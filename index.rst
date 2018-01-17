@@ -31,6 +31,9 @@ The videos, links and documentation below can help you get started, or
 use the table of contents on the left to find a specific topic of
 interest.
 
+.. raw:: html
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/S0oNO3mbBE8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 .. toctree::
    :maxdepth: 4
    
