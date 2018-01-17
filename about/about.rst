@@ -1,6 +1,5 @@
 .. _about:
 
-==================
 About Dash
 ==================
 
@@ -9,8 +8,8 @@ cryptocurrency in the world. The Dash network features :ref:`instant
 transaction confirmation <instantsend>`, double spend protection, 
 anonymity equal to that of physical cash, a self-governing,
 :ref:`self-funding model <budget-system>` driven by 
-`incentivized full nodes <masternode-network>` and a `clear roadmap 
-<https://github.com/dashpay/dash-roadmap>` for on-chain scaling to 
+:ref:`incentivized full nodes <masternode-network>` and a `clear roadmap 
+<https://github.com/dashpay/dash-roadmap>`__ for on-chain scaling to 
 up to 400MB blocks using custom-developed open source hardware. 
 While Dash is based on Bitcoin and compatible with many key
 components of the Bitcoin ecosystem, its two-tier network structure
@@ -19,3 +18,24 @@ governance. This section of the documentation describes these and many
 more key features that set Dash apart in the blockchain economy. For
 full details, please read the `Dash whitepaper 
 <https://github.com/dashpay/dash/wiki/Whitepaper>`__.
+
+Official information sources
+----------------------------
+
+**Website:** `https://www.dash.org <https://www.dash.org/>`__
+**Team:** `https://www.dash.org/team <https://www.dash.org/team/>`__
+**Foundation:** https://www.dashfoundation.io
+
+**Dash Video Series:**
+
+Dash School
+------------------
+
+`Dash School` is a six-part video series produced by Amanda B. Johnson. 
+It explains Dash from a beginners level up to descriptions of the more 
+advanced features.
+
+https://www.youtube.com/playlist?list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod
+
+Features
+------------------

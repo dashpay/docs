@@ -39,5 +39,3 @@ interest.
 
 .. toctree::
    :maxdepth: 4
-   
-   wallets/index.rst
