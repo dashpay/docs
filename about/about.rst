@@ -22,18 +22,17 @@ full details, please read the `Dash whitepaper
 Official information sources
 ----------------------------
 
-**Website:** `https://www.dash.org <https://www.dash.org/>`__
+- **Website:** `https://www.dash.org <https://www.dash.org/>`__
+- **Team:** `https://www.dash.org/team <https://www.dash.org/team/>`__
+- **Foundation:** https://www.dashfoundation.io
 
-**Team:** `https://www.dash.org/team <https://www.dash.org/team/>`__
-
-**Foundation:** https://www.dashfoundation.io
-
-**Dash Video Series:**
-
-Dash School
+Dash Videos
 ------------------
 
-`Dash School` is a six-part video series produced by Amanda B. Johnson. 
+Dash School
+~~~~~~~~~~~
+
+Dash School is a six-part video series produced by Amanda B. Johnson. 
 It explains Dash from a beginners level up to descriptions of the more 
 advanced features.
 
@@ -43,5 +42,8 @@ advanced features.
         <iframe src="https://www.youtube.com/embed/?listType=playlist&list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
     </div>
 
-Features
-------------------
+Dash 101
+~~~~~~~~
+
+Dash Video Series
+~~~~~~~~~~~~~~~~~
