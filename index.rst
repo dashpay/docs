@@ -37,5 +37,18 @@ interest.
         <iframe src="//www.youtube.com/embed/S0oNO3mbBE8" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
+.. _user-docs:
+
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
+   :caption: User Documentation
+
+   about
+   features
+   wallets
+
+.. _developer-docs:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Developer Documentation

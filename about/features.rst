@@ -35,16 +35,8 @@ Specifications
 -  Difficulty Retargets using Dark Gravity Wave - Improved Kimoto
    Gravity Well - Exponential Moving Average weighted adjustment.
 -  7.14% decrease in the number of coins generated per year
--  Total coins: `between 17.74M and
-   18.92M <emission-rate>`__
--  Total coins: `between 17.74M and
-   18.92M <emission-rate>`_
 -  Total coins: :ref:`between 17.74M and
    18.92M <emission-rate>`
--  Total coins: :ref:`between 17.74M and
-   18.92M (see `Emission Rate`_)
--  Total coins: between 17.74M and
-   18.92M (see `Emission Rate`_)
 -  Decentralized Masternode Network
 -  Superior Transaction Anonymity using PrivateSend
 -  Two-tier network using masternodes to form the second tier
@@ -143,8 +135,8 @@ had (CPUs, GPUs, ASICs).
 Mining with X11
 ---------------
 
-Information on mining with X11 can be found in the `Mining <mining>`_ 
-section of this documentation.
+Information on mining with X11 can be found in the 
+:ref:`Mining <mining>` section of this documentation.
 
 .. _dark-gravity-wave:
 
@@ -152,20 +144,20 @@ Dark Gravity Wave
 ==================
 
 **DGW** or *Dark Gravity Wave* is an open source difficulty-adjusting
-algorithm for Bitcoin-based cryptocurrencies that was first used in 
-Darkcoin/Dash and has been adopted by other digital currencies.
-
-DGW was authored by Evan Duffield, the developer and creator of
-X11/Darkcoin/Dash, as a response to a time-warp exploit found
-in *Kimoto's Gravity Well*. 
+algorithm for Bitcoin-based cryptocurrencies that was first used in Dash
+and has since appeared in other digital currencies. DGW was authored by 
+Evan Duffield, the developer and creator of Dash, as a response to a 
+time-warp exploit found in *Kimoto's Gravity Well*. 
 
 In concept, DGW is similar to the Kimoto Gravity Well, adjusting the 
 difficulty levels every block (instead of every 2016 blocks like 
-Bitcoin) by using statistical data of the last blocks found. In this way
-block issuing times can remain consistent, despite high fluctuations in hashpower. However it doesn't suffer from the time-warp exploit. 
+Bitcoin) based on statistical data from recently found blocks. This 
+makes it possible to issue blocks with relatively consistent times, even 
+if the hashing power experiences high fluctuations, without suffering 
+from the time-warp exploit.
 
-Version 2.0 of DGW was implemented in Darkcoin/Dash from block 45,000 
-onwards in order to completely alleviate the time-warp exploit. 
+Version 2.0 of DGW was implemented in Dash from block 45,000 onwards in 
+order to completely alleviate the time-warp exploit.
 
 Version 3.0 was implemented on May 14 of 2014 to further improve
 difficulty re-targeting with smoother transitions. It also fixes issues

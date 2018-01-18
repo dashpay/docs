@@ -1,6 +1,8 @@
-################################################################################
+.. _wallets:
+
+==================
 Wallets
-################################################################################
+==================
 
 Whenever you are storing objects with a market value, security is
 necessary. This applies to barter systems as well as economies using
@@ -12,7 +14,7 @@ value in this system. This section of the documentation discusses
 different practical methods of keeping these keys safe in wallets, while
 still remaining useful for day-to-day needs.
 
-================================================================================
+
 Dash Core Wallet
 ================================================================================
 
@@ -30,7 +32,7 @@ Linux, Raspberry Pi and Windows.
    dashcore/interface.rst
    dashcore/installation.rst
 
-================================================================================
+
 Dash Electrum Wallet
 ================================================================================
 
@@ -43,7 +45,7 @@ is almost instant, while still keeping your funds secure and mobile. It
 does not currently support advanced InstantSend and PrivateSend
 features.
 
-================================================================================
+
 Mobile Wallets
 ================================================================================
 
@@ -53,7 +55,7 @@ recovery seed allows you to quickly recover your funds if your device is
 lost. Dash mobile apps for Android and iOS support InstantSend so you
 can pay vendors without waiting for block confirmations.
 
-================================================================================
+
 Hardware Wallets
 ================================================================================
 
@@ -61,7 +63,7 @@ Hardware wallets offer you the security of storing your keys in secure
 device while still allowing you to make simple transactions through a
 web interface.
 
-================================================================================
+
 Paper Wallet
 ================================================================================
 
@@ -69,14 +71,14 @@ The Dash Paper Wallet allows you to generate, encrypt and secure the
 keys to a single Dash address on a clean computer without ever
 connecting to the internet. Perfect for long term secure storage.
 
-================================================================================
+
 3rd Party Wallets
 ================================================================================
 
 These wallets have been developed by external developers to support
 Dash.
 
-================================================================================
+
 Web Wallets
 ================================================================================
 
