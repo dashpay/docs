@@ -2,7 +2,7 @@
 Dash Documentation
 ==================
 
-.. image:: images/dash_logo.png
+.. image:: img/dash_logo.png
 
 Dash is an open source peer-to-peer cryptocurrency with a strong focus
 on the payments industry. Dash offers a form of money that is portable,

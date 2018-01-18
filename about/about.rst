@@ -45,5 +45,7 @@ advanced features.
 Dash 101
 ~~~~~~~~
 
+Dash 101 is a 
+
 Dash Video Series
 ~~~~~~~~~~~~~~~~~
