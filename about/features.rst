@@ -14,10 +14,10 @@ details of how it will function. The Dash Whitepaper is frequently
 updated, but this page also provides links to the original version and
 translations.
 
-- `Latest whitepaper and official translations <https://github.com/dashpay/dash/wiki/Whitepaper>`_
 - `Dash Roadmap <https://github.com/dashpay/dash-roadmap>`_
-- `Original Darkcoin Whitepaper <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Darkcoin.pdf>`_
-- `InstantSend Whitepaper <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_
+- `Latest whitepaper and official translations <https://github.com/dashpay/dash/wiki/Whitepaper>`_
+- `Original Darkcoin whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Darkcoin.pdf>`_
+- `InstantSend Whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_
 
 
 Specifications
@@ -36,6 +36,14 @@ Specifications
 -  7.14% decrease in the number of coins generated per year
 -  Total coins: `between 17.74M and
    18.92M <emission-rate>`__
+-  Total coins: `between 17.74M and
+   18.92M <emission-rate>`_
+-  Total coins: :ref:`between 17.74M and
+   18.92M <emission-rate>`
+-  Total coins: :ref:`between 17.74M and
+   18.92M (see `Emission Rate`_)
+-  Total coins: `between 17.74M and
+   18.92M (see `Emission Rate`_)
 -  Decentralized Masternode Network
 -  Superior Transaction Anonymity using PrivateSend
 -  Two-tier network using masternodes to form the second tier
