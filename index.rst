@@ -46,9 +46,3 @@ interest.
    about
    features
    wallets
-
-.. _developer-docs:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Developer Documentation
