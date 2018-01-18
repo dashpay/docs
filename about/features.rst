@@ -17,7 +17,7 @@ translations.
 - `Dash Roadmap <https://github.com/dashpay/dash-roadmap>`_
 - `Latest whitepaper and official translations <https://github.com/dashpay/dash/wiki/Whitepaper>`_
 - `Original Darkcoin whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Darkcoin.pdf>`_
-- `InstantSend Whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_
+- `InstantSend whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_
 
 
 Specifications
@@ -42,7 +42,7 @@ Specifications
    18.92M <emission-rate>`
 -  Total coins: :ref:`between 17.74M and
    18.92M (see `Emission Rate`_)
--  Total coins: `between 17.74M and
+-  Total coins: between 17.74M and
    18.92M (see `Emission Rate`_)
 -  Decentralized Masternode Network
 -  Superior Transaction Anonymity using PrivateSend
@@ -53,6 +53,8 @@ Specifications
    vote on budget proposals and decisions that affect Dash. Budget
    proposals fund Dash development and come directly from block rewards,
    i.e. Dash development is self-funded by its own blockchain.
+
+
 
 Emission Rate
 ==================
