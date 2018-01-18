@@ -43,6 +43,7 @@ interest.
    :maxdepth: 2
    :caption: User Documentation
 
-   about
-   features
-   wallets
+   about/about
+   about/features
+   wallets/
+   wallets/index
