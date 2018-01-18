@@ -14,16 +14,10 @@ details of how it will function. The Dash Whitepaper is frequently
 updated, but this page also provides links to the original version and
 translations.
 
-Latest version and official translations: 
-https://github.com/dashpay/dash/wiki/Whitepaper
-
-Dash Roadmap: https://github.com/dashpay/dash-roadmap
-
-`Original Darkcoin
-Whitepaper <https://dashpay.atlassian.net/wiki/download/attachments/132120878/Darkcoin%20Whitepaper.pdf>`__
-
-`InstantSend
-Whitepaper <https://dashpay.atlassian.net/wiki/download/attachments/132120878/Dash%20Whitepaper%20-%20InstantTX.pdf>`__
+- `Latest whitepaper and official translations <https://github.com/dashpay/dash/wiki/Whitepaper>`_
+- `Dash Roadmap <https://github.com/dashpay/dash-roadmap>`_
+- `Original Darkcoin Whitepaper <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Darkcoin.pdf>`_
+- `InstantSend Whitepaper <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_
 
 
 Specifications
