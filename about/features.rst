@@ -62,8 +62,8 @@ Emission Rate
 
 Cryptocurrencies such as Dash and Bitcoin are created through a
 cryptographically difficult process known as mining. Mining involves
-repeatedly solving `hash algorithms <x11-hash-algorithm>` until a valid
-solution for the current `mining difficulty <dark-gravity-wave>`_ is discovered. Once discovered, the miner is permitted to create new units 
+repeatedly solving :ref:`hash algorithms <x11-hash-algorithm>` until a valid
+solution for the current :ref:`mining difficulty <dark-gravity-wave>` is discovered. Once discovered, the miner is permitted to create new units 
 of the currency. This is known as the block reward. To ensure that the 
 currency is not subject to endless inflation, the block reward is 
 reduced at regular intervals. Graphing this data results in a curve 
