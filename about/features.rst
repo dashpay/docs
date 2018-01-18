@@ -54,7 +54,7 @@ Specifications
    proposals fund Dash development and come directly from block rewards,
    i.e. Dash development is self-funded by its own blockchain.
 
-
+.. _emission-rate:
 
 Emission Rate
 ==================
