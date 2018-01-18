@@ -47,3 +47,11 @@ interest.
    about/features
    wallets/
    wallets/index
+
+.. _masternode-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Masternodes
+
+   masternodes
