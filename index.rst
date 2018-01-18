@@ -40,7 +40,7 @@ interest.
 .. _user-docs:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: User Documentation
 
    about/about
