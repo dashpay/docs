@@ -43,9 +43,11 @@ interest.
    :maxdepth: 3
    :caption: User Documentation
 
-   about/about
-   about/features
-   wallets/
+   about
+   features
+   how-to-buy
+   links
+   merchants
    wallets/index
 
 .. _masternode-docs:
