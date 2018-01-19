@@ -18,4 +18,4 @@ Linux versions available soon.
 .. |image0| image:: img/app-store.png
    :width: 223px
 .. |image1| image:: img/google-play.png
-   :width: 200px
+   :width: 400px
