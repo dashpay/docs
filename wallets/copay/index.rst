@@ -18,5 +18,5 @@ Linux versions available soon.
 .. |image0| image:: img/app-store.png
    :width: 200px
 .. |image1| image:: img/google-play.png
-   :height: 222px
+   :width: 222px
    :target: https://play.google.com/store/apps/details?id=org.dash.copay
