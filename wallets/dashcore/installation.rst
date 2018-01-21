@@ -45,7 +45,7 @@ how to check this in other versions of Linux, see
    Ubuntu System Overview. This is a 64 bit system.
 
 Once you know which version you need, download Dash Core to your
-computer from https://www.dash.org/wallets/
+computer from `https://www.dash.org/wallets <https://www.dash.org/wallets>`.
 
 .. figure:: img/linux/106329738.png
    :height: 250px
@@ -130,25 +130,115 @@ drop.
 
 To run Dash Core for the first time, open Terminal and browse to the
 Dash folder on the Desktop, or where you chose to extract the file. Type
-`./dash-qt` to run the file.
-
-
+``./dash-qt`` to run the file.
 
 .. figure:: img/linux/106329833.png
    :width: 486px
+
+   Running Dash Core from the Terminal
+
+The first time the program is launched, you will be offered a choice of
+where you want to store your blockchain and wallet data. Choose a
+location with enough free space, as the blockchain can reach around
+3-4GB in size. It is recommended to use the default data folder if
+possible.
+
 .. figure:: img/linux/106329842.png
    :height: 250px
+
+   Choosing the Dash Core data folder
+
+Dash Core will then start up. This will take a little longer than usual
+the first time you run it, since Dash Core needs to generate
+cryptographic data to secure your wallet.
+
 .. figure:: img/linux/106329854.png
    :height: 250px
+
+   Starting Dash Core
+
+Synchronizing Dash Core to the Dash network
+-------------------------------------------
+
+Once Dash Core is successfully installed and started, you will see the
+wallet overview screen. You will notice that the wallet is “out of
+sync”, and the status bar at the bottom of the window will show the
+synchronization progress.
+
 .. figure:: img/linux/106329873.png
    :height: 250px
+
+   Dash Core begins synchronizing with the Dash network
+
+During this process, Dash Core will download a full copy of the Dash
+blockchain from other nodes to your device. Depending on your internet
+connection, this may take a long time. If you see the message “No block
+source available”, check your internet connection. When synchronization
+is complete, you will see a small blue tick in the lower right corner.
+
 .. figure:: img/linux/106329889.png
    :height: 250px
+
+   Dash Core synchronization is complete
+
+You can now begin to use your wallet to send and receive funds.
+
+Encrypting your Dash wallet
+---------------------------
+
+After your wallet has synchronized with the Dash network, it is strongly
+advised to encrypt the wallet with a password or passphrase to prevent
+unauthorized access. You should use a strong, new password that you have
+never used somewhere else. Take note of your password and store it
+somewhere safe or you will be locked out of your wallet and lose access
+to your funds.
+
+To encrypt your wallet, click **Settings** > **Encrypt** wallet.
+
 .. figure:: img/linux/106329907.png
    :height: 250px
+
+   Encrypting the Dash wallet with a password
+
+You will be asked to enter and verify a password.
+
 .. figure:: img/linux/106329946.png
    :height: 150px
+
+   Entering a password
+
 .. figure:: img/linux/106329973.png
    :width: 359px
+
+   Confirm you want to encrypt your wallet
+
+When the encryption process is complete, you will see a warning that
+past backups of your wallet will no longer be usable, and be asked to
+shut down Dash Core. When you restart Dash Core, you will see a small
+blue lock in the lower right corner.
+
 .. figure:: img/linux/106329989.png
    :height: 250px
+
+   Fully encrypted and synchronized Dash Core wallet
+
+Using the Ubuntu Repository to install Dash Core
+------------------------------------------------
+
+Ubuntu allows you to add third-party repositories to install and update
+software using the apt command line utility. Dash Core team maintains
+such a repository, although the software version included here may be
+older than what is available on the website. To install Dash Core from
+the repository, open the Terminal and enter the following commands::
+
+    sudo add-apt-repository ppa:dash.org/dash
+    sudo apt update
+    sudo apt install dashd dash-qt
+
+macOS
+==================
+
+This guide describes how to download, install and encrypt the Dash Core
+wallet for macOS. The guide is written for macOS Sierra, but the steps
+should be similar for other versions.
+
