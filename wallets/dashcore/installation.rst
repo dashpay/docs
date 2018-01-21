@@ -27,29 +27,22 @@ wallet. In most cases, the website will properly detect which version
 you need. Click the blue Dash Core button to download the package
 directly.
 
-|image1|
-
-
-Interim text 
-
-
-|image2|
-
-
-Interim text 
-
-
-More text
-
-
-|image3|
-   The website properly detects the wallet appropriate for your system
-
-
-|image3|
+.. figure:: img/linux/106330106.png
+   :height: 250px
 
    The website properly detects the wallet appropriate for your system
 
+If detection does not work, you will need to manually choose your
+operating system and whether you need a 32 or 64 bit version. If you are
+unsure whether your version of Linux is 32 or 64 bit, you can check in
+Ubuntu under the **System menu > About This Computer**. For details on
+how to check this in other versions of Linux, see
+`here <https://www.howtogeek.com/198615/how-to-check-if-your-linux-system-is-32-bit-or-64-bit/>`__.
+
+.. figure:: img/linux/106329727.png
+   :height: 250px
+
+   Ubuntu System Overview. This is a 64 bit system.
 
 
 
@@ -58,14 +51,9 @@ Directives begin
 
 
 
-.. |image1| figure:: img/linux/106330106.png
-   :height: 250px
 
-   The website properly detects the wallet appropriate for your system
 
-.. |image2| figure:: img/linux/106329727.png
-   :height: 250px
-   The website properly detects the wallet appropriate for your system
+
 
 .. |image3| figure:: img/linux/106329738.png
    :height: 250px

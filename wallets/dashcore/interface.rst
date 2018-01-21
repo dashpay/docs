@@ -12,7 +12,7 @@ The Main Window
 =======================
 
 .. figure:: img/window-areas.png
-   
+
    The Dash Core Wallet
 
 The Dash Core window is broken up into several areas:
@@ -102,7 +102,7 @@ available. A quick view of your total balance is also available in the
 lower right corner.
 
 .. figure:: img/send.png
-   
+
    The Send tab
 
 The Receive Tab
@@ -113,7 +113,7 @@ create a request for a specific amount of Dash or include a specific
 message, and send it to another user as a link or QR code.
 
 .. figure:: img/receive.png
-   
+
    The Receive tab
 
 The Transactions Tab
@@ -176,7 +176,7 @@ perform certain other actions.
 ..  image:: img/network-icons.png
    :scale: 50 %
    :align: left
-   
+
 These icons indicate the quality of your connection to the
 Dash network. If you cannot connect because of network problems, you
 will see the icon on the left. More bars indicate more connections to
@@ -193,7 +193,7 @@ become a blue tick.
 ..  image:: img/hd.png
    :scale: 50 %
    :align: left
-   
+
 These icons indicate whether your wallet is running in hierarchical 
 deterministic (HD) mode or standard mode.
 
@@ -373,7 +373,7 @@ window under Microsoft Windows.
    :scale: 50 %
 
    The Window tab of the Dash Core Options dialog
-  
+
 Hide tray icon
   When this option is enabled, Dash Core will not display an icon in the
   system tray. This option cannot be selected at the same time as
@@ -482,7 +482,7 @@ issue.
    :scale: 50 %
 
    The Console tab of the Dash Core Tools dialog
-   
+
 Network Traffic tab
 -----------------------
 
@@ -494,7 +494,7 @@ slider or **Clear** the graph.
    :scale: 50 %
 
    The Network Traffic tab of the Dash Core Tools dialog
-   
+
 Peers tab
 -----------------------
 
