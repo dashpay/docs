@@ -242,3 +242,110 @@ This guide describes how to download, install and encrypt the Dash Core
 wallet for macOS. The guide is written for macOS Sierra, but the steps
 should be similar for other versions.
 
+Downloading the Dash Core wallet
+--------------------------------
+
+Visit https://www.dash.org/get-dash/ to download the latest Dash
+Core wallet. In most cases, the website will properly detect which
+version you need. Click the blue **Dash Core** button to download
+the installer directly.
+
+.. figure:: img/macos/112414571.png
+   :width: 451px
+
+   The website properly detects the wallet appropriate for your system
+
+If detection does not work, you will need to manually choose your
+operating system. Go to https://www.dash.org/wallets and select the 
+**OSX** tab, then click **Download DMG**.
+
+.. figure:: img/macos/112414634.png
+   :width: 451px
+
+   Manually selecting and downloading an installer
+
+Save the file you downloaded to your Downloads folder.
+
+Verifying Dash Core
+-------------------
+
+This step is optional, but recommended to verify the integrity of the
+file you downloaded. This is done by checking its SHA256 hash against
+the hash published by the Dash Core development team. To view the
+published hash, click the **Hash file** button on the wallet download
+page.
+
+.. figure:: img/macos/112414700.png
+   :width: 451px
+
+   Downloading the Dash Core hash file
+
+Once both the Dash Core file and the hash file have downloaded,
+double-click the hash file or view it in your browser and find the hash
+value for the Dash Core file you downloaded.
+
+.. figure:: img/macos/112414726.png
+   :height: 250px
+
+   Viewing the Dash Core hash file
+
+This hash value should correspond with the hash value of the file you
+have downloaded to ensure it is authentic and was not corrupted during
+transit. To do this, open **Terminal**, browse to the location where you
+saved the file, and run the following command, replacing the version
+with the specific version of the file you downloaded::
+
+   shasum -a 256 <dashcore-version-osx.dmg
+
+.. figure:: img/macos/112414768.png
+   :width: 451px
+
+   Generating an SHA256 hash for the downloaded file
+
+If the hashes match, then you have an authentic copy of Dash Core for
+macOS.
+
+Installing Dash Core
+--------------------
+
+Open Finder and browse to your Downloads folder. Then double-click on
+the .dmg file you downloaded to decompress it. A window appears showing
+the contents of the file.
+
+.. figure:: img/macos/112414813.png
+   :height: 250px
+.. figure:: img/macos/112414813.png
+   :height: 250px
+
+   Opening the Dash Core .dmg file
+
+.. figure:: img/macos/112414813.png
+   :height: 250px
+.. figure:: img/macos/112414818.png
+   :height: 250px
+.. figure:: img/macos/112414846.png
+   :height: 250px
+.. figure:: img/macos/112414895.png
+   :width: 280px
+.. figure:: img/macos/112414900.png
+   :height: 250px
+.. figure:: img/macos/112414910.png
+   :height: 250px
+.. figure:: img/macos/112414905.png
+   :width: 280px
+.. figure:: img/macos/112415002.png
+   :height: 250px
+.. figure:: img/macos/112415017.png
+   :height: 250px
+.. figure:: img/macos/112415040.png
+   :width: 359px
+.. figure:: img/macos/112596642.png
+   :width: 359px
+.. figure:: img/macos/112596735.png
+   :width: 359px
+.. figure:: img/macos/112596740.png
+   :width: 354px
+.. figure:: img/macos/112596745.png
+   :width: 354px
+.. figure:: img/macos/112596927.png
+   :width: 359px
