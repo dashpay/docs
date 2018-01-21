@@ -314,8 +314,6 @@ the contents of the file.
 
 .. figure:: img/macos/112414813.png
    :height: 250px
-.. figure:: img/macos/112414818.png
-   :height: 250px
 
    Opening the Dash Core .dmg file
 
@@ -344,12 +342,14 @@ Core, then try to open it again. This time you will be able to click
    :width: 280px
 
    macOS blocking Dash Core from running because it was not downloaded
-  from the App Store
+   from the App Store
+
 
 .. figure:: img/macos/112414900.png
    :height: 250px
 
     Permitting macOS to run Dash Core
+
 
 .. figure:: img/macos/112414910.png
    :height: 250px
