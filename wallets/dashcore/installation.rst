@@ -347,12 +347,13 @@ Core, then try to open it again. This time you will be able to click
 
 .. figure:: img/macos/112414900.png
    :height: 250px
+.. figure:: img/macos/112414910.png
+   :height: 250px
 
     Permitting macOS to run Dash Core
 
-
-.. figure:: img/macos/112414910.png
-   :height: 250px
+.. figure:: img/macos/112414905.png
+   :width: 280px
 
    Final confirmation to run Dash Core
 
@@ -362,45 +363,83 @@ location with enough free space, as the blockchain can reach around
 3-4GB in size. It is recommended to use the default data folder if
 possible.
 
-.. figure:: img/macos/112414905.png
-   :width: 280px
-
-   Choosing the Dash Core data folder
-
 .. figure:: img/macos/112415002.png
    :height: 250px
 
+   Choosing the Dash Core data folder
 
+Dash Core will then start up. This will take a little longer than usual
+the first time you run it, since Dash Core needs to generate
+cryptographic data to secure your wallet.
 
 .. figure:: img/macos/112415017.png
    :height: 250px
 
+   Starting Dash Core
 
+Synchronizing Dash Core to the Dash network
+-------------------------------------------
+
+Once Dash Core is successfully installed and started, you will see the
+wallet overview screen. You will notice that the wallet is “out of
+sync”, and the status bar at the bottom of the window will show the
+synchronization progress.
 
 .. figure:: img/macos/112415040.png
    :width: 359px
 
+   Dash Core begins synchronizing with the Dash network
 
+During this process, Dash Core will download a full copy of the Dash
+blockchain from other nodes to your device. Depending on your internet
+connection, this may take a long time. If you see the message “No block
+source available”, check your internet connection. When synchronization
+is complete, you will see a small blue tick in the lower right corner.
 
 .. figure:: img/macos/112596642.png
    :width: 359px
 
+   Dash Core synchronization is complete
 
+You can now begin to use your wallet to send and receive funds.
+
+Encrypting your Dash wallet
+---------------------------
+
+After your wallet has synchronized with the Dash network, it is strongly
+advised to encrypt the wallet with a password or passphrase to prevent
+unauthorized access. You should use a strong, new password that you have
+never used somewhere else. Take note of your password and store it
+somewhere safe or you will be locked out of your wallet and lose access
+to your funds.
+
+To encrypt your wallet, click **Settings** > **Encrypt** wallet.
 
 .. figure:: img/macos/112596735.png
    :width: 359px
 
+   Encrypting the Dash wallet with a password
 
+You will be asked to enter and verify a password.
 
 .. figure:: img/macos/112596740.png
    :width: 354px
 
-
+   Enter a password
 
 .. figure:: img/macos/112596745.png
    :width: 354px
 
+   Confirm you want to encrypt your wallet
 
+When the encryption process is complete, you will see a warning that
+past backups of your wallet will no longer be usable, and be asked to
+shut down Dash Core. When you restart Dash Core, you will see a small
+blue lock in the lower right corner.
 
 .. figure:: img/macos/112596927.png
    :width: 359px
+
+   Fully encrypted and synchronized Dash Core wallet
+
+You can now begin to use your wallet to safely send and receive funds.
