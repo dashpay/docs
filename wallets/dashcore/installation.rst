@@ -44,48 +44,111 @@ how to check this in other versions of Linux, see
 
    Ubuntu System Overview. This is a 64 bit system.
 
+Once you know which version you need, download Dash Core to your
+computer from https://www.dash.org/wallets/
 
+.. figure:: img/linux/106329738.png
+   :height: 250px
 
-Directives begin
+   Manually selecting and downloading Dash Core
+
+Save the file you downloaded to your Downloads folder.
+
+Verifying Dash Core
 ----------------------
 
+This step is optional, but recommended to verify the integrity of the
+file you downloaded. This is done by checking its SHA256 hash against
+the hash published by the Dash Core development team. To view the
+published hash, click the **Hash file** button on the wallet download
+page.
 
-
-
-
-
-
-.. |image3| figure:: img/linux/106329738.png
+.. figure:: img/linux/106329748.png
    :height: 250px
-.. |image4| image:: img/linux/106329748.png
+
+   Downloading the Dash Core hash file
+
+Once both the Dash Core file and the hash file have downloaded,
+double-click the hash file or view it in your browser and find the hash
+value for the Dash Core file you downloaded.
+
+.. figure:: img/linux/106329757.png
    :height: 250px
-.. |image5| image:: img/linux/106329757.png
-   :height: 250px
-.. |image6| image:: img/linux/106329766.png
+
+   Viewing the Dash Core hash file
+
+This hash value should correspond with the hash value of the file you
+have downloaded to ensure it is authentic and was not corrupted during
+transit. To do this, open Terminal, browse to the location where you
+saved the file, and run the sha256sum command.
+
+.. figure:: img/linux/106329766.png
    :width: 486px
-.. |image7| image:: img/linux/106329782.png
+
+   Generating an SHA256 hash for the downloaded file
+
+If the hashes match, then you have an authentic copy of Dash Core for
+Linux.
+
+Extracting Dash Core
+----------------------
+
+Dash Core for Linux is distributed as a compressed archive and not an
+installer. This is because this same archive also contains other files
+built for running a masternode on a server, for example. In this guide,
+we will extract the executable file with a graphical user interface
+(GUI) designed for use by end users as a wallet.
+
+Begin by creating a folder for the Dash Core executable file on the
+Desktop. Browse to the Desktop (or the location of your choice) and
+create the folder.
+
+.. figure:: img/linux/106329782.png
    :height: 250px
-.. |image8| image:: img/linux/106329798.png
+
+   Creating a folder on the Desktop
+
+.. figure:: img/linux/106329798.png
    :height: 250px
-.. |image9| image:: img/linux/106329807.png
+
+   Renaming the folder to Dash
+
+Next, open the archive by double-clicking on it. The Archive Manager
+will appear. Browse to the dashcore-0.12.1/bin/ folder and extract the
+dash-qt file to the Dash folder you created on the Desktop by drag and
+drop.
+
+.. figure:: img/linux/106329807.png
    :height: 250px
-.. |image10| image:: img/linux/106329816.png
+
+   The dash-qt file in Archive Manager
+
+.. figure:: img/linux/106329816.png
    :height: 250px
-.. |image11| image:: img/linux/106329833.png
+
+   The dash-qt file in the Dash folder on the Desktop
+
+To run Dash Core for the first time, open Terminal and browse to the
+Dash folder on the Desktop, or where you chose to extract the file. Type
+`./dash-qt` to run the file.
+
+
+
+.. figure:: img/linux/106329833.png
    :width: 486px
-.. |image12| image:: img/linux/106329842.png
+.. figure:: img/linux/106329842.png
    :height: 250px
-.. |image13| image:: img/linux/106329854.png
+.. figure:: img/linux/106329854.png
    :height: 250px
-.. |image14| image:: img/linux/106329873.png
+.. figure:: img/linux/106329873.png
    :height: 250px
-.. |image15| image:: img/linux/106329889.png
+.. figure:: img/linux/106329889.png
    :height: 250px
-.. |image16| image:: img/linux/106329907.png
+.. figure:: img/linux/106329907.png
    :height: 250px
-.. |image17| image:: img/linux/106329946.png
+.. figure:: img/linux/106329946.png
    :height: 150px
-.. |image18| image:: img/linux/106329973.png
+.. figure:: img/linux/106329973.png
    :width: 359px
-.. |image19| image:: img/linux/106329989.png
+.. figure:: img/linux/106329989.png
    :height: 250px
