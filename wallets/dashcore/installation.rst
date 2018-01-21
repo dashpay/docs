@@ -34,15 +34,22 @@ Interim text
 
 
 |image2|
-   The website properly detects the wallet appropriate for your system
+
+
+Interim text 
 
 
 More text
 
 
 |image3|
+   The website properly detects the wallet appropriate for your system
 
-   Manually selecting and downloading Dash Core
+
+|image3|
+
+   The website properly detects the wallet appropriate for your system
+
 
 
 
@@ -56,9 +63,11 @@ Directives begin
 
    The website properly detects the wallet appropriate for your system
 
-.. |image2| image:: img/linux/106329727.png
+.. |image2| figure:: img/linux/106329727.png
    :height: 250px
-.. |image3| image:: img/linux/106329738.png
+   The website properly detects the wallet appropriate for your system
+
+.. |image3| figure:: img/linux/106329738.png
    :height: 250px
 .. |image4| image:: img/linux/106329748.png
    :height: 250px
