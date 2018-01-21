@@ -314,38 +314,93 @@ the contents of the file.
 
 .. figure:: img/macos/112414813.png
    :height: 250px
-.. figure:: img/macos/112414813.png
+.. figure:: img/macos/112414818.png
    :height: 250px
 
    Opening the Dash Core .dmg file
 
-.. figure:: img/macos/112414813.png
-   :height: 250px
-.. figure:: img/macos/112414818.png
-   :height: 250px
+Drag the Dash Core application file into your Applications folder to
+install Dash Core.
+
 .. figure:: img/macos/112414846.png
    :height: 250px
+
+   Installing Dash Core
+
+Running Dash Core for the first time
+------------------------------------
+
+To run Dash Core for the first time, either open Launchpad or browse to
+your **Applications** folder in Finder. Double-click **Dash Core** or
+**Dash-Qt** to start the application. You may see a warning about
+opening an app from an unidentified developer. To resolve this problem,
+go to your **System Preferences** and select **Security & Privacy**. A
+warning about the unidentified developer will appear at the bottom of
+this screen. Click **Open Anyway** to allow your computer to run Dash
+Core, then try to open it again. This time you will be able to click
+**Open** to start Dash Core. This warning will only appear once.
+
 .. figure:: img/macos/112414895.png
    :width: 280px
+
+   macOS blocking Dash Core from running because it was not downloaded
+  from the App Store
+
 .. figure:: img/macos/112414900.png
    :height: 250px
+
+    Permitting macOS to run Dash Core
+
 .. figure:: img/macos/112414910.png
    :height: 250px
+
+   Final confirmation to run Dash Core
+
+The first time the program is launched, you will be offered a choice of
+where you want to store your blockchain and wallet data. Choose a
+location with enough free space, as the blockchain can reach around
+3-4GB in size. It is recommended to use the default data folder if
+possible.
+
 .. figure:: img/macos/112414905.png
    :width: 280px
+
+   Choosing the Dash Core data folder
+
 .. figure:: img/macos/112415002.png
    :height: 250px
+
+
+
 .. figure:: img/macos/112415017.png
    :height: 250px
+
+
+
 .. figure:: img/macos/112415040.png
    :width: 359px
+
+
+
 .. figure:: img/macos/112596642.png
    :width: 359px
+
+
+
 .. figure:: img/macos/112596735.png
    :width: 359px
+
+
+
 .. figure:: img/macos/112596740.png
    :width: 354px
+
+
+
 .. figure:: img/macos/112596745.png
    :width: 354px
+
+
+
 .. figure:: img/macos/112596927.png
    :width: 359px
