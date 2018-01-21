@@ -1,6 +1,6 @@
-################################################################################
+=======================
 Interface
-################################################################################
+=======================
 
 The Dash Core Wallet is an application that runs on your computer and
 allows you to make transactions on the Dash network. Most transactions
@@ -8,9 +8,8 @@ are for sending or receiving Dash, but it is also possible to create
 signed messages or control a masternode, for example. The Dash Core Wallet
 interface is described in detail in the following sections.
 
-================================================================================
 The Main Window
-================================================================================
+=======================
 
 .. figure:: img/window-areas.png
    
@@ -24,7 +23,7 @@ The Dash Core window is broken up into several areas:
 -  The status bar
 
 The Menu Bar
-================================================================================
+-----------------------
 
 The menu bar provides access to all functions of Dash Core. There are
 four menus available:
@@ -42,14 +41,14 @@ Help
   relating to Dash Core.
    
 The Tab Bar
-================================================================================
+-----------------------
 
 The tab bar is used to quickly switch between the main areas of the Dash
 Core. The content in the main area of Dash Core changes depending on
 which tab you have selected. The following tabs are available:
 
 The Overview tab
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The overview tab offers quick access to your balance and most recent
 transactions, as well as the PrivateSend feature and options for coin
@@ -93,7 +92,7 @@ identified by icons as follows:
 For more details on your transaction history, see the Transactions tab.
 
 The Send Tab
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The Send tab allows you to send funds to another address on the Dash
 network. It contains fields to enter the recipient’s address, a label
@@ -107,7 +106,7 @@ lower right corner.
    The Send tab
 
 The Receive Tab
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The Receive tab allows you to create addresses to receive Dash. You can
 create a request for a specific amount of Dash or include a specific
@@ -118,7 +117,7 @@ message, and send it to another user as a link or QR code.
    The Receive tab
 
 The Transactions Tab
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The transactions tab shows the entire transaction history for all
 addresses associated with your wallet. This appears as a table showing
@@ -136,13 +135,13 @@ six confirmations.
    The transactions tab
 
 The Status Bar
-================================================================================
+-----------------------
 
 The status bar shows a synchronization progress bar and a row of status
 icons which indicate the status of your connection to the Dash network.
 
 The Synchronization Bar
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 This bar shows the synchronization status of Dash Core with the Dash
 network. Each time you open Dash Core, it will begin downloading the
@@ -164,7 +163,7 @@ Once synchronization is complete, the progress bar will disappear and a
 tick will appear on the right of the status bar.
 
 The Status Icons
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  image:: img/locks.png
    :scale: 50 %
@@ -198,15 +197,15 @@ become a blue tick.
 These icons indicate whether your wallet is running in hierarchical 
 deterministic (HD) mode or standard mode.
 
-================================================================================
+
 The Options Dialog
-================================================================================
+=======================
 
 This documentation describes the functionality of the Dash Core Options
 dialog, available under the **Settings > Options** menu in Dash Core.
 
 Main tab
-================================================================================
+-----------------------
 
 The Main tab of the Options dialog contains settings related to startup
 and performance of the Dash Core app.
@@ -238,7 +237,7 @@ Number of script verification threads
   leave that number of processor cores free.
 
 Wallet tab
-================================================================================
+-----------------------
 
 The Wallet tab of the Options dialog contains settings related to how
 addresses are managed in the Dash Core app. The first time you run Dash
@@ -325,7 +324,7 @@ Amount of Dash to keep anonymized
   in the PrivateSend interface on the Overview tab.
 
 Network tab
-================================================================================
+-----------------------
 
 This tab includes options related to how your connection to the Dash
 network is made.
@@ -365,7 +364,7 @@ Use separate SOCKS5 proxy to reach peers via Tor hidden services
   `here <https://www.torproject.org/>`__.
 
 Window tab
-================================================================================
+-----------------------
 
 This option contains options governing behavior of the Dash Core app
 window under Microsoft Windows.
@@ -393,7 +392,7 @@ Minimize on close
   To completely close the app, select **File > Exit**.
   
 Display tab
-================================================================================
+-----------------------
 
 This tab contains options relating to the appearance of the Dash Core
 app window.
@@ -432,15 +431,15 @@ Third party transaction URLs
   ID. You will then be able to access this blockchain explorer directly
   from Dash Core using the context menu of any given transaction.   
 
-================================================================================
+
 The Tools Dialog
-================================================================================
+=======================
 
 This documentation describes the functionality of the Dash Core Tools
 dialog, available under the **Tools** menu in Dash Core.
 
 Information tab
-================================================================================
+-----------------------
 
 .. figure:: img/information.png
    :scale: 50 %
@@ -470,7 +469,7 @@ Open debug log file
   file contains output from Dash Core which may help to diagnose errors.
 
 Console tab
-================================================================================
+-----------------------
 
 The Console tab provides an interface with the Dash Core RPC (remote
 procedure call) console. This is equivalent to the ``dash-cli`` command
@@ -485,7 +484,7 @@ issue.
    The Console tab of the Dash Core Tools dialog
    
 Network Traffic tab
-================================================================================
+-----------------------
 
 The Network Traffic tab shows a graph of traffic sent and received to
 peers on the network over time. You can adjust the time period using the
@@ -497,7 +496,7 @@ slider or **Clear** the graph.
    The Network Traffic tab of the Dash Core Tools dialog
    
 Peers tab
-================================================================================
+-----------------------
 
 The Peers tab shows a list of other full nodes connected to your Dash
 Core client. The IP address, version and ping time are visible.
@@ -510,7 +509,7 @@ that peer.
    The Peers tab of the Dash Core Tools dialog
 
 Wallet Repair tab
-================================================================================
+-----------------------
 
 The Wallet Repair tab offers a range of startup commands to restore a
 wallet to a functional state. Selecting any of these commands will
