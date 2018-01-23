@@ -30,10 +30,11 @@ Linux, Raspberry Pi and Windows.
 
    dashcore/index.rst
    dashcore/interface.rst
-   dashcore/installation-linux.rst
-   dashcore/installation-macos.rst
-   dashcore/installation-windows.rst
    dashcore/installation.rst
+      dashcore/installation-linux.rst
+      dashcore/installation-macos.rst
+      dashcore/installation-windows.rst
+
 
 Dash Copay Wallet
 ========================================================================
