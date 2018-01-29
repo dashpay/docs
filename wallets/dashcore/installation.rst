@@ -13,9 +13,8 @@ It is also possible to :ref:`compile Dash Core from source code
 <compiling-dash>`.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    installation-linux.rst
    installation-macos.rst
    installation-windows.rst
-
