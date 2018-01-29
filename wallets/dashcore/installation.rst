@@ -18,3 +18,4 @@ It is also possible to :ref:`compile Dash Core from source code
    installation-linux.rst
    installation-macos.rst
    installation-windows.rst
+
