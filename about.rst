@@ -35,7 +35,7 @@ Dash School
 
 Dash School is a six-part video series produced by Amanda B. Johnson. 
 It explains Dash from a beginners level up to descriptions of the more 
-advanced features.
+advanced features. Test.
 
 .. raw:: html
 
