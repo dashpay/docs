@@ -41,6 +41,7 @@ interest.
 
 .. toctree::
    :maxdepth: 3
+   :hidden:
    :caption: User Documentation
 
    about
@@ -48,7 +49,7 @@ interest.
    how-to-buy
    links
    merchants
-   wallets/index
+   wallets
 
 .. _masternode-docs:
 
