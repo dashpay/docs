@@ -25,7 +25,7 @@ you to download the entire Dash blockchain. It is available for macOS,
 Linux, Raspberry Pi and Windows.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    dashcore/index.rst
    dashcore/interface.rst

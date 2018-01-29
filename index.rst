@@ -56,6 +56,7 @@ interest.
 
 .. toctree::
    :maxdepth: 3
+   :hidden:
    :caption: Masternodes
 
    masternodes
