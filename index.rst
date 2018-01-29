@@ -49,7 +49,7 @@ interest.
    how-to-buy
    links
    merchants
-   wallets
+   wallets/index
 
 .. _masternode-docs:
 
