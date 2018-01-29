@@ -42,6 +42,7 @@ interest.
 .. toctree::
    :maxdepth: 3
    :hidden:
+   :includehidden:
    :caption: User Documentation
 
    about
