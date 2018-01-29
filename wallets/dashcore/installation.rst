@@ -13,7 +13,6 @@ It is also possible to :ref:`compile Dash Core from source code
 <compiling-dash>`.
 
 .. toctree::
-   :hidden:
 
    installation-linux.rst
    installation-macos.rst
