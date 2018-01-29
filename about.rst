@@ -16,7 +16,7 @@ While Dash is based on Bitcoin and compatible with many key
 components of the Bitcoin ecosystem, its two-tier network structure
 offers significant improvements in transaction speed, anonymity and
 governance. This section of the documentation describes these and many
-more key features that set Dash apart in the blockchain economy. For
+more key features that set Dash apart in the blockchain economy. For
 full details, please read the `Dash whitepaper 
 <https://github.com/dashpay/dash/wiki/Whitepaper>`__.
 
@@ -41,7 +41,6 @@ advanced features. Test.
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="https://www.youtube.com/embed/?listType=playlist&list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-    </div>
 
 
 Dash 101
@@ -56,4 +55,3 @@ and is available in `English <https://www.youtube.com/watch?v=DzH7cMbZQHI&list=P
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="https://www.youtube.com/embed/?listType=playlist&list=PLiFMZOlhgsYIDP2V2XsuTFZu1C1sV5ohr" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-    </div>
