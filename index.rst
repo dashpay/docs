@@ -37,6 +37,19 @@ interest.
         <iframe src="//www.youtube.com/embed/S0oNO3mbBE8" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
+.. _first-steps:
+
+.. toctree::
+   :maxdepth: 3
+   :hidden:
+   :includehidden:
+   :caption: First Steps
+
+   about
+   features
+   how-to-buy
+   links
+
 .. _user-docs:
 
 .. toctree::
@@ -45,18 +58,30 @@ interest.
    :includehidden:
    :caption: User Documentation
 
-   about
-   features
-   how-to-buy
-   links
-   merchants
    wallets/index
+   debit-cards
 
-.. _masternode-docs:
+.. _merchant-docs:
 
 .. toctree::
    :maxdepth: 3
    :hidden:
-   :caption: Masternodes
+   :includehidden:
+   :caption: Merchant Documentation
 
-   masternodes
+   merchants/index
+   merchants/payment-solutions
+   merchants/onboarding
+
+
+.. _network-docs:
+
+.. toctree::
+   :maxdepth: 3
+   :hidden:
+   :caption: Network Documentation
+
+   governance/index
+   masternodes/index
+   mining/index
+   legal/index
