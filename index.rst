@@ -36,6 +36,10 @@ interest.
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="//www.youtube.com/embed/S0oNO3mbBE8" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="//www.youtube.com/embed/videoseries?list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+    
 
 .. _first-steps:
 
@@ -56,7 +60,7 @@ interest.
    :maxdepth: 3
    :hidden:
    :includehidden:
-   :caption: User Documentation
+   :caption: Users
 
    wallets/index
    debit-cards
@@ -67,7 +71,7 @@ interest.
    :maxdepth: 3
    :hidden:
    :includehidden:
-   :caption: Merchant Documentation
+   :caption: Merchants
 
    merchants/index
    merchants/payment-solutions
@@ -79,7 +83,7 @@ interest.
 .. toctree::
    :maxdepth: 3
    :hidden:
-   :caption: Network Documentation
+   :caption: Network
 
    governance/index
    masternodes/index
