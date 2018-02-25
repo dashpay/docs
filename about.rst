@@ -51,8 +51,9 @@ Dash 101 is an eight-part video series produced by Aaron Koenig. It
 covers unique features and functions only available on the Dash network,
 and is available in 
 `English <https://www.youtube.com/watch?v=DzH7cMbZQHI&list=PLiFMZOlhgsYIDP2V2XsuTFZu1C1sV5ohr>`__, 
-`German <https://www.youtube.com/watch?v=0YyDGu17IE4&list=PLiFMZOlhgsYKrbanA3ng7oh2aNRh7D98V>`__ 
-and Spanish.
+`German <https://www.youtube.com/watch?v=0YyDGu17IE4&list=PLiFMZOlhgsYKrbanA3ng7oh2aNRh7D98V>`__,
+`Spanish <https://www.youtube.com/playlist?list=PLiFMZOlhgsYK8P_NViNEJKCzADzdT8k0R>`__ and 
+`Russian <https://www.youtube.com/playlist?list=PLiFMZOlhgsYKBYORZIReix5hejKj08nUk>`__.
 
 .. raw:: html
 
