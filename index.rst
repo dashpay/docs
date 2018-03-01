@@ -49,6 +49,7 @@ interest.
    :caption: First Steps
 
    introduction/about
+   introduction/features
    introduction/how-to-buy
    introduction/glossary
    introduction/links

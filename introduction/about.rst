@@ -58,11 +58,3 @@ and is available in
 
 |
 
-
-.. toctree::
-   :maxdepth: 3
-   :hidden:
-   :includehidden:
-
-   features.rst
-   glossary

@@ -1,5 +1,5 @@
 .. _how-to-buy:
 
 ==================
-How To Buy Dash
+How To Buy
 ==================
