@@ -548,22 +548,22 @@ in summer 2018.
 Included below is our current work on Evolution, that adds many
 components such as:
 
--  DashDrive – A decentralized shared file system for user data that
-   lives on the second tier network
--  DAPI – A decentralized API which allows third tier users to access
-   the network securely
--  DashPay Decentralized Wallets – These wallets are light clients
-   connected to the network via DAPI and run on various platforms
--  Second Tier – The masternode network, which provides compensated
-   infrastructure for the project
--  Budgets – The second tier is given voting power to allocate funds for
-   specific projects on the network via the budget system
--  Governance – The second tier is given voting power to govern the
-   currency and chart the course the currency takes
--  Quorum Chain – This feature introduces a permanent stable masternode
-   list, which can be used to calculate past and present quorums
--  Social Wallet – We introduce a social wallet, which allows friends
-   lists, grouping of users and shared multisig accounts.
+- *DashDrive:* A decentralized shared file system for user data that
+  lives on the second tier network
+- *DAPI:* A decentralized API which allows third tier users to access
+  the network securely
+- *DashPay Decentralized Wallets:* These wallets are light clients
+  connected to the network via DAPI and run on various platforms
+- *Second Tier:* The masternode network, which provides compensated
+  infrastructure for the project
+- *Budgets:* The second tier is given voting power to allocate funds 
+  for specific projects on the network via the budget system
+- *Governance:* The second tier is given voting power to govern the
+  currency and chart the course the currency takes
+- *Quorum Chain:* This feature introduces a permanent stable masternode
+  list, which can be used to calculate past and present quorums
+- *Social Wallet:* We introduce a social wallet, which allows friends
+  lists, grouping of users and shared multisig accounts.
 
 Evolution Previews
 ------------------
@@ -573,8 +573,8 @@ UI/UX Development Chuck Williams describe the development process and
 upcoming features of the Dash Evolution platform.
 
 
-| **Head of UI/UX Development Chuck Williams on Evolution**
-| Dash Conference London, 14 September 2017
+**Head of UI/UX Development Chuck Williams on Evolution**
+Dash Conference London, 14 September 2017
 
 .. raw:: html
 
@@ -582,12 +582,12 @@ upcoming features of the Dash Evolution platform.
         <iframe src="//www.youtube.com/embed/b-XL_ddWCwQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-| **Dash Force News interview with Evan Duffield on the Evolution Roadmap**
-| 28 June 2017
+**Dash Force News interview with Evan Duffield on the Evolution Roadmap**
+28 June 2017
 
 .. raw:: html
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 70%; height: auto;">
+    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 20px; height: 0; overflow: hidden; max-width: 70%; height: auto;">
         <iframe src="//www.youtube.com/embed/E65QixSRosw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
