@@ -66,7 +66,7 @@ Masternodes cost money and effort to host so they are paid a share of
 the block reward as an incentivize. With current masternode numbers
 and rewards, masternodes earn approximately a 8% return on 1000 Dash
 (which means 6.97 Dash or USD1360 in July 2017) for the year of
-2017. This `tool <https://stats.masternode.me/>`__ shows a
+2017. This `tool <https://stats.masternode.me/>`_ shows a
 live calculation of masternode earnings. These rewards decrease by 7%
 each year, but the rising value of Dash should offset these
 reductions. As a matter of fact, masternodes were receiving 140 Dash per
@@ -196,7 +196,7 @@ with their respective private keys. Should problems arise, the code can
 be deactivated in the same manner, without the need for a network-wide
 rollback or client update. For technical details on individual sporks,
 see
-`here <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/128319489/Understanding+Sporks>`__.
+`here <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/128319489/Understanding+Sporks>`_.
 
 
 .. _x11_hash_algorithm:
@@ -322,15 +322,14 @@ fee-based economy than Bitcoin.
 Total coin emission
 -------------------
 
-`Bitcoin's total coin
-emission <https://docs.google.com/spreadsheets/d/12tR_9WrY0Hj4AQLoJYj9EDBzfA38XIVLQSOOOVePNm0/pubhtml?gid=0&single=true>`__
+`Bitcoin's total coin emission <https://docs.google.com/spreadsheets/d/12tR_9WrY0Hj4AQLoJYj9EDBzfA38XIVLQSOOOVePNm0/pubhtml?gid=0&single=true>`_
 can be calculated as the sum of a geometric series, with the total
 emission approaching (but never reaching) 21,000,000 BTC. This will
 continue until 2140, but the mining reward reduces so quickly that 99%
 of all bitcoin will be in circulation by 2036, and 99.9% by 2048.
 
 `Dash's total coin
-emission <https://docs.google.com/spreadsheets/d/1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`__
+emission <https://docs.google.com/spreadsheets/d/1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`_
 is also the sum of a geometric series, but the ultimate total coin
 emission is uncertain because it cannot be known how much of the 10%
 block reward reserved for budget proposals will actually be allocated,
@@ -353,20 +352,17 @@ Block reward allocation
 
 Unlike Bitcoin, which allocates 100% of the block reward to miners, Dash
 splits the block reward between the
-`miner <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146945/Mining>`__,
+`miner <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146945/Mining>`_,
 a deterministically selected
-`masternode <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/33947684/Understanding+masternodes>`__,
-and the decentralized `budget
-system <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8585246/Governance+and+Budget+System>`__.
+`masternode <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/33947684/Understanding+masternodes>`_,
+and the decentralized `budget system <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8585246/Governance+and+Budget+System>`_.
 Dash features superblocks, which appear every 16616 blocks (approx.
-30.29 days) and release 10% of the cumulative budget over that `budget
-cycle
-period <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/19169430/Using+Decentralized+Governance%3A+Proposals%2C+Voting%2C+and+Budgets>`__
+30.29 days) and release 10% of the cumulative budget over that 
+`budget cycle period <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/19169430/Using+Decentralized+Governance%3A+Proposals%2C+Voting%2C+and+Budgets>`_
 to the winning proposals in the budget system. To pay for superblocks,
 the block reward for normal blocks over the period is reduced by 10%.
 Normal block payments are split equally between miners and masternodes
-according to the `payment
-logic <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8880184/Payment+Logic>`__,
+according to the `payment logic <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8880184/Payment+Logic>`_,
 resulting in an coin reward allocation over a budget cycle as follows:
 
 +-----+----------------------------------------+
@@ -378,11 +374,10 @@ resulting in an coin reward allocation over a budget cycle as follows:
 +-----+----------------------------------------+
 
 This documentaiton is based on calculations and posts by moocowmoo.
-Please see `this reddit
-post <https://www.reddit.com/r/dashpay/comments/7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`__
+Please see `this reddit post <https://www.reddit.com/r/dashpay/comments/7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`_
 for more details, or run your own `emission calculations using this
-tool <https://repl.it/@moocowmoo/dash-minmax-coin-generation>`__.
-See `this site <https://stats.masternode.me>`__ for live data on current
+tool <https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_.
+See `this site <https://stats.masternode.me>`_ for live data on current
 network statistics.
 
 .. _decentralized_governance:
