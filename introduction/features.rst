@@ -214,8 +214,8 @@ time to develop before mining centralization became a threat. This
 approach was largely successful; as of early 2016, ASICs for X11 now
 exist and comprise a significant portion of the network hashrate, but
 have not resulted in the level of centralization present in Bitcoin.
-Information on mining with X11 can be found in the 
-:ref:`Mining <mining>` section of this documentation.
+Information on mining with X11 can be found in the `Mining <mining>`_ 
+section of this documentation.
 
 X11 is the name of the chained proof-of-work (**PoW**) algorithm that
 was introduced in Dash (launched January 2014 as "Xcoin"). It was 
@@ -297,8 +297,9 @@ Emission Rate
 
 Cryptocurrencies such as Dash and Bitcoin are created through a
 cryptographically difficult process known as mining. Mining involves
-repeatedly solving :ref:`hash algorithms <x11-hash-algorithm>` until a valid
-solution for the current :ref:`mining difficulty <dark-gravity-wave>` is discovered. Once discovered, the miner is permitted to create new units 
+repeatedly solving `hash algorithms <x11-hash-algorithm>`_ until a valid
+solution for the current `mining difficulty <dark-gravity-wave>`_ is 
+discovered. Once discovered, the miner is permitted to create new units 
 of the currency. This is known as the block reward. To ensure that the 
 currency is not subject to endless inflation, the block reward is 
 reduced at regular intervals. Graphing this data results in a curve 
@@ -416,7 +417,7 @@ not paid out (10% of each block) will be used to fund approved
 proposals. The network thus funds itself by reserving 10% of the block
 reward for budget projects.
 
-You can read more about Dash governance in the :ref:`governance <dgbb>` 
+You can read more about Dash governance in the `governance <dgbb>`_ 
 section of this documentation.
 
 
@@ -484,7 +485,7 @@ The release of Dash 0.12.2.0 and activation of DIP0001 saw a
 simultaneous reduction of fees by a factor of 10, while the block size
 was increased from 1MB to 2MB to promote continued growth of low-cost
 transactions even as the cost of Dash rises. Dash also supports
-:ref:`InstantSend <instantsend>` and :ref:`PrivateSend <privatesend>`
+`InstantSend <instantsend>`_ and `PrivateSend <privatesend>`_
 transactions, which operate on a different and mandatory fee schedule. 
 The fee schedule for Dash 12.2.x as of December 2017 is as follows:
 

@@ -7,7 +7,7 @@ How To Buy
 Dash can be purchased and sold in several ways, each with different
 advantages and disadvantages. The following options are available:
 
-- :ref:Exchanges_ are one of the most popular ways to trade cryptocurrency. A
+- Exchanges_ are one of the most popular ways to trade cryptocurrency. A
   wide range of exchanges exist, each offering slightly different
   features. Some serve different markets, some are in direct
   competition, some have cheaper fees, and some are subject to more or
@@ -20,20 +20,20 @@ advantages and disadvantages. The following options are available:
   categories: exchanges which accept national currency (fiat money) and
   exchanges which deal in cryptocurrencies only.
 
-- :ref:`Instant exchanges <instant_exchanges>` perform a similar
+- `Instant exchanges <instant_exchanges>`_ perform a similar
   function to normal exchanges, but without the requirement to log in.
   They effectively convert one currency to another, with some limits on
   the amount to be exchanged and usually at a less advantageous rate.
   Others may even offer to sell cryptocurrency as a credit card
   purchase.
 
-- Peer-to-peer exchanges have recently appeared to facilitate trading of
-  Dash directly between individuals. Volume is often lower, and users
-  typically make offers or requests at the price they are willing to
-  pay, and wait for someone to contact them and arrange details of the
-  sale. More advanced peer-to- peer sites offer escrow services for a
-  fee to prevent cheating during the sale between two parties who have
-  never met.
+  `Peer-to-peer exchanges <peer_to_peer>`_ have recently appeared to
+  facilitate trading ofDash directly between individuals. Volume is
+  often lower, and users typically make offers or requests at the price
+  they are willing to pay, and wait for someone to contact them and
+  arrange details of the sale. More advanced peer-to- peer sites offer
+  escrow services for a fee to prevent cheating during the sale between
+  two parties who have never met.
 
 - ATMs_ accepting card and cash payments in return for crypto are widely
   available. Mapping services can show the specific location of these
