@@ -155,7 +155,7 @@ InstantSend was introduced in a whitepaper called `Transaction Locking
 and Masternode Consensus: A Mechanism for Mitigating Double Spending
 Attacks <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_.
 
-***How Dash 'InstantSend' Protects Merchants from Double Spends***
+**How Dash 'InstantSend' Protects Merchants from Double Spends**,
 Dash Detailed by Amanda B. Johnson, 16 September 2016
 
 .. raw:: html
@@ -548,21 +548,21 @@ in summer 2018.
 Included below is our current work on Evolution, that adds many
 components such as:
 
-- *DashDrive:* A decentralized shared file system for user data that
+- **DashDrive:** A decentralized shared file system for user data that
   lives on the second tier network
-- *DAPI:* A decentralized API which allows third tier users to access
+- **DAPI:** A decentralized API which allows third tier users to access
   the network securely
-- *DashPay Decentralized Wallets:* These wallets are light clients
+- **DashPay Decentralized Wallets:** These wallets are light clients
   connected to the network via DAPI and run on various platforms
-- *Second Tier:* The masternode network, which provides compensated
+- **Second Tier:** The masternode network, which provides compensated
   infrastructure for the project
-- *Budgets:* The second tier is given voting power to allocate funds 
+- **Budgets:** The second tier is given voting power to allocate funds 
   for specific projects on the network via the budget system
-- *Governance:* The second tier is given voting power to govern the
+- **Governance:** The second tier is given voting power to govern the
   currency and chart the course the currency takes
-- *Quorum Chain:* This feature introduces a permanent stable masternode
+- **Quorum Chain:** This feature introduces a permanent stable masternode
   list, which can be used to calculate past and present quorums
-- *Social Wallet:* We introduce a social wallet, which allows friends
+- **Social Wallet:** We introduce a social wallet, which allows friends
   lists, grouping of users and shared multisig accounts.
 
 Evolution Previews
@@ -573,7 +573,7 @@ UI/UX Development Chuck Williams describe the development process and
 upcoming features of the Dash Evolution platform.
 
 
-**Chuck Williams on Evolution**Dash Conference London, 14 September 2017
+**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017
 
 .. raw:: html
 
