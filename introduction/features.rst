@@ -573,21 +573,19 @@ UI/UX Development Chuck Williams describe the development process and
 upcoming features of the Dash Evolution platform.
 
 
-**Head of UI/UX Development Chuck Williams on Evolution**
-Dash Conference London, 14 September 2017
+**Chuck Williams on Evolution**Dash Conference London, 14 September 2017
 
 .. raw:: html
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 70%; height: auto;">
+    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 70%; height: auto;">
         <iframe src="//www.youtube.com/embed/b-XL_ddWCwQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-**Dash Force News interview with Evan Duffield on the Evolution Roadmap**
-28 June 2017
+**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 
+2017
 
 .. raw:: html
 
-    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 20px; height: 0; overflow: hidden; max-width: 70%; height: auto;">
+    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 70%; height: auto;">
         <iframe src="//www.youtube.com/embed/E65QixSRosw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
-
