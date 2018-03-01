@@ -484,7 +484,7 @@ upcoming features of the Dash Evolution platform.
 
 
 Head of UI/UX Development, Chuck Williams
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+"""""""""""""""""""""""""""""""""""""""""
 
 Dash Conference London, 14 September 2017
 
@@ -493,7 +493,7 @@ Dash Conference London, 14 September 2017
     </div>
 
 Dash Force News interview with Evan Duffield on the Evolution Roadmap 
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 28 June 2017
 
