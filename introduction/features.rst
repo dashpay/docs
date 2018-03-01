@@ -147,7 +147,7 @@ to earn money from fees in the future.
 
 .. _sporks:
 
-Multi-Phased Fork ("Spork")
+Sporks
 ============================
 
 In response to unforeseen issues with the rollout of the major "RC3"
@@ -155,9 +155,8 @@ update in June 2014, the Dash development team created a mechanism by
 which updated code is released to the network, but not immediately made
 active ("enforced"). This innovation allows for far smoother transitions
 than in the traditional hard fork paradigm, as well as the collection of
-test data in the live network environment. This process was originally
-to be called "soft forking" but the community affectionately dubbed it
-"the spork" and the name stuck!
+test data in the live network environment. This process of multi-phased 
+forking was originally to be called "soft forking" but the community affectionately dubbed it "the spork" and the name stuck.
 
 New features or versions of Dash undergo extensive testing on testnet
 before they are released to the main network. When a new feature or
@@ -195,6 +194,8 @@ time to develop before mining centralization became a threat. This
 approach was largely successful; as of early 2016, ASICs for X11 now
 exist and comprise a significant portion of the network hashrate, but
 have not resulted in the level of centralization present in Bitcoin.
+Information on mining with X11 can be found in the 
+:ref:`Mining <mining>` section of this documentation.
 
 X11 is the name of the chained proof-of-work (**PoW**) algorithm that
 was introduced in Dash (launched January 2014 as "Xcoin"). It was 
@@ -206,10 +207,9 @@ priori* instead of having some hashes being randomly picked.
 The X11 algorithm uses multiple rounds of 11 different hashes (blake,
 bmw, groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, echo),
 thus making it one of the safest and more sophisticated cryptographic
-hashes in use by modern cryptocurrencies.
-
-The name X11 is not related to the open source GUI server that provides
-a graphical interface to Unix/Linux users.
+hashes in use by modern cryptocurrencies. The name X11 is not related to
+the open source X11 windowing system common on UNIX-like operating 
+systems.
 
 Advantages of X11
 -----------------
@@ -237,17 +237,12 @@ increased safety and longevity for store of wealth purposes, investment
 diversification and hedging against risks associated with single-hash
 currencies plagued by SPOF (Single Point Of Failure).
 
-Evan Duffield, the creator of Dash and X11 chained-hash, has wrote on
+Evan Duffield, the creator of Dash and X11 chained-hash, has written on
 several occasions that X11 was integrated into Dash not with the
 intention to prevent ASIC manufacturers from creating ASICs for X11 in
 the future, but rather to provide a similar migratory path that Bitcoin
 had (CPUs, GPUs, ASICs).
 
-Mining with X11
----------------
-
-Information on mining with X11 can be found in the 
-:ref:`Mining <mining>` section of this documentation.
 
 .. _dark-gravity-wave:
 
@@ -297,4 +292,212 @@ reduces the emission by one-fourteenth (approx. 7.14%) every 210240
 blocks (approx. 383.25 days). It can be seen that reducing the block
 reward by a smaller amount each year offers a smoother transition to a
 fee-based economy than Bitcoin.
+
+
+.. _decentralized_governance:
+
+Decentralized Governance
+=========================
+
+Decentralized Governance by Blockchain, or DGBB, is Dash's attempt to
+solve two important problems in cryptocurrency: governance and funding.
+Governance in a decentralized project is difficult, because by
+definition there are no central authorities to make decisions for the
+project. In Dash, such decisions are made by the network, that is, by
+the owners of masternodes. The DGBB system allows each masternode to
+vote once (yes/no/abstain) for each proposal. If a proposal passes, it
+can then be implemented (or not) by Dash's developers. A key example is
+early in 2016, when Dash's Core Team submitted a proposal to the network
+asking whether the blocksize should be increased to 2 MB. Within 24
+hours, consensus had been reached to approve this change. Compare this
+to Bitcoin, where debate on the blocksize has been raging for nearly
+three years.
+
+DGBB also provides a means for Dash to fund its own development. While 
+other projects have to depend on donations or premined endowments, Dash 
+uses 10% of the block reward to fund its own development. Every time a 
+block is mined, 45% of the reward goes to the miner, 45% goes to a 
+masternode, and the remaining 10% is not created until the end of the
+month. During the month, anybody can make a budget proposal to the
+network. If that proposal receives net approval of at least 10% of the
+masternode network, then at the end of the month a series of
+"superblocks" will be created. At that time, the block rewards that were
+not paid out (10% of each block) will be used to fund approved
+proposals. The network thus funds itself by reserving 10% of the block
+reward for budget projects.
+
+You can read more about Dash governance in the :ref:`governance <dgbb>` 
+section of this documentation.
+
+
+.. _sentinel:
+
+Sentinel
+=========
+
+Sentinel is an autonomous agent for persisting, processing and
+automating Dash 12.1 governance objects and tasks, and for expanded
+functions in the upcoming Dash V13 release (Evolution). Sentinel is
+implemented as a Python application that binds to a local version 12.1
+dashd instance on each Dash 12.1 masternode.
+
+A Governance Object (or "govObject") is a generic structure introduced
+in Dash Core 12.1 to allow for the creation of Budget Proposals,
+Triggers, and Watchdogs. Class inheritance has been utilized to extend 
+this generic object into a "Proposal" object to supplant the current 
+Dash budget system.
+
+
+.. epigraph::
+
+   "The differences with Sentinel are really architectural and not easy/
+   interesting to explain to users as they are a bridge from 12.0 
+   towards Evo features (but not fully implementing them), and Sentinel 
+   was only a part of 12.1 improvements anyway. Pre-Sentinel, governance 
+   functions were 'hard wired' into core code. Sentinel abstracts this 
+   process because in Evolution there are many Object types from Users 
+   to Accounts to Contacts etc, and if we didn't make this change first,
+   future changes / improvements in Evolution (e.g. adding a new type of 
+   Object) would require changing core code. Now Core is agnostic to 
+   types of objects and we can take this forward for user experience and
+   not just governance. In terms of documentation, there is no 
+   whitepaper specific to Sentinel, but we have various docs for Evo in
+   an on-going RFC process which are used as the basis for Evo 
+   development.
+
+   -- Andy Freer, Evolution Developer
+
+
+.. _fees:
+
+Fees
+======
+
+Transactions on the Dash network are recorded in blocks on the
+blockchain. The size of each transaction is measured in bytes, but there
+is not necessarily a correlation between high value transactions and the
+number of bytes required to process the transaction. Instead,
+transaction size is affected by how many input and output addresses are
+involved, since more data must be written in the block to store this
+information. Each new block is generated by a miner, who is paid for
+completing the work to generate the block with a block reward. In order
+to prevent the network from being filled with spam transactions, the
+size of each block is artificially limited. As transaction volume
+increases, the space in each block becomes a scarce commodity. Because
+miners are not obliged to include any transaction in the blocks they
+produce, once blocks are full, a voluntary transaction fee can be
+included as an incentive to the miner to process the transaction. Most
+wallets include a small fee by default, although many miners will
+process transactions even if no fee is included.
+
+The release of Dash 0.12.2.0 and activation of DIP0001 saw a
+simultaneous reduction of fees by a factor of 10, while the block size
+was increased from 1MB to 2MB to promote continued growth of low-cost
+transactions even as the cost of Dash rises. Dash also supports
+:ref:`InstantSend <instantsend>` and :ref:`PrivateSend <privatesend>`
+transactions, which operate on a different and mandatory fee schedule. 
+The fee schedule for Dash 12.2.x as of December 2017 is as follows:
+
++----------------------+-----------------+-----------------------------------+
+| Transaction type     | Recommended fee | Per unit                          |
++======================+=================+===================================+
+| Standard transaction | .00001 DASH     | Per kB of transaction data        |
++----------------------+-----------------+-----------------------------------+
+| InstantSend          | .0001 DASH      | Per transaction input             |
++----------------------+-----------------+-----------------------------------+
+| PrivateSend          | .001 DASH       | Per 10 rounds of mixing (average) |
++----------------------+-----------------+-----------------------------------+
+
+As an example, a standard and relatively simple transaction on the Dash
+network with one input, one output and a possible change address
+typically fits in the range of 200 - 400 bytes. Assuming a price of
+US$800 per DASH, the fee falls in the range of $0.0015 - $0.0030, or
+well under half a cent. Processing the transaction using InstantSend at
+the same price would add $0.08 or eight cents to the transaction. These
+fees apply regardless of the Dash or dollar value of the transaction
+itself.
+
+PrivateSend works by creating denominations of 10, 1, 0.1 and 0.01 DASH
+and then mixing these denominations with other users. Creation of the
+denominations is charged at the default fee for a standard transaction.
+Mixing is free, but to prevent spam attacks, an average of one in ten
+mixing transactions are charged a fee of 0.001 DASH. Spending inputs
+mixed using PrivateSend incurs the usual standard or InstantSend fees,
+but to avoid creating a potentially identifiable change address, the fee
+is always rounded up to the lowest possible denomination. This is
+typically .01 DASH, so it is important to deduct the fee from the amount
+being sent if possible to minimise fees. Combining InstantSend and
+PrivateSend may be expensive due to this requirement and the fact that a
+PrivateSend transaction may require several inputs, while InstantSend
+charges a fee of 0.0001 DASH per input. Always check your fees before
+sending a transaction.
+
+
+.. _evolution:
+
+Evolution
+==========
+
+***`Dash Evolution <https://www.dash.org/evolution/>`__** is the code
+name for a decentralized currency platform built on Dash blockchain
+technology. The goal is to provide simple access to the unique features
+and benefits of Dash to assist in the creation of decentralized
+technology. Dash introduces a tiered network design, which allows users
+to do various jobs for the network, along with decentralized API access
+and a decentralized file system.*
+
+Dash Evolution will be released in stages. Dash Core releases 12.1 
+through to 12.3 will lay the groundwork for the decentralized features 
+behind the scenes. An alpha version of Evolution is expected in the 
+first half of 2018, including a basic implementation of DashDrive, 
+Primitives, DAPI and a simple T3 wallet. This will be released together 
+with a series of Dash Improvement Proposals (DIPs), followed by a 
+testnet phase with most basic functionality, and a first stable release 
+in summer 2018.
+
+Included below is our current work on Evolution, that adds many
+components such as:
+
+-  DashDrive – A decentralized shared file system for user data that
+   lives on the second tier network
+-  DAPI – A decentralized API which allows third tier users to access
+   the network securely
+-  DashPay Decentralized Wallets – These wallets are light clients
+   connected to the network via DAPI and run on various platforms
+-  Second Tier – The masternode network, which provides compensated
+   infrastructure for the project
+-  Budgets – The second tier is given voting power to allocate funds for
+   specific projects on the network via the budget system
+-  Governance – The second tier is given voting power to govern the
+   currency and chart the course the currency takes
+-  Quorum Chain – This feature introduces a permanent stable masternode
+   list, which can be used to calculate past and present quorums
+-  Social Wallet – We introduce a social wallet, which allows friends
+   lists, grouping of users and shared multisig accounts.
+
+Evolution Previews
+------------------
+
+The following videos featuring Dash Founder Evan Duffield and Head of
+UI/UX Development Chuck Williams describe the development process and
+upcoming features of the Dash Evolution platform.
+
+
+Head of UI/UX Development, Chuck Williams
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Dash Conference London, 14 September 2017
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/b-XL_ddWCwQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+Dash Force News interview with Evan Duffield on the Evolution Roadmap 
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+28 June 2017
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/E65QixSRosw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
