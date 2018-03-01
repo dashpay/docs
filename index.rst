@@ -48,8 +48,7 @@ interest.
    :includehidden:
    :caption: First Steps
 
-   about
-   features
+   about/index
    how-to-buy
    links
 
