@@ -158,7 +158,7 @@ few seconds.
 
 InstantSend was introduced in a whitepaper called `Transaction Locking 
 and Masternode Consensus: A Mechanism for Mitigating Double Spending
-Attacks <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>
+Attacks <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_.
 
 
 .. _emission_rate:
@@ -200,9 +200,9 @@ exist and comprise a significant portion of the network hashrate, but
 have not resulted in the level of centralization present in Bitcoin.
 
 X11 is the name of the chained proof-of-work (**PoW**) algorithm that
-was introduced in Dash (launched January 2014 as “Xcoin”). It was 
+was introduced in Dash (launched January 2014 as "Xcoin"). It was 
 partially inspired by the chained-hashing approach of Quark, adding
-further “depth” and complexity by increasing the number of hashes, yet
+further "depth" and complexity by increasing the number of hashes, yet
 it differs from Quark in that the rounds of hashes are determined *a
 priori* instead of having some hashes being randomly picked.
 
@@ -221,7 +221,7 @@ The increased complexity and sophistication of the chained algorithm
 provides enhanced levels of security and less uncertainty for a digital
 currency, compared to single-hash PoW solutions that are not protected
 against security risks like SPOF (Single Point Of Failure). For example,
-a possible but not probable computing breakthrough that “breaks” the
+a possible but not probable computing breakthrough that "breaks" the
 SHA256 hash could jeopardize the entire Bitcoin network until the
 network shifts through a hard fork to another cryptographic hash.
 
@@ -277,4 +277,36 @@ Version 3.0 was implemented on May 14 of 2014 to further improve
 difficulty re-targeting with smoother transitions. It also fixes issues
 with various architectures that had different levels of floating-point
 accuracy through the use of integers.
+
+Multi-Phased Fork ("Spork")
+============================
+
+In response to unforeseen issues with the rollout of the major "RC3"
+update in June 2014, the Dash development team created a mechanism by
+which updated code is released to the network, but not immediately made
+active ("enforced"). This innovation allows for far smoother transitions
+than in the traditional hard fork paradigm, as well as the collection of
+test data in the live network environment. This process was originally
+to be called "soft forking" but the community affectionately dubbed it
+"the spork" and the name stuck!
+
+New features or versions of Dash undergo extensive testing on testnet
+before they are released to the main network. When a new feature or
+version of Dash is released on mainnet, communication is sent out to
+users informing them of the change and the need for them to update their
+clients. Those who update their clients run the new code, but it is not
+activated until a sufficient percentage of network participants (usually
+80%) reach consensus on running it. In the event of errors occurring
+with the new code, the client’s blocks are not rejected by the network
+and unintended forks are avoided. Data about the error can then be
+collected and forwarded to the development team. Once the development
+team is satisfied with the new code’s stability in the mainnet
+environment – and once acceptable network consensus is attained –
+enforcement of the updated code can be activated remotely by multiple
+members of the core development team signing a network message together
+with their respective private keys. Should problems arise, the code can
+be deactivated in the same manner, without the need for a network-wide
+rollback or client update. For technical details on individual sporks,
+see
+`here <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/128319489/Understanding+Sporks>`__.
 
