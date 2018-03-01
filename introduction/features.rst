@@ -35,15 +35,11 @@ Masternodes
 In addition to traditional Proof of Work (PoW) rewards for mining Dash,
 users are also rewarded for running and maintaining special servers
 called masternodes. Thanks to this innovative two tier network, Dash can
-offer innovative features in a trustless and decentralized way.
-
-What is a Dash masternode?
---------------------------
-
-Dash uses special servers called masternodes to power PrivateSend,
-InstantSend, and the governance and treasury system. Users are rewarded
-for running masternodes; 45% of the block reward is allocated to pay the
-masternode network.
+offer innovative features in a trustless and decentralized way. 
+Masternodes are used to power PrivateSend, InstantSend, and the 
+governance and treasury system. Users are rewarded for running 
+masternodes; 45% of the block reward is allocated to pay the masternode 
+network.
 
 Masternodes enable the following services:
 
@@ -61,20 +57,16 @@ Masternodes enable the following services:
 Masternode owners must have possession of 1000 DASH, which they prove by
 signing a message and broadcasting to the network. Those coins can be
 moved at any time, but moving them will cause the masternode to fall out
-of queue and stop earning rewards.
-
-Masternode users also are given **voting rights** on proposals. Each
-masternode has one vote and this vote can be used on budget proposals or
-important decisions that affect Dash.
-
-How much can you earn from hosting a Masternode?
-------------------------------------------------
+of queue and stop earning rewards. Masternode users are also given 
+**voting rights** on proposals. Each masternode has one vote and this 
+vote can be used on budget proposals or important decisions that affect 
+Dash.
 
 Masternodes cost money and effort to host so they are paid a share of
-the block reward to incentivize them. With current masternode numbers
-and rewards masternodes earn approximately a 8% return on 1000 Dash
+the block reward as an incentivize. With current masternode numbers
+and rewards, masternodes earn approximately a 8% return on 1000 Dash
 (which means 6.97 Dash or USD1360 in July 2017) for the year of
-2017. This `tool <https://stats.masternode.me/>`__ shows a
+2017. This `tool <https://stats.masternode.me/>`__ shows a
 live calculation of masternode earnings. These rewards decrease by 7%
 each year, but the rising value of Dash should offset these
 reductions. As a matter of fact, masternodes were receiving 140 Dash per
@@ -162,6 +154,15 @@ few seconds.
 InstantSend was introduced in a whitepaper called `Transaction Locking 
 and Masternode Consensus: A Mechanism for Mitigating Double Spending
 Attacks <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_.
+
+***How Dash 'InstantSend' Protects Merchants from Double Spends***
+Dash Detailed by Amanda B. Johnson, 16 September 2016
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/HJx82On8jig" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
 
 .. _sporks:
@@ -301,7 +302,7 @@ solution for the current :ref:`mining difficulty <dark-gravity-wave>` is discove
 of the currency. This is known as the block reward. To ensure that the 
 currency is not subject to endless inflation, the block reward is 
 reduced at regular intervals. Graphing this data results in a curve 
-showing total coins in circulation, known as the coin emission rate. 
+showing total coins in circulation, known as the coin emission rate.
 
 While Dash is based on Bitcoin, it significantly modifies the coin
 emission rate to offer a smoother reduction in coin emission over time.
@@ -311,6 +312,77 @@ blocks (approx. 383.25 days). It can be seen that reducing the block
 reward by a smaller amount each year offers a smoother transition to a
 fee-based economy than Bitcoin.
 
+
+.. figure:: img/coin_emission.jpg
+
+   Bitcoin vs. Dash coin emission rate
+
+
+Total coin emission
+-------------------
+
+`Bitcoin's total coin
+emission <https://docs.google.com/spreadsheets/d/12tR_9WrY0Hj4AQLoJYj9EDBzfA38XIVLQSOOOVePNm0/pubhtml?gid=0&single=true>`__
+can be calculated as the sum of a geometric series, with the total
+emission approaching (but never reaching) 21,000,000 BTC. This will
+continue until 2140, but the mining reward reduces so quickly that 99%
+of all bitcoin will be in circulation by 2036, and 99.9% by 2048.
+
+`Dash's total coin
+emission <https://docs.google.com/spreadsheets/d/1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`__
+is also the sum of a geometric series, but the ultimate total coin
+emission is uncertain because it cannot be known how much of the 10%
+block reward reserved for budget proposals will actually be allocated,
+since this depends on future voting behavior. Dash will continue to emit
+coins for approximately 192 years before a full year of mining creates
+less than 1 DASH. After 2209 only 14 more dash will be created. The last
+dash will take 231 years to be generated, starting in 2246 and ending
+when emission completely stops in 2477. Based on these numbers, a
+maximum and minimum possible coin supply in the year 2254 can be
+calculated to be between:
+
++-----------------+-----------------------------------+
+| 17,742,696 DASH | Assuming zero treasury allocation |
++-----------------+-----------------------------------+
+| 18,921,005 DASH | Assuming full treasury allocation |
++-----------------+-----------------------------------+
+
+Block reward allocation
+-----------------------
+
+Unlike Bitcoin, which allocates 100% of the block reward to miners, Dash
+splits the block reward between the
+`miner <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146945/Mining>`__,
+a deterministically selected
+`masternode <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/33947684/Understanding+masternodes>`__,
+and the decentralized `budget
+system <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8585246/Governance+and+Budget+System>`__.
+Dash features superblocks, which appear every 16616 blocks (approx.
+30.29 days) and release 10% of the cumulative budget over that `budget
+cycle
+period <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/19169430/Using+Decentralized+Governance%3A+Proposals%2C+Voting%2C+and+Budgets>`__
+to the winning proposals in the budget system. To pay for superblocks,
+the block reward for normal blocks over the period is reduced by 10%.
+Normal block payments are split equally between miners and masternodes
+according to the `payment
+logic <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8880184/Payment+Logic>`__,
+resulting in an coin reward allocation over a budget cycle as follows:
+
++-----+----------------------------------------+
+| 45% | Mining Reward                          |
++-----+----------------------------------------+
+| 45% | Masternode Reward for Proof-of-service |
++-----+----------------------------------------+
+| 10% | Decentralized Governance Budget        |
++-----+----------------------------------------+
+
+This documentaiton is based on calculations and posts by moocowmoo.
+Please see `this reddit
+post <https://www.reddit.com/r/dashpay/comments/7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`__
+for more details, or run your own `emission calculations using this
+tool <https://repl.it/@moocowmoo/dash-minmax-coin-generation>`__.
+See `this site <https://stats.masternode.me>`__ for live data on current
+network statistics.
 
 .. _decentralized_governance:
 
@@ -501,7 +573,7 @@ UI/UX Development Chuck Williams describe the development process and
 upcoming features of the Dash Evolution platform.
 
 
-***Head of UI/UX Development, Chuck Williams***
+***Head of UI/UX Development Chuck Williams on Evolution***
 Dash Conference London, 14 September 2017
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 70%; height: auto;">
