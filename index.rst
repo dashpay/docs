@@ -48,9 +48,9 @@ interest.
    :includehidden:
    :caption: First Steps
 
-   about/index
-   how-to-buy
-   links
+   introduction/about
+   introduction/how-to-buy
+   introduction/links
 
 .. _user-docs:
 

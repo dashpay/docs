@@ -37,6 +37,7 @@ advanced features.
         <iframe src="https://www.youtube.com/embed/?listType=playlist&list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
     </iframe>
 
+|
 
 Dash 101
 ~~~~~~~~
@@ -55,10 +56,13 @@ and is available in
         <iframe src="https://www.youtube.com/embed/?listType=playlist&list=PLiFMZOlhgsYIDP2V2XsuTFZu1C1sV5ohr" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
     </iframe>
 
+|
+
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :hidden:
    :includehidden:
 
    features
+   glossary
