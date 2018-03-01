@@ -528,13 +528,13 @@ sending a transaction.
 Evolution
 ==========
 
-***`Dash Evolution <https://www.dash.org/evolution/>`_** is the code
+`Dash Evolution <https://www.dash.org/evolution/>`_ is the code
 name for a decentralized currency platform built on Dash blockchain
 technology. The goal is to provide simple access to the unique features
 and benefits of Dash to assist in the creation of decentralized
 technology. Dash introduces a tiered network design, which allows users
 to do various jobs for the network, along with decentralized API access
-and a decentralized file system.*
+and a decentralized file system.
 
 Dash Evolution will be released in stages. Dash Core releases 12.1 
 through to 12.3 will lay the groundwork for the decentralized features 
@@ -573,8 +573,8 @@ UI/UX Development Chuck Williams describe the development process and
 upcoming features of the Dash Evolution platform.
 
 
-**Head of UI/UX Development Chuck Williams on Evolution**
-Dash Conference London, 14 September 2017
+| **Head of UI/UX Development Chuck Williams on Evolution**
+| Dash Conference London, 14 September 2017
 
 .. raw:: html
 
@@ -582,8 +582,8 @@ Dash Conference London, 14 September 2017
         <iframe src="//www.youtube.com/embed/b-XL_ddWCwQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-***Dash Force News interview with Evan Duffield on the Evolution Roadmap***
-28 June 2017
+| **Dash Force News interview with Evan Duffield on the Evolution Roadmap**
+| 28 June 2017
 
 .. raw:: html
 
