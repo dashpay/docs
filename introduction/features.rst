@@ -9,14 +9,14 @@ Features
 Specifications
 ==================
 
--  Release date: 11PM EST, 18th January 2014
+-  First block mined at 11PM EST, 18th January 2014
 -  No premine
 -  X11 hashing algorithm
--  2.5 minute block generation time
+-  2.6 minute block generation time
 -  Block reward decreases by 7.14% per year
 -  CPU/GPU/ASIC mining
 -  Dark Gravity Wave difficulty adjustment algorithm
--  Total coins: :ref:`between 17.74M and 18.92M <emission_rate>`
+-  Between 17.74M and 18.92M total coin supply
 -  Decentralized masternode network
 -  Superior transaction anonymity using PrivateSend
 -  Instant transactions using InstantSend
@@ -26,68 +26,6 @@ Specifications
    proposals fund Dash development and come directly from block rewards,
    i.e. Dash development is self-funded by its own blockchain.
 
-
-.. _privatesend:
-
-PrivateSend
-==================
-
-PrivateSend gives you true financial privacy by obscuring the origins of
-your funds. All the Dash in your wallet is comprised of different
-"inputs", which you can think of as separate, discrete coins. 
-PrivateSenduses an innovative process to mix your inputs with the inputs
-of two other people, without having your coins ever leave your wallet. 
-You retain control of your money at all times.
-
-The PrivateSend process works like this:
-
-#. PrivateSend begins by breaking your transaction inputs down into
-   standard denominations. These denominations are 0.01 Dash, 0.1 DASH,
-   1 DASH and 10 DASH -- much like the paper money you use every day.
-#. Your wallet then sends requests to specially configured software
-   nodes on the network, called "masternodes". These masternodes are
-   informed then that you are interested in mixing a certain
-   denomination. No identifiable information is sent to the masternodes,
-   so they never know "who" you are.
-#. When two other people send similar messages, indicating that they
-   wish to mix the same denomination, a mixing session begins. The
-   masternode mixes up the inputs and instructs all three users' wallets
-   to pay the now-transformed input back to themselves. Your wallet pays
-   that denomination directly to itself, but in a different address
-   (called a change address).
-#. In order to fully obscure your funds, your wallet must repeat this
-   process a number of times with each denomination. Each time the
-   process is completed, it's called a "round". Each round of
-   PrivateSend makes it exponentially more difficult to determine where
-   your funds originated.
-#. This mixing process happens in the background without any
-   intervention on your part. When you wish to make a transaction, your
-   funds will already be anonymized. No additional waiting is required.
-
-**IMPORTANT:** Your wallet only contains 1000 of these "change
-addresses". Every time a mixing event happens, one of your addresses is
-used up. Once enough of them are used, your wallet must create more
-addresses. It can only do this, however, if you have automatic backups
-enabled. Consequently, users who have backups disabled will also have
-PrivateSend disabled.
-
-
-.. _instantsend:
-
-InstantSend
-==================
-
-InstantSend technology will allow for cryptocurrencies such as Dash to 
-compete with nearly instantaneous transaction systems such as credit 
-cards for point-of-sale situationswhile not relying on a centralized 
-authority. Widespread vendor acceptance of Dash and InstantSend could
-revolutionize cryptocurrency by shortening the delay in confirmation of
-transactions from as long as an hour (with Bitcoin) to as little as a 
-few seconds.
-
-InstantSend was introduced in a whitepaper called `Transaction Locking 
-and Masternode Consensus: A Mechanism for Mitigating Double Spending
-Attacks <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_.
 
 .. _masternode_network:
 
@@ -145,6 +83,87 @@ today: USD600 per month. There is also the possibility for masternodes
 to earn money from fees in the future.
 
 
+.. _privatesend:
+
+PrivateSend
+==================
+
+PrivateSend gives you true financial privacy by obscuring the origins of
+your funds. All the Dash in your wallet is comprised of different
+"inputs", which you can think of as separate, discrete coins. 
+PrivateSenduses an innovative process to mix your inputs with the inputs
+of two other people, without having your coins ever leave your wallet. 
+You retain control of your money at all times.
+
+The PrivateSend process works like this:
+
+#. PrivateSend begins by breaking your transaction inputs down into
+   standard denominations. These denominations are 0.01 Dash, 0.1 DASH,
+   1 DASH and 10 DASH -- much like the paper money you use every day.
+#. Your wallet then sends requests to specially configured software
+   nodes on the network, called "masternodes". These masternodes are
+   informed then that you are interested in mixing a certain
+   denomination. No identifiable information is sent to the masternodes,
+   so they never know "who" you are.
+#. When two other people send similar messages, indicating that they
+   wish to mix the same denomination, a mixing session begins. The
+   masternode mixes up the inputs and instructs all three users' wallets
+   to pay the now-transformed input back to themselves. Your wallet pays
+   that denomination directly to itself, but in a different address
+   (called a change address).
+#. In order to fully obscure your funds, your wallet must repeat this
+   process a number of times with each denomination. Each time the
+   process is completed, it's called a "round". Each round of
+   PrivateSend makes it exponentially more difficult to determine where
+   your funds originated.
+#. This mixing process happens in the background without any
+   intervention on your part. When you wish to make a transaction, your
+   funds will already be anonymized. No additional waiting is required.
+
+**IMPORTANT:** Your wallet only contains 1000 of these "change
+addresses". Every time a mixing event happens, one of your addresses is
+used up. Once enough of them are used, your wallet must create more
+addresses. It can only do this, however, if you have automatic backups
+enabled. Consequently, users who have backups disabled will also have
+PrivateSend disabled.
+
+
+.. _instantsend:
+
+InstantSend
+==================
+
+Traditional decentralized cryptocurrencies must wait for certain period 
+of time for enough blocks to pass to ensure that a transaction is both 
+irreversible and not an attempt to double-spend money which has already 
+been spent elsewhere. This process is time-consuming, and may take 
+anywhere from 15 minutes to one hour for the widely accepted number of 
+six blocks to accumulate. Other cryptocurrencies achieve faster 
+transaction confirmation time by centralizing authority on the network 
+to various degrees.
+
+Dash suffers from neither of these limitations thanks to its 
+second-layer network of masternodes. Masternodes can be called upon to 
+form voting quorums to check whether or not a submitted transaction is 
+valid. If it is valid, the masternodes "lock" the inputs for the 
+transaction and broadcast this information to the network, effectively 
+promising that the transaction will be included in subsequently mined 
+blocks and not allowing any other spending of these inputs during the 
+confirmation time period.
+
+InstantSend technology will allow for cryptocurrencies such as Dash to 
+compete with nearly instantaneous transaction systems such as credit 
+cards for point-of-sale situations while not relying on a centralized 
+authority. Widespread vendor acceptance of Dash and InstantSend could
+revolutionize cryptocurrency by shortening the delay in confirmation of
+transactions from as long as an hour (with Bitcoin) to as little as a 
+few seconds.
+
+InstantSend was introduced in a whitepaper called `Transaction Locking 
+and Masternode Consensus: A Mechanism for Mitigating Double Spending
+Attacks <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_.
+
+
 .. _sporks:
 
 Sporks
@@ -179,7 +198,7 @@ see
 `here <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/128319489/Understanding+Sporks>`__.
 
 
-.. _x11-hash-algorithm:
+.. _x11_hash_algorithm:
 
 X11 Hash Algorithm
 ==================
@@ -244,7 +263,7 @@ the future, but rather to provide a similar migratory path that Bitcoin
 had (CPUs, GPUs, ASICs).
 
 
-.. _dark-gravity-wave:
+.. _dark_gravity_wave:
 
 Dark Gravity Wave
 ==================
@@ -253,22 +272,21 @@ Dark Gravity Wave
 algorithm for Bitcoin-based cryptocurrencies that was first used in Dash
 and has since appeared in other digital currencies. DGW was authored by 
 Evan Duffield, the developer and creator of Dash, as a response to a 
-time-warp exploit found in *Kimoto's Gravity Well*. 
+time-warp exploit found in *Kimoto's Gravity Well*. In concept, DGW is 
+similar to the Kimoto Gravity Well, adjusting the difficulty levels 
+every block (instead of every 2016 blocks like Bitcoin) based on 
+statistical data from recently found blocks. This makes it possible to 
+issue blocks with relatively consistent times, even if the hashing power
+experiences high fluctuations, without suffering from the time-warp 
+exploit.
 
-In concept, DGW is similar to the Kimoto Gravity Well, adjusting the 
-difficulty levels every block (instead of every 2016 blocks like 
-Bitcoin) based on statistical data from recently found blocks. This 
-makes it possible to issue blocks with relatively consistent times, even 
-if the hashing power experiences high fluctuations, without suffering 
-from the time-warp exploit.
+- Version 2.0 of DGW was implemented in Dash from block 45,000 onwards 
+  in order to completely alleviate the time-warp exploit.
 
-Version 2.0 of DGW was implemented in Dash from block 45,000 onwards in 
-order to completely alleviate the time-warp exploit.
-
-Version 3.0 was implemented on May 14 of 2014 to further improve
-difficulty re-targeting with smoother transitions. It also fixes issues
-with various architectures that had different levels of floating-point
-accuracy through the use of integers.
+- Version 3.0 was implemented on May 14 of 2014 to further improve 
+  difficulty re-targeting with smoother transitions. It also fixes 
+  issues with various architectures that had different levels of 
+  floating-point accuracy through the use of integers.
 
 
 .. _emission_rate:
@@ -350,7 +368,7 @@ Dash budget system.
 
 .. epigraph::
 
-   "The differences with Sentinel are really architectural and not easy/
+   *"The differences with Sentinel are really architectural and not easy/
    interesting to explain to users as they are a bridge from 12.0 
    towards Evo features (but not fully implementing them), and Sentinel 
    was only a part of 12.1 improvements anyway. Pre-Sentinel, governance 
@@ -363,7 +381,7 @@ Dash budget system.
    not just governance. In terms of documentation, there is no 
    whitepaper specific to Sentinel, but we have various docs for Evo in
    an on-going RFC process which are used as the basis for Evo 
-   development.
+   development.*
 
    -- Andy Freer, Evolution Developer
 
@@ -438,7 +456,7 @@ sending a transaction.
 Evolution
 ==========
 
-***`Dash Evolution <https://www.dash.org/evolution/>`__** is the code
+***`Dash Evolution <https://www.dash.org/evolution/>`_** is the code
 name for a decentralized currency platform built on Dash blockchain
 technology. The goal is to provide simple access to the unique features
 and benefits of Dash to assist in the creation of decentralized
@@ -483,18 +501,14 @@ UI/UX Development Chuck Williams describe the development process and
 upcoming features of the Dash Evolution platform.
 
 
-Head of UI/UX Development, Chuck Williams
-"""""""""""""""""""""""""""""""""""""""""
-
+***Head of UI/UX Development, Chuck Williams***
 Dash Conference London, 14 September 2017
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 70%; height: auto;">
         <iframe src="//www.youtube.com/embed/b-XL_ddWCwQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-Dash Force News interview with Evan Duffield on the Evolution Roadmap 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+***Dash Force News interview with Evan Duffield on the Evolution Roadmap***
 28 June 2017
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 70%; height: auto;">
