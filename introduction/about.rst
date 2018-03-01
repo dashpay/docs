@@ -1,7 +1,7 @@
 .. _about:
 
 ==================
-About Dash
+What is Dash?
 ==================
 
 Dash aims to be the most user-friendly and scalable payments-focused
@@ -64,5 +64,5 @@ and is available in
    :hidden:
    :includehidden:
 
-   features
+   features.rst
    glossary

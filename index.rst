@@ -40,7 +40,7 @@ interest.
     </div>
     
 
-.. _first-steps:
+.. _introduction:
 
 .. toctree::
    :maxdepth: 3
@@ -50,6 +50,7 @@ interest.
 
    introduction/about
    introduction/how-to-buy
+   introduction/glossary
    introduction/links
 
 .. _user-docs:
