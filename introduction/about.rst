@@ -37,7 +37,6 @@ advanced features.
         <iframe src="https://www.youtube.com/embed/?listType=playlist&list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
     </iframe>
 
-|
 
 Dash 101
 ~~~~~~~~
@@ -56,5 +55,30 @@ and is available in
         <iframe src="https://www.youtube.com/embed/?listType=playlist&list=PLiFMZOlhgsYIDP2V2XsuTFZu1C1sV5ohr" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
     </iframe>
 
-|
 
+.. _whitepaper:
+
+Whitepaper
+------------------
+
+The Dash Whitepaper describes the unique value proposition and key
+innovations in Dash from an academic and theoretical perspective. It is 
+a living document maintained as a GitHub wiki, receiving ongoing updates 
+and frequent community translations as new features are implemented. 
+Various other whitepapers describing particular features in additional 
+detail and (for historical reasons) the original whitepaper are 
+available for download as PDF files.
+
+- `Latest whitepaper and official translations <https://github.com/dashpay/dash/wiki/Whitepaper>`_
+- `Original Darkcoin whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Darkcoin.pdf>`_
+- `InstantSend whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_
+
+Roadmap
+------------------
+
+The Dash Roadmap sets out delivery milestones for future releases of
+Dash and includes specific technical details describing how the
+development team plans to realise each challenge. Like the Whitepaper,
+it is versioned and maintained as a project on GitHub.
+
+- `Dash Roadmap <https://github.com/dashpay/dash-roadmap>`_
