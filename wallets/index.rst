@@ -84,7 +84,8 @@ wallets and more.
 .. toctree::
    :maxdepth: 2
 
-   android/index.rst
+   android/introduction.rst
+   android/usage.rst
 
 .. _dash_ios_wallet:
 
