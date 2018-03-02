@@ -14,6 +14,8 @@ different practical methods of keeping these keys safe in wallets, while
 still remaining useful for day-to-day needs.
 
 
+.. _dash_core_wallet:
+
 Dash Core Wallet
 ================
 
@@ -30,6 +32,9 @@ Linux, Raspberry Pi and Windows.
    dashcore/index.rst
    dashcore/interface.rst
    dashcore/installation.rst
+
+
+.. _dash_copay_wallet:
 
 Dash Copay Wallet
 =================
@@ -48,6 +53,9 @@ all times.
 
    copay/index.rst
 
+
+.. _dash_electrum_wallet:
+
 Dash Electrum Wallet
 ====================
 
@@ -61,14 +69,38 @@ does not currently support advanced InstantSend and PrivateSend
 features.
 
 
-Mobile Wallets
-==============
+.. _dash_android_wallet:
+
+Dash Android Wallet
+===================
+
+Dash offers a standalone wallet for Android, with development supported 
+by the Dash budget. The Dash Android Wallet supports advanced Dash 
+features, including contact management and InstandSend. You can scan and 
+display QR codes for quick transfers, backup your wallet, keep an 
+address book of frequently used addresses, pay with NFC, sweep paper 
+wallets and more.
+
+.. toctree::
+   :maxdepth: 2
+
+   android/index.rst
+
+.. _dash_ios_wallet:
+
+Dash iOS Wallet
+===============
 
 Mobile wallets allow you to send and receive Dash from the convenience
 of your mobile device. The keys are stored on the device, and the
 recovery seed allows you to quickly recover your funds if your device is
 lost. Dash mobile apps for Android and iOS support InstantSend so you
 can pay vendors without waiting for block confirmations.
+
+.. toctree::
+   :maxdepth: 2
+
+   android/index.rst
 
 
 Hardware Wallets
