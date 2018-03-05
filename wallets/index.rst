@@ -85,7 +85,8 @@ paper wallets and more.
    :maxdepth: 1
 
    android/installation.rst
-   android/usage.rst
+   android/basic-usage.rst
+   android/advanced-usage.rst
 
 .. image:: android/img/android1.png
     :width: 30 %
