@@ -110,6 +110,7 @@ lost. Dash mobile apps for Android and iOS support InstantSend so you
 can pay vendors without waiting for block confirmations.
 
 .. toctree::
+   :includehidden:
    :maxdepth: 2
 
    android/index.rst
