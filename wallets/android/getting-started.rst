@@ -64,3 +64,40 @@ will receive a notification when the transfer occurs, and you can view
 the confirmation status on the main screen and the balance in the top
 right corner. Dash Wallet for Android considers a transaction spendable
 after 6 block confirmations have taken place (approx. 15 minutes).
+
+.. image:: img/android-receive1.png
+    :width: 160 px
+.. image:: img/android-receive2.png
+    :width: 160 px
+.. image:: img/android-receive3.png
+    :width: 160 px
+.. image:: img/android-receive4.png
+    :width: 160 px
+
+*Receiving Dash and viewing your transactions and balance in Dash Wallet
+for Android*
+
+
+Sending Dash
+------------
+
+Tap the **Send coins** button at the bottom right of the screen to send
+Dash. You will be prompted to type, paste or scan (by tapping the round
+QR button) a Dash address, the amount to pay and whether to use
+InstantSend. Note that this information may already be included if you
+are scanning a QR code. The automatically determined network fee is
+displayed. Tap **Send** to complete the transaction.
+
+.. image:: img/android-send1.png
+    :width: 160 px
+.. image:: img/android-send2.png
+    :width: 160 px
+.. image:: img/android-send3.png
+    :width: 160 px
+.. image:: img/android-send4.png
+    :width: 160 px
+.. image:: img/android-send5.png
+    :width: 160 px
+
+*Sending Dash and viewing your transactions and balance in Dash Wallet
+for Android*
