@@ -77,15 +77,24 @@ Dash Android Wallet
 Dash offers a standalone wallet for Android, with development supported 
 by the Dash budget. The Dash Android Wallet supports advanced Dash 
 features, including contact management and InstandSend. You can scan and 
-display QR codes for quick transfers, backup your wallet, keep an 
-address book of frequently used addresses, pay with NFC, sweep paper 
-wallets and more.
+display QR codes for quick transfers, backup and restore your wallet, 
+keep an address book of frequently used addresses, pay with NFC, sweep 
+paper wallets and more.
 
 .. toctree::
    :maxdepth: 2
 
-   android/introduction.rst
+   android/installation.rst
    android/usage.rst
+
+.. image:: android/img/android1.png
+    :width: 30 %
+.. image:: android/img/android2.png
+    :width: 30 %
+.. image:: android/img/android3.png
+    :width: 30 %
+
+Screenshots showing the Dash Wallet balance, send and receive screens
 
 .. _dash_ios_wallet:
 
