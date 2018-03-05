@@ -82,7 +82,7 @@ keep an address book of frequently used addresses, pay with NFC, sweep
 paper wallets and more.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    android/installation.rst
    android/usage.rst
@@ -94,7 +94,8 @@ paper wallets and more.
 .. image:: android/img/android3.png
     :width: 30 %
 
-Screenshots showing the Dash Wallet balance, send and receive screens
+*Screenshots showing the Dash Wallet balance, send and receive screens*
+
 
 .. _dash_ios_wallet:
 
