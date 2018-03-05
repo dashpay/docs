@@ -82,6 +82,7 @@ keep an address book of frequently used addresses, pay with NFC, sweep
 paper wallets and more.
 
 .. toctree::
+   :includehidden:
    :maxdepth: 1
 
    android/installation.rst
@@ -89,11 +90,11 @@ paper wallets and more.
    android/advanced-functions.rst
 
 .. image:: android/img/android1.png
-    :width: 30 %
+    :width: 160 px
 .. image:: android/img/android2.png
-    :width: 30 %
+    :width: 160 px
 .. image:: android/img/android3.png
-    :width: 30 %
+    :width: 160 px
 
 *Screenshots showing the Dash Wallet balance, send and receive screens*
 
@@ -111,9 +112,9 @@ can pay vendors without waiting for block confirmations.
 
 .. toctree::
    :includehidden:
-   :maxdepth: 2
+   :maxdepth: 1
 
-   android/index.rst
+   ios/installation.rst
 
 
 Hardware Wallets
