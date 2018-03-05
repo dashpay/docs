@@ -52,10 +52,6 @@ Android Debug Bridge (ADB). Follow these instructions:
    link <https://github.com/HashEngineering/dash-wallet/releases/latest>`_. 
    At the time of writing, this was 5.17.5.
 #. Connect your phone to the PC, open a terminal/command prompt window
-   and type:
+   and type::
 
-   ::
-
-       adb install <<full path and name of the .apk file to be installed>>
-
-   ::
+     adb install <<full path and name of the .apk file to be installed>>
