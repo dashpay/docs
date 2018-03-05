@@ -16,14 +16,14 @@ it in a safe place - if you lose this, you will also lose access to your
 funds forever. If you prefer, you can also back up a password protected
 wallet file by selecting **Safety** > **Back up wallet**.
 
-.. image:: img/android-setup1.png
-    :width: 180 px
-.. image:: img/android-setup2.png
-    :width: 180 px
-.. image:: img/android-setup3.png
-    :width: 180 px
-.. image:: img/android-setup4.png
-    :width: 180 px
+.. image:: img/setup1.png
+    :width: 30 %
+.. image:: img/setup2.png
+    :width: 30 %
+.. image:: img/setup3.png
+    :width: 30 %
+.. image:: img/setup4.png
+    :width: 30 %
 
 *Viewing the recovery phrase for a new wallet in Dash Wallet for
 Android*
@@ -38,14 +38,14 @@ selecting **Safety** > **Restore from recovery phrase**. Carefully enter
 your recovery phrase and tap **Restore**. Your wallet may restart, and
 it will take some time for any past transactions and balances to appear.
 
-.. image:: img/android-restore1.png
-    :width: 180 px
-.. image:: img/android-restore2.png
-    :width: 180 px
-.. image:: img/android-restore3.png
-    :width: 180 px
-.. image:: img/android-restore4.png
-    :width: 180 px
+.. image:: img/restore1.png
+    :width: 25 %
+.. image:: img/restore2.png
+    :width: 25 %
+.. image:: img/restore3.png
+    :width: 25 %
+.. image:: img/restore4.png
+    :width: 25 %
 
 *Restoring an existing wallet from recovery phrase in Dash Wallet for
 Android*
