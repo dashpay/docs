@@ -93,8 +93,6 @@ paper wallets and more.
     :width: 160 px
 .. image:: android/img/android2.png
     :width: 160 px
-.. image:: android/img/android3.png
-    :width: 160 px
 
 *Screenshots showing the Dash Wallet balance, send and receive screens*
 
@@ -104,17 +102,24 @@ paper wallets and more.
 Dash iOS Wallet
 ===============
 
-Mobile wallets allow you to send and receive Dash from the convenience
-of your mobile device. The keys are stored on the device, and the
-recovery seed allows you to quickly recover your funds if your device is
-lost. Dash mobile apps for Android and iOS support InstantSend so you
-can pay vendors without waiting for block confirmations.
+Dash offers a standalone wallet for iOS, with development supported by
+the Dash budget. The official Dash Wallet supports advanced Dash
+features such as InstandSend. You can scan and display QR codes for
+quick transfers, backup your wallet using a recovery phrase and even pay
+to Bitcoin addresses through native integration with ShapeShift.
 
 .. toctree::
    :includehidden:
    :maxdepth: 1
 
    ios/installation.rst
+   ios/getting-started.rst
+   ios/advanced-functions.rst
+
+.. image:: ios/img/ios1.jpg
+    :width: 160 px
+.. image:: ios/img/ios2.jpg
+    :width: 160 px
 
 
 Hardware Wallets

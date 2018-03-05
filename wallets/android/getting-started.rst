@@ -1,4 +1,4 @@
-.. _dash_android_basic_usage:
+.. _dash_android_getting_started:
 
 Getting Started
 ===============
