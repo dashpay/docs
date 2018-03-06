@@ -77,31 +77,49 @@ Dash Android Wallet
 Dash offers a standalone wallet for Android, with development supported 
 by the Dash budget. The Dash Android Wallet supports advanced Dash 
 features, including contact management and InstandSend. You can scan and 
-display QR codes for quick transfers, backup your wallet, keep an 
-address book of frequently used addresses, pay with NFC, sweep paper 
-wallets and more.
+display QR codes for quick transfers, backup and restore your wallet, 
+keep an address book of frequently used addresses, pay with NFC, sweep 
+paper wallets and more.
 
 .. toctree::
-   :maxdepth: 2
+   :includehidden:
+   :maxdepth: 1
 
-   android/introduction.rst
-   android/usage.rst
+   android/installation.rst
+   android/getting-started.rst
+   android/advanced-functions.rst
+
+.. image:: android/img/android1.png
+    :width: 160 px
+.. image:: android/img/android2.png
+    :width: 160 px
+
+*Screenshots showing the Dash Wallet balance, send and receive screens*
+
 
 .. _dash_ios_wallet:
 
 Dash iOS Wallet
 ===============
 
-Mobile wallets allow you to send and receive Dash from the convenience
-of your mobile device. The keys are stored on the device, and the
-recovery seed allows you to quickly recover your funds if your device is
-lost. Dash mobile apps for Android and iOS support InstantSend so you
-can pay vendors without waiting for block confirmations.
+Dash offers a standalone wallet for iOS, with development supported by
+the Dash budget. The official Dash Wallet supports advanced Dash
+features such as InstandSend. You can scan and display QR codes for
+quick transfers, backup your wallet using a recovery phrase and even pay
+to Bitcoin addresses through native integration with ShapeShift.
 
 .. toctree::
-   :maxdepth: 2
+   :includehidden:
+   :maxdepth: 1
 
-   android/index.rst
+   ios/installation.rst
+   ios/getting-started.rst
+   ios/advanced-functions.rst
+
+.. image:: ios/img/ios1.jpg
+    :width: 160 px
+.. image:: ios/img/ios2.jpg
+    :width: 160 px
 
 
 Hardware Wallets
