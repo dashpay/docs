@@ -6,6 +6,21 @@ Dash Documentation
    :scale: 25 %
    :align: center
 
+The Dash documentation is available in the following languages:
+
+* `العَرَبِيَّة‎ <https://docs.dash.org/ar/latest/>`_
+* `Deutsch <https://docs.dash.org/de/latest/>`_
+* `ελληνικά <https://docs.dash.org/el/latest/>`_
+* `English <https://docs.dash.org/en/latest/>`_
+* `Español <https://docs.dash.org/es/latest/>`_
+* `Français <https://docs.dash.org/fr/latest/>`_
+* `हिन्दी  <https://docs.dash.org/hi/latest/>`_
+* `日本語 <https://docs.dash.org/ja/latest/>`_
+* `한국어 <https://docs.dash.org/ko/latest/>`_
+* `Português <https://docs.dash.org/pt/latest/>`_
+* `Русский <https://docs.dash.org/ru/latest/>`_
+* `简体中文 <https://docs.dash.org/zh_CN/latest/>`_
+
 Dash is an open source peer-to-peer cryptocurrency with a strong focus
 on the payments industry. Dash offers a form of money that is portable,
 inexpensive, divisible and fast. It can be spent securely both online
