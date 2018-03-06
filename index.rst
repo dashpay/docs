@@ -9,8 +9,13 @@ Dash Documentation
 +---------+---------+-----------+----------+---------+----------+
 | test_ar | Español | English   | Français | Deutsch | ελληνικά | 
 +---------+---------+-----------+----------+---------+----------+
-| test_ja | test_ko | Português | Русский  | test_zh | हिन्दी     |
+| test_ja | test_ko | Português | Русский  | test_zh | test_hi  |
 +---------+---------+-----------+----------+---------+----------+
+हिन्दी 
+简体中文
+한국어
+日本語
+العَرَبِيَّة‎
 
 Dash is an open source peer-to-peer cryptocurrency with a strong focus
 on the payments industry. Dash offers a form of money that is portable,
