@@ -14,6 +14,8 @@ Official sites
 - **User documentation:** https://www.dash.org/wiki
 - **Protocol documentation:** https://dash-docs.github.io
 - **Foundation:** https://www.dashfoundation.io
+- **GitHub:** https://github.com/dashpay
+- **GitHub (Evolution):** https://github.com/dashevo
 
 
 Forums
@@ -87,6 +89,12 @@ Blogs
 - **Dashdot:** https://dashdot.io/alpha/
 
 
+Wikipedia
+---------
+
+- https://en.wikipedia.org/wiki/Dash_(cryptocurrency)
+
+
 Inactive
 --------
 
@@ -118,18 +126,6 @@ Treasury Tools
 - https://dashvotetracker.com
 - https://proposal.dash.org
 - https://www.dashninja.pl/governance.html
-
-Wikipedia
----------
-
-- https://en.wikipedia.org/wiki/Dash_(cryptocurrency)
-
-
-GitHub
-------
-
-- https://github.com/dashpay
-- https://github.com/dashevo
 
 
 Masternode and blockchain stats
