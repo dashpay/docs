@@ -4,6 +4,29 @@
 Glossary
 ==================
 
+51% Attack
+  A condition in which more than half the computing power on a
+  cryptocurrency network is controlled by a single miner or group of
+  miners. That amount of power theoretically makes them the authority on
+  the network. This means that every client on the network believes the
+  attacker’s hashed transaction block.
+
+Address
+  A Dash address is used to Send / Receive a Payment on the Dash network.
+  It contains a string of alphanumeric characters, but can also be
+  represented as a scannable QR code. A Dash address is also the public
+  key in the pair of keys used by Dash holders to digitally sign
+  transactions (see Public key).
+
+Algorithm
+  In mathematics and computer science, an algorithm is a self-contained
+  step-by-step set of operations to be performed. Algorithms perform
+  calculation, data processing, and/or automated reasoning tasks.
+
+  Wikipedia definition: https://en.wikipedia.org/wiki/Algorithm
+
+
+
 +-----------------------------------+-----------------------------------+
 | Term                              | Definition                        |
 +===================================+===================================+
