@@ -122,6 +122,8 @@ all times.
    copay/index.rst
 
 
+.. _hardware_wallets:
+
 Hardware Wallets
 ================
 
