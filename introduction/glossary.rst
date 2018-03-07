@@ -209,7 +209,7 @@ Dash
   open source peer-to- peer cryptocurrency that solves many of Bitcoin's
   problems. Dash's features include PrivateSend, InstantSend,
   Decentralized Governance by Blockchain (DGBB), a 2nd tier network
-  (referred to as the masternode network). See the `Features
+  (referred to as the masternode network). See the :ref:`Features
   <features>`_ page for a full list of Dash's features.
 
   `Wikipedia definition <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_
@@ -225,7 +225,7 @@ Dash Client
 Dash Evolution
   This is a 3 tier network Dash developers are presently building. It
   will make Dash as easy to use as PayPal, while still remaining
-  decentralized. See the `Evolution <evolution>`_ page for more 
+  decentralized. See the :ref:`Evolution <evolution>` page for more 
   information.
 
 
