@@ -4,7 +4,7 @@ Links
 ==================
 
 Official information
---------------------
+====================
 
 - **Website:** https://www.dash.org
 - **User documentation:** https://www.dash.org/wiki
@@ -167,21 +167,24 @@ DarkNet Pages
 -------------
 
 - **Dash (Mirror of Main Page):** http://dashorg64cjvj4s3.onion
-- **The Hidden Wiki:** http://zqktlwi4fecvo6ri.onion/wiki/Dash_-_DigitalCash
+- **The Hidden Wiki:** `http://zqktlwi4fecvo6ri.onion/wiki/Dash_-_DigitalCash <http://zqktlwi4fecvo6ri.onion/wiki/Dash_-_DigitalCash>`_
+
 
 Mobile Apps
 ===========
 
+
 iOS
 ---
 
-- Dash Wallet
-- Edge Wallet
-- Dashy
-- CoinCap
-- Lawnmower
-- Blockfolio
-- Coinomi
+- **Dash Wallet:** https://itunes.apple.com/app/id1206647026
+- **Edge Wallet:** https://itunes.apple.com/app/id1344400091
+- **Dashy:** https://itunes.apple.com/app/id1033268631
+- **CoinCap:** https://itunes.apple.com/app/id1074052280
+- **Lawnmower:** https://itunes.apple.com/app/id965079226
+- **Blockfolio:** https://itunes.apple.com/app/id1095564685
+- **Coinomi:** https://ios-beta.coinomi.com/?token=HDEN57f3b8HTUTFANRawrJt4dyHot2Up
+
 
 Android
 -------
