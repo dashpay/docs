@@ -34,26 +34,6 @@ Linux, Raspberry Pi and Windows.
    dashcore/installation.rst
 
 
-.. _dash_copay_wallet:
-
-Dash Copay Wallet
-=================
-
-The Dash Copay wallet is a modern and feature-rich wallet available for
-both mobile and desktop devices. It supports advanced Dash features
-including InstantSend, HD address generation, user-friendly address
-books, multiple wallets in one app and easy to use multi-signature
-wallets. Dash Copay is a light wallet, meaning that even though a full
-copy of the blockchain is not required for use, the private keys to your
-addresses are stored securely on your device and under your control at
-all times.
-
-.. toctree::
-   :maxdepth: 2
-
-   copay/index.rst
-
-
 .. _dash_electrum_wallet:
 
 Dash Electrum Wallet
@@ -120,6 +100,26 @@ to Bitcoin addresses through native integration with ShapeShift.
     :width: 160 px
 .. image:: ios/img/ios2.jpg
     :width: 160 px
+
+
+.. _dash_copay_wallet:
+
+Dash Copay Wallet
+=================
+
+The Dash Copay wallet is a modern and feature-rich wallet available for
+both mobile and desktop devices. It supports advanced Dash features
+including InstantSend, HD address generation, user-friendly address
+books, multiple wallets in one app and easy to use multi-signature
+wallets. Dash Copay is a light wallet, meaning that even though a full
+copy of the blockchain is not required for use, the private keys to your
+addresses are stored securely on your device and under your control at
+all times.
+
+.. toctree::
+   :maxdepth: 2
+
+   copay/index.rst
 
 
 Hardware Wallets
