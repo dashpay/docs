@@ -91,7 +91,7 @@ Blockchain
   Each block contains a timestamp and information linking it to a 
   previous block.
 
-Blocks  
+Blocks
   Transactions on the Blockchain are collected in "`blocks 
   <https://en.wikipedia.org/wiki/Block_chain_(database)#Blocks>`_" which 
   record and confirm when and in what sequence transactions enter and 
@@ -207,13 +207,20 @@ Dash
 
   `Wikipedia article <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_
 
-Dash Client 
+Dash Client
   Dash clients are software programs used to interface with the Dash
   network. They store the private keys needed to conduct Dash
   transactions as well as a copy of the entire blockchain. A Dash client
   connects to the Dash network and becomes a node in the network. A node
   shares and propagates new transactions with the rest of the network,
   creating a robust decentralized infrastructure.
+
+Dash Core Wallet 
+  The :ref:`Dash Core Wallet <dash_core_wallet> (known also as the QT
+  wallet) is the "official" Dash wallet that is compiled by the Dash
+  Core Team and allows both PrivateSend and InstantSend. The DashCore
+  wallet will download the entire blockchain and serve it over the
+  internet to any peers who request it.
 
 Dash Evolution
   This is a 3 tier network Dash developers are presently building. It
@@ -246,7 +253,7 @@ Decentralized
   the potential of these systems to maximize efficiency. However, it is 
   debatable whether these networks increase overall effectiveness.
 
-Desktop Wallet  
+Desktop Wallet
   A wallet is a piece of software that stores your Dash. There are many
   different wallet options, but it is imperative to choose a secure one.
   We recommend any of the following: :ref:`Dash Core Wallet
@@ -436,7 +443,273 @@ Fork
   network. Dash uses a Multi-Phased Fork (“:ref:`Spork <sporks>`”)
   system for greater flexibility and safety.
 
+Full Nodes
+  Any Dash client that is serving a full version of the blockchain to
+  peers. This can be a user running a Dash Core wallet on his/her
+  desktop, or it could be a masternode. Full nodes promote
+  decentrailzation by allowing any user to double check the validity of
+  the blockchain.
 
+Fungible
+  Every unit of the currency is worth the same as any other unit. 
 
+Genesis Block 
+  The very first block in the block chain. 
 
+GPU
+  A `graphics processing unit (GPU)
+  <https://en.wikipedia.org/wiki/Graphics_processing_unit>`_, also
+  occasionally called visual processing unit (VPU), is a specialized
+  electronic circuit designed to rapidly manipulate and alter memory to
+  accelerate the creation of images in a frame buffer intended for
+  output to a display. GPUs are used in embedded systems, mobile phones,
+  personal computers, workstations, and game consoles. Modern GPUs are
+  very efficient at manipulating computer graphics and image processing,
+  and their highly parallel structure makes them more efficient than
+  general- purpose CPUs for algorithms where the processing of large
+  blocks of data is done in parallel. In a personal computer, a GPU can
+  be present on a video card, or it can be embedded on the motherboard
+  or — in certain CPUs — on the CPU die. Certain cryptocurrencies use
+  mining algorithms which are most efficiently run on GPUs.
 
+Hardware Wallet
+  :ref:`Hardware wallets <hardware_wallets>` are among the safest type
+  of wallet for storing your Dash. Your private key is protected inside
+  a piece of hardware, and is never exposed to the internet. You are
+  still able to sign transactions as normal, making it both safe and
+  convenient.
+
+Hash
+  A mathematical process that takes a variable amount of data and
+  produces a shorter, fixed-length output. A hashing function has two
+  important characteristics. First, it is mathematically difficult to
+  work out what the original input was by looking at the output. Second,
+  changing even the tiniest part of the input will produce an entirely
+  different output.
+
+Hashrate
+  The number of hashes that can be performed by a Dash miner in a given
+  period of time (usually a second). 
+
+InstantX
+  See InstantSend
+
+InstantSend
+  :ref:`InstantSend <instantsend>` technology uses the masternode 
+  network to "lock" transaction inputs, preventing Dash from being 
+  double-spent. Unlike Bitcoin, where it takes an hour or longer for 
+  transactions to fully confirm, transactions using InstantSend are 
+  "locked" and irreversible after only a few seconds.
+
+Liquidity
+  The ability to buy and sell an asset easily, with pricing that stays
+  roughly similar between trades. A suitably large community of buyers
+  and sellers is important for liquidity. The result of an illiquid
+  market is price volatility, and the inability to easily determine the
+  value of an asset.
+
+Masternode
+  A :ref:`masternode <masternode>` is special type of full node that
+  performs services for the network and is paid a portion of the block
+  reward. Masternodes require proof of ownership of 1000 DASH.
+
+  Masternodes serve as the second tier of the Dash network, and power
+  InstantSend, PrivateSend, the Budget System.
+
+Mining
+  :ref:`Miners <mining>` process transactions on the Dash network and
+  publish them on the blockchain. As a reward for doing this, miners are
+  paid 45% of the block reward.
+
+Mobile Wallet
+  These are wallets available on mobile devices (iOS + Android).
+
+MultiSig
+  Multi-signature addresses provide additional security by requiring
+  multiple people to sign a transaction with their private key before
+  the transaction can be sent. For example, in 2 of 3 multisig, two out
+  of three possible signatories have to sign a transaction for it to be
+  processed. Multi-signature addresses are commonly used by exchanges
+  and other organizations that are in possession of large sums of
+  cryptocurrency, since it makes theft much more difficult.
+
+Node
+  A node is any device running Dash wallet software. Full nodes are
+  software clients that have downloaded the entire blockchain and serve
+  it to other clients on Dash's peer-to-peer network.
+
+OTC
+  Over the counter (OTC) trades are trades that occur off exchanges. In
+  an OTC trade, a buyer and seller trade with each other directly, or
+  through an intermediary. OTC trading is useful when a person wants to
+  either buy or sell a large amount of cryptocurrency and is afraid that
+  a large buy or sell order will move the price (called "slippage").
+
+P2P
+  Peer-to-peer. Decentralized interactions that happen between at least
+  two parties in a highly interconnected network. An alternative system
+  to a 'hub-and-spoke' arrangement, in which all participants in a
+  transaction deal with each other through a single mediation point.
+
+Paper Wallet
+  :ref:`Paper wallets <paper_wallets>` are offline wallets, printed on
+  paper for safety. If properly secured and stored they are considered
+  the safest way to store cryptocurrency.
+
+Privacy
+  `Privacy <https://en.wikipedia.org/wiki/Privacy>`_ is the ability of
+  an individual or group to seclude themselves, or information about
+  themselves, and thereby express themselves selectively. The boundaries
+  and content of what is considered private differ among cultures and
+  individuals, but share common themes. When something is private to a
+  person, it usually means that something is inherently special or
+  sensitive to them. The domain of privacy partially overlaps security
+  (confidentiality), which can include the concepts of appropriate use,
+  as well as protection of information. Dash includes PrivateSend, which
+  allows users to maintain financial privacy.
+
+Private Key
+  A `private key <https://en.wikipedia.org/wiki/Public-
+  key_cryptography>`_ is a long alphanumeric passcode that allows Dash
+  to be spent. Every Dash wallet contains one or more private keys which
+  are saved in the wallet file. The private keys are mathematically
+  related to all Dash addresses generated for the wallet. Because the
+  private key is the "ticket" that allows someone to spend Dash, it is
+  important that these are kept secure and secret.
+
+PrivateSend
+  :ref:`PrivateSend <privatesend>` obscures the source of funds in order
+  to maintain financial privacy between users. It can be turned on or 
+  off at the users' discretion.
+
+Proof of Work - PoW
+  Consensus mechanism that keeps all nodes honest by requiring
+  computational power to be expended in order to create new blocks.
+  Miners must use expensive equipment and burn electricity to add blocks
+  to the blockchain. Without a consensus mechanism of some sort, any
+  node could add blocks to the chain and the network's nodes would never
+  agree on which chain was valid.
+
+Proof of Stake - PoS
+  Consensus mechanism that relies on ownership of a cryptocurrency to
+  maintain the blockchain. In Proof of Stake systems, each owner of the
+  currency can use their wallet to "stake," and there's a small chance
+  that they will be chosen to create the next block and add it to the
+  chain. In this way consensus is maintained across all nodes. Proof of
+  Stake saves electricity and does not require specialized computer
+  hardware. It does however suffer from several pitfalls, including the
+  "nothing at stake" problem. Since no electricity is consumed, in the
+  event of an attack it is actually beneficial for Proof of Stake nodes
+  to "vote" to accept both the legitimate chain and the attacker's
+  chain.
+
+Public Key
+  The `public key <https://en.wikipedia.org/wiki/Public-
+  key_cryptography>`_ is derived from the private key but is not secret
+  and can be revealed to anybody. When a private key is used to sign
+  messages, the public key is used to verify that the signature is
+  valid.
+
+Pump and dump
+  Inflating the value of a financial asset that has been produced or
+  acquired cheaply, often using aggressive publicity and misleading
+  statements. The publicity causes others to acquire the asset, forcing
+  up its value. When the value is high enough, the perpetrator sells
+  their assets, cashing in and flooding the market, which causes the
+  value to crash. This is particularly common in markets with low
+  liquidity, such as some altcoins.
+
+QR Code
+  A two-dimensional graphical block containing a monochromatic pattern
+  representing a sequence of data. QR codes are designed to be scanned
+  by cameras, including those found in mobile phones, and are frequently
+  used to encode Dash addresses.
+
+Satoshi Nakamoto
+  `Satoshi Nakamoto <https://en.wikipedia.org/wiki/Satoshi_Nakamoto>`_
+  is the name used by the person or people who designed Bitcoin and
+  created its original reference implementation.
+
+Spork
+  The Dash development team created a mechanism known as a ":ref:`spork
+  <sporks>`" by which updated code is released to the network, but not
+  immediately made active (or “enforced”). Communication is sent out to
+  users informing them of the change and the need for them to update
+  their clients. Those who update their clients run the new code, but in
+  the event of errors occurring with that new code, the client’s blocks
+  are not rejected by the network and unintended forks are avoided. Data
+  about the error can then be collected and forwarded to the development
+  team. Once the development team is satisfied with the new code’s
+  stability in the mainnet environment – and once acceptable network
+  consensus is attained – enforcement of the updated code can be
+  activated remotely. Should problems arise, the code can be deactivated
+  in the same manner, without the need for a network-wide rollback or
+  client update.
+
+Tainted Coins
+  Taint is a measure of correlation between two (wallet) addresses. It
+  is only important if the user is trying to remain anonymous.
+
+tDash
+  Test Dash, used on testnet.
+
+Testnet
+  Testnet is a network only for testing (parallel to the mainnet), test
+  wallets, test coins, test masternodes, test miners, and test users all
+  simulate their mainnet counterparts in a safe environment where errors
+  or forks are not harmful.
+
+Tor
+  An anonymous routing protocol used by people wanting to hide their
+  identity online.
+
+Transaction Block
+  A collection of transactions on the Dash network, gathered into a
+  block that can then be hashed and added to the blockchain.
+
+Transaction Fee
+  A small fee imposed on some transactions sent across the Dash network.
+  The transaction fee is awarded to the miner that successfully hashes
+  the block containing the relevant transaction.
+
+Unconfirmed Transactions
+  Transactions that are not yet processed by miners or held via
+  InstantSend are "unconfirmed on the blockchain." Unconfirmed
+  transactions can be reversed and should not be considered as "final."
+
+Vanity Address
+  A Dash address with a desirable pattern, such as a name.
+
+Virgin Dash
+  Dash received as a reward for mining a block or running a masternode.
+  These have not yet been spent anywhere and are "virgin."
+
+Volatility
+  The measurement of price movements over time for a traded financial
+  asset (including Dash).
+
+Wallet
+  A method of storing Dash for later use. A wallet holds the private
+  keys associated with Dash addresses. The blockchain is the record of
+  the Dash balances (and transactions) associated with those addresses.
+
+Whitepaper
+  A `white paper <https://en.wikipedia.org/wiki/White_paper>`_ is an
+  authoritative report or guide that informs readers concisely about a
+  complex issue and presents the issuing body's philosophy on the
+  matter. It is meant to help readers understand an issue, solve a
+  problem, or make a decision.
+
+X11
+  :ref:`X11 <x11_hash_algorithm>` is a hashing algorithm created by Dash 
+  Core developer Evan Duffield.
+
+Zero Confirmations  
+  This is a transaction without any confirmations from the blockchain.
+  It is technically reversible (unless InstantSend was used).
+
+vin
+  A transaction (tx) consists of one or more inputs and one or more
+  outputs. The vin is the list of inputs to the transaction, and vout is
+  the list of outputs. Masternodes require a 1000 DASH vin (exactly that
+  amount) in order to work.
