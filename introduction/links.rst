@@ -1,10 +1,14 @@
 .. _links:
 
-Links
-==================
+=====================
+Links and information
+=====================
 
-Official information
-====================
+Links
+=====
+
+Official sites
+--------------
 
 - **Website:** https://www.dash.org
 - **User documentation:** https://www.dash.org/wiki
