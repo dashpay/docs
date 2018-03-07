@@ -23,6 +23,7 @@ Forums
 
 - **Dash Forum**: https://www.dash.org/forum
 - **BitcoinTalk thread:** https://bitcointalk.org/index.php?topic=421615.0
+- **Cryptocurrencytalk.com:** https://cryptocointalk.com/forum/693-dash-dash
 - **百度贴吧 达世币吧 (Baidu Tieba):** `https://tieba.baidu.com/f?kw=达世币 <https://tieba.baidu.com/f?kw=达世币>`_
 - **彩云比特 达世币 (CYBTC Dash):** http://www.cybtc.com/forum-123-1.html
 
@@ -67,7 +68,6 @@ Facebook
 - **Thailand:** https://www.facebook.com/groups/1127359790623640
 - **London:** https://www.facebook.com/Dash-Digital-Cash-London-1559503720975382
 - **Greece:** https://www.facebook.com/DashGreece
-- **Czech Republic:** https://www.facebook.com/dashpay.cz
 - **Denmark:** https://www.facebook.com/DashDenmark
 
 
@@ -92,20 +92,24 @@ Blogs
 Wikipedia
 ---------
 
-- https://en.wikipedia.org/wiki/Dash_(cryptocurrency)
+- `https://en.wikipedia.org/wiki/Dash_(cryptocurrency) <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_
 
 
 Inactive
 --------
 
 - **Bitcoin.com forum:** https://forum.bitcoin.com/dash-f67
-- **Cryptocurrencytalk.com forum:** https://cryptocointalk.com/forum/693-dash-dash
 - **Crypto-city.com page:** https://www.crypto-city.com/index.php/dash-dash-coin
 - **Bitco.in forum:** https://bitco.in/forum/threads/dash-digitalcash.891
 
 
 Tools
 =====
+
+Dash Masternode Tool
+--------------------
+
+- https://github.com/Bertrand256/dash-masternode-tool
 
 
 Block Explorers
