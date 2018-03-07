@@ -19,11 +19,10 @@ Address
   transactions (see Public key).
 
 Algorithm
-  In mathematics and computer science, an algorithm is a self-contained
-  step-by-step set of operations to be performed. Algorithms perform
+  In mathematics and computer science, an `algorithm 
+  <https://en.wikipedia.org/wiki/Algorithm>`_ is a self-contained 
+  step-by-step set of operations to be performed. Algorithms perform 
   calculation, data processing, and/or automated reasoning tasks.
-
-  `Wikipedia definition <https://en.wikipedia.org/wiki/Algorithm>`_
 
 Altcoin
   Since Bitcoin was the first cryptocurrency and has the largest market
@@ -37,7 +36,8 @@ AML
   Regulators frequently apply AML techniques to Dash exchanges.
 
 API
-  In computer programming, an application programming interface (API) is
+  In computer programming, an `application programming interface (API) 
+  <https://en.wikipedia.org/wiki/Application_programming_interface>`_ is
   a set of routines, protocols, and tools for building software and
   applications.
 
@@ -48,8 +48,6 @@ API
   interface. A good API makes it easier to develop a program by
   providing all the building blocks, which are then put together by the
   programmer.
-
-  `Wikipedia definition <https://en.wikipedia.org/wiki/Application_programming_interface>`_
 
 ASIC
   An application-specific integrated circuit (ASIC), is an integrated
@@ -83,25 +81,23 @@ Bitcoin 2.0
   Voting,....)
 
 Blockchain
-  A blockchain is a distributed database that maintains a continuously-
-  growing list of data records hardened against tampering and revision.
-  It consists of data structure blocks — which exclusively hold data in
-  initial blockchain implementations, and both data and programs in some
-  of the more recent implementations — with each block holding batches
-  of individual transactions and the results of any blockchain
-  executables. Each block contains a timestamp and information linking
-  it to a previous block.
-
-  `Wikipedia definition <https://en.wikipedia.org/wiki/Block_chain_(database)>`_
+  A `blockchain <https://en.wikipedia.org/wiki/Block_chain_(database)>`_ 
+  is a distributed database that maintains a continuously-growing list 
+  of data records hardened against tampering and revision. It consists 
+  of data structure blocks — which exclusively hold data in initial 
+  blockchain implementations, and both data and programs in some of the 
+  more recent implementations — with each block holding batches of 
+  individual transactions and the results of any blockchain executables. 
+  Each block contains a timestamp and information linking it to a 
+  previous block.
 
 Blocks  
-  Transactions on the Blockchain are collected in "blocks" which record
-  and confirm when and in what sequence transactions enter and are
-  logged in the block chain. Blocks are created by users known as
+  Transactions on the Blockchain are collected in "`blocks 
+  <https://en.wikipedia.org/wiki/Block_chain_(database)#Blocks>`_" which 
+  record and confirm when and in what sequence transactions enter and 
+  are logged in the block chain. Blocks are created by users known as
   "miners" who use specialized software or equipment designed
   specifically to create blocks.
-
-  `Wikipedia definition <https://en.wikipedia.org/wiki/Block_chain_(database)#Blocks>`_
 
 Budget System / DGBB
   The development of Dash and the Dash ecosystem is self-funded by the
@@ -156,24 +152,22 @@ Confirmed Transactions
   written to the blockchain (and thus "confirmed").
 
 CPU
-  A central processing unit (CPU) is the electronic circuitry within a
-  computer that carries out the instructions of a computer program by
-  performing the basic arithmetic, logical, control and input/output
-  (I/O) operations specified by the instructions. The term has been used
-  in the computer industry at least since the early 1960s.
-  Traditionally, the term "CPU" refers to a processor, more specifically
-  to its processing unit and control unit (CU), distinguishing these
-  core elements of a computer from external components such as main
-  memory and I/O circuitry.
-
-  `Wikipedia definition <https://en.wikipedia.org/wiki/Central_processing_unit>`_
+  A `central processing unit (CPU) 
+  <https://en.wikipedia.org/wiki/Central_processing_unit>`_ is the 
+  electronic circuitry within a computer that carries out the 
+  instructions of a computer program by performing the basic arithmetic, 
+  logical, control and input/output (I/O) operations specified by the 
+  instructions. The term has been used in the computer industry at least 
+  since the early 1960s. Traditionally, the term "CPU" refers to a 
+  processor, more specifically to its processing unit and control unit 
+  (CU), distinguishing these core elements of a computer from external 
+  components such as main memory and I/O circuitry.
 
 Cryptocurrency
-  A cryptocurrency (or crypto currency or crypto-currency) is a medium
-  of exchange using cryptography to secure the transactions and to
-  control the creation of new units.
-
-  `Wikipedia definition <https://en.wikipedia.org/wiki/Cryptocurrency>`_
+  A `cryptocurrency <https://en.wikipedia.org/wiki/Cryptocurrency>`_ (or 
+  crypto currency or crypto-currency) is a medium of exchange using 
+  cryptography to secure the transactions and to control the creation of 
+  new units.
 
 Cryptography
   Cryptography or cryptology (from Greek κρυπτός *kryptós*, "hidden,
@@ -189,14 +183,13 @@ Cryptography
   science, and electrical engineering. Applications of cryptography
   include ATM cards, computer passwords, and electronic commerce.
 
-Dark Gravity Wave / DGW
-  In concept, **DGW** is similar to *Kimoto Gravity Well*, adjusting the
-  difficulty levels every block (instead of every 2016 blocks like
-  Bitcoin) by using statistical data of the last blocks found. In this
-  way block issuing times can remain consistent despite fluctuations in
-  hashpower. However it doesn't suffer from the time-warp exploit.
-
-  `Dark Gravity Wave <dark_gravity_wave>`_ 
+Dark Gravity Wave
+  In concept, :ref:`Dark Gravity Wave (DGW) <dark_gravity_wave>` is 
+  similar to *Kimoto Gravity Well*, adjusting the difficulty levels 
+  every block (instead of every 2016 blocks like Bitcoin) by using 
+  statistical data of the last blocks found. In this way block issuing 
+  times can remain consistent despite fluctuations in hashpower. However 
+  it doesn't suffer from the time-warp exploit.
 
 Darkcoin
   Dash was initially launched as XCoin and then rebranded to Darkcoin and
@@ -212,7 +205,7 @@ Dash
   (referred to as the masternode network). See the :ref:`Features
   <features>` page for a full list of Dash's features.
 
-  `Wikipedia definition <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_
+  `Wikipedia article <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_
 
 Dash Client 
   Dash clients are software programs used to interface with the Dash
@@ -237,22 +230,21 @@ DDoS
   exchanges have sometimes been hit with DDoS attacks.
 
 Decentralized
-  Decentralized computing is the allocation of resources, both hardware
-  and software, to each individual workstation or office location. In
-  contrast, centralized computing exists when the majority of functions
-  are carried out or obtained from a remote centralized location.
-  Decentralized computing is a trend in modern-day business
-  environments. This is the opposite of centralized computing, which was
-  prevalent during the early days of computers. A decentralized computer
-  system has many benefits over a conventional centralized network.
-  Desktop computers have advanced so rapidly that their potential
-  performance far exceeds the requirements of most business
-  applications. This results in most desktop computers remaining nearly
-  idle most of the time. A decentralized system can use the potential of
-  these systems to maximize efficiency. However, it is debatable whether
-  these networks increase overall effectiveness.
-
-  `Wikipedia definition <https://en.wikipedia.org/wiki/Decentralized_computing>`_
+  `Decentralized computing 
+  <https://en.wikipedia.org/wiki/Decentralized_computing>`_ is the 
+  allocation of resources, both hardware and software, to each 
+  individual workstation or office location. In contrast, centralized 
+  computing exists when the majority of functions are carried out or 
+  obtained from a remote centralized location. Decentralized computing 
+  is a trend in modern-day business environments. This is the opposite 
+  of centralized computing, which was prevalent during the early days of 
+  computers. A decentralized computer system has many benefits over a 
+  conventional centralized network. Desktop computers have advanced so 
+  rapidly that their potential performance far exceeds the requirements 
+  of most business applications. This results in most desktop computers 
+  remaining nearly idle most of the time. A decentralized system can use 
+  the potential of these systems to maximize efficiency. However, it is 
+  debatable whether these networks increase overall effectiveness.
 
 Desktop Wallet  
   A wallet is a piece of software that stores your Dash. There are many
@@ -342,3 +334,109 @@ Digital Signature
   the network. You can also digitally sign messages using your private
   key, to prove for instance that you are the owner of a certain Dash
   address.
+
+Electrum Wallet
+  :ref:`Dash Electrum Wallet <dash_electrum_wallet>` is a lightweight
+  wallet that does not require you to download or sync the entire
+  blockchain, making the wallet lighter and faster. However, it is 
+  missing certain features such as PrivateSend and InstantSend.
+
+Encryption
+  In cryptography, `encryption 
+  <https://en.wikipedia.org/wiki/Encryption>`_ is the process of 
+  encoding messages or information in such a way that only authorized 
+  parties can read it. Encrypted messages which are intercepted by a 
+  third-party are indecipherable gibberish without the private key. In 
+  an encryption scheme, the *plaintext* message is encrypted using an 
+  encryption algorithm, generating *ciphertext* that can only be read if 
+  decrypted by the intended recipient. For technical reasons, an 
+  encryption scheme usually uses a pseudo-random encryption key 
+  generated by an algorithm. Increases in computing power have "broken" 
+  many past encryption algorithms, but a well-designed modern system 
+  such as AES-256 is considered essentially "uncrackable."
+
+Escrow Services
+  An `escrow <https://en.wikipedia.org/wiki/Escrow>`_ is:
+
+  - a contractual arrangement in which a third party receives and
+    disburses money or documents for the primary transacting parties,
+    with the disbursement dependent on conditions agreed to by the
+    transacting parties; or 
+
+  - an account established by a broker for holding funds on behalf of
+    the broker's principal or some other person until the consummation
+    or termination of a transaction; or
+
+  - a trust account held in the borrower's name to pay obligations such
+    as property taxes and insurance premiums.
+
+  A trusted escrow service is often used when purchasing cryptocurrency
+  or other goods/services over the internet. Both the buyer and seller
+  will choose a trusted third-party, the seller will send the item (or
+  currency) to the escrow agent, and the buyer will send the purchasing
+  funds to the escrow agent as well. Once the escrow agent is satisfied
+  that both parties have satisfied the terms of the agreement, he/she
+  will forward the funds and the product (or currency) being purchased
+  to the appropriate party.
+
+Evan Duffield
+  Founder and first Lead Developer of Dash. Inventor of X11, InstantSend
+  and PrivateSend. Before creating Dash, Evan was a financial advisor
+  and holds a Series 65 license.
+
+Exchange
+  The current price of one Dash compared to the price of other
+  currencies, like the US dollar, Yen, Euro, or Bitcoin. Because most
+  trading volume takes place on the BTC/DASH markets, price is often
+  quoted in fractions of a bitcoin. For instance, the price of one Dash
+  at the end of March 2017 was 0.08 (bitcoins per Dash). An excellent
+  site for following the exchange rate of Dash is `CoinMarketCap
+  <https://coinmarketcap.com/>`_. Businesses wishing to reduce the risk
+  of holding a volatile digital currency can avoid that risk altogether
+  by having a payment processor do an instant exchange at the time of
+  each transaction.
+
+Faucet
+  Faucets are a reward system, in the form of a website or app, that
+  dispenses rewards in the form of a microdash or Duff, which is a
+  hundredth of a millionth Dash, for visitors to claim in exchange for
+  completing a captcha or task as described by the website.
+
+Fiat Gateway
+  `Fiat money <https://en.wikipedia.org/wiki/Fiat_money>`_ has been 
+  defined variously as:
+
+  - Any money declared by a government to be legal tender.
+  - State-issued money which is neither convertible by law to any other thing, nor fixed in value in terms of any objective standard.
+  - Intrinsically valueless money used as money because of government decree.
+  
+  Examples include the US dollar, the Euro, the Yen, and so forth.
+
+Fintech
+  `Financial technology
+  <https://en.wikipedia.org/wiki/Financial_technology>`_, also known as
+  FinTech, is an economic industry composed of companies that use
+  technology to make financial services more efficient. Financial
+  technology companies are generally startups trying to make financial
+  processes more efficient or eliminate middle- men. Recently many
+  fintech companies have begun utilizing blockchain technology, which is
+  the same technology that underpins Dash and Bitcoin.
+
+Fork
+  When the blockchain diverges or splits, with some clients recognizing
+  one version of the blockchain as valid, and other clients believing
+  that a different version of the blockchain is valid. Most forks
+  resolve themselves without causing any problems, because the longest
+  blockchain is always considered to be valid. In time, one version of
+  the blockchain will usually "win" and become universally recognized as
+  valid. Forks can, however, be extremely dangerous and should be
+  avoided if possible.
+
+  Forking is most likely to occur during software updates to the
+  network. Dash uses a Multi-Phased Fork (“:ref:`Spork <sporks>`”)
+  system for greater flexibility and safety.
+
+
+
+
+

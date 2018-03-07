@@ -131,6 +131,7 @@ Hardware wallets offer you the security of storing your keys in secure
 device while still allowing you to make simple transactions through a
 web interface.
 
+.. _paper_wallets:
 
 Paper Wallet
 ============
@@ -140,12 +141,16 @@ keys to a single Dash address on a clean computer without ever
 connecting to the internet. Perfect for long term secure storage.
 
 
+.. _third_party_wallets:
+
 3rd Party Wallets
 =================
 
 These wallets have been developed by external developers to support
 Dash.
 
+
+.. _web_wallets:
 
 Web Wallets
 ===========
