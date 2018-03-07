@@ -272,3 +272,73 @@ Difficulty
   decrease. Dash's increasing popularity and the availability of
   specialized ASIC miners have caused the difficulty to increase over
   time.
+
+Digital Wallet
+  See :ref:`this link <wallets>` for full documentation on wallets.
+
+  A digital wallet is similar to a physical wallet except that it is
+  used to hold **digital currency**. A Dash wallet holds your private
+  keys, which allow you to spend your Dash. You are also able to make
+  backups of your wallet in order to ensure that you never lose access
+  to your Dash. Digital wallets can exist in many different forms and on
+  many devices:
+
+  - **Desktop Wallet** (:ref:`Dash Electrum Wallet
+    <dash_electrum_wallet>`, :ref:`Dash Core Wallet 
+    <dash_core_wallet>`): Wallet programs that you install on a laptop 
+    or desktop computer. You are solely responsible for protecting the 
+    wallet file and the private keys it contains. Make backup copies of 
+    your wallet files to ensure that you don't lose access to your 
+    funds.
+
+  - **Mobile Wallet** (:ref:`Android <dash_android_wallet>`, :ref:`iOS
+    <dash_ios_wallet>`): These wallets can be downloaded through Google
+    Play or Apple (iTunes) App Stores. Mobile wallets allow you to use
+    Dash on-the-go by scanning a QR code to send payment. Make backup
+    copies of your mobile wallet files to ensure that you don't lose
+    access to your funds. Due to security issues with mobile phones, it
+    is advised that you don't store large amounts of funds on these
+    wallets.
+
+  - **Online/Cloud/Web Wallet** (:ref:`Exodus <third_party_wallets>`,
+    :ref:`MyDashWallet <web_wallets>`): Third parties that will store 
+    your Dash on their servers for you or provide an interface to access 
+    your Dash with you providing the keys, so that you can access your 
+    Dash from any device connected to the internet. If their website is 
+    hacked or if their servers are damaged, you run the risk of losing 
+    your Dash. Any online wallets should be secured with strong 
+    passphrases and 2FA. You cannot make backup copies of your online 
+    wallet, because you do not have access to the private keys. We 
+    strongly urge that you NEVER store large amounts of Dash in any 
+    online wallet or cryptocurrency exchange.
+
+  - **Hardware Wallets** (:ref:`Trezor <hardware_wallets>`, KeepKey, 
+    Ledger, Nano): A hardware wallet is a specialized, tamper-proof, 
+    hardware device that stores your private keys. This device is able 
+    to sign transactions with your private key without being connected 
+    to the internet. However, you must have an internet connection to 
+    send the transaction to the Dash network. This allows your private 
+    keys to be accessed easily while still keeping them securely 
+    protected. This is widely regarded to be the safest form of storage 
+    for your Dash.
+
+  - **Offline/Cold Storage** (:ref:`Paper wallet <paper_wallets>`): A
+    special wallet that is created offline and is never exposed to the
+    internet. Accomplished by using software to generate a public and
+    private key offline and then recording the generated keys. They keys 
+    can be printed out on paper or even laser-etched in metal. Copies 
+    can be made and stored in a personal safe or bank deposit box. This 
+    is an extremely secure way to store Dash. There is no risk of using 
+    software wallet files, which can become corrupt, or web wallets, 
+    which can be hacked. NOTE: USB sticks are not safe for long-term 
+    (multi-year) storage because they degrade over time.
+
+Digital Signature
+  A digital signature is a mathematical mechanism that allows someone to
+  prove their identity or ownership of a digital asset. When your
+  digital wallet signs a transaction with the appropriate private key,
+  the whole network can see that the signature matches the address of
+  the Dash being spent, without the need to reveal the private key to
+  the network. You can also digitally sign messages using your private
+  key, to prove for instance that you are the owner of a certain Dash
+  address.
