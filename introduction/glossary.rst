@@ -1,8 +1,8 @@
 .. _glossary:
 
-==================
+========
 Glossary
-==================
+========
 
 51% Attack
   A condition in which more than half the computing power on a
@@ -12,10 +12,10 @@ Glossary
   attacker’s hashed transaction block.
 
 Address
-  A Dash address is used to Send / Receive a Payment on the Dash network.
-  It contains a string of alphanumeric characters, but can also be
-  represented as a scannable QR code. A Dash address is also the public
-  key in the pair of keys used by Dash holders to digitally sign
+  A Dash address is used to Send / Receive a Payment on the Dash
+  network. It contains a string of alphanumeric characters, but can also
+  be represented as a scannable QR code. A Dash address is also the
+  public key in the pair of keys used by Dash holders to digitally sign
   transactions (see Public key).
 
 Algorithm
@@ -23,8 +23,210 @@ Algorithm
   step-by-step set of operations to be performed. Algorithms perform
   calculation, data processing, and/or automated reasoning tasks.
 
-  Wikipedia definition: https://en.wikipedia.org/wiki/Algorithm
+  `Wikipedia definition <https://en.wikipedia.org/wiki/Algorithm>`_
 
+Altcoin
+  Since Bitcoin was the first cryptocurrency and has the largest market
+  capitalization, it is considered as the reference. An altcoin, or
+  alternative coin, is any cryptocurrency other than Bitcoin.
+
+AML
+  Anti-Money Laundering techniques are used to stop people from making
+  illegally obtained funds appear as though they have been earned
+  legally. AML mechanisms can be legal or technical in nature.
+  Regulators frequently apply AML techniques to Dash exchanges.
+
+API
+  In computer programming, an application programming interface (API) is
+  a set of routines, protocols, and tools for building software and
+  applications.
+
+  An API expresses a software component in terms of its operations,
+  inputs, outputs, and underlying types, defining functionalities that
+  are independent of their respective implementations, which allows
+  definitions and implementations to vary without compromising the
+  interface. A good API makes it easier to develop a program by
+  providing all the building blocks, which are then put together by the
+  programmer.
+
+  `Wikipedia definition <https://en.wikipedia.org/wiki/Application_programming_interface>`_
+
+ASIC
+  An application-specific integrated circuit (ASIC), is an integrated
+  circuit (IC) customized for a particular use, rather than intended for
+  general-purpose use. For example, a chip designed to run in a digital
+  voice recorder or for high-efficiency Dash mining is an ASIC.
+
+ATM / BTM
+  A Dash ATM is a physical machine that allows a customer to buy Dash
+  with cash. There are many manufacturers, some of which enable users to
+  sell Dash for cash. They are also sometimes called 'BTMs' or 'Dash
+  AVMS.' Dash is supported on several `ATMs <how_to_buy>`_.
+
+Backlog
+  Backlog generally refers to an accumulation over time of work waiting
+  to be done or orders to be fulfilled.
+
+Backup
+  The process of making copies of a computer file to ensure its
+  integrity in case of loss, theft, or damage. Dash has the unique
+  feature of allowing users to make backup copies of their digital
+  wallets. This protects against losing one's money in the event of a
+  computer crashing or losing one’s mobile device. This would be the
+  equivalent of being able to backup the cash in your wallet, so that if
+  you lost it, you could restore the cash from a backup.
+
+Bitcoin 2.0
+  This is a term explaining the next new level of Bitcoin projects which
+  started as a fork of Bitcoin but extended their code into the next
+  level of Blockchain Projects (Smart Contracts, Decentralised
+  Voting,....)
+
+Blockchain
+  A blockchain is a distributed database that maintains a continuously-
+  growing list of data records hardened against tampering and revision.
+  It consists of data structure blocks — which exclusively hold data in
+  initial blockchain implementations, and both data and programs in some
+  of the more recent implementations — with each block holding batches
+  of individual transactions and the results of any blockchain
+  executables. Each block contains a timestamp and information linking
+  it to a previous block.
+
+  `Wikipedia definition <https://en.wikipedia.org/wiki/Block_chain_(database)>`_
+
+Blocks  
+  Transactions on the Blockchain are collected in "blocks" which record
+  and confirm when and in what sequence transactions enter and are
+  logged in the block chain. Blocks are created by users known as
+  "miners" who use specialized software or equipment designed
+  specifically to create blocks.
+
+  `Wikipedia definition <https://en.wikipedia.org/wiki/Block_chain_(database)#Blocks>`_
+
+Budget System / DGBB
+  The development of Dash and the Dash ecosystem is self-funded by the
+  network. Each time a block is discovered, 45% of the block reward goes
+  to miners and 45% goes to masternodes. Ten percent is withheld by the
+  network and used to fund projects that are approved by the masternode
+  network. This process is known as Decentralized Governance by
+  Blockchain (DGBB). For a fee, anybody can submit a proposal to the
+  network, and will be paid directly by the blockchain if approved by
+  the masternodes. The Budget System is sometimes called the Treasury
+  System; the two terms are interchangeable.
+
+  See here for more details on the budget system.
+
+Cloud Wallet
+  Third parties that will store your Dash on their servers for you, so
+  that you can access your funds from any device connected to the
+  internet. If their website is hacked or if their servers are damaged,
+  you run the risk of losing your Dash. Any online wallets should be
+  secured with strong passphrases and 2FA. You cannot make backup copies
+  of your online wallet, because you do not have access to the private
+  keys. We do not recommend that you store large quantities of funds in
+  online wallets.
+
+Cold Storage
+  A method of generating and storing private keys completely offline.
+  One could use a desktop or laptop computer disconnected from the
+  internet, a dedicated hardware wallet, a USB stick, or a paper wallet.
+  To learn more, visit our Cold Storage Guide Section.
+
+Confirm(ed) Transaction
+  When a Dash transaction is made, a miner must verify that the
+  transaction is valid. When the inputs and outputs are verified, the
+  transaction is included in a block in the blockchain. The transaction
+  can then be considered complete and irreversible. The confirmation
+  number increases as more blocks are added to the blockchain.
+
+Confirmation Number
+  The number of confirmations for a specific Dash transaction. Zero
+  confirmations means that the **transaction is unconfirmed**. One
+  confirmation means that the transaction is included in the latest
+  block in the blockchain. Two confirmations means the transaction is
+  included in two blocks, three confirmations for three blocks, and so
+  on. The probability of a transaction being reversed (double spent)
+  diminishes exponentially with every block and subsequent confirmation.
+  Six confirmations is usually considered "safe" and irreversable.
+
+Confirmed Transactions
+  Transactions that are processed by miners and considered irreversible,
+  usually after six confirmations. In the case of InstantSend, funds can
+  be considered irreversible after a few seconds, but must still be
+  written to the blockchain (and thus "confirmed").
+
+CPU
+  A central processing unit (CPU) is the electronic circuitry within a
+  computer that carries out the instructions of a computer program by
+  performing the basic arithmetic, logical, control and input/output
+  (I/O) operations specified by the instructions. The term has been used
+  in the computer industry at least since the early 1960s.
+  Traditionally, the term "CPU" refers to a processor, more specifically
+  to its processing unit and control unit (CU), distinguishing these
+  core elements of a computer from external components such as main
+  memory and I/O circuitry.
+
+  `Wikipedia definition <https://en.wikipedia.org/wiki/Central_processing_unit>`_
+
+Cryptocurrency
+  A cryptocurrency (or crypto currency or crypto-currency) is a medium
+  of exchange using cryptography to secure the transactions and to
+  control the creation of new units.
+
+  `Wikipedia definition <https://en.wikipedia.org/wiki/Cryptocurrency>`_
+
+Cryptography
+  Cryptography or cryptology (from Greek κρυπτός *kryptós*, "hidden,
+  secret"; and γράφειν *graphein*, "writing," or -λογία *-logia*,
+  "study," respectively) is the practice and study of techniques for
+  secure communication in the presence of third parties called
+  adversaries. More generally, cryptography is about constructing and
+  analyzing protocols that prevent third parties or the public from
+  reading private messages; various aspects in information security such
+  as data confidentiality, data integrity, authentication, and non-
+  repudiation are central to modern cryptography. Modern cryptography
+  exists at the intersection of the disciplines of mathematics, computer
+  science, and electrical engineering. Applications of cryptography
+  include ATM cards, computer passwords, and electronic commerce.
+
+Dark Gravity Wave / DGW
+  In concept, **DGW** is similar to *Kimoto Gravity Well*, adjusting the
+  difficulty levels every block (instead of every 2016 blocks like
+  Bitcoin) by using statistical data of the last blocks found. In this
+  way block issuing times can remain consistent despite fluctuations in
+  hashpower. However it doesn't suffer from the time-warp exploit.
+
+  `Dark Gravity Wave <dark_gravity_wave>`_ 
+
+Darkcoin
+  Dash was initially launched as XCoin and then rebranded to Darkcoin and
+  finally Dash.
+
+Dash
+  Originally launched as Xcoin and later renamed to Darkcoin, the
+  currency was later renamed "Dash" to avoid association with the
+  darknet markets. Dash is a portmanteau of "Digital Cash." Dash is an
+  open source peer-to- peer cryptocurrency that solves many of Bitcoin's
+  problems. Dash's features include PrivateSend, InstantSend,
+  Decentralized Governance by Blockchain (DGBB), a 2nd tier network
+  (referred to as the masternode network). See the `Features
+  <features>`_ page for a full list of Dash's features.
+
+  `Wikipedia definition <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_
+
+Dash Client 
+  Dash clients are software programs used to interface with the Dash
+  network. They store the private keys needed to conduct Dash
+  transactions as well as a copy of the entire blockchain. A Dash client
+  connects to the Dash network and becomes a node in the network. A node
+  shares and propagates new transactions with the rest of the network,
+  creating a robust decentralized infrastructure.
+
+Dash Evolution
+  This is a 3 tier network Dash developers are presently building. It
+  will make Dash as easy to use as PayPal, while still remaining
+  decentralized. See the `Evolution <evolution>`_ page for more 
+  information.
 
 
 +-----------------------------------+-----------------------------------+
