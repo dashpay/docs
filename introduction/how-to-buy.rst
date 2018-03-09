@@ -744,7 +744,7 @@ MorphToken
 
 .. _over_the_counter:
 
-Over the counter
+Over the Counter
 ================
 
 Uphold
