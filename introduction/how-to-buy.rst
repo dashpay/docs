@@ -93,7 +93,7 @@ Poloniex
 
   .. image:: exchanges/poloniex.png
      :width: 200px
-     :align: center
+     :align: right
 
   Poloniex is a US-based pure-crypto exchange offering high volume DASH
   pairs for BTC, XMR and USDT. Leveraged margin trading and lending is
@@ -104,7 +104,7 @@ Bittrex
 
   .. image:: exchanges/bittrex.png
      :width: 200px
-     :align: left
+     :align: right
 
   Bittrex is a US exchange working with cryptocurrencies only, although
   USD wire transfers have been intermittently supported in the past.
@@ -115,6 +115,7 @@ Bitfinex
 
   .. image:: exchanges/bitfinex.png
      :width: 200px
+     :align: right
 
   Bitfinex is a cryptocurrency exchange based in Hong Kong offering high
   volume BTC and USD trading pairs for DASH, as well as leveraged
