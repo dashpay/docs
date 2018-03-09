@@ -27,11 +27,11 @@ advantages and disadvantages. The following options are available:
   Others may even offer to sell cryptocurrency as a credit card
   purchase.
 
-- `Peer-to-peer`_ exchanges have recently appeared to
-  facilitate trading ofDash directly between individuals. Volume is
-  often lower, and users typically make offers or requests at the price
-  they are willing to pay, and wait for someone to contact them and
-  arrange details of the sale. More advanced peer-to- peer sites offer
+- `Over the counter`_ exchanges have recently appeared to facilitate
+  sale of Dash directly from a company to the individual at a specified
+  price, or peer-to-peer between individuals at a negotiated price.
+  Volume may be limited compared to exchanges, but these services are
+  usually much easier to use. More advanced peer-to- peer sites offer
   escrow services for a fee to prevent cheating during the sale between
   two parties who have never met.
 
@@ -676,14 +676,340 @@ Bitsane
 Instant exchanges
 =================
 
+Changelly
+  .. image:: exchanges/changelly.png
+     :width: 200px
+     :align: right
+     :target: https://changelly.com
 
-.. _peer_to_peer:
+  https://changelly.com
 
-Peer-to-peer
-============
+  Changelly is a broker service offering a range of cryptocurrency,
+  including Dash, for instant exchange against other cryptocurrencies
+  without needing to create an account. Be sure to check the fees and
+  rates before purchasing.
+
+ShapeShift
+  .. image:: exchanges/shapeshift.png
+     :width: 200px
+     :align: right
+     :target: https://shapeshift.io
+
+  https://shapeshift.io
+
+  ShapeShift allows users to directly exchange one crypto asset for
+  another without creating any account, albeit with a higher markup than
+  most exchanges. ShapeShift supports Dash and over 70 other
+  cryptocurrencies.
+
+changeNOW
+  .. image:: exchanges/changenow.png
+     :width: 200px
+     :align: right
+     :target: https://changenow.io
+
+  https://changenow.io
+
+  changeNOW allows users to directly exchange one crypto asset for
+  another without creating any account, albeit with a higher markup than
+  most exchanges. ShapeShift supports Dash and over 75 other
+  cryptocurrencies.
+
+Godex
+  .. image:: exchanges/godex.png
+     :width: 200px
+     :align: right
+     :target: https://godex.io
+
+  https://godex.io
+
+  Godex allows users to directly exchange one crypto asset for another
+  without creating any account, albeit with a higher markup than most
+  exchanges. ShapeShift supports Dash and over 120 other
+  cryptocurrencies.
+
+MorphToken
+  .. image:: exchanges/morphtoken.png
+     :width: 200px
+     :align: right
+     :target: https://www.morphtoken.com
+
+  https://www.morphtoken.com
+
+  MorphToken is an instant exchange allowing users to instantly convert
+  between Dash, Bitcoin, Bitcoin Cash, Ethereum, Litecoin and Monero. It
+  is even possible to convert into more than one cryptocurrency in a
+  single exchange.
+
+
+.. _over_the_counter:
+
+Over the counter
+================
+
+Uphold
+  .. image:: exchanges/uphold.png
+     :width: 200px
+     :align: right
+     :target: https://uphold.com
+
+  https://uphold.com
+
+  Uphold accounts may be funded with over 30 national currencies by bank
+  account or credit card to purchase and spend multiple cryptocurrencies
+  including Dash.
+
+WeSellCrypto
+  .. image:: exchanges/wesellcrypto.png
+     :width: 200px
+     :align: right
+     :target: https://wesellcrypto.com
+
+  https://wesellcrypto.com
+
+  WeSellCrypto is a broker service offering a range of cryptocurrency,
+  including Dash, paid using Paypal. Be sure to check the fees and rates
+  before purchasing.
+
+Bitpanda
+  .. image:: exchanges/bitpanda.png
+     :width: 200px
+     :align: right
+     :target: https://www.bitpanda.com
+
+  https://www.bitpanda.com
+  https://www.bitpanda.com/togo
+
+  Bitpanda is a broker service offering Bitcoin, Ethereum, Litecoin and
+  Dash both online and at over 400 Post branches and about 1300 Post
+  partners throughout Austria. Pay with cash, credit card or bank
+  transfer.
+
+Bitnovo
+  .. image:: exchanges/bitnovo.png
+     :width: 200px
+     :align: right
+     :target: https://www.bitnovo.com
+
+  https://www.bitnovo.com
+
+  Bitnovo is a broker service offering Bitcoin and Dash both on their
+  website and at tens of thousands of physical locations throughout
+  Europe. They also offer reloadable cards, vouchers and cryptocurrency
+  wallets.
+
+Mercury Cash
+  .. image:: exchanges/mercury.png
+     :width: 200px
+     :align: right
+     :target: https://www.mercury.cash
+
+  https://www.mercury.cash
+
+  Mercury Cash is an online/mobile wallet and licensed money transmitter
+  with integration for merchant services. Balances can be held in both
+  Ethereum and Dash, and deposited or withdrawn in local currencies
+  through a number of methods, including credit cards.
+
+cryptomonster
+  .. image:: exchanges/cryptomonster.png
+     :width: 200px
+     :align: right
+     :target: https://www.cryptomonster.co.uk
+
+  https://www.cryptomonster.co.uk
+
+  cryptomonster have created an easy to use platform where you can buy
+  DASH and other digital assets within minutes. All you need is a UK
+  bank account and a wallet address. cryptomonster pride themselves on a
+  next-level service and regard themseleves as the leading digital
+  assets platform in the UK.
+
+Changelly
+  .. image:: exchanges/changelly.png
+     :width: 200px
+     :align: right
+     :target: https://changelly.com
+
+  https://changelly.com
+
+  Changelly is a broker service offering a range of cryptocurrency,
+  including Dash, paid in USD or EUR using bank or credit cards. Be sure
+  to check the fees and rates before purchasing.
+
+Cryptobuyer
+  .. image:: exchanges/cryptobuyer.png
+     :width: 200px
+     :align: right
+     :target: https://cryptobuyer.io
+
+  https://cryptobuyer.io
+
+  Cryptobuyer is a direct purchasing service with a focus on the Latin
+  American market and Venezuela in particular. It can be linked with a
+  bank account to purchase Dash, Litecoin and Bitcoin directly. The
+  company also operates a network of ATMs and merchant integrations.
+
+CoinBR
+  .. image:: exchanges/coinbr.png
+     :width: 200px
+     :align: right
+     :target: https://www.coinbr.net
+
+  https://www.coinbr.net
+
+  CoinBR is a Brazil-based cryptocurrency company offering a variety of
+  services including an exchange, mining, bill payment, point-of-sale,
+  and more. Dash is available for purchase at over 13,000 locations
+  around Brazil.
+
+Wall of Coins
+  .. image:: exchanges/wallofcoins.png
+     :width: 200px
+     :align: right
+     :target: https://wallofcoins.com
+
+  https://wallofcoins.com
+
+  Wall of Coins allows user to post offers to buy or sell Dash and
+  Bitcoin within their region or country. The service, which is
+  available in over 20 countries, then holds the coins in escrow while
+  the buyer completes payment.
+
+Liberalcoins
+  .. image:: exchanges/liberalcoins.png
+     :width: 200px
+     :align: right
+     :target: ttps://liberalcoins.com
+
+  https://liberalcoins.com
+
+  Liberalcoins allows users to arrange trades to buy or sell Dash,
+  Monero, Bitcoin and Litecoin directly with one another.
+
+QCashPay
+  .. image:: exchanges/qcashpay.png
+     :width: 200px
+     :align: right
+     :target: https://qcashpay.com
+
+  https://qcashpay.com
+
+  QCashPay is a Hong Kong company specialising in direct sale of
+  cryptocurrency, including Dash, for USD and CNY using various bank and
+  third party payment schemes.
+
+MegaChange
+  .. image:: exchanges/megachange.png
+     :width: 200px
+     :align: right
+     :target: https://www.megachange.is
+
+  https://www.megachange.is
+
+  MegaChange offers direct sale and exchange of various digital forms of
+  currency in a simple market system. It supports Dash and multiple
+  methods of adding fiat currency, including USD, RMB and RUB.
+
+Dashous
+  .. image:: exchanges/dashous.png
+     :width: 200px
+     :align: right
+     :target: https://www.dashous.com
+
+  https://www.dashous.com
+
+  Dashous allows user to post offers to buy or sell Dash and Bitcoin
+  within their region or country. The users then arrange the deal
+  between themselves.
+
+Magnetic Exchange
+  .. image:: exchanges/magnetic.png
+     :width: 200px
+     :align: right
+     :target: https://magneticexchange.com
+
+  https://magneticexchange.com
+
+  Magnetic Exchange offers Bitcoin, Ethereum, Litecoin and Dash in
+  exchange for USD or EUR through various payment services.
+
+AnycoinDirect
+  .. image:: exchanges/anycoin.png
+     :width: 200px
+     :align: right
+     :target: https://anycoindirect.eu
+
+  https://anycoindirect.eu
+
+  AnycoinDirect.eu is a broker service offering 14 cryptocurrencies,
+  including Dash, for sale online. Pay by bank transfer or various
+  national instant payment schemes.
+
+Dash Nearby
+  .. image:: exchanges/dashnearby.png
+     :width: 200px
+     :align: right
+     :target: https://dashnearby.com
+
+  https://dashnearby.com
+
+  Dash Nearby allows users to arrange direct trades of cryptocurrency or
+  local currency between one another.
 
 
 .. _atms:
 
 ATMs
 ====
+
+ATMs are a popular method of buying cryptocurrency at businesses to
+encourage adoption and spending in these currencies. A number of ATMs
+support Dash, and the mapping services listed on this page can help you
+find one near you. It is also possible to operate your own ATM to sell
+Dash on-site at your business - simply contact the companies listed on
+this page.
+
+Coin ATM Radar
+  .. image:: exchanges/coinatmradar.png
+     :width: 200px
+     :align: right
+     :target: https://coinatmradar.com
+
+  https://coinatmradar.com
+
+  Various coin ATMs are available around world. Coin ATM Radar helps you
+  find one close to you.
+
+General Bytes
+  .. image:: exchanges/generalbytes.png
+     :width: 200px
+     :align: right
+     :target: https://www.generalbytes.com
+
+  https://www.generalbytes.com
+
+  General Bytes offers a range of two-way cash ATM and Point of Sale
+  solutions integrating Dash.
+
+TigoCTM
+  .. image:: exchanges/tigoctm.png
+     :width: 200px
+     :align: right
+     :target: https://tigoctm.com
+
+  https://tigoctm.com
+
+  TigoCTM offers simple ATM solutions integrated with a management
+  blockchain.
+
+Trovemat
+  .. image:: exchanges/trovemat.png
+     :width: 200px
+     :align: right
+     :target: https://trovemat.com
+
+  https://trovemat.com
+
+  Focusing on the European market, Trovemat provides a risk-free
+  solution to sell cryptocurrency from a physical device.
