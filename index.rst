@@ -6,21 +6,6 @@ Dash Documentation
    :scale: 25 %
    :align: center
 
-The Dash documentation is available in the following languages:
-
-* `العَرَبِيَّة‎ <https://docs.dash.org/ar/latest/>`_
-* `Deutsch <https://docs.dash.org/de/latest/>`_
-* `ελληνικά <https://docs.dash.org/el/latest/>`_
-* `English <https://docs.dash.org/en/latest/>`_
-* `Español <https://docs.dash.org/es/latest/>`_
-* `Français <https://docs.dash.org/fr/latest/>`_
-* `हिन्दी  <https://docs.dash.org/hi/latest/>`_
-* `日本語 <https://docs.dash.org/ja/latest/>`_
-* `한국어 <https://docs.dash.org/ko/latest/>`_
-* `Português <https://docs.dash.org/pt/latest/>`_
-* `Русский <https://docs.dash.org/ru/latest/>`_
-* `简体中文 <https://docs.dash.org/zh_CN/latest/>`_
-
 Dash is an open source peer-to-peer cryptocurrency with a strong focus
 on the payments industry. Dash offers a form of money that is portable,
 inexpensive, divisible and fast. It can be spent securely both online
@@ -50,7 +35,7 @@ interest.
 
 .. raw:: html
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 70%; height: auto;">
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
         <iframe src="//www.youtube.com/embed/S0oNO3mbBE8" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
     
