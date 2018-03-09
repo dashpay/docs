@@ -102,7 +102,7 @@ Poloniex
 Bittrex
   https://bittrex.com/
 
-  .. images:: exchanges/bittrex.png
+  .. image:: exchanges/bittrex.png
      :width: 200px
      :align: left
 
@@ -113,7 +113,7 @@ Bittrex
 Bitfinex
   https://www.bitfinex.com/
 
-  .. images:: exchanges/bitfinex.png
+  .. image:: exchanges/bitfinex.png
      :width: 200px
 
   Bitfinex is a cryptocurrency exchange based in Hong Kong offering high
