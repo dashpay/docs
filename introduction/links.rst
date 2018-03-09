@@ -126,7 +126,7 @@ Block Explorers
 Treasury Tools
 --------------
 
-- http://dashwatch.org/
+- https://www.dashwatch.org
 - https://www.dashcentral.org
 - https://dashvotetracker.com
 - https://proposal.dash.org
@@ -143,11 +143,13 @@ Masternode and blockchain stats
 - http://dash-news.de/dashtv/?value=1000
 
 
-Price monitoring
-----------------
+Price monitoring and conversion
+-------------------------------
 
-- https://coinmarketcap.com/currencies/dash
 - http://www.dash.dog
+- https://coinmarketcap.com/currencies/dash
+- https://www.cryptonator.com/widget
+- http://atomox.net/1/DASH/USD
 
 
 Dash Community Project
@@ -160,12 +162,6 @@ Dash transaction visualizer
 ---------------------------
 
 - http://udjinm6.github.io/bitlisten/
-
-
-Dash price widget
------------------
-
-- https://www.cryptonator.com/widget
 
 
 DarkNet Pages
