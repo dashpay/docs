@@ -27,7 +27,7 @@ advantages and disadvantages. The following options are available:
   Others may even offer to sell cryptocurrency as a credit card
   purchase.
 
-  `Peer-to-peer`_ exchanges have recently appeared to
+- `Peer-to-peer`_ exchanges have recently appeared to
   facilitate trading ofDash directly between individuals. Volume is
   often lower, and users typically make offers or requests at the price
   they are willing to pay, and wait for someone to contact them and
@@ -152,9 +152,9 @@ HitBTC
      :align: right
      :target: https://hitbtc.com
 
-     HitBTC offers facilities to major investors to credit USD, EUR and
-     GBP, as well as BTC, ETH and USDT trading pairs against DASH for
-     normal users.
+  HitBTC offers facilities to major investors to credit USD, EUR and
+  GBP, as well as BTC, ETH and USDT trading pairs against DASH for
+  normal users.
 
 Bithumb
   https://www.bithumb.com
@@ -202,10 +202,40 @@ YoBit
   BTC, USD and RUB trading pairs for DASH.
 
 Bit-Z
+  https://www.bit-z.com
+
+  .. image:: exchanges/bit-z.png
+     :width: 200px
+     :align: right
+     :target: https://www.bit-z.com
+
+  Bit-Z is a cryptocurrency exchange with a focus on offering OTC
+  funding options to Chinese traders. DASH is available for trade
+  against BTC.
 
 WEX
+  https://wex.nz
+
+  .. image:: exchanges/wex.png
+     :width: 200px
+     :align: right
+     :target: https://wex.nz
+
+  WEX, previously known as BTC-e until it was shut down by authorities,
+  has resumed business under a new name. DASH trading pairs exist for
+  BTC, USD, RUB, EUR, LTC and ETH.
 
 Exmo
+  https://exmo.com
+
+  .. image:: exchanges/exmo.png
+     :width: 200px
+     :align: right
+     :target: https://exmo.com
+
+  Exmo is a UK-registered exchange offering fiat deposits in USD, EUR,
+  USD and UAH (Ukrainian Hryvnia). DASH trading pairs exist for BTC, USD
+  and RUB.
 
 Livecoin
 
