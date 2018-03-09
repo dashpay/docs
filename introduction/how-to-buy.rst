@@ -145,12 +145,12 @@ Binance
   DASH is available for funding and can be traded against BTC.
 
 HitBTC
-  https://hitbtc.com
-
   .. image:: exchanges/hitbtc.png
      :width: 200px
      :align: right
      :target: https://hitbtc.com
+
+  https://hitbtc.com
 
   HitBTC offers facilities to major investors to credit USD, EUR and
   GBP, as well as BTC, ETH and USDT trading pairs against DASH for
