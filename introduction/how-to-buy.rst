@@ -704,7 +704,7 @@ ShapeShift
 
 changeNOW
   .. image:: exchanges/changenow.png
-     :width: 200px
+     :width: 130px
      :align: right
      :target: https://changenow.io
 
@@ -983,7 +983,7 @@ Coin ATM Radar
 
 General Bytes
   .. image:: exchanges/generalbytes.png
-     :width: 200px
+     :width: 75px
      :align: right
      :target: https://www.generalbytes.com
 
@@ -994,7 +994,7 @@ General Bytes
 
 TigoCTM
   .. image:: exchanges/tigoctm.png
-     :width: 200px
+     :width: 110px
      :align: right
      :target: https://tigoctm.com
 
