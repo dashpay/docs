@@ -119,7 +119,7 @@ Bitfinex
 
   Bitfinex is a cryptocurrency exchange based in Hong Kong offering high
   volume BTC and USD trading pairs for DASH, as well as leveraged
-  trading. USD fiat deposit facilities were suspended as of April 2017.
+  trading.
 
 Kraken
   .. image:: exchanges/kraken.png
@@ -424,7 +424,7 @@ Cryptopia
   trading pairs for BTC, LTC, DOGE and USDT.
 
 ACX
-  .. image:: exchanges/acx.png
+  .. image:: exchanges/acxlogo.png
      :width: 200px
      :align: right
      :target: https://acx.io
