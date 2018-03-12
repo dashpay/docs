@@ -67,6 +67,9 @@ Configuration
    .. image:: img/privatesend-options.png
       :height: 180px
 
+   .. image:: img/privatesend-options.png
+      :width: 180px
+
 2. Next to **PrivateSend rounds to use**, enter a value between 1-8.
    Each round of PrivateSend performs one denominated fund mixing
    transaction. Higher numbers of rounds increase your overall level of
