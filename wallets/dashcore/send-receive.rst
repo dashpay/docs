@@ -34,7 +34,7 @@ the destination address in the **Pay To** field.
 .. figure:: img/send.png
    :height: 250px
 
-   The website properly detects the wallet appropriate for your system
+   The Dash Core Send tab
 
 You can also use the three icons |sendicons| to the right of the **Pay
 To** field to select a previously used address, paste an address from
@@ -44,23 +44,23 @@ identify it again later. Finally, enter the amount of Dash you want to
 transfer in the **Amount** field.
 
 .. |sendicons| image:: img/sendicons.png
-   :width: 100px
+   :width: 80px
 
 The other options relate to fees and PrivateSend/InstantSend. You can
 choose if you want to pay the network fee in addition to the amount
 sent, or subtract it from the amount sent. You can also increase your
 fee to encourage nodes on the network to prioritize your transaction.
-Choosing InstantSend has a similar effect, but actually relies on a
+Choosing **InstantSend** has a similar effect, but actually relies on a
 different mechanism in the second layer network to speed up the
 transaction time. You can read more about InstantSend :ref:`here
-<instantsend>`. Choosing PrivateSend will send Dash from an address that
-has previously been mixed. You can find out more about PrivateSend and
-mixing :ref:`here <privatesend>`.
+<instantsend>`. Choosing **PrivateSend** will send Dash from an address
+that has previously been mixed. You can find out more about PrivateSend
+and mixing :ref:`here <privatesend>`.
 
 Let’s try an example. Say you have received an invoice which you now
 want to pay with Dash. The writer of the invoice has included a Dash
-address, which can be seen in the following window beginning with Xpa.
-The invoice is for 2.45 Dash, which you fill in the Amount field.
+address, which can be seen in the following window beginning with *Xpa*.
+The invoice is for 2.45 Dash, which you fill in the **Amount** field.
 
 .. figure:: img/sendready.png
    :height: 250px
@@ -72,7 +72,7 @@ Once you have entered the destination address and the amount, click the
 required to enter your password to unlock the wallet.
 
 .. figure:: img/password.png
-   :height: 250px
+   :height: 170px
 
    Entering the password to unlock the wallet
 
@@ -81,7 +81,7 @@ send transaction before Dash Core processes the transaction on the
 blockchain.
 
 .. figure:: img/confirm.png
-   :height: 250px
+   :height: 170px
 
    Final confirmation window
 
@@ -90,7 +90,7 @@ operating system may display a notification, and the transaction will
 appear on the Transactions tab, where you can monitor its progress.
 
 .. figure:: img/sent-notification.png
-   :height: 250px
+   :height: 120px
 
    The Windows 10 sent transaction confirmation notification
 
@@ -106,7 +106,7 @@ the sending party. To do this, click **File > Receiving addresses**. The
 **Receiving addresses** window appears.
 
 .. figure:: img/receiving-addresses.png
-   :height: 250px
+   :height: 200px
 
    The Receiving addresses window
 
@@ -121,7 +121,7 @@ blockchain when it is open, and will recognize a new transaction
 involving your receiving address when it occurs.
 
 .. figure:: img/received-notification.png
-   :height: 250px
+   :height: 120px
 
    The Windows 10 received transaction confirmation notification
 
