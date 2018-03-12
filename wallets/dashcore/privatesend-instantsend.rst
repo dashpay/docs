@@ -1,8 +1,8 @@
 .. _dashcore_privatesend:
 
-=========================================
-Understanding PrivateSend and InstantSend
-=========================================
+===========================
+PrivateSend and InstantSend
+===========================
 
 PrivateSend
 ===========
@@ -65,10 +65,12 @@ Configuration
    **Options**. Go to the **Wallet** tab.
 
    .. image:: img/privatesend-options.png
-      :height: 250px
+      :height: 180px
+
+   .. image:: img/privatesend-options.png
+      :width: 180px
 
 2. Next to **PrivateSend rounds to use**, enter a value between 1-8.
-
    Each round of PrivateSend performs one denominated fund mixing
    transaction. Higher numbers of rounds increase your overall level of
    anonymity while decreasing the chance of detection via node
@@ -77,15 +79,13 @@ Configuration
    NOTE: To prevent system abuse, an average of one in ten rounds of
    masternode mixing incurs a fee of .001 DASH.
 
-3. Enter a target value for **Amount of Dash to keep anonymized**.
-
-   This value provides a lower boundary on the final amount of funds to
-   be anonymized. Depending on how the client splits your wallet
-   balance, you may end up with denominated inputs whose sum total is
-   greater than the target amount. In this case the client will use all
-   existing denominated inputs in the PrivateSend process. The final
-   anonymized amount may be higher than your target, but should be
-   close.
+3. Enter a target value for **Amount of Dash to keep anonymized**. This
+   value provides a lower boundary on the final amount of funds to be
+   anonymized. Depending on how the client splits your wallet balance,
+   you may end up with denominated inputs whose sum total is greater
+   than the target amount. In this case the client will use all existing
+   denominated inputs in the PrivateSend process. The final anonymized
+   amount may be higher than your target, but should be close.
 
 4. Click **OK** to save settings.
 
@@ -113,7 +113,7 @@ enter your wallet passphrase. Enable the **Only for mixing via
 PrivateSend** checkbox to unlock the wallet for mixing only.
 
 .. figure:: img/mixing-password.png
-   :height: 180px
+   :height: 120px
 
    Entering a password for PrivateSend mixing only
 
@@ -122,7 +122,7 @@ begin. The wallet will remain unlocked until PrivateSend mixing is
 complete, at which point it will be locked automatically.
 
 .. figure:: img/mixing.png
-   :height: 200px
+   :height: 120px
 
    PrivateSend interface after clicking the **Start Mixing** button.
    Note the **Status** is **Enabled**.
@@ -150,7 +150,7 @@ some advanced features of the wallet. Go to **Settings**, select
 interface** options.
 
 .. figure:: img/privatesend-settings.png
-   :height: 250px
+   :height: 180px
 
    Enabling advanced options for PrivateSend in the Dash Core wallet
    settings
@@ -159,7 +159,7 @@ This will allow you to monitor progress and see which individual
 operations PrivateSend is carrying out in the background.
 
 .. figure:: img/mixing-progress.png
-   :height: 200px
+   :height: 120px
 
    Monitoring PrivateSend progress
 
