@@ -32,7 +32,6 @@ Chat
 ----
 
 - **Dash Nation Discord:** https://discord.gg/9z8zX5j
-- **Dash Telegram:** https://telegram.me/DashDigitalCash
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil
 - **Dash Russia Telegram:** https://telegram.me/Dash_Ru
 - **Dash en Español Telegram:** http://unete.dashespanol.com
