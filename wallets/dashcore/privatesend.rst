@@ -1,0 +1,241 @@
+.. _dashcore_privatesend:
+
+=========================================
+Understanding PrivateSend and InstantSend
+=========================================
+
+PrivateSend
+===========
+
+This document describes how to use Dash Core to run PrivateSend
+and anonymize your Dash. PrivateSend, rebranded from DarkSend in May
+2016, is a trustless method of running a sequence of transactions such
+that an external observer is unable to determine the source of funding
+when a PrivateSend transaction is created. This gives your Dash the same
+anonymous properties as cash withdrawn from an ATM, for example.
+
+
+Introduction
+------------
+
+With the introduction of Release Candidate 4 (RC4) of the Darkcoin
+client, it became possible to store pre-mixed, denominated Dash in the
+user’s wallet, to be used instantly at any time the user desires. The
+mixing and denomination process is seamless, automatic, and requires no
+intervention on the part of the user. The current implementation of
+PrivateSend in the Dash Core wallet allows any amount of Dash to be
+mixed for later use in PrivateSend transactions.
+
+**Here's how it works**
+
+- Every 10 blocks, user clients network-wide will send any unmixed,
+  traceable DASH in their possession through an anonymization phase. In
+  this phase, masternodes are used in chained succession to mix the
+  coins they receive from the network and break them down into
+  homogenous denominations.
+
+- After being processed by a minimum of 2 masternodes, the coins are
+  either sent to the next masternode in the chain or back to the user’s
+  wallet at randomly generated change addresses.
+
+- Depending on the desired depth of security and privacy, users may
+  select between 2 and 8 “hops” to successive masternodes before their
+  coins are sent back to the client. Hops are made every 10 blocks, so
+  anonymization at a depth of 2 hops will take 2*2.5=5.0 minutes, 3 hops
+  3*2.5=7.5 minutes, and so on. The desired mixing depth can be selected
+  in the client GUI.
+
+- At the end of the anonymization phase, the user’s coins are returned
+  to their client at randomly generated change addresses. When the user
+  wishes to make a transaction, the client forwards the intended amount
+  from these anonymous change addresses directly to the intended
+  receiver’s address. There is no direct involvement of of masternodes
+  in the final person-to-person transaction.
+
+- Proof of payment will work as it always has: a user can see the send
+  transaction with the receiver’s address in their own wallet, and the
+  blockchain will show that the receiver’s address received an input in
+  the corresponding amount.
+
+
+Configuration
+-------------
+
+1. Open your Dash Core wallet, go to **Settings** and select
+   **Options**. Go to the **Wallet** tab.
+
+   .. image:: img/privatesend-options.png
+      :height: 250px
+
+2. Next to **PrivateSend rounds to use**, enter a value between 1-8.
+
+   Each round of PrivateSend performs one denominated fund mixing
+   transaction. Higher numbers of rounds increase your overall level of
+   anonymity while decreasing the chance of detection via node
+   collusion. 8 is the highest number of rounds currently available.
+
+   NOTE: To prevent system abuse, an average of one in ten rounds of
+   masternode mixing incurs a fee of .001 DASH.
+
+3. Enter a target value for **Amount of Dash to keep anonymized**.
+
+   This value provides a lower boundary on the final amount of funds to
+   be anonymized. Depending on how the client splits your wallet
+   balance, you may end up with denominated inputs whose sum total is
+   greater than the target amount. In this case the client will use all
+   existing denominated inputs in the PrivateSend process. The final
+   anonymized amount may be higher than your target, but should be
+   close.
+
+4. Click **OK** to save settings.
+
+5. PrivateSend is disabled by default when you open the wallet. It will
+   only start after you set the number of rounds and number of Dash to
+   mix under settings and click **Start Mixing** on the **Overview** tab
+   of your wallet.
+
+
+Starting Mixing
+---------------
+
+The PrivateSend process is initiated by clicking the **Start Mixing**
+button on the **Overview** tab of the Dash Core wallet. Mixing is
+possible once the following conditions have been met:
+
+- The wallet contains sufficient non-anonymized funds to create the
+  minimum required denominated values
+- The user has not disabled PrivateSend in the Options dialog
+- The target value for anonymized Funds in the Options dialog is greater
+  than zero
+
+If your wallet is encrypted (highly recommended), you will be asked to
+enter your wallet passphrase. Enable the **Only for mixing via
+PrivateSend** checkbox to unlock the wallet for mixing only.
+
+.. figure:: img/mixing-password.png
+   :height: 180px
+
+   Entering a password for PrivateSend mixing only
+
+This will unlock your wallet, and the PrivateSend mixing process will
+begin. The wallet will remain unlocked until PrivateSend mixing is
+complete, at which point it will be locked automatically.
+
+.. figure:: img/mixing.png
+   :height: 200px
+
+   PrivateSend interface after clicking the **Start Mixing** button.
+   Note the **Status** is **Enabled**.
+
+PrivateSend will begin creating transactions and your PrivateSend
+balance will gradually increase. This process can take some time, so be
+patient. You can monitor the process in more detail as described in the
+following section.
+
+Any of the following actions will interrupt the mixing process. Because the transactions are atomic (they either take place completely, or do not take place at all), it should be possible to safely interrupt PrivateSend mixing at any time.
+
+- Clicking the Stop Mixing button on the Overview tab
+- Closing the client before PrivateSend mixing is completed
+- Sending PrivateSend funds from the wallet before PrivateSend rounds
+  are completed
+- Disabling PrivateSend before the process is complete
+
+Monitoring Mixing
+-----------------
+
+If you want to monitor PrivateSend in more detail, you need to enable
+some advanced features of the wallet. Go to **Settings**, select
+**Options** and go to the **Wallet** tab. Check the boxes next to the
+**Enable coin control features** and **Enable advanced PrivateSend
+interface** options.
+
+.. figure:: img/privatesend-settings.png
+   :height: 250px
+
+   Enabling advanced options for PrivateSend in the Dash Core wallet
+   settings
+
+This will allow you to monitor progress and see which individual
+operations PrivateSend is carrying out in the background.
+
+.. figure:: img/mixing-progress.png
+   :height: 200px
+
+   Monitoring PrivateSend progress
+
+This will allow you to monitor progress and see which individual
+operations PrivateSend is carrying out in the background.
+
+Since PrivateSend mixing creates a lot of new address keys to send and
+receive the anonymized denominations, you may receive a warning when the
+number of remaining keys runs low. This is nothing to be worried about,
+since the wallet will simply create more keys as necessary. However,
+these keys will not exist in any previous backups of your wallet. For
+this reason, it is important to backup your wallet again after mixing is
+complete.
+
+You can also monitor PrivateSend progress by viewing the transactions
+created by the mixing process on the **Transactions** tab.
+
+.. figure:: img/privatesend-transactions.png
+   :height: 250px
+
+   Transactions created by PrivateSend on the Transactions tab
+
+You can also use the coin control feature to view which addresses hold
+mixed denominations ready to be used for PrivateSend transactions. Go to
+the **Send** tab of your wallet and click **Inputs** to view the possible input
+addresses for your transactions. You can see how each address holds
+given denominations of mixed Dash, and how many rounds of mixing have
+been completed. This is to ensure that an efficient combination of
+addresses can be used as inputs in PrivateSend transactions without too
+much change, since amount in a PrivateSend transaction must be rounded
+up to completely spend all inputs. The current minimum balance for an
+input used in a PrivateSend transaction is 0.01000010 DASH.
+
+.. figure:: img/privatesend-addresses.png
+   :height: 250px
+
+   Coin Selection dialog showing addresses holding PrivateSend mixed
+   balances in different denominations
+
+Paying with PrivateSend
+-----------------------
+
+You can only use PrivateSend for payments once you have mixed enough
+Dash to make up the amount you are trying to send. Because the mixing
+process takes time, it must be done in advance before you create the
+send transaction. A PrivateSend transaction is effectively the same as
+any other transaction on the blockchain, but it draws only from input
+addresses where the denomination has previously been mixed to ensure
+anonymity of funds. Because several input addresses are usually required
+to make up the amount you are trying to send, a PrivateSend transaction
+will usually take up more space (in kilobytes) on the blockchain, and
+therefore will be charged a slightly higher fee. 
+
+To send a payment using PrivateSend, go to the **Send** tab of the Dash
+Core wallet and enable the **PrivateSend** option. The balance displayed
+will change to show your PrivateSend balance instead of the total
+balance. You can then enter the **Pay To** address, **Label**,
+**Amount** and click **Send** as usual. Your payment will be rounded up
+to completely spend the lowest possible denomination of mixed balance
+available (currently to the nearest 0.01 DASH). You will be prompted to
+enter your password and receive a detailed breakdown of the fee
+structure for PrivateSend before sending.
+
+.. figure:: img/privatesend-send.png
+   :height: 250px
+
+   Dash Core ready to send a PrivateSend transaction. Note PrivateSend
+   is enabled and the amount to be sent is less than the available
+   PrivateSend balance
+
+
+InstantSend
+===========
+
+Introduction
+------------
+
+Paying with InstantSend
+-----------------------

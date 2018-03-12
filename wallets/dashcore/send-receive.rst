@@ -1,4 +1,4 @@
-.. _dashcore_introduction:
+.. _dashcore_send_receive:
 
 ============================
 How to send and receive Dash
