@@ -728,6 +728,18 @@ Godex
   exchanges. ShapeShift supports Dash and over 120 other
   cryptocurrencies.
 
+CoinSwitch
+  .. image:: exchanges/coinswitch.png
+     :width: 200px
+     :align: right
+     :target: https://coinswitch.co
+
+  https://coinswitch.co
+
+  CoinSwitch allows you to compare exchange rates across multiple
+  exchanges and perform instant exchanges at those rates without
+  necessarily creating an account.
+
 MorphToken
   .. image:: exchanges/morphtoken.png
      :width: 200px
