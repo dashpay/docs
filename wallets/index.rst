@@ -33,6 +33,7 @@ Linux, Raspberry Pi and Windows.
    dashcore/interface.rst
    dashcore/installation.rst
    dashcore/send-receive.rst
+   dashcore/privatesend-instantsend.rst
 
 
 .. _dash_electrum_wallet:
