@@ -65,10 +65,7 @@ Configuration
    **Options**. Go to the **Wallet** tab.
 
    .. image:: img/privatesend-options.png
-      :height: 180px
-
-   .. image:: img/privatesend-options.png
-      :width: 180px
+      :width: 300px
 
 2. Next to **PrivateSend rounds to use**, enter a value between 1-8.
    Each round of PrivateSend performs one denominated fund mixing
@@ -113,7 +110,7 @@ enter your wallet passphrase. Enable the **Only for mixing via
 PrivateSend** checkbox to unlock the wallet for mixing only.
 
 .. figure:: img/mixing-password.png
-   :height: 120px
+   :width: 300px
 
    Entering a password for PrivateSend mixing only
 
@@ -122,7 +119,7 @@ begin. The wallet will remain unlocked until PrivateSend mixing is
 complete, at which point it will be locked automatically.
 
 .. figure:: img/mixing.png
-   :height: 120px
+   :width: 250px
 
    PrivateSend interface after clicking the **Start Mixing** button.
    Note the **Status** is **Enabled**.
@@ -150,7 +147,7 @@ some advanced features of the wallet. Go to **Settings**, select
 interface** options.
 
 .. figure:: img/privatesend-settings.png
-   :height: 180px
+   :width: 300px
 
    Enabling advanced options for PrivateSend in the Dash Core wallet
    settings
@@ -159,7 +156,7 @@ This will allow you to monitor progress and see which individual
 operations PrivateSend is carrying out in the background.
 
 .. figure:: img/mixing-progress.png
-   :height: 120px
+   :width: 250px
 
    Monitoring PrivateSend progress
 
@@ -178,7 +175,7 @@ You can also monitor PrivateSend progress by viewing the transactions
 created by the mixing process on the **Transactions** tab.
 
 .. figure:: img/privatesend-transactions.png
-   :height: 250px
+   :width: 400px
 
    Transactions created by PrivateSend on the Transactions tab
 
@@ -194,7 +191,7 @@ up to completely spend all inputs. The current minimum balance for an
 input used in a PrivateSend transaction is 0.01000010 DASH.
 
 .. figure:: img/privatesend-addresses.png
-   :height: 250px
+   :width: 400px
 
    Coin Selection dialog showing addresses holding PrivateSend mixed
    balances in different denominations
@@ -224,7 +221,7 @@ enter your password and receive a detailed breakdown of the fee
 structure for PrivateSend before sending.
 
 .. figure:: img/privatesend-send.png
-   :height: 250px
+   :width: 400px
 
    Dash Core ready to send a PrivateSend transaction. Note PrivateSend
    is enabled and the amount to be sent is less than the available

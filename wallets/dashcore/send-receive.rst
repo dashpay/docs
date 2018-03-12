@@ -32,7 +32,7 @@ should send the funds. Click the **Send** tab in the tab bar and enter
 the destination address in the **Pay To** field.
 
 .. figure:: img/send.png
-   :height: 250px
+   :width: 400px
 
    The Dash Core Send tab
 
@@ -63,7 +63,7 @@ address, which can be seen in the following window beginning with *Xpa*.
 The invoice is for 2.45 Dash, which you fill in the **Amount** field.
 
 .. figure:: img/sendready.png
-   :height: 250px
+   :width: 400px
 
    The Send tab filled out for a transaction
 
@@ -72,7 +72,7 @@ Once you have entered the destination address and the amount, click the
 required to enter your password to unlock the wallet.
 
 .. figure:: img/password.png
-   :height: 170px
+   :width: 300px
 
    Entering the password to unlock the wallet
 
@@ -81,7 +81,7 @@ send transaction before Dash Core processes the transaction on the
 blockchain.
 
 .. figure:: img/confirm.png
-   :height: 170px
+   :width: 250px
 
    Final confirmation window
 
@@ -90,7 +90,7 @@ operating system may display a notification, and the transaction will
 appear on the Transactions tab, where you can monitor its progress.
 
 .. figure:: img/sent-notification.png
-   :height: 120px
+   :width: 200px
 
    The Windows 10 sent transaction confirmation notification
 
@@ -106,7 +106,7 @@ the sending party. To do this, click **File > Receiving addresses**. The
 **Receiving addresses** window appears.
 
 .. figure:: img/receiving-addresses.png
-   :height: 200px
+   :width: 350px
 
    The Receiving addresses window
 
@@ -121,7 +121,7 @@ blockchain when it is open, and will recognize a new transaction
 involving your receiving address when it occurs.
 
 .. figure:: img/received-notification.png
-   :height: 120px
+   :width: 200px
 
    The Windows 10 received transaction confirmation notification
 
@@ -129,7 +129,7 @@ Once you have been paid, you can see the balance both on the
 **Overview** tab and on the **Transactions** tab.
 
 .. figure:: img/received.png
-   :height: 250px
+   :width: 400px
 
    The received transaction
 
