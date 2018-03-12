@@ -32,6 +32,7 @@ Linux, Raspberry Pi and Windows.
    dashcore/index.rst
    dashcore/interface.rst
    dashcore/installation.rst
+   dashcore/send-receive.rst
 
 
 .. _dash_electrum_wallet:
