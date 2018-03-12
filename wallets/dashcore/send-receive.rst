@@ -24,7 +24,7 @@ transactions.
 Dash addresses are 34 characters long and begin with an uppercase X.
 
 Sending Dash
-------------
+============
 
 You can use Dash Core to send Dash from your balance to another user.
 The receiving user will provide you with a Dash address to which you
@@ -36,10 +36,6 @@ the destination address in the **Pay To** field.
 
    The website properly detects the wallet appropriate for your system
 
-
-.. image:: img/sendicons.png
-   :width: 100px
-
 You can also use the three icons |sendicons| to the right of the **Pay
 To** field to select a previously used address, paste an address from
 the clipboard, or clear the current address. If this is a new address,
@@ -49,3 +45,98 @@ transfer in the **Amount** field.
 
 .. |sendicons| image:: img/sendicons.png
    :width: 100px
+
+The other options relate to fees and PrivateSend/InstantSend. You can
+choose if you want to pay the network fee in addition to the amount
+sent, or subtract it from the amount sent. You can also increase your
+fee to encourage nodes on the network to prioritize your transaction.
+Choosing InstantSend has a similar effect, but actually relies on a
+different mechanism in the second layer network to speed up the
+transaction time. You can read more about InstantSend :ref:`here
+<instantsend>`. Choosing PrivateSend will send Dash from an address that
+has previously been mixed. You can find out more about PrivateSend and
+mixing :ref:`here <privatesend>`.
+
+Let’s try an example. Say you have received an invoice which you now
+want to pay with Dash. The writer of the invoice has included a Dash
+address, which can be seen in the following window beginning with Xpa.
+The invoice is for 2.45 Dash, which you fill in the Amount field.
+
+.. figure:: img/sendready.png
+   :height: 250px
+
+   The Send tab filled out for a transaction
+
+Once you have entered the destination address and the amount, click the
+**Send** button. If you have encrypted your wallet, you will now be
+required to enter your password to unlock the wallet.
+
+.. figure:: img/password.png
+   :height: 250px
+
+   Entering the password to unlock the wallet
+
+Finally, you are given one final confirmation and chance to cancel your
+send transaction before Dash Core processes the transaction on the
+blockchain.
+
+.. figure:: img/confirm.png
+   :height: 250px
+
+   Final confirmation window
+
+If you respond with **Yes**, your transaction will be processed. Your
+operating system may display a notification, and the transaction will
+appear on the Transactions tab, where you can monitor its progress.
+
+.. figure:: img/sent-notification.png
+   :height: 250px
+
+   The Windows 10 sent transaction confirmation notification
+
+Note that the amount of the transaction increased by .000045 Dash. This
+is the transaction fee. In the next section, we will see what this
+procedure looks like from the receiving side.
+
+Receiving Dash
+==============
+
+To receive Dash, you must first create a receiving address to give to
+the sending party. To do this, click **File > Receiving addresses**. The
+**Receiving addresses** window appears.
+
+.. figure:: img/receiving-addresses.png
+   :height: 250px
+
+   The Receiving addresses window
+
+Either copy an existing address by clicking on the address and then the
+**Copy** button, or create a new address by clicking the **New** button.
+You can also edit an existing address by right clicking and selecting
+**Edit** address from the context menu. Give this address to the person
+who will send you Dash. Your wallet does not need to be open to receive
+funds, but if it is, you can watch the transaction arrive in real time.
+This is because your wallet constantly watches for new blocks on the
+blockchain when it is open, and will recognize a new transaction
+involving your receiving address when it occurs.
+
+.. figure:: img/received-notification.png
+   :height: 250px
+
+   The Windows 10 received transaction confirmation notification
+
+Once you have been paid, you can see the balance both on the
+**Overview** tab and on the **Transactions** tab.
+
+.. figure:: img/received.png
+   :height: 250px
+
+   The received transaction
+
+**How to Create New Receiving Addresses in DashQT**
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/BciyhumbMq8" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
