@@ -28,9 +28,7 @@ dashd [options]
 Options
 ^^^^^^^
 
---?                                    This help message
-
-
+--help                                 This help message
 --version                              Print version and exit
 --alerts                               Receive and display P2P network alerts (default: 1)
 --alertnotify=<cmd>                    Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)
@@ -83,7 +81,7 @@ Connection options
 --proxyrandomize                       Randomize credentials for every proxy connection. This enables Tor stream isolation (default: 1)
 --seednode=<ip>                        Connect to a node to retrieve peer addresses, and disconnect
 --timeout=<n>                          Specify connection timeout in milliseconds (minimum: 1, default: 5000)
---torcontrol=<ip>:<port>               Tor control port to use if onion listening enabled (default: 127.0.0.1:9051)
+--torcontrol=<ip:port>                 Tor control port to use if onion listening enabled (default: 127.0.0.1:9051)
 --torpassword=<pass>                   Tor control port password (default: empty)
 --upnp                                 Use UPnP to map the listening port (default: 0)
 --whitebind=<addr>                     Bind to given address and whitelist peers connecting to it. Use [host]:port notation for IPv6
