@@ -11,8 +11,8 @@ These commands are accurate as of Dash Core version 0.12.2.1.
 
 - `dashd`_
 - `dash-qt`_
-- dash-cli
-- dash-tx
+- `dash-cli`_
+- `dash-tx`_
 
 
 dashd
@@ -423,36 +423,70 @@ verifychain ( checklevel numblocks )
 verifytxoutproof "proof"
   Verifies that a proof points to a transaction in a block, returning the transaction it commits to nd throwing an RPC error if the block is not in our best chain.
 
-== Control ==
-debug ( 0|1|addrman|alert|bench|coindb|db|lock|rand|rpc|selectcoins|mempool|mempoolrej|net|proxy|prune|http|libevent|tor|zmq|dash|privatesend|instantsend|masternode|spork|keepass|mnpayments|gobject )
-                                           Change debug category on the fly. Specify single category or use comma to specify many.
-getinfo                                    Returns an object containing various state info.
-help ( "command" )                         List all commands, or get help for a specified command.
-stop                                       Stop Dash Core server.
 
-== Dash ==
-getgovernanceinfo                          Returns an object containing governance parameters.
-getpoolinfo                                Returns an object containing mixing pool related information.
-getsuperblockbudget index                  Returns the absolute maximum sum of superblock payments allowed.
-gobject "command"...                       Manage governance objects. Available commands:
-                                             check            - Validate governance object data (proposal only)
-                                             prepare          - Prepare governance object by signing and creating tx
-                                             submit           - Submit governance object to network
-                                             deserialize      - Deserialize governance object from hex string to JSON
-                                             count            - Count governance objects and votes
-                                             get              - Get governance object by hash
-                                             getvotes         - Get all votes for a governance object hash (including old votes)
-                                             getcurrentvotes  - Get only current (tallying) votes for a governance object hash (does not include old votes)
-                                             list             - List governance objects (can be filtered by signal and/or object type)
-                                             diff             - List differences since last diff
-                                             vote-alias       - Vote on a governance object by masternode alias (using masternode.conf setup)
-                                             vote-conf        - Vote on a governance object by masternode configured in dash.conf
-                                             vote-many        - Vote on a governance object by all masternodes (using masternode.conf setup)
-masternode "command"...                    Set of commands to execute masternode related actions. Available commands:
-                                             count            - Print number of all known masternodes (optional: 'ps', 'enabled', 'all', 'qualify')
-                                             current          - Print info on current masternode winner to be paid the next block (calculated locally)
-                                             genkey           - Generate new masternodeprivkey
-                                             outputs          - Print masternode compatible outputs
+Control
+^^^^^^^
+
+debug ( 0|1|addrman|alert|bench|coindb|db|lock|rand|rpc|selectcoins|mempool|mempoolrej|net|proxy|prune|http|libevent|tor|zmq|dash|privatesend|instantsend|masternode|spork|keepass|mnpayments|gobject )
+  Change debug category on the fly. Specify single category or use comma to specify many.
+getinfo
+  Returns an object containing various state info.
+help ( "command" )
+  List all commands, or get help for a specified command.
+stop
+  Stop Dash Core server.
+
+
+Dash
+^^^^
+
+getgovernanceinfo
+  Returns an object containing governance parameters.
+getpoolinfo
+  Returns an object containing mixing pool related information.
+getsuperblockbudget index
+  Returns the absolute maximum sum of superblock payments allowed.
+gobject "command"...
+  Manage governance objects. Available commands:
+    check 
+      Validate governance object data (proposal only)
+    prepare
+      Prepare governance object by signing and creating tx
+    submit
+      Submit governance object to network
+    deserialize
+      Deserialize governance object from hex string to JSON
+    count
+      Count governance objects and votes
+    get
+      Get governance object by hash
+    getvotes
+      Get all votes for a governance object hash (including old votes)
+    getcurrentvotes
+      Get only current (tallying) votes for a governance object hash (does not include old votes)
+    list
+      List governance objects (can be filtered by signal and/or object type)
+    diff
+      List differences since last diff
+    vote-alias
+      Vote on a governance object by masternode alias (using masternode.conf setup)
+    vote-conf
+      Vote on a governance object by masternode configured in dash.conf
+    vote-many
+      Vote on a governance object by all masternodes (using masternode.conf setup)
+masternode "command"...
+  Set of commands to execute masternode related actions. Available commands:
+  count
+    Print number of all known masternodes (optional: 'ps', 'enabled', 'all', 'qualify')
+  current
+    Print info on current masternode winner to be paid the next block (calculated locally)
+  genkey
+    Generate new masternodeprivkey
+
+
+Test 
+
+outputs          - Print masternode compatible outputs
                                              start-alias      - Start single remote masternode by assigned alias configured in masternode.conf
                                              start-<mode>     - Start remote masternodes configured in masternode.conf (<mode>: 'all', 'missing', 'disabled')
                                              status           - Print masternode status information
