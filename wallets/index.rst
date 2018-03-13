@@ -53,6 +53,7 @@ Available documentation:
    dashcore/send-receive.rst
    dashcore/privatesend-instantsend.rst
    dashcore/backup.rst
+   dashcore/advanced.rst
 
 
 .. _dash_electrum_wallet:
