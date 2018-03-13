@@ -1,7 +1,7 @@
 .. _dashcore_send_receive:
 
 ============================
-How to send and receive Dash
+Sending and Receiving Dash
 ============================
 
 Your Dash Core Wallet is associated with a number of unique addresses
