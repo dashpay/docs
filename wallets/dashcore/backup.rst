@@ -33,14 +33,15 @@ file should be saved. Enter a name for the file, select a location and
 click **Save**. The example below shows saving the file to a USB stick.
 Keep this file in a physically separate location to your computer.
 
-.. figure:: img/backup-wallet.png
-   :width: 300px
+.. image:: img/backup-wallet.png
+   :width: 250px
    :align: left
+
+.. figure:: img/backup-save.png
+   :width: 350px
 
    The Dash Core Send tab
 
-.. image:: img/backup-save.png
-   :width: 400px
 
 Backup by copying wallet.dat
 ============================
@@ -51,12 +52,14 @@ located in the *DashCore* data folder. You were given the option to
 specify the location of this folder during installation, but by default
 the folder is in the following locations on different operating systems:
 
-- Windows::
+- Windows
+
+  ::
   
-  C:\Users\YourUserName\Appdata\Roaming\DashCore
+    C:\Users\YourUserName\Appdata\Roaming\DashCore
   
-  You can access this folder directly by Windows Key + R and typing
-  %APPDATA%\DashCore
+  You can access this folder directly by **Windows Key + R** and typing
+  ``%APPDATA%\DashCore``
 
 - Linux
   
@@ -64,10 +67,27 @@ the folder is in the following locations on different operating systems:
 
     /home/YourUserName/.dashcore
 
-  You can access this folder directly by typing cd ~/.dashcore at the
-  terminal or ~/.dashcore in the path bar using the Go > Enter
-  Location... menu item in Files
+  You can access this folder directly by typing ``cd ~/.dashcore`` at
+  the terminal or ``~/.dashcore`` in the path bar using the **Go > Enter
+  Location...** menu item in Files
 
-macOS
-/Users/YourUserName/Library/Application Support/DashCore
-You can access this folder by typing cd ~/Library/Application Support/DashCore at the terminal or ~/Library/Application Support/DashCore in dialog at the Go > Go To Folder menu item in Finder
+- macOS
+
+  ::
+
+    /Users/YourUserName/Library/Application Support/DashCore
+  
+  You can access this folder by typing ``cd ~/Library/Application
+  Support/DashCore`` at the terminal or ``~/Library/Application
+  Support/DashCore`` in dialog at the **Go > Go To Folder* menu item in
+  Finder
+
+Ensure Dash Core is not running, then simply copy the *wallet.dat* file
+from this folder to another folder in the normal way for your operating
+system. The example below shows copying the file to a USB stick using
+simple drag and drop while holding down **Ctrl** on a Windows system. On
+most operating systems, you can also right click on the file and select
+**Copy**, then select **Paste** in the target folder. Keep this file in
+a physically separate location to your computer. Be careful to copy (not
+move) the file!
+

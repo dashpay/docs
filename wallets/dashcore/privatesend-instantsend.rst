@@ -7,21 +7,14 @@ PrivateSend and InstantSend
 PrivateSend
 ===========
 
-This document describes how to use Dash Core to run PrivateSend
-and anonymize your Dash. PrivateSend, rebranded from DarkSend in May
-2016, is a trustless method of running a sequence of transactions such
-that an external observer is unable to determine the source of funding
-when a PrivateSend transaction is created. This gives your Dash the same
-anonymous properties as cash withdrawn from an ATM, for example.
-
-
-Introduction
-------------
-
-With the introduction of Release Candidate 4 (RC4) of the Darkcoin
-client, it became possible to store pre-mixed, denominated Dash in the
-user’s wallet, to be used instantly at any time the user desires. The
-mixing and denomination process is seamless, automatic, and requires no
+This document describes how to use Dash Core to send Dash anonymously.
+PrivateSend, released as DarkSend in RC4 of the DarkCoin client and
+rebranded to PrivateSend in May 2016, is a trustless method of running a
+sequence of transactions (known as "mixing") such that an external
+observer is unable to determine the source of funding when a PrivateSend
+transaction is created. This gives your Dash the same anonymous
+properties as cash withdrawn from an ATM, for example. The mixing and
+denomination process is seamless, automatic, and requires no
 intervention on the part of the user. The current implementation of
 PrivateSend in the Dash Core wallet allows any amount of Dash to be
 mixed for later use in PrivateSend transactions.
