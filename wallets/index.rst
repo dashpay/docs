@@ -53,6 +53,7 @@ Available documentation:
    dashcore/send-receive.rst
    dashcore/privatesend-instantsend.rst
    dashcore/backup.rst
+   dashcore/cmd-rpc.rst
    dashcore/advanced.rst
 
 
