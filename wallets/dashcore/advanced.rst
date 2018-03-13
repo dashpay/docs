@@ -477,12 +477,12 @@ gobject "command"...
 masternode "command"...
   Set of commands to execute masternode related actions. Available commands:
 
-  count
-    Print number of all known masternodes (optional: 'ps', 'enabled', 'all', 'qualify')
-  current
-    Print info on current masternode winner to be paid the next block (calculated locally)
-  genkey
-    Generate new masternodeprivkey
+    count
+      Print number of all known masternodes (optional: 'ps', 'enabled', 'all', 'qualify')
+    current
+      Print info on current masternode winner to be paid the next block (calculated locally)
+    genkey
+      Generate new masternodeprivkey
 
 
 Test 
