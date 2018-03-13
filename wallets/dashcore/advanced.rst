@@ -476,6 +476,7 @@ gobject "command"...
       Vote on a governance object by all masternodes (using masternode.conf setup)
 masternode "command"...
   Set of commands to execute masternode related actions. Available commands:
+
   count
     Print number of all known masternodes (optional: 'ps', 'enabled', 'all', 'qualify')
   current
