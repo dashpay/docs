@@ -1,7 +1,7 @@
 .. _dashcore_rpc:
 
 =======================================
-Command Line Arguments and RPC commands
+Arguments and Commands
 =======================================
 
 Command Line Arguments
