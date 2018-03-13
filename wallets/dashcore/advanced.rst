@@ -9,21 +9,24 @@ Command Line Arguments
 
 These commands are accurate as of Dash Core version 0.12.2.1.
 
-- dashd
-- dash-qt
+- `dashd`_
+- `dash-qt`_
 - dash-cli
 - dash-tx
+
 
 dashd
 -----
 
 Dash Core Daemon
 
+
 Usage
 ^^^^^
 
 dashd [options]
   Start Dash Core Daemon
+
 
 Options
 ^^^^^^^
@@ -90,12 +93,183 @@ Connection options
 --whitelistforcerelay                  Force relay of transactions from whitelisted peers even they violate local relay policy (default: 1)
 --maxuploadtarget=<n>                  Tries to keep outbound traffic under the given target (in MiB per 24h), 0 = no limit (default: 0)
 
-dashd
------
 
-Dash Core Daemon
-dashd [options]
-  Start Dash Core Daemon
+Wallet options
+^^^^^^^^^^^^^^
+
+--disablewallet                        Do not load the wallet and disable wallet RPC calls
+--keypool=<n>                          Set key pool size to <n> (default: 1000)
+--fallbackfee=<amt>                    A fee rate (in DASH/kB) that will be used when fee estimation has insufficient data (default: 0.0002)
+--mintxfee=<amt>                       Fees (in DASH/kB) smaller than this are considered zero fee for transaction creation (default: 0.0001)
+--paytxfee=<amt>                       Fee (in DASH/kB) to add to transactions you send (default: 0.00)
+--rescan                               Rescan the block chain for missing wallet transactions on startup
+--salvagewallet                        Attempt to recover private keys from a corrupt wallet.dat on startup
+--sendfreetransactions                 Send transactions as zero-fee transactions if possible (default: 0)
+--spendzeroconfchange                  Spend unconfirmed change when sending transactions (default: 1)
+--txconfirmtarget=<n>                  If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks (default: 2)
+--maxtxfee=<amt>                       Maximum total fees (in DASH) to use in a single wallet transaction; setting this too low may abort large transactions (default: 0.20)
+--usehd                                Use hierarchical deterministic key generation (HD) after bip39/bip44. Only has effect during wallet creation/first start (default: 0)
+--mnemonic                             User defined mnemonic for HD wallet (bip39). Only has effect during wallet creation/first start (default: randomly generated)
+--mnemonicpassphrase                   User defined mnemonic passphrase for HD wallet (bip39). Only has effect during wallet creation/first start (default: empty string)
+--hdseed                               User defined seed for HD wallet (should be in hex). Only has effect during wallet creation/first start (default: randomly generated)
+--upgradewallet                        Upgrade wallet to latest format on startup
+--wallet=<file>                        Specify wallet file (within data directory) (default: wallet.dat)
+--walletbroadcast                      Make the wallet broadcast transactions (default: 1)
+--walletnotify=<cmd>                   Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)
+--zapwallettxes=<mode>                 Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup (1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)
+--createwalletbackups=<n>              Number of automatic wallet backups (default: 10)
+--walletbackupsdir=<dir>               Specify full path to directory for automatic wallet backups (must exist)
+--keepass                              Use KeePass 2 integration using KeePassHttp plugin (default: 0)
+--keepassport=<port>                   Connect to KeePassHttp on port <port> (default: 19455)
+--keepasskey=<key>                     KeePassHttp key for AES encrypted communication with KeePass
+--keepassid=<name>                     KeePassHttp id for the established association
+--keepassname=<name>                   Name to construct url for KeePass entry that stores the wallet passphrase
+
+
+ZeroMQ notification options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+--zmqpubhashblock=<address>            Enable publish hash block in <address>
+--zmqpubhashtx=<address>               Enable publish hash transaction in <address>
+--zmqpubhashtxlock=<address>           Enable publish hash transaction (locked via InstantSend) in <address>
+--zmqpubrawblock=<address>             Enable publish raw block in <address>
+--zmqpubrawtx=<address>                Enable publish raw transaction in <address>
+--zmqpubrawtxlock=<address>            Enable publish raw transaction (locked via InstantSend) in <address>
+
+
+Debugging/Testing options
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+--uacomment=<cmt>                      Append comment to the user agent string
+--debug=<category>                     Output debugging information (default: 0, supplying <category> is optional). If <category> is not supplied or if <category> = 1, output all debugging information.<category> can be: addrman, alert, bench, coindb, db, http, libevent, lock, mempool, mempoolrej, net, proxy, prune, rand, reindex, rpc, selectcoins, tor, zmq, dash (or specifically: gobject, instantsend, keepass, masternode, mnpayments, mnsync, privatesend, spork).
+--gen                                  Generate coins (default: 0)
+--genproclimit=<n>                     Set the number of threads for coin generation if enabled (-1 = all cores, default: 1)
+--help-debug                           Show all debugging options (usage: --help -help-debug)
+--logips                               Include IP addresses in debug output (default: 0)
+--logtimestamps                        Prepend debug output with timestamp (default: 1)
+--minrelaytxfee=<amt>                  Fees (in DASH/kB) smaller than this are considered zero fee for relaying, mining and transaction creation (default: 0.0001)
+--printtoconsole                       Send trace/debug info to console instead of debug.log file
+--printtodebuglog                      Send trace/debug info to debug.log file (default: 1)
+--shrinkdebugfile                      Shrink debug.log file on client startup (default: 1 when no -debug)
+
+
+Chain selection options
+^^^^^^^^^^^^^^^^^^^^^^^
+
+--testnet                              Use the test chain
+--litemode=<n>                         Disable all Dash specific functionality (Masternodes, PrivateSend, InstantSend, Governance) (0-1, default: 0)
+
+
+Masternode options
+^^^^^^^^^^^^^^^^^^
+
+--masternode=<n>                       Enable the client to act as a masternode (0-1, default: 0)
+--mnconf=<file>                        Specify masternode configuration file (default: masternode.conf)
+--mnconflock=<n>                       Lock masternodes from masternode configuration file (default: 1)
+--masternodeprivkey=<n>                Set the masternode private key
+
+
+PrivateSend options
+^^^^^^^^^^^^^^^^^^^
+
+--enableprivatesend=<n>                Enable use of automated PrivateSend for funds stored in this wallet (0-1, default: 0)
+--privatesendmultisession=<n>          Enable multiple PrivateSend mixing sessions per block, experimental (0-1, default: 0)
+--privatesendrounds=<n>                Use N separate masternodes for each denominated input to mix funds (2-16, default: 2)
+--privatesendamount=<n>                Keep N DASH anonymized (default: 1000)
+--liquidityprovider=<n>                Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)
+
+
+InstantSend options
+^^^^^^^^^^^^^^^^^^^
+
+--enableinstantsend=<n>                Enable InstantSend, show confirmations for locked transactions (0-1, default: 1)
+--instantsenddepth=<n>                 Show N confirmations for a successfully locked transaction (0-9999, default: 5)
+--instantsendnotify=<cmd>              Execute command when a wallet InstantSend transaction is successfully locked (%s in cmd is replaced by TxID)
+
+
+Node relay options
+^^^^^^^^^^^^^^^^^^
+
+--bytespersigop                        Minimum bytes per sigop in transactions we relay and mine (default: 20)
+--datacarrier                          Relay and mine data carrier transactions (default: 1)
+--datacarriersize                      Maximum size of data in data carrier transactions we relay and mine (default: 83)
+--mempoolreplacement                   Enable transaction replacement in the memory pool (default: 0)
+
+
+Block creation options
+^^^^^^^^^^^^^^^^^^^^^^
+
+--blockminsize=<n>                     Set minimum block size in bytes (default: 0)
+--blockmaxsize=<n>                     Set maximum block size in bytes (default: 750000)
+--blockprioritysize=<n>                Set maximum size of high-priority/low-fee transactions in bytes (default: 10000)
+
+
+RPC server options
+^^^^^^^^^^^^^^^^^^
+
+--server                               Accept command line and JSON-RPC commands
+--rest                                 Accept public REST requests (default: 0)
+--rpcbind=<addr>                       Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)
+--rpccookiefile=<loc>                  Location of the auth cookie (default: data dir)
+--rpcuser=<user>                       Username for JSON-RPC connections
+--rpcpassword=<pw>                     Password for JSON-RPC connections
+--rpcauth=<userpw>                     Username and hashed password for JSON-RPC connections. The field <userpw> comes in the format: <USERNAME>:<SALT>$<HASH>. A canonical python script is included in share/rpcuser. This option can be specified multiple times
+--rpcport=<port>                       Listen for JSON-RPC connections on <port> (default: 9998 or testnet: 19998)
+--rpcallowip=<ip>                      Allow JSON-RPC connections from specified source. Valid for <ip> are a single IP (e.g. 1.2.3.4), a network/netmask (e.g. 1.2.3.4/255.255.255.0) or a network/CIDR (e.g. 1.2.3.4/24). This option can be specified multiple times
+--rpcthreads=<n>                       Set the number of threads to service RPC calls (default: 4)
+
+
+dash-qt
+-------
+
+Dash Core QT GUI, use same command line options as dashd with additional
+options for UI as described below.
+
+
+Usage
+^^^^^
+
+dash-qt [command-line options]
+  Start Dash Core QT GUI
+
+
+Wallet options
+^^^^^^^^^^^^^^
+
+--windowtitle=<name>                   Wallet window title
+ 
+Debugging/Testing options
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+--debug=<category>                     Output debugging information (default: 0, supplying <category> is optional). If <category> is not supplied or if <category> = 1, output all debugging information.<category> can be: addrman, alert, bench, coindb, db, http, libevent, lock, mempool, mempoolrej, net, proxy, prune, rand, reindex, rpc, selectcoins, tor, zmq, dash (or specifically: gobject, instantsend, keepass, masternode, mnpayments, mnsync, privatesend, spork), qt. 
+
+ 
+UI options
+^^^^^^^^^^
+
+--choosedatadir                        Choose data directory on startup (default: 0) 
+--lang=<lang>                          Set language, for example "de_DE" (default: system locale) 
+--min                                  Start minimized 
+--rootcertificates=<file>              Set SSL root certificates for payment request (default: -system-) 
+--splash                               Show splash screen on startup (default: 1) 
+--resetguisettings                     Reset all settings changed in the GUI
+
+
+dash-cli
+--------
+
+Dash Core RPC client
+
+
+Usage
+^^^^^
+
+dash-cli [options] <command> [params]  
+  Send command to Dash Core
+dash-cli [options] help                
+  List commands
+dash-cli [options] help <command>      
+  Get help for a command
 
 
 RPC Commands
