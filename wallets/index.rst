@@ -43,6 +43,8 @@ Features:
 -  Automated backup
 -  Debug console
 
+Available documentation:
+
 .. toctree::
    :maxdepth: 1
 
@@ -50,6 +52,7 @@ Features:
    dashcore/interface.rst
    dashcore/send-receive.rst
    dashcore/privatesend-instantsend.rst
+   dashcore/backup.rst
 
 
 .. _dash_electrum_wallet:
