@@ -66,17 +66,18 @@ Options
 
 
 
--version            Print version and exit
--alerts             Receive and display P2P network alerts (default: 1)
--alertnotify <cmd>  Execute command when a relevant alert is received or 
-                    we see a really long fork (%s in cmd is replaced by 
-                    message)
--blocknotify=cmd    Execute command when the best block changes (%s in 
-                    cmd is replaced by block hash)
--assumevalid=<cmd>  If this block is in the chain assume that it and its
-                    ancestors are valid and potentially skip their 
-                    script verification 
--loadblock          Imports blocks from external blk000.dat file on startup
+--version             Print version and exit
+--alerts              Receive and display P2P network alerts (default: 1)
+--alertnotify <cmd>   Execute command when a relevant alert is received or
+                     we see a really long fork (%s in cmd is replaced by 
+                     message)
+--blocknotify=cmd     Execute command when the best block changes (%s in 
+                     cmd is replaced by block hash)
+--assumevalid=<cmd>   If this block is in the chain assume that it and its
+                     ancestors are valid and potentially skip their 
+                     script verification 
+--loadblock=<file>   Imports blocks from external blk000.dat file on 
+                     startup
 
 
 
