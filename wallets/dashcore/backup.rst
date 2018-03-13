@@ -33,14 +33,14 @@ file should be saved. Enter a name for the file, select a location and
 click **Save**. The example below shows saving the file to a USB stick.
 Keep this file in a physically separate location to your computer.
 
-.. image:: img/backup-wallet.png
+.. figure:: img/backup-wallet.png
    :width: 250px
    :align: left
 
-.. figure:: img/backup-save.png
-   :width: 350px
-
    The Dash Core Send tab
+
+.. image:: img/backup-save.png
+   :width: 350px
 
 
 Backup by copying wallet.dat
@@ -79,7 +79,7 @@ the folder is in the following locations on different operating systems:
   
   You can access this folder by typing ``cd ~/Library/Application
   Support/DashCore`` at the terminal or ``~/Library/Application
-  Support/DashCore`` in dialog at the **Go > Go To Folder* menu item in
+  Support/DashCore`` in dialog at the **Go > Go To Folder** menu item in
   Finder
 
 Ensure Dash Core is not running, then simply copy the *wallet.dat* file
