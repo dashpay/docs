@@ -81,7 +81,7 @@ Options
 
 
 
-                    (0 to verify all, default: 
+(0 to verify all, default: 
                     00000000000000b4181bbbdddbae464ce11fede5d0292fb63fdede1e7c8ab21c, 
                     testnet: 
                     00000ce22113f3eb8636e225d6a1691e132fdd587aed993e1bc9b07a0235eea4)
