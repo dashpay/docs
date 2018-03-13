@@ -36,14 +36,14 @@ file should be saved. Enter a name for the file, select a location and
 click **Save**. The example below shows saving the file to a USB stick.
 Keep this file in a physically separate location to your computer.
 
-.. figure:: img/backup-wallet.png
-   :width: 240px
+.. image:: img/backup-wallet.png
+   :width: 250px
    :align: left
 
-   Backing up the Dash Core wallet from the File menu
+.. figure:: img/backup-save.png
+   :width: 400px
 
-.. image:: img/backup-save.png
-   :width: 370px
+   Backing up the Dash Core wallet from the File menu
 
 
 Backup by copying wallet.dat
