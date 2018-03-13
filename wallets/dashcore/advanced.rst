@@ -66,7 +66,7 @@ Options
 
 -version            Print version and exit
 -alerts             Receive and display P2P network alerts (default: 1)
--alertnotify=cmd    Execute command when a relevant alert is received or 
+-alertnotify        Execute command when a relevant alert is received or 
                     we see a really long fork (%s in cmd is replaced by 
                     message)
 -blocknotify=<cmd>  Execute command when the best block changes (%s in 
