@@ -427,7 +427,7 @@ verifytxoutproof "proof"
 Control
 ^^^^^^^
 
-debug ( 0|1|addrman|alert|bench|coindb|db|lock|rand|rpc|selectcoins|mempool|mempoolrej|net|proxy|prune|http|libevent|tor|zmq|dash|privatesend|instantsend|masternode|spork|keepass|mnpayments|gobject )
+debug ( 0 | 1 | addrman | alert | bench | coindb | db | lock | rand | rpc | selectcoins | mempool | mempoolrej | net | proxy | prune | http | libevent | tor | zmq | dash | privatesend | instantsend | masternode | spork | keepass | mnpayments | gobject )
   Change debug category on the fly. Specify single category or use comma to specify many.
 getinfo
   Returns an object containing various state info.
