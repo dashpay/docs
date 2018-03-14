@@ -17,7 +17,7 @@ currently exists. Enter a name for your wallet (or accept the default
 name) and click **Next** to create your wallet.
 
 .. image:: img/connect.png
-   :width: 250px
+   :width: 249px
    :align: left
 
 .. figure:: img/create-wallet.png
@@ -37,7 +37,7 @@ not restoring an existing wallet, choose **Create a new seed** and click
 **Next** to continue.
 
 .. image:: img/wallet-type.png
-   :width: 250px
+   :width: 249px
    :align: left
 
 .. figure:: img/seed-type.png
@@ -54,7 +54,7 @@ confirmation. Type the words in the correct order and click **Next** to
 continue.
 
 .. image:: img/seed-generate.png
-   :width: 250px
+   :width: 249px
    :align: left
 
 .. figure:: img/seed-confirm.png
