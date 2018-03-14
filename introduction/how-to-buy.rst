@@ -423,6 +423,17 @@ Cryptopia
   for supporting a large number of low-volume altcoins. It offers DASH
   trading pairs for BTC, LTC, DOGE and USDT.
 
+Styx24
+  .. image:: exchanges/styx24.png
+     :width: 100px
+     :align: right
+     :target: https://www.styx24.com
+
+  https://www.styx24.com
+
+  Styx24 is based in Zimbabwe and offers trading for DASH, BTC and LTC
+  against the USD.
+
 ACX
   .. image:: exchanges/acxlogo.png
      :width: 200px
