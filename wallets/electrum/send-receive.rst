@@ -89,7 +89,6 @@ timestamp at which the transaction was made.
 
 .. image:: img/monitor-confirmed.png
    :width: 250px
-   :align: right
 
 .. figure:: img/monitor-unconfirmed.png
    :width: 250px
