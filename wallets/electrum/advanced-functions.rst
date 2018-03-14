@@ -73,14 +73,14 @@ appear asking you to name your new wallet. Enter a name, select
 **Standard wallet** as the wallet type and then choose **I already have
 a seed**.
 
-.. figure:: img/restore-seed.png
+.. figure:: img/restore-seeds.png
    :width: 400px
 
    Restoring a wallet from an existing seed
 
 Next, copy the twelve word seed into the text field.
 
-.. figure:: img/restore-words.png
+.. figure:: img/restore-phrase.png
    :width: 400px
 
    Entering the recovery seed
@@ -91,7 +91,7 @@ Electrum will list any existing transactions from this wallet. This
 process may take a few minutes, and the transactions may appear as **Not
 Verified**. This problem disappears after restarting the program.
 
-.. figure:: img/restore-unverified.png
+.. figure:: img/restore-not-verified.png
    :width: 400px
 
    Unverified transactions after recovery
