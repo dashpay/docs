@@ -26,7 +26,7 @@ fee, which is calculated automatically. Dash Electrum issues a warning
 if the total transaction amount exceeds the wallet balance.
 
 .. figure:: img/send.png
-   :width: 250px
+   :width: 400px
 
    Transaction ready to send in Dash Electrum wallet
 
@@ -34,13 +34,14 @@ The wallet will request your password, then broadcast the transaction to
 the network and display a confirmation dialog with your transaction ID.
 
 .. image:: img/send-password.png
-   :width: 100px
+   :width: 120px
    :align: left
 
 .. figure:: img/send-confirmation.png
    :width: 400px
 
    Password prompt and transaction confirmation in Electrum-Dash wallet
+
 
 Receiving Dash
 ==============
@@ -54,7 +55,7 @@ display the stored information in the top area, together with a QR code
 containing the same information.
 
 .. figure:: img/receive-pending.png
-   :width: 250px
+   :width: 400px
 
    Transaction ready to send in Dash Electrum wallet
 
@@ -65,7 +66,7 @@ lower left corner of your wallet, and the indicator in the **Requests**
 table will change from **Pending** to **Paid**.
 
 .. figure:: img/receive-paid.png
-   :width: 250px
+   :width: 400px
 
    Successfully received payment in Electrum-Dash wallet
 
@@ -87,7 +88,7 @@ processed transactions are denoted with a green checkmark and the
 timestamp at which the transaction was made.
 
 .. image:: img/monitor-unconfirmed.png
-   :width: 249px
+   :width: 248px
    :align: left
 
 .. figure:: img/monitor-confirmed.png

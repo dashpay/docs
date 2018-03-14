@@ -119,13 +119,13 @@ ensure the **Encrypt wallet file** checkbox is ticked and click **Next**
 to continue.
 
 .. figure:: img/password.png
-   :width: 250px
+   :width: 400px
 
    Entering and confirming a wallet encryption password
 
 Your Dash Electrum wallet is now set up and ready for use.
 
 .. figure:: img/electrum.png
-   :width: 250px
+   :width: 400px
 
    Dash Electrum after setup is complete
