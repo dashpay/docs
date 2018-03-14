@@ -40,7 +40,7 @@ the network and display a confirmation dialog with your transaction ID.
 .. figure:: img/send-confirmation.png
    :width: 400px
 
-   Password prompt and transaction confirmation in Electrum-Dash wallet
+   Password prompt and transaction confirmation in Dash Electrum wallet
 
 
 Receiving Dash
@@ -68,7 +68,7 @@ table will change from **Pending** to **Paid**.
 .. figure:: img/receive-paid.png
    :width: 400px
 
-   Successfully received payment in Electrum-Dash wallet
+   Successfully received payment in Dash Electrum wallet
 
 Once you have used an address, you can either continue using it or click
 **New** to generate a new address.
@@ -106,4 +106,4 @@ external block explorer.
 .. figure:: img/transaction-details.png
    :width: 400px
 
-   Transaction details in Electrum-Dash wallet
+   Transaction details in Dash Electrum wallet
