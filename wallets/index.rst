@@ -77,7 +77,9 @@ features.
 
    electrum/installation.rst
    electrum/send-receive.rst
-   electrum/advanced-functions.rst
+   electrum/security.rst
+   electrum/faq.rst
+   electrum/advanced.rst
 
 
 .. _dash_android_wallet:
