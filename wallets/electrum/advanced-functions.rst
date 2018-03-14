@@ -24,7 +24,7 @@ up the Electrum wallet.
 .. figure:: img/backup-seed.png
    :width: 400px
 
-   Selecting the server and naming your first wallet
+   Displaying the wallet recovery seed in Dash Electrum
 
 Hand-copy the twelve words found in the box to a piece of paper and
 store it in a safe location. Remember, anyone who finds your seed can
@@ -33,7 +33,7 @@ spend all of the funds in your wallet.
 .. figure:: img/backup-view.png
    :width: 300px
 
-   Selecting the server and naming your first wallet
+   Viewing the recovery seed
 
 Alternatively, a backup file can be saved using the **File > Save Copy**
 main menu option. This file stores the wallet's encrypted seed along
@@ -54,19 +54,19 @@ be deleted. Begin by closing Electrum. Next, locate the application data
 folder according to your operating system:
 
 - **Linux**
-  1. Open Files, select **Go > Go to folder**, copy the path 
-  ``~/.electrum`` and paste it into the dialog box
-  2. Delete all files in the folder
+	  1. Open Files, select **Go > Go to folder**, copy the path 
+	  ``~/.electrum`` and paste it into the dialog box
+	  2. Delete all files in the folder
 
 - **macOS:**
-  1. Open Finder, select **Go > Go to Folder**, copy the path
-     ``~/.electrum`` and paste it into the dialog box
-  2. Delete all files in the folder
+	  1. Open Finder, select **Go > Go to Folder**, copy the path
+	     ``~/.electrum`` and paste it into the dialog box
+	  2. Delete all files in the folder
 
 - **Windows:**
-  1. Open Explorer, copy the path ``%APPDATA%\Electrum-DASH`` and paste
-     it in to the address bar
-  2. Delete all files in the folder
+	  1. Open Explorer, copy the path ``%APPDATA%\Electrum-DASH`` and paste
+	     it in to the address bar
+	  2. Delete all files in the folder
 
 Having cleared the data directory, restart Dash Electrum. A dialog will
 appear asking you to name your new wallet. Enter a name, select
@@ -83,7 +83,7 @@ Next, copy the twelve word seed into the text field.
 .. figure:: img/restore-words.png
    :width: 400px
 
-   Enter the recovery seed
+   Entering the recovery seed
 
 If your seed was entered correctly, Dash Electrum gives you the option
 to add a password for your wallet. After restoring your wallet, Dash
