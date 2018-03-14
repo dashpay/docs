@@ -62,7 +62,7 @@ Available documentation:
 Dash Electrum Wallet
 ====================
 
-Electrum-Dash is a light wallet which uses powerful external servers to
+Dash Electrum is a light wallet which uses powerful external servers to
 index the blockchain, while still securing the keys on your personal
 computer. Transactions are verified on the Dash blockchain using a
 technique called Secure Payment Verification (SPV), which only requires
@@ -70,6 +70,14 @@ the block headers and not the full block. This means that wallet startup
 is almost instant, while still keeping your funds secure and mobile. It
 does not currently support advanced InstantSend and PrivateSend
 features.
+
+.. toctree::
+   :includehidden:
+   :maxdepth: 1
+
+   electrum/installation.rst
+   electrum/getting-started.rst
+   electrum/advanced-functions.rst
 
 
 .. _dash_android_wallet:
