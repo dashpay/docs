@@ -87,15 +87,17 @@ confirmed (and therefore spendable) after six confirmations. These
 processed transactions are denoted with a green checkmark and the
 timestamp at which the transaction was made.
 
-.. image:: img/monitor-unconfirmed.png
-   :width: 248px
-   :align: left
-
-.. figure:: img/monitor-confirmed.png
+.. figure:: img/monitor-unconfirmed.png
    :width: 250px
+   :align: left
 
    Dash Electrum wallet History tab immediately after receiving a
    transaction and after confirmation is complete
+
+.. image:: img/monitor-confirmed.png
+   :width: 250px
+   :align: right
+
 
 To view additional transaction details, right click a transaction on the
 **History** tab and select **Details** from the context menu. You can
