@@ -76,7 +76,7 @@ features.
    :maxdepth: 1
 
    electrum/installation.rst
-   electrum/getting-started.rst
+   electrum/send-receive.rst
    electrum/advanced-functions.rst
 
 
