@@ -71,6 +71,12 @@ is almost instant, while still keeping your funds secure and mobile. It
 does not currently support advanced InstantSend and PrivateSend
 features.
 
+Dash Electrum is a fork of the Electrum wallet for Bitcoin. While this
+documentation focuses on using Dash Electrum, full documentation of all
+Bitcoin Electrum features (mostly identical in Dash Electrum) is
+available at the `official documentation site
+<http://docs.electrum.org>`_.
+
 .. toctree::
    :includehidden:
    :maxdepth: 1

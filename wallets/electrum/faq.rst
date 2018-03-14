@@ -17,7 +17,7 @@ Does Electrum trust servers?
 Not really; the Dash Electrum client never sends private keys to the
 servers. In addition, it verifies the information reported by
 servers, using a technique called `Simple Payment Verification
-<http://docs.electrum.org/en/latest/spv.html#spv>`_.
+<http://docs.electrum.org/en/latest/spv.html>`_.
 
 What is the Seed?
 -----------------
@@ -52,8 +52,8 @@ You can create a zero fee transaction in the GUI by following these
 steps:
 
 -  Enable the **Edit fees manually** option
--  Enter 0 in the fee field
--  Enter the amount in the amount field
+-  Enter 0 in the **Fee** field
+-  Enter the amount in the **Amount** field
 
 Note that transactions without fees might not be relayed by the Dash
 Electrum server, or by the Dash network.
@@ -90,8 +90,8 @@ is unencrypted in your computer’s memory.
 Does Electrum support cold wallets?
 -----------------------------------
 
-Yes. see \ `Cold Storage
-<http://docs.electrum.org/en/latest/coldstorage.html#coldstorage>`_.
+Yes. See `Cold Storage 
+<http://docs.electrum.org/en/latest/coldstorage.html>`_.
 
 Can I import private keys from other Dash clients?
 --------------------------------------------------
@@ -105,5 +105,24 @@ wallet, select **Use public or private keys**, and instead of typing
 your seed, type a list of private keys, or a list of addresses if you
 want to create a watching-only wallet. A master public (xpub) or private
 (xprv) will also work to import a hierarchical deterministic series of
-keys.
+keys. You will need to back up this wallet, because it cannot be
+recovered from seed.
 
+.. figure:: img/faq-xpub.png
+   :width: 400px
+
+   Importing a list of private keys to create a wallet
+
+Can I sweep private keys from other dash clients?
+-------------------------------------------------
+
+Sweeping private keys means to send all the Dash they control to an
+existing address in your wallet. The private keys you sweep do not
+become a part of your wallet. Instead, all the Dash they control are
+sent to an address that has been deterministically generated from your
+wallet seed.
+
+To sweep private keys go to **Wallet > Private Keys > Sweep**. Enter the
+private keys in the appropriate field. Leave the **Address** field
+unchanged. This is the destination address from your existing Dash
+Electrum wallet.
