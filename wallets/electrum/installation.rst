@@ -65,11 +65,10 @@ currently exists. Enter a name for your wallet (or accept the default
 name) and click **Next** to create your wallet.
 
 .. image:: img/connect.png
-   :width: 249px
-   :align: left
+   :width: 400px
 
 .. figure:: img/create-wallet.png
-   :width: 250px
+   :width: 400px
 
    Selecting the server and naming your first wallet
 
@@ -85,11 +84,10 @@ not restoring an existing wallet, choose **Create a new seed** and click
 **Next** to continue.
 
 .. image:: img/wallet-type.png
-   :width: 249px
-   :align: left
+   :width: 400px
 
 .. figure:: img/seed-type.png
-   :width: 250px
+   :width: 400px
 
    Selecting the wallet type and keystore
 
@@ -102,11 +100,10 @@ confirmation. Type the words in the correct order and click **Next** to
 continue.
 
 .. image:: img/seed-generate.png
-   :width: 249px
-   :align: left
+   :width: 400px
 
 .. figure:: img/seed-confirm.png
-   :width: 250px
+   :width: 400px
 
    Generating and confirming the recovery seed
 

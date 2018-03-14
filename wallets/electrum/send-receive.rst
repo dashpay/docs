@@ -34,7 +34,7 @@ The wallet will request your password, then broadcast the transaction to
 the network and display a confirmation dialog with your transaction ID.
 
 .. image:: img/send-password.png
-   :width: 120px
+   :width: 110px
    :align: left
 
 .. figure:: img/send-confirmation.png
@@ -87,12 +87,11 @@ confirmed (and therefore spendable) after six confirmations. These
 processed transactions are denoted with a green checkmark and the
 timestamp at which the transaction was made.
 
-.. image:: img/monitor-confirmed.png
-   :width: 250px
+.. image:: img/monitor-unconfirmed.png
+   :width: 400px
 
-.. figure:: img/monitor-unconfirmed.png
-   :width: 250px
-   :align: left
+.. figure:: img/monitor-confirmed.png
+   :width: 400px
 
    Dash Electrum wallet History tab immediately after receiving a
    transaction and after confirmation is complete
@@ -105,6 +104,6 @@ transaction description for your records or view the transaction on an
 external block explorer.
 
 .. figure:: img/transaction-details.png
-   :width: 250px
+   :width: 400px
 
    Transaction details in Electrum-Dash wallet
