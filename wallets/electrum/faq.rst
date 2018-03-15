@@ -103,8 +103,7 @@ seed phrase.
 Does Dash Electrum support cold wallets?
 ----------------------------------------
 
-Yes. See `Cold Storage 
-<http://docs.electrum.org/en/latest/coldstorage.html>`_.
+Yes. See the :ref:`cold storage <electrum_cold_storage>` section.
 
 Can I import private keys from other Dash clients?
 --------------------------------------------------
