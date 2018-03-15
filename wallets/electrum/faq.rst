@@ -1,10 +1,14 @@
 .. _electrum_faq:
 
+==========================
 Frequently Asked Questions
 ==========================
 
-How does Electrum work?
------------------------
+FAQ
+===
+
+How does Dash Electrum work?
+----------------------------
 
 Dash Electrum focuses on speed, low resource usage and providing a
 simple user experience for Dash. Startup times are instant because it
@@ -57,8 +61,8 @@ steps:
 Note that transactions without fees might not be relayed by the Dash
 Electrum server, or by the Dash network.
 
-What does it mean to “Freeze” an address in Electrum?
------------------------------------------------------
+What does it mean to “Freeze” an address in Dash Electrum?
+----------------------------------------------------------
 
 When you freeze an address, the funds in that address will not be used
 for sending Dash. You can not send Dash if you don’t have enough funds
@@ -79,8 +83,8 @@ Dash Electrum uses two separate levels of encryption:
    wallet information will remain unencrypted in the memory of your
    computer for the duration of your session. If a wallet is encrypted,
    then its password will be required in order to open it. Note that the
-   password will not be kept in memory; Electrum does not need it in
-   order to save the wallet on disk, because it uses asymmetric
+   password will not be kept in memory; Dash Electrum does not need it
+   in order to save the wallet on disk, because it uses asymmetric
    encryption (ECIES).
 
 Wallet file encryption is activated by default since version 2.8. It is
@@ -99,8 +103,8 @@ To restore your wallet from its seed phrase, create a new wallet, select
 the type, choose **I already have a seed** and proceed to input your
 seed phrase.
 
-Does Electrum support cold wallets?
------------------------------------
+Does Dash Electrum support cold wallets?
+----------------------------------------
 
 Yes. See `Cold Storage 
 <http://docs.electrum.org/en/latest/coldstorage.html>`_.
@@ -154,8 +158,8 @@ first run the application. It is located under the `/wallets` folder.
 - **Windows:** Open Explorer, copy the path ``%APPDATA%\Electrum-DASH``
   and paste it in to the address bar
 
-Can I do bulk payments with Electrum?
--------------------------------------
+Can I do bulk payments with Dash Electrum?
+------------------------------------------
 
 You can create a transaction with several outputs. In the GUI, type each
 address and amount on a line, separated by a comma.
@@ -201,15 +205,16 @@ What is the gap limit?
 ----------------------
 
 The gap limit is the maximum number of consecutive unused addresses in
-your deterministic sequence of addresses. Electrum uses it in order to
-stop looking for addresses. In Electrum 2.0, it is set to 20 by default,
-so the client will get all addresses until 20 unused addresses are
-found.
+your deterministic sequence of addresses. Dash Electrum uses it in order
+to stop looking for addresses. In Dash Electrum 2.0, it is set to 20 by
+default, so the client will get all addresses until 20 unused addresses
+are found.
 
 How can I pre-generate new addresses?
 -------------------------------------
 
-Electrum will generate new addresses as you use them, until it hits the `gap limit`_.
+Dash Electrum will generate new addresses as you use them, until it hits
+the `gap limit`_.
 
 If you need to pre-generate more addresses, you can do so by typing
 wallet.create_new_address() in the console. This command will generate
@@ -233,35 +238,207 @@ How to upgrade Dash Electrum?
 
 Warning: always save your wallet seed on paper before doing an upgrade.
 
-To upgrade Electrum, just :ref:`install <electrum_installation>` the
-most recent version. The way to do this will depend on your OS.
+To upgrade Dash Electrum, just :ref:`install <electrum_installation>`
+the most recent version. The way to do this will depend on your OS. Note
+that your wallet files are stored separately from the software, so you
+can safely remove the old version of the software if your OS does not do
+it for you.
 
-Note that your wallet files are stored separately from the software, so
-you can safely remove the old version of the software if your OS does
-not do it for you.
+Some Dash Electrum upgrades will modify the format of your wallet files.
+For this reason, it is not recommended to downgrade Dash Electrum to an
+older version once you have opened your wallet file with the new
+version. The older version will not always be able to read the new
+wallet file.
 
-Some Electrum upgrades will modify the format of your wallet files. For
-this reason, it is not recommended to downgrade Electrum to an older
-version once you have opened your wallet file with the new version. The
-older version will not always be able to read the new wallet file.
+The following issues should be considered when upgrading Dash Electrum
+1.x wallets to Dash Electrum 2.x:
 
-The following issues should be considered when upgrading Electrum 1.x
-wallets to Electrum 2.x:
+- Dash Electrum 2.x will need to regenerate all of your addresses during
+  the upgrade process. Please allow it time to complete, and expect it
+  to take a little longer than usual for Dash Electrum to be ready.
 
-- Electrum 2.x will need to regenerate all of your addresses during the
-  upgrade process. Please allow it time to complete, and expect it to
-  take a little longer than usual for Electrum to be ready.
-
-- The contents of your wallet file will be replaced with an Electrum 2
-  wallet. This means Electrum 1.x will no longer be able to use your
-  wallet once the upgrade is complete.
+- The contents of your wallet file will be replaced with an Dash
+  Electrum 2 wallet. This means Dash Electrum 1.x will no longer be able
+  to use your wallet once the upgrade is complete.
 
 - The **Addresses** tab will not show any addresses the first time you
-  launch Electrum 2. This is expected behaviour. Restart Electrum 2
-  after the upgrade is complete and your addresses will be available.
+  launch Dash Electrum 2. This is expected behaviour. Restart Dash
+  Electrum 2 after the upgrade is complete and your addresses will be
+  available.
 
-- Offline copies of Electrum will not show the addresses at all because
-  it cannot synchronize with the network. You can force an offline
-  generation of a few addresses by typing the following into the
-  Console: wallet.synchronize(). When it’s complete, restart Electrum
-  and your addresses will once again be available.
+- Offline copies of Dash Electrum will not show the addresses at all
+  because it cannot synchronize with the network. You can force an
+  offline generation of a few addresses by typing the following into the
+  Console: `wallet.synchronize()`. When it’s complete, restart Dash
+  Electrum and your addresses will once again be available.
+
+Multisig Wallets
+================
+
+This tutorial shows how to create a 2 of 2 multisig wallet. A 2 of 2
+multisig consists of 2 separate wallets (usually on separate machines
+and potentially controlled by separate people) that have to be used in
+conjunction in order to access the funds. Both wallets have the same set
+of addresses.
+
+- A common use-case for this is if you want to collaboratively control
+  funds: maybe you and your friend run a company together and certain
+  funds should only be spendable if you both agree.
+
+- Another one is security: one of the wallets can be on your main
+  machine, while the other one is on a offline machine. That way you
+  make it very hard for an attacker or malware to steal your coins.
+
+Create a pair of 2-of-2 wallets
+-------------------------------
+
+Each cosigner needs to do this: In the menu select **File > New**, then
+select **Multi-signature wallet**. On the next screen, select 2 of 2.
+
+.. figure:: img/faq-multisig-create.png
+   :width: 400px
+
+   Selecting x of y signatures for a multi-signature wallet
+
+After generating and confirming your recovery seed, you will be shown the xpub address for this wallet. 
+
+.. figure:: img/faq-multisig-xpub.png
+   :width: 400px
+
+   xpub key of the first wallet
+
+After generating a seed (keep it safely!) you will need to provide the
+master public key of the other wallet. Of course when you create
+the other wallet, you put the master public key of the first wallet.
+
+.. figure:: img/faq-multisig-share-xpub.png
+   :width: 400px
+
+   Entering xpub from the second wallet in the first wallet
+
+You will need to do this in parallel for the two wallets. Note that you
+can press cancel during this step, and reopen the file later.
+
+Receiving
+---------
+
+Check that both wallets generate the same set of Addresses. You can now
+send to these **Addresses** (note they start with a “7”) with any wallet
+that can send to P2SH Addresses.
+
+Sending
+--------
+
+To spend coins from a 2-of-2 wallet, two cosigners need to sign a
+transaction collaboratively. To accomplish this, create a transaction
+using one of the wallets (by filling out the form on the **Send** tab).
+After signing, a window is shown with the transaction details.
+
+.. figure:: img/faq-multisig-partially-signed.png
+   :width: 400px
+
+   Partially signed 2-of-2 multisig transaction in Dash Electrum
+
+The transaction now has to be sent to the second wallet. Several options
+are available for this:
+
+- You can transfer the file on a USB stick
+
+  You can save the partially signed transaction to a file (using the
+  **Save** button), transfer that to the machine where the second wallet
+  is running (via USB stick, for example) and load it there (using
+  **Tools > Load transaction > From file**)
+
+- You can use QR codes
+
+  A button showing a QR code icon is also available. Clicking this
+  button will display a QR code containing the transaction, which can be
+  scanned into the second wallet (**Tools > Load Transaction > From QR
+  Code**)
+
+With both of the above methods, you can now add the seconds signature
+the the transaction (using the **Sign** button). It will then be
+broadcast to the network.
+
+.. figure:: img/faq-multisig-fully-signed.png
+   :width: 400px
+
+   Fully signed 2-of-2 multisig transaction in Dash Electrum
+
+Cold Storage
+============
+
+This section shows how to create an offline wallet that holds your Dash
+and a watching-only online wallet that is used to view its history and
+to create transactions that have to be signed with the offline wallet
+before being broadcast on the online one.
+
+Create an offline wallet
+------------------------
+
+Create a wallet on an offline machine, as per the usual process (**File
+> New**). After creating the wallet, go to **Wallet -> Master Public Keys**.
+
+.. figure:: img/faq-cold-xpub.png
+   :width: 400px
+
+   Master Public Key of a new offline wallet
+
+The Master Public Key of your wallet is the string shown in this popup
+window. Transfer that key to your online machine somehow.
+
+Create a watching-only version of your wallet
+---------------------------------------------
+
+On your online machine, open Dash Electrum and select **File >
+New/Restore**. Enter a name for the wallet and select **Use public or
+private keys**. Paste your master public key in the box. Click **Next**
+to complete the creation of your wallet. When you’re done, you should
+see a popup informing you that you are opening a watching-only wallet.
+
+.. figure:: img/faq-cold-watching.png
+   :width: 300px
+
+   Master Public Key of a new offline wallet
+
+The transaction history of your cold wallet should then appear.
+
+Create an unsigned transaction
+------------------------------
+
+Go to the **Send** tab on your online watching-only wallet, input the
+transaction data and click **Send**. A window will appear to inform you
+that a transaction fee will be added. Continue. In the window that
+appears up, click **Save** and save the transaction file somewhere on
+your computer. Close the window and transfer the transaction file to
+your offline machine (e.g. with a USB stick).
+
+Sign your transaction
+---------------------
+
+On your offline wallet, select **Tools > Load transaction -> From file**
+in the menu and select the transaction file created in the previous
+step.
+
+Click **Sign**. Once the transaction is signed, the Transaction ID
+appears in its designated field.
+
+Click **Save**, store the file somewhere on your computer, and transfer
+it back to your online machine.
+
+Broadcast your transaction
+--------------------------
+
+On your online machine, select **Tools -> Load transaction -> From
+file** from the menu. Select the signed transaction file. In the window
+that opens up, click **Broadcast**. The transaction will be broadcast
+over the Dash network.
+
+Command Line
+============
+
+Electrum has a powerful command line. This section will show you a few
+basic principles.
+
+Using the inline help
+---------------------

@@ -55,7 +55,7 @@ To get Electrum to generate a new wallet, the old wallet data needs to
 be deleted. Begin by closing Electrum. Next, locate the application data
 folder according to your operating system:
 
-- **Linux**
+- **Linux:**
 	  1. Open Files, select **Go > Go to folder**, copy the path 
 	  ``~/.electrum`` and paste it into the dialog box
 	  2. Delete all files in the folder
