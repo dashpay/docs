@@ -6,27 +6,26 @@ Frequently Asked Questions
 How does Electrum work?
 -----------------------
 
-Electrum’s focus is speed, low resource usage and providing a simple
-user experience for Dash. Startup times are instant because it operates
-in conjunction with high- performance servers that handle the most
-complicated parts of the Dash system.
+Dash Electrum focuses on speed, low resource usage and providing a
+simple user experience for Dash. Startup times are instant because it
+operates in conjunction with high-performance servers that handle the
+most complicated parts of the Dash system.
 
-Does Electrum trust servers?
-----------------------------
+Does Dash Electrum trust servers?
+---------------------------------
 
 Not really; the Dash Electrum client never sends private keys to the
 servers. In addition, it verifies the information reported by
-servers, using a technique called `Simple Payment Verification
+servers using a technique called `Simple Payment Verification
 <http://docs.electrum.org/en/latest/spv.html>`_.
 
 What is the Seed?
 -----------------
 
 The seed is a random phrase that is used to generate your private keys.
-Example:
+Example::
 
-``constant forest adore false green weave stop guy fur freeze giggle
-clock``
+  constant forest adore false green weave stop guy fur freeze giggle clock
 
 Your wallet can be entirely recovered from its seed. To do this, select
 the **I already have a seed** option during startup.
@@ -34,16 +33,16 @@ the **I already have a seed** option during startup.
 How secure is the seed?
 -----------------------
 
-The seed created by Electrum has 128 bits of entropy. This means that
-it provides the same level of security as a Dash private key (of
-length 256 bits). Indeed, an elliptic curve key of length n provides
-n/2 bits of security.
+The seed created by Dash Electrum has 128 bits of entropy. This means
+that it provides the same level of security as a Dash private key (of
+length 256 bits). Indeed, an elliptic curve key of length n provides n/2
+bits of security.
 
 How can I send the maximum available in my wallet?
 --------------------------------------------------
 
-Type an exclamation mark (!) in the **Amount** field. The fee will be
-automatically adjusted for that amount.
+Type an exclamation mark (!) in the **Amount** field or simply click the
+**Max** button. The fee will be automatically adjusted for that amount.
 
 How can I send Dash without paying a transaction fee?
 -----------------------------------------------------
@@ -65,27 +64,40 @@ When you freeze an address, the funds in that address will not be used
 for sending Dash. You can not send Dash if you don’t have enough funds
 in your non-frozen addresses.
 
-What encryption is used for wallets?
-------------------------------------
+How is the wallet encrypted?
+----------------------------
 
-Electrum uses AES-256-CBC to encrypt the seed and private keys in the
-wallet.
+Dash Electrum uses two separate levels of encryption:
+
+ - Your seed and private keys are encrypted using AES-256-CBC. The
+   private keys are decrypted only briefly, when you need to sign a
+   transaction; for this you need to enter your password. This is done
+   in order to minimize the amount of time during which sensitive
+   information is unencrypted in your computer's memory.
+
+ - In addition, your wallet file may be encrypted on disk. Note that the
+   wallet information will remain unencrypted in the memory of your
+   computer for the duration of your session. If a wallet is encrypted,
+   then its password will be required in order to open it. Note that the
+   password will not be kept in memory; Electrum does not need it in
+   order to save the wallet on disk, because it uses asymmetric
+   encryption (ECIES).
+
+Wallet file encryption is activated by default since version 2.8. It is
+intended to protect your privacy, but also to prevent you from
+requesting Dash on a wallet that you do not control.
 
 I have forgotten my password but still have my seed. Is there any way I can recover my password?
 ------------------------------------------------------------------------------------------------
 
-No, you cannot recover your password. However, you can still recover
-your money: restore your wallet from its seed, and choose a new
-password.
+It is not possible to recover your password. However, you can restore
+your wallet from its seed phrase and choose a new password. If you lose
+both your password and your seed, there is no way to recover your money.
+This is why we ask you to save your seed phrase on paper.
 
-Why can I open the wallet without entering my password?
--------------------------------------------------------
-
-Only the seed and private keys are encrypted, and not the entire wallet
-file. The private keys are decrypted only briefly when you need to sign
-a transaction; for this you need to enter your password. This is done in
-order to minimize the amount of time during which sensitive information
-is unencrypted in your computer’s memory.
+To restore your wallet from its seed phrase, create a new wallet, select
+the type, choose **I already have a seed** and proceed to input your
+seed phrase.
 
 Does Electrum support cold wallets?
 -----------------------------------
@@ -113,7 +125,7 @@ recovered from seed.
 
    Importing a list of private keys to create a wallet
 
-Can I sweep private keys from other dash clients?
+Can I sweep private keys from other Dash clients?
 -------------------------------------------------
 
 Sweeping private keys means to send all the Dash they control to an
@@ -125,4 +137,131 @@ wallet seed.
 To sweep private keys go to **Wallet > Private Keys > Sweep**. Enter the
 private keys in the appropriate field. Leave the **Address** field
 unchanged. This is the destination address from your existing Dash
-Electrum wallet.
+Electrum wallet. Click on **Sweep**. Dash Electrum then takes you to the
+**Send** tab where you can set an appropriate fee and then click on
+**Send** to send the coins to your wallet.
+
+Where is my wallet file located?
+--------------------------------
+
+The default wallet file is called default_wallet and is created when you
+first run the application. It is located under the `/wallets` folder.
+
+- **Linux:** Open Files, select **Go > Go to folder**, copy the path 
+  ``~/.electrum-dash`` and paste it into the dialog box
+- **macOS:** Open Finder, select **Go > Go to Folder**, copy the path
+  ``~/.electrum-dash`` and paste it into the dialog box
+- **Windows:** Open Explorer, copy the path ``%APPDATA%\Electrum-DASH``
+  and paste it in to the address bar
+
+Can I do bulk payments with Electrum?
+-------------------------------------
+
+You can create a transaction with several outputs. In the GUI, type each
+address and amount on a line, separated by a comma.
+
+.. figure:: img/faq-paytomany.png
+   :width: 400px
+
+   Creating a transaction with multiple outputs in Dash Electrum
+
+Amounts are in the current unit set in the client. The total is shown in
+the GUI. You can also import a CSV file in the **Pay to** field by
+clicking on the folder icon.
+
+Can Dash Electrum create and sign raw transactions?
+---------------------------------------------------
+
+Dash Electrum lets you create and sign raw transactions right from the
+user interface using a form.
+
+Dash Electrum freezes when I try to send Dash
+---------------------------------------------
+
+This might happen if you are trying to spend a large number of
+transactions outputs (for example, if you have collected hundreds of
+donations from a Dash faucet). When you send Dash, Dash Electrum looks
+for unspent coins that are in your wallet in order to create the new
+transaction. Unspent coins can have different values, much like physical
+coins and bills.
+
+If this happens, you should consolidate your transaction inputs by
+sending smaller amounts of Dash to one of your wallet addresses; this
+would be the equivalent of exchanging a stack of nickels for a dollar
+bill.
+
+Is there a way to get a BTC/USD exchange ticker in Dash Electrum?
+-----------------------------------------------------------------
+
+Yes, go to **Tools > Plugins** and enable **Exchange rates**.
+
+.. _gap limit:
+
+What is the gap limit?
+----------------------
+
+The gap limit is the maximum number of consecutive unused addresses in
+your deterministic sequence of addresses. Electrum uses it in order to
+stop looking for addresses. In Electrum 2.0, it is set to 20 by default,
+so the client will get all addresses until 20 unused addresses are
+found.
+
+How can I pre-generate new addresses?
+-------------------------------------
+
+Electrum will generate new addresses as you use them, until it hits the `gap limit`_.
+
+If you need to pre-generate more addresses, you can do so by typing
+wallet.create_new_address() in the console. This command will generate
+one new address. Note that the address will be shown with a red
+background in the address tab, to indicate that it is beyond the gap
+limit. The red color will remain until the gap is filled.
+
+WARNING: Addresses beyond the gap limit will not automatically be
+recovered from seed. To recover them will require either increasing the
+client’s gap limit or generating new addresses until the used addresses
+are found.
+
+If you wish to generate more than one address, you may use a ‘for’ loop.
+For example, if you wanted to generate 50 addresses, you could do this::
+
+  for x in range(0, 50):
+    print wallet.create_new_address()
+
+How to upgrade Dash Electrum?
+-----------------------------
+
+Warning: always save your wallet seed on paper before doing an upgrade.
+
+To upgrade Electrum, just :ref:`install <electrum_installation>` the
+most recent version. The way to do this will depend on your OS.
+
+Note that your wallet files are stored separately from the software, so
+you can safely remove the old version of the software if your OS does
+not do it for you.
+
+Some Electrum upgrades will modify the format of your wallet files. For
+this reason, it is not recommended to downgrade Electrum to an older
+version once you have opened your wallet file with the new version. The
+older version will not always be able to read the new wallet file.
+
+The following issues should be considered when upgrading Electrum 1.x
+wallets to Electrum 2.x:
+
+- Electrum 2.x will need to regenerate all of your addresses during the
+  upgrade process. Please allow it time to complete, and expect it to
+  take a little longer than usual for Electrum to be ready.
+
+- The contents of your wallet file will be replaced with an Electrum 2
+  wallet. This means Electrum 1.x will no longer be able to use your
+  wallet once the upgrade is complete.
+
+- The **Addresses** tab will not show any addresses the first time you
+  launch Electrum 2. This is expected behaviour. Restart Electrum 2
+  after the upgrade is complete and your addresses will be available.
+
+- Offline copies of Electrum will not show the addresses at all because
+  it cannot synchronize with the network. You can force an offline
+  generation of a few addresses by typing the following into the
+  Console: wallet.synchronize(). When it’s complete, restart Electrum
+  and your addresses will once again be available.
