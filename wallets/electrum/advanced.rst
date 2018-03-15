@@ -791,143 +791,122 @@ in newer versions) is returned.
 
    {"id": 1, "method": "blockchain.address.get_history", "params": ["1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L"] }
 
-*response:*
+*response::*
 
-.. code-block:: json
-
-   {"id": 1, "result": [{"tx_hash": "ac9cd2f02ac3423b022e86708b66aa456a7c863b9730f7ce5bc24066031fdced", "height": 340235}, {"tx_hash": "c4a86b1324f0a1217c80829e9209900bc1862beb23e618f1be4404145baa5ef3", "height": 340237}]}
-   {"jsonrpc": "2.0", "id": 1, "result": [{"tx_hash": "16c2976eccd2b6fc937d24a3a9f3477b88a18b2c0cdbe58c40ee774b5291a0fe", "height": 0, "fee": 225}]}
+  {"id": 1, "result": [{"tx_hash": "ac9cd2f02ac3423b022e86708b66aa456a7c863b9730f7ce5bc24066031fdced", "height": 340235}, {"tx_hash": "c4a86b1324f0a1217c80829e9209900bc1862beb23e618f1be4404145baa5ef3", "height": 340237}]}
+  {"jsonrpc": "2.0", "id": 1, "result": [{"tx_hash": "16c2976eccd2b6fc937d24a3a9f3477b88a18b2c0cdbe58c40ee774b5291a0fe", "height": 0, "fee": 225}]}
 
 
 blockchain.address.get_mempool
-``````````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 blockchain.address.get_balance
-``````````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*request:*
+*request::*
 
-.. code-block:: json
+  { "id": 1, "method":"blockchain.address.get_balance", "params":["1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L"] }
 
-   { "id": 1, "method":"blockchain.address.get_balance", "params":["1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L"] }
+*response::*
 
-*response:*
-
-.. code-block:: json
-
-   {"id": 1, "result": {"confirmed": 533506535, "unconfirmed": 27060000}}
+  {"id": 1, "result": {"confirmed": 533506535, "unconfirmed": 27060000}}
 
 
 blockchain.address.get_proof
-````````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 blockchain.address.listunspent
-``````````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*request:*
+*request::*
 
-.. code-block:: json
+  { "id": 1, "method": "blockchain.address.listunspent", "params": ["1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L"] }
 
-   { "id": 1, "method":
-   "blockchain.address.listunspent", "params":
-   ["1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L"] }<br/>
+*response::*
 
-*response:*
-
-.. code-block:: json
-
-   {"id": 1, "result": [{"tx_hash":
-   "561534ec392fa8eebf5779b233232f7f7df5fd5179c3c640d84378ee6274686b",
-   "tx_pos": 0, "value": 24990000, "height": 340242},
-   {"tx_hash":"620238ab90af02713f3aef314f68c1d695bbc2e9652b38c31c025d58ec3ba968",
-   "tx_pos": 1, "value": 19890000, "height": 340242}]}
+  {"id": 1, "result": [{"tx_hash":
+  "561534ec392fa8eebf5779b233232f7f7df5fd5179c3c640d84378ee6274686b",
+  "tx_pos": 0, "value": 24990000, "height": 340242},
+  {"tx_hash":"620238ab90af02713f3aef314f68c1d695bbc2e9652b38c31c025d58ec3ba968",
+  "tx_pos": 1, "value": 19890000, "height": 340242}]}
 
 blockchain.utxo.get_address
-```````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 blockchain.block.get_header
-```````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 blockchain.block.get_chunk
-``````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 blockchain.transaction.broadcast
-````````````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Submits raw transaction (serialized, hex-encoded) to the network. Returns transaction id, or an error if the transaction is invalid for any reason.
+Submits raw transaction (serialized, hex-encoded) to the network.
+Returns transaction id, or an error if the transaction is invalid for
+any reason.
 
-*request:*
+*request::*
 
-.. code-block:: json
+  { "id": 1, "method":
+  "blockchain.transaction.broadcast", "params":
+  "0100000002f327e86da3e66bd20e1129b1fb36d07056f0b9a117199e759396526b8f3a20780000000000fffffffff0ede03d75050f20801d50358829ae02c058e8677d2cc74df51f738285013c260000000000ffffffff02f028d6dc010000001976a914ffb035781c3c69e076d48b60c3d38592e7ce06a788ac00ca9a3b000000001976a914fa5139067622fd7e1e722a05c17c2bb7d5fd6df088ac00000000" }<br/>
 
-   { "id": 1, "method":
-   "blockchain.transaction.broadcast", "params":
-   "0100000002f327e86da3e66bd20e1129b1fb36d07056f0b9a117199e759396526b8f3a20780000000000fffffffff0ede03d75050f20801d50358829ae02c058e8677d2cc74df51f738285013c260000000000ffffffff02f028d6dc010000001976a914ffb035781c3c69e076d48b60c3d38592e7ce06a788ac00ca9a3b000000001976a914fa5139067622fd7e1e722a05c17c2bb7d5fd6df088ac00000000" }<br/>
+*response::*
 
-*response:*
-
-.. code-block:: json
-
-   {"id": 1, "result": "561534ec392fa8eebf5779b233232f7f7df5fd5179c3c640d84378ee6274686b"}
+  {"id": 1, "result": "561534ec392fa8eebf5779b233232f7f7df5fd5179c3c640d84378ee6274686b"}
 
 blockchain.transaction.get_merkle
-`````````````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
 
   blockchain.transaction.get_merkle [$txid, $txHeight]
 
 blockchain.transaction.get
-``````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Method for obtaining raw transaction (hex-encoded) for
-given txid. If the transaction doesn't exist, an error is
-returned.
+Method for obtaining raw transaction (hex-encoded) for given txid. If
+the transaction doesn't exist, an error is returned.
 
-*request:*
+*request::*
 
-.. code-block:: json
+  { "id": 17, "method":"blockchain.transaction.get", "params": [
+  "0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098"
+  ] }
 
-   { "id": 17, "method":"blockchain.transaction.get", "params": [
-   "0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098"
-   ] }
+*response::*
 
-*response:*
+  { "id": 17, "result":"01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0704ffff001d0104ffffffff0100f2052a0100000043410496b538e853519c726a2c91e61ec11600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781e62294721166bf621e73a82cbf2342c858eeac00000000"}
 
-.. code-block:: json
+*error::*
 
-   { "id": 17, "result":"01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0704ffff001d0104ffffffff0100f2052a0100000043410496b538e853519c726a2c91e61ec11600ae1390813a627c66fb8be7947be63c52da7589379515d4e0a604f8141781e62294721166bf621e73a82cbf2342c858eeac00000000"}
-
-*error:*
-
-.. code-block:: json
-
-   { "id": 17, "error": "{ u'message': u'No information available about transaction', u'code': -5 }" }
+  { "id": 17, "error": "{ u'message': u'No information available about transaction', u'code': -5 }" }
 
 
 blockchain.estimatefee
-``````````````````````
+^^^^^^^^^^^^^^^^^^^^^^
 
-Estimates the transaction fee per kilobyte that needs to be paid for a transaction to be included within a certain number of blocks. If the node doesn’t have enough information to make an estimate, the value -1 will be returned.
+Estimates the transaction fee per kilobyte that needs to be paid for a
+transaction to be included within a certain number of blocks. If the
+node doesn’t have enough information to make an estimate, the value -1
+will be returned.
 
-Parameter: How many blocks the transaction may wait before being included.
+Parameter: How many blocks the transaction may wait before being
+included.
 
-*request:*
+*request::*
 
-.. code-block:: json
+  { "id": 17, "method": "blockchain.estimatefee", "params": [ 6 ] }
 
-   { "id": 17, "method": "blockchain.estimatefee", "params": [ 6 ] }
+*response::*
 
-*response:*
+  { "id": 17, "result": 0.00026809 }
+  { "id": 17, "result": 1.169e-05 }
 
-.. code-block:: json
+*error::*
 
-   { "id": 17, "result": 0.00026809 }
-   { "id": 17, "result": 1.169e-05 }
-
-*error:*
-
-.. code-block:: json
-
-   { "id": 17, "result": -1 }
+  { "id": 17, "result": -1 }
 
 
 External links
