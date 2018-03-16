@@ -21,7 +21,7 @@ Create a wallet on an offline machine, as per the usual process (**File
 > New**). After creating the wallet, go to **Wallet -> Master Public Keys**.
 
 .. figure:: img/faq-cold-xpub.png
-   :width: 400px
+   :width: 250px
 
    Master Public Key of a new offline wallet
 
@@ -38,7 +38,7 @@ to complete the creation of your wallet. When you’re done, you should
 see a popup informing you that you are opening a watching-only wallet.
 
 .. figure:: img/faq-cold-watching.png
-   :width: 300px
+   :width: 400px
 
    Master Public Key of a new offline wallet
 
@@ -59,13 +59,9 @@ Sign your transaction
 
 On your offline wallet, select **Tools > Load transaction -> From file**
 in the menu and select the transaction file created in the previous
-step.
-
-Click **Sign**. Once the transaction is signed, the Transaction ID
-appears in its designated field.
-
-Click **Save**, store the file somewhere on your computer, and transfer
-it back to your online machine.
+step. Click **Sign**. Once the transaction is signed, the Transaction ID
+appears in its designated field. Click **Save**, store the file
+somewhere on your computer, and transfer it back to your online machine.
 
 Broadcast your transaction
 --------------------------
