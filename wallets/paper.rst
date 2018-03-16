@@ -1,8 +1,7 @@
 .. _dash_paper_wallet:
 
-============================
-Dash Paper Wallet Generators
-============================
+Introduction
+============
 
 A paper wallet is a method of storing a private key to access funds
 stored on a single address. It can be generated on a computer that has
@@ -14,10 +13,6 @@ be imported or "swept" into an online wallet and should not be used
 again. Paper wallets are extremely secure but somewhat inconvenient for
 everyday use compared to hardware wallets, which also offer a high
 degree of security.
-
-
-Introduction
-============
 
 Paper wallets use random user and machine input to create a set of
 keys/addresses which you then print. You can never regenerate a paper
@@ -37,7 +32,7 @@ Nevertheless, together with appropriate planning, paper wallets are a
 highly convenient and user-friendly way to store Dash long term.
 
 Security
---------
+========
 
 While you can create a paper wallet using a machine that is connected to
 the internet, wallets that will be used to store significant funds
@@ -71,8 +66,8 @@ wallet BIP38 decryption password or brain wallet passphrase. Then write
 down instructions on how to use it, and keep them separate with a clear
 procedure on how they can be accessed when necessary.
 
-Generating paper wallets
-========================
+Tools
+=====
 
 A Dash paper wallet can be generated in several ways.
 
@@ -96,7 +91,7 @@ https://walletgenerator.net/. Please donate if you find this project
 useful!
 
 Address Generation
-------------------
+==================
 
 Go to https://paper.dash.org/ in your web browser (or open index.html if
 you downloaded the wallet generator). Select your language and choose
@@ -130,8 +125,8 @@ the page without somehow recording the dash address and private key, all
 data will be irretrievably lost, together with any funds you have sent
 to the address.
 
-Encrypting a paper wallet
--------------------------
+Encryption
+----------
 
 The information shown on the **Single Wallet** tab does not have a
 passphrase and is not encrypted. You can print this paper wallet as it
@@ -140,17 +135,17 @@ finds it. You should keep it safe the same way you would jewels or cash.
 
 If you decide that you need the additional security of a password for
 this address, click **Paper Wallet**. A different address/key pair will
-appear. To create an encrypted wallet, select **BIP38 Encrypt?** and enter a
-passphrase. Tick the box **Hide Art?** and change to **1** the field **Adresses to
-Generate** and then click on **Generate**. A new wallet will be generated
-where the private key (WIF) is encrypted using the password you
-specified, resulting in a BIP38 key. You now need both this BIP38 key
-and the password to control funds on the address, so be sure to click
-**Print** and store both safely. If you are unsure about how to use BIP38
-encryption, it is highly recommended to test the workflow with a low
-amount of Dash before storing significant funds on an encrypted paper
-wallet. If you forget the password or lose the encrypted key, you will
-permanently lose access to your funds.
+appear. To create an encrypted wallet, select **BIP38 Encrypt?** and
+enter a passphrase. Tick the box **Hide Art?** and change to **1** the
+field **Adresses to Generate** and then click on **Generate**. A new
+wallet will be generated where the private key (WIF) is encrypted using
+the password you specified, resulting in a BIP38 key. You now need both
+this BIP38 key and the password to control funds on the address, so be
+sure to click **Print** and store both safely. If you are unsure about
+how to use BIP38 encryption, it is highly recommended to test the
+workflow with a low amount of Dash before storing significant funds on
+an encrypted paper wallet. If you forget the password or lose the
+encrypted key, you will permanently lose access to your funds.
 
 A Dash WIF address can be easily identified because it always begins
 with "7". A BIP38 format encrypted key can be identified because it
@@ -180,8 +175,8 @@ small amounts first to learn how it works.
 
    Viewing the balance of the paper wallet using the Dash Block Explorer at explorer.dash.org
 
-Withdrawing funds from the paper wallet
----------------------------------------
+Spending from a paper wallet
+============================
 
 In order to access the funds stored on the paper wallet address, you
 will need the following:
@@ -196,7 +191,7 @@ convert the BIP38 key into the WIF key:
 - The passphrase you used to encrypt the key
 
 Optional: Decrypt BIP38 key to WIF
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------
 
 If you encrypted your paper wallet, you will first need to decrypt the
 BIP38 key. You can skip this step if your private key was not encrypted.
@@ -216,7 +211,7 @@ use it in the next step.
    encrypted private key
 
 Importing the private key to your live wallet
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------
 
 When you are ready to spend the balance on the paper wallet, you will
 need to import the private key used to control the address printed on
