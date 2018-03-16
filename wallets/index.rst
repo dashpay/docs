@@ -176,7 +176,7 @@ clean computer without ever connecting to the internet. Perfect for long
 term secure storage.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    paper.rst
 
