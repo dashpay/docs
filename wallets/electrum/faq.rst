@@ -39,6 +39,43 @@ that it provides the same level of security as a Dash private key (of
 length 256 bits). Indeed, an elliptic curve key of length n provides n/2
 bits of security.
 
+What are change addresses?
+--------------------------
+
+The Dash Electrum wallet design and workflow are based on a concept
+called a “wallet generation seed”. This seed is a unique, randomly-
+selected list of twelve words. A Dash Electrum wallet uses its seed as a
+template for generating addresses.
+
+To understand the problem that seeds solve, browse to the Electrum
+**Receive** tab. Next, open the collapsible entry marked **Change**.
+
+.. figure:: img/change-addresses.png
+   :width: 400px
+
+Notice that the total balance does not only show the sum of all
+receiving addresses, but also the separately listed **Change**
+addresses. Where did these new change addresses come from and why does
+the first one now hold funds?
+
+Dash is an electronic cash system, meaning that it shares much in common
+with the process of using paper banknotes. Although some cash payments
+involve exact change, many do not. You tend to “overpay” when using
+cash, and expect to receive the difference as change. Perhaps
+surprisingly, this is how Dash transactions work as well. If the entire
+balance of an address is not required for any given transaction, the
+remainder is sent to a new and unused address under control of the same
+wallet. This address is generated deterministically (rather than
+randomly) from the wallet seed, which means that any other wallet will
+also regenerate the change addresses in the same order from the same
+recovery seed, and have access to the balances.
+
+Spending the entire balance and sending any remainder to a change
+address is considered good practice because it prevents the transaction
+recipient from linking transactions by browsing the blockchain, thus
+compromising your privacy. If privacy is not a concern, change addresses
+can be disabled via the **Tools > Electrum preferences** menu option.
+
 How can I send the maximum available in my wallet?
 --------------------------------------------------
 

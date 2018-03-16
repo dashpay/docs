@@ -19,72 +19,107 @@ for both Bitcoin and Dash, please click the links below.
 - `Serialization of unsigned or partially signed transactions <http://docs.electrum.org/en/latest/transactions.html>`_
 - `Using Electrum Through Tor <http://docs.electrum.org/en/latest/tor.html>`_
 
-.. _electrum_cold_storage:
 
-Cold Storage
-============
+Masternodes in Electrum
+=======================
 
-This section shows how to create an offline wallet that holds your Dash
-and a watching-only online wallet that is used to view its history and
-to create transactions that have to be signed with the offline wallet
-before being broadcast on the online one.
+Dash Electrum supports masternode creation through an interface called
+the **Masternode Manager**. The functionality is available starting from
+the protocol version 70201.
 
-Create an offline wallet
-------------------------
+Masternode Manager
+------------------
 
-Create a wallet on an offline machine, as per the usual process (**File
-> New**). After creating the wallet, go to **Wallet -> Master Public Keys**.
+The Masternode Manager can be accessed either from the **Wallet >
+Masternodes** menu or by pressing **Ctrl+M**. This manager displays the
+status of your masternode(s). A wallet with no masternodes will begin
+with a default masternode for which you can fill in the necessary
+information.
 
-.. figure:: img/faq-cold-xpub.png
-   :width: 250px
+The manager displays the following data about each masternode you have
+set up:
 
-   Master Public Key of a new offline wallet
+-  The alias (name) of the masternode.
+-  The status of the masternode (e.g. whether it has been activated).
+-  The collateral payment of the masternode.
+-  The private delegate key.
+-  The IP address and port that your masternode can be reached at.
+-  The protocol version that your masternode supports.
 
-The Master Public Key of your wallet is the string shown in this popup
-window. Transfer that key to your online machine somehow.
+Masternode Setup
+----------------
 
-Create a watching-only version of your wallet
----------------------------------------------
+A masternode requires a "delegate" key, which is known to both Dash
+Electrum and your masternode. Your masternode will use this key to sign
+messages, and the Dash network will know that you authorized it to. A
+delegate key can either be one of your Dash Electrum keys, or an
+imported key. Either way, your masternode and Dash Electrum will both
+need to know the private key.
 
-On your online machine, open Dash Electrum and select **File >
-New/Restore**. Enter a name for the wallet and select **Use public or
-private keys**. Paste your master public key in the box. Click **Next**
-to complete the creation of your wallet. When you’re done, you should
-see a popup informing you that you are opening a watching-only wallet.
+To use one of your Dash Electrum keys as a delegate key, put its private
+key in the **Masternode Private Key** field of the **View Masternode**
+tab.
 
-.. figure:: img/faq-cold-watching.png
+IP Address and Protocol Version
+-------------------------------
+
+Certain information about your masternode is required. The IP address
+and port that your masternode uses must be supplied. Also, the protocol
+version that your masternode supports is required. This information is
+filled in automatically if you import a "masternode.conf" file.
+
+.. figure:: img/mn-view.png
    :width: 400px
 
-   Master Public Key of a new offline wallet
+   Entering IP and protocol information
 
-The transaction history of your cold wallet should then appear.
+Collateral
+----------
 
-Create an unsigned transaction
-------------------------------
+To start a masternode, you must have a 1000 DASH payment available in
+your wallet. You can scan your wallet for 1000 DASH payments in the
+**Choose Collateral** tab of the Masternode Manager.
 
-Go to the **Send** tab on your online watching-only wallet, input the
-transaction data and click **Send**. A window will appear to inform you
-that a transaction fee will be added. Continue. In the window that
-appears up, click **Save** and save the transaction file somewhere on
-your computer. Close the window and transfer the transaction file to
-your offline machine (e.g. with a USB stick).
+After scanning, a list of available 1000 DASH collateral payments will
+be displayed. Selecting one of them will cause the selected masternode's
+data to be filled in, though these changes won't be saved until you
+click the **Save** button in the lower-right corner of the tab.
 
-Sign your transaction
----------------------
+.. figure:: img/mn-collateral.png
+   :width: 400px
 
-On your offline wallet, select **Tools > Load transaction -> From file**
-in the menu and select the transaction file created in the previous
-step. Click **Sign**. Once the transaction is signed, the Transaction ID
-appears in its designated field. Click **Save**, store the file
-somewhere on your computer, and transfer it back to your online machine.
+   Entering IP and protocol information
 
-Broadcast your transaction
+Activating Your Masternode
 --------------------------
 
-On your online machine, select **Tools -> Load transaction -> From
-file** from the menu. Select the signed transaction file. In the window
-that opens up, click **Broadcast**. The transaction will be broadcast
-over the Dash network.
+After selecting a collateral payment and specifying a delegate key, you
+can activate your masternode. Do this by clicking **Activate
+Masternode** in the **Activate Masternode** tab of the Masternode
+Manager. If the **Activate Masternode** button cannot be clicked, look
+at the message in the **Status** bar. It will show you why your
+masternode cannot be activated.
+
+Activation will require your password if your wallet is encrypted,
+because a message must be signed. After waiting for Dash Electrum to
+sign and broadcast your masternode announcement, you will be presented
+with a message detailing the result. The status of your masternode will
+be updated in the table and the **View Masternode** tab.
+
+.. figure:: img/mn-enabling.png
+   :width: 400px
+
+   Entering IP and protocol information
+
+Importing masternode.conf
+-------------------------
+
+You can import a *masternode.conf* file using the **Masternode.conf**
+tab of the Masternode Manager. This is the recommended way of setting up
+masternodes, as it allows you to configure masternodes for Dash Core and
+Dash Electrum in the same way. Importing a *masternode.conf* file will
+automatically set up one or more masternode configurations in the
+Masternode Manager.
 
 Multisig Wallets
 ================
@@ -225,6 +260,74 @@ you swept is left with zero balance.
    :width: 400px
 
    Broadcasting the sweep transaction
+
+
+.. _electrum_cold_storage:
+
+Cold Storage
+============
+
+This section shows how to create an offline wallet that holds your Dash
+and a watching-only online wallet that is used to view its history and
+to create transactions that have to be signed with the offline wallet
+before being broadcast on the online one.
+
+Create an offline wallet
+------------------------
+
+Create a wallet on an offline machine, as per the usual process (**File
+> New**). After creating the wallet, go to **Wallet -> Master Public Keys**.
+
+.. figure:: img/faq-cold-xpub.png
+   :width: 250px
+
+   Master Public Key of a new offline wallet
+
+The Master Public Key of your wallet is the string shown in this popup
+window. Transfer that key to your online machine somehow.
+
+Create a watching-only version of your wallet
+---------------------------------------------
+
+On your online machine, open Dash Electrum and select **File >
+New/Restore**. Enter a name for the wallet and select **Use public or
+private keys**. Paste your master public key in the box. Click **Next**
+to complete the creation of your wallet. When you’re done, you should
+see a popup informing you that you are opening a watching-only wallet.
+
+.. figure:: img/faq-cold-watching.png
+   :width: 400px
+
+   Master Public Key of a new offline wallet
+
+The transaction history of your cold wallet should then appear.
+
+Create an unsigned transaction
+------------------------------
+
+Go to the **Send** tab on your online watching-only wallet, input the
+transaction data and click **Send**. A window will appear to inform you
+that a transaction fee will be added. Continue. In the window that
+appears up, click **Save** and save the transaction file somewhere on
+your computer. Close the window and transfer the transaction file to
+your offline machine (e.g. with a USB stick).
+
+Sign your transaction
+---------------------
+
+On your offline wallet, select **Tools > Load transaction -> From file**
+in the menu and select the transaction file created in the previous
+step. Click **Sign**. Once the transaction is signed, the Transaction ID
+appears in its designated field. Click **Save**, store the file
+somewhere on your computer, and transfer it back to your online machine.
+
+Broadcast your transaction
+--------------------------
+
+On your online machine, select **Tools -> Load transaction -> From
+file** from the menu. Select the signed transaction file. In the window
+that opens up, click **Broadcast**. The transaction will be broadcast
+over the Dash network.
 
 Command Line
 ============
