@@ -163,22 +163,29 @@ all times.
 
 .. _hardware_wallets:
 
+
+
+.. _paper_wallets:
+
+Dash Paper Wallet
+=================
+
+The `Dash Paper Wallet generator <https://paper.dash.org>`_ allows you
+to generate, encrypt and secure the keys to a single Dash address on a
+clean computer without ever connecting to the internet. Perfect for long
+term secure storage.
+
+.. toctree::
+   :maxdepth: 2
+
+   paper.rst
+
 Hardware Wallets
 ================
 
 Hardware wallets offer you the security of storing your keys in secure
 device while still allowing you to make simple transactions through a
 web interface.
-
-.. _paper_wallets:
-
-Paper Wallet
-============
-
-The Dash Paper Wallet allows you to generate, encrypt and secure the
-keys to a single Dash address on a clean computer without ever
-connecting to the internet. Perfect for long term secure storage.
-
 
 .. _third_party_wallets:
 
