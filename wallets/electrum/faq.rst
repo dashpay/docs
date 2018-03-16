@@ -53,6 +53,8 @@ To understand the problem that seeds solve, browse to the Electrum
 .. figure:: img/change-addresses.png
    :width: 400px
 
+   Receiving and change addresses in Dash Electrum
+
 Notice that the total balance does not only show the sum of all
 receiving addresses, but also the separately listed **Change**
 addresses. Where did these new change addresses come from and why does

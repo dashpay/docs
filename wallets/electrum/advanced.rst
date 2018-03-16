@@ -4,24 +4,23 @@
 Advanced Functions
 ==================
 
-Dash Electrum is based on `Electrum <https://electrum.org>`_, which is
-designed for Bitcoin. Most functions are identical, which means it is
-not necessary to reproduce the entirety of the Electrum documentation
-here. The following sections describe some frequently used advanced
-functions. For further details on other advanced functions in Electrum
-for both Bitcoin and Dash, please click the links below.
+Dash Electrum is based on `Electrum <https://electrum.org>`_, a Bitcoin
+wallet. Most functions are identical, which means it is not necessary to
+reproduce the entirety of the Electrum documentation here. The following
+sections describe some frequently used advanced functions. For further
+details on other advanced functions in Electrum for both Bitcoin and
+Dash, please click the links below.
 
 - `Electrum documentation <http://docs.electrum.org>`_
+- `Electrum seed version system <http://docs.electrum.org/en/latest/seedphrase.html>`_
 - `Electrum protocol specification <http://docs.electrum.org/en/latest/protocol.html>`_
+- `Serialization of unsigned or partially signed transactions <http://docs.electrum.org/en/latest/transactions.html>`_
 - `Simple Payment Verification <http://docs.electrum.org/en/latest/spv.html>`_
 - `The Python Console <http://docs.electrum.org/en/latest/console.html>`_
-- `Electrum Seed Version System <http://docs.electrum.org/en/latest/seedphrase.html>`_
-- `Serialization of unsigned or partially signed transactions <http://docs.electrum.org/en/latest/transactions.html>`_
 - `Using Electrum Through Tor <http://docs.electrum.org/en/latest/tor.html>`_
 
-
-Masternodes in Electrum
-=======================
+Masternodes in Dash Electrum
+============================
 
 Dash Electrum supports masternode creation through an interface called
 the **Masternode Manager**. The functionality is available starting from
@@ -332,8 +331,8 @@ over the Dash network.
 Command Line
 ============
 
-Electrum has a powerful command line available when running under Linux
-or macOS. This section will show you a few basic principles.
+Dash Electrum has a powerful command line available when running under
+Linux or macOS. This section will show you a few basic principles.
 
 Using the inline help
 ---------------------
@@ -492,7 +491,7 @@ You may view it using::
 Sign the transaction
 --------------------
 
-The serialization format of Electrum contains the master public key
+The serialization format of Dash Electrum contains the master public key
 needed and key derivation used by the offline wallet to sign the
 transaction. Thus we only need to pass the serialized transaction to the
 offline wallet::
@@ -532,7 +531,7 @@ Create a wallet on your web server::
 
 You can also use a watching only wallet (restored from xpub), if you
 want to keep private keys off the server. Once your wallet is created,
-start Electrum as a daemon::
+start Dash Electrum as a daemon::
 
   electrum daemon start
 
@@ -575,9 +574,9 @@ This directory must be served by your webserver (eg Apache)::
 
   electrum setconfig requests_dir /var/www/r/
 
-By default, electrum will display local URLs, starting with ‘file://‘ In
-order to display public URLs, we need to set another configuration
-variable, `url_rewrite`. For example::
+By default, Dash Electrum will display local URLs, starting with
+‘file://‘ In order to display public URLs, we need to set another
+configuration variable, `url_rewrite`. For example::
 
   electrum setconfig url_rewrite "['file:///var/www/','https://electrum.org/']"
 
@@ -659,8 +658,8 @@ subdomain.
 JSONRPC interface
 -----------------
 
-Commands to the Electrum daemon can be sent using JSONRPC. This is
-useful if you want to use electrum in a PHP script.
+Commands to the Dash Electrum daemon can be sent using JSONRPC. This is
+useful if you want to use Dash Electrum in a PHP script.
 
 Note that the daemon uses a random port number by default. In order to
 use a stable port number, you need to set the `rpcport` configuration
@@ -679,14 +678,3 @@ Query with named parameters::
 Create a payment request::
 
   curl --data-binary '{"id":"curltext","method":"addrequest","params":{"amount":"3.14","memo":"test"}}' http://127.0.0.1:7777
-
-
-Electrum Wallet on Tor
-======================
-
-Masternodes in Electrum
-=======================
-
-Seeds and Change Addresses
-==========================
-

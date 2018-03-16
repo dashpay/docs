@@ -16,11 +16,11 @@ its entirety using the backup procedure described here.
 Backup Wallet
 -------------
 
-In Electrum, a seed is a complete backup of all addresses and
+In Dash Electrum, a seed is a complete backup of all addresses and
 transactions. Access your wallet's seed through the seed icon in the
 lower right of the main screen, or the **Wallet > Seed** main menu
 option. When prompted, enter the secure password you chose when setting
-up the Electrum wallet.
+up the Dash Electrum wallet.
 
 .. figure:: img/backup-seed.png
    :width: 400px
@@ -45,15 +45,16 @@ wallet password.
 Restore Wallet
 --------------
 
-The only thing needed to recover an Electrum wallet on another computer
-is its seed. You can test wallet recovery with your current installation
-of Dash Electrum by removing the wallet data from the application data
-folder. This optional procedure is described below. Before continuing,
-verify that your seed is written down clearly and correctly on paper.
+The only thing needed to recover an Dash Electrum wallet on another
+computer is its seed. You can test wallet recovery with your current
+installation of Dash Electrum by removing the wallet data from the
+application data folder. This optional procedure is described below.
+Before continuing, verify that your seed is written down clearly and
+correctly on paper.
 
-To get Electrum to generate a new wallet, the old wallet data needs to
-be deleted. Begin by closing Electrum. Next, locate the application data
-folder according to your operating system:
+To get Dash Electrum to generate a new wallet, the old wallet data needs
+to be deleted. Begin by closing Dash Electrum. Next, locate the
+application data folder according to your operating system:
 
 - **Linux:**
 	  1. Open Files, select **Go > Go to folder**, copy the path 
@@ -66,8 +67,8 @@ folder according to your operating system:
 	  2. Delete all files in the folder
 
 - **Windows:**
-	  1. Open Explorer, copy the path ``%APPDATA%\Electrum-DASH`` and paste
-	     it in to the address bar
+	  1. Open Explorer, copy the path ``%APPDATA%\Electrum-DASH`` and 
+        paste it in to the address bar
 	  2. Delete all files in the folder
 
 Having cleared the data directory, restart Dash Electrum. A dialog will
