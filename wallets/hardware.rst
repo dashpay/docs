@@ -12,7 +12,8 @@ Trezor
 ======
 
 .. image:: img/trezor-logo.png
-   :width: 150px
+   :width: 100px
+   :align: right
 
 Developed by Czech startup `SatoshiLabs <https://satoshilabs.com>`_, the
 $99 device is essentially a USB dongle designed to add an extra
@@ -33,9 +34,6 @@ even on compromised and unsafe machines.
 - Review: https://www.dashforcenews.com/trezor-hardware-wallet-review
 - Shop: https://shop.trezor.io
 - Wallet: https://wallet.trezor.io
-
-.. image:: img/trezor-box.jpg
-   :width: 400px
 
 It is also possible to operate a Dash masternode using your Trezor. See
 here for details.
@@ -282,10 +280,8 @@ KeepKey
 =======
 
 .. image:: img/keepkey-logo.png
-   :width: 200px
-
-.. image:: img/keepkey-box.jpg
-   :width: 200px
+   :width: 100px
+   :align: right
 
 The $129 KeepKey hardware wallet features a large screen and 100% open
 source firmware to guarantee the security of your private keys. KeepKey
@@ -296,14 +292,7 @@ device.
 - Site: https://www.keepkey.com
 - Review: https://coincentral.com/keepkey-wallet-review
 - Shop: https://keepkey.myshopify.com/
-
-Product video:
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
-        <iframe src="https://player.vimeo.com/video/133811189?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
+- Product video: https://vimeo.com/133811189
 
 It is also possible to operate a Dash masternode using your KeepKey. See
 here for details.
@@ -313,9 +302,7 @@ Ledger
 
 .. image:: img/ledger-logo.png
    :width: 200px
-
-.. image:: img/ledger-box.jpg
-   :width: 200px
+   :align: right
 
 Founded in 2014, French startup `Ledger <https://www.ledger.fr>`_
 markets enterprise and consumer blockchain security solutions, including
