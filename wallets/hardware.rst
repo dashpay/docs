@@ -109,16 +109,15 @@ Receiving Dash
 We will now create a Dash receiving address and attempt to receive 1.0
 DASH.
 
-#. In the Trezor Dash wallet, click **Account #1**, then click Receive. 
-#. A Dash address will appear. Click **Show full address** to verify the
+1. In the Trezor Dash wallet, click **Account #1**, then click Receive. 
+2. A Dash address will appear. Click **Show full address** to verify the
    address on the Trezor device.
 
   .. image:: img/trezor-address.jpg
      :width: 100px
-     :align: right
 
-#. Send 1 DASH to this address using an exchange or another wallet.
-#. Once the transaction is confirmed, it will appear on the
+3. Send 1 DASH to this address using an exchange or another wallet.
+4. Once the transaction is confirmed, it will appear on the
    **Transactions** tab of your Trezor Wallet.
 
 .. figure:: img/trezor-receive.png
@@ -133,21 +132,19 @@ Sending Dash
 We will now send the Dash (minus transaction costs) to an external
 address.
 
-#. In the Trezor Dash wallet, click **Account #1**, then click **Send**.
-#. Enter the Dash address and amount in the fields.
+1. In the Trezor Dash wallet, click **Account #1**, then click **Send**.
+2. Enter the Dash address and amount in the fields.
 
   .. image:: img/trezor-send.png
      :width: 400px
-     :align: right
 
-#. Enter your PIN.
-#. Confirm the address on the device, then confirm the action.
+3. Enter your PIN.
+4. Confirm the address on the device, then confirm the action.
 
   .. image:: img/trezor-confirm.jpg
      :width: 100px
-     :align: right
 
-#. The transaction will be transmitted to the network and the recipient
+5. The transaction will be transmitted to the network and the recipient
    receives the funds.
 
 .. figure:: img/trezor-balance.png
