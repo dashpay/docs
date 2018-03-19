@@ -244,7 +244,8 @@ there.
 .. figure:: img/paper-coin-control.png
    :width: 400px
 
-   Paper wallet address successfully imported into Dash Core Wallet from WIF private key
+   Paper wallet address successfully imported into Dash Core Wallet from
+   WIF private key
 
 Since the paper wallet public address still holds the funds, it can also
 be imported again into a second wallet if it is not destroyed. It is
