@@ -11,6 +11,9 @@ exist, with Dash supported on all of them.
 Trezor
 ======
 
+.. image:: img/trezor-logo.png
+   :width: 150px
+
 Developed by Czech startup `SatoshiLabs <https://satoshilabs.com>`_, the
 $99 device is essentially a USB dongle designed to add an extra
 authentication layer to all outbound bitcoin transactions. Trezor has
@@ -27,9 +30,12 @@ key, Trezor claims to use a number of clever tricks to maintain security
 even on compromised and unsafe machines.
 
 - Site: https://trezor.io
-- Review: http://www.coindesk.com/review-bitcoin-vault-trezor-lives-name
+- Review: https://www.dashforcenews.com/trezor-hardware-wallet-review
 - Shop: https://shop.trezor.io
 - Wallet: https://wallet.trezor.io
+
+.. image:: img/trezor-box.jpg
+   :width: 400px
 
 It is also possible to operate a Dash masternode using your Trezor. See
 here for details.
@@ -151,3 +157,187 @@ address.
    :width: 400px
 
    Trezor Web Wallet after sending Dash
+
+Advanced Functions
+------------------
+
+Changing the PIN/Passphrase
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Your PIN is your primary form of security when using your hardware
+wallet. It is considered secure because the layout of the PIN keypad
+changes each time you use it. If you suspect your PIN has been
+compromised, change it using the following instructions. For extra
+security, or if you believe you may be subjected to duress at some point
+in the future, you can add a passphrase to reveal further wallets which
+only appear when you enter your passphrase. Since the passphrase acts as
+a cryptographic salt, there is no "correct" passphrase - a different
+wallet will be displayed for each passphrase you enter. Be absolutely
+sure you understand passphrases before using them. For more information,
+see `here <https://blog.trezor.io/hide-your-trezor-wallets-with-
+multiple-passphrases-f2e0834026eb>`_.
+
+Changing your PIN
+"""""""""""""""""
+
+You can change your Trezor PIN from both the `Trezor wallet
+<https://wallet.trezor.io>`_ and `DMT <https://github.com/Bertrand256
+/dash-masternode-tool/releases>`_.
+
+**From Trezor:** Go to https://wallet.trezor.io and click the cog icon
+next to your username. Then click **Change PIN**. You will need to
+confirm you want to change your PIN on the hardware device, then enter
+your existing PIN and the new PIN twice.
+
+.. image:: img/trezor-pin.png
+   :width: 300px
+
+**From DMT:** Open DMT and click **Tools > Hardware Wallet
+PIN/Passphrase configuration**. The following window will appear. Click
+**Change**. You will need to confirm you want to change your PIN on the
+hardware device, then enter your existing PIN and the new PIN twice.
+
+.. image:: img/trezor-dmt.png
+   :width: 250px
+
+
+Adding a passphrase
+"""""""""""""""""""
+
+You can add a passphrase to your Trezor from both the Trezor wallet and
+DMT. Before you add a passphrase, you should be fully aware of how it
+functions as a "25th word" to your seed, and the risks of forgetting
+your passphrase. Note that you do not need to enter a passphrase - blank
+is perfectly acceptable and will reveal your normal wallet.
+
+**From Trezor:** Click **Advanced**, confirm you understand the risks
+and click **Enable passphrase encryption**. This enables a prompt to
+enter a passphrase each time you use your Trezor.
+
+.. image:: img/trezor-passphrase.png
+   :width: 300px
+
+**From DMT:** Open DMT and click **Tools > Hardware Wallet
+PIN/Passphrase configuration**. The following window will appear. Click
+**Enable**. This enables a prompt to enter a passphrase each time you
+use your Trezor.
+
+.. image:: img/trezor-dmt.png
+   :width: 250px
+
+Changing the Homescreen
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Your Trezor allows you to change the homescreen image from the default
+Trezor logo. A range of existing images can be selected, you can
+generate one yourself using the `Trezor Homescreen Editor
+<https://trezor.github.io/homescreen-editor/>`_, or you can create and
+upload your own 128x64px black and white image. To change your
+homescreen image:
+
+#. Go to https://wallet.trezor.io and open your wallet
+#. Click the small cog icon next to your device name
+#. Click the **Homescreen** tab
+#. Select the new homescreen, then click the **Set as homescreen** 
+   button at the top
+#. Confirm the change on the Trezor device
+
+A few sample images are available for Dash:
+
+.. image:: img/trezor-home-1.png
+   :width: 128px
+
+.. image:: img/trezor-home-2.png
+   :width: 128px
+
+.. image:: img/trezor-home-3.png
+   :width: 128px
+
+Storage Suggestions
+^^^^^^^^^^^^^^^^^^^
+
+While losing a Trezor is not a security threat (unless someone knows
+your PIN and/or passphrase), it is a moderately expensive device that
+can be damaged by pressure or water, for example. For this reason, Dash
+community member tungfa has shared photos of a custom-made Trezor case.
+The following materials are required:
+
+- `Pelican Case 1010 Micro Case <http://www.pelican.com/us/en/product
+  /watertight-protector-hard-cases/micro-case/standard/1010/>`_
+- Foam
+- Trezor + Cable
+- USB Stick (for wallet.dat files + blockchains of all portfolios)
+- Notepad
+
+.. image:: img/trezor-case.jpg
+   :width: 400px
+
+.. image:: img/trezor-parts.jpg
+   :width: 400px
+
+.. image:: img/trezor-inside.jpg
+   :width: 400px
+
+KeepKey
+=======
+
+.. image:: img/keepkey-logo.png
+   :width: 200px
+
+.. image:: img/keepkey-box.jpg
+   :width: 200px
+
+The $129 KeepKey hardware wallet features a large screen and 100% open
+source firmware to guarantee the security of your private keys. KeepKey
+has supported Dash since firmware version 4.2.10, released on March 28,
+2017. Follow these instructions to begin using Dash on your KeepKey
+device.
+
+- Site: https://www.keepkey.com
+- Review: https://coincentral.com/keepkey-wallet-review
+- Shop: https://keepkey.myshopify.com/
+
+Product video:
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="https://player.vimeo.com/video/133811189?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+It is also possible to operate a Dash masternode using your KeepKey. See
+here for details.
+
+Ledger
+======
+
+.. image:: img/ledger-logo.png
+   :width: 200px
+
+.. image:: img/ledger-box.jpg
+   :width: 200px
+
+Founded in 2014, French startup `Ledger <https://www.ledger.fr>`_
+markets enterprise and consumer blockchain security solutions, including
+the €58 `Ledger Nano S <https://www.ledgerwallet.com/products/ledger-
+nano-s>`_ and upcoming `Ledger Blue
+<https://www.ledgerwallet.com/products/ledger-blue>`_. Ledger Nano S has
+supported Dash since November 2016 and firmware version 1.2. Follow
+`these instructions
+<http://support.ledgerwallet.com/knowledge_base/topics/how-to-use-dash-
+with-a-nano-s>`_ to add Dash support to the device.
+
+- Site: https://www.ledgerwallet.com
+- Review: https://www.dashforcenews.com/ledger-nano-s-review
+- Shop: https://www.ledgerwallet.com/products
+
+Product video:
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/MFLuRLcu61s" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+It is also possible to operate a Dash masternode using your Ledger. See
+here for details.
