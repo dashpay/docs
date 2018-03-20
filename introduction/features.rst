@@ -62,17 +62,17 @@ of queue and stop earning rewards. Masternode users are also given 
 vote can be used on budget proposals or important decisions that affect 
 Dash.
 
-Masternodes cost money and effort to host so they are paid a share of
-the block reward as an incentivize. With current masternode numbers
+Masternodes cost money and effort to host so they are paid a percentage
+ofthe block reward as an incentivize. With current masternode numbers
 and rewards, masternodes earn approximately a 8% return on 1000 Dash
-(which means 6.97 Dash or USD1360 in July 2017) for the year of
-2017. This `tool <https://stats.masternode.me/>`_ shows a
-live calculation of masternode earnings. These rewards decrease by 7%
-each year, but the rising value of Dash should offset these
-reductions. As a matter of fact, masternodes were receiving 140 Dash per
-month at the beginning of 2016, but this was actually less money than
-today: USD600 per month. There is also the possibility for masternodes
-to earn money from fees in the future.
+(which means 6.97 Dash or USD1360 in July 2017) for the year of 2017.
+This `tool <https://stats.masternode.me/>`_ shows a live calculation of
+masternode earnings. These rewards decrease by 7% each year, but the
+rising value of Dash should offset these reductions. As a matter of
+fact, masternodes were receiving 140 Dash per month at the beginning of
+2016, but this was actually less money than today: USD600 per month.
+There is also the possibility for masternodes to earn money from fees in
+the future.
 
 
 .. _privatesend:
