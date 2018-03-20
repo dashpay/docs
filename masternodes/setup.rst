@@ -70,8 +70,8 @@ EC2 <https://aws.amazon.com/ec2>`_, `Google Cloud
 <https://cloud.google.com/compute/>`_, `Choopa
 <https://www.choopa.com/>`_ and `OVH <https://www.ovh.com/>`_ are also
 popular choices. First create an account and add credit. Then go to the
-Servers menu item on the left and click + to add a new server. Select a
-location for your new server on the following screen:
+Servers menu item on the left and click **+** to add a new server.
+Select a location for your new server on the following screen:
 
 .. figure:: img/setup-server-location.png
    :width: 400px
