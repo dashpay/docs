@@ -1,8 +1,8 @@
 .. _governance:
 
-==================
+==========
 Governance
-==================
+==========
 
 Decentralized Governance by Blockchain, or DGBB, is Dash's attempt to
 solve two important problems in cryptocurrency: governance and funding.

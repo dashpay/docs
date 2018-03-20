@@ -1,8 +1,8 @@
 .. _mining:
 
-==================
+======
 Mining
-==================
+======
 
 Mining in the context of cryptocurrency such as Dash refers to the
 process of searching for solutions to cryptographically difficult
