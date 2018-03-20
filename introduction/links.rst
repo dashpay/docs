@@ -107,12 +107,6 @@ Inactive
 Tools
 =====
 
-Dash Masternode Tool
---------------------
-
-- https://github.com/Bertrand256/dash-masternode-tool
-
-
 Block Explorers
 ---------------
 
@@ -132,14 +126,16 @@ Treasury Tools
 - https://dashvotetracker.com
 - https://proposal.dash.org
 - https://www.dashninja.pl/governance.html
+- https://dashgiveaway.com
 
 
-Masternode and blockchain stats
--------------------------------
+Masternode management and blockchain stats
+------------------------------------------
 
 - https://dashninja.pl
 - https://stats.masternode.me
 - https://bitinfocharts.com/dash
+- https://github.com/Bertrand256/dash-masternode-tool
 - http://178.254.23.111/~pub/Dash/Dash_Info.html
 - http://dash-news.de/dashtv/?value=1000
 
@@ -174,7 +170,6 @@ DarkNet Pages
 
 Mobile Apps
 ===========
-
 
 iOS
 ---
