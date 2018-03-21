@@ -8,6 +8,8 @@ device while still allowing you to make simple transactions through a
 web interface. Three major manufacturers of hardware wallets currently
 exist, with Dash supported on all of them.
 
+.. _hardware_trezor:
+
 Trezor
 ======
 
