@@ -648,7 +648,7 @@ finally reaches ENABLED. Give it some time, the final result should
 appear as follows:
 
 .. figure:: img/setup-dashman-started.png
-   :width: 220px
+   :width: 400px
 
    dashman status output showing successfully started masternode
 
@@ -699,16 +699,36 @@ file extension by mistake. For different operating systems, the DashCore
 folder can be found in the following locations (copy and paste the
 shortcut text into the **Save** dialog to find it quickly):
 
++----------+-----------------------------------------------------+--------------------------------------------+
+| Platform | Path                                                | Shortcut                                   |
++==========+=====================================================+============================================+
+| Linux    | ``/home/yourusername/.dashcore``                    | ``~/.dashcore``                            |
++----------+-----------------------------------------------------+--------------------------------------------+
+| macOS    | ``/Macintosh HD/Library/Application Support``       | ``~/Library/Application Support/DashCore`` |
++----------+-----------------------------------------------------+--------------------------------------------+
+| Windows  | ``C:\Users\yourusername\AppData\Roaming\Dash Core`` | ``%APPDATA%\DashCore``                     |
++----------+-----------------------------------------------------+--------------------------------------------+
 
-+-------------+------------------------------+-----------------------+
-| Platform    | Path                         | Shortcut              |
-+=============+==============================+=======================+
-| Linux       | /home/yourusername/.dashcore | ~/.dashcore           |
-+-------------+------------------------------+-----------------------+
-| macOS       | ``Macintosh HD/Library       | ~/Library/Application |
-|             | /Application Support``       | Support/DashCore      |
-|             |                              |                       |
-+-------------+------------------------------+-----------------------+
-| Windows     | C:\Users\yourusername        | %APPDATA%\DashCore    |
-|             | \AppData\Roaming\Dash Core   |                       |
-+-------------+------------------------------+-----------------------+
+Now close your text editor and also shut down and restart Dash Core
+wallet. Dash Core will recognize masternode.conf during startup, and is
+now ready to activate your masternode. Go to **Settings > Unlock
+Wallet** and enter your wallet passphrase. Then click **Tools > Debug
+console** again and enter the following command to start your masternode
+(replace MN1 with the label for your masternode)::
+
+  masternode start-alias MN1
+
+At this point you can go back to your terminal window and monitor your
+masternode using ``dashman/dashman status``, by entering
+``~/.dashcore/dash- cli masternode status`` or using the **Get status**
+function in DMT. You will probably need to wait around 30 minutes as the
+node passes through the PRE_ENABLED stage and finally reaches ENABLED.
+Give it some time, the final result should appear as follows:
+
+.. figure:: img/setup-dashman-started.png
+   :width: 400px
+
+   dashman status output showing successfully started masternode
+
+At this point you can safely log out of your server by typing ``exit``.
+Congratulations! Your masternode is now running.
