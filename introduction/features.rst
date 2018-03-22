@@ -1,13 +1,13 @@
 .. _features:
 
-==================
+========
 Features
-==================
+========
 
 .. _specifications:
 
 Specifications
-==================
+==============
 
 -  First block mined at 11PM EST, 18th January 2014
 -  No premine
@@ -30,7 +30,7 @@ Specifications
 .. _masternode_network:
 
 Masternodes
-==================
+===========
 
 In addition to traditional Proof of Work (PoW) rewards for mining Dash,
 users are also rewarded for running and maintaining special servers
@@ -78,7 +78,7 @@ the future.
 .. _privatesend:
 
 PrivateSend
-==================
+===========
 
 PrivateSend gives you true financial privacy by obscuring the origins of
 your funds. All the Dash in your wallet is comprised of different

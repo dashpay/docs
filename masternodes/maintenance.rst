@@ -68,7 +68,7 @@ is done, confirm one more time to DMT that you want to broadcast the
 transaction to the network by clicking Yes. A confirmation with the
 transaction ID will appear.
 
-.. image:: img/maintenance-dmt-broadcast
+.. image:: img/maintenance-dmt-broadcast.png
    :width: 220px
 
 .. figure:: img/maintenance-dmt-sent.png
