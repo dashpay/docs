@@ -23,8 +23,7 @@ collateral, and cannot be spent without interrupting operation of the
 masternode. The second requirement is the actual server running the Dash
 masternode software.
 
-Option 1: Hosted masternode
----------------------------
+**Option 1: Hosted masternode**
 
 Since operating your own server requires a certain level knowledge of
 blockchains and Linux server operating systems, several community
@@ -35,8 +34,7 @@ of these hosting solutions also offer services to users who do not yet
 have access to 1000 DASH. See these pages for information on how to set
 up a hosted masternode.
 
-Option 2: Self-operated masternode
-----------------------------------
+**Option 2: Self-operated masternode**
 
 Users with a deeper understanding (or curiosity) about the inner
 workings of the Dash network may choose to operate their own  masternode
