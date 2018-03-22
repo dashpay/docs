@@ -1,8 +1,8 @@
 .. _masternode_hosting:
 
-================
-Hosting Services
-================
+===========================
+Masternode Hosting Services
+===========================
 
 Several Dash community members offer masternode hosting services. This
 service can be realized securely without the customer ever giving up

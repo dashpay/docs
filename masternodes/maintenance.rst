@@ -1,8 +1,8 @@
 .. _masternode_maintenance:
 
-===========
-Maintenance
-===========
+======================
+Masternode Maintenance
+======================
 
 Masternodes require regular maintenance to ensure you do not drop off
 the payment queue. This includes promptly installing updates to Dash, as
