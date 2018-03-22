@@ -11,6 +11,8 @@ addition, masternodes should vote on proposals and perform other tasks
 in the interest of the network and their own investment. This section
 covers the following topics:
 
+.. _masternode_withdrawals:
+
 Payment withdrawals
 ===================
 
