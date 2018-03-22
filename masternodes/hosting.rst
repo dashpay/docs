@@ -27,8 +27,8 @@ Masternode.me
 
 https://masternode.me
 
-Operated by: moocowmoo (Dash Core team member)
-Services: Hosting
+- Operated by: moocowmoo (Dash Core team member)
+- Services: Hosting
 - `Site <https://masternode.me>`_
 - `Email <moocowmoo@masternode.me>`_
 - `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`_
@@ -44,8 +44,8 @@ Splawik's Hosting Service
 
 http://dashmasternode.io
 
-Operated by: splawik21 (Dash Foundation member)
-Services: Hosting
+- Operated by: splawik21 (Dash Foundation member)
+- Services: Hosting
 - `Site <http://dashmasternode.io>`_
 - `Email <splawik21@protonmail.com>`_
 - `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`_
@@ -61,8 +61,8 @@ Node40
 
 https://node40.com
 
-Operated by: Perry Woodin
-Services: Hosting, Voting, Tax Compliance
+- Operated by: Perry Woodin
+- Services: Hosting, Voting, Tax Compliance
 - `Site <https://node40.com>`_
 - `Email <info@node40.com>`_
 - `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`_
@@ -73,8 +73,8 @@ Masternodehosting
 
 https://masternodehosting.com/
 
-Operated by: flare (Dash Core team member)
-Services: Hosting
+- Operated by: flare (Dash Core team member)
+- Services: Hosting
 - `Site <https://masternodehosting.com>`_
 - `Email <holger@masternodehosting.com>`_
 - `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`_
