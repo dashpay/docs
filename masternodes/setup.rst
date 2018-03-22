@@ -1,7 +1,7 @@
 .. _masternode_setup:
 
 ================
-Masternode Setup
+Setup
 ================
 
 Setting up a masternode requires a basic understanding of Linux and

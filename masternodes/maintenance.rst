@@ -1,7 +1,7 @@
 .. _masternode_maintenance:
 
 ======================
-Masternode Maintenance
+Maintenance
 ======================
 
 Masternodes require regular maintenance to ensure you do not drop off

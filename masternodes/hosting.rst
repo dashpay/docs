@@ -1,7 +1,7 @@
 .. _masternode_hosting:
 
 ===========================
-Masternode Hosting Services
+Hosting Services
 ===========================
 
 Several Dash community members offer masternode hosting services. This
@@ -11,65 +11,73 @@ it is highly recommended to keep the collateral on a hardware wallet
 when taking advantage of a hosting service. A list of currently
 available masternode hosting services is available below.
 
-List
-====
+List of Hosting Services
+========================
 
 **Disclaimer**: Dash Core may be affiliated with these community
 members, but is not involved in the provision of any of these services.
 
 Masternode.me
-  .. image:: img/moocowmoo.png
-     :width: 200px
-     :align: right
-     :target: https://masternode.me
+-------------
 
-  https://masternode.me
+.. image:: img/moocowmoo.png
+   :width: 200px
+   :align: right
+   :target: https://masternode.me
 
-  Operated by: moocowmoo (Dash Core team member)
-  Services: Hosting
-  - `Site <https://masternode.me>`_
-  - `Email <moocowmoo@masternode.me>`_
-  - `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`_
-  - `Review <https://www.dashforcenews.com/masternode-trusted-masternode-shares-review/>`_
+https://masternode.me
+
+Operated by: moocowmoo (Dash Core team member)
+Services: Hosting
+- `Site <https://masternode.me>`_
+- `Email <moocowmoo@masternode.me>`_
+- `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`_
+- `Review <https://www.dashforcenews.com/masternode-trusted-masternode-shares-review/>`_
 
 Splawik's Hosting Service
-  .. image:: img/splawik.png
-     :width: 200px
-     :align: right
-     :target: http://dashmasternode.io
+-------------------------
 
-  http://dashmasternode.io
+.. image:: img/splawik.png
+   :width: 200px
+   :align: right
+   :target: http://dashmasternode.io
 
-  Operated by: splawik21 (Dash Foundation member)
-  Services: Hosting
-  - `Site <http://dashmasternode.io>`_
-  - `Email <splawik21@protonmail.com>`_
-  - `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`_
-  - `Review <https://www.dashforcenews.com/meet-the-inventor-of-trusted-masternode-shares/>`_
+http://dashmasternode.io
+
+Operated by: splawik21 (Dash Foundation member)
+Services: Hosting
+- `Site <http://dashmasternode.io>`_
+- `Email <splawik21@protonmail.com>`_
+- `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`_
+- `Review <https://www.dashforcenews.com/meet-the-inventor-of-trusted-masternode-shares/>`_
 
 Node40
-  .. image:: img/node40.png
-     :width: 200px
-     :align: right
-     :target: https://node40.com
+------
 
-  https://node40.com
+.. image:: img/node40.png
+   :width: 200px
+   :align: right
+   :target: https://node40.com
 
-  Operated by: Perry Woodin
-  Services: Hosting, Voting, Tax Compliance
-  - `Site <https://node40.com>`_
-  - `Email <info@node40.com>`_
-  - `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`_
-  - `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`_
+https://node40.com
+
+Operated by: Perry Woodin
+Services: Hosting, Voting, Tax Compliance
+- `Site <https://node40.com>`_
+- `Email <info@node40.com>`_
+- `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`_
+- `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`_
 
 Masternodehosting
-  https://masternodehosting.com/
+-----------------
 
-  Operated by: flare (Dash Core team member)
-  Services: Hosting
-  - `Site <https://masternodehosting.com>`_
-  - `Email <holger@masternodehosting.com>`_
-  - `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`_
+https://masternodehosting.com/
+
+Operated by: flare (Dash Core team member)
+Services: Hosting
+- `Site <https://masternodehosting.com>`_
+- `Email <holger@masternodehosting.com>`_
+- `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`_
 
 Starting a Hosted Masternode
 ============================
