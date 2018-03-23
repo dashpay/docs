@@ -449,7 +449,7 @@ Dash budget system.
    not just governance. In terms of documentation, there is no 
    whitepaper specific to Sentinel, but we have various docs for Evo in
    an on-going RFC process which are used as the basis for Evo 
-   development.*
+   development."*
 
    -- Andy Freer, Evolution Developer
 
