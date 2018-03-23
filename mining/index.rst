@@ -569,6 +569,7 @@ obsolete due to the increase in difficulty on the network.
 
 .. toctree::
    :hidden:
+   :includehidden:
    :maxdepth: 1
 
    p2pool.rst
