@@ -83,7 +83,9 @@ as password.
 
 - http://www.p2poolmining.us/p2poolnodes/
 
-If you would like to set up your own P2Pool, the code for p2pool-dash is available here:
+If you would like to set up your own P2Pool, documentation of the
+process is available :ref:`here <p2pool>` and the code for p2pool-dash
+is available on GitHub:
 
 - https://github.com/dashpay/p2pool-dash
 
@@ -563,3 +565,10 @@ obsolete due to the increase in difficulty on the network.
 +----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
 | `Pinidea DRX-Varyag <https://shop.pinidea.io/index.php/product/asic-x11-miner-drx-varyag/>`_       | 1200 MH/s ±5%  | 850 W |         | 280 x 180 x 150 |
 +----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   p2pool.rst
