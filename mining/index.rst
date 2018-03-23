@@ -119,6 +119,13 @@ In addition to joining a pool, you will also need to create a Dash
 address to receive your payout. To do this in Dash Core wallet, see
 :ref:`here <dashcore_send_receive>`.
 
+.. toctree::
+   :hidden:
+   :includehidden:
+   :maxdepth: 1
+
+   p2pool.rst
+
 
 CPU Mining
 ==========
@@ -565,11 +572,3 @@ obsolete due to the increase in difficulty on the network.
 +----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
 | `Pinidea DRX-Varyag <https://shop.pinidea.io/index.php/product/asic-x11-miner-drx-varyag/>`_       | 1200 MH/s ±5%  | 850 W |         | 280 x 180 x 150 |
 +----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-
-
-.. toctree::
-   :hidden:
-   :includehidden:
-   :maxdepth: 1
-
-   p2pool.rst
