@@ -186,7 +186,7 @@ any additional inflation for investors. The network simply distributes
 the available resources in a way that is of greater net benefit to all
 parties.
 
-Blockchain contractors and proposals
+Contractors and proposals
 ------------------------------------
 
 Contractors of the blockchain can be developers, outreach professionals,
@@ -361,3 +361,67 @@ members, who share the benefits and responsibilities of those
 collectives, like governments, cooperative corporations, unions, DAOs,
 cryptocurrencies, etc. We call this model decentralized governance by
 blockchain.
+
+Using the Governance System
+===========================
+
+
+Governance Tools and Pages
+==========================
+
+8 Steps to a Successful Proposal
+================================
+
+Proposals in the Dash governance system are subject to voting by
+masternodes. So, like any voting, you need to convince the voters that
+your proposal should pass. Here are some key points to consider in every
+proposal:
+
+Keep your proposal clear
+  Your proposal should have a clear title, followed by a short and
+  simple description of the objectives. Explain early in your proposal
+  exactly how it will benefit the Dash network, how much Dash you are
+  requesting, how you arrived at this value, and finally who you are and
+  how you plan to do the work. Masternodes should be able to immediately
+  get an idea of what you are proposing from the first few lines of your
+  proposal.
+
+Run a pre-proposal discussion
+  Get feedback from the community before you post your proposal to the
+  blockchain. A discussion period of around two weeks will help you find
+  out if someone has proposed something similar in the past, and whether
+  it succeeded or failed. There are `pre-proposal channels on the forum
+  <https://www.dash.org/forum/topic/pre-budget-proposal-
+  discussions.93>`_ and `Dash Nation Discord <http://dashchat.org>`_,
+  and `Reddit <https://www.reddit.com/r/dashpay>`_ also attracts a lot
+  of views - consider the discussion on these channels to be the
+  research phase of your proposal. Later, you can post a link to the
+  forum discussion when your proposal goes live to show you are
+  including community feedback in your work.
+
+#. Manage your identity and reputation
+
+   The Dash community is one of the network's strongest features, and
+   newcomers are always welcome. However, because of the way proposals
+   work, there needs to be reasonable trust that the work promised in the
+   proposal will be completed if it passes. If you are new, consider
+   starting with a smaller proposal first to prove your ability to deliver
+   on time and budget. Attaching your real name or `Keybase
+   <https://keybase.io>`_ identity to a proposal also helps build trust. If
+   you are a making a large proposal, get a team together and nominate (or
+   hire) one person to serve as community liaison, since posting from
+   multiple accounts can be confusing.
+
+#. Run an enthusiastic campaign for your proposal
+
+   Proposals with a video or website have a far greater chance of
+   succeeding! Uploading a video gives your proposal a human touch and a
+   chance to convey your enthusiasm in a way that isn't always possible
+   in text. Post your video to the `forum
+   <https://www.dash.org/forum/topic/pre-budget-proposal-
+   discussions.93>`_ and `DashCentral
+   <https://www.dashcentral.org/budget>`_, become a regular on Discord
+   or run a webinar to explain the proposal and answer questions. Put
+   some work in before you ask for funding to demonstrate your
+   involvement with Dash - but don't be annoying and spam many channels
+   asking for votes.
