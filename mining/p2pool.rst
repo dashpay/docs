@@ -1,8 +1,8 @@
 .. _p2pool:
 
-================================
-How to set up a Dash P2Pool node
-================================
+======================
+Dash P2Pool Node Setup 
+======================
 
 This guide describes how to set up a Dash P2Pool node to manage a pool
 of miners. Unlike centralized mining pools, P2Pool is based on the same
@@ -89,8 +89,8 @@ interface or by visiting https://www.whatismyip.com/
 
    Setting up port forwarding under DD-WRT
 
-Option 1: Automated setup from script
-====================================
+Option 1: Automated script setup
+================================
 
 Dash community member **dracocephalum** has generously donated a script
 to automatically deploy everything required to run a p2pool-dash node

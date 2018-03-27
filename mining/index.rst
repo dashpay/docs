@@ -85,9 +85,7 @@ as password.
 
 If you would like to set up your own P2Pool, documentation of the
 process is available :ref:`here <p2pool>` and the code for p2pool-dash
-is available on GitHub:
-
-- https://github.com/dashpay/p2pool-dash
+is available on `GitHub <https://github.com/dashpay/p2pool-dash>`_.
 
 Other pools are also available and may be advantageous for different
 reasons such as ping latency, uptime, fee, users, etc.:
