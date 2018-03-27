@@ -1,8 +1,8 @@
 .. _electrum_send_receive:
 
-==========================
-Sending and Receiving Dash
-==========================
+=====================
+Sending and receiving
+=====================
 
 You may own Dash stored in another software wallet, or on an exchange
 such as Bittrex or Kraken, or simply want to send or receive funds as a
@@ -14,8 +14,8 @@ considered best practice to use a new address for each transaction in
 order to maintain your privacy.
 
 
-Sending Dash
-============
+Sending
+=======
 
 Click the **Send** tab to make a payment. Enter the destination address
 in the **Pay to** field, either manually or by pasting from the
@@ -43,8 +43,8 @@ the network and display a confirmation dialog with your transaction ID.
    Password prompt and transaction confirmation in Dash Electrum wallet
 
 
-Receiving Dash
-==============
+Receiving
+=========
 
 You can view your receiving addresses by clicking the **Receive** tab.
 Double-click the **Receiving address, then copy it to the clipboard by
@@ -73,7 +73,7 @@ table will change from **Pending** to **Paid**.
 Once you have used an address, you can either continue using it or click
 **New** to generate a new address.
 
-Monitoring Transactions
+Monitoring transactions
 =======================
 
 The **History** tab lists all current and pending transactions. A

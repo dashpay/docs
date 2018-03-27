@@ -1,7 +1,7 @@
 .. _dashcore_backup:
 
 =========================
-Wallet Backup and Restore
+Wallet backup and restore
 =========================
 
 Backup
@@ -100,7 +100,7 @@ move) the file!
    Backing up wallet.dat by copying to another folder
 
 
-Automatic Backups
+Automatic backups
 -----------------
 
 Every time you open Dash Core, it will automatically create a backup
@@ -146,7 +146,7 @@ since this will result in data corruption!
    wallet.dat
 
 
-Backup Storage Considerations
+Backup storage considerations
 =============================
 
 Any backup depends to some extent on the existence of software capable
@@ -182,7 +182,7 @@ are interested in this, read more about paper wallets, where the private
 key can be printed directly or also encrypted using BIP38 for safe
 storage.
 
-Verifying Backups
+Verifying backups
 =================
 
 There is no fixed procedure to verify your backup, but you should test

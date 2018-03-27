@@ -1,10 +1,10 @@
 .. _dashcore_rpc:
 
 =======================================
-Arguments and Commands
+Arguments and commands
 =======================================
 
-Command Line Arguments
+Command line arguments
 ======================
 
 These commands are accurate as of Dash Core version 0.12.2.1.
@@ -357,7 +357,7 @@ set=NAME:JSON-STRING
   Set register NAME to given JSON-STRING
 
 
-RPC Commands
+RPC commands
 ============
 
 This documentation lists all available RPC commands as of Dash version

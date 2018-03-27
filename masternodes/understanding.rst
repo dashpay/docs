@@ -79,7 +79,7 @@ news.de/dashtv/#value=1000>`_ to calculate real-time ROI rates, and
 `this site <http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for
 various real-time statistics on the masternode network.
 
-Masternodes vs. Mining
+Masternodes vs. mining
 ======================
 
 Dash, like Bitcoin and most other cryptocurrencies, is based on a
@@ -121,7 +121,7 @@ funds are not locked in any way. However, if the funds are moved or
 spent, the associated masternode will go offline and stop receiving
 rewards.
 
-Payment Logic
+Payment logic
 =============
 
 Masternode payments in Dash version 12 are determined using a completely
@@ -209,7 +209,7 @@ You can run the code (written by community member moocowmoo used to
 create the table above `here <https://repl.it/@moocowmoo/Dash-Selection-
 Probability>`_.
 
-Quorum Selection
+Quorum selection
 ================
 
 InstantSend transactions in Dash version 12 are secured using a
@@ -229,7 +229,7 @@ acceptance of the lock.
 All InstantSend inputs must be at least six blocks old or the
 transaction will be rejected.
 
-Masternode Requirements
+Masternode requirements
 =======================
 
 - 1000 Dash: Arguably the hardest part. Dash can be obtained from

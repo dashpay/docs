@@ -1,7 +1,7 @@
 .. _electrum_advanced_functions:
 
 ==================
-Advanced Functions
+Advanced functions
 ==================
 
 Dash Electrum is based on `Electrum <https://electrum.org>`_, a Bitcoin
@@ -45,7 +45,7 @@ set up:
 -  The IP address and port that your masternode can be reached at.
 -  The protocol version that your masternode supports.
 
-Masternode Setup
+Masternode setup
 ----------------
 
 A masternode requires a "delegate" key, which is known to both Dash
@@ -59,7 +59,7 @@ To use one of your Dash Electrum keys as a delegate key, put its private
 key in the **Masternode Private Key** field of the **View Masternode**
 tab.
 
-IP Address and Protocol Version
+IP address and protocol version
 -------------------------------
 
 Certain information about your masternode is required. The IP address
@@ -89,7 +89,7 @@ click the **Save** button in the lower-right corner of the tab.
 
    Entering IP and protocol information
 
-Activating Your Masternode
+Activating your masternode
 --------------------------
 
 After selecting a collateral payment and specifying a delegate key, you
@@ -120,7 +120,7 @@ Dash Electrum in the same way. Importing a *masternode.conf* file will
 automatically set up one or more masternode configurations in the
 Masternode Manager.
 
-Multisig Wallets
+Multisig wallets
 ================
 
 This tutorial shows how to create a 2 of 2 multisig wallet. A 2 of 2
@@ -213,7 +213,7 @@ broadcast to the network.
 
    Fully signed 2-of-2 multisig transaction in Dash Electrum
 
-Sweep a Paper Wallet
+Sweep a paper wallet
 ====================
 
 You may have received a paper wallet as a gift from another Dash user,
@@ -263,7 +263,7 @@ you swept is left with zero balance.
 
 .. _electrum_cold_storage:
 
-Cold Storage
+Cold storage
 ============
 
 This section shows how to create an offline wallet that holds your Dash
@@ -328,7 +328,7 @@ file** from the menu. Select the signed transaction file. In the window
 that opens up, click **Broadcast**. The transaction will be broadcast
 over the Dash network.
 
-Command Line
+Command line
 ============
 
 Dash Electrum has a powerful command line available when running under
@@ -345,7 +345,7 @@ To see the documentation for a command, type::
 
   electrum help <command>
 
-Magic Words
+Magic words
 -----------
 
 The arguments passed to commands may be one of the following magic words: `! ? : -`.

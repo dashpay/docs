@@ -1,8 +1,8 @@
 .. _masternode_setup:
 
-================
+=====
 Setup
-================
+=====
 
 Setting up a masternode requires a basic understanding of Linux and
 blockchain technology, as well as an ability to follow instructions
@@ -239,7 +239,7 @@ advisable. More tips are available `here <https://www.cyberciti.biz/tips
 store the keys to any Dash, these steps are considered beyong the scope
 of this guide.
 
-Send the Collateral
+Send the collateral
 ===================
 
 A Dash address with a single unspent transaction output (UTXO) of

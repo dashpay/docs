@@ -1,9 +1,9 @@
 .. _electrum_security:
 
-Wallet Security
+Wallet security
 ===============
 
-Change Password
+Change password
 ---------------
 
 To change the wallet's password, select the **Wallet > Password** option
@@ -13,8 +13,8 @@ your wallets' password, all is not lost. Your wallet can be restored in
 its entirety using the backup procedure described here.
 
 
-Backup Wallet
--------------
+Backup
+------
 
 In Dash Electrum, a seed is a complete backup of all addresses and
 transactions. Access your wallet's seed through the seed icon in the
@@ -42,8 +42,8 @@ with any imported addresses. Restoring this backup will require the
 wallet password.
 
 
-Restore Wallet
---------------
+Restore
+-------
 
 The only thing needed to recover an Dash Electrum wallet on another
 computer is its seed. You can test wallet recovery with your current

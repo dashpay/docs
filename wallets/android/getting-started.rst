@@ -1,9 +1,9 @@
 .. _dash_android_getting_started:
 
-Getting Started
+Getting started
 ===============
 
-Creating a New Wallet
+Creating a new wallet
 ---------------------
 
 When you first start your Dash Wallet, it will automatically generate a
@@ -29,7 +29,7 @@ wallet file by selecting **Safety** > **Back up wallet**.
 Android*
 
 
-Restoring from Backup
+Restoring from backup
 ---------------------
 
 If you already have an existing Dash Wallet for Android, you can restore
@@ -51,8 +51,8 @@ it will take some time for any past transactions and balances to appear.
 Android*
 
 
-Receiving Dash
---------------
+Receiving
+---------
 
 Tap the **Request coins** button at the bottom left of the screen to
 receive Dash. The wallet will generate and display a QR code for the
@@ -78,8 +78,8 @@ after 6 block confirmations have taken place (approx. 15 minutes).
 for Android*
 
 
-Sending Dash
-------------
+Sending
+-------
 
 Tap the **Send coins** button at the bottom right of the screen to send
 Dash. You will be prompted to type, paste or scan (by tapping the round

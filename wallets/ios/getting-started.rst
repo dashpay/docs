@@ -1,9 +1,9 @@
 .. _dash_ios_getting_started:
 
-Getting Started
+Getting started
 ===============
 
-Creating a New Wallet
+Creating a new wallet
 ---------------------
 
 When you first start your Dash Wallet, you will be prompted to choose
@@ -32,8 +32,8 @@ balance. You will need to unlock your wallet for this, as well as to
 view your transaction history or send Dash.
 
 
-Receiving Dash
---------------
+Receiving
+---------
 
 Once you have set up your wallet, you will have two screens available to
 send and receive Dash. You can swipe left and right between the screens.
@@ -51,8 +51,8 @@ clicking the menu button at the top left.
 *Receiving Dash and viewing your balance in iOS Dash Wallet*
 
 
-Sending Dash
-------------
+Sending
+-------
 
 The Send DASH screen gives you two options to enter the payment address:
 **Scan QR Code** or **Pay Address From Clipboard**. You can choose to

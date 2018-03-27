@@ -11,7 +11,7 @@ it is highly recommended to keep the collateral on a hardware wallet
 when taking advantage of a hosting service. A list of currently
 available masternode hosting services is available below.
 
-List of Hosting Services
+List of hosting services
 ========================
 
 **Disclaimer**: Dash Core may be affiliated with these community
@@ -79,7 +79,7 @@ https://masternodehosting.com/
 - `Email <holger@masternodehosting.com>`_
 - `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`_
 
-Starting a Hosted Masternode
+Starting a hosted masternode
 ============================
 
 Starting a hosted masternode is done in just a few easy steps:

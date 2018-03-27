@@ -71,7 +71,7 @@ trading pairs they offer.
 
 https://coinmarketcap.com/currencies/dash/#markets
 
-Dash.org Markets
+Dash.org markets
 ----------------
 
 The official Dash website also provides a list of major exchanges

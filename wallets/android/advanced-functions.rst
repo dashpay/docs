@@ -1,6 +1,6 @@
 .. _dash_android_advanced_functions:
 
-Advanced Functions
+Advanced functions
 ==================
 
 Contact management

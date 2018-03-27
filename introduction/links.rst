@@ -1,7 +1,7 @@
 .. _links:
 
 =====================
-Links and information
+Links and Information
 =====================
 
 Links
@@ -40,7 +40,7 @@ Chat
 - **Freenode IRC:** #dashpay
 
 
-Social Media
+Social media
 ------------
 
 - **Reddit:** https://www.reddit.com/r/dashpay
@@ -107,8 +107,8 @@ Inactive
 Tools
 =====
 
-Block Explorers
----------------
+Block explorers and statistics
+------------------------------
 
 - https://explorer.dash.org
 - https://insight.dash.org/insight
@@ -118,7 +118,7 @@ Block Explorers
 - https://dash.holytransaction.com
 
 
-Treasury Tools
+Treasury tools
 --------------
 
 - https://www.dashwatch.org
@@ -129,28 +129,28 @@ Treasury Tools
 - https://dashgiveaway.com
 
 
-Masternode management and blockchain stats
-------------------------------------------
+Masternode management
+---------------------
 
 - http://dashmasternode.org
 - https://dashninja.pl
 - https://stats.masternode.me
-- https://bitinfocharts.com/dash
 - https://github.com/Bertrand256/dash-masternode-tool
 - http://178.254.23.111/~pub/Dash/Dash_Info.html
 - http://dash-news.de/dashtv/?value=1000
 
 
-Price monitoring and conversion
+Price monitoring and statistics
 -------------------------------
 
 - http://www.dash.dog
 - https://coinmarketcap.com/currencies/dash
+- https://bitinfocharts.com/dash
 - https://www.cryptonator.com/widget
 - http://atomox.net/1/DASH/USD
 
 
-Dash Community Project
+Dash Community project
 ----------------------
 
 - http://github.com/dashcommunity
@@ -162,7 +162,7 @@ Dash transaction visualizer
 - http://udjinm6.github.io/bitlisten/
 
 
-DarkNet Pages
+DarkNet pages
 -------------
 
 - **Dash (Mirror of Main Page):** http://dashorg64cjvj4s3.onion

@@ -1,6 +1,6 @@
 .. _dash_ios_advanced_functions:
 
-Advanced Functions
+Advanced functions
 ==================
 
 Contact management

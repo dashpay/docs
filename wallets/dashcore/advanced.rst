@@ -1,7 +1,7 @@
 .. _dashcore_backup:
 
 ==================
-Advanced Functions
+Advanced functions
 ==================
 
 Placeholder

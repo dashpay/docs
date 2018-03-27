@@ -90,7 +90,7 @@ This guide is based on the guide available from
 https://walletgenerator.net/. Please donate if you find this project
 useful!
 
-Address Generation
+Address generation
 ==================
 
 Go to https://paper.dash.org/ in your web browser (or open index.html if
