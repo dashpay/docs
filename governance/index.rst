@@ -419,10 +419,9 @@ Budget cycles
 When preparing a proposal, be aware of when the next cycle will occur
 and plan accordingly. It is recommended to choose your proposal payment
 start block at least one cycle in the future to allow time for
-discussion and gathering support and votes.
-
-Block heights and dates
-^^^^^^^^^^^^^^^^^^^^^^^
+discussion and gathering support and votes. Note that votes will no
+longer be tallied 1662 blocks (approximately 3 days) prior to the
+superblock.
 
 +--------------+-----------------------------+
 | Block height | Approximate date            |
@@ -460,8 +459,8 @@ Block heights and dates
 | 996960       | Tue Jan 1 06:33:26 UTC 2019 |
 +--------------+-----------------------------+
 
-*View the source code for this calculation 
-`here <https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_*
+You can view the source code for this calculation at this
+`GitHub gist <https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_
 
 .. _creating_proposals:
 
@@ -545,8 +544,16 @@ closes and you receive your payout. You can also submit the ID to
 DashCentral to claim your proposal and enable simpified voting for
 masternodes using DashCentral voting services.
 
-Dash Central Proposal Generator
+DashCentral Proposal Generator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- https://www.dashcentral.org/budget/create
+
+DashCentral also includes a tool to create budget proposals, or claim
+existing proposals so you can add a description on DashCentral and begin
+discussion with the community. The steps to be taken are almost
+identical to the procedure described above, and documentation is
+available `here <https://www.dashcentral.org/about/contact>`_.
 
 
 Voting on proposals
@@ -572,8 +579,8 @@ are available to view and manage proposals and voting:
 For information on how to create a proposal, see :ref:`here
 <creating_proposals>`.
 
-Voting from DashCentral
-^^^^^^^^^^^^^^^^^^^^^^^
+DashCentral
+^^^^^^^^^^^
 
 Many masternode operators store their password-protected masternode
 private key on `DashCentral <https://www.dashcentral.org>`_ to enable
@@ -597,8 +604,8 @@ NO**.
 
    Voting interface on DashCentral
 
-Voting from Dash Masternode Tool (DMT)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Dash Masternode Tool (DMT)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you started your masternode from a hardware wallet using `DMT
 <https://github.com/Bertrand256/dash-masternode-tool/releases>`_, you
@@ -613,8 +620,8 @@ tab to **Vote Yes**, **Vote No** or **Vote Abstain** directly from DMT.
 
    Voting interface in DMT
 
-Voting from Dash Core Wallet or a masternode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Dash Core wallet or masternode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you started your masternode using the Dash Core Wallet (not
 recommended), you can vote manually from **Tools > Debug console**, or
