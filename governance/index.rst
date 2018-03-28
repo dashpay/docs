@@ -413,6 +413,45 @@ Budgets
 - Approximately 6176 dash (in 2018) are available for each budget cycle,
   decreasing by 7.14% every 210240 blocks (approx. 383.25 days).
 
+Object structure
+^^^^^^^^^^^^^^^^
+
+The following information is required to create a proposal:
+
+- proposal-name: a unique label, 20 characters or less
+- url: a proposer-created webpage or forum post containing detailed
+  proposal information
+- payment-count: how many cycles the proposal is requesting payment
+- block-start: the requested start of proposal payments
+- dash-address: the address to receive proposal payments
+- monthly-payment-dash: the requested payment amount
+
+Persistence
+^^^^^^^^^^^
+
+- Proposals become active one day after submission
+- Proposals will remain visible on the network until they are either
+  disapproved or the proposal's last payment-cycle is reached
+- Approval occurs when yes votes minus no votes equals 10% or more of
+  the total available votes.
+- Disapproval occurs when no votes minus yes votes equals 10% or more of
+  the total available votes.
+- The total available votes is the count of online and responding
+  masternodes and can be seen by running the command 
+  ``masternode count`` in the Dash Core wallet debug window. A graph of
+  the total masternode count can be found `here 
+  <http://178.254.23.111/~pub/masternode_count.png>`_
+
+Templates
+^^^^^^^^^
+
+The following two Microsoft Word templates are available from Dash Core
+Group to help facilitate standardized proposal submission and updates.
+Usage is recommended, but not required.
+
+- `Project Proposal Template
+- `Project Status Update Template
+
 Budget cycles
 -------------
 
