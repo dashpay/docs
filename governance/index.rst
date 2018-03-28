@@ -491,17 +491,22 @@ Preparation
      contact information for questions.
    - Estimate and outline the project requirements, progress milestones,
      and deliverables
+
      - Continued funding may depend on reaching your stated goals
      - The more detail the better. This page is your marketing and sales
        pitch.
+
    - Justify your funding request
      - Explain how the funds will be used. Detail your expenses and 
        profit.
 
 #. Shorten your proposal webpage/forum post url
+
    - Use a url shortening service such as: https://goo.gl/ or 
      https://tinyurl.com/
+
 #. Select your funding cycle start block
+
    - Choose a block far enough in the future to allow time for your 
      proposal to be discussed and gain support
    - Allow at least one cycle (calendar month) for most proposals
