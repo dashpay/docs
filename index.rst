@@ -88,4 +88,4 @@ interest.
    governance/index
    masternodes/index
    mining/index
-   legal/index
+   legal.rst
