@@ -2,7 +2,7 @@
 Dash Documentation
 ==================
 
-.. image:: img/dash_tc_logo.png
+.. image:: img/dash_logo.png
    :scale: 35 %
    :align: center
 
