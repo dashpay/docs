@@ -414,15 +414,15 @@ Budgets
   decreasing by 7.14% every 210240 blocks (approx. 383.25 days).
 
 Budget cycles
-^^^^^^^^^^^^^
+-------------
 
 When preparing a proposal, be aware of when the next cycle will occur
 and plan accordingly. It is recommended to choose your proposal payment
 start block at least one cycle in the future to allow time for
 discussion and gathering support and votes.
 
-Block heights and approximate dates
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Block heights and dates
+^^^^^^^^^^^^^^^^^^^^^^^
 
 +--------------+-----------------------------+
 | Block height | Approximate date            |
@@ -460,15 +460,58 @@ Block heights and approximate dates
 | 996960       | Tue Jan 1 06:33:26 UTC 2019 |
 +--------------+-----------------------------+
 
-*calculated using 
-https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49*
+*View the source code for this calculation 
+`here <https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_*
 
+Proposal rules
+--------------
 
-Create a proposal
------------------
+Preparation
+^^^^^^^^^^^
 
-Vote on proposals
------------------
+#. Choose a proposal name
+
+   - Proposal names are limited to 40 characters
+   - Choose a unique proposal name to to prevent voter confusion
+   - The currently active proposals can be found by visiting `Dash
+     Central <https://www.dashcentral.org/budget>`_ or `Dash Vote
+     Tracker <http://dashvotetracker.com>`_
+
+#. Choose your payment amount and cycle duration.
+
+   - The payment amount is fixed. You cannot vary your payment across
+     cycles
+   - For instance: request 100 dash for 3 cycles to receive a total of 
+     300 Dash
+
+#. Write your proposal webpage/forum post
+
+   - Explain your project
+   - Introduce yourself. Include your qualifications, experience and
+     contact information for questions.
+   - Estimate and outline the project requirements, progress milestones,
+     and deliverables
+     - Continued funding may depend on reaching your stated goals
+     - The more detail the better. This page is your marketing and sales
+       pitch.
+   - Justify your funding request
+     - Explain how the funds will be used. Detail your expenses and 
+       profit.
+
+#. Shorten your proposal webpage/forum post url
+   - Use a url shortening service such as: https://goo.gl/ or 
+     https://tinyurl.com/
+#. Select your funding cycle start block
+   - Choose a block far enough in the future to allow time for your 
+     proposal to be discussed and gain support
+   - Allow at least one cycle (calendar month) for most proposals
+   - Consider longer incubation periods for larger funding requests
+
+Creating proposals
+------------------
+
+Voting on proposals
+-------------------
 
 **You must vote at least three days before the superblock is created or
 your vote will not be counted. The exact deadline is 1662 blocks before
