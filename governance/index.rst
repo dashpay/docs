@@ -389,7 +389,7 @@ Proposals
 ^^^^^^^^^
 
 - Proposals are a request to receive funds
-- Proposals can be submitted by anyone for a fee of 5 dash. The proposal
+- Proposals can be submitted by anyone for a fee of 5 Dash. The proposal
   fee is irreversibly destroyed on submission.
 - Proposals cannot be altered once submitted
 
@@ -463,57 +463,91 @@ Block heights and dates
 *View the source code for this calculation 
 `here <https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_*
 
-Proposal rules
---------------
-
-Preparation
-^^^^^^^^^^^
-
-#. Choose a proposal name
-
-   - Proposal names are limited to 40 characters
-   - Choose a unique proposal name to to prevent voter confusion
-   - The currently active proposals can be found by visiting `Dash
-     Central <https://www.dashcentral.org/budget>`_ or `Dash Vote
-     Tracker <http://dashvotetracker.com>`_
-
-#. Choose your payment amount and cycle duration.
-
-   - The payment amount is fixed. You cannot vary your payment across
-     cycles
-   - For instance: request 100 dash for 3 cycles to receive a total of 
-     300 Dash
-
-#. Write your proposal webpage/forum post
-
-   - Explain your project
-   - Introduce yourself. Include your qualifications, experience and
-     contact information for questions.
-   - Estimate and outline the project requirements, progress milestones,
-     and deliverables
-
-     - Continued funding may depend on reaching your stated goals
-     - The more detail the better. This page is your marketing and sales
-       pitch.
-
-   - Justify your funding request
-     - Explain how the funds will be used. Detail your expenses and 
-       profit.
-
-#. Shorten your proposal webpage/forum post url
-
-   - Use a url shortening service such as: https://goo.gl/ or 
-     https://tinyurl.com/
-
-#. Select your funding cycle start block
-
-   - Choose a block far enough in the future to allow time for your 
-     proposal to be discussed and gain support
-   - Allow at least one cycle (calendar month) for most proposals
-   - Consider longer incubation periods for larger funding requests
+.. _creating_proposals:
 
 Creating proposals
 ------------------
+
+Once you have prepared the text of your proposal and set up a website or
+forum post, it is time to submit your proposal to the blockchain for
+voting. While all tasks involved with creating a budget proposal can be
+executed from the Dash Core wallet console, several tools providing a
+user interface have been developed to simplify this procedure.
+
+Dash Budget Proposal Generator
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- https://proposal.dash.org
+
+The `Dash Budget Proposal Generator <https://proposal.dash.org>`_
+supports creating budget proposals on both mainnet and testnet. In the
+first step, you must enter a short, clear and unique name for the
+proposal as it will appear on the blockchain. Proposal names are limited
+to 40 characters. You can then provide a link to the forum or
+DashCentral where your proposal is described in more detail (use a `URL
+shortening service <https://goo.gl>`_ if necessary), as well as select
+the amount of payment you are requesting, how often the payment should
+occur, and the superblock date on which you are requesting payment. This
+allows you to control in which budget period your proposal will appear,
+and gives you enough time to build support for your proposal by
+familiarising voters with your project. Note that the payment amount is
+fixed and cannot be modified after it has been submitted to the
+blockchain.
+
+.. image:: img/proposal-create.png
+   :width: 300px
+
+.. figure:: img/proposal-burn-prepare.png
+   :width: 300px
+
+   Steps 1 & 2: Creating your proposal and preparing the command
+
+Next, the proposal generator will provide you with a command to run from
+the console of your Dash Core wallet to prepare your budget proposal
+governance object. Running this command will cost you 5 DASH, which will
+be "burnt" or permanently removed from circulation. This one-time fee
+protects the governance system from becoming overwhelmed by spam, poorly
+thought out proposals or users not acting in good faith. A small
+transaction fee is charged as well, so make sure slightly more than 5
+DASH is available in your wallet. Many budget proposals request
+reimbursement of the 5 DASH fee.
+
+First unlock your wallet by clicking **Settings > Unlock wallet**, then
+open the console by clicking **Tools > Debug console** and paste the
+generated command. The transaction ID will appear. Copy and paste this
+into the proposal generator response window. As soon as you do this, the
+system will show a progress bar as it waits for 6 confirmations as
+follows:
+
+.. image:: img/proposal-burn-console.png
+   :width: 300px
+
+.. figure:: img/proposal-burn-confirming.png
+   :width: 250px
+
+   Step 3: Creating the proposal transaction and waiting for 6 
+   confirmations of the transaction ID
+
+Once 6 block confirmations exist, another command will appear to submit
+the prepared governance object to the network for voting. Copy and paste
+this command, and your governance object ID will appear as follows:
+
+.. image:: img/proposal-submit.png
+   :width: 300px
+
+.. figure:: img/proposal-submit-console.png
+   :width: 250px
+
+   Step 4: Submitting the governance object to the network
+
+You can use this ID to track voting on the proposal until the budget
+closes and you receive your payout. You can also submit the ID to
+DashCentral to claim your proposal and enable simpified voting for
+masternodes using DashCentral voting services.
+
+Dash Central Proposal Generator
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 Voting on proposals
 -------------------
@@ -522,7 +556,108 @@ Voting on proposals
 your vote will not be counted. The exact deadline is 1662 blocks before
 the superblock.**
 
+Voting on DGBB proposals is an important part of operating a masternode.
+Since masternodes are heavily invested in Dash, they are expected to
+critically appraise proposals each month and vote in a manner they
+perceive to be consistent with the best interests of the network. Each
+masternode may vote once on each proposal, and the vote can be changed
+at any time before the voting deadline. The following sites and tools
+are available to view and manage proposals and voting:
 
+- `DashCentral <https://www.dashcentral.org/budget>`_
+- `Dash Budget Proposal Vote Tracker <https://dashvotetracker.com/>`_
+- `Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`_
+- `Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-masternode-tool/releases>`_
+
+For information on how to create a proposal, see :ref:`here
+<creating_proposals>`.
+
+Voting from DashCentral
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Many masternode operators store their password-protected masternode
+private key on `DashCentral <https://www.dashcentral.org>`_ to enable
+simple voting with a user-friendly interface. The popularity of this
+site has made it a common place for discussion of the proposals after
+they are submitted to the governance system. To vote from the
+DashCentral web interface, first add your masternode private key to your
+account according to the instructions here. Note that the masternode
+private key is not the same as the private key controlling the 1000 DASH
+collateral, so there is no risk of losing your collateral. A separate
+password is required to unlock the masternode private key for voting, so
+the risk of the site operator voting in your name is minimal.
+
+When you are ready to vote, go to the `budget proposals page
+<https://www.dashcentral.org/budget>`_. Simply click to view the
+proposals, then click either **Vote YES**, **Vote ABSTAIN** or **Vote
+NO**.
+
+.. figure:: img/vote-dashcentral.png
+   :width: 400px
+
+   Voting interface on DashCentral
+
+Voting from Dash Masternode Tool (DMT)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you started your masternode from a hardware wallet using `DMT
+<https://github.com/Bertrand256/dash-masternode-tool/releases>`_, you
+can also use the tool to cast votes. Click **Tools > Proposals** and
+wait for the list of proposals to load. You can easily see the voting
+status of each proposal, and selecting a proposal shows details on the
+**Details** tab in the lower half of the window. Switch to the **Vote**
+tab to **Vote Yes**, **Vote No** or **Vote Abstain** directly from DMT.
+
+.. figure:: img/vote-dmt.png
+   :width: 400px
+
+   Voting interface in DMT
+
+Voting from Dash Core Wallet or a masternode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you started your masternode using the Dash Core Wallet (not
+recommended), you can vote manually from **Tools > Debug console**, or
+directly from your masternode via SSH using ``dash-cli``. First click on
+the proposal you want to vote on at either `DashCentral
+<https://www.dashcentral.org/budget>`_ or `Dash Ninja
+<https://www.dashninja.pl/governance.html>`_. You will see a command for
+manual voting below the proposal description. Copy and paste the command
+and modify it as necessary. As an example, take this proposal from `Dash
+Ninja <https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741
+8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`_ (or
+`DashCentral
+<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`_). The
+voting code for Dash Core Wallet is as follows::
+
+  gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding yes
+  gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding no
+  gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding abstain
+
+Note that to vote from your masternode directly, you need to prefix the
+command with ``dash-cli``, which is usually found in the ``.dashcore``
+folder. The command should be similar to the following::
+
+  ~/.dashcore/dash-cli gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding yes
+  ~/.dashcore/dash-cli gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding no
+  ~/.dashcore/dash-cli gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding abstain
+
+Note this command will trigger a vote from all masternodes configured in
+``dash.conf``. If you have multiple masternodes each with its own .conf
+file, or if you want to vote with only some of your masternodes, you
+must change the command from ``vote-many`` to ``vote``. If your vote was
+successful, you should see a confirmation message reading **Voted
+successfully**.
+
+.. figure:: img/vote-dashcore.png
+   :width: 300px
+
+   Voting from the debug console in Dash Core Wallet
+
+You can also view a list of proposals in JSON format from the console to
+copy and paste the proposal hash for voting as follows::
+
+  gobject list
 
 
 8 Steps to a Successful Proposal
