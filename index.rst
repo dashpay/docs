@@ -2,8 +2,8 @@
 Dash Documentation
 ==================
 
-.. image:: img/dash_logo.png
-   :scale: 25 %
+.. image:: img/dash_tc_logo.png
+   :scale: 35 %
    :align: center
 
 Dash is an open source peer-to-peer cryptocurrency with a strong focus
