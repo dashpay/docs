@@ -99,7 +99,7 @@ html_theme_options = {
     # 'navigation_depth': 4,  # Depth of the headers shown in the navigation bar
 }
 
-html_logo = 'img/dash_tc_logo_white.png'
+html_logo = 'img/dash_tc_logo_white.svg'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
