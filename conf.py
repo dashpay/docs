@@ -82,13 +82,11 @@ todo_include_todos = False
 
 # -- Options for HTML output ----------------------------------------------
 
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
 
 import sphinx_rtd_theme
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-if on_rtd:
-    using_rtd_theme = True
 
 # Theme options
 html_theme_options = {
