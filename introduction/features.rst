@@ -355,7 +355,7 @@ splits the block reward between the :ref:`miner <mining>`, a
 deterministically selected :ref:`masternode <masternodes>`, and the
 decentralized :ref:`budget system <decentralized-governance>`. Dash
 features superblocks, which appear every 16616 blocks (approx. 30.29
-days) and release 10% of the cumulative budget over that  :ref:`budget
+days) and release 10% of the cumulative budget over that :ref:`budget
 cycle period <budget-cycles>` to the winning proposals in the budget
 system. To pay for superblocks, the block reward for normal blocks over
 the period is reduced by 10%. Normal block payments are split equally
@@ -410,8 +410,8 @@ not paid out (10% of each block) will be used to fund approved
 proposals. The network thus funds itself by reserving 10% of the block
 reward for budget projects.
 
-You can read more about Dash governance in the `governance <dgbb>`_ 
-section of this documentation.
+You can read more about Dash governance in the :ref:`governance` section
+of this documentation.
 
 
 .. _sentinel:
@@ -455,7 +455,7 @@ Dash budget system.
 .. _fees:
 
 Fees
-======
+====
 
 Transactions on the Dash network are recorded in blocks on the
 blockchain. The size of each transaction is measured in bytes, but there
@@ -479,7 +479,7 @@ simultaneous reduction of fees by a factor of 10, while the block size
 was increased from 1MB to 2MB to promote continued growth of low-cost
 transactions even as the cost of Dash rises. Dash also supports
 :ref:`instantsend` and :ref:`privatesend` transactions, which operate on
-a different and mandatory fee schedule.  The fee schedule for Dash
+a different and mandatory fee schedule. The fee schedule for Dash
 12.2.x as of December 2017 is as follows:
 
 +----------------------+-----------------+-----------------------------------+

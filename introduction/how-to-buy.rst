@@ -1,8 +1,8 @@
-.. _how_to_buy:
+.. _how-to-buy:
 
-==================
+==========
 How To Buy
-==================
+==========
 
 Dash can be purchased and sold in several ways, each with different
 advantages and disadvantages. The following options are available:
@@ -616,6 +616,18 @@ Holy Transaction
   Holy Transaction offers DASH trading pairs for BTC, USD and EUR, as
   well as over ten other altcoins.
 
+NegocieCoins
+  .. image:: exchanges/negociecoins.jpg
+     :width: 200px
+     :align: right
+     :target: https://www.negociecoins.com.br
+
+  https://www.negociecoins.com.br
+
+  Based in Brazil, NegocieCoins offers deposits in Brazilian real and
+  Dash trading pairs. A premium service with higher withdrawal limits is
+  available.
+
 SouthXchange
   .. image:: exchanges/southxchange.png
      :width: 200px
@@ -765,7 +777,7 @@ MorphToken
   single exchange.
 
 
-.. _over_the_counter:
+.. _over-the-counter:
 
 Over the Counter
 ================
@@ -820,6 +832,18 @@ Bitnovo
   website and at tens of thousands of physical locations throughout
   Europe. They also offer reloadable cards, vouchers and cryptocurrency
   wallets.
+
+Bitit
+  .. image:: exchanges/bitit.png
+     :width: 200px
+     :align: right
+     :target: https://bitit.io
+
+  https://bitit.io
+
+  Bitit is a broker service offering Bitcoin, Dash and several other
+  cryptocurrencies for sale online. Payment in a range of currencies is
+  support using both direct banking, credit cards and couchers.
 
 Mercury Cash
   .. image:: exchanges/mercury.png
