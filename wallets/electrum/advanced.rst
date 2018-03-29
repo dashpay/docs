@@ -218,7 +218,7 @@ Sweep a paper wallet
 
 You may have received a paper wallet as a gift from another Dash user,
 or previously stored one in a safe deposit box. Funds are swept from a
-:ref:`paper wallet <paper_wallets>` into a live wallet by importing its
+:ref:`paper wallet <paper-wallets>` into a live wallet by importing its
 `private key <http://bitzuma.com/posts /six-things-bitcoin-users-should-
 know-about-private-keys/>`_, which is a long sequence of characters
 starting with the number "7" or the capital letter "X". The example

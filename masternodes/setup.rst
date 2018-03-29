@@ -259,7 +259,7 @@ Option 1: Sending from a hardware wallet
 
 Set up your Trezor using the Trezor wallet at https://wallet.trezor.io/
 and send a test transaction to verify that it is working properly. For
-help on this, see :ref:`this guide <hardware_trezor>` - you may also
+help on this, see :ref:`this guide <hardware-trezor>` - you may also
 choose to (carefully!) `add a passphrase <https://blog.trezor.io/hide-
 your-trezor-wallets-with-multiple-passphrases-f2e0834026eb>`_ to your
 Trezor to further protect your collateral. Create a new account in your

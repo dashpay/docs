@@ -216,7 +216,7 @@ Dash Client
   creating a robust decentralized infrastructure.
 
 Dash Core Wallet 
-  The :ref:`Dash Core Wallet <dash-core-wallet> (known also as the QT
+  The :ref:`Dash Core Wallet <dash-core-wallet>` (known also as the QT
   wallet) is the "official" Dash wallet that is compiled by the Dash
   Core Team and allows both PrivateSend and InstantSend. The DashCore
   wallet will download the entire blockchain and serve it over the
@@ -284,7 +284,7 @@ Digital Wallet
 
   - **Desktop Wallet** (:ref:`Dash Electrum Wallet
     <dash-electrum-wallet>`, :ref:`Dash Core Wallet 
-    <dash_core_wallet>`): Wallet programs that you install on a laptop 
+    <dash-core-wallet>`): Wallet programs that you install on a laptop 
     or desktop computer. You are solely responsible for protecting the 
     wallet file and the private keys it contains. Make backup copies of 
     your wallet files to ensure that you don't lose access to your 

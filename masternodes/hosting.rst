@@ -91,7 +91,7 @@ Starting a hosted masternode is done in just a few easy steps:
 #. Enter this information in your wallet and start the masternode
 
 It is **highly recommended** to store the keys to your masternode
-collateral on a :ref:`hardware wallet <dash_hardware_wallet>` for added
+collateral on a :ref:`hardware wallet <dash-hardware-wallet>` for added
 security against hackers. This documentation will use a Trezor as an
 example, but KeepKey and Ledger are also supported. For instructions on
 using Dash Core wallet to start the masternode (no longer recommended),
@@ -103,7 +103,7 @@ Send the collateral
 Set up your Trezor using the Trezor wallet at https://wallet.trezor.io,
 update the firmware if necessary and send a test transaction to verify
 that it is working properly. For help on this, see :ref:`this guide
-<hardware_trezor>`. Create a new account in your Trezor wallet by
+<hardware-trezor>`. Create a new account in your Trezor wallet by
 clicking **Add account**. Then click the **Receive** tab and send
 exactly 1000 DASH to the address displayed. You should see the
 transaction as soon as the first confirmation arrives, usually within a
