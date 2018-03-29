@@ -152,7 +152,7 @@ After some time, all statuses should turn green, in particular
 **masternode started: YES** and **masternode network state: ENABLED**.
 If you do need to restart your masternode, update the software version
 of the wallet holding the collateral to the latest version and follow
-the instructions :ref:`here <masternode_setup_start>`.
+the instructions :ref:`here <masternode-setup-start>`.
 
 Option 2: Manual update
 -----------------------

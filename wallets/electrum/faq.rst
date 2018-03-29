@@ -273,7 +273,7 @@ How to upgrade Dash Electrum?
 
 Warning: always save your wallet seed on paper before doing an upgrade.
 
-To upgrade Dash Electrum, just :ref:`install <electrum_installation>`
+To upgrade Dash Electrum, just :ref:`install <electrum-installation>`
 the most recent version. The way to do this will depend on your OS. Note
 that your wallet files are stored separately from the software, so you
 can safely remove the old version of the software if your OS does not do

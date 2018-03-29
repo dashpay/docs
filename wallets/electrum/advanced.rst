@@ -261,7 +261,7 @@ you swept is left with zero balance.
    Broadcasting the sweep transaction
 
 
-.. _electrum_cold_storage:
+.. _electrum-cold-storage:
 
 Cold storage
 ============
