@@ -123,7 +123,7 @@ PrivateSend disabled.
 .. _instantsend:
 
 InstantSend
-==================
+===========
 
 Traditional decentralized cryptocurrencies must wait for certain period 
 of time for enough blocks to pass to ensure that a transaction is both 
@@ -168,7 +168,7 @@ Dash Detailed by Amanda B. Johnson, 16 September 2016
 .. _sporks:
 
 Sporks
-============================
+======
 
 In response to unforeseen issues with the rollout of the major "RC3"
 update in June 2014, the Dash development team created a mechanism by
@@ -267,7 +267,7 @@ had (CPUs, GPUs, ASICs).
 .. _dark_gravity_wave:
 
 Dark Gravity Wave
-==================
+=================
 
 **DGW** or *Dark Gravity Wave* is an open source difficulty-adjusting
 algorithm for Bitcoin-based cryptocurrencies that was first used in Dash
@@ -293,7 +293,7 @@ exploit.
 .. _emission_rate:
 
 Emission Rate
-==================
+=============
 
 Cryptocurrencies such as Dash and Bitcoin are created through a
 cryptographically difficult process known as mining. Mining involves
@@ -480,9 +480,9 @@ The release of Dash 0.12.2.0 and activation of DIP0001 saw a
 simultaneous reduction of fees by a factor of 10, while the block size
 was increased from 1MB to 2MB to promote continued growth of low-cost
 transactions even as the cost of Dash rises. Dash also supports
-`InstantSend <instantsend>`_ and `PrivateSend <privatesend>`_
-transactions, which operate on a different and mandatory fee schedule. 
-The fee schedule for Dash 12.2.x as of December 2017 is as follows:
+:ref:`instantsend` and :ref:`privatesend` transactions, which operate on
+a different and mandatory fee schedule.  The fee schedule for Dash
+12.2.x as of December 2017 is as follows:
 
 +----------------------+-----------------+-----------------------------------+
 | Transaction type     | Recommended fee | Per unit                          |

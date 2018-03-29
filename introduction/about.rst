@@ -1,28 +1,27 @@
 .. _about:
 
-==================
+=============
 What is Dash?
-==================
+=============
 
 Dash aims to be the most user-friendly and scalable payments-focused
 cryptocurrency in the world. The Dash network features :ref:`instant
-transaction confirmation <instantsend>`, double spend protection, 
-anonymity equal to that of physical cash, a self-governing,
-:ref:`self-funding model <budget-system>` driven by 
-:ref:`incentivized full nodes <masternode-network>` and a `clear roadmap 
-<https://github.com/dashpay/dash-roadmap>`__ for on-chain scaling to 
-up to 400MB blocks using custom-developed open source hardware. 
-While Dash is based on Bitcoin and compatible with many key
-components of the Bitcoin ecosystem, its two-tier network structure
-offers significant improvements in transaction speed, anonymity and
-governance. This section of the documentation describes these and many
-more key features that set Dash apart in the blockchain economy. For
-full details, please read the `Dash whitepaper 
-<https://github.com/dashpay/dash/wiki/Whitepaper>`__.
+transaction confirmation <instantsend>`, double spend protection,
+anonymity equal to that of physical cash, a self-governing, :ref:`self-
+funding model <budget-system>` driven by :ref:`incentivized full nodes
+<masternode-network>` and a `clear roadmap <https://github.com/dashpay
+/dash-roadmap>`_ for on-chain scaling to up to 400MB blocks using
+custom-developed open source hardware. While Dash is based on Bitcoin
+and compatible with many key components of the Bitcoin ecosystem, its
+two-tier network structure offers significant improvements in
+transaction speed, anonymity and governance. This section of the
+documentation describes these and many more key features that set Dash
+apart in the blockchain economy. For full details, please read the `Dash
+whitepaper <https://github.com/dashpay/dash/wiki/Whitepaper>`_.
 
 
 Dash Videos
-------------------
+-----------
 
 Dash School
 ~~~~~~~~~~~
@@ -59,7 +58,7 @@ and is available in
 .. _whitepaper:
 
 Whitepaper
-------------------
+----------
 
 The Dash Whitepaper describes the unique value proposition and key
 innovations in Dash from an academic and theoretical perspective. It is 
@@ -74,7 +73,7 @@ available for download as PDF files.
 - `InstantSend whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_
 
 Roadmap
-------------------
+-------
 
 The Dash Roadmap sets out delivery milestones for future releases of
 Dash and includes specific technical details describing how the
