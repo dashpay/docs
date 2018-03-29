@@ -1,8 +1,8 @@
 .. _dashcore-rpc:
 
-=======================================
+======================
 Arguments and commands
-=======================================
+======================
 
 Command line arguments
 ======================
@@ -369,7 +369,7 @@ headless wallets and *dashd*.
 
 
 Addressindex
-^^^^^^^^^^^^
+------------
 
 getaddressbalance
   Returns the balance for an address(es) (requires addressindex to be enabled).
@@ -384,7 +384,7 @@ getaddressutxos
 
 
 Blockchain
-^^^^^^^^^^
+----------
 
 getbestblockhash
   Returns the hash of the best (tip) block in the longest block chain.
@@ -425,7 +425,7 @@ verifytxoutproof "proof"
 
 
 Control
-^^^^^^^
+-------
 
 debug ( 0 | 1 | addrman | alert | bench | coindb | db | lock | rand | rpc | selectcoins | mempool | mempoolrej | net | proxy | prune | http | libevent | tor | zmq | dash | privatesend | instantsend | masternode | spork | keepass | mnpayments | gobject )
   Change debug category on the fly. Specify single category or use comma to specify many.
@@ -438,7 +438,7 @@ stop
 
 
 Dash
-^^^^
+----
 
 getgovernanceinfo
   Returns an object containing governance parameters.
@@ -533,7 +533,7 @@ voteraw <masternode-tx-hash> <masternode-tx-index> <governance-hash> <vote-signa
 
 
 Generating
-^^^^^^^^^^
+----------
 
 generate numblocks
   Mine blocks immediately (before the RPC call returns).
@@ -544,7 +544,7 @@ setgenerate generate ( genproclimit )
 
 
 Mining
-^^^^^^
+------
 
 getblocktemplate ( "jsonrequestobject" )
   If the request parameters include a 'mode' key, that is used to explicitly select between the default 'template' request or a 'proposal'. It returns data needed to construct a block to work on.
@@ -559,7 +559,7 @@ submitblock "hexdata" ( "jsonparametersobject" )
 
 
 Network
-^^^^^^^
+-------
 
 addnode "node" "add|remove|onetry"
   Attempts add or remove a node from the addnode list. Or try a connection to a node once.
@@ -588,7 +588,7 @@ setnetworkactive true|false
 
 
 Rawtransactions
-^^^^^^^^^^^^^^^
+---------------
 
 createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )
   Create a transaction spending the given inputs and creating new outputs. Outputs can be addresses or data. Returns hex-encoded raw transaction. Note that the transaction's inputs are not signed, and it is not stored in the wallet or transmitted to the network.
@@ -607,7 +607,7 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
 
 
 Util
-^^^^
+----
 
 createmultisig nrequired ["key",...]
   Creates a multi-signature address with n signature of m keys required. It returns a json object with the address and redeemScript.
@@ -626,7 +626,7 @@ verifymessage "dashaddress" "signature" "message"
 
 
 Wallet
-^^^^^^
+------
 
 abandontransaction "txid"
   Mark in-wallet transaction <txid> as abandoned. This will mark this transaction and all its in-wallet descendants as abandoned which will allow for their inputs to be respent.
