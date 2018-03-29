@@ -1,8 +1,8 @@
-.. _copay:
+.. _dash-copay:
 
-==================
+============
 Introduction
-==================
+============
 
 This documentation describes how to use the most common features of the
 Dash Copay wallet. Since the functionality is similar across all

@@ -1,4 +1,4 @@
-.. _dash_android_advanced_functions:
+.. _dash-android-advanced-functions:
 
 Advanced functions
 ==================

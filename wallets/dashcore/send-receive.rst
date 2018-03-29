@@ -1,4 +1,4 @@
-.. _dashcore_send_receive:
+.. _dashcore-send-receive:
 
 =====================
 Sending and receiving

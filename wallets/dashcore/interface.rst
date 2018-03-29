@@ -1,4 +1,4 @@
-.. _dashcore_interface:
+.. _dashcore-interface:
 
 =======================
 Interface

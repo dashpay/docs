@@ -1,4 +1,4 @@
-.. _dashcore_rpc:
+.. _dashcore-rpc:
 
 =======================================
 Arguments and commands

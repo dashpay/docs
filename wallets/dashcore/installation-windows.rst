@@ -1,4 +1,4 @@
-.. _dashcore_installation_windows:
+.. _dashcore-installation-windows:
 
 Windows Installation Guide
 ==========================

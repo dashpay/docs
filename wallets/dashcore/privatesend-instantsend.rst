@@ -1,4 +1,4 @@
-.. _dashcore_privatesend:
+.. _dashcore-privatesend-instantsend:
 
 ===========================
 PrivateSend and InstantSend

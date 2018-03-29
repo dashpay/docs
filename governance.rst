@@ -38,7 +38,7 @@ reward for budget projects.
         <iframe src="//www.youtube.com/embed/jHsVU1LBuAY" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-.. _understanding_governance:
+.. _understanding-governance:
 
 Understanding Dash Governance
 =============================
@@ -364,7 +364,7 @@ collectives, like governments, cooperative corporations, unions, DAOs,
 cryptocurrencies, etc. We call this model decentralized governance by
 blockchain.
 
-.. _using_governance:
+.. _using-governance:
 
 Using the Governance System
 ===========================
@@ -503,7 +503,7 @@ superblock.
 You can view the source code for this calculation at this
 `GitHub gist <https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_
 
-.. _creating_proposals:
+.. _creating-proposals:
 
 Creating proposals
 ------------------
@@ -618,7 +618,7 @@ are available to view and manage proposals and voting:
 - `Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-masternode-tool/releases>`_
 
 For information on how to create a proposal, see :ref:`here
-<creating_proposals>`.
+<creating-proposals>`.
 
 DashCentral
 ^^^^^^^^^^^
@@ -805,7 +805,7 @@ Consider arrangements for large requests
   proposals out of the budget. Consider breaking your proposal into
   smaller monthly payments instead.
 
-See :ref:`this documentation <using_governance>` for specific
+See :ref:`this documentation <using-governance>` for specific
 instructions on how to create a proposal when you are ready. Good luck!
 
 For an example of good reporting, reputation management and use of a
@@ -853,5 +853,5 @@ A few additional points:
    significant portion of the budget, voting is likely to be very
    competitive with weaker projects being forced out of the budget, even
    if they collect sufficient votes to pass the 10% threshold. See
-   :ref:`here <understanding_governance>` for more details.
+   :ref:`here <understanding-governance>` for more details.
 

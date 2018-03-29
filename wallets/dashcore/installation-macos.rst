@@ -1,4 +1,4 @@
-.. _dashcore_installation_macos:
+.. _dashcore-installation-macos:
 
 macOS Installation Guide
 ========================

@@ -1,4 +1,4 @@
-.. _dashcore_installation_linux:
+.. _dashcore-installation-linux:
 
 Linux Installation Guide
 ========================
@@ -8,7 +8,7 @@ Dash Core wallet for Linux. The guide is written for Ubuntu 16.04 LTS,
 but the steps should be similar for other Linux distributions.
 
 Downloading the Dash Core wallet
-----------------------------------
+--------------------------------
 
 Visit https://www.dash.org/get-dash/ to download the latest Dash Core
 wallet. In most cases, the website will properly detect which version

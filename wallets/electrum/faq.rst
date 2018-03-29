@@ -1,4 +1,4 @@
-.. _electrum_faq:
+.. _electrum-faq:
 
 ==========================
 Frequently Asked Questions
@@ -142,7 +142,7 @@ seed phrase.
 Does Dash Electrum support cold wallets?
 ----------------------------------------
 
-Yes. See the :ref:`cold storage <electrum_cold_storage>` section.
+Yes. See the :ref:`cold storage <electrum-cold-storage>` section.
 
 Can I import private keys from other Dash clients?
 --------------------------------------------------

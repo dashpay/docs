@@ -68,7 +68,7 @@ funds are not locked in any way. However, if the funds are moved or
 spent, the associated masternode will go offline and stop receiving
 rewards.
 
-.. _mining_pools:
+.. _mining-pools:
 
 Mining Pools
 ============
@@ -115,7 +115,7 @@ coingun@masternode.io
 
 In addition to joining a pool, you will also need to create a Dash
 address to receive your payout. To do this in Dash Core wallet, see
-:ref:`here <dashcore_send_receive>`.
+:ref:`here <dashcore-send-receive>`.
 
 .. toctree::
    :hidden:
@@ -187,7 +187,7 @@ Configuration
 -------------
 
 Begin by selecting a mining pool and generating a Dash address as
-described in the :ref:`Mining Pools <mining_pools>` section above. Keep
+described in the :ref:`Mining Pools <mining-pools>` section above. Keep
 all your mining files in a single folder. In this example we will work
 from the Desktop. The node selected for this example is from the
 p2poolming.us list and is located in China::
@@ -334,7 +334,7 @@ Configuration
 -------------
 
 Begin by selecting a mining pool and generating a Dash address as
-described in the :ref:`Mining Pools <mining_pools>` section above. Keep
+described in the :ref:`Mining Pools <mining-pools>` section above. Keep
 all your mining files in a single folder. In this example we will work
 from the Desktop. The node selected for this example is from the
 p2poolming.us list and is located in China::

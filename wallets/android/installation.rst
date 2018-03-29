@@ -1,4 +1,4 @@
-.. _dash_android_installation:
+.. _dash-android-installation:
 
 Installation
 ============

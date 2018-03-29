@@ -1,4 +1,4 @@
-.. _masternode_setup:
+.. _masternode-setup:
 
 =====
 Setup
@@ -340,7 +340,7 @@ developer Bertrand256:
 
 Leave DMT open, take note of the masternode private key and collateral
 address and continue with the next step: :ref:`installing Dash Core on
-your VPS <masternode_setup_install_dashcore>`.
+your VPS <masternode-setup-install-dashcore>`.
 
 Option 2: Sending from Dash Core wallet
 ---------------------------------------
@@ -375,7 +375,7 @@ lose access to your funds. Next, back up your wallet file by selecting
 **File > Backup Wallet**. Save the file to a secure location physically
 separate to your computer, since this will be the only way you can
 access our funds if anything happens to your computer. For more details
-on these steps, see :ref:`here <dashcore_backup>`.
+on these steps, see :ref:`here <dashcore-backup>`.
 
 Now send exactly 1000 DASH in a single transaction to the account
 address you generated in the previous step. This may be sent from
@@ -392,7 +392,7 @@ already: installing Dash Core on your VPS.
    Trezor blockchain explorer showing 15 confirmations for collateral
    transfer
 
-.. _masternode_setup_install_dashcore:
+.. _masternode-setup-install-dashcore:
 
 Install Dash Core
 =================
@@ -462,7 +462,7 @@ the collateral transaction are complete::
    dashman status output showing masternode ready to be started
 
 Continue with the :ref:`next step to start your masternode
-<masternode_setup_start>`.
+<masternode-setup-start>`.
 
 Option 2: Manual installation
 -----------------------------
@@ -597,7 +597,7 @@ response::
 
 Continue with the next step to start your masternode.
 
-.. _masternode_setup_start:
+.. _masternode-setup-start:
 
 Start your masternode
 =====================

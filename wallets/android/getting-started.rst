@@ -1,4 +1,4 @@
-.. _dash_android_getting_started:
+.. _dash-android-getting-started:
 
 Getting started
 ===============
