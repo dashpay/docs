@@ -835,7 +835,7 @@ Bitnovo
 
 Bitit
   .. image:: exchanges/bitit.png
-     :width: 200px
+     :width: 150px
      :align: right
      :target: https://bitit.io
 

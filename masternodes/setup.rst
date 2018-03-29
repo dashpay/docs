@@ -36,7 +36,7 @@ Before you begin
 ================
 
 This guide assumes you are setting up a masternode for the first time.
-If you are updating a masternode, see :ref:`here <masternode_update>`
+If you are updating a masternode, see :ref:`here <masternode-update>`
 instead. You will need:
 
 - 1000 Dash
@@ -47,6 +47,8 @@ instead. You will need:
 This guide also assumes you will be working from a Windows computer.
 However, since most of the work is done on your Linux VPS, alternative
 steps for using macOS or Linux will be indicated where necessary.
+
+.. _vps-setup:
 
 Set up your VPS
 ===============

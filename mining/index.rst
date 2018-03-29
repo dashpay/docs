@@ -9,7 +9,7 @@ process of searching for solutions to cryptographically difficult
 problems as a method of securing blocks on the blockchain. The process
 of mining creates new currency tokens as a reward to the miner. Mining
 is possible on a range of hardware. Dash implements an algorithm known
-as :ref:`X11 <x11_hash_algorithm>`, which the miner must solve in order
+as :ref:`X11 <x11-hash-algorithm>`, which the miner must solve in order
 to earn rewards.
 
 The simplest and most general hardware available for mining is the

@@ -1,8 +1,8 @@
-.. _masternode_maintenance:
+.. _masternode-maintenance:
 
-======================
+===========
 Maintenance
-======================
+===========
 
 Masternodes require regular maintenance to ensure you do not drop off
 the payment queue. This includes promptly installing updates to Dash, as
@@ -11,7 +11,7 @@ addition, masternodes should vote on proposals and perform other tasks
 in the interest of the network and their own investment. This section
 covers the following topics:
 
-.. _masternode_withdrawals:
+.. _masternode-withdrawals:
 
 Payment withdrawals
 ===================
@@ -110,6 +110,8 @@ UTXOs.
    :width: 180px
 
    Locking UTXOs in Dash Core wallet
+
+.. _masternode-update:
 
 How to update a masternode
 ==========================
@@ -238,6 +240,7 @@ list of masternodes using this command and entering your masternode IP
 address::
 
   ~/.dashcore/dash-cli masternode list full | grep <your ip address>
+
 
 DashCentral voting, verification and monitoring
 ===============================================
@@ -500,7 +503,8 @@ https://www.dashcentral.org
 
 DashCentral, operated by forum member rango, offers an advanced service
 to monitor masternodes and vote on budget proposals through an advanced
-web interface.
+web interface. An `Android app <https://play.google.com/store/apps/detai
+ls?id=net.paregov.android.dashcentral>`_ is also available.
 
 Masternode.me
 -------------

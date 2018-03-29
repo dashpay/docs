@@ -1,8 +1,8 @@
-.. _dashcore_installation_linux:
+.. _dashcore-installation:
 
-==================
+============
 Installation
-==================
+============
 
 Installing Dash Core is as simple as going to https://www.dash.org/ and
 downloading the appropriate file for your system, then following the

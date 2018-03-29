@@ -184,7 +184,7 @@ Cryptography
   include ATM cards, computer passwords, and electronic commerce.
 
 Dark Gravity Wave
-  In concept, :ref:`Dark Gravity Wave (DGW) <dark_gravity_wave>` is 
+  In concept, :ref:`Dark Gravity Wave (DGW) <dark-gravity-wave>` is 
   similar to *Kimoto Gravity Well*, adjusting the difficulty levels 
   every block (instead of every 2016 blocks like Bitcoin) by using 
   statistical data of the last blocks found. In this way block issuing 
@@ -509,9 +509,9 @@ Liquidity
   value of an asset.
 
 Masternode
-  A :ref:`masternode <masternode>` is special type of full node that
-  performs services for the network and is paid a portion of the block
-  reward. Masternodes require proof of ownership of 1000 DASH.
+  A :ref:`masternode <masternode-network>` is special type of full node
+  that performs services for the network and is paid a portion of the
+  block reward. Masternodes require proof of ownership of 1000 DASH.
 
   Masternodes serve as the second tier of the Dash network, and power
   InstantSend, PrivateSend, the Budget System.
@@ -701,7 +701,7 @@ Whitepaper
   problem, or make a decision.
 
 X11
-  :ref:`X11 <x11_hash_algorithm>` is a hashing algorithm created by Dash 
+  :ref:`X11 <x11-hash-algorithm>` is a hashing algorithm created by Dash 
   Core developer Evan Duffield.
 
 Zero Confirmations  
