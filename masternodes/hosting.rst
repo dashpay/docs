@@ -63,10 +63,10 @@ https://node40.com
 
 - Operated by: Perry Woodin
 - Services: Hosting, Voting, Tax Compliance
-- `Site <https://node40.com>`_
-- `Email <info@node40.com>`_
-- `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`_
-- `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`_
+- `Site <https://node40.com>`__
+- `Email <info@node40.com>`__
+- `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`__
+- `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`__
 
 Masternodehosting
 -----------------
@@ -75,9 +75,9 @@ https://masternodehosting.com/
 
 - Operated by: flare (Dash Core team member)
 - Services: Hosting
-- `Site <https://masternodehosting.com>`_
-- `Email <holger@masternodehosting.com>`_
-- `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`_
+- `Site <https://masternodehosting.com>`__
+- `Email <holger@masternodehosting.com>`__
+- `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
 
 Starting a hosted masternode
 ============================
