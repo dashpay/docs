@@ -1,4 +1,4 @@
-.. _electrum_security:
+.. _electrum-security:
 
 Wallet security
 ===============

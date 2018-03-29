@@ -29,7 +29,7 @@ dummies-updated-for-12-1.2680/>`_, `BolehVPN
 <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/24019061>`_ and
 tungfa. Tao's hugely popular original guide and support thread is
 available `here <https://www.dash.org/forum/threads/taos-masternode-
-setup-guide-for-dummies-updated-for-12-1.2680/>`_, as well many more
+setup-guide-for-dummies-updated-for-12-1.2680/>`__, as well many more
 guides for specific cases in this forum.
 
 Before you begin
@@ -237,7 +237,7 @@ block login brute force attacks, `disabling root login
 `enabling automatic security updates
 <https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ is
 advisable. More tips are available `here <https://www.cyberciti.biz/tips
-/linux-security.html>`_. However, since the masternode does not actually
+/linux-security.html>`__. However, since the masternode does not actually
 store the keys to any Dash, these steps are considered beyong the scope
 of this guide.
 

@@ -440,7 +440,7 @@ Persistence
   masternodes and can be seen by running the command 
   ``masternode count`` in the Dash Core wallet debug window. A graph of
   the total masternode count can be found `here 
-  <http://178.254.23.111/~pub/masternode_count.png>`_
+  <http://178.254.23.111/~pub/masternode_count.png>`__
 
 Templates
 ^^^^^^^^^
@@ -612,10 +612,10 @@ masternode may vote once on each proposal, and the vote can be changed
 at any time before the voting deadline. The following sites and tools
 are available to view and manage proposals and voting:
 
-- `DashCentral <https://www.dashcentral.org/budget>`_
-- `Dash Budget Proposal Vote Tracker <https://dashvotetracker.com/>`_
-- `Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`_
-- `Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-masternode-tool/releases>`_
+- `DashCentral <https://www.dashcentral.org/budget>`__
+- `Dash Budget Proposal Vote Tracker <https://dashvotetracker.com/>`__
+- `Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`__
+- `Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-masternode-tool/releases>`__
 
 For information on how to create a proposal, see :ref:`here
 <creating-proposals>`.
@@ -624,7 +624,7 @@ DashCentral
 ^^^^^^^^^^^
 
 Many masternode operators store their password-protected masternode
-private key on `DashCentral <https://www.dashcentral.org>`_ to enable
+private key on `DashCentral <https://www.dashcentral.org>`__ to enable
 simple voting with a user-friendly interface. The popularity of this
 site has made it a common place for discussion of the proposals after
 they are submitted to the governance system. To vote from the
@@ -854,4 +854,3 @@ A few additional points:
    competitive with weaker projects being forced out of the budget, even
    if they collect sufficient votes to pass the 10% threshold. See
    :ref:`here <understanding-governance>` for more details.
-

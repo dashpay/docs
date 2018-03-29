@@ -1,4 +1,4 @@
-.. _electrum_send_receive:
+.. _electrum-send-receive:
 
 =====================
 Sending and receiving

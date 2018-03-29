@@ -1,4 +1,4 @@
-.. _electrum_advanced_functions:
+.. _electrum-advanced-functions:
 
 ==================
 Advanced functions

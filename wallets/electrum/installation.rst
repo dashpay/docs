@@ -1,4 +1,4 @@
-.. _electrum_installation:
+.. _electrum-installation:
 
 ============
 Installation

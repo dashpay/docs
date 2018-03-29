@@ -174,7 +174,7 @@ such as these:
 Our goal here is to choose mining software that supports the maximum
 possible instruction sets available on your CPU, and then try to
 increase the hash speed. Once you have made your choice, click
-**Releases** and download and extract the zip file. The different *.exe
+**Releases** and download and extract the zip file. The different \*.exe
 files indicate which specific processor optimizations they support. The
 folder should look something like this:
 
@@ -399,7 +399,7 @@ Wolf0 binaries
 ^^^^^^^^^^^^^^
 
 In 2015, a user named `Wolf0 created special binary files <https://www.r
-eddit.com/r/DRKCoin/comments/2o1yoz/rewritten_x11_binaries/>`_ (*.bin)
+eddit.com/r/DRKCoin/comments/2o1yoz/rewritten_x11_binaries/>`_ (\*.bin)
 for certain AMD graphics cards using the following GPU families:
 
 - Cape Verde: 7730/7750/7770
