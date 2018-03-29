@@ -668,15 +668,16 @@ If you started your masternode using the Dash Core Wallet (not
 recommended), you can vote manually from **Tools > Debug console**, or
 directly from your masternode via SSH using ``dash-cli``. First click on
 the proposal you want to vote on at either `DashCentral
-<https://www.dashcentral.org/budget>`_ or `Dash Ninja
-<https://www.dashninja.pl/governance.html>`_. You will see a command for
-manual voting below the proposal description. Copy and paste the command
-and modify it as necessary. As an example, take this proposal from `Dash
-Ninja <https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741
-8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`_ (or
+<https://www.dashcentral.org/budget>`__ or `Dash Ninja
+<https://www.dashninja.pl/governance.html>`__. You will see a command
+for manual voting below the proposal description. Copy and paste the
+command and modify it as necessary. As an example, take this proposal
+from `Dash Ninja
+<https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741
+8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`__ (or
 `DashCentral
-<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`_). The
-voting code for Dash Core Wallet is as follows::
+<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__).
+The voting code for Dash Core Wallet is as follows::
 
   gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding yes
   gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding no
@@ -731,8 +732,8 @@ Run a pre-proposal discussion
   out if someone has proposed something similar in the past, and whether
   it succeeded or failed. There are `pre-proposal channels on the forum
   <https://www.dash.org/forum/topic/pre-budget-proposal-
-  discussions.93>`_ and `Dash Nation Discord <http://dashchat.org>`_,
-  and `Reddit <https://www.reddit.com/r/dashpay>`_ also attracts a lot
+  discussions.93>`__ and `Dash Nation Discord <http://dashchat.org>`__,
+  and `Reddit <https://www.reddit.com/r/dashpay>`__ also attracts a lot
   of views - consider the discussion on these channels to be the
   research phase of your proposal. Later, you can post a link to the
   forum discussion when your proposal goes live to show you are

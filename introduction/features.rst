@@ -87,8 +87,8 @@ PrivateSenduses an innovative process to mix your inputs with the inputs
 of two other people, without having your coins ever leave your wallet. 
 You retain control of your money at all times.
 
-You can view a practical guide to use PrivateSend :ref:`here <dashcore-
-privatesend-instantsend>`.
+You can view a practical guide to use PrivateSend 
+:ref:`here <dashcore-privatesend-instantsend>`.
 
 The PrivateSend process works like this:
 
@@ -154,8 +154,8 @@ revolutionize cryptocurrency by shortening the delay in confirmation of
 transactions from as long as an hour (with Bitcoin) to as little as a 
 few seconds.
 
-You can view a practical guide to use InstantSend :ref:`here <dashcore-
-privatesend-instantsend>`.
+You can view a practical guide to use InstantSend 
+:ref:`here <dashcore-privatesend-instantsend>`.
 
 InstantSend was introduced in a whitepaper called `Transaction Locking 
 and Masternode Consensus: A Mechanism for Mitigating Double Spending
