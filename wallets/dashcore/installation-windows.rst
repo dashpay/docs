@@ -36,7 +36,7 @@ how to check this in other versions of Windows, see
    :width: 337px
 
    Under the System section, click About to view the System type. This is
-a 64 bit system.
+   a 64 bit system.
 
 Once you know which version you need, download the Dash Core Installer
 to your computer from https://www.dash.org/wallets/

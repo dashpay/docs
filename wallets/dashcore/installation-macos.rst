@@ -110,8 +110,9 @@ Core, then try to open it again. This time you will be able to click
    from the App Store
 
 
-.. figure:: img/macos/112414900.png
+.. image:: img/macos/112414900.png
    :height: 250px
+
 .. figure:: img/macos/112414910.png
    :height: 250px
 

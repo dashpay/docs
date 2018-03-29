@@ -17,7 +17,7 @@ decentralized and fair nature of this mining model means mining with
 P2Pool is strongly encouraged. P2Pool for Dash uses the `p2pool-dash
 <https://github.com/dashpay/p2pool-dash>`_ software on Github, which is
 a fork of p2pool for Bitcoin. For more information, see `here
-<https://en.bitcoin.it/wiki/P2Pool>`_.
+<https://en.bitcoin.it/wiki/P2Pool>`__.
 
 Because of the way P2Pool manages difficulty adjustments on the
 sharechain, it is important to maintain low latency between the miners
@@ -44,7 +44,7 @@ Download a copy of Ubuntu Server LTS from
 https://www.ubuntu.com/download/server and install it on your system
 according to the steps described `here
 <https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-
-server>`_. If you are using a VPS such as Vultr or AWS, your provider
+server>`__. If you are using a VPS such as Vultr or AWS, your provider
 will most likely provide an option to install this system during
 provisioning. Ensure you enable OpenSSH server during setup so you can
 control your server from a remote console. Once you have access to your
@@ -77,9 +77,9 @@ accessible to the public. How this is done depends on your particular
 network router and is therefore beyond the scope of this documentation.
 An example from the popular DD-WRT open source router distribution is
 shown below. Guides to setting up port forwarding can be found `here
-<https://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router>`_ and `here
+<https://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router>`__ and `here
 <http://www.noip.com/support/knowledgebase/general-port-forwarding-
-guide/>`_.
+guide/>`__.
 
 Take note of your IP address either from your router management
 interface or by visiting https://www.whatismyip.com/

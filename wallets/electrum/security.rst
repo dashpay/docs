@@ -57,19 +57,19 @@ to be deleted. Begin by closing Dash Electrum. Next, locate the
 application data folder according to your operating system:
 
 - **Linux:**
-	  1. Open Files, select **Go > Go to folder**, copy the path 
-	  ``~/.electrum`` and paste it into the dialog box
-	  2. Delete all files in the folder
+  1. Open Files, select **Go > Go to folder**, copy the path
+     ``~/.electrum`` and paste it into the dialog box
+  2. Delete all files in the folder
 
 - **macOS:**
-	  1. Open Finder, select **Go > Go to Folder**, copy the path
-	     ``~/.electrum`` and paste it into the dialog box
-	  2. Delete all files in the folder
+  1. Open Finder, select **Go > Go to Folder**, copy the path
+     ``~/.electrum`` and paste it into the dialog box
+  2. Delete all files in the folder
 
 - **Windows:**
-	  1. Open Explorer, copy the path ``%APPDATA%\Electrum-DASH`` and 
-        paste it in to the address bar
-	  2. Delete all files in the folder
+  1. Open Explorer, copy the path ``%APPDATA%\Electrum-DASH`` and 
+     paste it in to the address bar
+  2. Delete all files in the folder
 
 Having cleared the data directory, restart Dash Electrum. A dialog will
 appear asking you to name your new wallet. Enter a name, select

@@ -677,6 +677,7 @@ importwallet "filename"
 instantsendtoaddress "dashaddress" amount ( "comment" "comment-to" subtractfeefromamount )
   Send an amount to a given address. The amount is a real and is rounded to the nearest 0.00000001
 keepass <genkey|init|setpassphrase>
+  
 keypoolrefill ( newsize )
   Fills the keypool.
 listaccounts ( minconf addlockconf includeWatchonly)
