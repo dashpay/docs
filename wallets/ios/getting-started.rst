@@ -1,4 +1,4 @@
-.. _dash_ios_getting_started:
+.. _dash-ios-getting-started:
 
 Getting started
 ===============

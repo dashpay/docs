@@ -1,4 +1,4 @@
-.. _dash_ios_installation:
+.. _dash-ios-installation:
 
 Installation
 ============

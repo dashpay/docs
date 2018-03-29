@@ -213,13 +213,13 @@ together with the overall block reward.
 Proposal websites
 -----------------
 
-The community has gathered around `Dash Central
-<https://www.dashcentral.org>`_ as a website to facilitate discussion
+The community has gathered around `DashCentral
+<https://www.dashcentral.org>`__ as a website to facilitate discussion
 and voting on proposals formally entered on the Dash blockchain. Other
-websites, such as `Dash Ninja <https://www.dashninja.pl>`_ and `Dash
-Vote Tracker <https://dashvotetracker.com>`_ are available to monitor
+websites, such as `Dash Ninja <https://www.dashninja.pl>`__ and `Dash
+Vote Tracker <https://dashvotetracker.com>`__ are available to monitor
 progress over time and gather more detailed statistics. `Dash Masternode
-Tool <https://github.com/Bertrand256/dash-masternode-tool/releases>`_
+Tool <https://github.com/Bertrand256/dash-masternode-tool/releases>`__
 also allows for voting without the need to share masternode private keys
 with a third party service.
 
@@ -249,7 +249,7 @@ superblock.
 
 Once passed, proposals are able to report back to the network on the
 `Dash Forum <https://www.dash.org/forum/topic/approved-proposals-
-updates-news.140>`_ or via published public channels and social media.
+updates-news.140>`__ or via published public channels and social media.
 Since it is possible to create proposals that pay out over several
 months, it is also possible to revoke funding from a project by changing
 the vote if development or spending of already allocated funds is
@@ -262,7 +262,7 @@ roles.
 Voting on proposals is updated in real time every 2.5 minutes as blocks
 are mined, so current winning proposals and the total allocation of the
 available budget are always open and visible to everyone. `Dash Vote
-Tracker <https://dashvotetracker.com>`_ is a popular site used for this
+Tracker <https://dashvotetracker.com>`__ is a popular site used for this
 purpose.
 
 .. figure:: img/governance-dashvotetracker.png
@@ -270,7 +270,7 @@ purpose.
 
    Monitoring budget allocation on Dash Vote Tracker
 
-Finally, `Dash Watch <http://dashwatch.org>`_ (which was itself funded
+Finally, `Dash Watch <http://dashwatch.org>`__ (which was itself funded
 through a budget proposal) exists to monitor the ability of blockchain
 contractors to deliver on their promises with respect to delivery dates
 and the total amounts of budget allocated over multiple voting periods.
@@ -519,7 +519,7 @@ Dash Budget Proposal Generator
 
 - https://proposal.dash.org
 
-The `Dash Budget Proposal Generator <https://proposal.dash.org>`_
+The `Dash Budget Proposal Generator <https://proposal.dash.org>`__
 supports creating budget proposals on both mainnet and testnet. In the
 first step, you must enter a short, clear and unique name for the
 proposal as it will appear on the blockchain. Proposal names are limited

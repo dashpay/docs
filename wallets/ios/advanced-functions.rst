@@ -1,4 +1,4 @@
-.. _dash_ios_advanced_functions:
+.. _dash-ios-advanced-functions:
 
 Advanced functions
 ==================

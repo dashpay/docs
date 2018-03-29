@@ -1,4 +1,4 @@
-.. _dash_web_wallet:
+.. _dash-web-wallet:
 
 My Dash Wallet
 ==============
