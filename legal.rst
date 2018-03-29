@@ -16,8 +16,8 @@ legal opinion, and you should consult your own attorneys before relying
 upon it. However, it is meant to state our position on the law, and how
 the law should be properly interpreted.
 
-One of the most common questions we receive is “How are masternode
-operators treated under the US tax laws?”
+One of the most common questions we receive is *How are masternode
+operators treated under the US tax laws?*
 
 Tax Treatment
 -------------
@@ -78,14 +78,14 @@ As with cash or any other currency system, users may use Dash in
 connection with illegal activity. A common question we receive is
 whether masternode operators can also be liable for criminal activity,
 simply by relaying transactions related to that activity. The
-fundamental legal requirement of “*mens rea*” makes criminal liability
+fundamental legal requirement of *mens rea* makes criminal liability
 unlikely for masternode operators.
 
 Primary Liability
 ^^^^^^^^^^^^^^^^^
 
-Almost all crimes require that a defendant have a defined **mens rea**
-at the time of an offense. **Mens rea** is a mental state like
+Almost all crimes require that a defendant have a defined *mens rea*
+at the time of an offense. *Mens rea* is a mental state like
 purposefulness, knowledge, recklessness or negligence. For example, to
 act with “purpose” is commonly understood as desiring as your “conscious
 object” the result of a crime. “Knowledge” is a less culpable mindset
@@ -101,7 +101,7 @@ the identity of the users involved, the ultimate destination of users’
 funds, or any other circumstances of Dash transactions. As such, it
 would be difficult for a prosecutor to demonstrate that a masternode
 operator who facilitated an illegal transaction merely by relaying the
-transaction would have a culpable **mens rea**.
+transaction would have a culpable *mens rea*.
 
 Secondary Liability
 ^^^^^^^^^^^^^^^^^^^
@@ -113,20 +113,20 @@ involvement in relaying Dash transactions, could be “aiding and
 abetting” or “conspiring” to commit a crime that might involve Dash.
 Generally speaking, aiding and abetting requires that the defendant (i)
 seek by his action to make the crime succeed and (ii) act with the same
-**mens rea** as required for the principal offense.
+*mens rea* as required for the principal offense.
 
-No matter the requisite **mens rea** of a particular principal offense
+No matter the requisite *mens rea* of a particular principal offense
 committed by a Dash user, it is unlikely that a mere masternode
 operator, without more, could be found to have “aided and abetted." To
 be sure, the masternodes do provide assistance in the principal offense
 – in that masternode action is required to process all Dash
 transactions. However, the masternodes would not have the requisite
-**mens rea** to satisfy the requirements of aiding and abetting
+*mens rea* to satisfy the requirements of aiding and abetting
 liability. Masternode operators have no readily available information
 about the purpose or consequences of users’ Dash transactions, or even
 the originating identity of the sender of funds. As such, so long as a
 sufficient diversity of non-criminal transactions occur on the Dash
-network, they would not harbor even the least culpable **mens rea**
+network, they would not harbor even the least culpable *mens rea*
 (i.e. negligence) with respect to a user relaying or receiving Dash in
 furtherance of a particular crime.
 
