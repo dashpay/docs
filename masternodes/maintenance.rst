@@ -452,26 +452,26 @@ transactions entered in any given block. Each unique transaction is also
 searchable by its txid. A number of block explorers are available for
 the Dash network.
 
-- `CryptoID <https://chainz.cryptoid.info/>`_ offers a `Dash blockchain
-  explorer <https://chainz.cryptoid.info/dash/>`_ and a `function
-  <https://chainz.cryptoid.info/dash/masternodes.dws>`_ to view and map
+- `CryptoID <https://chainz.cryptoid.info/>`__ offers a `Dash blockchain
+  explorer <https://chainz.cryptoid.info/dash/>`__ and a `function
+  <https://chainz.cryptoid.info/dash/masternodes.dws>`__ to view and map
   Dash masternodes.
 - `BitInfoCharts <https://bitinfocharts.com>`_ offers a `page
   <https://bitinfocharts.com/dash/>`_ of price statistics and
   information and a `blockchain explorer
-  <https://bitinfocharts.com/dash/explorer/>`_.
-- `CoinCheckup <https://coincheckup.com/coins/dash/charts>`_ offers a
+  <https://bitinfocharts.com/dash/explorer/>`__.
+- `CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ offers a
   range of statistics and data on most blockchains, including Dash.
-- `CoinPayments <https://www.coinpayments.net/>`_ offers a simple `Dash
+- `CoinPayments <https://www.coinpayments.net/>`__ offers a simple `Dash
   blockchain explorer
-  <http://explorer.coinpayments.net/index.php?chain=7>`_.
-- `Dash.org <https://www.dash.org/>`_ includes two blockchain explorers
-  at `explorer.dash.org <http://explorer.dash.org/>`_ and
-  `insight.dash.org <http://insight.dash.org/>`_.
-- `Trezor <https://trezor.io/>`_ operates a `blockchain explorer <https
-  ://dash-bitcore1.trezor.io/>`_ powered by a `Dash fork
-  <https://github.com/dashpay/insight-ui-dash>`_ of `insight
-  <https://insight.is/>`_, an advanced blockchain API tool
+  <http://explorer.coinpayments.net/index.php?chain=7>`__.
+- `Dash.org <https://www.dash.org/>`__ includes two blockchain explorers
+  at `explorer.dash.org <http://explorer.dash.org/>`__ and
+  `insight.dash.org <http://insight.dash.org/>`__.
+- `Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https
+  ://dash-bitcore1.trezor.io/>`__ powered by a `Dash fork
+  <https://github.com/dashpay/insight-ui-dash>`__ of `insight
+  <https://insight.is/>`__, an advanced blockchain API tool
 
 Dash Masternode Tool
 --------------------
