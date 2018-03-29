@@ -240,7 +240,7 @@ Dash ATM Compliance Program
 ---------------------------
 
 #. Please first read the `Quick Guide To Operating a Virtual Currency
-   Kiosk <https://github.com/dashpay/docs/blob/master/pdf
+   Kiosk <https://github.com/dashpay/docs/blob/master/binary
    /QuickGuidetoOperatingaVirtualCurrencyKioskDASH-watermark.pdf>`_.
    This guide will guide you through the initial steps of registering as
    an MSB. It is crucial you start here.
@@ -248,17 +248,17 @@ Dash ATM Compliance Program
 #. Listen to the Audio Guides on BSA AML and read the BSA AML Training
    Manual
 
-   - `BSA AML Compliance Training manual <https://github.com/dashpay/docs/raw/master/pdf/BSA%20AML%20Compliance%20Training_Sample_DASH.pptx>`_
+   - `BSA AML Compliance Training manual <https://github.com/dashpay/docs/raw/master/binary/BSA%20AML%20Compliance%20Training_Sample_DASH.pptx>`_
    - `AML 101 <https://soundcloud.com/dashpay/aml-101-dash>`_
    - `AML In Depth <https://soundcloud.com/dashpay/aml-indepth-dash>`_
 
 #. Get familiar with the documentation you will need by looking at the
    following templates
 
-   - `Surveillance and Monitoring <https://github.com/dashpay/docs/raw/master/pdf/SurveillanceandMonitoring_Sample_DASH.docx>`_
-   - `KYC CDD Policy <https://github.com/dashpay/docs/raw/master/pdf/KYC%20CDD%20Policy_Sample_DASH.docx>`_
-   - `AML Program <https://github.com/dashpay/docs/raw/master/pdf/AML%20Program_Sample_DASH.docx>`_
-   - `Risk Assessment <https://github.com/dashpay/docs/raw/master/pdf/Risk%20Assessment_Sample_DASH.docx>`_
+   - `Surveillance and Monitoring <https://github.com/dashpay/docs/raw/master/binary/SurveillanceandMonitoring_Sample_DASH.docx>`_
+   - `KYC CDD Policy <https://github.com/dashpay/docs/raw/master/binary/KYC%20CDD%20Policy_Sample_DASH.docx>`_
+   - `AML Program <https://github.com/dashpay/docs/raw/master/binary/AML%20Program_Sample_DASH.docx>`_
+   - `Risk Assessment <https://github.com/dashpay/docs/raw/master/binary/Risk%20Assessment_Sample_DASH.docx>`_
 
 #. Get familiar with some of the reports you may need to file as part of
    operations. In the Quick Guide in Step 1, we go through registration
@@ -267,8 +267,8 @@ Dash ATM Compliance Program
    report samples. Dash operators should be familiar with these as they
    may need to file them as part of operations. Sample reports:
 
-   - `Currency Transaction Report <https://github.com/dashpay/docs/raw/master/pdf/CTR_job%20aid_DASH.pdf>`_
-   - `Suspicious Activity Report <https://github.com/dashpay/docs/raw/master/pdf/SAR_job%20aid_DASH.pdf>`_
+   - `Currency Transaction Report <https://github.com/dashpay/docs/raw/master/binary/CTR_job%20aid_DASH.pdf>`_
+   - `Suspicious Activity Report <https://github.com/dashpay/docs/raw/master/binary/SAR_job%20aid_DASH.pdf>`_
 
 #. If you would now like to move forward with your project, we recommend
    getting in contact with `Cogent Law <http://www.cogentlaw.co>`_, our
