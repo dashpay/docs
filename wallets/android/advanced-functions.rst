@@ -1,10 +1,10 @@
 .. _dash-android-advanced-functions:
 
-Advanced functions
+Funções Avançadas.
 ==================
 
-Contact management
+Gerenciamento de contatos
 ------------------
 
-Your Android wallet allows you to manage frequently used contacts and
-addresses.
+A sua carteira do Android permite-lhe gerir contactos e
+endereços.
