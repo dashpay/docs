@@ -216,7 +216,7 @@ Dash Client
   creating a robust decentralized infrastructure.
 
 Dash Core Wallet 
-  The :ref:`Dash Core Wallet <dash_core_wallet> (known also as the QT
+  The :ref:`Dash Core Wallet <dash-core-wallet> (known also as the QT
   wallet) is the "official" Dash wallet that is compiled by the Dash
   Core Team and allows both PrivateSend and InstantSend. The DashCore
   wallet will download the entire blockchain and serve it over the
@@ -257,8 +257,8 @@ Desktop Wallet
   A wallet is a piece of software that stores your Dash. There are many
   different wallet options, but it is imperative to choose a secure one.
   We recommend any of the following: :ref:`Dash Core Wallet
-  <dash_core_wallet>` / :ref:`Dash Electrum Wallet
-  <dash_electrum_wallet>` / :ref:`Hardware Wallets <hardware_wallets>`
+  <dash-core-wallet>` / :ref:`Dash Electrum Wallet
+  <dash-electrum-wallet>` / :ref:`Hardware Wallets <hardware-wallets>`
 
 
 Difficulty
@@ -283,15 +283,15 @@ Digital Wallet
   many devices:
 
   - **Desktop Wallet** (:ref:`Dash Electrum Wallet
-    <dash_electrum_wallet>`, :ref:`Dash Core Wallet 
+    <dash-electrum-wallet>`, :ref:`Dash Core Wallet 
     <dash_core_wallet>`): Wallet programs that you install on a laptop 
     or desktop computer. You are solely responsible for protecting the 
     wallet file and the private keys it contains. Make backup copies of 
     your wallet files to ensure that you don't lose access to your 
     funds.
 
-  - **Mobile Wallet** (:ref:`Android <dash_android_wallet>`, :ref:`iOS
-    <dash_ios_wallet>`): These wallets can be downloaded through Google
+  - **Mobile Wallet** (:ref:`Android <dash-android-wallet>`, :ref:`iOS
+    <dash-ios-wallet>`): These wallets can be downloaded through Google
     Play or Apple (iTunes) App Stores. Mobile wallets allow you to use
     Dash on-the-go by scanning a QR code to send payment. Make backup
     copies of your mobile wallet files to ensure that you don't lose
@@ -299,8 +299,8 @@ Digital Wallet
     is advised that you don't store large amounts of funds on these
     wallets.
 
-  - **Online/Cloud/Web Wallet** (:ref:`Exodus <third_party_wallets>`,
-    :ref:`MyDashWallet <web_wallets>`): Third parties that will store 
+  - **Online/Cloud/Web Wallet** (:ref:`Exodus <third-party-wallets>`,
+    :ref:`MyDashWallet <web-wallets>`): Third parties that will store 
     your Dash on their servers for you or provide an interface to access 
     your Dash with you providing the keys, so that you can access your 
     Dash from any device connected to the internet. If their website is 
@@ -311,7 +311,7 @@ Digital Wallet
     strongly urge that you NEVER store large amounts of Dash in any 
     online wallet or cryptocurrency exchange.
 
-  - **Hardware Wallets** (:ref:`Trezor <hardware_wallets>`, KeepKey, 
+  - **Hardware Wallets** (:ref:`Trezor <hardware-wallets>`, KeepKey, 
     Ledger, Nano): A hardware wallet is a specialized, tamper-proof, 
     hardware device that stores your private keys. This device is able 
     to sign transactions with your private key without being connected 
@@ -321,7 +321,7 @@ Digital Wallet
     protected. This is widely regarded to be the safest form of storage 
     for your Dash.
 
-  - **Offline/Cold Storage** (:ref:`Paper wallet <paper_wallets>`): A
+  - **Offline/Cold Storage** (:ref:`Paper wallet <paper-wallets>`): A
     special wallet that is created offline and is never exposed to the
     internet. Accomplished by using software to generate a public and
     private key offline and then recording the generated keys. They keys 
@@ -343,7 +343,7 @@ Digital Signature
   address.
 
 Electrum Wallet
-  :ref:`Dash Electrum Wallet <dash_electrum_wallet>` is a lightweight
+  :ref:`Dash Electrum Wallet <dash-electrum-wallet>` is a lightweight
   wallet that does not require you to download or sync the entire
   blockchain, making the wallet lighter and faster. However, it is 
   missing certain features such as PrivateSend and InstantSend.
@@ -473,7 +473,7 @@ GPU
   mining algorithms which are most efficiently run on GPUs.
 
 Hardware Wallet
-  :ref:`Hardware wallets <hardware_wallets>` are among the safest type
+  :ref:`Hardware wallets <hardware-wallets>` are among the safest type
   of wallet for storing your Dash. Your private key is protected inside
   a piece of hardware, and is never exposed to the internet. You are
   still able to sign transactions as normal, making it both safe and
@@ -552,7 +552,7 @@ P2P
   transaction deal with each other through a single mediation point.
 
 Paper Wallet
-  :ref:`Paper wallets <paper_wallets>` are offline wallets, printed on
+  :ref:`Paper wallets <paper-wallets>` are offline wallets, printed on
   paper for safety. If properly secured and stored they are considered
   the safest way to store cryptocurrency.
 
