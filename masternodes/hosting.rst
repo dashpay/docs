@@ -29,10 +29,10 @@ https://masternode.me
 
 - Operated by: moocowmoo (Dash Core team member)
 - Services: Hosting
-- `Site <https://masternode.me>`_
-- `Email <moocowmoo@masternode.me>`_
-- `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`_
-- `Review <https://www.dashforcenews.com/masternode-trusted-masternode-shares-review/>`_
+- `Site <https://masternode.me>`__
+- `Email <moocowmoo@masternode.me>`__
+- `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`__
+- `Review <https://www.dashforcenews.com/masternode-trusted-masternode-shares-review/>`__
 
 Splawik's Hosting Service
 -------------------------
@@ -46,10 +46,10 @@ http://dashmasternode.io
 
 - Operated by: splawik21 (Dash Foundation member)
 - Services: Hosting
-- `Site <http://dashmasternode.io>`_
-- `Email <splawik21@protonmail.com>`_
-- `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`_
-- `Review <https://www.dashforcenews.com/meet-the-inventor-of-trusted-masternode-shares/>`_
+- `Site <http://dashmasternode.io>`__
+- `Email <splawik21@protonmail.com>`__
+- `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`__
+- `Review <https://www.dashforcenews.com/meet-the-inventor-of-trusted-masternode-shares/>`__
 
 Node40
 ------
