@@ -86,7 +86,7 @@ interest.
    :hidden:
    :caption: Network
 
-   governance/index
+   governance.rst
    masternodes/index
    mining/index
    legal.rst

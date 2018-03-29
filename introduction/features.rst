@@ -27,7 +27,7 @@ Specifications
    i.e. Dash development is self-funded by its own blockchain.
 
 
-.. _masternode_network:
+.. _masternode-network:
 
 Masternodes
 ===========
@@ -199,7 +199,7 @@ see
 `here <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/128319489/Understanding+Sporks>`_.
 
 
-.. _x11_hash_algorithm:
+.. _x11-hash-algorithm:
 
 X11 Hash Algorithm
 ==================
@@ -264,7 +264,7 @@ the future, but rather to provide a similar migratory path that Bitcoin
 had (CPUs, GPUs, ASICs).
 
 
-.. _dark_gravity_wave:
+.. _dark-gravity-wave:
 
 Dark Gravity Wave
 =================
@@ -290,7 +290,7 @@ exploit.
   floating-point accuracy through the use of integers.
 
 
-.. _emission_rate:
+.. _emission-rate:
 
 Emission Rate
 =============
@@ -351,19 +351,17 @@ Block reward allocation
 -----------------------
 
 Unlike Bitcoin, which allocates 100% of the block reward to miners, Dash
-splits the block reward between the
-`miner <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/1146945/Mining>`_,
-a deterministically selected
-`masternode <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/33947684/Understanding+masternodes>`_,
-and the decentralized `budget system <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8585246/Governance+and+Budget+System>`_.
-Dash features superblocks, which appear every 16616 blocks (approx.
-30.29 days) and release 10% of the cumulative budget over that 
-`budget cycle period <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/19169430/Using+Decentralized+Governance%3A+Proposals%2C+Voting%2C+and+Budgets>`_
-to the winning proposals in the budget system. To pay for superblocks,
-the block reward for normal blocks over the period is reduced by 10%.
-Normal block payments are split equally between miners and masternodes
-according to the `payment logic <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/8880184/Payment+Logic>`_,
-resulting in an coin reward allocation over a budget cycle as follows:
+splits the block reward between the :ref:`miner <mining>`, a
+deterministically selected :ref:`masternode <masternodes>`, and the
+decentralized :ref:`budget system <decentralized-governance>`. Dash
+features superblocks, which appear every 16616 blocks (approx. 30.29
+days) and release 10% of the cumulative budget over that  :ref:`budget
+cycle period <budget-cycles>` to the winning proposals in the budget
+system. To pay for superblocks, the block reward for normal blocks over
+the period is reduced by 10%. Normal block payments are split equally
+between miners and masternodes according to the :ref:`payment logic
+<payment-logic>`, resulting in an coin reward allocation over a budget
+cycle as follows:
 
 +-----+----------------------------------------+
 | 45% | Mining Reward                          |
@@ -380,10 +378,10 @@ tool <https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_.
 See `this site <https://stats.masternode.me>`_ for live data on current
 network statistics.
 
-.. _decentralized_governance:
+.. _decentralized-governance:
 
 Decentralized Governance
-=========================
+========================
 
 Decentralized Governance by Blockchain, or DGBB, is Dash's attempt to
 solve two important problems in cryptocurrency: governance and funding.
