@@ -135,3 +135,142 @@ requires i) an agreement to commit a crime, ii) knowledge of the
 unlawful purpose of the agreement, iii) intent to further the unlawful
 purpose, and iv) an act in furtherance of the conspiracy. None of these
 requirements are met by mere masternode operators.
+
+Exchange Liability
+------------------
+
+Exchanges have asked whether they can be held liable for criminal
+activity connected with Dash PrivateSend transactions.
+
+The Bank Secrecy Act (BSA) is the law that primarily governs exchanges
+in the United States. The BSA does not contain any prohibition on
+supporting Dash transactions. Indeed, the BSA take a flexible, risk-
+based approach to regulation and contemplate that financial institutions
+will enter into lines of business with new risks. This risk-based
+approach requires, at the outset, an independent risk assessment. By and
+large, the risks faced by exchanges who begin to support Dash will be
+similar to the risks associated with other virtual currencies. One
+significant difference concerns PrivateSend transactions, and we focus
+on this difference below:
+
+- PrivateSend transactions obfuscate the source and destination
+  addresses of funds, thus blockchain forensic techniques like
+  clustering analysis may be less effective. To the extent that
+  exchanges rely on such blockchain forensics tools for their
+  information collection, reporting and reporting obligations under the
+  BSA, they should consider alternative means.
+
+- PrivateSend transactions are used for legitimate purposes and are
+  often required to achieve personal or commercial privacy for sensitive
+  transactions. The use of PrivateSend transactions is not inherently
+  suspicious. Combination with other factors, including those identified
+  in the exchange’s own risk assessment, may raise PrivateSend
+  transactions to the level of suspicious activity.
+
+- Exchanges should consider revising their risk assessments and AML
+  policies to account for the unique characteristics of Dash. For
+  example, including blockchain addresses in Suspicious Activity Reports
+  (SARs) will be less descriptive and effective for investigations based
+  on such addresses. Exchanges might consider adding additional context
+  and explanation in SARs.
+
+- When conducting Enhanced Due Diligence on customers and transactions,
+  exchanges should account for the presence of PrivateSend transactions
+  and update their AML policies accordingly. For example, identifying
+  counterparties to a PrivateSend transaction may be more difficult than
+  identifying counterparties to transactions in other virtual currencies
+  when relying on blockchain forensics.
+
+ATM & Fiat Compliance
+=====================
+
+Introduction
+------------
+
+An aspect that required legal research is what are the compliance
+requirements to facilitate Dash-fiat exchange. This can be in the form
+of running ATM kiosks or using other mechanisms to personally offer Dash
+to fiat exchange services.
+
+For this purpose we hired **Cogent Law**, who have a lot of experience
+working in compliance for digital money services. They have put together
+a compliance program that will be shared with anyone launching a Dash
+service if they require it. This includes:
+
+- A finCEN BSA compliant written Principal MSB/KYC AML Program designed
+  to prevent the Principal MSB from being used to facilitate money
+  laundering and the financing of terrorist activities
+- A comprehensive risk based assessment by a third party compliance
+  consultant expert
+
+Our lawyer for this project is **Adella Toulon-Foerster** who has
+extensive experience in this field including:
+
+- Banking Secrecy Act (BSA), Anti-Money Laundering (AML), and Know Your
+  Customer (KYC) regulations
+- FinCEN requirements and guidance
+- Written and on-going AML compliance programs
+- State-by-state money transmitter laws and licensure requirements
+
+We now have full documentation of the program from Cogent Law, the
+package includes:
+
+- BSA AML Compliance training
+- KYC CDD Policy
+- AML Program
+- Risk Assessment
+- Surveillance and Monitoring Policy
+- Different Reports to file in different situations
+
+The documents have a format as if they were created for the fictional
+company “Initech” and then the interested Dash entrepreneur would have
+to replace it with their real corporation. We believe that some counsel
+would still be advisable for an investor launching a service but this
+will help provide a solid understanding of the requirements and get them
+80% of the way. This should also be highly educational and help the Dash
+investor be more at ease as it enlightens a typically obscure topic for
+most crypto enthusiasts.
+
+This program is directed at Dash investors that are interested in
+running a compliant service in regulated markets. If some users prefer
+to run services without a compliance program or don't need one, we
+completely respect that too.
+
+Dash ATM Compliance Program
+---------------------------
+
+#. Please first read the `Quick Guide To Operating a Virtual Currency
+   Kiosk <https://github.com/dashpay/docs/blob/master/pdf
+   /QuickGuidetoOperatingaVirtualCurrencyKioskDASH-watermark.pdf>`_.
+   This guide will guide you through the initial steps of registering as
+   an MSB. It is crucial you start here.
+
+#. Listen to the Audio Guides on BSA AML and read the BSA AML Training
+   Manual
+
+   - `BSA AML Compliance Training manual <https://github.com/dashpay/docs/raw/master/pdf/BSA%20AML%20Compliance%20Training_Sample_DASH.pptx>`_
+   - `AML 101 <https://soundcloud.com/dashpay/aml-101-dash>`_
+   - `AML In Depth <https://soundcloud.com/dashpay/aml-indepth-dash>`_
+
+#. Get familiar with the documentation you will need by looking at the
+   following templates
+
+   - `Surveillance and Monitoring <https://github.com/dashpay/docs/raw/master/pdf/SurveillanceandMonitoring_Sample_DASH.docx>`_
+   - `KYC CDD Policy <https://github.com/dashpay/docs/raw/master/pdf/KYC%20CDD%20Policy_Sample_DASH.docx>`_
+   - `AML Program <https://github.com/dashpay/docs/raw/master/pdf/AML%20Program_Sample_DASH.docx>`_
+   - `Risk Assessment <https://github.com/dashpay/docs/raw/master/pdf/Risk%20Assessment_Sample_DASH.docx>`_
+
+#. Get familiar with some of the reports you may need to file as part of
+   operations. In the Quick Guide in Step 1, we go through registration
+   on the E - BSA filing system. This step also provides example CTR
+   (Currency Transaction Report) and SAR (Suspicious Activity Report)
+   report samples. Dash operators should be familiar with these as they
+   may need to file them as part of operations. Sample reports:
+
+   - `Currency Transaction Report <https://github.com/dashpay/docs/raw/master/pdf/CTR_job%20aid_DASH.pdf>`_
+   - `Suspicious Activity Report <https://github.com/dashpay/docs/raw/master/pdf/SAR_job%20aid_DASH.pdf>`_
+
+#. If you would now like to move forward with your project, we recommend
+   getting in contact with `Cogent Law <http://www.cogentlaw.co>`_, our
+   recommended legal counsel. Preferential rates are available for Dash
+   users. Please email: atoulon@cogentlaw.co
