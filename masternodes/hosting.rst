@@ -1,8 +1,8 @@
-.. _masternode_hosting:
+.. _masternode-hosting:
 
-===========================
+================
 Hosting Services
-===========================
+================
 
 Several Dash community members offer masternode hosting services. This
 service can be realized securely without the customer ever giving up
@@ -200,4 +200,4 @@ regular payments to your masternode address. You can monitor your
 masternode's acceptance by the network by entering the collateral
 address to search the masternode list at https://www.dashninja.pl. For
 information on how to withdraw masternode payments without affecting
-operation of the masternode, see :ref:`here <masternode_withdrawals>`.
+operation of the masternode, see :ref:`here <masternode-withdrawals>`.

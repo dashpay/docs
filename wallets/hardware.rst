@@ -1,4 +1,4 @@
-.. _dash_hardware_wallet:
+.. _dash-hardware-wallet:
 
 Introduction
 ============
@@ -8,7 +8,7 @@ device while still allowing you to make simple transactions through a
 web interface. Three major manufacturers of hardware wallets currently
 exist, with Dash supported on all of them.
 
-.. _hardware_trezor:
+.. _hardware-trezor:
 
 Trezor
 ======
@@ -50,9 +50,10 @@ wallet to use it with. Trezor supports the following Dash wallets:
 - `Trezor Wallet <https://wallet.trezor.io>`_ (`documentation
   <https://doc.satoshilabs.com/trezor-apps/trezorwallet.html>`_)
 - `Dash Electrum Wallet <https://electrum.dash.org>`_
-  (:ref:`documentation <dash_electrum_wallet>`)
+  (:ref:`documentation <dash-electrum-wallet>`)
 - `Dash Masternode Tool <https://github.com/Bertrand256/dash-masternode-
-  tool>`_ (:ref:`documentation <dash_masternode_tool>`)
+  tool>`_ (`documentation <https://github.com/Bertrand256/dash-
+  masternode-tool/blob/master/README.md>`_)
 
 This documentation describes how to get started using the official
 Trezor web wallet at `https://wallet.trezor.io

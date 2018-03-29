@@ -4,6 +4,8 @@
 Advanced topics
 ===============
 
+.. _compiling-dash:
+
 Compiling Dash Core
 ===================
 

@@ -15,7 +15,7 @@ different practical methods of keeping these keys safe in wallets, while
 still remaining useful for day-to-day needs.
 
 
-.. _dash_core_wallet:
+.. _dash-core-wallet:
 
 Dash Core Wallet
 ================
@@ -58,7 +58,7 @@ Available documentation:
    dashcore/advanced.rst
 
 
-.. _dash_electrum_wallet:
+.. _dash-electrum-wallet:
 
 Dash Electrum Wallet
 ====================
@@ -89,7 +89,7 @@ available at the `official documentation site
    electrum/advanced.rst
 
 
-.. _dash_android_wallet:
+.. _dash-android-wallet:
 
 Dash Android Wallet
 ===================
@@ -117,7 +117,7 @@ paper wallets and more.
 *Screenshots showing the Dash Wallet balance, send and receive screens*
 
 
-.. _dash_ios_wallet:
+.. _dash-ios-wallet:
 
 Dash iOS Wallet
 ===============
@@ -142,7 +142,7 @@ to Bitcoin addresses through native integration with ShapeShift.
     :width: 160 px
 
 
-.. _dash_copay_wallet:
+.. _dash-copay-wallet:
 
 Dash Copay Wallet
 =================
@@ -162,7 +162,7 @@ all times.
    copay/index.rst
 
 
-.. _paper_wallets:
+.. _paper-wallets:
 
 Dash Paper Wallet
 =================
@@ -178,7 +178,7 @@ term secure storage.
    paper.rst
 
 
-.. _hardware_wallets:
+.. _hardware-wallets:
 
 Hardware Wallets
 ================
@@ -209,7 +209,7 @@ Dash, although some other enthusiast projects may also be available.
    hardware.rst
 
 
-.. _third_party_wallets:
+.. _third-party-wallets:
 
 3rd Party Wallets
 =================
@@ -218,7 +218,7 @@ These wallets have been developed by external developers to support
 Dash.
 
 
-.. _web_wallets:
+.. _web-wallets:
 
 Web Wallets
 ===========
