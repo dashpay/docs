@@ -116,7 +116,7 @@ Core, then try to open it again. This time you will be able to click
 .. figure:: img/macos/112414910.png
    :height: 250px
 
-    Permitting macOS to run Dash Core
+   Permitting macOS to run Dash Core
 
 .. figure:: img/macos/112414905.png
    :width: 280px

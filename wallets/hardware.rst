@@ -48,16 +48,16 @@ Once you have bought your Trezor from https://shop.trezor.io or an
 wallet to use it with. Trezor supports the following Dash wallets:
 
 - `Trezor Wallet <https://wallet.trezor.io>`_ (`documentation
-  <https://doc.satoshilabs.com/trezor-apps/trezorwallet.html>`_)
-- `Dash Electrum Wallet <https://electrum.dash.org>`_
+  <https://doc.satoshilabs.com/trezor-apps/trezorwallet.html>`__)
+- `Dash Electrum Wallet <https://electrum.dash.org>`__
   (:ref:`documentation <dash-electrum-wallet>`)
 - `Dash Masternode Tool <https://github.com/Bertrand256/dash-masternode-
   tool>`_ (`documentation <https://github.com/Bertrand256/dash-
-  masternode-tool/blob/master/README.md>`_)
+  masternode-tool/blob/master/README.md>`__)
 
 This documentation describes how to get started using the official
 Trezor web wallet at `https://wallet.trezor.io
-<https://wallet.trezor.io>`_. Always confirm the URL is correct and SSL
+<https://wallet.trezor.io>`__. Always confirm the URL is correct and SSL
 encryption is enabled when working with the Trezor Wallet. Follow these
 steps when setting up your Trezor for the first time:
 

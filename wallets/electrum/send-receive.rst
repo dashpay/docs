@@ -47,7 +47,7 @@ Receiving
 =========
 
 You can view your receiving addresses by clicking the **Receive** tab.
-Double-click the **Receiving address, then copy it to the clipboard by
+Double-click the **Receiving address**, then copy it to the clipboard by
 clicking the Copy to clipboard icon. If you intend to use the address
 repeatedly, you can also enter a description click Save to store the
 address in the Requests list. Clicking an address in the list will
