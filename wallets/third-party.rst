@@ -1,6 +1,6 @@
 .. _dash-third-party:
 
-============
+
 Introduction
 ============
 
