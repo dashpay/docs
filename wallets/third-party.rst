@@ -31,8 +31,8 @@ codes and sign transactions using your fingerprint ID or a simple PIN
 code. ShapeShift is also integrated to facilitate exchange between
 different cryptocurrencies.
 
-Download
---------
+Installation
+------------
 
 .. image:: img/app-store.png
    :width: 200px
@@ -60,8 +60,10 @@ here:
 - `How do I receive money into my account? <https://support.edgesecure.co/support/solutions/articles/8000058749>`_
 - `What is ShapeShift and how does it work? <https://support.edgesecure.co/support/solutions/articles/8000060525>`_
 
-.. image:: img/edge-wallet.png
+.. figure:: img/edge-wallet.png
    :width: 400px
+
+   Edge Welcome, Receive Dash and Balance screens
 
 Exodus
 ======
@@ -94,5 +96,88 @@ http://support.exodus.io and a few quick links are also collected here:
 - `How do I install Exodus? <https://support.exodus.io/article/36-how-do-i-install-exodus>`_
 - `How do I get started with Exodus? <https://support.exodus.io/article/37-how-do-i-get-started-with-exodus>`_
 
-.. image:: img/exodus-wallet.png
+.. figure:: img/exodus-wallet.png
    :width: 400px
+
+   Exodus wallet Portfolio screen
+
+
+Jaxx
+====
+
+https://jaxx.io
+
+.. image:: img/jaxx.png
+   :width: 100px
+   :align: right
+   :target: https://jaxx.io
+
+Jaxx supports multiple currencies in one wallet, including Dash. It is
+available for almost all platforms including Android, iOS, macOS,
+Windows, Linux and also as a Chrome extension. Jaxx is open source
+software.
+
+Installation
+------------
+
+All Jaxx releases are available from https://jaxx.io/downloads.html -
+simply download and install the appropriate package for your system.
+
+Documentation
+-------------
+
+Jaxx offers detailed documentation of all functions at
+https://decentral.zendesk.com and a few quick links are also collected
+here:
+
+- `Getting started <https://decentral.zendesk.com/hc/en-us/sections/204038798-Getting-Started>`_
+- `How do I send currency? <https://decentral.zendesk.com/hc/en-us/articles/217873878-How-do-I-send-currency->`_
+- `How do I receive currency? <https://decentral.zendesk.com/hc/en-us/articles/218364217-How-do-I-receive-currency->`_
+
+.. figure:: img/jaxx-wallet.png
+   :width: 400px
+
+   Jaxx wallet running on various devices
+
+Coinomi
+=======
+
+https://coinomi.com
+
+.. image:: img/coinomi.png
+   :width: 100px
+   :align: right
+   :target: https://coinomi.com
+
+Coinomi is an open-source multi-currency mobile wallet available for iOS
+and Android. Your private keys never leave your device, and strong
+wallet encryption guarantees that your funds are always under your
+control only. Instant exchange is available directly in the wallet
+through ShapeShift and Changelly integrations.
+
+Download
+--------
+
+.. image:: img/app-store.png
+   :width: 200px
+   :target: https://itunes.apple.com/us/app/coinomi-wallet/id1333588809
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.coinomi.wallet
+
+Edge is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=com.coinomi.wallet>`_ and
+the `Apple App Store for iOS <https://itunes.apple.com/us/app/coinomi-
+wallet/id1333588809>`_.
+
+Documentation
+-------------
+
+Coinomi offers detailed documentation of all functions at
+https://coinomi.freshdesk.com 
+
+.. figure:: img/jaxx-wallet.png
+   :width: 400px
+
+   Jaxx wallet running on various devices
