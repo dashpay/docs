@@ -211,12 +211,16 @@ Dash, although some other enthusiast projects may also be available.
 
 .. _third-party-wallets:
 
-3rd Party Wallets
-=================
+Third Party Wallets
+===================
 
 These wallets have been developed by external developers to support
 Dash.
 
+.. toctree::
+   :maxdepth: 1
+
+   third-party.rst
 
 .. _web-wallets:
 
