@@ -16,6 +16,13 @@ vendor for support.
 Edge
 ====
 
+https://edgesecure.co
+
+.. image:: img/edge.png
+   :width: 100px
+   :align: right
+   :target: https://edgesecure.co
+
 Edge is a secure multi-currency wallet for iOS and Android. It offers a
 unique login system to store your encrypted HD seed on the cloud while
 still performing all sensitive operations requiring a private key on
@@ -54,4 +61,38 @@ here:
 - `What is ShapeShift and how does it work? <https://support.edgesecure.co/support/solutions/articles/8000060525>`_
 
 .. image:: img/edge-wallet.png
+   :width: 400px
+
+Exodus
+======
+
+http://www.exodus.io
+
+.. image:: img/exodus.png
+   :width: 100px
+   :align: right
+   :target: http://www.exodus.io
+
+The Exodus wallet features an engaging visual design and can
+simultaneously store multiple currencies. It is available for Windows,
+Mac and Linux. It is also fully integrated with Shapeshift to offer
+exchange between the different currencies.
+
+Installation
+------------
+
+All Exodus releases are available from https://www.exodus.io/releases -
+simply download and install the appropriate package for your system.
+
+Documentation
+-------------
+
+Exodus offers detailed documentation of all functions at
+http://support.exodus.io and a few quick links are also collected here:
+
+- `What is Exodus? <https://support.exodus.io/article/30-what-is-exodus>`_
+- `How do I install Exodus? <https://support.exodus.io/article/36-how-do-i-install-exodus>`_
+- `How do I get started with Exodus? <https://support.exodus.io/article/37-how-do-i-get-started-with-exodus>`_
+
+.. image:: img/exodus-wallet.png
    :width: 400px
