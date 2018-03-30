@@ -79,7 +79,9 @@ News
 - **Cointelegraph:** https://cointelegraph.com/tags/dash
 - **巴比特 (8BTC):** http://www.8btc.com/dash
 - **比特时代 (BTC38):** http://www.btc38.com/altcoin/dash
+- **Dash Embassy D-A-CH:** http://www.dash-embassy.org/
 - **Dash News Germany:** https://dash-news.de
+- **Dash Vietnam:** https://dashvn.blogspot.com
 - **Dash Français:** https://dashfrancais.com
 - **Dash Nation DeCentral:** http://www.dashnation.com
 
