@@ -765,7 +765,7 @@ CoinSwitch
 
 BlockTrades
   .. image:: exchanges/blocktrades.png
-     :width: 200px
+     :width: 100px
      :align: right
      :target: https://blocktrades.us/
 

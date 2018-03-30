@@ -35,7 +35,7 @@ Installation
 ------------
 
 .. image:: img/app-store.png
-   :width: 200px
+   :width: 180px
    :target: https://itunes.apple.com/us/app/edge-bitcoin-wallet/id1344400091
 
 .. image:: img/google-play-badge.png
@@ -159,14 +159,14 @@ Download
 --------
 
 .. image:: img/app-store.png
-   :width: 200px
+   :width: 180px
    :target: https://itunes.apple.com/us/app/coinomi-wallet/id1333588809
 
 .. image:: img/google-play-badge.png
    :width: 200px
    :target: https://play.google.com/store/apps/details?id=com.coinomi.wallet
 
-Edge is available from the `Google Play Store for Android
+Coinomi is available from the `Google Play Store for Android
 <https://play.google.com/store/apps/details?id=com.coinomi.wallet>`_ and
 the `Apple App Store for iOS <https://itunes.apple.com/us/app/coinomi-
 wallet/id1333588809>`_.
@@ -177,7 +177,7 @@ Documentation
 Coinomi offers detailed documentation of all functions at
 https://coinomi.freshdesk.com 
 
-.. figure:: img/jaxx-wallet.png
-   :width: 400px
+.. figure:: img/coinomi-wallet.png
+   :width: 300px
 
-   Jaxx wallet running on various devices
+   Coinomi wallet running on Android
