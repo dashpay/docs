@@ -763,6 +763,17 @@ CoinSwitch
   exchanges and perform instant exchanges at those rates without
   necessarily creating an account.
 
+BlockTrades
+  .. image:: exchanges/blocktrades.png
+     :width: 200px
+     :align: right
+     :target: https://blocktrades.us/
+
+  https://blocktrades.us/
+
+  BlockTrades is a decentralized exchange designed to facilitate free
+  movement between the Steemit, BitShares, Bitcoin and Dash blockchains.
+
 MorphToken
   .. image:: exchanges/morphtoken.png
      :width: 200px
