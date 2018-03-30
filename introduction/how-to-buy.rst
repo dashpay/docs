@@ -773,6 +773,8 @@ BlockTrades
 
   BlockTrades is a decentralized exchange designed to facilitate free
   movement between the Steemit, BitShares, Bitcoin and Dash blockchains.
+  The system is designed to find the best possible instant conversion
+  rate between any two given cryptocurrencies.
 
 MorphToken
   .. image:: exchanges/morphtoken.png
