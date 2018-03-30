@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Dash 0.1\n"
+"Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 10:25+0000\n"
+"POT-Creation-Date: 2018-03-29 10:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../wallets/dashcore/advanced.rst:5
 msgid "Advanced topics"
@@ -29,10 +29,10 @@ msgstr ""
 msgid ""
 "While Dash offers stable binary builds on the `website "
 "<https://www.dash.org/wallets>`_, on `Github "
-"<https://github.com/dashpay/dash/releases>`_ and through development "
-"builds using `Bamboo <https://bamboo.dash.org>`_, many users will also be"
-" interested in building Dash binaries for themselves. The following "
-"guides are available:"
+"<https://github.com/dashpay/dash/releases>`_ and through development builds "
+"using `Bamboo <https://bamboo.dash.org>`_, many users will also be "
+"interested in building Dash binaries for themselves. The following guides "
+"are available:"
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:19
@@ -55,11 +55,10 @@ msgstr ""
 msgid ""
 "This guide describes how to build Dash Core wallet without the GUI from "
 "source under Ubuntu Linux. It is intended to serve as a simple guide for "
-"general compilation of non-deterministic binary files from the stable "
-"source code. A standard installation of Ubuntu Linux 16.04 LTS running on"
-" a VPS will be used as an environment for the build. We assume you are "
-"running as root. First add the necessary extra repository and update all "
-"packages::"
+"general compilation of non-deterministic binary files from the stable source"
+" code. A standard installation of Ubuntu Linux 16.04 LTS running on a VPS "
+"will be used as an environment for the build. We assume you are running as "
+"root. First add the necessary extra repository and update all packages::"
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:40
@@ -88,19 +87,19 @@ msgstr ""
 msgid ""
 "Gitian is the deterministic build process that is used to build the Dash "
 "Core executables. It provides a way to be reasonably sure that the "
-"executables are really built from the source on GitHub. It also makes "
-"sure that the same, tested dependencies are used and statically built "
-"into the executable. Multiple developers build the source code by "
-"following a specific descriptor (\"recipe\"), cryptographically sign the "
-"result, and upload the resulting signature. These results are compared "
-"and only if they match, the build is accepted and uploaded to dash.org."
+"executables are really built from the source on GitHub. It also makes sure "
+"that the same, tested dependencies are used and statically built into the "
+"executable. Multiple developers build the source code by following a "
+"specific descriptor (\"recipe\"), cryptographically sign the result, and "
+"upload the resulting signature. These results are compared and only if they "
+"match, the build is accepted and uploaded to dash.org."
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:74
 msgid ""
-"More independent Gitian builders are needed, which is why this guide "
-"exists. It is preferred you follow these steps yourself instead of using "
-"someone else's VM image to avoid 'contaminating' the build."
+"More independent Gitian builders are needed, which is why this guide exists."
+" It is preferred you follow these steps yourself instead of using someone "
+"else's VM image to avoid 'contaminating' the build."
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:79
@@ -111,38 +110,37 @@ msgstr ""
 msgid ""
 "Gitian builds are known to be working on Debian 8.x. If your machine is "
 "already running this sytem, you can perform Gitian builds on the actual "
-"hardware. Alternatively, you can install it in a virtual machine. Follow "
-"the guide for :ref:`setting up a VPS for masternodes <vps-setup>`, "
-"selecting a Debian 8.x image during the installation process and naming "
-"your non-root user ``gitianuser``. Selecting a VPS with two processors "
-"will also greatly speed up the build process. If you cannot login to your"
-" VPS over SSH as root, access the terminal and issue the following "
-"command::"
+"hardware. Alternatively, you can install it in a virtual machine. Follow the"
+" guide for :ref:`setting up a VPS for masternodes <vps-setup>`, selecting a "
+"Debian 8.x image during the installation process and naming your non-root "
+"user ``gitianuser``. Selecting a VPS with two processors will also greatly "
+"speed up the build process. If you cannot login to your VPS over SSH as "
+"root, access the terminal and issue the following command::"
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:94
 msgid ""
-"Log in to your new environment by SSH as root. Set up the dependencies "
-"first by pasting the following in the terminal::"
+"Log in to your new environment by SSH as root. Set up the dependencies first"
+" by pasting the following in the terminal::"
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:100
 msgid ""
-"Then set up LXC and the rest with the following, which is a complex "
-"jumble of settings and workarounds::"
+"Then set up LXC and the rest with the following, which is a complex jumble "
+"of settings and workarounds::"
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:121
 msgid ""
-"At the end Debian is rebooted to make sure that the changes take effect. "
-"Re-login as the user gitianuser that was created during installation. The"
-" rest of the steps in this guide will be performed as that user."
+"At the end Debian is rebooted to make sure that the changes take effect. Re-"
+"login as the user gitianuser that was created during installation. The rest "
+"of the steps in this guide will be performed as that user."
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:125
 msgid ""
-"There is no ``python-vm-builder`` package in Debian, so we need to "
-"install it from source ourselves::"
+"There is no ``python-vm-builder`` package in Debian, so we need to install "
+"it from source ourselves::"
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:137
@@ -159,8 +157,8 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:147
 msgid ""
-"And paste the following script in place (this will be automatic if/when "
-"the script is pulled into Dash Core)::"
+"And paste the following script in place (this will be automatic if/when the "
+"script is pulled into Dash Core)::"
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:152
@@ -169,8 +167,8 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:156
 msgid ""
-"Set up the environment, replacing the name and version with your name and"
-" target version::"
+"Set up the environment, replacing the name and version with your name and "
+"target version::"
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:161
@@ -181,17 +179,9 @@ msgstr ""
 msgid ""
 "Your system will build all dependencies and Dash Core from scratch for "
 "Windows and Linux platforms (macOS if the dependencies were installed "
-"according to these instructions). This can take some time. When complete,"
-" you will see the SHA256 checksums, which you can compare against the "
-"hashes available on the Dash website `here "
-"<https://www.dash.org/wallets>`_. In this way, you can be sure that you "
-"are running original and untampered builds of the code as it exists on "
-"Github."
+"according to these instructions). This can take some time. When complete, "
+"you will see the SHA256 checksums, which you can compare against the hashes "
+"available on the Dash website `here <https://www.dash.org/wallets>`_. In "
+"this way, you can be sure that you are running original and untampered "
+"builds of the code as it exists on Github."
 msgstr ""
-
-#~ msgid "Advanced Functions"
-#~ msgstr ""
-
-#~ msgid "Placeholder"
-#~ msgstr ""
-
