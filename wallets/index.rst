@@ -157,7 +157,7 @@ addresses are stored securely on your device and under your control at
 all times.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    copay/getting-started.rst
    copay/shared-wallets.rst

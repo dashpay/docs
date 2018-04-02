@@ -59,6 +59,9 @@ who views the files.
 .. |image7| image:: img/setup-ready.png
    :width: 200px
 
+*Creating a new wallet and generating the recovery phrase in Dash Copay
+wallet*
+
 If you want to restore an existing Dash Copay wallet, simply tap
 **Restore from backup** and enter the 12 word recovery phrase. File/text
 backups are also supported.
@@ -81,6 +84,8 @@ transfer.
    :width: 200px
 .. |image9| image:: img/receive-done.png
    :width: 200px
+
+*Receiving dash and viewing your balance in Dash Copay wallet*
 
 Sending
 =======
@@ -112,6 +117,8 @@ confirmation screen.
 .. |image15| image:: img/send-done.png
    :width: 200px
 
+*Sending Dash from Dash Copay wallet*
+
 Viewing transactions and balances
 =================================
 
@@ -132,3 +139,6 @@ wallet only.
    :width: 200px
 .. |image18| image:: img/details.png
    :width: 200px
+
+*Home screen, transaction details and wallet details in Dash Copay
+wallet*

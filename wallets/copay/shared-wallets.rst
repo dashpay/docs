@@ -41,13 +41,40 @@ transaction. Tap the **Create m-of-n wallet** button to create the
 wallet. The wallet will appear with your other wallets, listed as
 **Incomplete** until the copayers have joined.
 
-|image0| |image1| |image2|
+|image0| |image1|
+|image2| |image3|
 
-.. |image0| image:: img/recent.png
+.. |image0| image:: img/shared-add.png
    :width: 200px
-.. |image1| image:: img/balance.png
+.. |image1| image:: img/shared-create.png
    :width: 200px
-.. |image2| image:: img/details.png
+.. |image2| image:: img/shared-settings.png
    :width: 200px
-.. |image2| image:: img/details.png
+.. |image3| image:: img/shared-incomplete.png
    :width: 200px
+
+*Creating a 2-of-3 shared wallet in Dash Copay*
+
+Tap the incomplete shared wallet when you are ready to add users. A QR
+code will be displayed. Have your copayers scan the code or share it to
+them by email or instant message by tapping the **Share invitation**
+button. Once everyone has scanned the code and entered their name, the
+wallet is ready for use. Simply tap the wallet to display addresses for
+receiving funds, but note that the addresses begin with 7 instead of X
+to indicated they are multisig addresses. It is possible to receive Dash
+to a shared wallet in exactly the same way as a normal wallet. Only
+sending Dash requires participation from the copayers.
+
+|image4| |image5| |image6|
+
+.. |image0| image:: img/shared-qr.png
+   :width: 200px
+.. |image1| image:: img/shared-join.png
+   :width: 200px
+.. |image2| image:: img/shared-join.png
+   :width: 200px
+
+*Adding copayers to a 2-of-3 shared wallet in Dash Copay*
+
+Sending from a Shared Wallet
+============================

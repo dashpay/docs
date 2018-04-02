@@ -181,3 +181,36 @@ https://coinomi.freshdesk.com
    :width: 300px
 
    Coinomi wallet running on Android
+
+Cryptonator
+===========
+
+https://www.cryptonator.com
+
+.. image:: img/cryptonator.png
+   :width: 100px
+   :align: right
+   :target: https://www.cryptonator.com
+
+Cryptonator offers a web/mobile wallet which can be accessed using a
+simple username/password combination. It supports multiple currencies
+including Dash, and offers instant exchange between the various
+currencies. It also support Euro-denominated SEPA payments directly from
+within the account.
+
+Download
+--------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.aev.cryptonator
+
+Cryptonator is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=com.aev.cryptonator>`_
+and online at https://www.cryptonator.com
+
+Documentation
+-------------
+
+Coinomi offers detailed documentation of all functions at
+https://www.cryptonator.com/hc
