@@ -119,7 +119,7 @@ Services listed here have not been evaluated or endorsed by the Dash
 developers and no guarantees are made as to the accuracy of this
 information. Please exercise discretion when using third-party services.
 If you’d like to be added to this list please reach out to
-coingun@masternode.io
+leon.white@dash.org
 
 In addition to joining a pool, you will also need to create a Dash
 address to receive your payout. To do this in Dash Core wallet, see
