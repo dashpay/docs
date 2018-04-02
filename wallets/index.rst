@@ -292,7 +292,6 @@ documentation is intended to help these users restore access to their
 funds.
 
 .. toctree::
-   :hidden:
    :maxdepth: 2
 
    recovery.rst
