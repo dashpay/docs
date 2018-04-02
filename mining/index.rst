@@ -20,11 +20,19 @@ instruction enhancements related to cryptography such as AES or AVX can
 provide a decent boost, GPUs offer a significant performance increase
 due to their multiple pipelines for predictable calculations of the type
 involved with mining. Finally, ASICs can perform a single operation
-only. A number of X11 ASICs are now available on the market, which are
-quickly making CPU and GPU mining uneconomic due to the increased
+only. A number of X11 ASICs are now available on the market, which have
+quickly made CPU and GPU mining uneconomic due to the increased
 difficulty of hashing arising from the rapidly increasing hash rate. The
 result is a currency which is more secure against brute force attacks on
 the Dash blockchain.
+
+The profitability of mining is determined by the hashrate of your mining
+device, the currently network difficulty and the costs of your hardware
+and electricity. The following links provide up to date information:
+
+- `Hashrate <https://bitinfocharts.com/comparison/dash-hashrate.html>`_
+- `Mining difficulty <https://bitinfocharts.com/comparison/dash-difficulty.html>`_
+- `Profitability calculation tool <https://www.coinwarz.com/calculators/dash-mining-calculator>`_
 
 Masternodes vs. Mining
 ======================
@@ -531,7 +539,7 @@ The following X11 ASIC miners are available on the market today, click the produ
 +==========================================================================================================+==============+========+========+=================+========+
 | `Baikal Giant X10 <https://www.baikalminer.com/product09.php>`_                                          | 10 GH/s ±5%  | 800 W  | 3.7 kg | 312 x 125 x 130 | $1,188 |
 +----------------------------------------------------------------------------------------------------------+--------------+--------+--------+-----------------+--------+
-| `Bitmain Antminer D3 <https://shop.bitmain.com/productDetail.htm?pid=00020170817162128100hiH7jINR0692>`_ | 17 GH/s ±5%  | 1200 W | 5.5 kg | 320 x 130 x 190 | $1,450 |
+| `Bitmain Antminer D3 <https://shop.bitmain.com/productDetail.htm?pid=00020170817162128100hiH7jINR0692>`_ | 17 GH/s ±5%  | 1200 W | 5.5 kg | 320 x 130 x 190 | $318   |
 +----------------------------------------------------------------------------------------------------------+--------------+--------+--------+-----------------+--------+
 | `iBelink DM11G <https://ibelink.co/product/ibelink-dm11g/>`_                                             | 11 GH/s ±5%  | 810 W  | 22 kg  | 490 x 350 x 180 | $4,888 |
 +----------------------------------------------------------------------------------------------------------+--------------+--------+--------+-----------------+--------+
