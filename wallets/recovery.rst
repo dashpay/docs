@@ -295,3 +295,17 @@ key named **Private Key WIF** and import this into your wallet.
    :width: 300px
 
 *Decrypting a BIP38 encrypted key to WIF for import in Dash Core wallet*
+
+Forgotten Passwords
+===================
+
+In most cases, if you selected a strong password and have forgotten or
+lost it, there is practically no hope of recovery. If you can recall
+some details of the password, particularly its length or sequences of
+characters that may be included, then brute force password cracking
+techniques may be practical. Several services exist to do this, or you
+can attempt it yourself. Because Dash Core is based on Bitcoin Core, most approaches to apply brute force to crack a Bitcoin wallet will also work for Dash wallets.
+
+- `Wallet Recovery Services <https://walletrecoveryservices.com>`_
+- `How To Recover Your Bitcoin Wallet Password <http://www.gobitgo.com/articles/1005/How-To-Recover-Your-Bitcoin-Wallet-Password>`_
+- `BTCRecover <https://github.com/gurnec/btcrecover>`_
