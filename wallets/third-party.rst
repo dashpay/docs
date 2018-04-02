@@ -214,3 +214,8 @@ Documentation
 
 Coinomi offers detailed documentation of all functions at
 https://www.cryptonator.com/hc
+
+.. figure:: img/cryptonator-wallet.png
+   :width: 400px
+
+   Cryptonator wallet running on Android
