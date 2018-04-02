@@ -111,3 +111,24 @@ confirmation screen.
    :width: 200px
 .. |image15| image:: img/send-done.png
    :width: 200px
+
+Viewing transactions and balances
+=================================
+
+Your recent transactions appear on the **Home** screen. You can tap any
+transaction to view more details or enter a **Memo** to help you
+remember the purpose of the transaction. Tap **View on blockchain** to
+open the Insight blockchain explorer to view full transaction details.
+All the wallets you have created and their respective balances appear
+below the recent transactions on the **Home** screen. You can tap any
+wallet to view the balance and transaction history associated with that
+wallet only.
+
+|image16| |image17| |image18|
+
+.. |image16| image:: img/recent.png
+   :width: 200px
+.. |image17| image:: img/balance.png
+   :width: 200px
+.. |image18| image:: img/details.png
+   :width: 200px

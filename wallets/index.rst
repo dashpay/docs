@@ -159,7 +159,8 @@ all times.
 .. toctree::
    :maxdepth: 2
 
-   copay/index.rst
+   copay/getting-started.rst
+   copay/shared-wallets.rst
 
 
 .. _paper-wallets:
