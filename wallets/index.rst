@@ -281,7 +281,6 @@ control of your private keys.
    My Dash Wallet
 
 .. toctree::
-   :includehidden:
    :hidden:
    :maxdepth: 1
 
