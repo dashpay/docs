@@ -300,11 +300,15 @@ Forgotten Passwords
 ===================
 
 In most cases, if you selected a strong password and have forgotten or
-lost it, there is practically no hope of recovery. If you can recall
-some details of the password, particularly its length or sequences of
-characters that may be included, then brute force password cracking
-techniques may be practical. Several services exist to do this, or you
-can attempt it yourself. Because Dash Core is based on Bitcoin Core, most approaches to apply brute force to crack a Bitcoin wallet will also work for Dash wallets.
+lost it, there is practically no hope of recovery. The encryption used
+by the Dash wallets is extremely strong by design, and a well-chosen
+password should defeat most brute force cracking attempts. If you can
+recall some details of the password, particularly its length or
+sequences of characters that may be included, then brute force password
+cracking techniques may be worth attempting. Several services exist to
+do this, or you can attempt it yourself. Because Dash Core is based on
+Bitcoin Core, most approaches to apply brute force to crack a Bitcoin
+wallet will also work for Dash wallets.
 
 - `Wallet Recovery Services <https://walletrecoveryservices.com>`_
 - `How To Recover Your Bitcoin Wallet Password <http://www.gobitgo.com/articles/1005/How-To-Recover-Your-Bitcoin-Wallet-Password>`_
