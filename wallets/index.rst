@@ -279,3 +279,10 @@ control of your private keys.
    :width: 400 px
 
    My Dash Wallet
+
+.. toctree::
+   :includehidden:
+   :hidden:
+   :maxdepth: 1
+
+   recovery.rst
