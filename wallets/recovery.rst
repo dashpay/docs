@@ -216,3 +216,30 @@ wallet** again.
    :width: 200px
 
 *Restoring a 12-word recovery phrase using Dash wallet for iOS*
+
+12-word phrase on Dash Electrum
+-------------------------------
+
+Ensure you are using the latest version of Dash Electrum according to
+the installation instructions :ref:`here <electrum-installation>`. Dash
+Electrum supports multiple simultaneous wallets, so you can safely
+restore to a new wallet file without losing your old wallet. Click
+**File > New/Restore** and enter a file name to store your new wallet.
+Then select **I already have a seed** and enter your 12/13-word recovery
+phrase. Enter a new password for your wallet and click **Next** to
+recover your addresses from the recovery phrase.
+
+.. image:: img/recovery-electrum1.png
+   :width: 300px
+.. image:: img/recovery-electrum2.png
+   :width: 300px
+.. image:: img/recovery-electrum3.png
+   :width: 300px
+.. image:: img/recovery-electrum4.png
+   :width: 300px
+.. image:: img/recovery-electrum5.png
+   :width: 300px
+.. image:: img/recovery-electrum6.png
+   :width: 300px
+
+*Restoring a 12-word recovery phrase using Dash Electrum*
