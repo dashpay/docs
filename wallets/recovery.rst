@@ -1,6 +1,5 @@
 .. _wallet-recovery:
 
-============
 Introduction
 ============
 
@@ -78,17 +77,18 @@ to create the DashCore folder. Then close Dash Core and copy the
 *wallet.dat* file you want to restore to the DashCore folder in the
 location specified below, replacing or renaming the existing file.
 
-+----------+--------------------------------+-----------------------------------------------------------------------------------+
-| Platform | Path to data folder            | How to navigate                                                                   |
-+==========+================================+===================================================================================+
-| Linux    | ~/                             | Go to your home folder and press Ctrl+H to show hidden files, then open .dashcore |
-+----------+--------------------------------+-----------------------------------------------------------------------------------+
-| macOS    | ~/Library/Application Support/ | Press Shift + Control + G, type ~/Library/Application Support, then open DashCore |
-+----------+--------------------------------+-----------------------------------------------------------------------------------+
-| Windows  | %APPDATA%                      | Press Windows Key+R and type %APPDATA%, then open DashCore                        |
-+----------+--------------------------------+-----------------------------------------------------------------------------------+
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
+| Platform | Path to data folder            | How to navigate                                                                               |
++==========+================================+===============================================================================================+
+| Linux    | ~/                             | Go to your home folder and press **Ctrl+H** to show hidden files, then open ``.dashcore``     |
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
+| macOS    | ~/Library/Application Support/ | Press **Shift + Control + G**, type ``~/Library/Application Support``, then open ``DashCore`` |
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
+| Windows  | %APPDATA%                      | Press **Windows Key + R** and type ``%APPDATA%``, then open ``DashCore``                      |
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
 
-If your existing version of Dash Core is older than v0.12.1.x, you may need to rename your data folder from ``Dash`` to ``DashCore``.
+If your existing version of Dash Core is older than v0.12.1.x, you may
+need to rename your data folder from ``Dash`` to ``DashCore``.
 
 To repair a broken installation, navigate to the DashCore folder and
 delete all *.log* and *.dat* files except *wallet.dat*. The following
@@ -105,5 +105,59 @@ files can be safely deleted:
 - *netfulfilled.dat*
 - *peers.dat*
 
+Leave ``.conf`` files and the folders (such as ``backups``, ``blocks``,
+``chainstate``, etc.) intact, since they will help you get started
+faster by providing a copy of the blockchain and your settings.
+
+Now open Dash Core and wait for blockchain synchronization to complete.
+Your wallet will be restored/upgraded and all balances should be
+displayed. You should ensure you have the correct password by trying to
+unlock your wallet from **Settings > Unlock Wallet** to make sure you
+can actually create transactions using your balances. If you have any
+problems with your balance not appearing, try to force a rescan of the
+blockchain by going to **Tools > Wallet Repair** and selecting **Rescan
+blockchain files**. **Rebuild index** may also help. Dash Core will
+restart and perform a full scan of the blockchain.
+
+.. image:: img/recovery-rescan.png
+   :width: 400px
+.. figure:: img/recovery-rescanning.png
+   :width: 300px
+
+   Forcing Dash Core to rescan the blockchain
+
+At this stage, recovery is complete and you should make another backup
+using **File > Backup Wallet** or following the instructions :ref:`here
+<dashcore-backup>`. If you have any further problems, try asking on the
+`forum <https://www.dash.org/forum/topic/daemon-and-qt-wallet-
+support.64/>`_, `Reddit <https://www.reddit.com/r/dashpay/>`_ or the
+#dash- support-desk channel at `Dash Nation Discord
+<http://dashchat.org/>`_.
+
+Dash Android
+============
+
+Similar to Dash Core wallet, Dash Wallet for Android can back up your
+wallet to a file. To restore this wallet on another device, simply copy
+the backup file to the ``/Downloads`` folder of your device using either
+a computer connected by USB or a file manager app on the device. Ensure
+your Dash wallet is fully updated in the Play Store, then open Dash. If
+you have an existing balance, either make another backup or transfer it
+to an external address, because restoring a wallet will replace your
+existing wallet!
+
+Click the menu button in the top left corner, select **Safety >
+Restore** wallet and select the appropriate file from the list. Enter
+your password and click **Restore**. This may take some time, and your
+balance will be displayed when complete.
+
+.. image:: img/recovery-android1.png
+   :width: 200px
+.. image:: img/recovery-android2.png
+   :width: 200px
+.. figure:: img/recovery-android3.png
+   :width: 200px
+
+   Restoring a file backup using Dash Wallet for Android
 
 
