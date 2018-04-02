@@ -280,8 +280,19 @@ control of your private keys.
 
    My Dash Wallet
 
+Wallet Recovery
+===============
+
+Long-time users of cryptocurrency sometimes find old wallet files on USB
+drives or cloud storage that they have forgotten about. Others may have
+a backup, but can't remember the software they used to create it, or
+have forgotten the password. Other users may have an old version of Dash
+Core that no longer works because the network has upgraded. This
+documentation is intended to help these users restore access to their
+funds.
+
 .. toctree::
    :hidden:
-   :maxdepth: 1
+   :maxdepth: 2
 
    recovery.rst
