@@ -45,6 +45,10 @@ to restore your wallet in order of probability.
 Once you have determined your backup format, follow the links to view
 the restore guide for that format.
 
+
+File Backups
+============
+
 .. _dashcore-restore:
 
 Dash Core
@@ -135,7 +139,7 @@ support.64/>`_, `Reddit <https://www.reddit.com/r/dashpay/>`_ or the
 <http://dashchat.org/>`_.
 
 Dash Android
-============
+------------
 
 Similar to Dash Core wallet, Dash Wallet for Android can back up your
 wallet to a file. To restore this wallet on another device, simply copy
@@ -155,9 +159,60 @@ balance will be displayed when complete.
    :width: 200px
 .. image:: img/recovery-android2.png
    :width: 200px
-.. figure:: img/recovery-android3.png
+.. image:: img/recovery-android3.png
    :width: 200px
 
-   Restoring a file backup using Dash Wallet for Android
+*Restoring a file backup using Dash Wallet for Android*
 
+Recovery Phrases
+================
 
+If you have a 12-word phrase and feel certain your backup was made on an
+iOS or Android mobile device, follow these instructions.
+
+12-word phrase on Android
+-------------------------
+
+Ensure your Dash wallet is fully updated in the Play Store, then open
+Dash. If you have an existing balance, either make another backup or
+transfer it to an external address, because restoring a wallet will
+replace your existing wallet! Click the menu button in the top left
+corner, select **Safety > Restore from recovery phrase** and enter your
+12-word phrase.
+
+.. image:: img/recovery-android1.png
+   :width: 200px
+.. image:: img/recovery-android4.png
+   :width: 200px
+.. image:: img/recovery-android5.png
+   :width: 200px
+
+*Restoring a 12-word recovery phrase using Dash wallet for Android*
+
+12-word phrase on iOS
+---------------------
+
+Ensure your Dash wallet is fully updated in the App Store, then open
+Dash. If this is the first time you are opening the app, you can enter
+your recovery phrase directly by selecting **Recover wallet** on the
+start screen. If you have an existing balance, either make another
+backup or transfer it to an external address, because restoring a wallet
+will replace your existing wallet!
+
+Click the menu button in the top left corner, select **Settings >
+Start/recover another wallet**. Enter your current wallet recovery
+phrase, then the app will reset and you will see the option to **Recover
+wallet** again.
+
+.. image:: img/recovery-ios1.png
+   :width: 200px
+.. image:: img/recovery-ios2.png
+   :width: 200px
+.. image:: img/recovery-ios3.png
+   :width: 200px
+.. image:: img/recovery-ios4.png
+   :width: 200px
+.. image:: img/recovery-ios5.png
+   :width: 200px
+
+*Restoring a 12-word recovery phrase using Dash wallet for iOS*
