@@ -57,6 +57,10 @@ Available documentation:
    dashcore/cmd-rpc.rst
    dashcore/advanced.rst
 
+.. figure:: dashcore/img/106329009.png
+   :width: 400 px
+
+   Dash Core Wallet
 
 .. _dash-electrum-wallet:
 
@@ -88,6 +92,10 @@ available at the `official documentation site
    electrum/faq.rst
    electrum/advanced.rst
 
+.. figure:: electrum/img/electrum.png
+   :width: 400 px
+
+   Dash Electrum Wallet
 
 .. _dash-android-wallet:
 
@@ -114,7 +122,7 @@ paper wallets and more.
 .. image:: android/img/android2.png
     :width: 160 px
 
-*Screenshots showing the Dash Wallet balance, send and receive screens*
+*Dash Android Wallet*
 
 
 .. _dash-ios-wallet:
@@ -141,6 +149,7 @@ to Bitcoin addresses through native integration with ShapeShift.
 .. image:: ios/img/ios2.jpg
     :width: 160 px
 
+*Dash iOS Wallet*
 
 .. _dash-copay-wallet:
 
@@ -162,6 +171,12 @@ all times.
    copay/getting-started.rst
    copay/shared-wallets.rst
 
+.. image:: copay/img/setup-splash.png
+    :width: 160 px
+.. image:: copay/img/details.png
+    :width: 160 px
+
+*Dash Copay Wallet*
 
 .. _paper-wallets:
 
@@ -177,6 +192,11 @@ term secure storage.
    :maxdepth: 1
 
    paper.rst
+
+.. figure:: img/paper-addresses.png
+   :width: 400 px
+
+   Dash Paper Wallet
 
 
 .. _hardware-wallets:
@@ -209,6 +229,10 @@ Dash, although some other enthusiast projects may also be available.
 
    hardware.rst
 
+.. figure:: img/trezor-balance.png
+   :width: 400 px
+
+   Trezor Web Wallet
 
 .. _third-party-wallets:
 
@@ -216,12 +240,20 @@ Third Party Wallets
 ===================
 
 These wallets have been developed by external developers to support
-Dash.
+Dash. Many third party wallets support multiple different
+cryptocurrencies at the same time, or integrate instant cryptocurrency
+exchanges.
 
 .. toctree::
    :maxdepth: 1
 
    third-party.rst
+
+.. figure:: img/edge-wallet.png
+   :width: 400 px
+
+   Edge Wallet
+
 
 .. _web-wallets:
 
@@ -242,3 +274,8 @@ control of your private keys.
    :maxdepth: 1
 
    web.rst
+
+.. figure:: img/mydashwallet-opened.png
+   :width: 400 px
+
+   My Dash Wallet
