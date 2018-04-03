@@ -52,7 +52,6 @@ interest.
    introduction/about
    introduction/features
    introduction/how-to-buy
-   introduction/glossary
    introduction/information
 
 .. _user-docs:
