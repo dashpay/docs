@@ -280,3 +280,14 @@ control of your private keys.
 
    My Dash Wallet
 
+Wallet Guides
+=============
+
+Documentation in this section describes common tasks and questions
+relating to all wallets.
+
+.. toctree::
+   :maxdepth: 1
+
+   recovery.rst
+   signing.rst

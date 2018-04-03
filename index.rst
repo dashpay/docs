@@ -63,8 +63,6 @@ interest.
    :caption: Users
 
    wallets/index
-   wallets/index/recovery.rst
-   wallets/index/signing.rst
    debit-cards
 
 .. _merchant-docs:
