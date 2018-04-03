@@ -181,11 +181,12 @@ iOS
 
 - **Dash Wallet:** https://itunes.apple.com/app/id1206647026
 - **Edge Wallet:** https://itunes.apple.com/app/id1344400091
+- **Jaxx Wallet:** https://itunes.apple.com/app/id1084514516
 - **Dashy:** https://itunes.apple.com/app/id1033268631
 - **CoinCap:** https://itunes.apple.com/app/id1074052280
 - **Lawnmower:** https://itunes.apple.com/app/id965079226
 - **Blockfolio:** https://itunes.apple.com/app/id1095564685
-- **Coinomi:** https://ios-beta.coinomi.com/?token=HDEN57f3b8HTUTFANRawrJt4dyHot2Up
+- **Coinomi:** https://itunes.apple.com/app/id1333588809
 
 
 Android
@@ -195,6 +196,7 @@ Android
 - **Edge Wallet:** https://play.google.com/store/apps/details?id=co.edgesecure.app
 - **Jaxx Wallet:** https://play.google.com/store/apps/details?id=com.kryptokit.jaxx
 - **Coinomi Wallet:** https://play.google.com/store/apps/details?id=com.coinomi.wallet
+- **Cryptonator Wallet:** https://play.google.com/store/apps/details?id=com.aev.cryptonator
 - **DashCentral:** https://play.google.com/store/apps/details?id=net.paregov.android.dashcentral
 - **Blockfolio:** https://play.google.com/store/apps/details?id=com.blockfolio.blockfolio
 - **Lawnmower:** https://play.google.com/store/apps/details?id=io.lawnmower.mobile

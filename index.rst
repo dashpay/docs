@@ -63,7 +63,7 @@ interest.
    :caption: Users
 
    wallets/index
-   debit-cards
+   earning-spending
 
 .. _merchant-docs:
 
@@ -88,4 +88,5 @@ interest.
    governance.rst
    masternodes/index
    mining/index
+   developers/index
    legal.rst

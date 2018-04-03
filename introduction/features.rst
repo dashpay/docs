@@ -201,8 +201,7 @@ members of the core development team signing a network message together
 with their respective private keys. Should problems arise, the code can
 be deactivated in the same manner, without the need for a network-wide
 rollback or client update. For technical details on individual sporks,
-see
-`here <https://dashpay.atlassian.net/wiki/spaces/DOC/pages/128319489/Understanding+Sporks>`_.
+see :ref:`here <understanding-sporks>`.
 
 
 .. _x11-hash-algorithm:
@@ -437,6 +436,10 @@ Triggers, and Watchdogs. Class inheritance has been utilized to extend
 this generic object into a "Proposal" object to supplant the current 
 Dash budget system.
 
+.. figure:: img/dashcore-sporks.png
+   :width: 500px
+
+   Diagram highlighting the relationship between Dash Sentinel and Core
 
 .. epigraph::
 
