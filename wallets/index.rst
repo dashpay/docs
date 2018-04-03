@@ -280,10 +280,3 @@ control of your private keys.
 
    My Dash Wallet
 
-
-.. toctree::
-   :hidden:
-   :maxdepth: 2
-
-   recovery.rst
-   signing.rst
