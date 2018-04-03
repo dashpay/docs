@@ -1,7 +1,8 @@
 .. _wallet-recovery:
 
-Introduction
-============
+===============
+Wallet Recovery
+===============
 
 Long-time users of cryptocurrency sometimes find old wallet files on USB
 drives or cloud storage that they have forgotten about. Others may have
