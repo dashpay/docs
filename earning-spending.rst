@@ -85,10 +85,10 @@ Wirex
   Dash and integration of Dash funding on Wirex cards.
 
 SpectroCoin
-  ..image:: img/spectrocoin.png
-  :width: 200px
-  :align: right
-  :target: https://spectrocoin.com
+  .. image:: img/spectrocoin.png
+     :width: 200px
+     :align: right
+     :target: https://spectrocoin.com
 
   https://spectrocoin.com
 
@@ -97,10 +97,10 @@ SpectroCoin
   fiat currencies.
 
 UQUID
-  ..image:: img/uquid.png
-  :width: 200px
-  :align: right
-  :target: https://uquid.com
+  .. image:: img/uquid.png
+     :width: 200px
+     :align: right
+     :target: https://uquid.com
 
   https://uquid.com
 
@@ -109,10 +109,10 @@ UQUID
   mail.
 
 Bitwala
-  ..image:: img/bitwala.png
-  :width: 200px
-  :align: right
-  :target: https://www.bitwala.com
+  .. image:: img/bitwala.png
+     :width: 200px
+     :align: right
+     :target: https://www.bitwala.com
 
   https://www.bitwala.com
 
@@ -120,10 +120,10 @@ Bitwala
   card service in Europe, and has supported Dash in the past.
 
 TenX
-  ..image:: img/tenx.png
-  :width: 100px
-  :align: right
-  :target: https://www.tenx.tech
+  .. image:: img/tenx.png
+     :width: 100px
+     :align: right
+     :target: https://www.tenx.tech
 
   https://www.tenx.tech
 
