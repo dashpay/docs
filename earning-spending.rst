@@ -26,6 +26,10 @@ Merchant Directory
 Dash can be spent in hundreds of stores and services both online and in
 physical locations.
 
+.. image:: img/discover-dash.png
+   :width: 100%
+   :target: https://discoverdash.com
+
 **Discover Dash** lists businesses around the world accepting Dash,
 sorted by category. It's easy to add your business to the list, and also
 features a short introduction for new Dash users. The site is maintained
