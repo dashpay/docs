@@ -7,49 +7,21 @@ PrivateSend and InstantSend
 PrivateSend
 ===========
 
-This document describes how to use Dash Core to send Dash anonymously.
-PrivateSend, released as DarkSend in RC4 of the DarkCoin client and
-rebranded to PrivateSend in May 2016, is a trustless method of running a
-sequence of transactions (known as "mixing") such that an external
-observer is unable to determine the source of funding when a PrivateSend
-transaction is created. This gives your Dash the same anonymous
-properties as cash withdrawn from an ATM, for example. The mixing and
-denomination process is seamless, automatic, and requires no
+This documentation describes how to use Dash Core to send Dash
+anonymously. PrivateSend, released as DarkSend in RC4 of the DarkCoin
+client and rebranded to PrivateSend in May 2016, is a trustless method
+of running a sequence of transactions (known as "mixing") such that an
+external observer is unable to determine the source of funding when a
+PrivateSend transaction is created. This gives your Dash the same
+anonymous properties as cash withdrawn from an ATM, for example. The
+mixing and denomination process is seamless, automatic, and requires no
 intervention on the part of the user. The current implementation of
 PrivateSend in the Dash Core wallet allows any amount of Dash to be
-mixed for later use in PrivateSend transactions.
+mixed for later use in PrivateSend transactions. As of April 2018,
+PrivateSend is not currently available in other Dash wallets.
 
-**Here's how it works**
-
-- Every 10 blocks, user clients network-wide will send any unmixed,
-  traceable DASH in their possession through an anonymization phase. In
-  this phase, masternodes are used in chained succession to mix the
-  coins they receive from the network and break them down into
-  homogenous denominations.
-
-- After being processed by a minimum of 2 masternodes, the coins are
-  either sent to the next masternode in the chain or back to the user’s
-  wallet at randomly generated change addresses.
-
-- Depending on the desired depth of security and privacy, users may
-  select between 2 and 8 “hops” to successive masternodes before their
-  coins are sent back to the client. Hops are made every 10 blocks, so
-  anonymization at a depth of 2 hops will take 2*2.5=5.0 minutes, 3 hops
-  3*2.5=7.5 minutes, and so on. The desired mixing depth can be selected
-  in the client GUI.
-
-- At the end of the anonymization phase, the user’s coins are returned
-  to their client at randomly generated change addresses. When the user
-  wishes to make a transaction, the client forwards the intended amount
-  from these anonymous change addresses directly to the intended
-  receiver’s address. There is no direct involvement of of masternodes
-  in the final person-to-person transaction.
-
-- Proof of payment will work as it always has: a user can see the send
-  transaction with the receiver’s address in their own wallet, and the
-  blockchain will show that the receiver’s address received an input in
-  the corresponding amount.
-
+You can read more about PrivateSend theory and processes :ref:`here
+<privatesend>`.
 
 Configuration
 -------------
@@ -227,5 +199,53 @@ InstantSend
 Introduction
 ------------
 
+This documentation describes how to use InstantSend to instantly send
+funds to any other Dash user around the world. Dash InstantSend is
+supported by many wallets and vendors, including (but not limited to)
+the following:
+
+- Dash Core Wallet
+- Dash Android Wallet
+- Dash iOS Wallet
+- Dash Copay Wallet
+- My Dash Wallet
+- Kraken
+- Bitrefill
+- and many more...
+
+You can read more about InstantSend theory and processes :ref:`here
+<instantsend>`.
+
 Paying with InstantSend
 -----------------------
+
+InstantSend functions by setting a flag on the transaction, causing
+deterministic selection of a quorum of 10 masternodes for each input
+spent in an InstantSend transaction. The masternodes examine the input,
+and if a majority determines it has at least six confirmations, they
+then accept the transaction. The input is then locked until the
+transaction has been confirmed in six mined blocks, at which point the
+output can be used as an input in another InstantSend transaction. This
+differs from inputs used in normal transactions, which can be spent
+after just one confirmation regardless of whether the Dash was received
+using InstantSend or not. A higher fee will be charged for InstantSend
+transactions, according to the :ref:`fee schedule <fees>`. Note that the
+receiving wallet must also be aware of InstantSend in order to be able
+to immediately continue with the transaction or display an apporiate
+notification that the transaction should be considered locked. If the
+receiving wallet is not aware of InstantSend, it will simply appear as a
+normal transaction and you will need to wait for standard block
+confirmations.
+
+To pay with InstantSend, simply check the relevant checkbox in your app.
+The following screenshots indicate where this setting can be found in
+the Dash Core, iOS and Android wallets.
+
+.. image:: img/instantsend-dashcore.png
+   :width: 400px
+.. image:: img/instantsend-android.png
+   :width: 200px
+.. image:: img/instantsend-ios.png
+   :width: 200px
+
+*Dash Wallets showing InstantSend option*

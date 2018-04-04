@@ -109,10 +109,15 @@ The PrivateSend process works like this:
    process a number of times with each denomination. Each time the
    process is completed, it's called a "round". Each round of
    PrivateSend makes it exponentially more difficult to determine where
-   your funds originated.
+   your funds originated. The user may choose between 2-8 rounds of 
+   mixing.
 #. This mixing process happens in the background without any
    intervention on your part. When you wish to make a transaction, your
    funds will already be anonymized. No additional waiting is required.
+
+Note that InstantSend transactions will be rounded up so that all
+transaction inputs are spent. Any excess Dash will be spent on the
+transaction fee.
 
 **IMPORTANT:** Your wallet only contains 1000 of these "change
 addresses". Every time a mixing event happens, one of your addresses is
