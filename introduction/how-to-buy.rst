@@ -237,6 +237,17 @@ Exmo
   USD and UAH (Ukrainian Hryvnia). DASH trading pairs exist for BTC, USD
   and RUB.
 
+BitBay
+  .. image:: exchanges/bitbay.png
+     :width: 200px
+     :align: right
+     :target: https://bitbay.net
+
+  https://bitbay.net
+
+  BitBay is based in Poland and accepts fiat deposits in EUR, USD and
+  PLN. DASH can be traded against all three fiat currencies and BTC.
+
 Livecoin
   .. image:: exchanges/livecoin.png
      :width: 200px
