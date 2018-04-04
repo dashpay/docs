@@ -243,6 +243,7 @@ the Dash Core, iOS and Android wallets.
 
 .. image:: ../img/instantsend-dashcore.png
    :width: 400px
+
 .. image:: ../img/instantsend-android.png
    :width: 200px
 .. image:: ../img/instantsend-ios.png
