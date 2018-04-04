@@ -102,17 +102,18 @@ reasons such as ping latency, uptime, fee, users, etc.:
 - https://dash.suprnova.cc
 - https://www.nicehash.com
 - https://www.coinotron.com
-- https://dash.miningpoolhub.com/
+- https://dash.miningpoolhub.com
+- https://www.f2pool.com
 - https://www2.coinmine.pl/dash
-- http://dash.cybtc.info/
-- https://aikapool.com/dash/
-- http://zpool.ca/
-- http://cryptopool.io/
-- https://www.ipominer.com/
+- http://dash.cybtc.info
+- https://aikapool.com/dash
+- http://zpool.ca
+- http://cryptopool.io
+- https://www.ipominer.com
 - https://www.antpool.com
-- http://partner.avalon-life.com/
+- http://partner.avalon-life.com
 - https://www.genesis-mining.com
-- https://pool.viabtc.com/pool/dash/state/
+- https://pool.viabtc.com/pool/dash/state
 
 DISCLAIMER: This list is provided for informational purposes only.
 Services listed here have not been evaluated or endorsed by the Dash
