@@ -22,9 +22,7 @@ Specifications
 -  Instant transactions using InstantSend
 -  Two-tier network using masternodes to form the second tier
 -  Decentralized Governance By Blockchain allows masternode owners to
-   vote on budget proposals and decisions that affect Dash. Budget
-   proposals fund Dash development and come directly from block rewards,
-   i.e. Dash development is self-funded by its own blockchain.
+   vote on budget proposals and decisions that affect Dash
 
 
 .. _masternode-network:
@@ -35,11 +33,12 @@ Masternodes
 In addition to traditional Proof of Work (PoW) rewards for mining Dash,
 users are also rewarded for running and maintaining special servers
 called masternodes. Thanks to this innovative two tier network, Dash can
-offer innovative features in a trustless and decentralized way. 
-Masternodes are used to power PrivateSend, InstantSend, and the 
-governance and treasury system. Users are rewarded for running 
-masternodes; 45% of the block reward is allocated to pay the masternode 
-network.
+offer innovative features in a trustless and decentralized way.
+Masternodes are used to power PrivateSend, InstantSend, and the
+governance and treasury system. Users are rewarded for running
+masternodes; 45% of the block reward is allocated to pay the masternode
+network. You can view practical guides on all topics relating to
+masternodes :ref:`here <masternodes>`.
 
 Masternodes enable the following services:
 
@@ -68,11 +67,11 @@ and rewards, masternodes earn approximately a 8% return on 1000 Dash
 (which means 6.97 Dash or USD1360 in July 2017) for the year of 2017.
 This `tool <https://stats.masternode.me/>`_ shows a live calculation of
 masternode earnings. These rewards decrease by 7% each year, but the
-rising value of Dash should offset these reductions. As a matter of
-fact, masternodes were receiving 140 Dash per month at the beginning of
-2016, but this was actually less money than today: USD600 per month.
-There is also the possibility for masternodes to earn money from fees in
-the future.
+rising value of Dash may offset these reductions. As a matter of fact,
+masternodes were receiving 140 Dash per month at the beginning of 2016,
+but this was actually less money than today: USD600 per month. There is
+also the possibility for masternodes to earn money from fees in the
+future.
 
 
 .. _privatesend:
@@ -154,12 +153,12 @@ revolutionize cryptocurrency by shortening the delay in confirmation of
 transactions from as long as an hour (with Bitcoin) to as little as a 
 few seconds.
 
-You can view a practical guide to use InstantSend 
-:ref:`here <dashcore-privatesend-instantsend>`.
-
-InstantSend was introduced in a whitepaper called `Transaction Locking 
-and Masternode Consensus: A Mechanism for Mitigating Double Spending
-Attacks <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_.
+You can view a practical guide to use InstantSend  :ref:`here <dashcore-
+privatesend-instantsend>`. InstantSend was introduced in a whitepaper
+called `Transaction Locking  and Masternode Consensus: A Mechanism for
+Mitigating Double Spending Attacks <https://github.com/dashpay/docs/raw/
+master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Mastern
+ode%20Consensus.pdf>`_.
 
 **How Dash 'InstantSend' Protects Merchants from Double Spends**,
 Dash Detailed by Amanda B. Johnson, 16 September 2016
@@ -181,8 +180,9 @@ update in June 2014, the Dash development team created a mechanism by
 which updated code is released to the network, but not immediately made
 active ("enforced"). This innovation allows for far smoother transitions
 than in the traditional hard fork paradigm, as well as the collection of
-test data in the live network environment. This process of multi-phased 
-forking was originally to be called "soft forking" but the community affectionately dubbed it "the spork" and the name stuck.
+test data in the live network environment. This process of multi-phased
+forking was originally to be called "soft forking" but the community
+affectionately dubbed it "the spork" and the name stuck.
 
 New features or versions of Dash undergo extensive testing on testnet
 before they are released to the main network. When a new feature or
@@ -327,24 +327,25 @@ fee-based economy than Bitcoin.
 Total coin emission
 -------------------
 
-`Bitcoin's total coin emission <https://docs.google.com/spreadsheets/d/12tR_9WrY0Hj4AQLoJYj9EDBzfA38XIVLQSOOOVePNm0/pubhtml?gid=0&single=true>`_
+`Bitcoin's total coin emission <https://docs.google.com/spreadsheets/d/1
+2tR_9WrY0Hj4AQLoJYj9EDBzfA38XIVLQSOOOVePNm0/pubhtml?gid=0&single=true>`_
 can be calculated as the sum of a geometric series, with the total
 emission approaching (but never reaching) 21,000,000 BTC. This will
 continue until 2140, but the mining reward reduces so quickly that 99%
 of all bitcoin will be in circulation by 2036, and 99.9% by 2048.
 
-`Dash's total coin
-emission <https://docs.google.com/spreadsheets/d/1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`_
-is also the sum of a geometric series, but the ultimate total coin
-emission is uncertain because it cannot be known how much of the 10%
-block reward reserved for budget proposals will actually be allocated,
-since this depends on future voting behavior. Dash will continue to emit
-coins for approximately 192 years before a full year of mining creates
-less than 1 DASH. After 2209 only 14 more dash will be created. The last
-dash will take 231 years to be generated, starting in 2246 and ending
-when emission completely stops in 2477. Based on these numbers, a
-maximum and minimum possible coin supply in the year 2254 can be
-calculated to be between:
+`Dash's total coin emission <https://docs.google.com/spreadsheets/d
+/1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`_ is
+also the sum of a geometric series, but the ultimate total coin emission
+is uncertain because it cannot be known how much of the 10% block reward
+reserved for budget proposals will actually be allocated, since this
+depends on future voting behavior. Dash will continue to emit coins for
+approximately 192 years before a full year of mining creates less than 1
+DASH. After 2209 only 14 more DASH will be created. The last DASH will
+take 231 years to be generated, starting in 2246 and ending when
+emission completely stops in 2477. Based on these numbers, a maximum and
+minimum possible coin supply in the year 2254 can be calculated to be
+between:
 
 +-----------------+-----------------------------------+
 | 17,742,696 DASH | Assuming zero treasury allocation |
@@ -377,11 +378,12 @@ cycle as follows:
 +-----+----------------------------------------+
 
 This documentaiton is based on calculations and posts by moocowmoo.
-Please see `this reddit post <https://www.reddit.com/r/dashpay/comments/7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`_
-for more details, or run your own `emission calculations using this
-tool <https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_.
-See `this site <https://stats.masternode.me>`_ for live data on current
-network statistics.
+Please see `this reddit post <https://www.reddit.com/r/dashpay/comments/
+7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`_ for more details, or
+run your own `emission calculations using this tool
+<https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_. See `this
+site <https://stats.masternode.me>`_ for live data on current network
+statistics.
 
 .. _decentralized-governance:
 
@@ -436,7 +438,7 @@ Triggers, and Watchdogs. Class inheritance has been utilized to extend
 this generic object into a "Proposal" object to supplant the current 
 Dash budget system.
 
-.. figure:: img/dashcore-sporks.png
+.. figure:: img/sentinel.png
    :width: 500px
 
    Diagram highlighting the relationship between Dash Sentinel and Core
