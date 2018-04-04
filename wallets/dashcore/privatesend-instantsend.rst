@@ -245,7 +245,8 @@ the Dash Core, iOS and Android wallets.
    :width: 200px
 .. image:: ../img/instantsend-ios.png
    :width: 200px
-.. image:: ../img/instantsend-dashcore.png
+
+.. figure:: ../img/instantsend-dashcore.png
    :width: 400px
 
-*Dash Wallets showing InstantSend option*
+   Dash Wallets showing InstantSend option
