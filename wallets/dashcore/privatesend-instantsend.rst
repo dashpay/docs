@@ -241,11 +241,11 @@ To pay with InstantSend, simply check the relevant checkbox in your app.
 The following screenshots indicate where this setting can be found in
 the Dash Core, iOS and Android wallets.
 
-.. image:: img/instantsend-dashcore.png
+.. image:: ../img/instantsend-dashcore.png
    :width: 400px
-.. image:: img/instantsend-android.png
+.. image:: ../img/instantsend-android.png
    :width: 200px
-.. image:: img/instantsend-ios.png
+.. image:: ../img/instantsend-ios.png
    :width: 200px
 
 *Dash Wallets showing InstantSend option*
