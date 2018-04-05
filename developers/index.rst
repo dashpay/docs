@@ -178,10 +178,120 @@ Github.
 Translating
 ===========
 
-Translations of all Dash software are managed courtesty of `Transifex
-<https://www.transifex.com/dash>`_. Guides for writing style,
-terminology and the reST documentation language will be updated here
-soon.
+Translations of all Dash products are managed courtesty of Transifex,
+which offers detailed documentation of all functions and features.
+Within Transifex, Dash maintains an organization which contains multiple
+projects and one team of translators assigned to all of the projects.
+Each project is assigned with one or more target languages for
+translation by the project maintainer. When a translator joins the team,
+they are able to choose the languages they feel able to translate. They
+can then work on any projects specifying this language as a target
+language.
+
+- `Transifex <https://www.transifex.com>`_
+- `Dash translation projects <https://www.transifex.com/dash>`_
+- `Dash translators team <https://www.transifex.com/dash/teams>`_
+
+In general, languages with minimal regional variantion are to be
+translated into the common language (rather than regional) target.
+Portuguese, for example, is simply translated into the `pt` target
+language, rather than two separate target languages `pt_BR` and `pt_PT`,
+for Portuguese as spoken in Brazil and Portugal, respectively. As Dash
+grows, these languages may be separated out into their regional variants
+by proofreaders, depending on demand. Exceptions to this rule apply
+where the written language is objectively different, such as `zh_CN` and
+`zh_TW` for Simplified Chinese and Traditional Chinese.
+
+Keeping translations consistent over time as multiple translators work
+on each target language is a very important part of delivering a quality
+user experience. For this reason, if you come across any Dash-specific
+terminology such as `masternodes`, you should use the **Concordance**
+search function to see how the term has been translated in the past.
+Transifex will also provide **Suggestions** and **History** if it
+recognizes a similar string in the database of past translations. Stay
+consistent with past language use, but also ensure your terminology is
+up to date with current use!
+
+.. image:: img/concordance.png
+   :width: 130 px
+.. image:: img/suggestions.png
+   :width: 300 px
+
+The following documentation describes the various projects and any
+special features specific to the programming language in which the
+product is written.
+
+Dash Core
+---------
+
+https://www.transifex.com/dash/dash/
+
+This project contains a file named `dash_en.ts`, which is an export of
+all translatable user-facing content in the :ref:`Dash Core Wallet
+<dash-core-wallet>`. Languages with 80% or more of the translations
+complete will be integrated in the next release. Note that the software
+will often replace placeholders in the text with actual numbers,
+addresses or usernames. If you see a placeholder in the source text, it
+must also appear in the target text. If it does not, your translation
+cannot be used. The **Copy source string** button can help you copy
+everything over, so all you need to do is replace the English words
+surrounding the placeholders. You can change the order of the
+placeholders as necessary, according to the grammar of your target
+language. Taking German as an example:
+
+- `E&xit` --> `&Beenden`
+  
+  Note that the `&` character indicates a keyboard shortcut in a program
+  menu, and must appear next to the appropriate character in your target
+  language with no adjacent space
+
+- `Syncing Headers (%1%)...` --> `Synchronisiere Header (%1%)...` 
+  
+  Note that the `%1` placeholder will be replaced by the software as it
+  is running to indicate the percentage progress. The second `%` sign in
+  this example will be output, resulting in e.g. `75%` when the program
+  is running.
+
+- `Error loading %s` --> `Fehler beim Laden von %s`
+
+  Note that the `%s` placeholder will be replaced by the software as it
+  is running to indicate which object failed to load.
+
+- `change from %1 (%2)` --> `Wechselgeld von %1 (%2)`
+
+  Note that any brackets and punctuation, particularly full stops `.` at
+  the end of a sentence must also exist in the target text.
+
+Dash Docs
+---------
+
+https://www.transifex.com/dash/dash-docs
+
+Dash Graphics
+-------------
+
+https://www.transifex.com/dash/dash-graphics
+
+Dash iOS Wallet
+---------------
+
+https://www.transifex.com/dash/dash-ios-wallet
+
+Dash Android Wallet
+-------------------
+
+https://www.transifex.com/dash/dash-wallet
+
+Dash Videos
+-----------
+
+https://www.transifex.com/dash/dash-videos
+
+Dash Website
+------------
+
+https://www.transifex.com/dash/dash-website
+
 
 Testnet
 =======
