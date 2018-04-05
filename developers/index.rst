@@ -299,7 +299,6 @@ Bold and italic
   *italic* font, while a double ``**`` will render it in **bold**.
 
 External hyperlinks
-  
   **Source:** The \`official Dash website <https://www.dash.org>\`_ also
   provides a list of major exchanges offering Dash.
 
