@@ -290,10 +290,10 @@ Inline literals
 
 Bold and italic  
   **Source:** To encrypt your wallet, click \*\*Settings\*\* >
-  **\*\*Encrypt\*\* wallet.
+  \*\*Encrypt\*\* wallet.
 
   **Target:** Para encriptar su billetera, haga click en
-  **\*\*Settings\*\* > \*\*Encrypt\*\* billetera.
+  \*\*Settings\*\* > \*\*Encrypt\*\* billetera.
 
   A single ``*`` before and after a word or phrase will render it in an
   *italic* font, while a double ``**`` will render it in **bold**.
