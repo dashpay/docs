@@ -241,16 +241,9 @@ placeholders as necessary, according to the grammar of your target
 language.
 
 Placeholders
-
   **Source:** E&xit
 
   **Target:** &Beenden
-
-  ``E&xit`` --> ``&Beenden``
-
-  ``Syncing Headers (%1%)...`` --> ``Synchronisiere Header (%1%)...``
-
-  ``Error loading %s`` --> ``Fehler beim Laden von %s``
 
   Note that the ``&`` character is placeholder used to indicate a
   keyboard shortcut in a program menu, and must appear next to the
@@ -285,7 +278,6 @@ must be reproduced in the target language as follows:
 
 
 Inline literals
-
   **Source:** Type \`\`./dash-qt\`\` to run the file.
 
   **Target:** Escriba \`\`./dash-qt\`\` para correr el archivo.
