@@ -111,8 +111,8 @@ Inactive
 Tools
 =====
 
-Block explorers and statistics
-------------------------------
+Block explorers, statistics and visualizations
+----------------------------------------------
 
 - https://explorer.dash.org
 - https://insight.dash.org/insight
@@ -120,6 +120,7 @@ Block explorers and statistics
 - https://bitinfocharts.com/dash/explorer
 - http://explorer.coinpayments.net/index.php?chain=7
 - https://dash.holytransaction.com
+- https://dashradar.com
 
 
 Treasury tools
