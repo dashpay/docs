@@ -189,18 +189,19 @@ can then work on any projects specifying this language as a target
 language.
 
 - `Transifex <https://www.transifex.com>`_
+- `Transifex Documentation <https://docs.transifex.com>`_
 - `Dash translation projects <https://www.transifex.com/dash>`_
 - `Dash translators team <https://www.transifex.com/dash/teams>`_
 
 In general, languages with minimal regional variantion are to be
 translated into the common language (rather than regional) target.
-Portuguese, for example, is simply translated into the `pt` target
-language, rather than two separate target languages `pt_BR` and `pt_PT`,
+Portuguese, for example, is simply translated into the ``pt`` target
+language, rather than two separate target languages ``pt_BR`` and ``pt_PT``,
 for Portuguese as spoken in Brazil and Portugal, respectively. As Dash
 grows, these languages may be separated out into their regional variants
 by proofreaders, depending on demand. Exceptions to this rule apply
-where the written language is objectively different, such as `zh_CN` and
-`zh_TW` for Simplified Chinese and Traditional Chinese.
+where the written language is objectively different, such as ``zh_CN`` and
+``zh_TW`` for Simplified Chinese and Traditional Chinese.
 
 Keeping translations consistent over time as multiple translators work
 on each target language is a very important part of delivering a quality
@@ -212,10 +213,10 @@ recognizes a similar string in the database of past translations. Stay
 consistent with past language use, but also ensure your terminology is
 up to date with current use!
 
-.. image:: img/concordance.png
-   :width: 130 px
 .. image:: img/suggestions.png
    :width: 300 px
+.. image:: img/concordance.png
+   :width: 130 px
 
 The following documentation describes the various projects and any
 special features specific to the programming language in which the
@@ -226,7 +227,7 @@ Dash Core
 
 https://www.transifex.com/dash/dash/
 
-This project contains a file named `dash_en.ts`, which is an export of
+This project contains a file named ``dash_en.ts``, which is an export of
 all translatable user-facing content in the :ref:`Dash Core Wallet
 <dash-core-wallet>`. Languages with 80% or more of the translations
 complete will be integrated in the next release. Note that the software
@@ -239,33 +240,64 @@ surrounding the placeholders. You can change the order of the
 placeholders as necessary, according to the grammar of your target
 language. Taking German as an example:
 
-- `E&xit` --> `&Beenden`
+- ``E&xit`` --> ``&Beenden``
   
-  Note that the `&` character indicates a keyboard shortcut in a program
+  Note that the ``&`` character indicates a keyboard shortcut in a program
   menu, and must appear next to the appropriate character in your target
   language with no adjacent space
 
-- `Syncing Headers (%1%)...` --> `Synchronisiere Header (%1%)...` 
+- ``Syncing Headers (%1%)...`` --> ``Synchronisiere Header (%1%)...`` 
   
-  Note that the `%1` placeholder will be replaced by the software as it
-  is running to indicate the percentage progress. The second `%` sign in
-  this example will be output, resulting in e.g. `75%` when the program
+  Note that the ``%1`` placeholder will be replaced by the software as it
+  is running to indicate the percentage progress. The second ``%`` sign in
+  this example will be output, resulting in e.g. ``75%`` when the program
   is running.
 
-- `Error loading %s` --> `Fehler beim Laden von %s`
+Placeholders
+  ``Error loading %s`` --> ``Fehler beim Laden von %s``
 
-  Note that the `%s` placeholder will be replaced by the software as it
+  Note that the ``%s`` placeholder will be replaced by the software as it
   is running to indicate which object failed to load.
 
-- `change from %1 (%2)` --> `Wechselgeld von %1 (%2)`
+- ``change from %1 (%2)`` --> ``Wechselgeld von %1 (%2)``
 
-  Note that any brackets and punctuation, particularly full stops `.` at
+  Note that any brackets and punctuation, particularly full stops ``.`` at
   the end of a sentence must also exist in the target text.
 
 Dash Docs
 ---------
 
 https://www.transifex.com/dash/dash-docs
+
+This project contains all content from the Dash Documentation hosted at
+https://docs.dash.org (probably the site you are reading now). Each
+``.html`` page in the documentation appears as a file in the resources
+section, named according to the navigation steps required to open the
+page.
+
+This documentation is written in a documentation language called
+`reStructuredText <http://docutils.sourceforge.net/rst.html>`_ and built
+using the open-source `Sphinx Documentation Generator <http://www
+.sphinx-doc.org>`_. To simplify layout, most of the text has no markup
+or code marks at all, but hyperlinks must be reproduced in the target
+language as follows:
+
+
+Inline literals
+  Source: Type \`\`./dash-qt\`\` to run the file.
+  Target: Escriba \`\`./dash-qt\`\` para correr el archivo.
+  
+  Note that two backticks "\`\`" before and after a word or phrase will
+  cause that text to appear as an ``inline literal``. This is commonly
+  used to highlight code or commands to be typed by the user.
+
+To encrypt your wallet, click \*\*Settings\*\* > \*\*Encrypt\*\* wallet.   Para encriptar su billetera, haga click en \*\*Settings\*\* > \*\*Encrypt\*\* billetera.
+
+The \`official Dash website <https://www.dash.org>\`_ also provides a list of major exchanges offering Dash.
+
+El \`sitio web oficial de Dash <https://www.dash.org>\`_ también proporciona una lista de las principales Casas de cambio o Exchanges que ofrecen Dash.
+
+  
 
 Dash Graphics
 -------------

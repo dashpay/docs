@@ -1,8 +1,8 @@
 .. _earning-spending:
 
-=========================
-Earning and Spending Dash
-=========================
+====================
+Earning and Spending
+====================
 
 Dash is designed from the ground up to function as digital cash. This
 documentation discusses how and where Dash users can manage all of their
