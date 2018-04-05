@@ -255,10 +255,12 @@ Placeholders
 
 
 Punctuation
-  ``change from %1 (%2)`` --> ``Wechselgeld von %1 (%2)``
+  **Source:** change from %1 (%2)
 
-  Note that any brackets and punctuation, particularly full stops ``.``
-  at the end of a sentence, must also exist in the target text.
+  **Target:** Wechselgeld von %1 (%2)
+
+  Note that any brackets ``()`` and punctuation such as full stops ``.``
+  at the end of a sentence must also exist in the target text.
 
 Dash Docs
 ---------
@@ -282,17 +284,35 @@ Inline literals
 
   **Target:** Escriba \`\`./dash-qt\`\` para correr el archivo.
   
-  Note that two backticks "\`\`" before and after a word or phrase will
+  Note that two backticks ``\`\``` before and after a word or phrase will
   cause that text to appear as an ``inline literal``. This is commonly
   used to highlight code or commands to be typed by the user.
 
-To encrypt your wallet, click \*\*Settings\*\* > \*\*Encrypt\*\* wallet.   Para encriptar su billetera, haga click en \*\*Settings\*\* > \*\*Encrypt\*\* billetera.
+Bold and italic  
+  **Source:** To encrypt your wallet, click \*\*Settings\*\* >
+  **\*\*Encrypt\*\* wallet.
 
-The \`official Dash website <https://www.dash.org>\`_ also provides a list of major exchanges offering Dash.
+  **Target:** Para encriptar su billetera, haga click en
+  **\*\*Settings\*\* > \*\*Encrypt\*\* billetera.
 
-El \`sitio web oficial de Dash <https://www.dash.org>\`_ también proporciona una lista de las principales Casas de cambio o Exchanges que ofrecen Dash.
+  A single ``*`` before and after a word or phrase will render it in an
+  *italic* font, while a double ``**`` will render it in **bold**.
 
+External hyperlinks
   
+  **Source:** The \`official Dash website <https://www.dash.org>\`_ also
+  provides a list of major exchanges offering Dash.
+
+  **Target:** El \`sitio web oficial de Dash <https://www.dash.org>\`_
+  también proporciona una lista de las principales Casas de cambio o
+  Exchanges que ofrecen Dash.
+
+  A hyperlink consists of a backtick `````, followed by some text which
+  must be translated, followed by angle brackets with the link target
+  ``< >``, followed by another backtick and an underscore ```_``.
+  Translate the text, but do not translate the hyperlink (unless you
+  want to link to a version of the page in the target language).
+
 
 Dash Graphics
 -------------
