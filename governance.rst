@@ -210,6 +210,16 @@ same process is then repeated every month, and the total amount of Dash
 available for proposals decreases by approximately 7.14% per year,
 together with the overall block reward.
 
+The following video by Tao of Satoshi includes advice for proposal
+owners entering proposals during periods of high competition for the
+available budget funds:
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/MR_1BJNX2SE" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
 Proposal websites
 -----------------
 
