@@ -238,31 +238,34 @@ cannot be used. The **Copy source string** button can help you copy
 everything over, so all you need to do is replace the English words
 surrounding the placeholders. You can change the order of the
 placeholders as necessary, according to the grammar of your target
-language. Taking German as an example:
-
-- ``E&xit`` --> ``&Beenden``
-  
-  Note that the ``&`` character indicates a keyboard shortcut in a program
-  menu, and must appear next to the appropriate character in your target
-  language with no adjacent space
-
-- ``Syncing Headers (%1%)...`` --> ``Synchronisiere Header (%1%)...`` 
-  
-  Note that the ``%1`` placeholder will be replaced by the software as it
-  is running to indicate the percentage progress. The second ``%`` sign in
-  this example will be output, resulting in e.g. ``75%`` when the program
-  is running.
+language.
 
 Placeholders
+
+  **Source:** E&xit
+
+  **Target:** &Beenden
+
+  ``E&xit`` --> ``&Beenden``
+
+  ``Syncing Headers (%1%)...`` --> ``Synchronisiere Header (%1%)...``
+
   ``Error loading %s`` --> ``Fehler beim Laden von %s``
 
-  Note that the ``%s`` placeholder will be replaced by the software as it
-  is running to indicate which object failed to load.
+  Note that the ``&`` character is placeholder used to indicate a
+  keyboard shortcut in a program menu, and must appear next to the
+  appropriate character in your target language with no adjacent space.
+  Placeholders such as ``%1`` or ``%s`` will be replaced by the software
+  as it is running to indicate a name or number of something relating to
+  the message. You must insert these placeholders in the grammatically
+  appropriate position in your target text.
 
-- ``change from %1 (%2)`` --> ``Wechselgeld von %1 (%2)``
 
-  Note that any brackets and punctuation, particularly full stops ``.`` at
-  the end of a sentence must also exist in the target text.
+Punctuation
+  ``change from %1 (%2)`` --> ``Wechselgeld von %1 (%2)``
+
+  Note that any brackets and punctuation, particularly full stops ``.``
+  at the end of a sentence, must also exist in the target text.
 
 Dash Docs
 ---------
@@ -273,19 +276,19 @@ This project contains all content from the Dash Documentation hosted at
 https://docs.dash.org (probably the site you are reading now). Each
 ``.html`` page in the documentation appears as a file in the resources
 section, named according to the navigation steps required to open the
-page.
-
-This documentation is written in a documentation language called
-`reStructuredText <http://docutils.sourceforge.net/rst.html>`_ and built
-using the open-source `Sphinx Documentation Generator <http://www
-.sphinx-doc.org>`_. To simplify layout, most of the text has no markup
-or code marks at all, but hyperlinks must be reproduced in the target
-language as follows:
+page. The Dash Documentation is written in a documentation language
+called `reStructuredText <http://docutils.sourceforge.net/rst.html>`_
+and built using the open-source `Sphinx Documentation Generator
+<http://www.sphinx-doc.org>`_. To simplify layout, most of the text has
+no markup or code marks at all, but hyperlinks and certain formatting
+must be reproduced in the target language as follows:
 
 
 Inline literals
-  Source: Type \`\`./dash-qt\`\` to run the file.
-  Target: Escriba \`\`./dash-qt\`\` para correr el archivo.
+
+  **Source:** Type \`\`./dash-qt\`\` to run the file.
+
+  **Target:** Escriba \`\`./dash-qt\`\` para correr el archivo.
   
   Note that two backticks "\`\`" before and after a word or phrase will
   cause that text to appear as an ``inline literal``. This is commonly
