@@ -759,8 +759,19 @@ Godex
 
   Godex allows users to directly exchange one crypto asset for another
   without creating any account, albeit with a higher markup than most
-  exchanges. ShapeShift supports Dash and over 120 other
-  cryptocurrencies.
+  exchanges. Godex supports Dash and over 120 other cryptocurrencies.
+
+Flyp.me
+  .. image:: exchanges/flypme.png
+     :width: 200px
+     :align: right
+     :target: https://flyp.me/
+
+  https://flyp.me/
+
+  Flyp.me is developed by the team at HolyTransaction, the first
+  multicurrency web wallet. It offers instant exchange services between
+  18 different cryptocurrencies without creating an account.
 
 CoinSwitch
   .. image:: exchanges/coinswitch.png
