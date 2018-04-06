@@ -1,8 +1,8 @@
-.. _onboarding:
+.. _merchants-technical:
 
-==================
-Onboarding
-==================
+=========
+Technical
+=========
 
 Dash welcomes new and existing merchants and supports integration
 through a standardised onboarding process. Larger integrations may

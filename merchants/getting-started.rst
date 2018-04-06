@@ -11,5 +11,5 @@ require some customisation.
 .. toctree::
    :maxdepth: 1
 
-   onboarding
-   dashcore/interface.rst
+   administrative.rst
+   technical.rst
