@@ -73,10 +73,8 @@ interest.
    :includehidden:
    :caption: Merchants
 
-   merchants/index
-   merchants/payment-solutions
-   merchants/onboarding
-
+   merchants/getting-started
+   merchants/payment-processors
 
 .. _network-docs:
 
@@ -89,4 +87,5 @@ interest.
    masternodes/index
    mining/index
    developers/index
+   marketing.rst
    legal.rst

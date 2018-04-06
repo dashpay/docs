@@ -174,6 +174,7 @@ against the hashes available on the Dash website `here
 are running original and untampered builds of the code as it exists on
 Github.
 
+.. _translating-dash:
 
 Translating
 ===========
@@ -317,6 +318,8 @@ Dash Graphics
 -------------
 
 https://www.transifex.com/dash/dash-graphics
+
+
 
 Dash iOS Wallet
 ---------------
