@@ -16,22 +16,30 @@ identity.
 
 Dash Blue
   RGB: 30,113,184
+
   CMYK: 85,50,0,0
+
   Hex: #1d71b8
 
 Dash Grey
   RGB: 227,227,227
+
   CMYK: 13,9,11,0
+
   Hex: #e3e3e3
 
 Black
   RGB: 0,0,0
+
   CMYK: 91,79,62,97
+
   Hex: #000000
 
 White
   RGB: 255,255,255
+
   CMYK: 0,0,0,0
+  
   Hex: #ffffff
 
  
