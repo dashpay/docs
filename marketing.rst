@@ -14,25 +14,26 @@ existing web and sticker designs, please see the following links.
 Dash uses the following color scheme to promote a consistent visual
 identity.
 
-+-----------+---------------------+
-| Name      | Values              |
-+===========+=====================+
-| Dash Blue | | RGB: 30,113,184   |
-|           | | CMYK: 85,50,0,0   |
-|           | | Hex: #1d71b8      |
-+-----------+---------------------+
-| Dash Grey | | RGB: 227,227,227  |
-|           | | CMYK: 13,9,11,0   |
-|           | | Hex: #e3e3e3      |
-+-----------+---------------------+
-| Black     | | RGB: 0,0,0        |
-|           | | CMYK: 91,79,62,97 |
-|           | | Hex: #000000      |
-+-----------+---------------------+
-| White     | | RGB: 255,255,255  |
-|           | | CMYK: 0,0,0,0     |
-|           | | Hex: #ffffff      |
-+-----------+---------------------+
+Dash Blue
+  RGB: 30,113,184
+  CMYK: 85,50,0,0
+  Hex: #1d71b8
+
+Dash Grey
+  RGB: 227,227,227
+  CMYK: 13,9,11,0
+  Hex: #e3e3e3
+
+Black
+  RGB: 0,0,0
+  CMYK: 91,79,62,97
+  Hex: #000000
+
+White
+  RGB: 255,255,255
+  CMYK: 0,0,0,0
+  Hex: #ffffff
+
  
 Design Materials
 ================
@@ -221,7 +222,7 @@ oto_Sans_UI.zip>`_ font must be installed if using the PowerPoint files.
 +----------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Chinese (Simplified) | PDF    | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxcnZaRFpEczlDVk0>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxWjlaamJscGxZa3M>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxVTdBOHZwM0ptNFE>`__                 |
 |                      +--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                      | PPTX   | `16:9  <https://drive.google.com/open?id=0B8wg_voNeTcxakw3YllwZlg4QTA>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxQW5pcm5fLWpLd3M>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxOEpNWURJUVZHSGM>`__                |
+|                      | PPTX   | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxakw3YllwZlg4QTA>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxQW5pcm5fLWpLd3M>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxOEpNWURJUVZHSGM>`__                |
 +----------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Portuguese           | PDF    | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxZ1A0RkNNRm9UemM>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxa3paSWc1SDRyNTA>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxODBvZjZFSjlBSU0>`__                 |
 |                      +--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
