@@ -14,25 +14,25 @@ existing web and sticker designs, please see the following links.
 Dash uses the following color scheme to promote a consistent visual
 identity.
 
-+-----------+-------------------+
-| Name      | Values            |
-+===========+===================+
-| Dash Blue | RGB: 30,113,184   |
-|           | CMYK: 85,50,0,0   |
-|           | Hex: #1d71b8      |
-+-----------+-------------------+
-| Dash Grey | RGB: 227,227,227  |
-|           | CMYK: 13,9,11,0   |
-|           | Hex: #e3e3e3      |
-+-----------+-------------------+
-| Black     | RGB: 0,0,0        |
-|           | CMYK: 91,79,62,97 |
-|           | Hex: #000000      |
-+-----------+-------------------+
-| White     | RGB: 255,255,255  |
-|           | CMYK: 0,0,0,0     |
-|           | Hex: #ffffff      |
-+-----------+-------------------+
++-----------+---------------------+
+| Name      | Values              |
++===========+=====================+
+| Dash Blue | | RGB: 30,113,184   |
+|           | | CMYK: 85,50,0,0   |
+|           | | Hex: #1d71b8      |
++-----------+---------------------+
+| Dash Grey | | RGB: 227,227,227  |
+|           | | CMYK: 13,9,11,0   |
+|           | | Hex: #e3e3e3      |
++-----------+---------------------+
+| Black     | | RGB: 0,0,0        |
+|           | | CMYK: 91,79,62,97 |
+|           | | Hex: #000000      |
++-----------+---------------------+
+| White     | | RGB: 255,255,255  |
+|           | | CMYK: 0,0,0,0     |
+|           | | Hex: #ffffff      |
++-----------+---------------------+
  
 Design Materials
 ================
@@ -219,21 +219,21 @@ oto_Sans_UI.zip>`_ font must be installed if using the PowerPoint files.
 |                      +--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                      | PPTX   | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxcEJ6UGpLdXhtUHc>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxWE1tWFNxU0ZnX2c>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxeDl0VUhFUjgySHc>`__                 |
 +----------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Chinese (Simplified) | PDF    | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxcnZaRFpEczlDVk0>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxWjlaamJscGxZa3M>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxVTdBOHZwM0ptNFE>`__             |
+| Chinese (Simplified) | PDF    | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxcnZaRFpEczlDVk0>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxWjlaamJscGxZa3M>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxVTdBOHZwM0ptNFE>`__                 |
 |                      +--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                      | PPTX   | `16:9  <https://drive.google.com/open?id=0B8wg_voNeTcxakw3YllwZlg4QTA>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxQW5pcm5fLWpLd3M>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxOEpNWURJUVZHSGM>`__          |
+|                      | PPTX   | `16:9  <https://drive.google.com/open?id=0B8wg_voNeTcxakw3YllwZlg4QTA>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxQW5pcm5fLWpLd3M>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxOEpNWURJUVZHSGM>`__                |
 +----------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Portuguese           | PDF    | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxZ1A0RkNNRm9UemM>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxa3paSWc1SDRyNTA>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxODBvZjZFSjlBSU0>`__             |
+| Portuguese           | PDF    | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxZ1A0RkNNRm9UemM>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxa3paSWc1SDRyNTA>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxODBvZjZFSjlBSU0>`__                 |
 |                      +--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                      | PPTX   | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxaGVaMGE5YzhQczA>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxUkVndWo5cDE0R28>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxNXJCMGxmcW5sVUk>`__             |
+|                      | PPTX   | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxaGVaMGE5YzhQczA>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxUkVndWo5cDE0R28>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxNXJCMGxmcW5sVUk>`__                 |
 +----------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Russian              | PDF    | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxNEw3MDA3YzdXWFE>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxTXhWOVdseldOcUU>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxV3VwSjNzVER5b2s>`__                 |
 |                      +--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                      | PPTX   | `16:9 <https://www.dropbox.com/s/8p5vlc8hv7ip0cl/DASH_ru_16_9.pptx?dl=0>`__ `4:3 <https://www.dropbox.com/s/r675o6drfkyn2nd/DASH_ru_4_3.pptx?dl=0>`__ `A4 <https://www.dropbox.com/s/9mfo28ulw1sqsin/DASH_ru_A4.pptx?dl=0>`__       |
+|                      | PPTX   | `16:9 <https://www.dropbox.com/s/8p5vlc8hv7ip0cl/DASH_ru_16_9.pptx?dl=0>`__ `4:3 <https://www.dropbox.com/s/r675o6drfkyn2nd/DASH_ru_4_3.pptx?dl=0>`__ `A4 <https://www.dropbox.com/s/9mfo28ulw1sqsin/DASH_ru_A4.pptx?dl=0>`__           |
 +----------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Spanish              | PDF    | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxbDZjTXZXQzlBOFE>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxZktReG9JTU9vckU>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxQmJhcUpFUzQxTmM>`__             |
+| Spanish              | PDF    | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxbDZjTXZXQzlBOFE>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxZktReG9JTU9vckU>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxQmJhcUpFUzQxTmM>`__                 |
 |                      +--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                      | PPTX   | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxSUVCdElKa2FoRVE>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxbWVVWmQ4NGpNQ1k>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxaEY0ME93a2ludTQ>`__             |
+|                      | PPTX   | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxSUVCdElKa2FoRVE>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxbWVVWmQ4NGpNQ1k>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxaEY0ME93a2ludTQ>`__                 |
 +----------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
