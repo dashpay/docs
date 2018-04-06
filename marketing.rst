@@ -158,42 +158,42 @@ For more information on translating Dash products on Transifex, see
 :ref:`here <translating-dash>`. Please contact leon.white@dash.org once
 translation is complete to request layout of the completed translation.
 
-+------------------------+-----------------------------------------------------------------------------------------------------+
-| Language               | Download                                                                                            |
-+========================+=====================================================================================================+
-| English                | - `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-EN.pdf>`__    |
-|                        | - `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-EN.png>`__    |
-+------------------------+-----------------------------------------------------------------------------------------------------+
-| Arabic                 | - `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-AR.pdf>`__    |
-|                        | - `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-AR.png>`__    |
-+------------------------+-----------------------------------------------------------------------------------------------------+
-| Bulgarian              | - `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-BG.pdf>`__    |
-|                        | - `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-BG.png>`__    |
-+------------------------+-----------------------------------------------------------------------------------------------------+
-| Chinese (Traditional)  | - `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ZH-TW.pdf>`__ |
-|                        | - `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ZH-TW.png>`__ |
-+------------------------+-----------------------------------------------------------------------------------------------------+
-| French                 | - `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-FR.pdf>`__    |
-|                        | - `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-FR.png>`__    |
-+------------------------+-----------------------------------------------------------------------------------------------------+
-| German                 | - `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-DE.pdf>`__    |
-|                        | - `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-DE.png>`__    |
-+------------------------+-----------------------------------------------------------------------------------------------------+
-| Greek                  | - `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-EL.pdf>`__    |
-|                        | - `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-EL.png>`__    |
-+------------------------+-----------------------------------------------------------------------------------------------------+
-| Polish                 | - `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-PL.pdf>`__    |
-|                        | - `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-PL.png>`__    |
-+------------------------+-----------------------------------------------------------------------------------------------------+
-| Russian                | - `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-RU.pdf>`__    |
-|                        | - `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-RU.png>`__    |
-+------------------------+-----------------------------------------------------------------------------------------------------+
-| Slovak                 | - `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-SK.pdf>`__    |
-|                        | - `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-SK.png>`__    |
-+------------------------+-----------------------------------------------------------------------------------------------------+
-| Spanish                | - `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ES.pdf>`__    |
-|                        | - `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ES.png>`__    |
-+------------------------+-----------------------------------------------------------------------------------------------------+
++------------------------+---------------------------------------------------------------------------------------------------+
+| Language               | Download                                                                                          |
++========================+===================================================================================================+
+| English                | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-EN.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-EN.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
+| Arabic                 | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-AR.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-AR.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
+| Bulgarian              | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-BG.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-BG.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
+| Chinese (Traditional)  | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ZH-TW.pdf>`__ |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ZH-TW.png>`__ |
++------------------------+---------------------------------------------------------------------------------------------------+
+| French                 | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-FR.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-FR.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
+| German                 | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-DE.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-DE.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
+| Greek                  | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-EL.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-EL.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
+| Polish                 | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-PL.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-PL.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
+| Russian                | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-RU.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-RU.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
+| Slovak                 | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-SK.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-SK.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
+| Spanish                | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ES.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ES.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
 
 
 Presentations
@@ -245,20 +245,20 @@ Prepared by community member Essra in 2017 following proposal
 sponsorship for the German `Dash Embassy D-A-CH <http://www.dash-
 embassy.org>`__.
 
-+----------+----------------------------------------------------------------------------------------------+
-| Language | Download                                                                                     |
-+==========+==============================================================================================+
-| English  | - `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-EN.pdf>`__ |
-+----------+----------------------------------------------------------------------------------------------+
-| French   | - `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-FR.pdf>`__ |
-+----------+----------------------------------------------------------------------------------------------+
-| German   | - `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-DE.pdf>`__ |
-+----------+----------------------------------------------------------------------------------------------+
-| Spanish  | - `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-ES.pdf>`__ |
-+----------+----------------------------------------------------------------------------------------------+
++----------+--------------------------------------------------------------------------------------------+
+| Language | Download                                                                                   |
++==========+============================================================================================+
+| English  | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-EN.pdf>`__ |
++----------+--------------------------------------------------------------------------------------------+
+| French   | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-FR.pdf>`__ |
++----------+--------------------------------------------------------------------------------------------+
+| German   | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-DE.pdf>`__ |
++----------+--------------------------------------------------------------------------------------------+
+| Spanish  | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-ES.pdf>`__ |
++----------+--------------------------------------------------------------------------------------------+
 
 
-Business templates
+Business Templates
 ==================
 
 Paper templates
