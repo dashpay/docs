@@ -217,11 +217,11 @@ Glossary
   attacker’s hashed transaction block.
 
 Address
-  A Dash address is used to Send / Receive a Payment on the Dash
-  network. It contains a string of alphanumeric characters, but can also
-  be represented as a scannable QR code. A Dash address is also the
-  public key in the pair of keys used by Dash holders to digitally sign
-  transactions (see Public key).
+  A Dash address is used to :ref:`Send/Receive a Payment <dashcore-send-
+  receive>` on the Dash network. It contains a string of alphanumeric
+  characters, but can also be represented as a scannable QR code. A Dash
+  address is also the public key in the pair of keys used by Dash
+  holders to digitally sign transactions (see Public key).
 
 Algorithm
   In mathematics and computer science, an `algorithm 
@@ -258,13 +258,14 @@ ASIC
   An application-specific integrated circuit (ASIC), is an integrated
   circuit (IC) customized for a particular use, rather than intended for
   general-purpose use. For example, a chip designed to run in a digital
-  voice recorder or for high-efficiency Dash mining is an ASIC.
+  voice recorder or for :ref:`high-efficiency Dash mining <asic-mining>`
+  is an ASIC.
 
 ATM / BTM
   A Dash ATM is a physical machine that allows a customer to buy Dash
   with cash. There are many manufacturers, some of which enable users to
   sell Dash for cash. They are also sometimes called 'BTMs' or 'Dash
-  AVMS.' Dash is supported on several `ATMs <how_to_buy>`_.
+  AVMS.' Dash is supported on several :ref:`ATMs <how-to-buy>`.
 
 Backlog
   Backlog generally refers to an accumulation over time of work waiting
@@ -272,12 +273,12 @@ Backlog
 
 Backup
   The process of making copies of a computer file to ensure its
-  integrity in case of loss, theft, or damage. Dash has the unique
-  feature of allowing users to make backup copies of their digital
-  wallets. This protects against losing one's money in the event of a
-  computer crashing or losing one’s mobile device. This would be the
-  equivalent of being able to backup the cash in your wallet, so that if
-  you lost it, you could restore the cash from a backup.
+  integrity in case of loss, theft, or damage. Dash allows users to
+  :ref:`make backup copies <dashcore-backup>` of their digital wallets.
+  This protects against losing one's money in the event of a computer
+  crashing or losing one’s mobile device. This would be the equivalent
+  of being able to backup the cash in your wallet, so that if you lost
+  it, you could restore the cash from a backup.
 
 Bitcoin 2.0
   This is a term explaining the next new level of Bitcoin projects which
@@ -309,13 +310,11 @@ Budget System / DGBB
   network. Each time a block is discovered, 45% of the block reward goes
   to miners and 45% goes to masternodes. Ten percent is withheld by the
   network and used to fund projects that are approved by the masternode
-  network. This process is known as Decentralized Governance by
-  Blockchain (DGBB). For a fee, anybody can submit a proposal to the
-  network, and will be paid directly by the blockchain if approved by
-  the masternodes. The Budget System is sometimes called the Treasury
-  System; the two terms are interchangeable.
-
-  See here for more details on the budget system.
+  network. This process is known as :ref:`Decentralized Governance by
+  Blockchain <governance>` (DGBB). For a fee, anybody can submit a
+  proposal to the network, and will be paid directly by the blockchain
+  if approved by the masternodes. The Budget System is sometimes called
+  the Treasury System; the two terms are interchangeable.
 
 Cloud Wallet
   Third parties that will store your Dash on their servers for you, so
@@ -330,8 +329,8 @@ Cloud Wallet
 Cold Storage
   A method of generating and storing private keys completely offline.
   One could use a desktop or laptop computer disconnected from the
-  internet, a dedicated hardware wallet, a USB stick, or a paper wallet.
-  To learn more, visit our Cold Storage Guide Section.
+  internet, a dedicated hardware wallet, a USB stick, or a :ref:`paper
+  wallet <dash-paper-wallet>`.
 
 Confirm(ed) Transaction
   When a Dash transaction is made, a miner must verify that the
@@ -408,9 +407,9 @@ Dash
   problems. Dash's features include PrivateSend, InstantSend,
   Decentralized Governance by Blockchain (DGBB), a 2nd tier network
   (referred to as the masternode network). See the :ref:`Features
-  <features>` page for a full list of Dash's features.
-
-  `Wikipedia article <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_
+  <features>` page for a full list of Dash's features. See this
+  `Wikipedia article
+  <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_
 
 Dash Client
   Dash clients are software programs used to interface with the Dash
@@ -526,8 +525,8 @@ Digital Wallet
     protected. This is widely regarded to be the safest form of storage 
     for your Dash.
 
-  - **Offline/Cold Storage** (:ref:`Paper wallet <paper-wallets>`): A
-    special wallet that is created offline and is never exposed to the
+  - **Offline/Cold Storage** (:ref:`Paper wallet <dash-paper-wallet>`): 
+    A special wallet that is created offline and is never exposed to the
     internet. Accomplished by using software to generate a public and
     private key offline and then recording the generated keys. They keys 
     can be printed out on paper or even laser-etched in metal. Copies 
@@ -651,9 +650,9 @@ Fork
 Full Nodes
   Any Dash client that is serving a full version of the blockchain to
   peers. This can be a user running a Dash Core wallet on his/her
-  desktop, or it could be a masternode. Full nodes promote
-  decentrailzation by allowing any user to double check the validity of
-  the blockchain.
+  desktop, or it could be a :ref:`masternode <masternodes>`. Full nodes
+  promote decentrailzation by allowing any user to double check the
+  validity of the blockchain.
 
 Fungible
   Every unit of the currency is worth the same as any other unit. 
@@ -732,11 +731,12 @@ Mobile Wallet
 MultiSig
   Multi-signature addresses provide additional security by requiring
   multiple people to sign a transaction with their private key before
-  the transaction can be sent. For example, in 2 of 3 multisig, two out
-  of three possible signatories have to sign a transaction for it to be
-  processed. Multi-signature addresses are commonly used by exchanges
-  and other organizations that are in possession of large sums of
-  cryptocurrency, since it makes theft much more difficult.
+  the transaction can be sent. For example, in :ref:`2 of 3 multisig
+  <dashcore-multisig>`, two out of three possible signatories have to
+  sign a transaction for it to be processed. Multi-signature addresses
+  are commonly used by exchanges and other organizations that are in
+  possession of large sums of cryptocurrency, since it makes theft much
+  more difficult.
 
 Node
   A node is any device running Dash wallet software. Full nodes are
@@ -757,9 +757,9 @@ P2P
   transaction deal with each other through a single mediation point.
 
 Paper Wallet
-  :ref:`Paper wallets <paper-wallets>` are offline wallets, printed on
-  paper for safety. If properly secured and stored they are considered
-  the safest way to store cryptocurrency.
+  :ref:`Paper wallets <dash-paper-wallet>` are offline wallets, printed
+  on paper for safety. If properly secured and stored they are 
+  considered the safest way to store cryptocurrency.
 
 Privacy
   `Privacy <https://en.wikipedia.org/wiki/Privacy>`_ is the ability of
@@ -856,13 +856,13 @@ Tainted Coins
   is only important if the user is trying to remain anonymous.
 
 tDash
-  Test Dash, used on testnet.
+  Test Dash, used on :ref:`testnet <testnet>`.
 
 Testnet
-  Testnet is a network only for testing (parallel to the mainnet), test
-  wallets, test coins, test masternodes, test miners, and test users all
-  simulate their mainnet counterparts in a safe environment where errors
-  or forks are not harmful.
+  :ref:`Testnet <testnet>` is a network only for testing (parallel to
+  the mainnet), test wallets, test coins, test masternodes, test miners,
+  and test users all simulate their mainnet counterparts in a safe
+  environment where errors or forks are not harmful.
 
 Tor
   An anonymous routing protocol used by people wanting to hide their
@@ -873,9 +873,9 @@ Transaction Block
   block that can then be hashed and added to the blockchain.
 
 Transaction Fee
-  A small fee imposed on some transactions sent across the Dash network.
-  The transaction fee is awarded to the miner that successfully hashes
-  the block containing the relevant transaction.
+  A :ref:`small fee <fees>` imposed on some transactions sent across the
+  Dash network. The transaction fee is awarded to the miner that
+  successfully hashes the block containing the relevant transaction.
 
 Unconfirmed Transactions
   Transactions that are not yet processed by miners or held via

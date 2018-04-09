@@ -341,6 +341,7 @@ Dash Website
 
 https://www.transifex.com/dash/dash-website
 
+.. _testnet:
 
 Testnet
 =======

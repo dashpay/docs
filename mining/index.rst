@@ -517,6 +517,8 @@ Tips
   from source with specific optimisations for your hardware under either
   Windows or Linux.
 
+.. _asic-mining:
+
 ASIC Mining
 ===========
 
