@@ -43,9 +43,9 @@ Installation
    :target: https://play.google.com/store/apps/details?id=co.edgesecure.app
 
 Edge is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=co.edgesecure.app>`_ and
+<https://play.google.com/store/apps/details?id=co.edgesecure.app>`__ and
 the `Apple App Store for iOS <https://itunes.apple.com/us/app/edge-
-bitcoin-wallet/id1344400091>`_.
+bitcoin-wallet/id1344400091>`__.
 
 Documentation
 -------------
@@ -54,7 +54,7 @@ Edge offers detailed documentation of all functions at
 https://support.edgesecure.co and a few quick links are also collected
 here:
 
-- `Getting started <https://support.edgesecure.co/support/solutions/8000051596>`_
+- `Getting started <https://support.edgesecure.co/support/solutions/8000051596>`__
 - `How do I create a new wallet? <https://support.edgesecure.co/support/solutions/8000051596>`_
 - `How do I send money? <https://support.edgesecure.co/support/solutions/articles/8000058750>`_
 - `How do I receive money into my account? <https://support.edgesecure.co/support/solutions/articles/8000058749>`_
@@ -130,7 +130,7 @@ Jaxx offers detailed documentation of all functions at
 https://decentral.zendesk.com and a few quick links are also collected
 here:
 
-- `Getting started <https://decentral.zendesk.com/hc/en-us/sections/204038798-Getting-Started>`_
+- `Getting started <https://decentral.zendesk.com/hc/en-us/sections/204038798-Getting-Started>`__
 - `How do I send currency? <https://decentral.zendesk.com/hc/en-us/articles/217873878-How-do-I-send-currency->`_
 - `How do I receive currency? <https://decentral.zendesk.com/hc/en-us/articles/218364217-How-do-I-receive-currency->`_
 
@@ -167,9 +167,9 @@ Download
    :target: https://play.google.com/store/apps/details?id=com.coinomi.wallet
 
 Coinomi is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.coinomi.wallet>`_ and
-the `Apple App Store for iOS <https://itunes.apple.com/us/app/coinomi-
-wallet/id1333588809>`_.
+<https://play.google.com/store/apps/details?id=com.coinomi.wallet>`__
+and the `Apple App Store for iOS
+<https://itunes.apple.com/us/app/coinomi- wallet/id1333588809>`__.
 
 Documentation
 -------------
@@ -206,7 +206,7 @@ Download
    :target: https://play.google.com/store/apps/details?id=com.aev.cryptonator
 
 Cryptonator is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.aev.cryptonator>`_
+<https://play.google.com/store/apps/details?id=com.aev.cryptonator>`__
 and online at https://www.cryptonator.com
 
 Documentation

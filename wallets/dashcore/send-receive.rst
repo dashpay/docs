@@ -54,8 +54,8 @@ Choosing **InstantSend** has a similar effect, but actually relies on a
 different mechanism in the second layer network to speed up the
 transaction time. Choosing **PrivateSend** will send Dash from an
 address that has previously been mixed. You can find out more about
-PrivateSend and InstantSend :ref:`here <dashcore-privatesend-
-instantsend>`.
+PrivateSend and InstantSend 
+:ref:`here <dashcore-privatesend-instantsend>`.
 
 Let’s try an example. Say you have received an invoice which you now
 want to pay with Dash. The writer of the invoice has included a Dash

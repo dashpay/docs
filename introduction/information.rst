@@ -219,11 +219,11 @@ Glossary
   attacker’s hashed transaction block.
 
 Address
-  A Dash address is used to :ref:`Send/Receive a Payment <dashcore-send-
-  receive>` on the Dash network. It contains a string of alphanumeric
-  characters, but can also be represented as a scannable QR code. A Dash
-  address is also the public key in the pair of keys used by Dash
-  holders to digitally sign transactions (see Public key).
+  A Dash address is used to :ref:`Send/Receive a Payment 
+  <dashcore-send-receive>` on the Dash network. It contains a string of
+  alphanumeric characters, but can also be represented as a scannable QR
+  code. A Dash address is also the public key in the pair of keys used 
+  by Dash holders to digitally sign transactions (see Public key).
 
 Algorithm
   In mathematics and computer science, an `algorithm 
