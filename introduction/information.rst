@@ -78,7 +78,7 @@ News
 
 - **Dash Force News:** https://www.dashforcenews.com
 - **Dash News En Español:** https://dashnewsespanol.com
-- **Dash News En Español (YouTube):**https://www.youtube.com/channel/UCG6Cuh8Q2eUt4NlZu4K-u8g
+- **Dash News En Español (YouTube):** https://www.youtube.com/channel/UCG6Cuh8Q2eUt4NlZu4K-u8g
 - **Dash News Korea:** https://dashnewskorea.com
 - **Cointelegraph:** https://cointelegraph.com/tags/dash
 - **巴比特 (8BTC):** http://www.8btc.com/dash

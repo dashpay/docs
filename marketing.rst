@@ -214,7 +214,7 @@ oto_Sans_UI.zip>`_ font must be installed if using the PowerPoint files.
 +----------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Chinese (Simplified) | PDF    | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxcnZaRFpEczlDVk0>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxWjlaamJscGxZa3M>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxVTdBOHZwM0ptNFE>`__                 |
 |                      +--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                      | PPTX   | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxakw3YllwZlg4QTA>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxQW5pcm5fLWpLd3M>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxOEpNWURJUVZHSGM>`__                |
+|                      | PPTX   | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxakw3YllwZlg4QTA>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxQW5pcm5fLWpLd3M>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxOEpNWURJUVZHSGM>`__                 |
 +----------------------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Portuguese           | PDF    | `16:9 <https://drive.google.com/open?id=0B8wg_voNeTcxZ1A0RkNNRm9UemM>`__ `4:3 <https://drive.google.com/open?id=0B8wg_voNeTcxa3paSWc1SDRyNTA>`__ `A4 <https://drive.google.com/open?id=0B8wg_voNeTcxODBvZjZFSjlBSU0>`__                 |
 |                      +--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -258,15 +258,15 @@ Paper templates
 
 Official Dash document templates.
 
-+----------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
-| Name                                               | Download                                                                                                     |
-+====================================================+==============================================================================================================+
-| Word document with cover page and paragraph styles | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Word-Document.docx>`_                |
-+----------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
-| Word template with blue watermark                  | `DOTX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Word-Document-Watermark-Blue.dotx>`_ |
-+----------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
-| Word template with grey watermark                  | `DOTX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Word-Document-Watermark-Grey.dotx>`_ |
-+----------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Name                                               | Download                                                                                                      |
++====================================================+===============================================================================================================+
+| Word document with cover page and paragraph styles | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Word-Document.docx>`__                |
++----------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Word template with blue watermark                  | `DOTX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Word-Document-Watermark-Blue.dotx>`__ |
++----------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Word template with grey watermark                  | `DOTX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Word-Document-Watermark-Grey.dotx>`__ |
++----------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 Presentation templates
 ----------------------
@@ -276,15 +276,15 @@ predefined presentation slide layouts (check `here
 <https://support.office.com/en-us/article/Apply-or-change-a-slide-
 layout-158E6DBA-E53E-479B-A6FC-CAAB72609689>`_ for instructions).
 
-+------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
-| Name                                                       | Download                                                                                                            |
-+============================================================+=====================================================================================================================+
-| PowerPoint template with simple blue and white slides      | `POTX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Presentation-Template-Empty.potx>`_         |
-+------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
-| PowerPoint template with sample layouts, styles and shapes | `POTX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Presentation-Template-Sample-Slides.potx>`_ |
-+------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
-| Presentation icons                                         | `PPTX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Icons.pptx>`_                               |
-+------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| Name                                                       | Download                                                                                                             |
++============================================================+======================================================================================================================+
+| PowerPoint template with simple blue and white slides      | `POTX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Presentation-Template-Empty.potx>`__         |
++------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| PowerPoint template with sample layouts, styles and shapes | `POTX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Presentation-Template-Sample-Slides.potx>`__ |
++------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| Presentation icons                                         | `PPTX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Icons.pptx>`__                               |
++------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 Cards
 -----
