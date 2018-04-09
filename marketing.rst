@@ -14,33 +14,17 @@ existing web and sticker designs, please see the following links.
 Dash uses the following color scheme to promote a consistent visual
 identity.
 
-Dash Blue
-  RGB: 30,113,184
-
-  CMYK: 85,50,0,0
-
-  Hex: #1d71b8
-
-Dash Grey
-  RGB: 227,227,227
-
-  CMYK: 13,9,11,0
-
-  Hex: #e3e3e3
-
-Black
-  RGB: 0,0,0
-
-  CMYK: 91,79,62,97
-
-  Hex: #000000
-
-White
-  RGB: 255,255,255
-
-  CMYK: 0,0,0,0
-  
-  Hex: #ffffff
++-------+-------------+-------------+---------+
+| Color | RGB         | CMYK        | Hex     |
++=======+=============+=============+=========+
+| Blue  | 30,113,184  | 85,50,0,0   | #1d71b8 |
++-------+-------------+-------------+---------+
+| Grey  | 227,227,227 | 13,9,11,0   | #e3e3e3 |
++-------+-------------+-------------+---------+
+| Black | 0,0,0       | 91,79,62,97 | #000000 |
++-------+-------------+-------------+---------+
+| White | 255,255,255 | 0,0,0,0     | #ffffff |
++-------+-------------+-------------+---------+
 
  
 Design Materials
