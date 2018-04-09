@@ -67,11 +67,11 @@ sending Dash requires participation from the copayers.
 
 |image4| |image5| |image6|
 
-.. |image0| image:: img/shared-qr.png
+.. |image4| image:: img/shared-qr.png
    :width: 200px
-.. |image1| image:: img/shared-join.png
+.. |image5| image:: img/shared-join.png
    :width: 200px
-.. |image2| image:: img/shared-join.png
+.. |image6| image:: img/shared-join.png
    :width: 200px
 
 *Adding copayers to a 2-of-3 shared wallet in Dash Copay*
