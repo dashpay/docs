@@ -169,7 +169,7 @@ Your system will build all dependencies and Dash Core from scratch for
 Windows and Linux platforms (macOS if the dependencies were installed
 according to these instructions). This can take some time. When
 complete, you will see the SHA256 checksums, which you can compare
-against the hashes available on the Dash website `here
+against the hashes available on the `Dash website
 <https://www.dash.org/wallets>`_. In this way, you can be sure that you
 are running original and untampered builds of the code as it exists on
 Github.
@@ -413,7 +413,7 @@ as the :ref:`mainnet masternode installation guide <masternode-setup>`,
 but with a few key differences:
 
 - You will probably be running a development version of Dash instead of
-  the stable release. See `here <https://bamboo.dash.org>`_ for
+  the stable release. See `here <https://bamboo.dash.org>`__ for
   downloadable builds, then choose **Develop > Latest Build >
   Artifacts**.
 - When opening the firewall, port 19999 must be opened instead of (or in
