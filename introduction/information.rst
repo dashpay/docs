@@ -70,14 +70,16 @@ Facebook
 - **London:** https://www.facebook.com/Dash-Digital-Cash-London-1559503720975382
 - **Greece:** https://www.facebook.com/DashGreece
 - **Denmark:** https://www.facebook.com/DashDenmark
+- **Dash News En Español:** https://www.facebook.com/DashNewsEspanol
 
 
 News
 ----
 
 - **Dash Force News:** https://www.dashforcenews.com
-- **Dash News En Español** https://dashnewsespanol.com
-- **Dash News Korea** https://dashnewskorea.com
+- **Dash News En Español:** https://dashnewsespanol.com
+- **Dash News En Español (YouTube):**https://www.youtube.com/channel/UCG6Cuh8Q2eUt4NlZu4K-u8g
+- **Dash News Korea:** https://dashnewskorea.com
 - **Cointelegraph:** https://cointelegraph.com/tags/dash
 - **巴比特 (8BTC):** http://www.8btc.com/dash
 - **比特时代 (BTC38):** http://www.btc38.com/altcoin/dash
