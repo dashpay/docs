@@ -43,27 +43,30 @@ For more information on translating Dash products on Transifex, see
 :ref:`here <translating-dash>`. Please contact leon.white@dash.org once
 translation is complete to request layout of the completed translation.
 
-+----------+--------------------------------------------------------------------------------------------------+
-| Language | Download                                                                                         |
-+==========+==================================================================================================+
-| English  | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-EN.pdf>`__   |
-|          | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-EN.docx>`__ |
-+----------+--------------------------------------------------------------------------------------------------+
-| Arabic   | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-AR.pdf>`__   |
-|          | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-AR.docx>`__ |
-+----------+--------------------------------------------------------------------------------------------------+
-| Czech    | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-CS.pdf>`__   |
-|          | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-CS.docx>`__ |
-+----------+--------------------------------------------------------------------------------------------------+
-| Dutch    | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-NL.pdf>`__   |
-|          | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-NL.docx>`__ |
-+----------+--------------------------------------------------------------------------------------------------+
-| Russian  | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-RU.pdf>`__   |
-|          | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-RU.docx>`__ |
-+----------+--------------------------------------------------------------------------------------------------+
-| Slovack  | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-SK.pdf>`__   |
-|          | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-SK.docx>`__ |
-+----------+--------------------------------------------------------------------------------------------------+
++------------+--------------------------------------------------------------------------------------------------+
+| Language   | Download                                                                                         |
++============+==================================================================================================+
+| English    | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-EN.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-EN.docx>`__ |
++------------+--------------------------------------------------------------------------------------------------+
+| Arabic     | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-AR.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-AR.docx>`__ |
++------------+--------------------------------------------------------------------------------------------------+
+| Czech      | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-CS.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-CS.docx>`__ |
++------------+--------------------------------------------------------------------------------------------------+
+| Dutch      | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-NL.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-NL.docx>`__ |
++------------+--------------------------------------------------------------------------------------------------+
+| Russian    | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-RU.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-RU.docx>`__ |
++------------+--------------------------------------------------------------------------------------------------+
+| Slovak     | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-SK.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-SK.docx>`__ |
++------------+--------------------------------------------------------------------------------------------------+
+| Vietnamese | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-VI.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-VI.docx>`__ |
++------------+--------------------------------------------------------------------------------------------------+
 
 Previous versions (English only):
 
@@ -137,7 +140,9 @@ the completed translation.
 | Spanish               | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/The-Dash-Difference-ES.pdf>`__    |
 |                       | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/The-Dash-Difference-ES.png>`__    |
 +-----------------------+--------------------------------------------------------------------------------------------------------+
-
+| Vietnamese            | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/The-Dash-Difference-VI.pdf>`__    |
+|                       | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/The-Dash-Difference-VI.png>`__    |
++-----------------------+--------------------------------------------------------------------------------------------------------+
 
 Ten Misconceptions About Dash
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -186,6 +191,9 @@ translation is complete to request layout of the completed translation.
 +------------------------+---------------------------------------------------------------------------------------------------+
 | Spanish                | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ES.pdf>`__    |
 |                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ES.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
+| Vietnamese             | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-VI.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-VI.png>`__    |
 +------------------------+---------------------------------------------------------------------------------------------------+
 
 
