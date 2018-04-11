@@ -107,7 +107,7 @@ must be reproduced in the target language as follows:
 
 
 Inline literals
-  **Source:** ``Type ``./dash-qt`` to run the file.``
+  **Source:** ```Type ``./dash-qt`` to run the file.```
 
   **Target:** ``Escriba \`\`./dash-qt\`\` para correr el archivo.``
   
