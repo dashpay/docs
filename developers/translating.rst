@@ -107,9 +107,9 @@ must be reproduced in the target language as follows:
 
 
 Inline literals
-  **Source:** ``Type ``./dash-qt\`` to run the file.``
+  **Source:** ``Type ``./dash-qt `` to run the file.``
 
-  **Target:** ``Escriba \`\`./dash-qt\`\` para correr el archivo.``
+  **Target:** ``Escriba `` ./dash-qt `` para correr el archivo.``
   
   Note that two backticks `````` before and after a word or phrase will
   cause that text to appear as an ``inline literal``. This is commonly
