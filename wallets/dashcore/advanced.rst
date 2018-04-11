@@ -4,6 +4,43 @@
 Advanced topics
 ===============
 
+.. _coin-control:
+
+Coin Control
+============
+
+Coin Control allows users of the Dash Core Wallet to specify which
+addresses and Unspent Transaction Outputs (UTXOs) should be used as
+inputs in transactions. This allows you to keep a specific balance on
+certain addresses in your wallet, while spending others freely. In Dash
+Core Wallet, click **Settings > Options > Wallet > Enable coin control
+features**. Now, when you go to the Send tab in your wallet, a new
+button labelled **Inputs…** will appear. Click this button to select
+which UTXOs can be used as input for any transactions you create. The
+following window appears:
+
+.. figure:: img/coin-selection.png
+   :width: 400px
+
+   Coin Selection window in Dash Core wallet, showing two masternodes
+   (testnet)
+
+Right click on the transaction(s) you do not want to spend, then select
+**Lock unspent**. A small lock will appear next to the transaction. You
+can click the **Toggle lock state** button to invert the locked/unlocked
+state of all UTXOs. When you are ready to continue, click **OK**. You
+can now safely create transactions with your remaining funds without
+affecting the locked UTXOs.
+
+.. image:: img/coin-selection-lock.png
+   :width: 220px
+
+.. figure:: img/coin-selection-locked.png
+   :width: 180px
+
+   Locking UTXOs in Dash Core wallet
+
+
 .. _dashcore-multisig:
 
 Multisignature

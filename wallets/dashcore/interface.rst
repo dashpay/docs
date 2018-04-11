@@ -253,18 +253,18 @@ as inputs with the Coin Control, PrivateSend and Masternode features.
    The Wallet tab of the Dash Core Options dialog
 
 Enable coin control features
-  Your Dash Core wallet balance is actually the sum total of all addresses
-  holding balance that are associated with your wallet. When you spend
-  Dash, Dash Core will withdraw from as many inputs as necessary to make
-  up the desired amount of Dash to be transferred. This behavior may be
-  undesirable if you want to keep a certain balance on one address. The
-  most common use case is the requirement to maintain 1000 Dash on a
-  single address as collateral for a masternode.
-
-Enabling this option will add a button labelled Inputs on the Send tab.
-  This provides access to the Coin selection dialog, which can be used to
-  lock, unlock and prioritize different addresses in your wallet. See
-  here for a more detailed explanation of Coin Control.
+  Your Dash Core wallet balance is actually the sum total of all
+  addresses holding balance that are associated with your wallet. When
+  you spend Dash, Dash Core will withdraw from as many inputs as
+  necessary to make up the desired amount of Dash to be transferred.
+  This behavior may be undesirable if you want to keep a certain balance
+  on one address. The most common use case is the requirement to
+  maintain 1000 Dash on a single address as collateral for a masternode.
+  Enabling this option will add a button labelled **Inputs** on the
+  **Send** tab. This provides access to the **Coin selection** dialog,
+  which can be used to lock, unlock and prioritize different addresses
+  in your wallet. See :ref:`here <coin-control>` for a more detailed
+  explanation of Coin Control.
 
 Show Masternodes tab
   Enabling this option causes Dash Core to display an additional
@@ -273,13 +273,14 @@ Show Masternodes tab
   used to manage interactions (start, stop, check status, etc.) with 
   masternodes controlled by this wallet. This tab is an advanced feature 
   not required by users that do not operate a masternode on the Dash 
-  network. See here for a description of the Masternodes tab.
+  network.
 
 Enable advanced PrivateSend interface
   Enabling this option changes the PrivateSend mixing interface on the
   Overview tab of the Dash Core wallet to include more options, such as
-  Try Mix and percentage completion. See here for a full explanation of 
-  how to use PrivateSend.
+  Try Mix and percentage completion. See 
+  :ref:`here <dashcore-privatesend-instantsend>` for a full explanation
+  of how to use PrivateSend.
 
 Warn if PrivateSend is running out of keys
   Enabling this option will cause Dash Core to display a warning when your
