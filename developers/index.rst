@@ -1,13 +1,19 @@
-
-
 .. _developers:
 
 ==========
 Developers
 ==========
 
-This section includes documentation useful to developers and technical
-writers interested in Dash.
+Dash Core has published an extensive `Developer Guide <https://dash-
+docs.github.io/en/>`_ to help new developers get started with the Dash
+code base, and as a reference for experienced developers. This guide can
+be leveraged to quickly and efficiently integrate external applications
+with the Dash ecosystem. Anyone can contribute to the guide by
+submitting an issue or pull request on GitHub. The documentation is
+available at: https://dash- docs.github.io/en/
+
+The remaining sections available below describe practical steps to
+carry out common development tasks in Dash.
 
 .. toctree::
    :maxdepth: 1
@@ -15,15 +21,6 @@ writers interested in Dash.
    translating.rst
    compiling.rst
    testnet.rst
-
-
-Version History
-===============
-
-Full release notes and the version history of Dash are available here:
-
-- https://github.com/dashpay/dash/blob/master/doc/release-notes.md
-
 
 .. _understanding-sporks:
 
@@ -97,3 +94,11 @@ console**.
    :width: 300px
 
    spork show and spork active output in the Dash Core debug console
+
+
+Version History
+===============
+
+Full release notes and the version history of Dash are available here:
+
+- https://github.com/dashpay/dash/blob/master/doc/release-notes.md

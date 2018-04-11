@@ -4,6 +4,11 @@
 Arguments and commands
 ======================
 
+All command-line options (except for ``-datadir`` and ``-conf``) may be
+specified in a configuration file, and all configuration file options
+may also be specified on the command line. Command-line options override
+values set in the configuration file.
+
 Command line arguments
 ======================
 
