@@ -5,14 +5,14 @@ Translating Dash
 ================
 
 Translations of all Dash products are managed courtesty of Transifex,
-which offers detailed documentation of all functions and features.
-Within Transifex, Dash maintains an organization which contains multiple
-projects and one team of translators assigned to all of the projects.
-Each project is assigned with one or more target languages for
-translation by the project maintainer. When a translator joins the team,
-they are able to choose the languages they feel able to translate. They
-can then work on any projects specifying this language as a target
-language.
+which offers its own detailed documentation of all functions and
+features. Within Transifex, Dash maintains an organization which
+contains multiple projects and one team of translators assigned to all
+of the projects. Each project is assigned with one or more target
+languages for translation by the project maintainer. When a translator
+joins the team, they are able to choose the languages they feel able to
+translate. They can then work on any projects specifying this language
+as a target language.
 
 - `Transifex <https://www.transifex.com>`_
 - `Transifex Documentation <https://docs.transifex.com>`_
@@ -22,12 +22,13 @@ language.
 In general, languages with minimal regional variantion are to be
 translated into the common language (rather than regional) target.
 Portuguese, for example, is simply translated into the ``pt`` target
-language, rather than two separate target languages ``pt_BR`` and ``pt_PT``,
-for Portuguese as spoken in Brazil and Portugal, respectively. As Dash
-grows, these languages may be separated out into their regional variants
-by proofreaders, depending on demand. Exceptions to this rule apply
-where the written language is objectively different, such as ``zh_CN`` and
-``zh_TW`` for Simplified Chinese and Traditional Chinese.
+language, rather than two separate target languages ``pt_BR`` and
+``pt_PT``, for Portuguese as spoken in Brazil and Portugal,
+respectively. As Dash grows, these languages may be separated out into
+their regional variants by proofreaders, depending on demand. Exceptions
+to this rule apply where the same spoken language is written
+differently, such as ``zh_CN`` and ``zh_TW`` for Simplified Chinese and
+Traditional Chinese.
 
 Keeping translations consistent over time as multiple translators work
 on each target language is a very important part of delivering a quality
@@ -67,9 +68,9 @@ placeholders as necessary, according to the grammar of your target
 language.
 
 Placeholders
-  **Source:** E&xit
+  **Source:** ``E&xit``
 
-  **Target:** &Beenden
+  **Target:** ``&Beenden``
 
   Note that the ``&`` character is placeholder used to indicate a
   keyboard shortcut in a program menu, and must appear next to the
@@ -81,9 +82,9 @@ Placeholders
 
 
 Punctuation
-  **Source:** change from %1 (%2)
+  **Source:** ``change from %1 (%2)``
 
-  **Target:** Wechselgeld von %1 (%2)
+  **Target:** ``Wechselgeld von %1 (%2)``
 
   Note that any brackets ``()`` and punctuation such as full stops ``.``
   at the end of a sentence must also exist in the target text.
@@ -106,31 +107,31 @@ must be reproduced in the target language as follows:
 
 
 Inline literals
-  **Source:** Type \`\`./dash-qt\`\` to run the file.
+  **Source:** ``Type \`\`./dash-qt\`\` to run the file.``
 
-  **Target:** Escriba \`\`./dash-qt\`\` para correr el archivo.
+  **Target:** ``Escriba \`\`./dash-qt\`\` para correr el archivo.``
   
   Note that two backticks ``\`\``` before and after a word or phrase will
   cause that text to appear as an ``inline literal``. This is commonly
   used to highlight code or commands to be typed by the user.
 
 Bold and italic  
-  **Source:** To encrypt your wallet, click \*\*Settings\*\* >
-  \*\*Encrypt\*\* wallet.
+  **Source:** ``To encrypt your wallet, click \*\*Settings\*\* >
+  \*\*Encrypt\*\* wallet.``
 
-  **Target:** Para encriptar su billetera, haga click en
-  \*\*Settings\*\* > \*\*Encrypt\*\* billetera.
+  **Target:** ``Para encriptar su billetera, haga click en
+  \*\*Settings\*\* > \*\*Encrypt\*\* billetera.``
 
   A single ``*`` before and after a word or phrase will render it in an
   *italic* font, while a double ``**`` will render it in **bold**.
 
 External hyperlinks
-  **Source:** The \`official Dash website <https://www.dash.org>\`_ also
-  provides a list of major exchanges offering Dash.
+  **Source:** ``The \`official Dash website <https://www.dash.org>\`_ also
+  provides a list of major exchanges offering Dash.``
 
-  **Target:** El \`sitio web oficial de Dash <https://www.dash.org>\`_
+  **Target:** ``El \`sitio web oficial de Dash <https://www.dash.org>\`_
   también proporciona una lista de las principales Casas de cambio o
-  Exchanges que ofrecen Dash.
+  Exchanges que ofrecen Dash.``
 
   A hyperlink consists of a backtick `````, followed by some text which
   must be translated, followed by angle brackets with the link target
@@ -144,25 +145,66 @@ Dash Graphics
 
 https://www.transifex.com/dash/dash-graphics
 
+Dash visual products such as infographics, flyers and conference
+handouts are produced using Adobe InDesign, Adobe Illustrator or
+Microsoft Word and are available for use in the :ref:`Marketing section
+<marketing>` of the Dash Documentation. It is important to view the
+finished English layout during translation in order to understand the
+context of the text you are translating. For example, many words should
+be translated differently depending if they are a heading, a sentence or
+an item in a diagram.
 
+Because these proprietary file formats are not easily handled by
+Transifex, the language content is exported to a text or Microsoft Excel
+file and uploaded to Transifex for processing. If you translate Dash
+Graphics, please send an email to leon.white@dash.org or @strophy on
+`Discord <http://dashchat.org>`_ when you are finished to request layout
+in the visual design.
 
 Dash iOS Wallet
 ===============
 
 https://www.transifex.com/dash/dash-ios-wallet
 
+All language content from the :ref:`Dash iOS Wallet <dash-ios-wallet>`
+are available for translation in this project. Please have a device
+running the iOS wallet available during translation to understand the
+context of the text you are translating. Note that any placeholders in
+the source text segment must also appear in the target language, similar
+to the instructions above for Dash Core Wallet.
+
 Dash Android Wallet
 ===================
 
 https://www.transifex.com/dash/dash-wallet
+
+All language content from the :ref:`Dash Android Wallet <dash-android-
+wallet>` are available for translation in this project. Please have a
+device running the Android wallet available during translation to
+understand the context of the text you are translating. Note that any
+placeholders in the source text segment must also appear in the target
+language, similar to the instructions above for Dash Core Wallet.
 
 Dash Videos
 ===========
 
 https://www.transifex.com/dash/dash-videos
 
+This section primarily contains language content from Amanda B.
+Johnson's popular `Dash School <https://www.youtube.com/watch?v=e7UwwcCK
+j4Y&list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod>`_ video series. Please
+translate with the videos open in YouTube to properly understand the
+context of the source text. Once your translation is complete, please
+send an email to leon.white@dash.org or @strophy on `Discord
+<http://dashchat.org>`_ to request inclusion of the subtitles on
+YouTube.
+
 Dash Website
 ============
 
 https://www.transifex.com/dash/dash-website
 
+The Dash website at https://www.dash.org is available for translation in
+Transifex. Technical problems are currently preventing the ability to
+import translations from Transifex, so please do not translate this
+project yet.
