@@ -107,6 +107,14 @@ must be reproduced in the target language as follows:
 
 
 Inline literals
+  **Source:** ``Type ``./dash-qt`` to run the file.``
+
+  **Source:** ``Type ``./dash-qt `` to run the file.``
+
+  **Source:** r"""\`\`Type \`\`./dash-qt\`\` to run the file."""
+
+  **Source:** """\\`\\`Type \`\`./dash-qt\`\` to run the file."""
+
   **Source:** ``Type ``./dash-qt `` to run the file.``
 
   **Target:** ``Escriba `` ./dash-qt `` para correr el archivo.``
@@ -133,7 +141,7 @@ External hyperlinks
   también proporciona una lista de las principales Casas de cambio o
   Exchanges que ofrecen Dash.``
 
-  A hyperlink consists of a backtick `````, followed by some text which
+  A hyperlink consists of a single backtick `````, followed by some text which
   must be translated, followed by angle brackets with the link target
   ``< >``, followed by another backtick and an underscore ```_``.
   Translate the text, but do not translate the hyperlink (unless you
