@@ -11,7 +11,6 @@ writers interested in Dash.
 
 .. toctree::
    :maxdepth: 1
-   :hidden:
 
    translating.rst
    compiling.rst

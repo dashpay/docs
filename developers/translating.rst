@@ -1,8 +1,8 @@
 .. _translating-dash:
 
-===========
-Translating
-===========
+================
+Translating Dash
+================
 
 Translations of all Dash products are managed courtesty of Transifex,
 which offers detailed documentation of all functions and features.
