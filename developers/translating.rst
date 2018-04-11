@@ -105,6 +105,10 @@ and built using the open-source `Sphinx Documentation Generator
 no markup or code marks at all, but hyperlinks and certain formatting
 must be reproduced in the target language as follows:
 
+r"""\`\`Type \`\`./dash-qt\`\` to run the file."""
+"""\\`\\`Type \`\`./dash-qt\`\` to run the file."""
+
+
 
 Inline literals
   **Source:** ``Type ``./dash-qt`` to run the file.``
