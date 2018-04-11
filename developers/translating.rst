@@ -105,46 +105,30 @@ and built using the open-source `Sphinx Documentation Generator
 no markup or code marks at all, but hyperlinks and certain formatting
 must be reproduced in the target language as follows:
 
-r"""\`\`Type \`\`./dash-qt\`\` to run the file."""
-
-"""\\`\\`Type \`\`./dash-qt\`\` to run the file."""
-
-``Type ``./dash-qt```` ``to run the file.``
-
-
-
 Inline literals
-  **Source:** ``Type ``./dash-qt`` to run the file.``
+  **Source:** Type \`\`./dash-qt\`\` to run the file.
 
-  **Source:** ``Type ``./dash-qt `` to run the file.``
-
-  **Source:** r"""\`\`Type \`\`./dash-qt\`\` to run the file."""
-
-  **Source:** """\\`\\`Type \`\`./dash-qt\`\` to run the file."""
-
-  **Source:** ``Type ``./dash-qt `` to run the file.``
-
-  **Target:** ``Escriba `` ./dash-qt `` para correr el archivo.``
+  **Target:** Escriba \`\`./dash-qt\`\` para correr el archivo.
   
   Note that two backticks `````` before and after a word or phrase will
   cause that text to appear as an ``inline literal``. This is commonly
   used to highlight code or commands to be typed by the user.
 
 Bold and italic  
-  **Source:** ``To encrypt your wallet, click \*\*Settings\*\* >
-  \*\*Encrypt\*\* wallet.``
+  **Source:** ``To encrypt your wallet, click **Settings** >
+  **Encrypt** wallet.``
 
   **Target:** ``Para encriptar su billetera, haga click en
-  \*\*Settings\*\* > \*\*Encrypt\*\* billetera.``
+  **Settings** > **Encrypt** billetera.``
 
   A single ``*`` before and after a word or phrase will render it in an
   *italic* font, while a double ``**`` will render it in **bold**.
 
 External hyperlinks
-  **Source:** ``The \`official Dash website <https://www.dash.org>\`_ also
+  **Source:** ``The `official Dash website <https://www.dash.org>`_ also
   provides a list of major exchanges offering Dash.``
 
-  **Target:** ``El \`sitio web oficial de Dash <https://www.dash.org>\`_
+  **Target:** ``El `sitio web oficial de Dash <https://www.dash.org>`_
   también proporciona una lista de las principales Casas de cambio o
   Exchanges que ofrecen Dash.``
 
