@@ -399,6 +399,18 @@ Coinsquare
   Coinsquare is a Canadian exchange offering DASH trading against BTC
   and CAD.
 
+Lykke
+  .. image:: exchanges/lykke.png
+     :width: 200px
+     :align: right
+     :target: https://www.lykke.com/
+
+  https://www.lykke.com/
+
+  Incorporated in Switzerland, Lykke is an open source exchange,
+  online/mobile wallet service, idea accelerator and ICO platform. DASH
+  is available for both trading and investment.
+
 Quoinex
   .. image:: exchanges/quoinex.png
      :width: 200px
