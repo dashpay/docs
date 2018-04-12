@@ -191,7 +191,6 @@ BIP70 for scan-to-pay
   add further verification and security features when scanning QR codes.
 
 Look up wallet names
-  
   Enables use of `DNSSEC <https://en.wikipedia.org/wiki/Domain_Name_Syst
   em_Security_Extensions>`_ to attempt to identify a wallet name when
   creating transactions.
