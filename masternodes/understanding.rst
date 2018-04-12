@@ -73,11 +73,14 @@ hosted on `over 100 ISPs
 reward is approximately 3.34 Dash, so the selected masternode receives
 1.67 Dash per payment or approximately 6 Dash per month. The block
 reward decreases by 7.14% approximately once per year, so the annual
-return on investment (ROI) to a masternode owner is currently under 8%
-and will decrease over time. See `this tool <https://dash-
-news.de/dashtv/#value=1000>`_ to calculate real-time ROI rates, and
-`this site <http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for
-various real-time statistics on the masternode network.
+return on investment (ROI) to a masternode owner is approximately 7% and
+will decrease over time `as calculated here
+<https://docs.google.com/spreadsheets/d
+/1HqgEkyfZDAA6pIZ3df2PwFE8Z430SVIzQ-mCQ6wGCh4/edit#gid=523620673>`_. See
+`this tool <https://dash- news.de/dashtv/#value=1000>`_ to calculate
+real-time ROI rates, and `this site
+<http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various real-time
+statistics on the masternode network.
 
 Masternodes vs. mining
 ======================
