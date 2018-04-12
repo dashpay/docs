@@ -201,6 +201,18 @@ YoBit
   YoBit is an exchange focusing on Ethereum tokens, but also supports
   BTC, USD and RUB trading pairs for DASH.
 
+Chaoex
+  .. image:: exchanges/chaoex.png
+     :width: 200px
+     :align: right
+     :target: https://www.chaoex.com
+
+  https://www.chaoex.com
+
+  Based in Hong Kong and available in English and Traditional Chinese,
+  Chaoex is a pure crypto exchange offering trading with a focus on new
+  assets and supports mobile apps for both Android and iOS.
+
 Bit-Z
   .. image:: exchanges/bit-z.png
      :width: 200px
