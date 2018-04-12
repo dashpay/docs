@@ -63,7 +63,8 @@ paste it in another app to send it to a person paying you remotely. You
 will receive a notification when the transfer occurs, and you can view
 the confirmation status on the main screen and the balance in the top
 right corner. Dash Wallet for Android considers a transaction spendable
-after 6 block confirmations have taken place (approx. 15 minutes).
+after 1 block confirmations has taken place (approx. 2.5 minutes), or 6
+block confirmations if you want to generate InstantSend transactions.
 
 .. image:: img/android-receive1.png
     :width: 160 px
