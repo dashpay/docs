@@ -22,13 +22,13 @@ can install the app manually by first enabling installation of external
 sources (if you have not already done so) and then downloading and
 installing an APK file. Follow these instructions:
 
-#. Ensure your Android version is at least 4.0.3 by going to Settings →
-   About phone and checking the version number.
-#. Enable Unknown sources by going to Settings → Security → Unknown
-   sources. Read and accept the warning.
+#. Ensure your Android version is at least 4.0.3 by going to **Settings
+   → About phone** and checking the version number.
+#. Enable Unknown sources by going to **Settings → Security → Unknown
+   sources**. Read and accept the warning.
 #. Using your phone, download the latest version of the APK from `this
-   link <https://github.com/HashEngineering/dash-wallet/releases/latest>`_. 
-   At the time of writing, this was 5.17.5.
+   link <https://github.com/HashEngineering/dash-
+   wallet/releases/latest>`_.  At the time of writing, this was 5.17.5.
 #. If you cannot use your phone to go online, download the APK using
    your PC instead and copy it to your phone using a cable or Bluetooth.
    You may need a file browser to find the copied file. `ES File
@@ -37,19 +37,20 @@ installing an APK file. Follow these instructions:
 You can also install an apk file directly from your computer using the
 Android Debug Bridge (ADB). Follow these instructions:
 
-#. Ensure your Android version is at least 4.0.3 by going to Settings →
-   About phone and checking the version number.
+#. Ensure your Android version is at least 4.0.3 by going to **Settings
+   → About phone** and checking the version number.
 #. Ensure you have a copy of ADB on your PC. This is included in the
-   Android `SDK Platform
-   Tools <https://developer.android.com/studio/releases/platform-tools.html>`_
+   Android `SDK Platform Tools
+   <https://developer.android.com/studio/releases/platform-tools.html>`_
    for Mac, Windows or Linux.
-#. Enable Unknown sources by going to Settings → Security → Unknown
-   sources. Read and accept the warning.
-#. Enable USB debugging by going to Settings → Developer options → USB
-   debugging. If Developer options is not available, go to About phone
-   instead, scroll down, and tap on the Build number seven times.
-#. Using your PC, download the latest version of the APK from `this
-   link <https://github.com/HashEngineering/dash-wallet/releases/latest>`_. 
+#. Enable Unknown sources by going to **Settings → Security → Unknown
+   sources**. Read and accept the warning.
+#. Enable USB debugging by going to **Settings → Developer options → USB
+   debugging**. If **Developer options** is not available, go to **About
+   phone** instead, scroll down, and tap on the **Build number** seven
+   times.
+#. Using your PC, download the latest version of the APK from `this link
+   <https://github.com/HashEngineering/dash-wallet/releases/latest>`_.
    At the time of writing, this was 5.17.5.
 #. Connect your phone to the PC, open a terminal/command prompt window
    and type::
