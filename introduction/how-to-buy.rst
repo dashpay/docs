@@ -915,6 +915,18 @@ Bitit
   cryptocurrencies for sale online. Payment in a range of currencies is
   support using both direct banking, credit cards and couchers.
 
+Coinfinity
+  ..image:: exchanges/coinfinity.png
+     :width: 200px
+     :align: right
+     :target: https://coinfinity.co
+
+  https://coinfinity.co
+
+  Coinfinity offers Dash and Bitcoin broker services in Austria and
+  Germany, as well as through their coupon-based `Bitcoinbon
+  <https://www.bitcoinbon.at/>`_ service.
+
 Mercury Cash
   .. image:: exchanges/mercury.png
      :width: 200px
