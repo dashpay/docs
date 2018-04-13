@@ -434,6 +434,17 @@ Bitcoin.vn
   Bitcoin.vn is a Vietnamese exchange offering BTC, BCH, LTC and DASH
   for trading against Vietnamese đồng.
 
+Coinfield
+  .. image:: exchanges/coinfield.png
+     :width: 200px
+     :align: right
+     :target: https://www.coinfield.com
+
+  https://www.coinfield.com
+
+  Coinfield is a Canadian exchange offering funding in CAD and quick
+  market purchases or advanced trading against DASH.
+
 Bitshares
   .. image:: exchanges/bitshares.png
      :width: 200px
