@@ -16,7 +16,6 @@ information. Please exercise discretion when using third-party services.
 https://www.coinpayments.net
 https://gourl.io/
 https://www.paybear.io
-https://www.blockpay.ch
 https://gocoin.com
 https://woocommerce.com
 https://github.com/dashpay/bitcore-node-dash

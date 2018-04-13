@@ -473,34 +473,50 @@ the latest Dash Core wallet. Click **Linux**, then right-click on
 **Download TGZ** for **Dash Core Linux 64 Bit** and select **Copy link
 address**. Go back to your terminal window and enter the following
 command, pasting in the address to the latest version of Dash Core
-(0.12.2.2 in the example) by right clicking or pressing **Ctrl + V**::
+(0.12.2.3 in the example) by right clicking or pressing **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.12.2.2/dashcore-0.12.2.2-linux64.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.12.2.3/dashcore-0.12.2.3-linux64.tar.gz
 
-Verify the integrity of your download by running the following command
-and comparing the output against the value for the file as shown on the
-Dash website under **Hash File**::
+You can optionally verify the integrity of your download by running the
+following command and comparing the output against the value for the
+file as shown on the Dash website under **Hash File**::
 
-  sha256sum dashcore-0.12.2.2-linux64.tar.gz
+  sha256sum dashcore-0.12.2.3-linux64.tar.gz
 
 .. figure:: img/setup-manual-download.png
    :width: 250px
 
    Link to the hash file to verify download integrity
 
+You can also optionally verify the authenticity of your download as an
+official release by Dash Core Team. All releases of Dash are signed
+using GPG by Holger Schinzel with the key `BD8DF332`, `visible here on
+Keybase <https://keybase.io/schinzelh>`_. Import the key, download the
+ASC file for the current release of Dash and verify the signature as
+follows::
+
+  curl https://keybase.io/schinzelh/pgp_keys.asc | gpg --import
+  wget https://github.com/dashpay/dash/releases/download/v0.12.2.3/dashcore-0.12.2.3-linux64.tar.gz.asc
+  gpg --verify dashcore-0.12.2.3-linux64.tar.gz.asc
+
+.. figure:: img/setup-manual-gpg.png
+   :width: 400px
+
+   Downloading the PGP key and verifying the signed binary
+
 Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
   mkdir .dashcore
-  tar xfvz dashcore-0.12.2.2-linux64.tar.gz
+  tar xfvz dashcore-0.12.2.3-linux64.tar.gz
   cp dashcore-0.12.2/bin/dashd .dashcore/
   cp dashcore-0.12.2/bin/dash-cli .dashcore/
   chmod 777 .dashcore/dash*
 
 Clean up unneeded files::
 
-  rm dashcore-0.12.2.2-linux64.tar.gz
+  rm dashcore-0.12.2.3-linux64.tar.gz
   rm -r dashcore-0.12.2/
 
 Create a configuration file using the following command::
