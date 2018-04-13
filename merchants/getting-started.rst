@@ -13,3 +13,4 @@ require some customisation.
 
    administrative.rst
    technical.rst
+   payment-processors.rst

@@ -177,12 +177,13 @@ Dash Android Wallet
 
 https://www.transifex.com/dash/dash-wallet
 
-All language content from the :ref:`Dash Android Wallet <dash-android-
-wallet>` are available for translation in this project. Please have a
-device running the Android wallet available during translation to
-understand the context of the text you are translating. Note that any
-placeholders in the source text segment must also appear in the target
-language, similar to the instructions above for Dash Core Wallet.
+All language content from the 
+:ref:`Dash Android Wallet <dash-android-wallet>` are available for
+translation in this project. Please have a device running the Android
+wallet available during translation to understand the context of the
+text you are translating. Note that any placeholders in the source text
+segment must also appear in the target language, similar to the
+instructions above for Dash Core Wallet.
 
 Dash Videos
 ===========

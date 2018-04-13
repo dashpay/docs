@@ -159,71 +159,7 @@ Run the compilation script::
 
 Your system will build all dependencies and Dash Core from scratch for
 Windows and Linux platforms (macOS if the dependencies were installed
-according to these instructions). This can take some time. When
-complete, you will see the SHA256 checksums, which you can compare
-against the hashes available on the `Dash website
-<https://www.dash.org/wallets>`_. In this way, you can be sure that you
-are running original and untampered builds of the code as it exists on
-Github./etc/rc.local
-  echo 'brctl addbr br0' >> /etc/rc.local
-  echo 'ifconfig br0 10.0.3.2/24 up' >> /etc/rc.local
-  echo 'iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE' >> /etc/rc.local
-  echo 'echo 1 > /proc/sys/net/ipv4/ip_forward' >> /etc/rc.local
-  echo 'exit 0' >> /etc/rc.local
-  # make sure that USE_LXC is always set when logging in as gitianuser,
-  # and configure LXC IP addresses
-  echo 'export USE_LXC=1' >> /home/gitianuser/.profile
-  echo 'export GITIAN_HOST_IP=10.0.3.2' >> /home/gitianuser/.profile
-  echo 'export LXC_GUEST_IP=10.0.3.5' >> /home/gitianuser/.profile
-  reboot
-
-At the end Debian is rebooted to make sure that the changes take effect.
-Re-login as the user gitianuser that was created during installation.
-The rest of the steps in this guide will be performed as that user.
-
-There is no ``python-vm-builder`` package in Debian, so we need to
-install it from source ourselves::
-
-  wget http://archive.ubuntu.com/ubuntu/pool/universe/v/vm-builder/vm-builder_0.12.4+bzr494.orig.tar.gz
-  echo "76cbf8c52c391160b2641e7120dbade5afded713afaa6032f733a261f13e6a8e  vm-builder_0.12.4+bzr494.orig.tar.gz" | sha256sum -c
-  # (verification -- must return OK)
-  tar -zxvf vm-builder_0.12.4+bzr494.orig.tar.gz
-  cd vm-builder-0.12.4+bzr494
-  sudo python setup.py install
-  cd ..
-
-Set up the environment and compile
-----------------------------------
-
-Clone the Dash Core repository to your home directory::
-
-  git clone https://github.com/dashpay/dash.git
-
-Then create the script file::
-
-  nano dash/contrib/gitian-build.sh
-
-And paste the following script in place (this will be automatic if/when
-the script is pulled into Dash Core)::
-
-  https://github.com/strophy/dash/blob/master/contrib/gitian-build.sh
-
-Save the file and set it executable::
-
-  sudo chmod +x dash/contrib/gitian-build.sh
-
-Set up the environment, replacing the name and version with your name
-and target version::
-
-  dash/contrib/gitian-build.sh --setup strophy 0.12.1.5
-
-Run the compilation script::
-
-  dash/contrib/gitian-build.sh --build strophy 0.12.1.5
-
-Your system will build all dependencies and Dash Core from scratch for
-Windows and Linux platforms (macOS if the dependencies were installed
-according to these instructions). This can take some time. When
+according to `these instructions <https://github.com/dashpay/dash/blob/master/doc/build-osx.md>`_). This can take some time. When
 complete, you will see the SHA256 checksums, which you can compare
 against the hashes available on the `Dash website
 <https://www.dash.org/wallets>`_. In this way, you can be sure that you
