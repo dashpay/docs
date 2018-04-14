@@ -300,25 +300,27 @@ Cards
 High resolution cards for printing. Great for use as the back of
 business cards, or to hand out to explain and promote Dash.
 
-+--------------+----------------------------------------------------------------------------------------------------------+
-| Name         | Download version                                                                                         |
-+==============+==========================================================================================================+
-| Handout Card | `English <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-EN.pdf>`_                 |
-+              +----------------------------------------------+-----------------------------------------------------------+
-|              | `Chinese (Simplified) <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-ZH.pdf>`_    |
-+              +----------------------------------------------------------------------------------------------------------+
-|              | `Czech <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-CS.pdf>`_                   |
-+              +----------------------------------------------------------------------------------------------------------+
-|              | `French <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-FR.pdf>`_                  |
-+              +----------------------------------------------------------------------------------------------------------+
-|              | `Polish <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-PL.pdf>`_                  |
-+              +----------------------------------------------------------------------------------------------------------+
-|              | `Portuguese <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-PT.pdf>`_              |
-+              +----------------------------------------------------------------------------------------------------------+
-|              | `Russian <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-RU.pdf>`_                 |
-+              +----------------------------------------------------------------------------------------------------------+
-|              | `Spanish <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-ES.pdf>`_                 |
-+--------------+----------------------------------------------------------------------------------------------------------+
++--------------+-------------------------------------------------------------------------------------------------------+
+| Name         | Download version                                                                                      |
++==============+=======================================================================================================+
+| Handout Card | `English <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-EN.pdf>`_              |
++              +-------------------------------------------------------------------------------------------------------+
+|              | `Arabic <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-AR.pdf>`_               |
++              +-------------------------------------------------------------------------------------------------------+
+|              | `Chinese (Simplified) <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-ZH.pdf>`_ |
++              +-------------------------------------------------------------------------------------------------------+
+|              | `Czech <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-CS.pdf>`_                |
++              +-------------------------------------------------------------------------------------------------------+
+|              | `French <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-FR.pdf>`_               |
++              +-------------------------------------------------------------------------------------------------------+
+|              | `Polish <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-PL.pdf>`_               |
++              +-------------------------------------------------------------------------------------------------------+
+|              | `Portuguese <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-PT.pdf>`_           |
++              +-------------------------------------------------------------------------------------------------------+
+|              | `Russian <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-RU.pdf>`_              |
++              +-------------------------------------------------------------------------------------------------------+
+|              | `Spanish <https://github.com/dashpay/docs/raw/master/binary/cards/Handout-Card-ES.pdf>`_              |
++--------------+-------------------------------------------------------------------------------------------------------+
 
 Fonts
 -----
