@@ -77,10 +77,11 @@ available version of `Dash Core on the website
 Update Dash Core to the latest version according to the
 :ref:`installation instructions <dashcore-installation>`. If you have
 only a wallet file and no existing installation of Dash Core, simply
-install Dash Core according to the instructions here and start it once
-to create the DashCore folder. Then close Dash Core and copy the
-*wallet.dat* file you want to restore to the DashCore folder in the
-location specified below, replacing or renaming the existing file.
+install Dash Core according to the :ref:`installation instructions
+<dashcore-installation>` and start it once to create the DashCore
+folder. Then close Dash Core and copy the *wallet.dat* file you want to
+restore to the DashCore folder in the location specified below,
+replacing or renaming the existing file.
 
 +----------+--------------------------------+-----------------------------------------------------------------------------------------------+
 | Platform | Path to data folder            | How to navigate                                                                               |
