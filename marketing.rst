@@ -46,26 +46,26 @@ translation is complete to request layout of the completed translation.
 +------------+--------------------------------------------------------------------------------------------------+
 | Language   | Download                                                                                         |
 +============+==================================================================================================+
-| English    | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-EN.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-EN.docx>`__ |
+| English    | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-EN.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-EN.docx>`__ |
 +------------+--------------------------------------------------------------------------------------------------+
-| Arabic     | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-AR.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-AR.docx>`__ |
+| Arabic     | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-AR.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-AR.docx>`__ |
 +------------+--------------------------------------------------------------------------------------------------+
-| Czech      | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-CS.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-CS.docx>`__ |
+| Czech      | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-CS.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-CS.docx>`__ |
 +------------+--------------------------------------------------------------------------------------------------+
-| Dutch      | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-NL.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-NL.docx>`__ |
+| Dutch      | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-NL.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-NL.docx>`__ |
 +------------+--------------------------------------------------------------------------------------------------+
-| Russian    | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-RU.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-RU.docx>`__ |
+| Russian    | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-RU.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-RU.docx>`__ |
 +------------+--------------------------------------------------------------------------------------------------+
-| Slovak     | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-SK.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-SK.docx>`__ |
+| Slovak     | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-SK.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-SK.docx>`__ |
 +------------+--------------------------------------------------------------------------------------------------+
-| Vietnamese | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-VI.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v3.0-VI.docx>`__ |
+| Vietnamese | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-VI.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-VI.docx>`__ |
 +------------+--------------------------------------------------------------------------------------------------+
 
 Previous versions (English only):
@@ -73,11 +73,11 @@ Previous versions (English only):
 +----------+-----------------------------------------------------------------------------------------------+
 | Version  | Download                                                                                      |
 +==========+===============================================================================================+
-| 2.0      | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v2.0.pdf>`__   |
-|          | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v2.0.docx>`__ |
+| 2.0      | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v2.0.pdf>`__   |
+|          | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v2.0.docx>`__ |
 +----------+-----------------------------------------------------------------------------------------------+
-| 1.0      | `PDF <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v1.0.pdf>`__   |
-|          | `DOCX <https://github.com/dashpay/docs/raw/master/binary/templates/Dash-Handout-v1.0.docx>`__ |
+| 1.0      | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v1.0.pdf>`__   |
+|          | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v1.0.docx>`__ |
 +----------+-----------------------------------------------------------------------------------------------+
 
 
@@ -261,8 +261,8 @@ embassy.org>`__.
 Business Templates
 ==================
 
-Paper templates
----------------
+Document templates
+------------------
 
 Official Dash document templates.
 
