@@ -9,20 +9,18 @@ Features
 Specifications
 ==============
 
--  First block mined at 11PM EST, 18th January 2014
--  No premine
--  X11 hashing algorithm
--  2.6 minute block generation time
--  Block reward decreases by 7.14% per year
--  CPU/GPU/ASIC mining
--  Dark Gravity Wave difficulty adjustment algorithm
--  Between 17.74M and 18.92M total coin supply
--  Decentralized masternode network
--  Superior transaction anonymity using PrivateSend
--  Instant transactions using InstantSend
--  Two-tier network using masternodes to form the second tier
--  Decentralized Governance By Blockchain allows masternode owners to
-   vote on budget proposals and decisions that affect Dash
+- First block mined at 11PM EST, 18th January 2014
+- No premine
+- X11 hashing algorithm, CPU/GPU/ASIC mining available
+- 2.6 minute block time, 2MB blocks, ~56 transactions per second
+- Block reward decreases by 7.14% per year
+- Dark Gravity Wave difficulty adjustment algorithm
+- Between 17.74M and 18.92M total coin supply
+- Decentralized second-tier masternode network
+- Superior transaction anonymity using PrivateSend
+- Instant transactions using InstantSend
+- Decentralized Governance By Blockchain allows masternode owners to
+  vote on budget proposals and decisions that affect Dash
 
 
 .. _masternode-network:
