@@ -13,12 +13,22 @@ Official sites
 --------------
 
 - **Website:** https://www.dash.org
-- **User documentation:** https://www.dash.org/wiki
+- **User documentation:** https://docs.dash.org
 - **Protocol documentation:** https://dash-docs.github.io
 - **Foundation:** https://www.dashfoundation.io
 - **GitHub:** https://github.com/dashpay
 - **GitHub (Evolution):** https://github.com/dashevo
 
+Community sites
+---------------
+
+- https://www.dashwatch.org
+- https://www.dashboost.org
+- https://www.dashcentral.org
+- https://www.dashninja.pl
+- https://www.dashforcenews.com
+- https://dashvotetracker.com
+- http://dashchat.org/
 
 Forums
 ------
