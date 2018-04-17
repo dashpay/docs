@@ -74,6 +74,8 @@ interest.
    :caption: Merchants
 
    merchants/getting-started
+   merchants/administrative
+   merchants/technical
    merchants/payment-processors
 
 .. _network-docs:

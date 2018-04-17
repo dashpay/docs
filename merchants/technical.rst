@@ -130,15 +130,32 @@ Bitcore
 
   https://bitcore.io
 
+  Bitcore is a full Dash node — your apps run directly on the 
+  peer-to-peer network. For wallet application development, additional
+  indexes have been added into Dash for querying address balances,
+  transaction history, and unspent outputs.
+
   - Platform: NodeJS / Javascript
   - Documentation: https://bitcore.io/api/lib
   - Repository: https://github.com/dashevo/bitcore-lib-dash
 
 
 DashJ
-Platform: Java
-Documentation: https://bitcoinj.github.io/getting-started 
-Link: https://github.com/HashEngineering/dashj 
+  .. image:: img/bitcoinj.png
+     :width: 200px
+     :align: right
+     :target: https://github.com/HashEngineering/dashj 
+
+  https://github.com/HashEngineering/dashj 
+
+  dashj is a library for working with the Dash protocol. It can maintain
+  a wallet, send/receive transactions without needing a local copy of
+  Dash Core and has many other advanced features. It's implemented in
+  Java but can be used from any JVM compatible language: examples in
+  Python and JavaScript are included.
+
+  - Platform: Java
+  - Documentation: https://bitcoinj.github.io/getting-started 
 
 
 NBitcoin
