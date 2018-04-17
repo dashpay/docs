@@ -97,9 +97,9 @@ SpectroCoin
 
   https://spectrocoin.com
 
-  Spectrocoin offers an exchange, wallet and POS service 
-  Dash, Bitcoin and Ethereum are supported, as well as over 20 major
-  fiat currencies.
+  Spectrocoin offers an exchange, wallet and POS service, with a
+  physical card potentially available again soon. Dash, Bitcoin and
+  Ethereum are supported, as well as over 20 major fiat currencies.
 
 Bitwala
   .. image:: img/bitwala.png
