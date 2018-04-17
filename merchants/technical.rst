@@ -29,6 +29,7 @@ features. The following list of API Providers attempts to outline these
 key features/differentiators and also includes a link to related
 documentation.
 
+
 Insight API
   .. image:: img/insight.png
      :width: 200px
@@ -44,6 +45,7 @@ Insight API
   - Features: Transaction Broadcast, WebSocket Notifications.
   - Pricing Model: Free / Open Source
   - Documentation: https://github.com/dashevo/insight-api
+
 
 BlockCypher API
   .. image:: img/blockcypher.png
@@ -63,6 +65,7 @@ BlockCypher API
   - Pricing Model: Per API Call, 5000 Requests -> $85.00 per month
     (https://accounts.blockcypher.com/plans)
   - Documentation: https://www.blockcypher.com/dev/dash/
+
 
 GoCoin API
   .. image:: img/gocoin.png
@@ -85,6 +88,7 @@ GoCoin API
   OpenCart, OSCommerce, UberCart, nopCommerce, WHMCS, NATS4, Shopify.
 - Pricing Model: 1% Processing Fee (https://gocoin.com/fees)
 - Documentation: https://gocoin.com/docs
+
 
 CoinPayments API
   .. image:: img/coinpayments.png
@@ -117,6 +121,7 @@ SDKs (Software Development Kits) are used to accelerate the design and
 development of a product for the Dash Network. These resources can
 either be used to interface with an API provider or for the creation of
 standalone applications.
+
 
 Dash Developer Guide
   Documentation: https://dash-docs.github.io/en/developer-guide
@@ -159,16 +164,43 @@ DashJ
 
 
 NBitcoin
-Platform: .NET
-Documentation: https://programmingblockchain.gitbooks.io/programmingblockchain/content/ 
-Repository: https://github.com/MetacoSA/NBitcoin
+  .. image:: img/bitcoinj.png
+     :width: 200px
+     :align: right
+     :target: https://github
+
+  NBitcoin is the most complete Dash library for the .NET platform. It
+  implements all most relevant Bitcoin Improvement Proposals (BIPs) and
+  Dash Improvement Proposals (DIPs). It also provides low level access
+  to Dash primitives so you can easily build your application on top of
+  it.
+
+  - Platform: .NET
+  - Documentation: https://programmingblockchain.gitbooks.io/programmingblockchain/content/ 
+  - Repository: https://github.com/MetacoSA/NBitcoin
 
 
 BlockCypher SDK
-Platform: Ruby, Python, Java, PHP, Go, NodeJS
-Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-supported-language-sdks 
+  .. image:: img/blockcypher.png
+     :width: 200px
+     :align: right
+     :target:  https://www.blockcypher.com
+  
+  https://www.blockcypher.com
+
+  BlockCypher also offers client SDKs.
+
+  - Platform: Ruby, Python, Java, PHP, Go, NodeJS
+  - Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-supported-language-sdks 
 
 
 GoCoin SDK
-Platform: JavaScript, PHP, Java, Ruby, .NET, Python
-Repositories: https://gocoin.com/docs 
+  .. image:: img/gocoin.png
+     :width: 200px
+     :align: right
+     :target: https://gocoin.com
+  
+  https://gocoin.com
+
+  - Platform: JavaScript, PHP, Java, Ruby, .NET, Python
+  - Repositories: https://gocoin.com/docs 
