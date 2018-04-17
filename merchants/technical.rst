@@ -15,6 +15,10 @@ the Dash network for services including:
 API Services
 ============
 
+This documentation is also available as a `PDF
+<https://github.com/dashpay/docs/raw/master/binary/merchants
+/Integration-Resources-API.pdf`_.
+
 API Services are typically leveraged to eliminate that requirement of
 running your own infrastructure to support blockchain interactions. This
 includes mechanisms such as:
@@ -124,6 +128,10 @@ or integrate with your pre-existing checkout.
 
 SDK Resources
 =============
+
+This documentation is also available as a `PDF
+<https://github.com/dashpay/docs/raw/master/binary/merchants
+/Integration-Resources-SDK.pdf`_.
 
 SDKs (Software Development Kits) are used to accelerate the design and
 development of a product for the Dash Network. These resources can
@@ -243,6 +251,10 @@ https://gocoin.com
 
 InstantSend
 ===========
+
+This documentation is also available as a `PDF
+<https://github.com/dashpay/docs/raw/master/binary/merchants
+/Integration-Resources-InstantSend.pdf`_.
 
 InstantSend is a feature provided by the Dash network that allows for
 0-confirmation transactions to be safely accepted by Merchants and other
