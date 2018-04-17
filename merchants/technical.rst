@@ -200,11 +200,11 @@ NBitcoin
 
 https://github.com/MetacoSA/NBitcoin
 
-NBitcoin is the most complete Dash library for the .NET platform. It
-implements all most relevant Bitcoin Improvement Proposals (BIPs) and
-Dash Improvement Proposals (DIPs). It also provides low level access
-to Dash primitives so you can easily build your application on top of
-it.
+NBitcoin is the most complete Bitcoin library for the .NET platform, and
+has been patched to include support for Dash. It implements all most
+relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement
+Proposals (DIPs). It also provides low level access to Dash primitives
+so you can easily build your application on top of it.
 
 - Platform: .NET
 - Documentation: https://programmingblockchain.gitbooks.io/programmingblockchain/content/ 
