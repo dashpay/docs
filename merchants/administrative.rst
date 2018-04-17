@@ -1,9 +1,7 @@
-.. _onboarding:
+.. _administrative:
 
 ==================
-Onboarding
+Administrative
 ==================
 
-Dash welcomes new and existing merchants and supports integration
-through a standardised onboarding process. Larger integrations may
-require some customisation.
+It's easy to get started 
