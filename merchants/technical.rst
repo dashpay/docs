@@ -30,88 +30,96 @@ key features/differentiators and also includes a link to related
 documentation.
 
 
-Insight API
-  .. image:: img/insight.png
-     :width: 200px
-     :align: right
-     :target: https://github.com/dashevo/insight-api
-  
-  https://github.com/dashevo/insight-api
+Insight
+-------
 
-  The open-source Insight REST API provides you with a convenient,
-  powerful and simple way to read data from the Dash network and build
-  your own services with it.
+.. image:: img/insight.png
+   :width: 200px
+   :align: right
+   :target: https://github.com/dashevo/insight-api
 
-  - Features: Transaction Broadcast, WebSocket Notifications.
-  - Pricing Model: Free / Open Source
-  - Documentation: https://github.com/dashevo/insight-api
+https://github.com/dashevo/insight-api
 
+The open-source Insight REST API provides you with a convenient,
+powerful and simple way to read data from the Dash network and build
+your own services with it.
 
-BlockCypher API
-  .. image:: img/blockcypher.png
-     :width: 200px
-     :align: right
-     :target:  https://www.blockcypher.com
-  
-  https://www.blockcypher.com
-
-  BlockCypher is a simple, mostly RESTful JSON API for interacting with
-  blockchains, accessed over HTTP or HTTPS from the api.blockcypher.com
-  domain.
-
-  - Features: Transaction Broadcast, HD Wallet / Address Generation,
-    WebSocket and WebHook Callbacks as well as Payment Forwarding.
-    BlockCypher does not handle Private Keys.
-  - Pricing Model: Per API Call, 5000 Requests -> $85.00 per month
-    (https://accounts.blockcypher.com/plans)
-  - Documentation: https://www.blockcypher.com/dev/dash/
+- Features: Transaction Broadcast, WebSocket Notifications.
+- Pricing Model: Free / Open Source
+- Documentation: https://github.com/dashevo/insight-api
 
 
-GoCoin API
-  .. image:: img/gocoin.png
-     :width: 200px
-     :align: right
-     :target: https://gocoin.com
-  
-  https://gocoin.com
+BlockCypher
+-----------
 
-  The GoCoin platform makes taking Dash as easy as installing a plugin.
-  Payment processing is already implemented for every major shopping
-  platform. GoCoin is focused on helping merchants in privacy-related
-  niches and specific industries, and handles all transaction risk for
-  all payments from your customers.
+.. image:: img/blockcypher.png
+   :width: 200px
+   :align: right
+   :target:  https://www.blockcypher.com
+
+https://www.blockcypher.com
+
+BlockCypher is a simple, mostly RESTful JSON API for interacting with
+blockchains, accessed over HTTP or HTTPS from the api.blockcypher.com
+domain.
+
+- Features: Transaction Broadcast, HD Wallet / Address Generation,
+  WebSocket and WebHook Callbacks as well as Payment Forwarding.
+  BlockCypher does not handle Private Keys.
+- Pricing Model: Per API Call, 5000 Requests -> $85.00 per month
+  (https://accounts.blockcypher.com/plans)
+- Documentation: https://www.blockcypher.com/dev/dash/
+
+
+GoCoin
+------
+
+.. image:: img/gocoin.png
+   :width: 200px
+   :align: right
+   :target: https://gocoin.com
+
+https://gocoin.com
+
+The GoCoin platform makes taking Dash as easy as installing a plugin.
+Payment processing is already implemented for every major shopping
+platform. GoCoin is focused on helping merchants in privacy-related
+niches and specific industries, and handles all transaction risk for
+all payments from your customers.
 
 - Features: Invoicing, Exchange Rates, WebHook Callbacks. GoCoin holds
-  Private Keys on their server allowing the merchant to withdraw funds
-  in Cryptocurrency or convert to Fiat.
+Private Keys on their server allowing the merchant to withdraw funds
+in Cryptocurrency or convert to Fiat.
 - Integrations: WooCommerce, Magento, Prestashop, VirtueMart, ZenCart,
-  OpenCart, OSCommerce, UberCart, nopCommerce, WHMCS, NATS4, Shopify.
+OpenCart, OSCommerce, UberCart, nopCommerce, WHMCS, NATS4, Shopify.
 - Pricing Model: 1% Processing Fee (https://gocoin.com/fees)
 - Documentation: https://gocoin.com/docs
 
 
-CoinPayments API
-  .. image:: img/coinpayments.png
-     :width: 200px
-     :align: right
-     :target: https://www.coinpayments.net
-  
-  https://www.coinpayments.net
+CoinPayments
+------------
 
-  CoinPayments is an integrated payment gateway for cryptocurrencies
-  such as Dash. Shopping cart plugins are available for all popular
-  webcarts used today. CoinPayments can help you set up a new checkout,
-  or integrate with your pre-existing checkout.
+.. image:: img/coinpayments.png
+   :width: 200px
+   :align: right
+   :target: https://www.coinpayments.net
 
-  - Features: Invoicing, Exchange Rates, WebHook Callbacks. CoinPayments
-    holds Private Keys on their server allowing merchant to withdraw
-    funds in Cryptocurrency or convert to Fiat.
-  - Integrations: aMember Pro, Arastta, Blesta, BoxBilling, Drupal,
-    Ecwid, Hikashop, Magento, OpenCart, OSCommerce, PrestaShop, Tomato
-    Cart, WooCommerce, Ubercart, XCart, ZenCart
-  - Pricing Model: 0.5% Processing Fee
-    (https://www.coinpayments.net/help- fees)
-  - Documentation: https://www.coinpayments.net/apidoc
+https://www.coinpayments.net
+
+CoinPayments is an integrated payment gateway for cryptocurrencies
+such as Dash. Shopping cart plugins are available for all popular
+webcarts used today. CoinPayments can help you set up a new checkout,
+or integrate with your pre-existing checkout.
+
+- Features: Invoicing, Exchange Rates, WebHook Callbacks. CoinPayments
+  holds Private Keys on their server allowing merchant to withdraw
+  funds in Cryptocurrency or convert to Fiat.
+- Integrations: aMember Pro, Arastta, Blesta, BoxBilling, Drupal,
+  Ecwid, Hikashop, Magento, OpenCart, OSCommerce, PrestaShop, Tomato
+  Cart, WooCommerce, Ubercart, XCart, ZenCart
+- Pricing Model: 0.5% Processing Fee
+  (https://www.coinpayments.net/help- fees)
+- Documentation: https://www.coinpayments.net/apidoc
 
 
 SDK Resources
@@ -128,82 +136,95 @@ Dash Developer Guide
 
 
 Bitcore
-  .. image:: img/bitcore.png
-     :width: 200px
-     :align: right
-     :target: https://bitcore.io
+-------
 
-  https://bitcore.io
+.. image:: img/bitcore.png
+   :width: 200px
+   :align: right
+   :target: https://bitcore.io
 
-  Bitcore is a full Dash node — your apps run directly on the 
-  peer-to-peer network. For wallet application development, additional
-  indexes have been added into Dash for querying address balances,
-  transaction history, and unspent outputs.
+https://bitcore.io
 
-  - Platform: NodeJS / Javascript
-  - Documentation: https://bitcore.io/api/lib
-  - Repository: https://github.com/dashevo/bitcore-lib-dash
+Bitcore is a full Dash node — your apps run directly on the 
+peer-to-peer network. For wallet application development, additional
+indexes have been added into Dash for querying address balances,
+transaction history, and unspent outputs.
+
+- Platform: NodeJS / Javascript
+- Documentation: https://bitcore.io/api/lib
+- Repository: https://github.com/dashevo/bitcore-lib-dash
 
 
 DashJ
-  .. image:: img/bitcoinj.png
-     :width: 200px
-     :align: right
-     :target: https://github.com/HashEngineering/dashj 
+-----
 
-  https://github.com/HashEngineering/dashj 
+.. image:: img/bitcoinj.png
+   :width: 200px
+   :align: right
+   :target: https://github.com/HashEngineering/dashj 
 
-  dashj is a library for working with the Dash protocol. It can maintain
-  a wallet, send/receive transactions without needing a local copy of
-  Dash Core and has many other advanced features. It's implemented in
-  Java but can be used from any JVM compatible language: examples in
-  Python and JavaScript are included.
+https://github.com/HashEngineering/dashj 
 
-  - Platform: Java
-  - Documentation: https://bitcoinj.github.io/getting-started 
+dashj is a library for working with the Dash protocol. It can maintain
+a wallet, send/receive transactions without needing a local copy of
+Dash Core and has many other advanced features. It's implemented in
+Java but can be used from any JVM compatible language: examples in
+Python and JavaScript are included.
+
+- Platform: Java
+- Documentation: https://bitcoinj.github.io/getting-started 
 
 
 NBitcoin
-  .. image:: img/bitcoinj.png
-     :width: 200px
-     :align: right
-     :target: https://github
+--------
 
-  NBitcoin is the most complete Dash library for the .NET platform. It
-  implements all most relevant Bitcoin Improvement Proposals (BIPs) and
-  Dash Improvement Proposals (DIPs). It also provides low level access
-  to Dash primitives so you can easily build your application on top of
-  it.
+.. image:: img/dash.png
+   :width: 200px
+   :align: right
+   :target: https://github.com/MetacoSA/NBitcoin
 
-  - Platform: .NET
-  - Documentation: https://programmingblockchain.gitbooks.io/programmingblockchain/content/ 
-  - Repository: https://github.com/MetacoSA/NBitcoin
+https://github.com/MetacoSA/NBitcoin
 
+NBitcoin is the most complete Dash library for the .NET platform. It
+implements all most relevant Bitcoin Improvement Proposals (BIPs) and
+Dash Improvement Proposals (DIPs). It also provides low level access
+to Dash primitives so you can easily build your application on top of
+it.
 
-BlockCypher SDK
-  .. image:: img/blockcypher.png
-     :width: 200px
-     :align: right
-     :target:  https://www.blockcypher.com
-  
-  https://www.blockcypher.com
-
-  BlockCypher also offers client SDKs.
-
-  - Platform: Ruby, Python, Java, PHP, Go, NodeJS
-  - Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-supported-language-sdks 
+- Platform: .NET
+- Documentation: https://programmingblockchain.gitbooks.io/programmingblockchain/content/ 
+- Repository: https://github.com/MetacoSA/NBitcoin
 
 
-GoCoin SDK
-  .. image:: img/gocoin.png
-     :width: 200px
-     :align: right
-     :target: https://gocoin.com
-  
-  https://gocoin.com
+BlockCypher
+-----------
 
-  - Platform: JavaScript, PHP, Java, Ruby, .NET, Python
-  - Repositories: https://gocoin.com/docs 
+.. image:: img/blockcypher.png
+   :width: 200px
+   :align: right
+   :target:  https://www.blockcypher.com
+
+https://www.blockcypher.com
+
+BlockCypher also offers client SDKs.
+
+- Platform: Ruby, Python, Java, PHP, Go, NodeJS
+- Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-supported-language-sdks 
+
+
+GoCoin
+------
+
+.. image:: img/gocoin.png
+   :width: 200px
+   :align: right
+   :target: https://gocoin.com
+
+https://gocoin.com
+
+- Platform: JavaScript, PHP, Java, Ruby, .NET, Python
+- Repositories: https://gocoin.com/docs 
+
 
 InstantSend
 ===========
