@@ -88,10 +88,10 @@ niches and specific industries, and handles all transaction risk for
 all payments from your customers.
 
 - Features: Invoicing, Exchange Rates, WebHook Callbacks. GoCoin holds
-Private Keys on their server allowing the merchant to withdraw funds
-in Cryptocurrency or convert to Fiat.
+  Private Keys on their server allowing the merchant to withdraw funds
+  in Cryptocurrency or convert to Fiat.
 - Integrations: WooCommerce, Magento, Prestashop, VirtueMart, ZenCart,
-OpenCart, OSCommerce, UberCart, nopCommerce, WHMCS, NATS4, Shopify.
+  OpenCart, OSCommerce, UberCart, nopCommerce, WHMCS, NATS4, Shopify.
 - Pricing Model: 1% Processing Fee (https://gocoin.com/fees)
 - Documentation: https://gocoin.com/docs
 
