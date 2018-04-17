@@ -132,7 +132,22 @@ standalone applications.
 
 
 Dash Developer Guide
-  Documentation: https://dash-docs.github.io/en/developer-guide
+--------------------
+
+.. image:: img/dash.png
+   :width: 200px
+   :align: right
+   :target: https://dash-docs.github.io/en/developer-guide
+
+https://dash-docs.github.io/en/developer-guide
+
+The Dash Developer Guide aims to provide the information you need to
+understand Dash and start building Dash-based applications. To make the
+best use of this documentation, you may want to install the current
+version of Dash Core, either from source or from a pre-compiled
+executable.
+
+- Documentation: https://dash-docs.github.io/en/developer-guide
 
 
 Bitcore
