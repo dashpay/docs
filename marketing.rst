@@ -58,6 +58,9 @@ translation is complete to request layout of the completed translation.
 | Dutch      | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-NL.pdf>`__   |
 |            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-NL.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
+| German     | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-DE.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-DE.docx>`__ |
++------------+-------------------------------------------------------------------------------------------------+
 | Russian    | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-RU.pdf>`__   |
 |            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-RU.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
