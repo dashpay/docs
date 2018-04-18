@@ -629,6 +629,17 @@ Bleutrade
   Registered in Brazil, Bleutrade offers DOGE and BTC trading pairs for
   DASH.
 
+LBank
+  .. image:: exchanges/lbank.png
+     :width: 200px
+     :align: right
+     :target: https://www.lbank.info
+
+  https://www.lbank.info
+
+  Available in English and Chinese, LBank has a focus on token trading.
+  DASH is available to trade against BTC.
+
 CoinSpot
   .. image:: exchanges/coinspot.png
      :width: 200px
