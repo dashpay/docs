@@ -119,6 +119,9 @@ the completed translation.
 | Chinese (Traditional) | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/The-Dash-Difference-ZH-TW.pdf>`__ |
 |                       | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/The-Dash-Difference-ZH-TW.png>`__ |
 +-----------------------+--------------------------------------------------------------------------------------------------------+
+| Czech                 | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/The-Dash-Difference-CS.pdf>`__    |
+|                       | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/The-Dash-Difference-CS.png>`__    |
++-----------------------+--------------------------------------------------------------------------------------------------------+
 | French                | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/The-Dash-Difference-FR.pdf>`__    |
 |                       | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/The-Dash-Difference-FR.png>`__    |
 +-----------------------+--------------------------------------------------------------------------------------------------------+
@@ -173,6 +176,9 @@ translation is complete to request layout of the completed translation.
 +------------------------+---------------------------------------------------------------------------------------------------+
 | Chinese (Traditional)  | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ZH-TW.pdf>`__ |
 |                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ZH-TW.png>`__ |
++------------------------+---------------------------------------------------------------------------------------------------+
+| Czech                  | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-CS.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-CS.png>`__    |
 +------------------------+---------------------------------------------------------------------------------------------------+
 | French                 | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-FR.pdf>`__    |
 |                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-FR.png>`__    |
