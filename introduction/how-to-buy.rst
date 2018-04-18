@@ -640,6 +640,19 @@ LBank
   Available in English and Chinese, LBank has a focus on token trading.
   DASH is available to trade against BTC.
 
+Coinroom
+  .. image:: exchanges/coinroom.png
+     :width: 200px
+     :align: right
+     :target: https://coinroom.com
+
+  https://coinroom.com
+
+  Registered in Poland, Coinroom has a strong focus on trading against
+  fiat currencies. Deposits are available in CHF, CZK, DKK, EUR, GBP,
+  NOK, PLN and USD. DASH can be traded against USD, BTC, EUR, PLN and
+  GBP.
+
 CoinSpot
   .. image:: exchanges/coinspot.png
      :width: 200px
