@@ -102,6 +102,10 @@ the budgets and projects. This guarantees there is a working system of
 maintenance as people come and go, making the network capable of
 sustaining itself on its own without depending on specific actors.
 
+Note that if you do not operate a masternode, you may still be able to
+vote on DashBoost proposals. See https://www.dashboost.org for more
+information.
+
 Budgets and masternode voting
 -----------------------------
 
@@ -613,6 +617,10 @@ Voting on proposals
 **You must vote at least three days before the superblock is created or
 your vote will not be counted. The exact deadline is 1662 blocks before
 the superblock.**
+
+Note that if you do not operate a masternode, you may still be able to
+vote on DashBoost proposals. See https://www.dashboost.org for more
+information.
 
 Voting on DGBB proposals is an important part of operating a masternode.
 Since masternodes are heavily invested in Dash, they are expected to
