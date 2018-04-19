@@ -1,6 +1,6 @@
 .. _merchants:
 
-.. include:: isopub.txt
+.. include:: <isopub.txt>
 
 ===============
 Getting Started
