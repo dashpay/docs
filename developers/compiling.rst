@@ -38,6 +38,11 @@ documentation::
   apt install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git libdb4.8-dev libdb4.8++-dev
   apt install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
 
+Optionally install the Qt dependencies if you want to build the Dash 
+GUI::
+
+  apt install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
+
 Download the stable Dash repository::
 
   git clone https://github.com/dashpay/dash.git
