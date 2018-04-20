@@ -127,5 +127,5 @@ while others support custom features such as NFC or a rewards scheme.
 +---------------------------------------------------------------+---------+----------------+-----------+---------+---------------------------------------------------------------------+
 | `QuikWallet <http://quikwallet.com>`_                         | |check| | |check|        |           |         | India only. Also supports SMS payment.                              |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+---------------------------------------------------------------------+
-| `RocketPay <https://rocketpay.today>`_                        | |check| | |check|        |           |         | Focus on Malaysian and Indonesian markets.                           |
+| `RocketPay <https://rocketpay.today>`_                        | |check| | |check|        |           |         | Focus on Malaysian and Indonesian markets.                          |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+---------------------------------------------------------------------+
