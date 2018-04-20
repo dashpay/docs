@@ -154,7 +154,7 @@ Masternode management
 - https://stats.masternode.me
 - https://github.com/Bertrand256/dash-masternode-tool
 - http://178.254.23.111/~pub/Dash/Dash_Info.html
-- http://dash-news.de/dashtv/?value=1000
+- https://m1.dash-news.de/dashtv/#value=1000
 
 
 Price monitoring and statistics
