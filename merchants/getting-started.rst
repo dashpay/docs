@@ -7,10 +7,23 @@ Getting Started
 ===============
 
 Dash welcomes new merchants and supports integration through a
-standardised onboarding process. Larger integrations may require some
-customisation. This documentation describes the :ref:`administrative
-<merchants-administrative>` and :ref:`technical <merchants-technical>`
-steps required to integrate various Dash services. 
+standardised onboarding process. It's easy to begin accepting payments
+in Dash and enjoy the following benefits:
+
+- Settlement within seconds and clearance within minutes
+- Ability to accept payments from any market around the world
+- Irreversible transactions to prevent fraud
+- Advanced privacy for both customers and merchants
+- Lowest fees in the industry
+
+To get started, simply select an online or point of sale payment
+solution from the lists below. If you are unsure, CoinPayments and
+GoCoin are popular choices for online stores, while Anypay is an
+incredibly simple solution for retail stores. Larger integrations may
+require some customisation. This documentation also describes the
+:ref:`administrative <merchants-administrative>` and :ref:`technical
+<merchants-technical>` steps required to integrate various Dash
+services.
 
 Payment Processors
 ==================
@@ -93,8 +106,7 @@ Point of Sale
 
 A range of Point of Sale systems are available. Many function as an app
 or simple website serving a checkout interface and QR code generator,
-while others support custom features such as NFC or InstantSend support
-and dedicated checkout hardware.
+while others support custom features such as NFC or a rewards scheme.
 
 +---------------------------------------------------------------+---------+----------------+-----------+---------+---------------------------------------------------------------------+
 | Name                                                          | App?    | Web interface? | Hardware? | NFC?    | Notes                                                               |
