@@ -21,6 +21,7 @@ Dash ecosystem:
 #. Decide on how and when to convert funds
 #. Implementation and testing
 #. Release and marketing
+#. Integration on `DiscoverDash <https://discoverdash.com>`_
 
 Legal considerations
 ====================
