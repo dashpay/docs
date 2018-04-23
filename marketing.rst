@@ -257,13 +257,13 @@ embassy.org>`__.
 +----------+--------------------------------------------------------------------------------------------+
 | Language | Download                                                                                   |
 +==========+============================================================================================+
-| English  | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-EN.pdf>`__ |
+| English  | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-EN.pptx>`__ |
 +----------+--------------------------------------------------------------------------------------------+
-| French   | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-FR.pdf>`__ |
+| French   | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-FR.pptx>`__ |
 +----------+--------------------------------------------------------------------------------------------+
-| German   | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-DE.pdf>`__ |
+| German   | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-DE.pptx>`__ |
 +----------+--------------------------------------------------------------------------------------------+
-| Spanish  | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-ES.pdf>`__ |
+| Spanish  | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash-101-ES.pptx>`__ |
 +----------+--------------------------------------------------------------------------------------------+
 
 
