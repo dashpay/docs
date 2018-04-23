@@ -201,7 +201,5 @@ administration section. See the `CoinPayments Documentation
    :width: 300px
 .. image:: img/coinpayments-scan.png
    :width: 225px
-.. image:: img/coinpayments-scan.png
-   :width: 225px
 .. image:: img/coinpayments-paid.png
    :width: 225px
