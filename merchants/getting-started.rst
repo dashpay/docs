@@ -275,3 +275,47 @@ administration section. See the `CoinPayments Documentation
    :width: 250px
 
    Completing payment through the CoinPayments.net payment processor
+
+
+Point-of-Sale with Anypay
+-------------------------
+
+`Anypay.global <http://anypay.global>`_ allows you to quickly start
+accepting point-of-sale payments in Dash at a physical store. The
+service functions as a simple website that you load on any internet-
+connected and touch-enabled device, such as a smartphone or tablet.
+
+Begin by registering an account with Anypay. You will be asked to
+specify an email address and password. Once you are signed in, you must
+add a Dash payment withdrawal address.
+
+.. image:: img/anypay-register.png
+   :width: 200px
+.. image:: img/anypay-signup.png
+   :width: 200px
+.. image:: img/anypay-address.png
+   :width: 200px
+
+.. figure:: img/anypay-admin.png
+   :width: 400px
+
+   Setting up Anypay
+
+Once this has been set up, you can begin processing payments
+immediately. Simply log in to https://pos.anypay.global or tap
+**Merchant Point of Sale App** in the admin area using your device. A
+keypad will appear. Enter the invoice amount in USD or DASH and press
+the **COLLECT** button at the bottom of the screen. The app will
+generate a QR code for your customer to scan. Once payment is complete,
+you will be able to create a new invoice by tapping **Next Payment**, or
+view the status of your invoices by tapping the menu button in the top
+left corner or checking the **Invoices** section of the administration
+backend. Withdrawals are processed to the address you specified shortly
+after payment is complete.
+
+.. image:: img/anypay-enter.png
+   :width: 200px
+.. image:: img/anypay-scan.png
+   :width: 200px
+.. image:: img/anypay-paid.png
+   :width: 200px
