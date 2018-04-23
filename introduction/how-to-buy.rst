@@ -503,6 +503,32 @@ OKEX
   Chinese market offering DASH trading pairs against BTC. Funding with
   CNY and futures trading is also available.
 
+Bitexbook
+  .. image:: exchanges/bitexbook.png
+     :width: 200px
+     :align: right
+     :target: https://bitexbook.com
+
+  https://bitexbook.com
+
+  Bitexbook promises the fastest possible deposit and withdrawal times
+  and responsive customer support. Deposits are available in USD and
+  RUB, and credit cards are supported.
+
+MoneyPolo
+  .. image:: exchanges/moneypolo.png
+     :width: 200px
+     :align: right
+     :target: https://moneypolo.com
+
+  https://moneypolo.com
+
+  MoneyPolo offers currency exchange and transfer, prepaid cards and the
+  ability to hold accounts in a range of currencies. Deposits and
+  withdrawals are available in DASH, BTC, ETH, LTC, BCH and BTG, and it
+  is possible to transfer value to a prepaid card or any worldwide bank
+  account.
+
 Coinapult
   .. image:: exchanges/coinapult.png
      :width: 200px
