@@ -129,3 +129,79 @@ while others support custom features such as NFC or a rewards scheme.
 +---------------------------------------------------------------+---------+----------------+-----------+---------+---------------------------------------------------------------------+
 | `RocketPay <https://rocketpay.today>`_                        | |check| | |check|        |           |         | Focus on Malaysian and Indonesian markets.                          |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+---------------------------------------------------------------------+
+
+Installation Examples
+=====================
+
+CoinPayments and WooCommerce
+----------------------------
+
+If your online store is built on WooCommerce, you can simply install
+CoinPayments as an additional payment gateway and immediately begin
+accepting Dash. This guide assumes you have already `installed Wordpress
+<https://codex.wordpress.org/Installing_WordPress>`_, `installed
+WooCommerce <https://docs.woocommerce.com/document/installing-
+uninstalling-woocommerce/>`_ and `created at least one product
+<https://docs.woocommerce.com/document/managing-products>`_ in your
+store. A `video <https://www.youtube.com/watch?v=Xa2o_8s3RNY>`_ of this
+process is also available.
+
+In your WordPress administration backend, select **Plugins -> Add New**
+and type ``coinpayments.net`` into the search box. A plugin named
+**CoinPayments.net Payment Gateway for WooCommerce** should appear.
+Click **Install Now** to install the plugin. Alternatively, you can
+`download the plugin <https://wordpress.org/plugins/coinpayments-
+payment-gateway-for-woocommerce>`_ from the WordPress website as a zip
+file and upload it using the **Upload Plugin** button. Once the plugin
+is installed, click **Activate** to begin configuration.
+
+.. figure:: img/coinpayments-plugin.png
+   :width: 400px
+
+   Installing the CoinPayments.net WooCommerce plugin
+
+Next, go to CoinPayments.net and `sign up
+<https://www.coinpayments.net/register>`_ to create an account. Once you
+are logged in, go to **Account -> Coin Acceptance Settings** and enable
+Dash, as well as optionally entering a withdrawal address. Next, go to
+**Account -> Account Settings** and copy **Your Merchant ID** from the
+**Basic Settings** area into a text file. Then navigate to the
+**Merchant Settings** section and enter a long, random series of
+characters for the **IPN Secret**. Copy this code to your temporary file
+as well.
+
+.. figure:: img/coinpayments-settings.png
+   :width: 400px
+
+   Configuring the CoinPayments.net WooCommerce plugin
+
+Back in the WordPress plugins section, click the **Settings** button for
+the WooCommerce plugin and navigate to **Checkout -> CoinPayments.net**
+section. Ensure the CoinPayments plugin is enabled here, then enter the
+**Merchant ID**, **IPN Secret** and **Description** in the appropriate
+fields as shown below.
+
+.. figure:: img/coinpayments-settings.png
+   :width: 400px
+
+   Configuring the CoinPayments.net WooCommerce plugin
+
+Your customers will now see an option to pay with Dash when completing
+the checkout process for an order. The payment will be processed by
+CoinPayments.net, and you will receive emails detailing each purchase
+procedure. You can choose how often you want to withdraw your income, to
+which Dash address and various other options in the CoinPayments
+administration section. See the `CoinPayments Documentation
+<https://www.coinpayments.net/help>`_ or `Merchant Tools
+<https://www.coinpayments.net/merchant-tools>`_ for more information.
+
+.. image:: img/coinpayments-order.png
+   :width: 150px
+.. image:: img/coinpayments-confirm.png
+   :width: 300px
+.. image:: img/coinpayments-scan.png
+   :width: 225px
+.. image:: img/coinpayments-scan.png
+   :width: 225px
+.. image:: img/coinpayments-paid.png
+   :width: 225px

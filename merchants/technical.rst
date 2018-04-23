@@ -1,8 +1,8 @@
 .. _merchants-technical:
 
-=========
-Technical
-=========
+================
+Technical Guides
+================
 
 Several API services exist to facilitate quick and easy integration with
 the Dash network for services including:

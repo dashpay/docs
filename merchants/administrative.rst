@@ -1,8 +1,8 @@
 .. _merchants-administrative:
 
-==============
-Administrative
-==============
+========================
+Administrative Processes
+========================
 
 It's easy to get started integrating Dash, but you will need to make
 some decisions about whether you plan to convert your income earned in
