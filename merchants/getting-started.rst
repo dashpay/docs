@@ -308,10 +308,10 @@ keypad will appear. Enter the invoice amount in USD or DASH and press
 the **COLLECT** button at the bottom of the screen. The app will
 generate a QR code for your customer to scan. Once payment is complete,
 you will be able to create a new invoice by tapping **Next Payment**, or
-view the status of your invoices by tapping the menu button in the top
-left corner or checking the **Invoices** section of the administration
-backend. Withdrawals are processed to the address you specified shortly
-after payment is complete.
+view the status of your invoices by tapping the **menu button** in the
+top left corner of the keypad, or checking the **Invoices** section of
+the administration backend. Withdrawals are processed to the address you
+specified shortly after payment is complete.
 
 .. image:: img/anypay-enter.png
    :width: 200px
