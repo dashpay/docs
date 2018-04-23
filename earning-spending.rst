@@ -101,6 +101,20 @@ SpectroCoin
   physical card potentially available again soon. Dash, Bitcoin and
   Ethereum are supported, as well as over 20 major fiat currencies.
 
+MoneyPolo
+  .. image:: img/moneypolo.png
+     :width: 200px
+     :align: right
+     :target: https://moneypolo.com
+
+  https://moneypolo.com
+
+  MoneyPolo offers currency exchange and transfer, prepaid cards and the
+  ability to hold accounts in a range of currencies. Deposits and
+  withdrawals are available in DASH, BTC, ETH, LTC, BCH and BTG, and it
+  is possible to transfer value to a prepaid card or any worldwide bank
+  account.
+
 Bitwala
   .. image:: img/bitwala.png
      :width: 200px
