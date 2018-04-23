@@ -170,16 +170,11 @@ Dash, as well as optionally entering a withdrawal address. Next, go to
 characters for the **IPN Secret**. Copy this code to your temporary file
 as well.
 
-.. figure:: img/coinpayments-settings.png
-   :width: 400px
-
-   Configuring the CoinPayments.net WooCommerce plugin
-
 Back in the WordPress plugins section, click the **Settings** button for
 the WooCommerce plugin and navigate to **Checkout -> CoinPayments.net**
 section. Ensure the CoinPayments plugin is enabled here, then enter the
 **Merchant ID**, **IPN Secret** and **Description** in the appropriate
-fields as shown below.
+fields as shown below. Click **Save Changes** when you are ready.
 
 .. figure:: img/coinpayments-settings.png
    :width: 400px
@@ -189,8 +184,8 @@ fields as shown below.
 Your customers will now see an option to pay with Dash when completing
 the checkout process for an order. The payment will be processed by
 CoinPayments.net, and you will receive emails detailing each purchase
-procedure. You can choose how often you want to withdraw your income, to
-which Dash address and various other options in the CoinPayments
+procedure. You can choose how often you want to withdraw your payments,
+to which Dash address and various other options in the CoinPayments
 administration section. See the `CoinPayments Documentation
 <https://www.coinpayments.net/help>`_ or `Merchant Tools
 <https://www.coinpayments.net/merchant-tools>`_ for more information.
@@ -201,5 +196,77 @@ administration section. See the `CoinPayments Documentation
    :width: 300px
 .. image:: img/coinpayments-scan.png
    :width: 225px
-.. image:: img/coinpayments-paid.png
+
+.. figure:: img/coinpayments-paid.png
    :width: 225px
+
+   Completing payment through the CoinPayments.net payment processor
+
+
+WooCommerce and GoCoin
+----------------------
+
+If your online store is built on WooCommerce, you can simply install
+GoCoin as an additional payment gateway and immediately begin accepting
+Dash. This guide assumes you have already `installed Wordpress
+<https://codex.wordpress.org/Installing_WordPress>`_, `installed
+WooCommerce <https://docs.woocommerce.com/document/installing-
+uninstalling-woocommerce/>`_ and `created at least one product
+<https://docs.woocommerce.com/document/managing-products>`_ in your
+store.
+
+Go to the `gocoin-woocommerce GitHub Releases page
+<https://github.com/GoCoin/gocoin-woocommerce/releases>`_ and download a
+zip file of the latest version of the plugin, as shown below. In your
+WordPress administration backend, select **Plugins -> Add New** and then
+click **Upload Plugin**. Click **Choose File** and select the file you
+just downloaded, then click **Install Now** and **Activate Plugin**. 
+
+.. image:: img/gocoin-download.png
+   :width: 250px
+.. image:: img/gocoin-install.png
+   :width: 250px
+
+Next, go to the `GoCoin merchant sign up page
+<https://gocoin.com/merchant_signup>`_ and create an account. Once you
+are logged in, go to **Preferences**, select **Dash** and click **Add
+DASH Address** to add a payment withdrawal address. You will receive an
+email with a link to confirm the address. Next, go to **Developers** and
+copy the **Merchant ID** into a temporary text file. Next, click **Get
+Key** to display a valid API key. Copy this key into your temporary text
+file as well. Finally, you can optionally add a Dash logo to your
+checkout by **Profile** section and clicking **Logo -> Upload**.
+
+.. image:: img/gocoin-address.png
+   :width: 250px
+.. image:: img/gocoin-apikey.png
+   :width: 250px
+
+Back in the WordPress plugins section, click the **Settings** button for
+the WooCommerce plugin and navigate to **Checkout -> GoCoin** section.
+Ensure the GoCoin plugin is enabled here, then enter the **Merchant ID**
+and **API Key** in the appropriate fields as shown below, modifying the
+other fields as necessary. Click **Save changes** when you are ready.
+
+.. image:: img/gocoin-settings.png
+   :width: 350px
+
+Your customers will now see an option to pay with Dash when completing
+the checkout process for an order. The payment will be processed by
+GoCoin, and you will receive emails detailing each purchase procedure.
+You can choose how often you want to withdraw your payments, to which
+Dash address and various other options in the GoCoin administration
+section. See the `GoCoin Documentation <https://gocoin.com/docs>`_ for
+more information.
+
+.. image:: img/gocoin-order.png
+   :width: 150px
+.. image:: img/gocoin-invoice.png
+   :width: 300px
+.. image:: img/gocoin-scan.png
+   :width: 300px
+
+.. figure:: img/gocoin-paid.png
+   :width: 300px
+
+   Completing payment through the GoCoin payment processor
