@@ -143,11 +143,11 @@ accepting Dash. This guide assumes you have already `installed Wordpress
 WooCommerce <https://docs.woocommerce.com/document/installing-
 uninstalling-woocommerce/>`_ and `created at least one product
 <https://docs.woocommerce.com/document/managing-products>`_ in your
-store. A `video <https://www.youtube.com/watch?v=Xa2o_8s3RNY>`_ of this
-process is also available.
+store. A `video <https://www.youtube.com/watch?v=Xa2o_8s3RNY>`_ of the
+process to install the CoinPayments payment processor is also available.
 
 In your WordPress administration backend, select **Plugins -> Add New**
-and type ``coinpayments.net`` into the search box. A plugin named
+and type "coinpayments.net" into the search box. A plugin named
 **CoinPayments.net Payment Gateway for WooCommerce** should appear.
 Click **Install Now** to install the plugin. Alternatively, you can
 `download the plugin <https://wordpress.org/plugins/coinpayments-
