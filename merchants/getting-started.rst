@@ -22,9 +22,10 @@ choice due its support for :ref:`InstantSend <instantsend>`, while
 CoinPayments supports the largest range of online shop software. Anypay
 is an incredibly simple solution for retail stores, and also supports
 InstantSend. Larger integrations may require some customisation. This
-documentation also describes the :ref:`administrative <merchants-
-administrative>` and :ref:`technical <merchants-technical>` steps
-required to integrate various Dash services.
+documentation also describes the 
+:ref:`administrative <merchants-administrative>` and 
+:ref:`technical <merchants-technical>` steps required to integrate 
+various Dash services.
 
 Payment Processors
 ==================
