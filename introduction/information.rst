@@ -131,6 +131,7 @@ Block explorers, statistics and visualizations
 - https://insight.dash.org/insight
 - https://chainz.cryptoid.info/dash
 - https://bitinfocharts.com/dash/explorer
+- https://live.blockcypher.com/dash/
 - http://explorer.coinpayments.net/index.php?chain=7
 - https://dash.holytransaction.com
 - https://dashradar.com
