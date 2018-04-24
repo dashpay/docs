@@ -726,7 +726,7 @@ NegocieCoins
 
 OmniTrade
   .. image:: exchanges/omnitrade.png
-     :width: 200px
+     :width: 160px
      :align: right
      :target: https://omnitrade.io
 
