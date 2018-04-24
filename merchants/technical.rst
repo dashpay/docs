@@ -357,7 +357,7 @@ simple `code snippet generator from CoinGecko
 
 .. raw:: html
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
+    <div style="position: relative; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
         <iframe id='widget-ticker-preview' src='//www.coingecko.com/en/widget_component/ticker/dash/usd?id=dash' style='border:none; height:125px; width: 275px;' scrolling='no' frameborder='0' allowTransparency='true'></iframe>
     </div>
 
