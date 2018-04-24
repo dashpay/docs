@@ -17,7 +17,7 @@ API Services
 
 This documentation is also available as a `PDF
 <https://github.com/dashpay/docs/raw/master/binary/merchants
-/Integration-Resources-API.pdf>`_.
+/Integration-Resources-API.pdf>`__.
 
 API Services are typically leveraged to eliminate that requirement of
 running your own infrastructure to support blockchain interactions. This
@@ -131,7 +131,7 @@ SDK Resources
 
 This documentation is also available as a `PDF
 <https://github.com/dashpay/docs/raw/master/binary/merchants
-/Integration-Resources-SDK.pdf>`_.
+/Integration-Resources-SDK.pdf>`__.
 
 SDKs (Software Development Kits) are used to accelerate the design and
 development of a product for the Dash Network. These resources can
@@ -254,7 +254,7 @@ InstantSend
 
 This documentation is also available as a `PDF
 <https://github.com/dashpay/docs/raw/master/binary/merchants
-/Integration-Resources-InstantSend.pdf>`_.
+/Integration-Resources-InstantSend.pdf>`__.
 
 InstantSend is a feature provided by the Dash network that allows for
 0-confirmation transactions to be safely accepted by Merchants and other
