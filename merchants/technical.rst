@@ -347,3 +347,24 @@ underlying technologies.
 - `InstantSend Whitepaper <https://dashpay.atlassian.net/wiki/download/attachments/75530298/Dash%20Whitepaper%20-%20InstantTX.pdf>`_
 - `How Dash InstantSend Protect Merchants from Double Spends <https://www.youtube.com/watch?v=HJx82On8jig>`_
 - `InstantSend Presentation from the Dash Conference London 2017 <https://www.youtube.com/watch?v=n4PELomRiFY>`_
+
+Price Tickers
+=============
+
+You can add a simple price ticket widget to your website using the
+simple `code snippet generator from CoinGecko
+<https://www.coingecko.com/en/widgets/ticker/dash/usd>`_.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe id='widget-ticker-preview' src='//www.coingecko.com/en/widget_component/ticker/dash/usd?id=dash' style='border:none; height:125px; width: 275px;' scrolling='no' frameborder='0' allowTransparency='true'></iframe>
+    </div>
+
+Similar widgets with different designs are available from `CoinLib
+<https://coinlib.io/widgets>`_, `WorldCoinIndex
+<https://www.worldcoinindex.com/Widget>`_, `Coinoxo
+<https://www.coinoxo.com/charts/DASH>`_ and `Cryptonator
+<https://www.cryptonator.com/widget>`_, while an API providing similar
+information is available from `DashCentral
+<https://www.dashcentral.org/api/v1/public>`_.

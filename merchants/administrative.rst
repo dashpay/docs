@@ -25,6 +25,21 @@ Dash ecosystem:
 #. Integration on `DiscoverDash <https://discoverdash.com>`_
 
 
+Promoting Dash
+==============
+
+A wide range of ready-to-go visual products are available to help you
+promote Dash as a payment method to your customers. This includes
+promotional graphics and stickers, fonts for consistent visual design
+and guidelines on how to use the Dash visual identity. See the
+:ref:`Marketing <marketing>` section for more information.
+
+The reduced fees may also offer an additional incentive for your
+customers to pay with Dash, particularly in businesses with high cash
+handling fees or where it is necessary to add a fee to process credit
+card transactions.
+
+
 Currency Conversion
 ===================
 
