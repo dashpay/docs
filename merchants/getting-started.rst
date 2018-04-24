@@ -27,6 +27,10 @@ documentation also describes the
 :ref:`technical <merchants-technical>` steps required to integrate 
 various Dash services.
 
+Once you are up and running accepting Dash, consider adding your
+business to the directory maintained at `Discover Dash
+<https://discoverdash.com>`_ for increased visibility.
+
 Payment Processors
 ==================
 

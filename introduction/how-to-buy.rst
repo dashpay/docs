@@ -724,6 +724,17 @@ NegocieCoins
   Dash trading pairs. A premium service with higher withdrawal limits is
   available.
 
+OmniTrade
+  .. image:: exchanges/omnitrade.png
+     :width: 200px
+     :align: right
+     :target: https://omnitrade.io
+
+  https://omnitrade.io
+
+  Based in Brazil, OmniTrade accepts deposits in Brazilian real through
+  a partnership with Neon Bank, which can then be traded against Dash.
+
 SouthXchange
   .. image:: exchanges/southxchange.png
      :width: 200px
