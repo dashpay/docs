@@ -367,4 +367,4 @@ Similar widgets with different designs are available from `CoinLib
 <https://www.coinoxo.com/charts/DASH>`_ and `Cryptonator
 <https://www.cryptonator.com/widget>`_, while an API providing similar
 information is available from `DashCentral
-<https://www.dashcentral.org/api/v1/public>`_.
+<https://www.dashcentral.org/about/api>`_.
