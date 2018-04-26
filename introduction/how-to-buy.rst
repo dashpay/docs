@@ -831,6 +831,18 @@ ShapeShift
   another without creating any account, albeit with a higher markup than
   most exchanges. ShapeShift supports Dash and over 70 other
   cryptocurrencies.
+  
+SimpleSwap
+  .. image:: exchanges/simpleswap.png
+     :width: 200px
+     :align: right
+     :target: https://www.simpleswap.io/
+
+  https://www.simpleswap.io/
+  
+  SimpleSwap is a simple and easy-to-use platform for cryptocurrency
+  exchanges that works without registration and limits. It is possible
+  to exchange Dash with over 60 other cryptocurrencies.
 
 changeNOW
   .. image:: exchanges/changenow.png
