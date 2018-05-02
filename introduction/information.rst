@@ -18,6 +18,8 @@ Official sites
 - **Foundation:** https://www.dashfoundation.io
 - **GitHub:** https://github.com/dashpay
 - **GitHub (Evolution):** https://github.com/dashevo
+- **Roadmap:** https://github.com/dashpay/dash-roadmap
+- **DIPs:** https://github.com/dashpay/dips
 
 Community sites
 ---------------
