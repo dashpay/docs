@@ -122,7 +122,7 @@ or integrate with your pre-existing checkout.
   Ecwid, Hikashop, Magento, OpenCart, OSCommerce, PrestaShop, Tomato
   Cart, WooCommerce, Ubercart, XCart, ZenCart
 - Pricing Model: 0.5% Processing Fee
-  (https://www.coinpayments.net/help- fees)
+  (https://www.coinpayments.net/help-fees)
 - Documentation: https://www.coinpayments.net/apidoc
 
 
