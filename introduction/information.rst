@@ -199,11 +199,15 @@ iOS
 - **Dash Wallet:** https://itunes.apple.com/app/id1206647026
 - **Edge Wallet:** https://itunes.apple.com/app/id1344400091
 - **Jaxx Wallet:** https://itunes.apple.com/app/id1084514516
+- **Coinomi Wallet:** https://itunes.apple.com/app/id1333588809
 - **Dashy:** https://itunes.apple.com/app/id1033268631
 - **CoinCap:** https://itunes.apple.com/app/id1074052280
-- **Lawnmower:** https://itunes.apple.com/app/id965079226
 - **Blockfolio:** https://itunes.apple.com/app/id1095564685
-- **Coinomi:** https://itunes.apple.com/app/id1333588809
+- **Cryptonaut:** https://itunes.apple.com/app/id1312756405
+- **Lawnmower:** https://itunes.apple.com/app/id965079226
+- **Quoinex:** https://itunes.apple.com/app/id1140955992
+- **Abra:** https://itunes.apple.com/app/id966301394
+- **Crypto Push:** https://itunes.apple.com/app/id1282856588
 
 
 Android
@@ -215,8 +219,13 @@ Android
 - **Coinomi Wallet:** https://play.google.com/store/apps/details?id=com.coinomi.wallet
 - **Cryptonator Wallet:** https://play.google.com/store/apps/details?id=com.aev.cryptonator
 - **DashCentral:** https://play.google.com/store/apps/details?id=net.paregov.android.dashcentral
+- **CoinCap:** https://play.google.com/store/apps/details?id=io.coincap.coincap
 - **Blockfolio:** https://play.google.com/store/apps/details?id=com.blockfolio.blockfolio
+- **Cryptonaut:** https://play.google.com/store/apps/details?id=org.cryptonaut.app
 - **Lawnmower:** https://play.google.com/store/apps/details?id=io.lawnmower.mobile
+- **Quoinex:** https://play.google.com/store/apps/details?id=mobi.quoine
+- **Abra:** https://play.google.com/store/apps/details?id=com.plutus.wallet
+- **Bitcoin Ticker Widget:** https://play.google.com/store/apps/details?id=st.brothas.mtgoxwidget
 
 
 .. _glossary:
