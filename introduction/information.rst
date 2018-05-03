@@ -137,6 +137,7 @@ Block explorers, statistics and visualizations
 - http://explorer.coinpayments.net/index.php?chain=7
 - https://dash.holytransaction.com
 - https://dashradar.com
+- http://udjinm6.github.io/bitlisten
 
 
 Treasury tools
@@ -175,12 +176,6 @@ Dash Community project
 ----------------------
 
 - http://github.com/dashcommunity
-
-
-Dash transaction visualizer
----------------------------
-
-- http://udjinm6.github.io/bitlisten/
 
 
 DarkNet pages
