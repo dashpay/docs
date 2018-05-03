@@ -1000,6 +1000,18 @@ Coinfinity
   Germany, as well as through their coupon-based `Bitcoinbon
   <https://www.bitcoinbon.at/>`_ service.
 
+CoinOYO
+  ..image:: exchanges/coinoyo.png
+     :width: 200px
+     :align: right
+     :target: https://coinoyo.com
+
+  https://coinoyo.com
+
+  CoinOYO is a cryptocurrency exchange dedicated to helping Nigerians
+  buy, sell and invest in cryptocurrencies. You can buy Dash and several
+  other cryptocurrencies using Nigerian naira.
+
 Mercury Cash
   .. image:: exchanges/mercury.png
      :width: 200px
