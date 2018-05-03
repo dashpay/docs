@@ -361,17 +361,17 @@ Block reward allocation
 -----------------------
 
 Unlike Bitcoin, which allocates 100% of the block reward to miners, Dash
-splits the block reward between the :ref:`miner <mining>`, a
-deterministically selected :ref:`masternode <masternodes>`, and the
-decentralized :ref:`budget system <decentralized-governance>`. Dash
-features superblocks, which appear every 16616 blocks (approx. 30.29
-days) and release 10% of the cumulative budget over that :ref:`budget
-cycle period <budget-cycles>` to the winning proposals in the budget
-system. To pay for superblocks, the block reward for normal blocks over
-the period is reduced by 10%. Normal block payments are split equally
-between miners and masternodes according to the :ref:`payment logic
-<payment-logic>`, resulting in an coin reward allocation over a budget
-cycle as follows:
+holds back 10% of the block reward for use in the decentralized
+:ref:`budget system <decentralized-governance>`. The remainder of the
+block, as well as any transaction fees, are split 50/50 between the
+:ref:`miner <mining>` and a :ref:`masternode <masternodes>`, which is
+deterministically selected according to the :ref:`payment logic
+<payment-logic>`. Dash features superblocks, which appear every 16616
+blocks (approx. 30.29 days) and can release up to 10% of the cumulative
+budget held back over that :ref:`budget cycle period <budget-cycles>` to
+the winning proposals in the budget system. Depending on budget
+utilization, this results in an approximate coin reward allocation over
+a budget cycle as follows:
 
 +-----+----------------------------------------+
 | 45% | Mining Reward                          |

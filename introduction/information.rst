@@ -342,6 +342,11 @@ Cloud Wallet
   keys. We do not recommend that you store large quantities of funds in
   online wallets.
 
+Coinbase transaction
+  The first transaction in a block. Always created by a miner, it
+  includes a single input which constitutes the block reward. This is
+  split between the miner and a deterministically chosen masternode.
+
 Cold Storage
   A method of generating and storing private keys completely offline.
   One could use a desktop or laptop computer disconnected from the
