@@ -1,5 +1,6 @@
 .. _understanding-governance:
 
+=============================
 Understanding Dash Governance
 =============================
 
