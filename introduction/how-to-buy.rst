@@ -15,10 +15,12 @@ advantages and disadvantages. The following options are available:
   meaning they are operated by a single company, which may be obliged by
   the laws of the jurisdiction in which it operates to collect data on
   its customers. Others are decentralized, but as a result have higher
-  escrow requirements since you are dealing peer-to- peer instead of
-  with a trusted entity. Exchanges can be broadly broken down into two
+  escrow requirements since you are dealing peer-to-peer instead of with
+  a trusted entity. Exchanges can be broadly broken down into two
   categories: exchanges which accept national currency (fiat money) and
-  exchanges which deal in cryptocurrencies only.
+  exchanges which deal in cryptocurrencies only. For safety, exchanges
+  should not be used as wallets. Exchanges are for trading, not for
+  savings.
 
 - `Instant exchanges`_ perform a similar
   function to normal exchanges, but without the requirement to log in.

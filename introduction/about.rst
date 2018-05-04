@@ -17,10 +17,26 @@ hardware. While Dash is based on Bitcoin and compatible with many key
 components of the Bitcoin ecosystem, its two-tier network structure
 offers significant improvements in transaction speed, anonymity and
 governance. This section of the documentation describes these and many
-more key features that set Dash apart in the blockchain economy. For
-full details, please read the `Dash whitepaper
-<https://github.com/dashpay/dash/wiki/Whitepaper>`_.
+more key features that set Dash apart in the blockchain economy.
 
+If you are new to cryptocurrencies, the most important change to
+understand is that transactions occur directly between two parties
+without any central authority to facilitate the transaction. This also
+means that you are responsible for your own security - there is no bank
+or credit card company to reverse a transaction if your funds are stolen
+or lost. In this sense, it is similar to cash or gold, but
+cryptocurrency can be spent locally and internationally with equal ease,
+if you are confident you are sending funds to the right destination. For
+these reasons, the Dash documentation has a strong focus on safety and
+understanding the concepts and features that drive the Dash ecosystem.
+The videos, links and documentation collected here can help you get
+started, or use the table of contents on the left to find a specific
+topic of interest.
+
+New users may be interested in getting started with an appropriate
+:ref:`wallet <wallets>`, learning about :ref:`how to buy Dash 
+<how-to-buy>` and :ref:`where to spend Dash <earning-spending>`, or
+joining one of the many :ref:`Dash community sites <information>`.
 
 Dash Videos
 -----------

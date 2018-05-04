@@ -14,6 +14,11 @@ value in this system. This section of the documentation discusses
 different practical methods of keeping these keys safe in wallets, while
 still remaining useful for day-to-day needs.
 
+For safety, it is not recommended to store significant funds on
+exchanges or software wallets. If you are holding cryptocurrency worth
+more than the device you use to store it, you should purchase a
+:ref:`hardware wallet <hardware-wallets>`.
+
 
 .. _dash-core-wallet:
 
