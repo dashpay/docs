@@ -176,11 +176,11 @@ selected on any given block is 1/450.
 The table below shows the probably of an eligible node being selected
 for payment over a particular period of time. For example, the
 probability that an eligible node is selected within 12 hours is about
-46%. The table does *not* (and cannot) tell us the probability of being
-selected *after* a given period of time. For example, if you haven’t
+46%. The table does **not** (and cannot) tell us the probability of being
+selected **after** a given period of time. For example, if you haven’t
 been selected within the past 12 hours — and we know from this table
 there is about a 54% chance of that happening — the probability of being
-selected on the next block is *not* 46%. It remains 1/450. Putting these
+selected on the next block is **not** 46%. It remains 1/450. Putting these
 together, if you have an eligible node, and, say, 48 hours have passed
 without payment, then you’ve been very unlucky, as there’s less than a
 10% chance of that happening. But, your chances of being selected on the
