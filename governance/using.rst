@@ -1,8 +1,8 @@
 .. _using-governance:
 
-=========================
-Using the Dash Governance
-=========================
+=====================
+Using Dash Governance
+=====================
 
 Dash's Decentralized Governance by Blockchain (DGBB) is a novel voting
 and funding platform. This documentation introduces and details the
