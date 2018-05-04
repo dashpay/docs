@@ -152,7 +152,7 @@ Selection pool
 
 The selection pool is the top 10% of the global list.  Its size is
 determined by the total masternode count. As an example, if there are
-4600 active masternodes, the top 460 masternodes in the global list are
+4500 active masternodes, the top 450 masternodes in the global list are
 eligible for selection. Once in the selection pool, selection for
 payment is determined by block hash entropy. The block hash 100 blocks
 ago determines which masternode will be selected for payment. A double
@@ -165,14 +165,29 @@ Probabilities
 -------------
 
 Because selection is determined by block hash entropy, it is impossible
-to predict when a payment will occur. Once in the selection pool,
-payments become a probability. These probabilities are calculated using
-an assumed current pool size of 450 (at 4500 total masternodes).
+to predict when a payment will occur. Masternode operators should expect
+considerable variance in payment intervals over time. Once a masternode
+enters the selection pool, payments become a probability. The
+probabilities in this example are calculated using an assumed current
+pool size of 450 (at 4500 total masternodes). Nodes in the selection
+pool are selected for rewards randomly, i.e. the probability of being
+selected on any given block is 1/450.
 
-As an example of reading this chart, after a masternode has been in the
-selection pool for 12 hours, 45.98% of nodes due to be selected will
-have been selected and removed from the selection pool to the back of
-the list.
+The table below shows the probably of an eligible node being selected
+for payment over a particular period of time. For example, the
+probability that an eligible node is selected within 12 hours is about
+46%. The table does *not* (and cannot) tell us the probability of being
+selected *after* a given period of time. For example, if you haven’t
+been selected within the past 12 hours — and we know from this table
+there is about a 54% chance of that happening — the probability of being
+selected on the next block is *not* 46%. It remains 1/450. Putting these
+together, if you have an eligible node, and, say, 48 hours have passed
+without payment, then you’ve been very unlucky, as there’s less than a
+10% chance of that happening. But, your chances of being selected on the
+next block remain the same as for any block, i.e. 1/450.
+
+Once a node is selected for payment, it is moved to the back of the list
+and cannot be selected again until it re-enters the selection pool.
 
 +-------+---------+-------------+
 | Hours | Blocks  | Probability |
