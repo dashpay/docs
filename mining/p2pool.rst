@@ -99,6 +99,7 @@ post <https://www.dash.org/forum/threads/script-to-deploy-p2pool-on-
 ubuntu.18376/>`_, or simply follow these instructions to get the script.
 To get fetch the script and get started, type::
 
+  sudo apt install git
   git clone https://github.com/strophy/p2pool-dash-deploy
 
 The files will be created in the p2pool-dash-deploy folder. We now need
@@ -118,14 +119,14 @@ values if they do not match the current version of Dash:
 - ``RPCUSER`` = <enter a random alphanumeric rpc user name>
 - ``RPCPASSWORD`` = <enter a random alphanumeric rpc password>
 
-Press **Ctrl + X** to close the editor and **Y** and **Enter*** save the
+Press **Ctrl + X** to close the editor and **Y** and **Enter** save the
 file. Then run the script::
 
   bash ./p2pool-dash-deploy/p2pool.deploy.sh
 
 The script will carry out all steps necessary to set up P2pool on Ubuntu
 Server and start dashd synchronisation. When setup is complete, you
-should see a message reading **Installation Completed.**. You can now
+should see a message reading **Installation Completed.** You can now
 run a second script to start p2pool-dash::
 
   bash ~/p2pool.start.sh

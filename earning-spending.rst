@@ -25,7 +25,7 @@ Dash wallet for spending or saving. For more information, see the
 following blog posts:
 
  - **Bitwage:** https://blog.bitwage.com/2018/03/12/get-dash
- - **Uphold:** https://uphold.com/pt/blog/posts/uphold/bitwage-launches-support-of-dash-powered-by-uphold
+ - **Uphold:** https://uphold.com/en/blog/posts/uphold/bitwage-launches-support-of-dash-powered-by-uphold
  - **Dash Force News:** https://www.dashforcenews.com/can-get-salary-dash-right-now
 
 
