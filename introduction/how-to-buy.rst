@@ -1027,6 +1027,19 @@ Mercury Cash
   Ethereum and Dash, and deposited or withdrawn in local currencies
   through a number of methods, including credit cards.
 
+SlithEx
+  .. image:: exchanges/slithex.png
+     :width: 140px
+     :align: right
+     :target: https://slithex.com
+
+  https://slithex.com
+
+  Based in Malaysia and funded by the Dash Treasury, SlithEx (and its
+  payment processor, `RocketPay <https://rocketpay.today>`_) offer
+  exchange, wallet and sale/trading of Dash against the Malaysian
+  ringgit.
+
 cryptomonster
   .. image:: exchanges/cryptomonster.png
      :width: 200px
