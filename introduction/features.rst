@@ -46,8 +46,8 @@ Masternodes enable the following services:
    funds on the blockchain.
 -  **Governance and Treasury** allows stakeholders in Dash to determine
    the direction of the project and devotes 10% of the block reward to
-   development of the project and ecosystem (as of March 2017, our
-   annual budget is $6.7 million).
+   development of the project and ecosystem (as of May 2018, our
+   annual budget exceeds $30 million).
 -  **Dash Evolution** will make using cryptocurrency as easy as using
    PayPal.
 
@@ -546,7 +546,7 @@ to do various jobs for the network, along with decentralized API access
 and a decentralized file system.
 
 Dash Evolution will be released in stages. Dash Core releases 12.1 
-through to 12.3 will lay the groundwork for the decentralized features 
+through to 12.4 will lay the groundwork for the decentralized features 
 behind the scenes. An alpha version of Evolution is expected in the 
 first half of 2018, including a basic implementation of DashDrive, 
 Primitives, DAPI and a simple T3 wallet. This will be released together 
@@ -587,6 +587,14 @@ upcoming features of the Dash Evolution platform.
 
     <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 70%; height: auto;">
         <iframe src="//www.youtube.com/embed/gbjYhZT2Ulc" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+**Evolution Demo #2 - Mobile Evolution**, 25 April 2018
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/EtYax7iz4hU" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
 **Chuck Williams on Evolution**, Dash Conference London, 14 September 2017

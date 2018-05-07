@@ -7,7 +7,29 @@ Arguments and commands
 All command-line options (except for ``-datadir`` and ``-conf``) may be
 specified in a configuration file, and all configuration file options
 may also be specified on the command line. Command-line options override
-values set in the configuration file.
+values set in the configuration file. The configuration file is a list
+of ``setting=value`` pairs, one per line, with optional comments starting
+with the ``#`` character.
+
+The configuration file is not automatically created; you can create it
+using your favorite plain-text editor. By default, dash-qt (or dashd)
+will look for a file named ``dash.conf`` in the dash data directory, but
+both the data directory and the configuration file path may be changed
+using the -datadir and -conf command-line arguments.
+
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
+| Platform | Path to data folder            | Typical path to configuration file                                                            |
++==========+================================+===============================================================================================+
+| Linux    | ~/                             | /home/username/.dashcore/dash.conf                                                            |
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
+| macOS    | ~/Library/Application Support/ | /Users/username/Library/Application Support/DashCore/dash.conf                                |
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
+| Windows  | %APPDATA%                      | (2000-XP) C:\Documents and Settings\username\Application Data\DashCore\dash.conf              |
+|          |                                | (Vista-10) C:\Users\username\AppData\Roaming\DashCore\dash.conf                               |
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
+
+Note: if running Dash in testnet mode, the sub-folder "testnet3" will be
+appended to the data directory automatically.
 
 Command line arguments
 ======================
