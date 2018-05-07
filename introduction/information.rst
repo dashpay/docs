@@ -74,16 +74,30 @@ Facebook
 --------
 
 - **English (Official):** https://www.facebook.com/DashPay
-- **Brazil:** https://www.facebook.com/DashBrazil
-- **Russia:** https://www.facebook.com/Dash.Russia
-- **Germany:** https://www.facebook.com/dashgermany
-- **Venezuela:** https://www.facebook.com/groups/DarkcoinVenezuela
-- **Poland:** https://www.facebook.com/Dash.Polska
-- **Thailand:** https://www.facebook.com/groups/1127359790623640
-- **London:** https://www.facebook.com/Dash-Digital-Cash-London-1559503720975382
-- **Greece:** https://www.facebook.com/DashGreece
-- **Denmark:** https://www.facebook.com/DashDenmark
 - **Dash News En Español:** https://www.facebook.com/DashNewsEspanol
+- **Brazil:** https://www.facebook.com/DashBrazil
+- **Denmark:** https://www.facebook.com/DashDenmark
+- **Germany:** https://www.facebook.com/dashgermany
+- **Greece:** https://www.facebook.com/DashGreece
+- **Poland:** https://www.facebook.com/Dash.Polska
+- **Russia:** https://www.facebook.com/Dash.Russia
+- **Thailand:** https://www.facebook.com/groups/1127359790623640
+- **Venezuela:** https://www.facebook.com/groups/DarkcoinVenezuela
+- **Vietnam:** https://www.facebook.com/dashvietnam
+
+
+Twitter
+-------
+
+- **Dash Official Account:** https://twitter.com/dashpay
+- **Ryan Taylor, CEO of Dash Core Group:** https://twitter.com/RTaylor05
+- **Dash Force News:** https://twitter.com/DashForceNews
+- **Joël Valenzuela, Chief Editor, Dash Force News:** https://twitter.com/TheDesertLynx
+- **Mark Mason, Director of Media & PR, Dash Force News:** https://twitter.com/StayDashy
+- **Amanda B. Johnson, Dash Superfan and DAO-funded contractor:** https://twitter.com/AmandaB_Johnson
+- **Ben Swann, Truth in Media and DAO-funded contractor:** https://twitter.com/BenSwann_
+- **とみ三（Samurai33）, Dash Japan:** https://twitter.com/samurai3311
+- **Dash Vietnam:** https://twitter.com/dashvietnam
 
 
 News
