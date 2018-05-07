@@ -66,6 +66,11 @@ introduces some of the most popular exchanges for trading Dash.
 CoinMarketCap
 -------------
 
+.. image:: exchanges/coinmarketcap.png
+   :width: 200px
+   :align: right
+   :target: https://coinmarketcap.com
+
 CoinMarketCap lists all cryptocurrencies by their market capitalization.
 Clicking one of these currencies allows you to view price charts, and
 clicking Markets allows you to view the markets available and the
