@@ -40,6 +40,7 @@ Faucets
 
 - https://test.faucet.dash.org - by flare
 - http://test.faucet.dashninja.pl - by elbereth
+- http://t.f.masternode.io - by coingun
 - http://test.faucet.masternode.io - by coingun
 - http://faucet.test.dash.crowdnode.io - ndrezza
 

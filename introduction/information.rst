@@ -38,6 +38,7 @@ Forums
 - **Dash Forum**: https://www.dash.org/forum
 - **BitcoinTalk thread:** https://bitcointalk.org/index.php?topic=421615.0
 - **Cryptocurrencytalk.com:** https://cryptocointalk.com/forum/693-dash-dash
+- **巴比特 (8BTC) Forum:** http://8btc.com/forum-115-1.html
 - **百度贴吧 达世币吧 (Baidu Tieba):** `https://tieba.baidu.com/f?kw=达世币 <https://tieba.baidu.com/f?kw=达世币>`_
 - **彩云比特 达世币 (CYBTC Dash):** http://www.cybtc.com/forum-123-1.html
 
@@ -60,6 +61,7 @@ Social media
 
 - **Reddit:** https://www.reddit.com/r/dashpay
 - **Twitter:** https://twitter.com/dashpay
+- **Steemit:** https://steemit.com/@dashpay
 - **LinkedIn:** https://www.linkedin.com/company/10424093
 - **YouTube:** https://www.youtube.com/c/DashOrg
 - **Instagram:** https://www.instagram.com/dashpay
@@ -68,6 +70,7 @@ Social media
 - **Soundcloud:** https://soundcloud.com/dashpay
 - **Google+:** https://plus.google.com/+DashOrg
 - **Minds:** https://www.minds.com/Dashpay
+- **Pinterest:** https://www.pinterest.com/dashdigitalcash
 
 
 Facebook
@@ -189,6 +192,7 @@ Price monitoring and statistics
 Dash Community project
 ----------------------
 
+- https://dashcommunity.github.io
 - http://github.com/dashcommunity
 
 
