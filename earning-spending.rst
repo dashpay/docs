@@ -12,10 +12,18 @@ Earning
 =======
 
 A range of services and businesses are available to convert your wage to
-and from Dash as you receive it.
+and from Dash as you receive it. It is of course easiest to receive
+payment from your employer in Dash directly, however this may not always
+be an option. Services such as `Dashlancer <http://dashlancer.com>`_ can
+help you find freelance work paid in Dash. `Uphold
+<https://uphold.com>`_ allows you to instantly and automatically convert
+any received deposits to and from Dash. Building on this functionality,
+`Bitwage <https://www.bitwage.com>`_ allows you to invoice and receive
+payment from any employer, anywhere in the world, and have your wage
+immediately converted to Dash (`blog post
+<https://blog.bitwage.com/2018/03/12/get-dash>`_). You can then withdraw
+your wage to any Dash wallet for spending or saving.
 
-- Uphold
-- Bitwage
 
 Spending
 ========
