@@ -29,8 +29,8 @@ using the -datadir and -conf command-line arguments.
 |          |                                | (2000-XP) C:\\Documents and Settings\\username\\Application Data\\DashCore\\dash.conf         |
 +----------+--------------------------------+-----------------------------------------------------------------------------------------------+
 
-Note: if running Dash in testnet mode, the sub-folder "testnet3" will be
-appended to the data directory automatically.
+Note: if running Dash in testnet mode, the sub-folder ``testnet3`` will
+be appended to the data directory automatically.
 
 Command line arguments
 ======================
