@@ -103,6 +103,7 @@ reasons such as ping latency, uptime, fee, users, etc.:
 - https://www.nicehash.com
 - https://www.coinotron.com
 - https://dash.miningpoolhub.com
+- https://www.multipool.us
 - https://www.f2pool.com
 - https://www2.coinmine.pl/dash
 - http://dash.cybtc.info
