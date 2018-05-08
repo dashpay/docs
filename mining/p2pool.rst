@@ -109,7 +109,8 @@ to configure a few variables specific to your system::
   nano ./p2pool-dash-deploy/p2pool.deploy.sh
 
 Scroll down to the section labeled ``#Variables`` and enter the
-following information. Note that it may also be necessary to update the
+following information, replacing the ``<xxx>`` placeholders after the
+``=`` sign. Note that it may also be necessary to update the
 ``DASH_WALLET_URL``, ``DASH_WALLET_ZIP`` and ``DASH_WALLET_LOCAL``
 values if they do not match the current version of Dash:
 
