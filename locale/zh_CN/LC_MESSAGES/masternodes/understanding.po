@@ -1,21 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 10:33+0000\n"
+"POT-Creation-Date: 2018-05-07 04:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: Chinese (China) "
+"(https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../masternodes/understanding.rst:5
 msgid "Understanding Masternodes"
@@ -23,10 +26,10 @@ msgstr ""
 
 #: ../../masternodes/understanding.rst:13
 msgid ""
-"Masternodes, once unique to the Dash network, are now becoming popular as "
-"the technology is forked into other blockchains. This section of the "
-"documentation describes the principles and mechanisms of masternodes and the"
-" services they provide to the Dash network specifically."
+"Masternodes, once unique to the Dash network, are now becoming popular as"
+" the technology is forked into other blockchains. This section of the "
+"documentation describes the principles and mechanisms of masternodes and "
+"the services they provide to the Dash network specifically."
 msgstr ""
 
 #: ../../masternodes/understanding.rst:18
@@ -36,10 +39,11 @@ msgid ""
 "perform certain tasks related to PrivateSend and InstantSend, as the "
 "anonymity and instant transaction features in Dash are called. The "
 "masternodes are paid for this service, using a concept known as Proof of "
-"Service. This is in addition to the Proof of Work done by miners to secure "
-"the blockchain. Masternodes are also allowed to vote on :ref:`governance and"
-" funding proposals <governance>`, with each masternode receiving one vote "
-"(yes/no/abstain) on each proposal submitted to the system."
+"Service. This is in addition to the Proof of Work done by miners to "
+"secure the blockchain. Masternodes are also allowed to vote on "
+":ref:`governance and funding proposals <governance>`, with each "
+"masternode receiving one vote (yes/no/abstain) on each proposal submitted"
+" to the system."
 msgstr ""
 
 #: ../../masternodes/understanding.rst:29
@@ -48,529 +52,630 @@ msgid ""
 "decentralization to ensure that no single person controls a significant "
 "fraction of the masternodes. However, to avoid bloating the network with "
 "unnecessary masternodes or encouraging reckless operators, there is one "
-"condition that needs to be fulfilled: proof of ownership of 1000 Dash. The "
-"coins don't need to be in the masternode, but they need to be kept in a "
-"certain way that is transparent to the entire network. If the owner moves or"
-" spends those coins, the masternode stops working and payment ceases."
+"condition that needs to be fulfilled: proof of ownership of 1000 Dash. "
+"The coins don't need to be in the masternode, but they need to be kept in"
+" a certain way that is transparent to the entire network. If the owner "
+"moves or spends those coins, the masternode stops working and payment "
+"ceases."
 msgstr ""
 
 #: ../../masternodes/understanding.rst:39
+#, python-format
 msgid ""
 "Masternodes are paid by the network for the PrivateSend, InstantSend and "
-"governance services they provide. 45% of the block reward is paid out to the"
-" masternodes, 45% to miners and 10% to the budget. In practice, half of the "
-"reward from a normal block goes to the miner and half to the masternode. "
-"Then, every 16,616 blocks (approximately 30.29 days), a superblock is "
-"created that contains the entire 10% payout to the budget proposal winners. "
-"Masternodes are randomly selected for payment in each block (approximately "
-"every 2.6 minutes) from a list once they reach the top 10% of the total "
-"count of masternodes, and moved to the back of the list after payment. As "
-"more masternodes are created, the duration between payments increases. Due "
-"to the selection algorithm, there is always an aspect of randomness to "
-"payment selection, but in the long term all masternode owners should receive"
-" similar payments. If the collateral behind a masternode is spent, or if a "
-"masternode stops providing services to the network for more than one hour, "
-"it is removed from the list until normal service resumes. In this way, "
-"masternodes are given incentive to provide efficient and reliable services "
-"to the network."
+"governance services they provide. 45% of the block reward is paid out to "
+"the masternodes, 45% to miners and 10% to the budget. In practice, half "
+"of the reward from a normal block goes to the miner and half to the "
+"masternode. Then, every 16,616 blocks (approximately 30.29 days), a "
+"superblock is created that contains the entire 10% payout to the budget "
+"proposal winners. Masternodes are randomly selected for payment in each "
+"block (approximately every 2.6 minutes) from a list once they reach the "
+"top 10% of the total count of masternodes, and moved to the back of the "
+"list after payment. As more masternodes are created, the duration between"
+" payments increases. Due to the selection algorithm, there is always an "
+"aspect of randomness to payment selection, but in the long term all "
+"masternode owners should receive similar payments. If the collateral "
+"behind a masternode is spent, or if a masternode stops providing services"
+" to the network for more than one hour, it is removed from the list until"
+" normal service resumes. In this way, masternodes are given incentive to "
+"provide efficient and reliable services to the network."
 msgstr ""
 
 #: ../../masternodes/understanding.rst:58
 msgid ""
-"Having so many servers holding a full copy of the blockchain and working for"
-" the coin can be extremely useful. Thanks to the reward system, there is no "
-"risk of not having enough masternodes, and the developers can rely on them "
-"quickly deploying any new decentralized feature they want to implement. This"
-" is where the true strength of Dash lies - an incentivized system of "
-"thousands of distributed servers working 24x7 means that Dash can scale more"
-" efficiently and deploy services more quickly than a blockchain run entirely"
-" by unpaid volunteers. The more masternodes, the better and safer the Dash "
-"network."
+"Having so many servers holding a full copy of the blockchain and working "
+"for the coin can be extremely useful. Thanks to the reward system, there "
+"is no risk of not having enough masternodes, and the developers can rely "
+"on them quickly deploying any new decentralized feature they want to "
+"implement. This is where the true strength of Dash lies - an incentivized"
+" system of thousands of distributed servers working 24x7 means that Dash "
+"can scale more efficiently and deploy services more quickly than a "
+"blockchain run entirely by unpaid volunteers. The more masternodes, the "
+"better and safer the Dash network."
 msgstr ""
 
 #: ../../masternodes/understanding.rst:68
 msgid ""
 "As of March 2018, the Dash network has `over 4700 masternodes located "
-"<http://178.254.23.111/~pub/masternode_count.png>`_ in over `41 countries "
-"<https://chainz.cryptoid.info/dash/masternodes.dws>`_ and hosted on `over "
-"100 ISPs <http://178.254.23.111/~pub/Dash/masternode_ISPs.html>`_. The block"
-" reward is approximately 3.34 Dash, so the selected masternode receives 1.67"
-" Dash per payment or approximately 6 Dash per month. The block reward "
-"decreases by 7.14% approximately once per year, so the annual return on "
-"investment (ROI) to a masternode owner is currently under 8% and will "
-"decrease over time. See `this tool <https://dash- "
-"news.de/dashtv/#value=1000>`_ to calculate real-time ROI rates, and `this "
-"site <http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various real-"
-"time statistics on the masternode network."
+"<http://178.254.23.111/~pub/masternode_count.png>`_ in over `41 countries"
+" <https://chainz.cryptoid.info/dash/masternodes.dws>`_ and hosted on "
+"`over 100 ISPs <http://178.254.23.111/~pub/Dash/masternode_ISPs.html>`_. "
+"The block reward is approximately 3.34 Dash, so the selected masternode "
+"receives 1.67 Dash per payment or approximately 6 Dash per month. The "
+"block reward decreases by 7.14% approximately once per year, so the "
+"annual return on investment (ROI) to a masternode owner is approximately "
+"7% and will decrease over time `as calculated here "
+"<https://docs.google.com/spreadsheets/d "
+"/1HqgEkyfZDAA6pIZ3df2PwFE8Z430SVIzQ-mCQ6wGCh4/edit#gid=523620673>`_. See "
+"`this tool <https://dash- news.de/dashtv/#value=1000>`_ to calculate "
+"real-time ROI rates, and `this site "
+"<http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various real-time "
+"statistics on the masternode network."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:83
+#: ../../masternodes/understanding.rst:86
 msgid "Masternodes vs. mining"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:85
+#: ../../masternodes/understanding.rst:88
 msgid ""
 "Dash, like Bitcoin and most other cryptocurrencies, is based on a "
 "decentralized ledger of all transactions, known as a blockchain. This "
 "blockchain is secured through a consensus mechanism; in the case of both "
 "Dash and Bitcoin, the consensus mechanism is Proof of Work (PoW). "
-":ref:`Miners <mining>` attempt to solve difficult problems with specialized "
-"computers, and when they solve the problem, they receive the right to add a "
-"new block to the blockchain. If all the other people running the software "
-"agree that the problem was solved correctly, the block is added to the "
-"blockchain and the miner is rewarded."
+":ref:`Miners <mining>` attempt to solve difficult problems with "
+"specialized computers, and when they solve the problem, they receive the "
+"right to add a new block to the blockchain. If all the other people "
+"running the software agree that the problem was solved correctly, the "
+"block is added to the blockchain and the miner is rewarded."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:95
+#: ../../masternodes/understanding.rst:98
+#, python-format
 msgid ""
-"Dash works a little differently from Bitcoin, however, because it has a two-"
-"tier network. The second tier is powered by masternodes (Full Nodes), which "
-"enable financial privacy (PrivateSend), instant transactions (InstantSend), "
-"and the decentralized governance and budget system. Because this second tier"
-" is so important, masternodes are also rewarded when miners discover new "
-"blocks. The breakdown is as follows: 45% of the block reward goes to the "
-"miner, 45% goes to masternodes, and 10% is reserved for the budget system "
-"(created by superblocks every month)."
+"Dash works a little differently from Bitcoin, however, because it has a "
+"two-tier network. The second tier is powered by masternodes (Full Nodes),"
+" which enable financial privacy (PrivateSend), instant transactions "
+"(InstantSend), and the decentralized governance and budget system. "
+"Because this second tier is so important, masternodes are also rewarded "
+"when miners discover new blocks. The breakdown is as follows: 45% of the "
+"block reward goes to the miner, 45% goes to masternodes, and 10% is "
+"reserved for the budget system (created by superblocks every month)."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:105
+#: ../../masternodes/understanding.rst:108
 msgid ""
-"The masternode system is referred to as Proof of Service (PoSe), since the "
-"masternodes provide crucial services to the network. In fact, the entire "
-"network is overseen by the masternodes, which have the power to reject "
-"improperly formed blocks from miners. If a miner tried to take the entire "
-"block reward for themselves or tried to run an old version of the Dash "
-"software, the masternode network would orphan that block, and it would not "
-"be added to the blockchain."
+"The masternode system is referred to as Proof of Service (PoSe), since "
+"the masternodes provide crucial services to the network. In fact, the "
+"entire network is overseen by the masternodes, which have the power to "
+"reject improperly formed blocks from miners. If a miner tried to take the"
+" entire block reward for themselves or tried to run an old version of the"
+" Dash software, the masternode network would orphan that block, and it "
+"would not be added to the blockchain."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:113
+#: ../../masternodes/understanding.rst:116
 msgid ""
 "In short, miners power the first tier, which is the basic sending and "
-"receiving of funds and prevention of doublespending. Masternodes power the "
-"second tier, which provide the added features that make Dash different from "
-"other cryptocurrencies. Masternodes do not mine, and mining computers cannot"
-" serve as masternodes. Additionally, each masternode is “secured” by 1000 "
-"DASH. Those DASH remain under the sole control of their owner at all times, "
-"and can still be freely spent. The funds are not locked in any way. However,"
-" if the funds are moved or spent, the associated masternode will go offline "
-"and stop receiving rewards."
+"receiving of funds and prevention of doublespending. Masternodes power "
+"the second tier, which provide the added features that make Dash "
+"different from other cryptocurrencies. Masternodes do not mine, and "
+"mining computers cannot serve as masternodes. Additionally, each "
+"masternode is “secured” by 1000 DASH. Those DASH remain under the sole "
+"control of their owner at all times, and can still be freely spent. The "
+"funds are not locked in any way. However, if the funds are moved or "
+"spent, the associated masternode will go offline and stop receiving "
+"rewards."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:127
+#: ../../masternodes/understanding.rst:130
 msgid "Payment logic"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:129
+#: ../../masternodes/understanding.rst:132
 msgid ""
 "Masternode payments in Dash version 12 are determined using a completely "
 "decentralized deterministic queue with probabilistic selection."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:133
+#: ../../masternodes/understanding.rst:136
 msgid "Global list"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:135
+#: ../../masternodes/understanding.rst:138
+#, python-format
 msgid ""
-"Every masternode appears in the global list. Their position in this list is "
-"determined by their time since the last payment according to the network, "
-"not the blockchain. New masternodes joining the network and masternodes "
-"receiving payment are placed at the end of the list. Running, active "
-"masternodes which are restarted using the rpc commands 'masternode start' or"
-" 'masternode start-alias' are also placed at the end of the list. Using the "
-"new rpc command 'masternode start-missing' avoids this. As masternodes are "
-"moved to the end of the global list, the remaining masternodes slowly "
-"migrate towards the top of the list. Once a masternode reaches the top 10% "
-"of the global list, it is eligible for selection from the selection pool."
+"Every masternode appears in the global list. Their position in this list "
+"is determined by their time since the last payment according to the "
+"network, not the blockchain. New masternodes joining the network and "
+"masternodes receiving payment are placed at the end of the list. Running,"
+" active masternodes which are restarted using the rpc commands "
+"'masternode start' or 'masternode start-alias' are also placed at the end"
+" of the list. Using the new rpc command 'masternode start-missing' avoids"
+" this. As masternodes are moved to the end of the global list, the "
+"remaining masternodes slowly migrate towards the top of the list. Once a "
+"masternode reaches the top 10% of the global list, it is eligible for "
+"selection from the selection pool."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:148
+#: ../../masternodes/understanding.rst:151
 msgid "Selection pool"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:150
+#: ../../masternodes/understanding.rst:153
+#, python-format
 msgid ""
 "The selection pool is the top 10% of the global list.  Its size is "
-"determined by the total masternode count. As an example, if there are 4600 "
-"active masternodes, the top 460 masternodes in the global list are eligible "
-"for selection. Once in the selection pool, selection for payment is "
-"determined by block hash entropy. The block hash 100 blocks ago determines "
-"which masternode will be selected for payment. A double SHA256 of the "
-"funding transaction hash and index for all masternodes in the selection pool"
-" is compared with the proof of work hash 100 blocks ago. The masternode with"
-" the closest numeric hash value to that block hash is selected for payment."
+"determined by the total masternode count. As an example, if there are "
+"4500 active masternodes, the top 450 masternodes in the global list are "
+"eligible for selection. Once in the selection pool, selection for payment"
+" is determined by block hash entropy. The block hash 100 blocks ago "
+"determines which masternode will be selected for payment. A double SHA256"
+" of the funding transaction hash and index for all masternodes in the "
+"selection pool is compared with the proof of work hash 100 blocks ago. "
+"The masternode with the closest numeric hash value to that block hash is "
+"selected for payment."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:162
+#: ../../masternodes/understanding.rst:165
 msgid "Probabilities"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:164
+#: ../../masternodes/understanding.rst:167
 msgid ""
-"Because selection is determined by block hash entropy, it is impossible to "
-"predict when a payment will occur. Once in the selection pool, payments "
-"become a probability. These probabilities are calculated using an assumed "
-"current pool size of 450 (at 4500 total masternodes)."
+"Because selection is determined by block hash entropy, it is impossible "
+"to predict when a payment will occur. Masternode operators should expect "
+"considerable variance in payment intervals over time. Once a masternode "
+"enters the selection pool, payments become a probability. The "
+"probabilities in this example are calculated using an assumed current "
+"pool size of 450 (at 4500 total masternodes). Nodes in the selection pool"
+" are selected for rewards randomly, i.e. the probability of being "
+"selected on any given block is 1/450."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:169
+#: ../../masternodes/understanding.rst:176
+#, python-format
 msgid ""
-"As an example of reading this chart, after a masternode has been in the "
-"selection pool for 12 hours, 45.98% of nodes due to be selected will have "
-"been selected and removed from the selection pool to the back of the list."
+"The table below shows the probably of an eligible node being selected for"
+" payment over a particular period of time. For example, the probability "
+"that an eligible node is selected within 12 hours is about 46%. The table"
+" does **not** (and cannot) tell us the probability of being selected "
+"**after** a given period of time. For example, if you haven’t been "
+"selected within the past 12 hours — and we know from this table there is "
+"about a 54% chance of that happening — the probability of being selected "
+"on the next block is **not** 46%. It remains 1/450. Putting these "
+"together, if you have an eligible node, and, say, 48 hours have passed "
+"without payment, then you’ve been very unlucky, as there’s less than a "
+"10% chance of that happening. But, your chances of being selected on the "
+"next block remain the same as for any block, i.e. 1/450."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:175
+#: ../../masternodes/understanding.rst:189
+msgid ""
+"Once a node is selected for payment, it is moved to the back of the list "
+"and cannot be selected again until it re-enters the selection pool."
+msgstr ""
+
+#: ../../masternodes/understanding.rst:193
 msgid "Hours"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:175
+#: ../../masternodes/understanding.rst:193
 msgid "Blocks"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:175
+#: ../../masternodes/understanding.rst:193
 msgid "Probability"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:177
+#: ../../masternodes/understanding.rst:195
 msgid "1"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:177
+#: ../../masternodes/understanding.rst:195
 msgid "23.07"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:177
+#: ../../masternodes/understanding.rst:195
 msgid "5.00%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:179
+#: ../../masternodes/understanding.rst:197
 msgid "2"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:179
+#: ../../masternodes/understanding.rst:197
 msgid "46.14"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:179
+#: ../../masternodes/understanding.rst:197
 msgid "9.76%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:181
+#: ../../masternodes/understanding.rst:199
 msgid "3"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:181
+#: ../../masternodes/understanding.rst:199
 msgid "69.21"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:181
+#: ../../masternodes/understanding.rst:199
 msgid "14.27%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:183
+#: ../../masternodes/understanding.rst:201
 msgid "4"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:183
+#: ../../masternodes/understanding.rst:201
 msgid "92.28"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:183
+#: ../../masternodes/understanding.rst:201
 msgid "18.56%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:185
+#: ../../masternodes/understanding.rst:203
 msgid "6"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:185
+#: ../../masternodes/understanding.rst:203
 msgid "138.42"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:185
+#: ../../masternodes/understanding.rst:203
 msgid "26.50%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:187
+#: ../../masternodes/understanding.rst:205
 msgid "8"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:187
+#: ../../masternodes/understanding.rst:205
 msgid "184.56"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:187
+#: ../../masternodes/understanding.rst:205
 msgid "33.67%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:189
+#: ../../masternodes/understanding.rst:207
 msgid "10"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:189
+#: ../../masternodes/understanding.rst:207
 msgid "230.70"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:189
+#: ../../masternodes/understanding.rst:207
 msgid "40.14%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:191
+#: ../../masternodes/understanding.rst:209
 msgid "12"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:191
+#: ../../masternodes/understanding.rst:209
 msgid "276.84"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:191
+#: ../../masternodes/understanding.rst:209
 msgid "45.98%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:193
+#: ../../masternodes/understanding.rst:211
 msgid "18"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:193
+#: ../../masternodes/understanding.rst:211
 msgid "415.26"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:193
+#: ../../masternodes/understanding.rst:211
 msgid "60.30%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:195
+#: ../../masternodes/understanding.rst:213
 msgid "24"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:195
+#: ../../masternodes/understanding.rst:213
 msgid "553.68"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:195
+#: ../../masternodes/understanding.rst:213
 msgid "70.82%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:197
+#: ../../masternodes/understanding.rst:215
 msgid "30"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:197
+#: ../../masternodes/understanding.rst:215
 msgid "692.10"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:197
+#: ../../masternodes/understanding.rst:215
 msgid "78.56%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:199
+#: ../../masternodes/understanding.rst:217
 msgid "36"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:199
+#: ../../masternodes/understanding.rst:217
 msgid "830.52"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:199
+#: ../../masternodes/understanding.rst:217
 msgid "84.24%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:201
+#: ../../masternodes/understanding.rst:219
 msgid "42"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:201
+#: ../../masternodes/understanding.rst:219
 msgid "968.94"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:201
+#: ../../masternodes/understanding.rst:219
 msgid "88.42%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:203
+#: ../../masternodes/understanding.rst:221
 msgid "48"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:203
+#: ../../masternodes/understanding.rst:221
 msgid "1107.36"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:203
+#: ../../masternodes/understanding.rst:221
 msgid "91.49%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:205
+#: ../../masternodes/understanding.rst:223
 msgid "72"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:205
+#: ../../masternodes/understanding.rst:223
 msgid "1661.04"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:205
+#: ../../masternodes/understanding.rst:223
 msgid "97.52%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:207
+#: ../../masternodes/understanding.rst:225
 msgid "96"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:207
+#: ../../masternodes/understanding.rst:225
 msgid "2214.72"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:207
+#: ../../masternodes/understanding.rst:225
 msgid "99.28%"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:210
+#: ../../masternodes/understanding.rst:228
 msgid ""
-"You can run the code (written by community member moocowmoo used to create "
-"the table above `here <https://repl.it/@moocowmoo/Dash-Selection- "
+"You can run the code (written by community member moocowmoo used to "
+"create the table above `here <https://repl.it/@moocowmoo/Dash-Selection- "
 "Probability>`_."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:215
+#: ../../masternodes/understanding.rst:233
 msgid "Quorum selection"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:217
-msgid ""
-"InstantSend transactions in Dash version 12 are secured using a consensus of"
-" deterministically selected masternodes. This set of masternodes is "
-"informally termed a quorum and must be in a majority agreement, at least six"
-" out of ten, for a successful lock of the transaction inputs. Multiple "
-"quorums are self-selected for each input in an InstantSend transaction using"
-" the mathematical distance between the hash of each input and of the set of "
-"masternode funding transactions."
-msgstr ""
-
-#: ../../masternodes/understanding.rst:225
-msgid ""
-"Each masternode receiving the InstantSend transaction lock request compares "
-"the hash of the masternode's funding transaction to the hash of the input "
-"requesting the lock. After validating the inputs are not spent, the ten "
-"masternodes furthest from this hash broadcast their acceptance of the lock."
-msgstr ""
-
-#: ../../masternodes/understanding.rst:231
-msgid ""
-"All InstantSend inputs must be at least six blocks old or the transaction "
-"will be rejected."
-msgstr ""
-
 #: ../../masternodes/understanding.rst:235
-msgid "Masternode requirements"
-msgstr ""
-
-#: ../../masternodes/understanding.rst:237
 msgid ""
-"1000 Dash: Arguably the hardest part. Dash can be obtained from exchanges "
-"such as Poloniex, Bittrex, Kraken and LiveCoin. Shapeshift's service is also"
-" an excellent way."
+"InstantSend transactions in Dash version 12 are secured using a consensus"
+" of deterministically selected masternodes. This set of masternodes is "
+"informally termed a quorum and must be in a majority agreement, at least "
+"six out of ten, for a successful lock of the transaction inputs. Multiple"
+" quorums are self-selected for each input in an InstantSend transaction "
+"using the mathematical distance between the hash of each input and of the"
+" set of masternode funding transactions."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:240
+#: ../../masternodes/understanding.rst:243
 msgid ""
-"A server or VPS running Linux: Most recent guides use Ubuntu 16.04 LTS. We "
-"recommend VPS services such as Vultr and DigitalOcean, although any decent "
-"provider will do. Generally an instance with low to average specifications "
-"will do, although performance requirements will increase according to this "
-"roadmap."
-msgstr ""
-
-#: ../../masternodes/understanding.rst:245
-msgid "A dedicated IP address: These usually come with the VPS/server."
-msgstr ""
-
-#: ../../masternodes/understanding.rst:246
-msgid ""
-"A little time and (heart): Masternodes used to require complex setup, but "
-"tools such as dashman now greatly simplify the process."
+"Each masternode receiving the InstantSend transaction lock request "
+"compares the hash of the masternode's funding transaction to the hash of "
+"the input requesting the lock. After validating the inputs are not spent,"
+" the ten masternodes furthest from this hash broadcast their acceptance "
+"of the lock."
 msgstr ""
 
 #: ../../masternodes/understanding.rst:249
 msgid ""
-"In addition to the 1000 Dash held in collateral, masternodes also have "
-"minimum hardware requirements. As of version 12.1, these requirements are as"
-" follows:"
+"All InstantSend inputs must be at least six blocks old or the transaction"
+" will be rejected."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:254
+#: ../../masternodes/understanding.rst:253
+msgid "Masternode requirements"
+msgstr ""
+
+#: ../../masternodes/understanding.rst:255
+msgid ""
+"1000 Dash: Arguably the hardest part. Dash can be obtained from exchanges"
+" such as Poloniex, Bittrex, Kraken and LiveCoin. Shapeshift's service is "
+"also an excellent way."
+msgstr ""
+
+#: ../../masternodes/understanding.rst:258
+msgid ""
+"A server or VPS running Linux: Most recent guides use Ubuntu 16.04 LTS. "
+"We recommend VPS services such as Vultr and DigitalOcean, although any "
+"decent provider will do. Generally an instance with low to average "
+"specifications will do, although performance requirements will increase "
+"according to this roadmap."
+msgstr ""
+
+#: ../../masternodes/understanding.rst:263
+msgid "A dedicated IP address: These usually come with the VPS/server."
+msgstr ""
+
+#: ../../masternodes/understanding.rst:264
+msgid ""
+"A little time and (heart): Masternodes used to require complex setup, but"
+" tools such as dashman now greatly simplify the process."
+msgstr ""
+
+#: ../../masternodes/understanding.rst:267
+msgid ""
+"In addition to the 1000 Dash held in collateral, masternodes also have "
+"minimum hardware requirements. As of version 12.1, these requirements are"
+" as follows:"
+msgstr ""
+
+#: ../../masternodes/understanding.rst:272
 msgid "Minimum"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:254
+#: ../../masternodes/understanding.rst:272
 msgid "Recommended"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:256
+#: ../../masternodes/understanding.rst:274
 msgid "CPU"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:256
+#: ../../masternodes/understanding.rst:274
 msgid "1x 1 GHz"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:256
+#: ../../masternodes/understanding.rst:274
 msgid "1x 2 GHz"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:258
+#: ../../masternodes/understanding.rst:276
 msgid "RAM"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:258
+#: ../../masternodes/understanding.rst:276
 msgid "1 GB"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:258
+#: ../../masternodes/understanding.rst:276
 msgid "2 GB"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:260
+#: ../../masternodes/understanding.rst:278
 msgid "Disk"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:260
+#: ../../masternodes/understanding.rst:278
 msgid "8 GB"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:260
+#: ../../masternodes/understanding.rst:278
 msgid "16 GB"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:262
+#: ../../masternodes/understanding.rst:280
 msgid "Network"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:262
+#: ../../masternodes/understanding.rst:280
 msgid "400 GB/mth"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:262
+#: ../../masternodes/understanding.rst:280
 msgid "1 TB/mth"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:265
+#: ../../masternodes/understanding.rst:283
 msgid ""
-"Masternode bandwidth use ranges between 300-500 GB per month and will grow "
-"as the network does."
+"Masternode bandwidth use ranges between 300-500 GB per month and will "
+"grow as the network does."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:269
+#: ../../masternodes/understanding.rst:287
 msgid "Dash Evolution"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:271
+#: ../../masternodes/understanding.rst:289
 msgid ""
-"The exact hardware requirements for Dash Evolution masternodes have yet to "
-"be determined, although some pointers can be taken from the `roadmap "
+"The exact hardware requirements for Dash Evolution masternodes have yet "
+"to be determined, although some pointers can be taken from the `roadmap "
 "<https://github.com/dashpay/dash-roadmap>`_ and this `blog post "
 "<https://medium.com/@eduffield222/how-to-enabling-on-chain-scaling- "
-"2ffab5997f8b>`_. It should be possible to run Dash masternodes on normal VPS"
-" servers until the block size reaches approximately 20 MB, after which "
-"custom hardware such as GPUs and eventually ASICs will be required."
+"2ffab5997f8b>`_. It should be possible to run Dash masternodes on normal "
+"VPS servers until the block size reaches approximately 20 MB, after which"
+" custom hardware such as GPUs and eventually ASICs will be required."
 msgstr ""
+
+#~ msgid ""
+#~ "As of March 2018, the Dash network"
+#~ " has `over 4700 masternodes located "
+#~ "<http://178.254.23.111/~pub/masternode_count.png>`_ in "
+#~ "over `41 countries "
+#~ "<https://chainz.cryptoid.info/dash/masternodes.dws>`_ and "
+#~ "hosted on `over 100 ISPs "
+#~ "<http://178.254.23.111/~pub/Dash/masternode_ISPs.html>`_. The"
+#~ " block reward is approximately 3.34 "
+#~ "Dash, so the selected masternode "
+#~ "receives 1.67 Dash per payment or "
+#~ "approximately 6 Dash per month. The "
+#~ "block reward decreases by 7.14% "
+#~ "approximately once per year, so the "
+#~ "annual return on investment (ROI) to "
+#~ "a masternode owner is currently under"
+#~ " 8% and will decrease over time. "
+#~ "See `this tool <https://dash- "
+#~ "news.de/dashtv/#value=1000>`_ to calculate real-"
+#~ "time ROI rates, and `this site "
+#~ "<http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for "
+#~ "various real-time statistics on the "
+#~ "masternode network."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The selection pool is the top 10%"
+#~ " of the global list.  Its size "
+#~ "is determined by the total masternode"
+#~ " count. As an example, if there "
+#~ "are 4600 active masternodes, the top "
+#~ "460 masternodes in the global list "
+#~ "are eligible for selection. Once in "
+#~ "the selection pool, selection for "
+#~ "payment is determined by block hash "
+#~ "entropy. The block hash 100 blocks "
+#~ "ago determines which masternode will be"
+#~ " selected for payment. A double "
+#~ "SHA256 of the funding transaction hash"
+#~ " and index for all masternodes in "
+#~ "the selection pool is compared with "
+#~ "the proof of work hash 100 blocks"
+#~ " ago. The masternode with the closest"
+#~ " numeric hash value to that block "
+#~ "hash is selected for payment."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Because selection is determined by block"
+#~ " hash entropy, it is impossible to"
+#~ " predict when a payment will occur."
+#~ " Once in the selection pool, payments"
+#~ " become a probability. These probabilities"
+#~ " are calculated using an assumed "
+#~ "current pool size of 450 (at 4500"
+#~ " total masternodes)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As an example of reading this "
+#~ "chart, after a masternode has been "
+#~ "in the selection pool for 12 "
+#~ "hours, 45.98% of nodes due to be"
+#~ " selected will have been selected and"
+#~ " removed from the selection pool to"
+#~ " the back of the list."
+#~ msgstr ""
+

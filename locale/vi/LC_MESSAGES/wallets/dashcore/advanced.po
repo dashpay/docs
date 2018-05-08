@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Dash Core Group, Inc
+# This file is distributed under the same license as the Dash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dash latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-07 04:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../wallets/dashcore/advanced.rst:5
+msgid "Advanced topics"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:10
+msgid "Coin Control"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:12
+msgid ""
+"Coin Control allows users of the Dash Core Wallet to specify which addresses"
+" and Unspent Transaction Outputs (UTXOs) should be used as inputs in "
+"transactions. This allows you to keep a specific balance on certain "
+"addresses in your wallet, while spending others freely. In Dash Core Wallet,"
+" click **Settings > Options > Wallet > Enable coin control features**. Now, "
+"when you go to the Send tab in your wallet, a new button labelled "
+"**Inputs…** will appear. Click this button to select which UTXOs can be used"
+" as input for any transactions you create. The following window appears:"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:25
+msgid ""
+"Coin Selection window in Dash Core wallet, showing two masternodes (testnet)"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:28
+msgid ""
+"Right click on the transaction(s) you do not want to spend, then select "
+"**Lock unspent**. A small lock will appear next to the transaction. You can "
+"click the **Toggle lock state** button to invert the locked/unlocked state "
+"of all UTXOs. When you are ready to continue, click **OK**. You can now "
+"safely create transactions with your remaining funds without affecting the "
+"locked UTXOs."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:41
+msgid "Locking UTXOs in Dash Core wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:47
+msgid "Multisignature"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:49
+msgid ""
+"This section presents a worked example to demonstrate multisig functionality"
+" in Dash Core. While the transactions are no longer visible on the current "
+"testnet blockchain and some address formats or RPC responses may differ "
+"slightly from the version shown here, the principle and commands are the "
+"same. The example demonstrates how to set up a 2-of-3 multisig address and "
+"create a transaction. The example parties involved are a buyer, a seller and"
+" an arbiter. This example is based on:"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:57
+msgid "https://people.xiph.org/~greg/escrowexample.txt"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:58
+msgid "https://gist.github.com/gavinandresen/3966071"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:59
+msgid "https://bitcoin.org/en/developer-examples#p2sh-multisig"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:62
+msgid "Step 1: Create three addresses"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:64
+#: ../../wallets/dashcore/advanced.rst:132
+#: ../../wallets/dashcore/advanced.rst:209
+#: ../../wallets/dashcore/advanced.rst:217
+#: ../../wallets/dashcore/advanced.rst:250
+msgid "Seller::"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:81
+#: ../../wallets/dashcore/advanced.rst:140
+#: ../../wallets/dashcore/advanced.rst:161
+#: ../../wallets/dashcore/advanced.rst:169
+#: ../../wallets/dashcore/advanced.rst:231
+#: ../../wallets/dashcore/advanced.rst:242
+msgid "Buyer::"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:98
+#: ../../wallets/dashcore/advanced.rst:148
+msgid "Arbiter::"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:115
+msgid "This results in three keypairs (public/private)::"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:122
+msgid "Step 2: Create multisig address"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:124
+msgid ""
+"The ``createmultisig`` command takes as variables the number n signatures of"
+" m keys (supplied as json array) required. In this example, 2 of 3 keys are "
+"required to sign the transaction."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:128
+msgid ""
+"Note: The address can be created by anyone, as long as the public keys and "
+"their sequence are known (resulting address and redeemScript are identical, "
+"see below)."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:157
+msgid "Step 3: Buyer funds the multisig address"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:159
+msgid "This works the same as a usual transaction."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:166
+msgid ""
+"The seller/arbiter can trace the transaction by its txid in the block "
+"explorer. Or from the console as follows."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:201
+msgid "Step 4: Spending the multisig"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:203
+msgid ""
+"Now we assume the deal is complete, the buyer got the goods and everyone is "
+"happy. Now the seller wants to get his Dash. As a 2-of-3 multisig was used, "
+"the transaction must be signed by 2 parties (seller + buyer or arbiter). The"
+" seller creates a transaction (we will reuse his public address from above)."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:214
+msgid ""
+"And partially signs it, using the redeemScript, scriptPubKey and his private"
+" key"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:225
+msgid ""
+"Note that the output hex is getting longer, but complete flag is \"false\" "
+"as the transaction needs another signature. So now either the buyer or the "
+"arbiter can complete the signature of the transaction, using the output from"
+" above and their private key. Let's assume the buyer is completing the "
+"signature."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:239
+msgid ""
+"The signature is complete now, and either of the parties can transmit the "
+"transaction to the network."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:247
+msgid ""
+"Again, this transaction can be traced in a block explorer. And the seller is"
+" happy to receive his coins at his public address as follows."
+msgstr ""
