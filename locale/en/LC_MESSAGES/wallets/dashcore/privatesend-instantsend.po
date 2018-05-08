@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-19 12:14+0000\n"
+"POT-Creation-Date: 2018-04-09 10:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,78 +27,37 @@ msgstr ""
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:10
 msgid ""
-"This document describes how to use Dash Core to send Dash anonymously. "
-"PrivateSend, released as DarkSend in RC4 of the DarkCoin client and "
-"rebranded to PrivateSend in May 2016, is a trustless method of running a "
-"sequence of transactions (known as \"mixing\") such that an external "
-"observer is unable to determine the source of funding when a PrivateSend "
-"transaction is created. This gives your Dash the same anonymous "
-"properties as cash withdrawn from an ATM, for example. The mixing and "
-"denomination process is seamless, automatic, and requires no intervention"
-" on the part of the user. The current implementation of PrivateSend in "
-"the Dash Core wallet allows any amount of Dash to be mixed for later use "
-"in PrivateSend transactions."
+"This documentation describes how to use Dash Core to send Dash "
+"anonymously. PrivateSend, released as DarkSend in RC4 of the DarkCoin "
+"client and rebranded to PrivateSend in May 2016, is a trustless method of"
+" running a sequence of transactions (known as \"mixing\") such that an "
+"external observer is unable to determine the source of funding when a "
+"PrivateSend transaction is created. This gives your Dash the same "
+"anonymous properties as cash withdrawn from an ATM, for example. The "
+"mixing and denomination process is seamless, automatic, and requires no "
+"intervention on the part of the user. The current implementation of "
+"PrivateSend in the Dash Core wallet allows any amount of Dash to be mixed"
+" for later use in PrivateSend transactions. As of April 2018, PrivateSend"
+" is not currently available in other Dash wallets."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:22
-msgid "**Here's how it works**"
-msgstr ""
-
-#: ../../wallets/dashcore/privatesend-instantsend.rst:24
+#: ../../wallets/dashcore/privatesend-instantsend.rst:23
 msgid ""
-"Every 10 blocks, user clients network-wide will send any unmixed, "
-"traceable DASH in their possession through an anonymization phase. In "
-"this phase, masternodes are used in chained succession to mix the coins "
-"they receive from the network and break them down into homogenous "
-"denominations."
+"You can read more about PrivateSend theory and processes :ref:`here "
+"<privatesend>`."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:30
-msgid ""
-"After being processed by a minimum of 2 masternodes, the coins are either"
-" sent to the next masternode in the chain or back to the user’s wallet at"
-" randomly generated change addresses."
-msgstr ""
-
-#: ../../wallets/dashcore/privatesend-instantsend.rst:34
-msgid ""
-"Depending on the desired depth of security and privacy, users may select "
-"between 2 and 8 “hops” to successive masternodes before their coins are "
-"sent back to the client. Hops are made every 10 blocks, so anonymization "
-"at a depth of 2 hops will take 2*2.5=5.0 minutes, 3 hops 3*2.5=7.5 "
-"minutes, and so on. The desired mixing depth can be selected in the "
-"client GUI."
-msgstr ""
-
-#: ../../wallets/dashcore/privatesend-instantsend.rst:41
-msgid ""
-"At the end of the anonymization phase, the user’s coins are returned to "
-"their client at randomly generated change addresses. When the user wishes"
-" to make a transaction, the client forwards the intended amount from "
-"these anonymous change addresses directly to the intended receiver’s "
-"address. There is no direct involvement of of masternodes in the final "
-"person-to-person transaction."
-msgstr ""
-
-#: ../../wallets/dashcore/privatesend-instantsend.rst:48
-msgid ""
-"Proof of payment will work as it always has: a user can see the send "
-"transaction with the receiver’s address in their own wallet, and the "
-"blockchain will show that the receiver’s address received an input in the"
-" corresponding amount."
-msgstr ""
-
-#: ../../wallets/dashcore/privatesend-instantsend.rst:55
+#: ../../wallets/dashcore/privatesend-instantsend.rst:27
 msgid "Configuration"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:57
+#: ../../wallets/dashcore/privatesend-instantsend.rst:29
 msgid ""
 "Open your Dash Core wallet, go to **Settings** and select **Options**. Go"
 " to the **Wallet** tab."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:63
+#: ../../wallets/dashcore/privatesend-instantsend.rst:35
 msgid ""
 "Next to **PrivateSend rounds to use**, enter a value between 1-8. Each "
 "round of PrivateSend performs one denominated fund mixing transaction. "
@@ -107,13 +66,13 @@ msgid ""
 "number of rounds currently available."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:69
+#: ../../wallets/dashcore/privatesend-instantsend.rst:41
 msgid ""
 "NOTE: To prevent system abuse, an average of one in ten rounds of "
 "masternode mixing incurs a fee of .001 DASH."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:72
+#: ../../wallets/dashcore/privatesend-instantsend.rst:44
 msgid ""
 "Enter a target value for **Amount of Dash to keep anonymized**. This "
 "value provides a lower boundary on the final amount of funds to be "
@@ -124,11 +83,11 @@ msgid ""
 "higher than your target, but should be close."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:80
+#: ../../wallets/dashcore/privatesend-instantsend.rst:52
 msgid "Click **OK** to save settings."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:82
+#: ../../wallets/dashcore/privatesend-instantsend.rst:54
 msgid ""
 "PrivateSend is disabled by default when you open the wallet. It will only"
 " start after you set the number of rounds and number of Dash to mix under"
@@ -136,58 +95,58 @@ msgid ""
 "wallet."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:89
+#: ../../wallets/dashcore/privatesend-instantsend.rst:61
 msgid "Starting Mixing"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:91
+#: ../../wallets/dashcore/privatesend-instantsend.rst:63
 msgid ""
 "The PrivateSend process is initiated by clicking the **Start Mixing** "
 "button on the **Overview** tab of the Dash Core wallet. Mixing is "
 "possible once the following conditions have been met:"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:95
+#: ../../wallets/dashcore/privatesend-instantsend.rst:67
 msgid ""
 "The wallet contains sufficient non-anonymized funds to create the minimum"
 " required denominated values"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:97
+#: ../../wallets/dashcore/privatesend-instantsend.rst:69
 msgid "The user has not disabled PrivateSend in the Options dialog"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:98
+#: ../../wallets/dashcore/privatesend-instantsend.rst:70
 msgid ""
 "The target value for anonymized Funds in the Options dialog is greater "
 "than zero"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:101
+#: ../../wallets/dashcore/privatesend-instantsend.rst:73
 msgid ""
 "If your wallet is encrypted (highly recommended), you will be asked to "
 "enter your wallet passphrase. Enable the **Only for mixing via "
 "PrivateSend** checkbox to unlock the wallet for mixing only."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:108
+#: ../../wallets/dashcore/privatesend-instantsend.rst:80
 msgid "Entering a password for PrivateSend mixing only"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:110
+#: ../../wallets/dashcore/privatesend-instantsend.rst:82
 msgid ""
 "This will unlock your wallet, and the PrivateSend mixing process will "
 "begin. The wallet will remain unlocked until PrivateSend mixing is "
 "complete, at which point it will be locked automatically."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:117
+#: ../../wallets/dashcore/privatesend-instantsend.rst:89
 msgid ""
 "PrivateSend interface after clicking the **Start Mixing** button. Note "
 "the **Status** is **Enabled**."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:120
+#: ../../wallets/dashcore/privatesend-instantsend.rst:92
 msgid ""
 "PrivateSend will begin creating transactions and your PrivateSend balance"
 " will gradually increase. This process can take some time, so be patient."
@@ -195,7 +154,7 @@ msgid ""
 " section."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:125
+#: ../../wallets/dashcore/privatesend-instantsend.rst:97
 msgid ""
 "Any of the following actions will interrupt the mixing process. Because "
 "the transactions are atomic (they either take place completely, or do not"
@@ -203,29 +162,29 @@ msgid ""
 "PrivateSend mixing at any time."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:127
+#: ../../wallets/dashcore/privatesend-instantsend.rst:99
 msgid "Clicking the Stop Mixing button on the Overview tab"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:128
+#: ../../wallets/dashcore/privatesend-instantsend.rst:100
 msgid "Closing the client before PrivateSend mixing is completed"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:129
+#: ../../wallets/dashcore/privatesend-instantsend.rst:101
 msgid ""
 "Sending PrivateSend funds from the wallet before PrivateSend rounds are "
 "completed"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:131
+#: ../../wallets/dashcore/privatesend-instantsend.rst:103
 msgid "Disabling PrivateSend before the process is complete"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:134
+#: ../../wallets/dashcore/privatesend-instantsend.rst:106
 msgid "Monitoring Mixing"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:136
+#: ../../wallets/dashcore/privatesend-instantsend.rst:108
 msgid ""
 "If you want to monitor PrivateSend in more detail, you need to enable "
 "some advanced features of the wallet. Go to **Settings**, select "
@@ -234,22 +193,22 @@ msgid ""
 "interface** options."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:145
+#: ../../wallets/dashcore/privatesend-instantsend.rst:117
 msgid "Enabling advanced options for PrivateSend in the Dash Core wallet settings"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:148
-#: ../../wallets/dashcore/privatesend-instantsend.rst:156
+#: ../../wallets/dashcore/privatesend-instantsend.rst:120
+#: ../../wallets/dashcore/privatesend-instantsend.rst:128
 msgid ""
 "This will allow you to monitor progress and see which individual "
 "operations PrivateSend is carrying out in the background."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:154
+#: ../../wallets/dashcore/privatesend-instantsend.rst:126
 msgid "Monitoring PrivateSend progress"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:159
+#: ../../wallets/dashcore/privatesend-instantsend.rst:131
 msgid ""
 "Since PrivateSend mixing creates a lot of new address keys to send and "
 "receive the anonymized denominations, you may receive a warning when the "
@@ -260,17 +219,17 @@ msgid ""
 "complete."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:167
+#: ../../wallets/dashcore/privatesend-instantsend.rst:139
 msgid ""
 "You can also monitor PrivateSend progress by viewing the transactions "
 "created by the mixing process on the **Transactions** tab."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:173
+#: ../../wallets/dashcore/privatesend-instantsend.rst:145
 msgid "Transactions created by PrivateSend on the Transactions tab"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:175
+#: ../../wallets/dashcore/privatesend-instantsend.rst:147
 msgid ""
 "You can also use the coin control feature to view which addresses hold "
 "mixed denominations ready to be used for PrivateSend transactions. Go to "
@@ -284,17 +243,17 @@ msgid ""
 " used in a PrivateSend transaction is 0.01000010 DASH."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:189
+#: ../../wallets/dashcore/privatesend-instantsend.rst:161
 msgid ""
 "Coin Selection dialog showing addresses holding PrivateSend mixed "
 "balances in different denominations"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:193
+#: ../../wallets/dashcore/privatesend-instantsend.rst:165
 msgid "Paying with PrivateSend"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:195
+#: ../../wallets/dashcore/privatesend-instantsend.rst:167
 msgid ""
 "You can only use PrivateSend for payments once you have mixed enough Dash"
 " to make up the amount you are trying to send. Because the mixing process"
@@ -308,7 +267,7 @@ msgid ""
 "therefore will be charged a slightly higher fee."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:206
+#: ../../wallets/dashcore/privatesend-instantsend.rst:178
 msgid ""
 "To send a payment using PrivateSend, go to the **Send** tab of the Dash "
 "Core wallet and enable the **PrivateSend** option. The balance displayed "
@@ -321,22 +280,186 @@ msgid ""
 " for PrivateSend before sending."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:219
+#: ../../wallets/dashcore/privatesend-instantsend.rst:191
 msgid ""
 "Dash Core ready to send a PrivateSend transaction. Note PrivateSend is "
 "enabled and the amount to be sent is less than the available PrivateSend "
 "balance"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:225
+#: ../../wallets/dashcore/privatesend-instantsend.rst:197
 msgid "InstantSend"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:228
+#: ../../wallets/dashcore/privatesend-instantsend.rst:200
 msgid "Introduction"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:231
+#: ../../wallets/dashcore/privatesend-instantsend.rst:202
+msgid ""
+"This documentation describes how to use InstantSend to instantly send "
+"funds to any other Dash user around the world. Dash InstantSend is "
+"supported by many wallets and vendors, including (but not limited to) the"
+" following:"
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:207
+msgid "Dash Core Wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:208
+msgid "Dash Android Wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:209
+msgid "Dash iOS Wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:210
+msgid "Dash Copay Wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:211
+msgid "My Dash Wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:212
+msgid "Kraken"
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:213
+msgid "Bitrefill"
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:214
+msgid "and many more..."
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:216
+msgid ""
+"You can read more about InstantSend theory and processes :ref:`here "
+"<instantsend>`."
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:220
 msgid "Paying with InstantSend"
 msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:222
+msgid ""
+"InstantSend functions by setting a flag on the transaction, causing "
+"deterministic selection of a quorum of 10 masternodes for each input "
+"spent in an InstantSend transaction. The masternodes examine the input, "
+"and if a majority determines it has at least six confirmations, they then"
+" accept the transaction. The input is then locked until the transaction "
+"has been confirmed in six mined blocks, at which point the output can be "
+"used as an input in another InstantSend transaction. This differs from "
+"inputs used in normal transactions, which can be spent after just one "
+"confirmation regardless of whether the Dash was received using "
+"InstantSend or not. A higher fee will be charged for InstantSend "
+"transactions, according to the :ref:`fee schedule <fees>`. Note that the "
+"receiving wallet must also be aware of InstantSend in order to be able to"
+" immediately continue with the transaction or display an apporiate "
+"notification that the transaction should be considered locked. If the "
+"receiving wallet is not aware of InstantSend, it will simply appear as a "
+"normal transaction and you will need to wait for standard block "
+"confirmations."
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:240
+msgid ""
+"To pay with InstantSend, simply check the relevant checkbox in your app. "
+"The following screenshots indicate where this setting can be found in the"
+" Dash Core, iOS and Android wallets."
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:252
+msgid "Dash Wallets showing InstantSend option"
+msgstr ""
+
+#~ msgid ""
+#~ "This document describes how to use "
+#~ "Dash Core to send Dash anonymously. "
+#~ "PrivateSend, released as DarkSend in RC4"
+#~ " of the DarkCoin client and rebranded"
+#~ " to PrivateSend in May 2016, is "
+#~ "a trustless method of running a "
+#~ "sequence of transactions (known as "
+#~ "\"mixing\") such that an external "
+#~ "observer is unable to determine the "
+#~ "source of funding when a PrivateSend "
+#~ "transaction is created. This gives your"
+#~ " Dash the same anonymous properties "
+#~ "as cash withdrawn from an ATM, for"
+#~ " example. The mixing and denomination "
+#~ "process is seamless, automatic, and "
+#~ "requires no intervention on the part "
+#~ "of the user. The current implementation"
+#~ " of PrivateSend in the Dash Core "
+#~ "wallet allows any amount of Dash "
+#~ "to be mixed for later use in "
+#~ "PrivateSend transactions."
+#~ msgstr ""
+
+#~ msgid "**Here's how it works**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Every 10 blocks, user clients "
+#~ "network-wide will send any unmixed, "
+#~ "traceable DASH in their possession "
+#~ "through an anonymization phase. In this"
+#~ " phase, masternodes are used in "
+#~ "chained succession to mix the coins "
+#~ "they receive from the network and "
+#~ "break them down into homogenous "
+#~ "denominations."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After being processed by a minimum "
+#~ "of 2 masternodes, the coins are "
+#~ "either sent to the next masternode "
+#~ "in the chain or back to the "
+#~ "user’s wallet at randomly generated "
+#~ "change addresses."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Depending on the desired depth of "
+#~ "security and privacy, users may select"
+#~ " between 2 and 8 “hops” to "
+#~ "successive masternodes before their coins "
+#~ "are sent back to the client. Hops"
+#~ " are made every 10 blocks, so "
+#~ "anonymization at a depth of 2 hops"
+#~ " will take 2*2.5=5.0 minutes, 3 hops"
+#~ " 3*2.5=7.5 minutes, and so on. The"
+#~ " desired mixing depth can be selected"
+#~ " in the client GUI."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "At the end of the anonymization "
+#~ "phase, the user’s coins are returned "
+#~ "to their client at randomly generated"
+#~ " change addresses. When the user "
+#~ "wishes to make a transaction, the "
+#~ "client forwards the intended amount from"
+#~ " these anonymous change addresses directly"
+#~ " to the intended receiver’s address. "
+#~ "There is no direct involvement of "
+#~ "of masternodes in the final person-"
+#~ "to-person transaction."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Proof of payment will work as it"
+#~ " always has: a user can see the"
+#~ " send transaction with the receiver’s "
+#~ "address in their own wallet, and "
+#~ "the blockchain will show that the "
+#~ "receiver’s address received an input in"
+#~ " the corresponding amount."
+#~ msgstr ""
 

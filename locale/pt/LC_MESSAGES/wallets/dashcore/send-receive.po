@@ -1,21 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 10:33+0000\n"
+"POT-Creation-Date: 2018-04-09 10:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language-Team: Portuguese (https://www.transifex.com/dash/teams/37570/pt/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: Portuguese "
+"(https://www.transifex.com/dash/teams/37570/pt/)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../wallets/dashcore/send-receive.rst:5
 msgid "Sending and receiving"
@@ -23,23 +26,25 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:7
 msgid ""
-"Your Dash Core Wallet is associated with a number of unique addresses that "
-"can be used to send and receive Dash. Each address holds its own balance, "
-"and the sum of all your balances is what appears on the **Overview** tab. "
-"When you send Dash, your wallet will automatically transfer funds from as "
-"many of your addresses as necessary to the destination address, which is "
-"controlled by another Dash user and associated with their wallet. You can "
-"control which addresses you use using the Coin Control feature."
+"Your Dash Core Wallet is associated with a number of unique addresses "
+"that can be used to send and receive Dash. Each address holds its own "
+"balance, and the sum of all your balances is what appears on the "
+"**Overview** tab. When you send Dash, your wallet will automatically "
+"transfer funds from as many of your addresses as necessary to the "
+"destination address, which is controlled by another Dash user and "
+"associated with their wallet. You can control which addresses you use "
+"using the Coin Control feature."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:16
 msgid ""
-"When you confirm a transaction, Dash Core will enter the transaction in a "
-"block, which will then be added to the blockchain for other clients to "
+"When you confirm a transaction, Dash Core will enter the transaction in a"
+" block, which will then be added to the blockchain for other clients to "
 "confirm. A transaction is generally considered confirmed once six blocks "
 "have been added after the block containing your transaction, although "
-"masternode and mining payments are only released after 101 blocks. Note that"
-" a different process is used for InstantSend and PrivateSend transactions."
+"masternode and mining payments are only released after 101 blocks. Note "
+"that a different process is used for InstantSend and PrivateSend "
+"transactions."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:24
@@ -52,10 +57,10 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:29
 msgid ""
-"You can use Dash Core to send Dash from your balance to another user. The "
-"receiving user will provide you with a Dash address to which you should send"
-" the funds. Click the **Send** tab in the tab bar and enter the destination "
-"address in the **Pay To** field."
+"You can use Dash Core to send Dash from your balance to another user. The"
+" receiving user will provide you with a Dash address to which you should "
+"send the funds. Click the **Send** tab in the tab bar and enter the "
+"destination address in the **Pay To** field."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:37
@@ -64,34 +69,33 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:39
 msgid ""
-"You can also use the three icons |sendicons| to the right of the **Pay To** "
-"field to select a previously used address, paste an address from the "
-"clipboard, or clear the current address. If this is a new address, you can "
-"enter a name for the address in the **Label** field to help identify it "
-"again later. Finally, enter the amount of Dash you want to transfer in the "
-"**Amount** field."
+"You can also use the three icons |sendicons| to the right of the **Pay "
+"To** field to select a previously used address, paste an address from the"
+" clipboard, or clear the current address. If this is a new address, you "
+"can enter a name for the address in the **Label** field to help identify "
+"it again later. Finally, enter the amount of Dash you want to transfer in"
+" the **Amount** field."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:49
 msgid ""
-"The other options relate to fees and PrivateSend/InstantSend. You can choose"
-" if you want to pay the network fee in addition to the amount sent, or "
-"subtract it from the amount sent. You can also increase your fee to "
+"The other options relate to fees and PrivateSend/InstantSend. You can "
+"choose if you want to pay the network fee in addition to the amount sent,"
+" or subtract it from the amount sent. You can also increase your fee to "
 "encourage nodes on the network to prioritize your transaction. Choosing "
 "**InstantSend** has a similar effect, but actually relies on a different "
-"mechanism in the second layer network to speed up the transaction time. You "
-"can read more about InstantSend :ref:`here <instantsend>`. Choosing "
-"**PrivateSend** will send Dash from an address that has previously been "
-"mixed. You can find out more about PrivateSend and mixing :ref:`here "
-"<privatesend>`."
+"mechanism in the second layer network to speed up the transaction time. "
+"Choosing **PrivateSend** will send Dash from an address that has "
+"previously been mixed. You can find out more about PrivateSend and "
+"InstantSend :ref:`here <dashcore-privatesend-instantsend>`."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:60
 msgid ""
-"Let’s try an example. Say you have received an invoice which you now want to"
-" pay with Dash. The writer of the invoice has included a Dash address, which"
-" can be seen in the following window beginning with *Xpa*. The invoice is "
-"for 2.45 Dash, which you fill in the **Amount** field."
+"Let’s try an example. Say you have received an invoice which you now want"
+" to pay with Dash. The writer of the invoice has included a Dash address,"
+" which can be seen in the following window beginning with *Xpa*. The "
+"invoice is for 2.45 Dash, which you fill in the **Amount** field."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:68
@@ -101,8 +105,8 @@ msgstr ""
 #: ../../wallets/dashcore/send-receive.rst:70
 msgid ""
 "Once you have entered the destination address and the amount, click the "
-"**Send** button. If you have encrypted your wallet, you will now be required"
-" to enter your password to unlock the wallet."
+"**Send** button. If you have encrypted your wallet, you will now be "
+"required to enter your password to unlock the wallet."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:77
@@ -111,8 +115,9 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:79
 msgid ""
-"Finally, you are given one final confirmation and chance to cancel your send"
-" transaction before Dash Core processes the transaction on the blockchain."
+"Finally, you are given one final confirmation and chance to cancel your "
+"send transaction before Dash Core processes the transaction on the "
+"blockchain."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:86
@@ -122,8 +127,8 @@ msgstr ""
 #: ../../wallets/dashcore/send-receive.rst:88
 msgid ""
 "If you respond with **Yes**, your transaction will be processed. Your "
-"operating system may display a notification, and the transaction will appear"
-" on the Transactions tab, where you can monitor its progress."
+"operating system may display a notification, and the transaction will "
+"appear on the Transactions tab, where you can monitor its progress."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:95
@@ -132,9 +137,9 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:97
 msgid ""
-"Note that the amount of the transaction increased by .000045 Dash. This is "
-"the transaction fee. In the next section, we will see what this procedure "
-"looks like from the receiving side."
+"Note that the amount of the transaction increased by .000045 Dash. This "
+"is the transaction fee. In the next section, we will see what this "
+"procedure looks like from the receiving side."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:102
@@ -143,8 +148,8 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:104
 msgid ""
-"To receive Dash, you must first create a receiving address to give to the "
-"sending party. To do this, click **File > Receiving addresses**. The "
+"To receive Dash, you must first create a receiving address to give to the"
+" sending party. To do this, click **File > Receiving addresses**. The "
 "**Receiving addresses** window appears."
 msgstr ""
 
@@ -155,14 +160,14 @@ msgstr ""
 #: ../../wallets/dashcore/send-receive.rst:113
 msgid ""
 "Either copy an existing address by clicking on the address and then the "
-"**Copy** button, or create a new address by clicking the **New** button. You"
-" can also edit an existing address by right clicking and selecting **Edit** "
-"address from the context menu. Give this address to the person who will send"
-" you Dash. Your wallet does not need to be open to receive funds, but if it "
-"is, you can watch the transaction arrive in real time. This is because your "
-"wallet constantly watches for new blocks on the blockchain when it is open, "
-"and will recognize a new transaction involving your receiving address when "
-"it occurs."
+"**Copy** button, or create a new address by clicking the **New** button. "
+"You can also edit an existing address by right clicking and selecting "
+"**Edit** address from the context menu. Give this address to the person "
+"who will send you Dash. Your wallet does not need to be open to receive "
+"funds, but if it is, you can watch the transaction arrive in real time. "
+"This is because your wallet constantly watches for new blocks on the "
+"blockchain when it is open, and will recognize a new transaction "
+"involving your receiving address when it occurs."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:126
@@ -171,8 +176,8 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:128
 msgid ""
-"Once you have been paid, you can see the balance both on the **Overview** "
-"tab and on the **Transactions** tab."
+"Once you have been paid, you can see the balance both on the **Overview**"
+" tab and on the **Transactions** tab."
 msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:134
@@ -182,3 +187,26 @@ msgstr ""
 #: ../../wallets/dashcore/send-receive.rst:136
 msgid "**How to Create New Receiving Addresses in DashQT**"
 msgstr ""
+
+#~ msgid ""
+#~ "The other options relate to fees "
+#~ "and PrivateSend/InstantSend. You can choose"
+#~ " if you want to pay the network"
+#~ " fee in addition to the amount "
+#~ "sent, or subtract it from the "
+#~ "amount sent. You can also increase "
+#~ "your fee to encourage nodes on the"
+#~ " network to prioritize your transaction."
+#~ " Choosing **InstantSend** has a similar "
+#~ "effect, but actually relies on a "
+#~ "different mechanism in the second layer"
+#~ " network to speed up the transaction"
+#~ " time. You can read more about "
+#~ "InstantSend :ref:`here <instantsend>`. Choosing "
+#~ "**PrivateSend** will send Dash from an"
+#~ " address that has previously been "
+#~ "mixed. You can find out more about"
+#~ " PrivateSend and mixing :ref:`here "
+#~ "<privatesend>`."
+#~ msgstr ""
+

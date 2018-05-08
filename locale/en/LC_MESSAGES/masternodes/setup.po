@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 10:25+0000\n"
+"POT-Creation-Date: 2018-04-16 05:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -579,14 +579,14 @@ msgid ""
 "**Download TGZ** for **Dash Core Linux 64 Bit** and select **Copy link "
 "address**. Go back to your terminal window and enter the following "
 "command, pasting in the address to the latest version of Dash Core "
-"(0.12.2.2 in the example) by right clicking or pressing **Ctrl + V**::"
+"(0.12.2.3 in the example) by right clicking or pressing **Ctrl + V**::"
 msgstr ""
 
 #: ../../masternodes/setup.rst:481
 msgid ""
-"Verify the integrity of your download by running the following command "
-"and comparing the output against the value for the file as shown on the "
-"Dash website under **Hash File**::"
+"You can optionally verify the integrity of your download by running the "
+"following command and comparing the output against the value for the file"
+" as shown on the Dash website under **Hash File**::"
 msgstr ""
 
 #: ../../masternodes/setup.rst:490
@@ -595,19 +595,33 @@ msgstr ""
 
 #: ../../masternodes/setup.rst:492
 msgid ""
+"You can also optionally verify the authenticity of your download as an "
+"official release by Dash Core Team. All releases of Dash are signed using"
+" GPG by Holger Schinzel with the key ``4B88 269A BD8D F332``, `verifiable"
+" here on Keybase <https://keybase.io/schinzelh>`_. Import the key, "
+"download the ASC file for the current release of Dash and verify the "
+"signature as follows::"
+msgstr ""
+
+#: ../../masternodes/setup.rst:506
+msgid "Downloading the PGP key and verifying the signed binary"
+msgstr ""
+
+#: ../../masternodes/setup.rst:508
+msgid ""
 "Create a working directory for Dash, extract the compressed archive, copy"
 " the necessary files to the directory and set them as executable::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:501
+#: ../../masternodes/setup.rst:517
 msgid "Clean up unneeded files::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:506
+#: ../../masternodes/setup.rst:522
 msgid "Create a configuration file using the following command::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:510
+#: ../../masternodes/setup.rst:526
 msgid ""
 "An editor window will appear. We now need to create a configuration file "
 "specifying several variables. Copy and paste the following text to get "
@@ -615,68 +629,68 @@ msgid ""
 "follows::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:530
+#: ../../masternodes/setup.rst:546
 msgid "Replace the fields marked with ``XXXXXXX`` as follows:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:532
+#: ../../masternodes/setup.rst:548
 msgid ""
 "``rpcuser``: enter any string of numbers or letters, no special "
 "characters allowed"
 msgstr ""
 
-#: ../../masternodes/setup.rst:534
+#: ../../masternodes/setup.rst:550
 msgid ""
 "``rpcpassword``: enter any string of numbers or letters, no special "
 "characters allowed"
 msgstr ""
 
-#: ../../masternodes/setup.rst:536
+#: ../../masternodes/setup.rst:552
 msgid ""
 "``masternodeprivkey``: this is the private key you generated in the "
 "previous step"
 msgstr ""
 
-#: ../../masternodes/setup.rst:538
+#: ../../masternodes/setup.rst:554
 msgid "``externalip``: this is the IP address of your VPS"
 msgstr ""
 
-#: ../../masternodes/setup.rst:540
+#: ../../masternodes/setup.rst:556
 msgid "The result should look something like this:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:545
+#: ../../masternodes/setup.rst:561
 msgid "Entering key data in dash.conf on the masternode"
 msgstr ""
 
-#: ../../masternodes/setup.rst:547
+#: ../../masternodes/setup.rst:563
 msgid ""
 "Press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
 "file. You can now start running Dash on the masternode to begin "
 "synchronization with the blockchain::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:553
+#: ../../masternodes/setup.rst:569
 msgid ""
 "You will see a message reading **Dash Core server starting**. We will now"
 " install Sentinel, a piece of software which operates as a watchdog to "
 "communicate to the network that your node is working properly::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:564
+#: ../../masternodes/setup.rst:580
 msgid ""
 "You will see a message reading **dashd not synced with network! Awaiting "
 "full sync before running Sentinel.** Add sentinel to crontab to make sure"
 " it runs every minute to check on your masternode::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:570
+#: ../../masternodes/setup.rst:586
 msgid ""
 "Choose nano as your editor and enter the following line at the end of the"
 " file::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:575
+#: ../../masternodes/setup.rst:591
 msgid ""
 "Press enter to make sure there is a blank line at the end of the file, "
 "then press **Ctrl + X** to close the editor and **Y** and **Enter** save "
@@ -686,19 +700,19 @@ msgid ""
 "monitor progress::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:584
+#: ../../masternodes/setup.rst:600
 msgid "When synchronisation is complete, you should see the following response::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:598
+#: ../../masternodes/setup.rst:614
 msgid "Continue with the next step to start your masternode."
 msgstr ""
 
-#: ../../masternodes/setup.rst:603
+#: ../../masternodes/setup.rst:619
 msgid "Start your masternode"
 msgstr ""
 
-#: ../../masternodes/setup.rst:605
+#: ../../masternodes/setup.rst:621
 msgid ""
 "Depending on how you sent your masternode collateral, you will need to "
 "start your masternode with a command sent either by your hardware wallet "
@@ -710,48 +724,48 @@ msgid ""
 "states:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:614
+#: ../../masternodes/setup.rst:630
 msgid ""
 "MASTERNODE_SYNC: This indicates the data currently being synchronised in "
 "the masternode"
 msgstr ""
 
-#: ../../masternodes/setup.rst:616
+#: ../../masternodes/setup.rst:632
 msgid ""
 "MASTERNODE_SYNC_FAILED: Synchronisation could not complete, check your "
 "firewall and restart dashd"
 msgstr ""
 
-#: ../../masternodes/setup.rst:618
+#: ../../masternodes/setup.rst:634
 msgid ""
 "WATCHDOG_EXPIRED: Waiting for sentinel to restart, make sure it is "
 "entered in crontab"
 msgstr ""
 
-#: ../../masternodes/setup.rst:620
+#: ../../masternodes/setup.rst:636
 msgid "NEW_START_REQUIRED: Start command must be sent from wallet"
 msgstr ""
 
-#: ../../masternodes/setup.rst:621
+#: ../../masternodes/setup.rst:637
 msgid "PRE_ENABLED: Waiting for network to recognize started masternode"
 msgstr ""
 
-#: ../../masternodes/setup.rst:622
+#: ../../masternodes/setup.rst:638
 msgid "ENABLED: Masternode successfully started"
 msgstr ""
 
-#: ../../masternodes/setup.rst:624
+#: ../../masternodes/setup.rst:640
 msgid ""
 "If you masternode does not seem to start immediately, do not arbitrarily "
 "issue more start commands. Each time you do so, you will reset your "
 "position in the payment queue."
 msgstr ""
 
-#: ../../masternodes/setup.rst:629
+#: ../../masternodes/setup.rst:645
 msgid "Option 1: Starting from a hardware wallet"
 msgstr ""
 
-#: ../../masternodes/setup.rst:631
+#: ../../masternodes/setup.rst:647
 msgid ""
 "Go back to DMT and ensure that all fields are filled out correctly. Click"
 " **Lookup** to find the collateral TX ID for the transaction which "
@@ -760,11 +774,11 @@ msgid ""
 "confirm the following two messages:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:643
+#: ../../masternodes/setup.rst:659
 msgid "Dash Masternode Tool confirmation dialogs to start a masternode"
 msgstr ""
 
-#: ../../masternodes/setup.rst:645
+#: ../../masternodes/setup.rst:661
 msgid ""
 "At this point you can monitor your masternode using ``dashman/dashman "
 "status``, by entering ``~/.dashcore/dash-cli masternode status`` or using"
@@ -774,32 +788,32 @@ msgid ""
 "appear as follows:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:655 ../../masternodes/setup.rst:733
+#: ../../masternodes/setup.rst:671 ../../masternodes/setup.rst:749
 msgid "dashman status output showing successfully started masternode"
 msgstr ""
 
-#: ../../masternodes/setup.rst:657
+#: ../../masternodes/setup.rst:673
 msgid ""
 "At this point you can safely log out of your server by typing exit. "
 "Congratulations! Your masternode is now running."
 msgstr ""
 
-#: ../../masternodes/setup.rst:661
+#: ../../masternodes/setup.rst:677
 msgid "Option 2: Starting from Dash Core wallet"
 msgstr ""
 
-#: ../../masternodes/setup.rst:663
+#: ../../masternodes/setup.rst:679
 msgid ""
 "If you used an address in Dash Core wallet for your collateral "
 "transaction, you now need to find the txid of the transaction. Click "
 "**Tools > Debug console** and enter the following command::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:669
+#: ../../masternodes/setup.rst:685
 msgid "This should return a string of characters similar to this::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:675
+#: ../../masternodes/setup.rst:691
 msgid ""
 "The first long string is your transaction hash, while the last number is "
 "the index. We now need to create a file called *masternode.conf* for this"
@@ -808,37 +822,37 @@ msgid ""
 "on macOS, gedit on Linux) and enter the following information:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:681
+#: ../../masternodes/setup.rst:697
 msgid "**Label**: Any single word used to identify your masternode, e.g. MN1"
 msgstr ""
 
-#: ../../masternodes/setup.rst:682
+#: ../../masternodes/setup.rst:698
 msgid ""
 "**IP and port**: The IP address and port (usually 9999) configured in the"
 " dash.conf file, separated by a colon (:)"
 msgstr ""
 
-#: ../../masternodes/setup.rst:684
+#: ../../masternodes/setup.rst:700
 msgid ""
 "**Masternode private key**: This is the result of your masternode genkey "
 "command earlier, also the same as configured in the dash.conf file"
 msgstr ""
 
-#: ../../masternodes/setup.rst:687
+#: ../../masternodes/setup.rst:703
 msgid "**Transaction hash**: The txid we just identified using masternode outputs"
 msgstr ""
 
-#: ../../masternodes/setup.rst:689
+#: ../../masternodes/setup.rst:705
 msgid "**Index**: The index we just identified using masternode outputs"
 msgstr ""
 
-#: ../../masternodes/setup.rst:691
+#: ../../masternodes/setup.rst:707
 msgid ""
 "Enter all of this information on a single line with each item separated "
 "by a space, for example::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:696
+#: ../../masternodes/setup.rst:712
 msgid ""
 "Save this file in the **DashCore** data folder on the PC running the Dash"
 " Core wallet using the filename *masternode.conf*. You may need to enable"
@@ -849,55 +863,55 @@ msgid ""
 "shortcut text into the **Save** dialog to find it quickly):"
 msgstr ""
 
-#: ../../masternodes/setup.rst:705
+#: ../../masternodes/setup.rst:721
 msgid "Platform"
 msgstr ""
 
-#: ../../masternodes/setup.rst:705
+#: ../../masternodes/setup.rst:721
 msgid "Path"
 msgstr ""
 
-#: ../../masternodes/setup.rst:705
+#: ../../masternodes/setup.rst:721
 msgid "Shortcut"
 msgstr ""
 
-#: ../../masternodes/setup.rst:707
+#: ../../masternodes/setup.rst:723
 msgid "Linux"
 msgstr ""
 
-#: ../../masternodes/setup.rst:707
+#: ../../masternodes/setup.rst:723
 msgid "``/home/yourusername/.dashcore``"
 msgstr ""
 
-#: ../../masternodes/setup.rst:707
+#: ../../masternodes/setup.rst:723
 msgid "``~/.dashcore``"
 msgstr ""
 
-#: ../../masternodes/setup.rst:709
+#: ../../masternodes/setup.rst:725
 msgid "macOS"
 msgstr ""
 
-#: ../../masternodes/setup.rst:709
+#: ../../masternodes/setup.rst:725
 msgid "``/Macintosh HD/Library/Application Support``"
 msgstr ""
 
-#: ../../masternodes/setup.rst:709
+#: ../../masternodes/setup.rst:725
 msgid "``~/Library/Application Support/DashCore``"
 msgstr ""
 
-#: ../../masternodes/setup.rst:711
+#: ../../masternodes/setup.rst:727
 msgid "Windows"
 msgstr ""
 
-#: ../../masternodes/setup.rst:711
+#: ../../masternodes/setup.rst:727
 msgid "``C:\\Users\\yourusername\\AppData\\Roaming\\Dash Core``"
 msgstr ""
 
-#: ../../masternodes/setup.rst:711
+#: ../../masternodes/setup.rst:727
 msgid "``%APPDATA%\\DashCore``"
 msgstr ""
 
-#: ../../masternodes/setup.rst:714
+#: ../../masternodes/setup.rst:730
 msgid ""
 "Now close your text editor and also shut down and restart Dash Core "
 "wallet. Dash Core will recognize masternode.conf during startup, and is "
@@ -907,7 +921,7 @@ msgid ""
 "MN1 with the label for your masternode)::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:723
+#: ../../masternodes/setup.rst:739
 msgid ""
 "At this point you can go back to your terminal window and monitor your "
 "masternode using ``dashman/dashman status``, by entering "
@@ -917,9 +931,34 @@ msgid ""
 "Give it some time, the final result should appear as follows:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:735
+#: ../../masternodes/setup.rst:751
 msgid ""
 "At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
 msgstr ""
+
+#~ msgid ""
+#~ "To manually download and install the "
+#~ "components of your Dash masternode, "
+#~ "visit https://www.dash.org/wallets on your "
+#~ "computer to find the link to the"
+#~ " latest Dash Core wallet. Click "
+#~ "**Linux**, then right-click on "
+#~ "**Download TGZ** for **Dash Core Linux"
+#~ " 64 Bit** and select **Copy link "
+#~ "address**. Go back to your terminal "
+#~ "window and enter the following command,"
+#~ " pasting in the address to the "
+#~ "latest version of Dash Core (0.12.2.2"
+#~ " in the example) by right clicking"
+#~ " or pressing **Ctrl + V**::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Verify the integrity of your download"
+#~ " by running the following command and"
+#~ " comparing the output against the "
+#~ "value for the file as shown on "
+#~ "the Dash website under **Hash File**::"
+#~ msgstr ""
 
