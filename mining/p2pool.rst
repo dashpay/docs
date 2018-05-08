@@ -31,11 +31,12 @@ your P2Pool node as a virtual machine in a data center with a high speed
 connection so geographically close miners can mine to your pool with
 relatively low latency.
 
-This following sections describe the steps to set up a Ubuntu 16.04 LTS
-Server running P2Pool for Dash 0.12.2.2. While a reasonable effort will
-be made to keep it up to date, it should be possible to modify the
-instructions slightly to support different versions or operating systems
-as necessary.
+This following sections describe the steps to set up an Ubuntu Server
+running P2Pool for Dash. It has been tested with Ubuntu 16.04 LTS and
+18.04 LTS and Dash 0.12.2.3. While a reasonable effort will be made to
+keep it up to date, it should be possible to modify the instructions
+slightly to support different versions or operating systems as
+necessary.
 
 Setting up the host server
 ==========================
@@ -167,14 +168,14 @@ in the address to the latest version of Dash Core by right clicking or
 pressing **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.12.2.2/dashcore-0.12.2.2-linux64.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.12.2.3/dashcore-0.12.2.3-linux64.tar.gz
 
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown on the
 Dash website under **Hash File**::
 
-  sha256sum dashcore-0.12.2.2-linux64.tar.gz
+  sha256sum dashcore-0.12.2.3-linux64.tar.gz
 
 .. figure:: img/setup-manual-download.png
    :width: 250px
@@ -185,14 +186,14 @@ Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
   mkdir .dashcore
-  tar xfvz dashcore-0.12.2.2-linux64.tar.gz
+  tar xfvz dashcore-0.12.2.3-linux64.tar.gz
   cp dashcore-0.12.2/bin/dashd .dashcore/
   cp dashcore-0.12.2/bin/dash-cli .dashcore/
   chmod 777 .dashcore/dash*
 
 Clean up unneeded files::
 
-  rm dashcore-0.12.2.2-linux64.tar.gz
+  rm dashcore-0.12.2.3-linux64.tar.gz
   rm -r dashcore-0.12.2/
 
 Create a configuration file using the following command::
