@@ -5,11 +5,16 @@ Safety
 ======
 
 If you are new to cryptocurrencies, the most important change to
-understand is that transactions occur directly between two parties
-without any central authority to facilitate the transaction. This also
-means that you are responsible for your own security - there is no bank
-or credit card company to reverse a transaction if your funds are stolen
-or lost. In this sense, it is similar to cash or gold, but
+understand in comparison with the traditional banking system is that
+transactions occur **directly between two parties without any central
+authority** to facilitate the transaction. This also means that **you
+are responsible for your own security** - there is no bank or credit
+card company to reverse a transaction if your funds are stolen or lost.
+If you forget or lose your wallet file, recovery phrase or PIN, you will
+permanently and irrevocably lose access to your funds.
+
+Dash is designed from the ground up to be fast, secure, fungible and
+private. In this sense, it is similar to cash or gold, but
 cryptocurrency can be spent locally and internationally with equal ease,
 if you are confident you are sending funds to the right destination. For
 these reasons, the Dash documentation has a strong focus on safety and
