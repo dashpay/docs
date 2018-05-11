@@ -33,14 +33,17 @@ Linux
 -----
 
 Dash Electrum for Linux is distributed as a source tarball and depends
-on Python to run. First download the installation package, then enter
-the following commands (changing the version number to match the file
-you downloaded) in the terminal to install Dash Electrum::
+on Python 3 to run. Enter the following commands (changing the version
+number to match the file you downloaded) in the terminal to install Dash
+Electrum::
 
-  sudo apt install python-pip python-qt4 libusb-1.0-0-dev libudev-dev
-  sudo pip install ./Downloads/Electrum-DASH-2.9.4.tar.gz
-  electrum-dash
+  sudo apt install python3-pyqt5 python3-setuptools
+  wget https://github.com/akhavr/electrum-dash/releases/download/3.0.6/Electrum-DASH-3.0.6.tar.gz
+  tar -zxvf Electrum-DASH-3.0.6.tar.gz
+  python3 ./Electrum-DASH/setup.py install
 
+A PPA for Dash Electrum for Linux is available 
+`here <https://launchpad.net/~akhavr/+archive/ubuntu/dash-electrum>`_.
 
 Windows
 -------
