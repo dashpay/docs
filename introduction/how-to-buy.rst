@@ -1048,7 +1048,7 @@ Mercury Cash
 
 SlithEx
   .. image:: exchanges/slithex.png
-     :width: 140px
+     :width: 90px
      :align: right
      :target: https://slithex.com
 
