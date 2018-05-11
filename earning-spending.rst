@@ -101,6 +101,20 @@ Wirex
   wallet-integration>`_ a partnership with Dash and integration of Dash
   funding on Wirex cards.
 
+Paycent
+  .. image:: img/paycent.png
+     :width: 200px
+     :align: right
+     :target: https://paycent.com/
+
+  https://paycent.com/
+
+  Paycent provides Android and iOS wallets that can be funded using both
+  fiat and cryptocurrency. Users can transact with one another within
+  the app, identified by their mobile numbers, or order physical debit
+  cards to spend their balance. Dash is the preferred network partner of
+  Paycent.
+
 SpectroCoin
   .. image:: img/spectrocoin.png
      :width: 200px
