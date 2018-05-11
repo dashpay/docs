@@ -996,7 +996,7 @@ Bitit
   support using both direct banking, credit cards and couchers.
 
 Coinfinity
-  ..image:: exchanges/coinfinity.png
+  .. image:: exchanges/coinfinity.png
      :width: 200px
      :align: right
      :target: https://coinfinity.co
@@ -1008,7 +1008,7 @@ Coinfinity
   <https://www.bitcoinbon.at/>`_ service.
 
 CoinOYO
-  ..image:: exchanges/coinoyo.png
+  .. image:: exchanges/coinoyo.png
      :width: 200px
      :align: right
      :target: https://coinoyo.com
@@ -1018,6 +1018,20 @@ CoinOYO
   CoinOYO is a cryptocurrency exchange dedicated to helping Nigerians
   buy, sell and invest in cryptocurrencies. You can buy Dash and several
   other cryptocurrencies using Nigerian naira.
+
+Cryptomate
+  .. image:: exchanges/cryptomate.png
+     :width: 200px
+     :align: right
+     :target: https://cryptomate.co.uk
+
+  https://cryptomate.co.uk
+
+  Cryptomate sells a range of cryptocurrencies, including Dash, for GBP.
+  Cryptomate's goal is to make buying and selling cryptocurrency as
+  simple as possible for people who want a pain-free experience and the
+  fastest transactions - coins can be in your wallet as soon as 5
+  minutes after ordering.
 
 Mercury Cash
   .. image:: exchanges/mercury.png
