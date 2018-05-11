@@ -37,7 +37,7 @@ up a hosted masternode.
 **Option 2: Self-operated masternode**
 
 Users with a deeper understanding (or curiosity) about the inner
-workings of the Dash network may choose to operate their own  masternode
+workings of the Dash network may choose to operate their own masternode
 on their own host server. Several steps are required, and the user must
 assume responsibility for setting up, securing and maintaining both the
 server and collateral. See these pages for information on how to set up

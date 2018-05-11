@@ -73,10 +73,10 @@ A Dash paper wallet can be generated in several ways.
 
 - Using the generator at https://paper.dash.org/
 - Using the generator at https://walletgenerator.net/?currency=Dash
-- Offline using the Dash Paper Wallet source code from Github at 
+- Offline using the Dash Paper Wallet source code from GitHub at 
   https://github.com/dashpay/paper.dash.org/releases/latest
 - Offline using the same code which powers both sites, by viewing the
-  `Github project <https://github.com/MichaelMure/WalletGenerator.net>`_
+  `GitHub project <https://github.com/MichaelMure/WalletGenerator.net>`_
   or `downloading directly <https://github.com/MichaelMure/WalletGenerator.net/archive/master.zip>`_
 
 Since the source code for all three options is largely similar, this
@@ -137,7 +137,7 @@ If you decide that you need the additional security of a password for
 this address, click **Paper Wallet**. A different address/key pair will
 appear. To create an encrypted wallet, select **BIP38 Encrypt?** and
 enter a passphrase. Tick the box **Hide Art?** and change to **1** the
-field **Adresses to Generate** and then click on **Generate**. A new
+field **Addresses to Generate** and then click on **Generate**. A new
 wallet will be generated where the private key (WIF) is encrypted using
 the password you specified, resulting in a BIP38 key. You now need both
 this BIP38 key and the password to control funds on the address, so be

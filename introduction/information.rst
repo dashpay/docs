@@ -396,7 +396,7 @@ Confirmation Number
   included in two blocks, three confirmations for three blocks, and so
   on. The probability of a transaction being reversed (double spent)
   diminishes exponentially with every block and subsequent confirmation.
-  Six confirmations is usually considered "safe" and irreversable.
+  Six confirmations is usually considered "safe" and irreversible.
 
 Confirmed Transactions
   Transactions that are processed by miners and considered irreversible,
@@ -710,7 +710,7 @@ Full Nodes
   Any Dash client that is serving a full version of the blockchain to
   peers. This can be a user running a Dash Core wallet on his/her
   desktop, or it could be a :ref:`masternode <masternodes>`. Full nodes
-  promote decentrailzation by allowing any user to double check the
+  promote decentralization by allowing any user to double check the
   validity of the blockchain.
 
 Fungible

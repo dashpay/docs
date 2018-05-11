@@ -47,7 +47,7 @@ blockchain is now stored in the "DashCore" rather than "Dash" folder.
         <iframe src="//www.youtube.com/embed/yv73bV7Xlfg" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-**How to Install DashQT Wallet on Mac**
+**How to Install DashQT Wallet on macOS**
 
 .. raw:: html
 
@@ -55,7 +55,7 @@ blockchain is now stored in the "DashCore" rather than "Dash" folder.
         <iframe src="//www.youtube.com/embed/hCGZPN0Sb84" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-**How to Verify the CheckSum of DashQT Wallet for Mac**
+**How to Verify the CheckSum of DashQT Wallet for macOS**
 
 .. raw:: html
 

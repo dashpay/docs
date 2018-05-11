@@ -4,7 +4,7 @@
 Translating Dash
 ================
 
-Translations of all Dash products are managed courtesty of Transifex,
+Translations of all Dash products are managed courtesy of Transifex,
 which offers its own detailed documentation of all functions and
 features. Within Transifex, Dash maintains an organization which
 contains multiple projects and one team of translators assigned to all
@@ -19,7 +19,7 @@ as a target language.
 - `Dash translation projects <https://www.transifex.com/dash>`_
 - `Dash translators team <https://www.transifex.com/dash/teams>`_
 
-In general, languages with minimal regional variantion are to be
+In general, languages with minimal regional variation are to be
 translated into the common language (rather than regional) target.
 Portuguese, for example, is simply translated into the ``pt`` target
 language, rather than two separate target languages ``pt_BR`` and

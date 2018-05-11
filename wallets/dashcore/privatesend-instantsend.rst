@@ -239,7 +239,7 @@ after just one confirmation regardless of whether the Dash was received
 using InstantSend or not. A higher fee will be charged for InstantSend
 transactions, according to the :ref:`fee schedule <fees>`. Note that the
 receiving wallet must also be aware of InstantSend in order to be able
-to immediately continue with the transaction or display an apporiate
+to immediately continue with the transaction or display an appropriate
 notification that the transaction should be considered locked. If the
 receiving wallet is not aware of InstantSend, it will simply appear as a
 normal transaction and you will need to wait for standard block

@@ -163,7 +163,7 @@ reasonable chance of passing their proposal, it is created as a
 governance object on the blockchain. A fee of 5 DASH is associated with
 this action to prevent spam and ensure only serious proposals make it to
 this stage. Several tools exist to allow masternode operators to
-comfortably review and vote on propoals. The net total of yes votes must
+comfortably review and vote on proposals. The net total of yes votes must
 exceed 10% of the total masternode count at the time votes are tallied
 in order to pass. If there are more passing proposals than the available
 block reward can provide for, the proposals with the most yes votes will

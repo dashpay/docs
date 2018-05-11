@@ -282,7 +282,7 @@ this guide should be used for experimental purposes only.
 
 This guide will cover the process of downloading and configuring the
 mining software, followed by some suggestions for optimizations. This
-technology can change rapidly, so we advice you to keep an eye out on
+technology can change rapidly, so we advise you to keep an eye out on
 mining sites such as these in order to keep up with the latest
 information and releases.
 

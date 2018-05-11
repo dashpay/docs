@@ -238,7 +238,7 @@ block login brute force attacks, `disabling root login
 <https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ is
 advisable. More tips are available `here <https://www.cyberciti.biz/tips
 /linux-security.html>`__. However, since the masternode does not actually
-store the keys to any Dash, these steps are considered beyong the scope
+store the keys to any Dash, these steps are considered beyond the scope
 of this guide.
 
 Send the collateral
@@ -286,7 +286,7 @@ confirmations exist, as shown in the following screenshot.
    transfer
 
 While we are waiting for 15 confirmations, download the latest version
-of the Dash Masternode Tool (DMT) from the Github releases page `here
+of the Dash Masternode Tool (DMT) from the GitHub releases page `here
 <https://github.com/Bertrand256/dash-masternode-tool/releases>`__. Unzip
 and run the file. The following window appears.
 

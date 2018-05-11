@@ -15,7 +15,7 @@ cryptographic chain of data representing value, similar to Dash's
 blockchain. The P2Pool version is called the sharechain. The
 decentralized and fair nature of this mining model means mining with
 P2Pool is strongly encouraged. P2Pool for Dash uses the `p2pool-dash
-<https://github.com/dashpay/p2pool-dash>`_ software on Github, which is
+<https://github.com/dashpay/p2pool-dash>`_ software on GitHub, which is
 a fork of p2pool for Bitcoin. For more information, see `here
 <https://en.bitcoin.it/wiki/P2Pool>`__.
 
@@ -31,7 +31,7 @@ your P2Pool node as a virtual machine in a data center with a high speed
 connection so geographically close miners can mine to your pool with
 relatively low latency.
 
-This following sections describe the steps to set up an Ubuntu Server
+This following section describes the steps to setup an Ubuntu Server
 running P2Pool for Dash. It has been tested with Ubuntu 16.04 LTS and
 18.04 LTS and Dash 0.12.2.3. While a reasonable effort will be made to
 keep it up to date, it should be possible to modify the instructions

@@ -113,7 +113,7 @@ What does it mean to “Freeze” an address in Dash Electrum?
 ----------------------------------------------------------
 
 When you freeze an address, the funds in that address will not be used
-for sending Dash. You can not send Dash if you don’t have enough funds
+for sending Dash. You cannot send Dash if you don’t have enough funds
 in your non-frozen addresses.
 
 How is the wallet encrypted?
@@ -299,7 +299,7 @@ The following issues should be considered when upgrading Dash Electrum
   the upgrade process. Please allow it time to complete, and expect it
   to take a little longer than usual for Dash Electrum to be ready.
 
-- The contents of your wallet file will be replaced with an Dash
+- The contents of your wallet file will be replaced with a Dash
   Electrum 2 wallet. This means Dash Electrum 1.x will no longer be able
   to use your wallet once the upgrade is complete.
 

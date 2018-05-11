@@ -45,7 +45,7 @@ wallet password.
 Restore
 -------
 
-The only thing needed to recover an Dash Electrum wallet on another
+The only thing needed to recover a Dash Electrum wallet on another
 computer is its seed. You can test wallet recovery with your current
 installation of Dash Electrum by removing the wallet data from the
 application data folder. This optional procedure is described below.
