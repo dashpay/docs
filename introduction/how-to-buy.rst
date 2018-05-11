@@ -584,6 +584,18 @@ Coincheck
   Coincheck is a Japanese exchange allowing deposits in JPY and USD for
   trading against DASH and other cryptocurrencies.
 
+Coindeal
+  .. image:: exchanges/coindeal.png
+     :width: 200px
+     :align: right
+     :target: https://coindeal.com
+
+  https://coindeal.com
+
+  Coindeal allows deposits in EUR and offers a range of trading pairs,
+  including DASH. The exchange is focused on obtaining a FINMA license
+  in Switzerland to be able to accept a broader range of fiat deposits.
+
 BuyUcoin
   .. image:: exchanges/buyucoin.png
      :width: 200px
