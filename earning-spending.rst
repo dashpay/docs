@@ -160,7 +160,8 @@ TenX
 
   https://www.tenx.tech
 
-  Dash has entered beta support on TenX.
+  TenX is in discussions with regulatory authorities to launch an
+  integration of Dash with their wallet app and physical cards.
 
 Tax
 ===
