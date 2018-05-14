@@ -97,6 +97,12 @@ steps:
 Note that transactions without fees might not be relayed by the Dash
 Electrum server, or by the Dash network.
 
+Is there a way to enter amounts in USD in Dash Electrum?
+--------------------------------------------------------
+
+Yes, go to **Tools > Prefernce > Fiat** and select a **Fiat currency**
+to display the current exchange rate from the chosen **Source**.
+
 What does it mean to “Freeze” an address in Dash Electrum?
 ----------------------------------------------------------
 
@@ -228,11 +234,6 @@ If this happens, you should consolidate your transaction inputs by
 sending smaller amounts of Dash to one of your wallet addresses; this
 would be the equivalent of exchanging a stack of nickels for a dollar
 bill.
-
-Is there a way to get a BTC/USD exchange ticker in Dash Electrum?
------------------------------------------------------------------
-
-Yes, go to **Tools > Plugins** and enable **Exchange rates**.
 
 .. _gap limit:
 
