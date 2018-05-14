@@ -103,6 +103,12 @@ Is there a way to enter amounts in USD in Dash Electrum?
 Yes, go to **Tools > Prefernce > Fiat** and select a **Fiat currency**
 to display the current exchange rate from the chosen **Source**.
 
+.. figure:: img/faq-fiat.png
+   :width: 400px
+
+   Entering values in fiat currency in Dash Electrum
+
+
 What does it mean to “Freeze” an address in Dash Electrum?
 ----------------------------------------------------------
 
