@@ -98,7 +98,7 @@ Twitter
 - **Joël Valenzuela, Chief Editor, Dash Force News:** https://twitter.com/TheDesertLynx
 - **Mark Mason, Director of Media & PR, Dash Force News:** https://twitter.com/StayDashy
 - **Amanda B. Johnson, Dash Superfan and DAO-funded contractor:** https://twitter.com/AmandaB_Johnson
-- **Ben Swann, Truth in Media and DAO-funded contractor:** https://twitter.com/BenSwann_
+- **Ben Swann, Truth in Media and DAO-funded contractor:** `https://twitter.com/BenSwann_ <https://twitter.com/BenSwann_>`__
 - **とみ三（Samurai33）, Dash Japan:** https://twitter.com/samurai3311
 - **Dash Vietnam:** https://twitter.com/dashvietnam
 
