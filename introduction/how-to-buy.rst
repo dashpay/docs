@@ -441,6 +441,18 @@ Bitcoin.vn
   Bitcoin.vn is a Vietnamese exchange offering BTC, BCH, LTC and DASH
   for trading against Vietnamese đồng.
 
+ZB.com
+  .. image:: exchanges/zb.png
+     :width: 200px
+     :align: right
+     :target: https://www.zb.com/
+
+  https://www.zb.com/
+
+  With a focus on the Chinese market, ZB.com offers trading from
+  specialized applications for macOS, Windows, Android and iOS. Crypto
+  deposits and DASH trading against QC, USDT and BTC.
+
 Coinfield
   .. image:: exchanges/coinfield.png
      :width: 200px
