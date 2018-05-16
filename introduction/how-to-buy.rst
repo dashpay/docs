@@ -548,6 +548,19 @@ MoneyPolo
   is possible to transfer value to a prepaid card or any worldwide bank
   account.
 
+Miami Crypto Exchange
+  .. image:: exchanges/mcex.png
+     :width: 110px
+     :align: right
+     :target: https://www.miami.exchange/
+
+  https://www.miami.exchange/
+
+  Miami Crypto Exchange (MCEX), operated by Dash partner `Mercury Cash
+  <https://www.mercury.cash>`_, is a legal and fully compliant crypto
+  gateway between the U.S. and the world, with a specific focus on Latin
+  America and the Caribbean. DASH can be traded against USD and BTC.
+
 Coinapult
   .. image:: exchanges/coinapult.png
      :width: 200px
@@ -1069,6 +1082,18 @@ Mercury Cash
   with integration for merchant services. Balances can be held in both
   Ethereum and Dash, and deposited or withdrawn in local currencies
   through a number of methods, including credit cards.
+
+Graviex
+  .. image:: exchanges/graviex.png
+     :width: 110px
+     :align: right
+     :target: https://graviex.net
+
+  https://graviex.net
+
+  Graviex is a part of the Gravio ecosystem, a blockchain-based
+  communication platform. It offers extremely low rates and fees for
+  trading. DASH can be traded against BTC, ETH, LTC and DOGE.
 
 SlithEx
   .. image:: exchanges/slithex.png
