@@ -56,3 +56,13 @@ Android Debug Bridge (ADB). Follow these instructions:
    and type::
 
      adb install <<path to .apk file>>
+
+From source
+-----------
+
+Compiling from source
+---------------------
+
+The source code for the wallet is available `here
+<https://github.com/HashEngineering/dash-wallet>`_. Details on how to
+compile the wallet from source will be posted here when available.

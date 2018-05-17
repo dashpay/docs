@@ -17,5 +17,6 @@ version.
 Compiling from source
 ---------------------
 
-Details on how to compile the wallet from source will be posted here
-when available.
+The source code for the wallet is available `here
+<https://github.com/dashpay/dashwallet>`_. Details on how to compile the
+wallet from source will be posted here when available.
