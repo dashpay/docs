@@ -29,7 +29,7 @@ Mint, and as a source tarball for other systems. As of version 3.0.6, it
 requires Python 3 to run. Enter the following commands to install from
 PPA::
 
-  sudo add-apt-repository ppa:akhavr/dash-electrum
+  sudo add-apt-repository ppa:akhavr/electrum-dash
   sudo apt update
   sudo apt install dash-electrum
 
