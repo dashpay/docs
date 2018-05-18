@@ -18,16 +18,18 @@ versatile but offers less efficiency than a GPU, which is designed to
 rapidly calculate millions of vectors in parallel. While specific CPU
 instruction enhancements related to cryptography such as AES or AVX can
 provide a decent boost, GPUs offer a significant performance increase
-due to their multiple pipelines for predictable calculations of the type
-involved with mining. Finally, ASICs can perform a single operation
-only. A number of X11 ASICs are now available on the market, which have
-quickly made CPU and GPU mining uneconomic due to the increased
-difficulty of hashing arising from the rapidly increasing hash rate. The
-result is a currency which is more secure against brute force attacks on
-the Dash blockchain.
+due to their multiple pipelines capable of processing the predictably
+repetitive calculations associated with cryptocurrency mining. Finally,
+ASICs are relatively inflexible and can only process the specific
+function(s) for which they were designed, but at an even faster rate
+than the more general purpose GPUs and CPUs. A number of X11 ASICs are
+now available on the market, which have quickly made CPU and GPU mining
+uneconomic due to the increased difficulty of hashing arising from the
+rapidly increasing hash rate. The result is a currency which is more
+secure against brute force attacks on the Dash blockchain.
 
 The profitability of mining is determined by the hashrate of your mining
-device, the currently network difficulty and the costs of your hardware
+device, the current network difficulty and the costs of your hardware
 and electricity. The following links provide up to date information:
 
 - `Hashrate <https://bitinfocharts.com/comparison/dash-hashrate.html>`_
