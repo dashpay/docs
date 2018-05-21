@@ -61,6 +61,14 @@ may need to grant permission to install, depending on your security
 settings. Click through the installation wizard and run Dash Electrum
 from the Start menu when complete.
 
+Android
+-------
+
+Download and run the APK file from https://electrum.dash.org to set up
+Dash Electrum. You may need to grant permission to install from unknown
+sources, depending on your security settings. Click through the
+installation wizard and run Dash Electrum when complete.
+
 
 Creating a New Wallet
 =====================
