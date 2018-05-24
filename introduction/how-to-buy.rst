@@ -325,18 +325,6 @@ Trade by Trade
   platform for over 60 cryptocurrencies with a range of tools to manage
   your trades.
 
-Abucoins
-  .. image:: exchanges/abucoins.png
-     :width: 200px
-     :align: right
-     :target: https://abucoins.com
-
-  https://abucoins.com
-
-  Abucoins is a Polish exchange accepting deposits in USD, EUR and
-  Polish Złoty (PLN), and offering a BTC/DASH trading pair in addition
-  to multiple crypto and fiat trading pairs.
-
 Bitinka
   .. image:: exchanges/bitinka.png
      :width: 200px
