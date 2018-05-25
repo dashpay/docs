@@ -28,7 +28,6 @@ the following line::
 Tools and links
 ===============
 
-- **Test builds:** https://bamboo.dash.org
 - **Bugtracker:** https://github.com/dashpay/dash/issues/new
 - **Discussion and help:** https://www.dash.org/forum/topic/testing.53/
 - **Masternode tools:** https://test.dashninja.pl/masternodes.html
@@ -38,7 +37,6 @@ Tools and links
 Faucets
 -------
 
-- https://test.faucet.dash.org - by flare
 - http://test.faucet.dashninja.pl - by elbereth
 - http://t.f.masternode.io - by coingun
 - http://test.faucet.masternode.io - by coingun
@@ -47,23 +45,14 @@ Faucets
 Explorers
 ---------
 
-- https://test.explorer.dash.org - by flare
 - https://test.insight.dash.siampm.com - by thelazier
 - http://test.explorer.dashninja.pl - by elbereth
-- http://test.insight.masternode.io:3001 - by coingun
 - https://testnet-insight.dashevo.org/insight/
-
-Pools
------
-
-- https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare
 
 P2Pool Nodes
 ------------
 
 - http://test.p2pool.dash.siampm.com [stratum+tcp://103.58.149.157:17903] by thelazier
-- http://p2pool.dashninja.pl:17903/static - by elbereth
-- http://test.p2pool.masternode.io:18998/static - by coingun
 
 Masternodes
 ===========
@@ -73,9 +62,7 @@ as the :ref:`mainnet masternode installation guide <masternode-setup>`,
 but with a few key differences:
 
 - You will probably be running a development version of Dash instead of
-  the stable release. See `here <https://bamboo.dash.org>`__ for
-  downloadable builds, then choose **Develop > Latest Build >
-  Artifacts**.
+  the stable release.
 - When opening the firewall, port 19999 must be opened instead of (or in
   addition to) 9999. Use this command: ``ufw allow 19999/tcp``
 - Your desktop wallet must be running in testnet mode. Add the following
@@ -118,8 +105,5 @@ release includes:
 
 Latest binaries:
 
-- Windows: https://bamboo.dash.org/browse/DASHW-DEV/latestSuccessful/artifact/JOB1/gitian-win-dash-dist/
-- macOS: https://bamboo.dash.org/browse/DASHM-DEV/latestSuccessful/artifact/JOB1/gitian-osx-dash-dist/
-- Linux: https://bamboo.dash.org/browse/DASHL-DEV/latestSuccessful/artifact/JOB1/gitian-linux-dash-dist/
-- Raspberry Pi: https://bamboo.dash.org/browse/DASHP-DEV/latestSuccessful/artifact/JOB1/gitian-RPi2-dash-dist/
+- Core Wallet https://www.dash.org/wallets/#wallets
 - Sentinel: https://github.com/dashpay/sentinel/tree/core-v0.12.2.x
