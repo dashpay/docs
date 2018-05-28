@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 09:41+0000\n"
+"POT-Creation-Date: 2018-05-25 08:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2018\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../wallets/copay/getting-started.rst:5
 msgid "Getting Started"
-msgstr ""
+msgstr "Bắt đầu"
 
 #: ../../wallets/copay/getting-started.rst:7
 msgid ""
@@ -29,6 +30,11 @@ msgid ""
 "screenshots will reference the Android software, highlighting differences "
 "between the platforms where necessary."
 msgstr ""
+"Tài liệu này mô tả cách sử dụng hầu hết các tính năng thông dụng của ví Dash"
+" Copay. Các chức năng này là tương tự nhau cho các nền tảng mà nó hỗ trợ "
+"(Android, iOS, Windows, macOS và Linux), hướng dẫn và ảnh chụp màn hình sẽ "
+"dùng trên phiên bản Android, những sự khác nhau giữa các nền tảng sẽ được "
+"làm rõ khi cần."
 
 #: ../../wallets/copay/getting-started.rst:13
 msgid ""
@@ -36,20 +42,25 @@ msgid ""
 "<testnet>` and is available for Android. iOS, Windows, macOS and Linux "
 "versions will be made available when they are ready."
 msgstr ""
+"Dash Copay hiện đang trong chế độ kiểm tra beta sử dụng :ref:`testnet "
+"<testnet>` và hiện hỗ trợ các phiên bản choAndroid. Các phiên bản cho iOS, "
+"Windows, macOS và Linux sẽ được đưa lên khi chúng đã sẵn sàng."
 
 #: ../../wallets/copay/getting-started.rst:17
 msgid "|image1|"
-msgstr ""
+msgstr "|image1|"
 
 #: ../../wallets/copay/getting-started.rst:23
 msgid ""
 "The Dash Copay wallet is available from the `Google Play Store for Android "
 "<https://play.google.com/store/apps/details?id=org.dash.copay>`_."
 msgstr ""
+"Ví Dash Copay có thể tải từ `Cửa hàng Google Play cho Android "
+"<https://play.google.com/store/apps/details?id=org.dash.copay>`_."
 
 #: ../../wallets/copay/getting-started.rst:30
 msgid "Installation"
-msgstr ""
+msgstr "Cài đặt"
 
 #: ../../wallets/copay/getting-started.rst:32
 msgid ""
@@ -65,16 +76,27 @@ msgid ""
 "automatically backed up to cloud file storage services where you may no "
 "longer have complete control over who views the files."
 msgstr ""
+"Khi bạn khởi động ví Dash lần đầu tiên, bạn sẽ được nhắc để lựa chọn giữa "
+"việc tạo một ví mới hoặc phục hồi từ một ví đã có sẵn. Chọn **Get started** "
+"để tạo một ví mới, trừ khi bạn đã có sẵn một ví mà đã có tiền trong đó thì "
+"bạn sử dụng một câu phục hồi. Khi ví mới của bạn được tạo, và một câu phục "
+"hồi sẽ xuất hiện để giúp bạn có thể phục hồi để lấy lại tiền trong ví trong "
+"tương lai nếu bạn bị mất hoặc hỏng điện thoại hay bạn muốn chuyển tài khoản "
+"sang thiết bị khác. Hãy viết dòng chữ đó xuống và cất giữ nó ở nơi an toàn -"
+" nếu bạn để mất nó, bạn sẽ có thể mất quyền truy cập đến khoản tiền của mình"
+" mãi mãi. Đừng chụp ảnh màn hình để lưu câu phục hồi của bạn! Ảnh chụp màn "
+"hình có thể được tự động sao lưu vào hệ thống lưu trữ trên đám mây nơi bạn "
+"không hoàn toàn có quyền kiểm soát việc ai được phép xem những file đó."
 
 #: ../../wallets/copay/getting-started.rst:45
 msgid "|image2| |image3| |image4| |image5| |image6| |image7|"
-msgstr ""
+msgstr "|image2| |image3| |image4| |image5| |image6| |image7|"
 
 #: ../../wallets/copay/getting-started.rst:61
 msgid ""
 "*Creating a new wallet and generating the recovery phrase in Dash Copay "
 "wallet*"
-msgstr ""
+msgstr "*Tạo một ví mới và sinh một câu khôi phục trong ví Dash Copay*"
 
 #: ../../wallets/copay/getting-started.rst:64
 msgid ""
@@ -82,10 +104,13 @@ msgid ""
 "from backup** and enter the 12 word recovery phrase. File/text backups are "
 "also supported."
 msgstr ""
+"Nếu bạn muốn khôi phục từ một ví Dash Copay đã có, chỉ cần đơn giản bấm vào "
+"**Restore from backup** và nhập vào 12 từ của câu phục hồi. File/text "
+"backups cũng được hỗ trợ."
 
 #: ../../wallets/copay/getting-started.rst:69
 msgid "Receiving"
-msgstr ""
+msgstr "Nhận"
 
 #: ../../wallets/copay/getting-started.rst:71
 msgid ""
@@ -97,18 +122,25 @@ msgid ""
 "to switch between wallets. The receiving address will change and you will "
 "receive a notification when you receive the transfer."
 msgstr ""
+"Chỉ đơn giảm bấm biểu tượng **Nhận** ở dưới cuối màn hình để nhận Dash. Ví "
+"sẽ tự động sinh và hiển thị một mã QE cho thiết bị khác quét, hoặc bạn chỉ "
+"cần bấm để hiển thị địa chỉ để có thể copy vào bộ nhớ đệm và sau đó bạn có "
+"thể dán vào một ứng dụng khác. Nếu bạn có nhiều ví, bạn có thể nhìn thấy tên"
+" ví ở cuối của màn hình, và bấm vào tên đó để chuyển qua lại giữa các ví. "
+"Địa chỉ nhận cũng sẽ thay đổi và bạn sẽ nhận được thông báo khi bạn nhận "
+"được tiền."
 
 #: ../../wallets/copay/getting-started.rst:80
 msgid "|image8| |image9|"
-msgstr ""
+msgstr "|image8| |image9|"
 
 #: ../../wallets/copay/getting-started.rst:87
 msgid "*Receiving dash and viewing your balance in Dash Copay wallet*"
-msgstr ""
+msgstr "*Nhận Dash và xem số dư của bạn trong ví Dash Copay*"
 
 #: ../../wallets/copay/getting-started.rst:90
 msgid "Sending"
-msgstr ""
+msgstr "Gửi"
 
 #: ../../wallets/copay/getting-started.rst:92
 msgid ""
@@ -126,15 +158,15 @@ msgstr ""
 
 #: ../../wallets/copay/getting-started.rst:103
 msgid "|image10| |image11| |image12| |image13| |image14| |image15|"
-msgstr ""
+msgstr "|image10| |image11| |image12| |image13| |image14| |image15|"
 
 #: ../../wallets/copay/getting-started.rst:119
 msgid "*Sending Dash from Dash Copay wallet*"
-msgstr ""
+msgstr "*Gửi Dash từ ví Dash Copay*"
 
 #: ../../wallets/copay/getting-started.rst:122
 msgid "Viewing transactions and balances"
-msgstr ""
+msgstr "Xem các giao dịch và các số dư"
 
 #: ../../wallets/copay/getting-started.rst:124
 msgid ""
@@ -146,12 +178,20 @@ msgid ""
 "recent transactions on the **Home** screen. You can tap any wallet to view "
 "the balance and transaction history associated with that wallet only."
 msgstr ""
+"Những giao dịch gần đây của bạn xuất hiện ở màn hình **Home**. Bạn có thể "
+"bấm vào bất kỳ giao dịch nào để xem cụ thể hơn hoặc nhập một **Memo** để "
+"giúp bạn nhớ được mục đích của giao dịch. Bấm vào **View on blockchain** để "
+"mở chức năng Insight blockchain explorer để xem đầy đủ chi tiết giao dịch. "
+"Tất cả các ví của bạn được tạo và có số dư tương ứng xuất hiện ở bên dưới "
+"các giao dịch gần đây trên màn hình **Home**. Bạn có thẻ bấm vào bất kỳ ví "
+"nào để xem số dư và lịch sử giao dịch trong mỗi ví đó."
 
 #: ../../wallets/copay/getting-started.rst:133
 msgid "|image16| |image17| |image18|"
-msgstr ""
+msgstr "|image16| |image17| |image18|"
 
 #: ../../wallets/copay/getting-started.rst:142
 msgid ""
 "*Home screen, transaction details and wallet details in Dash Copay wallet*"
 msgstr ""
+"*Màn hình chính, chi tiết giao dịch và chi tiết ví trong ví Dash Copay*"

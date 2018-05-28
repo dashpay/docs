@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 04:30+0000\n"
+"POT-Creation-Date: 2018-05-15 09:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2018\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../governance/using.rst:5
 msgid "Using Dash Governance"
-msgstr ""
+msgstr "Sử dụng cơ chế Quản trị Dash"
 
 #: ../../governance/using.rst:7
 msgid ""
@@ -27,72 +28,78 @@ msgid ""
 "funding platform. This documentation introduces and details the theory and "
 "practice to use the system."
 msgstr ""
+"Cơ chế Quản trị Phi tập trung bởi Blockchain (DGBB) là một nền tảng cấp vốn "
+"và biểu quyết mới lạ. Tài liệu này sẽ giới thiệu và nói rõ chi tiết về mặt "
+"lý thuyết và thực tiễn của việc sử dụng hệ thống này."
 
 #: ../../governance/using.rst:12
 msgid "Understanding the process"
-msgstr ""
+msgstr "Tìm hiểu về quy trình"
 
 #: ../../governance/using.rst:15
 msgid "Introduction"
-msgstr ""
+msgstr "Giới thiệu"
 
 #: ../../governance/using.rst:17
 msgid "DGBB consists of three components: Proposals, Votes, and Budgets"
-msgstr ""
+msgstr "DGBB bao gồm ba thành phần sau: Đề xuất, Bỏ phiếu, và Ngân sách"
 
 #: ../../governance/using.rst:18
 msgid "Anyone can submit a proposal for a small fee"
-msgstr ""
+msgstr "Bất cứ ai cũng có thể đăng một đề xuất với một khoản phí nhỏ"
 
 #: ../../governance/using.rst:19
 msgid "Masternode owners can cast for, against or abstain votes on proposals"
 msgstr ""
+"Các chủ masternode có thể bỏ phiếu để chống lại, hoặc bỏ qua những đề xuất"
 
 #: ../../governance/using.rst:20
 msgid "Approved proposals become budgets"
-msgstr ""
+msgstr "Những đề xuất được chấp thuận sẽ trở thành các ngân sách"
 
 #: ../../governance/using.rst:21
 msgid "Budgets are paid directly from the blockchain to the proposal owner"
-msgstr ""
+msgstr "Ngân sách được trả trực tiếp từ blockchain cho người lập đề xuất"
 
 #: ../../governance/using.rst:24
 msgid "Proposals"
-msgstr ""
+msgstr "Các đề xuất"
 
 #: ../../governance/using.rst:26
 msgid "Proposals are a request to receive funds"
-msgstr ""
+msgstr "Các đề xuất yêu cầu được cấp phát ngân sách"
 
 #: ../../governance/using.rst:27
 msgid ""
 "Proposals can be submitted by anyone for a fee of 5 Dash. The proposal fee "
 "is irreversibly destroyed on submission."
 msgstr ""
+"Đề xuất có thể được đưa ra bởi bất cứ ai với mức phí 5 Dash cho mỗi lần. Phí"
+" đề xuất này được tiêu huỷ mà không đảo ngược lại được khi đăng đề xuất."
 
 #: ../../governance/using.rst:29
 msgid "Proposals cannot be altered once submitted"
-msgstr ""
+msgstr "Đề xuất không thể thay đổi lại được một khi nó được đăng lên. "
 
 #: ../../governance/using.rst:32
 msgid "Votes"
-msgstr ""
+msgstr "Bỏ phiếu"
 
 #: ../../governance/using.rst:34
 msgid "Votes are cast by masternode owners"
-msgstr ""
+msgstr "Việc bỏ phiếu có thể thực hiện bởi các chủ masternode"
 
 #: ../../governance/using.rst:35
 msgid "Votes can be changed at any time"
-msgstr ""
+msgstr "Việc bỏ phiếu cũng có thể được thay đổi ở bất cứ thời gian nào"
 
 #: ../../governance/using.rst:36
 msgid "Votes are counted every 16616 blocks (approx. 30.29 days)"
-msgstr ""
+msgstr "Các phiếu bầu được tính cứ mỗi 16616 khối (xấp xỉ 30.29 ngày)"
 
 #: ../../governance/using.rst:39
 msgid "Budgets"
-msgstr ""
+msgstr "Ngân sách"
 
 #: ../../governance/using.rst:41
 msgid ""
@@ -100,84 +107,104 @@ msgid ""
 "greater than 10% of the total possible votes (for example over 448 out of "
 "4480)"
 msgstr ""
+"Ngân sách là các đề xuất mà nhận được tổng số vote YES ít nhất bằng 10% tổng"
+" số khả năng bỏ phiếu (ví dụ đạt 448 trên tổng số 4480)"
 
 #: ../../governance/using.rst:44
 msgid ""
 "Budgets can be nullified at any time if vote totals (cast or re-cast) fall "
 "below the approval threshold"
 msgstr ""
+"Ngân sách có thể bị huỷ bỏ tại bất kỳ thời điểm nào nếu tổng số phiếu (bỏ "
+"phiếu hoặc bỏ phiếu lại) dưới ngưỡng được chấp nhận."
 
 #: ../../governance/using.rst:46
 msgid ""
 "Budgets are processed (paid) in order of yes minus no votes. More popular "
 "budgets get payment priority."
 msgstr ""
+"Ngân sách được xử lý (chi trả) theo cách lấy số phiếu đồng ý - YES trừ đi số"
+" phiêu không đồng ý - NO. Ưu tiên thanh toán cho những đề xuất có nhiều bỏ "
+"phiếu ủng hộ hơn."
 
 #: ../../governance/using.rst:48
 msgid ""
 "Approximately 6176 dash (in 2018) are available for each budget cycle, "
 "decreasing by 7.14% every 210240 blocks (approx. 383.25 days)."
 msgstr ""
+"Có xấp xỉ 6176 dash (trong năm 2018) dành cho mỗi chu kỳ ngân sách, khoảng "
+"một tháng, ngân sách này giảm dần 7.14% cứ mỗi 210240 block (xấp xỉ 383.25 "
+"ngày)"
 
 #: ../../governance/using.rst:52
 msgid "Object structure"
-msgstr ""
+msgstr "Cấu trúc đối tượng"
 
 #: ../../governance/using.rst:54
 msgid "The following information is required to create a proposal:"
-msgstr ""
+msgstr "Thông tin sau đây là cần thiết để tạo một Đề xuất:"
 
 #: ../../governance/using.rst:56
 msgid "proposal-name: a unique label, 20 characters or less"
 msgstr ""
+"proposal-name: là một tiêu đề không trùng nhau, dài không quá 20 ký tự"
 
 #: ../../governance/using.rst:57
 msgid ""
 "url: a proposer-created webpage or forum post containing detailed proposal "
 "information"
 msgstr ""
+"url: là trang web do người lập đề xuất tạo hoặc một chủ đề trên diễn đàn có "
+"chứa thông tin cụ thể về đề xuất"
 
 #: ../../governance/using.rst:59
 msgid "payment-count: how many cycles the proposal is requesting payment"
-msgstr ""
+msgstr "payment-count: số chu kỳ thanh toán mà đề xuất này muốn được chi trả"
 
 #: ../../governance/using.rst:60
 msgid "block-start: the requested start of proposal payments"
 msgstr ""
+"block-start: đề xuất yêu cầu bắt đầu thanh toán từ block thứ bao nhiêu"
 
 #: ../../governance/using.rst:61
 msgid "dash-address: the address to receive proposal payments"
-msgstr ""
+msgstr "dash-address: là địa chỉ để nhận tiền cho đề xuất"
 
 #: ../../governance/using.rst:62
 msgid "monthly-payment-dash: the requested payment amount"
-msgstr ""
+msgstr "monthly-payment-dash: số tiền của mỗi lần thanh toán cho từng tháng"
 
 #: ../../governance/using.rst:65
 msgid "Persistence"
-msgstr ""
+msgstr "Sự nhất quán"
 
 #: ../../governance/using.rst:67
 msgid "Proposals become active one day after submission"
-msgstr ""
+msgstr "Đề xuất sẽ được kích hoạt một ngày sau khi đăng lên "
 
 #: ../../governance/using.rst:68
 msgid ""
 "Proposals will remain visible on the network until they are either "
 "disapproved or the proposal's last payment-cycle is reached"
 msgstr ""
+"Các đề xuất vẫn sẽ hiển thị trên mạng lưới đến tận khi hoặc là nó không còn "
+"được chấp nhận hoặc kết thúc chu kỳ thanh toán cuối cùng."
 
 #: ../../governance/using.rst:70
 msgid ""
 "Approval occurs when yes votes minus no votes equals 10% or more of the "
 "total available votes."
 msgstr ""
+"Chấp thuận xảy ra khi những phiếu YES trừ đi những phiếu NO đạt ít nhất 10% "
+"trên tổng số lượng phiếu bầu."
 
 #: ../../governance/using.rst:72
 msgid ""
 "Disapproval occurs when no votes minus yes votes equals 10% or more of the "
 "total available votes."
 msgstr ""
+"Không chấp thuận xảy ra khi số phiếu bầu NO trừ đi số phiếu bầu YES ít nhất "
+"bằng 10% tổng số lượng phiếu bầu."
 
 #: ../../governance/using.rst:74
 msgid ""
@@ -186,10 +213,14 @@ msgid ""
 " wallet debug window. A graph of the total masternode count can be found "
 "`here <http://178.254.23.111/~pub/masternode_count.png>`__"
 msgstr ""
+"Tổng số phiếu bầu có thể là số masternode đang online và đáp ứng đủ điều "
+"kiện, nó có thể xem bằng cách chạy lệnh ``masternode count`` trong cửa sổ "
+"Debug của ví Dash Core. Một biểu đồ về tổng số masternode có thể tìm thấy `ở"
+" đây <http://178.254.23.111/~pub/masternode_count.png>`__"
 
 #: ../../governance/using.rst:81
 msgid "Templates"
-msgstr ""
+msgstr "Các mẫu"
 
 #: ../../governance/using.rst:83
 msgid ""
@@ -197,22 +228,29 @@ msgid ""
 "Group to help facilitate standardized proposal submission and updates. Usage"
 " is recommended, but not required."
 msgstr ""
+"Những định dạng mẫu cho Microsoft Word sau đây từ Dash Core Group sẽ giúp "
+"chúng ta chuẩn hoá những mẫu đề xuất và được thường xuyên cập nhật. Bạn nên "
+"sử dụng những mẫu này, nhưng nó không phải là bắt buộc."
 
 #: ../../governance/using.rst:87
 msgid ""
 "`Project Proposal Template "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Proposal%20Template%20v1.0.docx>`_"
 msgstr ""
+"`Mẫu đề xuất dự án "
+"<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Proposal%20Template%20v1.0.docx>`_"
 
 #: ../../governance/using.rst:88
 msgid ""
 "`Project Status Update Template "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Status%20Update%20Template%20v1.0.docx>`_"
 msgstr ""
+"`Mẫu Cập Nhật Tình Hình Dự Án "
+"<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Status%20Update%20Template%20v1.0.docx>`_"
 
 #: ../../governance/using.rst:93
 msgid "Budget cycles"
-msgstr ""
+msgstr "Các chu kỳ ngân sách"
 
 #: ../../governance/using.rst:95
 msgid ""
@@ -222,152 +260,159 @@ msgid ""
 "gathering support and votes. Note that votes will no longer be tallied 1662 "
 "blocks (approximately 3 days) prior to the superblock."
 msgstr ""
+"Khi chuẩn bị một đề xuất, hãy chú ý khi nào thì chu kỳ tới sẽ đến và lập kế "
+"hoạch cho phù hợp. Bạn nên chọn kỳ thanh toán cho đề xuất ít nhất trước một "
+"chu kỳ thanh toán để có thời gian cho thảo luận và thu hút đủ sự hỗ trợ và "
+"bỏ phiếu ủng hộ. Hãy chú ý rằng các phiếu sẽ không được kiểm trong vòng 1662"
+" khối (khoảng 3 ngày) trước khi siêu khối được ra."
 
 #: ../../governance/using.rst:103
 msgid "Block height"
-msgstr ""
+msgstr "Độ cao khối"
 
 #: ../../governance/using.rst:103
 msgid "Approximate date"
-msgstr ""
+msgstr "Ngày dự kiến"
 
 #: ../../governance/using.rst:105
 msgid "747720"
-msgstr ""
+msgstr "747720"
 
 #: ../../governance/using.rst:105
 msgid "Tue Oct 3 20:17:56 UTC 2017"
-msgstr ""
+msgstr "Thứ 3, ngày 3 tháng 10 20:17:56 UTC 2017"
 
 #: ../../governance/using.rst:107
 msgid "764336"
-msgstr ""
+msgstr "764336"
 
 #: ../../governance/using.rst:107
 msgid "Fri Nov 3 03:22:58 UTC 2017"
-msgstr ""
+msgstr "Thứ 6 ngày 3 tháng 11 03:22:58 UTC 2017"
 
 #: ../../governance/using.rst:109
 msgid "780952"
-msgstr ""
+msgstr "780952"
 
 #: ../../governance/using.rst:109
 msgid "Sun Dec 3 10:28:00 UTC 2017"
-msgstr ""
+msgstr "Chủ nhật ngày 3 tháng 12 10:28:00 UTC 2017"
 
 #: ../../governance/using.rst:111
 msgid "797568"
-msgstr ""
+msgstr "797568"
 
 #: ../../governance/using.rst:111
 msgid "Tue Jan 2 17:33:02 UTC 2018"
-msgstr ""
+msgstr "Thứ 3 ngày 2 tháng 1 17:33:02 UTC 2018"
 
 #: ../../governance/using.rst:113
 msgid "814184"
-msgstr ""
+msgstr "814184"
 
 #: ../../governance/using.rst:113
 msgid "Fri Feb 2 00:38:04 UTC 2018"
-msgstr ""
+msgstr "Thứ 6 ngày 2 tháng 2 00:38:04 UTC 2018"
 
 #: ../../governance/using.rst:115
 msgid "830800"
-msgstr ""
+msgstr "830800"
 
 #: ../../governance/using.rst:115
 msgid "Sun Mar 4 07:43:06 UTC 2018"
-msgstr ""
+msgstr "Chủ nhật ngày 4 tháng 3 07:43:06 UTC 2018"
 
 #: ../../governance/using.rst:117
 msgid "847416"
-msgstr ""
+msgstr "847416"
 
 #: ../../governance/using.rst:117
 msgid "Tue Apr 3 14:48:08 UTC 2018"
-msgstr ""
+msgstr "Thứ 3 ngày 3 tháng 4 14:48:08 UTC 2018"
 
 #: ../../governance/using.rst:119
 msgid "864032"
-msgstr ""
+msgstr "864032"
 
 #: ../../governance/using.rst:119
 msgid "Thu May 3 21:53:10 UTC 2018"
-msgstr ""
+msgstr "Thứ 5 ngày 3 tháng 5 21:53:10 UTC 2018"
 
 #: ../../governance/using.rst:121
 msgid "880648"
-msgstr ""
+msgstr "880648"
 
 #: ../../governance/using.rst:121
 msgid "Sun Jun 3 04:58:12 UTC 2018"
-msgstr ""
+msgstr "Chủ nhật ngày 3 tháng 6 04:58:12 UTC 2018"
 
 #: ../../governance/using.rst:123
 msgid "897264"
-msgstr ""
+msgstr "897264"
 
 #: ../../governance/using.rst:123
 msgid "Tue Jul 3 12:03:14 UTC 2018"
-msgstr ""
+msgstr "Thứ 3 ngày 3 tháng 7 12:03:14 UTC 2018"
 
 #: ../../governance/using.rst:125
 msgid "913880"
-msgstr ""
+msgstr "913880"
 
 #: ../../governance/using.rst:125
 msgid "Thu Aug 2 19:08:16 UTC 2018"
-msgstr ""
+msgstr "Thứ 5 ngày 2 tháng 8 19:08:16 UTC 2018"
 
 #: ../../governance/using.rst:127
 msgid "930496"
-msgstr ""
+msgstr "930496"
 
 #: ../../governance/using.rst:127
 msgid "Sun Sep 2 02:13:18 UTC 2018"
-msgstr ""
+msgstr "Chủ nhật ngày 2 tháng 9 02:13:18 UTC 2018"
 
 #: ../../governance/using.rst:129
 msgid "947112"
-msgstr ""
+msgstr "947112"
 
 #: ../../governance/using.rst:129
 msgid "Tue Oct 2 09:18:20 UTC 2018"
-msgstr ""
+msgstr "Thứ 3 ngày 2 tháng 10 09:18:20 UTC 2018"
 
 #: ../../governance/using.rst:131
 msgid "963728"
-msgstr ""
+msgstr "963728"
 
 #: ../../governance/using.rst:131
 msgid "Thu Nov 1 16:23:22 UTC 2018"
-msgstr ""
+msgstr "Thứ 5 ngày 1 tháng 11 16:23:22 UTC 2018"
 
 #: ../../governance/using.rst:133
 msgid "980344"
-msgstr ""
+msgstr "980344"
 
 #: ../../governance/using.rst:133
 msgid "Sat Dec 1 23:28:24 UTC 2018"
-msgstr ""
+msgstr "Thứ 7 ngày 1 tháng 12 23:28:24 UTC 2018"
 
 #: ../../governance/using.rst:135
 msgid "996960"
-msgstr ""
+msgstr "996960"
 
 #: ../../governance/using.rst:135
 msgid "Tue Jan 1 06:33:26 UTC 2019"
-msgstr ""
+msgstr "Thứ 3 ngày 1 tháng 1 06:33:26 UTC 2019"
 
 #: ../../governance/using.rst:138
 msgid ""
 "You can view the source code for this calculation at this `GitHub gist "
 "<https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_"
 msgstr ""
+"Bạn có thể xem mã nguồn của tính toán này tại đây `GitHub gist "
+"<https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_"
 
 #: ../../governance/using.rst:144
 msgid "Creating proposals"
-msgstr ""
+msgstr "Tạo các đề xuất"
 
 #: ../../governance/using.rst:146
 msgid ""
@@ -377,14 +422,20 @@ msgid ""
 "from the Dash Core wallet console, several tools providing a user interface "
 "have been developed to simplify this procedure."
 msgstr ""
+"Một khi bạn đã chuẩn bị những nội dung cho đề xuất của bạn và thiết lập một "
+"website hoặc bài viết trên diễn đàn, thì đây là thời điểm để bạn đăng đề "
+"xuất của mình lên blockchain để cho mọi người bỏ phiếu. Trong khi tất cả các"
+" công việc liên quan đến việc tạo đề xuất xin ngân sách đều có thể thực hiện"
+" từ cửa sổ lệnh trên ví Dash Core, thì có vài công cụ cung cấp một giao diện"
+" trực quan hơn được phát triển để làm đơn giản tiến trình xin cấp vốn này."
 
 #: ../../governance/using.rst:153
 msgid "Dash Budget Proposal Generator"
-msgstr ""
+msgstr "Công cụ sinh Đề xuất Ngân sách của Dash"
 
 #: ../../governance/using.rst:155
 msgid "https://proposal.dash.org"
-msgstr ""
+msgstr "https://proposal.dash.org"
 
 #: ../../governance/using.rst:157
 msgid ""
@@ -402,10 +453,24 @@ msgid ""
 "amount is fixed and cannot be modified after it has been submitted to the "
 "blockchain."
 msgstr ""
+"Bộ `Công cụ tạo sinh đề xuất <https://proposal.dash.org>`__ hỗ trợ việc tạo "
+"các đề xuất cả trên mạng chính - mainnet và mạng thử nghiệm - testnet. Ở "
+"bước đầu tiên, bạn cần nhập tên ngắn gọn, rõ ràng, và duy nhất cho đề xuất "
+"và nó sẽ xuất hiện ở trên blockchain. Tên cảu đề xuất dài tối đa 40 ký tự. "
+"Bạn có thể cung cấp đường link đến diễn đàn hoặc DashCentral là nơi bạn có "
+"mô tả về đề xuất một cách cụ thể hơn (sử dụng ` dịch vụ thu gọn đường link "
+"như <https://goo.gl>`_ nếu cần), và sau đó là chọn một số lượng cho khoản "
+"thanh toán mà bạn yêu cầu, và số lần thanh toán, và ngày của siêu khối mà "
+"bạn yêu cầu thanh toán. Điều này cho phép bạn kiểm soát chu kỳ thanh toán "
+"nào bạn muốn đề xuất của bạn xuất hiện, và nó cho bạn đủ thời gian để tìm "
+"kiếm sự ủng hộ cho đề xuất của mình bằng việc làm cho những người bỏ phiếu "
+"cảm thấy quen thuộc với dự án của bạn. Chú ý rằng số tiền thanh toán là một "
+"khoản cố định và không thể thay đổi được sau khi đề xuất được đăng lên "
+"blockchain."
 
 #: ../../governance/using.rst:178
 msgid "Steps 1 & 2: Creating your proposal and preparing the command"
-msgstr ""
+msgstr "Bước 1 & 2: Tạo đề xuất và chuẩn bị câu lệnh"
 
 #: ../../governance/using.rst:180
 msgid ""
@@ -418,6 +483,16 @@ msgid ""
 "charged as well, so make sure slightly more than 5 DASH is available in your"
 " wallet. Many budget proposals request reimbursement of the 5 DASH fee."
 msgstr ""
+"Tiếp Theo, bộ sinh đề xuất sẽ cung cấp bạn một câu lệnh để bạn có thể chạy "
+"từ cửa sổ debug trên ví Dash Core để chuẩn bị đối tượng quản trị cho đề xuất"
+" của bạn. Chạy câu lệnh này sẽ làm bạn tốn mất 5 DASH, nó sẽ bị \"đốt\" đi "
+"mất một cách vĩnh viễn khỏi việc lưu thông. Đây là khoản phí một lần để bảo "
+"vệ hệ quản trị khỏi quá tải bởi spam, hoặc những đề xuất không được cân nhắc"
+" một cách thấu đáo hoặc người dùng hành động mà không có đức tin tốt. Ngoài "
+"ra còn có một khoản phí nhỏ sẽ được áp dụng, do đó hãy chắc chắn rằng trong "
+"ví của bạn phải có hơn 5 DASH một chút. Có rất nhiều để xuất thường tính "
+"luôn và yêu cầu hệ thống trả lại khoản phí 5 DASH nếu đề xuất của họ chiến "
+"thắng."
 
 #: ../../governance/using.rst:190
 msgid ""
@@ -427,12 +502,19 @@ msgid ""
 "proposal generator response window. As soon as you do this, the system will "
 "show a progress bar as it waits for 6 confirmations as follows:"
 msgstr ""
+"Đầu tiên là mở khoá ví của bạn bằng cách click vào  **Thiết lập > Mở khoá "
+"ví**, sau đó mở cửa sổ lệnh bằng cách click vào **Dụng cụ > Cửa sổ gỡ rối** "
+"và dán câu lệnh đã được sinh. Mã giao dịch sẽ xuất hiện. Copy và dán nó vào "
+"cửa sổ tạo đề xuất. Ngay khi bạn làm việc đó, hệ thống sẽ hiển thị thanh "
+"tiến trình cho biết bạn phải đợi để có đủ 6 xác thực như dưới đây:"
 
 #: ../../governance/using.rst:203
 msgid ""
 "Step 3: Creating the proposal transaction and waiting for 6 confirmations of"
 " the transaction ID"
 msgstr ""
+"Bước 3: Tạo giao dịch đề xuất và đợi cho giao dịch có 6 xác thực và lấy mã "
+"giao dịch"
 
 #: ../../governance/using.rst:206
 msgid ""
@@ -440,10 +522,13 @@ msgid ""
 "prepared governance object to the network for voting. Copy and paste this "
 "command, and your governance object ID will appear as follows:"
 msgstr ""
+"Sau khi đã có đủ 6 xác thực, thì lệnh khác sẽ sẵn sàng để gửi đối tượng quản"
+" trị đã chuẩn bị đến mạng cho việc biểu quyết. Hãy copy và dán lệnh này, và"
+"  mã ID của đối tượng quản trị của bạn sẽ xuất hiện giống như sau:"
 
 #: ../../governance/using.rst:216
 msgid "Step 4: Submitting the governance object to the network"
-msgstr ""
+msgstr "Bước 4: Gửi đối tượng quản trị lên mạng lưới Dash"
 
 #: ../../governance/using.rst:218
 msgid ""
@@ -452,14 +537,19 @@ msgid ""
 "claim your proposal and enable simpified voting for masternodes using "
 "DashCentral voting services."
 msgstr ""
+"Bạn có thể dùng mã ID này để theo dõi việc bỏ phiếu của đề xuất đến khi ngân"
+" sách được khép lại và bạn nhận được khoản thanh toán. Bạn cũng có thể đăng "
+"mã lên DashCentral để đề xuất của mình có thể được bỏ phiếu bởi các chủ "
+"masternode là thành viên trên DashCentral bằng cơ chế bỏ phiếu đơn giản với "
+"dịch vụ bỏ phiếu của DashCentral."
 
 #: ../../governance/using.rst:224
 msgid "DashCentral Proposal Generator"
-msgstr ""
+msgstr "Công cụ sinh Đề xuất của DashCentral"
 
 #: ../../governance/using.rst:226
 msgid "https://www.dashcentral.org/budget/create"
-msgstr ""
+msgstr "https://www.dashcentral.org/budget/create"
 
 #: ../../governance/using.rst:228
 msgid ""
@@ -469,10 +559,15 @@ msgid ""
 " the procedure described above, and documentation is available `here "
 "<https://www.dashcentral.org/about/contact>`_."
 msgstr ""
+"DashCentral cũng có các công cụ để tạo đề xuất ngân sách, hoặc trình bày "
+"những đề xuất đã được tạo và bạn có thể bổ sung thêm các phần mô tả trên "
+"DashCentral và để cộng đồng có thể bắt đầu thảo luận về nó. Các bước tiến "
+"hành cũng gần giống với thủ tục được mô tả ở trên đây và tài liệu của nó thì"
+" bạn có thể tìm thấy `ở đây <https://www.dashcentral.org/about/contact>`_."
 
 #: ../../governance/using.rst:236
 msgid "Voting on proposals"
-msgstr ""
+msgstr "Bỏ phiếu cho các đề xuất"
 
 #: ../../governance/using.rst:238
 msgid ""
@@ -480,12 +575,18 @@ msgid ""
 " vote will not be counted. The exact deadline is 1662 blocks before the "
 "superblock.**"
 msgstr ""
+"*Bạn phải bỏ phiếu ít nhất ba ngày trước khi siêu khối được tạo nếu không "
+"thì phiếu của bạn sẽ không được tính. Chính xác thì hạn chót là 1662 khối "
+"trước  siêu khối.**"
 
 #: ../../governance/using.rst:242
 msgid ""
 "Note that if you do not operate a masternode, you may still be able to vote "
 "on DashBoost proposals. See https://www.dashboost.org for more information."
 msgstr ""
+"Chú ý rằng nếu bạn không vận hành một masternode, bạn vẫn có thể bỏ phiếu "
+"cho các đề xuất trên DashBoost. Hãy xem https://www.dashboost.org để biết "
+"thêm thông tin."
 
 #: ../../governance/using.rst:246
 msgid ""
@@ -497,34 +598,47 @@ msgid ""
 "the voting deadline. The following sites and tools are available to view and"
 " manage proposals and voting:"
 msgstr ""
+"Bỏ phiếu cho đề xuất DGBB là một phần việc quan trọng đối với việc vận hành "
+"một masternode. Do chủ masternode đầu tư rất nhiều vào Dash, do vậy vì lợi "
+"ích của mình mà các chủ masternode cần đánh giá và bỏ phiếu mỗi tháng sao "
+"cho họ  cảm nhận là phù hợp với các lợi ích tốt nhất của mạng lưới. Mỗi một "
+"masternode có thể được bỏ phiếu một lần cho mỗi đề xuất, và việc bỏ phiếu đó"
+" có thể được thay đổi bất kỳ lúc nào miễn chưa đến hết hạn bỏ phiếu. Những "
+"website và công cụ sau đây cho phép chúng ta theo dõi và quản lý các đề xuất"
+" và bỏ phiếu:"
 
 #: ../../governance/using.rst:254
 msgid "`DashCentral <https://www.dashcentral.org/budget>`__"
-msgstr ""
+msgstr "`DashCentral <https://www.dashcentral.org/budget>`__"
 
 #: ../../governance/using.rst:255
 msgid "`Dash Budget Proposal Vote Tracker <https://dashvotetracker.com/>`__"
-msgstr ""
+msgstr "`Dash Budget Proposal Vote Tracker <https://dashvotetracker.com/>`__"
 
 #: ../../governance/using.rst:256
 msgid "`Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`__"
 msgstr ""
+"`Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`__"
 
 #: ../../governance/using.rst:257
 msgid ""
 "`Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-"
 "masternode-tool/releases>`__"
 msgstr ""
+"`Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-"
+"masternode-tool/releases>`__"
 
 #: ../../governance/using.rst:259
 msgid ""
 "For information on how to create a proposal, see :ref:`here <creating-"
 "proposals>`."
 msgstr ""
+"Thông tin về làm thế nào để tạo một đề xuất, xem :ref:`tại đây <creating-"
+"proposals>`."
 
 #: ../../governance/using.rst:263
 msgid "DashCentral"
-msgstr ""
+msgstr "DashCentral"
 
 #: ../../governance/using.rst:265
 msgid ""
@@ -540,6 +654,18 @@ msgid ""
 "private key for voting, so the risk of the site operator voting in your name"
 " is minimal."
 msgstr ""
+"Rất nhiều người vận hành masternode lưu khoá riêng của họ với tài khoản được"
+" bảo vệ bởi mật khẩu trên `DashCentral <https://www.dashcentral.org>`__ để "
+"có thể bỏ phiếu nhanh và đơn giản với giao diện trực quan. Sự phổ biến của "
+"website này làm cho nó trở thành một nơi nhiều người thảo luận về các đề "
+"xuất sau khi nó được đăng lên hệ thống quản trị. Để bỏ phiếu trên giao diện "
+"web của DashCentral, đầu tiên bạn cần nhập khoá riêng của masternode của bạn"
+" trong tài khoản theo hướng dẫn ở đây. Chú ý rằng khoá riêng của masternode "
+"không phải là khoá riêng để kiểm soát 1000 DASH, như vậy nếu có rủi ro đánh "
+"mất khoá riêng cũng không làm bạn bị mất 1000 DASH đặt cọc cho masternode. "
+"Đặt mật khẩu riêng cho khoá riêng của masternode để cho bỏ phiếu, và như vậy"
+" cũng giảm rủi ro cho việc người vận hành website này sử dụng khoá riêng của"
+" bạn xuống mức tối thiểu. "
 
 #: ../../governance/using.rst:277
 msgid ""
@@ -547,14 +673,18 @@ msgid ""
 "<https://www.dashcentral.org/budget>`_. Simply click to view the proposals, "
 "then click either **Vote YES**, **Vote ABSTAIN** or **Vote NO**."
 msgstr ""
+"Khi bạn đã sẵn sàng bỏ phiếu, hãy vào `trang ngân sách đề xuất "
+"<https://www.dashcentral.org/budget>`_. Chỉ cần click vào để xem các đề xuất"
+" rồi click vào một trong các tuỳ chọn **Vote YES**, **Vote ABSTAIN** or "
+"**Vote NO**."
 
 #: ../../governance/using.rst:285
 msgid "Voting interface on DashCentral"
-msgstr ""
+msgstr "Giao diện bỏ phiếu trên DashCentral"
 
 #: ../../governance/using.rst:288
 msgid "Dash Masternode Tool (DMT)"
-msgstr ""
+msgstr "Dash Masternode Tool (DMT)"
 
 #: ../../governance/using.rst:290
 msgid ""
@@ -566,14 +696,22 @@ msgid ""
 "the lower half of the window. Switch to the **Vote** tab to **Vote Yes**, "
 "**Vote No** or **Vote Abstain** directly from DMT."
 msgstr ""
+"Nếu bạn khởi động masternode của bạn từ ví cứng sử dụng `DMT "
+"<https://github.com/Bertrand256/dash-masternode-tool/releases>`_, bạn cũng "
+"có thể sử dụng công cụ đó để bỏ phiếu. Bấm vào **Tools > Proposals** và đợi "
+"cho danh sách các đề xuất được tải. Bạn có thể dễ dàng nhìn thấy tình trạng "
+"bỏ phiếu của mỗi một đề xuất và chọn một đề xuất để xem thông tin chi tiết "
+"trong trang **Details** ở phần bên dưới của cửa sổ. Chuyển sang trang "
+"**Vote** để **Vote Yes**, **Vote No** or **Vote Abstain** một cách trực tiếp"
+" từ DMT."
 
 #: ../../governance/using.rst:301
 msgid "Voting interface in DMT"
-msgstr ""
+msgstr "Giao diện bỏ phiếu trên DMT"
 
 #: ../../governance/using.rst:304
 msgid "Dash Core wallet or masternode"
-msgstr ""
+msgstr "Ví Dash Core hoặc masternode"
 
 #: ../../governance/using.rst:306
 msgid ""
@@ -591,6 +729,20 @@ msgid ""
 "<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__). The "
 "voting code for Dash Core Wallet is as follows::"
 msgstr ""
+"Nếu bạn khởi động masternode của mình sử dụng ví Dash Core  (không gợi ý bạn"
+" làm vậy), bạn có thể bỏ phiếu bằng tay từ menu **Công cụ > Cửa sổ debug**, "
+"hoặc trực tiếp từ masternode của bạn thông qua SSH bằng việc sử dụng ``dash-"
+"cli``. Đầu tiên click vào đề xuất mà bạn muốn bỏ phiếu hoặc trên "
+"`DashCentral <https://www.dashcentral.org/budget>`__ hoặc trên `Dash Ninja "
+"<https://www.dashninja.pl/governance.html>`__. Bạn sẽ thấy một câu lệnh cho "
+"việc bỏ phiếu bằng tay ở dưới phần mô tả của đề xuất. Copy và dán câu lệnh "
+"này và sửa đổi  tuỳ theo quyết định đồng ý hay không đồng ý của bạn, nếu "
+"cần. Như ví dụ sau, lấy phần này từ đề xuất trên `Dash Ninja "
+"<https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741 "
+"8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`__ (hoặc "
+"`DashCentral "
+"<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__). Mã để "
+"bỏ phiếu cho ví Dash Core có dạng như sau::"
 
 #: ../../governance/using.rst:325
 msgid ""
@@ -598,6 +750,9 @@ msgid ""
 "command with ``dash-cli``, which is usually found in the ``.dashcore`` "
 "folder. The command should be similar to the following::"
 msgstr ""
+"Chú ý rằng việc bỏ phiếu trực tiếp từ masternode của bạn, bạn cần có thêm "
+"tiền tố vào câu lệnh với ``dash-cli``, chương trình thường được thấy trong "
+"thư mục ``.dashcore``. Câu lệnh sẽ có dạng giống như sau::"
 
 #: ../../governance/using.rst:333
 msgid ""
@@ -608,13 +763,21 @@ msgid ""
 "successful, you should see a confirmation message reading **Voted "
 "successfully**."
 msgstr ""
+"Chú ý lệnh này sẽ kích hoạt việc bỏ phiếu từ tất cả các masternode được cấu "
+"hình trong file ``dash.conf``. Nếu bạn có nhiều masternode và mỗi masternode"
+" một file .conf riêng, hoặc nếu bạn muốn bỏ phiếu chỉ với một vài masternode"
+" nào đó, bạn phải thay đổi câu lệnh từ ``vote-many`` thành ``vote``. Nếu "
+"việc bỏ phiếu của bạn thành công, bạn sẽ thấy thông báo xác nhận việc đó có "
+"dạng như sau **Voted successfully**."
 
 #: ../../governance/using.rst:343
 msgid "Voting from the debug console in Dash Core Wallet"
-msgstr ""
+msgstr "Bỏ phiếu từ cửa sổ lệnh debug trong ví Dash Core"
 
 #: ../../governance/using.rst:345
 msgid ""
 "You can also view a list of proposals in JSON format from the console to "
 "copy and paste the proposal hash for voting as follows::"
 msgstr ""
+"Bạn cũng có thể xem danh sách các đề xuất theo định dạng JSON từ bảng điều "
+"khiển để copy và dán mã băm của đề xuất cho việc bỏ phiếu theo cách sau::"

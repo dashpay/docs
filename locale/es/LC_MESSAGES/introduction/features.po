@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 09:41+0000\n"
+"POT-Creation-Date: 2018-05-25 08:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Damian Walker <damianwalkerstrauss@gmail.com>, 2018\n"
+"Last-Translator: Tomas Alfaro <talfarod@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,11 +36,13 @@ msgstr "Sin pre-minado"
 
 #: ../../introduction/features.rst:14
 msgid "X11 hashing algorithm, CPU/GPU/ASIC mining available"
-msgstr ""
+msgstr "Algoritmo hash X11, disponibilidad de minería con CPU/GPU/ASIC"
 
 #: ../../introduction/features.rst:15
 msgid "2.6 minute block time, 2MB blocks, ~56 transactions per second"
 msgstr ""
+"tiempo de bloque de 2.6 minutos, bloques de 2MB, ~56 transacciones por "
+"segundo"
 
 #: ../../introduction/features.rst:16
 msgid "Block reward decreases by 7.14% per year"
@@ -56,7 +58,7 @@ msgstr "Emisión total de monedas: entre 17.74 millones y 18.92 millones"
 
 #: ../../introduction/features.rst:19
 msgid "Decentralized second-tier masternode network"
-msgstr ""
+msgstr "Red con segunda capa descentralizada de masternodes"
 
 #: ../../introduction/features.rst:20
 msgid "Superior transaction anonymity using PrivateSend"
@@ -71,6 +73,9 @@ msgid ""
 "Decentralized Governance By Blockchain allows masternode owners to vote on "
 "budget proposals and decisions that affect Dash"
 msgstr ""
+"La Gobernanza Descentralizada por Blockchain le permite a los propietarios "
+"de masternodes votar en las propuestas al presupuesto y en decisiones que "
+"afecten a Dash"
 
 #: ../../introduction/features.rst:29
 msgid "Masternodes"
@@ -409,6 +414,12 @@ msgid ""
 " measures and replace the problematic hashes with other more reliable "
 "hashing algorithms."
 msgstr ""
+"En caso de un avance computacional de esa escala, una moneda digital que "
+"utilice el algoritmo de PoW X11 continuaría funcionando seguramente a menos "
+"que los 11 hashes sean vulnerados simultáneamente. Incluso si alguno de los "
+"11 hashes no sea fidedigno, habría una alerta adecuada para utilizar X11 "
+"como algoritmo, la moneda debería reemplazar la función problemática con "
+"algún otro algoritmo más confiable.  "
 
 #: ../../introduction/features.rst:258
 msgid ""
@@ -420,6 +431,13 @@ msgid ""
 "hedging against risks associated with single-hash currencies plagued by SPOF"
 " (Single Point Of Failure)."
 msgstr ""
+"Debido a la naturaleza especulativa de las monedas digitales y su inherente "
+"incertidumbre al ser un campo nuevo, el algoritmo X11 puede proveer mas "
+"confianza a sus usuarios y a inversores potenciales que los algoritmos de "
+"hash individual. Estos algoritmos pueden proveer más seguridad y longevidad "
+"al momento de almacenarlos con el objetivo de almacenamiento de riqueza, "
+"diversificación de inversiones y cobertura contra los riesgos asociados a "
+"estos algoritmos afectados por SPOF (Puntos individuales de fallo)."
 
 #: ../../introduction/features.rst:266
 msgid ""
@@ -453,6 +471,9 @@ msgid ""
 "Version 2.0 of DGW was implemented in Dash from block 45,000 onwards in "
 "order to completely alleviate the time-warp exploit."
 msgstr ""
+"La versión 2.0 de DGW fue implementada en Dash desde el bloque 45.000 con el"
+" objetivo de aliviar completamente la vulnerabilidad ante la variación "
+"temporal."
 
 #: ../../introduction/features.rst:293
 msgid ""
@@ -461,6 +482,10 @@ msgid ""
 "architectures that had different levels of floating-point accuracy through "
 "the use of integers."
 msgstr ""
+"La versión 3.0 fue implementada en Mayo de 2014 con el objetivo de mejorar "
+"el calculo del targer con transiciones mas suaves. También resuelve varios "
+"problemas de arquitectura que tenía diferentes niveles de precisión de punto"
+" flotante a través del uso de enteros."
 
 #: ../../introduction/features.rst:302
 msgid "Emission Rate"
@@ -491,6 +516,13 @@ msgid ""
 "amount each year offers a smoother transition to a fee-based economy than "
 "Bitcoin."
 msgstr ""
+"Aunque Dash se encuentra basado en Bitcoin, cambia significativamente su "
+"tasa de emisión de monedas ofreciendo una disminución mas suave en el "
+"tiempo. Mientras que Bitcoin reduce su tasa en 50% cada 4 años, Dash reduce "
+"la emisión en un catorceavo (aprox. 7,14%) cada 210240 bloques (approx. "
+"383,25 días). Es notorio que reduciendo la recompensa por bloque más "
+"lentamente ofrece una transición más suave a una economía basada en "
+"comisiones en comparación con Bitcoin."
 
 #: ../../introduction/features.rst:328
 msgid "Bitcoin vs. Dash coin emission rate"
@@ -566,11 +598,11 @@ msgstr "45%"
 
 #: ../../introduction/features.rst:377
 msgid "Mining Reward"
-msgstr ""
+msgstr "Recompensa por minería"
 
 #: ../../introduction/features.rst:379
 msgid "Masternode Reward for Proof-of-service"
-msgstr ""
+msgstr "Recompensa de los masternodes por su Prueba-de-Servicio"
 
 #: ../../introduction/features.rst:381
 msgid "10%"
@@ -592,7 +624,7 @@ msgstr ""
 
 #: ../../introduction/features.rst:395
 msgid "Decentralized Governance"
-msgstr ""
+msgstr "Gobernanza descentralizada"
 
 #: ../../introduction/features.rst:397
 msgid ""
@@ -609,6 +641,19 @@ msgid ""
 "this change. Compare this to Bitcoin, where debate on the blocksize has been"
 " raging for nearly three years."
 msgstr ""
+"La gobernanza descentralizada por cadena de bloques en ingles: "
+"(Decentralized Governance by Blockchain DGBB) es un intento de Dash que "
+"tiene como objetivo de resolver los problemas de manejo en proyectos "
+"descentralizados como el desarrollo de Dash. Debido a que no hay autoridades"
+" centrales que decidan enrumbar o tomar las decisiones del proyecto. Las "
+"decisiones son tomadas por la red, específicamente la red de master-nodos. "
+"El sistema DGBB permite a cada master-nodo votar (si/no/abstengo) para cada "
+"propuesta. Si la propuesta pasa, puede ser implementada (o no) por los "
+"desarrolladores de Dash. Un ejemplo clave es: cuando en el 2016, el equipo "
+"núcleo de Dash envió una propuesta a la red preguntando si el tamaño del "
+"bloque debería ser incrementado a 2MB. Dentro de las primeras 24 horas se "
+"alcanzaron los votos para aprobar este cambio. Comparando con Bitcoin donde "
+"el debate del tamaño del bloque está sucediendo desde hace 3 años."
 
 #: ../../introduction/features.rst:411
 msgid ""
@@ -633,7 +678,7 @@ msgstr ""
 
 #: ../../introduction/features.rst:431
 msgid "Sentinel"
-msgstr ""
+msgstr "Sentinela"
 
 #: ../../introduction/features.rst:433
 msgid ""
@@ -878,11 +923,15 @@ msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr ""
 
 #: ../../introduction/features.rst:600
+msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
+msgstr ""
+
+#: ../../introduction/features.rst:608
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr ""
 
-#: ../../introduction/features.rst:608
+#: ../../introduction/features.rst:616
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""

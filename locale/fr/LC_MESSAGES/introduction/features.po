@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 09:41+0000\n"
+"POT-Creation-Date: 2018-05-25 08:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Daf Daf, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -400,7 +400,7 @@ msgstr ""
 
 #: ../../introduction/features.rst:211
 msgid "X11 Hash Algorithm"
-msgstr ""
+msgstr "Algorithme de hachage X11"
 
 #: ../../introduction/features.rst:213
 msgid ""
@@ -438,7 +438,7 @@ msgstr ""
 
 #: ../../introduction/features.rst:241
 msgid "Advantages of X11"
-msgstr ""
+msgstr "Avantages d'X11"
 
 #: ../../introduction/features.rst:243
 msgid ""
@@ -460,6 +460,12 @@ msgid ""
 " measures and replace the problematic hashes with other more reliable "
 "hashing algorithms."
 msgstr ""
+"Dans l'hypothèse d'une telle percée informatique, une monnaie numérique "
+"utilisant la PoW X11 continuerait de fonctionner en sécurité, à moins que "
+"les 11 hachages soient “cassés\" simultanément. Même si certains des 11 "
+"hachages s'avéraient faillibles, l'alerte serait donnée suffisamment à temps"
+" pour qu'une monnaie utilisant X11 puisse prendre des mesures de "
+"remplacement des hachages vulnérables par d'autres algorithmes plus fiables."
 
 #: ../../introduction/features.rst:258
 msgid ""
@@ -471,6 +477,14 @@ msgid ""
 "hedging against risks associated with single-hash currencies plagued by SPOF"
 " (Single Point Of Failure)."
 msgstr ""
+"Au vu de la nature spéculative des monnaies numériques et des incertitudes "
+"qui sont celles de ce domaine neuf, l'algorithme X11 donne une confiance "
+"accrue à ses utilisateurs et aux investisseurs potentiels, au contraire "
+"d'une approche à algorithme unique. Les solutions de hachage chaîné, telles "
+"que X11, permettent une meilleure sécurité et longévité pour des objectifs "
+"de réserve de valeur, de diversification d'investissement et de réduction "
+"des risques associés aux monnaies à algorithme unique (points de "
+"vulnérabilité uniques)."
 
 #: ../../introduction/features.rst:266
 msgid ""
@@ -483,7 +497,7 @@ msgstr ""
 
 #: ../../introduction/features.rst:276
 msgid "Dark Gravity Wave"
-msgstr ""
+msgstr "Dark Gravity Wave"
 
 #: ../../introduction/features.rst:278
 msgid ""
@@ -504,6 +518,8 @@ msgid ""
 "Version 2.0 of DGW was implemented in Dash from block 45,000 onwards in "
 "order to completely alleviate the time-warp exploit."
 msgstr ""
+"La version 2.0 de DGW a été implémentée dans Dash à partir du bloc 45000, "
+"afin de supprimer complètement le risque de la faille “time-warp\"."
 
 #: ../../introduction/features.rst:293
 msgid ""
@@ -512,10 +528,14 @@ msgid ""
 "architectures that had different levels of floating-point accuracy through "
 "the use of integers."
 msgstr ""
+"La version 3.0 a été implémentée le 14 mai 2014 pour améliorer davantage le "
+"recalcul de la difficulté, avec des transitions plus douces. Elle a aussi "
+"corrigé des problèmes rencontrés sur certaines architectures qui avaient "
+"différents niveaux de précision de virgule flottante."
 
 #: ../../introduction/features.rst:302
 msgid "Emission Rate"
-msgstr ""
+msgstr "Taux d'émission"
 
 #: ../../introduction/features.rst:304
 msgid ""
@@ -542,6 +562,14 @@ msgid ""
 "amount each year offers a smoother transition to a fee-based economy than "
 "Bitcoin."
 msgstr ""
+"Tout en étant basé sur Bitcoin, Dash modifie significativement le taux "
+"d'émission de manière à ce que sa diminution soit mieux lissée à travers le "
+"temps. Tandis que Bitcoin diminue le taux d'émission de 50% tous les 4 ans, "
+"Dash le diminue d'un quatorzième (environ 7,14%) tous les 210240 blocs "
+"(environ tous les 383,25 jours). On peut considérer que la moindre "
+"diminution de la récompense de bloc tous les ans constitue, par rapport à "
+"Bitcoin, une transition plus douce vers une économie basée sur les frais de "
+"transaction."
 
 #: ../../introduction/features.rst:328
 msgid "Bitcoin vs. Dash coin emission rate"
@@ -660,6 +688,20 @@ msgid ""
 "this change. Compare this to Bitcoin, where debate on the blocksize has been"
 " raging for nearly three years."
 msgstr ""
+"La gouvernance décentralisée par blockchain (DGBB) est la façon dont Dash "
+"résout deux problèmes importants des cryptomonnaies : la gouvernance et le "
+"financement. La gouvernance d'un projet décentralisé est une chose difficile"
+" car, par définition, il n'y a aucune autorité centrale qui puisse prendre "
+"des décisions sur le projet. Avec Dash, de telles décisions sont prises par "
+"le réseau, c'est-à-dire par les opérateurs de masternode. Le système DGBB "
+"permet à chaque masternode de voter une fois (oui/non/abstention) sur chaque"
+" proposition budgétaire. Si une proposition est adoptée, elle peut alors "
+"être mise en œuvre (ou non) par les développeurs Dash. Un exemple clé a eu "
+"lieu en 2016 : l'équipe Dash Core a soumis au réseau une proposition "
+"demandant si la taille de bloc devait être agrandie à 2 Mo. En vingt-quatre "
+"heures, un consensus avait été atteint en faveur de cette mesure. Il faut "
+"comparer cela à Bitcoin, où le débat sur la taille de bloc fait rage depuis "
+"presque trois ans."
 
 #: ../../introduction/features.rst:411
 msgid ""
@@ -929,11 +971,15 @@ msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr ""
 
 #: ../../introduction/features.rst:600
+msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
+msgstr ""
+
+#: ../../introduction/features.rst:608
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr ""
 
-#: ../../introduction/features.rst:608
+#: ../../introduction/features.rst:616
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""

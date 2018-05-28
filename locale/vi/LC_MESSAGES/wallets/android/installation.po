@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 04:30+0000\n"
+"POT-Creation-Date: 2018-05-25 08:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kien Bui <kientemp2@gmail.com>, 2018\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
@@ -31,6 +31,7 @@ msgid ""
 "The easiest way to install the Dash Wallet for Android is from the Google "
 "Play Store."
 msgstr ""
+"Cách dễ nhất để cài ví Dash cho Android là từ Cửa hàng ứng dụng Google Play."
 
 #: ../../wallets/android/installation.rst:17
 msgid "From APK"
@@ -44,6 +45,11 @@ msgid ""
 "(if you have not already done so) and then downloading and installing an APK"
 " file. Follow these instructions:"
 msgstr ""
+"Một số điện thoại Android không có quyền truy cập vào cửa hàng ứng dụng "
+"Google Play bởi vì phần mềm của điện thoại, nhà mạng cung câp hoặc quốc gia "
+"không cho phép nó. Bạn có thể cài ứng dụng bằng tay trước hết bằng việc bật "
+"chức năng cho phép cài đặt ứng dụng từ nguồn bên ngoài (nếu bạn chưa làm "
+"việc đó) và sau đó tải và cài từ file APK. Hãy làm theo hướng dẫn sau:"
 
 #: ../../wallets/android/installation.rst:25
 #: ../../wallets/android/installation.rst:40
@@ -51,6 +57,8 @@ msgid ""
 "Ensure your Android version is at least 4.0.3 by going to **Settings → About"
 " phone** and checking the version number."
 msgstr ""
+"Hãy đảm bảo rằng Android của bạn có phiên bản ít nhất là 4.0.3 bằng việc vào"
+" **Settings → About phone** và kiểm tra số phiên bản."
 
 #: ../../wallets/android/installation.rst:27
 #: ../../wallets/android/installation.rst:46
@@ -58,6 +66,8 @@ msgid ""
 "Enable Unknown sources by going to **Settings → Security → Unknown "
 "sources**. Read and accept the warning."
 msgstr ""
+"Cho phép nguồn không xác định bằng việc vào **Settings → Security → Unknown "
+"sources**. Sau đó đọc và chấp nhận cảnh báo."
 
 #: ../../wallets/android/installation.rst:29
 msgid ""
@@ -65,6 +75,9 @@ msgid ""
 "<https://github.com/HashEngineering/dash- wallet/releases/latest>`_.  At the"
 " time of writing, this was 5.17.5."
 msgstr ""
+"Sử dụng điện thoại của bạn, tải phiên bản mới nhất của APK từ `đường link "
+"này <https://github.com/HashEngineering/dash- wallet/releases/latest>`_. Tại"
+" thời điểm viết bài này thì nó là 5.17.5."
 
 #: ../../wallets/android/installation.rst:32
 msgid ""
@@ -73,12 +86,19 @@ msgid ""
 " file browser to find the copied file. `ES File Explorer "
 "<http://www.estrongs.com/>`_ is recommended for this."
 msgstr ""
+"Nếu bạn không thể dùng điện thoại để truy cập mạng Internet, thì tải file "
+"APK bằng cách dùng máy tính và sau đó copy nó vào điện thoại bằng cáp hoặc "
+"bluetooth. Bạn cũng có thể cần chương trình duyệt file để tìm  và copy file."
+" Chúng tôi gợi ý với bạn phần mềm này `ES File Explorer "
+"<http://www.estrongs.com/>`_ để dùng cho việc đó."
 
 #: ../../wallets/android/installation.rst:37
 msgid ""
 "You can also install an apk file directly from your computer using the "
 "Android Debug Bridge (ADB). Follow these instructions:"
 msgstr ""
+"Bạn cũng có thể cài một file APK trực tiếp từ máy tính của bạn bằng cách "
+"dùng Android Debug Bridge (ADB). Hãy làm theo những hướng dẫn sau:"
 
 #: ../../wallets/android/installation.rst:42
 msgid ""
@@ -86,6 +106,10 @@ msgid ""
 "`SDK Platform Tools <https://developer.android.com/studio/releases/platform-"
 "tools.html>`_ for Mac, Windows or Linux."
 msgstr ""
+"Hãy chắc rằng bạn đã có một bản của ADB trên máy tính của mình. Nó được bao "
+"gồm trong Android `SDK Platform Tools "
+"<https://developer.android.com/studio/releases/platform-tools.html>`_ cho "
+"Mac, Windows hoặc Linux."
 
 #: ../../wallets/android/installation.rst:48
 msgid ""
@@ -93,6 +117,9 @@ msgid ""
 "debugging**. If **Developer options** is not available, go to **About "
 "phone** instead, scroll down, and tap on the **Build number** seven times."
 msgstr ""
+"Bật chế độ USB debugging bằng việc vào **Settings → Developer options → USB "
+"debugging**. Nếu không có tuỳ chọn **Developer options**, thì vào **About "
+"phone**, cuốn xuống, và bấm vào **Build number** bảy lần."
 
 #: ../../wallets/android/installation.rst:52
 msgid ""
@@ -100,9 +127,32 @@ msgid ""
 "<https://github.com/HashEngineering/dash-wallet/releases/latest>`_. At the "
 "time of writing, this was 5.17.5."
 msgstr ""
+"Sử dụng máy tính của bạn, tải phiên bản APK mới nhất từ `đường link này "
+"<https://github.com/HashEngineering/dash-wallet/releases/latest>`_. Tại thời"
+" điểm viết bài này, nó là 5.17.5."
 
 #: ../../wallets/android/installation.rst:55
 msgid ""
 "Connect your phone to the PC, open a terminal/command prompt window and "
 "type::"
 msgstr ""
+"Kết nối điện thoại của bạn vào máy tính, mở cửa sổ dòng lệnh "
+"terminal/command và gõ:"
+
+#: ../../wallets/android/installation.rst:61
+msgid "From source"
+msgstr "Từ mã nguồn"
+
+#: ../../wallets/android/installation.rst:64
+msgid "Compiling from source"
+msgstr "Biên dịch từ mã nguồn"
+
+#: ../../wallets/android/installation.rst:66
+msgid ""
+"The source code for the wallet is available `here "
+"<https://github.com/HashEngineering/dash-wallet>`_. Details on how to "
+"compile the wallet from source will be posted here when available."
+msgstr ""
+"Mã nguồn của phần mềm ví có thể tải `ở đây "
+"<https://github.com/HashEngineering/dash-wallet>`_. Chi tiết về làm thế nào "
+"để biên dịch ví từ mã nguồn sẽ được đăng tải khi nó đã sẵn sàng."

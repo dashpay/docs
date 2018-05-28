@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 04:30+0000\n"
+"POT-Creation-Date: 2018-05-25 08:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2018\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../wallets/index.rst:5
 msgid "Wallets"
-msgstr ""
+msgstr "Ví"
 
 #: ../../wallets/index.rst:7
 msgid ""
@@ -41,10 +42,13 @@ msgid ""
 "device you use to store it, you should purchase a :ref:`hardware wallet "
 "<hardware-wallets>`."
 msgstr ""
+"VÌ sự an toàn, bạn không nên chứa nhiều tiền trên các sàn giao dịch hoặc "
+"trên các ví mềm. Nếu bạn giữ tiền số có giá trị nhiều hơn thiết bị mà bạn "
+"đang dùng để chứa, thì bạn nên mua một :ref:`ví cứng <hardware-wallets>`."
 
 #: ../../wallets/index.rst:26 ../../wallets/index.rst:68
 msgid "Dash Core Wallet"
-msgstr ""
+msgstr "Ví Dash Core"
 
 #: ../../wallets/index.rst:28
 msgid ""
@@ -60,50 +64,60 @@ msgid ""
 "functions in the wallet can be used. Dash Core Wallet is available for "
 "macOS, Linux, Raspberry Pi and Windows."
 msgstr ""
+"Ví Dash Core là ví đầy đủ chính thức của Dash, và nó hỗ trợ tất cả các tính "
+"năng mà Dash cung cấp, bao gồm InstantSend và PrivateSend, cũng như là cửa "
+"sổ lệnh RPC và các tính năng quản trị. Ví Dash Core (đôi khi được biết với "
+"tên là ví QT, do sử dụng nền tảng QT để phát triển nên) là ví chuyên nghiệp "
+"và nặng, nó sẽ tải toàn bộ blockchain (kích thước vài GB) và hoạt động giống"
+" như một full node hoặc masternode trên mạng. Bởi vì nó đòi hỏi phải chứa "
+"toàn bộ đầy đủ cả blockchain, nên thường thường nó sẽ đòi hỏi đồng bộ ví mỗi"
+" khi khởi động phần mềm ví. Khi việc đồng bộ xong, số dư chính xác sẽ được "
+"hiển thị và các chức năng ví mới có thể dùng được. Ví Dash Core có thể hoạt "
+"động trên macOS, Linux, Raspberry Pi và Windows."
 
 #: ../../wallets/index.rst:41
 msgid "Features:"
-msgstr ""
+msgstr "Các tính năng"
 
 #: ../../wallets/index.rst:43
 msgid "PrivateSend"
-msgstr ""
+msgstr "PrivateSend"
 
 #: ../../wallets/index.rst:44
 msgid "InstandSend"
-msgstr ""
+msgstr "InstandSend"
 
 #: ../../wallets/index.rst:45
 msgid "Wallet encryption"
-msgstr ""
+msgstr "Mã hoá ví"
 
 #: ../../wallets/index.rst:46
 msgid "Coin control and fee control"
-msgstr ""
+msgstr "Kiểm soát coin và kiểm soát phí"
 
 #: ../../wallets/index.rst:47
 msgid "QR code generation and address book"
-msgstr ""
+msgstr "Sinh mã QR và sổ địa chỉ"
 
 #: ../../wallets/index.rst:48
 msgid "Masternode commands and voting"
-msgstr ""
+msgstr "Các lệnh Masternode và việc bỏ phiếu"
 
 #: ../../wallets/index.rst:49
 msgid "Automated backup"
-msgstr ""
+msgstr "Sao lưu tự động"
 
 #: ../../wallets/index.rst:50
 msgid "Debug console"
-msgstr ""
+msgstr "Cửa sổ debug"
 
 #: ../../wallets/index.rst:52
 msgid "Available documentation:"
-msgstr ""
+msgstr "Các tài liệu"
 
 #: ../../wallets/index.rst:73 ../../wallets/index.rst:103
 msgid "Dash Electrum Wallet"
-msgstr ""
+msgstr "Vì Dash Electrum"
 
 #: ../../wallets/index.rst:75
 msgid ""
@@ -123,10 +137,15 @@ msgid ""
 "Bitcoin Electrum features (mostly identical in Dash Electrum) is available "
 "at the `official documentation site <http://docs.electrum.org>`_."
 msgstr ""
+"Dash Electrum là phiên bản ví được fork từ ví Electrum dành cho Bitcoin. Khi"
+" tài liệu này tập trung vào việc sử dụng ví Dash Electrum, một tài liệu đầy "
+"đủ về các tính năng của ví Bitcoin Electrum (hầu hết giống với Dash "
+"Electrum) có thể xem ở `website tài liệu chính thức "
+"<http://docs.electrum.org>`_."
 
 #: ../../wallets/index.rst:108
 msgid "Dash Android Wallet"
-msgstr ""
+msgstr "Ví Dash cho Android"
 
 #: ../../wallets/index.rst:110
 msgid ""
@@ -140,11 +159,11 @@ msgstr ""
 
 #: ../../wallets/index.rst:130
 msgid "*Dash Android Wallet*"
-msgstr ""
+msgstr "*Ví Dash cho Android*"
 
 #: ../../wallets/index.rst:136
 msgid "Dash iOS Wallet"
-msgstr ""
+msgstr "Ví Dash cho iOS"
 
 #: ../../wallets/index.rst:138
 msgid ""
@@ -157,11 +176,11 @@ msgstr ""
 
 #: ../../wallets/index.rst:157
 msgid "*Dash iOS Wallet*"
-msgstr ""
+msgstr "*Ví Dash cho iOS*"
 
 #: ../../wallets/index.rst:162
 msgid "Dash Copay Wallet"
-msgstr ""
+msgstr "Ví Dash Copay"
 
 #: ../../wallets/index.rst:164
 msgid ""
@@ -173,14 +192,21 @@ msgid ""
 "required for use, the private keys to your addresses are stored securely on "
 "your device and under your control at all times."
 msgstr ""
+"Ví Dash Copay là một ví hiện đại và nhiều tính năng nó có cả phiên bản cho "
+"di động lẫn cho máy tính để bàn. Nó hỗ trợ những tính năng tiên tiến của "
+"Dash như InstantSend, sinh địa chỉ HD, sử dụng sổ danh bạ thân thiện, hỗ trợ"
+" nhiều ví trong một app và chức năng đa chữ ký dễ sử dụng. Dash Copay cũng "
+"là ví nhẹ, nghĩa là nó sẽ không cần phải tải toàn bộ blockchain, các khoá "
+"riêng và sổ địa chỉ được lưu trữ an toàn trên thiết bị của bạn trong mọi "
+"thời điểm."
 
 #: ../../wallets/index.rst:184
 msgid "*Dash Copay Wallet*"
-msgstr ""
+msgstr "*Ví Dash Copay*"
 
 #: ../../wallets/index.rst:189 ../../wallets/index.rst:204
 msgid "Dash Paper Wallet"
-msgstr ""
+msgstr "Ví giấy Dash"
 
 #: ../../wallets/index.rst:191
 msgid ""
@@ -189,10 +215,14 @@ msgid ""
 "computer without ever connecting to the internet. Perfect for long term "
 "secure storage."
 msgstr ""
+"`Phần mềm sinh ví Dash trên giấy <https://paper.dash.org>`_ cho phép bạn "
+"sinh ra, mã hoá và bảo mật các khoá về một địa chỉ Dash đơn nhất trên một "
+"máy tính sách mà không kết nối vào Internet. Nó là cách tuyệt vời cho việc "
+"lưu trữ lâu dài một cách an toàn."
 
 #: ../../wallets/index.rst:210
 msgid "Hardware Wallets"
-msgstr ""
+msgstr "Các loại ví cứng"
 
 #: ../../wallets/index.rst:212
 msgid ""
@@ -215,20 +245,28 @@ msgid ""
 " computer or smartphone. Most hardware wallets feature a screen which allows"
 " you to independently confirm the address you are sending to is correct."
 msgstr ""
+"Các ví phần cứng hoạt động bằng cách lưu khoá riêng của bạn trong một phần "
+"được bảo vệ bởi bộ vi điều khiển. Không thể để các khoá riêng của bạn ở trên"
+" thiết bị dưới dạng không mã hoá - chỉ đầu ra được ký trên một mã băm mới "
+"được truyền tài đến máy tính/điện thoại để tương tác với blockchain. Hầu hết"
+" các ví phần cứng đều có màn hình để cho phép bạn xác nhận một cách độc lập "
+"địa chỉ mà bạn muốn gửi tiền đến để đảm bảo sự chính xác."
 
 #: ../../wallets/index.rst:229
 msgid ""
 "This section lists the most common commercial hardware wallets supporting "
 "Dash, although some other enthusiast projects may also be available."
 msgstr ""
+"Phần này liệt kê hầu hết các ví phần cứng thương mại thông dụng mà hỗ trợ "
+"Dash, mặc dù một vài dự án khác của những người nhiều tình cũng có thể có."
 
 #: ../../wallets/index.rst:240
 msgid "Trezor Web Wallet"
-msgstr ""
+msgstr "Ví web Trezor"
 
 #: ../../wallets/index.rst:245
 msgid "Third Party Wallets"
-msgstr ""
+msgstr "Các loại ví của các hãng thứ 3"
 
 #: ../../wallets/index.rst:247
 msgid ""
@@ -236,14 +274,17 @@ msgid ""
 "Many third party wallets support multiple different cryptocurrencies at the "
 "same time, or integrate instant cryptocurrency exchanges."
 msgstr ""
+"Những ví này đã được phát triển bởi những lập trình viên bên ngoài để hỗ trợ"
+" cho Dash. Có rất nhiều các ví của các bên thứ ba hỗ trợ nhiều loại tiền số "
+"khác nhau tại cùng một thời điểm, hoặc tích hợp sàn giao dịch tực thời."
 
 #: ../../wallets/index.rst:260
 msgid "Edge Wallet"
-msgstr ""
+msgstr "Ví Edge"
 
 #: ../../wallets/index.rst:266
 msgid "Web Wallets"
-msgstr ""
+msgstr "Các ví trên Web"
 
 #: ../../wallets/index.rst:268
 msgid ""
@@ -259,14 +300,16 @@ msgstr ""
 
 #: ../../wallets/index.rst:286
 msgid "My Dash Wallet"
-msgstr ""
+msgstr "Ví My Dash Wallet"
 
 #: ../../wallets/index.rst:289
 msgid "Wallet Guides"
-msgstr ""
+msgstr "Hướng dẫn sử dụng ví"
 
 #: ../../wallets/index.rst:291
 msgid ""
 "Documentation in this section describes common tasks and questions relating "
 "to all wallets."
 msgstr ""
+"Tài liệu trong phần này sẽ mô tả những chức năng thông dụng và những câu hỏi"
+" liên quan đến các loại ví."
