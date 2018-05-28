@@ -430,6 +430,16 @@ Cryptography
   science, and electrical engineering. Applications of cryptography
   include ATM cards, computer passwords, and electronic commerce.
 
+DAP
+  Decentralized Application Protocol. This term describes an application
+  running on top of the Dash DAPI platform.
+
+DAPI
+  Decentralized Application Programming Interface. See above for a
+  definition of API. DAPI will perform the same functions as an API, but
+  with quorums of masternodes acting as the endpoints for API
+  communication.
+
 Dark Gravity Wave
   In concept, :ref:`Dark Gravity Wave (DGW) <dark-gravity-wave>` is 
   similar to *Kimoto Gravity Well*, adjusting the difficulty levels 
