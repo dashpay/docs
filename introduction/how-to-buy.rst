@@ -676,6 +676,29 @@ ALFAcashier
   fiat services. DASH trading paris are available for BTC, XRP, XMR,
   XEM, ETH, LTC, BCH, USD, EUR, CNY, CAD and RUB.
 
+CoinSuper
+  .. image:: exchanges/coinsuper.png
+     :width: 200px
+     :align: right
+     :target: https://www.coinsuper.com
+
+  https://www.coinsuper.com
+
+  Registered in Hong Kong and with a focus on the Chinese market,
+  CoinSuper allows fiat deposits in USD and offers DASH trading against
+  BTC, ETH and USD.
+
+Exrates
+  .. image:: exchanges/exrates.png
+     :width: 200px
+     :align: right
+     :target: https://exrates.me
+
+  https://exrates.me
+
+  Exrates allows crypto and USD deposits, and offers DASH trading
+  against BTC and USD.
+
 Bleutrade
   .. image:: exchanges/bleutrade.png
      :width: 200px
