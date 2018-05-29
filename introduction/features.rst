@@ -381,7 +381,7 @@ a budget cycle as follows:
 | 10% | Decentralized Governance Budget        |
 +-----+----------------------------------------+
 
-This documentaiton is based on calculations and posts by moocowmoo.
+This documentation is based on calculations and posts by moocowmoo.
 Please see `this reddit post <https://www.reddit.com/r/dashpay/comments/
 7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`_ for more details, or
 run your own `emission calculations using this tool
