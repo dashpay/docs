@@ -209,10 +209,10 @@ information, and masternode owners have the option to verify their
 ownership of a masternode and ability to cast a vote by signing a
 message from the masternode collateral address. Masternodes can vote at
 any time, and also change their vote at any time until the cutoff block
-is mined and voting stops. After voting stops, the blockchain executes a
-decentralized tally and validates all votes. Once consensus is reached,
-the results are broadcast and the budget is allocated soon after in a
-superblock.
+is mined and voting stops. This occurs 1662 blocks prior to the
+superblock. After voting stops, the blockchain executes a decentralized
+tally and validates all votes. Once consensus is reached, the results
+are broadcast and the budget is allocated soon after in a superblock.
 
 .. figure:: img/governance-dashcentral-vote.png
    :width: 400px
@@ -248,7 +248,12 @@ contractors to deliver on their promises with respect to delivery dates
 and the total amounts of budget allocated over multiple voting periods.
 A team of dedicated staff routinely interact with proposal owners to
 track progress of the various projects and provide reports to voting
-masternodes in a single location.
+masternodes in a single location. While providing data on the
+performance of your proposal to Dash Watch is optional, many masternode
+owners take advantage of the data they make available to make their
+voting decisions. The Dash Watch team may be contacted at
+team@dashwatch.org email address or through their `website
+<http://dashwatch.org>`__.
 
 .. figure:: img/governance-dashwatch.png
    :width: 400px
@@ -261,13 +266,14 @@ Budget allocation
 The total budget of the network can be calculated by taking 10% of the
 reward over the period of time between two superblocks, which occur
 every 16616 blocks or approximately 30.29 days. A voting cutoff occurs
-before the superblock, and the final votes are tallied at this point. A
-proposal must satisfy the condition ``(YES votes - NO votes) > (Total
-Number of Masternodes / 10)`` in order to be considered passing. Then,
-in the superblock, the winning proposals are awarded in the order of the
-margin by which they are passing until either the entire budget is
-allocated or no more passing proposals exist. This allows for completely
-trustless and decentralized allocation of the budget.
+1662 blocks before the superblock, and the final votes are tallied at
+this point. A proposal must satisfy the condition ``(YES votes - NO
+votes) > (Total Number of Masternodes / 10)`` in order to be considered
+passing. Then, in the superblock, the winning proposals are awarded in
+the order of the margin by which they are passing until either the
+entire budget is allocated or no more passing proposals exist. This
+allows for completely trustless and decentralized allocation of the
+budget.
 
 Due to the decentralized nature of the masternode system, it is
 sometimes necessary to form funded organisations, such as committees or
