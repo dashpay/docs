@@ -28,7 +28,7 @@ installing an APK file. Follow these instructions:
    sources**. Read and accept the warning.
 #. Using your phone, download the latest version of the APK from `this
    link <https://github.com/HashEngineering/dash-
-   wallet/releases/latest>`_.  At the time of writing, this was 5.17.5.
+   wallet/releases/latest>`_.  At the time of writing, this was 5.18.
 #. If you cannot use your phone to go online, download the APK using
    your PC instead and copy it to your phone using a cable or Bluetooth.
    You may need a file browser to find the copied file. `ES File
@@ -51,7 +51,7 @@ Android Debug Bridge (ADB). Follow these instructions:
    times.
 #. Using your PC, download the latest version of the APK from `this link
    <https://github.com/HashEngineering/dash-wallet/releases/latest>`_.
-   At the time of writing, this was 5.17.5.
+   At the time of writing, this was 5.18.
 #. Connect your phone to the PC, open a terminal/command prompt window
    and type::
 
@@ -60,9 +60,34 @@ Android Debug Bridge (ADB). Follow these instructions:
 From source
 -----------
 
-Compiling from source
----------------------
+The source code for the Dash Android wallet is available `here
+<https://github.com/HashEngineering/dash-wallet>`_. The following
+instructions describe how to compile an APK from source under a clean
+installation of Ubuntu 18.04 LTS with a single non-root user. Begin by
+installing dependencies and downloading the latest Android SDK Tools::
 
-The source code for the wallet is available `here
-<https://github.com/HashEngineering/dash-wallet>`_. Details on how to
-compile the wallet from source will be posted here when available.
+  sudo apt install openjdk-8-jdk-headless unzip make
+  mkdir android-sdk-linux
+  cd android-sdk-linux
+  wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
+  unzip sdk-tools-linux-3859397.zip
+
+Next, update the SDK Tools and download the necessary SDK platform
+bundles and dependencies, then add and load the appropriate environment
+variables::
+
+  ./tools/bin/sdkmanager --update
+  ./tools/bin/sdkmanager "platforms;android-15" "platforms;android-25" "build-tools;25.0.2" "ndk-bundle"
+  echo 'export ANDROID_HOME=$HOME/android-sdk-linux' >> ~/.bashrc
+  echo 'export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle' >> ~/.bashrc
+  source ~/.bashrc
+
+Now that the build environment is ready, download and build the Dash
+Android Wallet source::
+
+  git clone https://github.com/HashEngineering/dash-wallet.git
+  cd dash-wallet
+  ./gradlew clean build -x test
+
+The APK files are now available in the `/wallet/build/outputs/apk`
+folder.
