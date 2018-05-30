@@ -92,5 +92,5 @@ Android Wallet source::
   cd dash-wallet
   ./gradlew clean build -x test
 
-The APK files are now available in the `/wallet/build/outputs/apk`
+The APK files are now available in the ``/wallet/build/outputs/apk``
 folder.
