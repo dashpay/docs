@@ -15,16 +15,16 @@ as the technology is forked into other blockchains. This section of the
 documentation describes the principles and mechanisms of masternodes and
 the services they provide to the Dash network specifically.
 
-Simply put, a masternode is a server connected to the network which
-guarantees a certain minimum level of performance and functionality to
-perform certain tasks related to PrivateSend and InstantSend, as the
-anonymity and instant transaction features in Dash are called. The
-masternodes are paid for this service, using a concept known as Proof of
-Service. This is in addition to the Proof of Work done by miners to
-secure the blockchain. Masternodes are also allowed to vote on
-:ref:`governance and funding proposals <governance>`, with each
-masternode receiving one vote (yes/no/abstain) on each proposal
-submitted to the system.
+Simply put, a masternode is a server with a full copy of the Dash
+blockchain, which guarantees a certain minimum level of performance and
+functionality to perform certain tasks related to block validation, as
+well as PrivateSend and InstantSend, as the anonymity and instant
+transaction features in Dash are called. The masternodes are paid for
+this service, using a concept known as Proof of Service. This is in
+addition to the Proof of Work done by miners to secure the blockchain.
+Masternodes are also allowed to vote on :ref:`governance and funding
+proposals <governance>`, with each masternode receiving one vote
+(yes/no/abstain) on each proposal submitted to the system.
 
 Anyone can run a masternode. The objective is to have enough
 decentralization to ensure that no single person controls a significant
