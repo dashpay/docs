@@ -34,7 +34,7 @@ installing an APK file. Follow these instructions:
    You may need a file browser to find the copied file. `ES File
    Explorer <http://www.estrongs.com/>`_ is recommended for this.
 
-You can also install an apk file directly from your computer using the
+You can also install an APK file directly from your computer using the
 Android Debug Bridge (ADB). Follow these instructions:
 
 #. Ensure your Android version is at least 4.0.3 by going to **Settings
@@ -57,14 +57,16 @@ Android Debug Bridge (ADB). Follow these instructions:
 
      adb install <<path to .apk file>>
 
+
 From source
 -----------
 
-The source code for the Dash Android wallet is available `here
-<https://github.com/HashEngineering/dash-wallet>`_. The following
-instructions describe how to compile an APK from source under a clean
-installation of Ubuntu 18.04 LTS with a single non-root user. Begin by
-installing dependencies and downloading the latest Android SDK Tools::
+The source code for the Dash Android wallet is available on `GitHub
+<https://github.com/HashEngineering/dash-wallet>`__. The following
+instructions describe how to compile an APK from source under an up-to-
+date installation of Ubuntu 18.04 LTS with a single non-root user. Begin
+by installing dependencies and downloading the latest Android SDK
+Tools::
 
   sudo apt install openjdk-8-jdk-headless unzip make
   mkdir android-sdk-linux
@@ -81,6 +83,7 @@ variables::
   echo 'export ANDROID_HOME=$HOME/android-sdk-linux' >> ~/.bashrc
   echo 'export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle' >> ~/.bashrc
   source ~/.bashrc
+  cd ~
 
 Now that the build environment is ready, download and build the Dash
 Android Wallet source::
