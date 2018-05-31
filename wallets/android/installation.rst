@@ -66,7 +66,7 @@ The source code for the Dash Android wallet is available on `GitHub
 instructions describe how to compile an APK from source under an up-to-
 date installation of Ubuntu 18.04 LTS with a single non-root user. Note
 that NDK version 12b is required, instead of installing the latest
-version using `sdkmanager`. Begin by installing dependencies and
+version using ``sdkmanager``. Begin by installing dependencies and
 downloading the latest Android SDK Tools::
 
   sudo apt install openjdk-8-jdk-headless unzip make
