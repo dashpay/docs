@@ -300,7 +300,7 @@ identify your graphics hardware, then choose an appropriate build of
 sgminer. You can use `GPU-Z <https://www.techpowerup.com/gpuz/>`_ to
 identify your GPU hardware:
 
-.. figure:: img/cpu-mining.png
+.. figure:: img/gpu-z.png
    :width: 400px
 
    GPU-Z showing details for AMD Radeon Turks and NVIDIA Quadro GK104
