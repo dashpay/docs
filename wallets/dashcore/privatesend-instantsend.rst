@@ -20,6 +20,14 @@ PrivateSend in the Dash Core wallet allows any amount of Dash to be
 mixed for later use in PrivateSend transactions. As of April 2018,
 PrivateSend is not currently available in other Dash wallets.
 
+Knowledge of the exact number of rounds of PrivateSend mixing used in
+any given PrivateSend transaction has a `quantifiable effect
+<https://www.dash.org/forum/threads/evaluating-the-privacy-of-
+privatesend.32472/>`_ on the confidence an adversary may have when
+attempting to guess the source of a PrivateSend transaction. For this
+reason, the recommended (and default) number of rounds of PrivateSend
+mixing is set to four.
+
 You can read more about PrivateSend theory and processes :ref:`here
 <privatesend>`.
 
