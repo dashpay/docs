@@ -315,8 +315,8 @@ software maintained by newer developers only.
 **AMD**
 
 - https://github.com/nicehash/sgminer/releases
-- https://github.com/dashminer/dashminer/releases (supports one pool 
-  only)
+- https://github.com/dashminer/dashminer/releases (supports DashMiner 
+  pools only)
 
 **NVIDIA**
 
@@ -431,7 +431,7 @@ Algorithm
 ^^^^^^^^^
 
 A simple change is to replace the ``darkcoin`` algorithm with
-``darkcoin- mod`` in your *sgminer.conf* file and compare performance.
+``darkcoin-mod`` in your *sgminer.conf* file and compare performance.
 Monitor the hashrate and GPU temperature over some time and choose the
 algorithm that works best on your hardware.
 
