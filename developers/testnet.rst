@@ -57,11 +57,7 @@ Pools
 -----
 
 - https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare
-
-P2Pool Nodes
-------------
-
-- http://test.p2pool.dash.siampm.com [stratum+tcp://103.58.149.157:17903] by thelazier
+- http://test.p2pool.dash.siampm.com [stratum+tcp://test.p2pool.dash.siampm.com:17903] by thelazier
 - http://p2pool.dashninja.pl:17903/static - by elbereth
 - http://test.p2pool.masternode.io:18998/static - by coingun
 
