@@ -96,6 +96,7 @@ html_theme_options = {
     'logo_only': True,  # if we have a html_logo below, this shows /only/ the logo with no title text
     'collapse_navigation': False,  # Collapse navigation (False makes it tree-like)
     'display_version': False,  # Display the docs version
+    'commit': False,
     # 'navigation_depth': 4,  # Depth of the headers shown in the navigation bar
 }
 
@@ -182,7 +183,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'Dash', u'Dash Documentation',
-     author, 'Dash', 'One line description of project.',
+     author, 'Dash', 'A revolutionary digital money system, Dash is Digital Cash',
      'Miscellaneous'),
 ]
 
