@@ -38,7 +38,7 @@ Handouts
 --------
 
 This handout is ideal for dual-sided printing as a handout for
-conferences. The current version is **v3.0**; previous versions are
+conferences. The current version is **v3.1**; previous versions are
 available below.
 
 This design can be translated into your language at `Transifex here
@@ -50,29 +50,29 @@ translation is complete to request layout of the completed translation.
 +------------+-------------------------------------------------------------------------------------------------+
 | Language   | Download                                                                                        |
 +============+=================================================================================================+
-| English    | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-EN.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-EN.docx>`__ |
+| English    | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-EN.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-EN.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
-| Arabic     | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-AR.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-AR.docx>`__ |
+| Arabic     | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-AR.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-AR.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
-| Czech      | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-CS.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-CS.docx>`__ |
+| Czech      | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-CS.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-CS.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
-| Dutch      | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-NL.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-NL.docx>`__ |
+| Dutch      | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-NL.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-NL.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
-| German     | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-DE.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-DE.docx>`__ |
+| German     | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-DE.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-DE.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
-| Russian    | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-RU.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-RU.docx>`__ |
+| Russian    | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-RU.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-RU.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
-| Slovak     | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-SK.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-SK.docx>`__ |
+| Slovak     | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-SK.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-SK.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
-| Vietnamese | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-VI.pdf>`__   |
-|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.0-VI.docx>`__ |
+| Vietnamese | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-VI.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-VI.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
 
 Previous versions (English only):
