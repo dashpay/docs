@@ -171,5 +171,6 @@ for tax purposes. The following services are available to help you
 calculate your tax obligations.
 
 - https://www.node40.com
+- https://dash-taxes.herokuapp.com
 - https://cointracking.info
 - https://bitcoin.tax
