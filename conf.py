@@ -99,12 +99,6 @@ html_theme_options = {
     # 'navigation_depth': 4,  # Depth of the headers shown in the navigation bar
 }
 
-html_context = {
-  "display_github": False, # Add 'Edit on Github' link instead of 'View page source'
-  "last_updated": True,
-  "commit": False,
-}
-
 html_logo = 'img/dash_logo_white.png'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
