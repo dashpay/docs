@@ -286,8 +286,9 @@ confirmations exist, as shown in the following screenshot.
    transfer
 
 While we are waiting for 15 confirmations, download the latest version
-of the Dash Masternode Tool (DMT) from the Github releases page here.
-Unzip and run the file. The following window appears.
+of the Dash Masternode Tool (DMT) from the Github releases page `here
+<https://github.com/Bertrand256/dash-masternode-tool/releases>`__. Unzip
+and run the file. The following window appears.
 
 .. figure:: img/setup-collateral-dmt-start.png
    :width: 400px
