@@ -6,10 +6,10 @@ Testnet
 
 Testnet is a fully functioning Dash blockchain with the one key
 exception that because the Dash on the network can be created freely, it
-has no value. Testnet helps developers test new versions of Dash, as
-well as test network operations using identical versions of the software
-before they are carried out on the mainnet. There are a few other key
-differences:
+has no value. This currency, known as tDASH, can be requested from a
+faucet to help developers test new versions of Dash, as well as test
+network operations using identical versions of the software before they
+are carried out on the mainnet. There are a few other key differences:
 
 - Testnet operates on port 19999 (instead of 9999)
 - Testnet addresses start with "y" instead of "X", ADDRESSVERSION is 140
@@ -90,29 +90,59 @@ but with a few key differences:
   ``~/.dashcore/sentinel/sentinel.conf``, comment the mainnet line and
   uncomment: ``network=testnet``
 
+Testnet 12.3
+============
+
+In June 2018, the Dash team announced the start of testing of the
+upcoming Dash 12.3 release. Extensive internal testing has already been
+done on the 12.2 code, but there are numerous bugs that can only be
+revealed with actual use by real people. The Dash team invites anybody
+who is interested to download the software and become active on testnet.
+This release includes:
+
+- Named Devnets, to help developers quickly create multiple independent
+  devnets
+- New format of network message signatures
+- Governance system improvements
+- PrivateSend improvements
+- Additional indexes cover P2PK now
+- Support for pruned nodes in Lite Mode
+- New Masternode Information Dialog
+
+Discussion:
+
+- https://www.dash.org/forum/threads/v12-3-testing.38475
+- Testnet tools: https://docs.dash.org/en/latest/developers/testnet.html
+- Issue tracking: https://github.com/dashpay/dash/issues/new
+
+Latest test binaries:
+
+- https://github.com/dashpay/dash/tree/v0.12.3.0-rc2
+
+
 Testnet 12.2
 ============
 
-The Dash team has recently announced the launch of a testnet for public
-testing of the upcoming 12.2 release of the Dash software. Unlike
-mainnet, the DASH that exists on testnet has no real value, and since
-its an entirely separate network, there is no risk to using new and
-experimental software. Extensive internal testing has already been done
-on the 12.2 code, but there are numerous bugs that can only be revealed
-with actual use by real people. The Dash team invites anybody who is
-interested to download the software and become active on testnet. This
-release includes:
+In October 2017, the Dash team announced the launch of a testnet for
+public testing of the upcoming 12.2 release of the Dash software.
+Extensive internal testing has already been done on the 12.2 code, but
+there are numerous bugs that can only be revealed with actual use by
+real people. The Dash team invites anybody who is interested to download
+the software and become active on testnet. This release includes:
 
 - DIP0001 implementation https://github.com/dashpay/dips/blob/master/dip-0001.md
 - 10x transaction fee reduction (including InstantSend fee)
 - InstantSend vulnerability fix
 - Lots of other bug fixes and performance improvements
 - Experimental BIP39/BIP44 complaint HD wallet (disabled by default, should be fully functional but there is no GUI yet)
+
+Discussion:
+
 - Testnet 12.2 discussion: https://www.dash.org/forum/threads/v12-2-testing.17412/
 - Testnet tools: https://www.dash.org/forum/threads/testnet-tools-resources.1768/
 - Issue tracking: https://github.com/dashpay/dash/issues/new
 
-Latest binaries:
+Latest test binaries:
 
 - Windows: https://bamboo.dash.org/browse/DASHW-DEV/latestSuccessful/artifact/JOB1/gitian-win-dash-dist/
 - macOS: https://bamboo.dash.org/browse/DASHM-DEV/latestSuccessful/artifact/JOB1/gitian-osx-dash-dist/
