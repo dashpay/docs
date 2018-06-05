@@ -19,10 +19,10 @@ help you find freelance work paid in Dash. `Uphold
 <https://uphold.com>`_ allows you to instantly and automatically convert
 any received deposits to and from Dash. Building on this functionality,
 `Bitwage <https://www.bitwage.com>`_ allows you to invoice and receive
-payment from any employer, anywhere in the world, and have your wage
-immediately converted to Dash. You can then withdraw your wage to any
-Dash wallet for spending or saving. For more information, see the
-following blog posts:
+payment from any employer, practically anywhere in the world, and have a
+percentage of your wage immediately converted to Dash. You can then
+withdraw your wage to any Dash wallet for spending or saving. For more
+information, see the following blog posts:
 
  - **Bitwage:** https://blog.bitwage.com/2018/03/12/get-dash
  - **Uphold:** https://uphold.com/en/blog/posts/uphold/bitwage-launches-support-of-dash-powered-by-uphold
