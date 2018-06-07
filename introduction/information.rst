@@ -121,7 +121,7 @@ News
 - **Dash News China (Wechat): dashnews (or scan QR below)
 
 .. image:: img/dash-wx.png
-    :width: 221 px
+    :width: 100 px
 
 
 
