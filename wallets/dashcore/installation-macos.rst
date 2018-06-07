@@ -97,31 +97,18 @@ To run Dash Core for the first time, either open Launchpad or browse to
 your **Applications** folder in Finder. Double-click **Dash Core** or
 **Dash-Qt** to start the application. You may see a warning about
 opening an app from an unidentified developer. To resolve this problem,
-go to your **System Preferences** and select **Security & Privacy**. A
-warning about the unidentified developer will appear at the bottom of
-this screen. Click **Open Anyway** to allow your computer to run Dash
-Core, then try to open it again. This time you will be able to click
-**Open** to start Dash Core. This warning will only appear once.
+simply Control-click the app icon and choose **Open** from the shortcut
+menu, then click **Open** again in the dialog box. The app is saved as
+an exception to your security settings, and you can open it in the
+future by double-clicking it just as you can any registered app.
 
-.. figure:: img/macos/112414895.png
+.. image:: img/macos/112414895.png
    :width: 280px
-
-   macOS blocking Dash Core from running because it was not downloaded
-   from the App Store
-
-
-.. image:: img/macos/112414900.png
-   :height: 250px
-
-.. figure:: img/macos/112414910.png
-   :height: 250px
-
-   Permitting macOS to run Dash Core
 
 .. figure:: img/macos/112414905.png
    :width: 280px
 
-   Final confirmation to run Dash Core
+   Unblocking macOS from running Dash Core
 
 The first time the program is launched, you will be offered a choice of
 where you want to store your blockchain and wallet data. Choose a
