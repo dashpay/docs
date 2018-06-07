@@ -118,6 +118,12 @@ News
 - **Dash Vietnam:** https://dashvn.blogspot.com
 - **Dash Français:** https://dashfrancais.com
 - **Dash Nation DeCentral:** http://www.dashnation.com
+- **Dash News China (Wechat): dashnews (or scan QR below)
+
+.. image:: img/dash-wx.png
+    :width: 221 px
+
+
 
 Blogs
 -----
