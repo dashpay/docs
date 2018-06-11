@@ -7,40 +7,40 @@ How To Buy
 Dash can be purchased and sold in several ways, each with different
 advantages and disadvantages. The following options are available:
 
-- Exchanges_ are one of the most popular ways to trade cryptocurrency. A
-  wide range of exchanges exist, each offering slightly different
-  features. Some serve different markets, some are in direct
-  competition, some have cheaper fees, and some are subject to more or
-  less strict regulatory requirements. Most exchanges are centralized,
-  meaning they are operated by a single company, which may be obliged by
-  the laws of the jurisdiction in which it operates to collect data on
-  its customers. Others are decentralized, but as a result have higher
-  escrow requirements since you are dealing peer-to-peer instead of with
-  a trusted entity. Exchanges can be broadly broken down into two
-  categories: exchanges which accept national currency (fiat money) and
-  exchanges which deal in cryptocurrencies only. For safety, exchanges
-  should not be used as wallets. Exchanges are for trading, not for
-  savings.
+- :ref:`Exchanges <exchanges>` are one of the most popular ways to trade
+  cryptocurrency. A wide range of exchanges exist, each offering 
+  slightly different features. Some serve different markets, some are in
+  direct competition, some have cheaper fees, and some are subject to
+  more or less strict regulatory requirements. Most exchanges are 
+  centralized, meaning they are operated by a single company, which may
+  be obliged by the laws of the jurisdiction in which it operates to 
+  collect data on its customers. Others are decentralized, but as a 
+  result have higher escrow requirements since you are dealing 
+  peer-to-peer instead of with a trusted entity. Exchanges can be 
+  broadly broken down into two categories: exchanges which accept 
+  national currency (fiat money) and exchanges which deal in 
+  cryptocurrencies only. For safety, exchanges should not be used as 
+  wallets. Exchanges are for trading, not for savings.
 
-- `Instant exchanges`_ perform a similar
+- :ref:`Instant exchanges <instant_exchanges>` perform a similar
   function to normal exchanges, but without the requirement to log in.
   They effectively convert one currency to another, with some limits on
   the amount to be exchanged and usually at a less advantageous rate.
   Others may even offer to sell cryptocurrency as a credit card
   purchase.
 
-- `Over the counter`_ exchanges have recently appeared to facilitate
-  sale of Dash directly from a company to the individual at a specified
-  price, or peer-to-peer between individuals at a negotiated price.
-  Volume may be limited compared to exchanges, but these services are
-  usually much easier to use. More advanced peer-to- peer sites offer
-  escrow services for a fee to prevent cheating during the sale between
-  two parties who have never met.
+- :ref:`Over the counter <over-the-counter>` exchanges have recently 
+  appeared to facilitate sale of Dash directly from a company to the 
+  individual at a specified price, or peer-to-peer between individuals 
+  at a negotiated price. Volume may be limited compared to exchanges, 
+  but these services are usually much easier to use. More advanced 
+  peer-to-peer sites offer escrow services for a fee to prevent cheating
+  during the sale between two parties who have never met.
 
-- ATMs_ accepting card and cash payments in return for crypto are widely
-  available. Mapping services can show the specific location of these
-  machines, or you can even set one up at your own business and earn a
-  percentage of sales.
+- :ref:`ATMs <atms>` accepting card and cash payments in return for
+  crypto are widely available. Mapping services can show the specific
+  location of these machines, or you can even set one up at your own 
+  business and earn a percentage of sales.
 
 DISCLAIMER: This list is provided for informational purposes only.
 Services listed here have not been evaluated or endorsed by Dash Core
