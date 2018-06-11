@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-25 08:42+0000\n"
+"POT-Creation-Date: 2018-06-11 06:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kien Bui <kientemp2@gmail.com>, 2018\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
@@ -73,11 +73,8 @@ msgstr ""
 msgid ""
 "Using your phone, download the latest version of the APK from `this link "
 "<https://github.com/HashEngineering/dash- wallet/releases/latest>`_.  At the"
-" time of writing, this was 5.17.5."
+" time of writing, this was 5.18."
 msgstr ""
-"Sử dụng điện thoại của bạn, tải phiên bản mới nhất của APK từ `đường link "
-"này <https://github.com/HashEngineering/dash- wallet/releases/latest>`_. Tại"
-" thời điểm viết bài này thì nó là 5.17.5."
 
 #: ../../wallets/android/installation.rst:32
 msgid ""
@@ -94,11 +91,9 @@ msgstr ""
 
 #: ../../wallets/android/installation.rst:37
 msgid ""
-"You can also install an apk file directly from your computer using the "
+"You can also install an APK file directly from your computer using the "
 "Android Debug Bridge (ADB). Follow these instructions:"
 msgstr ""
-"Bạn cũng có thể cài một file APK trực tiếp từ máy tính của bạn bằng cách "
-"dùng Android Debug Bridge (ADB). Hãy làm theo những hướng dẫn sau:"
 
 #: ../../wallets/android/installation.rst:42
 msgid ""
@@ -125,11 +120,8 @@ msgstr ""
 msgid ""
 "Using your PC, download the latest version of the APK from `this link "
 "<https://github.com/HashEngineering/dash-wallet/releases/latest>`_. At the "
-"time of writing, this was 5.17.5."
+"time of writing, this was 5.18."
 msgstr ""
-"Sử dụng máy tính của bạn, tải phiên bản APK mới nhất từ `đường link này "
-"<https://github.com/HashEngineering/dash-wallet/releases/latest>`_. Tại thời"
-" điểm viết bài này, nó là 5.17.5."
 
 #: ../../wallets/android/installation.rst:55
 msgid ""
@@ -139,20 +131,35 @@ msgstr ""
 "Kết nối điện thoại của bạn vào máy tính, mở cửa sổ dòng lệnh "
 "terminal/command và gõ:"
 
-#: ../../wallets/android/installation.rst:61
+#: ../../wallets/android/installation.rst:62
 msgid "From source"
 msgstr "Từ mã nguồn"
 
 #: ../../wallets/android/installation.rst:64
-msgid "Compiling from source"
-msgstr "Biên dịch từ mã nguồn"
-
-#: ../../wallets/android/installation.rst:66
 msgid ""
-"The source code for the wallet is available `here "
-"<https://github.com/HashEngineering/dash-wallet>`_. Details on how to "
-"compile the wallet from source will be posted here when available."
+"The source code for the Dash Android wallet is available on `GitHub "
+"<https://github.com/HashEngineering/dash-wallet>`__. The following "
+"instructions describe how to compile an APK from source under an up-to- date"
+" installation of Ubuntu 18.04 LTS with a single non-root user. Note that NDK"
+" version 12b is required, instead of installing the latest version using "
+"``sdkmanager``. Begin by installing dependencies and downloading the latest "
+"Android SDK Tools::"
 msgstr ""
-"Mã nguồn của phần mềm ví có thể tải `ở đây "
-"<https://github.com/HashEngineering/dash-wallet>`_. Chi tiết về làm thế nào "
-"để biên dịch ví từ mã nguồn sẽ được đăng tải khi nó đã sẵn sàng."
+
+#: ../../wallets/android/installation.rst:80
+msgid ""
+"Next, update the SDK Tools and download the necessary SDK platform bundles "
+"and dependencies, then add and load the appropriate environment variables::"
+msgstr ""
+
+#: ../../wallets/android/installation.rst:91
+msgid ""
+"Now that the build environment is ready, download and build the Dash Android"
+" Wallet source::"
+msgstr ""
+
+#: ../../wallets/android/installation.rst:98
+msgid ""
+"The built APK files are now available in the ``~/dash-"
+"wallet/wallet/build/outputs/apk`` folder."
+msgstr ""
