@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-25 08:42+0000\n"
+"POT-Creation-Date: 2018-06-11 06:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: John Theman <Grdash@mail.com>, 2018\n"
 "Language-Team: Greek (https://www.transifex.com/dash/teams/37570/el/)\n"
@@ -50,13 +50,23 @@ msgid ""
 " The Dash Roadmap is complemented by the `Dash Improvement Proposals "
 "<https://github.com/dashpay/dips>`_, which contain detailed technical "
 "explanations of proposed changes to the Dash protocol itself."
-msgstr "Η ομάδα Dash Core Team"
+msgstr ""
+"Η ομάδα Dash Core Team επίσης διατηρεί το `Dash Roadmap "
+"<https://github.com/dashpay/dash-roadmap>`_, το οποίο θέτει δικλείδες "
+"παράδοσης για μελλοντικές εκδόσεις του Dash και περιλαμβάνει τεχνικές "
+"λεπτομέρειες για το πως η ομάδα ανάπτυξης σκοπεύει να πραγματοποιήσει την "
+"κάθε πρόκληση. Το Dash Roadmap συμπληρώνεται με το `Dash Improvement "
+"Proposals <https://github.com/dashpay/dips>`_, το οποίο περιέχει λεπτομερείς"
+" τεχνικές επεξηγήσεις σχετικά με τις προτεινόμενες αλλαγές στο πρωτόκολλο "
+"του Dash."
 
 #: ../../developers/index.rst:23
 msgid ""
 "The remaining sections available below describe practical steps to carry out"
 " common development tasks in Dash."
 msgstr ""
+"Οι υπόλοιπες παράγραφοι που διατίθοντια παρακάτω περιγράφουν τα πρακτικά "
+"στάδια για να πραγματοποιήσετε συνήθες έργα δημιουργίας στο Dash."
 
 #: ../../developers/index.rst:36
 msgid "Sporks"
@@ -73,6 +83,16 @@ msgid ""
 "spork currently existing on the network, and how to check their respective "
 "statuses."
 msgstr ""
+" Ένα πολυ-σταδιακό \"πηρούνι - fork\", γνωστό ως \"spork\", είναι ένας "
+"μηχανισμός μοναδικός στο Dash που χρησιμοποιείται για να ξεδιπλώσει με "
+"ασφάλεια νέες λειτουργίες στο δίκτυο μέσω επιπεδου-δικτύου μεταβλητών για να"
+" αποφύγουμε τον κίνδυνο μη σκόπιμου forking δικτύου κατά την διάρκεια "
+"αναβαθμίσεων. Μπορεί επίσης να χρησιμοποιηθεί για να κλείσει κάποιες "
+"συγκεκριμένες λειτουργίες σε περίπτωση που ανακαλυφτεί κάποια αδυναμία στην "
+"ασφάλεια - κοιτάξτε :ref:`εδώ ` <sporks>` για μία γρήγορη ειασαγωγή στα "
+"sporks. Σε αυτά τα έγγραφα περιγράφονται η σημασία του κάθε spork το οποίο "
+"βρίσκεται αυττή την στιγμή στο δίκτυο και πως να ελέγξετε την κατάστασή "
+"τους."
 
 #: ../../developers/index.rst:48
 msgid "Spork functions"
@@ -88,6 +108,15 @@ msgid ""
 "changed. The following sporks currently exist on the network and serve "
 "functions as described below:"
 msgstr ""
+"Τα spork καθορίζονται χρησιμοποιώντας αξίες ακεραίων αριθμών. Πολλά spork "
+"μπορεί να ορίζονται σε μία συγκεκριμένη εποχή και χρόνο (αριθμό "
+"δευτερολέπτων που έχουν περάσει από την 1η Ιανουαρίου 1970) για να ορίσουν "
+"τον χρόνο στον οποίο θα είναι ενεργά. Τα ενεργοποιημένα spork ορίζονται στο "
+"0 (δευτερόλεπτα μέχρι την ενεργοποίησή τους). Αυτή η λειτουργία "
+"χρησιμοποιείται σηνύθως για να ορίσουμε μία ημερομηνία ένεργοποίησης spork "
+"στο μέλλον για να είναι ανενεργό μέχρι να λλάξει. Τα ακόλουθα spork υπάρχουν"
+" αυτή την στιγμή στο δίκτυο και εξυπηρετούν λειτουργίες όπως περιγράφεται "
+"παρακάτω:"
 
 #: ../../developers/index.rst:59
 msgid "SPORK_2_INSTANTSEND_ENABLED"
@@ -96,6 +125,8 @@ msgstr "SPORK_2_INSTANTSEND_ENABLED"
 #: ../../developers/index.rst:59
 msgid "Governs the ability of Dash clients to use InstandSend functionality."
 msgstr ""
+"Διαχειρίζεται την δυνατότητα των περλατών Dash να χρησιμοποιούν την "
+"λειτουργία InstantSend."
 
 #: ../../developers/index.rst:63
 msgid "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
@@ -106,6 +137,9 @@ msgid ""
 "If enabled, masternodes will reject blocks containing transactions in "
 "conflict with locked but unconfirmed InstandSend transactions."
 msgstr ""
+"Αν ενεργοποιηθεί, τα masternodes θα απορρίψουν τα μπλοκ που περιέχουν "
+"συναλλαγές σε αντίθεση με κλειδωμένες αλλά μή εξακριβωμένες συναλλαγές "
+"InstantSend."
 
 #: ../../developers/index.rst:67
 msgid "SPORK_5_INSTANTSEND_MAX_VALUE"
@@ -116,6 +150,8 @@ msgid ""
 "Enforces the maximum value in Dash that can be included in an InstantSend "
 "transaction."
 msgstr ""
+"Επιβάλλει την ανώτατη αξία του Dash που μπορεί να χρησιμοποιηθεί σε μία "
+"συναλλαγή InsantSend."
 
 #: ../../developers/index.rst:71
 msgid "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT"
@@ -126,6 +162,9 @@ msgid ""
 "If enabled, miners must pay 50% of the block reward to a masternode "
 "currently pending selection or the block will be considered invalid."
 msgstr ""
+"Αν ενεργοποιηθεί, οι miners πρέπει να πληρώσουν το 50% των block reward σε "
+"ένα masternode το οποίο αυτή την στιγμή κάνει διαλογή αλλιώς το μπλόκ θα "
+"θεωρηθεί μή έγκυρο."
 
 #: ../../developers/index.rst:75
 msgid "SPORK_9_SUPERBLOCKS_ENABLED"
@@ -135,6 +174,8 @@ msgstr "SPORK_9_SUPERBLOCKS_ENABLED"
 msgid ""
 "If enabled, superblocks are verified and issued to pay proposal winners."
 msgstr ""
+"Αν ενεργοποιηθεί, τα superblocks είναι επαληθευμένα και ορίζονται να "
+"πληρώσουν τους νικητές των προτάσεων."
 
 #: ../../developers/index.rst:80
 msgid "SPORK_10_MASTERNODE_PAY_UPDATED_NODES"
@@ -146,6 +187,9 @@ msgid ""
 "considered eligible for payment. This can be used as an incentive to "
 "encourage masternodes to update."
 msgstr ""
+"Ελέγχει αν τα masternodes που τρέχουν ένα παλαιότερο πρωτόκολλο είναι "
+"επιλέξιμα για πληρωμή. Αυτό χρησιμοποιείται για να δώσει κίνητρο στα "
+"masternodes για να αναβαθμιστούν."
 
 #: ../../developers/index.rst:84
 msgid "SPORK_12_RECONSIDER_BLOCKS"
@@ -156,6 +200,8 @@ msgid ""
 "Forces reindex of a specified number of blocks to recover from unintentional"
 " network forks."
 msgstr ""
+"Επιβάλλει τον επαναπροσδιορισμό ορισμένου αριθμού μπλόκ για να ανακάμψει από"
+" μή σκόπιμα forks δικτύου."
 
 #: ../../developers/index.rst:87
 msgid "SPORK_13_OLD_SUPERBLOCK_FLAG"
@@ -163,7 +209,7 @@ msgstr "SPORK_13_OLD_SUPERBLOCK_FLAG"
 
 #: ../../developers/index.rst:87
 msgid "Deprecated. No network function since block 614820."
-msgstr ""
+msgstr "Απορρίφθηκε. Δεν έχει καμία λειτουργία δικτύου από το μπλόκ 614820."
 
 #: ../../developers/index.rst:91
 msgid "SPORK_14_REQUIRE_SENTINEL_FLAG"
@@ -174,10 +220,12 @@ msgid ""
 "Toggles whether masternodes with status are eligible for payment if status "
 "is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly."
 msgstr ""
+"Εναλάσσει αν τα masternodes με status είναι επιλέξιμα για πληρωμή αν το "
+"status ειναι WATCHDOG_EXPIRED, πχ το Sentinel δεν τρέχει σωστά."
 
 #: ../../developers/index.rst:94
 msgid "Viewing spork status"
-msgstr ""
+msgstr "Παρατηρεί το status των spork."
 
 #: ../../developers/index.rst:96
 msgid ""
@@ -185,18 +233,22 @@ msgid ""
 "(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
 "You can open the debug window by selecting **Tools > Debug console**."
 msgstr ""
+"Οι εντολές ``spork show`` και ``spork active``που μπορούν να οριστούν στο "
+"debug window (ή απο το ``dash-cli`` σε ένα masternode) σας επιτρέπεον να "
+"επικοινωνείτε με τα spork. Μπορείτε να ανοίξετε το debug window επιλέγοντας "
+"**Tools > Debug console**."
 
 #: ../../developers/index.rst:104
 msgid "spork show and spork active output in the Dash Core debug console"
-msgstr ""
+msgstr "Η παραγωγή spork show και spork active στο Dash Core debug console"
 
 #: ../../developers/index.rst:108
 msgid "Version History"
-msgstr ""
+msgstr "Ιστορία Έκδοσης"
 
 #: ../../developers/index.rst:110
 msgid "Full release notes and the version history of Dash are available here:"
-msgstr ""
+msgstr "Πλήρης σημειώσεις και η ιστορία έκδοσης του Dash είναι διαθέσιμη εδώ:"
 
 #: ../../developers/index.rst:112
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"

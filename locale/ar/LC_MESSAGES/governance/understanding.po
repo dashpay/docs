@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 09:41+0000\n"
+"POT-Creation-Date: 2018-06-11 06:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
@@ -280,10 +280,11 @@ msgid ""
 "owners have the option to verify their ownership of a masternode and ability"
 " to cast a vote by signing a message from the masternode collateral address."
 " Masternodes can vote at any time, and also change their vote at any time "
-"until the cutoff block is mined and voting stops. After voting stops, the "
-"blockchain executes a decentralized tally and validates all votes. Once "
-"consensus is reached, the results are broadcast and the budget is allocated "
-"soon after in a superblock."
+"until the cutoff block is mined and voting stops. This occurs 1662 blocks "
+"prior to the superblock. After voting stops, the blockchain executes a "
+"decentralized tally and validates all votes. Once consensus is reached, the "
+"results are broadcast and the budget is allocated soon after in a "
+"superblock."
 msgstr ""
 
 #: ../../governance/understanding.rst:220
@@ -324,32 +325,36 @@ msgid ""
 "the total amounts of budget allocated over multiple voting periods. A team "
 "of dedicated staff routinely interact with proposal owners to track progress"
 " of the various projects and provide reports to voting masternodes in a "
-"single location."
-msgstr ""
-
-#: ../../governance/understanding.rst:256
-msgid "Proposal monitoring on Dash Watch"
-msgstr ""
-
-#: ../../governance/understanding.rst:259
-msgid "Budget allocation"
+"single location. While providing data on the performance of your proposal to"
+" Dash Watch is optional, many masternode owners take advantage of the data "
+"they make available to make their voting decisions. The Dash Watch team may "
+"be contacted at team@dashwatch.org email address or through their `website "
+"<http://dashwatch.org>`__."
 msgstr ""
 
 #: ../../governance/understanding.rst:261
+msgid "Proposal monitoring on Dash Watch"
+msgstr ""
+
+#: ../../governance/understanding.rst:264
+msgid "Budget allocation"
+msgstr ""
+
+#: ../../governance/understanding.rst:266
 msgid ""
 "The total budget of the network can be calculated by taking 10% of the "
 "reward over the period of time between two superblocks, which occur every "
-"16616 blocks or approximately 30.29 days. A voting cutoff occurs before the "
-"superblock, and the final votes are tallied at this point. A proposal must "
-"satisfy the condition ``(YES votes - NO votes) > (Total Number of "
-"Masternodes / 10)`` in order to be considered passing. Then, in the "
+"16616 blocks or approximately 30.29 days. A voting cutoff occurs 1662 blocks"
+" before the superblock, and the final votes are tallied at this point. A "
+"proposal must satisfy the condition ``(YES votes - NO votes) > (Total Number"
+" of Masternodes / 10)`` in order to be considered passing. Then, in the "
 "superblock, the winning proposals are awarded in the order of the margin by "
 "which they are passing until either the entire budget is allocated or no "
 "more passing proposals exist. This allows for completely trustless and "
 "decentralized allocation of the budget."
 msgstr ""
 
-#: ../../governance/understanding.rst:272
+#: ../../governance/understanding.rst:278
 msgid ""
 "Due to the decentralized nature of the masternode system, it is sometimes "
 "necessary to form funded organisations, such as committees or companies, to "
@@ -369,17 +374,17 @@ msgid ""
 "system."
 msgstr ""
 
-#: ../../governance/understanding.rst:289
+#: ../../governance/understanding.rst:295
 msgid ""
 "Any unallocated budget is simply never created in the superblock, reducing "
 "unnecessary inflation."
 msgstr ""
 
-#: ../../governance/understanding.rst:293
+#: ../../governance/understanding.rst:299
 msgid "Scaling and future uses"
 msgstr ""
 
-#: ../../governance/understanding.rst:295
+#: ../../governance/understanding.rst:301
 msgid ""
 "As the number of blockchain contractors increases, a point is reached where "
 "masternode operators cannot be realistically expected to evaluate the volume"
@@ -389,7 +394,7 @@ msgid ""
 "of such an organization."
 msgstr ""
 
-#: ../../governance/understanding.rst:302
+#: ../../governance/understanding.rst:308
 msgid ""
 "The existence of the decentralized budget system puts the power of "
 "determining where Dash goes in the future in the hands of the masternode "
@@ -402,11 +407,11 @@ msgid ""
 "cohesively and bring added value services to end users in a consistent way."
 msgstr ""
 
-#: ../../governance/understanding.rst:314
+#: ../../governance/understanding.rst:320
 msgid "Conclusion"
 msgstr ""
 
-#: ../../governance/understanding.rst:316
+#: ../../governance/understanding.rst:322
 msgid ""
 "Every masternode operator establishes a bond of trust and a social contract "
 "with the network in which she is bound to contribute to the development and "
@@ -422,7 +427,7 @@ msgid ""
 "with traditional governments or cooperative corporations."
 msgstr ""
 
-#: ../../governance/understanding.rst:330
+#: ../../governance/understanding.rst:336
 msgid ""
 "We envision a future in which this model of transparent, unbreakable and "
 "verifiable contribution to the common good, in combination with continuous "
