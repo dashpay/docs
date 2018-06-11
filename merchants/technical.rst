@@ -158,8 +158,8 @@ executable.
 - Documentation: https://dash-docs.github.io/en/developer-guide
 
 
-Bitcore
--------
+Dashcore
+--------
 
 .. image:: img/bitcore.png
    :width: 200px
@@ -168,14 +168,15 @@ Bitcore
 
 https://bitcore.io
 
-Bitcore is a full Dash node — your apps run directly on the 
-peer-to-peer network. For wallet application development, additional
-indexes have been added into Dash for querying address balances,
-transaction history, and unspent outputs.
+Dashcore is a fork of Bitcore and operates as a full Dash node — your
+apps run directly on the  peer-to-peer network. For wallet application
+development, additional indexes have been added into Dash for querying
+address balances, transaction history, and unspent outputs.
 
 - Platform: NodeJS / Javascript
 - Documentation: https://bitcore.io/api/lib
-- Repository: https://github.com/dashevo/bitcore-lib-dash
+- Repository lib: https://github.com/dashevo/dashcore-lib
+- Repository node: https://github.com/dashevo/dashcore-node
 
 
 DashJ
