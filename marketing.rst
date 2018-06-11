@@ -71,6 +71,9 @@ translation is complete to request layout of the completed translation.
 | Slovak     | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-SK.pdf>`__   |
 |            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-SK.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
+| Thai       | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-TH.pdf>`__   |
+|            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-TH.docx>`__ |
++------------+-------------------------------------------------------------------------------------------------+
 | Vietnamese | `PDF <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-VI.pdf>`__   |
 |            | `DOCX <https://github.com/dashpay/docs/raw/master/binary/handouts/Dash-Handout-v3.1-VI.docx>`__ |
 +------------+-------------------------------------------------------------------------------------------------+
