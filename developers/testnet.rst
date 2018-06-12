@@ -28,6 +28,12 @@ the following line::
 Tools and links
 ===============
 
+The links below were collected from various community sources and may
+not necessarily be online or functioning at any given time. Please join
+`Dash Nation Discord <http://dashchat.org>`_ or the `Dash Forum
+<https://www.dash.org/forum/>`_ if you have a question relating to a
+specific service.
+
 - **Test builds:** https://bamboo.dash.org
 - **Bugtracker:** https://github.com/dashpay/dash/issues/new
 - **Discussion and help:** https://www.dash.org/forum/topic/testing.53/
@@ -117,7 +123,7 @@ Discussion:
 
 Latest test binaries:
 
-- https://github.com/dashpay/dash/tree/v0.12.3.0-rc2
+- https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3
 
 
 Testnet 12.2
