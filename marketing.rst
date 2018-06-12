@@ -34,6 +34,40 @@ identity.
 Design Materials
 ================
 
+Brochures
+---------
+
+An attractive brochure about Dash, designed for handing out at
+conferences and events. Prepared by community member Essra in 2018
+following proposal sponsorship for the German `Dash Embassy D-A-CH
+<http://www.dash-embassy.org>`__.
+
++----------+----------------------------------------------------------------------------------------------------+
+| Language | Download                                                                                           |
++==========+====================================================================================================+
+| English  | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_GB_RZ_2018.pdf>`__ |
++----------+----------------------------------------------------------------------------------------------------+
+| German   | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_RZ_2018.pdf>`__    |
++----------+----------------------------------------------------------------------------------------------------+
+
+
+Flyers
+------
+
+An attractive flyer about Dash, designed to be folded in half and placed
+on flat surfaces at conferences and events. Prepared by community member
+Essra in 2018 following proposal sponsorship for the German `Dash
+Embassy D-A-CH <http://www.dash-embassy.org>`__.
+
++----------+----------------------------------------------------------------------------------------------------+
+| Language | Download                                                                                           |
++==========+====================================================================================================+
+| English  | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_GB.pdf>`__  |
++----------+----------------------------------------------------------------------------------------------------+
+| German   | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018.pdf>`__     |
++----------+----------------------------------------------------------------------------------------------------+
+
+
 Handouts
 --------
 
@@ -258,8 +292,8 @@ Dash 101 Presentation
 ^^^^^^^^^^^^^^^^^^^^^
 
 Prepared by community member Essra in 2017 following proposal
-sponsorship for the German `Dash Embassy D-A-CH <http://www.dash-
-embassy.org>`__.
+sponsorship for the German `Dash Embassy D-A-CH 
+<http://www.dash-embassy.org>`__.
 
 +----------+---------------------------------------------------------------------------------------------+
 | Language | Download                                                                                    |
