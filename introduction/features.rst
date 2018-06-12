@@ -79,9 +79,9 @@ PrivateSend
 
 PrivateSend gives you true financial privacy by obscuring the origins of
 your funds. All the Dash in your wallet is comprised of different
-"inputs", which you can think of as separate, discrete coins. 
-PrivateSenduses an innovative process to mix your inputs with the inputs
-of two other people, without having your coins ever leave your wallet. 
+"inputs", which you can think of as separate, discrete coins.
+PrivateSend uses an innovative process to mix your inputs with the inputs
+of two other people, without having your coins ever leave your wallet.
 You retain control of your money at all times.
 
 You can view a practical guide to use PrivateSend 
@@ -113,7 +113,7 @@ The PrivateSend process works like this:
    intervention on your part. When you wish to make a transaction, your
    funds will already be anonymized. No additional waiting is required.
 
-Note that InstantSend transactions will be rounded up so that all
+Note that PrivateSend transactions will be rounded up so that all
 transaction inputs are spent. Any excess Dash will be spent on the
 transaction fee.
 

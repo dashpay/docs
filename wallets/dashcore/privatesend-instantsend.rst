@@ -133,9 +133,6 @@ operations PrivateSend is carrying out in the background.
 
    Monitoring PrivateSend progress
 
-This will allow you to monitor progress and see which individual
-operations PrivateSend is carrying out in the background.
-
 Since PrivateSend mixing creates a lot of new address keys to send and
 receive the anonymized denominations, you may receive a warning when the
 number of remaining keys runs low. This is nothing to be worried about,
