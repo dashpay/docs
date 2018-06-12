@@ -152,6 +152,31 @@ created by the mixing process on the **Transactions** tab.
 
    Transactions created by PrivateSend on the Transactions tab
 
+The following table describes the PrivateSend-related transactions displayed in
+the Type column of the **Transactions** tab:
+
++------------------------------------+-------------------------------------------+
+| PrivateSend Transaction Type       | Transaction Description                   |
++====================================+===========================================+
+| PrivateSend Make Collateral Inputs | Wallet funds were moved to collateral     |
+|                                    | inputs that will be used to make          |
+|                                    | collateral payments. This is done to      |
+|                                    | minimize traceability of collaterals.     |
++------------------------------------+-------------------------------------------+
+| PrivateSend Create Denominations   | Wallet funds were broken into             |
+|                                    | PrivateSend denominations (Step 1         |
+|                                    | :ref:`here<privatesend>`)                 |
++------------------------------------+-------------------------------------------+
+| PrivateSend Denominate             | A transaction was sent to a masternode    |
+|                                    | in order to participate in a mixing       |
+|                                    | session (Step 3 :ref:`here<privatesend>`) |
++------------------------------------+-------------------------------------------+
+| PrivateSend Collateral Payment     | The mixing session collateral was         |
+|                                    | claimed. This fee is charged in ~10%      |
+|                                    | of mixing sessions to prevent spam        |
+|                                    | attacks.                                  |
++------------------------------------+-------------------------------------------+
+
 You can also use the coin control feature to view which addresses hold
 mixed denominations ready to be used for PrivateSend transactions. Go to
 the **Send** tab of your wallet and click **Inputs** to view the possible input
