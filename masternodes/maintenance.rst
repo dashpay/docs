@@ -62,7 +62,7 @@ window should appear as follows:
 .. figure:: img/maintenance-dmt-utxos.png
    :width: 400px
 
-   Selecting the UTXOs to use an inputs in the withdrawal transaction
+   Selecting the UTXOs to use as inputs in the withdrawal transaction
 
 Verify the transaction fee and click **Send**. Your Trezor will prompt
 to enter your PIN and confirm the transaction on the device. Once this
@@ -482,7 +482,7 @@ Written and maintained by community member Bertrand256, Dash Masternode
 Tool (DMT) allows you to start a masternode from all major hardware
 wallets such as Trezor, Ledger and KeepKey. It also supports functions
 to vote on proposals and withdraw masternode payments without affecting
-the collateral transation.
+the collateral transaction.
 
 DASH Ninja
 ----------

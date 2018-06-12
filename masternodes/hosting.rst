@@ -144,7 +144,7 @@ Start the masternode
 
 The Dash Masternode Tool (DMT) is required to combine all of this data
 and issue the command to the network to start the masternode. Download
-the appropriate version of DMT for your computer from the Github
+the appropriate version of DMT for your computer from the GitHub
 releases page `here <https://github.com/Bertrand256/dash-masternode-
 tool/releases>`_. Unzip the file and run the executable. The following
 window appears.

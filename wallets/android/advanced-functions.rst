@@ -182,7 +182,7 @@ Enable Lite Mode
   Enabling lite mode reduces bandwidth usage.
 
 Show disclaimer
-  Enables or disalbes various disclaimers and warning messages in the
+  Enables or disables various disclaimers and warning messages in the
   app.
 
 BIP70 for scan-to-pay

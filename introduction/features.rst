@@ -311,7 +311,7 @@ currency is not subject to endless inflation, the block reward is
 reduced at regular intervals, as `shown in this calculation
 <https://docs.google.com/spreadsheets/d
 /1HqgEkyfZDAA6pIZ3df2PwFE8Z430SVIzQ-mCQ6wGCh4/edit#gid=523620673>`_.
-Graphing this data results in a curve  showing total coins in
+Graphing this data results in a curve showing total coins in
 circulation, known as the coin emission rate.
 
 While Dash is based on Bitcoin, it significantly modifies the coin

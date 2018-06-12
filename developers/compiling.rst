@@ -5,7 +5,7 @@ Compiling Dash Core
 ===================
 
 While Dash offers stable binary builds on the `website
-<https://www.dash.org/wallets>`_, on `Github
+<https://www.dash.org/wallets>`_, on `GitHub
 <https://github.com/dashpay/dash/releases>`_ and through development
 builds using `Bamboo <https://bamboo.dash.org>`_, many users will also
 be interested in building Dash binaries for themselves. The following
@@ -79,7 +79,7 @@ Setup the host environment
 --------------------------
 
 Gitian builds are known to be working on Debian 8.x. If your machine is
-already running this sytem, you can perform Gitian builds on the actual
+already running this system, you can perform Gitian builds on the actual
 hardware. Alternatively, you can install it in a virtual machine. Follow
 the guide for :ref:`setting up a VPS for masternodes <vps-setup>`,
 selecting a Debian 8.x image during the installation process and naming
@@ -169,4 +169,4 @@ complete, you will see the SHA256 checksums, which you can compare
 against the hashes available on the `Dash website
 <https://www.dash.org/wallets>`_. In this way, you can be sure that you
 are running original and untampered builds of the code as it exists on
-Github.
+GitHub.

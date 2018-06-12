@@ -59,7 +59,7 @@ handled on markets, and trades are created between pairs of currencies,
 identified by their ticker codes. Dash is widely accepted on exchanges
 and many pairs exist against both fiat money and cryptocurrency. This
 means it is possible to exchange EUR for DASH, or DASH for BTC, for
-example. The volume traded on an exchanges provides a good indication of
+example. The volume traded on an exchange provides a good indication of
 how quickly a buy or sell order you place will be filled. This section
 introduces some of the most popular exchanges for trading Dash.
 
@@ -358,7 +358,7 @@ Liqui
 
   https://liqui.io
 
-  Liqui is headquarted in Ukraine and offers a modern interfaced for
+  Liqui is headquartered in Ukraine and offers a modern interfaced for
   leveraged trading of many cryptocurrencies, including a DASH/BTC pair.
 
 Coinome
@@ -673,7 +673,7 @@ ALFAcashier
   https://www.alfacashier.com
 
   ALFAcashier, incorporated in Belize, provides electronic exchange and
-  fiat services. DASH trading paris are available for BTC, XRP, XMR,
+  fiat services. DASH trading pairs are available for BTC, XRP, XMR,
   XEM, ETH, LTC, BCH, USD, EUR, CNY, CAD and RUB.
 
 CoinSuper
@@ -1041,7 +1041,7 @@ Bitit
 
   Bitit is a broker service offering Bitcoin, Dash and several other
   cryptocurrencies for sale online. Payment in a range of currencies is
-  support using both direct banking, credit cards and couchers.
+  support using both direct banking, credit cards and vouchers.
 
 Coinfinity
   .. image:: exchanges/coinfinity.png

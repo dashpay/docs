@@ -217,7 +217,7 @@ this command, and your governance object ID will appear as follows:
 
 You can use this ID to track voting on the proposal until the budget
 closes and you receive your payout. You can also submit the ID to
-DashCentral to claim your proposal and enable simpified voting for
+DashCentral to claim your proposal and enable simplified voting for
 masternodes using DashCentral voting services.
 
 DashCentral Proposal Generator
