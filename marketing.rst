@@ -42,6 +42,12 @@ conferences and events. Prepared by community member Essra in 2018
 following proposal sponsorship for the German `Dash Embassy D-A-CH
 <http://www.dash-embassy.org>`__.
 
+This design can be translated into your language at `Transifex here
+<https://www.transifex.com/dash/dash-graphics/dash-brochurexlsx/>`__.
+For more information on translating Dash products on Transifex, see
+:ref:`here <translating-dash>`. Please contact leon.white@dash.org once
+translation is complete to request layout of the completed translation.
+
 +----------+----------------------------------------------------------------------------------------------------+
 | Language | Download                                                                                           |
 +==========+====================================================================================================+
@@ -58,6 +64,12 @@ An attractive flyer about Dash, designed to be folded in half and placed
 on flat surfaces at conferences and events. Prepared by community member
 Essra in 2018 following proposal sponsorship for the German `Dash
 Embassy D-A-CH <http://www.dash-embassy.org>`__.
+
+This design can be translated into your language at `Transifex here
+<https://www.transifex.com/dash/dash-graphics/dash-flyerxlsx/>`__.
+For more information on translating Dash products on Transifex, see
+:ref:`here <translating-dash>`. Please contact leon.white@dash.org once
+translation is complete to request layout of the completed translation.
 
 +----------+----------------------------------------------------------------------------------------------------+
 | Language | Download                                                                                           |
