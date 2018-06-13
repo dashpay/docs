@@ -119,11 +119,11 @@ html_static_path = ['_static']
 
 # Override to allow text wrap in tables
 # Details: https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
-html_context = {
-    'css_files': [
-        '_static/theme_overrides.css',  # override wide tables in RTD theme
-        ],
-     }
+#html_context = {
+#    'css_files': [
+#        '_static/theme_overrides.css',  # override wide tables in RTD theme
+#        ],
+#     }
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
