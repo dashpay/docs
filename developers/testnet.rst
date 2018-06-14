@@ -55,7 +55,7 @@ Explorers
 
 - https://test.explorer.dash.org - by flare
 - https://test.insight.dash.siampm.com - by thelazier
-- http://test.explorer.dashninja.pl - by elbereth
+- https://test.explorer.dashninja.pl - by elbereth
 - http://test.insight.masternode.io:3001 - by coingun
 - https://testnet-insight.dashevo.org/insight/
 
