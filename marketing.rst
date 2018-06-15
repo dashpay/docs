@@ -76,7 +76,9 @@ translation is complete to request layout of the completed translation.
 +==========+====================================================================================================+
 | English  | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_GB.pdf>`__  |
 +----------+----------------------------------------------------------------------------------------------------+
-| German   | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018.pdf>`__     |
+| Dutch    | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_NL.pdf>`__  |
++----------+----------------------------------------------------------------------------------------------------+
+| German   | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_DE.pdf>`__  |
 +----------+----------------------------------------------------------------------------------------------------+
 
 
