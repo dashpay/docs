@@ -71,17 +71,19 @@ For more information on translating Dash products on Transifex, see
 :ref:`here <translating-dash>`. Please contact leon.white@dash.org once
 translation is complete to request layout of the completed translation.
 
-+----------+----------------------------------------------------------------------------------------------------+
-| Language | Download                                                                                           |
-+==========+====================================================================================================+
-| English  | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_GB.pdf>`__  |
-+----------+----------------------------------------------------------------------------------------------------+
-| Dutch    | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_NL.pdf>`__  |
-+----------+----------------------------------------------------------------------------------------------------+
-| German   | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_DE.pdf>`__  |
-+----------+----------------------------------------------------------------------------------------------------+
-| Thai     | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_TH.pdf>`__  |
-+----------+----------------------------------------------------------------------------------------------------+
++-----------------------+-------------------------------------------------------------------------------------------------------+
+| Language              | Download                                                                                              |
++=======================+=======================================================================================================+
+| English               | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_GB.pdf>`__     |
++-----------------------+-------------------------------------------------------------------------------------------------------+
+| Chinese (Traditional) | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_ZH_TW.pdf>`__  |
++-----------------------+-------------------------------------------------------------------------------------------------------+
+| Dutch                 | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_NL.pdf>`__     |
++-----------------------+-------------------------------------------------------------------------------------------------------+
+| German                | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_DE.pdf>`__     |
++-----------------------+-------------------------------------------------------------------------------------------------------+
+| Thai                  | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_TH.pdf>`__     |
++-----------------------+-------------------------------------------------------------------------------------------------------+
 
 
 Handouts
