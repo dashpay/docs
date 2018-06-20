@@ -159,7 +159,8 @@ few seconds.
 You can view a practical guide to use InstantSend 
 :ref:`here <dashcore-privatesend-instantsend>`. InstantSend was 
 introduced in a whitepaper called `Transaction Locking and Masternode 
-Consensus: A Mechanism for Mitigating Double Spending Attacks <https://github.com/dashpay/docs/raw/master/pdf/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_.
+Consensus: A Mechanism for Mitigating Double Spending Attacks <https://github.com/dashpay/docs/blob/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_.
+
 
 **How Dash 'InstantSend' Protects Merchants from Double Spends**,
 Dash Detailed by Amanda B. Johnson, 16 September 2016
