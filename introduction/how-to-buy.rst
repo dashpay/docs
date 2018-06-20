@@ -583,8 +583,7 @@ Bisq
 
   Bisq is a decentralized exchange running on the Tor network and offers
   complete privacy, but trades are manual, require escrow and must be
-  settled between users. DASH trading pairs are available for 80
-  national currencies and 130 cryptocurrencies.
+  settled between users. 
 
 Coincheck
   .. image:: exchanges/coincheck.png
