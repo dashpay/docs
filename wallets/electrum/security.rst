@@ -12,6 +12,7 @@ main window. Enter and confirm a new secure password. Should you forget
 your wallets' password, all is not lost. Your wallet can be restored in
 its entirety using the backup procedure described here.
 
+.. _electrum-backup:
 
 Backup
 ------

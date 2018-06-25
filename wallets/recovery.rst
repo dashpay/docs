@@ -266,6 +266,67 @@ wallet, follow these instructions:
 - `Ledger Nano S <https://ledger.zendesk.com/hc/en-us/articles/115005165309-How-to-import-recover-a-backup-on-a-Nano-S->`_
 - `Trezor <https://doc.satoshilabs.com/trezor-user/recovery.html>`_
 
+.. _dash-ios-restore-electrum
+
+Restoring an iOS wallet in Dash Electrum
+----------------------------------------
+
+You can use your Dash iOS recovery phrase with Dash Electrum to recover
+funds if you lose access to your iOS device for any reason. However,
+since the wallet derivation paths are not identical, the process only
+works in one direction, meaning it is not possible to restore a Dash
+Electrum wallet using the Dash iOS wallet. Also, because the import
+process uses an xprv key rather than the recovery phrase directly, it
+will not be possible to display the recovery phrase in Dash Electrum. It
+is therefore recommended to move the funds (either to a standard Dash
+Electrum wallet or some other wallet) once recovery is successful to
+ensure that standard backup procedures work as expected.
+
+Recovery takes place in two steps. First, we will convert the Dash iOS
+recovery phrase into an xprv key using a specific recovery depth, namely
+"m/0p". In the second step, we will import the xprv key into Dash
+Electrum.
+
+Retrieving the correct Dash iOS xprv key
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Go to the `BIP39 Mnemonic Code Converter
+<https://iancoleman.io/bip39/>`_ page. This is a useful tool for
+manipulating/displaying BIP32/39 seed data. If you are not comfortable
+performing this procedure online, an offline version is available by
+downloading the file described in `these instrutions
+<https://github.com/iancoleman/bip39#standalone-offline-version>`_. Once
+the tool is loaded in your browser, complete the following steps:
+
+1. Enter your 12 word seed phrase in the **BIP39 Mnemonic** field.
+2. Leave **BIP39 Passphrase** blank.
+3. Leave coin set to 'Bitcoin'.
+4. Under **Derivation Path**, click the **BIP32** tab.
+5. In the **BIP32 Derivation Path** box, type: ``m/0'`` 
+6. Copy the value shown in "BIP32 Extended Private Key".
+
+Importing the xprv key into Dash Electrum
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Open Dash Electrum and click **File** -> **New/Restore**.
+2. Type a name for your wallet.
+3. Select **Standard wallet**.
+3. Select **Use public or private keys**.
+4. Paste in your value from **BIP32 Extended Private Key**.
+5. Optionally enter a password.
+
+Dash Electrum should now detect your Dash iOS balance and you should
+have complete access to your funds. The seed phrase won't be available
+in Dash Electrum , so you will just need to follow the steps above again
+if you want to restore this wallet from the recovery phrase again. It is
+recommended to send your funds to a new Dash Electrum wallet instead and
+follow :ref:`standard backup procedures <electrum-backup>`.
+
+Please see `this forum thread <https://www.dash.org/forum/threads
+/restore-breadwallet-dash-funds-to-your-electrum-dash-wallet-
+tested.8335>`_ for further discussion on this process.
+
+
 .. _privkey-restore:
 
 Private Keys
