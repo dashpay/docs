@@ -38,9 +38,9 @@ current version as necessary) in the terminal to install Dash Electrum
 from the source tarball::
 
   sudo apt install python3-pyqt5 python3-pip python3-setuptools
-  wget https://github.com/akhavr/electrum-dash/releases/download/3.0.6/Electrum-DASH-3.0.6.tar.gz
-  tar -zxvf Electrum-DASH-3.0.6.tar.gz
-  cd Electrum-DASH-3.0.6
+  wget https://github.com/akhavr/electrum-dash/releases/download/3.0.6.3/Electrum-DASH-3.0.6.3.tar.gz
+  tar -zxvf Electrum-DASH-3.0.6.3.tar.gz
+  cd Electrum-DASH-3.0.6.3
   sudo python3 setup.py install
 
 
