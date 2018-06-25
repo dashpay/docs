@@ -311,9 +311,9 @@ Importing the xprv key into Dash Electrum
 1. Open Dash Electrum and click **File** -> **New/Restore**.
 2. Type a name for your wallet.
 3. Select **Standard wallet**.
-3. Select **Use public or private keys**.
-4. Paste in your value from **BIP32 Extended Private Key**.
-5. Optionally enter a password.
+4. Select **Use public or private keys**.
+5. Paste in your value from **BIP32 Extended Private Key**.
+6. Optionally enter a password.
 
 Dash Electrum should now detect your Dash iOS balance and you should
 have complete access to your funds. The seed phrase won't be available
