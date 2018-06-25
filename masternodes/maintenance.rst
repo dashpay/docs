@@ -171,13 +171,13 @@ command, pasting in the address to the latest version of Dash Core
 (0.12.2.1 in the example) by right clicking or pressing **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.12.2.2/dashcore-0.12.2.2-linux64.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.12.2.3/dashcore-0.12.2.3-linux64.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown on the
 Dash website under **Hash File**::
 
-  sha256sum dashcore-0.12.2.2-linux64.tar.gz
+  sha256sum dashcore-0.12.2.3-linux64.tar.gz
 
 .. figure:: img/setup-manual-download.png
    :width: 250px
@@ -190,13 +190,13 @@ executable::
 
   rm ~/.dashcore/dashd
   rm ~/.dashcore/dash-cli
-  tar xfvz dashcore-0.12.2.2-linux64.tar.gz
+  tar xfvz dashcore-0.12.2.3-linux64.tar.gz
   cp dashcore-0.12.2/bin/dashd ~/.dashcore/
   cp dashcore-0.12.2/bin/dash-cli ~/.dashcore/
 
 Clean up unneeded files::
 
-  rm dashcore-0.12.2.2-linux64.tar.gz
+  rm dashcore-0.12.2.3-linux64.tar.gz
   rm -r dashcore-0.12.2/
 
 Restart Dash::
