@@ -205,6 +205,8 @@ Dash Website
 https://www.transifex.com/dash/dash-website
 
 The Dash website at https://www.dash.org is available for translation in
-Transifex. Technical problems are currently preventing the ability to
-import translations from Transifex, so please do not translate this
-project yet.
+Transifex. Please have the website open while you translate to correctly
+understand the context of the source text. Once your translation is
+complete, please send an email to leon.white@dash.org or @strophy on
+`Discord <http://dashchat.org>`_ to request a build of your translation
+onto the website.
