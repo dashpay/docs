@@ -89,6 +89,8 @@ but with a few key differences:
 - Your masternode configuration file must also specify testnet mode. Add
   the following line when setting up *dash.conf* on the masternode:
   testnet = 1
+- As for mainnet masternodes, the RPC username and password must contain
+  alphanumeric characters only
 - When cloning sentinel, you may need to clone the development branch
   using the ``-b`` option, for example: ``git clone -b core-v0.12.2.x
   https://github.com/dashpay/sentinel.git``
