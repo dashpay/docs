@@ -1299,6 +1299,16 @@ General Bytes
   General Bytes offers a range of two-way cash ATM and Point of Sale
   solutions integrating Dash.
 
+Lamassu
+  .. image:: exchanges/lamassu.png
+     :width: 75px
+     :align: right
+     :target: https://lamassu.is/
+
+  https://lamassu.is/
+
+  Lamassu offers modular one-way and two-way cash ATMs integrating Dash.
+
 TigoCTM
   .. image:: exchanges/tigoctm.png
      :width: 110px
