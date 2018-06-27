@@ -573,6 +573,18 @@ Whaleclub
   highly leveraged trading of cryptocurrency including DASH against
   other cryptocurrencies, forex, metals, stocks and bonds.
 
+Golix
+  .. image:: exchanges/golix.png
+     :width: 200px
+     :align: right
+     :target: https://golix.com
+
+  https://golix.com
+
+  Based in Zimbabwe, Golix is a digital currency exchange that helps
+  people in Sub-Saharan Africa buy and sell DASH and other
+  cryptocurrencies.
+
 Bisq
   .. image:: exchanges/bisq.png
      :width: 200px
