@@ -266,7 +266,7 @@ wallet, follow these instructions:
 - `Ledger Nano S <https://ledger.zendesk.com/hc/en-us/articles/115005165309-How-to-import-recover-a-backup-on-a-Nano-S->`_
 - `Trezor <https://doc.satoshilabs.com/trezor-user/recovery.html>`_
 
-.. _dash-ios-restore-electrum
+.. _dash-ios-restore-electrum:
 
 Restoring an iOS wallet in Dash Electrum
 ----------------------------------------
