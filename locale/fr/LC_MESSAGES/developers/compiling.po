@@ -1,208 +1,230 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 04:30+0000\n"
+"POT-Creation-Date: 2018-06-27 10:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Daf Daf, 2018\n"
+"Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../developers/compiling.rst:5
 msgid "Compiling Dash Core"
-msgstr ""
+msgstr "Compiler Dash Core"
 
 #: ../../developers/compiling.rst:7
 msgid ""
 "While Dash offers stable binary builds on the `website "
-"<https://www.dash.org/wallets>`_, on `Github "
-"<https://github.com/dashpay/dash/releases>`_ and through development "
-"builds using `Bamboo <https://bamboo.dash.org>`_, many users will also be"
-" interested in building Dash binaries for themselves. The following "
-"guides are available:"
+"<https://www.dash.org/wallets>`_, on `GitHub "
+"<https://github.com/dashpay/dash/releases>`_ and through development builds "
+"using `Bamboo <https://bamboo.dash.org>`_, many users will also be "
+"interested in building Dash binaries for themselves. The following guides "
+"are available:"
 msgstr ""
 
 #: ../../developers/compiling.rst:14
 msgid "Eclipse (coming soon)"
-msgstr ""
+msgstr "Eclipse (prochainement)"
 
 #: ../../developers/compiling.rst:15
 msgid ":ref:`Building on Linux <linux-build>`"
-msgstr ""
+msgstr ":ref:`Compiler sur Linux <linux-build>`"
 
 #: ../../developers/compiling.rst:16
 msgid ":ref:`Gitian deterministic builds <gitian-build>`"
-msgstr ""
+msgstr ":ref:`Gitian deterministic builds <gitian-build>`"
 
 #: ../../developers/compiling.rst:21
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../developers/compiling.rst:23
 msgid ""
 "This guide describes how to build Dash Core wallet without the GUI from "
 "source under Ubuntu Linux. It is intended to serve as a simple guide for "
-"general compilation of non-deterministic binary files from the stable "
-"source code. A standard installation of Ubuntu Linux 16.04 LTS will be "
-"used as an environment for the build. We assume you are running as a user"
-" with sudo permissions. First add the necessary extra repository and "
-"update all packages::"
+"general compilation of non-deterministic binary files from the stable source"
+" code. A standard installation of Ubuntu Linux 16.04 LTS will be used as an "
+"environment for the build. We assume you are running as a user with sudo "
+"permissions. First add the necessary extra repository and update all "
+"packages::"
 msgstr ""
+"Ce guide explique comment compiler le portefeuille Dash Core sans interface "
+"graphique, depuis le code source, sur Linux Ubuntu. Il s'agit d'un guide "
+"simple pour compiler des fichiers binaires non-déterministes depuis le code "
+"source stable. Une installation standard d'Ubuntu 16.04 LTS sera utilisée "
+"comme environnement de compilation. Il est présupposé que vous êtes un "
+"utilisateur avec les droits sudo. Tout d'abord, ajouter le dépôt "
+"supplémentaire nécessaire, et mettez à jour tous les paquets ::"
 
 #: ../../developers/compiling.rst:35
 msgid ""
 "Now install the dependencies as described in the installation "
 "documentation::"
 msgstr ""
+"Maintenant, installez les dépendances, tel que décrit dans la documentation "
+"d'installation ::"
 
 #: ../../developers/compiling.rst:41
-msgid "Optionally install the Qt dependencies if you want to build the Dash GUI::"
+msgid ""
+"Optionally install the Qt dependencies if you want to build the Dash GUI::"
 msgstr ""
+"Installez éventuellement les dépendances Qt si vous souhaitez compiler "
+"l'interface graphique Dash (GUI) ::"
 
 #: ../../developers/compiling.rst:46
 msgid "Download the stable Dash repository::"
-msgstr ""
+msgstr "Téléchargez le dépôt stable Dash ::"
 
 #: ../../developers/compiling.rst:50
 msgid "And build::"
-msgstr ""
+msgstr "Puis compilez ::"
 
 #: ../../developers/compiling.rst:58
 msgid "``/usr/local/bin`` now contains the compiled Dash binaries."
-msgstr ""
+msgstr "``/usr/local/bin`` contient maintenant les binaires Dash compilés."
 
 #: ../../developers/compiling.rst:63
 msgid "Gitian"
-msgstr ""
+msgstr "Gitian"
 
 #: ../../developers/compiling.rst:65
 msgid ""
 "Gitian is the deterministic build process that is used to build the Dash "
 "Core executables. It provides a way to be reasonably sure that the "
-"executables are really built from the source on GitHub. It also makes "
-"sure that the same, tested dependencies are used and statically built "
-"into the executable. Multiple developers build the source code by "
-"following a specific descriptor (\"recipe\"), cryptographically sign the "
-"result, and upload the resulting signature. These results are compared "
-"and only if they match, the build is accepted and uploaded to dash.org."
+"executables are really built from the source on GitHub. It also makes sure "
+"that the same, tested dependencies are used and statically built into the "
+"executable. Multiple developers build the source code by following a "
+"specific descriptor (\"recipe\"), cryptographically sign the result, and "
+"upload the resulting signature. These results are compared and only if they "
+"match, the build is accepted and uploaded to dash.org."
 msgstr ""
+"Gitian est le processus de compilation déterministe qui est utilisé pour "
+"compiler les exécutables Dash Core. Il constitue un moyen de s'assurer "
+"raisonnablement que les exécutables sont vraiment compilés depuis la source "
+"sur GitHub. Il s'assure également que les mêmes dépendances éprouvées sont "
+"utilisées et intégrées statiquement à l'exécutable. De nombreux développeurs"
+" compilent le source code selon un descripteur spécifique (\"recette\"), "
+"signent cryptographiquement le résultat et téléversent la signature qui en "
+"résulte. Ces résultats sont comparés et, s'ils correspondent, la compilation"
+" est acceptée et téléversée sur dash.org."
 
 #: ../../developers/compiling.rst:74
 msgid ""
-"More independent Gitian builders are needed, which is why this guide "
-"exists. It is preferred you follow these steps yourself instead of using "
-"someone else's VM image to avoid 'contaminating' the build."
+"More independent Gitian builders are needed, which is why this guide exists."
+" It is preferred you follow these steps yourself instead of using someone "
+"else's VM image to avoid 'contaminating' the build."
 msgstr ""
+"Un plus grand nombre de compilateurs Gitian est souhaité ; c'est la raison "
+"d'être de ce guide. Il est préférable que vous suiviez ces étapes plutôt que"
+" d'utiliser l'image VM de quelqu'un d'autre, afin d'éviter de \"contaminer\""
+" la compilation."
 
 #: ../../developers/compiling.rst:79
 msgid "Setup the host environment"
-msgstr ""
+msgstr "Mise en place de l'environnement hôte"
 
 #: ../../developers/compiling.rst:81
 msgid ""
 "Gitian builds are known to be working on Debian 8.x. If your machine is "
-"already running this sytem, you can perform Gitian builds on the actual "
-"hardware. Alternatively, you can install it in a virtual machine. Follow "
-"the guide for :ref:`setting up a VPS for masternodes <vps-setup>`, "
-"selecting a Debian 8.x image during the installation process and naming "
-"your non-root user ``gitianuser``. Selecting a VPS with two processors "
-"will also greatly speed up the build process. If you cannot login to your"
-" VPS over SSH as root, access the terminal and issue the following "
-"command::"
+"already running this system, you can perform Gitian builds on the actual "
+"hardware. Alternatively, you can install it in a virtual machine. Follow the"
+" guide for :ref:`setting up a VPS for masternodes <vps-setup>`, selecting a "
+"Debian 8.x image during the installation process and naming your non-root "
+"user ``gitianuser``. Selecting a VPS with two processors will also greatly "
+"speed up the build process. If you cannot login to your VPS over SSH as "
+"root, access the terminal and issue the following command::"
 msgstr ""
 
 #: ../../developers/compiling.rst:94
 msgid ""
-"Log in to your new environment by SSH as root. Set up the dependencies "
-"first by pasting the following in the terminal::"
+"Log in to your new environment by SSH as root. Set up the dependencies first"
+" by pasting the following in the terminal::"
 msgstr ""
+"Connectez-vous à votre nouvel environnement via SSH en tant que root. Mettez"
+" d'abord en place les dépendances en copiant-collant ce qui suit dans le "
+"terminal ::"
 
 #: ../../developers/compiling.rst:100
 msgid ""
-"Then set up LXC and the rest with the following, which is a complex "
-"jumble of settings and workarounds::"
+"Then set up LXC and the rest with the following, which is a complex jumble "
+"of settings and workarounds::"
 msgstr ""
+"Puis mettez en place LXC et le reste avec ce qui suit (un mélange complexe "
+"de réglages et de contournements) ::"
 
 #: ../../developers/compiling.rst:121
 msgid ""
-"At the end Debian is rebooted to make sure that the changes take effect. "
-"Re-login as the user gitianuser that was created during installation. The"
-" rest of the steps in this guide will be performed as that user."
+"At the end Debian is rebooted to make sure that the changes take effect. Re-"
+"login as the user gitianuser that was created during installation. The rest "
+"of the steps in this guide will be performed as that user."
 msgstr ""
+"À la fin, Debian redémarre pour être certain que les modifications prennent "
+"effet. Re-connectez-vous en tant qu'utilisateur \"gitianuser\", celui créé "
+"durant l'installation. Le reste des étapes de ce guide seront exécutées en "
+"tant que cet utilisateur."
 
 #: ../../developers/compiling.rst:125
 msgid ""
-"There is no ``python-vm-builder`` package in Debian, so we need to "
-"install it from source ourselves::"
+"There is no ``python-vm-builder`` package in Debian, so we need to install "
+"it from source ourselves::"
 msgstr ""
+"Il n'y a pas de paquet ``python-vm-builder`` dans Debian, nous devons donc "
+"l'installer nous-mêmes depuis la source ::"
 
 #: ../../developers/compiling.rst:137
 msgid "Set up the environment and compile"
-msgstr ""
+msgstr "Mise en place de l'environnement et compilation"
 
 #: ../../developers/compiling.rst:139
 msgid "Clone the Dash Core repository to your home directory::"
-msgstr ""
+msgstr "Clonez le dépôt Dash Core dans votre répertoire home ::"
 
 #: ../../developers/compiling.rst:143
 msgid "Then create the script file::"
-msgstr ""
+msgstr "Puis créer le fichier script ::"
 
 #: ../../developers/compiling.rst:147
 msgid ""
-"And paste the following script in place (this will be automatic if/when "
-"the script is pulled into Dash Core)::"
+"And paste the following script in place (this will be automatic if/when the "
+"script is pulled into Dash Core)::"
 msgstr ""
+"Collez le script suivant au bon endroit (ce sera automatique si/quand le "
+"script est placé dans Dash Core) ::"
 
 #: ../../developers/compiling.rst:152
 msgid "Save the file and set it executable::"
-msgstr ""
+msgstr "Enregistrez le fichier et rendez-le exécutable ::"
 
 #: ../../developers/compiling.rst:156
 msgid ""
-"Set up the environment, replacing the name and version with your name and"
-" target version::"
+"Set up the environment, replacing the name and version with your name and "
+"target version::"
 msgstr ""
+"Mettez en place l'environnement, en remplaçant le nom et la version par vos "
+"nom et version-cible ::"
 
 #: ../../developers/compiling.rst:161
 msgid "Run the compilation script::"
-msgstr ""
+msgstr "Lancez le script de compilation ::"
 
 #: ../../developers/compiling.rst:165
 msgid ""
 "Your system will build all dependencies and Dash Core from scratch for "
 "Windows and Linux platforms (macOS if the dependencies were installed "
 "according to `these instructions "
-"<https://github.com/dashpay/dash/blob/master/doc/build-osx.md>`_). This "
-"can take some time. When complete, you will see the SHA256 checksums, "
-"which you can compare against the hashes available on the `Dash website "
-"<https://www.dash.org/wallets>`_. In this way, you can be sure that you "
-"are running original and untampered builds of the code as it exists on "
-"Github."
+"<https://github.com/dashpay/dash/blob/master/doc/build-osx.md>`_). This can "
+"take some time. When complete, you will see the SHA256 checksums, which you "
+"can compare against the hashes available on the `Dash website "
+"<https://www.dash.org/wallets>`_. In this way, you can be sure that you are "
+"running original and untampered builds of the code as it exists on GitHub."
 msgstr ""
-
-#~ msgid ""
-#~ "This guide describes how to build "
-#~ "Dash Core wallet without the GUI "
-#~ "from source under Ubuntu Linux. It "
-#~ "is intended to serve as a simple"
-#~ " guide for general compilation of "
-#~ "non-deterministic binary files from the "
-#~ "stable source code. A standard "
-#~ "installation of Ubuntu Linux 16.04 LTS"
-#~ " running on a VPS will be used"
-#~ " as an environment for the build. "
-#~ "We assume you are running as root."
-#~ " First add the necessary extra "
-#~ "repository and update all packages::"
-#~ msgstr ""
-
