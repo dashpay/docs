@@ -11,18 +11,11 @@ instructions and screenshots will reference the Android software,
 highlighting differences between the platforms where necessary.
 
 Dash Copay is currently undergoing beta testing using 
-:ref:`testnet <testnet>` and is available for Android. iOS, Windows, 
-macOS and Linux versions will be made available when they are ready.
+:ref:`testnet <testnet>` and will be available for Android. iOS, Windows, 
+macOS and Linux versions when they are ready.
 
-|image1|
-
-.. |image1| image:: img/google-play.png
-   :width: 222px
-   :target: https://play.google.com/store/apps/details?id=org.dash.copay
-
-The Dash Copay wallet is available from the `Google Play Store for
-Android
-<https://play.google.com/store/apps/details?id=org.dash.copay>`_.
+Update June 2018:
+<https://www.dash.org/forum/threads/dashcopay-release-plan.38915/#post-190465>
 
 .. _dash-copay-installation:
 
