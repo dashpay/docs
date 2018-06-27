@@ -1313,7 +1313,7 @@ General Bytes
 
 Lamassu
   .. image:: exchanges/lamassu.png
-     :width: 75px
+     :width: 200px
      :align: right
      :target: https://lamassu.is/
 
