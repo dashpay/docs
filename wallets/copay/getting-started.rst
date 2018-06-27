@@ -10,12 +10,11 @@ supported platforms (Android, iOS, Windows, macOS, Linux), the
 instructions and screenshots will reference the Android software,
 highlighting differences between the platforms where necessary.
 
-Dash Copay is currently undergoing beta testing using 
-:ref:`testnet <testnet>` and will be available for Android. iOS, Windows, 
-macOS and Linux versions when they are ready.
+Dash Copay is currently undergoing beta testing using  :ref:`testnet
+<testnet>` and will be available for Android. iOS, Windows,  macOS and
+Linux versions when they are ready.
 
-Update June 2018:
-<https://www.dash.org/forum/threads/dashcopay-release-plan.38915/#post-190465>
+Update June 2018: https://www.dash.org/forum/threads/dashcopay-release-plan.38915/#post-190465
 
 .. _dash-copay-installation:
 
