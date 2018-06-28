@@ -65,6 +65,42 @@ here:
 
    Edge Welcome, Receive Dash and Balance screens
 
+Paytomat
+========
+
+https://paytomat.com
+
+.. image:: img/paytomat.png
+   :width: 100px
+   :align: right
+   :target: https://paytomat.com
+
+Paytomat offers a multicurrency wallet for Android and iOS which
+integrates a loyalty program to incentivize retailers and consumers to
+transact in Dash.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.paytomat
+
+Paytomat is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=com.paytomat>`__ and
+coming soon on the Apple App Store for iOS.
+
+Documentation
+-------------
+
+Join the Paytomat Telegram group or send an email to
+support@paytomat.com for support with Paytomat.
+
+.. figure:: img/paytomat-wallet.png
+   :width: 300px
+
+   Paytomat wallet running on Android
+
 Exodus
 ======
 
