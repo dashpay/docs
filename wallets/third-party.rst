@@ -97,7 +97,7 @@ Join the Paytomat Telegram group or send an email to
 support@paytomat.com for support with Paytomat.
 
 .. figure:: img/paytomat-wallet.png
-   :width: 300px
+   :width: 133px
 
    Paytomat wallet running on Android
 
