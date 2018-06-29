@@ -11,7 +11,7 @@ Store. While older versions of iOS are supported, you will need to be
 using iOS 10.0 or newer to use the latest version.
 
 .. image:: img/app-store.png
-    :width: 300 px
+    :width: 250 px
     :target: https://itunes.apple.com/app/id1206647026
 
 Compiling from source

@@ -10,7 +10,7 @@ The easiest way to install the Dash Wallet for Android is from the
 Google Play Store. 
 
 .. image:: img/google-play-badge.png
-    :width: 300 px
+    :width: 250 px
     :target: https://play.google.com/store/apps/details?id=hashengineering.darkcoin.wallet
 
 From APK
