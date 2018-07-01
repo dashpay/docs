@@ -920,7 +920,7 @@ changeNOW
 
   changeNOW allows users to directly exchange one crypto asset for
   another without creating any account, albeit with a higher markup than
-  most exchanges. ShapeShift supports Dash and over 75 other
+  most exchanges. changeNOW supports Dash and over 75 other
   cryptocurrencies.
 
 Godex
