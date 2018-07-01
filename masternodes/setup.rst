@@ -40,8 +40,8 @@ If you are updating a masternode, see :ref:`here <masternode-update>`
 instead. You will need:
 
 - 1000 Dash
-- A wallet to store your Dash, either a hardware wallet or Dash Core 
-  wallet
+- A wallet to store your Dash, preferably a hardware wallet, although 
+  Dash Core wallet is also supported
 - A Linux server, preferably a Virtual Private Server (VPS)
 
 This guide also assumes you will be working from a Windows computer.
