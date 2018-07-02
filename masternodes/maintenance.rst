@@ -220,7 +220,8 @@ alias for your masternode::
 
 Monitor the status of your masternode as it starts up::
 
-  ~/.dashcore/dash-cli getinfo
+  ~/.dashcore/dash-cli getblockcount
+  ~/.dashcore/dash-cli getnetworkinfo
   ~/.dashcore/dash-cli mnsync status
   ~/.dashcore/dash-cli masternode status
 

@@ -458,7 +458,7 @@ Control
 debug ( 0 | 1 | addrman | alert | bench | coindb | db | lock | rand | rpc | selectcoins | mempool | mempoolrej | net | proxy | prune | http | libevent | tor | zmq | dash | privatesend | instantsend | masternode | spork | keepass | mnpayments | gobject )
   Change debug category on the fly. Specify single category or use comma to specify many.
 getinfo
-  Returns an object containing various state info.
+  Deprecated. Returns an object containing various state info.
 help ( "command" )
   List all commands, or get help for a specified command.
 stop

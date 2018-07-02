@@ -245,7 +245,7 @@ of ``blocks`` is equal to the current number of blocks in the Dash
 blockchain, as can be seen from any synchronized Dash wallet or `block
 explorer <https://insight.dash.org/insight/>`_::
 
-  ~/.dashcore/dash-cli getinfo
+  ~/.dashcore/dash-cli getblockcount
 
 Setting up P2Pool
 -----------------
