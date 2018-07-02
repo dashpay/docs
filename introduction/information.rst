@@ -440,6 +440,22 @@ DAP
   Decentralized Application Protocol. This term describes an application
   running on top of the Dash DAPI platform.
 
+DAP Client
+  An HTTP Client that connects to DAPI and enables Dash blockchain users
+  to read and write data to their DAP Space.
+
+DAP Schema
+  A Dash Schema document extending the Dash System Schema to define
+  consensus data and rules within a DAP contract.
+
+DAP Space
+  The part of a DAP State that is owned by a specific blockchain user.
+  Data in a DAP Space can only be changed by the owner.
+
+DAP State
+  The total set of data stored in a DAP. This data consists of user
+  DAP Spaces.
+
 DAPI
   Decentralized Application Programming Interface. See above for a
   definition of API. DAPI will perform the same functions as an API, but
@@ -490,6 +506,10 @@ Dash Evolution
   will make Dash as easy to use as PayPal, while still remaining
   decentralized. See the :ref:`Evolution <evolution>` page for more 
   information.
+
+Dash Schema
+  A JSON-based language specification for defining and validating
+  consensus data in Evolution.
 
 DDoS
   A distributed denial of service attack uses large numbers of computers
@@ -977,3 +997,8 @@ vin
   outputs. The vin is the list of inputs to the transaction, and vout is
   the list of outputs. Masternodes require a 1000 DASH vin (exactly that
   amount) in order to work.
+
+VMN
+  Virtual Masternode - a standalone masternode emulator in JavaScript
+  that simulates Layer 1-3 Evolution functions for DAP design, development
+  and testing.
