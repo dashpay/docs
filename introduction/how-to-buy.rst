@@ -585,6 +585,18 @@ Golix
   people in Sub-Saharan Africa buy and sell DASH and other
   cryptocurrencies.
 
+eBitcoinics
+  .. image:: exchanges/ebitcoinics.png
+     :width: 200px
+     :align: right
+     :target: http://www.ebitcoinics.com
+
+  http://www.ebitcoinics.com
+
+  eBitcoinics is a cryptocurrency exchange and education platform for
+  the African market. Dash is available for exchange against Nigerian
+  Naira (NGN) and Ghanaian Cedi (GHS).
+
 Bisq
   .. image:: exchanges/bisq.png
      :width: 200px
