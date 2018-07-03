@@ -497,7 +497,7 @@ using GPG by Holger Schinzel with the key ``4B88 269A BD8D F332``,
 key, download the ASC file for the current release of Dash and verify
 the signature as follows::
 
-  curl https://keybase.io/schinzelh/pgp_keys.asc | gpg --import
+  curl https://keybase.io/udjinm6/pgp_keys.asc | gpg --import
   wget https://github.com/dashpay/dash/releases/download/v0.12.3.1/SHA256SUMS.asc
   gpg --verify SHA256SUMS.asc
 
