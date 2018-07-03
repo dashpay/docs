@@ -470,6 +470,11 @@ Dash
   `Wikipedia article
   <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_
 
+DashDrive
+  Dash network data storage backend service used by masternodes for 
+  off-chain data relating to Evolution. DashDrive implements `IPFS
+  <https://ipfs.io>`_, a type of distributed file storage system.
+
 Dash Client
   Dash clients are software programs used to interface with the Dash
   network. They store the private keys needed to conduct Dash
@@ -754,6 +759,10 @@ Hashrate
   The number of hashes that can be performed by a Dash miner in a given
   period of time (usually a second). 
 
+Insight
+  Blockchain information server used to power block explorers and 
+  respond to transaction queries.
+
 InstantX
   See InstantSend
 
@@ -846,13 +855,13 @@ PrivateSend
   to maintain financial privacy between users. It can be turned on or 
   off at the users' discretion.
 
-Proof of Work - PoW
-  Consensus mechanism that keeps all nodes honest by requiring
-  computational power to be expended in order to create new blocks.
-  Miners must use expensive equipment and burn electricity to add blocks
-  to the blockchain. Without a consensus mechanism of some sort, any
-  node could add blocks to the chain and the network's nodes would never
-  agree on which chain was valid.
+Proof of Service - PoSe  
+  Consensus mechanism used in Dash to verify that a masternode has
+  provided uninterrupted service meeting a minimum quality level to the
+  network. Maintaining this service allows a masternode to enter and
+  move up through the global list and eventually into the selection pool
+  to receive payment.
+
 
 Proof of Stake - PoS
   Consensus mechanism that relies on ownership of a cryptocurrency to
@@ -866,6 +875,14 @@ Proof of Stake - PoS
   event of an attack it is actually beneficial for Proof of Stake nodes
   to "vote" to accept both the legitimate chain and the attacker's
   chain.
+
+Proof of Work - PoW
+  Consensus mechanism that keeps all nodes honest by requiring
+  computational power to be expended in order to create new blocks.
+  Miners must use expensive equipment and burn electricity to add blocks
+  to the blockchain. Without a consensus mechanism of some sort, any
+  node could add blocks to the chain and the network's nodes would never
+  agree on which chain was valid.
 
 Public Key
   The `public key <https://en.wikipedia.org/wiki/Public-
@@ -883,6 +900,10 @@ Pump and dump
   value to crash. This is particularly common in markets with low
   liquidity, such as some altcoins.
 
+Quorum
+  Group of masternodes signing or voting on some action, with the
+  formation of the group determined by some determiniation algorithm.
+
 QR Code
   A two-dimensional graphical block containing a monochromatic pattern
   representing a sequence of data. QR codes are designed to be scanned
@@ -893,6 +914,16 @@ Satoshi Nakamoto
   `Satoshi Nakamoto <https://en.wikipedia.org/wiki/Satoshi_Nakamoto>`_
   is the name used by the person or people who designed Bitcoin and
   created its original reference implementation.
+
+SDK
+  Software Development Kit. A set of tools, code and documentation used
+  by developers to create apps targeting a specific hardware or software
+  platform.
+
+State View
+  The current state of a data object once all changes from state
+  transitions have been applied. Used in Evolution to determine what
+  should be displayed in a given social wallet, for example.
 
 Spork
   The Dash development team created a mechanism known as a ":ref:`spork
@@ -926,6 +957,15 @@ Testnet
 Tor
   An anonymous routing protocol used by people wanting to hide their
   identity online.
+
+Transaction
+  Some movement of data on the distributed blockchain ledger.
+  Transactions may divided into classical and special transactions.
+  Similar to Bitcoin, classical transactions move balances between
+  addresses on the blockchain. Special transactions contain an extra
+  payload in the format defined by `DIP2
+  <https://github.com/dashpay/dips/blob/master/dip-0002.md>`_, and can
+  be used to manage blockchain users, for example.
 
 Transaction Block
   A collection of transactions on the Dash network, gathered into a
