@@ -941,7 +941,7 @@ SDK
   platform.
 
 State View
-  The current state of a data object once all changes from state
+  The current state of all data objects once all changes from state
   transitions have been applied. Used in Evolution to determine what
   should be displayed in a given social wallet, for example.
 
