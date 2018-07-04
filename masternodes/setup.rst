@@ -492,10 +492,10 @@ file as shown on the Dash website under **Hash File**::
 
 You can also optionally verify the authenticity of your download as an
 official release by Dash Core Team. All releases of Dash are signed
-using GPG by Holger Schinzel with the key ``4B88 269A BD8D F332``,
-`verifiable here on Keybase <https://keybase.io/schinzelh>`_. Import the
-key, download the ASC file for the current release of Dash and verify
-the signature as follows::
+using GPG by UdjinM6 with the key ``8359 2BD1 400D 58D9``, `verifiable
+here on Keybase <https://keybase.io/udjinm6>`_. Import the key, download
+the ASC file for the current release of Dash and verify the signature as
+follows::
 
   curl https://keybase.io/udjinm6/pgp_keys.asc | gpg --import
   wget https://github.com/dashpay/dash/releases/download/v0.12.3.1/SHA256SUMS.asc
