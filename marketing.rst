@@ -260,6 +260,9 @@ translation is complete to request layout of the completed translation.
 | Spanish                | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ES.pdf>`__    |
 |                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ES.png>`__    |
 +------------------------+---------------------------------------------------------------------------------------------------+
+| Thai                   | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-TH.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-TH.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
 | Vietnamese             | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-VI.pdf>`__    |
 |                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-VI.png>`__    |
 +------------------------+---------------------------------------------------------------------------------------------------+
