@@ -202,29 +202,28 @@ newly secured environment as the new user::
   ufw logging on
   ufw enable
 
-(press **Y** and **Enter** to confirm)
+The below block creates a 1GB swap file if required.
+Copy & paste the block below into the PuTTY terminal.
 
 ::
 
-  fallocate -l 4G /swapfile
-  chmod 600 /swapfile
-  mkswap /swapfile
-  swapon /swapfile
-  nano /etc/fstab
+  if [ $(free -m|grep Swap|awk '{print $2}') -lt 1024 ]
+  then
+    echo "Adding 1GB swap..."
+    sudo bash -c "fallocate -l 1G /var/swapfile&&\
+    chmod 600 /var/swapfile&&\
+    mkswap /var/swapfile&&\
+    swapon /var/swapfile&&\
+    echo \"/var/swapfile none swap sw 0 0\">>/etc/fstab"
+  else
+    echo "You already have enough swap space."
+  fi
 
-Add the following line at the end of the file (press tab to separate
-each word/number), then press **Ctrl + X** to close the editor, then
-**Y** and **Enter** save the file.
-
-::
-
-  /swapfile none swap sw 0 0
-
-Then reboot the server:
+Now reboot the server:
 
 ::
 
-  reboot now
+  sudo reboot now
 
 PuTTY will disconnect when the server reboots.
 
