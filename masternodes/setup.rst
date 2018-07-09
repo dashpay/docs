@@ -125,8 +125,9 @@ Set up your operating system
 
 We will begin by connecting to your newly provisioned server. On
 Windows, we will first download an app called PuTTY to connect to the
-server. Go to the PuTTY download page here and select the appropriate
-MSI installer for your system. On Mac or Linux you can ssh directly from
+server. Go to the `PuTTY download page <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_
+and select the appropriate MSI installer for your system.
+On Mac or Linux you can ssh directly from
 the terminal - simply type ``ssh root@<server_ip>`` and enter your
 password when prompted.
 
