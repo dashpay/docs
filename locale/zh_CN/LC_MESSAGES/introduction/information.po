@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 10:04+0000\n"
+"POT-Creation-Date: 2018-07-11 06:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1016,22 +1017,62 @@ msgid ""
 "running on top of the Dash DAPI platform."
 msgstr ""
 
-#: ../../introduction/information.rst:447
-msgid "DAPI"
+#: ../../introduction/information.rst:445
+msgid "DAP Client"
 msgstr ""
 
 #: ../../introduction/information.rst:444
+msgid ""
+"An HTTP Client that connects to DAPI and enables Dash blockchain users to "
+"read and write data to their DAP Space."
+msgstr ""
+
+#: ../../introduction/information.rst:449
+msgid "DAP Schema"
+msgstr ""
+
+#: ../../introduction/information.rst:448
+msgid ""
+"A Dash Schema document extending the Dash System Schema to define consensus "
+"data and rules within a DAP contract."
+msgstr ""
+
+#: ../../introduction/information.rst:453
+msgid "DAP Space"
+msgstr ""
+
+#: ../../introduction/information.rst:452
+msgid ""
+"The part of a DAP State that is owned by a specific blockchain user. Data in"
+" a DAP Space can only be changed by the owner."
+msgstr ""
+
+#: ../../introduction/information.rst:457
+msgid "DAP State"
+msgstr ""
+
+#: ../../introduction/information.rst:456
+msgid ""
+"The total set of data stored in a DAP. This data consists of user DAP "
+"Spaces."
+msgstr ""
+
+#: ../../introduction/information.rst:463
+msgid "DAPI"
+msgstr ""
+
+#: ../../introduction/information.rst:460
 msgid ""
 "Decentralized Application Programming Interface. See above for a definition "
 "of API. DAPI will perform the same functions as an API, but with quorums of "
 "masternodes acting as the endpoints for API communication."
 msgstr ""
 
-#: ../../introduction/information.rst:455
+#: ../../introduction/information.rst:471
 msgid "Dark Gravity Wave"
-msgstr ""
+msgstr "暗黑重力波"
 
-#: ../../introduction/information.rst:450
+#: ../../introduction/information.rst:466
 msgid ""
 "In concept, :ref:`Dark Gravity Wave (DGW) <dark-gravity-wave>` is similar to"
 " *Kimoto Gravity Well*, adjusting the difficulty levels every block (instead"
@@ -1041,21 +1082,21 @@ msgid ""
 "exploit."
 msgstr ""
 
-#: ../../introduction/information.rst:459
+#: ../../introduction/information.rst:475
 msgid "Darkcoin"
 msgstr ""
 
-#: ../../introduction/information.rst:458
+#: ../../introduction/information.rst:474
 msgid ""
 "Dash was initially launched as XCoin and then rebranded to Darkcoin and "
 "finally Dash."
 msgstr ""
 
-#: ../../introduction/information.rst:471
+#: ../../introduction/information.rst:487
 msgid "Dash"
 msgstr ""
 
-#: ../../introduction/information.rst:462
+#: ../../introduction/information.rst:478
 msgid ""
 "Originally launched as Xcoin and later renamed to Darkcoin, the currency was"
 " later renamed \"Dash\" to avoid association with the darknet markets. Dash "
@@ -1067,11 +1108,22 @@ msgid ""
 " `Wikipedia article <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_"
 msgstr ""
 
-#: ../../introduction/information.rst:479
+#: ../../introduction/information.rst:492
+msgid "DashDrive"
+msgstr ""
+
+#: ../../introduction/information.rst:490
+msgid ""
+"Dash network data storage backend service used by masternodes for off-chain "
+"data relating to Evolution. DashDrive implements `IPFS <https://ipfs.io>`_, "
+"a type of distributed file storage system."
+msgstr ""
+
+#: ../../introduction/information.rst:500
 msgid "Dash Client"
 msgstr ""
 
-#: ../../introduction/information.rst:474
+#: ../../introduction/information.rst:495
 msgid ""
 "Dash clients are software programs used to interface with the Dash network. "
 "They store the private keys needed to conduct Dash transactions as well as a"
@@ -1081,11 +1133,11 @@ msgid ""
 "infrastructure."
 msgstr ""
 
-#: ../../introduction/information.rst:486
+#: ../../introduction/information.rst:507
 msgid "Dash Core Wallet"
 msgstr ""
 
-#: ../../introduction/information.rst:482
+#: ../../introduction/information.rst:503
 msgid ""
 "The :ref:`Dash Core Wallet <dash-core-wallet>` (known also as the QT wallet)"
 " is the \"official\" Dash wallet that is compiled by the Dash Core Team and "
@@ -1094,22 +1146,32 @@ msgid ""
 "request it."
 msgstr ""
 
-#: ../../introduction/information.rst:492
+#: ../../introduction/information.rst:513
 msgid "Dash Evolution"
 msgstr ""
 
-#: ../../introduction/information.rst:489
+#: ../../introduction/information.rst:510
 msgid ""
 "This is a 3 tier network Dash developers are presently building. It will "
 "make Dash as easy to use as PayPal, while still remaining decentralized. See"
 " the :ref:`Evolution <evolution>` page for more information."
 msgstr ""
 
-#: ../../introduction/information.rst:500
+#: ../../introduction/information.rst:517
+msgid "Dash Schema"
+msgstr ""
+
+#: ../../introduction/information.rst:516
+msgid ""
+"A JSON-based language specification for defining and validating consensus "
+"data in Evolution."
+msgstr ""
+
+#: ../../introduction/information.rst:525
 msgid "DDoS"
 msgstr ""
 
-#: ../../introduction/information.rst:495
+#: ../../introduction/information.rst:520
 msgid ""
 "A distributed denial of service attack uses large numbers of computers under"
 " an attacker’s control to drain the resources of a central target. They "
@@ -1119,11 +1181,11 @@ msgid ""
 "hit with DDoS attacks."
 msgstr ""
 
-#: ../../introduction/information.rst:517
+#: ../../introduction/information.rst:542
 msgid "Decentralized"
 msgstr ""
 
-#: ../../introduction/information.rst:503
+#: ../../introduction/information.rst:528
 msgid ""
 "`Decentralized computing "
 "<https://en.wikipedia.org/wiki/Decentralized_computing>`_ is the allocation "
@@ -1142,11 +1204,11 @@ msgid ""
 "effectiveness."
 msgstr ""
 
-#: ../../introduction/information.rst:525
+#: ../../introduction/information.rst:550
 msgid "Desktop Wallet"
 msgstr ""
 
-#: ../../introduction/information.rst:520
+#: ../../introduction/information.rst:545
 msgid ""
 "A wallet is a piece of software that stores your Dash. There are many "
 "different wallet options, but it is imperative to choose a secure one. We "
@@ -1155,11 +1217,11 @@ msgid ""
 " <hardware-wallets>`"
 msgstr ""
 
-#: ../../introduction/information.rst:536
+#: ../../introduction/information.rst:561
 msgid "Difficulty"
 msgstr ""
 
-#: ../../introduction/information.rst:528
+#: ../../introduction/information.rst:553
 msgid ""
 "This number determines how difficult it is to hash a new block. It is "
 "related to the maximum allowed number in a given numerical portion of a "
@@ -1171,15 +1233,15 @@ msgid ""
 "difficulty to increase over time."
 msgstr ""
 
-#: ../../introduction/information.rst:596
+#: ../../introduction/information.rst:621
 msgid "Digital Wallet"
 msgstr ""
 
-#: ../../introduction/information.rst:539
+#: ../../introduction/information.rst:564
 msgid "See :ref:`this link <wallets>` for full documentation on wallets."
 msgstr ""
 
-#: ../../introduction/information.rst:541
+#: ../../introduction/information.rst:566
 msgid ""
 "A digital wallet is similar to a physical wallet except that it is used to "
 "hold **digital currency**. A Dash wallet holds your private keys, which "
@@ -1188,7 +1250,7 @@ msgid ""
 "wallets can exist in many different forms and on many devices:"
 msgstr ""
 
-#: ../../introduction/information.rst:548
+#: ../../introduction/information.rst:573
 msgid ""
 "**Desktop Wallet** (:ref:`Dash Electrum Wallet <dash-electrum-wallet>`, "
 ":ref:`Dash Core Wallet <dash-core-wallet>`): Wallet programs that you "
@@ -1198,7 +1260,7 @@ msgid ""
 "funds."
 msgstr ""
 
-#: ../../introduction/information.rst:556
+#: ../../introduction/information.rst:581
 msgid ""
 "**Mobile Wallet** (:ref:`Android <dash-android-wallet>`, :ref:`iOS <dash-"
 "ios-wallet>`): These wallets can be downloaded through Google Play or Apple "
@@ -1209,7 +1271,7 @@ msgid ""
 "of funds on these wallets."
 msgstr ""
 
-#: ../../introduction/information.rst:565
+#: ../../introduction/information.rst:590
 msgid ""
 "**Online/Cloud/Web Wallet** (:ref:`Exodus <third-party-wallets>`, "
 ":ref:`MyDashWallet <web-wallets>`): Third parties that will store your Dash "
@@ -1223,7 +1285,7 @@ msgid ""
 "wallet or cryptocurrency exchange."
 msgstr ""
 
-#: ../../introduction/information.rst:577
+#: ../../introduction/information.rst:602
 msgid ""
 "**Hardware Wallets** (:ref:`Trezor <hardware-wallets>`, KeepKey, Ledger, "
 "Nano): A hardware wallet is a specialized, tamper-proof, hardware device "
@@ -1235,7 +1297,7 @@ msgid ""
 "storage for your Dash."
 msgstr ""
 
-#: ../../introduction/information.rst:587
+#: ../../introduction/information.rst:612
 msgid ""
 "**Offline/Cold Storage** (:ref:`Paper wallet <dash-paper-wallet>`): A "
 "special wallet that is created offline and is never exposed to the internet."
@@ -1248,11 +1310,11 @@ msgid ""
 "for long-term (multi-year) storage because they degrade over time."
 msgstr ""
 
-#: ../../introduction/information.rst:606
+#: ../../introduction/information.rst:631
 msgid "Digital Signature"
 msgstr ""
 
-#: ../../introduction/information.rst:599
+#: ../../introduction/information.rst:624
 msgid ""
 "A digital signature is a mathematical mechanism that allows someone to prove"
 " their identity or ownership of a digital asset. When your digital wallet "
@@ -1263,11 +1325,11 @@ msgid ""
 " owner of a certain Dash address."
 msgstr ""
 
-#: ../../introduction/information.rst:612
+#: ../../introduction/information.rst:637
 msgid "Electrum Wallet"
 msgstr ""
 
-#: ../../introduction/information.rst:609
+#: ../../introduction/information.rst:634
 msgid ""
 ":ref:`Dash Electrum Wallet <dash-electrum-wallet>` is a lightweight wallet "
 "that does not require you to download or sync the entire blockchain, making "
@@ -1275,11 +1337,11 @@ msgid ""
 "as PrivateSend and InstantSend."
 msgstr ""
 
-#: ../../introduction/information.rst:626
+#: ../../introduction/information.rst:651
 msgid "Encryption"
 msgstr ""
 
-#: ../../introduction/information.rst:615
+#: ../../introduction/information.rst:640
 msgid ""
 "In cryptography, `encryption <https://en.wikipedia.org/wiki/Encryption>`_ is"
 " the process of encoding messages or information in such a way that only "
@@ -1294,15 +1356,15 @@ msgid ""
 "\"uncrackable.\""
 msgstr ""
 
-#: ../../introduction/information.rst:650
+#: ../../introduction/information.rst:675
 msgid "Escrow Services"
 msgstr ""
 
-#: ../../introduction/information.rst:629
+#: ../../introduction/information.rst:654
 msgid "An `escrow <https://en.wikipedia.org/wiki/Escrow>`_ is:"
 msgstr ""
 
-#: ../../introduction/information.rst:631
+#: ../../introduction/information.rst:656
 msgid ""
 "a contractual arrangement in which a third party receives and disburses "
 "money or documents for the primary transacting parties, with the "
@@ -1310,20 +1372,20 @@ msgid ""
 "or"
 msgstr ""
 
-#: ../../introduction/information.rst:636
+#: ../../introduction/information.rst:661
 msgid ""
 "an account established by a broker for holding funds on behalf of the "
 "broker's principal or some other person until the consummation or "
 "termination of a transaction; or"
 msgstr ""
 
-#: ../../introduction/information.rst:640
+#: ../../introduction/information.rst:665
 msgid ""
 "a trust account held in the borrower's name to pay obligations such as "
 "property taxes and insurance premiums."
 msgstr ""
 
-#: ../../introduction/information.rst:643
+#: ../../introduction/information.rst:668
 msgid ""
 "A trusted escrow service is often used when purchasing cryptocurrency or "
 "other goods/services over the internet. Both the buyer and seller will "
@@ -1334,22 +1396,22 @@ msgid ""
 " the product (or currency) being purchased to the appropriate party."
 msgstr ""
 
-#: ../../introduction/information.rst:655
+#: ../../introduction/information.rst:680
 msgid "Evan Duffield"
 msgstr ""
 
-#: ../../introduction/information.rst:653
+#: ../../introduction/information.rst:678
 msgid ""
 "Founder and first Lead Developer of Dash. Inventor of X11, InstantSend and "
 "PrivateSend. Before creating Dash, Evan was a financial advisor and holds a "
 "Series 65 license."
 msgstr ""
 
-#: ../../introduction/information.rst:667
+#: ../../introduction/information.rst:692
 msgid "Exchange"
 msgstr ""
 
-#: ../../introduction/information.rst:658
+#: ../../introduction/information.rst:683
 msgid ""
 "The current price of one Dash compared to the price of other currencies, "
 "like the US dollar, Yen, Euro, or Bitcoin. Because most trading volume takes"
@@ -1362,11 +1424,11 @@ msgid ""
 "time of each transaction."
 msgstr ""
 
-#: ../../introduction/information.rst:673
+#: ../../introduction/information.rst:698
 msgid "Faucet"
 msgstr ""
 
-#: ../../introduction/information.rst:670
+#: ../../introduction/information.rst:695
 msgid ""
 "Faucets are a reward system, in the form of a website or app, that dispenses"
 " rewards in the form of a microdash or Duff, which is a hundredth of a "
@@ -1374,40 +1436,40 @@ msgid ""
 "or task as described by the website."
 msgstr ""
 
-#: ../../introduction/information.rst:683
+#: ../../introduction/information.rst:708
 msgid "Fiat Gateway"
 msgstr ""
 
-#: ../../introduction/information.rst:676
+#: ../../introduction/information.rst:701
 msgid ""
 "`Fiat money <https://en.wikipedia.org/wiki/Fiat_money>`_ has been defined "
 "variously as:"
 msgstr ""
 
-#: ../../introduction/information.rst:679
+#: ../../introduction/information.rst:704
 msgid "Any money declared by a government to be legal tender."
 msgstr ""
 
-#: ../../introduction/information.rst:680
+#: ../../introduction/information.rst:705
 msgid ""
 "State-issued money which is neither convertible by law to any other thing, "
 "nor fixed in value in terms of any objective standard."
 msgstr ""
 
-#: ../../introduction/information.rst:681
+#: ../../introduction/information.rst:706
 msgid ""
 "Intrinsically valueless money used as money because of government decree."
 msgstr ""
 
-#: ../../introduction/information.rst:683
+#: ../../introduction/information.rst:708
 msgid "Examples include the US dollar, the Euro, the Yen, and so forth."
 msgstr ""
 
-#: ../../introduction/information.rst:693
+#: ../../introduction/information.rst:718
 msgid "Fintech"
 msgstr ""
 
-#: ../../introduction/information.rst:686
+#: ../../introduction/information.rst:711
 msgid ""
 "`Financial technology "
 "<https://en.wikipedia.org/wiki/Financial_technology>`_, also known as "
@@ -1419,11 +1481,11 @@ msgid ""
 "Bitcoin."
 msgstr ""
 
-#: ../../introduction/information.rst:707
+#: ../../introduction/information.rst:732
 msgid "Fork"
 msgstr ""
 
-#: ../../introduction/information.rst:696
+#: ../../introduction/information.rst:721
 msgid ""
 "When the blockchain diverges or splits, with some clients recognizing one "
 "version of the blockchain as valid, and other clients believing that a "
@@ -1434,18 +1496,18 @@ msgid ""
 "extremely dangerous and should be avoided if possible."
 msgstr ""
 
-#: ../../introduction/information.rst:705
+#: ../../introduction/information.rst:730
 msgid ""
 "Forking is most likely to occur during software updates to the network. Dash"
 " uses a Multi-Phased Fork (“:ref:`Spork <sporks>`”) system for greater "
 "flexibility and safety."
 msgstr ""
 
-#: ../../introduction/information.rst:714
+#: ../../introduction/information.rst:739
 msgid "Full Nodes"
 msgstr ""
 
-#: ../../introduction/information.rst:710
+#: ../../introduction/information.rst:735
 msgid ""
 "Any Dash client that is serving a full version of the blockchain to peers. "
 "This can be a user running a Dash Core wallet on his/her desktop, or it "
@@ -1454,27 +1516,27 @@ msgid ""
 "blockchain."
 msgstr ""
 
-#: ../../introduction/information.rst:717
+#: ../../introduction/information.rst:742
 msgid "Fungible"
 msgstr ""
 
-#: ../../introduction/information.rst:717
+#: ../../introduction/information.rst:742
 msgid "Every unit of the currency is worth the same as any other unit."
 msgstr ""
 
-#: ../../introduction/information.rst:720
+#: ../../introduction/information.rst:745
 msgid "Genesis Block"
 msgstr ""
 
-#: ../../introduction/information.rst:720
+#: ../../introduction/information.rst:745
 msgid "The very first block in the block chain."
 msgstr ""
 
-#: ../../introduction/information.rst:736
+#: ../../introduction/information.rst:761
 msgid "GPU"
 msgstr ""
 
-#: ../../introduction/information.rst:723
+#: ../../introduction/information.rst:748
 msgid ""
 "A `graphics processing unit (GPU) "
 "<https://en.wikipedia.org/wiki/Graphics_processing_unit>`_, also "
@@ -1492,11 +1554,11 @@ msgid ""
 "GPUs."
 msgstr ""
 
-#: ../../introduction/information.rst:743
+#: ../../introduction/information.rst:768
 msgid "Hardware Wallet"
 msgstr ""
 
-#: ../../introduction/information.rst:739
+#: ../../introduction/information.rst:764
 msgid ""
 ":ref:`Hardware wallets <hardware-wallets>` are among the safest type of "
 "wallet for storing your Dash. Your private key is protected inside a piece "
@@ -1504,11 +1566,11 @@ msgid ""
 "sign transactions as normal, making it both safe and convenient."
 msgstr ""
 
-#: ../../introduction/information.rst:751
+#: ../../introduction/information.rst:776
 msgid "Hash"
 msgstr ""
 
-#: ../../introduction/information.rst:746
+#: ../../introduction/information.rst:771
 msgid ""
 "A mathematical process that takes a variable amount of data and produces a "
 "shorter, fixed-length output. A hashing function has two important "
@@ -1517,29 +1579,39 @@ msgid ""
 "tiniest part of the input will produce an entirely different output."
 msgstr ""
 
-#: ../../introduction/information.rst:755
+#: ../../introduction/information.rst:780
 msgid "Hashrate"
 msgstr ""
 
-#: ../../introduction/information.rst:754
+#: ../../introduction/information.rst:779
 msgid ""
 "The number of hashes that can be performed by a Dash miner in a given period"
 " of time (usually a second)."
 msgstr ""
 
-#: ../../introduction/information.rst:758
+#: ../../introduction/information.rst:784
+msgid "Insight"
+msgstr ""
+
+#: ../../introduction/information.rst:783
+msgid ""
+"Blockchain information server used to power block explorers and respond to "
+"transaction queries."
+msgstr ""
+
+#: ../../introduction/information.rst:787
 msgid "InstantX"
 msgstr ""
 
-#: ../../introduction/information.rst:758
+#: ../../introduction/information.rst:787
 msgid "See InstantSend"
 msgstr ""
 
-#: ../../introduction/information.rst:765
+#: ../../introduction/information.rst:794
 msgid "InstantSend"
-msgstr ""
+msgstr "即时支付"
 
-#: ../../introduction/information.rst:761
+#: ../../introduction/information.rst:790
 msgid ""
 ":ref:`InstantSend <instantsend>` technology uses the masternode network to "
 "\"lock\" transaction inputs, preventing Dash from being double-spent. Unlike"
@@ -1548,11 +1620,11 @@ msgid ""
 "after only a few seconds."
 msgstr ""
 
-#: ../../introduction/information.rst:772
+#: ../../introduction/information.rst:801
 msgid "Liquidity"
 msgstr ""
 
-#: ../../introduction/information.rst:768
+#: ../../introduction/information.rst:797
 msgid ""
 "The ability to buy and sell an asset easily, with pricing that stays roughly"
 " similar between trades. A suitably large community of buyers and sellers is"
@@ -1560,47 +1632,47 @@ msgid ""
 "volatility, and the inability to easily determine the value of an asset."
 msgstr ""
 
-#: ../../introduction/information.rst:780
+#: ../../introduction/information.rst:809
 msgid "Masternode"
 msgstr ""
 
-#: ../../introduction/information.rst:775
+#: ../../introduction/information.rst:804
 msgid ""
 "A :ref:`masternode <masternode-network>` is special type of full node that "
 "performs services for the network and is paid a portion of the block reward."
 " Masternodes require proof of ownership of 1000 DASH."
 msgstr ""
 
-#: ../../introduction/information.rst:779
+#: ../../introduction/information.rst:808
 msgid ""
 "Masternodes serve as the second tier of the Dash network, and power "
 "InstantSend, PrivateSend, the Budget System."
 msgstr ""
 
-#: ../../introduction/information.rst:785
+#: ../../introduction/information.rst:814
 msgid "Mining"
 msgstr ""
 
-#: ../../introduction/information.rst:783
+#: ../../introduction/information.rst:812
 msgid ""
 ":ref:`Miners <mining>` process transactions on the Dash network and publish "
 "them on the blockchain. As a reward for doing this, miners are paid 45% of "
 "the block reward."
 msgstr ""
 
-#: ../../introduction/information.rst:788
+#: ../../introduction/information.rst:817
 msgid "Mobile Wallet"
 msgstr ""
 
-#: ../../introduction/information.rst:788
+#: ../../introduction/information.rst:817
 msgid "These are wallets available on mobile devices (iOS + Android)."
 msgstr ""
 
-#: ../../introduction/information.rst:798
+#: ../../introduction/information.rst:827
 msgid "MultiSig"
 msgstr ""
 
-#: ../../introduction/information.rst:791
+#: ../../introduction/information.rst:820
 msgid ""
 "Multi-signature addresses provide additional security by requiring multiple "
 "people to sign a transaction with their private key before the transaction "
@@ -1611,22 +1683,22 @@ msgid ""
 "since it makes theft much more difficult."
 msgstr ""
 
-#: ../../introduction/information.rst:803
+#: ../../introduction/information.rst:832
 msgid "Node"
 msgstr ""
 
-#: ../../introduction/information.rst:801
+#: ../../introduction/information.rst:830
 msgid ""
 "A node is any device running Dash wallet software. Full nodes are software "
 "clients that have downloaded the entire blockchain and serve it to other "
 "clients on Dash's peer-to-peer network."
 msgstr ""
 
-#: ../../introduction/information.rst:810
+#: ../../introduction/information.rst:839
 msgid "OTC"
 msgstr ""
 
-#: ../../introduction/information.rst:806
+#: ../../introduction/information.rst:835
 msgid ""
 "Over the counter (OTC) trades are trades that occur off exchanges. In an OTC"
 " trade, a buyer and seller trade with each other directly, or through an "
@@ -1635,11 +1707,11 @@ msgid ""
 " order will move the price (called \"slippage\")."
 msgstr ""
 
-#: ../../introduction/information.rst:816
+#: ../../introduction/information.rst:845
 msgid "P2P"
 msgstr ""
 
-#: ../../introduction/information.rst:813
+#: ../../introduction/information.rst:842
 msgid ""
 "Peer-to-peer. Decentralized interactions that happen between at least two "
 "parties in a highly interconnected network. An alternative system to a 'hub-"
@@ -1647,22 +1719,22 @@ msgid ""
 " each other through a single mediation point."
 msgstr ""
 
-#: ../../introduction/information.rst:821
+#: ../../introduction/information.rst:850
 msgid "Paper Wallet"
 msgstr ""
 
-#: ../../introduction/information.rst:819
+#: ../../introduction/information.rst:848
 msgid ""
 ":ref:`Paper wallets <dash-paper-wallet>` are offline wallets, printed on "
 "paper for safety. If properly secured and stored they are considered the "
 "safest way to store cryptocurrency."
 msgstr ""
 
-#: ../../introduction/information.rst:833
+#: ../../introduction/information.rst:862
 msgid "Privacy"
 msgstr ""
 
-#: ../../introduction/information.rst:824
+#: ../../introduction/information.rst:853
 msgid ""
 "`Privacy <https://en.wikipedia.org/wiki/Privacy>`_ is the ability of an "
 "individual or group to seclude themselves, or information about themselves, "
@@ -1675,11 +1747,11 @@ msgid ""
 "includes PrivateSend, which allows users to maintain financial privacy."
 msgstr ""
 
-#: ../../introduction/information.rst:842
+#: ../../introduction/information.rst:871
 msgid "Private Key"
 msgstr ""
 
-#: ../../introduction/information.rst:836
+#: ../../introduction/information.rst:865
 msgid ""
 "A `private key <https://en.wikipedia.org/wiki/Public- key_cryptography>`_ is"
 " a long alphanumeric passcode that allows Dash to be spent. Every Dash "
@@ -1690,35 +1762,34 @@ msgid ""
 "secret."
 msgstr ""
 
-#: ../../introduction/information.rst:847
+#: ../../introduction/information.rst:876
 msgid "PrivateSend"
-msgstr ""
+msgstr "匿名支付"
 
-#: ../../introduction/information.rst:845
+#: ../../introduction/information.rst:874
 msgid ""
 ":ref:`PrivateSend <privatesend>` obscures the source of funds in order to "
 "maintain financial privacy between users. It can be turned on or off at the "
 "users' discretion."
 msgstr ""
 
-#: ../../introduction/information.rst:855
-msgid "Proof of Work - PoW"
+#: ../../introduction/information.rst:884
+msgid "Proof of Service - PoSe"
 msgstr ""
 
-#: ../../introduction/information.rst:850
+#: ../../introduction/information.rst:879
 msgid ""
-"Consensus mechanism that keeps all nodes honest by requiring computational "
-"power to be expended in order to create new blocks. Miners must use "
-"expensive equipment and burn electricity to add blocks to the blockchain. "
-"Without a consensus mechanism of some sort, any node could add blocks to the"
-" chain and the network's nodes would never agree on which chain was valid."
+"Consensus mechanism used in Dash to verify that a masternode has provided "
+"uninterrupted service meeting a minimum quality level to the network. "
+"Maintaining this service allows a masternode to enter and move up through "
+"the global list and eventually into the selection pool to receive payment."
 msgstr ""
 
-#: ../../introduction/information.rst:868
+#: ../../introduction/information.rst:897
 msgid "Proof of Stake - PoS"
 msgstr ""
 
-#: ../../introduction/information.rst:858
+#: ../../introduction/information.rst:887
 msgid ""
 "Consensus mechanism that relies on ownership of a cryptocurrency to maintain"
 " the blockchain. In Proof of Stake systems, each owner of the currency can "
@@ -1732,11 +1803,24 @@ msgid ""
 "and the attacker's chain."
 msgstr ""
 
-#: ../../introduction/information.rst:875
+#: ../../introduction/information.rst:905
+msgid "Proof of Work - PoW"
+msgstr ""
+
+#: ../../introduction/information.rst:900
+msgid ""
+"Consensus mechanism that keeps all nodes honest by requiring computational "
+"power to be expended in order to create new blocks. Miners must use "
+"expensive equipment and burn electricity to add blocks to the blockchain. "
+"Without a consensus mechanism of some sort, any node could add blocks to the"
+" chain and the network's nodes would never agree on which chain was valid."
+msgstr ""
+
+#: ../../introduction/information.rst:912
 msgid "Public Key"
 msgstr ""
 
-#: ../../introduction/information.rst:871
+#: ../../introduction/information.rst:908
 msgid ""
 "The `public key <https://en.wikipedia.org/wiki/Public- key_cryptography>`_ "
 "is derived from the private key but is not secret and can be revealed to "
@@ -1744,11 +1828,11 @@ msgid ""
 " to verify that the signature is valid."
 msgstr ""
 
-#: ../../introduction/information.rst:884
+#: ../../introduction/information.rst:921
 msgid "Pump and dump"
 msgstr ""
 
-#: ../../introduction/information.rst:878
+#: ../../introduction/information.rst:915
 msgid ""
 "Inflating the value of a financial asset that has been produced or acquired "
 "cheaply, often using aggressive publicity and misleading statements. The "
@@ -1758,11 +1842,21 @@ msgid ""
 "common in markets with low liquidity, such as some altcoins."
 msgstr ""
 
-#: ../../introduction/information.rst:890
+#: ../../introduction/information.rst:925
+msgid "Quorum"
+msgstr ""
+
+#: ../../introduction/information.rst:924
+msgid ""
+"Group of masternodes signing or voting on some action, with the formation of"
+" the group determined by some determiniation algorithm."
+msgstr ""
+
+#: ../../introduction/information.rst:931
 msgid "QR Code"
 msgstr ""
 
-#: ../../introduction/information.rst:887
+#: ../../introduction/information.rst:928
 msgid ""
 "A two-dimensional graphical block containing a monochromatic pattern "
 "representing a sequence of data. QR codes are designed to be scanned by "
@@ -1770,22 +1864,44 @@ msgid ""
 "encode Dash addresses."
 msgstr ""
 
-#: ../../introduction/information.rst:895
+#: ../../introduction/information.rst:936
 msgid "Satoshi Nakamoto"
 msgstr ""
 
-#: ../../introduction/information.rst:893
+#: ../../introduction/information.rst:934
 msgid ""
 "`Satoshi Nakamoto <https://en.wikipedia.org/wiki/Satoshi_Nakamoto>`_ is the "
 "name used by the person or people who designed Bitcoin and created its "
 "original reference implementation."
 msgstr ""
 
-#: ../../introduction/information.rst:911
+#: ../../introduction/information.rst:941
+msgid "SDK"
+msgstr ""
+
+#: ../../introduction/information.rst:939
+msgid ""
+"Software Development Kit. A set of tools, code and documentation used by "
+"developers to create apps targeting a specific hardware or software "
+"platform."
+msgstr ""
+
+#: ../../introduction/information.rst:946
+msgid "State View"
+msgstr ""
+
+#: ../../introduction/information.rst:944
+msgid ""
+"The current state of all data objects once all changes from state "
+"transitions have been applied. Used in Evolution to determine what should be"
+" displayed in a given social wallet, for example."
+msgstr ""
+
+#: ../../introduction/information.rst:962
 msgid "Spork"
 msgstr ""
 
-#: ../../introduction/information.rst:898
+#: ../../introduction/information.rst:949
 msgid ""
 "The Dash development team created a mechanism known as a \":ref:`spork "
 "<sporks>`\" by which updated code is released to the network, but not "
@@ -1802,29 +1918,29 @@ msgid ""
 " or client update."
 msgstr ""
 
-#: ../../introduction/information.rst:915
+#: ../../introduction/information.rst:966
 msgid "Tainted Coins"
 msgstr ""
 
-#: ../../introduction/information.rst:914
+#: ../../introduction/information.rst:965
 msgid ""
 "Taint is a measure of correlation between two (wallet) addresses. It is only"
 " important if the user is trying to remain anonymous."
 msgstr ""
 
-#: ../../introduction/information.rst:918
+#: ../../introduction/information.rst:969
 msgid "tDash"
 msgstr ""
 
-#: ../../introduction/information.rst:918
+#: ../../introduction/information.rst:969
 msgid "Test Dash, used on :ref:`testnet <testnet>`."
 msgstr ""
 
-#: ../../introduction/information.rst:924
+#: ../../introduction/information.rst:975
 msgid "Testnet"
 msgstr ""
 
-#: ../../introduction/information.rst:921
+#: ../../introduction/information.rst:972
 msgid ""
 ":ref:`Testnet <testnet>` is a network only for testing (parallel to the "
 "mainnet), test wallets, test coins, test masternodes, test miners, and test "
@@ -1832,92 +1948,106 @@ msgid ""
 "errors or forks are not harmful."
 msgstr ""
 
-#: ../../introduction/information.rst:928
+#: ../../introduction/information.rst:979
 msgid "Tor"
 msgstr ""
 
-#: ../../introduction/information.rst:927
+#: ../../introduction/information.rst:978
 msgid ""
 "An anonymous routing protocol used by people wanting to hide their identity "
 "online."
 msgstr ""
 
-#: ../../introduction/information.rst:932
+#: ../../introduction/information.rst:988
+msgid "Transaction"
+msgstr ""
+
+#: ../../introduction/information.rst:982
+msgid ""
+"Some movement of data on the distributed blockchain ledger. Transactions may"
+" divided into classical and special transactions. Similar to Bitcoin, "
+"classical transactions move balances between addresses on the blockchain. "
+"Special transactions contain an extra payload in the format defined by `DIP2"
+" <https://github.com/dashpay/dips/blob/master/dip-0002.md>`_, and can be "
+"used to manage blockchain users, for example."
+msgstr ""
+
+#: ../../introduction/information.rst:992
 msgid "Transaction Block"
 msgstr ""
 
-#: ../../introduction/information.rst:931
+#: ../../introduction/information.rst:991
 msgid ""
 "A collection of transactions on the Dash network, gathered into a block that"
 " can then be hashed and added to the blockchain."
 msgstr ""
 
-#: ../../introduction/information.rst:937
+#: ../../introduction/information.rst:997
 msgid "Transaction Fee"
 msgstr ""
 
-#: ../../introduction/information.rst:935
+#: ../../introduction/information.rst:995
 msgid ""
 "A :ref:`small fee <fees>` imposed on some transactions sent across the Dash "
 "network. The transaction fee is awarded to the miner that successfully "
 "hashes the block containing the relevant transaction."
 msgstr ""
 
-#: ../../introduction/information.rst:942
+#: ../../introduction/information.rst:1002
 msgid "Unconfirmed Transactions"
 msgstr ""
 
-#: ../../introduction/information.rst:940
+#: ../../introduction/information.rst:1000
 msgid ""
 "Transactions that are not yet processed by miners or held via InstantSend "
 "are \"unconfirmed on the blockchain.\" Unconfirmed transactions can be "
 "reversed and should not be considered as \"final.\""
 msgstr ""
 
-#: ../../introduction/information.rst:945
+#: ../../introduction/information.rst:1005
 msgid "Vanity Address"
 msgstr ""
 
-#: ../../introduction/information.rst:945
+#: ../../introduction/information.rst:1005
 msgid "A Dash address with a desirable pattern, such as a name."
 msgstr ""
 
-#: ../../introduction/information.rst:949
+#: ../../introduction/information.rst:1009
 msgid "Virgin Dash"
 msgstr ""
 
-#: ../../introduction/information.rst:948
+#: ../../introduction/information.rst:1008
 msgid ""
 "Dash received as a reward for mining a block or running a masternode. These "
 "have not yet been spent anywhere and are \"virgin.\""
 msgstr ""
 
-#: ../../introduction/information.rst:953
+#: ../../introduction/information.rst:1013
 msgid "Volatility"
 msgstr ""
 
-#: ../../introduction/information.rst:952
+#: ../../introduction/information.rst:1012
 msgid ""
 "The measurement of price movements over time for a traded financial asset "
 "(including Dash)."
 msgstr ""
 
-#: ../../introduction/information.rst:958
+#: ../../introduction/information.rst:1018
 msgid "Wallet"
 msgstr ""
 
-#: ../../introduction/information.rst:956
+#: ../../introduction/information.rst:1016
 msgid ""
 "A method of storing Dash for later use. A wallet holds the private keys "
 "associated with Dash addresses. The blockchain is the record of the Dash "
 "balances (and transactions) associated with those addresses."
 msgstr ""
 
-#: ../../introduction/information.rst:965
+#: ../../introduction/information.rst:1025
 msgid "Whitepaper"
-msgstr ""
+msgstr "白皮书"
 
-#: ../../introduction/information.rst:961
+#: ../../introduction/information.rst:1021
 msgid ""
 "A `white paper <https://en.wikipedia.org/wiki/White_paper>`_ is an "
 "authoritative report or guide that informs readers concisely about a complex"
@@ -1925,34 +2055,45 @@ msgid ""
 " to help readers understand an issue, solve a problem, or make a decision."
 msgstr ""
 
-#: ../../introduction/information.rst:969
+#: ../../introduction/information.rst:1029
 msgid "X11"
 msgstr ""
 
-#: ../../introduction/information.rst:968
+#: ../../introduction/information.rst:1028
 msgid ""
 ":ref:`X11 <x11-hash-algorithm>` is a hashing algorithm created by Dash Core "
 "developer Evan Duffield."
 msgstr ""
 
-#: ../../introduction/information.rst:973
+#: ../../introduction/information.rst:1033
 msgid "Zero Confirmations"
 msgstr ""
 
-#: ../../introduction/information.rst:972
+#: ../../introduction/information.rst:1032
 msgid ""
 "This is a transaction without any confirmations from the blockchain. It is "
 "technically reversible (unless InstantSend was used)."
 msgstr ""
 
-#: ../../introduction/information.rst:978
+#: ../../introduction/information.rst:1039
 msgid "vin"
 msgstr ""
 
-#: ../../introduction/information.rst:976
+#: ../../introduction/information.rst:1036
 msgid ""
 "A transaction (tx) consists of one or more inputs and one or more outputs. "
 "The vin is the list of inputs to the transaction, and vout is the list of "
 "outputs. Masternodes require a 1000 DASH vin (exactly that amount) in order "
 "to work."
+msgstr ""
+
+#: ../../introduction/information.rst:1043
+msgid "VMN"
+msgstr ""
+
+#: ../../introduction/information.rst:1042
+msgid ""
+"Virtual Masternode - a standalone masternode emulator in JavaScript that "
+"simulates Layer 1-3 Evolution functions for DAP design, development and "
+"testing."
 msgstr ""

@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-25 08:42+0000\n"
+"POT-Creation-Date: 2018-07-11 06:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Damian Walker <damianwalkerstrauss@gmail.com>, 2018\n"
+"Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,6 +52,10 @@ msgid ""
 "device you use to store it, you should purchase a :ref:`hardware wallet "
 "<hardware-wallets>`."
 msgstr ""
+"Por seguridad, no se recomienda almacenar fondos significativos en casas de "
+"cambio o billeteras de software. Si tienes criptomonedas que valen más que "
+"el dispositivo que usas para almacenarlas, deberías comprar una: ref: "
+"`billetera de hardware <hardware-wallets>`."
 
 #: ../../wallets/index.rst:26 ../../wallets/index.rst:68
 msgid "Dash Core Wallet"
@@ -71,10 +75,22 @@ msgid ""
 "functions in the wallet can be used. Dash Core Wallet is available for "
 "macOS, Linux, Raspberry Pi and Windows."
 msgstr ""
+"La billetera Dash Core es el lanzamiento oficial completo de Dash, y es "
+"compatible con todas las funciones de Dash a medida que se lanzan, "
+"incluyendo InstantSend y PrivateSend, así como una consola RPC y funciones "
+"de governanza. La billetera Dash Core (a veces conocida como la billetera "
+"QT, debido al marco de software QT utilizado en el desarrollo) es una "
+"billetera profesional o pesada que descarga la cadena de bloques completa "
+"(varios GB de tamaño) y puede funcionar como un nodo completo o masternode "
+"en el red. Debido al requisito de tener una copia completa de la cadena de "
+"bloques, se requiere cierto tiempo para la sincronización al iniciar la "
+"billetera. Una vez hecho esto, se mostrarán los saldos correctos y se podrán"
+" usar las funciones en la billetera. La billetera Dash Core está disponible "
+"para macOS, Linux, Raspberry Pi y Windows."
 
 #: ../../wallets/index.rst:41
 msgid "Features:"
-msgstr ""
+msgstr "Características:"
 
 #: ../../wallets/index.rst:43
 msgid "PrivateSend"
@@ -82,35 +98,35 @@ msgstr "PrivateSend"
 
 #: ../../wallets/index.rst:44
 msgid "InstandSend"
-msgstr ""
+msgstr "InstandSend"
 
 #: ../../wallets/index.rst:45
 msgid "Wallet encryption"
-msgstr ""
+msgstr "Encriptación de billetera"
 
 #: ../../wallets/index.rst:46
 msgid "Coin control and fee control"
-msgstr ""
+msgstr "Control de moneda y control de comisiones"
 
 #: ../../wallets/index.rst:47
 msgid "QR code generation and address book"
-msgstr ""
+msgstr "Generación de código QR y libreta de direcciones"
 
 #: ../../wallets/index.rst:48
 msgid "Masternode commands and voting"
-msgstr ""
+msgstr "Comandos y votación de masternodes"
 
 #: ../../wallets/index.rst:49
 msgid "Automated backup"
-msgstr ""
+msgstr "Respaldo automatizado"
 
 #: ../../wallets/index.rst:50
 msgid "Debug console"
-msgstr ""
+msgstr "Consola de depuración"
 
 #: ../../wallets/index.rst:52
 msgid "Available documentation:"
-msgstr ""
+msgstr "Documentación disponible:"
 
 #: ../../wallets/index.rst:73 ../../wallets/index.rst:103
 msgid "Dash Electrum Wallet"
@@ -126,6 +142,14 @@ msgid ""
 "instant, while still keeping your funds secure and mobile. It does not "
 "currently support advanced InstantSend and PrivateSend features."
 msgstr ""
+"Dash Electrum es una billetera liviana que utiliza potentes servidores "
+"externos para indexar la cadena de bloques, mientras sigue asegurando las "
+"llaves en su computadora personal. Las transacciones se verifican en la "
+"cadena de bloques de Dash utilizando una técnica llamada verificación de "
+"pago segura (SPV), que solo requiere los encabezados de bloque y no el "
+"bloque completo. Esto significa que el inicio de la cartera es casi "
+"instantáneo, a la vez que mantiene sus fondos seguros y móviles. Actualmente"
+" no es compatible con funciones avanzadas de InstantSend y PrivateSend."
 
 #: ../../wallets/index.rst:84
 msgid ""
@@ -134,6 +158,11 @@ msgid ""
 "Bitcoin Electrum features (mostly identical in Dash Electrum) is available "
 "at the `official documentation site <http://docs.electrum.org>`_."
 msgstr ""
+"Dash Electrum es una bifurcación de la billetera Electrum para Bitcoin. Si "
+"bien esta documentación se centra en el uso de Dash Electrum, la "
+"documentación completa de todas las características de Bitcoin Electrum (en "
+"su mayoría idénticas en Dash Electrum) está disponible en el `sitio oficial "
+"de documentación. <http://docs.electrum.org>`_."
 
 #: ../../wallets/index.rst:108
 msgid "Dash Android Wallet"
@@ -148,10 +177,17 @@ msgid ""
 "book of frequently used addresses, pay with NFC, sweep paper wallets and "
 "more."
 msgstr ""
+"Dash ofrece una billetera independiente para Android, con desarrollo "
+"respaldado por el presupuesto de Dash. La billetera Android de Dash admite "
+"funciones avanzadas de Dash, incluida la administración de contactos e "
+"InstandSend. Puedes escanear y mostrar códigos QR para realizar "
+"transferencias rápidas, hacer copias de seguridad y restaurar tu billetera, "
+"mantener una libreta de direcciones de direcciones usadas con frecuencia, "
+"pagar con NFC, barrer billeteras de papel y más."
 
 #: ../../wallets/index.rst:130
 msgid "*Dash Android Wallet*"
-msgstr ""
+msgstr "*Billetera Android de Dash*"
 
 #: ../../wallets/index.rst:136
 msgid "Dash iOS Wallet"
@@ -165,10 +201,16 @@ msgid ""
 "backup your wallet using a recovery phrase and even pay to Bitcoin addresses"
 " through native integration with ShapeShift."
 msgstr ""
+"Dash ofrece una billetera independiente para iOS, con desarrollo respaldado "
+"por el presupuesto de Dash. El Dash Wallet oficial admite funciones "
+"avanzadas de Dash como InstandSend. Puedes escanear y mostrar códigos QR "
+"para realizar transferencias rápidas, hacer una copia de seguridad de su "
+"billetera con una frase de recuperación e incluso pagar a las direcciones de"
+" Bitcoin a través de la integración nativa con ShapeShift."
 
 #: ../../wallets/index.rst:157
 msgid "*Dash iOS Wallet*"
-msgstr ""
+msgstr "*Billetera iOS de Dash*"
 
 #: ../../wallets/index.rst:162
 msgid "Dash Copay Wallet"
@@ -196,11 +238,11 @@ msgstr ""
 
 #: ../../wallets/index.rst:184
 msgid "*Dash Copay Wallet*"
-msgstr ""
+msgstr "*Billetera Copay de Dash*"
 
 #: ../../wallets/index.rst:189 ../../wallets/index.rst:204
 msgid "Dash Paper Wallet"
-msgstr ""
+msgstr "Billetera de papel de Dash"
 
 #: ../../wallets/index.rst:191
 msgid ""
@@ -209,6 +251,10 @@ msgid ""
 "computer without ever connecting to the internet. Perfect for long term "
 "secure storage."
 msgstr ""
+"El `Generador de billetera de papel deDash <https://paper.dash.org>`_te "
+"permite generar, encriptar y asegurar las llaves para una sola dirección de "
+"Dash en una computadora sin tener que conectarse a internet. Perfecto para "
+"el almacenamiento seguro a largo plazo."
 
 #: ../../wallets/index.rst:210
 msgid "Hardware Wallets"
@@ -225,6 +271,16 @@ msgid ""
 "could be used to steal passwords to unlock the private keys used with "
 "software wallets."
 msgstr ""
+"Una billetera de hardware es un tipo de dispositivo que almacena claves "
+"privadas para una cadena de bloques en un dispositivo de hardware seguro, en"
+" lugar de almacenarlas en un archivo de base de datos como wallet.dat "
+"utilizado con billeteras de software comunes. Esto ofrece importantes "
+"ventajas de seguridad sobre las billeteras de software, así como beneficios "
+"prácticos sobre las billeteras de papel. Hasta la fecha, no hay evidencia "
+"verificable de que las billeteras de hardware estén en peligro por los "
+"virus, y también son inmunes a los ataques de keylogger que podrían usarse "
+"para robar contraseñas para desbloquear las llaves privadas usadas con las "
+"billeteras de software."
 
 #: ../../wallets/index.rst:221
 msgid ""
@@ -235,20 +291,29 @@ msgid ""
 " computer or smartphone. Most hardware wallets feature a screen which allows"
 " you to independently confirm the address you are sending to is correct."
 msgstr ""
+"Las billeteras de hardware funcionan almacenando sus claves privadas en un "
+"área protegida de un microcontrolador. Es imposible que la clave privada "
+"deje el dispositivo en texto sin formato - solo la salida firmada del hash "
+"criptográfico se transmite al dispositivo que interactúa con la cadena de "
+"bloques, como tu computadora o teléfono inteligente. La mayoría de las "
+"billeteras de hardware cuentan con una pantalla que te permite confirmar de "
+"manera independiente que la dirección a la que estás enviando es correcta."
 
 #: ../../wallets/index.rst:229
 msgid ""
 "This section lists the most common commercial hardware wallets supporting "
 "Dash, although some other enthusiast projects may also be available."
 msgstr ""
+"Esta sección enumera las billeteras de hardware comerciales más comunes que "
+"admiten Dash, aunque también hay otros proyectos entusiastas disponibles."
 
 #: ../../wallets/index.rst:240
 msgid "Trezor Web Wallet"
-msgstr ""
+msgstr "Trezor Web Wallet"
 
 #: ../../wallets/index.rst:245
 msgid "Third Party Wallets"
-msgstr ""
+msgstr "Billeteras de terceros"
 
 #: ../../wallets/index.rst:247
 msgid ""
@@ -256,10 +321,14 @@ msgid ""
 "Many third party wallets support multiple different cryptocurrencies at the "
 "same time, or integrate instant cryptocurrency exchanges."
 msgstr ""
+"Estas billeteras han sido desarrolladas por desarrolladores externos para "
+"admitir Dash. Muchas billeteras de terceros admiten varias criptomonedas "
+"diferentes al mismo tiempo, o integran casas de cambio instantáneas de "
+"criptomonedas."
 
 #: ../../wallets/index.rst:260
 msgid "Edge Wallet"
-msgstr ""
+msgstr "Billetera Edge"
 
 #: ../../wallets/index.rst:266
 msgid "Web Wallets"
@@ -276,17 +345,29 @@ msgid ""
 "exception is MyDashWallet.org, which provides a secure web interface to the "
 "Dash blockchain while leaving you with full control of your private keys."
 msgstr ""
+"Las billeteras web son servicios que mantienen un saldo de Dash por ti, "
+"mientras mantienen el control de las claves privadas a tu nombre. Cualquier "
+"Dash almacenado en: ref: `casas de cambio <exchanges>` pertenece a esta "
+"categoría, pero también hay algunos servicios que pueden almacenar Dash por "
+"ti a través de simples sistemas de inicio de sesión de Google / Facebook. "
+"Debes ser extremadamente cuidadoso con el almacenamiento web, ya que tus "
+"Dash es tan seguros como la reputación de la empresa que los almacena. Una "
+"excepción particular es MyDashWallet.org, que proporciona una interfaz web "
+"segura para la cadena de bloques de Dash, al mismo tiempo que te da el "
+"control total de tus claves privadas."
 
 #: ../../wallets/index.rst:286
 msgid "My Dash Wallet"
-msgstr ""
+msgstr "Mi billetera de Dash"
 
 #: ../../wallets/index.rst:289
 msgid "Wallet Guides"
-msgstr ""
+msgstr "Guías de billetera"
 
 #: ../../wallets/index.rst:291
 msgid ""
 "Documentation in this section describes common tasks and questions relating "
 "to all wallets."
 msgstr ""
+"La documentación en esta sección describe tareas comunes y preguntas "
+"relacionadas con todas las billeteras."

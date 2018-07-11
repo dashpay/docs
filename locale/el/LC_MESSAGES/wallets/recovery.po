@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 10:04+0000\n"
+"POT-Creation-Date: 2018-07-11 06:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: John Theman <Grdash@mail.com>, 2018\n"
 "Language-Team: Greek (https://www.transifex.com/dash/teams/37570/el/)\n"
@@ -450,16 +450,15 @@ msgstr ""
 #: ../../wallets/recovery.rst:285
 msgid ""
 "Recovery takes place in two steps. First, we will convert the Dash iOS "
-"recovery phrase into an xprv key using a specific recovery depth, namely "
-"\"m/0p\". In the second step, we will import the xprv key into Dash "
-"Electrum."
+"recovery phrase into an xprv key. In the second step, we will import the "
+"xprv key into Dash Electrum."
 msgstr ""
 
-#: ../../wallets/recovery.rst:291
+#: ../../wallets/recovery.rst:290
 msgid "Retrieving the correct Dash iOS xprv key"
 msgstr ""
 
-#: ../../wallets/recovery.rst:293
+#: ../../wallets/recovery.rst:292
 msgid ""
 "Go to the `BIP39 Mnemonic Code Converter <https://iancoleman.io/bip39/>`_ "
 "page. This is a useful tool for manipulating/displaying BIP32/39 seed data. "
@@ -469,59 +468,55 @@ msgid ""
 "the tool is loaded in your browser, complete the following steps:"
 msgstr ""
 
-#: ../../wallets/recovery.rst:301
+#: ../../wallets/recovery.rst:300
 msgid "Enter your 12 word seed phrase in the **BIP39 Mnemonic** field."
 msgstr ""
 
-#: ../../wallets/recovery.rst:302
+#: ../../wallets/recovery.rst:301
 msgid "Leave **BIP39 Passphrase** blank."
 msgstr ""
 
+#: ../../wallets/recovery.rst:302
+msgid "Set coin to **Dash**."
+msgstr ""
+
 #: ../../wallets/recovery.rst:303
-msgid "Leave coin set to 'Bitcoin'."
+msgid "Under **Derivation Path**, click the **BIP44** tab."
 msgstr ""
 
 #: ../../wallets/recovery.rst:304
-msgid "Under **Derivation Path**, click the **BIP32** tab."
+msgid "Copy the value shown in **Account Extended Private Key**."
 msgstr ""
 
-#: ../../wallets/recovery.rst:305
-msgid "In the **BIP32 Derivation Path** box, type: ``m/0'``"
-msgstr ""
-
-#: ../../wallets/recovery.rst:306
-msgid "Copy the value shown in \"BIP32 Extended Private Key\"."
-msgstr ""
-
-#: ../../wallets/recovery.rst:309
+#: ../../wallets/recovery.rst:307
 msgid "Importing the xprv key into Dash Electrum"
 msgstr ""
 
-#: ../../wallets/recovery.rst:311
+#: ../../wallets/recovery.rst:309
 msgid "Open Dash Electrum and click **File** -> **New/Restore**."
 msgstr ""
 
-#: ../../wallets/recovery.rst:312
+#: ../../wallets/recovery.rst:310
 msgid "Type a name for your wallet."
 msgstr ""
 
-#: ../../wallets/recovery.rst:313
+#: ../../wallets/recovery.rst:311
 msgid "Select **Standard wallet**."
 msgstr ""
 
-#: ../../wallets/recovery.rst:314
+#: ../../wallets/recovery.rst:312
 msgid "Select **Use public or private keys**."
 msgstr ""
 
-#: ../../wallets/recovery.rst:315
-msgid "Paste in your value from **BIP32 Extended Private Key**."
+#: ../../wallets/recovery.rst:313
+msgid "Paste in your value from **Account Extended Private Key**."
 msgstr ""
 
-#: ../../wallets/recovery.rst:316
+#: ../../wallets/recovery.rst:314
 msgid "Optionally enter a password."
 msgstr ""
 
-#: ../../wallets/recovery.rst:318
+#: ../../wallets/recovery.rst:316
 msgid ""
 "Dash Electrum should now detect your Dash iOS balance and you should have "
 "complete access to your funds. The seed phrase won't be available in Dash "
@@ -531,18 +526,23 @@ msgid ""
 ":ref:`standard backup procedures <electrum-backup>`."
 msgstr ""
 
-#: ../../wallets/recovery.rst:325
+#: ../../wallets/recovery.rst:323
 msgid ""
-"Please see `this forum thread <https://www.dash.org/forum/threads /restore-"
-"breadwallet-dash-funds-to-your-electrum-dash-wallet- tested.8335>`_ for "
-"further discussion on this process."
+"Older versions of the Dash iOS wallet used **BIP32** addresses under the "
+"``m/0'`` derivation path. The wallet should migrate these funds over to "
+"BIP44 addresses during normal use, but some residual balance may be under "
+"this derivation path, so restoring the **BIP32 Extended Private Key** may be"
+" helpful in some situations. Please see `this forum thread "
+"<https://www.dash.org/forum/threads /restore-breadwallet-dash-funds-to- "
+"your-electrum-dash-wallet- tested.8335>`_ for further discussion on this "
+"process."
 msgstr ""
 
-#: ../../wallets/recovery.rst:333
+#: ../../wallets/recovery.rst:336
 msgid "Private Keys"
 msgstr ""
 
-#: ../../wallets/recovery.rst:335
+#: ../../wallets/recovery.rst:338
 msgid ""
 "Most wallets offer a function to import an address from a private key, see "
 "the documentation for your wallet for specific instructions. While private "
@@ -554,7 +554,7 @@ msgid ""
 "/quick-scan-qr-code- reader/id483336864>`_) to read the code first."
 msgstr ""
 
-#: ../../wallets/recovery.rst:345
+#: ../../wallets/recovery.rst:348
 msgid ""
 "First, start Dash Core and unlock your wallet by selecting **Settings > "
 "Unlock Wallet**. Enter your password, then open the debug console by "
@@ -562,17 +562,17 @@ msgid ""
 "replacing the example private key with your key::"
 msgstr ""
 
-#: ../../wallets/recovery.rst:352
+#: ../../wallets/recovery.rst:355
 msgid "Importing a private key using the debug console in Dash Core wallet"
 msgstr ""
 
-#: ../../wallets/recovery.rst:354
+#: ../../wallets/recovery.rst:357
 msgid ""
 "Dash Core will rescan the blockchain for transactions involving the public "
 "address of this key and enter the transactions and balance in your wallet."
 msgstr ""
 
-#: ../../wallets/recovery.rst:358
+#: ../../wallets/recovery.rst:361
 msgid ""
 "The private key must be in wallet import format (WIF). If your key is "
 "encrypted using BIP38 (key begins with 6P instead of 7), you must first "
@@ -583,16 +583,16 @@ msgid ""
 "this into your wallet."
 msgstr ""
 
-#: ../../wallets/recovery.rst:373
+#: ../../wallets/recovery.rst:376
 msgid ""
 "*Decrypting a BIP38 encrypted key to WIF for import in Dash Core wallet*"
 msgstr ""
 
-#: ../../wallets/recovery.rst:376
+#: ../../wallets/recovery.rst:379
 msgid "Forgotten Passwords"
 msgstr ""
 
-#: ../../wallets/recovery.rst:378
+#: ../../wallets/recovery.rst:381
 msgid ""
 "In most cases, if you selected a strong password and have forgotten or lost "
 "it, there is practically no hope of recovery. The encryption used by the "
@@ -605,17 +605,17 @@ msgid ""
 "apply brute force to crack a Bitcoin wallet will also work for Dash wallets."
 msgstr ""
 
-#: ../../wallets/recovery.rst:389
+#: ../../wallets/recovery.rst:392
 msgid "`Wallet Recovery Services <https://walletrecoveryservices.com>`_"
 msgstr ""
 
-#: ../../wallets/recovery.rst:390
+#: ../../wallets/recovery.rst:393
 msgid ""
 "`How To Recover Your Bitcoin Wallet Password "
 "<http://www.gobitgo.com/articles/1005/How-To-Recover-Your-Bitcoin-Wallet-"
 "Password>`_"
 msgstr ""
 
-#: ../../wallets/recovery.rst:391
+#: ../../wallets/recovery.rst:394
 msgid "`BTCRecover <https://github.com/gurnec/btcrecover>`_"
 msgstr ""

@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-25 08:42+0000\n"
+"POT-Creation-Date: 2018-07-11 06:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Tomas Alfaro <talfarod@gmail.com>, 2018\n"
+"Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,10 +29,15 @@ msgid ""
 "interface. Three major manufacturers of hardware wallets currently exist, "
 "with Dash supported on all of them."
 msgstr ""
+"Las billeteras de hardware le ofrecen la seguridad de almacenar tus llaves "
+"en un dispositivo seguro y al mismo tiempo, te permiten realizar "
+"transacciones simples a través de una interfaz web. Actualmente existen tres"
+" fabricantes principales de billeteras de hardware, con Dash admitido en "
+"todas ellas."
 
 #: ../../wallets/hardware.rst:14
 msgid "Trezor"
-msgstr ""
+msgstr "Trezor"
 
 #: ../../wallets/hardware.rst:20
 msgid ""
@@ -41,6 +46,11 @@ msgid ""
 "layer to all outbound bitcoin transactions. Trezor has supported Dash since "
 "January 2017 with the release of firmware version 1.4.2."
 msgstr ""
+"Desarrollado por la startup checa `SatoshiLabs <https://satoshilabs.com>` _,"
+" el dispositivo de 99 $ es esencialmente un dispositivo USB diseñado para "
+"agregar una nivel de autenticación extra a todas las transacciones de "
+"bitcoins salientes. Trezor ha admitido Dash desde enero de 2017 con el "
+"lanzamiento de la versión de firmware 1.4.2."
 
 #: ../../wallets/hardware.rst:26
 msgid ""
@@ -52,32 +62,43 @@ msgid ""
 " 'vault' for your private bitcoin key, Trezor claims to use a number of "
 "clever tricks to maintain security even on compromised and unsafe machines."
 msgstr ""
+"En virtud de su diseño, Trezor puede usarse para firmar transacciones en "
+"computadoras \"inseguras\" y es impermeable a los registradores de llaves y "
+"muchos otros vectores de ataque, por lo que incluso si tu PC se ve "
+"comprometida, el atacante no tiene forma de obtener tu llave privada. Ahí es"
+" donde el dispositivo recibe su nombre, ya que 'trezor' se traduce en "
+"'bóveda' en la mayoría de los idiomas eslavos, incluido el checo. Una "
+"especie de 'bóveda' para su llave privada de bitcoin, Trezor afirma utilizar"
+" una serie de ingeniosos trucos para mantener la seguridad incluso en "
+"máquinas comprometidas e inseguras."
 
 #: ../../wallets/hardware.rst:35
 msgid "Site: https://trezor.io"
-msgstr ""
+msgstr "Sitio: https://trezor.io"
 
 #: ../../wallets/hardware.rst:36
 msgid "Review: https://www.dashforcenews.com/trezor-hardware-wallet-review"
-msgstr ""
+msgstr "Revisar: https://www.dashforcenews.com/trezor-hardware-wallet-review"
 
 #: ../../wallets/hardware.rst:37
 msgid "Shop: https://shop.trezor.io"
-msgstr ""
+msgstr "Tienda: https://shop.trezor.io"
 
 #: ../../wallets/hardware.rst:38
 msgid "Wallet: https://wallet.trezor.io"
-msgstr ""
+msgstr "Billetera: https://wallet.trezor.io"
 
 #: ../../wallets/hardware.rst:40
 msgid ""
 "It is also possible to operate a Dash masternode using your Trezor. See here"
 " for details."
 msgstr ""
+"También es posible operar un masternode de Dash usando Trezor. Mira aquí "
+"para más detalles."
 
 #: ../../wallets/hardware.rst:44
 msgid "Getting Started"
-msgstr ""
+msgstr "Empezando"
 
 #: ../../wallets/hardware.rst:46
 msgid ""
@@ -85,18 +106,26 @@ msgid ""
 "`authorized reseller <https://trezor.io/resellers>`_, you will need a wallet"
 " to use it with. Trezor supports the following Dash wallets:"
 msgstr ""
+"Una vez que hayas comprado tu Trezor en https://shop.trezor.io o en un "
+"\"distribuidor autorizado <https://trezor.io/resellers>` _, necesitarás una "
+"billetera para usarlo. Trezor es compatible con las siguientes billeteras de"
+" Dash:"
 
 #: ../../wallets/hardware.rst:50
 msgid ""
 "`Trezor Wallet <https://wallet.trezor.io>`_ (`documentation "
 "<https://doc.satoshilabs.com/trezor-apps/trezorwallet.html>`__)"
 msgstr ""
+"`Billetera Trezor <https://wallet.trezor.io>`_ (`documentación "
+"<https://doc.satoshilabs.com/trezor-apps/trezorwallet.html>`__)"
 
 #: ../../wallets/hardware.rst:52
 msgid ""
 "`Dash Electrum Wallet <https://electrum.dash.org>`__ (:ref:`documentation "
 "<dash-electrum-wallet>`)"
 msgstr ""
+"`Billetera Dash Electrum <https://electrum.dash.org>`__ (:ref:`documentación"
+" <dash-electrum-wallet>`)"
 
 #: ../../wallets/hardware.rst:54
 msgid ""
@@ -104,6 +133,9 @@ msgid ""
 "tool>`_ (`documentation <https://github.com/Bertrand256/dash- masternode-"
 "tool/blob/master/README.md>`__)"
 msgstr ""
+"`Herramienta de masternode de Dash <https://github.com/Bertrand256/dash-"
+"masternode- tool>`_ (`documentación <https://github.com/Bertrand256/dash- "
+"masternode-tool/blob/master/README.md>`__)"
 
 #: ../../wallets/hardware.rst:58
 msgid ""
@@ -113,6 +145,11 @@ msgid ""
 " with the Trezor Wallet. Follow these steps when setting up your Trezor for "
 "the first time:"
 msgstr ""
+"Esta documentación describe cómo comenzar a utilizar la billetera web Trezor"
+" oficial en `https://wallet.trezor.io <https://wallet.trezor.io>` __. "
+"Confirma siempre que la URL sea correcta y que el cifrado SSL esté "
+"habilitado cuando trabajes con la billetera Trezor. Sigue estos pasos cuando"
+" configures tu Trezor por primera vez:"
 
 #: ../../wallets/hardware.rst:64
 msgid ""
@@ -120,26 +157,34 @@ msgid ""
 " should be glued shut. It should be impossible to remove the device without "
 "totally destroying the packaging."
 msgstr ""
+"Inspecciona el embalaje para ver si está manipulado. Debería haber dos "
+"sellos y las aletas deberían estar pegadas. Debería ser imposible remover el"
+" dispositivo sin destruir totalmente el embalaje."
 
 #: ../../wallets/hardware.rst:68
 msgid ""
 "Go to https://trezor.io/start/ and watch the video to introduce the concepts"
 " of a shifting PIN layout and recovery seed."
 msgstr ""
+"Ve a https://trezor.io/start/ y mira el video para presentar los conceptos "
+"de un diseño de un PIN cambiante y una semilla de recuperación."
 
 #: ../../wallets/hardware.rst:71
 msgid "Go to https://wallet.trezor.io/ to begin the setup process."
 msgstr ""
+"Ve a https://wallet.trezor.io/ para comenzar el proceso de configuración."
 
 #: ../../wallets/hardware.rst:73
 msgid ""
 "If not already installed, install the Trezor Bridge application from "
 "https://wallet.trezor.io/#/bridge"
 msgstr ""
+"Si aún no está instalado, instala la aplicación Trezor Bridge desde "
+"https://wallet.trezor.io/#/bridge"
 
 #: ../../wallets/hardware.rst:76
 msgid "Connect the Trezor to your computer when prompted."
-msgstr ""
+msgstr "Conecta el Trezor a tu computadora cuando se te solicite."
 
 #: ../../wallets/hardware.rst:78
 msgid ""
@@ -147,6 +192,9 @@ msgid ""
 "install firmware. Click the **Install** button, wait for the download and "
 "confirm on the device."
 msgstr ""
+"Si esta es la primera vez que conectas tu Trezor, se te pedirá que instales "
+"el firmware. Haz click en el botón **Instalar**, espera la descarga y "
+"confirma en el dispositivo."
 
 #: ../../wallets/hardware.rst:82
 msgid ""
@@ -154,18 +202,26 @@ msgid ""
 "matches the fingerprint shown on the screen. Note that this is hexadecimal "
 "and therefore not case-sensitive."
 msgstr ""
+"Cuando se complete, el dispositivo mostrará una huella digital. Verifica que"
+" esto coincida con la huella digital que se muestra en la pantalla. Ten en "
+"cuenta que esto es hexadecimal y, por lo tanto, no distingue entre "
+"mayúsculas y minúsculas."
 
 #: ../../wallets/hardware.rst:86
 msgid ""
 "After verification is complete, disconnect and reconnect your device. Enter "
 "a device label on the screen that appears."
 msgstr ""
+"Una vez completada la verificación, desconecta y vuelve a conectar tu "
+"dispositivo. Ingresa una etiqueta de dispositivo en la pantalla que aparece."
 
 #: ../../wallets/hardware.rst:89
 msgid ""
 "Enter and confirm a PIN by clicking on the squares according to the mapping "
 "shown on the device."
 msgstr ""
+"Ingresa y confirma un PIN haciendo click en los cuadrados de acuerdo con la "
+"asignación que se muestra en el dispositivo."
 
 #: ../../wallets/hardware.rst:92
 msgid ""
@@ -174,108 +230,132 @@ msgid ""
 " the recovery card. Never store your recovery seed in any digital format, "
 "including photos or text."
 msgstr ""
+"Tu dispositivo Trezor ahora mostrará una secuencia de 24 palabras en la "
+"pantalla. Esta es tu semilla de recuperación. Escribe las palabras en el "
+"orden en que aparecen en la tarjeta de recuperación. Nunca almacenes su "
+"semilla de recuperación en ningún formato digital, incluidas fotos o texto."
 
 #: ../../wallets/hardware.rst:97
 msgid ""
 "Verify the seed against what you have written down and store it in a safe "
 "place."
 msgstr ""
+"Verifica la semilla contra lo que has anotado y guárdala en un lugar seguro."
 
 #: ../../wallets/hardware.rst:100
 msgid "You will be asked to enter your PIN again."
-msgstr ""
+msgstr "Se te pedirá que ingreses tu PIN nuevamente."
 
 #: ../../wallets/hardware.rst:102
 msgid ""
 "The Trezor Wallet will appear with a message that your device is ready for "
 "use. Your device name will appear on the device."
 msgstr ""
+"La billetera Trezor aparecerá con un mensaje de que tu dispositivo está "
+"listo para su uso. El nombre de tu dispositivo aparecerá en el dispositivo."
 
 #: ../../wallets/hardware.rst:105
 msgid ""
 "Switch to the Dash wallet using the menu at the top left. You can now use "
 "your Trezor to send and receive Dash."
 msgstr ""
+"Cambia a la billetera Dash usando el menú en la esquina superior izquierda. "
+"Ahora puede usar tu Trezor para enviar y recibir Dash."
 
 #: ../../wallets/hardware.rst:111
 msgid "Trezor Web Wallet for Dash ready for first use"
-msgstr ""
+msgstr "La billetera web de Trezor para Dash lista para su primer uso"
 
 #: ../../wallets/hardware.rst:114
 msgid "Receiving Dash"
-msgstr ""
+msgstr "Recibir Dash"
 
 #: ../../wallets/hardware.rst:116
 msgid ""
 "We will now create a Dash receiving address and attempt to receive 1.0 DASH."
 msgstr ""
+"Ahora crearemos una dirección de recepción de Dash e intentaremos recibir "
+"1.0 DASH."
 
 #: ../../wallets/hardware.rst:119
 msgid "In the Trezor Dash wallet, click **Account #1**, then click Receive."
 msgstr ""
+"En la billetera Trezor de Dash, haz click en **Cuenta #1**, luego haz click "
+"en Recibir."
 
 #: ../../wallets/hardware.rst:120
 msgid ""
 "A Dash address will appear. Click **Show full address** to verify the "
 "address on the Trezor device."
 msgstr ""
+"Aparecerá una dirección de Dash. Haz click en **Mostrar dirección completa**"
+" para verificar la dirección en el dispositivo Trezor."
 
 #: ../../wallets/hardware.rst:126
 msgid "Send 1 DASH to this address using an exchange or another wallet."
 msgstr ""
+"Envía 1 DASH a esta dirección usando una casa de cambio u otra billetera."
 
 #: ../../wallets/hardware.rst:127
 msgid ""
 "Once the transaction is confirmed, it will appear on the **Transactions** "
 "tab of your Trezor Wallet."
 msgstr ""
+"Una vez que se confirma la transacción, aparecerá en la pestaña "
+"**Transacciones** de tu billetera Trezor."
 
 #: ../../wallets/hardware.rst:133
 msgid "Trezor Web Wallet after receiving Dash"
-msgstr ""
+msgstr "Billetera web deTrezor después de recibir Dash"
 
 #: ../../wallets/hardware.rst:137
 msgid "Sending Dash"
-msgstr ""
+msgstr "Enviar Dash"
 
 #: ../../wallets/hardware.rst:139
 msgid ""
 "We will now send the Dash (minus transaction costs) to an external address."
 msgstr ""
+"Ahora enviaremos el Dash (menos los costos de transacción) a una dirección "
+"externa."
 
 #: ../../wallets/hardware.rst:142
 msgid "In the Trezor Dash wallet, click **Account #1**, then click **Send**."
 msgstr ""
+"En la billetera Trezor de Dash, haz click en **Cuenta #1**, luego haz click "
+"en **Enviar**."
 
 #: ../../wallets/hardware.rst:143
 msgid "Enter the Dash address and amount in the fields."
-msgstr ""
+msgstr "Ingresa la dirección y el monto de Dash en los campos."
 
 #: ../../wallets/hardware.rst:148
 msgid "Enter your PIN."
-msgstr ""
+msgstr "Ingresa to PIN."
 
 #: ../../wallets/hardware.rst:149
 msgid "Confirm the address on the device, then confirm the action."
-msgstr ""
+msgstr "Confirma la dirección en el dispositivo, luego confirma la acción."
 
 #: ../../wallets/hardware.rst:154
 msgid ""
 "The transaction will be transmitted to the network and the recipient "
 "receives the funds."
 msgstr ""
+"La transacción se transmitirá a la red y el destinatario recibirá los "
+"fondos."
 
 #: ../../wallets/hardware.rst:160
 msgid "Trezor Web Wallet after sending Dash"
-msgstr ""
+msgstr "La billetera web de Trezor después de enviar Dash"
 
 #: ../../wallets/hardware.rst:163
 msgid "Advanced Functions"
-msgstr ""
+msgstr "Funciones avanzadas"
 
 #: ../../wallets/hardware.rst:166
 msgid "Changing the PIN/Passphrase"
-msgstr ""
+msgstr "Cambiar el PIN/frase de contraseña"
 
 #: ../../wallets/hardware.rst:168
 msgid ""
@@ -291,10 +371,23 @@ msgid ""
 "using them. For more information, see `here <https://blog.trezor.io/hide-"
 "your-trezor-wallets-with- multiple-passphrases-f2e0834026eb>`_."
 msgstr ""
+"Tu PIN es tu principal forma de seguridad cuando usas su billetera de "
+"hardware. Se considera seguro porque el diseño del teclado PIN cambia cada "
+"vez que lo usas. Si sospechas que tu PIN se ha visto comprometido, cámbialo "
+"usando las siguientes instrucciones. Para mayor seguridad, o si crees que "
+"puedes estar sujeto a coacción en algún momento en el futuro, puedes agregar"
+" una frase de contraseña para revelar más billeteras que solo aparecen "
+"cuando ingresas tu frase de contraseña. Dado que la frase de contraseña "
+"actúa como un salero criptográfico, no existe una frase de contraseña "
+"\"correcta\" - se mostrará una billetera diferente para cada frase de "
+"contraseña que ingreses. Asegúrate de comprender las frases de contraseña "
+"antes de usarlas. Para obtener más información, consulta `aquí "
+"<https://blog.trezor.io/hide-your-trezor-wallets-with- multiple-passphrases-"
+"f2e0834026eb>` _."
 
 #: ../../wallets/hardware.rst:182
 msgid "Changing your PIN"
-msgstr ""
+msgstr "Cambiar tu PIN"
 
 #: ../../wallets/hardware.rst:184
 msgid ""
@@ -302,6 +395,9 @@ msgid ""
 "<https://wallet.trezor.io>`_ and `DMT <https://github.com/Bertrand256 /dash-"
 "masternode-tool/releases>`_."
 msgstr ""
+"Puedes cambiar tu PIN de Trezor desde `Billetera de Trezor "
+"<https://wallet.trezor.io>` _ y desde `DMT <https://github.com/Bertrand256 /"
+" dash-masternode-tool / releases>` _."
 
 #: ../../wallets/hardware.rst:188
 msgid ""
@@ -310,6 +406,10 @@ msgid ""
 "want to change your PIN on the hardware device, then enter your existing PIN"
 " and the new PIN twice."
 msgstr ""
+"**Desde Trezor:** Ve a https://wallet.trezor.io y haz click en el ícono del "
+"engranaje junto a tu nombre de usuario. Luego haz click en **Cambiar PIN**. "
+"Tendrás que confirmar que deseaa cambiar tu PIN en el dispositivo de "
+"hardware, luego ingresa tu PIN existente y el nuevo PIN dos veces."
 
 #: ../../wallets/hardware.rst:196
 msgid ""
@@ -318,10 +418,15 @@ msgid ""
 "will need to confirm you want to change your PIN on the hardware device, "
 "then enter your existing PIN and the new PIN twice."
 msgstr ""
+"**Desde DMT:** Abre DMT y haz clic en **Herramientas > PIN de billetera de "
+"hardware/Configuración de frase de contraseña**. La siguiente ventana "
+"aparecerá. Haz clic en **Cambiar *. Tendrás que confirmar que deseas cambiar"
+" tu PIN en el dispositivo de hardware, luego ingresa tu PIN existente y el "
+"nuevo PIN dos veces."
 
 #: ../../wallets/hardware.rst:206
 msgid "Adding a passphrase"
-msgstr ""
+msgstr "Agregar una frase de contraseña"
 
 #: ../../wallets/hardware.rst:208
 msgid ""
@@ -331,6 +436,13 @@ msgid ""
 "passphrase. Note that you do not need to enter a passphrase - blank is "
 "perfectly acceptable and will reveal your normal wallet."
 msgstr ""
+"Puedes agregar una frase de contraseña a tu Trezor tanto desde tu billetera "
+"Trezor como desde un DMT. Antes de agregar una frase de contraseña, debes "
+"estar plenamente consciente de cómo funciona como una \"palabra de 25 "
+"caracteres\" para su semilla, y los riesgos de olvidar su frase de "
+"contraseña. Ten en cuenta que no necesitas ingresar una frase de contraseña "
+"- el espacio en blanco es perfectamente aceptable y revelará su billetera "
+"normal."
 
 #: ../../wallets/hardware.rst:214
 msgid ""
@@ -338,6 +450,10 @@ msgid ""
 "click **Enable passphrase encryption**. This enables a prompt to enter a "
 "passphrase each time you use your Trezor."
 msgstr ""
+"**Desde Trezor:** Haz click en **Avanzado**, confirma que comprendes los "
+"riesgos y haz clic en **Habilitar cifrado de frase de contraseña**. Esto "
+"permite que un aviso ingrese una frase de contraseña cada vez que uses tu "
+"Trezor."
 
 #: ../../wallets/hardware.rst:221
 msgid ""
@@ -345,10 +461,14 @@ msgid ""
 "configuration**. The following window will appear. Click **Enable**. This "
 "enables a prompt to enter a passphrase each time you use your Trezor."
 msgstr ""
+"**Desde DMT: **Abre DMT y haz click en **Herramientas > PIN de billetera de "
+"hardware/Configuración de frase de contraseña **. La siguiente ventana "
+"aparecerá. Haz click en **Habilitar**. Esto permite que un aviso ingrese una"
+" frase de contraseña cada vez que uses tu Trezor."
 
 #: ../../wallets/hardware.rst:230
 msgid "Changing the Homescreen"
-msgstr ""
+msgstr "Cambiar pantalla de inicio"
 
 #: ../../wallets/hardware.rst:232
 msgid ""
@@ -358,36 +478,46 @@ msgid ""
 "/homescreen-editor/>`_, or you can create and upload your own 128x64px black"
 " and white image. To change your homescreen image:"
 msgstr ""
+"Tu Trezor te permite cambiar la imagen de la pantalla de inicio del logo de "
+"Trezor predeterminado. Se puede seleccionar un rango de imágenes existentes,"
+" puedes generar uno tu mismo usando el `Editor de de pantalla de inicio de "
+"Trezor <https://trezor.github.io/homescreen-editor/>` _, o puedes crear y "
+"cargar tu propia imagen 128x64px en blanco y negro. Para cambiar la imagen "
+"de tu pantalla de inicio:"
 
 #: ../../wallets/hardware.rst:239
 msgid "Go to https://wallet.trezor.io and open your wallet"
-msgstr ""
+msgstr "Ve a https://wallet.trezor.io y abre tu billetera"
 
 #: ../../wallets/hardware.rst:240
 msgid "Click the small cog icon next to your device name"
 msgstr ""
+"Haz click en el ícono de un pequeño engranaje al lado del nombre de tu "
+"dispositivo"
 
 #: ../../wallets/hardware.rst:241
 msgid "Click the **Homescreen** tab"
-msgstr ""
+msgstr "Haz click en la pestaña **Pantalla de inicio**"
 
 #: ../../wallets/hardware.rst:242
 msgid ""
 "Select the new homescreen, then click the **Set as homescreen** button at "
 "the top"
 msgstr ""
+"Selecciona la nueva pantalla de inicio, luego haz click en el botón "
+"**Establecer como pantalla de inicio** en la parte superior"
 
 #: ../../wallets/hardware.rst:244
 msgid "Confirm the change on the Trezor device"
-msgstr ""
+msgstr "Confirme el cambio en el dispositivo Trezor"
 
 #: ../../wallets/hardware.rst:246
 msgid "A few sample images are available for Dash:"
-msgstr ""
+msgstr "Algunas imágenes de muestra están disponibles para Dash:"
 
 #: ../../wallets/hardware.rst:258
 msgid "Storage Suggestions"
-msgstr ""
+msgstr "Recomendaciones de almacenamiento"
 
 #: ../../wallets/hardware.rst:260
 msgid ""
@@ -397,32 +527,43 @@ msgid ""
 "member tungfa has shared photos of a custom-made Trezor case. The following "
 "materials are required:"
 msgstr ""
+"Si bien perder un Trezor no es una amenaza para la seguridad (a menos que "
+"alguien sepa su PIN y/o frase de contraseña), es un dispositivo "
+"moderadamente costoso que puede dañarse por la presión o el agua, por "
+"ejemplo. Por esta razón, Tungfa, miembro de la comunidad Dash, compartió "
+"fotos de un caso Trezor hecho a medida. Se requieren los siguientes "
+"materiales:"
 
 #: ../../wallets/hardware.rst:266
 msgid ""
 "`Pelican Case 1010 Micro Case <http://www.pelican.com/us/en/product "
 "/watertight-protector-hard-cases/micro-case/standard/1010/>`_"
 msgstr ""
+"`Protector Pelican protector 1010 Micro "
+"<http://www.pelican.com/us/en/product /watertight-protector-hard-cases"
+"/micro-case/standard/1010/>`_"
 
 #: ../../wallets/hardware.rst:268
 msgid "Foam"
-msgstr ""
+msgstr "Espuma"
 
 #: ../../wallets/hardware.rst:269
 msgid "Trezor + Cable"
-msgstr ""
+msgstr "Trezor + Cable"
 
 #: ../../wallets/hardware.rst:270
 msgid "USB Stick (for wallet.dat files + blockchains of all portfolios)"
 msgstr ""
+"Memoria USB (para archivos wallet.dat + cadena de bloques de todos los "
+"portafolios)"
 
 #: ../../wallets/hardware.rst:271
 msgid "Notepad"
-msgstr ""
+msgstr "Notepad"
 
 #: ../../wallets/hardware.rst:283
 msgid "KeepKey"
-msgstr ""
+msgstr "KeepKey"
 
 #: ../../wallets/hardware.rst:289
 msgid ""
@@ -431,32 +572,39 @@ msgid ""
 "supported Dash since firmware version 4.2.10, released on March 28, 2017. "
 "Follow these instructions to begin using Dash on your KeepKey device."
 msgstr ""
+"La billetera de hardware KeepKey de $ 129 cuenta con una pantalla grande y "
+"firmware de fuente 100% abierta para garantizar la seguridad de sus llaves "
+"privadas. KeepKey ha admitido Dash desde la versión de firmware 4.2.10, "
+"lanzada el 28 de marzo de 2017. Sigue estas instrucciones para comenzar a "
+"usar Dash en tu dispositivo KeepKey."
 
 #: ../../wallets/hardware.rst:295
 msgid "Site: https://www.keepkey.com"
-msgstr ""
+msgstr "Sitio: https://www.keepkey.com"
 
 #: ../../wallets/hardware.rst:296
 msgid "Review: https://coincentral.com/keepkey-wallet-review"
-msgstr ""
+msgstr "Revisar: https://coincentral.com/keepkey-wallet-review"
 
 #: ../../wallets/hardware.rst:297
 msgid "Shop: https://keepkey.myshopify.com/"
-msgstr ""
+msgstr "Tienda: https://keepkey.myshopify.com/"
 
 #: ../../wallets/hardware.rst:298
 msgid "Product video: https://vimeo.com/133811189"
-msgstr ""
+msgstr "Video del producto: https://vimeo.com/133811189"
 
 #: ../../wallets/hardware.rst:300
 msgid ""
 "It is also possible to operate a Dash masternode using your KeepKey. See "
 "here for details."
 msgstr ""
+"También es posible operar un masternode de Dash usando tu KeepKey. Mira aquí"
+" para más detalles."
 
 #: ../../wallets/hardware.rst:304
 msgid "Ledger"
-msgstr ""
+msgstr "Ledger"
 
 #: ../../wallets/hardware.rst:310
 msgid ""
@@ -469,25 +617,36 @@ msgid ""
 "<http://support.ledgerwallet.com/knowledge_base/topics/how-to-use-dash- "
 "with-a-nano-s>`_ to add Dash support to the device."
 msgstr ""
+"Fundada en 2014, la startup francesa `Ledger <https://www.ledger.fr>`_ "
+"comercializa soluciones de seguridad de cadena de bloques para empresas y "
+"consumidores, incluida la versión `Ledger Nano S de 58 € "
+"<https://www.ledgerwallet.com/products/ledger- nano-s>`_ y próximamente "
+"`Ledger Blue <https://www.ledgerwallet.com/products/ledger-blue>`_. Ledger "
+"Nano S ha admitido Dash desde noviembre de 2016 y la versión de firmware "
+"1.2. Sigue `estas instrucciones "
+"<http://support.ledgerwallet.com/knowledge_base/topics/how-to-use-dash- "
+"with-a-nano-s>`_ para agregar compatibilidad con Dash al dispositivo."
 
 #: ../../wallets/hardware.rst:320
 msgid "Site: https://www.ledgerwallet.com"
-msgstr ""
+msgstr "Sitio: https://www.ledgerwallet.com"
 
 #: ../../wallets/hardware.rst:321
 msgid "Review: https://www.dashforcenews.com/ledger-nano-s-review"
-msgstr ""
+msgstr "Revisar: https://www.dashforcenews.com/ledger-nano-s-review"
 
 #: ../../wallets/hardware.rst:322
 msgid "Shop: https://www.ledgerwallet.com/products"
-msgstr ""
+msgstr "Tienda: https://www.ledgerwallet.com/products"
 
 #: ../../wallets/hardware.rst:324
 msgid "Product video:"
-msgstr ""
+msgstr "Video del producto:"
 
 #: ../../wallets/hardware.rst:332
 msgid ""
 "It is also possible to operate a Dash masternode using your Ledger. See here"
 " for details."
 msgstr ""
+"También es posible operar un masternode de Dash usando tu Ledger. Mira aquí "
+"para más detalles."
