@@ -204,8 +204,8 @@ are available for this:
   scanned into the second wallet (**Tools > Load Transaction > From QR
   Code**)
 
-With both of the above methods, you can now add the seconds signature
-the the transaction (using the **Sign** button). It will then be
+With both of the above methods, you can now add the second signature
+to the transaction (using the **Sign** button). It will then be
 broadcast to the network.
 
 .. figure:: img/faq-multisig-fully-signed.png
@@ -234,7 +234,7 @@ Funds from paper wallets are swept into an Dash Electrum Wallet by
 creating a transaction using the private key and sending it to a new
 address from your wallet. This is necessary because it is not possible
 to add new public or private keys to an existing deterministic series of
-addresses derived from aa seed phrase.
+addresses derived from a seed phrase.
 
 Begin by selecting the **Wallet** > **Private Keys** > **Sweep** menu
 item. The **Sweep private keys** dialog will appear, where you can
