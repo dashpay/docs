@@ -126,14 +126,14 @@ from the payment queue. If you run a hosted masternode, your host will
 take care of updates for you. If not, the method of updating depends on
 how you installed Dash.
 
-Minor version updates to Dash (e.g. from 0.12.1.4 to 0.12.1.5) usually
-do not result in changes to the protocol version, while major version
-updates (e.g. from 0.12.1.5 to 0.12.2.0) will usually increase the
-network protocol version. If the protocol version did not change, you DO
-NOT need to restart your masternode if you complete the update within 60
-minutes. If the protocol version did change, you must issue a start
-command from your wallet. Do not send start commands to your masternode
-if not necessary, as it may send you to the back of the payment queue.
+Minor version updates to Dash (e.g. from 0.12.3.1 to 0.12.3.2) do not
+make changes to the protocol version, while major version updates (e.g.
+from 0.12.2.3 to 0.12.3.0) will usually increase the network protocol
+version. If the protocol version did not change, you DO NOT need to
+restart your masternode if you complete the update within 60 minutes. If
+the protocol version did change, you must issue a start command from
+your wallet. Do not send start commands to your masternode if not
+necessary, as it will send you to the back of the payment queue.
 
 Option 1: Automated update using dashman
 ----------------------------------------
@@ -148,11 +148,14 @@ Check the status of your masternode::
 
   ~/dashman/dashman status
 
-After some time, all statuses should turn green, in particular
-**masternode started: YES** and **masternode network state: ENABLED**.
-If you do need to restart your masternode, update the software version
-of the wallet holding the collateral to the latest version and follow
-the instructions :ref:`here <masternode-setup-start>`.
+If you are doing a major version update and need to restart your
+masternode, update the software version of the wallet holding the
+collateral to the latest version now by following the instructions
+:ref:`here <masternode-setup-start>`. Continue monitoring your
+masternode. After some time, all statuses should turn green, in
+particular **masternode started: YES** and **masternode network state:
+ENABLED**.
+
 
 Option 2: Manual update
 -----------------------
