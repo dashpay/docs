@@ -69,8 +69,8 @@ SPORK_5_INSTANTSEND_MAX_VALUE
 SPORK_6_NEW_SIGS
   Enables a new signature format for Dash-specific network messages
   introduced in Dash 12.3. For more information, see `here
-  <https://github.com/dashpay/dash/pull/1936>`_ and `here
-  <https://github.com/dashpay/dash/pull/1937>`_.
+  <https://github.com/dashpay/dash/pull/1936>`__ and `here
+  <https://github.com/dashpay/dash/pull/1937>`__.
 
 SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT
   If enabled, miners must pay 50% of the block reward to a masternode
