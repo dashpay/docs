@@ -66,6 +66,12 @@ SPORK_5_INSTANTSEND_MAX_VALUE
   Enforces the maximum value in Dash that can be included in an
   InstantSend transaction.
 
+SPORK_6_NEW_SIGS
+  Enables a new signature format for Dash-specific network messages
+  introduced in Dash 12.3. For more information, see `here
+  <https://github.com/dashpay/dash/pull/1936>`_ and `here
+  <https://github.com/dashpay/dash/pull/1937>`_.
+
 SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT
   If enabled, miners must pay 50% of the block reward to a masternode
   currently pending selection or the block will be considered invalid.
