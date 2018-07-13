@@ -140,12 +140,12 @@ Documentation
 
 Read the `FAQ <https://www.mobi.me/faq>`_, join the `Mobi Telegram group
 <https://t.me/btccmobi>`_ or send an email to support@paytomat.com for
-support with Paytomat.d
+support with Mobi.
 
 .. figure:: img/mobi-wallet.png
    :width: 133px
 
-   Paytomat wallet running on Android
+   Mobi wallet running on Android
 
 
 Exodus
