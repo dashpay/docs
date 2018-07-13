@@ -93,13 +93,60 @@ coming soon on the Apple App Store for iOS.
 Documentation
 -------------
 
-Join the Paytomat Telegram group or send an email to
-support@paytomat.com for support with Paytomat.
+Join the `Paytomat Telegram group <https://t.me/paytomat>`_ or send an
+email to support@paytomat.com for support with Paytomat.
 
 .. figure:: img/paytomat-wallet.png
    :width: 133px
 
    Paytomat wallet running on Android
+
+Mobi.me
+=======
+
+https://www.mobi.me
+
+.. image:: img/mobi.png
+   :width: 100px
+   :align: right
+   :target: https://www.mobi.me
+
+Mobi is a multi-currency mobile wallet linked to your phone number. As a
+hosted wallet, Mobi holds the private keys to your funds on your behalf,
+meaning you can restore your funds simply by receiving a text message
+and entering your PIN. However, you must trust Mobi to act responsibly
+with these private keys, and you will lose access to your funds if you
+lose access to your phone number. A web interface is also available, and
+you can use fiat currency to buy cryptocurrency in the app.
+
+Installation
+------------
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/mobi-your-money-anywhere/id1180017272
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.btcc.wallet
+
+Mobi is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=com.btcc.wallet>`__ and
+the `Apple App Store for iOS <https://itunes.apple.com/us/app/mobi-your-
+money-anywhere/id1180017272>`__.
+
+Documentation
+-------------
+
+Read the `FAQ <https://www.mobi.me/faq>`_, join the `Mobi Telegram group
+<https://t.me/btccmobi>`_ or send an email to support@paytomat.com for
+support with Paytomat.d
+
+.. figure:: img/mobi-wallet.png
+   :width: 133px
+
+   Paytomat wallet running on Android
+
 
 Exodus
 ======
