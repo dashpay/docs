@@ -139,7 +139,7 @@ Documentation
 -------------
 
 Read the `FAQ <https://www.mobi.me/faq>`_, join the `Mobi Telegram group
-<https://t.me/btccmobi>`_ or send an email to support@paytomat.com for
+<https://t.me/btccmobi>`_ or send an email to support@mobi.me for
 support with Mobi.
 
 .. figure:: img/mobi-wallet.png
