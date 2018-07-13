@@ -101,8 +101,8 @@ email to support@paytomat.com for support with Paytomat.
 
    Paytomat wallet running on Android
 
-Mobi.me
-=======
+Mobi
+====
 
 https://www.mobi.me
 
