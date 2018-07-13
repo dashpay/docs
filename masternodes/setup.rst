@@ -348,7 +348,7 @@ Option 2: Sending from Dash Core wallet
 ---------------------------------------
 
 Open Dash Core wallet and wait for it to synchronize with the network.
-It should like this when ready:
+It should look like this when ready:
 
 .. figure:: img/setup-collateral-dashcore.png
    :width: 400px
