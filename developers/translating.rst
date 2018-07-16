@@ -145,10 +145,10 @@ External hyperlinks
 
   An external hyperlink consists of a single backtick `````, followed by
   some text which must be translated, followed by angle brackets with
-  the link target ``< >``, followed by another backtick and an
-  underscore ```_``. Translate the text, but do not translate the
-  hyperlink (unless you want to link to a version of the page in the
-  target language).
+  the link target ``< >``, followed by another backtick and a single or
+  double underscore: ```_`` or ```__``. Translate the text, but do not
+  translate the hyperlink (unless you want to link to a version of the
+  page in the target language).
 
 
 Dash Graphics
