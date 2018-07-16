@@ -127,9 +127,9 @@ Bold and italic
 Internal hyperlinks
   **Source:** ``See :ref:`here <sporks>` for a brief introduction to sporks.``
 
-  **Target:** ``ver :ref:`aquí <sporks>` para una breve introducción a sporks``
+  **Target:** ``Ver :ref:`aquí <sporks>` para una breve introducción a sporks``
 
-  An internal hyperlink consists of the phrase `:ref:`, followed by a
+  An internal hyperlink consists of the phrase ``:ref:``, followed by a
   single backtick `````, followed by some text which must be translated,
   followed by angle brackets with the link target ``< >``, followed by
   another backtick `````. Translate the text, but do not translate the
