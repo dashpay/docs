@@ -1338,11 +1338,22 @@ Lamassu
   .. image:: exchanges/lamassu.png
      :width: 200px
      :align: right
-     :target: https://lamassu.is/
+     :target: https://lamassu.is
 
-  https://lamassu.is/
+  https://lamassu.is
 
   Lamassu offers modular one-way and two-way cash ATMs integrating Dash.
+
+CoinFlip
+  .. image:: exchanges/coinflip.png
+     :width: 200px
+     :align: right
+     :target: https://coinflip.tech
+
+  https://coinflip.tech
+
+  CoinFlip operates a network of ATMs across the USA and offers hosted
+  ATMs for businesses.
 
 TigoCTM
   .. image:: exchanges/tigoctm.png
