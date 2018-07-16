@@ -244,6 +244,17 @@ WEX
   has resumed business under a new name. DASH trading pairs exist for
   BTC, USD, RUB, EUR, LTC and ETH.
 
+Koineks
+  .. image:: exchanges/koineks.png
+     :width: 183px
+     :align: right
+     :target: https://koineks.com/
+
+  https://koineks.com/
+
+  Koineks serves the Turkish market and offers trading pairs for DASH against
+  the Turkish Lira and Bitcion.
+
 Exmo
   .. image:: exchanges/exmo.png
      :width: 200px
