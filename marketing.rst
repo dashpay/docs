@@ -55,6 +55,8 @@ translation is complete to request layout of the completed translation.
 +----------+----------------------------------------------------------------------------------------------------+
 | German   | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_RZ_2018.pdf>`__    |
 +----------+----------------------------------------------------------------------------------------------------+
+| Thai     | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_TH_RZ_2018.pdf>`__ |
++----------+----------------------------------------------------------------------------------------------------+
 
 
 Flyers
