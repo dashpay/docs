@@ -27,8 +27,11 @@ documentation also describes the
 :ref:`technical <merchants-technical>` steps required to integrate 
 various Dash services.
 
-Once you are up and running accepting Dash, consider adding your
-business to the directory maintained at `Discover Dash
+Many major merchants accept Dash - check out `Bitrefill
+<https://www.bitrefill.com>`__ or `CheapAir
+<https://www.cheapair.com>`__ for examples of what merchant integration
+can look like. Once you are up and running accepting Dash, consider
+adding your business to the directory maintained at `Discover Dash
 <https://discoverdash.com>`_ for increased visibility.
 
 Payment Processors
