@@ -475,16 +475,16 @@ the latest Dash Core wallet. Click **Linux**, then right-click on
 **Download TGZ** for **Dash Core Linux 64 Bit** and select **Copy link
 address**. Go back to your terminal window and enter the following
 command, pasting in the address to the latest version of Dash Core
-(0.12.3.1 in the example) by right clicking or pressing **Ctrl + V**::
+(0.12.3.2 in the example) by right clicking or pressing **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.12.3.1/dashcore-0.12.3.1-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.12.3.2/dashcore-0.12.3.2-x86_64-linux-gnu.tar.gz
 
 You can optionally verify the integrity of your download by running the
 following command and comparing the output against the value for the
 file as shown on the Dash website under **Hash File**::
 
-  sha256sum dashcore-0.12.3.1-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.12.3.2-x86_64-linux-gnu.tar.gz
 
 .. figure:: img/setup-manual-download.png
    :width: 250px
@@ -499,7 +499,7 @@ the ASC file for the current release of Dash and verify the signature as
 follows::
 
   curl https://keybase.io/udjinm6/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v0.12.3.1/SHA256SUMS.asc
+  wget https://github.com/dashpay/dash/releases/download/v0.12.3.2/SHA256SUMS.asc
   gpg --verify SHA256SUMS.asc
 
 .. figure:: img/setup-manual-gpg.png
@@ -511,14 +511,14 @@ Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
   mkdir .dashcore
-  tar xfvz dashcore-0.12.3.1-x86_64-linux-gnu.tar.gz
+  tar xfvz dashcore-0.12.3.2-x86_64-linux-gnu.tar.gz
   cp dashcore-0.12.3/bin/dashd .dashcore/
   cp dashcore-0.12.3/bin/dash-cli .dashcore/
   chmod 777 .dashcore/dash*
 
 Clean up unneeded files::
 
-  rm dashcore-0.12.3.1-x86_64-linux-gnu.tar.gz
+  rm dashcore-0.12.3.2-x86_64-linux-gnu.tar.gz
   rm -r dashcore-0.12.3/
 
 Create a configuration file using the following command::
