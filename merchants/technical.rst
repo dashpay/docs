@@ -189,14 +189,15 @@ DashJ
 
 https://github.com/HashEngineering/dashj 
 
-dashj is a library for working with the Dash protocol. It can maintain
-a wallet, send/receive transactions without needing a local copy of
-Dash Core and has many other advanced features. It's implemented in
-Java but can be used from any JVM compatible language: examples in
-Python and JavaScript are included.
+DashJ is a library for working with the Dash protocol. It can maintain a
+wallet, send/receive transactions (including InstantSend) without
+needing a local copy of Dash Core, and has many other advanced features.
+It's implemented in Java but can be used from any JVM compatible
+language: examples in Python and JavaScript are included.
 
 - Platform: Java
 - Documentation: https://bitcoinj.github.io/getting-started 
+- Example application: https://github.com/tomasz-ludek/pocket-of-dash
 
 
 NBitcoin
