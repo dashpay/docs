@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-11 06:39+0000\n"
+"POT-Creation-Date: 2018-07-18 08:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../wallets/index.rst:5
 msgid "Wallets"
-msgstr ""
+msgstr "钱包"
 
 #: ../../wallets/index.rst:7
 msgid ""
@@ -34,6 +34,7 @@ msgid ""
 "keeping these keys safe in wallets, while still remaining useful for day-to-"
 "day needs."
 msgstr ""
+"任何时候你存储一个有价值的东西，安全都是必须的。这适用于以物换物的交易，也适用于以货币作为媒介的经济行为。银行把钱存放在私人账户下，加密货款将钱存放在分布式公共账户的唯一地址下。于是用于进入公共地址存款的私钥便成了加密货币系统里的价值主体。这一部分的文件讨论了不同的实际方法，如何即保证密钥在钱包中的安全，同时还要满足每天使用的要求。"
 
 #: ../../wallets/index.rst:17
 msgid ""
@@ -42,10 +43,12 @@ msgid ""
 "device you use to store it, you should purchase a :ref:`hardware wallet "
 "<hardware-wallets>`."
 msgstr ""
+"为了安全，不建议将大量的资金存放在交易平台上或者软钱包内。如果你拥有的加密货币价值超过你用于存储的设备价值，建议购买一个 :ref:`硬钱包"
+"<hardware-wallets>`。"
 
 #: ../../wallets/index.rst:26 ../../wallets/index.rst:68
 msgid "Dash Core Wallet"
-msgstr ""
+msgstr "达世币核心钱包"
 
 #: ../../wallets/index.rst:28
 msgid ""
@@ -61,10 +64,12 @@ msgid ""
 "functions in the wallet can be used. Dash Core Wallet is available for "
 "macOS, Linux, Raspberry Pi and Windows."
 msgstr ""
+"达世币核心钱包由达世币官方全权发行，支持达世币的所有功能，包括即时支付和匿名支付，以及远程过程调用RPC控制台和管理功能。达世币核心钱包（因为开发中用到了QT的软件架构，有时也称QT钱包。）是一个专业的重量钱包，它下载了整个区块链（有几个GB大小），可以像全节点或主节点那样运行。因为需要保留区块链的全部拷贝，打开钱包时需要一段时间去同步。当同步完成后，就会显示正确的余额，钱包的功能也可以使用了。达世币核心钱包有适用于macOs、Linux、Raspberry"
+" Pi和Windows系统的版本。"
 
 #: ../../wallets/index.rst:41
 msgid "Features:"
-msgstr ""
+msgstr "特点："
 
 #: ../../wallets/index.rst:43
 msgid "PrivateSend"
@@ -72,39 +77,39 @@ msgstr "匿名支付"
 
 #: ../../wallets/index.rst:44
 msgid "InstandSend"
-msgstr ""
+msgstr "即时支付"
 
 #: ../../wallets/index.rst:45
 msgid "Wallet encryption"
-msgstr ""
+msgstr "钱包加密"
 
 #: ../../wallets/index.rst:46
 msgid "Coin control and fee control"
-msgstr ""
+msgstr "货币控制和费用控制"
 
 #: ../../wallets/index.rst:47
 msgid "QR code generation and address book"
-msgstr ""
+msgstr "生成二维码和地址簿"
 
 #: ../../wallets/index.rst:48
 msgid "Masternode commands and voting"
-msgstr ""
+msgstr "主节点命令和投票"
 
 #: ../../wallets/index.rst:49
 msgid "Automated backup"
-msgstr ""
+msgstr "自动备份"
 
 #: ../../wallets/index.rst:50
 msgid "Debug console"
-msgstr ""
+msgstr "Debug控制台"
 
 #: ../../wallets/index.rst:52
 msgid "Available documentation:"
-msgstr ""
+msgstr "可用文档："
 
 #: ../../wallets/index.rst:73 ../../wallets/index.rst:103
 msgid "Dash Electrum Wallet"
-msgstr ""
+msgstr "达世币轻钱包"
 
 #: ../../wallets/index.rst:75
 msgid ""
@@ -116,6 +121,8 @@ msgid ""
 "instant, while still keeping your funds secure and mobile. It does not "
 "currently support advanced InstantSend and PrivateSend features."
 msgstr ""
+"Dash Electrum是一个轻钱包，利用强大的外部服务器与区块链挂钩，同时把钥匙保存在你的个人电脑上。在达世币区块链上, "
+"交易会通过一种称为安全付款验证（SPV）的技术被验证，只需要区块头信息而不需要整个区块的。就是说轻钱包的启动几乎是瞬时的，同时还能保证你资金的安全性和机动性。轻钱包现在还不支持即时支付和匿名支付功能。"
 
 #: ../../wallets/index.rst:84
 msgid ""
@@ -124,10 +131,12 @@ msgid ""
 "Bitcoin Electrum features (mostly identical in Dash Electrum) is available "
 "at the `official documentation site <http://docs.electrum.org>`_."
 msgstr ""
+"达世币轻钱包是比特币轻钱包的一个分叉。这部分文件资料重点是达世币轻钱包的使用，关于比特币轻钱包的所有功能（大部分与达世币轻钱包一致）的资料也同时可在`官方文件资料网站"
+" <http://docs.electrum.org>`_ 查看。"
 
 #: ../../wallets/index.rst:108
 msgid "Dash Android Wallet"
-msgstr ""
+msgstr "达世币安卓钱包"
 
 #: ../../wallets/index.rst:110
 msgid ""
@@ -138,14 +147,15 @@ msgid ""
 "book of frequently used addresses, pay with NFC, sweep paper wallets and "
 "more."
 msgstr ""
+"通过预算系统的支持，达世币为安卓系统提供了独立的钱包。达世币安卓钱包支持达世币的高级功能，包括联系人管理和即时支付。你可以利用扫描和出示二维码来实现快速转账、备份和存储你的钱包、保留常用地址、利用NFC手环支付、扫描纸钱包以及更多。"
 
 #: ../../wallets/index.rst:130
 msgid "*Dash Android Wallet*"
-msgstr ""
+msgstr "*达世币安卓钱包*"
 
 #: ../../wallets/index.rst:136
 msgid "Dash iOS Wallet"
-msgstr ""
+msgstr "达世币iOS钱包"
 
 #: ../../wallets/index.rst:138
 msgid ""
@@ -155,14 +165,15 @@ msgid ""
 "backup your wallet using a recovery phrase and even pay to Bitcoin addresses"
 " through native integration with ShapeShift."
 msgstr ""
+"通过预算系统的支持，达世币为苹果iOS系统也提供了独立的钱包。官方的达世币钱包支持达世币的高级功能如即时支付。你可以通过扫描或出示二维码来实现快速转账；利用一组助记词备份你的钱包；因为捆绑了Shapeshift，也可以向比特币地址付款。"
 
 #: ../../wallets/index.rst:157
 msgid "*Dash iOS Wallet*"
-msgstr ""
+msgstr "*达世币iOS钱包*"
 
 #: ../../wallets/index.rst:162
 msgid "Dash Copay Wallet"
-msgstr ""
+msgstr "达世币Copay钱包"
 
 #: ../../wallets/index.rst:164
 msgid ""
@@ -174,14 +185,15 @@ msgid ""
 "required for use, the private keys to your addresses are stored securely on "
 "your device and under your control at all times."
 msgstr ""
+"达世币Copay钱包是一个同时为手机和台式机提供的新式多功能钱包。它支持达世币的高级功能，包括即时支付、HD地址生成、用户友好界面的地址簿、同一APP下的多个钱包以及方便使用的多重签名钱包。达世币Copay是一个轻钱包，这意味着虽然在应用时不需要整个区块链的拷贝，但是接入地址的私钥会安全地保存在你的设备上，随时在你的掌控之下。"
 
 #: ../../wallets/index.rst:184
 msgid "*Dash Copay Wallet*"
-msgstr ""
+msgstr "*达世币Copay钱包*"
 
 #: ../../wallets/index.rst:189 ../../wallets/index.rst:204
 msgid "Dash Paper Wallet"
-msgstr ""
+msgstr "达世币纸钱包"
 
 #: ../../wallets/index.rst:191
 msgid ""
@@ -190,10 +202,12 @@ msgid ""
 "computer without ever connecting to the internet. Perfect for long term "
 "secure storage."
 msgstr ""
+"`达世币纸钱包生成器 <https://paper.dash.org>`_ "
+"允许你在一台干净的不连接外网的计算机上生成、加密和保存一个能连接到单一达世币地址的密钥。适用于长期的安全存储。"
 
 #: ../../wallets/index.rst:210
 msgid "Hardware Wallets"
-msgstr ""
+msgstr "硬件钱包"
 
 #: ../../wallets/index.rst:212
 msgid ""
@@ -206,6 +220,7 @@ msgid ""
 "could be used to steal passwords to unlock the private keys used with "
 "software wallets."
 msgstr ""
+"硬件钱包是一种可以存储区域链密钥的安全的硬件设备，而不是像普通软件钱包那样的wallet.dat数据库文件。它具有比软件钱包更优的安全性，和对比纸钱包的实用价值。迄今为止，还没有确切的证据显示硬件钱包会被病毒破解，另外，它对键盘记录攻击也是免疫的，防止有人利用此方法盗取密码来破译软件钱包的私钥。"
 
 #: ../../wallets/index.rst:221
 msgid ""
@@ -216,35 +231,36 @@ msgid ""
 " computer or smartphone. Most hardware wallets feature a screen which allows"
 " you to independently confirm the address you are sending to is correct."
 msgstr ""
+"硬件钱包会把你的私钥存放在微型处理器的一个受保护区域。它不会让你的私钥以简单字符的方式离开设备，只有加密哈希的签名输出会被发送到与区块链相连的设备，如你的计算机或智能手机上。多数的硬件钱包都带有一个屏幕，使你能各自地确认发出地址是否正确。"
 
 #: ../../wallets/index.rst:229
 msgid ""
 "This section lists the most common commercial hardware wallets supporting "
 "Dash, although some other enthusiast projects may also be available."
-msgstr ""
+msgstr "这一部分的内容列出了支持达世币的一些最普通的商业硬件钱包。当然这些设备也可能支持其他币种。"
 
 #: ../../wallets/index.rst:240
 msgid "Trezor Web Wallet"
-msgstr ""
+msgstr "Trezor 网页钱包"
 
 #: ../../wallets/index.rst:245
 msgid "Third Party Wallets"
-msgstr ""
+msgstr "第三方钱包"
 
 #: ../../wallets/index.rst:247
 msgid ""
 "These wallets have been developed by external developers to support Dash. "
 "Many third party wallets support multiple different cryptocurrencies at the "
 "same time, or integrate instant cryptocurrency exchanges."
-msgstr ""
+msgstr "这些钱包是由支持达世币的外部开发者开发的。很多第三方钱包同时支持多种不同的加密数字货币，或者整合了加密数字货币即时兑换功能。"
 
 #: ../../wallets/index.rst:260
 msgid "Edge Wallet"
-msgstr ""
+msgstr "Edge钱包"
 
 #: ../../wallets/index.rst:266
 msgid "Web Wallets"
-msgstr ""
+msgstr "网页钱包"
 
 #: ../../wallets/index.rst:268
 msgid ""
@@ -257,17 +273,19 @@ msgid ""
 "exception is MyDashWallet.org, which provides a secure web interface to the "
 "Dash blockchain while leaving you with full control of your private keys."
 msgstr ""
+"网页钱包可为你保存达世币资金，同时替你来保管私钥，任何存在 :ref:`交易平台 "
+"<exchanges>`上的达世币都属于这一类。除此之外还有其它一些服务仅通过简单的Google/Facebook登录，也能让你存放达世币。要特别小心这些网页存储，达世币在这里的安全性只能靠这些公司的声誉来保证。MyDashWallet.org是个特例，它提供了一个达世币区块链的安全网页接口，让你自己全权掌控你的密钥。"
 
 #: ../../wallets/index.rst:286
 msgid "My Dash Wallet"
-msgstr ""
+msgstr "My Dash Wallet"
 
 #: ../../wallets/index.rst:289
 msgid "Wallet Guides"
-msgstr ""
+msgstr "钱包指南"
 
 #: ../../wallets/index.rst:291
 msgid ""
 "Documentation in this section describes common tasks and questions relating "
 "to all wallets."
-msgstr ""
+msgstr "本节的文件资料描述了与各种钱包相关的常见使用方法和问题。"

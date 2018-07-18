@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 10:04+0000\n"
+"POT-Creation-Date: 2018-07-18 08:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Tikhon Skudarnov <semargsemarg@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -210,41 +210,66 @@ msgid ""
 "*italic* font, while a double ``**`` will render it in **bold**."
 msgstr ""
 
-#: ../../developers/translating.rst:140
-msgid "External hyperlinks"
+#: ../../developers/translating.rst:136
+msgid "Internal hyperlinks"
 msgstr ""
 
 #: ../../developers/translating.rst:128
+msgid ""
+"**Source:** ``See :ref:`here <sporks>` for a brief introduction to sporks.``"
+msgstr ""
+
+#: ../../developers/translating.rst:130
+msgid ""
+"**Target:** ``Ver :ref:`aquí <sporks>` para una breve introducción a "
+"sporks``"
+msgstr ""
+
+#: ../../developers/translating.rst:132
+msgid ""
+"An internal hyperlink consists of the phrase ``:ref:``, followed by a single"
+" backtick `````, followed by some text which must be translated, followed by"
+" angle brackets with the link target ``< >``, followed by another backtick "
+"`````. Translate the text, but do not translate the text inside the angle "
+"brackets."
+msgstr ""
+
+#: ../../developers/translating.rst:152
+msgid "External hyperlinks"
+msgstr ""
+
+#: ../../developers/translating.rst:139
 msgid ""
 "**Source:** ``The `official Dash website <https://www.dash.org>`_ also "
 "provides a list of major exchanges offering Dash.``"
 msgstr ""
 
-#: ../../developers/translating.rst:131
+#: ../../developers/translating.rst:142
 msgid ""
 "**Target:** ``El `sitio web oficial de Dash <https://www.dash.org>`_ también"
 " proporciona una lista de las principales Casas de cambio o Exchanges que "
 "ofrecen Dash.``"
 msgstr ""
 
-#: ../../developers/translating.rst:135
+#: ../../developers/translating.rst:146
 msgid ""
-"A hyperlink consists of a single backtick `````, followed by some text which"
-" must be translated, followed by angle brackets with the link target ``< "
-">``, followed by another backtick and an underscore ```_``. Translate the "
-"text, but do not translate the hyperlink (unless you want to link to a "
-"version of the page in the target language)."
+"An external hyperlink consists of a single backtick `````, followed by some "
+"text which must be translated, followed by angle brackets with the link "
+"target ``< >``, followed by another backtick and a single or double "
+"underscore: ```_`` or ```__``. Translate the text, but do not translate the "
+"hyperlink (unless you want to link to a version of the page in the target "
+"language)."
 msgstr ""
 
-#: ../../developers/translating.rst:143
+#: ../../developers/translating.rst:155
 msgid "Dash Graphics"
 msgstr ""
 
-#: ../../developers/translating.rst:145
+#: ../../developers/translating.rst:157
 msgid "https://www.transifex.com/dash/dash-graphics"
 msgstr ""
 
-#: ../../developers/translating.rst:147
+#: ../../developers/translating.rst:159
 msgid ""
 "Dash visual products such as infographics, flyers and conference handouts "
 "are produced using Adobe InDesign, Adobe Illustrator or Microsoft Word and "
@@ -255,7 +280,7 @@ msgid ""
 "depending if they are a heading, a sentence or an item in a diagram."
 msgstr ""
 
-#: ../../developers/translating.rst:156
+#: ../../developers/translating.rst:168
 msgid ""
 "Because these proprietary file formats are not easily handled by Transifex, "
 "the language content is exported to a text or Microsoft Excel file and "
@@ -265,15 +290,15 @@ msgid ""
 "visual design."
 msgstr ""
 
-#: ../../developers/translating.rst:164
+#: ../../developers/translating.rst:176
 msgid "Dash iOS Wallet"
 msgstr ""
 
-#: ../../developers/translating.rst:166
+#: ../../developers/translating.rst:178
 msgid "https://www.transifex.com/dash/dash-ios-wallet"
 msgstr ""
 
-#: ../../developers/translating.rst:168
+#: ../../developers/translating.rst:180
 msgid ""
 "All language content from the :ref:`Dash iOS Wallet <dash-ios-wallet>` are "
 "available for translation in this project. Please have a device running the "
@@ -283,15 +308,15 @@ msgid ""
 " above for Dash Core Wallet."
 msgstr ""
 
-#: ../../developers/translating.rst:176
+#: ../../developers/translating.rst:188
 msgid "Dash Android Wallet"
 msgstr ""
 
-#: ../../developers/translating.rst:178
+#: ../../developers/translating.rst:190
 msgid "https://www.transifex.com/dash/dash-wallet"
 msgstr ""
 
-#: ../../developers/translating.rst:180
+#: ../../developers/translating.rst:192
 msgid ""
 "All language content from the :ref:`Dash Android Wallet <dash-android-"
 "wallet>` are available for translation in this project. Please have a device"
@@ -301,15 +326,15 @@ msgid ""
 "instructions above for Dash Core Wallet."
 msgstr ""
 
-#: ../../developers/translating.rst:189
+#: ../../developers/translating.rst:201
 msgid "Dash Videos"
 msgstr "Видео"
 
-#: ../../developers/translating.rst:191
+#: ../../developers/translating.rst:203
 msgid "https://www.transifex.com/dash/dash-videos"
 msgstr ""
 
-#: ../../developers/translating.rst:193
+#: ../../developers/translating.rst:205
 msgid ""
 "This section primarily contains language content from Amanda B. Johnson's "
 "popular `Dash School <https://www.youtube.com/watch?v=e7UwwcCK "
@@ -320,15 +345,15 @@ msgid ""
 "request inclusion of the subtitles on YouTube."
 msgstr ""
 
-#: ../../developers/translating.rst:203
+#: ../../developers/translating.rst:215
 msgid "Dash Website"
 msgstr ""
 
-#: ../../developers/translating.rst:205
+#: ../../developers/translating.rst:217
 msgid "https://www.transifex.com/dash/dash-website"
 msgstr ""
 
-#: ../../developers/translating.rst:207
+#: ../../developers/translating.rst:219
 msgid ""
 "The Dash website at https://www.dash.org is available for translation in "
 "Transifex. Please have the website open while you translate to correctly "
