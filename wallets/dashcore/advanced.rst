@@ -266,3 +266,96 @@ Seller::
       }
   ]
 
+
+Multiple wallets
+================
+
+It is possible to select between different Dash wallets when starting
+Dash Core by specifying the ``wallet`` argument, or even run multiple
+instances of Dash Core simultaneously by specifying separate data
+directories using the ``datadir`` argument when starting Dash Core.
+
+To begin, install the Dash Core wallet for your system according to the
+:ref:`installation instructions <dashcore-installation>`. When you get
+to the step **Running Dash Core for the first time**, you can decide
+whether you want to maintain separate data directories in the default
+location (simpler if you do not need to run the wallets simultaneously),
+or specify another location such as e.g. ``C:\Dash1`` (simpler if you do
+want to run the wallets simultaneously).
+
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
+| Platform | Path to default data folder    | How to navigate                                                                               |
++==========+================================+===============================================================================================+
+| Linux    | ~/                             | Go to your home folder and press **Ctrl+H** to show hidden files, then open ``.dashcore``     |
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
+| macOS    | ~/Library/Application Support/ | Press **Shift + Control + G**, type ``~/Library/Application Support``, then open ``DashCore`` |
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
+| Windows  | %APPDATA%                      | Press **Windows Key + R** and type ``%APPDATA%``, then open ``DashCore``                      |
++----------+--------------------------------+-----------------------------------------------------------------------------------------------+
+
+Separate wallet.dat files
+-------------------------
+
+We will now create two shortcuts on the desktop, each using a different
+wallet file. Navigate to the binary file used to start Dash Core
+(typically named ``dash-qt.exe`` or similar) and create two shortcuts on
+the desktop. Then open the **Properties** window for each of these
+shortcuts.
+
+.. figure:: img/shortcuts.png
+   :height: 250px
+
+   Creating desktop shortcuts using Windows 10
+
+Modify the **Target** property of each shortcut to point to a different
+wallet file by specifying the ``wallet`` argument when starting the
+wallet. If you do not specify a ``wallet`` argument, ``wallet.dat`` will
+be used by default. The wallet file will be created if it does not
+exist. The following example demonstrates two wallets named
+``workwallet.dat`` and ``strophy.dat``:
+
+- Wallet Target 1: ``"C:\Program Files\DashCore\dash-qt.exe" -wallet=workwallet.dat``
+- Wallet Target 2: ``"C:\Program Files\DashCore\dash-qt.exe" -wallet=homewallet.dat``
+
+.. figure:: img/walletfilesd.png
+   :height: 250px
+
+   Specifying separate wallet files
+
+You can now use the two icons to quickly and easily open different
+wallets from your desktop. Note that you cannot open both wallets
+simultaneously. To do this, you will need two separate data directories,
+as described below.
+
+
+Separate data directories
+-------------------------
+
+Start Dash Core and allow it to synchronize with the network, then close
+Dash Core again. You can now create two directories at e.g. ``C:\Dash1``
+and ``C:\Dash2`` and copy the ``blocks`` and ``chainstate`` directories
+from the synchronized data directory into the new directories. Each of
+these will serve as a separate data directory, allowing you to run two
+instances of Dash Core simultaneously. Create two (or more) shortcuts on
+your desktop as described above, then specify arguments for ``datadir``
+as shown below:
+
+- Datadir Target 1: ``"C:\Program Files\DashCore\dash-qt.exe" -datadir=C:\Dash1 -listen=0``
+- Datadir Target 2: ``"C:\Program Files\DashCore\dash-qt.exe" -datadir=C:\Dash2 -listen=0``
+
+.. figure:: img/datadirs.png
+   :height: 250px
+
+   Specifying separate datadirs
+
+You can now use the two icons to quickly and easily open different
+wallets simultaneously from your desktop. Both wallets maintain separate
+and full copies of the blockchain, which may use a lot of drive space.
+For more efficient use of drive space, consider using an SPV or "light"
+wallet such as :ref:`Dash Electrum <dash-electrum-wallet>` to maintain
+multiple separate wallets without keeping a full copy of the blockchain.
+
+.. figure:: img/2wallets.png
+   :height: 250px
+
+   Two instances of Dash Core running simultaneously
