@@ -350,6 +350,21 @@ underlying technologies.
 - `How Dash InstantSend Protect Merchants from Double Spends <https://www.youtube.com/watch?v=HJx82On8jig>`_
 - `InstantSend Presentation from the Dash Conference London 2017 <https://www.youtube.com/watch?v=n4PELomRiFY>`_
 
+
+Vending Machines
+================
+
+Community member moocowmoo has released code to help merchants build
+their own vending machine and set it up to receive Dash InstantSend
+payments. The Dashvend software can also be used to create any sort of
+payment system, including point-of-sale systems, that can accept
+InstantSend payments.
+
+- `Open Source Code <https://github.com/moocowmoo/dashvend>`_
+- `Demonstration website <http://code.dashndrink.com>`_
+- `Demonstration video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_
+
+
 Price Tickers
 =============
 
