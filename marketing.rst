@@ -287,8 +287,11 @@ German `Dash Embassy D-A-CH <http://www.dash-embassy.org>`__.
 +------------------------+--------------------------------------------------------------------------------------------------------------+
 | Language               | Download                                                                                                     |
 +========================+==============================================================================================================+
-| English                | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Roadshow_English_Final.pptx>`__  |
-|                        | `PDF <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Roadshow_English_Final.pdf>`__    |
+| English                | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Meetup_Presentation_EN.pptx>`__  |
+|                        | `PDF <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Meetup_Presentation_EN.pdf>`__    |
++------------------------+--------------------------------------------------------------------------------------------------------------+
+| German                 | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Meetup_Presentation_DE.pptx>`__  |
+|                        | `PDF <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Meetup_Presentation_DE.pdf>`__    |
 +------------------------+--------------------------------------------------------------------------------------------------------------+
 
 
