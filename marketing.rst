@@ -273,10 +273,10 @@ translation is complete to request layout of the completed translation.
 Presentations
 -------------
 
-Dash Roadshow
-^^^^^^^^^^^^^
+Dash Meetup
+^^^^^^^^^^^
 
-.. image:: img/roadshow.png
+.. image:: img/meetup.png
    :width: 400px
 
 An attractive presentation about Dash, designed to guide the audience
