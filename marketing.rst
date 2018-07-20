@@ -276,6 +276,9 @@ Presentations
 Dash Roadshow
 ^^^^^^^^^^^^^
 
+.. image:: img/roadshow.png
+   :width: 400px
+
 An attractive presentation about Dash, designed to guide the audience
 through the basics of cryptocurrency and advantages of Dash. Prepared by
 community member Essra in 2018 following proposal sponsorship for the
