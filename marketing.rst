@@ -273,6 +273,22 @@ translation is complete to request layout of the completed translation.
 Presentations
 -------------
 
+Dash Roadshow
+^^^^^^^^^^^^^
+
+An attractive presentation about Dash, designed to guide the audience
+through the basics of cryptocurrency and advantages of Dash. Prepared by
+community member Essra in 2018 following proposal sponsorship for the
+German `Dash Embassy D-A-CH <http://www.dash-embassy.org>`__.
+
++------------------------+--------------------------------------------------------------------------------------------------------------+
+| Language               | Download                                                                                                     |
++========================+==============================================================================================================+
+| English                | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Roadshow_English_Final.pptx>`__  |
+|                        | `PDF <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Roadshow_English_Final.pdf>`__    |
++------------------------+--------------------------------------------------------------------------------------------------------------+
+
+
 Simple presentation
 ^^^^^^^^^^^^^^^^^^^
 
