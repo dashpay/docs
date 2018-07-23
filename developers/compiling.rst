@@ -57,6 +57,51 @@ And build::
 
 ``/usr/local/bin`` now contains the compiled Dash binaries.
 
+
+macOS
+=====
+
+This guide describes how to build Dash Core wallet from
+source under macOS. It is intended to serve as a simple guide for
+general compilation of non-deterministic binary files from the stable
+source code. A standard installation of macOS 10.13 High Sierra will be
+used as an environment for the build. We assume you are running as a
+user with sudo permissions. First, open a the **Terminal** app and enter
+the following command to install the OS X command line tools::
+
+  xcode-select --install
+
+When the popup appears, click **Install**. Then install `Homebrew 
+<https://brew.sh>`__::
+
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Install dependencies::
+
+  brew install automake berkeley-db4 libtool boost --c++11 miniupnpc openssl pkg-config protobuf qt libevent librsvg
+
+Clone the Dash Core source code and change to the ``dash`` directory::
+
+  git clone https://github.com/dashpay/dash
+  cd dash
+
+Build Dash Core. Configure and build the headless dash binaries as well as the GUI (if Qt is found). You can disable the GUI build by passing ``--without-gui`` to configure::
+
+  ./autogen.sh
+  ./configure
+  make
+
+It is recommended to build and run the unit tests::
+
+  make check
+
+You can also create a ``.dmg`` that contains the ``.app`` bundle (optional)::
+
+  make deploy
+
+Dash Core is now available at ``./src/dashd``.
+
+
 .. _gitian-build:
 
 Gitian
