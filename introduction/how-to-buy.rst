@@ -244,6 +244,17 @@ WEX
   has resumed business under a new name. DASH trading pairs exist for
   BTC, USD, RUB, EUR, LTC and ETH.
 
+Koineks
+  .. image:: exchanges/koineks.png
+     :width: 183px
+     :align: right
+     :target: https://koineks.com/
+
+  https://koineks.com/
+
+  Koineks serves the Turkish market and offers trading pairs for DASH against
+  the Turkish Lira and Bitcion.
+
 Exmo
   .. image:: exchanges/exmo.png
      :width: 200px
@@ -585,6 +596,18 @@ Golix
   people in Sub-Saharan Africa buy and sell DASH and other
   cryptocurrencies.
 
+eBitcoinics
+  .. image:: exchanges/ebitcoinics.png
+     :width: 200px
+     :align: right
+     :target: http://www.ebitcoinics.com
+
+  http://www.ebitcoinics.com
+
+  eBitcoinics is a cryptocurrency exchange and education platform for
+  the African market. Dash is available for exchange against Nigerian
+  Naira (NGN) and Ghanaian Cedi (GHS).
+
 Bisq
   .. image:: exchanges/bisq.png
      :width: 200px
@@ -920,7 +943,7 @@ changeNOW
 
   changeNOW allows users to directly exchange one crypto asset for
   another without creating any account, albeit with a higher markup than
-  most exchanges. ShapeShift supports Dash and over 75 other
+  most exchanges. changeNOW supports Dash and over 75 other
   cryptocurrencies.
 
 Godex
@@ -1315,11 +1338,22 @@ Lamassu
   .. image:: exchanges/lamassu.png
      :width: 200px
      :align: right
-     :target: https://lamassu.is/
+     :target: https://lamassu.is
 
-  https://lamassu.is/
+  https://lamassu.is
 
   Lamassu offers modular one-way and two-way cash ATMs integrating Dash.
+
+CoinFlip
+  .. image:: exchanges/coinflip.png
+     :width: 200px
+     :align: right
+     :target: https://coinflip.tech
+
+  https://coinflip.tech
+
+  CoinFlip operates a network of ATMs across the USA and offers hosted
+  ATMs for businesses.
 
 TigoCTM
   .. image:: exchanges/tigoctm.png

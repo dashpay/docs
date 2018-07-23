@@ -283,9 +283,8 @@ Electrum wallet or some other wallet) once recovery is successful to
 ensure that standard backup procedures work as expected.
 
 Recovery takes place in two steps. First, we will convert the Dash iOS
-recovery phrase into an xprv key using a specific recovery depth, namely
-"m/0p". In the second step, we will import the xprv key into Dash
-Electrum.
+recovery phrase into an xprv key. In the second step, we will import the
+xprv key into Dash Electrum.
 
 Retrieving the correct Dash iOS xprv key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -300,10 +299,9 @@ the tool is loaded in your browser, complete the following steps:
 
 1. Enter your 12 word seed phrase in the **BIP39 Mnemonic** field.
 2. Leave **BIP39 Passphrase** blank.
-3. Leave coin set to 'Bitcoin'.
-4. Under **Derivation Path**, click the **BIP32** tab.
-5. In the **BIP32 Derivation Path** box, type: ``m/0'`` 
-6. Copy the value shown in "BIP32 Extended Private Key".
+3. Set coin to **Dash**.
+4. Under **Derivation Path**, click the **BIP44** tab.
+5. Copy the value shown in **Account Extended Private Key**.
 
 Importing the xprv key into Dash Electrum
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -312,7 +310,7 @@ Importing the xprv key into Dash Electrum
 2. Type a name for your wallet.
 3. Select **Standard wallet**.
 4. Select **Use public or private keys**.
-5. Paste in your value from **BIP32 Extended Private Key**.
+5. Paste in your value from **Account Extended Private Key**.
 6. Optionally enter a password.
 
 Dash Electrum should now detect your Dash iOS balance and you should
@@ -322,9 +320,14 @@ if you want to restore this wallet from the recovery phrase again. It is
 recommended to send your funds to a new Dash Electrum wallet instead and
 follow :ref:`standard backup procedures <electrum-backup>`.
 
-Please see `this forum thread <https://www.dash.org/forum/threads
-/restore-breadwallet-dash-funds-to-your-electrum-dash-wallet-
-tested.8335>`_ for further discussion on this process.
+Older versions of the Dash iOS wallet used **BIP32** addresses under the
+``m/0'`` derivation path. The wallet should migrate these funds over to
+BIP44 addresses during normal use, but some residual balance may be
+under this derivation path, so restoring the **BIP32 Extended Private
+Key** may be helpful in some situations. Please see `this forum thread
+<https://www.dash.org/forum/threads /restore-breadwallet-dash-funds-to-
+your-electrum-dash-wallet- tested.8335>`_ for further discussion on this
+process.
 
 
 .. _privkey-restore:

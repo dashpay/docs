@@ -189,14 +189,15 @@ DashJ
 
 https://github.com/HashEngineering/dashj 
 
-dashj is a library for working with the Dash protocol. It can maintain
-a wallet, send/receive transactions without needing a local copy of
-Dash Core and has many other advanced features. It's implemented in
-Java but can be used from any JVM compatible language: examples in
-Python and JavaScript are included.
+DashJ is a library for working with the Dash protocol. It can maintain a
+wallet, send/receive transactions (including InstantSend) without
+needing a local copy of Dash Core, and has many other advanced features.
+It's implemented in Java but can be used from any JVM compatible
+language: examples in Python and JavaScript are included.
 
 - Platform: Java
 - Documentation: https://bitcoinj.github.io/getting-started 
+- Example application: https://github.com/tomasz-ludek/pocket-of-dash
 
 
 NBitcoin
@@ -348,6 +349,21 @@ underlying technologies.
 - `InstantSend Whitepaper <https://dashpay.atlassian.net/wiki/download/attachments/75530298/Dash%20Whitepaper%20-%20InstantTX.pdf>`_
 - `How Dash InstantSend Protect Merchants from Double Spends <https://www.youtube.com/watch?v=HJx82On8jig>`_
 - `InstantSend Presentation from the Dash Conference London 2017 <https://www.youtube.com/watch?v=n4PELomRiFY>`_
+
+
+Vending Machines
+================
+
+Community member moocowmoo has released code to help merchants build
+their own vending machine and set it up to receive Dash InstantSend
+payments. The Dashvend software can also be used to create any sort of
+payment system, including point-of-sale systems, that can accept
+InstantSend payments.
+
+- `Open Source Code <https://github.com/moocowmoo/dashvend>`_
+- `Demonstration website <http://code.dashndrink.com>`_
+- `Demonstration video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_
+
 
 Price Tickers
 =============

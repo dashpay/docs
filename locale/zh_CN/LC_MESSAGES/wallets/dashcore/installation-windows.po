@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 10:33+0000\n"
+"POT-Creation-Date: 2018-07-18 08:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-windows.rst:4
 msgid "Windows Installation Guide"
-msgstr ""
+msgstr "Windows安装指南"
 
 #: ../../wallets/dashcore/installation-windows.rst:6
 msgid ""
@@ -27,10 +28,11 @@ msgid ""
 "wallet for Windows. The guide is written for Windows 10, but the steps "
 "should be similar for Windows XP, Vista, 7 and 8."
 msgstr ""
+"本指南介绍了如何下载、安装和加密Windows达世币核心钱包。指南是基于Windows 10的，但Windows XP、Vista、7和8的步骤类似。"
 
 #: ../../wallets/dashcore/installation-windows.rst:11
 msgid "Downloading the Dash Core wallet"
-msgstr ""
+msgstr "正在下载达世币核心钱包"
 
 #: ../../wallets/dashcore/installation-windows.rst:13
 msgid ""
@@ -39,10 +41,12 @@ msgid ""
 "need. Click the blue **Dash Core** button to download the installer "
 "directly."
 msgstr ""
+"访问https://www.dash.org/get-dash/ "
+"可以下载最新版本的达世币核心钱包。多数情况下，网站会正确地检测到你所需要的版本。点击蓝色的**达世核心**按钮，直接下载安装程序。"
 
 #: ../../wallets/dashcore/installation-windows.rst:21
 msgid "The website properly detects the wallet appropriate for your system"
-msgstr ""
+msgstr "网站会正确检测到适合你系统的钱包软件"
 
 #: ../../wallets/dashcore/installation-windows.rst:23
 msgid ""
@@ -54,34 +58,38 @@ msgid ""
 "<https://www.lifewire.com/am-i-running-a-32-bit-or-64-bit-version-of-"
 "windows-2624475>`__."
 msgstr ""
+"如果检测不到，就需要手动选择你的操作系统，以及你需要的是32位的还是64位的版本。如果你也不太确定你的Windows系统是32位还是64位的，可以在Windows"
+" 10的**开始>设置>系统>关于**进行查找。如何在其它Windows版本下查找此信息，请参见这里 "
+"`<https://www.lifewire.com/am-i-running-a-32-bit-or-64-bit-version-of-"
+"windows-2624475>`__。"
 
 #: ../../wallets/dashcore/installation-windows.rst:33
 msgid "In Windows Settings, click System"
-msgstr ""
+msgstr "在Windows设置，点击系统"
 
 #: ../../wallets/dashcore/installation-windows.rst:38
 msgid ""
 "Under the System section, click About to view the System type. This is a 64 "
 "bit system."
-msgstr ""
+msgstr "在系统项中，点击关于查看系统类型。这是一个64位的系统。"
 
 #: ../../wallets/dashcore/installation-windows.rst:41
 msgid ""
 "Once you know which version you need, download the Dash Core Installer to "
 "your computer from https://www.dash.org/wallets/"
-msgstr ""
+msgstr "当你知道你需要的是哪个版本后，从https://www.dash.org/wallets/ 下载达世币核心安装程序到你的电脑上。"
 
 #: ../../wallets/dashcore/installation-windows.rst:47
 msgid "Manually selecting and downloading an installer"
-msgstr ""
+msgstr "手动选择和下载安装程序"
 
 #: ../../wallets/dashcore/installation-windows.rst:49
 msgid "Save the file you downloaded to your Downloads folder."
-msgstr ""
+msgstr "将下载文件保存在你的下载文件夹中。"
 
 #: ../../wallets/dashcore/installation-windows.rst:52
 msgid "Verifying Dash Core"
-msgstr ""
+msgstr "正在验证达世币核心"
 
 #: ../../wallets/dashcore/installation-windows.rst:54
 msgid ""
@@ -90,21 +98,23 @@ msgid ""
 "published by the Dash Core development team. To view the published hash, "
 "click the **Hash file** button on the wallet download page."
 msgstr ""
+"这一步是可选的，但推荐对下载文件的完整性进行验证。验证工作通过比对下载文件的SHA256哈希值与达世币核心开发团队公布的哈希值来完成。查看公布的哈希值，点击钱包下载页面上的**Hash"
+" file**按钮。"
 
 #: ../../wallets/dashcore/installation-windows.rst:63
 msgid "Downloading the Dash Core hash file"
-msgstr ""
+msgstr "正在下载达世币哈希值文件"
 
 #: ../../wallets/dashcore/installation-windows.rst:65
 msgid ""
 "Once both the Dash Core file and the hash file have downloaded, open the "
 "hash file in a text editor or your browser and find the hash value for the "
 "Dash Core file you downloaded."
-msgstr ""
+msgstr "当达世币核心文件和哈希值文件都下载完成后，用文字编辑器或浏览器打开该文件，找到你下载的达世币核心文件的哈希值。"
 
 #: ../../wallets/dashcore/installation-windows.rst:72
 msgid "Viewing the Dash Core hash file"
-msgstr ""
+msgstr "正在浏览达世币哈希值文件"
 
 #: ../../wallets/dashcore/installation-windows.rst:74
 msgid ""
@@ -114,75 +124,77 @@ msgid ""
 "the file, and run the following command, replacing the version with the "
 "specific version of the file you downloaded."
 msgstr ""
+"这里的哈希值应该与你下载的文件的哈希值一致，以确定文件是正版而且在传输过程中没有被毁坏。为此，请打开**命令提示符**，找到保存文件的位置，运行以下 "
+"指令，将版本改成你下载文件的具体版本。"
 
 #: ../../wallets/dashcore/installation-windows.rst:87
 msgid "Generating an SHA256 hash for the downloaded file"
-msgstr ""
+msgstr "正为下载文件生成一个SHA256哈希值。"
 
 #: ../../wallets/dashcore/installation-windows.rst:89
 msgid ""
 "If the hashes match, then you have an authentic copy of Dash Core for "
 "Windows."
-msgstr ""
+msgstr "如果哈希值相同，你的Windows系统就有一个正版的达世币核心了。"
 
 #: ../../wallets/dashcore/installation-windows.rst:93
 msgid "Running the Dash Core installer"
-msgstr ""
+msgstr "正在运行达世币核心安装程序"
 
 #: ../../wallets/dashcore/installation-windows.rst:95
 msgid "Double-click the file to start installing Dash Core."
-msgstr ""
+msgstr "双击文件启动达世币安装程序。"
 
 #: ../../wallets/dashcore/installation-windows.rst:100
 msgid "The Dash Core installer in the Downloads folder"
-msgstr ""
+msgstr "达世币核心安装程序在下载文件夹中"
 
 #: ../../wallets/dashcore/installation-windows.rst:102
 msgid ""
 "At this point, you may see a warning from Windows SmartScreen that the app "
 "is unrecognized. You can safely skip past this warning by clicking **More "
 "info**, then **Run anyway**."
-msgstr ""
+msgstr "此时，你会看到Windows有一条弹出窗口报警显示有不可识别应用。你可以按以下步骤安全地跳过报警，点击**更多信息**，然后**退出**。"
 
 #: ../../wallets/dashcore/installation-windows.rst:112
 msgid ""
 "Bypassing Windows SmartScreen to run the app. This warning is known as a "
 "“false positive”."
-msgstr ""
+msgstr "忽略弹出窗口运行应用程序。此报警可被视为\"误报\"。"
 
 #: ../../wallets/dashcore/installation-windows.rst:115
 msgid "The installer will then guide you through the installation process."
-msgstr ""
+msgstr "安装程序随后会指导你完成安装流程。"
 
 #: ../../wallets/dashcore/installation-windows.rst:120
 msgid "The Dash Core installer welcome screen"
-msgstr ""
+msgstr "达世币核心安装程序欢迎界面"
 
 #: ../../wallets/dashcore/installation-windows.rst:122
 msgid ""
 "Click through the following screens. All settings can be left at their "
 "default values unless you have a specific reason to change something."
-msgstr ""
+msgstr "接下来的界面可以下一步点过。所有设置可以默认执行，除非你有做特别修改的原因。"
 
 #: ../../wallets/dashcore/installation-windows.rst:128
 msgid "Select the installation location"
-msgstr ""
+msgstr "选择安装目录"
 
 #: ../../wallets/dashcore/installation-windows.rst:133
 msgid "Select the Start menu folder"
-msgstr ""
+msgstr "选择开始目录文件夹"
 
 #: ../../wallets/dashcore/installation-windows.rst:138
 msgid "Dash Core is being installed"
-msgstr ""
+msgstr "达世币核心正在被安装"
 
 #: ../../wallets/dashcore/installation-windows.rst:143
 msgid "Installation is complete"
-msgstr ""
+msgstr "安装完成"
 
 #: ../../wallets/dashcore/installation-windows.rst:146
 msgid "Running Dash Core for the first time"
-msgstr ""
+msgstr "首次运行达世币核心"
 
 #: ../../wallets/dashcore/installation-windows.rst:148
 msgid ""
@@ -193,25 +205,26 @@ msgid ""
 "with enough free space, as the blockchain can reach around 3-4GB in size. It"
 " is recommended to use the default data folder if possible."
 msgstr ""
+"安装完成后，达世币核心会马上启动程序。如果没有，请点击**开始>达世币核心>达世币核心**来启动。程序首次启动时，会问到你准备将区块链和钱包数据存储在哪里。区块链的大小能达到3-4GB，所以请选择一个有足够可用空间的地方。建议尽量使用默认的数据文件夹。"
 
 #: ../../wallets/dashcore/installation-windows.rst:159
 msgid "Choosing the Dash Core data folder"
-msgstr ""
+msgstr "正在选择达世币核心数据文件夹"
 
 #: ../../wallets/dashcore/installation-windows.rst:161
 msgid ""
 "Dash Core will then start up. This will take a little longer than usual the "
 "first time you run it, since Dash Core needs to generate cryptographic data "
 "to secure your wallet."
-msgstr ""
+msgstr "达世币核心随后便开始运行了。第一次运行会比正常情况时间久一点，因为达世币核心需要生成一些加密数据来保护你的钱包。"
 
 #: ../../wallets/dashcore/installation-windows.rst:168
 msgid "Starting Dash Core"
-msgstr ""
+msgstr "正在启动达世币核心"
 
 #: ../../wallets/dashcore/installation-windows.rst:171
 msgid "Synchronizing Dash Core to the Dash network"
-msgstr ""
+msgstr "正在和达世币网络同步达世币核心"
 
 #: ../../wallets/dashcore/installation-windows.rst:173
 msgid ""
@@ -219,11 +232,11 @@ msgid ""
 "wallet overview screen. You will notice that the wallet is “out of sync”, "
 "and the status bar at the bottom of the window will show the synchronization"
 " progress."
-msgstr ""
+msgstr "一旦达世币核心成功安装并启动，你就会看到钱包的主屏幕界面。这时钱包是“非同步状态”，窗口下面会有进度条显示同步的进程。"
 
 #: ../../wallets/dashcore/installation-windows.rst:181
 msgid "Dash Core begins synchronizing with the Dash network"
-msgstr ""
+msgstr "达世币核心正在和达世币网络同步"
 
 #: ../../wallets/dashcore/installation-windows.rst:183
 msgid ""
@@ -233,18 +246,19 @@ msgid ""
 "source available”, check your internet connection. When synchronization is "
 "complete, you will see a small blue tick in the lower right corner."
 msgstr ""
+"在同步过程中，达世币核心会从其它节点下载达世币区块链的完整拷贝到你的设备上。这可能会花上很长的一段时间，取决于你的网速。如果你看到“没有区块资源可用”的信息，请检查你的网络连接。当同步结束后，你会看到右下角出现一个蓝色的对勾。"
 
 #: ../../wallets/dashcore/installation-windows.rst:193
 msgid "Dash Core synchronization is complete"
-msgstr ""
+msgstr "达世币核心同步完成"
 
 #: ../../wallets/dashcore/installation-windows.rst:195
 msgid "You can now begin to use your wallet to send and receive funds."
-msgstr ""
+msgstr "你现在可以通过你的钱包发送和接收资金了。"
 
 #: ../../wallets/dashcore/installation-windows.rst:198
 msgid "Encrypting your Dash wallet"
-msgstr ""
+msgstr "正在加密你的达世币钱包"
 
 #: ../../wallets/dashcore/installation-windows.rst:200
 msgid ""
@@ -255,26 +269,27 @@ msgid ""
 " safe or you will be locked out of your wallet and lose access to your "
 "funds."
 msgstr ""
+"当你的钱包与达世币网络同步完成后，强烈建议你为钱包设置一个密码或口令，以避免未经授权的登录。密码应该有一些难度，而且是你没有在别的地方使用过的新密码。记下你的密码，存放在一个安全的地方，否则你有可能因忘记密码而无法进入钱包获取资金。"
 
 #: ../../wallets/dashcore/installation-windows.rst:207
 msgid "To encrypt your wallet, click **Settings > Encrypt** wallet."
-msgstr ""
+msgstr "加密你的钱包，请点击**设置 > 加密钱包**。"
 
 #: ../../wallets/dashcore/installation-windows.rst:212
 msgid "Encrypting the Dash wallet with a password"
-msgstr ""
+msgstr "正在对达世币钱包进行加密"
 
 #: ../../wallets/dashcore/installation-windows.rst:214
 msgid "You will be asked to enter and verify a password."
-msgstr ""
+msgstr "你将被要求输入和验证密码"
 
 #: ../../wallets/dashcore/installation-windows.rst:219
 msgid "Enter a password"
-msgstr ""
+msgstr "输入密码"
 
 #: ../../wallets/dashcore/installation-windows.rst:224
 msgid "Confirm you want to encrypt your wallet"
-msgstr ""
+msgstr "确认你想要加密你的钱包"
 
 #: ../../wallets/dashcore/installation-windows.rst:226
 msgid ""
@@ -283,11 +298,12 @@ msgid ""
 "Dash Core. When you restart Dash Core, you will see a small blue lock in the"
 " lower right corner."
 msgstr ""
+"当加密过程结束后，你会看到一条提示说钱包之前的备份已不可用，并要求关闭达世币核心。当你重新启动达世币核心后，你会看到右下角出现了一个蓝色的小锁。"
 
 #: ../../wallets/dashcore/installation-windows.rst:234
 msgid "Fully encrypted and synchronized Dash Core wallet"
-msgstr ""
+msgstr "达世币核心钱包完成同步和加密"
 
 #: ../../wallets/dashcore/installation-windows.rst:236
 msgid "You can now begin to use your wallet to safely send and receive funds."
-msgstr ""
+msgstr "你现在可以通过你的钱包安全地发送和接收资金了。"

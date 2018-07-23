@@ -126,14 +126,14 @@ from the payment queue. If you run a hosted masternode, your host will
 take care of updates for you. If not, the method of updating depends on
 how you installed Dash.
 
-Minor version updates to Dash (e.g. from 0.12.1.4 to 0.12.1.5) usually
-do not result in changes to the protocol version, while major version
-updates (e.g. from 0.12.1.5 to 0.12.2.0) will usually increase the
-network protocol version. If the protocol version did not change, you DO
-NOT need to restart your masternode if you complete the update within 60
-minutes. If the protocol version did change, you must issue a start
-command from your wallet. Do not send start commands to your masternode
-if not necessary, as it may send you to the back of the payment queue.
+Minor version updates to Dash (e.g. from 0.12.3.1 to 0.12.3.2) do not
+make changes to the protocol version, while major version updates (e.g.
+from 0.12.2.3 to 0.12.3.0) will usually increase the network protocol
+version. If the protocol version did not change, you DO NOT need to
+restart your masternode if you complete the update within 60 minutes. If
+the protocol version did change, you must issue a start command from
+your wallet. Do not send start commands to your masternode if not
+necessary, as it will send you to the back of the payment queue.
 
 Option 1: Automated update using dashman
 ----------------------------------------
@@ -148,11 +148,14 @@ Check the status of your masternode::
 
   ~/dashman/dashman status
 
-After some time, all statuses should turn green, in particular
-**masternode started: YES** and **masternode network state: ENABLED**.
-If you do need to restart your masternode, update the software version
-of the wallet holding the collateral to the latest version and follow
-the instructions :ref:`here <masternode-setup-start>`.
+If you are doing a major version update and need to restart your
+masternode, update the software version of the wallet holding the
+collateral to the latest version now by following the instructions
+:ref:`here <masternode-setup-start>`. Continue monitoring your
+masternode. After some time, all statuses should turn green, in
+particular **masternode started: YES** and **masternode network state:
+ENABLED**.
+
 
 Option 2: Manual update
 -----------------------
@@ -168,16 +171,16 @@ the latest Dash Core wallet. Click **Linux**, then right-click on
 **Download TGZ** for **Dash Core Linux 64 Bit** and select **Copy link
 address**. Go back to your terminal window and enter the following
 command, pasting in the address to the latest version of Dash Core
-(0.12.2.1 in the example) by right clicking or pressing **Ctrl + V**::
+(0.12.3.1 in the example) by right clicking or pressing **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.12.2.3/dashcore-0.12.2.3-linux64.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.12.3.2/dashcore-0.12.3.2-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown on the
 Dash website under **Hash File**::
 
-  sha256sum dashcore-0.12.2.3-linux64.tar.gz
+  sha256sum dashcore-0.12.3.2-x86_64-linux-gnu.tar.gz
 
 .. figure:: img/setup-manual-download.png
    :width: 250px
@@ -190,14 +193,14 @@ executable::
 
   rm ~/.dashcore/dashd
   rm ~/.dashcore/dash-cli
-  tar xfvz dashcore-0.12.2.3-linux64.tar.gz
-  cp dashcore-0.12.2/bin/dashd ~/.dashcore/
-  cp dashcore-0.12.2/bin/dash-cli ~/.dashcore/
+  tar xfvz dashcore-0.12.3.2-x86_64-linux-gnu.tar.gz
+  cp dashcore-0.12.3/bin/dashd ~/.dashcore/
+  cp dashcore-0.12.3/bin/dash-cli ~/.dashcore/
 
 Clean up unneeded files::
 
-  rm dashcore-0.12.2.3-linux64.tar.gz
-  rm -r dashcore-0.12.2/
+  rm dashcore-0.12.3.2-x86_64-linux-gnu.tar.gz
+  rm -r dashcore-0.12.3/
 
 Restart Dash::
 
@@ -220,7 +223,8 @@ alias for your masternode::
 
 Monitor the status of your masternode as it starts up::
 
-  ~/.dashcore/dash-cli getinfo
+  ~/.dashcore/dash-cli getblockcount
+  ~/.dashcore/dash-cli getnetworkinfo
   ~/.dashcore/dash-cli mnsync status
   ~/.dashcore/dash-cli masternode status
 

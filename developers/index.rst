@@ -4,13 +4,13 @@
 Developers
 ==========
 
-Dash Core has published an extensive `Developer Guide <https://dash-
-docs.github.io/en/>`_ to help new developers get started with the Dash
-code base, and as a reference for experienced developers. This guide can
-be leveraged to quickly and efficiently integrate external applications
-with the Dash ecosystem. Anyone can contribute to the guide by
-submitting an issue or pull request on GitHub. The documentation is
-available at: https://dash-docs.github.io/en/
+Dash Core has published an extensive `Developer Guide 
+<https://dash-docs.github.io/en/>`_ to help new developers get started
+with the Dash code base, and as a reference for experienced developers.
+This guide can be leveraged to quickly and efficiently integrate
+external applications with the Dash ecosystem. Anyone can contribute to
+the guide by submitting an issue or pull request on GitHub. The
+documentation is available at: https://dash- docs.github.io/en/
 
 The Dash Core Team also maintains the `Dash Roadmap
 <https://github.com/dashpay/dash-roadmap>`_, which sets out delivery
@@ -65,6 +65,12 @@ SPORK_3_INSTANTSEND_BLOCK_FILTERING
 SPORK_5_INSTANTSEND_MAX_VALUE
   Enforces the maximum value in Dash that can be included in an
   InstantSend transaction.
+
+SPORK_6_NEW_SIGS
+  Enables a new signature format for Dash-specific network messages
+  introduced in Dash 12.3. For more information, see `here
+  <https://github.com/dashpay/dash/pull/1936>`__ and `here
+  <https://github.com/dashpay/dash/pull/1937>`__.
 
 SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT
   If enabled, miners must pay 50% of the block reward to a masternode

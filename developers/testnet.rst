@@ -1,8 +1,18 @@
 .. _testnet:
 
-=======
-Testnet
-=======
+===================
+Testnet and devnets
+===================
+
+With the release of Dash Core 12.3, Dash added support for a great new
+feature — **named devnets**. Devnets are developer networks that combine
+some aspects of testnet (the global and public testing network) and some
+aspects of regtest (the local-only regression testing mode that provides
+controlled block generation). Unlike testnet, multiple independent
+devnets can be created and coexist without interference. For practical
+documentation on how to use devnets, see the `developer documentation
+<https://dash-docs.github.io/en/developer-examples#devnet-mode>`__ or
+this `blog post <https://blog.dash.org/dash-devnets-bc27ecbf0085>`__.
 
 Testnet is a fully functioning Dash blockchain with the one key
 exception that because the Dash on the network can be created freely, it

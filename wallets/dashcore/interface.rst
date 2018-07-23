@@ -550,7 +550,7 @@ Upgrade wallet format
   This command is available for very old wallets where an upgrade to the
   wallet version is required in addition to an update to the wallet
   software. You can view your current wallet version by running the
-  ``getinfo`` command in the console.
+  ``getwalletinfo`` command in the console.
 
 Rebuild index
   Discards the current blockchain and chainstate indexes (the database of

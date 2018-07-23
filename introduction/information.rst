@@ -440,6 +440,22 @@ DAP
   Decentralized Application Protocol. This term describes an application
   running on top of the Dash DAPI platform.
 
+DAP Client
+  An HTTP Client that connects to DAPI and enables Dash blockchain users
+  to read and write data to their DAP Space.
+
+DAP Schema
+  A Dash Schema document extending the Dash System Schema to define
+  consensus data and rules within a DAP contract.
+
+DAP Space
+  The part of a DAP State that is owned by a specific blockchain user.
+  Data in a DAP Space can only be changed by the owner.
+
+DAP State
+  The total set of data stored in a DAP. This data consists of user
+  DAP Spaces.
+
 DAPI
   Decentralized Application Programming Interface. See above for a
   definition of API. DAPI will perform the same functions as an API, but
@@ -470,6 +486,11 @@ Dash
   `Wikipedia article
   <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_
 
+DashDrive
+  Dash network data storage backend service used by masternodes for 
+  off-chain data relating to Evolution. DashDrive implements `IPFS
+  <https://ipfs.io>`_, a type of distributed file storage system.
+
 Dash Client
   Dash clients are software programs used to interface with the Dash
   network. They store the private keys needed to conduct Dash
@@ -490,6 +511,10 @@ Dash Evolution
   will make Dash as easy to use as PayPal, while still remaining
   decentralized. See the :ref:`Evolution <evolution>` page for more 
   information.
+
+Dash Schema
+  A JSON-based language specification for defining and validating
+  consensus data in Evolution.
 
 DDoS
   A distributed denial of service attack uses large numbers of computers
@@ -754,6 +779,10 @@ Hashrate
   The number of hashes that can be performed by a Dash miner in a given
   period of time (usually a second). 
 
+Insight
+  Blockchain information server used to power block explorers and 
+  respond to transaction queries.
+
 InstantX
   See InstantSend
 
@@ -846,13 +875,13 @@ PrivateSend
   to maintain financial privacy between users. It can be turned on or 
   off at the users' discretion.
 
-Proof of Work - PoW
-  Consensus mechanism that keeps all nodes honest by requiring
-  computational power to be expended in order to create new blocks.
-  Miners must use expensive equipment and burn electricity to add blocks
-  to the blockchain. Without a consensus mechanism of some sort, any
-  node could add blocks to the chain and the network's nodes would never
-  agree on which chain was valid.
+Proof of Service - PoSe  
+  Consensus mechanism used in Dash to verify that a masternode has
+  provided uninterrupted service meeting a minimum quality level to the
+  network. Maintaining this service allows a masternode to enter and
+  move up through the global list and eventually into the selection pool
+  to receive payment.
+
 
 Proof of Stake - PoS
   Consensus mechanism that relies on ownership of a cryptocurrency to
@@ -866,6 +895,14 @@ Proof of Stake - PoS
   event of an attack it is actually beneficial for Proof of Stake nodes
   to "vote" to accept both the legitimate chain and the attacker's
   chain.
+
+Proof of Work - PoW
+  Consensus mechanism that keeps all nodes honest by requiring
+  computational power to be expended in order to create new blocks.
+  Miners must use expensive equipment and burn electricity to add blocks
+  to the blockchain. Without a consensus mechanism of some sort, any
+  node could add blocks to the chain and the network's nodes would never
+  agree on which chain was valid.
 
 Public Key
   The `public key <https://en.wikipedia.org/wiki/Public-
@@ -883,6 +920,10 @@ Pump and dump
   value to crash. This is particularly common in markets with low
   liquidity, such as some altcoins.
 
+Quorum
+  Group of masternodes signing or voting on some action, with the
+  formation of the group determined by some determiniation algorithm.
+
 QR Code
   A two-dimensional graphical block containing a monochromatic pattern
   representing a sequence of data. QR codes are designed to be scanned
@@ -893,6 +934,16 @@ Satoshi Nakamoto
   `Satoshi Nakamoto <https://en.wikipedia.org/wiki/Satoshi_Nakamoto>`_
   is the name used by the person or people who designed Bitcoin and
   created its original reference implementation.
+
+SDK
+  Software Development Kit. A set of tools, code and documentation used
+  by developers to create apps targeting a specific hardware or software
+  platform.
+
+State View
+  The current state of all data objects once all changes from state
+  transitions have been applied. Used in Evolution to determine what
+  should be displayed in a given social wallet, for example.
 
 Spork
   The Dash development team created a mechanism known as a ":ref:`spork
@@ -926,6 +977,15 @@ Testnet
 Tor
   An anonymous routing protocol used by people wanting to hide their
   identity online.
+
+Transaction
+  Some movement of data on the distributed blockchain ledger.
+  Transactions may divided into classical and special transactions.
+  Similar to Bitcoin, classical transactions move balances between
+  addresses on the blockchain. Special transactions contain an extra
+  payload in the format defined by `DIP2
+  <https://github.com/dashpay/dips/blob/master/dip-0002.md>`_, and can
+  be used to manage blockchain users, for example.
 
 Transaction Block
   A collection of transactions on the Dash network, gathered into a
@@ -977,3 +1037,8 @@ vin
   outputs. The vin is the list of inputs to the transaction, and vout is
   the list of outputs. Masternodes require a 1000 DASH vin (exactly that
   amount) in order to work.
+
+VMN
+  Virtual Masternode - a standalone masternode emulator in JavaScript
+  that simulates Layer 1-3 Evolution functions for DAP design, development
+  and testing.

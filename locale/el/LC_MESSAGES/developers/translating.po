@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 10:04+0000\n"
+"POT-Creation-Date: 2018-07-18 08:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: John Theman <Grdash@mail.com>, 2018\n"
 "Language-Team: Greek (https://www.transifex.com/dash/teams/37570/el/)\n"
@@ -33,6 +33,15 @@ msgid ""
 "languages they feel able to translate. They can then work on any projects "
 "specifying this language as a target language."
 msgstr ""
+"Όλες οι μεταφράσεις των προϊόντων του Dash γίνονται μέσω του Transifex, το "
+"οποίο προσφέρει το δικό του λεπτομερές documentation σε όλες τις λειτουργίες"
+" και επιλογές. Μέσω του Transifex, το Dash διατηρεί μία οργάνωση η οποία "
+"περιέχει πολλαπλά πρότζεκτ και μία ομάδα μεταφραστών που συμμετέχει σε όλα "
+"τα πρότζεκτ. Κάθε πρότζεκτ έχει πολλές γλώσσες στόχους για μετάφραση από τον"
+" υπεύθυνο του πρότζεκτ. ΄'οταν ένας μεταφραστής μπαίνει στην ομάδα, μπορεί "
+"να διαλέξει τις γλώσσες που αισθάνεται ότι μπορεί να μεταφράσει. Μπορεί να "
+"δουλέψει σε οποιοδήποτε πρότζεκτ δηλώνοντας αυτήν την γλώσσα ως γλώσσα "
+"στόχο."
 
 #: ../../developers/translating.rst:17
 msgid "`Transifex <https://www.transifex.com>`_"
@@ -62,6 +71,16 @@ msgid ""
 "written differently, such as ``zh_CN`` and ``zh_TW`` for Simplified Chinese "
 "and Traditional Chinese."
 msgstr ""
+"Σε γενικές γραμμές, οι γλώσσες με ελάχιστη τοπική διαφοροποίηση "
+"μεταφράζονται σαν την κύρια γλώσσα (αντί για την τοπική) στόχο. Για "
+"παράδειγμα τα Πορτογαλικά απλά μεταφράζονται στην γλώσσα στόχο \"pt\", αντί "
+"για δύο διαφορετικές γλώσσες στόχους ``pt_BR`` και ``pt_PT``, για τα "
+"Πορτογαλικά που μιλάνε στην Βραζιλία και την Πορτογαλία αντίστοιχα. Όπως "
+"μεγαλώνει το Dash, αυτές οι γλώσσες μπορεί να χρειαστεί να διαχωριστούν στις"
+" τοπικές διαλέκτους από τους proofreaders, πάντα σε σχέση με την ζήτηση. "
+"Εξαίρεση από αυτόν τον κανόνα γίνεται στις περιοχές όπου η ίδια ομιλούμενη "
+"γλώσσα γράφεται διαφορετικά όπως στις ``zh_CN`` και ``zh_TW`` για "
+"απλοποιημένα Κινέζικα και Παραδοσιακά Κινέζικα. "
 
 #: ../../developers/translating.rst:33
 msgid ""
@@ -268,19 +287,43 @@ msgstr ""
 "Ένα ``*`` πρίν και μετά από μία λέξη ή φράση θα την μετατρέψει στ φόντο "
 "*italic*, ενώ ένα διπλό ``**`` θα την εμφανίσει σε **bold**."
 
-#: ../../developers/translating.rst:140
-msgid "External hyperlinks"
-msgstr "External hyperlinks"
+#: ../../developers/translating.rst:136
+msgid "Internal hyperlinks"
+msgstr ""
 
 #: ../../developers/translating.rst:128
 msgid ""
+"**Source:** ``See :ref:`here <sporks>` for a brief introduction to sporks.``"
+msgstr ""
+
+#: ../../developers/translating.rst:130
+msgid ""
+"**Target:** ``Ver :ref:`aquí <sporks>` para una breve introducción a "
+"sporks``"
+msgstr ""
+
+#: ../../developers/translating.rst:132
+msgid ""
+"An internal hyperlink consists of the phrase ``:ref:``, followed by a single"
+" backtick `````, followed by some text which must be translated, followed by"
+" angle brackets with the link target ``< >``, followed by another backtick "
+"`````. Translate the text, but do not translate the text inside the angle "
+"brackets."
+msgstr ""
+
+#: ../../developers/translating.rst:152
+msgid "External hyperlinks"
+msgstr "External hyperlinks"
+
+#: ../../developers/translating.rst:139
+msgid ""
 "**Source:** ``The `official Dash website <https://www.dash.org>`_ also "
 "provides a list of major exchanges offering Dash.``"
 msgstr ""
 "**Source:** ``The `official Dash website <https://www.dash.org>`_ also "
 "provides a list of major exchanges offering Dash.``"
 
-#: ../../developers/translating.rst:131
+#: ../../developers/translating.rst:142
 msgid ""
 "**Target:** ``El `sitio web oficial de Dash <https://www.dash.org>`_ también"
 " proporciona una lista de las principales Casas de cambio o Exchanges que "
@@ -290,29 +333,25 @@ msgstr ""
 " proporciona una lista de las principales Casas de cambio o Exchanges que "
 "ofrecen Dash.``"
 
-#: ../../developers/translating.rst:135
+#: ../../developers/translating.rst:146
 msgid ""
-"A hyperlink consists of a single backtick `````, followed by some text which"
-" must be translated, followed by angle brackets with the link target ``< "
-">``, followed by another backtick and an underscore ```_``. Translate the "
-"text, but do not translate the hyperlink (unless you want to link to a "
-"version of the page in the target language)."
+"An external hyperlink consists of a single backtick `````, followed by some "
+"text which must be translated, followed by angle brackets with the link "
+"target ``< >``, followed by another backtick and a single or double "
+"underscore: ```_`` or ```__``. Translate the text, but do not translate the "
+"hyperlink (unless you want to link to a version of the page in the target "
+"language)."
 msgstr ""
-"Ένα hyperlink αποτελείται από μία δασεία `````, και ακολουθεί λίγο κείμενο "
-"που πρέπει να μεταφραστεί, έπειτα ακολουθουν αγκυλωτές παρενθέσεις με τον "
-"σύνδεσμο στόχο ``< >``, και μετά ακολουθεί μία ακόμα δασεία και μία κάτω "
-"παύλα ```_``. Μεταφράστε το κείμενο αλλά όχι το hyperlink (εκτός και αν "
-"θέλετε να το συνδέσετε σε μία έκδοση της σελίδας στην γλώσσα στόχο)."
 
-#: ../../developers/translating.rst:143
+#: ../../developers/translating.rst:155
 msgid "Dash Graphics"
 msgstr "Dash Graphics"
 
-#: ../../developers/translating.rst:145
+#: ../../developers/translating.rst:157
 msgid "https://www.transifex.com/dash/dash-graphics"
 msgstr "https://www.transifex.com/dash/dash-graphics"
 
-#: ../../developers/translating.rst:147
+#: ../../developers/translating.rst:159
 msgid ""
 "Dash visual products such as infographics, flyers and conference handouts "
 "are produced using Adobe InDesign, Adobe Illustrator or Microsoft Word and "
@@ -332,7 +371,7 @@ msgstr ""
 "είναι μέρος μιάς επικεφαλίδας, μίας πρότασης ή αν είναι ένα αντικείμενο σε "
 "ένα διάγραμμα."
 
-#: ../../developers/translating.rst:156
+#: ../../developers/translating.rst:168
 msgid ""
 "Because these proprietary file formats are not easily handled by Transifex, "
 "the language content is exported to a text or Microsoft Excel file and "
@@ -348,15 +387,15 @@ msgstr ""
 "στο @strophy στοι `Discord <http://dashchat.org>`_  μόλις τελειώσετε για να "
 "ζητήσετε το layout του τελικού design."
 
-#: ../../developers/translating.rst:164
+#: ../../developers/translating.rst:176
 msgid "Dash iOS Wallet"
 msgstr "Dash iOS Wallet"
 
-#: ../../developers/translating.rst:166
+#: ../../developers/translating.rst:178
 msgid "https://www.transifex.com/dash/dash-ios-wallet"
 msgstr "https://www.transifex.com/dash/dash-ios-wallet"
 
-#: ../../developers/translating.rst:168
+#: ../../developers/translating.rst:180
 msgid ""
 "All language content from the :ref:`Dash iOS Wallet <dash-ios-wallet>` are "
 "available for translation in this project. Please have a device running the "
@@ -372,15 +411,15 @@ msgstr ""
 " σημειοδείκτες από το αρχικό κείμενο πρέπει ναβρίσκονται και στην μετάφραση,"
 " όπως και στις οδηγίες παραπάνω για το Dash Core Wallet."
 
-#: ../../developers/translating.rst:176
+#: ../../developers/translating.rst:188
 msgid "Dash Android Wallet"
 msgstr "Dash Android Wallet"
 
-#: ../../developers/translating.rst:178
+#: ../../developers/translating.rst:190
 msgid "https://www.transifex.com/dash/dash-wallet"
 msgstr "https://www.transifex.com/dash/dash-wallet"
 
-#: ../../developers/translating.rst:180
+#: ../../developers/translating.rst:192
 msgid ""
 "All language content from the :ref:`Dash Android Wallet <dash-android-"
 "wallet>` are available for translation in this project. Please have a device"
@@ -396,15 +435,15 @@ msgstr ""
 "ότι όλοι οι σημειοδείκτες από το αρχικό κείμενο πρέπει ναβρίσκονται και στην"
 " μετάφραση, όπως και στις οδηγίες παραπάνω για το Dash Core Wallet."
 
-#: ../../developers/translating.rst:189
+#: ../../developers/translating.rst:201
 msgid "Dash Videos"
 msgstr "Dash Videos"
 
-#: ../../developers/translating.rst:191
+#: ../../developers/translating.rst:203
 msgid "https://www.transifex.com/dash/dash-videos"
 msgstr "https://www.transifex.com/dash/dash-videos"
 
-#: ../../developers/translating.rst:193
+#: ../../developers/translating.rst:205
 msgid ""
 "This section primarily contains language content from Amanda B. Johnson's "
 "popular `Dash School <https://www.youtube.com/watch?v=e7UwwcCK "
@@ -422,15 +461,15 @@ msgstr ""
 "leon.white@dash.org ή στο @strophy στο `Discord <http://dashchat.org>`_ για "
 "να ζητήσετε την ενσωμάτωση τωνυποτίτλων στο YouTube."
 
-#: ../../developers/translating.rst:203
+#: ../../developers/translating.rst:215
 msgid "Dash Website"
 msgstr "Dash Website"
 
-#: ../../developers/translating.rst:205
+#: ../../developers/translating.rst:217
 msgid "https://www.transifex.com/dash/dash-website"
 msgstr "https://www.transifex.com/dash/dash-website"
 
-#: ../../developers/translating.rst:207
+#: ../../developers/translating.rst:219
 msgid ""
 "The Dash website at https://www.dash.org is available for translation in "
 "Transifex. Please have the website open while you translate to correctly "
@@ -439,3 +478,9 @@ msgid ""
 "`Discord <http://dashchat.org>`_ to request a build of your translation onto"
 " the website."
 msgstr ""
+"Η ιστοσελίδα του Dash https://www.dash.org είναι διαθέσιμη για μετάφραση στο"
+" Transifex. Παρακαλείστε να έχετε την ιστοσελίδα ανοιχτή όταν κάνετε την "
+"μετάφραση για να καταλάβετε το νόημα από το αρχικό κείμενο. Μόλις τελειώσετε"
+" την μετάφρασή σας, στείλτε παρακαλώ ένα email στο leon.white@dash.org ή στο"
+"  @strophy στο `Discord <http://dashchat.org>`_ για να ζητήσετε να "
+"ενσωματωθεί η μετάφρασή σας στην ιστοσελίδα."

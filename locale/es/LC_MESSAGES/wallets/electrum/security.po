@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 10:04+0000\n"
+"POT-Creation-Date: 2018-07-11 06:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Alejandro Echeverria <alejem93@gmail.com>, 2018\n"
+"Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../wallets/electrum/security.rst:4
 msgid "Wallet security"
-msgstr ""
+msgstr "Seguridad de monedero"
 
 #: ../../wallets/electrum/security.rst:7
 msgid "Change password"
-msgstr ""
+msgstr "Cambiar contraseña"
 
 #: ../../wallets/electrum/security.rst:9
 msgid ""
@@ -34,6 +34,12 @@ msgid ""
 "wallets' password, all is not lost. Your wallet can be restored in its "
 "entirety using the backup procedure described here."
 msgstr ""
+"Para cambiar la contraseña de el monedero, selecciona la opción **Monedero >"
+" Contraseña** en el menú principal, o haz click en el ícono de candado en la"
+" esquina inferior derecha de la ventana principal. Ingresa y confirma una "
+"nueva contraseña segura. Si olvidas la contraseña de tu monedero, no todo "
+"estará perdido. Tu monedero se puede restaurar en su totalidad utilizando el"
+" procedimiento de respaldo que se describe aquí."
 
 #: ../../wallets/electrum/security.rst:18
 msgid "Backup"
@@ -47,10 +53,16 @@ msgid ""
 "prompted, enter the secure password you chose when setting up the Dash "
 "Electrum wallet."
 msgstr ""
+"En Dash Electrum, una semilla es un respaldo completo de todas las "
+"direcciones y transacciones. Accede a la semilla de tu monedero a través del"
+" icono de la semilla en la esquina inferior derecha de la pantalla "
+"principal, o la opción del menú principal **Monedero > Semilla**. Cuando se "
+"te solicite, ingresa la contraseña segura que eligiste al configurar el "
+"monedero Dash Electrum."
 
 #: ../../wallets/electrum/security.rst:29
 msgid "Displaying the wallet recovery seed in Dash Electrum"
-msgstr ""
+msgstr "Mostrar la semilla de recuperación de monedero en Dash Electrum"
 
 #: ../../wallets/electrum/security.rst:31
 msgid ""
@@ -58,10 +70,13 @@ msgid ""
 " in a safe location. Remember, anyone who finds your seed can spend all of "
 "the funds in your wallet."
 msgstr ""
+"Copia a mano las doce palabras que se encuentran en el cuadro a una hoja de "
+"papel y guárdalo en un lugar seguro. Recuerda, cualquiera que encuentre tu "
+"semilla puede gastar todos los fondos en tu monedero."
 
 #: ../../wallets/electrum/security.rst:38
 msgid "Viewing the recovery seed"
-msgstr ""
+msgstr "Ver la semilla de recuperación"
 
 #: ../../wallets/electrum/security.rst:40
 msgid ""
@@ -70,10 +85,14 @@ msgid ""
 "any imported addresses. Restoring this backup will require the wallet "
 "password."
 msgstr ""
+"Alternativamente, se puede guardar un archivo de respaldo usando la opción "
+"del menú principal **Archivo > Guardar copia**. Este archivo almacena la "
+"semilla encriptada del monedero junto con las direcciones importadas. La "
+"restauración de este respaldo requerirá la contraseña del monedero."
 
 #: ../../wallets/electrum/security.rst:47
 msgid "Restore"
-msgstr ""
+msgstr "Restaurar"
 
 #: ../../wallets/electrum/security.rst:49
 msgid ""
@@ -83,6 +102,12 @@ msgid ""
 "This optional procedure is described below. Before continuing, verify that "
 "your seed is written down clearly and correctly on paper."
 msgstr ""
+"Lo único que se necesita para recuperar un monedero Dash Electrum en otra "
+"computadora es su semilla. Puedes probar la recuperación del monedero con tu"
+" instalación actual de Dash Electrum quitando los datos del monedero de la "
+"carpeta de datos de la aplicación. Este procedimiento opcional se describe a"
+" continuación. Antes de continuar, verifica que tu semilla esté escrita "
+"clara y correctamente en papel."
 
 #: ../../wallets/electrum/security.rst:56
 msgid ""
@@ -90,42 +115,52 @@ msgid ""
 "be deleted. Begin by closing Dash Electrum. Next, locate the application "
 "data folder according to your operating system:"
 msgstr ""
+"Para que Dash Electrum genere un nuevo monedero, es necesario eliminar los "
+"datos del monedero anterior. Comienza cerrando Dash Electrum. A "
+"continuación, busca la carpeta de datos de la aplicación de acuerdo con tu "
+"sistema operativo:"
 
 #: ../../wallets/electrum/security.rst:60
 msgid "**Linux:**"
-msgstr ""
+msgstr "**Linux:**"
 
 #: ../../wallets/electrum/security.rst:62
 msgid ""
 "Open Files, select **Go > Go to folder**, copy the path ``~/.electrum`` and "
 "paste it into the dialog box"
 msgstr ""
+"Abrir archivos, selecciona **Ir > Ir a la carpeta**, copia la ruta "
+"``~/.electrum`` y pégala en el cuadro de diálogo"
 
 #: ../../wallets/electrum/security.rst:64
 #: ../../wallets/electrum/security.rst:70
 #: ../../wallets/electrum/security.rst:76
 msgid "Delete all files in the folder"
-msgstr ""
+msgstr "Borrar todos los archivos en la carpeta"
 
 #: ../../wallets/electrum/security.rst:66
 msgid "**macOS:**"
-msgstr ""
+msgstr "**macOS:**"
 
 #: ../../wallets/electrum/security.rst:68
 msgid ""
 "Open Finder, select **Go > Go to Folder**, copy the path ``~/.electrum`` and"
 " paste it into the dialog box"
 msgstr ""
+"Abrir buscador, selecciona  **Ir > Ir a la carpeta**, copia la ruta "
+"``~/.electrum`` y pégala en el cuadro de diálogo"
 
 #: ../../wallets/electrum/security.rst:72
 msgid "**Windows:**"
-msgstr ""
+msgstr "**Windows:**"
 
 #: ../../wallets/electrum/security.rst:74
 msgid ""
 "Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and paste it in to"
 " the address bar"
 msgstr ""
+"Abrir el explorador, copia la ruta ``%APPDATA%\\Electrum-DASH`` y pégala en "
+"la barra de direcciones"
 
 #: ../../wallets/electrum/security.rst:78
 msgid ""
@@ -133,18 +168,22 @@ msgid ""
 "appear asking you to name your new wallet. Enter a name, select **Standard "
 "wallet** as the wallet type and then choose **I already have a seed**."
 msgstr ""
+"Habiendo borrado el directorio de datos, reinicia Dash Electrum. Aparecerá "
+"un cuadro de diálogo pidiéndote que nombres tu nuevo monedero. Ingresa un "
+"nombre, selecciona **Monedero estándar** como tipo de Monedero y luego elije"
+" **Ya tengo una semilla**."
 
 #: ../../wallets/electrum/security.rst:86
 msgid "Restoring a wallet from an existing seed"
-msgstr ""
+msgstr "Restaurar un monedero desde una semilla existente"
 
 #: ../../wallets/electrum/security.rst:88
 msgid "Next, copy the twelve word seed into the text field."
-msgstr ""
+msgstr "Luego, copia la semilla de doce palabras en el campo de texto."
 
 #: ../../wallets/electrum/security.rst:93
 msgid "Entering the recovery seed"
-msgstr ""
+msgstr "Ingresar una semilla de recuperación"
 
 #: ../../wallets/electrum/security.rst:95
 msgid ""
@@ -154,7 +193,13 @@ msgid ""
 "a few minutes, and the transactions may appear as **Not Verified**. This "
 "problem disappears after restarting the program."
 msgstr ""
+"Si tu semilla fue ingresada correctamente, Dash Electrum te da la opción de "
+"agregar una contraseña para tu monedero. Después de restaurar tu monedero, "
+"Dash Electrum listará todas las transacciones existentes de este monedero. "
+"Este proceso puede demorar unos minutos y las transacciones pueden aparecer "
+"como **No verificadas**. Este problema desaparece después de reiniciar el "
+"programa."
 
 #: ../../wallets/electrum/security.rst:104
 msgid "Unverified transactions after recovery"
-msgstr ""
+msgstr "Transacciones no verificadas después de la recuperación"

@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 04:30+0000\n"
+"POT-Creation-Date: 2018-07-18 08:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Korean (https://www.transifex.com/dash/teams/37570/ko/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../developers/index.rst:5
 msgid "Developers"
@@ -23,13 +23,13 @@ msgstr ""
 
 #: ../../developers/index.rst:7
 msgid ""
-"Dash Core has published an extensive `Developer Guide <https://dash- "
-"docs.github.io/en/>`_ to help new developers get started with the Dash "
-"code base, and as a reference for experienced developers. This guide can "
-"be leveraged to quickly and efficiently integrate external applications "
-"with the Dash ecosystem. Anyone can contribute to the guide by submitting"
-" an issue or pull request on GitHub. The documentation is available at: "
-"https://dash-docs.github.io/en/"
+"Dash Core has published an extensive `Developer Guide <https://dash-"
+"docs.github.io/en/>`_ to help new developers get started with the Dash code "
+"base, and as a reference for experienced developers. This guide can be "
+"leveraged to quickly and efficiently integrate external applications with "
+"the Dash ecosystem. Anyone can contribute to the guide by submitting an "
+"issue or pull request on GitHub. The documentation is available at: "
+"https://dash- docs.github.io/en/"
 msgstr ""
 
 #: ../../developers/index.rst:15
@@ -37,16 +37,16 @@ msgid ""
 "The Dash Core Team also maintains the `Dash Roadmap "
 "<https://github.com/dashpay/dash-roadmap>`_, which sets out delivery "
 "milestones for future releases of Dash and includes specific technical "
-"details describing how the development team plans to realise each "
-"challenge. The Dash Roadmap is complemented by the `Dash Improvement "
-"Proposals <https://github.com/dashpay/dips>`_, which contain detailed "
-"technical explanations of proposed changes to the Dash protocol itself."
+"details describing how the development team plans to realise each challenge."
+" The Dash Roadmap is complemented by the `Dash Improvement Proposals "
+"<https://github.com/dashpay/dips>`_, which contain detailed technical "
+"explanations of proposed changes to the Dash protocol itself."
 msgstr ""
 
 #: ../../developers/index.rst:23
 msgid ""
-"The remaining sections available below describe practical steps to carry "
-"out common development tasks in Dash."
+"The remaining sections available below describe practical steps to carry out"
+" common development tasks in Dash."
 msgstr ""
 
 #: ../../developers/index.rst:36
@@ -59,10 +59,10 @@ msgid ""
 "unique to Dash used to safely deploy new features to the network through "
 "network-level variables to avoid the risk of unintended network forking "
 "during upgrades. It can also be used to disable certain features if a "
-"security vulnerability is discovered - see :ref:`here <sporks>` for a "
-"brief introduction to sporks. This documentation describes the meaning of"
-" each spork currently existing on the network, and how to check their "
-"respective statuses."
+"security vulnerability is discovered - see :ref:`here <sporks>` for a brief "
+"introduction to sporks. This documentation describes the meaning of each "
+"spork currently existing on the network, and how to check their respective "
+"statuses."
 msgstr ""
 
 #: ../../developers/index.rst:48
@@ -71,13 +71,13 @@ msgstr ""
 
 #: ../../developers/index.rst:50
 msgid ""
-"Sporks are set using integer values. Many sporks may be set to a "
-"particular epoch datetime (number of seconds that have elapsed since "
-"January 1, 1970) to specify the time at which they will active. Enabled "
-"sporks are set to 0 (seconds until activation). This function is often "
-"used to set a spork enable date so far in the future that it is "
-"effectively disabled until changed. The following sporks currently exist "
-"on the network and serve functions as described below:"
+"Sporks are set using integer values. Many sporks may be set to a particular "
+"epoch datetime (number of seconds that have elapsed since January 1, 1970) "
+"to specify the time at which they will active. Enabled sporks are set to 0 "
+"(seconds until activation). This function is often used to set a spork "
+"enable date so far in the future that it is effectively disabled until "
+"changed. The following sporks currently exist on the network and serve "
+"functions as described below:"
 msgstr ""
 
 #: ../../developers/index.rst:59
@@ -104,859 +104,103 @@ msgstr ""
 
 #: ../../developers/index.rst:66
 msgid ""
-"Enforces the maximum value in Dash that can be included in an InstantSend"
-" transaction."
+"Enforces the maximum value in Dash that can be included in an InstantSend "
+"transaction."
 msgstr ""
 
-#: ../../developers/index.rst:71
-msgid "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT"
+#: ../../developers/index.rst:73
+msgid "SPORK_6_NEW_SIGS"
 msgstr ""
 
 #: ../../developers/index.rst:70
-#, python-format
+msgid ""
+"Enables a new signature format for Dash-specific network messages introduced"
+" in Dash 12.3. For more information, see `here "
+"<https://github.com/dashpay/dash/pull/1936>`__ and `here "
+"<https://github.com/dashpay/dash/pull/1937>`__."
+msgstr ""
+
+#: ../../developers/index.rst:77
+msgid "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT"
+msgstr ""
+
+#: ../../developers/index.rst:76
 msgid ""
 "If enabled, miners must pay 50% of the block reward to a masternode "
 "currently pending selection or the block will be considered invalid."
 msgstr ""
 
-#: ../../developers/index.rst:75
+#: ../../developers/index.rst:81
 msgid "SPORK_9_SUPERBLOCKS_ENABLED"
 msgstr ""
 
-#: ../../developers/index.rst:74
-msgid "If enabled, superblocks are verified and issued to pay proposal winners."
+#: ../../developers/index.rst:80
+msgid ""
+"If enabled, superblocks are verified and issued to pay proposal winners."
 msgstr ""
 
-#: ../../developers/index.rst:80
+#: ../../developers/index.rst:86
 msgid "SPORK_10_MASTERNODE_PAY_UPDATED_NODES"
 msgstr ""
 
-#: ../../developers/index.rst:78
+#: ../../developers/index.rst:84
 msgid ""
 "Controls whether masternodes running an older protocol version are "
 "considered eligible for payment. This can be used as an incentive to "
 "encourage masternodes to update."
 msgstr ""
 
-#: ../../developers/index.rst:84
+#: ../../developers/index.rst:90
 msgid "SPORK_12_RECONSIDER_BLOCKS"
 msgstr ""
 
-#: ../../developers/index.rst:83
+#: ../../developers/index.rst:89
 msgid ""
-"Forces reindex of a specified number of blocks to recover from "
-"unintentional network forks."
+"Forces reindex of a specified number of blocks to recover from unintentional"
+" network forks."
 msgstr ""
 
-#: ../../developers/index.rst:87
+#: ../../developers/index.rst:93
 msgid "SPORK_13_OLD_SUPERBLOCK_FLAG"
 msgstr ""
 
-#: ../../developers/index.rst:87
+#: ../../developers/index.rst:93
 msgid "Deprecated. No network function since block 614820."
 msgstr ""
 
-#: ../../developers/index.rst:91
+#: ../../developers/index.rst:97
 msgid "SPORK_14_REQUIRE_SENTINEL_FLAG"
-msgstr ""
-
-#: ../../developers/index.rst:90
-msgid ""
-"Toggles whether masternodes with status are eligible for payment if "
-"status is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly."
-msgstr ""
-
-#: ../../developers/index.rst:94
-msgid "Viewing spork status"
 msgstr ""
 
 #: ../../developers/index.rst:96
 msgid ""
-"The ``spork show`` and ``spork active`` commands issued in the debug "
-"window (or from ``dash-cli`` on a masternode) allow you to interact with "
-"sporks. You can open the debug window by selecting **Tools > Debug "
-"console**."
+"Toggles whether masternodes with status are eligible for payment if status "
+"is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly."
 msgstr ""
 
-#: ../../developers/index.rst:104
-msgid "spork show and spork active output in the Dash Core debug console"
+#: ../../developers/index.rst:100
+msgid "Viewing spork status"
 msgstr ""
 
-#: ../../developers/index.rst:108
-msgid "Version History"
+#: ../../developers/index.rst:102
+msgid ""
+"The ``spork show`` and ``spork active`` commands issued in the debug window "
+"(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
+"You can open the debug window by selecting **Tools > Debug console**."
 msgstr ""
 
 #: ../../developers/index.rst:110
+msgid "spork show and spork active output in the Dash Core debug console"
+msgstr ""
+
+#: ../../developers/index.rst:114
+msgid "Version History"
+msgstr ""
+
+#: ../../developers/index.rst:116
 msgid "Full release notes and the version history of Dash are available here:"
 msgstr ""
 
-#: ../../developers/index.rst:112
+#: ../../developers/index.rst:118
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
 msgstr ""
-
-#~ msgid ""
-#~ "This section includes documentation useful "
-#~ "to developers and technical writers "
-#~ "interested in Dash."
-#~ msgstr ""
-
-#~ msgid "Compiling Dash Core"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "While Dash offers stable binary builds"
-#~ " on the `website "
-#~ "<https://www.dash.org/wallets>`_, on `Github "
-#~ "<https://github.com/dashpay/dash/releases>`_ and through"
-#~ " development builds using `Bamboo "
-#~ "<https://bamboo.dash.org>`_, many users will "
-#~ "also be interested in building Dash "
-#~ "binaries for themselves. The following "
-#~ "guides are available:"
-#~ msgstr ""
-
-#~ msgid "Eclipse (coming soon)"
-#~ msgstr ""
-
-#~ msgid ":ref:`Building on Linux <linux-build>`"
-#~ msgstr ""
-
-#~ msgid ":ref:`Gitian deterministic builds <gitian-build>`"
-#~ msgstr ""
-
-#~ msgid "Linux"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This guide describes how to build "
-#~ "Dash Core wallet without the GUI "
-#~ "from source under Ubuntu Linux. It "
-#~ "is intended to serve as a simple"
-#~ " guide for general compilation of "
-#~ "non-deterministic binary files from the "
-#~ "stable source code. A standard "
-#~ "installation of Ubuntu Linux 16.04 LTS"
-#~ " running on a VPS will be used"
-#~ " as an environment for the build. "
-#~ "We assume you are running as root."
-#~ " First add the necessary extra "
-#~ "repository and update all packages::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Now install the dependencies as "
-#~ "described in the installation documentation::"
-#~ msgstr ""
-
-#~ msgid "Download the stable Dash repository::"
-#~ msgstr ""
-
-#~ msgid "And build::"
-#~ msgstr ""
-
-#~ msgid "``/usr/local/bin`` now contains the compiled Dash binaries."
-#~ msgstr ""
-
-#~ msgid "Gitian"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Gitian is the deterministic build "
-#~ "process that is used to build the"
-#~ " Dash Core executables. It provides a"
-#~ " way to be reasonably sure that "
-#~ "the executables are really built from"
-#~ " the source on GitHub. It also "
-#~ "makes sure that the same, tested "
-#~ "dependencies are used and statically "
-#~ "built into the executable. Multiple "
-#~ "developers build the source code by "
-#~ "following a specific descriptor (\"recipe\"),"
-#~ " cryptographically sign the result, and "
-#~ "upload the resulting signature. These "
-#~ "results are compared and only if "
-#~ "they match, the build is accepted "
-#~ "and uploaded to dash.org."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "More independent Gitian builders are "
-#~ "needed, which is why this guide "
-#~ "exists. It is preferred you follow "
-#~ "these steps yourself instead of using"
-#~ " someone else's VM image to avoid "
-#~ "'contaminating' the build."
-#~ msgstr ""
-
-#~ msgid "Setup the host environment"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Gitian builds are known to be "
-#~ "working on Debian 8.x. If your "
-#~ "machine is already running this sytem,"
-#~ " you can perform Gitian builds on "
-#~ "the actual hardware. Alternatively, you "
-#~ "can install it in a virtual "
-#~ "machine. Follow the guide for "
-#~ ":ref:`setting up a VPS for masternodes"
-#~ " <vps-setup>`, selecting a Debian 8.x"
-#~ " image during the installation process "
-#~ "and naming your non-root user "
-#~ "``gitianuser``. Selecting a VPS with two"
-#~ " processors will also greatly speed "
-#~ "up the build process. If you "
-#~ "cannot login to your VPS over SSH"
-#~ " as root, access the terminal and "
-#~ "issue the following command::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Log in to your new environment by"
-#~ " SSH as root. Set up the "
-#~ "dependencies first by pasting the "
-#~ "following in the terminal::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Then set up LXC and the rest "
-#~ "with the following, which is a "
-#~ "complex jumble of settings and "
-#~ "workarounds::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "At the end Debian is rebooted to"
-#~ " make sure that the changes take "
-#~ "effect. Re-login as the user "
-#~ "gitianuser that was created during "
-#~ "installation. The rest of the steps "
-#~ "in this guide will be performed as"
-#~ " that user."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "There is no ``python-vm-builder`` "
-#~ "package in Debian, so we need to"
-#~ " install it from source ourselves::"
-#~ msgstr ""
-
-#~ msgid "Set up the environment and compile"
-#~ msgstr ""
-
-#~ msgid "Clone the Dash Core repository to your home directory::"
-#~ msgstr ""
-
-#~ msgid "Then create the script file::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "And paste the following script in "
-#~ "place (this will be automatic if/when"
-#~ " the script is pulled into Dash "
-#~ "Core)::"
-#~ msgstr ""
-
-#~ msgid "Save the file and set it executable::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Set up the environment, replacing the"
-#~ " name and version with your name "
-#~ "and target version::"
-#~ msgstr ""
-
-#~ msgid "Run the compilation script::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Your system will build all dependencies"
-#~ " and Dash Core from scratch for "
-#~ "Windows and Linux platforms (macOS if"
-#~ " the dependencies were installed according"
-#~ " to these instructions). This can "
-#~ "take some time. When complete, you "
-#~ "will see the SHA256 checksums, which "
-#~ "you can compare against the hashes "
-#~ "available on the `Dash website "
-#~ "<https://www.dash.org/wallets>`_. In this way, "
-#~ "you can be sure that you are "
-#~ "running original and untampered builds "
-#~ "of the code as it exists on "
-#~ "Github."
-#~ msgstr ""
-
-#~ msgid "Translating"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Translations of all Dash products are"
-#~ " managed courtesty of Transifex, which "
-#~ "offers detailed documentation of all "
-#~ "functions and features. Within Transifex, "
-#~ "Dash maintains an organization which "
-#~ "contains multiple projects and one team"
-#~ " of translators assigned to all of"
-#~ " the projects. Each project is "
-#~ "assigned with one or more target "
-#~ "languages for translation by the project"
-#~ " maintainer. When a translator joins "
-#~ "the team, they are able to choose"
-#~ " the languages they feel able to "
-#~ "translate. They can then work on "
-#~ "any projects specifying this language as"
-#~ " a target language."
-#~ msgstr ""
-
-#~ msgid "`Transifex <https://www.transifex.com>`_"
-#~ msgstr ""
-
-#~ msgid "`Transifex Documentation <https://docs.transifex.com>`_"
-#~ msgstr ""
-
-#~ msgid "`Dash translation projects <https://www.transifex.com/dash>`_"
-#~ msgstr ""
-
-#~ msgid "`Dash translators team <https://www.transifex.com/dash/teams>`_"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In general, languages with minimal "
-#~ "regional variantion are to be translated"
-#~ " into the common language (rather "
-#~ "than regional) target. Portuguese, for "
-#~ "example, is simply translated into the"
-#~ " ``pt`` target language, rather than "
-#~ "two separate target languages ``pt_BR`` "
-#~ "and ``pt_PT``, for Portuguese as spoken"
-#~ " in Brazil and Portugal, respectively. "
-#~ "As Dash grows, these languages may "
-#~ "be separated out into their regional "
-#~ "variants by proofreaders, depending on "
-#~ "demand. Exceptions to this rule apply"
-#~ " where the written language is "
-#~ "objectively different, such as ``zh_CN`` "
-#~ "and ``zh_TW`` for Simplified Chinese and"
-#~ " Traditional Chinese."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Keeping translations consistent over time "
-#~ "as multiple translators work on each "
-#~ "target language is a very important "
-#~ "part of delivering a quality user "
-#~ "experience. For this reason, if you "
-#~ "come across any Dash-specific "
-#~ "terminology such as `masternodes`, you "
-#~ "should use the **Concordance** search "
-#~ "function to see how the term has"
-#~ " been translated in the past. "
-#~ "Transifex will also provide **Suggestions**"
-#~ " and **History** if it recognizes a"
-#~ " similar string in the database of"
-#~ " past translations. Stay consistent with"
-#~ " past language use, but also ensure"
-#~ " your terminology is up to date "
-#~ "with current use!"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The following documentation describes the "
-#~ "various projects and any special "
-#~ "features specific to the programming "
-#~ "language in which the product is "
-#~ "written."
-#~ msgstr ""
-
-#~ msgid "Dash Core"
-#~ msgstr ""
-
-#~ msgid "https://www.transifex.com/dash/dash/"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This project contains a file named "
-#~ "``dash_en.ts``, which is an export of"
-#~ " all translatable user-facing content "
-#~ "in the :ref:`Dash Core Wallet <dash-"
-#~ "core-wallet>`. Languages with 80% or "
-#~ "more of the translations complete will"
-#~ " be integrated in the next release."
-#~ " Note that the software will often"
-#~ " replace placeholders in the text "
-#~ "with actual numbers, addresses or "
-#~ "usernames. If you see a placeholder "
-#~ "in the source text, it must also"
-#~ " appear in the target text. If "
-#~ "it does not, your translation cannot "
-#~ "be used. The **Copy source string** "
-#~ "button can help you copy everything "
-#~ "over, so all you need to do "
-#~ "is replace the English words surrounding"
-#~ " the placeholders. You can change the"
-#~ " order of the placeholders as "
-#~ "necessary, according to the grammar of"
-#~ " your target language."
-#~ msgstr ""
-
-#~ msgid "Placeholders"
-#~ msgstr ""
-
-#~ msgid "**Source:** E&xit"
-#~ msgstr ""
-
-#~ msgid "**Target:** &Beenden"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that the ``&`` character is "
-#~ "placeholder used to indicate a keyboard"
-#~ " shortcut in a program menu, and "
-#~ "must appear next to the appropriate "
-#~ "character in your target language with"
-#~ " no adjacent space. Placeholders such "
-#~ "as ``%1`` or ``%s`` will be "
-#~ "replaced by the software as it is"
-#~ " running to indicate a name or "
-#~ "number of something relating to the "
-#~ "message. You must insert these "
-#~ "placeholders in the grammatically appropriate"
-#~ " position in your target text."
-#~ msgstr ""
-
-#~ msgid "Punctuation"
-#~ msgstr ""
-
-#~ msgid "**Source:** change from %1 (%2)"
-#~ msgstr ""
-
-#~ msgid "**Target:** Wechselgeld von %1 (%2)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that any brackets ``()`` and "
-#~ "punctuation such as full stops ``.`` "
-#~ "at the end of a sentence must "
-#~ "also exist in the target text."
-#~ msgstr ""
-
-#~ msgid "Dash Docs"
-#~ msgstr ""
-
-#~ msgid "https://www.transifex.com/dash/dash-docs"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This project contains all content from"
-#~ " the Dash Documentation hosted at "
-#~ "https://docs.dash.org (probably the site you"
-#~ " are reading now). Each ``.html`` "
-#~ "page in the documentation appears as "
-#~ "a file in the resources section, "
-#~ "named according to the navigation steps"
-#~ " required to open the page. The "
-#~ "Dash Documentation is written in a "
-#~ "documentation language called `reStructuredText "
-#~ "<http://docutils.sourceforge.net/rst.html>`_ and built "
-#~ "using the open-source `Sphinx "
-#~ "Documentation Generator <http://www.sphinx-"
-#~ "doc.org>`_. To simplify layout, most of"
-#~ " the text has no markup or code"
-#~ " marks at all, but hyperlinks and "
-#~ "certain formatting must be reproduced in"
-#~ " the target language as follows:"
-#~ msgstr ""
-
-#~ msgid "Inline literals"
-#~ msgstr ""
-
-#~ msgid "**Source:** Type \\`\\`./dash-qt\\`\\` to run the file."
-#~ msgstr ""
-
-#~ msgid "**Target:** Escriba \\`\\`./dash-qt\\`\\` para correr el archivo."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that two backticks ``\\`\\``` "
-#~ "before and after a word or phrase"
-#~ " will cause that text to appear "
-#~ "as an ``inline literal``. This is "
-#~ "commonly used to highlight code or "
-#~ "commands to be typed by the user."
-#~ msgstr ""
-
-#~ msgid "Bold and italic"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "**Source:** To encrypt your wallet, "
-#~ "click \\*\\*Settings\\*\\* > \\*\\*Encrypt\\*\\* "
-#~ "wallet."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "**Target:** Para encriptar su billetera, "
-#~ "haga click en \\*\\*Settings\\*\\* > "
-#~ "\\*\\*Encrypt\\*\\* billetera."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A single ``*`` before and after a"
-#~ " word or phrase will render it "
-#~ "in an *italic* font, while a "
-#~ "double ``**`` will render it in "
-#~ "**bold**."
-#~ msgstr ""
-
-#~ msgid "External hyperlinks"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "**Source:** The \\`official Dash website "
-#~ "<https://www.dash.org>\\`_ also provides a "
-#~ "list of major exchanges offering Dash."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "**Target:** El \\`sitio web oficial de"
-#~ " Dash <https://www.dash.org>\\`_ también "
-#~ "proporciona una lista de las principales"
-#~ " Casas de cambio o Exchanges que "
-#~ "ofrecen Dash."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A hyperlink consists of a backtick "
-#~ "`````, followed by some text which "
-#~ "must be translated, followed by angle"
-#~ " brackets with the link target ``<"
-#~ " >``, followed by another backtick "
-#~ "and an underscore ```_``. Translate the"
-#~ " text, but do not translate the "
-#~ "hyperlink (unless you want to link "
-#~ "to a version of the page in "
-#~ "the target language)."
-#~ msgstr ""
-
-#~ msgid "Dash Graphics"
-#~ msgstr ""
-
-#~ msgid "https://www.transifex.com/dash/dash-graphics"
-#~ msgstr ""
-
-#~ msgid "Dash iOS Wallet"
-#~ msgstr ""
-
-#~ msgid "https://www.transifex.com/dash/dash-ios-wallet"
-#~ msgstr ""
-
-#~ msgid "Dash Android Wallet"
-#~ msgstr ""
-
-#~ msgid "https://www.transifex.com/dash/dash-wallet"
-#~ msgstr ""
-
-#~ msgid "Dash Videos"
-#~ msgstr ""
-
-#~ msgid "https://www.transifex.com/dash/dash-videos"
-#~ msgstr ""
-
-#~ msgid "Dash Website"
-#~ msgstr ""
-
-#~ msgid "https://www.transifex.com/dash/dash-website"
-#~ msgstr ""
-
-#~ msgid "Testnet"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Testnet is a fully functioning Dash "
-#~ "blockchain with the one key exception"
-#~ " that because the Dash on the "
-#~ "network can be created freely, it "
-#~ "has no value. Testnet helps developers"
-#~ " test new versions of Dash, as "
-#~ "well as test network operations using"
-#~ " identical versions of the software "
-#~ "before they are carried out on the"
-#~ " mainnet. There are a few other "
-#~ "key differences:"
-#~ msgstr ""
-
-#~ msgid "Testnet operates on port 19999 (instead of 9999)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Testnet addresses start with \"y\" "
-#~ "instead of \"X\", ADDRESSVERSION is 140"
-#~ " (instead of 76)"
-#~ msgstr ""
-
-#~ msgid "Testnet balances are denominated in tDASH (instead of DASH)"
-#~ msgstr ""
-
-#~ msgid "Protocol message header bytes are 0xcee2caff (instead of 0xbf0c6bbd)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Bootstrapping uses different DNS seeds: "
-#~ "test.dnsseed.masternode.io, testnet-seed.darkcoin.qa, "
-#~ "testnet-seed.dashpay.io"
-#~ msgstr ""
-
-#~ msgid "Launching Dash Core in testnet mode shows an orange splash screen"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To start Dash Core in testnet "
-#~ "mode, find your dash.conf file and "
-#~ "enter the following line::"
-#~ msgstr ""
-
-#~ msgid "Tools and links"
-#~ msgstr ""
-
-#~ msgid "**Test builds:** https://bamboo.dash.org"
-#~ msgstr ""
-
-#~ msgid "**Bugtracker:** https://github.com/dashpay/dash/issues/new"
-#~ msgstr ""
-
-#~ msgid "**Discussion and help:** https://www.dash.org/forum/topic/testing.53/"
-#~ msgstr ""
-
-#~ msgid "**Masternode tools:** https://test.dashninja.pl/masternodes.html"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "**Android wallet:** https://www.dash.org/forum/threads"
-#~ "/dash-wallet-for-android-v5-testnet.14775/"
-#~ msgstr ""
-
-#~ msgid "**Testnet for Bitcoin:** https://en.bitcoin.it/wiki/Testnet"
-#~ msgstr ""
-
-#~ msgid "Faucets"
-#~ msgstr ""
-
-#~ msgid "https://test.faucet.dash.org - by flare"
-#~ msgstr ""
-
-#~ msgid "http://test.faucet.dashninja.pl - by elbereth"
-#~ msgstr ""
-
-#~ msgid "http://test.faucet.masternode.io - by coingun"
-#~ msgstr ""
-
-#~ msgid "Explorers"
-#~ msgstr ""
-
-#~ msgid "https://test.explorer.dash.org - by flare"
-#~ msgstr ""
-
-#~ msgid "https://test.insight.dash.siampm.com - by thelazier"
-#~ msgstr ""
-
-#~ msgid "http://test.explorer.dashninja.pl - by elbereth"
-#~ msgstr ""
-
-#~ msgid "http://test.insight.masternode.io:3001 - by coingun"
-#~ msgstr ""
-
-#~ msgid "https://testnet-insight.dashevo.org/insight/"
-#~ msgstr ""
-
-#~ msgid "Pools"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org]"
-#~ " - by flare"
-#~ msgstr ""
-
-#~ msgid "P2Pool Nodes"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "http://test.p2pool.dash.siampm.com "
-#~ "[stratum+tcp://103.58.149.157:17903] by thelazier"
-#~ msgstr ""
-
-#~ msgid "http://p2pool.dashninja.pl:17903/static - by elbereth"
-#~ msgstr ""
-
-#~ msgid "http://test.p2pool.masternode.io:18998/static - by coingun"
-#~ msgstr ""
-
-#~ msgid "Masternodes"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Installing a masternode under testnet "
-#~ "generally follows the same steps as "
-#~ "the :ref:`mainnet masternode installation "
-#~ "guide <masternode-setup>`, but with a"
-#~ " few key differences:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You will probably be running a "
-#~ "development version of Dash instead of"
-#~ " the stable release. See `here "
-#~ "<https://bamboo.dash.org>`__ for downloadable "
-#~ "builds, then choose **Develop > Latest"
-#~ " Build > Artifacts**."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "When opening the firewall, port 19999"
-#~ " must be opened instead of (or "
-#~ "in addition to) 9999. Use this "
-#~ "command: ``ufw allow 19999/tcp``"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Your desktop wallet must be running "
-#~ "in testnet mode. Add the following "
-#~ "line to *dash.conf*: ``testnet = 1``"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "When sending the collateral, you can "
-#~ "get the 1000 tDASH for free from"
-#~ " a faucet (see above)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You cannot use dashman to install "
-#~ "development versions of Dash. See the"
-#~ " link to downloadable builds above."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Your masternode configuration file must "
-#~ "also specify testnet mode. Add the "
-#~ "following line when setting up "
-#~ "*dash.conf* on the masternode: testnet ="
-#~ " 1"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "When cloning sentinel, you may need "
-#~ "to clone the development branch using"
-#~ " the ``-b`` option, for example: "
-#~ "``git clone -b core-v0.12.2.x "
-#~ "https://github.com/dashpay/sentinel.git``"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Once sentinel is installed, modify "
-#~ "``~/.dashcore/sentinel/sentinel.conf``, comment the "
-#~ "mainnet line and uncomment: "
-#~ "``network=testnet``"
-#~ msgstr ""
-
-#~ msgid "Testnet 12.2"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The Dash team has recently announced "
-#~ "the launch of a testnet for public"
-#~ " testing of the upcoming 12.2 release"
-#~ " of the Dash software. Unlike "
-#~ "mainnet, the DASH that exists on "
-#~ "testnet has no real value, and "
-#~ "since its an entirely separate network,"
-#~ " there is no risk to using new"
-#~ " and experimental software. Extensive "
-#~ "internal testing has already been done"
-#~ " on the 12.2 code, but there "
-#~ "are numerous bugs that can only be"
-#~ " revealed with actual use by real "
-#~ "people. The Dash team invites anybody"
-#~ " who is interested to download the"
-#~ " software and become active on "
-#~ "testnet. This release includes:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "DIP0001 implementation "
-#~ "https://github.com/dashpay/dips/blob/master/dip-0001.md"
-#~ msgstr ""
-
-#~ msgid "10x transaction fee reduction (including InstantSend fee)"
-#~ msgstr ""
-
-#~ msgid "InstantSend vulnerability fix"
-#~ msgstr ""
-
-#~ msgid "Lots of other bug fixes and performance improvements"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Experimental BIP39/BIP44 complaint HD wallet"
-#~ " (disabled by default, should be "
-#~ "fully functional but there is no "
-#~ "GUI yet)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Testnet 12.2 discussion: "
-#~ "https://www.dash.org/forum/threads/v12-2-testing.17412/"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Testnet tools: https://www.dash.org/forum/threads"
-#~ "/testnet-tools-resources.1768/"
-#~ msgstr ""
-
-#~ msgid "Issue tracking: https://github.com/dashpay/dash/issues/new"
-#~ msgstr ""
-
-#~ msgid "Latest binaries:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Windows: https://bamboo.dash.org/browse/DASHW-"
-#~ "DEV/latestSuccessful/artifact/JOB1/gitian-win-dash-"
-#~ "dist/"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "macOS: https://bamboo.dash.org/browse/DASHM-"
-#~ "DEV/latestSuccessful/artifact/JOB1/gitian-osx-dash-"
-#~ "dist/"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Linux: https://bamboo.dash.org/browse/DASHL-"
-#~ "DEV/latestSuccessful/artifact/JOB1/gitian-linux-dash-"
-#~ "dist/"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Raspberry Pi: https://bamboo.dash.org/browse/DASHP-"
-#~ "DEV/latestSuccessful/artifact/JOB1/gitian-RPi2-dash-dist/"
-#~ msgstr ""
-
-#~ msgid "Sentinel: https://github.com/dashpay/sentinel/tree/core-v0.12.2.x"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Dash Core has published an extensive "
-#~ "`Developer Guide <https://dash- "
-#~ "docs.github.io/en/>`_ to help new developers"
-#~ " get started with the Dash code "
-#~ "base, and as a reference for "
-#~ "experienced developers. This guide can "
-#~ "be leveraged to quickly and efficiently"
-#~ " integrate external applications with the"
-#~ " Dash ecosystem. Anyone can contribute "
-#~ "to the guide by submitting an "
-#~ "issue or pull request on GitHub. "
-#~ "The documentation is available at: "
-#~ "https://dash- docs.github.io/en/"
-#~ msgstr ""
-

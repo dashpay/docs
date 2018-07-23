@@ -55,6 +55,8 @@ translation is complete to request layout of the completed translation.
 +----------+----------------------------------------------------------------------------------------------------+
 | German   | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_RZ_2018.pdf>`__    |
 +----------+----------------------------------------------------------------------------------------------------+
+| Thai     | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_TH_RZ_2018.pdf>`__ |
++----------+----------------------------------------------------------------------------------------------------+
 
 
 Flyers
@@ -260,6 +262,9 @@ translation is complete to request layout of the completed translation.
 | Spanish                | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ES.pdf>`__    |
 |                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-ES.png>`__    |
 +------------------------+---------------------------------------------------------------------------------------------------+
+| Thai                   | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-TH.pdf>`__    |
+|                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-TH.png>`__    |
++------------------------+---------------------------------------------------------------------------------------------------+
 | Vietnamese             | `PDF <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-VI.pdf>`__    |
 |                        | `PNG <https://github.com/dashpay/docs/raw/master/binary/infographics/Misconceptions-VI.png>`__    |
 +------------------------+---------------------------------------------------------------------------------------------------+
@@ -267,6 +272,28 @@ translation is complete to request layout of the completed translation.
 
 Presentations
 -------------
+
+Dash Meetup
+^^^^^^^^^^^
+
+.. image:: img/meetup.png
+   :width: 400px
+
+An attractive presentation about Dash, designed to guide the audience
+through the basics of cryptocurrency and advantages of Dash. Prepared by
+community member Essra in 2018 following proposal sponsorship for the
+German `Dash Embassy D-A-CH <http://www.dash-embassy.org>`__.
+
++------------------------+--------------------------------------------------------------------------------------------------------------+
+| Language               | Download                                                                                                     |
++========================+==============================================================================================================+
+| English                | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Meetup_Presentation_EN.pptx>`__  |
+|                        | `PDF <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Meetup_Presentation_EN.pdf>`__    |
++------------------------+--------------------------------------------------------------------------------------------------------------+
+| German                 | `PPTX <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Meetup_Presentation_DE.pptx>`__  |
+|                        | `PDF <https://github.com/dashpay/docs/raw/master/binary/presentations/Dash_Meetup_Presentation_DE.pdf>`__    |
++------------------------+--------------------------------------------------------------------------------------------------------------+
+
 
 Simple presentation
 ^^^^^^^^^^^^^^^^^^^

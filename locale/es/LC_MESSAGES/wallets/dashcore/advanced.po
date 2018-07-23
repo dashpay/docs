@@ -1,95 +1,119 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-16 05:17+0000\n"
+"POT-Creation-Date: 2018-07-23 09:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
+"Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../wallets/dashcore/advanced.rst:5
 msgid "Advanced topics"
-msgstr ""
+msgstr "Temas avanzados"
 
 #: ../../wallets/dashcore/advanced.rst:10
 msgid "Coin Control"
-msgstr ""
+msgstr "Control de monedas"
 
 #: ../../wallets/dashcore/advanced.rst:12
 msgid ""
-"Coin Control allows users of the Dash Core Wallet to specify which "
-"addresses and Unspent Transaction Outputs (UTXOs) should be used as "
-"inputs in transactions. This allows you to keep a specific balance on "
-"certain addresses in your wallet, while spending others freely. In Dash "
-"Core Wallet, click **Settings > Options > Wallet > Enable coin control "
-"features**. Now, when you go to the Send tab in your wallet, a new button"
-" labelled **Inputs…** will appear. Click this button to select which "
-"UTXOs can be used as input for any transactions you create. The following"
-" window appears:"
+"Coin Control allows users of the Dash Core Wallet to specify which addresses"
+" and Unspent Transaction Outputs (UTXOs) should be used as inputs in "
+"transactions. This allows you to keep a specific balance on certain "
+"addresses in your wallet, while spending others freely. In Dash Core Wallet,"
+" click **Settings > Options > Wallet > Enable coin control features**. Now, "
+"when you go to the Send tab in your wallet, a new button labelled "
+"**Inputs…** will appear. Click this button to select which UTXOs can be used"
+" as input for any transactions you create. The following window appears:"
 msgstr ""
+"El control de monedas permite a los usuarios de la billtera Dash Core "
+"especificar qué direcciones y salidas de transacciones no utilizadas (UTXOs)"
+" deben usarse como entradas en las transacciones. Esto te permite mantener "
+"un saldo específico en ciertas direcciones en tu billetera, mientras que "
+"gastas otros libremente. En la billetera Dash Core, haz click en "
+"**Configuración > Opciones > Billetera > Habilitar funciones de control de "
+"monedas**. Ahora, cuando vayas a la pestaña Enviar en tu billetera, "
+"aparecerá un nuevo botón con la etiqueta **Entradas ...**. Haz click en este"
+" botón para seleccionar qué UTXOs se pueden usar como entrada para cualquier"
+" transacción que crees. La siguiente ventana aparecerá:"
 
 #: ../../wallets/dashcore/advanced.rst:25
 msgid ""
-"Coin Selection window in Dash Core wallet, showing two masternodes "
-"(testnet)"
+"Coin Selection window in Dash Core wallet, showing two masternodes (testnet)"
 msgstr ""
+"Ventana de selección de monedas en la billetera Dash Core, que muestra dos "
+"masternodes (red de prueba)"
 
 #: ../../wallets/dashcore/advanced.rst:28
 msgid ""
 "Right click on the transaction(s) you do not want to spend, then select "
-"**Lock unspent**. A small lock will appear next to the transaction. You "
-"can click the **Toggle lock state** button to invert the locked/unlocked "
-"state of all UTXOs. When you are ready to continue, click **OK**. You can"
-" now safely create transactions with your remaining funds without "
-"affecting the locked UTXOs."
+"**Lock unspent**. A small lock will appear next to the transaction. You can "
+"click the **Toggle lock state** button to invert the locked/unlocked state "
+"of all UTXOs. When you are ready to continue, click **OK**. You can now "
+"safely create transactions with your remaining funds without affecting the "
+"locked UTXOs."
 msgstr ""
+"Haz click derecho en la(s) transacción(es) que no deseas gastar, luego "
+"selecciona **Bloquear sin gastar**. Aparecerá un pequeño candado junto a la "
+"transacción. Puedes hacer click en el botón **Conmutar estado de bloqueo** "
+"para invertir el estado bloqueado/desbloqueado de todos los UTXOs. Cuando "
+"estés listo para continuar, haz click en **Aceptar**. Ahora puedes crear "
+"transacciones de forma segura con los fondos restantes sin afectar los UTXOs"
+" bloqueados."
 
 #: ../../wallets/dashcore/advanced.rst:41
 msgid "Locking UTXOs in Dash Core wallet"
-msgstr ""
+msgstr "Bloquear UTXOs en la billetera Dash Core"
 
 #: ../../wallets/dashcore/advanced.rst:47
 msgid "Multisignature"
-msgstr ""
+msgstr "Multifirma"
 
 #: ../../wallets/dashcore/advanced.rst:49
 msgid ""
-"This section presents a worked example to demonstrate multisig "
-"functionality in Dash Core. While the transactions are no longer visible "
-"on the current testnet blockchain and some address formats or RPC "
-"responses may differ slightly from the version shown here, the principle "
-"and commands are the same. The example demonstrates how to set up a "
-"2-of-3 multisig address and create a transaction. The example parties "
-"involved are a buyer, a seller and an arbiter. This example is based on:"
+"This section presents a worked example to demonstrate multisig functionality"
+" in Dash Core. While the transactions are no longer visible on the current "
+"testnet blockchain and some address formats or RPC responses may differ "
+"slightly from the version shown here, the principle and commands are the "
+"same. The example demonstrates how to set up a 2-of-3 multisig address and "
+"create a transaction. The example parties involved are a buyer, a seller and"
+" an arbiter. This example is based on:"
 msgstr ""
+"Esta sección presenta un ejemplo trabajado para demostrar la funcionalidad "
+"multifirma en Dash Core. Si bien las transacciones ya no son visibles en la "
+"cadena de bloques de la red de prueba actual y algunos formatos de "
+"direcciones o respuestas de RPC pueden diferir ligeramente de la versión que"
+" se muestra aquí, el principio y los comandos son los mismos. El ejemplo "
+"muestra cómo configurar una dirección multifirma de 2-de-3 y crear una "
+"transacción. Las partes de ejemplo involucradas son un comprador, un "
+"vendedor y un árbitro. Este ejemplo se basa en:"
 
 #: ../../wallets/dashcore/advanced.rst:57
 msgid "https://people.xiph.org/~greg/escrowexample.txt"
-msgstr ""
+msgstr "https://people.xiph.org/~greg/escrowexample.txt"
 
 #: ../../wallets/dashcore/advanced.rst:58
 msgid "https://gist.github.com/gavinandresen/3966071"
-msgstr ""
+msgstr "https://gist.github.com/gavinandresen/3966071"
 
 #: ../../wallets/dashcore/advanced.rst:59
 msgid "https://bitcoin.org/en/developer-examples#p2sh-multisig"
-msgstr ""
+msgstr "https://bitcoin.org/en/developer-examples#p2sh-multisig"
 
 #: ../../wallets/dashcore/advanced.rst:62
 msgid "Step 1: Create three addresses"
-msgstr ""
+msgstr "Paso 1: Crear tres direcciones"
 
 #: ../../wallets/dashcore/advanced.rst:64
 #: ../../wallets/dashcore/advanced.rst:132
@@ -97,7 +121,7 @@ msgstr ""
 #: ../../wallets/dashcore/advanced.rst:217
 #: ../../wallets/dashcore/advanced.rst:250
 msgid "Seller::"
-msgstr ""
+msgstr "Vendedor::"
 
 #: ../../wallets/dashcore/advanced.rst:81
 #: ../../wallets/dashcore/advanced.rst:140
@@ -106,272 +130,227 @@ msgstr ""
 #: ../../wallets/dashcore/advanced.rst:231
 #: ../../wallets/dashcore/advanced.rst:242
 msgid "Buyer::"
-msgstr ""
+msgstr "Comprador::"
 
 #: ../../wallets/dashcore/advanced.rst:98
 #: ../../wallets/dashcore/advanced.rst:148
 msgid "Arbiter::"
-msgstr ""
+msgstr "Árbitro::"
 
 #: ../../wallets/dashcore/advanced.rst:115
 msgid "This results in three keypairs (public/private)::"
-msgstr ""
+msgstr "Esto resulta en tres pares de llaves (pública/privada)::"
 
 #: ../../wallets/dashcore/advanced.rst:122
 msgid "Step 2: Create multisig address"
-msgstr ""
+msgstr "Paso 2: Crear una dirección multifirma"
 
 #: ../../wallets/dashcore/advanced.rst:124
 msgid ""
-"The ``createmultisig`` command takes as variables the number n signatures"
-" of m keys (supplied as json array) required. In this example, 2 of 3 "
-"keys are required to sign the transaction."
+"The ``createmultisig`` command takes as variables the number n signatures of"
+" m keys (supplied as json array) required. In this example, 2 of 3 keys are "
+"required to sign the transaction."
 msgstr ""
+"El comando ``createmultisig`` toma como variables el número n de firmas de m"
+" claves (suministradas como arreglo json) requeridas. En este ejemplo, se "
+"requieren 2 de 3 llaves para firmar la transacción."
 
 #: ../../wallets/dashcore/advanced.rst:128
 msgid ""
-"Note: The address can be created by anyone, as long as the public keys "
-"and their sequence are known (resulting address and redeemScript are "
-"identical, see below)."
+"Note: The address can be created by anyone, as long as the public keys and "
+"their sequence are known (resulting address and redeemScript are identical, "
+"see below)."
 msgstr ""
+"Nota: Cualquier persona puede crear la dirección, siempre que se conozcan "
+"las llaves públicas y su secuencia (la dirección resultante y redeemScript "
+"son idénticos, ver abajo)."
 
 #: ../../wallets/dashcore/advanced.rst:157
 msgid "Step 3: Buyer funds the multisig address"
-msgstr ""
+msgstr "Paso 3: el comprador financia la dirección multifirma"
 
 #: ../../wallets/dashcore/advanced.rst:159
 msgid "This works the same as a usual transaction."
-msgstr ""
+msgstr "Esto funciona igual que una transacción normal."
 
 #: ../../wallets/dashcore/advanced.rst:166
 msgid ""
 "The seller/arbiter can trace the transaction by its txid in the block "
 "explorer. Or from the console as follows."
 msgstr ""
+"El vendedor/árbitro puede rastrear la transacción por su txid en el "
+"explorador de bloques. O desde la consola de la siguiente manera."
 
 #: ../../wallets/dashcore/advanced.rst:201
 msgid "Step 4: Spending the multisig"
-msgstr ""
+msgstr "Paso 4: Gastar la multifirma"
 
 #: ../../wallets/dashcore/advanced.rst:203
 msgid ""
-"Now we assume the deal is complete, the buyer got the goods and everyone "
-"is happy. Now the seller wants to get his Dash. As a 2-of-3 multisig was "
-"used, the transaction must be signed by 2 parties (seller + buyer or "
-"arbiter). The seller creates a transaction (we will reuse his public "
-"address from above)."
+"Now we assume the deal is complete, the buyer got the goods and everyone is "
+"happy. Now the seller wants to get his Dash. As a 2-of-3 multisig was used, "
+"the transaction must be signed by 2 parties (seller + buyer or arbiter). The"
+" seller creates a transaction (we will reuse his public address from above)."
 msgstr ""
+"Ahora suponemos que el trato está completo, el comprador obtuvo los "
+"productos y todos están contentos. Ahora el vendedor quiere obtener sus "
+"Dash. Como se utilizó una multifirma de 2-de-3, la transacción debe estar "
+"firmada por 2 partes (vendedor + comprador o árbitro). El vendedor crea una "
+"transacción (reutilizaremos su dirección pública de arriba)."
 
 #: ../../wallets/dashcore/advanced.rst:214
 msgid ""
-"And partially signs it, using the redeemScript, scriptPubKey and his "
-"private key"
+"And partially signs it, using the redeemScript, scriptPubKey and his private"
+" key"
 msgstr ""
+"Y lo firma parcialmente, usando redeemScript, scriptPubKey y su llave "
+"privada"
 
 #: ../../wallets/dashcore/advanced.rst:225
 msgid ""
-"Note that the output hex is getting longer, but complete flag is "
-"\"false\" as the transaction needs another signature. So now either the "
-"buyer or the arbiter can complete the signature of the transaction, using"
-" the output from above and their private key. Let's assume the buyer is "
-"completing the signature."
+"Note that the output hex is getting longer, but complete flag is \"false\" "
+"as the transaction needs another signature. So now either the buyer or the "
+"arbiter can complete the signature of the transaction, using the output from"
+" above and their private key. Let's assume the buyer is completing the "
+"signature."
 msgstr ""
+"Ten en cuenta que el hexágono de salida se hace más largo, pero el indicador"
+" completo es \"falso\" ya que la transacción necesita otra firma. Entonces, "
+"ahora el comprador o el árbitro pueden completar la firma de la transacción,"
+" utilizando el resultado de arriba y sus llaves privada. Supongamos que el "
+"comprador está completando la firma."
 
 #: ../../wallets/dashcore/advanced.rst:239
 msgid ""
-"The signature is complete now, and either of the parties can transmit the"
-" transaction to the network."
+"The signature is complete now, and either of the parties can transmit the "
+"transaction to the network."
 msgstr ""
+"La firma está completa ahora, y cualquiera de las partes puede transmitir la"
+" transacción a la red."
 
 #: ../../wallets/dashcore/advanced.rst:247
 msgid ""
-"Again, this transaction can be traced in a block explorer. And the seller"
-" is happy to receive his coins at his public address as follows."
+"Again, this transaction can be traced in a block explorer. And the seller is"
+" happy to receive his coins at his public address as follows."
+msgstr ""
+"De nuevo, esta transacción se puede rastrear en un explorador de bloques. Y "
+"el vendedor está feliz de recibir sus monedas en su dirección pública de la "
+"siguiente manera."
+
+#: ../../wallets/dashcore/advanced.rst:271
+msgid "Multiple wallets"
 msgstr ""
 
-#~ msgid "Compiling Dash Core"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:273
+msgid ""
+"It is possible to select between different Dash wallets when starting Dash "
+"Core by specifying the ``wallet`` argument, or even run multiple instances "
+"of Dash Core simultaneously by specifying separate data directories using "
+"the ``datadir`` argument."
+msgstr ""
 
-#~ msgid ""
-#~ "While Dash offers stable binary builds"
-#~ " on the `website "
-#~ "<https://www.dash.org/wallets>`_, on `Github "
-#~ "<https://github.com/dashpay/dash/releases>`_ and through"
-#~ " development builds using `Bamboo "
-#~ "<https://bamboo.dash.org>`_, many users will "
-#~ "also be interested in building Dash "
-#~ "binaries for themselves. The following "
-#~ "guides are available:"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:278
+msgid ""
+"To begin, install the Dash Core wallet for your system according to the "
+":ref:`installation instructions <dashcore-installation>`. When you get to "
+"the step **Running Dash Core for the first time**, you can decide whether "
+"you want to maintain separate ``wallet.dat`` files in the default location "
+"(simpler if you do not need to run the wallets simultaneously), or specify "
+"entirely separate data directories such as e.g. ``C:\\Dash1`` (simpler if "
+"you do want to run the wallets simultaneously)."
+msgstr ""
 
-#~ msgid "Eclipse (coming soon)"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:289
+msgid "Separate wallet.dat files"
+msgstr ""
 
-#~ msgid ":ref:`Building on Linux <linux-build>`"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:291
+msgid ""
+"For this scenario, we will create two shortcuts on the desktop, each using a"
+" different wallet file. Navigate to the binary file used to start Dash Core "
+"(typically locatd at ``C:\\Program Files\\DashCore\\dash-qt.exe`` or "
+"similar) and create two shortcuts on the desktop. Then open the "
+"**Properties** window for each of these shortcuts."
+msgstr ""
 
-#~ msgid ":ref:`Gitian deterministic builds <gitian-build>`"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:300
+msgid "Creating desktop shortcuts using Windows 10"
+msgstr ""
 
-#~ msgid "Linux"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:302
+msgid ""
+"Modify the **Target** property of each shortcut to point to a different "
+"wallet file by specifying the ``wallet`` argument when starting the wallet. "
+"If you do not specify a ``wallet`` argument, ``wallet.dat`` will be used by "
+"default. The specified wallet file will be created if it does not exist. The"
+" following example demonstrates two wallets named ``workwallet.dat`` and "
+"``homewallet.dat``:"
+msgstr ""
 
-#~ msgid ""
-#~ "This guide describes how to build "
-#~ "Dash Core wallet without the GUI "
-#~ "from source under Ubuntu Linux. It "
-#~ "is intended to serve as a simple"
-#~ " guide for general compilation of "
-#~ "non-deterministic binary files from the "
-#~ "stable source code. A standard "
-#~ "installation of Ubuntu Linux 16.04 LTS"
-#~ " running on a VPS will be used"
-#~ " as an environment for the build. "
-#~ "We assume you are running as root."
-#~ " First add the necessary extra "
-#~ "repository and update all packages::"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:309
+msgid ""
+"Wallet Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-wallet=workwallet.dat``"
+msgstr ""
 
-#~ msgid ""
-#~ "Now install the dependencies as "
-#~ "described in the installation documentation::"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:310
+msgid ""
+"Wallet Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-wallet=homewallet.dat``"
+msgstr ""
 
-#~ msgid "Download the stable Dash repository::"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:315
+msgid "Specifying separate wallet files"
+msgstr ""
 
-#~ msgid "And build::"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:317
+msgid ""
+"You can now use the two icons to quickly and easily open different wallets "
+"from your desktop. Note that you cannot open both wallets simultaneously. To"
+" do this, you will need two separate data directories, as described below."
+msgstr ""
 
-#~ msgid "``/usr/local/bin`` now contains the compiled Dash binaries."
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:324
+msgid "Separate data directories"
+msgstr ""
 
-#~ msgid "Gitian"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:326
+msgid ""
+"Start Dash Core and allow it to synchronize with the network, then close "
+"Dash Core again. You can now create two directories at e.g. ``C:\\Dash1`` "
+"and ``C:\\Dash2`` and copy the ``blocks`` and ``chainstate`` directories "
+"from the synchronized data directory into the new directories. Each of these"
+" will serve as a separate data directory, allowing you to run two instances "
+"of Dash Core simultaneously. Create two (or more) shortcuts on your desktop "
+"as described above, then specify arguments for ``datadir`` as shown below:"
+msgstr ""
 
-#~ msgid ""
-#~ "Gitian is the deterministic build "
-#~ "process that is used to build the"
-#~ " Dash Core executables. It provides a"
-#~ " way to be reasonably sure that "
-#~ "the executables are really built from"
-#~ " the source on GitHub. It also "
-#~ "makes sure that the same, tested "
-#~ "dependencies are used and statically "
-#~ "built into the executable. Multiple "
-#~ "developers build the source code by "
-#~ "following a specific descriptor (\"recipe\"),"
-#~ " cryptographically sign the result, and "
-#~ "upload the resulting signature. These "
-#~ "results are compared and only if "
-#~ "they match, the build is accepted "
-#~ "and uploaded to dash.org."
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:335
+msgid ""
+"Datadir Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-datadir=C:\\Dash1 -listen=0``"
+msgstr ""
 
-#~ msgid ""
-#~ "More independent Gitian builders are "
-#~ "needed, which is why this guide "
-#~ "exists. It is preferred you follow "
-#~ "these steps yourself instead of using"
-#~ " someone else's VM image to avoid "
-#~ "'contaminating' the build."
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:336
+msgid ""
+"Datadir Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-datadir=C:\\Dash2 -listen=0``"
+msgstr ""
 
-#~ msgid "Setup the host environment"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:341
+msgid "Specifying separate datadirs"
+msgstr ""
 
-#~ msgid ""
-#~ "Gitian builds are known to be "
-#~ "working on Debian 8.x. If your "
-#~ "machine is already running this sytem,"
-#~ " you can perform Gitian builds on "
-#~ "the actual hardware. Alternatively, you "
-#~ "can install it in a virtual "
-#~ "machine. Follow the guide for "
-#~ ":ref:`setting up a VPS for masternodes"
-#~ " <vps-setup>`, selecting a Debian 8.x"
-#~ " image during the installation process "
-#~ "and naming your non-root user "
-#~ "``gitianuser``. Selecting a VPS with two"
-#~ " processors will also greatly speed "
-#~ "up the build process. If you "
-#~ "cannot login to your VPS over SSH"
-#~ " as root, access the terminal and "
-#~ "issue the following command::"
-#~ msgstr ""
+#: ../../wallets/dashcore/advanced.rst:343
+msgid ""
+"You can now use the two icons to quickly and easily open different wallets "
+"simultaneously from your desktop. Both wallets maintain separate and full "
+"copies of the blockchain, which may use a lot of drive space. For more "
+"efficient use of drive space, consider using an SPV or \"light\" wallet such"
+" as :ref:`Dash Electrum <dash-electrum-wallet>` to maintain multiple "
+"separate wallets without keeping a full copy of the blockchain."
+msgstr ""
 
-#~ msgid ""
-#~ "Log in to your new environment by"
-#~ " SSH as root. Set up the "
-#~ "dependencies first by pasting the "
-#~ "following in the terminal::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Then set up LXC and the rest "
-#~ "with the following, which is a "
-#~ "complex jumble of settings and "
-#~ "workarounds::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "At the end Debian is rebooted to"
-#~ " make sure that the changes take "
-#~ "effect. Re-login as the user "
-#~ "gitianuser that was created during "
-#~ "installation. The rest of the steps "
-#~ "in this guide will be performed as"
-#~ " that user."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "There is no ``python-vm-builder`` "
-#~ "package in Debian, so we need to"
-#~ " install it from source ourselves::"
-#~ msgstr ""
-
-#~ msgid "Set up the environment and compile"
-#~ msgstr ""
-
-#~ msgid "Clone the Dash Core repository to your home directory::"
-#~ msgstr ""
-
-#~ msgid "Then create the script file::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "And paste the following script in "
-#~ "place (this will be automatic if/when"
-#~ " the script is pulled into Dash "
-#~ "Core)::"
-#~ msgstr ""
-
-#~ msgid "Save the file and set it executable::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Set up the environment, replacing the"
-#~ " name and version with your name "
-#~ "and target version::"
-#~ msgstr ""
-
-#~ msgid "Run the compilation script::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Your system will build all dependencies"
-#~ " and Dash Core from scratch for "
-#~ "Windows and Linux platforms (macOS if"
-#~ " the dependencies were installed according"
-#~ " to these instructions). This can "
-#~ "take some time. When complete, you "
-#~ "will see the SHA256 checksums, which "
-#~ "you can compare against the hashes "
-#~ "available on the Dash website `here "
-#~ "<https://www.dash.org/wallets>`_. In this way, "
-#~ "you can be sure that you are "
-#~ "running original and untampered builds "
-#~ "of the code as it exists on "
-#~ "Github."
-#~ msgstr ""
-
+#: ../../wallets/dashcore/advanced.rst:353
+msgid "Two instances of Dash Core running simultaneously"
+msgstr ""

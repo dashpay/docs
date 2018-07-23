@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-25 08:42+0000\n"
+"POT-Creation-Date: 2018-07-18 08:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018\n"
+"Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +30,7 @@ msgid ""
 " or control a masternode, for example. The Dash Core Wallet interface is "
 "described in detail in the following sections."
 msgstr ""
-"la billetera Dash Core es una aplicación que se ejecuta en su computador y "
+"La billetera Dash Core es una aplicación que se ejecuta en su computador y "
 "le permite hacer transacciones en la red de Dash. La mayoría de las "
 "transacciones son para enviar o recibir Dash, pero también es posible crear "
 "mensajes firmados o controlar un masternode, por ejemplo. La interfaz de la "
@@ -88,7 +88,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:36
 msgid "Settings"
-msgstr "Configuraciones"
+msgstr "Configuración"
 
 #: ../../wallets/dashcore/interface.rst:36
 msgid ""
@@ -348,9 +348,9 @@ msgid ""
 msgstr ""
 "Esta barra muestra el estatus de la sincronización de la Dash Core con la "
 "red de Dash. Cada vez que abre la Dash Core, comenzara a descargar los "
-"bloques que han sido creados en la blockchain desde la ultima vez que abrió "
-"la aplicación. Estos bloques son descargados desde otros usuarios y "
-"masternodes Dash. Si nunca ha abierto la aplicacion, esto podria significar "
+"bloques que han sido creados en la cadena de bloques desde la ultima vez que"
+" abrió la aplicación. Estos bloques son descargados desde otros usuarios y "
+"masternodes Dash. Si nunca ha abierto la aplicación, esto podría significar "
 "la necesidad de descargar varios años de bloques. Los siguientes estatus son"
 " posibles:"
 
@@ -441,7 +441,7 @@ msgid ""
 "dialog, available under the **Settings > Options** menu in Dash Core."
 msgstr ""
 "Esta documentación describe la funcionalidad del dialogo de opciones de la "
-"Dash Core, disponible en el menú **Configuraciones > Opciones** en la Dash "
+"Dash Core, disponible en el menú **Configuración > Opciones** en la Dash "
 "Core."
 
 #: ../../wallets/dashcore/interface.rst:210
@@ -462,7 +462,7 @@ msgstr "Pestaña Principal del dialogo de Opciones de la Dash Core"
 
 #: ../../wallets/dashcore/interface.rst:224
 msgid "Start Dash Core on system login"
-msgstr "Iniciar la Dash Core al iniciar el sistema"
+msgstr "Iniciar la Dash Core al ingresar al sistema"
 
 #: ../../wallets/dashcore/interface.rst:221
 msgid ""
@@ -480,7 +480,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:229
 msgid "Size of database cache"
-msgstr "Tamaño del cache de base de datos"
+msgstr "Tamaño de la memoria caché en la base de datos"
 
 #: ../../wallets/dashcore/interface.rst:227
 msgid ""
@@ -496,7 +496,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:239
 msgid "Number of script verification threads"
-msgstr "Número de hilos de verificación de secuencia de comandos"
+msgstr "Número de hilos de verificación de instrucciones"
 
 #: ../../wallets/dashcore/interface.rst:232
 msgid ""
@@ -510,14 +510,15 @@ msgid ""
 "cores free."
 msgstr ""
 "Esta opción establece el número de hilos de verificación de secuencia de "
-"comandos, estableciendo desde -4 hasta 16. La secuencia de comandos de "
+"comandos, estableciendo desde -4 hasta 16. `La secuencia de comandos de "
 "verificación <https://en.bitcoin.it/wiki/Script>`__ es el proceso de seguir "
-"instrucciones grabadas en la blockchain para asegurar que las transacciones "
-"son validas. 0 significa automático y permitirá la verificación secuencia de"
-" comandos para escalar el número de núcleos disponibles de su procesador.  "
-"Configurar un numero positivo establece que la Dash Core debería usar ese "
-"numero de núcleos del procesador, mientras si configura un numero negativo "
-"dejara ese numero núcleos del procesador libres."
+"instrucciones grabadas en la cadena de bloques para asegurar que las "
+"transacciones son validas. 0 significa automático y permitirá la "
+"verificación secuencia de comandos para escalar el número de núcleos "
+"disponibles de su procesador.  Configurar un numero positivo establece que "
+"la Dash Core debería usar ese numero de núcleos del procesador, mientras si "
+"configura un numero negativo dejara ese numero núcleos del procesador "
+"libres."
 
 #: ../../wallets/dashcore/interface.rst:242
 msgid "Wallet tab"
@@ -544,7 +545,7 @@ msgstr "Pestaña Billetera del cuadro de Opciones de la Dash Core"
 
 #: ../../wallets/dashcore/interface.rst:267
 msgid "Enable coin control features"
-msgstr "Habilitar caracteristicas de Coin Control"
+msgstr "Activar características de Coin Control"
 
 #: ../../wallets/dashcore/interface.rst:256
 msgid ""
@@ -560,10 +561,22 @@ msgid ""
 "different addresses in your wallet. See :ref:`here <coin-control>` for a "
 "more detailed explanation of Coin Control."
 msgstr ""
+"El saldo de tu billetera Dash Core es en realidad la suma total de todas las"
+" direcciones con saldo que están asociadas con su billetera. Cuando gastas "
+"Dash, Dash Core retirará tantas entradas como sea necesario para compensar "
+"la cantidad deseada de Dash que se transferirá. Este comportamiento puede "
+"ser indeseable si desea mantener un cierto saldo en una dirección. El caso "
+"de uso más común es el requisito de mantener 1000 Dash en una sola dirección"
+" como garantía para un masternode. Habilitar esta opción agregará un botón "
+"etiquetado como **Entradas** en la pestaña **Enviar**. Esto proporciona "
+"acceso al cuadro de diálogo **Selección de moneda**, que se puede usar para "
+"bloquear, desbloquear y priorizar diferentes direcciones en tu billetera. "
+"Ver :ref:`aquí <coin-control>` para una explicación más detallada sobre el "
+"control de monedas."
 
 #: ../../wallets/dashcore/interface.rst:276
 msgid "Show Masternodes tab"
-msgstr "Pestaña Mostrar Masternodes"
+msgstr "Mostrar Pestaña Masternodes"
 
 #: ../../wallets/dashcore/interface.rst:270
 msgid ""
@@ -574,6 +587,13 @@ msgid ""
 "by this wallet. This tab is an advanced feature not required by users that "
 "do not operate a masternode on the Dash network."
 msgstr ""
+"Habilitar esta opción hace que Dash Core muestre una pestaña de masternodes "
+"adicional a la derecha de la pestaña Transacciones. Esta opción requiere que"
+" reinicies la aplicación Dash Core. La pestaña de masternodes se puede usar "
+"para gestionar las interacciones (inicio, detención, comprobación de estado,"
+" etc.) con los masternodes controlados por esta billetera. Esta pestaña es "
+"una función avanzada no requerida por los usuarios que no operan un "
+"masternode en la red Dash."
 
 #: ../../wallets/dashcore/interface.rst:283
 msgid "Enable advanced PrivateSend interface"
@@ -586,10 +606,15 @@ msgid ""
 "Mix and percentage completion. See :ref:`here <dashcore-privatesend-"
 "instantsend>` for a full explanation of how to use PrivateSend."
 msgstr ""
+"Al habilitar esta opción cambia la interfaz de mezcla de PrivateSend en la "
+"pestaña de Overview de la billetera Dash Core para incluir más opciones, "
+"como Try Mix y porcentaje de finalización. Ver :ref:`aquí <dashcore-"
+"privatesend-instantsend>` para una explicación completa de como usar "
+"PrivateSend."
 
 #: ../../wallets/dashcore/interface.rst:293
 msgid "Warn if PrivateSend is running out of keys"
-msgstr "Advertir si PrivateSend se queda sin llaves"
+msgstr "Advertir si PrivateSend se esta quedando sin llaves"
 
 #: ../../wallets/dashcore/interface.rst:286
 msgid ""
@@ -612,7 +637,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:301
 msgid "Enable PrivateSend multi-session"
-msgstr "Habilitar multisesion de PrivateSend"
+msgstr "Habilitar multisesión de PrivateSend"
 
 #: ../../wallets/dashcore/interface.rst:296
 msgid ""
@@ -633,7 +658,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:311
 msgid "Spend unconfirmed change"
-msgstr "Gastar saldo sin confirmar"
+msgstr "Gastar cambio no confirmado"
 
 #: ../../wallets/dashcore/interface.rst:304
 msgid ""
@@ -656,7 +681,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:319
 msgid "PrivateSend rounds to use"
-msgstr "Rondas de PrivateSend a usar"
+msgstr "Rondas de PrivateSend para usar"
 
 #: ../../wallets/dashcore/interface.rst:314
 msgid ""
@@ -677,7 +702,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:327
 msgid "Amount of Dash to keep anonymized"
-msgstr "Cantidad de Dash a mantener anonimas"
+msgstr "Cantidad de Dash a mantener anónima"
 
 #: ../../wallets/dashcore/interface.rst:322
 msgid ""
@@ -713,7 +738,7 @@ msgstr "Pestaña Red del cuadro Opciones Dash Core"
 
 #: ../../wallets/dashcore/interface.rst:346
 msgid "Map port using UPnP"
-msgstr "Mapa de puertos usando UPnP"
+msgstr "Mapear puerto usando UPnP"
 
 #: ../../wallets/dashcore/interface.rst:341
 msgid ""
@@ -725,7 +750,7 @@ msgid ""
 " on your router."
 msgstr ""
 "Esta opción hace que la Dash Core automáticamente intente abrir y mapear el "
-"puerto cliente en su router usando UPnP "
+"puerto cliente en su router usando `UPnP "
 "<https://en.wikipedia.org/wiki/Universal_Plug_and_Play>`__ (Universal Plug "
 "and Play). Esta característica es soportada por los routers caseros mas "
 "modernos y le permitirán conectarse a la red Dash sin hacer ninguna "
@@ -744,12 +769,13 @@ msgid ""
 msgstr ""
 "Esta opción hace que su cliente acepte conexiones externas. Dash es una red "
 "punto-a-punto y Dash Core es considerada un cliente completo porque almacena"
-" una copia de la blockchain en su dispositivo, habilitando esta opción ayuda"
-" a otros clientes a sincronizar la blockchain y la red a través de su nodo."
+" una copia de la cadena de bloques en su dispositivo, habilitando esta "
+"opción ayuda a otros clientes a sincronizar la cadena de bloques y la red a "
+"través de su nodo."
 
 #: ../../wallets/dashcore/interface.rst:360
 msgid "Connect through SOCKS5 proxy (default proxy)"
-msgstr "Conectar a traves del proxy SOCKS5 (proxy predeterminado)"
+msgstr "Conectar a través de proxy SOCKS5 (proxy predeterminado)"
 
 #: ../../wallets/dashcore/interface.rst:356
 msgid ""
@@ -768,7 +794,7 @@ msgstr ""
 #: ../../wallets/dashcore/interface.rst:367
 msgid "Use separate SOCKS5 proxy to reach peers via Tor hidden services"
 msgstr ""
-"Utilice un proxy SOCKS5 separado para llegar a los pares a través de los "
+"Utilizar un proxy SOCKS5 separado para llegar a los pares a través de los "
 "servicios ocultos de Tor"
 
 #: ../../wallets/dashcore/interface.rst:363
@@ -801,7 +827,7 @@ msgstr "Pestaña Ventana del cuadro de dialogo Opciones de la Dash Core"
 
 #: ../../wallets/dashcore/interface.rst:383
 msgid "Hide tray icon"
-msgstr "Ocultar icono de la bandeja"
+msgstr "Ocultar el icono de la bandeja"
 
 #: ../../wallets/dashcore/interface.rst:381
 msgid ""
@@ -815,7 +841,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:390
 msgid "Minimize to the tray instead of the taskbar"
-msgstr "Minimizar a la en vez de la barra de tarea"
+msgstr "Minimizar en la bandeja en vez de en la barra de tarea"
 
 #: ../../wallets/dashcore/interface.rst:386
 msgid ""
@@ -865,7 +891,7 @@ msgstr "Pestaña Visualización del cuadro de dialogo Opciones de la Dash Core"
 
 #: ../../wallets/dashcore/interface.rst:410
 msgid "User interface language"
-msgstr "Idioma de interfaz de usuario"
+msgstr "Idioma de la interfaz de usuario"
 
 #: ../../wallets/dashcore/interface.rst:409
 msgid ""
@@ -877,7 +903,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:416
 msgid "User interface theme"
-msgstr "Tema de interfaz de usuario"
+msgstr "Tema de la Interfaz de Usuario"
 
 #: ../../wallets/dashcore/interface.rst:413
 msgid ""
@@ -935,12 +961,12 @@ msgid ""
 "Core using the context menu of any given transaction."
 msgstr ""
 "Esta opción le permite especificar una pagina web externa para inspeccionar "
-"una dirección particular o transacción en la blockchain. Varios exploradores"
-" blockchain están disponibles para esto. Para usar esta característica, "
-"ingrese la URL de su explorador blockchain favorito, reemplazando el %s con "
-"el ID de transacción. A continuación, podrá acceder a este explorador "
-"blockchain directamente desde la Dash Core usando el menú de contexto de "
-"cualquier transacción."
+"una dirección particular o transacción en la cadena de bloques. Varios "
+"exploradores cadena de bloques están disponibles para esto. Para usar esta "
+"característica, ingrese la URL de su explorador cadena de bloques favorito, "
+"reemplazando el %s con el ID de transacción. A continuación, podrá acceder a"
+" este explorador cadena de bloques directamente desde la Dash Core usando el"
+" menú de contexto de cualquier transacción."
 
 #: ../../wallets/dashcore/interface.rst:439
 msgid "The Tools Dialog"
@@ -995,7 +1021,7 @@ msgstr "Cadena de bloques"
 
 #: ../../wallets/dashcore/interface.rst:462
 msgid "This section shows the current status of the blockchain."
-msgstr "Esta sección muestra el estatus actual de la blockchain."
+msgstr "Esta sección muestra el estatus actual de la cadena de bloques."
 
 #: ../../wallets/dashcore/interface.rst:468
 msgid "Memory pool"
@@ -1040,14 +1066,14 @@ msgid ""
 msgstr ""
 "La pestaña consola provee una interfaz con la consola RPC (remote procedure "
 "call - llamada remota de procedimiento) de Dash Core. Esto es equivalente al"
-" comando \"dash-cli\" en versiones sin cabeza de Dash, como \"dashd\" "
-"corriendo en un masternode. Clic en el icono rojo \"–\" para limpiar la "
+" comando ``dash-cli`` en versiones sin cabeza de Dash, como ``dashd`` "
+"corriendo en un masternode. Clic en el icono rojo ``–`` para limpiar la "
 "consola, y ver la documentación detallada de los comandos RPC para aprender "
 "acerca de los posibles comandos que pueda emitir."
 
 #: ../../wallets/dashcore/interface.rst:487
 msgid "The Console tab of the Dash Core Tools dialog"
-msgstr "Pestala Consola del cuadro de dialogo de Herramientas de la Dash Core"
+msgstr "Pestaña Consola del cuadro de dialogo de Herramientas de la Dash Core"
 
 #: ../../wallets/dashcore/interface.rst:490
 msgid "Network Traffic tab"
@@ -1127,7 +1153,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:538
 msgid "Rescan blockchain files"
-msgstr "Volver a escanear los archivos blockchain"
+msgstr "Volver a escanear los archivos de la cadena de bloques"
 
 #: ../../wallets/dashcore/interface.rst:534
 msgid ""
@@ -1137,11 +1163,12 @@ msgid ""
 "not know about these transactions, so a rescan is necessary to determine "
 "balances."
 msgstr ""
-"Volver a escanear la blockchain ya descargada para cualquier transacción que"
-" afecte a las cuentas contenidas en la billetera. Esto puede ser necesario "
-"si reemplaza su archivo wallet.dat con una billetera o un respaldo "
-"diferentes - la lógica de la billetera no conocerá estas transacciones, por "
-"lo que es necesario volver a analizarlas para determinar los saldos."
+"Volver a escanear la cadena de bloques ya descargada para cualquier "
+"transacción que afecte a las cuentas contenidas en la billetera. Esto puede "
+"ser necesario si reemplaza su archivo wallet.dat con una billetera o un "
+"respaldo diferentes - la lógica de la billetera no conocerá estas "
+"transacciones, por lo que es necesario volver a analizarlas para determinar "
+"los saldos."
 
 #: ../../wallets/dashcore/interface.rst:547
 msgid "Recover transactions"
@@ -1159,12 +1186,12 @@ msgid ""
 msgstr ""
 "Los comandos de recuperación de transacciones pueden ser usados para remover"
 " transacciones sin confirmar del bloque de memoria. Su billetera se "
-"reiniciara y volverá a escanear la blockchain, recuperando las transacciones"
-" existentes y removiendo las transacciones sin confirmar. Las transacciones "
-"pueden estancarse en un estado sin confirmar si hay conflictos en las "
-"versiones de protocolo en la red durante el mezclado de PrivateSend, por "
-"ejemplo, o si una transacción es enviada con comisiones insuficientes cuando"
-" el bloque esta lleno."
+"reiniciara y volverá a escanear la cadena de bloques, recuperando las "
+"transacciones existentes y removiendo las transacciones sin confirmar. Las "
+"transacciones pueden estancarse en un estado sin confirmar si hay conflictos"
+" en las versiones de protocolo en la red durante el mezclado de PrivateSend,"
+" por ejemplo, o si una transacción es enviada con comisiones insuficientes "
+"cuando el bloque esta lleno."
 
 #: ../../wallets/dashcore/interface.rst:553
 msgid "Upgrade wallet format"
@@ -1174,13 +1201,13 @@ msgstr "Actualizar el formato de la billetera"
 msgid ""
 "This command is available for very old wallets where an upgrade to the "
 "wallet version is required in addition to an update to the wallet software. "
-"You can view your current wallet version by running the ``getinfo`` command "
-"in the console."
+"You can view your current wallet version by running the ``getwalletinfo`` "
+"command in the console."
 msgstr ""
-"Este comando esta disponible para billeteras muy viejas donde se requiere "
-"una actualización de versión de la billetera, además de una actualización "
-"del programa de la billetera. Puede ver su version actual de billetera "
-"ejecutando el comando \"getinfo\" en la consola."
+"Este comando está disponible para billeteras muy antiguas en las que se "
+"requiere una actualización de versión de billetera, además de una "
+"actualización del software de billetera. Puedes ver tu versión actual de "
+"billetera ejecutando el comando ``getwalletinfo`` en la consola."
 
 #: ../../wallets/dashcore/interface.rst:557
 msgid "Rebuild index"
@@ -1192,7 +1219,7 @@ msgid ""
 "unspent transaction outputs) and rebuilds it from existing block files. This"
 " can be useful to recover missing or stuck balances."
 msgstr ""
-"Descarta la blockchain e indices del estado de la cadena actual (la base de "
-"datos de transacciones de salidas de transacción no utilizadas) y "
+"Descarta la cadena de bloques e indices del estado de la cadena actual (la "
+"base de datos de transacciones de salidas de transacción no utilizadas) y "
 "reconstruirla de archivos de bloques existentes. Esto puede ser util para "
 "recuperar saldos perdidos o estancados."
