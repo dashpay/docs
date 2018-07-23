@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-18 08:33+0000\n"
+"POT-Creation-Date: 2018-07-23 09:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -177,6 +177,7 @@ msgstr ""
 #: ../../merchants/getting-started.rst:137
 #: ../../merchants/getting-started.rst:141
 #: ../../merchants/getting-started.rst:143
+#: ../../merchants/getting-started.rst:145
 msgid "|check|"
 msgstr ""
 
@@ -379,22 +380,32 @@ msgstr ""
 msgid "Focus on Malaysian and Indonesian markets."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:147
-msgid "Installation Examples"
+#: ../../merchants/getting-started.rst:145
+msgid "`Spark Payments <https://www.dash.org/forum/threads/39665/>`_"
+msgstr ""
+
+#: ../../merchants/getting-started.rst:145
+msgid ""
+"Available for Android, Windows, macOS, Linux. 94 exchange rates and "
+"Uphold.com supported"
 msgstr ""
 
 #: ../../merchants/getting-started.rst:149
+msgid "Installation Examples"
+msgstr ""
+
+#: ../../merchants/getting-started.rst:151
 msgid ""
 "This section contains worked examples of how to install, configure and "
 "process your first payment using the payment processors listed in this "
 "documentation."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:154
+#: ../../merchants/getting-started.rst:156
 msgid "WooCommerce and GoCoin"
 msgstr ""
 
-#: ../../merchants/getting-started.rst:156
+#: ../../merchants/getting-started.rst:158
 msgid ""
 "If your online store is built on WooCommerce, you can simply install "
 "GoCoin as an additional payment gateway and immediately begin accepting "
@@ -406,7 +417,7 @@ msgid ""
 "store."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:165
+#: ../../merchants/getting-started.rst:167
 msgid ""
 "Go to the `gocoin-woocommerce GitHub Releases page "
 "<https://github.com/GoCoin/gocoin-woocommerce/releases>`_ and download a "
@@ -416,7 +427,7 @@ msgid ""
 "just downloaded, then click **Install Now** and **Activate Plugin**."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:177
+#: ../../merchants/getting-started.rst:179
 msgid ""
 "Next, go to the `GoCoin merchant sign up page "
 "<https://gocoin.com/merchant_signup>`_ and create an account. Once you "
@@ -429,7 +440,7 @@ msgid ""
 "checkout by **Profile** section and clicking **Logo -> Upload**."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:192
+#: ../../merchants/getting-started.rst:194
 msgid ""
 "Back in the WordPress plugins section, click the **Settings** button for "
 "the WooCommerce plugin and navigate to **Checkout -> GoCoin** section. "
@@ -438,7 +449,7 @@ msgid ""
 "other fields as necessary. Click **Save changes** when you are ready."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:201
+#: ../../merchants/getting-started.rst:203
 msgid ""
 "Your customers will now see an option to pay with Dash when completing "
 "the checkout process for an order. The payment will be processed by "
@@ -449,15 +460,15 @@ msgid ""
 "more information."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:219
+#: ../../merchants/getting-started.rst:221
 msgid "Completing payment through the GoCoin payment processor"
 msgstr ""
 
-#: ../../merchants/getting-started.rst:223
+#: ../../merchants/getting-started.rst:225
 msgid "WooCommerce and CoinPayments.net"
 msgstr ""
 
-#: ../../merchants/getting-started.rst:225
+#: ../../merchants/getting-started.rst:227
 msgid ""
 "If your online store is built on WooCommerce, you can simply install "
 "CoinPayments as an additional payment gateway and immediately begin "
@@ -470,7 +481,7 @@ msgid ""
 "process to install the CoinPayments payment processor is also available."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:235
+#: ../../merchants/getting-started.rst:237
 msgid ""
 "In your WordPress administration backend, select **Plugins -> Add New** "
 "and type \"coinpayments.net\" into the search box. A plugin named "
@@ -482,11 +493,11 @@ msgid ""
 "**Activate** to begin configuration."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:247
+#: ../../merchants/getting-started.rst:249
 msgid "Installing the CoinPayments.net WooCommerce plugin"
 msgstr ""
 
-#: ../../merchants/getting-started.rst:249
+#: ../../merchants/getting-started.rst:251
 msgid ""
 "Next, go to CoinPayments.net and `sign up "
 "<https://www.coinpayments.net/register>`_ to create an account. Once you "
@@ -498,7 +509,7 @@ msgid ""
 " **IPN Secret**. Copy this code to your temporary file as well."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:259
+#: ../../merchants/getting-started.rst:261
 msgid ""
 "Back in the WordPress plugins section, click the **Settings** button for "
 "the WooCommerce plugin and navigate to **Checkout -> CoinPayments.net** "
@@ -507,11 +518,11 @@ msgid ""
 "fields as shown below. Click **Save Changes** when you are ready."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:268
+#: ../../merchants/getting-started.rst:270
 msgid "Configuring the CoinPayments.net WooCommerce plugin"
 msgstr ""
 
-#: ../../merchants/getting-started.rst:270
+#: ../../merchants/getting-started.rst:272
 msgid ""
 "Your customers will now see an option to pay with Dash when completing "
 "the checkout process for an order. The payment will be processed by "
@@ -523,15 +534,15 @@ msgid ""
 "<https://www.coinpayments.net/merchant-tools>`_ for more information."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:289
+#: ../../merchants/getting-started.rst:291
 msgid "Completing payment through the CoinPayments.net payment processor"
 msgstr ""
 
-#: ../../merchants/getting-started.rst:293
+#: ../../merchants/getting-started.rst:295
 msgid "Point-of-Sale with Anypay"
 msgstr ""
 
-#: ../../merchants/getting-started.rst:295
+#: ../../merchants/getting-started.rst:297
 msgid ""
 "`Anypay.global <http://anypay.global>`_ allows you to quickly start "
 "accepting point-of-sale payments in Dash at a physical store. The service"
@@ -539,18 +550,18 @@ msgid ""
 "and touch-enabled device, such as a smartphone or tablet."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:300
+#: ../../merchants/getting-started.rst:302
 msgid ""
 "Begin by registering an account with Anypay. You will be asked to specify"
 " an email address and password. Once you are signed in, you must add a "
 "Dash payment withdrawal address."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:314
+#: ../../merchants/getting-started.rst:316
 msgid "Setting up Anypay"
 msgstr ""
 
-#: ../../merchants/getting-started.rst:316
+#: ../../merchants/getting-started.rst:318
 msgid ""
 "Once this has been set up, you can begin processing payments immediately."
 " Simply log in to https://pos.anypay.global or tap **Merchant Point of "
