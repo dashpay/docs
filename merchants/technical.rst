@@ -59,7 +59,7 @@ BlockCypher
 .. image:: img/blockcypher.png
    :width: 200px
    :align: right
-   :target:  https://www.blockcypher.com
+   :target: https://www.blockcypher.com
 
 https://www.blockcypher.com
 
@@ -73,6 +73,25 @@ domain.
 - Pricing Model: Per API Call, 5000 Requests -> $85.00 per month
   (https://accounts.blockcypher.com/plans)
 - Documentation: https://www.blockcypher.com/dev/dash/
+
+
+ChainRider
+----------
+
+.. image:: img/chainrider.png
+   :width: 200px
+   :align: right
+   :target: https://www.chainrider.io
+
+https://www.chainrider.io
+
+ChainRider is a cloud service providing a set of REST APIs for digital
+currency management and exploration.
+
+- Features: Blockchain queries, Event Notifications, Transaction
+  Broadcast, Payment Processing, etc.
+- Pricing Model: Free trial, pay per API call
+- Documentation: https://www.chainrider.io/docs/dash
 
 
 GoCoin
