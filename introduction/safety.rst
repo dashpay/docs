@@ -74,8 +74,7 @@ Please report these and any others scams you encounter as follows:
    report there as well: https://fried.com/crypto-scam-checker
 
 Feel free to report any new scams you find on the forum in our "swat
-team" thread: https://dashtalk.org/threads/www-dash-wallet-com-is-a
--scam-website.8267
+team" thread: https://dashtalk.org/threads/www-dash-wallet-com-is-a-scam-website.8267
 
 
 Ponzi Schemes
