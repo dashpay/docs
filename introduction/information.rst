@@ -980,7 +980,7 @@ Tor
 
 Transaction
   Some movement of data on the distributed blockchain ledger.
-  Transactions may divided into classical and special transactions.
+  Transactions may be divided into classical and special transactions.
   Similar to Bitcoin, classical transactions move balances between
   addresses on the blockchain. Special transactions contain an extra
   payload in the format defined by `DIP2
