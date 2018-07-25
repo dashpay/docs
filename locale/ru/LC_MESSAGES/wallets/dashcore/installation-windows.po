@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 10:33+0000\n"
+"POT-Creation-Date: 2018-07-25 08:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Max Aronych <taofgoar@protonmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-windows.rst:4
 msgid "Windows Installation Guide"
-msgstr ""
+msgstr "Руководство по установке в Windows"
 
 #: ../../wallets/dashcore/installation-windows.rst:6
 msgid ""
@@ -27,10 +28,13 @@ msgid ""
 "wallet for Windows. The guide is written for Windows 10, but the steps "
 "should be similar for Windows XP, Vista, 7 and 8."
 msgstr ""
+"Это руководство объясняет как скачать, установить и зашифровать кошелёк Dash"
+" Core для Windows. Руководство написано для Windows 10, но описанные в нём "
+"шаги подходят для Windows XP, Vista, 7 и 8."
 
 #: ../../wallets/dashcore/installation-windows.rst:11
 msgid "Downloading the Dash Core wallet"
-msgstr ""
+msgstr "Процедура скачивания кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-windows.rst:13
 msgid ""
@@ -39,10 +43,14 @@ msgid ""
 "need. Click the blue **Dash Core** button to download the installer "
 "directly."
 msgstr ""
+"Чтобы скачать последнюю версию кошелька Dash Core, зайдите на "
+"https://www.dash.org/get-dash/ . В большинстве случаев, сайт самостоятельно "
+"определит, какая версия вам необходима. Нажмите на синюю кнопку **Dash "
+"Core**, чтобы скачать файл-инсталлятор напрямую."
 
 #: ../../wallets/dashcore/installation-windows.rst:21
 msgid "The website properly detects the wallet appropriate for your system"
-msgstr ""
+msgstr "Сайт автоматически определит кошелёк, подходящий для вашей системы"
 
 #: ../../wallets/dashcore/installation-windows.rst:23
 msgid ""
@@ -54,34 +62,46 @@ msgid ""
 "<https://www.lifewire.com/am-i-running-a-32-bit-or-64-bit-version-of-"
 "windows-2624475>`__."
 msgstr ""
+"Если автоматическое определение не работает, то вам будет необходимо вручную"
+" выбрать вашу операционную систему и указать, какая версия необходима, "
+"32-битная или 64-битная. Если вы не знаете, какая у вас верcия Windows, "
+"32-битная или 64-битная, то в Windows 10 можно это проверить следующим "
+"образом: **Start > Settings > System > About**. Для подробностей, как это "
+"проверить в других версиях Windows, обратитесь сюда: `here "
+"<https://www.lifewire.com/am-i-running-a-32-bit-or-64-bit-version-of-"
+"windows-2624475>`__."
 
 #: ../../wallets/dashcore/installation-windows.rst:33
 msgid "In Windows Settings, click System"
-msgstr ""
+msgstr "В Панели управления Windows зайдите в раздел Система"
 
 #: ../../wallets/dashcore/installation-windows.rst:38
 msgid ""
 "Under the System section, click About to view the System type. This is a 64 "
 "bit system."
 msgstr ""
+"Во вкладке Система зайдите в раздел \"О системе\", чтобы увидеть тип "
+"системы. В данном случае это 64-битная система."
 
 #: ../../wallets/dashcore/installation-windows.rst:41
 msgid ""
 "Once you know which version you need, download the Dash Core Installer to "
 "your computer from https://www.dash.org/wallets/"
 msgstr ""
+"Как только вы узнаете, какая версия необходима, скачайте с "
+"https://www.dash.org/wallets/ установочный файл Dash Core на ваш компьютер "
 
 #: ../../wallets/dashcore/installation-windows.rst:47
 msgid "Manually selecting and downloading an installer"
-msgstr ""
+msgstr "Выбор и скачивание установочного файла вручную"
 
 #: ../../wallets/dashcore/installation-windows.rst:49
 msgid "Save the file you downloaded to your Downloads folder."
-msgstr ""
+msgstr "Сохрание скачиваемого файл в папку Загрузки"
 
 #: ../../wallets/dashcore/installation-windows.rst:52
 msgid "Verifying Dash Core"
-msgstr ""
+msgstr "Проверка кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-windows.rst:54
 msgid ""
@@ -90,10 +110,15 @@ msgid ""
 "published by the Dash Core development team. To view the published hash, "
 "click the **Hash file** button on the wallet download page."
 msgstr ""
+"Этот шаг не является обязательным, но провести проверку целостности "
+"скачанного файла рекомендуется. Это делается сверкой SHA256 хэша этого файла"
+" с хэшем, опубликованным командой разработчиков Dash Core. Чтобы увидеть "
+"опубликованный хэш, нажмите кнопку **Hash file** на странице скачивания "
+"кошелька."
 
 #: ../../wallets/dashcore/installation-windows.rst:63
 msgid "Downloading the Dash Core hash file"
-msgstr ""
+msgstr "Скачивание хэш файла кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-windows.rst:65
 msgid ""
@@ -101,10 +126,13 @@ msgid ""
 "hash file in a text editor or your browser and find the hash value for the "
 "Dash Core file you downloaded."
 msgstr ""
+"Когда скачаны с файл с кошельком Dash Core и файл с хэшем, откройте хэш файл"
+" в текстовом редакторе или браузере и найдите значение, соответствующее "
+"тому, что находится в скачанном файле кошелька Dash Core."
 
 #: ../../wallets/dashcore/installation-windows.rst:72
 msgid "Viewing the Dash Core hash file"
-msgstr ""
+msgstr "Просмотр хэш файла кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-windows.rst:74
 msgid ""
@@ -114,28 +142,37 @@ msgid ""
 "the file, and run the following command, replacing the version with the "
 "specific version of the file you downloaded."
 msgstr ""
+"Для того, чтобы убедиться в подлинности и скачанного файла и в том, что он "
+"не был повреждён в процессе скачивания, значение хэша  в хэш-файле должно "
+"соответствовать значению хэша в скачанном файле. Чтобы проверить это, "
+"запустите  **Command Prompt**, найдите место, куда вы сохранили файл и "
+"запустите команду,  заменив версию в примере той версией, которую вы скачали"
 
 #: ../../wallets/dashcore/installation-windows.rst:87
 msgid "Generating an SHA256 hash for the downloaded file"
-msgstr ""
+msgstr "Создание SHA256 хэша для скачанного файла"
 
 #: ../../wallets/dashcore/installation-windows.rst:89
 msgid ""
 "If the hashes match, then you have an authentic copy of Dash Core for "
 "Windows."
 msgstr ""
+"Если хэш совпадает, значит у вас подлинная копия кошелька Dash Core для "
+"Windows"
 
 #: ../../wallets/dashcore/installation-windows.rst:93
 msgid "Running the Dash Core installer"
-msgstr ""
+msgstr "Запуск установщика кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-windows.rst:95
 msgid "Double-click the file to start installing Dash Core."
 msgstr ""
+"Сделайте двойной щелчок мышкой на файле для запуска установки кошелька Dash "
+"Core."
 
 #: ../../wallets/dashcore/installation-windows.rst:100
 msgid "The Dash Core installer in the Downloads folder"
-msgstr ""
+msgstr "Установочный файл кошелька Dash Core находится в папке Загрузки"
 
 #: ../../wallets/dashcore/installation-windows.rst:102
 msgid ""
@@ -143,46 +180,54 @@ msgid ""
 "is unrecognized. You can safely skip past this warning by clicking **More "
 "info**, then **Run anyway**."
 msgstr ""
+"На данном этапе, Защитник Windows может выдать предупреждение о "
+"нераспознанной угрозе. Вы можете пропустить это предупреждение, не "
+"беспокоясь о безопасности, нажав **More info**, далее **Run anyway**."
 
 #: ../../wallets/dashcore/installation-windows.rst:112
 msgid ""
 "Bypassing Windows SmartScreen to run the app. This warning is known as a "
 "“false positive”."
 msgstr ""
+"Обход Защитника Windows для запуска приложения. Предупреждение от него "
+"является \"ложноположительным\"."
 
 #: ../../wallets/dashcore/installation-windows.rst:115
 msgid "The installer will then guide you through the installation process."
-msgstr ""
+msgstr "Далее, установщик проведёт вас через процесс установки"
 
 #: ../../wallets/dashcore/installation-windows.rst:120
 msgid "The Dash Core installer welcome screen"
-msgstr ""
+msgstr "Приветственный экран установщика кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-windows.rst:122
 msgid ""
 "Click through the following screens. All settings can be left at their "
 "default values unless you have a specific reason to change something."
 msgstr ""
+"Пройдите через все последующие окна. Все настройки можно оставить на "
+"значениях по умолчанию, кроме случаев, когда у вас есть конкретная причина "
+"для их изменения."
 
 #: ../../wallets/dashcore/installation-windows.rst:128
 msgid "Select the installation location"
-msgstr ""
+msgstr "Выберите расположение для установки"
 
 #: ../../wallets/dashcore/installation-windows.rst:133
 msgid "Select the Start menu folder"
-msgstr ""
+msgstr "Выберите папку в меню Пуск"
 
 #: ../../wallets/dashcore/installation-windows.rst:138
 msgid "Dash Core is being installed"
-msgstr ""
+msgstr "Кошелёк Dash Core устанавливается"
 
 #: ../../wallets/dashcore/installation-windows.rst:143
 msgid "Installation is complete"
-msgstr ""
+msgstr "Установка завершена"
 
 #: ../../wallets/dashcore/installation-windows.rst:146
 msgid "Running Dash Core for the first time"
-msgstr ""
+msgstr "Первый запуск кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-windows.rst:148
 msgid ""
@@ -193,10 +238,17 @@ msgid ""
 "with enough free space, as the blockchain can reach around 3-4GB in size. It"
 " is recommended to use the default data folder if possible."
 msgstr ""
+"По завершению установки, кошелёк Dash Core сразу запустится. Если этого не "
+"произойдёт, то нажмите  **Start > Dash Core > Dash Core** для запуска "
+"приложения. При первом запуске программы, вам будет предложено выбрать "
+"расположение места хранения блокчейна и данных кошелька. Выберите "
+"расположение с достаточным свободным местом на диске, поскольку размер "
+"блокчейна может достигать 3-4 гигабайт. При возможности, рекомендуется "
+"использовать место, предлагаемое по умолчанию."
 
 #: ../../wallets/dashcore/installation-windows.rst:159
 msgid "Choosing the Dash Core data folder"
-msgstr ""
+msgstr "Выбор места хранения данных кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-windows.rst:161
 msgid ""
@@ -204,14 +256,17 @@ msgid ""
 "first time you run it, since Dash Core needs to generate cryptographic data "
 "to secure your wallet."
 msgstr ""
+"Произойдёт запуск кошелька Dash Core. Первый запуск проходит дольше "
+"обычного, поскольку кошельку Dash Core необходимо создать криптографические "
+"данные для обеспечения безопасности вашего кошелька."
 
 #: ../../wallets/dashcore/installation-windows.rst:168
 msgid "Starting Dash Core"
-msgstr ""
+msgstr "Запуск кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-windows.rst:171
 msgid "Synchronizing Dash Core to the Dash network"
-msgstr ""
+msgstr "Синхронизация кошелька Dash Core с сетью Dash"
 
 #: ../../wallets/dashcore/installation-windows.rst:173
 msgid ""
@@ -220,10 +275,13 @@ msgid ""
 "and the status bar at the bottom of the window will show the synchronization"
 " progress."
 msgstr ""
+"Как только кошелёк Dash Core будет успешно установлен и запущен, вы увидете "
+"экран обзора кошелька. В  увидете что кошелёк \"не синхронизирован\" и "
+"полосу прогресса статуса синхронизации в нижней части экрана."
 
 #: ../../wallets/dashcore/installation-windows.rst:181
 msgid "Dash Core begins synchronizing with the Dash network"
-msgstr ""
+msgstr "Кошелёк Dash Core начнёт синхронизацию с сетью Dash"
 
 #: ../../wallets/dashcore/installation-windows.rst:183
 msgid ""
@@ -233,18 +291,25 @@ msgid ""
 "source available”, check your internet connection. When synchronization is "
 "complete, you will see a small blue tick in the lower right corner."
 msgstr ""
+"Во время этого процесса, кошелёк Dash Core скачает с узлов сети (нод) полную"
+" копию блокчейна Dash на ваше устройство. В зависимости от интернет-"
+"соединения, это может занят как мало времени, так и много. Если вы увидете "
+"сообщение \"Отсутствует источник блоков\", проверьте ваше соединение с "
+"интернетом."
 
 #: ../../wallets/dashcore/installation-windows.rst:193
 msgid "Dash Core synchronization is complete"
-msgstr ""
+msgstr "Синхронизация кошелька Dash Core завершена"
 
 #: ../../wallets/dashcore/installation-windows.rst:195
 msgid "You can now begin to use your wallet to send and receive funds."
 msgstr ""
+"Теперь вы можете начать использовать кошелёк для отправки или получения "
+"средств."
 
 #: ../../wallets/dashcore/installation-windows.rst:198
 msgid "Encrypting your Dash wallet"
-msgstr ""
+msgstr "Ваш кошелёк Dash Core зашифровывается"
 
 #: ../../wallets/dashcore/installation-windows.rst:200
 msgid ""
@@ -255,26 +320,33 @@ msgid ""
 " safe or you will be locked out of your wallet and lose access to your "
 "funds."
 msgstr ""
+"Как только ваш кошелёк синхронизируется с сетью Dash, то для предотвращения "
+"несанкционированного доступа к нему, настойчиво рекомендуем вам зашифровать "
+"кошелёк с помощью пароля или кодовой фразы. Необходимо использовать "
+"надежный, новый пароль, который вы не использовали ранее нигде. Запишите "
+"свой пароль и храните его в безопасном месте, иначе вы можете потерять "
+"доступ к кошельку и вашим средствам."
 
 #: ../../wallets/dashcore/installation-windows.rst:207
 msgid "To encrypt your wallet, click **Settings > Encrypt** wallet."
 msgstr ""
+"Для того, чтобы зашифровать кошелёк, нажмите **Settings > Encrypt Wallet**  "
 
 #: ../../wallets/dashcore/installation-windows.rst:212
 msgid "Encrypting the Dash wallet with a password"
-msgstr ""
+msgstr "Кошелёк Dash шифруется паролем"
 
 #: ../../wallets/dashcore/installation-windows.rst:214
 msgid "You will be asked to enter and verify a password."
-msgstr ""
+msgstr "Вам поступит запрос ввести и подтвердить пароль."
 
 #: ../../wallets/dashcore/installation-windows.rst:219
 msgid "Enter a password"
-msgstr ""
+msgstr "Введите пароль"
 
 #: ../../wallets/dashcore/installation-windows.rst:224
 msgid "Confirm you want to encrypt your wallet"
-msgstr ""
+msgstr "Подтвердите, что вы хотите зашифровать кошелёк"
 
 #: ../../wallets/dashcore/installation-windows.rst:226
 msgid ""
@@ -283,11 +355,18 @@ msgid ""
 "Dash Core. When you restart Dash Core, you will see a small blue lock in the"
 " lower right corner."
 msgstr ""
+"Когда процесс шифрования завершится, вы увидете предупреждение, что старые "
+"резервные копии вашего кошелька более не могут быть использованы, после чего"
+" вам будет предложено закрыть кошелёк Dash Core. Когда вы перезапустите "
+"кошелёк Dash Core, то увидете небольшой синий знак замка в нижней правой "
+"части экрана."
 
 #: ../../wallets/dashcore/installation-windows.rst:234
 msgid "Fully encrypted and synchronized Dash Core wallet"
-msgstr ""
+msgstr "Кошелёк Dash Core полностью зашифрован и синхронизирован"
 
 #: ../../wallets/dashcore/installation-windows.rst:236
 msgid "You can now begin to use your wallet to safely send and receive funds."
 msgstr ""
+"Теперь вы можете начать использовать свой кошелёк для отправки и получения "
+"средств."

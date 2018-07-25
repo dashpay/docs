@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-18 08:33+0000\n"
+"POT-Creation-Date: 2018-07-25 08:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -20,14 +20,14 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-macos.rst:4
 msgid "macOS Installation Guide"
-msgstr ""
+msgstr "macOS安装指南"
 
 #: ../../wallets/dashcore/installation-macos.rst:6
 msgid ""
 "This guide describes how to download, install and encrypt the Dash Core "
 "wallet for macOS. The guide is written for macOS Sierra, but the steps "
 "should be similar for other versions."
-msgstr ""
+msgstr "本指南介绍了如何下载、安装和加密macOS达世币核心钱包。指南是基于macOS Sierra的，但其他相似版本的步骤类似。"
 
 #: ../../wallets/dashcore/installation-macos.rst:11
 msgid "Downloading the Dash Core wallet"
@@ -40,6 +40,8 @@ msgid ""
 "need. Click the blue **Dash Core** button to download the installer "
 "directly."
 msgstr ""
+"访问 https://www.dash.org/get-dash/  "
+"可以下载最新版本的达世币核心钱包。多数情况下，网站会正确地检测到你所需要的版本。点击蓝色的 **达世核心** 按钮，直接下载安装程序。"
 
 #: ../../wallets/dashcore/installation-macos.rst:21
 msgid "The website properly detects the wallet appropriate for your system"
@@ -51,6 +53,8 @@ msgid ""
 "system. Go to https://www.dash.org/wallets and select the **OSX** tab, then "
 "click **Download DMG**."
 msgstr ""
+"如果检测不到，就需要手动选择你的操作系统。访问 https://www.dash.org/wallets "
+"选择**OSX**表，然后点击**下载DMG**。"
 
 #: ../../wallets/dashcore/installation-macos.rst:30
 msgid "Manually selecting and downloading an installer"
@@ -83,7 +87,7 @@ msgid ""
 "Once both the Dash Core file and the hash file have downloaded, double-click"
 " the hash file or view it in your browser and find the hash value for the "
 "Dash Core file you downloaded."
-msgstr ""
+msgstr "当达世币核心文件和哈希值文件都下载完成后，双击或用浏览器打开查看，找到你下载的达世币核心文件的哈希值。"
 
 #: ../../wallets/dashcore/installation-macos.rst:55
 msgid "Viewing the Dash Core hash file"
@@ -97,6 +101,8 @@ msgid ""
 "file, and run the following command, replacing the version with the specific"
 " version of the file you downloaded::"
 msgstr ""
+"这里的哈希值应该与你下载的文件的哈希值一致，以确定文件是正版而且在传输过程中没有被毁坏。为此，请打开**终端**，找到保存文件的位置，运行以下 "
+"指令，将版本改成你下载文件的具体版本::"
 
 #: ../../wallets/dashcore/installation-macos.rst:68
 msgid "Generating an SHA256 hash for the downloaded file"
@@ -105,29 +111,29 @@ msgstr "正为下载文件生成一个SHA256哈希值。"
 #: ../../wallets/dashcore/installation-macos.rst:70
 msgid ""
 "If the hashes match, then you have an authentic copy of Dash Core for macOS."
-msgstr ""
+msgstr "如果哈希值相同，你的macOS系统就有一个正版的达世币核心了。"
 
 #: ../../wallets/dashcore/installation-macos.rst:74
 #: ../../wallets/dashcore/installation-macos.rst:91
 msgid "Installing Dash Core"
-msgstr ""
+msgstr "正在安装达世币核心"
 
 #: ../../wallets/dashcore/installation-macos.rst:76
 msgid ""
 "Open Finder and browse to your Downloads folder. Then double-click on the "
 ".dmg file you downloaded to decompress it. A window appears showing the "
 "contents of the file."
-msgstr ""
+msgstr "打开“Finder”查看下载文件夹。双击下载的.dmg文件将其解压。会有一个窗口显示文件内容。"
 
 #: ../../wallets/dashcore/installation-macos.rst:83
 msgid "Opening the Dash Core .dmg file"
-msgstr ""
+msgstr "正在打开Dash Core .dmg文件"
 
 #: ../../wallets/dashcore/installation-macos.rst:85
 msgid ""
 "Drag the Dash Core application file into your Applications folder to install"
 " Dash Core."
-msgstr ""
+msgstr "将达世币核心应用文件拖拽到你的应用程序文件夹中进行安装。"
 
 #: ../../wallets/dashcore/installation-macos.rst:94
 msgid "Running Dash Core for the first time"
@@ -144,10 +150,12 @@ msgid ""
 "security settings, and you can open it in the future by double-clicking it "
 "just as you can any registered app."
 msgstr ""
+"第一次运行达世币核心时，打开Launchpad或者找到Finder中的**Applications**文件夹，双击**达世币核心**   "
+"或**达世币Qt**来启动应用程序。可能会有一个报警提示你打开了一个不可识别应用。为解决此问题，右键点击应用图标并从快捷菜单中选择**打开**，在对话框中再次点击**打开**。这时应用程序在你的安全设定里就会被存成特例，将来你可以通过双击打开它，就像打开已注册的应用那样。"
 
 #: ../../wallets/dashcore/installation-macos.rst:111
 msgid "Unblocking macOS from running Dash Core"
-msgstr ""
+msgstr "解锁macOS，运行达世币核心"
 
 #: ../../wallets/dashcore/installation-macos.rst:113
 msgid ""
@@ -156,6 +164,8 @@ msgid ""
 "with enough free space, as the blockchain can reach around 3-4GB in size. It"
 " is recommended to use the default data folder if possible."
 msgstr ""
+"程序首次启动时，会问到你准备将区块链和钱包数据存储在哪里。 "
+"区块链的大小能达到3-4GB，所以请选择一个有足够可用空间的地方。建议尽量使用默认的数据文件夹。"
 
 #: ../../wallets/dashcore/installation-macos.rst:122
 msgid "Choosing the Dash Core data folder"
@@ -223,7 +233,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-macos.rst:169
 msgid "To encrypt your wallet, click **Settings** > **Encrypt** wallet."
-msgstr ""
+msgstr "加密你的钱包，请点击 **设置** >** 加密** 钱包。"
 
 #: ../../wallets/dashcore/installation-macos.rst:174
 msgid "Encrypting the Dash wallet with a password"

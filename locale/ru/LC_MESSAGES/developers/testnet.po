@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-18 08:33+0000\n"
+"POT-Creation-Date: 2018-07-25 08:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Tikhon Skudarnov <semargsemarg@gmail.com>, 2018\n"
+"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../developers/testnet.rst:5
 msgid "Testnet and devnets"
-msgstr ""
+msgstr "Тестовая сеть и devnets"
 
 #: ../../developers/testnet.rst:7
 msgid ""
@@ -34,6 +34,17 @@ msgid ""
 "docs.github.io/en/developer-examples#devnet-mode>`__ or this `blog post "
 "<https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
 msgstr ""
+"С выпуском кошелька Dash Core 12.3 команда Dash добавила поддержку новой "
+"прекрасной функции, называемой **именованные devnets**. Devnets - это сети "
+"разработчиков, которые объединяют некоторые аспекты тестовой сети "
+"(глобальной и публичной сети тестирования) и некоторые аспекты режима "
+"regtest (режим исключительно локального регрессионного тестирования, который"
+" обеспечивает управляемую генерацию блоков). В отличие от тестовой сети, "
+"можно создать несколько независимых devnets, которые смогут сосуществовать "
+"без вмешательства. Для ознакомления с практической документацией по "
+"использованию devnets, см. `документацию разработчиков <https://dash-"
+"docs.github.io/en/developer-examples#devnet-mode>`__ или этот `пост в блоге "
+"<https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
 
 #: ../../developers/testnet.rst:17
 msgid ""
@@ -44,20 +55,29 @@ msgid ""
 "using identical versions of the software before they are carried out on the "
 "mainnet. There are a few other key differences:"
 msgstr ""
+"Testnet - это полностью функционирующий блокчейн Dash с одним ключевым "
+"отличием, которое состоит в том, что монеты Dash в этой сети могут "
+"создаваться свободно и они не имеют ценности. Эта валюта, известная как "
+"tDASH, может запрашиваться у сборщика, чтобы помочь разработчикам "
+"протестировать новые версии Dash, а также проверить сетевые операции с "
+"использованием идентичных версий программного обеспечения, прежде чем они "
+"начнут работать в основной сети. Существует еще несколько ключевых отличий:"
 
 #: ../../developers/testnet.rst:24
 msgid "Testnet operates on port 19999 (instead of 9999)"
-msgstr ""
+msgstr "Testnet работает на порту 19999 (вместо 9999)"
 
 #: ../../developers/testnet.rst:25
 msgid ""
 "Testnet addresses start with \"y\" instead of \"X\", ADDRESSVERSION is 140 "
 "(instead of 76)"
 msgstr ""
+"Адреса тестовых сетей начинаются с «y» вместо «X», ADDRESSVERSION - 140 "
+"(вместо 76)"
 
 #: ../../developers/testnet.rst:27
 msgid "Testnet balances are denominated in tDASH (instead of DASH)"
-msgstr ""
+msgstr "Балансы Testnet выражены в tDASH (вместо DASH)"
 
 #: ../../developers/testnet.rst:28
 msgid "Protocol message header bytes are 0xcee2caff (instead of 0xbf0c6bbd)"
@@ -68,20 +88,26 @@ msgid ""
 "Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, testnet-"
 "seed.darkcoin.qa, testnet-seed.dashpay.io"
 msgstr ""
+"Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, testnet-"
+"seed.darkcoin.qa, testnet-seed.dashpay.io"
 
 #: ../../developers/testnet.rst:31
 msgid "Launching Dash Core in testnet mode shows an orange splash screen"
 msgstr ""
+"При запуске Dash Core в режиме testnet на экране появляется оранжевая "
+"заставка"
 
 #: ../../developers/testnet.rst:33
 msgid ""
 "To start Dash Core in testnet mode, find your dash.conf file and enter the "
 "following line::"
 msgstr ""
+"Чтобы запустить Dash Core в режиме testnet, найдите файл dash.conf и введите"
+" следующую строку::"
 
 #: ../../developers/testnet.rst:39
 msgid "Tools and links"
-msgstr ""
+msgstr "Инструменты и ссылки"
 
 #: ../../developers/testnet.rst:41
 msgid ""
@@ -91,103 +117,115 @@ msgid ""
 "<https://www.dash.org/forum/>`_ if you have a question relating to a "
 "specific service."
 msgstr ""
+"Ссылки, приведенные ниже, были собраны из различных источников сообщества и "
+"не обязательно могут быть онлайн или работать в любой момент времени. "
+"Присоединяйтесь к `Dash Nation Discord <http://dashchat.org>` _ или `Dash "
+"Forum <https://www.dash.org/forum/>` _, если у вас есть вопросы, связанные с"
+" конкретными услугами."
 
 #: ../../developers/testnet.rst:47
 msgid "**Test builds:** https://bamboo.dash.org"
-msgstr ""
+msgstr "**Test builds:** https://bamboo.dash.org"
 
 #: ../../developers/testnet.rst:48
 msgid "**Bugtracker:** https://github.com/dashpay/dash/issues/new"
-msgstr ""
+msgstr "**Bugtracker:** https://github.com/dashpay/dash/issues/new"
 
 #: ../../developers/testnet.rst:49
 msgid "**Discussion and help:** https://www.dash.org/forum/topic/testing.53/"
-msgstr ""
+msgstr "**Обсуждение и помощь:** https://www.dash.org/forum/topic/testing.53/"
 
 #: ../../developers/testnet.rst:50
 msgid "**Masternode tools:** https://test.dashninja.pl/masternodes.html"
 msgstr ""
+"**Инструменты для Мастернод:** https://test.dashninja.pl/masternodes.html"
 
 #: ../../developers/testnet.rst:51
 msgid ""
 "**Android wallet:** https://www.dash.org/forum/threads/dash-wallet-for-"
 "android-v5-testnet.14775/"
 msgstr ""
+"**Кошелёк на Андроид:** https://www.dash.org/forum/threads/dash-wallet-for-"
+"android-v5-testnet.14775/"
 
 #: ../../developers/testnet.rst:52
 msgid "**Testnet for Bitcoin:** https://en.bitcoin.it/wiki/Testnet"
-msgstr ""
+msgstr "**Testnet для Биткойна:** https://en.bitcoin.it/wiki/Testnet"
 
 #: ../../developers/testnet.rst:55
 msgid "Faucets"
-msgstr ""
+msgstr "Краны"
 
 #: ../../developers/testnet.rst:57
 msgid "https://test.faucet.dash.org - by flare"
-msgstr ""
+msgstr "https://test.faucet.dash.org - пользователя flare"
 
 #: ../../developers/testnet.rst:58
 msgid "http://test.faucet.dashninja.pl - by elbereth"
-msgstr ""
+msgstr "http://test.faucet.dashninja.pl - пользователя elbereth"
 
 #: ../../developers/testnet.rst:59
 msgid "http://t.f.masternode.io - by coingun"
-msgstr ""
+msgstr "http://t.f.masternode.io - пользователя coingun"
 
 #: ../../developers/testnet.rst:60
 msgid "http://test.faucet.masternode.io - by coingun"
-msgstr ""
+msgstr "http://test.faucet.masternode.io - пользователя coingun"
 
 #: ../../developers/testnet.rst:61
 msgid "http://faucet.test.dash.crowdnode.io - ndrezza"
-msgstr ""
+msgstr "http://faucet.test.dash.crowdnode.io - пользователя ndrezza"
 
 #: ../../developers/testnet.rst:64
 msgid "Explorers"
-msgstr ""
+msgstr "Обозреватели"
 
 #: ../../developers/testnet.rst:66
 msgid "https://test.explorer.dash.org - by flare"
-msgstr ""
+msgstr "https://test.explorer.dash.org - пользователя flare"
 
 #: ../../developers/testnet.rst:67
 msgid "https://test.insight.dash.siampm.com - by thelazier"
-msgstr ""
+msgstr "https://test.insight.dash.siampm.com - пользователя thelazier"
 
 #: ../../developers/testnet.rst:68
 msgid "https://test.explorer.dashninja.pl - by elbereth"
-msgstr ""
+msgstr "https://test.explorer.dashninja.pl - пользователя elbereth"
 
 #: ../../developers/testnet.rst:69
 msgid "http://test.insight.masternode.io:3001 - by coingun"
-msgstr ""
+msgstr "http://test.insight.masternode.io:3001 - пользователя coingun"
 
 #: ../../developers/testnet.rst:70
 msgid "https://testnet-insight.dashevo.org/insight/"
-msgstr ""
+msgstr "https://testnet-insight.dashevo.org/insight/"
 
 #: ../../developers/testnet.rst:73
 msgid "Pools"
-msgstr ""
+msgstr "Пулы"
 
 #: ../../developers/testnet.rst:75
 msgid ""
 "https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare"
 msgstr ""
+"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - "
+"пользователя flare"
 
 #: ../../developers/testnet.rst:76
 msgid ""
 "http://test.p2pool.dash.siampm.com "
 "[stratum+tcp://test.p2pool.dash.siampm.com:17903] by thelazier"
 msgstr ""
+"http://test.p2pool.dash.siampm.com "
+"[stratum+tcp://test.p2pool.dash.siampm.com:17903] пользователя thelazier"
 
 #: ../../developers/testnet.rst:77
 msgid "http://p2pool.dashninja.pl:17903/static - by elbereth"
-msgstr ""
+msgstr "http://p2pool.dashninja.pl:17903/static - пользователя elbereth"
 
 #: ../../developers/testnet.rst:78
 msgid "http://test.p2pool.masternode.io:18998/static - by coingun"
-msgstr ""
+msgstr "http://test.p2pool.masternode.io:18998/static - пользователя coingun"
 
 #: ../../developers/testnet.rst:81
 msgid "Masternodes"
@@ -199,6 +237,9 @@ msgid ""
 "the :ref:`mainnet masternode installation guide <masternode-setup>`, but "
 "with a few key differences:"
 msgstr ""
+"Установка Мастерноды в тестовой сети обычно выполняется теми же шагами, что "
+"и :ref:`mainnet masternode installation guide <masternode-setup>`, но с "
+"несколькими ключевыми отличиями:"
 
 #: ../../developers/testnet.rst:87
 msgid ""
@@ -224,6 +265,8 @@ msgid ""
 "When sending the collateral, you can get the 1000 tDASH for free from a "
 "faucet (see above)"
 msgstr ""
+"Если хотите отправить залог, то 1000 tDASH вы можете получить бесплатно с "
+"помощью кранов (ссылки на которые приведены выше)"
 
 #: ../../developers/testnet.rst:97
 msgid ""
@@ -255,10 +298,13 @@ msgid ""
 "Once sentinel is installed, modify ``~/.dashcore/sentinel/sentinel.conf``, "
 "comment the mainnet line and uncomment: ``network=testnet``"
 msgstr ""
+"После того, как Хранитель был установлен, модифицируйте "
+"``~/.dashcore/sentinel/sentinel.conf``, comment the mainnet line and "
+"uncomment: ``network=testnet``"
 
 #: ../../developers/testnet.rst:112
 msgid "Testnet 12.3"
-msgstr ""
+msgstr "Testnet версии 12.3"
 
 #: ../../developers/testnet.rst:114
 msgid ""
@@ -268,24 +314,32 @@ msgid ""
 " use by real people. The Dash team invites anybody who is interested to "
 "download the software and become active on testnet. This release includes:"
 msgstr ""
+"В июне 2018 года команда Dash объявила о начале тестирования предстоящего "
+"выпуска кошелька Dash версии 12.3. Обширное внутреннее тестирование уже было"
+" выполнено по коду версии 12.2, но есть множество ошибок, которые могут быть"
+" обнаружены только с реальным использованием реальными людьми. Команда Dash "
+"приглашает любого, кто заинтересован скачать программное обеспечение и стать"
+" активным в тестовой сети. Этот выпуск включает:"
 
 #: ../../developers/testnet.rst:121
 msgid ""
 "Named Devnets, to help developers quickly create multiple independent "
 "devnets"
 msgstr ""
+"Именованные Devnets, которые помогают разработчикам быстро создавать "
+"несколько независимых devnets"
 
 #: ../../developers/testnet.rst:123
 msgid "New format of network message signatures"
-msgstr ""
+msgstr "Новый формат подписей сетевых сообщений"
 
 #: ../../developers/testnet.rst:124
 msgid "Governance system improvements"
-msgstr ""
+msgstr "Совершенствование системы управления"
 
 #: ../../developers/testnet.rst:125
 msgid "PrivateSend improvements"
-msgstr ""
+msgstr "Совершенствование функции PrivateSend"
 
 #: ../../developers/testnet.rst:126
 msgid "Additional indexes cover P2PK now"
@@ -301,31 +355,33 @@ msgstr ""
 
 #: ../../developers/testnet.rst:130 ../../developers/testnet.rst:157
 msgid "Discussion:"
-msgstr ""
+msgstr "Обсуждение:"
 
 #: ../../developers/testnet.rst:132
 msgid "https://www.dash.org/forum/threads/v12-3-testing.38475"
-msgstr ""
+msgstr "https://www.dash.org/forum/threads/v12-3-testing.38475"
 
 #: ../../developers/testnet.rst:133
 msgid "Testnet tools: https://docs.dash.org/en/latest/developers/testnet.html"
 msgstr ""
+"Инструменты для Testnet: "
+"https://docs.dash.org/en/latest/developers/testnet.html"
 
 #: ../../developers/testnet.rst:134 ../../developers/testnet.rst:161
 msgid "Issue tracking: https://github.com/dashpay/dash/issues/new"
-msgstr ""
+msgstr "Отслеживание проблем: https://github.com/dashpay/dash/issues/new"
 
 #: ../../developers/testnet.rst:136 ../../developers/testnet.rst:163
 msgid "Latest test binaries:"
-msgstr ""
+msgstr "Последние тестовые двоичные файлы:"
 
 #: ../../developers/testnet.rst:138
 msgid "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
-msgstr ""
+msgstr "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
 
 #: ../../developers/testnet.rst:142
 msgid "Testnet 12.2"
-msgstr ""
+msgstr "Testnet версии 12.2"
 
 #: ../../developers/testnet.rst:144
 msgid ""
@@ -336,24 +392,34 @@ msgid ""
 "Dash team invites anybody who is interested to download the software and "
 "become active on testnet. This release includes:"
 msgstr ""
+"В октябре 2017 года команда Dash объявила о запуске тестовой сети для "
+"публичного тестирования предстоящего выпуска программного обеспечения Dash "
+"12.2. Обширное внутреннее тестирование уже было выполнено по 12.2-коду, но "
+"есть множество ошибок, которые могут быть обнаружены только с реальным "
+"использованием реальными людьми. Команда Dash приглашает любого, кто "
+"заинтересован скачать программное обеспечение и стать активным в тестовой "
+"сети. Этот выпуск включает:"
 
 #: ../../developers/testnet.rst:151
 msgid ""
 "DIP0001 implementation "
 "https://github.com/dashpay/dips/blob/master/dip-0001.md"
 msgstr ""
+"Имплементация DIP0001 "
+"https://github.com/dashpay/dips/blob/master/dip-0001.md"
 
 #: ../../developers/testnet.rst:152
 msgid "10x transaction fee reduction (including InstantSend fee)"
 msgstr ""
+"Уменьшение комиссии за транзакцию в 10 раз (включая комиссию InstantSend)"
 
 #: ../../developers/testnet.rst:153
 msgid "InstantSend vulnerability fix"
-msgstr ""
+msgstr "Исправление уязвимости InstantSend"
 
 #: ../../developers/testnet.rst:154
 msgid "Lots of other bug fixes and performance improvements"
-msgstr ""
+msgstr "Многие другие исправления ошибок и улучшения производительности"
 
 #: ../../developers/testnet.rst:155
 msgid ""
@@ -366,37 +432,49 @@ msgid ""
 "Testnet 12.2 discussion: "
 "https://www.dash.org/forum/threads/v12-2-testing.17412/"
 msgstr ""
+"Обсуждение Testnet версии 12.2: "
+"https://www.dash.org/forum/threads/v12-2-testing.17412/"
 
 #: ../../developers/testnet.rst:160
 msgid ""
 "Testnet tools: https://www.dash.org/forum/threads/testnet-tools-"
 "resources.1768/"
 msgstr ""
+"Инструменты для тестовой сети: https://www.dash.org/forum/threads/testnet-"
+"tools-resources.1768/"
 
 #: ../../developers/testnet.rst:165
 msgid ""
 "Windows: https://bamboo.dash.org/browse/DASHW-"
 "DEV/latestSuccessful/artifact/JOB1/gitian-win-dash-dist/"
 msgstr ""
+"Windows: https://bamboo.dash.org/browse/DASHW-"
+"DEV/latestSuccessful/artifact/JOB1/gitian-win-dash-dist/"
 
 #: ../../developers/testnet.rst:166
 msgid ""
 "macOS: https://bamboo.dash.org/browse/DASHM-"
 "DEV/latestSuccessful/artifact/JOB1/gitian-osx-dash-dist/"
 msgstr ""
+"macOS: https://bamboo.dash.org/browse/DASHM-"
+"DEV/latestSuccessful/artifact/JOB1/gitian-osx-dash-dist/"
 
 #: ../../developers/testnet.rst:167
 msgid ""
 "Linux: https://bamboo.dash.org/browse/DASHL-"
 "DEV/latestSuccessful/artifact/JOB1/gitian-linux-dash-dist/"
 msgstr ""
+"Linux: https://bamboo.dash.org/browse/DASHL-"
+"DEV/latestSuccessful/artifact/JOB1/gitian-linux-dash-dist/"
 
 #: ../../developers/testnet.rst:168
 msgid ""
 "Raspberry Pi: https://bamboo.dash.org/browse/DASHP-"
 "DEV/latestSuccessful/artifact/JOB1/gitian-RPi2-dash-dist/"
 msgstr ""
+"Raspberry Pi: https://bamboo.dash.org/browse/DASHP-"
+"DEV/latestSuccessful/artifact/JOB1/gitian-RPi2-dash-dist/"
 
 #: ../../developers/testnet.rst:169
 msgid "Sentinel: https://github.com/dashpay/sentinel/tree/core-v0.12.2.x"
-msgstr ""
+msgstr "Хранитель: https://github.com/dashpay/sentinel/tree/core-v0.12.2.x"

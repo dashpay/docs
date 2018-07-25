@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-11 06:20+0000\n"
+"POT-Creation-Date: 2018-07-25 08:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Max Aronych <taofgoar@protonmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +31,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-macos.rst:11
 msgid "Downloading the Dash Core wallet"
-msgstr ""
+msgstr "Процедура скачивания кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-macos.rst:13
 msgid ""
@@ -42,7 +43,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-macos.rst:21
 msgid "The website properly detects the wallet appropriate for your system"
-msgstr ""
+msgstr "Сайт автоматически определит кошелёк, подходящий для вашей системы"
 
 #: ../../wallets/dashcore/installation-macos.rst:23
 msgid ""
@@ -53,15 +54,15 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-macos.rst:30
 msgid "Manually selecting and downloading an installer"
-msgstr ""
+msgstr "Выбирая и скачивая установочный файл вручную"
 
 #: ../../wallets/dashcore/installation-macos.rst:32
 msgid "Save the file you downloaded to your Downloads folder."
-msgstr ""
+msgstr "Сохрание скачиваемый файл в папку Загрузки"
 
 #: ../../wallets/dashcore/installation-macos.rst:35
 msgid "Verifying Dash Core"
-msgstr ""
+msgstr "Проверка Dash Core"
 
 #: ../../wallets/dashcore/installation-macos.rst:37
 msgid ""
@@ -70,10 +71,15 @@ msgid ""
 "published by the Dash Core development team. To view the published hash, "
 "click the **Hash file** button on the wallet download page."
 msgstr ""
+"Этот шаг не является обязательным, но провести проверку целостности "
+"скачанного файла рекомендуется. Это делается проверкой SHA 256 хэша этого "
+"файла с хэшем, опубликованным командой разработчиков Dash Core. Чтобы "
+"увидеть опубликованный хэш, нажмите кнопку **Hash file** на странице "
+"скачивания кошелька."
 
 #: ../../wallets/dashcore/installation-macos.rst:46
 msgid "Downloading the Dash Core hash file"
-msgstr ""
+msgstr "Скачивание хэш файла Dash Core"
 
 #: ../../wallets/dashcore/installation-macos.rst:48
 msgid ""
@@ -84,7 +90,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-macos.rst:55
 msgid "Viewing the Dash Core hash file"
-msgstr ""
+msgstr "Просмотр хэш файла кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-macos.rst:57
 msgid ""
@@ -97,7 +103,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-macos.rst:68
 msgid "Generating an SHA256 hash for the downloaded file"
-msgstr ""
+msgstr "Создание SHA256 хэша для скачанного файла"
 
 #: ../../wallets/dashcore/installation-macos.rst:70
 msgid ""
@@ -128,7 +134,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-macos.rst:94
 msgid "Running Dash Core for the first time"
-msgstr ""
+msgstr "Первый запуск кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-macos.rst:96
 msgid ""
@@ -156,7 +162,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-macos.rst:122
 msgid "Choosing the Dash Core data folder"
-msgstr ""
+msgstr "Выбор места хранения данных кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-macos.rst:124
 msgid ""
@@ -164,14 +170,17 @@ msgid ""
 "first time you run it, since Dash Core needs to generate cryptographic data "
 "to secure your wallet."
 msgstr ""
+"Произойдёт запуск кошелька Dash Core. Первый запуск проходит дольше "
+"обычного, поскольку кошельку Dash Core необходимо создать криптографические "
+"данные для защиты вашего кошелька."
 
 #: ../../wallets/dashcore/installation-macos.rst:131
 msgid "Starting Dash Core"
-msgstr ""
+msgstr "Запуск кошелька Dash Core"
 
 #: ../../wallets/dashcore/installation-macos.rst:134
 msgid "Synchronizing Dash Core to the Dash network"
-msgstr ""
+msgstr "Синхронизация кошелька Dash Core с сетью Dash"
 
 #: ../../wallets/dashcore/installation-macos.rst:136
 msgid ""
@@ -180,10 +189,13 @@ msgid ""
 "and the status bar at the bottom of the window will show the synchronization"
 " progress."
 msgstr ""
+"Как только кошелёк Dash Core будет успешно установлен и запущен, вы увидете "
+"экран обзора кошелька. В  увидете что кошелёк \"не синхронизирован\" и "
+"полосу прогресса статуса синхронизации в нижней части экрана."
 
 #: ../../wallets/dashcore/installation-macos.rst:144
 msgid "Dash Core begins synchronizing with the Dash network"
-msgstr ""
+msgstr "Кошелёк Dash Core начнёт синхронизацию с сетью Dash"
 
 #: ../../wallets/dashcore/installation-macos.rst:146
 msgid ""
@@ -193,18 +205,25 @@ msgid ""
 "source available”, check your internet connection. When synchronization is "
 "complete, you will see a small blue tick in the lower right corner."
 msgstr ""
+"Во время этого процесса, кошелёк Dash Core скачает с узлов сети (нод) полную"
+" копию блокчейна Dash на ваше устройство. В зависимости от интернет-"
+"соединения, это может занят как мало времени, так и много. Если вы увидете "
+"сообщение \"Отсутствует источник блоков\", проверьте ваше соединение с "
+"интернетом."
 
 #: ../../wallets/dashcore/installation-macos.rst:155
 msgid "Dash Core synchronization is complete"
-msgstr ""
+msgstr "Синхронизация кошелька Dash Core завершена"
 
 #: ../../wallets/dashcore/installation-macos.rst:157
 msgid "You can now begin to use your wallet to send and receive funds."
 msgstr ""
+"Теперь вы можете начать использовать кошелёк для отправки или получения "
+"средств."
 
 #: ../../wallets/dashcore/installation-macos.rst:160
 msgid "Encrypting your Dash wallet"
-msgstr ""
+msgstr "Ваш кошелёк Dash Core зашифровывается"
 
 #: ../../wallets/dashcore/installation-macos.rst:162
 msgid ""
@@ -215,6 +234,12 @@ msgid ""
 " safe or you will be locked out of your wallet and lose access to your "
 "funds."
 msgstr ""
+"Как только ваш кошелёк синхронизируется с сетью Dash, то для предотвращения "
+"несанкционированного доступа к нему, настойчиво рекомендуем вам зашифровать "
+"кошелёк с помощью пароля или кодовой фразы. Необходимо использовать "
+"надежный, новый пароль, который вы не использовали ранее нигде. Запишите "
+"свой пароль и храните его в безопасном месте, иначе вы можете потерять "
+"доступ к кошельку и вашим средствам."
 
 #: ../../wallets/dashcore/installation-macos.rst:169
 msgid "To encrypt your wallet, click **Settings** > **Encrypt** wallet."
@@ -222,19 +247,19 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-macos.rst:174
 msgid "Encrypting the Dash wallet with a password"
-msgstr ""
+msgstr "Кошелёк Dash шифруется паролем"
 
 #: ../../wallets/dashcore/installation-macos.rst:176
 msgid "You will be asked to enter and verify a password."
-msgstr ""
+msgstr "Вам поступит запрос ввести и подтвердить пароль."
 
 #: ../../wallets/dashcore/installation-macos.rst:181
 msgid "Enter a password"
-msgstr ""
+msgstr "Введите пароль"
 
 #: ../../wallets/dashcore/installation-macos.rst:186
 msgid "Confirm you want to encrypt your wallet"
-msgstr ""
+msgstr "Подтвердите, что вы хотите зашифровать кошелёк"
 
 #: ../../wallets/dashcore/installation-macos.rst:188
 msgid ""
@@ -243,11 +268,18 @@ msgid ""
 "Dash Core. When you restart Dash Core, you will see a small blue lock in the"
 " lower right corner."
 msgstr ""
+"Когда процесс шифрования завершится, вы увидете предупреждение, что старые "
+"резервные копии вашего кошелька более не могут быть использованы, после чего"
+" вам будет предложено закрыть кошелёк Dash Core. Когда вы перезапустите "
+"кошелёк Dash Core, то увидете небольшой синий знак замка в нижней правой "
+"части экрана."
 
 #: ../../wallets/dashcore/installation-macos.rst:196
 msgid "Fully encrypted and synchronized Dash Core wallet"
-msgstr ""
+msgstr "Кошелёк Dash Core полностью зашифрован и синхронизирован"
 
 #: ../../wallets/dashcore/installation-macos.rst:198
 msgid "You can now begin to use your wallet to safely send and receive funds."
 msgstr ""
+"Теперь вы можете начать использовать свой кошелёк для отправки и получения "
+"средств."

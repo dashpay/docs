@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 10:04+0000\n"
+"POT-Creation-Date: 2018-07-25 08:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +20,11 @@ msgstr ""
 
 #: ../../wallets/electrum/faq.rst:5
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Часто Задаваемые Вопросы"
 
 #: ../../wallets/electrum/faq.rst:8
 msgid "How does Dash Electrum work?"
-msgstr ""
+msgstr "Как работает Dash Electrum?"
 
 #: ../../wallets/electrum/faq.rst:10
 msgid ""
@@ -32,10 +33,15 @@ msgid ""
 "conjunction with high-performance servers that handle the most complicated "
 "parts of the Dash system."
 msgstr ""
+"Приоритетом Dash Electrum является скорость, экономное использование "
+"ресурсов и предоставление простому пользователю опыт работы с Dash. Он "
+"запускается мгновенно, потому что работает в связке с "
+"высокопроизводительными серверами, которые поддерживают наиболее сложные "
+"части системы Dash."
 
 #: ../../wallets/electrum/faq.rst:16
 msgid "Does Dash Electrum trust servers?"
-msgstr ""
+msgstr "Доверяет ли Dash Electrum серверам свои данные?"
 
 #: ../../wallets/electrum/faq.rst:18
 msgid ""
@@ -44,26 +50,35 @@ msgid ""
 "a technique called `Simple Payment Verification "
 "<http://docs.electrum.org/en/latest/spv.html>`_."
 msgstr ""
+"Не совсем; клиент Dash Electrum никогда не отправляет серверам приватные "
+"ключи. Кроме того, он подтверждает информацию от серверов, используя "
+"технику, которая называет Подтверждение Обычного "
+"Платежа<http://docs.electrum.org/en/latest/spv.html>`_."
 
 #: ../../wallets/electrum/faq.rst:24
 msgid "What is the Seed?"
-msgstr ""
+msgstr "Что такое Мнемоническая фраза?"
 
 #: ../../wallets/electrum/faq.rst:26
 msgid ""
 "The seed is a random phrase that is used to generate your private keys. "
 "Example::"
 msgstr ""
+"Мнемоническая фраза - это случайная фраза, которая используется для создания"
+" ваших приватных ключей. Например:"
 
 #: ../../wallets/electrum/faq.rst:31
 msgid ""
 "Your wallet can be entirely recovered from its seed. To do this, select the "
 "**I already have a seed** option during startup."
 msgstr ""
+"С помощью мнемонической фразы вы можете полностью восстановить свой кошелёк."
+" Чтобы сделать это, выберите опцию \"У меня уже есть мнемоническая фраза\" "
+"во время запуска."
 
 #: ../../wallets/electrum/faq.rst:35
 msgid "How secure is the seed?"
-msgstr ""
+msgstr "Надёжна ли Мнемоническая фраза?"
 
 #: ../../wallets/electrum/faq.rst:37
 msgid ""
@@ -72,10 +87,14 @@ msgid ""
 "bits). Indeed, an elliptic curve key of length n provides n/2 bits of "
 "security."
 msgstr ""
+"Мнемоническая фраза, которая создаётся Dash Electrum, содержит 128 битов "
+"энтропии. Это означает, что её уровень надёжности такой же, как и приватного"
+" ключа Dash (длина которого составляет 256 битов). Фактически, эллиптическая"
+" кривая ключа длиной в n даёт n/2 битов безопасности."
 
 #: ../../wallets/electrum/faq.rst:43
 msgid "What are change addresses?"
-msgstr ""
+msgstr "Что такое смена адресов?"
 
 #: ../../wallets/electrum/faq.rst:45
 msgid ""
@@ -84,16 +103,23 @@ msgid ""
 " twelve words. A Dash Electrum wallet uses its seed as a template for "
 "generating addresses."
 msgstr ""
+"Дизайн и рабочий процесс кошелька Dash Electrum основаны на идее, которая "
+"называется \"генерация мнемонической фразы для кошелька\". Эта мнемоническая"
+" фраза - уникальный и случайным образом выбранный список из 12 слов. Кошелёк"
+" Dash Electrum использует мнемоническую фразу в качестве шаблона для "
+"генерирования адресов."
 
 #: ../../wallets/electrum/faq.rst:50
 msgid ""
 "To understand the problem that seeds solve, browse to the Electrum "
 "**Receive** tab. Next, open the collapsible entry marked **Change**."
 msgstr ""
+"Чтобы понять, какую проблему решает мнемоническая фраза, откройте вкладку "
+"**Получить** в Electrum. Затем откройте вкладку **Сдача**."
 
 #: ../../wallets/electrum/faq.rst:56
 msgid "Receiving and change addresses in Dash Electrum"
-msgstr ""
+msgstr "Получение и изменение адресов в Dash Electrum"
 
 #: ../../wallets/electrum/faq.rst:58
 msgid ""
@@ -102,6 +128,10 @@ msgid ""
 "these new change addresses come from and why does the first one now hold "
 "funds?"
 msgstr ""
+"Обратите внимание, что общий баланс не только показывает сумму всех "
+"полученных адресов, но также отдельный список адресов для **Сдачи**. Откуда "
+"появились эти новые адреса для сдачи и почему на первом из них хранятся "
+"средства? "
 
 #: ../../wallets/electrum/faq.rst:63
 msgid ""
@@ -117,6 +147,18 @@ msgid ""
 "in the same order from the same recovery seed, and have access to the "
 "balances."
 msgstr ""
+"Dash - система электронных денег, и это означает, что она во многом похожа "
+"на использование бумажных банкнот. Хотя многие наличные платежи "
+"подразумевают получение точной сдачи, многие этого не делают. Когда вы "
+"используете наличные, вы склонны \"переплачивать\", и получать разницу в "
+"качестве сдачи. Возможно, это вас удивит, но переводы в Dash работают так "
+"же. Если для любого перевода не нужен весь баланс кошелька, остаток "
+"отправляется на новый неиспользованный адрес, который находится под "
+"контролем того же кошелька. Этот адрес генерируется определённым (а не "
+"случайным) образом из мнемонической фразы кошелька, что означает, что любой "
+"другой кошелёк может также воссоздать адреса для сдачи в том же порядке  из "
+"той же самой мнемонической фразы для восстановления, и получить доступ к "
+"балансам."
 
 #: ../../wallets/electrum/faq.rst:75
 msgid ""
@@ -126,61 +168,78 @@ msgid ""
 "privacy. If privacy is not a concern, change addresses can be disabled via "
 "the **Tools > Electrum preferences** menu option."
 msgstr ""
+"Перевод всех средств и возвращение остатка на адрес для сдачи считается "
+"хорошей практикой, потому что это предотвращает проведение связи между "
+"получателем и переводами путём просмотра информации в блокчейне и, таким "
+"образом, работает на вашу конфиденциальность. Если конфиденциальность "
+"перевода для вас не важна, вы можете отключить адреса для сдачи, пройдя в "
+"меню через **Инструменты > Настройки Electrum**. "
 
 #: ../../wallets/electrum/faq.rst:82
 msgid "How can I send the maximum available in my wallet?"
 msgstr ""
+"Как мне отправить все средства, которые сейчас доступны в моём кошельке?"
 
 #: ../../wallets/electrum/faq.rst:84
 msgid ""
 "Type an exclamation mark (!) in the **Amount** field or simply click the "
 "**Max** button. The fee will be automatically adjusted for that amount."
 msgstr ""
+"Напечатайте восклицательный знак в поле ввода **Сумма** восклицательный знак"
+" (!) или просто нажмите на кнопку **Всё**. Комиссия за перевод автоматически"
+" вычтется из этой суммой."
 
 #: ../../wallets/electrum/faq.rst:88
 msgid "How can I send Dash without paying a transaction fee?"
-msgstr ""
+msgstr "Как мне отправить Dash без комиссии?"
 
 #: ../../wallets/electrum/faq.rst:90
 msgid ""
 "You can create a zero fee transaction in the GUI by following these steps:"
 msgstr ""
+"Вы можете создать перевод с нулевой комиссией в GUI, выполнив следующие "
+"шаги:"
 
 #: ../../wallets/electrum/faq.rst:93
 msgid "Enable the **Edit fees manually** option"
-msgstr ""
+msgstr "Включите опцию **Редактирование комиссии вручную**"
 
 #: ../../wallets/electrum/faq.rst:94
 msgid "Enter 0 in the **Fee** field"
-msgstr ""
+msgstr "Введите 0 в поле **Комиссия**"
 
 #: ../../wallets/electrum/faq.rst:95
 msgid "Enter the amount in the **Amount** field"
-msgstr ""
+msgstr "Введите сумму перевода в поле **Сумма**"
 
 #: ../../wallets/electrum/faq.rst:97
 msgid ""
 "Note that transactions without fees might not be relayed by the Dash "
 "Electrum server, or by the Dash network."
 msgstr ""
+"Обратите внимание, что транзакции без комиссии могут не отправить сервером "
+"Dash Electrum или сетью Dash."
 
 #: ../../wallets/electrum/faq.rst:101
 msgid "Is there a way to enter amounts in USD in Dash Electrum?"
-msgstr ""
+msgstr "Можно ли ввести сумму в долларах в Dash Electrum?"
 
 #: ../../wallets/electrum/faq.rst:103
 msgid ""
 "Yes, go to **Tools > Prefernce > Fiat** and select a **Fiat currency** to "
 "display the current exchange rate from the chosen **Source**."
 msgstr ""
+"Да, зайдите в **Инструменты > Настройки > Фиат** и выберите **Фиатная "
+"валюта**, чтобы отображался текущий курс по информации от выбранного "
+"**Источника**."
 
 #: ../../wallets/electrum/faq.rst:109
 msgid "Entering values in fiat currency in Dash Electrum"
-msgstr ""
+msgstr "Введение значений в фиатной валюте в Dash Electrum"
 
 #: ../../wallets/electrum/faq.rst:113
 msgid "What does it mean to “Freeze” an address in Dash Electrum?"
-msgstr ""
+msgstr "Что такое \"Заморозить\" адрес в Dash Electrum?"
 
 #: ../../wallets/electrum/faq.rst:115
 msgid ""
@@ -188,14 +247,17 @@ msgid ""
 "sending Dash. You cannot send Dash if you don’t have enough funds in your "
 "non-frozen addresses."
 msgstr ""
+"Когда вы замораживаете адрес, средства с этого адреса не будут "
+"использоваться для отправления Dash. Вы не сможете отправить Dash, если на "
+"не замороженных счетах недостаточно средств. "
 
 #: ../../wallets/electrum/faq.rst:120
 msgid "How is the wallet encrypted?"
-msgstr ""
+msgstr "Каким образом зашифрован кошелёк?"
 
 #: ../../wallets/electrum/faq.rst:122
 msgid "Dash Electrum uses two separate levels of encryption:"
-msgstr ""
+msgstr "У Dash Electrum два уровня шифрования:"
 
 #: ../../wallets/electrum/faq.rst:124
 msgid ""
@@ -205,6 +267,11 @@ msgid ""
 "amount of time during which sensitive information is unencrypted in your "
 "computer's memory."
 msgstr ""
+"Ваша мнемоническая фраза и приватные ключи зашифрованы с помощью "
+"AES-256-CBC. Когда вам нужно подтвердить транзакцию, приватные ключи "
+"шифруются быстрым способом - для этого вам нужно ввести пароль. Это сделано "
+"для того, чтобы минимизировать время, в течение которого приватная "
+"информация хранится в незашифрованном виде в памяти вашего компьютера."
 
 #: ../../wallets/electrum/faq.rst:130
 msgid ""
@@ -215,6 +282,13 @@ msgid ""
 "memory; Dash Electrum does not need it in order to save the wallet on disk, "
 "because it uses asymmetric encryption (ECIES)."
 msgstr ""
+"Кроме того, ваш кошелёк может быть зашифрован на диске. Обратите внимание, "
+"что информация о кошельке остаётся в памяти вашего компьютера в "
+"незашифрованном виде в течении сеанса работы. Если кошелёк зашифрован, тогда"
+" понадобится пароль, чтобы его открыть. Обратите внимание, что пароль не "
+"сохранится в памяти; для того, чтобы сохранить кошелёк на диск, Dash "
+"Electrum этого не требуется, потому что он использует асимметричное "
+"шифрование (ECIES)."
 
 #: ../../wallets/electrum/faq.rst:138
 msgid ""
@@ -222,12 +296,17 @@ msgid ""
 "intended to protect your privacy, but also to prevent you from requesting "
 "Dash on a wallet that you do not control."
 msgstr ""
+"Шифрование файла кошелька включено по умолчанию, начиная с версии 2.8. Это "
+"сделано для защиты ваших приватных данных, но также и для того, чтобы "
+"оградить вас от переводов Dash на кошелёк, который вы не контролируете."
 
 #: ../../wallets/electrum/faq.rst:143
 msgid ""
 "I have forgotten my password but still have my seed. Is there any way I can "
 "recover my password?"
 msgstr ""
+"Я забыл пароль, но у меня всё ещё есть мнемоническая фраза. Есть ли способ "
+"восстановить мой пароль?"
 
 #: ../../wallets/electrum/faq.rst:145
 msgid ""
@@ -236,6 +315,10 @@ msgid ""
 " password and your seed, there is no way to recover your money. This is why "
 "we ask you to save your seed phrase on paper."
 msgstr ""
+"Восстановить пароль невозможно. Однако, с помощью мнемонической фразы вы "
+"можете восстановить кошелёк и выбрать новый пароль. Если вы потеряете и "
+"пароль, и мнемоническую фразу, то вернуть ваши деньги невозможно. Именно "
+"поэтому мы просим вас записывать мнемоническую фразу на бумажный носитель. "
 
 #: ../../wallets/electrum/faq.rst:150
 msgid ""
@@ -243,24 +326,30 @@ msgid ""
 " type, choose **I already have a seed** and proceed to input your seed "
 "phrase."
 msgstr ""
+"Чтобы восстановить кошелёк с помощью мнемонической фразы, создайте новый "
+"кошелёк, выберите его тип, нажмите \"У меня уже есть мнемоническая фраза\", "
+"и затем введите вашу фразу."
 
 #: ../../wallets/electrum/faq.rst:155
 msgid "Does Dash Electrum support cold wallets?"
-msgstr ""
+msgstr "Поддерживает ли Dash Electrum холодные кошельки?"
 
 #: ../../wallets/electrum/faq.rst:157
 msgid "Yes. See the :ref:`cold storage <electrum-cold-storage>` section."
 msgstr ""
+"Да. Подробности смотрите в секции :ref:`cold storage<electrum-cold-storage>`"
 
 #: ../../wallets/electrum/faq.rst:160
 msgid "Can I import private keys from other Dash clients?"
-msgstr ""
+msgstr "Могу ли я импортировать ключи приватности из других клиентов Dash?"
 
 #: ../../wallets/electrum/faq.rst:162
 msgid ""
 "In Dash Electrum 2.0, you cannot import private keys in a wallet that has a "
 "seed. You should sweep them instead."
 msgstr ""
+"В Dash Electrum 2.0 вы не можете импортировать приватные ключи в кошелёк с "
+"мнемонической фразой. Вместо этого, вам стоит удалить их."
 
 #: ../../wallets/electrum/faq.rst:165
 msgid ""
@@ -275,11 +364,11 @@ msgstr ""
 
 #: ../../wallets/electrum/faq.rst:177
 msgid "Importing a list of private keys to create a wallet"
-msgstr ""
+msgstr "Импорт списка приватных ключей для создания кошелька"
 
 #: ../../wallets/electrum/faq.rst:180
 msgid "Can I sweep private keys from other Dash clients?"
-msgstr ""
+msgstr "Могу ли я удалить приватные ключи с других клиентов Dash?"
 
 #: ../../wallets/electrum/faq.rst:182
 msgid ""
@@ -288,6 +377,11 @@ msgid ""
 "your wallet. Instead, all the Dash they control are sent to an address that "
 "has been deterministically generated from your wallet seed."
 msgstr ""
+"Если вы удалите приватные ключи, то все Dash, которые привязаны к этим "
+"ключам, переведутся на существующий адрес в вашем кошельке. Приватные ключи,"
+" которые вы удаляете, не становятся частью вашего кошелька. Вместо этого, "
+"все средства Dash, которые к ним привязаны, пересылаются на адрес, который "
+"создаётся определённым способом с помощью вашей мнемонической фразы."
 
 #: ../../wallets/electrum/faq.rst:188
 msgid ""
@@ -298,48 +392,64 @@ msgid ""
 " where you can set an appropriate fee and then click on **Send** to send the"
 " coins to your wallet."
 msgstr ""
+"Чтобы удалить приватные ключи, зайдите в **Кошелёк > Приватные ключи > "
+"Удалить**. Введите приватные ключи в соответствующее поле. Оставьте поле "
+"**Адрес** пустым. Это адрес из вашего существующего кошелька Electrum "
+"Wallet. Нажмите **Удалить**. Затем Dash Electrum перенаправит вас во вкладку"
+" **Отправить**, где вы сможете установить подходящую комиссию. После этого "
+"нажмите **Отправить**, чтобы отправить монеты в ваш кошелёк."
 
 #: ../../wallets/electrum/faq.rst:196
 msgid "Where is my wallet file located?"
-msgstr ""
+msgstr "Где находится мой кошелёк?"
 
 #: ../../wallets/electrum/faq.rst:198
 msgid ""
 "The default wallet file is called default_wallet and is created when you "
 "first run the application. It is located under the `/wallets` folder."
 msgstr ""
+"По умолчанию, файл кошелька называется default_wallet и создаётся, когда вы "
+"впервые запускаете приложение. Он расположен в папке '/wallets'."
 
 #: ../../wallets/electrum/faq.rst:201
 msgid ""
 "**Linux:** Open Files, select **Go > Go to folder**, copy the path "
 "``~/.electrum-dash`` and paste it into the dialog box"
 msgstr ""
+"**Linux:** Откройте Файлы, выберите **Перейти > Перейти в папку**, "
+"скопируйте путь ``~/.electrum-dash`` и вставьте его в диалоговое окно."
 
 #: ../../wallets/electrum/faq.rst:203
 msgid ""
 "**macOS:** Open Finder, select **Go > Go to Folder**, copy the path "
 "``~/.electrum-dash`` and paste it into the dialog box"
 msgstr ""
+"**macOS:** Откройте Finder, выберите **Перейти > Перейти в папку**, "
+"скопируйте путь ``~/.electrum-dash`` и вставьте его в диалоговое окно."
 
 #: ../../wallets/electrum/faq.rst:205
 msgid ""
 "**Windows:** Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and "
 "paste it in to the address bar"
 msgstr ""
+"**Windows:** Откройте Explorer, скопируйте путь ``%APPDATA%\\Electrum-DASH``"
+" и вставьте его в адресную строку"
 
 #: ../../wallets/electrum/faq.rst:209
 msgid "Can I do bulk payments with Dash Electrum?"
-msgstr ""
+msgstr "Можно ли сделать массовые платежи с помощью Dash Electrum?"
 
 #: ../../wallets/electrum/faq.rst:211
 msgid ""
 "You can create a transaction with several outputs. In the GUI, type each "
 "address and amount on a line, separated by a comma."
 msgstr ""
+"Вы можете создать перевод с несколькими выводами. В GIU введите каждый адрес"
+" и сумму в одну линию, разделяя их запятой."
 
 #: ../../wallets/electrum/faq.rst:217
 msgid "Creating a transaction with multiple outputs in Dash Electrum"
-msgstr ""
+msgstr "Создание перевода для множества получателей в Dash Electrum"
 
 #: ../../wallets/electrum/faq.rst:219
 msgid ""
@@ -350,17 +460,19 @@ msgstr ""
 
 #: ../../wallets/electrum/faq.rst:224
 msgid "Can Dash Electrum create and sign raw transactions?"
-msgstr ""
+msgstr "Может ли Dash Electrum создавать и подписывать raw transaction?"
 
 #: ../../wallets/electrum/faq.rst:226
 msgid ""
 "Dash Electrum lets you create and sign raw transactions right from the user "
 "interface using a form."
 msgstr ""
+"В Dash Electrum вы можете создавать и подписывать raw transaction прямо в "
+"пользовательском интерфейсе с помощью специальной формы."
 
 #: ../../wallets/electrum/faq.rst:230
 msgid "Dash Electrum freezes when I try to send Dash"
-msgstr ""
+msgstr "Dash Electrum зависает, когда я пытаюсь отправить Dash"
 
 #: ../../wallets/electrum/faq.rst:232
 msgid ""
@@ -370,6 +482,12 @@ msgid ""
 " are in your wallet in order to create the new transaction. Unspent coins "
 "can have different values, much like physical coins and bills."
 msgstr ""
+"Это может случиться, если вы пытаетесь потратить большое количество "
+"транзакций от разных людей (например, если вы собрали несколько сотен "
+"пожертвований из \"крана\" Dash). Когда вы отправляете Dash, Dash Electrum "
+"ищет в вашем кошельке свободные монеты, чтобы создать новый перевод. У "
+"свободных монет разное достоинство, примерно как у физических монет и "
+"счетов."
 
 #: ../../wallets/electrum/faq.rst:239
 msgid ""
@@ -377,10 +495,13 @@ msgid ""
 "smaller amounts of Dash to one of your wallet addresses; this would be the "
 "equivalent of exchanging a stack of nickels for a dollar bill."
 msgstr ""
+"Если такое случается, вам стоит уменьшить количество вводных транзакций "
+"путём уменьшения суммы Dash до одного из адресов в вашем кошельке; это будет"
+" похоже на обмен стопки пятаков на один целый доллар."
 
 #: ../../wallets/electrum/faq.rst:247
 msgid "What is the gap limit?"
-msgstr ""
+msgstr "Что такое гэп-лимит?"
 
 #: ../../wallets/electrum/faq.rst:249
 msgid ""
@@ -389,16 +510,23 @@ msgid ""
 "looking for addresses. In Dash Electrum 2.0, it is set to 20 by default, so "
 "the client will get all addresses until 20 unused addresses are found."
 msgstr ""
+"Гэп-лимит - это максимальное количество последовательных неиспользованных "
+"адресов в вашей детерминированной последовательности адресов.  Dash Electrum"
+" использует её для того, чтобы перестать искать адрес. В Dash Electrum 2.0 "
+"по умолчанию она установлена на 20, поэтому клиент получит все адреса до "
+"того, как будут найдены 20 неиспользованных адресов. "
 
 #: ../../wallets/electrum/faq.rst:256
 msgid "How can I pre-generate new addresses?"
-msgstr ""
+msgstr "Каким образом я могу предварительно создать новый адрес?"
 
 #: ../../wallets/electrum/faq.rst:258
 msgid ""
 "Dash Electrum will generate new addresses as you use them, until it hits the"
 " `gap limit`_."
 msgstr ""
+"Dash Electrum будет генерировать новые адреса по мере их использования, до "
+"того момента, пока он не достигнет гэп-лимита."
 
 #: ../../wallets/electrum/faq.rst:261
 msgid ""
@@ -408,6 +536,11 @@ msgid ""
 "the address tab, to indicate that it is beyond the gap limit. The red color "
 "will remain until the gap is filled."
 msgstr ""
+"Поэтому, если вам нужно предварительно создать больше адресов, вы можете "
+"сделать это, напечатав wallet.create_new_address() в консоли. Обратите "
+"внимание, что адрес в адресной строке будет подсвечиваться красным, если он "
+"находится за пределами гэп-лимита. Он останется красным до тех пор, пока гэп"
+" не будет заполнен. "
 
 #: ../../wallets/electrum/faq.rst:267
 msgid ""
@@ -415,21 +548,29 @@ msgid ""
 "from seed. To recover them will require either increasing the client’s gap "
 "limit or generating new addresses until the used addresses are found."
 msgstr ""
+"ПРЕДУПРЕЖДЕНИЕ: Адреса за пределами гэп-лимита не будут автоматически "
+"восстанавливаться с помощью мнемонической фразы. Чтобы восстановить их, "
+"потребуется либо увеличить гэп-лимит клиента, либо создавать новые адреса до"
+" тех пор, пока не будут найдены использованные адреса."
 
 #: ../../wallets/electrum/faq.rst:272
 msgid ""
 "If you wish to generate more than one address, you may use a ‘for’ loop. For"
 " example, if you wanted to generate 50 addresses, you could do this::"
 msgstr ""
+"Если вы хотите создать больше одного адреса, вы можете использовать цикл "
+"'for'. Например, если вы хотите создать 50 адресов, сделайте следующее:"
 
 #: ../../wallets/electrum/faq.rst:279
 msgid "How to upgrade Dash Electrum?"
-msgstr ""
+msgstr "Как обновить Dash Electrum?"
 
 #: ../../wallets/electrum/faq.rst:281
 msgid ""
 "Warning: always save your wallet seed on paper before doing an upgrade."
 msgstr ""
+"Предупреждение: перед обновлением всегда сохраняйте мнемоническую фразу от "
+"вашего кошелька на бумажный носитель."
 
 #: ../../wallets/electrum/faq.rst:283
 msgid ""
@@ -438,6 +579,11 @@ msgid ""
 "your wallet files are stored separately from the software, so you can safely"
 " remove the old version of the software if your OS does not do it for you."
 msgstr ""
+"Чтобы обновить Dash Electrum, просто :ref:`install <electrum-installation> `"
+" самую последнюю версию. Способ будет зависеть от вашей системы. Обратите "
+"внимание, что файлы вашего кошелька хранятся отдельно от программы, поэтому "
+"вы можете безопасно удалить старую версию программы, если ваша система не "
+"может сделать это за вас."
 
 #: ../../wallets/electrum/faq.rst:289
 msgid ""
@@ -446,12 +592,18 @@ msgid ""
 "version once you have opened your wallet file with the new version. The "
 "older version will not always be able to read the new wallet file."
 msgstr ""
+"Некоторые обновления Dash Electrum изменят формат файлов вашего кошелька. "
+"Поэтому не рекомендуется откатывать Dash Electrum в старые версии после "
+"того, как вы отрыли файлы кошелька через новую версию. Старые версии не "
+"всегда могут прочитать новые файлы кошелька."
 
 #: ../../wallets/electrum/faq.rst:295
 msgid ""
 "The following issues should be considered when upgrading Dash Electrum 1.x "
 "wallets to Dash Electrum 2.x:"
 msgstr ""
+"При обновлении кошельков Dash Electrum 1.x до Dash Electrum 2.x следует "
+"учитывать следующие сложности:"
 
 #: ../../wallets/electrum/faq.rst:298
 msgid ""
@@ -459,6 +611,10 @@ msgid ""
 "upgrade process. Please allow it time to complete, and expect it to take a "
 "little longer than usual for Dash Electrum to be ready."
 msgstr ""
+"Во время установки обновления Dash Electrum 2.x потребуется пересоздать все "
+"ваши адреса. Пожалуйста, дайте ему время, чтобы завершить процесс, и "
+"помните, что это займет немного больше времени, чем обычно запускается Dash "
+"Electrum."
 
 #: ../../wallets/electrum/faq.rst:302
 msgid ""
@@ -466,6 +622,9 @@ msgid ""
 "wallet. This means Dash Electrum 1.x will no longer be able to use your "
 "wallet once the upgrade is complete."
 msgstr ""
+"Содержимое файлов вашего кошелька будет заменено кошельком Dash Electrum 2. "
+"Это означает, что когда обновление завершится, Dash Electrum 1.x больше не "
+"сможет использовать ваш кошелёк."
 
 #: ../../wallets/electrum/faq.rst:306
 msgid ""
@@ -473,6 +632,9 @@ msgid ""
 "Dash Electrum 2. This is expected behaviour. Restart Dash Electrum 2 after "
 "the upgrade is complete and your addresses will be available."
 msgstr ""
+"Когда вы впервые запустите Dash Electrum 2, во вкладке **Адреса** будет "
+"пусто. Так и должно быть. Перезапустите Dash Electrum 2 после того, как "
+"обновление завершится, и ваши адреса станут снова доступны. "
 
 #: ../../wallets/electrum/faq.rst:311
 msgid ""
@@ -482,3 +644,7 @@ msgid ""
 "`wallet.synchronize()`. When it’s complete, restart Dash Electrum and your "
 "addresses will once again be available."
 msgstr ""
+"В офлайн копиях Dash Electrum адреса не будут отражаться вообще, поскольку "
+"он не сможет синхронизироваться с сетью. Вы можете принудительно создать "
+"несколько адресов, напечатав в консоли: `wallet.synchronize()`. Когда вы "
+"закончите, перезапустите Dash Electrum, и ваши адреса снова станут доступны."
