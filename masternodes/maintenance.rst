@@ -246,6 +246,25 @@ address::
   ~/.dashcore/dash-cli masternode list full | grep <your ip address>
 
 
+Finding your position in the payment queue
+==========================================
+
+Prior to Dash 0.12.4, each masternode may have a slightly different view
+of the network. In addition, selection from the top 10% of masternodes
+in the list in the :ref:`selection pool <payment-logic>` is random. This
+means that there is no definite answer to when your masternode will be
+selected for payment. However, it is possible to make an approximation
+based on the time your masternode entered the back of the queue.
+
+Community members xkcd, Bertrand256 and moocowmoo have all published
+various tools you can run to determine your approximate position in the
+payment queue, and bots are available on Discord and Slack as well.
+
+- xkcd's mn_queue: https://github.com/kxcd/mn_queue
+- Dashman: https://github.com/moocowmoo/dashman
+- DMT: https://github.com/Bertrand256/dash-masternode-tool
+
+
 DashCentral voting, verification and monitoring
 ===============================================
 
