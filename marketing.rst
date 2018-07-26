@@ -78,6 +78,8 @@ translation is complete to request layout of the completed translation.
 +=======================+=======================================================================================================+
 | English               | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_GB.pdf>`__     |
 +-----------------------+-------------------------------------------------------------------------------------------------------+
+| Arabic                | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_AR.pdf>`__     |
++-----------------------+-------------------------------------------------------------------------------------------------------+
 | Chinese (Traditional) | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_ZH_TW.pdf>`__  |
 +-----------------------+-------------------------------------------------------------------------------------------------------+
 | Dutch                 | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_NL.pdf>`__     |
