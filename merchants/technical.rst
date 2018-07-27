@@ -404,3 +404,23 @@ Similar widgets with different designs are available from `CoinLib
 <https://www.cryptonator.com/widget>`_, while an API providing similar
 information is available from `DashCentral
 <https://www.dashcentral.org/about/api>`_.
+
+QR Codes
+========
+
+Many wallets are capable of generating QR codes which can be scanned to
+simplify entry of the Dash address. Printing these codes or posting the
+on your website makes it easy to receive payment and tips in Dash, both
+online and offline.
+
+- In Dash Core, go to the **Receive** tab, generate an address if
+  necessary, and double-click it to display a QR code. Right click on
+  the QR code and select **Save Image** to save a PNG file.
+- In Dash for Android, tap **Request Coins** and then tap the QR code to
+  display a larger image. You can screenshot this to save an image.
+- In Dash for iOS, swipe to the left to display the **Receive Dash**
+  screen. A QR code and address will appear. You can screenshot this to
+  save an image.
+- To generate a QR code from any Dash address, visit `CWA QR Code
+  Generator <https://cwaqrgen.com/dash>`_ and simply paste your Dash
+  address to generate an image.
