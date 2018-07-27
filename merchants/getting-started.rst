@@ -336,3 +336,45 @@ specified shortly after payment is complete.
    :width: 200px
 .. image:: img/anypay-paid.png
    :width: 200px
+
+Point-of-Sale with Spark
+------------------------
+
+`Spark Payments <https://www.dash.org/forum/threads/39665/>`_ allows you
+to quickly start accepting point-of-sale payments in Dash at a physical
+store. The system works as an app, and is available for Android, macOS,
+Windows and Linux, with an iOS progressive web app (`PWA
+<https://en.wikipedia.org/wiki/Progressive_Web_Apps>`_) in development.
+
+The project is an external terminal application for processing Dash
+payments in brick and mortar stores. The merchant types the sale amount
+in their local currency (94 currencies supported), the application will
+generate a QR code sale for the proper amount of Dash for the customer
+to scan. Then the terminal will provide feedback on the status of the
+payment (received, timed out, partial, instantsend or regular), and if
+set up - fiat conversion through `uphold.com <https://uphold.com>`_. A
+guide on how to set up Spark with Uphold to convert payments to fiat
+currency is available in 
+`English <https://github.com/dashpay/docs/raw/master/merchants/Spark-Payments-Uphold-English.pdf>`__ 
+and 
+`German <https://github.com/dashpay/docs/raw/master/merchants/Spark-Payments-Uphold-German.pdf>`__.
+
+To use Spark, open the app on your device. If this is the first time you
+are using the app, you will need to specify a Dash address to receive
+payments from the system, as well as your chosen fiat currency. You can
+change this information at any time from the menu. To generate a payment
+invoice, enter the amount in fiat currency. Spark will generate a QR
+code containing your specified address and the requested amount,
+denominated in Dash. The customer scans the QR code, and the app will
+display a visual indication when payment is complete.
+
+.. figure:: img/spark.png
+   :width: 600px
+
+   Configuring and receiving payment using Spark Payments
+
+Payment systems like Anypay and Spark can be integrated with your
+existing terminal and/or accounting software (such as Square Register,
+by recording sales invoiced in Dash as an **Other Payment Type** in the
+system. This allows you to keep track of your Dash income as easily as
+if you were accepting cash.
