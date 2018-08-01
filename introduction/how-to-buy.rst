@@ -824,6 +824,19 @@ OmniTrade
   Based in Brazil, OmniTrade accepts deposits in Brazilian real through
   a partnership with Neon Bank, which can then be traded against Dash.
 
+Bitcointoyou
+  .. image:: exchanges/bitcointoyou.png
+     :width: 200px
+     :align: right
+     :target: https://bitcointoyou.com/
+
+  https://bitcointoyou.com/
+
+  Based in Brazil, Bitcointoyou has been in operation since 2010 and
+  offers trading of a number of cryptocurrencies, including Dash,
+  against the Brazilian real.
+
+
 SouthXchange
   .. image:: exchanges/southxchange.png
      :width: 200px
