@@ -275,6 +275,16 @@ entire budget is allocated or no more passing proposals exist. This
 allows for completely trustless and decentralized allocation of the
 budget.
 
+If a proposal has passed the voting threshold but insufficient funds
+remain to pay the full amount requested, it will not be funded at all.
+Any smaller proposals which have also passed the threshold that will fit
+in the budget will be funded, even if they have lower net approval than
+the larger proposal. Proposals requesting payment over multiple budget
+periods will remain in the treasury system for the duration of their
+validity if they pass the voting threshold, even if insufficient budget
+is available for funding as described above. Any unallocated budget is
+simply never created in the superblock, reducing unnecessary inflation.
+
 Due to the decentralized nature of the masternode system, it is
 sometimes necessary to form funded organisations, such as committees or
 companies, to be responsible for some project or task. These are
@@ -291,9 +301,6 @@ to build up a reputation and gain trust from the community. Proposals
 which do not provide regular reports and cannot answer questions about
 their budget allocation will soon be defunded if it is part of a regular
 monthly proposal cycle. The result is a kind of self-policing system.
-
-Any unallocated budget is simply never created in the superblock,
-reducing unnecessary inflation.
 
 Scaling and future uses
 =======================
