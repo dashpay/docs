@@ -1192,6 +1192,31 @@ Cryptobuyer
   bank account to purchase Dash, Litecoin and Bitcoin directly. The
   company also operates a network of ATMs and merchant integrations.
 
+BasiChange
+  .. image:: exchanges/basichange.png
+     :width: 200px
+     :align: right
+     :target: https://basichange.com/
+
+  https://basichange.com/
+
+  BasiChange offers exchange, trading and OTC crypto sales with a focus
+  on Venezuela and Colombia.
+
+CryptoWay
+  .. image:: exchanges/cryptoway.png
+     :width: 200px
+     :align: right
+     :target: https://cryptoway.io
+
+  https://cryptoway.io
+
+  On CryptoWay, you can buy and sell Dash, Bitcoin, Ethereum, Litecoin
+  and Doge peer-to-peer (P2P) with Venezuelan bolivars on a secure, fast
+  and simple platform. You can also link your bank account for efficient
+  processing of deposits and withdrawals.
+
+
 CoinBR
   .. image:: exchanges/coinbr.png
      :width: 200px
