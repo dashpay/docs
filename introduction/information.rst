@@ -31,6 +31,7 @@ Community sites
 - https://www.dashforcenews.com
 - https://dashvotetracker.com
 - http://dashchat.org/
+- https://bra.in/8v2r6v
 
 Forums
 ------
