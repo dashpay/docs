@@ -252,8 +252,19 @@ Koineks
 
   https://koineks.com/
 
-  Koineks serves the Turkish market and offers trading pairs for DASH against
-  the Turkish Lira and Bitcion.
+  Koineks serves the Turkish market and offers trading pairs for DASH
+  against the Turkish Lira and Bitcoin.
+
+Sistemkoin
+  .. image:: exchanges/sistemkoin.png
+     :width: 200px
+     :align: right
+     :target: https://sistemkoin.com
+
+  https://sistemkoin.com
+
+  Sistemkoin serves the Turkish market and offers trading pairs for DASH
+  against the Turkish Lira and Bitcoin.
 
 Exmo
   .. image:: exchanges/exmo.png
