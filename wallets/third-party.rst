@@ -184,6 +184,43 @@ http://support.exodus.io and a few quick links are also collected here:
 
    Exodus wallet Portfolio screen
 
+Atomic Wallet
+=============
+
+https://atomicwallet.io
+
+.. image:: img/atomic.png
+   :width: 100px
+   :align: right
+   :target: https://atomicwallet.io
+
+Atomic Wallet is a multi-asset custody-free wallet with atomic swap
+exchange and decentralized orderbook functionality. It provides a
+powerful, secure service that transparently and reliablly allows users
+to reduce effort spent on managing and exchanging crypto assets​.
+
+Installation
+------------
+
+All Atomic Wallet releases are available from https://atomicwallet.io -
+simply download and install the appropriate package for your system.
+
+Documentation
+-------------
+
+Atomic Wallet offers detailed documentation of all functions at
+https://atomicwallet.freshdesk.com and a few quick links are also
+collected here:
+
+- `Getting started with Atomic Wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066359-getting-started-with-atomic-wallet>`_
+- `How to install Atomic Wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066351-how-to-install-atomic-wallet->`_
+- `How to create a wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066354-how-to-create-a-wallet->`_
+- `Getting started with Atomic Swaps <https://atomicwallet.freshdesk.com/support/solutions/articles/36000073262-getting-started-with-atomic-swaps>`_
+
+.. figure:: img/atomic-wallet.png
+   :width: 400px
+
+   Atomic Wallet Portfolio screen
 
 Jaxx
 ====
