@@ -38,6 +38,11 @@ reward for budget projects.
         <iframe src="//www.youtube.com/embed/jHsVU1LBuAY" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
+In late 2016, IOHK prepared a detailed report on version 0.12.1 of the
+Dash governance system, including formal analysis of weaknesses and
+areas for improvement. You can view the report `here
+<https://iohk.io/research/papers/#NSJ554WR>`_.
+
 You can learn more about Dash Governance in the following sections:
 
 .. toctree::
