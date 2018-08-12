@@ -107,6 +107,9 @@ but with a few key differences:
 - Once sentinel is installed, modify
   ``~/.dashcore/sentinel/sentinel.conf``, comment the mainnet line and
   uncomment: ``network=testnet``
+- The wallet holding the masternode collateral will expect to find the
+  ``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf``
+  instead of ``~/.dashcore/masternode.conf``.
 
 Testnet 12.3
 ============
