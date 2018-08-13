@@ -1141,7 +1141,7 @@ Cryptomate
 
 Coindirect
   .. image:: exchanges/coindirect.png
-     :width: 200px
+     :width: 150px
      :align: right
      :target: https://www.coindirect.com
 
