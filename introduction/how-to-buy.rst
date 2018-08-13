@@ -1139,6 +1139,19 @@ Cryptomate
   fastest transactions - coins can be in your wallet as soon as 5
   minutes after ordering.
 
+Coindirect
+  .. image:: exchanges/coindirect.png
+     :width: 200px
+     :align: right
+     :target: https://www.coindirect.com
+
+  https://www.coindirect.com
+
+  Coindirect offers OTC and P2P services to buy and sell many
+  cryptocurrencies, including Dash. Verified users can create offers in
+  their local currency to buy and sell with other users. Online wallets
+  and exchange services are available for most currencies as well.
+
 Mercury Cash
   .. image:: exchanges/mercury.png
      :width: 200px
