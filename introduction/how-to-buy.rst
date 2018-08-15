@@ -268,7 +268,7 @@ Sistemkoin
 
 Ovis
   .. image:: exchanges/ovis.png
-     :width: 200px
+     :width: 80px
      :align: right
      :target: https://www.ovis.com.tr
 
