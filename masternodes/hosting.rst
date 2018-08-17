@@ -51,6 +51,21 @@ http://dashmasternode.io
 - `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`__
 - `Review <https://www.dashforcenews.com/meet-the-inventor-of-trusted-masternode-shares/>`__
 
+CrowdNode
+---------
+
+.. image:: img/crowdnode.png
+   :width: 200px
+   :align: right
+   :target: https://crowdnode.io
+
+https://crowdnode.io/
+
+- Operated by: CrowdNode ApS
+- Services: Hosting
+- `Site <https://crowdnode.io>`__
+- `Email <hello@crowdnode.io>`__
+
 Node40
 ------
 
