@@ -707,7 +707,7 @@ KuCoin
   https://www.kucoin.com
 
   KuCoin is a pure crypto exchange with a focus on the Chinese market.
-  DASH can be traded against BTC, ETH and KCS.
+  DASH can be traded against BTC, USDT, ETH and KCS.
 
 Bitcoin Indonesia
   .. image:: exchanges/bitcoinid.png
