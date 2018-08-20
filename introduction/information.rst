@@ -79,6 +79,7 @@ Facebook
 
 - **English (Official):** https://www.facebook.com/DashPay
 - **Dash News En Español:** https://www.facebook.com/DashNewsEspanol
+- **Dash Embassy Asia:** https://www.facebook.com/DashEmbassyAsia
 - **Brazil:** https://www.facebook.com/DashBrazil
 - **Denmark:** https://www.facebook.com/DashDenmark
 - **Germany:** https://www.facebook.com/dashgermany
