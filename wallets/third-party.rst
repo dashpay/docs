@@ -302,6 +302,51 @@ https://coinomi.freshdesk.com
 
    Coinomi wallet running on Android
 
+Cobo
+====
+
+https://cobo.com
+
+.. image:: img/cobo.png
+   :width: 100px
+   :align: right
+   :target: https://cobo.com
+
+Cobo is a multi-currency mobile wallet supporting Dash with options to
+either register a cloud wallet (private keys backed up on the cloud) or
+generate your own HD wallet seed (private keys encrypted on your
+device), giving you maximum control over how you handle the crypographic
+keys to all assets in the wallet. The wallet offers a unique "staking"
+feature where users can pool their Dash to set up masternodes and enjoy
+weekly returns.
+
+Installation
+------------
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/cobo-wallet-2/id1406282615
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=cobo.wallet
+
+Cobo is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=cobo.wallet>`__ and
+the `Apple App Store for iOS <https://itunes.apple.com/us/app/cobo-wallet-2/id1406282615>`__.
+
+Documentation
+-------------
+
+Cobo offers detailed documentation of all functions at
+https://support.cobo.com
+
+.. figure:: img/cobo-wallet.png
+   :width: 200px
+
+   Cobo wallet
+
+
 Cryptonator
 ===========
 
