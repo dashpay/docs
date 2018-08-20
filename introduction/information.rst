@@ -30,8 +30,8 @@ Community sites
 - https://www.dashninja.pl
 - https://www.dashforcenews.com
 - https://dashvotetracker.com
+- http://thedashbrain.com
 - http://dashchat.org/
-- https://bra.in/8v2r6v
 
 Forums
 ------
