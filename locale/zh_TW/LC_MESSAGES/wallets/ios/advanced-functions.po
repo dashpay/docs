@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-11 06:39+0000\n"
+"POT-Creation-Date: 2018-07-25 08:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: William <narutokun.me@gmail.com>, 2018\n"
+"Language-Team: Chinese (Taiwan) (https://www.transifex.com/dash/teams/37570/zh_TW/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../wallets/ios/advanced-functions.rst:5
 msgid "Advanced functions"
@@ -47,15 +48,15 @@ msgstr ""
 
 #: ../../wallets/ios/advanced-functions.rst:24
 msgid ""
-"``sender`` is both your callback URL and the name of the app that you "
-"show to the user. This is to prevent 3rd party apps from phishing."
+"``sender`` is both your callback URL and the name of the app that you show "
+"to the user. This is to prevent 3rd party apps from phishing."
 msgstr ""
 
 #: ../../wallets/ios/advanced-functions.rst:26
 msgid ""
 "``req-`` can be added before IS to force use of InstantSend for the "
-"transaction. If the user doesn’t have InstantSend enabled and doesn’t "
-"want to enable it, he will not be offered the option to send as a normal "
+"transaction. If the user doesn’t have InstantSend enabled and doesn’t want "
+"to enable it, he will not be offered the option to send as a normal "
 "transaction."
 msgstr ""
 
@@ -69,8 +70,8 @@ msgstr ""
 
 #: ../../wallets/ios/advanced-functions.rst:38
 msgid ""
-"If the user enters the correct passcode, then the transaction is sent and"
-" the user is returned to the sender app following the callback URL."
+"If the user enters the correct passcode, then the transaction is sent and "
+"the user is returned to the sender app following the callback URL."
 msgstr ""
 
 #: ../../wallets/ios/advanced-functions.rst:41
@@ -87,10 +88,10 @@ msgstr ""
 
 #: ../../wallets/ios/advanced-functions.rst:52
 msgid ""
-"Note: account is optional and corresponds to BIP32/BIP44 account, most of"
-" the time this should be 0. If account is not specified, we use account "
-"0. This will send back both the extended public key at "
-"``44’/5’/<account>’`` and ``<account>’``"
+"Note: account is optional and corresponds to BIP32/BIP44 account, most of "
+"the time this should be 0. If account is not specified, we use account 0. "
+"This will send back both the extended public key at ``44’/5’/<account>’`` "
+"and ``<account>’``"
 msgstr ""
 
 #: ../../wallets/ios/advanced-functions.rst:57
@@ -104,5 +105,4 @@ msgstr ""
 
 #: ../../wallets/ios/advanced-functions.rst:64
 msgid "``dashwallet://request=address&sender=<sender>``"
-msgstr ""
-
+msgstr "``dashwallet://request=address&sender=<sender>``"

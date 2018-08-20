@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-18 08:33+0000\n"
+"POT-Creation-Date: 2018-07-25 08:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Daf Daf, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -24,17 +24,19 @@ msgstr "Installation"
 
 #: ../../wallets/android/installation.rst:7
 msgid "Google Play"
-msgstr ""
+msgstr "Google Play"
 
 #: ../../wallets/android/installation.rst:9
 msgid ""
 "The easiest way to install the Dash Wallet for Android is from the Google "
 "Play Store."
 msgstr ""
+"La façon la plus simple d'installer le portefeuille Dash Wallet pour Android"
+" est d'utiliser le Play Store de Google."
 
 #: ../../wallets/android/installation.rst:17
 msgid "From APK"
-msgstr ""
+msgstr "Depuis un APK"
 
 #: ../../wallets/android/installation.rst:19
 msgid ""
@@ -44,6 +46,12 @@ msgid ""
 "(if you have not already done so) and then downloading and installing an APK"
 " file. Follow these instructions:"
 msgstr ""
+"Certains téléphones Android n'ont pas accès au Play Store de Google parce "
+"que le logiciel du téléphone, le fournisseur d'accès ou le pays ne le "
+"permettent pas. Vous pouvez installer manuellement l'application. Il vous "
+"faut d'abord activer l'installation depuis des sources externes (si vous ne "
+"l'avez pas déjà fait) puis télécharger et installer un fichier APK. Veuillez"
+" suivre ces instructions :"
 
 #: ../../wallets/android/installation.rst:25
 #: ../../wallets/android/installation.rst:40
@@ -51,6 +59,9 @@ msgid ""
 "Ensure your Android version is at least 4.0.3 by going to **Settings → About"
 " phone** and checking the version number."
 msgstr ""
+"Assurez-vous que votre version d'Android soit au moins la 4.0.3, en "
+"consultant **Réglages > À propos de ce téléphone** et en vérifiant le numéro"
+" de version."
 
 #: ../../wallets/android/installation.rst:27
 #: ../../wallets/android/installation.rst:46
@@ -58,6 +69,8 @@ msgid ""
 "Enable Unknown sources by going to **Settings → Security → Unknown "
 "sources**. Read and accept the warning."
 msgstr ""
+"Activer Sources inconnues en allant sur **Réglages > Sécurité > Sources "
+"inconnues**. Lisez l'avertissement et acceptez-le."
 
 #: ../../wallets/android/installation.rst:29
 msgid ""
@@ -65,6 +78,10 @@ msgid ""
 "<https://github.com/HashEngineering/dash- wallet/releases/latest>`_.  At the"
 " time of writing, this was 5.18.1."
 msgstr ""
+"En utilisant votre téléphone, téléchargez la plus récente version de l'APK "
+"depuis `ce lien <https://github.com/HashEngineering/dash- "
+"wallet/releases/latest>`_. Au moment de l'écriture de ces lignes, il "
+"s'agissait de la version 5.18.1."
 
 #: ../../wallets/android/installation.rst:32
 msgid ""
@@ -73,12 +90,20 @@ msgid ""
 " file browser to find the copied file. `ES File Explorer "
 "<http://www.estrongs.com/>`_ is recommended for this."
 msgstr ""
+"Si votre téléphone ne peut pas aller sur Internet, téléchargez l'APK en "
+"utilisant plutôt votre PC et copiez-le sur votre téléphone par connexion "
+"filaire ou par Bluetooth. Vous aurez peut-être besoin d'un navigateur de "
+"fichier pour trouver le fichier copié. `ES File Explorer "
+"<http://www.estrongs.com/>`_ est à recommander pour cette tâche."
 
 #: ../../wallets/android/installation.rst:37
 msgid ""
 "You can also install an APK file directly from your computer using the "
 "Android Debug Bridge (ADB). Follow these instructions:"
 msgstr ""
+"Vous pouvez aussi installer directement un fichier APK depuis votre "
+"ordinateur en utilisant Android Debug Bridge (ADB). Veuillez suivre ces "
+"instructions :"
 
 #: ../../wallets/android/installation.rst:42
 msgid ""
@@ -86,6 +111,9 @@ msgid ""
 "`SDK Platform Tools <https://developer.android.com/studio/releases/platform-"
 "tools.html>`_ for Mac, Windows or Linux."
 msgstr ""
+"Assurez-vous d'avoir une copie d'ADB sur votre PC. ADB est inclus dans les "
+"`Android SDK Platform Tools <https://developer.android.com/studio/releases"
+"/platform-tools.html>`_ pour Mac, Windows ou Linux."
 
 #: ../../wallets/android/installation.rst:48
 msgid ""
@@ -93,6 +121,10 @@ msgid ""
 "debugging**. If **Developer options** is not available, go to **About "
 "phone** instead, scroll down, and tap on the **Build number** seven times."
 msgstr ""
+"Activez le débogage USB en allant sur **Réglages > Options développeur > "
+"Débogage USB**. Si les **Options développeur** ne sont pas disponibles, "
+"allez plutôt sur **À propos de ce téléphone**, descendez en bas et touchez "
+"sept fois le **Numéro de build**."
 
 #: ../../wallets/android/installation.rst:52
 msgid ""
@@ -100,16 +132,21 @@ msgid ""
 "<https://github.com/HashEngineering/dash-wallet/releases/latest>`_. At the "
 "time of writing, this was 5.18."
 msgstr ""
+"Depuis votre PC, téléchargez la plus récente version de l'APK depuis `ce "
+"lien <https://github.com/HashEngineering/dash-wallet/releases/latest>`_. Au "
+"moment où sont écrites ces lignes, il s'agissait de la version 5.18."
 
 #: ../../wallets/android/installation.rst:55
 msgid ""
 "Connect your phone to the PC, open a terminal/command prompt window and "
 "type::"
 msgstr ""
+"Connectez votre téléphone à un PC, ouvrez une fenêtre de terminal ou de "
+"commandes, et tapez :"
 
 #: ../../wallets/android/installation.rst:62
 msgid "From source"
-msgstr ""
+msgstr "Depuis le code source"
 
 #: ../../wallets/android/installation.rst:64
 msgid ""
@@ -121,21 +158,36 @@ msgid ""
 "``sdkmanager``. Begin by installing dependencies and downloading the latest "
 "Android SDK Tools::"
 msgstr ""
+"Le code source pour le portefeuille Dash Wallet pour Android est disponible "
+"sur `GitHub <https://github.com/HashEngineering/dash-wallet>`__. Les "
+"instructions suivantes expliquent comment compiler un APK depuis le code "
+"source, dans une installation mise à jour d'Ubuntu 18.04 LTS, avec un seul "
+"utilisateur non-root. À noter que NDK version 12b est obligatoire, au lieu "
+"d'installer la plus récente version en utilisant \"sdkmanager\". Commencez "
+"par installer les dépendances et par télécharger les plus récents Android "
+"SDK Tools :"
 
 #: ../../wallets/android/installation.rst:80
 msgid ""
 "Next, update the SDK Tools and download the necessary SDK platform bundles "
 "and dependencies, then add and load the appropriate environment variables::"
 msgstr ""
+"Ensuite, mettez à jour les SDK Tools et téléchargez les paquets SDK "
+"nécessaires et les dépendances, puis ajoutez et chargez les variables "
+"d'environnement appropriées :"
 
 #: ../../wallets/android/installation.rst:91
 msgid ""
 "Now that the build environment is ready, download and build the Dash Android"
 " Wallet source::"
 msgstr ""
+"Maintenant que l'environnement de compilation est prêt, téléchargez et "
+"compilez la source de Dash Wallet pour Android :"
 
 #: ../../wallets/android/installation.rst:98
 msgid ""
 "The built APK files are now available in the ``~/dash-"
 "wallet/wallet/build/outputs/apk`` folder."
 msgstr ""
+"Les fichiers APK compilés sont disponibles dans le répertoire ``~/dash-"
+"wallet/wallet/build/outputs/apk``."

@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-25 08:07+0000\n"
+"POT-Creation-Date: 2018-08-20 08:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Daf Daf, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -300,4 +301,154 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:353
 msgid "Two instances of Dash Core running simultaneously"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:356
+msgid "KeePass"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:358
+msgid ""
+"Since version 0.11.0, Dash Core has supported integration with KeePass, the "
+"popular open source password manager. This guide describes how to configure "
+"the association between Dash Core and KeePass, and how to save a Dash Core "
+"wallet passphrase in KeePass using the integration. When this is done, "
+"KeePass can be used to unlock the wallet."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:365
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../wallets/dashcore/advanced.rst:367
+msgid "You will need the following:"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:369
+msgid "KeePass 2: http://keepass.info"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:370
+msgid "KeePassHttp plugin: https://github.com/pfn/keepasshttp"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:371
+msgid "Dash Core: https://www.dash.org"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:373
+msgid ""
+"If not already installed, install these packages according to the "
+"instructions linked below:"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:376
+msgid "KeePass: https://keepass.info/help/v2/setup.html"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:377
+msgid "KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:378
+msgid ""
+"Dash Core: "
+"https://docs.dash.org/en/latest/wallets/dashcore/installation.html"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:381
+msgid "Commands"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:383
+msgid ""
+"The following KeePass RPC commands are available in the Dash Core client "
+"console or server:"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:389
+msgid "keepass genkey"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:387
+msgid ""
+"Generates a base64 encoded 256 bit AES key that can be used for "
+"communication with KeePassHttp. This is only necessary for manual "
+"configuration. Use init for automatic configuration."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:395
+msgid "keepass init"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:392
+msgid ""
+"Sets up the association between Dash and KeePass by generating an AES key "
+"and sending an association message to KeePassHttp. This will trigger KeePass"
+" to ask for an ID for the association. Returns the association and the "
+"base64 encoded string for the AES key."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:402
+msgid "keepass setpassphrase"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:398
+msgid ""
+"Updates the passphrase in KeePassHttp to a new value. This should match the "
+"passphrase you intend to use for the wallet. Please note that the standard "
+"RPC commands walletpassphrasechange and the wallet encryption from the QT "
+"GUI already send the updates to KeePassHttp, so this is only necessary for "
+"manual manipulation of the password."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:404
+msgid "The following new arguments are available for dashd and dash-qt:"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:407
+msgid "keepass"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:407
+msgid "Use KeePass 2 integration using KeePassHttp plugin (default: 0)"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:410
+msgid "keepassport=<port>"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:410
+msgid "Connect to KeePassHttp on port <port> (default: 19455)"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:413
+msgid "keepasskey=<key>"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:413
+msgid "KeePassHttp key for AES encrypted communication with KeePass"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:416
+msgid "keepassid=<name>"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:416
+msgid "KeePassHttp id for the established association"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:420
+msgid "keepassname=<name>"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:419
+msgid ""
+"Name to construct url for KeePass entry that stores the wallet passphrase"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:422
+msgid ""
+"keepass option is not necessary during configuration, but is necessary to "
+"retrieve the password from keepass."
 msgstr ""

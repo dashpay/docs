@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 10:33+0000\n"
+"POT-Creation-Date: 2018-07-25 08:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: oscar junior <geleira@gmail.com>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/dash/teams/37570/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +20,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/backup.rst:5
 msgid "Wallet backup and restore"
-msgstr ""
+msgstr "Backup e restauração de carteira"
 
 #: ../../wallets/dashcore/backup.rst:8
 msgid "Backup"
-msgstr ""
+msgstr "Backup"
 
 #: ../../wallets/dashcore/backup.rst:10
 msgid ""
@@ -38,6 +39,17 @@ msgid ""
 "stored in a safe place. **If you lose access to your wallet file, you will "
 "permanently lose access to your Dash.**"
 msgstr ""
+"Esta documentação descreve como fazer o backup seguro do seu arquivo de "
+"carteira para armazenamento seguro, caso seu computador ou laptop seja "
+"danificado ou perdido. O Dash Core armazena todos os dados necessários para "
+"controlar seus endereços do Dash em um único arquivo chamado *wallet.dat*. "
+"Esta carteira está no formato Berkeley DB e armazena os pares de chaves "
+"criptográficas privadas/públicas usadas para gerenciar seus saldos no "
+"blockchain do Dash. O Dash Core torna transparente a maioria dessas "
+"operações e até gera backups automáticos do seu arquivo de carteira, caso "
+"esteja corrompido, mas o usuário é responsável por garantir que esses "
+"backups sejam armazenados em um local seguro. **Se você perder o acesso ao "
+"seu arquivo da carteira, perderá permanentemente o acesso ao seu Dash.**"
 
 #: ../../wallets/dashcore/backup.rst:22
 msgid ""
@@ -48,10 +60,16 @@ msgid ""
 " place as the wallet.dat file, particularly if you are saving the backup to "
 "the cloud."
 msgstr ""
+"É importante considerar que, se você não tiver criptografado sua carteira "
+"usando o item de menu **Configurações> Criptografar Carteira**, qualquer "
+"pessoa com acesso ao arquivo wallet.dat com backup terá acesso total ao seu "
+"Dash. Se você optar por criptografar sua carteira, não armazene a senha no "
+"mesmo local que o arquivo wallet.dat, especialmente se estiver salvando o "
+"backup na nuvem."
 
 #: ../../wallets/dashcore/backup.rst:30
 msgid "Backup from Dash Core"
-msgstr ""
+msgstr "Backup do  Dash Core"
 
 #: ../../wallets/dashcore/backup.rst:32
 msgid ""
@@ -62,14 +80,21 @@ msgid ""
 " example below shows saving the file to a USB stick. Keep this file in a "
 "physically separate location to your computer."
 msgstr ""
+"Em primeiro lugar, nunca copie o seu arquivo wallet.dat enquanto o Dash Core"
+" estiver aberto. Sempre use o menu **Arquivo > Backup Wallet** se a carteira"
+" estiver aberta. Quando você seleciona este item de menu, uma caixa de "
+"diálogo aparecerá para especificar onde o arquivo deve ser salvo. Digite um "
+"nome para o arquivo, selecione um local e clique em **Salvar**. O exemplo "
+"abaixo mostra como salvar o arquivo em um pendrive. Mantenha este arquivo em"
+" um local fisicamente separado para o seu computador."
 
 #: ../../wallets/dashcore/backup.rst:46
 msgid "Backing up the Dash Core wallet from the File menu"
-msgstr ""
+msgstr "Fazendo backup da carteira do Dash Core no menu Arquivo"
 
 #: ../../wallets/dashcore/backup.rst:50
 msgid "Backup by copying wallet.dat"
-msgstr ""
+msgstr "Backup copiado wallet.dat"
 
 #: ../../wallets/dashcore/backup.rst:52
 msgid ""
@@ -79,20 +104,28 @@ msgid ""
 "location of this folder during installation, but by default the folder is in"
 " the following locations on different operating systems:"
 msgstr ""
+"**Se o Dash Core não estiver rodando**, você também pode fazer o backup da "
+"sua carteira simplesmente copiando o arquivo *wallet.dat* para outro local. "
+"Este arquivo está localizado na pasta de dados *DashCore*. Você recebeu a "
+"opção de especificar o local dessa pasta durante a instalação, mas, por "
+"padrão, a pasta está nos seguintes locais em sistemas operacionais "
+"diferentes:"
 
 #: ../../wallets/dashcore/backup.rst:58
 msgid "**Windows**"
-msgstr ""
+msgstr "**Windows**"
 
 #: ../../wallets/dashcore/backup.rst:64
 msgid ""
 "You can access this folder directly by **Windows Key + R** and typing "
 "``%APPDATA%\\DashCore``"
 msgstr ""
+"Você pode acessar esta pasta diretamente  precionando a tecla **Windows + "
+"R** e digitando ``%APPDATA%\\DashCore``"
 
 #: ../../wallets/dashcore/backup.rst:67
 msgid "**Linux**"
-msgstr ""
+msgstr "**Linux**"
 
 #: ../../wallets/dashcore/backup.rst:73
 msgid ""
@@ -100,10 +133,13 @@ msgid ""
 "terminal or ``~/.dashcore`` in the path bar using the **Go > Enter "
 "Location...** menu item in Files"
 msgstr ""
+"Você pode acessar essa pasta diretamente digitando ``cd ~/.dashcore`` at the"
+" terminal or ``~/.dashcore`` na barra de caminho usando o **Ir > Endereço da"
+" Pasta...** item do menu em arquivos"
 
 #: ../../wallets/dashcore/backup.rst:77
 msgid "**macOS**"
-msgstr ""
+msgstr "**macOS**"
 
 #: ../../wallets/dashcore/backup.rst:83
 msgid ""
@@ -112,6 +148,10 @@ msgid ""
 "Support/DashCore`` in dialog at the **Go > Go To Folder** menu item in "
 "Finder"
 msgstr ""
+"Você pode acessar essa pasta diretamente digitando ``cd "
+"~/Library/Application Support/DashCore`` no terminal ou "
+"``~/Library/Application Support/DashCore`` no diálogo no**Ir> Ir Para "
+"Pastar** "
 
 #: ../../wallets/dashcore/backup.rst:88
 msgid ""
@@ -123,14 +163,23 @@ msgid ""
 "select **Paste** in the target folder. Keep this file in a physically "
 "separate location to your computer. Be careful to copy (not move) the file!"
 msgstr ""
+"Assegure-se de que o Dash Core não esteja em execução e simplesmente copie o"
+" arquivo *wallet.dat* desta pasta para outra pasta da maneira normal para o "
+"seu sistema operacional. O exemplo abaixo mostra a cópia do arquivo em um "
+"pendrive USB usando o simples arrastar e soltar enquanto mantém pressionada "
+"a tecla **Ctrl** em um sistema Windows. Na maioria dos sistemas "
+"operacionais, você também pode clicar com o botão direito do mouse no "
+"arquivo e selecionar **Copiar** e, em seguida, selecione **Colar** na pasta "
+"de destino. Mantenha este arquivo em um local fisicamente separado para o "
+"seu computador."
 
 #: ../../wallets/dashcore/backup.rst:100
 msgid "Backing up wallet.dat by copying to another folder"
-msgstr ""
+msgstr "Fazendo o backup do wallet.dat copiando para outra pasta"
 
 #: ../../wallets/dashcore/backup.rst:104
 msgid "Automatic backups"
-msgstr ""
+msgstr "Backups Automatico"
 
 #: ../../wallets/dashcore/backup.rst:106
 msgid ""
@@ -141,6 +190,13 @@ msgid ""
 "the ``-createwalletbackups=n`` parameter at the command line or in "
 "*dash.conf*. Setting this value to 0 completely disables backups."
 msgstr ""
+"Toda vez que você abrir o Dash Core, ele criará automaticamente uma cópia de"
+" backup de *wallet.dat* na pasta *dashcore/backups*. Até 10 backups podem "
+"ser mantidos por padrão, e o backup mais antigo será excluído à medida que "
+"cada novo backup adicional é criado. Você pode modificar o número de backups"
+" mantidos usando o parâmetro ``-createwalletbackups = n`` na linha de "
+"comando ou no *dash.conf*. Definir esse valor como 0 desativa completamente "
+"os backups."
 
 #: ../../wallets/dashcore/backup.rst:114
 msgid ""
@@ -152,10 +208,17 @@ msgid ""
 "original files in the DashCore folder become corrupted due to improper "
 "shutdown of the Dash Core app."
 msgstr ""
+"Você pode visualizar a pasta de backups automáticos navegando até a pasta "
+"*DashCore* no local especificado acima para *wallet.dat* e abrindo a pasta "
+"de backups ou selecionando **Ferramentas> Mostrar backups automáticos** no "
+"menu do Dash Core. Como esses arquivos não estão ativos quando o Dash Core "
+"está em execução, você pode copiá-los com segurança a qualquer momento. Eles"
+" também são um backup útil se os arquivos originais na pasta DashCore forem "
+"corrompidos devido ao desligamento incorreto do aplicativo Dash Core."
 
 #: ../../wallets/dashcore/backup.rst:123
 msgid "Restore"
-msgstr ""
+msgstr "Restaurar"
 
 #: ../../wallets/dashcore/backup.rst:125
 msgid ""
@@ -163,10 +226,14 @@ msgid ""
 "already installed) and rename the existing *wallet.dat* file in the "
 "*DashCore* folder."
 msgstr ""
+"Para restaurar um backup, instale o Dash Core no sistema (ou pare-o, se já "
+"estiver instalado) e renomeie o arquivo *wallet.dat* existente na pasta "
+"*DashCore*."
 
 #: ../../wallets/dashcore/backup.rst:132
 msgid "Renaming the old wallet.dat file to wallet.old in the DashCore folder"
 msgstr ""
+"Renomeia o arquivo wallet.dat antigo para wallet.old na pasta DashCore"
 
 #: ../../wallets/dashcore/backup.rst:134
 msgid ""
@@ -175,16 +242,23 @@ msgid ""
 "new wallet. Do not replace *wallet.dat* while Dash Core is running, since "
 "this will result in data corruption!"
 msgstr ""
+"Em seguida, copie o arquivo da carteira de backup para a pasta *DashCore* e "
+"verifique se ele está nomeado *wallet.dat*. Agora, quando você iniciar o "
+"Dash Core novamente, ele carregará a nova carteira. Não substitua "
+"*wallet.dat* enquanto o Core Core estiver em execução, pois isso ira "
+"corromper os dados!"
 
 #: ../../wallets/dashcore/backup.rst:145
 msgid ""
 "Copying the backup file into the DashCore folder and renaming it to "
 "wallet.dat"
 msgstr ""
+"Copiando o arquivo de backup para a pasta DashCore e renomeá-lo para "
+"wallet.dat"
 
 #: ../../wallets/dashcore/backup.rst:150
 msgid "Backup storage considerations"
-msgstr ""
+msgstr "Considerações sobre armazenamento de backup"
 
 #: ../../wallets/dashcore/backup.rst:152
 msgid ""
@@ -194,6 +268,11 @@ msgid ""
 "backup file itself. In this case, this would be a copy of the version of "
 "Dash Core you used to create the backup."
 msgstr ""
+"Qualquer backup depende, até certo ponto, da existência do software capaz de"
+" ler os dados em algum momento no futuro. Como tal, é recomendável armazenar"
+" uma cópia do software usado para criar o backup junto com o próprio arquivo"
+" de backup. Nesse caso, isso seria uma cópia da versão do Core do Dash que "
+"você usou para criar o backup."
 
 #: ../../wallets/dashcore/backup.rst:158
 msgid ""
@@ -212,6 +291,20 @@ msgid ""
 "is yours. For further reading on encrypted containers, see `here "
 "<https://theintercept.com/2015/04/27/encrypting-laptop-like- mean/>`_."
 msgstr ""
+"O arquivo *wallet.dat* deve ser criptografado usando uma senha definida a "
+"partir do **Configurações> Criptografar Carteira**. No entanto, isso só "
+"impede que alguém com acesso ao arquivo crie transações, e não abra o "
+"arquivo. Você também pode armazenar o arquivo em outro local criptografado, "
+"como um dispositivo USB usando o `BitLocker <https://technet.microsoft.com"
+"/en-us/library/ff404223.aspx>` _ no Windows,`LUKS "
+"<https://help.ubuntu.com/community/EncryptedFilesystemsOn "
+"RemovableStorage>`_ no Linux ou` FileVault "
+"<https://support.apple.com/kb/PH25745> `_ no macOS. Também é possível criar "
+"`imagens de disco <https://support.apple.com/kb/PH22247>` _ ou `arquivos zip"
+" <https://www.howtogeek.com/203590/how-to-create-secure -encrypted-zip-or-"
+"7z-archives-on-qualquer-operating-system /> `_ com criptografia - Para mais "
+"informações sobre locais criptografados, veja `aqui "
+"<https://theintercept.com/2015/04/27/encrypting-laptop-like- mean/>` _."
 
 #: ../../wallets/dashcore/backup.rst:174
 msgid ""
@@ -222,6 +315,12 @@ msgid ""
 " paper, in a password manager, etc.) and who may need access to the password"
 " in the future."
 msgstr ""
+"Você decide aonde armazenar este arquivo. Pode ser em sua casa, em um cofre "
+"em um banco, em um contêiner à prova d'água ou à prova de fogo ou em "
+"armazenamento na nuvem, como o Google Drive, o Dropbox ou o iCloud. "
+"Considere onde você armazenará as senhas necessárias para restaurar o acesso"
+" à carteira (em sua cabeça, em papel, em um gerenciador de senhas, etc.) e "
+"quem pode precisar acessar a senha no futuro."
 
 #: ../../wallets/dashcore/backup.rst:181
 msgid ""
@@ -235,10 +334,20 @@ msgid ""
 "this, read more about paper wallets, where the private key can be printed "
 "directly or also encrypted using BIP38 for safe storage."
 msgstr ""
+"Finalmente, é importante entender que *wallet.dat* em si é uma maneira "
+"relativamente perigosa de armazenar grandes quantidades de fundos - é "
+"simplesmente um arquivo de banco de dados que armazena chaves privadas. "
+"Embora a conveniência de armazenar um arquivo de carteira diretamente seja "
+"boa para holdings menores, é mais seguro armazenar grandes quantidades de "
+"Dash em um único endereço predefinido de modo que você tenha acesso "
+"garantido por meio de qualquer software que suporte o protocolo, em vez de "
+"um específico. Se estiver interessado, leia mais sobre carteiras de papel, "
+"onde a chave privada pode ser impressa diretamente ou também criptografada "
+"usando o BIP38 para armazenamento seguro."
 
 #: ../../wallets/dashcore/backup.rst:193
 msgid "Verifying backups"
-msgstr ""
+msgstr "Verificando backups"
 
 #: ../../wallets/dashcore/backup.rst:195
 msgid ""
@@ -252,3 +361,13 @@ msgid ""
 " reverse your backup process to get access to your Dash, instead of relying "
 "on the fact that this process should theoretically be reversible."
 msgstr ""
+"Não há procedimento fixo para verificar seu backup, mas você deve testá-lo "
+"pelo menos uma vez para ter certeza de que funciona. Se você tiver uma cópia"
+" simples do arquivo, tente restaurá-lo para a sua pasta atual *DashCore* e "
+"inicie o Dash Core para ter certeza de que ele será aberto sem erros. Se "
+"você decidiu armazenar o arquivo em um arquivo zip criptografado, "
+"certifique-se de descompactá-lo e abrir corretamente no Dash Core. "
+"Resumindo, certifique-se de que você (ou a pessoa em quem você confia "
+"eventualmente passar por esse processo para você) pode realmente reverter "
+"seu processo de backup para obter acesso ao seu Dash, em vez de confiar no "
+"fato de que esse processo deveria ser reversível teoricamente."

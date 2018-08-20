@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-11 06:39+0000\n"
+"POT-Creation-Date: 2018-07-25 08:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Daf Daf, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../wallets/electrum/security.rst:4
 msgid "Wallet security"
-msgstr ""
+msgstr "Sécurité du portefeuille"
 
 #: ../../wallets/electrum/security.rst:7
 msgid "Change password"
-msgstr ""
+msgstr "Modifier le mot de passe"
 
 #: ../../wallets/electrum/security.rst:9
 msgid ""
@@ -34,6 +34,13 @@ msgid ""
 "wallets' password, all is not lost. Your wallet can be restored in its "
 "entirety using the backup procedure described here."
 msgstr ""
+"Pour modifier le mot de passe, choisissez l'option **Portefeuille > Mot de "
+"passe** du menu principal, ou cliquez sur l'icône en forme de cadenas au "
+"coin inférieur droit de la fenêtre principale. Saisissez puis confirmez un "
+"nouveau mot de passe sûr. Si vous veniez à perdre le mot de passe de votre "
+"portefeuille, tout ne serait pas perdu. Votre portefeuille pourrait être "
+"restauré dans son intégralité en utilisant la procédure de sauvegarde "
+"décrite ici."
 
 #: ../../wallets/electrum/security.rst:18
 msgid "Backup"
@@ -47,10 +54,17 @@ msgid ""
 "prompted, enter the secure password you chose when setting up the Dash "
 "Electrum wallet."
 msgstr ""
+"Dans Dash Electrum, une graine représente une sauvegarde complète de toutes "
+"les adresses et transactions. Accédez à la graine de votre portefeuille en "
+"cliquant sur l'icône graine au coin inférieur droit de l'écran principal, ou"
+" bien par le menu **Portefeuille > Graine**. Quand il vous est demandé, "
+"saisissez le mot de passe sûr que vous aviez choisi au moment de "
+"l'installation du portefeuille Dash Electrum."
 
 #: ../../wallets/electrum/security.rst:29
 msgid "Displaying the wallet recovery seed in Dash Electrum"
 msgstr ""
+"Affichage de la graine de récupération de portefeuille dans Dash Electrum"
 
 #: ../../wallets/electrum/security.rst:31
 msgid ""
@@ -58,10 +72,13 @@ msgid ""
 " in a safe location. Remember, anyone who finds your seed can spend all of "
 "the funds in your wallet."
 msgstr ""
+"Recopiez les douze mots affichés sur une feuille de papier, et conservez-la "
+"dans un endroit sûr. N'oubliez pas que toute personne qui trouve votre "
+"graine peut dépenser tous les fonds de votre portefeuille."
 
 #: ../../wallets/electrum/security.rst:38
 msgid "Viewing the recovery seed"
-msgstr ""
+msgstr "Affichage de la graine de récupération"
 
 #: ../../wallets/electrum/security.rst:40
 msgid ""
@@ -70,10 +87,15 @@ msgid ""
 "any imported addresses. Restoring this backup will require the wallet "
 "password."
 msgstr ""
+"Autre méthode : un fichier de sauvegarde peut être obtenu par le menu "
+"**Fichier > Enregistrer une copie**. Ce fichier contient la graine du "
+"portefeuille, chiffrée, ainsi que toutes les adresses éventuellement "
+"importées. Restaurer cette sauvegarde demandera la connaissance du mot de "
+"passe du portefeuille."
 
 #: ../../wallets/electrum/security.rst:47
 msgid "Restore"
-msgstr ""
+msgstr "Restauration"
 
 #: ../../wallets/electrum/security.rst:49
 msgid ""
@@ -83,6 +105,13 @@ msgid ""
 "This optional procedure is described below. Before continuing, verify that "
 "your seed is written down clearly and correctly on paper."
 msgstr ""
+"La seule chose indispensable pour récupérer un portefeuille Dash Electrum "
+"sur un autre ordinateur, c'est la graine. Vous pouvez tester la récupération"
+" de portefeuille avec votre installation actuelle de Dash Electrum ; il "
+"suffit d'enlever les données de portefeuille du répertoire de données. Cette"
+" procédure facultative est décrite ci-dessous. Avant de continuer, veuillez "
+"vérifier que votre graine est écrite clairement et correctement sur une "
+"feuille de papier."
 
 #: ../../wallets/electrum/security.rst:56
 msgid ""
@@ -90,42 +119,52 @@ msgid ""
 "be deleted. Begin by closing Dash Electrum. Next, locate the application "
 "data folder according to your operating system:"
 msgstr ""
+"Pour que Dash Electrum crée un nouveau portefeuille, les données de l'ancien"
+" portefeuille doivent être supprimées. Commencez par quitter l'application "
+"Dash Electrum. Puis repérer le répertoire de données de l'application, selon"
+" votre système d'exploitation :"
 
 #: ../../wallets/electrum/security.rst:60
 msgid "**Linux:**"
-msgstr ""
+msgstr "**Linux :**"
 
 #: ../../wallets/electrum/security.rst:62
 msgid ""
 "Open Files, select **Go > Go to folder**, copy the path ``~/.electrum`` and "
 "paste it into the dialog box"
 msgstr ""
+"Ouvrez Fichiers, choisissez **Aller > Aller au dossier**, copiez le chemin "
+"``~/.electrum`` et collez-le dans la boîte de dialogue"
 
 #: ../../wallets/electrum/security.rst:64
 #: ../../wallets/electrum/security.rst:70
 #: ../../wallets/electrum/security.rst:76
 msgid "Delete all files in the folder"
-msgstr ""
+msgstr "Effacez tous les fichiers contenus dans le répertoire"
 
 #: ../../wallets/electrum/security.rst:66
 msgid "**macOS:**"
-msgstr ""
+msgstr "**macOS :**"
 
 #: ../../wallets/electrum/security.rst:68
 msgid ""
 "Open Finder, select **Go > Go to Folder**, copy the path ``~/.electrum`` and"
 " paste it into the dialog box"
 msgstr ""
+"Ouvrez le Finder, choisissez **Aller > Aller au dossier**, copiez le chemin "
+"``~/.electrum`` et collez-le dans la boîte de dialogue"
 
 #: ../../wallets/electrum/security.rst:72
 msgid "**Windows:**"
-msgstr ""
+msgstr "**Windows :**"
 
 #: ../../wallets/electrum/security.rst:74
 msgid ""
 "Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and paste it in to"
 " the address bar"
 msgstr ""
+"Ouvrez l'Explorateur, copiez le chemin ``%APPDATA%\\Electrum-DASH`` et "
+"collez-le dans la barre d'adresse"
 
 #: ../../wallets/electrum/security.rst:78
 msgid ""
@@ -133,18 +172,22 @@ msgid ""
 "appear asking you to name your new wallet. Enter a name, select **Standard "
 "wallet** as the wallet type and then choose **I already have a seed**."
 msgstr ""
+"Une fois le répertoire de données vidé, relancez Dash Electrum. Un dialogue "
+"apparaîtra, vous demandant de donner un nom à votre nouveau portefeuille. "
+"Saisissez un nom, choisissez **Portefeuille standard** comme type de "
+"portefeuille, puis choisissez **Je dispose déjà d'une graine**."
 
 #: ../../wallets/electrum/security.rst:86
 msgid "Restoring a wallet from an existing seed"
-msgstr ""
+msgstr "Restauration d'un portefeuille à partir d'une graine déjà existante"
 
 #: ../../wallets/electrum/security.rst:88
 msgid "Next, copy the twelve word seed into the text field."
-msgstr ""
+msgstr "Ensuite, copiez la graine de douze mots dans le champ de texte."
 
 #: ../../wallets/electrum/security.rst:93
 msgid "Entering the recovery seed"
-msgstr ""
+msgstr "Saisie de la graine de récupération"
 
 #: ../../wallets/electrum/security.rst:95
 msgid ""
@@ -154,7 +197,13 @@ msgid ""
 "a few minutes, and the transactions may appear as **Not Verified**. This "
 "problem disappears after restarting the program."
 msgstr ""
+"Si votre graine a été saisie correctement, Dash Electrum vous donne l'option"
+" d'ajouter un mot de passe à votre portefeuille. Après restauration de votre"
+" portefeuille, Dash Electrum répertoriera toutes les transactions existantes"
+" depuis ce portefeuille. Ce processus peut prendre quelques minutes, et les "
+"transactions peuvent être affichées comme **Non vérifiées**. Ce problème "
+"disparaît au redémarrage du programme."
 
 #: ../../wallets/electrum/security.rst:104
 msgid "Unverified transactions after recovery"
-msgstr ""
+msgstr "Transactions non vérifiées après une restauration"
