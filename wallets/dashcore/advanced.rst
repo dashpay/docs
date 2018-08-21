@@ -418,6 +418,3 @@ keepassid=<name>
 keepassname=<name>
   Name to construct url for KeePass entry that stores the wallet
   passphrase
-
-keepass option is not necessary during configuration, but is necessary
-to retrieve the password from keepass.
