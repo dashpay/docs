@@ -60,7 +60,7 @@ transit. To do this, open **Terminal**, browse to the location where you
 saved the file, and run the following command, replacing the version
 with the specific version of the file you downloaded::
 
-   shasum -a 256 <dashcore-version-osx.dmg
+   shasum -a 256 dashcore-version-osx.dmg
 
 .. figure:: img/macos/112414768.png
    :width: 451px

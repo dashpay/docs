@@ -33,7 +33,7 @@ how to check this in other versions of Linux, see
    Ubuntu System Overview. This is a 64 bit system.
 
 Once you know which version you need, download Dash Core to your
-computer from `https://www.dash.org/wallets <https://www.dash.org/wallets>`.
+computer from `https://www.dash.org/wallets <https://www.dash.org/wallets>`__.
 
 .. figure:: img/linux/106329738.png
    :height: 250px
