@@ -485,9 +485,7 @@ Dash
   problems. Dash's features include PrivateSend, InstantSend,
   Decentralized Governance by Blockchain (DGBB), a 2nd tier network
   (referred to as the masternode network). See the :ref:`Features
-  <features>` page for a full list of Dash's features. See this
-  `Wikipedia article
-  <https://en.wikipedia.org/wiki/Dash_(cryptocurrency)>`_
+  <features>` page for a full list of Dash's features.
 
 DashDrive
   Dash network data storage backend service used by masternodes for 
