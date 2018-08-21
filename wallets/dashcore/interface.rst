@@ -387,7 +387,7 @@ Minimize to the tray instead of the taskbar
   will no longer appear in your taskbar as a running task. Instead, Dash
   Core will keep running in the background and can be re-opened from the
   Dash icon in the system tray (the area next to your system clock). This
-  option cannot be selected at the same time as \ **Hide tray icon**.
+  option cannot be selected at the same time as **Hide tray icon**.
 
 Minimize on close
   When this option is enabled, clicking the X button in the top right
