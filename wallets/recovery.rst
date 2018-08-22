@@ -390,5 +390,4 @@ Bitcoin Core, most approaches to apply brute force to crack a Bitcoin
 wallet will also work for Dash wallets.
 
 - `Wallet Recovery Services <https://walletrecoveryservices.com>`_
-- `How To Recover Your Bitcoin Wallet Password <http://www.gobitgo.com/articles/1005/How-To-Recover-Your-Bitcoin-Wallet-Password>`_
 - `BTCRecover <https://github.com/gurnec/btcrecover>`_
