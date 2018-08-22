@@ -451,15 +451,15 @@ Quoinex
   AUD, INR, PHP, EUR, HKD, CNY, IDR and SGD, and trading against ETH,
   BTC, BCH and DASH.
 
-Bitcoin.vn
+BitcoinVN
   .. image:: exchanges/bitcoinvn.png
      :width: 200px
      :align: right
-     :target: https://bitcoin.vn
+     :target: https://bitcoinvn.io
 
-  https://bitcoin.vn
+  https://bitcoinvn.io
 
-  Bitcoin.vn is a Vietnamese exchange offering BTC, BCH, LTC and DASH
+  BitcoinVN is a Vietnamese exchange offering BTC, BCH, LTC and DASH
   for trading against Vietnamese đồng.
 
 ZB.com
