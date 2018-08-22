@@ -57,7 +57,7 @@ Run an enthusiastic campaign for your proposal
   asking for votes.
 
 Demonstrate your commitment to the network
-  If you are asking for a significant investment to start up or expand a
+  If you are asking for significant funding to start up or expand a
   for-profit business built on Dash, you need to explain why and for how
   long this funding is required, and what you are offering in return. It
   can be very helpful to show you have skin in the game by matching the
@@ -65,7 +65,6 @@ Demonstrate your commitment to the network
   investors. Equity or exclusivity agreements can be reached with `Dash
   Core Group, Inc. <bradley.zastrow@dash.org>`_, but must be clarified
   in writing before the proposal is posted.
-
 
 Post your proposal early and make yourself available for questions
   The voting window closes 1662 blocks (or just under 3 days) before the
