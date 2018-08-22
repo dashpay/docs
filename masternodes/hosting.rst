@@ -49,7 +49,6 @@ http://dashmasternode.io
 - `Site <http://dashmasternode.io>`__
 - `Email <splawik21@protonmail.com>`__
 - `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`__
-- `Review <https://www.dashforcenews.com/meet-the-inventor-of-trusted-masternode-shares/>`__
 
 CrowdNode
 ---------
