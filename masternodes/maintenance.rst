@@ -8,8 +8,7 @@ Masternodes require regular maintenance to ensure you do not drop off
 the payment queue. This includes promptly installing updates to Dash, as
 well as maintaining the security and performance of the server. In
 addition, masternodes should vote on proposals and perform other tasks
-in the interest of the network and their own investment. This section
-covers the following topics:
+in the interest of the network and the value of the Dash they hold.
 
 .. _masternode-withdrawals:
 
