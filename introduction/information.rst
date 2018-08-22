@@ -229,7 +229,6 @@ iOS
 - **Lawnmower:** https://itunes.apple.com/app/id965079226
 - **Quoinex:** https://itunes.apple.com/app/id1140955992
 - **Abra:** https://itunes.apple.com/app/id966301394
-- **Crypto Push:** https://itunes.apple.com/app/id1282856588
 
 
 Android
