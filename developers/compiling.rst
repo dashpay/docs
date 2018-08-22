@@ -7,11 +7,10 @@ Compiling Dash Core
 While Dash offers stable binary builds on the `website
 <https://www.dash.org/wallets>`_, on `GitHub
 <https://github.com/dashpay/dash/releases>`_ and through development
-builds using `Bamboo <https://bamboo.dash.org>`_, many users will also
-be interested in building Dash binaries for themselves. The following
-guides are available:
+builds using `Jenkins <https://jenkins.dash.org/>`_, many users will
+also be interested in building Dash binaries for themselves. The
+following guides are available:
 
-- Eclipse (coming soon)
 - :ref:`Building on Linux <linux-build>`
 - :ref:`Gitian deterministic builds <gitian-build>`
 

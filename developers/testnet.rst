@@ -44,7 +44,7 @@ not necessarily be online or functioning at any given time. Please join
 <https://www.dash.org/forum/>`_ if you have a question relating to a
 specific service.
 
-- **Test builds:** https://bamboo.dash.org
+- **Test builds:** https://jenkins.dash.org
 - **Bugtracker:** https://github.com/dashpay/dash/issues/new
 - **Discussion and help:** https://www.dash.org/forum/topic/testing.53/
 - **Masternode tools:** https://test.dashninja.pl/masternodes.html
@@ -85,9 +85,9 @@ as the :ref:`mainnet masternode installation guide <masternode-setup>`,
 but with a few key differences:
 
 - You will probably be running a development version of Dash instead of
-  the stable release. See `here <https://bamboo.dash.org>`__ for
-  downloadable builds, then choose **Develop > Latest Build >
-  Artifacts**.
+  the stable release. See `here <https://jenkins.dash.org>`__ for
+  downloadable builds, then choose **dashpay-dash > develop** to view a
+  list of recent builds.
 - When opening the firewall, port 19999 must be opened instead of (or in
   addition to) 9999. Use this command: ``ufw allow 19999/tcp``
 - Your desktop wallet must be running in testnet mode. Add the following
@@ -163,10 +163,7 @@ Discussion:
 - Testnet tools: https://www.dash.org/forum/threads/testnet-tools-resources.1768/
 - Issue tracking: https://github.com/dashpay/dash/issues/new
 
-Latest test binaries:
+Latest successfully built develop branch binaries:
 
-- Windows: https://bamboo.dash.org/browse/DASHW-DEV/latestSuccessful/artifact/JOB1/gitian-win-dash-dist/
-- macOS: https://bamboo.dash.org/browse/DASHM-DEV/latestSuccessful/artifact/JOB1/gitian-osx-dash-dist/
-- Linux: https://bamboo.dash.org/browse/DASHL-DEV/latestSuccessful/artifact/JOB1/gitian-linux-dash-dist/
-- Raspberry Pi: https://bamboo.dash.org/browse/DASHP-DEV/latestSuccessful/artifact/JOB1/gitian-RPi2-dash-dist/
+- Dash Core: https://jenkins.dash.org/job/dashpay-dash/job/develop/lastSuccessfulBuild/
 - Sentinel: https://github.com/dashpay/sentinel/tree/develop
