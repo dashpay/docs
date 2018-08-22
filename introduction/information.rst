@@ -240,7 +240,7 @@ Android
 - **Coinomi Wallet:** https://play.google.com/store/apps/details?id=com.coinomi.wallet
 - **Cryptonator Wallet:** https://play.google.com/store/apps/details?id=com.aev.cryptonator
 - **DashCentral:** https://play.google.com/store/apps/details?id=net.paregov.android.dashcentral
-- **CoinCap:** https://play.google.com/store/apps/details?id=io.coincap.coincap
+- **CoinCap:** https://play.google.com/store/apps/details?id=io.coinCap.coinCap
 - **Blockfolio:** https://play.google.com/store/apps/details?id=com.blockfolio.blockfolio
 - **Cryptonaut:** https://play.google.com/store/apps/details?id=org.cryptonaut.app
 - **Lawnmower:** https://play.google.com/store/apps/details?id=io.lawnmower.mobile
