@@ -687,17 +687,6 @@ BitMEX
   BitMEX is a pure-crypto derivates exchange offering trading with up to
   100x leverage. DASH is available to trade against BTC.
 
-UseCryptos
-  .. image:: exchanges/usecryptos.png
-     :width: 200px
-     :align: right
-     :target: https://usecryptos.com
-
-  https://usecryptos.com
-
-  UseCryptos is an exchange based in Portugal offering DASH trading for
-  EUR and BTC.
-
 KuCoin
   .. image:: exchanges/kucoin.png
      :width: 200px
