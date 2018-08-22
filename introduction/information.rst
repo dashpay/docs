@@ -196,7 +196,6 @@ Price monitoring and statistics
 - https://coinmarketcap.com/currencies/dash
 - https://bitinfocharts.com/dash
 - https://www.cryptonator.com/widget
-- http://atomox.net/1/DASH/USD
 
 
 Dash Community project
