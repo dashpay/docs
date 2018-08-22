@@ -1186,7 +1186,7 @@ SlithEx
   https://slithex.com
 
   Based in Malaysia and funded by the Dash Treasury, SlithEx (and its
-  payment processor, `RocketPay <https://rocketpay.today>`_) offer
+  payment processor, `RocketPay <https://rocketpay.net>`_) offer
   exchange, wallet and sale/trading of Dash against the Malaysian
   ringgit.
 
