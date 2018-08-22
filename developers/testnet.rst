@@ -169,4 +169,4 @@ Latest test binaries:
 - macOS: https://bamboo.dash.org/browse/DASHM-DEV/latestSuccessful/artifact/JOB1/gitian-osx-dash-dist/
 - Linux: https://bamboo.dash.org/browse/DASHL-DEV/latestSuccessful/artifact/JOB1/gitian-linux-dash-dist/
 - Raspberry Pi: https://bamboo.dash.org/browse/DASHP-DEV/latestSuccessful/artifact/JOB1/gitian-RPi2-dash-dist/
-- Sentinel: https://github.com/dashpay/sentinel/tree/core-v0.12.2.x
+- Sentinel: https://github.com/dashpay/sentinel/tree/develop
