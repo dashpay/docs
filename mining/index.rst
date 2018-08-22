@@ -314,8 +314,6 @@ software maintained by newer developers only.
 **AMD**
 
 - https://github.com/nicehash/sgminer/releases
-- https://github.com/dashminer/dashminer/releases (supports DashMiner 
-  pools only)
 
 **NVIDIA**
 
