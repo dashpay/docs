@@ -27,12 +27,11 @@ masternode software.
 
 Since operating your own server requires a certain level knowledge of
 blockchains and Linux server operating systems, several community
-members offer dedicated hosting solutions for a small fee. Taking
-advantage of these services means the user only needs to provide the
-masternode collateral in order to earn returns on the investment. Some
-of these hosting solutions also offer services to users who do not yet
-have access to 1000 DASH. See these pages for information on how to set
-up a hosted masternode.
+members offer dedicated hosting solutions for a fee. Taking advantage of
+these services means the user only needs to provide the masternode
+collateral and pay the hosting fee in order to receive payment from the
+block reward. See :ref:`these pages <masternode-hosting>` for
+information on how to set up a hosted masternode.
 
 **Option 2: Self-operated masternode**
 
