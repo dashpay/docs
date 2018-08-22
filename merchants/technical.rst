@@ -399,8 +399,7 @@ simple `code snippet generator from CoinGecko
 
 Similar widgets with different designs are available from `CoinLib
 <https://coinlib.io/widgets>`_, `WorldCoinIndex
-<https://www.worldcoinindex.com/Widget>`_, `Coinoxo
-<https://www.coinoxo.com/charts/DASH>`_ and `Cryptonator
+<https://www.worldcoinindex.com/Widget>`_ and `Cryptonator
 <https://www.cryptonator.com/widget>`_, while an API providing similar
 information is available from `DashCentral
 <https://www.dashcentral.org/about/api>`_.
