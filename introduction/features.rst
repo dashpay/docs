@@ -221,8 +221,8 @@ time to develop before mining centralization became a threat. This
 approach was largely successful; as of early 2016, ASICs for X11 now
 exist and comprise a significant portion of the network hashrate, but
 have not resulted in the level of centralization present in Bitcoin.
-Information on mining with X11 can be found in the `Mining <mining>`_ 
-section of this documentation.
+Information on mining with X11 can be found in the :ref:`Mining
+<mining>` section of this documentation.
 
 X11 is the name of the chained proof-of-work (**PoW**) algorithm that
 was introduced in Dash (launched January 2014 as "Xcoin"). It was 
