@@ -111,7 +111,6 @@ reasons such as ping latency, uptime, fee, users, etc.:
 - http://dash.cybtc.info
 - https://aikapool.com/dash
 - http://zpool.ca
-- http://cryptopool.io
 - https://www.ipominer.com
 - https://www.antpool.com
 - http://partner.avalon-life.com
