@@ -113,7 +113,7 @@ reasons such as ping latency, uptime, fee, users, etc.:
 - http://zpool.ca
 - https://www.ipominer.com
 - https://www.antpool.com
-- http://partner.avalon-life.com
+- https://avalon-life.io
 - https://www.genesis-mining.com
 - https://pool.viabtc.com/pool/dash/state
 
