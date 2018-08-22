@@ -108,13 +108,13 @@ reasons such as ping latency, uptime, fee, users, etc.:
 - https://www.multipool.us
 - https://www.f2pool.com
 - https://www2.coinmine.pl/dash
-- http://dash.cybtc.info
 - https://aikapool.com/dash
-- http://zpool.ca
 - https://www.antpool.com
 - https://avalon-life.io
 - https://www.genesis-mining.com
 - https://pool.viabtc.com/pool/dash/state
+- http://dash.cybtc.info
+- http://zpool.ca
 
 DISCLAIMER: This list is provided for informational purposes only.
 Services listed here have not been evaluated or endorsed by the Dash
