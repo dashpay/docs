@@ -1284,7 +1284,7 @@ Liberalcoins
   .. image:: exchanges/liberalcoins.png
      :width: 200px
      :align: right
-     :target: ttps://liberalcoins.com
+     :target: https://liberalcoins.com
 
   https://liberalcoins.com
 
