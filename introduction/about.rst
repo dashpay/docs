@@ -78,8 +78,7 @@ detail and (for historical reasons) the original whitepaper are
 available for download as PDF files.
 
 - `Latest whitepaper and official translations <https://github.com/dashpay/dash/wiki/Whitepaper>`_
-- `PDF whitepaper <https://github.com/dashpay/docs/raw/master/binary/Dash%20Whitepaper%20-%20V1.pdf>`_
-- `Dash audio whitepaper <https://www.youtube.com/watch?v=oZGd5ebZJUo>`_
+- `PDF whitepaper <https://github.com/dashpay/docs/raw/master/binary/Dash%20Whitepaper%20-%20V2.pdf>`_
 - `Original Darkcoin whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/binary/Dash%20Whitepaper%20-%20Darkcoin.pdf>`_
 - `InstantSend whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_
 
