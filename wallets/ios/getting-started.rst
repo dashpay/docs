@@ -1,3 +1,7 @@
+.. meta::
+   :description: Getting started with sending and receiving Dash on your iOS device
+   :keywords: dash, mobile, wallet, ios, send, receive, addresses, getting started
+
 .. _dash-ios-getting-started:
 
 Getting started

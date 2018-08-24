@@ -1,3 +1,7 @@
+.. meta::
+   :description: Security, backup and safety when using the Dash Electrum wallet
+   :keywords: dash, wallet, electrum, safety, password, backup, security, restore
+
 .. _electrum-security:
 
 Wallet security

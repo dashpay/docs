@@ -1,3 +1,7 @@
+.. meta::
+   :description: Guide to sending and receiving dash using the Dash Electrum wallet
+   :keywords: dash, wallet, electrum, send, receive, transaction
+
 .. _electrum-send-receive:
 
 =====================

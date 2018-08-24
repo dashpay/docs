@@ -1,3 +1,7 @@
+.. meta::
+   :description: Set up address book, exchange rates, sweep paper wallets and change settings in the Dash Android wallet.
+   :keywords: dash, mobile, wallet, android, address book, paper, exchange rates
+
 .. _dash-android-advanced-functions:
 
 Advanced functions

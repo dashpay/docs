@@ -1,3 +1,7 @@
+.. meta::
+   :description: Frequently Asked Questions about the Dash Electrum wallet
+   :keywords: dash, wallet, electrum, faq, seed
+
 .. _electrum-faq:
 
 ==========================

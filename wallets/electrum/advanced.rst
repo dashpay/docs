@@ -1,3 +1,7 @@
+.. meta::
+   :description: Masternodes, multisig, sweeping paper wallets, cold storage and command line in the Dash Electrum wallet.
+   :keywords: dash, wallet, electrum, masternode, multisig, paper, cold storage, command line
+
 .. _electrum-advanced-functions:
 
 ==================

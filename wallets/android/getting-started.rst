@@ -1,3 +1,7 @@
+.. meta::
+   :description: Getting started with sending and receiving Dash on your Android device
+   :keywords: dash, mobile, wallet, android, send, receive, addresses, getting started
+
 .. _dash-android-getting-started:
 
 Getting started

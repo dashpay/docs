@@ -1,3 +1,7 @@
+.. meta::
+   :description: How to install the Dash wallet on your Android device
+   :keywords: dash, mobile, wallet, android, installation, compile
+
 .. _dash-android-installation:
 
 Installation

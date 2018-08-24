@@ -1,3 +1,7 @@
+.. meta::
+   :description: How to install and create a new Dash Electrum wallet on Windows, Linux, macOS and Android
+   :keywords: dash, mobile, wallet, electrum, android, linux, windows, macos, installation, compile
+
 .. _electrum-installation:
 
 ============

@@ -1,3 +1,7 @@
+.. meta::
+   :description: How to install the Dash wallet on your iOS device
+   :keywords: dash, mobile, wallet, ios, installation, compile
+
 .. _dash-ios-installation:
 
 Installation

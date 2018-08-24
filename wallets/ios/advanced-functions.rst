@@ -1,3 +1,7 @@
+.. meta::
+   :description: URL scheme, master public key and requesting payment in Dash on your iOS device
+   :keywords: dash, mobile, wallet, ios, send, receive, payment, url, public key
+
 .. _dash-ios-advanced-functions:
 
 ==================
