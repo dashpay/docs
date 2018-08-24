@@ -1,3 +1,7 @@
+.. meta::
+   :description: Legal and tax information on the Dash cryptocurrency, block rewards, collateral and ATMs.
+   :keywords: dash, marketing, designs, presentations, brochures, logo
+
 .. _legal:
 
 =====

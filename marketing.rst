@@ -1,3 +1,7 @@
+.. meta::
+   :description: Downloads of various templates and designs intended for use as office stationary and presentations.
+   :keywords: dash, marketing, designs, presentations, brochures, logo
+
 .. _marketing:
 
 =========

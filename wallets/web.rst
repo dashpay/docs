@@ -1,3 +1,7 @@
+.. meta::
+   :description: MyDashWallet is a secure web wallet for Dash, supporting InstantSend and PrivateSend
+   :keywords: dash, mydashwallet, web, wallet, privatesend, instantsend, my dash wallet
+
 .. _dash-web-wallet:
 
 My Dash Wallet

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Description of different wallets available to use and spend Dash cryptocurrency
+   :keywords: dash, wallet, core, electrum, android, ios, copay, paper, hardware, trezor, ledger, web, recovery
+
 .. _wallets:
 
 =======

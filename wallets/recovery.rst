@@ -1,3 +1,7 @@
+.. meta::
+   :description: Recovering Dash wallets from files, private keys or recovery phrases
+   :keywords: dash, wallet, recovery, password, lost, mobile, core, phrase, private key
+
 .. _wallet-recovery:
 
 ===============

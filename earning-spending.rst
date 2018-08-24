@@ -1,3 +1,7 @@
+.. meta::
+   :description: Guides on debit cards, wage conversion, merchants and physical stores.
+   :keywords: dash, earning, spending, merchants, debit cards
+
 .. _earning-spending:
 
 ====================

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Details on how to use Dash cryptocurrency with hardware wallets
+   :keywords: dash, hardware, wallet, ledger, keepkey, trezor, secure, private key
+
 .. _dash-hardware-wallet:
 
 Introduction

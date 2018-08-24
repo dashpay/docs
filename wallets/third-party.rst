@@ -1,5 +1,8 @@
-.. _dash-third-party:
+.. meta::
+   :description: List and detailed information on third-party wallets supporting the Dash cryptocurrency
+   :keywords: dash, wallet, mobile, edge, paytomat, mobi, exodus, atomic, jaxx, coinomi, cobo, cryptonator
 
+.. _dash-third-party:
 
 Introduction
 ============

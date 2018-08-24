@@ -1,3 +1,7 @@
+.. meta::
+   :description: Guides to secure paper wallets for Dash cryptocurrency
+   :keywords: dash, paper, wallet, encryption
+
 .. _dash-paper-wallet:
 
 Introduction

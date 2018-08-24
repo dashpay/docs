@@ -1,3 +1,7 @@
+.. meta::
+   :description: Guides and screenshots on how to sign and verify messages using the Dash cryptocurrency
+   :keywords: dash, sign, verify, message, trezor, dash core
+
 .. _dashcore-signing:
 
 ==============================
