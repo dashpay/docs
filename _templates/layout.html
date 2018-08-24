@@ -2,12 +2,25 @@
 {% block extrahead %}
     <link href="{{ pathto("_static/style.css", True) }}" rel="stylesheet" type="text/css">
     <meta name="google-site-verification" content="JVzTMPjsCY-U-SaJERGf-eviRxXUPfFkPFdiF_MINCU" />
-    <script type="application/ld+json">
-	{
-	  "@context": "http://schema.org",
-	  "@type": "Organization",
-	  "url": "https://docs.dash.org",
-	  "logo": "https://docs.dash.org/en/latest/_images/dash_logo.png"
-	}
-	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"url": "https://www.dash.org",
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": "https://docs.dash.org"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Dash Core Group, Inc.",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://docs.dash.org/en/latest/_images/dash_logo.png",
+					"width": 1446,
+					"height": 424
+				}
+			}
+		}
+</script>
 {% endblock %}
