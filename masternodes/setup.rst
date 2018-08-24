@@ -35,18 +35,18 @@ guides for specific cases in this forum.
 Before you begin
 ================
 
-This guide assumes you are setting up a masternode for the first time.
-If you are updating a masternode, see :ref:`here <masternode-update>`
-instead. You will need:
+This guide assumes you are setting up a single masternode for the first
+time. If you are updating a masternode, see :ref:`here <masternode-
+update>` instead. You will need:
 
 - 1000 Dash
 - A wallet to store your Dash, preferably a hardware wallet, although 
   Dash Core wallet is also supported
 - A Linux server, preferably a Virtual Private Server (VPS)
 
-This guide also assumes you will be working from a Windows computer.
-However, since most of the work is done on your Linux VPS, alternative
-steps for using macOS or Linux will be indicated where necessary.
+We also assume you will be working from a Windows computer. However,
+since most of the work is done on your Linux VPS, alternative steps for
+using macOS or Linux will be indicated where necessary.
 
 .. _vps-setup:
 
@@ -265,9 +265,10 @@ choose to (carefully!) `add a passphrase <https://blog.trezor.io/hide-
 your-trezor-wallets-with-multiple-passphrases-f2e0834026eb>`_ to your
 Trezor to further protect your collateral. Create a new account in your
 Trezor wallet by clicking **Add account**. Then click the **Receive**
-tab and send exactly 1000 DASH to the address displayed. You should see
-the transaction as soon as the first confirmation arrives, usually
-within a few minutes.
+tab and send exactly 1000 DASH to the address displayed. If you are
+setting up multiple masternodes, send 1000 DASH to consecutive addresses
+within the same new account. You should see the transaction as soon as
+the first confirmation arrives, usually within a few minutes.
 
 .. figure:: img/setup-collateral-trezor.png
    :width: 400px
