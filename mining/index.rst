@@ -104,7 +104,7 @@ is available on `GitHub <https://github.com/dashpay/p2pool-dash>`_.
 Other pools are also available and may be advantageous for different
 reasons such as ping latency, uptime, fee, users, etc.:
 
-- https://poolmining.org/pool/dash
+- https://coinfoundry.org
 - https://dash.suprnova.cc
 - https://www.nicehash.com
 - https://www.coinotron.com
