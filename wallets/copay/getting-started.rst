@@ -1,3 +1,7 @@
+.. meta::
+   :description: Getting started with sending and receiving Dash using the Dash Copay wallet
+   :keywords: dash, mobile, wallet, copay, multisig, ios, android, installation, send, receive, addresses, getting started
+
 .. _dash-copay-getting-started:
 
 ===============

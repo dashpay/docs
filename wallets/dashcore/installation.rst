@@ -1,3 +1,7 @@
+.. meta::
+   :description: How to download and install the Dash Core wallet. Compilation guide also available
+   :keywords: dash, core, wallet, linux, windows, macos, installation, compile
+
 .. _dashcore-installation:
 
 ============

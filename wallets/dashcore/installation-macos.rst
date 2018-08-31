@@ -1,3 +1,7 @@
+.. meta::
+   :description: How to download, install and encrypt the Dash Core wallet in macOS
+   :keywords: dash, core, wallet, macos, installation
+
 .. _dashcore-installation-macos:
 
 macOS Installation Guide

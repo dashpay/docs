@@ -1,3 +1,7 @@
+.. meta::
+   :description: Dash Core wallet stratup arguments and RPC command reference
+   :keywords: dash, core, wallet, arguments, commands, RPC
+
 .. _dashcore-rpc:
 
 ======================

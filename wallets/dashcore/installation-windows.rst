@@ -1,3 +1,7 @@
+.. meta::
+   :description: How to download, install and encrypt the Dash Core wallet in Windows
+   :keywords: dash, core, wallet, windows, installation
+
 .. _dashcore-installation-windows:
 
 Windows Installation Guide

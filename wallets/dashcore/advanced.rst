@@ -1,3 +1,7 @@
+.. meta::
+   :description: Coin control, multisig, KeePass and multiple wallet files using the Dash Core wallet
+   :keywords: dash, core, wallet, backup, restore, wallet.dat, multisig, KeePass, coin control
+
 .. _dashcore-advanced:
 
 ===============

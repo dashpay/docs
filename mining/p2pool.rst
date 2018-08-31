@@ -1,3 +1,7 @@
+.. meta::
+   :description: Guide to setting up a Dash P2Pool node
+   :keywords: dash, mining, X11, p2pool, node, pool, software, ASIC, mining pool
+
 .. _p2pool:
 
 ======================

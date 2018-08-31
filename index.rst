@@ -1,6 +1,6 @@
 .. meta::
    :description: The Dash Documentation offers information and guides on Dash, the open source peer-to-peer cryptocurrency with a strong focus on the payments industry. 
-   :keywords: dash, cryptocurrency, documentation, guide, masternodes, mining, wallets, merchants, governance, digital cash
+   :keywords: dash, cryptocurrency, documentation, guide, masternodes, mining, wallets, merchants, governance, instantsend, privatesend, x11, instant, private, secure, digital cash
 
 
 ==================

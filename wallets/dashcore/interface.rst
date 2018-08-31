@@ -1,3 +1,7 @@
+.. meta::
+   :description: Description of dialogs and interfaces in the Dash Core wallet
+   :keywords: dash, core, wallet, interface, dialog, synchronisation, tools options
+
 .. _dashcore-interface:
 
 =======================

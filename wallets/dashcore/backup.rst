@@ -1,3 +1,7 @@
+.. meta::
+   :description: How to safely back up and restore the Dash Core wallet
+   :keywords: dash, core, wallet, backup, restore, wallet.dat
+
 .. _dashcore-backup:
 
 =========================

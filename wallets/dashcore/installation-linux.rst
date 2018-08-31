@@ -1,3 +1,7 @@
+.. meta::
+   :description: How to download, install and encrypt the Dash Core wallet in Linux
+   :keywords: dash, core, wallet, linux, ubuntu, installation
+
 .. _dashcore-installation-linux:
 
 Linux Installation Guide

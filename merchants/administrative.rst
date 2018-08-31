@@ -1,3 +1,7 @@
+.. meta::
+   :description: Administrative guides for merchants using Dash. Onboarding and immediate currency conversion at time of sale
+   :keywords: dash, pos, merchants, currency, conversion, onboarding, legal, promotion
+
 .. _merchants-administrative:
 
 ========================

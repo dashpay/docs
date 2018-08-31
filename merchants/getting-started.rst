@@ -1,3 +1,7 @@
+.. meta::
+   :description: Guide for merchants getting started with Dash. Online and offline payment processors
+   :keywords: dash, pos, merchants, payment processor, store, wordpress, woocommerce, coinpayments, point of sale
+
 .. _merchants:
 
 .. include:: <isopub.txt>

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Technical guides for merchants using Dash. API and SDK resources.
+   :keywords: dash, merchants, payment processor, API, SDK, insight, blockcypher, gocoin, instantsend, vending machines
+
 .. _merchants-technical:
 
 ================

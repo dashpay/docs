@@ -1,3 +1,7 @@
+.. meta::
+   :description: Guide to sending and receiving Dash using the Dash Core wallet
+   :keywords: dash, core, wallet, send, receive, transaction
+
 .. _dashcore-send-receive:
 
 =====================

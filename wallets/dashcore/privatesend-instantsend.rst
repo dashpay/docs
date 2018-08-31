@@ -1,3 +1,7 @@
+.. meta::
+   :description: Using InstantSend and PrivateSend with Dash
+   :keywords: dash, core, mobile, wallet, privatesend, instantsend
+
 .. _dashcore-privatesend-instantsend:
 
 ===========================

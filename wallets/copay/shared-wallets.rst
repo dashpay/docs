@@ -1,3 +1,7 @@
+.. meta::
+   :description: Setting up shared multi-signature wallets using Dash Copay
+   :keywords: dash, mobile, wallet, copay, multisig, ios, android, shared wallet
+
 .. _dash-copay:
 
 ==============
@@ -75,6 +79,3 @@ sending Dash requires participation from the copayers.
    :width: 200px
 
 *Adding copayers to a 2-of-3 shared wallet in Dash Copay*
-
-Sending from a Shared Wallet
-============================

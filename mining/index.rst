@@ -1,3 +1,7 @@
+.. meta::
+   :description: Information and guides on how to mine the Dash cryptocurrency
+   :keywords: dash, mining, X11, masternode, CPU, GPU, ASIC, software, hardware, pool, mining pools
+
 .. _mining:
 
 ======
