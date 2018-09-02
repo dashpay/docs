@@ -114,7 +114,7 @@ here:
 - `How to Send Cryptocurrency from the SmartWallet <https://support.ethos.io/support/solutions/articles/35000082787-how-to-send-cryptocurrency-from-the-smartwallet>`_
 
 .. figure:: img/ethos-wallet.png
-   :width: 400px
+   :width: 133px
 
    Ethos Universal Wallet on Android
 
