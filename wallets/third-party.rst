@@ -1,6 +1,6 @@
 .. meta::
    :description: List and detailed information on third-party wallets supporting the Dash cryptocurrency
-   :keywords: dash, wallet, mobile, edge, paytomat, mobi, exodus, atomic, jaxx, coinomi, cobo, cryptonator
+   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, exodus, atomic, jaxx, coinomi, cobo, cryptonator
 
 .. _dash-third-party:
 
@@ -67,6 +67,56 @@ here:
    :width: 400px
 
    Edge Welcome, Receive Dash and Balance screens
+
+Ethos
+=====
+
+https://www.ethos.io
+
+.. image:: img/ethos.png
+   :width: 100px
+   :align: right
+   :target: https://www.ethos.io
+
+The Ethos Universal Wallet allows you to store Dash and over 100 other
+cryptocurrencies. It features a single recovery phrase, known as the
+SmartKey, with which you can restore all balances on another device.
+Features include human-readable usernames, ShapeShift coin conversion
+and a portfolio tracker.
+
+Installation
+------------
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/ethos-universal-wallet/id1376959464
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=io.ethos.universalwallet
+
+Ethos Universal Wallet is available from the `Google Play Store for Android 
+<https://play.google.com/store/apps/details?id=io.ethos.universalwallet>`__ 
+and the `Apple App Store for iOS
+<https://itunes.apple.com/us/app/ethos-universal-wallet/id1376959464>`__.
+
+Documentation
+-------------
+
+Ethos offers detailed documentation of all functions at
+https://support.ethos.io and a few quick links are also collected
+here:
+
+- `How to Create and Ethos Account <https://support.ethos.io/support/solutions/articles/35000081037-how-to-create-an-ethos-account>`__
+- `How to Create Your SmartKey and First SmartWallet <https://support.ethos.io/support/solutions/articles/35000077327-how-to-create-your-smartkey-and-first-smartwallet>`_
+- `How to Add Coins to a SmartWallet <https://support.ethos.io/support/solutions/articles/35000077328-how-to-add-coins-to-a-smartwallet>`_
+- `How to Receive Cryptocurrency to a SmartWallet <https://support.ethos.io/support/solutions/articles/35000077329-how-to-receive-cryptocurrency-to-a-smartwallet>`_
+- `How to Send Cryptocurrency from the SmartWallet <https://support.ethos.io/support/solutions/articles/35000082787-how-to-send-cryptocurrency-from-the-smartwallet>`_
+
+.. figure:: img/ethos-wallet.png
+   :width: 400px
+
+   Ethos Universal Wallet on Android
 
 Paytomat
 ========
