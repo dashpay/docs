@@ -1,3 +1,7 @@
+.. meta::
+   :description: Developers guide and information about sporks and Dash version history
+   :keywords: dash, developers, sporks, version history
+
 .. _developers:
 
 ==========

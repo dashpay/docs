@@ -1,3 +1,7 @@
+.. meta::
+   :description: Practical guide to using the Dash governance system and treasury
+   :keywords: dash, dgbb, governance, funding, voting, proposals, masternodes
+
 .. _using-governance:
 
 =====================

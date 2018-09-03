@@ -1,6 +1,6 @@
 .. meta::
    :description: Introduction to documentation on how to set up and operate a masternode for the Dash cryptocurrency.
-   :keywords: dash, masternodes, hosting, linux, payment
+   :keywords: dash, masternodes, hosting, linux, payment, setup
 
 .. _masternodes:
 

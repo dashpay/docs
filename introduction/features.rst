@@ -1,3 +1,7 @@
+.. meta::
+   :description: Dash features several unique value propositions including masternodes, PrivateSend, InstantSend and a decentralized governance system
+   :keywords: dash, cryptocurrency, features, masternodes, privatesend, instantsend, sporks, x11, dgw, governance, sentinel, evolution
+
 .. _features:
 
 ========

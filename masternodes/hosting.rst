@@ -1,3 +1,7 @@
+.. meta::
+   :description: Masternode hosting services can help you set up and maintain a Dash masternode
+   :keywords: dash, cryptocurrency, hosting, server, linux, masternode, contact, trezor, setup
+
 .. _masternode-hosting:
 
 ================
@@ -58,7 +62,7 @@ CrowdNode
    :align: right
    :target: https://crowdnode.io
 
-https://crowdnode.io/
+https://crowdnode.io
 
 - Operated by: CrowdNode ApS
 - Services: Hosting
@@ -85,7 +89,7 @@ https://node40.com
 Masternodehosting
 -----------------
 
-https://masternodehosting.com/
+https://masternodehosting.com
 
 - Operated by: flare (Dash Core team member)
 - Services: Hosting

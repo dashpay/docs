@@ -1,3 +1,7 @@
+.. meta::
+   :description: Safety and security when buying, holding and spending Dash
+   :keywords: dash, cryptocurrency, safety, security, hardware, trezor, scam, ponzi, fake
+
 .. _safety:
 
 ======
@@ -144,4 +148,3 @@ HashOcean
 
 CryptoDouble
   - http://themerkle.com/bitcoin-hyip-ponzi-scheme-alert-coindouble/
-

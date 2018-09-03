@@ -1,3 +1,7 @@
+.. meta::
+   :description: Installing Dash using a package manager
+   :keywords: dash, cryptocurrency, fedora, ubuntu, rpm, apt, git, masternode, install, binary
+
 .. _masternode_advanced:
 
 ===============
@@ -19,4 +23,3 @@ Installing Dash on Ubuntu Linux
 Dash binaries are under development for distribution through the Ubuntu
 Linux Launchpad repository system. Check back here for details once a
 release announcement is made.
-

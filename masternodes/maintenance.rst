@@ -1,3 +1,7 @@
+.. meta::
+   :description: Maintaining a Dash masternode involves staying up to date with the latest version, voting and handling payments
+   :keywords: dash, cryptocurrency, masternode, maintenance, maintain, payments, withdrawal, voting, monitoring
+
 .. _masternode-maintenance:
 
 ===========
@@ -259,7 +263,7 @@ Community members xkcd, Bertrand256 and moocowmoo have all published
 various tools you can run to determine your approximate position in the
 payment queue, and bots are available on Discord and Slack as well.
 
-- xkcd's mn_queue: https://github.com/kxcd/mn_queue
+- mn_queue: https://github.com/kxcd/mn_queue
 - Dashman: https://github.com/moocowmoo/dashman
 - DMT: https://github.com/Bertrand256/dash-masternode-tool
 

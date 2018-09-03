@@ -1,3 +1,7 @@
+.. meta::
+   :description: Translate Dash products such as wallets, websites and documentation using Transifex
+   :keywords: dash, translate, localize, syntax, website, android, ios, wallets, documentation, dash core
+
 .. _translating-dash:
 
 ================

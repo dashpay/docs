@@ -1,3 +1,7 @@
+.. meta::
+   :description: The Dash governance system is funded by 10% of the block reward
+   :keywords: dash, dgbb, governance, funding, voting, blockchain, development, block reward
+
 .. _governance:
 
 ==========

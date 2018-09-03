@@ -1,3 +1,7 @@
+.. meta::
+   :description: How to prepare and submit a successful proposal for the Dash treasury system
+   :keywords: dash, treasury, proposal, recommendations, communication, escrow
+
 .. _eight-steps:
 
 ================================

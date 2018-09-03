@@ -1,3 +1,7 @@
+.. meta::
+   :description: Explanation of how Dash masternodes work in theory and practice to support InstantSend, PrivateSend and governance
+   :keywords: dash, masternodes, hosting, linux, payment, instantsend, privatesend, governance, quorum, evolution
+
 .. _understanding_masternodes:
 
 =========================

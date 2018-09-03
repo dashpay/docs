@@ -1,3 +1,7 @@
+.. meta::
+   :description: Introduction to the Dash cryptocurrency and links to further reading
+   :keywords: dash, cryptocurrency, videos, documentation, roadmap, governance, funding, payments, whitepaper, roadmap
+
 .. _about:
 
 =============

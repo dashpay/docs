@@ -1,3 +1,7 @@
+.. meta::
+   :description: Dash can be purchased on cryptocurrency exchanges, over the counter and from ATMs
+   :keywords: dash, cryptocurrency, purchase, buy, exchange, atm, shapeshift, over the counter
+
 .. _how-to-buy:
 
 ==========

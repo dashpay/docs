@@ -1,3 +1,7 @@
+.. meta::
+   :description: Glossary and collection of links to other parts of the Dash ecosystem and network
+   :keywords: dash, cryptocurrency, glossary, links, community, official, github, roadmap, chat, discord, facebook, twitter, social media
+
 .. _information:
 
 =====================
