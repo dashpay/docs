@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 10:04+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: Korean (https://www.transifex.com/dash/teams/37570/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -17,15 +17,23 @@ msgstr ""
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../wallets/electrum/faq.rst:5
+#: ../../wallets/electrum/faq.rst:1
+msgid "Frequently Asked Questions about the Dash Electrum wallet"
+msgstr ""
+
+#: ../../wallets/electrum/faq.rst:1
+msgid "dash, wallet, electrum, faq, seed"
+msgstr ""
+
+#: ../../wallets/electrum/faq.rst:9
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:8
+#: ../../wallets/electrum/faq.rst:12
 msgid "How does Dash Electrum work?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:10
+#: ../../wallets/electrum/faq.rst:14
 msgid ""
 "Dash Electrum focuses on speed, low resource usage and providing a simple "
 "user experience for Dash. Startup times are instant because it operates in "
@@ -33,11 +41,11 @@ msgid ""
 "parts of the Dash system."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:16
+#: ../../wallets/electrum/faq.rst:20
 msgid "Does Dash Electrum trust servers?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:18
+#: ../../wallets/electrum/faq.rst:22
 msgid ""
 "Not really; the Dash Electrum client never sends private keys to the "
 "servers. In addition, it verifies the information reported by servers using "
@@ -45,27 +53,27 @@ msgid ""
 "<http://docs.electrum.org/en/latest/spv.html>`_."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:24
+#: ../../wallets/electrum/faq.rst:28
 msgid "What is the Seed?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:26
+#: ../../wallets/electrum/faq.rst:30
 msgid ""
 "The seed is a random phrase that is used to generate your private keys. "
 "Example::"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:31
+#: ../../wallets/electrum/faq.rst:35
 msgid ""
 "Your wallet can be entirely recovered from its seed. To do this, select the "
 "**I already have a seed** option during startup."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:35
+#: ../../wallets/electrum/faq.rst:39
 msgid "How secure is the seed?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:37
+#: ../../wallets/electrum/faq.rst:41
 msgid ""
 "The seed created by Dash Electrum has 128 bits of entropy. This means that "
 "it provides the same level of security as a Dash private key (of length 256 "
@@ -73,11 +81,11 @@ msgid ""
 "security."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:43
+#: ../../wallets/electrum/faq.rst:47
 msgid "What are change addresses?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:45
+#: ../../wallets/electrum/faq.rst:49
 msgid ""
 "The Dash Electrum wallet design and workflow are based on a concept called a"
 " “wallet generation seed”. This seed is a unique, randomly- selected list of"
@@ -85,17 +93,17 @@ msgid ""
 "generating addresses."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:50
+#: ../../wallets/electrum/faq.rst:54
 msgid ""
 "To understand the problem that seeds solve, browse to the Electrum "
 "**Receive** tab. Next, open the collapsible entry marked **Change**."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:56
+#: ../../wallets/electrum/faq.rst:60
 msgid "Receiving and change addresses in Dash Electrum"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:58
+#: ../../wallets/electrum/faq.rst:62
 msgid ""
 "Notice that the total balance does not only show the sum of all receiving "
 "addresses, but also the separately listed **Change** addresses. Where did "
@@ -103,7 +111,7 @@ msgid ""
 "funds?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:63
+#: ../../wallets/electrum/faq.rst:67
 msgid ""
 "Dash is an electronic cash system, meaning that it shares much in common "
 "with the process of using paper banknotes. Although some cash payments "
@@ -118,7 +126,7 @@ msgid ""
 "balances."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:75
+#: ../../wallets/electrum/faq.rst:79
 msgid ""
 "Spending the entire balance and sending any remainder to a change address is"
 " considered good practice because it prevents the transaction recipient from"
@@ -127,77 +135,77 @@ msgid ""
 "the **Tools > Electrum preferences** menu option."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:82
+#: ../../wallets/electrum/faq.rst:86
 msgid "How can I send the maximum available in my wallet?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:84
+#: ../../wallets/electrum/faq.rst:88
 msgid ""
 "Type an exclamation mark (!) in the **Amount** field or simply click the "
 "**Max** button. The fee will be automatically adjusted for that amount."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:88
+#: ../../wallets/electrum/faq.rst:92
 msgid "How can I send Dash without paying a transaction fee?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:90
+#: ../../wallets/electrum/faq.rst:94
 msgid ""
 "You can create a zero fee transaction in the GUI by following these steps:"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:93
+#: ../../wallets/electrum/faq.rst:97
 msgid "Enable the **Edit fees manually** option"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:94
+#: ../../wallets/electrum/faq.rst:98
 msgid "Enter 0 in the **Fee** field"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:95
+#: ../../wallets/electrum/faq.rst:99
 msgid "Enter the amount in the **Amount** field"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:97
+#: ../../wallets/electrum/faq.rst:101
 msgid ""
 "Note that transactions without fees might not be relayed by the Dash "
 "Electrum server, or by the Dash network."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:101
+#: ../../wallets/electrum/faq.rst:105
 msgid "Is there a way to enter amounts in USD in Dash Electrum?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:103
+#: ../../wallets/electrum/faq.rst:107
 msgid ""
 "Yes, go to **Tools > Prefernce > Fiat** and select a **Fiat currency** to "
 "display the current exchange rate from the chosen **Source**."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:109
+#: ../../wallets/electrum/faq.rst:113
 msgid "Entering values in fiat currency in Dash Electrum"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:113
+#: ../../wallets/electrum/faq.rst:117
 msgid "What does it mean to “Freeze” an address in Dash Electrum?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:115
+#: ../../wallets/electrum/faq.rst:119
 msgid ""
 "When you freeze an address, the funds in that address will not be used for "
 "sending Dash. You cannot send Dash if you don’t have enough funds in your "
 "non-frozen addresses."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:120
+#: ../../wallets/electrum/faq.rst:124
 msgid "How is the wallet encrypted?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:122
+#: ../../wallets/electrum/faq.rst:126
 msgid "Dash Electrum uses two separate levels of encryption:"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:124
+#: ../../wallets/electrum/faq.rst:128
 msgid ""
 "Your seed and private keys are encrypted using AES-256-CBC. The private keys"
 " are decrypted only briefly, when you need to sign a transaction; for this "
@@ -206,7 +214,7 @@ msgid ""
 "computer's memory."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:130
+#: ../../wallets/electrum/faq.rst:134
 msgid ""
 "In addition, your wallet file may be encrypted on disk. Note that the wallet"
 " information will remain unencrypted in the memory of your computer for the "
@@ -216,20 +224,20 @@ msgid ""
 "because it uses asymmetric encryption (ECIES)."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:138
+#: ../../wallets/electrum/faq.rst:142
 msgid ""
 "Wallet file encryption is activated by default since version 2.8. It is "
 "intended to protect your privacy, but also to prevent you from requesting "
 "Dash on a wallet that you do not control."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:143
+#: ../../wallets/electrum/faq.rst:147
 msgid ""
 "I have forgotten my password but still have my seed. Is there any way I can "
 "recover my password?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:145
+#: ../../wallets/electrum/faq.rst:149
 msgid ""
 "It is not possible to recover your password. However, you can restore your "
 "wallet from its seed phrase and choose a new password. If you lose both your"
@@ -237,32 +245,32 @@ msgid ""
 "we ask you to save your seed phrase on paper."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:150
+#: ../../wallets/electrum/faq.rst:154
 msgid ""
 "To restore your wallet from its seed phrase, create a new wallet, select the"
 " type, choose **I already have a seed** and proceed to input your seed "
 "phrase."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:155
+#: ../../wallets/electrum/faq.rst:159
 msgid "Does Dash Electrum support cold wallets?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:157
+#: ../../wallets/electrum/faq.rst:161
 msgid "Yes. See the :ref:`cold storage <electrum-cold-storage>` section."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:160
+#: ../../wallets/electrum/faq.rst:164
 msgid "Can I import private keys from other Dash clients?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:162
+#: ../../wallets/electrum/faq.rst:166
 msgid ""
 "In Dash Electrum 2.0, you cannot import private keys in a wallet that has a "
 "seed. You should sweep them instead."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:165
+#: ../../wallets/electrum/faq.rst:169
 msgid ""
 "If you want to import private keys and not sweep them you need to create a "
 "special wallet that does not have a seed. For this, create a new wallet, "
@@ -273,15 +281,15 @@ msgid ""
 " back up this wallet, because it cannot be recovered from seed."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:177
+#: ../../wallets/electrum/faq.rst:181
 msgid "Importing a list of private keys to create a wallet"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:180
+#: ../../wallets/electrum/faq.rst:184
 msgid "Can I sweep private keys from other Dash clients?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:182
+#: ../../wallets/electrum/faq.rst:186
 msgid ""
 "Sweeping private keys means to send all the Dash they control to an existing"
 " address in your wallet. The private keys you sweep do not become a part of "
@@ -289,7 +297,7 @@ msgid ""
 "has been deterministically generated from your wallet seed."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:188
+#: ../../wallets/electrum/faq.rst:192
 msgid ""
 "To sweep private keys go to **Wallet > Private Keys > Sweep**. Enter the "
 "private keys in the appropriate field. Leave the **Address** field "
@@ -299,70 +307,70 @@ msgid ""
 " coins to your wallet."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:196
+#: ../../wallets/electrum/faq.rst:200
 msgid "Where is my wallet file located?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:198
+#: ../../wallets/electrum/faq.rst:202
 msgid ""
 "The default wallet file is called default_wallet and is created when you "
 "first run the application. It is located under the `/wallets` folder."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:201
+#: ../../wallets/electrum/faq.rst:205
 msgid ""
 "**Linux:** Open Files, select **Go > Go to folder**, copy the path "
 "``~/.electrum-dash`` and paste it into the dialog box"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:203
+#: ../../wallets/electrum/faq.rst:207
 msgid ""
 "**macOS:** Open Finder, select **Go > Go to Folder**, copy the path "
 "``~/.electrum-dash`` and paste it into the dialog box"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:205
+#: ../../wallets/electrum/faq.rst:209
 msgid ""
 "**Windows:** Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and "
 "paste it in to the address bar"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:209
+#: ../../wallets/electrum/faq.rst:213
 msgid "Can I do bulk payments with Dash Electrum?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:211
+#: ../../wallets/electrum/faq.rst:215
 msgid ""
 "You can create a transaction with several outputs. In the GUI, type each "
 "address and amount on a line, separated by a comma."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:217
+#: ../../wallets/electrum/faq.rst:221
 msgid "Creating a transaction with multiple outputs in Dash Electrum"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:219
+#: ../../wallets/electrum/faq.rst:223
 msgid ""
 "Amounts are in the current unit set in the client. The total is shown in the"
 " GUI. You can also import a CSV file in the **Pay to** field by clicking on "
 "the folder icon."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:224
+#: ../../wallets/electrum/faq.rst:228
 msgid "Can Dash Electrum create and sign raw transactions?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:226
+#: ../../wallets/electrum/faq.rst:230
 msgid ""
 "Dash Electrum lets you create and sign raw transactions right from the user "
 "interface using a form."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:230
+#: ../../wallets/electrum/faq.rst:234
 msgid "Dash Electrum freezes when I try to send Dash"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:232
+#: ../../wallets/electrum/faq.rst:236
 msgid ""
 "This might happen if you are trying to spend a large number of transactions "
 "outputs (for example, if you have collected hundreds of donations from a "
@@ -371,18 +379,18 @@ msgid ""
 "can have different values, much like physical coins and bills."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:239
+#: ../../wallets/electrum/faq.rst:243
 msgid ""
 "If this happens, you should consolidate your transaction inputs by sending "
 "smaller amounts of Dash to one of your wallet addresses; this would be the "
 "equivalent of exchanging a stack of nickels for a dollar bill."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:247
+#: ../../wallets/electrum/faq.rst:251
 msgid "What is the gap limit?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:249
+#: ../../wallets/electrum/faq.rst:253
 msgid ""
 "The gap limit is the maximum number of consecutive unused addresses in your "
 "deterministic sequence of addresses. Dash Electrum uses it in order to stop "
@@ -390,17 +398,17 @@ msgid ""
 "the client will get all addresses until 20 unused addresses are found."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:256
+#: ../../wallets/electrum/faq.rst:260
 msgid "How can I pre-generate new addresses?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:258
+#: ../../wallets/electrum/faq.rst:262
 msgid ""
 "Dash Electrum will generate new addresses as you use them, until it hits the"
 " `gap limit`_."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:261
+#: ../../wallets/electrum/faq.rst:265
 msgid ""
 "If you need to pre-generate more addresses, you can do so by typing "
 "wallet.create_new_address() in the console. This command will generate one "
@@ -409,29 +417,29 @@ msgid ""
 "will remain until the gap is filled."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:267
+#: ../../wallets/electrum/faq.rst:271
 msgid ""
 "WARNING: Addresses beyond the gap limit will not automatically be recovered "
 "from seed. To recover them will require either increasing the client’s gap "
 "limit or generating new addresses until the used addresses are found."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:272
+#: ../../wallets/electrum/faq.rst:276
 msgid ""
 "If you wish to generate more than one address, you may use a ‘for’ loop. For"
 " example, if you wanted to generate 50 addresses, you could do this::"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:279
+#: ../../wallets/electrum/faq.rst:283
 msgid "How to upgrade Dash Electrum?"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:281
+#: ../../wallets/electrum/faq.rst:285
 msgid ""
 "Warning: always save your wallet seed on paper before doing an upgrade."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:283
+#: ../../wallets/electrum/faq.rst:287
 msgid ""
 "To upgrade Dash Electrum, just :ref:`install <electrum-installation>` the "
 "most recent version. The way to do this will depend on your OS. Note that "
@@ -439,7 +447,7 @@ msgid ""
 " remove the old version of the software if your OS does not do it for you."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:289
+#: ../../wallets/electrum/faq.rst:293
 msgid ""
 "Some Dash Electrum upgrades will modify the format of your wallet files. For"
 " this reason, it is not recommended to downgrade Dash Electrum to an older "
@@ -447,34 +455,34 @@ msgid ""
 "older version will not always be able to read the new wallet file."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:295
+#: ../../wallets/electrum/faq.rst:299
 msgid ""
 "The following issues should be considered when upgrading Dash Electrum 1.x "
 "wallets to Dash Electrum 2.x:"
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:298
+#: ../../wallets/electrum/faq.rst:302
 msgid ""
 "Dash Electrum 2.x will need to regenerate all of your addresses during the "
 "upgrade process. Please allow it time to complete, and expect it to take a "
 "little longer than usual for Dash Electrum to be ready."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:302
+#: ../../wallets/electrum/faq.rst:306
 msgid ""
 "The contents of your wallet file will be replaced with a Dash Electrum 2 "
 "wallet. This means Dash Electrum 1.x will no longer be able to use your "
 "wallet once the upgrade is complete."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:306
+#: ../../wallets/electrum/faq.rst:310
 msgid ""
 "The **Addresses** tab will not show any addresses the first time you launch "
 "Dash Electrum 2. This is expected behaviour. Restart Dash Electrum 2 after "
 "the upgrade is complete and your addresses will be available."
 msgstr ""
 
-#: ../../wallets/electrum/faq.rst:311
+#: ../../wallets/electrum/faq.rst:315
 msgid ""
 "Offline copies of Dash Electrum will not show the addresses at all because "
 "it cannot synchronize with the network. You can force an offline generation "

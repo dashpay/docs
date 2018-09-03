@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-25 08:07+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2018\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
@@ -18,11 +18,23 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../wallets/index.rst:5
+#: ../../wallets/index.rst:1
+msgid ""
+"Description of different wallets available to use and spend Dash "
+"cryptocurrency"
+msgstr ""
+
+#: ../../wallets/index.rst:1
+msgid ""
+"dash, wallet, core, electrum, android, ios, copay, paper, hardware, trezor, "
+"ledger, web, recovery"
+msgstr ""
+
+#: ../../wallets/index.rst:9
 msgid "Wallets"
 msgstr "Wallets"
 
-#: ../../wallets/index.rst:7
+#: ../../wallets/index.rst:11
 msgid ""
 "Whenever you are storing objects with a market value, security is necessary."
 " This applies to barter systems as well as economies using currency as a "
@@ -46,7 +58,7 @@ msgstr ""
 "Wallets aufbewahrt und dennoch für den alltäglichen Verbrauch verwendet "
 "werden können."
 
-#: ../../wallets/index.rst:17
+#: ../../wallets/index.rst:21
 msgid ""
 "For safety, it is not recommended to store significant funds on exchanges or"
 " software wallets. If you are holding cryptocurrency worth more than the "
@@ -59,11 +71,11 @@ msgstr ""
 "ist, solltest du darüber nachdenken eine :ref:`Hardware Wallet <hardware-"
 "wallets>` zu erwerben."
 
-#: ../../wallets/index.rst:26 ../../wallets/index.rst:68
+#: ../../wallets/index.rst:30 ../../wallets/index.rst:72
 msgid "Dash Core Wallet"
 msgstr "Dash Core Wallet"
 
-#: ../../wallets/index.rst:28
+#: ../../wallets/index.rst:32
 msgid ""
 "Dash Core Wallet is the full official release of Dash, and supports all Dash"
 " features as they are released, including InstantSend and PrivateSend, as "
@@ -77,52 +89,64 @@ msgid ""
 "functions in the wallet can be used. Dash Core Wallet is available for "
 "macOS, Linux, Raspberry Pi and Windows."
 msgstr ""
+"Dash Core Wallet ist die offizielle Dash-Vollversion und unterstützt alle "
+"Dash-Funktionen, einschließlich InstantSend und PrivateSend, und bietet den "
+"Zugang zu einer RPC-Konsole und den Governance-Features. Dash Core Wallet "
+"(aufgrund des verwendeten QT-Software-Frameworks gelegentlich auch QT-Wallet"
+" genannt) ist eine professionelle bzw. heavy Wallet, die die komplette "
+"Blockchain (mehrere GB groß) herunterladen muss und sowohl als Full Node als"
+" auch als Masternode betrieben werden kann. Aufgrund der Notwendigkeit, eine"
+" komplette Version der Blockchain zu speichern, ist eine längere Zeit für "
+"die Synchronisierung beim Starten der Wallet erforderlich. Ist dies "
+"geschehen, werden die korrekten Guthaben eingeblendet und die Funktionen der"
+" Wallet können genutzt werden. Die Dash Core Wallet ist für MacOS, Linux, "
+"Raspberry Pi und Windows erhältlich."
 
-#: ../../wallets/index.rst:41
+#: ../../wallets/index.rst:45
 msgid "Features:"
 msgstr "Funktionen:"
 
-#: ../../wallets/index.rst:43
+#: ../../wallets/index.rst:47
 msgid "PrivateSend"
 msgstr "PrivateSend"
 
-#: ../../wallets/index.rst:44
+#: ../../wallets/index.rst:48
 msgid "InstandSend"
 msgstr "InstandSend"
 
-#: ../../wallets/index.rst:45
+#: ../../wallets/index.rst:49
 msgid "Wallet encryption"
 msgstr "Wallet-Verschlüsselung"
 
-#: ../../wallets/index.rst:46
+#: ../../wallets/index.rst:50
 msgid "Coin control and fee control"
 msgstr "Coin-Kontrolle und Gebühren-Kontrolle"
 
-#: ../../wallets/index.rst:47
+#: ../../wallets/index.rst:51
 msgid "QR code generation and address book"
 msgstr "QR-Code generieren und Adressbuch"
 
-#: ../../wallets/index.rst:48
+#: ../../wallets/index.rst:52
 msgid "Masternode commands and voting"
 msgstr "Masternode-Befehle und Abstimmungen"
 
-#: ../../wallets/index.rst:49
+#: ../../wallets/index.rst:53
 msgid "Automated backup"
 msgstr "Automatische Backups"
 
-#: ../../wallets/index.rst:50
+#: ../../wallets/index.rst:54
 msgid "Debug console"
 msgstr "Debug-Konsole"
 
-#: ../../wallets/index.rst:52
+#: ../../wallets/index.rst:56
 msgid "Available documentation:"
 msgstr "Verfügbare Dokumentationen:"
 
-#: ../../wallets/index.rst:73 ../../wallets/index.rst:103
+#: ../../wallets/index.rst:77 ../../wallets/index.rst:107
 msgid "Dash Electrum Wallet"
 msgstr "Dash Electrum Wallet"
 
-#: ../../wallets/index.rst:75
+#: ../../wallets/index.rst:79
 msgid ""
 "Dash Electrum is a light wallet which uses powerful external servers to "
 "index the blockchain, while still securing the keys on your personal "
@@ -132,8 +156,16 @@ msgid ""
 "instant, while still keeping your funds secure and mobile. It does not "
 "currently support advanced InstantSend and PrivateSend features."
 msgstr ""
+"Dash Electrum ist eine Light Wallet, die mit leistungsstarken externen "
+"Servern die Blockchain indexiert und trotzdem die Schlüssel auf dem lokalen "
+"PC speichert. Die Transaktionen werden auf der Dash-Blockchain über die "
+"sogenannte Secure Payment Verification (SPV) verifiziert, die nur die Block-"
+"Header und nicht die vollständigen Blöcke benötigt. Dadurch ist der Start "
+"der Wallet in sekundenschnelle möglich, während das Guthaben weiterhin "
+"sicher und versendbar bleibt. Zur Zeit werden jedoch die Sonderfunktionen "
+"InstantSend und PrivateSend nicht unterstützt."
 
-#: ../../wallets/index.rst:84
+#: ../../wallets/index.rst:88
 msgid ""
 "Dash Electrum is a fork of the Electrum wallet for Bitcoin. While this "
 "documentation focuses on using Dash Electrum, full documentation of all "
@@ -146,11 +178,11 @@ msgstr ""
 "gleichen), kann über die `offizielle Dokumentationsseite "
 "<http://docs.electrum.org>`_ abgerufen werden."
 
-#: ../../wallets/index.rst:108
+#: ../../wallets/index.rst:112
 msgid "Dash Android Wallet"
 msgstr "Dash Android Wallet"
 
-#: ../../wallets/index.rst:110
+#: ../../wallets/index.rst:114
 msgid ""
 "Dash offers a standalone wallet for Android, with development supported by "
 "the Dash budget. The Dash Android Wallet supports advanced Dash features, "
@@ -159,16 +191,24 @@ msgid ""
 "book of frequently used addresses, pay with NFC, sweep paper wallets and "
 "more."
 msgstr ""
+"Dash verfügt über eine Standalone-Wallet für Android, wobei die "
+"Entwicklungskosten durch das Dash-Budget getragen werden. Die Dash Android "
+"Wallet unterstützt verschiedene Dash-Sonderfunktionen, inklusive "
+"Kontaktverwaltung und InstandSend. QR-Codes können gescannt und dargestellt "
+"werden, was schnelle Übertragungen ermöglicht. Die Wallet kann gesichert und"
+" wiederhergestellt werden, es ist möglich ein Adressbuch mit häufig "
+"verwendeten Adressen zu führen, über NFC zu bezahlen, Paper-Wallets zu "
+"übertragen und vieles mehr."
 
-#: ../../wallets/index.rst:130
+#: ../../wallets/index.rst:134
 msgid "*Dash Android Wallet*"
 msgstr "*Dash Android Wallet*"
 
-#: ../../wallets/index.rst:136
+#: ../../wallets/index.rst:140
 msgid "Dash iOS Wallet"
 msgstr "Dash iOS Wallet"
 
-#: ../../wallets/index.rst:138
+#: ../../wallets/index.rst:142
 msgid ""
 "Dash offers a standalone wallet for iOS, with development supported by the "
 "Dash budget. The official Dash Wallet supports advanced Dash features such "
@@ -176,16 +216,22 @@ msgid ""
 "backup your wallet using a recovery phrase and even pay to Bitcoin addresses"
 " through native integration with ShapeShift."
 msgstr ""
+"Dash verfügt über eine Standalone-Wallet für iOS, wobei die "
+"Entwicklungskosten durch das Dash-Budget getragen werden. Die Dash Wallet "
+"unterstützt verschiedene Dash-Sonderfunktionen, wie etwa InstandSend. QR-"
+"Codes können gescannt und dargestellt werden, die Wallet kann gesichert und "
+"wiederhergestellt werden und es ist möglich Zahlungen an Bitcoin-Adressen "
+"durch die ShapeShift-Integration durchzuführen."
 
-#: ../../wallets/index.rst:157
+#: ../../wallets/index.rst:161
 msgid "*Dash iOS Wallet*"
 msgstr "*Dash iOS Wallet*"
 
-#: ../../wallets/index.rst:162
+#: ../../wallets/index.rst:166
 msgid "Dash Copay Wallet"
 msgstr "Dash Copay Wallet"
 
-#: ../../wallets/index.rst:164
+#: ../../wallets/index.rst:168
 msgid ""
 "The Dash Copay wallet is a modern and feature-rich wallet available for both"
 " mobile and desktop devices. It supports advanced Dash features including "
@@ -195,28 +241,40 @@ msgid ""
 "required for use, the private keys to your addresses are stored securely on "
 "your device and under your control at all times."
 msgstr ""
+"Die Dash Copay Wallet ist eine hochmoderne und leistungsfähige Wallet für "
+"Mobil- und Desktop-Geräte. Sie unterstützt Dash-Sonderfunktionen wie "
+"InstantSend, HD-Adressgenerierung, benutzerfreundliche Adressbücher, "
+"verschiedene Wallets in einer App und anwenderfreundliche Multisignatur-"
+"Wallets. Dash Copay ist eine Light Wallet, d.h., dass die privaten Schlüssel"
+" der Adressen sicher auf dem Endgerät gespeichert sind, obwohl keine "
+"vollständige Kopie der Blockchain benötigt wird."
 
-#: ../../wallets/index.rst:184
+#: ../../wallets/index.rst:188
 msgid "*Dash Copay Wallet*"
 msgstr "*Dash Copay Wallet*"
 
-#: ../../wallets/index.rst:189 ../../wallets/index.rst:204
+#: ../../wallets/index.rst:193 ../../wallets/index.rst:208
 msgid "Dash Paper Wallet"
 msgstr "Dash Paper Wallet"
 
-#: ../../wallets/index.rst:191
+#: ../../wallets/index.rst:195
 msgid ""
 "The `Dash Paper Wallet generator <https://paper.dash.org>`_ allows you to "
 "generate, encrypt and secure the keys to a single Dash address on a clean "
 "computer without ever connecting to the internet. Perfect for long term "
 "secure storage."
 msgstr ""
+"Mit dem `Dash Paper Wallet Generator <https://paper.dash.org>`_ ist es "
+"möglich, die Schlüssel zu einer einzelnen Dash-Adresse auf einem virenfreien"
+" Computer zu generieren, zu verschlüsseln und zu sichern, ohne dass dieser "
+"sich jemals mit dem Internet verbinden muss. Dies ist ideal für eine "
+"langfristige und sichere Lagerung."
 
-#: ../../wallets/index.rst:210
+#: ../../wallets/index.rst:214
 msgid "Hardware Wallets"
 msgstr "Hardware Wallets"
 
-#: ../../wallets/index.rst:212
+#: ../../wallets/index.rst:216
 msgid ""
 "A hardware wallet is a type of device which stores private keys for a "
 "blockchain in a secure hardware device, instead of in a database file such "
@@ -227,8 +285,17 @@ msgid ""
 "could be used to steal passwords to unlock the private keys used with "
 "software wallets."
 msgstr ""
+"Eine Hardware-Wallet ist ein Gerät, welches die privaten Schlüssel zu einer "
+"Blockchain in einem sicheren Speichermedium lagert, statt in einer "
+"Datenbankdatei wie etwa wallet.dat, die bei gängigen Software-Wallets "
+"verwendet wird. Dies bietet gegenüber Software-Wallets große "
+"Sicherheitsvorteile, ebenso wie praktische Vorteile gegenüber Paper-Wallets."
+" Bis heute liegen keine Beweise dafür vor, dass Hardware-Wallets durch Viren"
+" kompromittiert werden können, und sie sind zudem immun gegen Keylogger-"
+"Angriffe, durch welche Passwörter gestohlen werden, um die privaten "
+"Schlüssel einer Software-Wallet abzufangen."
 
-#: ../../wallets/index.rst:221
+#: ../../wallets/index.rst:225
 msgid ""
 "Hardware wallets function by storing your private keys in a protected area "
 "of a microcontroller. It is impossible for the private key to leave the "
@@ -237,37 +304,50 @@ msgid ""
 " computer or smartphone. Most hardware wallets feature a screen which allows"
 " you to independently confirm the address you are sending to is correct."
 msgstr ""
+"Hardware-Wallets lagern die privaten Schlüssel in dem abgeschlossenen "
+"Bereich eines Mikrocontrollers. Es ist vollkommen unmöglich, dass die "
+"privaten Schlüssel diesen Bereich unverschlüsselt verlassen können - nur die"
+" signierte Ausgabe des kryptographischen Hash wird an das Gerät, welches wie"
+" etwa ein Computer oder Smartphone mit der Blockchain interagiert, "
+"übermittelt. Die meisten Hardware-Wallets geben auf einem Bildschirm zur "
+"Sicherheit auch die Adresse aus, an die eine Transaktion versandt wird."
 
-#: ../../wallets/index.rst:229
+#: ../../wallets/index.rst:233
 msgid ""
 "This section lists the most common commercial hardware wallets supporting "
 "Dash, although some other enthusiast projects may also be available."
 msgstr ""
+"In diesem Abschnitt werden die wichtigsten Hardware-Wallets aufgelistet, die"
+" Dash integriert haben, wobei jedoch auch Liebhaberprojekte existieren."
 
-#: ../../wallets/index.rst:240
+#: ../../wallets/index.rst:244
 msgid "Trezor Web Wallet"
 msgstr "Trezor Web Wallet"
 
-#: ../../wallets/index.rst:245
+#: ../../wallets/index.rst:249
 msgid "Third Party Wallets"
 msgstr "Third Party Wallets"
 
-#: ../../wallets/index.rst:247
+#: ../../wallets/index.rst:251
 msgid ""
 "These wallets have been developed by external developers to support Dash. "
 "Many third party wallets support multiple different cryptocurrencies at the "
 "same time, or integrate instant cryptocurrency exchanges."
 msgstr ""
+"Diese Wallets wurden von Drittanbietern entwickelt und sie verfügen über "
+"eine Dash-Integration. Bei diesen Wallets werden verschiedene "
+"Kryptowährungen unterstützt und es ist eine sofortige Tauschmöglichkeit "
+"integriert."
 
-#: ../../wallets/index.rst:260
+#: ../../wallets/index.rst:264
 msgid "Edge Wallet"
 msgstr "Edge Wallet"
 
-#: ../../wallets/index.rst:266
+#: ../../wallets/index.rst:270
 msgid "Web Wallets"
 msgstr "Web Wallets"
 
-#: ../../wallets/index.rst:268
+#: ../../wallets/index.rst:272
 msgid ""
 "Web wallets are services which keep a Dash balance for you, while "
 "maintaining control of the private keys on your behalf. Any Dash stored on "
@@ -278,16 +358,25 @@ msgid ""
 "exception is MyDashWallet.org, which provides a secure web interface to the "
 "Dash blockchain while leaving you with full control of your private keys."
 msgstr ""
+"Web Wallets sind Dienste, die das Dash-Guthaben eines Nutzers sichern und "
+"dabei die Kontrolle über dessen privaten Schlüssel haben. Unter diese "
+"Kategorie fällt vorallem Guthaben, welches auf :ref:`exchanges <exchanges>` "
+"gelagert wird, aber es gibt auch einige Dienste, die Dash über einfache "
+"Google/Facebook Login-Systeme absichern. Vorsicht bei der Lagerung im "
+"Internet, denn die Sicherheit der Dash hängt sehr stark von dem lagernden "
+"Unternehmen ab. Eine Ausnahme ist dabei MyDashWallet.org, welches eine "
+"sichere Schnittstelle zur Dash-Blockchain bietet und keine Kontrolle über "
+"die privaten Schlüssel hat."
 
-#: ../../wallets/index.rst:286
+#: ../../wallets/index.rst:290
 msgid "My Dash Wallet"
 msgstr "My Dash Wallet"
 
-#: ../../wallets/index.rst:289
+#: ../../wallets/index.rst:293
 msgid "Wallet Guides"
 msgstr "Wallet-Anleitungen"
 
-#: ../../wallets/index.rst:291
+#: ../../wallets/index.rst:295
 msgid ""
 "Documentation in this section describes common tasks and questions relating "
 "to all wallets."

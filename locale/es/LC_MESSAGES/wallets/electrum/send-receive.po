@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-11 06:39+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
@@ -18,11 +18,19 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../wallets/electrum/send-receive.rst:5
+#: ../../wallets/electrum/send-receive.rst:1
+msgid "Guide to sending and receiving Dash using the Dash Electrum wallet"
+msgstr ""
+
+#: ../../wallets/electrum/send-receive.rst:1
+msgid "dash, wallet, electrum, send, receive, transaction"
+msgstr ""
+
+#: ../../wallets/electrum/send-receive.rst:9
 msgid "Sending and receiving"
 msgstr "Enviar y recibir"
 
-#: ../../wallets/electrum/send-receive.rst:7
+#: ../../wallets/electrum/send-receive.rst:11
 msgid ""
 "You may own Dash stored in another software wallet, or on an exchange such "
 "as Bittrex or Kraken, or simply want to send or receive funds as a wage or "
@@ -41,11 +49,11 @@ msgstr ""
 "para el público, se considera como mejor práctica utilizar una nueva "
 "dirección para cada transacción a fin de mantener tu privacidad."
 
-#: ../../wallets/electrum/send-receive.rst:18
+#: ../../wallets/electrum/send-receive.rst:22
 msgid "Sending"
 msgstr "Enviando"
 
-#: ../../wallets/electrum/send-receive.rst:20
+#: ../../wallets/electrum/send-receive.rst:24
 msgid ""
 "Click the **Send** tab to make a payment. Enter the destination address in "
 "the **Pay to** field, either manually or by pasting from the clipboard. "
@@ -64,12 +72,12 @@ msgstr ""
 " una advertencia si el monto total de la transacción excede el saldo del "
 "monedero."
 
-#: ../../wallets/electrum/send-receive.rst:31
-#: ../../wallets/electrum/send-receive.rst:60
+#: ../../wallets/electrum/send-receive.rst:35
+#: ../../wallets/electrum/send-receive.rst:64
 msgid "Transaction ready to send in Dash Electrum wallet"
 msgstr "Transacción lista para enviar en el monedero Dash Electrum"
 
-#: ../../wallets/electrum/send-receive.rst:33
+#: ../../wallets/electrum/send-receive.rst:37
 msgid ""
 "The wallet will request your password, then broadcast the transaction to the"
 " network and display a confirmation dialog with your transaction ID."
@@ -78,17 +86,17 @@ msgstr ""
 "red y mostrará un cuadro de diálogo de confirmación con tu ID de "
 "transacción."
 
-#: ../../wallets/electrum/send-receive.rst:43
+#: ../../wallets/electrum/send-receive.rst:47
 msgid "Password prompt and transaction confirmation in Dash Electrum wallet"
 msgstr ""
 "Solicitud de contraseña y confirmación de transacción en el monedero Dash "
 "Electrum "
 
-#: ../../wallets/electrum/send-receive.rst:47
+#: ../../wallets/electrum/send-receive.rst:51
 msgid "Receiving"
 msgstr "Recibiendo"
 
-#: ../../wallets/electrum/send-receive.rst:49
+#: ../../wallets/electrum/send-receive.rst:53
 msgid ""
 "You can view your receiving addresses by clicking the **Receive** tab. "
 "Double-click the **Receiving address**, then copy it to the clipboard by "
@@ -107,7 +115,7 @@ msgstr ""
 "mostrará la información almacenada en el área superior, junto con un código "
 "QR que contiene la misma información."
 
-#: ../../wallets/electrum/send-receive.rst:62
+#: ../../wallets/electrum/send-receive.rst:66
 msgid ""
 "Enter this address in the software sending the funds, send it to the person "
 "transferring funds to you or scan it directly from your mobile wallet. Once "
@@ -121,11 +129,11 @@ msgstr ""
 "en la esquina inferior izquierda de tu monedero, y el indicador en la tabla "
 "**Solicitudes** cambiará de **Pendiente** a **Pagado**."
 
-#: ../../wallets/electrum/send-receive.rst:71
+#: ../../wallets/electrum/send-receive.rst:75
 msgid "Successfully received payment in Dash Electrum wallet"
 msgstr "Recibir de manera exitosa un pago en el monedero Dash Electrum"
 
-#: ../../wallets/electrum/send-receive.rst:73
+#: ../../wallets/electrum/send-receive.rst:77
 msgid ""
 "Once you have used an address, you can either continue using it or click "
 "**New** to generate a new address."
@@ -133,11 +141,11 @@ msgstr ""
 "Una vez que hayas utilizado una dirección, puedes continuar usándola o hacer"
 " click en **Nueva** para generar una nueva dirección."
 
-#: ../../wallets/electrum/send-receive.rst:77
+#: ../../wallets/electrum/send-receive.rst:81
 msgid "Monitoring transactions"
 msgstr "Supervisar transacciones"
 
-#: ../../wallets/electrum/send-receive.rst:79
+#: ../../wallets/electrum/send-receive.rst:83
 msgid ""
 "The **History** tab lists all current and pending transactions. A "
 "transaction to an address in your wallet will appear in the list soon after "
@@ -161,7 +169,7 @@ msgstr ""
 "con una marca de verificación verde y la marca de tiempo en la que se "
 "realizó la transacción."
 
-#: ../../wallets/electrum/send-receive.rst:96
+#: ../../wallets/electrum/send-receive.rst:100
 msgid ""
 "Dash Electrum wallet History tab immediately after receiving a transaction "
 "and after confirmation is complete"
@@ -169,7 +177,7 @@ msgstr ""
 "Pestaña de Historia del monedero Dash Electrum inmediatamente después de "
 "recibir una transacción y una vez completada la confirmación"
 
-#: ../../wallets/electrum/send-receive.rst:99
+#: ../../wallets/electrum/send-receive.rst:103
 msgid ""
 "To view additional transaction details, right click a transaction on the "
 "**History** tab and select **Details** from the context menu. You can also "
@@ -186,6 +194,6 @@ msgstr ""
 "descripción de la transacción para tus registros o ve la transacción en un "
 "explorador de bloques externo."
 
-#: ../../wallets/electrum/send-receive.rst:109
+#: ../../wallets/electrum/send-receive.rst:113
 msgid "Transaction details in Dash Electrum wallet"
 msgstr "Detalles de la transacción en el monedero Dash Electrum"

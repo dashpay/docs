@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-11 06:39+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
@@ -18,15 +18,23 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:5
+#: ../../wallets/dashcore/privatesend-instantsend.rst:1
+msgid "Using InstantSend and PrivateSend with Dash"
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:1
+msgid "dash, core, mobile, wallet, privatesend, instantsend"
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:9
 msgid "PrivateSend and InstantSend"
 msgstr "PrivateSend e InstantSend"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:8
+#: ../../wallets/dashcore/privatesend-instantsend.rst:12
 msgid "PrivateSend"
 msgstr "PrivateSend"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:10
+#: ../../wallets/dashcore/privatesend-instantsend.rst:14
 msgid ""
 "This documentation describes how to use Dash Core to send Dash anonymously. "
 "PrivateSend, released as DarkSend in RC4 of the DarkCoin client and "
@@ -54,7 +62,7 @@ msgstr ""
 "Dash para su uso posterior en transacciones de PrivateSend. A partir de "
 "abril de 2018, PrivateSend no está disponible en otras billeteras Dash."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:23
+#: ../../wallets/dashcore/privatesend-instantsend.rst:27
 msgid ""
 "Knowledge of the exact number of rounds of PrivateSend mixing used in any "
 "given PrivateSend transaction has a `quantifiable effect "
@@ -72,7 +80,7 @@ msgstr ""
 "razón, el número recomendado (y predeterminado) de rondas de mezcla de "
 "PrivateSend se establece en cuatro."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:31
+#: ../../wallets/dashcore/privatesend-instantsend.rst:35
 msgid ""
 "You can read more about PrivateSend theory and processes :ref:`here "
 "<privatesend>`."
@@ -80,11 +88,11 @@ msgstr ""
 "Puedes leer más sobre la teoría y procesos de PrivateSend :ref:`aquí "
 "<privatesend>`."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:35
+#: ../../wallets/dashcore/privatesend-instantsend.rst:39
 msgid "Configuration"
 msgstr "Configuración"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:37
+#: ../../wallets/dashcore/privatesend-instantsend.rst:41
 msgid ""
 "Open your Dash Core wallet, go to **Settings** and select **Options**. Go to"
 " the **Wallet** tab."
@@ -92,7 +100,7 @@ msgstr ""
 "Abre tu billetera de Dash Core, ve a **Ajustes** y selecciona **Opciones**. "
 "Ve a la pestaña **Billetera**."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:43
+#: ../../wallets/dashcore/privatesend-instantsend.rst:47
 msgid ""
 "Next to **PrivateSend rounds to use**, enter a value between 1-8. Each round"
 " of PrivateSend performs one denominated fund mixing transaction. Higher "
@@ -106,7 +114,7 @@ msgstr ""
 " mientras que disminuye las posibilidades de detección a través de la "
 "colusión de nodos. 8 es la mayor cantidad de rondas disponibles actualmente."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:49
+#: ../../wallets/dashcore/privatesend-instantsend.rst:53
 msgid ""
 "NOTE: To prevent system abuse, an average of one in ten rounds of masternode"
 " mixing incurs a fee of .001 DASH."
@@ -114,7 +122,7 @@ msgstr ""
 "NOTA: para evitar el abuso del sistema, un promedio de una de cada diez "
 "rondas de mezcla de masternode conlleva a una comisión de .001 DASH."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:52
+#: ../../wallets/dashcore/privatesend-instantsend.rst:56
 msgid ""
 "Enter a target value for **Amount of Dash to keep anonymized**. This value "
 "provides a lower boundary on the final amount of funds to be anonymized. "
@@ -133,11 +141,11 @@ msgstr ""
 "cantidad anonimizada final puede ser mayor que tu cantidad deseada, pero "
 "debe estar cerca."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:60
+#: ../../wallets/dashcore/privatesend-instantsend.rst:64
 msgid "Click **OK** to save settings."
 msgstr "Haz click en **OK** para salvar los ajustes."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:62
+#: ../../wallets/dashcore/privatesend-instantsend.rst:66
 msgid ""
 "PrivateSend is disabled by default when you open the wallet. It will only "
 "start after you set the number of rounds and number of Dash to mix under "
@@ -148,11 +156,11 @@ msgstr ""
 "número de Dash para mezclar, en la configuración haz click en **Iniciar "
 "mezcla** en la pestaña **Información general** de tu billetera."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:69
+#: ../../wallets/dashcore/privatesend-instantsend.rst:73
 msgid "Starting Mixing"
 msgstr "Iniciar mezcla"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:71
+#: ../../wallets/dashcore/privatesend-instantsend.rst:75
 msgid ""
 "The PrivateSend process is initiated by clicking the **Start Mixing** button"
 " on the **Overview** tab of the Dash Core wallet. Mixing is possible once "
@@ -162,7 +170,7 @@ msgstr ""
 "mezcla** en la pestaña **Información general** de la billetera Dash Core. La"
 " mezcla es posible una vez que se han cumplido las siguientes condiciones:"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:75
+#: ../../wallets/dashcore/privatesend-instantsend.rst:79
 msgid ""
 "The wallet contains sufficient non-anonymized funds to create the minimum "
 "required denominated values"
@@ -170,12 +178,12 @@ msgstr ""
 "La billetera contiene suficientes fondos no anonimizados para crear los "
 "valores denominados mínimos requeridos "
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:77
+#: ../../wallets/dashcore/privatesend-instantsend.rst:81
 msgid "The user has not disabled PrivateSend in the Options dialog"
 msgstr ""
 "El usuario no ha deshabilitado PrivateSend en el cuadro de diálogo Opciones"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:78
+#: ../../wallets/dashcore/privatesend-instantsend.rst:82
 msgid ""
 "The target value for anonymized Funds in the Options dialog is greater than "
 "zero"
@@ -183,7 +191,7 @@ msgstr ""
 "El valor deseado para Fondos anónimos en el cuadro de diálogo Opciones es "
 "mayor que cero"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:81
+#: ../../wallets/dashcore/privatesend-instantsend.rst:85
 msgid ""
 "If your wallet is encrypted (highly recommended), you will be asked to enter"
 " your wallet passphrase. Enable the **Only for mixing via PrivateSend** "
@@ -193,11 +201,11 @@ msgstr ""
 " su contraseña de la billetera. Activa la casilla **Solo para mezclar "
 "mediante PrivateSend** para desbloquear la billetera solo para mezclar."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:88
+#: ../../wallets/dashcore/privatesend-instantsend.rst:92
 msgid "Entering a password for PrivateSend mixing only"
 msgstr "Ingresar una contraseña para PrivateSend solo para mezclar "
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:90
+#: ../../wallets/dashcore/privatesend-instantsend.rst:94
 msgid ""
 "This will unlock your wallet, and the PrivateSend mixing process will begin."
 " The wallet will remain unlocked until PrivateSend mixing is complete, at "
@@ -207,7 +215,7 @@ msgstr ""
 "PrivateSend. La billetera permanecerá desbloqueada hasta que se complete la "
 "mezcla de PrivateSend, en cuyo punto se bloqueará automáticamente."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:97
+#: ../../wallets/dashcore/privatesend-instantsend.rst:101
 msgid ""
 "PrivateSend interface after clicking the **Start Mixing** button. Note the "
 "**Status** is **Enabled**."
@@ -215,7 +223,7 @@ msgstr ""
 "La interfaz de PrivateSend después de hacer click en el botón **Iniciar "
 "mezcla**. Tenga en cuenta que **Estado** está **Activado**."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:100
+#: ../../wallets/dashcore/privatesend-instantsend.rst:104
 msgid ""
 "PrivateSend will begin creating transactions and your PrivateSend balance "
 "will gradually increase. This process can take some time, so be patient. You"
@@ -227,7 +235,7 @@ msgstr ""
 "paciente. Puedes supervisar el proceso con más detalle, como se describe en "
 "la siguiente sección."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:105
+#: ../../wallets/dashcore/privatesend-instantsend.rst:109
 msgid ""
 "Any of the following actions will interrupt the mixing process. Because the "
 "transactions are atomic (they either take place completely, or do not take "
@@ -239,16 +247,16 @@ msgstr ""
 "completo, o no realizan), debería ser posible interrumpir de manera segura "
 "la mezcla de PrivateSend en cualquier momento."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:107
+#: ../../wallets/dashcore/privatesend-instantsend.rst:111
 msgid "Clicking the Stop Mixing button on the Overview tab"
 msgstr ""
 "Hacer click en el botón Detener mezcla en la pestaña Descripción general"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:108
+#: ../../wallets/dashcore/privatesend-instantsend.rst:112
 msgid "Closing the client before PrivateSend mixing is completed"
 msgstr "Cerrar el cliente antes de que se complete la mezcla de PrivateSend"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:109
+#: ../../wallets/dashcore/privatesend-instantsend.rst:113
 msgid ""
 "Sending PrivateSend funds from the wallet before PrivateSend rounds are "
 "completed"
@@ -256,15 +264,15 @@ msgstr ""
 "Envío de fondos de PrivateSend desde la billetera antes de completar las "
 "rondas de PrivateSend"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:111
+#: ../../wallets/dashcore/privatesend-instantsend.rst:115
 msgid "Disabling PrivateSend before the process is complete"
 msgstr "Deshabilitar PrivateSend antes de que se complete el proceso"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:114
+#: ../../wallets/dashcore/privatesend-instantsend.rst:118
 msgid "Monitoring Mixing"
 msgstr "Monitorear la mezcla"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:116
+#: ../../wallets/dashcore/privatesend-instantsend.rst:120
 msgid ""
 "If you want to monitor PrivateSend in more detail, you need to enable some "
 "advanced features of the wallet. Go to **Settings**, select **Options** and "
@@ -277,14 +285,14 @@ msgstr ""
 " opciones **Habilitar las funciones de control de monedas** y **Habilitar la"
 " interfaz avanzada de PrivateSend**."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:125
+#: ../../wallets/dashcore/privatesend-instantsend.rst:129
 msgid ""
 "Enabling advanced options for PrivateSend in the Dash Core wallet settings"
 msgstr ""
 "Habilitar opciones avanzadas para PrivateSend en los ajustes de la billetera"
 " Dash Core"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:128
+#: ../../wallets/dashcore/privatesend-instantsend.rst:132
 msgid ""
 "This will allow you to monitor progress and see which individual operations "
 "PrivateSend is carrying out in the background."
@@ -292,11 +300,11 @@ msgstr ""
 "Esto te permitirá monitorear el progreso y ver qué operaciones individuales "
 "realiza PrivateSend en segundo plano."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:134
+#: ../../wallets/dashcore/privatesend-instantsend.rst:138
 msgid "Monitoring PrivateSend progress"
 msgstr "Monitorear el proceso de PrivateSend"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:136
+#: ../../wallets/dashcore/privatesend-instantsend.rst:140
 msgid ""
 "Since PrivateSend mixing creates a lot of new address keys to send and "
 "receive the anonymized denominations, you may receive a warning when the "
@@ -313,7 +321,7 @@ msgstr ""
 "anterior de tu billetera. Por esta razón, es importante hacer un respaldo de"
 " tu billetera nuevamente después de que se complete la mezcla."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:144
+#: ../../wallets/dashcore/privatesend-instantsend.rst:148
 msgid ""
 "You can also monitor PrivateSend progress by viewing the transactions "
 "created by the mixing process on the **Transactions** tab."
@@ -322,11 +330,11 @@ msgstr ""
 "transacciones creadas por el proceso de mezcla en la pestaña "
 "**Transacciones**."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:150
+#: ../../wallets/dashcore/privatesend-instantsend.rst:154
 msgid "Transactions created by PrivateSend on the Transactions tab"
 msgstr "Transacciones creadas por PrivateSend en la pestaña Transacciones"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:152
+#: ../../wallets/dashcore/privatesend-instantsend.rst:156
 msgid ""
 "The following table describes the PrivateSend-related transactions displayed"
 " in the Type column of the **Transactions** tab:"
@@ -334,19 +342,19 @@ msgstr ""
 "La siguiente tabla describe las transacciones relacionadas con PrivateSend "
 "que se muestran en la columna de la pestaña **Transacciones**:"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:156
+#: ../../wallets/dashcore/privatesend-instantsend.rst:160
 msgid "PrivateSend Transaction Type"
 msgstr "Tipo de transacción de PrivateSend"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:156
+#: ../../wallets/dashcore/privatesend-instantsend.rst:160
 msgid "Transaction Description"
 msgstr "Descripción de transacción"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:158
+#: ../../wallets/dashcore/privatesend-instantsend.rst:162
 msgid "PrivateSend Make Collateral Inputs (*Mixing*)"
 msgstr "PrivateSend hace entradas colaterales (*Mezclando*)"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:158
+#: ../../wallets/dashcore/privatesend-instantsend.rst:162
 msgid ""
 "Wallet funds were moved to collateral inputs that will be used to make "
 "collateral payments. This is done to minimize traceability of collaterals."
@@ -355,11 +363,11 @@ msgstr ""
 "usarán para realizar pagos de garantías. Esto se hace para minimizar la "
 "trazabilidad de las garantías."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:163
+#: ../../wallets/dashcore/privatesend-instantsend.rst:167
 msgid "PrivateSend Create Denominations (*Mixing*)"
 msgstr "PrivateSend crea denomiaciones (*Mezclando*)"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:163
+#: ../../wallets/dashcore/privatesend-instantsend.rst:167
 msgid ""
 "Wallet funds were broken into PrivateSend denominations (Step 1 "
 ":ref:`here<privatesend>`)"
@@ -367,11 +375,11 @@ msgstr ""
 "Los fondos de la billetera se dividen en denominaciones de PrivateSend (Paso"
 " 1 :ref:`aquí<privatesend>`)"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:167
+#: ../../wallets/dashcore/privatesend-instantsend.rst:171
 msgid "PrivateSend Denominate (*Mixing*)"
 msgstr "PrivatSend Denomina (*Mezclando*)"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:167
+#: ../../wallets/dashcore/privatesend-instantsend.rst:171
 msgid ""
 "A transaction was sent to a masternode in order to participate in a mixing "
 "session (Step 3 :ref:`here<privatesend>`)"
@@ -379,11 +387,11 @@ msgstr ""
 "Una transacción fue enviada a un masternode para participar en una sesión de"
 " mezcla (Paso 3 :ref:`aquí<privatesend>`)"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:171
+#: ../../wallets/dashcore/privatesend-instantsend.rst:175
 msgid "PrivateSend Collateral Payment (*Mixing*)"
 msgstr "PrivateSend pago de garantías (*Mezclando*)"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:171
+#: ../../wallets/dashcore/privatesend-instantsend.rst:175
 msgid ""
 "The mixing session collateral was claimed. This fee is charged in ~10% of "
 "mixing sessions to prevent spam attacks."
@@ -391,11 +399,11 @@ msgstr ""
 "Se reclamó la garantía de la sesión de mezcla. Esta comisión se cobra en ~ "
 "10% de las sesiones de mezcla para evitar los ataques de spam."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:176
+#: ../../wallets/dashcore/privatesend-instantsend.rst:180
 msgid "PrivateSend (*Spending*)"
 msgstr "PrivateSend (*Gasto*)"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:176
+#: ../../wallets/dashcore/privatesend-instantsend.rst:180
 msgid ""
 "Mixed funds were used to send a payment to someone. Note: Unlike the "
 "previous 4 transaction types, this is not a mixing process transaction."
@@ -404,7 +412,7 @@ msgstr ""
 " los 4 tipos de transacciones anteriores, esta no es una transacción de "
 "proceso de mezcla."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:182
+#: ../../wallets/dashcore/privatesend-instantsend.rst:186
 msgid ""
 "You can also use the coin control feature to view which addresses hold mixed"
 " denominations ready to be used for PrivateSend transactions. Go to the "
@@ -429,7 +437,7 @@ msgstr ""
 "completamente todas las entradas. El saldo mínimo actual para una entrada "
 "utilizada en una transacción de PrivateSend es 0.01000010 DASH."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:196
+#: ../../wallets/dashcore/privatesend-instantsend.rst:200
 msgid ""
 "Coin Selection dialog showing addresses holding PrivateSend mixed balances "
 "in different denominations"
@@ -437,11 +445,11 @@ msgstr ""
 "El Cuadro de diálogo de Selección de moneda muestra las direcciones que "
 "contienen saldos mixtos de PrivateSend en diferentes denominaciones"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:200
+#: ../../wallets/dashcore/privatesend-instantsend.rst:204
 msgid "Paying with PrivateSend"
 msgstr "Pago con PrivateSend"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:202
+#: ../../wallets/dashcore/privatesend-instantsend.rst:206
 msgid ""
 "You can only use PrivateSend for payments once you have mixed enough Dash to"
 " make up the amount you are trying to send. Because the mixing process takes"
@@ -466,7 +474,7 @@ msgstr ""
 "generalmente ocupará más espacio (en kilobytes) en la cadena de bloques y, "
 "por lo tanto, se te cobrará una comisión ligeramente más alta."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:213
+#: ../../wallets/dashcore/privatesend-instantsend.rst:217
 msgid ""
 "To send a payment using PrivateSend, go to the **Send** tab of the Dash Core"
 " wallet and enable the **PrivateSend** option. The balance displayed will "
@@ -487,7 +495,7 @@ msgstr ""
 "contraseña y recibirás un desglose detallado de la estructura de comisiones "
 "para PrivateSend antes de enviarla."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:226
+#: ../../wallets/dashcore/privatesend-instantsend.rst:230
 msgid ""
 "Dash Core ready to send a PrivateSend transaction. Note PrivateSend is "
 "enabled and the amount to be sent is less than the available PrivateSend "
@@ -497,15 +505,15 @@ msgstr ""
 "PrivateSend está habilitado y el monto que se enviará es menor que el saldo "
 "de PrivateSend disponible"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:232
+#: ../../wallets/dashcore/privatesend-instantsend.rst:236
 msgid "InstantSend"
 msgstr "InstantSend"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:235
+#: ../../wallets/dashcore/privatesend-instantsend.rst:239
 msgid "Introduction"
 msgstr "Introducción"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:237
+#: ../../wallets/dashcore/privatesend-instantsend.rst:241
 msgid ""
 "This documentation describes how to use InstantSend to instantly send funds "
 "to any other Dash user around the world. Dash InstantSend is supported by "
@@ -516,39 +524,39 @@ msgstr ""
 "mundo. Dash InstantSend es compatible con muchas billeteras y proveedores, "
 "incluidos (entre otros) los siguientes:"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:242
+#: ../../wallets/dashcore/privatesend-instantsend.rst:246
 msgid "Dash Core Wallet"
 msgstr "Billetera Dash Core"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:243
+#: ../../wallets/dashcore/privatesend-instantsend.rst:247
 msgid "Dash Android Wallet"
 msgstr "Cartera Dash para Android"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:244
+#: ../../wallets/dashcore/privatesend-instantsend.rst:248
 msgid "Dash iOS Wallet"
 msgstr "Cartera Dash para iOS"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:245
+#: ../../wallets/dashcore/privatesend-instantsend.rst:249
 msgid "Dash Copay Wallet"
 msgstr "Dash Copay Wallet"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:246
+#: ../../wallets/dashcore/privatesend-instantsend.rst:250
 msgid "My Dash Wallet"
 msgstr "Mi billetera de Dash"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:247
+#: ../../wallets/dashcore/privatesend-instantsend.rst:251
 msgid "Kraken"
 msgstr "Kraken"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:248
+#: ../../wallets/dashcore/privatesend-instantsend.rst:252
 msgid "Bitrefill"
 msgstr "Bitrefill"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:249
+#: ../../wallets/dashcore/privatesend-instantsend.rst:253
 msgid "and many more..."
 msgstr "y muchos más..."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:251
+#: ../../wallets/dashcore/privatesend-instantsend.rst:255
 msgid ""
 "You can read more about InstantSend theory and processes :ref:`here "
 "<instantsend>`."
@@ -556,11 +564,11 @@ msgstr ""
 "Puedes leer más sobre la teoría y procesos de InstantSend  :ref:`aquí "
 "<instantsend>`."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:255
+#: ../../wallets/dashcore/privatesend-instantsend.rst:259
 msgid "Paying with InstantSend"
 msgstr "Pago con InstantSend"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:257
+#: ../../wallets/dashcore/privatesend-instantsend.rst:261
 msgid ""
 "InstantSend functions by setting a flag on the transaction, causing "
 "deterministic selection of a quorum of 10 masternodes for each input spent "
@@ -597,7 +605,7 @@ msgstr ""
 "simplemente aparecerá como una transacción normal y deberás esperar por "
 "confirmaciones de bloque estándares."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:275
+#: ../../wallets/dashcore/privatesend-instantsend.rst:279
 msgid ""
 "To pay with InstantSend, simply check the relevant checkbox in your app. The"
 " following screenshots indicate where this setting can be found in the Dash "
@@ -608,6 +616,6 @@ msgstr ""
 "encontrar esta configuración en las billeteras Dash Core en iOS y en "
 "Android."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:287
+#: ../../wallets/dashcore/privatesend-instantsend.rst:291
 msgid "Dash Wallets showing InstantSend option"
 msgstr "Billeteras de Dash muestran la opción InstantSend"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-11 06:39+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
@@ -18,11 +18,21 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../wallets/signing.rst:5
+#: ../../wallets/signing.rst:1
+msgid ""
+"Guides and screenshots on how to sign and verify messages using the Dash "
+"cryptocurrency"
+msgstr ""
+
+#: ../../wallets/signing.rst:1
+msgid "dash, sign, verify, message, trezor, dash core"
+msgstr ""
+
+#: ../../wallets/signing.rst:9
 msgid "Signing and Verifying Messages"
 msgstr "Firmando y verificando mensajes"
 
-#: ../../wallets/signing.rst:7
+#: ../../wallets/signing.rst:11
 msgid ""
 "Dash wallets function by securely storing the private keys used to create "
 "transactions using publicly visible addresses on a distributed ledger called"
@@ -45,7 +55,7 @@ msgstr ""
 "en las que no confías, ya que los mensajes ambiguos pueden utilizarse para "
 "suplantar tu identidad."
 
-#: ../../wallets/signing.rst:17
+#: ../../wallets/signing.rst:21
 msgid ""
 "Signing messages requires a private key. Verifying messages requires a "
 "public address. In this way, you can write an arbitrary message and generate"
@@ -70,7 +80,7 @@ msgstr ""
 "ejemplo, puedes probar el siguiente mensaje y firma, y verificar que haya "
 "sido firmado por la dirección indicada:"
 
-#: ../../wallets/signing.rst:29
+#: ../../wallets/signing.rst:33
 msgid ""
 "**Message:** Documentation test signature **Address:** "
 "XwHihwiQzheVKbT76e7ZhPkujDCQGEZC6P **Signature:** "
@@ -80,11 +90,11 @@ msgstr ""
 "XwHihwiQzheVKbT76e7ZhPkujDCQGEZC6P **Firma:** "
 "IKaEt7MTb4Y57WIde5TLUkm1vbVsjk/L9eG+TE2tdQhMeK9vGgTsqcVOTmXXQ6QA0/WQtxqPURH2qZG27YR2VE0="
 
-#: ../../wallets/signing.rst:34
+#: ../../wallets/signing.rst:38
 msgid "Signing a Message"
 msgstr "Firmar un mensaje"
 
-#: ../../wallets/signing.rst:36
+#: ../../wallets/signing.rst:40
 msgid ""
 "The following screenshots show how to sign a message using the Dash Core "
 "wallet (**File > Sign message**), Trezor web wallet (Sign & Verify > Sign "
@@ -96,15 +106,15 @@ msgstr ""
 "Trezor (Firmar & Verificar > Firmar mensaje) y DMT (**Herramientas > Firmar "
 "mensaje con HW para la dirección del masternode actual**):"
 
-#: ../../wallets/signing.rst:48
+#: ../../wallets/signing.rst:52
 msgid "*Signing messages in Dash Core, Trezor web wallet and DMT*"
 msgstr "*Firmar mensajes en las billeteras Dash Core, web Trezor y DMT*"
 
-#: ../../wallets/signing.rst:51
+#: ../../wallets/signing.rst:55
 msgid "Verifying a Message"
 msgstr "Verificar mensaje"
 
-#: ../../wallets/signing.rst:53
+#: ../../wallets/signing.rst:57
 msgid ""
 "The following screenshots show how to verify a message using the Dash Core "
 "wallet (**File > Sign message**) and Trezor web wallet (**Sign & Verify > "
@@ -114,7 +124,7 @@ msgstr ""
 "utilizando la billetera Dash Core (**Archivo > Firmar mensaje**) y en la "
 "billetera web de Trezor (**Firmar & Verificar > Firmar mensaje**):"
 
-#: ../../wallets/signing.rst:62
+#: ../../wallets/signing.rst:66
 msgid ""
 "*Verifying messages in Dash Core and Trezor web wallet. Notice that the "
 "message verified by Dash Core was generated in Trezor, and vice versa*"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 08:39+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: G. S. <dashdenarodigitale@gmail.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
@@ -18,11 +18,23 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../governance/understanding.rst:5
+#: ../../governance/understanding.rst:1
+msgid ""
+"Discussion of theory and motivation behind the Dash governance system and "
+"treasury"
+msgstr ""
+
+#: ../../governance/understanding.rst:1
+msgid ""
+"dash, dgbb, governance, funding, voting, blockchain, development, block "
+"reward, treasury, budget"
+msgstr ""
+
+#: ../../governance/understanding.rst:9
 msgid "Understanding Dash Governance"
 msgstr "Comprendere la governance di Dash"
 
-#: ../../governance/understanding.rst:7
+#: ../../governance/understanding.rst:11
 msgid ""
 "One of the greatest challenges of building a cryptocurrency platform is "
 "ensuring you create a decentralized system of governance to manage, fund, "
@@ -43,7 +55,7 @@ msgstr ""
 " ha alcuni problemi che sono stati resi evidenti dall'esperienza delle "
 "vecchie piattaforme di criètomonete."
 
-#: ../../governance/understanding.rst:17
+#: ../../governance/understanding.rst:21
 msgid ""
 "Current crypto foundations are not related to the currency itself by any "
 "mechanism that is included in the protocol and are not designed to outlive "
@@ -71,7 +83,7 @@ msgstr ""
 "centralizzato e in quella fase è impossibile quantificare le esigenze future"
 " del progetto."
 
-#: ../../governance/understanding.rst:30
+#: ../../governance/understanding.rst:34
 msgid ""
 "Through the network of full nodes and the collateral requirement, Dash "
 "already has a decentralized network of masternode operators that are heavily"
@@ -91,7 +103,7 @@ msgstr ""
 " ma sono i più coinvolti perché, a differenza dei minatori, non possono "
 "riutilizzare i propri asset per nessun altro scopo o moneta."
 
-#: ../../governance/understanding.rst:39
+#: ../../governance/understanding.rst:43
 msgid ""
 "In the budget system, a portion of the block reward is held in escrow by the"
 " network itself, in the name of the operators, to be executed in the "
@@ -116,7 +128,7 @@ msgstr ""
 "un sorta di Kickstarter, il budget può essere utilizzato per qualsiasi cosa "
 "che crei valore all'interno dell'ecosistema."
 
-#: ../../governance/understanding.rst:51
+#: ../../governance/understanding.rst:55
 msgid ""
 "This is a 100% decentralized system powered by the masternodes, where "
 "budgets are set and paid directly from the blockchain. The blockchain hires "
@@ -142,7 +154,7 @@ msgstr ""
 "preservazione man mano che le persone vanno e vengono, rendendo la rete "
 "capace di sostenersi autonomamente senza dipendere da attori specifici."
 
-#: ../../governance/understanding.rst:63
+#: ../../governance/understanding.rst:67
 msgid ""
 "Note that if you do not operate a masternode, you may still be able to vote "
 "on DashBoost proposals. See https://www.dashboost.org for more information."
@@ -150,11 +162,11 @@ msgstr ""
 "Si noti che se non si utilizza un masternode, è possibile votare le proposte"
 " su DashBoost. Vedere https://www.dashboost.org per ulteriori informazioni."
 
-#: ../../governance/understanding.rst:68
+#: ../../governance/understanding.rst:72
 msgid "Budgets and masternode voting"
 msgstr "Budget e votazione dei masternode"
 
-#: ../../governance/understanding.rst:70
+#: ../../governance/understanding.rst:74
 msgid ""
 "The system works as a decentralized voting mechanism set up in the rules "
 "governing the blockchain, where budgets for specific projects are proposed, "
@@ -171,7 +183,7 @@ msgstr ""
 "Dash di assumere gli sviluppatori core e di pagarli direttamente dopo "
 "l'approvazione in modo decentralizzato del lavoro proposto ."
 
-#: ../../governance/understanding.rst:78
+#: ../../governance/understanding.rst:82
 msgid ""
 "A masternode votes on a proposal (technically a governance object on the "
 "blockchain) using the example command “masternode vote yes”, “masternode "
@@ -187,7 +199,7 @@ msgstr ""
 " I budget in discussione e l'avanzamento del voto possono essere "
 "visualizzati utilizzando il comando  \"masternode budget show\"."
 
-#: ../../governance/understanding.rst:85
+#: ../../governance/understanding.rst:89
 msgid ""
 "A well defined decentralized system of governance allows a cryptocurrency "
 "network to endure and survive its original creators. In this way, later "
@@ -208,7 +220,7 @@ msgstr ""
 " permettendoci di essere più agili e di competere con altri sistemi di "
 "pagamento, come Bitcoin o carte di credito, su scala globale."
 
-#: ../../governance/understanding.rst:95
+#: ../../governance/understanding.rst:99
 msgid ""
 "As the system has developed, a strong team of productive contractors paid "
 "from blockchain rewards has arisen and become established. This includes the"
@@ -231,11 +243,11 @@ msgstr ""
 "più rapida e più coerente della tabella di marcia di Dash e dei servizi di "
 "base di Dash."
 
-#: ../../governance/understanding.rst:106
+#: ../../governance/understanding.rst:110
 msgid "Reward schedule"
 msgstr "Programma dei reward"
 
-#: ../../governance/understanding.rst:108
+#: ../../governance/understanding.rst:112
 msgid ""
 "To guarantee long term sustainability of the blockchain, the network keeps a"
 " portion of the block rewards back as new blocks are created, with the "
@@ -247,28 +259,28 @@ msgid ""
 "the control of any individual."
 msgstr ""
 
-#: ../../governance/understanding.rst:118
+#: ../../governance/understanding.rst:122
 msgid "Mining reward for Proof-of-Work"
 msgstr ""
 
-#: ../../governance/understanding.rst:118
-#: ../../governance/understanding.rst:120
+#: ../../governance/understanding.rst:122
+#: ../../governance/understanding.rst:124
 msgid "45%"
 msgstr ""
 
-#: ../../governance/understanding.rst:120
+#: ../../governance/understanding.rst:124
 msgid "Masternode reward for Proof-of-Service"
 msgstr ""
 
-#: ../../governance/understanding.rst:122
+#: ../../governance/understanding.rst:126
 msgid "Decentralized governance budget"
 msgstr ""
 
-#: ../../governance/understanding.rst:122
+#: ../../governance/understanding.rst:126
 msgid "10%"
 msgstr ""
 
-#: ../../governance/understanding.rst:125
+#: ../../governance/understanding.rst:129
 msgid ""
 "Masternodes and miners take 45% of the mining reward each, at the time it is"
 " created. The remaining 10% is disbursed monthly by the masternode operators"
@@ -281,7 +293,7 @@ msgid ""
 "ripple effect that benefits all parties involved - especially the end users."
 msgstr ""
 
-#: ../../governance/understanding.rst:136
+#: ../../governance/understanding.rst:140
 msgid ""
 "The value generated by work done implementing proposals is expected to be "
 "greater than allocating 100% of rewards to mining because the network has "
@@ -293,7 +305,7 @@ msgid ""
 "similar to establishing a constitution."
 msgstr ""
 
-#: ../../governance/understanding.rst:145
+#: ../../governance/understanding.rst:149
 msgid ""
 "This approach of distributing the normal block reward in a way that "
 "considers all critical elements a cryptocurrency needs for its long term "
@@ -303,11 +315,11 @@ msgid ""
 "available resources in a way that is of greater net benefit to all parties."
 msgstr ""
 
-#: ../../governance/understanding.rst:154
+#: ../../governance/understanding.rst:158
 msgid "Contractors and proposals"
 msgstr ""
 
-#: ../../governance/understanding.rst:156
+#: ../../governance/understanding.rst:160
 msgid ""
 "Contractors of the blockchain can be developers, outreach professionals, "
 "team leaders, attorneys or even people appointed to do specific tasks. "
@@ -328,18 +340,18 @@ msgid ""
 "approximately 7.14% per year, together with the overall block reward."
 msgstr ""
 
-#: ../../governance/understanding.rst:175
+#: ../../governance/understanding.rst:179
 msgid ""
 "The following video by Tao of Satoshi includes advice for proposal owners "
 "entering proposals during periods of high competition for the available "
 "budget funds:"
 msgstr ""
 
-#: ../../governance/understanding.rst:186
+#: ../../governance/understanding.rst:190
 msgid "Proposal websites"
 msgstr ""
 
-#: ../../governance/understanding.rst:188
+#: ../../governance/understanding.rst:192
 msgid ""
 "The community has gathered around `DashCentral "
 "<https://www.dashcentral.org>`__ as a website to facilitate discussion and "
@@ -352,11 +364,11 @@ msgid ""
 "third party service."
 msgstr ""
 
-#: ../../governance/understanding.rst:201
+#: ../../governance/understanding.rst:205
 msgid "A typical view of proposal discussion and voting on Dash Central"
 msgstr ""
 
-#: ../../governance/understanding.rst:203
+#: ../../governance/understanding.rst:207
 msgid ""
 "Each proposal includes a description of the proposal goals, details of what "
 "work will be done and a breakdown of the requested budget. Many proposals "
@@ -373,11 +385,11 @@ msgid ""
 "superblock."
 msgstr ""
 
-#: ../../governance/understanding.rst:220
+#: ../../governance/understanding.rst:224
 msgid "Proposal details and voting buttons on Dash Central"
 msgstr ""
 
-#: ../../governance/understanding.rst:222
+#: ../../governance/understanding.rst:226
 msgid ""
 "Once passed, proposals are able to report back to the network on the `Dash "
 "Forum <https://www.dash.org/forum/topic/approved-proposals- updates-"
@@ -391,7 +403,7 @@ msgid ""
 "network in supporting roles."
 msgstr ""
 
-#: ../../governance/understanding.rst:234
+#: ../../governance/understanding.rst:238
 msgid ""
 "Voting on proposals is updated in real time every 2.5 minutes as blocks are "
 "mined, so current winning proposals and the total allocation of the "
@@ -399,11 +411,11 @@ msgid ""
 " <https://dashvotetracker.com>`__ is a popular site used for this purpose."
 msgstr ""
 
-#: ../../governance/understanding.rst:243
+#: ../../governance/understanding.rst:247
 msgid "Monitoring budget allocation on Dash Vote Tracker"
 msgstr ""
 
-#: ../../governance/understanding.rst:245
+#: ../../governance/understanding.rst:249
 msgid ""
 "Finally, `Dash Watch <http://dashwatch.org>`__ (which was itself funded "
 "through a budget proposal) exists to monitor the ability of blockchain "
@@ -418,15 +430,15 @@ msgid ""
 "<http://dashwatch.org>`__."
 msgstr ""
 
-#: ../../governance/understanding.rst:261
+#: ../../governance/understanding.rst:265
 msgid "Proposal monitoring on Dash Watch"
 msgstr ""
 
-#: ../../governance/understanding.rst:264
+#: ../../governance/understanding.rst:268
 msgid "Budget allocation"
 msgstr ""
 
-#: ../../governance/understanding.rst:266
+#: ../../governance/understanding.rst:270
 msgid ""
 "The total budget of the network can be calculated by taking 10% of the "
 "reward over the period of time between two superblocks, which occur every "
@@ -440,7 +452,7 @@ msgid ""
 "decentralized allocation of the budget."
 msgstr ""
 
-#: ../../governance/understanding.rst:278
+#: ../../governance/understanding.rst:282
 msgid ""
 "If a proposal has passed the voting threshold but insufficient funds remain "
 "to pay the full amount requested, it will not receive partial funding. "
@@ -453,7 +465,7 @@ msgid ""
 "never created in the superblock, reducing unnecessary inflation."
 msgstr ""
 
-#: ../../governance/understanding.rst:289
+#: ../../governance/understanding.rst:293
 msgid ""
 "Due to the decentralized nature of the masternode system, it is sometimes "
 "necessary to form funded organisations, such as committees or companies, to "
@@ -473,11 +485,11 @@ msgid ""
 "system."
 msgstr ""
 
-#: ../../governance/understanding.rst:307
+#: ../../governance/understanding.rst:311
 msgid "Scaling and future uses"
 msgstr ""
 
-#: ../../governance/understanding.rst:309
+#: ../../governance/understanding.rst:313
 msgid ""
 "As the number of blockchain contractors increases, a point is reached where "
 "masternode operators cannot be realistically expected to evaluate the volume"
@@ -487,7 +499,7 @@ msgid ""
 "of such an organization."
 msgstr ""
 
-#: ../../governance/understanding.rst:316
+#: ../../governance/understanding.rst:320
 msgid ""
 "The existence of the decentralized budget system puts the power of "
 "determining where Dash goes in the future in the hands of the masternode "
@@ -500,11 +512,11 @@ msgid ""
 "cohesively and bring added value services to end users in a consistent way."
 msgstr ""
 
-#: ../../governance/understanding.rst:328
+#: ../../governance/understanding.rst:332
 msgid "Conclusion"
 msgstr ""
 
-#: ../../governance/understanding.rst:330
+#: ../../governance/understanding.rst:334
 msgid ""
 "Every masternode operator establishes a bond of trust and a social contract "
 "with the network in which she is bound to contribute to the development and "
@@ -520,7 +532,7 @@ msgid ""
 "with traditional governments or cooperative corporations."
 msgstr ""
 
-#: ../../governance/understanding.rst:344
+#: ../../governance/understanding.rst:348
 msgid ""
 "We envision a future in which this model of transparent, unbreakable and "
 "verifiable contribution to the common good, in combination with continuous "

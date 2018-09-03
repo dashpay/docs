@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-25 08:07+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Rina L <lsq@daum.net>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/dash/teams/37570/ko/)\n"
@@ -18,15 +18,23 @@ msgstr ""
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../wallets/dashcore/backup.rst:5
+#: ../../wallets/dashcore/backup.rst:1
+msgid "How to safely back up and restore the Dash Core wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/backup.rst:1
+msgid "dash, core, wallet, backup, restore, wallet.dat"
+msgstr ""
+
+#: ../../wallets/dashcore/backup.rst:9
 msgid "Wallet backup and restore"
 msgstr "지갑 백업 및 복구"
 
-#: ../../wallets/dashcore/backup.rst:8
+#: ../../wallets/dashcore/backup.rst:12
 msgid "Backup"
 msgstr "백업하기"
 
-#: ../../wallets/dashcore/backup.rst:10
+#: ../../wallets/dashcore/backup.rst:14
 msgid ""
 "This documentation describes how to safely back up your wallet file for safe"
 " storage in case your computer or laptop is damaged or lost. Dash Core "
@@ -46,7 +54,7 @@ msgstr ""
 "백업이 늘 안전한 장소에 저장되도록 해야 할 책임이 있습니다. **지갑 파일에 액세스 할 수 없으면 Dash에 대한 액세스 권한이 "
 "영구적으로 손실됩니다.**"
 
-#: ../../wallets/dashcore/backup.rst:22
+#: ../../wallets/dashcore/backup.rst:26
 msgid ""
 "It is important to consider that if you have not encrypted your wallet using"
 " the **Settings > Encrypt Wallet** menu item, anyone with access to the "
@@ -59,11 +67,11 @@ msgstr ""
 " 있는 사용자 누구나 그 즉시 당신의 Dash에 액세스 권한을 갖게 됨을 명심하십시오. Wallet을 암호화하도록 선택하는 경우 "
 "wallet.dat 파일과 동일한 위치에 암호를 저장하지 마십시오. 특히 클라우드에 백업을 저장하는 경우 더욱 그렇습니다."
 
-#: ../../wallets/dashcore/backup.rst:30
+#: ../../wallets/dashcore/backup.rst:34
 msgid "Backup from Dash Core"
 msgstr "Dash Core에서 백업하기"
 
-#: ../../wallets/dashcore/backup.rst:32
+#: ../../wallets/dashcore/backup.rst:36
 msgid ""
 "Firstly, never copy your wallet.dat file while Dash Core is open. Always use"
 " the **File > Backup Wallet** menu if the wallet is open. When you select "
@@ -77,15 +85,15 @@ msgstr ""
 "입력하고 위치를 선택한 다음 **저장** 을 클릭하십시오. 다음 예는 파일을 USB 플래시 드라이브에 저장하는 방법입니다. 그리고 이 "
 "파일은 컴퓨터와 떨어진 곳에 보관하십시오."
 
-#: ../../wallets/dashcore/backup.rst:46
+#: ../../wallets/dashcore/backup.rst:50
 msgid "Backing up the Dash Core wallet from the File menu"
 msgstr "파일 메뉴에서 Dash Core 지갑 백업하기"
 
-#: ../../wallets/dashcore/backup.rst:50
+#: ../../wallets/dashcore/backup.rst:54
 msgid "Backup by copying wallet.dat"
 msgstr "wallet.dat 파일을 복사해서 백업하기"
 
-#: ../../wallets/dashcore/backup.rst:52
+#: ../../wallets/dashcore/backup.rst:56
 msgid ""
 "**If Dash Core is not running**, you can also backup your wallet by simply "
 "copying the *wallet.dat* file to another location. This file is located in "
@@ -97,11 +105,11 @@ msgstr ""
 "있습니다. 이 파일은 *DashCore* 데이터 폴더에 저장됩니다. 폴더 위치는 지정 가능하나 기본적으로 이 폴더는 다른 운영 체제의 "
 "다음 위치에 있습니다."
 
-#: ../../wallets/dashcore/backup.rst:58
+#: ../../wallets/dashcore/backup.rst:62
 msgid "**Windows**"
 msgstr "**윈도우즈 용**"
 
-#: ../../wallets/dashcore/backup.rst:64
+#: ../../wallets/dashcore/backup.rst:68
 msgid ""
 "You can access this folder directly by **Windows Key + R** and typing "
 "``%APPDATA%\\DashCore``"
@@ -109,11 +117,11 @@ msgstr ""
 "**Windows Key + R** 로 폴더에 직접 액세스 가능하며, ``%APPDATA%\\DashCore`` 를 직접 입력해도 액세스"
 " 가능합니다. "
 
-#: ../../wallets/dashcore/backup.rst:67
+#: ../../wallets/dashcore/backup.rst:71
 msgid "**Linux**"
 msgstr "**리눅스 용**"
 
-#: ../../wallets/dashcore/backup.rst:73
+#: ../../wallets/dashcore/backup.rst:77
 msgid ""
 "You can access this folder directly by typing ``cd ~/.dashcore`` at the "
 "terminal or ``~/.dashcore`` in the path bar using the **Go > Enter "
@@ -122,11 +130,11 @@ msgstr ""
 "파일에서 **Go > Enter Location...** 메뉴 항목을 사용하여 터미널에서 ``cd ~/.dashcore`` 를 입력하거나"
 " 경로 표시바에 ``~/.dashcore`` 를 입력하여 이 폴더에 직접 액세스할 수 있습니다."
 
-#: ../../wallets/dashcore/backup.rst:77
+#: ../../wallets/dashcore/backup.rst:81
 msgid "**macOS**"
 msgstr "**맥OS 용**"
 
-#: ../../wallets/dashcore/backup.rst:83
+#: ../../wallets/dashcore/backup.rst:87
 msgid ""
 "You can access this folder by typing ``cd ~/Library/Application "
 "Support/DashCore`` at the terminal or ``~/Library/Application "
@@ -137,7 +145,7 @@ msgstr ""
 "To Folder** 메뉴 항목의 대화 상자에서 ``~/Library/Application Support/DashCore`` 를 입력하면"
 " 폴더에 액세스 할 수 있습니다. "
 
-#: ../../wallets/dashcore/backup.rst:88
+#: ../../wallets/dashcore/backup.rst:92
 msgid ""
 "Ensure Dash Core is not running, then simply copy the *wallet.dat* file from"
 " this folder to another folder in the normal way for your operating system. "
@@ -153,15 +161,15 @@ msgstr ""
 "**붙여넣기** 를 선택할 수 있습니다. 이 파일은 컴퓨터와 물리적으로 분리된 위치에 보관하십시오. 파일을 (이동시키는 것이 아니라) "
 "복사하는 것이라는 것을 잊지 마십시오!"
 
-#: ../../wallets/dashcore/backup.rst:100
+#: ../../wallets/dashcore/backup.rst:104
 msgid "Backing up wallet.dat by copying to another folder"
 msgstr "다른 폴더에 복사하여 wallet.dat 백업하기"
 
-#: ../../wallets/dashcore/backup.rst:104
+#: ../../wallets/dashcore/backup.rst:108
 msgid "Automatic backups"
 msgstr "자동 백업"
 
-#: ../../wallets/dashcore/backup.rst:106
+#: ../../wallets/dashcore/backup.rst:110
 msgid ""
 "Every time you open Dash Core, it will automatically create a backup copy of"
 " *wallet.dat* in the *dashcore/backups* folder. Up to 10 backups can be kept"
@@ -175,7 +183,7 @@ msgstr ""
 "에서 ``-createwalletbackups = n`` 매개 변수를 사용하여 보관 된 백업 수를 수정할 수 있습니다. 이 값을 0 으로"
 " 설정하면 백업이 완전히 비활성화됩니다."
 
-#: ../../wallets/dashcore/backup.rst:114
+#: ../../wallets/dashcore/backup.rst:118
 msgid ""
 "You can view the automatic backups folder by browsing to *DashCore* folder "
 "at the location specified above for *wallet.dat* and opening the backups "
@@ -190,11 +198,11 @@ msgstr ""
 "이러한 파일이 활성화되어 있지 않으므로 언제든지 안전하게 복사할 수 있습니다. Dash Core 폴더의 원본 파일이 Dash Core "
 "앱의 부적절한 종료로 인해 손상된 경우 편리한 백업입니다."
 
-#: ../../wallets/dashcore/backup.rst:123
+#: ../../wallets/dashcore/backup.rst:127
 msgid "Restore"
 msgstr "복구하기"
 
-#: ../../wallets/dashcore/backup.rst:125
+#: ../../wallets/dashcore/backup.rst:129
 msgid ""
 "To restore a backup, install Dash Core on the target system (or stop it, if "
 "already installed) and rename the existing *wallet.dat* file in the "
@@ -203,11 +211,11 @@ msgstr ""
 "백업을 복원하려면, 타겟 시스템에 Dash Core를 설치 (또는 이미 설치되어있는 경우 중지)하고 *DashCore* 폴더에서 기존 "
 "*wallet.dat* 파일의 이름을 바꿉니다."
 
-#: ../../wallets/dashcore/backup.rst:132
+#: ../../wallets/dashcore/backup.rst:136
 msgid "Renaming the old wallet.dat file to wallet.old in the DashCore folder"
 msgstr "이전 wallet.dat 파일명을 Dash Core 폴더의 wallet.old로 변경하기"
 
-#: ../../wallets/dashcore/backup.rst:134
+#: ../../wallets/dashcore/backup.rst:138
 msgid ""
 "Then copy the backup wallet file to the *DashCore* folder and ensure it is "
 "named *wallet.dat*. Now, when you start Dash Core again, it will load the "
@@ -218,17 +226,17 @@ msgstr ""
 "Core를 다시 시작하면 새 지갑이 로드됩니다. Dash Core가 실행중일 때는 *wallet.dat* 를 바꾸지 마십시오. 데이터가 "
 "손상 될 수 있습니다!"
 
-#: ../../wallets/dashcore/backup.rst:145
+#: ../../wallets/dashcore/backup.rst:149
 msgid ""
 "Copying the backup file into the DashCore folder and renaming it to "
 "wallet.dat"
 msgstr "백업 파일을 DashCore 폴더에 복사하고 wallet.dat로 파일명 바꾸기"
 
-#: ../../wallets/dashcore/backup.rst:150
+#: ../../wallets/dashcore/backup.rst:154
 msgid "Backup storage considerations"
 msgstr "백업 스토리지 고려사항"
 
-#: ../../wallets/dashcore/backup.rst:152
+#: ../../wallets/dashcore/backup.rst:156
 msgid ""
 "Any backup depends to some extent on the existence of software capable of "
 "reading the data at some future point in time. As such, it is good practice "
@@ -240,7 +248,7 @@ msgstr ""
 "소프트웨어 복사본을 백업 파일과 함께 저장하는 것이 좋습니다. 이 경우는 백업을 만드는 데 사용했던 Dash Core 버전의 "
 "복사본이됩니다."
 
-#: ../../wallets/dashcore/backup.rst:158
+#: ../../wallets/dashcore/backup.rst:162
 msgid ""
 "The *wallet.dat* file itself should be encrypted using a password set from "
 "the **Settings > Encrypt Wallet** menu item. However, this only prevents "
@@ -269,7 +277,7 @@ msgstr ""
 "암호화 된 컨테이너에 대한 자세한 내용은 `여기 <https://theintercept.com/2015/04/27/encrypting-"
 "laptop-like- mean />`_ 을 참조하십시오."
 
-#: ../../wallets/dashcore/backup.rst:174
+#: ../../wallets/dashcore/backup.rst:178
 msgid ""
 "Where you store this file is then up to you. It could be in your home, in a "
 "safe deposit box at a bank, a waterproof or fireproof container, or on cloud"
@@ -282,7 +290,7 @@ msgstr ""
 "저장소 등 원하는 곳 어디든 저장 가능합니다.  지갑에 대한 액세스를 복원하는 데 필요한 암호(예 : 머릿속, 수첩, 암호 관리자 등)를"
 " 저장할 위치와 접근 가능한 대상을 기억해두십시오. "
 
-#: ../../wallets/dashcore/backup.rst:181
+#: ../../wallets/dashcore/backup.rst:185
 msgid ""
 "Finally it is important to understand that *wallet.dat* itself is a "
 "relatively dangerous way to store large amounts of funds - it is simply a "
@@ -300,11 +308,11 @@ msgstr ""
 "단일 주소에 저장하는 편이 더 안전합니다. 프로토콜 구현에 관심이 있으시다면 개인 키를 직접 인쇄하거나 안전한 보관을 위해 BIP38을 "
 "사용하여 암호화 할 수있는 종이 지갑에 대해 자세히 읽어보시길 바랍니다."
 
-#: ../../wallets/dashcore/backup.rst:193
+#: ../../wallets/dashcore/backup.rst:197
 msgid "Verifying backups"
 msgstr "백업 확인하기"
 
-#: ../../wallets/dashcore/backup.rst:195
+#: ../../wallets/dashcore/backup.rst:199
 msgid ""
 "There is no fixed procedure to verify your backup, but you should test "
 "restoring it at least once to make sure it works. If you have a simple copy "

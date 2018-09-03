@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-25 08:07+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -18,11 +18,19 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../mining/p2pool.rst:5
+#: ../../mining/p2pool.rst:1
+msgid "Guide to setting up a Dash P2Pool node"
+msgstr ""
+
+#: ../../mining/p2pool.rst:1
+msgid "dash, mining, X11, p2pool, node, pool, software, ASIC, mining pool"
+msgstr ""
+
+#: ../../mining/p2pool.rst:9
 msgid "Dash P2Pool Node Setup"
 msgstr ""
 
-#: ../../mining/p2pool.rst:7
+#: ../../mining/p2pool.rst:11
 msgid ""
 "This guide describes how to set up a Dash P2Pool node to manage a pool of "
 "miners. Unlike centralized mining pools, P2Pool is based on the same "
@@ -39,7 +47,7 @@ msgid ""
 "`here <https://en.bitcoin.it/wiki/P2Pool>`__."
 msgstr ""
 
-#: ../../mining/p2pool.rst:22
+#: ../../mining/p2pool.rst:26
 msgid ""
 "Because of the way P2Pool manages difficulty adjustments on the sharechain, "
 "it is important to maintain low latency between the miners and the P2Pool "
@@ -53,7 +61,7 @@ msgid ""
 " can mine to your pool with relatively low latency."
 msgstr ""
 
-#: ../../mining/p2pool.rst:34
+#: ../../mining/p2pool.rst:38
 msgid ""
 "This following section describes the steps to setup an Ubuntu Server running"
 " P2Pool for Dash. It has been tested with Ubuntu 16.04 LTS and 18.04 LTS and"
@@ -62,11 +70,11 @@ msgid ""
 "different versions or operating systems as necessary."
 msgstr ""
 
-#: ../../mining/p2pool.rst:42
+#: ../../mining/p2pool.rst:46
 msgid "Setting up the host server"
 msgstr ""
 
-#: ../../mining/p2pool.rst:44
+#: ../../mining/p2pool.rst:48
 msgid ""
 "Download a copy of Ubuntu Server LTS from "
 "https://www.ubuntu.com/download/server and install it on your system "
@@ -80,7 +88,7 @@ msgid ""
 "``<username>`` with a username of your choice::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:58
+#: ../../mining/p2pool.rst:62
 msgid ""
 "You will be prompted for a password. Enter and confirm using a new password "
 "(different to your root password) and store it in a safe place. You will "
@@ -89,7 +97,7 @@ msgid ""
 "perform commands as root::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:66
+#: ../../mining/p2pool.rst:70
 msgid ""
 "Reboot your server and log in as the new user. At this point it is "
 "recommended to connect remotely using `PuTTY "
@@ -97,11 +105,11 @@ msgid ""
 "Windows) or ssh (for Linux and macOS) if you have not already done so."
 msgstr ""
 
-#: ../../mining/p2pool.rst:72
+#: ../../mining/p2pool.rst:76
 msgid "Setting up port forwarding"
 msgstr ""
 
-#: ../../mining/p2pool.rst:74
+#: ../../mining/p2pool.rst:78
 msgid ""
 "If you are on a private network behind a router, you will need to set up "
 "port forwarding for at least port 8999 (UDP/TCP) for access to the "
@@ -115,21 +123,21 @@ msgid ""
 "guide/>`__."
 msgstr ""
 
-#: ../../mining/p2pool.rst:85
+#: ../../mining/p2pool.rst:89
 msgid ""
 "Take note of your IP address either from your router management interface or"
 " by visiting https://www.whatismyip.com/"
 msgstr ""
 
-#: ../../mining/p2pool.rst:91
+#: ../../mining/p2pool.rst:95
 msgid "Setting up port forwarding under DD-WRT"
 msgstr ""
 
-#: ../../mining/p2pool.rst:94
+#: ../../mining/p2pool.rst:98
 msgid "Option 1: Automated script setup"
 msgstr ""
 
-#: ../../mining/p2pool.rst:96
+#: ../../mining/p2pool.rst:100
 msgid ""
 "Dash community member **dracocephalum** has generously donated a script to "
 "automatically deploy everything required to run a p2pool-dash node under "
@@ -139,13 +147,13 @@ msgid ""
 "get fetch the script and get started, type::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:106
+#: ../../mining/p2pool.rst:110
 msgid ""
 "The files will be created in the p2pool-dash-deploy folder. We now need to "
 "configure a few variables specific to your system::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:111
+#: ../../mining/p2pool.rst:115
 msgid ""
 "Scroll down to the section labeled ``#Variables`` and enter the following "
 "information, replacing the ``<xxx>`` placeholders after the ``=`` sign. Note"
@@ -154,37 +162,37 @@ msgid ""
 "the current version of Dash:"
 msgstr ""
 
-#: ../../mining/p2pool.rst:117
+#: ../../mining/p2pool.rst:121
 msgid "``PUBLIC_IP`` = <your public IP address from the previous step>"
 msgstr "``PUBLIC_IP`` = <your public IP address from the previous step>"
 
-#: ../../mining/p2pool.rst:118
+#: ../../mining/p2pool.rst:122
 msgid "``EMAIL`` = <your email address>"
 msgstr "``EMAIL`` = <your email address>"
 
-#: ../../mining/p2pool.rst:119
+#: ../../mining/p2pool.rst:123
 msgid "``PAYOUT_ADDRESS`` = <your DASH wallet address to receive fees>"
 msgstr "``PAYOUT_ADDRESS`` = <your DASH wallet address to receive fees>"
 
-#: ../../mining/p2pool.rst:120
+#: ../../mining/p2pool.rst:124
 msgid "``USER_NAME`` = <linux user name>"
 msgstr "``USER_NAME`` = <linux user name>"
 
-#: ../../mining/p2pool.rst:121
+#: ../../mining/p2pool.rst:125
 msgid "``RPCUSER`` = <enter a random alphanumeric rpc user name>"
 msgstr "``RPCUSER`` = <enter a random alphanumeric rpc user name>"
 
-#: ../../mining/p2pool.rst:122
+#: ../../mining/p2pool.rst:126
 msgid "``RPCPASSWORD`` = <enter a random alphanumeric rpc password>"
 msgstr "``RPCPASSWORD`` = <enter a random alphanumeric rpc password>"
 
-#: ../../mining/p2pool.rst:124
+#: ../../mining/p2pool.rst:128
 msgid ""
 "Press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
 "file. Then run the script::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:129
+#: ../../mining/p2pool.rst:133
 msgid ""
 "The script will carry out all steps necessary to set up P2pool on Ubuntu "
 "Server and start dashd synchronisation. When setup is complete, you should "
@@ -192,7 +200,7 @@ msgid ""
 "script to start p2pool-dash::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:136
+#: ../../mining/p2pool.rst:140
 msgid ""
 "Your P2Pool node is now running. If you see errors similar to **Error "
 "getting work from dashd** or **-10 Dash Core is downloading blocks...** then"
@@ -200,25 +208,25 @@ msgid ""
 "can point your miners to ``<ip_address>:7903`` to begin mining."
 msgstr ""
 
-#: ../../mining/p2pool.rst:148 ../../mining/p2pool.rst:299
+#: ../../mining/p2pool.rst:152 ../../mining/p2pool.rst:303
 msgid ""
 "Example configuration showing a single Bitmain Antminer D3 connected to a "
 "p2pool-dash node on the local network"
 msgstr ""
 
-#: ../../mining/p2pool.rst:152
+#: ../../mining/p2pool.rst:156
 msgid "Option 2: Manual setup"
 msgstr ""
 
-#: ../../mining/p2pool.rst:154
+#: ../../mining/p2pool.rst:158
 msgid "First update your operating system as follows::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:160
+#: ../../mining/p2pool.rst:164
 msgid "Setting up dashd"
 msgstr ""
 
-#: ../../mining/p2pool.rst:162
+#: ../../mining/p2pool.rst:166
 msgid ""
 "P2Pool requires a full Dash node to be running to get block and transaction "
 "data. To download and install Dash, visit https://www.dash.org/wallets/ on "
@@ -229,32 +237,32 @@ msgid ""
 " Dash Core by right clicking or pressing **Ctrl + V**::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:175
+#: ../../mining/p2pool.rst:179
 msgid ""
 "Verify the integrity of your download by running the following command and "
 "comparing the output against the value for the file as shown on the Dash "
 "website under **Hash File**::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:184
+#: ../../mining/p2pool.rst:188
 msgid "Link to the hash file to verify download integrity"
 msgstr ""
 
-#: ../../mining/p2pool.rst:186
+#: ../../mining/p2pool.rst:190
 msgid ""
 "Create a working directory for Dash, extract the compressed archive, copy "
 "the necessary files to the directory and set them as executable::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:195
+#: ../../mining/p2pool.rst:199
 msgid "Clean up unneeded files::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:200
+#: ../../mining/p2pool.rst:204
 msgid "Create a configuration file using the following command::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:204
+#: ../../mining/p2pool.rst:208
 msgid ""
 "An editor window will appear. We now need to create a configuration file "
 "specifying several variables. Copy and paste the following text to get "
@@ -262,38 +270,38 @@ msgid ""
 "follows::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:221
+#: ../../mining/p2pool.rst:225
 msgid "Replace the fields marked with ``XXXXXXX`` as follows:"
 msgstr ""
 
-#: ../../mining/p2pool.rst:223
+#: ../../mining/p2pool.rst:227
 msgid ""
 "``rpcuser``: enter any string of numbers or letters, no special characters "
 "allowed"
 msgstr ""
 
-#: ../../mining/p2pool.rst:225
+#: ../../mining/p2pool.rst:229
 msgid ""
 "``rpcpassword``: enter any string of numbers or letters, no special "
 "characters allowed"
 msgstr ""
 
-#: ../../mining/p2pool.rst:228
+#: ../../mining/p2pool.rst:232
 msgid "The result should look something like this:"
 msgstr ""
 
-#: ../../mining/p2pool.rst:233
+#: ../../mining/p2pool.rst:237
 msgid "Entering key data in dash.conf on the P2Pool node"
 msgstr ""
 
-#: ../../mining/p2pool.rst:235
+#: ../../mining/p2pool.rst:239
 msgid ""
 "Press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
 "file. You can now start running Dash on the masternode to begin "
 "synchronization with the blockchain::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:241
+#: ../../mining/p2pool.rst:245
 msgid ""
 "You will see a message reading **Dash Core server starting**. You can "
 "continue with the following steps and check synchronization periodically "
@@ -303,48 +311,48 @@ msgid ""
 "<https://insight.dash.org/insight/>`_::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:251
+#: ../../mining/p2pool.rst:255
 msgid "Setting up P2Pool"
 msgstr ""
 
-#: ../../mining/p2pool.rst:253
+#: ../../mining/p2pool.rst:257
 msgid ""
 "We will now set up the P2Pool software and its dependencies. Begin with the "
 "dependencies::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:259
+#: ../../mining/p2pool.rst:263
 msgid "Create working directories and set up p2pool-dash::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:270
+#: ../../mining/p2pool.rst:274
 msgid "We will add some optional extra interfaces to the control panel::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:280
+#: ../../mining/p2pool.rst:284
 msgid ""
 "You can now start p2pool and optionally specify the payout address, external"
 " IP (if necessary), fee and donation as follows::"
 msgstr ""
 
-#: ../../mining/p2pool.rst:285
+#: ../../mining/p2pool.rst:289
 msgid ""
 "You can then monitor your node by browsing to the following addresses, "
 "replacing ``<ip_address>`` with the IP address of your P2Pool node:"
 msgstr ""
 
-#: ../../mining/p2pool.rst:288
+#: ../../mining/p2pool.rst:292
 msgid "Punchy interface: http://<ip_address>:7903/static/"
 msgstr ""
 
-#: ../../mining/p2pool.rst:289
+#: ../../mining/p2pool.rst:293
 msgid "Legacy interface: http://<ip_address>:7903/static/legacy/"
 msgstr ""
 
-#: ../../mining/p2pool.rst:290
+#: ../../mining/p2pool.rst:294
 msgid "Status interface: http://<ip_address>:7903/static/status/"
 msgstr ""
 
-#: ../../mining/p2pool.rst:291
+#: ../../mining/p2pool.rst:295
 msgid "Extended interface: http://<ip_address>:7903/static/ext/"
 msgstr ""

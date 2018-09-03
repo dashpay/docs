@@ -1,33 +1,41 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 04:30+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ko\n"
 "Language-Team: Korean (https://www.transifex.com/dash/teams/37570/ko/)\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../wallets/ios/advanced-functions.rst:5
+#: ../../wallets/ios/advanced-functions.rst:1
+msgid ""
+"URL scheme, master public key and requesting payment in Dash on your iOS "
+"device"
+msgstr ""
+
+#: ../../wallets/ios/advanced-functions.rst:1
+msgid "dash, mobile, wallet, ios, send, receive, payment, url, public key"
+msgstr ""
+
+#: ../../wallets/ios/advanced-functions.rst:9
 msgid "Advanced functions"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:8
+#: ../../wallets/ios/advanced-functions.rst:12
 msgid "URL Scheme"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:10
+#: ../../wallets/ios/advanced-functions.rst:14
 msgid ""
 "iOS allows apps to communicate with one another through URL schemes. The "
 "Dash Wallet for iOS implements the dashwallet:// scheme, allowing you to "
@@ -35,85 +43,75 @@ msgid ""
 "documents the methods available using the URL scheme."
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:16
+#: ../../wallets/ios/advanced-functions.rst:20
 msgid "Payment"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:18
+#: ../../wallets/ios/advanced-functions.rst:22
 msgid "Payment request URL format::"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:22
+#: ../../wallets/ios/advanced-functions.rst:26
 msgid "Notes:"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:24
+#: ../../wallets/ios/advanced-functions.rst:28
 msgid ""
-"``sender`` is both your callback URL and the name of the app that you "
-"show to the user. This is to prevent 3rd party apps from phishing."
+"``sender`` is both your callback URL and the name of the app that you show "
+"to the user. This is to prevent 3rd party apps from phishing."
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:26
+#: ../../wallets/ios/advanced-functions.rst:30
 msgid ""
 "``req-`` can be added before IS to force use of InstantSend for the "
-"transaction. If the user doesn’t have InstantSend enabled and doesn’t "
-"want to enable it, he will not be offered the option to send as a normal "
+"transaction. If the user doesn’t have InstantSend enabled and doesn’t want "
+"to enable it, he will not be offered the option to send as a normal "
 "transaction."
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:31
+#: ../../wallets/ios/advanced-functions.rst:35
 msgid "The user will see something similar to this:"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:36
+#: ../../wallets/ios/advanced-functions.rst:40
 msgid "Payment request in iOS"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:38
+#: ../../wallets/ios/advanced-functions.rst:42
 msgid ""
-"If the user enters the correct passcode, then the transaction is sent and"
-" the user is returned to the sender app following the callback URL."
+"If the user enters the correct passcode, then the transaction is sent and "
+"the user is returned to the sender app following the callback URL."
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:41
+#: ../../wallets/ios/advanced-functions.rst:45
 msgid "Callback URL format::"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:46
+#: ../../wallets/ios/advanced-functions.rst:50
 msgid "Master public key"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:48
+#: ../../wallets/ios/advanced-functions.rst:52
 msgid "Master public key request format::"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:52
+#: ../../wallets/ios/advanced-functions.rst:56
 msgid ""
-"Note: account is optional and corresponds to BIP32/BIP44 account, most of"
-" the time this should be 0. If account is not specified, we use account "
-"0. This will send back both the extended public key at "
-"``44’/5’/<account>’`` and ``<account>’``"
+"Note: account is optional and corresponds to BIP32/BIP44 account, most of "
+"the time this should be 0. If account is not specified, we use account 0. "
+"This will send back both the extended public key at ``44’/5’/<account>’`` "
+"and ``<account>’``"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:57
-#: ../../wallets/ios/advanced-functions.rst:66
+#: ../../wallets/ios/advanced-functions.rst:61
+#: ../../wallets/ios/advanced-functions.rst:70
 msgid "Callback::"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:62
+#: ../../wallets/ios/advanced-functions.rst:66
 msgid "Get address for payment"
 msgstr ""
 
-#: ../../wallets/ios/advanced-functions.rst:64
+#: ../../wallets/ios/advanced-functions.rst:68
 msgid "``dashwallet://request=address&sender=<sender>``"
 msgstr ""
-
-#~ msgid "Contact management"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Your iOS wallet allows you to "
-#~ "manage frequently used contacts and "
-#~ "addresses."
-#~ msgstr ""
-

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-25 08:07+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Max Aronych <taofgoar@protonmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -18,11 +18,19 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: ../../wallets/paper.rst:4
+#: ../../wallets/paper.rst:1
+msgid "Guides to secure paper wallets for Dash cryptocurrency"
+msgstr ""
+
+#: ../../wallets/paper.rst:1
+msgid "dash, paper, wallet, encryption"
+msgstr ""
+
+#: ../../wallets/paper.rst:8
 msgid "Introduction"
 msgstr "Введение"
 
-#: ../../wallets/paper.rst:6
+#: ../../wallets/paper.rst:10
 msgid ""
 "A paper wallet is a method of storing a private key to access funds stored "
 "on a single address. It can be generated on a computer that has never been "
@@ -34,8 +42,19 @@ msgid ""
 "extremely secure but somewhat inconvenient for everyday use compared to "
 "hardware wallets, which also offer a high degree of security."
 msgstr ""
+"Бумажный кошелёк это метод хранения приватного ключа, дающего доступ к "
+"средствам, хранящимся на определённом адресе. Он может быть создан на "
+"компьютере, который никогда не был присоединён к интернету и потом "
+"распечатан для хранения в изолированном месте. Благодаря этой возможности, "
+"его можно использовать для хранения большого количества DASH, но необходимо "
+"принять соответствующие меры предосторожности, чтобы не потерять такой ключ,"
+" поскольку при его утере, восстановление невозможно. Для использования "
+"ключа, его необходимо импортировать или ввести в кошелёк, присоединённый к "
+"интернету и никогда более не использовать. Бумажные кошельки очень "
+"безопасны, но неудобны для повседневного использования, по сравнению с "
+"физическими кошельками, тоже предлагающими высокую степень защиты."
 
-#: ../../wallets/paper.rst:17
+#: ../../wallets/paper.rst:21
 msgid ""
 "Paper wallets use random user and machine input to create a set of "
 "keys/addresses which you then print. You can never regenerate a paper wallet"
@@ -46,22 +65,34 @@ msgid ""
 "(e.g. robbery/home invasion) could bypass this encryption using the "
 "proverbial \"$5 wrench attack\"."
 msgstr ""
+"Бумажный кошелёк использует произвольный ввод данных от пользователя и "
+"компьютера для создания ключа/адреса, которые потом распечатываются. Вы не "
+"можете воссоздать такой же кошелёк, когда выключите компьютер. То, что будет"
+" распечатано на бумаге это единственные данные, которые вы получите. По этой"
+" причине, бумажные кошельки несколько уязвимы и с ними надо аккуратно "
+"обращаться, так как их можно повредить, потерять, они могут юыть уничтожены "
+"или украдены. Даже если вы зашифруете их с помощью BIP38 (что и необходимо "
+"сделать), то всё равно достаточно мотивированный злоумышленник (например, в "
+"случа кражи или проникновения в дом) может обойти шифрование используя так "
+"называемую \"атаку 5-ти долларовым гаечным ключом\"."
 
-#: ../../wallets/paper.rst:29
+#: ../../wallets/paper.rst:33
 msgid "The $5 wrench attack. Credit: xkcd.com"
-msgstr ""
+msgstr "Атака гаечным ключом за 5$. Выражаем признательность xkcd.com"
 
-#: ../../wallets/paper.rst:31
+#: ../../wallets/paper.rst:35
 msgid ""
 "Nevertheless, together with appropriate planning, paper wallets are a highly"
 " convenient and user-friendly way to store Dash long term."
 msgstr ""
+"Тем не менее, при должном планировании, бумажные кошельки это очень удобный "
+"и лёгкий в использовании способ долгосрочного хранения Dash."
 
-#: ../../wallets/paper.rst:35
+#: ../../wallets/paper.rst:39
 msgid "Security"
-msgstr ""
+msgstr "Безопасность"
 
-#: ../../wallets/paper.rst:37
+#: ../../wallets/paper.rst:41
 msgid ""
 "While you can create a paper wallet using a machine that is connected to the"
 " internet, wallets that will be used to store significant funds should be "
@@ -69,8 +100,14 @@ msgid ""
 " ensure that all generated data will be permanently wiped from memory once "
 "the process is complete."
 msgstr ""
+"Вы можете создать бумажный кошелёк используя компьютер, подключённый к "
+"интернету, но кошельки, которые предусмотрены для хранения крупных сумм "
+"следует создавать используя компьютер, который не подключен к интернету, с "
+"операционной системой, установленной для однократного использования. Это "
+"необходимо, чтобы удостовериться в том, что все данные будут навсегда "
+"удалены из памяти по завершению процесса."
 
-#: ../../wallets/paper.rst:43
+#: ../../wallets/paper.rst:47
 msgid ""
 "A simple method of doing this is to burn a live Linux CD. `Ubuntu Desktop "
 "<https://www.ubuntu.com/download/desktop>`_ is recommended because it will "
@@ -82,20 +119,34 @@ msgid ""
 "desktops can be used if you can ensure that all networking hardware is "
 "disabled when you get to the stage of actually generating your keys."
 msgstr ""
+"Самым простым методом будет записать CD диск с Linux. Рекомендуется `Ubuntu "
+"Desktop <https://www.ubuntu.com/download/desktop>`_ , так как у этого "
+"дистрибутива есть большинство драйверов и он прост в использовании, так же "
+"есть `Tails <https://tails.boum.org/>`_ и `Kali Linux "
+"<https://www.kali.org/downloads/>`_ , они популярны из-за своей высокой "
+"защищенности. Загрузка с CD это наиболее безопасный способ, так как "
+"информация с них только считывается, но не записывается. Использование USB "
+"флешки тоже подойдёт. Можно использовать настольные компьютеры и ноутбуки, "
+"но на этапе создания ключей необходимо убедиться, что всё сетевое "
+"оборудование отключено."
 
-#: ../../wallets/paper.rst:54
+#: ../../wallets/paper.rst:58
 msgid ""
 "Boot from the CD and download/install your tools (or download them ahead of "
 "time to a USB drive). Disconnect from the internet, generate your "
 "keys/addresses/printouts, and power off the machine. You are now the only "
 "person with access to these addresses."
 msgstr ""
+"Произведите загрузку с CD и скачайте/установите необходимые инструменты (или"
+" скачайте их заранее на USB-флешку). Отключите соединение с интернетом, "
+"создайте свои ключи/адресы/распечатки и выключите компьютер. Теперь только "
+"вы имеете доступ к этим адресам."
 
-#: ../../wallets/paper.rst:60
+#: ../../wallets/paper.rst:64
 msgid "Death plan"
-msgstr ""
+msgstr "Смертельный план"
 
-#: ../../wallets/paper.rst:62
+#: ../../wallets/paper.rst:66
 msgid ""
 "Whichever type of cold storage you choose, make a plan to pass on the "
 "necessary data to regenerate the keys to your loved ones in the event of an "
@@ -104,38 +155,50 @@ msgid ""
 "instructions on how to use it, and keep them separate with a clear procedure"
 " on how they can be accessed when necessary."
 msgstr ""
+"Какой тип холодного хранилища вы бы не выбрали, необходимо продумать, как "
+"при несчастном случае с вами передать вашим близким данные, необходимые для "
+"восстановления ключей. В конце концов, все мы смертны. Запишите на бумаге "
+"пароль дешифрования BIP38 или кодовую фразу мнемонического кошелька. Затем "
+"запишите инструкции, как его использовать и храните эти инструкции раздельно"
+" с пояснениями по доступу к ним."
 
-#: ../../wallets/paper.rst:70
+#: ../../wallets/paper.rst:74
 msgid "Tools"
 msgstr "Инструменты"
 
-#: ../../wallets/paper.rst:72
+#: ../../wallets/paper.rst:76
 msgid "A Dash paper wallet can be generated in several ways."
-msgstr ""
+msgstr "Бумажный кошелёк можно создать несколькими способами."
 
-#: ../../wallets/paper.rst:74
+#: ../../wallets/paper.rst:78
 msgid "Using the generator at https://paper.dash.org/"
-msgstr ""
+msgstr "Можно использовать генератор на https://paper.dash.org/"
 
-#: ../../wallets/paper.rst:75
+#: ../../wallets/paper.rst:79
 msgid "Using the generator at https://walletgenerator.net/?currency=Dash"
 msgstr ""
+"Можно использовать генератор на https://walletgenerator.net/?currency=Dash"
 
-#: ../../wallets/paper.rst:76
+#: ../../wallets/paper.rst:80
 msgid ""
 "Offline using the Dash Paper Wallet source code from GitHub at "
 "https://github.com/dashpay/paper.dash.org/releases/latest"
 msgstr ""
+"Оффлайн, используя код Dash Paper Wallet с GitHub по адресу "
+"https://github.com/dashpay/paper.dash.org/releases/latest"
 
-#: ../../wallets/paper.rst:78
+#: ../../wallets/paper.rst:82
 msgid ""
 "Offline using the same code which powers both sites, by viewing the `GitHub "
 "project <https://github.com/MichaelMure/WalletGenerator.net>`_ or "
 "`downloading directly "
 "<https://github.com/MichaelMure/WalletGenerator.net/archive/master.zip>`_"
 msgstr ""
+"Оффлайн, используя код, на котором работают оба сайта `GitHub project "
+"<https://github.com/MichaelMure/WalletGenerator.net>`_ или `скачав напрямую "
+"<https://github.com/MichaelMure/WalletGenerator.net/archive/master.zip>`_"
 
-#: ../../wallets/paper.rst:82
+#: ../../wallets/paper.rst:86
 msgid ""
 "Since the source code for all three options is largely similar, this guide "
 "will use https://paper.dash.org/ as an example. The websites listed here run"
@@ -144,45 +207,61 @@ msgid ""
 "generator and run it on a computer with a freshly installed operating system"
 " that is not connected to the internet."
 msgstr ""
+"Поскольку исходные коды для всех трёх вариантов, по большей части, "
+"одинаковы, используйте руководство на https://paper.dash.org/ как пример. "
+"Сайты, находящиеся здесь в списке полностью работают в браузере без отправки"
+" каких-либо данных на внешний сервер, но самым безопасным будет скачать "
+"генератор кошелька и запустить его на компьютере с новоустановленной "
+"операционной системой и не соединённом с интернетом."
 
-#: ../../wallets/paper.rst:89
+#: ../../wallets/paper.rst:93
 msgid ""
 "This guide is based on the guide available from "
 "https://walletgenerator.net/. Please donate if you find this project useful!"
 msgstr ""
+"Это руководство основано на руководстве, доступном на "
+"https://walletgenerator.net/. Если вы сочтёте данный проект полезным, то "
+"пожертвуйте на него средства!"
 
-#: ../../wallets/paper.rst:94
+#: ../../wallets/paper.rst:98
 msgid "Address generation"
-msgstr ""
+msgstr "Создание адреса"
 
-#: ../../wallets/paper.rst:96
+#: ../../wallets/paper.rst:100
 msgid ""
 "Go to https://paper.dash.org/ in your web browser (or open index.html if you"
 " downloaded the wallet generator). Select your language and choose Dash as "
 "the currency if necessary. The following screen will appear:"
 msgstr ""
+"Зайдите на https://paper.dash.org/ в вашем браузере (или откройте  "
+"index.html, если скачали генератор кошелька). Выберите язык и выберите Dash "
+"в качестве валюты, если необходимо. Появится следующий экран:"
 
-#: ../../wallets/paper.rst:103
+#: ../../wallets/paper.rst:107
 msgid "The Dash Paper Wallet Generator at paper.dash.org"
-msgstr ""
+msgstr "Dash Paper Wallet Generator на paper.dash.org"
 
-#: ../../wallets/paper.rst:105
+#: ../../wallets/paper.rst:109
 msgid ""
 "Some random data is required to ensure the generated address and key are "
 "unique. Move our mouse around and/or type random characters into the text "
 "box until the process reaches 100% and the following screen appears:"
 msgstr ""
+"Для того, чтобы добиться уникальности созданного адреса и ключа, необходимо "
+"ввести некоторый случайный набор данных. Подвигайте мышью и/или напечатайте "
+"случайные символы в поле для текста, до тех пор пока прогресс не достигнет "
+"100% и не появится следующий экран:"
 
-#: ../../wallets/paper.rst:113
+#: ../../wallets/paper.rst:117
 msgid "Generating randomness for the Dash Paper Wallet Generator"
-msgstr ""
+msgstr "Создание случайного набора данных для Dash Paper Wallet Generator"
 
-#: ../../wallets/paper.rst:118
+#: ../../wallets/paper.rst:122
 msgid ""
 "A Dash address and private key generated using Dash Paper Wallet Generator"
-msgstr ""
+msgstr "Адрес Dash и приватный ключ, созданный в Dash Paper Wallet Generator"
 
-#: ../../wallets/paper.rst:121
+#: ../../wallets/paper.rst:125
 msgid ""
 "Once your public address and private key (shown in Wallet Import Format or "
 "WIF) are visible on the **Single Wallet** tab, you should immediately click "
@@ -190,20 +269,31 @@ msgid ""
 "without somehow recording the dash address and private key, all data will be"
 " irretrievably lost, together with any funds you have sent to the address."
 msgstr ""
+"Как только ваш публичный адрес и приватный ключ (которые показываются в "
+"формате Wallet Import Format или WIF) станут видны в окне **Single Wallet**,"
+" необходимо немедленно нажать **Print** для распечатки данных и убрать "
+"распечатку в безопасное место. Если вы покинете страницу, по какой-либо "
+"причине не записав адрес или приватный ключ, то все данные, ровно как и "
+"любые средства, которые будут отправлены на этот адрес, станут безвозвратно "
+"утеряны."
 
-#: ../../wallets/paper.rst:129
+#: ../../wallets/paper.rst:133
 msgid "Encryption"
 msgstr "Шифрование"
 
-#: ../../wallets/paper.rst:131
+#: ../../wallets/paper.rst:135
 msgid ""
 "The information shown on the **Single Wallet** tab does not have a "
 "passphrase and is not encrypted. You can print this paper wallet as it is "
 "and use it, but it is not protected from being stolen if someone finds it. "
 "You should keep it safe the same way you would jewels or cash."
 msgstr ""
+"Инофрмация, показываемая в окне **Single Wallet** не имеет кодовой фразы и "
+"не зашифрована. Вы можете распечатать этот кошелёк как есть и использовать "
+"его, но он не будет защищён в случае кражи или, если его кто-нибудь найдёт. "
+"Его следует хранить в безопасном месте, как драгоценности или наличность."
 
-#: ../../wallets/paper.rst:136
+#: ../../wallets/paper.rst:140
 msgid ""
 "If you decide that you need the additional security of a password for this "
 "address, click **Paper Wallet**. A different address/key pair will appear. "
@@ -219,24 +309,42 @@ msgid ""
 " the password or lose the encrypted key, you will permanently lose access to"
 " your funds."
 msgstr ""
+"Если вы решите, что необходимо дополнительно защитить пароль для этого "
+"адреса, нажмите **Paper Wallet**. Появится другая пара адреса/пароля. Для "
+"создания зашифрованного кошелька, выберите **BIP38 Encrypt?** и введите "
+"кодовую фразу. Поставьте галку в поле**Hide Art?** и измените на **1** "
+"значение поля **Addresses to Generate**, далее нажмите **Generate**.Будет "
+"создан новый кошелёк, в котором приватный ключ (WIF) будет зашифрован "
+"указанным вами паролем, в результате вы получите BIP38 ключ. Теперь для "
+"контроля за средствами на адресе вам нужен будет BIP38 ключ и пароль, "
+"поэтому убедитесь, что вы нажали **Print** и храните их в безопасном месте. "
+"Если вы не до конца разобрались в использовании BIP38 шифрования, то, прежде"
+" чем настраивать хранение крупных средств на зашифрованном кошельке, "
+"рекомендуем вам попробовать прогнать весь процесс, используя небольшое "
+"количество Dash. Если вы забудете пароль или потеряете код шифрования, то "
+"средства будут утеряны навсегда."
 
-#: ../../wallets/paper.rst:150
+#: ../../wallets/paper.rst:154
 msgid ""
 "A Dash WIF address can be easily identified because it always begins with "
 "\"7\". A BIP38 format encrypted key can be identified because it always "
 "begins with \"6P\". See `here <https://bitcoinpaperwallet.com/bip38 "
 "-password-encrypted-wallets/>`_ to learn more about BIP38."
 msgstr ""
+"WIF адрес Dash легко опознать, так как он всегда начинается на \"7\". Формат"
+" BIP38 легко опознать, так как он всегда начинается на \"6P\". Более "
+"подробая информация о BIP38 `здесь <https://bitcoinpaperwallet.com/bip38 "
+"-password-encrypted-wallets/>`_."
 
-#: ../../wallets/paper.rst:158
+#: ../../wallets/paper.rst:162
 msgid "Encrypted paper wallet generated using Dash Paper Wallet Generator"
-msgstr ""
+msgstr "Шифрование бумажного кошелька, используя Dash Paper Wallet Generator"
 
-#: ../../wallets/paper.rst:161
+#: ../../wallets/paper.rst:165
 msgid "Sending to a paper wallet and viewing the balance"
-msgstr ""
+msgstr "Отправка средств на бумажный кошелёк и проверка баланса"
 
-#: ../../wallets/paper.rst:163
+#: ../../wallets/paper.rst:167
 msgid ""
 "You can send Dash to a paper wallet address in the same way as to any other "
 "Dash address. See the documentation for your wallet if you do not know how "
@@ -248,56 +356,74 @@ msgid ""
 "you’d like. Just make sure you test your wallet with small amounts first to "
 "learn how it works."
 msgstr ""
+"Вы можете отправить Dash на бумажный кошелёк точно так же как и на любой "
+"другой адрес Dash. Если вы не знаете, как это делать, то обратитесь к "
+"документации к кошельку. В этом примере 0,05 DASH (за минусом комиссии за "
+"транзакцию) были отправлены на адрес бумажного кошелька. Любой, кто знает "
+"публичный адрес сможет увидеть баланс кошелька через Block Explorer, но "
+"только тот, у кого есть приватный ключ, сможет получить к ним доступ. На "
+"один и тот же адрес можно отправлять сколько угодно монет любое количество "
+"раз. Просто, для начала, разберитесь с работой кошелька, используя небольшие"
+" суммы."
 
-#: ../../wallets/paper.rst:176
+#: ../../wallets/paper.rst:180
 msgid ""
 "Viewing the balance of the paper wallet using the Dash Block Explorer at "
 "explorer.dash.org"
 msgstr ""
+"Просмотр баланса бумажного кошелька, используя Dash Block Explorer на "
+"explorer.dash.org"
 
-#: ../../wallets/paper.rst:179
+#: ../../wallets/paper.rst:183
 msgid "Spending from a paper wallet"
-msgstr ""
+msgstr "Расходование средств с бумажного кошелька"
 
-#: ../../wallets/paper.rst:181
+#: ../../wallets/paper.rst:185
 msgid ""
 "In order to access the funds stored on the paper wallet address, you will "
 "need the following:"
 msgstr ""
+"Для получения доступа к средствам адреса на бумажном кошельке, необходимо "
+"сделать следующее:"
 
-#: ../../wallets/paper.rst:184
+#: ../../wallets/paper.rst:188
 msgid "The public address"
-msgstr ""
+msgstr "Публичный адрес"
 
-#: ../../wallets/paper.rst:185
+#: ../../wallets/paper.rst:189
 msgid "The private key in WIF"
-msgstr ""
+msgstr "Приватный ключ в формате WIF"
 
-#: ../../wallets/paper.rst:187
+#: ../../wallets/paper.rst:191
 msgid ""
 "If you encrypted the wallet, you will additionally need the following to "
 "convert the BIP38 key into the WIF key:"
 msgstr ""
-
-#: ../../wallets/paper.rst:190
-msgid "The encrypted private key in BIP38 format"
-msgstr ""
-
-#: ../../wallets/paper.rst:191
-msgid "The passphrase you used to encrypt the key"
-msgstr ""
+"Если вы зашифровали кошелёк, то для преобразования BIP38 ключа в WIF ключ, "
+"дополнительно необходимо сделать следующее:"
 
 #: ../../wallets/paper.rst:194
-msgid "Optional: Decrypt BIP38 key to WIF"
-msgstr ""
+msgid "The encrypted private key in BIP38 format"
+msgstr "Зашифрованный приватный ключ в формате BIP38"
 
-#: ../../wallets/paper.rst:196
+#: ../../wallets/paper.rst:195
+msgid "The passphrase you used to encrypt the key"
+msgstr "Кодовая фраза, которую вы использовали для шифрования кошелька"
+
+#: ../../wallets/paper.rst:198
+msgid "Optional: Decrypt BIP38 key to WIF"
+msgstr "По желанию: дешифровка BIP38 ключа в WIF"
+
+#: ../../wallets/paper.rst:200
 msgid ""
 "If you encrypted your paper wallet, you will first need to decrypt the BIP38"
 " key. You can skip this step if your private key was not encrypted."
 msgstr ""
+"Если вы зашифровали свой бумажный кошелёк, то в первую очередь, вам "
+"необходимо дешифровать BIP38 ключ. Вы можете пропустить этот шаг, если ваш "
+"приватный ключ не зашифрован."
 
-#: ../../wallets/paper.rst:199
+#: ../../wallets/paper.rst:203
 msgid ""
 "Go to the **Wallet Details** tab, enter the encrypted key in the **Enter "
 "Private Key** field and click **View Details**. You will be asked to **Enter"
@@ -306,18 +432,26 @@ msgid ""
 "information required to access the funds on the public address appears under"
 " **Private Key WIF**. Copy the Private Key WIF and use it in the next step."
 msgstr ""
+"Зайдите в окно **Wallet Details**, введите зашифрованный ключ в поле **Enter"
+" Private Key** и нажмите **View Details**. Появится запрос **Enter BIP38 "
+"Passphrase** в поле. Введите кодовую фразу и нажмите **Decrypt BIP38**. "
+"Появятся данные, извлечённые из ключа, а информация, необходимая для доступа"
+" к средствам на публичном адресе появится под **Private Key WIF**. "
+"Скопируйте приватный ключ WIF и используйте его в следющем шаге."
 
-#: ../../wallets/paper.rst:210
+#: ../../wallets/paper.rst:214
 msgid ""
 "Dash Paper Wallet Generator displaying information derived from an encrypted"
 " private key"
 msgstr ""
+"Dash Paper Wallet Generator показывает информацию, извлечённую из "
+"зашифрованного приватного ключа"
 
-#: ../../wallets/paper.rst:214
+#: ../../wallets/paper.rst:218
 msgid "Importing the private key to your live wallet"
-msgstr ""
+msgstr "Импортирование приватного ключа в работающий кошелёк"
 
-#: ../../wallets/paper.rst:216
+#: ../../wallets/paper.rst:220
 msgid ""
 "When you are ready to spend the balance on the paper wallet, you will need "
 "to import the private key used to control the address printed on the wallet "
@@ -327,12 +461,20 @@ msgid ""
 "Wallet**. Enter your wallet passphrase. Then click **Tools** and select "
 "**Debug Console**. The console appears. Enter the following command:"
 msgstr ""
+"Когда вы захотите начать расходовать баланс бумажного кошелька, необходимо "
+"будет импортировать приватный ключ, использующийся для контроля "
+"распечатанного адреса в другой кошелёк Dash, присоединённый к интернету. Для"
+" примера, мы используем кошелёк Dash Core, но так же есть поддержка Dash "
+"Electrum и мобильных кошельков. Откройте кошелёк Dash Core, нажмите "
+"**Settings** и **Unlock Wallet**. Введите кодовую фразу кошелька. Затем "
+"нажмите **Tools** и выберите **Debug Console**. Когда появится консоль, "
+"введите следующую команду:"
 
-#: ../../wallets/paper.rst:232
+#: ../../wallets/paper.rst:236
 msgid "Dash Core Wallet importing a private key"
-msgstr ""
+msgstr "Кошелёк Dash Core импортирует приватный ключ"
 
-#: ../../wallets/paper.rst:234
+#: ../../wallets/paper.rst:238
 msgid ""
 "This process requires rescanning the entire downloaded blockchain for "
 "transactions involving this address, and will therefore take some time. Be "
@@ -340,14 +482,21 @@ msgid ""
 "imported address will appear in your list of transactions. If you use Coin "
 "Control, you can also enable or disable the address for spending there."
 msgstr ""
+"Этот процесс потребует пересканирования всего скачанного блокчейна для "
+"транзакций, включающих в себя этот адрес, поэтому потребуется время. "
+"Потерпите. Когда процесс завершится, все трананзакции на/с этого адреса "
+"появятся в списке транзакций. Если вы используете Coin Control, то там можно"
+" включить или выключить возможность траты средств с этого адреса."
 
-#: ../../wallets/paper.rst:247
+#: ../../wallets/paper.rst:251
 msgid ""
 "Paper wallet address successfully imported into Dash Core Wallet from WIF "
 "private key"
 msgstr ""
+"Адрес из бумажного кошелька удачно импортирован в кошелёк Dash Core из "
+"приватного ключа WIF"
 
-#: ../../wallets/paper.rst:250
+#: ../../wallets/paper.rst:254
 msgid ""
 "Since the paper wallet public address still holds the funds, it can also be "
 "imported again into a second wallet if it is not destroyed. It is "
@@ -357,9 +506,18 @@ msgid ""
 "access to the same address from the paper wallet before you do. You can then"
 " spend your balance as usual."
 msgstr ""
+"Поскольку публичный адрес кошелька до сих пор хранит средства, то, если он "
+"не был уничтожен, его можно снова импортировать в другой кошелёк. "
+"Рекомендуется перевести средства из бумажного кошелька во внутренний кошелёк"
+" или на другой адрес, где доступом к приватному ключу владеете только вы. "
+"Это предотвратит несанкционированный доступ третьих лиц прежде вас, к "
+"которому же адресу бумажного кошелька, что имеете и вы. После этих действий "
+"вы сможете распоряжаться балансом как обычно."
 
-#: ../../wallets/paper.rst:258
+#: ../../wallets/paper.rst:262
 msgid ""
 "Once the paper wallet is empty and you are sure it will not be receiving any"
 " further deposits, you can destroy the paper."
 msgstr ""
+"Как только средств на бумажном кошельке не останется и поступления новых "
+"средств не будет ожидаться, его можно уничтожить."

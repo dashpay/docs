@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-25 08:07+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: strophy <leon.white@dash.org>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
@@ -18,30 +18,30 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../developers/index.rst:5
+#: ../../developers/index.rst:1
+msgid "Developers guide and information about sporks and Dash version history"
+msgstr ""
+
+#: ../../developers/index.rst:1
+msgid "dash, developers, sporks, version history"
+msgstr ""
+
+#: ../../developers/index.rst:9
 msgid "Developers"
 msgstr "Desarrolladores"
 
-#: ../../developers/index.rst:7
+#: ../../developers/index.rst:11
 msgid ""
 "Dash Core has published an extensive `Developer Guide <https://dash-"
 "docs.github.io/en/>`_ to help new developers get started with the Dash code "
 "base, and as a reference for experienced developers. This guide can be "
 "leveraged to quickly and efficiently integrate external applications with "
 "the Dash ecosystem. Anyone can contribute to the guide by submitting an "
-"issue or pull request on GitHub. The documentation is available at: "
-"https://dash- docs.github.io/en/"
+"issue or pull request on GitHub. The documentation is available at: https"
+"://dash-docs.github.io/en/"
 msgstr ""
-"Dash Core ha publicado una extensa `Guía del Desarrollador <https://dash-"
-"docs.github.io/en/>`_ para ayudar a los nuevos desarrolladores a comenzar "
-"con la base de código de Dash y como una referencia para desarrolladores "
-"experimentados. Esta guía se puede aprovechar para integrar de manera rápida"
-" y eficiente las aplicaciones externas con el ecosistema Dash. Cualquiera "
-"puede contribuir a la guía enviando un problema o solicitud de extracción en"
-" GitHub. La documentación está disponible en: https://dash- "
-"docs.github.io/en/"
 
-#: ../../developers/index.rst:15
+#: ../../developers/index.rst:19
 msgid ""
 "The Dash Core Team also maintains the `Dash Roadmap "
 "<https://github.com/dashpay/dash-roadmap>`_, which sets out delivery "
@@ -60,7 +60,7 @@ msgstr ""
 "explicaciones técnicas detalladas de los cambios propuestos al protocolo "
 "Dash."
 
-#: ../../developers/index.rst:23
+#: ../../developers/index.rst:27
 msgid ""
 "The remaining sections available below describe practical steps to carry out"
 " common development tasks in Dash."
@@ -68,11 +68,11 @@ msgstr ""
 "Las secciones restantes disponibles a continuación describen pasos prácticos"
 " para llevar a cabo tareas de desarrollo comunes en Dash."
 
-#: ../../developers/index.rst:36
+#: ../../developers/index.rst:40
 msgid "Sporks"
 msgstr "Sporks"
 
-#: ../../developers/index.rst:38
+#: ../../developers/index.rst:42
 msgid ""
 "A multi-phased fork, colloquially known as a \"spork\", is a mechanism "
 "unique to Dash used to safely deploy new features to the network through "
@@ -93,11 +93,11 @@ msgstr ""
 "de cada spork que existe actualmente en la red y cómo verificar sus "
 "respectivos estados."
 
-#: ../../developers/index.rst:48
+#: ../../developers/index.rst:52
 msgid "Spork functions"
 msgstr "Funciones de spork"
 
-#: ../../developers/index.rst:50
+#: ../../developers/index.rst:54
 msgid ""
 "Sporks are set using integer values. Many sporks may be set to a particular "
 "epoch datetime (number of seconds that have elapsed since January 1, 1970) "
@@ -117,21 +117,21 @@ msgstr ""
 "actualmente en la red y cumplen las funciones que se describen a "
 "continuación:"
 
-#: ../../developers/index.rst:59
+#: ../../developers/index.rst:63
 msgid "SPORK_2_INSTANTSEND_ENABLED"
 msgstr "SPORK_2_INSTANTSEND_HABILITADO"
 
-#: ../../developers/index.rst:59
+#: ../../developers/index.rst:63
 msgid "Governs the ability of Dash clients to use InstandSend functionality."
 msgstr ""
 "Gobierna la capacidad de los clientes de Dash para usar la funcionalidad de "
 "InstandSend."
 
-#: ../../developers/index.rst:63
+#: ../../developers/index.rst:67
 msgid "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
 msgstr "SPORK_3_INSTANTSEND_FILTRADO_DE_BLOQUES"
 
-#: ../../developers/index.rst:62
+#: ../../developers/index.rst:66
 msgid ""
 "If enabled, masternodes will reject blocks containing transactions in "
 "conflict with locked but unconfirmed InstandSend transactions."
@@ -140,11 +140,11 @@ msgstr ""
 "transacciones en conflicto con las transacciones de InstandSend bloqueadas "
 "pero no confirmadas."
 
-#: ../../developers/index.rst:67
+#: ../../developers/index.rst:71
 msgid "SPORK_5_INSTANTSEND_MAX_VALUE"
 msgstr "SPORK_5_INSTANTSEND_VALOR_MÁXIMO"
 
-#: ../../developers/index.rst:66
+#: ../../developers/index.rst:70
 msgid ""
 "Enforces the maximum value in Dash that can be included in an InstantSend "
 "transaction."
@@ -152,11 +152,11 @@ msgstr ""
 "Aplica el valor máximo en Dash que se puede incluir en una transacción "
 "InstantSend."
 
-#: ../../developers/index.rst:73
+#: ../../developers/index.rst:77
 msgid "SPORK_6_NEW_SIGS"
 msgstr "SPORK_6_NEW_SIGS"
 
-#: ../../developers/index.rst:70
+#: ../../developers/index.rst:74
 msgid ""
 "Enables a new signature format for Dash-specific network messages introduced"
 " in Dash 12.3. For more information, see `here "
@@ -168,11 +168,11 @@ msgstr ""
 "<https://github.com/dashpay/dash/pull/1936>`__ y `aquí "
 "<https://github.com/dashpay/dash/pull/1937>`__."
 
-#: ../../developers/index.rst:77
+#: ../../developers/index.rst:81
 msgid "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT"
 msgstr "SPORK_8_APLICACIÓN_DEL_PAGO_A_MASTERNODES"
 
-#: ../../developers/index.rst:76
+#: ../../developers/index.rst:80
 msgid ""
 "If enabled, miners must pay 50% of the block reward to a masternode "
 "currently pending selection or the block will be considered invalid."
@@ -181,22 +181,22 @@ msgstr ""
 "bloque a un masternode que esté actualmente pendiente de selección o el "
 "bloque se considerará no válido."
 
-#: ../../developers/index.rst:81
+#: ../../developers/index.rst:85
 msgid "SPORK_9_SUPERBLOCKS_ENABLED"
 msgstr "SPORK_9_SUPERBLOCKS_HABILITADOS"
 
-#: ../../developers/index.rst:80
+#: ../../developers/index.rst:84
 msgid ""
 "If enabled, superblocks are verified and issued to pay proposal winners."
 msgstr ""
 "Si está habilitado, los superbloques se verifican y emiten para pagar a los "
 "ganadores de propuestas."
 
-#: ../../developers/index.rst:86
+#: ../../developers/index.rst:90
 msgid "SPORK_10_MASTERNODE_PAY_UPDATED_NODES"
 msgstr "SPORK_10_MASTERNODE_PAGO_A_NODOS_ACTUALIZADOS"
 
-#: ../../developers/index.rst:84
+#: ../../developers/index.rst:88
 msgid ""
 "Controls whether masternodes running an older protocol version are "
 "considered eligible for payment. This can be used as an incentive to "
@@ -206,11 +206,11 @@ msgstr ""
 "se consideran elegibles para el pago. Esto puede usarse como un incentivo "
 "para alentar la actualización de los masternodes."
 
-#: ../../developers/index.rst:90
+#: ../../developers/index.rst:94
 msgid "SPORK_12_RECONSIDER_BLOCKS"
 msgstr "SPORK_12_RECONSIDERAR_BLOQUES"
 
-#: ../../developers/index.rst:89
+#: ../../developers/index.rst:93
 msgid ""
 "Forces reindex of a specified number of blocks to recover from unintentional"
 " network forks."
@@ -218,19 +218,19 @@ msgstr ""
 "Forzar el reindex de un número específico de bloques para recuperarse de las"
 " bifurcaciones de red involuntarias."
 
-#: ../../developers/index.rst:93
+#: ../../developers/index.rst:97
 msgid "SPORK_13_OLD_SUPERBLOCK_FLAG"
 msgstr "SPORK_13_BANDERA_VIEJA_DE_SUPERBLOQUE"
 
-#: ../../developers/index.rst:93
+#: ../../developers/index.rst:97
 msgid "Deprecated. No network function since block 614820."
 msgstr "Obsoleto. Sin función de red desde el bloque 614820."
 
-#: ../../developers/index.rst:97
+#: ../../developers/index.rst:101
 msgid "SPORK_14_REQUIRE_SENTINEL_FLAG"
 msgstr "SPORK_14_REQUIERE_BANDERA_SENTINEL"
 
-#: ../../developers/index.rst:96
+#: ../../developers/index.rst:100
 msgid ""
 "Toggles whether masternodes with status are eligible for payment if status "
 "is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly."
@@ -239,11 +239,11 @@ msgstr ""
 "estado es WATCHDOG_EXPIRED, es decir, Sentinel no se está ejecutando "
 "correctamente."
 
-#: ../../developers/index.rst:100
+#: ../../developers/index.rst:104
 msgid "Viewing spork status"
 msgstr "Revisar estado de spork"
 
-#: ../../developers/index.rst:102
+#: ../../developers/index.rst:106
 msgid ""
 "The ``spork show`` and ``spork active`` commands issued in the debug window "
 "(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
@@ -254,21 +254,21 @@ msgstr ""
 "con sporks. Puedes abrir la ventana de depuración seleccionando "
 "**Herramientas > Depurar consola**."
 
-#: ../../developers/index.rst:110
+#: ../../developers/index.rst:114
 msgid "spork show and spork active output in the Dash Core debug console"
 msgstr ""
 "Salidas de spork show y spork active en la consola de depuración Dash Core"
 
-#: ../../developers/index.rst:114
+#: ../../developers/index.rst:118
 msgid "Version History"
 msgstr "Historial de versiones"
 
-#: ../../developers/index.rst:116
+#: ../../developers/index.rst:120
 msgid "Full release notes and the version history of Dash are available here:"
 msgstr ""
 "Las notas de la versión completa y el historial de versiones de Dash están "
 "disponibles aquí:"
 
-#: ../../developers/index.rst:118
+#: ../../developers/index.rst:122
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
 msgstr "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"

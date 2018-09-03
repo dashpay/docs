@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-21 07:19+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: strophy <leon.white@dash.org>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
@@ -18,11 +18,19 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../wallets/dashcore/send-receive.rst:5
+#: ../../wallets/dashcore/send-receive.rst:1
+msgid "Guide to sending and receiving Dash using the Dash Core wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/send-receive.rst:1
+msgid "dash, core, wallet, send, receive, transaction"
+msgstr ""
+
+#: ../../wallets/dashcore/send-receive.rst:9
 msgid "Sending and receiving"
 msgstr "Enviar y recibir"
 
-#: ../../wallets/dashcore/send-receive.rst:7
+#: ../../wallets/dashcore/send-receive.rst:11
 msgid ""
 "Your Dash Core Wallet is associated with a number of unique addresses that "
 "can be used to send and receive Dash. Each address holds its own balance, "
@@ -41,7 +49,7 @@ msgstr ""
 "asociada a su billetera. Puedes controlar qué direcciones usar con la "
 "función Control de monedas."
 
-#: ../../wallets/dashcore/send-receive.rst:16
+#: ../../wallets/dashcore/send-receive.rst:20
 msgid ""
 "When you confirm a transaction, Dash Core will enter the transaction in a "
 "block, which will then be added to the blockchain for other clients to "
@@ -58,17 +66,17 @@ msgstr ""
 " se liberan después de 101 bloques. Tenga en cuenta que se utiliza un "
 "proceso diferente para las transacciones InstantSend y PrivateSend."
 
-#: ../../wallets/dashcore/send-receive.rst:24
+#: ../../wallets/dashcore/send-receive.rst:28
 msgid "Dash addresses are 34 characters long and begin with an uppercase X."
 msgstr ""
 "Las direcciones de Dash tienen 34 caracteres y comienzan con una X en "
 "mayúscula."
 
-#: ../../wallets/dashcore/send-receive.rst:27
+#: ../../wallets/dashcore/send-receive.rst:31
 msgid "Sending Dash"
 msgstr "Enviar Dash"
 
-#: ../../wallets/dashcore/send-receive.rst:29
+#: ../../wallets/dashcore/send-receive.rst:33
 msgid ""
 "You can use Dash Core to send Dash from your balance to another user. The "
 "receiving user will provide you with a Dash address to which you should send"
@@ -80,11 +88,11 @@ msgstr ""
 "que debes enviar los fondos. Haz click en la pestaña **Enviar** en la barra "
 "de pestañas e ingresa la dirección de destino en el campo **Pagar a**."
 
-#: ../../wallets/dashcore/send-receive.rst:37
+#: ../../wallets/dashcore/send-receive.rst:41
 msgid "The Dash Core Send tab"
 msgstr "La pestaña Enviar de Dash Core"
 
-#: ../../wallets/dashcore/send-receive.rst:39
+#: ../../wallets/dashcore/send-receive.rst:43
 msgid ""
 "You can also use the three icons |sendicons| to the right of the **Pay To** "
 "field to select a previously used address, paste an address from the "
@@ -101,7 +109,7 @@ msgstr ""
 "Finalmente, ingresa la cantidad de Dash que deseas transferir en el campo "
 "**Monto**."
 
-#: ../../wallets/dashcore/send-receive.rst:49
+#: ../../wallets/dashcore/send-receive.rst:53
 msgid ""
 "The other options relate to fees and PrivateSend/InstantSend. You can choose"
 " if you want to pay the network fee in addition to the amount sent, or "
@@ -123,7 +131,7 @@ msgstr ""
 "previamente mezclada. Puedes encontrar más información sobre PrivateSend y "
 "InstantSend :ref:`aquí <dashcore-privatesend-instantsend>`."
 
-#: ../../wallets/dashcore/send-receive.rst:60
+#: ../../wallets/dashcore/send-receive.rst:64
 msgid ""
 "Let’s try an example. Say you have received an invoice which you now want to"
 " pay with Dash. The writer of the invoice has included a Dash address, which"
@@ -135,11 +143,11 @@ msgstr ""
 "que se puede ver en la siguiente ventana que comienza con *Xpa*. La factura "
 "es por 2.45 Dash, lo que debes completar en el campo **Monto**."
 
-#: ../../wallets/dashcore/send-receive.rst:68
+#: ../../wallets/dashcore/send-receive.rst:72
 msgid "The Send tab filled out for a transaction"
 msgstr "La pestaña Enviar rellenada para una transacción"
 
-#: ../../wallets/dashcore/send-receive.rst:70
+#: ../../wallets/dashcore/send-receive.rst:74
 msgid ""
 "Once you have entered the destination address and the amount, click the "
 "**Send** button. If you have encrypted your wallet, you will now be required"
@@ -149,11 +157,11 @@ msgstr ""
 " el botón **Enviar**. Si encriptaste tu billetera, ahora se te pedirá que "
 "ingreses tu contraseña para desbloquear la billetera."
 
-#: ../../wallets/dashcore/send-receive.rst:77
+#: ../../wallets/dashcore/send-receive.rst:81
 msgid "Entering the password to unlock the wallet"
 msgstr "Ingresar la contraseña para desbloquear la billetera"
 
-#: ../../wallets/dashcore/send-receive.rst:79
+#: ../../wallets/dashcore/send-receive.rst:83
 msgid ""
 "Finally, you are given one final confirmation and chance to cancel your send"
 " transaction before Dash Core processes the transaction on the blockchain."
@@ -162,11 +170,11 @@ msgstr ""
 " transacción de envío antes de que Dash Core procese la transacción en la "
 "cadena de bloques."
 
-#: ../../wallets/dashcore/send-receive.rst:86
+#: ../../wallets/dashcore/send-receive.rst:90
 msgid "Final confirmation window"
 msgstr "Ventana final de confirmación"
 
-#: ../../wallets/dashcore/send-receive.rst:88
+#: ../../wallets/dashcore/send-receive.rst:92
 msgid ""
 "If you respond with **Yes**, your transaction will be processed. Your "
 "operating system may display a notification, and the transaction will appear"
@@ -176,11 +184,11 @@ msgstr ""
 " puede mostrar una notificación, y la transacción aparecerá en la pestaña "
 "Transacciones, donde puedes monitorear su progreso."
 
-#: ../../wallets/dashcore/send-receive.rst:95
+#: ../../wallets/dashcore/send-receive.rst:99
 msgid "The Windows 10 sent transaction confirmation notification"
 msgstr "La notificación de confirmación de transacción enviada por Windows 10"
 
-#: ../../wallets/dashcore/send-receive.rst:97
+#: ../../wallets/dashcore/send-receive.rst:101
 msgid ""
 "Note that the amount of the transaction increased by .000045 Dash. This is "
 "the transaction fee. In the next section, we will see what this procedure "
@@ -190,11 +198,11 @@ msgstr ""
 "es la comisión de transacción. En la siguiente sección, veremos cómo se ve "
 "este procedimiento desde el lado de recepción."
 
-#: ../../wallets/dashcore/send-receive.rst:102
+#: ../../wallets/dashcore/send-receive.rst:106
 msgid "Receiving Dash"
 msgstr "Recibir Dash"
 
-#: ../../wallets/dashcore/send-receive.rst:104
+#: ../../wallets/dashcore/send-receive.rst:108
 msgid ""
 "To receive Dash, you must first create a receiving address to give to the "
 "sending party. To do this, click **File > Receiving addresses**. The "
@@ -204,11 +212,11 @@ msgstr ""
 "entregarla a la parte que envía. Para hacer esto, haz click en **Archivo > "
 "Recibir direcciones**. Aparece la ventana **Recibir direcciones**."
 
-#: ../../wallets/dashcore/send-receive.rst:111
+#: ../../wallets/dashcore/send-receive.rst:115
 msgid "The Receiving addresses window"
 msgstr "La ventana de Recibir direcciones"
 
-#: ../../wallets/dashcore/send-receive.rst:113
+#: ../../wallets/dashcore/send-receive.rst:117
 msgid ""
 "Either copy an existing address by clicking on the address and then the "
 "**Copy** button, or create a new address by clicking the **New** button. You"
@@ -231,11 +239,11 @@ msgstr ""
 "abierta, y reconocerá cuando ocurra una nueva transacción que involucre tu "
 "dirección de recepción."
 
-#: ../../wallets/dashcore/send-receive.rst:126
+#: ../../wallets/dashcore/send-receive.rst:130
 msgid "The Windows 10 received transaction confirmation notification"
 msgstr "Windows 10 recibió notificación de confirmación de transacción"
 
-#: ../../wallets/dashcore/send-receive.rst:128
+#: ../../wallets/dashcore/send-receive.rst:132
 msgid ""
 "Once you have been paid, you can see the balance both on the **Overview** "
 "tab and on the **Transactions** tab."
@@ -243,10 +251,10 @@ msgstr ""
 "Una vez que te hayan pagado, puedes ver el saldo en la pestaña **Descripción"
 " general** y en la pestaña **Transacciones**."
 
-#: ../../wallets/dashcore/send-receive.rst:134
+#: ../../wallets/dashcore/send-receive.rst:138
 msgid "The received transaction"
 msgstr "La transacción recibida"
 
-#: ../../wallets/dashcore/send-receive.rst:136
+#: ../../wallets/dashcore/send-receive.rst:140
 msgid "**How to Create New Receiving Addresses in DashQT**"
 msgstr "**Como crear Nuevas Direcciones de Recepción en DashQT**"

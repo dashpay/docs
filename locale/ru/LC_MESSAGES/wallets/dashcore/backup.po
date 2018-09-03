@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-25 08:07+0000\n"
+"POT-Creation-Date: 2018-09-03 08:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -18,15 +18,23 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: ../../wallets/dashcore/backup.rst:5
+#: ../../wallets/dashcore/backup.rst:1
+msgid "How to safely back up and restore the Dash Core wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/backup.rst:1
+msgid "dash, core, wallet, backup, restore, wallet.dat"
+msgstr ""
+
+#: ../../wallets/dashcore/backup.rst:9
 msgid "Wallet backup and restore"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:8
+#: ../../wallets/dashcore/backup.rst:12
 msgid "Backup"
 msgstr "Резервная копия"
 
-#: ../../wallets/dashcore/backup.rst:10
+#: ../../wallets/dashcore/backup.rst:14
 msgid ""
 "This documentation describes how to safely back up your wallet file for safe"
 " storage in case your computer or laptop is damaged or lost. Dash Core "
@@ -40,7 +48,7 @@ msgid ""
 "permanently lose access to your Dash.**"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:22
+#: ../../wallets/dashcore/backup.rst:26
 msgid ""
 "It is important to consider that if you have not encrypted your wallet using"
 " the **Settings > Encrypt Wallet** menu item, anyone with access to the "
@@ -50,11 +58,11 @@ msgid ""
 "the cloud."
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:30
+#: ../../wallets/dashcore/backup.rst:34
 msgid "Backup from Dash Core"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:32
+#: ../../wallets/dashcore/backup.rst:36
 msgid ""
 "Firstly, never copy your wallet.dat file while Dash Core is open. Always use"
 " the **File > Backup Wallet** menu if the wallet is open. When you select "
@@ -64,15 +72,15 @@ msgid ""
 "physically separate location to your computer."
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:46
+#: ../../wallets/dashcore/backup.rst:50
 msgid "Backing up the Dash Core wallet from the File menu"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:50
+#: ../../wallets/dashcore/backup.rst:54
 msgid "Backup by copying wallet.dat"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:52
+#: ../../wallets/dashcore/backup.rst:56
 msgid ""
 "**If Dash Core is not running**, you can also backup your wallet by simply "
 "copying the *wallet.dat* file to another location. This file is located in "
@@ -81,32 +89,32 @@ msgid ""
 " the following locations on different operating systems:"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:58
+#: ../../wallets/dashcore/backup.rst:62
 msgid "**Windows**"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:64
+#: ../../wallets/dashcore/backup.rst:68
 msgid ""
 "You can access this folder directly by **Windows Key + R** and typing "
 "``%APPDATA%\\DashCore``"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:67
+#: ../../wallets/dashcore/backup.rst:71
 msgid "**Linux**"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:73
+#: ../../wallets/dashcore/backup.rst:77
 msgid ""
 "You can access this folder directly by typing ``cd ~/.dashcore`` at the "
 "terminal or ``~/.dashcore`` in the path bar using the **Go > Enter "
 "Location...** menu item in Files"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:77
+#: ../../wallets/dashcore/backup.rst:81
 msgid "**macOS**"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:83
+#: ../../wallets/dashcore/backup.rst:87
 msgid ""
 "You can access this folder by typing ``cd ~/Library/Application "
 "Support/DashCore`` at the terminal or ``~/Library/Application "
@@ -114,7 +122,7 @@ msgid ""
 "Finder"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:88
+#: ../../wallets/dashcore/backup.rst:92
 msgid ""
 "Ensure Dash Core is not running, then simply copy the *wallet.dat* file from"
 " this folder to another folder in the normal way for your operating system. "
@@ -125,15 +133,15 @@ msgid ""
 "separate location to your computer. Be careful to copy (not move) the file!"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:100
+#: ../../wallets/dashcore/backup.rst:104
 msgid "Backing up wallet.dat by copying to another folder"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:104
+#: ../../wallets/dashcore/backup.rst:108
 msgid "Automatic backups"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:106
+#: ../../wallets/dashcore/backup.rst:110
 msgid ""
 "Every time you open Dash Core, it will automatically create a backup copy of"
 " *wallet.dat* in the *dashcore/backups* folder. Up to 10 backups can be kept"
@@ -143,7 +151,7 @@ msgid ""
 "*dash.conf*. Setting this value to 0 completely disables backups."
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:114
+#: ../../wallets/dashcore/backup.rst:118
 msgid ""
 "You can view the automatic backups folder by browsing to *DashCore* folder "
 "at the location specified above for *wallet.dat* and opening the backups "
@@ -154,22 +162,22 @@ msgid ""
 "shutdown of the Dash Core app."
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:123
+#: ../../wallets/dashcore/backup.rst:127
 msgid "Restore"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:125
+#: ../../wallets/dashcore/backup.rst:129
 msgid ""
 "To restore a backup, install Dash Core on the target system (or stop it, if "
 "already installed) and rename the existing *wallet.dat* file in the "
 "*DashCore* folder."
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:132
+#: ../../wallets/dashcore/backup.rst:136
 msgid "Renaming the old wallet.dat file to wallet.old in the DashCore folder"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:134
+#: ../../wallets/dashcore/backup.rst:138
 msgid ""
 "Then copy the backup wallet file to the *DashCore* folder and ensure it is "
 "named *wallet.dat*. Now, when you start Dash Core again, it will load the "
@@ -177,17 +185,17 @@ msgid ""
 "this will result in data corruption!"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:145
+#: ../../wallets/dashcore/backup.rst:149
 msgid ""
 "Copying the backup file into the DashCore folder and renaming it to "
 "wallet.dat"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:150
+#: ../../wallets/dashcore/backup.rst:154
 msgid "Backup storage considerations"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:152
+#: ../../wallets/dashcore/backup.rst:156
 msgid ""
 "Any backup depends to some extent on the existence of software capable of "
 "reading the data at some future point in time. As such, it is good practice "
@@ -196,7 +204,7 @@ msgid ""
 "Dash Core you used to create the backup."
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:158
+#: ../../wallets/dashcore/backup.rst:162
 msgid ""
 "The *wallet.dat* file itself should be encrypted using a password set from "
 "the **Settings > Encrypt Wallet** menu item. However, this only prevents "
@@ -214,7 +222,7 @@ msgid ""
 "<https://theintercept.com/2015/04/27/encrypting-laptop-like- mean/>`_."
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:174
+#: ../../wallets/dashcore/backup.rst:178
 msgid ""
 "Where you store this file is then up to you. It could be in your home, in a "
 "safe deposit box at a bank, a waterproof or fireproof container, or on cloud"
@@ -224,7 +232,7 @@ msgid ""
 " in the future."
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:181
+#: ../../wallets/dashcore/backup.rst:185
 msgid ""
 "Finally it is important to understand that *wallet.dat* itself is a "
 "relatively dangerous way to store large amounts of funds - it is simply a "
@@ -237,11 +245,11 @@ msgid ""
 "directly or also encrypted using BIP38 for safe storage."
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:193
+#: ../../wallets/dashcore/backup.rst:197
 msgid "Verifying backups"
 msgstr ""
 
-#: ../../wallets/dashcore/backup.rst:195
+#: ../../wallets/dashcore/backup.rst:199
 msgid ""
 "There is no fixed procedure to verify your backup, but you should test "
 "restoring it at least once to make sure it works. If you have a simple copy "
