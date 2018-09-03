@@ -67,7 +67,8 @@ Explorers
 - https://test.insight.dash.siampm.com - by thelazier
 - https://test.explorer.dashninja.pl - by elbereth
 - http://test.insight.masternode.io:3001 - by coingun
-- https://testnet-insight.dashevo.org/insight/
+- http://insight.test.dash.crowdnode.io
+- https://testnet-insight.dashevo.org/insight
 
 Pools
 -----

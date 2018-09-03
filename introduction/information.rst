@@ -165,6 +165,7 @@ Block explorers, statistics and visualizations
 - https://dash.holytransaction.com
 - https://dashradar.com
 - http://udjinm6.github.io/bitlisten
+- http://insight.dash.crowdnode.io
 
 
 Treasury tools
