@@ -24,6 +24,7 @@ Official sites
 Community sites
 ---------------
 
+- https://www.dashnexus.org
 - https://www.dashwatch.org
 - https://www.dashboost.org
 - https://www.dashcentral.org
