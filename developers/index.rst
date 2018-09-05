@@ -101,7 +101,6 @@ SPORK_14_REQUIRE_SENTINEL_FLAG
   status is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly.
 
 SPORK_15_DETERMINISTIC_MNS_ENABLED
-
   Controls whether `deterministic masternodes
   <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ are
   required. When activated, the legacy masternode list logic will no
