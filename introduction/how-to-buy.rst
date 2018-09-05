@@ -953,13 +953,25 @@ SimpleSwap
   .. image:: exchanges/simpleswap.png
      :width: 200px
      :align: right
-     :target: https://www.simpleswap.io/
+     :target: https://www.simpleswap.io
 
-  https://www.simpleswap.io/
+  https://www.simpleswap.io
   
   SimpleSwap is a simple and easy-to-use platform for cryptocurrency
   exchanges that works without registration and limits. It is possible
   to exchange Dash with over 60 other cryptocurrencies.
+
+AirTM
+  .. image:: exchanges/airtm.png
+     :width: 200px
+     :align: right
+     :target: https://www.airtm.io
+
+  https://www.airtm.io
+  
+  AirTM allows rapid exchanges between a range of cryptocurrencies,
+  traditional banks and proprietary regional payment schemes such as
+  Alipay, Western Union or Skrill.
 
 changeNOW
   .. image:: exchanges/changenow.png
