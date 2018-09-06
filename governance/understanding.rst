@@ -285,10 +285,10 @@ funding. Instead, any smaller proposals which have also passed the
 threshold that will fit in the budget will be funded, even if they have
 lower net approval than the larger proposal. Proposals requesting
 payment over multiple budget periods will remain in the treasury system
-for the duration of their validity if they pass the voting threshold,
-even if insufficient budget is available for funding as described above.
-Any unallocated budget is simply never created in the superblock,
-reducing unnecessary inflation.
+for the duration of their validity, even if they do not pass the voting
+threshold, and even if insufficient budget is available for funding as
+described above. Any unallocated budget is simply never created in the
+superblock, reducing unnecessary inflation.
 
 Due to the decentralized nature of the masternode system, it is
 sometimes necessary to form funded organisations, such as committees or
