@@ -163,13 +163,14 @@ Block explorers, statistics and visualizations
 
 - https://explorer.dash.org
 - https://insight.dash.org/insight
-- https://chainz.cryptoid.info/dash/
+- https://chainz.cryptoid.info/dash
 - https://www.coinexplorer.net/dash
 - https://bitinfocharts.com/dash/explorer
-- https://live.blockcypher.com/dash/
-- http://explorer.coinpayments.net/index.php?chain=7
+- https://dashblockexplorer.com
+- https://live.blockcypher.com/dash
 - https://dash.holytransaction.com
 - https://dashradar.com
+- http://explorer.coinpayments.net/index.php?chain=7
 - http://udjinm6.github.io/bitlisten
 - http://insight.dash.crowdnode.io
 
