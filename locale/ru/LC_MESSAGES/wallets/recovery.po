@@ -21,11 +21,15 @@ msgstr ""
 #: ../../wallets/recovery.rst:1
 msgid "Recovering Dash wallets from files, private keys or recovery phrases"
 msgstr ""
+"Восстановление кошельков Dash из файлов, с помощью приватных ключей или фраз"
+" для восстановления"
 
 #: ../../wallets/recovery.rst:1
 msgid ""
 "dash, wallet, recovery, password, lost, mobile, core, phrase, private key"
 msgstr ""
+"dash, кошелёк, восстановление, пароль, потеря, мобильный, core, фраза, "
+"приватный ключ"
 
 #: ../../wallets/recovery.rst:9
 msgid "Wallet Recovery"
@@ -40,10 +44,18 @@ msgid ""
 "that no longer works because the network has upgraded. This documentation is"
 " intended to help these users restore access to their funds."
 msgstr ""
+"Пользователи, которые длительный период пользуются криптовалютой, иногда "
+"находят старые файлы кошельков на USB-накопителях или в облачном хранилище, "
+"о которых они забыли. Также есть пользователи могут иметь резервную копию, "
+"но не могут вспомнить программное обеспечение, которое они использовали для "
+"её создания, или забыли пароль. И есть пользователи, которые могут иметь "
+"старую версию Dash Core, которая больше не работает, потому что сеть "
+"обновилась. Эта документация призвана помочь этим пользователям восстановить"
+" доступ к своим средствам."
 
 #: ../../wallets/recovery.rst:20
 msgid "Determining the backup format"
-msgstr ""
+msgstr "Определение формата резервного копирования"
 
 #: ../../wallets/recovery.rst:22
 msgid ""
@@ -53,26 +65,37 @@ msgid ""
 " directly. The following list shows the possibilities and methods to restore"
 " your wallet in order of probability."
 msgstr ""
+"Первым шагом является определение формата создаваемой вами резервной копии. "
+"В большинстве случаев это будет либо файл, возможно, названный *wallet.dat*,"
+" либо фраза из слов. В некоторых случаях вы можете напрямую сохранить "
+"закрытый ключ для адреса Dash. В следующем списке показаны возможности и "
+"методы восстановления вашего кошелька в порядке вероятности."
 
 #: ../../wallets/recovery.rst:28
 msgid "Backup is stored in an older version of Dash Core that no longer works"
 msgstr ""
+"Резервная копия хранится в старой версии Dash Core, которая больше не "
+"работает"
 
 #: ../../wallets/recovery.rst:30
 msgid ""
 "Follow instructions for restoring wallet files using :ref:`Dash Core "
 "<dashcore-restore>`"
 msgstr ""
+"Следуйте инструкциям по восстановлению файлов кошелька, используя "
+":ссылку:`Dash Core <dashcore-restore>`"
 
 #: ../../wallets/recovery.rst:32
 msgid "Backup is a file"
-msgstr ""
+msgstr "Резервной копией является файл"
 
 #: ../../wallets/recovery.rst:34
 msgid ""
 "If file name is similar to wallet.dat, try to restore using :ref:`Dash Core "
 "<dashcore-restore>`"
 msgstr ""
+"Если файл имеет имя идентичное с wallet.dat, попробуйте способ "
+"восстановления по :ссылке:`Dash Core <dashcore-restore>`"
 
 #: ../../wallets/recovery.rst:35
 msgid ""
@@ -80,10 +103,13 @@ msgid ""
 " try to restore using :ref:`Dash Wallet for Android <dash-android-file-"
 "restore>`"
 msgstr ""
+"Если имя файла аналогично с dash-wallet-backup или содержит слово 'mobile', "
+"попробуйте способ восстановления по :ссылке:`Кошелёк Dash для Android <dash-"
+"android-file-restore>`"
 
 #: ../../wallets/recovery.rst:37
 msgid "Backup is a phrase of words"
-msgstr ""
+msgstr "Резервной копией является фраза из слов"
 
 #: ../../wallets/recovery.rst:39
 msgid ""
@@ -92,34 +118,51 @@ msgid ""
 "phrase-restore>` or :ref:`iOS <dash-ios-phrase-restore>`, depending what you"
 " used to create the backup"
 msgstr ""
+"Если фраза состоит из 12 слов, попробуйте восстановление по :ссылке:`Dash "
+"Electrum wallet <dash-electrum-phrase-restore>` or Dash wallet for "
+":ref:`Android <dash-android-phrase-restore>` or :ref:`iOS <dash-ios-phrase-"
+"restore>`, depending what you used to create the backup"
 
 #: ../../wallets/recovery.rst:40
 msgid ""
 "If 13 words long, try to restore using :ref:`Dash Electrum wallet <dash-"
 "electrum-phrase-restore>`"
 msgstr ""
+"Если фраза состоит из 13 слов, попробуйте восстановление по :ссылке:`Кошелёк"
+" Dash Electrum <dash-electrum-phrase-restore>`"
 
 #: ../../wallets/recovery.rst:41
 msgid ""
 "If 12, 18 or 24 or 25 words long, try to restore with the :ref:`hardware "
 "wallet <hardware-phrase-restore>` you used to create the recovery phrase"
 msgstr ""
+"Если фраза состоит из 12, 18, 24 или 25 слов, попробуйте восстановление по "
+":ссылке:`аппаратный кошелёк <hardware-phrase-restore>`, которую вы "
+"использовали для создания фразы восстановления"
 
 #: ../../wallets/recovery.rst:43
 msgid "Backup is a long string of random characters or a QR code"
 msgstr ""
+"Резервной копией является длинная строка, состоящая из случайных букв и цифр"
+" или QR-код"
 
 #: ../../wallets/recovery.rst:45
 msgid ""
 "If 34 characters long and starting with X, this is a public address and "
 "cannot be used to restore access to lost funds. You need the private key."
 msgstr ""
+"Если строка состоит из 34 символов и начинается с Х, то это строка с "
+"публичным адресом и она не может использоваться для восстановления доступа к"
+" потеряннм средствам. Вам необходим приватный ключ."
 
 #: ../../wallets/recovery.rst:47
 msgid ""
 "If 51 characters long and starting with 7, this is a :ref:`private key in "
 "WIF <privkey-restore>`, import using Dash Core"
 msgstr ""
+"Если строка состоит из 51 символа и начинается с 7, то это "
+":ссылка:`приватный ключ в формате WIF <privkey-restore>`, импортируйте его с"
+" помощью Dash Core"
 
 #: ../../wallets/recovery.rst:48
 msgid ""
@@ -127,16 +170,22 @@ msgid ""
 "private key <privkey-restore>`, decrypt using paper wallet then import using"
 " Dash Core"
 msgstr ""
+"Если строка состоит из 58 символов и начинается с 6Р, то это "
+":ссылка:`зашифрованный с помощью BIP38 приватный ключ <privkey-restore>`, "
+"decrypt using paper wallet then import using Dash Core"
 
 #: ../../wallets/recovery.rst:50
 msgid ""
 "Once you have determined your backup format, follow the links to view the "
 "restore guide for that format."
 msgstr ""
+"После того как вы определили формат резервного копирования, следуйте по "
+"ссылкам для ознакомления с руководством по восстановлению для выбранного "
+"формата."
 
 #: ../../wallets/recovery.rst:55
 msgid "File Backups"
-msgstr ""
+msgstr "Создание резервной копии с помощью файла"
 
 #: ../../wallets/recovery.rst:60
 msgid "Dash Core"
@@ -154,12 +203,25 @@ msgid ""
 "Dash Core**. Compare this with the latest available version of `Dash Core on"
 " the website <https://www.dash.org/wallets/#wallets>`_ as follows:"
 msgstr ""
+"Одним из наиболее распространённых форматов резервного копирования кошельков"
+" является файл *wallet.dat* из кошелька Dash Core. Прежде чем начать "
+"пользоваться кошельком, убедитесь, что у вас есть копия этого файла, "
+"хранящаяся где-то в безопасности, в случае, если процесс восстановления "
+"случайно повредит ваш файл кошелька! В большинстве случаев резервные копии "
+"*wallet.dat* также будут защищены паролем, который вам нужно будет знать, "
+"чтобы восстановить доступ к вашим средствам DASH. Если у вас уже установлен "
+"Dash Core, сначала убедитесь, что он обновлен до последней версии, нажав "
+"**Help > About Dash Core**. Compare this with the latest available version "
+"of `Dash Core on the website <https://www.dash.org/wallets/#wallets>`_ as "
+"follows:"
 
 #: ../../wallets/recovery.rst:78
 msgid ""
 "Comparing the installed version of Dash Core with the latest version "
 "available on the website"
 msgstr ""
+"Сравнение установленной версии Dash Core с последней версией, доступной на "
+"веб-сайте"
 
 #: ../../wallets/recovery.rst:81
 msgid ""
@@ -171,10 +233,18 @@ msgid ""
 "*wallet.dat* file you want to restore to the DashCore folder in the location"
 " specified below, replacing or renaming the existing file."
 msgstr ""
+"Обновите Dash Core до последней версии в соответствии с :ref:`инструкции по "
+"инсталляции <dashcore-installation>`. Если у вас имеется только файл "
+"кошелька и нет установленной версии Dash Core, то просто установите Dash "
+"Core в соответствии с :ref:`инструкции по инсталляции <dashcore-"
+"installation>` после чего запустите его один раз для создания папки "
+"DashCore. Затем закройте Dash Core и скопируйте файл *wallet.dat* который вы"
+" хотите восстановить в папку DashCore, которая расположена по адресу, "
+"указанному ниже, заменив или переименовав существующий файл."
 
 #: ../../wallets/recovery.rst:91
 msgid "Platform"
-msgstr ""
+msgstr "Платформа"
 
 #: ../../wallets/recovery.rst:91
 msgid "Path to data folder"
@@ -182,7 +252,7 @@ msgstr "Путь к папке с данными"
 
 #: ../../wallets/recovery.rst:91
 msgid "How to navigate"
-msgstr ""
+msgstr "Как перемещаться"
 
 #: ../../wallets/recovery.rst:93
 msgid "Linux"
@@ -197,6 +267,8 @@ msgid ""
 "Go to your home folder and press **Ctrl+H** to show hidden files, then open "
 "``.dashcore``"
 msgstr ""
+"Следуйте к вашей домашней папке и нажмите **Ctrl+H**, чтобы показать скрытые"
+" файлы, затем откройте ``.dashcore``"
 
 #: ../../wallets/recovery.rst:95
 msgid "macOS"
@@ -204,13 +276,15 @@ msgstr "macOS"
 
 #: ../../wallets/recovery.rst:95
 msgid "~/Library/Application Support/"
-msgstr ""
+msgstr "~/Library/Application Support/"
 
 #: ../../wallets/recovery.rst:95
 msgid ""
 "Press **Shift + Control + G**, type ``~/Library/Application Support``, then "
 "open ``DashCore``"
 msgstr ""
+"Нажмите **Shift + Control + G**, наберите ``~/Library/Application Support``,"
+" затем откройте ``DashCore``"
 
 #: ../../wallets/recovery.rst:97
 msgid "Windows"
@@ -218,18 +292,22 @@ msgstr "Windows"
 
 #: ../../wallets/recovery.rst:97
 msgid "%APPDATA%"
-msgstr ""
+msgstr "%APPDATA%"
 
 #: ../../wallets/recovery.rst:97
 msgid ""
 "Press **Windows Key + R** and type ``%APPDATA%``, then open ``DashCore``"
 msgstr ""
+"Нажмите **Windows Key + R** и наберите ``%APPDATA%``, затем откройте "
+"``DashCore``"
 
 #: ../../wallets/recovery.rst:100
 msgid ""
 "If your existing version of Dash Core is older than v0.12.1.x, you may need "
 "to rename your data folder from ``Dash`` to ``DashCore``."
 msgstr ""
+"Если ваша существующая версия Dash Core старее, чем v0.12.1.x, вам может "
+"потребоваться переименовать папку с данными из ``Dash`` в ``DashCore``."
 
 #: ../../wallets/recovery.rst:103
 msgid ""
@@ -237,6 +315,9 @@ msgid ""
 "all *.log* and *.dat* files except *wallet.dat*. The following files can be "
 "safely deleted:"
 msgstr ""
+"Для исправления неудавшейся инсталляции, перейдите в папку DashCore и "
+"удалите все *.log* и *.dat* файлы, кроме *wallet.dat*. Удаление следующих "
+"файлов не принесёт вреда:"
 
 #: ../../wallets/recovery.rst:107
 msgid "*banlist.dat*"
@@ -284,6 +365,9 @@ msgid ""
 "``chainstate``, etc.) intact, since they will help you get started faster by"
 " providing a copy of the blockchain and your settings."
 msgstr ""
+"``.conf`` файлы и папки (такие как ``backups``, ``blocks``, ``chainstate``, "
+"и т.п.) не изменяйте, поскольку они помогут вам запуститься быстрее загрузив"
+" копию блокчейна и ваши настройки."
 
 #: ../../wallets/recovery.rst:122
 msgid ""
@@ -310,7 +394,7 @@ msgstr ""
 
 #: ../../wallets/recovery.rst:137
 msgid "Forcing Dash Core to rescan the blockchain"
-msgstr ""
+msgstr "Принуждение Dash Core к пересканированию блокчейна"
 
 #: ../../wallets/recovery.rst:139
 msgid ""
@@ -321,6 +405,13 @@ msgid ""
 "support.64/>`_, `Reddit <https://www.reddit.com/r/dashpay/>`_ or the #dash- "
 "support-desk channel at `Dash Nation Discord <http://dashchat.org/>`_."
 msgstr ""
+"На этой стадии восстановление завершено и вам следует создать еще одну "
+"копию, при помощи **File > Backup Wallet** или следуя инструкициям "
+":ref:`здесь <dashcore-backup>`. Если вы столкнулись с какими-то другими "
+"проблемами, попробуйте задать вопрос на `форуме "
+"<https://www.dash.org/forum/topic/daemon-and-qt-wallet- support.64/>`_, "
+"`Reddit <https://www.reddit.com/r/dashpay/>`_ или на канале #dash- support-"
+"desk в `Dash Nation Discord <http://dashchat.org/>`_."
 
 #: ../../wallets/recovery.rst:150
 msgid "Dash Android"
@@ -336,6 +427,16 @@ msgid ""
 "existing balance, either make another backup or transfer it to an external "
 "address, because restoring a wallet will replace your existing wallet!"
 msgstr ""
+"По аналогии с кошельком Dash Core, кошелёк Dash для Android может сделать "
+"резервную копию вашего кошелька в файл. Для того, чтобы восстановить этот "
+"кошелёк на другом устройстве, просто скопируйте файл с резервной копией "
+"кошелька в папку ``/Downloads`` вашего устройства либо с помощью компьютера "
+"подсоединённого через USB либо с помощью приложения с файловым менеджером на"
+" устройстве. Убедитесь, что ваш кошелёк Dash полностью обновлён в Play "
+"Store, затем открывайте Dash. Если у вас имеется какой-то положительный "
+"баланс, то либо сделайте ещё одну резервную копию, либо переведите деньги на"
+" какой-то внешний адрес, так как при восстановлении кошелька ваш "
+"существующий файл кошелька будет заменён новым!"
 
 #: ../../wallets/recovery.rst:161
 msgid ""
@@ -344,10 +445,16 @@ msgid ""
 "and click **Restore**. This may take some time, and your balance will be "
 "displayed when complete."
 msgstr ""
+"Нажмите кнопку меню в левом верхнем углу, выберите **Safety > Restore** "
+"кошелёк, затем выберите необходимый файл из списка. Введите пароль и нажмите"
+" **Restore**. Для восстановления может понадобиться некоторое время, а после"
+" завершения вы увидите на экране свой баланс."
 
 #: ../../wallets/recovery.rst:173
 msgid "*Restoring a file backup using Dash Wallet for Android*"
 msgstr ""
+"*Восстановление резервной копии из файла при помощи кошелька Dash для "
+"Андроид*"
 
 #: ../../wallets/recovery.rst:176
 msgid "Recovery Phrases"
@@ -358,6 +465,8 @@ msgid ""
 "If you have a 12-word phrase and feel certain your backup was made on an iOS"
 " or Android mobile device, follow these instructions."
 msgstr ""
+"Если у вас есть фраза из 12 слов и вы уверены, что сделали резервную копию "
+"на мобильном устройстве на базе iOS или Android - следуйте инструкциям ниже."
 
 #: ../../wallets/recovery.rst:184
 msgid "12-word phrase on Android"
@@ -381,6 +490,7 @@ msgstr ""
 #: ../../wallets/recovery.rst:200
 msgid "*Restoring a 12-word recovery phrase using Dash wallet for Android*"
 msgstr ""
+"*Восстановление фразы из 12 слов с использованием кошелька Dash для Android*"
 
 #: ../../wallets/recovery.rst:205
 msgid "12-word phrase on iOS"
@@ -409,14 +519,19 @@ msgid ""
 "then the app will reset and you will see the option to **Recover wallet** "
 "again."
 msgstr ""
+"Нажмите кнопку меню в левом верхнем углу, выберите **Settings > "
+"Start/recover another wallet**. введите вашу текущую фразу для "
+"восстановления кошелька, затем приложение перезагрузится и вы снова увидите "
+"опцию для **Recover wallet**."
 
 #: ../../wallets/recovery.rst:230
 msgid "*Restoring a 12-word recovery phrase using Dash wallet for iOS*"
 msgstr ""
+"*Восстановление фразы из 12 слов с использованием кошелька Dash для iOS*"
 
 #: ../../wallets/recovery.rst:235
 msgid "12/13-word phrase on Dash Electrum"
-msgstr ""
+msgstr "Фраза из 12/13 слов для кошелька Dash Electrum"
 
 #: ../../wallets/recovery.rst:237
 msgid ""
@@ -429,40 +544,55 @@ msgid ""
 "your wallet and click **Next** to recover your addresses from the recovery "
 "phrase."
 msgstr ""
+"Убедитесь, что вы используете последнюю версию кошелька Dash Electrum в "
+"соответствии с инструкциями по инсталляции :ref:`здесь <electrum-"
+"installation>`. Dash Electrum поддерживает работу нескольких совместных "
+"кошельков, поэтому можно безопасно восстановиться в новый файл кошелька  без"
+" потери старого кошелька. Нажмите **File > New/Restore** и введите имя для "
+"сохранения вашего новго кошелька. Затем выберите **I already have a seed** и"
+" введите фразу восстановления из 12/13 слов. Введите новый пароль для своего"
+" кошелька и нажмите **Next** для восстановления ваших адресов из фразы "
+"восстановления."
 
 #: ../../wallets/recovery.rst:259
 msgid "*Restoring a 12-word recovery phrase using Dash Electrum*"
-msgstr ""
+msgstr "*Восстановление фразы из 12 слов с использованием Dash Electrum*"
 
 #: ../../wallets/recovery.rst:264
 msgid "Hardware wallet recovery phrases"
-msgstr ""
+msgstr "Фразы для восстановления аппаратного кошелька"
 
 #: ../../wallets/recovery.rst:266
 msgid ""
 "If your 12, 18 or 24-word recovery phrase was generated by a hardware "
 "wallet, follow these instructions:"
 msgstr ""
+"Если ваша фраза, состоящая из 12, 18 или 24 слов была сгенерирована "
+"аппаратным кошельком - следуйте инструкциям ниже:"
 
 #: ../../wallets/recovery.rst:269
 msgid ""
 "`KeepKey <https://help.keepkey.com/how-to-guides/how-to-recover-your-"
 "keepkey>`_"
 msgstr ""
+"`KeepKey <https://help.keepkey.com/how-to-guides/how-to-recover-your-"
+"keepkey>`_"
 
 #: ../../wallets/recovery.rst:270
 msgid ""
 "`Ledger Nano S <https://support.ledgerwallet.com/hc/en-"
 "us/articles/360005434914-Restore-a-configuration>`_"
 msgstr ""
+"`Ledger Nano S <https://support.ledgerwallet.com/hc/en-"
+"us/articles/360005434914-Restore-a-configuration>`_"
 
 #: ../../wallets/recovery.rst:271
 msgid "`Trezor <https://doc.satoshilabs.com/trezor-user/recovery.html>`_"
-msgstr ""
+msgstr "`Trezor <https://doc.satoshilabs.com/trezor-user/recovery.html>`_"
 
 #: ../../wallets/recovery.rst:276
 msgid "Restoring an iOS wallet in Dash Electrum"
-msgstr ""
+msgstr "Восстановление кошелька iOS при помощи Dash Electrum"
 
 #: ../../wallets/recovery.rst:278
 msgid ""
@@ -477,6 +607,17 @@ msgid ""
 "wallet) once recovery is successful to ensure that standard backup "
 "procedures work as expected."
 msgstr ""
+"Вы можете использовать фразу восстановления Dash iOS с Dash Electrum для "
+"восстановления средств, если по какой-либо причине вы потеряете доступ к "
+"своему устройству iOS. Однако, поскольку пути вывода кошелька не идентичны, "
+"процесс работает только в одном направлении, то есть невозможно восстановить"
+" кошелек Dash Electrum с помощью кошелька Dash iOS. Кроме того, поскольку в "
+"процессе импорта напрямую используется ключ xprv, а не фраза восстановления,"
+" невозможно будет отобразить фразу восстановления в Dash Electrum. Поэтому "
+"рекомендуется переместить средства (либо в стандартный кошелек Dash Electrum"
+" или какой-либо другой кошелек) после успешного восстановления, чтобы "
+"гарантировать, что стандартные процедуры резервного копирования работают "
+"должным образом."
 
 #: ../../wallets/recovery.rst:289
 msgid ""
@@ -484,10 +625,13 @@ msgid ""
 "recovery phrase into an xprv key. In the second step, we will import the "
 "xprv key into Dash Electrum."
 msgstr ""
+"Восстановление происходит в два шага. На первом шаге мы конвертируем фразу "
+"восстановления Dash iOS в ключ xprv. На втором шаге мы импортируем ключ xprv"
+" в кошелёк Dash Electrum."
 
 #: ../../wallets/recovery.rst:294
 msgid "Retrieving the correct Dash iOS xprv key"
-msgstr ""
+msgstr "Получение правильного ключа xprv для Dash на iOS"
 
 #: ../../wallets/recovery.rst:296
 msgid ""
@@ -498,10 +642,18 @@ msgid ""
 " <https://github.com/iancoleman/bip39#standalone-offline-version>`_. Once "
 "the tool is loaded in your browser, complete the following steps:"
 msgstr ""
+"Перейдите на страницу `Конвертер мнемонического кода BIP39 "
+"<https://iancoleman.io/bip39/>`_. Это полезный инструмент для "
+"манипуляции/отображения BIP32/39 seed данных. Если вам неудобно выполнять "
+"эту процедуру онлайн, то можно загрузить офлайн версию,  скачав файл, "
+"описанный в `этих инструкциях <https://github.com/iancoleman/bip39"
+"#standalone-offline-version>`_. Как только инструмент будет загружен в ваш "
+"браузер, следуйте следующим шагам:"
 
 #: ../../wallets/recovery.rst:304
 msgid "Enter your 12 word seed phrase in the **BIP39 Mnemonic** field."
 msgstr ""
+"Введите вашу сид-фразу, состоящую из 12 слов в поле **BIP39 Mnemonic**."
 
 #: ../../wallets/recovery.rst:305
 msgid "Leave **BIP39 Passphrase** blank."
@@ -509,7 +661,7 @@ msgstr ""
 
 #: ../../wallets/recovery.rst:306
 msgid "Set coin to **Dash**."
-msgstr ""
+msgstr "Переключите валюту на **Dash**."
 
 #: ../../wallets/recovery.rst:307
 msgid "Under **Derivation Path**, click the **BIP44** tab."
@@ -518,34 +670,36 @@ msgstr ""
 #: ../../wallets/recovery.rst:308
 msgid "Copy the value shown in **Account Extended Private Key**."
 msgstr ""
+"Скопируйте значение показанное в поле **Account Extended Private Key**."
 
 #: ../../wallets/recovery.rst:311
 msgid "Importing the xprv key into Dash Electrum"
-msgstr ""
+msgstr "Импорт ключа xprv в кошелёк Dash Electrum"
 
 #: ../../wallets/recovery.rst:313
 msgid "Open Dash Electrum and click **File** -> **New/Restore**."
 msgstr ""
+"Откройте кошелёк Dash Electrum и кликните **File** -> **New/Restore**."
 
 #: ../../wallets/recovery.rst:314
 msgid "Type a name for your wallet."
-msgstr ""
+msgstr "Наберите имя вашего кошелька."
 
 #: ../../wallets/recovery.rst:315
 msgid "Select **Standard wallet**."
-msgstr ""
+msgstr "Выберите **Стандартный кошелёк**"
 
 #: ../../wallets/recovery.rst:316
 msgid "Select **Use public or private keys**."
-msgstr ""
+msgstr "Выберите **Use public or private keys**."
 
 #: ../../wallets/recovery.rst:317
 msgid "Paste in your value from **Account Extended Private Key**."
-msgstr ""
+msgstr "Вставьте значение из поля **Account Extended Private Key**."
 
 #: ../../wallets/recovery.rst:318
 msgid "Optionally enter a password."
-msgstr ""
+msgstr "При желании введите пароль."
 
 #: ../../wallets/recovery.rst:320
 msgid ""
@@ -556,6 +710,13 @@ msgid ""
 " send your funds to a new Dash Electrum wallet instead and follow "
 ":ref:`standard backup procedures <electrum-backup>`."
 msgstr ""
+"Кошелёк Dash Electrum теперь должен обнаружить баланс кошелька Dash iOS и у "
+"вас должен появиться полный доступ к вашим средствам. Сид-фраза не будет "
+"доступна в Dash Electrum, поэтому вам просто нужно будет повторить шаги, "
+"описанные выше, если вы хотите снова восстановить этот кошелек с помощью "
+"фразы восстановления. Вместо этого рекомендуется отправить свои деньги на "
+"новый кошелек Dash Electrum и следовать :ref:`стандартные шаги резервного "
+"копирования <electrum-backup>`."
 
 #: ../../wallets/recovery.rst:327
 msgid ""
@@ -596,12 +757,16 @@ msgstr ""
 #: ../../wallets/recovery.rst:359
 msgid "Importing a private key using the debug console in Dash Core wallet"
 msgstr ""
+"Импорт приватного ключа с использованием консоли отладки в кошельке Dash "
+"Core"
 
 #: ../../wallets/recovery.rst:361
 msgid ""
 "Dash Core will rescan the blockchain for transactions involving the public "
 "address of this key and enter the transactions and balance in your wallet."
 msgstr ""
+"Dash Core пересканирует блокчейн для транзакций, использующий общий адрес "
+"этого ключа и покажет транзакции и баланс в вашем кошельке."
 
 #: ../../wallets/recovery.rst:365
 msgid ""
@@ -618,6 +783,8 @@ msgstr ""
 msgid ""
 "*Decrypting a BIP38 encrypted key to WIF for import in Dash Core wallet*"
 msgstr ""
+"*Расшифровка закондированного в BIP38 ключа в формат WIF для импорта в "
+"кошелёк Dash Core*"
 
 #: ../../wallets/recovery.rst:383
 msgid "Forgotten Passwords"
@@ -653,4 +820,4 @@ msgstr ""
 
 #: ../../wallets/recovery.rst:397
 msgid "`BTCRecover <https://github.com/gurnec/btcrecover>`_"
-msgstr ""
+msgstr "`BTCRecover <https://github.com/gurnec/btcrecover>`_"
