@@ -125,7 +125,7 @@ News
 - **Dash Embassy D-A-CH:** http://www.dash-embassy.org/
 - **Dash News Germany:** https://dash-news.de
 - **Dash Vietnam:** https://dashvn.blogspot.com
-- **Dash Français:** https://dashfrancais.com
+- **Dash France:** https://dashfrance.com/
 - **Dash Nation DeCentral:** http://www.dashnation.com
 - **Dash News China (Wechat):** dashnews (or scan QR below)
 
