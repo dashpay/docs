@@ -93,7 +93,7 @@ https://www.dash.org/exchanges/
 Marketplace comparison websites
 ----------------
 
-Cryptoradar
+ Cryptoradar
   .. image:: exchanges/cryptoradar.png
      :width: 200px
      :align: right
