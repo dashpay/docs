@@ -208,7 +208,7 @@ never used somewhere else. Take note of your password and store it
 somewhere safe or you will be locked out of your wallet and lose access
 to your funds.
 
-To encrypt your wallet, click **Settings > Encrypt** wallet.
+To encrypt your wallet, click **Settings > Encrypt Wallet**.
 
 .. figure:: img/windows/106329084.png
    :height: 250px
