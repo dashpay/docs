@@ -90,6 +90,21 @@ offering Dash.
 
 https://www.dash.org/exchanges/
 
+Marketplace comparison websites
+----------------
+
+ Cryptoradar
+  .. image:: exchanges/cryptoradar.png
+     :width: 200px
+     :align: right
+     :target: https://cryptoradar.co/buy-dash
+
+  https://cryptoradar.co/buy-dash
+
+  Cryptoradar is a real-time cryptocurrency marketplace price comparison
+  and review platform. The website compares dozens of Dash markets based
+  on prices, fees, payment methods, reviews and more.
+
 List of exchanges
 -----------------
 
