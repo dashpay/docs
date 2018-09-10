@@ -82,18 +82,10 @@ trading pairs they offer.
 
 https://coinmarketcap.com/currencies/dash/#markets
 
-Dash.org markets
-----------------
-
-The official Dash website also provides a list of major exchanges
-offering Dash.
-
-https://www.dash.org/exchanges/
-
 Marketplace comparison websites
 ----------------
 
- Cryptoradar
+Cryptoradar
   .. image:: exchanges/cryptoradar.png
      :width: 200px
      :align: right
@@ -104,6 +96,14 @@ Marketplace comparison websites
   Cryptoradar is a real-time cryptocurrency marketplace price comparison
   and review platform. The website compares dozens of Dash markets based
   on prices, fees, payment methods, reviews and more.
+
+Dash.org markets
+----------------
+
+The official Dash website also provides a list of major exchanges
+offering Dash.
+
+https://www.dash.org/exchanges/
 
 List of exchanges
 -----------------
