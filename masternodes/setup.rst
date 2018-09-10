@@ -206,29 +206,28 @@ newly secured environment as the new user::
   ufw logging on
   ufw enable
 
-(press **Y** and **Enter** to confirm)
+The below block creates a 1GB swap file if required.
+Copy & paste the block below into the PuTTY terminal.
 
 ::
 
-  fallocate -l 4G /swapfile
-  chmod 600 /swapfile
-  mkswap /swapfile
-  swapon /swapfile
-  nano /etc/fstab
+  if [ $(free -m|grep Swap|awk '{print $2}') -lt 1024 ]
+  then
+    echo "Adding 1GB swap..."
+    sudo bash -c "fallocate -l 1G /var/swapfile&&\
+    chmod 600 /var/swapfile&&\
+    mkswap /var/swapfile&&\
+    swapon /var/swapfile&&\
+    echo \"/var/swapfile none swap sw 0 0\">>/etc/fstab"
+  else
+    echo "You already have enough swap space."
+  fi
 
-Add the following line at the end of the file (press tab to separate
-each word/number), then press **Ctrl + X** to close the editor, then
-**Y** and **Enter** save the file.
-
-::
-
-  /swapfile none swap sw 0 0
-
-Then reboot the server:
+Now reboot the server:
 
 ::
 
-  reboot now
+  sudo reboot now
 
 PuTTY will disconnect when the server reboots.
 
@@ -586,18 +585,15 @@ to communicate to the network that your node is working properly::
 
 You will see a message reading **dashd not synced with network! Awaiting
 full sync before running Sentinel.** Add sentinel to crontab to make
-sure it runs every minute to check on your masternode::
+sure it runs every 10 minutes to check on your masternode, copy & paste the below
+as one block into PuTTY::
 
-  crontab -e
+  echo "*/10 * * * * (cd ~/.dashcore/sentinel && venv/bin/python bin/sentinel.py) >> \
+  ~/.dashcore/sentinel/sentinel-cron.log 2>&1" \
+  |crontab -&&echo "Successfully installed cron job."
 
-Choose nano as your editor and enter the following line at the end of
-the file::
 
-  * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
-
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. We now need to wait for 15 confirmations of the collateral
+We now need to wait for 15 confirmations of the collateral
 transaction to complete, and wait for the blockchain to finish
 synchronizing on the masternode. You can use the following commands to
 monitor progress::
