@@ -23,11 +23,9 @@ Google Play Store.
 
 Dash Copay for iOS is available through Apple TestFlight. To join the
 list of testers, send an email to elizabeth.robuck@dash.org with your
-Apple Account ID.
-
-For other platforms, or to view and compile the source code yourself,
-please see the instructions on 
-`GitHub <https://github.com/dashevo/dash-copay>`__.
+Apple Account ID. For other platforms, or to view and compile the source
+code yourself, please see the instructions on  `GitHub
+<https://github.com/dashevo/dash-copay>`__.
 
 .. _dash-copay-installation:
 
