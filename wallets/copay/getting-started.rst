@@ -17,13 +17,17 @@ highlighting differences between the platforms where necessary.
 The easiest way to install the Dash Copay for Android is from the
 Google Play Store.
 
-.. image:: img/google-play-badge.png
+.. image:: img/google-play.png
     :width: 250 px
     :target: https://play.google.com/store/apps/details?id=org.dash.copay
 
 Dash Copay for iOS is available through Apple TestFlight. To join the
 list of testers, send an email to elizabeth.robuck@dash.org with your
 Apple Account ID.
+
+For other platforms, or to view and compile the source code yourself,
+please see the instructions on 
+`GitHub <https://github.com/dashevo/dash-copay>`__.
 
 .. _dash-copay-installation:
 
