@@ -14,42 +14,49 @@ supported platforms (Android, iOS, Windows, macOS, Linux), the
 instructions and screenshots will reference the Android software,
 highlighting differences between the platforms where necessary.
 
-Dash Copay is currently undergoing beta testing using  :ref:`testnet
-<testnet>` and will be available for Android. iOS, Windows,  macOS and
-Linux versions when they are ready.
+The easiest way to install the Dash Copay for Android is from the
+Google Play Store.
 
-Update June 2018: https://www.dash.org/forum/threads/dashcopay-release-plan.38915/#post-190465
+.. image:: img/google-play-badge.png
+    :width: 250 px
+    :target: https://play.google.com/store/apps/details?id=org.dash.copay
+
+Dash Copay for iOS is available through Apple TestFlight. To join the
+list of testers, send an email to elizabeth.robuck@dash.org with your
+Apple Account ID.
 
 .. _dash-copay-installation:
 
 Installation
 ============
 
-When you first start your Dash Wallet, you will be prompted to choose
-between creating a new wallet or restoring an existing wallet from
-backup. Choose **Get started** to create a new wallet unless you have
-existing funds stored in another wallet using a recovery phrase. Your
-new wallet will be generated, and a recovery phrase will appear so you
-can recover the funds later if you lose or damage your device or need to
-transfer the account to another device. Write the phrase down on paper
-and store it in a safe place - if you lose this, you will also lose
-access to your funds forever. Do not take screenshots to store your
-recovery phrase! Screenshots may be automatically backed up to cloud
-file storage services where you may no longer have complete control over
-who views the files.
+When you first start your Dash Copay Wallet, you will be prompted to
+choose between creating a new wallet or restoring an existing wallet
+from backup. Choose **Get Started** to create a new wallet, unless you
+have existing funds stored in another wallet using a recovery phrase.
+When prompted, enter and confirm a spending password to encrypt your
+wallet keys. You will need this password every time you want to send
+Dash from your wallet. At this point, you will be offered a chance to
+back up your wallet using a recovery phrase. It is highly recommended to
+do this immediately by tapping the **Backup wallet** button. Acknowledge
+the warnings, enter your password and write down the displayed recovery
+phrase on paper. Do not take a screenshot, since your device will likely
+make a copy on cloud storage, which is not necessarily under your
+personal control. Confirm the recovery phrase and terms of use. Your
+Dash Copay wallet is now ready to go!
 
 |image2| |image3| |image4|
 |image5| |image6| |image7|
 
 .. |image2| image:: img/setup-splash.png
    :width: 200px
-.. |image3| image:: img/setup-warning.png
+.. |image3| image:: img/setup-password.png
    :width: 200px
-.. |image4| image:: img/setup-phrase.png
+.. |image4| image:: img/setup-warning.png
    :width: 200px
-.. |image5| image:: img/setup-verify.png
+.. |image5| image:: img/setup-phrase.png
    :width: 200px
-.. |image6| image:: img/setup-backed-up.png
+.. |image6| image:: img/setup-confirm.png
    :width: 200px
 .. |image7| image:: img/setup-ready.png
    :width: 200px
@@ -66,12 +73,11 @@ Receiving
 
 Simply tap the **Receive** icon at the bottom of the screen to receive
 Dash. The wallet will generate and display a QR code for the other
-device to scan, or you can simply tap the displayed address to copy it
-to the clipboard so you can paste it in another app. If you have
-multiple wallets, you can see the name of the wallet at the bottom of
-the screen, and tap it to switch between wallets. The receiving address
-will change and you will receive a notification when you receive the
-transfer.
+device to scan, or you can tap the displayed address to copy it to the
+clipboard so you can paste it in another app. If you have multiple
+wallets, you can see the name of the wallet at the bottom of the screen,
+and tap it to switch between wallets. The receiving address will change
+and you will receive a notification when you receive the transfer.
 
 |image8| |image9|
 
@@ -91,7 +97,7 @@ camera to scan a QR code, or the **Send** icon to paste a copied address
 or select an address from your Dash Copay address book. Once you have
 entered the address, it may be possible or necessary to enter the amount
 of Dash to be sent or an optional label for the recipient, and to decide
-if you want to send with InstantSend on or off (on by default). If you
+if you want to send with InstantSend on or off (off by default). If you
 have multiple wallets, you must also choose which wallet you will use to
 send the funds. Once the transaction is complete, you will see a payment
 confirmation screen.
@@ -107,7 +113,7 @@ confirmation screen.
    :width: 200px
 .. |image13| image:: img/send-ready.png
    :width: 200px
-.. |image14| image:: img/send-confirm.png
+.. |image14| image:: img/send-password.png
    :width: 200px
 .. |image15| image:: img/send-done.png
    :width: 200px
