@@ -613,6 +613,18 @@ Coinapult
   providing exchange services between BTC, DASH, USD, GBP and EUR, as
   well as gold and silver.
 
+Panda.exchange
+  .. image:: exchanges/panda.png
+     :width: 200px
+     :align: right
+     :target: https://panda.exchange
+
+  https://panda.exchange
+
+  Based in Latin America, Panda.exchange specializes in making digital
+  assets such as Dash available in Latin America and, through a branch
+  in Portugal, the EU market.
+
 Whaleclub
   .. image:: exchanges/whaleclub.png
      :width: 200px
