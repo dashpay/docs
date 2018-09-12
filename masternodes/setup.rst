@@ -470,14 +470,14 @@ the collateral transaction are complete::
 
 dashman does not automatically restart your masternode in the event of a
 system error. Add a check function to crontab to make sure it checks
-regularly to ensure your masternode is still running::
+every minute to ensure your masternode is still running::
 
   crontab -e
 
 Choose nano as your editor and enter the following line at the end of
 the file, after the line for sentinel::
 
-  */5 * * * * pidof dashd || ~/.dashcore/dashd
+  * * * * * pidof dashd || ~/.dashcore/dashd
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
@@ -601,15 +601,15 @@ to communicate to the network that your node is working properly::
 
 You will see a message reading **dashd not synced with network! Awaiting
 full sync before running Sentinel.** Add dashd and sentinel to crontab
-to make sure it runs regularly to check on your masternode::
+to make sure it runs every minute to check on your masternode::
 
   crontab -e
 
 Choose nano as your editor and enter the following lines at the end of
 the file::
 
-  * * * * *   cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
-  */5 * * * * pidof dashd || ~/.dashcore/dashd
+  * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+  * * * * * pidof dashd || ~/.dashcore/dashd
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
