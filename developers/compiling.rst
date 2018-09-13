@@ -16,7 +16,15 @@ also be interested in building Dash binaries for themselves. The
 following guides are available:
 
 - :ref:`Building on Linux <linux-build>`
+- :ref:`Building on macOS <macos-build>`
+- :ref:`Building on Windows <windows-build>`
 - :ref:`Gitian deterministic builds <gitian-build>`
+
+These guides describe how to build the current stable version. To build
+the latest version from the develop branch, replace the normal ``git
+clone`` command with the following command when pulling from GitHub::
+
+  git clone https://github.com/dashpay/dash.git -b develop
 
 .. _linux-build:
 
