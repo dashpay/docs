@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
+"POT-Creation-Date: 2018-09-06 10:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: strophy <leon.white@dash.org>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/dash/teams/37570/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,15 +20,15 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:1
 msgid "Guide to sending and receiving Dash using the Dash Core wallet"
-msgstr ""
+msgstr "Guia para enviar e receber o Dash usando a carteira do Dash Core"
 
 #: ../../wallets/dashcore/send-receive.rst:1
 msgid "dash, core, wallet, send, receive, transaction"
-msgstr ""
+msgstr "dash, core, carteira, enviar, receber, transação"
 
 #: ../../wallets/dashcore/send-receive.rst:9
 msgid "Sending and receiving"
-msgstr ""
+msgstr "Enviando e recebendo"
 
 #: ../../wallets/dashcore/send-receive.rst:11
 msgid ""
@@ -39,6 +40,14 @@ msgid ""
 "controlled by another Dash user and associated with their wallet. You can "
 "control which addresses you use using the Coin Control feature."
 msgstr ""
+"A sua carteira do Dash Core está associada a vários endereços exclusivos que"
+" podem ser usados para enviar e receber o Dash. Cada endereço possui seu "
+"próprio saldo e a soma de todos os seus saldos é o que aparece na guia "
+"**Visão geral**. Quando você envia o Dash, sua carteira transfere "
+"automaticamente fundos de quantos endereços forem necessários para o "
+"endereço de destino, que é controlado por outro usuário do Dash e associado "
+"à sua carteira. Você pode controlar quais endereços você usa usando o "
+"recurso Coin Control."
 
 #: ../../wallets/dashcore/send-receive.rst:20
 msgid ""
@@ -49,14 +58,21 @@ msgid ""
 "masternode and mining payments are only released after 101 blocks. Note that"
 " a different process is used for InstantSend and PrivateSend transactions."
 msgstr ""
+"Quando você confirma uma transação, o Dash Core irá inserir a transação em "
+"um bloco, que será então adicionado ao blockchain para outros clientes "
+"confirmarem. Uma transação é geralmente considerada confirmada uma vez que "
+"seis blocos foram adicionados após o bloco contendo sua transação, embora os"
+" pagamentos de masternode e mineração sejam liberados somente após 101 "
+"blocos. Observe que um processo diferente é usado para transações "
+"InstantSend e PrivateSend."
 
 #: ../../wallets/dashcore/send-receive.rst:28
 msgid "Dash addresses are 34 characters long and begin with an uppercase X."
-msgstr ""
+msgstr "Os endereços do Dash têm 34 caracteres e começam com um X maiúsculo."
 
 #: ../../wallets/dashcore/send-receive.rst:31
 msgid "Sending Dash"
-msgstr ""
+msgstr "Enviando Dash"
 
 #: ../../wallets/dashcore/send-receive.rst:33
 msgid ""
@@ -65,10 +81,14 @@ msgid ""
 " the funds. Click the **Send** tab in the tab bar and enter the destination "
 "address in the **Pay To** field."
 msgstr ""
+"Você pode usar o Dash Core para enviar o Dash da sua conta para outro "
+"usuário. O usuário que recebe lhe fornecerá um endereço do Dash para o qual "
+"você deverá enviar os fundos. Clique na guia **Enviar** na barra de guias e "
+"insira o endereço de destino no campo **Pagar para**."
 
 #: ../../wallets/dashcore/send-receive.rst:41
 msgid "The Dash Core Send tab"
-msgstr ""
+msgstr "A guia Envio do Dash Core"
 
 #: ../../wallets/dashcore/send-receive.rst:43
 msgid ""
@@ -79,6 +99,12 @@ msgid ""
 "again later. Finally, enter the amount of Dash you want to transfer in the "
 "**Amount** field."
 msgstr ""
+"Você também pode usar os três ícones |sendicons| à direita do campo **Pagar "
+"para** para selecionar um endereço usado anteriormente, cole um endereço da "
+"área de transferência ou limpe o endereço atual. Se este for um novo "
+"endereço, você pode inserir um nome para o endereço no campo **Etiqueta** "
+"para ajudar a identificá-lo novamente mais tarde. Por fim, insira a quantia "
+"de Dash que você deseja transferir no campo **Quantidade**."
 
 #: ../../wallets/dashcore/send-receive.rst:53
 msgid ""
@@ -92,6 +118,15 @@ msgid ""
 "been mixed. You can find out more about PrivateSend and InstantSend "
 ":ref:`here <dashcore-privatesend-instantsend>`."
 msgstr ""
+"As outras opções estão relacionadas a taxas e PrivateSend/InstantSend. Você "
+"pode escolher se deseja pagar a taxa de rede além do valor enviado ou "
+"subtrai-la do valor enviado. Você também pode aumentar sua taxa para "
+"incentivar os nós na rede a priorizar sua transação. A escolha do "
+"**InstantSend** tem um efeito semelhante, mas na verdade depende de um "
+"mecanismo diferente na rede da segunda camada para acelerar o tempo de "
+"transação. A escolha do **PrivateSend** enviará o Dash de um endereço que "
+"tenha sido previamente misturado. Você pode descobrir mais sobre o "
+"PrivateSend e o InstantSend :ref:`aqui <dashcore-privatesend-instantsend>`."
 
 #: ../../wallets/dashcore/send-receive.rst:64
 msgid ""
@@ -100,10 +135,14 @@ msgid ""
 " can be seen in the following window beginning with *Xpa*. The invoice is "
 "for 2.45 Dash, which you fill in the **Amount** field."
 msgstr ""
+"Vamos tentar um exemplo. Digamos que você tenha recebido uma fatura que "
+"agora deseja pagar com o Dash. O escritor da fatura incluiu um endereço de "
+"Dash, que pode ser visto na seguinte janela começando com *Xpa*. A fatura é "
+"para 2.45 Dash, que você preenche no campo **Valor**."
 
 #: ../../wallets/dashcore/send-receive.rst:72
 msgid "The Send tab filled out for a transaction"
-msgstr ""
+msgstr "A guia Enviar preenchida para uma transação"
 
 #: ../../wallets/dashcore/send-receive.rst:74
 msgid ""
@@ -111,20 +150,25 @@ msgid ""
 "**Send** button. If you have encrypted your wallet, you will now be required"
 " to enter your password to unlock the wallet."
 msgstr ""
+"Depois de inserir o endereço de destino e o valor, clique no botão "
+"**Enviar**. Se você criptografou sua carteira, será necessário inserir sua "
+"senha para desbloquear a carteira."
 
 #: ../../wallets/dashcore/send-receive.rst:81
 msgid "Entering the password to unlock the wallet"
-msgstr ""
+msgstr "Digitando a senha para desbloquear a carteira"
 
 #: ../../wallets/dashcore/send-receive.rst:83
 msgid ""
 "Finally, you are given one final confirmation and chance to cancel your send"
 " transaction before Dash Core processes the transaction on the blockchain."
 msgstr ""
+"Finalmente, você recebe uma confirmação final e a chance de cancelar sua "
+"transação de envio antes que o Dash Core processe a transação no blockchain."
 
 #: ../../wallets/dashcore/send-receive.rst:90
 msgid "Final confirmation window"
-msgstr ""
+msgstr "Janela de confirmação final"
 
 #: ../../wallets/dashcore/send-receive.rst:92
 msgid ""
@@ -132,10 +176,13 @@ msgid ""
 "operating system may display a notification, and the transaction will appear"
 " on the Transactions tab, where you can monitor its progress."
 msgstr ""
+"Se você responder com **Sim**, sua transação será processada. Seu sistema "
+"operacional pode exibir uma notificação e a transação aparecerá na guia "
+"Transações, onde você poderá monitorar seu progresso."
 
 #: ../../wallets/dashcore/send-receive.rst:99
 msgid "The Windows 10 sent transaction confirmation notification"
-msgstr ""
+msgstr "O Windows 10 enviou notificação de confirmação de transação"
 
 #: ../../wallets/dashcore/send-receive.rst:101
 msgid ""
@@ -143,10 +190,13 @@ msgid ""
 "the transaction fee. In the next section, we will see what this procedure "
 "looks like from the receiving side."
 msgstr ""
+"Observe que o valor da transação aumentou em .000045 Dash. Esta é a taxa de "
+"transação. Na próxima seção, veremos como esse procedimento se parece no "
+"lado do recebimento."
 
 #: ../../wallets/dashcore/send-receive.rst:106
 msgid "Receiving Dash"
-msgstr ""
+msgstr "Recebendo Dash"
 
 #: ../../wallets/dashcore/send-receive.rst:108
 msgid ""
@@ -154,10 +204,13 @@ msgid ""
 "sending party. To do this, click **File > Receiving addresses**. The "
 "**Receiving addresses** window appears."
 msgstr ""
+"Para receber o Dash, primeiro você deve criar um endereço de recebimento "
+"para dar à parte de envio. Para fazer isso, clique em **Arquivo > Recebendo "
+"Endereços**. A janela **Recebendo endereços** é exibida."
 
 #: ../../wallets/dashcore/send-receive.rst:115
 msgid "The Receiving addresses window"
-msgstr ""
+msgstr "A janela de endereços de recebimento"
 
 #: ../../wallets/dashcore/send-receive.rst:117
 msgid ""
@@ -171,21 +224,32 @@ msgid ""
 "and will recognize a new transaction involving your receiving address when "
 "it occurs."
 msgstr ""
+"Copie um endereço existente clicando no endereço e, em seguida, no botão "
+"**Copiar** ou crie um novo endereço clicando no botão **Novo**. Você também "
+"pode editar um endereço existente clicando com o botão direito e "
+"selecionando **Editar** endereço no menu de contexto. Dê este endereço para "
+"a pessoa que lhe enviará o Dash. Sua carteira não precisa estar aberta para "
+"receber fundos, mas se estiver, você pode ver a transação chegar em tempo "
+"real. Isso ocorre porque sua carteira sempre procura novos blocos no "
+"blockchain quando ela está aberta e reconhece uma nova transação envolvendo "
+"seu endereço de recebimento quando ele ocorre."
 
 #: ../../wallets/dashcore/send-receive.rst:130
 msgid "The Windows 10 received transaction confirmation notification"
-msgstr ""
+msgstr "O Windows 10 recebeu notificação de confirmação de transação"
 
 #: ../../wallets/dashcore/send-receive.rst:132
 msgid ""
 "Once you have been paid, you can see the balance both on the **Overview** "
 "tab and on the **Transactions** tab."
 msgstr ""
+"Depois de receber o pagamento, você poderá ver o saldo na guia **Visão "
+"geral** e na guia **Transações**."
 
 #: ../../wallets/dashcore/send-receive.rst:138
 msgid "The received transaction"
-msgstr ""
+msgstr "A transação recebida"
 
 #: ../../wallets/dashcore/send-receive.rst:140
 msgid "**How to Create New Receiving Addresses in DashQT**"
-msgstr ""
+msgstr "**Como criar novos endereços de recebimento no DashQT**"
