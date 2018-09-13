@@ -1,6 +1,6 @@
 .. meta::
    :description: Compile Dash Core using Linux, macOS and Gitian
-   :keywords: dash, build, compile, linux, Jenkins, macOS, binary, Gitian, developers
+   :keywords: dash, build, compile, linux, Jenkins, macOS, windows, binary, Gitian, developers
 
 .. _compiling-dash:
 
