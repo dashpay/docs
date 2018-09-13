@@ -67,23 +67,8 @@ example. The volume traded on an exchange provides a good indication of
 how quickly a buy or sell order you place will be filled. This section
 introduces some of the most popular exchanges for trading Dash.
 
-CoinMarketCap
--------------
-
-.. image:: exchanges/coinmarketcap.png
-   :width: 200px
-   :align: right
-   :target: https://coinmarketcap.com
-
-CoinMarketCap lists all cryptocurrencies by their market capitalization.
-Clicking one of these currencies allows you to view price charts, and
-clicking Markets allows you to view the markets available and the
-trading pairs they offer.
-
-https://coinmarketcap.com/currencies/dash/#markets
-
 Marketplace comparison websites
-----------------
+-------------------------------
 
 Cryptoradar
   .. image:: exchanges/cryptoradar.png
@@ -96,6 +81,19 @@ Cryptoradar
   Cryptoradar is a real-time cryptocurrency marketplace price comparison
   and review platform. The website compares dozens of Dash markets based
   on prices, fees, payment methods, reviews and more.
+
+CoinMarketCap
+  .. image:: exchanges/coinmarketcap.png
+     :width: 200px
+     :align: right
+     :target: https://coinmarketcap.com
+
+  https://coinmarketcap.com/currencies/dash/#markets
+
+  CoinMarketCap lists all cryptocurrencies by their market capitalization.
+  Clicking one of these currencies allows you to view price charts, and
+  clicking Markets allows you to view the markets available and the
+  trading pairs they offer.
 
 Dash.org markets
 ----------------
