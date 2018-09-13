@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
+"POT-Creation-Date: 2018-09-06 10:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: strophy <leon.white@dash.org>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
@@ -40,6 +40,14 @@ msgid ""
 "issue or pull request on GitHub. The documentation is available at: https"
 "://dash-docs.github.io/en/"
 msgstr ""
+"Dash Core ha publicado una extensa `Guía del desarrollador <https://dash-"
+"docs.github.io/en/>`_ para ayudar a los nuevos desarrolladores a comenzar "
+"con la base de código de Dash y como una referencia para desarrolladores "
+"experimentados. Esta guía se puede aprovechar para integrar de manera rápida"
+" y eficiente las aplicaciones externas con el ecosistema de Dash. Cualquiera"
+" puede contribuir a la guía enviando un problema o solicitud de extracción "
+"en GitHub. La documentación está disponible en:  https://dash-"
+"docs.github.io/en/"
 
 #: ../../developers/index.rst:19
 msgid ""
@@ -239,11 +247,23 @@ msgstr ""
 "estado es WATCHDOG_EXPIRED, es decir, Sentinel no se está ejecutando "
 "correctamente."
 
+#: ../../developers/index.rst:108
+msgid "SPORK_15_DETERMINISTIC_MNS_ENABLED"
+msgstr "SPORK_15_DETERMINISTIC_MNS_ENABLED"
+
 #: ../../developers/index.rst:104
+msgid ""
+"Controls whether `deterministic masternodes "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ are required. "
+"When activated, the legacy masternode list logic will no longer run and non-"
+"updated masternodes will not be eligible for payment."
+msgstr ""
+
+#: ../../developers/index.rst:111
 msgid "Viewing spork status"
 msgstr "Revisar estado de spork"
 
-#: ../../developers/index.rst:106
+#: ../../developers/index.rst:113
 msgid ""
 "The ``spork show`` and ``spork active`` commands issued in the debug window "
 "(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
@@ -254,21 +274,21 @@ msgstr ""
 "con sporks. Puedes abrir la ventana de depuración seleccionando "
 "**Herramientas > Depurar consola**."
 
-#: ../../developers/index.rst:114
+#: ../../developers/index.rst:121
 msgid "spork show and spork active output in the Dash Core debug console"
 msgstr ""
 "Salidas de spork show y spork active en la consola de depuración Dash Core"
 
-#: ../../developers/index.rst:118
+#: ../../developers/index.rst:125
 msgid "Version History"
 msgstr "Historial de versiones"
 
-#: ../../developers/index.rst:120
+#: ../../developers/index.rst:127
 msgid "Full release notes and the version history of Dash are available here:"
 msgstr ""
 "Las notas de la versión completa y el historial de versiones de Dash están "
 "disponibles aquí:"
 
-#: ../../developers/index.rst:122
+#: ../../developers/index.rst:129
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
 msgstr "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
