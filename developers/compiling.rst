@@ -24,9 +24,11 @@ Linux
 =====
 
 This guide describes how to build Dash Core wallet without the GUI from
-source under Ubuntu Linux. It is intended to serve as a simple guide for
+source under Ubuntu Linux. For a more detailed guide, see the `Unix
+Build Notes <https://github.com/dashpay/dash/blob/master/doc/build-unix.md>`__. 
+The content on this page is intended to serve as a simple guide for
 general compilation of non-deterministic binary files from the stable
-source code. A standard installation of Ubuntu Linux 16.04 LTS will be
+source code. A standard installation of Ubuntu Linux 18.04 LTS will be
 used as an environment for the build. We assume you are running as a
 user with sudo permissions. First add the necessary extra repository and
 update all packages::
@@ -38,7 +40,7 @@ update all packages::
 Now install the dependencies as described in the installation
 documentation::
 
-  sudo apt install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git libdb4.8-dev libdb4.8++-dev
+  sudo apt install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git libdb4.8-dev libdb4.8++-dev curl
   sudo apt install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libzmq3-dev
 
 Optionally install the Qt dependencies if you want to build the Dash 
@@ -60,13 +62,16 @@ And build::
 
 ``/usr/local/bin`` now contains the compiled Dash binaries.
 
+.. _macos-build:
 
 macOS
 =====
 
 This guide describes how to build Dash Core wallet from source under
 macOS. It is intended to serve as a simple guide for general compilation
-of non-deterministic binary files from the stable source code. A
+of non-deterministic binary files from the stable source code. For a
+more detailed guide, see the `macOS Build Notes
+<https://github.com/dashpay/dash/blob/master/doc/build-osx.md>`__. A
 standard installation of macOS 10.13 High Sierra will be used as an
 environment for the build. We assume you are running as a user with sudo
 permissions. First, open a the **Terminal** app and enter the following
@@ -107,6 +112,59 @@ You can also create a ``.dmg`` that contains the ``.app`` bundle
 
 Dash Core is now available at ``./src/dashd``.
 
+.. _windows-build:
+
+Windows
+=======
+
+This guide describes how to build Dash Core wallet from source for
+64-bit Windows. Most developers use cross-compilation from Linux to
+build executables for Windows. The content on this page is intended to
+serve as a simple guide for general compilation of non-deterministic
+binary files from the stable source code. For a more detailed guide, see
+the `Windows Build Notes
+<https://github.com/dashpay/dash/blob/master/doc/build-windows.md>`__.
+A standard installation of Ubuntu Linux 18.04 LTS will be used as an
+environment for the build. We assume you are running as a user with sudo
+permissions. First add the necessary extra repository and update all
+packages::
+
+  sudo add-apt-repository ppa:bitcoin/bitcoin
+  sudo apt update
+  sudo apt upgrade
+
+Now install the dependencies as described in the installation
+documentation::
+
+  sudo apt install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git libdb4.8-dev libdb4.8++-dev curl
+  sudo apt install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libzmq3-dev
+  sudo apt-get install g++-mingw-w64-x86-64 mingw-w64-x86-64-dev
+
+Optionally install the Qt dependencies if you want to build the Dash 
+GUI::
+
+  sudo apt install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
+
+Download the stable Dash repository::
+
+  git clone https://github.com/dashpay/dash.git
+
+Build and link the depends system::
+
+  cd dash/depends
+  make HOST=x86_64-w64-mingw32
+  cd ..
+  sudo update-alternatives --set x86_64-w64-mingw32-gcc  /usr/bin/x86_64-w64-mingw32-gcc-posix
+  sudo update-alternatives --set x86_64-w64-mingw32-g++  /usr/bin/x86_64-w64-mingw32-g++-posix
+
+And build::
+
+  ./autogen.sh
+  CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
+  make
+
+``~/dash/src`` now contains the compiled Dash binaries, and
+``~/dash/src/qt`` contains the Dash GUI wallet.
 
 .. _gitian-build:
 
