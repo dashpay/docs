@@ -293,8 +293,9 @@ KeepKey
 The $129 KeepKey hardware wallet features a large screen and 100% open
 source firmware to guarantee the security of your private keys. KeepKey
 has supported Dash since firmware version 4.2.10, released on March 28,
-2017. Follow these instructions to begin using Dash on your KeepKey
-device.
+2017, and added support for InstantSend in firmware version 5.7.2,
+released on September 5, 2018. Follow these instructions to begin using
+Dash on your KeepKey device.
 
 - Site: https://www.keepkey.com
 - Review: https://coincentral.com/keepkey-wallet-review
