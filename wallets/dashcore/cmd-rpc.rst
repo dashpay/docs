@@ -161,16 +161,16 @@ Wallet options
 ZeroMQ notification options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
---zmqpubhashblock=<address>                  Enable publish hash block in <address>
---zmqpubhashtx=<address>                     Enable publish hash transaction in <address>
---zmqpubhashtxlock=<address>                 Enable publish hash transaction (locked via InstantSend) in <address>
---zmqpubhashgovernancevote=<address>         Enable publish hash of governance votes in <address>
---zmqpubhashgovernanceobject=<address>       Enable publish hash of governance objects (like proposals) in <address>
---zmqpubhashinstantsenddoublespend=<address> Enable publish transaction hashes of attempted InstantSend double spend in <address>
---zmqpubrawblock=<address>                   Enable publish raw block in <address>
---zmqpubrawtx=<address>                      Enable publish raw transaction in <address>
---zmqpubrawtxlock=<address>                  Enable publish raw transaction (locked via InstantSend) in <address>
---zmqpubrawinstantsenddoublespend=<address>  Enable publish raw transactions of attempted InstantSend double spend in <address>
+--zmqpubhashblock=<address>                   Enable publish hash block in <address>
+--zmqpubhashtx=<address>                      Enable publish hash transaction in <address>
+--zmqpubhashtxlock=<address>                  Enable publish hash transaction (locked via InstantSend) in <address>
+--zmqpubhashgovernancevote=<address>          Enable publish hash of governance votes in <address>
+--zmqpubhashgovernanceobject=<address>        Enable publish hash of governance objects (like proposals) in <address>
+--zmqpubhashinstantsenddoublespend=<address>  Enable publish transaction hashes of attempted InstantSend double spend in <address>
+--zmqpubrawblock=<address>                    Enable publish raw block in <address>
+--zmqpubrawtx=<address>                       Enable publish raw transaction in <address>
+--zmqpubrawtxlock=<address>                   Enable publish raw transaction (locked via InstantSend) in <address>
+--zmqpubrawinstantsenddoublespend=<address>   Enable publish raw transactions of attempted InstantSend double spend in <address>
 
 
 Debugging/Testing options
