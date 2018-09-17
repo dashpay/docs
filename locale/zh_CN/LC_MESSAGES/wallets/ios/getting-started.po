@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
+"POT-Creation-Date: 2018-09-17 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -20,19 +20,19 @@ msgstr ""
 
 #: ../../wallets/ios/getting-started.rst:1
 msgid "Getting started with sending and receiving Dash on your iOS device"
-msgstr ""
+msgstr "通过个人的IOS设备开始发送或接收达世币"
 
 #: ../../wallets/ios/getting-started.rst:1
 msgid "dash, mobile, wallet, ios, send, receive, addresses, getting started"
-msgstr ""
+msgstr "达世币、移动、钱包、ios、发送、接收、地址、入门"
 
 #: ../../wallets/ios/getting-started.rst:8
 msgid "Getting started"
-msgstr ""
+msgstr "入门"
 
 #: ../../wallets/ios/getting-started.rst:11
 msgid "Creating a new wallet"
-msgstr ""
+msgstr "创建新钱包"
 
 #: ../../wallets/ios/getting-started.rst:13
 msgid ""
@@ -45,12 +45,13 @@ msgid ""
 " Write the phrase down and store it in a safe place - if you lose this, you "
 "will also lose access to your funds forever."
 msgstr ""
+"在用户第一次登陆达世币钱包的时候，软件将提示用户选择**创建新钱包**或复原已有的钱包。如果用户已有钱包且钱包中存有余额，那么用户可以使用恢复密码来复原已有的钱包；如果之前没有钱包，那么用户应选择新建钱包。在用户选择新建钱包后，软件将生成新钱包和恢复密码。如果用户由于资金丢失、手机故障或转移账户到另一设备而需要恢复资金，那么用户就要用到这个恢复短语。因此，建议用户将它写下来并妥善保存。如果丢失了这个短语，那么用户就会完全丢失个人的资金。"
 
 #: ../../wallets/ios/getting-started.rst:30
 msgid ""
 "*Creating a new wallet and generating the recovery phrase in iOS Dash "
 "Wallet*"
-msgstr ""
+msgstr "*创建iOS版达世币钱包及其恢复短语*"
 
 #: ../../wallets/ios/getting-started.rst:33
 msgid ""
@@ -59,6 +60,8 @@ msgid ""
 "will need to unlock your wallet for this, as well as to view your "
 "transaction history or send Dash."
 msgstr ""
+"钱包软件也有可能会要求用户指定PIN码或将应用软件与TouchID关联起来。 "
+"用户可以点击应用程序顶端的达世币图标来浏览余额。在浏览余额、交易历史记录或发送达世币之前，用户需要解锁钱包。"
 
 #: ../../wallets/ios/getting-started.rst:40
 msgid "Receiving"
@@ -74,10 +77,11 @@ msgid ""
 "transaction history and the status of any pending transactions by clicking "
 "the menu button at the top left."
 msgstr ""
+"在达世币钱包安装完毕后，用户可以通过两个界面来发送或接收达世币，这两个界面可以左右滑动。在接收达世币的时候，应用程序会生成一个地址，并显示在屏幕下方。用户可以点击地址，以便复制并共享或直接扫描二维码。在交易完成后，用户可以点击左上角的菜单按键，以便浏览余额、交易历史记录或任何等待处理的交易的当前状态。"
 
 #: ../../wallets/ios/getting-started.rst:55
 msgid "*Receiving Dash and viewing your balance in iOS Dash Wallet*"
-msgstr ""
+msgstr "*在iOS 版达世币钱包中接收达世币并查看余额*"
 
 #: ../../wallets/ios/getting-started.rst:59
 msgid "Sending"
@@ -94,14 +98,15 @@ msgid ""
 "structure and request your unlock code (PIN or TouchID). The transaction "
 "will then be sent."
 msgstr ""
+"达世币的发送页面为用户提供了两个输入支付地址的途径：**扫描二维码**或**从剪贴板中获取支付地址**。用户可以选用**即时发送**功能，从而实现交易的立即确认；也可以禁用即时发送功能，而只使用交易确认时间相对略长的普通交易。在扫描二维码时，用户是否需要手动输入金额取决于二维码中是否已经包含了金额的相关信息。此时，钱包中将出现一个确认界面，界面上说明了各项费用并请求用户提供解锁密码（PIN或TouchID）。交易将在随后被发送出去。"
 
 #: ../../wallets/ios/getting-started.rst:79
 msgid "*Sending Dash from iOS Dash Wallet*"
-msgstr ""
+msgstr "*在iOS 版达世币钱包中发送达世币*"
 
 #: ../../wallets/ios/getting-started.rst:83
 msgid "Sending to a Bitcoin address"
-msgstr ""
+msgstr "向比特币地址发送达世币"
 
 #: ../../wallets/ios/getting-started.rst:85
 msgid ""
@@ -118,8 +123,10 @@ msgid ""
 "iOS will display **Shapeshift in progress** until the transaction is "
 "complete."
 msgstr ""
+"用户还可以借助ShapeShift的服务直接从达世币钱包中向比特币地址发送资金。如果用户扫描或输入比特币地址，那么用户需要输入的是比特币金额，而不是达世币金额。在输入金额后，用户需点击**Shapeshift!**按键。此时，钱包将会显示一个额外的确认页面，以便用户在交易推进前确认ShapeShift的服务费用。用户需要确认页面上的比特币地址准确无误（如果出现数值过低的错误信息，用户可点击顶部以灰色显示的达世币金额，从而选定以达世币而非比特币的形式转移的资金）。一旦用户的交易得到认可，iOS"
+" 版达世币钱包将显示** Shapeshift 正处于服务进程当中**，直到交易完成。"
 
 #: ../../wallets/ios/getting-started.rst:107
 msgid ""
 "*Sending Dash to a Bitcoin address via ShapeShift from iOS Dash Wallet*"
-msgstr ""
+msgstr "*借助ShapeShift将iOS 版达世币钱包中的达世币发送到比特币地址*"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
+"POT-Creation-Date: 2018-09-17 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -32,11 +32,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:9
 msgid "Advanced topics"
-msgstr ""
+msgstr "高级主题"
 
 #: ../../wallets/dashcore/advanced.rst:14
 msgid "Coin Control"
-msgstr ""
+msgstr "货币控制"
 
 #: ../../wallets/dashcore/advanced.rst:16
 msgid ""
@@ -49,11 +49,14 @@ msgid ""
 "**Inputs…** will appear. Click this button to select which UTXOs can be used"
 " as input for any transactions you create. The following window appears:"
 msgstr ""
+"货币控制选项帮助达世币核心钱包的用户指定地址，此时，未经支付（UTXOs）的输出应当用作交易输入。这项功能不仅帮助用户在指定的钱包地址上留存指定余额，同时还能让他们自由支配其余资金。以达世币达世币核心钱包为例，用户需要点击"
+" **设置 > 选项 > 钱包 > 启用货币控制功能**。现在用户只要访问钱包的“发送”选项卡，就会看到一个新的 **输入** "
+"按键。只要点击这个按键，用户就能选定交易所使用的未经支付的输出了。操作页面如下所示："
 
 #: ../../wallets/dashcore/advanced.rst:29
 msgid ""
 "Coin Selection window in Dash Core wallet, showing two masternodes (testnet)"
-msgstr ""
+msgstr "达世币核心钱包中的货币选择界面，显示两个主节点（测试网）"
 
 #: ../../wallets/dashcore/advanced.rst:32
 msgid ""
@@ -64,14 +67,17 @@ msgid ""
 "safely create transactions with your remaining funds without affecting the "
 "locked UTXOs."
 msgstr ""
+"单击鼠标右键选择不想支出的（多个）交易项，然后选择 **锁定未支付**。此时，交易的旁边将会出现一把小锁的标志。用户可以点击 **切换锁定状态** "
+"按键来切换未经支付的输出的状态，即锁定或解锁状态。完成操作后，用户应点击 "
+"**OK**按键。以不影响已锁定的未经支付的输出为前提，用户就可以安全地创建交易了。"
 
 #: ../../wallets/dashcore/advanced.rst:45
 msgid "Locking UTXOs in Dash Core wallet"
-msgstr ""
+msgstr "在达世币核心钱包当中锁定未经支付的输出"
 
 #: ../../wallets/dashcore/advanced.rst:51
 msgid "Multisignature"
-msgstr ""
+msgstr "多重签名"
 
 #: ../../wallets/dashcore/advanced.rst:53
 msgid ""
@@ -83,22 +89,24 @@ msgid ""
 "create a transaction. The example parties involved are a buyer, a seller and"
 " an arbiter. This example is based on:"
 msgstr ""
+"本章节介绍了达世币核心钱包中的多重签名功能。尽管交易在当前的测试网区块链上是不可见的，并且地址格式或远程过程调用与本文显示的稍有不同，但原则和命令是相同的。本章节提供了创建2"
+" -3多重签名地址及交易的例子，其中涉及三方，即买卖双方和仲裁者。实例如下列网站所示："
 
 #: ../../wallets/dashcore/advanced.rst:61
 msgid "https://people.xiph.org/~greg/escrowexample.txt"
-msgstr ""
+msgstr "https://people.xiph.org/~greg/escrowexample.txt"
 
 #: ../../wallets/dashcore/advanced.rst:62
 msgid "https://gist.github.com/gavinandresen/3966071"
-msgstr ""
+msgstr "https://gist.github.com/gavinandresen/3966071"
 
 #: ../../wallets/dashcore/advanced.rst:63
 msgid "https://bitcoin.org/en/developer-examples#p2sh-multisig"
-msgstr ""
+msgstr "https://bitcoin.org/en/developer-examples#p2sh-multisig"
 
 #: ../../wallets/dashcore/advanced.rst:66
 msgid "Step 1: Create three addresses"
-msgstr ""
+msgstr "步骤 1：创建三个地址"
 
 #: ../../wallets/dashcore/advanced.rst:68
 #: ../../wallets/dashcore/advanced.rst:136
@@ -106,7 +114,7 @@ msgstr ""
 #: ../../wallets/dashcore/advanced.rst:221
 #: ../../wallets/dashcore/advanced.rst:254
 msgid "Seller::"
-msgstr ""
+msgstr "卖方::"
 
 #: ../../wallets/dashcore/advanced.rst:85
 #: ../../wallets/dashcore/advanced.rst:144
@@ -115,52 +123,52 @@ msgstr ""
 #: ../../wallets/dashcore/advanced.rst:235
 #: ../../wallets/dashcore/advanced.rst:246
 msgid "Buyer::"
-msgstr ""
+msgstr "买方::"
 
 #: ../../wallets/dashcore/advanced.rst:102
 #: ../../wallets/dashcore/advanced.rst:152
 msgid "Arbiter::"
-msgstr ""
+msgstr "仲裁者::"
 
 #: ../../wallets/dashcore/advanced.rst:119
 msgid "This results in three keypairs (public/private)::"
-msgstr ""
+msgstr "结果会产生三对密钥（公钥/私钥）::"
 
 #: ../../wallets/dashcore/advanced.rst:126
 msgid "Step 2: Create multisig address"
-msgstr ""
+msgstr "步骤 2：创建多重签名地址"
 
 #: ../../wallets/dashcore/advanced.rst:128
 msgid ""
 "The ``createmultisig`` command takes as variables the number n signatures of"
 " m keys (supplied as json array) required. In this example, 2 of 3 keys are "
 "required to sign the transaction."
-msgstr ""
+msgstr "``createmultisig`` 命令可以创建n/m的多重签名变量（json数据提供）。本文示例创建的是2/3多重签名。"
 
 #: ../../wallets/dashcore/advanced.rst:132
 msgid ""
 "Note: The address can be created by anyone, as long as the public keys and "
 "their sequence are known (resulting address and redeemScript are identical, "
 "see below)."
-msgstr ""
+msgstr "值得注意的是：只要公钥和序列已知（则地址和redeemScript都是一样的），那么任何人都可以创建地址。"
 
 #: ../../wallets/dashcore/advanced.rst:161
 msgid "Step 3: Buyer funds the multisig address"
-msgstr ""
+msgstr "步骤 3：买方为多重签名地址提供资金"
 
 #: ../../wallets/dashcore/advanced.rst:163
 msgid "This works the same as a usual transaction."
-msgstr ""
+msgstr "买方为多重签名地址提供资金的流程与寻常交易相同。"
 
 #: ../../wallets/dashcore/advanced.rst:170
 msgid ""
 "The seller/arbiter can trace the transaction by its txid in the block "
 "explorer. Or from the console as follows."
-msgstr ""
+msgstr "卖方/仲裁者可以通过区块浏览器中的交易ID跟进交易情况或通过控制台来完成操作。"
 
 #: ../../wallets/dashcore/advanced.rst:205
 msgid "Step 4: Spending the multisig"
-msgstr ""
+msgstr "步骤 4：通过多重签名功能完成支付"
 
 #: ../../wallets/dashcore/advanced.rst:207
 msgid ""
@@ -169,12 +177,14 @@ msgid ""
 "the transaction must be signed by 2 parties (seller + buyer or arbiter). The"
 " seller creates a transaction (we will reuse his public address from above)."
 msgstr ""
+"现在我们假定交易已完成，那么买卖双方都会得到满意的结果。如果卖方希望领取个人的达世币，那么在2 "
+"-3多重签名的情况下，交易需要取得三方中的两方的签名许可（即卖方的签名加上买方或仲裁者的签名）。这时候，卖方就可以创建交易了（在这里，我们重复使用了上述的公共地址）。"
 
 #: ../../wallets/dashcore/advanced.rst:218
 msgid ""
 "And partially signs it, using the redeemScript, scriptPubKey and his private"
 " key"
-msgstr ""
+msgstr "使用redeemScript、scriptPubKey和个人私钥对多重签名交易进行部分签名"
 
 #: ../../wallets/dashcore/advanced.rst:229
 msgid ""
@@ -184,22 +194,24 @@ msgid ""
 " above and their private key. Let's assume the buyer is completing the "
 "signature."
 msgstr ""
+"值得注意的是，十六进制的输出变得越来越长，但由于交易还需要另一个签名，因此输出的完成情况备注为 \"false\" "
+"。这时，买方或仲裁者就可以使用上述输出和私钥来完成交易签名了。我们假设买方正在完成签名。"
 
 #: ../../wallets/dashcore/advanced.rst:243
 msgid ""
 "The signature is complete now, and either of the parties can transmit the "
 "transaction to the network."
-msgstr ""
+msgstr "现在交易签名已经完成了，任何一方都可以将交易传输到达世币网络上了。"
 
 #: ../../wallets/dashcore/advanced.rst:251
 msgid ""
 "Again, this transaction can be traced in a block explorer. And the seller is"
 " happy to receive his coins at his public address as follows."
-msgstr ""
+msgstr "同样，用户也可以在区块浏览器中跟进交易。卖方也很乐意在如下所示的个人公共地址上接收达世币。"
 
 #: ../../wallets/dashcore/advanced.rst:275
 msgid "Multiple wallets"
-msgstr ""
+msgstr "多款钱包"
 
 #: ../../wallets/dashcore/advanced.rst:277
 msgid ""
@@ -208,6 +220,8 @@ msgid ""
 "of Dash Core simultaneously by specifying separate data directories using "
 "the ``datadir`` argument."
 msgstr ""
+"用户可以通过 ``wallet`` 参数来启动达世币核心钱包，并在此时选用不同类型的钱包。此外，用户还可以通过 ``datadir`` "
+"参数来指定不同的数据目录，从而同时运行达世币核心钱包的不同实例。"
 
 #: ../../wallets/dashcore/advanced.rst:282
 msgid ""
@@ -219,10 +233,14 @@ msgid ""
 "entirely separate data directories such as e.g. ``C:\\Dash1`` (simpler if "
 "you do want to run the wallets simultaneously)."
 msgstr ""
+"首先，用户应根据\\ :ref:`安装指南<dashcore-installation>`\\ 的指示在个人的计算机系统上安装达世币核心钱包。在 "
+"**初次运行达世币核心钱包 的时候**，用户可以决定是否将独立的 ``wallet.dat`` "
+"文件保存在默认地址上（如果用户不需要同时运行钱包，那就更简单了）。用户也可以指定完全独立的数据目录，例如 ``C:\\Dash1`` "
+"（如果用户希望同时运行钱包，那么设置将相对更简单）。"
 
 #: ../../wallets/dashcore/advanced.rst:293
 msgid "Separate wallet.dat files"
-msgstr ""
+msgstr "独立的wallet.dat文件"
 
 #: ../../wallets/dashcore/advanced.rst:295
 msgid ""
@@ -232,10 +250,13 @@ msgid ""
 "similar) and create two shortcuts on the desktop. Then open the "
 "**Properties** window for each of these shortcuts."
 msgstr ""
+"在这种情况下，用户需要分别通过不同的钱包文件在桌面上创建两个快捷方式。具体来说，用户需要导航到用于启动达世币核心钱包的二进制文件（文件通常位于 "
+"``C:\\Program Files\\DashCore\\dash-qt.exe`` "
+"或在类似文件中），然后在桌面上创建两个快捷方式。随后，达世币需要打开这些快捷方式的 **属性**窗口。"
 
 #: ../../wallets/dashcore/advanced.rst:304
 msgid "Creating desktop shortcuts using Windows 10"
-msgstr ""
+msgstr "使用Windows 10创建桌面快捷方式"
 
 #: ../../wallets/dashcore/advanced.rst:306
 msgid ""
@@ -246,22 +267,29 @@ msgid ""
 " following example demonstrates two wallets named ``workwallet.dat`` and "
 "``homewallet.dat``:"
 msgstr ""
+"通过在启动钱包时指定 ``钱包`` 参数，用户可以修改各个快捷方式的 **目标** 属性，从而指向不同的钱包文件。如果用户没有指定 ``钱包`` "
+"参数，那么钱包将默认使用 ``wallet.dat`` 。如果指定的钱包文件并不存在，那么文件将会自行创建。下文以 ``workwallet.dat``"
+" 和 ``homewallet.dat`` 这两个文件为例："
 
 #: ../../wallets/dashcore/advanced.rst:313
 msgid ""
 "Wallet Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=workwallet.dat``"
 msgstr ""
+"Wallet Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-wallet=workwallet.dat``"
 
 #: ../../wallets/dashcore/advanced.rst:314
 msgid ""
 "Wallet Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=homewallet.dat``"
 msgstr ""
+"Wallet Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-wallet=homewallet.dat``"
 
 #: ../../wallets/dashcore/advanced.rst:319
 msgid "Specifying separate wallet files"
-msgstr ""
+msgstr "指定独立的钱包文件"
 
 #: ../../wallets/dashcore/advanced.rst:321
 msgid ""
@@ -269,10 +297,11 @@ msgid ""
 "from your desktop. Note that you cannot open both wallets simultaneously. To"
 " do this, you will need two separate data directories, as described below."
 msgstr ""
+"现在，用户可以使用这两个快捷图标轻松迅速地从桌面打开不同的钱包了。请注意，用户无法同时打开两个钱包。如果用户需要两个独立的数据目录，操作步骤如下所述。"
 
 #: ../../wallets/dashcore/advanced.rst:328
 msgid "Separate data directories"
-msgstr ""
+msgstr "独立的数据目录"
 
 #: ../../wallets/dashcore/advanced.rst:330
 msgid ""
@@ -284,22 +313,30 @@ msgid ""
 "of Dash Core simultaneously. Create two (or more) shortcuts on your desktop "
 "as described above, then specify arguments for ``datadir`` as shown below:"
 msgstr ""
+"用户需启动达世币核心钱包，并等待钱包与网络同步，然后再关闭达世币核心钱包。此时，用户可以创建两个独立的数据目录，例如 ``C:\\Dash1`` 和 "
+"``C:\\Dash2`` ，然后将同步数据目录下的 ``blocks`` 和 ``chainstate`` "
+"复制到新的目录之下。它们将作为独立的数据目录，帮助达世币核心钱包同时运行不同的实例。用户可参照上述步骤创建两个（或更多的）快捷方式，并按以下方式为 "
+"``datadir`` 指定参数。"
 
 #: ../../wallets/dashcore/advanced.rst:339
 msgid ""
 "Datadir Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash1 -listen=0``"
 msgstr ""
+"Datadir Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-datadir=C:\\Dash1 -listen=0``"
 
 #: ../../wallets/dashcore/advanced.rst:340
 msgid ""
 "Datadir Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash2 -listen=0``"
 msgstr ""
+"Datadir Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-datadir=C:\\Dash2 -listen=0``"
 
 #: ../../wallets/dashcore/advanced.rst:345
 msgid "Specifying separate datadirs"
-msgstr ""
+msgstr "指定独立的数据路径"
 
 #: ../../wallets/dashcore/advanced.rst:347
 msgid ""
@@ -310,14 +347,17 @@ msgid ""
 " as :ref:`Dash Electrum <dash-electrum-wallet>` to maintain multiple "
 "separate wallets without keeping a full copy of the blockchain."
 msgstr ""
+"现在，用户可以使用这两个快捷图标快速轻松地从桌面打开不同的钱包了。两个钱包都独立地保存着区块链的完整副本，这可能会占用较大的磁盘空间。为了更有效地使用磁盘空间，用户可以考虑使用SPV或"
+" \"轻\"钱包。在这种情况下，用户可以参照\\ :ref:`达世币轻钱包 <dash-electrum-wallet>`\\ "
+"的指示在无需保存区块链完整副本的前提下维护多个独立的钱包。"
 
 #: ../../wallets/dashcore/advanced.rst:357
 msgid "Two instances of Dash Core running simultaneously"
-msgstr ""
+msgstr "达世币核心钱包同时运行两个实例"
 
 #: ../../wallets/dashcore/advanced.rst:360
 msgid "KeePass"
-msgstr ""
+msgstr "KeePass"
 
 #: ../../wallets/dashcore/advanced.rst:362
 msgid ""
@@ -327,6 +367,8 @@ msgid ""
 "wallet passphrase in KeePass using the integration. When this is done, "
 "KeePass can be used to unlock the wallet."
 msgstr ""
+"从0.11.0版本开始，达世币核心钱包支持与流行的开源密码管理器KeePass的集成。本指南介绍了达世币核心钱包与KeePass之间建立关联的步骤，并指导用户通过集成在KeePass上保存达世币核心钱包的密码。在用户完成上述操作后，"
+" 用户就可以通过KeePass来解锁钱包了。"
 
 #: ../../wallets/dashcore/advanced.rst:369
 msgid "Installation"
@@ -334,39 +376,41 @@ msgstr "安装"
 
 #: ../../wallets/dashcore/advanced.rst:371
 msgid "You will need the following:"
-msgstr ""
+msgstr "用户可能需要参考以下网址上的信息："
 
 #: ../../wallets/dashcore/advanced.rst:373
 msgid "KeePass 2: http://keepass.info"
-msgstr ""
+msgstr "KeePass 2: http://keepass.info"
 
 #: ../../wallets/dashcore/advanced.rst:374
 msgid "KeePassHttp plugin: https://github.com/pfn/keepasshttp"
-msgstr ""
+msgstr "KeePassHttp plugin: https://github.com/pfn/keepasshttp"
 
 #: ../../wallets/dashcore/advanced.rst:375
 msgid "Dash Core: https://www.dash.org"
-msgstr ""
+msgstr "Dash Core: https://www.dash.org"
 
 #: ../../wallets/dashcore/advanced.rst:377
 msgid ""
 "If not already installed, install these packages according to the "
 "instructions linked below:"
-msgstr ""
+msgstr "如果未安装，则根据下方链接指南进行安装："
 
 #: ../../wallets/dashcore/advanced.rst:380
 msgid "KeePass: https://keepass.info/help/v2/setup.html"
-msgstr ""
+msgstr "KeePass: https://keepass.info/help/v2/setup.html"
 
 #: ../../wallets/dashcore/advanced.rst:381
 msgid "KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md"
-msgstr ""
+msgstr "KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md"
 
 #: ../../wallets/dashcore/advanced.rst:382
 msgid ""
 "Dash Core: "
 "https://docs.dash.org/en/latest/wallets/dashcore/installation.html"
 msgstr ""
+"Dash Core: "
+"https://docs.dash.org/en/latest/wallets/dashcore/installation.html"
 
 #: ../../wallets/dashcore/advanced.rst:385
 msgid "Commands"
@@ -376,11 +420,11 @@ msgstr "命令"
 msgid ""
 "The following KeePass RPC commands are available in the Dash Core client "
 "console or server:"
-msgstr ""
+msgstr "用户可以在达世币核心钱包的客户端或服务器上使用以下的KeePass远程过程调用命令："
 
 #: ../../wallets/dashcore/advanced.rst:393
 msgid "keepass genkey"
-msgstr ""
+msgstr "keepass genkey"
 
 #: ../../wallets/dashcore/advanced.rst:391
 msgid ""
@@ -388,10 +432,11 @@ msgid ""
 "communication with KeePassHttp. This is only necessary for manual "
 "configuration. Use init for automatic configuration."
 msgstr ""
+"用户可生成base64编码的256位AES密钥，以便用于与KeePassHttp之间的通信。只有人工设置才需要用到这一命令，自动设置用到的则是init命令。"
 
 #: ../../wallets/dashcore/advanced.rst:399
 msgid "keepass init"
-msgstr ""
+msgstr "keepass init"
 
 #: ../../wallets/dashcore/advanced.rst:396
 msgid ""
@@ -400,10 +445,11 @@ msgid ""
 " to ask for an ID for the association. Returns the association and the "
 "base64 encoded string for the AES key."
 msgstr ""
+"用户可以通过生成AES密钥并向KeePassHttp发送关联消息来设置达世币和KeePass之间的关联。在此期间，KeePass将申请建立关联所需的ID。随后，达世币核心钱包将返回AES密钥的关联和Base64编码字符串。"
 
 #: ../../wallets/dashcore/advanced.rst:406
 msgid "keepass setpassphrase"
-msgstr ""
+msgstr "keepass setpassphrase"
 
 #: ../../wallets/dashcore/advanced.rst:402
 msgid ""
@@ -413,14 +459,16 @@ msgid ""
 "GUI already send the updates to KeePassHttp, so this is only necessary for "
 "manual manipulation of the password."
 msgstr ""
+"更新KeePassHttp中的密码，此密码应与用户想要用于钱包的密码相匹配。请注意，标准的远程过程调用命令walletpassphrasechange和来自QT"
+" GUI的钱包加密已经将更新发送到了KeePassHttp，因此只有人工设置才需要借助KeePassHttp的密码更新。"
 
 #: ../../wallets/dashcore/advanced.rst:408
 msgid "The following new arguments are available for dashd and dash-qt:"
-msgstr ""
+msgstr "以下新参数可用于dashd和dash-qt："
 
 #: ../../wallets/dashcore/advanced.rst:411
 msgid "keepass"
-msgstr ""
+msgstr "keepass"
 
 #: ../../wallets/dashcore/advanced.rst:411
 msgid "Use KeePass 2 integration using KeePassHttp plugin (default: 0)"
@@ -428,7 +476,7 @@ msgstr "借助KeePassHttp插件来使用KeePass 2集成功能（默认值：0）
 
 #: ../../wallets/dashcore/advanced.rst:414
 msgid "keepassport=<port>"
-msgstr ""
+msgstr "keepassport=<port>"
 
 #: ../../wallets/dashcore/advanced.rst:414
 msgid "Connect to KeePassHttp on port <port> (default: 19455)"
@@ -436,7 +484,7 @@ msgstr "通过端口<port>上连接到KeePassHttp（默认值：19455）"
 
 #: ../../wallets/dashcore/advanced.rst:417
 msgid "keepasskey=<key>"
-msgstr ""
+msgstr "keepasskey=<key>"
 
 #: ../../wallets/dashcore/advanced.rst:417
 msgid "KeePassHttp key for AES encrypted communication with KeePass"
@@ -444,7 +492,7 @@ msgstr "借助KeePassHttp密钥使用KeePass 加密通信功能"
 
 #: ../../wallets/dashcore/advanced.rst:420
 msgid "keepassid=<name>"
-msgstr ""
+msgstr "keepassid=<name>"
 
 #: ../../wallets/dashcore/advanced.rst:420
 msgid "KeePassHttp id for the established association"
@@ -452,7 +500,7 @@ msgstr "已建立关联的KeePassHttp身份"
 
 #: ../../wallets/dashcore/advanced.rst:423
 msgid "keepassname=<name>"
-msgstr ""
+msgstr "keepassname=<name>"
 
 #: ../../wallets/dashcore/advanced.rst:423
 msgid ""

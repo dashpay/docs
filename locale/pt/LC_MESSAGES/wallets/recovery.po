@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 10:36+0000\n"
+"POT-Creation-Date: 2018-09-17 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: strophy <leon.white@dash.org>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/dash/teams/37570/pt/)\n"
@@ -716,24 +716,15 @@ msgid ""
 "BIP44 addresses during normal use, but some residual balance may be under "
 "this derivation path, so restoring the **BIP32 Extended Private Key** may be"
 " helpful in some situations. Please see `this forum thread "
-"<https://www.dash.org/forum/threads /restore-breadwallet-dash-funds-to- "
-"your-electrum-dash-wallet- tested.8335>`_ for further discussion on this "
-"process."
+"<https://www.dash.org/forum/threads/restore-breadwallet-dash-funds-to-your-"
+"electrum-dash-wallet-tested.8335>`_ for further discussion on this process."
 msgstr ""
-"Versões mais antigas da carteira do Dash iOS usavam o endereço **BIP32** sob"
-" o caminho de derivação ``m/0'``. A carteira deve migrar esses fundos para "
-"endereços BIP44 durante o uso normal, mas algum saldo residual pode estar "
-"sob esse caminho de derivação, então restaurar a **Chave Privada Estendida "
-"BIP32** pode ser útil em algumas situações. Por favor, consulte `este tópico"
-" do fórum <https://www.dash.org/forum/threads/storage-breadwallet-dash-"
-"funds-to-your-electrum-dash-wallet- tested.8335>`_ para uma discussão mais "
-"aprofundada sobre este assunto."
 
-#: ../../wallets/recovery.rst:340
+#: ../../wallets/recovery.rst:339
 msgid "Private Keys"
 msgstr "Chaves Privadas"
 
-#: ../../wallets/recovery.rst:342
+#: ../../wallets/recovery.rst:341
 msgid ""
 "Most wallets offer a function to import an address from a private key, see "
 "the documentation for your wallet for specific instructions. While private "
@@ -754,7 +745,7 @@ msgstr ""
 " m.google.zxing.client.android>`_ ou` iOS <https://itunes.apple.com/us/app"
 "/quick-scan-qr-code- reader / id483336864>`_) para ler o código primeiro."
 
-#: ../../wallets/recovery.rst:352
+#: ../../wallets/recovery.rst:351
 msgid ""
 "First, start Dash Core and unlock your wallet by selecting **Settings > "
 "Unlock Wallet**. Enter your password, then open the debug console by "
@@ -766,13 +757,13 @@ msgstr ""
 "depuração selecionando **Ferramentas > Consola de Depuração**. No console, "
 "digite o seguinte, substituindo a chave privada de exemplo pela sua chave:"
 
-#: ../../wallets/recovery.rst:359
+#: ../../wallets/recovery.rst:358
 msgid "Importing a private key using the debug console in Dash Core wallet"
 msgstr ""
 "Importando uma chave privada usando o console de depuração na carteira do "
 "Dash Core"
 
-#: ../../wallets/recovery.rst:361
+#: ../../wallets/recovery.rst:360
 msgid ""
 "Dash Core will rescan the blockchain for transactions involving the public "
 "address of this key and enter the transactions and balance in your wallet."
@@ -781,7 +772,7 @@ msgstr ""
 "envolvendo o endereço público dessa chave e inserir as transações e o saldo "
 "em sua carteira."
 
-#: ../../wallets/recovery.rst:365
+#: ../../wallets/recovery.rst:364
 msgid ""
 "The private key must be in wallet import format (WIF). If your key is "
 "encrypted using BIP38 (key begins with 6P instead of 7), you must first "
@@ -800,18 +791,18 @@ msgstr ""
 "chaves serão descriptografadas. Encontre a chave chamada **Private Key WIF**"
 " e importe-a para sua carteira."
 
-#: ../../wallets/recovery.rst:380
+#: ../../wallets/recovery.rst:379
 msgid ""
 "*Decrypting a BIP38 encrypted key to WIF for import in Dash Core wallet*"
 msgstr ""
 "*Descriptografar uma chave criptografada BIP38 para WIF para importação na "
 "carteira do Dash Core*"
 
-#: ../../wallets/recovery.rst:383
+#: ../../wallets/recovery.rst:382
 msgid "Forgotten Passwords"
 msgstr "Senhas Esquecidas"
 
-#: ../../wallets/recovery.rst:385
+#: ../../wallets/recovery.rst:384
 msgid ""
 "In most cases, if you selected a strong password and have forgotten or lost "
 "it, there is practically no hope of recovery. The encryption used by the "
@@ -834,11 +825,11 @@ msgstr ""
 "Bitcoin Core, a maioria das abordagens para aplicar a força bruta para "
 "quebrar uma carteira Bitcoin também funcionará para as carteiras do Dash."
 
-#: ../../wallets/recovery.rst:396
+#: ../../wallets/recovery.rst:395
 msgid "`Wallet Recovery Services <https://walletrecoveryservices.com>`_"
 msgstr ""
 "`Serviços de Recuperação de Carteiras <https://walletrecoveryservices.com>`_"
 
-#: ../../wallets/recovery.rst:397
+#: ../../wallets/recovery.rst:396
 msgid "`BTCRecover <https://github.com/gurnec/btcrecover>`_"
 msgstr "`BTCRecover <https://github.com/gurnec/btcrecover>`_"

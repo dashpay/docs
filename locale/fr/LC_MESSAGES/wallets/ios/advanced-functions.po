@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
+"POT-Creation-Date: 2018-09-17 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Daf Daf, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,18 +23,22 @@ msgid ""
 "URL scheme, master public key and requesting payment in Dash on your iOS "
 "device"
 msgstr ""
+"Schéma d'URL, clé publique maître et requête de paiement dans le "
+"portefeuille Dash sur votre appareil iOS"
 
 #: ../../wallets/ios/advanced-functions.rst:1
 msgid "dash, mobile, wallet, ios, send, receive, payment, url, public key"
 msgstr ""
+"dash, mobile, portefeuille, ios, envoyer, recevoir, paiement, url, clé "
+"publique"
 
 #: ../../wallets/ios/advanced-functions.rst:9
 msgid "Advanced functions"
-msgstr ""
+msgstr "Fonctions avancées"
 
 #: ../../wallets/ios/advanced-functions.rst:12
 msgid "URL Scheme"
-msgstr ""
+msgstr "Schéma d'URL"
 
 #: ../../wallets/ios/advanced-functions.rst:14
 msgid ""
@@ -42,24 +47,32 @@ msgid ""
 "call the wallet to complete a transaction denominated in Dash. This page "
 "documents the methods available using the URL scheme."
 msgstr ""
+"iOS permet aux applications de communiquer entre elles en utilisant des "
+"schémas d'URL. Le portefeuille logiciel Dash pour iOS implémente le schéma "
+"dashwallet://, ce qui permet d'appeler le portefeuille pour accomplir une "
+"transaction libellée en dashs. Cette page explique les méthodes disponibles "
+"avec ce schéma d'URL."
 
 #: ../../wallets/ios/advanced-functions.rst:20
 msgid "Payment"
-msgstr ""
+msgstr "Paiement"
 
 #: ../../wallets/ios/advanced-functions.rst:22
 msgid "Payment request URL format::"
-msgstr ""
+msgstr "Format d'URL de requête de paiement ::"
 
 #: ../../wallets/ios/advanced-functions.rst:26
 msgid "Notes:"
-msgstr ""
+msgstr "Notes :"
 
 #: ../../wallets/ios/advanced-functions.rst:28
 msgid ""
 "``sender`` is both your callback URL and the name of the app that you show "
 "to the user. This is to prevent 3rd party apps from phishing."
 msgstr ""
+"``sender`` est à la fois votre URL de retour et le nom de l'application "
+"affiché à l'utilisateur. Cela sert à empêcher le hameçonnage depuis des "
+"applications tierces."
 
 #: ../../wallets/ios/advanced-functions.rst:30
 msgid ""
@@ -68,32 +81,39 @@ msgid ""
 "to enable it, he will not be offered the option to send as a normal "
 "transaction."
 msgstr ""
+"``req-`` peut être ajouté avant IS pour forcer l'utilisation d'InstantSend "
+"pour la transaction. Si l'utilisateur n'a pas activé InstantSend et ne veut "
+"pas l'activer, il ne lui sera pas proposé d'envoyer la transaction comme "
+"transaction normale."
 
 #: ../../wallets/ios/advanced-functions.rst:35
 msgid "The user will see something similar to this:"
-msgstr ""
+msgstr "L'utilisateur verra quelque chose comme ceci ::"
 
 #: ../../wallets/ios/advanced-functions.rst:40
 msgid "Payment request in iOS"
-msgstr ""
+msgstr "Requête de paiement dans iOS"
 
 #: ../../wallets/ios/advanced-functions.rst:42
 msgid ""
 "If the user enters the correct passcode, then the transaction is sent and "
 "the user is returned to the sender app following the callback URL."
 msgstr ""
+"Si l'utilisateur saisit le bon mot de passe, la transaction est envoyée et "
+"l'utilisateur est renvoyé vers l'application émettrice, selon l'URL de "
+"retour."
 
 #: ../../wallets/ios/advanced-functions.rst:45
 msgid "Callback URL format::"
-msgstr ""
+msgstr "Format de l'URL de retour ::"
 
 #: ../../wallets/ios/advanced-functions.rst:50
 msgid "Master public key"
-msgstr ""
+msgstr "Clé publique maître"
 
 #: ../../wallets/ios/advanced-functions.rst:52
 msgid "Master public key request format::"
-msgstr ""
+msgstr "Format de requête de clé publique maître ::"
 
 #: ../../wallets/ios/advanced-functions.rst:56
 msgid ""
@@ -102,16 +122,20 @@ msgid ""
 "This will send back both the extended public key at ``44’/5’/<account>’`` "
 "and ``<account>’``"
 msgstr ""
+"À noter : le compte est facultatif et correspond au compte BIP32/BIP44, la "
+"plupart du temps il s'agit de 0. Si le compte n'est pas indiqué, on utilise "
+"le compte 0. Cela renverra la clé publique étendue à la fois à "
+"``44’/5’/<account>’`` et à ``<account>’``"
 
 #: ../../wallets/ios/advanced-functions.rst:61
 #: ../../wallets/ios/advanced-functions.rst:70
 msgid "Callback::"
-msgstr ""
+msgstr "Retour ::"
 
 #: ../../wallets/ios/advanced-functions.rst:66
 msgid "Get address for payment"
-msgstr ""
+msgstr "Obtenir une adresse de paiement"
 
 #: ../../wallets/ios/advanced-functions.rst:68
 msgid "``dashwallet://request=address&sender=<sender>``"
-msgstr ""
+msgstr "``dashwallet://request=address&sender=<sender>``"

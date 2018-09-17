@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
+"POT-Creation-Date: 2018-09-17 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Daf Daf, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -23,16 +23,20 @@ msgid ""
 "Maintaining a Dash masternode involves staying up to date with the latest "
 "version, voting and handling payments"
 msgstr ""
+"Gérer un masternode Dash signifie le mettre à jour avec la version la plus "
+"récente, voter et gérer les paiements"
 
 #: ../../masternodes/maintenance.rst:1
 msgid ""
 "dash, cryptocurrency, masternode, maintenance, maintain, payments, "
 "withdrawal, voting, monitoring"
 msgstr ""
+"dash, cryptomonnaie, masternode, gestion, gérer, paiements, retrait, vote, "
+"surveillance"
 
 #: ../../masternodes/maintenance.rst:9
 msgid "Maintenance"
-msgstr ""
+msgstr "Gestion"
 
 #: ../../masternodes/maintenance.rst:11
 msgid ""
@@ -42,10 +46,16 @@ msgid ""
 "masternodes should vote on proposals and perform other tasks in the interest"
 " of the network and the value of the Dash they hold."
 msgstr ""
+"Les masternodes impliquent une gestion régulière, pour être certain qu'ils "
+"ne soient pas éjectés de la file d'attente des paiements. Cela comprend "
+"l'installation sans attendre des mises à jour de Dash, mais aussi certaines "
+"opérations de sécurité et de performance sur le serveur. De plus, les "
+"masternodes doivent voter sur les propositions et accomplir d'autres tâches "
+"dans l'intérêt du réseau et de la valeur en dashs qu'ils représentent."
 
 #: ../../masternodes/maintenance.rst:20
 msgid "Payment withdrawals"
-msgstr ""
+msgstr "Retrait des paiements"
 
 #: ../../masternodes/maintenance.rst:22
 msgid ""
@@ -62,10 +72,26 @@ msgid ""
 "of only spending those UTXOs and not the one containing the 1000 DASH. Note "
 "that masternode payouts can only be spent after 100 confirmations."
 msgstr ""
+"Une fois votre masternode accepté par le réseau, il sera placé au bout de la"
+" file d'attente des paiements puis se mettra à la remonter lentement. À "
+"chaque minage d'un nouveau bloc, un masternode atteignant les 10% supérieurs"
+" de la liste sera choisi et recevra un paiement. Pour en savoir plus sur ce "
+"processus, voir ici. Ces paiements sont envoyés à l'adresse déjà utilisée "
+"pour démarrer votre masternode, ce qui signifie que vous devez être prudent "
+"si vous souhaitez retirer les paiements. Le paiement originel de 1000 dashs,"
+" utilisé pour démarrer votre masternode, doit rester intact, sous la forme "
+"d'une unique transaction de sortie (utxo) non dépensée, sinon votre "
+"masternode sera éjecté de la liste d'attente des paiements -- il est "
+"probable que vous ayez vu l'identifiant de cette transaction lorsque vous "
+"avez préparé la commande de démarrage de masternode. Les paiements "
+"apparaissent sous forme de transactions distinctes, donc vous aurez besoin "
+"de savoir comment dépenser seulement ces transactions-ci, mais pas celle "
+"contenant les 1000 dashs. Veuillez noter que les paiements de masternode ne "
+"peuvent être dépensés qu'après 100 confirmations."
 
 #: ../../masternodes/maintenance.rst:37
 msgid "Option 1: Withdrawals using a hardware wallet"
-msgstr ""
+msgstr "Option 1 : Retraits avec un portefeuille matériel"
 
 #: ../../masternodes/maintenance.rst:39
 msgid ""
@@ -76,6 +102,14 @@ msgid ""
 "without touching the original collateral transaction. This is not possible "
 "using the Trezor web wallet alone."
 msgstr ""
+"Si vous vous êtes servi d'un portefeuille matériel, tel qu'un Trezor, pour "
+"démarrer votre masternode, vous devrez également vous en servir pour retirer"
+" vos paiements. Une fois de plus, nous utiliserons le logiciel "
+"DashMasternodeTool (DMT) de Bertrand256 pour sélectionner les sorties "
+"correctes. Avec DMT, nous pouvons choisir des transactions de sortie (UTXO) "
+"spécifiques pour retirer les paiements, tout en préservant la transaction "
+"originelle de la caution. Cela n'est pas possible avec le portefeuille web "
+"Trezor seul."
 
 #: ../../masternodes/maintenance.rst:46
 msgid ""
@@ -84,10 +118,15 @@ msgid ""
 "or **Transfer funds from all masternode's addresses**, if you use DMT to "
 "control multiple masternodes."
 msgstr ""
+"Lancez DMT et vérifiez que les connexions RPC et HW (matérielle) "
+"fonctionnent bien. Dans le menu **Outils**, choisissez **Transférer les "
+"fonds depuis l'adresse du masternode actuel**, ou bien **Transférer les "
+"fonds depuis toutes les adresses de masternode** si DMT vous sert à gérer "
+"plusieurs masternodes."
 
 #: ../../masternodes/maintenance.rst:54
 msgid "Selecting the transfer funds function in DMT"
-msgstr ""
+msgstr "Choix de la fonction de transfert de fonds dans DMT"
 
 #: ../../masternodes/maintenance.rst:56
 msgid ""
@@ -100,10 +139,18 @@ msgid ""
 "Enter your destination address for the transaction. The window should appear"
 " as follows:"
 msgstr ""
+"DMT tournera un moment, puis ouvrira une fenêtre montrant les UTXO que vous "
+"pouvez utiliser pour votre retrait. Par défaut, toutes les UTXO non "
+"utilisées comme caution de masternode sont cochées. Les UTXO de caution de "
+"masternode ne sont pas cochées et, en plus, elles sont cachées, dans le but "
+"d'éviter de déplacer sans le vouloir des fonds de caution et donc d'arrêter "
+"votre masternode. Vous pouvez afficher ces entrées cachées en décochant "
+"l'option **Cacher les UTXO de caution**. Saisissez l'adresse de destination "
+"de la transaction. La fenêtre doit ressembler à quelque chose comme ceci :"
 
 #: ../../masternodes/maintenance.rst:68
 msgid "Selecting the UTXOs to use as inputs in the withdrawal transaction"
-msgstr ""
+msgstr "Choix des UTXO à utiliser comme entrées de la transaction de retrait"
 
 #: ../../masternodes/maintenance.rst:70
 msgid ""
@@ -113,14 +160,19 @@ msgid ""
 "the network by clicking Yes. A confirmation with the transaction ID will "
 "appear."
 msgstr ""
+"Vérifiez la transaction puis cliquez sur **Envoyer**. Votre Trezor vous "
+"demandera d'entrer votre code PIN puis de confirmer la transaction sur "
+"l'appareil. Une fois fait, confirmez une dernière fois à DMT que vous "
+"souhaitez diffuser la transaction au réseau, en cliquant sur Oui. Une "
+"confirmation comportant l'identifiant de transaction sera affichée."
 
 #: ../../masternodes/maintenance.rst:82
 msgid "Confirming broadcast of the transaction to the network"
-msgstr ""
+msgstr "Confirmation de la diffusion de la transaction au réseau"
 
 #: ../../masternodes/maintenance.rst:85
 msgid "Option 2: Withdrawals from Dash Core wallet"
-msgstr ""
+msgstr "Option 2 : Retraits avec le portefeuille logiciel Dash Core"
 
 #: ../../masternodes/maintenance.rst:87
 msgid ""
@@ -134,11 +186,25 @@ msgid ""
 " UTXOs can be used as input for any transactions you create. The following "
 "window appears:"
 msgstr ""
+"De manière similaire à la procédure DMT décrite ci-dessus, il nous faut, "
+"dans le portefeuille logiciel Dash Core, restreindre les transactions de "
+"sortie (UTXO) pouvant être dépensées lors d'un retrait depuis une adresse de"
+" masternode, afin de nous assurer que l'UTXO de caution reste intacte. Dans "
+"le portefeuille logiciel Dash Core, cette fonction porte le nom de Contrôle "
+"des pièces, et elle doit être activée pour pouvoir être utilisée. Allez dans"
+" le menu **Réglages > Options > Portefeuille > Activer les fonctionnalités "
+"de contrôle des pièces**. Désormais, quand vous irez dans l'onglet "
+"**Envoyer** de votre portefeuille, un nouveau bouton **Entrées...** sera "
+"affiché. Cliquez sur ce bouton pour choisir les UTXO pouvant servir "
+"d'entrées pour les transactions que vous créez. La fenêtre suivante "
+"s'affiche :"
 
 #: ../../masternodes/maintenance.rst:100
 msgid ""
 "Coin Selection window in Dash Core wallet, showing two masternodes (testnet)"
 msgstr ""
+"Fenêtre de Contrôle des pièces dans le portefeuille logiciel Dash Core, "
+"affichant deux masternodes (du réseau de test)"
 
 #: ../../masternodes/maintenance.rst:103
 msgid ""
@@ -147,14 +213,22 @@ msgid ""
 "Then click **OK**. You can now safely create transactions with your "
 "remaining funds without affecting the original collateral UTXOs."
 msgstr ""
+"Faites un clic-droit sur la ou les transaction(s) d'un montant de 1000 "
+"dashs, puis choisissez **Verrouiller les transactions non dépensées**. Une "
+"petite icône en forme de cadenas sera affichée à côté de la transaction. "
+"Puis cliquez sur **OK**. Vous pouvez désormais créer des transactions en "
+"toute sécurité avec les fonds restants, sans que cela n'affecte les UTXO "
+"originelles de la caution."
 
 #: ../../masternodes/maintenance.rst:115
 msgid "Locking UTXOs in Dash Core wallet"
 msgstr ""
+"Verrouillage de transactions de sortie (UTXO) dans le portefeuille logiciel "
+"Dash Core"
 
 #: ../../masternodes/maintenance.rst:120
 msgid "How to update a masternode"
-msgstr ""
+msgstr "Comment mettre à jour un masternode"
 
 #: ../../masternodes/maintenance.rst:122
 msgid ""
@@ -167,6 +241,17 @@ msgid ""
 "If you run a hosted masternode, your host will take care of updates for you."
 " If not, the method of updating depends on how you installed Dash."
 msgstr ""
+"L'équipe de développement Dash Core publie régulièrement des mises à jour de"
+" Dash. Comme les nœuds normaux s'appuient sur les masternodes pour certains "
+"services et l'obtention de copies de la blockchain, il est demandé aux "
+"masternodes d'appliquer rapidement les mises à jour de Dash et de Sentinel. "
+"Dans certains cas, des mises à jour matérielles (plus de puissance "
+"processeur, de mémoire vive, d'espace-disque, voire du matériel spécialisé "
+"GPU/ASIC) peuvent être aussi nécessaires. Ne pas faire les mises à jour "
+"entraîne à terme l'éjection de votre masternode de la file d'attente des "
+"paiements. Si votre masternode est hébergé, votre hébergeur fera les mises à"
+" jour pour vous. Si ce n'est pas le cas, la méthode de mise à jour dépend de"
+" la façon dont vous avez installé Dash Core sur votre serveur."
 
 #: ../../masternodes/maintenance.rst:132
 msgid ""
@@ -179,20 +264,32 @@ msgid ""
 "send start commands to your masternode if not necessary, as it will send you"
 " to the back of the payment queue."
 msgstr ""
+"Les mises à jour mineures de Dash (par ex. de la version 0.12.3.1 à la "
+"0.12.3.2) ne comportent aucun changement de la version du protocole, "
+"cependant que les mises à jour majeures (par ex. de 0.12.2.3 à 0.12.3.0) "
+"changent en général la version du protocole de réseau. Si la version du "
+"protocole n'a pas changé, vous n'avez PAS besoin de redémarrer votre "
+"masternode, du moment que vous avez fait la mise à jour en moins de 60 "
+"minutes. Si la version du protocole a changé, vous devez émettre une "
+"commande de démarrage depuis votre portefeuille. N'envoyez pas de commande "
+"de démarrage de votre masternode si ce n'est pas nécessaire, car cette "
+"commande vous renvoie au début de la file d'attente des paiements."
 
 #: ../../masternodes/maintenance.rst:142
 msgid "Option 1: Automated update using dashman"
-msgstr ""
+msgstr "Option 1 : Mise à jour automatique avec Dashman"
 
 #: ../../masternodes/maintenance.rst:144
 msgid ""
 "To update Dash using dashman, log in to your server and enter the following "
 "commands::"
 msgstr ""
+"Pour faire une mise à jour en utilisant Dashman, connectez-vous à votre "
+"serveur et saisissez les commandes suivantes ::"
 
 #: ../../masternodes/maintenance.rst:150
 msgid "Check the status of your masternode::"
-msgstr ""
+msgstr "Vérifiez l'état de votre masternode ::"
 
 #: ../../masternodes/maintenance.rst:154
 msgid ""
@@ -203,16 +300,25 @@ msgid ""
 "statuses should turn green, in particular **masternode started: YES** and "
 "**masternode network state: ENABLED**."
 msgstr ""
+"Si vous faites une mise à jour importante et devez redémarrer votre "
+"masternode, mettez aussi à jour, sans attendre, le logiciel du portefeuille "
+"détenant la caution vers la plus récente version, en suivant les "
+"instructions :ref:`ici <masternode-setup-start>`. Surveillez en continu "
+"votre masternode. Au bout d'un certain temps, tous les états devraient "
+"s'afficher en vert, en particulier **masternode démarré : OUI** et **état "
+"réseau du masternode : ACTIVÉ**."
 
 #: ../../masternodes/maintenance.rst:164
 msgid "Option 2: Manual update"
-msgstr ""
+msgstr "Option 2 : Mise à jour manuelle"
 
 #: ../../masternodes/maintenance.rst:166
 msgid ""
 "To update Dash manually, log in to your server using ssh or PuTTY. First we "
 "need to stop Dash running::"
 msgstr ""
+"Pour mettre à jour Dash Core manuellement, connectez-vous à votre serveur au"
+" moyen de ssh ou de PuTTY. Nous devons d'abord arrêter Dash::"
 
 #: ../../masternodes/maintenance.rst:171
 msgid ""
@@ -224,6 +330,15 @@ msgid ""
 " address to the latest version of Dash Core (0.12.3.1 in the example) by "
 "right clicking or pressing **Ctrl + V**::"
 msgstr ""
+"Pour télécharger et installer manuellement les composants de votre "
+"masternode Dash, allez à l'adresse https://www.dash.org/wallets/ sur votre "
+"ordinateur pour trouver le lien vers la plus récente version du portefeuille"
+" logiciel Dash Core. Cliquez sur **Linux**, puis faites un clic-droit sur "
+"**Télécharger TGZ** pour **Dash Core Linux 64 bits**, puis choisissez "
+"**Copier l'adresse du lien**. Revenez à votre fenêtre de terminal et tapez "
+"la commande suivante, en y collant l'adresse de la plus récente version de "
+"Dash Core (0.12.3.1 dans cet exemple) en faisant un clic-droit ou la "
+"combinaison de touches **Ctrl-V** ::"
 
 #: ../../masternodes/maintenance.rst:182
 msgid ""
@@ -231,30 +346,40 @@ msgid ""
 "comparing the output against the value for the file as shown on the Dash "
 "website under **Hash File**::"
 msgstr ""
+"Vérifiez l'intégrité de votre téléchargement en lançant la commande suivante"
+" et en comparant sa valeur de sortie à la valeur du fichier affiché sur le "
+"site Dash sous le nom de **Fichier d'empreinte numérique** ::"
 
 #: ../../masternodes/maintenance.rst:191
 msgid "Link to the hash file to verify download integrity"
 msgstr ""
+"Lien vers le fichier d'empreinte numérique pour vérifier l'intégrité du "
+"téléchargement"
 
 #: ../../masternodes/maintenance.rst:193
 msgid ""
 "Remove the old binaries from the working directory, extract the compressed "
 "archive, copy the new files to the directory and set them as executable::"
 msgstr ""
+"Enlevez les vieux exécutables du répertoire de travail, décompressez "
+"l'archive compressée, copiez les nouveau fichiers dans le répertoire et "
+"rendez-les exécutables ::"
 
 #: ../../masternodes/maintenance.rst:203
 msgid "Clean up unneeded files::"
-msgstr ""
+msgstr "Nettoyez les fichiers non nécessaires ::"
 
 #: ../../masternodes/maintenance.rst:208
 msgid "Restart Dash::"
-msgstr ""
+msgstr "Redémarrez Dash ::"
 
 #: ../../masternodes/maintenance.rst:212
 msgid ""
 "You will see a message reading \"Dash Core server starting\". We will now "
 "update Sentinel::"
 msgstr ""
+"Vous verrez un message disant \"Démarrage du serveur Dash Core\". Nous "
+"allons maintenant mettre à jour Sentinel ::"
 
 #: ../../masternodes/maintenance.rst:218
 msgid ""
@@ -265,10 +390,17 @@ msgid ""
 " console and enter this command, where MN1 is the alias for your "
 "masternode::"
 msgstr ""
+"Si la version du protocole a changé durant cette mise à jour, vous devrez "
+"émettre une commande de démarrage depuis votre portefeuille. Si vous "
+"utilisez un portefeuille matériel, vous pouvez émettre la commande de "
+"démarrage en cliquant simplement le bouton correspondant dans DMT. Si vous "
+"utilisez le portefeuille logiciel Dash Core, mettez-le à jour vers la plus "
+"récente version, puis ouvrez la console de débogage et saisissez cette "
+"commande, où \"MN1\" est l'alias de votre masternode ::"
 
 #: ../../masternodes/maintenance.rst:227
 msgid "Monitor the status of your masternode as it starts up::"
-msgstr ""
+msgstr "Surveillez l'état de votre masternode pendant son démarrage ::"
 
 #: ../../masternodes/maintenance.rst:234
 msgid ""
@@ -279,6 +411,13 @@ msgid ""
 "masternode from Sentinel. If Sentinel detects a functioning masternode, the "
 "following command should return nothing::"
 msgstr ""
+"En particulier, la dernière commande devrait renvoyer l'état **Masternode "
+"démarré avec succès**. Si vous voyez une erreur ressemblant à **Version de "
+"protocole invalide**, cela signifie que la version du protocole a changé et "
+"que vous devez émettre à nouveau une commande de démarrage depuis votre "
+"portefeuille. Vous pouvez aussi suivre l'état de votre masternode depuis "
+"Sentinel. Si Sentinel détecte un masternode en état de marche, la commande "
+"suivante ne devrait rien renvoyer ::"
 
 #: ../../masternodes/maintenance.rst:244
 msgid ""
@@ -286,10 +425,14 @@ msgid ""
 "`DashNinja <https://www.dashninja.pl/>`_, or search the consensus list of "
 "masternodes using this command and entering your masternode IP address::"
 msgstr ""
+"Enfin, vous pouvez vérifier l'état de votre masternode par son adresse de "
+"caution au moyen de `DashNinja <https://www.dashninja.pl/>`_, ou bien "
+"chercher dans la liste consensuelle des masternodes avec cette commande, et "
+"en saisissant l'adresse IP de votre masternode ::"
 
 #: ../../masternodes/maintenance.rst:253
 msgid "Finding your position in the payment queue"
-msgstr ""
+msgstr "Trouver votre position dans la file d'attente des paiements"
 
 #: ../../masternodes/maintenance.rst:255
 msgid ""
@@ -300,6 +443,13 @@ msgid ""
 "payment. However, it is possible to make an approximation based on the time "
 "your masternode entered the back of the queue."
 msgstr ""
+"Dans les versions de Dash antérieures à 0.12.4, chaque masternode peut avoir"
+" une vision légèrement différente du réseau. De plus, la sélection dans les "
+"10% supérieurs de la liste du :ref:`groupe de sélection <payment-logic>` est"
+" aléatoire. Cela veut dire qu'il n'y a pas de réponse définitive à la "
+"question de savoir quand votre masternode sera choisi pour le paiement. "
+"Cependant, il est possible d'obtenir une approximation, basée sur le temps "
+"depuis lequel votre masternode est entré au bout de la file d'attente."
 
 #: ../../masternodes/maintenance.rst:262
 msgid ""
@@ -307,22 +457,28 @@ msgid ""
 " tools you can run to determine your approximate position in the payment "
 "queue, and bots are available on Discord and Slack as well."
 msgstr ""
+"Xkcd, Bertrand256 et Moocowmoo, membres de la communauté, ont publié "
+"différents outils que vous pouvez utiliser pour déterminer votre position "
+"approximative dans la file d'attente des paiements, et des robots existent "
+"aussi sur Discord et Slack."
 
 #: ../../masternodes/maintenance.rst:266
 msgid "mn_queue: https://github.com/kxcd/mn_queue"
-msgstr ""
+msgstr "mn_queue : https://github.com/kxcd/mn_queue"
 
 #: ../../masternodes/maintenance.rst:267
 msgid "Dashman: https://github.com/moocowmoo/dashman"
-msgstr ""
+msgstr "Dashman : https://github.com/moocowmoo/dashman"
 
 #: ../../masternodes/maintenance.rst:268
 msgid "DMT: https://github.com/Bertrand256/dash-masternode-tool"
 msgstr ""
+"DashMasternodeTool (DMT) : https://github.com/Bertrand256/dash-masternode-"
+"tool"
 
 #: ../../masternodes/maintenance.rst:272
 msgid "DashCentral voting, verification and monitoring"
-msgstr ""
+msgstr "Vote, vérification et suivi avec DashCentral"
 
 #: ../../masternodes/maintenance.rst:274
 msgid ""
@@ -331,10 +487,14 @@ msgid ""
 "and to facilitate voting from a graphical user interface, but also offers "
 "functions to monitor masternodes."
 msgstr ""
+"DashCentral est un site web communautaire géré par Rango, membre de la "
+"communauté. Il est devenu le site *de facto* pour les débats sur les "
+"propositions budgétaires et pour accomplir le vote avec une interface "
+"graphique, mais il propose aussi diverses fonctions de suivi de masternodes."
 
 #: ../../masternodes/maintenance.rst:280
 msgid "Adding your masternode to DashCentral"
-msgstr ""
+msgstr "Ajouter votre masternode à DashCentral"
 
 #: ../../masternodes/maintenance.rst:282
 msgid ""
@@ -345,19 +505,28 @@ msgid ""
 "masternode now** button. Enter your collateral address on the following "
 "screen:"
 msgstr ""
+"`Dashcentral <https://www.dashcentral.org/>`_ vous permet de voter "
+"confortablement sur les propositions budgétaires, avec votre navigateur "
+"Internet. Après vous être `inscrit <https://www.dashcentral.org/register>`_,"
+" allez à la page des `masternodes "
+"<https://www.dashcentral.org/masternodes>`_ et cliquez sur le bouton "
+"**Ajouter maintenant un masternode**. Saisissez votre adresse de caution sur"
+" l'écran suivant ::"
 
 #: ../../masternodes/maintenance.rst:292
 msgid "Adding a masternode to DashCentral"
-msgstr ""
+msgstr "Ajout d'un masternode dans DashCentral"
 
 #: ../../masternodes/maintenance.rst:294
 msgid ""
 "Click **Add masternode**. Your masternode has now been added to DashCentral."
 msgstr ""
+"Cliquez sur **Ajouter un masternode**. Votre masternode est désormais ajouté"
+" à DashCentral."
 
 #: ../../masternodes/maintenance.rst:298
 msgid "Enabling voting from DashCentral"
-msgstr ""
+msgstr "Activer le vote depuis DashCentral"
 
 #: ../../masternodes/maintenance.rst:300
 msgid ""
@@ -367,10 +536,16 @@ msgid ""
 "remember!) and enter the private key (the same key you used in the dash.conf"
 " file on your masternode) on the following screen:"
 msgstr ""
+"Cliquez sur **Modifier**, sous **Clés privées de vote**, pour saisir la clé "
+"privée de votre masternode et rendre possible le vote par l'interface web "
+"DashCentral. Saisissez une phrase de passe de vote (pas la même que votre "
+"mot de passe de connexion, mais dont il faut aussi bien se souvenir !) et "
+"saisissez la clé privée (celle que vous avez utilisée dans le fichier "
+"\"dash.conf\" de votre masternode) sur l'écran suivant ::"
 
 #: ../../masternodes/maintenance.rst:310
 msgid "Adding voting privkeys to DashCentral"
-msgstr ""
+msgstr "Ajout de clés privées de vote dans DashCentral"
 
 #: ../../masternodes/maintenance.rst:312
 msgid ""
@@ -383,10 +558,19 @@ msgid ""
 "privkeys on server**. You can now vote on proposals from the DashCentral web"
 " interface."
 msgstr ""
+"Il est important de noter que la clé privée de démarrage de votre masternode"
+" est sans rapport avec les clés privées de l'adresse de caution détenant vos"
+" 1000 dashs. Cette clé peut être utilisée pour émettre des commandes au nom "
+"du masternode, telles que le vote, mais ne peuvent pas servir à accéder à la"
+" caution. Les clés sont chiffrées sur votre ordinateur et ne sont jamais "
+"stockées en clair sur les serveurs de DashCentral. Une fois que vous avez "
+"saisi la clé, cliquez sur **Stocker sur le serveur les clés privées de vote "
+"chiffrées**. Vous pouvez à présent voter sur les propositions budgétaires "
+"depuis l'interface web DashCentral."
 
 #: ../../masternodes/maintenance.rst:322
 msgid "Verifying ownership"
-msgstr ""
+msgstr "Certification de propriété"
 
 #: ../../masternodes/maintenance.rst:324
 msgid ""
@@ -394,10 +578,13 @@ msgid ""
 "masternode to DashCentral. Click **Unverified** under **Ownership** and the "
 "following screen will appear:"
 msgstr ""
+"Vous pouvez également émettre un message depuis votre adresse pour certifier"
+" à DashCentral que vous êtes propriétaire de votre masternode. Cliquez sur "
+"**Non vérifié** sous **Propriété** et l'écran suivant s'affichera ::"
 
 #: ../../masternodes/maintenance.rst:331
 msgid "Verifying ownership of your masternode to DashCentral"
-msgstr ""
+msgstr "Certification à DashCentral de la propriété de votre masternode"
 
 #: ../../masternodes/maintenance.rst:333
 msgid ""
@@ -409,10 +596,18 @@ msgid ""
 "appear, where you can enter the message provided by DashCentral and the "
 "address you wish to sign:"
 msgstr ""
+"Des instructions sur la manière de signer votre adresse de caution avec un "
+"portefeuille logiciel sont affichées. Si vous utilisez un portefeuille "
+"matériel qui n'est pas un Trezor, vous devrez utiliser l'application "
+"DashMasternodeTool (DMT) pour signer l'adresse. Si vous utilisez le "
+"portefeuille matériel Trezor, allez à l'adresse du `portefeuille Trezor "
+"<https://wallet.trezor.io/>`_, copiez l'adresse de caution et cliquez sur "
+"**Signer & vérifier**. L'écran suivant s'affiche, où vous pouvez saisir le "
+"message fourni par DashCentral et l'adresse que vous souhaitez signer ::"
 
 #: ../../masternodes/maintenance.rst:344
 msgid "Signing a message from the Trezor Wallet"
-msgstr ""
+msgstr "Signature d'un message depuis le portefeuille Trezor"
 
 #: ../../masternodes/maintenance.rst:346
 msgid ""
@@ -421,14 +616,19 @@ msgid ""
 "this signature and paste it into the box on DashCentral and click **Verify "
 "ownership**. Verification is now complete."
 msgstr ""
+"Cliquez sur **Signer**, confirmez sur votre appareil Trezor et saisissez "
+"votre code PIN pour signer le message. Une signature de message apparaîtra "
+"dans le champ **Signature**. Copiez cette signature et collez-la dans le "
+"champ sur DashCentral, puis cliquez sur **Vérifier la propriété**. La "
+"certification est maintenant terminée."
 
 #: ../../masternodes/maintenance.rst:354
 msgid "Masternode ownership has been successfully verified"
-msgstr ""
+msgstr "Propriété du masternode certifiée avec succès"
 
 #: ../../masternodes/maintenance.rst:357
 msgid "Installing the DashCentral monitoring script"
-msgstr ""
+msgstr "Installation du script de suivi DashCentral"
 
 #: ../../masternodes/maintenance.rst:359
 msgid ""
@@ -439,10 +639,16 @@ msgid ""
 "key, adding a PIN to your account if necessary. Scroll to the following "
 "screen:"
 msgstr ""
+"DashCentral propose un service de suivi de masternode, qui redémarrera "
+"automatiquement dashd dans le cas d'un crash, et enverra un message par "
+"e-mail dans le cas d'une erreur. Allez sur la page des `réglages de compte "
+"<https://www.dashcentral.org/account/edit>`_ et générez une nouvelle clé "
+"d'API, en ajoutant si nécessaire un code PIN à votre compte. Défilez jusqu'à"
+" l'écran suivant ::"
 
 #: ../../masternodes/maintenance.rst:369
 msgid "Setting up the DashCentral monitoring script"
-msgstr ""
+msgstr "Configuration du script de suivi de DashCentral"
 
 #: ../../masternodes/maintenance.rst:371
 msgid ""
@@ -450,22 +656,31 @@ msgid ""
 "click and selecting **Copy link address**. Open PuTTY and connect to your "
 "masternode, then type::"
 msgstr ""
+"Copiez le lien de la version la plus récente du script DashCentral en "
+"faisant un clic-droit dessus et en choisissant **Copier l'adresse du lien**."
+" Ouvrez votre terminal ou PuTTY et connectez-vous à votre masternode, puis "
+"tapez ::"
 
 #: ../../masternodes/maintenance.rst:377
 msgid ""
 "Replace the link with the current version of dashcentral-updater as "
 "necessary. Decompress the archive using the following command::"
 msgstr ""
+"Remplacez le lien avec celui de la version la plus récente de dashcentral-"
+"updater, si nécessaire. Décompressez l'archive avec la commande suivante ::"
 
 #: ../../masternodes/maintenance.rst:382
 msgid "View your masternode configuration details by typing::"
 msgstr ""
+"Consultez les détails de configuration de votre masternode en tapant ::"
 
 #: ../../masternodes/maintenance.rst:386
 msgid ""
 "Copy the values for ``rpcuser`` and ``rpcpassword``. Then edit the "
 "dashcentral configuration by typing::"
 msgstr ""
+"Copiez les valeurs de ``rpcuser`` et ``rpcpassword``. Puis modifiez la "
+"configuration DashCentral en tapant ::"
 
 #: ../../masternodes/maintenance.rst:391
 msgid ""
@@ -474,10 +689,14 @@ msgid ""
 "according to your system. A common configuration, where ``lwhite`` is the "
 "name of the Linux user, may look like this:"
 msgstr ""
+"Remplacez les valeurs de ``api_key``, de l'adresse de caution de votre "
+"masternode, de ``rpc_user``, de ``rpc_password``, de ``daemon_binary`` et "
+"``daemon_datadir`` en fonction de votre système. Une configuration courante,"
+" où ``lwhite`` est le nom de l'utilisateur Linux, ressemble à ça ::"
 
 #: ../../masternodes/maintenance.rst:399
 msgid "DashCentral updater configuration file"
-msgstr ""
+msgstr "Fichier de configuration de dashcentral-updater"
 
 #: ../../masternodes/maintenance.rst:424
 msgid ""
@@ -486,14 +705,18 @@ msgid ""
 "check the website. If it was successful, you will see that an update has "
 "been sent::"
 msgstr ""
+"Appuyez sur **Ctrl-X** pour sortir, confirmez l'enregistrement avec **Y** ou"
+" **O** et tapez sur **Entrée**. Testez votre configuration en lançant le "
+"script DashCentral, puis allez voir le site web. Si tout s'est bien passé, "
+"vous constaterez qu'une mise à jour a été transmise ::"
 
 #: ../../masternodes/maintenance.rst:434
 msgid "Manually testing the DashCentral updater"
-msgstr ""
+msgstr "Test manuel de la mise à jour DashCentral"
 
 #: ../../masternodes/maintenance.rst:439
 msgid "DashCentral updater has successfully sent data to the DashCentral site"
-msgstr ""
+msgstr "dashcentral-updater a bien envoyé des données au site DashCentral"
 
 #: ../../masternodes/maintenance.rst:442
 msgid ""
@@ -504,6 +727,13 @@ msgid ""
 " an effective way to make sure you do not drop off the payment queue. Type "
 "the following command::"
 msgstr ""
+"Une fois que vous avez vérifié que votre configuration fonctionne, vous "
+"pouvez modifier le fichier crontab sur votre système pour demander "
+"l'exécution du script dcupdater toutes les 2 minutes. Cela permet au système"
+" de vous envoyer rapidement une alerte en cas de problème, et ça redémarrera"
+" même le daemon dashd s'il est gelé ou s'il plante. C'est un moyen efficace "
+"de vous assurer de ne pas être éjecté de la file d'attente des paiements. "
+"Tapez la commande suivante ::"
 
 #: ../../masternodes/maintenance.rst:451
 msgid ""
@@ -511,10 +741,15 @@ msgid ""
 "after the line for sentinel, replacing lwhite with your username on your "
 "system::"
 msgstr ""
+"Choisissez un éditeur de texte si nécessaire, puis ajoutez la ligne suivante"
+" à votre fichier crontab après la ligne concernant Sentinel, en remplaçant "
+"\"lwhite\" par votre nom d'utilisateur sur l'ordinateur ::"
 
 #: ../../masternodes/maintenance.rst:460
 msgid "Editing crontab to run the DashCentral updater automatically"
 msgstr ""
+"Modification du fichier crontab pour exécuter automatiquement dashcentral-"
+"updater"
 
 #: ../../masternodes/maintenance.rst:462
 msgid ""
@@ -522,20 +757,27 @@ msgid ""
 "**Enter**. The dcupdater script will now run every two minutes, restart "
 "dashd whenever necessary and email you in the event of an error."
 msgstr ""
+"Tapez **Ctrl-X** pour sortir, confirmez l'enregistrement avec **Y** ou **O**"
+" puis appuyez sur **Entrée**. Le script dcupdater se lancera désormais "
+"toutes les deux minutes, redémarrera dashd si nécessaire et vous enverra des"
+" messages par e-mail en cas d'erreur."
 
 #: ../../masternodes/maintenance.rst:467
 msgid "Masternode monitoring tools"
-msgstr ""
+msgstr "Outils de suivi de masternode"
 
 #: ../../masternodes/maintenance.rst:469
 msgid ""
 "Several sites operated by community members are available to monitor key "
 "information and statistics relating to the masternode network."
 msgstr ""
+"Plusieurs sites gérés par des membres de la communauté sont disponibles pour"
+" surveiller les informations clés et suivre les statistiques du réseau des "
+"masternodes."
 
 #: ../../masternodes/maintenance.rst:473
 msgid "Block Explorers"
-msgstr ""
+msgstr "Explorateurs de blocs"
 
 #: ../../masternodes/maintenance.rst:475
 msgid ""
@@ -545,6 +787,12 @@ msgid ""
 "searchable by its txid. A number of block explorers are available for the "
 "Dash network."
 msgstr ""
+"Puisque Dash est une blockchain publique, il est possible d'utiliser des "
+"explorateurs de blocs pour consulter les soldes de n'importe quelle adresse "
+"publique Dash, ou bien examiner les transactions insérées dans un bloc "
+"donné. Chaque transaction unique peut également être trouvée par son "
+"identifiant de transaction. Un certain nombre d'explorateurs de blocs sont "
+"disponibles pour le réseau Dash."
 
 #: ../../masternodes/maintenance.rst:481
 msgid ""
@@ -553,6 +801,10 @@ msgid ""
 "<https://chainz.cryptoid.info/dash/masternodes.dws>`__ to view and map Dash "
 "masternodes."
 msgstr ""
+"`CryptoID <https://chainz.cryptoid.info/>`__ propose un `explorateur de la "
+"blockchain Dash <https://chainz.cryptoid.info/dash/>`__ et une `fonction "
+"<https://chainz.cryptoid.info/dash/masternodes.dws>`__ de visualisation et "
+"de cartographie des masternodes Dash."
 
 #: ../../masternodes/maintenance.rst:485
 msgid ""
@@ -560,18 +812,27 @@ msgid ""
 "<https://bitinfocharts.com/dash/>`_ of price statistics and information and "
 "a `blockchain explorer <https://bitinfocharts.com/dash/explorer/>`__."
 msgstr ""
+"`BitInfoCharts <https://bitinfocharts.com>`_ propose une `page "
+"<https://bitinfocharts.com/dash/>`_ d'information et de statistiques sur le "
+"cours, ainsi qu'un `explorateur de blocs "
+"<https://bitinfocharts.com/dash/explorer/>`__."
 
 #: ../../masternodes/maintenance.rst:489
 msgid ""
 "`CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ offers a range "
 "of statistics and data on most blockchains, including Dash."
 msgstr ""
+"`CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ propose toute "
+"une gamme de statistiques et de données sur la plupart des blockchains, dont"
+" Dash."
 
 #: ../../masternodes/maintenance.rst:491
 msgid ""
 "`CoinPayments <https://www.coinpayments.net/>`__ offers a simple `Dash "
 "blockchain explorer <http://explorer.coinpayments.net/index.php?chain=7>`__."
 msgstr ""
+"`CoinPayments <https://www.coinpayments.net/>`__ propose un `explorateur de "
+"blocs Dash <http://explorer.coinpayments.net/index.php?chain=7>`__ simple."
 
 #: ../../masternodes/maintenance.rst:494
 msgid ""
@@ -579,6 +840,9 @@ msgid ""
 "`explorer.dash.org <http://explorer.dash.org/>`__ and `insight.dash.org "
 "<http://insight.dash.org/>`__."
 msgstr ""
+"`Dash.org <https://www.dash.org/>`__ propose deux explorateurs de blocs aux "
+"adresses `explorer.dash.org <http://explorer.dash.org/>`__ et "
+"`insight.dash.org <http://insight.dash.org/>`__."
 
 #: ../../masternodes/maintenance.rst:497
 msgid ""
@@ -587,10 +851,14 @@ msgid ""
 "<https://github.com/dashpay/insight-ui-dash>`__ of `insight "
 "<https://insight.is/>`__, an advanced blockchain API tool"
 msgstr ""
+"`Trezor <https://trezor.io/>`__ gère un `explorateur de blocs <https "
+"://dash-bitcore1.trezor.io/>`__ fonctionnant grâce à un `fork Dash "
+"<https://github.com/dashpay/insight-ui-dash>`__ d' `Insight "
+"<https://insight.is/>`__, un outil sophistiqué d'API blockchain."
 
 #: ../../masternodes/maintenance.rst:503
 msgid "Dash Masternode Tool"
-msgstr ""
+msgstr "DashMasternodeTool"
 
 #: ../../masternodes/maintenance.rst:505
 msgid "https://github.com/Bertrand256/dash-masternode-tool"
@@ -604,10 +872,15 @@ msgid ""
 "proposals and withdraw masternode payments without affecting the collateral "
 "transaction."
 msgstr ""
+"Écrit et géré par Bertrand256, membre de la communauté, DashMasternodeTool "
+"(DMT) vous permet de démarrer un masternode depuis tous les principaux "
+"portefeuilles matériels, tels que Trezor, Ledger et KeepKey. Il permet "
+"également de voter sur les propositions budgétaires et de retirer des "
+"paiements de masternode sans affecter la transaction de caution."
 
 #: ../../masternodes/maintenance.rst:514
 msgid "DASH Ninja"
-msgstr ""
+msgstr "DASH Ninja"
 
 #: ../../masternodes/maintenance.rst:516
 msgid "https://www.dashninja.pl"
@@ -621,10 +894,16 @@ msgid ""
 "the masternode payment schedule and the geographic distribution of "
 "masternodes are also available, as well as a simple blockchain explorer."
 msgstr ""
+"Dash Ninja, géré par Elbereth, développeur Dash Core et membre du forum "
+"Dash, propose des statistiques clés sur l'adoption de différentes versions "
+"de Dash dans le réseau des masternodes. Plusieurs fonctions sont également "
+"disponibles pour suivre la gouvernance de Dash, le calendrier des paiements "
+"de masternode et leur distribution géographique, ainsi qu'un explorateur de "
+"blocs simple."
 
 #: ../../masternodes/maintenance.rst:526
 msgid "DashCentral"
-msgstr ""
+msgstr "DashCentral"
 
 #: ../../masternodes/maintenance.rst:528
 msgid "https://www.dashcentral.org"
@@ -637,10 +916,15 @@ msgid ""
 "interface. An `Android app <https://play.google.com/store/apps/detai "
 "ls?id=net.paregov.android.dashcentral>`_ is also available."
 msgstr ""
+"DashCentral, géré par Rango, membre du forum, propose un service avancé de "
+"suivi des masternodes et de vote sur les propositions budgétaires au moyen "
+"d'une interface web. Une `application Android "
+"<https://play.google.com/store/apps/detai "
+"ls?id=net.paregov.android.dashcentral>`_ est également disponible."
 
 #: ../../masternodes/maintenance.rst:536
 msgid "Masternode.me"
-msgstr ""
+msgstr "Masternode.me"
 
 #: ../../masternodes/maintenance.rst:538
 msgid "https://stats.masternode.me"
@@ -652,10 +936,13 @@ msgid ""
 "offers sequential reports on the price, generation rate, blockchain "
 "information and some information on masternodes."
 msgstr ""
+"Masternode.me, géré par Moocowmoo, développeur Dash Core et membre du forum,"
+" génère des rapports récurrents sur le cours, le taux de génération, des "
+"informations sur la blockchain et sur les masternodes."
 
 #: ../../masternodes/maintenance.rst:545
 msgid "Dash Masternode Information"
-msgstr ""
+msgstr "Dash Masternode Information"
 
 #: ../../masternodes/maintenance.rst:547
 msgid "http://178.254.23.111/~pub/Dash/Dash_Info.html"
@@ -668,3 +955,8 @@ msgid ""
 "network, including graphs of the total masternode count over time, price "
 "information and network distribution."
 msgstr ""
+"Ce site, géré par Crowning, développeur Dash Core et membre du forum, "
+"propose une représentation visuelle de beaucoup de statistiques clés du "
+"réseau des masternodes Dash, dont des graphiques du nombre total de "
+"masternodes à travers le temps, des informations sur le cours et sur la "
+"distribution du réseau."

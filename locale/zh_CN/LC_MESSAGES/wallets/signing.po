@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
+"POT-Creation-Date: 2018-09-17 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -22,11 +22,11 @@ msgstr ""
 msgid ""
 "Guides and screenshots on how to sign and verify messages using the Dash "
 "cryptocurrency"
-msgstr ""
+msgstr "有关加密数字货币达世币的签名及验证信息的指南和截图"
 
 #: ../../wallets/signing.rst:1
 msgid "dash, sign, verify, message, trezor, dash core"
-msgstr ""
+msgstr "达世币、签名、验证、消息、trezor、达世币核心"
 
 #: ../../wallets/signing.rst:9
 msgid "Signing and Verifying Messages"
@@ -44,6 +44,7 @@ msgid ""
 "since ambiguously worded messages could be used to impersonate your "
 "identity."
 msgstr ""
+"达世币钱包借助被称作区块链的分布式帐目创建可公开预览的地址并安全地保管交易创建所需的私钥。在某些情况下，用户需要验证地址才能证明对个人资金的掌控，证明可以使用该地址接收款项，或者向此前已从该地址上浏览到交易资讯的交易平台证明个人身份。为了避免网络上的钓鱼攻击，用户在向不熟悉的对象发送签名信息时要特别谨慎，因为对方可能使用含糊不清的信息冒名顶替该用户。"
 
 #: ../../wallets/signing.rst:21
 msgid ""
@@ -58,6 +59,7 @@ msgid ""
 "example, you can test the following message and signature and verify that it"
 " was signed by the given address:"
 msgstr ""
+"用户在发送签名信息时需要用到私钥，而在验证信息时需要用到公共地址。通过这种方式，用户可以任意编写消息并生成一个签名，该签名只能由掌管该地址私钥的用户创建。任何持有信息、公共地址和签名的用户都可以轻松地证明对签名的独家创建。信息不会存储在区块链中，相反，用户需要通过电子邮件等其它通信渠道将这三个文本片段（包括消息、地址和签名）发送给收款方。例如，用户可以验证以下信息和签名，并验证它是否由既定地址的用户签名授权："
 
 #: ../../wallets/signing.rst:33
 msgid ""
@@ -65,10 +67,12 @@ msgid ""
 "XwHihwiQzheVKbT76e7ZhPkujDCQGEZC6P **Signature:** "
 "IKaEt7MTb4Y57WIde5TLUkm1vbVsjk/L9eG+TE2tdQhMeK9vGgTsqcVOTmXXQ6QA0/WQtxqPURH2qZG27YR2VE0="
 msgstr ""
+"**消息:** 文档测试签名 **地址:** XwHihwiQzheVKbT76e7ZhPkujDCQGEZC6P **签名:** "
+"IKaEt7MTb4Y57WIde5TLUkm1vbVsjk/L9eG+TE2tdQhMeK9vGgTsqcVOTmXXQ6QA0/WQtxqPURH2qZG27YR2VE0="
 
 #: ../../wallets/signing.rst:38
 msgid "Signing a Message"
-msgstr ""
+msgstr "签名消息"
 
 #: ../../wallets/signing.rst:40
 msgid ""
@@ -77,14 +81,16 @@ msgid ""
 "message) and DMT (**Tools > Sign message with HW for current masternode's "
 "address**):"
 msgstr ""
+"以下截图显示了不同的消息签名途径，其中包括达世币核心钱包（**文件 > 为消息签名**）、Trezor网页钱包（**签名及验证 > "
+"为消息签名**）和DMT（**工具 > 使用HW为当前的主节点地址提供消息签名**）："
 
 #: ../../wallets/signing.rst:52
 msgid "*Signing messages in Dash Core, Trezor web wallet and DMT*"
-msgstr ""
+msgstr "*在达世币核心、Trezor网页钱包和DMT中进行消息签名*"
 
 #: ../../wallets/signing.rst:55
 msgid "Verifying a Message"
-msgstr ""
+msgstr "验证消息"
 
 #: ../../wallets/signing.rst:57
 msgid ""
@@ -92,9 +98,11 @@ msgid ""
 "wallet (**File > Sign message**) and Trezor web wallet (**Sign & Verify > "
 "Sign message**):"
 msgstr ""
+"以下截图显示了不同的消息验证途径，其中包括达世币核心钱包（ **文件 > 为消息签名**）和 Trezor网页钱包（**签名及验证 > "
+"为消息签名**）："
 
 #: ../../wallets/signing.rst:66
 msgid ""
 "*Verifying messages in Dash Core and Trezor web wallet. Notice that the "
 "message verified by Dash Core was generated in Trezor, and vice versa*"
-msgstr ""
+msgstr "*达世币核心钱包和Trezor网页钱包中的消息验证。请注意，达世币核心钱包的验证消息是在Trezor网页钱包中生成的，反之则反之*"
