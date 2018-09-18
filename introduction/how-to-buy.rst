@@ -842,7 +842,7 @@ Holy Transaction
   well as over ten other altcoins.
 
 RealExchange
-  .. image:: exchanges/real-exchange.jpg
+  .. image:: exchanges/real-exchange.png
      :width: 200px
      :align: right
      :target: https://realexchange.com.br
