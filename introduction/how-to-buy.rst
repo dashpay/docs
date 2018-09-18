@@ -841,6 +841,18 @@ Holy Transaction
   Holy Transaction offers DASH trading pairs for BTC, USD and EUR, as
   well as over ten other altcoins.
 
+RealExchange
+  .. image:: exchanges/real-exchange.jpg
+     :width: 200px
+     :align: right
+     :target: https://realexchange.com.br
+
+  https://realexchange.com.br
+
+  RealExchange is a Brazil-based exchange offering support for a handful
+  of currencies including Dash, Bitcoin, Litecoin, and SmartCash. The
+  exchange also supports fiat trading pairs with the Brazilian real.
+
 NegocieCoins
   .. image:: exchanges/negociecoins.jpg
      :width: 200px
