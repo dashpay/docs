@@ -173,8 +173,8 @@ visit https://www.dash.org/wallets/ on your computer to find the link to
 the latest Dash Core wallet. Click **Linux**, then right-click on
 **Download TGZ** for **Dash Core Linux 64 Bit** and select **Copy link
 address**. Go back to your terminal window and enter the following
-command, pasting in the address to the latest version of Dash Core
-(0.12.3.1 in the example) by right clicking or pressing **Ctrl + V**::
+command, pasting in the address to the latest version of Dash Core by
+right clicking or pressing **Ctrl + V**::
 
   cd ~
   wget https://github.com/dashpay/dash/releases/download/v0.12.3.3/dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
