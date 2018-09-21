@@ -191,8 +191,8 @@ money-anywhere/id1180017272>`__.
 Documentation
 -------------
 
-Read the `FAQ <https://www.mobi.me/faq>`_, join the `Mobi Telegram group
-<https://t.me/btccmobi>`_ or send an email to support@mobi.me for
+Read the `FAQ <https://www.mobi.me/faq>`__, join the `Mobi Telegram
+group <https://t.me/btccmobi>`_ or send an email to support@mobi.me for
 support with Mobi.
 
 .. figure:: img/mobi-wallet.png
@@ -310,7 +310,7 @@ Evercoin is available from the `Google Play Store for Android
 Documentation
 -------------
 
-Read the `FAQ <https://evercoin.com/#faq>`_ or visit the `Evercoin site
+Read the `FAQ <https://evercoin.com/#faq>`__ or visit the `Evercoin site
 <https://evercoin.com>`_ to chat with the support team directly.
 
 .. figure:: img/evercoin-wallet.png
