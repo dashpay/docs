@@ -256,7 +256,7 @@ at any time before the voting deadline. The following sites and tools
 are available to view and manage proposals and voting:
 
 - `DashCentral <https://www.dashcentral.org/budget>`__
-- `Dash Budget Proposal Vote Tracker <https://dashvotetracker.com/>`__
+- `Dash Nexus <https://dashnexus.org>`__
 - `Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`__
 - `Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-masternode-tool/releases>`__
 

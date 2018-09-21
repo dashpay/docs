@@ -180,6 +180,8 @@ Treasury tools
 
 - https://www.dashwatch.org
 - https://www.dashcentral.org
+- https://www.dashboost.org
+- https://dashnexus.org
 - https://dashvotetracker.com
 - https://proposal.dash.org
 - https://www.dashninja.pl/governance.html
