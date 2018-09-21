@@ -305,7 +305,7 @@ Installation
 
 Evercoin is available from the `Google Play Store for Android
 <https://play.google.com/store/apps/details?id=com.evercoin>`__ and the
-`https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158>`__.
+`Apple App Store for iOS <https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158>`__.
 
 Documentation
 -------------
