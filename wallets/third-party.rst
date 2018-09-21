@@ -275,6 +275,49 @@ collected here:
 
    Atomic Wallet Portfolio screen
 
+Evercoin
+========
+
+https://evercoin.com
+
+.. image:: img/evercoin.png
+   :width: 100px
+   :align: right
+   :target: https://evercoin.com
+
+Evercoin is a multi-currency mobile wallet combined with the full power
+of an instant exchange, all in one app. Advanced features like limit
+orders allows you to execute advantageous trades without having to copy
+addresses around and use complicated online exchanges. Private keys are
+stored on the device and backed up using a typical 12-word phrase. An
+Evercoin hardware wallet is also due to launch soon.
+
+Installation
+------------
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.evercoin
+
+Evercoin is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=com.evercoin>`__ and the
+`https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158>`__.
+
+Documentation
+-------------
+
+Read the `FAQ <https://evercoin.com/#faq>`_ or visit the `Evercoin site
+<https://evercoin.com>`_ to chat with the support team directly.
+
+.. figure:: img/evercoin-wallet.png
+   :width: 133px
+
+   Evercoin wallet running on Android
+
 Jaxx
 ====
 
