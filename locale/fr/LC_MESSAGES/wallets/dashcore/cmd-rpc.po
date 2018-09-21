@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-17 11:43+0000\n"
+"POT-Creation-Date: 2018-09-17 12:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Daf Daf, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -21,14 +21,16 @@ msgstr ""
 #: ../../wallets/dashcore/cmd-rpc.rst:1
 msgid "Dash Core wallet stratup arguments and RPC command reference"
 msgstr ""
+"Guide de référence des arguments de démarrage et des commandes RPC du "
+"portefeuille logiciel Dash Core"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:1
 msgid "dash, core, wallet, arguments, commands, RPC"
-msgstr ""
+msgstr "dash, core, portefeuille logiciel, arguments, commandes, RPC"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:9
 msgid "Arguments and commands"
-msgstr ""
+msgstr "Arguments et commandes"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:11
 msgid ""
@@ -39,6 +41,13 @@ msgid ""
 "``setting=value`` pairs, one per line, with optional comments starting with "
 "the ``#`` character."
 msgstr ""
+"Toutes les options de ligne de commande (sauf pour ``-datadir`` et "
+"``-conf``) peuvent être indiquées dans un fichier de configuration, et "
+"toutes les options de fichier de configuration peuvent aussi être indiquées "
+"en ligne de commande. Les options de ligne de commande outrepassent les "
+"valeurs indiquées dans le fichier de configuration. Le fichier de "
+"configuration est une liste de paires ``réglage=valeur``, une par ligne, "
+"avec des commentaires facultatifs qui commencent par le caractère ``#``."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:18
 msgid ""
@@ -48,6 +57,11 @@ msgid ""
 " directory and the configuration file path may be changed using the -datadir"
 " and -conf command-line arguments."
 msgstr ""
+"Ce fichier de configuration n'est pas créé automatiquement ; vous pouvez le "
+"créer avec votre éditeur de texte préféré. Par défaut, dash-qt (ou dashd) "
+"cherchera un fichier nommé ``dash.conf`` dans le répertoire de données Dash,"
+" mais les chemins de ce répertoire ou du fichier peuvent être modifiés avec "
+"les arguments -datadir et -conf command-line."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:25
 msgid "Platform"
@@ -110,85 +124,93 @@ msgid ""
 "Note: if running Dash in testnet mode, the sub-folder ``testnet3`` will be "
 "appended to the data directory automatically."
 msgstr ""
+"À noter : si Dash tourne en mode de réseau de test, le sous-répertoire "
+"``testnet3``sera ajouté automatiquement au répertoire de données."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:40
 msgid "Command line arguments"
-msgstr ""
+msgstr "Arguments de ligne de commande"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:42
 msgid "These commands are accurate as of Dash Core version 0.12.2.1."
-msgstr ""
+msgstr "Ces commandes sont exactes pour la version 0.12.2.1 de Dash Core."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:44
 msgid "`dashd`_"
-msgstr ""
+msgstr "`dashd`_"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:45
 msgid "`dash-qt`_"
-msgstr ""
+msgstr "`dash-qt`_"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:46
 msgid "`dash-cli`_"
-msgstr ""
+msgstr "`dash-cli`_"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:47
 msgid "`dash-tx`_"
-msgstr ""
+msgstr "`dash-tx`_"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:51
 msgid "dashd"
-msgstr ""
+msgstr "dashd"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:53
 msgid "Dash Core Daemon"
-msgstr ""
+msgstr "Daemon Dash Core"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:57
 #: ../../wallets/dashcore/cmd-rpc.rst:266
 #: ../../wallets/dashcore/cmd-rpc.rst:302
 #: ../../wallets/dashcore/cmd-rpc.rst:340
 msgid "Usage"
-msgstr ""
+msgstr "Utilisation"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:61
 msgid "dashd [options]"
-msgstr ""
+msgstr "dashd [options]"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:60
 msgid "Start Dash Core Daemon"
-msgstr ""
+msgstr "Démarrage du daemon Dash Core"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:64
 #: ../../wallets/dashcore/cmd-rpc.rst:313
 #: ../../wallets/dashcore/cmd-rpc.rst:349
 msgid "Options"
-msgstr ""
+msgstr "Options"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:66
 #: ../../wallets/dashcore/cmd-rpc.rst:315
 #: ../../wallets/dashcore/cmd-rpc.rst:351
 msgid "This help message"
-msgstr ""
+msgstr "Ce message d'aide"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:67
 msgid "Print version and exit"
-msgstr ""
+msgstr "Afficher la version et quitter"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:68
 msgid "Receive and display P2P network alerts (default: 1)"
 msgstr ""
+"Recevoir et afficher les alertes pair à pair du réseau (par défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:69
 msgid ""
 "Execute command when a relevant alert is received or we see a really long "
 "fork (%s in cmd is replaced by message)"
 msgstr ""
+"Exécuter la commande quand une alerte correspondante est reçue, ou quand un "
+"très long fork est constaté (%s dans la commande est remplacé par le "
+"message)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:70
 msgid ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"
 msgstr ""
+"Exécuter la commande quand le meilleur bloc est modifié (%s dans la commande"
+" est remplacé par l'empreinte de hachage du bloc)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:71
 msgid ""
@@ -197,51 +219,66 @@ msgid ""
 "00000000000000b4181bbbdddbae464ce11fede5d0292fb63fdede1e7c8ab21c, testnet: "
 "00000ce22113f3eb8636e225d6a1691e132fdd587aed993e1bc9b07a0235eea4)"
 msgstr ""
+"Si ce bloc est dans la chaîne, considérer que lui et ses ancêtres sont "
+"valides et sauter potentiellement leur vérification de script (0 pour tout "
+"vérifier, par défaut : "
+"00000000000000b4181bbbdddbae464ce11fede5d0292fb63fdede1e7c8ab21c, réseau de "
+"test : 00000ce22113f3eb8636e225d6a1691e132fdd587aed993e1bc9b07a0235eea4)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:72
 #: ../../wallets/dashcore/cmd-rpc.rst:316
 msgid "Specify configuration file (default: dash.conf)"
-msgstr ""
+msgstr "Indiquer le fichier de configuration (par défaut : dash.conf)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:73
 msgid "Run in the background as a daemon and accept commands"
-msgstr ""
+msgstr "Tourner en arrière-plan en tant que daemon et accepter les commandes"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:74
 #: ../../wallets/dashcore/cmd-rpc.rst:317
 msgid "Specify data directory"
-msgstr ""
+msgstr "Indiquer le répertoire de données"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:75
 msgid "Set database cache size in megabytes (4 to 16384, default: 100)"
 msgstr ""
+"Définir la taille du cache de la base de données, en Mo (4 à 16384, par "
+"défaut : 100)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:76
 msgid "Imports blocks from external blk000??.dat file on startup"
 msgstr ""
+"Importer les blocs depuis un fichier externe blk000??.dat au démarrage"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:77
 msgid "Keep at most <n> unconnectable transactions in memory (default: 100)"
 msgstr ""
+"Conserver au maximum <n> transactions non connectables en mémoire (par "
+"défaut : 100)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:78
 msgid "Keep the transaction memory pool below <n> megabytes (default: 300)"
 msgstr ""
+"Garder le tampon mémoire de transactions sous <n> Mo (par défaut : 300)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:79
 msgid ""
 "Do not keep transactions in the mempool longer than <n> hours (default: 72)"
 msgstr ""
+"Ne pas garder les transactions dans le tampon mémoire plus que <n> heures "
+"(défaut : 72)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:80
 msgid ""
 "Set the number of script verification threads (-1 to 16, 0 = auto, <0 = "
 "leave that many cores free, default: 0)"
 msgstr ""
+"Définir le nombre de files de vérification de script (-1 à 16, 0 = auto, <0 "
+"= garder libres ce nombre de cœurs, défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:81
 msgid "Specify pid file (default: dashd.pid)"
-msgstr ""
+msgstr "Indiquer le fichier pid (défaut : dashd.pid)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:82
 msgid ""
@@ -250,178 +287,231 @@ msgid ""
 "requires re-downloading the entire blockchain. (default: 0 = disable pruning"
 " blocks, >945 = target size in MiB to use for block files)"
 msgstr ""
+"Réduire les exigences de stockage en élaguant (effaçant) les vieux blocs. Ce"
+" mode est incompatible avec -txindex et -rescan. Attention : annuler ce "
+"réglage implique de retélécharger la blockchain entière. (par défaut : 0 = "
+"désactiver l'élagage de blocs, >945 = taille cible en Mo à utiliser pour les"
+" fichiers de blocs)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:83
 msgid "Rebuild chain state from the currently indexed blocks"
 msgstr ""
+"Reconstruire l'état de la chaîne depuis les blocs actuellement indexés"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:84
 msgid "Rebuild chain state and block index from the blk*.dat files on disk"
 msgstr ""
+"Reconstruire l'état de la chaîne et de l'index de blocs depuis les fichiers "
+"blk*.dat sur disque"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:85
 msgid ""
 "Create new files with system default permissions, instead of umask 077 (only"
 " effective with disabled wallet functionality)"
 msgstr ""
+"Créer de nouveau fichiers avec les autorisations système par défaut, au lieu"
+" de umask 077 (effectif seulement avec les fonctionnalités de portefeuille "
+"désactivées)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:86
 msgid ""
 "Maintain a full transaction index, used by the getrawtransaction rpc call "
 "(default: 1)"
 msgstr ""
+"Garder un index complet des transactions, utilisé par l'appel RPC "
+"getrawtransaction (défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:87
 msgid ""
 "Maintain a full address index, used to query for the balance, txids and "
 "unspent outputs for addresses (default: 0)"
 msgstr ""
+"Garder un index complet des adresses, utilisé pour interroger le solde, les "
+"identifiants de transaction et les sorties non dépensées des adresses "
+"(défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:88
 msgid ""
 "Maintain a timestamp index for block hashes, used to query blocks hashes by "
 "a range of timestamps (default: 0)"
 msgstr ""
+"Garder un index des horodatages des signatures de hachage des blocs, utilisé"
+" pour interroger les signatures de hachage par dates (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:89
 msgid ""
 "Maintain a full spent index, used to query the spending txid and input index"
 " for an outpoint (default: 0)"
 msgstr ""
+"Garder un index complet des dépenses, utilisé pour interroger l'identifiant "
+"de transaction de dépense et l'index d'entrée pour une sortie (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:93
 msgid "Connection options"
-msgstr ""
+msgstr "Options de connexion"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:95
 msgid "Add a node to connect to and attempt to keep the connection open"
 msgstr ""
+"Ajouter un nœud auquel se connecter, et essayer de garder la connexion "
+"ouverte"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:96
 msgid "Threshold for disconnecting misbehaving peers (default: 100)"
-msgstr ""
+msgstr "Seuil de déconnexion des pairs qui se comportent mal (défaut : 100)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:97
 msgid ""
 "Number of seconds to keep misbehaving peers from reconnecting (default: "
 "86400)"
 msgstr ""
+"Nombre de secondes pendant lesquelles les pairs qui se comportent mal ne "
+"peuvent pas se reconnecter (défaut : 86400)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:98
 msgid ""
 "Bind to given address and always listen on it. Use [host]:port notation for "
 "IPv6"
 msgstr ""
+"Se lier à une adresse donnée et toujours l'écouter. Utiliser la notation "
+"[hôte]:port pour IPv6"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:99
 msgid "Connect only to the specified node(s)"
-msgstr ""
+msgstr "Se connecter seulement au(x) nœud(s) indiqué(s)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:100
 msgid ""
 "Discover own IP addresses (default: 1 when listening and no -externalip or "
 "-proxy)"
 msgstr ""
+"Découvrir ses propres adresses IP (défaut : 1 à l'écoute et sans -externalip"
+" ou -proxy)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:101
 msgid "Allow DNS lookups for -addnode, -seednode and -connect (default: 1)"
 msgstr ""
+"Autoriser les consultations DNS pour -addnode, -seednode et -connect (défaut"
+" : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:102
 msgid ""
 "Query for peer addresses via DNS lookup, if low on addresses (default: 1 "
 "unless -connect)"
 msgstr ""
+"Demander les adresses de pairs par consultation DNS, si le nombre d'adresses"
+" devient faible (défaut : 1, sauf si -connect)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:103
 msgid "Specify your own public address"
-msgstr ""
+msgstr "Indiquer votre propre adresse publique"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:104
 msgid "Always query for peer addresses via DNS lookup (default: 0)"
 msgstr ""
+"Toujours demander les adresses de pairs par consultation DNS (défaut :  0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:105
 msgid "Accept connections from outside (default: 1 if no -proxy or -connect)"
 msgstr ""
+"Accepter les connexions de l'extérieur (défaut : 1, si pas de -proxy ou de "
+"-connect)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:106
 msgid "Automatically create Tor hidden service (default: 1)"
-msgstr ""
+msgstr "Créer automatiquement un service caché Tor (défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:107
 msgid ""
 "Maintain at most <n> connections to peers (temporary service connections "
 "excluded) (default: 125)"
 msgstr ""
+"Conserver un maximum de <n> connexions aux pairs (connexions temporaires de "
+"service exclues) (défaut : 125)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:108
 msgid "Maximum per-connection receive buffer, <n>*1000 bytes (default: 5000)"
 msgstr ""
+"Tampon de réception par connexion maximal, <n>*1000 octets (défaut : 5000)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:109
 msgid "Maximum per-connection send buffer, <n>*1000 bytes (default: 1000)"
-msgstr ""
+msgstr "Tampon d'envoi par connexion maximal, <n>*1000 octets (défaut : 1000)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:110
 msgid ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "-proxy)"
 msgstr ""
+"Utiliser un proxy SOCKS5 distinct pour atteindre les pairs par des services "
+"cachés Tor (défaut : -proxy)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:111
 msgid "Only connect to nodes in network <net> (ipv4, ipv6 or onion)"
-msgstr ""
+msgstr "Ne se connecter qu'aux nœuds du réseau <net> (ipv4, ipv6 ou onion)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:112
 msgid "Relay non-P2SH multisig (default: 1)"
-msgstr ""
+msgstr "Retransmettre les multi-signatures non P2SH (défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:113
 msgid ""
 "Support filtering of blocks and transaction with bloom filters (default: 1)"
 msgstr ""
+"Assurer le filtrage des blocs et transactions avec des filtres bloom (défaut"
+" : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:114
 msgid "Listen for connections on <port> (default: 9999 or testnet: 19999)"
 msgstr ""
+"Écouter les connexions sur <port> (défaut : 9999 or réseau de test : 19999)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:115
 msgid "Connect through SOCKS5 proxy"
-msgstr ""
+msgstr "Se connecter par proxy SOCKS5"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:116
 msgid ""
 "Randomize credentials for every proxy connection. This enables Tor stream "
 "isolation (default: 1)"
 msgstr ""
+"Identifiants aléatoires pour chaque connexion proxy. Cela active l'isolation"
+" de canal Tor (défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:117
 msgid "Connect to a node to retrieve peer addresses, and disconnect"
 msgstr ""
+"Se connecter à un nœud pour obtenir les adresses de pairs, puis se "
+"déconnecter"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:118
 msgid "Specify connection timeout in milliseconds (minimum: 1, default: 5000)"
 msgstr ""
+"Indiquer l'expiration de la connexion en millisecondes (minimum : 1, défaut "
+": 5000)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:119
 msgid ""
 "Tor control port to use if onion listening enabled (default: 127.0.0.1:9051)"
 msgstr ""
+"Port de contrôle Tor à utiliser si l'écoute Onion est activée (défaut : "
+"127.0.0.1:9051)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:120
 msgid "Tor control port password (default: empty)"
-msgstr ""
+msgstr "Mot de passe du port de contrôle Tor (défaut : vide)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:121
 msgid "Use UPnP to map the listening port (default: 0)"
-msgstr ""
+msgstr "Utiliser UpnP pour lier le port d'écoute (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:122
 msgid ""
 "Bind to given address and whitelist peers connecting to it. Use [host]:port "
 "notation for IPv6"
 msgstr ""
+"Se lier à l'adresse donnée et aux pairs en liste blanche qui s'y connectent."
+" Utiliser la notation [hôte]:port pour IPv6"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:123
 msgid ""
@@ -430,123 +520,171 @@ msgid ""
 "transactions are always relayed, even if they are already in the mempool, "
 "useful e.g. for a gateway"
 msgstr ""
+"Pairs en liste blanche se connectant depuis un masque de réseau ou une "
+"adresse IP donné(e). Peut être indiqué plusieurs fois. Les pairs en liste "
+"blanche ne peuvent pas être bannis pour DoS et leurs transactions sont "
+"toujours retransmises, même si elles sont déjà dans le tampon mémoire, ce "
+"qui est utile par ex. pour une passerelle"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:124
 msgid ""
 "Accept relayed transactions received from whitelisted peers even when not "
 "relaying transactions (default: 1)"
 msgstr ""
+"Accepter les transactions retransmises reçues des pairs en liste blanche, "
+"même si on ne retransmet pas les transactions (défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:125
 msgid ""
 "Force relay of transactions from whitelisted peers even they violate local "
 "relay policy (default: 1)"
 msgstr ""
+"Obliger la retransmission des transactions depuis les pairs en liste "
+"blanche, même si elles violent les règles locales de retransmission (défaut "
+": 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:126
 msgid ""
 "Tries to keep outbound traffic under the given target (in MiB per 24h), 0 = "
 "no limit (default: 0)"
 msgstr ""
+"Essayer de garder le trafic sortant sous la valeur cible donnée (en Mo par "
+"24 heures), 0 = pas de limite (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:130
 #: ../../wallets/dashcore/cmd-rpc.rst:273
 msgid "Wallet options"
-msgstr ""
+msgstr "Options de portefeuille"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:132
 msgid "Do not load the wallet and disable wallet RPC calls"
 msgstr ""
+"Ne pas charger le portefeuille et désactiver les appels RPC de portefeuille"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:133
 msgid "Set key pool size to <n> (default: 1000)"
-msgstr ""
+msgstr "Fixer la taille de la réserve des clés à <n> (défaut : 1000)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:134
 msgid ""
 "A fee rate (in DASH/kB) that will be used when fee estimation has "
 "insufficient data (default: 0.0002)"
 msgstr ""
+"Un taux de frais de transaction (en dashs/Ko) qui sera utilisé quand "
+"l'estimation des frais ne dispose pas d'assez de données (défaut : 0,0002)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:135
 msgid ""
 "Fees (in DASH/kB) smaller than this are considered zero fee for transaction "
 "creation (default: 0.0001)"
 msgstr ""
+"Seuil de frais de transaction (en dashs/Ko) en-deçà duquel les frais sont "
+"considérés nuls pour la création de transaction (défaut : 0,0001)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:136
 msgid "Fee (in DASH/kB) to add to transactions you send (default: 0.00)"
 msgstr ""
+"Frais de transaction (en dashs/Ko) à ajouter aux transactions que vous "
+"envoyez (défaut : 0,00)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:137
 msgid "Rescan the block chain for missing wallet transactions on startup"
 msgstr ""
+"Balayer à nouveau la blockchain au démarrage pour repérer les transactions "
+"de portefeuille manquantes"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:138
 msgid "Attempt to recover private keys from a corrupt wallet.dat on startup"
 msgstr ""
+"Essayer au démarrage de récupérer les clés privées d'un fichier wallet.dat "
+"corrompu"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:139
 msgid "Send transactions as zero-fee transactions if possible (default: 0)"
-msgstr ""
+msgstr "Envoyer des transactions sans frais si possible (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:140
 msgid "Spend unconfirmed change when sending transactions (default: 1)"
 msgstr ""
+"Dépenser le rendu de monnaie non confirmé à l'envoi de transactions (défaut "
+": 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:141
 msgid ""
 "If paytxfee is not set, include enough fee so transactions begin "
 "confirmation on average within n blocks (default: 2)"
 msgstr ""
+"Si paytxfee n'est pas défini, inclure suffisamment de frais pour que les "
+"transactions commencent à être confirmées en moyenne dans les n blocs "
+"(défaut : 2)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:142
 msgid ""
 "Maximum total fees (in DASH) to use in a single wallet transaction; setting "
 "this too low may abort large transactions (default: 0.20)"
 msgstr ""
+"Maximum de frais de transaction totaux (en dashs) à utiliser en une seule "
+"transaction de portefeuille ; définir une valeur trop basse peut empêcher "
+"les transactions larges (défaut : 0,20)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:143
 msgid ""
 "Use hierarchical deterministic key generation (HD) after bip39/bip44. Only "
 "has effect during wallet creation/first start (default: 0)"
 msgstr ""
+"Utiliser la génération hiérarchique déterministe (HD) de clés (BIP39/BIP44)."
+" N'a d'effet qu'à la création du portefeuille ou à son premier démarrage "
+"(défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:144
 msgid ""
 "User defined mnemonic for HD wallet (bip39). Only has effect during wallet "
 "creation/first start (default: randomly generated)"
 msgstr ""
+"Graine mnémonique définie par l'utilisateur pour un portefeuille HD (BIP39)."
+" N'a d'effet qu'à la création du portefeuille ou à son premier démarrage "
+"(défaut : générée aléatoirement)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:145
 msgid ""
 "User defined mnemonic passphrase for HD wallet (bip39). Only has effect "
 "during wallet creation/first start (default: empty string)"
 msgstr ""
+"Phrase de passe mnémonique définie par l'utilisateur pour un portefeuille HD"
+" (BIP39). N'a d'effet qu'à la création du portefeuille ou à son premier "
+"démarrage (défaut : chaîne vide)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:146
 msgid ""
 "User defined seed for HD wallet (should be in hex). Only has effect during "
 "wallet creation/first start (default: randomly generated)"
 msgstr ""
+"Graine définie par l'utilisateur pour un portefeuille HD (doit être en "
+"hexadécimal). N'a d'effet qu'à la création du portefeuille ou à son premier "
+"démarrage (défaut : générée aléatoirement)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:147
 msgid "Upgrade wallet to latest format on startup"
 msgstr ""
+"Mettre à jour le portefeuille au format le plus récent durant le démarrage"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:148
 msgid "Specify wallet file (within data directory) (default: wallet.dat)"
 msgstr ""
+"Indiquer le fichier de portefeuille (dans le répertoire de données) (défaut "
+": wallet.dat)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:149
 msgid "Make the wallet broadcast transactions (default: 1)"
-msgstr ""
+msgstr "Faire diffuser les transactions par le portefeuille (défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:150
 msgid ""
 "Execute command when a wallet transaction changes (%s in cmd is replaced by "
 "TxID)"
 msgstr ""
+"Exécuter la commande quand une transaction de portefeuille est modifiée (%s "
+"dans la commande est remplacé par l'identifiant de transaction)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:151
 msgid ""
@@ -554,15 +692,21 @@ msgid ""
 "blockchain through -rescan on startup (1 = keep tx meta data e.g. account "
 "owner and payment request information, 2 = drop tx meta data)"
 msgstr ""
+"Effacer toutes les transactions de portefeuille et ne récupérer que celles "
+"faisant partie de la blockchain avec -rescan au démarrage (1 = conserver les"
+" métadonnées de transactions, par ex. propriétaire du compte et information "
+"de requête de paiement, 2 = effacer les métadonnées de transaction)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:152
 msgid "Number of automatic wallet backups (default: 10)"
-msgstr ""
+msgstr "Nombre de sauvegardes automatiques du portefeuille (défaut : 10)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:153
 msgid ""
 "Specify full path to directory for automatic wallet backups (must exist)"
 msgstr ""
+"Indiquer le chemin complet du répertoire des sauvegardes automatiques du "
+"portefeuille (doit exister)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:154
 msgid "Use KeePass 2 integration using KeePassHttp plugin (default: 0)"
@@ -590,61 +734,72 @@ msgstr ""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:162
 msgid "ZeroMQ notification options"
-msgstr ""
+msgstr "Options de notification ZeroMQ"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:164
 msgid "Enable publish hash block in <address>"
-msgstr ""
+msgstr "Activer la publication du hachage de bloc dans <address>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:165
 msgid "Enable publish hash transaction in <address>"
-msgstr ""
+msgstr "Activer la publication du hachage de transaction dans <address>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:166
 msgid "Enable publish hash transaction (locked via InstantSend) in <address>"
 msgstr ""
+"Activer la publication du hachage de transaction (verrouillée par "
+"InstantSend) dans <address>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:167
 msgid "Enable publish hash of governance votes in <address>"
 msgstr ""
+"Activer la publication du hachage des votes de gouvernance dans <address>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:168
 msgid ""
 "Enable publish hash of governance objects (like proposals) in <address>"
 msgstr ""
+"Activer la publication du hachage des objets de gouvernance (comme les "
+"propositions budgétaires) dans <address>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:169
 msgid ""
 "Enable publish transaction hashes of attempted InstantSend double spend in "
 "<address>"
 msgstr ""
+"Activer la publication des hachages de transaction pour les tentatives de "
+"double dépense InstantSend dans <address>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:170
 msgid "Enable publish raw block in <address>"
-msgstr ""
+msgstr "Activer la publication du bloc brut dans<address>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:171
 msgid "Enable publish raw transaction in <address>"
-msgstr ""
+msgstr "Activer la publication de la transaction brute dans <address>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:172
 msgid "Enable publish raw transaction (locked via InstantSend) in <address>"
 msgstr ""
+"Activer la publication de la transaction brute (verrouillée par InstantSend)"
+" dans <address>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:173
 msgid ""
 "Enable publish raw transactions of attempted InstantSend double spend in "
 "<address>"
 msgstr ""
+"Activer la publication des transactions brutes pour les tentatives de double"
+" dépense InstantSend dans <address>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:177
 #: ../../wallets/dashcore/cmd-rpc.rst:279
 msgid "Debugging/Testing options"
-msgstr ""
+msgstr "Options de débogage et de test"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:179
 msgid "Append comment to the user agent string"
-msgstr ""
+msgstr "Ajouter le commentaire à la chaîne d'agent utilisateur"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:180
 msgid ""
@@ -655,110 +810,142 @@ msgid ""
 "selectcoins, tor, zmq, dash (or specifically: gobject, instantsend, keepass,"
 " masternode, mnpayments, mnsync, privatesend, spork)."
 msgstr ""
+"Afficher les informations de débogage (défaut : 0, indiquer <category> est "
+"facultatif). Si <category> n'est pas indiqué ou si <category> = 1, afficher "
+"toutes les informations de débogage.<category> peut être : addrman, alert, "
+"bench, coindb, db, http, libevent, lock, mempool, mempoolrej, net, proxy, "
+"prune, rand, reindex, rpc, selectcoins, tor, zmq, dash (ou plus "
+"spécifiquement : gobject, instantsend, keepass, masternode, mnpayments, "
+"mnsync, privatesend, spork)."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:181
 msgid "Generate coins (default: 0)"
-msgstr ""
+msgstr "Générer des pièces (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:182
 msgid ""
 "Set the number of threads for coin generation if enabled (-1 = all cores, "
 "default: 1)"
 msgstr ""
+"Définir le nombre de files pour la génération de pièces si activée (-1 = "
+"tous les cœurs, défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:183
 msgid "Show all debugging options (usage: --help -help-debug)"
 msgstr ""
+"Afficher toutes les options de débitage (utilisation : --help -help-debug)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:184
 msgid "Include IP addresses in debug output (default: 0)"
-msgstr ""
+msgstr "Inclure les adresses IP dans la sortie de débogage (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:185
 msgid "Prepend debug output with timestamp (default: 1)"
-msgstr ""
+msgstr "Ajouter l'horodatage au début de la sortie de débogage (défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:186
 msgid ""
 "Fees (in DASH/kB) smaller than this are considered zero fee for relaying, "
 "mining and transaction creation (default: 0.0001)"
 msgstr ""
+"Seuil de frais de transaction (en dashs/Ko) en-deçà duquel les frais sont "
+"considérés nuls pour la création de transaction, la retransmission ou le "
+"minage (défaut : 0,0001)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:187
 msgid "Send trace/debug info to console instead of debug.log file"
 msgstr ""
+"Envoyer les informations de pistage/débogage à la console plutôt qu'au "
+"fichier debug.log"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:188
 msgid "Send trace/debug info to debug.log file (default: 1)"
 msgstr ""
+"Envoyer les informations de pistage/débogage au fichier debug.log (défaut : "
+"1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:189
 msgid "Shrink debug.log file on client startup (default: 1 when no -debug)"
 msgstr ""
+"Réduire le fichier debug.log au démarrage du client (défaut : 1 si pas de "
+"-debug)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:193
 #: ../../wallets/dashcore/cmd-rpc.rst:321
 #: ../../wallets/dashcore/cmd-rpc.rst:358
 msgid "Chain selection options"
-msgstr ""
+msgstr "Options de sélection de chaîne"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:195
 #: ../../wallets/dashcore/cmd-rpc.rst:323
 #: ../../wallets/dashcore/cmd-rpc.rst:360
 msgid "Use the test chain"
-msgstr ""
+msgstr "Utiliser la chaîne de test"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:196
 msgid ""
 "Disable all Dash specific functionality (Masternodes, PrivateSend, "
 "InstantSend, Governance) (0-1, default: 0)"
 msgstr ""
+"Désactiver toutes les fonctions spécifiques à Dash (masternodes, "
+"PrivateSend, InstantSend, gouvernance) (0-1, défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:200
 msgid "Masternode options"
-msgstr ""
+msgstr "Options de masternode"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:202
 msgid "Enable the client to act as a masternode (0-1, default: 0)"
 msgstr ""
+"Activer le client pour qu'il agisse comme un masternode (0-1, défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:203
 msgid "Specify masternode configuration file (default: masternode.conf)"
 msgstr ""
+"Indiquer le fichier de configuration de masternode (défaut : "
+"masternode.conf)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:204
 msgid "Lock masternodes from masternode configuration file (default: 1)"
 msgstr ""
+"Verrouiller les masternodes du fichier de configuration de masternode "
+"(défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:205
 msgid "Set the masternode private key"
-msgstr ""
+msgstr "Définir la clé privée de masternode"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:209
 msgid "PrivateSend options"
-msgstr ""
+msgstr "Options PrivateSend"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:211
 msgid ""
 "Enable use of automated PrivateSend for funds stored in this wallet (0-1, "
 "default: 0)"
 msgstr ""
+"Activer l'utilisation automatique de PrivateSend pour les fonds stockés dans"
+" ce portefeuille (0-1, défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:212
 msgid ""
 "Enable multiple PrivateSend mixing sessions per block, experimental (0-1, "
 "default: 0)"
 msgstr ""
+"Activer les sessions multiples de mélange PrivateSend par bloc, expérimental"
+" (0-1, défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:213
 msgid ""
 "Use N separate masternodes for each denominated input to mix funds (2-16, "
 "default: 2)"
 msgstr ""
+"Utiliser N masternodes distincts pour chaque entrée de coupure pour le "
+"mélange des fonds (2-16, défaut : 2)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:214
 msgid "Keep N DASH anonymized (default: 1000)"
-msgstr ""
+msgstr "Conserver N dashs anonymisés (défaut : 1000)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:215
 msgid ""
@@ -766,81 +953,99 @@ msgid ""
 " basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, "
 "low fees)"
 msgstr ""
+"Fournir de la liquidité à PrivateSend en mélangeant les fonds de temps à "
+"autre mais sans limite de temps (0-100, défaut : 0, 1=très fréquemment, "
+"frais élevés, 100=très peu fréquemment, frais bas)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:219
 msgid "InstantSend options"
-msgstr ""
+msgstr "Options InstantSend"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:221
 msgid ""
 "Enable InstantSend, show confirmations for locked transactions (0-1, "
 "default: 1)"
 msgstr ""
+"Activer InstantSend, afficher les confirmations pour les transactions "
+"verrouillées (0-1, défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:222
 msgid ""
 "Show N confirmations for a successfully locked transaction (0-9999, default:"
 " 5)"
 msgstr ""
+"Afficher N confirmations pour une transaction verrouillée avec succès "
+"(0-9999, défaut : 5)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:223
 msgid ""
 "Execute command when a wallet InstantSend transaction is successfully locked"
 " (%s in cmd is replaced by TxID)"
 msgstr ""
+"Exécuter la commande quand une transaction de portefeuille InstantSend est "
+"verrouillée avec succès (%s dans la commande est remplacé par l'identifiant "
+"de transaction)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:227
 msgid "Node relay options"
-msgstr ""
+msgstr "Options de relais de nœud"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:229
 msgid ""
 "Minimum bytes per sigop in transactions we relay and mine (default: 20)"
 msgstr ""
+"Nombre minimal d'octets par sigop dans les transactions que nous relayons et"
+" minons (défaut : 20)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:230
 msgid "Relay and mine data carrier transactions (default: 1)"
 msgstr ""
+"Retransmettre et miner les transactions porteuses de données (défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:231
 msgid ""
 "Maximum size of data in data carrier transactions we relay and mine "
 "(default: 83)"
 msgstr ""
+"Taille maximale des données dans les transactions porteuses de données que "
+"nous relayons et minons (défaut : 83)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:232
 msgid "Enable transaction replacement in the memory pool (default: 0)"
 msgstr ""
+"Activer le remplacement de transaction dans le tampon mémoire (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:236
 msgid "Block creation options"
-msgstr ""
+msgstr "Options de création de bloc"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:238
 msgid "Set minimum block size in bytes (default: 0)"
-msgstr ""
+msgstr "Définir la taille minimale de bloc en octets (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:239
 msgid "Set maximum block size in bytes (default: 750000)"
-msgstr ""
+msgstr "Définir la taille maximale de bloc en octets (défaut : 750000)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:240
 msgid ""
 "Set maximum size of high-priority/low-fee transactions in bytes (default: "
 "10000)"
 msgstr ""
+"Définir la taille maximale en octets des transactions de haute "
+"priorité/frais bas (défaut : 10000)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:244
 msgid "RPC server options"
-msgstr ""
+msgstr "Options de serveur RPC"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:246
 msgid "Accept command line and JSON-RPC commands"
-msgstr ""
+msgstr "Accepter les commandes en ligne de commande et JSON-RPC"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:247
 msgid "Accept public REST requests (default: 0)"
-msgstr ""
+msgstr "Accepter les requêtes publiques REST (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:248
 msgid ""
@@ -848,20 +1053,24 @@ msgid ""
 "notation for IPv6. This option can be specified multiple times (default: "
 "bind to all interfaces)"
 msgstr ""
+"Se lier à l'adresse donnée pour écouter les connexions JSON-RPC. Utiliser la"
+" notation [hôte]:port pour IPv6. Cette option peut être choisie plusieurs "
+"fois (défaut : lien avec toutes les interfaces)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:249
 msgid "Location of the auth cookie (default: data dir)"
 msgstr ""
+"Emplacement du cookie d'authentification (défaut : répertoire de données)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:250
 #: ../../wallets/dashcore/cmd-rpc.rst:328
 msgid "Username for JSON-RPC connections"
-msgstr ""
+msgstr "Nom d'utilisateur pour les connexions JSON-RPC"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:251
 #: ../../wallets/dashcore/cmd-rpc.rst:329
 msgid "Password for JSON-RPC connections"
-msgstr ""
+msgstr "Mot de passe pour les connexions JSON-RPC"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:252
 msgid ""
@@ -869,11 +1078,17 @@ msgid ""
 "comes in the format: <USERNAME>:<SALT>$<HASH>. A canonical python script is "
 "included in share/rpcuser. This option can be specified multiple times"
 msgstr ""
+"Nom d'utilisateur et mot de passe haché pour les connexions JSON-RPC. Le "
+"champ <userpw> a pour format : <USERNAME>:<SALT>$<HASH>. Un script canonique"
+" Python est inclus dans share/rpcuser. Cette option peut être indiquée "
+"plusieurs fois"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:253
 msgid ""
 "Listen for JSON-RPC connections on <port> (default: 9998 or testnet: 19998)"
 msgstr ""
+"Écouter les connexions JSON-RPC sur <port> (défaut : 9998 ou réseau de test "
+": 19998)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:254
 msgid ""
@@ -882,32 +1097,39 @@ msgid ""
 "a network/CIDR (e.g. 1.2.3.4/24). This option can be specified multiple "
 "times"
 msgstr ""
+"Autoriser les connexions JSON-RPC depuis une source précisée. Valide quand "
+"<ip> sont une seule adresse IP (par ex. 1.2.3.4), un réseau ou masque de "
+"réseau (par ex. 1.2.3.4/255.255.255.0) ou un réseau/CIDR (par ex. "
+"1.2.3.4/24). Cette option peut être indiquée plusieurs fois"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:255
 msgid "Set the number of threads to service RPC calls (default: 4)"
-msgstr ""
+msgstr "Définir le nombre de files pour les appels RPC (défaut : 4)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:259
 msgid "dash-qt"
-msgstr ""
+msgstr "dash-qt"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:261
 msgid ""
 "Dash Core QT GUI, use same command line options as dashd with additional "
 "options for UI as described below."
 msgstr ""
+"Interface graphique Dash Core QT, utiliser les mêmes options de ligne de "
+"commande que dashd avec des options supplémentaires pour l'interface "
+"graphiques telles que décrites ci-dessous."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:270
 msgid "dash-qt [command-line options]"
-msgstr ""
+msgstr "dash-qt [options de ligne de commande]"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:269
 msgid "Start Dash Core QT GUI"
-msgstr ""
+msgstr "Démarrer l'interface graphique Dash Core QT"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:275
 msgid "Wallet window title"
-msgstr ""
+msgstr "Titre de la fenêtre de portefeuille"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:281
 msgid ""
@@ -918,66 +1140,75 @@ msgid ""
 "selectcoins, tor, zmq, dash (or specifically: gobject, instantsend, keepass,"
 " masternode, mnpayments, mnsync, privatesend, spork), qt."
 msgstr ""
+"Sortie des informations de débogage (défaut : 0, indiquer <category> est "
+"facultatif). Si <category> n'est pas indiqué ou si <category> = 1, afficher "
+"toutes les informations de débogage.<category> peut être : addrman, alert, "
+"bench, coindb, db, http, libevent, lock, mempool, mempoolrej, net, proxy, "
+"prune, rand, reindex, rpc, selectcoins, tor, zmq, dash (ou plus "
+"spécifiquement : gobject, instantsend, keepass, masternode, mnpayments, "
+"mnsync, privatesend, spork), qt."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:285
 msgid "UI options"
-msgstr ""
+msgstr "Options d'interface graphique"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:287
 msgid "Choose data directory on startup (default: 0)"
-msgstr ""
+msgstr "Choisir au démarrage le répertoire de données (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:288
 msgid "Set language, for example \"de_DE\" (default: system locale)"
-msgstr ""
+msgstr "Choisir la langue, par exemple \"de_DE\" (défaut : langue du système)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:289
 msgid "Start minimized"
-msgstr ""
+msgstr "Démarrer en mode minimisé"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:290
 msgid "Set SSL root certificates for payment request (default: -system-)"
 msgstr ""
+"Définir les certificats racine SSL pour les requêtes de paiement (défaut : "
+"-system-)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:291
 msgid "Show splash screen on startup (default: 1)"
-msgstr ""
+msgstr "Afficher l'écran d'accueil au démarrage (défaut : 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:292
 msgid "Reset all settings changed in the GUI"
-msgstr ""
+msgstr "Réinitialiser tous les réglages modifiés dans l'interface graphique"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:296
 msgid "dash-cli"
-msgstr ""
+msgstr "dash-cli"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:298
 msgid "Dash Core RPC client"
-msgstr ""
+msgstr "Client RPC Dash Core"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:304
 msgid "dash-cli [options] <command> [params]"
-msgstr ""
+msgstr "dash-cli [options] <command> [paramètres]"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:305
 msgid "Send command to Dash Core"
-msgstr ""
+msgstr "Envoyer une commande à Dash Core"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:306
 msgid "dash-cli [options] help"
-msgstr ""
+msgstr "dash-cli [options] help"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:307
 msgid "List commands"
-msgstr ""
+msgstr "Afficher la liste des commandes"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:310
 msgid "dash-cli [options] help <command>"
-msgstr ""
+msgstr "dash-cli [options] help <command>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:309
 msgid "Get help for a command"
-msgstr ""
+msgstr "Obtenir de l'aide sur une commande"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:324
 #: ../../wallets/dashcore/cmd-rpc.rst:361
@@ -986,59 +1217,65 @@ msgid ""
 "be solved instantly. This is intended for regression testing tools and app "
 "development."
 msgstr ""
+"Basculer en mode de test de régression, qui utilise une chaîne spéciale dans"
+" laquelle les blocs peuvent être résolus instantanément. Cela sert aux "
+"outils de test de régression et au développement d'applications."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:325
 msgid "Send commands to node running on <ip> (default: 127.0.0.1)"
-msgstr ""
+msgstr "Envoyer des commandes au nœud tournant sur <ip> (défaut : 127.0.0.1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:326
 msgid "Connect to JSON-RPC on <port> (default: 9998 or testnet: 19998)"
 msgstr ""
+"Se connecter à JSON-RPC sur <port> (défaut : 9998 ou réseau de test : 19998)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:327
 msgid "Wait for RPC server to start"
-msgstr ""
+msgstr "Attendre que le serveur RPC ait démarré"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:330
 msgid "Timeout during HTTP requests (default: 900)"
-msgstr ""
+msgstr "Durée d'expiration des requêtes HTTP (défaut : 900)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:334
 msgid "dash-tx"
-msgstr ""
+msgstr "dash-tx"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:336
 msgid "Dash Core dash-tx utility"
-msgstr ""
+msgstr "Utilitaire dash-tx de Dash Core"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:342
 msgid "dash-tx [options] <hex-tx> [commands]"
-msgstr ""
+msgstr "dash-tx [options] <hex-tx> [commandes]"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:343
 msgid "Update hex-encoded dash transaction"
-msgstr ""
+msgstr "Mettre à jour les transactions Dash codées en hexadécimal"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:346
 msgid "dash-tx [options] -create [commands]"
-msgstr ""
+msgstr "dash-tx [options] -create [commandes]"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:345
 msgid "Create hex-encoded dash transaction"
-msgstr ""
+msgstr "Créer une transaction Dash codée en hexadécimal"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:352
 msgid "Create new, empty TX."
-msgstr ""
+msgstr "Créer une transaction neuve, vide."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:353
 msgid "Select JSON output"
-msgstr ""
+msgstr "Choisir la sortie JSON"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:354
 msgid ""
 "Output only the hex-encoded transaction id of the resultant transaction."
 msgstr ""
+"Passer en sortie uniquement l'identifiant de transaction codé en hexadécimal"
+" de la transaction résultante."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:365
 msgid "Commands"
@@ -1046,71 +1283,71 @@ msgstr "Commandes"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:367
 msgid "delin=N"
-msgstr ""
+msgstr "delin=N"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:368
 msgid "Delete input N from TX"
-msgstr ""
+msgstr "Effacer l'entrée N de la transaction"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:369
 msgid "delout=N"
-msgstr ""
+msgstr "delout=N"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:370
 msgid "Delete output N from TX"
-msgstr ""
+msgstr "Effacer la sortie N de la transaction"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:371
 msgid "in=TXID:VOUT"
-msgstr ""
+msgstr "in=TXID:VOUT"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:372
 msgid "Add input to TX"
-msgstr ""
+msgstr "Ajouter l'entrée à la transaction"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:373
 msgid "locktime=N"
-msgstr ""
+msgstr "locktime=N"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:374
 msgid "Set TX lock time to N"
-msgstr ""
+msgstr "Définir le temps de verrouillage de la transaction sur N"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:375
 msgid "nversion=N"
-msgstr ""
+msgstr "nversion=N"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:376
 msgid "Set TX version to N"
-msgstr ""
+msgstr "Définir la version de transaction sur N"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:377
 msgid "outaddr=VALUE:ADDRESS"
-msgstr ""
+msgstr "outaddr=VALEUR:ADRESSE"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:378
 msgid "Add address-based output to TX"
-msgstr ""
+msgstr "Ajouter à la transaction une sortie basée sur l'adresse"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:379
 msgid "outdata=[VALUE:]DATA"
-msgstr ""
+msgstr "outdata=[VALEUR:]DONNÉES"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:380
 msgid "Add data-based output to TX"
-msgstr ""
+msgstr "Ajouter à la transaction une sortie basée sur les données"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:381
 msgid "outscript=VALUE:SCRIPT"
-msgstr ""
+msgstr "outscript=VALEUR:SCRIPT"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:382
 msgid "Add raw script output to TX"
-msgstr ""
+msgstr "Ajouter à la transaction une sortie de script brut"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:385
 msgid "sign=SIGHASH-FLAGS"
-msgstr ""
+msgstr "sign=SIGHASH-FLAGS"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:384
 msgid ""
@@ -1118,30 +1355,34 @@ msgid ""
 "registers:prevtxs=JSON object, privatekeys=JSON object. See "
 "signrawtransaction docs for format of sighash flags, JSON objects."
 msgstr ""
+"Ajouter zéro signature ou plus à la transaction. Cette commande demande un "
+"objet JSON registers:prevtxs=JSON, et un objet privatekeys=JSON. Voir la "
+"documentation sur signrawtransaction pour le format des drapeaux sighash, "
+"des objets JSON."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:388
 msgid "Register Commands"
-msgstr ""
+msgstr "Enregistrer des commandes"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:390
 msgid "load=NAME:FILENAME"
-msgstr ""
+msgstr "load=NOM:NOMDEFICHIER"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:391
 msgid "Load JSON file FILENAME into register NAME"
-msgstr ""
+msgstr "Charger le fichier JSON NOMDEFICHIER dans le registre NOM"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:394
 msgid "set=NAME:JSON-STRING"
-msgstr ""
+msgstr "set=NOM:CHAÎNE-JSON"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:393
 msgid "Set register NAME to given JSON-STRING"
-msgstr ""
+msgstr "Définir le NOM de registre sur la CHAÎNE-JSON fournie"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:397
 msgid "RPC commands"
-msgstr ""
+msgstr "Commandes RPC"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:399
 msgid ""
@@ -1152,58 +1393,74 @@ msgid ""
 "**Tools > Debug** console in the QT wallet, or using *dash-cli* for headless"
 " wallets and *dashd*."
 msgstr ""
+"Cette documentation répertorie toutes les commandes RPC disponibles dans "
+"Dash version 0.12.2.1, et fournit une explication brève de ce que fait "
+"chaque commande. Pour une documentation complète des arguments, résultats et"
+" exemples, tapez help(\"commande\") pour voir tous les détails dans la "
+"console. Vous pouvez saisir les commandes soit depuis **Outils > Console de "
+"débogage** dans le portefeuille QT, soit en utilisant *dash-cli* pour les "
+"portefeuilles sans interface graphique et pour *dashd*."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:408
 msgid "Addressindex"
-msgstr ""
+msgstr "Addressindex"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:410
 msgid "getaddressbalance"
-msgstr ""
+msgstr "getaddressbalance"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:411
 msgid ""
 "Returns the balance for an address(es) (requires addressindex to be "
 "enabled)."
 msgstr ""
+"Renvoie le solde d'une ou plusieurs adresses (addressindex doit être "
+"activé)."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:412
 msgid "getaddressdeltas"
-msgstr ""
+msgstr "getaddressdeltas"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:413
 msgid ""
 "Returns all changes for an address (requires addressindex to be enabled)."
 msgstr ""
+"Renvoie tous les changements d'une adresse (addressindex doit être activé)."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:414
 msgid "getaddressmempool"
-msgstr ""
+msgstr "getaddressmempool"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:415
 msgid ""
 "Returns all mempool deltas for an address (requires addressindex to be "
 "enabled)."
 msgstr ""
+"Renvoie tous les deltas de tampon mémoire pour une adresse (addressindex "
+"doit être activé)."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:416
 msgid "getaddresstxids"
-msgstr ""
+msgstr "getaddresstxids"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:417
 msgid ""
 "Returns the txids for an address(es) (requires addressindex to be enabled)."
 msgstr ""
+"Renvoie les identifiants de transaction d'une ou plusieurs adresses "
+"(addressindex doit être activé)."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:420
 msgid "getaddressutxos"
-msgstr ""
+msgstr "getaddressutxos"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:419
 msgid ""
 "Returns all unspent outputs for an address (requires addressindex to be "
 "enabled)."
 msgstr ""
+"Renvoie toutes les sorties non dépensées d'une adresse (addressindex doit "
+"être activé)."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:423
 msgid "Blockchain"
@@ -1211,15 +1468,17 @@ msgstr "Blockchain"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:425
 msgid "getbestblockhash"
-msgstr ""
+msgstr "getbestblockhash"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:426
 msgid "Returns the hash of the best (tip) block in the longest block chain."
 msgstr ""
+"Renvoie la signature de hachage du meilleur bloc (de tête) de la blockchain "
+"la plus longue."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:427
 msgid "getblock \"hash\" ( verbose )"
-msgstr ""
+msgstr "getblock \"hash\" ( bavard )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:428
 msgid ""
@@ -1227,44 +1486,53 @@ msgid ""
 "for block 'hash'. If verbose is true, returns an Object with information "
 "about block <hash>."
 msgstr ""
+"Si \"bavard\" est \"false\", renvoie une chaîne de données sérialisées et "
+"codées en hexadécimal pour le bloc \"hash\". Si \"bavard\" est \"true\", "
+"renvoie un objet avec des informations sur le bloc <hash>."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:429
 msgid "getblockchaininfo"
-msgstr ""
+msgstr "getblockchaininfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:430
 msgid ""
 "Returns an object containing various state info regarding block chain "
 "processing."
 msgstr ""
+"Renvoie un objet contenant diverses informations d'état sur le traitement de"
+" la blockchain."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:431
 msgid "getblockcount"
-msgstr ""
+msgstr "getblockcount"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:432
 msgid "Returns the number of blocks in the longest block chain."
-msgstr ""
+msgstr "Renvoie le nombre de blocs de la blockchain la plus longue."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:433
 msgid "getblockhash index"
-msgstr ""
+msgstr "getblockhash index"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:434
 msgid "Returns hash of block in best-block-chain at index provided."
 msgstr ""
+"Renvoie la signature de hachage du block de la meilleure blockchain, à "
+"l'index fourni."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:435
 msgid "getblockhashes timestamp"
-msgstr ""
+msgstr "getblockhashes timestamp"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:436
 msgid "Returns array of hashes of blocks within the timestamp range provided."
 msgstr ""
+"Renvoie un tableau de hachages de blocs inclus dans l'intervalle "
+"d'horodatages fourni."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:437
 msgid "getblockheader \"hash\" ( verbose )"
-msgstr ""
+msgstr "getblockheader \"hash\" ( bavard )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:438
 msgid ""
@@ -1272,10 +1540,14 @@ msgid ""
 "for blockheader 'hash'. If verbose is true, returns an Object with "
 "information about blockheader <hash>."
 msgstr ""
+"Si \"bavard\" est \"false\", renvoie une chaîne de données sérialisées et "
+"codées en hexadécimal sur l'en-tête de bloc \"hash\". Si \"bavard\" est "
+"\"true\", renvoie un objet avec des informations sur l'en-tête de bloc "
+"<hash>."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:439
 msgid "getblockheaders \"hash\" ( count verbose )"
-msgstr ""
+msgstr "getblockheaders \"hash\" ( count bavard )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:440
 msgid ""
@@ -1284,90 +1556,108 @@ msgid ""
 "serialized, hex-encoded data for a single blockheader. If verbose is true, "
 "each item is an Object with information about a single blockheader."
 msgstr ""
+"Renvoie un tableau d'éléments avec des informations sur les <count> en-têtes"
+" de bloc à partir de <hash>. Si \"bavard\" est \"false\", chaque élément est"
+" une chaîne de données sérialisées et codées en hexadécimal pour un seul en-"
+"tête de bloc \"hash\". Si \"bavard\" est \"true\", chaque élément est un "
+"objet avec des informations sur un seul en-tête de bloc."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:441
 msgid "getchaintips ( count branchlen )"
-msgstr ""
+msgstr "getchaintips ( count branchlen )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:442
 msgid ""
 "Return information about all known tips in the block tree, including the "
 "main chain as well as orphaned branches."
 msgstr ""
+"Renvoie des informations sur tous les bouts connus dans l'arbre des blocs, "
+"dont la chaîne principale aussi bien que les branches orphelines."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:443
 msgid "getdifficulty"
-msgstr ""
+msgstr "getdifficulty"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:444
 msgid ""
 "Returns the proof-of-work difficulty as a multiple of the minimum "
 "difficulty."
 msgstr ""
+"Renvoie la difficulté de la preuve de travail en tant que multiple de la "
+"difficulté minimale."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:445
 msgid "getmempoolinfo"
-msgstr ""
+msgstr "getmempoolinfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:446
 msgid "Returns details on the active state of the TX memory pool."
 msgstr ""
+"Renvoie des détails sur l'état actif du tampon mémoire de transactions."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:447
 msgid "getrawmempool ( verbose )"
-msgstr ""
+msgstr "getrawmempool ( bavard )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:448
 msgid ""
 "Returns all transaction ids in memory pool as a json array of string "
 "transaction ids."
 msgstr ""
+"Renvoie tous les identifiants de transaction dans le tampon mémoire sous "
+"forme de tableau JSON des chaînes d'identifiants de transaction."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:449
 msgid "getspentinfo"
-msgstr ""
+msgstr "getspentinfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:450
 msgid "Returns the txid and index where an output is spent."
 msgstr ""
+"Renvoie l'identifiant de transaction et l'index correspondant à une sortie "
+"dépensée."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:451
 msgid "gettxout \"txid\" n ( includemempool )"
-msgstr ""
+msgstr "gettxout \"txid\" n ( includemempool )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:452
 msgid "Returns details about an unspent transaction output."
-msgstr ""
+msgstr "Renvoie des détails sur une sortie de transaction non dépensée."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:453
 msgid "gettxoutproof [\"txid\",...] ( blockhash )"
-msgstr ""
+msgstr "gettxoutproof [\"txid\",...] ( blockhash )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:454
 msgid "Returns a hex-encoded proof that \"txid\" was included in a block."
 msgstr ""
+"Renvoie une preuve codée en hexadécimal que la transaction \"txid\" a été "
+"incluse dans un bloc."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:455
 msgid "gettxoutsetinfo"
-msgstr ""
+msgstr "gettxoutsetinfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:456
 msgid ""
 "Returns statistics about the unspent transaction output set. Note this call "
 "may take some time."
 msgstr ""
+"Renvoie des statistiques sur le jeu de sorties de transactions non "
+"dépensées. Veuillez noter que ça peut prendre un certain temps."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:457
 msgid "verifychain ( checklevel numblocks )"
-msgstr ""
+msgstr "verifychain ( checklevel numblocks )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:458
 msgid "Verifies blockchain database."
-msgstr ""
+msgstr "Vérifie la base de données de la blockchain."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:461
 msgid "verifytxoutproof \"proof\""
-msgstr ""
+msgstr "verifytxoutproof \"proof\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:460
 msgid ""
@@ -1375,10 +1665,13 @@ msgid ""
 "transaction it commits to nd throwing an RPC error if the block is not in "
 "our best chain."
 msgstr ""
+"Vérifie qu'une preuve pointe vers une transaction dans un bloc, en renvoyant"
+" la transaction associée et une erreur RPC si le bloc n'est pas dans la "
+"meilleure chaîne."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:464
 msgid "Control"
-msgstr ""
+msgstr "Contrôle"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:466
 msgid ""
@@ -1387,37 +1680,45 @@ msgid ""
 " tor | zmq | dash | privatesend | instantsend | masternode | spork | keepass"
 " | mnpayments | gobject )"
 msgstr ""
+"debug ( 0 | 1 | addrman | alert | bench | coindb | db | lock | rand | rpc | "
+"selectcoins | mempool | mempoolrej | net | proxy | prune | http | libevent |"
+" tor | zmq | dash | privatesend | instantsend | masternode | spork | keepass"
+" | mnpayments | gobject )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:467
 msgid ""
 "Change debug category on the fly. Specify single category or use comma to "
 "specify many."
 msgstr ""
+"Modifie la catégorie de débogage en temps réel. Indiquez une catégorie "
+"unique ou utilisez des virgules pour en séparer plusieurs."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:468
 msgid "getinfo"
-msgstr ""
+msgstr "getinfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:469
 msgid "Deprecated. Returns an object containing various state info."
-msgstr ""
+msgstr "Obsolète. Renvoie un objet contenant diverses informations d'état."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:470
 msgid "help ( \"command\" )"
-msgstr ""
+msgstr "help ( \"commande\" )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:471
 msgid "List all commands, or get help for a specified command."
 msgstr ""
+"Afficher la liste de toutes les commandes, ou obtenir de l'aide sur une "
+"commande spécifiée."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:474
 #: ../../wallets/dashcore/cmd-rpc.rst:559
 msgid "stop"
-msgstr ""
+msgstr "stop"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:473
 msgid "Stop Dash Core server."
-msgstr ""
+msgstr "Arrêter le serveur Dash Core."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:477
 msgid "Dash"
@@ -1425,346 +1726,386 @@ msgstr "Dash"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:479
 msgid "getgovernanceinfo"
-msgstr ""
+msgstr "getgovernanceinfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:480
 msgid "Returns an object containing governance parameters."
-msgstr ""
+msgstr "Renvoie un objet contenant les paramètres de gouvernance."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:481
 msgid "getpoolinfo"
-msgstr ""
+msgstr "getpoolinfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:482
 msgid "Returns an object containing mixing pool related information."
 msgstr ""
+"Renvoie un objet contenant des informations relatives au pool de mélange. "
 
 #: ../../wallets/dashcore/cmd-rpc.rst:483
 msgid "getsuperblockbudget index"
-msgstr ""
+msgstr "getsuperblockbudget index"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:484
 msgid "Returns the absolute maximum sum of superblock payments allowed."
 msgstr ""
+"Renvoie la somme maximale absolument autorisée des paiements de superbloc."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:512
 msgid "gobject \"command\"..."
-msgstr ""
+msgstr "gobject \"commande\"..."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:486
 msgid "Manage governance objects. Available commands:"
-msgstr ""
+msgstr "Gérer les objets de gouvernance. Commandes disponibles :"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:488
 msgid "check"
-msgstr ""
+msgstr "check"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:489
 msgid "Validate governance object data (proposal only)"
 msgstr ""
+"Valider les données d'objet de gouvernance (propositions budgétaires "
+"seulement)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:490
 msgid "prepare"
-msgstr ""
+msgstr "prepare"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:491
 msgid "Prepare governance object by signing and creating tx"
 msgstr ""
+"Préparer un objet de gouvernance en le signant et en créant la transaction"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:492
 msgid "submit"
-msgstr ""
+msgstr "submit"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:493
 msgid "Submit governance object to network"
-msgstr ""
+msgstr "Soumettre l'objet de gouvernance au réseau"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:494
 msgid "deserialize"
-msgstr ""
+msgstr "deserialize"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:495
 msgid "Deserialize governance object from hex string to JSON"
 msgstr ""
+"Désérialiser l'objet de gouvernance, d'une chaîne hexadécimale en JSON"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:496
 #: ../../wallets/dashcore/cmd-rpc.rst:517
 msgid "count"
-msgstr ""
+msgstr "count"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:497
 msgid "Count governance objects and votes"
-msgstr ""
+msgstr "Compter les objets de gouvernance et les votes"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:498
 msgid "get"
-msgstr ""
+msgstr "get"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:499
 msgid "Get governance object by hash"
-msgstr ""
+msgstr "Récupérer un objet de gouvernance par sa signature de hachage"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:500
 msgid "getvotes"
-msgstr ""
+msgstr "getvotes"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:501
 msgid "Get all votes for a governance object hash (including old votes)"
 msgstr ""
+"Récupérer tous les votes correspondant au hachage d'un objet de gouvernance "
+"(dont les vieux votes)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:502
 msgid "getcurrentvotes"
-msgstr ""
+msgstr "getcurrentvotes"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:503
 msgid ""
 "Get only current (tallying) votes for a governance object hash (does not "
 "include old votes)"
 msgstr ""
+"Récupérer selon les votes actuels (décomptés) correspondant au hachage d'un "
+"objet de gouvernance (n'inclut pas les vieux votes)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:504
 #: ../../wallets/dashcore/cmd-rpc.rst:531
 msgid "list"
-msgstr ""
+msgstr "list"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:505
 msgid "List governance objects (can be filtered by signal and/or object type)"
 msgstr ""
+"Afficher la liste des objets de gouvernance (peut être filtrée par signal "
+"et/ou type d'objet)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:506
 msgid "diff"
-msgstr ""
+msgstr "diff"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:507
 msgid "List differences since last diff"
-msgstr ""
+msgstr "Afficher la liste des différences depuis la dernière modification"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:508
 msgid "vote-alias"
-msgstr ""
+msgstr "vote-alias"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:509
 msgid ""
 "Vote on a governance object by masternode alias (using masternode.conf "
 "setup)"
 msgstr ""
+"Voter sur un objet de gouvernance par un alias de masternode (en utilisant "
+"la configuration du fichier masternode.conf)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:510
 msgid "vote-conf"
-msgstr ""
+msgstr "vote-conf"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:511
 msgid "Vote on a governance object by masternode configured in dash.conf"
 msgstr ""
+"Voter sur un objet de gouvernance pas masternode configuré dans le fichier "
+"dash.conf"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:512
 msgid "vote-many"
-msgstr ""
+msgstr "vote-many"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:513
 msgid ""
 "Vote on a governance object by all masternodes (using masternode.conf setup)"
 msgstr ""
+"Voter sur un objet de gouvernance avec tous les masternodes (en utilisant la"
+" configuration du fichier masternode.conf)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:537
 msgid "masternode \"command\"..."
-msgstr ""
+msgstr "masternode \"commande\"..."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:515
 msgid ""
 "Set of commands to execute masternode related actions. Available commands:"
 msgstr ""
+"Jeu de commandes pour exécuter des actions relatives aux masternodes. "
+"Commandes disponibles :"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:518
 msgid ""
 "Print number of all known masternodes (optional: 'ps', 'enabled', 'all', "
 "'qualify')"
 msgstr ""
+"Afficher le nombre de tous les masternodes connus (facultatif : 'ps', "
+"'enabled', 'all', 'qualify')"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:519
 msgid "current"
-msgstr ""
+msgstr "current"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:520
 msgid ""
 "Print info on current masternode winner to be paid the next block "
 "(calculated locally)"
 msgstr ""
+"Afficher des informations sur le gagnant actuel des masternodes qui sera "
+"payé dans le prochain bloc (calculé localement)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:521
 msgid "genkey"
-msgstr ""
+msgstr "genkey"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:522
 msgid "Generate new masternodeprivkey"
-msgstr ""
+msgstr "Générer une nouvelle clé privée de masternode"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:523
 msgid "outputs"
-msgstr ""
+msgstr "outputs"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:524
 msgid "Print masternode compatible outputs"
-msgstr ""
+msgstr "Afficher les sorties compatibles de masternode"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:525
 msgid "start-alias"
-msgstr ""
+msgstr "start-alias"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:526
 msgid ""
 "Start single remote masternode by assigned alias configured in "
 "masternode.conf"
 msgstr ""
+"Démarrer un seul masternode distant par son alias tel que configuré dans le "
+"fichier masternode.conf"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:527
 msgid "start-<mode>"
-msgstr ""
+msgstr "start-<mode>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:528
 msgid ""
 "Start remote masternodes configured in masternode.conf (<mode>: 'all', "
 "'missing', 'disabled')"
 msgstr ""
+"Démarrer les masternodes distants tels que configurés dans le fichier "
+"masternode.conf (<mode>: 'all', 'missing', 'disabled')"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:529
 msgid "status"
-msgstr ""
+msgstr "status"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:530
 msgid "Print masternode status information"
-msgstr ""
+msgstr "Afficher les informations sur l'état des masternodes"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:532
 msgid "Print list of all known masternodes (see masternodelist for more info)"
 msgstr ""
+"Afficher la liste de tous les masternodes connus (voir masternodelist pour "
+"en savoir plus)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:533
 msgid "list-conf"
-msgstr ""
+msgstr "list-conf"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:534
 msgid "Print masternode.conf in JSON format"
-msgstr ""
+msgstr "Afficher le fichier \"masternode.conf\" au format JSON"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:535
 msgid "winner"
-msgstr ""
+msgstr "winner"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:536
 msgid "Print info on next masternode winner to vote for"
 msgstr ""
+"Afficher les informations sur le prochain masternode gagnant pour lequel "
+"voter"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:537
 msgid "winners"
-msgstr ""
+msgstr "winners"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:538
 msgid "Print list of masternode winners"
-msgstr ""
+msgstr "Afficher la liste des masternodes gagnants"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:548
 msgid "masternodebroadcast \"command\"..."
-msgstr ""
+msgstr "masternodebroadcast \"commande\"..."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:540
 msgid ""
 "Set of commands to create and relay masternode broadcast messages. Available"
 " commands:"
 msgstr ""
+"Jeu de commandes pour créer et retransmettre des messages diffusés de "
+"masternodes. Commandes disponibles :"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:542
 msgid "create-alias"
-msgstr ""
+msgstr "create-alias"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:543
 msgid ""
 "Create single remote masternode broadcast message by assigned alias "
 "configured in masternode.conf"
 msgstr ""
+"Créer un seul message diffusé pour un masternode distant, en utilisant son "
+"alias tel que configuré dans le fichier masternode.conf"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:544
 msgid "create-all"
-msgstr ""
+msgstr "create-all"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:545
 msgid ""
 "Create remote masternode broadcast messages for all masternodes configured "
 "in masternode.conf"
 msgstr ""
+"Créer des messages diffusés pour tous les masternodes distants tels que "
+"configurés dans le fichier masternode.conf"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:546
 msgid "decode"
-msgstr ""
+msgstr "decode"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:547
 msgid "Decode masternode broadcast message"
-msgstr ""
+msgstr "Décoder le message diffusé de masternode"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:548
 msgid "relay"
-msgstr ""
+msgstr "relay"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:549
 msgid "Relay masternode broadcast message to the network"
-msgstr ""
+msgstr "Retransmettre le message diffusé de masternode au réseau"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:550
 msgid "masternodelist ( \"mode\" \"filter\" )"
-msgstr ""
+msgstr "masternodelist ( \"mode\" \"filtre\" )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:551
 msgid "Get a list of masternodes in different modes"
-msgstr ""
+msgstr "Obtenir une liste des masternodes en différents modes"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:552
 msgid "mnsync [status|next|reset]"
-msgstr ""
+msgstr "mnsync [status|next|reset]"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:553
 msgid ""
 "Returns the sync status, updates to the next step or resets it entirely."
 msgstr ""
+"Renvoie l'état de synchronisation, met à jour vers l'étape suivante, ou le "
+"réinitialise entièrement."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:561
 msgid "privatesend \"command\""
-msgstr ""
+msgstr "privatesend \"commande\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:555
 msgid "Available commands:"
-msgstr ""
+msgstr "Commandes disponibles :"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:557
 msgid "start"
-msgstr ""
+msgstr "start"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:558
 msgid "Start mixing"
-msgstr ""
+msgstr "Commencer le mélange"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:560
 msgid "Stop mixing"
-msgstr ""
+msgstr "Arrêter le mélange"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:561
 msgid "reset"
-msgstr ""
+msgstr "reset"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:562
 msgid "Reset mixing"
-msgstr ""
+msgstr "Réinitialise le mélange"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:563
 msgid "sentinelping version"
-msgstr ""
+msgstr "sentinelping version"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:564
 msgid "Sentinel ping."
-msgstr ""
+msgstr "Ping sur Sentinel."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:565
 msgid "spork <name> [<value>]"
-msgstr ""
+msgstr "spork <name> [<value>]"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:566
 msgid ""
@@ -1773,34 +2114,43 @@ msgid ""
 "to enable or disable spork. Requires wallet passphrase to be set with "
 "walletpassphrase call."
 msgstr ""
+"<name> est le nom du spork correspondant, ou \"show\" pour afficher tous les"
+" réglages de spork actuels, \"active\" pour afficher les sporks "
+"actifs<value> est un horodatage \"datetime\" pour activer ou désactiver le "
+"spork. Nécessite que la phrase de passe du portefeuille soit définie avec "
+"l'appel walletpassphrase."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:569
 msgid ""
 "voteraw <masternode-tx-hash> <masternode-tx-index> <governance-hash> <vote-"
 "signal> [yes|no|abstain] <time> <vote-sig>"
 msgstr ""
+"voteraw <masternode-tx-hash> <masternode-tx-index> <governance-hash> <vote-"
+"signal> [yes|no|abstain] <time> <vote-sig>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:568
 msgid ""
 "Compile and relay a governance vote with provided external signature instead"
 " of signing vote internally."
 msgstr ""
+"Compiler et retransmettre un vote de gouvernance avec la signature externe "
+"fournie plutôt que de signer le vote en interne."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:572
 msgid "Generating"
-msgstr ""
+msgstr "Génération"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:574
 msgid "generate numblocks"
-msgstr ""
+msgstr "generate numblocks"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:575
 msgid "Mine blocks immediately (before the RPC call returns)."
-msgstr ""
+msgstr "Minage immédiat de blocs (avant le renvoi de l'appel RPC)."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:576
 msgid "getgenerate"
-msgstr ""
+msgstr "getgenerate"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:577
 msgid ""
@@ -1808,10 +2158,14 @@ msgid ""
 "It is set with the command line argument -gen (or dash.conf setting gen). It"
 " can also be set with the setgenerate call."
 msgstr ""
+"Renvoie si le serveur est configuré ou non pour générer des pièces. Le "
+"défaut est \"false\". Cela est configuré par l'argument de ligne de commande"
+" -gen (ou le réglage gen dans le fichier dash.conf). Cela peut aussi être "
+"défini avec l'appel setgenerate."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:580
 msgid "setgenerate generate ( genproclimit )"
-msgstr ""
+msgstr "setgenerate generate ( genproclimit )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:579
 msgid ""
@@ -1819,6 +2173,9 @@ msgid ""
 "limited to 'genproclimit' processors, -1 is unlimited. See the getgenerate "
 "call for the current setting."
 msgstr ""
+"Définir \"generate\" sur \"true\" ou \"false\" pour activer ou désactiver la"
+" génération. La génération est limitée à \"genproclimit\" processeurs, -1 "
+"est illimité. Voir l'appel getgenerate pour le réglage actuel."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:583
 msgid "Mining"
@@ -1834,18 +2191,22 @@ msgid ""
 "select between the default 'template' request or a 'proposal'. It returns "
 "data needed to construct a block to work on."
 msgstr ""
+"Si les paramètres de requête incluent une clé \"mode\", elle est utilisée "
+"pour choisir explicitement entre la requête \"modèle\" par défaut ou une "
+"\"proposition\". Renvoie les données nécessaires pour former un bloc sur "
+"lequel travailler."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:587
 msgid "getmininginfo"
-msgstr ""
+msgstr "getmininginfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:588
 msgid "Returns a json object containing mining-related information."
-msgstr ""
+msgstr "Renvoie un objet JSON contenant des informations relatives au minage."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:589
 msgid "getnetworkhashps ( blocks height )"
-msgstr ""
+msgstr "getnetworkhashps ( blocks height )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:590
 msgid ""
@@ -1854,19 +2215,26 @@ msgid ""
 " change. Pass in [height] to estimate the network speed at the time when a "
 "certain block was found."
 msgstr ""
+"Renvoie le nombre estimé de hachages par seconde du réseau, en se basant sur"
+" les n derniers blocs. Indiquez [blocks] pour outrepasser le nombre de "
+"blocs, -1 indiquant la période depuis la dernière modification de la "
+"difficulté. Indiquez [height] pour estimer la vitesse du réseau au moment où"
+" un certain bloc a été découvert."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:591
 msgid "prioritisetransaction <txid> <priority delta> <fee delta>"
-msgstr ""
+msgstr "prioritisetransaction <txid> <priority delta> <fee delta>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:592
 msgid ""
 "Accepts the transaction into mined blocks at a higher (or lower) priority."
 msgstr ""
+"Accepte la transaction dans les blocs minés avec une priorité supérieure (ou"
+" inférieure)."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:595
 msgid "submitblock \"hexdata\" ( \"jsonparametersobject\" )"
-msgstr ""
+msgstr "submitblock \"hexdata\" ( \"jsonparametersobject\" )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:594
 msgid ""
@@ -1874,6 +2242,9 @@ msgid ""
 "parameter is currently ignored. See https://en.bitcoin.it/wiki/BIP_0022 for "
 "full specification."
 msgstr ""
+"Essaie de soumettre un nouveau bloc au réseau. Le paramètre "
+"'jsonparametersobject' est actuellement ignoré. Pour voir la spécification "
+"complète, voir https://en.bitcoin.it/wiki/BIP_0022 ."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:598
 msgid "Network"
@@ -1881,87 +2252,99 @@ msgstr "Réseau"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:600
 msgid "addnode \"node\" \"add|remove|onetry\""
-msgstr ""
+msgstr "addnode \"node\" \"add|remove|onetry\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:601
 msgid ""
 "Attempts add or remove a node from the addnode list. Or try a connection to "
 "a node once."
 msgstr ""
+"Essaie d'ajouter ou d'enlever un nœud depuis la liste d'ajout de nœuds. Ou "
+"essaie une connexion à un nœud une seule fois."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:602
 msgid "clearbanned"
-msgstr ""
+msgstr "clearbanned"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:603
 msgid "Clear all banned IPs."
-msgstr ""
+msgstr "Effacer toutes les adresses IP bannies."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:604
 msgid "disconnectnode \"node\""
-msgstr ""
+msgstr "disconnectnode \"nœud\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:605
 msgid "Immediately disconnects from the specified node."
-msgstr ""
+msgstr "Se déconnecte immédiatement du nœud indiqué."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:606
 msgid "getaddednodeinfo dummy ( \"node\" )"
-msgstr ""
+msgstr "getaddednodeinfo dummy ( \"nœud\" )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:607
 msgid ""
 "Returns information about the given added node, or all added nodes (note "
 "that onetry addnodes are not listed here)."
 msgstr ""
+"Renvoie des informations sur le nœud ajouté donné, ou sur tous les nœuds "
+"ajoutés (veuillez noter que les nœuds ajoutés onetry ne sont pas répertoriés"
+" ici)."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:608
 msgid "getconnectioncount"
-msgstr ""
+msgstr "getconnectioncount"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:609
 msgid "Returns the number of connections to other nodes."
-msgstr ""
+msgstr "Renvoie le nombre de connexions à d'autres nœuds."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:610
 msgid "getnettotals"
-msgstr ""
+msgstr "getnettotals"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:611
 msgid ""
 "Returns information about network traffic, including bytes in, bytes out, "
 "and current time."
 msgstr ""
+"Renvoie des informations sur le trafic réseau, dont les octets entrants, les"
+" octets sortants et l'heure actuelle."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:612
 msgid "getnetworkinfo"
-msgstr ""
+msgstr "getnetworkinfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:613
 msgid ""
 "Returns an object containing various state info regarding P2P networking."
 msgstr ""
+"Renvoie un objet contenant diverses informations d'état relatives au réseau "
+"pair à pair."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:614
 msgid "getpeerinfo"
-msgstr ""
+msgstr "getpeerinfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:615
 msgid ""
 "Returns data about each connected network node as a json array of objects."
 msgstr ""
+"Renvoie des données sur chaque nœud connecté du réseau, sous forme de "
+"tableau JSON d'objets."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:616
 msgid "listbanned"
-msgstr ""
+msgstr "listbanned"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:617
 msgid "List all banned IPs/Subnets."
 msgstr ""
+"Afficher la liste de toutes les adresses IP ou tous les sous-réseaux bannis."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:618
 msgid "ping"
-msgstr ""
+msgstr "ping"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:619
 msgid ""
@@ -1970,32 +2353,41 @@ msgid ""
 "seconds. Ping command is handled in queue with all other commands, so it "
 "measures processing backlog, not just network ping."
 msgstr ""
+"Demande l'envoi d'un ping à tous les autres nœuds, pour évaluer le temps de "
+"ping. Les résultats fournis par les champs getpeerinfo, pingtime et pingwait"
+" sont exprimés en secondes décimales. La commande ping est traitée en file "
+"d'attente avec les autres commandes, donc elle mesure l'arriéré de "
+"traitement, pas uniquement le ping de réseau."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:620
 msgid "setban \"ip(/netmask)\" \"add|remove\" (bantime) (absolute)"
-msgstr ""
+msgstr "setban \"ip(/netmask)\" \"add|remove\" (bantime) (absolute)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:621
 msgid "Attempts add or remove a IP/Subnet from the banned list."
 msgstr ""
+"Essaie d'ajouter ou d'enlever une adresse IP ou un sous-réseau de la liste "
+"des bannis."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:624
 msgid "setnetworkactive true|false"
-msgstr ""
+msgstr "setnetworkactive true|false"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:623
 msgid "Disable/enable all p2p network activity."
-msgstr ""
+msgstr "Désactive/active toute l'activité réseau pair à pair."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:627
 msgid "Rawtransactions"
-msgstr ""
+msgstr "Rawtransactions"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:629
 msgid ""
 "createrawtransaction [{\"txid\":\"id\",\"vout\":n},...] "
 "{\"address\":amount,\"data\":\"hex\",...} ( locktime )"
 msgstr ""
+"createrawtransaction [{\"txid\":\"id\",\"vout\":n},...] "
+"{\"address\":amount,\"data\":\"hex\",...} ( locktime )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:630
 msgid ""
@@ -2004,27 +2396,34 @@ msgid ""
 "that the transaction's inputs are not signed, and it is not stored in the "
 "wallet or transmitted to the network."
 msgstr ""
+"Créer une transaction qui dépense toutes les entrées données et crée de "
+"nouvelles sorties. Les sorties peuvent être des adresses ou des données. "
+"Renvoie la transaction brute codée en hexadécimal. À noter que les entrées "
+"de transaction ne sont pas signées, et qu'elle n'est pas stockée dans le "
+"portefeuille ni transmise au réseau."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:631
 msgid "decoderawtransaction \"hexstring\""
-msgstr ""
+msgstr "decoderawtransaction \"hexstring\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:632
 msgid ""
 "Return a JSON object representing the serialized, hex-encoded transaction."
 msgstr ""
+"Renvoie un objet JSON représentant la transaction sérialisée, codée en "
+"hexadécimal."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:633
 msgid "decodescript \"hex\""
-msgstr ""
+msgstr "decodescript \"hex\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:634
 msgid "Decode a hex-encoded script."
-msgstr ""
+msgstr "Décode un script codé en hexadécimal."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:635
 msgid "fundrawtransaction \"hexstring\" includeWatching"
-msgstr ""
+msgstr "fundrawtransaction \"hexstring\" includeWatching"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:636
 msgid ""
@@ -2032,10 +2431,14 @@ msgid ""
 "value. This will not modify existing inputs, and will add one change output "
 "to the outputs."
 msgstr ""
+"Ajoute des entrées à une transaction jusqu'à ce que sa valeur soit "
+"suffisante pour correspondre à sa valeur de sortie. Cela ne modifiera pas "
+"les entrées existantes, et ajoutera aux sorties une sortie de monnaie "
+"rendue."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:637
 msgid "getrawtransaction \"txid\" ( verbose )"
-msgstr ""
+msgstr "getrawtransaction \"txid\" ( bavard )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:638
 msgid ""
@@ -2043,16 +2446,22 @@ msgid ""
 "serialized, hex-encoded data for 'txid'. If verbose is non-zero, returns an "
 "Object with information about 'txid'."
 msgstr ""
+"Renvoie les données de transaction brute. Si \"bavard\" est 0, renvoie une "
+"chaîne sérialisée, codée en hexadécimal pour \"txid\". Si \"bavard\" n'est "
+"pas 0, renvoie un objet avec des informations sur \"txid\"."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:639
 msgid "sendrawtransaction \"hexstring\" ( allowhighfees instantsend )"
-msgstr ""
+msgstr "sendrawtransaction \"hexstring\" ( allowhighfees instantsend )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:640
 msgid ""
 "Submits raw transaction (serialized, hex-encoded) to local node and network."
 " Also see createrawtransaction and signrawtransaction calls."
 msgstr ""
+"Soumet une transaction brute (sérialisée, codée en hexadécimal) au nœud "
+"local et au réseau. Voir aussi les appels createrawtransaction et "
+"signrawtransaction."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:643
 msgid ""
@@ -2060,6 +2469,9 @@ msgid ""
 "[{\"txid\":\"id\",\"vout\":n,\"scriptPubKey\":\"hex\",\"redeemScript\":\"hex\"},...]"
 " [\"privatekey1\",...] sighashtype )"
 msgstr ""
+"signrawtransaction \"hexstring\" ( "
+"[{\"txid\":\"id\",\"vout\":n,\"scriptPubKey\":\"hex\",\"redeemScript\":\"hex\"},...]"
+" [\"privatekey1\",...] sighashtype )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:642
 msgid ""
@@ -2069,44 +2481,56 @@ msgid ""
 "third optional argument (may be null) is an array of base58-encoded private "
 "keys that, if given, will be the only keys used to sign the transaction."
 msgstr ""
+"Signe les entrées pour une transaction brute (sérialisée, codée en "
+"hexadécimal). Le second argument facultatif (peut être nul) est un tableau "
+"des précédentes sorties de transaction dont dépend cette transaction mais "
+"qui peuvent ne pas être encore dans la blockchain. Le troisième argument "
+"facultatif (peut être nul) est un tableau de clés privées codées base58 qui,"
+" si fournies, seront les seules clés utilisées pour signer la transaction."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:646
 msgid "Util"
-msgstr ""
+msgstr "Outils"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:648
 msgid "createmultisig nrequired [\"key\",...]"
-msgstr ""
+msgstr "createmultisig nrequired [\"key\",...]"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:649
 msgid ""
 "Creates a multi-signature address with n signature of m keys required. It "
 "returns a json object with the address and redeemScript."
 msgstr ""
+"Crée une adresse multi-signature avec n signatures sur m clés requises. "
+"Renvoie un objet JSON avec l'adresse et redeemScript."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:650
 msgid "estimatefee nblocks"
-msgstr ""
+msgstr "estimatefee nblocks"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:651
 msgid ""
 "Estimates the approximate fee per kilobyte needed for a transaction to begin"
 " confirmation within nblocks blocks."
 msgstr ""
+"Estime les frais approximatifs par Ko nécessaires pour qu'une transaction "
+"commence à être confirmée dans les n blocs."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:652
 msgid "estimatepriority nblocks"
-msgstr ""
+msgstr "estimatepriority nblocks"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:653
 msgid ""
 "Estimates the approximate priority a zero-fee transaction needs to begin "
 "confirmation within nblocks blocks."
 msgstr ""
+"Estime la priorité approximative pour qu'une transaction sans frais commence"
+" à être confirmée dans les n blocs."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:654
 msgid "estimatesmartfee nblocks"
-msgstr ""
+msgstr "estimatesmartfee nblocks"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:655
 msgid ""
@@ -2115,10 +2539,14 @@ msgid ""
 "confirmation within nblocks blocks if possible and return the number of "
 "blocks for which the estimate is valid."
 msgstr ""
+"AVERTISSEMENT : cette interface est instable et peut disparaître ou être "
+"modifiée ! Estime les frais approximatifs par Ko nécessaires pour qu'une "
+"transaction commence à être confirmée dans les n blocs, si possible, et "
+"renvoie le nombre de blocs pour lequel l'estimation est valable."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:656
 msgid "estimatesmartpriority nblocks"
-msgstr ""
+msgstr "estimatesmartpriority nblocks"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:657
 msgid ""
@@ -2127,22 +2555,26 @@ msgid ""
 "within nblocks blocks if possible and return the number of blocks for which "
 "the estimate is valid."
 msgstr ""
+"AVERTISSEMENT : cette interface est instable et peut disparaître ou être "
+"modifiée ! Estime la priorité approximative pour qu'une transaction sans "
+"frais commence à être confirmée dans les n blocs, si possible, et renvoie le"
+" nombre de blocs pour lequel l'estimation est valable."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:658
 msgid "validateaddress \"dashaddress\""
-msgstr ""
+msgstr "validateaddress \"dashaddress\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:659
 msgid "Return information about the given dash address."
-msgstr ""
+msgstr "Renvoie des informations sur l'adresse Dash donnée."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:662
 msgid "verifymessage \"dashaddress\" \"signature\" \"message\""
-msgstr ""
+msgstr "verifymessage \"dashaddress\" \"signature\" \"message\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:661
 msgid "Verify a signed message."
-msgstr ""
+msgstr "Vérifie un message signé."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:665
 msgid "Wallet"
@@ -2150,7 +2582,7 @@ msgstr "Portefeuille"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:667
 msgid "abandontransaction \"txid\""
-msgstr ""
+msgstr "abandontransaction \"txid\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:668
 msgid ""
@@ -2158,10 +2590,13 @@ msgid ""
 "transaction and all its in-wallet descendants as abandoned which will allow "
 "for their inputs to be respent."
 msgstr ""
+"Marque la transaction de portefeuille <txid> comme abandonnée. Cela marquera"
+" la transaction et tous ses descendants dans le portefeuille comme "
+"abandonnés, ce qui permettra à leurs entrées d'être dépensées à nouveau."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:669
 msgid "addmultisigaddress nrequired [\"key\",...] ( \"account\" )"
-msgstr ""
+msgstr "addmultisigaddress nrequired [\"key\",...] ( \"account\" )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:670
 msgid ""
@@ -2169,47 +2604,59 @@ msgid ""
 "Dash address or hex-encoded public key. If 'account' is specified "
 "(DEPRECATED), assign address to that account."
 msgstr ""
+"Ajoute une adresse multi-signature de type \"n requis pour signer\" au "
+"portefeuille. Chaque clé est une adresse Dash ou une clé publique codée en "
+"hexadécimal. Si \"account\" est indiqué (OBSOLÈTE), assigner l'adresse à ce "
+"compte."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:671
 msgid "backupwallet \"destination\""
-msgstr ""
+msgstr "backupwallet \"destination\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:672
 msgid ""
 "Safely copies wallet.dat to destination, which can be a directory or a path "
 "with filename."
 msgstr ""
+"Sauvegarde de manière sécurisée le fichier wallet.dat vers la destination, "
+"qui peut être un répertoire ou un chemin vers un nom de fichier."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:673
 msgid "dumphdinfo"
-msgstr ""
+msgstr "dumphdinfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:674
 msgid ""
 "Returns an object containing sensitive private info about this HD wallet."
 msgstr ""
+"Renvoie un objet contenant des informations sensibles et confidentielles sur"
+" ce portefeuille HD."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:675
 msgid "dumpprivkey \"dashaddress\""
-msgstr ""
+msgstr "dumpprivkey \"adresseDash\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:676
 msgid ""
 "Reveals the private key corresponding to 'dashaddress'. Then the "
 "importprivkey can be used with this output"
 msgstr ""
+"Révèle la clé privée correspondant à \"adresseDash\". Ensuite, importprivkey"
+" peut être utilisé avec cette valeur"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:677
 msgid "dumpwallet \"filename\""
-msgstr ""
+msgstr "dumpwallet \"nomdefichier\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:678
 msgid "Dumps all wallet keys in a human-readable format."
 msgstr ""
+"Enregistre toutes les clés du portefeuille dans un format lisible par un "
+"humain."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:679
 msgid "encryptwallet \"passphrase\""
-msgstr ""
+msgstr "encryptwallet \"phrasedepasse\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:680
 msgid ""
@@ -2220,36 +2667,45 @@ msgid ""
 "wallet is already encrypted, use the walletpassphrasechange call. Note that "
 "this will shutdown the server."
 msgstr ""
+"Chiffre le portefeuille avec \"phrasedepasse\". Il s'agit du tout premier "
+"chiffrage. Après cela, tous les appels pour interagir avec les clés privées,"
+" tels que l'envoi ou la signature, demanderont la phrase de passe avant que "
+"l'appel ne soit exécuté. Utilisez pour cela l'appel walletpassphrase, puis "
+"walletlock. Si le portefeuille est déjà chiffré, utilisez l'appel "
+"walletpassphrasechange. Veuillez noter que cela forcera la fermeture du "
+"serveur."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:681
 msgid "getaccount \"dashaddress\""
-msgstr ""
+msgstr "getaccount \"adresseDash\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:682
 msgid "DEPRECATED. Returns the account associated with the given address."
-msgstr ""
+msgstr "OBSOLÈTE. Renvoie le compte associé à l'adresse donnée."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:683
 msgid "getaccountaddress \"account\""
-msgstr ""
+msgstr "getaccountaddress \"compte\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:684
 msgid ""
 "DEPRECATED. Returns the current Dash address for receiving payments to this "
 "account."
 msgstr ""
+"OBSOLÈTE. Renvoie l'adresse Dash actuelle pour recevoir des paiements sur ce"
+" compte."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:685
 msgid "getaddressesbyaccount \"account\""
-msgstr ""
+msgstr "getaddressesbyaccount \"compte\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:686
 msgid "DEPRECATED. Returns the list of addresses for the given account."
-msgstr ""
+msgstr "OBSOLÈTE. Renvoie la liste d'adresses pour le compte donné."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:687
 msgid "getbalance ( \"account\" minconf addlockconf includeWatchonly )"
-msgstr ""
+msgstr "getbalance ( \"compte\" minconf addlockconf includeWatchonly )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:688
 msgid ""
@@ -2258,10 +2714,14 @@ msgid ""
 "Note that the account \"\" is not the same as leaving the parameter out. The"
 " server total may be different to the balance in the default \"\" account."
 msgstr ""
+"Si \"compte\" n'est pas indiqué, renvoie le solde total disponible sur le "
+"serveur. Si \"compte\" est indiqué (OBSOLÈTE), renvoie le solde du compte. À"
+" noter que le compte \"\" n'est pas identique à la non-mention du paramètre."
+" Le total du serveur peut être différent au solde du compte par défaut \"\"."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:689
 msgid "getnewaddress ( \"account\" )"
-msgstr ""
+msgstr "getnewaddress ( \"compte\" )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:690
 msgid ""
@@ -2269,204 +2729,246 @@ msgid ""
 " (DEPRECATED), it is added to the address book so payments received with the"
 " address will be credited to 'account'."
 msgstr ""
+"Renvoie une nouvelle adresse Dash pour recevoir des paiements. Si \"compte\""
+" est indiqué (OBSOLÈTE), il est ajouté au carnet d'adresses pour que les "
+"paiements reçus à cette adresse soient crédités dans \"compte\"."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:691
 msgid "getrawchangeaddress"
-msgstr ""
+msgstr "getrawchangeaddress"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:692
 msgid ""
 "Returns a new Dash address, for receiving change. This is for use with raw "
 "transactions, NOT normal use."
 msgstr ""
+"Renvoie une nouvelle adresse Dash, pour la monnaie rendue. Cela s'utilise "
+"avec les transactions brutes, PAS pour une utilisation normale."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:693
 msgid "getreceivedbyaccount \"account\" ( minconf addlockconf )"
-msgstr ""
+msgstr "getreceivedbyaccount \"compte\" ( minconf addlockconf )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:694
 msgid ""
 "DEPRECATED. Returns the total amount received by addresses with <account> in"
 " transactions with specified minimum number of confirmations."
 msgstr ""
+"OBSOLÈTE. Renvoie le montant total reçu par les adresses dans <account> dans"
+" des transactions ayant le nombre minimal indiqué de confirmations."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:695
 msgid "getreceivedbyaddress \"dashaddress\" ( minconf addlockconf )"
-msgstr ""
+msgstr "getreceivedbyaddress \"adresseDash\" ( minconf addlockconf )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:696
 msgid ""
 "Returns the total amount received by the given dashaddress in transactions "
 "with specified minimum number of confirmations."
 msgstr ""
+"Renvoie le montant total reçu par l'adresse Dash donnée dans des "
+"transactions ayant le nombre minimal indiqué de confirmations."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:697
 msgid "gettransaction \"txid\" ( includeWatchonly )"
-msgstr ""
+msgstr "gettransaction \"txid\" ( includeWatchonly )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:698
 msgid "Get detailed information about in-wallet transaction <txid>"
 msgstr ""
+"Obtient des informations détaillées sur la transaction de portefeuille "
+"<txid>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:699
 msgid "getunconfirmedbalance"
-msgstr ""
+msgstr "getunconfirmedbalance"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:700
 msgid "Returns the server's total unconfirmed balance."
-msgstr ""
+msgstr "Renvoie le solde total non confirmé du serveur."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:701
 msgid "getwalletinfo"
-msgstr ""
+msgstr "getwalletinfo"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:702
 msgid "Returns an object containing various wallet state info."
 msgstr ""
+"Renvoie un objet contenant diverses informations sur l'état de portefeuille."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:703
 msgid "importaddress \"address\" ( \"label\" rescan p2sh )"
-msgstr ""
+msgstr "importaddress \"adresse\" ( \"étiquette\" rescan p2sh )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:704
 msgid ""
 "Adds a script (in hex) or address that can be watched as if it were in your "
 "wallet but cannot be used to spend."
 msgstr ""
+"Ajoute un script (en hexadécimal) ou une adresse qui peut être surveillée "
+"comme si elle était dans votre portefeuille, mais qui ne peut pas être "
+"utilisée en dépense."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:705
 msgid "importelectrumwallet \"filename\" index"
-msgstr ""
+msgstr "importelectrumwallet \"nomdefichier\" index"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:706
 msgid "Imports keys from an Electrum wallet export file (.csv or .json)"
 msgstr ""
+"Importe des clés depuis un fichier d'exportation du portefeuille logiciel "
+"Electrum (.csv ou .json)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:707
 msgid "importprivkey \"dashprivkey\" ( \"label\" rescan )"
-msgstr ""
+msgstr "importprivkey \"cléprivéeDash\" ( \"étiquette\" rescan )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:708
 msgid "Adds a private key (as returned by dumpprivkey) to your wallet."
 msgstr ""
+"Ajoute une clé privée (telle que renvoyée par dumpprivkey) à votre "
+"portefeuille."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:709
 msgid "importpubkey \"pubkey\" ( \"label\" rescan )"
-msgstr ""
+msgstr "importpubkey \"clépublique\" ( \"étiquette\" rescan )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:710
 msgid ""
 "Adds a public key (in hex) that can be watched as if it were in your wallet "
 "but cannot be used to spend."
 msgstr ""
+"Ajoute une clé publique (en hexadécimal) qui peut être surveillée comme si "
+"elle était dans votre portefeuille, mais qui ne peut pas être utilisée en "
+"dépense."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:711
 msgid "importwallet \"filename\""
-msgstr ""
+msgstr "importwallet \"nomdefichier\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:712
 msgid "Imports keys from a wallet dump file (see dumpwallet)."
 msgstr ""
+"Importe des clés depuis un fichier d'exportation de portefeuille (voir "
+"dumpwallet)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:713
 msgid ""
 "instantsendtoaddress \"dashaddress\" amount ( \"comment\" \"comment-to\" "
 "subtractfeefromamount )"
 msgstr ""
+"instantsendtoaddress \"adresseDash\" amount ( \"commentaire\" "
+"\"commentaire-à\" subtractfeefromamount )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:714
 msgid ""
 "Send an amount to a given address. The amount is a real and is rounded to "
 "the nearest 0.00000001"
 msgstr ""
+"Envoie un montant à une adresse donnée. Le montant est un nombre réel et il "
+"est arrondi au 0,00000001 dash le plus proche."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:715
 msgid "keepass <genkey|init|setpassphrase>"
-msgstr ""
+msgstr "keepass <genkey|init|setpassphrase>"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:716
 msgid "Keepass settings."
-msgstr ""
+msgstr "Réglages KeePass."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:717
 msgid "keypoolrefill ( newsize )"
-msgstr ""
+msgstr "keypoolrefill ( newsize )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:718
 msgid "Fills the keypool."
-msgstr ""
+msgstr "Réalimente le jeu de clés."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:719
 msgid "listaccounts ( minconf addlockconf includeWatchonly)"
-msgstr ""
+msgstr "listaccounts ( minconf addlockconf includeWatchonly)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:720
 msgid ""
 "DEPRECATED. Returns Object that has account names as keys, account balances "
 "as values."
 msgstr ""
+"OBSOLÈTE. Renvoie un objet avec les noms de compte comme clés, et les soldes"
+" de compte comme valeurs."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:721
 msgid "listaddressgroupings"
-msgstr ""
+msgstr "listaddressgroupings"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:722
 msgid ""
 "Lists groups of addresses which have had their common ownership made public "
 "by common use as inputs or as the resulting change in past transactions."
 msgstr ""
+"Affiche des groupes d'adresses ayant révélé leur propriétaire commun par "
+"l'utilisation commune d'entrées, ou par la monnaie rendue dans des "
+"transactions antérieures."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:723
 msgid "listlockunspent"
-msgstr ""
+msgstr "listlockunspent"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:724
 msgid ""
 "Returns list of temporarily unspendable outputs. See the lockunspent call to"
 " lock and unlock transactions for spending."
 msgstr ""
+"Renvoie une liste de sorties temporairement non dépensables. Voir l'appel "
+"lockunspent pour verrouiller et déverrouiller des transactions pour la "
+"dépense."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:725
 msgid ""
 "listreceivedbyaccount ( minconf addlockconf includeempty includeWatchonly)"
 msgstr ""
+"listreceivedbyaccount ( minconf addlockconf includeempty includeWatchonly)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:726
 msgid "DEPRECATED. List balances by account."
-msgstr ""
+msgstr "OBSOLÈTE. Répertorie les soldes par compte."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:727
 msgid ""
 "listreceivedbyaddress ( minconf addlockconf includeempty includeWatchonly)"
 msgstr ""
+"listreceivedbyaddress ( minconf addlockconf includeempty includeWatchonly)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:728
 msgid "List balances by receiving address."
-msgstr ""
+msgstr "Répertorie les soldes par adresse de réception."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:729
 msgid "listsinceblock ( \"blockhash\" target-confirmations includeWatchonly)"
-msgstr ""
+msgstr "listsinceblock ( \"blockhash\" target-confirmations includeWatchonly)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:730
 msgid ""
 "Get all transactions in blocks since block [blockhash], or all transactions "
 "if omitted"
 msgstr ""
+"Récupère toutes les transactions dans les blocs depuis le bloc [blockhash], "
+"ou, si omis, toutes les transactions"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:731
 msgid "listtransactions ( \"account\" count from includeWatchonly)"
-msgstr ""
+msgstr "listtransactions ( \"compte\" count from includeWatchonly)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:732
 msgid ""
 "Returns up to 'count' most recent transactions skipping the first 'from' "
 "transactions for account 'account'."
 msgstr ""
+"Renvoie les \"count\" transactions les plus récentes à partir des \"from\" "
+"premières transactions, pour le compte \"compte\"."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:733
 msgid "listunspent ( minconf maxconf [\"address\",...] )"
-msgstr ""
+msgstr "listunspent ( minconf maxconf [\"adresse\",...] )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:734
 msgid ""
@@ -2474,87 +2976,107 @@ msgid ""
 "maxconf (inclusive) confirmations. Optionally filter to only include txouts "
 "paid to specified addresses."
 msgstr ""
+"Renvoie un tableau de sorties de transaction non dépensées comprenant entre "
+"\"minconf\" et \"maxconf\" confirmations (incluses). Filtre facultatif "
+"possible pour afficher seulement les sorties de transaction payées aux "
+"adresses indiquées."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:735
 msgid "lockunspent unlock [{\"txid\":\"txid\",\"vout\":n},...]"
-msgstr ""
+msgstr "lockunspent unlock [{\"txid\":\"txid\",\"vout\":n},...]"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:736
 msgid ""
 "Updates list of temporarily unspendable outputs. Temporarily lock "
 "(unlock=false) or unlock (unlock=true) specified transaction outputs."
 msgstr ""
+"Met à jour la liste de sorties temporairement non dépensables. Verrouillez "
+"(unlock=false) ou déverrouillez (unlock=true) temporairement les sorties de "
+"transaction indiquées."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:737
 msgid "move \"fromaccount\" \"toaccount\" amount ( minconf \"comment\" )"
-msgstr ""
+msgstr "move \"fromaccount\" \"toaccount\" amount ( minconf \"comment\" )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:738
 msgid ""
 "DEPRECATED. Move a specified amount from one account in your wallet to "
 "another."
 msgstr ""
+"OBSOLÈTE. Déplace un montant indiqué d'un compte de votre portefeuille à un "
+"autre."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:739
 msgid ""
 "sendfrom \"fromaccount\" \"todashaddress\" amount ( minconf addlockconf "
 "\"comment\" \"comment-to\" )"
 msgstr ""
+"sendfrom \"fromaccount\" \"todashaddress\" amount ( minconf addlockconf "
+"\"comment\" \"comment-to\" )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:740
 msgid ""
 "DEPRECATED (use sendtoaddress). Sent an amount from an account to a dash "
 "address."
 msgstr ""
+"OBSOLÈTE (utilisez sendtoaddress à la place). Envoie un montant d'un compte "
+"vers une adresse Dash."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:741
 msgid ""
 "sendmany \"fromaccount\" {\"address\":amount,...} ( minconf addlockconf "
 "\"comment\" [\"address\",...] subtractfeefromamount use_is use_ps )"
 msgstr ""
+"sendmany \"fromaccount\" {\"address\":amount,...} ( minconf addlockconf "
+"\"comment\" [\"address\",...] subtractfeefromamount use_is use_ps )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:742
 msgid ""
 "Send multiple times. Amounts are double-precision floating point numbers."
 msgstr ""
+"Envoi multiple. Les montants sont des nombres à virgule flottante à "
+"précision double."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:743
 msgid ""
 "sendtoaddress \"dashaddress\" amount ( \"comment\" \"comment-to\" "
 "subtractfeefromamount use_is use_ps )"
 msgstr ""
+"sendtoaddress \"adresseDash\" amount ( \"comment\" \"comment-to\" "
+"subtractfeefromamount use_is use_ps )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:744
 msgid "Send an amount to a given address."
-msgstr ""
+msgstr "Envoi d'un montant à une adresse donnée."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:745
 msgid "setaccount \"dashaddress\" \"account\""
-msgstr ""
+msgstr "setaccount \"adresseDash\" \"compte\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:746
 msgid "DEPRECATED. Sets the account associated with the given address."
-msgstr ""
+msgstr "OBSOLÈTE. Définit le compte associé à l'adresse donnée."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:747
 msgid "settxfee amount"
-msgstr ""
+msgstr "settxfee amount"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:748
 msgid "Set the transaction fee per kB. Overwrites the paytxfee parameter."
 msgstr ""
+"Définit les frais de transaction par Ko. Annule le paramètre paytxfee."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:749
 msgid "signmessage \"dashaddress\" \"message\""
-msgstr ""
+msgstr "signmessage \"adresseDash\" \"message\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:750
 msgid "Sign a message with the private key of an address."
-msgstr ""
+msgstr "Signe un message avec la clé privée d'une adresse."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:751
 msgid "walletlock"
-msgstr ""
+msgstr "walletlock"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:752
 msgid ""
@@ -2562,10 +3084,14 @@ msgid ""
 "calling this method, you will need to call walletpassphrase again before "
 "being able to call any methods which require the wallet to be unlocked."
 msgstr ""
+"Efface de la mémoire la clé de chiffrage du portefeuille, ce qui verrouille "
+"le portefeuille. Après avoir appelé cette méthode, vous devrez appeler "
+"walletpassphrase une nouvelle fois pour pouvoir appeler n'importe quelle "
+"autre méthode nécessitant un déverrouillage du portefeuille."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:753
 msgid "walletpassphrase \"passphrase\" timeout ( mixingonly )"
-msgstr ""
+msgstr "walletpassphrase \"phrasedepasse\" timeout ( mixingonly )"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:754
 msgid ""
@@ -2573,11 +3099,16 @@ msgid ""
 "needed prior to performing transactions related to private keys such as "
 "sending dashs"
 msgstr ""
+"Stocke en mémoire la clé de déchiffrage du portefeuille, pour une durée de "
+"\"timeout\" secondes. Cela est nécessaire avant d'exécuter des transactions "
+"impliquant les clés privées, telles que l'envoi de dashs."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:755
 msgid "walletpassphrasechange \"oldpassphrase\" \"newpassphrase\""
-msgstr ""
+msgstr "walletpassphrasechange \"vieillephrasedepasse\" \"nouvellephrasedepasse\""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:756
 msgid "Changes the wallet passphrase from 'oldpassphrase' to 'newpassphrase'."
 msgstr ""
+"Modifie la phrase de passe du portefeuille, de \"vieillephrasedepasse\" à "
+"\"nouvellephrasedepasse\"."

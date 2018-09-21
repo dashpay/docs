@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-17 11:43+0000\n"
+"POT-Creation-Date: 2018-09-17 12:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Daf Daf, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -319,11 +319,11 @@ msgstr "Option 2 : Configuration manuelle"
 
 #: ../../mining/p2pool.rst:158
 msgid "First update your operating system as follows::"
-msgstr ""
+msgstr "D'abord, mettez à jour votre système d'exploitation comme suit ::"
 
 #: ../../mining/p2pool.rst:164
 msgid "Setting up dashd"
-msgstr ""
+msgstr "Configuration de dashd"
 
 #: ../../mining/p2pool.rst:166
 msgid ""
@@ -335,6 +335,15 @@ msgid ""
 "enter the following command, pasting in the address to the latest version of"
 " Dash Core by right clicking or pressing **Ctrl + V**::"
 msgstr ""
+"P2Pool demande que tourne un nœud complet Dash pour obtenir les données de "
+"transactions et de blocs. Pour télécharger et installer Dash Core, allez à "
+"l'adresse https://www.dash.org/wallets/ sur votre ordinateur pour trouver le"
+" lien vers la plus récente version du portefeuille logiciel Dash Core. "
+"Cliquez sur **Linux**, puis faites un clic-droit sur **Télécharger TGZ** "
+"pour **Dash Core Linux 64 bits**, puis choisissez **Copier l'adresse du "
+"lien**. Revenez à votre fenêtre de terminal et tapez la commande suivante, "
+"en y collant l'adresse de la plus récente version de Dash Core en faisant un"
+" clic-droit ou la combinaison de touches **Ctrl-V** ::"
 
 #: ../../mining/p2pool.rst:179
 msgid ""
@@ -406,7 +415,7 @@ msgstr "Le résultat devrait ressembler à ça :"
 
 #: ../../mining/p2pool.rst:237
 msgid "Entering key data in dash.conf on the P2Pool node"
-msgstr ""
+msgstr "Saisie de données clés dans le fichier \"dash.conf\" sur le nœud P2Pool"
 
 #: ../../mining/p2pool.rst:239
 msgid ""
@@ -428,49 +437,66 @@ msgid ""
 "as can be seen from any synchronized Dash wallet or `block explorer "
 "<https://insight.dash.org/insight/>`_::"
 msgstr ""
+"Vous verrez un message disant **Démarrage du serveur Dash Core**. Vous "
+"pouvez suivre les étapes ci-dessous tout en vérifiant régulièrement la "
+"synchronisation avec la commande suivante. La synchronisation est terminée "
+"quand le nombre ``blocks`` est égal au nombre actuel de blocs dans la "
+"blockchain Dash, tel qu'il est indiqué par n'importe quel portefeuille Dash "
+"synchronisé ou par tout `explorateur de blocs "
+"<https://insight.dash.org/insight/>`_::"
 
 #: ../../mining/p2pool.rst:255
 msgid "Setting up P2Pool"
-msgstr ""
+msgstr "Configuration de P2Pool"
 
 #: ../../mining/p2pool.rst:257
 msgid ""
 "We will now set up the P2Pool software and its dependencies. Begin with the "
 "dependencies::"
 msgstr ""
+"Nous allons maintenant configurer le logiciel P2Pool et ses dépendances. "
+"Commencez avec les dépendances ::"
 
 #: ../../mining/p2pool.rst:263
 msgid "Create working directories and set up p2pool-dash::"
-msgstr ""
+msgstr "Créez des répertoires de travail et configurez p2pool-dash ::"
 
 #: ../../mining/p2pool.rst:274
 msgid "We will add some optional extra interfaces to the control panel::"
 msgstr ""
+"Nous ajoutons quelques interfaces supplémentaires, facultatives, au panneau "
+"de contrôle ::"
 
 #: ../../mining/p2pool.rst:284
 msgid ""
 "You can now start p2pool and optionally specify the payout address, external"
 " IP (if necessary), fee and donation as follows::"
 msgstr ""
+"Vous pouvez à présent démarrer p2pool et, facultativement, indiquer "
+"l'adresse de paiement, l'IP externe (si nécessaire), les frais et un don, "
+"comme suit ::"
 
 #: ../../mining/p2pool.rst:289
 msgid ""
 "You can then monitor your node by browsing to the following addresses, "
 "replacing ``<ip_address>`` with the IP address of your P2Pool node:"
 msgstr ""
+"Vous pouvez alors surveiller votre nœud en vous rendant aux adresses "
+"suivantes, en remplaçant ``<ip_address>`` par l'adresse IP de votre nœud "
+"P2Pool :"
 
 #: ../../mining/p2pool.rst:292
 msgid "Punchy interface: http://<ip_address>:7903/static/"
-msgstr ""
+msgstr "Interface Punchy : http://<ip_address>:7903/static/"
 
 #: ../../mining/p2pool.rst:293
 msgid "Legacy interface: http://<ip_address>:7903/static/legacy/"
-msgstr ""
+msgstr "Interface classique : http://<ip_address>:7903/static/legacy/"
 
 #: ../../mining/p2pool.rst:294
 msgid "Status interface: http://<ip_address>:7903/static/status/"
-msgstr ""
+msgstr "Interface d'état : http://<ip_address>:7903/static/status/"
 
 #: ../../mining/p2pool.rst:295
 msgid "Extended interface: http://<ip_address>:7903/static/ext/"
-msgstr ""
+msgstr "Interface étendue : http://<ip_address>:7903/static/ext/"
