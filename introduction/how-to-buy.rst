@@ -1165,6 +1165,19 @@ Bitit
   cryptocurrencies for sale online. Payment in a range of currencies is
   support using both direct banking, credit cards and vouchers.
 
+Kraken
+  .. image:: exchanges/kraken.png
+     :width: 200px
+     :align: right
+     :target: https://www.kraken.com
+
+  https://www.kraken.com
+
+  Kraken offers private, personalized OTC service with deep liquidity to
+  institutions and high net-worth individuals needing to fill orders in
+  excess of $100,000. Simply send an email to otc@kraken.com to get
+  started.
+
 Coinfinity
   .. image:: exchanges/coinfinity.png
      :width: 200px
