@@ -411,6 +411,17 @@ Liqui
   Liqui is headquartered in Ukraine and offers a modern interfaced for
   leveraged trading of many cryptocurrencies, including a DASH/BTC pair.
 
+Bitbns
+  .. image:: exchanges/bitbns.png
+     :width: 200px
+     :align: right
+     :target: https://bitbns.com
+  
+  https://bitbns.com
+
+  Bitbns offers DASH trading against the Indian Rupee (INR) for Indian
+  citizens with bank deposits supported from many major Indian banks.
+
 Coinome
   .. image:: exchanges/coinome.png
      :width: 200px
