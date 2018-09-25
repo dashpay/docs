@@ -123,6 +123,8 @@ Point of Sale
 A range of Point of Sale systems are available. Many function as an app
 or simple website serving a checkout interface and QR code generator,
 while others support custom features such as NFC or a rewards scheme.
+QR.cr, Spark Payments and Anypay are supported by the community and are
+particularly widespread.
 
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 | Name                                                          | App?    | Web interface? | Hardware? | NFC?    | Notes                                                                                    |
@@ -144,6 +146,8 @@ while others support custom features such as NFC or a rewards scheme.
 | `GB CortexPay <https://www.generalbytes.com/pos>`_            |         |                | |check|   |         |                                                                                          |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 | `Paytomat <https://paytomat.com>`_                            |         |                |           |         | Token rewards for crypto payments.                                                       |
++---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
+| `QR.cr <https://qr.cr/>`_                                     | |check| | |check|        |           |         | Cheap solution with many features to use a mobile phone as a POS terminal.               |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 | `QuikWallet <http://quikwallet.com>`_                         | |check| | |check|        |           |         | India only. Also supports SMS payment.                                                   |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
