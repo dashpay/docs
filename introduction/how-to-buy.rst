@@ -1226,6 +1226,17 @@ Cryptomate
   fastest transactions - coins can be in your wallet as soon as 5
   minutes after ordering.
 
+Kurecoinhub
+  .. image:: exchanges/kurecoin.png
+     :width: 200px
+     :align: right
+     :target: https://kurecoinhub.com
+
+  https://kurecoinhub.com
+
+  Kurecoinhub offers DASH and other cryptocurrencies for sale OTC for
+  the Nigerian Naira.
+
 Coindirect
   .. image:: exchanges/coindirect.png
      :width: 150px
