@@ -50,8 +50,6 @@ interest.
 
 .. toctree::
    :maxdepth: 3
-   :hidden:
-   :includehidden:
    :caption: First Steps
 
    introduction/about
@@ -64,8 +62,6 @@ interest.
 
 .. toctree::
    :maxdepth: 3
-   :hidden:
-   :includehidden:
    :caption: Users
 
    wallets/index
@@ -75,8 +71,6 @@ interest.
 
 .. toctree::
    :maxdepth: 3
-   :hidden:
-   :includehidden:
    :caption: Merchants
 
    merchants/getting-started
@@ -87,7 +81,6 @@ interest.
 
 .. toctree::
    :maxdepth: 3
-   :hidden:
    :caption: Network
 
    governance/index.rst
