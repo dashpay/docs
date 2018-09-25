@@ -1029,10 +1029,9 @@ changeNOW
 
   https://changenow.io
 
-  changeNOW allows users to directly exchange one crypto asset for
-  another without creating any account, albeit with a higher markup than
-  most exchanges. changeNOW supports Dash and over 75 other
-  cryptocurrencies.
+  changeNOW is a non-custodian exchange service based in the
+  Netherlands, with low commissions and quick service. Offers crypto to
+  crypto exchanges, as well as purchases through credit/debit cards.
 
 Godex
   .. image:: exchanges/godex.png
@@ -1066,9 +1065,9 @@ CoinSwitch
 
   https://coinswitch.co
 
-  CoinSwitch allows you to compare exchange rates across multiple
-  exchanges and perform instant exchanges at those rates without
-  necessarily creating an account.
+  CoinSwitch is a crypto to crypto exchange aggregate with more than 300
+  different coins and tokens listed. Also offers purchases through
+  credit/debit cards.
 
 BlockTrades
   .. image:: exchanges/blocktrades.png
@@ -1289,9 +1288,9 @@ Changelly
 
   https://changelly.com
 
-  Changelly is a broker service offering a range of cryptocurrency,
-  including Dash, paid in USD or EUR using bank or credit cards. Be sure
-  to check the fees and rates before purchasing.
+  Changelly is a popular instantaneous crypto to crypto exchange
+  platform with more than 100 different coins and tokens listed. Also
+  offers purchases via credit/debit cards.
 
 Cryptobuyer
   .. image:: exchanges/cryptobuyer.png
