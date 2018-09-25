@@ -224,6 +224,17 @@ each word/number), then press **Ctrl + X** to close the editor, then
 
   /swapfile none swap sw 0 0
 
+Finally, in order to prevent brute force password hacking attacks, open
+the SSH configuration file to disable root login over SSH::
+
+  nano /etc/ssh/sshd_config
+
+Locate the line that reads ``PermitRootLogin yes`` and set it to
+``PermitRootLogin no``. Directly below this, add a line which reads
+``AllowUsers <username>``, replacing ``<username>`` with the username
+you selected above. The press **Ctrl + X** to close the editor, then
+**Y** and **Enter** save the file.
+
 Then reboot the server:
 
 ::
@@ -237,14 +248,12 @@ attacks, much more can be done. In particular, `authenticating with a
 public key <https://help.ubuntu.com/community/SSH/OpenSSH/Keys>`_
 instead of a username/password combination, `installing fail2ban
 <https://www.linode.com/docs/security/using-fail2ban-for-security>`_ to
-block login brute force attacks, `disabling root login
-<https://help.ubuntu.com/lts/serverguide/user-management.html>`_ and
-`enabling automatic security updates
+block login brute force attacks and `enabling automatic security updates
 <https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ is
 advisable. More tips are available `here <https://www.cyberciti.biz/tips
-/linux-security.html>`__. However, since the masternode does not actually
-store the keys to any Dash, these steps are considered beyond the scope
-of this guide.
+/linux-security.html>`__. However, since the masternode does not
+actually store the keys to any Dash, these steps are considered beyond
+the scope of this guide.
 
 Send the collateral
 ===================
