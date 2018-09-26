@@ -20,7 +20,7 @@ system in the world. In addition to Bitcoin's feature set, Dash
 currently also offers instant transactions (:ref:`instantsend`), private
 transactions (:ref:`privatesend`) and operates a self-governing and
 self-funding model that enables the Dash network to pay individuals and
-businesses for work that adds value to the network. This
+businesses for work that adds value to the network. This 
 :ref:`decentralized governance and budgeting system <governance>` makes
 it one of the first ever successful decentralized autonomous
 organizations (DAO).
