@@ -2,7 +2,6 @@
    :description: The Dash Documentation offers information and guides on Dash, the open source peer-to-peer cryptocurrency with a strong focus on the payments industry. 
    :keywords: dash, cryptocurrency, blockchain, documentation, guide, masternodes, mining, wallets, merchants, governance, instantsend, privatesend, x11, instant, private, secure, digital cash
 
-
 ==================
 Dash Documentation
 ==================
@@ -20,7 +19,7 @@ system in the world. In addition to Bitcoin's feature set, Dash
 currently also offers instant transactions (:ref:`instantsend`), private
 transactions (:ref:`privatesend`) and operates a self-governing and
 self-funding model that enables the Dash network to pay individuals and
-businesses for work that adds value to the network. This 
+businesses for work that adds value to the network. This
 :ref:`decentralized governance and budgeting system <governance>` makes
 it one of the first ever successful decentralized autonomous
 organizations (DAO).
@@ -46,7 +45,8 @@ interest.
     </div>
     
 
-.. _introduction:
+Contents
+========
 
 .. toctree::
    :maxdepth: 3
