@@ -18,7 +18,7 @@ CoinText
 https://dash.cointext.io
 
 .. image:: img/cointext.png
-   :width: 100px
+   :width: 150px
    :align: right
    :target: https://dash.cointext.io
 
@@ -47,7 +47,7 @@ DashText
 http://dashtext.com
 
 .. image:: img/dashtext.png
-   :width: 100px
+   :width: 150px
    :align: right
    :target: http://dashtext.com
 
