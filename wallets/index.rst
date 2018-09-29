@@ -1,6 +1,6 @@
 .. meta::
    :description: Description of different wallets available to use and spend Dash cryptocurrency
-   :keywords: dash, wallet, core, electrum, android, ios, copay, paper, hardware, trezor, ledger, web, recovery
+   :keywords: dash, wallet, core, electrum, android, ios, copay, paper, hardware, trezor, ledger, web, recovery, text, sms
 
 .. _wallets:
 
@@ -288,6 +288,27 @@ control of your private keys.
    :width: 400 px
 
    My Dash Wallet
+
+
+SMS Wallets
+===========
+
+SMS wallets (or text wallets) allow users without smartphones or
+internet access to transact in Dash using text messages on simple
+feature phones. Innovative shortcodes, usually in collaboration with
+national mobile service providers, make it relatively simple to create
+transactions to both send and receive Dash.
+
+.. toctree::
+   :maxdepth: 1
+
+   sms.rst
+
+.. figure:: img/cointext-wallet.png
+   :width: 400 px
+
+   Dash CoinText
+
 
 Wallet Guides
 =============
