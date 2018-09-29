@@ -464,7 +464,7 @@ Download
 
 .. image:: img/google-play-badge.png
    :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.aev.cryptonator
+   :target: https://play.google.com/store/apps/details?id=com.plutus.wallet
 
 Cryptonator is available from the `Google Play Store for Android
 <https://play.google.com/store/apps/details?id=com.aev.cryptonator>`__
@@ -480,3 +480,46 @@ https://www.cryptonator.com/hc
    :width: 400px
 
    Cryptonator wallet running on Android
+
+
+Abra
+====
+
+https://www.abra.com
+
+.. image:: img/abra.png
+   :width: 100px
+   :align: right
+   :target: https://www.abra.com
+
+Abra is a multi-cryptocurrency wallet supporting Dash amongst other
+currencies. It is designed for investment and can be funded from your
+bank account, credit/debit card, cash (in the Philippines), Bitcoin,
+Bitcoin Cash, or Litecoin. Dash deposits and withdrawals are currently
+not supported.
+
+Download
+--------
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/US/app/id966301394
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.plutus.wallet
+
+Abra is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=com.plutus.wallet>`__ and
+the `Apple App Store for iOS <https://itunes.apple.com/US/app/id966301394>`__.
+
+Documentation
+-------------
+
+Abra offers detailed documentation of all functions at
+https://abra.zendesk.com
+
+.. figure:: img/abra-wallet.png
+   :width: 400px
+
+   Abra wallet running on iOS
