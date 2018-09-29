@@ -17,14 +17,14 @@ CoinText
 
 https://dash.cointext.io
 
-.. image:: img/cointex.tpng
+.. image:: img/cointext.png
    :width: 100px
    :align: right
    :target: https://dash.cointext.io
 
 CoinText is a for-purpose project to make cryptocurrency easy to use to
 expand economic freedom around the world. It makes it possible to
-transact in Dash without Internet, apps, accounts or complicated
+transact in Dash without internet, apps, accounts or complicated
 addresses. CoinText currently supports Dash transactions in the USA and
 Canada and aims to expand to over 50 countries in coming months. It is
 possible to denominate the amount to be sent in both Dash and the local
