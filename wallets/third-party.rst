@@ -520,6 +520,6 @@ Abra offers detailed documentation of all functions at
 https://abra.zendesk.com
 
 .. figure:: img/abra-wallet.png
-   :width: 400px
+   :width: 133px
 
    Abra wallet running on iOS
