@@ -1,5 +1,5 @@
 .. meta::
-   :description: Guides to SMS text message wallets for Dash cryptocurrency
+   :description: Guides to text message wallets for Dash cryptocurrency
    :keywords: dash, wallet, text, sms, feature, phone, mobile, cointext, dashtext, short message, short code, simple
 
 .. _dash-text-wallet:
