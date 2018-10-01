@@ -61,6 +61,8 @@ translation is complete to request layout of the completed translation.
 +----------+----------------------------------------------------------------------------------------------------+
 | German   | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_RZ_2018.pdf>`__    |
 +----------+----------------------------------------------------------------------------------------------------+
+| Spanish  | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_ES_RZ_2018.pdf>`__ |
++----------+----------------------------------------------------------------------------------------------------+
 | Thai     | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_TH_RZ_2018.pdf>`__ |
 +----------+----------------------------------------------------------------------------------------------------+
 
@@ -93,6 +95,8 @@ translation is complete to request layout of the completed translation.
 | French                | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_FR.pdf>`__     |
 +-----------------------+-------------------------------------------------------------------------------------------------------+
 | German                | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_DE.pdf>`__     |
++-----------------------+-------------------------------------------------------------------------------------------------------+
+| Spanish               | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_ES.pdf>`__     |
 +-----------------------+-------------------------------------------------------------------------------------------------------+
 | Thai                  | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_TH.pdf>`__     |
 +-----------------------+-------------------------------------------------------------------------------------------------------+
