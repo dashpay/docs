@@ -153,9 +153,9 @@ to Bitcoin addresses through native integration with ShapeShift.
    ios/getting-started.rst
    ios/advanced-functions.rst
 
-.. image:: ios/img/ios1.jpg
+.. image:: ios/img/ios1.png
     :width: 160 px
-.. image:: ios/img/ios2.jpg
+.. image:: ios/img/ios2.png
     :width: 160 px
 
 *Dash iOS Wallet*

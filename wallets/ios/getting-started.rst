@@ -12,7 +12,7 @@ Creating a new wallet
 
 When you first start your Dash Wallet, you will be prompted to choose
 between creating a new wallet or recovering an existing wallet. Choose
-**new wallet** to create a new wallet unless you have existing funds
+**New Wallet** to create a new wallet unless you have existing funds
 stored in another wallet using a recovery phrase. Your new wallet will
 be generated, and a recovery phrase will appear so you can recover the
 funds later if you lose or damage your phone or need to transfer the
