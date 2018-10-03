@@ -34,11 +34,11 @@ Community sites
 - https://www.dashcentral.org
 - https://www.dashninja.pl
 - https://www.dashforcenews.com
+- http://www.dashnation.com
 - https://dashvotetracker.com
 - https://www.dashspain.org
 - http://www.dashhaiti.com
 - http://thedashbrain.com
-- http://dashchat.org
 
 Forums
 ------
@@ -54,7 +54,8 @@ Forums
 Chat
 ----
 
-- **Dash Nation Discord:** https://discord.gg/9z8zX5j
+- **Dash Nation Discord:** https://discordapp.com/invite/9z8zX5j
+- **Dash Force Discord:** https://discordapp.com/invite/PXbUxJB
 - **Dash English Telegram:** https://t.me/dash_chat
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil
 - **Dash Russia Telegram:** https://telegram.me/Dash_Ru
@@ -126,7 +127,6 @@ News
 - **Dash News Germany:** https://dash-news.de
 - **Dash Vietnam:** https://dashvn.blogspot.com
 - **Dash France:** https://dashfrance.com/
-- **Dash Nation DeCentral:** http://www.dashnation.com
 - **Dash News China (Wechat):** dashnews (or scan QR below)
 
 .. image:: img/dash-wx.png
