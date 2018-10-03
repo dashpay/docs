@@ -55,7 +55,7 @@ Chat
 ----
 
 - **Dash Nation Discord:** https://discordapp.com/invite/9z8zX5j
-- **Dash Force Discord:** https://discordapp.com/invite/PXbUxJB
+- **Dash Talk Discord:** https://discordapp.com/invite/PXbUxJB
 - **Dash English Telegram:** https://t.me/dash_chat
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil
 - **Dash Russia Telegram:** https://telegram.me/Dash_Ru
