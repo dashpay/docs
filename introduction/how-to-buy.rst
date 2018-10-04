@@ -1226,6 +1226,18 @@ Cryptomate
   fastest transactions - coins can be in your wallet as soon as 5
   minutes after ordering.
 
+BitPrime
+  .. image:: exchanges/bitprime.png
+     :width: 200px
+     :align: right
+     :target: https://www.bitprime.co.nz
+
+  https://www.bitprime.co.nz
+
+  BitPrime operates a secure and compliant platform for easy retail
+  trading in New Zealand. Dash is available OTC for both purchase and
+  sale together with many other cryptocurrencies.
+
 Kurecoinhub
   .. image:: exchanges/kurecoin.png
      :width: 200px
