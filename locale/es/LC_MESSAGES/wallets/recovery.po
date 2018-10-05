@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-17 11:43+0000\n"
+"POT-Creation-Date: 2018-09-28 10:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: strophy <leon.white@dash.org>, 2018\n"
+"Last-Translator: Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,11 +21,15 @@ msgstr ""
 #: ../../wallets/recovery.rst:1
 msgid "Recovering Dash wallets from files, private keys or recovery phrases"
 msgstr ""
+"Recuperar la billetera Dash desde archivos, llaves privadas o frases de "
+"recuperación"
 
 #: ../../wallets/recovery.rst:1
 msgid ""
 "dash, wallet, recovery, password, lost, mobile, core, phrase, private key"
 msgstr ""
+"dash, billetera, recuperación, contraseña, perdido, perdida, móvil, core, "
+"frase, llave privada"
 
 #: ../../wallets/recovery.rst:9
 msgid "Wallet Recovery"
@@ -624,6 +628,9 @@ msgid ""
 "recovery phrase into an xprv key. In the second step, we will import the "
 "xprv key into Dash Electrum."
 msgstr ""
+"La recuperación se hace en dos pasos. Primero, convertiremos la frase de "
+"recuperación de la Dash iOS en una llave xprv. En el segundo paso, "
+"importaremos la llave xprv en la Dash Electrum."
 
 #: ../../wallets/recovery.rst:294
 msgid "Retrieving the correct Dash iOS xprv key"
@@ -658,15 +665,15 @@ msgstr "Dejar la **BIP39 Frase de acceso** en blanco. "
 
 #: ../../wallets/recovery.rst:306
 msgid "Set coin to **Dash**."
-msgstr ""
+msgstr "Establecer moneda a **Dash**."
 
 #: ../../wallets/recovery.rst:307
 msgid "Under **Derivation Path**, click the **BIP44** tab."
-msgstr ""
+msgstr "En **Ruta de derivación**, haga clic en la pestaña **BIP44**."
 
 #: ../../wallets/recovery.rst:308
 msgid "Copy the value shown in **Account Extended Private Key**."
-msgstr ""
+msgstr "Copiar el valor mostrado en **Llave Privada de Cuenta Extendida**"
 
 #: ../../wallets/recovery.rst:311
 msgid "Importing the xprv key into Dash Electrum"
@@ -690,7 +697,7 @@ msgstr "Selecciona **Usar llaves públicas o privadas**."
 
 #: ../../wallets/recovery.rst:317
 msgid "Paste in your value from **Account Extended Private Key**."
-msgstr ""
+msgstr "Pegar en su valor de **Llave Privada de Cuenta Extendida**."
 
 #: ../../wallets/recovery.rst:318
 msgid "Optionally enter a password."
@@ -722,6 +729,14 @@ msgid ""
 "<https://www.dash.org/forum/threads/restore-breadwallet-dash-funds-to-your-"
 "electrum-dash-wallet-tested.8335>`_ for further discussion on this process."
 msgstr ""
+"Versiones anteriores de la billetera Dash iOS usan direcciones **BIP32** "
+"bajo la ruta de derivación ``m/0'``. La billetera debe migrar sus fondos a "
+"direcciones BIP44 durante el uso normal, pero algún balance residual puede "
+"quedar en esta ruta de derivación, entonces restaurar la **Llave Privada "
+"Extendida BIP32** puede ser de ayuda en algunas situaciones. Por favor vea "
+"`este hilo del foro <https://www.dash.org/forum/threads/restore-breadwallet-"
+"dash-funds-to-your-electrum-dash-wallet-tested.8335>`_ para mayores "
+"discusiones en este proceso."
 
 #: ../../wallets/recovery.rst:339
 msgid "Private Keys"
