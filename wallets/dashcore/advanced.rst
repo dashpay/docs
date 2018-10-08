@@ -47,8 +47,8 @@ affecting the locked UTXOs.
 
 .. _dashcore-hd:
 
-Hierarchical Deterministic Wallets
-==================================
+HD Wallets
+==========
 
 Since version 0.12.2.0, Dash Core has included an implementation of
 BIP39/BIP44 compatible hierarchical deterministic (HD) key generation.
@@ -77,10 +77,12 @@ following RPC command from ``dash-cli`` to view the mnemonic seed::
   dumphdinfo
 
 Dash Core will display the HD seed in both hexadecimal and as a BIP39
-mnemonic. To restore an existing HD wallet, ensure no ``wallet.dat``
-file exists in the ``datadir`` and enter the following command::
+mnemonic. To restore an existing HD wallet, or define your own
+separately generated mnemonic and/or passphrase, ensure no
+``wallet.dat`` file exists in the ``datadir`` and enter the following
+command::
 
-  dash-qt.exe --usehd=1 --mnemonic="enter mnemonic" --mnemonicpassphrase="enter optional mnemonic passphrase"
+  dash-qt.exe --usehd=1 --mnemonic="enter mnemonic" --mnemonicpassphrase="optional mnemonic passphrase"
 
 The HD wallet will be restored and your balance will appear once sync is
 complete.
