@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 10:17+0000\n"
+"POT-Creation-Date: 2018-10-08 08:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Max Aronych <taofgoar@protonmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -23,16 +23,21 @@ msgid ""
 "Maintaining a Dash masternode involves staying up to date with the latest "
 "version, voting and handling payments"
 msgstr ""
+"Обслуживание мастерноды Dash включает в себя регулярное обновление до "
+"последних версий программного обеспечения, голосование и обработку платежей"
 
 #: ../../masternodes/maintenance.rst:1
 msgid ""
 "dash, cryptocurrency, masternode, maintenance, maintain, payments, "
 "withdrawal, voting, monitoring"
 msgstr ""
+"dash, cryptocurrency, криптовалюты, masternode, мастернода, maintenance, "
+"обслуживание, maintain, payments, платежи, withdrawal, снятие, voting, "
+"голосование, monitoring, слежение"
 
 #: ../../masternodes/maintenance.rst:9
 msgid "Maintenance"
-msgstr ""
+msgstr "Обслуживание"
 
 #: ../../masternodes/maintenance.rst:11
 msgid ""
@@ -42,10 +47,16 @@ msgid ""
 "masternodes should vote on proposals and perform other tasks in the interest"
 " of the network and the value of the Dash they hold."
 msgstr ""
+"Мастренjды требуют регулярного обслуживания, это необходимо для того, чтобы "
+"не выпасть из очереди на выплату наград. Обслуживание включает в себя "
+"своевременное обновление Dash и поддержку уровня безопасности и "
+"производительности сервера на должном уровне. Так же мастерноды должны "
+"голосовать по бюджетным предложениям и выполнять другие задачи в интересах "
+"сети и для поддержки стоимости DASH, заложенных в них."
 
 #: ../../masternodes/maintenance.rst:20
 msgid "Payment withdrawals"
-msgstr ""
+msgstr "Снатие платежей"
 
 #: ../../masternodes/maintenance.rst:22
 msgid ""
@@ -62,10 +73,24 @@ msgid ""
 "of only spending those UTXOs and not the one containing the 1000 DASH. Note "
 "that masternode payouts can only be spent after 100 confirmations."
 msgstr ""
+"Как только ваша мастернода будет принята сетью, то попадёт в очередь "
+"мастернод на выплаты и медленно начнёт двргаться по ней вверх. Мастернода, "
+"находящаяся в верхних 10% списка выбирается для выплаты награды и получает "
+"её каждый раз, когда майнится новый блок Dash. Для большей информации по "
+"этому процессу, обратитесь сюда. Выплаты мастерноде направляются на тот же "
+"арес, который был использован для её запуска, это означает, что нужно быть "
+"аккуратным при снятии с неё средств. 1000 DASH, которые изначально были в "
+"неё заложены, должны в ней оставаться в форме выхода единократной "
+"непотраченной транзакции (UTXO), иначе ваша местернода выпадет из списка. ID"
+" этой транзакции вы могли видеть, когда готовились отправить команду на "
+"старт мастерноды. Выплаты приходят с разными UTXO, поэтому необходим способ,"
+" с помощью которого можно будет снимать средства только UTXO выплат, а не "
+"той, которая содержит 1000 DASH. Обратите внимание, что выплаты мастернодам "
+"могут быть потрачены только после 100 подтверждений."
 
 #: ../../masternodes/maintenance.rst:37
 msgid "Option 1: Withdrawals using a hardware wallet"
-msgstr ""
+msgstr "Способ 1: снятие средств с помощью физического кошелька"
 
 #: ../../masternodes/maintenance.rst:39
 msgid ""
@@ -76,6 +101,13 @@ msgid ""
 "without touching the original collateral transaction. This is not possible "
 "using the Trezor web wallet alone."
 msgstr ""
+"Если для запуска мастерноды вы используете физический кошелёк, например, "
+"Trezor, то для вывода выплат следует использовать это руководство. Для "
+"выбора правильных выходов мы будем использовать Dash Masternode Tool (DMT) "
+"от Bertrand256. С помощью DMT мы можем выбрать конкретные UTXO для вывода "
+"выплат и благодаря этому избежим затрагивания транзакции с изначально "
+"заложенной суммой. Сделать это исключительно в веб-версии кошелька Trezor "
+"невозможно."
 
 #: ../../masternodes/maintenance.rst:46
 msgid ""
@@ -84,10 +116,14 @@ msgid ""
 "or **Transfer funds from all masternode's addresses**, if you use DMT to "
 "control multiple masternodes."
 msgstr ""
+" Откройте DMT и убедитесь, что RPC и HW соединения работают. Из меню "
+"**Tools** выберите **Transfer funds from current masternode’s address** или "
+"**Transfer funds from all masternode’s addresses**, в случае, если "
+"используете DMT для управления несколькими мастернодами."
 
 #: ../../masternodes/maintenance.rst:54
 msgid "Selecting the transfer funds function in DMT"
-msgstr ""
+msgstr "Выбор функции передачи средств в DMT"
 
 #: ../../masternodes/maintenance.rst:56
 msgid ""
@@ -100,10 +136,20 @@ msgid ""
 "Enter your destination address for the transaction. The window should appear"
 " as follows:"
 msgstr ""
+"Некоторе время DMT понадобится на загрузку, далее на экране появятся UTXO, "
+"которые возможно использовать для снятия. по умолчанию, все UTXO, которые не"
+" использовались в заложенной сумме, помечены галочками. UTXO заложенной "
+"суммы не только не помеченны галочками, но и вообще спрятаны для избежания "
+"непреднамеренной траты средств, связанных с заложенной суммой, что приведёт "
+"к прекращению работы мастерноды. Посмотреть эти UTXO можно сняв галочку с "
+"**Hode collateral utxos**. Далее, введите адрес платежа. ядолжно появиться "
+"следующее окно:"
 
 #: ../../masternodes/maintenance.rst:68
 msgid "Selecting the UTXOs to use as inputs in the withdrawal transaction"
 msgstr ""
+"Выбор UTXO, которые будут использоваться как вводы в транзакции при снятии "
+"средств"
 
 #: ../../masternodes/maintenance.rst:70
 msgid ""
@@ -113,14 +159,18 @@ msgid ""
 "the network by clicking Yes. A confirmation with the transaction ID will "
 "appear."
 msgstr ""
+"Проверьте комиссию за транзакцию и нажмите **Send**. Ваш Trezor запросит PIN"
+" и подтверждение транзакции на устройстве. Как только это будет сделаною "
+"подтвердите DMT ещё раз, что вы хотите провести транзакцию через сеть, нажав"
+" Yes. Появится подтверждение и ID транзакции."
 
 #: ../../masternodes/maintenance.rst:82
 msgid "Confirming broadcast of the transaction to the network"
-msgstr ""
+msgstr "Подтверждение проведения транзакции через сеть"
 
 #: ../../masternodes/maintenance.rst:85
 msgid "Option 2: Withdrawals from Dash Core wallet"
-msgstr ""
+msgstr "Способ 2: снятие с кошелька Dash Core"
 
 #: ../../masternodes/maintenance.rst:87
 msgid ""
@@ -134,11 +184,22 @@ msgid ""
 " UTXOs can be used as input for any transactions you create. The following "
 "window appears:"
 msgstr ""
+"Точно так же, как и в вышеуказанном способе, необходим метод ограничения "
+"того, какие UTXO при снятии средств с мастерноды можно потратить, будучи "
+"уверенным, что UTXO заложенной суммы не будет затронута. В кошельке Dash "
+"Core такая функция называется Coin Cointrol и перед использованием её "
+"необходимо включить. Нажмите **Settings > Options > Wallet > Enable coin "
+"control features**. Теперь, когда вы зайдёте во вкладку кошелька **Send**, "
+"то увидете новую кнопку с названием **Inputs...**.Нажмите на эту кнопку и "
+"выберите, какие UTXO могут использоваться в качестве ввода для любой "
+"созданной вами транзакции. Появится следующее меню:"
 
 #: ../../masternodes/maintenance.rst:100
 msgid ""
 "Coin Selection window in Dash Core wallet, showing two masternodes (testnet)"
 msgstr ""
+"Окно Coin Selection в кошельке Dash Core, показывающее две мастерноды (в "
+"тестовой сети)"
 
 #: ../../masternodes/maintenance.rst:103
 msgid ""
@@ -167,6 +228,17 @@ msgid ""
 "If you run a hosted masternode, your host will take care of updates for you."
 " If not, the method of updating depends on how you installed Dash."
 msgstr ""
+"Периодически команда разработчиков Dash Core будет выпускать обновления "
+"Dash. На нодах, как узлах сети, лежит нагрузка по обеспечению услуг сети и "
+"хранению копий блокчейна, поэтому, от мастернод требуется своевременное "
+"обновление до новых версий Dash и Sentinel. В некоторых случаях может "
+"понадобится обновление компьютерного оборудования (увеличение оперативной "
+"памяти, мощности процессора, пространства на диске, даже установка "
+"специальных графических процессоров или ASIC’ов). При необновлении ваша "
+"мастернода неизбежно будет удалена из очереди на выплаты. Если вы хостите "
+"мастерноду, то слежение за обновлениями возьмёт на себя хостер. Если же вы "
+"самостоятельно держите мастерноду, то способ обновления зависит от того, как"
+" вы установили Dash."
 
 #: ../../masternodes/maintenance.rst:132
 msgid ""
@@ -182,17 +254,19 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:142
 msgid "Option 1: Automated update using dashman"
-msgstr ""
+msgstr "Способ 1: автоматические обновление с помощью dashman"
 
 #: ../../masternodes/maintenance.rst:144
 msgid ""
 "To update Dash using dashman, log in to your server and enter the following "
 "commands::"
 msgstr ""
+"Чтобы обновить Dash, используя dashman, войдите на ваш сервер и введите "
+"следующие команды::"
 
 #: ../../masternodes/maintenance.rst:150
 msgid "Check the status of your masternode::"
-msgstr ""
+msgstr "Проверьте статус вашей мастерноды::"
 
 #: ../../masternodes/maintenance.rst:154
 msgid ""
@@ -206,7 +280,7 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:164
 msgid "Option 2: Manual update"
-msgstr ""
+msgstr "Способ 2: обновление вручную"
 
 #: ../../masternodes/maintenance.rst:166
 msgid ""
@@ -244,11 +318,11 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:203
 msgid "Clean up unneeded files::"
-msgstr ""
+msgstr "Удалите ненужные файлы::"
 
 #: ../../masternodes/maintenance.rst:208
 msgid "Restart Dash::"
-msgstr ""
+msgstr "Перезапустите Dash::"
 
 #: ../../masternodes/maintenance.rst:212
 msgid ""
@@ -386,7 +460,7 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:322
 msgid "Verifying ownership"
-msgstr ""
+msgstr "Подтверждение владения"
 
 #: ../../masternodes/maintenance.rst:324
 msgid ""
@@ -460,6 +534,8 @@ msgstr ""
 #: ../../masternodes/maintenance.rst:382
 msgid "View your masternode configuration details by typing::"
 msgstr ""
+"Подробную информацию о конфигурации вашей мастерноды можно увидеть "
+"напечатав::"
 
 #: ../../masternodes/maintenance.rst:386
 msgid ""
@@ -590,7 +666,7 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:503
 msgid "Dash Masternode Tool"
-msgstr ""
+msgstr "Dash Masternode Tool"
 
 #: ../../masternodes/maintenance.rst:505
 msgid "https://github.com/Bertrand256/dash-masternode-tool"
@@ -607,7 +683,7 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:514
 msgid "DASH Ninja"
-msgstr ""
+msgstr "DASH Ninja"
 
 #: ../../masternodes/maintenance.rst:516
 msgid "https://www.dashninja.pl"

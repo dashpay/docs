@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 10:17+0000\n"
+"POT-Creation-Date: 2018-10-08 08:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -38,11 +38,11 @@ msgstr "Google Play"
 msgid ""
 "The easiest way to install the Dash Wallet for Android is from the Google "
 "Play Store."
-msgstr ""
+msgstr "借助谷歌应用商店是在Android设备上安装达世币钱包的最便捷的方式。"
 
 #: ../../wallets/android/installation.rst:21
 msgid "From APK"
-msgstr ""
+msgstr "通过APK"
 
 #: ../../wallets/android/installation.rst:23
 msgid ""
@@ -52,20 +52,21 @@ msgid ""
 "(if you have not already done so) and then downloading and installing an APK"
 " file. Follow these instructions:"
 msgstr ""
+"某些Android手机无法访问谷歌应用商店商店，原因是某些国家或地区的手机软件供应商和网络服务商不支持这项功能。在这种情况下，（还没有安装外部资源的）用户可以先手动安装，然后再下载并安装Android安装包。在安装进程中，用户可以参考以下说明："
 
 #: ../../wallets/android/installation.rst:29
 #: ../../wallets/android/installation.rst:44
 msgid ""
 "Ensure your Android version is at least 4.0.3 by going to **Settings → About"
 " phone** and checking the version number."
-msgstr ""
+msgstr "通过 **设置 → 关于手机** 检查软件版本，确保软件至少为4.0.3版本。"
 
 #: ../../wallets/android/installation.rst:31
 #: ../../wallets/android/installation.rst:50
 msgid ""
 "Enable Unknown sources by going to **Settings → Security → Unknown "
 "sources**. Read and accept the warning."
-msgstr ""
+msgstr "通过 **设置 → 安全性 → 未知来源** 启用未知来源的软件，阅读并接受提示条款。"
 
 #: ../../wallets/android/installation.rst:33
 msgid ""
@@ -73,6 +74,8 @@ msgid ""
 "<https://github.com/HashEngineering/dash- wallet/releases/latest>`_.  At the"
 " time of writing, this was 5.18.1."
 msgstr ""
+"使用手机通过\\ `此链接 <https://github.com/HashEngineering/dash- "
+"wallet/releases/latest>`_ 下载最近版本的Android安装包。截至本文档撰稿时，最新的版本是5.18.1。"
 
 #: ../../wallets/android/installation.rst:36
 msgid ""
@@ -81,12 +84,14 @@ msgid ""
 " file browser to find the copied file. `ES File Explorer "
 "<http://www.estrongs.com/>`_ is recommended for this."
 msgstr ""
+"如果用户无法使用手机上网，请使用电脑下载Android安装包，并通过数据线或蓝牙功能将安装包复制到手机上。用户可能还需要一个文件浏览器来查找复制的文件。我们建议用户使用\\"
+" `ES File Explorer <http://www.estrongs.com/>`_。"
 
 #: ../../wallets/android/installation.rst:41
 msgid ""
 "You can also install an APK file directly from your computer using the "
 "Android Debug Bridge (ADB). Follow these instructions:"
-msgstr ""
+msgstr "您还可以使用Android 调试（ADB）直接通过个人计算机进行安装。请参考以下说明："
 
 #: ../../wallets/android/installation.rst:46
 msgid ""
@@ -94,6 +99,9 @@ msgid ""
 "`SDK Platform Tools <https://developer.android.com/studio/releases/platform-"
 "tools.html>`_ for Mac, Windows or Linux."
 msgstr ""
+"用户需确保个人计算机上存有Android 调试的副本。SDK平台调试工具\\ `SDK Platform Tools "
+"<https://developer.android.com/studio/releases/platform-tools.html>`_\\ "
+"适用于Mac、 Windows或Linux系统。"
 
 #: ../../wallets/android/installation.rst:52
 msgid ""
@@ -101,6 +109,8 @@ msgid ""
 "debugging**. If **Developer options** is not available, go to **About "
 "phone** instead, scroll down, and tap on the **Build number** seven times."
 msgstr ""
+"通过 **设置 → 开发人员选项 → USB调试** 启用USB调试。如果 **开发者选项** 不可用，用户可在 **关于手机** "
+"页面向下滚动，然后连续点击 **内部版本号** 七次。"
 
 #: ../../wallets/android/installation.rst:56
 msgid ""
@@ -108,16 +118,18 @@ msgid ""
 "<https://github.com/HashEngineering/dash-wallet/releases/latest>`_. At the "
 "time of writing, this was 5.18."
 msgstr ""
+"用户可以在个人计算机上打开\\ `此链接 <https://github.com/HashEngineering/dash-"
+"wallet/releases/latest>`_ \\，并下载最新版本的Android安装包。截至本文档撰稿时，最新的版本是5.18.1。"
 
 #: ../../wallets/android/installation.rst:59
 msgid ""
 "Connect your phone to the PC, open a terminal/command prompt window and "
 "type::"
-msgstr ""
+msgstr "连接手机与个人计算机，打开终端或命令提示符窗口并输入以下内容::"
 
 #: ../../wallets/android/installation.rst:66
 msgid "From source"
-msgstr ""
+msgstr "通过源"
 
 #: ../../wallets/android/installation.rst:68
 msgid ""
@@ -129,21 +141,26 @@ msgid ""
 "``sdkmanager``. Begin by installing dependencies and downloading the latest "
 "Android SDK Tools::"
 msgstr ""
+"用户可在\\ `GitHub <https://github.com/HashEngineering/dash-wallet>`__ "
+"上找到达世币Android版钱包的源代码。以下操作说明将指导用户在root权限未开启的前提下以Ubuntu 18.04 "
+"为基础通过源代码编译最新版本的Android安装包。值得注意的是，原生开发工具包12b版本是必须的，用户不应通过 ``sdkmanager`` "
+"安装最新的版本。用户应先下载最新的Android SDK工具::"
 
 #: ../../wallets/android/installation.rst:84
 msgid ""
 "Next, update the SDK Tools and download the necessary SDK platform bundles "
 "and dependencies, then add and load the appropriate environment variables::"
-msgstr ""
+msgstr "接下来，用户应更新SDK工具并下载必要的SDK安装包和关联文件，然后添加并加载适用的环境变量::"
 
 #: ../../wallets/android/installation.rst:95
 msgid ""
 "Now that the build environment is ready, download and build the Dash Android"
 " Wallet source::"
-msgstr ""
+msgstr "在环境搭建完毕之后，用户需要下载并构建达世币Android钱包的资源::"
 
 #: ../../wallets/android/installation.rst:102
 msgid ""
 "The built APK files are now available in the ``~/dash-"
 "wallet/wallet/build/outputs/apk`` folder."
 msgstr ""
+"用户可以在 ``~/dash-wallet/wallet/build/outputs/apk`` 文件夹中找到已完成上述操作的Android安装包。"
