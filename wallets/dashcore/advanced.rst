@@ -45,6 +45,47 @@ affecting the locked UTXOs.
    Locking UTXOs in Dash Core wallet
 
 
+.. _dashcore-hd:
+
+Hierarchical Deterministic Wallets
+==================================
+
+Since version 0.12.2.0, Dash Core has included an implementation of
+BIP39/BIP44 compatible hierarchical deterministic (HD) key generation.
+This functionality is only available from the command line by specifying
+the ``usehd`` option when starting Dash Core for the first time. Use
+this function with care, since the mnemonic seed and keys will be stored
+in plain text until you specify a wallet passphrase. Note that the
+wallet passphrase is different to the mnemonic passphrase, which is
+often also referred to as the "25th word" or "extension word". The
+wallet passphrase encrypts the wallet file itself, while the mnemonic
+passphrase is used to specify different derivation branches from the
+same mnemonic seed.
+
+We will use the Windows GUI wallet in this example, but the commands are
+similar if using ``dash-qt`` or ``dashd`` on other operating systems.
+Enter the following command to get started with a randomly generated HD
+wallet seed and no mnemonic passphrase::
+
+  dash-qt.exe --usehd=1
+
+A new HD wallet will be generated and Dash Core will display a warning
+informing you that you must encrypt your wallet after verifying it works
+correctly. Open the console from **Tools -> Debug console** or issue the
+following RPC command from ``dash-cli`` to view the mnemonic seed::
+
+  dumphdinfo
+
+Dash Core will display the HD seed in both hexadecimal and as a BIP39
+mnemonic. To restore an existing HD wallet, ensure no ``wallet.dat``
+file exists in the ``datadir`` and enter the following command::
+
+  dash-qt.exe --usehd=1 --mnemonic="enter mnemonic" --mnemonicpassphrase="enter optional mnemonic passphrase"
+
+The HD wallet will be restored and your balance will appear once sync is
+complete.
+
+
 .. _dashcore-multisig:
 
 Multisignature
