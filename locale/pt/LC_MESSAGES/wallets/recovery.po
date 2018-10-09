@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 10:17+0000\n"
+"POT-Creation-Date: 2018-10-09 09:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: strophy <leon.white@dash.org>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/dash/teams/37570/pt/)\n"
@@ -739,21 +739,13 @@ msgid ""
 "keys can be stored in many ways, in this example we will work through the "
 "process of restoring a private key from a paper wallet using Dash Core. If "
 "you only have a QR code and not the key, use a barcode scanning app "
-"(`Android <https://play.google.com/store/apps/details?id=co "
-"m.google.zxing.client.android>`_ or `iOS <https://itunes.apple.com/us/app"
-"/quick-scan-qr-code- reader/id483336864>`_) to read the code first."
+"(`Android "
+"<https://play.google.com/store/apps/details?id=com.google.zxing.client.android>`_"
+" or `iOS <https://itunes.apple.com/us/app/quick-scan-qr-code-"
+"reader/id483336864>`_) to read the code first."
 msgstr ""
-"A maioria das carteiras oferece uma função para importar um endereço de uma "
-"chave privada, consulte a documentação da sua carteira para obter instruções"
-" específicas. Embora as chaves privadas possam ser armazenadas de várias "
-"maneiras, neste exemplo, trabalharemos no processo de restauração de uma "
-"chave privada a partir de uma carteira de papel usando o Dash Core. Se você "
-"tiver apenas um código QR e não a chave, use um aplicativo de leitura de "
-"código de barras (`Android <https://play.google.com/store/apps/details?id=co"
-" m.google.zxing.client.android>`_ ou `iOS <https://itunes.apple.com/us/app"
-"/quick-scan-qr-code- reader/id483336864>`_) para ler o código primeiro."
 
-#: ../../wallets/recovery.rst:351
+#: ../../wallets/recovery.rst:350
 msgid ""
 "First, start Dash Core and unlock your wallet by selecting **Settings > "
 "Unlock Wallet**. Enter your password, then open the debug console by "
@@ -765,13 +757,13 @@ msgstr ""
 "depuração selecionando **Ferramentas > Consola de Depuração**. No console, "
 "digite o seguinte, substituindo a chave privada de exemplo pela sua chave:"
 
-#: ../../wallets/recovery.rst:358
+#: ../../wallets/recovery.rst:360
 msgid "Importing a private key using the debug console in Dash Core wallet"
 msgstr ""
 "Importando uma chave privada usando o console de depuração na carteira do "
 "Dash Core"
 
-#: ../../wallets/recovery.rst:360
+#: ../../wallets/recovery.rst:362
 msgid ""
 "Dash Core will rescan the blockchain for transactions involving the public "
 "address of this key and enter the transactions and balance in your wallet."
@@ -780,7 +772,7 @@ msgstr ""
 "envolvendo o endereço público dessa chave e inserir as transações e o saldo "
 "em sua carteira."
 
-#: ../../wallets/recovery.rst:364
+#: ../../wallets/recovery.rst:366
 msgid ""
 "The private key must be in wallet import format (WIF). If your key is "
 "encrypted using BIP38 (key begins with 6P instead of 7), you must first "
@@ -799,18 +791,18 @@ msgstr ""
 "chaves serão descriptografadas. Encontre a chave chamada **Private Key WIF**"
 " e importe-a para sua carteira."
 
-#: ../../wallets/recovery.rst:379
+#: ../../wallets/recovery.rst:381
 msgid ""
 "*Decrypting a BIP38 encrypted key to WIF for import in Dash Core wallet*"
 msgstr ""
 "*Descriptografar uma chave criptografada BIP38 para WIF para importação na "
 "carteira do Dash Core*"
 
-#: ../../wallets/recovery.rst:382
+#: ../../wallets/recovery.rst:384
 msgid "Forgotten Passwords"
 msgstr "Senhas Esquecidas"
 
-#: ../../wallets/recovery.rst:384
+#: ../../wallets/recovery.rst:386
 msgid ""
 "In most cases, if you selected a strong password and have forgotten or lost "
 "it, there is practically no hope of recovery. The encryption used by the "
@@ -833,11 +825,11 @@ msgstr ""
 "Bitcoin Core, a maioria das abordagens para aplicar a força bruta para "
 "quebrar uma carteira Bitcoin também funcionará para as carteiras do Dash."
 
-#: ../../wallets/recovery.rst:395
+#: ../../wallets/recovery.rst:397
 msgid "`Wallet Recovery Services <https://walletrecoveryservices.com>`_"
 msgstr ""
 "`Serviços de Recuperação de Carteiras <https://walletrecoveryservices.com>`_"
 
-#: ../../wallets/recovery.rst:396
+#: ../../wallets/recovery.rst:398
 msgid "`BTCRecover <https://github.com/gurnec/btcrecover>`_"
 msgstr "`BTCRecover <https://github.com/gurnec/btcrecover>`_"
