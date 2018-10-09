@@ -64,8 +64,7 @@ withdrawing cash from an ATM or spending online or anywhere debit/credit
 cards are supported. The Dash is either exchanged at the time of
 purchase or in advance. For an overview and review of all available and
 upcoming cards, including cards funded by the Dash budget system, see
-`this article on Dash Force News <https://www.dashforcenews.com/debit-
-card-proposal- reviews/>`_.
+`this article on Dash Force News <https://www.dashforcenews.com/debit-card-proposal-reviews/>`_.
 
 The rapidly evolving approach to regulation of cryptocurrencies such as
 Dash and instant exchange solutions such as ShapeShift means that
