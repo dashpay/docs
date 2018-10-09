@@ -48,7 +48,7 @@ not necessarily be online or functioning at any given time. Please join
 <https://www.dash.org/forum/>`_ if you have a question relating to a
 specific service.
 
-- **Test builds:** https://jenkins.dash.org
+- **Test builds:** https://jenkins.dash.org/blue/
 - **Bugtracker:** https://github.com/dashpay/dash/issues/new
 - **Discussion and help:** https://www.dash.org/forum/topic/testing.53/
 - **Masternode tools:** https://test.dashninja.pl/masternodes.html
@@ -90,7 +90,7 @@ as the :ref:`mainnet masternode installation guide <masternode-setup>`,
 but with a few key differences:
 
 - You will probably be running a development version of Dash instead of
-  the stable release. See `here <https://jenkins.dash.org>`__ for
+  the stable release. See `here <https://jenkins.dash.org/blue>`__ for
   downloadable builds, then choose **dashpay-dash > develop** to view a
   list of recent builds.
 - When opening the firewall, port 19999 must be opened instead of (or in
@@ -170,5 +170,5 @@ Discussion:
 
 Latest successfully built develop branch binaries:
 
-- Dash Core: https://jenkins.dash.org/job/dashpay-dash/job/develop/lastSuccessfulBuild/
+- Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash/activity
 - Sentinel: https://github.com/dashpay/sentinel/tree/develop
