@@ -170,5 +170,5 @@ Discussion:
 
 Latest successfully built develop branch binaries:
 
-- Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash/activity
+- Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash/activity/?branch=develop
 - Sentinel: https://github.com/dashpay/sentinel/tree/develop
