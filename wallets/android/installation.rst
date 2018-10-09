@@ -31,8 +31,7 @@ installing an APK file. Follow these instructions:
 #. Enable Unknown sources by going to **Settings → Security → Unknown
    sources**. Read and accept the warning.
 #. Using your phone, download the latest version of the APK from `this
-   link <https://github.com/HashEngineering/dash-
-   wallet/releases/latest>`_.  At the time of writing, this was 5.18.1.
+   link <https://github.com/HashEngineering/dash-wallet/releases/latest>`_.
 #. If you cannot use your phone to go online, download the APK using
    your PC instead and copy it to your phone using a cable or Bluetooth.
    You may need a file browser to find the copied file. `ES File
@@ -55,7 +54,6 @@ Android Debug Bridge (ADB). Follow these instructions:
    times.
 #. Using your PC, download the latest version of the APK from `this link
    <https://github.com/HashEngineering/dash-wallet/releases/latest>`_.
-   At the time of writing, this was 5.18.
 #. Connect your phone to the PC, open a terminal/command prompt window
    and type::
 
