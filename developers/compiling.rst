@@ -11,9 +11,9 @@ Compiling Dash Core
 While Dash offers stable binary builds on the `website
 <https://www.dash.org/wallets>`_ and on `GitHub
 <https://github.com/dashpay/dash/releases>`_, and development builds
-using `Jenkins <https://jenkins.dash.org/blue/pipelines>`_, many users
-will also be interested in building Dash binaries for themselves. The
-following guides are available:
+using `Jenkins <https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-nightly/activity/>`_,
+many users will also be interested in building Dash binaries for
+themselves. The following guides are available:
 
 - :ref:`Building on Linux <linux-build>`
 - :ref:`Building on macOS <macos-build>`

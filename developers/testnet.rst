@@ -90,9 +90,9 @@ as the :ref:`mainnet masternode installation guide <masternode-setup>`,
 but with a few key differences:
 
 - You will probably be running a development version of Dash instead of
-  the stable release. See `here <https://jenkins.dash.org/blue>`__ for
-  downloadable builds, then choose **dashpay-dash > develop** to view a
-  list of recent builds.
+  the stable release. See `here <https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-nightly/activity>`__
+  for a list of builds, then choose the latest successful build and
+  click **Artifacts** to view a list of binaries.
 - When opening the firewall, port 19999 must be opened instead of (or in
   addition to) 9999. Use this command: ``ufw allow 19999/tcp``
 - Your desktop wallet must be running in testnet mode. Add the following
@@ -170,5 +170,5 @@ Discussion:
 
 Latest successfully built develop branch binaries:
 
-- Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash/activity/?branch=develop
+- Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-nightly
 - Sentinel: https://github.com/dashpay/sentinel/tree/develop
