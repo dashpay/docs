@@ -1200,6 +1200,19 @@ Coinfinity
   Germany, as well as through their coupon-based `Bitcoinbon
   <https://www.bitcoinbon.at/>`_ service.
 
+Bitcoin Meester
+  .. image:: exchanges/bitcoinmeester.png
+     :width: 200px
+     :align: right
+     :target: https://www.bitcoinmeester.nl
+
+  https://www.bitcoinmeester.nl
+  https://www.bitladon.com/
+
+  Bitcoin Meester, and it's international sister site Bitladon, allows
+  you to buy and sell Dash (and other cryptocurrencies) OTC in exchange
+  for Euro.
+
 CoinOYO
   .. image:: exchanges/coinoyo.png
      :width: 200px
