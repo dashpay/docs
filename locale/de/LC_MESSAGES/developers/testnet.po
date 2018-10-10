@@ -1,26 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 08:38+0000\n"
+"POT-Creation-Date: 2018-10-10 07:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2018\n"
-"Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../developers/testnet.rst:1
 msgid ""
-"Dash testnet and devnets are used by Dash developers for testing using tDASH"
+"Dash testnet and devnets are used by Dash developers for testing using "
+"tDASH"
 msgstr ""
 
 #: ../../developers/testnet.rst:1
@@ -39,21 +41,21 @@ msgid ""
 "feature — **named devnets**. Devnets are developer networks that combine "
 "some aspects of testnet (the global and public testing network) and some "
 "aspects of regtest (the local-only regression testing mode that provides "
-"controlled block generation). Unlike testnet, multiple independent devnets "
-"can be created and coexist without interference. For practical documentation"
-" on how to use devnets, see the `developer documentation <https://dash-"
-"docs.github.io/en/developer-examples#devnet-mode>`__ or this `blog post "
-"<https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
+"controlled block generation). Unlike testnet, multiple independent "
+"devnets can be created and coexist without interference. For practical "
+"documentation on how to use devnets, see the `developer documentation "
+"<https://dash-docs.github.io/en/developer-examples#devnet-mode>`__ or "
+"this `blog post <https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
 msgstr ""
 
 #: ../../developers/testnet.rst:21
 msgid ""
-"Testnet is a fully functioning Dash blockchain with the one key exception "
-"that because the Dash on the network can be created freely, it has no value."
-" This currency, known as tDASH, can be requested from a faucet to help "
-"developers test new versions of Dash, as well as test network operations "
-"using identical versions of the software before they are carried out on the "
-"mainnet. There are a few other key differences:"
+"Testnet is a fully functioning Dash blockchain with the one key exception"
+" that because the Dash on the network can be created freely, it has no "
+"value. This currency, known as tDASH, can be requested from a faucet to "
+"help developers test new versions of Dash, as well as test network "
+"operations using identical versions of the software before they are "
+"carried out on the mainnet. There are a few other key differences:"
 msgstr ""
 
 #: ../../developers/testnet.rst:28
@@ -62,8 +64,8 @@ msgstr ""
 
 #: ../../developers/testnet.rst:29
 msgid ""
-"Testnet addresses start with \"y\" instead of \"X\", ADDRESSVERSION is 140 "
-"(instead of 76)"
+"Testnet addresses start with \"y\" instead of \"X\", ADDRESSVERSION is "
+"140 (instead of 76)"
 msgstr ""
 
 #: ../../developers/testnet.rst:31
@@ -76,8 +78,8 @@ msgstr ""
 
 #: ../../developers/testnet.rst:33
 msgid ""
-"Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, testnet-"
-"seed.darkcoin.qa, testnet-seed.dashpay.io"
+"Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, "
+"testnet-seed.darkcoin.qa, testnet-seed.dashpay.io"
 msgstr ""
 
 #: ../../developers/testnet.rst:35
@@ -86,8 +88,8 @@ msgstr ""
 
 #: ../../developers/testnet.rst:37
 msgid ""
-"To start Dash Core in testnet mode, find your dash.conf file and enter the "
-"following line::"
+"To start Dash Core in testnet mode, find your dash.conf file and enter "
+"the following line::"
 msgstr ""
 
 #: ../../developers/testnet.rst:43
@@ -96,9 +98,9 @@ msgstr ""
 
 #: ../../developers/testnet.rst:45
 msgid ""
-"The links below were collected from various community sources and may not "
-"necessarily be online or functioning at any given time. Please join `Dash "
-"Nation Discord <http://dashchat.org>`_ or the `Dash Forum "
+"The links below were collected from various community sources and may not"
+" necessarily be online or functioning at any given time. Please join "
+"`Dash Nation Discord <http://dashchat.org>`_ or the `Dash Forum "
 "<https://www.dash.org/forum/>`_ if you have a question relating to a "
 "specific service."
 msgstr ""
@@ -187,7 +189,8 @@ msgstr ""
 
 #: ../../developers/testnet.rst:80
 msgid ""
-"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare"
+"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by "
+"flare"
 msgstr ""
 
 #: ../../developers/testnet.rst:81
@@ -210,17 +213,18 @@ msgstr "Masternodes"
 
 #: ../../developers/testnet.rst:88
 msgid ""
-"Installing a masternode under testnet generally follows the same steps as "
-"the :ref:`mainnet masternode installation guide <masternode-setup>`, but "
-"with a few key differences:"
+"Installing a masternode under testnet generally follows the same steps as"
+" the :ref:`mainnet masternode installation guide <masternode-setup>`, but"
+" with a few key differences:"
 msgstr ""
 
 #: ../../developers/testnet.rst:92
 msgid ""
-"You will probably be running a development version of Dash instead of the "
-"stable release. See `here <https://jenkins.dash.org/blue>`__ for "
-"downloadable builds, then choose **dashpay-dash > develop** to view a list "
-"of recent builds."
+"You will probably be running a development version of Dash instead of the"
+" stable release. See `here "
+"<https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-"
+"nightly/activity>`__ for a list of builds, then choose the latest "
+"successful build and click **Artifacts** to view a list of binaries."
 msgstr ""
 
 #: ../../developers/testnet.rst:96
@@ -231,8 +235,8 @@ msgstr ""
 
 #: ../../developers/testnet.rst:98
 msgid ""
-"Your desktop wallet must be running in testnet mode. Add the following line "
-"to *dash.conf*: ``testnet = 1``"
+"Your desktop wallet must be running in testnet mode. Add the following "
+"line to *dash.conf*: ``testnet = 1``"
 msgstr ""
 
 #: ../../developers/testnet.rst:100
@@ -243,14 +247,15 @@ msgstr ""
 
 #: ../../developers/testnet.rst:102
 msgid ""
-"You cannot use dashman to install development versions of Dash. See the link"
-" to downloadable builds above."
+"You cannot use dashman to install development versions of Dash. See the "
+"link to downloadable builds above."
 msgstr ""
 
 #: ../../developers/testnet.rst:104
 msgid ""
-"Your masternode configuration file must also specify testnet mode. Add the "
-"following line when setting up *dash.conf* on the masternode: testnet = 1"
+"Your masternode configuration file must also specify testnet mode. Add "
+"the following line when setting up *dash.conf* on the masternode: testnet"
+" = 1"
 msgstr ""
 
 #: ../../developers/testnet.rst:107
@@ -261,22 +266,23 @@ msgstr ""
 
 #: ../../developers/testnet.rst:109
 msgid ""
-"When cloning sentinel, you may need to clone the development branch using "
-"the ``-b`` option, for example: ``git clone -b core-v0.12.2.x "
+"When cloning sentinel, you may need to clone the development branch using"
+" the ``-b`` option, for example: ``git clone -b core-v0.12.2.x "
 "https://github.com/dashpay/sentinel.git``"
 msgstr ""
 
 #: ../../developers/testnet.rst:112
 msgid ""
-"Once sentinel is installed, modify ``~/.dashcore/sentinel/sentinel.conf``, "
-"comment the mainnet line and uncomment: ``network=testnet``"
+"Once sentinel is installed, modify "
+"``~/.dashcore/sentinel/sentinel.conf``, comment the mainnet line and "
+"uncomment: ``network=testnet``"
 msgstr ""
 
 #: ../../developers/testnet.rst:115
 msgid ""
 "The wallet holding the masternode collateral will expect to find the "
-"``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf`` instead"
-" of ``~/.dashcore/masternode.conf``."
+"``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf`` "
+"instead of ``~/.dashcore/masternode.conf``."
 msgstr ""
 
 #: ../../developers/testnet.rst:120
@@ -285,11 +291,12 @@ msgstr ""
 
 #: ../../developers/testnet.rst:122
 msgid ""
-"In June 2018, the Dash team announced the start of testing of the upcoming "
-"Dash 12.3 release. Extensive internal testing has already been done on the "
-"12.2 code, but there are numerous bugs that can only be revealed with actual"
-" use by real people. The Dash team invites anybody who is interested to "
-"download the software and become active on testnet. This release includes:"
+"In June 2018, the Dash team announced the start of testing of the "
+"upcoming Dash 12.3 release. Extensive internal testing has already been "
+"done on the 12.2 code, but there are numerous bugs that can only be "
+"revealed with actual use by real people. The Dash team invites anybody "
+"who is interested to download the software and become active on testnet. "
+"This release includes:"
 msgstr ""
 
 #: ../../developers/testnet.rst:129
@@ -352,12 +359,12 @@ msgstr ""
 
 #: ../../developers/testnet.rst:152
 msgid ""
-"In October 2017, the Dash team announced the launch of a testnet for public "
-"testing of the upcoming 12.2 release of the Dash software. Extensive "
-"internal testing has already been done on the 12.2 code, but there are "
-"numerous bugs that can only be revealed with actual use by real people. The "
-"Dash team invites anybody who is interested to download the software and "
-"become active on testnet. This release includes:"
+"In October 2017, the Dash team announced the launch of a testnet for "
+"public testing of the upcoming 12.2 release of the Dash software. "
+"Extensive internal testing has already been done on the 12.2 code, but "
+"there are numerous bugs that can only be revealed with actual use by real"
+" people. The Dash team invites anybody who is interested to download the "
+"software and become active on testnet. This release includes:"
 msgstr ""
 
 #: ../../developers/testnet.rst:159
@@ -380,8 +387,8 @@ msgstr ""
 
 #: ../../developers/testnet.rst:163
 msgid ""
-"Experimental BIP39/BIP44 complaint HD wallet (disabled by default, should be"
-" fully functional but there is no GUI yet)"
+"Experimental BIP39/BIP44 complaint HD wallet (disabled by default, should"
+" be fully functional but there is no GUI yet)"
 msgstr ""
 
 #: ../../developers/testnet.rst:167
@@ -403,9 +410,26 @@ msgstr ""
 #: ../../developers/testnet.rst:173
 msgid ""
 "Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-"
-"dash/activity/?branch=develop"
+"dash-gitian-nightly"
 msgstr ""
 
 #: ../../developers/testnet.rst:174
 msgid "Sentinel: https://github.com/dashpay/sentinel/tree/develop"
 msgstr ""
+
+#~ msgid ""
+#~ "You will probably be running a "
+#~ "development version of Dash instead of"
+#~ " the stable release. See `here "
+#~ "<https://jenkins.dash.org/blue>`__ for downloadable "
+#~ "builds, then choose **dashpay-dash > "
+#~ "develop** to view a list of recent"
+#~ " builds."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Dash Core: "
+#~ "https://jenkins.dash.org/blue/organizations/jenkins/dashpay-"
+#~ "dash/activity/?branch=develop"
+#~ msgstr ""
+
