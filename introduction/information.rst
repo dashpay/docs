@@ -60,6 +60,7 @@ Chat
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil
 - **Dash Russia Telegram:** https://telegram.me/Dash_Ru
 - **Dash en Español Telegram:** http://unete.dashespanol.com
+- **Dash Embassy D-A-CH auf Deutsch Telegram:** https://t.me/dashembassydach 
 - **Dash Telegram News Bot:** https://telegram.me/dashnews
 - **QQ 达世币官方群 DASH.China:** 419967021
 - **Freenode IRC:** #dashpay
