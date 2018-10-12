@@ -48,7 +48,7 @@ Splawik's Hosting Service
 
 http://dashmasternode.io
 
-- Operated by: splawik21 (Dash Foundation member)
+- Operated by: splawik21 (Dash Core team member)
 - Services: Hosting
 - `Site <http://dashmasternode.io>`__
 - `Email <splawik21@protonmail.com>`__
