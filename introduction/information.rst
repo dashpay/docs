@@ -31,6 +31,7 @@ Community sites
 - https://www.dashnexus.org
 - https://www.dashwatch.org
 - https://www.dashboost.org
+- https://dashroots.fund
 - https://www.dashcentral.org
 - https://www.dashninja.pl
 - https://www.dashforcenews.com
@@ -182,6 +183,7 @@ Treasury tools
 - https://www.dashwatch.org
 - https://www.dashcentral.org
 - https://www.dashboost.org
+- https://dashroots.fund
 - https://dashnexus.org
 - https://dashvotetracker.com
 - https://proposal.dash.org
