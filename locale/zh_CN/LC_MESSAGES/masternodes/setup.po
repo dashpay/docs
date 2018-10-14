@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 10:17+0000\n"
+"POT-Creation-Date: 2018-10-14 06:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -22,15 +22,15 @@ msgstr ""
 msgid ""
 "This guide describes how to set up a Dash masternode. It also describes "
 "various options for hosting and different wallets"
-msgstr ""
+msgstr "本指南描述了如何架设达世币主节点。还介绍了各种托管服务和不同的钱包选择"
 
 #: ../../masternodes/setup.rst:1
 msgid "dash, guide, masternodes, trezor"
-msgstr ""
+msgstr "dash，指南，主节点，trezor"
 
 #: ../../masternodes/setup.rst:9
 msgid "Setup"
-msgstr ""
+msgstr "架设"
 
 #: ../../masternodes/setup.rst:11
 msgid ""
@@ -41,6 +41,7 @@ msgid ""
 " to be made along the way, and optional extra steps to take for increased "
 "security."
 msgstr ""
+"架设一个主节点需要对Linux和区块链技术有基本的理解，并且需要能够严格遵循指令。主节点也需要定期的维护和谨慎的安全部署，特别是当您没有把您的达世币存储在硬件钱包上的时候。在此过程中，需要做出一些选择，并采取可选的额外步骤来提高安全性。"
 
 #: ../../masternodes/setup.rst:18
 msgid ""
@@ -53,6 +54,12 @@ msgid ""
 "address and communicate the transaction ID to the hosting service. Simply "
 "follow the steps here."
 msgstr ""
+"如果您更喜欢使用主节点托管服务，则有几个社区成员提供主机服务，地址为\\ `masternode.me "
+"<https://masternode.me/>`_,\\ `node40.com "
+"<https://www.node40.com/hosting/>`_,\\ `dashmasternode.io "
+"<http://dashmasternode.io/>`_ 或\\ `masternodehosting "
+"<https://masternodehosting.com/>`_. "
+"当使用这些托管服务时，您所要做的就是发送1000个达世币的单笔交易到一个特定的地址，并将交易ID传递给托管服务。只要按照此处步骤执行就行了。"
 
 #: ../../masternodes/setup.rst:27
 msgid ""
@@ -68,31 +75,40 @@ msgid ""
 "dummies-updated-for-12-1.2680/>`__, as well many more guides for specific "
 "cases in this forum."
 msgstr ""
+"本指南主要以\\ `Bertrand256 <https://github.com/Bertrand256/dash-masternode- "
+"tool/blob/master/README.md>`_,\\ `moocowmoo "
+"<https://github.com/moocowmoo/dashman/blob/master/README.md>`_,\\ `tao "
+"<https://www.dash.org/forum/threads/taos-masternode-setup-guide-for- "
+"dummies-updated-for-12-1.2680/>`_,\\ `BolehVPN "
+"<https://dashpay.atlassian.net/wiki/spaces/DOC/pages/24019061>`_ "
+"和Tungfa先前编写的指南为基础。Tao的非常受欢迎的原创指南和支持线程可在 `此处 "
+"<https://www.dash.org/forum/threads/taos-masternode- setup-guide-for-"
+"dummies-updated-for-12-1.2680/>`__浏览，在论坛中还有关于更多具体案例的指南。"
 
 #: ../../masternodes/setup.rst:40
 msgid "Before you begin"
-msgstr ""
+msgstr "在您开始之前"
 
 #: ../../masternodes/setup.rst:42
 msgid ""
 "This guide assumes you are setting up a single masternode for the first "
 "time. If you are updating a masternode, see :ref:`here <masternode-update>` "
 "instead. You will need:"
-msgstr ""
+msgstr "本指南是假设您第一次设置单个主节点。如果您想要更新主节点，请参阅\\ :ref:`此处 <masternode-update>`\\ 。您将需要："
 
 #: ../../masternodes/setup.rst:46
 msgid "1000 Dash"
-msgstr ""
+msgstr "1000个达世币"
 
 #: ../../masternodes/setup.rst:47
 msgid ""
 "A wallet to store your Dash, preferably a hardware wallet, although Dash "
 "Core wallet is also supported"
-msgstr ""
+msgstr "存储您达世币的钱包，最好是硬件钱包，当然也支持Dash Core钱包"
 
 #: ../../masternodes/setup.rst:49
 msgid "A Linux server, preferably a Virtual Private Server (VPS)"
-msgstr ""
+msgstr "Linux服务器，最好是虚拟专用服务器(VPS)"
 
 #: ../../masternodes/setup.rst:51
 msgid ""
@@ -100,10 +116,11 @@ msgid ""
 "most of the work is done on your Linux VPS, alternative steps for using "
 "macOS or Linux will be indicated where necessary."
 msgstr ""
+"我们还假设您将在Windows系统上工作。但是，由于大部分工作都会在Linux VPS上完成，因此将在必要时说明使用MacOS或Linux的其他步骤。"
 
 #: ../../masternodes/setup.rst:58
 msgid "Set up your VPS"
-msgstr ""
+msgstr "设置您的VPS"
 
 #: ../../masternodes/setup.rst:60
 msgid ""
@@ -119,6 +136,9 @@ msgid ""
 " technically possible, it will most likely not work reliably because most "
 "ISPs allocate dynamic IP addresses to home users."
 msgstr ""
+"通常被称为云服务器的VPS，是在虚拟机中运行的操作系统(通常是Linux)的全功能安装。虚拟机允许VPS提供程序在一台物理服务器上运行多个系统，这使得它比在每台服务器的"
+" “裸金属” "
+"上运行单个操作系统更高效、更便宜。VPS是托管达世币主节点的理想选择，因为它们通常提供有保证的正常运行时间、硬件故障时的冗余以及确保您保持在主节点支付队列中所需的静态IP地址。虽然在家中从桌面计算机上运行主节点在技术上是可能的，但它很可能无法可靠地工作，因为大多数ISPs为家庭用户分配动态IP地址。"
 
 #: ../../masternodes/setup.rst:73
 msgid ""
@@ -131,10 +151,16 @@ msgid ""
 "click **+** to add a new server. Select a location for your new server on "
 "the following screen:"
 msgstr ""
+"我们将使用\\  `Vultr <https://www.vultr.com/>`_ 托管作为VPS的示例，尽管\\ `DigitalOcean "
+"<https://www.digitalocean.com/>`_,\\ `Amazon EC2 "
+"<https://aws.amazon.com/ec2>`_,\\ `Google Cloud "
+"<https://cloud.google.com/compute/>`_,\\ `Choopa <https://www.choopa.com/>`_"
+" 以及\\ `OVH <https://www.ovh.com/>`_ 也都是流行的选择。首先，创建一个帐户并添加信用。然后转到左侧的服务器菜单并单击 "
+"**+** 以添加一个新的服务器。在以下屏幕上选择您的新服务器的位置："
 
 #: ../../masternodes/setup.rst:85
 msgid "Vultr server location selection screen"
-msgstr ""
+msgstr "Vultr服务器位置选择屏幕"
 
 #: ../../masternodes/setup.rst:87
 msgid ""
@@ -142,51 +168,52 @@ msgid ""
 "latest version because 16.04 is an LTS release of Ubuntu, which will be "
 "supported with security updates for 5 years instead of the usual 9 months."
 msgstr ""
+"选择Ubuntu16.04x64作为服务器类型。我们使用的是16.04而不是最新版本，因为16.04是Ubuntu的LTS版本，它将支持5年的安全更新，而不是通常的9个月。"
 
 #: ../../masternodes/setup.rst:95
 msgid "Vultr server type selection screen"
-msgstr ""
+msgstr "Vultr服务器类型选择屏幕"
 
 #: ../../masternodes/setup.rst:97
 msgid "Select a server size offering at least 2GB of memory."
-msgstr ""
+msgstr "选择至少提供2GB内存的服务器。"
 
 #: ../../masternodes/setup.rst:102
 msgid "Vultr server size selection screen"
-msgstr ""
+msgstr "Vultr服务器大小选择屏幕"
 
 #: ../../masternodes/setup.rst:104
 msgid ""
 "Enter a hostname and label for your server. In this example we will use "
 "``dashmn1`` as the hostname."
-msgstr ""
+msgstr "为您的服务器输入主机名和标签。在本例中，我们将使用 ``dashmn1`` 作为主机名。"
 
 #: ../../masternodes/setup.rst:110
 msgid "Vultr server hostname & label selection screen"
-msgstr ""
+msgstr "Vultr服务器主机名和标签选择屏幕"
 
 #: ../../masternodes/setup.rst:112
 msgid ""
 "Vultr will now install your server. This process may take a few minutes."
-msgstr ""
+msgstr "Vultr现在将安装您的服务器。这个过程可能需要几分钟。"
 
 #: ../../masternodes/setup.rst:117
 msgid "Vultr server installation screen"
-msgstr ""
+msgstr "Vultr服务器安装屏幕"
 
 #: ../../masternodes/setup.rst:119
 msgid ""
 "Click **Manage** when installation is complete and take note of the IP "
 "address, username and password."
-msgstr ""
+msgstr "在安装完成后，单击 **Manage** ，并记下IP地址、用户名和密码。"
 
 #: ../../masternodes/setup.rst:125
 msgid "Vultr server management screen"
-msgstr ""
+msgstr "Vultr服务器管理屏幕"
 
 #: ../../masternodes/setup.rst:128
 msgid "Set up your operating system"
-msgstr ""
+msgstr "设置您的操作系统"
 
 #: ../../masternodes/setup.rst:130
 msgid ""
@@ -198,10 +225,14 @@ msgid ""
 "can ssh directly from the terminal - simply type ``ssh root@<server_ip>`` "
 "and enter your password when prompted."
 msgstr ""
+"我们将从连接到您新提供的服务器开始。在Windows上，我们将首先下载一个名为PuTTY的应用程序来连接到服务器。转到\\ `PuTTY 下载页面 "
+"<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_ "
+"并为您的系统选择适当的MSI安装程序。在Mac或Linux上，您可以直接从终端中 -只需键入``ssh root@<server_ip>`` "
+"，然后在提示时输入密码。"
 
 #: ../../masternodes/setup.rst:141
 msgid "PuTTY download page"
-msgstr ""
+msgstr "PuTTY下载页面"
 
 #: ../../masternodes/setup.rst:143
 msgid ""
@@ -211,21 +242,23 @@ msgid ""
 "the first time you are connecting to this server. You can safely click "
 "**Yes** to trust this server in the future."
 msgstr ""
+"双击下载的文件安装PuTTY，然后从您的开始菜单中运行该应用程序。在 **主机名** 字段中输入服务器的IP地址，然后单击 **打开** "
+"。您可能会看到证书警告，因为这是您第一次连接到此服务器。之后您可以安全地单击 **是** 来信任服务器。"
 
 #: ../../masternodes/setup.rst:152
 msgid "PuTTY security alert when connecting to a new server"
-msgstr ""
+msgstr "连接到新服务器时的PuTTY安全警告"
 
 #: ../../masternodes/setup.rst:154
 msgid ""
 "You are now connected to your server and should see a terminal window. Begin"
 " by logging in to your server with the user ``root`` and password supplied "
 "by your hosting provider."
-msgstr ""
+msgstr "您现在已连接到您的服务器，并且应该会看到一个终端窗口。 首先，使用您的主机提供商提供的用户 ``root`` 和密码登录到您的服务器。"
 
 #: ../../masternodes/setup.rst:161
 msgid "Password challenge when connecting to your VPS for the first time"
-msgstr ""
+msgstr "第一次连接到您的VPS时会遇到密码问题"
 
 #: ../../masternodes/setup.rst:163
 msgid ""
@@ -235,6 +268,8 @@ msgid ""
 " PuTTY window and right-clicking in the window. The text will paste at the "
 "current cursor location::"
 msgstr ""
+"为了确保安全，您应该立即更改root密码，并将其存储在安全的地方。您可以复制和粘贴以下任何命令，方法是在您的浏览器中选择这些命令，按下 **Ctrl +"
+" C**，然后切换到PuTTY窗口，并在窗口中右键单击。文本将粘贴在当前光标位置::"
 
 #: ../../masternodes/setup.rst:171
 msgid ""
@@ -242,6 +277,7 @@ msgid ""
 "Next we will create a new user with the following command, replacing "
 "``<username>`` with a username of your choice::"
 msgstr ""
+"输入并确认一个新密码(最好是长的和随机生成的)。接下来，我们将使用以下命令，将 ``<username> `` 替换为您喜欢的用户名来创建一个新用户::"
 
 #: ../../masternodes/setup.rst:177
 msgid ""
@@ -251,12 +287,13 @@ msgid ""
 "user has been created, we will add them to the sudo group so they can "
 "perform commands as root::"
 msgstr ""
+"您将被提示输入密码。输入并确认使用新密码(与您的root密码不同)，并将其存储在安全的地方。您还将看到有关用户信息的提示，但可以将其保留为空白。一旦创建了用户，我们将把它们添加到sudo组中，这样它们就能以root用户的身份执行命令::"
 
 #: ../../masternodes/setup.rst:185
 msgid ""
 "Now, while still as root, we will update the system from the Ubuntu package "
 "repository::"
-msgstr ""
+msgstr "现在，在仍是root用户时，我们将从Ubuntu软件包存储库更新系统::"
 
 #: ../../masternodes/setup.rst:191
 msgid ""
@@ -266,11 +303,13 @@ msgid ""
 "apply any necessary kernel updates, and then login to our newly secured "
 "environment as the new user::"
 msgstr ""
+"系统将显示可升级软件包的列表。按 **Y** 和 **Enter** "
+"来安装软件包。现在我们将安装防火墙(以及稍后使用的其他软件包)，添加交换内存和重新启动服务器以应用任何必要的内核更新，然后以新用户的身份登录到我们新的安全环境::"
 
 #: ../../masternodes/setup.rst:199 ../../masternodes/setup.rst:209
 #: ../../masternodes/setup.rst:437
 msgid "(press **Y** and **Enter** to confirm)"
-msgstr ""
+msgstr "(按 **Y** 和 **Enter** 以确认)"
 
 #: ../../masternodes/setup.rst:219
 msgid ""
@@ -278,12 +317,14 @@ msgid ""
 "word/number), then press **Ctrl + X** to close the editor, then **Y** and "
 "**Enter** save the file."
 msgstr ""
+"在文件末尾添加以下行(按tab键来分隔每个单词/数字)，然后按 **Ctrl + X** 来关闭编辑器，再按 **Y** 和 **Enter** "
+"保存该文件。"
 
 #: ../../masternodes/setup.rst:227
 msgid ""
 "Finally, in order to prevent brute force password hacking attacks, open the "
 "SSH configuration file to disable root login over SSH::"
-msgstr ""
+msgstr "最后，为了防止暴力密码黑客攻击，请打开SSH配置文件以禁用SSH上的root登录::"
 
 #: ../../masternodes/setup.rst:232
 msgid ""
@@ -293,14 +334,17 @@ msgid ""
 "selected above. The press **Ctrl + X** to close the editor, then **Y** and "
 "**Enter** save the file."
 msgstr ""
+"找到一行 ``PermitRootLogin Yes`` ，并将其设置为 ``PermitRootLogin no`` 。在此下面，添加一行内容为 "
+"``AllowUser <username>`` ，将 ``<username>`` 替换为您在上面选择的用户名。按下 **Ctrl + X** "
+"来关闭编辑器，然后按 **Y** 和 **Enter** 保存该文件。"
 
 #: ../../masternodes/setup.rst:238
 msgid "Then reboot the server:"
-msgstr ""
+msgstr "然后重新启动服务器:"
 
 #: ../../masternodes/setup.rst:244
 msgid "PuTTY will disconnect when the server reboots."
-msgstr ""
+msgstr "当服务器重新启动时，PuTTY将断开连接。"
 
 #: ../../masternodes/setup.rst:246
 msgid ""
@@ -316,10 +360,17 @@ msgid ""
 " keys to any Dash, these steps are considered beyond the scope of this "
 "guide."
 msgstr ""
+"虽然此设置包括保护您的服务器免受攻击的基本步骤，但还可以做更多的工作。特别是\\ `使用公钥 "
+"<https://help.ubuntu.com/community/SSH/OpenSSH/Keys>`_ "
+"而不是用户名/密码组合来进行身份验证，`安装Fail2ba <https://www.linode.com/docs/security/using-"
+"fail2ban-for-security>`_ 来阻止登录暴力攻击，且可以 `启动自动安全升级 "
+"<https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ 。更多提示可以在 `此处 "
+"<https://www.cyberciti.biz/tips /linux-"
+"security.html>`__获得。但是，由于主节点实际上并不存储任何Dash的密钥，这些步骤被认为超出了本指南的范围。"
 
 #: ../../masternodes/setup.rst:259
 msgid "Send the collateral"
-msgstr ""
+msgstr "发送保证金"
 
 #: ../../masternodes/setup.rst:261
 msgid ""
@@ -332,10 +383,12 @@ msgid ""
 "to enhance security and protect yourself against hacking. This guide will "
 "describe the steps for both hardware wallets and Dash Core."
 msgstr ""
+"要操作一个主节点，需要一个带有单个未花费的交易输出(UTXO)为1000个达世币的钱包地址。一旦交易被发送，必须提取有关交易的各种密钥，以便稍后在配置文件中输入，来证明交易已经被成功完成。一个主节点可以从硬件钱包或官方的Dash"
+" Core钱包开始，尽管强烈推荐使用硬件钱包来增强安全性和保护自己免受黑客攻击。该指南将描述硬件钱包和Dash Core钱包的步骤。"
 
 #: ../../masternodes/setup.rst:272
 msgid "Option 1: Sending from a hardware wallet"
-msgstr ""
+msgstr "选项1：从硬件钱包发送"
 
 #: ../../masternodes/setup.rst:274
 msgid ""
@@ -351,12 +404,18 @@ msgid ""
 "account. You should see the transaction as soon as the first confirmation "
 "arrives, usually within a few minutes."
 msgstr ""
+"使用 https://wallet.trezor.io/ "
+"上的Trezor钱包设置您的Trezor，并发送一个测试交易以验证它是否正常工作。有关此方面的帮助，请参阅  :ref:`此处 <hardware-"
+"trezor>` - 您也可以(小心)选择  `在Trezor中添加一个密码 <https://blog.trezor.io/hide- your-"
+"trezor-wallets-with-multiple-passphrases-f2e0834026eb>`_ 以进一步保护您的保证金。单击 "
+"**添加账户** 以在您的Trezor钱包中添加一个新的账户。然后单击 **接收** "
+"选项卡，并准确地向所显示的地址发送1000个达世币。如果您正在设置多个主节点，则向同一新帐户内的连续地址发送1000个达世币。您应该在第一笔确认到达时立即查看交易，通常需要几分钟。"
 
 #: ../../masternodes/setup.rst:289
 msgid ""
 "Trezor Wallet Receive tab showing successfully received collateral of 1000 "
 "DASH"
-msgstr ""
+msgstr "Trezor钱包接收选项卡显示成功接收到1000个达世币的保证金"
 
 #: ../../masternodes/setup.rst:292
 msgid ""
@@ -365,11 +424,12 @@ msgid ""
 "following steps, since we will soon need to confirm that 15 confirmations "
 "exist, as shown in the following screenshot."
 msgstr ""
+"交易出现后，单击右侧的QR代码，查看区块链上的交易。在我们完成以下步骤时，请保持此窗口打开，因为我们很快将需要确认是否存在如以下屏幕截图所示的15次确认。"
 
 #: ../../masternodes/setup.rst:300 ../../masternodes/setup.rst:408
 msgid ""
 "Trezor blockchain explorer showing 15 confirmations for collateral transfer"
-msgstr ""
+msgstr "Trezor区块链浏览器为保证金转移显示了15次确认"
 
 #: ../../masternodes/setup.rst:303
 msgid ""
@@ -378,10 +438,12 @@ msgid ""
 "<https://github.com/Bertrand256/dash-masternode-tool/releases>`__. Unzip and"
 " run the file. The following window appears."
 msgstr ""
+"在我们等待15次确认时，从GitHub发布 `页面 <https://github.com/Bertrand256/dash-masternode-"
+"tool/releases>`__下载达世币主节点工具(DMT)的最新版本。解压并运行该文件。以下窗口将出现。"
 
 #: ../../masternodes/setup.rst:311
 msgid "Dash Masternode Tool startup screen"
-msgstr ""
+msgstr "达世币主节点工具启动屏幕"
 
 #: ../../masternodes/setup.rst:313
 msgid ""
@@ -389,21 +451,23 @@ msgid ""
 "verify that the connection is working. Then connect your Trezor device and "
 "click **Test HW** to verify the Trezor connection is working."
 msgstr ""
+"在主窗口的左上角单击 **检查RPC连接** ，以验证连接是否正常。然后连接您的Trezor设备，并单击 **测试 HW** "
+"来验证Trezor连接是否正常。"
 
 #: ../../masternodes/setup.rst:323
 msgid "Dash Masternode Tool successful connection confirmations"
-msgstr ""
+msgstr "达世币主节点工具成功连接确认"
 
 #: ../../masternodes/setup.rst:325
 msgid ""
 "We will now use DMT to extract the transaction ID. Carry out the following "
 "sequence of steps as shown in this screenshot from DMT developer "
 "Bertrand256:"
-msgstr ""
+msgstr "现在我们将使用DMT提取交易ID。按DMT开发人员Bertrand 256的屏幕截图所示执行以下步骤顺序："
 
 #: ../../masternodes/setup.rst:332
 msgid "Dash Masternode Tool configuration steps"
-msgstr ""
+msgstr "达世币工具配置步骤"
 
 #: ../../masternodes/setup.rst:334
 msgid ""
@@ -411,26 +475,28 @@ msgid ""
 "defined when setting up your server, dashmn1 in this case. You can view this"
 " in the first line of the output of dashman/dashman status."
 msgstr ""
+"在此处输入您的主节点名称。在本例中，该名称应该与您设置服务器dashmn 1时定义的主机名相匹配。您可以在 dashman/dashm "
+"状态输出的第一行中查看这该名称。"
 
 #: ../../masternodes/setup.rst:338
 msgid ""
 "Enter the IP address of your masternode here. This was given to you by the "
 "VPS provider when you set up the server."
-msgstr ""
+msgstr "在此处输入您主节点的IP地址。该IP地址是由VPS提供程序在您设置服务器时提供给您的。"
 
 #: ../../masternodes/setup.rst:340
 msgid "Enter the TCP port number. This should be 9999."
-msgstr ""
+msgstr "输入TCP端口号。该端口号应该是9999。"
 
 #: ../../masternodes/setup.rst:341
 msgid "Click Generate new to generate a new masternode private key."
-msgstr ""
+msgstr "单击Generate new以生成新的主节点私钥。"
 
 #: ../../masternodes/setup.rst:342
 msgid ""
 "Copy the collateral address where you sent the 1000 DASH collateral from "
 "your Trezor Wallet and paste it in this field."
-msgstr ""
+msgstr "复制您从Trezor钱包发送1000个达世币的钱包地址，并将其粘贴到此字段中。"
 
 #: ../../masternodes/setup.rst:344
 msgid ""
@@ -438,6 +504,7 @@ msgid ""
 " can verify this against the BIP32 path shown on the receive tab in your "
 "Trezor Wallet for the transaction."
 msgstr ""
+"单击箭头 → 以从您的保证金地址派生BIP32路径。您可以通过您Trezor钱包的接收选项卡中显示的BIP 32路径来验证这一点，以获取交易。"
 
 #: ../../masternodes/setup.rst:347
 msgid ""
@@ -446,10 +513,11 @@ msgid ""
 "TX ID shown on the confirmation page of the blockchain explorer for your "
 "collateral address."
 msgstr ""
+"单击查找以找到交易的保证金交易 ID，也就是存有保证金的钱包地址。您可以根据区块链浏览器的确认页面上显示的交易 ID来验证这一点，以获取您的保证金地址。"
 
 #: ../../masternodes/setup.rst:355
 msgid "Dash Masternode Tool with configuration ready to start masternode"
-msgstr ""
+msgstr "配置就绪的达世币主节点工具可以启动主节点"
 
 #: ../../masternodes/setup.rst:357
 msgid ""
@@ -457,31 +525,33 @@ msgid ""
 "address and continue with the next step: :ref:`installing Dash Core on your "
 "VPS <masternode-setup-install-dashcore>`."
 msgstr ""
+"保持DMT打开，记录主节点私钥和保证金地址，然后继续下一步: \\ :ref:`在您的VPS <masternode-setup-install-"
+"dashcore>上安装Dash Core钱包`。"
 
 #: ../../masternodes/setup.rst:362
 msgid "Option 2: Sending from Dash Core wallet"
-msgstr ""
+msgstr "选项2：从Dash Core钱包发送"
 
 #: ../../masternodes/setup.rst:364
 msgid ""
 "Open Dash Core wallet and wait for it to synchronize with the network. It "
 "should look like this when ready:"
-msgstr ""
+msgstr "打开Dash Core钱包，并等待它与网络同步。当Dash Core钱包准备好的时候应该是这样的:"
 
 #: ../../masternodes/setup.rst:370
 msgid "Fully synchronized Dash Core wallet"
-msgstr ""
+msgstr "完全同步后的Dash Core钱包"
 
 #: ../../masternodes/setup.rst:372
 msgid ""
 "Click **Tools > Debug console** to open the console. Type the following two "
 "commands into the console to generate a masternode key and get a fresh "
 "address::"
-msgstr ""
+msgstr "单击 **工具 > 调试控制台** 以打开控制台。在控制台中键入以下两个命令以生成一个主节点密钥，并获得一个新地址::"
 
 #: ../../masternodes/setup.rst:382
 msgid "Generating a masternode private key in Dash Core wallet"
-msgstr ""
+msgstr "在Dash Core钱包中生成主节点私钥"
 
 #: ../../masternodes/setup.rst:384
 msgid ""
@@ -497,6 +567,11 @@ msgid ""
 "anything happens to your computer. For more details on these steps, see "
 ":ref:`here <dashcore-backup>`."
 msgstr ""
+"请记录主节点私钥和保证金地址，因为我们稍后将需要它。下一步是确保您的钱包安全 (如果您还没有这样做的话) 。首先，通过选择 **设置 > 加密钱包** "
+"来给钱包加密。您应该使用一个您从未在其他地方使用过的强而新的密码。记下您的密码，并把它存放在安全的地方，否则您将永远被锁在您的钱包之外，且无法使用您的资金。接下来，通过选择"
+" **文件 > 备份钱包** "
+"来备份您的钱包文件。将文件保存到物理上独立于计算机的安全位置，因为如果您的电脑出了什么问题，这将是您获得我们资金的唯一途径。有关这些步骤的更多详细信息，请参考\\"
+" :ref:`此处<dashcore-backup>`\\ 。 "
 
 #: ../../masternodes/setup.rst:396
 msgid ""
@@ -509,10 +584,13 @@ msgid ""
 "continue with the next step at this point already: installing Dash Core on "
 "your VPS."
 msgstr ""
+"现在，将单个交易中的1000个达世币准确地发送到您在上一步中生成的帐户地址中。这1000个达世币可能是从另一个钱包，或是从您当前钱包已持有的资金中发送的。交易完成后，通过搜索地址来查看在"
+" `区块链浏览器 <http://insight.dash.org/insight/>`_ "
+"中的交易。在您能够启动主节点之前，您将需要15次确认，但您现在可以继续下一步：在您的VPS上安装Dash Core。"
 
 #: ../../masternodes/setup.rst:414
 msgid "Install Dash Core"
-msgstr ""
+msgstr "安装Dash Core"
 
 #: ../../masternodes/setup.rst:416
 msgid ""
@@ -520,6 +598,8 @@ msgid ""
 "masternodes. If not displaying a GUI, it runs as a daemon on your VPS "
 "(dashd), controlled by a simple command interface (dash-cli)."
 msgstr ""
+"Dash Core是Dash Core "
+"GUI钱包和达世币主节点工具后的软件。如果不显示GUI，它将在您的VPS上作为守护进程运行(Dashd)，由一个简单的命令接口(dash-cli)控制。"
 
 #: ../../masternodes/setup.rst:420
 msgid ""
@@ -530,16 +610,19 @@ msgid ""
 "will allow you to understand all of the key steps involved in preparing your"
 " masternode."
 msgstr ""
+"再次打开PuTTY或控制台，并使用您刚刚为您的新的、non-root用户创建的用户名和密码进行连接。有两种选项可以安装Dash "
+"Core，一种是使用脚本实用工具的自动选项，它被Dash "
+"Core团队成员moocowmoo称为dashman，另一种选项更复杂，该选项将允许您理解在准备您的主节点过程中所涉及的所有关键步骤。"
 
 #: ../../masternodes/setup.rst:428
 msgid "Option 1: Automated installation using dashman"
-msgstr ""
+msgstr "选项1：使用dashman自动安装"
 
 #: ../../masternodes/setup.rst:430
 msgid ""
 "To install Dash using dashman, enter the following commands after logging "
 "in::"
-msgstr ""
+msgstr "若要使用dashman安装Dash，请在登录后输入以下命令::"
 
 #: ../../masternodes/setup.rst:439
 msgid ""
@@ -548,6 +631,8 @@ msgid ""
 "process. Next download and install sentinel, which is required for "
 "masternodes at version 12.1 or higher::"
 msgstr ""
+"Dashman将为您的系统下载最新版本的Dash Core，以及区块链的初始情况说明，以加快引导过程。下一次下载并安装 "
+"sentine时，需要12.1版本或更高版本的主节点::"
 
 #: ../../masternodes/setup.rst:446
 msgid ""
@@ -556,6 +641,7 @@ msgid ""
 "private key generated in the previous step. Edit the configuration file "
 "using the following command::"
 msgstr ""
+"您的系统现在正在作为标准主节点节点运行，并且正忙于完成与区块链的同步。我们现在需要输入在上一步中生成的主节点私钥。使用以下命令编辑配置文件::"
 
 #: ../../masternodes/setup.rst:453
 msgid ""
@@ -565,27 +651,30 @@ msgid ""
 " into the terminal window. Press **Ctrl + X** to close the editor and **Y** "
 "and **Enter** save the file."
 msgstr ""
+"删除行首的 # 符号，取消对最后两行的注释，然后粘贴您在 ``masternodeprivkey=`` "
+"之后生成的主节点私钥。您只需单击鼠标右键将其粘贴到终端窗口即可。按 **Ctrl + X** 来关闭编辑器，并按 **Y** 和 **Enter** "
+"保存文件。"
 
 #: ../../masternodes/setup.rst:462
 msgid "Entering masternodeprivkey in dash.conf on the masternode"
-msgstr ""
+msgstr "在主节点的dash.conf 中输入masternodeprivkey"
 
 #: ../../masternodes/setup.rst:464
 msgid ""
 "At this point you should restart dashd to load the new configuration file by"
 " typing the following::"
-msgstr ""
+msgstr "此时，您应该重新启动dashd，通过键入以下命令加载新的配置文件::"
 
 #: ../../masternodes/setup.rst:469
 msgid ""
 "Press **Y** and **Enter** to confirm. Then check the sync status and wait "
 "until all blockchain synchronisation and the 15 confirmations for the "
 "collateral transaction are complete::"
-msgstr ""
+msgstr "按 **Y** 和 **Enter** 以确认。然后检查同步状态并等待，直到完成所有区块链同步和保证金交易的15次确认为止::"
 
 #: ../../masternodes/setup.rst:478
 msgid "dashman status output showing masternode ready to be started"
-msgstr ""
+msgstr "Dashman状态输出显示即将被启动的主节点"
 
 #: ../../masternodes/setup.rst:480
 msgid ""
@@ -593,29 +682,30 @@ msgid ""
 "system error. Add a check function to crontab to make sure it checks every "
 "minute to ensure your masternode is still running::"
 msgstr ""
+"如果发生系统错误，dashman不会自动重新启动您的主节点。向crontab添加一个检查功能，以确保它每分钟检查一次，从而确保主节点仍在运行::"
 
 #: ../../masternodes/setup.rst:486
 msgid ""
 "Choose nano as your editor and enter the following line at the end of the "
 "file, after the line for sentinel::"
-msgstr ""
+msgstr "选择nano作为编辑器，并在 sentinel行后面的文件末尾输入以下行::"
 
 #: ../../masternodes/setup.rst:491
 msgid ""
 "Press enter to make sure there is a blank line at the end of the file, then "
 "press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
 "file."
-msgstr ""
+msgstr "按Enter键以确保文件末尾有空行，然后按 **Ctrl + X** 来关闭编辑器，并按 **Y** 和 **Enter** 保存该文件。"
 
 #: ../../masternodes/setup.rst:495
 msgid ""
 "Continue with the :ref:`next step to start your masternode <masternode-"
 "setup-start>`."
-msgstr ""
+msgstr "继续使用 :ref:`启动您的主节点<masternode-setup-start>的下一个步骤 `。"
 
 #: ../../masternodes/setup.rst:499
 msgid "Option 2: Manual installation"
-msgstr ""
+msgstr "选项2：手动安装"
 
 #: ../../masternodes/setup.rst:501
 msgid ""
@@ -627,17 +717,20 @@ msgid ""
 " address to the latest version of Dash Core by right clicking or pressing "
 "**Ctrl + V**::"
 msgstr ""
+"要手动下载和安装您的主节点组件，请在您的计算机上访问 https://www.dash.org/wallets ，以查找到最新版本Dash "
+"Core钱包的链接。单击 **Linux** ，然后右键单击 **Dash Core Linux 64 Bit** 中的 **下载TGZ** ，并选择 "
+"**复制链接地址** 。返回到您的终端窗口并输入以下命令，右键单击或按 **Ctrl + V** 将地址粘贴到最新版本的Dash  Core上::"
 
 #: ../../masternodes/setup.rst:512
 msgid ""
 "You can optionally verify the integrity of your download by running the "
 "following command and comparing the output against the value for the file as"
 " shown on the Dash website under **Hash File**::"
-msgstr ""
+msgstr "您可以通过运行以下程序，并将输出与如在 **Hash文件** 下的Dash网站所示的文件值作比较来选择验证您的下载的完整性::"
 
 #: ../../masternodes/setup.rst:521
 msgid "Link to the hash file to verify download integrity"
-msgstr ""
+msgstr "链接到Hash文件以验证下载完整性"
 
 #: ../../masternodes/setup.rst:523
 msgid ""
@@ -647,24 +740,27 @@ msgid ""
 "Keybase <https://keybase.io/udjinm6>`_. Import the key, download the ASC "
 "file for the current release of Dash and verify the signature as follows::"
 msgstr ""
+"您还可以选择验证您的下载作为Dash Core团队发布官方版本的真实性。所有达世币版本的发布都由UdjinM6使用GPG签署，密钥为 ``8359 "
+"2BD1 400D 58D9``，`可以在这里 Keybase <https://keybase.io/udjinm6>`_ "
+"验证。按如下所示导入密钥，下载达世币当前版本的ASC文件并验证签名::"
 
 #: ../../masternodes/setup.rst:537
 msgid "Downloading the PGP key and verifying the signed binary"
-msgstr ""
+msgstr "下载PGP密钥并验证已签名的二进制文件"
 
 #: ../../masternodes/setup.rst:539
 msgid ""
 "Create a working directory for Dash, extract the compressed archive, copy "
 "the necessary files to the directory and set them as executable::"
-msgstr ""
+msgstr "为达世币创建一个工作目录，解压压缩的归档文件，将必要的文件复制到目录中，并将它们设置为可执行文件::"
 
 #: ../../masternodes/setup.rst:548
 msgid "Clean up unneeded files::"
-msgstr ""
+msgstr "清理不需要的文件::"
 
 #: ../../masternodes/setup.rst:553
 msgid "Create a configuration file using the following command::"
-msgstr ""
+msgstr "使用以下命令创建配置文件::"
 
 #: ../../masternodes/setup.rst:557
 msgid ""
@@ -672,41 +768,41 @@ msgid ""
 "specifying several variables. Copy and paste the following text to get "
 "started, then replace the variables specific to your configuration as "
 "follows::"
-msgstr ""
+msgstr "一个编辑器窗口将会出现。现在我们需要指定几个变量来创建一个配置文件。复制并粘贴以下文本以开始创建，然后按如下所示替换您配置中的具体变量::"
 
 #: ../../masternodes/setup.rst:577
 msgid "Replace the fields marked with ``XXXXXXX`` as follows:"
-msgstr ""
+msgstr "按如下所示替换标记为 ``XXXXXXX`` 的字段:"
 
 #: ../../masternodes/setup.rst:579
 msgid ""
 "``rpcuser``: enter any string of numbers or letters, no special characters "
 "allowed"
-msgstr ""
+msgstr "``rpcuser``: 输入任何数字或字母字符串，不允许有特殊字符"
 
 #: ../../masternodes/setup.rst:581
 msgid ""
 "``rpcpassword``: enter any string of numbers or letters, no special "
 "characters allowed"
-msgstr ""
+msgstr "``rpcpassword``: 输入任何数字或字母字符串，不允许有特殊字符"
 
 #: ../../masternodes/setup.rst:583
 msgid ""
 "``masternodeprivkey``: this is the private key you generated in the previous"
 " step"
-msgstr ""
+msgstr "``masternodeprivkey``: 这是您在上一步中生成的私钥"
 
 #: ../../masternodes/setup.rst:585
 msgid "``externalip``: this is the IP address of your VPS"
-msgstr ""
+msgstr "``externalip``: 这是您VPS的IP地址"
 
 #: ../../masternodes/setup.rst:587
 msgid "The result should look something like this:"
-msgstr ""
+msgstr "结果应该是这样的:"
 
 #: ../../masternodes/setup.rst:592
 msgid "Entering key data in dash.conf on the masternode"
-msgstr ""
+msgstr "在主节点上的dash.conf中输入主要数据"
 
 #: ../../masternodes/setup.rst:594
 msgid ""
@@ -714,6 +810,8 @@ msgid ""
 "file. You can now start running Dash on the masternode to begin "
 "synchronization with the blockchain::"
 msgstr ""
+"按 **Ctrl + X** 以关闭编辑器，并按 **Y** 和 **Enter** "
+"保存该文件。您现在可以开始在主节点上运行达世币，以便开始与区块链同步::"
 
 #: ../../masternodes/setup.rst:600
 msgid ""
@@ -721,6 +819,8 @@ msgid ""
 "install Sentinel, a piece of software which operates as a watchdog to "
 "communicate to the network that your node is working properly::"
 msgstr ""
+"您将看到一条显示 **Dash Core服务器启动** "
+"的消息。我们现在将安装Sentinel，这是一个以看门狗的方式运行的软件，以和网络进行通信，从而说明您的节点正在正常工作::"
 
 #: ../../masternodes/setup.rst:611
 msgid ""
@@ -728,12 +828,14 @@ msgid ""
 "full sync before running Sentinel.** Add dashd and sentinel to crontab to "
 "make sure it runs every minute to check on your masternode::"
 msgstr ""
+"您将看到一条显示 **Dashd没有与网络同步！在运行Sentinel前等待完全同步** "
+"的消息。将dashd和sentinel添加到crontab以确保它每分钟运行一次，来对您的主节点进行检查::"
 
 #: ../../masternodes/setup.rst:617
 msgid ""
 "Choose nano as your editor and enter the following lines at the end of the "
 "file::"
-msgstr ""
+msgstr "选择nano作为您的编辑器，并在文件末尾输入以下行::"
 
 #: ../../masternodes/setup.rst:623
 msgid ""
@@ -743,19 +845,21 @@ msgid ""
 " to complete, and wait for the blockchain to finish synchronizing on the "
 "masternode. You can use the following commands to monitor progress::"
 msgstr ""
+"按enter键以确保文件末尾有空行，然后按 **Ctrl + X** 关闭编辑器，并按 **Y** 和 **Enter** "
+"保存该文件。现在，我们需要等待要完成的15次保证金交易的确认，并等待区块链在主节点上完成同步。您可以使用以下命令来监测进度::"
 
 #: ../../masternodes/setup.rst:632
 msgid ""
 "When synchronisation is complete, you should see the following response::"
-msgstr ""
+msgstr "完成同步后，您应该看到以下响应::"
 
 #: ../../masternodes/setup.rst:646
 msgid "Continue with the next step to start your masternode."
-msgstr ""
+msgstr "继续下一步来启动您的主节点。"
 
 #: ../../masternodes/setup.rst:651
 msgid "Start your masternode"
-msgstr ""
+msgstr "启动您的主节点"
 
 #: ../../masternodes/setup.rst:653
 msgid ""
@@ -767,47 +871,49 @@ msgid ""
 "the previous step for details on how to do this. During the startup process,"
 " your masternode may pass through the following states:"
 msgstr ""
+"根据您发送主节点保证金的方式，您需要使用由您的硬件钱包或Dash "
+"Core钱包发送的命令来启动您的主节点。在您继续之前，您必须确保您的1000个达世币交易至少有15次确认，并且该dashd正在运行，并与您的主节点上的区块链完全同步。有关此步骤的详细信息，请参阅上一步。在启动主节点过程中，您的主节点可能经过以下状态:"
 
 #: ../../masternodes/setup.rst:662
 msgid ""
 "MASTERNODE_SYNC: This indicates the data currently being synchronised in the"
 " masternode"
-msgstr ""
+msgstr "MASTERNODE_SYNC: 这表示当前正在主节点中被同步的数据"
 
 #: ../../masternodes/setup.rst:664
 msgid ""
 "MASTERNODE_SYNC_FAILED: Synchronisation could not complete, check your "
 "firewall and restart dashd"
-msgstr ""
+msgstr "MASTERNODE_SYNC_FILED: 同步无法完成，请检查您的防火墙并重新启动dashd"
 
 #: ../../masternodes/setup.rst:666
 msgid ""
 "WATCHDOG_EXPIRED: Waiting for sentinel to restart, make sure it is entered "
 "in crontab"
-msgstr ""
+msgstr "WATCHDOG_EXPIRED: 等待 sentinel重新启动，确保它被输入到crontab中。"
 
 #: ../../masternodes/setup.rst:668
 msgid "NEW_START_REQUIRED: Start command must be sent from wallet"
-msgstr ""
+msgstr "NEW_START_REQUIRED: 启动命令必须从钱包中发送"
 
 #: ../../masternodes/setup.rst:669
 msgid "PRE_ENABLED: Waiting for network to recognize started masternode"
-msgstr ""
+msgstr "PRE_ENABLED: 等待网络识别已启动的主节点"
 
 #: ../../masternodes/setup.rst:670
 msgid "ENABLED: Masternode successfully started"
-msgstr ""
+msgstr "ENABLED: 成功启动主节点"
 
 #: ../../masternodes/setup.rst:672
 msgid ""
 "If you masternode does not seem to start immediately, do not arbitrarily "
 "issue more start commands. Each time you do so, you will reset your position"
 " in the payment queue."
-msgstr ""
+msgstr "如果您的主节点似乎没有立即启动，不要任意地发出更多的启动命令。因为每次这样做时，您将重置您在支付队列中的位置。"
 
 #: ../../masternodes/setup.rst:677
 msgid "Option 1: Starting from a hardware wallet"
-msgstr ""
+msgstr "选项1：从硬件钱包中启动"
 
 #: ../../masternodes/setup.rst:679
 msgid ""
@@ -817,10 +923,12 @@ msgid ""
 "earlier. Then click **Start Masternode using Hardware Wallet** and confirm "
 "the following two messages:"
 msgstr ""
+"返回DMT并确保所有字段都被正确填写。如果您之前没有能找到保证金交易ID，此时单击 **查找** 以找到转移保证金到入账地址的交易ID。然后单击 "
+"**使用硬件钱包启动主节点** ，并确认以下两条消息:"
 
 #: ../../masternodes/setup.rst:691
 msgid "Dash Masternode Tool confirmation dialogs to start a masternode"
-msgstr ""
+msgstr "启动主节点工具确认对话框"
 
 #: ../../masternodes/setup.rst:693
 msgid ""
@@ -831,20 +939,23 @@ msgid ""
 "reaches ENABLED. Give it some time, the final result should appear as "
 "follows:"
 msgstr ""
+"此时，您可以通过输入 ``~/.dashcore/dash-cli masternode status`` 使用 ``dashman/dashman "
+"status``，或者使用DMT中的 **获取状态** 功能来监测您的主节点。在主节点经过PRE_ENABLED阶段并最终到达 "
+"ENABLED阶段，您可能需要等待大约30分钟。一段时间之后，最终结果应显示如下:"
 
 #: ../../masternodes/setup.rst:703 ../../masternodes/setup.rst:781
 msgid "dashman status output showing successfully started masternode"
-msgstr ""
+msgstr "dashman状态输出显示成功启动主节点"
 
 #: ../../masternodes/setup.rst:705
 msgid ""
 "At this point you can safely log out of your server by typing exit. "
 "Congratulations! Your masternode is now running."
-msgstr ""
+msgstr "此时，您可以通过键入“exit”来安全地注销您的服务器。祝贺您！您的主节点现在正在运行。"
 
 #: ../../masternodes/setup.rst:709
 msgid "Option 2: Starting from Dash Core wallet"
-msgstr ""
+msgstr "选项2：从Dash Core钱包启动"
 
 #: ../../masternodes/setup.rst:711
 msgid ""
@@ -852,10 +963,11 @@ msgid ""
 "you now need to find the txid of the transaction. Click **Tools > Debug "
 "console** and enter the following command::"
 msgstr ""
+"如果您使用Dash Core钱包中的地址用于您的保证金交易，现在您则需要找到该交易的交易id。单击 **工具 > 调试控制台** 并输入以下命令::"
 
 #: ../../masternodes/setup.rst:717
 msgid "This should return a string of characters similar to this::"
-msgstr ""
+msgstr "这时应该返回类似于以下内容的字符串::"
 
 #: ../../masternodes/setup.rst:723
 msgid ""
@@ -865,37 +977,39 @@ msgid ""
 "masternode on the network. Open a new text file in Notepad (or TextEdit on "
 "macOS, gedit on Linux) and enter the following information:"
 msgstr ""
+"第一个长字符串是您的交易hash，而最后一个数字是索引。我们现在需要为这个钱包创建一个名为 *masternode.conf* "
+"的文件，以便能够使用它发出命令，从而启动您在网络上的主节点。在记事本(或macOS上的TextEdit，Linux上的gedit)中打开一个新的文本文件，并输入以下信息:"
 
 #: ../../masternodes/setup.rst:729
 msgid "**Label**: Any single word used to identify your masternode, e.g. MN1"
-msgstr ""
+msgstr "**标签**: 用于识别您的主节点的任何单个单词，例如，MN1"
 
 #: ../../masternodes/setup.rst:730
 msgid ""
 "**IP and port**: The IP address and port (usually 9999) configured in the "
 "dash.conf file, separated by a colon (:)"
-msgstr ""
+msgstr "**IP 和端口**: 在dash.conf文件中的IP地址和端口（通常为9999），由冒号（:）分隔"
 
 #: ../../masternodes/setup.rst:732
 msgid ""
 "**Masternode private key**: This is the result of your masternode genkey "
 "command earlier, also the same as configured in the dash.conf file"
-msgstr ""
+msgstr "**主节点私钥**: 这是之前主节点genkey命令的结果，也是在dash.conf配置的内容"
 
 #: ../../masternodes/setup.rst:735
 msgid ""
 "**Transaction hash**: The txid we just identified using masternode outputs"
-msgstr ""
+msgstr "**交易hash**: 我们刚才使用主节点outputs标识的交易id"
 
 #: ../../masternodes/setup.rst:737
 msgid "**Index**: The index we just identified using masternode outputs"
-msgstr ""
+msgstr "**索引**: 我们刚才使用主节点outputs标识的索引"
 
 #: ../../masternodes/setup.rst:739
 msgid ""
 "Enter all of this information on a single line with each item separated by a"
 " space, for example::"
-msgstr ""
+msgstr "在单行中输入这些信息的所有内容，每个条目用空格分隔，例如::"
 
 #: ../../masternodes/setup.rst:744
 msgid ""
@@ -907,6 +1021,10 @@ msgid ""
 "in the following locations (copy and paste the shortcut text into the "
 "**Save** dialog to find it quickly):"
 msgstr ""
+"将此文件保存在PC上的 **DashCore** 数据文件夹中，使用文件名 *masternode.conf* ，运行Dash "
+"Core钱包。您可能需要启用 **查看隐藏项** 来查看此文件夹。如果使用记事本，请确保选择 **所有文件** ，这样就不会出现 *.conf.txt*"
+" 文件扩展名错误。对于不同的操作系统，可以在以下位置找到DashCore文件夹(复制并粘贴快捷文本到 **保存** 对话框以快速找到Dash "
+"Core文件夹):"
 
 #: ../../masternodes/setup.rst:753
 msgid "Platform"
@@ -914,11 +1032,11 @@ msgstr "平台"
 
 #: ../../masternodes/setup.rst:753
 msgid "Path"
-msgstr ""
+msgstr "路径"
 
 #: ../../masternodes/setup.rst:753
 msgid "Shortcut"
-msgstr ""
+msgstr "快捷方式"
 
 #: ../../masternodes/setup.rst:755
 msgid "Linux"
@@ -926,11 +1044,11 @@ msgstr "Linux"
 
 #: ../../masternodes/setup.rst:755
 msgid "``/home/yourusername/.dashcore``"
-msgstr ""
+msgstr "``/home/yourusername/.dashcore``"
 
 #: ../../masternodes/setup.rst:755
 msgid "``~/.dashcore``"
-msgstr ""
+msgstr "``~/.dashcore``"
 
 #: ../../masternodes/setup.rst:757
 msgid "macOS"
@@ -938,11 +1056,11 @@ msgstr "macOS"
 
 #: ../../masternodes/setup.rst:757
 msgid "``/Macintosh HD/Library/Application Support``"
-msgstr ""
+msgstr "``/Macintosh HD/Library/Application Support``"
 
 #: ../../masternodes/setup.rst:757
 msgid "``~/Library/Application Support/DashCore``"
-msgstr ""
+msgstr "``~/Library/Application Support/DashCore``"
 
 #: ../../masternodes/setup.rst:759
 msgid "Windows"
@@ -950,11 +1068,11 @@ msgstr "Windows"
 
 #: ../../masternodes/setup.rst:759
 msgid "``C:\\Users\\yourusername\\AppData\\Roaming\\Dash Core``"
-msgstr ""
+msgstr "``C:\\Users\\yourusername\\AppData\\Roaming\\Dash Core``"
 
 #: ../../masternodes/setup.rst:759
 msgid "``%APPDATA%\\DashCore``"
-msgstr ""
+msgstr "``%APPDATA%\\DashCore``"
 
 #: ../../masternodes/setup.rst:762
 msgid ""
@@ -965,6 +1083,9 @@ msgid ""
 " following command to start your masternode (replace MN1 with the label for "
 "your masternode)::"
 msgstr ""
+"现在关闭您的文本编辑器，而且关闭并重新启动Dash Core钱包。Dash "
+"Core将在启动过程中识别masternode.conf，并在此时准备激活您的主节点。转到 **设置 > 解锁钱包** 并输入您的钱包密码。然后再次单击"
+" **工具 > 调试控制台** ，并输入以下命令来启动您的主节点(用您的主节点的标签替换MN1)::"
 
 #: ../../masternodes/setup.rst:771
 msgid ""
@@ -975,9 +1096,12 @@ msgid ""
 "PRE_ENABLED stage and finally reaches ENABLED. Give it some time, the final "
 "result should appear as follows:"
 msgstr ""
+"此时，您可以返回到您的终端窗口，并通过输入 ``~/.dashcore/dash- cli masternode status`` 使用 "
+"``dashman/dashman "
+"status``，或者使用DMT上的**获取状态**功能来监测您的主节点。在节点经过PRE_ENABLED阶段并最终到达ENABLED阶段时，您可能需要等待大约30分钟。一段时间之后，最终的结果应显示如下:"
 
 #: ../../masternodes/setup.rst:783
 msgid ""
 "At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
-msgstr ""
+msgstr "此时，您可以通过键入“exit”来安全地注销您的服务器。祝贺您！您的主节点现在正在运行。"

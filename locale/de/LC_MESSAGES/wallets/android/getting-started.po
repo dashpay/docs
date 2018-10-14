@@ -8,8 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
+"POT-Creation-Date: 2018-10-14 06:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2018\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,20 +20,20 @@ msgstr ""
 
 #: ../../wallets/android/getting-started.rst:1
 msgid "Getting started with sending and receiving Dash on your Android device"
-msgstr ""
+msgstr "Dash auf einem Android-Gerät empfangen und versenden"
 
 #: ../../wallets/android/getting-started.rst:1
 msgid ""
 "dash, mobile, wallet, android, send, receive, addresses, getting started"
-msgstr ""
+msgstr "dash, mobile, wallet, android, senden, empfangen, adressen, starten"
 
 #: ../../wallets/android/getting-started.rst:8
 msgid "Getting started"
-msgstr ""
+msgstr "Implementierung beginnen"
 
 #: ../../wallets/android/getting-started.rst:11
 msgid "Creating a new wallet"
-msgstr ""
+msgstr "Eine neue Wallet erstellen"
 
 #: ../../wallets/android/getting-started.rst:13
 msgid ""
@@ -46,15 +47,27 @@ msgid ""
 "you can also back up a password protected wallet file by selecting "
 "**Safety** > **Back up wallet**."
 msgstr ""
+"Beim ersten Starten der Dash Wallet wird automatisch eine neue Wallet "
+"generiert. Als allererstes muss ein Backup der neuen Wallet erstellt werden "
+"indem der Menüknopf am oberen linken Rand gedrückt und **Sicherheit** > "
+"**Wiederherstellungsphrase ansehen** angewählt wird. Diese Phrase ist "
+"notwendig um den Zugang zum Guthaben wiederherzustellen, wenn das Gerät "
+"zerstört wird oder verloren geht. Sie kann zudem verwendet werden, wenn das "
+"gesamte Guthaben auf ein neues Gerät übertragen werden soll. Die Phrase muss"
+" niedergeschrieben und an einem sicheren Ort aufbewahrt werden - wer sie "
+"verliert, verliert eventuell den Zugang zu seinem gesamten Guthaben. Falls "
+"bevorzugt, kann auch eine passwortgeschützte Wallet-Datei über "
+"**Sicherheit** > **Wallet sichern** erstellt werden."
 
 #: ../../wallets/android/getting-started.rst:32
 msgid ""
 "*Viewing the recovery phrase for a new wallet in Dash Wallet for Android*"
 msgstr ""
+"*Die Wiederherstellungsphrase für eine neue Android Dash Wallet ansehen*"
 
 #: ../../wallets/android/getting-started.rst:37
 msgid "Restoring from backup"
-msgstr ""
+msgstr "Ein Backup wiederherstellen"
 
 #: ../../wallets/android/getting-started.rst:39
 msgid ""
@@ -64,16 +77,25 @@ msgid ""
 "your recovery phrase and tap **Restore**. Your wallet may restart, and it "
 "will take some time for any past transactions and balances to appear."
 msgstr ""
+"Wenn bereits eine existierende Dash Wallet für Android besteht, kann diese "
+"über **Sicherheit** > **Mithilfe der Phrase wiederherstellen** "
+"wiederhergestellt werden. Der Punkt kann über das Menü am oberen linken "
+"Bildschirmrand geöffnet werden. Die Wiederherstellungsphrase muss nun "
+"eingeben und **Wiederherstellen** angewählt werden. Die Wallet startet neu "
+"und es wird einige Zeit dauern, bis vergangene Transaktionen und das "
+"aktuelle Guthaben angezeigt werden."
 
 #: ../../wallets/android/getting-started.rst:54
 msgid ""
 "*Restoring an existing wallet from recovery phrase in Dash Wallet for "
 "Android*"
 msgstr ""
+"*Eine existierende Wallet über die Wiederherstellungsphrase der Android Dash"
+" Wallet wiederherstellen*"
 
 #: ../../wallets/android/getting-started.rst:59
 msgid "Receiving"
-msgstr ""
+msgstr "Empfangen"
 
 #: ../../wallets/android/getting-started.rst:61
 msgid ""
@@ -89,16 +111,31 @@ msgid ""
 "place (approx. 2.5 minutes), or 6 block confirmations if you want to "
 "generate InstantSend transactions."
 msgstr ""
+"Der Knopf mit der Anschrift **Anfordern** wird dazu verwendet Dash zu "
+"empfangen. Die Wallet generiert und zeigt einen QR-Code an, der von anderen "
+"Geräten eingescannt werden kann. Dieser QR-Code kann bereits eine bestimmte "
+"Menge in Dash oder Euro erfragen, da dies dem Sender die Eingabe erspart. "
+"Mithilfe der Menütaste oben rechts und der Auswahl von **Adresse kopieren** "
+"kann diese kopiert und in eine andere App eingefügt werden, damit sie an "
+"eine Person gesendet werden kann, die die Transaktion durchführt. Wenn die "
+"Übertragung erfolgt, wird eine Benachrichtigung verschickt, und der "
+"Bestätigungsstatus wird auf dem Hauptbildschirm und der Kontostand in der "
+"rechten oberen Ecke angezeigt. Die Dash Wallet für Android betrachtet eine "
+"Transaktion als wieder verwendbar, nachdem 1 Blockbestätigung (ca. 2,5 "
+"Minuten) oder 6 Blockbestätigungen stattgefunden haben, wenn InstantSend "
+"verwendet werden soll."
 
 #: ../../wallets/android/getting-started.rst:82
 msgid ""
 "*Receiving Dash and viewing your transactions and balance in Dash Wallet for"
 " Android*"
 msgstr ""
+"*Dash erhalten und Transaktionen sowie Guthaben in der Android Dash Wallet "
+"betrachten*"
 
 #: ../../wallets/android/getting-started.rst:87
 msgid "Sending"
-msgstr ""
+msgstr "Senden"
 
 #: ../../wallets/android/getting-started.rst:89
 msgid ""
@@ -109,9 +146,18 @@ msgid ""
 "code. The automatically determined network fee is displayed. Tap **Send** to"
 " complete the transaction."
 msgstr ""
+"Durch das Anklicken des Knopfs mit der Aufschrift **Senden** erscheint ein "
+"Bildschirm, über den Dash versandt werden kann. Hier können eine Dash-"
+"Adresse, der Betrag und InstantSend eingetragen, eingefügt oder eingescannt "
+"(über den Runden QR-Knopf) werden. QR-Codes können dabei bereits alle "
+"relevanten Informationen enthalten. Die automatisch festgelegte Netzwerk-"
+"Gebühr wird ebenfalls angezeigt. Über **Senden** kann die Transaktion "
+"abgeschickt werden."
 
 #: ../../wallets/android/getting-started.rst:107
 msgid ""
 "*Sending Dash and viewing your transactions and balance in Dash Wallet for "
 "Android*"
 msgstr ""
+"*Dash senden und Transaktionen sowie Guthaben in der Android Dash Wallet "
+"betrachten*"

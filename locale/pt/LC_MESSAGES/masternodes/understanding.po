@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
+"POT-Creation-Date: 2018-10-14 06:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: oscar junior <geleira@gmail.com>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/dash/teams/37570/pt/)\n"
@@ -23,16 +23,20 @@ msgid ""
 "Explanation of how Dash masternodes work in theory and practice to support "
 "InstantSend, PrivateSend and governance"
 msgstr ""
+"Explicação de como os masternodes do Dash funcionam na teoria e na prática "
+"para suportar o InstantSend, o PrivateSend e a governança"
 
 #: ../../masternodes/understanding.rst:1
 msgid ""
 "dash, masternodes, hosting, linux, payment, instantsend, privatesend, "
 "governance, quorum, evolution"
 msgstr ""
+"dash, masternodes, hosting, linux, pagamento, instantsend, privatesend, "
+"governanca, quorum, evolution"
 
 #: ../../masternodes/understanding.rst:9
 msgid "Understanding Masternodes"
-msgstr ""
+msgstr "Entendendo os Masternodes"
 
 #: ../../masternodes/understanding.rst:17
 msgid ""
@@ -41,6 +45,10 @@ msgid ""
 "documentation describes the principles and mechanisms of masternodes and the"
 " services they provide to the Dash network specifically."
 msgstr ""
+"Os Masternodes, antes exclusivos da rede Dash, estão se tornando populares à"
+" medida que a tecnologia é colocada em outros blockchains. Esta seção da "
+"documentação descreve os princípios e mecanismos dos masternodes e os "
+"serviços que eles fornecem especificamente para a rede do Dash."
 
 #: ../../masternodes/understanding.rst:22
 msgid ""
@@ -55,6 +63,16 @@ msgid ""
 "with each masternode receiving one vote (yes/no/abstain) on each proposal "
 "submitted to the system."
 msgstr ""
+"Simplificando, um masternode é um servidor com uma cópia completa do "
+"blockchain, que garante um determinado nível mínimo de desempenho e "
+"funcionalidade para executar determinadas tarefas relacionadas à validação "
+"de bloco, bem como PrivateSend e InstantSend, como recursos de anonimato e "
+"transação instantânea. no Dash são chamados. Os masternodes são pagos por "
+"este serviço, usando um conceito conhecido como Prova de Serviço. Isto é, "
+"além da prova de trabalho feita por mineiros para garantir o blockchain. Os "
+"Masternodes também podem votar :ref:`governança e propostas de financiamento"
+" <governance>`, com cada masternode recebendo um voto (sim/não/abstenção) em"
+" cada proposta submetida ao sistema."
 
 #: ../../masternodes/understanding.rst:33
 msgid ""
@@ -67,6 +85,15 @@ msgid ""
 "certain way that is transparent to the entire network. If the owner moves or"
 " spends those coins, the masternode stops working and payment ceases."
 msgstr ""
+"Qualquer um pode executar um masternode. O objetivo é ter descentralização "
+"suficiente para garantir que nenhuma pessoa individual controle uma fração "
+"significativa dos masternodes. No entanto, para evitar o inchaço da rede com"
+" masternodes desnecessários ou incentivar os operadores imprudentes, há uma "
+"condição que precisa ser cumprida: prova de propriedade de 1000 Dash. As "
+"moedas não precisam estar no masternode, mas precisam ser mantidas de uma "
+"maneira que seja transparente para toda a rede. Se o proprietário move ou "
+"gasta essas moedas, o masternode pára de funcionar e o pagamento é "
+"interrompido."
 
 #: ../../masternodes/understanding.rst:43
 msgid ""
@@ -88,6 +115,24 @@ msgid ""
 "masternodes are given incentive to provide efficient and reliable services "
 "to the network."
 msgstr ""
+"Masternodes são pagos pela rede pelos serviços PrivateSend, InstantSend e de"
+" governança que eles fornecem. 45% da recompensa em bloco é paga aos "
+"masternodes, 45% aos mineiros e 10% ao orçamento. Na prática, metade da "
+"recompensa de um bloco normal vai para o mineiro e metade para o masternode."
+" Em seguida, a cada 16.616 blocos (aproximadamente 30,29 dias), é criado um "
+"superbloco que contém todo o pagamento de 10% para os vencedores da proposta"
+" orçamentária. Masternodes são selecionados aleatoriamente para pagamento em"
+" cada bloco (aproximadamente a cada 2,6 minutos) de uma lista, uma vez que "
+"atingem o top 10% da contagem total de masternodes, e movidos para o final "
+"da lista após o pagamento. À medida que mais masternodes são criados, a "
+"duração entre os pagamentos aumenta. Devido ao algoritmo de seleção, há "
+"sempre um aspecto de aleatoriedade na seleção de pagamento, mas a longo "
+"prazo, todos os proprietários de masternode devem receber pagamentos "
+"semelhantes. Se o colateral por trás de um masternode for gasto, ou se um "
+"masternode parar de fornecer serviços para a rede por mais de uma hora, ele "
+"será removido da lista até que o serviço normal seja retomado. Desta forma, "
+"os masternodes são incentivados a fornecer serviços eficientes e confiáveis "
+"​​para a rede."
 
 #: ../../masternodes/understanding.rst:62
 msgid ""
@@ -275,207 +320,207 @@ msgstr ""
 
 #: ../../masternodes/understanding.rst:196
 msgid "Hours"
-msgstr ""
+msgstr "Horas"
 
 #: ../../masternodes/understanding.rst:196
 msgid "Blocks"
-msgstr ""
+msgstr "Blocos"
 
 #: ../../masternodes/understanding.rst:196
 msgid "Probability"
-msgstr ""
+msgstr "Probabilidade "
 
 #: ../../masternodes/understanding.rst:198
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../../masternodes/understanding.rst:198
 msgid "23.07"
-msgstr ""
+msgstr "23.07"
 
 #: ../../masternodes/understanding.rst:198
 msgid "5.00%"
-msgstr ""
+msgstr "5.00%"
 
 #: ../../masternodes/understanding.rst:200
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../../masternodes/understanding.rst:200
 msgid "46.14"
-msgstr ""
+msgstr "46.14"
 
 #: ../../masternodes/understanding.rst:200
 msgid "9.76%"
-msgstr ""
+msgstr "9.76%"
 
 #: ../../masternodes/understanding.rst:202
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #: ../../masternodes/understanding.rst:202
 msgid "69.21"
-msgstr ""
+msgstr "69.21"
 
 #: ../../masternodes/understanding.rst:202
 msgid "14.27%"
-msgstr ""
+msgstr "14.27%"
 
 #: ../../masternodes/understanding.rst:204
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../../masternodes/understanding.rst:204
 msgid "92.28"
-msgstr ""
+msgstr "92.28"
 
 #: ../../masternodes/understanding.rst:204
 msgid "18.56%"
-msgstr ""
+msgstr "18.56%"
 
 #: ../../masternodes/understanding.rst:206
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #: ../../masternodes/understanding.rst:206
 msgid "138.42"
-msgstr ""
+msgstr "138.42"
 
 #: ../../masternodes/understanding.rst:206
 msgid "26.50%"
-msgstr ""
+msgstr "26.50%"
 
 #: ../../masternodes/understanding.rst:208
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: ../../masternodes/understanding.rst:208
 msgid "184.56"
-msgstr ""
+msgstr "184.56"
 
 #: ../../masternodes/understanding.rst:208
 msgid "33.67%"
-msgstr ""
+msgstr "33.67%"
 
 #: ../../masternodes/understanding.rst:210
 msgid "10"
-msgstr ""
+msgstr "10"
 
 #: ../../masternodes/understanding.rst:210
 msgid "230.70"
-msgstr ""
+msgstr "230.70"
 
 #: ../../masternodes/understanding.rst:210
 msgid "40.14%"
-msgstr ""
+msgstr "40.14%"
 
 #: ../../masternodes/understanding.rst:212
 msgid "12"
-msgstr ""
+msgstr "12"
 
 #: ../../masternodes/understanding.rst:212
 msgid "276.84"
-msgstr ""
+msgstr "276.84"
 
 #: ../../masternodes/understanding.rst:212
 msgid "45.98%"
-msgstr ""
+msgstr "45.98%"
 
 #: ../../masternodes/understanding.rst:214
 msgid "18"
-msgstr ""
+msgstr "18"
 
 #: ../../masternodes/understanding.rst:214
 msgid "415.26"
-msgstr ""
+msgstr "415.26"
 
 #: ../../masternodes/understanding.rst:214
 msgid "60.30%"
-msgstr ""
+msgstr "60.30%"
 
 #: ../../masternodes/understanding.rst:216
 msgid "24"
-msgstr ""
+msgstr "24"
 
 #: ../../masternodes/understanding.rst:216
 msgid "553.68"
-msgstr ""
+msgstr "553.68"
 
 #: ../../masternodes/understanding.rst:216
 msgid "70.82%"
-msgstr ""
+msgstr "70.82%"
 
 #: ../../masternodes/understanding.rst:218
 msgid "30"
-msgstr ""
+msgstr "30"
 
 #: ../../masternodes/understanding.rst:218
 msgid "692.10"
-msgstr ""
+msgstr "692.10"
 
 #: ../../masternodes/understanding.rst:218
 msgid "78.56%"
-msgstr ""
+msgstr "78.56%"
 
 #: ../../masternodes/understanding.rst:220
 msgid "36"
-msgstr ""
+msgstr "36"
 
 #: ../../masternodes/understanding.rst:220
 msgid "830.52"
-msgstr ""
+msgstr "830.52"
 
 #: ../../masternodes/understanding.rst:220
 msgid "84.24%"
-msgstr ""
+msgstr "84.24%"
 
 #: ../../masternodes/understanding.rst:222
 msgid "42"
-msgstr ""
+msgstr "42"
 
 #: ../../masternodes/understanding.rst:222
 msgid "968.94"
-msgstr ""
+msgstr "968.94"
 
 #: ../../masternodes/understanding.rst:222
 msgid "88.42%"
-msgstr ""
+msgstr "88.42%"
 
 #: ../../masternodes/understanding.rst:224
 msgid "48"
-msgstr ""
+msgstr "48"
 
 #: ../../masternodes/understanding.rst:224
 msgid "1107.36"
-msgstr ""
+msgstr "1107.36"
 
 #: ../../masternodes/understanding.rst:224
 msgid "91.49%"
-msgstr ""
+msgstr "91.49%"
 
 #: ../../masternodes/understanding.rst:226
 msgid "72"
-msgstr ""
+msgstr "72"
 
 #: ../../masternodes/understanding.rst:226
 msgid "1661.04"
-msgstr ""
+msgstr "1661.04"
 
 #: ../../masternodes/understanding.rst:226
 msgid "97.52%"
-msgstr ""
+msgstr "97.52%"
 
 #: ../../masternodes/understanding.rst:228
 msgid "96"
-msgstr ""
+msgstr "96"
 
 #: ../../masternodes/understanding.rst:228
 msgid "2214.72"
-msgstr ""
+msgstr "2214.72"
 
 #: ../../masternodes/understanding.rst:228
 msgid "99.28%"
-msgstr ""
+msgstr "99.28%"
 
 #: ../../masternodes/understanding.rst:231
 msgid ""
@@ -560,39 +605,39 @@ msgstr ""
 
 #: ../../masternodes/understanding.rst:277
 msgid "CPU"
-msgstr ""
+msgstr "CPU"
 
 #: ../../masternodes/understanding.rst:277
 msgid "1x 1 GHz"
-msgstr ""
+msgstr "1x 1 GHz"
 
 #: ../../masternodes/understanding.rst:277
 msgid "1x 2 GHz"
-msgstr ""
+msgstr "1x 2 GHz"
 
 #: ../../masternodes/understanding.rst:279
 msgid "RAM"
-msgstr ""
+msgstr "RAM"
 
 #: ../../masternodes/understanding.rst:279
 msgid "1 GB"
-msgstr ""
+msgstr "1 GB"
 
 #: ../../masternodes/understanding.rst:279
 msgid "2 GB"
-msgstr ""
+msgstr "2 GB"
 
 #: ../../masternodes/understanding.rst:281
 msgid "Disk"
-msgstr ""
+msgstr "Disco"
 
 #: ../../masternodes/understanding.rst:281
 msgid "8 GB"
-msgstr ""
+msgstr "8 GB"
 
 #: ../../masternodes/understanding.rst:281
 msgid "16 GB"
-msgstr ""
+msgstr "16 GB"
 
 #: ../../masternodes/understanding.rst:283
 msgid "Network"
@@ -600,11 +645,11 @@ msgstr "Network"
 
 #: ../../masternodes/understanding.rst:283
 msgid "400 GB/mth"
-msgstr ""
+msgstr "400 GB/mth"
 
 #: ../../masternodes/understanding.rst:283
 msgid "1 TB/mth"
-msgstr ""
+msgstr "1 TB/mth"
 
 #: ../../masternodes/understanding.rst:286
 msgid ""
@@ -614,7 +659,7 @@ msgstr ""
 
 #: ../../masternodes/understanding.rst:290
 msgid "Dash Evolution"
-msgstr ""
+msgstr "Dash Evolution"
 
 #: ../../masternodes/understanding.rst:292
 msgid ""
