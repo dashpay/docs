@@ -570,7 +570,7 @@ ACX
 
 Lescovex
   .. image:: exchanges/lescovex.png
-     :width: 200px
+     :width: 130px
      :align: right
      :target: https://lescovex.com/
 
