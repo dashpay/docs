@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-14 06:13+0000\n"
+"POT-Creation-Date: 2018-10-16 01:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -461,10 +461,13 @@ msgid ""
 "appear, where you can enter the message provided by DashCentral and the "
 "address you wish to sign:"
 msgstr ""
+"有关如何使用软件钱包保证金地址的说明将会显示出来。如果您正在使用除Trezor以外的硬件钱包，您则需要使用DMT应用程序对地址进行签名。如果您正在使用Trezor硬件钱包，转到您的\\"
+" `Trezor wallet <https://wallet.trezor.io/>`_，复制钱包地址，然后单击 **签名和验证** "
+"。以下屏幕将会出现，您可以在其中输入DashCentral提供的信息和您希望签名的地址:"
 
 #: ../../masternodes/maintenance.rst:344
 msgid "Signing a message from the Trezor Wallet"
-msgstr ""
+msgstr "从Trezor钱包签名信息"
 
 #: ../../masternodes/maintenance.rst:346
 msgid ""
@@ -473,14 +476,16 @@ msgid ""
 "this signature and paste it into the box on DashCentral and click **Verify "
 "ownership**. Verification is now complete."
 msgstr ""
+"单击 **签名** ，在您的Trezor设备上确认并输入您的PIN码来签名该信息。信息签名将出现在 **签名** "
+"框中。复制此签名并将其粘贴到DashCentral上的方框中，并单击 **验证所有权** 。验证工作现已完成。"
 
 #: ../../masternodes/maintenance.rst:354
 msgid "Masternode ownership has been successfully verified"
-msgstr ""
+msgstr "主节点所有权已被成功验证"
 
 #: ../../masternodes/maintenance.rst:357
 msgid "Installing the DashCentral monitoring script"
-msgstr ""
+msgstr "安装DashCentral监测脚本"
 
 #: ../../masternodes/maintenance.rst:359
 msgid ""
@@ -491,33 +496,36 @@ msgid ""
 "key, adding a PIN to your account if necessary. Scroll to the following "
 "screen:"
 msgstr ""
+"DashCentral提供一项监测您的主节点的服务，它会在系统崩溃时自动重新启动dashd，并在发生错误时发送电子邮件。转到 `账户设置 "
+"<https://www.dashcentral.org/account/edit>`_ "
+"页面，并生成一个新的API密钥，必要时向您的帐户添加一个PIN码。滚动到以下屏幕:"
 
 #: ../../masternodes/maintenance.rst:369
 msgid "Setting up the DashCentral monitoring script"
-msgstr ""
+msgstr "设置DashCentral监测脚本"
 
 #: ../../masternodes/maintenance.rst:371
 msgid ""
 "Copy the link to the current version of the dashcentral script by right- "
 "click and selecting **Copy link address**. Open PuTTY and connect to your "
 "masternode, then type::"
-msgstr ""
+msgstr "右键单击并选择 **复制链接地址** 将链接复制到DashCentral脚本的当前版本。打开PuTTY并连接到您的主节点，然后键入::"
 
 #: ../../masternodes/maintenance.rst:377
 msgid ""
 "Replace the link with the current version of dashcentral-updater as "
 "necessary. Decompress the archive using the following command::"
-msgstr ""
+msgstr "必要时用当前版本的DashCentral更新程序替换链接。使用以下命令解压压缩的归档文件::"
 
 #: ../../masternodes/maintenance.rst:382
 msgid "View your masternode configuration details by typing::"
-msgstr ""
+msgstr "通过键入查看您的主节点配置的详细信息::"
 
 #: ../../masternodes/maintenance.rst:386
 msgid ""
 "Copy the values for ``rpcuser`` and ``rpcpassword``. Then edit the "
 "dashcentral configuration by typing::"
-msgstr ""
+msgstr "复制 ``rpcuser`` 和 ``rpcpassword`` 的值。然后通过键入来编辑DashCentral配置::"
 
 #: ../../masternodes/maintenance.rst:391
 msgid ""
@@ -526,10 +534,13 @@ msgid ""
 "according to your system. A common configuration, where ``lwhite`` is the "
 "name of the Linux user, may look like this:"
 msgstr ""
+"根据您的系统替换 ``api_key``、您的主节点的钱包地址、 ``rpc_user``、 ``rpc_password``、 "
+"``daemon_binary`` 和 ``daemon_datadir`` 的值。在常见的配置中， ``lwhite`` "
+"是Linux用户的名称，可能如下所示："
 
 #: ../../masternodes/maintenance.rst:399
 msgid "DashCentral updater configuration file"
-msgstr ""
+msgstr "DashCentral更新程序配置文件"
 
 #: ../../masternodes/maintenance.rst:424
 msgid ""
@@ -538,14 +549,16 @@ msgid ""
 "check the website. If it was successful, you will see that an update has "
 "been sent::"
 msgstr ""
+"按 **Ctrl + X** 退出，确认您想要使用 **Y ** 保存，然后按下 **Enter** "
+"键。通过运行DashCentral脚本测试您的配置，然后查看网站。如果测试成功，您会看到更新已被发送::"
 
 #: ../../masternodes/maintenance.rst:434
 msgid "Manually testing the DashCentral updater"
-msgstr ""
+msgstr "手动测试DashCentral更新程序"
 
 #: ../../masternodes/maintenance.rst:439
 msgid "DashCentral updater has successfully sent data to the DashCentral site"
-msgstr ""
+msgstr "DashCentral更新程序已成功地将数据发送到DashCentral站点"
 
 #: ../../masternodes/maintenance.rst:442
 msgid ""
@@ -556,17 +569,18 @@ msgid ""
 " an effective way to make sure you do not drop off the payment queue. Type "
 "the following command::"
 msgstr ""
+"一旦您验证了您的配置有效，我们就可以在您的系统上编辑crontab，以便将dcudater脚本安排为每2分钟运行一次。这允许系统在发生故障时为您提供早期警告，甚至会在dashd守护进程挂起或崩溃将其重新启动。这是一个有效的方法，以确保您不会从支付队列中掉线。键入以下命令::"
 
 #: ../../masternodes/maintenance.rst:451
 msgid ""
 "Select an editor if necessary and add the following line to your crontab "
 "after the line for sentinel, replacing lwhite with your username on your "
 "system::"
-msgstr ""
+msgstr "如有必要，请选择编辑器，并在sentinel行后面添加以下行到crontab中，将lWhite替换为您在系统上的用户名::"
 
 #: ../../masternodes/maintenance.rst:460
 msgid "Editing crontab to run the DashCentral updater automatically"
-msgstr ""
+msgstr "编辑crontab以自动运行DashCentral更新程序"
 
 #: ../../masternodes/maintenance.rst:462
 msgid ""
@@ -574,20 +588,22 @@ msgid ""
 "**Enter**. The dcupdater script will now run every two minutes, restart "
 "dashd whenever necessary and email you in the event of an error."
 msgstr ""
+"按 **Ctrl + X** 退出，确认您想要使用 **Y** 保存，然后按下 **Enter** "
+"键。现在，dcupdater脚本将每两分钟运行一次，并在必要时重新启动dashd，在发生错误时给您发送电子邮件。"
 
 #: ../../masternodes/maintenance.rst:467
 msgid "Masternode monitoring tools"
-msgstr ""
+msgstr "主节点监测工具"
 
 #: ../../masternodes/maintenance.rst:469
 msgid ""
 "Several sites operated by community members are available to monitor key "
 "information and statistics relating to the masternode network."
-msgstr ""
+msgstr "几个由社区成员操作的站点可用于监测与主节点网络有关的关键信息和统计数据。"
 
 #: ../../masternodes/maintenance.rst:473
 msgid "Block Explorers"
-msgstr ""
+msgstr "区块浏览器"
 
 #: ../../masternodes/maintenance.rst:475
 msgid ""
@@ -597,6 +613,7 @@ msgid ""
 "searchable by its txid. A number of block explorers are available for the "
 "Dash network."
 msgstr ""
+"由于达世币是一个公有区块链，所以可以使用区块浏览器查看任何达世币钱包地址的余额，以及检查在任何给定块中输入的交易。每个唯一的交易也可以通过txid进行搜索。可以使用多种不同区块浏览器查看达世币网络。"
 
 #: ../../masternodes/maintenance.rst:481
 msgid ""
@@ -605,6 +622,9 @@ msgid ""
 "<https://chainz.cryptoid.info/dash/masternodes.dws>`__ to view and map Dash "
 "masternodes."
 msgstr ""
+"`CryptoID <https://chainz.cryptoid.info/>`__ 提供一个 `达世币区块链浏览器 "
+"<https://chainz.cryptoid.info/dash/>`__ 和一个 `功能 "
+"<https://chainz.cryptoid.info/dash/masternodes.dws>`__ 来查看和浏览达世币主节点。"
 
 #: ../../masternodes/maintenance.rst:485
 msgid ""
@@ -612,18 +632,25 @@ msgid ""
 "<https://bitinfocharts.com/dash/>`_ of price statistics and information and "
 "a `blockchain explorer <https://bitinfocharts.com/dash/explorer/>`__."
 msgstr ""
+"`BitInfoCharts <https://bitinfocharts.com>`_ 提供了价格统计和信息的 `页面 "
+"<https://bitinfocharts.com/dash/>`_ 和 `区块链浏览器 "
+"<https://bitinfocharts.com/dash/explorer/>`__。"
 
 #: ../../masternodes/maintenance.rst:489
 msgid ""
 "`CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ offers a range "
 "of statistics and data on most blockchains, including Dash."
 msgstr ""
+"`CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ "
+"提供了包括达世币在内的大多数区块链的一系列统计信息和数据。"
 
 #: ../../masternodes/maintenance.rst:491
 msgid ""
 "`CoinPayments <https://www.coinpayments.net/>`__ offers a simple `Dash "
 "blockchain explorer <http://explorer.coinpayments.net/index.php?chain=7>`__."
 msgstr ""
+"`CoinPayments <https://www.coinpayments.net/>`__ 提供了一个简单的 `达世币区块链浏览器 "
+"<http://explorer.coinpayments.net/index.php?chain=7>`__。"
 
 #: ../../masternodes/maintenance.rst:494
 msgid ""
@@ -631,6 +658,9 @@ msgid ""
 "`explorer.dash.org <http://explorer.dash.org/>`__ and `insight.dash.org "
 "<http://insight.dash.org/>`__."
 msgstr ""
+"`Dash.org <https://www.dash.org/>`__ 包括两个区块链浏览器，分别位于 `explorer.dash.org "
+"<http://explorer.dash.org/>`__ 和 `insight.dash.org "
+"<http://insight.dash.org/>`__。"
 
 #: ../../masternodes/maintenance.rst:497
 msgid ""
@@ -639,10 +669,13 @@ msgid ""
 "<https://github.com/dashpay/insight-ui-dash>`__ of `insight "
 "<https://insight.is/>`__, an advanced blockchain API tool"
 msgstr ""
+"`Trezor <https://trezor.io/>`__ 运营一种由 `insight <https://insight.is/>`__的 "
+"`Dash fork <https://github.com/dashpay/insight-ui-dash>`__ 驱动的 `区块链浏览器 "
+"<https ://dash-bitcore1.trezor.io/>`__，它是一种先进的区块链API工具"
 
 #: ../../masternodes/maintenance.rst:503
 msgid "Dash Masternode Tool"
-msgstr ""
+msgstr "达世币主节点工具"
 
 #: ../../masternodes/maintenance.rst:505
 msgid "https://github.com/Bertrand256/dash-masternode-tool"
@@ -656,10 +689,12 @@ msgid ""
 "proposals and withdraw masternode payments without affecting the collateral "
 "transaction."
 msgstr ""
+"由社区成员Bertrand256编写和维护的Dash "
+"Masterode工具(DMT)允许您从所有主要硬件钱包，如Trezor、Ledger和KeepKey，激活主节点。它还有在不影响保证金的情况下对提案进行投票和提取主节点区块奖励。"
 
 #: ../../masternodes/maintenance.rst:514
 msgid "DASH Ninja"
-msgstr ""
+msgstr "DASH Ninja"
 
 #: ../../masternodes/maintenance.rst:516
 msgid "https://www.dashninja.pl"
@@ -673,6 +708,8 @@ msgid ""
 "the masternode payment schedule and the geographic distribution of "
 "masternodes are also available, as well as a simple blockchain explorer."
 msgstr ""
+"由论坛成员和Dash Core开发人员elbereth运营的DASH "
+"Ninja提供了关于在主节点网络中采用不同版本达世币的关键统计数据。它还提供了多个如监测达世币管理、主节点奖励时间和主节点地理分布的功能，以及提供了一个简单的区块链浏览器。"
 
 #: ../../masternodes/maintenance.rst:526
 msgid "DashCentral"
@@ -689,6 +726,9 @@ msgid ""
 "interface. An `Android app <https://play.google.com/store/apps/detai "
 "ls?id=net.paregov.android.dashcentral>`_ is also available."
 msgstr ""
+"由论坛成员Rango运营的DashCentral，提供了一种高级服务，通过先进的网络界面监测主节点并就预算提案进行投票。也可下载 `Android "
+"app应用 <https://play.google.com/store/apps/detai "
+"ls?id=net.paregov.android.dashcentral>`_ 。"
 
 #: ../../masternodes/maintenance.rst:536
 msgid "Masternode.me"
@@ -704,10 +744,12 @@ msgid ""
 "offers sequential reports on the price, generation rate, blockchain "
 "information and some information on masternodes."
 msgstr ""
+"由论坛成员和Dash "
+"Core开发人员moocowmoo运营的Masternode.me，提供了关于价格、生成速率、区块链信息和一些主节点信息的顺序报告。"
 
 #: ../../masternodes/maintenance.rst:545
 msgid "Dash Masternode Information"
-msgstr ""
+msgstr "达世币主节点信息"
 
 #: ../../masternodes/maintenance.rst:547
 msgid "http://178.254.23.111/~pub/Dash/Dash_Info.html"
@@ -720,3 +762,5 @@ msgid ""
 "network, including graphs of the total masternode count over time, price "
 "information and network distribution."
 msgstr ""
+"由论坛成员和Dash Core 开发人员 "
+"Corning运营的网站，提供了达世币主节点网络的许多关键统计信息的可视化表示，包括总主节点数关于时间、价格信息和网络分布的图表。"
