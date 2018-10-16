@@ -4,8 +4,8 @@
 
 .. _dash-web-wallet:
 
-My Dash Wallet
-==============
+MyDashWallet
+============
 
 .. image:: img/mydashwallet.png
    :width: 120px
