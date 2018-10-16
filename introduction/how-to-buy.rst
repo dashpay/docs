@@ -559,6 +559,20 @@ ACX
   ACX is an Australian exchange accepting fiat deposits from Australian
   bank accounts. DASH is available to trade against BTC.
 
+Lescovex
+  .. image:: exchanges/lescovex.png
+     :width: 200px
+     :align: right
+     :target: https://lescovex.com/
+
+  https://lescovex.com/
+
+  Registered in Switzerland, Lescovex offers deposits and withdrawals in
+  a wide range of fiat currencies (EUR, USD, CAD, GBP, CHF, SEK, RON)
+  for trading against DASH and other cryptocurrencies. The platform is
+  designed to assist in the creation of tokens and cryptographic
+  contracts.
+
 OKEX
   .. image:: exchanges/okex.png
      :width: 200px
