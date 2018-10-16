@@ -1,6 +1,6 @@
 .. meta::
    :description: List and detailed information on third-party wallets supporting the Dash cryptocurrency
-   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, exodus, atomic, jaxx, coinomi, cobo, cryptonator
+   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, cryptonator
 
 .. _dash-third-party:
 
@@ -236,6 +236,44 @@ http://support.exodus.io and a few quick links are also collected here:
    :width: 400px
 
    Exodus wallet Portfolio screen
+
+Guarda
+======
+
+https://guarda.co
+
+.. image:: img/guarda.png
+   :width: 100px
+   :align: right
+   :target: https://guarda.co
+
+Guarda offers an entire blockchain ecosystem consisting of desktop, web
+and mobile wallets, OTC crypto sales and instant crypto exchange. Dash
+is supported throughout the ecosystem, making it an easy and convenient
+way for new users to get started. All keys are held by the user,
+ensuring the safety of your funds.
+
+Installation
+------------
+
+Guarda desktop wallets are available from https://guarda.co/desktop for
+Linux, macOS and Windows, or you can use web wallet at
+https://guarda.co/app to create new or restore existing wallets.
+
+Documentation
+-------------
+
+Guarda offers detailed documentation of all functions at
+https://guarda.freshdesk.com and a few quick links are also collected
+here:
+
+- `Getting started with Guarda Wallet <https://guarda.freshdesk.com/support/solutions/articles/36000032811-getting-started-with-guarda-wallet>`_
+- `What is Guarda Exchange? <https://guarda.freshdesk.com/support/solutions/articles/36000011303-what-is-guarda-exchange->`_
+
+.. figure:: img/guarda-wallet.png
+   :width: 400px
+
+   Guarda wallet
 
 Atomic Wallet
 =============

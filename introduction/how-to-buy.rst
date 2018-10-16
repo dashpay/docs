@@ -1044,6 +1044,19 @@ changeNOW
   Netherlands, with low commissions and quick service. Offers crypto to
   crypto exchanges, as well as purchases through credit/debit cards.
 
+Guarda
+  .. image:: exchanges/guarda.png
+     :width: 200px
+     :align: right
+     :target: https://guarda.co
+
+  https://guarda.co
+
+  Guarda offers an entire blockchain ecosystem consisting of desktop,
+  web and mobile wallets, OTC crypto sales and instant crypto exchange.
+  Dash is supported throughout the ecosystem, making it an easy and
+  convenient way for new users to get started.
+
 Godex
   .. image:: exchanges/godex.png
      :width: 200px
