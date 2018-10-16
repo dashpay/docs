@@ -16,6 +16,217 @@ provide support for any of these wallets, and any listing here should
 not be considered an endorsement or recommendation. Contact the software
 vendor for support.
 
+
+Abra
+====
+
+https://www.abra.com
+
+.. image:: img/abra.png
+   :width: 100px
+   :align: right
+   :target: https://www.abra.com
+
+Abra is a multi-cryptocurrency wallet supporting Dash amongst other
+currencies. It is designed for investment and can be funded from your
+bank account, credit/debit card, cash (in the Philippines), Bitcoin,
+Bitcoin Cash, or Litecoin. Dash deposits and withdrawals are currently
+not supported.
+
+Download
+--------
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/US/app/id966301394
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.plutus.wallet
+
+Abra is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=com.plutus.wallet>`__ and
+the `Apple App Store for iOS <https://itunes.apple.com/US/app/id966301394>`__.
+
+Documentation
+-------------
+
+Abra offers detailed documentation of all functions at
+https://abra.zendesk.com
+
+.. figure:: img/abra-wallet.png
+   :width: 133px
+
+   Abra wallet running on iOS
+
+
+Atomic Wallet
+=============
+
+https://atomicwallet.io
+
+.. image:: img/atomic.png
+   :width: 100px
+   :align: right
+   :target: https://atomicwallet.io
+
+Atomic Wallet is a multi-asset custody-free wallet with atomic swap
+exchange and decentralized orderbook functionality. It provides a
+powerful, secure service that transparently and reliablly allows users
+to reduce effort spent on managing and exchanging crypto assets​.
+
+Installation
+------------
+
+All Atomic Wallet releases are available from https://atomicwallet.io -
+simply download and install the appropriate package for your system.
+
+Documentation
+-------------
+
+Atomic Wallet offers detailed documentation of all functions at
+https://atomicwallet.freshdesk.com and a few quick links are also
+collected here:
+
+- `Getting started with Atomic Wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066359-getting-started-with-atomic-wallet>`_
+- `How to install Atomic Wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066351-how-to-install-atomic-wallet->`_
+- `How to create a wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066354-how-to-create-a-wallet->`_
+- `Getting started with Atomic Swaps <https://atomicwallet.freshdesk.com/support/solutions/articles/36000073262-getting-started-with-atomic-swaps>`_
+
+.. figure:: img/atomic-wallet.png
+   :width: 400px
+
+   Atomic Wallet Portfolio screen
+
+
+Cobo
+====
+
+https://cobo.com
+
+.. image:: img/cobo.png
+   :width: 100px
+   :align: right
+   :target: https://cobo.com
+
+Cobo is a multi-currency mobile wallet supporting Dash with options to
+either register a cloud wallet (private keys backed up on the cloud) or
+generate your own HD wallet seed (private keys encrypted on your
+device), giving you maximum control over how you handle the crypographic
+keys to all assets in the wallet. The wallet offers a unique "staking"
+feature where users can pool their Dash to set up masternodes and enjoy
+weekly returns.
+
+Installation
+------------
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/cobo-wallet-2/id1406282615
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=cobo.wallet
+
+Cobo is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=cobo.wallet>`__ and
+the `Apple App Store for iOS <https://itunes.apple.com/us/app/cobo-wallet-2/id1406282615>`__.
+
+Documentation
+-------------
+
+Cobo offers detailed documentation of all functions at
+https://support.cobo.com
+
+.. figure:: img/cobo-wallet.png
+   :width: 200px
+
+   Cobo wallet
+
+
+Coinomi
+=======
+
+https://coinomi.com
+
+.. image:: img/coinomi.png
+   :width: 100px
+   :align: right
+   :target: https://coinomi.com
+
+Coinomi is an open-source multi-currency mobile wallet available for iOS
+and Android. Your private keys never leave your device, and strong
+wallet encryption guarantees that your funds are always under your
+control only. Instant exchange is available directly in the wallet
+through ShapeShift and Changelly integrations.
+
+Download
+--------
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/coinomi-wallet/id1333588809
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.coinomi.wallet
+
+Coinomi is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=com.coinomi.wallet>`__
+and the `Apple App Store for iOS
+<https://itunes.apple.com/us/app/coinomi- wallet/id1333588809>`__.
+
+Documentation
+-------------
+
+Coinomi offers detailed documentation of all functions at
+https://coinomi.freshdesk.com 
+
+.. figure:: img/coinomi-wallet.png
+   :width: 300px
+
+   Coinomi wallet running on Android
+
+
+Cryptonator
+===========
+
+https://www.cryptonator.com
+
+.. image:: img/cryptonator.png
+   :width: 100px
+   :align: right
+   :target: https://www.cryptonator.com
+
+Cryptonator offers a web/mobile wallet which can be accessed using a
+simple username/password combination. It supports multiple currencies
+including Dash, and offers instant exchange between the various
+currencies. It also support Euro-denominated SEPA payments directly from
+within the account.
+
+Download
+--------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.plutus.wallet
+
+Cryptonator is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=com.aev.cryptonator>`__
+and online at https://www.cryptonator.com
+
+Documentation
+-------------
+
+Coinomi offers detailed documentation of all functions at
+https://www.cryptonator.com/hc
+
+.. figure:: img/cryptonator-wallet.png
+   :width: 400px
+
+   Cryptonator wallet running on Android
+
+
 Edge
 ====
 
@@ -118,41 +329,164 @@ here:
 
    Ethos Universal Wallet on Android
 
-Paytomat
+
+Evercoin
 ========
 
-https://paytomat.com
+https://evercoin.com
 
-.. image:: img/paytomat.png
+.. image:: img/evercoin.png
    :width: 100px
    :align: right
-   :target: https://paytomat.com
+   :target: https://evercoin.com
 
-Paytomat offers a multicurrency wallet for Android and iOS which
-integrates a loyalty program to incentivize retailers and consumers to
-transact in Dash.
+Evercoin is a multi-currency mobile wallet combined with the full power
+of an instant exchange, all in one app. Advanced features like limit
+orders allows you to execute advantageous trades without having to copy
+addresses around and use complicated online exchanges. Private keys are
+stored on the device and backed up using a typical 12-word phrase. An
+Evercoin hardware wallet is also due to launch soon.
 
 Installation
 ------------
 
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158
+
 .. image:: img/google-play-badge.png
    :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.paytomat
+   :target: https://play.google.com/store/apps/details?id=com.evercoin
 
-Paytomat is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.paytomat>`__ and
-coming soon on the Apple App Store for iOS.
+Evercoin is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=com.evercoin>`__ and the
+`Apple App Store for iOS <https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158>`__.
 
 Documentation
 -------------
 
-Join the `Paytomat Telegram group <https://t.me/paytomat>`_ or send an
-email to support@paytomat.com for support with Paytomat.
+Read the `FAQ <https://evercoin.com/#faq>`__ or visit the `Evercoin site
+<https://evercoin.com>`_ to chat with the support team directly.
 
-.. figure:: img/paytomat-wallet.png
+.. figure:: img/evercoin-wallet.png
    :width: 133px
 
-   Paytomat wallet running on Android
+   Evercoin wallet running on Android
+
+
+Exodus
+======
+
+http://www.exodus.io
+
+.. image:: img/exodus.png
+   :width: 100px
+   :align: right
+   :target: http://www.exodus.io
+
+The Exodus wallet features an engaging visual design and can
+simultaneously store multiple currencies. It is available for Windows,
+Mac and Linux. It is also fully integrated with Shapeshift to offer
+exchange between the different currencies.
+
+Installation
+------------
+
+All Exodus releases are available from https://www.exodus.io/releases -
+simply download and install the appropriate package for your system.
+
+Documentation
+-------------
+
+Exodus offers detailed documentation of all functions at
+http://support.exodus.io and a few quick links are also collected here:
+
+- `What is Exodus? <https://support.exodus.io/article/30-what-is-exodus>`_
+- `How do I install Exodus? <https://support.exodus.io/article/36-how-do-i-install-exodus>`_
+- `How do I get started with Exodus? <https://support.exodus.io/article/37-how-do-i-get-started-with-exodus>`_
+
+.. figure:: img/exodus-wallet.png
+   :width: 400px
+
+   Exodus wallet Portfolio screen
+
+
+Guarda
+======
+
+https://guarda.co
+
+.. image:: img/guarda.png
+   :width: 100px
+   :align: right
+   :target: https://guarda.co
+
+Guarda offers an entire blockchain ecosystem consisting of desktop, web
+and mobile wallets, OTC crypto sales and instant crypto exchange. Dash
+is supported throughout the ecosystem, making it an easy and convenient
+way for new users to get started. All keys are held by the user,
+ensuring the safety of your funds.
+
+Installation
+------------
+
+Guarda desktop wallets are available from https://guarda.co/desktop for
+Linux, macOS and Windows, or you can use web wallet at
+https://guarda.co/app to create new or restore existing wallets.
+
+Documentation
+-------------
+
+Guarda offers detailed documentation of all functions at
+https://guarda.freshdesk.com and a few quick links are also collected
+here:
+
+- `Getting started with Guarda Wallet <https://guarda.freshdesk.com/support/solutions/articles/36000032811-getting-started-with-guarda-wallet>`_
+- `What is Guarda Exchange? <https://guarda.freshdesk.com/support/solutions/articles/36000011303-what-is-guarda-exchange->`_
+
+.. figure:: img/guarda-wallet.png
+   :width: 400px
+
+   Guarda wallet
+
+
+Jaxx
+====
+
+https://jaxx.io
+
+.. image:: img/jaxx.png
+   :width: 100px
+   :align: right
+   :target: https://jaxx.io
+
+Jaxx supports multiple currencies in one wallet, including Dash. It is
+available for almost all platforms including Android, iOS, macOS,
+Windows, Linux and also as a Chrome extension. Jaxx is open source
+software.
+
+Installation
+------------
+
+All Jaxx releases are available from https://jaxx.io/downloads.html -
+simply download and install the appropriate package for your system.
+
+Documentation
+-------------
+
+Jaxx offers detailed documentation of all functions at
+https://decentral.zendesk.com and a few quick links are also collected
+here:
+
+- `Getting started <https://decentral.zendesk.com/hc/en-us/sections/204038798-Getting-Started>`__
+- `How do I send currency? <https://decentral.zendesk.com/hc/en-us/articles/217873878-How-do-I-send-currency->`_
+- `How do I receive currency? <https://decentral.zendesk.com/hc/en-us/articles/218364217-How-do-I-receive-currency->`_
+
+.. figure:: img/jaxx-wallet.png
+   :width: 400px
+
+   Jaxx wallet running on various devices
+
 
 Mobi
 ====
@@ -201,363 +535,38 @@ support with Mobi.
    Mobi wallet running on Android
 
 
-Exodus
-======
-
-http://www.exodus.io
-
-.. image:: img/exodus.png
-   :width: 100px
-   :align: right
-   :target: http://www.exodus.io
-
-The Exodus wallet features an engaging visual design and can
-simultaneously store multiple currencies. It is available for Windows,
-Mac and Linux. It is also fully integrated with Shapeshift to offer
-exchange between the different currencies.
-
-Installation
-------------
-
-All Exodus releases are available from https://www.exodus.io/releases -
-simply download and install the appropriate package for your system.
-
-Documentation
--------------
-
-Exodus offers detailed documentation of all functions at
-http://support.exodus.io and a few quick links are also collected here:
-
-- `What is Exodus? <https://support.exodus.io/article/30-what-is-exodus>`_
-- `How do I install Exodus? <https://support.exodus.io/article/36-how-do-i-install-exodus>`_
-- `How do I get started with Exodus? <https://support.exodus.io/article/37-how-do-i-get-started-with-exodus>`_
-
-.. figure:: img/exodus-wallet.png
-   :width: 400px
-
-   Exodus wallet Portfolio screen
-
-Guarda
-======
-
-https://guarda.co
-
-.. image:: img/guarda.png
-   :width: 100px
-   :align: right
-   :target: https://guarda.co
-
-Guarda offers an entire blockchain ecosystem consisting of desktop, web
-and mobile wallets, OTC crypto sales and instant crypto exchange. Dash
-is supported throughout the ecosystem, making it an easy and convenient
-way for new users to get started. All keys are held by the user,
-ensuring the safety of your funds.
-
-Installation
-------------
-
-Guarda desktop wallets are available from https://guarda.co/desktop for
-Linux, macOS and Windows, or you can use web wallet at
-https://guarda.co/app to create new or restore existing wallets.
-
-Documentation
--------------
-
-Guarda offers detailed documentation of all functions at
-https://guarda.freshdesk.com and a few quick links are also collected
-here:
-
-- `Getting started with Guarda Wallet <https://guarda.freshdesk.com/support/solutions/articles/36000032811-getting-started-with-guarda-wallet>`_
-- `What is Guarda Exchange? <https://guarda.freshdesk.com/support/solutions/articles/36000011303-what-is-guarda-exchange->`_
-
-.. figure:: img/guarda-wallet.png
-   :width: 400px
-
-   Guarda wallet
-
-Atomic Wallet
-=============
-
-https://atomicwallet.io
-
-.. image:: img/atomic.png
-   :width: 100px
-   :align: right
-   :target: https://atomicwallet.io
-
-Atomic Wallet is a multi-asset custody-free wallet with atomic swap
-exchange and decentralized orderbook functionality. It provides a
-powerful, secure service that transparently and reliablly allows users
-to reduce effort spent on managing and exchanging crypto assets​.
-
-Installation
-------------
-
-All Atomic Wallet releases are available from https://atomicwallet.io -
-simply download and install the appropriate package for your system.
-
-Documentation
--------------
-
-Atomic Wallet offers detailed documentation of all functions at
-https://atomicwallet.freshdesk.com and a few quick links are also
-collected here:
-
-- `Getting started with Atomic Wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066359-getting-started-with-atomic-wallet>`_
-- `How to install Atomic Wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066351-how-to-install-atomic-wallet->`_
-- `How to create a wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066354-how-to-create-a-wallet->`_
-- `Getting started with Atomic Swaps <https://atomicwallet.freshdesk.com/support/solutions/articles/36000073262-getting-started-with-atomic-swaps>`_
-
-.. figure:: img/atomic-wallet.png
-   :width: 400px
-
-   Atomic Wallet Portfolio screen
-
-Evercoin
+Paytomat
 ========
 
-https://evercoin.com
+https://paytomat.com
 
-.. image:: img/evercoin.png
+.. image:: img/paytomat.png
    :width: 100px
    :align: right
-   :target: https://evercoin.com
+   :target: https://paytomat.com
 
-Evercoin is a multi-currency mobile wallet combined with the full power
-of an instant exchange, all in one app. Advanced features like limit
-orders allows you to execute advantageous trades without having to copy
-addresses around and use complicated online exchanges. Private keys are
-stored on the device and backed up using a typical 12-word phrase. An
-Evercoin hardware wallet is also due to launch soon.
+Paytomat offers a multicurrency wallet for Android and iOS which
+integrates a loyalty program to incentivize retailers and consumers to
+transact in Dash.
 
 Installation
 ------------
 
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158
-
 .. image:: img/google-play-badge.png
    :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.evercoin
+   :target: https://play.google.com/store/apps/details?id=com.paytomat
 
-Evercoin is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.evercoin>`__ and the
-`Apple App Store for iOS <https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158>`__.
+Paytomat is available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=com.paytomat>`__ and
+coming soon on the Apple App Store for iOS.
 
 Documentation
 -------------
 
-Read the `FAQ <https://evercoin.com/#faq>`__ or visit the `Evercoin site
-<https://evercoin.com>`_ to chat with the support team directly.
+Join the `Paytomat Telegram group <https://t.me/paytomat>`_ or send an
+email to support@paytomat.com for support with Paytomat.
 
-.. figure:: img/evercoin-wallet.png
+.. figure:: img/paytomat-wallet.png
    :width: 133px
 
-   Evercoin wallet running on Android
-
-Jaxx
-====
-
-https://jaxx.io
-
-.. image:: img/jaxx.png
-   :width: 100px
-   :align: right
-   :target: https://jaxx.io
-
-Jaxx supports multiple currencies in one wallet, including Dash. It is
-available for almost all platforms including Android, iOS, macOS,
-Windows, Linux and also as a Chrome extension. Jaxx is open source
-software.
-
-Installation
-------------
-
-All Jaxx releases are available from https://jaxx.io/downloads.html -
-simply download and install the appropriate package for your system.
-
-Documentation
--------------
-
-Jaxx offers detailed documentation of all functions at
-https://decentral.zendesk.com and a few quick links are also collected
-here:
-
-- `Getting started <https://decentral.zendesk.com/hc/en-us/sections/204038798-Getting-Started>`__
-- `How do I send currency? <https://decentral.zendesk.com/hc/en-us/articles/217873878-How-do-I-send-currency->`_
-- `How do I receive currency? <https://decentral.zendesk.com/hc/en-us/articles/218364217-How-do-I-receive-currency->`_
-
-.. figure:: img/jaxx-wallet.png
-   :width: 400px
-
-   Jaxx wallet running on various devices
-
-Coinomi
-=======
-
-https://coinomi.com
-
-.. image:: img/coinomi.png
-   :width: 100px
-   :align: right
-   :target: https://coinomi.com
-
-Coinomi is an open-source multi-currency mobile wallet available for iOS
-and Android. Your private keys never leave your device, and strong
-wallet encryption guarantees that your funds are always under your
-control only. Instant exchange is available directly in the wallet
-through ShapeShift and Changelly integrations.
-
-Download
---------
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://itunes.apple.com/us/app/coinomi-wallet/id1333588809
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.coinomi.wallet
-
-Coinomi is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.coinomi.wallet>`__
-and the `Apple App Store for iOS
-<https://itunes.apple.com/us/app/coinomi- wallet/id1333588809>`__.
-
-Documentation
--------------
-
-Coinomi offers detailed documentation of all functions at
-https://coinomi.freshdesk.com 
-
-.. figure:: img/coinomi-wallet.png
-   :width: 300px
-
-   Coinomi wallet running on Android
-
-Cobo
-====
-
-https://cobo.com
-
-.. image:: img/cobo.png
-   :width: 100px
-   :align: right
-   :target: https://cobo.com
-
-Cobo is a multi-currency mobile wallet supporting Dash with options to
-either register a cloud wallet (private keys backed up on the cloud) or
-generate your own HD wallet seed (private keys encrypted on your
-device), giving you maximum control over how you handle the crypographic
-keys to all assets in the wallet. The wallet offers a unique "staking"
-feature where users can pool their Dash to set up masternodes and enjoy
-weekly returns.
-
-Installation
-------------
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://itunes.apple.com/us/app/cobo-wallet-2/id1406282615
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=cobo.wallet
-
-Cobo is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=cobo.wallet>`__ and
-the `Apple App Store for iOS <https://itunes.apple.com/us/app/cobo-wallet-2/id1406282615>`__.
-
-Documentation
--------------
-
-Cobo offers detailed documentation of all functions at
-https://support.cobo.com
-
-.. figure:: img/cobo-wallet.png
-   :width: 200px
-
-   Cobo wallet
-
-
-Cryptonator
-===========
-
-https://www.cryptonator.com
-
-.. image:: img/cryptonator.png
-   :width: 100px
-   :align: right
-   :target: https://www.cryptonator.com
-
-Cryptonator offers a web/mobile wallet which can be accessed using a
-simple username/password combination. It supports multiple currencies
-including Dash, and offers instant exchange between the various
-currencies. It also support Euro-denominated SEPA payments directly from
-within the account.
-
-Download
---------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.plutus.wallet
-
-Cryptonator is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.aev.cryptonator>`__
-and online at https://www.cryptonator.com
-
-Documentation
--------------
-
-Coinomi offers detailed documentation of all functions at
-https://www.cryptonator.com/hc
-
-.. figure:: img/cryptonator-wallet.png
-   :width: 400px
-
-   Cryptonator wallet running on Android
-
-
-Abra
-====
-
-https://www.abra.com
-
-.. image:: img/abra.png
-   :width: 100px
-   :align: right
-   :target: https://www.abra.com
-
-Abra is a multi-cryptocurrency wallet supporting Dash amongst other
-currencies. It is designed for investment and can be funded from your
-bank account, credit/debit card, cash (in the Philippines), Bitcoin,
-Bitcoin Cash, or Litecoin. Dash deposits and withdrawals are currently
-not supported.
-
-Download
---------
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://itunes.apple.com/US/app/id966301394
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.plutus.wallet
-
-Abra is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.plutus.wallet>`__ and
-the `Apple App Store for iOS <https://itunes.apple.com/US/app/id966301394>`__.
-
-Documentation
--------------
-
-Abra offers detailed documentation of all functions at
-https://abra.zendesk.com
-
-.. figure:: img/abra-wallet.png
-   :width: 133px
-
-   Abra wallet running on iOS
+   Paytomat wallet running on Android
