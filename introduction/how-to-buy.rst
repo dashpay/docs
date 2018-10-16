@@ -51,6 +51,7 @@ Services listed here have not been evaluated or endorsed by Dash Core
 and no guarantees are made as to the accuracy of this information.
 Please exercise discretion when using third-party services.
 
+
 .. _exchanges:
 
 Exchanges
@@ -66,6 +67,7 @@ means it is possible to exchange EUR for DASH, or DASH for BTC, for
 example. The volume traded on an exchange provides a good indication of
 how quickly a buy or sell order you place will be filled. This section
 introduces some of the most popular exchanges for trading Dash.
+
 
 Marketplace comparison websites
 -------------------------------
@@ -95,13 +97,20 @@ CoinMarketCap
   clicking Markets allows you to view the markets available and the
   trading pairs they offer.
 
+
 Dash.org markets
 ----------------
+
+  .. image:: exchanges/dash.png
+     :width: 200px
+     :align: right
+     :target: https://www.dash.org/exchanges
+
+https://www.dash.org/exchanges
 
 The official Dash website also provides a list of major exchanges
 offering Dash.
 
-https://www.dash.org/exchanges/
 
 List of exchanges
 -----------------
@@ -1060,7 +1069,7 @@ changeNOW
 
 Guarda
   .. image:: exchanges/guarda.png
-     :width: 200px
+     :width: 140px
      :align: right
      :target: https://guarda.co
 
