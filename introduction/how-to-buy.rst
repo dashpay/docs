@@ -442,17 +442,6 @@ Coinome
   Coinome is an Indian exchange offering DASH trading against the Indian
   Rupee (INR).
 
-Qryptos
-  .. image:: exchanges/qryptos.png
-     :width: 200px
-     :align: right
-     :target: https://www.qryptos.com
-
-  https://www.qryptos.com
-
-  Qryptos is a Japanese pure-crypto exchange offering DASH trading
-  against BTC with optional leverage.
-
 Coinsquare
   .. image:: exchanges/coinsquare.png
      :width: 200px
@@ -476,16 +465,15 @@ Lykke
   online/mobile wallet service, idea accelerator and ICO platform. DASH
   is available for both trading and investment.
 
-Quoinex
-  .. image:: exchanges/quoinex.png
+Liquid
+  .. image:: exchanges/liquid.png
      :width: 200px
      :align: right
-     :target: https://quoinex.com
+     :target: https://www.liquid.com/
 
-  https://quoinex.com
+  https://www.liquid.com/
 
-  Quoinex serves the Asian market with funding support for USD, JPY,
-  AUD, INR, PHP, EUR, HKD, CNY, IDR and SGD, and trading against ETH,
+  Liquid serves the Asian market with funding support for HKD, AUD, CNY, INR, JPY, PHP, IDR, UDS, SGD and EUR, and trading against ETH,
   BTC, BCH and DASH.
 
 BitcoinVN
