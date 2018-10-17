@@ -107,6 +107,12 @@ SPORK_15_DETERMINISTIC_MNS_ENABLED
   longer run and non-updated masternodes will not be eligible for
   payment.
 
+SPORK_16_INSTANTSEND_AUTOLOCKS
+  Enables automatic transaction locking for transactions with less than
+  a specified number of inputs, and removes the legacy InstantSend fee.
+  Allows any node to request the transaction lock, not just the sending
+  node.
+
 Viewing spork status
 --------------------
 
