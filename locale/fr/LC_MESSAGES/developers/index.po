@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-17 11:43+0000\n"
+"POT-Creation-Date: 2018-10-17 08:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Daf Daf, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -267,11 +267,22 @@ msgstr ""
 "fonctionnera plus, et les masternodes non mis à jour ne seront plus "
 "éligibles aux paiements."
 
+#: ../../developers/index.rst:114
+msgid "SPORK_16_INSTANTSEND_AUTOLOCKS"
+msgstr ""
+
 #: ../../developers/index.rst:111
+msgid ""
+"Enables automatic transaction locking for transactions with less than a "
+"specified number of inputs, and removes the legacy InstantSend fee. Allows "
+"any node to request the transaction lock, not just the sending node."
+msgstr ""
+
+#: ../../developers/index.rst:117
 msgid "Viewing spork status"
 msgstr "Affichage de l'état de spork"
 
-#: ../../developers/index.rst:113
+#: ../../developers/index.rst:119
 msgid ""
 "The ``spork show`` and ``spork active`` commands issued in the debug window "
 "(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
@@ -282,22 +293,22 @@ msgstr ""
 " permettent d'interagir avec les sporks. On peut ouvrir la fenêtre de "
 "débogage dans Dash Core par le menu **Outils > Console de débogage**."
 
-#: ../../developers/index.rst:121
+#: ../../developers/index.rst:127
 msgid "spork show and spork active output in the Dash Core debug console"
 msgstr ""
 "affichage de spork et sortie active de spork dans la console de débogage du "
 "portefeuille logiciel Dash Core"
 
-#: ../../developers/index.rst:125
+#: ../../developers/index.rst:131
 msgid "Version History"
 msgstr "Historique des versions"
 
-#: ../../developers/index.rst:127
+#: ../../developers/index.rst:133
 msgid "Full release notes and the version history of Dash are available here:"
 msgstr ""
 "Les notes de publication complètes et l'historique des versions de Dash sont"
 " disponibles ici :"
 
-#: ../../developers/index.rst:129
+#: ../../developers/index.rst:135
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
 msgstr "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
