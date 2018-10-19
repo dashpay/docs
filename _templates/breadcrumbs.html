@@ -1,16 +1,17 @@
 {%- extends "sphinx_rtd_theme/breadcrumbs.html" %}
 {% block breadcrumbs_aside %}
-	<select class="wy-breadcrumbs-aside">
-		<option value="de">Deutsch</option>
-		<option value="en" selected="selected">English</option>
-		<option value="es">Español</option>
-		<option value="fr">Français</option>
-		<option value="pt">Português</option>
-		<option value="vi">Tiếng Việt</option>
-		<option value="ru">Русский</option>
-		<option value="ko">한국어</option>
-		<option value="ja">日本語</option>
-		<option value="zh_CN">中文</option>
-		<option value="ar">العربية</option>
+	<select class="wy-breadcrumbs-aside" onchange="location = this.options[this.selectedIndex].value;">
+		<option value="http://docs.dash.org/de/latest/">Deutsch</option>
+		<option value="https://docs.dash.org/en/latest/" selected="selected">English</option>
+		<option value="http://docs.dash.org/es/latest/">Español</option>
+		<option value="http://docs.dash.org/fr/latest/">Français</option>
+		<option value="http://docs.dash.org/pt/latest/">Português</option>
+		<option value="http://docs.dash.org/vi/latest/">Tiếng Việt</option>
+		<option value="http://docs.dash.org/el/latest/">Ελληνικά</option>
+		<option value="http://docs.dash.org/ru/latest/">Русский</option>
+		<option value="http://docs.dash.org/ko/latest/">한국어</option>
+		<option value="http://docs.dash.org/ja/latest/">日本語</option>
+		<option value="http://docs.dash.org/zh_CN/latest/">中文</option>
+		<option value="http://docs.dash.org/ar/latest/">العربية</option>
 	</select>
 {% endblock %}
