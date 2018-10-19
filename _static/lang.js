@@ -1,1 +1,3 @@
-$(document).ready(function() {$("#langselect").val($('html').attr('lang'));});
+$(document).ready(function() {
+	$("#langselect").val(DOCUMENTATION_OPTIONS['LANGUAGE']);
+});
