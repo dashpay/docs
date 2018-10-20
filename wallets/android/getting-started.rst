@@ -11,14 +11,16 @@ Creating a new wallet
 ---------------------
 
 When you first start your Dash Wallet, it will automatically generate a
-new wallet for you. The first thing you should do is back up this wallet
-by tapping the menu button in the top left corner and selecting
-**Safety** > **View recovery phrase**. You will need this phrase
-to recover the funds later if you lose or damage your phone or need to
-transfer the account to another device. Write the phrase down and store
-it in a safe place - if you lose this, you will also lose access to your
-funds forever. If you prefer, you can also back up a password protected
-wallet file by selecting **Safety** > **Back up wallet**.
+new wallet for you. It will then ask you to enter a PIN to protect
+spending from the wallet. The first thing you should do after setting a
+PIN is back up the wallet by tapping the menu button in the top left
+corner and selecting **Safety** > **View recovery phrase**. You will
+need this phrase to recover the funds later if you lose or damage your
+phone or need to transfer the account to another device. Write the
+phrase down and store it in a safe place - if you lose this, you will
+also lose access to your funds forever. If you prefer, you can also back
+up a password protected wallet file by selecting **Safety** > **Back up
+wallet**.
 
 .. image:: img/android-setup1.png
     :width: 160 px
@@ -100,8 +102,6 @@ displayed. Tap **Send** to complete the transaction.
 .. image:: img/android-send3.png
     :width: 160 px
 .. image:: img/android-send4.png
-    :width: 160 px
-.. image:: img/android-send5.png
     :width: 160 px
 
 *Sending Dash and viewing your transactions and balance in Dash Wallet
