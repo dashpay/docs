@@ -103,7 +103,7 @@ but with a few key differences:
   the link to downloadable builds above.
 - Your masternode configuration file must also specify testnet mode. Add
   the following line when setting up *dash.conf* on the masternode:
-  testnet = 1
+  ``testnet = 1``
 - As for mainnet masternodes, the RPC username and password must contain
   alphanumeric characters only
 - When cloning sentinel, you may need to clone the development branch
