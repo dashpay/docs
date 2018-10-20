@@ -1,3 +1,3 @@
-//$(document).ready(function() {
-//	$("#langselect").val(DOCUMENTATION_OPTIONS['LANGUAGE']);
-//});
+$(document).ready(function() {
+	$("#langselect").val(DOCUMENTATION_OPTIONS['LANGUAGE']);
+});
