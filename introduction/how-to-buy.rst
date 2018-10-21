@@ -1271,7 +1271,6 @@ Gredo E-currency
   Gredo E-currency offers OTC sale of Dash and other cryptocurrencies
   for Nigerian Naira (NGN).
 
-
 TruexGOLD
   .. image:: exchanges/truexgold.png
      :width: 200px
