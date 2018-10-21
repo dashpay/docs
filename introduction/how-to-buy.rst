@@ -669,18 +669,6 @@ Golix
   people in Sub-Saharan Africa buy and sell DASH and other
   cryptocurrencies.
 
-eBitcoinics
-  .. image:: exchanges/ebitcoinics.png
-     :width: 200px
-     :align: right
-     :target: http://www.ebitcoinics.com
-
-  http://www.ebitcoinics.com
-
-  eBitcoinics is a cryptocurrency exchange and education platform for
-  the African market. Dash is available for exchange against Nigerian
-  Naira (NGN) and Ghanaian Cedi (GHS).
-
 Bisq
   .. image:: exchanges/bisq.png
      :width: 200px
@@ -1237,17 +1225,28 @@ Bitcoin Meester
   you to buy and sell Dash (and other cryptocurrencies) OTC in exchange
   for Euro.
 
-CoinOYO
-  .. image:: exchanges/coinoyo.png
+eBitcoinics
+  .. image:: exchanges/ebitcoinics.png
      :width: 200px
      :align: right
-     :target: https://coinoyo.com
+     :target: http://www.ebitcoinics.com
 
-  https://coinoyo.com
+  http://www.ebitcoinics.com
 
-  CoinOYO is a cryptocurrency exchange dedicated to helping Nigerians
-  buy, sell and invest in cryptocurrencies. You can buy Dash and several
-  other cryptocurrencies using Nigerian naira.
+  eBitcoinics is a cryptocurrency exchange and education platform for
+  the African market. Dash is available for exchange against Nigerian
+  Naira (NGN) and Ghanaian Cedi (GHS).
+
+Kurecoinhub
+  .. image:: exchanges/kurecoin.png
+     :width: 200px
+     :align: right
+     :target: https://kurecoinhub.com
+
+  https://kurecoinhub.com
+
+  Kurecoinhub offers DASH and other cryptocurrencies for sale OTC for
+  the Nigerian Naira.
 
 Cryptomate
   .. image:: exchanges/cryptomate.png
@@ -1274,17 +1273,6 @@ BitPrime
   BitPrime operates a secure and compliant platform for easy retail
   trading in New Zealand. Dash is available OTC for both purchase and
   sale together with many other cryptocurrencies.
-
-Kurecoinhub
-  .. image:: exchanges/kurecoin.png
-     :width: 200px
-     :align: right
-     :target: https://kurecoinhub.com
-
-  https://kurecoinhub.com
-
-  Kurecoinhub offers DASH and other cryptocurrencies for sale OTC for
-  the Nigerian Naira.
 
 Coindirect
   .. image:: exchanges/coindirect.png
