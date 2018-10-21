@@ -1260,6 +1260,18 @@ Kurecoinhub
   Kurecoinhub offers DASH and other cryptocurrencies for sale OTC for
   the Nigerian Naira.
 
+Gredo E-currency
+  .. image:: exchanges/gredo.png
+     :width: 200px
+     :align: right
+     :target: https://www.gredoe-currency.com
+
+  https://www.gredoe-currency.com
+
+  Gredo E-currency offers OTC sale of Dash and other cryptocurrencies
+  for Nigerian Naira (NGN).
+
+
 TruexGOLD
   .. image:: exchanges/truexgold.png
      :width: 200px
