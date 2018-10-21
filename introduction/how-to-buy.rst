@@ -794,6 +794,18 @@ Bleutrade
   Registered in Brazil, Bleutrade offers DOGE and BTC trading pairs for
   DASH.
 
+SatoWallet
+  .. image:: exchanges/satowallet.png
+     :width: 200px
+     :align: right
+     :target: https://satowallet.com
+
+  https://satowallet.com
+
+  SatoWallet is a multi-coin crypto wallet with built-in exchange
+  functionality. Dash is available for trade against Nigerian Naira
+  (NGN), USD, BTC and ETH.
+
 LBank
   .. image:: exchanges/lbank.png
      :width: 200px
@@ -1247,6 +1259,16 @@ Kurecoinhub
 
   Kurecoinhub offers DASH and other cryptocurrencies for sale OTC for
   the Nigerian Naira.
+
+TruexGOLD
+  .. image:: exchanges/truexgold.png
+     :width: 200px
+     :align: right
+     :target: https://truexgold.com/
+
+  https://truexgold.com/
+
+  TruexGOLD offers OTC sale of Dash in Nigeria for Nigeria Naira (NGN).
 
 Cryptomate
   .. image:: exchanges/cryptomate.png
