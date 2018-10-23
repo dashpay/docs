@@ -796,7 +796,7 @@ Bleutrade
 
 SatoWallet
   .. image:: exchanges/satowallet.png
-     :width: 200px
+     :width: 120px
      :align: right
      :target: https://satowallet.com
 
@@ -1336,7 +1336,7 @@ Graviex
 
 SlithEx
   .. image:: exchanges/slithex.png
-     :width: 90px
+     :width: 200px
      :align: right
      :target: https://slithex.com
 
@@ -1411,13 +1411,13 @@ CryptoWay
   processing of deposits and withdrawals.
 
 
-CoinBR
-  .. image:: exchanges/coinbr.png
+Stratum CoinBR
+  .. image:: exchanges/stratum.png
      :width: 200px
      :align: right
-     :target: https://www.coinbr.net
+     :target: https://coinbr.io
 
-  https://www.coinbr.net
+  https://coinbr.io
 
   CoinBR is a Brazil-based cryptocurrency company offering a variety of
   services including an exchange, mining, bill payment, point-of-sale,
