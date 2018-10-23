@@ -188,7 +188,6 @@ Treasury tools
 - https://dashvotetracker.com
 - https://proposal.dash.org
 - https://www.dashninja.pl/governance.html
-- https://dashgiveaway.com
 
 
 Masternode management
