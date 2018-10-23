@@ -274,9 +274,9 @@ Koineks
   .. image:: exchanges/koineks.png
      :width: 183px
      :align: right
-     :target: https://koineks.com/
+     :target: https://koineks.com
 
-  https://koineks.com/
+  https://koineks.com
 
   Koineks serves the Turkish market and offers trading pairs for DASH
   against the Turkish Lira and Bitcoin.
@@ -457,9 +457,9 @@ Lykke
   .. image:: exchanges/lykke.png
      :width: 200px
      :align: right
-     :target: https://www.lykke.com/
+     :target: https://www.lykke.com
 
-  https://www.lykke.com/
+  https://www.lykke.com
 
   Incorporated in Switzerland, Lykke is an open source exchange,
   online/mobile wallet service, idea accelerator and ICO platform. DASH
@@ -469,9 +469,9 @@ Liquid
   .. image:: exchanges/liquid.png
      :width: 200px
      :align: right
-     :target: https://www.liquid.com/
+     :target: https://www.liquid.com
 
-  https://www.liquid.com/
+  https://www.liquid.com
 
   Liquid serves the Asian market with funding support for HKD, AUD, CNY, INR, JPY, PHP, IDR, UDS, SGD and EUR, and trading against ETH,
   BTC, BCH and DASH.
@@ -503,9 +503,9 @@ ZB.com
   .. image:: exchanges/zb.png
      :width: 200px
      :align: right
-     :target: https://www.zb.com/
+     :target: https://www.zb.com
 
-  https://www.zb.com/
+  https://www.zb.com
 
   With a focus on the Chinese market, ZB.com offers trading from
   specialized applications for macOS, Windows, Android and iOS. Crypto
@@ -546,17 +546,6 @@ Cryptopia
   for supporting a large number of low-volume altcoins. It offers DASH
   trading pairs for BTC, LTC, DOGE and USDT.
 
-Styx24
-  .. image:: exchanges/styx24.png
-     :width: 100px
-     :align: right
-     :target: https://www.styx24.com
-
-  https://www.styx24.com
-
-  Styx24 is based in Zimbabwe and offers trading for DASH, BTC and LTC
-  against the USD.
-
 ACX
   .. image:: exchanges/acxlogo.png
      :width: 200px
@@ -572,9 +561,9 @@ Lescovex
   .. image:: exchanges/lescovex.png
      :width: 130px
      :align: right
-     :target: https://lescovex.com/
+     :target: https://lescovex.com
 
-  https://lescovex.com/
+  https://lescovex.com
 
   Registered in Switzerland, Lescovex offers deposits and withdrawals in
   a wide range of fiat currencies (EUR, USD, CAD, GBP, CHF, SEK, RON)
@@ -624,9 +613,9 @@ Miami Crypto Exchange
   .. image:: exchanges/mcex.png
      :width: 110px
      :align: right
-     :target: https://www.miami.exchange/
+     :target: https://www.miami.exchange
 
-  https://www.miami.exchange/
+  https://www.miami.exchange
 
   Miami Crypto Exchange (MCEX), operated by Dash partner `Mercury Cash
   <https://www.mercury.cash>`_, is a legal and fully compliant crypto
@@ -749,16 +738,15 @@ KuCoin
   KuCoin is a pure crypto exchange with a focus on the Chinese market.
   DASH can be traded against BTC, USDT, ETH and KCS.
 
-Bitcoin Indonesia
-  .. image:: exchanges/bitcoinid.png
+Indodax
+  .. image:: exchanges/indodax.png
      :width: 200px
      :align: right
-     :target: https://www.bitcoin.co.id
+     :target: https://indodax.com
 
-  https://www.bitcoin.co.id
+  https://indodax.com
 
-  Bitcoin Indonesia allows funding in IDR and offers a DASH/BTC trading
-  pair.
+  Indodax allows funding in IDR and offers a DASH/BTC trading pair.
 
 ALFAcashier
   .. image:: exchanges/alfa.png
@@ -853,17 +841,6 @@ CoinSpot
   CoinSpot is an Australian exchange offering DASH, BTC, LTC and ETH in
   exchange for AUD.
 
-Bter
-  .. image:: exchanges/bter.png
-     :width: 200px
-     :align: right
-     :target: https://bter.com
-
-  https://bter.com
-
-  Bter is a Chinese exchange allowing deposits in CNY and offering DASH
-  trading pairs for CNY and BTC.
-
 Holy Transaction
   .. image:: exchanges/holytransaction.png
      :width: 200px
@@ -925,9 +902,9 @@ Bitcointoyou
   .. image:: exchanges/bitcointoyou.png
      :width: 200px
      :align: right
-     :target: https://bitcointoyou.com/
+     :target: https://bitcointoyou.com
 
-  https://bitcointoyou.com/
+  https://bitcointoyou.com
 
   Based in Brazil, Bitcointoyou has been in operation since 2010 and
   offers trading of a number of cryptocurrencies, including Dash,
@@ -1096,9 +1073,9 @@ Flyp.me
   .. image:: exchanges/flypme.png
      :width: 200px
      :align: right
-     :target: https://flyp.me/
+     :target: https://flyp.me
 
-  https://flyp.me/
+  https://flyp.me
 
   Flyp.me is developed by the team at HolyTransaction, the first
   multicurrency web wallet. It offers instant exchange services between
@@ -1120,9 +1097,9 @@ BlockTrades
   .. image:: exchanges/blocktrades.png
      :width: 100px
      :align: right
-     :target: https://blocktrades.us/
+     :target: https://blocktrades.us
 
-  https://blocktrades.us/
+  https://blocktrades.us
 
   BlockTrades is a decentralized exchange designed to facilitate free
   movement between the Steemit, BitShares, Bitcoin and Dash blockchains.
@@ -1243,7 +1220,7 @@ Bitcoin Meester
      :target: https://www.bitcoinmeester.nl
 
   https://www.bitcoinmeester.nl
-  https://www.bitladon.com/
+  https://www.bitladon.com
 
   Bitcoin Meester, and it's international sister site Bitladon, allows
   you to buy and sell Dash (and other cryptocurrencies) OTC in exchange
@@ -1287,9 +1264,9 @@ TruexGOLD
   .. image:: exchanges/truexgold.png
      :width: 200px
      :align: right
-     :target: https://truexgold.com/
+     :target: https://truexgold.com
 
-  https://truexgold.com/
+  https://truexgold.com
 
   TruexGOLD offers OTC sale of Dash in Nigeria for Nigeria Naira (NGN).
 
@@ -1413,9 +1390,9 @@ BasiChange
   .. image:: exchanges/basichange.png
      :width: 200px
      :align: right
-     :target: https://basichange.com/
+     :target: https://basichange.com
 
-  https://basichange.com/
+  https://basichange.com
 
   BasiChange offers exchange, trading and OTC crypto sales with a focus
   on Venezuela and Colombia.
