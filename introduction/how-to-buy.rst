@@ -487,6 +487,18 @@ BitcoinVN
   BitcoinVN is a Vietnamese exchange offering BTC, BCH, LTC and DASH
   for trading against Vietnamese đồng.
 
+Ginero
+  .. image:: exchanges/ginero.png
+     :width: 200px
+     :align: right
+     :target: https://ginero.io
+
+  https://ginero.io
+
+  Ginero is a peer-to-peer exchange operating in Vietnam and
+  offeringexchange offering BTC, BCH, LTC, ETH, GIN and DASH for trading
+  against Vietnamese đồng.
+
 ZB.com
   .. image:: exchanges/zb.png
      :width: 200px
