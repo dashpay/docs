@@ -102,6 +102,20 @@ Wirex
   wallet-integration>`_ a partnership with Dash and integration of Dash
   funding on Wirex cards.
 
+FuzeX
+  .. image:: img/fuzex.png
+     :width: 200px
+     :align: right
+     :target: https://fuzex.co
+
+  https://fuzex.co
+
+  The FuzeX Card & FuzeX Wallet strive to offer an all in one payment
+  solution that provides a smarter way to pay. The card offers real-time
+  exchange of cryptocurrency at the time of purchase. The goal is to
+  make paying with cryptocurrency secure, fast and a seamless process
+  for everyday use.
+
 Paycent
   .. image:: img/paycent.png
      :width: 200px
