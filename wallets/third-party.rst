@@ -441,7 +441,7 @@ Guarda offers detailed documentation of all functions at
 https://guarda.freshdesk.com and a few quick links are also collected
 here:
 
-- `Getting started with Guarda Wallet <https://guarda.freshdesk.com/support/solutions/articles/36000032811-getting-started-with-guarda-wallet>`_
+- `How to create a wallet? <https://guarda.freshdesk.com/support/solutions/articles/36000032815-how-to-create-a-wallet->`_
 - `What is Guarda Exchange? <https://guarda.freshdesk.com/support/solutions/articles/36000011303-what-is-guarda-exchange->`_
 
 .. figure:: img/guarda-wallet.png
