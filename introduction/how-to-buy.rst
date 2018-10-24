@@ -865,7 +865,7 @@ RealExchange
   exchange also supports fiat trading pairs with the Brazilian real.
 
 NegocieCoins
-  .. image:: exchanges/negociecoins.jpg
+  .. image:: exchanges/negociecoins.png
      :width: 200px
      :align: right
      :target: https://www.negociecoins.com.br
