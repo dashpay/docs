@@ -106,3 +106,41 @@ displayed. Tap **Send** to complete the transaction.
 
 *Sending Dash and viewing your transactions and balance in Dash Wallet
 for Android*
+
+
+Buying
+------
+
+Since version 6.1.0, it has been possible to link your Android wallet
+with Uphold to purchase Dash using any funding methods available to you
+in Uphold. To get started, tap the menu button, select **Uphold
+account** and then **Link Uphold account**. Enter your username and
+password and complete two-factor authentication (if enabled for your
+account). Your Uphold balance will appear. Tap **Buy Dash** to add funds
+and convert them to Dash using Uphold. Tap **Transfer from Uphold**
+enter the amount, tap **Transfer** and confirm the transaction details
+to move funds from Uphold into your Dash wallet. For more information on
+using Uphold, see the `Uphold documentation
+<https://support.uphold.com>`_.
+
+.. image:: img/android-uphold1.png
+    :width: 160 px
+.. image:: img/android-uphold2.png
+    :width: 160 px
+.. image:: img/android-uphold3.png
+    :width: 160 px
+.. image:: img/android-uphold4.png
+    :width: 160 px
+
+*Logging in to Uphold and purchasing Dash*
+
+.. image:: img/android-uphold5.png
+    :width: 160 px
+.. image:: img/android-uphold6.png
+    :width: 160 px
+.. image:: img/android-uphold7.png
+    :width: 160 px
+.. image:: img/android-uphold8.png
+    :width: 160 px
+
+*Transferring Dash from Uphold to your Dash Android wallet*
