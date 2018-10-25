@@ -65,7 +65,7 @@ CrowdNode
 https://crowdnode.io
 
 - Operated by: CrowdNode ApS
-- Services: Hosting
+- Services: Hosting, Shares
 - `Site <https://crowdnode.io>`__
 - `Email <hello@crowdnode.io>`__
 
@@ -85,6 +85,21 @@ https://node40.com
 - `Email <info@node40.com>`__
 - `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`__
 - `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`__
+
+币舫 (Bifun)
+-----------------
+
+.. image:: img/bifun.png
+   :width: 100px
+   :align: right
+   :target: https://bifun.com
+
+https://bifun.com
+
+- Operated by: BiFun (Hainan) Network Technology Co, Ltd.
+- Services: Hosting, Shares
+- `Site <https://bifun.com>`__
+- `Email <business@bifun.com>`__
 
 Masternodehosting
 -----------------
