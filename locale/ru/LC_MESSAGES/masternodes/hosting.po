@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-18 10:50+0000\n"
+"POT-Creation-Date: 2018-10-25 10:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: strophy <leon.white@dash.org>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -76,7 +76,7 @@ msgid "Operated by: moocowmoo (Dash Core team member)"
 msgstr "Управляется: moocowmoo (участник команды Dash Core)"
 
 #: ../../masternodes/hosting.rst:35 ../../masternodes/hosting.rst:52
-#: ../../masternodes/hosting.rst:68 ../../masternodes/hosting.rst:95
+#: ../../masternodes/hosting.rst:110
 msgid "Services: Hosting"
 msgstr "Услуги: хостинг"
 
@@ -144,6 +144,10 @@ msgstr ""
 msgid "Operated by: CrowdNode ApS"
 msgstr "Управляет: CrowdNode ApS"
 
+#: ../../masternodes/hosting.rst:68 ../../masternodes/hosting.rst:100
+msgid "Services: Hosting, Shares"
+msgstr ""
+
 #: ../../masternodes/hosting.rst:69
 msgid "`Site <https://crowdnode.io>`__"
 msgstr "`Сайт <https://crowdnode.io>`__"
@@ -193,26 +197,46 @@ msgstr ""
 "compliance/>`__"
 
 #: ../../masternodes/hosting.rst:90
+msgid "币舫 (Bifun)"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:97
+msgid "https://bifun.com"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:99
+msgid "Operated by: BiFun (Hainan) Network Technology Co, Ltd."
+msgstr ""
+
+#: ../../masternodes/hosting.rst:101
+msgid "`Site <https://bifun.com>`__"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:102
+msgid "`Email <business@bifun.com>`__"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:105
 msgid "Masternodehosting"
 msgstr "Masternodehosting"
 
-#: ../../masternodes/hosting.rst:92
+#: ../../masternodes/hosting.rst:107
 msgid "https://masternodehosting.com"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:94
+#: ../../masternodes/hosting.rst:109
 msgid "Operated by: flare (Dash Core team member)"
 msgstr "Управляет: flare (участник команды Dash Core)"
 
-#: ../../masternodes/hosting.rst:96
+#: ../../masternodes/hosting.rst:111
 msgid "`Site <https://masternodehosting.com>`__"
 msgstr "`Сайт <https://masternodehosting.com>`__"
 
-#: ../../masternodes/hosting.rst:97
+#: ../../masternodes/hosting.rst:112
 msgid "`Email <holger@masternodehosting.com>`__"
 msgstr "`Email <holger@masternodehosting.com>`__"
 
-#: ../../masternodes/hosting.rst:98
+#: ../../masternodes/hosting.rst:113
 msgid ""
 "`Forum <https://www.dash.org/forum/threads/service-masternode-hosting-"
 "service.2648/>`__"
@@ -220,15 +244,15 @@ msgstr ""
 "`Форум <https://www.dash.org/forum/threads/service-masternode-hosting-"
 "service.2648/>`__"
 
-#: ../../masternodes/hosting.rst:101
+#: ../../masternodes/hosting.rst:116
 msgid "Starting a hosted masternode"
 msgstr "Запуск мастерноды на хостинге"
 
-#: ../../masternodes/hosting.rst:103
+#: ../../masternodes/hosting.rst:118
 msgid "Starting a hosted masternode is done in just a few easy steps:"
 msgstr "Запуск мастерноды на хостинге происходит в несколько простых шагов:"
 
-#: ../../masternodes/hosting.rst:105
+#: ../../masternodes/hosting.rst:120
 msgid ""
 "Send 1000 DASH to an address you control in a single transaction and wait "
 "for 15 confirmations"
@@ -236,7 +260,7 @@ msgstr ""
 "Отправьте 1000 Dash на принадлежащий вам адрес одним переводом и подождите, "
 "пока он не подтвердится 15 раз"
 
-#: ../../masternodes/hosting.rst:107
+#: ../../masternodes/hosting.rst:122
 msgid ""
 "Communicate the address to your hosting provider, who will provide you with "
 "a masternode IP address and private key"
@@ -244,11 +268,11 @@ msgstr ""
 "Сообщите адрес вашему хостинг-провайдеру, который даст вам IP адрес "
 "мастерноды и приватный ключ"
 
-#: ../../masternodes/hosting.rst:109
+#: ../../masternodes/hosting.rst:124
 msgid "Enter this information in your wallet and start the masternode"
 msgstr "Введите эту информацию в ваш кошелёк и запустите мастерноду"
 
-#: ../../masternodes/hosting.rst:111
+#: ../../masternodes/hosting.rst:126
 msgid ""
 "It is **highly recommended** to store the keys to your masternode collateral"
 " on a :ref:`hardware wallet <dash-hardware-wallet>` for added security "
@@ -264,11 +288,11 @@ msgstr ""
 "пользоваться Dash Core Wallet для запуска мастерноды (больше не "
 "рекомендуется) свяжитесь с вашим хостинг-провайдером."
 
-#: ../../masternodes/hosting.rst:119
+#: ../../masternodes/hosting.rst:134
 msgid "Send the collateral"
 msgstr "Отправьте залог"
 
-#: ../../masternodes/hosting.rst:121
+#: ../../masternodes/hosting.rst:136
 msgid ""
 "Set up your Trezor using the Trezor wallet at https://wallet.trezor.io, "
 "update the firmware if necessary and send a test transaction to verify that "
@@ -286,7 +310,7 @@ msgstr ""
 "1000 Dash на адрес, который там написан. Вы увидите этот перевод после "
 "первых подтверждений, обычно это происходит в течение нескольких минут. "
 
-#: ../../masternodes/hosting.rst:133
+#: ../../masternodes/hosting.rst:148
 msgid ""
 "Trezor Wallet Receive tab showing successfully received collateral of 1000 "
 "DASH"
@@ -294,7 +318,7 @@ msgstr ""
 "Вкладка Receive из Trezor Wallet, в которой отображается успешно "
 "переведённый залог в 1000 Dash"
 
-#: ../../masternodes/hosting.rst:136
+#: ../../masternodes/hosting.rst:151
 msgid ""
 "Once the transaction appears, click the QR code on the right to view the "
 "transaction on the blockchain. Keep this window open as we complete the "
@@ -306,17 +330,17 @@ msgstr ""
 "поскольку вам скоро понадобятся 15 подтверждений, как показано на этом "
 "скриншоте. "
 
-#: ../../masternodes/hosting.rst:144
+#: ../../masternodes/hosting.rst:159
 msgid ""
 "Trezor blockchain explorer showing 15 confirmations for collateral transfer"
 msgstr ""
 "Блокчейн эксплорер Trezor показывает, что прошло 15 подтверждений перевода"
 
-#: ../../masternodes/hosting.rst:148
+#: ../../masternodes/hosting.rst:163
 msgid "Correspond with your hosting provider"
 msgstr "Свяжитесь с вашим хостинг-провайдером"
 
-#: ../../masternodes/hosting.rst:150
+#: ../../masternodes/hosting.rst:165
 msgid ""
 "Once 15 confirmations exist, send the address holding the 1000 DASH to your "
 "hosting provider. Payment for operating the masternode will generally also "
@@ -331,23 +355,23 @@ msgstr ""
 " того, на котором лежат залоговые средства. Вскоре вам придёт ответ со "
 "следующими данными:"
 
-#: ../../masternodes/hosting.rst:156
+#: ../../masternodes/hosting.rst:171
 msgid "A server IP address"
 msgstr "IP адрес сервера"
 
-#: ../../masternodes/hosting.rst:157
+#: ../../masternodes/hosting.rst:172
 msgid "A masternode private key"
 msgstr "Приватный ключ мастерноды"
 
-#: ../../masternodes/hosting.rst:158
+#: ../../masternodes/hosting.rst:173
 msgid "The collateral transaction ID (optional)"
 msgstr "ID залогового перевода (опционально)"
 
-#: ../../masternodes/hosting.rst:161
+#: ../../masternodes/hosting.rst:176
 msgid "Start the masternode"
 msgstr "Запуск мастерноды"
 
-#: ../../masternodes/hosting.rst:163
+#: ../../masternodes/hosting.rst:178
 msgid ""
 "The Dash Masternode Tool (DMT) is required to combine all of this data and "
 "issue the command to the network to start the masternode. Download the "
@@ -361,11 +385,11 @@ msgstr ""
 "<https://github.com/Bertrand256/dash-masternode- tool/releases>`_. "
 "Распакуйте файл и запустите программу. Появится следующее окно."
 
-#: ../../masternodes/hosting.rst:173
+#: ../../masternodes/hosting.rst:188
 msgid "Dash Masternode Tool startup screen"
 msgstr "Начальный экран Dash Masternode Tool"
 
-#: ../../masternodes/hosting.rst:175
+#: ../../masternodes/hosting.rst:190
 msgid ""
 "We will now do the final preparation in Dash DMT. Carry out the following "
 "sequence of steps as shown in this screenshot from DMT developer "
@@ -374,25 +398,25 @@ msgstr ""
 "На завершающем этапе мы будем работать с Dash DMT. Следуйте описанным "
 "этапам, как показано на этих скриншотах от разработчика DMT Bertrand256:"
 
-#: ../../masternodes/hosting.rst:182
+#: ../../masternodes/hosting.rst:197
 msgid "Dash Masternode Tool configuration steps"
 msgstr "Этапы настройки Dash Masternode Tool"
 
-#: ../../masternodes/hosting.rst:184
+#: ../../masternodes/hosting.rst:199
 msgid "Enter the name of your masternode here."
 msgstr "Введите здесь название вашей мастерноды."
 
-#: ../../masternodes/hosting.rst:185
+#: ../../masternodes/hosting.rst:200
 msgid "Enter the IP address of your masternode, as provided by your host."
 msgstr ""
 "Введите IP адрес мастерноды, который вы получили от вашего хостинг-"
 "провайдера."
 
-#: ../../masternodes/hosting.rst:186
+#: ../../masternodes/hosting.rst:201
 msgid "Enter the TCP port number. This should be 9999."
 msgstr "Введите номер TCP порта. Он должен быть 9999."
 
-#: ../../masternodes/hosting.rst:187
+#: ../../masternodes/hosting.rst:202
 msgid ""
 "Instead of clicking **Generate new**, simply enter the masternode private "
 "key provided by your host."
@@ -400,7 +424,7 @@ msgstr ""
 "Не нажимайте **Generate new**. Вместо этого введите приватный ключ "
 "мастерноды, который вы получили от вашего хостинг-провайдера."
 
-#: ../../masternodes/hosting.rst:189
+#: ../../masternodes/hosting.rst:204
 msgid ""
 "Copy the collateral address where you sent the 1000 DASH collateral from "
 "your Trezor Wallet and paste it in this field."
@@ -408,7 +432,7 @@ msgstr ""
 "Скопируйте адрес, куда вы отправили залог в 1000 Dash из вашего Trezor "
 "кошелька, и вставьте его в это поле."
 
-#: ../../masternodes/hosting.rst:191
+#: ../../masternodes/hosting.rst:206
 msgid ""
 "Click the **arrow** → to derive the BIP32 path from your collateral address."
 " You can verify this against the BIP32 path shown on the receive tab in your"
@@ -418,7 +442,7 @@ msgstr ""
 "залога. Вы можете сверить его с BIP32 путём, который отображается во вкладке"
 " Reveive в вашем Trezor кошельке для этого перевода. "
 
-#: ../../masternodes/hosting.rst:194
+#: ../../masternodes/hosting.rst:209
 msgid ""
 "Click **Lookup** to find the collateral TX ID for the transaction which "
 "transferred the collateral to the address. You can verify this against the "
@@ -429,11 +453,11 @@ msgstr ""
 " на этот адрес. Вы можете сверить его с TX ID, который отображается на "
 "странице подтверждения перевода в блокчейн эксплорере."
 
-#: ../../masternodes/hosting.rst:202
+#: ../../masternodes/hosting.rst:217
 msgid "Dash Masternode Tool with configuration ready to start masternode"
 msgstr "Теперь Dash Masternode Tool настроен и готов к запуску мастерноды."
 
-#: ../../masternodes/hosting.rst:204
+#: ../../masternodes/hosting.rst:219
 msgid ""
 "Click **Start Masternode using Hardware Wallet**. Enter your PIN and confirm"
 " on your hardware wallet that you want to transmit this command. The "
@@ -443,13 +467,13 @@ msgstr ""
 "подтвердите на аппаратном кошельке, что вы хотите передать эту команду. На "
 "экране появятся следующие сообщения, подтвердите каждое:"
 
-#: ../../masternodes/hosting.rst:214
+#: ../../masternodes/hosting.rst:229
 msgid "Dash Masternode Tool confirmation dialogs to start a masternode"
 msgstr ""
 "Запрашивающие подтверждение диалоги в Dash Masternode Tool перед запуском "
 "мастерноды "
 
-#: ../../masternodes/hosting.rst:216
+#: ../../masternodes/hosting.rst:231
 msgid ""
 "That's it! Your masternode is now running, and you should receive regular "
 "payments to your masternode address. You can monitor your masternode's "

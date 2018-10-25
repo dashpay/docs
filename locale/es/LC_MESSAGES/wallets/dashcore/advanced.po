@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-22 09:24+0000\n"
+"POT-Creation-Date: 2018-10-25 10:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018\n"
+"Last-Translator: Tomas Alfaro <talfarod@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,7 +81,7 @@ msgid ""
 "safely create transactions with your remaining funds without affecting the "
 "locked UTXOs."
 msgstr ""
-"Haz click derecho en la(s) transacción(es) que no deseas gastar, luego "
+"Haz click derecho en las transacción(es) que no deseas gastar, luego "
 "selecciona **Bloquear sin gastar**. Aparecerá un pequeño candado junto a la "
 "transacción. Puedes hacer click en el botón **Conmutar estado de bloqueo** "
 "para invertir el estado bloqueado/desbloqueado de todos los UTXOs. Cuando "
@@ -128,6 +128,10 @@ msgid ""
 "the following command to get started with a randomly generated HD wallet "
 "seed and no mnemonic passphrase::"
 msgstr ""
+"Usaremos la billetera GUI de Windows en este ejemplo, pero los comandos son "
+"similares si usa ``dash-qt`` o ``dashd`` en otros sistemas operativos. "
+"Ingrese el siguiente comando para iniciar con una semilla de billetera HD "
+"generada aleatoriamente y sin contraseña mnemonica::"
 
 #: ../../wallets/dashcore/advanced.rst:72
 msgid ""
@@ -136,6 +140,11 @@ msgid ""
 "correctly. Open the console from **Tools -> Debug console** or issue the "
 "following RPC command from ``dash-cli`` to view the mnemonic seed::"
 msgstr ""
+"Una nueva billetera HD sera generada y Dash Core mostrara una advertencia "
+"informándole que debe encriptar su billetera después de verificar que "
+"funciona correctamente. Abra la consola en **Herramientas -> Consola de "
+"Depuración** o emita el siguiente comando RPC desde `` dash-cli`` para ver "
+"la semilla mnemonica ::"
 
 #: ../../wallets/dashcore/advanced.rst:79
 msgid ""
@@ -144,12 +153,18 @@ msgid ""
 "generated mnemonic and/or passphrase, ensure no ``wallet.dat`` file exists "
 "in the ``datadir`` and enter the following command::"
 msgstr ""
+"Dash Core mostrara la semilla HD en hexadecimal y mnemonica BIP39. Para "
+"restaurar una billetera HD existente, o define tu propia mnemonica y/o "
+"contraseña generada por separado, asegúrate que no existe archivo "
+"``wallet.dat`` en ``datadir`` e ingrese los siguientes comandos::"
 
 #: ../../wallets/dashcore/advanced.rst:87
 msgid ""
 "The HD wallet will be restored and your balance will appear once sync is "
 "complete."
 msgstr ""
+"La billetera HD sera restaurada y tu balance aparecerá una vez que la "
+"sincronización esta completa."
 
 #: ../../wallets/dashcore/advanced.rst:94
 msgid "Multisignature"
@@ -314,7 +329,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:318
 msgid "Multiple wallets"
-msgstr ""
+msgstr "Múltiples billeteras"
 
 #: ../../wallets/dashcore/advanced.rst:320
 msgid ""
@@ -323,6 +338,10 @@ msgid ""
 "of Dash Core simultaneously by specifying separate data directories using "
 "the ``datadir`` argument."
 msgstr ""
+"Es posible seleccionar entre diferentes billeteras Dash cuando Dash Core "
+"inicia especificando el argumento ``wallet``, o incluso ejecuta múltiples "
+"instancias de Dash Core simultáneamente especificando directorios de datos "
+"separados usando el argumento ``datadir``."
 
 #: ../../wallets/dashcore/advanced.rst:325
 msgid ""
@@ -334,10 +353,18 @@ msgid ""
 "entirely separate data directories such as e.g. ``C:\\Dash1`` (simpler if "
 "you do want to run the wallets simultaneously)."
 msgstr ""
+"Para empezar, instala la billetera Dash Core para tu sistema de acuerdo a la"
+" :ref:`instrucciones de instalación <dashcore-installation>`. Cuando llegues"
+" al paso **Ejecutando Dash Core por primera vez**, puedes decidir si desea "
+"mantener archivos `` wallet.dat`` separados en la ubicación predeterminada "
+"(más sencillo si no necesita ejecutar las carteras simultáneamente), o "
+"especificar directorios de datos completamente separados como, por ejemplo, "
+"`` C: \\ Dash1`` (más simple si desea ejecutar las carteras "
+"simultáneamente)."
 
 #: ../../wallets/dashcore/advanced.rst:336
 msgid "Separate wallet.dat files"
-msgstr ""
+msgstr "Archivos wallet.dat separados"
 
 #: ../../wallets/dashcore/advanced.rst:338
 msgid ""
@@ -347,10 +374,15 @@ msgid ""
 "similar) and create two shortcuts on the desktop. Then open the "
 "**Properties** window for each of these shortcuts."
 msgstr ""
+"Para este escenario, crearemos dos atajos en el escritorio, cada uno usando "
+"un archivo de billetera diferente. Navega al archivo binario usado para "
+"iniciar Dash Core (tipicamente localizado en ``C:\\Program Files\\DashCore"
+"\\dash-qt.exe`` o similar) y crea dos atajos en el escritorio. Entonces abre"
+" la ventana **Propiedades** para cada uno de estos atajos."
 
 #: ../../wallets/dashcore/advanced.rst:347
 msgid "Creating desktop shortcuts using Windows 10"
-msgstr ""
+msgstr "Creando atajos de escritorio usando Windows 10"
 
 #: ../../wallets/dashcore/advanced.rst:349
 msgid ""
@@ -361,22 +393,32 @@ msgid ""
 " following example demonstrates two wallets named ``workwallet.dat`` and "
 "``homewallet.dat``:"
 msgstr ""
+"Modificar la propiedad ** Objetivo ** de cada acceso directo para puntar a "
+"diferentes archivos de billeteras especificando la el argumento ``wallet`` "
+"cuando inicia la billetera. Si no especificas un argumento ``wallet``, "
+"``wallet.dat`` se usara por defecto. El archivo billetera especificado sera "
+"creado sino existe. Los siguientes ejemplos muestran dos billeteras "
+"nombradas ``workwallet.dat`` y ``homewallet.dat``:"
 
 #: ../../wallets/dashcore/advanced.rst:356
 msgid ""
 "Wallet Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=workwallet.dat``"
 msgstr ""
+"Billetera Objetivo 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-wallet=workwallet.dat``"
 
 #: ../../wallets/dashcore/advanced.rst:357
 msgid ""
 "Wallet Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=homewallet.dat``"
 msgstr ""
+"Billetera Objetivo 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-wallet=homewallet.dat``"
 
 #: ../../wallets/dashcore/advanced.rst:362
 msgid "Specifying separate wallet files"
-msgstr ""
+msgstr "Especificando archivos de billeteras separadas"
 
 #: ../../wallets/dashcore/advanced.rst:364
 msgid ""
@@ -384,10 +426,14 @@ msgid ""
 "from your desktop. Note that you cannot open both wallets simultaneously. To"
 " do this, you will need two separate data directories, as described below."
 msgstr ""
+"Puedes usar ahora los dos iconos para abrir rápida y fácilmente diferentes "
+"billeteras desde tu escritorio. Ten en cuenta que no puedes abrir ambas "
+"billeteras simultáneamente. Para hacer esto, necesitas dos directorios de "
+"datos separados, como se describe abajo."
 
 #: ../../wallets/dashcore/advanced.rst:371
 msgid "Separate data directories"
-msgstr ""
+msgstr "Directorios de datos separados"
 
 #: ../../wallets/dashcore/advanced.rst:373
 msgid ""
@@ -399,22 +445,34 @@ msgid ""
 "of Dash Core simultaneously. Create two (or more) shortcuts on your desktop "
 "as described above, then specify arguments for ``datadir`` as shown below:"
 msgstr ""
+"Inicia la Dash Core y deja que sincronice con la red, luego cierra la Dash "
+"Core de nuevo. Ahora puedes crear dos directorios por ejemplo ``C:\\Dash1`` "
+"y ``C:\\Dash2`` y copia los directorios ``blocks`` y ``chainstate`` dentro "
+"del directorio de datos sincronizado a los nuevos directorios. Cada uno "
+"estos servirá como un directorio de datos separado, permitiendo que ejecutes"
+" dos instancias de la Dash Core simultáneamente. Crea dos (o mas) atajos en "
+"tu escritorio como se describe abajo, entonces especifica el argumento "
+"``datadir`` como se muestra abajo:"
 
 #: ../../wallets/dashcore/advanced.rst:382
 msgid ""
 "Datadir Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash1 -listen=0``"
 msgstr ""
+"Datadir Objetivo 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-datadir=C:\\Dash1 -listen=0``"
 
 #: ../../wallets/dashcore/advanced.rst:383
 msgid ""
 "Datadir Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash2 -listen=0``"
 msgstr ""
+"Datadir Objetivos 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-datadir=C:\\Dash2 -listen=0``"
 
 #: ../../wallets/dashcore/advanced.rst:388
 msgid "Specifying separate datadirs"
-msgstr ""
+msgstr "Especificar directorios de datos separados"
 
 #: ../../wallets/dashcore/advanced.rst:390
 msgid ""
@@ -428,11 +486,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:400
 msgid "Two instances of Dash Core running simultaneously"
-msgstr ""
+msgstr "Dos instancias de Dash Core ejecutándose simultáneamente"
 
 #: ../../wallets/dashcore/advanced.rst:403
 msgid "KeePass"
-msgstr ""
+msgstr "KeePass"
 
 #: ../../wallets/dashcore/advanced.rst:405
 msgid ""
@@ -449,19 +507,19 @@ msgstr "Instalación"
 
 #: ../../wallets/dashcore/advanced.rst:414
 msgid "You will need the following:"
-msgstr ""
+msgstr "Necesitaras lo siguiente:"
 
 #: ../../wallets/dashcore/advanced.rst:416
 msgid "KeePass 2: http://keepass.info"
-msgstr ""
+msgstr "KeePass 2: http://keepass.info"
 
 #: ../../wallets/dashcore/advanced.rst:417
 msgid "KeePassHttp plugin: https://github.com/pfn/keepasshttp"
-msgstr ""
+msgstr "Plugin KeePassHttp: https://github.com/pfn/keepasshttp"
 
 #: ../../wallets/dashcore/advanced.rst:418
 msgid "Dash Core: https://www.dash.org"
-msgstr ""
+msgstr "Dash Core: https://www.dash.org"
 
 #: ../../wallets/dashcore/advanced.rst:420
 msgid ""
@@ -471,21 +529,23 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:423
 msgid "KeePass: https://keepass.info/help/v2/setup.html"
-msgstr ""
+msgstr "KeePass: https://keepass.info/help/v2/setup.html"
 
 #: ../../wallets/dashcore/advanced.rst:424
 msgid "KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md"
-msgstr ""
+msgstr "KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md"
 
 #: ../../wallets/dashcore/advanced.rst:425
 msgid ""
 "Dash Core: "
 "https://docs.dash.org/en/latest/wallets/dashcore/installation.html"
 msgstr ""
+"Dash Core: "
+"https://docs.dash.org/en/latest/wallets/dashcore/installation.html"
 
 #: ../../wallets/dashcore/advanced.rst:428
 msgid "Commands"
-msgstr ""
+msgstr "Comandos"
 
 #: ../../wallets/dashcore/advanced.rst:430
 msgid ""
@@ -495,7 +555,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:436
 msgid "keepass genkey"
-msgstr ""
+msgstr "keepass genkey"
 
 #: ../../wallets/dashcore/advanced.rst:434
 msgid ""
@@ -506,7 +566,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:442
 msgid "keepass init"
-msgstr ""
+msgstr "keepass init"
 
 #: ../../wallets/dashcore/advanced.rst:439
 msgid ""
@@ -518,7 +578,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:449
 msgid "keepass setpassphrase"
-msgstr ""
+msgstr "keepass setpassphrase"
 
 #: ../../wallets/dashcore/advanced.rst:445
 msgid ""
@@ -535,7 +595,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:454
 msgid "keepass"
-msgstr ""
+msgstr "keepass"
 
 #: ../../wallets/dashcore/advanced.rst:454
 msgid "Use KeePass 2 integration using KeePassHttp plugin (default: 0)"
@@ -543,15 +603,15 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:457
 msgid "keepassport=<port>"
-msgstr ""
+msgstr "keepassport=<port>"
 
 #: ../../wallets/dashcore/advanced.rst:457
 msgid "Connect to KeePassHttp on port <port> (default: 19455)"
-msgstr ""
+msgstr "Conectar a KeePassHttp en el puerto <port> (por defecto: 19455) "
 
 #: ../../wallets/dashcore/advanced.rst:460
 msgid "keepasskey=<key>"
-msgstr ""
+msgstr "keepasskey=<key>"
 
 #: ../../wallets/dashcore/advanced.rst:460
 msgid "KeePassHttp key for AES encrypted communication with KeePass"
@@ -559,7 +619,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:463
 msgid "keepassid=<name>"
-msgstr ""
+msgstr "keepassid=<name>"
 
 #: ../../wallets/dashcore/advanced.rst:463
 msgid "KeePassHttp id for the established association"
@@ -567,7 +627,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:466
 msgid "keepassname=<name>"
-msgstr ""
+msgstr "keepassname=<name>"
 
 #: ../../wallets/dashcore/advanced.rst:466
 msgid ""
