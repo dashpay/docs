@@ -90,7 +90,7 @@ https://node40.com
 -----------------
 
 .. image:: img/bifun.png
-   :width: 100px
+   :width: 200px
    :align: right
    :target: https://bifun.com
 
