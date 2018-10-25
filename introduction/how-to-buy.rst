@@ -727,6 +727,17 @@ BitMEX
   BitMEX is a pure-crypto derivates exchange offering trading with up to
   100x leverage. DASH is available to trade against BTC.
 
+MBAex
+  .. image:: exchanges/mbaex.png
+     :width: 200px
+     :align: right
+     :target: https://mbaex.com
+
+  https://mbaex.com
+
+  MBAex is a pure crypto exchange with a focus on the Chinese market.
+  DASH can be traded against BTC, USDT and MDP.
+
 KuCoin
   .. image:: exchanges/kucoin.png
      :width: 200px
