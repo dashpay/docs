@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 10:03+0000\n"
+"POT-Creation-Date: 2018-10-26 08:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Tomas Alfaro <talfarod@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
@@ -483,6 +483,13 @@ msgid ""
 " as :ref:`Dash Electrum <dash-electrum-wallet>` to maintain multiple "
 "separate wallets without keeping a full copy of the blockchain."
 msgstr ""
+"Puedes ahora usar dos iconos para abrir rápida y fácilmente diferentes "
+"billeteras simultáneamente desde su escritorio. Ambas billeteras mantienen "
+"copias enteras y separadas de la cadena de bloques, la cual puede usar mucho"
+" espacio en disco. Para uso mas eficiente del espacio en disco, considere "
+"usar un SPV o una billetera \"liviana\" como ref:`Dash Electrum <dash-"
+"electrum-wallet>` para mantener separadas múltiples billeteras sin mantener "
+"una copia completa de la cadena de bloques."
 
 #: ../../wallets/dashcore/advanced.rst:400
 msgid "Two instances of Dash Core running simultaneously"
@@ -500,6 +507,11 @@ msgid ""
 "wallet passphrase in KeePass using the integration. When this is done, "
 "KeePass can be used to unlock the wallet."
 msgstr ""
+"Desde la versión 0.11.0, la Dash Core tiene soporte integrado con KeePass, "
+"el popular manejador de contraseña de código abierto. Esta guía describe "
+"como configurar la asociación entre Dash Core y KeePass, y como guardar una "
+"contraseña de la billetera Dash Core en KeePass usando la integración. "
+"Cuando esta listo, KeePass puede ser usado para desbloquear la billetera."
 
 #: ../../wallets/dashcore/advanced.rst:412
 msgid "Installation"
@@ -526,6 +538,8 @@ msgid ""
 "If not already installed, install these packages according to the "
 "instructions linked below:"
 msgstr ""
+"Si no esta instalada aun, instala los paquetes de acuerdo a las "
+"instrucciones enlazadas abajo:"
 
 #: ../../wallets/dashcore/advanced.rst:423
 msgid "KeePass: https://keepass.info/help/v2/setup.html"
@@ -552,6 +566,8 @@ msgid ""
 "The following KeePass RPC commands are available in the Dash Core client "
 "console or server:"
 msgstr ""
+"Los siguientes comandos RPC de KeePass están disponibles en la consola "
+"cliente o servidor de la Dash Core "
 
 #: ../../wallets/dashcore/advanced.rst:436
 msgid "keepass genkey"
@@ -563,6 +579,9 @@ msgid ""
 "communication with KeePassHttp. This is only necessary for manual "
 "configuration. Use init for automatic configuration."
 msgstr ""
+"Generar una llave AES base64 codificada en 256 bit que puede ser usada para "
+"comunicación con KeePassHttp. Esto solo es necesario para configuración "
+"manual. Utilice init para la configuración automática."
 
 #: ../../wallets/dashcore/advanced.rst:442
 msgid "keepass init"
@@ -575,6 +594,10 @@ msgid ""
 " to ask for an ID for the association. Returns the association and the "
 "base64 encoded string for the AES key."
 msgstr ""
+"Configurar la asociación entre Dash y KeePass generando una llave AES y "
+"enviando un mensaje de asociación para KeePassHttp. Esto accionara KeePass "
+"para solicitar una identificación para la asociación. Devuelve la asociación"
+" y la cadena codificada en base64 para la clave AES."
 
 #: ../../wallets/dashcore/advanced.rst:449
 msgid "keepass setpassphrase"
@@ -588,10 +611,17 @@ msgid ""
 "GUI already send the updates to KeePassHttp, so this is only necessary for "
 "manual manipulation of the password."
 msgstr ""
+"Actualizar la contraseña en KeePassHttp a un nuevo valor. Esto debe "
+"coincidir con la contraseña que esta intentando usar para la billetera. Por "
+"favor tenga en cuenta que el comando RPC estándar walletpassphrasechange y "
+"la encriptación de la billetera del GUI QT aun envía actualizaciones a "
+"KeePassHttp, por lo que esto solo es necesario para la manipulación manual "
+"de la contraseña."
 
 #: ../../wallets/dashcore/advanced.rst:451
 msgid "The following new arguments are available for dashd and dash-qt:"
 msgstr ""
+"Los siguientes argumentos nuevos están disponibles para dashd y dash-qt:"
 
 #: ../../wallets/dashcore/advanced.rst:454
 msgid "keepass"
@@ -600,6 +630,8 @@ msgstr "keepass"
 #: ../../wallets/dashcore/advanced.rst:454
 msgid "Use KeePass 2 integration using KeePassHttp plugin (default: 0)"
 msgstr ""
+"Utiliza la integración con KeePass 2 usando el complemento KeePassHttp (por "
+"defecto: 0)"
 
 #: ../../wallets/dashcore/advanced.rst:457
 msgid "keepassport=<port>"
@@ -615,7 +647,7 @@ msgstr "keepasskey=<key>"
 
 #: ../../wallets/dashcore/advanced.rst:460
 msgid "KeePassHttp key for AES encrypted communication with KeePass"
-msgstr ""
+msgstr "Llave KeePassHttp para la comunicación encriptada AES con KeePass"
 
 #: ../../wallets/dashcore/advanced.rst:463
 msgid "keepassid=<name>"
@@ -623,7 +655,7 @@ msgstr "keepassid=<name>"
 
 #: ../../wallets/dashcore/advanced.rst:463
 msgid "KeePassHttp id for the established association"
-msgstr ""
+msgstr "Identificación KeePassHttp para la asociación establecida "
 
 #: ../../wallets/dashcore/advanced.rst:466
 msgid "keepassname=<name>"
@@ -633,3 +665,5 @@ msgstr "keepassname=<name>"
 msgid ""
 "Name to construct url for KeePass entry that stores the wallet passphrase"
 msgstr ""
+"Nombre para construir url para las entradas KeePass que almacenen la "
+"contraseña de la billetera."
