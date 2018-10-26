@@ -163,16 +163,13 @@ The *wallet.dat* file itself should be encrypted using a password set
 from the **Settings > Encrypt Wallet** menu item. However, this only
 prevents someone with access to the file from creating transactions, not
 from opening the file. You could additionally store the file in another
-encrypted container, such as a USB stick using `BitLocker
-<https://technet.microsoft.com/en-us/library/ff404223.aspx>`_ in
-Windows, `LUKS <https://help.ubuntu.com/community/EncryptedFilesystemsOnRemovableStorage>`_ 
+encrypted container, such as a USB stick using `BitLocker <https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-to-go-faq>`_ 
+in Windows, `LUKS <https://help.ubuntu.com/community/EncryptedFilesystemsOnRemovableStorage>`_ 
 in Linux or `FileVault <https://support.apple.com/en-us/HT204837>`_ on
-macOS. It is also possible to create `disk images
-<https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac>`_ 
+macOS. It is also possible to create `disk images <https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac>`_ 
 or `zip files <https://www.howtogeek.com/203590/how-to-create-secure-encrypted-zip-or-7z-archives-on-any-operating-system/>`_ 
 with password encryption - the choice is yours. For further reading on
-encrypted containers, see `here
-<https://theintercept.com/2015/04/27/encrypting-laptop-like-mean/>`_.
+encrypted containers, see `here <https://theintercept.com/2015/04/27/encrypting-laptop-like-mean/>`_.
 
 Where you store this file is then up to you. It could be in your home,
 in a safe deposit box at a bank, a waterproof or fireproof container, or
