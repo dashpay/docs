@@ -18,6 +18,11 @@ html[lang=ar] .wy-nav-side, html[lang=ar] .rst-versions {
     right:0;
 }
 
+html[lang=ar] .wy-nav-content-wrap {
+    margin-right: 300px;
+    margin-left: 0;
+}
+
 @media screen and (max-width: 768px) {
     html[lang=ar] .wy-nav-side {
         right:-300px;
@@ -31,11 +36,6 @@ html[lang=ar] .wy-nav-side, html[lang=ar] .rst-versions {
     html[lang=ar] wy-nav-content-wrap.shift {
         right:85%;
     }
-}
-
-html[lang=ar] .wy-nav-content-wrap {
-    margin-right: 300px;
-    margin-left: 0;
 }
 
 html[lang=ar] .wy-menu-vertical li span.toctree-expand {
