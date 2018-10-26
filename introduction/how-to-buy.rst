@@ -442,6 +442,17 @@ Coinome
   Coinome is an Indian exchange offering DASH trading against the Indian
   Rupee (INR).
 
+WazirX
+  .. image:: exchanges/wazirx.png
+     :width: 200px
+     :align: right
+     :target: https://wazirx.com
+
+  https://wazirx.com
+
+  WazirX is an Indian exchange offering DASH trading against BTC and
+  USDT, and funding in the Indian Rupee (INR).
+
 Coinsquare
   .. image:: exchanges/coinsquare.png
      :width: 200px
