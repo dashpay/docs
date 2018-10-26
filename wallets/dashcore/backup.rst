@@ -166,7 +166,7 @@ from opening the file. You could additionally store the file in another
 encrypted container, such as a USB stick using `BitLocker
 <https://technet.microsoft.com/en-us/library/ff404223.aspx>`_ in
 Windows, `LUKS <https://help.ubuntu.com/community/EncryptedFilesystemsOnRemovableStorage>`_ 
-in Linux or `FileVault <https://support.apple.com /en-us/HT204837>`_ on
+in Linux or `FileVault <https://support.apple.com/en-us/HT204837>`_ on
 macOS. It is also possible to create `disk images
 <https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac>`_ 
 or `zip files <https://www.howtogeek.com/203590/how-to-create-secure-encrypted-zip-or-7z-archives-on-any-operating-system/>`_ 
