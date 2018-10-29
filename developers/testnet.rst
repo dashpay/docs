@@ -1,6 +1,6 @@
 .. meta::
    :description: Dash testnet and devnets are used by Dash developers for testing using tDASH
-   :keywords: dash, masternodes, testnet, devnet, faucet, masternodes, testing, mining pools
+   :keywords: dash, masternodes, testnet, devnet, faucet, masternodes, testing, pool, explorer, mining pools, block explorer
 
 .. _testnet:
 
