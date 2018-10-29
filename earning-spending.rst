@@ -41,7 +41,7 @@ Dash can be spent in hundreds of stores and services both online and in
 physical locations.
 
 .. image:: img/discover-dash.png
-   :width: 100%
+   :width: 70%
    :target: https://discoverdash.com
 
 **Discover Dash** lists businesses around the world accepting Dash,
