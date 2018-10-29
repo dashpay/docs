@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-14 06:13+0000\n"
+"POT-Creation-Date: 2018-10-29 11:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -22,13 +22,13 @@ msgstr ""
 msgid ""
 "Coin control, HD wallets, multisig, KeePass and multiple wallet files using "
 "the Dash Core wallet"
-msgstr ""
+msgstr "货币控制、HD 钱包、多重签名、KeePass和使用Dash Core钱包的各个钱包文件。"
 
 #: ../../wallets/dashcore/advanced.rst:1
 msgid ""
 "dash, core, wallet, backup, restore, wallet.dat, multisig, KeePass, hd, "
 "seed, passphrase, mnemonic, coin control, hierarchical deterministic"
-msgstr ""
+msgstr "达世币，核心，钱包，备份，恢复，wallet.dat，多重签名，KeePass，hd，种子，密码，助记符，货币控制，分层确定性"
 
 #: ../../wallets/dashcore/advanced.rst:9
 msgid "Advanced topics"
@@ -77,7 +77,7 @@ msgstr "在达世币核心钱包当中锁定未经支付的输出"
 
 #: ../../wallets/dashcore/advanced.rst:51
 msgid "HD Wallets"
-msgstr ""
+msgstr "HD 钱包"
 
 #: ../../wallets/dashcore/advanced.rst:53
 msgid ""
@@ -92,6 +92,10 @@ msgid ""
 " wallet file itself, while the mnemonic passphrase is used to specify "
 "different derivation branches from the same mnemonic seed."
 msgstr ""
+"从 0.12.2.0 版本开始，达世币核心钱包就具备了兼容 BIP39/BIP44 的分层确定性（HD）密码生成功能。只有在初次启动达世币核心钱包时指定"
+" ``usehd`` "
+"选项的用户才能通过命令行使用这一功能。用户应当慎用这一功能，因为助记符种子和密码需要以纯文本格式存储，直到用户为钱包指定密码短语。值得注意的是，钱包密码与助记符密码不同，后者通常也被称作"
+" \"第25个字符\" 或 \"扩展字符\"。此外，钱包密码用于加密钱包文件本身，而助记符密码则用于指定来自同一助记符种子的不同派生分支。"
 
 #: ../../wallets/dashcore/advanced.rst:65
 msgid ""
@@ -100,6 +104,8 @@ msgid ""
 "the following command to get started with a randomly generated HD wallet "
 "seed and no mnemonic passphrase::"
 msgstr ""
+"在下文中，我们将以Windows GUI钱包为例，但如果用户在其他操作系统上使用 ``dash-qt`` 或 "
+"``dashd``，那么要用到的命令行就是一样的。用户可以输入以下命令，以便启用随机生成的分层确定性钱包种子，此时，钱包并不具备助记符密码::"
 
 #: ../../wallets/dashcore/advanced.rst:72
 msgid ""
@@ -108,6 +114,8 @@ msgid ""
 "correctly. Open the console from **Tools -> Debug console** or issue the "
 "following RPC command from ``dash-cli`` to view the mnemonic seed::"
 msgstr ""
+"新的HD钱包已经生成，达世币核心钱包将显示一则通知，告知用户必须在验证程序可正确运行后对钱包进行加密。用户可以通过 **工具 -> 调试控制台** 或在"
+" ``dash-cli`` 上执行远程过程调用命令，以便浏览助记符种子::"
 
 #: ../../wallets/dashcore/advanced.rst:79
 msgid ""
@@ -116,12 +124,14 @@ msgid ""
 "generated mnemonic and/or passphrase, ensure no ``wallet.dat`` file exists "
 "in the ``datadir`` and enter the following command::"
 msgstr ""
+"达世币核心钱包将以十六进制和 BIP39 助记符显示HD钱包的种子。如需恢复已有的HD钱包或者定义单独生成的助记符和密码，用户需要确保 "
+"``datadir`` 中不存在 ``wallet.dat`` 文件，然后再输入以下命令::"
 
 #: ../../wallets/dashcore/advanced.rst:87
 msgid ""
 "The HD wallet will be restored and your balance will appear once sync is "
 "complete."
-msgstr ""
+msgstr "HD钱包可以恢复，并且用户的余额将在完成同步后予以显示。"
 
 #: ../../wallets/dashcore/advanced.rst:94
 msgid "Multisignature"
