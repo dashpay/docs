@@ -8,13 +8,57 @@
 Technical Guides
 ================
 
-Several API services exist to facilitate quick and easy integration with
-the Dash network for services including:
+Dash Wallet Integration
+=======================
 
-- Transaction broadcasting
-- Exchange rates
-- Currency conversion
-- Invoice generation
+This documentation is also available as a `PDF
+<https://github.com/dashpay/docs/raw/master/binary/merchants
+/Integration-Resources-Wallet-Integration.pdf>`__.
+
+`Dash Core <https://github.com/dashpay/dash/releases>`__ is a fork of
+Bitcoin and the majority of functionality included in the Dash Core
+Daemon can be integrated in a similar manner. Key differences relate to
+customizations to existing JSON-RPC commands to support unique
+functionalities such as InstantSend. These differences, as well as more
+general information, is summarized below.
+
+1. **General Information:** Dash is a “Proof of Work” blockchain with
+   attributes similar to that of Bitcoin.
+
+   a. Block Time: ~2.6 Minutes per Block
+   b. Blockchain Confirmations: 6 Confirmations (or 1 in the case of 
+      InstantSend)
+   c. Github Source: https://github.com/dashpay/dash
+   d. Release Link: https://github.com/dashpay/dash/releases
+
+2. **JSON-RPC Interface:** The majority of Bitcoin JSON-RPC commands are
+   unchanged making integration into existing systems relatively
+   straightforward. For a complete listing of RPC commands see the 
+   `Developer Guide <https://dash-docs.github.io/en/developer-guide>`__.
+
+   It’s worth noting that several key Transaction-related JSON-RPC
+   commands have been modified to support InstantSend through the
+   addition of an “InstantLock” field and are listed below:
+
+   a. `GetTransaction <https://dash-docs.github.io/en/developer-reference#gettransaction>`__
+   b. `ListTransactions <https://dash-docs.github.io/en/developer-reference#listtransactions>`__
+   c. `ListSinceBlock <https://dash-docs.github.io/en/developer-reference#listsinceblock>`__
+
+3. **Block Hashing Algorithm:** Dash uses the “X11” algorithm in place
+   of SHA256 used in Bitcoin. It’s important to note, however, that this
+   only affects the hashing of the Block itself. All other internals
+   utilize SHA256 hashes (transactions, merkle root, etc) which allows 
+   for most existing libraries to work in the Dash ecosystem.
+
+4. **Supporting Libraries:** Due to the aforementioned differences in
+   Hashing Algorithm only minor adjustments are required before using
+   Bitcoin libraries on the Dash network. The most popular libraries
+   have already been ported to Dash which has enabled support for most
+   major programming languages. These resources are outlined in the
+   :ref:`SDK Resources <sdk-resources>` section of this document.
+
+
+.. _api-services:
 
 API Services
 ============
@@ -22,6 +66,14 @@ API Services
 This documentation is also available as a `PDF
 <https://github.com/dashpay/docs/raw/master/binary/merchants
 /Integration-Resources-API.pdf>`__.
+
+Several API services exist to facilitate quick and easy integration with
+the Dash network for services including:
+
+- Transaction broadcasting
+- Exchange rates
+- Currency conversion
+- Invoice generation
 
 API Services are typically leveraged to eliminate that requirement of
 running your own infrastructure to support blockchain interactions. This
@@ -149,6 +201,8 @@ or integrate with your pre-existing checkout.
 - Documentation: https://www.coinpayments.net/apidoc
 
 
+.. _sdk-resources:
+
 SDK Resources
 =============
 
@@ -159,7 +213,8 @@ This documentation is also available as a `PDF
 SDKs (Software Development Kits) are used to accelerate the design and
 development of a product for the Dash Network. These resources can
 either be used to interface with an API provider or for the creation of
-standalone applications.
+standalone applications by forming transactions and/or performing
+various wallet services.
 
 
 Dash Developer Guide
@@ -180,9 +235,8 @@ executable.
 
 - Documentation: https://dash-docs.github.io/en/developer-guide
 
-
-Dashcore
---------
+NodeJS/JavaScript: Bitcore (Dashcore)
+-------------------------------------
 
 .. image:: img/bitcore.png
    :width: 200px
@@ -192,7 +246,7 @@ Dashcore
 https://bitcore.io
 
 Dashcore is a fork of Bitcore and operates as a full Dash node — your
-apps run directly on the  peer-to-peer network. For wallet application
+apps run directly on the peer-to-peer network. For wallet application
 development, additional indexes have been added into Dash for querying
 address balances, transaction history, and unspent outputs.
 
@@ -201,9 +255,29 @@ address balances, transaction history, and unspent outputs.
 - Repository lib: https://github.com/dashevo/dashcore-lib
 - Repository node: https://github.com/dashevo/dashcore-node
 
+PHP: Bitcoin-PHP
+----------------
 
-DashJ
------
+Bitcoin-PHP is an implementation of Bitcoin with support for Dash using
+mostly pure PHP.
+
+- Platform: PHP
+- Documentation: https://github.com/Bit-Wasp/bitcoin-php/blob/master/doc/Introduction.md
+- Repository: https://github.com/Bit-Wasp/bitcoin-php
+
+Python: PyCoin
+--------------
+
+PyCoin is an implementation of a bunch of utility routines that may be
+useful when dealing with Bitcoin and Dash. It has been tested
+with Python 2.7, 3.6 and 3.7.
+
+- Platform: Python
+- Documentation: https://pycoin.readthedocs.io/en/latest/
+- Repository: https://github.com/richardkiss/pycoin
+
+Java: DashJ
+-----------
 
 .. image:: img/bitcoinj.png
    :width: 200px
@@ -222,9 +296,8 @@ language: examples in Python and JavaScript are included.
 - Documentation: https://bitcoinj.github.io/getting-started 
 - Example application: https://github.com/tomasz-ludek/pocket-of-dash
 
-
-NBitcoin
---------
+.NET: NBitcoin
+--------------
 
 .. image:: img/dash.png
    :width: 200px
@@ -243,7 +316,6 @@ so you can easily build your application on top of it.
 - Documentation: https://programmingblockchain.gitbooks.io/programmingblockchain/content/ 
 - Repository: https://github.com/MetacoSA/NBitcoin
 
-
 BlockCypher
 -----------
 
@@ -258,7 +330,6 @@ BlockCypher also offers client SDKs.
 
 - Platform: Ruby, Python, Java, PHP, Go, NodeJS
 - Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-supported-language-sdks 
-
 
 GoCoin
 ------
