@@ -303,7 +303,7 @@ language: examples in Python and JavaScript are included.
 .NET: NBitcoin
 --------------
 
-.. image:: img/dash.png
+.. image:: img/dash-logo.png
    :width: 200px
    :align: right
    :target: https://github.com/MetacoSA/NBitcoin
