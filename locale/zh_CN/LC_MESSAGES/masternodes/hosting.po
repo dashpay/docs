@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-29 11:49+0000\n"
+"POT-Creation-Date: 2018-10-30 07:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -22,13 +22,13 @@ msgstr ""
 msgid ""
 "Masternode hosting services can help you set up and maintain a Dash "
 "masternode"
-msgstr ""
+msgstr "主节点托管服务可以帮助您设置并维护达世币主节点"
 
 #: ../../masternodes/hosting.rst:1
 msgid ""
 "dash, cryptocurrency, hosting, server, linux, masternode, contact, trezor, "
 "setup"
-msgstr ""
+msgstr "达世币，加密数字货币，托管，服务器，linux，主节点，接触，trezor，设置"
 
 #: ../../masternodes/hosting.rst:9
 msgid "Hosting Services"
@@ -43,6 +43,7 @@ msgid ""
 "advantage of a hosting service. A list of currently available masternode "
 "hosting services is available below."
 msgstr ""
+"多个达世币社区成员提供主节点托管服务。托管服务可以安全实现客户无需放弃对1000个达世币的控制权，这1000个达世币是必需的保证金。出于安全考虑，强烈建议您在使用托管服务时，将保证金保存在硬件钱包中。下面列出了一些当前可用的主节点托管服务。"
 
 #: ../../masternodes/hosting.rst:19
 msgid "List of hosting services"
@@ -52,7 +53,7 @@ msgstr "托管服务列表"
 msgid ""
 "**Disclaimer**: Dash Core may be affiliated with these community members, "
 "but is not involved in the provision of any of these services."
-msgstr ""
+msgstr "**免责声明**：Dash Core可能与这些社区成员相关联，但并不参与提供任何上述服务。"
 
 #: ../../masternodes/hosting.rst:25
 msgid "Masternode.me"
@@ -237,27 +238,27 @@ msgstr ""
 
 #: ../../masternodes/hosting.rst:116
 msgid "Starting a hosted masternode"
-msgstr ""
+msgstr "启动某一经托管的主节点"
 
 #: ../../masternodes/hosting.rst:118
 msgid "Starting a hosted masternode is done in just a few easy steps:"
-msgstr ""
+msgstr "启动经托管的主节点，只需简单几步："
 
 #: ../../masternodes/hosting.rst:120
 msgid ""
 "Send 1000 DASH to an address you control in a single transaction and wait "
 "for 15 confirmations"
-msgstr ""
+msgstr "发送1000个DASH至您所控制的单一钱包地址，等待15个确认"
 
 #: ../../masternodes/hosting.rst:122
 msgid ""
 "Communicate the address to your hosting provider, who will provide you with "
 "a masternode IP address and private key"
-msgstr ""
+msgstr "将该地址发送给您的托管提供商，提供商将向您提供主节点IP地址和私钥"
 
 #: ../../masternodes/hosting.rst:124
 msgid "Enter this information in your wallet and start the masternode"
-msgstr ""
+msgstr "在您的钱包中输入该信息，然后启动主节点"
 
 #: ../../masternodes/hosting.rst:126
 msgid ""
@@ -268,6 +269,9 @@ msgid ""
 "wallet to start the masternode (no longer recommended), contact your hosting"
 " provider."
 msgstr ""
+"**强烈建议** 将存有主节点保证金的密钥存储在 :ref:`硬件钱包 <dash-hardware-wallet>` "
+"上，以增强安全性，抵御黑客。该文档将用Trezor作为示例，但也支持KeepKey和Ledger。关于如何使用Dash "
+"Core钱包启动主节点（不再作推荐），请咨询您的托管提供商。"
 
 #: ../../masternodes/hosting.rst:134
 msgid "Send the collateral"
@@ -283,6 +287,10 @@ msgid ""
 "address displayed. You should see the transaction as soon as the first "
 "confirmation arrives, usually within a few minutes."
 msgstr ""
+"使用 https://wallet.trezor.io "
+"上的Trezor钱包设置您的硬件钱包，必要时更新固件，同时发送一项测试交易以验证它是否正常运行。有关于此的帮助，请参阅 :ref:`本指南 "
+"<hardware-trezor>`。点击 **添加帐户** ，在您的Trezor钱包中创建一个新帐户。然后单击 **Receive** "
+"选项卡，发送1000个DASH至所显示出来的地址。一般几分钟内，即可收到首个确认，然后您便可看到该交易。"
 
 #: ../../masternodes/hosting.rst:148
 msgid ""
@@ -306,7 +314,7 @@ msgstr "Trezor区块链浏览器为保证金转移显示了15次确认"
 
 #: ../../masternodes/hosting.rst:163
 msgid "Correspond with your hosting provider"
-msgstr ""
+msgstr "与您的托管提供商保持通信"
 
 #: ../../masternodes/hosting.rst:165
 msgid ""
@@ -316,6 +324,8 @@ msgid ""
 "the address holding the collateral. You will receive a reply with the "
 "following data:"
 msgstr ""
+"15个确认完成后，将持有1000个DASH的地址发送给您的托管提供商。通常情况下，此时也会要求被支付托管费用 - "
+"如果使用达世币付款，请注意不要从持有保证金的地址进行支付。您将会收到一份回复，附有以下数据："
 
 #: ../../masternodes/hosting.rst:171
 msgid "A server IP address"
@@ -327,11 +337,11 @@ msgstr "一个主节点私钥"
 
 #: ../../masternodes/hosting.rst:173
 msgid "The collateral transaction ID (optional)"
-msgstr ""
+msgstr "保证金交易ID（可选）"
 
 #: ../../masternodes/hosting.rst:176
 msgid "Start the masternode"
-msgstr ""
+msgstr "激活主节点"
 
 #: ../../masternodes/hosting.rst:178
 msgid ""
@@ -341,6 +351,9 @@ msgid ""
 "`here <https://github.com/Bertrand256/dash-masternode- tool/releases>`_. "
 "Unzip the file and run the executable. The following window appears."
 msgstr ""
+"对所有这些数据进行整合，并向网络发送指令以要求启动主节点，您需要用到主节点工具（DMT）。从GitHub版本页面 `此处 "
+"<https://github.com/Bertrand256/dash-masternode- "
+"tool/releases>`_下载适用于您计算机的DMT版本。解压文件并运行可执行文件。随即出现以下窗口。"
 
 #: ../../masternodes/hosting.rst:188
 msgid "Dash Masternode Tool startup screen"
@@ -351,7 +364,7 @@ msgid ""
 "We will now do the final preparation in Dash DMT. Carry out the following "
 "sequence of steps as shown in this screenshot from DMT developer "
 "Bertrand256:"
-msgstr ""
+msgstr "我们现在做DMT中的最后准备。如DMT开发者Bertrand256屏幕截图所示，按顺序执行下列步骤："
 
 #: ../../masternodes/hosting.rst:197
 msgid "Dash Masternode Tool configuration steps"
@@ -359,11 +372,11 @@ msgstr "达世币工具配置步骤"
 
 #: ../../masternodes/hosting.rst:199
 msgid "Enter the name of your masternode here."
-msgstr ""
+msgstr "在此处输入您的主节点名称。"
 
 #: ../../masternodes/hosting.rst:200
 msgid "Enter the IP address of your masternode, as provided by your host."
-msgstr ""
+msgstr "输入您的托管提供商提供给您的主节点IP地址。"
 
 #: ../../masternodes/hosting.rst:201
 msgid "Enter the TCP port number. This should be 9999."
@@ -373,7 +386,7 @@ msgstr "输入TCP端口号。该端口号应该是9999。"
 msgid ""
 "Instead of clicking **Generate new**, simply enter the masternode private "
 "key provided by your host."
-msgstr ""
+msgstr "无需单击 **生成新的私钥**，只需输入您的托管提供商提供给您的主节点私钥即可。"
 
 #: ../../masternodes/hosting.rst:204
 msgid ""
@@ -386,7 +399,7 @@ msgid ""
 "Click the **arrow** → to derive the BIP32 path from your collateral address."
 " You can verify this against the BIP32 path shown on the receive tab in your"
 " Trezor Wallet for the transaction."
-msgstr ""
+msgstr "单击 **箭头** → 从您的保证金地址得到BIP32路径。您可以与您的Trezor钱包中接收选项卡上所显示的BIP32路径进行核对。"
 
 #: ../../masternodes/hosting.rst:209
 msgid ""
@@ -394,7 +407,7 @@ msgid ""
 "transferred the collateral to the address. You can verify this against the "
 "TXID shown on the confirmation page of the blockchain explorer for your "
 "collateral address."
-msgstr ""
+msgstr "单击 **查找**，找到该交易的保证金交易地址，即保证金TX ID。您可将其与区块链浏览器确认页面上所显示的TXID进行核对。"
 
 #: ../../masternodes/hosting.rst:217
 msgid "Dash Masternode Tool with configuration ready to start masternode"
@@ -405,7 +418,7 @@ msgid ""
 "Click **Start Masternode using Hardware Wallet**. Enter your PIN and confirm"
 " on your hardware wallet that you want to transmit this command. The "
 "following messages will appear, confirm each one:"
-msgstr ""
+msgstr "单击 **使用硬件钱包启动主节点**。输入您的PIN，在您的硬件钱包上确认您想要传输此指令。您将会看到以下消息，请逐一进行确认："
 
 #: ../../masternodes/hosting.rst:229
 msgid "Dash Masternode Tool confirmation dialogs to start a masternode"
@@ -420,3 +433,6 @@ msgid ""
 "withdraw masternode payments without affecting operation of the masternode, "
 "see :ref:`here <masternode-withdrawals>`."
 msgstr ""
+"完成啦！您的主节点现已运行，主节点地址将定期收到奖励。您可以借助网络，在 https://www.dashninja.pl "
+"上输入保证金地址，搜索主节点列表，监控您的主节点收益。关于如何提取主节点奖励，同时不影响主节点的运行，请参阅 :ref:`此处 <masternode-"
+"withdrawals>`。"
