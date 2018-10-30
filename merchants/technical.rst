@@ -20,7 +20,7 @@ Bitcoin and the majority of functionality included in the Dash Core
 Daemon can be integrated in a similar manner. Key differences relate to
 customizations to existing JSON-RPC commands to support unique
 functionalities such as InstantSend. These differences, as well as more
-general information, is summarized below.
+general information, are summarized below.
 
 1. **General Information:** Dash is a “Proof of Work” blockchain with
    attributes similar to that of Bitcoin.
@@ -220,7 +220,7 @@ various wallet services.
 Dash Developer Guide
 --------------------
 
-.. image:: img/dash.png
+.. image:: img/dash-logo.png
    :width: 200px
    :align: right
    :target: https://dash-docs.github.io/en/developer-guide
@@ -258,6 +258,8 @@ address balances, transaction history, and unspent outputs.
 PHP: Bitcoin-PHP
 ----------------
 
+https://github.com/Bit-Wasp/bitcoin-php
+
 Bitcoin-PHP is an implementation of Bitcoin with support for Dash using
 mostly pure PHP.
 
@@ -267,6 +269,8 @@ mostly pure PHP.
 
 Python: PyCoin
 --------------
+
+https://github.com/richardkiss/pycoin
 
 PyCoin is an implementation of a bunch of utility routines that may be
 useful when dealing with Bitcoin and Dash. It has been tested
