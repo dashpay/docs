@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 09:24+0000\n"
+"POT-Creation-Date: 2018-11-01 04:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -20,12 +20,12 @@ msgstr ""
 
 #: ../../wallets/recovery.rst:1
 msgid "Recovering Dash wallets from files, private keys or recovery phrases"
-msgstr ""
+msgstr "通过文件、私钥和恢复短语恢复达世币钱包"
 
 #: ../../wallets/recovery.rst:1
 msgid ""
 "dash, wallet, recovery, password, lost, mobile, core, phrase, private key"
-msgstr ""
+msgstr "达世币，钱包，恢复，密码，丢失，移动，核心，短语，私钥"
 
 #: ../../wallets/recovery.rst:9
 msgid "Wallet Recovery"
@@ -602,6 +602,11 @@ msgid ""
 "<https://www.dash.org/forum/threads/restore-breadwallet-dash-funds-to-your-"
 "electrum-dash-wallet-tested.8335>`_ for further discussion on this process."
 msgstr ""
+"旧版的IOS达世币钱包使用的是在 ``m/0'`` 派生路径下的 **BIP32** 地址。钱包通常会在正常的使用状态下将资金转移到 **BIP44**"
+" 地址，但部分余额仍有可能会存留在该派生路径下。因此，用户可以在某些情况下恢复 **BIP32扩展私钥** "
+"，这会对事情有所帮助。如需参与进一步的讨论，欢迎大家访问 `论坛帖子 <https://www.dash.org/forum/threads"
+"/restore-breadwallet-dash-funds-to-your-electrum-dash-wallet-tested.8335>`_ "
+"。"
 
 #: ../../wallets/recovery.rst:339
 msgid "Private Keys"
@@ -619,6 +624,11 @@ msgid ""
 " or `iOS <https://itunes.apple.com/us/app/quick-scan-qr-code-"
 "reader/id483336864>`_) to read the code first."
 msgstr ""
+"很多达世币都具备从私钥导入地址的功能，如需参考详细的说明，请阅读钱包附带的文档。虽然私钥的存储方式多种多样，但我们在本文档中以使用达世币核心钱包中的纸钱包的私钥存储为例。只有二维码却没有密码的用户可以使用条码扫描应用程序"
+" (`Android "
+"<https://play.google.com/store/apps/details?id=com.google.zxing.client.android>`_"
+" 或 `iOS <https://itunes.apple.com/us/app/quick-scan-qr-code-"
+"reader/id483336864>`_) 来读取二维码。"
 
 #: ../../wallets/recovery.rst:350
 msgid ""
