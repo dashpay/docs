@@ -49,6 +49,7 @@ general information, are summarized below.
    only affects the hashing of the Block itself. All other internals
    utilize SHA256 hashes (transactions, merkle root, etc) which allows 
    for most existing libraries to work in the Dash ecosystem.
+   :raw-html:`<br />`
 
 4. **Supporting Libraries:** Due to the aforementioned differences in
    Hashing Algorithm only minor adjustments are required before using
