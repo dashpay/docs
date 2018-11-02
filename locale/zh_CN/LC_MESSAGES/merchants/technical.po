@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-30 07:12+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-02 05:47+0000\n"
+"PO-Revision-Date: 2018-04-09 11:01+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +37,7 @@ msgstr "技术指南"
 
 #: ../../merchants/technical.rst:12
 msgid "Dash Wallet Integration"
-msgstr ""
+msgstr "Dash钱包整合"
 
 #: ../../merchants/technical.rst:14
 msgid ""
@@ -42,6 +45,8 @@ msgid ""
 "<https://github.com/dashpay/docs/raw/master/binary/merchants /Integration-"
 "Resources-Wallet-Integration.pdf>`__."
 msgstr ""
+"用户也可以以 `PDF <https://github.com/dashpay/docs/raw/master/binary/merchants "
+"/Integration-Resources-Wallet-Integration.pdf>`__的形式阅读本文档。"
 
 #: ../../merchants/technical.rst:18
 msgid ""
@@ -52,29 +57,32 @@ msgid ""
 "functionalities such as InstantSend. These differences, as well as more "
 "general information, are summarized below."
 msgstr ""
+"`Dash Core <https://github.com/dashpay/dash/releases>`__ "
+"是比特币的分叉，绝大多数功能与比特币相同，可以用类似的方式对Dash Core Daemon进行集成整合。主要的区别在于现有的定制化JSON-"
+"RPC命令用以支持特殊功能，如即时支付。基本信息和区别如下所示。"
 
 #: ../../merchants/technical.rst:25
 msgid ""
 "**General Information:** Dash is a “Proof of Work” blockchain with "
 "attributes similar to that of Bitcoin."
-msgstr ""
+msgstr "**基本信息:** Dash 是基于 “工作量证明” 的区块链项目，与比特币相似。"
 
 #: ../../merchants/technical.rst:28
 msgid "Block Time: ~2.6 Minutes per Block"
-msgstr ""
+msgstr "区块时间: 每 ~2.6 分钟产生一个区块"
 
 #: ../../merchants/technical.rst:29
 msgid ""
 "Blockchain Confirmations: 6 Confirmations (or 1 in the case of InstantSend)"
-msgstr ""
+msgstr "区块链确认: 6 个确认 (或 在即时交易时1个确认即可)"
 
 #: ../../merchants/technical.rst:31
 msgid "Github Source: https://github.com/dashpay/dash"
-msgstr ""
+msgstr "Github 源代码: https://github.com/dashpay/dash"
 
 #: ../../merchants/technical.rst:32
 msgid "Release Link: https://github.com/dashpay/dash/releases"
-msgstr ""
+msgstr "发布链接: https://github.com/dashpay/dash/releases"
 
 #: ../../merchants/technical.rst:34
 msgid ""
@@ -83,31 +91,40 @@ msgid ""
 "straightforward. For a complete listing of RPC commands see the `Developer "
 "Guide <https://dash-docs.github.io/en/developer-guide>`__."
 msgstr ""
+"**JSON-RPC 界面:** 绝大多数基于比特币JSON-"
+"RPC命令依然可用，这使得达世币能够非常容易的嵌入已建立的比特币生态中。查看完整的RPC命令列表，请阅读 `开发者指南 <https://dash-"
+"docs.github.io/en/developer-guide>`__."
 
 #: ../../merchants/technical.rst:39
 msgid ""
 "It’s worth noting that several key Transaction-related JSON-RPC commands "
 "have been modified to support InstantSend through the addition of an "
 "“InstantLock” field and are listed below:"
-msgstr ""
+msgstr "值得注意的是几个主要的交易相关的JSON-RPC命令已被修改用来通过附加的 “InstantLock”字段支持即时支付，如以下列表所示:"
 
 #: ../../merchants/technical.rst:43
 msgid ""
 "`GetTransaction <https://dash-docs.github.io/en/developer-"
 "reference#gettransaction>`__"
 msgstr ""
+"`GetTransaction <https://dash-docs.github.io/en/developer-"
+"reference#gettransaction>`__"
 
 #: ../../merchants/technical.rst:44
 msgid ""
 "`ListTransactions <https://dash-docs.github.io/en/developer-"
 "reference#listtransactions>`__"
 msgstr ""
+"`ListTransactions <https://dash-docs.github.io/en/developer-"
+"reference#listtransactions>`__"
 
 #: ../../merchants/technical.rst:45
 msgid ""
 "`ListSinceBlock <https://dash-docs.github.io/en/developer-"
 "reference#listsinceblock>`__"
 msgstr ""
+"`ListSinceBlock <https://dash-docs.github.io/en/developer-"
+"reference#listsinceblock>`__"
 
 #: ../../merchants/technical.rst:47
 msgid ""
@@ -127,6 +144,9 @@ msgid ""
 "resources are outlined in the :ref:`SDK Resources <sdk-resources>` section "
 "of this document."
 msgstr ""
+"**支持库:** "
+"由于上述哈希算法的区别，仅需要稍作修改即可在Dash网络中使用比特币的资源库。最流行的资源库已被植入到Dash中，并且支持大多数主流编程语言。这些资源可在本文档的"
+" :ref:`SDK 资源 <sdk-resources>` 分区中查看。"
 
 #: ../../merchants/technical.rst:64
 msgid "API Services"
@@ -411,7 +431,7 @@ msgstr "说明文档的链接： https://dash-docs.github.io/en/developer-guide"
 
 #: ../../merchants/technical.rst:239
 msgid "NodeJS/JavaScript: Bitcore (Dashcore)"
-msgstr ""
+msgstr "NodeJS/JavaScript: Bitcore (Dashcore)"
 
 #: ../../merchants/technical.rst:246
 msgid "https://bitcore.io"
@@ -443,11 +463,11 @@ msgstr "存储节点：https://github.com/dashevo/dashcore-node"
 
 #: ../../merchants/technical.rst:259
 msgid "PHP: Bitcoin-PHP"
-msgstr ""
+msgstr "PHP: Bitcoin-PHP"
 
 #: ../../merchants/technical.rst:261
 msgid "https://github.com/Bit-Wasp/bitcoin-php"
-msgstr ""
+msgstr "https://github.com/Bit-Wasp/bitcoin-php"
 
 #: ../../merchants/technical.rst:263
 msgid ""
@@ -457,25 +477,26 @@ msgstr ""
 
 #: ../../merchants/technical.rst:266
 msgid "Platform: PHP"
-msgstr ""
+msgstr "平台: PHP"
 
 #: ../../merchants/technical.rst:267
 msgid ""
 "Documentation: https://github.com/Bit-Wasp/bitcoin-"
 "php/blob/master/doc/Introduction.md"
 msgstr ""
+"文档: https://github.com/Bit-Wasp/bitcoin-php/blob/master/doc/Introduction.md"
 
 #: ../../merchants/technical.rst:268
 msgid "Repository: https://github.com/Bit-Wasp/bitcoin-php"
-msgstr ""
+msgstr "资源库: https://github.com/Bit-Wasp/bitcoin-php"
 
 #: ../../merchants/technical.rst:271
 msgid "Python: PyCoin"
-msgstr ""
+msgstr "Python: PyCoin"
 
 #: ../../merchants/technical.rst:273
 msgid "https://github.com/richardkiss/pycoin"
-msgstr ""
+msgstr "https://github.com/richardkiss/pycoin"
 
 #: ../../merchants/technical.rst:275
 msgid ""
@@ -486,19 +507,19 @@ msgstr ""
 
 #: ../../merchants/technical.rst:279
 msgid "Platform: Python"
-msgstr ""
+msgstr "平台: Python"
 
 #: ../../merchants/technical.rst:280
 msgid "Documentation: https://pycoin.readthedocs.io/en/latest/"
-msgstr ""
+msgstr "文档: https://pycoin.readthedocs.io/en/latest/"
 
 #: ../../merchants/technical.rst:281
 msgid "Repository: https://github.com/richardkiss/pycoin"
-msgstr ""
+msgstr "资源库: https://github.com/richardkiss/pycoin"
 
 #: ../../merchants/technical.rst:284
 msgid "Java: DashJ"
-msgstr ""
+msgstr "Java: DashJ"
 
 #: ../../merchants/technical.rst:291
 msgid "https://github.com/HashEngineering/dashj"
@@ -528,7 +549,7 @@ msgstr "应用示例：https://github.com/tomasz-ludek/pocket-of-dash"
 
 #: ../../merchants/technical.rst:304
 msgid ".NET: NBitcoin"
-msgstr ""
+msgstr ".NET: NBitcoin"
 
 #: ../../merchants/technical.rst:311
 msgid "https://github.com/MetacoSA/NBitcoin"
