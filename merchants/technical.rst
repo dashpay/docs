@@ -22,6 +22,10 @@ customizations to existing JSON-RPC commands to support unique
 functionalities such as InstantSend. These differences, as well as more
 general information, are summarized below.
 
+.. |br| raw:: html
+
+   <br />
+
 1. **General Information:** Dash is a “Proof of Work” blockchain with
    attributes similar to that of Bitcoin.
 
@@ -48,8 +52,7 @@ general information, are summarized below.
    of SHA256 used in Bitcoin. It’s important to note, however, that this
    only affects the hashing of the Block itself. All other internals
    utilize SHA256 hashes (transactions, merkle root, etc) which allows 
-   for most existing libraries to work in the Dash ecosystem.
-   :raw-html:`<br />`
+   for most existing libraries to work in the Dash ecosystem. |br|
 
 4. **Supporting Libraries:** Due to the aforementioned differences in
    Hashing Algorithm only minor adjustments are required before using
