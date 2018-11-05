@@ -246,6 +246,17 @@ Chaoex
   Chaoex is a pure crypto exchange offering trading with a focus on new
   assets and supports mobile apps for both Android and iOS.
 
+BTCC
+  .. image:: exchanges/btcc.png
+     :width: 200px
+     :align: right
+     :target: https://www.btcc.com
+
+  https://www.btcc.com
+
+  Based in the UK Hong Kong and available in English and Chinese,
+  BTCC offers DASH trading against BTC and USD.
+
 Bit-Z
   .. image:: exchanges/bit-z.png
      :width: 200px
