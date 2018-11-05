@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-02 05:47+0000\n"
+"POT-Creation-Date: 2018-11-05 06:53+0000\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
@@ -552,10 +552,13 @@ msgid ""
 " rather to provide a similar migratory path that Bitcoin had (CPUs, GPUs, "
 "ASICs)."
 msgstr ""
+"كتب إيفان دوفيلد ، مبتكر داش و X11 بالسلاسل ، في عدة مناسبات أن X11 قد تم "
+"دمجها في داش ليس مع نية منع مصنعي ASIC من إنشاء ASICs ل X11 في المستقبل ، بل"
+" لتوفير مسار مماثل للهجرة كان بيتكوين (وحدات المعالجة ، GPUs ، ASICs)."
 
 #: ../../introduction/features.rst:281
 msgid "Dark Gravity Wave"
-msgstr ""
+msgstr "موجة الجاذبية الداكنة"
 
 #: ../../introduction/features.rst:283
 msgid ""
@@ -570,12 +573,23 @@ msgid ""
 "consistent times, even if the hashing power experiences high fluctuations, "
 "without suffering from the time-warp exploit."
 msgstr ""
+"**DGW**  أو  *موجة الجاذبية الداكنة*  هو خوارزمية ضبط صعوبة مفتوحة المصدر ل "
+"العملات الرقمية المستندة إلى بيتكوين التي استخدمت لأول مرة في  داش ومنذ ذلك "
+"الحين ظهرت في العملات الرقمية الأخرى. من تأليف إيفان دوفيلد ، مطور ومبدع داش"
+" ، كإستجابة لسرقة تشوه زمنًا وجدت في  *بئر كيموتو الجاذبية* في المفهوم DGW  "
+"مشابه ل بئر كيموتو الجاذبية ، وضبط مستويات الصعوبة في كل كتلة (بدلا من كل "
+"الكتل عام 2016 مثل  بيتكوين) استناداً إلى البيانات الإحصائية من كتل تم "
+"العثور عليها مؤخرا. هذا يجعل من الممكن إصدار كتل ذات أوقات متناسقة نسبياً ، "
+"حتى إذا واجهت طاقة التجزئة تقلبات عالية ، دون المعاناة من استغلال وقت "
+"الإعوجاج."
 
 #: ../../introduction/features.rst:295
 msgid ""
 "Version 2.0 of DGW was implemented in Dash from block 45,000 onwards in "
 "order to completely alleviate the time-warp exploit."
 msgstr ""
+"نسخة 2.0 من  DGW تم تنفيذ في داش من كتلة 45000 فصاعدا من أجل التخفيف تماما "
+"من استغلال الوقت الاعوجاج."
 
 #: ../../introduction/features.rst:298
 msgid ""
@@ -584,10 +598,14 @@ msgid ""
 "architectures that had different levels of floating-point accuracy through "
 "the use of integers."
 msgstr ""
+"تم تنفيذ الإصدار 3.0 في 14 مايو 2014 لزيادة تحسين صعوبة إعادة الاستهداف "
+"بتحويلات أكثر سلاسة. كما أنه يعمل على إصلاح المشكلات المتعلقة بالمعماريات "
+"المختلفة التي لها مستويات مختلفة من الدقة الفاصلة العائمة من خلال استخدام "
+"الأعداد الصحيحة."
 
 #: ../../introduction/features.rst:307
 msgid "Emission Rate"
-msgstr ""
+msgstr "معدل الانبعاثات"
 
 #: ../../introduction/features.rst:309
 msgid ""
@@ -603,6 +621,15 @@ msgid ""
 "mCQ6wGCh4/edit#gid=523620673>`_. Graphing this data results in a curve "
 "showing total coins in circulation, known as the coin emission rate."
 msgstr ""
+"يتم إنشاء العملات الرقمية مثل داش و بيتكوين من خلال عملية صعبة مشفرة تعرف "
+"باسم التعدين. التعدين ينطوي على حل متكرر :ref:`خوارزمية <x11-hash-"
+"algorithm>` حتى حل صالح للتيار :ref:`التعدين الصعب <dark-gravity-wave>` "
+"اكتشف. بمجرد اكتشافها ، يسمح لعمال المنجم بإنشاء وحدات جديدة للعملة. هذا هو "
+"المعروف باسم مكافأة كتلة. للتأكد من أن العملة لا تخضع للتضخم اللانهائي ، يتم"
+" تقليل مكافأة الكتلة على فترات منتظمة ، `كما هو مبين في هذا الحساب "
+"<https://docs.google.com/spreadsheets/d/1HqgEkyfZDAA6pIZ3df2PwFE8Z430SVIzQ-"
+"mCQ6wGCh4/edit#gid=523620673>`_.  يؤدي رسم هذه البيانات إلى ظهور منحنى يوضح "
+"إجمالي العملات المتداولة ، والمعروفة باسم معدل انبعاث العملة."
 
 #: ../../introduction/features.rst:322
 msgid ""
@@ -614,14 +641,20 @@ msgid ""
 "amount each year offers a smoother transition to a fee-based economy than "
 "Bitcoin."
 msgstr ""
+"بينما تستند داش على بيتكوين ، فإنها تعدِّل معدل انبعاث العملة بشكل كبير "
+"لتقديم تخفيض أكثر سلاسة في انبعاثات العملات مع مرور الوقت. في حين تعمل "
+"بيتكوين على تقليل معدل انبعاث العملة بنسبة 50٪ كل 4 سنوات ، فإن داش يقلل من "
+"الانبعاثات بمقدار واحد إلى أربعة عشر (حوالي 7.14٪) كل 210240 كتلة (حوالي "
+"383.25 يومًا) يمكن ملاحظة أن خفض المكافأة بمقدار أقل من كل عام يوفر انتقالًا"
+" أكثر سلاسة إلى الاقتصاد القائم على الرسوم من البيتكوين."
 
 #: ../../introduction/features.rst:333
 msgid "Bitcoin vs. Dash coin emission rate"
-msgstr ""
+msgstr "معدل البيتكوين ضد انبعاث عملة داش"
 
 #: ../../introduction/features.rst:337
 msgid "Total coin emission"
-msgstr ""
+msgstr "مجموع انبعاثات العملة"
 
 #: ../../introduction/features.rst:339
 msgid ""
@@ -632,6 +665,12 @@ msgid ""
 "2140, but the mining reward reduces so quickly that 99% of all bitcoin will "
 "be in circulation by 2036, and 99.9% by 2048."
 msgstr ""
+"`مجموع معدل عملة البيتكوين <https://docs.google.com/spreadsheets/d/1 "
+"2tR_9WrY0Hj4AQLoJYj9EDBzfA38XIVLQSOOOVePNm0/pubhtml?gid=0&single=true>`_ "
+"يمكن حسابه كمجموع سلسلة هندسية ، مع اقتراب إجمالي الانبعاثات (ولكن لا تصل "
+"أبداً) 21،000،000 بيتكوين. سيستمر هذا حتى عام 2140 ، ولكن مكافأة التعدين تقل"
+" بسرعة بحيث أن 99 ٪ من جميع البيتكوين سوف يتم تداولها بحلول عام 2036 ، و "
+"99.9 ٪ بحلول عام 2048."
 
 #: ../../introduction/features.rst:346
 msgid ""
@@ -647,26 +686,36 @@ msgid ""
 "completely stops in 2477. Based on these numbers, a maximum and minimum "
 "possible coin supply in the year 2254 can be calculated to be between:"
 msgstr ""
+"`مجموع معدل إنبعات عملة داش <https://docs.google.com/spreadsheets/d "
+"/1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`_ هو أيضًا"
+" مجموع سلسلة هندسية ، ولكن إجمالي الانبعاثات النهائية للعملات غير مؤكّد لأنه"
+" لا يمكن معرفة كم من 10٪ من المكافآت المخصصة لمقترحات الميزانية سيتم تخصيصها"
+" بالفعل ، لأن ذلك يعتمد على سلوك التصويت المستقبلي. ستواصل داش إصدار العملات"
+" المعدنية لما يقرب من 192 عامًا قبل أن تخلق سنة كاملة من التعدين أقل من 1 "
+"داش. بعد عام 2209 سيتم إنشاء 14 داش فقط. سيستغرق إنشاء داش الأخير 231 عامًا "
+"بدءًا من عام 2246 وينتهي عند توقف البث تمامًا في 2477. استنادًا إلى هذه "
+"الأرقام ، يمكن حساب الحد الأقصى والحد الأدنى الممكن من العملة في العام 2254 "
+"ليكون بين:"
 
 #: ../../introduction/features.rst:360
 msgid "17,742,696 DASH"
-msgstr ""
+msgstr "17,742,696 داش"
 
 #: ../../introduction/features.rst:360
 msgid "Assuming zero treasury allocation"
-msgstr ""
+msgstr "على افتراض صفر تخصيص الخزانة"
 
 #: ../../introduction/features.rst:362
 msgid "18,921,005 DASH"
-msgstr ""
+msgstr "18,921,005 داش"
 
 #: ../../introduction/features.rst:362
 msgid "Assuming full treasury allocation"
-msgstr ""
+msgstr "على افتراض  تخصيص الخزانة الكاملة"
 
 #: ../../introduction/features.rst:366
 msgid "Block reward allocation"
-msgstr ""
+msgstr "حظر توزيع المكافآت"
 
 #: ../../introduction/features.rst:368
 msgid ""
@@ -682,26 +731,36 @@ msgid ""
 " Depending on budget utilization, this results in an approximate coin reward"
 " allocation over a budget cycle as follows:"
 msgstr ""
+"على عكس بيتكوين ، الذي يخصص 100 ٪ من المكافأة إلى عمال المناجم ، يعيد داش 10"
+" ٪ من مكافأة الكتلة لاستخدامها في اللامركزية :ref:`نظام الميزانية "
+"<decentralized-governance>`. يتم تقسيم ما تبقى من الكتلة ، وكذلك أي رسوم "
+"المعاملات ، 50/50 بين :ref:`تعدين <mining>` و :ref:`ماسترنود <masternodes>`,"
+" الذي تم تحديده بشكل حاسم وفقا ل :ref:`منطق الدفع <payment-logic>`. تتميز "
+"داش بميزات رائعة ، والتي تظهر كل 16616 قطعة تقريبًا (30.29 يومًا تقريبًا) "
+"ويمكنها إطلاق ما يصل إلى 10٪ من الميزانية التراكمية المحفوظة فوق ذلك "
+":ref:`فترة دورة الميزانية <budget-cycles>` إلى المقترحات الفائزة في نظام "
+"الميزانية. اعتمادًا على استخدام الميزانية ، ينتج عن ذلك تخصيصًا تقريبيًا "
+"لمكافأة العملات على دورة ميزانية كما يلي:"
 
 #: ../../introduction/features.rst:382 ../../introduction/features.rst:384
 msgid "45%"
-msgstr ""
+msgstr "45%"
 
 #: ../../introduction/features.rst:382
 msgid "Mining Reward"
-msgstr ""
+msgstr "مكافئة التعدين"
 
 #: ../../introduction/features.rst:384
 msgid "Masternode Reward for Proof-of-service"
-msgstr ""
+msgstr "مكافأة ماسترنود لإثبات الخدمة"
 
 #: ../../introduction/features.rst:386
 msgid "10%"
-msgstr ""
+msgstr "10%"
 
 #: ../../introduction/features.rst:386
 msgid "Decentralized Governance Budget"
-msgstr ""
+msgstr "موازنة الحوكمة اللامركزية"
 
 #: ../../introduction/features.rst:389
 msgid ""
@@ -712,10 +771,17 @@ msgid ""
 "/dash-minmax-coin-generation>`_. See `this site "
 "<https://stats.masternode.me>`_ for live data on current network statistics."
 msgstr ""
+"يعتمد هذا المستند على الحسابات والمشاركات من قبل moocowmoo. يرجى الاطلاع "
+"`منشور ريديت <https://www.reddit.com/r/dashpay/comments/ "
+"7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`_ لمزيد من التفاصيل ، أو "
+"تشغيل الخاصة بك `حسابات الانبعاثات باستخدام هذه الأداة "
+"<https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_. أنظر `هذا الموقع"
+" <https://stats.masternode.me>`_  للبيانات الحية على إحصائيات الشبكة "
+"الحالية."
 
 #: ../../introduction/features.rst:400
 msgid "Decentralized Governance"
-msgstr ""
+msgstr "الحكم اللامركزي"
 
 #: ../../introduction/features.rst:402
 msgid ""
@@ -757,16 +823,26 @@ msgid ""
 "to fund approved proposals. The network thus funds itself by reserving 10% "
 "of the block reward for budget projects."
 msgstr ""
+"كما يوفر DGBB وسيلة ل داش لتمويل التطوير الخاص بها. في حين أن المشروعات "
+"الأخرى تعتمد على التبرعات أو الهبات المسبقة ، فإن داش تستخدم 10٪ من مكافأة "
+"المكافآت لتمويل التطوير الخاص بها. في كل مرة يتم استخراج كتلة ، 45 ٪ من "
+"المكافأة يذهب إلى عامل التعدين ، 45 ٪ يذهب إلى ماسترنود ، والباقي 10 ٪ لا "
+"يتم إنشاء حتى نهاية الشهر. خلال الشهر ، يمكن لأي شخص تقديم اقتراح ميزانية "
+"للشبكة. إذا حصل هذا الاقتراح على موافقة صافية بنسبة 10٪ على الأقل من شبكة "
+"ماسترنود ، فسيتم إنشاء سلسلة من \"الكتلة\" في نهاية الشهر. في ذلك الوقت ، "
+"سيتم استخدام المكافآت التي لم يتم دفعها (10 ٪ من كل كتلة) لتمويل المقترحات "
+"المعتمدة. وهكذا تقوم الشبكة بتمويل نفسها من خلال حجز 10٪ من المكافأة المجمعة"
+" للمشروعات الموازنة."
 
 #: ../../introduction/features.rst:429
 msgid ""
 "You can read more about Dash governance in the :ref:`governance` section of "
 "this documentation."
-msgstr ""
+msgstr "يمكنك قراءة المزيد عن إدارة داش في :ref:`الحكم` قسم من هذه الوثائق."
 
 #: ../../introduction/features.rst:436
 msgid "Sentinel"
-msgstr ""
+msgstr "الحماية"
 
 #: ../../introduction/features.rst:438
 msgid ""
@@ -776,6 +852,9 @@ msgid ""
 "application that binds to a local version 12.1 dashd instance on each Dash "
 "12.1 masternode."
 msgstr ""
+"الحماية هو عامل مستقل لاستمرارية وتجهيز وأتمتة كائنات ومهام الحوك 12.1 ، "
+"وللوظائف الموسعة في إصدار داش V13 القادم (التورة). يتم تنفيذ الحماية كتطبيق "
+"بايتون الذي يربط إلى نسخة داش إصدار محلي 12.1 على كل ماسترنود داش 12.1."
 
 #: ../../introduction/features.rst:444
 msgid ""
@@ -784,10 +863,14 @@ msgid ""
 "Watchdogs. Class inheritance has been utilized to extend this generic object"
 " into a \"Proposal\" object to supplant the current Dash budget system."
 msgstr ""
+"إن هدف الحوكمة (أو \"govObject\") هو بنية عامة تم إدخالها في داش كور 12.1 "
+"للسماح بإنشاء المقترحات الخاصة بالموازنة ، والمشغلات ، و Watchdogs. تم "
+"استخدام توريث الفئة لتوسيع هذا الكائن العام إلى كائن \"اقتراح\" لاستبدال "
+"نظام ميزانية داش الحالي."
 
 #: ../../introduction/features.rst:453
 msgid "Diagram highlighting the relationship between Dash Sentinel and Core"
-msgstr ""
+msgstr "رسم تخطيطي يوضح العلاقة بين حماية داش و كور"
 
 #: ../../introduction/features.rst:457
 msgid ""
@@ -804,14 +887,25 @@ msgid ""
 "whitepaper specific to Sentinel, but we have various docs for Evo in an on-"
 "going RFC process which are used as the basis for Evo development.\"*"
 msgstr ""
+"*\"الاختلافات مع حماية هي معمارية حقاً وليست سهلة / مثيرة للإهتمام لتشرح "
+"للمستخدمين لأنهم جسر من 12.0 نحو ميزات Evo (ولكن ليس التطبيق الكامل لها) ، "
+"وكان الحماية فقط جزءًا من التحسينات على 12.1 على أي حال. كانت وظائف الحوكمة "
+"\"سلكيةً صلبةً\" في الكود الأساسي ، حيث تستخلص \"حماية\" هذه العملية لأنه في"
+" التورة ، هناك العديد من أنواع الكائنات من المستخدمين إلى الحسابات إلى جهات "
+"الاتصال ، وما إلى ذلك ، وإذا لم نجر هذا التغيير أولاً ، فإن التغييرات / "
+"التحسينات المستقبلية في التطور ( تتطلب إضافة نوع جديد من الكائنات) تغيير "
+"الكود الأساسي.الآن أصبح كور ملائماً لأنواع الكائنات ويمكننا أن نأخذ هذا إلى "
+"الأمام من أجل تجربة المستخدم وليس فقط الحكم. من حيث التوثيق ، لا يوجد ورق "
+"أبيض خاص بـ الحماية ، ولكن لدينا مستندات متعددة لـ Evo في عملية RFC مستمرة "
+"والتي يتم استخدامها كأساس لتطوير Evo.\"*"
 
 #: ../../introduction/features.rst:489
 msgid "Andy Freer, Evolution Developer"
-msgstr ""
+msgstr "Andy Freer, مطور التورة"
 
 #: ../../introduction/features.rst:478
 msgid "Fees"
-msgstr ""
+msgstr "الرسوم"
 
 #: ../../introduction/features.rst:480
 msgid ""
@@ -831,6 +925,18 @@ msgid ""
 " Most wallets include a small fee by default, although many miners will "
 "process transactions even if no fee is included."
 msgstr ""
+"يتم تسجيل المعاملات على شبكة داش في كتل على بلوكشين. يتم قياس حجم كل معاملة "
+"بالبايت ، ولكن لا يوجد بالضرورة ارتباط بين المعاملات ذات القيمة العالية وعدد"
+" البايتات المطلوبة لمعالجة المعاملة. بدلاً من ذلك ، يتأثر حجم المعاملة بعدد "
+"عناوين الإدخال والإخراج ، نظرًا لأنه يجب كتابة المزيد من البيانات في الكتلة "
+"لتخزين هذه المعلومات. يتم إنشاء كل كتلة جديدة بواسطة عامل مناجم ، يتم دفعه "
+"مقابل إكمال العمل لإنشاء الكتلة بمكافأة كتلة. لمنع ملء الشبكة بمعاملات "
+"البريد العشوائي ، يكون حجم كل كتلة محدودا بشكل مصطنع. مع زيادة حجم المعاملة "
+"، يصبح المساحة في كل كتلة سلعة نادرة. نظرًا لأن عمال المناجم ليسوا ملزمين "
+"بإدراج أي معاملة في الكتل التي ينتجونها ، فبمجرد اكتمال الكتل ، يمكن تضمين "
+"رسوم المعاملات الطوعية كحافز على عامل التعدين لمعالجة الصفقة. معظم المحافظ "
+"تتضمن رسمًا صغيرًا بشكل افتراضي ، على الرغم من أن العديد من عمال المناجم "
+"سيعالجون المعاملات حتى لو لم يتم تضمين أي رسوم."
 
 #: ../../introduction/features.rst:497
 msgid ""
@@ -842,46 +948,52 @@ msgid ""
 "fee schedule. The fee schedule for Dash 12.2.x as of December 2017 is as "
 "follows:"
 msgstr ""
+"شهد إصدار داش 0.12.2.0 وتنشيط DIP0001 تخفيضًا متزامنًا للرسوم بعامل 10 ، "
+"بينما زاد حجم الكتلة من 1 ميغابايت إلى 2 ميغابايت لتعزيز النمو المستمر "
+"للمعاملات منخفضة التكلفة حتى مع ارتفاع تكلفة داش. داش يدعم أيضا "
+":ref:`الإرسال الفوري` و :ref:`الإرسال المخفي` المعاملات ، والتي تعمل على "
+"جدول الرسوم المختلفة والإلزامية. جدول الرسوم ل داش  12.2.x اعتبارًا من "
+"ديسمبر 2017 هو كالتالي:"
 
 #: ../../introduction/features.rst:506
 msgid "Transaction type"
-msgstr ""
+msgstr "نوع المعاملة"
 
 #: ../../introduction/features.rst:506
 msgid "Recommended fee"
-msgstr ""
+msgstr "الرسوم الموصى بها"
 
 #: ../../introduction/features.rst:506
 msgid "Per unit"
-msgstr ""
+msgstr "لكل وحدة"
 
 #: ../../introduction/features.rst:508
 msgid "Standard transaction"
-msgstr ""
+msgstr "المعاملة العادية"
 
 #: ../../introduction/features.rst:508
 msgid ".00001 DASH"
-msgstr ""
+msgstr ".00001 داش"
 
 #: ../../introduction/features.rst:508
 msgid "Per kB of transaction data"
-msgstr ""
+msgstr "لكل كيلو بايت من بيانات المعاملات"
 
 #: ../../introduction/features.rst:510
 msgid ".0001 DASH"
-msgstr ""
+msgstr ".0001 داش"
 
 #: ../../introduction/features.rst:510
 msgid "Per transaction input"
-msgstr ""
+msgstr "لكل إدخال المعاملة"
 
 #: ../../introduction/features.rst:512
 msgid ".001 DASH"
-msgstr ""
+msgstr ".001 داش"
 
 #: ../../introduction/features.rst:512
 msgid "Per 10 rounds of mixing (average)"
-msgstr ""
+msgstr "لكل 10 جولات من الخلط (المتوسط)"
 
 #: ../../introduction/features.rst:515
 msgid ""
@@ -893,6 +1005,12 @@ msgid ""
 "$0.08 or eight cents to the transaction. These fees apply regardless of the "
 "Dash or dollar value of the transaction itself."
 msgstr ""
+"وكمثال على ذلك ، فإن المعاملة القياسية والبسيطة نسبيًا على شبكة داش مع أحد "
+"المدخلات ومخرج واحد وعنوان تغيير محتمل تتناسب عادة في نطاق 200 - 400 بايت. "
+"بافتراض سعر 800 دولار لكل داش ، فإن الرسوم تقع في نطاق 0.0015 دولار - 0.0030"
+" دولار أو أقل من نصف سنت. ستؤدي معالجة المعاملة باستخدام الإرسال الفوري بنفس"
+" السعر إلى إضافة 0.08 دولار أو ثمانية سنتات إلى المعاملة. تنطبق هذه الرسوم "
+"بغض النظر عن قيمة الداش أو الدولار للمعاملة نفسها."
 
 #: ../../introduction/features.rst:524
 msgid ""
@@ -910,10 +1028,22 @@ msgid ""
 " several inputs, while InstantSend charges a fee of 0.0001 DASH per input. "
 "Always check your fees before sending a transaction."
 msgstr ""
+"يعمل الإرسال المخفي عن طريق إنشاء فئات من 10 و 1 و 0.1 و 0.01 داش ثم مزج هذه"
+" الفئات مع مستخدمين آخرين. يتم فرض رسوم إنشاء الرسوم على الرسم الافتراضي "
+"للمعاملة القياسية. الخلط مجاني ، ولكن لمنع هجمات الرسائل غير المرغوب فيها ، "
+"يتم تحصيل رسوم قدرها 0.001 داش في المتوسط من واحد إلى عشرة من معاملات المزج."
+" إن إنفاق الإدخالات المختلطة باستخدام الإرسال المخفي يتكبد رسوم قياسية أو "
+"الإرسال الفوري المعتادة ، ولكن لتجنب إنشاء عنوان تغيير يمكن تحديده ، يتم "
+"دومًا تقريب الرسوم إلى أدنى فئة ممكنة. هذا هو عادة .01 داش ، لذا من المهم "
+"خصم الرسوم من المبلغ الذي يتم إرساله إن أمكن لتقليل الرسوم. قد يكون الجمع "
+"بين الإرسال الفوري و الإرسال المخفي مكلفًا بسبب هذا المطلب وحقيقة أن معاملة "
+"الإرسال المخفي قد تتطلب العديد من المدخلات ، بينما تقوم الإرسال الفوري "
+"بتحصيل رسوم قدرها 0.0001 داش لكل إدخال. تحقق دائما من الرسوم الخاصة بك قبل "
+"إرسال المعاملات."
 
 #: ../../introduction/features.rst:543
 msgid "Evolution"
-msgstr ""
+msgstr "التورة"
 
 #: ../../introduction/features.rst:545
 msgid ""
@@ -925,6 +1055,12 @@ msgid ""
 "network, along with decentralized API access and a decentralized file "
 "system."
 msgstr ""
+"`تورة داش <https://www.dash.org/evolution/>`_ هو الاسم الرمزي لمنصة العملة "
+"اللامركزية المبنية على تقنية داش بلوكشين. الهدف هو توفير وصول بسيط للميزات "
+"الفريدة والفوائد من داش للمساعدة في خلق التكنولوجيا اللامركزية. تقدم داش "
+"تصميمًا متدرجًا للشبكة ، والذي يتيح للمستخدمين القيام بوظائف مختلفة للشبكة ،"
+" إلى جانب الوصول غير المشروط إلى واجهة برمجة التطبيقات API ونظام الملفات "
+"اللامركزية."
 
 #: ../../introduction/features.rst:553
 msgid ""
@@ -936,64 +1072,85 @@ msgid ""
 "Improvement Proposals (DIPs), followed by a testnet phase with most basic "
 "functionality, and a first stable release in summer 2018."
 msgstr ""
+"سيتم طرح تورة داش على مراحل. إصدارات داش كور من 12.1 إلى 12.4 ستضع الأساس "
+"للميزات اللامركزية وراء الكواليس. من المتوقع إصدار نسخة ألفا من داش في النصف"
+" الأول من عام 2018 ، بما في ذلك التنفيذ الأساسي لـ حملة داش و Primitives و "
+"DAPI ومحفظة T3 بسيطة. سيتم إصدار هذا مع سلسلة من تحسينات داش لتحسين (DIPs) ،"
+" تليها مرحلة تيست نت مع معظم الوظائف الأساسية ، وأول إصدار مستقر في صيف عام "
+"2018."
 
 #: ../../introduction/features.rst:562
 msgid ""
 "Included below is our current work on Evolution, that adds many components "
 "such as:"
-msgstr ""
+msgstr "يرد أدناه عملنا الحالي في التورة ، الذي يضيف العديد من المكونات مثل:"
 
 #: ../../introduction/features.rst:565
 msgid ""
 "**DashDrive:** A decentralized shared file system for user data that lives "
 "on the second tier network"
 msgstr ""
+"**حملة داش:** نظام ملفات مشترك غير مركزي لبيانات المستخدم التي تعيش على شبكة"
+" الطبقة الثانية"
 
 #: ../../introduction/features.rst:567
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the "
 "network securely"
 msgstr ""
+"**DAPI:** واجهة برمجة تطبيقات لا مركزية تتيح لمستخدمي الطبقة الثالثة الوصول "
+"إلى الشبكة بأمان"
 
 #: ../../introduction/features.rst:569
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients connected"
 " to the network via DAPI and run on various platforms"
 msgstr ""
+"**محافظ DashPay اللامركزية:** هذه المحافظ هي عملاء فاتحين متصلين بالشبكة عبر"
+" DAPI وتعمل على منصات متنوعة"
 
 #: ../../introduction/features.rst:571
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
 msgstr ""
+"**المستوى الثاني:** شبكة ماسترنود ، التي توفر بنية تحتية معوضة للمشروع"
 
 #: ../../introduction/features.rst:573
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
 msgstr ""
+"**الميزانيات:** يتم منح الطبقة الثانية القدرة على التصويت لتخصيص الأموال "
+"لمشاريع محددة على الشبكة من خلال نظام الميزانية"
 
 #: ../../introduction/features.rst:575
 msgid ""
 "**Governance:** The second tier is given voting power to govern the currency"
 " and chart the course the currency takes"
 msgstr ""
+"**الحكم:** يتم منح الطبقة الثانية القدرة على التصويت لتنظيم العملة ورسم مسار"
+" العملة"
 
 #: ../../introduction/features.rst:577
 msgid ""
 "**Quorum Chain:** This feature introduces a permanent stable masternode "
 "list, which can be used to calculate past and present quorums"
 msgstr ""
+"**سلسلة النصاب القانوني:** تقدم هذه الميزة قائمة ماسترنود ثابتة دائمة ، "
+"والتي يمكن استخدامها لحساب النصاب في الماضي والحاضر"
 
 #: ../../introduction/features.rst:579
 msgid ""
 "**Social Wallet:** We introduce a social wallet, which allows friends lists,"
 " grouping of users and shared multisig accounts."
 msgstr ""
+"**المحفظة الاجتماعية:** نقدم محفظة اجتماعية تسمح بقوائم الأصدقاء وتجميع "
+"المستخدمين وحسابات multisig المشتركة."
 
 #: ../../introduction/features.rst:583
 msgid "Evolution Previews"
-msgstr ""
+msgstr "معاينة التورة"
 
 #: ../../introduction/features.rst:585
 msgid ""
@@ -1001,25 +1158,27 @@ msgid ""
 "Development Chuck Williams describe the development process and upcoming "
 "features of the Dash Evolution platform."
 msgstr ""
+"تصف مقاطع الفيديو التالية المقدمة من مؤسس داش ايفان دوفيلد ورئيس التطوير UI "
+"/ UX تشاك وليامز عملية التطوير والميزات القادمة لمنصة تورة داش."
 
 #: ../../introduction/features.rst:589
 msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
-msgstr ""
+msgstr "**تورة تجريبية #1 - أول داش DAP**,  مارس16  2018"
 
 #: ../../introduction/features.rst:597
 msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
-msgstr ""
+msgstr "**تورة تجريبية #2 - تورة الهاتف**,  25 أبريل 2018"
 
 #: ../../introduction/features.rst:605
 msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
-msgstr ""
+msgstr "**تورة تجريبية #3 - خبرة مستخدمين داش**,  15 مايو 2018"
 
 #: ../../introduction/features.rst:613
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
-msgstr ""
+msgstr "**تورة شوك ويليامس** ملتقى داش في لندن 14 سبتمبر 2017"
 
 #: ../../introduction/features.rst:621
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
-msgstr ""
+msgstr "**تورة إيفان ديفيلد**, أخبار داش, 28 يونيو 2017"
