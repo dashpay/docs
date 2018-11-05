@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Hasna Brania <hasna.brania19@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 08:48+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-05 06:53+0000\n"
+"PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +23,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/backup.rst:1
 msgid "How to safely back up and restore the Dash Core wallet"
-msgstr ""
+msgstr "كيفية إجراء نسخ احتياطي آمن واستعادة المحفظة الأساسية داش"
 
 #: ../../wallets/dashcore/backup.rst:1
 msgid "dash, core, wallet, backup, restore, wallet.dat"
-msgstr ""
+msgstr "داش، كور، محفظة، إسترجاع، wallet.dat"
 
 #: ../../wallets/dashcore/backup.rst:9
 msgid "Wallet backup and restore"
@@ -32,7 +35,7 @@ msgstr "نسخة إحتياطية للمحفظة و الإسترجاع"
 
 #: ../../wallets/dashcore/backup.rst:12
 msgid "Backup"
-msgstr ""
+msgstr "إسترجاع"
 
 #: ../../wallets/dashcore/backup.rst:14
 msgid ""
@@ -47,6 +50,15 @@ msgid ""
 "stored in a safe place. **If you lose access to your wallet file, you will "
 "permanently lose access to your Dash.**"
 msgstr ""
+"توضح هذه الوثائق كيفية الاحتفاظ بنسخة احتياطية من ملف المحفظة بأمان للتخزين "
+"الآمن في حالة تلف الكمبيوتر أو الكمبيوتر المحمول أو فقده. تقوم داش كور "
+"بتخزين كافة البيانات الضرورية للتحكم في عناوين داش الخاصة بك في ملف واحد "
+"يسمى *wallet.dat*. هذه المحفظة في تنسيق Berkeley DB وتخزن أزواج مفاتيح "
+"التشفير الخاصة / العامة المستخدمة لإدارة أرصدةك على بلوكشين داش. تعمل داش "
+"كور على جعل معظم هذه العمليات شفافة ، بل تقوم بإنشاء نسخ احتياطية تلقائية "
+"لملف المحفظة في حالة تلفها ، ولكن يكون المستخدم مسؤولاً عن ضمان تخزين هذه "
+"النسخ الاحتياطية في مكان آمن. **إذا فقدت الوصول إلى ملف المحفظة الخاص بك ، "
+"فسوف تفقد الوصول إلى داش الخاص بك بشكل دائم.**"
 
 #: ../../wallets/dashcore/backup.rst:26
 msgid ""
@@ -57,10 +69,15 @@ msgid ""
 " place as the wallet.dat file, particularly if you are saving the backup to "
 "the cloud."
 msgstr ""
+"من المهم أن تضع في اعتبارك أنه إذا لم تقم بتشفير محفظتك باستخدام عنصر "
+"القائمة **إعدادات> تشفير المحفظة** ، فإن أي شخص لديه حق الوصول إلى ملف "
+"wallet.dat الذي تم نسخه احتياطيًا سيحصل على حق الوصول الكامل إلى داش الخاص "
+"بك. إذا اخترت تشفير محفظتك ، فلا تخزن كلمة المرور في نفس مكان ملف wallet.dat"
+" ، خاصة إذا كنت تقوم بحفظ النسخة الاحتياطية إلى السحابة."
 
 #: ../../wallets/dashcore/backup.rst:34
 msgid "Backup from Dash Core"
-msgstr ""
+msgstr "إسترجاع من داش كور"
 
 #: ../../wallets/dashcore/backup.rst:36
 msgid ""
@@ -71,14 +88,19 @@ msgid ""
 " example below shows saving the file to a USB stick. Keep this file in a "
 "physically separate location to your computer."
 msgstr ""
+"أولاً ، لا تنسخ ملف wallet.dat مطلقًا أثناء فتح داش كور. استخدم دائمًا قائمة"
+" **ملف> نسخة للمحفظة الإحتياطية** إذا كانت المحفظة مفتوحة. عند تحديد عنصر "
+"القائمة هذا ، سيظهر مربع حوار لتحديد مكان حفظ الملف. أدخل اسمًا للملف ، وحدد"
+" موقعًا وانقر على **حفظ**. يوضح المثال أدناه حفظ الملف إلى USB. احتفظ بهذا "
+"الملف في موقع منفصل فعليًا على جهاز الكمبيوتر."
 
 #: ../../wallets/dashcore/backup.rst:50
 msgid "Backing up the Dash Core wallet from the File menu"
-msgstr ""
+msgstr "عمل نسخة احتياطية من محفظة داش كور من القائمة الملف"
 
 #: ../../wallets/dashcore/backup.rst:54
 msgid "Backup by copying wallet.dat"
-msgstr ""
+msgstr "عملة نسخة wallet.dat"
 
 #: ../../wallets/dashcore/backup.rst:56
 msgid ""
@@ -88,20 +110,27 @@ msgid ""
 "location of this folder during installation, but by default the folder is in"
 " the following locations on different operating systems:"
 msgstr ""
+"**إذا لم يتم تشغيل داش كور** ، فيمكنك أيضًا الاحتفاظ بنسخة احتياطية من "
+"محفظتك بمجرد نسخ ملف *wallet.dat* إلى موقع آخر. يوجد هذا الملف في مجلد "
+"البيانات *داش كور*. لقد تم منحك خيار تحديد موقع هذا المجلد أثناء التثبيت ، "
+"ولكن المجلد يكون موجودًا افتراضيًا في المواقع التالية على أنظمة تشغيل "
+"مختلفة:"
 
 #: ../../wallets/dashcore/backup.rst:62
 msgid "**Windows**"
-msgstr ""
+msgstr "**ويندوز**"
 
 #: ../../wallets/dashcore/backup.rst:68
 msgid ""
 "You can access this folder directly by **Windows Key + R** and typing "
 "``%APPDATA%\\DashCore``"
 msgstr ""
+"يمكنك الوصول إلى هذا المجلد مباشرة بواسطة **مفتاح الويندوز + R** والكتابة "
+"``%APPDATA%\\DashCore``"
 
 #: ../../wallets/dashcore/backup.rst:71
 msgid "**Linux**"
-msgstr ""
+msgstr "**لينكس**"
 
 #: ../../wallets/dashcore/backup.rst:77
 msgid ""
@@ -109,10 +138,13 @@ msgid ""
 "terminal or ``~/.dashcore`` in the path bar using the **Go > Enter "
 "Location...** menu item in Files"
 msgstr ""
+"يمكنك الوصول إلى هذا المجلد مباشرة عن طريق كتابة ``cd ~ / .dashcore`` في "
+"المحطة أو ``~ / .dashcore`` في شريط المسار باستخدام عنصر الانتقال **إذهب> "
+"Enter Location ...** في الملفات"
 
 #: ../../wallets/dashcore/backup.rst:81
 msgid "**macOS**"
-msgstr ""
+msgstr "**ماك**"
 
 #: ../../wallets/dashcore/backup.rst:87
 msgid ""
@@ -121,6 +153,9 @@ msgid ""
 "Support/DashCore`` in dialog at the **Go > Go To Folder** menu item in "
 "Finder"
 msgstr ""
+"يمكنك الوصول إلى هذا المجلد بكتابة ``cd ~ / Library / Application Support / "
+"DashCore`` في المحطة أو ``~ / Library / Application Support / DashCore`` في "
+"مربع الحوار في القائمة **إذهب> إذهب للمجلد**. البند في الباحث"
 
 #: ../../wallets/dashcore/backup.rst:92
 msgid ""
@@ -132,14 +167,21 @@ msgid ""
 "select **Paste** in the target folder. Keep this file in a physically "
 "separate location to your computer. Be careful to copy (not move) the file!"
 msgstr ""
+"تأكد من عدم تشغيل داش كور ، ثم قم ببساطة بنسخ الملف *wallet.dat* من هذا "
+"المجلد إلى مجلد آخر بالطريقة العادية لنظام التشغيل الخاص بك. يوضح المثال "
+"التالي نسخ الملف إلى عصا USB باستخدام السحب والإسقاط البسيط أثناء الضغط "
+"باستمرار على **Ctrl** على نظام الويندوز. في معظم أنظمة التشغيل ، يمكنك أيضًا"
+" النقر بزر الماوس الأيمن على الملف وتحديد **نسخ** ، ثم حدد **لصق** في المجلد"
+" الهدف. احتفظ بهذا الملف في موقع منفصل فعليًا على جهاز الكمبيوتر. كن حذرا "
+"لنسخ (وليس نقل) الملف!"
 
 #: ../../wallets/dashcore/backup.rst:104
 msgid "Backing up wallet.dat by copying to another folder"
-msgstr ""
+msgstr "النسخ الاحتياطي wallet.dat عن طريق نسخ إلى مجلد آخر"
 
 #: ../../wallets/dashcore/backup.rst:108
 msgid "Automatic backups"
-msgstr ""
+msgstr "النسخ الاحتياطي التلقائي"
 
 #: ../../wallets/dashcore/backup.rst:110
 msgid ""
@@ -150,6 +192,13 @@ msgid ""
 "the ``-createwalletbackups=n`` parameter at the command line or in "
 "*dash.conf*. Setting this value to 0 completely disables backups."
 msgstr ""
+"في كل مرة تقوم فيها بفتح داش كور ، سيقوم تلقائيًا بإنشاء نسخة احتياطية من "
+"*wallet.dat* في مجلد *داش كور / إسترجاع*. يمكن الاحتفاظ بما يصل إلى 10 نسخ "
+"احتياطية هنا افتراضيًا ، وسيتم حذف أقدم نسخة احتياطية عند إنشاء كل نسخة "
+"احتياطية إضافية جديدة. يمكنك تعديل عدد النسخ الاحتياطية التي تم الاحتفاظ بها"
+" هنا باستخدام المعلمة ``-createwalletbackups = n`` في سطر الأوامر أو في "
+"*dash.conf *. يؤدي تعيين هذه القيمة إلى 0 إلى تعطيل عمليات النسخ الاحتياطي "
+"تمامًا"
 
 #: ../../wallets/dashcore/backup.rst:118
 msgid ""
@@ -161,10 +210,16 @@ msgid ""
 "original files in the DashCore folder become corrupted due to improper "
 "shutdown of the Dash Core app."
 msgstr ""
+"يمكنك عرض مجلد النسخ الاحتياطي التلقائي من خلال التصفح إلى مجلد *داش كور* في"
+" الموقع المحدد أعلاه من أجل *wallet.dat* وفتح مجلد النسخ الاحتياطية ، أو "
+"بتحديد **أدوات> إظهار النسخ الاحتياطية التلقائية** من القائمة الموجودة في "
+"داش كور. نظرًا لأن هذه الملفات غير نشطة عند تشغيل داش كور ، يمكنك نسخها "
+"بأمان في أي وقت. كما أنها نسخة احتياطية مفيدة في حالة تلف الملفات الأصلية "
+"الموجودة في المجلد داش كور بسبب إيقاف تشغيل تطبيق داش كور بشكل غير صحيح."
 
 #: ../../wallets/dashcore/backup.rst:127
 msgid "Restore"
-msgstr ""
+msgstr "إسترجاع"
 
 #: ../../wallets/dashcore/backup.rst:129
 msgid ""
@@ -172,10 +227,13 @@ msgid ""
 "already installed) and rename the existing *wallet.dat* file in the "
 "*DashCore* folder."
 msgstr ""
+"لاستعادة نسخة احتياطية ، قم بتثبيت داش كور على النظام المستهدف (أو قم "
+"بإيقافه ، إذا كان مثبتًا بالفعل) وقم بإعادة تسمية ملف *wallet.dat* الموجود "
+"في *داش كور*."
 
 #: ../../wallets/dashcore/backup.rst:136
 msgid "Renaming the old wallet.dat file to wallet.old in the DashCore folder"
-msgstr ""
+msgstr "إعادة تسمية ملف wallet.dat القديم إلى wallet.old في المجلد داش كور"
 
 #: ../../wallets/dashcore/backup.rst:138
 msgid ""
@@ -184,16 +242,21 @@ msgid ""
 "new wallet. Do not replace *wallet.dat* while Dash Core is running, since "
 "this will result in data corruption!"
 msgstr ""
+"ثم انسخ ملف محفظة النسخ الاحتياطي إلى مجلد *داش كور* وتأكد من تسميته "
+"*wallet.dat*. الآن ، عند بدء تشغيل داش كور مرة أخرى ، سيتم تحميل المحفظة "
+"الجديدة. لا تستبدل *wallet.dat* بينما يتم تشغيل داش كور ، لأن ذلك سيؤدي إلى "
+"تلف البيانات!"
 
 #: ../../wallets/dashcore/backup.rst:149
 msgid ""
 "Copying the backup file into the DashCore folder and renaming it to "
 "wallet.dat"
 msgstr ""
+"نسخ ملف النسخة الاحتياطية إلى مجلد داش كور وإعادة تسميته إلى wallet.dat"
 
 #: ../../wallets/dashcore/backup.rst:154
 msgid "Backup storage considerations"
-msgstr ""
+msgstr "اعتبارات تخزين النسخ الاحتياطي"
 
 #: ../../wallets/dashcore/backup.rst:156
 msgid ""
@@ -203,6 +266,10 @@ msgid ""
 "backup file itself. In this case, this would be a copy of the version of "
 "Dash Core you used to create the backup."
 msgstr ""
+"يعتمد أي نسخ احتياطي إلى حد ما على وجود برنامج قادر على قراءة البيانات في "
+"وقت ما في المستقبل. على هذا النحو ، من الأفضل تخزين نسخة من البرنامج "
+"المستخدم لإنشاء النسخة الاحتياطية مع ملف النسخ الاحتياطي نفسه. في هذه الحالة"
+" ، سيكون هذا نسخة من إصدار داش كور الذي استخدمته لإنشاء النسخة الاحتياطية."
 
 #: ../../wallets/dashcore/backup.rst:162
 msgid ""
@@ -223,6 +290,20 @@ msgid ""
 "containers, see `here <https://theintercept.com/2015/04/27/encrypting-"
 "laptop-like-mean/>`_."
 msgstr ""
+"يجب أن يتم تشفير الملف *wallet.dat* باستخدام كلمة مرور من عنصر القائمة "
+"**الإعدادات> تشفير المحفظة**. ومع ذلك ، هذا يمنع فقط شخص لديه حق الوصول إلى "
+"الملف من إنشاء المعاملات ، وليس من فتح الملف. يمكنك أيضًا تخزين الملف في "
+"حاوية مشفرة أخرى ، مثل عصا USB باستخدام `BitLocker "
+"<https://docs.microsoft.com/en-us/windows/security/information-"
+"protection/bitlocker/bitlocker-to-go- faq>`_ في ويندوز ، `لينكس "
+"<https://help.ubuntu.com/community/EncryptedFilesystemsOnRemovableStorage>`_"
+" في Linux أو`FileVault <https://support.apple.com/en-us/HT204837>`_ على ماك."
+" من الممكن أيضًا إنشاء `صور القرص <https://support.apple.com/guide/disk-"
+"utility/create-a-disk-image-dskutl11888/mac>`_ أو `ملفات زيب  "
+"<https://www.howtogeek.com/203590/how-to-create-secure-encrypted-zip-or-7z-"
+"archives-on-any-operating-system/>`_ مع كلمة مرور التشفير - الخيار هو الخاص "
+"بك . لمزيد من القراءة عن الحاويات المشفرة ، انظر `هنا "
+"<https://theintercept.com/2015/04/27/encrypting-laptop-like-mean/>`_."
 
 #: ../../wallets/dashcore/backup.rst:174
 msgid ""
@@ -233,6 +314,12 @@ msgid ""
 " paper, in a password manager, etc.) and who may need access to the password"
 " in the future."
 msgstr ""
+"أين تخزن هذا الملف هو متروك لك. يمكن أن يكون في منزلك ، في صندوق ودائع آمن "
+"في أحد البنوك ، أو حاوية مقاومة للماء أو مضادة للحريق ، أو على التخزين "
+"السحابي مثل Google Drive أو Dropbox أو iCloud. ضع في اعتبارك المكان الذي "
+"ستخزن فيه أي كلمات مرور مطلوبة لاستعادة الوصول إلى المحفظة (في رأسك ، على "
+"الورق ، في مدير كلمات المرور ، وما إلى ذلك) والذين قد يحتاجون إلى الوصول إلى"
+" كلمة المرور في المستقبل."
 
 #: ../../wallets/dashcore/backup.rst:181
 msgid ""
@@ -246,10 +333,18 @@ msgid ""
 "this, read more about paper wallets, where the private key can be printed "
 "directly or also encrypted using BIP38 for safe storage."
 msgstr ""
+"وأخيرًا من المهم أن نفهم أن *wallet.dat* نفسها هي طريقة خطرة نسبيًا لتخزين "
+"كميات كبيرة من الأموال - إنها ببساطة عبارة عن ملف قاعدة بيانات يخزن المفاتيح"
+" الخاصة. على الرغم من أن راحة تخزين ملف المحفظة مباشرة أمر جيد بالنسبة "
+"للمقتنيات الأصغر ، إلا أنه أكثر أمناً لتخزين كميات كبيرة من داش على عنوان "
+"محدد مسبقًا بطريقة تضمن الوصول إلى أي برنامج يدعم البروتوكول ، بدلاً من أن "
+"يكون محددًا تنفيذ هذا البروتوكول. إذا كنت مهتمًا بهذا ، اقرأ المزيد حول "
+"محافظ الأوراق ، حيث يمكن طباعة المفتاح الخاص مباشرة أو أيضًا مشفرًا باستخدام"
+" BIP38 للتخزين الآمن."
 
 #: ../../wallets/dashcore/backup.rst:193
 msgid "Verifying backups"
-msgstr ""
+msgstr "التحقق من النسخ الاحتياطية"
 
 #: ../../wallets/dashcore/backup.rst:195
 msgid ""
@@ -263,3 +358,11 @@ msgid ""
 " reverse your backup process to get access to your Dash, instead of relying "
 "on the fact that this process should theoretically be reversible."
 msgstr ""
+"لا يوجد إجراء ثابت للتحقق من النسخة الاحتياطية ، ولكن يجب عليك اختبارها مرة "
+"واحدة على الأقل للتأكد من أنها تعمل. إذا كان لديك نسخة بسيطة من الملف ، "
+"فحاول استعادته إلى مجلد *داش كور* الحالي وابدأ تشغيل داش كور للتأكد من فتحه "
+"دون أي أخطاء. إذا قررت تخزين الملف في ملف مضغوط مشفر ، فتأكد من فك ضغطه ومن "
+"فتحه بشكل صحيح في داش كور. باختصار ، تأكد من أنك (أو الشخص الذي تثق به في "
+"نهاية المطاف من خلال هذه العملية من أجلك) يمكنه في الواقع عكس عملية النسخ "
+"الاحتياطي الخاصة بك للوصول إلى داش الخاص بك ، بدلاً من الاعتماد على حقيقة أن"
+" هذه العملية يجب أن تكون قابلة للعكس نظريًا."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-02 05:47+0000\n"
+"POT-Creation-Date: 2018-11-05 06:53+0000\n"
 "PO-Revision-Date: 2018-02-08 10:31+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-linux.rst:1
 msgid "How to download, install and encrypt the Dash Core wallet in Linux"
-msgstr ""
+msgstr "كيفية تنزيل وتثبيت وتشفير محفظة داش كور في لينكس"
 
 #: ../../wallets/dashcore/installation-linux.rst:1
 msgid "dash, core, wallet, linux, ubuntu, installation"
-msgstr ""
+msgstr "داش، كور، محفظة، لينكس، يوبنتو، التتبيث"
 
 #: ../../wallets/dashcore/installation-linux.rst:8
 msgid "Linux Installation Guide"
@@ -39,6 +39,9 @@ msgid ""
 "Core wallet for Linux. The guide is written for Ubuntu 16.04 LTS, but the "
 "steps should be similar for other Linux distributions."
 msgstr ""
+"يوضح هذا الدليل كيفية تنزيل محفظة داش كور وتحميلها وتثبيتها وتشفيرها لنظام "
+"لينكس. تمت كتابة دليل يوبنتو 16.04 LTS ، لكن الخطوات يجب أن تكون مشابهة "
+"لتوزيعات لينكس الأخرى."
 
 #: ../../wallets/dashcore/installation-linux.rst:15
 msgid "Downloading the Dash Core wallet"
@@ -50,6 +53,9 @@ msgid ""
 "wallet. In most cases, the website will properly detect which version you "
 "need. Click the blue Dash Core button to download the package directly."
 msgstr ""
+"قم بزيارة https://www.dash.org/get-dash/ لتنزيل أحدث محفظة داش كور. في معظم "
+"الحالات ، سيكتشف موقع  بشكل صحيح أي إصدار تحتاجه. انقر على زر داش كور الأزرق"
+" لتنزيل الحزمة مباشرةً."
 
 #: ../../wallets/dashcore/installation-linux.rst:25
 msgid "The website properly detects the wallet appropriate for your system"
@@ -64,20 +70,28 @@ msgid ""
 " in other versions of Linux, see `here <https://www.howtogeek.com/198615"
 "/how-to-check-if-your-linux-system-is-32-bit-or-64-bit/>`__."
 msgstr ""
+"إذا لم يعمل الكشف ، فستحتاج إلى اختيار نظام التشغيل يدويًا وما إذا كنت تحتاج"
+" إلى إصدار 32 أو 64 بت. إذا كنت غير متأكد من أن إصدار لينكس الخاص بك هو 32 "
+"أو 64 بت ، فيمكنك تسجيل الدخول في يوبنتو تحت **قائمة النظام**> حول هذا "
+"الكمبيوتر**. للحصول على تفاصيل حول كيفية التحقق من ذلك في إصدارات أخرى من "
+"لينكس ، راجع :ref:`هنا <https://www.howtogeek.com/198615/how-to-check-if-"
+"your-linux-system-is-32-bit-or-64-bit/>`_."
 
 #: ../../wallets/dashcore/installation-linux.rst:37
 msgid "Ubuntu System Overview. This is a 64 bit system."
-msgstr ""
+msgstr "نظام أوبونتو نظرة عامة. هذا هو نظام 64 بت."
 
 #: ../../wallets/dashcore/installation-linux.rst:39
 msgid ""
 "Once you know which version you need, download Dash Core to your computer "
 "from `https://www.dash.org/wallets <https://www.dash.org/wallets>`__."
 msgstr ""
+"بمجرد معرفة الإصدار الذي تحتاجه ، قم بتنزيل داش كور على جهاز الكمبيوتر الخاص"
+" بك من  `https://www.dash.org/wallets <https://www.dash.org/wallets>`__."
 
 #: ../../wallets/dashcore/installation-linux.rst:45
 msgid "Manually selecting and downloading Dash Core"
-msgstr ""
+msgstr "اختيار وتنزيل داش كور يدويًا"
 
 #: ../../wallets/dashcore/installation-linux.rst:47
 msgid "Save the file you downloaded to your Downloads folder."
@@ -109,6 +123,9 @@ msgid ""
 " the hash file or view it in your browser and find the hash value for the "
 "Dash Core file you downloaded."
 msgstr ""
+"بمجرد تنزيل ملف داش كور وملف التجزئة ، انقر نقرًا مزدوجًا فوق ملف التجزئة أو"
+" قم بعرضه في المستعرض الخاص بك وابحث عن قيمة التجزئة لملف داش كور الذي قمت "
+"بتنزيله."
 
 #: ../../wallets/dashcore/installation-linux.rst:70
 msgid "Viewing the Dash Core hash file"
@@ -121,6 +138,9 @@ msgid ""
 "To do this, open Terminal, browse to the location where you saved the file, "
 "and run the sha256sum command."
 msgstr ""
+"يجب أن تتوافق قيمة تجزئة هذا مع قيمة تجزئة الملف الذي قمت بتنزيله للتأكد من "
+"أنه أصلي ولم يتم إتلافه أثناء النقل. للقيام بذلك ، افتح Terminal ، واستعرض "
+"الموقع الذي قمت فيه بحفظ الملف ، وقم بتشغيل الأمر sha256sum"
 
 #: ../../wallets/dashcore/installation-linux.rst:80
 msgid "Generating an SHA256 hash for the downloaded file"
@@ -130,10 +150,11 @@ msgstr "إنشاء تجزئة SHA256 للملف الذي تم تنزيله"
 msgid ""
 "If the hashes match, then you have an authentic copy of Dash Core for Linux."
 msgstr ""
+"إذا تطابقت التجزئة ، فستحصل على نسخة أصلية من داش كور لنظام التشغيل لينكس."
 
 #: ../../wallets/dashcore/installation-linux.rst:86
 msgid "Extracting Dash Core"
-msgstr ""
+msgstr "استخراج داش كور"
 
 #: ../../wallets/dashcore/installation-linux.rst:88
 msgid ""
@@ -143,6 +164,10 @@ msgid ""
 "extract the executable file with a graphical user interface (GUI) designed "
 "for use by end users as a wallet."
 msgstr ""
+"يتم توزيع داش كور لنظام التشغيل لينكس كأرشيف مضغوط وليست أداة تثبيت. هذا لأن"
+" هذا الأرشيف نفسه يحتوي أيضًا على ملفات أخرى تم إنشاؤها لتشغيل خادم على خادم"
+" ، على سبيل المثال. في هذا الدليل ، سنستخرج الملف القابل للتنفيذ بواجهة "
+"مستخدم رسومية (GUI) مصممة للاستخدام من قبل المستخدمين النهائيين كمحافظة."
 
 #: ../../wallets/dashcore/installation-linux.rst:94
 msgid ""
@@ -150,14 +175,16 @@ msgid ""
 " Browse to the Desktop (or the location of your choice) and create the "
 "folder."
 msgstr ""
+"ابدأ بإنشاء مجلد لملف داش كور القابل للتنفيذ على سطح المكتب. استعرض إلى سطح "
+"المكتب (أو المكان الذي تختاره) وقم بإنشاء المجلد."
 
 #: ../../wallets/dashcore/installation-linux.rst:101
 msgid "Creating a folder on the Desktop"
-msgstr ""
+msgstr "إنشاء مجلد على سطح المكتب"
 
 #: ../../wallets/dashcore/installation-linux.rst:106
 msgid "Renaming the folder to Dash"
-msgstr ""
+msgstr "إعادة تسمية المجلد إلى داش"
 
 #: ../../wallets/dashcore/installation-linux.rst:108
 msgid ""
@@ -165,14 +192,17 @@ msgid ""
 "appear. Browse to the dashcore-0.12.1/bin/ folder and extract the dash-qt "
 "file to the Dash folder you created on the Desktop by drag and drop."
 msgstr ""
+"بعد ذلك ، افتح الأرشيف بالنقر المزدوج عليه. سوف تظهر إدارة الأرشيف. استعرض "
+"للوصول إلى dashcore-0.12.1/bin/ واستخرج ملف dash-qt إلى مجلد داش الذي أنشأته"
+" على سطح المكتب بالسحب والإسقاط."
 
 #: ../../wallets/dashcore/installation-linux.rst:116
 msgid "The dash-qt file in Archive Manager"
-msgstr ""
+msgstr "ملف dash-qt في مدير الأرشيف"
 
 #: ../../wallets/dashcore/installation-linux.rst:121
 msgid "The dash-qt file in the Dash folder on the Desktop"
-msgstr ""
+msgstr "ملف dash-qt في مجلد داش على سطح المكتب"
 
 #: ../../wallets/dashcore/installation-linux.rst:123
 msgid ""
@@ -180,10 +210,12 @@ msgid ""
 "folder on the Desktop, or where you chose to extract the file. Type "
 "``./dash-qt`` to run the file."
 msgstr ""
+"لتشغيل داش كور للمرة الأولى ، افتح Terminal وتصفح إلى مجلد داش على سطح "
+"المكتب ، أو حيث اخترت استخراج الملف. اكتب ``./dash-qt`` لتشغيل الملف."
 
 #: ../../wallets/dashcore/installation-linux.rst:130
 msgid "Running Dash Core from the Terminal"
-msgstr ""
+msgstr "تشغيل داش كور من Terminal"
 
 #: ../../wallets/dashcore/installation-linux.rst:132
 msgid ""
@@ -192,6 +224,10 @@ msgid ""
 "with enough free space, as the blockchain can reach around 3-4GB in size. It"
 " is recommended to use the default data folder if possible."
 msgstr ""
+"في المرة الأولى التي يتم فيها إطلاق البرنامج ، سيتاح لك اختيار المكان الذي "
+"تريد فيه تخزين بيانات بلوكشين و محفظة الخاصة بك. اختر موقعًا به مساحة خالية "
+"كافية ، حيث يمكن أن يصل حجم بلوكشين إلى 3-4 جيجابايت. من المستحسن استخدام "
+"مجلد البيانات الافتراضي إذا أمكن ذلك."
 
 #: ../../wallets/dashcore/installation-linux.rst:141
 msgid "Choosing the Dash Core data folder"
@@ -271,7 +307,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-linux.rst:188
 msgid "To encrypt your wallet, click **Settings** > **Encrypt wallet**."
-msgstr ""
+msgstr "لتشفير محفظتك ، انقر فوق **إعدادات**> **تشفير المحفظة**."
 
 #: ../../wallets/dashcore/installation-linux.rst:193
 msgid "Encrypting the Dash wallet with a password"
@@ -283,7 +319,7 @@ msgstr "سيُطلب منك إدخال الرقم السري والتحقق من
 
 #: ../../wallets/dashcore/installation-linux.rst:200
 msgid "Entering a password"
-msgstr ""
+msgstr "إدخال كلمة المرور"
 
 #: ../../wallets/dashcore/installation-linux.rst:205
 msgid "Confirm you want to encrypt your wallet"
@@ -306,7 +342,7 @@ msgstr "مشفرة تماما ومتزامنة داش كور المحفظة"
 
 #: ../../wallets/dashcore/installation-linux.rst:218
 msgid "Using the Ubuntu Repository to install Dash Core"
-msgstr ""
+msgstr "استخدام مستودع أوبونتو لتثبيت داش كور"
 
 #: ../../wallets/dashcore/installation-linux.rst:220
 msgid ""
@@ -316,3 +352,7 @@ msgid ""
 "what is available on the website. To install Dash Core from the repository, "
 "open the Terminal and enter the following commands::"
 msgstr ""
+"يتيح لك اوبينتو إضافة مستودعات طرف ثالث لتثبيت وتحديث البرامج باستخدام "
+"الأداة المساعدة لسطر الأوامر apt. يحتفظ فريق داش كور بمثل هذا المستودع ، على"
+" الرغم من أن إصدار البرنامج المتضمن هنا قد يكون أقدم من ما هو متاح على موقع "
+"الويب. لتثبيت داش كور من المستودع ، افتح Terminal وأدخل الأوامر التالية::"
