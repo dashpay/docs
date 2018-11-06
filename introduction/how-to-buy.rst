@@ -260,7 +260,7 @@ Bit-Z
 
 WEX
   .. image:: exchanges/wex.png
-     :width: 200px
+     :width: 100px
      :align: right
      :target: https://wex.nz
 
