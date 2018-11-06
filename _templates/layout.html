@@ -26,3 +26,21 @@
 		}
 	</script>
 {% endblock %}
+
+{% block linktags %}
+    <link rel="alternate" hreflang="ar" href="https://docs.dash.org/ar/latest/" />
+    <link rel="alternate" hreflang="en" href="https://docs.dash.org/en/latest/" />
+    <link rel="alternate" hreflang="de" href="https://docs.dash.org/de/latest/" />
+    <link rel="alternate" hreflang="el" href="https://docs.dash.org/el/latest/" />
+    <link rel="alternate" hreflang="es" href="https://docs.dash.org/es/latest/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.dash.org/fr/latest/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.dash.org/ja/latest/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.dash.org/ko/latest/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.dash.org/pt/latest/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.dash.org/ru/latest/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.dash.org/vi/latest/" />
+    <link rel="alternate" hreflang="zh-cn" href="https://docs.dash.org/zh_CN/latest/" />
+    <link rel="alternate" hreflang="zh-tw" href="https://docs.dash.org/zh_TW/latest/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.dash.org/" />
+    {{ super() }}
+{% endblock %}
