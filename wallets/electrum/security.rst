@@ -64,13 +64,13 @@ application data folder according to your operating system:
 - **Linux:**
 
   1. Open Files, select **Go > Go to folder**, copy the path
-     ``~/.electrum`` and paste it into the dialog box
+     ``~/.electrum-dash`` and paste it into the dialog box
   2. Delete all files in the folder
 
 - **macOS:**
 
   1. Open Finder, select **Go > Go to Folder**, copy the path
-     ``~/.electrum`` and paste it into the dialog box
+     ``~/.electrum-dash`` and paste it into the dialog box
   2. Delete all files in the folder
 
 - **Windows:**
