@@ -246,17 +246,6 @@ Chaoex
   Chaoex is a pure crypto exchange offering trading with a focus on new
   assets and supports mobile apps for both Android and iOS.
 
-BTCC
-  .. image:: exchanges/btcc.png
-     :width: 200px
-     :align: right
-     :target: https://www.btcc.com
-
-  https://www.btcc.com
-
-  Based in the UK Hong Kong and available in English and Chinese,
-  BTCC offers DASH trading against BTC and USD.
-
 Bit-Z
   .. image:: exchanges/bit-z.png
      :width: 200px
@@ -771,6 +760,60 @@ KuCoin
   KuCoin is a pure crypto exchange with a focus on the Chinese market.
   DASH can be traded against BTC, USDT, ETH and KCS.
 
+BTCC
+  .. image:: exchanges/btcc.png
+     :width: 200px
+     :align: right
+     :target: https://www.btcc.com
+
+  https://www.btcc.com
+
+  Based in the UK Hong Kong and available in English and Chinese,
+  BTCC offers DASH trading against BTC and USD.
+
+Bibox
+  .. image:: exchanges/bibox.png
+     :width: 200px
+     :align: right
+     :target: https://www.bibox.com
+
+  https://www.bibox.com
+
+  With a focus on the Asian market, Bibox offers DASH trading against
+  BTC, ETH and USDT.
+
+DigiFinex
+  .. image:: exchanges/digifinex.png
+     :width: 200px
+     :align: right
+     :target: https://www.digifinex.com
+
+  https://www.digifinex.com
+
+  DigiFinex is a Chinese exchange allowing trading of DASH against USDT
+  and BTC.
+
+OOOBTC
+  .. image:: exchanges/ooobtc.png
+     :width: 200px
+     :align: right
+     :target: https://www.ooobtc.com
+
+  https://www.ooobtc.com
+
+  OOOBTC offers DASH trading against BTC and ETH, with a user interface
+  available in Russian, Arabic and many East Asian languages.
+
+ABCC
+  .. image:: exchanges/abcc.png
+     :width: 200px
+     :align: right
+     :target: https://abcc.com
+
+  https://abcc.com
+
+  ABCC offers web and app-based trading of Dash against BTC, ETH and USDT.
+
 Indodax
   .. image:: exchanges/indodax.png
      :width: 200px
@@ -963,6 +1006,17 @@ Coinrail
   https://coinrail.co.kr
 
   Coinrail is a Korean exchange offering DASH trading against KRW.
+
+Cashierest
+  .. image:: exchanges/cashierest.png
+     :width: 200px
+     :align: right
+     :target: https://www.cashierest.com
+
+  https://www.cashierest.com
+
+  Cashierest is a Korean exchange offering DASH trading against KRW, BTC
+  and ETH.
 
 Tidex
   .. image:: exchanges/tidex.png
@@ -1369,7 +1423,7 @@ Graviex
 
 SlithEx
   .. image:: exchanges/slithex.png
-     :width: 200px
+     :width: 80px
      :align: right
      :target: https://slithex.com
 
