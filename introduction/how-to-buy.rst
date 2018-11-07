@@ -1325,6 +1325,18 @@ eBitcoinics
   the African market. Dash is available for exchange against Nigerian
   Naira (NGN) and Ghanaian Cedi (GHS).
 
+eBitpoint
+  .. image:: exchanges/ebitpoint.png
+     :width: 200px
+     :align: right
+     :target: https://www.ebitpoint.com
+
+  https://www.ebitpoint.com
+
+  eBitpoint is a secure online platform for buying, selling, storing
+  Dash and other digital currencies at competitive exchange rates in
+  Ghana.
+
 Kurecoinhub
   .. image:: exchanges/kurecoin.png
      :width: 200px
