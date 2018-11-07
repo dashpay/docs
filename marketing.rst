@@ -100,6 +100,8 @@ translation is complete to request layout of the completed translation.
 +-----------------------+-------------------------------------------------------------------------------------------------------+
 | Thai                  | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_TH.pdf>`__     |
 +-----------------------+-------------------------------------------------------------------------------------------------------+
+| Turkish               | `PDF <https://github.com/dashpay/docs/raw/master/binary/flyers/Flyer_DINlang_DASH_2018_TR.pdf>`__     |
++-----------------------+-------------------------------------------------------------------------------------------------------+
 
 
 Handouts
