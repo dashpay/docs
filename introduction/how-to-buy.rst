@@ -258,18 +258,6 @@ Bit-Z
   funding options to Chinese traders. DASH is available for trade
   against BTC.
 
-WEX
-  .. image:: exchanges/wex.png
-     :width: 100px
-     :align: right
-     :target: https://wex.nz
-
-  https://wex.nz
-
-  WEX, previously known as BTC-e until it was shut down by authorities,
-  has resumed business under a new name. DASH trading pairs exist for
-  BTC, USD, RUB, EUR, LTC and ETH.
-
 Koineks
   .. image:: exchanges/koineks.png
      :width: 183px
@@ -290,9 +278,7 @@ Sistemkoin
   https://sistemkoin.com
 
   Sistemkoin serves the Turkish market and offers trading pairs for DASH
-  against the Turkish Lira and Bitcoin.
-
-Ovis
+  against the Turkish Lira and Bitcoin.Ovis
   .. image:: exchanges/ovis.png
      :width: 80px
      :align: right
@@ -568,20 +554,6 @@ ACX
   ACX is an Australian exchange accepting fiat deposits from Australian
   bank accounts. DASH is available to trade against BTC.
 
-Lescovex
-  .. image:: exchanges/lescovex.png
-     :width: 130px
-     :align: right
-     :target: https://lescovex.com
-
-  https://lescovex.com
-
-  Registered in Switzerland, Lescovex offers deposits and withdrawals in
-  a wide range of fiat currencies (EUR, USD, CAD, GBP, CHF, SEK, RON)
-  for trading against DASH and other cryptocurrencies. The platform is
-  designed to assist in the creation of tokens and cryptographic
-  contracts.
-
 OKEX
   .. image:: exchanges/okex.png
      :width: 200px
@@ -619,19 +591,6 @@ MoneyPolo
   withdrawals are available in DASH, BTC, ETH, LTC, BCH and BTG, and it
   is possible to transfer value to a prepaid card or any worldwide bank
   account.
-
-Miami Crypto Exchange
-  .. image:: exchanges/mcex.png
-     :width: 110px
-     :align: right
-     :target: https://www.miami.exchange
-
-  https://www.miami.exchange
-
-  Miami Crypto Exchange (MCEX), operated by Dash partner `Mercury Cash
-  <https://www.mercury.cash>`_, is a legal and fully compliant crypto
-  gateway between the U.S. and the world, with a specific focus on Latin
-  America and the Caribbean. DASH can be traded against USD and BTC.
 
 Coinapult
   .. image:: exchanges/coinapult.png
@@ -870,18 +829,6 @@ Bleutrade
   Registered in Brazil, Bleutrade offers DOGE and BTC trading pairs for
   DASH.
 
-SatoWallet
-  .. image:: exchanges/satowallet.png
-     :width: 120px
-     :align: right
-     :target: https://satowallet.com
-
-  https://satowallet.com
-
-  SatoWallet is a multi-coin crypto wallet with built-in exchange
-  functionality. Dash is available for trade against Nigerian Naira
-  (NGN), USD, BTC and ETH.
-
 LBank
   .. image:: exchanges/lbank.png
      :width: 200px
@@ -952,6 +899,43 @@ NegocieCoins
   Dash trading pairs. A premium service with higher withdrawal limits is
   available.
 
+Bitcointoyou
+  .. image:: exchanges/bitcointoyou.png
+     :width: 200px
+     :align: right
+     :target: https://bitcointoyou.com
+
+  https://bitcointoyou.com
+
+  Based in Brazil, Bitcointoyou has been in operation since 2010 and
+  offers trading of a number of cryptocurrencies, including Dash,
+  against the Brazilian real.
+
+Miami Crypto Exchange
+  .. image:: exchanges/mcex.png
+     :width: 110px
+     :align: right
+     :target: https://www.miami.exchange
+
+  https://www.miami.exchange
+
+  Miami Crypto Exchange (MCEX), operated by Dash partner `Mercury Cash
+  <https://www.mercury.cash>`_, is a legal and fully compliant crypto
+  gateway between the U.S. and the world, with a specific focus on Latin
+  America and the Caribbean. DASH can be traded against USD and BTC.
+
+SatoWallet
+  .. image:: exchanges/satowallet.png
+     :width: 120px
+     :align: right
+     :target: https://satowallet.com
+
+  https://satowallet.com
+
+  SatoWallet is a multi-coin crypto wallet with built-in exchange
+  functionality. Dash is available for trade against Nigerian Naira
+  (NGN), USD, BTC and ETH.
+
 OmniTrade
   .. image:: exchanges/omnitrade.png
      :width: 160px
@@ -974,18 +958,42 @@ Braziliex
   Based in Brazil, Brazilies accepts deposits in Brazilian real, and
   offers trading of real, Bitcoin and USDT against Dash.
 
-Bitcointoyou
-  .. image:: exchanges/bitcointoyou.png
-     :width: 200px
+WEX
+  .. image:: exchanges/wex.png
+     :width: 100px
      :align: right
-     :target: https://bitcointoyou.com
+     :target: https://wex.nz
 
-  https://bitcointoyou.com
+  https://wex.nz
 
-  Based in Brazil, Bitcointoyou has been in operation since 2010 and
-  offers trading of a number of cryptocurrencies, including Dash,
-  against the Brazilian real.
+  WEX, previously known as BTC-e until it was shut down by authorities,
+  has resumed business under a new name. DASH trading pairs exist for
+  BTC, USD, RUB, EUR, LTC and ETH.
 
+Ovis
+  .. image:: exchanges/ovis.png
+     :width: 80px
+     :align: right
+     :target: https://www.ovis.com.tr
+
+  https://www.ovis.com.tr
+
+  Ovis serves the Turkish market and offers trading pairs for DASH
+  against the Turkish Lira and Bitcoin.
+
+Lescovex
+  .. image:: exchanges/lescovex.png
+     :width: 130px
+     :align: right
+     :target: https://lescovex.com
+
+  https://lescovex.com
+
+  Registered in Switzerland, Lescovex offers deposits and withdrawals in
+  a wide range of fiat currencies (EUR, USD, CAD, GBP, CHF, SEK, RON)
+  for trading against DASH and other cryptocurrencies. The platform is
+  designed to assist in the creation of tokens and cryptographic
+  contracts.
 
 SouthXchange
   .. image:: exchanges/southxchange.png
@@ -1119,31 +1127,6 @@ AirTM
   traditional banks and proprietary regional payment schemes such as
   Alipay, Western Union or Skrill.
 
-changeNOW
-  .. image:: exchanges/changenow.png
-     :width: 130px
-     :align: right
-     :target: https://changenow.io
-
-  https://changenow.io
-
-  changeNOW is a non-custodian exchange service based in the
-  Netherlands, with low commissions and quick service. Offers crypto to
-  crypto exchanges, as well as purchases through credit/debit cards.
-
-Guarda
-  .. image:: exchanges/guarda.png
-     :width: 140px
-     :align: right
-     :target: https://guarda.co
-
-  https://guarda.co
-
-  Guarda offers an entire blockchain ecosystem consisting of desktop,
-  web and mobile wallets, OTC crypto sales and instant crypto exchange.
-  Dash is supported throughout the ecosystem, making it an easy and
-  convenient way for new users to get started.
-
 Godex
   .. image:: exchanges/godex.png
      :width: 200px
@@ -1180,19 +1163,6 @@ CoinSwitch
   different coins and tokens listed. Also offers purchases through
   credit/debit cards.
 
-BlockTrades
-  .. image:: exchanges/blocktrades.png
-     :width: 100px
-     :align: right
-     :target: https://blocktrades.us
-
-  https://blocktrades.us
-
-  BlockTrades is a decentralized exchange designed to facilitate free
-  movement between the Steemit, BitShares, Bitcoin and Dash blockchains.
-  The system is designed to find the best possible instant conversion
-  rate between any two given cryptocurrencies.
-
 MorphToken
   .. image:: exchanges/morphtoken.png
      :width: 200px
@@ -1205,6 +1175,44 @@ MorphToken
   between Dash, Bitcoin, Bitcoin Cash, Ethereum, Litecoin and Monero. It
   is even possible to convert into more than one cryptocurrency in a
   single exchange.
+
+changeNOW
+  .. image:: exchanges/changenow.png
+     :width: 130px
+     :align: right
+     :target: https://changenow.io
+
+  https://changenow.io
+
+  changeNOW is a non-custodian exchange service based in the
+  Netherlands, with low commissions and quick service. Offers crypto to
+  crypto exchanges, as well as purchases through credit/debit cards.
+
+Guarda
+  .. image:: exchanges/guarda.png
+     :width: 140px
+     :align: right
+     :target: https://guarda.co
+
+  https://guarda.co
+
+  Guarda offers an entire blockchain ecosystem consisting of desktop,
+  web and mobile wallets, OTC crypto sales and instant crypto exchange.
+  Dash is supported throughout the ecosystem, making it an easy and
+  convenient way for new users to get started.  
+
+BlockTrades
+  .. image:: exchanges/blocktrades.png
+     :width: 100px
+     :align: right
+     :target: https://blocktrades.us
+
+  https://blocktrades.us
+
+  BlockTrades is a decentralized exchange designed to facilitate free
+  movement between the Steemit, BitShares, Bitcoin and Dash blockchains.
+  The system is designed to find the best possible instant conversion
+  rate between any two given cryptocurrencies.
 
 
 .. _over-the-counter:
@@ -1395,19 +1403,6 @@ BitPrime
   trading in New Zealand. Dash is available OTC for both purchase and
   sale together with many other cryptocurrencies.
 
-Coindirect
-  .. image:: exchanges/coindirect.png
-     :width: 150px
-     :align: right
-     :target: https://www.coindirect.com
-
-  https://www.coindirect.com
-
-  Coindirect offers OTC and P2P services to buy and sell many
-  cryptocurrencies, including Dash. Verified users can create offers in
-  their local currency to buy and sell with other users. Online wallets
-  and exchange services are available for most currencies as well.
-
 Mercury Cash
   .. image:: exchanges/mercury.png
      :width: 200px
@@ -1420,31 +1415,6 @@ Mercury Cash
   with integration for merchant services. Balances can be held in both
   Ethereum and Dash, and deposited or withdrawn in local currencies
   through a number of methods, including credit cards.
-
-Graviex
-  .. image:: exchanges/graviex.png
-     :width: 110px
-     :align: right
-     :target: https://graviex.net
-
-  https://graviex.net
-
-  Graviex is a part of the Gravio ecosystem, a blockchain-based
-  communication platform. It offers extremely low rates and fees for
-  trading. DASH can be traded against BTC, ETH, LTC and DOGE.
-
-SlithEx
-  .. image:: exchanges/slithex.png
-     :width: 80px
-     :align: right
-     :target: https://slithex.com
-
-  https://slithex.com
-
-  Based in Malaysia and funded by the Dash Treasury, SlithEx (and its
-  payment processor, `RocketPay <https://rocketpay.net>`_) offer
-  exchange, wallet and sale/trading of Dash against the Malaysian
-  ringgit.
 
 cryptomonster
   .. image:: exchanges/cryptomonster.png
@@ -1617,6 +1587,43 @@ Dash Nearby
   Dash Nearby allows users to arrange direct trades of cryptocurrency or
   local currency between one another.
 
+Coindirect
+  .. image:: exchanges/coindirect.png
+     :width: 150px
+     :align: right
+     :target: https://www.coindirect.com
+
+  https://www.coindirect.com
+
+  Coindirect offers OTC and P2P services to buy and sell many
+  cryptocurrencies, including Dash. Verified users can create offers in
+  their local currency to buy and sell with other users. Online wallets
+  and exchange services are available for most currencies as well.
+
+Graviex
+  .. image:: exchanges/graviex.png
+     :width: 110px
+     :align: right
+     :target: https://graviex.net
+
+  https://graviex.net
+
+  Graviex is a part of the Gravio ecosystem, a blockchain-based
+  communication platform. It offers extremely low rates and fees for
+  trading. DASH can be traded against BTC, ETH, LTC and DOGE.
+
+SlithEx
+  .. image:: exchanges/slithex.png
+     :width: 80px
+     :align: right
+     :target: https://slithex.com
+
+  https://slithex.com
+
+  Based in Malaysia and funded by the Dash Treasury, SlithEx (and its
+  payment processor, `RocketPay <https://rocketpay.net>`_) offer
+  exchange, wallet and sale/trading of Dash against the Malaysian
+  ringgit.
 
 .. _atms:
 
@@ -1630,17 +1637,6 @@ find one near you. It is also possible to operate your own ATM to sell
 Dash on-site at your business - simply contact the companies listed on
 this page.
 
-Coin ATM Radar
-  .. image:: exchanges/coinatmradar.png
-     :width: 200px
-     :align: right
-     :target: https://coinatmradar.com
-
-  https://coinatmradar.com
-
-  Various coin ATMs are available around world. Coin ATM Radar helps you
-  find one close to you.
-
 General Bytes
   .. image:: exchanges/generalbytes.png
      :width: 75px
@@ -1651,6 +1647,17 @@ General Bytes
 
   General Bytes offers a range of two-way cash ATM and Point of Sale
   solutions integrating Dash.
+
+Coin ATM Radar
+  .. image:: exchanges/coinatmradar.png
+     :width: 200px
+     :align: right
+     :target: https://coinatmradar.com
+
+  https://coinatmradar.com
+
+  Various coin ATMs are available around world. Coin ATM Radar helps you
+  find one close to you.
 
 Lamassu
   .. image:: exchanges/lamassu.png
@@ -1673,17 +1680,6 @@ CoinFlip
   CoinFlip operates a network of ATMs across the USA and offers hosted
   ATMs for businesses.
 
-TigoCTM
-  .. image:: exchanges/tigoctm.png
-     :width: 110px
-     :align: right
-     :target: https://tigoctm.com
-
-  https://tigoctm.com
-
-  TigoCTM offers simple ATM solutions integrated with a management
-  blockchain.
-
 Trovemat
   .. image:: exchanges/trovemat.png
      :width: 200px
@@ -1694,3 +1690,14 @@ Trovemat
 
   Focusing on the European market, Trovemat provides a risk-free
   solution to sell cryptocurrency from a physical device.
+
+TigoCTM
+  .. image:: exchanges/tigoctm.png
+     :width: 110px
+     :align: right
+     :target: https://tigoctm.com
+
+  https://tigoctm.com
+
+  TigoCTM offers simple ATM solutions integrated with a management
+  blockchain.
