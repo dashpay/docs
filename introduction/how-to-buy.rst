@@ -1321,6 +1321,18 @@ Bitcoin Meester
   you to buy and sell Dash (and other cryptocurrencies) OTC in exchange
   for Euro.
 
+eBitpoint
+  .. image:: exchanges/ebitpoint.png
+     :width: 200px
+     :align: right
+     :target: https://www.ebitpoint.com
+
+  https://www.ebitpoint.com
+
+  eBitpoint is a secure online peer to peer platform with escrow service
+  for buying, selling, storing Dash and other digital currencies at
+  competitive exchange rates in Ghana.
+
 eBitcoinics
   .. image:: exchanges/ebitcoinics.png
      :width: 200px
@@ -1332,18 +1344,6 @@ eBitcoinics
   eBitcoinics is a cryptocurrency exchange and education platform for
   the African market. Dash is available for exchange against Nigerian
   Naira (NGN) and Ghanaian Cedi (GHS).
-
-eBitpoint
-  .. image:: exchanges/ebitpoint.png
-     :width: 200px
-     :align: right
-     :target: https://www.ebitpoint.com
-
-  https://www.ebitpoint.com
-
-  eBitpoint is a secure online platform for buying, selling, storing
-  Dash and other digital currencies at competitive exchange rates in
-  Ghana.
 
 Kurecoinhub
   .. image:: exchanges/kurecoin.png
