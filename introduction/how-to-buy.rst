@@ -278,7 +278,9 @@ Sistemkoin
   https://sistemkoin.com
 
   Sistemkoin serves the Turkish market and offers trading pairs for DASH
-  against the Turkish Lira and Bitcoin.Ovis
+  against the Turkish Lira and Bitcoin.
+
+Ovis
   .. image:: exchanges/ovis.png
      :width: 80px
      :align: right
