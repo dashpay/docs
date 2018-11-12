@@ -1614,6 +1614,19 @@ Graviex
   communication platform. It offers extremely low rates and fees for
   trading. DASH can be traded against BTC, ETH, LTC and DOGE.
 
+Bitqist
+  .. image:: exchanges/bitqist.png
+     :width: 100px
+     :align: right
+     :target: https://bitqist.com
+
+  https://bitqist.com
+
+  Bitqist is a service based in The Netherlands offering over 140 for
+  purchase and sale. While not strictly an exchange in the sense of
+  offering order books, it is possible to buy and sell each currency at
+  near the market price.
+
 SlithEx
   .. image:: exchanges/slithex.png
      :width: 80px
