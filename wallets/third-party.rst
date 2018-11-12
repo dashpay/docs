@@ -218,8 +218,8 @@ and online at https://www.cryptonator.com
 Documentation
 -------------
 
-Coinomi offers detailed documentation of all functions at
-https://www.cryptonator.com/hc
+Cryptonator offers detailed documentation of all functions at
+https://cryptonator.zendesk.com/hc
 
 .. figure:: img/cryptonator-wallet.png
    :width: 400px
