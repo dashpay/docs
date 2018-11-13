@@ -154,7 +154,7 @@ it does not, click **Start > Dash Core > Dash Core** to start the
 application. The first time the program is launched, you will be offered
 a choice of where you want to store your blockchain and wallet data.
 Choose a location with enough free space, as the blockchain can reach
-around 3-4GB in size. It is recommended to use the default data folder
+10GB+ in size. It is recommended to use the default data folder
 if possible.
 
 .. figure:: img/windows/106328945.png

@@ -116,9 +116,8 @@ future by double-clicking it just as you can any registered app.
 
 The first time the program is launched, you will be offered a choice of
 where you want to store your blockchain and wallet data. Choose a
-location with enough free space, as the blockchain can reach around
-3-4GB in size. It is recommended to use the default data folder if
-possible.
+location with enough free space, as the blockchain can reach 10GB+ in
+size. It is recommended to use the default data folder if possible.
 
 .. figure:: img/macos/112415002.png
    :height: 250px
