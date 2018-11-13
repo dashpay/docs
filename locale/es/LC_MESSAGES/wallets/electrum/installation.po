@@ -3,13 +3,19 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alejandro Echeverria <alejem93@gmail.com>, 2018
+# Tomas Alfaro <talfarod@gmail.com>, 2018
+# Ivan SIerraalta <ivansierraalta@gmail.com>, 2018
+# Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 10:17+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-13 08:42+0000\n"
+"PO-Revision-Date: 2018-03-19 12:19+0000\n"
 "Last-Translator: Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
@@ -148,7 +154,7 @@ msgstr ""
 
 #: ../../wallets/electrum/installation.rst:78
 msgid "Creating a New Wallet"
-msgstr "Crear un nuevo monedero"
+msgstr "Crear una Nueva Billetera"
 
 #: ../../wallets/electrum/installation.rst:80
 msgid ""
@@ -167,15 +173,15 @@ msgstr ""
 "proceso, ve a las secciones posteriores de esta guía donde se explican los "
 "respaldos, la seguridad y las direcciones. Al configurar Dash Electrum por "
 "primera vez, un asistente te guiará a través del proceso de creación de tu "
-"primer monedero. La primera pantalla te pregunta cómo te gustaría conectarte"
-" al servidor remoto. Selecciona **Conexión automática** y haz click en "
-"**Siguiente** para continuar. Verás un aviso de que actualmente no existe un"
-" monedero. Ingresa un nombre para tu monedero (o acepta el nombre "
-"predeterminado) y haz click en **Siguiente** para crear tu monedero."
+"primera billetera. La primera pantalla te pregunta cómo te gustaría "
+"conectarte al servidor remoto. Selecciona **Conexión automática** y haz clic"
+" en **Siguiente** para continuar. Verás un aviso de que actualmente no "
+"existe una billetera. Ingresa un nombre para tu billetera (o acepta el "
+"nombre predeterminado) y haz clic en **Siguiente** para crear tu billetera."
 
 #: ../../wallets/electrum/installation.rst:96
 msgid "Selecting the server and naming your first wallet"
-msgstr "Selecciona el servidor y nombra tu primer monedero"
+msgstr "Selecciona el servidor y nombra tu primera billetera"
 
 #: ../../wallets/electrum/installation.rst:98
 msgid ""
@@ -189,21 +195,20 @@ msgid ""
 "are using Electrum Dash for the first time and not restoring an existing "
 "wallet, choose **Create a new seed** and click **Next** to continue."
 msgstr ""
-"Se te preguntará qué tipo de monedero quieres crear. Elije entre **Monedero "
-"estándar**, **Monedero con múltiples firmas** y **Ver direcciones de Dash**."
-" Si no estás seguro, selecciona **Monedero estándar ** y haz click en "
-"**Siguiente** para continuar. Luego se te preguntará cómo deseas "
-"almacenar/recuperar la semilla. Si se almacena de manera segura, se puede "
-"usar una semilla para restaurar en otra computadora un monedero perdido. "
-"Elije entre **Crear una nueva semilla**, **Ya tengo una semilla**, **Usar "
-"llaves públicas o privadas** o **Usar un dispositivo de hardware**. Si estás"
-" utilizando Electrum Dash por primera vez y no restauras un monedero "
-"existente, elije **Crear una nueva semilla** y haz click en **Siguiente** "
-"para continuar."
+"Se te preguntará qué tipo de monedero quieres crear. Elije entre **Billetera"
+" estándar**, **Billetera multifirmas** y **Ver direcciones Dash**. Si no "
+"estás seguro, selecciona **Billetera estándar ** y haz clic en **Siguiente**"
+" para continuar. Luego se te preguntará cómo deseas almacenar/recuperar la "
+"semilla. Si se almacena de manera segura, se puede usar una semilla para "
+"restaurar en otra computadora una billetera perdida. Elije entre **Crear una"
+" nueva semilla**, **Ya tengo una semilla**, **Usar llaves públicas o "
+"privadas** o **Usar un dispositivo de hardware**. Si estás utilizando "
+"Electrum Dash por primera vez y no restauras una billetera existente, elije "
+"**Crear una nueva semilla** y haz clic en **Siguiente** para continuar."
 
 #: ../../wallets/electrum/installation.rst:115
 msgid "Selecting the wallet type and keystore"
-msgstr "Seleccionar el tipo de monedero y el almacén de claves"
+msgstr "Seleccionar el tipo de billetera y el almacén de claves"
 
 #: ../../wallets/electrum/installation.rst:117
 msgid ""
@@ -214,13 +219,13 @@ msgid ""
 "seed, Electrum Dash will ask you to type it in as a confirmation. Type the "
 "words in the correct order and click **Next** to continue."
 msgstr ""
-"Electrum Dash generará tu monedero y mostrará la semilla de recuperación. "
-"Escribe esta semilla, idealmente en papel y no un en formato electrónico, y "
-"guárdaa en un lugar seguro. Esta semilla es la única forma en que puedes "
-"recuperar tu monedero si pierdes el acceso por cualquier motivo. Para "
+"Electrum Dash generará tu billetera y mostrará la semilla de recuperación. "
+"Escribe esta semilla, idealmente en papel y no en formato electrónico, y "
+"guárdala en un lugar seguro. Esta semilla es la única forma en que puedes "
+"recuperar tu billetera si pierdes el acceso por cualquier motivo. Para "
 "asegurarte de haber guardado correctamente tu semilla, Electrum Dash te "
 "pedirá que la escribas como confirmación. Escribe las palabras en el orden "
-"correcto y haz click en **Siguiente** para continuar."
+"correcto y haz clic en **Siguiente** para continuar."
 
 #: ../../wallets/electrum/installation.rst:131
 msgid "Generating and confirming the recovery seed"
@@ -235,21 +240,22 @@ msgid ""
 "however unlikely the threat may be. Enter and confirm a password, ensure the"
 " **Encrypt wallet file** checkbox is ticked and click **Next** to continue."
 msgstr ""
-"Una contraseña opcionalmente protege tu monedero del acceso no autorizado. "
-"Agregar una contraseña segura mejora la seguridad de tu monedero encriptando"
-" tu semilla desde el principio. Omitir la encriptación en este punto al no "
-"seleccionar una contraseña puede ocasionar un posible robo de fondos más "
-"adelante, por improbable que sea la amenaza. Ingresa y confirma una "
-"contraseña, asegúrate de que la casilla de verificación **Encriptar archivo "
-"de monedero** esté marcada y haz click en **Siguiente** para continuar."
+"Opcionalmente con una contraseña proteges tu monedero del acceso no "
+"autorizado. Agregar una contraseña segura mejora la seguridad de tu monedero"
+" encriptando tu semilla desde el principio. Omitir la encriptación en este "
+"punto al no seleccionar una contraseña puede ocasionar un posible robo de "
+"fondos más adelante, por improbable que sea la amenaza. Ingresa y confirma "
+"una contraseña, asegúrate de que la casilla de verificación **Encriptar "
+"archivo de billetera** esté marcada y haz clic en **Siguiente** para "
+"continuar."
 
 #: ../../wallets/electrum/installation.rst:144
 msgid "Entering and confirming a wallet encryption password"
-msgstr "Ingresar y confirmar una contraseña de encriptación de monedero"
+msgstr "Ingresar y confirmar una contraseña de encriptación de la billetera"
 
 #: ../../wallets/electrum/installation.rst:146
 msgid "Your Dash Electrum wallet is now set up and ready for use."
-msgstr "Tu monedero Dash Electrum ahora está configurado y listo para usar."
+msgstr "Tu billetera Dash Electrum ahora está configurada y listo para usar."
 
 #: ../../wallets/electrum/installation.rst:151
 msgid "Dash Electrum after setup is complete"
