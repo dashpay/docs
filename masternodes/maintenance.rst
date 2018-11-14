@@ -155,6 +155,13 @@ genkey`` command.**
 Prepare a ProRegTx transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+First, we need to get a new, unused address from the wallet to serve as
+the owner (and, if desired, also voting) address::
+
+  getnewaddress
+
+  yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt
+
 Next, we will prepare an unsigned ProRegTx special transaction using the
 ``protx register_prepare`` command. This command has the following
 syntax::
@@ -168,9 +175,9 @@ argument to the command as follows:
 - ``"collateralHash"``: The txid of the 1000 Dash collateral funding transaction
 - ``collateralIndex``: The output index of the 1000 Dash funding transaction
 - ``"ipAndPort"``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
-- ``"ownerKeyAddr"``: The Dash address holding the 1000 Dash collateral
+- ``"ownerKeyAddr"``: The new Dash address generated above for the owner/voting address
 - ``"operatorKeyAddr"``: The BLS public key generated above (or provided by your hosting service)
-- ``"votingKeyAddr"``: A Dash address used for proposal voting (can be the same as ``ownerKeyAddr``)
+- ``"votingKeyAddr"``: A new Dash address generated above, or a different address, used for proposal voting
 - ``operatorReward``: The percentage of the block reward allocated to the operator as payment
 - ``"payoutAddress"``: A Dash address to receive the masternode rewards (can be different to the collateral address)
 
@@ -180,18 +187,18 @@ Example (remove line breaks if copying)::
     "2eb760f394f756ea9d8c8eac832f77366503bfccd4e77ee73deca200733fe615" 
     1 
     "140.82.59.51:19999" 
-    "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia" 
+    "yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt" 
     "86179eb4f45405f8d5fc00a4378356fc0600e104a7f3e6aec6b937a2830f1b538f2b08a7d66132158613bf18832ddd98" 
-    "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia" 
+    "yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt" 
     0 
     "ydDzieEtpeZpugXrr2Xuh6U66VB4m6ztjU"
 
 Output::
 
   {
-    "tx": "0300010001ff9d8afe16f4607727e76cbdb02d36e83d42e32a2d8940d7489674872cf7cf710200000000feffffff01dacc6d00000000001976a914caa5d16ce78ed082717a73e12a468ac1e04b7ab688ac00000000d101000000000015e63f7300a2ec3de77ee7d4ccbf036536772f83ac8e8c9dea56f794f360b72e0100000000000000000000000000ffff8c523b334e1fe596abefc7db2e8a05782510fa462b365884cc1486179eb4f45405f8d5fc00a4378356fc0600e104a7f3e6aec6b937a2830f1b538f2b08a7d66132158613bf18832ddd98e596abefc7db2e8a05782510fa462b365884cc1400001976a914b9723ef9cf900c6a76fcca97a60cf94c1a35783888ac8314ef2f635ca875bdeef9576e3c371f8b40c211c8f2e5226b3be985fb54e00200",
-    "collateralAddress": "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia",
-    "signMessage": "ydDzieEtpeZpugXrr2Xuh6U66VB4m6ztjU|0|yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia|yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia|b8250822facd1a9b19e45a9822740b85c3c38bf96eef926e68129f1ff618ae66"
+  "tx": "0300010001755fbe3bca61bd6cea97fb2f8dc6d9b448e5fff0b8f95c8eeb3f14fb2100f3b30100000000feffffff018ba62000000000001976a914c57cb841100586c2d812590e2ccac88b037a70aa88ac00000000d101000000000015e63f7300a2ec3de77ee7d4ccbf036536772f83ac8e8c9dea56f794f360b72e0100000000000000000000000000ffff8c523b334e1f93b37f469464b675a982c9fc7001f24ab2c197d686179eb4f45405f8d5fc00a4378356fc0600e104a7f3e6aec6b937a2830f1b538f2b08a7d66132158613bf18832ddd9893b37f469464b675a982c9fc7001f24ab2c197d600001976a914b9723ef9cf900c6a76fcca97a60cf94c1a35783888ac6b1d51d50c26f6600e7a713acaa892397f51a1cafa7db2f972c3a06cfe46327800",
+  "collateralAddress": "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia",
+  "signMessage": "ydDzieEtpeZpugXrr2Xuh6U66VB4m6ztjU|0|yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt|yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt|0fd4701b0316597809640632cc258be4de89d84006383c12f5ad2d50b69be86b"
   }
 
 We will use ``collateralAddress`` and ``signMessage`` fields in Step 3,
@@ -212,11 +219,12 @@ function of a hardware wallet. The command takes the following syntax::
 
 Example::
 
-  signmessage "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia" "ydDzieEtpeZpugXrr2Xuh6U66VB4m6ztjU|0|yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia|yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia|b8250822facd1a9b19e45a9822740b85c3c38bf96eef926e68129f1ff618ae66"
+  signmessage "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia" "ydDzieEtpeZpugXrr2Xuh6U66VB4m6ztjU|0|yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt|yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt|0fd4701b0316597809640632cc258be4de89d84006383c12f5ad2d50b69be86b"
 
 Output::
 
-  IDtMICHdqJDbs3mlUxD0+ym2nvQPIze646tzGrKHkhvaSrw/cu+XzNxSkAZu/xtxEDkx1HaROqCW1iBWFJti8LY=
+  H+K8jIXR0R8xdKSOeb0cszVcz0KNJo+JNjP4uSC3/M4lB+HwmGjQMMkPhj4wiIQaziw7JfwcLjTMvPKS5SVu69A=
+
 
 
 Submit the signed message
@@ -236,7 +244,7 @@ Where:
 
 Example::
 
-  protx register_submit "0300010001ff9d8afe16f4607727e76cbdb02d36e83d42e32a2d8940d7489674872cf7cf710200000000feffffff01dacc6d00000000001976a914caa5d16ce78ed082717a73e12a468ac1e04b7ab688ac00000000d101000000000015e63f7300a2ec3de77ee7d4ccbf036536772f83ac8e8c9dea56f794f360b72e0100000000000000000000000000ffff8c523b334e1fe596abefc7db2e8a05782510fa462b365884cc1486179eb4f45405f8d5fc00a4378356fc0600e104a7f3e6aec6b937a2830f1b538f2b08a7d66132158613bf18832ddd98e596abefc7db2e8a05782510fa462b365884cc1400001976a914b9723ef9cf900c6a76fcca97a60cf94c1a35783888ac8314ef2f635ca875bdeef9576e3c371f8b40c211c8f2e5226b3be985fb54e00200" "IDtMICHdqJDbs3mlUxD0+ym2nvQPIze646tzGrKHkhvaSrw/cu+XzNxSkAZu/xtxEDkx1HaROqCW1iBWFJti8LY="
+  protx register_submit "0300010001755fbe3bca61bd6cea97fb2f8dc6d9b448e5fff0b8f95c8eeb3f14fb2100f3b30100000000feffffff018ba62000000000001976a914c57cb841100586c2d812590e2ccac88b037a70aa88ac00000000d101000000000015e63f7300a2ec3de77ee7d4ccbf036536772f83ac8e8c9dea56f794f360b72e0100000000000000000000000000ffff8c523b334e1f93b37f469464b675a982c9fc7001f24ab2c197d686179eb4f45405f8d5fc00a4378356fc0600e104a7f3e6aec6b937a2830f1b538f2b08a7d66132158613bf18832ddd9893b37f469464b675a982c9fc7001f24ab2c197d600001976a914b9723ef9cf900c6a76fcca97a60cf94c1a35783888ac6b1d51d50c26f6600e7a713acaa892397f51a1cafa7db2f972c3a06cfe46327800" "H+K8jIXR0R8xdKSOeb0cszVcz0KNJo+JNjP4uSC3/M4lB+HwmGjQMMkPhj4wiIQaziw7JfwcLjTMvPKS5SVu69A="
 
 Output::
 
