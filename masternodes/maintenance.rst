@@ -48,12 +48,29 @@ method of finding consensus on the list of valid masternodes. Due to the
 deep underlying changes and new signature formats involved, the
 instructions on how to set up a masternode have changed as well. This
 documentation describes how to upgrade a masternode from Dash 0.12.3 to
-Dash 0.13.0 without moving your collateral.
+Dash 0.13.0 without moving your collateral. The procedure involves four
+major steps: 
 
-Begin by logging in to your masternode using ssh or PuTTY. Generate BLS
-public/private keypair as follows::
+1. Generating a BLS key pair
+2. Preparing a ProRegTx transaction
+3. Signing the ProRegTx transaction
+4. Submitting the signed message
 
-  ~/.dashcore/dash-cli bls generate
+Steps 1, 2 and 4 can be carried out either on your masternode or in the
+Dash Core wallet. Signing the transaction in step 3 must be done using
+the wallet holding the private key to the 1000 Dash collateral. This
+documentation describes the commands as if they were entered in Dash
+Core by opening the console from **Tools > Debug console**, but the same
+result can be achieved on a masternode by entering the same commands and
+adding the prefix ``~/.dashcore/dash-cli`` to each command.
+
+Begin by logging in to your masternode using ssh or PuTTY. A
+public/private BLS key pair is required for the operator of the
+masternode. If you are using a hosting service, they will provide you
+with their public key, and you can skip this step. If you are hosting
+your own masternode, generate a BLS public/private keypair as follows::
+
+  bls generate
 
   {
   "secret": "2dbc0abdd52467569e4e74db61406b32c8ce41f38e5919ab0ee5596dc4b384cf",
@@ -63,15 +80,29 @@ public/private keypair as follows::
 The public key will be used in following steps. The secret key must be
 kept secure since it is used to sign operator-related masternode
 messages and update operator-related masternode parameters (e.g. IP
-Address, Port). **These keys are NOT stored in the Dash Core Wallet and
-must be backed up, similar to the value provided in the past by the
-``masternode genkey`` command.**
+Address, Port). **These keys are NOT stored by the wallet and must be
+backed up, similar to the value provided in the past by the ``masternode
+genkey`` command.**
 
 Next, we will prepare an unsigned ProRegTx special transaction using the
 ``protx register_prepare`` command. This command has the following
 syntax::
 
-  protx register_prepare "collateralHash" collateralIndex "ipAndPort" "ownerKeyAddr" "operatorKeyAddr" "votingKeyAddr" operatorReward "payoutAddress"
+  protx register_prepare "collateralHash" collateralIndex "ipAndPort" "ownerKeyAddr" 
+    "operatorKeyAddr" "votingKeyAddr" operatorReward "payoutAddress"
+
+Open a text editor such as notepad to prepare this command. Replace each
+argument to the command as follows:
+
+- ``"collateralHash"``: The txid of the 1000 Dash collateral funding transaction
+- ``collateralIndex``: The output index of the 1000 Dash funding transaction
+- ``"ipAndPort"``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
+- ``"ownerKeyAddr"``: The Dash address holding the 1000 Dash collateral
+- ``"operatorKeyAddr"``: The BLS public key generated above (or provided by your hosting service)
+- ``"votingKeyAddr"``: A Dash address used for proposal voting (can be the same as ``ownerKeyAddr``)
+- ``operatorReward``: The percentage of the block reward allocated to the operator as payment
+- ``"payoutAddress"``: A Dash address to receive the masternode rewards (can be different to the collateral address)
+
 
 Begin by generating 
 
