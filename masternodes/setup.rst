@@ -24,17 +24,15 @@ all you have to do is send a single transaction of 1000 DASH to a
 specific address and communicate the transaction ID to the hosting
 service. Simply follow the steps here.
 
-This guide is heavily based on previous guides written by `Bertrand256
-<https://github.com/Bertrand256/dash-masternode-
-tool/blob/master/README.md>`_, `moocowmoo
-<https://github.com/moocowmoo/dashman/blob/master/README.md>`_, `tao
-<https://www.dash.org/forum/threads/taos-masternode-setup-guide-for-
-dummies-updated-for-12-1.2680/>`_, `BolehVPN
-<https://dashpay.atlassian.net/wiki/spaces/DOC/pages/24019061>`_ and
-tungfa. Tao's hugely popular original guide and support thread is
-available `here <https://www.dash.org/forum/threads/taos-masternode-
-setup-guide-for-dummies-updated-for-12-1.2680/>`__, as well many more
-guides for specific cases in this forum.
+Dash 0.13.0 introduced `Deterministic Masternode Lists
+<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
+method of finding consensus on the list of valid masternodes. Due to the
+deep underlying changes and new signature formats involved, the
+instructions on how to set up a masternode have changed as well. This
+documentation describes how to set up a masternode using Dash 0.13.0 or
+higher. If you are looking for documentation for older versions, please
+see the `0.12.3 documentation branch
+<https://docs.dash.org/en/0.12.3/masternodes/setup.html>`_.
 
 Before you begin
 ================
