@@ -82,10 +82,9 @@ Select a location for your new server on the following screen:
 
    Vultr server location selection screen
 
-Select Ubuntu 18.04 x64 as the server type. We use 16.04 instead of the
-latest version because 18.04 is an LTS release of Ubuntu, which will be
-supported with security updates for 5 years instead of the usual 9
-months.
+Select Ubuntu 18.04 x64 as the server type. We use this LTS release of
+Ubuntu instead of the latest version because LTS releases are supported
+with security updates for 5 years, instead of the usual 9 months.
 
 .. figure:: img/setup-server-type.png
    :width: 400px
