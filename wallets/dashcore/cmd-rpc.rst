@@ -219,7 +219,6 @@ InstantSend options
 ^^^^^^^^^^^^^^^^^^^
 
 --enableinstantsend=<n>                Enable InstantSend, show confirmations for locked transactions (0-1, default: 1)
---instantsenddepth=<n>                 Show N confirmations for a successfully locked transaction (0-9999, default: 5)
 --instantsendnotify=<cmd>              Execute command when a wallet InstantSend transaction is successfully locked (%s in cmd is replaced by TxID)
 
 
@@ -684,15 +683,15 @@ getaccountaddress "account"
   DEPRECATED. Returns the current Dash address for receiving payments to this account.
 getaddressesbyaccount "account"
   DEPRECATED. Returns the list of addresses for the given account.
-getbalance ( "account" minconf addlockconf includeWatchonly )
+getbalance ( "account" minconf addlocked includeWatchonly )
   If account is not specified, returns the server's total available balance. If account is specified (DEPRECATED), returns the balance in the account. Note that the account "" is not the same as leaving the parameter out. The server total may be different to the balance in the default "" account.
 getnewaddress ( "account" )
   Returns a new Dash address for receiving payments. If 'account' is specified (DEPRECATED), it is added to the address book so payments received with the address will be credited to 'account'.
 getrawchangeaddress
   Returns a new Dash address, for receiving change. This is for use with raw transactions, NOT normal use.
-getreceivedbyaccount "account" ( minconf addlockconf )
+getreceivedbyaccount "account" ( minconf addlocked )
   DEPRECATED. Returns the total amount received by addresses with <account> in transactions with specified minimum number of confirmations.
-getreceivedbyaddress "dashaddress" ( minconf addlockconf )
+getreceivedbyaddress "dashaddress" ( minconf addlocked )
   Returns the total amount received by the given dashaddress in transactions with specified minimum number of confirmations.
 gettransaction "txid" ( includeWatchonly )
   Get detailed information about in-wallet transaction <txid>
@@ -716,15 +715,15 @@ keepass <genkey|init|setpassphrase>
   Keepass settings.
 keypoolrefill ( newsize )
   Fills the keypool.
-listaccounts ( minconf addlockconf includeWatchonly)
+listaccounts ( minconf addlocked includeWatchonly)
   DEPRECATED. Returns Object that has account names as keys, account balances as values.
 listaddressgroupings
   Lists groups of addresses which have had their common ownership made public by common use as inputs or as the resulting change in past transactions.
 listlockunspent
   Returns list of temporarily unspendable outputs. See the lockunspent call to lock and unlock transactions for spending.
-listreceivedbyaccount ( minconf addlockconf includeempty includeWatchonly)
+listreceivedbyaccount ( minconf addlocked includeempty includeWatchonly)
   DEPRECATED. List balances by account.
-listreceivedbyaddress ( minconf addlockconf includeempty includeWatchonly)
+listreceivedbyaddress ( minconf addlocked includeempty includeWatchonly)
   List balances by receiving address.
 listsinceblock ( "blockhash" target-confirmations includeWatchonly)
   Get all transactions in blocks since block [blockhash], or all transactions if omitted
@@ -736,9 +735,9 @@ lockunspent unlock [{"txid":"txid","vout":n},...]
   Updates list of temporarily unspendable outputs. Temporarily lock (unlock=false) or unlock (unlock=true) specified transaction outputs.
 move "fromaccount" "toaccount" amount ( minconf "comment" )
   DEPRECATED. Move a specified amount from one account in your wallet to another.
-sendfrom "fromaccount" "todashaddress" amount ( minconf addlockconf "comment" "comment-to" )
+sendfrom "fromaccount" "todashaddress" amount ( minconf addlocked "comment" "comment-to" )
   DEPRECATED (use sendtoaddress). Sent an amount from an account to a dash address.
-sendmany "fromaccount" {"address":amount,...} ( minconf addlockconf "comment" ["address",...] subtractfeefromamount use_is use_ps )
+sendmany "fromaccount" {"address":amount,...} ( minconf addlocked "comment" ["address",...] subtractfeefromamount use_is use_ps )
   Send multiple times. Amounts are double-precision floating point numbers.
 sendtoaddress "dashaddress" amount ( "comment" "comment-to" subtractfeefromamount use_is use_ps )
   Send an amount to a given address.

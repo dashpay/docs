@@ -14,6 +14,344 @@ well as maintaining the security and performance of the server. In
 addition, masternodes should vote on proposals and perform other tasks
 in the interest of the network and the value of the Dash they hold.
 
+.. _masternode-update:
+
+Updating masternodes
+====================
+
+Periodically, the Dash Core development team will release updates to
+Dash. Since normal nodes rely on them for services and copies of the
+blockchain, masternodes are expected to update to new versions of Dash.
+In some cases, hardware upgrades may also be necessary. Not updating
+will eventually result in your masternode being removed from the payment
+queue by the Proof of Service (PoSe) system. If you run a hosted
+masternode, your hosting operator will take care of updates for you. If
+not, the method of updating depends on how you installed Dash.
+
+Minor version updates to Dash (e.g. from 0.12.3.1 to 0.12.3.2) do not
+make changes to the protocol version, while major version updates (e.g.
+from 0.12.2.3 to 0.12.3.0) will usually increase the network protocol
+version. If the protocol version did not change, you DO NOT need to
+restart your masternode if you complete the update within 60 minutes. If
+the protocol version did change, you must issue a start command from
+your wallet. Do not send start commands to your masternode if not
+necessary, as it will send you to the back of the payment queue.
+
+Software update
+---------------
+
+This process describes how to update dashd on a **testnet masternode**
+to 0.13.0-rc2. Please see the `stable documentation
+<http://docs.dash.org/en/stable/masternodes/maintenance.html>`_ for
+older versions of Dash.
+
+Begin by logging in to your masternode using ssh or PuTTY. First we need
+to stop Dash running::
+
+  ~/.dashcore/dash-cli stop
+
+Visit the `GitHub releases page
+<https://github.com/dashpay/dash/releases>`_ and copy the link to the
+latest version. Go back to your terminal window and enter the following
+command, pasting in the address to the latest version of Dash Core by
+right clicking or pressing **Ctrl + V**::
+
+  cd ~
+  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc2/dashcore-0.13.0.0-rc2-x86_64-linux-gnu.tar.gz
+
+Verify the integrity of your download by running the following command
+and comparing the output against the value for the file as shown in the
+``SHA256SUMS.asc`` file::
+
+  sha256sum dashcore-0.13.0.0-rc2-x86_64-linux-gnu.tar.gz
+
+Remove the old binaries from the working directory, extract the
+compressed archive, copy the new files to the directory and set them as
+executable::
+
+  rm ~/.dashcore/dashd
+  rm ~/.dashcore/dash-cli
+  tar dashcore-0.13.0.0-rc2-x86_64-linux-gnu.tar.gz
+  cp dashcore-0.13.0/bin/dashd ~/.dashcore/
+  cp dashcore-0.13.0/bin/dash-cli ~/.dashcore/
+
+Clean up unneeded files::
+
+  rm dashcore-0.13.0.0-rc2-x86_64-linux-gnu.tar.gz
+  rm -r dashcore-0.13.0/
+
+Restart Dash::
+
+  ~/.dashcore/dashd
+
+You will see a message reading "Dash Core server starting". We will now
+update Sentinel::
+
+  cd ~/.dashcore/sentinel/
+  git pull
+  
+
+.. _deterministic_upgrade
+
+Dash 0.13 Upgrade Procedure
+---------------------------
+
+Dash 0.13.0 introduced `Deterministic Masternode Lists
+<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
+method of finding consensus on the list of valid masternodes. Due to the
+deep underlying changes and new signature formats involved, the
+instructions on how to set up a masternode have changed as well. This
+documentation describes how to upgrade a masternode from Dash 0.12.3 to
+Dash 0.13.0 without moving your collateral. The procedure involves four
+major steps: 
+
+1. Generating a BLS key pair
+2. Preparing a ProRegTx transaction
+3. Signing the ProRegTx transaction
+4. Submitting the signed message
+
+Steps 1, 2 and 4 can be carried out either on your masternode or in the
+Dash Core wallet. Signing the transaction in step 3 must be done using
+the wallet holding the private key to the 1000 Dash collateral. This
+documentation describes the commands as if they were entered in Dash
+Core by opening the console from **Tools > Debug console**, but the same
+result can be achieved on a masternode by entering the same commands and
+adding the prefix ``~/.dashcore/dash-cli`` to each command.
+
+1. Generate a BLS key pair
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Begin by logging in to your masternode using ssh or PuTTY. A
+public/private BLS key pair is required for the operator of the
+masternode. If you are using a hosting service, they will provide you
+with their public key, and you can skip this step. If you are hosting
+your own masternode, generate a BLS public/private keypair as follows::
+
+  bls generate
+
+  {
+  "secret": "2dbc0abdd52467569e4e74db61406b32c8ce41f38e5919ab0ee5596dc4b384cf",
+  "public": "84d8468dd9b495443ae9d0e12e608229111edf5ea94d52deb1623716566444425a3deb4a0fa09477e5eafb8fc94a2384"
+  }
+
+The public key will be used in following steps. The secret key must be
+kept secure since it is used to sign operator-related masternode
+messages and update operator-related masternode parameters (e.g. IP
+Address, Port). **These keys are NOT stored by the wallet and must be
+backed up, similar to the value provided in the past by the ``masternode
+genkey`` command.**
+
+2. Prepare a ProRegTx transaction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Next, we will prepare an unsigned ProRegTx special transaction using the
+``protx register_prepare`` command. This command has the following
+syntax::
+
+  protx register_prepare "collateralHash" collateralIndex "ipAndPort" "ownerKeyAddr" 
+    "operatorKeyAddr" "votingKeyAddr" operatorReward "payoutAddress"
+
+Open a text editor such as notepad to prepare this command. Replace each
+argument to the command as follows:
+
+- ``"collateralHash"``: The txid of the 1000 Dash collateral funding transaction
+- ``collateralIndex``: The output index of the 1000 Dash funding transaction
+- ``"ipAndPort"``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
+- ``"ownerKeyAddr"``: The Dash address holding the 1000 Dash collateral
+- ``"operatorKeyAddr"``: The BLS public key generated above (or provided by your hosting service)
+- ``"votingKeyAddr"``: A Dash address used for proposal voting (can be the same as ``ownerKeyAddr``)
+- ``operatorReward``: The percentage of the block reward allocated to the operator as payment
+- ``"payoutAddress"``: A Dash address to receive the masternode rewards (can be different to the collateral address)
+
+Example::
+
+  protx register_prepare 
+    "2eb760f394f756ea9d8c8eac832f77366503bfccd4e77ee73deca200733fe615" 
+    1 
+    "140.82.59.51:19999" 
+    "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia" 
+    "86179eb4f45405f8d5fc00a4378356fc0600e104a7f3e6aec6b937a2830f1b538f2b08a7d66132158613bf18832ddd98" 
+    "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia" 
+    0 
+    "ydDzieEtpeZpugXrr2Xuh6U66VB4m6ztjU"
+
+
+  {
+    "tx": "0300010001ff9d8afe16f4607727e76cbdb02d36e83d42e32a2d8940d7489674872cf7cf710200000000feffffff01dacc6d00000000001976a914caa5d16ce78ed082717a73e12a468ac1e04b7ab688ac00000000d101000000000015e63f7300a2ec3de77ee7d4ccbf036536772f83ac8e8c9dea56f794f360b72e0100000000000000000000000000ffff8c523b334e1fe596abefc7db2e8a05782510fa462b365884cc1486179eb4f45405f8d5fc00a4378356fc0600e104a7f3e6aec6b937a2830f1b538f2b08a7d66132158613bf18832ddd98e596abefc7db2e8a05782510fa462b365884cc1400001976a914b9723ef9cf900c6a76fcca97a60cf94c1a35783888ac8314ef2f635ca875bdeef9576e3c371f8b40c211c8f2e5226b3be985fb54e00200",
+    "collateralAddress": "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia",
+    "signMessage": "ydDzieEtpeZpugXrr2Xuh6U66VB4m6ztjU|0|yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia|yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia|b8250822facd1a9b19e45a9822740b85c3c38bf96eef926e68129f1ff618ae66"
+  }
+
+We will use ``collateralAddress`` and ``signMessage`` fields in Step 3,
+and the output of the "tx" field in Step 4.
+
+3. Sign the ProRegTx transaction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Now we will sign the content of the ``signMessage`` field using the
+private key for the collateral address as specified in
+``collateralAddress``. Note that no internet connection is required for
+this step, meaning that the wallet can remain disconnected from the
+internet in cold to sign the message. In this example we will again use
+Dash Core, but it is equally possible to use the signing function of a
+hardware wallet. The command takes the following syntax::
+
+  signmessage "address" "message"
+
+For example::
+
+  signmessage "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia" "ydDzieEtpeZpugXrr2Xuh6U66VB4m6ztjU|0|yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia|yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia|b8250822facd1a9b19e45a9822740b85c3c38bf96eef926e68129f1ff618ae66"
+
+  IDtMICHdqJDbs3mlUxD0+ym2nvQPIze646tzGrKHkhvaSrw/cu+XzNxSkAZu/xtxEDkx1HaROqCW1iBWFJti8LY=
+
+
+4. Submit the signed message
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We will now create the ProRegTx special transaction on the network to
+start the masternode. This command must be sent from a Dash Core wallet
+holding a balance, since a standard transaction fee is involved. The
+command takes the following syntax::
+
+  protx register_submit "tx" "sig"
+
+Where: 
+
+- ``"tx"``: The serialized transaction previously returned in the "tx" output field from ``protx register_prepare`` in Step 2
+- ``"sig"``: The message signed with the collateral key from Step 3
+
+Example::
+
+  protx register_submit "0300010001ff9d8afe16f4607727e76cbdb02d36e83d42e32a2d8940d7489674872cf7cf710200000000feffffff01dacc6d00000000001976a914caa5d16ce78ed082717a73e12a468ac1e04b7ab688ac00000000d101000000000015e63f7300a2ec3de77ee7d4ccbf036536772f83ac8e8c9dea56f794f360b72e0100000000000000000000000000ffff8c523b334e1fe596abefc7db2e8a05782510fa462b365884cc1486179eb4f45405f8d5fc00a4378356fc0600e104a7f3e6aec6b937a2830f1b538f2b08a7d66132158613bf18832ddd98e596abefc7db2e8a05782510fa462b365884cc1400001976a914b9723ef9cf900c6a76fcca97a60cf94c1a35783888ac8314ef2f635ca875bdeef9576e3c371f8b40c211c8f2e5226b3be985fb54e00200" "IDtMICHdqJDbs3mlUxD0+ym2nvQPIze646tzGrKHkhvaSrw/cu+XzNxSkAZu/xtxEDkx1HaROqCW1iBWFJti8LY="
+
+Your masternode is now upgraded to DIP3 and will appear on the
+Deterministic Masternode List.
+
+
+7e8fa6416cbce43c37419bcd290e7085766fc00369b3bc15a35bc8f6ff2009e9
+
+
+
+
+
+Begin by generating 
+
+First we need to stop Dash running::
+
+  ~/.dashcore/dash-cli stop
+
+To manually download and install the components of your Dash masternode,
+visit https://www.dash.org/wallets/ on your computer to find the link to
+the latest Dash Core wallet. Click **Linux**, then right-click on
+**Download TGZ** for **Dash Core Linux 64 Bit** and select **Copy link
+address**. Go back to your terminal window and enter the following
+command, pasting in the address to the latest version of Dash Core by
+right clicking or pressing **Ctrl + V**::
+
+  cd ~
+  wget https://github.com/dashpay/dash/releases/download/v0.12.3.3/dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
+
+Verify the integrity of your download by running the following command
+and comparing the output against the value for the file as shown on the
+Dash website under **Hash File**::
+
+  sha256sum dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
+
+.. figure:: img/setup-manual-download.png
+   :width: 250px
+
+   Link to the hash file to verify download integrity
+
+Remove the old binaries from the working directory, extract the
+compressed archive, copy the new files to the directory and set them as
+executable::
+
+  rm ~/.dashcore/dashd
+  rm ~/.dashcore/dash-cli
+  tar xfvz dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
+  cp dashcore-0.12.3/bin/dashd ~/.dashcore/
+  cp dashcore-0.12.3/bin/dash-cli ~/.dashcore/
+
+Clean up unneeded files::
+
+  rm dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
+  rm -r dashcore-0.12.3/
+
+Restart Dash::
+
+  ~/.dashcore/dashd
+
+You will see a message reading "Dash Core server starting". We will now
+update Sentinel::
+
+  cd ~/.dashcore/sentinel/
+  git pull
+
+If the protocol version changed during this update, you will need to
+issue a start command from your wallet. If you are using a hardware
+wallet, you can issue the start command by simply clicking the button in
+DMT. If you are using Dash Core wallet, update it to the latest version,
+then open the debug console and enter this command, where MN1 is the
+alias for your masternode::
+
+  masternode start-alias MN1
+
+Monitor the status of your masternode as it starts up::
+
+  ~/.dashcore/dash-cli getblockcount
+  ~/.dashcore/dash-cli getnetworkinfo
+  ~/.dashcore/dash-cli mnsync status
+  ~/.dashcore/dash-cli masternode status
+
+In particular, the last command should return the status **Masternode
+successfully started**. If you see an error similar to **Invalid
+protocol version**, then the protocol version has changed and you must
+send a start command from your wallet again. You can also monitor the
+status of your masternode from Sentinel. If Sentinel detects a
+functioning masternode, the following command should return nothing::
+
+  cd ~/.dashcore/sentinel
+  venv/bin/python bin/sentinel.py
+
+Finally, you can check for your masternode by its collateral address
+using `DashNinja <https://www.dashninja.pl/>`_, or search the consensus
+list of masternodes using this command and entering your masternode IP
+address::
+
+  ~/.dashcore/dash-cli masternode list full | grep <your ip address>
+
+
+
+Updating from dashman
+---------------------
+
+Versions of Dash prior to 0.13.0 frequently used a tool called
+``dashman`` by community member moocowmoo to install Dash. This tool has
+been deprecated until it is updated. You can follow the instructions
+below to upgrade your system::
+
+**OBSOLETE**
+
+To update Dash using dashman, log in to your server and enter the
+following commands::
+
+  ~/dashman/dashman sync
+  ~/dashman/dashman update
+
+Check the status of your masternode::
+
+  ~/dashman/dashman status
+
+If you are doing a major version update and need to restart your
+masternode, update the software version of the wallet holding the
+collateral to the latest version now by following the instructions
+:ref:`here <masternode-setup-start>`. Continue monitoring your
+masternode. After some time, all statuses should turn green, in
+particular **masternode started: YES** and **masternode network state:
+ENABLED**.
+
+
+
 .. _masternode-withdrawals:
 
 Payment withdrawals
@@ -113,140 +451,6 @@ UTXOs.
    :width: 180px
 
    Locking UTXOs in Dash Core wallet
-
-.. _masternode-update:
-
-How to update a masternode
-==========================
-
-Periodically, the Dash Core development team will release updates to
-Dash. Since normal nodes rely on them for services and copies of the
-blockchain, masternodes are expected to update to new versions of Dash
-and Sentinel promptly. In some cases, hardware upgrades (more CPU, RAM
-or disk space, or even custom GPU/ASIC hardware) may also be necessary.
-Not updating will eventually result in your masternode being removed
-from the payment queue. If you run a hosted masternode, your host will
-take care of updates for you. If not, the method of updating depends on
-how you installed Dash.
-
-Minor version updates to Dash (e.g. from 0.12.3.1 to 0.12.3.2) do not
-make changes to the protocol version, while major version updates (e.g.
-from 0.12.2.3 to 0.12.3.0) will usually increase the network protocol
-version. If the protocol version did not change, you DO NOT need to
-restart your masternode if you complete the update within 60 minutes. If
-the protocol version did change, you must issue a start command from
-your wallet. Do not send start commands to your masternode if not
-necessary, as it will send you to the back of the payment queue.
-
-Option 1: Automated update using dashman
-----------------------------------------
-
-To update Dash using dashman, log in to your server and enter the
-following commands::
-
-  ~/dashman/dashman sync
-  ~/dashman/dashman update
-
-Check the status of your masternode::
-
-  ~/dashman/dashman status
-
-If you are doing a major version update and need to restart your
-masternode, update the software version of the wallet holding the
-collateral to the latest version now by following the instructions
-:ref:`here <masternode-setup-start>`. Continue monitoring your
-masternode. After some time, all statuses should turn green, in
-particular **masternode started: YES** and **masternode network state:
-ENABLED**.
-
-
-Option 2: Manual update
------------------------
-
-To update Dash manually, log in to your server using ssh or PuTTY. First
-we need to stop Dash running::
-
-  ~/.dashcore/dash-cli stop
-
-To manually download and install the components of your Dash masternode,
-visit https://www.dash.org/wallets/ on your computer to find the link to
-the latest Dash Core wallet. Click **Linux**, then right-click on
-**Download TGZ** for **Dash Core Linux 64 Bit** and select **Copy link
-address**. Go back to your terminal window and enter the following
-command, pasting in the address to the latest version of Dash Core by
-right clicking or pressing **Ctrl + V**::
-
-  cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.12.3.3/dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
-
-Verify the integrity of your download by running the following command
-and comparing the output against the value for the file as shown on the
-Dash website under **Hash File**::
-
-  sha256sum dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
-
-.. figure:: img/setup-manual-download.png
-   :width: 250px
-
-   Link to the hash file to verify download integrity
-
-Remove the old binaries from the working directory, extract the
-compressed archive, copy the new files to the directory and set them as
-executable::
-
-  rm ~/.dashcore/dashd
-  rm ~/.dashcore/dash-cli
-  tar xfvz dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
-  cp dashcore-0.12.3/bin/dashd ~/.dashcore/
-  cp dashcore-0.12.3/bin/dash-cli ~/.dashcore/
-
-Clean up unneeded files::
-
-  rm dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
-  rm -r dashcore-0.12.3/
-
-Restart Dash::
-
-  ~/.dashcore/dashd
-
-You will see a message reading "Dash Core server starting". We will now
-update Sentinel::
-
-  cd ~/.dashcore/sentinel/
-  git pull
-
-If the protocol version changed during this update, you will need to
-issue a start command from your wallet. If you are using a hardware
-wallet, you can issue the start command by simply clicking the button in
-DMT. If you are using Dash Core wallet, update it to the latest version,
-then open the debug console and enter this command, where MN1 is the
-alias for your masternode::
-
-  masternode start-alias MN1
-
-Monitor the status of your masternode as it starts up::
-
-  ~/.dashcore/dash-cli getblockcount
-  ~/.dashcore/dash-cli getnetworkinfo
-  ~/.dashcore/dash-cli mnsync status
-  ~/.dashcore/dash-cli masternode status
-
-In particular, the last command should return the status **Masternode
-successfully started**. If you see an error similar to **Invalid
-protocol version**, then the protocol version has changed and you must
-send a start command from your wallet again. You can also monitor the
-status of your masternode from Sentinel. If Sentinel detects a
-functioning masternode, the following command should return nothing::
-
-  cd ~/.dashcore/sentinel
-  venv/bin/python bin/sentinel.py
-
-Finally, you can check for your masternode by its collateral address
-using `DashNinja <https://www.dashninja.pl/>`_, or search the consensus
-list of masternodes using this command and entering your masternode IP
-address::
-
-  ~/.dashcore/dash-cli masternode list full | grep <your ip address>
 
 
 Finding your position in the payment queue

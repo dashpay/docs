@@ -15,26 +15,24 @@ particularly if you are not storing your Dash on a hardware wallet.
 There are some decisions to be made along the way, and optional extra
 steps to take for increased security.
 
-If you prefer to use a masternode hosting service, several community
-members provide hosting at `masternode.me <https://masternode.me/>`_,
-`node40.com <https://www.node40.com/hosting/>`_, `dashmasternode.io
-<http://dashmasternode.io/>`_ or `masternodehosting
-<https://masternodehosting.com/>`_. When using these hosting services,
-all you have to do is send a single transaction of 1000 DASH to a
-specific address and communicate the transaction ID to the hosting
-service. Simply follow the steps here.
+Commercial :ref:`masternode hosting services <masternode-hosting>` are
+available if you prefer to delegate day-to-day operation of your
+masternode to a professional operator. When using these hosting
+services, you retain full control of the 1000 DASH collateral and pay an
+agreed percentage of your reward to the operator. It is also possible to
+delegate your voting keys to a representative, see the 
+:ref:`governance documentation <using- governance>` for more
+information.
 
-This guide is heavily based on previous guides written by `Bertrand256
-<https://github.com/Bertrand256/dash-masternode-
-tool/blob/master/README.md>`_, `moocowmoo
-<https://github.com/moocowmoo/dashman/blob/master/README.md>`_, `tao
-<https://www.dash.org/forum/threads/taos-masternode-setup-guide-for-
-dummies-updated-for-12-1.2680/>`_, `BolehVPN
-<https://dashpay.atlassian.net/wiki/spaces/DOC/pages/24019061>`_ and
-tungfa. Tao's hugely popular original guide and support thread is
-available `here <https://www.dash.org/forum/threads/taos-masternode-
-setup-guide-for-dummies-updated-for-12-1.2680/>`__, as well many more
-guides for specific cases in this forum.
+Dash 0.13.0 introduced `Deterministic Masternode Lists
+<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
+method of finding consensus on the list of valid masternodes. Due to the
+deep underlying changes and new signature formats involved, the
+instructions on how to set up a masternode have changed as well. This
+documentation describes how to set up a masternode using Dash 0.13.0 or
+higher. If you are looking for documentation for older versions, please
+see the `0.12.3 documentation branch
+<https://docs.dash.org/en/0.12.3/masternodes/setup.html>`_.
 
 Before you begin
 ================
@@ -62,7 +60,7 @@ installation of an operating system (usually Linux) operating within a
 virtual machine. The virtual machine allows the VPS provider to run
 multiple systems on one physical server, making it more efficient and
 much cheaper than having a single operating system running on the "bare
-metal " of each server. A VPS is ideal for hosting a Dash masternode
+metal" of each server. A VPS is ideal for hosting a Dash masternode
 because they typically offer guaranteed uptime, redundancy in the case
 of hardware failure and a static IP address that is required to ensure
 you remain in the masternode payment queue. While running a masternode
@@ -76,7 +74,7 @@ EC2 <https://aws.amazon.com/ec2>`_, `Google Cloud
 <https://cloud.google.com/compute/>`_, `Choopa
 <https://www.choopa.com/>`_ and `OVH <https://www.ovh.com/>`_ are also
 popular choices. First create an account and add credit. Then go to the
-Servers menu item on the left and click **+** to add a new server.
+**Servers** menu item on the left and click **+** to add a new server.
 Select a location for your new server on the following screen:
 
 .. figure:: img/setup-server-location.png
@@ -84,10 +82,9 @@ Select a location for your new server on the following screen:
 
    Vultr server location selection screen
 
-Select Ubuntu 16.04 x64 as the server type. We use 16.04 instead of the
-latest version because 16.04 is an LTS release of Ubuntu, which will be
-supported with security updates for 5 years instead of the usual 9
-months.
+Select Ubuntu 18.04 x64 as the server type. We use this LTS release of
+Ubuntu instead of the latest version because LTS releases are supported
+with security updates for 5 years, instead of the usual 9 months.
 
 .. figure:: img/setup-server-type.png
    :width: 400px
