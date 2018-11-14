@@ -60,7 +60,7 @@ installation of an operating system (usually Linux) operating within a
 virtual machine. The virtual machine allows the VPS provider to run
 multiple systems on one physical server, making it more efficient and
 much cheaper than having a single operating system running on the "bare
-metal " of each server. A VPS is ideal for hosting a Dash masternode
+metal" of each server. A VPS is ideal for hosting a Dash masternode
 because they typically offer guaranteed uptime, redundancy in the case
 of hardware failure and a static IP address that is required to ensure
 you remain in the masternode payment queue. While running a masternode
@@ -82,7 +82,7 @@ Select a location for your new server on the following screen:
 
    Vultr server location selection screen
 
-Select Ubuntu 16.04 x64 as the server type. We use 16.04 instead of the
+Select Ubuntu 18.04 x64 as the server type. We use 16.04 instead of the
 latest version because 16.04 is an LTS release of Ubuntu, which will be
 supported with security updates for 5 years instead of the usual 9
 months.
