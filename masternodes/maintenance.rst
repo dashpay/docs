@@ -2,6 +2,18 @@
    :description: Maintaining a Dash masternode involves staying up to date with the latest version, voting and handling payments
    :keywords: dash, cryptocurrency, masternode, maintenance, maintain, payments, withdrawal, voting, monitoring
 
+.. _masternode-maintenance:
+
+===========
+Maintenance
+===========
+
+Masternodes require regular maintenance to ensure you do not drop off
+the payment queue. This includes promptly installing updates to Dash, as
+well as maintaining the security and performance of the server. In
+addition, masternodes should vote on proposals and perform other tasks
+in the interest of the network and the value of the Dash they hold.
+
 .. _masternode-update:
 
 How to update a masternode
@@ -144,18 +156,6 @@ address::
 
   ~/.dashcore/dash-cli masternode list full | grep <your ip address>
 
-
-.. _masternode-maintenance:
-
-===========
-Maintenance
-===========
-
-Masternodes require regular maintenance to ensure you do not drop off
-the payment queue. This includes promptly installing updates to Dash, as
-well as maintaining the security and performance of the server. In
-addition, masternodes should vote on proposals and perform other tasks
-in the interest of the network and the value of the Dash they hold.
 
 .. _masternode-withdrawals:
 
