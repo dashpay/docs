@@ -25,8 +25,8 @@ blockchain, masternodes are expected to update to new versions of Dash.
 In some cases, hardware upgrades may also be necessary. Not updating
 will eventually result in your masternode being removed from the payment
 queue by the Proof of Service (PoSe) system. If you run a hosted
-masternode, your host will take care of updates for you. If not, the
-method of updating depends on how you installed Dash.
+masternode, your hosting operator will take care of updates for you. If
+not, the method of updating depends on how you installed Dash.
 
 Dash 0.13.0 introduced `Deterministic Masternode Lists
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
@@ -46,26 +46,7 @@ the protocol version did change, you must issue a start command from
 your wallet. Do not send start commands to your masternode if not
 necessary, as it will send you to the back of the payment queue.
 
-Option 1: Automated update using dashman
-----------------------------------------
 
-To update Dash using dashman, log in to your server and enter the
-following commands::
-
-  ~/dashman/dashman sync
-  ~/dashman/dashman update
-
-Check the status of your masternode::
-
-  ~/dashman/dashman status
-
-If you are doing a major version update and need to restart your
-masternode, update the software version of the wallet holding the
-collateral to the latest version now by following the instructions
-:ref:`here <masternode-setup-start>`. Continue monitoring your
-masternode. After some time, all statuses should turn green, in
-particular **masternode started: YES** and **masternode network state:
-ENABLED**.
 
 
 Option 2: Manual update
@@ -155,6 +136,37 @@ list of masternodes using this command and entering your masternode IP
 address::
 
   ~/.dashcore/dash-cli masternode list full | grep <your ip address>
+
+
+
+Updating from dashman
+---------------------
+
+Versions of Dash prior to 0.13.0 frequently used a tool called
+``dashman`` by community member moocowmoo to install Dash. This tool has
+been deprecated until it is updated. You can follow the instructions
+below to upgrade your system::
+
+**OBSOLETE**
+
+To update Dash using dashman, log in to your server and enter the
+following commands::
+
+  ~/dashman/dashman sync
+  ~/dashman/dashman update
+
+Check the status of your masternode::
+
+  ~/dashman/dashman status
+
+If you are doing a major version update and need to restart your
+masternode, update the software version of the wallet holding the
+collateral to the latest version now by following the instructions
+:ref:`here <masternode-setup-start>`. Continue monitoring your
+masternode. After some time, all statuses should turn green, in
+particular **masternode started: YES** and **masternode network state:
+ENABLED**.
+
 
 
 .. _masternode-withdrawals:
