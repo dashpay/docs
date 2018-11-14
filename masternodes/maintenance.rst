@@ -102,15 +102,18 @@ You will see a message reading "Dash Core server starting". We will now
 update Sentinel::
 
   cd ~/.dashcore/sentinel/
+  git checkout develop
   git pull
-  
+
+Dash is now updated.
+
 
 DIP3 Upgrade Overview
 ^^^^^^^^^^^^^^^^^^^^^
 
 Dash is now updated, and you can continue with the procedure to upgrade
-your masternode to work using the DIP3 Deterministic Masternode List.The
-procedure involves four major steps:
+your masternode to work using the DIP3 Deterministic Masternode List.
+The procedure involves four major steps:
 
 1. Generating a BLS key pair
 2. Preparing a ProRegTx transaction
@@ -171,7 +174,7 @@ argument to the command as follows:
 - ``operatorReward``: The percentage of the block reward allocated to the operator as payment
 - ``"payoutAddress"``: A Dash address to receive the masternode rewards (can be different to the collateral address)
 
-Example::
+Example (remove line breaks if copying)::
 
   protx register_prepare 
     "2eb760f394f756ea9d8c8eac832f77366503bfccd4e77ee73deca200733fe615" 
@@ -201,9 +204,9 @@ Now we will sign the content of the ``signMessage`` field using the
 private key for the collateral address as specified in
 ``collateralAddress``. Note that no internet connection is required for
 this step, meaning that the wallet can remain disconnected from the
-internet in cold to sign the message. In this example we will again use
-Dash Core, but it is equally possible to use the signing function of a
-hardware wallet. The command takes the following syntax::
+internet in cold storage to sign the message. In this example we will
+again use Dash Core, but it is equally possible to use the signing
+function of a hardware wallet. The command takes the following syntax::
 
   signmessage "address" "message"
 
