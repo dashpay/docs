@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Daf Daf, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-30 07:12+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-07 06:03+0000\n"
+"PO-Revision-Date: 2018-04-09 11:01+0000\n"
 "Last-Translator: Daf Daf, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +40,7 @@ msgstr "Guides techniques"
 
 #: ../../merchants/technical.rst:12
 msgid "Dash Wallet Integration"
-msgstr ""
+msgstr "Intégration du portefeuille Dash"
 
 #: ../../merchants/technical.rst:14
 msgid ""
@@ -45,6 +48,9 @@ msgid ""
 "<https://github.com/dashpay/docs/raw/master/binary/merchants /Integration-"
 "Resources-Wallet-Integration.pdf>`__."
 msgstr ""
+"Cette documentation est également disponible au `format PDF  "
+"<https://github.com/dashpay/docs/raw/master/binary/merchants /Integration-"
+"Resources-Wallet-Integration.pdf>`__."
 
 #: ../../merchants/technical.rst:18
 msgid ""
@@ -55,29 +61,39 @@ msgid ""
 "functionalities such as InstantSend. These differences, as well as more "
 "general information, are summarized below."
 msgstr ""
+"`Dash Core <https://github.com/dashpay/dash/releases>`__ est un \"fork\" de "
+"Bitcoin et la majorité des fonctionnalités proposées par le daemon Dash Core"
+" peuvent être intégrées de façon similaire. Les différences clés résident "
+"dans certaines modifications apportées aux commandes JSON-RPC existantes, de"
+" manière à assurer des fonctionnalités propres à Dash telles qu'InstantSend."
+" Ces différences, ainsi que des informations plus générales, sont présentées"
+" ci-dessous."
 
 #: ../../merchants/technical.rst:25
 msgid ""
 "**General Information:** Dash is a “Proof of Work” blockchain with "
 "attributes similar to that of Bitcoin."
 msgstr ""
+"**Informations générales :** Dash est une blockchain de type \"preuve de "
+"travail\" avec des caractéristiques similaires à celles de Bitcoin."
 
 #: ../../merchants/technical.rst:28
 msgid "Block Time: ~2.6 Minutes per Block"
-msgstr ""
+msgstr "Durée de bloc : environ 2,6 minutes par bloc"
 
 #: ../../merchants/technical.rst:29
 msgid ""
 "Blockchain Confirmations: 6 Confirmations (or 1 in the case of InstantSend)"
 msgstr ""
+"Confirmations de bloc : 6 confirmations (ou 1 dans le cas d'InstantSend)"
 
 #: ../../merchants/technical.rst:31
 msgid "Github Source: https://github.com/dashpay/dash"
-msgstr ""
+msgstr "Code source GitHub : https://github.com/dashpay/dash"
 
 #: ../../merchants/technical.rst:32
 msgid "Release Link: https://github.com/dashpay/dash/releases"
-msgstr ""
+msgstr "Lien de publication : https://github.com/dashpay/dash/releases"
 
 #: ../../merchants/technical.rst:34
 msgid ""
@@ -86,6 +102,10 @@ msgid ""
 "straightforward. For a complete listing of RPC commands see the `Developer "
 "Guide <https://dash-docs.github.io/en/developer-guide>`__."
 msgstr ""
+"**Interface JSON-RPC :** la majorité des commandes JSON-RPC de Bitcoin sont "
+"inchangées, rendant assez simple l'intégration dans des systèmes existants. "
+"Pour une liste complète des commandes RPC, voir le `guide développeur <https"
+"://dash-docs.github.io/en/developer-guide>`__."
 
 #: ../../merchants/technical.rst:39
 msgid ""
@@ -93,24 +113,33 @@ msgid ""
 "have been modified to support InstantSend through the addition of an "
 "“InstantLock” field and are listed below:"
 msgstr ""
+"Il convient de noter que plusieurs commandes clés JSON-RPC relatives aux "
+"transactions ont été modifiées pour être compatibles avec InstantSend, par "
+"l'ajout d'un champ \"InstantLock\". Elles sont répertoriées ci-dessous :"
 
 #: ../../merchants/technical.rst:43
 msgid ""
 "`GetTransaction <https://dash-docs.github.io/en/developer-"
 "reference#gettransaction>`__"
 msgstr ""
+"`GetTransaction <https://dash-docs.github.io/en/developer-"
+"reference#gettransaction>`__"
 
 #: ../../merchants/technical.rst:44
 msgid ""
 "`ListTransactions <https://dash-docs.github.io/en/developer-"
 "reference#listtransactions>`__"
 msgstr ""
+"`ListTransactions <https://dash-docs.github.io/en/developer-"
+"reference#listtransactions>`__"
 
 #: ../../merchants/technical.rst:45
 msgid ""
 "`ListSinceBlock <https://dash-docs.github.io/en/developer-"
 "reference#listsinceblock>`__"
 msgstr ""
+"`ListSinceBlock <https://dash-docs.github.io/en/developer-"
+"reference#listsinceblock>`__"
 
 #: ../../merchants/technical.rst:47
 msgid ""
@@ -120,6 +149,12 @@ msgid ""
 "hashes (transactions, merkle root, etc) which allows for most existing "
 "libraries to work in the Dash ecosystem."
 msgstr ""
+"**Algorithme de hachage de bloc :** Dash utilise l'algorithme \"X11\" à la "
+"place de SHA256 qu'utilise Bitcoin. Il est cependant important de noter que "
+"cela ne concerne que le hachage du bloc lui-même. Tous les autres composants"
+" internes utilisent des empreintes SHA256 (transactions, arbre Merkle, "
+"etc.), ce qui permet à la plupart des bibliothèques déjà existantes de "
+"fonctionner dans l'écosystème Dash."
 
 #: ../../merchants/technical.rst:53
 msgid ""
@@ -130,6 +165,13 @@ msgid ""
 "resources are outlined in the :ref:`SDK Resources <sdk-resources>` section "
 "of this document."
 msgstr ""
+"**Bibliothèques compatibles :** en raison des différences d'algorithme de "
+"hachage mentionnées ci-dessus, seuls des ajustements mineurs sont "
+"nécessaires pour utiliser des bibliothèques Bitcoin sur le réseau Dash. Les "
+"bibliothèques les plus connues ont déjà été portées vers Dash, qui est "
+"devenu compatible avec la plupart des langages de programmation les plus "
+"importants. Ces ressources sont répertoriées dans la section "
+":ref:`Ressources SDK <sdk-resources>` de ce document."
 
 #: ../../merchants/technical.rst:64
 msgid "API Services"
@@ -430,6 +472,11 @@ msgid ""
 "applications by forming transactions and/or performing various wallet "
 "services."
 msgstr ""
+"Des SDK (kits de développement logiciel) sont utilisés pour accélérer la "
+"conception et le développement d'un produit destiné au réseau Dash. Ces "
+"ressources peuvent être utilisées soit pour communiquer avec un fournisseur "
+"d'API, soit pour la création d'applications autonomes, par formation de "
+"transactions et/ou exécution de divers services de portefeuille."
 
 #: ../../merchants/technical.rst:221
 msgid "Dash Developer Guide"
@@ -458,7 +505,7 @@ msgstr "Documentation : https://dash-docs.github.io/en/developer-guide"
 
 #: ../../merchants/technical.rst:239
 msgid "NodeJS/JavaScript: Bitcore (Dashcore)"
-msgstr ""
+msgstr "NodeJS/JavaScript : Bitcore (Dashcore)"
 
 #: ../../merchants/technical.rst:246
 msgid "https://bitcore.io"
@@ -471,6 +518,11 @@ msgid ""
 "development, additional indexes have been added into Dash for querying "
 "address balances, transaction history, and unspent outputs."
 msgstr ""
+"Dash Core est un \"fork\" de Bitcoin et tourne en tant que nœud complet Dash"
+" — vos applications tournent directement sur le réseau pair à pair. Pour le "
+"développement d'applications portefeuille, des index supplémentaires ont été"
+" ajoutés dans Dash, permettant de demander les soldes d'adresses, les "
+"historiques de transactions et les sorties non dépensées."
 
 #: ../../merchants/technical.rst:253
 msgid "Platform: NodeJS / Javascript"
@@ -490,39 +542,43 @@ msgstr "Nœud de dépôt : https://github.com/dashevo/dashcore-node"
 
 #: ../../merchants/technical.rst:259
 msgid "PHP: Bitcoin-PHP"
-msgstr ""
+msgstr "PHP : Bitcoin-PHP"
 
 #: ../../merchants/technical.rst:261
 msgid "https://github.com/Bit-Wasp/bitcoin-php"
-msgstr ""
+msgstr "https://github.com/Bit-Wasp/bitcoin-php"
 
 #: ../../merchants/technical.rst:263
 msgid ""
 "Bitcoin-PHP is an implementation of Bitcoin with support for Dash using "
 "mostly pure PHP."
 msgstr ""
+"Bitcoin-PHP est une implémentation de Bitcoin compatible avec Dash, conçue "
+"presque exclusivement en PHP."
 
 #: ../../merchants/technical.rst:266
 msgid "Platform: PHP"
-msgstr ""
+msgstr "Plateforme : PHP"
 
 #: ../../merchants/technical.rst:267
 msgid ""
 "Documentation: https://github.com/Bit-Wasp/bitcoin-"
 "php/blob/master/doc/Introduction.md"
 msgstr ""
+"Documentation : https://github.com/Bit-Wasp/bitcoin-"
+"php/blob/master/doc/Introduction.md"
 
 #: ../../merchants/technical.rst:268
 msgid "Repository: https://github.com/Bit-Wasp/bitcoin-php"
-msgstr ""
+msgstr "Dépôt : https://github.com/Bit-Wasp/bitcoin-php"
 
 #: ../../merchants/technical.rst:271
 msgid "Python: PyCoin"
-msgstr ""
+msgstr "Python : PyCoin"
 
 #: ../../merchants/technical.rst:273
 msgid "https://github.com/richardkiss/pycoin"
-msgstr ""
+msgstr "https://github.com/richardkiss/pycoin"
 
 #: ../../merchants/technical.rst:275
 msgid ""
@@ -530,22 +586,25 @@ msgid ""
 "useful when dealing with Bitcoin and Dash. It has been tested with Python "
 "2.7, 3.6 and 3.7."
 msgstr ""
+"PyCoin est l'implémentation de toute une série de routines utilitaires, qui "
+"peuvent être utiles pour manipuler Bitcoin ou Dash. Elle a été testée avec "
+"Python 2.7, 3.6 et 3.7."
 
 #: ../../merchants/technical.rst:279
 msgid "Platform: Python"
-msgstr ""
+msgstr "Plateforme : Python"
 
 #: ../../merchants/technical.rst:280
 msgid "Documentation: https://pycoin.readthedocs.io/en/latest/"
-msgstr ""
+msgstr "Documentation : https://pycoin.readthedocs.io/en/latest/"
 
 #: ../../merchants/technical.rst:281
 msgid "Repository: https://github.com/richardkiss/pycoin"
-msgstr ""
+msgstr "Dépôt : https://github.com/richardkiss/pycoin"
 
 #: ../../merchants/technical.rst:284
 msgid "Java: DashJ"
-msgstr ""
+msgstr "Java : DashJ"
 
 #: ../../merchants/technical.rst:291
 msgid "https://github.com/HashEngineering/dashj"
@@ -581,7 +640,7 @@ msgstr ""
 
 #: ../../merchants/technical.rst:304
 msgid ".NET: NBitcoin"
-msgstr ""
+msgstr ".NET : NBitcoin"
 
 #: ../../merchants/technical.rst:311
 msgid "https://github.com/MetacoSA/NBitcoin"

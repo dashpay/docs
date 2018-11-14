@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Hasna Brania <hasna.brania19@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-17 08:27+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-12 05:06+0000\n"
+"PO-Revision-Date: 2018-04-09 11:01+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +23,11 @@ msgstr ""
 
 #: ../../developers/index.rst:1
 msgid "Developers guide and information about sporks and Dash version history"
-msgstr ""
+msgstr "دليل مطوّري البرامج ومعلومات حول تاريخ إصدار داش"
 
 #: ../../developers/index.rst:1
 msgid "dash, developers, sporks, version history"
-msgstr ""
+msgstr "داش، المطورين، تاريخ الإصدار"
 
 #: ../../developers/index.rst:9
 msgid "Developers"
@@ -40,6 +43,12 @@ msgid ""
 "issue or pull request on GitHub. The documentation is available at: https"
 "://dash-docs.github.io/en/"
 msgstr ""
+"وقد نشرت داش كور واسعة النطاق `دليل المطورين <https://dash-"
+"docs.github.io/en/>`_ لمساعدة المطورين الجدد على البدء بقاعدة رمز داش ، "
+"وكمرجع للمطورين ذوي الخبرة. يمكن الاستفادة من هذا الدليل في دمج التطبيقات "
+"الخارجية بسرعة وكفاءة مع نظام داش البيئي. يمكن لأي شخص المساهمة في الدليل عن"
+" طريق إرسال مشكلة أو سحب طلب على GitHub. الوثائق متاحة على: https://dash-"
+"docs.github.io/en/"
 
 #: ../../developers/index.rst:19
 msgid ""
@@ -51,16 +60,23 @@ msgid ""
 "<https://github.com/dashpay/dips>`_, which contain detailed technical "
 "explanations of proposed changes to the Dash protocol itself."
 msgstr ""
+"يحافظ فريق داش كور أيضًا على `خريطة داش <https://github.com/dashpay/dash-"
+"roadmap>`_, الذي يحدد معالم التسليم للإصدارات المستقبلية من داش ويتضمن "
+"تفاصيل فنية محددة تصف كيفية تخطيط فريق التطوير لتحقيق كل تحد. تكمل خريطة "
+"طريق داش من قبل `اقتراحات تحسين داش <https://github.com/dashpay/dips>`_, "
+"التي تحتوي على تفسيرات فنية مفصلة للتغييرات المقترحة على بروتوكول داش نفسه."
 
 #: ../../developers/index.rst:27
 msgid ""
 "The remaining sections available below describe practical steps to carry out"
 " common development tasks in Dash."
 msgstr ""
+"توضح الأقسام المتبقية أدناه الخطوات العملية لتنفيذ مهام التطوير المشتركة في "
+"داش."
 
 #: ../../developers/index.rst:40
 msgid "Sporks"
-msgstr ""
+msgstr "الرميات"
 
 #: ../../developers/index.rst:42
 msgid ""
@@ -73,10 +89,16 @@ msgid ""
 "spork currently existing on the network, and how to check their respective "
 "statuses."
 msgstr ""
+"الشوكة متعددة المراحل ، والتي تُعرف العامية باسم \"سبرورك\" ، هي آلية فريدة "
+"من نوعها لداش تستخدم لنشر ميزات جديدة على الشبكة بأمان من خلال المتغيرات على"
+" مستوى الشبكة لتجنب خطر حدوث تشوه غير مقصود للشبكة أثناء الترقيات. ويمكن "
+"أيضًا استخدامه لتعطيل ميزات معينة في حالة اكتشاف ثغرة أمنية :ref:`هنا "
+"<sporks>` للحصول على مقدمة موجزة عن السيقان. تصف هذه الوثائق معنى كل سائح "
+"موجود حاليًا على الشبكة ، وكيفية التحقق من حالات كل منها."
 
 #: ../../developers/index.rst:52
 msgid "Spork functions"
-msgstr ""
+msgstr "وظائف Spork"
 
 #: ../../developers/index.rst:54
 msgid ""
@@ -88,38 +110,47 @@ msgid ""
 "changed. The following sporks currently exist on the network and serve "
 "functions as described below:"
 msgstr ""
+"يتم تعيين Sporks باستخدام قيم عدد صحيح. قد يتم تعيين العديد من spaccs إلى "
+"تاريخ معين (عدد الثواني التي انقضت منذ 1 يناير 1970) لتحديد الوقت الذي سيتم "
+"تنشيطه فيه. يتم تعيين sporks ممكّن إلى 0 (بالثواني حتى التنشيط). غالبًا ما "
+"يتم استخدام هذه الوظيفة لتعيين تاريخ تمكين spork حتى الآن في المستقبل بحيث "
+"يتم تعطيله بشكل فعال حتى يتم تغييره. تتوفر حاليًا السكاتور التالية على "
+"الشبكة وتؤدي وظائف كما هو موضح أدناه"
 
 #: ../../developers/index.rst:63
 msgid "SPORK_2_INSTANTSEND_ENABLED"
-msgstr ""
+msgstr "SPORK_2_INSTANTSEND_ENABLED"
 
 #: ../../developers/index.rst:63
 msgid "Governs the ability of Dash clients to use InstandSend functionality."
-msgstr ""
+msgstr "يحكم قدرة عملاء داش على استخدام وظيفة الإرسال الفوري"
 
 #: ../../developers/index.rst:67
 msgid "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
-msgstr ""
+msgstr "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
 
 #: ../../developers/index.rst:66
 msgid ""
 "If enabled, masternodes will reject blocks containing transactions in "
 "conflict with locked but unconfirmed InstandSend transactions."
 msgstr ""
+"في حالة التمكين ، سترفض ماسترنود كتل تحتوي على معاملات في تعارض مع معاملات "
+"الإرسال الفوري مؤمنة ولكن غير مؤمنة."
 
 #: ../../developers/index.rst:71
 msgid "SPORK_5_INSTANTSEND_MAX_VALUE"
-msgstr ""
+msgstr "SPORK_5_INSTANTSEND_MAX_VALUE"
 
 #: ../../developers/index.rst:70
 msgid ""
 "Enforces the maximum value in Dash that can be included in an InstantSend "
 "transaction."
 msgstr ""
+"يفرض الحد الأقصى للقيمة في داش التي يمكن تضمينها في معاملة الإرسال الفوري."
 
 #: ../../developers/index.rst:77
 msgid "SPORK_6_NEW_SIGS"
-msgstr ""
+msgstr "SPORK_6_NEW_SIGS"
 
 #: ../../developers/index.rst:74
 msgid ""
@@ -128,29 +159,35 @@ msgid ""
 "<https://github.com/dashpay/dash/pull/1936>`__ and `here "
 "<https://github.com/dashpay/dash/pull/1937>`__."
 msgstr ""
+"لتمكين تنسيق توقيع جديد لرسائل شبكة خاصة بشركة داش المقدمة في داش 12.3. "
+"لمزيد من المعلومات، راجع `هنا <https://github.com/dashpay/dash/pull/1936>`__"
+"  و `هنا <https://github.com/dashpay/dash/pull/1937>`__."
 
 #: ../../developers/index.rst:81
 msgid "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT"
-msgstr ""
+msgstr "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT"
 
 #: ../../developers/index.rst:80
 msgid ""
 "If enabled, miners must pay 50% of the block reward to a masternode "
 "currently pending selection or the block will be considered invalid."
 msgstr ""
+"في حالة التمكين ، يجب على عمال التعدين دفع 50٪ من مكافأة المجموعة إلى "
+"ماسترنود معلقة حاليًا أو اعتبار الكتلة غير صالحة."
 
 #: ../../developers/index.rst:85
 msgid "SPORK_9_SUPERBLOCKS_ENABLED"
-msgstr ""
+msgstr "SPORK_9_SUPERBLOCKS_ENABLED"
 
 #: ../../developers/index.rst:84
 msgid ""
 "If enabled, superblocks are verified and issued to pay proposal winners."
 msgstr ""
+"إذا تم تمكينها ، يتم التحقق من superblocks وإصدارها لدفع الفائزين بالاقتراح."
 
 #: ../../developers/index.rst:90
 msgid "SPORK_10_MASTERNODE_PAY_UPDATED_NODES"
-msgstr ""
+msgstr "SPORK_10_MASTERNODE_PAY_UPDATED_NODES"
 
 #: ../../developers/index.rst:88
 msgid ""
@@ -158,38 +195,42 @@ msgid ""
 "considered eligible for payment. This can be used as an incentive to "
 "encourage masternodes to update."
 msgstr ""
+"يتحكم في ما إذا كان ماسترنود الذي يشغل إصدار بروتوكول أقدم يعتبر مؤهلاً "
+"للدفع. يمكن استخدام هذا كحافز لتشجيع ماسترنود لتحديث."
 
 #: ../../developers/index.rst:94
 msgid "SPORK_12_RECONSIDER_BLOCKS"
-msgstr ""
+msgstr "SPORK_12_RECONSIDER_BLOCKS"
 
 #: ../../developers/index.rst:93
 msgid ""
 "Forces reindex of a specified number of blocks to recover from unintentional"
 " network forks."
-msgstr ""
+msgstr "يفرض reindex من عدد معين من القطع لاسترداد من شوك الشبكة غير المقصود."
 
 #: ../../developers/index.rst:97
 msgid "SPORK_13_OLD_SUPERBLOCK_FLAG"
-msgstr ""
+msgstr "SPORK_13_OLD_SUPERBLOCK_FLAG"
 
 #: ../../developers/index.rst:97
 msgid "Deprecated. No network function since block 614820."
-msgstr ""
+msgstr "إهمال. لا توجد وظيفة شبكة منذ كتلة 614820."
 
 #: ../../developers/index.rst:101
 msgid "SPORK_14_REQUIRE_SENTINEL_FLAG"
-msgstr ""
+msgstr "SPORK_14_REQUIRE_SENTINEL_FLAG"
 
 #: ../../developers/index.rst:100
 msgid ""
 "Toggles whether masternodes with status are eligible for payment if status "
 "is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly."
 msgstr ""
+"يتم تبديل ما إذا كان ماسترنود مع الحالة مؤهلاً للدفع إذا كانت الحالة "
+"WATCHDOG_EXPIRED ، أي أنه لا يتم تشغيل الحماية بشكل صحيح"
 
 #: ../../developers/index.rst:108
 msgid "SPORK_15_DETERMINISTIC_MNS_ENABLED"
-msgstr ""
+msgstr "SPORK_15_DETERMINISTIC_MNS_ENABLED"
 
 #: ../../developers/index.rst:104
 msgid ""
@@ -198,10 +239,14 @@ msgid ""
 "When activated, the legacy masternode list logic will no longer run and non-"
 "updated masternodes will not be eligible for payment."
 msgstr ""
+"ضوابط ما إذا كانت `ماسترنود الحتمية "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ مطلوبة. عند "
+"التنشيط ، لن يتم تشغيل منطق قائمة ماسترنود القديمة بعد الآن ولن تكون "
+"ماسترنود غير المحدثة مؤهلة للدفع."
 
 #: ../../developers/index.rst:114
 msgid "SPORK_16_INSTANTSEND_AUTOLOCKS"
-msgstr ""
+msgstr "SPORK_16_INSTANTSEND_AUTOLOCKS"
 
 #: ../../developers/index.rst:111
 msgid ""
@@ -209,10 +254,13 @@ msgid ""
 "specified number of inputs, and removes the legacy InstantSend fee. Allows "
 "any node to request the transaction lock, not just the sending node."
 msgstr ""
+"لتمكين تأمين المعاملات التلقائية للمعاملات التي تقل عن عدد محدد من المدخلات "
+"، وإزالة رسوم الإرسال الفوري القديمة. يسمح لأي عقدة بطلب قفل المعاملة ، وليس"
+" فقط عقدة الإرسال."
 
 #: ../../developers/index.rst:117
 msgid "Viewing spork status"
-msgstr ""
+msgstr "رؤية حالة spork"
 
 #: ../../developers/index.rst:119
 msgid ""
@@ -220,19 +268,22 @@ msgid ""
 "(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
 "You can open the debug window by selecting **Tools > Debug console**."
 msgstr ""
+"تسمح لك أوامر ``spork show`` و``spork active`` الصادرة في نافذة التصحيح (أو "
+"من``dash-cli`` على ماسترنود) بالتفاعل مع sporks. يمكنك فتح نافذة التصحيح من "
+"خلال تحديد **أدوات> وحدة التحكم في التصحيح**."
 
 #: ../../developers/index.rst:127
 msgid "spork show and spork active output in the Dash Core debug console"
-msgstr ""
+msgstr "عرض spork الإخراج النشط في وحدة تصحيح الأخطاء داش كور"
 
 #: ../../developers/index.rst:131
 msgid "Version History"
-msgstr ""
+msgstr "تاريخ الإصدار"
 
 #: ../../developers/index.rst:133
 msgid "Full release notes and the version history of Dash are available here:"
-msgstr ""
+msgstr "تتوفر هنا ملاحظات الإصدار الكاملة وتاريخ إصدار داش:"
 
 #: ../../developers/index.rst:135
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
-msgstr ""
+msgstr "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"

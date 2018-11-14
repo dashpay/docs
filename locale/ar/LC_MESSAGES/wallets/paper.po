@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Hasna Brania <hasna.brania19@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-12 05:06+0000\n"
+"PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +23,11 @@ msgstr ""
 
 #: ../../wallets/paper.rst:1
 msgid "Guides to secure paper wallets for Dash cryptocurrency"
-msgstr ""
+msgstr "أدلة لتأمين محافظ عملة داش"
 
 #: ../../wallets/paper.rst:1
 msgid "dash, paper, wallet, encryption"
-msgstr ""
+msgstr "داش ، ورقة ، محفظة ، تشفير"
 
 #: ../../wallets/paper.rst:8
 msgid "Introduction"
@@ -42,6 +45,14 @@ msgid ""
 "extremely secure but somewhat inconvenient for everyday use compared to "
 "hardware wallets, which also offer a high degree of security."
 msgstr ""
+"المحفظة الورقية هي طريقة لتخزين مفتاح خاص للوصول إلى الأموال المخزنة على "
+"عنوان واحد. يمكن إنشاؤه على جهاز كمبيوتر لم يتم توصيله بالإنترنت على الإطلاق"
+" ، وطباعته للتخزين دون اتصال بالإنترنت. على هذا النحو ، فهي مناسبة لتخزين "
+"كميات كبيرة من داش ، ولكن يجب الحرص على عدم فقدان المفتاح الخاص ، حيث لا "
+"توجد وسيلة لاستعادة الأموال إذا فقدت من أي وقت مضى. لاستخدام المفتاح ، يجب "
+"استيراده أو \"اجتاحته\" في محفظة عبر الإنترنت ويجب عدم استخدامه مرة أخرى. "
+"تعتبر حافظات الورق آمنة للغاية ، ولكنها غير مناسبة إلى حد ما للاستخدام "
+"اليومي مقارنةً بمحفظة الأجهزة ، والتي توفر درجة عالية من الأمان أيضًا."
 
 #: ../../wallets/paper.rst:21
 msgid ""
@@ -54,20 +65,29 @@ msgid ""
 "(e.g. robbery/home invasion) could bypass this encryption using the "
 "proverbial \"$5 wrench attack\"."
 msgstr ""
+"تستخدم محافظ الأوراق مستخدمًا عشوائيًا وإدخالًا آليًا لإنشاء مجموعة من "
+"المفاتيح / العناوين التي تطبعها بعد ذلك. لا يمكنك أبدًا إعادة إنشاء محفظة "
+"الورق بمجرد إيقاف تشغيل الجهاز. ما تطبعه هو كل ما تحصل عليه. ولهذا السبب ، "
+"فإن المحافظ الورقية معرضة إلى حد ما وتتطلب رعاية خاصة لأنها قد تتعرض للتلف "
+"أو الضياع أو التدمير أو السرقة. حتى إذا قمت بتشفيرها مع BIP38 (وهو ما يجب "
+"عليك) ، يمكن أن يتخطى الخصم ذو الدوافع الكافية (على سبيل المثال ، عمليات "
+"السطو / الغزو المنزلي) هذا التشفير مستخدمًا \"هجوم 5 دولارات\"."
 
 #: ../../wallets/paper.rst:33
 msgid "The $5 wrench attack. Credit: xkcd.com"
-msgstr ""
+msgstr "هجوم $ 5. الائتمان: xkcd.com"
 
 #: ../../wallets/paper.rst:35
 msgid ""
 "Nevertheless, together with appropriate planning, paper wallets are a highly"
 " convenient and user-friendly way to store Dash long term."
 msgstr ""
+"ومع ذلك ، فبالإضافة إلى التخطيط الملائم ، تعد المحفظة الورقية طريقة سهلة "
+"الاستخدام وسهلة الاستخدام لتخزين داش على المدى الطويل"
 
 #: ../../wallets/paper.rst:39
 msgid "Security"
-msgstr ""
+msgstr "الحماية"
 
 #: ../../wallets/paper.rst:41
 msgid ""
@@ -77,6 +97,10 @@ msgid ""
 " ensure that all generated data will be permanently wiped from memory once "
 "the process is complete."
 msgstr ""
+"على الرغم من أنه يمكنك إنشاء محفظة ورقية باستخدام جهاز متصل بالإنترنت ، إلا "
+"أنه يجب إنشاء المحافظ التي سيتم استخدامها لتخزين أموال كبيرة باستخدام جهاز "
+"كمبيوتر غير متصل يعمل بنظام تشغيل يستخدم مرة واحدة للتأكد من أنه سيتم مسح "
+"جميع البيانات التي تم إنشاؤها بشكل دائم من الذاكرة بمجرد اكتمال العملية."
 
 #: ../../wallets/paper.rst:47
 msgid ""
@@ -90,6 +114,14 @@ msgid ""
 "desktops can be used if you can ensure that all networking hardware is "
 "disabled when you get to the stage of actually generating your keys."
 msgstr ""
+"إحدى الطرق البسيطة للقيام بذلك هي نسخ قرص مضغوط مباشر بنظام لينكس و `يوبنتو "
+"<https://www.ubuntu.com/download/desktop>`_ أوصت لأنه سيكون لديها معظم "
+"السائقين وسهلة الاستخدام ، في حين `تايلز <https://tails.boum.org/>`_ و `كالي"
+" لينكس <https://www.kali.org/downloads/>`_ هي خيارات شائعة للأمن قوي للغاية."
+" يعد التشغيل من قرص مضغوط حقيقي أمناً للغاية حيث أنه مثبت للقراءة فقط ، ولكن"
+" USB جيدة بشكل عام أيضًا. يمكن استخدام كل من أجهزة الكمبيوتر المحمولة وأجهزة"
+" سطح المكتب في حالة التأكد من تعطيل كافة أجهزة الشبكة عند الوصول إلى مرحلة "
+"إنشاء المفاتيح فعليًا."
 
 #: ../../wallets/paper.rst:58
 msgid ""
@@ -98,10 +130,14 @@ msgid ""
 "keys/addresses/printouts, and power off the machine. You are now the only "
 "person with access to these addresses."
 msgstr ""
+"قم بالتمهيد من القرص المضغوط وقم بتنزيل / تثبيت الأدوات (أو تنزيلها مسبقًا "
+"إلى محرك أقراص USB). قطع الاتصال بالإنترنت ، قم بإنشاء المفاتيح / العناوين /"
+" المطبوعات ، وقم بإيقاف تشغيل الجهاز. أنت الآن الشخص الوحيد الذي يمكنه "
+"الوصول إلى هذه العناوين."
 
 #: ../../wallets/paper.rst:64
 msgid "Death plan"
-msgstr ""
+msgstr "خطة الموت"
 
 #: ../../wallets/paper.rst:66
 msgid ""
@@ -112,28 +148,35 @@ msgid ""
 "instructions on how to use it, and keep them separate with a clear procedure"
 " on how they can be accessed when necessary."
 msgstr ""
+"أيا كان نوع التخزين البارد الذي تختاره ، ضع خطة لتمرير البيانات الضرورية "
+"لتجديد مفاتيح أحبائك في حال وقوع حادث - سيحدث لنا جميعًا في النهاية. قم "
+"بتدوين كلمة السر الخاصة بك في المحفظة الورقية BIP38 أو كلمة مرور المحفظة في "
+"المخ. ثم قم بتدوين التعليمات حول كيفية استخدامها ، والاحتفاظ بها منفصلة مع "
+"إجراء واضح حول كيفية الوصول إليها عند الضرورة."
 
 #: ../../wallets/paper.rst:74
 msgid "Tools"
-msgstr ""
+msgstr "الأدوات"
 
 #: ../../wallets/paper.rst:76
 msgid "A Dash paper wallet can be generated in several ways."
-msgstr ""
+msgstr "يمكن إنشاء محفظة ورق داش بعدة طرق."
 
 #: ../../wallets/paper.rst:78
 msgid "Using the generator at https://paper.dash.org/"
-msgstr ""
+msgstr "باستخدام مولد في  https://paper.dash.org/"
 
 #: ../../wallets/paper.rst:79
 msgid "Using the generator at https://walletgenerator.net/?currency=Dash"
-msgstr ""
+msgstr "باستخدام مولد في https://walletgenerator.net/?currency=Dash"
 
 #: ../../wallets/paper.rst:80
 msgid ""
 "Offline using the Dash Paper Wallet source code from GitHub at "
 "https://github.com/dashpay/paper.dash.org/releases/latest"
 msgstr ""
+"وضع عدم الاتصال باستخدام شفرة مصدر محفظة داش الورقية "
+"https://github.com/dashpay/paper.dash.org/releases/latest"
 
 #: ../../wallets/paper.rst:82
 msgid ""
@@ -142,6 +185,10 @@ msgid ""
 "`downloading directly "
 "<https://github.com/MichaelMure/WalletGenerator.net/archive/master.zip>`_"
 msgstr ""
+"غير متصل باستخدام نفس الرمز الذي يعمل على كلا الموقعين ، من خلال عرض `مشروع "
+"جيتب <https://github.com/MichaelMure/WalletGenerator.net>`_ أو `التحميل "
+"مباشرة "
+"<https://github.com/MichaelMure/WalletGenerator.net/archive/master.zip>`_"
 
 #: ../../wallets/paper.rst:86
 msgid ""
@@ -152,16 +199,23 @@ msgid ""
 "generator and run it on a computer with a freshly installed operating system"
 " that is not connected to the internet."
 msgstr ""
+"ونظرًا لأن شفرة المصدر لجميع الخيارات الثلاثة متشابهة إلى حد كبير ، فسيستخدم"
+" هذا الدليل https://paper.dash.org/ كمثال. تعمل مواقع الويب المدرجة هنا "
+"بالكامل في متصفح الويب الخاص بك دون إرسال أي من البيانات التي تم إنشاؤها إلى"
+" خادم خارجي ، ولكن الخيار الأكثر أمانًا هو تنزيل مولد المحفظة وتشغيله على "
+"جهاز كمبيوتر باستخدام نظام تشغيل مثبت حديثًا غير متصل بـ الأنترنيت."
 
 #: ../../wallets/paper.rst:93
 msgid ""
 "This guide is based on the guide available from "
 "https://walletgenerator.net/. Please donate if you find this project useful!"
 msgstr ""
+"يستند هذا الدليل على الدليل المتاح من https://walletgenerator.net/. يرجى "
+"التبرع إذا وجدت هذا المشروع مفيدًا!"
 
 #: ../../wallets/paper.rst:98
 msgid "Address generation"
-msgstr ""
+msgstr "مولد العناوين"
 
 #: ../../wallets/paper.rst:100
 msgid ""
@@ -169,10 +223,13 @@ msgid ""
 " downloaded the wallet generator). Select your language and choose Dash as "
 "the currency if necessary. The following screen will appear:"
 msgstr ""
+"انتقل إلى https://paper.dash.org/ في متصفح الويب الخاص بك (أو افتح "
+"index.html إذا قمت بتنزيل مولد المحفظة). حدد لغتك واختر داش كعملة عند "
+"الضرورة. سوف تظهر الشاشة التالية:"
 
 #: ../../wallets/paper.rst:107
 msgid "The Dash Paper Wallet Generator at paper.dash.org"
-msgstr ""
+msgstr "محفزة داش الورقية في paper.dash.org"
 
 #: ../../wallets/paper.rst:109
 msgid ""
@@ -180,15 +237,18 @@ msgid ""
 "unique. Move our mouse around and/or type random characters into the text "
 "box until the process reaches 100% and the following screen appears:"
 msgstr ""
+"هناك حاجة إلى بعض البيانات العشوائية لضمان أن العنوان والمفتاح اللذين يتم "
+"إنشاؤهما يكونان فريدين. حرك الماوس حول و / أو اكتب أحرفًا عشوائية في مربع "
+"النص حتى تصل العملية إلى 100٪ وتظهر الشاشة التالية:"
 
 #: ../../wallets/paper.rst:117
 msgid "Generating randomness for the Dash Paper Wallet Generator"
-msgstr ""
+msgstr "توليد العشوائية لمولد المحفظة داش الورق"
 
 #: ../../wallets/paper.rst:122
 msgid ""
 "A Dash address and private key generated using Dash Paper Wallet Generator"
-msgstr ""
+msgstr "عنوان داش ومفتاح خاص تم إنشاؤه باستخدام توليد محفظة داش الورقية"
 
 #: ../../wallets/paper.rst:125
 msgid ""
@@ -198,10 +258,15 @@ msgid ""
 "without somehow recording the dash address and private key, all data will be"
 " irretrievably lost, together with any funds you have sent to the address."
 msgstr ""
+"بمجرد ظهور عنوانك العام ومفتاحك الخاص (كما هو موضح في إستراد المحفظة "
+"الممسوحة أو WIF) في علامة **محفظة واحدة** ، يجب أن تنقر على الفور **طباعة** "
+"لطباعة البيانات وتخزينها بأمان. إذا تركت الصفحة دون تسجيل عنوان الشرطة "
+"والمفتاح الخاص بطريقة ما ، فستفقد جميع البيانات إلى غير رجعة ، بالإضافة إلى "
+"أي أموال ترسلها إلى العنوان."
 
 #: ../../wallets/paper.rst:133
 msgid "Encryption"
-msgstr ""
+msgstr "تشفير"
 
 #: ../../wallets/paper.rst:135
 msgid ""
@@ -210,6 +275,10 @@ msgid ""
 "and use it, but it is not protected from being stolen if someone finds it. "
 "You should keep it safe the same way you would jewels or cash."
 msgstr ""
+"لا تحتوي المعلومات المعروضة في علامة  **محفظة واحدة** على عبارة مرور وهي غير"
+" مشفرة. يمكنك طباعة هذه المحفظة الورقية كما هي واستخدامها ، ولكنها ليست "
+"محمية من السرقة إذا وجدها شخص ما. يجب عليك أن تحافظ على سلامته بنفس الطريقة "
+"التي ترغبين فيها في المجوهرات أو المال."
 
 #: ../../wallets/paper.rst:140
 msgid ""
@@ -227,6 +296,17 @@ msgid ""
 " the password or lose the encrypted key, you will permanently lose access to"
 " your funds."
 msgstr ""
+"إذا قررت أنك بحاجة إلى الأمان الإضافي لكلمة المرور لهذا العنوان ، فانقر فوق "
+"**Paper Wallet**. سيظهر عنوان / زوج مختلف. لإنشاء محفظتك المشفرة ، اختر "
+"**BIP38 Encrypt؟** وأدخل عبارة المرور. ضع علامة في المربع **إخفاء الفن؟** "
+"وتغيير إلى **1** الحقل **عناوين لإنشاء** ثم انقر فوق **إنشاء**. سيتم إنشاء "
+"محفظة جديدة حيث يتم تشفير المفتاح الخاص (WIF) باستخدام كلمة المرور التي "
+"حددتها ، مما يؤدي إلى مفتاح BIP38. أنت الآن بحاجة إلى مفتاح BIP38 وكلمة "
+"المرور للتحكم في الأموال على العنوان ، لذا تأكد من النقر فوق **طباعة** "
+"وتخزينهما بأمان. إذا كنت غير متأكد من كيفية استخدام تشفير BIP38 ، فمن "
+"المستحسن بشدة اختبار سير العمل باستخدام كمية قليلة من داش قبل تخزين أموال "
+"كبيرة على محفظة ورقية مشفرة. إذا نسيت كلمة المرور أو فقدت المفتاح المشفر ، "
+"فستفقد الوصول إلى أموالك بشكل دائم."
 
 #: ../../wallets/paper.rst:154
 msgid ""
@@ -235,14 +315,18 @@ msgid ""
 "begins with \"6P\". See `here <https://bitcoinpaperwallet.com/bip38 "
 "-password-encrypted-wallets/>`_ to learn more about BIP38."
 msgstr ""
+"يمكن تحديد عنوان داس بسهولة لأنه يبدأ دائمًا بـ \"7\". يمكن تعريف مفتاح "
+"BIP38 الذي تم تشفيره لأنه يبدأ دائمًا بـ \"6P\". أنظر `هنا "
+"<https://bitcoinpaperwallet.com/bip38 -password-encrypted-wallets/>`_ لتعلم "
+"المزيد عن BIP38."
 
 #: ../../wallets/paper.rst:162
 msgid "Encrypted paper wallet generated using Dash Paper Wallet Generator"
-msgstr ""
+msgstr "محفظة ورقية مشفرة تم إنشاؤها باستخدام محفظة داش الورقية"
 
 #: ../../wallets/paper.rst:165
 msgid "Sending to a paper wallet and viewing the balance"
-msgstr ""
+msgstr "إرسال إلى محفظة ورقية وعرض الرصيد"
 
 #: ../../wallets/paper.rst:167
 msgid ""
@@ -256,54 +340,66 @@ msgid ""
 "you’d like. Just make sure you test your wallet with small amounts first to "
 "learn how it works."
 msgstr ""
+"يمكنك إرسال داش إلى عنوان محفظة ورقي بنفس طريقة أي عنوان داش آخر. راجع وثائق"
+" محفظتك إذا كنت لا تعرف كيفية القيام بذلك. في هذا المثال ، تم إرسال 0.05 داش"
+" (رسوم المعاملة ناقص) إلى عنوان المحفظة الورقية. يمكن لأي شخص لديه معرفة "
+"بالعنوان العام رؤية رصيد المحفظة باستخدام مستكشف كتلة ، ولكن فقط شخص لديه "
+"معرفة بالمفتاح الخاص يمكنه الوصول إلى الأموال. يمكنك إجراء العديد من "
+"الإيداعات وإرسال العديد من العملات إلى نفس العنوان الذي تريده. فقط تأكد من "
+"اختبار محفظتك بكميات صغيرة أولاً لمعرفة كيفية عملها."
 
 #: ../../wallets/paper.rst:180
 msgid ""
 "Viewing the balance of the paper wallet using the Dash Block Explorer at "
 "explorer.dash.org"
-msgstr ""
+msgstr "رؤية رصيد المحفة الورقية من explorer.dash.org"
 
 #: ../../wallets/paper.rst:183
 msgid "Spending from a paper wallet"
-msgstr ""
+msgstr "الإىسال من المحفظة الورقية"
 
 #: ../../wallets/paper.rst:185
 msgid ""
 "In order to access the funds stored on the paper wallet address, you will "
 "need the following:"
 msgstr ""
+"للوصول إلى الأموال المخزنة على عنوان المحفظة الورقية ، ستحتاج إلى ما يلي:"
 
 #: ../../wallets/paper.rst:188
 msgid "The public address"
-msgstr ""
+msgstr "العناوين العامة"
 
 #: ../../wallets/paper.rst:189
 msgid "The private key in WIF"
-msgstr ""
+msgstr "المفتاح الخاص في WIF"
 
 #: ../../wallets/paper.rst:191
 msgid ""
 "If you encrypted the wallet, you will additionally need the following to "
 "convert the BIP38 key into the WIF key:"
 msgstr ""
+"إذا قمت بتشفير المحفظة ، فستحتاج إلى ما يلي أيضًا لتحويل المفتاح BIP38 إلى "
+"مفتاح WIF:"
 
 #: ../../wallets/paper.rst:194
 msgid "The encrypted private key in BIP38 format"
-msgstr ""
+msgstr "المفتاح الخاص المشفر بتنسيق BIP38"
 
 #: ../../wallets/paper.rst:195
 msgid "The passphrase you used to encrypt the key"
-msgstr ""
+msgstr "عبارة المرور التي استخدمتها لتشفير المفتاح"
 
 #: ../../wallets/paper.rst:198
 msgid "Optional: Decrypt BIP38 key to WIF"
-msgstr ""
+msgstr "اختياري: فك تشفير مفتاح BIP38 إلى WIF"
 
 #: ../../wallets/paper.rst:200
 msgid ""
 "If you encrypted your paper wallet, you will first need to decrypt the BIP38"
 " key. You can skip this step if your private key was not encrypted."
 msgstr ""
+"إذا قمت بتشفير محفظتك الورقية ، فستحتاج أولاً إلى فك تشفير المفتاح BIP38. "
+"يمكنك تخطي هذه الخطوة إذا لم يكن مفتاحك الخاص مشفرًا."
 
 #: ../../wallets/paper.rst:203
 msgid ""
@@ -314,16 +410,22 @@ msgid ""
 "information required to access the funds on the public address appears under"
 " **Private Key WIF**. Copy the Private Key WIF and use it in the next step."
 msgstr ""
+"انتقل إلى علامة التبويب **تفاصيل المحفظة** ، وأدخل المفتاح المشفر في الحقل "
+"**إدخال مفتاح خاص** وانقر فوق **عرض التفاصيل**. سيُطلب منك إدخال **عبارة "
+"BIP38** في الحقل. أدخل عبارة المرور وانقر فوق **فك تشفير BIP38**. ستظهر "
+"مجموعة من المعلومات المشتقة من المفتاح ، تظهر المعلومات المطلوبة للوصول إلى "
+"الأموال على العنوان العام تحت **المفتاح الخاص WIF**. انسخ المفتاح الخاص WIF "
+"واستخدمه في الخطوة التالية."
 
 #: ../../wallets/paper.rst:214
 msgid ""
 "Dash Paper Wallet Generator displaying information derived from an encrypted"
 " private key"
-msgstr ""
+msgstr "مولد محفظة داش الورقية يعرض معلومات مستمدة من مفتاح خاص مشفر"
 
 #: ../../wallets/paper.rst:218
 msgid "Importing the private key to your live wallet"
-msgstr ""
+msgstr "استيراد المفتاح الخاص إلى محفظتك المباشرة"
 
 #: ../../wallets/paper.rst:220
 msgid ""
@@ -335,10 +437,16 @@ msgid ""
 "Wallet**. Enter your wallet passphrase. Then click **Tools** and select "
 "**Debug Console**. The console appears. Enter the following command:"
 msgstr ""
+"عندما تكون مستعدًا لإنفاق الرصيد في المحفظة الورقية ، ستحتاج إلى استيراد "
+"المفتاح الخاص المستخدم للتحكم في العنوان المطبوع على المحفظة في محفظة داش "
+"أخرى متصلة بالإنترنت. سنستخدم محفظة  داش كور في هذا المثال ، على الرغم من "
+"دعم داش أليكتروم ومحافظ الجوال أيضًا. افتح محفظة داش كور ، وانقر على "
+"**الإعدادات** و **فتح المحفظة**. أدخل عبارة المرور الخاصة بك. ثم انقر فوق "
+"**أدوات** وحدد **Debug Console**. تظهر وحدة التحكم. أدخل الأمر التالي:"
 
 #: ../../wallets/paper.rst:236
 msgid "Dash Core Wallet importing a private key"
-msgstr ""
+msgstr "محفظة داش كور تستورد مفتاحًا خاصًا"
 
 #: ../../wallets/paper.rst:238
 msgid ""
@@ -348,12 +456,18 @@ msgid ""
 "imported address will appear in your list of transactions. If you use Coin "
 "Control, you can also enable or disable the address for spending there."
 msgstr ""
+"تتطلب هذه العملية إعادة فحص بلوكشين الذي تم تنزيله بالكامل للمعاملات التي "
+"تتضمن هذا العنوان ، وبالتالي ستستغرق بعض الوقت. كن صبورا. بمجرد اكتمال "
+"العملية ، ستظهر أي معاملات تتضمن العنوان المدرج في قائمة المعاملات الخاصة "
+"بك. إذا كنت تستخدم عملة التحكم ، يمكنك أيضًا تمكين أو تعطيل عنوان الإنفاق "
+"هناك."
 
 #: ../../wallets/paper.rst:251
 msgid ""
 "Paper wallet address successfully imported into Dash Core Wallet from WIF "
 "private key"
 msgstr ""
+"تم استيراد عنوان محفظة الورق بنجاح إلى محفظة داش كور من مفتاح WIF الخاص"
 
 #: ../../wallets/paper.rst:254
 msgid ""
@@ -365,9 +479,17 @@ msgid ""
 "access to the same address from the paper wallet before you do. You can then"
 " spend your balance as usual."
 msgstr ""
+"بما أن العنوان العام للحقيبة الورقية لا يزال يحتفظ بالأموال ، يمكن أيضًا "
+"استيراده مرة أخرى في محفظة ثانية إذا لم يتم إتلافه. يوصى بتحويل الرصيد من "
+"المحفظة الورقية إلى عنوان محفظة داخلي أو عنوان آخر حيث يكون لديك سيطرة حصرية"
+" على المفتاح الخاص. سيؤدي ذلك إلى منع طرف ثالث من الحصول على وصول غير مصرح "
+"به إلى العنوان نفسه من المحفظة الورقية قبل قيامك بذلك. يمكنك حينئذٍ إنفاق "
+"رصيدك كالمعتاد."
 
 #: ../../wallets/paper.rst:262
 msgid ""
 "Once the paper wallet is empty and you are sure it will not be receiving any"
 " further deposits, you can destroy the paper."
 msgstr ""
+"بمجرد أن تصبح المحفظة الورقية فارغة وكنت متأكداً من أنها لن تتلقى أي ودائع "
+"أخرى ، يمكنك تدمير الورقة."

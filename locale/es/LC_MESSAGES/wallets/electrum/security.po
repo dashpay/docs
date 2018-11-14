@@ -3,14 +3,19 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alejandro Echeverria <alejem93@gmail.com>, 2018
+# Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018
+# Ivan SIerraalta <ivansierraalta@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 10:17+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-11-07 06:03+0000\n"
+"PO-Revision-Date: 2018-03-19 12:19+0000\n"
+"Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,94 +115,31 @@ msgstr "Restaurar"
 msgid ""
 "The only thing needed to recover a Dash Electrum wallet on another computer "
 "is its seed. You can test wallet recovery with your current installation of "
-"Dash Electrum by removing the wallet data from the application data folder. "
-"This optional procedure is described below. Before continuing, verify that "
-"your seed is written down clearly and correctly on paper."
+"Dash Electrum by selecting the **File > New/Restore** menu item. A dialog "
+"will appear asking you to name your new wallet. Enter a name, select "
+"**Standard wallet** as the wallet type and then choose **I already have a "
+"seed**."
 msgstr ""
 "Lo único que se necesita para recuperar una billetera Dash Electrum en otra "
-"computadora es la semilla. Puedes probar la recuperación de la billetera con"
-" tu instalación actual de Dash Electrum quitando los datos de la billetera "
-"de la carpeta de datos de la aplicación. Este procedimiento opcional se "
-"describe a continuación. Antes de continuar, verifica que tu semilla esté "
-"escrita clara y correctamente en papel."
+"computadora es su semilla. Puedes probar la recuperación de billetera con tu"
+" instalación actual de Dash Electrum seleccionando el elemento de menú "
+"**Archivo > Nuevo/Restaurar**. Aparecerá un cuadro de diálogo pidiéndote que"
+" nombres tu nueva billetera. Ingresa un nombre, selecciona **Billetera "
+"estándar** como el tipo de billetera y luego elije **Ya tengo una semilla**."
 
-#: ../../wallets/electrum/security.rst:60
-msgid ""
-"To get Dash Electrum to generate a new wallet, the old wallet data needs to "
-"be deleted. Begin by closing Dash Electrum. Next, locate the application "
-"data folder according to your operating system:"
-msgstr ""
-"Para que Dash Electrum genere una nueva billetera, es necesario eliminar los"
-" datos de la billetera anterior. Comienza cerrando Dash Electrum. A "
-"continuación, busca la carpeta de datos de la aplicación de acuerdo con tu "
-"sistema operativo:"
-
-#: ../../wallets/electrum/security.rst:64
-msgid "**Linux:**"
-msgstr "**Linux:**"
-
-#: ../../wallets/electrum/security.rst:66
-msgid ""
-"Open Files, select **Go > Go to folder**, copy the path ``~/.electrum`` and "
-"paste it into the dialog box"
-msgstr ""
-"Abrir archivos, selecciona **Ir > Ir a la carpeta**, copia la ruta "
-"``~/.electrum`` y pégala en el cuadro de diálogo"
-
-#: ../../wallets/electrum/security.rst:68
-#: ../../wallets/electrum/security.rst:74
-#: ../../wallets/electrum/security.rst:80
-msgid "Delete all files in the folder"
-msgstr "Borrar todos los archivos en la carpeta"
-
-#: ../../wallets/electrum/security.rst:70
-msgid "**macOS:**"
-msgstr "**macOS:**"
-
-#: ../../wallets/electrum/security.rst:72
-msgid ""
-"Open Finder, select **Go > Go to Folder**, copy the path ``~/.electrum`` and"
-" paste it into the dialog box"
-msgstr ""
-"Abrir buscador, selecciona  **Ir > Ir a la carpeta**, copia la ruta "
-"``~/.electrum`` y pégala en el cuadro de diálogo"
-
-#: ../../wallets/electrum/security.rst:76
-msgid "**Windows:**"
-msgstr "**Windows:**"
-
-#: ../../wallets/electrum/security.rst:78
-msgid ""
-"Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and paste it in to"
-" the address bar"
-msgstr ""
-"Abrir el explorador, copia la ruta ``%APPDATA%\\Electrum-DASH`` y pégala en "
-"la barra de direcciones"
-
-#: ../../wallets/electrum/security.rst:82
-msgid ""
-"Having cleared the data directory, restart Dash Electrum. A dialog will "
-"appear asking you to name your new wallet. Enter a name, select **Standard "
-"wallet** as the wallet type and then choose **I already have a seed**."
-msgstr ""
-"Habiendo borrado el directorio de datos, reinicia Dash Electrum. Aparecerá "
-"un cuadro de diálogo pidiéndote que nombres tu nueva billetera. Ingresa un "
-"nombre, selecciona **Billetera estándar** asi como el tipo de billetera y "
-"luego elije **Ya tengo una semilla**."
-
-#: ../../wallets/electrum/security.rst:90
+#: ../../wallets/electrum/security.rst:63
 msgid "Restoring a wallet from an existing seed"
 msgstr "Restaurar una billetera desde una semilla existente"
 
-#: ../../wallets/electrum/security.rst:92
+#: ../../wallets/electrum/security.rst:65
 msgid "Next, copy the twelve word seed into the text field."
 msgstr "Luego, copia la semilla de doce palabras en el campo de texto."
 
-#: ../../wallets/electrum/security.rst:97
+#: ../../wallets/electrum/security.rst:70
 msgid "Entering the recovery seed"
 msgstr "Ingresar una semilla de recuperación"
 
-#: ../../wallets/electrum/security.rst:99
+#: ../../wallets/electrum/security.rst:72
 msgid ""
 "If your seed was entered correctly, Dash Electrum gives you the option to "
 "add a password for your wallet. After restoring your wallet, Dash Electrum "
@@ -212,6 +154,39 @@ msgstr ""
 " como **No verificadas**. Este problema desaparece después de reiniciar el "
 "programa."
 
-#: ../../wallets/electrum/security.rst:108
+#: ../../wallets/electrum/security.rst:81
 msgid "Unverified transactions after recovery"
 msgstr "Transacciones no verificadas después de la recuperación"
+
+#: ../../wallets/electrum/security.rst:83
+msgid ""
+"To restore a wallet file without using the recovery seed, copy the file to "
+"the application data folder according to your operating system:"
+msgstr ""
+"Para restaurar un archivo de billetera sin usar la semilla de recuperación, "
+"copia el archivo a la carpeta de datos de la aplicación de acuerdo con tu "
+"sistema operativo:"
+
+#: ../../wallets/electrum/security.rst:86
+msgid ""
+"**Linux:** Open Files, select **Go > Go to folder**, copy the path "
+"``~/.electrum-dash`` and paste it into the dialog box."
+msgstr ""
+"**Linux:** Abre Archivos, selecciona **Ir > Ir a carpeta**, copia la ruta "
+"``~/.electrum-dash`` y pégala en el cuadro de diálogo."
+
+#: ../../wallets/electrum/security.rst:89
+msgid ""
+"**macOS:** Open Finder, select **Go > Go to Folder**, copy the path "
+"``~/.electrum-dash`` and paste it into the dialog box."
+msgstr ""
+"**macOS:** Abre el buscador, selecciona **Ir > Ir a carpeta**, copia la ruta"
+" ``~/.electrum-dash`` y pégala en el cuadro de diálogo."
+
+#: ../../wallets/electrum/security.rst:92
+msgid ""
+"**Windows:** Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and "
+"paste it in to the address bar."
+msgstr ""
+"**Windows:** Abre el explorador, copia la ruta ``%APPDATA%\\Electrum-DASH`` "
+"y pégala en la barra de direcciones."

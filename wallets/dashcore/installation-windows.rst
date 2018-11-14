@@ -14,7 +14,7 @@ should be similar for Windows XP, Vista, 7 and 8.
 Downloading the Dash Core wallet
 --------------------------------
 
-Visit https://www.dash.org/get-dash/ to download the latest Dash Core
+Visit https://www.dash.org/get-dash to download the latest Dash Core
 wallet. In most cases, the website will properly detect which version
 you need. Click the blue **Dash Core** button to download the installer
 directly.
@@ -43,7 +43,7 @@ how to check this in other versions of Windows, see
    a 64 bit system.
 
 Once you know which version you need, download the Dash Core Installer
-to your computer from https://www.dash.org/wallets/
+to your computer from https://www.dash.org/wallets
 
 .. figure:: img/windows/106328767.png
    :height: 250px
@@ -154,7 +154,7 @@ it does not, click **Start > Dash Core > Dash Core** to start the
 application. The first time the program is launched, you will be offered
 a choice of where you want to store your blockchain and wallet data.
 Choose a location with enough free space, as the blockchain can reach
-around 3-4GB in size. It is recommended to use the default data folder
+10GB+ in size. It is recommended to use the default data folder
 if possible.
 
 .. figure:: img/windows/106328945.png

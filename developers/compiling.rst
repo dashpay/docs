@@ -22,7 +22,6 @@ The instructions to build Dash Core 0.12.3 or older are available `here
 <https://docs.dash.org/en/0.12.3/developers/compiling.html>`__ on a
 previous version of this page.
 
-
 .. _gitian-build:
 
 Gitian

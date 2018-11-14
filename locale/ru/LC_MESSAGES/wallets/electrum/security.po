@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Андрей Дегтяр <diusha1711@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 10:17+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-07 06:03+0000\n"
+"PO-Revision-Date: 2018-03-19 12:19+0000\n"
 "Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -109,93 +112,26 @@ msgstr "Восстановление"
 msgid ""
 "The only thing needed to recover a Dash Electrum wallet on another computer "
 "is its seed. You can test wallet recovery with your current installation of "
-"Dash Electrum by removing the wallet data from the application data folder. "
-"This optional procedure is described below. Before continuing, verify that "
-"your seed is written down clearly and correctly on paper."
+"Dash Electrum by selecting the **File > New/Restore** menu item. A dialog "
+"will appear asking you to name your new wallet. Enter a name, select "
+"**Standard wallet** as the wallet type and then choose **I already have a "
+"seed**."
 msgstr ""
-"Единственное, что вам понадобится для восстановления кошелька Dash Electrum "
-"на другом компьютере - это его seed-фраза. Можно протестировать "
-"восстановление кошелька на текущей установленной у вас версии Dash Electrum "
-"удалив данные кошелька из папки \"Application data\". Эта процедура описана "
-"ниже, она не является обязательной. Прежде чем сделать это, удостоверьтесь, "
-"что ваша seed-фраза  записана на бумаге правильно и понятно."
 
-#: ../../wallets/electrum/security.rst:60
-msgid ""
-"To get Dash Electrum to generate a new wallet, the old wallet data needs to "
-"be deleted. Begin by closing Dash Electrum. Next, locate the application "
-"data folder according to your operating system:"
-msgstr ""
-"Для того, чтобы Dash Electrum сгенерировал новый кошелёк, все данные старого"
-" кошелька необходимо удалить. Чтобы сделать это, закройте Dash Electrum. "
-"Далее отыщите на компьютере папку \"Application data\" в зависимости от "
-"установленной операционной системы:"
-
-#: ../../wallets/electrum/security.rst:64
-msgid "**Linux:**"
-msgstr "**Linux:**"
-
-#: ../../wallets/electrum/security.rst:66
-msgid ""
-"Open Files, select **Go > Go to folder**, copy the path ``~/.electrum`` and "
-"paste it into the dialog box"
-msgstr ""
-"Откройте Files, выберите **Go > Go to folder**, скопируйте путь "
-"``~/.electrum`` и вставьте его в диалоговое окно"
-
-#: ../../wallets/electrum/security.rst:68
-#: ../../wallets/electrum/security.rst:74
-#: ../../wallets/electrum/security.rst:80
-msgid "Delete all files in the folder"
-msgstr "Удалите все файлы из папки"
-
-#: ../../wallets/electrum/security.rst:70
-msgid "**macOS:**"
-msgstr "**macOS:**"
-
-#: ../../wallets/electrum/security.rst:72
-msgid ""
-"Open Finder, select **Go > Go to Folder**, copy the path ``~/.electrum`` and"
-" paste it into the dialog box"
-msgstr ""
-"Откройте Finder, выберите **Go > Go to folder**, скопируйте путь "
-"``~/.electrum`` и вставьте его в диалоговое окно"
-
-#: ../../wallets/electrum/security.rst:76
-msgid "**Windows:**"
-msgstr "**Windows:**"
-
-#: ../../wallets/electrum/security.rst:78
-msgid ""
-"Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and paste it in to"
-" the address bar"
-msgstr ""
-"Откройте браузер Explorer, скопируйте следующий путь ``%APPDATA%\\Electrum-"
-"DASH`` и вставьте его в адресную строку"
-
-#: ../../wallets/electrum/security.rst:82
-msgid ""
-"Having cleared the data directory, restart Dash Electrum. A dialog will "
-"appear asking you to name your new wallet. Enter a name, select **Standard "
-"wallet** as the wallet type and then choose **I already have a seed**."
-msgstr ""
-"Очистив папку с данными, перезапустите Dash Electrum. Появится диалоговое "
-"окно, в котором вам будет предложено ввести имя для вашего нового кошелька."
-
-#: ../../wallets/electrum/security.rst:90
+#: ../../wallets/electrum/security.rst:63
 msgid "Restoring a wallet from an existing seed"
 msgstr "Восстановление кошелька с помощью существующей seed-фразы"
 
-#: ../../wallets/electrum/security.rst:92
+#: ../../wallets/electrum/security.rst:65
 msgid "Next, copy the twelve word seed into the text field."
 msgstr ""
 "Следующим шагом скопируйте в текстовое поле seed-фразу из двенадцати слов."
 
-#: ../../wallets/electrum/security.rst:97
+#: ../../wallets/electrum/security.rst:70
 msgid "Entering the recovery seed"
 msgstr "Ввод seed-фразы восстановления"
 
-#: ../../wallets/electrum/security.rst:99
+#: ../../wallets/electrum/security.rst:72
 msgid ""
 "If your seed was entered correctly, Dash Electrum gives you the option to "
 "add a password for your wallet. After restoring your wallet, Dash Electrum "
@@ -210,6 +146,30 @@ msgstr ""
 " обозначены как **Not Verified**. Эта проблема исчезает при перезапуске "
 "программы."
 
-#: ../../wallets/electrum/security.rst:108
+#: ../../wallets/electrum/security.rst:81
 msgid "Unverified transactions after recovery"
 msgstr "Неподтверждённые транзакции после восстановления"
+
+#: ../../wallets/electrum/security.rst:83
+msgid ""
+"To restore a wallet file without using the recovery seed, copy the file to "
+"the application data folder according to your operating system:"
+msgstr ""
+
+#: ../../wallets/electrum/security.rst:86
+msgid ""
+"**Linux:** Open Files, select **Go > Go to folder**, copy the path "
+"``~/.electrum-dash`` and paste it into the dialog box."
+msgstr ""
+
+#: ../../wallets/electrum/security.rst:89
+msgid ""
+"**macOS:** Open Finder, select **Go > Go to Folder**, copy the path "
+"``~/.electrum-dash`` and paste it into the dialog box."
+msgstr ""
+
+#: ../../wallets/electrum/security.rst:92
+msgid ""
+"**Windows:** Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and "
+"paste it in to the address bar."
+msgstr ""

@@ -21,22 +21,20 @@ List of hosting services
 **Disclaimer**: Dash Core may be affiliated with these community
 members, but is not involved in the provision of any of these services.
 
-Masternode.me
--------------
+CrowdNode
+---------
 
-.. image:: img/moocowmoo.png
+.. image:: img/crowdnode.png
    :width: 200px
    :align: right
-   :target: https://masternode.me
+   :target: https://crowdnode.io
 
-https://masternode.me
+https://crowdnode.io
 
-- Operated by: moocowmoo (Dash Core team member)
-- Services: Hosting
-- `Site <https://masternode.me>`__
-- `Email <moocowmoo@masternode.me>`__
-- `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`__
-- `Review <https://www.dashforcenews.com/masternode-trusted-masternode-shares-review/>`__
+- Operated by: CrowdNode ApS
+- Services: Hosting, Shares
+- `Site <https://crowdnode.io>`__
+- `Email <hello@crowdnode.io>`__
 
 Splawik's Hosting Service
 -------------------------
@@ -54,20 +52,23 @@ http://dashmasternode.io
 - `Email <splawik21@protonmail.com>`__
 - `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`__
 
-CrowdNode
----------
+AllNodes
+------
 
-.. image:: img/crowdnode.png
+.. image:: img/allnodes.png
    :width: 200px
    :align: right
-   :target: https://crowdnode.io
+   :target: https://www.allnodes.com
 
-https://crowdnode.io
+https://www.allnodes.com
 
-- Operated by: CrowdNode ApS
-- Services: Hosting, Shares
-- `Site <https://crowdnode.io>`__
-- `Email <hello@crowdnode.io>`__
+- Operated by: Sephiroth
+- Services: Hosting
+- `Site <https://www.allnodes.com>`__
+- `Email <info@allnodes.com>`__
+- `Twitter <https://twitter.com/allnodes>`__
+- `Telegram <https://t.me/allnodes>`__
+- `Discord <https://discord.allnodes.com>`__
 
 Node40
 ------
@@ -85,6 +86,23 @@ https://node40.com
 - `Email <info@node40.com>`__
 - `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`__
 - `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`__
+
+Masternode.me
+-------------
+
+.. image:: img/moocowmoo.png
+   :width: 200px
+   :align: right
+   :target: https://masternode.me
+
+https://masternode.me
+
+- Operated by: moocowmoo (Dash Core team member)
+- Services: Hosting
+- `Site <https://masternode.me>`__
+- `Email <moocowmoo@masternode.me>`__
+- `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`__
+- `Review <https://www.dashforcenews.com/masternode-trusted-masternode-shares-review/>`__
 
 币舫 (Bifun)
 -----------------

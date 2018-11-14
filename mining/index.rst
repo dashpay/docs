@@ -110,7 +110,9 @@ reasons such as ping latency, uptime, fee, users, etc.:
 - https://www.coinotron.com
 - https://dash.miningpoolhub.com
 - https://www.multipool.us
+- https://dash.miningfield.com
 - https://www.f2pool.com
+- https://dash.miningfield.com
 - https://www2.coinmine.pl/dash
 - https://aikapool.com/dash
 - https://www.antpool.com
