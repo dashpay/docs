@@ -16,8 +16,8 @@ in the interest of the network and the value of the Dash they hold.
 
 .. _masternode-update:
 
-How to update a masternode
-==========================
+Updating masternodes
+====================
 
 Periodically, the Dash Core development team will release updates to
 Dash. Since normal nodes rely on them for services and copies of the
@@ -28,15 +28,6 @@ queue by the Proof of Service (PoSe) system. If you run a hosted
 masternode, your hosting operator will take care of updates for you. If
 not, the method of updating depends on how you installed Dash.
 
-Dash 0.13.0 introduced `Deterministic Masternode Lists
-<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
-method of finding consensus on the list of valid masternodes. Due to the
-deep underlying changes and new signature formats involved, the
-instructions on how to set up a masternode have changed as well. This
-documentation describes how to set up a masternode using Dash 0.13.0 or
-higher. If you are looking for documentation for older versions, please
-see the `0.12.3 documentation branch <https://docs.dash.org/en/0.12.3/masternodes/maintenance.html#how-to-update-a-masternode>`_.
-
 Minor version updates to Dash (e.g. from 0.12.3.1 to 0.12.3.2) do not
 make changes to the protocol version, while major version updates (e.g.
 from 0.12.2.3 to 0.12.3.0) will usually increase the network protocol
@@ -46,14 +37,45 @@ the protocol version did change, you must issue a start command from
 your wallet. Do not send start commands to your masternode if not
 necessary, as it will send you to the back of the payment queue.
 
+.. _deterministic_upgrade
 
+Dsah 0.13 Upgrade Procedure
+---------------------------
 
+Dash 0.13.0 introduced `Deterministic Masternode Lists
+<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
+method of finding consensus on the list of valid masternodes. Due to the
+deep underlying changes and new signature formats involved, the
+instructions on how to set up a masternode have changed as well. This
+documentation describes how to upgrade a masternode from Dash 0.12.3 to
+Dash 0.13.0 without moving your collateral.
 
-Option 2: Manual update
------------------------
+Begin by logging in to your masternode using ssh or PuTTY. Generate BLS
+public/private keypair as follows::
 
-To update Dash manually, log in to your server using ssh or PuTTY. First
-we need to stop Dash running::
+  ~/.dashcore/dash-cli bls generate
+
+  {
+  "secret": "2dbc0abdd52467569e4e74db61406b32c8ce41f38e5919ab0ee5596dc4b384cf",
+  "public": "84d8468dd9b495443ae9d0e12e608229111edf5ea94d52deb1623716566444425a3deb4a0fa09477e5eafb8fc94a2384"
+  }
+
+The public key will be used in following steps. The secret key must be
+kept secure since it is used to sign operator-related masternode
+messages and update operator-related masternode parameters (e.g. IP
+Address, Port). **These keys are NOT stored in the Dash Core Wallet and
+must be backed up, similar to the value provided in the past by the
+``masternode genkey`` command.**
+
+Next, we will prepare an unsigned ProRegTx special transaction using the
+``protx register_prepare`` command. This command has the following
+syntax::
+
+  protx register_prepare "collateralHash" collateralIndex "ipAndPort" "ownerKeyAddr" "operatorKeyAddr" "votingKeyAddr" operatorReward "payoutAddress"
+
+Begin by generating 
+
+First we need to stop Dash running::
 
   ~/.dashcore/dash-cli stop
 
