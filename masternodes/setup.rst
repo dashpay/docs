@@ -15,14 +15,14 @@ particularly if you are not storing your Dash on a hardware wallet.
 There are some decisions to be made along the way, and optional extra
 steps to take for increased security.
 
-If you prefer to use a masternode hosting service, several community
-members provide hosting at `masternode.me <https://masternode.me/>`_,
-`node40.com <https://www.node40.com/hosting/>`_, `dashmasternode.io
-<http://dashmasternode.io/>`_ or `masternodehosting
-<https://masternodehosting.com/>`_. When using these hosting services,
-all you have to do is send a single transaction of 1000 DASH to a
-specific address and communicate the transaction ID to the hosting
-service. Simply follow the steps here.
+Commercial :ref:`masternode hosting services <masternode-hosting>` are
+available if you prefer to delegate day-to-day operation of your
+masternode to a professional operator. When using these hosting
+services, you retain full control of the 1000 DASH collateral and pay an
+agreed percentage of your reward to the operator. It is also possible to
+delegate your voting keys to a representative, see the 
+:ref:`governance documentation <using- governance>` for more
+information.
 
 Dash 0.13.0 introduced `Deterministic Masternode Lists
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
@@ -74,7 +74,7 @@ EC2 <https://aws.amazon.com/ec2>`_, `Google Cloud
 <https://cloud.google.com/compute/>`_, `Choopa
 <https://www.choopa.com/>`_ and `OVH <https://www.ovh.com/>`_ are also
 popular choices. First create an account and add credit. Then go to the
-Servers menu item on the left and click **+** to add a new server.
+**Servers** menu item on the left and click **+** to add a new server.
 Select a location for your new server on the following screen:
 
 .. figure:: img/setup-server-location.png
