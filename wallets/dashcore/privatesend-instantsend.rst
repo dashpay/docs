@@ -44,11 +44,11 @@ Configuration
    .. image:: img/privatesend-options.png
       :width: 300px
 
-2. Next to **PrivateSend rounds to use**, enter a value between 1-8.
+2. Next to **PrivateSend rounds to use**, enter a value between 1-16.
    Each round of PrivateSend performs one denominated fund mixing
    transaction. Higher numbers of rounds increase your overall level of
    anonymity while decreasing the chance of detection via node
-   collusion. 8 is the highest number of rounds currently available.
+   collusion. 16 is the highest number of rounds currently available.
 
    NOTE: To prevent system abuse, an average of one in ten rounds of
    masternode mixing incurs a fee of .001 DASH.
