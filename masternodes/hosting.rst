@@ -62,11 +62,13 @@ AllNodes
 
 https://www.allnodes.com
 
-- Operated by: AllNodes
+- Operated by: Sephiroth
 - Services: Hosting
 - `Site <https://www.allnodes.com>`__
 - `Email <info@allnodes.com>`__
-
+- `Twitter <https://twitter.com/allnodes>`__
+- `Telegram <https://t.me/allnodes>`__
+- `Discord <https://discord.allnodes.com>`__
 
 Node40
 ------
