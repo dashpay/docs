@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 10:17+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-15 06:30+0000\n"
+"PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +23,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:1
 msgid "Guide to sending and receiving Dash using the Dash Core wallet"
-msgstr ""
+msgstr "使用Dash Core钱包发送或接收达世币"
 
 #: ../../wallets/dashcore/send-receive.rst:1
 msgid "dash, core, wallet, send, receive, transaction"
-msgstr ""
+msgstr "dash、core、钱包、发送、接收、交易"
 
 #: ../../wallets/dashcore/send-receive.rst:9
 msgid "Sending and receiving"
@@ -40,6 +43,8 @@ msgid ""
 "controlled by another Dash user and associated with their wallet. You can "
 "control which addresses you use using the Coin Control feature."
 msgstr ""
+"Dash Core钱包内含一系列用于发送和接收达世币的地址。每个地址都存有一定的余额，而各个地址上的余额会显示在 **总览** "
+"选项卡上。如果用户发送达世币，那么钱包将自动将资金从这些地址上转移到收款方的钱包地址上。用户可以通过货币控制功能来选定发送达世币时所用的地址。"
 
 #: ../../wallets/dashcore/send-receive.rst:20
 msgid ""
@@ -50,10 +55,12 @@ msgid ""
 "masternode and mining payments are only released after 101 blocks. Note that"
 " a different process is used for InstantSend and PrivateSend transactions."
 msgstr ""
+"一旦用户确认交易，Dash "
+"Core钱包将会把交易录入区块链，以等待其它客户端的确认。在包含该交易的区块链获得六次确认后，交易通常就会被认为已经得到了确认，不过，主节点奖励和矿工奖励往往需要等待101个区块创建之后才能予以确认。值得注意的是，即时发送和匿名发送交易的流程与上述过程有所区别。"
 
 #: ../../wallets/dashcore/send-receive.rst:28
 msgid "Dash addresses are 34 characters long and begin with an uppercase X."
-msgstr ""
+msgstr "达世币地址以大写字母X开头，长度为34个字符。"
 
 #: ../../wallets/dashcore/send-receive.rst:31
 msgid "Sending Dash"
@@ -66,10 +73,12 @@ msgid ""
 " the funds. Click the **Send** tab in the tab bar and enter the destination "
 "address in the **Pay To** field."
 msgstr ""
+"用户可以通过Dash Core钱包将余额发送给他人。收款方需要提供接收资金的达世币地址。在获取收款地址后，用户可以单击选项卡栏上的 **发送** "
+"选项卡，然后在 **支付给** 字段中输入收款地址。"
 
 #: ../../wallets/dashcore/send-receive.rst:41
 msgid "The Dash Core Send tab"
-msgstr ""
+msgstr "Dash Core钱包的发送选项卡"
 
 #: ../../wallets/dashcore/send-receive.rst:43
 msgid ""
@@ -80,6 +89,8 @@ msgid ""
 "again later. Finally, enter the amount of Dash you want to transfer in the "
 "**Amount** field."
 msgstr ""
+"用户还可以通过位于 **支付给** 字段的右边的发送图标来选择之前用过的地址、从剪贴板上复制粘贴地址或清除当前的地址。如果输入的是新的地址，用户可以通过"
+" **标签** 字段来为该地址命名，以便将来识别地址的所有人。最后，用户还要在 **金额** 字段中输入想要发送的达世币金额。"
 
 #: ../../wallets/dashcore/send-receive.rst:53
 msgid ""
@@ -93,6 +104,8 @@ msgid ""
 "been mixed. You can find out more about PrivateSend and InstantSend "
 ":ref:`here <dashcore-privatesend-instantsend>`."
 msgstr ""
+"其它选项涉及手续费、匿名发送或即时发送功能。用户可以选择在所汇金额中自动扣除交易费用，也可以选择在汇款之外另行支付。如果希望达世币网络优先处理个人交易，那么用户就需要额外支付交易费用。用户可以选择即时发送功能，不过这个功能需要依靠网络的第二层级的不同机制才能加速交易确认。用户还可以选择匿名发送功能，它将发送经过预先混币的达世币。如需了解有关匿名发送和即时发送的更多信息，请点击"
+" :ref:`此处 <dashcore-privatesend-instantsend>`.。"
 
 #: ../../wallets/dashcore/send-receive.rst:64
 msgid ""
@@ -101,31 +114,33 @@ msgid ""
 " can be seen in the following window beginning with *Xpa*. The invoice is "
 "for 2.45 Dash, which you fill in the **Amount** field."
 msgstr ""
+"我们举个例子来示范一下吧。假设用户收到了一个票据，然后想用达世币来支付。票据上含有收款方的达世币地址，即下一个窗口上显示的以 *Xpa* "
+"开头的字符，支付金额为2.45个达世币，据此，用户就可以把地址和金额填到相应的字段中了。"
 
 #: ../../wallets/dashcore/send-receive.rst:72
 msgid "The Send tab filled out for a transaction"
-msgstr ""
+msgstr "为交易填写的发送选项卡"
 
 #: ../../wallets/dashcore/send-receive.rst:74
 msgid ""
 "Once you have entered the destination address and the amount, click the "
 "**Send** button. If you have encrypted your wallet, you will now be required"
 " to enter your password to unlock the wallet."
-msgstr ""
+msgstr "输入收款地址和金额后，用户需要单击 **发送** 按键。如果用户已经对钱包进行了加密，那么用户还需要输入密码来解锁。"
 
 #: ../../wallets/dashcore/send-receive.rst:81
 msgid "Entering the password to unlock the wallet"
-msgstr ""
+msgstr "输入密码来解锁钱包"
 
 #: ../../wallets/dashcore/send-receive.rst:83
 msgid ""
 "Finally, you are given one final confirmation and chance to cancel your send"
 " transaction before Dash Core processes the transaction on the blockchain."
-msgstr ""
+msgstr "最后要提醒的一点是，在Dash Core钱包处理区块链上的交易之前，用户还有机会进行最终确认或取消正在进行的交易。"
 
 #: ../../wallets/dashcore/send-receive.rst:90
 msgid "Final confirmation window"
-msgstr ""
+msgstr "最终确认的窗口"
 
 #: ../../wallets/dashcore/send-receive.rst:92
 msgid ""
@@ -133,17 +148,18 @@ msgid ""
 "operating system may display a notification, and the transaction will appear"
 " on the Transactions tab, where you can monitor its progress."
 msgstr ""
+"如果用户的确认 **是**，那么用户的交易将得到处理。之后，用户的操作系统将会弹出通知，而交易情况将会在交易选项卡上自动更新，以便用户掌握交易进程。"
 
 #: ../../wallets/dashcore/send-receive.rst:99
 msgid "The Windows 10 sent transaction confirmation notification"
-msgstr ""
+msgstr "Windows 10操作系统发送的交易确认通知"
 
 #: ../../wallets/dashcore/send-receive.rst:101
 msgid ""
 "Note that the amount of the transaction increased by .000045 Dash. This is "
 "the transaction fee. In the next section, we will see what this procedure "
 "looks like from the receiving side."
-msgstr ""
+msgstr "请注意，发送金额比实际的交易金额多了0.000045达世币，这是交易所收取的手费用。在下一个章节中，我们将从收款方的角度了解这一过程。"
 
 #: ../../wallets/dashcore/send-receive.rst:106
 msgid "Receiving Dash"
@@ -155,10 +171,12 @@ msgid ""
 "sending party. To do this, click **File > Receiving addresses**. The "
 "**Receiving addresses** window appears."
 msgstr ""
+"如需接收达世币，用户首先要创建一个接收地址并提供给汇款人。具体来说，用户需要单击 **文件 > 接收地址**，接下来界面将会弹出一个 **接收地址** "
+"窗口。"
 
 #: ../../wallets/dashcore/send-receive.rst:115
 msgid "The Receiving addresses window"
-msgstr ""
+msgstr "接收地址窗口"
 
 #: ../../wallets/dashcore/send-receive.rst:117
 msgid ""
@@ -172,21 +190,23 @@ msgid ""
 "and will recognize a new transaction involving your receiving address when "
 "it occurs."
 msgstr ""
+"用户可以点击并 **复制** 现有地址，也可以通过 **新建** 按键来创建新的地址，还可以通过右击现有地址并选择 **编辑** "
+"来进行编辑。然后，用户需要将地址发送给汇款人。钱包无需打开也能实时接收资金，这是因为用户的钱包会一直关注区块链上的新区块，并探查到与本钱包地址有关的新交易。"
 
 #: ../../wallets/dashcore/send-receive.rst:130
 msgid "The Windows 10 received transaction confirmation notification"
-msgstr ""
+msgstr "Windows 10操作系统收到的交易确认通知"
 
 #: ../../wallets/dashcore/send-receive.rst:132
 msgid ""
 "Once you have been paid, you can see the balance both on the **Overview** "
 "tab and on the **Transactions** tab."
-msgstr ""
+msgstr "收到付款后，用户可以在 **总览** 和 **交易** 选项卡上查看余额。"
 
 #: ../../wallets/dashcore/send-receive.rst:138
 msgid "The received transaction"
-msgstr ""
+msgstr "收到的支付款项"
 
 #: ../../wallets/dashcore/send-receive.rst:140
 msgid "**How to Create New Receiving Addresses in DashQT**"
-msgstr ""
+msgstr "**如何在DashQT中创建新的接收地址**"

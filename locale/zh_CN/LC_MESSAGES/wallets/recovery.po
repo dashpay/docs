@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 09:24+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-15 06:30+0000\n"
+"PO-Revision-Date: 2018-04-09 11:00+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +23,12 @@ msgstr ""
 
 #: ../../wallets/recovery.rst:1
 msgid "Recovering Dash wallets from files, private keys or recovery phrases"
-msgstr ""
+msgstr "通过文件、私钥和恢复短语恢复达世币钱包"
 
 #: ../../wallets/recovery.rst:1
 msgid ""
 "dash, wallet, recovery, password, lost, mobile, core, phrase, private key"
-msgstr ""
+msgstr "dash，钱包，恢复，密码，丢失，移动，core，短语，私钥"
 
 #: ../../wallets/recovery.rst:9
 msgid "Wallet Recovery"
@@ -40,7 +43,8 @@ msgid ""
 "that no longer works because the network has upgraded. This documentation is"
 " intended to help these users restore access to their funds."
 msgstr ""
-"加密数字货币的老用户有时会在U盘或云存储平台上找到遗忘的旧钱包文件。其他用户可能备份了钱包，但却忘记了用于创建备份的软件或者密码。还有一些用户还在使用因网络已升级而失效的达世币核心钱包。本文档致力于帮助上述用户恢复钱包以便重新获得个人资金的访问权限。"
+"加密数字货币的老用户有时会在U盘或云存储平台上找到遗忘的旧钱包文件。其他用户可能备份了钱包，但却忘记了用于创建备份的软件或者密码。还有一些用户还在使用因网络已升级而失效的Dash"
+" Core钱包。本文档致力于帮助上述用户恢复钱包以便重新获得个人资金的访问权限。"
 
 #: ../../wallets/recovery.rst:20
 msgid "Determining the backup format"
@@ -59,7 +63,7 @@ msgstr ""
 
 #: ../../wallets/recovery.rst:28
 msgid "Backup is stored in an older version of Dash Core that no longer works"
-msgstr "备份文件存储在失效了的旧版达世币核心钱包中"
+msgstr "备份文件存储在失效了的旧版Dash Core钱包中"
 
 #: ../../wallets/recovery.rst:30
 msgid ""
@@ -130,7 +134,8 @@ msgid ""
 "If 51 characters long and starting with 7, this is a :ref:`private key in "
 "WIF <privkey-restore>`, import using Dash Core"
 msgstr ""
-"如果短语含有51个字符且以7开头，那么这是\\ :ref:`WIF <privkey-restore>中的私钥`\\ ，用户可以使用达世币核心钱包导入。"
+"如果短语含有51个字符且以7开头，那么这是\\ :ref:`WIF <privkey-restore>中的私钥`\\ ，用户可以使用Dash "
+"Core钱包导入。"
 
 #: ../../wallets/recovery.rst:48
 msgid ""
@@ -139,7 +144,7 @@ msgid ""
 " Dash Core"
 msgstr ""
 "如果短语含有58个字符且以6P开头，那么这是\\ :ref:`BIP38 加密私钥 <privkey-restore>`\\ "
-"，用户可以通过纸钱包解码并使用达世币核心钱包导入。"
+"，用户可以通过纸钱包解码并使用Dash Core钱包导入。"
 
 #: ../../wallets/recovery.rst:50
 msgid ""
@@ -153,7 +158,7 @@ msgstr "文件备份"
 
 #: ../../wallets/recovery.rst:60
 msgid "Dash Core"
-msgstr "达世币核心"
+msgstr "Dash Core"
 
 #: ../../wallets/recovery.rst:62
 msgid ""
@@ -167,15 +172,16 @@ msgid ""
 "Dash Core**. Compare this with the latest available version of `Dash Core on"
 " the website <https://www.dash.org/wallets/#wallets>`_ as follows:"
 msgstr ""
-"达世币核心钱包的*wallet.dat*文件是最常见的钱包备份格式之一。在恢复钱包之前，用户需确保已将该文件的副本存储在安全的地方，以免恢复过程意外损坏钱包文件。在大多数情况下，*wallet.dat*的备份受到密码保护，因此用户需要密码才能重新获得对达世币资金的访问权限。如果用户已经安装了达世币核心钱包，请先单击**帮助"
-" > 关于达世币核心**，以确保钱包已更新至最新版本。用户可将钱包版本与`官网的达世币核心钱包 "
+"Dash "
+"Core钱包的*wallet.dat*文件是最常见的钱包备份格式之一。在恢复钱包之前，用户需确保已将该文件的副本存储在安全的地方，以免恢复过程意外损坏钱包文件。在大多数情况下，*wallet.dat*的备份受到密码保护，因此用户需要密码才能重新获得对达世币资金的访问权限。如果用户已经安装了Dash"
+" Core钱包，请先单击**帮助 > 关于Dash Core**，以确保钱包已更新至最新版本。用户可将钱包版本与`官网的Dash Core钱包 "
 "<https://www.dash.org/wallets/#wallets>`_相做比较:"
 
 #: ../../wallets/recovery.rst:78
 msgid ""
 "Comparing the installed version of Dash Core with the latest version "
 "available on the website"
-msgstr "将已安装的达世币核心钱包版本与网站上提供的最新版本进行比较"
+msgstr "将已安装的Dash Core钱包版本与网站上提供的最新版本进行比较"
 
 #: ../../wallets/recovery.rst:81
 msgid ""
@@ -187,10 +193,10 @@ msgid ""
 "*wallet.dat* file you want to restore to the DashCore folder in the location"
 " specified below, replacing or renaming the existing file."
 msgstr ""
-"根据\\ :ref:`安装说明 <dashcore-installation>`\\ "
-"将达世币核心钱包更新到最新版本。如果用户只有一个钱包文件但没有安装达世币核心钱包，那么用户可以根据\\ :ref:`安装说明 <dashcore-"
-"installation>`\\ "
-"进行安装，并在启动一次后创建DashCore文件夹。在这之后，用户需要关闭达世币核心钱包，将要还原的*wallet.dat*文件复制到下文指定位置的DashCore文件夹，并替换或重命名现有的文件。"
+"根据\\ :ref:`安装说明 <dashcore-installation>`\\ 将Dash "
+"Core钱包更新到最新版本。如果用户只有一个钱包文件但没有安装Dash Core钱包，那么用户可以根据\\ :ref:`安装说明 <dashcore-"
+"installation>`\\ 进行安装，并在启动一次后创建DashCore文件夹。在这之后，用户需要关闭Dash "
+"Core钱包，将要还原的*wallet.dat*文件复制到下文指定位置的DashCore文件夹，并替换或重命名现有的文件。"
 
 #: ../../wallets/recovery.rst:91
 msgid "Platform"
@@ -251,7 +257,7 @@ msgstr "按**Windows Key + R**，输入``%APPDATA%``，然后打开``DashCore``�
 msgid ""
 "If your existing version of Dash Core is older than v0.12.1.x, you may need "
 "to rename your data folder from ``Dash`` to ``DashCore``."
-msgstr "如果用户的达世币核心钱包版本早于0.12.1.x版本，则用户需要将数据文件夹的名称``Dash``改为``DashCore``。"
+msgstr "如果用户的Dash Core钱包版本早于0.12.1.x版本，则用户需要将数据文件夹的名称``Dash``改为``DashCore``。"
 
 #: ../../wallets/recovery.rst:103
 msgid ""
@@ -323,13 +329,14 @@ msgid ""
 "index** may also help. Dash Core will restart and perform a full scan of the"
 " blockchain."
 msgstr ""
-"现在，用户可以打开达世币核心钱包，并等待区块链完成同步。用户的钱包将会被恢复并升级，然后显示所有余额。用户应通过**设置 > "
+"现在，用户可以打开Dash Core钱包，并等待区块链完成同步。用户的钱包将会被恢复并升级，然后显示所有余额。用户应通过**设置 > "
 "解锁钱包**来解锁钱包，确保获得正确的密码并能使用余额创建交易。如果余额显示有问题，用户可以通过**工具 > "
-"修复钱包**中的**扫描区块链文件**来重新扫描。**重建索引**也可以帮助解决这个问题。在进行上述操作之后，达世币核心钱包将重启并对区块链进行完整的扫描。"
+"修复钱包**中的**扫描区块链文件**来重新扫描。**重建索引**也可以帮助解决这个问题。在进行上述操作之后，Dash "
+"Core钱包将重启并对区块链进行完整的扫描。"
 
 #: ../../wallets/recovery.rst:137
 msgid "Forcing Dash Core to rescan the blockchain"
-msgstr "达世币核心重新扫描区块链"
+msgstr "Dash Core钱包重新扫描区块链"
 
 #: ../../wallets/recovery.rst:139
 msgid ""
@@ -359,7 +366,8 @@ msgid ""
 "existing balance, either make another backup or transfer it to an external "
 "address, because restoring a wallet will replace your existing wallet!"
 msgstr ""
-"达世币安卓钱包和达世币核心钱包一样将备份保存在文件当中。如需将钱包恢复到另一个设备上，用户只需通过USB连接的计算机或设备上的文件管理器将备份文件复制到设备的``/Downloads``文件夹中。用户需确保达世币钱包已经在应用商店中予以更新，然后再打开达世币钱包。恢复的钱包将会取代当前的钱包，因此，如果个人钱包中还有余额，用户应另行备份或将余额转移到外部地址。"
+"达世币安卓钱包和Dash "
+"Core钱包一样将备份保存在文件当中。如需将钱包恢复到另一个设备上，用户只需通过USB连接的计算机或设备上的文件管理器将备份文件复制到设备的``/Downloads``文件夹中。用户需确保达世币钱包已经在应用商店中予以更新，然后再打开达世币钱包。恢复的钱包将会取代当前的钱包，因此，如果个人钱包中还有余额，用户应另行备份或将余额转移到外部地址。"
 
 #: ../../wallets/recovery.rst:161
 msgid ""
@@ -602,6 +610,11 @@ msgid ""
 "<https://www.dash.org/forum/threads/restore-breadwallet-dash-funds-to-your-"
 "electrum-dash-wallet-tested.8335>`_ for further discussion on this process."
 msgstr ""
+"旧版的IOS达世币钱包使用的是在 ``m/0'`` 派生路径下的 **BIP32** 地址。钱包通常会在正常的使用状态下将资金转移到 **BIP44**"
+" 地址，但部分余额仍有可能会存留在该派生路径下。因此，用户可以在某些情况下恢复 **BIP32扩展私钥** "
+"，这会对事情有所帮助。如需参与进一步的讨论，欢迎大家访问 `论坛帖子 <https://www.dash.org/forum/threads"
+"/restore-breadwallet-dash-funds-to-your-electrum-dash-wallet-tested.8335>`_ "
+"。"
 
 #: ../../wallets/recovery.rst:339
 msgid "Private Keys"
@@ -619,6 +632,11 @@ msgid ""
 " or `iOS <https://itunes.apple.com/us/app/quick-scan-qr-code-"
 "reader/id483336864>`_) to read the code first."
 msgstr ""
+"很多达世币都具备从私钥导入地址的功能，如需参考详细的说明，请阅读钱包附带的文档。虽然私钥的存储方式多种多样，但我们在本文档中以使用Dash "
+"Core钱包中的纸钱包的私钥存储为例。只有二维码却没有密码的用户可以使用条码扫描应用程序 (`Android "
+"<https://play.google.com/store/apps/details?id=com.google.zxing.client.android>`_"
+" 或 `iOS <https://itunes.apple.com/us/app/quick-scan-qr-code-"
+"reader/id483336864>`_) 来读取二维码。"
 
 #: ../../wallets/recovery.rst:350
 msgid ""
@@ -627,18 +645,18 @@ msgid ""
 "selecting **Tools > Debug Console**. In the console, type the following, "
 "replacing the example private key with your key::"
 msgstr ""
-"首先，用户应选择**设置 > 解锁钱包**，然后启动达世币核心钱包并解锁。接下来，用户应输入密码，然后通过**工具 > "
+"首先，用户应选择**设置 > 解锁钱包**，然后启动Dash Core钱包并解锁。接下来，用户应输入密码，然后通过**工具 > "
 "调试控制台**打开调试控制台。借助控制台，用户可以输入以下内容，以便将私钥示例改为个人私钥::"
 
 #: ../../wallets/recovery.rst:360
 msgid "Importing a private key using the debug console in Dash Core wallet"
-msgstr "通过达世币核心钱包中的调试控制台输入私钥"
+msgstr "通过Dash Core钱包中的调试控制台输入私钥"
 
 #: ../../wallets/recovery.rst:362
 msgid ""
 "Dash Core will rescan the blockchain for transactions involving the public "
 "address of this key and enter the transactions and balance in your wallet."
-msgstr "达世币核心钱包将重新扫描涉及私钥公共地址的交易区块链，并导入钱包的交易与余额信息。"
+msgstr "Dash Core钱包将重新扫描涉及私钥公共地址的交易区块链，并导入钱包的交易与余额信息。"
 
 #: ../../wallets/recovery.rst:366
 msgid ""
@@ -657,7 +675,7 @@ msgstr ""
 #: ../../wallets/recovery.rst:381
 msgid ""
 "*Decrypting a BIP38 encrypted key to WIF for import in Dash Core wallet*"
-msgstr "*对经过BIP38加密的私钥进行解密，然后导入到达世币核心钱包当中*"
+msgstr "*对经过BIP38加密的私钥进行解密，然后导入到Dash Core钱包当中*"
 
 #: ../../wallets/recovery.rst:384
 msgid "Forgotten Passwords"
@@ -675,7 +693,8 @@ msgid ""
 "yourself. Because Dash Core is based on Bitcoin Core, most approaches to "
 "apply brute force to crack a Bitcoin wallet will also work for Dash wallets."
 msgstr ""
-"在大多数情况下，如果用户选择了一个复杂的密码但又忘记了这个密码，那么密码就很难找回来。达世币钱包的加密功能非常大，而精心挑选的密码又有助于抵御强力破解。如果用户回忆起有关密码的细节信息，例如密码的长度或者字符的顺序，那么暴力破解值得一试。目前，有很多服务商都提供强力破解密码的服务。由于达世币核心钱包的技术以比特币核心钱包技术为基础，因此对后者有效的密码破解技术对前者同样有效。相关链接："
+"在大多数情况下，如果用户选择了一个复杂的密码但又忘记了这个密码，那么密码就很难找回来。达世币钱包的加密功能非常大，而精心挑选的密码又有助于抵御强力破解。如果用户回忆起有关密码的细节信息，例如密码的长度或者字符的顺序，那么暴力破解值得一试。目前，有很多服务商都提供强力破解密码的服务。由于Dash"
+" Core钱包的技术以Bitcoin Core钱包技术为基础，因此对后者有效的密码破解技术对前者同样有效。相关链接："
 
 #: ../../wallets/recovery.rst:397
 msgid "`Wallet Recovery Services <https://walletrecoveryservices.com>`_"

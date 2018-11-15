@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-15 06:30+0000\n"
+"PO-Revision-Date: 2018-04-16 05:42+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -22,17 +25,17 @@ msgstr ""
 msgid ""
 "Translate Dash products such as wallets, websites and documentation using "
 "Transifex"
-msgstr ""
+msgstr "使用Transifex翻译Dash产品，如钱包、网站和文档"
 
 #: ../../developers/translating.rst:1
 msgid ""
 "dash, translate, localize, syntax, website, android, ios, wallets, "
 "documentation, dash core"
-msgstr ""
+msgstr "dash，翻译，本地化，语法，网站，android，ios，钱包，文档，dash core"
 
 #: ../../developers/translating.rst:9
 msgid "Translating Dash"
-msgstr ""
+msgstr "翻译达世币"
 
 #: ../../developers/translating.rst:11
 msgid ""
@@ -45,22 +48,23 @@ msgid ""
 "languages they feel able to translate. They can then work on any projects "
 "specifying this language as a target language."
 msgstr ""
+"所有的达世币产品翻译均经由Transifex友好管理，Transifex提供关于其自身功能与特性的详细说明文档。在Transifex中，达世币负责维护组织，组织包含多个项目以及一个译员团队，所有这些项目都会相应地分配给该译员团队。项目维护者给每一个项目分配一种或多种目标翻译语言。翻译员加入团队之后，可以自由选择自己能够进行翻译的语言。然后，翻译员即可将所选语言作为目标语言，开始项目翻译。"
 
 #: ../../developers/translating.rst:21
 msgid "`Transifex <https://www.transifex.com>`_"
-msgstr ""
+msgstr "`Transifex <https://www.transifex.com>`_"
 
 #: ../../developers/translating.rst:22
 msgid "`Transifex Documentation <https://docs.transifex.com>`_"
-msgstr ""
+msgstr "`Transifex 文档 <https://docs.transifex.com>`_"
 
 #: ../../developers/translating.rst:23
 msgid "`Dash translation projects <https://www.transifex.com/dash>`_"
-msgstr ""
+msgstr "`达世币翻译项目 <https://www.transifex.com/dash>`_"
 
 #: ../../developers/translating.rst:24
 msgid "`Dash translators team <https://www.transifex.com/dash/teams>`_"
-msgstr ""
+msgstr "`达世币翻译团队 <https://www.transifex.com/dash/teams>`_"
 
 #: ../../developers/translating.rst:26
 msgid ""
@@ -74,6 +78,10 @@ msgid ""
 "written differently, such as ``zh_CN`` and ``zh_TW`` for Simplified Chinese "
 "and Traditional Chinese."
 msgstr ""
+"总体而言，区域差异最小化的语言将被翻译成公用语言（非区域语言）。例如，葡萄牙语将简单地翻译成目标语言 ``pt`` "
+"，而非独立的巴西式、葡萄牙式口语目标语言 ``pt_BR`` 和 "
+"``pt_PT``。随着达世币的不断发展，校对者可能根据需求，进一步将这些语言细分为独立的区域式变体。但同一口语具有不同的书写方式暂不包括在内，如简体中文和繁体中文分别对应"
+" ``zh_CN`` 和 ``zh_TW`` 。"
 
 #: ../../developers/translating.rst:37
 msgid ""
@@ -87,21 +95,24 @@ msgid ""
 "language use, but also ensure your terminology is up to date with current "
 "use!"
 msgstr ""
+"每一种目标语言都对应有多名翻译人员，这样的工作模式下，保持翻译的一致性，是确保高质量用户体验的一个重要组成部分。为此，如果您遇到了特定的达世币术语，例如"
+" `主节点`，您应该使用**Concordance**检索功能，查看该术语的历史翻译。Transifex也将在历史翻译数据库中识别类似的字符串，为您提供"
+" **建议** 和 **历史** 。请确保您的术语与历史语用一致，同时与当前使用同步！"
 
 #: ../../developers/translating.rst:52
 msgid ""
 "The following documentation describes the various projects and any special "
 "features specific to the programming language in which the product is "
 "written."
-msgstr ""
+msgstr "下列文档介绍了各种项目以及编写产品的编程语言其固有的特性。"
 
 #: ../../developers/translating.rst:57
 msgid "Dash Core"
-msgstr "达世币核心"
+msgstr "Dash Core"
 
 #: ../../developers/translating.rst:59
 msgid "https://www.transifex.com/dash/dash/"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash/"
 
 #: ../../developers/translating.rst:61
 msgid ""
@@ -117,18 +128,20 @@ msgid ""
 "order of the placeholders as necessary, according to the grammar of your "
 "target language."
 msgstr ""
+"该项目包含一个名为 ``dash_en.ts`` 的文件， :ref:`Dash Core钱包 <dash-core-wallet>` "
+"中所有面向用户的可翻译的内容的导出。80％或以上的翻译均已完成的语言，将于下一版本统一整合。请注意，该软件会时常用实际的数字、地址或用户名替文本中的占位符。源文本中出现的占位符，必须同时在目标文本中也出现。不然，您的翻译将不可用。**复制源字符串**按钮可以帮助您复制所需内容，您只需将占位符周围的英文词汇替换掉。如有需要，您还可以依照目标语言语法规则，更改占位符顺序。"
 
 #: ../../developers/translating.rst:86
 msgid "Placeholders"
-msgstr ""
+msgstr "占位符"
 
 #: ../../developers/translating.rst:75
 msgid "**Source:** ``E&xit``"
-msgstr ""
+msgstr "**来源:** ``E&xit``"
 
 #: ../../developers/translating.rst:77
 msgid "**Target:** ``&Beenden``"
-msgstr ""
+msgstr "**目标t:** ``&Beenden``"
 
 #: ../../developers/translating.rst:79
 msgid ""
@@ -140,32 +153,34 @@ msgid ""
 "insert these placeholders in the grammatically appropriate position in your "
 "target text."
 msgstr ""
+"请注意， ``&`` 字符为占位符，负责指示程序菜单中的键盘快捷键，必须以无空格的方式紧邻目标语言相应字符。运行过程中，软件将替换掉 ``%1`` 或 "
+"``%s`` 等类似的占位符，用以指示信息相关性内容的名称或数量。您必须依照语法规则，于目标文本中适当的位置插入这些占位符。"
 
 #: ../../developers/translating.rst:94
 msgid "Punctuation"
-msgstr ""
+msgstr "标点"
 
 #: ../../developers/translating.rst:89
 msgid "**Source:** ``change from %1 (%2)``"
-msgstr ""
+msgstr "**来源:** ``源自 %1 (%2)的转化``"
 
 #: ../../developers/translating.rst:91
 msgid "**Target:** ``Wechselgeld von %1 (%2)``"
-msgstr ""
+msgstr "**目标:** ``源自 %1 (%2)的转化``"
 
 #: ../../developers/translating.rst:93
 msgid ""
 "Note that any brackets ``()`` and punctuation such as full stops ``.`` at "
 "the end of a sentence must also exist in the target text."
-msgstr ""
+msgstr "请注意，一个句子末尾的括号 ``()`` 和标点如句号 ``.`` ，必须同时出现在目标文本中。"
 
 #: ../../developers/translating.rst:97
 msgid "Dash Docs"
-msgstr ""
+msgstr "达世币 文献"
 
 #: ../../developers/translating.rst:99
 msgid "https://www.transifex.com/dash/dash-docs"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash-docs"
 
 #: ../../developers/translating.rst:101
 msgid ""
@@ -180,62 +195,67 @@ msgid ""
 " at all, but hyperlinks and certain formatting must be reproduced in the "
 "target language as follows:"
 msgstr ""
+"本项目包含网站 https://docs.dash.org （可能就是您正在浏览的网站）所托管的达世币文档所拥有的全部内容。文档中每一个 "
+"``.html`` 页面都显示为资源节中的一个文件，根据打开页面所需的导航步骤进行命名。达世币文档用名为 `reStructuredText "
+"<http://docutils.sourceforge.net/rst.html>`_ 的文档语言进行编写，用开放源代码 `Sphinx 文档生成器 "
+"<http://www.sphinx-"
+"doc.org>`_进行构建。为简化布局，大多数文本根本不含标记或代码标记，但必须将超链接和特定格式复制于目标语言，如下所示："
 
 #: ../../developers/translating.rst:119
 msgid "Inline literals"
-msgstr ""
+msgstr "内联文字"
 
 #: ../../developers/translating.rst:113
 msgid "**Source:** Type \\`\\`./dash-qt\\`\\` to run the file."
-msgstr ""
+msgstr "**来源:** 类型 \\`\\`./dash-qt\\`\\` 运行该文件。"
 
 #: ../../developers/translating.rst:115
 msgid "**Target:** Escriba \\`\\`./dash-qt\\`\\` para correr el archivo."
-msgstr ""
+msgstr "**目标:** Escriba \\`\\`./dash-qt\\`\\` 运行该文件。"
 
 #: ../../developers/translating.rst:117
 msgid ""
 "Note that two backticks `````` before and after a word or phrase will cause "
 "that text to appear as an ``inline literal``. This is commonly used to "
 "highlight code or commands to be typed by the user."
-msgstr ""
+msgstr "请注意，一个单词或短语前后的两个反引号 `````` 可使文本显示为 ``内联文字`` 。通常用于突出显示用户将键入的代码或指令。"
 
 #: ../../developers/translating.rst:129
 msgid "Bold and italic"
-msgstr ""
+msgstr "粗斜体"
 
 #: ../../developers/translating.rst:122
 msgid ""
 "**Source:** ``To encrypt your wallet, click **Settings** > **Encrypt** "
 "wallet.``"
-msgstr ""
+msgstr "**来源:** ``若要加密您的钱包, 点击 **设置** > **加密** 钱包.``"
 
 #: ../../developers/translating.rst:125
 msgid ""
 "**Target:** ``Para encriptar su billetera, haga click en **Settings** > "
 "**Encrypt** billetera.``"
-msgstr ""
+msgstr "**目标:** ``若要加密您的钱包, 请点击 **设置** > **加密** 钱包.``"
 
 #: ../../developers/translating.rst:128
 msgid ""
 "A single ``*`` before and after a word or phrase will render it in an "
 "*italic* font, while a double ``**`` will render it in **bold**."
-msgstr ""
+msgstr "在一个单词或短语前后出现的独立 ``*`` 将使其呈 *斜体* 字体，双 ``**`` 将使其呈 **粗体** 字体。"
 
 #: ../../developers/translating.rst:140
 msgid "Internal hyperlinks"
-msgstr ""
+msgstr "内部超链接"
 
 #: ../../developers/translating.rst:132
 msgid ""
 "**Source:** ``See :ref:`here <sporks>` for a brief introduction to sporks.``"
-msgstr ""
+msgstr "**来源:** ``查看 :ref:`此处 <sporks>` 浏览sporks简介.``"
 
 #: ../../developers/translating.rst:134
 msgid ""
 "**Target:** ``Ver :ref:`aquí <sporks>` para una breve introducción a "
 "sporks``"
-msgstr ""
+msgstr "**目标:** ``查看 :ref:`此处 <sporks>` 浏览sporks简介``"
 
 #: ../../developers/translating.rst:136
 msgid ""
@@ -245,23 +265,25 @@ msgid ""
 "`````. Translate the text, but do not translate the text inside the angle "
 "brackets."
 msgstr ""
+"内部超链接包括短语 ``:ref:``，后面依次跟进单个反引号 `````、必须进行翻译的文本、尖角括号和链接目标 ``< >``，以及另一个反引号 "
+"`````。翻译文本，但不要翻译尖角括号内的文本。"
 
 #: ../../developers/translating.rst:156
 msgid "External hyperlinks"
-msgstr ""
+msgstr "外部超链接"
 
 #: ../../developers/translating.rst:143
 msgid ""
 "**Source:** ``The `official Dash website <https://www.dash.org>`_ also "
 "provides a list of major exchanges offering Dash.``"
-msgstr ""
+msgstr "**来源:** `` `达世币官方网站 <https://www.dash.org>`_ 还提供主要的达世币交易所列表.``"
 
 #: ../../developers/translating.rst:146
 msgid ""
 "**Target:** ``El `sitio web oficial de Dash <https://www.dash.org>`_ también"
 " proporciona una lista de las principales Casas de cambio o Exchanges que "
 "ofrecen Dash.``"
-msgstr ""
+msgstr "**目标:** `` `达世币官方网站 <https://www.dash.org>`_ 还提供主要的达世币交易所列表.``"
 
 #: ../../developers/translating.rst:150
 msgid ""
@@ -272,14 +294,16 @@ msgid ""
 "hyperlink (unless you want to link to a version of the page in the target "
 "language)."
 msgstr ""
+"外部超链接包括一个反引号 `````，后面依次跟进必须翻译的文本、尖角括号和链接目标 ``< >`` 、另一个反引号和单或双下划线：```_`` 或 "
+"```__``。请翻译文本，但不翻译超链接（除非您想链接到目标语言的一个页面版本）。"
 
 #: ../../developers/translating.rst:159
 msgid "Dash Graphics"
-msgstr ""
+msgstr "达世币图表"
 
 #: ../../developers/translating.rst:161
 msgid "https://www.transifex.com/dash/dash-graphics"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash-graphics"
 
 #: ../../developers/translating.rst:163
 msgid ""
@@ -291,6 +315,9 @@ msgid ""
 "translating. For example, many words should be translated differently "
 "depending if they are a heading, a sentence or an item in a diagram."
 msgstr ""
+"达世币可视产品，如信息图表、宣传单、会议讲义等，采用Adobe InDesign、Adobe Illustrator或Microsoft "
+"Word制作，可于达世币文档 :ref:`市场分区 <marketing>` "
+"中找到并使用。翻译过程中，查看已完成的英文布局，能够帮助您理解翻译文本的上下文，这一点非常重要。例如，图表的标题、语句及单个项目，可能需采用不同的译法进行翻译。"
 
 #: ../../developers/translating.rst:172
 msgid ""
@@ -301,6 +328,9 @@ msgid ""
 "<http://dashchat.org>`_ when you are finished to request layout in the "
 "visual design."
 msgstr ""
+"Transifex暂且无法轻松处理这些专有文件格式，这些语言内容将导出为文本或Microsoft "
+"Excel文件，然后再上传至Transifex进行处理。如果您翻译的是达世币图表，请在完成翻译后，发送电子邮件至leon.white@dash.org"
+"  或 `Discord <http://dashchat.org>`_ 上的@strophy，请求视觉设计布局。"
 
 #: ../../developers/translating.rst:180
 msgid "Dash iOS Wallet"
@@ -308,7 +338,7 @@ msgstr "达世币iOS钱包"
 
 #: ../../developers/translating.rst:182
 msgid "https://www.transifex.com/dash/dash-ios-wallet"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash-ios-wallet"
 
 #: ../../developers/translating.rst:184
 msgid ""
@@ -319,14 +349,17 @@ msgid ""
 "segment must also appear in the target language, similar to the instructions"
 " above for Dash Core Wallet."
 msgstr ""
+"所有来自 :ref:`达世币iOS钱包 <dash-ios-wallet>` "
+"的语言内容均可在此项目中进行翻译。翻译过程中，请确保有可用的iOS钱包运行，获悉您所用翻译文本的上下文。请注意，源文本段中的占位符，必须同时以目标语言出现，类似于上述的Dash"
+" Core钱包说明。"
 
 #: ../../developers/translating.rst:192
 msgid "Dash Android Wallet"
-msgstr "达世币安卓钱包"
+msgstr "达世币Android钱包"
 
 #: ../../developers/translating.rst:194
 msgid "https://www.transifex.com/dash/dash-wallet"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash-wallet"
 
 #: ../../developers/translating.rst:196
 msgid ""
@@ -337,6 +370,9 @@ msgid ""
 "source text segment must also appear in the target language, similar to the "
 "instructions above for Dash Core Wallet."
 msgstr ""
+"所有来自 :ref:`达世币Android钱包 <dash-android-wallet>` "
+"的语言内容均可在此项目中进行翻译。翻译过程中，请确保有可用的安卓钱包运行，获悉您所用翻译文本的上下文。请注意，源文本段中的占位符，必须同时以目标语言出现，类似于上述的Dash"
+" Core钱包说明。"
 
 #: ../../developers/translating.rst:205
 msgid "Dash Videos"
@@ -344,7 +380,7 @@ msgstr "达世币视频"
 
 #: ../../developers/translating.rst:207
 msgid "https://www.transifex.com/dash/dash-videos"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash-videos"
 
 #: ../../developers/translating.rst:209
 msgid ""
@@ -356,14 +392,18 @@ msgid ""
 " to leon.white@dash.org or @strophy on `Discord <http://dashchat.org>`_ to "
 "request inclusion of the subtitles on YouTube."
 msgstr ""
+"本节主要包含来自Amanda B. Johnson流行 `达世币学堂 <https://www.youtube.com/watch?v=e7UwwcCK"
+" j4Y&list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod>`_ "
+"系列视频的语言内容。请在YouTube上打开视频，边看视频边进行翻译，以便正确理解源文本的上下文。翻译完成后，请发送电子邮件至leon.white@dash.org"
+" 或 `Discord <http://dashchat.org>`_ 上的@strophy，请求在YouTube上添加字幕。"
 
 #: ../../developers/translating.rst:219
 msgid "Dash Website"
-msgstr ""
+msgstr "达世币网站"
 
 #: ../../developers/translating.rst:221
 msgid "https://www.transifex.com/dash/dash-website"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash-website"
 
 #: ../../developers/translating.rst:223
 msgid ""
@@ -374,3 +414,6 @@ msgid ""
 "`Discord <http://dashchat.org>`_ to request a build of your translation onto"
 " the website."
 msgstr ""
+"达世币网站 https://www.dash.org "
+"的内容可在Transifex中进行翻译。请在翻译时打开该网站，以便正确理解源文本的上下文。翻译完成后，请发送电子邮件至leon.white@dash.org"
+" 或 `Discord <http://dashchat.org>`_ 上的@strophy，请求在该网站上建立您的翻译。"

@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-14 06:13+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-15 06:30+0000\n"
+"PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -22,13 +25,13 @@ msgstr ""
 msgid ""
 "Coin control, HD wallets, multisig, KeePass and multiple wallet files using "
 "the Dash Core wallet"
-msgstr ""
+msgstr "货币控制、HD 钱包、多重签名、KeePass和使用Dash Core钱包的各个钱包文件。"
 
 #: ../../wallets/dashcore/advanced.rst:1
 msgid ""
 "dash, core, wallet, backup, restore, wallet.dat, multisig, KeePass, hd, "
 "seed, passphrase, mnemonic, coin control, hierarchical deterministic"
-msgstr ""
+msgstr "dash，core，钱包，备份，恢复，wallet.dat，多重签名，KeePass，hd，种子，密码，助记符，货币控制，分层确定性"
 
 #: ../../wallets/dashcore/advanced.rst:9
 msgid "Advanced topics"
@@ -49,14 +52,15 @@ msgid ""
 "**Inputs…** will appear. Click this button to select which UTXOs can be used"
 " as input for any transactions you create. The following window appears:"
 msgstr ""
-"货币控制选项帮助达世币核心钱包的用户指定地址，此时，未经支付（UTXOs）的输出应当用作交易输入。这项功能不仅帮助用户在指定的钱包地址上留存指定余额，同时还能让他们自由支配其余资金。以达世币达世币核心钱包为例，用户需要点击"
-" **设置 > 选项 > 钱包 > 启用货币控制功能**。现在用户只要访问钱包的“发送”选项卡，就会看到一个新的 **输入** "
-"按键。只要点击这个按键，用户就能选定交易所使用的未经支付的输出了。操作页面如下所示："
+"货币控制选项帮助Dash "
+"Core钱包的用户指定地址，此时，未经支付（UTXOs）的输出应当用作交易输入。这项功能不仅帮助用户在指定的钱包地址上留存指定余额，同时还能让他们自由支配其余资金。以Dash"
+" Core钱包为例，用户需要点击 **设置 > 选项 > 钱包 > 启用货币控制功能**。现在用户只要访问钱包的“发送”选项卡，就会看到一个新的 "
+"**输入** 按键。只要点击这个按键，用户就能选定交易所使用的未经支付的输出了。操作页面如下所示："
 
 #: ../../wallets/dashcore/advanced.rst:29
 msgid ""
 "Coin Selection window in Dash Core wallet, showing two masternodes (testnet)"
-msgstr "达世币核心钱包中的货币选择界面，显示两个主节点（测试网）"
+msgstr "Dash Core钱包中的货币选择界面，显示两个主节点（测试网）"
 
 #: ../../wallets/dashcore/advanced.rst:32
 msgid ""
@@ -73,11 +77,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:45
 msgid "Locking UTXOs in Dash Core wallet"
-msgstr "在达世币核心钱包当中锁定未经支付的输出"
+msgstr "在Dash Core钱包当中锁定未经支付的输出"
 
 #: ../../wallets/dashcore/advanced.rst:51
 msgid "HD Wallets"
-msgstr ""
+msgstr "HD 钱包"
 
 #: ../../wallets/dashcore/advanced.rst:53
 msgid ""
@@ -92,6 +96,10 @@ msgid ""
 " wallet file itself, while the mnemonic passphrase is used to specify "
 "different derivation branches from the same mnemonic seed."
 msgstr ""
+"从 0.12.2.0 版本开始，Dash Core钱包就具备了兼容 BIP39/BIP44 的分层确定性（HD）密码生成功能。只有在初次启动Dash "
+"Core钱包时指定 ``usehd`` "
+"选项的用户才能通过命令行使用这一功能。用户应当慎用这一功能，因为助记符种子和密码需要以纯文本格式存储，直到用户为钱包指定密码短语。值得注意的是，钱包密码与助记符密码不同，后者通常也被称作"
+" \"第25个字符\" 或 \"扩展字符\"。此外，钱包密码用于加密钱包文件本身，而助记符密码则用于指定来自同一助记符种子的不同派生分支。"
 
 #: ../../wallets/dashcore/advanced.rst:65
 msgid ""
@@ -100,6 +108,8 @@ msgid ""
 "the following command to get started with a randomly generated HD wallet "
 "seed and no mnemonic passphrase::"
 msgstr ""
+"在下文中，我们将以Windows GUI钱包为例，但如果用户在其他操作系统上使用 ``dash-qt`` 或 "
+"``dashd``，那么要用到的命令行就是一样的。用户可以输入以下命令，以便启用随机生成的分层确定性钱包种子，此时，钱包并不具备助记符密码::"
 
 #: ../../wallets/dashcore/advanced.rst:72
 msgid ""
@@ -108,6 +118,8 @@ msgid ""
 "correctly. Open the console from **Tools -> Debug console** or issue the "
 "following RPC command from ``dash-cli`` to view the mnemonic seed::"
 msgstr ""
+"新的HD钱包已经生成，Dash Core钱包将显示一则通知，告知用户必须在验证程序可正确运行后对钱包进行加密。用户可以通过 **工具 -> "
+"调试控制台** 或在 ``dash-cli`` 上执行远程过程调用命令，以便浏览助记符种子::"
 
 #: ../../wallets/dashcore/advanced.rst:79
 msgid ""
@@ -116,12 +128,14 @@ msgid ""
 "generated mnemonic and/or passphrase, ensure no ``wallet.dat`` file exists "
 "in the ``datadir`` and enter the following command::"
 msgstr ""
+"Dash Core钱包将以十六进制和 BIP39 助记符显示HD钱包的种子。如需恢复已有的HD钱包或者定义单独生成的助记符和密码，用户需要确保 "
+"``datadir`` 中不存在 ``wallet.dat`` 文件，然后再输入以下命令::"
 
 #: ../../wallets/dashcore/advanced.rst:87
 msgid ""
 "The HD wallet will be restored and your balance will appear once sync is "
 "complete."
-msgstr ""
+msgstr "HD钱包可以恢复，并且用户的余额将在完成同步后予以显示。"
 
 #: ../../wallets/dashcore/advanced.rst:94
 msgid "Multisignature"
@@ -137,7 +151,8 @@ msgid ""
 "create a transaction. The example parties involved are a buyer, a seller and"
 " an arbiter. This example is based on:"
 msgstr ""
-"本章节介绍了达世币核心钱包中的多重签名功能。尽管交易在当前的测试网区块链上是不可见的，并且地址格式或远程过程调用与本文显示的稍有不同，但原则和命令是相同的。本章节提供了创建2"
+"本章节介绍了Dash "
+"Core钱包中的多重签名功能。尽管交易在当前的测试网区块链上是不可见的，并且地址格式或远程过程调用与本文显示的稍有不同，但原则和命令是相同的。本章节提供了创建2"
 " -3多重签名地址及交易的例子，其中涉及三方，即买卖双方和仲裁者。实例如下列网站所示："
 
 #: ../../wallets/dashcore/advanced.rst:104
@@ -268,8 +283,8 @@ msgid ""
 "of Dash Core simultaneously by specifying separate data directories using "
 "the ``datadir`` argument."
 msgstr ""
-"用户可以通过 ``wallet`` 参数来启动达世币核心钱包，并在此时选用不同类型的钱包。此外，用户还可以通过 ``datadir`` "
-"参数来指定不同的数据目录，从而同时运行达世币核心钱包的不同实例。"
+"用户可以通过 ``wallet`` 参数来启动Dash Core钱包，并在此时选用不同类型的钱包。此外，用户还可以通过 ``datadir`` "
+"参数来指定不同的数据目录，从而同时运行Dash Core钱包的不同实例。"
 
 #: ../../wallets/dashcore/advanced.rst:325
 msgid ""
@@ -281,8 +296,8 @@ msgid ""
 "entirely separate data directories such as e.g. ``C:\\Dash1`` (simpler if "
 "you do want to run the wallets simultaneously)."
 msgstr ""
-"首先，用户应根据\\ :ref:`安装指南<dashcore-installation>`\\ 的指示在个人的计算机系统上安装达世币核心钱包。在 "
-"**初次运行达世币核心钱包 的时候**，用户可以决定是否将独立的 ``wallet.dat`` "
+"首先，用户应根据\\ :ref:`安装指南<dashcore-installation>`\\ 的指示在个人的计算机系统上安装Dash Core钱包。在"
+" **初次运行Dash Core钱包 的时候**，用户可以决定是否将独立的 ``wallet.dat`` "
 "文件保存在默认地址上（如果用户不需要同时运行钱包，那就更简单了）。用户也可以指定完全独立的数据目录，例如 ``C:\\Dash1`` "
 "（如果用户希望同时运行钱包，那么设置将相对更简单）。"
 
@@ -298,7 +313,7 @@ msgid ""
 "similar) and create two shortcuts on the desktop. Then open the "
 "**Properties** window for each of these shortcuts."
 msgstr ""
-"在这种情况下，用户需要分别通过不同的钱包文件在桌面上创建两个快捷方式。具体来说，用户需要导航到用于启动达世币核心钱包的二进制文件（文件通常位于 "
+"在这种情况下，用户需要分别通过不同的钱包文件在桌面上创建两个快捷方式。具体来说，用户需要导航到用于启动Dash Core钱包的二进制文件（文件通常位于 "
 "``C:\\Program Files\\DashCore\\dash-qt.exe`` "
 "或在类似文件中），然后在桌面上创建两个快捷方式。随后，达世币需要打开这些快捷方式的 **属性**窗口。"
 
@@ -361,10 +376,10 @@ msgid ""
 "of Dash Core simultaneously. Create two (or more) shortcuts on your desktop "
 "as described above, then specify arguments for ``datadir`` as shown below:"
 msgstr ""
-"用户需启动达世币核心钱包，并等待钱包与网络同步，然后再关闭达世币核心钱包。此时，用户可以创建两个独立的数据目录，例如 ``C:\\Dash1`` 和 "
-"``C:\\Dash2`` ，然后将同步数据目录下的 ``blocks`` 和 ``chainstate`` "
-"复制到新的目录之下。它们将作为独立的数据目录，帮助达世币核心钱包同时运行不同的实例。用户可参照上述步骤创建两个（或更多的）快捷方式，并按以下方式为 "
-"``datadir`` 指定参数。"
+"用户需启动Dash Core钱包，并等待钱包与网络同步，然后再关闭Dash Core钱包。此时，用户可以创建两个独立的数据目录，例如 "
+"``C:\\Dash1`` 和 ``C:\\Dash2`` ，然后将同步数据目录下的 ``blocks`` 和 ``chainstate`` "
+"复制到新的目录之下。它们将作为独立的数据目录，帮助Dash "
+"Core钱包同时运行不同的实例。用户可参照上述步骤创建两个（或更多的）快捷方式，并按以下方式为 ``datadir`` 指定参数。"
 
 #: ../../wallets/dashcore/advanced.rst:382
 msgid ""
@@ -401,7 +416,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:400
 msgid "Two instances of Dash Core running simultaneously"
-msgstr "达世币核心钱包同时运行两个实例"
+msgstr "Dash Core钱包同时运行两个实例"
 
 #: ../../wallets/dashcore/advanced.rst:403
 msgid "KeePass"
@@ -415,8 +430,9 @@ msgid ""
 "wallet passphrase in KeePass using the integration. When this is done, "
 "KeePass can be used to unlock the wallet."
 msgstr ""
-"从0.11.0版本开始，达世币核心钱包支持与流行的开源密码管理器KeePass的集成。本指南介绍了达世币核心钱包与KeePass之间建立关联的步骤，并指导用户通过集成在KeePass上保存达世币核心钱包的密码。在用户完成上述操作后，"
-" 用户就可以通过KeePass来解锁钱包了。"
+"从0.11.0版本开始，Dash Core钱包支持与流行的开源密码管理器KeePass的集成。本指南介绍了Dash "
+"Core钱包与KeePass之间建立关联的步骤，并指导用户通过集成在KeePass上保存Dash Core钱包的密码。在用户完成上述操作后， "
+"用户就可以通过KeePass来解锁钱包了。"
 
 #: ../../wallets/dashcore/advanced.rst:412
 msgid "Installation"
@@ -468,7 +484,7 @@ msgstr "命令"
 msgid ""
 "The following KeePass RPC commands are available in the Dash Core client "
 "console or server:"
-msgstr "用户可以在达世币核心钱包的客户端或服务器上使用以下的KeePass远程过程调用命令："
+msgstr "用户可以在Dash Core钱包的客户端或服务器上使用以下的KeePass远程过程调用命令："
 
 #: ../../wallets/dashcore/advanced.rst:436
 msgid "keepass genkey"

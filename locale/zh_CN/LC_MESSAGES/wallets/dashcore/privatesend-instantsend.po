@@ -3,14 +3,18 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# strophy <leon.white@dash.org>, 2018
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-18 10:50+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: strophy <leon.white@dash.org>, 2018\n"
+"POT-Creation-Date: 2018-11-15 06:30+0000\n"
+"PO-Revision-Date: 2018-03-19 12:18+0000\n"
+"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,11 +24,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:1
 msgid "Using InstantSend and PrivateSend with Dash"
-msgstr ""
+msgstr "使用达世币即时支付和匿名支付"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:1
 msgid "dash, core, mobile, wallet, privatesend, instantsend"
-msgstr ""
+msgstr "dash，core，移动，钱包，匿名支付，即时支付"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:9
 msgid "PrivateSend and InstantSend"
@@ -49,8 +53,10 @@ msgid ""
 "transactions. As of April 2018, PrivateSend is not currently available in "
 "other Dash wallets."
 msgstr ""
-"本文档介绍了如何使用达世币核心钱包来匿名发送达世币。匿名发送功能始创于Darkcoin "
-"RC4客户端，最初被称作Darksend。随后，这个功能在2016年5月被重新命名为匿名发送。它无需信任第三方就能完成一系列的交易操作（这一环节通常也被称作混币）。混币期间，外部的服务器无法确定匿名发送功能所涉资金的来源。匿名发送功能赋予了用户在ATM取现一样的匿名属性。混币和面值的处理过程是自动完成、无缝对接的，以用户的角度来看，他们不会受到任何干扰。达世币核心钱包当前的匿名发送功能可以帮助用户混合任意金额的达世币，以便之后匿名发送的使用。截至2018年4月，匿名发送功能还没有推广到其它版本的达世币钱包。"
+"本文档介绍了如何使用Dash Core钱包来匿名发送达世币。匿名发送功能始创于Darkcoin "
+"RC4客户端，最初被称作Darksend。随后，这个功能在2016年5月被重新命名为匿名发送。它无需信任第三方就能完成一系列的交易操作（这一环节通常也被称作混币）。混币期间，外部的服务器无法确定匿名发送功能所涉资金的来源。匿名发送功能赋予了用户在ATM取现一样的匿名属性。混币和面值的处理过程是自动完成、无缝对接的，以用户的角度来看，他们不会受到任何干扰。Dash"
+" "
+"Core钱包当前的匿名发送功能可以帮助用户混合任意金额的达世币，以便之后匿名发送的使用。截至2018年4月，匿名发送功能还没有推广到其它版本的达世币钱包。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:27
 msgid ""
@@ -80,7 +86,7 @@ msgstr "配置"
 msgid ""
 "Open your Dash Core wallet, go to **Settings** and select **Options**. Go to"
 " the **Wallet** tab."
-msgstr "如需完成匿名发送功能的设置，用户需要打开 **设置** 并选择 **选项** ，然后再打开 **钱包**选项卡。"
+msgstr "用户需要打开 **设置** 并选择 **选项** ，然后再打开 **钱包**选项卡。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:47
 msgid ""
@@ -133,7 +139,8 @@ msgid ""
 "The PrivateSend process is initiated by clicking the **Start Mixing** button"
 " on the **Overview** tab of the Dash Core wallet. Mixing is possible once "
 "the following conditions have been met:"
-msgstr "在用户点击达世币核心钱包的 **概览** 中的 **开始混币** 后，匿名发送功能就会启用。一旦满足以下条件，用户就可以进行混币了："
+msgstr ""
+"在用户点击Dash Core钱包的 **概览** 中的 **开始混币** 后，匿名发送功能就会启用。一旦满足以下条件，用户就可以进行混币了："
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:79
 msgid ""
@@ -231,7 +238,7 @@ msgstr ""
 #: ../../wallets/dashcore/privatesend-instantsend.rst:129
 msgid ""
 "Enabling advanced options for PrivateSend in the Dash Core wallet settings"
-msgstr "在达世币核心钱包的设置中启用匿名发送的高级选项"
+msgstr "在Dash Core钱包的设置中启用匿名发送的高级选项"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:132
 msgid ""
@@ -380,7 +387,7 @@ msgid ""
 "nearest 0.01 DASH). You will be prompted to enter your password and receive "
 "a detailed breakdown of the fee structure for PrivateSend before sending."
 msgstr ""
-"需要使用匿名发送功能的用户应打开达世币核心钱包的 **发送** 选项卡，并启用 **匿名发送** "
+"需要使用匿名发送功能的用户应打开Dash Core钱包的 **发送** 选项卡，并启用 **匿名发送** "
 "选项。此时，钱包上显示的余额将从资金的总余额变为匿名发送的金额。用户可以输入 **发送至** 的地址、**标签** 和 "
 "**金额**，再点击**发送**。用户的匿名发送金额将累加至所需的最小面值（当前发送的最小额度是0.01个达世币）。接下来，用户将会被提示输入密码，并在发送之前收到发送款项的具体组成部分。"
 
@@ -389,7 +396,7 @@ msgid ""
 "Dash Core ready to send a PrivateSend transaction. Note PrivateSend is "
 "enabled and the amount to be sent is less than the available PrivateSend "
 "balance"
-msgstr "达世币核心钱包已经做好了匿名发送的准备。值得注意的是，匿名发送功能已经启用了，发送的金额比余额少"
+msgstr "Dash Core钱包已经做好了匿名发送的准备。值得注意的是，匿名发送功能已经启用了，发送的金额比余额少"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:236
 msgid "InstantSend"
@@ -476,7 +483,8 @@ msgid ""
 "To pay with InstantSend, simply check the relevant checkbox in your app. The"
 " following screenshots indicate where this setting can be found in the Dash "
 "Core, iOS and Android wallets."
-msgstr "如需使用即时发送功能，用户只要选中应用中的相关复选框就可以了。以下截屏显示了在达世币核心钱包、IOS和安卓钱包中找到相关设置的位置。"
+msgstr ""
+"如需使用即时发送功能，用户只要选中应用中的相关复选框就可以了。以下截屏显示了在Dash Core钱包、IOS和安卓钱包中找到相关设置的位置。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:291
 msgid "Dash Wallets showing InstantSend option"
