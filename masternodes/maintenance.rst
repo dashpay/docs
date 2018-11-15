@@ -85,13 +85,13 @@ executable::
 
   rm ~/.dashcore/dashd
   rm ~/.dashcore/dash-cli
-  tar dashcore-0.13.0.0-rc2-x86_64-linux-gnu.tar.gz
+  tar xfvz dashcore-0.13.0.0-rc3-x86_64-linux-gnu.tar.gz
   cp dashcore-0.13.0/bin/dashd ~/.dashcore/
   cp dashcore-0.13.0/bin/dash-cli ~/.dashcore/
 
 Clean up unneeded files::
 
-  rm dashcore-0.13.0.0-rc2-x86_64-linux-gnu.tar.gz
+  rm dashcore-0.13.0.0-rc3-x86_64-linux-gnu.tar.gz
   rm -r dashcore-0.13.0/
 
 Restart Dash::
