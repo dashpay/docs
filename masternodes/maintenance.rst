@@ -37,7 +37,7 @@ the protocol version did change, you must issue a start command from
 your wallet. Do not send start commands to your masternode if not
 necessary, as it will send you to the back of the payment queue.
 
-.. _deterministic_upgrade
+.. _dip3-upgrade:
 
 Dash 0.13 Upgrade Procedure
 ---------------------------
