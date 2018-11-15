@@ -21,7 +21,7 @@ masternode to a professional operator. When using these hosting
 services, you retain full control of the 1000 DASH collateral and pay an
 agreed percentage of your reward to the operator. It is also possible to
 delegate your voting keys to a representative, see the 
-:ref:`governance documentation <using- governance>` for more
+:ref:`governance documentation <using-governance>` for more
 information.
 
 Dash 0.13.0 introduced `Deterministic Masternode Lists
