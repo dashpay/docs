@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Hasna Brania <hasna.brania19@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-15 06:30+0000\n"
+"PO-Revision-Date: 2018-04-09 11:00+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -23,10 +26,12 @@ msgid ""
 "Guides and screenshots on how to sign and verify messages using the Dash "
 "cryptocurrency"
 msgstr ""
+"أدلة ولقطات شاشة عن كيفية تسجيل الرسائل والتحقق منها باستخدام أداة التشفير "
+"عملة داش"
 
 #: ../../wallets/signing.rst:1
 msgid "dash, sign, verify, message, trezor, dash core"
-msgstr ""
+msgstr "داش، علامة، تحقق، رسالة، تريزور، داش كور"
 
 #: ../../wallets/signing.rst:9
 msgid "Signing and Verifying Messages"
@@ -44,6 +49,13 @@ msgid ""
 "since ambiguously worded messages could be used to impersonate your "
 "identity."
 msgstr ""
+"تعمل حافظات داش عن طريق تخزين المفاتيح الخاصة بشكل آمن لتكوين معاملات "
+"باستخدام عناوين مرئية بشكل عام على دفتر أستاذ موزع يسمى بلوكشين. في بعض "
+"الحالات ، قد يكون من الضروري التحقق من عنوان لإثبات التحكم في الأموال التي "
+"تحتفظ بها ، أو يمكنك تلقيها باستخدام العنوان ، أو حتى التحقق من هويتك إلى "
+"عملية تبادل سبق لها أن شهدت معاملة من هذا العنوان. لتجنب هجمات التصيد "
+"الاحتيالي ، يجب توخي الحذر الشديد عند إرسال رسائل موقعة إلى الأطراف التي لا "
+"تثق بها ، نظرًا لأنه يمكن استخدام الرسائل المجهولة بذكاء في انتحال هويتك."
 
 #: ../../wallets/signing.rst:21
 msgid ""
@@ -58,6 +70,14 @@ msgid ""
 "example, you can test the following message and signature and verify that it"
 " was signed by the given address:"
 msgstr ""
+"يتطلب توقيع الرسائل مفتاحًا خاصًا. يتطلب التحقق من الرسائل عنوانًا عامًا. "
+"وبهذه الطريقة ، يمكنك كتابة رسالة عشوائية وإنشاء توقيع يمكن إنشاؤه بواسطة "
+"مستخدم يتحكم في المفتاح الخاص لهذا العنوان فقط. يمكن لأي مستخدم لديه الرسالة"
+" والعنوان العام والتوقيع بسهولة التحقق من أنك فقط من الممكن أن تكون قد أنشأت"
+" التوقيع. لا يتم تخزين الرسائل على بلوكشين. بدلاً من ذلك ، يجب أن ترسل هذه "
+"المقتطفات النصية الثلاثة (الرسالة والعنوان والتوقيع) إلى المستلم المقصود "
+"باستخدام قناة اتصال أخرى ، مثل البريد الإلكتروني. على سبيل المثال ، يمكنك "
+"اختبار الرسالة والتوقيع التاليين والتحقق من توقيعها من خلال العنوان المحدد:"
 
 #: ../../wallets/signing.rst:33
 msgid ""
@@ -65,10 +85,13 @@ msgid ""
 "XwHihwiQzheVKbT76e7ZhPkujDCQGEZC6P **Signature:** "
 "IKaEt7MTb4Y57WIde5TLUkm1vbVsjk/L9eG+TE2tdQhMeK9vGgTsqcVOTmXXQ6QA0/WQtxqPURH2qZG27YR2VE0="
 msgstr ""
+"**رسالة:** توقيع اختبار التوقيع **العنوان:** "
+"XwHihwiQzheVKbT76e7ZhPkujDCQGEZC6P **الإمضاء** "
+"IKaEt7MTb4Y57WIde5TLUkm1vbVsjk/L9eG+TE2tdQhMeK9vGgTsqcVOTmXXQ6QA0/WQtxqPURH2qZG27YR2VE0="
 
 #: ../../wallets/signing.rst:38
 msgid "Signing a Message"
-msgstr ""
+msgstr "توقيع رسالة"
 
 #: ../../wallets/signing.rst:40
 msgid ""
@@ -77,14 +100,17 @@ msgid ""
 "message) and DMT (**Tools > Sign message with HW for current masternode's "
 "address**):"
 msgstr ""
+"توضح اللقطات التالية كيفية توقيع رسالة باستخدام محفظة داش كور (**ملف> "
+"امضاء**) ، و Trezor web wallet (إمضاء & تحقق> تحقق من الرسالة) و DMT "
+"(**الأدوات>عنوان**):"
 
 #: ../../wallets/signing.rst:52
 msgid "*Signing messages in Dash Core, Trezor web wallet and DMT*"
-msgstr ""
+msgstr "*توقيع الرسائل في داش كور و Trezor web wallet و DMT *"
 
 #: ../../wallets/signing.rst:55
 msgid "Verifying a Message"
-msgstr ""
+msgstr "تحفق من الرسالة"
 
 #: ../../wallets/signing.rst:57
 msgid ""
@@ -92,9 +118,13 @@ msgid ""
 "wallet (**File > Sign message**) and Trezor web wallet (**Sign & Verify > "
 "Sign message**):"
 msgstr ""
+"توضح اللقطات التالية كيفية التحقق من رسالة باستخدام محفظة داش كور (**ملف> "
+"امضاء**) و Trezor web wallet (**امضاء & تحقق> امضاء**):"
 
 #: ../../wallets/signing.rst:66
 msgid ""
 "*Verifying messages in Dash Core and Trezor web wallet. Notice that the "
 "message verified by Dash Core was generated in Trezor, and vice versa*"
 msgstr ""
+"*التحقق من الرسائل في محفظة داش كور و Trezor على الويب. لاحظ أن الرسالة التي"
+" تم التحقق منها بواسطة داش كور تم إنشاؤها في Trezor والعكس بالعكس*"

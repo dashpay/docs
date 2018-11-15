@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Hasna Brania <hasna.brania19@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-15 06:30+0000\n"
+"PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +23,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:1
 msgid "Guide to sending and receiving Dash using the Dash Core wallet"
-msgstr ""
+msgstr "دليل لإرسال واستقبال داش باستخدام محفظة داش كور"
 
 #: ../../wallets/dashcore/send-receive.rst:1
 msgid "dash, core, wallet, send, receive, transaction"
-msgstr ""
+msgstr "داش، كور، محفظة، إرسال، إستقبال، المعاملة"
 
 #: ../../wallets/dashcore/send-receive.rst:9
 msgid "Sending and receiving"
@@ -40,6 +43,12 @@ msgid ""
 "controlled by another Dash user and associated with their wallet. You can "
 "control which addresses you use using the Coin Control feature."
 msgstr ""
+"ترتبط محفظة داش كور الخاصة بك بعدد من العناوين الفريدة التي يمكن استخدامها "
+"لإرسال واستقبال داش. يحتفظ كل عنوان برصيده الخاص ، ومجموع جميع أرصدةك هو ما "
+"يظهر في علامة التبويب **نظرة عامة**. عند إرسال داش ، ستحوّل محفظتك الأموال "
+"تلقائيًا من أكبر عدد ممكن من عناوينك إلى عنوان الوجهة ، والذي يتحكم فيه "
+"مستخدم داش آخر ويرتبط بمحفوظته. يمكنك التحكم في العناوين التي تستخدمها "
+"باستخدام ميزة التحكم في العملة"
 
 #: ../../wallets/dashcore/send-receive.rst:20
 msgid ""
@@ -50,14 +59,19 @@ msgid ""
 "masternode and mining payments are only released after 101 blocks. Note that"
 " a different process is used for InstantSend and PrivateSend transactions."
 msgstr ""
+"عندما تقوم بتأكيد معاملة ، ستدخل داش كور الصفقة في كتلة ، والتي ستتم إضافتها"
+" بعد ذلك إلى بلوكشبن لتأكيد العملاء الآخرين. تعتبر الصفقة مؤكدًا بشكل عام "
+"بمجرد إضافة ست كتل بعد الكتلة المحتوية على معاملتك ، على الرغم من أن مدفوعات"
+" التعدين و ماسترنود يتم إصدارها بعد 101 كتلة فقط. لاحظ أنه يتم استخدام عملية"
+" مختلفة لعمليات الإرسال الفوري و الإرسال المخفي."
 
 #: ../../wallets/dashcore/send-receive.rst:28
 msgid "Dash addresses are 34 characters long and begin with an uppercase X."
-msgstr ""
+msgstr "تتكون عناوين داش من 34 حرفًا وتبدأ بحرف X كبيرًا."
 
 #: ../../wallets/dashcore/send-receive.rst:31
 msgid "Sending Dash"
-msgstr ""
+msgstr "إرسال داش"
 
 #: ../../wallets/dashcore/send-receive.rst:33
 msgid ""
@@ -66,10 +80,13 @@ msgid ""
 " the funds. Click the **Send** tab in the tab bar and enter the destination "
 "address in the **Pay To** field."
 msgstr ""
+"يمكنك استخدام داش كور لإرسال داش من رصيدك إلى مستخدم آخر. سيزودك المستخدم "
+"المتلقي بعنوان داش يجب إرسال الأموال إليه. انقر فوق علامة **إرسال** في شريط "
+"علامات وأدخل عنوان الوجهة في الحقل **الدفع إلى**"
 
 #: ../../wallets/dashcore/send-receive.rst:41
 msgid "The Dash Core Send tab"
-msgstr ""
+msgstr "شريط الإرسال من داش كور"
 
 #: ../../wallets/dashcore/send-receive.rst:43
 msgid ""
@@ -80,6 +97,11 @@ msgid ""
 "again later. Finally, enter the amount of Dash you want to transfer in the "
 "**Amount** field."
 msgstr ""
+"يمكنك أيضًا استخدام الرموز الثلاثة |إرسال العملة| إلى يمين الحقل **الدفع "
+"إلى** لتحديد عنوان تم استخدامه مسبقًا ، أو لصق عنوان من الحافظة ، أو مسح "
+"العنوان الحالي. إذا كان هذا عنوانًا جديدًا ، يمكنك إدخال اسم للعنوان في "
+"الحقل **ملصق** للمساعدة في التعرف عليه مرة أخرى لاحقًا. أخيرًا ، أدخل مقدار "
+"داش التي تريد نقلها في حقل **المبلغ**."
 
 #: ../../wallets/dashcore/send-receive.rst:53
 msgid ""
@@ -93,6 +115,14 @@ msgid ""
 "been mixed. You can find out more about PrivateSend and InstantSend "
 ":ref:`here <dashcore-privatesend-instantsend>`."
 msgstr ""
+"الخيارات الأخرى تتعلق بالرسوم و الإرسال المخفي/الإرسال الفوري. يمكنك اختيار "
+"ما إذا كنت تريد دفع رسوم الشبكة بالإضافة إلى المبلغ المرسل أو طرحها من "
+"المبلغ المرسل. يمكنك أيضًا زيادة الرسوم لتشجيع العقد على الشبكة لتحديد "
+"أولويات المعاملة. اختيار **الإرسال الفوري** له تأثير مماثل ، لكنه يعتمد في "
+"الواقع على آلية مختلفة في شبكة الطبقة الثانية لتسريع وقت المعاملة. سيؤدي "
+"اختيار **الإرسال المخفي** إلى إرسال داش من عنوان تم مزجه سابقًا. يمكنك معرفة"
+" المزيد عن الإرسال المخفي و الإرسال الفوري :ref:`هنا <dashcore-privatesend-"
+"instantsend>`."
 
 #: ../../wallets/dashcore/send-receive.rst:64
 msgid ""
@@ -101,10 +131,13 @@ msgid ""
 " can be seen in the following window beginning with *Xpa*. The invoice is "
 "for 2.45 Dash, which you fill in the **Amount** field."
 msgstr ""
+"لنجرب مثالاً. لنفترض أنك تلقيت فاتورة تريد دفعها الآن باستخدام داش. قام كاتب"
+" الفاتورة بتضمين عنوان الشرطة ، والذي يمكن رؤيته في النافذة التالية التي "
+"تبدأ بـ *Xpa*. الفاتورة هي ل 2.45 داش ، التي تقوم بملء حقل **المبلغ**."
 
 #: ../../wallets/dashcore/send-receive.rst:72
 msgid "The Send tab filled out for a transaction"
-msgstr ""
+msgstr "تم ملء علامة إرسال لإجراء معاملة"
 
 #: ../../wallets/dashcore/send-receive.rst:74
 msgid ""
@@ -112,20 +145,24 @@ msgid ""
 "**Send** button. If you have encrypted your wallet, you will now be required"
 " to enter your password to unlock the wallet."
 msgstr ""
+"بمجرد إدخال عنوان الوجهة والمبلغ ، انقر فوق الزر **إرسال**. إذا قمت بتشفير "
+"محفظتك ، سيُطلب منك الآن إدخال كلمة المرور لإلغاء قفل المحفظة."
 
 #: ../../wallets/dashcore/send-receive.rst:81
 msgid "Entering the password to unlock the wallet"
-msgstr ""
+msgstr "إدخال كلمة المرور لفتح المحفظة"
 
 #: ../../wallets/dashcore/send-receive.rst:83
 msgid ""
 "Finally, you are given one final confirmation and chance to cancel your send"
 " transaction before Dash Core processes the transaction on the blockchain."
 msgstr ""
+"وأخيرًا ، يتم إعطاؤك تأكيدًا نهائيًا واحدًا وفرصة لإلغاء معاملة الإرسال قبل "
+"أن تقوم داش كور بمعالجة المعاملة على بلوكشين."
 
 #: ../../wallets/dashcore/send-receive.rst:90
 msgid "Final confirmation window"
-msgstr ""
+msgstr "نافذة التأكيد النهائية"
 
 #: ../../wallets/dashcore/send-receive.rst:92
 msgid ""
@@ -133,10 +170,12 @@ msgid ""
 "operating system may display a notification, and the transaction will appear"
 " on the Transactions tab, where you can monitor its progress."
 msgstr ""
+"إذا قمت بالرد بـ **نعم** ، فستتم معالجة معاملتك. قد يعرض نظام التشغيل "
+"إشعارًا ، وستظهر المعاملة في علامة المعاملات ، حيث يمكنك مراقبة تقدمها"
 
 #: ../../wallets/dashcore/send-receive.rst:99
 msgid "The Windows 10 sent transaction confirmation notification"
-msgstr ""
+msgstr "أرسل ويندوز 10 إشعار تأكيد المعاملة"
 
 #: ../../wallets/dashcore/send-receive.rst:101
 msgid ""
@@ -144,10 +183,12 @@ msgid ""
 "the transaction fee. In the next section, we will see what this procedure "
 "looks like from the receiving side."
 msgstr ""
+"لاحظ أن كمية المعاملة زادت بمقدار .000045 داش. هذه هي رسوم المعاملة. في "
+"القسم التالي ، سنرى كيف يبدو هذا الإجراء من جانب المتلقي."
 
 #: ../../wallets/dashcore/send-receive.rst:106
 msgid "Receiving Dash"
-msgstr ""
+msgstr "إستقبال داش"
 
 #: ../../wallets/dashcore/send-receive.rst:108
 msgid ""
@@ -155,10 +196,12 @@ msgid ""
 "sending party. To do this, click **File > Receiving addresses**. The "
 "**Receiving addresses** window appears."
 msgstr ""
+"لتلقي داش ، يجب أولاً إنشاء عنوان استلام لمنح الطرف المرسل. للقيام بذلك ، "
+"انقر فوق **ملف> عناوين الإستلام**. تظهر نافذة عناوين الاستلام."
 
 #: ../../wallets/dashcore/send-receive.rst:115
 msgid "The Receiving addresses window"
-msgstr ""
+msgstr "نافذة عناوين الإستلام"
 
 #: ../../wallets/dashcore/send-receive.rst:117
 msgid ""
@@ -172,21 +215,30 @@ msgid ""
 "and will recognize a new transaction involving your receiving address when "
 "it occurs."
 msgstr ""
+"إما أن تنسخ عنوانًا موجودًا بالنقر فوق العنوان ثم الزر **نسخ** ، أو إنشاء "
+"عنوان جديد بالنقر فوق الزر **جديد**. يمكنك أيضًا تحرير عنوان موجود بالنقر "
+"بزر الماوس الأيمن وتحديد **تحرير** عنوان من قائمة السياق. أعط هذا العنوان "
+"للشخص الذي سيرسل إليك داش. لا يلزم أن تكون محفظتك مفتوحة لتلقي الأموال ، "
+"ولكن إذا كان الأمر كذلك ، فيمكنك مشاهدة عملية الوصول في الوقت الفعلي. يرجع "
+"ذلك إلى أن محفظتك تراقب باستمرار إنشاء كتل جديدة على بلوكشين عندما تكون "
+"مفتوحة ، وسوف تتعرف على معاملة جديدة تتضمن عنوان استلامك عند حدوثه."
 
 #: ../../wallets/dashcore/send-receive.rst:130
 msgid "The Windows 10 received transaction confirmation notification"
-msgstr ""
+msgstr "أرسل ويندوز 10 إشعار تأكيد إستلام المعاملة"
 
 #: ../../wallets/dashcore/send-receive.rst:132
 msgid ""
 "Once you have been paid, you can see the balance both on the **Overview** "
 "tab and on the **Transactions** tab."
 msgstr ""
+"بمجرد أن يتم الدفع لك ، يمكنك رؤية الرصيد في كل من علامة **نظرة عامة** وعلى "
+"علامة  **المعاملات**."
 
 #: ../../wallets/dashcore/send-receive.rst:138
 msgid "The received transaction"
-msgstr ""
+msgstr "معاملة الإساقبال"
 
 #: ../../wallets/dashcore/send-receive.rst:140
 msgid "**How to Create New Receiving Addresses in DashQT**"
-msgstr ""
+msgstr "**كيفية إنشاء عناوين استقبال جديدة في DashQ**"

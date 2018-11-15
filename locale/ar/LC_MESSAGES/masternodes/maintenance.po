@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Hasna Brania <hasna.brania19@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 10:17+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-15 06:30+0000\n"
+"PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -23,12 +26,16 @@ msgid ""
 "Maintaining a Dash masternode involves staying up to date with the latest "
 "version, voting and handling payments"
 msgstr ""
+"يتضمن الحفاظ على داش ماسترنود مواكبة أحدث إصدار ، والتصويت والتعامل مع "
+"المدفوعات"
 
 #: ../../masternodes/maintenance.rst:1
 msgid ""
 "dash, cryptocurrency, masternode, maintenance, maintain, payments, "
 "withdrawal, voting, monitoring"
 msgstr ""
+"داش ، العملات الرقمية ، ماسترنود ، صيانة ، صيانة ، المدفوعات ، الانسحاب ، "
+"التصويت ، المراقبة"
 
 #: ../../masternodes/maintenance.rst:9
 msgid "Maintenance"
@@ -42,10 +49,14 @@ msgid ""
 "masternodes should vote on proposals and perform other tasks in the interest"
 " of the network and the value of the Dash they hold."
 msgstr ""
+"يتطلب ماسترنود إجراء صيانة دورية لضمان عدم إسقاط قائمة انتظار الدفع. ويتضمن "
+"ذلك تثبيت التحديثات على الفور ، بالإضافة إلى الحفاظ على أمان الخادم وأدائه. "
+"بالإضافة إلى ذلك ، يجب أن تصوت ماسترنود على مقترحات وأداء مهام أخرى في مصلحة"
+" الشبكة وقيمة داش يحملونها."
 
 #: ../../masternodes/maintenance.rst:20
 msgid "Payment withdrawals"
-msgstr ""
+msgstr "سحوبات الدفع"
 
 #: ../../masternodes/maintenance.rst:22
 msgid ""
@@ -62,10 +73,21 @@ msgid ""
 "of only spending those UTXOs and not the one containing the 1000 DASH. Note "
 "that masternode payouts can only be spent after 100 confirmations."
 msgstr ""
+"بمجرد قبول الشبكة من قبل ماسترنود ، فإنها ستدخل في قائمة انتظار الدفع في "
+"ماسترنود وتبدأ ببطء في الصعود. يتم تحديد ماسترنود ضمن أعلى 10٪ من القائمة "
+"ويتلقى دفعة في كل مرة يتم استخراج كتلة داش جديدة. لمزيد من التفاصيل حول هذه "
+"العملية ، انظر هنا. يتم إرسال هذه المدفوعات إلى نفس العنوان الذي استخدمته "
+"لبدء الرمز الخاص بك ، مما يعني أنك بحاجة إلى توخي الحذر عند سحب الدفعات. يجب"
+" أن يظل مبلغ 1000 داش الأصلي الذي استخدمته لبدء تشغيل ماسترنود دون مساس في "
+"مخرجات معاملات فردية غير منفقة (utxo) وإلا سيُسقطك ماسترنود من قائمة الدفع -"
+" ربما تكون قد شاهدت هذا المعرّف عند التحضير لإرسال الأمر ماسترنود للبدء. "
+"تظهر المدفوعات في UTXOs منفصلة ، لذلك نحن بحاجة إلى طريقة إنفاق تلك UTXOs "
+"فقط وليس تلك التي تحتوي على 1000 داش. لاحظ أنه يمكن إنفاق عوائد ماسترنود فقط"
+" بعد 100 تأكيد."
 
 #: ../../masternodes/maintenance.rst:37
 msgid "Option 1: Withdrawals using a hardware wallet"
-msgstr ""
+msgstr "الخيار 1: السحب باستخدام محفظة الأجهزة"
 
 #: ../../masternodes/maintenance.rst:39
 msgid ""
@@ -76,6 +98,11 @@ msgid ""
 "without touching the original collateral transaction. This is not possible "
 "using the Trezor web wallet alone."
 msgstr ""
+"إذا استخدمت محفظة أجهزة مثل Trezor لبدء تشغيل ماسترنود الخاص بك ، فيجب عليك "
+"أيضًا استخدام هذه العملية لإجراء عمليات سحب العوائد. مرة أخرى ، سنستخدم أداة"
+" ماسترنود داش (DMT) من Bertrand256 لتحديد المخرجات الصحيحة. باستخدام DMT ، "
+"يمكننا اختيار UTXOs محددة لسحب المدفوعات دون لمس صفقة الضمانات الأصلية. هذا "
+"غير ممكن باستخدام محفظة Trezor على شبكة الإنترنت وحدها."
 
 #: ../../masternodes/maintenance.rst:46
 msgid ""
@@ -84,10 +111,13 @@ msgid ""
 "or **Transfer funds from all masternode's addresses**, if you use DMT to "
 "control multiple masternodes."
 msgstr ""
+"افتح DMT وتحقق تعمل اتصالات RPC و HW. من قائمة **الأدوات** ، حدد **تحويل "
+"الأموال من عنوان ماسترنود الحالي** أو **تحويل الأموال من جميع عناوين "
+"ماسترنود** ، إذا كنت تستخدم DMT للتحكم في عدة ماسترنود"
 
 #: ../../masternodes/maintenance.rst:54
 msgid "Selecting the transfer funds function in DMT"
-msgstr ""
+msgstr "اختيار وظيفة تحويل الأموال في DMT"
 
 #: ../../masternodes/maintenance.rst:56
 msgid ""
@@ -100,10 +130,16 @@ msgid ""
 "Enter your destination address for the transaction. The window should appear"
 " as follows:"
 msgstr ""
+"سيتم تحميل DMT للحظة ، ثم عرض نافذة توضح UTXOs المتاحة التي يمكنك استخدامها "
+"في عملية السحب. بشكل افتراضي ، يتم فحص جميع UTXOs غير المستخدمة كضمان ثانوي."
+" لا يتم فحص أجهزة UTXOs الثانوية فقط ولكن أيضًا مخفية لتجنب إرسال الأموال "
+"المرتبطة بالضمانات دون قصد وإيقاف رمزك. يمكنك إظهار هذه الإدخالات المخفية عن"
+" طريق إلغاء تحديد الخيار **إخفاء utushos ضمني**. أدخل عنوان الوجهة الخاص بك "
+"للمعاملة. يجب أن تظهر النافذة على النحو التالي:"
 
 #: ../../masternodes/maintenance.rst:68
 msgid "Selecting the UTXOs to use as inputs in the withdrawal transaction"
-msgstr ""
+msgstr "اختيار UTXOs لاستخدامه كمدخلات في عملية السحب"
 
 #: ../../masternodes/maintenance.rst:70
 msgid ""
@@ -113,14 +149,18 @@ msgid ""
 "the network by clicking Yes. A confirmation with the transaction ID will "
 "appear."
 msgstr ""
+"تحقق من رسوم المعاملة وانقر فوق **إرسال**. سيطالبك برنامج Trezor بإدخال رقم "
+"التعريف الشخصي الخاص بك وتأكيد المعاملة على الجهاز. بمجرد الانتهاء من ذلك ، "
+"قم بتأكيد مرة أخرى على DMT أنك تريد بث المعاملة إلى الشبكة عن طريق النقر فوق"
+" \"نعم\". سيظهر تأكيد مع معرف المعاملة."
 
 #: ../../masternodes/maintenance.rst:82
 msgid "Confirming broadcast of the transaction to the network"
-msgstr ""
+msgstr "تأكيد بث المعاملة إلى الشبكة"
 
 #: ../../masternodes/maintenance.rst:85
 msgid "Option 2: Withdrawals from Dash Core wallet"
-msgstr ""
+msgstr "الخيار 2: السحوبات من محفظة داش كور"
 
 #: ../../masternodes/maintenance.rst:87
 msgid ""
@@ -134,11 +174,20 @@ msgid ""
 " UTXOs can be used as input for any transactions you create. The following "
 "window appears:"
 msgstr ""
+"على غرار DMT كما هو موضح أعلاه ، نحن بحاجة إلى طريقة في محفظة داش كور لتقييد"
+" أي UTXOs يتم إنفاقها عند إجراء عمليات السحب من عنوان ماسترنود للتأكد من عدم"
+" لمس UTXO الجانبي. في محفظة داش كور ، تُعرف هذه الميزة باسم تحكم في العملة ،"
+" ويجب تمكينها قبل أن تتمكن من استخدامها. انقر على **الإعدادات> الخيارات> "
+"المحفظة> تمكين ميزات التحكم بالعملة**. الآن ، عندما تذهب إلى علامة التبويب "
+"**إرسال** في محفظتك ، سيظهر زر جديد يسمى **المدخلات ...**. انقر فوق هذا الزر"
+" لتحديد أي UTXOs يمكن استخدامه كمدخل لأية معاملات تقوم بإنشائها. النافذة "
+"التالية تظهر"
 
 #: ../../masternodes/maintenance.rst:100
 msgid ""
 "Coin Selection window in Dash Core wallet, showing two masternodes (testnet)"
 msgstr ""
+"نافذة اختيار النقود في محفظة داش كور ، تظهر اثنين من ماسترنود (testnet)"
 
 #: ../../masternodes/maintenance.rst:103
 msgid ""
@@ -147,14 +196,18 @@ msgid ""
 "Then click **OK**. You can now safely create transactions with your "
 "remaining funds without affecting the original collateral UTXOs."
 msgstr ""
+"انقر بزر الماوس الأيمن على المعاملة (المعاملات) التي تعرض مبلغًا قدره 1000 "
+"داش ، ثم حدد **قفل غير مفصول**. سيظهر قفل صغير بجوار المعاملة. ثم انقر فوق "
+"**موافق**. يمكنك الآن إنشاء معاملات بأموالك المتبقية بأمان دون التأثير على "
+"UTXOs الأصلية."
 
 #: ../../masternodes/maintenance.rst:115
 msgid "Locking UTXOs in Dash Core wallet"
-msgstr ""
+msgstr "قفل UTXOs في محفظة الأساسية داش"
 
 #: ../../masternodes/maintenance.rst:120
 msgid "How to update a masternode"
-msgstr ""
+msgstr "كيفية تحديث ماسترنود"
 
 #: ../../masternodes/maintenance.rst:122
 msgid ""
@@ -167,6 +220,15 @@ msgid ""
 "If you run a hosted masternode, your host will take care of updates for you."
 " If not, the method of updating depends on how you installed Dash."
 msgstr ""
+"بشكل دوري ، سيقوم فريق تطوير داش كور بإصدار تحديثات إلى داش. نظرًا لأن العقد"
+" الطبيعية تعتمد عليها لخدمات ونسخ من بلوكشين ، فمن المتوقع أن يتم تحديث "
+"ماسترنود إلى إصدارات جديدة من داش على وجه السرعة. في بعض الحالات ، قد يكون "
+"من الضروري أيضًا إجراء ترقيات الأجهزة (المزيد من وحدة المعالجة المركزية أو "
+"ذاكرة الوصول العشوائي أو مساحة القرص أو حتى أجهزة GPU / ASIC المخصصة). سيؤدي"
+" عدم التحديث في نهاية المطاف إلى إزالة الرمز الخاص بك من قائمة انتظار الدفع."
+" إذا قمت بتشغيل ماسترنود مستضافة ، فسيقوم المضيف الخاص بك بالاهتمام "
+"بالتحديثات لك. إذا لم يكن الأمر كذلك ، تعتمد طريقة التحديث على كيفية تثبيت "
+"داش."
 
 #: ../../masternodes/maintenance.rst:132
 msgid ""
@@ -179,20 +241,29 @@ msgid ""
 "send start commands to your masternode if not necessary, as it will send you"
 " to the back of the payment queue."
 msgstr ""
+"تحديثات الإصدارات الثانوية إلى داش (على سبيل المثال من 0.12.3.1 إلى "
+"0.12.3.2) لا تجري تغييرات على إصدار البروتوكول ، في حين أن تحديثات الإصدارات"
+" الرئيسية (على سبيل المثال من 0.12.2.3 إلى 0.12.3.0) ستزيد عادةً من إصدار "
+"بروتوكول الشبكة. في حالة عدم تغيير إصدار البروتوكول ، لن تحتاج إلى إعادة "
+"تشغيل ماسترنود إذا قمت بإكمال التحديث خلال 60 دقيقة. إذا تغير إصدار "
+"البروتوكول ، فيجب عليك إصدار أمر بدء من محفظتك. لا ترسل أوامر البدء إلى "
+"ماسترنود الخاص بك إذا لم يكن ذلك ضروريا ، لأنها سوف نرسل لك إلى الجزء الخلفي"
+" من قائمة انتظار الدفع."
 
 #: ../../masternodes/maintenance.rst:142
 msgid "Option 1: Automated update using dashman"
-msgstr ""
+msgstr "الخيار 1: التحديث التلقائي باستخدام dashman"
 
 #: ../../masternodes/maintenance.rst:144
 msgid ""
 "To update Dash using dashman, log in to your server and enter the following "
 "commands::"
 msgstr ""
+"لتحديث داش باستخدام dashman ، سجّل الدخول إلى خادمك وأدخل الأوامر التالية ::"
 
 #: ../../masternodes/maintenance.rst:150
 msgid "Check the status of your masternode::"
-msgstr ""
+msgstr "تحقق من حالة ماسترنود ::"
 
 #: ../../masternodes/maintenance.rst:154
 msgid ""
@@ -203,16 +274,23 @@ msgid ""
 "statuses should turn green, in particular **masternode started: YES** and "
 "**masternode network state: ENABLED**."
 msgstr ""
+"إذا كنت تقوم بتحديث إصدار رئيسي وتحتاج إلى إعادة تشغيل ماسترنود ، فقم بتحديث"
+" إصدار البرنامج من المحفظة التي تحمل الضمانات إلى أحدث إصدار الآن باتباع "
+"الإرشادات :ref:`هنا <masternode-setup-start>`. تواصل مراقبة ماسترنود الخاص "
+"بك. بعد مرور بعض الوقت ، يجب أن تتحول جميع الحالات إلى اللون الأخضر ، ولا "
+"سيما **بدأ ماسترنود: نعم** و **حالة شبكة: ماسترنود**."
 
 #: ../../masternodes/maintenance.rst:164
 msgid "Option 2: Manual update"
-msgstr ""
+msgstr "الخيار 2: التحديث اليدوي"
 
 #: ../../masternodes/maintenance.rst:166
 msgid ""
 "To update Dash manually, log in to your server using ssh or PuTTY. First we "
 "need to stop Dash running::"
 msgstr ""
+"لتحديث داش يدويًا ، قم بتسجيل الدخول إلى خادمك باستخدام ssh أو PuTTY. أولا "
+"نحن بحاجة لوقف داش تشغيل ::"
 
 #: ../../masternodes/maintenance.rst:171
 msgid ""
@@ -224,6 +302,12 @@ msgid ""
 " address to the latest version of Dash Core by right clicking or pressing "
 "**Ctrl + V**::"
 msgstr ""
+"لتنزيل مكونات د ماسترنود داش وتثبيتها يدويًا ، تفضل بزيارة "
+"https://www.dash.org/wallets/ على جهاز الكمبيوتر الخاص بك للعثور على رابط "
+"لأحدث محفظة داش كور. انقر فوق **لينكس** ، ثم انقر بزر الماوس الأيمن فوق "
+"**تنزيل TGZ** لـ **داش كور في لينكس 64 Bit** وحدد **نسخ عنوان الرابط**. ارجع"
+" إلى نافذة طرفك وأدخل الأمر التالي ، وقم بلصق العنوان إلى أحدث إصدار من داش "
+"كور عن طريق النقر بزر الماوس الأيمن أو الضغط على **Ctrl + V** ::"
 
 #: ../../masternodes/maintenance.rst:182
 msgid ""
@@ -231,30 +315,36 @@ msgid ""
 "comparing the output against the value for the file as shown on the Dash "
 "website under **Hash File**::"
 msgstr ""
+"تحقق من تكامل التنزيل الخاص بك عن طريق تشغيل الأمر التالي ومقارنة الإخراج "
+"مقابل قيمة الملف كما هو موضح في موقع ويب داش ضمن **ملف هاش** ::"
 
 #: ../../masternodes/maintenance.rst:191
 msgid "Link to the hash file to verify download integrity"
-msgstr ""
+msgstr "اربط بملف تجزئة للتحقق من سلامة التنزيل"
 
 #: ../../masternodes/maintenance.rst:193
 msgid ""
 "Remove the old binaries from the working directory, extract the compressed "
 "archive, copy the new files to the directory and set them as executable::"
 msgstr ""
+"إزالة الثنائيات القديمة من دليل العمل ، واستخراج أرشيف مضغوط ، نسخ الملفات "
+"الجديدة إلى الدليل وتعيينها كما للتنفيذ:"
 
 #: ../../masternodes/maintenance.rst:203
 msgid "Clean up unneeded files::"
-msgstr ""
+msgstr "تنظيف الملفات غير الضرورية ::"
 
 #: ../../masternodes/maintenance.rst:208
 msgid "Restart Dash::"
-msgstr ""
+msgstr "إعادت داش::"
 
 #: ../../masternodes/maintenance.rst:212
 msgid ""
 "You will see a message reading \"Dash Core server starting\". We will now "
 "update Sentinel::"
 msgstr ""
+"سترى رسالة تنص على \"بدء تشغيل وحدة خدمة الأساسية الأساسية\". سنقوم الآن "
+"بتحديث الأمان ::"
 
 #: ../../masternodes/maintenance.rst:218
 msgid ""
@@ -265,10 +355,15 @@ msgid ""
 " console and enter this command, where MN1 is the alias for your "
 "masternode::"
 msgstr ""
+"إذا تم تغيير إصدار البروتوكول أثناء هذا التحديث ، فستحتاج إلى إصدار أمر بدء "
+"من محفظتك. إذا كنت تستخدم محفظة أجهزة ، فيمكنك إصدار الأمر بدأ بمجرد النقر "
+"فوق الزر الموجود في DMT. إذا كنت تستخدم محفظة داش كور ، فقم بتحديثها إلى "
+"أحدث إصدار ، ثم افتح وحدة التحكم في تصحيح الأخطاء وأدخل هذا الأمر ، حيث يكون"
+" MN1 هو الاسم المستعار لـ ماسترنود الخاص بك:"
 
 #: ../../masternodes/maintenance.rst:227
 msgid "Monitor the status of your masternode as it starts up::"
-msgstr ""
+msgstr "رصد حالة ماسترنود الخاص بك لأنه يبدأ ::"
 
 #: ../../masternodes/maintenance.rst:234
 msgid ""
@@ -279,6 +374,11 @@ msgid ""
 "masternode from Sentinel. If Sentinel detects a functioning masternode, the "
 "following command should return nothing::"
 msgstr ""
+"على وجه الخصوص ، يجب أن يعود الأمر الأخير للحالة **بدأ ماسترنود بنجاح**. إذا"
+" ظهر لك خطأ مشابه ل **نسخة بروتوكول غير صالحة** ، فقد تغير إصدار البروتوكول "
+"ويجب عليك إرسال أمر بدء من محفظتك مرة أخرى. يمكنك أيضا رصد حالة ماسترنود "
+"الخاص بك من الحماية. إذا كشف مشكل عن ماسترنود يعمل ، يجب أن يرجع الأمر "
+"التالي:"
 
 #: ../../masternodes/maintenance.rst:244
 msgid ""
@@ -286,10 +386,13 @@ msgid ""
 "`DashNinja <https://www.dashninja.pl/>`_, or search the consensus list of "
 "masternodes using this command and entering your masternode IP address::"
 msgstr ""
+"وأخيرا ، يمكنك التحقق من ماسترنود الخاص بك عن طريق استخدام عنوان ضمانات `داش"
+" نينجا <https://www.dashninja.pl/>`_, أو ابحث في قائمة توافق الآراء من "
+"ماسترنود باستخدام هذا الأمر وإدخال عنوان IP الخاص بك ماسترنود ::"
 
 #: ../../masternodes/maintenance.rst:253
 msgid "Finding your position in the payment queue"
-msgstr ""
+msgstr "العثور على موقعك في قائمة انتظار الدفع"
 
 #: ../../masternodes/maintenance.rst:255
 msgid ""
@@ -300,6 +403,11 @@ msgid ""
 "payment. However, it is possible to make an approximation based on the time "
 "your masternode entered the back of the queue."
 msgstr ""
+"قبل داش  0.12.4 ، قد يكون لكل ماسترنود وجهة نظر مختلفة قليلاً عن الشبكة. "
+"بالإضافة إلى ذلك ، الاختيار من أعلى 10 ٪ من ماسترنود في القائمة في :ref:`هنا"
+" <payment-logic>` هو عشوائي. هذا يعني أنه لا توجد إجابة محددة على موعد "
+"اختيار رمز الدفع الخاص بك. ومع ذلك ، من الممكن إجراء تقدير تقريبي استنادًا "
+"إلى الوقت الذي دخل فيه ماسترنود خلف قائمة الانتظار."
 
 #: ../../masternodes/maintenance.rst:262
 msgid ""
@@ -307,22 +415,25 @@ msgid ""
 " tools you can run to determine your approximate position in the payment "
 "queue, and bots are available on Discord and Slack as well."
 msgstr ""
+"أعضاء المجتمع xkcd ، Bertrand256 و moocowmoo قد نشروا مختلف الأدوات التي "
+"يمكنك تشغيلها لتحديد موقعك التقريبي في طابور الدفع ، و bot متوفرة على "
+"Discord و Slack كذلك."
 
 #: ../../masternodes/maintenance.rst:266
 msgid "mn_queue: https://github.com/kxcd/mn_queue"
-msgstr ""
+msgstr "mn_queue: https://github.com/kxcd/mn_queue"
 
 #: ../../masternodes/maintenance.rst:267
 msgid "Dashman: https://github.com/moocowmoo/dashman"
-msgstr ""
+msgstr "Dashman: https://github.com/moocowmoo/dashman"
 
 #: ../../masternodes/maintenance.rst:268
 msgid "DMT: https://github.com/Bertrand256/dash-masternode-tool"
-msgstr ""
+msgstr "DMT: https://github.com/Bertrand256/dash-masternode-tool"
 
 #: ../../masternodes/maintenance.rst:272
 msgid "DashCentral voting, verification and monitoring"
-msgstr ""
+msgstr "داش سنترال و التصويت والتحقق والرصد"
 
 #: ../../masternodes/maintenance.rst:274
 msgid ""
@@ -331,10 +442,13 @@ msgid ""
 "and to facilitate voting from a graphical user interface, but also offers "
 "functions to monitor masternodes."
 msgstr ""
+"داش سنترال هو موقع مدعوم من قبل المجتمع المدار من قبل عضو المجتمع رانجو. لقد"
+" أصبح موقعًا * واقعيًا * لمناقشة مقترحات الميزانية وتسهيل عملية التصويت من "
+"واجهة مستخدم رسومية ، ولكنه يوفر أيضًا وظائف لمراقبة الأعداد."
 
 #: ../../masternodes/maintenance.rst:280
 msgid "Adding your masternode to DashCentral"
-msgstr ""
+msgstr "إضافة ماستؤنود الخاص بك إلى داش سنترال"
 
 #: ../../masternodes/maintenance.rst:282
 msgid ""
@@ -345,19 +459,25 @@ msgid ""
 "masternode now** button. Enter your collateral address on the following "
 "screen:"
 msgstr ""
+"`داش سنترال <https://www.dashcentral.org/>`_ يسمح لك بالتصويت على المقترحات "
+"من راحة متصفحك. بعد الانتهاء `التسجيل "
+"<https://www.dashcentral.org/register>`_, إدخب إلى `ماسترنود  "
+"<https://www.dashcentral.org/masternodes>`_ الصفحة وانقر على زر **إضافة "
+"ماسترنود الآن**. أدخل عنوان الضمان الخاص بك على الشاشة التالية:"
 
 #: ../../masternodes/maintenance.rst:292
 msgid "Adding a masternode to DashCentral"
-msgstr ""
+msgstr "اضافة ماسترنود فب داش سنترال"
 
 #: ../../masternodes/maintenance.rst:294
 msgid ""
 "Click **Add masternode**. Your masternode has now been added to DashCentral."
 msgstr ""
+"انقر **إضافة ماسترنود**. تمت إضافة ماسترنود الخاص بك الآن إلى داش سنترال."
 
 #: ../../masternodes/maintenance.rst:298
 msgid "Enabling voting from DashCentral"
-msgstr ""
+msgstr "تمكين التصويت من داش سنترال"
 
 #: ../../masternodes/maintenance.rst:300
 msgid ""
@@ -367,10 +487,15 @@ msgid ""
 "remember!) and enter the private key (the same key you used in the dash.conf"
 " file on your masternode) on the following screen:"
 msgstr ""
+"انقر فوق ** تحرير ** تحت **مفاتيح الخصوصية الخاصة بالتصويت** لإدخال مفتاحك "
+"الخاص الرئيسي لتمكين التصويت عبر واجهة الويب داش سنترال. أدخل عبارة مرور "
+"التصويت (ليست هي نفسها كلمة مرور تسجيل الدخول الخاصة بك ، ولكن من المهم "
+"تذكرها أيضًا!) وأدخل المفتاح الخاص (نفس المفتاح الذي استخدمته في ملف "
+"dash.conf الموجود على ماسترنوظ الخاص بك) على الشاشة التالية:"
 
 #: ../../masternodes/maintenance.rst:310
 msgid "Adding voting privkeys to DashCentral"
-msgstr ""
+msgstr "إضافة مفاتيح حرة للتصويت إلى داش سنترال"
 
 #: ../../masternodes/maintenance.rst:312
 msgid ""
@@ -383,10 +508,17 @@ msgid ""
 "privkeys on server**. You can now vote on proposals from the DashCentral web"
 " interface."
 msgstr ""
+"من المهم ملاحظة أن المفتاح الخاص لبدء تشغيل ماسترنود لا يرتبط بالمفاتيح "
+"الخاصة لعنوان الضمان الذي يخزن 1000 داش. يمكن استخدام هذه المفاتيح لإصدار "
+"الأوامر نيابة عن ماسترنود ، مثل التصويت ، ولكن لا يمكن استخدامها للوصول إلى "
+"الضمانات. يتم تشفير المفاتيح على جهازك ولا يتم تخزينها كنص عادي على خوادم "
+"داش سنترال. بمجرد إدخال المفتاح ، انقر فوق **قم بتخزين مفاتيح تجزئة التصويت "
+"المشفرة على الخادم**. يمكنك الآن التصويت على المقترحات من واجهة الويب داش "
+"سنترال"
 
 #: ../../masternodes/maintenance.rst:322
 msgid "Verifying ownership"
-msgstr ""
+msgstr "التحقق من الملكية"
 
 #: ../../masternodes/maintenance.rst:324
 msgid ""
@@ -394,10 +526,12 @@ msgid ""
 "masternode to DashCentral. Click **Unverified** under **Ownership** and the "
 "following screen will appear:"
 msgstr ""
+"يمكنك أيضًا إصدار رسالة من عنوانك لإثبات ملكية الرمز الخاص بك إلى داش "
+"سنترال. انقر غير محقق **تحت**الملكية** وستظهر الشاشة التالية:"
 
 #: ../../masternodes/maintenance.rst:331
 msgid "Verifying ownership of your masternode to DashCentral"
-msgstr ""
+msgstr "التحقق من ملكية ماسترنود الخاص بك إلى داش سنترال"
 
 #: ../../masternodes/maintenance.rst:333
 msgid ""
@@ -409,10 +543,16 @@ msgid ""
 "appear, where you can enter the message provided by DashCentral and the "
 "address you wish to sign:"
 msgstr ""
+"تظهر تعليمات حول كيفية توقيع عنوان الضمان الخاص بك باستخدام محفظة برامج. إذا"
+" كنت تستخدم محفظة أجهزة أخرى غير Trezor ، فستحتاج إلى استخدام تطبيق DMT "
+"لتوقيع العنوان. إذا كنت تستخدم محفظة الأجهزة Trezor ، انتقل إلى الخاص بك "
+"`محفظة تريزو <https://wallet.trezor.io/>`_, انسخ عنوان الضمانات وانقر على "
+"**تسجيل والتحقق**. ستظهر الشاشة التالية ، حيث يمكنك إدخال الرسالة المقدمة من"
+" داش سنترال والعنوان الذي ترغب في توقيعه:"
 
 #: ../../masternodes/maintenance.rst:344
 msgid "Signing a message from the Trezor Wallet"
-msgstr ""
+msgstr "توقيع رسالة من محفظة Trezor"
 
 #: ../../masternodes/maintenance.rst:346
 msgid ""
@@ -421,14 +561,18 @@ msgid ""
 "this signature and paste it into the box on DashCentral and click **Verify "
 "ownership**. Verification is now complete."
 msgstr ""
+"انقر فوق **تسجيل** ، قم بالتأكيد على جهاز Trezor وأدخل رقم التعريف الشخصي "
+"الخاص بك لتوقيع الرسالة. سيظهر توقيع الرسالة في المربع **الإمظاء**. انسخ هذا"
+" التوقيع والصقه في المربع الموجود على داش سنترال وانقر على **التحقق من "
+"الملكية**. اكتمل التحقق الآن."
 
 #: ../../masternodes/maintenance.rst:354
 msgid "Masternode ownership has been successfully verified"
-msgstr ""
+msgstr "تم التحقق من ملكية ماسترنود بنجاح"
 
 #: ../../masternodes/maintenance.rst:357
 msgid "Installing the DashCentral monitoring script"
-msgstr ""
+msgstr "تثبيت البرنامج النصي لمراقبة داش سنترال"
 
 #: ../../masternodes/maintenance.rst:359
 msgid ""
@@ -439,10 +583,15 @@ msgid ""
 "key, adding a PIN to your account if necessary. Scroll to the following "
 "screen:"
 msgstr ""
+"يقدم داش سنترال خدمة لمراقبة ماسترنود الخاص بك ، إعادة تشغيل داش تلقائيا في "
+"حالة حدوث تعطل وإرسال البريد الإلكتروني في حالة حدوث خطأ. اذهب الى `إعدادات "
+"الحساب <https://www.dashcentral.org/account/edit>`_ الصفحة وإنشاء مفتاح جديد"
+" لواجهة برمجة التطبيقات ، مع إضافة رقم تعريف شخصي إلى حسابك إذا لزم الأمر. "
+"قم بالتمرير إلى الشاشة التالية:"
 
 #: ../../masternodes/maintenance.rst:369
 msgid "Setting up the DashCentral monitoring script"
-msgstr ""
+msgstr "إعداد البرنامج النصي لمراقبة داش سنترال"
 
 #: ../../masternodes/maintenance.rst:371
 msgid ""
@@ -450,22 +599,29 @@ msgid ""
 "click and selecting **Copy link address**. Open PuTTY and connect to your "
 "masternode, then type::"
 msgstr ""
+"انسخ الرابط إلى الإصدار الحالي من البرنامج النصي داش سنترال بالنقر بزر "
+"الماوس الأيمن وتحديد **نسخ عنوان الرابط**. فتح PuTTY والاتصال بك ماسترنود ، "
+"ثم اكتب ::"
 
 #: ../../masternodes/maintenance.rst:377
 msgid ""
 "Replace the link with the current version of dashcentral-updater as "
 "necessary. Decompress the archive using the following command::"
 msgstr ""
+"استبدال الارتباط مع الإصدار الحالي من المحدث داش سنترال حسب الضرورة. قم "
+"بإلغاء ضغط الأرشيف باستخدام الأمر التالي::"
 
 #: ../../masternodes/maintenance.rst:382
 msgid "View your masternode configuration details by typing::"
-msgstr ""
+msgstr "عرض تفاصيل تهيئة ماسترنود بكتابة ::"
 
 #: ../../masternodes/maintenance.rst:386
 msgid ""
 "Copy the values for ``rpcuser`` and ``rpcpassword``. Then edit the "
 "dashcentral configuration by typing::"
 msgstr ""
+"انسخ قيم ``rpcuser`` و ``rpcpassword``. ثم تحرير التكوين داش سنترال بكتابة "
+"::"
 
 #: ../../masternodes/maintenance.rst:391
 msgid ""
@@ -474,10 +630,14 @@ msgid ""
 "according to your system. A common configuration, where ``lwhite`` is the "
 "name of the Linux user, may look like this:"
 msgstr ""
+"استبدل القيم الخاصة بـ ``api_key`` ، والعنوان الضمني لرنايتك البريدية ، و "
+"``rpc_user`` ، و ``rpc_password`` ، و ``daemon_binary`` ، و "
+"``daemon_datadir`` وفقًا للنظام الخاص بك. قد يبدو الشكل الشائع ، حيث "
+"``lwhite`` اسم مستخدم لينكس ، كما يلي:"
 
 #: ../../masternodes/maintenance.rst:399
 msgid "DashCentral updater configuration file"
-msgstr ""
+msgstr "داش سنترال ملف التكوين التحديث"
 
 #: ../../masternodes/maintenance.rst:424
 msgid ""
@@ -486,14 +646,17 @@ msgid ""
 "check the website. If it was successful, you will see that an update has "
 "been sent::"
 msgstr ""
+"اضغط على **Ctrl + X** للخروج ، وتأكد من أنك تريد الحفظ مع **Y** ثم اضغط على "
+"**اضغط**. اختبار التكوين الخاص بك عن طريق تشغيل البرنامج النصي داش سنترال ، "
+"ثم تحقق من الموقع. إذا نجحت ، سترى أنه قد تم إرسال تحديث ::"
 
 #: ../../masternodes/maintenance.rst:434
 msgid "Manually testing the DashCentral updater"
-msgstr ""
+msgstr "قم باختبار أداة التحديث داش سنترال يدويًا"
 
 #: ../../masternodes/maintenance.rst:439
 msgid "DashCentral updater has successfully sent data to the DashCentral site"
-msgstr ""
+msgstr "لقد قام محدث داش سنترال بإرسال البيانات بنجاح إلى موقع داش سنترال"
 
 #: ../../masternodes/maintenance.rst:442
 msgid ""
@@ -504,6 +667,11 @@ msgid ""
 " an effective way to make sure you do not drop off the payment queue. Type "
 "the following command::"
 msgstr ""
+"بمجرد التحقق من عمل التهيئة ، يمكننا تحرير crontab على النظام الخاص بك "
+"لجدولة البرنامج النصي dcupdater لتشغيل كل 2 دقائق. وهذا يسمح للنظام بإعطائك "
+"إنذارًا مبكرًا في حالة حدوث خطأ وسيعيد تشغيل البرنامج الخفي إذا تم تعليقه أو"
+" تعطله. هذه طريقة فعالة للتأكد من عدم قيامك بإسقاط قائمة انتظار الدفع. اكتب "
+"الأمر التالي ::"
 
 #: ../../masternodes/maintenance.rst:451
 msgid ""
@@ -511,10 +679,12 @@ msgid ""
 "after the line for sentinel, replacing lwhite with your username on your "
 "system::"
 msgstr ""
+"حدد محررًا إذا لزم الأمر وأضف السطر التالي إلى ملف crontab بعد سطر الحارس ، "
+"واستبدل lwhite باسم المستخدم على نظامك:"
 
 #: ../../masternodes/maintenance.rst:460
 msgid "Editing crontab to run the DashCentral updater automatically"
-msgstr ""
+msgstr "تحرير crontab لتشغيل المحدث داش سنترال تلقائياً"
 
 #: ../../masternodes/maintenance.rst:462
 msgid ""
@@ -522,20 +692,25 @@ msgid ""
 "**Enter**. The dcupdater script will now run every two minutes, restart "
 "dashd whenever necessary and email you in the event of an error."
 msgstr ""
+"اضغط على **Ctrl + X** للخروج ، وتأكد من أنك تريد الحفظ مع **Y** ثم اضغط على "
+"**اضغط**. سيتم تشغيل البرنامج النصي لـ dcupdater الآن كل دقيقتين ، وأعد "
+"تشغيل dashd عند الضرورة ، ثم أرسل رسالة بريد إلكتروني إليك في حالة حدوث خطأ."
 
 #: ../../masternodes/maintenance.rst:467
 msgid "Masternode monitoring tools"
-msgstr ""
+msgstr "أدوات مراقبة ماسترنود"
 
 #: ../../masternodes/maintenance.rst:469
 msgid ""
 "Several sites operated by community members are available to monitor key "
 "information and statistics relating to the masternode network."
 msgstr ""
+"تتوفر العديد من المواقع التي يديرها أعضاء المجتمع لمراقبة المعلومات "
+"والإحصاءات الرئيسية المتعلقة بشبكة ماسترنود."
 
 #: ../../masternodes/maintenance.rst:473
 msgid "Block Explorers"
-msgstr ""
+msgstr "مستكشف الكتلة"
 
 #: ../../masternodes/maintenance.rst:475
 msgid ""
@@ -545,6 +720,10 @@ msgid ""
 "searchable by its txid. A number of block explorers are available for the "
 "Dash network."
 msgstr ""
+"بما أن داش عبارة عن بلوكشين عام ، فمن الممكن استخدام مستكشفين مستعرضين لعرض "
+"أرصدة أي عنوان عام من داش ، بالإضافة إلى فحص المعاملات التي تم إدخالها في أي"
+" كتلة معينة. كل معاملة فريدة من نوعها هي أيضا قابلة للبحث عن طريق سداسي. "
+"يتوفر عدد من المستكشفين المحظورين لشبكة داش."
 
 #: ../../masternodes/maintenance.rst:481
 msgid ""
@@ -553,6 +732,10 @@ msgid ""
 "<https://chainz.cryptoid.info/dash/masternodes.dws>`__ to view and map Dash "
 "masternodes."
 msgstr ""
+"`CryptoID <https://chainz.cryptoid.info/>`__ offers a `Dash blockchain "
+"explorer <https://chainz.cryptoid.info/dash/>`__ and a `function "
+"<https://chainz.cryptoid.info/dash/masternodes.dws>`__ to view and map Dash "
+"masternodes."
 
 #: ../../masternodes/maintenance.rst:485
 msgid ""
@@ -560,18 +743,25 @@ msgid ""
 "<https://bitinfocharts.com/dash/>`_ of price statistics and information and "
 "a `blockchain explorer <https://bitinfocharts.com/dash/explorer/>`__."
 msgstr ""
+"`BitInfoCharts <https://bitinfocharts.com>`_ offers a `page "
+"<https://bitinfocharts.com/dash/>`_ of price statistics and information and "
+"a `blockchain explorer <https://bitinfocharts.com/dash/explorer/>`__."
 
 #: ../../masternodes/maintenance.rst:489
 msgid ""
 "`CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ offers a range "
 "of statistics and data on most blockchains, including Dash."
 msgstr ""
+"`CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ offers a range "
+"of statistics and data on most blockchains, including Dash."
 
 #: ../../masternodes/maintenance.rst:491
 msgid ""
 "`CoinPayments <https://www.coinpayments.net/>`__ offers a simple `Dash "
 "blockchain explorer <http://explorer.coinpayments.net/index.php?chain=7>`__."
 msgstr ""
+"`CoinPayments <https://www.coinpayments.net/>`__ offers a simple `Dash "
+"blockchain explorer <http://explorer.coinpayments.net/index.php?chain=7>`__."
 
 #: ../../masternodes/maintenance.rst:494
 msgid ""
@@ -579,6 +769,9 @@ msgid ""
 "`explorer.dash.org <http://explorer.dash.org/>`__ and `insight.dash.org "
 "<http://insight.dash.org/>`__."
 msgstr ""
+"`Dash.org <https://www.dash.org/>`__ includes two blockchain explorers at "
+"`explorer.dash.org <http://explorer.dash.org/>`__ and `insight.dash.org "
+"<http://insight.dash.org/>`__."
 
 #: ../../masternodes/maintenance.rst:497
 msgid ""
@@ -587,14 +780,18 @@ msgid ""
 "<https://github.com/dashpay/insight-ui-dash>`__ of `insight "
 "<https://insight.is/>`__, an advanced blockchain API tool"
 msgstr ""
+"`Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https "
+"://dash-bitcore1.trezor.io/>`__ powered by a `Dash fork "
+"<https://github.com/dashpay/insight-ui-dash>`__ of `insight "
+"<https://insight.is/>`__, an advanced blockchain API tool"
 
 #: ../../masternodes/maintenance.rst:503
 msgid "Dash Masternode Tool"
-msgstr ""
+msgstr "ادوات ماسترنود داش"
 
 #: ../../masternodes/maintenance.rst:505
 msgid "https://github.com/Bertrand256/dash-masternode-tool"
-msgstr ""
+msgstr "https://github.com/Bertrand256/dash-masternode-tool"
 
 #: ../../masternodes/maintenance.rst:507
 msgid ""
@@ -604,14 +801,18 @@ msgid ""
 "proposals and withdraw masternode payments without affecting the collateral "
 "transaction."
 msgstr ""
+"يتيح لك  ادوات ماسترنود داش (DMT) ، الذي قام بكتابته وصيانته من قبل عضو "
+"المجتمع Bertrand256 ، بدء تشغيل رمز حديث من جميع محافظ الأجهزة الرئيسية مثل "
+"Trezor و Ledger و KeepKey. كما يدعم الوظائف للتصويت على المقترحات وسحب "
+"المدفوعات ماسترنود دون التأثير على الصفقة الضمانات."
 
 #: ../../masternodes/maintenance.rst:514
 msgid "DASH Ninja"
-msgstr ""
+msgstr "داش نينجا"
 
 #: ../../masternodes/maintenance.rst:516
 msgid "https://www.dashninja.pl"
-msgstr ""
+msgstr "https://www.dashninja.pl"
 
 #: ../../masternodes/maintenance.rst:518
 msgid ""
@@ -621,14 +822,18 @@ msgid ""
 "the masternode payment schedule and the geographic distribution of "
 "masternodes are also available, as well as a simple blockchain explorer."
 msgstr ""
+"يقدم داش نينجا ، الذي يديره عضو في المنتدى ومطور داش كور elbereth ، إحصائيات"
+" أساسية حول اعتماد إصدارات مختلفة من داش عبر شبكة ماسترنود. تتوفر أيضًا "
+"العديد من الميزات لمراقبة حوكمة داش والجدول الزمني للدفع في ماسترنود "
+"والتوزيع الجغرافي للغة ماسترنود ، بالإضافة إلى مستكشف بلوكشين بسيط."
 
 #: ../../masternodes/maintenance.rst:526
 msgid "DashCentral"
-msgstr ""
+msgstr "داش سنترال"
 
 #: ../../masternodes/maintenance.rst:528
 msgid "https://www.dashcentral.org"
-msgstr ""
+msgstr "https://www.dashcentral.org"
 
 #: ../../masternodes/maintenance.rst:530
 msgid ""
@@ -637,14 +842,18 @@ msgid ""
 "interface. An `Android app <https://play.google.com/store/apps/detai "
 "ls?id=net.paregov.android.dashcentral>`_ is also available."
 msgstr ""
+"يقدم داش سنترال ، الذي يديره عضو في المنتدى ، رنجو ، خدمة متطورة لرصد "
+"الألقاب والتصويت على مقترحات الميزانية من خلال واجهة ويب متقدمة. ل `تطبيق "
+"الأندرويد <https://play.google.com/store/apps/detai "
+"ls?id=net.paregov.android.dashcentral>`_  و هو متاح ايضا."
 
 #: ../../masternodes/maintenance.rst:536
 msgid "Masternode.me"
-msgstr ""
+msgstr "Masternode.me"
 
 #: ../../masternodes/maintenance.rst:538
 msgid "https://stats.masternode.me"
-msgstr ""
+msgstr "https://stats.masternode.me"
 
 #: ../../masternodes/maintenance.rst:540
 msgid ""
@@ -652,14 +861,16 @@ msgid ""
 "offers sequential reports on the price, generation rate, blockchain "
 "information and some information on masternodes."
 msgstr ""
+"Masternode.me ، يديرها عضو المنتدى و moocowmoo داش كور ، يقدم تقارير متسلسلة"
+" عن السعر ، معدل التوليد ، معلومات بلوكشين وبعض المعلومات عن ماسترنود."
 
 #: ../../masternodes/maintenance.rst:545
 msgid "Dash Masternode Information"
-msgstr ""
+msgstr "معلومات عن ماسترنود داش"
 
 #: ../../masternodes/maintenance.rst:547
 msgid "http://178.254.23.111/~pub/Dash/Dash_Info.html"
-msgstr ""
+msgstr "http://178.254.23.111/~pub/Dash/Dash_Info.html"
 
 #: ../../masternodes/maintenance.rst:549
 msgid ""
@@ -668,3 +879,7 @@ msgid ""
 "network, including graphs of the total masternode count over time, price "
 "information and network distribution."
 msgstr ""
+"يقدم هذا الموقع ، الذي يديره عضو في المنتدى وتتويج مطور داش كور ، تمثيلًا "
+"مرئيًا للعديد من الإحصاءات الرئيسية لشبكة ماسترنود داش ، بما في ذلك الرسوم "
+"البيانية لإجمالي عدد ماسترنود مع مرور الوقت ، ومعلومات عن الأسعار وتوزيع "
+"الشبكة."

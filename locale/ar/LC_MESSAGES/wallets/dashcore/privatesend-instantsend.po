@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Hasna Brania <hasna.brania19@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-18 05:04+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-15 06:30+0000\n"
+"PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +23,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:1
 msgid "Using InstantSend and PrivateSend with Dash"
-msgstr ""
+msgstr "باستخدام الأرسال الفوري و الإرسال المخفي مع داش"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:1
 msgid "dash, core, mobile, wallet, privatesend, instantsend"
-msgstr ""
+msgstr "داش، كور، هاتف، محفظة، الإرسال المخفي، الإرسال الفوري"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:9
 msgid "PrivateSend and InstantSend"
@@ -49,6 +52,16 @@ msgid ""
 "transactions. As of April 2018, PrivateSend is not currently available in "
 "other Dash wallets."
 msgstr ""
+"توضح هذه الوثائق كيفية استخدام داش مور لإرسال داش بشكل مجهول. الإرسال المخفي"
+" ، الذي تم إصداره كـ الإرسال المظلم في RC4 لعميل دارك كوين وإعادة تسميته إلى"
+" الإرسال المخفي في مايو 2016 ، هو أسلوب غير موثوق به لتشغيل سلسلة من "
+"المعاملات (المعروفة باسم \"الاختلاط\") بحيث يتعذر على المراقب الخارجي تحديد "
+"مصدر التمويل عند يتم إنشاء معاملة الإرسال المخفي. وهذا يمنحك خاصية داش نفس "
+"الخصائص المجهولة مثل النقدية المسحوبة من أجهزة الصراف الآلي ، على سبيل "
+"المثال. تكون عملية المزج والطائفة سلسة وتلقائية ولا تتطلب أي تدخل من جانب "
+"المستخدم. يسمح التطبيق الحالي لـ الإرسال المخفي في محفظة داش كور بدمج أي "
+"مقدار من داش لاستخدامه لاحقًا في معاملات الإرسال المخفي. اعتبارًا من أبريل "
+"2018 ، لا تتوفر الإرسال المخفي حاليًا في محافظ داش الأخرى."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:27
 msgid ""
@@ -60,22 +73,31 @@ msgid ""
 "reason, the recommended (and default) number of rounds of PrivateSend mixing"
 " is set to four."
 msgstr ""
+"معرفة العدد الدقيق لجولات الخلط الإرسال المخفي المستخدمة في أي صفقة الإرسال "
+"المخفي معين `تأثير قابل للقياس الكمي <https://www.dash.org/forum/threads"
+"/evaluating-the-privacy-of- privatesend.32472/>`_ على الثقة التي قد يواجهها "
+"الخصم عند محاولة تخمين مصدر معاملة الإرسال المخفي. لهذا السبب ، يتم تعيين "
+"عدد الموصى به (والافتراضي) لجولات خلط الإرسال المخفي إلى أربعة."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:35
 msgid ""
 "You can read more about PrivateSend theory and processes :ref:`here "
 "<privatesend>`."
 msgstr ""
+"يمكنك قراءة المزيد عن نظرية الإرسال المخفي والعمليات :ref:`هنا "
+"<privatesend>`."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:39
 msgid "Configuration"
-msgstr ""
+msgstr "إدارة الإعدادات"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:41
 msgid ""
 "Open your Dash Core wallet, go to **Settings** and select **Options**. Go to"
 " the **Wallet** tab."
 msgstr ""
+"افتح محفظة داش كور ، وانتقل إلى **الإعدادات** واختر **أدوات**. انتقل إلى "
+"علامة **المحفظة**."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:47
 msgid ""
@@ -85,12 +107,18 @@ msgid ""
 "the chance of detection via node collusion. 8 is the highest number of "
 "rounds currently available."
 msgstr ""
+"بجوار **إستخدام جولات الإرسال المخفي** ، أدخل قيمة بين 1-8. تقوم كل جولة من "
+"الإرسال المخفي بأداء معاملة مختزلة واحدة للصندوق. زيادة عدد الجولات يزيد من "
+"المستوى العام لإخفاء هويتك مع تقليل فرصة الكشف عن طريق التواطؤ العقدي. 8 هو "
+"أعلى عدد من الجولات المتوفرة حاليًا."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:53
 msgid ""
 "NOTE: To prevent system abuse, an average of one in ten rounds of masternode"
 " mixing incurs a fee of .001 DASH."
 msgstr ""
+"ملاحظة: لمنع إساءة استخدام النظام ، فإن معدل واحد من كل عشرة جولات من خلط "
+"ماسترنود يؤدي إلى رسوم بقيمة .001 داش."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:56
 msgid ""
@@ -102,10 +130,16 @@ msgid ""
 "PrivateSend process. The final anonymized amount may be higher than your "
 "target, but should be close."
 msgstr ""
+"أدخل قيمة مستهدفة لـ **رصيد داش للاحتفاظ بهويتها مجهولة المصدر**. توفر هذه "
+"القيمة حدًا أدنى للمبلغ النهائي للأموال المراد إخفاء هويتها. اعتمادًا على "
+"كيفية تقسيم العميل لتوازن المحفظة ، قد ينتهي بك الأمر مع المدخلات المقومة "
+"التي يزيد مجموعها الإجمالي عن المبلغ المستهدف. في هذه الحالة ، سيستخدم "
+"العميل جميع المدخلات القائمة في عملية الإرسال المخفي. قد يكون المبلغ النهائي"
+" المجهول النهائي أعلى من هدفك ، ولكن يجب أن يكون قريبًا."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:64
 msgid "Click **OK** to save settings."
-msgstr ""
+msgstr "إظغط على **أوكي** لحفظ الإعدادات."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:66
 msgid ""
@@ -113,10 +147,13 @@ msgid ""
 "start after you set the number of rounds and number of Dash to mix under "
 "settings and click **Start Mixing** on the **Overview** tab of your wallet."
 msgstr ""
+"يتم تعطيل الإرسال المخفي بشكل افتراضي عند فتح المحفظة. سيبدأ فقط بعد تعيين "
+"عدد الجولات وعدد الداش للخلط تحت إعدادات وانقر فوق **بدء خلط** في علامة  "
+"**نظرة عامة** في محفظتك."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:73
 msgid "Starting Mixing"
-msgstr ""
+msgstr "بدأ الخلط"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:75
 msgid ""
@@ -124,22 +161,25 @@ msgid ""
 " on the **Overview** tab of the Dash Core wallet. Mixing is possible once "
 "the following conditions have been met:"
 msgstr ""
+"تبدأ عملية الإرسال المخفي بالنقر فوق الزر **بدء الخلط** في علامة **نظرة "
+"عامة** في محفظة داش كور. الاختلاط ممكن بمجرد استيفاء الشروط التالية:"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:79
 msgid ""
 "The wallet contains sufficient non-anonymized funds to create the minimum "
 "required denominated values"
-msgstr ""
+msgstr "ﺗﺤﺘﻮي اﻟﻤﺤﻔﻈﺔ ﻋﻠﻰ أﻣﻮال آﺎﻓﻴﺔ ﻏﻴﺮ ﻣﺠﻬﻮﻟﺔ ﻟﺘﺤﺪﻳﺪ اﻟﻘﻴﻢ اﻟﺪﻧﻴﺎ اﻟﻤﻄﻠﻮﺑﺔ"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:81
 msgid "The user has not disabled PrivateSend in the Options dialog"
-msgstr ""
+msgstr "لم يقم المستخدم بتعطيل الإرسال المخفي في مربع الحوار خيارات"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:82
 msgid ""
 "The target value for anonymized Funds in the Options dialog is greater than "
 "zero"
 msgstr ""
+"القيمة المستهدفة للأموال المجهولة المصدر في مربع الحوار خيارات أكبر من الصفر"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:85
 msgid ""
@@ -147,10 +187,13 @@ msgid ""
 " your wallet passphrase. Enable the **Only for mixing via PrivateSend** "
 "checkbox to unlock the wallet for mixing only."
 msgstr ""
+"إذا كانت محفظتك مشفرة (موصى به للغاية) ، سيُطلب منك إدخال عبارة المرور "
+"الخاصة بك. تمكين خانة الاختيار **فقط للخلط عبر الإرسال المخفي** لفتح المحفظة"
+" للاختلاط فقط."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:92
 msgid "Entering a password for PrivateSend mixing only"
-msgstr ""
+msgstr "إدخال كلمة مرور لدمج الإرسال المخفي فقط"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:94
 msgid ""
@@ -158,12 +201,16 @@ msgid ""
 " The wallet will remain unlocked until PrivateSend mixing is complete, at "
 "which point it will be locked automatically."
 msgstr ""
+"سيؤدي هذا إلى فتح محفظتك ، وستبدأ عملية خلط الإرسال المخفي. ستبقى المحفظة "
+"مفتوحة حتى اكتمال خلط الإرسال المخفي ، وعند هذه النقطة سيتم قفله تلقائيًا."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:101
 msgid ""
 "PrivateSend interface after clicking the **Start Mixing** button. Note the "
 "**Status** is **Enabled**."
 msgstr ""
+"واجهة الإرسال المخفي بعد النقر على زر **بدأ الخلط**. لاحظ أن **الحالة** هي "
+"**ممكّنة**."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:104
 msgid ""
@@ -172,6 +219,9 @@ msgid ""
 " can monitor the process in more detail as described in the following "
 "section."
 msgstr ""
+"سيبدأ الإرسال المخفي في إنشاء معاملات وسيزداد تدريجياً رصيد الإرسال المخفي "
+"الخاص بك. قد تستغرق هذه العملية بعض الوقت ، لذا كن صبورًا. يمكنك مراقبة "
+"العملية بمزيد من التفصيل كما هو موضح في القسم التالي."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:109
 msgid ""
@@ -180,28 +230,32 @@ msgid ""
 "place at all), it should be possible to safely interrupt PrivateSend mixing "
 "at any time."
 msgstr ""
+"أي من الإجراءات التالية سيؤدي إلى مقاطعة عملية الخلط. نظرًا لأن المعاملات "
+"ذرية (إما أنها تتم بالكامل ، أو لا تحدث على الإطلاق) ، فيمكن أن يكون من "
+"الممكن مقاطعة خلط الإرسال المخفي بأمان في أي وقت."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:111
 msgid "Clicking the Stop Mixing button on the Overview tab"
-msgstr ""
+msgstr "النقر فوق الزر إنهاء الخلط في علامة انظرة عامة"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:112
 msgid "Closing the client before PrivateSend mixing is completed"
-msgstr ""
+msgstr "اكتمال إغلاق العميل قبل خلط الإرسال المخفي"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:113
 msgid ""
 "Sending PrivateSend funds from the wallet before PrivateSend rounds are "
 "completed"
 msgstr ""
+"يتم إرسال أموال الإرسال المخفي من المحفظة قبل انتهاء جولات الإرسال المخفي"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:115
 msgid "Disabling PrivateSend before the process is complete"
-msgstr ""
+msgstr "تعطيل الإرسال المخفي قبل اكتمال العملية"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:118
 msgid "Monitoring Mixing"
-msgstr ""
+msgstr "مراقبة الاختلاط"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:120
 msgid ""
@@ -210,21 +264,27 @@ msgid ""
 "go to the **Wallet** tab. Check the boxes next to the **Enable coin control "
 "features** and **Enable advanced PrivateSend interface** options."
 msgstr ""
+"إذا كنت ترغب في مراقبة الإرسال المخفي بمزيد من التفاصيل ، فستحتاج إلى تمكين "
+"بعض الميزات المتقدمة للمحفظة. انتقل إلى **الإعدادات** ، حدد **خيارات** "
+"وانتقل إلى علامة  **المحفظة**. حدد المربعات المجاورة لميزات **تمكين ميزات "
+"التحكم في العملة** و **تمكين واجهة الإرسال المخفي المتقدمة**."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:129
 msgid ""
 "Enabling advanced options for PrivateSend in the Dash Core wallet settings"
-msgstr ""
+msgstr "تمكين الخيارات المتقدمة لـ الإرسال المخفي في إعدادات محفظة داش كور"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:132
 msgid ""
 "This will allow you to monitor progress and see which individual operations "
 "PrivateSend is carrying out in the background."
 msgstr ""
+"سيسمح لك ذلك بمراقبة التقدم ومعرفة العمليات الفردية التي يقوم بها الإرسال "
+"المخفي في الخلفية."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:138
 msgid "Monitoring PrivateSend progress"
-msgstr ""
+msgstr "رصد تقدم الإرسال المخفي"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:140
 msgid ""
@@ -235,80 +295,100 @@ msgid ""
 "keys will not exist in any previous backups of your wallet. For this reason,"
 " it is important to backup your wallet again after mixing is complete."
 msgstr ""
+"نظرًا لأن إنشاء الإرسال المخفي يؤدي إلى إنشاء الكثير من مفاتيح العنوان "
+"الجديدة لإرسال واستقبال الفئات المجهولة الهوية ، فقد تتلقى تحذيرًا عند "
+"انخفاض عدد المفاتيح المتبقية. لا داعي للقلق حيال ذلك ، لأن المحفظة ستقوم "
+"ببساطة بإنشاء المزيد من المفاتيح حسب الضرورة. ومع ذلك ، لن تكون هذه المفاتيح"
+" موجودة في أي نسخ احتياطية سابقة من محفظتك. لهذا السبب ، من المهم الاحتفاظ "
+"بنسخة احتياطية من محفظتك مرة أخرى بعد اكتمال الخلط."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:148
 msgid ""
 "You can also monitor PrivateSend progress by viewing the transactions "
 "created by the mixing process on the **Transactions** tab."
 msgstr ""
+"يمكنك أيضًا مراقبة تقدم الإرسال المخفي عن طريق عرض المعاملات التي أنشأتها "
+"عملية الخلط في علامة **المعاملات**."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:154
 msgid "Transactions created by PrivateSend on the Transactions tab"
-msgstr ""
+msgstr "المعاملات التي تم إنشاؤها بواسطة الإرسال المخفي على علامة المعاملات"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:156
 msgid ""
 "The following table describes the PrivateSend-related transactions displayed"
 " in the Type column of the **Transactions** tab:"
 msgstr ""
+"يصف الجدول التالي المعاملات ذات الصلة الإرسال المخفي المعروضة في عمود النوع "
+"من علامة **المعاملات**."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:160
 msgid "PrivateSend Transaction Type"
-msgstr ""
+msgstr "نوع المعاملة الإرسال المخفي"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:160
 msgid "Transaction Description"
-msgstr ""
+msgstr "وصف العملية"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:162
 msgid "PrivateSend Make Collateral Inputs (*Mixing*)"
-msgstr ""
+msgstr "الإرسال المخفي جعل المدخلات الجانبية (*خلط*)"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:162
 msgid ""
 "Wallet funds were moved to collateral inputs that will be used to make "
 "collateral payments. This is done to minimize traceability of collaterals."
 msgstr ""
+"تم تحويل أموال المحفظة إلى مدخلات الضمانات التي سيتم استخدامها في سداد "
+"مدفوعات الضمانات. يتم ذلك للحد من إمكانية تتبع الضمانات."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:167
 msgid "PrivateSend Create Denominations (*Mixing*)"
-msgstr ""
+msgstr "الإرسال المخفي إنشاء فئات (*خلط*)"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:167
 msgid ""
 "Wallet funds were broken into PrivateSend denominations (Step 1 "
 ":ref:`here<privatesend>`)"
 msgstr ""
+"تم تقسيم أموال المحفظة إلى فئات الإرسال المخفي (الخطوة 1 :ref:`هنا "
+"<privatesend>`)"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:171
 msgid "PrivateSend Denominate (*Mixing*)"
-msgstr ""
+msgstr "تسمية الأرسال المخفي (*خلط*)"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:171
 msgid ""
 "A transaction was sent to a masternode in order to participate in a mixing "
 "session (Step 3 :ref:`here<privatesend>`)"
 msgstr ""
+"تم إرسال معاملة إلى ماسترنود للمشاركة في جلسة خلط (الخطوة 3 :ref:`هنا "
+"<privatesend>`)"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:175
 msgid "PrivateSend Collateral Payment (*Mixing*)"
-msgstr ""
+msgstr "الإرسال المخفي الدفع الجانبي (*خلط*)"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:175
 msgid ""
 "The mixing session collateral was claimed. This fee is charged in ~10% of "
 "mixing sessions to prevent spam attacks."
 msgstr ""
+"تمت المطالبة بمزج ضمانات الجلسة. يتم فرض هذه الرسوم في ~ 10٪ من جلسات الخلط "
+"لمنع هجمات البريد العشوائي."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:180
 msgid "PrivateSend (*Spending*)"
-msgstr ""
+msgstr "الإرسال المخفي (*الأنفاق*)"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:180
 msgid ""
 "Mixed funds were used to send a payment to someone. Note: Unlike the "
 "previous 4 transaction types, this is not a mixing process transaction."
 msgstr ""
+"تم استخدام صناديق مختلطة لإرسال دفعة لشخص ما. ملاحظة: على عكس أنواع "
+"المعاملات 4 السابقة ، هذه ليست معاملة عملية خلط."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:186
 msgid ""
@@ -323,16 +403,27 @@ msgid ""
 "all inputs. The current minimum balance for an input used in a PrivateSend "
 "transaction is 0.01000010 DASH."
 msgstr ""
+"يمكنك أيضًا استخدام ميزة التحكم بالنقود المعدنية لعرض العناوين التي تحتوي "
+"على فئات مختلطة جاهزة للاستخدام مع معاملات الإرسال المخفي. انتقل إلى علامة "
+"التبويب **إرسال** في محفظتك وانقر على **المدخلات** لعرض عناوين الإدخال "
+"المحتملة لمعاملاتك. يمكنك أن ترى كيف يحتفظ كل عنوان بفئات معينة من داش "
+"المختلط ، وعدد جولات الخلط قد اكتملت. وهذا لضمان إمكانية استخدام مجموعة "
+"فعالة من العناوين كمدخلات في معاملات الإرسال المخفي دون تغيير كبير ، حيث يجب"
+" تقريب المبلغ في معاملة الإرسال المخفي حتى يتم إنفاق جميع المدخلات تمامًا. "
+"الحد الأدنى للرصيد الحالي لإدخال المستخدم في معاملة الإرسال المخفي هو "
+"0.01000010 داش"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:200
 msgid ""
 "Coin Selection dialog showing addresses holding PrivateSend mixed balances "
 "in different denominations"
 msgstr ""
+"مربع حوار تحديد العملة الذي يعرض العناوين التي تحتفظ بأرصدة الإرسال المخفي "
+"المختلطة في فئات مختلفة"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:204
 msgid "Paying with PrivateSend"
-msgstr ""
+msgstr "الدفع عن طريق الإرسال المخفي"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:206
 msgid ""
@@ -347,6 +438,14 @@ msgid ""
 "(in kilobytes) on the blockchain, and therefore will be charged a slightly "
 "higher fee."
 msgstr ""
+"يمكنك فقط استخدام الإرسال المخفي للدفعات بمجرد أن يكون لديك ما يكفي من داش "
+"لتعويض المبلغ الذي تحاول إرساله. نظرًا لأن عملية المزج تستغرق وقتًا ، فيجب "
+"إجراؤها مقدمًا قبل إنشاء معاملة الإرسال. تعتبر معاملة الإرسال المخفي هي "
+"نفسها تمامًا مثل أي معاملة أخرى على بلوكشين ، ولكنها ترسم فقط من عناوين "
+"المدخلات التي سبق أن اختلطت فيها التسمية لضمان إخفاء الأموال. نظرًا لأن "
+"العديد من عناوين الإدخال مطلوبة عادةً لتعويض المبلغ الذي تحاول إرساله ، "
+"فعادة ما تشغل صفقة الإرسال المخفي مساحة أكبر (بالكيلو بايت) على بلوكشين ، "
+"وبالتالي سيتم تحصيل رسوم أعلى قليلاً."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:217
 msgid ""
@@ -359,6 +458,13 @@ msgid ""
 "nearest 0.01 DASH). You will be prompted to enter your password and receive "
 "a detailed breakdown of the fee structure for PrivateSend before sending."
 msgstr ""
+"لإرسال الدفع باستخدام الإرسال المخفي ، انتقل إلى علامة  **إرسال** في محفظة "
+"داش كور وتمكين خيار **الإرسال المخفي**. سيتم تغيير الرصيد المعروض ليعرض رصيد"
+" الإرسال المخفي الخاص بك بدلاً من الرصيد الإجمالي. يمكنك بعد ذلك إدخال عنوان"
+" **الدفع إلى** ، **ملصق** ، **المبلغ** والنقر **إرسال** كالمعتاد. سيتم تقريب"
+" دفعتك بالكامل لإنفاق أقل فئة ممكنة من الرصيد المختلط (حاليًا إلى أقرب رقم "
+"0.01 داش). ستتم مطالبتك بإدخال كلمة المرور الخاصة بك والحصول على تفاصيل "
+"تفصيلية لهيكل الرسوم لـ الإرسال المخفي قبل الإرسال."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:230
 msgid ""
@@ -366,6 +472,8 @@ msgid ""
 "enabled and the amount to be sent is less than the available PrivateSend "
 "balance"
 msgstr ""
+"داش كور جاهز لإرسال معاملة الإرسال المخفي. ملاحظة تم تمكين الإرسال المخفي "
+"والمبلغ الذي سيتم إرساله أقل من رصيد الإرسال المخفي المتوفر"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:236
 msgid "InstantSend"
@@ -381,6 +489,9 @@ msgid ""
 "to any other Dash user around the world. Dash InstantSend is supported by "
 "many wallets and vendors, including (but not limited to) the following:"
 msgstr ""
+"توضح هذه الوثائق كيفية استخدام الإرسال الفوري لإرسال الأموال على الفور إلى "
+"أي مستخدم داش آخر حول العالم. يتم دعم داش الإرسال الفوري من قبل العديد من "
+"المحافظ والبائعين ، بما في ذلك (على سبيل المثال لا الحصر) ما يلي:"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:246
 msgid "Dash Core Wallet"
@@ -404,25 +515,26 @@ msgstr "محفظتي لداش"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:251
 msgid "Kraken"
-msgstr ""
+msgstr "Kraken"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:252
 msgid "Bitrefill"
-msgstr ""
+msgstr "Bitrefill"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:253
 msgid "and many more..."
-msgstr ""
+msgstr "و أكثر من ذلك بكثير..."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:255
 msgid ""
 "You can read more about InstantSend theory and processes :ref:`here "
 "<instantsend>`."
 msgstr ""
+"يمكنك قراءة المزيد عن نظرية وعمليات الإرسال الفوري :ref:`هنا <instantsend>`."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:259
 msgid "Paying with InstantSend"
-msgstr ""
+msgstr "إدفع عن طريق الإرسال الفوري"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:261
 msgid ""
@@ -443,6 +555,18 @@ msgid ""
 "InstantSend, it will simply appear as a normal transaction and you will need"
 " to wait for standard block confirmations."
 msgstr ""
+"تعمل وظيفة الإرسال الفوري عن طريق وضع علامة على المعاملة ، مما يؤدي إلى "
+"تحديد حتمية لحجم 10 أصوات لكل إدخال ينفق في معاملات الإرسال الفوري. تدرس "
+"ماسترنود الإدخال ، وإذا حددت الأغلبية أن لديها ست تأكيدات على الأقل ، فإنها "
+"تقبل المعاملة. ثم يتم قفل الإدخال حتى يتم تأكيد المعاملة في ستة كتل ملغومة ،"
+" وعند هذه النقطة يمكن استخدام المخرجات كمدخل في معاملة الإرسال الفوري أخرى. "
+"هذا يختلف عن المدخلات المستخدمة في المعاملات العادية ، والتي يمكن أن تنفق "
+"بعد تأكيد واحد فقط بغض النظر عما إذا تم تلقي داش باستخدام الإرسال الفوري أم "
+"لا. سيتم فرض رسوم أعلى لمعاملات الإرسال الفوري ، وفقا ل:ref:`جدول "
+"الرسوم<fees>`.  لاحظ أن محفظة الاستلام يجب أن تكون على دراية بـ الإرسال "
+"الفوري حتى تتمكن من متابعة المعاملة فوراً أو تعرض إشعارًا مناسبًا بأنه يجب "
+"اعتبار المعاملة مقفلة. إذا لم تكن محفظة الاستلام على دراية بـ الإرسال الفوري"
+" ، فستظهر ببساطة كمعاملة عادية ، وستحتاج إلى انتظار تأكيدات الحظر القياسية."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:279
 msgid ""
@@ -450,7 +574,10 @@ msgid ""
 " following screenshots indicate where this setting can be found in the Dash "
 "Core, iOS and Android wallets."
 msgstr ""
+"للدفع باستخدام الإرسال الفوري ، ما عليك سوى التحقق من مربع الاختيار المناسب "
+"في تطبيقك. توضح لقطات الشاشة التالية أين يمكن العثور على هذا الإعداد في "
+"محافظ داش كور و الأيفون و الأندرويد."
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:291
 msgid "Dash Wallets showing InstantSend option"
-msgstr ""
+msgstr "داش محافظ تظهر خيار الإرسال الفوري"
