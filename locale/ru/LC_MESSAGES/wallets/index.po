@@ -3,14 +3,19 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Tikhon Skudarnov <semargsemarg@gmail.com>, 2018
+# Андрей Дегтяр <diusha1711@gmail.com>, 2018
+# Max Aronych <taofgoar@protonmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 10:03+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-11-15 03:41+0000\n"
+"PO-Revision-Date: 2018-02-08 10:31+0000\n"
+"Last-Translator: Max Aronych <taofgoar@protonmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,11 +75,11 @@ msgstr ""
 "В целях безопасности не рекомендуется хранить значительные средства на "
 "биржах или программных кошельках. Если вы владеете криптовалютой стоимостью "
 "больше, чем устройство на на котором вы её храните в данный момент, то "
-"приобретите :ref:`hardware wallet <hardware-wallets>`."
+"приобретите :ref:`физический кошелёк <hardware-wallets>`."
 
 #: ../../wallets/index.rst:30 ../../wallets/index.rst:72
 msgid "Dash Core Wallet"
-msgstr "Dash Core Wallet"
+msgstr "Кошелёк Dash Core"
 
 #: ../../wallets/index.rst:32
 msgid ""
@@ -90,6 +95,17 @@ msgid ""
 "functions in the wallet can be used. Dash Core Wallet is available for "
 "macOS, Linux, Raspberry Pi and Windows."
 msgstr ""
+"Кошелёк Dash Core является полным официальным релизом Dash и поддерживает "
+"все новые функции Dash к моменту их выхода, включая InstantSend, "
+"PrivateSend, RPC консоль и функции управления. Кошелёк Dash Core (иногда его"
+" называют QT кошелёк, т.к. при его разработке используется QT framework) это"
+" профессиональный \"тяжёлый\" кошелёк, который скачивает и хранит актуальный"
+" блокчейн (размером в несколько гигабайт) и может работать в сети как в "
+"качестве полной ноды, так и мастерноды. Из-за необходимости хранения полной "
+"копии блокчейна, кошельку при запуске требуется некоторое время на "
+"синхронизацию. По завершению синхронизации, в кошельке начнёт отображаться "
+"правильный баланс и станут доступны его различные функции. Кошелёк Dash Core"
+" доступен для macOS, Linux, Raspberry Pi и Windows."
 
 #: ../../wallets/index.rst:45
 msgid "Features:"
@@ -145,6 +161,14 @@ msgid ""
 "instant, while still keeping your funds secure and mobile. It does not "
 "currently support advanced InstantSend and PrivateSend features."
 msgstr ""
+"Dash Electrum это лёгкий кошелёк, который использует внешние серверы для "
+"индексации блокчейна, но, при этом, хранит ключи на вашем персональном "
+"компьютере. Транзакции подтверждаются в блокчейне Dash c помощью технологии "
+"Secure Payment Verification (SPV), которой нужна информация только о "
+"заголовках блока, без полного блока. Это означает, что запуск кошелька "
+"проходит очень быстро, а ваши средства надёжно защищены и могут храниться на"
+" мобильном устройстве. На данный момент, кошельки такого типа не "
+"поддерживают функции InstantSend и PrivateSend."
 
 #: ../../wallets/index.rst:88
 msgid ""
@@ -153,6 +177,11 @@ msgid ""
 "Bitcoin Electrum features (mostly identical in Dash Electrum) is available "
 "at the `official documentation site <http://docs.electrum.org>`_."
 msgstr ""
+"Dash Electrum это форк кошелька Electrum для Bitcoin. Данная документация "
+"сосредоточена на использовании Dash Electrum, полная же документация по всем"
+" функциям Bitcoin Electrum (которые почти полностью совпадают с функциями "
+"Dash Electrum) доступна на `сайте официальной документации "
+"<http://docs.electrum.org>`_."
 
 #: ../../wallets/index.rst:112
 msgid "Dash Android Wallet"
@@ -167,10 +196,17 @@ msgid ""
 "book of frequently used addresses, pay with NFC, sweep paper wallets and "
 "more."
 msgstr ""
+"Dash предлагает отдельный кошелёк для Android, разработка которого "
+"поддерживается из бюджета Dash. Кошелёк Dash для Android поддерживает "
+"продвинутые функции Dash, включая управление контрактами и InstantSend. Есть"
+" функция сканирования и показа QR-кода для быстрого проведения оплаты, "
+"создание резервной копии и восстановление кошелька, доступна записная книга "
+"с часто используемыми адресами, оплата через NFC, бумажный кошелёк и так "
+"далее."
 
 #: ../../wallets/index.rst:134
 msgid "*Dash Android Wallet*"
-msgstr ""
+msgstr "*Кошелёк Dash Android*"
 
 #: ../../wallets/index.rst:140
 msgid "Dash iOS Wallet"
@@ -184,10 +220,16 @@ msgid ""
 "backup your wallet using a recovery phrase and even pay to Bitcoin addresses"
 " through native integration with ShapeShift."
 msgstr ""
+"Dash предлагает отдельный кошелёк для iOS, разработка которого "
+"поддерживается из бюджета Dash. Официальный кошелёк Dash поддерживает "
+"некоторые продвинутые функции, например, InstantSend. Возможно сканирование "
+"QR-кодов для быстрых платежей и создание резервной копии кошелька с помощью "
+"фразы восстановления. Есть функция проведения платежа на Биткойн-адрес через"
+" встроенную интеграцию с ShapeShift."
 
 #: ../../wallets/index.rst:161
 msgid "*Dash iOS Wallet*"
-msgstr ""
+msgstr "*Кошелёк Dash для iOS*"
 
 #: ../../wallets/index.rst:166
 msgid "Dash Copay Wallet"
@@ -203,14 +245,22 @@ msgid ""
 "required for use, the private keys to your addresses are stored securely on "
 "your device and under your control at all times."
 msgstr ""
+"Кошелёк Dash Copay это современный и насыщенный функционалом кошелёк, "
+"доступный как для мобильных платформ, так и для компьютера. Он поддерживает "
+"продвинутые функции Dash, включая InstantSend, создание HD адреса, удобную "
+"адресную книгу, многочисленные кошельки в одном приложении и простые в "
+"использовании кошельки с мульти-подписями. Dash Copay это лёгкий кошелёк, "
+"что означает отсутствие необходимости хранения полной копии блокчейна. "
+"Приватные ключи к вашему адресу безопасно хранятся на вашем устройстве и "
+"всегда находятся под вашем контролем."
 
 #: ../../wallets/index.rst:188
 msgid "*Dash Copay Wallet*"
-msgstr ""
+msgstr "*Кошелёк Dash Copay*"
 
 #: ../../wallets/index.rst:193 ../../wallets/index.rst:208
 msgid "Dash Paper Wallet"
-msgstr ""
+msgstr "Бумажный кошелёк Dash"
 
 #: ../../wallets/index.rst:195
 msgid ""
@@ -219,10 +269,14 @@ msgid ""
 "computer without ever connecting to the internet. Perfect for long term "
 "secure storage."
 msgstr ""
+"`Генератор бумажного кошелька Dash <https://paper.dash.org>`_ позволяет "
+"создавать, шифровать и безопасно хранить ключи к адресу Dash на чистом "
+"компьютере, даже без соединения с интернетом. Идеальный выбор для "
+"долгосрочного хранения."
 
 #: ../../wallets/index.rst:214
 msgid "Hardware Wallets"
-msgstr ""
+msgstr "Физические кошельки"
 
 #: ../../wallets/index.rst:216
 msgid ""
@@ -235,6 +289,16 @@ msgid ""
 "could be used to steal passwords to unlock the private keys used with "
 "software wallets."
 msgstr ""
+"Физический кошелёк это тип устройства, которое хранит приватные ключи к "
+"блокчейну в защищённом устройстве. В отличие от физических кошельков, "
+"программные хранят базу данных в файлах типа wallet.dat. Физический кошелёк "
+"предлагает больше преимуществ в области безопасности, чем программные "
+"кошельки и более практичен, чем бумажные. На данный момент нет "
+"подтверждённых данных, что физические кошельки подвержены атакам вирусов, "
+"плюс они не чувствительны к программам типа keylogger, записывающим "
+"набираемое на клавиатуре, которые могут использоваться для кражи паролей с "
+"целью получения доступа к приватным ключам, используемым в программных "
+"кошельках."
 
 #: ../../wallets/index.rst:225
 msgid ""
@@ -245,20 +309,30 @@ msgid ""
 " computer or smartphone. Most hardware wallets feature a screen which allows"
 " you to independently confirm the address you are sending to is correct."
 msgstr ""
+"Основной принцип работы физического кошелька заключается в хранении ваших "
+"приватных ключей в защищённой области микроконтроллера. Получение приватного"
+" ключа в виде простого текста невозможно, так как единственная информация, "
+"которая передаётся из кошелька на ваш компьютер или смартфон, "
+"взаимодействующие с блокчейном- это зашифрованный хэш. Большинство "
+"физических кошельков имеют экран, которые позволяет, независимо от "
+"устройства подключения, проверять правильность адреса отправки средств."
+"                                                                 "
 
 #: ../../wallets/index.rst:233
 msgid ""
 "This section lists the most common commercial hardware wallets supporting "
 "Dash, although some other enthusiast projects may also be available."
 msgstr ""
+"В этом разделе представлены наиболее распространённые физические кошельки, "
+"находящиеся в продаже и поддерживающие Dash. "
 
 #: ../../wallets/index.rst:244
 msgid "Trezor Web Wallet"
-msgstr ""
+msgstr "Веб-кошелёк Trezor"
 
 #: ../../wallets/index.rst:249
 msgid "Third Party Wallets"
-msgstr ""
+msgstr "Сторонние кошельки"
 
 #: ../../wallets/index.rst:251
 msgid ""
@@ -266,14 +340,17 @@ msgid ""
 "Many third party wallets support multiple different cryptocurrencies at the "
 "same time, or integrate instant cryptocurrency exchanges."
 msgstr ""
+"Эти кошельки были разработаны внешними разработчиками для поддержки Dash. "
+"Многие сторонние кошельки поддерживают несколько видов криптовалют или имеют"
+" встроенную интеграцию с криптовалютными биржами."
 
 #: ../../wallets/index.rst:264
 msgid "Edge Wallet"
-msgstr ""
+msgstr "Кошелёк Egde"
 
 #: ../../wallets/index.rst:270
 msgid "Web Wallets"
-msgstr ""
+msgstr "Веб-кошельки"
 
 #: ../../wallets/index.rst:272
 msgid ""
@@ -286,6 +363,15 @@ msgid ""
 "exception is MyDashWallet.org, which provides a secure web interface to the "
 "Dash blockchain while leaving you with full control of your private keys."
 msgstr ""
+"Веб-кошельки это сервисы, ктоторые предлагают услуги по хранению Dash у "
+"себя, в то время как контроль за приватными ключами остаётся у вас. Любыы "
+"Dash, хранящиеся на :ref:`биржах <exchanges>` попадают в эту категорию, но "
+"существуют также и сервисы, которые могут хранить ваш Dash, используя для "
+"идентификации логины в Google/Facebook. Будте предельно аккуратны с веб-"
+"кошельками, так как сохранность ваших Dash напрямую зависит от репутации "
+"компании, которая их хранит. Некоторым исключением является "
+"MyDashWallet.org, который предлагает защищённый веб-интерфейс блокчейна "
+"Dash, в то время как приватные ключи остаются под вашим полным контролем."
 
 #: ../../wallets/index.rst:290
 msgid "My Dash Wallet"
@@ -293,7 +379,7 @@ msgstr "My Dash Wallet"
 
 #: ../../wallets/index.rst:294
 msgid "Text Wallets"
-msgstr ""
+msgstr "Текстовые кошельки"
 
 #: ../../wallets/index.rst:296
 msgid ""
@@ -303,17 +389,24 @@ msgid ""
 " providers, make it relatively simple to create transactions to both send "
 "and receive Dash."
 msgstr ""
+"Текстовые кошельки (или SMS кошельки) можно использовать без смартфона или "
+"соединения с интернетом и создавать транзакции простым набором текста в "
+"телефоне. Это возможно благодаря инновационной системе коротких кодов, "
+"которые согласованы с национальными мобильными операторами, что делает "
+"процесс отправки или получения Dash довольно простым."
 
 #: ../../wallets/index.rst:310
 msgid "Dash CoinText"
-msgstr ""
+msgstr "Dash CoinText"
 
 #: ../../wallets/index.rst:314
 msgid "Wallet Guides"
-msgstr ""
+msgstr "Руководства по кошелькам"
 
 #: ../../wallets/index.rst:316
 msgid ""
 "Documentation in this section describes common tasks and questions relating "
 "to all wallets."
 msgstr ""
+"Документация в этом разделе описывает общие функции и вопросы, касающиеся "
+"всех кошельков."

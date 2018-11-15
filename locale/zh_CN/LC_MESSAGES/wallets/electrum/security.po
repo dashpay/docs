@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-28 10:17+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-15 03:41+0000\n"
+"PO-Revision-Date: 2018-03-19 12:19+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -20,19 +23,19 @@ msgstr ""
 
 #: ../../wallets/electrum/security.rst:1
 msgid "Security, backup and safety when using the Dash Electrum wallet"
-msgstr ""
+msgstr "使用达世币轻钱包时的安全和备份事宜"
 
 #: ../../wallets/electrum/security.rst:1
 msgid "dash, wallet, electrum, safety, password, backup, security, restore"
-msgstr ""
+msgstr "达世币，钱包，轻钱包，安全，密码，备份，安全，恢复"
 
 #: ../../wallets/electrum/security.rst:8
 msgid "Wallet security"
-msgstr ""
+msgstr "钱包的安全"
 
 #: ../../wallets/electrum/security.rst:11
 msgid "Change password"
-msgstr ""
+msgstr "更改密码"
 
 #: ../../wallets/electrum/security.rst:13
 msgid ""
@@ -42,6 +45,8 @@ msgid ""
 "wallets' password, all is not lost. Your wallet can be restored in its "
 "entirety using the backup procedure described here."
 msgstr ""
+"如需修改密码，用户需要从主菜单中选择 **钱包 > 密码** "
+"，或单击主窗口右下角的锁定图标。随后，用户需要输入并确认新的安全密码。需要牢记的是，如果用户忘记密码，那么相关数据和资金并不会丢失，用户还能通过本文档中介绍的备份程序的恢复步骤来复原钱包。"
 
 #: ../../wallets/electrum/security.rst:22
 msgid "Backup"
@@ -55,21 +60,23 @@ msgid ""
 "prompted, enter the secure password you chose when setting up the Dash "
 "Electrum wallet."
 msgstr ""
+"在达世币轻钱包中，种子指的是所有地址和交易数据的完整备份。用户可以通过主屏右下方的种子图标或主菜单选项 **钱包 > 种子** "
+"来获取种子。一旦界面弹出提示，用户可在安装达世币轻钱包的时候设置安全密码。"
 
 #: ../../wallets/electrum/security.rst:33
 msgid "Displaying the wallet recovery seed in Dash Electrum"
-msgstr ""
+msgstr "在达世币轻钱包中显示的钱包恢复种子"
 
 #: ../../wallets/electrum/security.rst:35
 msgid ""
 "Hand-copy the twelve words found in the box to a piece of paper and store it"
 " in a safe location. Remember, anyone who finds your seed can spend all of "
 "the funds in your wallet."
-msgstr ""
+msgstr "将密码框中的十二个字符密码记录到纸上并妥善保管。请牢记，任何拥有这个种子的个人都可以花费相应钱包中的所有资金。"
 
 #: ../../wallets/electrum/security.rst:42
 msgid "Viewing the recovery seed"
-msgstr ""
+msgstr "查看恢复种子"
 
 #: ../../wallets/electrum/security.rst:44
 msgid ""
@@ -78,6 +85,8 @@ msgid ""
 "any imported addresses. Restoring this backup will require the wallet "
 "password."
 msgstr ""
+"此外，用户还可以通过主菜单选项 **文件 > 保存副本** "
+"来进行存储。这个备份文件包含钱包的加密种子和所有的导入地址。如需恢复备份，用户则需要用到钱包密码。"
 
 #: ../../wallets/electrum/security.rst:51
 msgid "Restore"
@@ -91,49 +100,50 @@ msgid ""
 "This optional procedure is described below. Before continuing, verify that "
 "your seed is written down clearly and correctly on paper."
 msgstr ""
+"如需在另一台计算机上恢复达世币轻钱包，用户唯一需要用到的就是种子。用户可以从应用程序数据文件夹中删除钱包数据，以此测试当前安装的达世币轻钱包的恢复情况，具体步骤如下所示。在进行后续操作之前，请用户务必确认种子已经清晰无误地记录下来了。"
 
 #: ../../wallets/electrum/security.rst:60
 msgid ""
 "To get Dash Electrum to generate a new wallet, the old wallet data needs to "
 "be deleted. Begin by closing Dash Electrum. Next, locate the application "
 "data folder according to your operating system:"
-msgstr ""
+msgstr "如需生成达世币轻钱包的新钱包，用户需要删除旧的钱包数据。用户首先需要关闭达世币轻钱包，然后再根据个人的操作系统找到应用程序的数据文件夹："
 
 #: ../../wallets/electrum/security.rst:64
 msgid "**Linux:**"
-msgstr ""
+msgstr "**Linux:**"
 
 #: ../../wallets/electrum/security.rst:66
 msgid ""
 "Open Files, select **Go > Go to folder**, copy the path ``~/.electrum`` and "
 "paste it into the dialog box"
-msgstr ""
+msgstr "打开文件夹，选择 **访问 > 访问文件夹**，然后将路径 ``~/.electrum``  复制粘贴到对话框中"
 
 #: ../../wallets/electrum/security.rst:68
 #: ../../wallets/electrum/security.rst:74
 #: ../../wallets/electrum/security.rst:80
 msgid "Delete all files in the folder"
-msgstr ""
+msgstr "删除文件夹中的所有文件"
 
 #: ../../wallets/electrum/security.rst:70
 msgid "**macOS:**"
-msgstr ""
+msgstr "**macOS:**"
 
 #: ../../wallets/electrum/security.rst:72
 msgid ""
 "Open Finder, select **Go > Go to Folder**, copy the path ``~/.electrum`` and"
 " paste it into the dialog box"
-msgstr ""
+msgstr "打开文件夹，选择 **访问 > 访问文件夹**，然后将路径 ``~/.electrum`` 复制粘贴到对话框中"
 
 #: ../../wallets/electrum/security.rst:76
 msgid "**Windows:**"
-msgstr ""
+msgstr "**Windows:**"
 
 #: ../../wallets/electrum/security.rst:78
 msgid ""
 "Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and paste it in to"
 " the address bar"
-msgstr ""
+msgstr "打开Explorer浏览器，然后将路径 ``%APPDATA%\\Electrum-DASH`` 复制粘贴到地址栏中"
 
 #: ../../wallets/electrum/security.rst:82
 msgid ""
@@ -141,18 +151,20 @@ msgid ""
 "appear asking you to name your new wallet. Enter a name, select **Standard "
 "wallet** as the wallet type and then choose **I already have a seed**."
 msgstr ""
+"清除数据目录后，用户需要重新启动达世币轻钱包。此时，界面将会出现一个对话框，要求用户为新钱包命名。根据提示，用户可输入名称，选择 **标准钱包** "
+"作为钱包类型，然后再选择 **已有种子**。"
 
 #: ../../wallets/electrum/security.rst:90
 msgid "Restoring a wallet from an existing seed"
-msgstr ""
+msgstr "借助现有的种子备份钱包"
 
 #: ../../wallets/electrum/security.rst:92
 msgid "Next, copy the twelve word seed into the text field."
-msgstr ""
+msgstr "接下来，用户需要将十二个字符的种子复制粘贴到文本框中。"
 
 #: ../../wallets/electrum/security.rst:97
 msgid "Entering the recovery seed"
-msgstr ""
+msgstr "输入恢复种子"
 
 #: ../../wallets/electrum/security.rst:99
 msgid ""
@@ -162,7 +174,9 @@ msgid ""
 "a few minutes, and the transactions may appear as **Not Verified**. This "
 "problem disappears after restarting the program."
 msgstr ""
+"如果用户输入了正确的种子，那么达世币轻钱包就会提示用户为钱包添加密码。在钱包恢复后，达世币轻钱包将列出这个钱包中所有的现有交易。这个过程可能需要花费几分钟的时间，而交易可能会显示为"
+" **未经验证** 。在程序重新启动后，这个问题就会自行解决。"
 
 #: ../../wallets/electrum/security.rst:108
 msgid "Unverified transactions after recovery"
-msgstr ""
+msgstr "恢复钱包后显示的未经验证交易"

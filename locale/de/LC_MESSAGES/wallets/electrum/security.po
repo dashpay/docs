@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Nils Hermann <vk.translation@protonmail.ch>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-11-15 03:41+0000\n"
+"PO-Revision-Date: 2018-03-19 12:19+0000\n"
 "Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2018\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
 "MIME-Version: 1.0\n"
@@ -21,18 +24,22 @@ msgstr ""
 #: ../../wallets/electrum/security.rst:1
 msgid "Security, backup and safety when using the Dash Electrum wallet"
 msgstr ""
+"Sicherheitsvorkehrungen, Backup und Vorsichtsmaßnahmen beim Verwenden der "
+"Dash Electrum Wallet"
 
 #: ../../wallets/electrum/security.rst:1
 msgid "dash, wallet, electrum, safety, password, backup, security, restore"
 msgstr ""
+"dash, wallet, electrum, sicherheit, passwort, backup, vorsichtsmaßnahmen, "
+"wiederherstellen"
 
 #: ../../wallets/electrum/security.rst:8
 msgid "Wallet security"
-msgstr ""
+msgstr "Wallet-Sicherheit"
 
 #: ../../wallets/electrum/security.rst:11
 msgid "Change password"
-msgstr ""
+msgstr "Passwort ändern"
 
 #: ../../wallets/electrum/security.rst:13
 msgid ""
@@ -42,6 +49,12 @@ msgid ""
 "wallets' password, all is not lost. Your wallet can be restored in its "
 "entirety using the backup procedure described here."
 msgstr ""
+"Das Passwort der Wallet kann über die Option **Wallet > Password** im "
+"Hauptmenü oder durch einen Klick auf das Schlosssymbol im unteren rechten "
+"Bildschirmbereich geändert werden. Hierzu ist die Eingabe eines neuen und "
+"sicheren Passworts notwendig. Der Verlust des Passworts geht nicht "
+"zwangsläufig mit einem Verlust des Wallet-Inhalts einher. Die Wallet kann "
+"auch durch das Befolgen dieses Backup-Vorgangs wiederhergestellt werden."
 
 #: ../../wallets/electrum/security.rst:22
 msgid "Backup"
@@ -55,10 +68,16 @@ msgid ""
 "prompted, enter the secure password you chose when setting up the Dash "
 "Electrum wallet."
 msgstr ""
+"Ein Dash Electrum Seed stellt ein komplettes Backup für alle verknüpften "
+"Adressen und Transaktionen dar. Der Seed der Wallet kann über das Seed-"
+"Symbol am unteren rechten Rand des Fensters oder über die Option **Wallet > "
+"Seed** im Hauptmenü eingesehen werden. Zum Abrufen muss das "
+"Sicherheitspasswort eingegeben werden, welches beim Erstellen der Dash "
+"Electrum Wallet eingegeben wurde."
 
 #: ../../wallets/electrum/security.rst:33
 msgid "Displaying the wallet recovery seed in Dash Electrum"
-msgstr ""
+msgstr "Die Wiederherstellungsphrase in Dash Electrum anzeigen lassen"
 
 #: ../../wallets/electrum/security.rst:35
 msgid ""
@@ -66,10 +85,13 @@ msgid ""
 " in a safe location. Remember, anyone who finds your seed can spend all of "
 "the funds in your wallet."
 msgstr ""
+"Die zwölf Wörter sollten per Hand aufgeschrieben und an einem sicheren Ort "
+"gelagert werden. Jeder, der Zugang zu diesen Wörtern erhält, erhält auch den"
+" Zugang zu allem Guthaben in der Wallet."
 
 #: ../../wallets/electrum/security.rst:42
 msgid "Viewing the recovery seed"
-msgstr ""
+msgstr "Die Wiederherstellungsphrase ansehen"
 
 #: ../../wallets/electrum/security.rst:44
 msgid ""
@@ -78,6 +100,10 @@ msgid ""
 "any imported addresses. Restoring this backup will require the wallet "
 "password."
 msgstr ""
+"Als Alternative kann über den Punkt **File > Save Copy** im Hauptmenü eine "
+"Backup-Datei erstellt werden. Diese Datei speichert den verschlüsselten Seed"
+" der Wallet zusammen mit allen importierten Adressen. Zum Wiederherstellen "
+"dieses Backups wird das Wallet Passwort benötigt."
 
 #: ../../wallets/electrum/security.rst:51
 msgid "Restore"
@@ -144,15 +170,16 @@ msgstr ""
 
 #: ../../wallets/electrum/security.rst:90
 msgid "Restoring a wallet from an existing seed"
-msgstr ""
+msgstr "Eine Wallet aus einem existierenden Seed wiederherstellen"
 
 #: ../../wallets/electrum/security.rst:92
 msgid "Next, copy the twelve word seed into the text field."
 msgstr ""
+"Danach müssen die 12 Worte des Seeds in das Textfeld eingetragen werden."
 
 #: ../../wallets/electrum/security.rst:97
 msgid "Entering the recovery seed"
-msgstr ""
+msgstr "Die Wiederherstellungsphrase eingeben"
 
 #: ../../wallets/electrum/security.rst:99
 msgid ""
@@ -162,7 +189,14 @@ msgid ""
 "a few minutes, and the transactions may appear as **Not Verified**. This "
 "problem disappears after restarting the program."
 msgstr ""
+"Wenn der Seed korrekt eingegeben wurde, ermöglicht Dash Electrum nun die "
+"Eingabe eines neuen Passworts zur Verschlüsselung der Wallet. Nach dem "
+"Wiederherstellen der Wallet wird Dash Electrum alle bisherigen Transaktionen"
+" der Wallet auflisten. Dieser Vorgang kann einige Minuten in Anspruch nehmen"
+" und es könnte sein, dass manche Transaktionen als **Not Verified** markiert"
+" werden. Dieses Problem lässt sich durch einen Neustart des Programmes "
+"lösen."
 
 #: ../../wallets/electrum/security.rst:108
 msgid "Unverified transactions after recovery"
-msgstr ""
+msgstr "Unbestätigte Transaktionen nach der Wiederherstellung"
