@@ -71,13 +71,13 @@ command, pasting in the address to the latest version of Dash Core by
 right clicking or pressing **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc2/dashcore-0.13.0.0-rc2-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc3/dashcore-0.13.0.0-rc3-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.13.0.0-rc2-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.13.0.0-rc3-x86_64-linux-gnu.tar.gz
 
 Remove the old binaries from the working directory, extract the
 compressed archive, copy the new files to the directory and set them as
@@ -111,9 +111,9 @@ Dash is now updated.
 DIP3 Upgrade Overview
 ^^^^^^^^^^^^^^^^^^^^^
 
-Dash is now updated, and you can continue with the procedure to upgrade
-your masternode to work using the DIP3 Deterministic Masternode List.
-The procedure involves four major steps:
+You can now continue with the procedure to upgrade your masternode to
+work using the DIP3 Deterministic Masternode List. The procedure
+involves four major steps:
 
 1. Generating a BLS key pair
 2. Preparing a ProRegTx transaction
@@ -141,14 +141,14 @@ your own masternode, generate a BLS public/private keypair as follows::
   bls generate
 
   {
-  "secret": "2dbc0abdd52467569e4e74db61406b32c8ce41f38e5919ab0ee5596dc4b384cf",
-  "public": "84d8468dd9b495443ae9d0e12e608229111edf5ea94d52deb1623716566444425a3deb4a0fa09477e5eafb8fc94a2384"
+    "secret": "565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101",
+    "public": "01d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127"
   }
 
 The public key will be used in following steps. The secret key must be
 kept secure since it is used to sign operator-related masternode
 messages and update operator-related masternode parameters (e.g. IP
-Address, Port). **These keys are NOT stored by the wallet and must be
+address, port). **These keys are NOT stored by the wallet and must be
 backed up, similar to the value provided in the past by the ``masternode
 genkey`` command.**
 
@@ -160,7 +160,14 @@ the owner (and, if desired, also voting) address::
 
   getnewaddress
 
-  yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt
+  yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
+
+Then either generate or choose a second address to receive the owner's
+masternode payouts::
+
+  getnewaddress
+
+  ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy
 
 Next, we will prepare an unsigned ProRegTx special transaction using the
 ``protx register_prepare`` command. This command has the following
@@ -175,34 +182,38 @@ argument to the command as follows:
 - ``"collateralHash"``: The txid of the 1000 Dash collateral funding transaction
 - ``collateralIndex``: The output index of the 1000 Dash funding transaction
 - ``"ipAndPort"``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
-- ``"ownerKeyAddr"``: The new Dash address generated above for the owner/voting address
+- ``"ownerKeyAddr"``: The first new Dash address generated above for the owner/voting address
 - ``"operatorKeyAddr"``: The BLS public key generated above (or provided by your hosting service)
-- ``"votingKeyAddr"``: A new Dash address generated above, or a different address, used for proposal voting
+- ``"votingKeyAddr"``: The second new Dash address generated above, or the address of a delegate, used for proposal voting
 - ``operatorReward``: The percentage of the block reward allocated to the operator as payment
-- ``"payoutAddress"``: A Dash address to receive the masternode rewards (can be different to the collateral address)
+- ``"payoutAddress"``: A new or existing Dash address to receive the owner's masternode rewards
+
+Note that the operator is responsible for specifying their reward
+address in a separate transaction if you specify a non-zero
+``operatorReward``.
 
 Example (remove line breaks if copying)::
 
-  protx register_prepare 
-    "2eb760f394f756ea9d8c8eac832f77366503bfccd4e77ee73deca200733fe615" 
-    1 
-    "140.82.59.51:19999" 
-    "yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt" 
-    "86179eb4f45405f8d5fc00a4378356fc0600e104a7f3e6aec6b937a2830f1b538f2b08a7d66132158613bf18832ddd98" 
-    "yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt" 
-    0 
-    "ydDzieEtpeZpugXrr2Xuh6U66VB4m6ztjU"
+  protx register_prepare
+    "2c499e3862e5aa5f220278f42f9dfac32566d50f1e70ae0585dd13290227fdc7"
+    1
+    "140.82.59.51:19999"
+    "yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz"
+    "01d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127"
+    "yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz"
+    0
+    "ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy"
 
 Output::
 
   {
-  "tx": "0300010001755fbe3bca61bd6cea97fb2f8dc6d9b448e5fff0b8f95c8eeb3f14fb2100f3b30100000000feffffff018ba62000000000001976a914c57cb841100586c2d812590e2ccac88b037a70aa88ac00000000d101000000000015e63f7300a2ec3de77ee7d4ccbf036536772f83ac8e8c9dea56f794f360b72e0100000000000000000000000000ffff8c523b334e1f93b37f469464b675a982c9fc7001f24ab2c197d686179eb4f45405f8d5fc00a4378356fc0600e104a7f3e6aec6b937a2830f1b538f2b08a7d66132158613bf18832ddd9893b37f469464b675a982c9fc7001f24ab2c197d600001976a914b9723ef9cf900c6a76fcca97a60cf94c1a35783888ac6b1d51d50c26f6600e7a713acaa892397f51a1cafa7db2f972c3a06cfe46327800",
-  "collateralAddress": "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia",
-  "signMessage": "ydDzieEtpeZpugXrr2Xuh6U66VB4m6ztjU|0|yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt|yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt|0fd4701b0316597809640632cc258be4de89d84006383c12f5ad2d50b69be86b"
-  }
+    "tx": "030001000191def1f8bb265861f92e9984ac25c5142ebeda44901334e304c447dad5adf6070000000000feffffff0121dff505000000001976a9149e2deda2452b57e999685cb7dabdd6f4c3937f0788ac00000000d1010000000000c7fd27022913dd8505ae701e0fd56625c3fa9d2ff47802225faae562389e492c0100000000000000000000000000ffff8c523b334e1fad8e6259e14db7d05431ef4333d94b70df1391c601d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127ad8e6259e14db7d05431ef4333d94b70df1391c600001976a914adf50b01774202a184a2c7150593442b89c212e788acf8d42b331ae7a29076b464e61fdbcfc0b13f611d3d7f88bbe066e6ebabdfab7700",
+    "collateralAddress": "yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG",
+    "signMessage": "ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy|0|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|54e34b8b996839c32f91e28a9e5806ec5ba5a1dadcffe47719f5b808219acf84"
+}
 
-We will use ``collateralAddress`` and ``signMessage`` fields in Step 3,
-and the output of the "tx" field in Step 4.
+We will use the ``collateralAddress`` and ``signMessage`` fields in Step
+3, and the output of the "tx" field in Step 4.
 
 Sign the ProRegTx transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -219,11 +230,11 @@ function of a hardware wallet. The command takes the following syntax::
 
 Example::
 
-  signmessage "yhFQ5ypRyDSJkwuEAAKA3ZL3QFmUZQb1ia" "ydDzieEtpeZpugXrr2Xuh6U66VB4m6ztjU|0|yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt|yZnRD5qUbBDNjaiTeNTEMefVMQ1JDARCRt|0fd4701b0316597809640632cc258be4de89d84006383c12f5ad2d50b69be86b"
+  signmessage "yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG" "ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy|0|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|54e34b8b996839c32f91e28a9e5806ec5ba5a1dadcffe47719f5b808219acf84"
 
 Output::
 
-  H+K8jIXR0R8xdKSOeb0cszVcz0KNJo+JNjP4uSC3/M4lB+HwmGjQMMkPhj4wiIQaziw7JfwcLjTMvPKS5SVu69A=
+  IMf5P6WT60E+QcA5+ixors38umHuhTxx6TNHMsf9gLTIPcpilXkm1jDglMpK+JND0W3k/Z+NzEWUxvRy71NEDns=
 
 
 
@@ -244,14 +255,16 @@ Where:
 
 Example::
 
-  protx register_submit "0300010001755fbe3bca61bd6cea97fb2f8dc6d9b448e5fff0b8f95c8eeb3f14fb2100f3b30100000000feffffff018ba62000000000001976a914c57cb841100586c2d812590e2ccac88b037a70aa88ac00000000d101000000000015e63f7300a2ec3de77ee7d4ccbf036536772f83ac8e8c9dea56f794f360b72e0100000000000000000000000000ffff8c523b334e1f93b37f469464b675a982c9fc7001f24ab2c197d686179eb4f45405f8d5fc00a4378356fc0600e104a7f3e6aec6b937a2830f1b538f2b08a7d66132158613bf18832ddd9893b37f469464b675a982c9fc7001f24ab2c197d600001976a914b9723ef9cf900c6a76fcca97a60cf94c1a35783888ac6b1d51d50c26f6600e7a713acaa892397f51a1cafa7db2f972c3a06cfe46327800" "H+K8jIXR0R8xdKSOeb0cszVcz0KNJo+JNjP4uSC3/M4lB+HwmGjQMMkPhj4wiIQaziw7JfwcLjTMvPKS5SVu69A="
+  protx register_submit "030001000191def1f8bb265861f92e9984ac25c5142ebeda44901334e304c447dad5adf6070000000000feffffff0121dff505000000001976a9149e2deda2452b57e999685cb7dabdd6f4c3937f0788ac00000000d1010000000000c7fd27022913dd8505ae701e0fd56625c3fa9d2ff47802225faae562389e492c0100000000000000000000000000ffff8c523b334e1fad8e6259e14db7d05431ef4333d94b70df1391c601d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127ad8e6259e14db7d05431ef4333d94b70df1391c600001976a914adf50b01774202a184a2c7150593442b89c212e788acf8d42b331ae7a29076b464e61fdbcfc0b13f611d3d7f88bbe066e6ebabdfab7700" "IMf5P6WT60E+QcA5+ixors38umHuhTxx6TNHMsf9gLTIPcpilXkm1jDglMpK+JND0W3k/Z+NzEWUxvRy71NEDns="
 
 Output::
 
-  7e8fa6416cbce43c37419bcd290e7085766fc00369b3bc15a35bc8f6ff2009e9
+  9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6
 
 Your masternode is now upgraded to DIP3 and will appear on the
-Deterministic Masternode List.
+Deterministic Masternode List. You can view this list in the console
+using the command ``protx list valid``, where the txid of the final
+``protx register_submit`` transaction identifies your DIP3 masternode.
 
 
 Updating from dashman
