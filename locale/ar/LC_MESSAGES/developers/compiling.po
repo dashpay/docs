@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 06:30+0000\n"
+"POT-Creation-Date: 2018-11-16 09:07+0000\n"
 "PO-Revision-Date: 2018-04-16 05:42+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
@@ -24,13 +24,13 @@ msgstr ""
 #: ../../developers/compiling.rst:1
 msgid ""
 "Compile Dash Core for Linux, macOS, Windows and Gitian deterministic builds"
-msgstr ""
+msgstr "ترجمة الأساسية داش لينكس ، ماك ، ويندوز و Gitian الحتمية يبني"
 
 #: ../../developers/compiling.rst:1
 msgid ""
 "dash, build, compile, linux, Jenkins, macOS, windows, binary, Gitian, "
 "developers"
-msgstr ""
+msgstr "داش، بناء، ترجمة، لينكس، جنكينز، ماك، ويندوز، ثنائي، جيتيان، المطورين"
 
 #: ../../developers/compiling.rst:9
 msgid "Compiling Dash Core"
@@ -45,22 +45,28 @@ msgid ""
 "gitian-nightly/activity/>`_, many users will also be interested in building "
 "Dash binaries for themselves. The following guides are available:"
 msgstr ""
+"في حين يقدم داش ثنائي مستقر يبني على `الموقع "
+"<https://www.dash.org/wallets>`_  و في `جيتب "
+"<https://github.com/dashpay/dash/releases>`_, و `المطورين في "
+"<https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-"
+"nightly/activity/>`_, العديد من المستخدمين سوف تكون مهتمة أيضا في بناء "
+"ثنائيات داش لأنفسهم. الأدلة التالية متاحة:"
 
 #: ../../developers/compiling.rst:18
 msgid ":ref:`Building on Linux <linux-build>`"
-msgstr ""
+msgstr ":ref:`بناء في لينكس <linux-build>`"
 
 #: ../../developers/compiling.rst:19
 msgid ":ref:`Building on macOS <macos-build>`"
-msgstr ""
+msgstr ":ref:`بناء في ماك <macos-build>`"
 
 #: ../../developers/compiling.rst:20
 msgid ":ref:`Building on Windows <windows-build>`"
-msgstr ""
+msgstr ":ref:`بناء في ويندوز <windows-build>`"
 
 #: ../../developers/compiling.rst:21
 msgid ":ref:`Gitian deterministic builds <gitian-build>`"
-msgstr ""
+msgstr ":ref:`بناء في Gitan <gitian-build>`"
 
 #: ../../developers/compiling.rst:23
 msgid ""
@@ -68,6 +74,9 @@ msgid ""
 "latest version from the develop branch, replace the normal ``git clone`` "
 "command with the following command when pulling from GitHub::"
 msgstr ""
+"تصف هذه الأدلة كيفية إنشاء الإصدار الثابت الحالي. لإنشاء أحدث إصدار من فرع "
+"التطوير ، استبدل الأمر ``git clone`` الطبيعي بالأمر التالي عند السحب من "
+"GitHub ::"
 
 #: ../../developers/compiling.rst:32
 msgid "Linux"
@@ -85,33 +94,41 @@ msgid ""
 "permissions. First add the necessary extra repository and update all "
 "packages::"
 msgstr ""
+"يصف هذا الدليل كيفية بناء محفظة داش كور بدون واجهة المستخدم الرسومية GUI من "
+"المصدر تحت لينكس يوبنتو. للحصول على دليل أكثر تفصيلاً ، انظر `هنا "
+"<https://github.com/dashpay/dash/blob/master/doc/build-unix.md>`__. يهدف "
+"المحتوى الموجود في هذه الصفحة إلى تقديم دليل بسيط للتجميع العام للملفات "
+"الثنائية غير المحددة من الكود المصدري الثابت. سيتم استخدام تثبيت قياسي لنظام"
+" التشغيل لينكس يوبنتو 18.04 LTS كبيئة للبناء. نفترض أنك تعمل كمستخدم مع "
+"أذونات sudo. أولا إضافة المستودع الإضافي الضروري وتحديث جميع الحزم ::"
 
 #: ../../developers/compiling.rst:48 ../../developers/compiling.rst:98
 #: ../../developers/compiling.rst:218
 msgid ""
 "Now install the dependencies as described in the installation "
 "documentation::"
-msgstr ""
+msgstr "الآن تثبيت التبعيات كما هو موضح في وثائق التثبيت ::"
 
 #: ../../developers/compiling.rst:54 ../../developers/compiling.rst:105
 #: ../../developers/compiling.rst:225
 msgid ""
 "Optionally install the Qt dependencies if you want to build the Dash GUI::"
 msgstr ""
+"اختياريًا ، قم بتثبيت تبعيات Qt إذا كنت تريد إنشاء واجهة المستخدم داش GUI ::"
 
 #: ../../developers/compiling.rst:59 ../../developers/compiling.rst:110
 #: ../../developers/compiling.rst:230
 msgid "Download the stable Dash repository::"
-msgstr ""
+msgstr "تنزيل مستودع  داش ::"
 
 #: ../../developers/compiling.rst:63 ../../developers/compiling.rst:138
 #: ../../developers/compiling.rst:242
 msgid "And build::"
-msgstr ""
+msgstr "و بناء::"
 
 #: ../../developers/compiling.rst:71
 msgid "``/usr/local/bin`` now contains the compiled Dash binaries."
-msgstr ""
+msgstr "``/usr/local/bin`` يحتوي الآن على الثنائيات داش المترجمة."
 
 #: ../../developers/compiling.rst:76
 msgid "macOS"
@@ -122,10 +139,12 @@ msgid ""
 "Dash can be built for macOS either using a cross-compiler under Linux or "
 "natively under macOS."
 msgstr ""
+"يمكن أن يتم تصميم داش للـ ماك إما باستخدام مترجم برمجي ضمن لينكس أو أصلاً "
+"تحت ماك."
 
 #: ../../developers/compiling.rst:82
 msgid "Linux cross-compile"
-msgstr ""
+msgstr "لينكس عبر ترجمة"
 
 #: ../../developers/compiling.rst:84
 msgid ""
@@ -139,6 +158,13 @@ msgid ""
 "permissions. First add the necessary extra repository and update all "
 "packages::"
 msgstr ""
+"يصف هذا الدليل كيفية بناء محفظة داش كور من المصدر تحت لينكس يوبنتو. الغرض "
+"منه هو بمثابة دليل بسيط للتجميع العام للملفات الثنائية غير الحتمية من شفرة "
+"المصدر المستقرة. للحصول على دليل أكثر تفصيلاً ، انظر `هنا "
+"<https://github.com/dashpay/dash/blob/master/doc/build-osx.md>`__. سيتم "
+"استخدام تثبيت قياسي لنظام التشغيل ليتكس يوبنتو 18.04 LTS كبيئة للبناء. نفترض"
+" أنك تعمل كمستخدم مع أذونات sudo. أولا إضافة المستودع الإضافي الضروري وتحديث"
+" جميع الحزم :: "
 
 #: ../../developers/compiling.rst:115
 msgid ""
@@ -149,6 +175,12 @@ msgid ""
 "the **Menu -> More tools -> Developer tools**. Click on the **Network** tab,"
 " then go back to your main browser window and copy in the following URL::"
 msgstr ""
+"مطلوب نسخة من نظام التشغيل ماك SDK أثناء عملية الإنشاء. لتنزيل هذا ، استخدم "
+"قوقل غروم في بيئة سطح المكتب للانتقال إلى https://appleid.apple.com وإنشاء "
+"حساب Apple أو تسجيل الدخول إليه. ثم انتقل إلى https://developer.apple.com "
+"وافتح أدوات مطوري برامج غروم من القائمة **المزيد من الأدوات -> أدوات المطور "
+"**انقر على علامة **الشبكة** ، ثم ارجع إلى نافذة المتصفح الرئيسية وانسخ في "
+"عنوان الرابط التالي:"
 
 #: ../../developers/compiling.rst:125
 msgid ""
@@ -160,16 +192,24 @@ msgid ""
 "download. Once it is complete, extract the required files from the disc "
 "image as follows::"
 msgstr ""
+"إلغاء التنزيل بمجرد أن يبدأ ويعود إلى علامة  **الشبكة** في أدوات المطور. "
+"انقر بزر الماوس الأيمن على طلب الشبكة في أسفل القائمة المسمى "
+"**Xcode_7.3.1.dmg** وحدد **نسخ -> نسخ باسم cURL (داش)**. الصق هذه السلسلة "
+"الطويلة من النص في وحدة لينكس ، وأضف  ``-o Xcode_7.3.1.dmg`` في النهاية ، ثم"
+" اضغط على ادخل لبدء عملية التنزيل. بمجرد اكتماله ، قم باستخراج الملفات "
+"المطلوبة من صورة القرص كما يلي ::"
 
 #: ../../developers/compiling.rst:145 ../../developers/compiling.rst:248
 msgid ""
 "``~/dash/src`` now contains the compiled Dash binaries, and "
 "``~/dash/src/qt`` contains the Dash GUI wallet."
 msgstr ""
+"`` ~ / dash / src`` يحتوي الآن على الثنائيات داش المترجمة ، و `` ~ / dash / "
+"src / qt`` يحتوي على محفظة داش GUI."
 
 #: ../../developers/compiling.rst:150
 msgid "macOS Native"
-msgstr ""
+msgstr "ماك الأصلية"
 
 #: ../../developers/compiling.rst:152
 msgid ""
@@ -183,20 +223,29 @@ msgid ""
 "permissions. First, open a the **Terminal** app and enter the following "
 "command to install the OS X command line tools::"
 msgstr ""
+"يصف هذا الدليل كيفية بناء محفظة داش كةر من المصدر تحت ماك. الغرض منه هو "
+"بمثابة دليل بسيط للتجميع العام للملفات الثنائية غير الحتمية من شفرة المصدر "
+"المستقرة. للحصول على دليل أكثر تفصيلاً ، انظر `هنا "
+"<https://github.com/dashpay/dash/blob/master/doc/build-osx.md>`__. سيتم "
+"استخدام تثبيت قياسي لنظام التشغيل ماك 10.13 High Sierra كبيئة للبناء. نفترض "
+"أنك تعمل كمستخدم مع أذونات sudo. أولاً ، افتح تطبيق **Terminal** وأدخل الأمر"
+" التالي لتثبيت أدوات سطر الأوامر OS X ::"
 
 #: ../../developers/compiling.rst:164
 msgid ""
 "When the popup appears, click **Install**. Then install `Homebrew "
 "<https://brew.sh>`__::"
 msgstr ""
+"عندما تظهر النافذة المنبثقة ، انقر فوق **تثبيت**. ثم قم بتثبيت `Homebrew "
+"<https://brew.sh>`__::"
 
 #: ../../developers/compiling.rst:169
 msgid "Install dependencies::"
-msgstr ""
+msgstr "تثبيت التبعيات ::"
 
 #: ../../developers/compiling.rst:173
 msgid "Clone the Dash Core source code and change to the ``dash`` directory::"
-msgstr ""
+msgstr "استنساخ كود مصدر داش كور وتغيير إلى دليل ``داش`` ::"
 
 #: ../../developers/compiling.rst:178
 msgid ""
@@ -204,20 +253,23 @@ msgid ""
 "the GUI (if Qt is found). You can disable the GUI build by passing "
 "``--without-gui`` to configure::"
 msgstr ""
+"بناء داش كور. تكوين وبناء ثنائيات داش مقطوعة الرأس وكذلك واجهة المستخدم "
+"الرسومية (إذا تم العثور على كيو تي). يمكنك تعطيل إنشاء واجهة المستخدم "
+"الرسومية بتمرير ``- بدون - gui`` لتهيئة ::"
 
 #: ../../developers/compiling.rst:186
 msgid "It is recommended to build and run the unit tests::"
-msgstr ""
+msgstr "يوصى ببناء وتشغيل اختبارات الوحدة ::"
 
 #: ../../developers/compiling.rst:190
 msgid ""
 "You can also create a ``.dmg`` that contains the ``.app`` bundle "
 "(optional)::"
-msgstr ""
+msgstr "يمكنك أيضًا إنشاء ``.dmg`` الذي يحتوي على حزمة ``.app`` (اختياري) ::"
 
 #: ../../developers/compiling.rst:195
 msgid "Dash Core is now available at ``./src/dashd``."
-msgstr ""
+msgstr "داش كور متاح على  ``./src/dashd``."
 
 #: ../../developers/compiling.rst:200
 msgid "Windows"
@@ -236,14 +288,22 @@ msgid ""
 "permissions. First add the necessary extra repository and update all "
 "packages::"
 msgstr ""
+"يصف هذا الدليل كيفية إنشاء محفظة داش كور من المصدر لنظام ويندوز 64 بت. "
+"يستخدم معظم المطورين الترجمة المتقاطعة من لينكس لإنشاء ملفات تنفيذية لـ "
+"ويندوز. يهدف المحتوى الموجود في هذه الصفحة إلى تقديم دليل بسيط للتجميع العام"
+" للملفات الثنائية غير المحددة من الكود المصدري الثابت. للحصول على دليل أكثر "
+"تفصيلاً ، انظر `هنا <https://github.com/dashpay/dash/blob/master/doc/build-"
+"windows.md>`__. سيتم استخدام تثبيت قياسي لنظام التشغيل لينكس يوبنتو 18.04 "
+"LTS كبيئة للبناء. نفترض أنك تعمل كمستخدم مع أذونات sudo. أولا إضافة المستودع"
+" الإضافي الضروري وتحديث جميع الحزم ::"
 
 #: ../../developers/compiling.rst:234
 msgid "Build and link the depends system::"
-msgstr ""
+msgstr "بناء وربط نظام يعتمد ::"
 
 #: ../../developers/compiling.rst:254
 msgid "Gitian"
-msgstr ""
+msgstr "Gitian"
 
 #: ../../developers/compiling.rst:256
 msgid ""
@@ -256,6 +316,13 @@ msgid ""
 "upload the resulting signature. These results are compared and only if they "
 "match, the build is accepted and uploaded to dash.org."
 msgstr ""
+"Gitian هي عملية البناء الحتمية التي تُستخدم لإنشاء الملفات التنفيذية "
+"الأساسية في داش. ويوفر طريقة للتأكد بشكل معقول من أن الملفات التنفيذية مبنية"
+" بالفعل من المصدر على GitHub. كما أنه يضمن أن نفس التبعيات التي تم اختبارها "
+"قد تم استخدامها وتم دمجها بشكل ثابت في الملف القابل للتنفيذ. يقوم المطورون "
+"المتعددون ببناء الشفرة المصدرية باتباع واصف محدد (\"وصفة\") ، وتوقيع النتيجة"
+" مشفرًا ، وتحميل التوقيع الناتج. تتم مقارنة هذه النتائج وفقط في حالة تطابقها"
+" ، يتم قبول الإنشاء وتحميله إلى dash.org."
 
 #: ../../developers/compiling.rst:265
 msgid ""
@@ -263,10 +330,13 @@ msgid ""
 " It is preferred you follow these steps yourself instead of using someone "
 "else's VM image to avoid 'contaminating' the build."
 msgstr ""
+"هناك حاجة لمزيد من بناة Gitian مستقلة ، وهذا هو السبب في وجود هذا الدليل. "
+"يفضل استخدام هذه الخطوات بنفسك بدلاً من استخدام صورة VM لشخص آخر لتجنب "
+"\"تلويث\" البنية"
 
 #: ../../developers/compiling.rst:270
 msgid "Setup the host environment"
-msgstr ""
+msgstr "إعداد بيئة المضيف"
 
 #: ../../developers/compiling.rst:272
 msgid ""
@@ -279,18 +349,28 @@ msgid ""
 "speed up the build process. If you cannot login to your VPS over SSH as "
 "root, access the terminal and issue the following command::"
 msgstr ""
+"من المعروف أن Gitian builds تعمل على Debian 8.x. إذا كان جهازك يعمل بالفعل "
+"على هذا النظام ، يمكنك تنفيذ Gitian على الأجهزة الفعلية. بدلاً من ذلك ، "
+"يمكنك تثبيته في جهاز ظاهري. اتبع الدليل ل :ref:`اعدادات ماسترنود <vps-"
+"setup>`، تحديد صورة Debian 8.x أثناء عملية التثبيت وتسمية المستخدم غير الجذر"
+" ``gitianuser``. سيؤدي اختيار VPS مع معالجين إلى تسريع عملية الإنشاء بشكل "
+"كبير. إذا لم تتمكن من تسجيل الدخول إلى VPS عبر SSH كجذر ، فقم بالوصول إلى "
+"المحطة وإصدار الأمر التالي:"
 
 #: ../../developers/compiling.rst:285
 msgid ""
 "Log in to your new environment by SSH as root. Set up the dependencies first"
 " by pasting the following in the terminal::"
 msgstr ""
+"تسجيل الدخول إلى البيئة الجديدة الخاصة بك عن طريق SSH كجذر. قم بإعداد "
+"التبعيات أولاً عن طريق لصق ما يلي في terminal ::"
 
 #: ../../developers/compiling.rst:291
 msgid ""
 "Then set up LXC and the rest with the following, which is a complex jumble "
 "of settings and workarounds::"
 msgstr ""
+"ثم قم بإعداد LXC والباقي مع ما يلي ، وهو مزيج معقد من الإعدادات والحلول:"
 
 #: ../../developers/compiling.rst:312
 msgid ""
@@ -298,44 +378,51 @@ msgid ""
 "login as the user gitianuser that was created during installation. The rest "
 "of the steps in this guide will be performed as that user."
 msgstr ""
+"في النهاية ، يتم إعادة تمهيد Debian للتأكد من أن التغييرات سارية المفعول. "
+"إعادة تسجيل الدخول باسم المستخدم gitianuser التي تم إنشاؤها أثناء التثبيت. "
+"سيتم تنفيذ بقية الخطوات في هذا الدليل كهذا المستخدم."
 
 #: ../../developers/compiling.rst:316
 msgid ""
 "There is no ``python-vm-builder`` package in Debian, so we need to install "
 "it from source ourselves::"
 msgstr ""
+"لا توجد حزمة ``python-vm-builder`` في دبيان ، لذلك نحن بحاجة إلى تثبيتها من "
+"المصدر أنفسنا ::"
 
 #: ../../developers/compiling.rst:328
 msgid "Set up the environment and compile"
-msgstr ""
+msgstr "إعداد البيئة وتجميعها"
 
 #: ../../developers/compiling.rst:330
 msgid "Clone the Dash Core repository to your home directory::"
-msgstr ""
+msgstr "استنساخ مستودع داش كور إلى دليل المنزل الخاص بك ::"
 
 #: ../../developers/compiling.rst:334
 msgid "Then create the script file::"
-msgstr ""
+msgstr "ثم قم بإنشاء ملف البرنامج النصي ::"
 
 #: ../../developers/compiling.rst:338
 msgid ""
 "And paste the following script in place (this will be automatic if/when the "
 "script is pulled into Dash Core)::"
 msgstr ""
+"ثم قم بلصق البرنامج النصي التالي في مكانه (سيكون هذا تلقائيًا إذا / عندما "
+"يتم سحب البرنامج النصي إلى داش كور) ::"
 
 #: ../../developers/compiling.rst:343
 msgid "Save the file and set it executable::"
-msgstr ""
+msgstr "احفظ الملف واضبطه للتنفيذ ::"
 
 #: ../../developers/compiling.rst:347
 msgid ""
 "Set up the environment, replacing the name and version with your name and "
 "target version::"
-msgstr ""
+msgstr "قم بإعداد البيئة ، واستبدل الاسم والإصدار باسمك وإصدارك المستهدف:"
 
 #: ../../developers/compiling.rst:352
 msgid "Run the compilation script::"
-msgstr ""
+msgstr "تشغيل البرنامج النصي التصنيف ::"
 
 #: ../../developers/compiling.rst:356
 msgid ""
@@ -348,3 +435,10 @@ msgid ""
 "<https://www.dash.org/wallets>`_. In this way, you can be sure that you are "
 "running original and untampered builds of the code as it exists on GitHub."
 msgstr ""
+"سيقوم النظام الخاص بك ببناء كل الاعتماديات و داش كور من الصفر لمنصات ويندوز "
+"و لينكس (ماك إذا تم تثبيت التبعيات وفقًا لـ  `هذه التعليمات "
+"<https://github.com/dashpay/dash/blob/master/doc/build-osx.md>`_). وهذا يمكن"
+" أن يستغرق بعض الوقت. عند الاكتمال ، سترى المجموع الاختباري SHA256 ، والذي "
+"يمكنك مقارنته مع التجزئة المتاحة على `موقع داش "
+"<https://www.dash.org/wallets>`_. وبهذه الطريقة ، يمكنك التأكد من تشغيلك "
+"للبنود الأصلية وغير المضغوطة من الرمز كما هو موجود على GitHub"

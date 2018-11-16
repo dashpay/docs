@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-15 06:30+0000\n"
+"POT-Creation-Date: 2018-11-16 09:07+0000\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
@@ -26,12 +26,17 @@ msgid ""
 "Coin control, HD wallets, multisig, KeePass and multiple wallet files using "
 "the Dash Core wallet"
 msgstr ""
+"مراقبة العملات ، محافظ HD ، multisig ، KeePass وملفات المحفظة المتعددة "
+"باستخدام محفظة داش كور"
 
 #: ../../wallets/dashcore/advanced.rst:1
 msgid ""
 "dash, core, wallet, backup, restore, wallet.dat, multisig, KeePass, hd, "
 "seed, passphrase, mnemonic, coin control, hierarchical deterministic"
 msgstr ""
+"داش ، كور ، المحفظة ، النسخ الاحتياطي ، استعادة ، wallet.dat ، multisig ، "
+"KeePass ، HD ، البذور ، عبارة المرور ، ذاكري ، التحكم في العملة ، حتمية "
+"هرمية"
 
 #: ../../wallets/dashcore/advanced.rst:9
 msgid "Advanced topics"
@@ -39,7 +44,7 @@ msgstr "الموضوعات المتقدمة"
 
 #: ../../wallets/dashcore/advanced.rst:14
 msgid "Coin Control"
-msgstr ""
+msgstr "تحكم في العملة"
 
 #: ../../wallets/dashcore/advanced.rst:16
 msgid ""
@@ -52,6 +57,13 @@ msgid ""
 "**Inputs…** will appear. Click this button to select which UTXOs can be used"
 " as input for any transactions you create. The following window appears:"
 msgstr ""
+"يتيح نظام التحكم في العملة لمستخدمي محفظة داش كور تحديد العناوين والمخرجات "
+"غير المستخدمة (UTXOs) التي يجب استخدامها كمدخلات في المعاملات. هذا يسمح لك "
+"بالحفاظ على رصيد معين على بعض العناوين في محفظتك ، بينما تنفق الآخرين بحرية."
+" في محفظة داش كور ، انقر على **الإعدادات> الخيارات> المحفظة> تمكين ميزات "
+"التحكم بالعملة**. الآن ، عندما تذهب إلى علامة التبويب \"إرسال\" في محفظتك ، "
+"سيظهر زر جديد يسمى ** لمدخلات…**. انقر فوق هذا الزر لتحديد أي UTXOs يمكن "
+"استخدامه كمدخل لأية معاملات تقوم بإنشائها. تظهر النافذة التالية:"
 
 #: ../../wallets/dashcore/advanced.rst:29
 msgid ""
@@ -68,6 +80,11 @@ msgid ""
 "safely create transactions with your remaining funds without affecting the "
 "locked UTXOs."
 msgstr ""
+"انقر بزر الماوس الأيمن على المعاملة (المعاملات) التي لا ترغب في إنفاقها ، ثم"
+" حدد **قفل بدون رصيد**. سيظهر قفل صغير بجوار المعاملة. يمكنك النقر فوق الزر "
+"**تبديل قفل الحالة** لعكس حالة القفل / عدم القفل لجميع أجهزة UTXO. عندما "
+"تكون مستعدًا للمتابعة ، انقر فوق **موافق**. يمكنك الآن إنشاء معاملات بأموالك"
+" المتبقية بأمان دون التأثير على UTXOs المقفلة."
 
 #: ../../wallets/dashcore/advanced.rst:45
 msgid "Locking UTXOs in Dash Core wallet"
@@ -75,7 +92,7 @@ msgstr "قفل UTXOs في محفظة الأساسية داش"
 
 #: ../../wallets/dashcore/advanced.rst:51
 msgid "HD Wallets"
-msgstr ""
+msgstr "محافظ HD"
 
 #: ../../wallets/dashcore/advanced.rst:53
 msgid ""
@@ -90,6 +107,14 @@ msgid ""
 " wallet file itself, while the mnemonic passphrase is used to specify "
 "different derivation branches from the same mnemonic seed."
 msgstr ""
+"منذ الإصدار 0.12.2.0 ، قامت داش كور بتضمين تنفيذ BIP39 / BIP44 لتوليد "
+"المفتاح المتسلسل الهيكلي (HD) المتوافق. هذه الوظيفة متوفرة فقط من خلال سطر "
+"الأوامر من خلال تحديد الخيار ``usedhd`` عند بدء تشغيل داش كور لأول مرة. "
+"استخدم هذه الوظيفة بحذر ، حيث سيتم تخزين البذور والمفاتيح المكتوبة بنص عادي "
+"إلى أن تحدد عبارة مرور المحفظة. لاحظ أن عبارة مرور المحفظة تختلف عن عبارة "
+"المرور ، والتي غالبًا ما يشار إليها أيضًا باسم \"الكلمة 25\" أو \"كلمة "
+"الامتداد\". تقوم عبارة مرور المحفظة بتشفير ملف المحفظة نفسه ، بينما يتم "
+"استخدام عبارة المرور لتعريف فروع اشتقاق مختلفة من بذرة ذاكري."
 
 #: ../../wallets/dashcore/advanced.rst:65
 msgid ""
@@ -98,6 +123,9 @@ msgid ""
 "the following command to get started with a randomly generated HD wallet "
 "seed and no mnemonic passphrase::"
 msgstr ""
+"سنستخدم محفظة ويندوز GUI في هذا المثال ، لكن الأوامر متشابهة في حالة استخدام"
+" ``dash-qt`` أو ``dashd`` على أنظمة التشغيل الأخرى. أدخل الأمر التالي لتبدأ "
+"مع محفظتك HD بشكل عشوائي ولا توجد عبارة مرور ذاكري:"
 
 #: ../../wallets/dashcore/advanced.rst:72
 msgid ""
@@ -106,6 +134,9 @@ msgid ""
 "correctly. Open the console from **Tools -> Debug console** or issue the "
 "following RPC command from ``dash-cli`` to view the mnemonic seed::"
 msgstr ""
+"سيتم إنشاء محفظة HD جديدة وستعرض داش كور تحذيرًا يخبرك بأنه يجب عليك تشفير "
+"محفظتك بعد التحقق من أنها تعمل بشكل صحيح. فتح وحدة التحكم من **أدوات -> وحدة"
+" التحكم في التصحيح** أو إصدار أمر RPC التالي من ``dash-cli`` لعرض بذرة ذاكري"
 
 #: ../../wallets/dashcore/advanced.rst:79
 msgid ""
@@ -114,16 +145,20 @@ msgid ""
 "generated mnemonic and/or passphrase, ensure no ``wallet.dat`` file exists "
 "in the ``datadir`` and enter the following command::"
 msgstr ""
+"سيعرض داش كور البذرة عالية الدقة في كل من الست عشري وكذا ذاك BIP39 ذاكري. "
+"لاستعادة محفظة HD موجودة ، أو تعريف كلمة المرور الخاصة بك التي تم إنشاؤها "
+"بشكل منفصل و / أو عبارة المرور ، تأكد من عدم وجود ملف ``wallet.dat`` "
+"في``datadir`` وأدخل الأمر التالي ::"
 
 #: ../../wallets/dashcore/advanced.rst:87
 msgid ""
 "The HD wallet will be restored and your balance will appear once sync is "
 "complete."
-msgstr ""
+msgstr "ستتم استعادة محفظة HD وسيظهر رصيدك بمجرد اكتمال المزامنة."
 
 #: ../../wallets/dashcore/advanced.rst:94
 msgid "Multisignature"
-msgstr ""
+msgstr "متعدد التوقيع"
 
 #: ../../wallets/dashcore/advanced.rst:96
 msgid ""
@@ -135,22 +170,27 @@ msgid ""
 "create a transaction. The example parties involved are a buyer, a seller and"
 " an arbiter. This example is based on:"
 msgstr ""
+"يقدم هذا القسم مثالًا عمليًا لإثبات الوظائف المتعددة في داش كور. في حين أن "
+"المعاملات لم تعد مرئية على بلوكشين الحالي testnet وبعض تنسيقات العنوان أو "
+"ردود RPC قد تختلف قليلا عن النسخة المعروضة هنا ، فإن المبدأ والأوامر هي "
+"نفسها. يوضح المثال كيفية إعداد عنوان تعدد 2 -من -3 وإنشاء معاملة. مثال "
+"الأطراف المعنية هم مشترٍ وبائع وحكم. هذا المثال مبني على:"
 
 #: ../../wallets/dashcore/advanced.rst:104
 msgid "https://people.xiph.org/~greg/escrowexample.txt"
-msgstr ""
+msgstr "https://people.xiph.org/~greg/escrowexample.txt"
 
 #: ../../wallets/dashcore/advanced.rst:105
 msgid "https://gist.github.com/gavinandresen/3966071"
-msgstr ""
+msgstr "https://gist.github.com/gavinandresen/3966071"
 
 #: ../../wallets/dashcore/advanced.rst:106
 msgid "https://bitcoin.org/en/developer-examples#p2sh-multisig"
-msgstr ""
+msgstr "https://bitcoin.org/en/developer-examples#p2sh-multisig"
 
 #: ../../wallets/dashcore/advanced.rst:109
 msgid "Step 1: Create three addresses"
-msgstr ""
+msgstr "الخطوة 1: إنشاء ثلاثة عناوين"
 
 #: ../../wallets/dashcore/advanced.rst:111
 #: ../../wallets/dashcore/advanced.rst:179
@@ -158,7 +198,7 @@ msgstr ""
 #: ../../wallets/dashcore/advanced.rst:264
 #: ../../wallets/dashcore/advanced.rst:297
 msgid "Seller::"
-msgstr ""
+msgstr "البائع:"
 
 #: ../../wallets/dashcore/advanced.rst:128
 #: ../../wallets/dashcore/advanced.rst:187
@@ -167,20 +207,20 @@ msgstr ""
 #: ../../wallets/dashcore/advanced.rst:278
 #: ../../wallets/dashcore/advanced.rst:289
 msgid "Buyer::"
-msgstr ""
+msgstr "المشتري:"
 
 #: ../../wallets/dashcore/advanced.rst:145
 #: ../../wallets/dashcore/advanced.rst:195
 msgid "Arbiter::"
-msgstr ""
+msgstr "الوسيط:"
 
 #: ../../wallets/dashcore/advanced.rst:162
 msgid "This results in three keypairs (public/private)::"
-msgstr ""
+msgstr "هذه النتائج في ثلاثة keypairs (عام / خاص) ::"
 
 #: ../../wallets/dashcore/advanced.rst:169
 msgid "Step 2: Create multisig address"
-msgstr ""
+msgstr "الخطوة 2: إنشاء عنوان multisig"
 
 #: ../../wallets/dashcore/advanced.rst:171
 msgid ""
@@ -188,6 +228,9 @@ msgid ""
 " m keys (supplied as json array) required. In this example, 2 of 3 keys are "
 "required to sign the transaction."
 msgstr ""
+"يأخذ الأمر ``createmultisig`` `كمتغيرات ، عدد n من التوقيعات لمفاتيح m "
+"(المقدمة كصفيف json) مطلوب. في هذا المثال ، مطلوب 2 من 3 مفاتيح لتوقيع "
+"المعاملة."
 
 #: ../../wallets/dashcore/advanced.rst:175
 msgid ""
@@ -195,24 +238,28 @@ msgid ""
 "their sequence are known (resulting address and redeemScript are identical, "
 "see below)."
 msgstr ""
+"ملاحظة: يمكن إنشاء العنوان بواسطة أي شخص ، طالما أن المفاتيح العامة وتسلسلها"
+" معروفان (العنوان الناتج وواجهة الاسترداد متطابقان ، انظر أدناه)."
 
 #: ../../wallets/dashcore/advanced.rst:204
 msgid "Step 3: Buyer funds the multisig address"
-msgstr ""
+msgstr "الخطوة 3: يقوم المشتري بتمويل عنوان multisig"
 
 #: ../../wallets/dashcore/advanced.rst:206
 msgid "This works the same as a usual transaction."
-msgstr ""
+msgstr "هذا يعمل نفس المعاملة المعتادة."
 
 #: ../../wallets/dashcore/advanced.rst:213
 msgid ""
 "The seller/arbiter can trace the transaction by its txid in the block "
 "explorer. Or from the console as follows."
 msgstr ""
+"يمكن للبائع / الوسيط تتبع المعاملة بواسطة txid في مستكشف كتلة. أو من وحدة "
+"التحكم على النحو التالي."
 
 #: ../../wallets/dashcore/advanced.rst:248
 msgid "Step 4: Spending the multisig"
-msgstr ""
+msgstr "الخطوة 4: إنفاق multisig"
 
 #: ../../wallets/dashcore/advanced.rst:250
 msgid ""
@@ -221,12 +268,17 @@ msgid ""
 "the transaction must be signed by 2 parties (seller + buyer or arbiter). The"
 " seller creates a transaction (we will reuse his public address from above)."
 msgstr ""
+"الآن نحن نفترض أن الصفقة كاملة ، والمشتري حصلت على السلع والجميع سعداء. الآن"
+" البائع يريد الحصول على داش. كما تم استخدام 2- من -3 جزيئات ، يجب أن يتم "
+"التوقيع على المعاملة من قبل الطرفين (البائع + المشتري أو الحكام). ينشئ "
+"البائع معاملة (سنقوم بإعادة استخدام عنوانه العام من الأعلى)."
 
 #: ../../wallets/dashcore/advanced.rst:261
 msgid ""
 "And partially signs it, using the redeemScript, scriptPubKey and his private"
 " key"
 msgstr ""
+"ويوقع عليها جزئيًا ، باستخدام redeemScript و scriptPubKey ومفتاحه الخاص"
 
 #: ../../wallets/dashcore/advanced.rst:272
 msgid ""
@@ -236,22 +288,28 @@ msgid ""
 " above and their private key. Let's assume the buyer is completing the "
 "signature."
 msgstr ""
+"لاحظ أن سداسي المخرجات يحصل على وقت أطول ، ولكن العلم الكامل هو \"خطأ\" لأن "
+"المعاملة تحتاج إلى توقيع آخر. لذلك الآن يمكن للمشتري أو للحكم إكمال توقيع "
+"المعاملة ، باستخدام المخرجات من الأعلى ومفتاحها الخاص. لنفترض أن المشتري "
+"يكمل التوقيع."
 
 #: ../../wallets/dashcore/advanced.rst:286
 msgid ""
 "The signature is complete now, and either of the parties can transmit the "
 "transaction to the network."
-msgstr ""
+msgstr "اكتمال التوقيع الآن ، ويمكن لأي من الطرفين نقل المعاملة إلى الشبكة."
 
 #: ../../wallets/dashcore/advanced.rst:294
 msgid ""
 "Again, this transaction can be traced in a block explorer. And the seller is"
 " happy to receive his coins at his public address as follows."
 msgstr ""
+"مرة أخرى ، يمكن تتبع هذه المعاملة في مستكشف كتلة. ويسعد البائع باستلام "
+"عملاته المعدنية في عنوانه العام على النحو التالي."
 
 #: ../../wallets/dashcore/advanced.rst:318
 msgid "Multiple wallets"
-msgstr ""
+msgstr "كتير من المحافظ"
 
 #: ../../wallets/dashcore/advanced.rst:320
 msgid ""
@@ -260,6 +318,9 @@ msgid ""
 "of Dash Core simultaneously by specifying separate data directories using "
 "the ``datadir`` argument."
 msgstr ""
+"من الممكن الاختيار بين محافظ داش المختلفة عند بدء تشغيل داش كور من خلال "
+"تحديد الوسيطة ``محفظة`` ، أو حتى تشغيل مثيلات متعددة من داش كور في نفس الوقت"
+" عن طريق تحديد دلائل بيانات منفصلة باستخدام وسيطة ``datadir``."
 
 #: ../../wallets/dashcore/advanced.rst:325
 msgid ""
@@ -271,10 +332,16 @@ msgid ""
 "entirely separate data directories such as e.g. ``C:\\Dash1`` (simpler if "
 "you do want to run the wallets simultaneously)."
 msgstr ""
+"للبدء ، قم بتثبيت محفظة داش كور للنظام الخاص بك وفقًا :ref:`التتبيث "
+"<dashcore-installation>`. عندما تصل إلى الخطوة **تشغيل داش كةر للمرة "
+"الأولى** ، يمكنك أن تقرر ما إذا كنت تريد الاحتفاظ بملفات منفصلة "
+"``wallet.dat`` في الموقع الافتراضي (أبسط إذا كنت لا تحتاج إلى تشغيل محافظ في"
+" وقت واحد) ، أو تحديد أدلة بيانات منفصلة تماما مثل على سبيل المثال ``C: \\ "
+"Dash1`` (أبسط إذا كنت ترغب في تشغيل محافظ) في وقت واحد"
 
 #: ../../wallets/dashcore/advanced.rst:336
 msgid "Separate wallet.dat files"
-msgstr ""
+msgstr "ملفات wallet.dat منفصلة"
 
 #: ../../wallets/dashcore/advanced.rst:338
 msgid ""
@@ -284,10 +351,15 @@ msgid ""
 "similar) and create two shortcuts on the desktop. Then open the "
 "**Properties** window for each of these shortcuts."
 msgstr ""
+"بالنسبة إلى هذا السيناريو ، سننشئ اختصارين على سطح المكتب ، يستخدم كل منهما "
+"ملفًا مختلفًا للمحفظة. انتقل إلى الملف الثنائي المستخدم لبدء داش كور (عادةً "
+"ما يتم تحديد موقعه في ``C: \\ Program Files \\ DashCore \\ dash-qt.exe`` أو "
+"ما شابه) وإنشاء اختصارين على سطح المكتب. ثم افتح نافذة **خصائص** لكل من هذه "
+"الاختصارات."
 
 #: ../../wallets/dashcore/advanced.rst:347
 msgid "Creating desktop shortcuts using Windows 10"
-msgstr ""
+msgstr "إنشاء اختصارات سطح المكتب باستخدام ويندوز 10"
 
 #: ../../wallets/dashcore/advanced.rst:349
 msgid ""
@@ -298,22 +370,31 @@ msgid ""
 " following example demonstrates two wallets named ``workwallet.dat`` and "
 "``homewallet.dat``:"
 msgstr ""
+"قم بتعديل الخاصية **استهداف** لكل اختصار للإشارة إلى ملف محفظة آخر عن طريق "
+"تحديد وسيطة ``محفظة`` عند بدء تشغيل المحفظة. إذا لم تحدد وسيطة ``محفظة`` ، "
+"فسيتم استخدام ``wallet.dat`` بشكل افتراضي. سيتم إنشاء ملف المحفظة المحدد إذا"
+" لم يكن موجودًا. يوضح المثال التالي محافظتين باسم ``workwallet.dat`` و "
+"``homewallet.dat``:"
 
 #: ../../wallets/dashcore/advanced.rst:356
 msgid ""
 "Wallet Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=workwallet.dat``"
 msgstr ""
+"Wallet Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-wallet=workwallet.dat``"
 
 #: ../../wallets/dashcore/advanced.rst:357
 msgid ""
 "Wallet Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=homewallet.dat``"
 msgstr ""
+"Wallet Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-wallet=homewallet.dat``"
 
 #: ../../wallets/dashcore/advanced.rst:362
 msgid "Specifying separate wallet files"
-msgstr ""
+msgstr "تحديد ملفات محفظة منفصلة"
 
 #: ../../wallets/dashcore/advanced.rst:364
 msgid ""
@@ -321,10 +402,13 @@ msgid ""
 "from your desktop. Note that you cannot open both wallets simultaneously. To"
 " do this, you will need two separate data directories, as described below."
 msgstr ""
+"يمكنك الآن استخدام الشريحتين لفتح محافظ مختلفة بسهولة وسرعة من سطح المكتب. "
+"لاحظ أنه لا يمكنك فتح كلا المحفظتين في وقت واحد. للقيام بذلك ، ستحتاج إلى "
+"دلائل بيانات منفصلة ، كما هو موضح أدناه."
 
 #: ../../wallets/dashcore/advanced.rst:371
 msgid "Separate data directories"
-msgstr ""
+msgstr "دلائل بيانات منفصلة"
 
 #: ../../wallets/dashcore/advanced.rst:373
 msgid ""
@@ -336,22 +420,33 @@ msgid ""
 "of Dash Core simultaneously. Create two (or more) shortcuts on your desktop "
 "as described above, then specify arguments for ``datadir`` as shown below:"
 msgstr ""
+"ابدأ تشغيل داش كور والسماح له بالمزامنة مع الشبكة ، ثم أغلق داش كور مرة "
+"أخرى. يمكنك الآن إنشاء دليلين على سبيل المثال. ``C: \\ Dash1`` و ``C: \\ "
+"Dash2`` ونسخ الدلائل ``كتل`` و ``chainstate`` من دليل البيانات المتزامنة إلى"
+" الدلائل الجديدة. كل من هذه ستعمل كدليل بيانات منفصل ، مما يسمح لك بتشغيل "
+"حالتين من داش كور في وقت واحد. قم بإنشاء اختصارين (أو أكثر) على سطح المكتب "
+"الخاص بك كما هو موضح أعلاه ، ثم قم بتعيين الوسيطات لـ ``datadir`` كما هو "
+"موضح أدناه:"
 
 #: ../../wallets/dashcore/advanced.rst:382
 msgid ""
 "Datadir Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash1 -listen=0``"
 msgstr ""
+"Datadir Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-datadir=C:\\Dash1 -listen=0``"
 
 #: ../../wallets/dashcore/advanced.rst:383
 msgid ""
 "Datadir Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash2 -listen=0``"
 msgstr ""
+"Datadir Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
+"-datadir=C:\\Dash2 -listen=0``"
 
 #: ../../wallets/dashcore/advanced.rst:388
 msgid "Specifying separate datadirs"
-msgstr ""
+msgstr "تحديد datadirs منفصلة"
 
 #: ../../wallets/dashcore/advanced.rst:390
 msgid ""
@@ -362,14 +457,20 @@ msgid ""
 " as :ref:`Dash Electrum <dash-electrum-wallet>` to maintain multiple "
 "separate wallets without keeping a full copy of the blockchain."
 msgstr ""
+"يمكنك الآن استخدام الشريحتين لفتح محافظ مختلفة بسرعة وسهولة في وقت واحد من "
+"سطح المكتب. يحتفظ كل من المحافظين بنسخ منفصلة وكاملة من بلوكشين ، والتي قد "
+"تستخدم الكثير من مساحة محرك الأقراص. لمزيد من الاستخدام الفعال لمساحة محرك "
+"الأقراص ، ضع في اعتبارك استخدام SPV أو محفظة \"light\" مثل :ref:`داش الكتروم"
+" <dash-electrum-wallet>` للحفاظ على محافظ منفصلة متعددة دون الاحتفاظ بنسخة "
+"كاملة من بلوكشين."
 
 #: ../../wallets/dashcore/advanced.rst:400
 msgid "Two instances of Dash Core running simultaneously"
-msgstr ""
+msgstr "اثنين من حالات داش كور تعمل في وقت واحد"
 
 #: ../../wallets/dashcore/advanced.rst:403
 msgid "KeePass"
-msgstr ""
+msgstr "رمز المفتاح"
 
 #: ../../wallets/dashcore/advanced.rst:405
 msgid ""
@@ -379,6 +480,10 @@ msgid ""
 "wallet passphrase in KeePass using the integration. When this is done, "
 "KeePass can be used to unlock the wallet."
 msgstr ""
+"منذ الإصدار 0.11.0 ، دعمت داش كور التكامل مع KeePass ، مدير كلمات المرور "
+"الشائعة مفتوحة المصدر. يصف هذا الدليل كيفية تكوين الارتباط بين داش كور و "
+"KeePass وكيفية حفظ عبارة مرور داش كور في KeePass باستخدام التكامل. عندما يتم"
+" ذلك ، يمكن استخدام KeePass لفتح المحفظة."
 
 #: ../../wallets/dashcore/advanced.rst:412
 msgid "Installation"
@@ -386,53 +491,56 @@ msgstr "التتبيث"
 
 #: ../../wallets/dashcore/advanced.rst:414
 msgid "You will need the following:"
-msgstr ""
+msgstr "سوف تحتاج إلى ما يلي"
 
 #: ../../wallets/dashcore/advanced.rst:416
 msgid "KeePass 2: http://keepass.info"
-msgstr ""
+msgstr "KeePass 2: http://keepass.info"
 
 #: ../../wallets/dashcore/advanced.rst:417
 msgid "KeePassHttp plugin: https://github.com/pfn/keepasshttp"
-msgstr ""
+msgstr "KeePassHttp plugin: https://github.com/pfn/keepasshttp"
 
 #: ../../wallets/dashcore/advanced.rst:418
 msgid "Dash Core: https://www.dash.org"
-msgstr ""
+msgstr "داش كور: https://www.dash.org"
 
 #: ../../wallets/dashcore/advanced.rst:420
 msgid ""
 "If not already installed, install these packages according to the "
 "instructions linked below:"
 msgstr ""
+"إذا لم تكن مثبتة بالفعل ، قم بتثبيت هذه الحزم وفقًا للتعليمات الموضحة أدناه:"
 
 #: ../../wallets/dashcore/advanced.rst:423
 msgid "KeePass: https://keepass.info/help/v2/setup.html"
-msgstr ""
+msgstr "KeePass: https://keepass.info/help/v2/setup.html"
 
 #: ../../wallets/dashcore/advanced.rst:424
 msgid "KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md"
-msgstr ""
+msgstr "KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md"
 
 #: ../../wallets/dashcore/advanced.rst:425
 msgid ""
 "Dash Core: "
 "https://docs.dash.org/en/latest/wallets/dashcore/installation.html"
 msgstr ""
+"داش كور: https://docs.dash.org/en/latest/wallets/dashcore/installation.html"
 
 #: ../../wallets/dashcore/advanced.rst:428
 msgid "Commands"
-msgstr ""
+msgstr "الأوامر"
 
 #: ../../wallets/dashcore/advanced.rst:430
 msgid ""
 "The following KeePass RPC commands are available in the Dash Core client "
 "console or server:"
 msgstr ""
+"تتوفر أوامر KeePass RPC التالية في وحدة تحكم أو وحدة تحكم العميل داش كور."
 
 #: ../../wallets/dashcore/advanced.rst:436
 msgid "keepass genkey"
-msgstr ""
+msgstr "keepass genkey"
 
 #: ../../wallets/dashcore/advanced.rst:434
 msgid ""
@@ -440,10 +548,12 @@ msgid ""
 "communication with KeePassHttp. This is only necessary for manual "
 "configuration. Use init for automatic configuration."
 msgstr ""
+"يولد مفتاح AES 256 بت مكرر 64 بت والذي يمكن استخدامه للتواصل مع KeePassHttp."
+" هذا ضروري فقط للتكوين اليدوي. استخدم init للتهيئة التلقائية."
 
 #: ../../wallets/dashcore/advanced.rst:442
 msgid "keepass init"
-msgstr ""
+msgstr "keepass init"
 
 #: ../../wallets/dashcore/advanced.rst:439
 msgid ""
@@ -452,10 +562,13 @@ msgid ""
 " to ask for an ID for the association. Returns the association and the "
 "base64 encoded string for the AES key."
 msgstr ""
+"يضبط الارتباط بين داش و KeePass عن طريق إنشاء مفتاح AES وإرسال رسالة اقتران "
+"إلى KeePassHttp. سيؤدي ذلك إلى مطالبة KeePass بطلب معرف للجمعية. إرجاع "
+"الاقتران والسلسلة المشفرة base64 لمفتاح AES."
 
 #: ../../wallets/dashcore/advanced.rst:449
 msgid "keepass setpassphrase"
-msgstr ""
+msgstr "keepass تعيين كلمة المرور"
 
 #: ../../wallets/dashcore/advanced.rst:445
 msgid ""
@@ -465,48 +578,54 @@ msgid ""
 "GUI already send the updates to KeePassHttp, so this is only necessary for "
 "manual manipulation of the password."
 msgstr ""
+"تحديث عبارة المرور في KeePassHttp إلى قيمة جديدة. يجب أن يتطابق هذا مع عبارة"
+" المرور التي تنوي استخدامها للمحفظة. يرجى ملاحظة أن الأوامر القياسية RPC "
+"وتشفير المحفظة من QT GUI ترسل بالفعل التحديثات إلى KeePassHttp ، لذلك هذا "
+"ضروري فقط للتلاعب اليدوي لكلمة المرور."
 
 #: ../../wallets/dashcore/advanced.rst:451
 msgid "The following new arguments are available for dashd and dash-qt:"
-msgstr ""
+msgstr "الوسيطات الجديدة التالية متاحة لـ dashd و dash-qt:"
 
 #: ../../wallets/dashcore/advanced.rst:454
 msgid "keepass"
-msgstr ""
+msgstr "keepass"
 
 #: ../../wallets/dashcore/advanced.rst:454
 msgid "Use KeePass 2 integration using KeePassHttp plugin (default: 0)"
 msgstr ""
+"استخدام تكامل KeePass 2 باستخدام المكون الإضافي KeePassHttp (الإعداد "
+"الافتراضي: 0)"
 
 #: ../../wallets/dashcore/advanced.rst:457
 msgid "keepassport=<port>"
-msgstr ""
+msgstr "keepassport=<port>"
 
 #: ../../wallets/dashcore/advanced.rst:457
 msgid "Connect to KeePassHttp on port <port> (default: 19455)"
-msgstr ""
+msgstr "الاتصال KeePassHttp على المنفذ <port> (افتراضي: 19455)"
 
 #: ../../wallets/dashcore/advanced.rst:460
 msgid "keepasskey=<key>"
-msgstr ""
+msgstr "keepasskey=<key>"
 
 #: ../../wallets/dashcore/advanced.rst:460
 msgid "KeePassHttp key for AES encrypted communication with KeePass"
-msgstr ""
+msgstr "مفتاح KeePassHttp للتواصل المشفر مع AES KeePass"
 
 #: ../../wallets/dashcore/advanced.rst:463
 msgid "keepassid=<name>"
-msgstr ""
+msgstr "keepassid=<name>"
 
 #: ../../wallets/dashcore/advanced.rst:463
 msgid "KeePassHttp id for the established association"
-msgstr ""
+msgstr "معرف KeePassHttp للرابطة المنشأة"
 
 #: ../../wallets/dashcore/advanced.rst:466
 msgid "keepassname=<name>"
-msgstr ""
+msgstr "keepassname=<name>"
 
 #: ../../wallets/dashcore/advanced.rst:466
 msgid ""
 "Name to construct url for KeePass entry that stores the wallet passphrase"
-msgstr ""
+msgstr "اسم لإنشاء عنوان الرابط لإدخال KeePass الذي يخزن عبارة مرور المحفظة"
