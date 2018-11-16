@@ -37,6 +37,30 @@ the protocol version did change, you must issue a start command from
 your wallet. Do not send start commands to your masternode if not
 necessary, as it will send you to the back of the payment queue.
 
+Option 1: Updating from dashman
+-------------------------------
+
+To update Dash using dashman, log in to your server and enter the
+following commands::
+
+  ~/dashman/dashman sync
+  ~/dashman/dashman update
+
+Check the status of your masternode::
+
+  ~/dashman/dashman status
+
+If you are doing a major version update and need to restart your
+masternode, update the software version of the wallet holding the
+collateral to the latest version now by following the instructions
+:ref:`here <masternode-setup-start>`. Continue monitoring your
+masternode. After some time, all statuses should turn green, in
+particular **masternode started: YES** and **masternode network state:
+ENABLED**.
+
+
+
+
 .. _dip3-upgrade:
 
 Dash 0.13 Upgrade Procedure
@@ -65,7 +89,7 @@ masternode using ssh or PuTTY. First we need to stop Dash running::
   ~/.dashcore/dash-cli stop
 
 If your crontab contains an entry to automatically restart dashd, invoke
-``crontab -l`` and comment out the appropriate line by adding the ``#``
+``crontab -e`` and comment out the appropriate line by adding the ``#``
 character. It should look something like this::
 
   # * * * * * pidof dashd || ~/.dashcore/dashd
@@ -112,7 +136,7 @@ update Sentinel::
   git pull
 
 Finally, uncomment the line to automatically restart Dash in your
-crontab by invoking ``crontab -l`` again and deleting the ``#``
+crontab by invoking ``crontab -e`` again and deleting the ``#``
 character.
 
 Dash is now updated.
@@ -275,35 +299,6 @@ Your masternode is now upgraded to DIP3 and will appear on the
 Deterministic Masternode List. You can view this list in the console
 using the command ``protx list valid``, where the txid of the final
 ``protx register_submit`` transaction identifies your DIP3 masternode.
-
-
-Updating from dashman
----------------------
-
-Versions of Dash prior to 0.13.0 frequently used a tool called
-``dashman`` by community member moocowmoo to install Dash. This tool has
-been deprecated until it is updated. You can follow the instructions
-below to upgrade your system::
-
-**OBSOLETE**
-
-To update Dash using dashman, log in to your server and enter the
-following commands::
-
-  ~/dashman/dashman sync
-  ~/dashman/dashman update
-
-Check the status of your masternode::
-
-  ~/dashman/dashman status
-
-If you are doing a major version update and need to restart your
-masternode, update the software version of the wallet holding the
-collateral to the latest version now by following the instructions
-:ref:`here <masternode-setup-start>`. Continue monitoring your
-masternode. After some time, all statuses should turn green, in
-particular **masternode started: YES** and **masternode network state:
-ENABLED**.
 
 
 .. _masternode-withdrawals:
