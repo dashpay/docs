@@ -186,8 +186,8 @@ The public key will be used in following steps. The secret key must be
 kept secure since it is used to sign operator-related masternode
 messages and update operator-related masternode parameters (e.g. IP
 address, port). **These keys are NOT stored by the wallet and must be
-backed up, similar to the value provided in the past by the ``masternode
-genkey`` command.**
+backed up, similar to the value provided in the past by the**
+``masternode genkey`` **command.**
 
 Prepare a ProRegTx transaction
 ------------------------------
