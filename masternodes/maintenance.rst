@@ -14,6 +14,7 @@ well as maintaining the security and performance of the server. In
 addition, masternodes should vote on proposals and perform other tasks
 in the interest of the network and the value of the Dash they hold.
 
+
 .. _masternode-update:
 
 Updating masternodes
@@ -58,33 +59,11 @@ masternode. After some time, all statuses should turn green, in
 particular **masternode started: YES** and **masternode network state:
 ENABLED**.
 
+Option 2: Manual update
+-----------------------
 
-
-
-.. _dip3-upgrade:
-
-Dash 0.13 Upgrade Procedure
----------------------------
-
-This documentation describes how to upgrade a masternode from Dash
-0.12.3 to Dash 0.13.0 without moving your collateral. Please see the
-`stable documentation
-<http://docs.dash.org/en/stable/masternodes/maintenance.html>`_ for
-older versions of Dash.
-
-Dash 0.13.0 introduced `Deterministic Masternode Lists
-<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
-method of finding consensus on the list of valid masternodes. Due to the
-deep underlying changes and new signature formats involved, the
-instructions on how to update a masternode have changed as well. We
-will begin by updating the Dash software itself.
-
-Software update
-^^^^^^^^^^^^^^^
-
-This process describes how to update dashd on a **testnet masternode**
-to the Dash 0.13.0 Release Candidates. Begin by logging in to your
-masternode using ssh or PuTTY. First we need to stop Dash running::
+To update Dash manually, log in to your server using ssh or PuTTY. First
+we need to stop Dash running::
 
   ~/.dashcore/dash-cli stop
 
@@ -142,8 +121,33 @@ character.
 Dash is now updated.
 
 
+.. _dip3-upgrade:
+
+Dash 0.13 Upgrade Procedure
+===========================
+
+This documentation describes how to upgrade a **testnet** masternode
+from Dash 0.12.3 to Dash 0.13.0 without moving your collateral. Please
+see the `stable documentation
+<http://docs.dash.org/en/stable/masternodes/maintenance.html>`_ for
+older versions of Dash.
+
+Dash 0.13.0 introduced `Deterministic Masternode Lists
+<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
+method of finding consensus on the list of valid masternodes. Due to the
+deep underlying changes and new signature formats involved, the
+instructions on how to update a masternode have changed as well. We
+will begin by updating the Dash software itself.
+
+Software update
+---------------
+
+First, update the Dash software following the normal procedure described
+above under the heading :ref:`masternode-update`. You can use either
+dashman or the normal procedure to update the software.
+
 DIP3 Upgrade Overview
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 You can now continue with the procedure to upgrade your masternode to
 work using the DIP3 Deterministic Masternode List. The procedure
@@ -162,9 +166,8 @@ Core by opening the console from **Tools > Debug console**, but the same
 result can be achieved on a masternode by entering the same commands and
 adding the prefix ``~/.dashcore/dash-cli`` to each command.
 
-
 Generate a BLS key pair
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 Begin by logging in to your masternode using ssh or PuTTY. A
 public/private BLS key pair is required for the operator of the
@@ -187,7 +190,7 @@ backed up, similar to the value provided in the past by the ``masternode
 genkey`` command.**
 
 Prepare a ProRegTx transaction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 First, we need to get a new, unused address from the wallet to serve as
 the owner (and, if desired, also voting) address::
@@ -250,7 +253,7 @@ We will use the ``collateralAddress`` and ``signMessage`` fields in Step
 3, and the output of the "tx" field in Step 4.
 
 Sign the ProRegTx transaction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 Now we will sign the content of the ``signMessage`` field using the
 private key for the collateral address as specified in
@@ -273,7 +276,7 @@ Output::
 
 
 Submit the signed message
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
 We will now create the ProRegTx special transaction on the network to
 start the masternode. This command must be sent from a Dash Core wallet
