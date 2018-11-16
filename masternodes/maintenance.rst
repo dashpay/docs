@@ -64,6 +64,12 @@ masternode using ssh or PuTTY. First we need to stop Dash running::
 
   ~/.dashcore/dash-cli stop
 
+If your crontab contains an entry to automatically restart dashd, invoke
+``crontab -l`` and comment out the appropriate line by adding the ``#``
+character. It should look something like this::
+
+  # * * * * * pidof dashd || ~/.dashcore/dashd
+
 Visit the `GitHub releases page
 <https://github.com/dashpay/dash/releases>`_ and copy the link to the
 latest version. Go back to your terminal window and enter the following
@@ -104,6 +110,10 @@ update Sentinel::
   cd ~/.dashcore/sentinel/
   git checkout develop
   git pull
+
+Finally, uncomment the line to automatically restart Dash in your
+crontab by invoking ``crontab -l`` again and deleting the ``#``
+character.
 
 Dash is now updated.
 
