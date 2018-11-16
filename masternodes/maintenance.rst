@@ -126,45 +126,37 @@ Dash is now updated.
 Dash 0.13 Upgrade Procedure
 ===========================
 
-This documentation describes how to upgrade a **testnet** masternode
-from Dash 0.12.3 to Dash 0.13.0 without moving your collateral. Please
-see the `stable documentation
-<http://docs.dash.org/en/stable/masternodes/maintenance.html>`_ for
-older versions of Dash.
-
 Dash 0.13.0 introduced `Deterministic Masternode Lists
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
 method of finding consensus on the list of valid masternodes. Due to the
-deep underlying changes and new signature formats involved, the
-instructions on how to update a masternode have changed as well. We
-will begin by updating the Dash software itself.
+deep underlying changes and new signature formats involved, all
+masternodes are required to update both the Dash software and generate
+new keys to be accepted by the DIP3 consensus rules. This procedure
+involves five basic steps:
+
+1. Update the Dash software
+2. Generate a BLS key pair
+3. Prepare a ProRegTx transaction
+4. Sign the ProRegTx transaction
+5. Submit the signed ProRegTx transaction
+
+Step 1 is performed on the masternode directly. Steps 2, 3 and 5 can be
+carried out either on your masternode or in the Dash Core wallet.
+Signing the transaction in step 4 must be done using the wallet holding
+the private key to the 1000 Dash collateral. This documentation
+describes the commands as if they were entered in Dash Core by opening
+the console from **Tools > Debug console**, but the same result can be
+achieved on a masternode by entering the same commands and adding the
+prefix ``~/.dashcore/dash-cli`` to each command.
+
 
 Software update
 ---------------
 
-First, update the Dash software following the normal procedure described
-above under the heading :ref:`masternode-update`. You can use either
-dashman or the normal procedure to update the software.
-
-DIP3 Upgrade Overview
----------------------
-
-You can now continue with the procedure to upgrade your masternode to
-work using the DIP3 Deterministic Masternode List. The procedure
-involves four major steps:
-
-1. Generating a BLS key pair
-2. Preparing a ProRegTx transaction
-3. Signing the ProRegTx transaction
-4. Submitting the signed message
-
-Steps 1, 2 and 4 can be carried out either on your masternode or in the
-Dash Core wallet. Signing the transaction in step 3 must be done using
-the wallet holding the private key to the 1000 Dash collateral. This
-documentation describes the commands as if they were entered in Dash
-Core by opening the console from **Tools > Debug console**, but the same
-result can be achieved on a masternode by entering the same commands and
-adding the prefix ``~/.dashcore/dash-cli`` to each command.
+First, update the Dash software on your masternode following the normal
+procedure described above under the heading :ref:`masternode-update`.
+You can use either dashman or the normal procedure to update the
+software.
 
 Generate a BLS key pair
 -----------------------
@@ -199,8 +191,8 @@ the owner (and, if desired, also voting) address::
 
   yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
 
-Then either generate or choose a second address to receive the owner's
-masternode payouts::
+Then either generate or choose an existing second address to receive the
+owner's masternode payouts::
 
   getnewaddress
 
@@ -225,9 +217,10 @@ argument to the command as follows:
 - ``operatorReward``: The percentage of the block reward allocated to the operator as payment
 - ``"payoutAddress"``: A new or existing Dash address to receive the owner's masternode rewards
 
-Note that the operator is responsible for specifying their reward
-address in a separate transaction if you specify a non-zero
-``operatorReward``.
+Note that the operator is responsible for specifying their own reward
+address in a separate ``update_service`` transaction if you specify a
+non-zero ``operatorReward``. The owner of the masternode collateral does
+not specify the operator's payout address.
 
 Example (remove line breaks if copying)::
 
