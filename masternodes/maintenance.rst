@@ -302,6 +302,8 @@ Your masternode is now upgraded to DIP3 and will appear on the
 Deterministic Masternode List. You can view this list in the console
 using the command ``protx list valid``, where the txid of the final
 ``protx register_submit`` transaction identifies your DIP3 masternode.
+Note that all functions related to DIP3 will only take effect once Spork
+15 is enabled on the network.
 
 
 .. _masternode-withdrawals:
