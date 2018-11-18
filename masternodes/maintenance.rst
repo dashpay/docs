@@ -140,14 +140,19 @@ involves five basic steps:
 4. Sign the ProRegTx transaction
 5. Submit the signed ProRegTx transaction
 
-Step 1 is performed on the masternode directly. Steps 2, 3 and 5 can be
-carried out either on your masternode or in the Dash Core wallet.
+Steps 1 and 2 are performed on the masternode directly. Steps 3 and 5
+can be carried out either on your masternode or in the Dash Core wallet.
 Signing the transaction in step 4 must be done using the wallet holding
-the private key to the 1000 Dash collateral. This documentation
-describes the commands as if they were entered in Dash Core by opening
-the console from **Tools > Debug console**, but the same result can be
-achieved on a masternode by entering the same commands and adding the
-prefix ``~/.dashcore/dash-cli`` to each command.
+the private key to the 1000 Dash collateral. Note that all functions
+related to DIP3 will only take effect once Spork 15 is enabled on the
+network. Until then, the masternode will continue to function in
+compatibility node, and all DIP3 related functions, such payments to a
+separate address or percentage payments to operators, will not function.
+
+This documentation describes the commands as if they were entered in
+Dash Core by opening the console from **Tools > Debug console**, but the
+same result can be achieved on a masternode by entering the same
+commands and adding the prefix ``~/.dashcore/dash-cli`` to each command.
 
 
 Software update
@@ -227,9 +232,9 @@ argument to the command as follows:
 - ``"collateralHash"``: The txid of the 1000 Dash collateral funding transaction
 - ``collateralIndex``: The output index of the 1000 Dash funding transaction
 - ``"ipAndPort"``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
-- ``"ownerKeyAddr"``: The first new Dash address generated above for the owner/voting address
+- ``"ownerKeyAddr"``: The new Dash address generated above for the owner/voting address
 - ``"operatorKeyAddr"``: The BLS public key generated above (or provided by your hosting service)
-- ``"votingKeyAddr"``: The second new Dash address generated above, or the address of a delegate, used for proposal voting
+- ``"votingKeyAddr"``: The new Dash address generated above, or the address of a delegate, used for proposal voting
 - ``operatorReward``: The percentage of the block reward allocated to the operator as payment
 - ``"payoutAddress"``: A new or existing Dash address to receive the owner's masternode rewards
 
@@ -259,7 +264,7 @@ Output::
   }
 
 We will use the ``collateralAddress`` and ``signMessage`` fields in Step
-3, and the output of the "tx" field in Step 4.
+4, and the output of the "tx" field in Step 5.
 
 Sign the ProRegTx transaction
 -----------------------------
@@ -281,7 +286,6 @@ Example::
 Output::
 
   IMf5P6WT60E+QcA5+ixors38umHuhTxx6TNHMsf9gLTIPcpilXkm1jDglMpK+JND0W3k/Z+NzEWUxvRy71NEDns=
-
 
 
 Submit the signed message
@@ -312,7 +316,8 @@ Deterministic Masternode List. You can view this list in the console
 using the command ``protx list valid``, where the txid of the final
 ``protx register_submit`` transaction identifies your DIP3 masternode.
 Note that all functions related to DIP3 will only take effect once Spork
-15 is enabled on the network.
+15 is enabled on the network. You can view the spork status using the
+``spork active`` command.
 
 
 .. _masternode-withdrawals:
