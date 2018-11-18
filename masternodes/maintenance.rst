@@ -147,12 +147,12 @@ the private key to the 1000 Dash collateral.
 
 DIP3 introduces several changes to how a masternode is set up and
 operated. Masternode payments were previously sent to the address
-holding the collateral. Under the new system, the owner must specify a
-different address to receive payments. A masternode was previously
-"started" using the ``masternode start-alias`` command. Under the new
-system, masternodes begin offering services when a ProRegTx `special
-transaction <https://github.com/dashpay/dips/blob/master/dip-0002.md>`_
-containing a particular key is written to the blockchain. The masternode
+holding the collateral. Under DIP3, the owner must specify a different
+address to receive payments. A masternode was previously "started" using
+the ``masternode start-alias`` command. Under DIP3, masternodes begin
+offering services when a ProRegTx `special transaction
+<https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ containing a
+particular key is written to the blockchain. The masternode
 configuration can later be updated using ProUpServTx, ProUpRegTx and
 ProUpRevTx transactions. See `Updating Masternode Information
 <https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-masternode-information>`_ 
@@ -181,9 +181,9 @@ All functions related to DIP3 will only take effect once Spork 15 is
 enabled on the network. Until then, it is necessary to set up the
 masternode following the old process and then work through the upgrade
 procedure. In this state, the masternode will continue to function in
-compatibility node, and all DIP3 related functions, such payments to a
-separate address or percentage payments to operators, will not yet have
-any effect.
+compatibility node, and all DIP3 related functions, such as payments to
+a separate address or percentage payments to operators, will not yet
+have any effect.
 
 This documentation describes the commands as if they were entered in
 Dash Core by opening the console from **Tools > Debug console**, but the
@@ -198,6 +198,7 @@ First, update the Dash software on your masternode following the normal
 procedure described above under the heading :ref:`masternode-update`.
 You can use either dashman or the normal procedure to update the
 software.
+
 
 Generate a BLS key pair
 -----------------------
@@ -219,15 +220,16 @@ BLS public/private keypair as follows::
 similar to the value provided in the past by the** ``masternode genkey``
 **command.** The public key will be used in following steps. The secret
 key must be entered in the ``dash.conf`` file on the masternode. This
-allows the masternode to watch the network for ``protx`` transactions,
-and will cause it to start serving as a masternode when the signed
-ProRegTx is broadcast by the owner (Step 5 below). Edit the
+allows the masternode to watch the network for relevant Pro*Tx
+transactions, and will cause it to start serving as a masternode when
+the signed ProRegTx is broadcast by the owner (Step 5 below). Edit the
 configuration file on your masternode as follows::
 
   nano ~/.dashcore/dash.conf
 
 The editor appears with the existing masternode configuration. Add this
-line to the end of the file::
+line to the end of the file, replacing the key with your BLS secret key
+generated above::
 
   masternodeblsprivkey=565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101
 
@@ -348,12 +350,13 @@ Output::
   9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6
 
 Your masternode is now upgraded to DIP3 and will appear on the
-Deterministic Masternode List. You can view this list in the console
-using the command ``protx list valid``, where the txid of the final
-``protx register_submit`` transaction identifies your DIP3 masternode.
-Note that all functions related to DIP3 will only take effect once Spork
-15 is enabled on the network. You can view the spork status using the
-``spork active`` command.
+Deterministic Masternode List. You can view this list on the
+**Masternodes -> DIP3 Masternodes** tab of the Dash Core wallet, or in
+the console using the command ``protx list valid``, where the txid of
+the final ``protx register_submit`` transaction identifies your DIP3
+masternode. Note again that all functions related to DIP3 will only take
+effect once Spork 15 is enabled on the network. You can view the spork
+status using the ``spork active`` command.
 
 
 .. _masternode-withdrawals:
