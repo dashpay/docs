@@ -174,12 +174,27 @@ BLS public/private keypair as follows::
     "public": "01d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127"
   }
 
-The public key will be used in following steps. The secret key must be
-kept secure since it is used to sign operator-related masternode
-messages and update operator-related masternode parameters (e.g. IP
-address, port). **These keys are NOT stored by the wallet and must be
-backed up, similar to the value provided in the past by the**
-``masternode genkey`` **command.**
+**These keys are NOT stored by the wallet and must be kept secure,
+similar to the value provided in the past by the** ``masternode genkey``
+**command.** The public key will be used in following steps. The secret
+key must be entered in the ``dash.conf`` file on the masternode. This
+allows the masternode to watch the network for ``protx`` transactions,
+and will cause it to start serving as a masternode when the signed
+ProRegTx is broadcast by the owner (Step 5 below). Edit the
+configuration file on your masternode as follows::
+
+  nano ~/.dashcore/dash.conf
+
+The editor appears with the existing masternode configuration. Add this
+line to the end of the file::
+
+  masternodeblsprivkey=565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101
+
+Press enter to make sure there is a blank line at the end of the file,
+then press **Ctrl + X** to close the editor and **Y** and **Enter** save
+the file. We will now prepare the transaction used to register the
+masternode on the network.
+
 
 Prepare a ProRegTx transaction
 ------------------------------
