@@ -150,11 +150,11 @@ operated. Masternode payments were previously sent to the address
 holding the collateral. Under the new system, the owner must specify a
 different address to receive payments. A masternode was previously
 "started" using the ``masternode start-alias`` command. Under the new
-system, masternodes begin offering services when a ``ProRegTx`` `special
+system, masternodes begin offering services when a ProRegTx `special
 transaction <https://github.com/dashpay/dips/blob/master/dip-0002.md>`_
 containing a particular key is written to the blockchain. The masternode
-configuration can later be updated using ``ProUpServTx``, ``ProUpRegTx``
-and ``ProUpRevTx`` transactions. See `Updating Masternode Information
+configuration can later be updated using ProUpServTx, ProUpRegTx and
+ProUpRevTx transactions. See `Updating Masternode Information
 <https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-masternode-information>`_ 
 in DIP3 for more details.
 
