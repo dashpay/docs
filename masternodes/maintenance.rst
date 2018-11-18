@@ -130,8 +130,8 @@ Dash 0.13.0 introduced `Deterministic Masternode Lists
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
 method of finding consensus on the list of valid masternodes. Due to the
 deep underlying changes and new signature formats involved, all
-masternodes are required to update both the Dash software and generate
-new keys to be accepted by the DIP3 consensus rules. This procedure
+masternodes are required to update the Dash software and generate new
+keys in order to be accepted by the DIP3 consensus rules. This procedure
 involves five basic steps:
 
 1. Update the Dash software
@@ -143,11 +143,13 @@ involves five basic steps:
 Steps 1 and 2 are performed on the masternode directly. Steps 3 and 5
 can be carried out either on your masternode or in the Dash Core wallet.
 Signing the transaction in step 4 must be done using the wallet holding
-the private key to the 1000 Dash collateral. Note that all functions
-related to DIP3 will only take effect once Spork 15 is enabled on the
-network. Until then, the masternode will continue to function in
-compatibility node, and all DIP3 related functions, such payments to a
-separate address or percentage payments to operators, will not function.
+the private key to the 1000 Dash collateral. All functions related to
+DIP3 will only take effect once Spork 15 is enabled on the network.
+Until then, it is necessary to set up the masternode following the old
+process and then work through the upgrade procedure. In this state, the
+masternode will continue to function in compatibility node, and all DIP3
+related functions, such payments to a separate address or percentage
+payments to operators, will not yet have any effect.
 
 This documentation describes the commands as if they were entered in
 Dash Core by opening the console from **Tools > Debug console**, but the
@@ -197,7 +199,7 @@ line to the end of the file::
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. We will now prepare the transaction used to register the
+the file. We will now prepare the transaction used to register a DIP3
 masternode on the network.
 
 
