@@ -79,8 +79,8 @@ latest x86_64-linux-gnu version. Go back to your terminal window and
 enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
-  cd ~
-  wget -P /tmp https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc4/dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
+  cd /tmp
+  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc4/dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
@@ -88,11 +88,10 @@ and comparing the output against the value for the file as shown in the
 
   sha256sum dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
 
-Remove the old binaries from the working directory, extract the
-compressed archive, copy the new files to the directory and set them as
-executable::
+Extract the compressed archive, copy the new files to the directory and
+set them as executable::
 
-  tar xfv /tmp/dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
+  tar xfv dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
   cp -f dashcore-0.13.0/bin/dashd ~/.dashcore/
   cp -f dashcore-0.13.0/bin/dash-cli ~/.dashcore/
 
