@@ -62,46 +62,39 @@ ENABLED**.
 Option 2: Manual update
 -----------------------
 
-To update Dash manually, log in to your server using ssh or PuTTY. First
-we need to stop Dash running::
-
-  ~/.dashcore/dash-cli stop
-
-If your crontab contains an entry to automatically restart dashd, invoke
+To update Dash manually, log in to your server using ssh or PuTTY. If
+your crontab contains an entry to automatically restart dashd, invoke
 ``crontab -e`` and comment out the appropriate line by adding the ``#``
 character. It should look something like this::
 
   # * * * * * pidof dashd || ~/.dashcore/dashd
 
+Then stop Dash running::
+
+  ~/.dashcore/dash-cli stop
+
 Visit the `GitHub releases page
 <https://github.com/dashpay/dash/releases>`_ and copy the link to the
-latest version. Go back to your terminal window and enter the following
-command, pasting in the address to the latest version of Dash Core by
-right clicking or pressing **Ctrl + V**::
+latest x86_64-linux-gnu version. Go back to your terminal window and
+enter the following command, pasting in the address to the latest
+version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc3/dashcore-0.13.0.0-rc3-x86_64-linux-gnu.tar.gz
+  wget -P /tmp https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc4/dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.13.0.0-rc3-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
 
 Remove the old binaries from the working directory, extract the
 compressed archive, copy the new files to the directory and set them as
 executable::
 
-  rm ~/.dashcore/dashd
-  rm ~/.dashcore/dash-cli
-  tar xfvz dashcore-0.13.0.0-rc3-x86_64-linux-gnu.tar.gz
-  cp dashcore-0.13.0/bin/dashd ~/.dashcore/
-  cp dashcore-0.13.0/bin/dash-cli ~/.dashcore/
-
-Clean up unneeded files::
-
-  rm dashcore-0.13.0.0-rc3-x86_64-linux-gnu.tar.gz
-  rm -r dashcore-0.13.0/
+  tar xfv /tmp/dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.13.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.13.0/bin/dash-cli ~/.dashcore/
 
 Restart Dash::
 
@@ -179,11 +172,11 @@ voting rights. The keys are:
 
 All functions related to DIP3 will only take effect once Spork 15 is
 enabled on the network. Until then, it is necessary to set up the
-masternode following the old process and then work through the upgrade
-procedure. In this state, the masternode will continue to function in
-compatibility node, and all DIP3 related functions, such as payments to
-a separate address or percentage payments to operators, will not yet
-have any effect.
+masternode following the :ref:`old process <masternode-setup>` and then
+work through the upgrade procedure. In this state, the masternode will
+continue to function in compatibility node, and all DIP3 related
+functions, such as payments to a separate address or percentage payments
+to operators, will not yet have any effect.
 
 This documentation describes the commands as if they were entered in
 Dash Core by opening the console from **Tools > Debug console**, but the
@@ -203,11 +196,10 @@ software.
 Generate a BLS key pair
 -----------------------
 
-Log in to your masternode using ssh or PuTTY. A public/private BLS key
-pair is required for the operator of the masternode. If you are using a
-hosting service, they will provide you with their public key, and you
-can skip this step. If you are hosting your own masternode, generate a
-BLS public/private keypair as follows::
+A public/private BLS key pair is required for the operator of the
+masternode. If you are using a hosting service, they will provide you
+with their public key, and you can skip this step. If you are hosting
+your own masternode, generate a BLS public/private keypair as follows::
 
   bls generate
 
@@ -222,8 +214,9 @@ similar to the value provided in the past by the** ``masternode genkey``
 key must be entered in the ``dash.conf`` file on the masternode. This
 allows the masternode to watch the network for relevant Pro*Tx
 transactions, and will cause it to start serving as a masternode when
-the signed ProRegTx is broadcast by the owner (Step 5 below). Edit the
-configuration file on your masternode as follows::
+the signed ProRegTx is broadcast by the owner (Step 5 below). Log in to
+your masternode using ssh or PuTTY and edit the configuration file on
+your masternode as follows::
 
   nano ~/.dashcore/dash.conf
 
@@ -261,20 +254,20 @@ Next, we will prepare an unsigned ProRegTx special transaction using the
 ``protx register_prepare`` command. This command has the following
 syntax::
 
-  protx register_prepare "collateralHash" collateralIndex "ipAndPort" "ownerKeyAddr" 
-    "operatorKeyAddr" "votingKeyAddr" operatorReward "payoutAddress"
+  protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr 
+    operatorKeyAddr votingKeyAddr operatorReward payoutAddress
 
 Open a text editor such as notepad to prepare this command. Replace each
 argument to the command as follows:
 
-- ``"collateralHash"``: The txid of the 1000 Dash collateral funding transaction
+- ``collateralHash``: The txid of the 1000 Dash collateral funding transaction
 - ``collateralIndex``: The output index of the 1000 Dash funding transaction
-- ``"ipAndPort"``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
-- ``"ownerKeyAddr"``: The new Dash address generated above for the owner/voting address
-- ``"operatorKeyAddr"``: The BLS public key generated above (or provided by your hosting service)
-- ``"votingKeyAddr"``: The new Dash address generated above, or the address of a delegate, used for proposal voting
+- ``ipAndPort``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
+- ``ownerKeyAddr``: The new Dash address generated above for the owner/voting address
+- ``operatorKeyAddr``: The BLS public key generated above (or provided by your hosting service)
+- ``votingKeyAddr``: The new Dash address generated above, or the address of a delegate, used for proposal voting
 - ``operatorReward``: The percentage of the block reward allocated to the operator as payment
-- ``"payoutAddress"``: A new or existing Dash address to receive the owner's masternode rewards
+- ``payoutAddress``: A new or existing Dash address to receive the owner's masternode rewards
 
 Note that the operator is responsible for specifying their own reward
 address in a separate ``update_service`` transaction if you specify a
@@ -284,14 +277,14 @@ not specify the operator's payout address.
 Example (remove line breaks if copying)::
 
   protx register_prepare
-    "2c499e3862e5aa5f220278f42f9dfac32566d50f1e70ae0585dd13290227fdc7"
+    2c499e3862e5aa5f220278f42f9dfac32566d50f1e70ae0585dd13290227fdc7
     1
-    "140.82.59.51:19999"
-    "yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz"
-    "01d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127"
-    "yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz"
+    140.82.59.51:19999
+    yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
+    01d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127
+    yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
     0
-    "ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy"
+    ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy
 
 Output::
 
