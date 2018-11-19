@@ -28,11 +28,11 @@ Dash 0.13.0 introduced `DIP3 Deterministic Masternode Lists
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
 method of finding consensus on the list of valid masternodes. Due to the
 deep underlying changes and new signature formats involved, all
-masternodes are required to update the Dash software and generate new
-keys in order to be accepted by the DIP3 consensus rules. This procedure
-involves five basic steps:
+masternodes are required to use the latest version of the Dash software
+and generate new keys in order to be accepted by the DIP3 consensus
+rules. This procedure involves five basic steps:
 
-1. Update the Dash software
+1. Install the Dash software
 2. Generate a BLS key pair
 3. Prepare a ProRegTx transaction
 4. Sign the ProRegTx transaction
@@ -43,50 +43,6 @@ can be carried out either on your masternode or in the Dash Core wallet.
 Signing the transaction in step 4 must be done using the wallet holding
 the private key to the 1000 Dash collateral.
 
-DIP3 introduces several changes to how a masternode is set up and
-operated. Masternode payments were previously sent to the address
-holding the collateral. Under DIP3, the owner must specify a different
-address to receive payments. A masternode was previously "started" using
-the ``masternode start-alias`` command. Under DIP3, masternodes begin
-offering services when a ProRegTx `special transaction
-<https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ containing a
-particular key is written to the blockchain. The masternode
-configuration can later be updated using ProUpServTx, ProUpRegTx and
-ProUpRevTx transactions. See `Updating Masternode Information
-<https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-masternode-information>`_ 
-in DIP3 for more details.
-
-The ProRegTx contains 2 public key IDs and one BLS public key, which
-represent 3 different roles in the masternode and define update and
-voting rights. The keys are:
-
-1. ``ownerKeyAddr``: This is the public key ID of the masternode or
-   collateral owner. It is different than the key used in the collateral
-   output. Only the owner is allowed to issue ProUpRegTx transactions.
-
-2. ``operatorKeyAddr``: This is the BLS public key of the masternode
-   operator. Only the operator is allowed to issue ProUpServTx
-   transactions. The operator key is also used while operating the
-   masternode to sign masternode related P2P messages, quorum related
-   messages and governance trigger votes. Messages signed with this key
-   are only valid while the masternode is in the valid set.
-
-3. ``votingKeyAddr``: This is the public key ID used for proposal
-   voting. Votes signed with this key are valid while the masternode is
-   in the registered set.
-
-All functions related to DIP3 will only take effect once Spork 15 is
-enabled on the network. Until then, it is necessary to set up the
-masternode following the `old process <https://docs.dash.org/en/stable/masternodes/setup.html>` 
-and then work through the upgrade procedure. In this state, the
-masternode will continue to function in compatibility node, and all DIP3
-related functions, such as payments to a separate address or percentage
-payments to operators, will not yet have any effect.
-
-This documentation describes the commands as if they were entered in
-Dash Core by opening the console from **Tools > Debug console**, but the
-same result can be achieved on a masternode by entering the same
-commands and adding the prefix ``~/.dashcore/dash-cli`` to each command.
 
 Before you begin
 ================
@@ -103,6 +59,7 @@ time. If you are updating a masternode, see
 We also assume you will be working from a Windows computer. However,
 since most of the work is done on your Linux VPS, alternative steps for
 using macOS or Linux will be indicated where necessary.
+
 
 .. _vps-setup:
 
@@ -174,6 +131,7 @@ address, username and password.
    :width: 276px
 
    Vultr server management screen
+
 
 Set up your operating system
 ============================
@@ -301,10 +259,10 @@ instead of a username/password combination, `installing fail2ban
 <https://www.linode.com/docs/security/using-fail2ban-for-security>`_ to
 block login brute force attacks and `enabling automatic security updates
 <https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ is
-advisable. More tips are available `here <https://www.cyberciti.biz/tips
-/linux-security.html>`__. However, since the masternode does not
-actually store the keys to any Dash, these steps are considered beyond
-the scope of this guide.
+advisable. More tips are available `here <https://www.cyberciti.biz/tips/linux-security.html>`__. 
+However, since the masternode does not actually store the keys to any
+Dash, these steps are considered beyond the scope of this guide.
+
 
 Send the collateral
 ===================
@@ -312,27 +270,30 @@ Send the collateral
 A Dash address with a single unspent transaction output (UTXO) of
 exactly 1000 DASH is required to operate a masternode. Once it has been
 sent, various keys regarding the transaction must be extracted for later
-entry in a configuration file as proof that the transaction was
-completed successfully. A masternode can be started from a hardware
-wallet or the official Dash Core wallet, although a hardware wallet is
-highly recommended to enhance security and protect yourself against
-hacking. This guide will describe the steps for both hardware wallets
-and Dash Core.
+entry in a configuration file and registration transaction as proof to
+write the configuration to the blockchain so the masternode can be
+included in the deterministic list. A masternode can be started from a
+hardware wallet or the official Dash Core wallet, although a hardware
+wallet is highly recommended to enhance security and protect yourself
+against hacking. This guide will describe the steps for both hardware
+wallets and Dash Core.
 
 Option 1: Sending from a hardware wallet
 ----------------------------------------
 
+**NOTE: This documentation should be considered obsolete until DMT is
+updated to provide DIP3 support.**
+
 Set up your Trezor using the Trezor wallet at https://wallet.trezor.io/
 and send a test transaction to verify that it is working properly. For
 help on this, see :ref:`this guide <hardware-trezor>` - you may also
-choose to (carefully!) `add a passphrase <https://blog.trezor.io/hide-
-your-trezor-wallets-with-multiple-passphrases-f2e0834026eb>`_ to your
-Trezor to further protect your collateral. Create a new account in your
-Trezor wallet by clicking **Add account**. Then click the **Receive**
-tab and send exactly 1000 DASH to the address displayed. If you are
-setting up multiple masternodes, send 1000 DASH to consecutive addresses
-within the same new account. You should see the transaction as soon as
-the first confirmation arrives, usually within a few minutes.
+choose to (carefully!) `add a passphrase <https://blog.trezor.io/hide-your-trezor-wallets-with-multiple-passphrases-f2e0834026eb>`_
+to your Trezor to further protect your collateral. Create a new account
+in your Trezor wallet by clicking **Add account**. Then click the
+**Receive** tab and send exactly 1000 DASH to the address displayed. If
+you are setting up multiple masternodes, send 1000 DASH to consecutive
+addresses within the same new account. You should see the transaction as
+soon as the first confirmation arrives, usually within a few minutes.
 
 .. figure:: img/setup-collateral-trezor.png
    :width: 400px
@@ -421,43 +382,39 @@ It should look like this when ready:
    Fully synchronized Dash Core wallet
 
 Click **Tools > Debug console** to open the console. Type the following
-two commands into the console to generate a masternode key and get a
-fresh address::
+command into the console to get a new Dash address for the collateral::
 
-  masternode genkey
-  getaccountaddress 0
+  getnewaddress
 
-.. figure:: img/setup-collateral-console.png
-   :width: 400px
+  yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG
 
-   Generating a masternode private key in Dash Core wallet
+Take note of the collateral address, since we will need it later. The
+next step is to secure your wallet (if you have not already done so).
+First, encrypt the wallet by selecting **Settings > Encrypt wallet**.
+You should use a strong, new password that you have never used somewhere
+else. Take note of your password and store it somewhere safe or you will
+be permanently locked out of your wallet and lose access to your funds.
+Next, back up your wallet file by selecting **File > Backup Wallet**.
+Save the file to a secure location physically separate to your computer,
+since this will be the only way you can access our funds if anything
+happens to your computer. For more details on these steps, see
+:ref:`here <dashcore-backup>`.
 
-Take note of the masternode private key and collateral address, since we
-will need it later. The next step is to secure your wallet (if you have
-not already done so). First, encrypt the wallet by selecting **Settings
-> Encrypt wallet**. You should use a strong, new password that you have
-never used somewhere else. Take note of your password and store it
-somewhere safe or you will be permanently locked out of your wallet and
-lose access to your funds. Next, back up your wallet file by selecting
-**File > Backup Wallet**. Save the file to a secure location physically
-separate to your computer, since this will be the only way you can
-access our funds if anything happens to your computer. For more details
-on these steps, see :ref:`here <dashcore-backup>`.
-
-Now send exactly 1000 DASH in a single transaction to the account
-address you generated in the previous step. This may be sent from
-another wallet, or from funds already held in your current wallet. Once
-the transaction is complete, view the transaction in a `blockchain
-explorer <http://insight.dash.org/insight/>`_ by searching for the
-address. You will need 15 confirmations before you can start the
-masternode, but you can continue with the next step at this point
-already: installing Dash Core on your VPS.
+Now send exactly 1000 DASH in a single transaction to the new address
+you generated in the previous step. This may be sent from another
+wallet, or from funds already held in your current wallet. Once the
+transaction is complete, view the transaction in a `blockchain explorer
+<http://insight.dash.org/insight/>`_ by searching for the address. You
+will need 15 confirmations before you can start the masternode, but you
+can continue with the next step at this point already: installing Dash
+Core on your VPS.
 
 .. figure:: img/setup-collateral-blocks.png
    :width: 400px
 
    Trezor blockchain explorer showing 15 confirmations for collateral
    transfer
+
 
 .. _masternode-setup-install-dashcore:
 
@@ -489,48 +446,16 @@ logging in::
 
 dashman will download the latest version of Dash Core for your system,
 as well as an initial snapshot of the blockchain to speed up the
-bootstrapping process. Next download and install sentinel, which is
-required for masternodes at version 12.1 or higher::
+bootstrapping process. Next download and install Sentinel, which is
+required for masternodes at version 0.12.1 or higher::
 
   ~/dashman/dashman install sentinel
 
 Your system is now running as a standard Dash node, and is busy
-completing synchronisation with the blockchain. We now need to enter the
-masternode private key generated in the previous step. Edit the
-configuration file using the following command::
-
-  nano ~/.dashcore/dash.conf
-
-Uncomment the last two lines by deleting the # symbol at the start of
-the line, then paste the masternode private key you generated after
-``masternodeprivkey=``. You can simply click the right mouse button to
-paste into the terminal window. Press **Ctrl + X** to close the editor
-and **Y** and **Enter** save the file.
-
-.. figure:: img/setup-dashman-conf.png
-   :width: 400px
-
-   Entering masternodeprivkey in dash.conf on the masternode
-
-At this point you should restart dashd to load the new configuration
-file by typing the following::
-
-  ~/dashman/dashman restart
-
-Press **Y** and **Enter** to confirm. Then check the sync status and
-wait until all blockchain synchronisation and the 15 confirmations for
-the collateral transaction are complete::
-
-  ~/dashman/dashman status
-
-.. figure:: img/setup-dashman-done.png
-   :width: 400px
-
-   dashman status output showing masternode ready to be started
-
-dashman does not automatically restart your masternode in the event of a
-system error. Add a check function to crontab to make sure it checks
-every minute to ensure your masternode is still running::
+completing synchronisation with the blockchain. Since dashman does not
+automatically restart your masternode in the event of a system error,
+add a check function to crontab to make sure it checks every minute to
+ensure your masternode is still running::
 
   crontab -e
 
@@ -541,30 +466,38 @@ the file, after the line for sentinel::
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file.
+the file. Check the sync status and wait until all blockchain
+synchronisation and the 15 confirmations for the collateral transaction
+are complete::
+
+  ~/dashman/dashman status
+
+.. figure:: img/setup-dashman-done.png
+   :width: 400px
+
+   dashman status output showing masternode ready to be started
 
 Continue with the :ref:`next step to start your masternode
-<masternode-setup-start>`.
+<register-masternode>`.
 
 Option 2: Manual installation
 -----------------------------
 
 To manually download and install the components of your Dash masternode,
-visit https://www.dash.org/wallets on your computer to find the link to
-the latest Dash Core wallet. Click **Linux**, then right-click on
-**Download TGZ** for **Dash Core Linux 64 Bit** and select **Copy link
-address**. Go back to your terminal window and enter the following
-command, pasting in the address to the latest version of Dash Core by
-right clicking or pressing **Ctrl + V**::
+visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ 
+and copy the link to the latest x86_64-linux-gnu version. Go back to
+your terminal window and enter the following command, pasting in the
+address to the latest version of Dash Core by right clicking or pressing
+**Ctrl + V**::
 
-  cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.12.3.3/dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
+  cd /tmp
+  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc4/dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
 
-You can optionally verify the integrity of your download by running the
-following command and comparing the output against the value for the
-file as shown on the Dash website under **Hash File**::
+Verify the integrity of your download by running the following command
+and comparing the output against the value for the file as shown in the
+``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
 
 .. figure:: img/setup-manual-download.png
    :width: 250px
@@ -579,7 +512,7 @@ the ASC file for the current release of Dash and verify the signature as
 follows::
 
   curl https://keybase.io/udjinm6/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v0.12.3.3/SHA256SUMS.asc
+  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc4/SHA256SUMS.asc
   gpg --verify SHA256SUMS.asc
 
 .. figure:: img/setup-manual-gpg.png
@@ -590,16 +523,10 @@ follows::
 Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
-  mkdir .dashcore
-  tar xfvz dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
-  cp dashcore-0.12.3/bin/dashd .dashcore/
-  cp dashcore-0.12.3/bin/dash-cli .dashcore/
-  chmod 777 .dashcore/dash*
-
-Clean up unneeded files::
-
-  rm dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
-  rm -r dashcore-0.12.3/
+  tar xfv dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.13.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.13.0/bin/dash-cli ~/.dashcore/
+  chmod 777 ~/.dashcore/dash*
 
 Create a configuration file using the following command::
 
@@ -621,7 +548,6 @@ follows::
   maxconnections=64
   #----
   masternode=1
-  masternodeprivkey=XXXXXXXXXXXXXXXXXXXXXXX
   externalip=XXX.XXX.XXX.XXX
   #----
 
@@ -631,8 +557,6 @@ Replace the fields marked with ``XXXXXXX`` as follows:
   characters allowed
 - ``rpcpassword``: enter any string of numbers or letters, no special
   characters allowed
-- ``masternodeprivkey``: this is the private key you generated in the
-  previous step
 - ``externalip``: this is the IP address of your VPS
 
 The result should look something like this:
@@ -694,38 +618,29 @@ response::
    "IsFailed": false
   }
 
-Continue with the next step to start your masternode.
+Continue with the next step to construct the ProTx transaction required
+to enable your masternode.
 
-.. _masternode-setup-start:
 
-Start your masternode
-=====================
+.. _register-masternode:
 
-Depending on how you sent your masternode collateral, you will need to
-start your masternode with a command sent either by your hardware wallet
-or by Dash Core wallet. Before you continue, you must ensure that your
-1000 DASH collateral transaction has at least 15 confirmation, and that
-dashd is running and fully synchronized with the blockchain on your
-masternode. See the previous step for details on how to do this. During
-the startup process, your masternode may pass through the following
-states:
+Register your masternode
+========================
 
-- MASTERNODE_SYNC: This indicates the data currently being synchronised
-  in the masternode
-- MASTERNODE_SYNC_FAILED: Synchronisation could not complete, check your
-  firewall and restart dashd
-- WATCHDOG_EXPIRED: Waiting for sentinel to restart, make sure it is
-  entered in crontab
-- NEW_START_REQUIRED: Start command must be sent from wallet
-- PRE_ENABLED: Waiting for network to recognize started masternode
-- ENABLED: Masternode successfully started
+DIP3 introduces several changes to how a masternode is set up and
+operated. These are described briefly under `<dip3-changes>` in this
+documentation, or in full detail in `DIP3
+<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ itself. It
+is highly recommended to first read at least the brief documentation
+before continuing in order to familiarize yourself with the new concepts
+in DIP3.
 
-If you masternode does not seem to start immediately, do not arbitrarily
-issue more start commands. Each time you do so, you will reset your
-position in the payment queue.
 
-Option 1: Starting from a hardware wallet
------------------------------------------
+Option 1: Registering from a hardware wallet
+--------------------------------------------
+
+**NOTE: This documentation should be considered obsolete until DMT is
+updated to provide DIP3 support.**
 
 Go back to DMT and ensure that all fields are filled out correctly.
 Click **Lookup** to find the collateral TX ID for the transaction which
@@ -756,8 +671,13 @@ appear as follows:
 At this point you can safely log out of your server by typing exit.
 Congratulations! Your masternode is now running.
 
-Option 2: Starting from Dash Core wallet
+.. _dashcore-protx
+
+Option 2: Registering from Dash Core wallet
 ----------------------------------------
+
+Identify the funding transaction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you used an address in Dash Core wallet for your collateral
 transaction, you now need to find the txid of the transaction. Click
@@ -768,56 +688,168 @@ transaction, you now need to find the txid of the transaction. Click
 This should return a string of characters similar to this::
 
   {
-  "06e38868bb8f9958e34d5155437d009b72dff33fc28874c87fd42e51c0f74fdb" : "0",
+  "2c499e3862e5aa5f220278f42f9dfac32566d50f1e70ae0585dd13290227fdc7" : "1",
   }
 
 The first long string is your transaction hash, while the last number is
-the index. We now need to create a file called *masternode.conf* for
-this wallet in order to be able to use it to issue the command to start
-your masternode on the network. Open a new text file in Notepad (or
-TextEdit on macOS, gedit on Linux) and enter the following information:
+the index. 
 
-- **Label**: Any single word used to identify your masternode, e.g. MN1
-- **IP and port**: The IP address and port (usually 9999) configured in
-  the dash.conf file, separated by a colon (:)
-- **Masternode private key**: This is the result of your masternode
-  genkey command earlier, also the same as configured in the dash.conf
-  file
-- **Transaction hash**: The txid we just identified using masternode
-  outputs
-- **Index**: The index we just identified using masternode outputs
+Generate a BLS key pair
+^^^^^^^^^^^^^^^^^^^^^^^
 
-Enter all of this information on a single line with each item separated
-by a space, for example::
+A public/private BLS key pair is required for the operator of the
+masternode. If you are using a hosting service, they will provide you
+with their public key, and you can skip this step. If you are hosting
+your own masternode, generate a BLS public/private keypair as follows::
 
-  MN1 52.14.2.67:9999 XrxSr3fXpX3dZcU7CoiFuFWqeHYw83r28btCFfIHqf6zkMp1PZ4 06e38868bb8f9958e34d5155437d009b72dff33fc28874c87fd42e51c0f74fdb 0
+  bls generate
 
-Save this file in the **DashCore** data folder on the PC running the
-Dash Core wallet using the filename *masternode.conf*. You may need to
-enable **View hidden items** to view this folder. Be sure to select
-**All files** if using Notepad so you don't end up with a *.conf.txt*
-file extension by mistake. For different operating systems, the DashCore
-folder can be found in the following locations (copy and paste the
-shortcut text into the **Save** dialog to find it quickly):
+  {
+    "secret": "565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101",
+    "public": "01d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127"
+  }
 
-+----------+-----------------------------------------------------+--------------------------------------------+
-| Platform | Path                                                | Shortcut                                   |
-+==========+=====================================================+============================================+
-| Linux    | ``/home/yourusername/.dashcore``                    | ``~/.dashcore``                            |
-+----------+-----------------------------------------------------+--------------------------------------------+
-| macOS    | ``/Macintosh HD/Library/Application Support``       | ``~/Library/Application Support/DashCore`` |
-+----------+-----------------------------------------------------+--------------------------------------------+
-| Windows  | ``C:\Users\yourusername\AppData\Roaming\Dash Core`` | ``%APPDATA%\DashCore``                     |
-+----------+-----------------------------------------------------+--------------------------------------------+
+**These keys are NOT stored by the wallet and must be kept secure,
+similar to the value provided in the past by the** ``masternode genkey``
+**command.** The public key will be used in following steps. The secret
+key must be entered in the ``dash.conf`` file on the masternode. This
+allows the masternode to watch the network for relevant Pro*Tx
+transactions, and will cause it to start serving as a masternode when
+the signed ProRegTx is broadcast by the owner (Step 5 below). Log in to
+your masternode using ssh or PuTTY and edit the configuration file on
+your masternode as follows::
 
-Now close your text editor and also shut down and restart Dash Core
-wallet. Dash Core will recognize masternode.conf during startup, and is
-now ready to activate your masternode. Go to **Settings > Unlock
-Wallet** and enter your wallet passphrase. Then click **Tools > Debug
-console** again and enter the following command to start your masternode
-(replace MN1 with the label for your masternode)::
+  nano ~/.dashcore/dash.conf
 
-  masternode start-alias MN1
+The editor appears with the existing masternode configuration. Add this
+line to the end of the file, replacing the key with your BLS secret key
+generated above::
+
+  masternodeblsprivkey=565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101
+
+Press enter to make sure there is a blank line at the end of the file,
+then press **Ctrl + X** to close the editor and **Y** and **Enter** save
+the file. We will now prepare the transaction used to register a DIP3
+masternode on the network.
+
+Prepare a ProRegTx transaction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+First, we need to get a new, unused address from the wallet to serve as
+the owner address. This must also be used as the voting address if Spork
+15 is not yet active. Generate a new address as follows::
+
+  getnewaddress
+
+  yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
+
+Then either generate or choose an existing second address to receive the
+owner's masternode payouts::
+
+  getnewaddress
+
+  ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy
+
+Next, we will prepare an unsigned ProRegTx special transaction using the
+``protx register_prepare`` command. This command has the following
+syntax::
+
+  protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr 
+    operatorKeyAddr votingKeyAddr operatorReward payoutAddress
+
+Open a text editor such as notepad to prepare this command. Replace each
+argument to the command as follows:
+
+- ``collateralHash``: The txid of the 1000 Dash collateral funding transaction
+- ``collateralIndex``: The output index of the 1000 Dash funding transaction
+- ``ipAndPort``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
+- ``ownerKeyAddr``: The new Dash address generated above for the owner/voting address
+- ``operatorKeyAddr``: The BLS public key generated above (or provided by your hosting service)
+- ``votingKeyAddr``: The new Dash address generated above, or the address of a delegate, used for proposal voting
+- ``operatorReward``: The percentage of the block reward allocated to the operator as payment
+- ``payoutAddress``: A new or existing Dash address to receive the owner's masternode rewards
+
+Note that the operator is responsible for specifying their own reward
+address in a separate ``update_service`` transaction if you specify a
+non-zero ``operatorReward``. The owner of the masternode collateral does
+not specify the operator's payout address.
+
+Example (remove line breaks if copying)::
+
+  protx register_prepare
+    2c499e3862e5aa5f220278f42f9dfac32566d50f1e70ae0585dd13290227fdc7
+    1
+    140.82.59.51:19999
+    yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
+    01d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127
+    yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
+    0
+    ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy
+
+Output::
+
+  {
+    "tx": "030001000191def1f8bb265861f92e9984ac25c5142ebeda44901334e304c447dad5adf6070000000000feffffff0121dff505000000001976a9149e2deda2452b57e999685cb7dabdd6f4c3937f0788ac00000000d1010000000000c7fd27022913dd8505ae701e0fd56625c3fa9d2ff47802225faae562389e492c0100000000000000000000000000ffff8c523b334e1fad8e6259e14db7d05431ef4333d94b70df1391c601d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127ad8e6259e14db7d05431ef4333d94b70df1391c600001976a914adf50b01774202a184a2c7150593442b89c212e788acf8d42b331ae7a29076b464e61fdbcfc0b13f611d3d7f88bbe066e6ebabdfab7700",
+    "collateralAddress": "yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG",
+    "signMessage": "ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy|0|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|54e34b8b996839c32f91e28a9e5806ec5ba5a1dadcffe47719f5b808219acf84"
+  }
+
+We will use the ``collateralAddress`` and ``signMessage`` fields in Step
+4, and the output of the "tx" field in Step 5.
+
+Sign the ProRegTx transaction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Now we will sign the content of the ``signMessage`` field using the
+private key for the collateral address as specified in
+``collateralAddress``. Note that no internet connection is required for
+this step, meaning that the wallet can remain disconnected from the
+internet in cold storage to sign the message. In this example we will
+again use Dash Core, but it is equally possible to use the signing
+function of a hardware wallet. The command takes the following syntax::
+
+  signmessage "address" "message"
+
+Example::
+
+  signmessage "yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG" "ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy|0|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|54e34b8b996839c32f91e28a9e5806ec5ba5a1dadcffe47719f5b808219acf84"
+
+Output::
+
+  IMf5P6WT60E+QcA5+ixors38umHuhTxx6TNHMsf9gLTIPcpilXkm1jDglMpK+JND0W3k/Z+NzEWUxvRy71NEDns=
+
+
+Submit the signed message
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We will now register the ProRegTx special transaction on the blockchain
+to register the masternode. This command must be sent from a Dash Core
+wallet holding a balance, since a standard transaction fee is involved.
+The command takes the following syntax::
+
+  protx register_submit "tx" "sig"
+
+Where: 
+
+- ``"tx"``: The serialized transaction previously returned in the "tx" output field from ``protx register_prepare`` in Step 2
+- ``"sig"``: The message signed with the collateral key from Step 3
+
+Example::
+
+  protx register_submit "030001000191def1f8bb265861f92e9984ac25c5142ebeda44901334e304c447dad5adf6070000000000feffffff0121dff505000000001976a9149e2deda2452b57e999685cb7dabdd6f4c3937f0788ac00000000d1010000000000c7fd27022913dd8505ae701e0fd56625c3fa9d2ff47802225faae562389e492c0100000000000000000000000000ffff8c523b334e1fad8e6259e14db7d05431ef4333d94b70df1391c601d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127ad8e6259e14db7d05431ef4333d94b70df1391c600001976a914adf50b01774202a184a2c7150593442b89c212e788acf8d42b331ae7a29076b464e61fdbcfc0b13f611d3d7f88bbe066e6ebabdfab7700" "IMf5P6WT60E+QcA5+ixors38umHuhTxx6TNHMsf9gLTIPcpilXkm1jDglMpK+JND0W3k/Z+NzEWUxvRy71NEDns="
+
+Output::
+
+  9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6
+
+Your masternode is now upgraded to DIP3 and will appear on the
+Deterministic Masternode List. You can view this list on the
+**Masternodes -> DIP3 Masternodes** tab of the Dash Core wallet, or in
+the console using the command ``protx list valid``, where the txid of
+the final ``protx register_submit`` transaction identifies your DIP3
+masternode. Note again that all functions related to DIP3 will only take
+effect once Spork 15 is enabled on the network. You can view the spork
+status using the ``spork active`` command.
 
 At this point you can go back to your terminal window and monitor your
 masternode using ``dashman/dashman status``, by entering

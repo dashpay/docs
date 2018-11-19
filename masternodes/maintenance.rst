@@ -103,7 +103,7 @@ You will see a message reading "Dash Core server starting". We will now
 update Sentinel::
 
   cd ~/.dashcore/sentinel/
-  git checkout develop
+  git checkout master
   git pull
 
 Finally, uncomment the line to automatically restart Dash in your
@@ -118,64 +118,13 @@ Dash is now updated.
 Dash 0.13 Upgrade Procedure
 ===========================
 
-Dash 0.13.0 introduced `DIP3 Deterministic Masternode Lists
-<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
-method of finding consensus on the list of valid masternodes. Due to the
-deep underlying changes and new signature formats involved, all
-masternodes are required to update the Dash software and generate new
-keys in order to be accepted by the DIP3 consensus rules. This procedure
-involves five basic steps:
-
-1. Update the Dash software
-2. Generate a BLS key pair
-3. Prepare a ProRegTx transaction
-4. Sign the ProRegTx transaction
-5. Submit the signed ProRegTx transaction
-
-Steps 1 and 2 are performed on the masternode directly. Steps 3 and 5
-can be carried out either on your masternode or in the Dash Core wallet.
-Signing the transaction in step 4 must be done using the wallet holding
-the private key to the 1000 Dash collateral.
-
 DIP3 introduces several changes to how a masternode is set up and
-operated. Masternode payments were previously sent to the address
-holding the collateral. Under DIP3, the owner must specify a different
-address to receive payments. A masternode was previously "started" using
-the ``masternode start-alias`` command. Under DIP3, masternodes begin
-offering services when a ProRegTx `special transaction
-<https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ containing a
-particular key is written to the blockchain. The masternode
-configuration can later be updated using ProUpServTx, ProUpRegTx and
-ProUpRevTx transactions. See `Updating Masternode Information
-<https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-masternode-information>`_ 
-in DIP3 for more details.
-
-The ProRegTx contains 2 public key IDs and one BLS public key, which
-represent 3 different roles in the masternode and define update and
-voting rights. The keys are:
-
-1. ``ownerKeyAddr``: This is the public key ID of the masternode or
-   collateral owner. It is different than the key used in the collateral
-   output. Only the owner is allowed to issue ProUpRegTx transactions.
-
-2. ``operatorKeyAddr``: This is the BLS public key of the masternode
-   operator. Only the operator is allowed to issue ProUpServTx
-   transactions. The operator key is also used while operating the
-   masternode to sign masternode related P2P messages, quorum related
-   messages and governance trigger votes. Messages signed with this key
-   are only valid while the masternode is in the valid set.
-
-3. ``votingKeyAddr``: This is the public key ID used for proposal
-   voting. Votes signed with this key are valid while the masternode is
-   in the registered set.
-
-All functions related to DIP3 will only take effect once Spork 15 is
-enabled on the network. Until then, it is necessary to set up the
-masternode following the `old process <https://docs.dash.org/en/stable/masternodes/setup.html>` 
-and then work through the upgrade procedure. In this state, the
-masternode will continue to function in compatibility node, and all DIP3
-related functions, such as payments to a separate address or percentage
-payments to operators, will not yet have any effect.
+operated. These are described briefly under `<dip3-changes>` in this
+documentation, or in full detail in `DIP3
+<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ itself. It
+is highly recommended to first read at least the brief documentation
+before continuing in order to familiarize yourself with the new concepts
+in DIP3.
 
 This documentation describes the commands as if they were entered in
 Dash Core by opening the console from **Tools > Debug console**, but the
