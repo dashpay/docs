@@ -761,14 +761,22 @@ syntax::
 Open a text editor such as notepad to prepare this command. Replace each
 argument to the command as follows:
 
-- ``collateralHash``: The txid of the 1000 Dash collateral funding transaction
-- ``collateralIndex``: The output index of the 1000 Dash funding transaction
-- ``ipAndPort``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
-- ``ownerKeyAddr``: The new Dash address generated above for the owner/voting address
-- ``operatorKeyAddr``: The BLS public key generated above (or provided by your hosting service)
-- ``votingKeyAddr``: The new Dash address generated above, or the address of a delegate, used for proposal voting
-- ``operatorReward``: The percentage of the block reward allocated to the operator as payment
-- ``payoutAddress``: A new or existing Dash address to receive the owner's masternode rewards
+- ``collateralHash``: The txid of the 1000 Dash collateral funding 
+  transaction
+- ``collateralIndex``: The output index of the 1000 Dash funding 
+  transaction
+- ``ipAndPort``: Masternode IP address and port, in the format 
+  ``x.x.x.x:yyyy``
+- ``ownerKeyAddr``: The new Dash address generated above for the 
+  owner/voting address
+- ``operatorKeyAddr``: The BLS public key generated above (or provided 
+  by your hosting service)
+- ``votingKeyAddr``: The new Dash address generated above, or the 
+  address of a delegate, used for proposal voting
+- ``operatorReward``: The percentage of the block reward allocated to 
+  the operator as payment
+- ``payoutAddress``: A new or existing Dash address to receive the 
+  owner's masternode rewards
 
 Note that the operator is responsible for specifying their own reward
 address in a separate ``update_service`` transaction if you specify a

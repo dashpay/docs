@@ -230,14 +230,21 @@ syntax::
 Open a text editor such as notepad to prepare this command. Replace each
 argument to the command as follows:
 
-- ``collateralHash``: The txid of the 1000 Dash collateral funding transaction
-- ``collateralIndex``: The output index of the 1000 Dash funding transaction
+- ``collateralHash``: The txid of the 1000 Dash collateral funding 
+  transaction
+- ``collateralIndex``: The output index of the 1000 Dash funding 
+  transaction
 - ``ipAndPort``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
-- ``ownerKeyAddr``: The new Dash address generated above for the owner/voting address
-- ``operatorKeyAddr``: The BLS public key provided by your hosting service
-- ``votingKeyAddr``: The new Dash address generated above, or the address of a delegate, used for proposal voting
-- ``operatorReward``: The percentage of the block reward allocated to the operator as payment
-- ``payoutAddress``: A new or existing Dash address to receive the owner's masternode rewards
+- ``ownerKeyAddr``: The new Dash address generated above for the 
+  owner/voting address
+- ``operatorKeyAddr``: The BLS public key provided by your hosting 
+  service
+- ``votingKeyAddr``: The new Dash address generated above, or the 
+  address of a delegate, used for proposal voting
+- ``operatorReward``: The percentage of the block reward allocated to 
+  the operator as payment
+- ``payoutAddress``: A new or existing Dash address to receive the 
+  owner's masternode rewards
 
 Note that the operator is responsible for specifying their own reward
 address in a separate ``update_service`` transaction if you specify a
@@ -301,7 +308,8 @@ command takes the following syntax::
 
 Where: 
 
-- ``tx``: The serialized transaction previously returned in the ``tx`` output field from ``protx register_prepare`` in Step 2
+- ``tx``: The serialized transaction previously returned in the ``tx`` 
+  output field from ``protx register_prepare`` in Step 2
 - ``sig``: The message signed with the collateral key from Step 3
 
 Example::
@@ -345,13 +353,17 @@ Where:
 
 - ``proTxHash``: The hash of the initial ProRegTx.
 - ``ipAndPort``: IP and port in the form "ip:port"
-- ``operatorKey``: The operator's BLS private key belonging to the registered operator public key.
-- ``operatorPayoutAddress`` (optional): The address used for operator reward payments. Only allowed when the ProRegTx had a non-zero ``operatorReward`` value.
+- ``operatorKey``: The operator's BLS private key belonging to the
+  registered operator public key.
+- ``operatorPayoutAddress`` (optional): The address used for operator 
+  reward payments. Only allowed when the ProRegTx had a non-zero 
+  ``operatorReward`` value.
 
 Example::
 
   protx update_service d6ec9a03e1251ac8c34178f47b6d763dc4ea6d96fd6eddb3c7aae2359e0f474a 140.82.59.51:10002 4308daa8de099d3d5f81694f6b618381e04311b9e0345b4f8b025392c33b0696 yf6Cj6VcCfDxU5yweAT3NKKvm278rVbkhu
 
-fad61c5f21cf3c0832f782c1444d3d2e2a8dbff39c5925c38033730e64ecc598
+  fad61c5f21cf3c0832f782c1444d3d2e2a8dbff39c5925c38033730e64ecc598
 
-The masternode is now removed from the PoSe-banned list, and the IP:port and operator reward addresses are updated.
+The masternode is now removed from the PoSe-banned list, and the IP:port
+and operator reward addresses are updated.

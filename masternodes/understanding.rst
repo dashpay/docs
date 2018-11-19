@@ -183,8 +183,10 @@ Payment logic
 Masternode paymentss in Dash version 0.13.0 are entirely deterministic
 and based on a simple list sort algorithm. For documentation of version
 0.12.0 payment logic, see the `legacy masternode payment documentation
-<https://docs.dash.org/en/stable/masternodes/understanding.html#payment-logic>`_. Dash version 0.13.0 implements `DIP3 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ 
-and defines two sets of masternodes.
+<https://docs.dash.org/en/stable/masternodes/understanding.html#payment-logic>`_. 
+Dash version 0.13.0 implements `DIP3
+<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_  and defines
+two sets of masternodes.
 
 1. The full set, which contains all registered masternodes that have not
    spent their collateral funding transactions.
