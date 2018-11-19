@@ -125,11 +125,11 @@ voting rights. The keys are:
 All functions related to DIP3 will only take effect once Spork 15 is
 enabled on the network. Until then, it is necessary to set up the
 masternode following the `old process
-<https://docs.dash.org/en/stable/masternodes/setup.html>`  and then work
-through the :ref:`upgrade procedure <dip3-upgrade>`. In this state, the
-masternode will continue to function in compatibility node, and all DIP3
-related functions, such as payments to a separate address or percentage
-payments to operators, will not yet have any effect.
+<https://docs.dash.org/en/stable/masternodes/setup.html>`_  and then 
+work through the :ref:`upgrade procedure <dip3-upgrade>`. In this state,
+the masternode will continue to function in compatibility node, and all
+DIP3 related functions, such as payments to a separate address or
+percentage payments to operators, will not yet have any effect.
 
 
 Masternodes vs. mining
