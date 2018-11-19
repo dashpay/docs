@@ -628,8 +628,8 @@ Register your masternode
 ========================
 
 DIP3 introduces several changes to how a masternode is set up and
-operated. These are described briefly under `<dip3-changes>` in this
-documentation, or in full detail in `DIP3
+operated. These are described briefly under :ref:`<dip3-changes>` in
+this documentation, or in full detail in `DIP3
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ itself. It
 is highly recommended to first read at least the brief documentation
 before continuing in order to familiarize yourself with the new concepts
@@ -671,10 +671,10 @@ appear as follows:
 At this point you can safely log out of your server by typing exit.
 Congratulations! Your masternode is now running.
 
-.. _dashcore-protx
+.. _dashcore-protx:
 
 Option 2: Registering from Dash Core wallet
-----------------------------------------
+-------------------------------------------
 
 Identify the funding transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

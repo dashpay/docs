@@ -51,13 +51,6 @@ Check the status of your masternode::
 
   ~/dashman/dashman status
 
-If you are doing a major version update and need to restart your
-masternode, update the software version of the wallet holding the
-collateral to the latest version now by following the instructions
-:ref:`here <masternode-setup-start>`. Continue monitoring your
-masternode. After some time, all statuses should turn green, in
-particular **masternode started: YES** and **masternode network state:
-ENABLED**.
 
 Option 2: Manual update
 -----------------------

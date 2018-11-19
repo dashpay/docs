@@ -82,7 +82,7 @@ real-time payment rates, and `this site
 statistics on the masternode network.
 
 
-.. _dip3-changes
+.. _dip3-changes:
 
 DIP3 Changes in Dash 0.13
 =========================
