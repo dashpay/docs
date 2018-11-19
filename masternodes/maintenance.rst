@@ -118,7 +118,7 @@ Dash is now updated.
 Dash 0.13 Upgrade Procedure
 ===========================
 
-Dash 0.13.0 introduced `Deterministic Masternode Lists
+Dash 0.13.0 introduced `DIP3 Deterministic Masternode Lists
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
 method of finding consensus on the list of valid masternodes. Due to the
 deep underlying changes and new signature formats involved, all
@@ -171,11 +171,11 @@ voting rights. The keys are:
 
 All functions related to DIP3 will only take effect once Spork 15 is
 enabled on the network. Until then, it is necessary to set up the
-masternode following the :ref:`old process <masternode-setup>` and then
-work through the upgrade procedure. In this state, the masternode will
-continue to function in compatibility node, and all DIP3 related
-functions, such as payments to a separate address or percentage payments
-to operators, will not yet have any effect.
+masternode following the `old process <https://docs.dash.org/en/stable/masternodes/setup.html>` 
+and then work through the upgrade procedure. In this state, the
+masternode will continue to function in compatibility node, and all DIP3
+related functions, such as payments to a separate address or percentage
+payments to operators, will not yet have any effect.
 
 This documentation describes the commands as if they were entered in
 Dash Core by opening the console from **Tools > Debug console**, but the

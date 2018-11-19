@@ -46,18 +46,14 @@ the masternodes, 45% to miners and 10% to the budget. In practice, half
 of the reward from a normal block goes to the miner and half to the
 masternode. Then, every 16,616 blocks (approximately 30.29 days), a
 superblock is created that contains the entire 10% payout to the budget
-proposal winners. Masternodes are randomly selected for payment in each
-block (approximately every 2.6 minutes) from a list once they reach the
-top 10% of the total count of masternodes, and moved to the back of the
-list after payment. As more masternodes are created, the duration
-between payments increases. Due to the selection algorithm, there is
-always an aspect of randomness to payment selection, but in the long
-term all masternode owners should receive similar payments. If the
-collateral behind a masternode is spent, or if a masternode stops
-providing services to the network for more than one hour, it is removed
-from the list until normal service resumes. In this way, masternodes are
-given incentive to provide efficient and reliable services to the
-network.
+proposal winners. Masternodes are selected for payment in each block
+(approximately every 2.6 minutes) from a deterministic masternode list,
+and moved to the back of the list after payment. As more masternodes are
+created, the duration between payments increases. If the collateral
+behind a masternode is spent, or if a masternode stops providing
+services to the network for more than one hour, it is removed from the
+list until normal service resumes. In this way, masternodes are given
+incentive to provide efficient and reliable services to the network.
 
 Having so many servers holding a full copy of the blockchain and working
 for the coin can be extremely useful. Thanks to the reward system, there
@@ -69,10 +65,10 @@ means that Dash can scale more efficiently and deploy services more
 quickly than a blockchain run entirely by unpaid volunteers. The more
 masternodes, the better and safer the Dash network.
 
-As of March 2018, the Dash network has `over 4700 masternodes located
-<http://178.254.23.111/~pub/masternode_count.png>`_ in over `41
+As of November 2018, the Dash network has `over 5000 masternodes located
+<http://178.254.23.111/~pub/masternode_count.png>`_ in over `45
 countries <https://chainz.cryptoid.info/dash/masternodes.dws>`_ and
-hosted on `over 100 ISPs
+hosted on `over 140 ISPs
 <http://178.254.23.111/~pub/Dash/masternode_ISPs.html>`_. The block
 reward is approximately 3.34 Dash, so the selected masternode receives
 1.67 Dash per payment or approximately 6 Dash per month. The block
@@ -84,6 +80,54 @@ See `this tool <https://dash- news.de/dashtv/#value=1000>`_ to calculate
 real-time payment rates, and `this site
 <http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various real-time
 statistics on the masternode network.
+
+Changes in version 0.13
+=======================
+
+Dash 0.13.0 introduced `DIP3 Deterministic Masternode Lists
+<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
+method of finding consensus on the list of valid masternodes. 
+
+DIP3 introduces several changes to how a masternode is set up and
+operated. Masternode payments were previously sent to the address
+holding the collateral. Under DIP3, the owner must specify a different
+address to receive payments. A masternode was previously "started" using
+the ``masternode start-alias`` command. Under DIP3, masternodes begin
+offering services when a ProRegTx `special transaction
+<https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ containing a
+particular key is written to the blockchain. The masternode
+configuration can later be updated using ProUpServTx, ProUpRegTx and
+ProUpRevTx transactions. See `Updating Masternode Information
+<https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-
+masternode-information>`_  in DIP3 for more details.
+
+The ProRegTx contains 2 public key IDs and one BLS public key, which
+represent 3 different roles in the masternode and define update and
+voting rights. The keys are:
+
+1. ``ownerKeyAddr``: This is the public key ID of the masternode or
+   collateral owner. It is different than the key used in the collateral
+   output. Only the owner is allowed to issue ProUpRegTx transactions.
+
+2. ``operatorKeyAddr``: This is the BLS public key of the masternode
+   operator. Only the operator is allowed to issue ProUpServTx
+   transactions. The operator key is also used while operating the
+   masternode to sign masternode related P2P messages, quorum related
+   messages and governance trigger votes. Messages signed with this key
+   are only valid while the masternode is in the valid set.
+
+3. ``votingKeyAddr``: This is the public key ID used for proposal
+   voting. Votes signed with this key are valid while the masternode is
+   in the registered set.
+
+All functions related to DIP3 will only take effect once Spork 15 is
+enabled on the network. Until then, it is necessary to set up the
+masternode following the `old process <https://docs.dash.org/en/stable/masternodes/setup.html>` 
+and then work through the upgrade procedure. In this state, the
+masternode will continue to function in compatibility node, and all DIP3
+related functions, such as payments to a separate address or percentage
+payments to operators, will not yet have any effect.
+
 
 Masternodes vs. mining
 ======================
@@ -127,115 +171,36 @@ funds are not locked in any way. However, if the funds are moved or
 spent, the associated masternode will go offline and stop receiving
 rewards.
 
+
 .. _payment-logic:
 
 Payment logic
 =============
 
-Masternode payments in Dash version 12 are determined using a completely
-decentralized deterministic queue with probabilistic selection.
+Masternode paymentss in Dash version 0.13.0 are entirely deterministic
+and based on a simple list sort algorithm. For documentation of version
+0.12.0 payment logic, see the `legacy masternode payment documentation
+<https://docs.dash.org/en/stable/masternodes/understanding.html#payment-logic>`_. Dash version 0.13.0 implements `DIP3 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ 
+and defines two sets of masternodes.
 
-Global list
------------
+1. The full set, which contains all registered masternodes that have not
+   spent their collateral funding transactions.
+2. The valid subset, which contains all masternodes which are not marked
+   as Proof of Service (PoSe) banned.
 
-Every masternode appears in the global list. Their position in this list
-is determined by their time since the last payment according to the
-network, not the blockchain. New masternodes joining the network and
-masternodes receiving payment are placed at the end of the list.
-Running, active masternodes which are restarted using the rpc commands
-'masternode start' or 'masternode start-alias' are also placed at the
-end of the list. Using the new rpc command 'masternode start-missing'
-avoids this. As masternodes are moved to the end of the global list, the
-remaining masternodes slowly migrate towards the top of the list. Once a
-masternode reaches the top 10% of the global list, it is eligible for
-selection from the selection pool.
+Each masternode in the set of valid masternodes is identified by the
+block at which it was last paid. If it has never received payment or was
+banned for failing to meet the PoSe requirements, then the block at
+which it was first registered or at which PoSe was restored is used
+instead. The list is sorted in ascending order, and the first entry is
+paid. If this results in more than one masternode, then the hash of the
+masternode ProRegTx is sorted to break the tie.
 
-Selection pool
---------------
-
-The selection pool is the top 10% of the global list.  Its size is
-determined by the total masternode count. As an example, if there are
-4500 active masternodes, the top 450 masternodes in the global list are
-eligible for selection. Once in the selection pool, selection for
-payment is determined by block hash entropy. The block hash 100 blocks
-ago determines which masternode will be selected for payment. A double
-SHA256 of the funding transaction hash and index for all masternodes in
-the selection pool is compared with the proof of work hash 100 blocks
-ago. The masternode with the closest numeric hash value to that block
-hash is selected for payment.
-
-Probabilities
--------------
-
-Because selection is determined by block hash entropy, it is impossible
-to predict when a payment will occur. Masternode operators should expect
-considerable variance in payment intervals over time. Once a masternode
-enters the selection pool, payments become a probability. The
-probabilities in this example are calculated using an assumed current
-pool size of 450 (at 4500 total masternodes). Nodes in the selection
-pool are selected for rewards randomly, i.e. the probability of being
-selected on any given block is 1/450.
-
-The table below shows the probably of an eligible node being selected
-for payment over a particular period of time. For example, the
-probability that an eligible node is selected within 12 hours is about
-46%. The table does **not** (and cannot) tell us the probability of being
-selected **after** a given period of time. For example, if you haven’t
-been selected within the past 12 hours — and we know from this table
-there is about a 54% chance of that happening — the probability of being
-selected on the next block is **not** 46%. It remains 1/450. Putting these
-together, if you have an eligible node, and, say, 48 hours have passed
-without payment, then you’ve been very unlucky, as there’s less than a
-10% chance of that happening. But, your chances of being selected on the
-next block remain the same as for any block, i.e. 1/450.
-
-Once a node is selected for payment, it is moved to the back of the list
-and cannot be selected again until it re-enters the selection pool.
-
-+-------+---------+-------------+
-| Hours | Blocks  | Probability |
-+=======+=========+=============+
-| 1     | 23.07   | 5.00%       |
-+-------+---------+-------------+
-| 2     | 46.14   | 9.76%       |
-+-------+---------+-------------+
-| 3     | 69.21   | 14.27%      |
-+-------+---------+-------------+
-| 4     | 92.28   | 18.56%      |
-+-------+---------+-------------+
-| 6     | 138.42  | 26.50%      |
-+-------+---------+-------------+
-| 8     | 184.56  | 33.67%      |
-+-------+---------+-------------+
-| 10    | 230.70  | 40.14%      |
-+-------+---------+-------------+
-| 12    | 276.84  | 45.98%      |
-+-------+---------+-------------+
-| 18    | 415.26  | 60.30%      |
-+-------+---------+-------------+
-| 24    | 553.68  | 70.82%      |
-+-------+---------+-------------+
-| 30    | 692.10  | 78.56%      |
-+-------+---------+-------------+
-| 36    | 830.52  | 84.24%      |
-+-------+---------+-------------+
-| 42    | 968.94  | 88.42%      |
-+-------+---------+-------------+
-| 48    | 1107.36 | 91.49%      |
-+-------+---------+-------------+
-| 72    | 1661.04 | 97.52%      |
-+-------+---------+-------------+
-| 96    | 2214.72 | 99.28%      |
-+-------+---------+-------------+
-
-You can run the code (written by community member moocowmoo used to
-create the table above `here <https://repl.it/@moocowmoo/Dash-Selection-
-Probability>`_.
 
 Quorum selection
 ================
 
-InstantSend transactions in Dash version 12 are secured using a
+InstantSend transactions in Dash version 0.13.0 are secured using a
 consensus of deterministically selected masternodes. This set of
 masternodes is informally termed a quorum and must be in a majority
 agreement, at least six out of ten, for a successful lock of the
@@ -251,6 +216,7 @@ acceptance of the lock.
 
 All InstantSend inputs must be at least six blocks old or the
 transaction will be rejected.
+
 
 Masternode requirements
 =======================
@@ -276,9 +242,9 @@ are as follows:
 +=========+============+=============+
 | CPU     | 1x 1 GHz   | 1x 2 GHz    |
 +---------+------------+-------------+
-| RAM     | 1 GB       | 2 GB        |
+| RAM     | 2 GB       | 4 GB        |
 +---------+------------+-------------+
-| Disk    | 8 GB       | 16 GB       |
+| Disk    | 20 GB      | 40 GB       |
 +---------+------------+-------------+
 | Network | 400 GB/mth | 1 TB/mth    |
 +---------+------------+-------------+
@@ -295,4 +261,4 @@ to be determined, although some pointers can be taken from the `roadmap
 <https://medium.com/@eduffield222/how-to-enabling-on-chain-scaling-2ffab5997f8b>`_. 
 It should be possible to run Dash masternodes on normal VPS servers
 until the block size reaches approximately 20 MB, after which custom
-hardware such as GPUs and eventually ASICs will be required.
+hardware such as GPUs and eventually ASICs may be required.
