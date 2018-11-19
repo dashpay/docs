@@ -130,23 +130,26 @@ https://masternodehosting.com
 - `Email <holger@masternodehosting.com>`__
 - `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
 
-Starting a hosted masternode
-============================
+Registering a hosted masternode
+===============================
 
-Starting a hosted masternode is done in just a few easy steps:
+Registering a hosted masternode is done in several steps:
 
 #. Send 1000 DASH to an address you control in a single transaction and
    wait for 15 confirmations
-#. Communicate the address to your hosting provider, who will provide
-   you with a masternode IP address and private key
-#. Enter this information in your wallet and start the masternode
+#. Request a BLS public key from your hosting provider and wait for them
+   to set up your masternode
+#. Enter this information in your wallet and broadcast the registration
+   transaction
 
 It is **highly recommended** to store the keys to your masternode
 collateral on a :ref:`hardware wallet <dash-hardware-wallet>` for added
-security against hackers. This documentation will use a Trezor as an
-example, but KeepKey and Ledger are also supported. For instructions on
-using Dash Core wallet to start the masternode (no longer recommended),
-contact your hosting provider.
+security against hackers. Since the hardware wallet is only used to sign
+a transaction, there is no need to ever connect this wallet to the
+internet. However, a Dash Core wallet with balance (for the transaction
+fee) is required to submit the registration transaction. This
+documentation will use a Trezor as an example, but KeepKey and Ledger
+are also supported.
 
 Send the collateral
 -------------------
@@ -180,75 +183,175 @@ confirmations exist, as shown in the following screenshot.
 Correspond with your hosting provider
 -------------------------------------
 
-Once 15 confirmations exist, send the address holding the 1000 DASH to
-your hosting provider. Payment for operating the masternode will
-generally also be requested at this point - if paying in Dash, be
-careful not to pay from the address holding the collateral. You will
-receive a reply with the following data:
+Once 15 confirmations exist, ask your hosting provider to provide you
+with the BLS public key from the masternode they will operate on your
+behalf. They may also optionally provide you with the IP address and
+port of the server.
 
-- A server IP address
-- A masternode private key
-- The collateral transaction ID (optional)
+Register the masternode
+-----------------------
 
-Start the masternode
---------------------
+The Dash Masternode Tool (DMT) can be used to combine all of this data
+and issue the ProRegTx command to the network to register the
+masternode. Download the appropriate version of DMT for your computer
+from the GitHub releases page `here <https://github.com/Bertrand256
+/dash-masternode- tool/releases>`_. Further documentation will be
+available once the tool is updated.
 
-The Dash Masternode Tool (DMT) is required to combine all of this data
-and issue the command to the network to start the masternode. Download
-the appropriate version of DMT for your computer from the GitHub
-releases page `here <https://github.com/Bertrand256/dash-masternode-
-tool/releases>`_. Unzip the file and run the executable. The following
-window appears.
+It is also possible to create the registration transaction yourself
+using Dash Core wallet. The documentation below describes this process.
 
-.. figure:: img/setup-collateral-dmt-start.png
-   :width: 400px
+Prepare a ProRegTx transaction
+------------------------------
 
-   Dash Masternode Tool startup screen
+First, we need to get a new, unused address from the wallet to serve as
+the owner address. This is different to the collateral address. It must
+also be used as the voting address if Spork 15 is not yet active.
+Generate a new address as follows::
 
-We will now do the final preparation in Dash DMT. Carry out the
-following sequence of steps as shown in this screenshot from DMT
-developer Bertrand256:
+  getnewaddress
 
-.. figure:: img/setup-collateral-dmt-steps.png
-   :width: 400px
+  yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
 
-   Dash Masternode Tool configuration steps
+Then either generate or choose an existing second address to receive the
+owner's masternode payouts::
 
-#. Enter the name of your masternode here.
-#. Enter the IP address of your masternode, as provided by your host.
-#. Enter the TCP port number. This should be 9999.
-#. Instead of clicking **Generate new**, simply enter the masternode 
-   private key provided by your host.
-#. Copy the collateral address where you sent the 1000 DASH collateral
-   from your Trezor Wallet and paste it in this field.
-#. Click the **arrow** → to derive the BIP32 path from your collateral
-   address. You can verify this against the BIP32 path shown on the
-   receive tab in your Trezor Wallet for the transaction.
-#. Click **Lookup** to find the collateral TX ID for the transaction 
-   which transferred the collateral to the address. You can verify this
-   against the TXID shown on the confirmation page of the blockchain
-   explorer for your collateral address.
+  getnewaddress
 
-.. figure:: img/setup-collateral-dmt-ready.png
-   :width: 400px
+  ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy
 
-   Dash Masternode Tool with configuration ready to start masternode
+Next, we will prepare an unsigned ProRegTx special transaction using the
+``protx register_prepare`` command. This command has the following
+syntax::
 
-Click **Start Masternode using Hardware Wallet**. Enter your PIN and
-confirm on your hardware wallet that you want to transmit this command.
-The following messages will appear, confirm each one:
+  protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr 
+    operatorKeyAddr votingKeyAddr operatorReward payoutAddress
 
-.. image:: img/setup-dmt-send.png
-   :width: 220px
+Open a text editor such as notepad to prepare this command. Replace each
+argument to the command as follows:
 
-.. figure:: img/setup-dmt-sent.png
-   :width: 220px
+- ``collateralHash``: The txid of the 1000 Dash collateral funding transaction
+- ``collateralIndex``: The output index of the 1000 Dash funding transaction
+- ``ipAndPort``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
+- ``ownerKeyAddr``: The new Dash address generated above for the owner/voting address
+- ``operatorKeyAddr``: The BLS public key provided by your hosting service
+- ``votingKeyAddr``: The new Dash address generated above, or the address of a delegate, used for proposal voting
+- ``operatorReward``: The percentage of the block reward allocated to the operator as payment
+- ``payoutAddress``: A new or existing Dash address to receive the owner's masternode rewards
 
-   Dash Masternode Tool confirmation dialogs to start a masternode
+Note that the operator is responsible for specifying their own reward
+address in a separate ``update_service`` transaction if you specify a
+non-zero ``operatorReward``. The owner of the masternode collateral does
+not specify the operator's payout address.
 
-That's it! Your masternode is now running, and you should receive
-regular payments to your masternode address. You can monitor your
-masternode's acceptance by the network by entering the collateral
-address to search the masternode list at https://www.dashninja.pl. For
-information on how to withdraw masternode payments without affecting
-operation of the masternode, see :ref:`here <masternode-withdrawals>`.
+Example (remove line breaks if copying)::
+
+  protx register_prepare
+    2c499e3862e5aa5f220278f42f9dfac32566d50f1e70ae0585dd13290227fdc7
+    1
+    140.82.59.51:19999
+    yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
+    01d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127
+    yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
+    0
+    ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy
+
+Output::
+
+  {
+    "tx": "030001000191def1f8bb265861f92e9984ac25c5142ebeda44901334e304c447dad5adf6070000000000feffffff0121dff505000000001976a9149e2deda2452b57e999685cb7dabdd6f4c3937f0788ac00000000d1010000000000c7fd27022913dd8505ae701e0fd56625c3fa9d2ff47802225faae562389e492c0100000000000000000000000000ffff8c523b334e1fad8e6259e14db7d05431ef4333d94b70df1391c601d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127ad8e6259e14db7d05431ef4333d94b70df1391c600001976a914adf50b01774202a184a2c7150593442b89c212e788acf8d42b331ae7a29076b464e61fdbcfc0b13f611d3d7f88bbe066e6ebabdfab7700",
+    "collateralAddress": "yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG",
+    "signMessage": "ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy|0|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|54e34b8b996839c32f91e28a9e5806ec5ba5a1dadcffe47719f5b808219acf84"
+  }
+
+We will use the ``collateralAddress`` and ``signMessage`` fields in Step
+4, and the output of the ``tx`` field in Step 5.
+
+Sign the ProRegTx transaction
+-----------------------------
+
+Now we will sign the content of the ``signMessage`` field using the
+private key for the collateral address as specified in
+``collateralAddress``. Note that no internet connection is required for
+this step, meaning that the wallet can remain disconnected from the
+internet in cold storage to sign the message. In this example we will
+again use Dash Core, but it is equally possible to use the signing
+function of a hardware wallet. The command takes the following syntax::
+
+  signmessage address message
+
+Example::
+
+  signmessage yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy|0|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|54e34b8b996839c32f91e28a9e5806ec5ba5a1dadcffe47719f5b808219acf84
+
+Output::
+
+  IMf5P6WT60E+QcA5+ixors38umHuhTxx6TNHMsf9gLTIPcpilXkm1jDglMpK+JND0W3k/Z+NzEWUxvRy71NEDns=
+
+
+Submit the signed message
+-------------------------
+
+We will now create the ProRegTx special transaction on the network to
+start the masternode. This command must be sent from a Dash Core wallet
+holding a balance, since a standard transaction fee is involved. The
+command takes the following syntax::
+
+  protx register_submit tx sig
+
+Where: 
+
+- ``tx``: The serialized transaction previously returned in the ``tx`` output field from ``protx register_prepare`` in Step 2
+- ``sig``: The message signed with the collateral key from Step 3
+
+Example::
+
+  protx register_submit 030001000191def1f8bb265861f92e9984ac25c5142ebeda44901334e304c447dad5adf6070000000000feffffff0121dff505000000001976a9149e2deda2452b57e999685cb7dabdd6f4c3937f0788ac00000000d1010000000000c7fd27022913dd8505ae701e0fd56625c3fa9d2ff47802225faae562389e492c0100000000000000000000000000ffff8c523b334e1fad8e6259e14db7d05431ef4333d94b70df1391c601d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127ad8e6259e14db7d05431ef4333d94b70df1391c600001976a914adf50b01774202a184a2c7150593442b89c212e788acf8d42b331ae7a29076b464e61fdbcfc0b13f611d3d7f88bbe066e6ebabdfab7700 IMf5P6WT60E+QcA5+ixors38umHuhTxx6TNHMsf9gLTIPcpilXkm1jDglMpK+JND0W3k/Z+NzEWUxvRy71NEDns=
+
+Output::
+
+  9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6
+
+Your masternode is now upgraded to DIP3 and will appear on the
+Deterministic Masternode List. You can view this list on the
+**Masternodes -> DIP3 Masternodes** tab of the Dash Core wallet, or in
+the console using the command ``protx list valid``, where the txid of
+the final ``protx register_submit`` transaction identifies your DIP3
+masternode. Note again that all functions related to DIP3 will only take
+effect once Spork 15 is enabled on the network. You can view the spork
+status using the ``spork active`` command.
+
+
+Operator transactions
+=====================
+
+This documentation is intended for operators managing nodes on behalf of
+owners. If you provide an IP address and port to a running masternode,
+it will appear in the DIP3 valid set immediately after the ``protx
+register_submit`` command is submitted by the owner as described above.
+If your the node is not running, or if the owner submits ``0`` for the
+``ipAndPort``, then the node will registered in PoSe-banned state. In
+this case, the operator will need to issue a ProUpServTx transaction
+to update the service features.
+
+The ProRegTx submitted by the owner also specifies the percentage reward
+for the operator. It does not specify the operator's reward address, so
+a ProUpServTx is also required to "claim" this reward by specifying a
+Dash address. The ProUpServTx takes the following syntax::
+
+  protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress)
+
+Where:
+
+- ``proTxHash``: The hash of the initial ProRegTx.
+- ``ipAndPort``: IP and port in the form "ip:port"
+- ``operatorKey``: The operator's BLS private key belonging to the registered operator public key.
+- ``operatorPayoutAddress`` (optional): The address used for operator reward payments. Only allowed when the ProRegTx had a non-zero ``operatorReward`` value.
+
+Example::
+
+  protx update_service d6ec9a03e1251ac8c34178f47b6d763dc4ea6d96fd6eddb3c7aae2359e0f474a 140.82.59.51:10002 4308daa8de099d3d5f81694f6b618381e04311b9e0345b4f8b025392c33b0696 yf6Cj6VcCfDxU5yweAT3NKKvm278rVbkhu
+
+fad61c5f21cf3c0832f782c1444d3d2e2a8dbff39c5925c38033730e64ecc598
+
+The masternode is now removed from the PoSe-banned list, and the IP:port and operator reward addresses are updated.

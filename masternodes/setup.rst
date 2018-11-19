@@ -736,8 +736,9 @@ Prepare a ProRegTx transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 First, we need to get a new, unused address from the wallet to serve as
-the owner address. This must also be used as the voting address if Spork
-15 is not yet active. Generate a new address as follows::
+the owner address. This is different to the collateral address. It must
+also be used as the voting address if Spork 15 is not yet active.
+Generate a new address as follows::
 
   getnewaddress
 
@@ -795,7 +796,7 @@ Output::
   }
 
 We will use the ``collateralAddress`` and ``signMessage`` fields in Step
-4, and the output of the "tx" field in Step 5.
+4, and the output of the ``tx`` field in Step 5.
 
 Sign the ProRegTx transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -808,11 +809,11 @@ internet in cold storage to sign the message. In this example we will
 again use Dash Core, but it is equally possible to use the signing
 function of a hardware wallet. The command takes the following syntax::
 
-  signmessage "address" "message"
+  signmessage address message
 
 Example::
 
-  signmessage "yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG" "ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy|0|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|54e34b8b996839c32f91e28a9e5806ec5ba5a1dadcffe47719f5b808219acf84"
+  signmessage yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy|0|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|54e34b8b996839c32f91e28a9e5806ec5ba5a1dadcffe47719f5b808219acf84
 
 Output::
 
@@ -827,16 +828,16 @@ to register the masternode. This command must be sent from a Dash Core
 wallet holding a balance, since a standard transaction fee is involved.
 The command takes the following syntax::
 
-  protx register_submit "tx" "sig"
+  protx register_submit tx sig
 
 Where: 
 
-- ``"tx"``: The serialized transaction previously returned in the "tx" output field from ``protx register_prepare`` in Step 2
-- ``"sig"``: The message signed with the collateral key from Step 3
+- ``tx``: The serialized transaction previously returned in the ``tx`` output field from ``protx register_prepare`` in Step 2
+- ``sig``: The message signed with the collateral key from Step 3
 
 Example::
 
-  protx register_submit "030001000191def1f8bb265861f92e9984ac25c5142ebeda44901334e304c447dad5adf6070000000000feffffff0121dff505000000001976a9149e2deda2452b57e999685cb7dabdd6f4c3937f0788ac00000000d1010000000000c7fd27022913dd8505ae701e0fd56625c3fa9d2ff47802225faae562389e492c0100000000000000000000000000ffff8c523b334e1fad8e6259e14db7d05431ef4333d94b70df1391c601d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127ad8e6259e14db7d05431ef4333d94b70df1391c600001976a914adf50b01774202a184a2c7150593442b89c212e788acf8d42b331ae7a29076b464e61fdbcfc0b13f611d3d7f88bbe066e6ebabdfab7700" "IMf5P6WT60E+QcA5+ixors38umHuhTxx6TNHMsf9gLTIPcpilXkm1jDglMpK+JND0W3k/Z+NzEWUxvRy71NEDns="
+  protx register_submit 030001000191def1f8bb265861f92e9984ac25c5142ebeda44901334e304c447dad5adf6070000000000feffffff0121dff505000000001976a9149e2deda2452b57e999685cb7dabdd6f4c3937f0788ac00000000d1010000000000c7fd27022913dd8505ae701e0fd56625c3fa9d2ff47802225faae562389e492c0100000000000000000000000000ffff8c523b334e1fad8e6259e14db7d05431ef4333d94b70df1391c601d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127ad8e6259e14db7d05431ef4333d94b70df1391c600001976a914adf50b01774202a184a2c7150593442b89c212e788acf8d42b331ae7a29076b464e61fdbcfc0b13f611d3d7f88bbe066e6ebabdfab7700 IMf5P6WT60E+QcA5+ixors38umHuhTxx6TNHMsf9gLTIPcpilXkm1jDglMpK+JND0W3k/Z+NzEWUxvRy71NEDns=
 
 Output::
 
