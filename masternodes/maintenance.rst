@@ -313,10 +313,10 @@ owner gets the full masternode reward. The ProUpServTx takes the following synta
 
 Where:
 
-- ``proTxHash``: The hash of the initial ProRegTx.
+- ``proTxHash``: The hash of the initial ProRegTx
 - ``ipAndPort``: IP and port in the form "ip:port"
-- ``operatorKey``: The operator's BLS private key belonging to the
-  registered operator public key.
+- ``operatorKey``: The operator BLS private key associated with the
+  registered operator public key
 - ``operatorPayoutAddress`` (optional): The address used for operator 
   reward payments. Only allowed when the ProRegTx had a non-zero 
   ``operatorReward`` value.
@@ -334,7 +334,9 @@ ProUpRegTx
 ----------
 
 A Provider Update Registrar Transaction (ProUpRegTx) is used to update
-information relating to the owner. An owner can  The ProUpRegTx takes the following syntax::
+information relating to the owner. An owner can update the operator's
+BLS public key (e.g. to nominate a new operator), the voting address and
+their own payout address. The ProUpRegTx takes the following syntax::
 
   protx update_registrar proTxHash operatorKeyAddr votingKeyAddr payoutAddress
 
@@ -352,11 +354,31 @@ Example to update payout address::
 
   protx update_registrar cedce432ebabc9366f5eb1e3abc219558de9fbd2530a13589b698e4bf917b8ae 0 0 yi5kVoPQQ8xaVoriytJFzpvKomAQxg6zea
 
+
 ProUpRevTx
 ----------
 
+A Provider Update Revocation Transaction (ProUpRevTx) is used by the
+operator to terminate service or signal the owner that a new BLS key is
+required. It will immediately put the masternode in the PoSe-banned
+state. The owner must then issue a ProUpRegTx to set a new operator key.
+After the ProUpRegTx is processed, the new operator must issue a
+ProUpServTx to update the service-related metadata and clear the PoSe-
+banned state (revive the masternode). The ProUpRevTx takes the following
+syntax::
 
+  protx revoke proTxHash operatorKey reason
 
+Where:
+
+- ``proTxHash``: The transaction id of the initial ProRegTx
+- ``operatorKey``: The operator BLS private key associated with the
+  registered operator public key
+- ``reason`` (optional): Integer value indicating the revocation `reason <https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-for-self-revocation-of-operators>`__
+
+Example::
+
+  protx revoke 9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6 565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101
 
 
 DashCentral voting, verification and monitoring
