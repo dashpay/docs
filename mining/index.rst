@@ -274,6 +274,7 @@ Try to select a pool that is nearby to reduce network latency. If the
 node appears slow, switch to another location. Please distribute the
 hashing power globally to different pools to avoid forking.
 
+
 GPU Mining
 ==========
 
@@ -406,121 +407,6 @@ store it in the folder, then begin hashing.
    Example of GPU mining using sgminer 5.6.1-nicehash-51 on Intel HD
    Graphics 4600
 
-Optimization
-------------
-
-Wolf0 binaries
-^^^^^^^^^^^^^^
-
-In 2015, a user named `Wolf0 created special binary files <https://www.r
-eddit.com/r/DRKCoin/comments/2o1yoz/rewritten_x11_binaries/>`_ (\*.bin)
-for certain AMD graphics cards using the following GPU families:
-
-- Cape Verde: 7730/7750/7770
-- Pitcairn: 7850/7870/R9 270/R9 270X
-- Tahiti: 7870XT/7950/7970/R9 280/R9 280X
-- Hawaii: R9 290/R9 290X/R9 295X2
-
-If this matches your GPU hardware, you can try to replace the file
-generated automatically the first time you ran sgminer with these
-special binaries. Take careful note of the algorithm and GPU model, find
-the right file from `Wolf0's Reddit thread <https://www.reddit.com/r/DRK
-Coin/comments/2o1yoz/rewritten_x11_binaries/>`_, and place it in the
-sgminer folder with the exact same name as the automatically generated
-file, overwriting it.
-
-Algorithm
-^^^^^^^^^
-
-A simple change is to replace the ``darkcoin`` algorithm with
-``darkcoin-mod`` in your *sgminer.conf* file and compare performance.
-Monitor the hashrate and GPU temperature over some time and choose the
-algorithm that works best on your hardware.
-
-xintensity
-^^^^^^^^^^
-
-This is the main option to play around with to improve performance.
-Intensity correlates with the size of work being submitted at any one
-time to a GPU. The higher the number the larger the size of work.
-Generally speaking, finding an optimal value rather than the highest
-value is the correct approach as hash rate rises up to a point with
-higher intensities but above that, the device may be very slow to return
-responses, or produce errors
-
-``xintensity`` is a new setting that replaces the older ``intensity``
-setting. It should be inserted together with the ``worksize`` setting after
-the ``pools : [ ]`` section as follows::
-
-  {
-    "pools" : [
-      {
-        "url" : "stratum+tcp://pooladdress:7903",
-        "user" : "walletaddress",
-        "pass" : "x",
-        "algorithm":"darkcoin"
-      }
-    ],
-    "xintensity" : "64",
-    "worksize": "64"
-  }
-
-From the documentation:
-
-.. epigraph::
-
-  *This new setting allows for a much finer grained intensity setting
-  and also opens up for dual GPU threads on devices not previously able
-  to. Note: make sure to use lower thread-concurrency values when you
-  increase CPU threads. It is simply a shader multiplier, obviously
-  based on the amount of shaders you got on a card, this should allow
-  the same value to scale with different card models.*
-
-  - 6970 with 1536 shaders: xI:64 = 98304 threads
-  - R9 280X with 2048 shaders: xI:64 = 131072 threads
-  - R9 290 with 2560 shaders: xI:64 = 180224 threads
-  - R9 290X with 2816 shaders: xI:64 = 163840 threads
-
-  - 6970 with 1536 shaders: xI:300 = 460800 threads
-  - R9 280X with 2048 shaders: xI:300 = 614400 threads
-  - R9 290 with 2560 shaders: xI:300 = 768000 threads
-  - R9 290X with 2816 shaders: xI:300 = 844800 threads
-
-Try ``xintensity = 64`` first and play around with the number to see
-which gives you the best performance with the lowest error rate. The
-higher the number the larger the size of work. Generally speaking
-finding an optimal value rather than the highest value is the correct
-approach as hash rate rises up to a point with higher intensities but
-above that, the device may be very slow to return responses, or produce
-errors. Or you can Google around for your card with the recommended
-xintensity setting. Do not change the worksize setting, particularly if
-using Wolf0's binaries. Save *sgminer.conf* in the same folder as your
-*sgminer.exe*.
-
-Tips
-----
-
-- Installing the latest display drivers can often improve performance.
-  These can be found here for `NVIDIA
-  <http://www.nvidia.com/Download/index.aspx?lang=en-us>`_ and `AMD
-  <http://support.amd.com/en-us/download>`_.
-- If you have problems with old driver versions, try to use a `Display
-  Driver Uninstaller <http://www.guru3d.com/files-details/display-
-  driver-uninstaller-download.html>`_ tool in safe mode to make sure
-  there is no trace of previous versions.
-- If you are feeling adventurous, you can try to overclock your GPU to
-  squeeze out some more performance (at your own risk) using Afterburner.
-  You can do this both by increasing the clock rate and decreasing the
-  voltage to manage heat. Be aware of your maximum GPU temperature,
-  anything above 90 °C risks permanent damage to your GPU.
-- If you have a Crossfire setup, disable Crossfire in your ATI Catalyst
-  settings or things will be funky.
-- Changing the graphics driver version can influence performance. Some
-  report for AMD cards suggest that Catalyst 14.7-RC3 may offer increased
-  performance.
-- You can also try mining under Linux, or compiling your own mining binary
-  from source with specific optimisations for your hardware under either
-  Windows or Linux.
 
 .. _asic-mining:
 
@@ -537,54 +423,56 @@ quickly due to the rapidly changing market and difficulty of mining
 Dash. You are responsible for carrying out your own research and any
 listing on this page should not be considered an endorsement of any
 particular product. A good place to begin your research is the `mining
-section of the Dash Forums <https://www.dash.org/forum/topic/hardware-
-discussions-asic-gpu-cpu.101/>`_.
+section of the Dash Forums <https://www.dash.org/forum/topic/hardware-discussions-asic-gpu-cpu.101/>`_.
 
-The following X11 ASIC miners are available on the market today, click the product name to visit the manufacturer's website:
+The following X11 ASIC miners are available on the market today, click
+the product name to visit the manufacturer's website:
 
 +----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-----------------+---------+
 | Name                                                                                                     | Hash rate     | Power   | Weight  | Dimensions (mm) | Price   |
 +==========================================================================================================+===============+=========+=========+=================+=========+
-| `Baikal BK-X <https://www.baikalminer.com/product09.php>`_                                               | 10 GH/s ±5%   | 800 W   | 3.8 kg  | 312 x 125 x 130 | $999    |
-+----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-----------------+---------+
-| `Bitmain Antminer D3 <https://shop.bitmain.com/product/detail?pid=00020180827100546986D6i5s54n0665>`_    | 17 GH/s ±5%   | 970 W   | 6.5 kg  | 320 x 130 x 190 | $133    |
+| `Bitmain Antminer D5 <https://shop.bitmain.com.cn/product/detail?pid=000201811150956053407f2Bhw2x068D>`_ | 119 GH/s ±5%  | 1566 W  | 7.5 kg  | 486 x 265 x 388 | $1,180  |
 +----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-----------------+---------+
 | `iBelink DM56G <https://ibelink.co/product/ibelink-dm56g-x11-dash-miner-with-56-gh-s-hash-rate/>`_       | 56 GH/s ±5%   | 2100 W  | 17 kg   | 490 x 390 x 180 | $1,800  |
 +----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-----------------+---------+
 | `Innosilicon A5 <http://www.innosilicon.com/html/a5-miner/index.html>`_                                  | 32 GH/s ±8%   | 750 W   | 3.1 kg  | 400 x 135 x 158 | $990    |
 +----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-----------------+---------+
-| `Spondoolies SPx36 <https://www.spondoolies-tech.com/products/spx36>`_                                   | 540 GH/s ±10% | 4400 W  | 19.5 kg | 640 X 525 X 185 | $15,500 |
+| `Spondoolies SPx36 <https://www.spondoolies-tech.com/products/spx36>`_                                   | 540 GH/s ±10% | 4400 W  | 19.5 kg | 640 X 525 X 185 | $10,850 |
 +----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-----------------+---------+
 
 The following ASIC miners are either no longer easily available or
 obsolete due to the increase in difficulty on the network.
 
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| Name                                                                                               | Hash rate      | Power | Weight  | Dimensions (mm) |
-+====================================================================================================+================+=======+=========+=================+
-| `Baikal Mini <http://www.baikalminer.com/>`_                                                       | 150 MH/s ±10%  | 40 W  | .475 kg | 140 x 100 x 95  |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `Baikal Giant+ A2000 <http://www.baikalminer.com/product06.php>`_                                  | 2000 MH/s ±10% | 430 W | 3 kg    | 300 x 140 x 125 |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `Baikal Giant A900 <http://baikalminer.com/>`_                                                     | 900 MH/s ±5%   | 217 W | 2.5 kg  | 300 x 123 x 123 |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `Baikal Quad Cube <http://www.baikalminer.com/>`_                                                  | 1200 MH/s ±10% | 300 W | 3 kg    | 135 x 135 x 425 |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `iBelink DM384M <https://ibelink.co/>`_                                                            | 384 MH/s ±10%  | 715 W | 21 kg   | 490 x 350 x 180 |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `iBelink DM11G <https://ibelink.co/product/ibelink-dm11g/>`_                                       | 11 GH/s ±5%    | 810 W | 22 kg   | 490 x 350 x 180 |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `iBelink DM22G <https://ibelink.co/product/ibelink-dm22g-x11dash-miner-with-22-ghs-hash-rate/>`_   | 22 GH/s ±5%    | 810 W | 19 kg   | 490 x 350 x 180 |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `Pinidea DR-1 <https://shop.pinidea.io/index.php/product/asic-x11-miner-dr-1/>`_                   | 500 MH/s ±10%  | 320 W | 4.5 kg  | 290 x 130 x 150 |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `Pinidea DR-2 <https://shop.pinidea.io/index.php/product/asic-x11-miner-dr2/>`_                    | 450 MH/s ±5%   | 335 W | 4.5 kg  | 200 x 165 x 135 |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `Pinidea DR-3 <https://shop.pinidea.io/index.php/product/asic-x11-miner-dr3/>`_                    | 600 MH/s ±5%   | 345 W | 4.5 kg  | 200 x 165 x 135 |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `Pinidea DU-1 <https://shop.pinidea.io/index.php/product/asic-x11-miner-du-1/>`_                   | 9 MH/s ±5%     | 7 W   |         | 50 x 50 x 30    |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `Pinidea DRX-Kuznetsov <https://shop.pinidea.io/index.php/product/asic-x11-miner-drx-kuznetsov/>`_ | 900 MH/s ±5%   | 650 W |         | 280 x 180 x 150 |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
-| `Pinidea DRX-Varyag <https://shop.pinidea.io/index.php/product/asic-x11-miner-drx-varyag/>`_       | 1200 MH/s ±5%  | 850 W |         | 280 x 180 x 150 |
-+----------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| Name                                                                                                  | Hash rate      | Power | Weight  | Dimensions (mm) |
++=======================================================================================================+================+=======+=========+=================+
+| `Baikal BK-X <https://www.baikalminer.com/product09.php>`_                                            | 10 GH/s ±5%    | 800 W | 3.8 kg  | 312 x 125 x 130 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `Baikal Mini <http://www.baikalminer.com/>`_                                                          | 150 MH/s ±10%  | 40 W  | .475 kg | 140 x 100 x 95  |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `Baikal Giant+ A2000 <http://www.baikalminer.com/product06.php>`_                                     | 2000 MH/s ±10% | 430 W | 3 kg    | 300 x 140 x 125 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `Baikal Giant A900 <http://baikalminer.com/>`_                                                        | 900 MH/s ±5%   | 217 W | 2.5 kg  | 300 x 123 x 123 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `Baikal Quad Cube <http://www.baikalminer.com/>`_                                                     | 1200 MH/s ±10% | 300 W | 3 kg    | 135 x 135 x 425 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `Bitmain Antminer D3 <https://shop.bitmain.com/product/detail?pid=000201810311345082643S60TX7I0609>`_ | 17 GH/s ±5%    | 970 W | 6.5 kg  | 320 x 130 x 190 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `iBelink DM384M <https://ibelink.co/>`_                                                               | 384 MH/s ±10%  | 715 W | 21 kg   | 490 x 350 x 180 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `iBelink DM11G <https://ibelink.co/product/ibelink-dm11g/>`_                                          | 11 GH/s ±5%    | 810 W | 22 kg   | 490 x 350 x 180 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `iBelink DM22G <https://ibelink.co/product/ibelink-dm22g-x11dash-miner-with-22-ghs-hash-rate/>`_      | 22 GH/s ±5%    | 810 W | 19 kg   | 490 x 350 x 180 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `Pinidea DR-1 <https://shop.pinidea.io/index.php/product/asic-x11-miner-dr-1/>`_                      | 500 MH/s ±10%  | 320 W | 4.5 kg  | 290 x 130 x 150 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `Pinidea DR-2 <https://shop.pinidea.io/index.php/product/asic-x11-miner-dr2/>`_                       | 450 MH/s ±5%   | 335 W | 4.5 kg  | 200 x 165 x 135 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `Pinidea DR-3 <https://shop.pinidea.io/index.php/product/asic-x11-miner-dr3/>`_                       | 600 MH/s ±5%   | 345 W | 4.5 kg  | 200 x 165 x 135 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `Pinidea DU-1 <https://shop.pinidea.io/index.php/product/asic-x11-miner-du-1/>`_                      | 9 MH/s ±5%     | 7 W   |         | 50 x 50 x 30    |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `Pinidea DRX-Kuznetsov <https://shop.pinidea.io/index.php/product/asic-x11-miner-drx-kuznetsov/>`_    | 900 MH/s ±5%   | 650 W |         | 280 x 180 x 150 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
+| `Pinidea DRX-Varyag <https://shop.pinidea.io/index.php/product/asic-x11-miner-drx-varyag/>`_          | 1200 MH/s ±5%  | 850 W |         | 280 x 180 x 150 |
++-------------------------------------------------------------------------------------------------------+----------------+-------+---------+-----------------+
