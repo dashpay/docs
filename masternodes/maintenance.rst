@@ -114,7 +114,7 @@ character.
 
 Dash is now updated.
 
-.. bls-generation:
+.. _bls-generation:
 
 Generate a BLS key pair
 -----------------------
@@ -285,7 +285,7 @@ effect once Spork 15 is enabled on the network. You can view the spork
 status using the ``spork active`` command.
 
 
-.. update-dip3-config:
+.. _update-dip3-config:
 
 Updating Masternode Information
 ===============================
@@ -362,7 +362,7 @@ A Provider Update Revocation Transaction (ProUpRevTx) is used by the
 operator to terminate service or signal the owner that a new BLS key is
 required. It will immediately put the masternode in the PoSe-banned
 state. The owner must then issue a ProUpRegTx to set a new operator key.
-After the ProUpRegTx is processed, the new operator must issue a
+After the ProUpRegTx is mined to a block, the new operator must issue a
 ProUpServTx to update the service-related metadata and clear the PoSe-
 banned state (revive the masternode). The ProUpRevTx takes the following
 syntax::
