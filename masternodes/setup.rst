@@ -32,7 +32,7 @@ masternodes are required to use the latest version of the Dash software
 and generate new keys in order to be accepted by the DIP3 consensus
 rules. This procedure involves five basic steps:
 
-1. Install the Dash software
+1. Set up your server and install the Dash software
 2. Generate a BLS key pair
 3. Prepare a ProRegTx transaction
 4. Sign the ProRegTx transaction
@@ -628,7 +628,7 @@ Register your masternode
 ========================
 
 DIP3 introduces several changes to how a masternode is set up and
-operated. These are described briefly under :ref:`<dip3-changes>` in
+operated. These are described briefly under :ref:`dip3-changes` in
 this documentation, or in full detail in `DIP3
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ itself. It
 is highly recommended to first read at least the brief documentation

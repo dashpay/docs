@@ -24,8 +24,8 @@ Dash masternode is set up and operated. A list of available
 documentation appears below:
 
 - `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
-- :ref:`DIP3 Masternode Changes <dip3-changes>`
-- :ref:`<dip3-upgrade>` (you are here)
+- :ref:`dip3-changes`
+- :ref:`dip3-upgrade` (you are here)
 - :ref:`Full masternode setup guide <masternode-setup>`
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
 - :ref:`Information for operators of hosted masternodes <operator-transactions>`
