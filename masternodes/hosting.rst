@@ -337,36 +337,19 @@ Operator transactions
 =====================
 
 This documentation is intended for operators managing nodes on behalf of
-owners. If you provide an IP address and port to a running masternode,
-it will appear in the DIP3 valid set immediately after the ``protx
-register_submit`` command is submitted by the owner as described above.
-If your the node is not running, or if the owner submits ``0`` for the
-``ipAndPort``, then the node will be registered in a PoSe-banned state.
-In this case, the operator will need to issue a ProUpServTx transaction
-to update the service features.
+owners. If you provide an IP address and port of a synchronized full
+node with your ``masternodeblsprivkey`` entered in the ``dash.conf``
+file as descibed :ref:`here <bls-generation>` to the masternode owner,
+it will appear in the DIP3 valid set immediately after they submit the
+``protx register_submit`` command as described above. If the full node
+is not running, or if the owner submits ``0`` for the ``ipAndPort``,
+then the node will be registered in a PoSe-banned state. In this case,
+the operator will need to issue a :ref:`ProUpServTx transaction <update-
+dip3-config>` to update the service features and register the
+masternode.
 
 The ProRegTx submitted by the owner also specifies the percentage reward
 for the operator. It does not specify the operator's reward address, so
-a ProUpServTx is also required to "claim" this reward by specifying a
-Dash address. The ProUpServTx takes the following syntax::
-
-  protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress)
-
-Where:
-
-- ``proTxHash``: The hash of the initial ProRegTx.
-- ``ipAndPort``: IP and port in the form "ip:port"
-- ``operatorKey``: The operator's BLS private key belonging to the
-  registered operator public key.
-- ``operatorPayoutAddress`` (optional): The address used for operator 
-  reward payments. Only allowed when the ProRegTx had a non-zero 
-  ``operatorReward`` value.
-
-Example::
-
-  protx update_service d6ec9a03e1251ac8c34178f47b6d763dc4ea6d96fd6eddb3c7aae2359e0f474a 140.82.59.51:10002 4308daa8de099d3d5f81694f6b618381e04311b9e0345b4f8b025392c33b0696 yf6Cj6VcCfDxU5yweAT3NKKvm278rVbkhu
-
-  fad61c5f21cf3c0832f782c1444d3d2e2a8dbff39c5925c38033730e64ecc598
-
-The masternode is now removed from the PoSe-banned list, and the IP:port
-and operator reward addresses are updated.
+a ProUpServTx is also required to claim this reward by specifying a Dash
+address. If the reward is not claimed, it will be paid to the owner in
+full.
