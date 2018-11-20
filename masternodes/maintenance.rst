@@ -1,6 +1,6 @@
 .. meta::
    :description: Maintaining a Dash masternode involves staying up to date with the latest version, voting and handling payments
-   :keywords: dash, cryptocurrency, masternode, maintenance, maintain, payments, withdrawal, voting, monitoring
+   :keywords: dash, cryptocurrency, masternode, maintenance, maintain, payments, withdrawal, voting, monitoring, dip3, upgrade, deterministic
 
 .. _masternode-maintenance:
 
@@ -287,12 +287,76 @@ status using the ``spork active`` command.
 
 .. update-dip3-config:
 
-Updating Masternode Configuration
-=================================
+Updating Masternode Information
+===============================
 
-- ProUpServTx
-- ProUpRegTx
-- ProUpRevTx
+Periodically, it may be necessary to update masternode information if
+any information relating to the owner or operator changes. Examples may
+include a change in IP address, change in owner/operator payout address,
+or change in percentage of the reward allocated to an operator. It is
+also possible to revoke a masternode's registered status (in the event
+of a security breach, for example) to force both owner and operator to
+update their details.
+
+ProUpServTx
+-----------
+
+A Provider Update Service Transaction (ProUpServTx) is used to update
+information relating to the operator. An operator can update the IP
+address and port fields of a masternode entry. If a non-zero
+operatorReward was set in the initial ProRegTx, the operator may also
+set the scriptOperatorPayout field in the ProUpServTx. If
+scriptOperatorPayout is not set and operatorReward is non-zero, the
+owner gets the full masternode reward. The ProUpServTx takes the following syntax::
+
+  protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress)
+
+Where:
+
+- ``proTxHash``: The hash of the initial ProRegTx.
+- ``ipAndPort``: IP and port in the form "ip:port"
+- ``operatorKey``: The operator's BLS private key belonging to the
+  registered operator public key.
+- ``operatorPayoutAddress`` (optional): The address used for operator 
+  reward payments. Only allowed when the ProRegTx had a non-zero 
+  ``operatorReward`` value.
+
+Example::
+
+  protx update_service d6ec9a03e1251ac8c34178f47b6d763dc4ea6d96fd6eddb3c7aae2359e0f474a 140.82.59.51:10002 4308daa8de099d3d5f81694f6b618381e04311b9e0345b4f8b025392c33b0696 yf6Cj6VcCfDxU5yweAT3NKKvm278rVbkhu
+
+  fad61c5f21cf3c0832f782c1444d3d2e2a8dbff39c5925c38033730e64ecc598
+
+The masternode is now removed from the PoSe-banned list, and the IP:port
+and operator reward addresses are updated.
+
+ProUpRegTx
+----------
+
+A Provider Update Registrar Transaction (ProUpRegTx) is used to update
+information relating to the owner. An owner can  The ProUpRegTx takes the following syntax::
+
+  protx update_registrar proTxHash operatorKeyAddr votingKeyAddr payoutAddress
+
+Where:
+
+- ``proTxHash``: The transaction id of the initial ProRegTx
+- ``operatorKeyAddr``: An updated BLS public key, or 0 to use the last 
+  on-chain operator key
+- ``votingKeyAddr``: An updated voting key address, or 0 to use the last 
+  on-chain operator key
+- ``payoutAddress``: An updated Dash address for owner payments, or 0 to 
+  use the last on-chain operator key
+
+Example to update payout address::
+
+  protx update_registrar cedce432ebabc9366f5eb1e3abc219558de9fbd2530a13589b698e4bf917b8ae 0 0 yi5kVoPQQ8xaVoriytJFzpvKomAQxg6zea
+
+ProUpRevTx
+----------
+
+
+
 
 
 DashCentral voting, verification and monitoring

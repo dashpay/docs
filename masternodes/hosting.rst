@@ -1,6 +1,6 @@
 .. meta::
    :description: Masternode hosting services can help you set up and maintain a Dash masternode
-   :keywords: dash, cryptocurrency, hosting, server, linux, masternode, contact, trezor, setup
+   :keywords: dash, cryptocurrency, hosting, server, linux, masternode, contact, trezor, setup, operator, owner, dip3, reward
 
 .. _masternode-hosting:
 
@@ -341,8 +341,8 @@ owners. If you provide an IP address and port to a running masternode,
 it will appear in the DIP3 valid set immediately after the ``protx
 register_submit`` command is submitted by the owner as described above.
 If your the node is not running, or if the owner submits ``0`` for the
-``ipAndPort``, then the node will registered in PoSe-banned state. In
-this case, the operator will need to issue a ProUpServTx transaction
+``ipAndPort``, then the node will be registered in a PoSe-banned state.
+In this case, the operator will need to issue a ProUpServTx transaction
 to update the service features.
 
 The ProRegTx submitted by the owner also specifies the percentage reward

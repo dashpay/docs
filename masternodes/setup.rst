@@ -1,6 +1,6 @@
 .. meta::
    :description: This guide describes how to set up a Dash masternode. It also describes various options for hosting and different wallets
-   :keywords: dash, guide, masternodes, trezor
+   :keywords: dash, guide, masternodes, trezor, dip3, setup, bls
 
 .. _masternode-setup:
 
