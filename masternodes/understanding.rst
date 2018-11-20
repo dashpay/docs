@@ -84,52 +84,56 @@ statistics on the masternode network.
 
 .. _dip3-changes:
 
-DIP3 Changes in Dash 0.13
-=========================
+DIP3 Masternode Changes
+=======================
 
 Dash 0.13.0 introduced `DIP3 Deterministic Masternode Lists
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
 method of finding consensus on the list of valid masternodes. This
 results in several changes to how a masternode is set up and operated.
-Masternode payments were previously sent to the address holding the
-collateral. Under DIP3, the owner must specify a different address to
-receive payments. A masternode was previously "started" using the
-``masternode start-alias`` command. Under DIP3, masternodes begin
-offering services when a ProRegTx `special transaction
-<https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ containing a
-particular key is written to the blockchain. The masternode
-configuration can later be updated using ProUpServTx, ProUpRegTx and
-ProUpRevTx transactions. See `Updating Masternode Information
-<https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-
-masternode-information>`_ in DIP3 for more details.
 
-The ProRegTx contains 2 public key IDs and one BLS public key, which
-represent 3 different roles in the masternode and define update and
-voting rights. The keys are:
+- Masternode payments were previously sent to the address holding the
+  collateral. Under DIP3, the owner must specify a different address to
+  receive payments. 
 
-1. ``ownerKeyAddr``: This is the public key ID of the masternode or
-   collateral owner. It is different than the key used in the collateral
-   output. Only the owner is allowed to issue ProUpRegTx transactions.
+- A masternode was previously "started" using the ``masternode start-alias`` 
+  command based on a ``masternode.conf`` file. Under DIP3, this file is
+  no longer used, and masternodes are "registered" instead of "started".
+  Masternodes begin offering services when a ProRegTx `special
+  transaction <https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ 
+  containing a particular key is written to the blockchain.
 
-2. ``operatorKeyAddr``: This is the BLS public key of the masternode
-   operator. Only the operator is allowed to issue ProUpServTx
-   transactions. The operator key is also used while operating the
-   masternode to sign masternode related P2P messages, quorum related
-   messages and governance trigger votes. Messages signed with this key
-   are only valid while the masternode is in the valid set.
+- The masternode configuration can later be updated using ProUpServTx,
+  ProUpRegTx and ProUpRevTx transactions. See `Updating Masternode
+  Information <https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-masternode-information>`_ 
+  in DIP3 and :ref:`<update-dip3-config>` in this documentation for more
+  details.
 
-3. ``votingKeyAddr``: This is the public key ID used for proposal
-   voting. Votes signed with this key are valid while the masternode is
-   in the registered set.
+- The ProRegTx contains 2 public key IDs and one BLS public key, which
+  represent 3 different roles in the masternode and define update and
+  voting rights. The keys are:
 
-All functions related to DIP3 will only take effect once Spork 15 is
-enabled on the network. Until then, it is necessary to set up the
-masternode following the `old process
-<https://docs.dash.org/en/stable/masternodes/setup.html>`_  and then 
-work through the :ref:`upgrade procedure <dip3-upgrade>`. In this state,
-the masternode will continue to function in compatibility node, and all
-DIP3 related functions, such as payments to a separate address or
-percentage payments to operators, will not yet have any effect.
+  1. ``ownerKeyAddr``: This is the public key ID of the masternode or
+     collateral owner. It is different than the key used in the collateral
+     output. Only the owner is allowed to issue ProUpRegTx transactions.
+  2. ``operatorKeyAddr``: This is the BLS public key of the masternode
+     operator. Only the operator is allowed to issue ProUpServTx
+     transactions. The operator key is also used while operating the
+     masternode to sign masternode related P2P messages, quorum related
+     messages and governance trigger votes. Messages signed with this key
+     are only valid while the masternode is in the valid set.
+  3. ``votingKeyAddr``: This is the public key ID used for proposal
+     voting. Votes signed with this key are valid while the masternode is
+     in the registered set.
+
+- All functions related to DIP3 will only take effect once Spork 15 is
+  enabled on the network. Until then, it is necessary to set up the
+  masternode following the `old process
+  <https://docs.dash.org/en/stable/masternodes/setup.html>`_  and then 
+  work through the :ref:`upgrade procedure <dip3-upgrade>`. In this state,
+  the masternode will continue to function in compatibility node, and all
+  DIP3 related functions, such as payments to a separate address or
+  percentage payments to operators, will not yet have any effect.
 
 
 Masternodes vs. mining

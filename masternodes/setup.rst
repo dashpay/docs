@@ -874,3 +874,4 @@ Give it some time, the final result should appear as follows:
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
+

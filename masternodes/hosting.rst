@@ -130,6 +130,8 @@ https://masternodehosting.com
 - `Email <holger@masternodehosting.com>`__
 - `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
 
+.. hosted-setup:
+
 Registering a hosted masternode
 ===============================
 
@@ -329,6 +331,7 @@ masternode. Note again that all functions related to DIP3 will only take
 effect once Spork 15 is enabled on the network. You can view the spork
 status using the ``spork active`` command.
 
+.. operator-transactions:
 
 Operator transactions
 =====================

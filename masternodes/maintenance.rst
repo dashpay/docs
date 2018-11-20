@@ -14,32 +14,41 @@ well as maintaining the security and performance of the server. In
 addition, masternodes should vote on proposals and perform other tasks
 in the interest of the network and the value of the Dash they hold.
 
+.. _dip3-upgrade:
 
-.. _masternode-update:
+Dash 0.13 Upgrade Procedure
+===========================
 
-Updating masternodes
-====================
+Dash 0.13.0 implements DIP3, which introduces several changes to how a
+Dash masternode is set up and operated. A list of available
+documentation appears below:
 
-Periodically, the Dash Core development team will release updates to
-Dash. Since normal nodes rely on them for services and copies of the
-blockchain, masternodes are expected to update to new versions of Dash.
-In some cases, hardware upgrades may also be necessary. Not updating
-will eventually result in your masternode being removed from the payment
-queue by the Proof of Service (PoSe) system. If you run a hosted
-masternode, your hosting operator will take care of updates for you. If
-not, the method of updating depends on how you installed Dash.
+- `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
+- :ref:`DIP3 Masternode Changes <dip3-changes>`
+- :ref:`<dip3-upgrade>` (you are here)
+- :ref:`Full masternode setup guide <masternode-setup>`
+- :ref:`Information for users of hosted masternodes <hosted-setup>`
+- :ref:`Information for operators of hosted masternodes <operator-transactions>`
 
-Minor version updates to Dash (e.g. from 0.12.3.1 to 0.12.3.2) do not
-make changes to the protocol version, while major version updates (e.g.
-from 0.12.2.3 to 0.12.3.0) will usually increase the network protocol
-version. If the protocol version did not change, you DO NOT need to
-restart your masternode if you complete the update within 60 minutes. If
-the protocol version did change, you must issue a start command from
-your wallet. Do not send start commands to your masternode if not
-necessary, as it will send you to the back of the payment queue.
+It is highly recommended to first read at least the list of changes
+before continuing in order to familiarize yourself with the new concepts
+in DIP3. This documentation describes the commands as if they were
+entered in the Dash Core GUI by opening the console from **Tools > Debug
+console**, but the same result can be achieved on a masternode by
+entering the same commands and adding the prefix ``~/.dashcore/dash-
+cli`` to each command.
+
+
+Software update
+---------------
+
+Begin by updating the Dash software on your masternode following the
+procedure appropriate for your masternode, as described below. You can
+use either dashman or the manual procedure to update the software.
+
 
 Option 1: Updating from dashman
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To update Dash using dashman, log in to your server and enter the
 following commands::
@@ -53,7 +62,7 @@ Check the status of your masternode::
 
 
 Option 2: Manual update
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 To update Dash manually, log in to your server using ssh or PuTTY. If
 your crontab contains an entry to automatically restart dashd, invoke
@@ -105,34 +114,7 @@ character.
 
 Dash is now updated.
 
-
-.. _dip3-upgrade:
-
-Dash 0.13 Upgrade Procedure
-===========================
-
-DIP3 introduces several changes to how a masternode is set up and
-operated. These are described briefly under `<dip3-changes>` in this
-documentation, or in full detail in `DIP3
-<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ itself. It
-is highly recommended to first read at least the brief documentation
-before continuing in order to familiarize yourself with the new concepts
-in DIP3.
-
-This documentation describes the commands as if they were entered in
-Dash Core by opening the console from **Tools > Debug console**, but the
-same result can be achieved on a masternode by entering the same
-commands and adding the prefix ``~/.dashcore/dash-cli`` to each command.
-
-
-Software update
----------------
-
-First, update the Dash software on your masternode following the normal
-procedure described above under the heading :ref:`masternode-update`.
-You can use either dashman or the normal procedure to update the
-software.
-
+.. bls-generation:
 
 Generate a BLS key pair
 -----------------------
@@ -301,6 +283,16 @@ the final ``protx register_submit`` transaction identifies your DIP3
 masternode. Note again that all functions related to DIP3 will only take
 effect once Spork 15 is enabled on the network. You can view the spork
 status using the ``spork active`` command.
+
+
+.. update-dip3-config:
+
+Updating Masternode Configuration
+=================================
+
+- ProUpServTx
+- ProUpRegTx
+- ProUpRevTx
 
 
 DashCentral voting, verification and monitoring
