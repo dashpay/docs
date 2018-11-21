@@ -87,11 +87,21 @@ statistics on the masternode network.
 DIP3 Masternode Changes
 =======================
 
-Dash 0.13.0 introduced `DIP3 Deterministic Masternode Lists
-<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
-method of finding consensus on the list of valid masternodes. This
-results in several changes to how a masternode is set up and operated.
+Dash 0.13.0 implements DIP3, which introduces several changes to how a
+Dash masternode is set up and operated. A list of available
+documentation appears below:
 
+- `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
+- :ref:`dip3-changes` (you are here)
+- :ref:`dip3-upgrade`
+- :ref:`Full masternode setup guide <masternode-setup>`
+- :ref:`Information for users of hosted masternodes <hosted-setup>`
+- :ref:`Information for operators of hosted masternodes <operator-transactions>`
+
+Important concepts and changes:
+
+- It is possible to upgrade an existing masternode in-place without 
+  starting a new server and without moving your 1000 DASH collateral.
 - A masternode was previously "started" using the ``masternode start-alias`` 
   command based on a ``masternode.conf`` file. Under DIP3, this file is
   no longer used, and masternodes are "registered" instead of "started".
@@ -137,6 +147,20 @@ results in several changes to how a masternode is set up and operated.
   address or percentage payments to operators, will not yet have any
   effect.
 
+The process of setting up or upgrading a masternode is as follows:
+
+1. Set up your server and operating system
+2. Install the Dash software and synchronize the blockchain
+3. Generate a BLS key pair and enter the private key on the masternode
+4. Prepare a ProRegTx transaction
+5. Sign the ProRegTx transaction
+6. Submit the signed ProRegTx transaction
+
+Step 1 can be omitted if you have an existing server. Steps 2 and 3
+require direct access to the masternode. Steps 3 and 4 require access to
+a Dash Wallet (or DMT). Step 5 requires access to the wallet actually
+holding the collateral. Step 6 requires a Dash balance to pay the
+transaction fee.
 
 Masternodes vs. mining
 ======================

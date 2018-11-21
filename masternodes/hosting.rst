@@ -135,6 +135,21 @@ https://masternodehosting.com
 Registering a hosted masternode
 ===============================
 
+Dash 0.13.0 implements DIP3, which introduces several changes to how a
+Dash masternode is set up and operated. A list of available
+documentation appears below:
+
+- `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
+- :ref:`dip3-changes`
+- :ref:`dip3-upgrade`
+- :ref:`Full masternode setup guide <masternode-setup>`
+- :ref:`Information for users of hosted masternodes <hosted-setup>` (you are here)
+- :ref:`Information for operators of hosted masternodes <operator-transactions>`
+
+It is highly recommended to first read at least the list of changes
+before continuing in order to familiarize yourself with the new concepts
+in DIP3.
+
 Registering a hosted masternode is done in several steps:
 
 #. Send 1000 DASH to an address you control in a single transaction and

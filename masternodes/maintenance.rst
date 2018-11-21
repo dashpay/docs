@@ -38,6 +38,7 @@ console**, but the same result can be achieved on a masternode by
 entering the same commands and adding the prefix ``~/.dashcore/dash-
 cli`` to each command.
 
+.. _masternode-update:
 
 Software update
 ---------------

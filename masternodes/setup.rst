@@ -24,25 +24,6 @@ delegate your voting keys to a representative, see the
 :ref:`governance documentation <using-governance>` for more
 information.
 
-Dash 0.13.0 introduced `DIP3 Deterministic Masternode Lists
-<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, a new
-method of finding consensus on the list of valid masternodes. Due to the
-deep underlying changes and new signature formats involved, all
-masternodes are required to use the latest version of the Dash software
-and generate new keys in order to be accepted by the DIP3 consensus
-rules. This procedure involves five basic steps:
-
-1. Set up your server and install the Dash software
-2. Generate a BLS key pair
-3. Prepare a ProRegTx transaction
-4. Sign the ProRegTx transaction
-5. Submit the signed ProRegTx transaction
-
-Steps 1 and 2 are performed on the masternode directly. Steps 3 and 5
-can be carried out either on your masternode or in the Dash Core wallet.
-Signing the transaction in step 4 must be done using the wallet holding
-the private key to the 1000 Dash collateral.
-
 
 Before you begin
 ================
@@ -56,9 +37,24 @@ time. If you are updating a masternode, see
   Dash Core wallet is also supported
 - A Linux server, preferably a Virtual Private Server (VPS)
 
-We also assume you will be working from a Windows computer. However,
-since most of the work is done on your Linux VPS, alternative steps for
-using macOS or Linux will be indicated where necessary.
+Dash 0.13.0 implements DIP3, which introduces several changes to how a
+Dash masternode is set up and operated. A list of available
+documentation appears below:
+
+- `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
+- :ref:`dip3-changes`
+- :ref:`dip3-upgrade`
+- :ref:`Full masternode setup guide <masternode-setup>` (you are here)
+- :ref:`Information for users of hosted masternodes <hosted-setup>`
+- :ref:`Information for operators of hosted masternodes <operator-transactions>`
+
+It is highly recommended to first read at least the list of changes
+before continuing in order to familiarize yourself with the new concepts
+in DIP3. This documentation describes the commands as if they were
+entered in the Dash Core GUI by opening the console from **Tools > Debug
+console**, but the same result can be achieved on a masternode by
+entering the same commands and adding the prefix ``~/.dashcore/dash-
+cli`` to each command.
 
 
 .. _vps-setup:
