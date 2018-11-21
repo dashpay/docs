@@ -1356,7 +1356,9 @@ Kurecoinhub
   https://kurecoinhub.com
 
   Kurecoinhub offers DASH and other cryptocurrencies for sale OTC for
-  the Nigerian Naira.
+  the Nigerian Naira. Dividend bearing bank deposits, loans against Dash
+  collateral and merchant services are also available from this
+  innovative platform.
 
 Gredo E-currency
   .. image:: exchanges/gredo.png
