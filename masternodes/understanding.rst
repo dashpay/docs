@@ -114,6 +114,7 @@ Important concepts and changes:
 - The ProRegTx contains 2 Dash addresses (also called public keys) and
   one BLS public key, which represent 3 different roles in the
   masternode and define update and voting rights. The keys are:
+  
   1. ``ownerKeyAddr``: This is a Dash address (public key) controlled by
      the masternode owner. It is different from the address used for the
      collateral. Because the owner uses the private key associated with
