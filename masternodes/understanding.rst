@@ -125,20 +125,20 @@ Important concepts and changes:
      <update-dip3-config>` transactions. Because operator key is used
      during live masternode operation to sign masternode-related P2P
      messages, quorum-related messages and governance trigger votes,
-     each BLS key must be unique for each masternode.
+     the BLS key must be unique for each masternode.
   3. ``votingKeyAddr``: This is a Dash address (public key) used for
      proposal voting. Votes signed with this key are valid while the
      masternode is in the registered set.
 
 - Masternode payments were previously sent to the address holding the
-  collateral. Under DIP3, the owner must specify a different address to
-  receive payments in the ProRegTx. The owner may optionally specify a
-  non-zero percentage as payment to a separate masternode operator, if
+  collateral. Under DIP3, the owner should specify a different address 
+  to receive payments in the ProRegTx. The owner may optionally specify 
+  a non-zero percentage as payment to a separate masternode operator, if
   applicable.
 - The masternode configuration can later be updated using ProUpServTx,
   ProUpRegTx and ProUpRevTx transactions. See `Updating Masternode
   Information <https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-masternode-information>`_ 
-  in DIP3 and :ref:`<update-dip3-config>` in this documentation for more
+  in DIP3 and :ref:`update-dip3-config` in this documentation for more
   details.
 - All functions related to DIP3 will only take effect once Spork 15 is
   enabled on the network. Until then, it is necessary to set up the
