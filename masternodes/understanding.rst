@@ -126,9 +126,10 @@ Important concepts and changes:
      during live masternode operation to sign masternode-related P2P
      messages, quorum-related messages and governance trigger votes,
      each BLS key must be unique for each masternode.
-  3. ``votingKeyAddr``: This is the public key ID used for proposal
-     voting. Votes signed with this key are valid while the masternode
-     is in the registered set.
+  3. ``votingKeyAddr``: This is a Dash address (public key) used for
+     proposal voting. Votes signed with this key are valid while the
+     masternode is in the registered set.
+
 - Masternode payments were previously sent to the address holding the
   collateral. Under DIP3, the owner must specify a different address to
   receive payments in the ProRegTx. The owner may optionally specify a
@@ -146,7 +147,8 @@ Important concepts and changes:
   this state, the masternode will continue to function in compatibility
   node, and all DIP3 related functions, such as payments to a separate
   address or percentage payments to operators, will not yet have any
-  effect.
+  effect. The ``ownerKeyAddr`` and ``votingKeyAddr`` must also be 
+  identical until Spork 15 is enabled.
 
 The process of setting up or upgrading a masternode is as follows:
 
