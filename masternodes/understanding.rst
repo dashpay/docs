@@ -145,7 +145,7 @@ Important concepts and changes:
   masternode following the `old process <https://docs.dash.org/en/stable/masternodes/setup.html>`_ 
   and then work through the :ref:`upgrade procedure <dip3-upgrade>`. In
   this state, the masternode will continue to function in compatibility
-  node, and all DIP3 related functions, such as payments to a separate
+  mode, and all DIP3 related functions, such as payments to a separate
   address or percentage payments to operators, will not yet have any
   effect. The ``ownerKeyAddr`` and ``votingKeyAddr`` must also be 
   identical until Spork 15 is enabled.
