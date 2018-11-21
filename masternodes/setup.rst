@@ -729,8 +729,13 @@ generated above::
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. We will now prepare the transaction used to register a DIP3
-masternode on the network.
+the file. We now need to restart the masternode for this change to take effect. Enter the following commands, waiting a few seconds in between to give Dash Core time to shut down::
+
+  ~/.dashcore/dash-cli stop
+  ~/.dashcore/dashd
+
+We will now prepare the transaction used to register a DIP3 masternode
+on the network.
 
 Prepare a ProRegTx transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
