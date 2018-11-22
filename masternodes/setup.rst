@@ -29,8 +29,12 @@ Before you begin
 ================
 
 This guide assumes you are setting up a single masternode for the first
-time. If you are updating a masternode, see 
-:ref:`here <masternode-update>` instead. You will need:
+time. If you are updating a masternode, see  :ref:`here <masternode-update>` 
+instead. If Spork 15 is not yet enabled, it is not possible to directly
+set up a DIP3 masternode. You will need to set up the masternode
+following the `old process
+<https://docs.dash.org/en/stable/masternodes/setup.html>`_ and then work
+through the :ref:`upgrade procedure <dip3-upgrade>`. You will need:
 
 - 1000 Dash
 - A wallet to store your Dash, preferably a hardware wallet, although 
