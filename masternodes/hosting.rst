@@ -359,8 +359,8 @@ it will appear in the DIP3 valid set immediately after they submit the
 ``protx register_submit`` command as described above. If the full node
 is not running, or if the owner submits ``0`` for the ``ipAndPort``,
 then the node will be registered in a PoSe-banned state. In this case,
-the operator will need to issue a :ref:`ProUpServTx transaction <update-
-dip3-config>` to update the service features and register the
+the operator will need to issue a :ref:`ProUpServTx transaction 
+<update-dip3-config>` to update the service features and register the
 masternode.
 
 The ProRegTx submitted by the owner also specifies the percentage reward
