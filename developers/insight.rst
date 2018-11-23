@@ -14,8 +14,11 @@ your own services with it. Simple HTTP endpoints exist for all common
 operations on the Dash blockchain familiar from the Bitcore Insight API,
 as well as Dash-specific features such as InstantSend transactions,
 budget proposals, sporks and the masternode list. This documentation
-describes how to set up an Insight server and (optionally) the Insight
-UI block explorer.
+describes how to set up the 
+`Dash Insight API <https://github.com/dashevo/insight-api>`__ server and
+(optionally) the 
+`Dash Insight UI <https://github.com/dashevo/insight-ui>`__ block 
+explorer.
 
 A standard installation of Ubuntu Linux 18.04 LTS will be used as an
 environment for the server. We assume you are running as a user with
@@ -33,7 +36,8 @@ Download and extract the latest version of Dash Core::
   tar -xvzf dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
   rm dashcore-0.12.3.3-x86_64-linux-gnu.tar.gz
 
-Install `Dashcore Node <https://github.com/dashevo/dashcore-node>`_ and create your configuration::
+Install `Dashcore Node <https://github.com/dashevo/dashcore-node>`_ and
+create your configuration::
 
   sudo npm install -g @dashevo/dashcore-node
   dashcore-node create mynode
