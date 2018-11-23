@@ -4,9 +4,9 @@
 
 .. _insight-api:
 
-===========
-Insight API
-===========
+========================
+Insight API Installation
+========================
 
 The open-source Dash Insight REST API provides you with a convenient,
 powerful and simple way to read data from the Dash network and build

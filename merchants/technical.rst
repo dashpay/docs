@@ -102,7 +102,9 @@ https://github.com/dashevo/insight-api
 
 The open-source Insight REST API provides you with a convenient,
 powerful and simple way to read data from the Dash network and build
-your own services with it.
+your own services with it. A practical guide to getting started with the
+Insight API and Insight UI block explorer is available :ref:`here
+<insight-api>`.
 
 - Features: Transaction Broadcast, WebSocket Notifications.
 - Pricing Model: Free / Open Source
@@ -401,8 +403,8 @@ notification script / service that is configured at a server level.
    The API can also be manually polled to retrieve Transaction
    information including InstantSend status.
 
-   a. Web Socket: https://github.com/dashpay/insight-api-dash#web-socket-api
-   b. Transaction API: https://github.com/dashpay/insight-api-dash#instantsend-transactions 
+   a. Web Socket: https://github.com/dashevo/insight-api#web-socket-api
+   b. Transaction API: https://github.com/dashevo/insight-api#instantsend-transactions
 
 #. Script Notify: The Dash Core Daemon can be configured to execute an
    external script whenever an InstantSend transaction relating to that

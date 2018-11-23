@@ -33,6 +33,7 @@ carry out common development tasks in Dash.
    translating.rst
    compiling.rst
    testnet.rst
+   insight.rst
 
 .. _understanding-sporks:
 
