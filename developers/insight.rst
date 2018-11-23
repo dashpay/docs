@@ -64,7 +64,7 @@ displayed on stdout. Once sync is complete, the `API endpoints listed in
 the documentation <https://github.com/dashevo/insight-api#api-http-endpoints>`_ 
 will be available at::
 
-  https://<ip-address>:3001/insight-api-dash/<endpoint>/
+  https://<ip-address>:3001/insight-api/<endpoint>/
 
 The Insight UI block explorer will be available at::
 
