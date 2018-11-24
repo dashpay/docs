@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-19 06:34+0000\n"
+"POT-Creation-Date: 2018-11-24 02:46+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -48,10 +48,163 @@ msgstr ""
 "主节点需要定期维护，以确保您不会从支付队列中退出。这包括及时安装达世币的更新版本，以及保持服务器的安全性和性能。此外，主节点应该对提案进行投票，并为了网络的利益和他们所持有的达世币的价值而执行其他任务。"
 
 #: ../../masternodes/maintenance.rst:20
+msgid "How to update a masternode"
+msgstr "如何更新主节点"
+
+#: ../../masternodes/maintenance.rst:22
+msgid ""
+"Periodically, the Dash Core development team will release updates to Dash. "
+"Since normal nodes rely on them for services and copies of the blockchain, "
+"masternodes are expected to update to new versions of Dash and Sentinel "
+"promptly. In some cases, hardware upgrades (more CPU, RAM or disk space, or "
+"even custom GPU/ASIC hardware) may also be necessary. Not updating will "
+"eventually result in your masternode being removed from the payment queue. "
+"If you run a hosted masternode, your host will take care of updates for you."
+" If not, the method of updating depends on how you installed Dash."
+msgstr ""
+"Dash Core开发团队会定期发布达世币的更新版本。由于普通节点依赖于达世币来获取服务和区块链的副本，因此主节点需要迅速更新到达世币 "
+"和Sentinel的新版本。在某些情况下，硬件升级(更优的CPU、更大的RAM或磁盘空间，甚至是定制的GPU/ASIC硬件)也可能是必要的。不更新将最终导致您的主节点被从支付队列中提出。如果您运行一个托管的主节点，您的托管服务商将为您处理更新。如果不是，更新方法取决于您如何安装达世币。"
+
+#: ../../masternodes/maintenance.rst:32
+msgid ""
+"Minor version updates to Dash (e.g. from 0.12.3.1 to 0.12.3.2) do not make "
+"changes to the protocol version, while major version updates (e.g. from "
+"0.12.2.3 to 0.12.3.0) will usually increase the network protocol version. If"
+" the protocol version did not change, you DO NOT need to restart your "
+"masternode if you complete the update within 60 minutes. If the protocol "
+"version did change, you must issue a start command from your wallet. Do not "
+"send start commands to your masternode if not necessary, as it will send you"
+" to the back of the payment queue."
+msgstr ""
+"达世币的次要版本更新 (例如从 0.12.3.1 到 0.12.3.2 ) 不会对协议版本进行更改，而主要版本更新(例如从 0.12.2.3 到 "
+"0.12.3.0 "
+")通常会增加网络协议版本。如果协议版本没有更改，且如果您在60分钟内完成更新，则不需要重新激活您的主节点。如果协议版本确实发生了变化，您必须从您的钱包中发布激活命令。如果没有必要，不要向您的主节点发送激活命令，因为它会使您的主节点重新排队。"
+
+#: ../../masternodes/maintenance.rst:42
+msgid "Option 1: Automated update using dashman"
+msgstr "选项1: 使用Dashman自动更新"
+
+#: ../../masternodes/maintenance.rst:44
+msgid ""
+"To update Dash using dashman, log in to your server and enter the following "
+"commands::"
+msgstr "若要使用Dashman更新达世币，请登录到您的服务器并输入以下命令::"
+
+#: ../../masternodes/maintenance.rst:50
+msgid "Check the status of your masternode::"
+msgstr "检查您的主节点的状态::"
+
+#: ../../masternodes/maintenance.rst:54
+msgid ""
+"If you are doing a major version update and need to restart your masternode,"
+" update the software version of the wallet holding the collateral to the "
+"latest version now by following the instructions :ref:`here <masternode-"
+"setup-start>`. Continue monitoring your masternode. After some time, all "
+"statuses should turn green, in particular **masternode started: YES** and "
+"**masternode network state: ENABLED**."
+msgstr ""
+"如果您正在进行主要版本更新，并且需要重新激活您的主节点，请按照以下说明，更新持有保证金的钱包的软件版本至最新版本 :ref:`查看此处 "
+"<masternode-setup-start>` 。继续监测主节点。过一段时间之后，所有状态都会变成绿色，特别是 **主节点已启动: Yes** 和 "
+"**主节点网络状态: 已启用**。"
+
+#: ../../masternodes/maintenance.rst:64
+msgid "Option 2: Manual update"
+msgstr "方法2: 手动更新"
+
+#: ../../masternodes/maintenance.rst:66
+msgid ""
+"To update Dash manually, log in to your server using ssh or PuTTY. First we "
+"need to stop Dash running::"
+msgstr "要手动更新Dash，请使用ssh或PuTTY登录到您的服务器。首先，我们需要停止运行达世币::"
+
+#: ../../masternodes/maintenance.rst:71
+msgid ""
+"To manually download and install the components of your Dash masternode, "
+"visit https://www.dash.org/wallets/ on your computer to find the link to the"
+" latest Dash Core wallet. Click **Linux**, then right-click on **Download "
+"TGZ** for **Dash Core Linux 64 Bit** and select **Copy link address**. Go "
+"back to your terminal window and enter the following command, pasting in the"
+" address to the latest version of Dash Core by right clicking or pressing "
+"**Ctrl + V**::"
+msgstr ""
+"要手动下载和安装您的达世币主节点工具的组件，请在电脑上访问 https://www.dash.org/wallets/ ，以查找到Dash "
+"Core钱包最新版本的链接。单击 **Linux** ，然后右键单击 **Dash Core Linux 64 Bit** 中的 **下载TGZ** "
+"，并选择 **复制链接地址** 。然后返回到您的终端窗口并输入以下命令，右键单击或按下 **Ctrl +V** 将地址粘贴到Dash "
+"Core的最新版本::"
+
+#: ../../masternodes/maintenance.rst:82
+msgid ""
+"Verify the integrity of your download by running the following command and "
+"comparing the output against the value for the file as shown on the Dash "
+"website under **Hash File**::"
+msgstr "通过运行以下命令，并将输出与诸如 **Hash 文件** 下达世币网站所示的该文件的值进行比较来验证您下载的完整性::"
+
+#: ../../masternodes/maintenance.rst:91
+msgid "Link to the hash file to verify download integrity"
+msgstr "链接到Hash文件以验证下载完整性"
+
+#: ../../masternodes/maintenance.rst:93
+msgid ""
+"Remove the old binaries from the working directory, extract the compressed "
+"archive, copy the new files to the directory and set them as executable::"
+msgstr "从工作目录中删除旧的二进制文件，解压压缩的归档文件，将新文件复制到目录中，并将它们设置为可执行文件::"
+
+#: ../../masternodes/maintenance.rst:103
+msgid "Clean up unneeded files::"
+msgstr "清理不需要的文件::"
+
+#: ../../masternodes/maintenance.rst:108
+msgid "Restart Dash::"
+msgstr "重新启动达世币::"
+
+#: ../../masternodes/maintenance.rst:112
+msgid ""
+"You will see a message reading \"Dash Core server starting\". We will now "
+"update Sentinel::"
+msgstr "您将看到一条消息，上面写着 \"Dash Core服务器激活\" 。我们现在将更新Sentinel::"
+
+#: ../../masternodes/maintenance.rst:118
+msgid ""
+"If the protocol version changed during this update, you will need to issue a"
+" start command from your wallet. If you are using a hardware wallet, you can"
+" issue the start command by simply clicking the button in DMT. If you are "
+"using Dash Core wallet, update it to the latest version, then open the debug"
+" console and enter this command, where MN1 is the alias for your "
+"masternode::"
+msgstr ""
+"如果协议版本在此更新期间更改，您则需要从您的钱包中发出激活命令。如果您正在使用硬件钱包，则只需单击DMT中的按钮即可发出激活命令。如果您正在使用Dash"
+" Core钱包，请将其更新为最新版本，然后打开调试控制台并输入以下命令，其中MN1是主节点的别名::"
+
+#: ../../masternodes/maintenance.rst:127
+msgid "Monitor the status of your masternode as it starts up::"
+msgstr "监测主节点激活时的状态::"
+
+#: ../../masternodes/maintenance.rst:134
+msgid ""
+"In particular, the last command should return the status **Masternode "
+"successfully started**. If you see an error similar to **Invalid protocol "
+"version**, then the protocol version has changed and you must send a start "
+"command from your wallet again. You can also monitor the status of your "
+"masternode from Sentinel. If Sentinel detects a functioning masternode, the "
+"following command should return nothing::"
+msgstr ""
+"特别要注意的是，最后一个命令应该返回状态 **Masternodes成功激活** 。如果您看到类似于 **无效协议版本** "
+"的错误，则协议版本已经更改，您必须再次从您的钱包发送激活命令。您从Sentinel中监测您的主节点的状态。如果Sentinel检测到一个正常运行的主节点，则以下命令不应该返回任何内容::"
+
+#: ../../masternodes/maintenance.rst:144
+msgid ""
+"Finally, you can check for your masternode by its collateral address using "
+"`DashNinja <https://www.dashninja.pl/>`_, or search the consensus list of "
+"masternodes using this command and entering your masternode IP address::"
+msgstr ""
+"最后，您可以使用\\ `DashNinja <https://www.dashninja.pl/>`_\\ "
+"，通过主节点的钱包地址来检查它，也可以使用此命令并输入您的主节点IP地址来搜索主节点的一致列表::"
+
+#: ../../masternodes/maintenance.rst:155
 msgid "Payment withdrawals"
 msgstr "提取奖励"
 
-#: ../../masternodes/maintenance.rst:22
+#: ../../masternodes/maintenance.rst:157
 msgid ""
 "Once your masternode has been accepted by the network, it will enter the "
 "masternode payment queue and slowly begin moving up. A masternode within the"
@@ -70,11 +223,11 @@ msgstr ""
 " 个达世币必须在单个未花费的交易输出（utxo）中保持不变，否则您的主节点将从支付队列中踢出-"
 "当准备发送启动主节点命令时，您可能已经看到了此ID。支付以独立的UTXO形式显现，因此我们需要一种只使用UTXO交易，而不是包含1000个达世币的交易方法。请注意，主节点的奖励只能在100次确认后使用。"
 
-#: ../../masternodes/maintenance.rst:37
+#: ../../masternodes/maintenance.rst:172
 msgid "Option 1: Withdrawals using a hardware wallet"
 msgstr "选项1：使用硬件钱包提币"
 
-#: ../../masternodes/maintenance.rst:39
+#: ../../masternodes/maintenance.rst:174
 msgid ""
 "If you used a hardware wallet such as Trezor to start your masternode, you "
 "must also use this process to make payout withdrawals. Once again, we will "
@@ -86,7 +239,7 @@ msgstr ""
 "如果您使用诸如Trezor这样的硬件钱包启动主节点，则还必须使用此过程进行提取奖励。我们将再次使用Bertrand "
 "256的达世币主节点工具(DMT)来选择正确的输出。使用DMT，我们可以选择特定的UTXOs方式来提币，而不涉及原始的保证金交易。这个过程只使用Trezor网络钱包是不可能完成的。"
 
-#: ../../masternodes/maintenance.rst:46
+#: ../../masternodes/maintenance.rst:181
 msgid ""
 "Open DMT and verify the RPC and HW connections are working. From the "
 "**Tools** menu, select **Transfer funds from current masternode's address** "
@@ -96,11 +249,11 @@ msgstr ""
 "打开DMT并验证RPC和HW连接是否工作。如果您使用DMT来控制多个主节点，在 **工具** 菜单中，选择 **从当前主节点的地址转移资金** 或 "
 "**从所有主节点的地址转移资金** 。"
 
-#: ../../masternodes/maintenance.rst:54
+#: ../../masternodes/maintenance.rst:189
 msgid "Selecting the transfer funds function in DMT"
 msgstr "在DMT中选择资金转移功能"
 
-#: ../../masternodes/maintenance.rst:56
+#: ../../masternodes/maintenance.rst:191
 msgid ""
 "DMT will load for a moment, then display a window showing the available "
 "UTXOs you can use in your withdrawal. By default, all UTXOs not used as "
@@ -114,11 +267,11 @@ msgstr ""
 "DMT将加载一会儿，然后呈现一个窗口，显示您可以在您的取款中使用的可用的UTXOs。默认情况下，所有未用作主节点保证金的UTXO将被检查。主节点保证金UTXOs不仅不受检查，而且是隐藏的，以避免无意中发送与保证金相关的资金并停止您的主节点。您可以通过取消检查"
 " **隐藏担保品utxos** 选项来显示这些隐藏条目。输入您交易的目标地址。窗口应显示如下:"
 
-#: ../../masternodes/maintenance.rst:68
+#: ../../masternodes/maintenance.rst:203
 msgid "Selecting the UTXOs to use as inputs in the withdrawal transaction"
 msgstr "选择UTXOs来用作在提币交易中的输入"
 
-#: ../../masternodes/maintenance.rst:70
+#: ../../masternodes/maintenance.rst:205
 msgid ""
 "Verify the transaction fee and click **Send**. Your Trezor will prompt to "
 "enter your PIN and confirm the transaction on the device. Once this is done,"
@@ -129,15 +282,15 @@ msgstr ""
 "确认交易费用，然后单击 **发送** "
 "。您的Trezor将提示您输入PIN码并确认设备上的交易。确认完成后，再次向DMT确认您希望通过单击“是”将交易广播到网络。然后将显示对交易ID的确认。"
 
-#: ../../masternodes/maintenance.rst:82
+#: ../../masternodes/maintenance.rst:217
 msgid "Confirming broadcast of the transaction to the network"
 msgstr "确认将交易广播到网络"
 
-#: ../../masternodes/maintenance.rst:85
+#: ../../masternodes/maintenance.rst:220
 msgid "Option 2: Withdrawals from Dash Core wallet"
 msgstr "选项2: 从Dash Core钱包取币"
 
-#: ../../masternodes/maintenance.rst:87
+#: ../../masternodes/maintenance.rst:222
 msgid ""
 "Similar to DMT as described above, we need a method in Dash Core wallet to "
 "restrict which UTXOs are spent when making withdrawals from a masternode "
@@ -155,12 +308,12 @@ msgstr ""
 "。现在，当您转到钱包中的 **发送** 选项上时，将会出现一个标签为 **输入** "
 "的新按钮。单击此按钮可选择哪些UTXOs来用作您创建的任何交易的输入。以下窗口将会出现:"
 
-#: ../../masternodes/maintenance.rst:100
+#: ../../masternodes/maintenance.rst:235
 msgid ""
 "Coin Selection window in Dash Core wallet, showing two masternodes (testnet)"
 msgstr "Dash Core钱包中的货币选择界面，显示两个主节点（测试网）"
 
-#: ../../masternodes/maintenance.rst:103
+#: ../../masternodes/maintenance.rst:238
 msgid ""
 "Right click on the transaction(s) showing an amount of 1000 DASH, then "
 "select **Lock unspent**. A small lock will appear next to the transaction. "
@@ -170,168 +323,15 @@ msgstr ""
 "右键单击显示1000 达世币数量的（多个）交易，然后选择 **锁定未用** 。交易旁边将出现一个小锁。然后单击 **OK** "
 "。现在，您可以安全地使用剩余的资金创建交易，而不会影响原始的UTXOs保证金。"
 
-#: ../../masternodes/maintenance.rst:115
+#: ../../masternodes/maintenance.rst:250
 msgid "Locking UTXOs in Dash Core wallet"
 msgstr "在Dash Core钱包当中锁定未经支付的输出"
 
-#: ../../masternodes/maintenance.rst:120
-msgid "How to update a masternode"
-msgstr "如何更新主节点"
-
-#: ../../masternodes/maintenance.rst:122
-msgid ""
-"Periodically, the Dash Core development team will release updates to Dash. "
-"Since normal nodes rely on them for services and copies of the blockchain, "
-"masternodes are expected to update to new versions of Dash and Sentinel "
-"promptly. In some cases, hardware upgrades (more CPU, RAM or disk space, or "
-"even custom GPU/ASIC hardware) may also be necessary. Not updating will "
-"eventually result in your masternode being removed from the payment queue. "
-"If you run a hosted masternode, your host will take care of updates for you."
-" If not, the method of updating depends on how you installed Dash."
-msgstr ""
-"Dash Core开发团队会定期发布达世币的更新版本。由于普通节点依赖于达世币来获取服务和区块链的副本，因此主节点需要迅速更新到达世币 "
-"和Sentinel的新版本。在某些情况下，硬件升级(更优的CPU、更大的RAM或磁盘空间，甚至是定制的GPU/ASIC硬件)也可能是必要的。不更新将最终导致您的主节点被从支付队列中提出。如果您运行一个托管的主节点，您的托管服务商将为您处理更新。如果不是，更新方法取决于您如何安装达世币。"
-
-#: ../../masternodes/maintenance.rst:132
-msgid ""
-"Minor version updates to Dash (e.g. from 0.12.3.1 to 0.12.3.2) do not make "
-"changes to the protocol version, while major version updates (e.g. from "
-"0.12.2.3 to 0.12.3.0) will usually increase the network protocol version. If"
-" the protocol version did not change, you DO NOT need to restart your "
-"masternode if you complete the update within 60 minutes. If the protocol "
-"version did change, you must issue a start command from your wallet. Do not "
-"send start commands to your masternode if not necessary, as it will send you"
-" to the back of the payment queue."
-msgstr ""
-"达世币的次要版本更新 (例如从 0.12.3.1 到 0.12.3.2 ) 不会对协议版本进行更改，而主要版本更新(例如从 0.12.2.3 到 "
-"0.12.3.0 "
-")通常会增加网络协议版本。如果协议版本没有更改，且如果您在60分钟内完成更新，则不需要重新激活您的主节点。如果协议版本确实发生了变化，您必须从您的钱包中发布激活命令。如果没有必要，不要向您的主节点发送激活命令，因为它会使您的主节点重新排队。"
-
-#: ../../masternodes/maintenance.rst:142
-msgid "Option 1: Automated update using dashman"
-msgstr "选项1: 使用Dashman自动更新"
-
-#: ../../masternodes/maintenance.rst:144
-msgid ""
-"To update Dash using dashman, log in to your server and enter the following "
-"commands::"
-msgstr "若要使用Dashman更新达世币，请登录到您的服务器并输入以下命令::"
-
-#: ../../masternodes/maintenance.rst:150
-msgid "Check the status of your masternode::"
-msgstr "检查您的主节点的状态::"
-
-#: ../../masternodes/maintenance.rst:154
-msgid ""
-"If you are doing a major version update and need to restart your masternode,"
-" update the software version of the wallet holding the collateral to the "
-"latest version now by following the instructions :ref:`here <masternode-"
-"setup-start>`. Continue monitoring your masternode. After some time, all "
-"statuses should turn green, in particular **masternode started: YES** and "
-"**masternode network state: ENABLED**."
-msgstr ""
-"如果您正在进行主要版本更新，并且需要重新激活您的主节点，请按照以下说明，更新持有保证金的钱包的软件版本至最新版本 :ref:`查看此处 "
-"<masternode-setup-start>` 。继续监测主节点。过一段时间之后，所有状态都会变成绿色，特别是 **主节点已启动: Yes** 和 "
-"**主节点网络状态: 已启用**。"
-
-#: ../../masternodes/maintenance.rst:164
-msgid "Option 2: Manual update"
-msgstr "方法2: 手动更新"
-
-#: ../../masternodes/maintenance.rst:166
-msgid ""
-"To update Dash manually, log in to your server using ssh or PuTTY. First we "
-"need to stop Dash running::"
-msgstr "要手动更新Dash，请使用ssh或PuTTY登录到您的服务器。首先，我们需要停止运行达世币::"
-
-#: ../../masternodes/maintenance.rst:171
-msgid ""
-"To manually download and install the components of your Dash masternode, "
-"visit https://www.dash.org/wallets/ on your computer to find the link to the"
-" latest Dash Core wallet. Click **Linux**, then right-click on **Download "
-"TGZ** for **Dash Core Linux 64 Bit** and select **Copy link address**. Go "
-"back to your terminal window and enter the following command, pasting in the"
-" address to the latest version of Dash Core by right clicking or pressing "
-"**Ctrl + V**::"
-msgstr ""
-"要手动下载和安装您的达世币主节点工具的组件，请在电脑上访问 https://www.dash.org/wallets/ ，以查找到Dash "
-"Core钱包最新版本的链接。单击 **Linux** ，然后右键单击 **Dash Core Linux 64 Bit** 中的 **下载TGZ** "
-"，并选择 **复制链接地址** 。然后返回到您的终端窗口并输入以下命令，右键单击或按下 **Ctrl +V** 将地址粘贴到Dash "
-"Core的最新版本::"
-
-#: ../../masternodes/maintenance.rst:182
-msgid ""
-"Verify the integrity of your download by running the following command and "
-"comparing the output against the value for the file as shown on the Dash "
-"website under **Hash File**::"
-msgstr "通过运行以下命令，并将输出与诸如 **Hash 文件** 下达世币网站所示的该文件的值进行比较来验证您下载的完整性::"
-
-#: ../../masternodes/maintenance.rst:191
-msgid "Link to the hash file to verify download integrity"
-msgstr "链接到Hash文件以验证下载完整性"
-
-#: ../../masternodes/maintenance.rst:193
-msgid ""
-"Remove the old binaries from the working directory, extract the compressed "
-"archive, copy the new files to the directory and set them as executable::"
-msgstr "从工作目录中删除旧的二进制文件，解压压缩的归档文件，将新文件复制到目录中，并将它们设置为可执行文件::"
-
-#: ../../masternodes/maintenance.rst:203
-msgid "Clean up unneeded files::"
-msgstr "清理不需要的文件::"
-
-#: ../../masternodes/maintenance.rst:208
-msgid "Restart Dash::"
-msgstr "重新启动达世币::"
-
-#: ../../masternodes/maintenance.rst:212
-msgid ""
-"You will see a message reading \"Dash Core server starting\". We will now "
-"update Sentinel::"
-msgstr "您将看到一条消息，上面写着 \"Dash Core服务器激活\" 。我们现在将更新Sentinel::"
-
-#: ../../masternodes/maintenance.rst:218
-msgid ""
-"If the protocol version changed during this update, you will need to issue a"
-" start command from your wallet. If you are using a hardware wallet, you can"
-" issue the start command by simply clicking the button in DMT. If you are "
-"using Dash Core wallet, update it to the latest version, then open the debug"
-" console and enter this command, where MN1 is the alias for your "
-"masternode::"
-msgstr ""
-"如果协议版本在此更新期间更改，您则需要从您的钱包中发出激活命令。如果您正在使用硬件钱包，则只需单击DMT中的按钮即可发出激活命令。如果您正在使用Dash"
-" Core钱包，请将其更新为最新版本，然后打开调试控制台并输入以下命令，其中MN1是主节点的别名::"
-
-#: ../../masternodes/maintenance.rst:227
-msgid "Monitor the status of your masternode as it starts up::"
-msgstr "监测主节点激活时的状态::"
-
-#: ../../masternodes/maintenance.rst:234
-msgid ""
-"In particular, the last command should return the status **Masternode "
-"successfully started**. If you see an error similar to **Invalid protocol "
-"version**, then the protocol version has changed and you must send a start "
-"command from your wallet again. You can also monitor the status of your "
-"masternode from Sentinel. If Sentinel detects a functioning masternode, the "
-"following command should return nothing::"
-msgstr ""
-"特别要注意的是，最后一个命令应该返回状态 **Masternodes成功激活** 。如果您看到类似于 **无效协议版本** "
-"的错误，则协议版本已经更改，您必须再次从您的钱包发送激活命令。您从Sentinel中监测您的主节点的状态。如果Sentinel检测到一个正常运行的主节点，则以下命令不应该返回任何内容::"
-
-#: ../../masternodes/maintenance.rst:244
-msgid ""
-"Finally, you can check for your masternode by its collateral address using "
-"`DashNinja <https://www.dashninja.pl/>`_, or search the consensus list of "
-"masternodes using this command and entering your masternode IP address::"
-msgstr ""
-"最后，您可以使用\\ `DashNinja <https://www.dashninja.pl/>`_\\ "
-"，通过主节点的钱包地址来检查它，也可以使用此命令并输入您的主节点IP地址来搜索主节点的一致列表::"
-
-#: ../../masternodes/maintenance.rst:253
+#: ../../masternodes/maintenance.rst:254
 msgid "Finding your position in the payment queue"
 msgstr "在支付列表中找到您的位置"
 
-#: ../../masternodes/maintenance.rst:255
+#: ../../masternodes/maintenance.rst:256
 msgid ""
 "Prior to Dash 0.12.4, each masternode may have a slightly different view of "
 "the network. In addition, selection from the top 10% of masternodes in the "
@@ -343,7 +343,7 @@ msgstr ""
 "在达世币 0.12.4 之前，每个主节点对网络的看法可能略有不同。此外，从列表中的前10%的主节点 :ref:`选取池 <payment-logic>`"
 " 的选择是随机的。这意味着您的主节点在何时将被选择获得奖励并没有明确的答案。但是，可以根据您的主节点进入队列后面的时间得到大致的时间。"
 
-#: ../../masternodes/maintenance.rst:262
+#: ../../masternodes/maintenance.rst:263
 msgid ""
 "Community members xkcd, Bertrand256 and moocowmoo have all published various"
 " tools you can run to determine your approximate position in the payment "
@@ -352,23 +352,23 @@ msgstr ""
 "社区成员xkcd、Bertrand "
 "256和moocowmoo都发布了各种工具，您可以运行这些工具来确定您在支付队列中的大致位置，而bots也可以在Discord和Slack上使用。"
 
-#: ../../masternodes/maintenance.rst:266
+#: ../../masternodes/maintenance.rst:267
 msgid "mn_queue: https://github.com/kxcd/mn_queue"
 msgstr "mn_queue: https://github.com/kxcd/mn_queue"
 
-#: ../../masternodes/maintenance.rst:267
+#: ../../masternodes/maintenance.rst:268
 msgid "Dashman: https://github.com/moocowmoo/dashman"
 msgstr "Dashman: https://github.com/moocowmoo/dashman"
 
-#: ../../masternodes/maintenance.rst:268
+#: ../../masternodes/maintenance.rst:269
 msgid "DMT: https://github.com/Bertrand256/dash-masternode-tool"
 msgstr "DMT: https://github.com/Bertrand256/dash-masternode-tool"
 
-#: ../../masternodes/maintenance.rst:272
+#: ../../masternodes/maintenance.rst:273
 msgid "DashCentral voting, verification and monitoring"
 msgstr "DashCentral 投票，验证和监测"
 
-#: ../../masternodes/maintenance.rst:274
+#: ../../masternodes/maintenance.rst:275
 msgid ""
 "DashCentral is a community-supported website managed by community member "
 "Rango. It has become a *de facto* site for discussion of budget proposals "
@@ -378,11 +378,11 @@ msgstr ""
 "DashCentral是由社区成员Rango管理的以支持社区为主的网站。它已成为一个 *事实上的* "
 "网站，用来讨论预算提案，以方便从图形用户界面投票，但它也提供了监测主节点的功能。"
 
-#: ../../masternodes/maintenance.rst:280
+#: ../../masternodes/maintenance.rst:281
 msgid "Adding your masternode to DashCentral"
 msgstr "将您的主节点添加到DashCentral"
 
-#: ../../masternodes/maintenance.rst:282
+#: ../../masternodes/maintenance.rst:283
 msgid ""
 "`Dashcentral <https://www.dashcentral.org/>`_ allows you to vote on "
 "proposals from the comfort of your browser. After completing `registration "
@@ -396,20 +396,20 @@ msgstr ""
 "<https://www.dashcentral.org/masternodes>`_ 页面并单击 **现在添加主节点** "
 "按钮。在以下屏幕上输入您的钱包地址:"
 
-#: ../../masternodes/maintenance.rst:292
+#: ../../masternodes/maintenance.rst:293
 msgid "Adding a masternode to DashCentral"
 msgstr "向DashCentral添加一个主节点"
 
-#: ../../masternodes/maintenance.rst:294
+#: ../../masternodes/maintenance.rst:295
 msgid ""
 "Click **Add masternode**. Your masternode has now been added to DashCentral."
 msgstr "单击 **添加主节点** 。您的主节点现在已经被添加到DashCentral。"
 
-#: ../../masternodes/maintenance.rst:298
+#: ../../masternodes/maintenance.rst:299
 msgid "Enabling voting from DashCentral"
 msgstr "从DashCentral启用投票"
 
-#: ../../masternodes/maintenance.rst:300
+#: ../../masternodes/maintenance.rst:301
 msgid ""
 "Click **Edit** under **Voting privkeys** to enter your masternode private "
 "key to enable voting through the DashCentral web interface. Enter a voting "
@@ -420,11 +420,11 @@ msgstr ""
 "在 **投票私钥** 下单击 *编辑* 来输入您的主节点私钥，以便通过DashCentral "
 "网站界面进行投票。输入投票密码(与登录密码不同，但同样重要需要记住！)，并在以下屏幕上输入私钥(在主节点上的dash.conf文件中使用的相同的密钥):"
 
-#: ../../masternodes/maintenance.rst:310
+#: ../../masternodes/maintenance.rst:311
 msgid "Adding voting privkeys to DashCentral"
 msgstr "将投票私钥添加到DashCentra"
 
-#: ../../masternodes/maintenance.rst:312
+#: ../../masternodes/maintenance.rst:313
 msgid ""
 "It is important to note that the private key to start your masternode is "
 "unrelated to the private keys to the collateral address storing your 1000 "
@@ -438,11 +438,11 @@ msgstr ""
 "需要注意的是，激活您的主节点的私钥与存储1000个达世币的钱包地址的私钥无关。这些密钥可用于代表主节点发送命令，如投票，但不能用于获取保证金。这些密钥在您的设备上是被加密的，且从未以纯文本形式存储在DashCentral服务器上。一旦您输入了密钥，单击"
 " **在服务器上存储加密的投票私钥** 。您现在可以从DashCentral 网站界面对提案进行投票。"
 
-#: ../../masternodes/maintenance.rst:322
+#: ../../masternodes/maintenance.rst:323
 msgid "Verifying ownership"
 msgstr "验证所有权"
 
-#: ../../masternodes/maintenance.rst:324
+#: ../../masternodes/maintenance.rst:325
 msgid ""
 "You can also issue a message from your address to verify ownership of your "
 "masternode to DashCentral. Click **Unverified** under **Ownership** and the "
@@ -450,11 +450,11 @@ msgid ""
 msgstr ""
 "您也可以从您的地址发出一条消息来验证您的主节点对DashCentral的所有权。在 **所有权** 下单击 **未验证** ，将出现以下屏幕:"
 
-#: ../../masternodes/maintenance.rst:331
+#: ../../masternodes/maintenance.rst:332
 msgid "Verifying ownership of your masternode to DashCentral"
 msgstr "验证您的主节点对DashCentral的所有权"
 
-#: ../../masternodes/maintenance.rst:333
+#: ../../masternodes/maintenance.rst:334
 msgid ""
 "Instructions on how to sign your collateral address using a software wallet "
 "appear. If you are using a hardware wallet other than Trezor, you will need "
@@ -468,11 +468,11 @@ msgstr ""
 " `Trezor wallet <https://wallet.trezor.io/>`_，复制钱包地址，然后单击 **签名和验证** "
 "。以下屏幕将会出现，您可以在其中输入DashCentral提供的信息和您希望签名的地址:"
 
-#: ../../masternodes/maintenance.rst:344
+#: ../../masternodes/maintenance.rst:345
 msgid "Signing a message from the Trezor Wallet"
 msgstr "从Trezor钱包签名信息"
 
-#: ../../masternodes/maintenance.rst:346
+#: ../../masternodes/maintenance.rst:347
 msgid ""
 "Click **Sign**, confirm on your Trezor device and enter your PIN to sign the"
 " message. A message signature will appear in the **Signature** box. Copy "
@@ -482,15 +482,15 @@ msgstr ""
 "单击 **签名** ，在您的Trezor设备上确认并输入您的PIN码来签名该信息。信息签名将出现在 **签名** "
 "框中。复制此签名并将其粘贴到DashCentral上的方框中，并单击 **验证所有权** 。验证工作现已完成。"
 
-#: ../../masternodes/maintenance.rst:354
+#: ../../masternodes/maintenance.rst:355
 msgid "Masternode ownership has been successfully verified"
 msgstr "主节点所有权已被成功验证"
 
-#: ../../masternodes/maintenance.rst:357
+#: ../../masternodes/maintenance.rst:358
 msgid "Installing the DashCentral monitoring script"
 msgstr "安装DashCentral监测脚本"
 
-#: ../../masternodes/maintenance.rst:359
+#: ../../masternodes/maintenance.rst:360
 msgid ""
 "DashCentral offers a service to monitor your masternode, automatically "
 "restart dashd in the event of a crash and send email in the event of an "
@@ -503,34 +503,34 @@ msgstr ""
 "<https://www.dashcentral.org/account/edit>`_ "
 "页面，并生成一个新的API密钥，必要时向您的帐户添加一个PIN码。滚动到以下屏幕:"
 
-#: ../../masternodes/maintenance.rst:369
+#: ../../masternodes/maintenance.rst:370
 msgid "Setting up the DashCentral monitoring script"
 msgstr "设置DashCentral监测脚本"
 
-#: ../../masternodes/maintenance.rst:371
+#: ../../masternodes/maintenance.rst:372
 msgid ""
 "Copy the link to the current version of the dashcentral script by right- "
 "click and selecting **Copy link address**. Open PuTTY and connect to your "
 "masternode, then type::"
 msgstr "右键单击并选择 **复制链接地址** 将链接复制到DashCentral脚本的当前版本。打开PuTTY并连接到您的主节点，然后键入::"
 
-#: ../../masternodes/maintenance.rst:377
+#: ../../masternodes/maintenance.rst:378
 msgid ""
 "Replace the link with the current version of dashcentral-updater as "
 "necessary. Decompress the archive using the following command::"
 msgstr "必要时用当前版本的DashCentral更新程序替换链接。使用以下命令解压压缩的归档文件::"
 
-#: ../../masternodes/maintenance.rst:382
+#: ../../masternodes/maintenance.rst:383
 msgid "View your masternode configuration details by typing::"
 msgstr "通过键入查看您的主节点配置的详细信息::"
 
-#: ../../masternodes/maintenance.rst:386
+#: ../../masternodes/maintenance.rst:387
 msgid ""
 "Copy the values for ``rpcuser`` and ``rpcpassword``. Then edit the "
 "dashcentral configuration by typing::"
 msgstr "复制 ``rpcuser`` 和 ``rpcpassword`` 的值。然后通过键入来编辑DashCentral配置::"
 
-#: ../../masternodes/maintenance.rst:391
+#: ../../masternodes/maintenance.rst:392
 msgid ""
 "Replace the values for ``api_key``, your masternode collateral address, "
 "``rpc_user``, ``rpc_password``, ``daemon_binary`` and ``daemon_datadir`` "
@@ -541,11 +541,11 @@ msgstr ""
 "``daemon_binary`` 和 ``daemon_datadir`` 的值。在常见的配置中， ``lwhite`` "
 "是Linux用户的名称，可能如下所示："
 
-#: ../../masternodes/maintenance.rst:399
+#: ../../masternodes/maintenance.rst:400
 msgid "DashCentral updater configuration file"
 msgstr "DashCentral更新程序配置文件"
 
-#: ../../masternodes/maintenance.rst:424
+#: ../../masternodes/maintenance.rst:425
 msgid ""
 "Press **Ctrl + X** to exit, confirm you want save with **Y** and press "
 "**Enter**. Test your configuration by running the dashcentral script, then "
@@ -555,15 +555,15 @@ msgstr ""
 "按 **Ctrl + X** 退出，确认您想要使用 **Y ** 保存，然后按下 **Enter** "
 "键。通过运行DashCentral脚本测试您的配置，然后查看网站。如果测试成功，您会看到更新已被发送::"
 
-#: ../../masternodes/maintenance.rst:434
+#: ../../masternodes/maintenance.rst:435
 msgid "Manually testing the DashCentral updater"
 msgstr "手动测试DashCentral更新程序"
 
-#: ../../masternodes/maintenance.rst:439
+#: ../../masternodes/maintenance.rst:440
 msgid "DashCentral updater has successfully sent data to the DashCentral site"
 msgstr "DashCentral更新程序已成功地将数据发送到DashCentral站点"
 
-#: ../../masternodes/maintenance.rst:442
+#: ../../masternodes/maintenance.rst:443
 msgid ""
 "Once you have verified your configuration is working, we can edit the "
 "crontab on your system to schedule the dcupdater script to run every 2 "
@@ -574,18 +574,18 @@ msgid ""
 msgstr ""
 "一旦您验证了您的配置有效，我们就可以在您的系统上编辑crontab，以便将dcudater脚本安排为每2分钟运行一次。这允许系统在发生故障时为您提供早期警告，甚至会在dashd守护进程挂起或崩溃将其重新启动。这是一个有效的方法，以确保您不会从支付队列中掉线。键入以下命令::"
 
-#: ../../masternodes/maintenance.rst:451
+#: ../../masternodes/maintenance.rst:452
 msgid ""
 "Select an editor if necessary and add the following line to your crontab "
 "after the line for sentinel, replacing lwhite with your username on your "
 "system::"
 msgstr "如有必要，请选择编辑器，并在sentinel行后面添加以下行到crontab中，将lWhite替换为您在系统上的用户名::"
 
-#: ../../masternodes/maintenance.rst:460
+#: ../../masternodes/maintenance.rst:461
 msgid "Editing crontab to run the DashCentral updater automatically"
 msgstr "编辑crontab以自动运行DashCentral更新程序"
 
-#: ../../masternodes/maintenance.rst:462
+#: ../../masternodes/maintenance.rst:463
 msgid ""
 "Press **Ctrl + X** to exit, confirm you want save with **Y** and press "
 "**Enter**. The dcupdater script will now run every two minutes, restart "
@@ -594,21 +594,21 @@ msgstr ""
 "按 **Ctrl + X** 退出，确认您想要使用 **Y** 保存，然后按下 **Enter** "
 "键。现在，dcupdater脚本将每两分钟运行一次，并在必要时重新启动dashd，在发生错误时给您发送电子邮件。"
 
-#: ../../masternodes/maintenance.rst:467
+#: ../../masternodes/maintenance.rst:468
 msgid "Masternode monitoring tools"
 msgstr "主节点监测工具"
 
-#: ../../masternodes/maintenance.rst:469
+#: ../../masternodes/maintenance.rst:470
 msgid ""
 "Several sites operated by community members are available to monitor key "
 "information and statistics relating to the masternode network."
 msgstr "几个由社区成员操作的站点可用于监测与主节点网络有关的关键信息和统计数据。"
 
-#: ../../masternodes/maintenance.rst:473
+#: ../../masternodes/maintenance.rst:474
 msgid "Block Explorers"
 msgstr "区块浏览器"
 
-#: ../../masternodes/maintenance.rst:475
+#: ../../masternodes/maintenance.rst:476
 msgid ""
 "Since Dash is a public blockchain, it is possible to use block explorers to "
 "view the balances of any Dash public address, as well as examine the "
@@ -618,7 +618,7 @@ msgid ""
 msgstr ""
 "由于达世币是一个公有区块链，所以可以使用区块浏览器查看任何达世币钱包地址的余额，以及检查在任何给定块中输入的交易。每个唯一的交易也可以通过txid进行搜索。可以使用多种不同区块浏览器查看达世币网络。"
 
-#: ../../masternodes/maintenance.rst:481
+#: ../../masternodes/maintenance.rst:482
 msgid ""
 "`CryptoID <https://chainz.cryptoid.info/>`__ offers a `Dash blockchain "
 "explorer <https://chainz.cryptoid.info/dash/>`__ and a `function "
@@ -629,7 +629,7 @@ msgstr ""
 "<https://chainz.cryptoid.info/dash/>`__ 和一个 `功能 "
 "<https://chainz.cryptoid.info/dash/masternodes.dws>`__ 来查看和浏览达世币主节点。"
 
-#: ../../masternodes/maintenance.rst:485
+#: ../../masternodes/maintenance.rst:486
 msgid ""
 "`BitInfoCharts <https://bitinfocharts.com>`_ offers a `page "
 "<https://bitinfocharts.com/dash/>`_ of price statistics and information and "
@@ -639,7 +639,7 @@ msgstr ""
 "<https://bitinfocharts.com/dash/>`_ 和 `区块链浏览器 "
 "<https://bitinfocharts.com/dash/explorer/>`__。"
 
-#: ../../masternodes/maintenance.rst:489
+#: ../../masternodes/maintenance.rst:490
 msgid ""
 "`CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ offers a range "
 "of statistics and data on most blockchains, including Dash."
@@ -647,7 +647,7 @@ msgstr ""
 "`CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ "
 "提供了包括达世币在内的大多数区块链的一系列统计信息和数据。"
 
-#: ../../masternodes/maintenance.rst:491
+#: ../../masternodes/maintenance.rst:492
 msgid ""
 "`CoinPayments <https://www.coinpayments.net/>`__ offers a simple `Dash "
 "blockchain explorer <http://explorer.coinpayments.net/index.php?chain=7>`__."
@@ -655,7 +655,7 @@ msgstr ""
 "`CoinPayments <https://www.coinpayments.net/>`__ 提供了一个简单的 `达世币区块链浏览器 "
 "<http://explorer.coinpayments.net/index.php?chain=7>`__。"
 
-#: ../../masternodes/maintenance.rst:494
+#: ../../masternodes/maintenance.rst:495
 msgid ""
 "`Dash.org <https://www.dash.org/>`__ includes two blockchain explorers at "
 "`explorer.dash.org <http://explorer.dash.org/>`__ and `insight.dash.org "
@@ -665,7 +665,7 @@ msgstr ""
 "<http://explorer.dash.org/>`__ 和 `insight.dash.org "
 "<http://insight.dash.org/>`__。"
 
-#: ../../masternodes/maintenance.rst:497
+#: ../../masternodes/maintenance.rst:498
 msgid ""
 "`Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https "
 "://dash-bitcore1.trezor.io/>`__ powered by a `Dash fork "
@@ -676,15 +676,15 @@ msgstr ""
 "`Dash fork <https://github.com/dashpay/insight-ui-dash>`__ 驱动的 `区块链浏览器 "
 "<https ://dash-bitcore1.trezor.io/>`__，它是一种先进的区块链API工具"
 
-#: ../../masternodes/maintenance.rst:503
+#: ../../masternodes/maintenance.rst:504
 msgid "Dash Masternode Tool"
 msgstr "达世币主节点工具"
 
-#: ../../masternodes/maintenance.rst:505
+#: ../../masternodes/maintenance.rst:506
 msgid "https://github.com/Bertrand256/dash-masternode-tool"
 msgstr "https://github.com/Bertrand256/dash-masternode-tool"
 
-#: ../../masternodes/maintenance.rst:507
+#: ../../masternodes/maintenance.rst:508
 msgid ""
 "Written and maintained by community member Bertrand256, Dash Masternode Tool"
 " (DMT) allows you to start a masternode from all major hardware wallets such"
@@ -695,15 +695,15 @@ msgstr ""
 "由社区成员Bertrand256编写和维护的Dash "
 "Masterode工具(DMT)允许您从所有主要硬件钱包，如Trezor、Ledger和KeepKey，激活主节点。它还有在不影响保证金的情况下对提案进行投票和提取主节点区块奖励。"
 
-#: ../../masternodes/maintenance.rst:514
+#: ../../masternodes/maintenance.rst:515
 msgid "DASH Ninja"
 msgstr "DASH Ninja"
 
-#: ../../masternodes/maintenance.rst:516
+#: ../../masternodes/maintenance.rst:517
 msgid "https://www.dashninja.pl"
 msgstr "https://www.dashninja.pl"
 
-#: ../../masternodes/maintenance.rst:518
+#: ../../masternodes/maintenance.rst:519
 msgid ""
 "DASH Ninja, operated by forum member and Dash Core developer elbereth, "
 "offers key statistics on the adoption of different versions of Dash across "
@@ -714,15 +714,15 @@ msgstr ""
 "由论坛成员和Dash Core开发人员elbereth运营的DASH "
 "Ninja提供了关于在主节点网络中采用不同版本达世币的关键统计数据。它还提供了多个如监测达世币管理、主节点奖励时间和主节点地理分布的功能，以及提供了一个简单的区块链浏览器。"
 
-#: ../../masternodes/maintenance.rst:526
+#: ../../masternodes/maintenance.rst:527
 msgid "DashCentral"
 msgstr "DashCentral"
 
-#: ../../masternodes/maintenance.rst:528
+#: ../../masternodes/maintenance.rst:529
 msgid "https://www.dashcentral.org"
 msgstr "https://www.dashcentral.org"
 
-#: ../../masternodes/maintenance.rst:530
+#: ../../masternodes/maintenance.rst:531
 msgid ""
 "DashCentral, operated by forum member rango, offers an advanced service to "
 "monitor masternodes and vote on budget proposals through an advanced web "
@@ -733,15 +733,15 @@ msgstr ""
 "app应用 <https://play.google.com/store/apps/detai "
 "ls?id=net.paregov.android.dashcentral>`_ 。"
 
-#: ../../masternodes/maintenance.rst:536
+#: ../../masternodes/maintenance.rst:537
 msgid "Masternode.me"
 msgstr "Masternode.me"
 
-#: ../../masternodes/maintenance.rst:538
+#: ../../masternodes/maintenance.rst:539
 msgid "https://stats.masternode.me"
 msgstr "https://stats.masternode.me"
 
-#: ../../masternodes/maintenance.rst:540
+#: ../../masternodes/maintenance.rst:541
 msgid ""
 "Masternode.me, operated by forum member and Dash Core developer moocowmoo, "
 "offers sequential reports on the price, generation rate, blockchain "
@@ -750,15 +750,15 @@ msgstr ""
 "由论坛成员和Dash "
 "Core开发人员moocowmoo运营的Masternode.me，提供了关于价格、生成速率、区块链信息和一些主节点信息的顺序报告。"
 
-#: ../../masternodes/maintenance.rst:545
+#: ../../masternodes/maintenance.rst:546
 msgid "Dash Masternode Information"
 msgstr "达世币主节点信息"
 
-#: ../../masternodes/maintenance.rst:547
+#: ../../masternodes/maintenance.rst:548
 msgid "http://178.254.23.111/~pub/Dash/Dash_Info.html"
 msgstr "http://178.254.23.111/~pub/Dash/Dash_Info.html"
 
-#: ../../masternodes/maintenance.rst:549
+#: ../../masternodes/maintenance.rst:550
 msgid ""
 "This site, operated by forum member and Dash Core developer crowning, offers"
 " a visual representation of many key statistics of the Dash masternode "

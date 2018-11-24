@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-19 06:34+0000\n"
+"POT-Creation-Date: 2018-11-24 02:46+0000\n"
 "PO-Revision-Date: 2018-03-19 12:19+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
@@ -108,6 +108,11 @@ msgid ""
 "This optional procedure is described below. Before continuing, verify that "
 "your seed is written down clearly and correctly on paper."
 msgstr ""
+"الشيء الوحيد المطلوب لاسترداد محفظة داش الكتروم على جهاز كمبيوتر آخر هو "
+"بذوره. يمكنك اختبار استرداد المحفظة من خلال التثبيت الحالي لـ داش الكتروم عن"
+" طريق إزالة بيانات المحفظة من مجلد بيانات التطبيق. يتم وصف هذا الإجراء "
+"الاختياري أدناه. قبل المتابعة ، تحقق من كتابة بطاقتك بشكل واضح وصحيح على "
+"الورق."
 
 #: ../../wallets/electrum/security.rst:60
 msgid ""
@@ -115,42 +120,51 @@ msgid ""
 "be deleted. Begin by closing Dash Electrum. Next, locate the application "
 "data folder according to your operating system:"
 msgstr ""
+"للحصول على داش الكتروم لإنشاء محفظة جديدة ، يجب حذف بيانات المحفظة القديمة. "
+"ابدأ بإغلاق داش الكتروم. بعد ذلك ، حدد موقع مجلد بيانات التطبيق وفقًا لنظام "
+"التشغيل الخاص بك:"
 
 #: ../../wallets/electrum/security.rst:64
 msgid "**Linux:**"
-msgstr ""
+msgstr "**لينكس**"
 
 #: ../../wallets/electrum/security.rst:66
 msgid ""
 "Open Files, select **Go > Go to folder**, copy the path ``~/.electrum`` and "
 "paste it into the dialog box"
 msgstr ""
+"افتح ملفات ، حدد **انتقال> اذهب إلى المجلد** ، انسخ المسار `` ~ / "
+".electrum`` وقم بلصقه في مربع الحوار"
 
 #: ../../wallets/electrum/security.rst:68
 #: ../../wallets/electrum/security.rst:74
 #: ../../wallets/electrum/security.rst:80
 msgid "Delete all files in the folder"
-msgstr ""
+msgstr "احذف جميع الملفات الموجودة في المجلد"
 
 #: ../../wallets/electrum/security.rst:70
 msgid "**macOS:**"
-msgstr ""
+msgstr "**ماك**"
 
 #: ../../wallets/electrum/security.rst:72
 msgid ""
 "Open Finder, select **Go > Go to Folder**, copy the path ``~/.electrum`` and"
 " paste it into the dialog box"
 msgstr ""
+"افتح Finder ، حدد **اذهب> الى المجلد** ، انسخ المسار `` ~ / .electrum`` "
+"والصقه في مربع الحوار"
 
 #: ../../wallets/electrum/security.rst:76
 msgid "**Windows:**"
-msgstr ""
+msgstr "**ويندوز**"
 
 #: ../../wallets/electrum/security.rst:78
 msgid ""
 "Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and paste it in to"
 " the address bar"
 msgstr ""
+"افتح Explorer ، انسخ المسار ``%APPDATA%\\Electrum-DASH`` ولصقه في شريط "
+"العنوان"
 
 #: ../../wallets/electrum/security.rst:82
 msgid ""
@@ -158,6 +172,9 @@ msgid ""
 "appear asking you to name your new wallet. Enter a name, select **Standard "
 "wallet** as the wallet type and then choose **I already have a seed**."
 msgstr ""
+"بعد مسح دليل البيانات ، أعد تشغيل داش الكتروم. سيظهر مربع حوار يطلب منك "
+"تسمية محفظتك الجديدة. أدخل اسمًا ، حدد **محفظة قياسية** كنوع المحفظة ثم اختر"
+" **لدي بالفعل بذور**."
 
 #: ../../wallets/electrum/security.rst:90
 msgid "Restoring a wallet from an existing seed"
