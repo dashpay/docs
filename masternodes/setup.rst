@@ -716,8 +716,8 @@ key must be entered in the ``dash.conf`` file on the masternode. This
 allows the masternode to watch the network for relevant Pro*Tx
 transactions, and will cause it to start serving as a masternode when
 the signed ProRegTx is broadcast by the owner (Step 5 below). Log in to
-your masternode using ssh or PuTTY and edit the configuration file on
-your masternode as follows::
+your masternode using ``ssh`` or PuTTY and edit the configuration file
+on your masternode as follows::
 
   nano ~/.dashcore/dash.conf
 
@@ -729,7 +729,9 @@ generated above::
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. We now need to restart the masternode for this change to take effect. Enter the following commands, waiting a few seconds in between to give Dash Core time to shut down::
+the file. We now need to restart the masternode for this change to take
+effect. Enter the following commands, waiting a few seconds in between
+to give Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
   ~/.dashcore/dashd
