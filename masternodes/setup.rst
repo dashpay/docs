@@ -694,6 +694,9 @@ This should return a string of characters similar to this::
 The first long string is your transaction hash, while the last number is
 the index. 
 
+
+.. _bls-generation:
+
 Generate a BLS key pair
 ^^^^^^^^^^^^^^^^^^^^^^^
 
