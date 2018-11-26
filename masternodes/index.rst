@@ -51,6 +51,7 @@ a self-operated masternode.
 
    understanding.rst
    hosting.rst
+   dip3-upgrade.rst
    setup.rst
    maintenance.rst
    advanced.rst

@@ -29,17 +29,14 @@ in DIP3. This documentation describes the upgrade procedure in two steps:
    - :ref:`From the Dash Core wallet <dashcore-dip3-upgrade>`
 
 
-.. _dmt-dip3-upgrade:
-
-
 .. _masternode-update:
 
 Masternode Software Update
 ==========================
 
-Begin by updating the Dash software on your masternode following the
-procedure appropriate for your masternode, as described below. You can
-use either dashman or the manual procedure to update the software.
+Begin by updating the Dash software on your masternode. Depending on
+whether you installed Dash manually or using dashman, you must follow
+the procedure appropriate for your masternode, as described below.
 
 
 Option 1: Updating from dashman
