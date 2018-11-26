@@ -46,7 +46,7 @@ Forums
 
 - **Dash Forum**: https://www.dash.org/forum
 - **BitcoinTalk thread:** https://bitcointalk.org/index.php?topic=421615.0
-- **Cryptocurrencytalk.com:** https://cryptocurrencytalk.com/forum/693-dash/
+- **Cryptocurrencytalk.com:** https://cryptocurrencytalk.com/forum/693-dash
 - **巴比特 (8BTC) Forum:** http://8btc.com/forum-115-1.html
 - **百度贴吧 达世币吧 (Baidu Tieba):** `https://tieba.baidu.com/f?kw=达世币 <https://tieba.baidu.com/f?kw=达世币>`_
 - **彩云比特 达世币 (CYBTC Dash):** http://www.cybtc.com/forum-123-1.html
