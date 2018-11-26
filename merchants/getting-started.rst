@@ -34,6 +34,13 @@ customisation. This documentation also describes the
 :ref:`technical <merchants-technical>` steps required to integrate 
 various Dash services.
 
+Any Dash received in payment can be automatically converted to the fiat
+currency of your choice using services such as `Uphold
+<https://uphold.com>`_. Simply select the card for the target currency
+and click **Add funds** -> **With cryptocurrency**. Any cryptocurrency
+deposited to this address will immediately be converted to the target
+fiat currency at the time of deposit.
+
 Many major merchants accept Dash - check out `Bitrefill
 <https://www.bitrefill.com>`__ or `CheapAir
 <https://www.cheapair.com>`__ for examples of what merchant integration
