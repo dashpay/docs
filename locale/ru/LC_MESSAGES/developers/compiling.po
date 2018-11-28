@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-26 04:39+0000\n"
+"POT-Creation-Date: 2018-11-28 05:53+0000\n"
 "PO-Revision-Date: 2018-04-16 05:42+0000\n"
 "Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -178,12 +178,21 @@ msgid ""
 "download. Once it is complete, extract the required files from the disc "
 "image as follows::"
 msgstr ""
+"Отмените загрузку, как только она начнется и возвращайтесь назад на вкладку "
+"**Network** в инструментах разработчика. Right click on the network request "
+"at the bottom of the list labeled **Xcode_7.3.1.dmg** and select **Copy -> "
+"Copy as cURL (bash)**. Paste this long string of text into your Linux "
+"terminal, append ``-o Xcode_7.3.1.dmg`` at the end and then press enter to "
+"begin the download. Once it is complete, extract the required files from the"
+" disc image as follows::"
 
 #: ../../developers/compiling.rst:145 ../../developers/compiling.rst:248
 msgid ""
 "``~/dash/src`` now contains the compiled Dash binaries, and "
 "``~/dash/src/qt`` contains the Dash GUI wallet."
 msgstr ""
+"``~/dash/src`` теперь содержит скомпилированные бинарные файлы Dash, а "
+"``~/dash/src/qt`` содержит GUI-кошелёк Dash."
 
 #: ../../developers/compiling.rst:150
 msgid "macOS Native"
@@ -207,10 +216,12 @@ msgid ""
 "When the popup appears, click **Install**. Then install `Homebrew "
 "<https://brew.sh>`__::"
 msgstr ""
+"После появления всплывающего окна кликните **Установить**. Затем установите "
+"`Homebrew <https://brew.sh>`__::"
 
 #: ../../developers/compiling.rst:169
 msgid "Install dependencies::"
-msgstr ""
+msgstr "Установочные зависимости::"
 
 #: ../../developers/compiling.rst:173
 msgid "Clone the Dash Core source code and change to the ``dash`` directory::"
@@ -235,7 +246,7 @@ msgstr ""
 
 #: ../../developers/compiling.rst:195
 msgid "Dash Core is now available at ``./src/dashd``."
-msgstr ""
+msgstr "Dash Core теперь доступен по адресу ``./src/dashd``."
 
 #: ../../developers/compiling.rst:200
 msgid "Windows"
