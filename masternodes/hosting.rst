@@ -53,7 +53,7 @@ http://dashmasternode.io
 - `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`__
 
 AllNodes
-------
+--------
 
 .. image:: img/allnodes.png
    :width: 200px
