@@ -380,7 +380,7 @@ Exodus
 http://www.exodus.io
 
 .. image:: img/exodus.png
-   :width: 200px
+   :width: 100px
    :align: right
    :target: http://www.exodus.io
 
