@@ -114,6 +114,9 @@ SPORK_16_INSTANTSEND_AUTOLOCKS
   Allows any node to request the transaction lock, not just the sending
   node.
 
+SPORK_17_QUORUM_DKG_ENABLED
+  
+
 Viewing spork status
 --------------------
 
