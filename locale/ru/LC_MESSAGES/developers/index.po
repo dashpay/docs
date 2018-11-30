@@ -7,15 +7,16 @@
 # Tikhon Skudarnov <semargsemarg@gmail.com>, 2018
 # Leon White <leon.white@dash.org>, 2018
 # Андрей Дегтяр <diusha1711@gmail.com>, 2018
+# Julia Ogonkova <livingflcl@gmail.com>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-29 08:55+0000\n"
+"POT-Creation-Date: 2018-11-30 09:45+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
-"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2018\n"
+"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,10 +27,12 @@ msgstr ""
 #: ../../developers/index.rst:1
 msgid "Developers guide and information about sporks and Dash version history"
 msgstr ""
+"Инструкции и информация для разработчиков, касающаяся спорков и истории "
+"версий Dash"
 
 #: ../../developers/index.rst:1
 msgid "dash, developers, sporks, version history"
-msgstr ""
+msgstr "dash, developers, sporks, version history"
 
 #: ../../developers/index.rst:9
 msgid "Developers"
@@ -45,6 +48,13 @@ msgid ""
 "issue or pull request on GitHub. The documentation is available at: https"
 "://dash-docs.github.io/en/"
 msgstr ""
+"Dash Core опубликовали углублённую  `Инструкцию для разработчиков <https"
+"://dash-docs.github.io/en/>`_ , чтобы помочь разработчикам разобраться в "
+"базовом коде Dash, а также в качестве справочного материала для более "
+"опытных разработчиков. С помощью этой инструкции можно быстро и эффективно "
+"внедрить сторонние приложение в экосистему Dash. Эту инструкцию можно "
+"дополнить, запостив на Github обсуждение или опрос. Документы доступны по "
+"адресу: https://dash-docs.github.io/en/"
 
 #: ../../developers/index.rst:19
 msgid ""
@@ -242,7 +252,7 @@ msgstr ""
 
 #: ../../developers/index.rst:108
 msgid "SPORK_15_DETERMINISTIC_MNS_ENABLED"
-msgstr ""
+msgstr "SPORK_15_DETERMINISTIC_MNS_ENABLED"
 
 #: ../../developers/index.rst:104
 msgid ""
@@ -251,10 +261,14 @@ msgid ""
 "When activated, the legacy masternode list logic will no longer run and non-"
 "updated masternodes will not be eligible for payment."
 msgstr ""
+"Отслеживает, требуются ли  `детерминированные мастерноды "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_. При активации, "
+"старая логика списков мастернод больше не работает, а не обновившие ПО "
+"мастерноды теряют право на выплаты. "
 
 #: ../../developers/index.rst:114
 msgid "SPORK_16_INSTANTSEND_AUTOLOCKS"
-msgstr ""
+msgstr "SPORK_16_INSTANTSEND_AUTOLOCKS"
 
 #: ../../developers/index.rst:111
 msgid ""
@@ -262,6 +276,10 @@ msgid ""
 "specified number of inputs, and removes the legacy InstantSend fee. Allows "
 "any node to request the transaction lock, not just the sending node."
 msgstr ""
+"Разрешает автоматическую блокировку транзакций для транзакций с заданным "
+"количеством вводов, а также убирает старую комиссию за InstantSend. "
+"Позволяет любой ноде (не только отправляющей) запрашивать блокировку "
+"транзакции."
 
 #: ../../developers/index.rst:117
 msgid "Viewing spork status"
