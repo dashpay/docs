@@ -1246,6 +1246,34 @@ WeSellCrypto
   including Dash, paid using Paypal. Be sure to check the fees and rates
   before purchasing.
 
+Kraken
+  .. image:: exchanges/kraken.png
+     :width: 200px
+     :align: right
+     :target: https://www.kraken.com
+
+  https://www.kraken.com
+
+  Kraken offers private, personalized OTC service with deep liquidity to
+  institutions and high net-worth individuals needing to fill orders in
+  excess of $100,000. Simply send an email to otc@kraken.com to get
+  started.
+
+Koi Trading
+  .. image:: exchanges/koi.png
+     :width: 200px
+     :align: right
+     :target: https://koi.trade
+
+  https://koi.trade
+
+  Based in San Francisco with satellite offices in Hong Kong and Europe,
+  Koi Trading offers a reliable, efficient, and compliant OTC pathway
+  for institutions and high net-worth individuals to engage with
+  cryptocurrency. Brokerages, exchanges, miners and funds worldwide
+  trust Koi Trading for its professional, high-touch services and robust
+  cryptocurrency liquidity.
+
 Bitpanda
   .. image:: exchanges/bitpanda.png
      :width: 200px
@@ -1284,19 +1312,6 @@ Bitit
   Bitit is a broker service offering Bitcoin, Dash and several other
   cryptocurrencies for sale online. Payment in a range of currencies is
   support using both direct banking, credit cards and vouchers.
-
-Kraken
-  .. image:: exchanges/kraken.png
-     :width: 200px
-     :align: right
-     :target: https://www.kraken.com
-
-  https://www.kraken.com
-
-  Kraken offers private, personalized OTC service with deep liquidity to
-  institutions and high net-worth individuals needing to fill orders in
-  excess of $100,000. Simply send an email to otc@kraken.com to get
-  started.
 
 Coinfinity
   .. image:: exchanges/coinfinity.png
