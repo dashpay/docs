@@ -115,6 +115,10 @@ SPORK_16_INSTANTSEND_AUTOLOCKS
   node.
 
 SPORK_17_QUORUM_DKG_ENABLED
+  Enables the `DKG process to create LLMQ quorums
+  <https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. At the
+  moment, this only activates a dummy DKG on testnet, which will later
+  be replaced by the real DKG for mainnet and testnet.
   
 
 Viewing spork status
