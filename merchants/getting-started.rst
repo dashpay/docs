@@ -28,11 +28,12 @@ sale payment solution from the lists below. If you are unsure, GoCoin is
 a popular choice due its support for :ref:`InstantSend <instantsend>`,
 while CoinPayments supports the largest range of online shop software.
 Anypay is an incredibly simple solution for retail stores, and also
-supports InstantSend. Larger integrations may require some
-customisation. This documentation also describes the
-:ref:`administrative <merchants-administrative>` and 
-:ref:`technical <merchants-technical>` steps required to integrate 
-various Dash services.
+supports InstantSend. Larger integrations may require some customisation
+or cooperation with a specialist payment processor such as `ePaymints
+<http://epaymints.com>`__. This documentation also describes the
+:ref:`administrative <merchants-administrative>` and  :ref:`technical
+<merchants-technical>` steps required to integrate  various Dash
+services.
 
 Any Dash received in payment can be automatically converted to the fiat
 currency of your choice using services such as `Uphold
@@ -53,7 +54,12 @@ Payment Processors
 
 This section lists known payment processors supporting Dash and the
 business platforms they support. Please conduct thorough research before
-choosing a payment provider to ensure your needs will be met.
+choosing a payment provider to ensure your needs will be met. 
+
+For more advanced payment processing needs, such as for high risk
+merchant accounts in industries challenged with high levels of
+chargebacks, it is recommended to contact Dash partner `ePaymints
+<http://epaymints.com>`__.
 
 
 Online Stores
