@@ -28,11 +28,12 @@ blockchain. Instead, you must send these three text snippets (message,
 address and signature) to your intended recipient using another
 communication channel, such as email. As an example, you can test the
 following message and signature and verify that it was signed by the
-given address:
+given address::
 
-**Message:** Documentation test signature
-**Address:** XwHihwiQzheVKbT76e7ZhPkujDCQGEZC6P
-**Signature:** IKaEt7MTb4Y57WIde5TLUkm1vbVsjk/L9eG+TE2tdQhMeK9vGgTsqcVOTmXXQ6QA0/WQtxqPURH2qZG27YR2VE0=
+  Message: Documentation test signature
+  Address: XwHihwiQzheVKbT76e7ZhPkujDCQGEZC6P
+  Signature: IKaEt7MTb4Y57WIde5TLUkm1vbVsjk/L9eG+TE2tdQhMeK9vGgTsqcVOTmXXQ6QA0/WQtxqPURH2qZG27YR2VE0=
+
 
 Signing a Message
 =================
