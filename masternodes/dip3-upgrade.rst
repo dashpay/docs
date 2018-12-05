@@ -423,10 +423,11 @@ Output::
   9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6
 
 Your masternode is now upgraded to DIP3 and will appear on the
-Deterministic Masternode List. You can view this list on the
-**Masternodes -> DIP3 Masternodes** tab of the Dash Core wallet, or in
-the console using the command ``protx list valid``, where the txid of
-the final ``protx register_submit`` transaction identifies your DIP3
-masternode. Note again that all functions related to DIP3 will only take
-effect once Spork 15 is enabled on the network. You can view the spork
-status using the ``spork active`` command.   
+Deterministic Masternode List after the transaction is mined to a block.
+You can view this list on the **Masternodes -> DIP3 Masternodes** tab of
+the Dash Core wallet, or in the console using the command ``protx list
+valid``, where the txid of the final ``protx register_submit``
+transaction identifies your DIP3 masternode. Note again that all
+functions related to DIP3 will only take effect once Spork 15 is enabled
+on the network. You can view the spork status using the ``spork active``
+command.

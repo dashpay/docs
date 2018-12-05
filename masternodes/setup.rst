@@ -382,23 +382,27 @@ It should look like this when ready:
    Fully synchronized Dash Core wallet
 
 Click **Tools > Debug console** to open the console. Type the following
-command into the console to get a new Dash address for the collateral::
+two commands into the console to generate a legacy masternode key
+(necessary for successful startup during the DIP3 transition period) and
+a new Dash address for the collateral::
+
+  masternode genkey
+  93PAqQsDjcVdYJHRfQPjsSt5338GCswMnUaSxoCD8J6fiLk4NHL
 
   getnewaddress
+  yiFfzbwiN9oneftd7cEfr3kQLRwQ4kp7ue
 
-  yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG
-
-Take note of the collateral address, since we will need it later. The
-next step is to secure your wallet (if you have not already done so).
-First, encrypt the wallet by selecting **Settings > Encrypt wallet**.
-You should use a strong, new password that you have never used somewhere
-else. Take note of your password and store it somewhere safe or you will
-be permanently locked out of your wallet and lose access to your funds.
-Next, back up your wallet file by selecting **File > Backup Wallet**.
-Save the file to a secure location physically separate to your computer,
-since this will be the only way you can access our funds if anything
-happens to your computer. For more details on these steps, see
-:ref:`here <dashcore-backup>`.
+Take note of the legacy masternode private key and collateral address,
+since we will need it later. The next step is to secure your wallet (if
+you have not already done so). First, encrypt the wallet by selecting
+**Settings > Encrypt wallet**. You should use a strong, new password
+that you have never used somewhere else. Take note of your password and
+store it somewhere safe or you will be permanently locked out of your
+wallet and lose access to your funds. Next, back up your wallet file by
+selecting **File > Backup Wallet**. Save the file to a secure location
+physically separate to your computer, since this will be the only way
+you can access our funds if anything happens to your computer. For more
+details on these steps, see :ref:`here <dashcore-backup>`.
 
 Now send exactly 1000 DASH in a single transaction to the new address
 you generated in the previous step. This may be sent from another
@@ -491,18 +495,15 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc4/dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc6/dashcore-0.13.0.0-rc6-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
-
-.. figure:: img/setup-manual-download.png
-   :width: 250px
-
-   Link to the hash file to verify download integrity
+  sha256sum dashcore-0.13.0.0-rc6-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc6/SHA256SUMS.asc
+  cat dashcore-0.13.0.0-rc6-x86_64-linux-gnu.tar.gz
 
 You can also optionally verify the authenticity of your download as an
 official release by Dash Core Team. All releases of Dash are signed
@@ -512,7 +513,6 @@ the ASC file for the current release of Dash and verify the signature as
 follows::
 
   curl https://keybase.io/udjinm6/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc4/SHA256SUMS.asc
   gpg --verify SHA256SUMS.asc
 
 .. figure:: img/setup-manual-gpg.png
@@ -523,7 +523,8 @@ follows::
 Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
-  tar xfv dashcore-0.13.0.0-rc4-x86_64-linux-gnu.tar.gz
+  mkdir ~/.dashcore
+  tar xfv dashcore-0.13.0.0-rc6-x86_64-linux-gnu.tar.gz
   cp -f dashcore-0.13.0/bin/dashd ~/.dashcore/
   cp -f dashcore-0.13.0/bin/dash-cli ~/.dashcore/
   chmod 777 ~/.dashcore/dash*
@@ -548,6 +549,7 @@ follows::
   maxconnections=64
   #----
   masternode=1
+  masternodeprivkey=XXXXXXXXXXXXXXXXXXXXXXX
   externalip=XXX.XXX.XXX.XXX
   #----
 
@@ -557,6 +559,8 @@ Replace the fields marked with ``XXXXXXX`` as follows:
   characters allowed
 - ``rpcpassword``: enter any string of numbers or letters, no special
   characters allowed
+- ``masternodeprivkey``: this is the legacy masternode private key you
+  generated in the previous step
 - ``externalip``: this is the IP address of your VPS
 
 The result should look something like this:
@@ -688,7 +692,7 @@ transaction, you now need to find the txid of the transaction. Click
 This should return a string of characters similar to this::
 
   {
-  "2c499e3862e5aa5f220278f42f9dfac32566d50f1e70ae0585dd13290227fdc7" : "1",
+  "ad308ec104bdf113444be609eb3dce9474a5550424204c6538843e3ccd3d4e78" : "1",
   }
 
 The first long string is your transaction hash, while the last number is
@@ -708,8 +712,8 @@ your own masternode, generate a BLS public/private keypair as follows::
   bls generate
 
   {
-    "secret": "565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101",
-    "public": "01d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127"
+    "secret": "28a85abb5aa8e820f65e33974cef0ab0bf06195f61454d2feb7fa578612d2228",
+    "public": "144cbf4d472716b9504a54c7ca26906a3346253b787ffeb1a4999325049f5b2c51ef2e7c215d85f0a9142ec1c78db99b"
   }
 
 **These keys are NOT stored by the wallet and must be kept secure,
@@ -728,7 +732,7 @@ The editor appears with the existing masternode configuration. Add this
 line to the end of the file, replacing the key with your BLS secret key
 generated above::
 
-  masternodeblsprivkey=565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101
+  masternodeblsprivkey=28a85abb5aa8e820f65e33974cef0ab0bf06195f61454d2feb7fa578612d2228
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
@@ -752,14 +756,14 @@ Generate a new address as follows::
 
   getnewaddress
 
-  yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
+  yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5
 
 Then either generate or choose an existing second address to receive the
 owner's masternode payouts::
 
   getnewaddress
 
-  ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy
+  yLqyR8PHEB7Fp1ue8nSuLfuxQhrj5PSTDv
 
 Next, we will prepare an unsigned ProRegTx special transaction using the
 ``protx register_prepare`` command. This command has the following
@@ -796,21 +800,21 @@ not specify the operator's payout address.
 Example (remove line breaks if copying)::
 
   protx register_prepare
-    2c499e3862e5aa5f220278f42f9dfac32566d50f1e70ae0585dd13290227fdc7
+    ad308ec104bdf113444be609eb3dce9474a5550424204c6538843e3ccd3d4e78
     1
-    140.82.59.51:19999
-    yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
-    01d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127
-    yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
+    140.82.59.51:10004
+    yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5 
+    144cbf4d472716b9504a54c7ca26906a3346253b787ffeb1a4999325049f5b2c51ef2e7c215d85f0a9142ec1c78db99b
+    yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5 
     0
-    ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy
+    yLqyR8PHEB7Fp1ue8nSuLfuxQhrj5PSTDv
 
 Output::
 
   {
-    "tx": "030001000191def1f8bb265861f92e9984ac25c5142ebeda44901334e304c447dad5adf6070000000000feffffff0121dff505000000001976a9149e2deda2452b57e999685cb7dabdd6f4c3937f0788ac00000000d1010000000000c7fd27022913dd8505ae701e0fd56625c3fa9d2ff47802225faae562389e492c0100000000000000000000000000ffff8c523b334e1fad8e6259e14db7d05431ef4333d94b70df1391c601d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127ad8e6259e14db7d05431ef4333d94b70df1391c600001976a914adf50b01774202a184a2c7150593442b89c212e788acf8d42b331ae7a29076b464e61fdbcfc0b13f611d3d7f88bbe066e6ebabdfab7700",
-    "collateralAddress": "yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG",
-    "signMessage": "ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy|0|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|54e34b8b996839c32f91e28a9e5806ec5ba5a1dadcffe47719f5b808219acf84"
+     "tx": "0300010001784e3dcd3c3e8438654c20240455a57494ce3deb09e64b4413f1bd04c18e30ad0000000000feffffff01cccfa204000000001976a9141ea44ced396667eb7d1c5b3699e04b5b3046ecfb88ac00000000d1010000000000784e3dcd3c3e8438654c20240455a57494ce3deb09e64b4413f1bd04c18e30ad0100000000000000000000000000ffff8c523b33271411c59262c9633a1bb810a7fc2b833c43cfa852ab144cbf4d472716b9504a54c7ca26906a3346253b787ffeb1a4999325049f5b2c51ef2e7c215d85f0a9142ec1c78db99b11c59262c9633a1bb810a7fc2b833c43cfa852ab00001976a91405c5fed6a3eb0b92ea5119039efae7a8dee5456488ac4e6cc5451440a6044dbd04d33a11f4cddc9021532ede3012ebbc31c0bb4ceb9c00",
+    "collateralAddress": "yiFfzbwiN9oneftd7cEfr3kQLRwQ4kp7ue",
+    "signMessage": "yLqyR8PHEB7Fp1ue8nSuLfuxQhrj5PSTDv|0|yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5|yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5|4e00de34ee03d28adb4e1fdaec966ae239c11da7e6115f566fc4b3f75c8a5503"
   }
 
 We will use the ``collateralAddress`` and ``signMessage`` fields in Step
@@ -831,11 +835,11 @@ function of a hardware wallet. The command takes the following syntax::
 
 Example::
 
-  signmessage yPd75LrstM268Sr4hD7RfQe5SHtn9UMSEG ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy|0|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|54e34b8b996839c32f91e28a9e5806ec5ba5a1dadcffe47719f5b808219acf84
+  signmessage yiFfzbwiN9oneftd7cEfr3kQLRwQ4kp7ue yLqyR8PHEB7Fp1ue8nSuLfuxQhrj5PSTDv|0|yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5|yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5|4e00de34ee03d28adb4e1fdaec966ae239c11da7e6115f566fc4b3f75c8a5503
 
 Output::
 
-  IMf5P6WT60E+QcA5+ixors38umHuhTxx6TNHMsf9gLTIPcpilXkm1jDglMpK+JND0W3k/Z+NzEWUxvRy71NEDns=
+  H3ub9BATtvuV+zDGdkUQNoUGpaYFr/O1FypmrSmH5WJ0KFRi8T10FSew0EJO/+Ij+OLv4r0rt+HS9pQFsZgc2dE=
 
 
 Submit the signed message
@@ -855,20 +859,21 @@ Where:
 
 Example::
 
-  protx register_submit 030001000191def1f8bb265861f92e9984ac25c5142ebeda44901334e304c447dad5adf6070000000000feffffff0121dff505000000001976a9149e2deda2452b57e999685cb7dabdd6f4c3937f0788ac00000000d1010000000000c7fd27022913dd8505ae701e0fd56625c3fa9d2ff47802225faae562389e492c0100000000000000000000000000ffff8c523b334e1fad8e6259e14db7d05431ef4333d94b70df1391c601d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127ad8e6259e14db7d05431ef4333d94b70df1391c600001976a914adf50b01774202a184a2c7150593442b89c212e788acf8d42b331ae7a29076b464e61fdbcfc0b13f611d3d7f88bbe066e6ebabdfab7700 IMf5P6WT60E+QcA5+ixors38umHuhTxx6TNHMsf9gLTIPcpilXkm1jDglMpK+JND0W3k/Z+NzEWUxvRy71NEDns=
+  protx register_submit 0300010001784e3dcd3c3e8438654c20240455a57494ce3deb09e64b4413f1bd04c18e30ad0000000000feffffff01cccfa204000000001976a9141ea44ced396667eb7d1c5b3699e04b5b3046ecfb88ac00000000d1010000000000784e3dcd3c3e8438654c20240455a57494ce3deb09e64b4413f1bd04c18e30ad0100000000000000000000000000ffff8c523b33271411c59262c9633a1bb810a7fc2b833c43cfa852ab144cbf4d472716b9504a54c7ca26906a3346253b787ffeb1a4999325049f5b2c51ef2e7c215d85f0a9142ec1c78db99b11c59262c9633a1bb810a7fc2b833c43cfa852ab00001976a91405c5fed6a3eb0b92ea5119039efae7a8dee5456488ac4e6cc5451440a6044dbd04d33a11f4cddc9021532ede3012ebbc31c0bb4ceb9c00 H3ub9BATtvuV+zDGdkUQNoUGpaYFr/O1FypmrSmH5WJ0KFRi8T10FSew0EJO/+Ij+OLv4r0rt+HS9pQFsZgc2dE=
 
 Output::
 
-  9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6
+  b823338301e47875493c20361a23aef034578030c639480203b394669ab05e09
 
 Your masternode is now upgraded to DIP3 and will appear on the
-Deterministic Masternode List. You can view this list on the
-**Masternodes -> DIP3 Masternodes** tab of the Dash Core wallet, or in
-the console using the command ``protx list valid``, where the txid of
-the final ``protx register_submit`` transaction identifies your DIP3
-masternode. Note again that all functions related to DIP3 will only take
-effect once Spork 15 is enabled on the network. You can view the spork
-status using the ``spork active`` command.
+Deterministic Masternode List after the transaction is mined to a block.
+You can view this list on the **Masternodes -> DIP3 Masternodes** tab of
+the Dash Core wallet, or in the console using the command ``protx list
+valid``, where the txid of the final ``protx register_submit``
+transaction identifies your DIP3 masternode. Note again that all
+functions related to DIP3 will only take effect once Spork 15 is enabled
+on the network. You can view the spork status using the ``spork active``
+command.
 
 At this point you can go back to your terminal window and monitor your
 masternode using ``dashman/dashman status``, by entering
