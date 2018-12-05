@@ -545,7 +545,8 @@ follows::
   #----
   listen=1
   server=1
-  daemon=1
+  daemon=
+  testnet=1
   maxconnections=64
   #----
   masternode=1
