@@ -338,6 +338,17 @@ xBTCe
   available for currencies including CNH (Chinese Offshore Yuan), EUR,
   GBP, JPY, IDR and RUB. DASH trading pairs include BTC, USD and CNH.
 
+IDAX
+  .. image:: exchanges/idax.png
+     :width: 200px
+     :align: right
+     :target: https://www.idax.pro
+
+  https://www.idax.pro
+
+  Based in Mongolia, IDAX is a high volume exchange with a focus on the
+  Chinese and Korean markets. Dash is available for trade against BTC.
+
 Upbit
   .. image:: exchanges/upbit.png
      :width: 200px
