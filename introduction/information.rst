@@ -372,6 +372,14 @@ Budget System / DGBB
   if approved by the masternodes. The Budget System is sometimes called
   the Treasury System; the two terms are interchangeable.
 
+ChainLock
+  Defined in `DIP8
+  <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__,
+  ChainLocks are a method of using an LLMQ to threshold sign a block
+  immediately after it is propogated by the miner in order to enforce
+  the first-seen rule. This is a powerful method of mitigating 51%
+  mining attacks, which are associated with double spending.
+
 Cloud Wallet
   Third parties that will store your Dash on their servers for you, so
   that you can access your funds from any device connected to the
@@ -630,6 +638,16 @@ Digital Wallet
     which can be hacked. NOTE: USB sticks are not safe for long-term 
     (multi-year) storage because they degrade over time.
 
+DKG
+  Defined in `DIP6
+  <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__,
+  Distributed Key Generation (`DKG
+  <https://github.com/dashpay/dips/blob/master/dip-0006.md#llmq-dkg-network-protocol>`__) 
+  is a method of generating a BLS key pair for use in an LLMQ to perform
+  threshold signing on network messages. It is based on BLS M-of-N
+  Threshold Scheme and Distributed Key Generation, which is an
+  implementation of Shamir’s Secret Sharing.
+
 Digital Signature
   A digital signature is a mathematical mechanism that allows someone to
   prove their identity or ownership of a digital asset. When your
@@ -809,6 +827,17 @@ Liquidity
   and sellers is important for liquidity. The result of an illiquid
   market is price volatility, and the inability to easily determine the
   value of an asset.
+
+LLMQ
+  Defined in `DIP6
+  <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, A Long-
+  Living Masternode Quorum (LLMQ) is a deterministic subset of the
+  global deterministic masternode list. Such a quorum is formed with the
+  help of a distributed key generation (DKG) protocol and is supposed to
+  be active for a long time (e.g. days). Multiple quorums are kept alive
+  at the same time, allowing load balancing between these quorums. The
+  main task of a LLMQ is to perform threshold signing of consensus
+  related messages.
 
 Masternode
   A :ref:`masternode <masternode-network>` is special type of full node
