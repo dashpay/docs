@@ -18,11 +18,27 @@ Dash Electrum minisite.
 - https://electrum.dash.org
 
 Dash Electrum is developed by community member **akhavr** and is
-released through his GitHub account. SHA256 checksums are available in
-the releases section of the Dash Electrum repository to verify
-authenticity.
+released through his GitHub account. 
 
 - https://github.com/akhavr/electrum-dash/releases
+
+You can optionally verify the integrity of your download by running the
+following commands (example for Linux)::
+
+  wget https://github.com/akhavr/electrum-dash/releases/download/3.2.3.1/Dash-Electrum-3.2.3.1.tar.gz
+  sha256sum https://github.com/akhavr/electrum-dash/releases/download/3.2.3.1/Dash-Electrum-3.2.3.1.tar.gz
+  wget https://github.com/akhavr/electrum-dash/releases/download/3.2.3.1/SHA256SUMS.txt.asc
+  cat SHA256SUMS.txt.asc
+
+You can also optionally verify the authenticity of your download as an
+official release by akhavr. All releases of Dash Electrum are signed by
+akhavr using GPG with the key ``64A3 BA82 2F44 9D50``, `verifiable here
+on Keybase <https://keybase.io/akhavr>`_. Import the key, download the
+ASC file for the current release of Dash Electrum and verify the
+signature as follows::
+
+  curl https://keybase.io/akhavr/pgp_keys.asc | gpg --import
+  gpg --verify SHA256SUMS.txt.asc
 
 
 Linux

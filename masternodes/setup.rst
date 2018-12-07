@@ -503,7 +503,7 @@ and comparing the output against the value for the file as shown in the
 
   sha256sum dashcore-0.13.0.0-rc6-x86_64-linux-gnu.tar.gz
   wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc6/SHA256SUMS.asc
-  cat dashcore-0.13.0.0-rc6-x86_64-linux-gnu.tar.gz
+  cat SHA256SUMS.asc
 
 You can also optionally verify the authenticity of your download as an
 official release by Dash Core Team. All releases of Dash are signed
