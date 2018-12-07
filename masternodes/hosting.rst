@@ -33,6 +33,7 @@ https://crowdnode.io
 
 - Operated by: CrowdNode ApS
 - Services: Hosting, Shares
+- Cost: 15% of masternode payments
 - `Site <https://crowdnode.io>`__
 - `Email <hello@crowdnode.io>`__
 
@@ -48,6 +49,7 @@ http://dashmasternode.io
 
 - Operated by: splawik21 (Dash Core team member)
 - Services: Hosting
+- Cost: 0.1 Dash/month
 - `Site <http://dashmasternode.io>`__
 - `Email <splawik21@protonmail.com>`__
 - `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`__
@@ -64,6 +66,7 @@ https://www.allnodes.com
 
 - Operated by: Sephiroth
 - Services: Hosting
+- Cost: $5/month (free during beta)
 - `Site <https://www.allnodes.com>`__
 - `Email <info@allnodes.com>`__
 - `Twitter <https://twitter.com/allnodes>`__
@@ -82,6 +85,7 @@ https://node40.com
 
 - Operated by: Perry Woodin
 - Services: Hosting, Voting, Tax Compliance
+- 0.34 Dash/month (variable, discounts available)
 - `Site <https://node40.com>`__
 - `Email <info@node40.com>`__
 - `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`__
@@ -99,6 +103,7 @@ https://masternode.me
 
 - Operated by: moocowmoo (Dash Core team member)
 - Services: Hosting
+- Cost: 10% of masternode payments
 - `Site <https://masternode.me>`__
 - `Email <moocowmoo@masternode.me>`__
 - `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`__
@@ -126,6 +131,7 @@ https://masternodehosting.com
 
 - Operated by: flare (Dash Core team member)
 - Services: Hosting
+- Cost: €18/month
 - `Site <https://masternodehosting.com>`__
 - `Email <holger@masternodehosting.com>`__
 - `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
