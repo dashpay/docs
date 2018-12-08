@@ -223,6 +223,18 @@ CEX.IO
   CEX.IO is a UK-based exchange with over one million users and offers
   DASH exchange pairs for fiat currencies including GBP, EUR and USD.
 
+DigiFinex
+  .. image:: exchanges/digifinex.png
+     :width: 200px
+     :align: right
+     :target: https://www.digifinex.com
+
+  https://www.digifinex.com
+
+  Based in Singapore, DigiFinex offers Dash trading against USDT, BTC
+  and ETH. DigiFinex supports InstantSend, with clear benefits for
+  arbitrage traders and consumers.
+
 YoBit
   .. image:: exchanges/yobit.png
      :width: 200px
