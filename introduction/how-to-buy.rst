@@ -359,7 +359,8 @@ IDAX
   https://www.idax.pro
 
   Based in Mongolia, IDAX is a high volume exchange with a focus on the
-  Chinese and Korean markets. Dash is available for trade against BTC.
+  Chinese and Korean markets. Dash transactions support InstantSend, and
+  trading is available for against BTC.
 
 Upbit
   .. image:: exchanges/upbit.png
