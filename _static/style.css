@@ -10,6 +10,7 @@ html[lang=ar] {
     direction: rtl;
 }
 
+/* Preformatted and code formatted segments LTR */
 html[lang=ar] pre {
     direction: ltr;
 }
@@ -19,6 +20,12 @@ html[lang=ar] code {
     direction: ltr;
 }
 
+/* Force floated images float opposite in Arabic */
+html[lang=ar] .rst-content .align-right {
+    float: left;
+}
+
+/* RTD navigation changes for Arabic */
 html[lang=ar] .wy-breadcrumbs select.wy-breadcrumbs-aside {
     float: left;
 }
