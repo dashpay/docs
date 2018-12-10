@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-30 09:45+0000\n"
+"POT-Creation-Date: 2018-12-10 07:49+0000\n"
 "PO-Revision-Date: 2018-03-19 12:19+0000\n"
 "Last-Translator: oscar junior <geleira@gmail.com>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/dash/teams/37570/pt/)\n"
@@ -111,6 +111,12 @@ msgid ""
 "This optional procedure is described below. Before continuing, verify that "
 "your seed is written down clearly and correctly on paper."
 msgstr ""
+"A única coisa necessária para recuperar uma carteira Dash Electrum em outro "
+"computador é a sua semente. Você pode testar a recuperação da carteira com a"
+" sua instalação atual do Dash Electrum removendo os dados da carteira da "
+"pasta de dados do aplicativo. Este procedimento opcional é descrito abaixo. "
+"Antes de continuar, verifique se a sua semente está escrita de forma clara e"
+" correta no papel."
 
 #: ../../wallets/electrum/security.rst:60
 msgid ""
@@ -118,42 +124,52 @@ msgid ""
 "be deleted. Begin by closing Dash Electrum. Next, locate the application "
 "data folder according to your operating system:"
 msgstr ""
+"Para que a Dash Electrum gere uma nova carteira, os dados antigos da "
+"carteira precisam ser excluídos. Comece fechando o Dash Electrum. Em "
+"seguida, localize a pasta de dados do aplicativo de acordo com o seu sistema"
+" operacional:"
 
 #: ../../wallets/electrum/security.rst:64
 msgid "**Linux:**"
-msgstr ""
+msgstr "**Linux:**"
 
 #: ../../wallets/electrum/security.rst:66
 msgid ""
 "Open Files, select **Go > Go to folder**, copy the path ``~/.electrum`` and "
 "paste it into the dialog box"
 msgstr ""
+"Abra Arquivos, selecione **Ir> Ir para pasta**, copie o caminho "
+"``~/.electrum`` e cole-o na caixa de diálogo"
 
 #: ../../wallets/electrum/security.rst:68
 #: ../../wallets/electrum/security.rst:74
 #: ../../wallets/electrum/security.rst:80
 msgid "Delete all files in the folder"
-msgstr ""
+msgstr "Excluir todos os arquivos da pasta"
 
 #: ../../wallets/electrum/security.rst:70
 msgid "**macOS:**"
-msgstr ""
+msgstr "**macOS:**"
 
 #: ../../wallets/electrum/security.rst:72
 msgid ""
 "Open Finder, select **Go > Go to Folder**, copy the path ``~/.electrum`` and"
 " paste it into the dialog box"
 msgstr ""
+"Abra o Finder, selecione **Ir > Vá para a Pasta**, copie o caminho "
+"``~/.electrum`` e cole-o na caixa de diálogo"
 
 #: ../../wallets/electrum/security.rst:76
 msgid "**Windows:**"
-msgstr ""
+msgstr "**Windows:**"
 
 #: ../../wallets/electrum/security.rst:78
 msgid ""
 "Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and paste it in to"
 " the address bar"
 msgstr ""
+"Abra o Explorer, copie o caminho ``%AAPPDATA%\\Electrum-DASH`` e cole-o na "
+"barra de endereços"
 
 #: ../../wallets/electrum/security.rst:82
 msgid ""
@@ -161,6 +177,10 @@ msgid ""
 "appear asking you to name your new wallet. Enter a name, select **Standard "
 "wallet** as the wallet type and then choose **I already have a seed**."
 msgstr ""
+"Tendo apagado o diretório de dados, reinicie o Dash Electrum. Uma caixa de "
+"diálogo aparecerá pedindo para você nomear sua nova carteira. Digite um "
+"nome, selecione **carteira padrão** como o tipo de carteira e, em seguida, "
+"escolha **Eu já tenho uma semente**."
 
 #: ../../wallets/electrum/security.rst:90
 msgid "Restoring a wallet from an existing seed"

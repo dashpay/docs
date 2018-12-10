@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Hasna Brania <hasna.brania19@gmail.com>, 2018
+# Leon White <leon.white@dash.org>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-30 09:45+0000\n"
+"POT-Creation-Date: 2018-12-10 07:49+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
+"Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -386,7 +387,7 @@ msgid ""
 "**Enter** save the file."
 msgstr ""
 "حدد السطر الذي يقرأ ``PermitRootLogin yes`` وقم بتعيينه على "
-"``PermitRootLogin no``. مباشرة أدناه ، إضافة خط ما يقرأ ``المستخدمين "
+"``PermitRootLogin no``. مباشرة أدناه ، إضافة خط ما يقرأ ``AllowUsers "
 "<username>``، تبديل ``<username>`` مع اسم المستخدم الذي حددته أعلاه. اضغط "
 "على **Ctrl + X** لإغلاق المحرر ، ثم **Y** و **ادخل** قم بحفظ الملف."
 
@@ -1083,13 +1084,13 @@ msgstr ""
 msgid "dashman status output showing successfully started masternode"
 msgstr "خرج حالة dashman تظهر بنجاح ماسترنود"
 
-#: ../../masternodes/setup.rst:705
+#: ../../masternodes/setup.rst:705 ../../masternodes/setup.rst:783
 msgid ""
-"At this point you can safely log out of your server by typing exit. "
+"At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
 msgstr ""
-"في هذه المرحلة ، يمكنك الخروج من الخادم بأمان عن طريق كتابة الخروج. تهانينا!"
-" الخاص بك ماسترنود قيد التشغيل الآن."
+"في هذه المرحلة ، يمكنك الخروج من الخادم بأمان عن طريق كتابة ``exit`` . "
+"تهانينا! الخاص بك ماسترنود قيد التشغيل الآن."
 
 #: ../../masternodes/setup.rst:709
 msgid "Option 2: Starting from Dash Core wallet"
@@ -1247,22 +1248,14 @@ msgstr ""
 msgid ""
 "At this point you can go back to your terminal window and monitor your "
 "masternode using ``dashman/dashman status``, by entering ``~/.dashcore/dash-"
-" cli masternode status`` or using the **Get status** function in DMT. You "
+"cli masternode status`` or using the **Get status** function in DMT. You "
 "will probably need to wait around 30 minutes as the node passes through the "
 "PRE_ENABLED stage and finally reaches ENABLED. Give it some time, the final "
 "result should appear as follows:"
 msgstr ""
 "في هذه المرحلة ، يمكنك الرجوع إلى نافذة طرفك ومراقبة الرمز الخاص بك باستخدام"
-" ``dashman/dashman status``  ، عن طريق إدخال ``~/.dashcore/dash- cli "
+" ``dashman/dashman status``  ، عن طريق إدخال ``~/.dashcore/dash-cli "
 "masternode status``  أو باستخدام **الحصول على الحالة** وظيفة في DMT. قد "
 "تحتاج إلى الانتظار لمدة 30 دقيقة تقريبًا حيث تمر العقدة خلال مرحلة "
 "PRE_ENABLED وتصل في النهاية إلى متاح. اعطائها بعض الوقت ، يجب أن تظهر "
 "النتيجة النهائية على النحو التالي:"
-
-#: ../../masternodes/setup.rst:783
-msgid ""
-"At this point you can safely log out of your server by typing ``exit``. "
-"Congratulations! Your masternode is now running."
-msgstr ""
-"في هذه المرحلة ، يمكنك الخروج من الخادم بأمان عن طريق كتابة ``خروج`` . "
-"تهانينا! الخاص بك ماسترنود قيد التشغيل الآن."
