@@ -75,7 +75,7 @@ Tools
 
 A Dash paper wallet can be generated in several ways.
 
-- Using the generator at https://paper.dash.org/
+- Using the generator at https://paper.dash.org
 - Using the generator at https://walletgenerator.net/?currency=Dash
 - Offline using the Dash Paper Wallet source code from GitHub at 
   https://github.com/dashpay/paper.dash.org/releases/latest
@@ -84,20 +84,20 @@ A Dash paper wallet can be generated in several ways.
   or `downloading directly <https://github.com/MichaelMure/WalletGenerator.net/archive/master.zip>`_
 
 Since the source code for all three options is largely similar, this
-guide will use https://paper.dash.org/ as an example. The websites
+guide will use https://paper.dash.org as an example. The websites
 listed here run entirely in your web browser without sending any of the
 data generated to an external server, but the most secure option is to
 download the wallet generator and run it on a computer with a freshly
 installed operating system that is not connected to the internet.
 
 This guide is based on the guide available from
-https://walletgenerator.net/. Please donate if you find this project
+https://walletgenerator.net. Please donate if you find this project
 useful!
 
 Address generation
 ==================
 
-Go to https://paper.dash.org/ in your web browser (or open index.html if
+Go to https://paper.dash.org in your web browser (or open index.html if
 you downloaded the wallet generator). Select your language and choose
 Dash as the currency if necessary. The following screen will appear:
 
