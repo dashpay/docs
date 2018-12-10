@@ -729,12 +729,12 @@ TextEdit on macOS, gedit on Linux) and enter the following information:
 - **Label**: Any single word used to identify your masternode, e.g. MN1
 - **IP and port**: The IP address and port (usually 9999) configured in
   the dash.conf file, separated by a colon (:)
-- **Masternode private key**: This is the result of your masternode
-  genkey command earlier, also the same as configured in the dash.conf
+- **Masternode private key**: This is the result of your ``masternode
+  genkey`` command earlier, also the same as configured in the dash.conf
   file
-- **Transaction hash**: The txid we just identified using masternode
-  outputs
-- **Index**: The index we just identified using masternode outputs
+- **Transaction hash**: The txid we just identified using ``masternode
+  outputs``
+- **Index**: The index we just identified using ``masternode outputs``
 
 Enter all of this information on a single line with each item separated
 by a space, for example::
