@@ -770,7 +770,7 @@ console** again and enter the following command to start your masternode
 
 At this point you can go back to your terminal window and monitor your
 masternode using ``dashman/dashman status``, by entering
-``~/.dashcore/dash- cli masternode status`` or using the **Get status**
+``~/.dashcore/dash-cli masternode status`` or using the **Get status**
 function in DMT. You will probably need to wait around 30 minutes as the
 node passes through the PRE_ENABLED stage and finally reaches ENABLED.
 Give it some time, the final result should appear as follows:
