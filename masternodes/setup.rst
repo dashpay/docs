@@ -673,7 +673,7 @@ appear as follows:
 
    dashman status output showing successfully started masternode
 
-At this point you can safely log out of your server by typing exit.
+At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
 
 .. _dashcore-protx:
