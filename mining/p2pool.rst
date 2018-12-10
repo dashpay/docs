@@ -118,12 +118,12 @@ following information, replacing the ``<xxx>`` placeholders after the
 ``DASH_WALLET_URL``, ``DASH_WALLET_ZIP`` and ``DASH_WALLET_LOCAL``
 values if they do not match the current version of Dash:
 
-- ``PUBLIC_IP`` = <your public IP address from the previous step>
-- ``EMAIL`` = <your email address>
-- ``PAYOUT_ADDRESS`` = <your DASH wallet address to receive fees>
-- ``USER_NAME`` = <linux user name>
-- ``RPCUSER`` = <enter a random alphanumeric rpc user name>
-- ``RPCPASSWORD`` = <enter a random alphanumeric rpc password>
+- ``PUBLIC_IP`` = your public IP address from the previous step
+- ``EMAIL`` = your email address
+- ``PAYOUT_ADDRESS`` = your DASH wallet address to receive fees
+- ``USER_NAME`` = linux user name
+- ``RPCUSER`` = enter a random alphanumeric rpc user name
+- ``RPCPASSWORD`` = enter a random alphanumeric rpc password
 
 Press **Ctrl + X** to close the editor and **Y** and **Enter** save the
 file. Then run the script::
@@ -289,10 +289,10 @@ external IP (if necessary), fee and donation as follows::
 You can then monitor your node by browsing to the following addresses,
 replacing ``<ip_address>`` with the IP address of your P2Pool node:
 
-- Punchy interface: http://<ip_address>:7903/static
-- Legacy interface: http://<ip_address>:7903/static/legacy
-- Status interface: http://<ip_address>:7903/static/status
-- Extended interface: http://<ip_address>:7903/static/ext
+- Punchy interface: http://ip_address:7903/static
+- Legacy interface: http://ip_address:7903/static/legacy
+- Status interface: http://ip_address:7903/static/status
+- Extended interface: http://ip_address:7903/static/ext
 
 .. image:: img/p2pool-antminer.png
    :width: 400px
