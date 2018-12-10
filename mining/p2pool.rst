@@ -87,7 +87,7 @@ shown below. Guides to setting up port forwarding can be found `here
 guide/>`__.
 
 Take note of your IP address either from your router management
-interface or by visiting https://www.whatismyip.com/
+interface or by visiting https://www.whatismyip.com
 
 .. figure:: img/p2pool-ddwrt.png
    :width: 400px
@@ -165,8 +165,8 @@ Setting up dashd
 
 P2Pool requires a full Dash node to be running to get block and
 transaction data. To download and install Dash, visit
-https://www.dash.org/wallets/ on your computer to find the link to the
-latest Dash Core wallet. Click **Linu**, then right-click on **Download
+https://www.dash.org/wallets on your computer to find the link to the
+latest Dash Core wallet. Click **Linux**, then right-click on **Download
 TGZ** for **Dash Core Linux 64 Bit** and select **Copy link address**.
 Go back to your terminal window and enter the following command, pasting
 in the address to the latest version of Dash Core by right clicking or
@@ -289,10 +289,10 @@ external IP (if necessary), fee and donation as follows::
 You can then monitor your node by browsing to the following addresses,
 replacing ``<ip_address>`` with the IP address of your P2Pool node:
 
-- Punchy interface: http://<ip_address>:7903/static/
-- Legacy interface: http://<ip_address>:7903/static/legacy/
-- Status interface: http://<ip_address>:7903/static/status/
-- Extended interface: http://<ip_address>:7903/static/ext/
+- Punchy interface: http://<ip_address>:7903/static
+- Legacy interface: http://<ip_address>:7903/static/legacy
+- Status interface: http://<ip_address>:7903/static/status
+- Extended interface: http://<ip_address>:7903/static/ext
 
 .. image:: img/p2pool-antminer.png
    :width: 400px
