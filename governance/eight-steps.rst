@@ -40,11 +40,11 @@ Manage your identity and reputation
   newcomers are always welcome. However, because of the way proposals
   work, there needs to be reasonable trust that the work promised in the
   proposal will be completed if it passes. If you are new, consider
-  starting with a smaller proposal first to prove your ability to deliver
-  on time and budget. Attaching your real name or `Keybase
-  <https://keybase.io>`_ identity to a proposal also helps build trust. If
-  you are a making a large proposal, get a team together and nominate (or
-  hire) one person to serve as community liaison, since posting from
+  starting with a smaller proposal first to prove your ability to
+  deliver on time and budget. Attaching your real name or `Keybase
+  <https://keybase.io>`_ identity to a proposal also helps build trust.
+  If you are a making a large proposal, get a team together and nominate
+  (or hire) one person to serve as community liaison, since posting from
   multiple accounts can be confusing.
 
 Run an enthusiastic campaign for your proposal
