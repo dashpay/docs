@@ -5,18 +5,19 @@
 # 
 # Translators:
 # Tikhon Skudarnov <semargsemarg@gmail.com>, 2018
-# Андрей Дегтяр <diusha1711@gmail.com>, 2018
 # Max Aronych <taofgoar@protonmail.com>, 2018
 # Julia Ogonkova <livingflcl@gmail.com>, 2018
+# Дмитрий <dmitry.zhludin@gmail.com>, 2018
+# Андрей Дегтяр <diusha1711@gmail.com>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-12 07:18+0000\n"
+"POT-Creation-Date: 2018-12-18 11:14+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2018\n"
+"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,14 +30,16 @@ msgid ""
 "This guide describes how to set up a Dash masternode. It also describes "
 "various options for hosting and different wallets"
 msgstr ""
+"В этом руководстве описывается настройка мастерноды Dash. Также в нём "
+"описаны различные варианты для хостинга и различные кошельки"
 
 #: ../../masternodes/setup.rst:1
 msgid "dash, guide, masternodes, trezor"
-msgstr ""
+msgstr "dash, руководство, мастерноды, trezor"
 
 #: ../../masternodes/setup.rst:9
 msgid "Setup"
-msgstr ""
+msgstr "Настройка"
 
 #: ../../masternodes/setup.rst:11
 msgid ""
@@ -47,6 +50,12 @@ msgid ""
 " to be made along the way, and optional extra steps to take for increased "
 "security."
 msgstr ""
+"Настройка и запуск мастерноды подразумевают наличие базового понимания Linux"
+" и технологии блокчейн, а также an ability to follow instructions closely. "
+"It also requires regular maintenance and careful security, particularly if "
+"you are not storing your Dash on a hardware wallet. There are some decisions"
+" to be made along the way, and optional extra steps to take for increased "
+"security."
 
 #: ../../masternodes/setup.rst:18
 msgid ""
@@ -59,6 +68,14 @@ msgid ""
 "address and communicate the transaction ID to the hosting service. Simply "
 "follow the steps here."
 msgstr ""
+"Если вы предпочитаете использовать хостинг-сервис мастернод, то несколько "
+"учстников сообщества обеспечивают хостинг на `masternode.me "
+"<https://masternode.me/>`_, `node40.com <https://www.node40.com/hosting/>`_,"
+" `dashmasternode.io <http://dashmasternode.io/>`_ или `masternodehosting "
+"<https://masternodehosting.com/>`_. При использовании данных хостинг-"
+"сервисов, всё, что вам нужно сделать, это отправить одиночную транзакцию в "
+"размере 1000 DASH на специальный адрес и связаться с хостинг-сервисом, "
+"отправив им ID транзакции. Просто следуйте следующим шагам."
 
 #: ../../masternodes/setup.rst:27
 msgid ""
@@ -74,10 +91,21 @@ msgid ""
 "dummies-updated-for-12-1.2680/>`__, as well many more guides for specific "
 "cases in this forum."
 msgstr ""
+"Это руководство в большей степени основано на предыдущих руководствах, "
+"написанных `Bertrand256 <https://github.com/Bertrand256/dash-masternode- "
+"tool/blob/master/README.md>`_, `moocowmoo "
+"<https://github.com/moocowmoo/dashman/blob/master/README.md>`_, `tao "
+"<https://www.dash.org/forum/threads/taos-masternode-setup-guide-for- "
+"dummies-updated-for-12-1.2680/>`_, `BolehVPN "
+"<https://dashpay.atlassian.net/wiki/spaces/DOC/pages/24019061>`_ и tungfa. "
+"Очень популярное оригинальное руководство Тао и ветвь поддержки доступны "
+"`здесь <https://www.dash.org/forum/threads/taos-masternode- setup-guide-for-"
+"dummies-updated-for-12-1.2680/>`__, равно как и большое количество других "
+"руководств на этом форуме по специфическим случаям."
 
 #: ../../masternodes/setup.rst:40
 msgid "Before you begin"
-msgstr ""
+msgstr "Перед началом"
 
 #: ../../masternodes/setup.rst:42
 msgid ""
@@ -85,20 +113,25 @@ msgid ""
 "time. If you are updating a masternode, see :ref:`here <masternode-update>` "
 "instead. You will need:"
 msgstr ""
+"В этом руководстве предполагается, что вы настраиваете одну мастерноду в "
+"первый раз. Если вы обновляете мастерноду, то вместо этого смотрите "
+"информацию :ref:`здесь <masternode-update>`. Вам понадобится:"
 
 #: ../../masternodes/setup.rst:46
 msgid "1000 Dash"
-msgstr ""
+msgstr "1000 DASH"
 
 #: ../../masternodes/setup.rst:47
 msgid ""
 "A wallet to store your Dash, preferably a hardware wallet, although Dash "
 "Core wallet is also supported"
 msgstr ""
+"Кошелёк для хранения DASH, предпочтительно аппаратный кошелёк, хотя кошелёк "
+"Dash Core также поддерживается"
 
 #: ../../masternodes/setup.rst:49
 msgid "A Linux server, preferably a Virtual Private Server (VPS)"
-msgstr ""
+msgstr "Сервер Linux, предпочтительно виртуальный выделенный сервер (VPS)"
 
 #: ../../masternodes/setup.rst:51
 msgid ""
@@ -106,10 +139,14 @@ msgid ""
 "most of the work is done on your Linux VPS, alternative steps for using "
 "macOS or Linux will be indicated where necessary."
 msgstr ""
+"Мы также предполагаем, что вы будете работать из компьютера на базе ОС "
+"Windows. Как бы там ни было, поскольку большая часть работы выполнена на "
+"вашем VPS Linux, alternative steps for using macOS or Linux will be "
+"indicated where necessary."
 
 #: ../../masternodes/setup.rst:58
 msgid "Set up your VPS"
-msgstr ""
+msgstr "Настройка вашего VPS"
 
 #: ../../masternodes/setup.rst:60
 msgid ""
@@ -125,6 +162,19 @@ msgid ""
 " technically possible, it will most likely not work reliably because most "
 "ISPs allocate dynamic IP addresses to home users."
 msgstr ""
+"VPS, более известный как облачный сервер, является полнофункциональной "
+"установкой операционной системы (обычно Linux), работающей на виртуальной "
+"машине. Виртуальная машина позволяет провайдеру VPS запускать несколько "
+"систем на одном физическом сервере, что делает ее более эффективной и "
+"намного более дешевой, чем использование одной операционной системы на "
+"\"голом железе\" каждого сервера. VPS идеально подходит для размещения "
+"мастер-узла Dash, поскольку он обычно обеспечивает гарантированное время "
+"безотказной работы, избыточность в случае аппаратного сбоя и статический IP-"
+"адрес, необходимый для того, чтобы вы оставались в очереди платежей мастер-"
+"узла. Хотя технически возможно запустить мастер-узел из дома на настольном "
+"компьютере, он, скорее всего, не будет работать надежно, поскольку "
+"большинство интернет-провайдеров выделяют динамические IP-адреса домашним "
+"пользователям."
 
 #: ../../masternodes/setup.rst:73
 msgid ""
@@ -137,10 +187,18 @@ msgid ""
 "click **+** to add a new server. Select a location for your new server on "
 "the following screen:"
 msgstr ""
+"Мы будем использовать хостинг `Vultr <https://www.vultr.com/>`_ в качестве "
+"примера VPS, хотя `DigitalOcean <https://www.digitalocean.com/>`_, `Amazon "
+"EC2 <https://aws.amazon.com/ec2>`_, `Google Cloud "
+"<https://cloud.google.com/compute/>`_, `Choopa <https://www.choopa.com/>`_ и"
+" `OVH <https://www.ovh.com/>`_ также популярные варианты. First create an "
+"account and add credit. Then go to the Servers menu item on the left and "
+"click **+** to add a new server. Select a location for your new server on "
+"the following screen:"
 
 #: ../../masternodes/setup.rst:85
 msgid "Vultr server location selection screen"
-msgstr ""
+msgstr "Экран выбора расположения Vultr-сервера"
 
 #: ../../masternodes/setup.rst:87
 msgid ""
@@ -148,51 +206,61 @@ msgid ""
 "latest version because 16.04 is an LTS release of Ubuntu, which will be "
 "supported with security updates for 5 years instead of the usual 9 months."
 msgstr ""
+"В качестве типа сервера выберите Ubuntu 16.04 x64. Мы используем 16.04 "
+"вместо последней версии, потому что 16.04 - это LTS-релиз Ubuntu, который на"
+" протяжении 5 лет будет поддерживаться обновлениями безопасности вместо "
+"обычных 9 месяцев."
 
 #: ../../masternodes/setup.rst:95
 msgid "Vultr server type selection screen"
-msgstr ""
+msgstr "Экран выбора типа Vultr-сервера"
 
 #: ../../masternodes/setup.rst:97
 msgid "Select a server size offering at least 2GB of memory."
-msgstr ""
+msgstr "Выберите размер сервера, которому необходимо как минимум 2ГБ памяти."
 
 #: ../../masternodes/setup.rst:102
 msgid "Vultr server size selection screen"
-msgstr ""
+msgstr "Экран выбора размера Vultr-сервера"
 
 #: ../../masternodes/setup.rst:104
 msgid ""
 "Enter a hostname and label for your server. In this example we will use "
 "``dashmn1`` as the hostname."
 msgstr ""
+"Введите имя хоста и метку для вашего сервера. В данном примере в качестве "
+"имени хоста мы будем использовать ``dashmn1``."
 
 #: ../../masternodes/setup.rst:110
 msgid "Vultr server hostname & label selection screen"
-msgstr ""
+msgstr "Экран выбора имени хоста и метки для Vultr-сервера"
 
 #: ../../masternodes/setup.rst:112
 msgid ""
 "Vultr will now install your server. This process may take a few minutes."
 msgstr ""
+"Vultr теперь выполнит установку вашего сервера. Этот процесс может занять "
+"несколько минут."
 
 #: ../../masternodes/setup.rst:117
 msgid "Vultr server installation screen"
-msgstr ""
+msgstr "Экран инсталляции Vultr-сервера"
 
 #: ../../masternodes/setup.rst:119
 msgid ""
 "Click **Manage** when installation is complete and take note of the IP "
 "address, username and password."
 msgstr ""
+"Когда инсталляция будет завершена, кликните **Manage** и обратите внимание "
+"на IP-адрес, имя пользователя и пароль."
 
 #: ../../masternodes/setup.rst:125
 msgid "Vultr server management screen"
-msgstr ""
+msgstr "Экран управления Vultr-сервера"
 
 #: ../../masternodes/setup.rst:128
 msgid "Set up your operating system"
-msgstr ""
+msgstr "Настройте вашу операционную систему"
 
 #: ../../masternodes/setup.rst:130
 msgid ""
@@ -204,10 +272,17 @@ msgid ""
 "can ssh directly from the terminal - simply type ``ssh root@<server_ip>`` "
 "and enter your password when prompted."
 msgstr ""
+"Мы начнем с подключения к вашему вновь подготовленному серверу. On Windows, "
+"we will first download приложение, которое называется PuTTY для соединения с"
+" сервером. Отправляйтесь на `страницу загрузки PuTTY "
+"<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_ and "
+"select the appropriate MSI installer for your system. On Mac or Linux you "
+"can ssh directly from the terminal - simply type ``ssh root@<server_ip>`` и "
+"ввести пароль по запросу."
 
 #: ../../masternodes/setup.rst:141
 msgid "PuTTY download page"
-msgstr ""
+msgstr "Страница загрузки PuTTY"
 
 #: ../../masternodes/setup.rst:143
 msgid ""
@@ -217,10 +292,16 @@ msgid ""
 "the first time you are connecting to this server. You can safely click "
 "**Yes** to trust this server in the future."
 msgstr ""
+"Выполните двойной щелчок по скачанному файлу и установите PuTTY, затем "
+"запутсите приложение из меню Пуск. Введите IP-адрес сервера в поле **Host "
+"Name** и кликните **Open**. Вы увидите свидетельство, предупреждающее о том,"
+" что к этому серверу вы подсоединяетесь впервые. Будет вполне безопасно, "
+"если вы кликните **Yes**, этим вы доверите подсоединение к этому серверу в "
+"будущем."
 
 #: ../../masternodes/setup.rst:152
 msgid "PuTTY security alert when connecting to a new server"
-msgstr ""
+msgstr "Оповещение безопасности PuTTY при подсоединении к новому серверу"
 
 #: ../../masternodes/setup.rst:154
 msgid ""
@@ -228,10 +309,13 @@ msgid ""
 " by logging in to your server with the user ``root`` and password supplied "
 "by your hosting provider."
 msgstr ""
+"Теперь вы подсоединены к серверу и должны увидеть окно терминала. Начните с "
+"авторизации на сервере с ``root`` правами, введите логин и пароль, "
+"предложенные вашим хостинг-провайдером."
 
 #: ../../masternodes/setup.rst:161
 msgid "Password challenge when connecting to your VPS for the first time"
-msgstr ""
+msgstr "Проверка пароля при первом соединении с VPS"
 
 #: ../../masternodes/setup.rst:163
 msgid ""
@@ -241,6 +325,11 @@ msgid ""
 " PuTTY window and right-clicking in the window. The text will paste at the "
 "current cursor location::"
 msgstr ""
+"Вам необходимо немедленно сменить свой рут-пароль и сохранить его  в "
+"надёжном месте для безопасности. Можно скопировать и вставить любую из "
+"следующих команд, выбрав её в браузере и нажав **Ctrl + C**, затем перейти в"
+" окно PuTTY и кликнуть правой кнопкой мыши в этом окне. Текст будет вставлен"
+" на текущем месте расположения курсора::"
 
 #: ../../masternodes/setup.rst:171
 msgid ""
@@ -248,6 +337,10 @@ msgid ""
 "Next we will create a new user with the following command, replacing "
 "``<username>`` with a username of your choice::"
 msgstr ""
+"Введите и подтвердите новый пароль (предпочительно, чтобы он был длинным и "
+"сгенерированным случайным образом). Далее произойдёт создание нового "
+"пользователя with the following command, replacing ``<username>`` with a "
+"username of your choice::"
 
 #: ../../masternodes/setup.rst:177
 msgid ""
@@ -257,12 +350,19 @@ msgid ""
 "user has been created, we will add them to the sudo group so they can "
 "perform commands as root::"
 msgstr ""
+"Вам будет предложено задать пароль. Введите и подтвердите новый пароль "
+"(который отличается от вашего рут-пароля) и сохраните его в безопасном "
+"месте. Также вы можете ввести информацию о пользователе, но эти поля можно "
+"не заполнять. После создания пользователя, мы добавим их в sudo группу, "
+"чтобы они могли выполнять команды в качестве рут-пользователей:"
 
 #: ../../masternodes/setup.rst:185
 msgid ""
 "Now, while still as root, we will update the system from the Ubuntu package "
 "repository::"
 msgstr ""
+"Теперь, пока мы все ещё с правами администратора, обновим систему с помощью "
+"пакета репозитория Ubuntu::"
 
 #: ../../masternodes/setup.rst:191
 msgid ""
@@ -272,11 +372,16 @@ msgid ""
 "apply any necessary kernel updates, and then login to our newly secured "
 "environment as the new user::"
 msgstr ""
+"Система покажет список обновляемых пакетов. Нажмите **Y** и **Enter**, чтобы"
+" установить пакеты. Теперь мы установим брандмауэр (и некоторые другие "
+"пакеты, которые будем использовать позже), добавим память подкачки и "
+"перезагрузим сервер, чтобы применить все необходимые обновления ядра, а "
+"затем войдем в нашу новую защищенную среду как новый пользователь::"
 
 #: ../../masternodes/setup.rst:199 ../../masternodes/setup.rst:209
 #: ../../masternodes/setup.rst:437
 msgid "(press **Y** and **Enter** to confirm)"
-msgstr ""
+msgstr "(нажмите **Y** и **Enter** для подтверждения)"
 
 #: ../../masternodes/setup.rst:219
 msgid ""
@@ -284,6 +389,9 @@ msgid ""
 "word/number), then press **Ctrl + X** to close the editor, then **Y** and "
 "**Enter** save the file."
 msgstr ""
+"В конце файла добавьте следующую строку (чтобы разделить каждое слово/цифру,"
+" нажмите tab), затем нажмите **Ctrl + X**, чтобы закрыть редактор и потом "
+"**Y** и **Enter** для сохранения файла."
 
 #: ../../masternodes/setup.rst:227
 msgid ""
@@ -302,11 +410,11 @@ msgstr ""
 
 #: ../../masternodes/setup.rst:238
 msgid "Then reboot the server:"
-msgstr ""
+msgstr "Затем перезагрузите сервер:"
 
 #: ../../masternodes/setup.rst:244
 msgid "PuTTY will disconnect when the server reboots."
-msgstr ""
+msgstr "При перезагрузке сервера PuTTY отсоединится."
 
 #: ../../masternodes/setup.rst:246
 msgid ""
@@ -338,10 +446,19 @@ msgid ""
 "to enhance security and protect yourself against hacking. This guide will "
 "describe the steps for both hardware wallets and Dash Core."
 msgstr ""
+"Адрес Dash с одним неизрасходованным выводом транзакции (UTXO), равным ровно"
+" 1000 DASH, необходим для работы с главным узлом. После того, как он был "
+"отправлен, необходимо извлечь различные ключи, относящиеся к транзакции, для"
+" последующей записи в файл конфигурации в качестве доказательства того, что "
+"транзакция была успешно завершена. Мастернод может быть запущен из "
+"аппаратного кошелька или официального кошелька Dash Core, хотя настоятельно "
+"рекомендуется использовать аппаратный кошелек для повышения безопасности и "
+"защиты от взлома. В этом руководстве будут описаны шаги для аппаратных "
+"кошельков и Dash Core."
 
 #: ../../masternodes/setup.rst:272
 msgid "Option 1: Sending from a hardware wallet"
-msgstr ""
+msgstr "Способ 1: Отправка из аппаратного кошелька"
 
 #: ../../masternodes/setup.rst:274
 msgid ""
@@ -391,6 +508,10 @@ msgid ""
 "<https://github.com/Bertrand256/dash-masternode-tool/releases>`__. Unzip and"
 " run the file. The following window appears."
 msgstr ""
+"Пока мы ждем завершения 15 подтверждений, загрузите последнюю версию Dash "
+"Masternode Tool (DMT) from the GitHub releases page `here "
+"<https://github.com/Bertrand256/dash-masternode-tool/releases>`__. "
+"Распакуйте и запустите файл. Появится следующее окно."
 
 #: ../../masternodes/setup.rst:311
 msgid "Dash Masternode Tool startup screen"
@@ -402,10 +523,13 @@ msgid ""
 "verify that the connection is working. Then connect your Trezor device and "
 "click **Test HW** to verify the Trezor connection is working."
 msgstr ""
+"Кликните **Check RPC connection** в верхнем левом углу главного окна to "
+"verify that the connection is working. Then connect your Trezor device and "
+"click **Test HW** to verify the Trezor connection is working."
 
 #: ../../masternodes/setup.rst:323
 msgid "Dash Masternode Tool successful connection confirmations"
-msgstr ""
+msgstr "Подтверждения успешного соединения Dash Masternode Tool"
 
 #: ../../masternodes/setup.rst:325
 msgid ""
@@ -413,6 +537,8 @@ msgid ""
 "sequence of steps as shown in this screenshot from DMT developer "
 "Bertrand256:"
 msgstr ""
+"Сейчас, чтобы извлечь ID транзакции, мы используем DMT. Следуйте описанным "
+"этапам, как показано на этих скриншотах от разработчика DMT Bertrand256:"
 
 #: ../../masternodes/setup.rst:332
 msgid "Dash Masternode Tool configuration steps"
@@ -424,12 +550,17 @@ msgid ""
 "defined when setting up your server, dashmn1 in this case. You can view this"
 " in the first line of the output of dashman/dashman status."
 msgstr ""
+"Здесь введите имя вашей мастерноды. Оно должно соответствовать имени хоста, "
+"как определено при настройке вашего сервера, в данном случае dashmn1. Вы "
+"можете просмотреть это в первой строке вывода статуса dashman/dashman."
 
 #: ../../masternodes/setup.rst:338
 msgid ""
 "Enter the IP address of your masternode here. This was given to you by the "
 "VPS provider when you set up the server."
 msgstr ""
+"Здесь введите IP-адрес вашей мастерноды. Его вы получили от вашего VPS-"
+"провайдера во время настройки сервера."
 
 #: ../../masternodes/setup.rst:340
 msgid "Enter the TCP port number. This should be 9999."
@@ -438,6 +569,7 @@ msgstr "Введите номер TCP порта. Он должен быть 999
 #: ../../masternodes/setup.rst:341
 msgid "Click Generate new to generate a new masternode private key."
 msgstr ""
+"Кликните Generate new, чтобы сгенерировать новый приватный ключ мастерноды. "
 
 #: ../../masternodes/setup.rst:342
 msgid ""
@@ -453,6 +585,9 @@ msgid ""
 " can verify this against the BIP32 path shown on the receive tab in your "
 "Trezor Wallet for the transaction."
 msgstr ""
+"Кликните на стрелочку → для получение BIP32 пути из адреса вашего залога. Вы"
+" можете сверить его с BIP32 путём, который отображается во вкладке Reveive в"
+" вашем Trezor кошельке для этого перевода. "
 
 #: ../../masternodes/setup.rst:347
 msgid ""
@@ -461,6 +596,9 @@ msgid ""
 "TX ID shown on the confirmation page of the blockchain explorer for your "
 "collateral address."
 msgstr ""
+"Кликните Lookup, чтобы найти TX ID транзакции, которая перевела залог на "
+"этот адрес. Вы можете сверить его с TX ID, который отображается для адреса "
+"вашего залога на странице подтверждения перевода в блокчейн-обозревателе."
 
 #: ../../masternodes/setup.rst:355
 msgid "Dash Masternode Tool with configuration ready to start masternode"
@@ -472,20 +610,25 @@ msgid ""
 "address and continue with the next step: :ref:`installing Dash Core on your "
 "VPS <masternode-setup-install-dashcore>`."
 msgstr ""
+"Оставьте DMT открытым, обратите внимание на приватный ключ мастерноды и "
+"адрес для залога и переходите на следующий шаг: :ref:`установка Dash Core на"
+" вашем VPS <masternode-setup-install-dashcore>`."
 
 #: ../../masternodes/setup.rst:362
 msgid "Option 2: Sending from Dash Core wallet"
-msgstr ""
+msgstr "Способ 2: Отправка из кошелька Dash Core"
 
 #: ../../masternodes/setup.rst:364
 msgid ""
 "Open Dash Core wallet and wait for it to synchronize with the network. It "
 "should look like this when ready:"
 msgstr ""
+"Откройте кошелёк Dash Core и дождитесь пока он синхронизируется с сетью. По "
+"завершении это должно выглядеть вот так:"
 
 #: ../../masternodes/setup.rst:370
 msgid "Fully synchronized Dash Core wallet"
-msgstr ""
+msgstr "Полностью синхрониируйте кошелёк Dash Core"
 
 #: ../../masternodes/setup.rst:372
 msgid ""
@@ -493,10 +636,13 @@ msgid ""
 "commands into the console to generate a masternode key and get a fresh "
 "address::"
 msgstr ""
+"Кликните **Инструменты > Консоль отладки**, чтобы открыть консоль. Type the "
+"following two commands into the console to generate a masternode key and get"
+" a fresh address::"
 
 #: ../../masternodes/setup.rst:382
 msgid "Generating a masternode private key in Dash Core wallet"
-msgstr ""
+msgstr "Генерация приватного ключа мастерноды в кошельке Dash Core"
 
 #: ../../masternodes/setup.rst:384
 msgid ""
@@ -524,10 +670,18 @@ msgid ""
 "continue with the next step at this point already: installing Dash Core on "
 "your VPS."
 msgstr ""
+"Теперь одиночной транзакцией отправьте точную сумму, равную 1000 DASH на "
+"account address you generated in the previous step. Эти деньги можно "
+"отправить как с другого кошелька, так и со средств, которые находятся на "
+"вашем текущем кошельке. Once the transaction is complete, view the "
+"transaction in a `blockchain explorer <http://insight.dash.org/insight/>`_ "
+"by searching for the address. Понадобится 15 подтверждений, before you can "
+"start the masternode, but you can continue with the next step at this point "
+"already: установка Dash Core на вашем VPS."
 
 #: ../../masternodes/setup.rst:414
 msgid "Install Dash Core"
-msgstr ""
+msgstr "Установка Dash Core"
 
 #: ../../masternodes/setup.rst:416
 msgid ""
@@ -545,16 +699,24 @@ msgid ""
 "will allow you to understand all of the key steps involved in preparing your"
 " masternode."
 msgstr ""
+"Снова откройте PuTTY или консоль и подключитесь, используя имя пользователя "
+"и пароль, которые вы только что создали для своего нового пользователя без "
+"полномочий root. Существует два варианта установки Dash Core: автоматический"
+" вариант с использованием утилиты сценариев dashman от члена команды Dash "
+"Core moocowmoo и более сложный вариант, который позволит вам понять все "
+"ключевые этапы подготовки вашей мастерноды."
 
 #: ../../masternodes/setup.rst:428
 msgid "Option 1: Automated installation using dashman"
-msgstr ""
+msgstr "Способ 1: Автоматическая инсталляция с использованием dashman"
 
 #: ../../masternodes/setup.rst:430
 msgid ""
 "To install Dash using dashman, enter the following commands after logging "
 "in::"
 msgstr ""
+"Чтобы установить Dash, используя dashman, после входа в систему введите "
+"следующие команды::"
 
 #: ../../masternodes/setup.rst:439
 msgid ""
@@ -571,6 +733,10 @@ msgid ""
 "private key generated in the previous step. Edit the configuration file "
 "using the following command::"
 msgstr ""
+"Ваша система теперь работает как стандартный узел Dash и занята завершением "
+"синхронизации с блокчейном. Теперь нам нужно ввести закрытый ключ мастера, "
+"сгенерированный на предыдущем шаге. Отредактируйте файл конфигурации, "
+"используя следующую команду:"
 
 #: ../../masternodes/setup.rst:453
 msgid ""
@@ -583,13 +749,15 @@ msgstr ""
 
 #: ../../masternodes/setup.rst:462
 msgid "Entering masternodeprivkey in dash.conf on the masternode"
-msgstr ""
+msgstr "Ввод masternodeprivkey в файле dash.conf on the masternode"
 
 #: ../../masternodes/setup.rst:464
 msgid ""
 "At this point you should restart dashd to load the new configuration file by"
 " typing the following::"
 msgstr ""
+"На этом этапе вы должны перезапустить dashd, чтобы загрузить новый файл "
+"конфигурации, набрав следующее::"
 
 #: ../../masternodes/setup.rst:469
 msgid ""
@@ -597,6 +765,9 @@ msgid ""
 "until all blockchain synchronisation and the 15 confirmations for the "
 "collateral transaction are complete::"
 msgstr ""
+"Для подтверждения нажмите **Y** и **Enter**. Then check the sync status and "
+"wait until all blockchain synchronisation and the 15 confirmations for the "
+"collateral transaction are complete::"
 
 #: ../../masternodes/setup.rst:478
 msgid "dashman status output showing masternode ready to be started"
@@ -614,6 +785,8 @@ msgid ""
 "Choose nano as your editor and enter the following line at the end of the "
 "file, after the line for sentinel::"
 msgstr ""
+"В качестве редактора выберите nano и в конце файла введите следующую строку,"
+" после строки Sentinel::"
 
 #: ../../masternodes/setup.rst:491
 msgid ""
@@ -627,10 +800,12 @@ msgid ""
 "Continue with the :ref:`next step to start your masternode <masternode-"
 "setup-start>`."
 msgstr ""
+"Для продолжения перейдите по ссылке :ref:`следующий шаг для запуска "
+"мастерноды <masternode-setup-start>`."
 
 #: ../../masternodes/setup.rst:499
 msgid "Option 2: Manual installation"
-msgstr ""
+msgstr "Способ 2: Инсталляция вручную"
 
 #: ../../masternodes/setup.rst:501
 msgid ""
@@ -718,10 +893,12 @@ msgid ""
 "``masternodeprivkey``: this is the private key you generated in the previous"
 " step"
 msgstr ""
+"``masternodeprivkey``: это приватный ключ, который вы сгенерировали в "
+"предыдущем шаге"
 
 #: ../../masternodes/setup.rst:585
 msgid "``externalip``: this is the IP address of your VPS"
-msgstr ""
+msgstr "``externalip``: это IP-адрес вашего VPS"
 
 #: ../../masternodes/setup.rst:587
 msgid "The result should look something like this:"
@@ -760,6 +937,8 @@ msgid ""
 "Choose nano as your editor and enter the following lines at the end of the "
 "file::"
 msgstr ""
+"В качестве редактора выберите nano и в конце файла введите следующие "
+"строки::"
 
 #: ../../masternodes/setup.rst:623
 msgid ""
@@ -773,15 +952,15 @@ msgstr ""
 #: ../../masternodes/setup.rst:632
 msgid ""
 "When synchronisation is complete, you should see the following response::"
-msgstr ""
+msgstr "Когда синхронизация будет завершена, вы увидите следующий ответ::"
 
 #: ../../masternodes/setup.rst:646
 msgid "Continue with the next step to start your masternode."
-msgstr ""
+msgstr "Выполните следующий шаг для запуска мастерноды."
 
 #: ../../masternodes/setup.rst:651
 msgid "Start your masternode"
-msgstr ""
+msgstr "Запуск вашей мастерноды"
 
 #: ../../masternodes/setup.rst:653
 msgid ""
@@ -799,12 +978,16 @@ msgid ""
 "MASTERNODE_SYNC: This indicates the data currently being synchronised in the"
 " masternode"
 msgstr ""
+"MASTERNODE_SYNC: Показывает текущий процесс синхронизации данных в "
+"мастерноде"
 
 #: ../../masternodes/setup.rst:664
 msgid ""
 "MASTERNODE_SYNC_FAILED: Synchronisation could not complete, check your "
 "firewall and restart dashd"
 msgstr ""
+"MASTERNODE_SYNC_FAILED: Не удаётся завершить синхронизацию, проверьте ваш "
+"фаервол и перезапустите dashd"
 
 #: ../../masternodes/setup.rst:666
 msgid ""
@@ -815,14 +998,15 @@ msgstr ""
 #: ../../masternodes/setup.rst:668
 msgid "NEW_START_REQUIRED: Start command must be sent from wallet"
 msgstr ""
+"NEW_START_REQUIRED: Команда о запуске должна быть отправлена из кошелька"
 
 #: ../../masternodes/setup.rst:669
 msgid "PRE_ENABLED: Waiting for network to recognize started masternode"
-msgstr ""
+msgstr "PRE_ENABLED: Ожидание сети для распознавания запущенной мастерноды"
 
 #: ../../masternodes/setup.rst:670
 msgid "ENABLED: Masternode successfully started"
-msgstr ""
+msgstr "ENABLED: Мастернода успешно запущена"
 
 #: ../../masternodes/setup.rst:672
 msgid ""
@@ -833,7 +1017,7 @@ msgstr ""
 
 #: ../../masternodes/setup.rst:677
 msgid "Option 1: Starting from a hardware wallet"
-msgstr ""
+msgstr "Способ 1: Запуск из аппаратного кошелька"
 
 #: ../../masternodes/setup.rst:679
 msgid ""
@@ -872,7 +1056,7 @@ msgstr ""
 
 #: ../../masternodes/setup.rst:709
 msgid "Option 2: Starting from Dash Core wallet"
-msgstr ""
+msgstr "Способ 2: Запуск из кошелька Dash Core"
 
 #: ../../masternodes/setup.rst:711
 msgid ""
@@ -883,7 +1067,7 @@ msgstr ""
 
 #: ../../masternodes/setup.rst:717
 msgid "This should return a string of characters similar to this::"
-msgstr ""
+msgstr "Консоль должна вернуть строку символов, аналогичную этой::"
 
 #: ../../masternodes/setup.rst:723
 msgid ""
@@ -936,6 +1120,14 @@ msgid ""
 "in the following locations (copy and paste the shortcut text into the "
 "**Save** dialog to find it quickly):"
 msgstr ""
+"Сохраните этот файл в папке данных **DashCore** на ПК, на котором запущен "
+"кошелёк Dash Core, задайте имя для файла *masternode.conf*. Возможно "
+"придётся активировать опцию **Показать скрытые файлы и папки**, чтобы эта "
+"папка отображалась. Be sure to select **All files** if using Notepad so you "
+"don't end up with a *.conf.txt* file extension by mistake. For different "
+"operating systems, the DashCore folder can be found in the following "
+"locations (copy and paste the shortcut text into the **Save** dialog to find"
+" it quickly):"
 
 #: ../../masternodes/setup.rst:753
 msgid "Platform"
@@ -955,11 +1147,11 @@ msgstr "Linux"
 
 #: ../../masternodes/setup.rst:755
 msgid "``/home/yourusername/.dashcore``"
-msgstr ""
+msgstr "``/home/yourusername/.dashcore``"
 
 #: ../../masternodes/setup.rst:755
 msgid "``~/.dashcore``"
-msgstr ""
+msgstr "``~/.dashcore``"
 
 #: ../../masternodes/setup.rst:757
 msgid "macOS"
@@ -967,11 +1159,11 @@ msgstr "macOS"
 
 #: ../../masternodes/setup.rst:757
 msgid "``/Macintosh HD/Library/Application Support``"
-msgstr ""
+msgstr "``/Macintosh HD/Library/Application Support``"
 
 #: ../../masternodes/setup.rst:757
 msgid "``~/Library/Application Support/DashCore``"
-msgstr ""
+msgstr "``~/Library/Application Support/DashCore``"
 
 #: ../../masternodes/setup.rst:759
 msgid "Windows"
@@ -979,11 +1171,11 @@ msgstr "Windows"
 
 #: ../../masternodes/setup.rst:759
 msgid "``C:\\Users\\yourusername\\AppData\\Roaming\\Dash Core``"
-msgstr ""
+msgstr "``C:\\Users\\yourusername\\AppData\\Roaming\\Dash Core``"
 
 #: ../../masternodes/setup.rst:759
 msgid "``%APPDATA%\\DashCore``"
-msgstr ""
+msgstr "``%APPDATA%\\DashCore``"
 
 #: ../../masternodes/setup.rst:762
 msgid ""
