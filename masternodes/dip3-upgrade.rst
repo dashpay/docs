@@ -25,6 +25,7 @@ in DIP3. This documentation describes the upgrade procedure in two steps:
 
 1. :ref:`Update the masternode software <masternode-update>`
 2. Register the DIP3 masternode
+
    - :ref:`From a hardware wallet <dmt-dip3-upgrade>`
    - :ref:`From the Dash Core wallet <dashcore-dip3-upgrade>`
 
