@@ -57,8 +57,8 @@ before continuing in order to familiarize yourself with the new concepts
 in DIP3. This documentation describes the commands as if they were
 entered in the Dash Core GUI by opening the console from **Tools > Debug
 console**, but the same result can be achieved on a masternode by
-entering the same commands and adding the prefix ``~/.dashcore/dash-
-cli`` to each command.
+entering the same commands and adding the prefix 
+``~/.dashcore/dash-cli`` to each command.
 
 
 .. _vps-setup:
@@ -281,9 +281,6 @@ wallets and Dash Core.
 Option 1: Sending from a hardware wallet
 ----------------------------------------
 
-**NOTE: This documentation should be considered obsolete until DMT is
-updated to provide DIP3 support.**
-
 Set up your Trezor using the Trezor wallet at https://wallet.trezor.io/
 and send a test transaction to verify that it is working properly. For
 help on this, see :ref:`this guide <hardware-trezor>` - you may also
@@ -322,9 +319,11 @@ and run the file. The following window appears.
 
    Dash Masternode Tool startup screen
 
-Click **Check RPC connection** in the top left corner of the main window
-to verify that the connection is working. Then connect your Trezor
-device and click **Test HW** to verify the Trezor connection is working.
+Click the third button from the left **Check Dash Network Connection**
+in the top left corner of the main window to verify that the connection
+is working. Then connect your Trezor device and click the next button
+**Test Hardware Wallet Connection** to verify the Trezor connection is
+working.
 
 .. image:: img/setup-collateral-connection.png
    :width: 100px
@@ -343,10 +342,9 @@ developer Bertrand256:
 
    Dash Masternode Tool configuration steps
 
-#. Enter the name of your masternode here. This should match the
-   hostname as defined when setting up your server, dashmn1 in this
-   case. You can view this in the first line of the output of
-   dashman/dashman status.
+#. Click the **New** button.
+#. Enter a name for your masternode here. The host name you specified 
+   for your VPS above is a good choice.
 #. Enter the IP address of your masternode here. This was given to you
    by the VPS provider when you set up the server.
 #. Enter the TCP port number. This should be 9999.
