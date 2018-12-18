@@ -1021,6 +1021,20 @@ Lescovex
   designed to assist in the creation of tokens and cryptographic
   contracts.
 
+AvaTrade
+  .. image:: exchanges/avatrade.png
+     :width: 130px
+     :align: right
+     :target: https://www.avatrade.com
+
+  https://www.avatrade.com
+
+  Headquartered in Ireland, with offices around the world and boasting
+  over 200,000 registered customers globally, AvaTrade is committed to
+  empowering people to invest and trade, with confidence, in an
+  innovative and reliable environment. AvaTrade offers Dash trading as
+  well as traditional Forex, CFD and options trading.
+
 SouthXchange
   .. image:: exchanges/southxchange.png
      :width: 200px
@@ -1336,6 +1350,19 @@ Bitit
   Bitit is a broker service offering Bitcoin, Dash and several other
   cryptocurrencies for sale online. Payment in a range of currencies is
   support using both direct banking, credit cards and vouchers.
+
+buycrypto
+  .. image:: exchanges/buycrypto.png
+     :width: 64px
+     :align: right
+     :target: https://buycrypto.gr
+
+  https://buycrypto.gr
+
+  Buycrypto is a peer-to-peer cryptocurrency-fiat exchange geared
+  towards giving Greeks easier access to economically sound money. Dash
+  is available for purchase and sale against the Euro.
+
 
 Coinfinity
   .. image:: exchanges/coinfinity.png
