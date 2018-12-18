@@ -125,7 +125,7 @@ Open DMT and ensure your existing masternode configuration appears.
 Configuration
 -------------
 
-Click the **Migrate to DMN** button to get started. The **Masternode
+Click the **Send ProRegTx** button to get started. The **Masternode
 migration wizard** appears.
 
 .. figure:: img/dmt-dip3-wizard.png
@@ -175,7 +175,8 @@ on the blockchain immediately. A window appears with the final
 configuration information. Click **Save to a file** and enter a new file
 name. This file contains various private and public keys related to the
 ownership, operation and voting for the masternode, so keep it in a
-secure location.
+secure location. Continue below with the :ref:`final step 
+<DMT-enter-BLS>`of entering the BLS key on the masternode.
 
 Option 2: Manual method
 -----------------------
@@ -206,6 +207,8 @@ A window appears with the final configuration information. Click **Save
 to a file** and enter a new file name. This file contains various
 private and public keys related to the ownership, operation and voting
 for the masternode, so keep it in a secure location.
+
+.. _DMT-enter-BLS:
 
 Enter the BLS key on the masternode
 -----------------------------------
