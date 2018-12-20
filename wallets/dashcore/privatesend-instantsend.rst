@@ -156,32 +156,32 @@ created by the mixing process on the **Transactions** tab.
 The following table describes the PrivateSend-related transactions displayed in
 the Type column of the **Transactions** tab:
 
-+------------------------------------+-------------------------------------------+
-| PrivateSend Transaction Type       | Transaction Description                   |
-+====================================+===========================================+
-| PrivateSend Make Collateral Inputs | Wallet funds were moved to collateral     |
-| (*Mixing*)                         | inputs that will be used to make          |
-|                                    | collateral payments. This is done to      |
-|                                    | minimize traceability of collaterals.     |
-+------------------------------------+-------------------------------------------+
-| PrivateSend Create Denominations   | Wallet funds were broken into             |
-| (*Mixing*)                         | PrivateSend denominations (Step 1         |
-|                                    | :ref:`here<privatesend>`)                 |
-+------------------------------------+-------------------------------------------+
-| PrivateSend Denominate             | A transaction was sent to a masternode    |
-| (*Mixing*)                         | in order to participate in a mixing       |
-|                                    | session (Step 3 :ref:`here<privatesend>`) |
-+------------------------------------+-------------------------------------------+
-| PrivateSend Collateral Payment     | The mixing session collateral was         |
-| (*Mixing*)                         | claimed. This fee is charged in ~10%      |
-|                                    | of mixing sessions to prevent spam        |
-|                                    | attacks.                                  |
-+------------------------------------+-------------------------------------------+
-| PrivateSend                        | Mixed funds were used to send a payment   |
-| (*Spending*)                       | to someone. Note: Unlike the previous 4   |
-|                                    | transaction types, this is not a mixing   |
-|                                    | process transaction.                      |
-+------------------------------------+-------------------------------------------+
++------------------------------------+--------------------------------------------+
+| PrivateSend Transaction Type       | Transaction Description                    |
++====================================+============================================+
+| PrivateSend Make Collateral Inputs | Wallet funds were moved to collateral      |
+| (*Mixing*)                         | inputs that will be used to make           |
+|                                    | collateral payments. This is done to       |
+|                                    | minimize traceability of collaterals.      |
++------------------------------------+--------------------------------------------+
+| PrivateSend Create Denominations   | Wallet funds were broken into              |
+| (*Mixing*)                         | PrivateSend denominations (Step 1          |
+|                                    | :ref:`here <privatesend>`)                 |
++------------------------------------+--------------------------------------------+
+| PrivateSend Denominate             | A transaction was sent to a masternode     |
+| (*Mixing*)                         | in order to participate in a mixing        |
+|                                    | session (Step 3 :ref:`here <privatesend>`) |
++------------------------------------+--------------------------------------------+
+| PrivateSend Collateral Payment     | The mixing session collateral was          |
+| (*Mixing*)                         | claimed. This fee is charged in ~10%       |
+|                                    | of mixing sessions to prevent spam         |
+|                                    | attacks.                                   |
++------------------------------------+--------------------------------------------+
+| PrivateSend                        | Mixed funds were used to send a payment    |
+| (*Spending*)                       | to someone. Note: Unlike the previous 4    |
+|                                    | transaction types, this is not a mixing    |
+|                                    | process transaction.                       |
++------------------------------------+--------------------------------------------+
 
 You can also use the coin control feature to view which addresses hold
 mixed denominations ready to be used for PrivateSend transactions. Go to
