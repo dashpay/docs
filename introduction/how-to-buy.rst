@@ -1389,6 +1389,17 @@ Bitcoin Meester
   you to buy and sell Dash (and other cryptocurrencies) OTC in exchange
   for Euro.
 
+Coinvertit
+  .. image:: exchanges/coinvertit.png
+     :width: 200px
+     :align: right
+     :target: https://www.coinvertit.com
+
+  https://www.coinvertit.com
+
+  Based in Romania, Coinvertit is an easy way to buy and sell Dash in
+  exchange for BTC, LTC, BCH and Romanian Leu (RON).
+
 eBitpoint
   .. image:: exchanges/ebitpoint.png
      :width: 200px
