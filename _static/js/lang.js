@@ -1,11 +1,11 @@
 $(document).ready(function() {
 	$('#langselect').val(DOCUMENTATION_OPTIONS['LANGUAGE']);
-	jQuery('link[rel="alternate"]').remove();
+	/* jQuery('link[rel="alternate"]').remove();
 	var link = document.createElement('link');
 	link.rel = "alternate";
 	link.hreflang = "x-default";
 	link.href = "https://docs.dash.org/en/latest/";
-	jQuery('head').append(link);
+	jQuery('head').append(link);*/
 });
 
 $('#langselect').change(function(){
