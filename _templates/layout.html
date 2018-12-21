@@ -18,11 +18,29 @@
 				"name": "Dash Core Group, Inc.",
 				"logo": {
 					"@type": "ImageObject",
-					"url": "https://docs.dash.org/en/latest/_images/dash_logo.png",
+					"url": "https://docs.dash.org/en/stable/_images/dash_logo.png",
 					"width": 1446,
 					"height": 424
 				}
 			}
 		}
 	</script>
+{% endblock %}
+
+{% block linktags %}
+    <link rel="alternate" hreflang="ar" href="https://docs.dash.org/ar/stable/" />
+    <link rel="alternate" hreflang="de" href="https://docs.dash.org/de/stable/" />
+    <link rel="alternate" hreflang="el" href="https://docs.dash.org/el/stable/" />
+    <link rel="alternate" hreflang="en" href="https://docs.dash.org/en/stable/" />
+    <link rel="alternate" hreflang="es" href="https://docs.dash.org/es/stable/" />
+    <link rel="alternate" hreflang="fr" href="https://docs.dash.org/fr/stable/" />
+    <link rel="alternate" hreflang="ja" href="https://docs.dash.org/ja/stable/" />
+    <link rel="alternate" hreflang="ko" href="https://docs.dash.org/ko/stable/" />
+    <link rel="alternate" hreflang="pt" href="https://docs.dash.org/pt/stable/" />
+    <link rel="alternate" hreflang="ru" href="https://docs.dash.org/ru/stable/" />
+    <link rel="alternate" hreflang="vi" href="https://docs.dash.org/vi/stable/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://docs.dash.org/zh_CN/stable/" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://docs.dash.org/zh_TW/stable/" />
+    <link rel="alternate" hreflang="x-default" href="https://docs.dash.org/en/stable/" />
+    {{ super() }}
 {% endblock %}
