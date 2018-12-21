@@ -176,7 +176,7 @@ configuration information. Click **Save to a file** and enter a new file
 name. This file contains various private and public keys related to the
 ownership, operation and voting for the masternode, so keep it in a
 secure location. Continue below with the :ref:`final step 
-<DMT-enter-BLS>`of entering the BLS key on the masternode.
+<DMT-enter-BLS>` of entering the BLS key on the masternode.
 
 Option 2: Manual method
 -----------------------
