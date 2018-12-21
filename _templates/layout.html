@@ -42,5 +42,8 @@
     <link rel="alternate" hreflang="zh-Hans" href="https://docs.dash.org/zh_CN/latest/" />
     <link rel="alternate" hreflang="zh-Hant" href="https://docs.dash.org/zh_TW/latest/" />
     <link rel="alternate" hreflang="x-default" href="https://docs.dash.org/en/latest/" />
+    <script>
+    	jQuery('link[rel="alternate"]').remove();
+    </script>
     {{ super() }}
 {% endblock %}
