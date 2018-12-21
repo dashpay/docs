@@ -44,10 +44,3 @@
     <link rel="alternate" hreflang="x-default" href="https://docs.dash.org/en/latest/" />
     {{ super() }}
 {% endblock %}
-
-{% block footer %}
-    <script type="text/javascript">
-    	jQuery('link[rel="alternate"]').remove();
-    </script>
-    {{ super() }}
-{% endblock %}
