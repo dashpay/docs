@@ -1,12 +1,15 @@
 $(document).ready(function() {
 	$('#langselect').val(DOCUMENTATION_OPTIONS['LANGUAGE']);
 	jQuery('link[rel="alternate"]').remove();
-	var link = document.createElement('link');
-	link.rel = "alternate";
-	link.hreflang = "x-default";
-	link.href = "https://docs.dash.org/en/latest/";
-	jQuery('head').append(link);
-	console.log('Test lang loaded')
+	$.each(DOCUMENTATION_OPTIONS['LANGUAGE'], function(index, value) {
+		var link = document.createElement('link');
+		var pageURL = $(location).attr("href");
+		pageURL = pageURL.replace("https://docs.dash.org/" + value , "")
+		link.rel = "alternate";
+		link.hreflang = value;
+		link.href = "https://docs.dash.org/" + value + pageURL;
+		jQuery('head').append();
+	});
 });
 
 $('#langselect').change(function(){
