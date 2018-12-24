@@ -1,6 +1,8 @@
 $(document).ready(function() {
+	/* Select currently language */
 	$('#langselect').val(DOCUMENTATION_OPTIONS['LANGUAGE']);
-	jQuery('link[rel="alternate"]').remove();
+	
+	/* Set alternate links */
 	var langs = [ "de", "en", "es", "fr", "pt", "vi", "el", "ru", "ko", "ja", "zh-Hans", "zh-Hant", "ar", "x-default" ];
 	var pageURL = $(location).attr("href");
 	pageURL = pageURL.replace("https://docs.dash.org/" + DOCUMENTATION_OPTIONS['LANGUAGE'] , "");
