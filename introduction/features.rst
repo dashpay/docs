@@ -94,8 +94,8 @@ You can view a practical guide to use PrivateSend
 The PrivateSend process works like this:
 
 #. PrivateSend begins by breaking your transaction inputs down into
-   standard denominations. These denominations are 0.01 Dash, 0.1 DASH,
-   1 DASH and 10 DASH -- much like the paper money you use every day.
+   standard denominations. These denominations are 0.001, 0.01, 0.1, 1
+   and 10 DASH -- much like the paper money you use every day.
 #. Your wallet then sends requests to specially configured software
    nodes on the network, called "masternodes". These masternodes are
    informed then that you are interested in mixing a certain
@@ -491,7 +491,7 @@ increases, the space in each block becomes a scarce commodity. Because
 miners are not obliged to include any transaction in the blocks they
 produce, once blocks are full, a voluntary transaction fee can be
 included as an incentive to the miner to process the transaction. Most
-wallets include a small fee by default, although many miners will
+wallets include a small fee by default, although some miners will
 process transactions even if no fee is included.
 
 The release of Dash 0.12.2.0 and activation of DIP0001 saw a
@@ -499,13 +499,19 @@ simultaneous reduction of fees by a factor of 10, while the block size
 was increased from 1MB to 2MB to promote continued growth of low-cost
 transactions even as the cost of Dash rises. Dash also supports
 :ref:`instantsend` and :ref:`privatesend` transactions, which operate on
-a different and mandatory fee schedule. The fee schedule for Dash
-12.2.x as of December 2017 is as follows:
+a different and mandatory fee schedule. Dash 0.13.0.0 introduced
+InstantSend autolocks, which causes masternodes to automatically attempt
+to lock any transaction with 4 or fewer inputs — which are referred to
+as “simple” transactions — and removes the additional fee for
+InstantSend. The fee schedule for Dash 0.13.x as of December 2018 is as
+follows:
 
 +----------------------+-----------------+-----------------------------------+
 | Transaction type     | Recommended fee | Per unit                          |
 +======================+=================+===================================+
 | Standard transaction | .00001 DASH     | Per kB of transaction data        |
++----------------------+-----------------+-----------------------------------+
+| InstantSend autolock | .00001 DASH     | Per kB of transaction data        |
 +----------------------+-----------------+-----------------------------------+
 | InstantSend          | .0001 DASH      | Per transaction input             |
 +----------------------+-----------------+-----------------------------------+
@@ -515,26 +521,27 @@ a different and mandatory fee schedule. The fee schedule for Dash
 As an example, a standard and relatively simple transaction on the Dash
 network with one input, one output and a possible change address
 typically fits in the range of 200 - 400 bytes. Assuming a price of
-US$800 per DASH, the fee falls in the range of $0.0015 - $0.0030, or
-well under half a cent. Processing the transaction using InstantSend at
-the same price would add $0.08 or eight cents to the transaction. These
-fees apply regardless of the Dash or dollar value of the transaction
-itself.
+US$100 per DASH, the fee falls in the range of $0.0002 - $0.0004, or
+1/50th of a cent. Processing a simple transaction using InstantSend at
+the same price is free of charge, while more complex InstantSend
+transactions may cost around 1-2 cents per transaction, depending on the
+number of inputs. These fees apply regardless of the Dash or dollar
+value of the transaction itself.
 
-PrivateSend works by creating denominations of 10, 1, 0.1 and 0.01 DASH
-and then mixing these denominations with other users. Creation of the
-denominations is charged at the default fee for a standard transaction.
-Mixing is free, but to prevent spam attacks, an average of one in ten
-mixing transactions are charged a fee of 0.001 DASH. Spending inputs
-mixed using PrivateSend incurs the usual standard or InstantSend fees,
-but to avoid creating a potentially identifiable change address, the fee
-is always rounded up to the lowest possible denomination. This is
-typically .01 DASH, so it is important to deduct the fee from the amount
-being sent if possible to minimise fees. Combining InstantSend and
-PrivateSend may be expensive due to this requirement and the fact that a
-PrivateSend transaction may require several inputs, while InstantSend
-charges a fee of 0.0001 DASH per input. Always check your fees before
-sending a transaction.
+PrivateSend works by creating denominations of 10, 1, 0.1, 0.01 and
+0.001 DASH and then mixing these denominations with other users.
+Creation of the denominations is charged at the default fee for a
+standard transaction. Mixing is free, but to prevent spam attacks, an
+average of one in ten mixing transactions are charged a fee of 0.0001
+DASH. Spending inputs mixed using PrivateSend incurs the usual standard
+or InstantSend fees, but to avoid creating a potentially identifiable
+change address, the fee is always rounded up to the lowest possible
+denomination. This is typically .001 DASH, so it is important to deduct
+the fee from the amount being sent if possible to minimise fees.
+Combining InstantSend and PrivateSend may be expensive due to this
+requirement and the fact that a PrivateSend transaction may require
+several inputs, while InstantSend charges a fee of 0.0001 DASH per
+input. Always check your fees before sending a transaction.
 
 
 .. _evolution:

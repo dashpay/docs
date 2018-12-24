@@ -21,7 +21,7 @@ anonymous properties as cash withdrawn from an ATM, for example. The
 mixing and denomination process is seamless, automatic, and requires no
 intervention on the part of the user. The current implementation of
 PrivateSend in the Dash Core wallet allows any amount of Dash to be
-mixed for later use in PrivateSend transactions. As of April 2018,
+mixed for later use in PrivateSend transactions. As of December 2018,
 PrivateSend is not currently available in other Dash wallets.
 
 Knowledge of the exact number of rounds of PrivateSend mixing used in
@@ -51,7 +51,7 @@ Configuration
    collusion. 16 is the highest number of rounds currently available.
 
    NOTE: To prevent system abuse, an average of one in ten rounds of
-   masternode mixing incurs a fee of .001 DASH.
+   masternode mixing incurs a fee of .0001 DASH.
 
 3. Enter a target value for **Amount of Dash to keep anonymized**. This
    value provides a lower boundary on the final amount of funds to be
@@ -106,7 +106,10 @@ balance will gradually increase. This process can take some time, so be
 patient. You can monitor the process in more detail as described in the
 following section.
 
-Any of the following actions will interrupt the mixing process. Because the transactions are atomic (they either take place completely, or do not take place at all), it should be possible to safely interrupt PrivateSend mixing at any time.
+Any of the following actions will interrupt the mixing process. Because
+the transactions are atomic (they either take place completely, or do
+not take place at all), it should be possible to safely interrupt
+PrivateSend mixing at any time.
 
 - Clicking the Stop Mixing button on the Overview tab
 - Closing the client before PrivateSend mixing is completed
@@ -192,7 +195,7 @@ been completed. This is to ensure that an efficient combination of
 addresses can be used as inputs in PrivateSend transactions without too
 much change, since amount in a PrivateSend transaction must be rounded
 up to completely spend all inputs. The current minimum balance for an
-input used in a PrivateSend transaction is 0.01000010 DASH.
+input used in a PrivateSend transaction is 0.00100010 DASH.
 
 .. figure:: img/privatesend-addresses.png
    :width: 400px
@@ -220,7 +223,7 @@ will change to show your PrivateSend balance instead of the total
 balance. You can then enter the **Pay To** address, **Label**,
 **Amount** and click **Send** as usual. Your payment will be rounded up
 to completely spend the lowest possible denomination of mixed balance
-available (currently to the nearest 0.01 DASH). You will be prompted to
+available (currently to the nearest 0.001 DASH). You will be prompted to
 enter your password and receive a detailed breakdown of the fee
 structure for PrivateSend before sending.
 
@@ -246,7 +249,6 @@ the following:
 - Dash Core Wallet
 - Dash Android Wallet
 - Dash iOS Wallet
-- Dash Copay Wallet
 - My Dash Wallet
 - Kraken
 - Bitrefill
@@ -268,13 +270,13 @@ output can be used as an input in another InstantSend transaction. This
 differs from inputs used in normal transactions, which can be spent
 after just one confirmation regardless of whether the Dash was received
 using InstantSend or not. A higher fee will be charged for InstantSend
-transactions, according to the :ref:`fee schedule <fees>`. Note that the
-receiving wallet must also be aware of InstantSend in order to be able
-to immediately continue with the transaction or display an appropriate
-notification that the transaction should be considered locked. If the
-receiving wallet is not aware of InstantSend, it will simply appear as a
-normal transaction and you will need to wait for standard block
-confirmations.
+transactions with more than four inputs, according to the :ref:`fee
+schedule <fees>`. Note that the receiving wallet must also be aware of
+InstantSend in order to be able to immediately continue with the
+transaction or display an appropriate notification that the transaction
+should be considered locked. If the receiving wallet is not aware of
+InstantSend, it will simply appear as a normal transaction and you will
+need to wait for standard block confirmations.
 
 To pay with InstantSend, simply check the relevant checkbox in your app.
 The following screenshots indicate where this setting can be found in
