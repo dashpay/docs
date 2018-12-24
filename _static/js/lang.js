@@ -1,13 +1,22 @@
 $(document).ready(function() {
 	$('#langselect').val(DOCUMENTATION_OPTIONS['LANGUAGE']);
 	jQuery('link[rel="alternate"]').remove();
-	$.each(DOCUMENTATION_OPTIONS, function(index, value) {
+	var langs = [ "de", "en", "es", "fr", "pt", "vi", "el", "ru", "ko", "ja", "zh-Hans", "zh-Hant", "ar", "x-default" ];
+	var pageURL = $(location).attr("href");
+	pageURL = pageURL.replace("https://docs.dash.org/" + DOCUMENTATION_OPTIONS['LANGUAGE'] , "");
+	$.each(langs, function(index, value) {
 		var link = document.createElement('link');
-		var pageURL = $(location).attr("href");
-		pageURL = pageURL.replace("https://docs.dash.org/" + DOCUMENTATION_OPTIONS['LANGUAGE'] , "");
 		link.rel = "alternate";
 		link.hreflang = value;
-		link.href = "https://docs.dash.org/" + value + pageURL;
+		if (value == "x-default") {
+			link.href = "https://docs.dash.org/en/" + pageURL;
+		} else if (value == "zh-Hans") {
+			link.href = "https://docs.dash.org/zh_CN" + pageURL;
+		} else if (value == "zh-Hant") {
+			link.href = "https://docs.dash.org/zh_TW" + pageURL;
+		} else {
+			link.href = "https://docs.dash.org/" + value + pageURL;
+		}
 		jQuery('head').append(link);
 	});
 });
