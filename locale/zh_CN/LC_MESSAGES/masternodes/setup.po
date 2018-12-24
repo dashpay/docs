@@ -3,14 +3,18 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# Leon White <leon.white@dash.org>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-18 10:50+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: strophy <leon.white@dash.org>, 2018\n"
+"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"PO-Revision-Date: 2018-03-29 10:35+0000\n"
+"Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -225,10 +229,10 @@ msgid ""
 "can ssh directly from the terminal - simply type ``ssh root@<server_ip>`` "
 "and enter your password when prompted."
 msgstr ""
-"我们将从连接到您新提供的服务器开始。在Windows上，我们将首先下载一个名为PuTTY的应用程序来连接到服务器。转到\\ `PuTTY 下载页面 "
+"我们将从连接到您新提供的服务器开始。在Windows上，我们将首先下载一个名为PuTTY的应用程序来连接到服务器。转到\\ `PuTTY "
 "<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_\\ "
-"并为您的系统选择适当的MSI安装程序。在Mac或Linux上，您可以直接从终端中 -只需键入\\ ``ssh root@<server_ip>`` "
-"，然后在提示时输入密码。"
+"下载页面并为您的系统选择适当的MSI安装程序。在Mac或Linux上，您可以直接从终端中 -只需键入\\ ``ssh "
+"root@<server_ip>`` ，然后在提示时输入密码。"
 
 #: ../../masternodes/setup.rst:141
 msgid "PuTTY download page"
@@ -406,7 +410,7 @@ msgid ""
 "account. You should see the transaction as soon as the first confirmation "
 "arrives, usually within a few minutes."
 msgstr ""
-"使用\\ https://wallet.trezor.io/\\ "
+"使用\\ https://wallet.trezor.io/ \\ "
 "上的Trezor钱包设置您的Trezor，并发送一个测试交易以验证它是否正常工作。有关此方面的帮助，请参阅\\ :ref:`此处 <hardware-"
 "trezor>`\\ 。您也可以（小心）选择\\ `在Trezor中添加一个密码 <https://blog.trezor.io/hide- your-"
 "trezor-wallets-with-multiple-passphrases-f2e0834026eb>`_\\ 以进一步保护您的保证金。单击\\ "
@@ -703,7 +707,7 @@ msgstr "按Enter键以确保文件末尾有空行，然后按\\ **Ctrl + X**\\ �
 msgid ""
 "Continue with the :ref:`next step to start your masternode <masternode-"
 "setup-start>`."
-msgstr "继续使用\\ :ref:`启动您的主节点 <masternode-setup-start>的下一个步骤`\\ 。"
+msgstr "继续下一步来\\ :ref:`启动您的主节点 <masternode-setup-start>`\\ 。"
 
 #: ../../masternodes/setup.rst:499
 msgid "Option 2: Manual installation"
@@ -719,7 +723,7 @@ msgid ""
 " address to the latest version of Dash Core by right clicking or pressing "
 "**Ctrl + V**::"
 msgstr ""
-"要手动下载和安装您的主节点组件，请在您的计算机上访问\\ https://www.dash.org/wallets\\ ，以查找到最新版本Dash "
+"要手动下载和安装您的主节点组件，请在您的计算机上访问\\ https://www.dash.org/wallets \\ ，以查找到最新版本Dash "
 "Core钱包的链接。单击\\ **Linux**\\ ，然后右键单击\\ **Dash Core Linux 64 Bit**\\ 中的\\ "
 "**下载TGZ**\\ ，并选择\\ **复制链接地址**\\ 。返回到您的终端窗口并输入以下命令，右键单击或按\\ **Ctrl + V**\\ "
 "将地址粘贴到最新版本的Dash Core上::"
@@ -951,9 +955,9 @@ msgstr ""
 msgid "dashman status output showing successfully started masternode"
 msgstr "dashman状态输出显示成功启动主节点"
 
-#: ../../masternodes/setup.rst:705
+#: ../../masternodes/setup.rst:705 ../../masternodes/setup.rst:783
 msgid ""
-"At this point you can safely log out of your server by typing exit. "
+"At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
 msgstr "此时，您可以通过键入\\ ``exit``\\ 来安全地注销您的服务器。祝贺您！您的主节点现在正在运行。"
 
@@ -997,18 +1001,19 @@ msgstr "**IP和端口**\\ ：在dash.conf文件中的IP地址和端口（通常�
 
 #: ../../masternodes/setup.rst:732
 msgid ""
-"**Masternode private key**: This is the result of your masternode genkey "
-"command earlier, also the same as configured in the dash.conf file"
-msgstr "**主节点私钥**\\ ：这是之前主节点genkey命令的结果，也是在dash.conf配置的内容"
+"**Masternode private key**: This is the result of your ``masternode genkey``"
+" command earlier, also the same as configured in the dash.conf file"
+msgstr "**主节点私钥**\\ ：这是之前\\ ``masternode genkey``\\ 命令的结果，也是在dash.conf配置的内容"
 
 #: ../../masternodes/setup.rst:735
 msgid ""
-"**Transaction hash**: The txid we just identified using masternode outputs"
-msgstr "**交易hash**\\ ：我们刚才使用主节点outputs标识的txid"
+"**Transaction hash**: The txid we just identified using ``masternode "
+"outputs``"
+msgstr "**交易hash**\\ ：我们刚才使用\\ ``masternode outputs``\\ 标识的txid"
 
 #: ../../masternodes/setup.rst:737
-msgid "**Index**: The index we just identified using masternode outputs"
-msgstr "**索引**\\ ：我们刚才使用主节点outputs标识的索引"
+msgid "**Index**: The index we just identified using ``masternode outputs``"
+msgstr "**索引**\\ ：我们刚才使用\\ ``masternode outputs``\\ 标识的索引"
 
 #: ../../masternodes/setup.rst:739
 msgid ""
@@ -1096,17 +1101,11 @@ msgstr ""
 msgid ""
 "At this point you can go back to your terminal window and monitor your "
 "masternode using ``dashman/dashman status``, by entering ``~/.dashcore/dash-"
-" cli masternode status`` or using the **Get status** function in DMT. You "
+"cli masternode status`` or using the **Get status** function in DMT. You "
 "will probably need to wait around 30 minutes as the node passes through the "
 "PRE_ENABLED stage and finally reaches ENABLED. Give it some time, the final "
 "result should appear as follows:"
 msgstr ""
-"此时，您可以返回到您的终端窗口，并通过输入\\ ``~/.dashcore/dash- cli masternode status``\\ 使用\\ "
+"此时，您可以返回到您的终端窗口，并通过输入\\ ``~/.dashcore/dash-cli masternode status``\\ 使用\\ "
 "``dashman/dashman status``\\ ，或者使用DMT上的\\ **获取状态**\\ "
 "功能来监测您的主节点。在节点经过PRE_ENABLED阶段并最终到达ENABLED阶段时，您可能需要等待大约30分钟。一段时间之后，最终的结果应显示如下:"
-
-#: ../../masternodes/setup.rst:783
-msgid ""
-"At this point you can safely log out of your server by typing ``exit``. "
-"Congratulations! Your masternode is now running."
-msgstr "此时，您可以通过键入\\ ``exit``\\ 来安全地注销您的服务器。祝贺您！您的主节点现在正在运行。"

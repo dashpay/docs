@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Leon White <leon.white@dash.org>, 2018
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-30 07:12+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"PO-Revision-Date: 2018-04-16 05:42+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -92,22 +96,26 @@ msgstr ""
 "unix.md>`__。此页面所示内容旨在作为简单的指示性说明，介绍如何自稳定的源代码编译一般的非确定性二进制文件。Ubuntu Linux 18.04"
 " LTS的标准安装将用作构建环境。我们假设您是以具有sudo权限的用户身份在运行。首先添加必要的额外仓储，并更新所有程序包::"
 
-#: ../../developers/compiling.rst:48 ../../developers/compiling.rst:144
+#: ../../developers/compiling.rst:48 ../../developers/compiling.rst:98
+#: ../../developers/compiling.rst:218
 msgid ""
 "Now install the dependencies as described in the installation "
 "documentation::"
 msgstr "现在依照安装文档所述，安装依赖项::"
 
-#: ../../developers/compiling.rst:54 ../../developers/compiling.rst:151
+#: ../../developers/compiling.rst:54 ../../developers/compiling.rst:105
+#: ../../developers/compiling.rst:225
 msgid ""
 "Optionally install the Qt dependencies if you want to build the Dash GUI::"
 msgstr "若您想要构建达世币 GUI，可选择安装Qt依赖项::"
 
-#: ../../developers/compiling.rst:59 ../../developers/compiling.rst:156
+#: ../../developers/compiling.rst:59 ../../developers/compiling.rst:110
+#: ../../developers/compiling.rst:230
 msgid "Download the stable Dash repository::"
 msgstr "下载稳定的达世币仓储::"
 
-#: ../../developers/compiling.rst:63 ../../developers/compiling.rst:168
+#: ../../developers/compiling.rst:63 ../../developers/compiling.rst:138
+#: ../../developers/compiling.rst:242
 msgid "And build::"
 msgstr "然后构建::"
 
@@ -120,6 +128,60 @@ msgid "macOS"
 msgstr "macOS"
 
 #: ../../developers/compiling.rst:78
+msgid ""
+"Dash can be built for macOS either using a cross-compiler under Linux or "
+"natively under macOS."
+msgstr ""
+
+#: ../../developers/compiling.rst:82
+msgid "Linux cross-compile"
+msgstr ""
+
+#: ../../developers/compiling.rst:84
+msgid ""
+"This guide describes how to build Dash Core wallet from source under Ubuntu "
+"Linux. It is intended to serve as a simple guide for general compilation of "
+"non-deterministic binary files from the stable source code. For a more "
+"detailed guide, see the `macOS Build Notes "
+"<https://github.com/dashpay/dash/blob/master/doc/build-osx.md>`__. A "
+"standard installation of Ubuntu Linux 18.04 LTS will be used as an "
+"environment for the build. We assume you are running as a user with sudo "
+"permissions. First add the necessary extra repository and update all "
+"packages::"
+msgstr ""
+
+#: ../../developers/compiling.rst:115
+msgid ""
+"A copy of the macOS SDK is required during the build process. To download "
+"this, use a Google Chrome in a desktop environment to go to "
+"https://appleid.apple.com and create or sign in to your Apple account. Then "
+"go to https://developer.apple.com and open the Chrome Developer Tools from "
+"the **Menu -> More tools -> Developer tools**. Click on the **Network** tab,"
+" then go back to your main browser window and copy in the following URL::"
+msgstr ""
+
+#: ../../developers/compiling.rst:125
+msgid ""
+"Cancel the download as soon as it begins and go back to your the **Network**"
+" tab in the developer tools. Right click on the network request at the "
+"bottom of the list labeled **Xcode_7.3.1.dmg** and select **Copy -> Copy as "
+"cURL (bash)**. Paste this long string of text into your Linux terminal, "
+"append ``-o Xcode_7.3.1.dmg`` at the end and then press enter to begin the "
+"download. Once it is complete, extract the required files from the disc "
+"image as follows::"
+msgstr ""
+
+#: ../../developers/compiling.rst:145 ../../developers/compiling.rst:248
+msgid ""
+"``~/dash/src`` now contains the compiled Dash binaries, and "
+"``~/dash/src/qt`` contains the Dash GUI wallet."
+msgstr "现在 ``~/dash/src`` 包含已编译的达世币二进制文件， ``~/dash/src/qt`` 包含达世币 GUI钱包。"
+
+#: ../../developers/compiling.rst:150
+msgid "macOS Native"
+msgstr ""
+
+#: ../../developers/compiling.rst:152
 msgid ""
 "This guide describes how to build Dash Core wallet from source under macOS. "
 "It is intended to serve as a simple guide for general compilation of non-"
@@ -137,21 +199,21 @@ msgstr ""
 "10.13 High Sierra的标准安装将用作构建环境。我们假设您是以具有sudo权限的用户身份在运行。首先，打开一个 **终端** "
 "应用程序并输入以下命令，安装OS X命令行工具::"
 
-#: ../../developers/compiling.rst:90
+#: ../../developers/compiling.rst:164
 msgid ""
 "When the popup appears, click **Install**. Then install `Homebrew "
 "<https://brew.sh>`__::"
 msgstr "出现弹出窗口后，单击 **安装** 。安装 `Homebrew <https://brew.sh>`__::"
 
-#: ../../developers/compiling.rst:95
+#: ../../developers/compiling.rst:169
 msgid "Install dependencies::"
 msgstr "安装依赖项::"
 
-#: ../../developers/compiling.rst:99
+#: ../../developers/compiling.rst:173
 msgid "Clone the Dash Core source code and change to the ``dash`` directory::"
 msgstr "复制Dash Core源代码，将其更改为 ``dash`` directory::"
 
-#: ../../developers/compiling.rst:104
+#: ../../developers/compiling.rst:178
 msgid ""
 "Build Dash Core. Configure and build the headless dash binaries as well as "
 "the GUI (if Qt is found). You can disable the GUI build by passing "
@@ -160,25 +222,25 @@ msgstr ""
 "构建Dash Core。配置并构建无头达世币二进制文件以及GUI（如果已找到Qt）。您可以通过传送 ``--without-gui`` "
 "禁用GUI构建，然后配置::"
 
-#: ../../developers/compiling.rst:112
+#: ../../developers/compiling.rst:186
 msgid "It is recommended to build and run the unit tests::"
 msgstr "建议构建并运行单元测试::"
 
-#: ../../developers/compiling.rst:116
+#: ../../developers/compiling.rst:190
 msgid ""
 "You can also create a ``.dmg`` that contains the ``.app`` bundle "
 "(optional)::"
 msgstr "您也可以创建一个包含 ``.app`` 程序包的 ``.dmg`` （可选）::"
 
-#: ../../developers/compiling.rst:121
+#: ../../developers/compiling.rst:195
 msgid "Dash Core is now available at ``./src/dashd``."
 msgstr "现在可以从 ``./src/dashd`` 获得Dash Core。"
 
-#: ../../developers/compiling.rst:126
+#: ../../developers/compiling.rst:200
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../developers/compiling.rst:128
+#: ../../developers/compiling.rst:202
 msgid ""
 "This guide describes how to build Dash Core wallet from source for 64-bit "
 "Windows. Most developers use cross-compilation from Linux to build "
@@ -197,21 +259,15 @@ msgstr ""
 "windows.md>`__。Ubuntu Linux 18.04 "
 "LTS的标准安装将用作构建环境。我们假设您是以具有sudo权限的用户身份在运行。首先添加必要的额外存储，并更新所有程序包::"
 
-#: ../../developers/compiling.rst:160
+#: ../../developers/compiling.rst:234
 msgid "Build and link the depends system::"
 msgstr "构建并链接依赖系统::"
 
-#: ../../developers/compiling.rst:174
-msgid ""
-"``~/dash/src`` now contains the compiled Dash binaries, and "
-"``~/dash/src/qt`` contains the Dash GUI wallet."
-msgstr "现在 ``~/dash/src`` 包含已编译的达世币二进制文件， ``~/dash/src/qt`` 包含达世币 GUI钱包。"
-
-#: ../../developers/compiling.rst:180
+#: ../../developers/compiling.rst:254
 msgid "Gitian"
 msgstr "Gitian"
 
-#: ../../developers/compiling.rst:182
+#: ../../developers/compiling.rst:256
 msgid ""
 "Gitian is the deterministic build process that is used to build the Dash "
 "Core executables. It provides a way to be reasonably sure that the "
@@ -225,7 +281,7 @@ msgstr ""
 "Gitian属于确定性构建过程，用于构建Dash "
 "Core的可执行文件。Gitian提供有一种方法，可合理地确认可执行文件真实构建自GitHub上的源文件。Gitian还可确保将相同的、经过测试的依赖项应用于可执行文件，并将其静态构建到可执行文件中。多名开发者依照特定的描述符（\"recipe\"）来构建源代码，加密签署结果，并将生成的签名上传。对这些结果进行比较，如果相匹配，则接受构建并上传至dash.org。"
 
-#: ../../developers/compiling.rst:191
+#: ../../developers/compiling.rst:265
 msgid ""
 "More independent Gitian builders are needed, which is why this guide exists."
 " It is preferred you follow these steps yourself instead of using someone "
@@ -233,11 +289,11 @@ msgid ""
 msgstr ""
 "需要更多的独立Gitian建造者，这也是该指南的意图所在。作为优先选项，您最好执行自己的步骤，不要使用他人的VM映像，这样可以避免 '污染' 构建。"
 
-#: ../../developers/compiling.rst:196
+#: ../../developers/compiling.rst:270
 msgid "Setup the host environment"
 msgstr "设置主机环境"
 
-#: ../../developers/compiling.rst:198
+#: ../../developers/compiling.rst:272
 msgid ""
 "Gitian builds are known to be working on Debian 8.x. If your machine is "
 "already running this system, you can perform Gitian builds on the actual "
@@ -249,68 +305,68 @@ msgid ""
 "root, access the terminal and issue the following command::"
 msgstr ""
 "已知Gitian构建是基于Debian "
-"8.x.，如果您的计算机已运行该系统，那么您即可在实际硬件上执行Gitian构建。或者，您也可以将其安装到虚拟机中。参照指南 :ref:`为主节点 "
-"<vps-setup> 设置VPS ` ，在安装过程中选择Debian 8.x映像，将您的非根用户命名为 "
+"8.x.，如果您的计算机已运行该系统，那么您即可在实际硬件上执行Gitian构建。或者，您也可以将其安装到虚拟机中。参照指南\\ "
+":ref:`为主节点设置VPS <vps-setup>`\\ ，在安装过程中选择Debian 8.x映像，将您的非根用户命名为 "
 "``gitianuser``。选择具有两台处理器的VPS也将大大加速构建过程。如果您无法通过SSH以根用户身份登录VPS，请访问终端，发布以下指令::"
 
-#: ../../developers/compiling.rst:211
+#: ../../developers/compiling.rst:285
 msgid ""
 "Log in to your new environment by SSH as root. Set up the dependencies first"
 " by pasting the following in the terminal::"
 msgstr "通过SSH以根用户身份登录新环境。首先在终端中粘贴以下内容，进行依赖项设置::"
 
-#: ../../developers/compiling.rst:217
+#: ../../developers/compiling.rst:291
 msgid ""
 "Then set up LXC and the rest with the following, which is a complex jumble "
 "of settings and workarounds::"
 msgstr "然后采用下列方法设置LXC和剩余部分，下列方法是一种设置与变通方法相混杂的复合体::"
 
-#: ../../developers/compiling.rst:238
+#: ../../developers/compiling.rst:312
 msgid ""
 "At the end Debian is rebooted to make sure that the changes take effect. Re-"
 "login as the user gitianuser that was created during installation. The rest "
 "of the steps in this guide will be performed as that user."
 msgstr "最后，重启Debian，确保更改生效。以安装过程中所设置的 gitianuser 用户身份重新登录。然后以该身份执行该指南的剩余步骤。"
 
-#: ../../developers/compiling.rst:242
+#: ../../developers/compiling.rst:316
 msgid ""
 "There is no ``python-vm-builder`` package in Debian, so we need to install "
 "it from source ourselves::"
 msgstr "Debian中不含 ``python-vm-builder`` 程序包，我们需要从源代码自行安装::"
 
-#: ../../developers/compiling.rst:254
+#: ../../developers/compiling.rst:328
 msgid "Set up the environment and compile"
 msgstr "设置环境并编译"
 
-#: ../../developers/compiling.rst:256
+#: ../../developers/compiling.rst:330
 msgid "Clone the Dash Core repository to your home directory::"
 msgstr "复制Dash Core仓储到您的主目录::"
 
-#: ../../developers/compiling.rst:260
+#: ../../developers/compiling.rst:334
 msgid "Then create the script file::"
 msgstr "创建脚本文件::"
 
-#: ../../developers/compiling.rst:264
+#: ../../developers/compiling.rst:338
 msgid ""
 "And paste the following script in place (this will be automatic if/when the "
 "script is pulled into Dash Core)::"
 msgstr "粘贴以下脚本到（如果/当脚本被拉入Dash Core，该粘贴将自动进行）::"
 
-#: ../../developers/compiling.rst:269
+#: ../../developers/compiling.rst:343
 msgid "Save the file and set it executable::"
 msgstr "保存文件并将其设置为可执行::"
 
-#: ../../developers/compiling.rst:273
+#: ../../developers/compiling.rst:347
 msgid ""
 "Set up the environment, replacing the name and version with your name and "
 "target version::"
 msgstr "设置环境，将名称和版本更换为您的名称和目标版本::"
 
-#: ../../developers/compiling.rst:278
+#: ../../developers/compiling.rst:352
 msgid "Run the compilation script::"
 msgstr "运行编译脚本::"
 
-#: ../../developers/compiling.rst:282
+#: ../../developers/compiling.rst:356
 msgid ""
 "Your system will build all dependencies and Dash Core from scratch for "
 "Windows and Linux platforms (macOS if the dependencies were installed "
@@ -321,8 +377,8 @@ msgid ""
 "<https://www.dash.org/wallets>`_. In this way, you can be sure that you are "
 "running original and untampered builds of the code as it exists on GitHub."
 msgstr ""
-"如果是基于Windows和Linux平台，您的系统将从零开始构建所有的依赖项和Dash Core（如果是macOS，需根据 `这些指南 "
-"<https://github.com/dashpay/dash/blob/master/doc/build-"
-"osx.md>`_安装的依赖项）。这可能需花费一些时间。完成后，您将看到SHA256校验和，您可以将该校验和与 `Dash 网站 "
-"<https://www.dash.org/wallets>`_ "
+"如果是基于Windows和Linux平台，您的系统将从零开始构建所有的依赖项和Dash Core（如果是macOS，需根据\\ `这些指南 "
+"<https://github.com/dashpay/dash/blob/master/doc/build-osx.md>`_\\ "
+"安装的依赖项）。这可能需花费一些时间。完成后，您将看到SHA256校验和，您可以将该校验和与\\ `Dash 网站 "
+"<https://www.dash.org/wallets>`_\\ "
 "上的哈希值进行比较。借此，您可确认自己正在运行的是原始、未经篡改的代码构建，一如GitHub上的源代码。"

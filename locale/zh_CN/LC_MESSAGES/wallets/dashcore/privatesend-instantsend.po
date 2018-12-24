@@ -3,14 +3,18 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# Leon White <leon.white@dash.org>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-30 07:12+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: strophy <leon.white@dash.org>, 2018\n"
+"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"PO-Revision-Date: 2018-03-19 12:18+0000\n"
+"Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +28,7 @@ msgstr "使用达世币即时支付和匿名支付"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:1
 msgid "dash, core, mobile, wallet, privatesend, instantsend"
-msgstr "达世币，核心，移动，钱包，匿名支付，即时支付"
+msgstr "dash，core，移动，钱包，匿名支付，即时支付"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:9
 msgid "PrivateSend and InstantSend"
@@ -49,8 +53,10 @@ msgid ""
 "transactions. As of April 2018, PrivateSend is not currently available in "
 "other Dash wallets."
 msgstr ""
-"本文档介绍了如何使用达世币核心钱包来匿名发送达世币。匿名发送功能始创于Darkcoin "
-"RC4客户端，最初被称作Darksend。随后，这个功能在2016年5月被重新命名为匿名发送。它无需信任第三方就能完成一系列的交易操作（这一环节通常也被称作混币）。混币期间，外部的服务器无法确定匿名发送功能所涉资金的来源。匿名发送功能赋予了用户在ATM取现一样的匿名属性。混币和面值的处理过程是自动完成、无缝对接的，以用户的角度来看，他们不会受到任何干扰。达世币核心钱包当前的匿名发送功能可以帮助用户混合任意金额的达世币，以便之后匿名发送的使用。截至2018年4月，匿名发送功能还没有推广到其它版本的达世币钱包。"
+"本文档介绍了如何使用Dash Core钱包来匿名发送达世币。匿名发送功能始创于Darkcoin "
+"RC4客户端，最初被称作Darksend。随后，这个功能在2016年5月被重新命名为匿名发送。它无需信任第三方就能完成一系列的交易操作（这一环节通常也被称作混币）。混币期间，外部的服务器无法确定匿名发送功能所涉资金的来源。匿名发送功能赋予了用户在ATM取现一样的匿名属性。混币和面值的处理过程是自动完成、无缝对接的，以用户的角度来看，他们不会受到任何干扰。Dash"
+" "
+"Core钱包当前的匿名发送功能可以帮助用户混合任意金额的达世币，以便之后匿名发送的使用。截至2018年4月，匿名发送功能还没有推广到其它版本的达世币钱包。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:27
 msgid ""
@@ -62,9 +68,9 @@ msgid ""
 "reason, the recommended (and default) number of rounds of PrivateSend mixing"
 " is set to four."
 msgstr ""
-"对于任何既定匿名发送交易来说，有关匿名发送功能的具体混币次数取决于 `量化效果 <https://www.dash.org/forum/threads"
-"/evaluating-the-privacy-of- privatesend.32472/>`_ "
-"，它涉及到对手追溯匿名发送资金来源时的可能性。考虑到这一点，匿名发送功能的混币环节通常（默认）为四轮。"
+"对于任何既定匿名发送交易来说，有关匿名发送功能的具体混币次数取决于\\ `量化效果 "
+"<https://www.dash.org/forum/threads/evaluating-the-privacy-of- "
+"privatesend.32472/>`_\\ ，它涉及到对手追溯匿名发送资金来源时的可能性。考虑到这一点，匿名发送功能的混币环节通常（默认）为四轮。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:35
 msgid ""
@@ -80,7 +86,7 @@ msgstr "配置"
 msgid ""
 "Open your Dash Core wallet, go to **Settings** and select **Options**. Go to"
 " the **Wallet** tab."
-msgstr "如需完成匿名发送功能的设置，用户需要打开 **设置** 并选择 **选项** ，然后再打开 **钱包**选项卡。"
+msgstr "用户需要打开\\ **设置**\\ 并选择\\ **选项**\\ ，然后再打开\\ **钱包**\\ 选项卡。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:47
 msgid ""
@@ -90,7 +96,7 @@ msgid ""
 "the chance of detection via node collusion. 8 is the highest number of "
 "rounds currently available."
 msgstr ""
-"在设置 **匿名发送回合次数** "
+"在设置\\ **匿名发送回合次数**\\ "
 "时，用户可以选择1-8之间的数值。每一轮的混币都会对涉及的资金进行一次混合，回合次数越多，匿名性就越高；节点串通的可能性也就越低。目前，混币最高轮数为8轮。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:53
@@ -109,7 +115,7 @@ msgid ""
 "PrivateSend process. The final anonymized amount may be higher than your "
 "target, but should be close."
 msgstr ""
-"输入希望 **维持匿名的达世币金额** 数值 "
+"输入希望\\ **维持匿名的达世币金额**\\ 数值 "
 "。这个数值设定了维持匿名的达世币金额的最低限额。根据客户端对钱包余额的拆分，用户最终实现匿名的金额会高于期望值。在这种情况下，客户端将在匿名发送的交易过程中使用现有的所有匿名金额。虽然最终的匿名金额可能高于用户的预期，但也应该和期望值很接近。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:64
@@ -122,7 +128,8 @@ msgid ""
 "start after you set the number of rounds and number of Dash to mix under "
 "settings and click **Start Mixing** on the **Overview** tab of your wallet."
 msgstr ""
-"当用户启动钱包后，匿名发送功能是默认禁用的。只有用户在选项中设定混币轮数、数量并点击钱包 **概览** 中的 **开始混币** 后，这项功能才会被激活。"
+"当用户启动钱包后，匿名发送功能是默认禁用的。只有用户在选项中设定混币轮数、数量并点击钱包\\ **概览**\\ 中的\\ **开始混币**\\ "
+"后，这项功能才会被激活。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:73
 msgid "Starting Mixing"
@@ -133,7 +140,9 @@ msgid ""
 "The PrivateSend process is initiated by clicking the **Start Mixing** button"
 " on the **Overview** tab of the Dash Core wallet. Mixing is possible once "
 "the following conditions have been met:"
-msgstr "在用户点击达世币核心钱包的 **概览** 中的 **开始混币** 后，匿名发送功能就会启用。一旦满足以下条件，用户就可以进行混币了："
+msgstr ""
+"在用户点击Dash Core钱包的\\ **概览**\\ 中的\\ **开始混币**\\ "
+"后，匿名发送功能就会启用。一旦满足以下条件，用户就可以进行混币了："
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:79
 msgid ""
@@ -157,7 +166,7 @@ msgid ""
 " your wallet passphrase. Enable the **Only for mixing via PrivateSend** "
 "checkbox to unlock the wallet for mixing only."
 msgstr ""
-"如果用户的钱包已经加密（强烈推荐进行加密），那么钱包将要求用户输入钱包密码。启用 **仅用于通过匿名发送功能进行混币** "
+"如果用户的钱包已经加密（强烈推荐进行加密），那么钱包将要求用户输入钱包密码。启用\\ **仅用于通过匿名发送功能进行混币**\\ "
 "复选框，以便解锁钱包的混币功能。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:92
@@ -176,7 +185,7 @@ msgstr ""
 msgid ""
 "PrivateSend interface after clicking the **Start Mixing** button. Note the "
 "**Status** is **Enabled**."
-msgstr "匿名发送功能的界面将在点击 **开始混币** 后出现。请注意，此时的 **状态** 显示为 **启用**。"
+msgstr "匿名发送功能的界面将在点击\\ **开始混币**\\ 后出现。请注意，此时的\\ **状态**\\ 显示为\\ **启用**\\ 。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:104
 msgid ""
@@ -225,13 +234,13 @@ msgid ""
 "go to the **Wallet** tab. Check the boxes next to the **Enable coin control "
 "features** and **Enable advanced PrivateSend interface** options."
 msgstr ""
-"如果想要对匿名发送功能进行更细致的监控，用户就需要启用一些更加高级的钱包功能。用户需要访问 **设置**，选中 **选项**，再打开 **钱包** "
-"选项卡。接下来，用户需要选中 **启用混币管控功能** 和 **启用高级的匿名发送界面**。"
+"如果想要对匿名发送功能进行更细致的监控，用户就需要启用一些更加高级的钱包功能。用户需要访问\\ **设置**\\ ，选中\\ **选项**\\ "
+"，再打开\\ **钱包**\\ 选项卡。接下来，用户需要选中\\ **启用混币管控功能**\\ 和\\ **启用高级的匿名发送界面**\\ 。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:129
 msgid ""
 "Enabling advanced options for PrivateSend in the Dash Core wallet settings"
-msgstr "在达世币核心钱包的设置中启用匿名发送的高级选项"
+msgstr "在Dash Core钱包的设置中启用匿名发送的高级选项"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:132
 msgid ""
@@ -258,7 +267,7 @@ msgstr ""
 msgid ""
 "You can also monitor PrivateSend progress by viewing the transactions "
 "created by the mixing process on the **Transactions** tab."
-msgstr "用户也可以通过在 **交易** 选项中浏览混币流程创建的交易来监控匿名发送功能。"
+msgstr "用户也可以通过在\\ **交易**\\ 选项中浏览混币流程创建的交易来监控匿名发送功能。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:154
 msgid "Transactions created by PrivateSend on the Transactions tab"
@@ -268,7 +277,7 @@ msgstr "交易选项中由匿名发送产生的交易"
 msgid ""
 "The following table describes the PrivateSend-related transactions displayed"
 " in the Type column of the **Transactions** tab:"
-msgstr "以下表格显示了与匿名发送功能相关的交易，它将显示在 **交易** 选项中的类型列表当中："
+msgstr "以下表格显示了与匿名发送功能相关的交易，它将显示在\\ **交易**\\ 选项中的类型列表当中："
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:160
 msgid "PrivateSend Transaction Type"
@@ -280,7 +289,7 @@ msgstr "交易描述"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:162
 msgid "PrivateSend Make Collateral Inputs (*Mixing*)"
-msgstr "匿名发送功能创建的保证金输入（*混币*）"
+msgstr "匿名发送功能创建的保证金输入（\\ *混币*\\ ）"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:162
 msgid ""
@@ -290,27 +299,27 @@ msgstr "钱包的资金将被移用作保证金输入，从而完成有担保的
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:167
 msgid "PrivateSend Create Denominations (*Mixing*)"
-msgstr "匿名发送功能创建的交易面值（*混币*）"
+msgstr "匿名发送功能创建的交易面值（\\ *混币*\\ ）"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:167
 msgid ""
-"Wallet funds were broken into PrivateSend denominations (Step 1 "
-":ref:`here<privatesend>`)"
+"Wallet funds were broken into PrivateSend denominations (Step 1 :ref:`here "
+"<privatesend>`)"
 msgstr "钱包中的资金面额化（步骤1 请参考\\ :ref:`这里 <privatesend>`\\ ）"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:171
 msgid "PrivateSend Denominate (*Mixing*)"
-msgstr "匿名发送的面额化（*混币*）"
+msgstr "匿名发送的面额化（\\ *混币*\\ ）"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:171
 msgid ""
 "A transaction was sent to a masternode in order to participate in a mixing "
-"session (Step 3 :ref:`here<privatesend>`)"
+"session (Step 3 :ref:`here <privatesend>`)"
 msgstr "交易将被发送到主节点上，以便参与到混币流程当中（步骤3 请参考\\ :ref:`这里 <privatesend>`\\ ）"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:175
 msgid "PrivateSend Collateral Payment (*Mixing*)"
-msgstr "匿名发送功能的保证金发送（*混币*）"
+msgstr "匿名发送功能的保证金发送（\\ *混币*\\ ）"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:175
 msgid ""
@@ -320,7 +329,7 @@ msgstr "收取混币流程的保证金。为了避免垃圾邮件的攻击，混
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:180
 msgid "PrivateSend (*Spending*)"
-msgstr "匿名发送（*发送*）"
+msgstr "匿名发送（\\ *发送*\\ ）"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:180
 msgid ""
@@ -341,7 +350,8 @@ msgid ""
 "all inputs. The current minimum balance for an input used in a PrivateSend "
 "transaction is 0.01000010 DASH."
 msgstr ""
-"用户可以通过货币管控功能来浏览哪些地址上存有混币的面额并且确定它们是否可用于匿名交易。用户需要访问钱包的 **发送** 选项卡中，并点击 **输入** "
+"用户可以通过货币管控功能来浏览哪些地址上存有混币的面额并且确定它们是否可用于匿名交易。用户需要访问钱包的\\ **发送**\\ 选项卡中，并点击\\ "
+"**输入**\\ "
 "来浏览交易可用的输入地址。用户可以查看各个地址上的经过了混币处理的达世币数量和它们所经历的混币的回合次数。这些操作的目的是确保这些地址的组合不必经太多改动就能完成匿名发送，因为地址上的金额已经完全可以满足交易的需求了。目前，匿名发送使用的最小输入额度是0.01000010个达世币。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:200
@@ -380,16 +390,17 @@ msgid ""
 "nearest 0.01 DASH). You will be prompted to enter your password and receive "
 "a detailed breakdown of the fee structure for PrivateSend before sending."
 msgstr ""
-"需要使用匿名发送功能的用户应打开达世币核心钱包的 **发送** 选项卡，并启用 **匿名发送** "
-"选项。此时，钱包上显示的余额将从资金的总余额变为匿名发送的金额。用户可以输入 **发送至** 的地址、**标签** 和 "
-"**金额**，再点击**发送**。用户的匿名发送金额将累加至所需的最小面值（当前发送的最小额度是0.01个达世币）。接下来，用户将会被提示输入密码，并在发送之前收到发送款项的具体组成部分。"
+"需要使用匿名发送功能的用户应打开Dash Core钱包的\\ **发送**\\ 选项卡，并启用\\ **匿名发送**\\ "
+"选项。此时，钱包上显示的余额将从资金的总余额变为匿名发送的金额。用户可以输入\\ **发送至**\\ 的地址、\\ **标签**\\ 和\\ "
+"**金额**\\ ，再点击\\ **发送**\\ "
+"。用户的匿名发送金额将累加至所需的最小面值（当前发送的最小额度是0.01个达世币）。接下来，用户将会被提示输入密码，并在发送之前收到发送款项的具体组成部分。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:230
 msgid ""
 "Dash Core ready to send a PrivateSend transaction. Note PrivateSend is "
 "enabled and the amount to be sent is less than the available PrivateSend "
 "balance"
-msgstr "达世币核心钱包已经做好了匿名发送的准备。值得注意的是，匿名发送功能已经启用了，发送的金额比余额少"
+msgstr "Dash Core钱包已经做好了匿名发送的准备。值得注意的是，匿名发送功能已经启用了，发送的金额比余额少"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:236
 msgid "InstantSend"
@@ -476,7 +487,8 @@ msgid ""
 "To pay with InstantSend, simply check the relevant checkbox in your app. The"
 " following screenshots indicate where this setting can be found in the Dash "
 "Core, iOS and Android wallets."
-msgstr "如需使用即时发送功能，用户只要选中应用中的相关复选框就可以了。以下截屏显示了在达世币核心钱包、IOS和安卓钱包中找到相关设置的位置。"
+msgstr ""
+"如需使用即时发送功能，用户只要选中应用中的相关复选框就可以了。以下截屏显示了在Dash Core钱包、IOS和安卓钱包中找到相关设置的位置。"
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:291
 msgid "Dash Wallets showing InstantSend option"

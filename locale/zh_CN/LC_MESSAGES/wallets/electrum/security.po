@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-07 06:03+0000\n"
+"POT-Creation-Date: 2018-12-24 09:15+0000\n"
 "PO-Revision-Date: 2018-03-19 12:19+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -96,25 +96,77 @@ msgstr "恢复"
 msgid ""
 "The only thing needed to recover a Dash Electrum wallet on another computer "
 "is its seed. You can test wallet recovery with your current installation of "
-"Dash Electrum by selecting the **File > New/Restore** menu item. A dialog "
-"will appear asking you to name your new wallet. Enter a name, select "
-"**Standard wallet** as the wallet type and then choose **I already have a "
-"seed**."
+"Dash Electrum by removing the wallet data from the application data folder. "
+"This optional procedure is described below. Before continuing, verify that "
+"your seed is written down clearly and correctly on paper."
 msgstr ""
+"如需在另一台计算机上恢复达世币轻钱包，用户唯一需要用到的就是种子。用户可以从应用程序数据文件夹中删除钱包数据，以此测试当前安装的达世币轻钱包的恢复情况，具体步骤如下所示。在进行后续操作之前，请用户务必确认种子已经清晰无误地记录下来了。"
 
-#: ../../wallets/electrum/security.rst:63
+#: ../../wallets/electrum/security.rst:60
+msgid ""
+"To get Dash Electrum to generate a new wallet, the old wallet data needs to "
+"be deleted. Begin by closing Dash Electrum. Next, locate the application "
+"data folder according to your operating system:"
+msgstr "如需生成达世币轻钱包的新钱包，用户需要删除旧的钱包数据。用户首先需要关闭达世币轻钱包，然后再根据个人的操作系统找到应用程序的数据文件夹："
+
+#: ../../wallets/electrum/security.rst:64
+msgid "**Linux:**"
+msgstr "**Linux:**"
+
+#: ../../wallets/electrum/security.rst:66
+msgid ""
+"Open Files, select **Go > Go to folder**, copy the path ``~/.electrum`` and "
+"paste it into the dialog box"
+msgstr "打开文件夹，选择 **访问 > 访问文件夹** ，然后将路径 ``~/.electrum``  复制粘贴到对话框中"
+
+#: ../../wallets/electrum/security.rst:68
+#: ../../wallets/electrum/security.rst:74
+#: ../../wallets/electrum/security.rst:80
+msgid "Delete all files in the folder"
+msgstr "删除文件夹中的所有文件"
+
+#: ../../wallets/electrum/security.rst:70
+msgid "**macOS:**"
+msgstr "**macOS:**"
+
+#: ../../wallets/electrum/security.rst:72
+msgid ""
+"Open Finder, select **Go > Go to Folder**, copy the path ``~/.electrum`` and"
+" paste it into the dialog box"
+msgstr "打开文件夹，选择 **访问 > 访问文件夹** ，然后将路径 ``~/.electrum`` 复制粘贴到对话框中"
+
+#: ../../wallets/electrum/security.rst:76
+msgid "**Windows:**"
+msgstr "**Windows:**"
+
+#: ../../wallets/electrum/security.rst:78
+msgid ""
+"Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and paste it in to"
+" the address bar"
+msgstr "打开Explorer浏览器，然后将路径 ``%APPDATA%\\Electrum-DASH`` 复制粘贴到地址栏中"
+
+#: ../../wallets/electrum/security.rst:82
+msgid ""
+"Having cleared the data directory, restart Dash Electrum. A dialog will "
+"appear asking you to name your new wallet. Enter a name, select **Standard "
+"wallet** as the wallet type and then choose **I already have a seed**."
+msgstr ""
+"清除数据目录后，用户需要重新启动达世币轻钱包。此时，界面将会出现一个对话框，要求用户为新钱包命名。根据提示，用户可输入名称，选择 **标准钱包** "
+"作为钱包类型，然后再选择 **已有种子** 。"
+
+#: ../../wallets/electrum/security.rst:90
 msgid "Restoring a wallet from an existing seed"
 msgstr "借助现有的种子备份钱包"
 
-#: ../../wallets/electrum/security.rst:65
+#: ../../wallets/electrum/security.rst:92
 msgid "Next, copy the twelve word seed into the text field."
 msgstr "接下来，用户需要将十二个字符的种子复制粘贴到文本框中。"
 
-#: ../../wallets/electrum/security.rst:70
+#: ../../wallets/electrum/security.rst:97
 msgid "Entering the recovery seed"
 msgstr "输入恢复种子"
 
-#: ../../wallets/electrum/security.rst:72
+#: ../../wallets/electrum/security.rst:99
 msgid ""
 "If your seed was entered correctly, Dash Electrum gives you the option to "
 "add a password for your wallet. After restoring your wallet, Dash Electrum "
@@ -125,30 +177,6 @@ msgstr ""
 "如果用户输入了正确的种子，那么达世币轻钱包就会提示用户为钱包添加密码。在钱包恢复后，达世币轻钱包将列出这个钱包中所有的现有交易。这个过程可能需要花费几分钟的时间，而交易可能会显示为"
 " **未经验证** 。在程序重新启动后，这个问题就会自行解决。"
 
-#: ../../wallets/electrum/security.rst:81
+#: ../../wallets/electrum/security.rst:108
 msgid "Unverified transactions after recovery"
 msgstr "恢复钱包后显示的未经验证交易"
-
-#: ../../wallets/electrum/security.rst:83
-msgid ""
-"To restore a wallet file without using the recovery seed, copy the file to "
-"the application data folder according to your operating system:"
-msgstr ""
-
-#: ../../wallets/electrum/security.rst:86
-msgid ""
-"**Linux:** Open Files, select **Go > Go to folder**, copy the path "
-"``~/.electrum-dash`` and paste it into the dialog box."
-msgstr ""
-
-#: ../../wallets/electrum/security.rst:89
-msgid ""
-"**macOS:** Open Finder, select **Go > Go to Folder**, copy the path "
-"``~/.electrum-dash`` and paste it into the dialog box."
-msgstr ""
-
-#: ../../wallets/electrum/security.rst:92
-msgid ""
-"**Windows:** Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and "
-"paste it in to the address bar."
-msgstr ""

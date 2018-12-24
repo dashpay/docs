@@ -3,14 +3,18 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# Leon White <leon.white@dash.org>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 10:03+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"PO-Revision-Date: 2018-03-29 10:35+0000\n"
+"Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,9 +50,10 @@ msgid ""
 "GitHub, which is a fork of p2pool for Bitcoin. For more information, see "
 "`here <https://en.bitcoin.it/wiki/P2Pool>`__."
 msgstr ""
-"本指南描述如何架设达世币P2Pool节点来管理矿池。与集中式矿池不同，P2Pool以与达世币相同的peer-2-peer（点对点）模式为基础，使矿池作为一个整体高度抵抗恶意攻击，并维持和保护达世币的去中心化性质。当您启动P2Pool节点时，它会与其他P2Pool节点（也被称为对等节点）的去中心化网络查找、连接和共享数据。P2Pool节点共享一个表示价值的加密数据链，类似于达世币的区块链。P2Pool版本被称为共享链。这种挖矿模式的去中心化和公平性意味着人们强烈鼓励使用P2Pool进行挖矿。达世币的P2Pool使用在GitHub上的"
-" `p2pool-dash <https://github.com/dashpay/p2pool-dash>`_ "
-"软件，它是比特币p2pool的分叉。有关更多信息，请参阅 `此处 <https://en.bitcoin.it/wiki/P2Pool>`__."
+"本指南描述如何架设达世币P2Pool节点来管理矿池。与集中式矿池不同，P2Pool以与达世币相同的peer-2-peer（点对点）模式为基础，使矿池作为一个整体高度抵抗恶意攻击，并维持和保护达世币的去中心化性质。当您启动P2Pool节点时，它会与其他P2Pool节点（也被称为对等节点）的去中心化网络查找、连接和共享数据。P2Pool节点共享一个表示价值的加密数据链，类似于达世币的区块链。P2Pool版本被称为共享链。这种挖矿模式的去中心化和公平性意味着人们强烈鼓励使用P2Pool进行挖矿。达世币的P2Pool使用在GitHub上的\\"
+" `p2pool-dash <https://github.com/dashpay/p2pool-dash>`_\\ "
+"软件，它是比特币p2pool的分叉。有关更多信息，请参阅\\ `此处 <https://en.bitcoin.it/wiki/P2Pool>`__\\ "
+"."
 
 #: ../../mining/p2pool.rst:26
 msgid ""
@@ -95,8 +100,8 @@ msgid ""
 msgstr ""
 "从 https://www.ubuntu.com/download/server 下载Ubuntu Server LTS的副本，并按照 `这里 "
 "<https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu- server>`__ "
-"描述的步骤在您的系统上对其进行安装。如果您正在使用如Vultr或AWS的VPS，则您的提供程序很可能在供应期间提供安装此系统的选项。确保您在设置期间启用OpenSSH服务器，以便您可以从远程控制台控制您的服务器。在您访问了您的服务器之后，创建一个新的非root用户，如果您尚未使用以下命令创建新的非root用户，请用您选择的用户名替换"
-" ``<username>`` ::"
+"描述的步骤在您的系统上对其进行安装。如果您正在使用如Vultr或AWS的VPS，则您的提供程序很可能在供应期间提供安装此系统的选项。确保您在设置期间启用OpenSSH服务器，以便您可以从远程控制台控制您的服务器。在您访问了您的服务器之后，创建一个新的非root用户，如果您尚未使用以下命令创建新的非root用户，请用您选择的用户名替换\\"
+" ``<username>``\\ ::"
 
 #: ../../mining/p2pool.rst:62
 msgid ""
@@ -116,9 +121,9 @@ msgid ""
 "<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_ (for "
 "Windows) or ssh (for Linux and macOS) if you have not already done so."
 msgstr ""
-"重新启动您的服务器并以新用户的身份登录。此时如果您还没有进行远程连接，建议使用 `PuTTY "
-"<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_  "
-"(Windows版本)或ssh（Linux和MacOS版本）进行远程连接。"
+"重新启动您的服务器并以新用户的身份登录。此时如果您还没有进行远程连接，建议使用\\ `PuTTY "
+"<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_\\ "
+"（Windows版本）或ssh（Linux和MacOS版本）进行远程连接。"
 
 #: ../../mining/p2pool.rst:76
 msgid "Setting up port forwarding"
@@ -140,16 +145,16 @@ msgstr ""
 "如果您使用的是路由器后面的专用网络，则您需要至少为端口8999 (UDP/TCP) "
 "设置端口转发以访问共享链，如果您需要您的节点被公众访问，则您需要为端口7903 (UDP/TCP) "
 "设置端口转发。这如何操作取决于您的特定网络路由器，因此超出了本文档的范围。来自流行的DD-"
-"WRT开放源码路由器发行版本的示例如下所示。关于设置端口转发的指南可以在 `这里 <https://www.wikihow.com/Set-Up-"
-"Port-Forwarding-on-a-Router>`__ 和 `这里 "
+"WRT开放源码路由器发行版本的示例如下所示。关于设置端口转发的指南可以在\\ `这里 <https://www.wikihow.com/Set-Up-"
+"Port-Forwarding-on-a-Router>`__\\ 和\\ `这里 "
 "<http://www.noip.com/support/knowledgebase/general-port-forwarding- "
-"guide/>`__找到。"
+"guide/>`__\\ 找到。"
 
 #: ../../mining/p2pool.rst:89
 msgid ""
 "Take note of your IP address either from your router management interface or"
-" by visiting https://www.whatismyip.com/"
-msgstr "从您的路由器管理接口或通过访问 https://www.whatismyip.com/ 来记录您的IP地址。"
+" by visiting https://www.whatismyip.com"
+msgstr "从您的路由器管理接口或通过访问 https://www.whatismyip.com 来记录您的IP地址。"
 
 #: ../../mining/p2pool.rst:95
 msgid "Setting up port forwarding under DD-WRT"
@@ -170,8 +175,8 @@ msgid ""
 msgstr ""
 "Dash社区成员 **dracocephalum** 慷慨地捐赠了一个脚本，用于在Ubuntu Server 16.04及更高版本下自动部署运行 "
 "p2pool-达世币节点所需的所有内容。有关更多的详细信息，请参阅 `论坛的帖子 <https://www.dash.org/forum/threads"
-"/script-to-deploy-p2pool-on- "
-"ubuntu.18376/>`_，或者只需按照这些说明来获得脚本。要获取脚本并开始运行，请键入::"
+"/script-to-deploy-p2pool-on- ubuntu.18376/>`_\\ "
+"，或者只需按照这些说明来获得脚本。要获取脚本并开始运行，请键入::"
 
 #: ../../mining/p2pool.rst:110
 msgid ""
@@ -192,28 +197,28 @@ msgstr ""
 "和``DASH_WALLET_LOCAL``与达世币的当前版本不匹配，则可能还需要对它们进行更新:"
 
 #: ../../mining/p2pool.rst:121
-msgid "``PUBLIC_IP`` = <your public IP address from the previous step>"
-msgstr "``PUBLIC_IP`` = <your public IP address from the previous step>"
+msgid "``PUBLIC_IP`` = your public IP address from the previous step"
+msgstr ""
 
 #: ../../mining/p2pool.rst:122
-msgid "``EMAIL`` = <your email address>"
-msgstr "``EMAIL`` = <your email address>"
+msgid "``EMAIL`` = your email address"
+msgstr ""
 
 #: ../../mining/p2pool.rst:123
-msgid "``PAYOUT_ADDRESS`` = <your DASH wallet address to receive fees>"
-msgstr "``PAYOUT_ADDRESS`` = <your DASH wallet address to receive fees>"
+msgid "``PAYOUT_ADDRESS`` = your DASH wallet address to receive fees"
+msgstr ""
 
 #: ../../mining/p2pool.rst:124
-msgid "``USER_NAME`` = <linux user name>"
-msgstr "``USER_NAME`` = <linux user name>"
+msgid "``USER_NAME`` = linux user name"
+msgstr ""
 
 #: ../../mining/p2pool.rst:125
-msgid "``RPCUSER`` = <enter a random alphanumeric rpc user name>"
-msgstr "``RPCUSER`` = <enter a random alphanumeric rpc user name>"
+msgid "``RPCUSER`` = enter a random alphanumeric rpc user name"
+msgstr ""
 
 #: ../../mining/p2pool.rst:126
-msgid "``RPCPASSWORD`` = <enter a random alphanumeric rpc password>"
-msgstr "``RPCPASSWORD`` = <enter a random alphanumeric rpc password>"
+msgid "``RPCPASSWORD`` = enter a random alphanumeric rpc password"
+msgstr ""
 
 #: ../../mining/p2pool.rst:128
 msgid ""
@@ -262,17 +267,17 @@ msgstr "设置dashd"
 #: ../../mining/p2pool.rst:166
 msgid ""
 "P2Pool requires a full Dash node to be running to get block and transaction "
-"data. To download and install Dash, visit https://www.dash.org/wallets/ on "
+"data. To download and install Dash, visit https://www.dash.org/wallets on "
 "your computer to find the link to the latest Dash Core wallet. Click "
-"**Linu**, then right-click on **Download TGZ** for **Dash Core Linux 64 "
+"**Linux**, then right-click on **Download TGZ** for **Dash Core Linux 64 "
 "Bit** and select **Copy link address**. Go back to your terminal window and "
 "enter the following command, pasting in the address to the latest version of"
 " Dash Core by right clicking or pressing **Ctrl + V**::"
 msgstr ""
 "P2Pool需要运行一个全达世币节点来获取区块和交易数据。若要下载和安装达世币，请访问您计算机上的 "
-"https://www.dash.org/wallets/ 以找到最新版本的Dash Core钱包的链接。单击 **Linu**，然后右键单击 "
-"**Dash Core Linux 64 Bit** 的 **下载TGZ**，并选择 **复制链接地址** "
-"。返回到您的终端窗口并输入以下命令，右键单击或按下 **Ctrl + V** 将地址粘贴到Dash Core的最新版本::"
+"https://www.dash.org/wallets 以找到最新版本的Dash Core钱包的链接。单击\\ **Linux**\\ "
+"，然后右键单击\\ **Dash Core Linux 64 Bit**\\ 的\\ **下载TGZ**\\ ，并选择\\ **复制链接地址**\\ "
+"。返回到您的终端窗口并输入以下命令，右键单击或按下\\ **Ctrl + V**\\ 将地址粘贴到Dash Core的最新版本::"
 
 #: ../../mining/p2pool.rst:179
 msgid ""
@@ -349,9 +354,9 @@ msgid ""
 "as can be seen from any synchronized Dash wallet or `block explorer "
 "<https://insight.dash.org/insight/>`_::"
 msgstr ""
-"您将看到一条消息显示 **Dash Core服务器启动** 。您可以继续执行以下步骤，并使用以下命令定期检查同步状况。当 "
-"``区块``的数量等于达世币区块链中的当前区块数量时，同步完成，从任何同步的达世币钱包或 `区块浏览器 "
-"<https://insight.dash.org/insight/>`_中可以看到这一过程::"
+"您将看到一条消息显示 **Dash Core服务器启动** 。您可以继续执行以下步骤，并使用以下命令定期检查同步状况。当 ``区块`` "
+"的数量等于达世币区块链中的当前区块数量时，同步完成，从任何同步的达世币钱包或 `区块浏览器 "
+"<https://insight.dash.org/insight/>`_\\ 中可以看到这一过程::"
 
 #: ../../mining/p2pool.rst:255
 msgid "Setting up P2Pool"
@@ -384,17 +389,17 @@ msgid ""
 msgstr "然后，您可以通过浏览到以下地址来检测您的节点，用您P2Pool节点的IP地址替换 ``<ip_address>`` :"
 
 #: ../../mining/p2pool.rst:292
-msgid "Punchy interface: http://<ip_address>:7903/static/"
-msgstr "Punchy 界面: http://<ip_address>:7903/static/"
+msgid "Punchy interface: http://ip_address:7903/static"
+msgstr ""
 
 #: ../../mining/p2pool.rst:293
-msgid "Legacy interface: http://<ip_address>:7903/static/legacy/"
-msgstr "Legacy 界面: http://<ip_address>:7903/static/legacy/"
+msgid "Legacy interface: http://ip_address:7903/static/legacy"
+msgstr ""
 
 #: ../../mining/p2pool.rst:294
-msgid "Status interface: http://<ip_address>:7903/static/status/"
-msgstr "Status 界面: http://<ip_address>:7903/static/status/"
+msgid "Status interface: http://ip_address:7903/static/status"
+msgstr ""
 
 #: ../../mining/p2pool.rst:295
-msgid "Extended interface: http://<ip_address>:7903/static/ext/"
-msgstr "Extended 界面: http://<ip_address>:7903/static/ext/"
+msgid "Extended interface: http://ip_address:7903/static/ext"
+msgstr ""

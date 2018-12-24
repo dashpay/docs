@@ -3,14 +3,18 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Leon White <leon.white@dash.org>, 2018
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 08:48+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: strophy <leon.white@dash.org>, 2018\n"
+"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"PO-Revision-Date: 2018-03-19 12:18+0000\n"
+"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,11 +24,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/backup.rst:1
 msgid "How to safely back up and restore the Dash Core wallet"
-msgstr "如何安全地备份和还原达世币核心钱包"
+msgstr "如何安全地备份和还原Dash Core钱包"
 
 #: ../../wallets/dashcore/backup.rst:1
 msgid "dash, core, wallet, backup, restore, wallet.dat"
-msgstr "达世币，核心，钱包，备份，还原，wallet.dat"
+msgstr "dash，core，钱包，备份，还原，wallet.dat"
 
 #: ../../wallets/dashcore/backup.rst:9
 msgid "Wallet backup and restore"
@@ -47,10 +51,11 @@ msgid ""
 "stored in a safe place. **If you lose access to your wallet file, you will "
 "permanently lose access to your Dash.**"
 msgstr ""
-"本文档将指导用户在台式电脑或笔记本电脑发生故障或丢失的时候安全地备份和还原达世币核心钱包。达世币核心钱包存储着管理达世币地址的所有数据，这些数据都存储在一个名叫\\"
-" *wallet.dat*\\ 的文件当中。这个钱包以Berkeley "
-"DB嵌入式数据库编程库为格式，它存储着用于管理达世币区块链余额的公钥和私钥配对。达世币核心钱包的大多数操作都是公开透明的，而且能在钱包受损的时候自动备份钱包文件。不过，用户有责任确保备份得到妥善的保管。\\"
-" **如果无法访问自己的钱包文件，那么用户将永远失去对自己达世币的访问权限。**"
+"本文档将指导用户在台式电脑或笔记本电脑发生故障或丢失的时候安全地备份和还原Dash Core钱包。Dash "
+"Core钱包存储着管理达世币地址的所有数据，这些数据都存储在一个名叫\\ *wallet.dat*\\ 的文件当中。这个钱包以Berkeley "
+"DB嵌入式数据库编程库为格式，它存储着用于管理达世币区块链余额的公钥和私钥配对。Dash "
+"Core钱包的大多数操作都是公开透明的，而且能在钱包受损的时候自动备份钱包文件。不过，用户有责任确保备份得到妥善的保管。\\ "
+"**如果无法访问自己的钱包文件，那么用户将永远失去对自己达世币的访问权限。**"
 
 #: ../../wallets/dashcore/backup.rst:26
 msgid ""
@@ -66,7 +71,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/backup.rst:34
 msgid "Backup from Dash Core"
-msgstr "通过达世币核心钱包进行备份"
+msgstr "通过Dash Core钱包进行备份"
 
 #: ../../wallets/dashcore/backup.rst:36
 msgid ""
@@ -77,13 +82,13 @@ msgid ""
 " example below shows saving the file to a USB stick. Keep this file in a "
 "physically separate location to your computer."
 msgstr ""
-"首先，在达世币核心钱包开启的时候，用户应避免复制wallet.dat文件，而应通过\\ **文件 > 备份钱包**\\ "
+"首先，在Dash Core钱包开启的时候，用户应避免复制wallet.dat文件，而应通过\\ **文件 > 备份钱包**\\ "
 "来完成备份。当用户选定菜单栏的时候，界面将会显示一个对话框，提示用户指定文件的保存地址。此时，用户需要命名文件、选择保存的位置并点击\\ "
 "**保存**\\ 。以下示例显示的是将文件储存到U盘上。建议用户将文件保存在除个人电脑之外的其它地方。"
 
 #: ../../wallets/dashcore/backup.rst:50
 msgid "Backing up the Dash Core wallet from the File menu"
-msgstr "通过文件菜单进行备份"
+msgstr "通过文件菜单进行Dash Core钱包备份"
 
 #: ../../wallets/dashcore/backup.rst:54
 msgid "Backup by copying wallet.dat"
@@ -97,7 +102,7 @@ msgid ""
 "location of this folder during installation, but by default the folder is in"
 " the following locations on different operating systems:"
 msgstr ""
-"**如果达世币核心钱包没有正在运行**\\ ，用户也可以通过将\\ *wallet.dat*\\ "
+"**如果Dash Core钱包没有运行**\\ ，用户也可以通过将\\ *wallet.dat*\\ "
 "文件复制到另一个位置来备份个人钱包。wallet.dat文件位于\\ *DashCore*\\ "
 "数据文件夹中。用户有权在安装期间指定该文件夹的位置，但在默认情况下，不同操作系统上的数据文件夹位于不同的位置上，访问方法如下所示："
 
@@ -149,7 +154,7 @@ msgid ""
 "select **Paste** in the target folder. Keep this file in a physically "
 "separate location to your computer. Be careful to copy (not move) the file!"
 msgstr ""
-"在确定达世币核心钱包并未运行的前提下，用户可以直接将\\ *wallet.dat*\\ "
+"在确定Dash Core钱包并未运行的前提下，用户可以直接将\\ *wallet.dat*\\ "
 "文件复制到另一个文件夹，从而备份个人钱包。以下示例显示的是将文件储存到U盘上，Windows的用户只需在按下\\ **Ctrl**\\ "
 "键的同时借助简单的拖放即可完成操作。在大多数操作系统上，用户也可以右键单击wallet.dat文件并选择\\ **复制**\\ "
 "，然后在目标文件夹中选择\\ **粘贴**\\ 。建议用户将文件保存在除个人电脑之外的其它地方。用户需注意复制（而非移动）文件！"
@@ -171,7 +176,7 @@ msgid ""
 "the ``-createwalletbackups=n`` parameter at the command line or in "
 "*dash.conf*. Setting this value to 0 completely disables backups."
 msgstr ""
-"每当用户打开达世币核心钱包的时候，它都会在\\ *dashcore/backup*\\ 文件夹中自动创建\\ *wallet.dat*\\ "
+"每当用户打开Dash Core钱包的时候，它都会在\\ *dashcore/backup*\\ 文件夹中自动创建\\ *wallet.dat*\\ "
 "的备份副本。在默认情况下，文件夹中最多能保留10个备份，因此，每当文件夹中存入最新的一个备份时，文件夹将自动删除最旧的一个备份。用户可以在命令行中通过 "
 "``-createwalletbackups=n`` 来修改备份副本的上限，或将\\ *dash.conf*\\ 上的数值设为0以便禁用备份副本。"
 
@@ -186,8 +191,9 @@ msgid ""
 "shutdown of the Dash Core app."
 msgstr ""
 "用户可以通过浏览\\ *DashCore*\\ 文件夹，上文中指定位置的\\ *wallet.dat*\\ "
-"的保存地址，来浏览达世币的自动备份，或通过选择菜单栏上的\\ **工具 > 显示自动备份**\\ "
-"打开备份文件夹。由于这些文件在达世币核心钱包运行时处于不活跃的状态，因此用户随时可以安全地进行复制。如果达世币核心钱包文件夹中的原始文件因达世币核心钱包的应用程序不正常关闭而受损，上述备份操作也很简便。"
+"的保存地址，来浏览达世币的自动备份，或通过选择菜单栏上的\\ **工具 > 显示自动备份**\\ 打开备份文件夹。由于这些文件在Dash "
+"Core钱包运行时处于不活跃的状态，因此用户随时可以安全地进行复制。如果Dash Core钱包文件夹中的原始文件因Dash "
+"Core钱包的应用程序不正常关闭而受损，上述备份操作也很简便。"
 
 #: ../../wallets/dashcore/backup.rst:127
 msgid "Restore"
@@ -199,8 +205,8 @@ msgid ""
 "already installed) and rename the existing *wallet.dat* file in the "
 "*DashCore* folder."
 msgstr ""
-"如需还原备份，用户需要在目标系统上安装达世币核心钱包。（如果用户已经安装了达世币核心钱包，那么就需要停止钱包的运行）重命名\\ *DashCore*\\"
-" 文件夹中已有的\\ *wallet.dat*\\ 文件。"
+"如需还原备份，用户需要在目标系统上安装Dash Core钱包。（如果用户已经安装了Dash Core钱包，那么就需要停止钱包的运行）重命名\\ "
+"*DashCore*\\ 文件夹中已有的\\ *wallet.dat*\\ 文件。"
 
 #: ../../wallets/dashcore/backup.rst:136
 msgid "Renaming the old wallet.dat file to wallet.old in the DashCore folder"
@@ -214,8 +220,8 @@ msgid ""
 "this will result in data corruption!"
 msgstr ""
 "随后，用户需要将备份钱包文件复制到\\ *DashCore*\\ 文件夹，并将它名为\\ *wallet.dat*\\ "
-"。完成这步操作后，当用户再次启动达世币核心钱包的时候，该文件将会加载新钱包。注意：在达世币核心钱包运行的时候，请勿替换\\ *wallet.dat*\\"
-" 文件，否则将会导致数据损坏！"
+"。完成这步操作后，当用户再次启动Dash Core钱包的时候，该文件将会加载新钱包。注意：在Dash Core钱包运行的时候，请勿替换\\ "
+"*wallet.dat*\\ 文件，否则将会导致数据损坏！"
 
 #: ../../wallets/dashcore/backup.rst:149
 msgid ""
@@ -235,7 +241,8 @@ msgid ""
 "backup file itself. In this case, this would be a copy of the version of "
 "Dash Core you used to create the backup."
 msgstr ""
-"在某种程度上，任何备份的效用都取决于在未来某一时间读取备份数据的软件。因此，用户最好将用于创建备份的软件副本与备份文件一同保存。在这种情况下，这将是用户用于创建备份的达世币核心钱包的副本。"
+"在某种程度上，任何备份的效用都取决于在未来某一时间读取备份数据的软件。因此，用户最好将用于创建备份的软件副本与备份文件一同保存。在这种情况下，这将是用户用于创建备份的Dash"
+" Core钱包的副本。"
 
 #: ../../wallets/dashcore/backup.rst:162
 msgid ""
@@ -258,11 +265,11 @@ msgid ""
 msgstr ""
 "*wallet.dat*文件本身应通过菜单栏上的 **设置 > 加密钱包** "
 "来完成加密。不过，这一操作只能阻止有权访问该文件的人创建交易，却不能阻止他们打开文件。因此，用户可以使用其它加密存储设备来进行文件的存储，例如Windows的\\"
-" `BitLocker <https://docs.microsoft.com/zh-cn/windows/security/information-"
+" `BitLocker <https://docs.microsoft.com/en-us/windows/security/information-"
 "protection/bitlocker/bitlocker-to-go-faq>`_\\ 、Linux系统的\\ `LUKS "
 "<https://help.ubuntu.com/community/EncryptedFilesystemsOnRemovableStorage>`_\\"
-" 和macOS的\\ `FileVault <https://support.apple.com/zh-cn/HT204837>`_\\ "
-"。用户还可以创建带有密码加密的\\ `磁盘映像 <https://support.apple.com/zh-cn/guide/disk-"
+" 和macOS的\\ `FileVault <https://support.apple.com/en-us/HT204837>`_\\ "
+"。用户还可以创建带有密码加密的\\ `磁盘映像  <https://support.apple.com/guide/disk-"
 "utility/create-a-disk-image-dskutl11888/mac>`_\\ 或\\ `ZIP文件 "
 "<https://www.howtogeek.com/203590/how-to-create-secure-encrypted-zip-or-7z-"
 "archives-on-any-operating-system/>`_\\ 。用户可自行选择适宜的方式。有关加密存储的更多信息，请阅读\\ `此处 "
@@ -312,5 +319,6 @@ msgid ""
 "on the fact that this process should theoretically be reversible."
 msgstr ""
 "备份的验证没有固定的流程，不过，用户应当至少完成一次验证，以证实备份文件确实有效。如果用户留存了文件的简单副本，那么就可以尝试将其还原到当前的\\ "
-"*DashCore*\\ "
-"文件夹中并启动达世币核心钱包来确保它能运行如常。如果决定将文件存储在加密的压缩文件中，用户需确保压缩文件可以正常解压并在达世币核心钱包中正确地打开。简而言之，用户需确保自己（或授权完成备份验证的个人）确实可以重溯备份过程并获得达世币钱包的访问权限，而不是理所当然地认为备份之后就一劳永逸了。"
+"*DashCore*\\ 文件夹中并启动Dash "
+"Core钱包来确保它能运行如常。如果决定将文件存储在加密的压缩文件中，用户需确保压缩文件可以正常解压并在Dash "
+"Core钱包中正确地打开。简而言之，用户需确保自己（或授权完成备份验证的个人）确实可以重溯备份过程并获得达世币钱包的访问权限，而不是理所当然地认为备份之后就一劳永逸了。"

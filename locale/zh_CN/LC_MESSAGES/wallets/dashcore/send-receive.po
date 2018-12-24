@@ -3,13 +3,16 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alex.ys <silvershark.ys@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-29 11:49+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +27,7 @@ msgstr "使用Dash Core钱包发送或接收达世币"
 
 #: ../../wallets/dashcore/send-receive.rst:1
 msgid "dash, core, wallet, send, receive, transaction"
-msgstr "达世币、核心、钱包、发送、接收、交易"
+msgstr "dash、core、钱包、发送、接收、交易"
 
 #: ../../wallets/dashcore/send-receive.rst:9
 msgid "Sending and receiving"
@@ -40,7 +43,7 @@ msgid ""
 "controlled by another Dash user and associated with their wallet. You can "
 "control which addresses you use using the Coin Control feature."
 msgstr ""
-"达世币核心钱包内含一系列用于发送和接收达世币的地址。每个地址都存有一定的余额，而各个地址上的余额会显示在 **总览** "
+"Dash Core钱包内含一系列用于发送和接收达世币的地址。每个地址都存有一定的余额，而各个地址上的余额会显示在 **总览** "
 "选项卡上。如果用户发送达世币，那么钱包将自动将资金从这些地址上转移到收款方的钱包地址上。用户可以通过货币控制功能来选定发送达世币时所用的地址。"
 
 #: ../../wallets/dashcore/send-receive.rst:20
@@ -52,7 +55,8 @@ msgid ""
 "masternode and mining payments are only released after 101 blocks. Note that"
 " a different process is used for InstantSend and PrivateSend transactions."
 msgstr ""
-"一旦用户确认交易，达世币核心钱包将会把交易录入区块链，以等待其它客户端的确认。在包含该交易的区块链获得六次确认后，交易通常就会被认为已经得到了确认，不过，主节点奖励和矿工奖励往往需要等待101个区块创建之后才能予以确认。值得注意的是，即时发送和匿名发送交易的流程与上述过程有所区别。"
+"一旦用户确认交易，Dash "
+"Core钱包将会把交易录入区块链，以等待其它客户端的确认。在包含该交易的区块链获得六次确认后，交易通常就会被认为已经得到了确认，不过，主节点奖励和矿工奖励往往需要等待101个区块创建之后才能予以确认。值得注意的是，即时发送和匿名发送交易的流程与上述过程有所区别。"
 
 #: ../../wallets/dashcore/send-receive.rst:28
 msgid "Dash addresses are 34 characters long and begin with an uppercase X."
@@ -69,12 +73,12 @@ msgid ""
 " the funds. Click the **Send** tab in the tab bar and enter the destination "
 "address in the **Pay To** field."
 msgstr ""
-"用户可以通过达世币核心钱包将余额发送给他人。收款方需要提供接收资金的达世币地址。在获取收款地址后，用户可以单击选项卡栏上的 **发送** 选项卡，然后在"
-" **支付给** 字段中输入收款地址。"
+"用户可以通过Dash Core钱包将余额发送给他人。收款方需要提供接收资金的达世币地址。在获取收款地址后，用户可以单击选项卡栏上的 **发送** "
+"选项卡，然后在 **支付给** 字段中输入收款地址。"
 
 #: ../../wallets/dashcore/send-receive.rst:41
 msgid "The Dash Core Send tab"
-msgstr "达世币核心钱包的发送选项卡"
+msgstr "Dash Core钱包的发送选项卡"
 
 #: ../../wallets/dashcore/send-receive.rst:43
 msgid ""
@@ -100,8 +104,10 @@ msgid ""
 "been mixed. You can find out more about PrivateSend and InstantSend "
 ":ref:`here <dashcore-privatesend-instantsend>`."
 msgstr ""
-"其它选项涉及手续费、匿名发送或即时发送功能。用户可以选择在所汇金额中自动扣除交易费用，也可以选择在汇款之外另行支付。如果希望达世币网络优先处理个人交易，那么用户就需要额外支付交易费用。用户可以选择即时发送功能，不过这个功能需要依靠网络的第二层级的不同机制才能加速交易确认。用户还可以选择匿名发送功能，它将发送经过预先混币的达世币。如需了解有关匿名发送和即时发送的更多信息，请点击"
-" :ref:`此处 <dashcore-privatesend-instantsend>`.。"
+"其它选项涉及手续费、匿名发送或即时发送功能。用户可以选择在所汇金额中自动扣除交易费用，也可以选择在汇款之外另行支付。如果希望达世币网络优先处理个人交易，那么用户就需要额外支付交易费用。用户可以选择"
+" **即时发送** 功能，不过这个功能需要依靠网络的第二层级的不同机制才能加速交易确认。用户还可以选择 **匿名发送** "
+"功能，它将发送经过预先混币的达世币。如需了解有关匿名发送和即时发送的更多信息，请点击\\ :ref:`此处 <dashcore-privatesend-"
+"instantsend>`\\ 。"
 
 #: ../../wallets/dashcore/send-receive.rst:64
 msgid ""
@@ -132,7 +138,7 @@ msgstr "输入密码来解锁钱包"
 msgid ""
 "Finally, you are given one final confirmation and chance to cancel your send"
 " transaction before Dash Core processes the transaction on the blockchain."
-msgstr "最后要提醒的一点是，在达世币核心钱包处理区块链上的交易之前，用户还有机会进行最终确认或取消正在进行的交易。"
+msgstr "最后要提醒的一点是，在Dash Core钱包处理区块链上的交易之前，用户还有机会进行最终确认或取消正在进行的交易。"
 
 #: ../../wallets/dashcore/send-receive.rst:90
 msgid "Final confirmation window"

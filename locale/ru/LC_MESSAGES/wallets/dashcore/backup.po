@@ -3,13 +3,18 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Julia Ogonkova <livingflcl@gmail.com>, 2018
+# Дмитрий <dmitry.zhludin@gmail.com>, 2018
+# Андрей Дегтяр <diusha1711@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 08:48+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -21,14 +26,15 @@ msgstr ""
 #: ../../wallets/dashcore/backup.rst:1
 msgid "How to safely back up and restore the Dash Core wallet"
 msgstr ""
+"Как безопасно сделать резервную копию и восстановить кошелёк Dash Core"
 
 #: ../../wallets/dashcore/backup.rst:1
 msgid "dash, core, wallet, backup, restore, wallet.dat"
-msgstr ""
+msgstr "dash, core, кошелёк, резервная копия, восстановление, wallet.dat"
 
 #: ../../wallets/dashcore/backup.rst:9
 msgid "Wallet backup and restore"
-msgstr ""
+msgstr "Создание резервной копии кошелька и восстановление"
 
 #: ../../wallets/dashcore/backup.rst:12
 msgid "Backup"
@@ -47,6 +53,18 @@ msgid ""
 "stored in a safe place. **If you lose access to your wallet file, you will "
 "permanently lose access to your Dash.**"
 msgstr ""
+"В этой документации описывается процесс безопасного создания резервной копии"
+" вашего файла кошелька для безопасного хранения в случае утраты или "
+"повреждения компьютера или ноутбука. Dash Core сохраняет все данные, которые"
+" необходимы для контроля ваших Dash адресов в едином файле, который "
+"называется *wallet.dat*. Этот файл выполнен в формате Berkeley DB и хранит "
+"пары приватных/публичных криптографических ключей, которые используются для "
+"управления вашими балансами на блокчейне Dash. Dash Core делает большинство "
+"этих операций прозрачными и даже создаёт автоматические резервные копии "
+"вашего файла кошелька на случай, если он повредится, но только пользователь "
+"несёт ответственность за обеспечение хранения резервных копий в надёжном "
+"месте. **Если вы потеряете доступ к своему файлу кошелька, вы навсегда "
+"потеряете доступ к своим DASH.**"
 
 #: ../../wallets/dashcore/backup.rst:26
 msgid ""
@@ -57,10 +75,16 @@ msgid ""
 " place as the wallet.dat file, particularly if you are saving the backup to "
 "the cloud."
 msgstr ""
+"Важно учитывать, что если вы не зашифровали свой кошелёк используя пункт "
+"меню **Настройки > Зашифровать кошелёк**, любой, кто получит доступ к "
+"резервной копии вашего файла wallet.dat, тут же получит полный доступ к "
+"вашим DASH. Если вы решили зашифровать свой кошелек, не храните пароль в том"
+" же месте, где находится файл wallet.dat, особенно если вы сохраняете "
+"резервную копию в облаке."
 
 #: ../../wallets/dashcore/backup.rst:34
 msgid "Backup from Dash Core"
-msgstr ""
+msgstr "Создание резервной копии с помощью кошелька Dash Core"
 
 #: ../../wallets/dashcore/backup.rst:36
 msgid ""
@@ -71,14 +95,22 @@ msgid ""
 " example below shows saving the file to a USB stick. Keep this file in a "
 "physically separate location to your computer."
 msgstr ""
+"Первое, о чём стоит сказать, никогда не копируйте ваш файл wallet.dat во то "
+"время, когда открыт Dash Core. Если кошелёк открыт, всегда используйте для "
+"резервного копирования меню **Файл > Сделать резервную копию кошелька**. "
+"После выбора этого пункта меню, появится диалоговое окно с вопросом "
+"определить место для сохранения файла. Введите имя для файла, выберите "
+"расположение и кликните **Сохранить**. В приведённом ниже примере показано "
+"сохранение файла на USB-накопитель. Храните этот файл в физически отдельном "
+"от вашего компьютера месте."
 
 #: ../../wallets/dashcore/backup.rst:50
 msgid "Backing up the Dash Core wallet from the File menu"
-msgstr ""
+msgstr "Создание резервной копии кошелька Dash Core с помощью меню Файл."
 
 #: ../../wallets/dashcore/backup.rst:54
 msgid "Backup by copying wallet.dat"
-msgstr ""
+msgstr "Создание резервной копии с помощью копирования файла wallet.dat"
 
 #: ../../wallets/dashcore/backup.rst:56
 msgid ""
@@ -88,20 +120,28 @@ msgid ""
 "location of this folder during installation, but by default the folder is in"
 " the following locations on different operating systems:"
 msgstr ""
+"**Если Dash Core не запущен**, вы также можете сделать резервную копию "
+"вашего кошелька простым копированием файла *wallet.dat* в другое место. Этот"
+" файл расположен в папке с данными *DashCore*. Вам предоставлялась "
+"возможность указать расположение этой папки во время установки, но по "
+"умолчанию папка находится по следующему расположению для разных операционных"
+" систем:"
 
 #: ../../wallets/dashcore/backup.rst:62
 msgid "**Windows**"
-msgstr ""
+msgstr "**Windows**"
 
 #: ../../wallets/dashcore/backup.rst:68
 msgid ""
 "You can access this folder directly by **Windows Key + R** and typing "
 "``%APPDATA%\\DashCore``"
 msgstr ""
+"Вы можете напрямую получить доступ к этой папке, нажав **Windows Key + R** и"
+" набрав ``%APPDATA%\\DashCore``"
 
 #: ../../wallets/dashcore/backup.rst:71
 msgid "**Linux**"
-msgstr ""
+msgstr "**Linux**"
 
 #: ../../wallets/dashcore/backup.rst:77
 msgid ""
@@ -109,10 +149,13 @@ msgid ""
 "terminal or ``~/.dashcore`` in the path bar using the **Go > Enter "
 "Location...** menu item in Files"
 msgstr ""
+"Вы можете напрямую получить доступ к этой папке, набрав в терминале ``cd "
+"~/.dashcore`` или ``~/.dashcore`` в адресной строке, используя пункты **Go >"
+" Enter Location...** в меню Files"
 
 #: ../../wallets/dashcore/backup.rst:81
 msgid "**macOS**"
-msgstr ""
+msgstr "**macOS**"
 
 #: ../../wallets/dashcore/backup.rst:87
 msgid ""
@@ -121,6 +164,10 @@ msgid ""
 "Support/DashCore`` in dialog at the **Go > Go To Folder** menu item in "
 "Finder"
 msgstr ""
+"Вы можете получить доступ к этой папке набрав в терминале ``cd "
+"~/Library/Application Support/DashCore`` или ``~/Library/Application "
+"Support/DashCore`` в диалоговом окне из пункта **Go > Go To Folder** в меню "
+"Finder"
 
 #: ../../wallets/dashcore/backup.rst:92
 msgid ""
@@ -132,14 +179,24 @@ msgid ""
 "select **Paste** in the target folder. Keep this file in a physically "
 "separate location to your computer. Be careful to copy (not move) the file!"
 msgstr ""
+"Убедитесь, что Dash Core не запущен и просто скопируйте файл *wallet.dat* из"
+" этой папки в другую обычным, предусмотренным вашей операционной системой, "
+"способом. В примере ниже показано копирование файла на USB-накопитель с "
+"использованием простого метода \"drag and drop\" с удержанием клавиши "
+"**Ctrl** на ОС Windows. На большинстве операционных систем вы также можете "
+"кликнуть правой кнопкой мыши на файле и выбрать **Копировать**, затем "
+"выбрать **Вставить** в паке назначения. Храните этот файл в физически "
+"отдельном от вашего компьютера месте. Будьте внимательны, чтобы скопировать "
+"файл (а не переместить его)!"
 
 #: ../../wallets/dashcore/backup.rst:104
 msgid "Backing up wallet.dat by copying to another folder"
 msgstr ""
+"Создание резервной копии файла wallet.dat копированием его в другую папку"
 
 #: ../../wallets/dashcore/backup.rst:108
 msgid "Automatic backups"
-msgstr ""
+msgstr "Автоматическое резервное копирование"
 
 #: ../../wallets/dashcore/backup.rst:110
 msgid ""
@@ -150,6 +207,14 @@ msgid ""
 "the ``-createwalletbackups=n`` parameter at the command line or in "
 "*dash.conf*. Setting this value to 0 completely disables backups."
 msgstr ""
+"Каждый раз открывая Dash Core, он будет автоматически создавать резервную "
+"копию файла *wallet.dat* в папке *dashcore/backups*. По умолчанию здесь "
+"может храниться до 10 резервных копий, и самая старая резервная копия будет "
+"удаляться при создании каждой новой дополнительной резервной копии. Вы "
+"можете изменить количество сохранённых здесь резервных копий, используя "
+"параметр ``-createwalletbackups=n`` в командной строке или в файле "
+"*dash.conf*. Установка этого значения в 0 полностью отключает резервное "
+"копирование."
 
 #: ../../wallets/dashcore/backup.rst:118
 msgid ""
@@ -161,6 +226,14 @@ msgid ""
 "original files in the DashCore folder become corrupted due to improper "
 "shutdown of the Dash Core app."
 msgstr ""
+"Вы можете посмотреть папку с автоматическими резервными копиями, перейдя в "
+"папку *DashCore*, расположение которой для файла  *wallet.dat* указано выше "
+"и открыв папку резервных копий, или выбрав из меню Dash Core **Инструменты >"
+" Показать автоматические резервные копии**. Поскольку эти файлы не активны "
+"во время работы Dash Core, вы можете безопасно копировать их в любое время. "
+"Они также являются удобной резервной копией, если исходные файлы в папке "
+"DashCore повреждены из-за неправильного завершения работы приложения Dash "
+"Core."
 
 #: ../../wallets/dashcore/backup.rst:127
 msgid "Restore"
@@ -172,10 +245,14 @@ msgid ""
 "already installed) and rename the existing *wallet.dat* file in the "
 "*DashCore* folder."
 msgstr ""
+"Чтобы восстановить резервную копию, установите Dash Core в целевой системе "
+"(или остановите его, если он уже установлен) и переименуйте существующий "
+"файл *wallet.dat* в папке *DashCore*."
 
 #: ../../wallets/dashcore/backup.rst:136
 msgid "Renaming the old wallet.dat file to wallet.old in the DashCore folder"
 msgstr ""
+"Переименование старого файла wallet.dat в файл wallet.old в папке DashCore"
 
 #: ../../wallets/dashcore/backup.rst:138
 msgid ""
@@ -184,16 +261,22 @@ msgid ""
 "new wallet. Do not replace *wallet.dat* while Dash Core is running, since "
 "this will result in data corruption!"
 msgstr ""
+"Затем скопируйте файл резервного кошелька в папку *DashCore* и убедитесь, "
+"что он называется *wallet.dat*. Теперь, когда вы снова запустите Dash Core, "
+"он загрузит новый кошелёк. Не заменяйте *wallet.dat* во время работы Dash "
+"Core, так как это приведет к повреждению данных!"
 
 #: ../../wallets/dashcore/backup.rst:149
 msgid ""
 "Copying the backup file into the DashCore folder and renaming it to "
 "wallet.dat"
 msgstr ""
+"Копирование резервной копии файла в папку DashCore и переименование его на "
+"wallet.dat"
 
 #: ../../wallets/dashcore/backup.rst:154
 msgid "Backup storage considerations"
-msgstr ""
+msgstr "Соображения относительно хранения резервной копии"
 
 #: ../../wallets/dashcore/backup.rst:156
 msgid ""
@@ -203,6 +286,12 @@ msgid ""
 "backup file itself. In this case, this would be a copy of the version of "
 "Dash Core you used to create the backup."
 msgstr ""
+"Любое резервное копирование зависит в некоторой степени от наличия "
+"программного обеспечения, способного считывать данные в определённый момент "
+"времени. Поэтому, рекомендуется хранить копию программного обеспечения, "
+"используемого для создания резервной копии, вместе с самим файлом резервной "
+"копии. В этом случае это будет копия версии Dash Core, которую вы "
+"использовали для создания резервной копии."
 
 #: ../../wallets/dashcore/backup.rst:162
 msgid ""
@@ -223,6 +312,22 @@ msgid ""
 "containers, see `here <https://theintercept.com/2015/04/27/encrypting-"
 "laptop-like-mean/>`_."
 msgstr ""
+"Сам файл *wallet.dat* должен быть зашифрован заданием пароля с помощью "
+"пункта меню **Настройки > Зашифровать кошелёк**. Однако это препятствует "
+"только тому, чтобы кто-то с доступом к файлу создавал транзакции, а не "
+"открывал файл. Вы можете дополнительно сохранить файл в другом зашифрованном"
+" контейнере, таком как USB-накопитель, используя `BitLocker "
+"<https://docs.microsoft.com/en-us/windows/security/information-"
+"protection/bitlocker/bitlocker-to-go-faq>`_ в Windows, `LUKS "
+"<https://help.ubuntu.com/community/EncryptedFilesystemsOnRemovableStorage>`_"
+" в Linux или `FileVault <https://support.apple.com/en-us/HT204837>`_ на "
+"macOS. Также возможно создание `образов диска "
+"<https://support.apple.com/guide/disk-utility/create-a-disk-image-"
+"dskutl11888/mac>`_ или `zip-файлов <https://www.howtogeek.com/203590/how-to-"
+"create-secure-encrypted-zip-or-7z-archives-on-any-operating-system/>`_ с "
+"шифрованием паролем - выбор за вами. Для получения более подбробной "
+"информации о зашифрованных контейнерах, перейдите `сюда "
+"<https://theintercept.com/2015/04/27/encrypting-laptop-like-mean/>`_."
 
 #: ../../wallets/dashcore/backup.rst:174
 msgid ""
@@ -233,6 +338,13 @@ msgid ""
 " paper, in a password manager, etc.) and who may need access to the password"
 " in the future."
 msgstr ""
+"Где вы будете храните этот файл, зависит только от вас. Вы можете хранить "
+"его у себя дома, в сейфе в банке, в водонепроницаемом или огнеупорном "
+"контейнере или облачном хранилище, таком как Google Drive, Dropbox или "
+"iCloud. Подумайте, где вы будете хранить любые пароли, необходимые для "
+"восстановления доступа к кошельку (в своей голове, на бумаге, в менеджере "
+"паролей и т. д.), а также о том, кому может понадобиться доступ к паролю в "
+"будущем."
 
 #: ../../wallets/dashcore/backup.rst:181
 msgid ""
@@ -246,10 +358,20 @@ msgid ""
 "this, read more about paper wallets, where the private key can be printed "
 "directly or also encrypted using BIP38 for safe storage."
 msgstr ""
+"Наконец, важно понимать, что *wallet.dat* сам по себе является относительно "
+"опасным способом хранения больших сумм денег - это просто файл базы данных, "
+"хранящий закрытые ключи. Хотя такой удобный способ хранения файла кошелька "
+"подходит для непосредственного хранения небольших средств, большие объёмы "
+"DASH более безопасно хранить на одном заранее заданном адресе таким образом,"
+" чтобы вам был гарантирован доступ к нему с помощью любого программного "
+"обеспечения, поддерживающего протокол, а не через специальную реализацию "
+"этого протокола. Если вы заинтересованы в этом, почитайте больше о бумажных "
+"кошельках, где закрытый ключ может быть распечатан напрямую, а также "
+"зашифрован с использованием алгоритма BIP38 для безопасного хранения."
 
 #: ../../wallets/dashcore/backup.rst:193
 msgid "Verifying backups"
-msgstr ""
+msgstr "Верификация резервных копий"
 
 #: ../../wallets/dashcore/backup.rst:195
 msgid ""
@@ -263,3 +385,14 @@ msgid ""
 " reverse your backup process to get access to your Dash, instead of relying "
 "on the fact that this process should theoretically be reversible."
 msgstr ""
+"Не существует фиксированной процедуры для проверки вашей резервной копии, но"
+" вы должны проверить её восстановление хотя бы один раз, чтобы убедиться, "
+"что она рабочая. Если у вас есть простая копия файла, попробуйте "
+"восстановить её в текущей папке *DashCore* и запустите Dash Core, чтобы "
+"убедиться, что он открывается без ошибок. Если вы решили сохранить файл "
+"кошелька в зашифрованном zip-файле, убедитесь, что можете распаковать его и "
+"правильно открыть в Dash Core. Короче говоря, убедитесь, что вы (или "
+"человек, которому вы доверяете в конечном итоге пройти этот процесс за вас),"
+" действительно можете задействовать процесс резервного копирования, чтобы "
+"получить доступ к вашим DASH, вместо того, чтобы полагать, что этот процесс "
+"теоретически должен сработать."

@@ -3,14 +3,19 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Leon White <leon.white@dash.org>, 2018
+# Julia Ogonkova <livingflcl@gmail.com>, 2018
+# Дмитрий <dmitry.zhludin@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-25 10:03+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"PO-Revision-Date: 2018-02-08 10:31+0000\n"
+"Last-Translator: Дмитрий <dmitry.zhludin@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -192,7 +197,7 @@ msgstr "Здесь показаны средства, которые ждут з
 
 #: ../../wallets/dashcore/interface.rst:79
 msgid "Immature"
-msgstr ""
+msgstr "Неподтверждённые"
 
 #: ../../wallets/dashcore/interface.rst:78
 msgid ""
@@ -566,11 +571,12 @@ msgstr ""
 "хотите, чтобы на каком-то из адресов хранилось определённое количество "
 "средств, такое поведение нежелательно. Очень часто это необходимо, чтобы "
 "хранить на одном адресе 1000 Dash в качестве коллатерального залога для "
-"мастерноды.  Включение этой опции добавит кнопку \"Вклады\" во вкладке "
-"\"Отправить\". С её помощью можно получить доступ к диалоговому окну \"Выбор"
-" монет\", где можно заблокировать, разблокировать и определить "
+"мастерноды.  Включение этой опции добавит кнопку **Вклады** во вкладке "
+"**Отправить**. С её помощью можно получить доступ к диалоговому окну **Выбор"
+" монет**, где можно заблокировать, разблокировать и определить "
 "приоритетность различных адресов вашего кошелька. Для более детального "
-"объяснения, как работает Coin Control, пройдите по ссылке. "
+"объяснения, как работает Coin Control, пройдите по :ref:`ссылке <coin-"
+"control>`."
 
 #: ../../wallets/dashcore/interface.rst:280
 msgid "Show Masternodes tab"
@@ -607,7 +613,8 @@ msgstr ""
 "Включение этой опции изменяет интерфейс перемешивания PrivateSend во вкладке"
 " Анализ кошелька Dash Core, добавляя в него больше опций, например Пробное "
 "Перемешивание и процент выполнения. Подробнее о том, как пользоваться "
-"PrivateSend, можно узнать по ссылке. "
+"PrivateSend, можно узнать по :ref:`ссылке <dashcore-privatesend-"
+"instantsend>`."
 
 #: ../../wallets/dashcore/interface.rst:297
 msgid "Warn if PrivateSend is running out of keys"
