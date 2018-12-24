@@ -4,11 +4,11 @@ $(document).ready(function() {
 	$.each(DOCUMENTATION_OPTIONS, function(index, value) {
 		var link = document.createElement('link');
 		var pageURL = $(location).attr("href");
-		pageURL = pageURL.replace("https://docs.dash.org/" + value , "");
+		pageURL = pageURL.replace("https://docs.dash.org/" + DOCUMENTATION_OPTIONS['LANGUAGE'] , "");
 		link.rel = "alternate";
 		link.hreflang = value;
 		link.href = "https://docs.dash.org/" + value + pageURL;
-		jQuery('head').append();
+		jQuery('head').append(link);
 	});
 });
 
