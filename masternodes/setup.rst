@@ -333,9 +333,10 @@ working.
 
    Dash Masternode Tool successful connection confirmations
 
-We will now use DMT to extract the transaction ID. Carry out the
-following sequence of steps as shown in this screenshot from DMT
-developer Bertrand256:
+We will now use DMT to extract the transaction ID and legacy masternode
+key (necessary for successful startup during the DIP3 transition
+period). Carry out the following sequence of steps as shown in this
+screenshot:
 
 .. figure:: img/setup-collateral-dmt-steps.png
    :width: 400px
@@ -343,30 +344,27 @@ developer Bertrand256:
    Dash Masternode Tool configuration steps
 
 #. Click the **New** button.
-#. Enter a name for your masternode here. The host name you specified 
+#. Ensure you are on the settings page for a Non-deterministic 
+   masternode and click **Generate new** to generate a legacy masternode
+   key. Copy this key into a text editor.
+#. Click **Alter configuration to deterministic**
+#. Enter a name for your masternode. The host name you specified 
    for your VPS above is a good choice.
-#. Enter the IP address of your masternode here. This was given to you
+#. Enter the IP address of your masternode. This was given to you
    by the VPS provider when you set up the server.
 #. Enter the TCP port number. This should be 9999.
-#. Click Generate new to generate a new masternode private key.
-#. Copy the collateral address where you sent the 1000 DASH collateral
-   from your Trezor Wallet and paste it in this field.
-#. Click the arrow → to derive the BIP32 path from your collateral
-   address. You can verify this against the BIP32 path shown on the
-   receive tab in your Trezor Wallet for the transaction.
-#. Click Lookup to find the collateral TX ID for the transaction which
-   transferred the collateral to the address. You can verify this
-   against the TX ID shown on the confirmation page of the blockchain
-   explorer for your collateral address.
+#. Click **Locate collateral** to view unused collateral funding 
+   transactions available on the connected hardware wallet. The 
+   **Collateral address**, **index** and **Collateral TX hash** fields 
+   should be filled automatically
 
 .. figure:: img/setup-collateral-dmt-ready.png
    :width: 400px
 
    Dash Masternode Tool with configuration ready to start masternode
 
-Leave DMT open, take note of the masternode private key and collateral
-address and continue with the next step: :ref:`installing Dash Core on
-your VPS <masternode-setup-install-dashcore>`.
+Leave DMT open and continue with the next step: :ref:`installing Dash
+Core on your VPS <masternode-setup-install-dashcore>`.
 
 Option 2: Sending from Dash Core wallet
 ---------------------------------------
@@ -487,7 +485,7 @@ Option 2: Manual installation
 
 To manually download and install the components of your Dash masternode,
 visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ 
-and copy the link to the latest x86_64-linux-gnu version. Go back to
+and copy the link to the latest ``x86_64-linux-gnu`` version. Go back to
 your terminal window and enter the following command, pasting in the
 address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
@@ -499,8 +497,8 @@ Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
   wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc10/SHA256SUMS.asc
+  sha256sum dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
   cat SHA256SUMS.asc
 
 You can also optionally verify the authenticity of your download as an
@@ -543,8 +541,7 @@ follows::
   #----
   listen=1
   server=1
-  daemon=
-  testnet=1
+  daemon=1
   maxconnections=64
   #----
   masternode=1
@@ -642,14 +639,20 @@ in DIP3.
 Option 1: Registering from a hardware wallet
 --------------------------------------------
 
-**NOTE: This documentation should be considered obsolete until DMT is
-updated to provide DIP3 support.**
+Go back to DMT and ensure that all fields from the previous step are
+still filled out correctly.  Click **Generate new** for the three
+private keys required for a DIP3 deterministic masternode:
 
-Go back to DMT and ensure that all fields are filled out correctly.
-Click **Lookup** to find the collateral TX ID for the transaction which
-transferred the collateral to the address if you were not able to do so
-earlier. Then click **Start Masternode using Hardware Wallet** and
-confirm the following two messages:
+- Owner private key
+- Operator private key
+- Voting private key
+
+.. figure:: img/setup-dmt-filled.png
+   :width: 220px
+
+   Dash Masternode Tool ready to register a new masternode
+
+Then click **Send ProRegTx** and confirm the following two messages:
 
 .. image:: img/setup-dmt-send.png
    :width: 220px
@@ -657,7 +660,31 @@ confirm the following two messages:
 .. figure:: img/setup-dmt-sent.png
    :width: 220px
 
-   Dash Masternode Tool confirmation dialogs to start a masternode
+   Dash Masternode Tool confirmation dialogs to register a masternode
+
+The BLS secret key must be entered in the ``dash.conf`` file on the
+masternode. This allows the masternode to watch the blockchain for
+relevant Pro*Tx transactions, and will cause it to start serving as a
+masternode when the signed ProRegTx is broadcast by the owner, as we
+just did above. Edit the configuration file on your masternode as
+follows::
+
+  nano ~/.dashcore/dash.conf
+
+The editor appears with the existing masternode configuration. Add this
+line to the end of the file, replacing the key with your BLS secret key
+generated above::
+
+  masternodeblsprivkey=21e27edbabf70a677303d527d750b502628e1c51d66d3bfd2b4583f690fbd14e
+
+Press enter to make sure there is a blank line at the end of the file,
+then press **Ctrl + X** to close the editor and **Y** and **Enter** save
+the file. We now need to restart the masternode for this change to take
+effect. Enter the following commands, waiting a few seconds in between
+to give Dash Core time to shut down::
+
+  ~/.dashcore/dash-cli stop
+  ~/.dashcore/dashd
 
 At this point you can monitor your masternode using ``dashman/dashman
 status``, by entering ``~/.dashcore/dash-cli masternode status`` or
@@ -666,10 +693,10 @@ around 30 minutes as the node passes through the PRE_ENABLED stage and
 finally reaches ENABLED. Give it some time, the final result should
 appear as follows:
 
-.. figure:: img/setup-dashman-started.png
+.. figure:: img/setup-dash-cli-started.png
    :width: 400px
 
-   dashman status output showing successfully started masternode
+   dash-cli masternode status output showing successfully started masternode
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.

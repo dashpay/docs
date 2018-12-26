@@ -277,9 +277,9 @@ your own masternode, generate a BLS public/private keypair as follows::
 
 **These keys are NOT stored by the wallet and must be kept secure,
 similar to the value provided in the past by the** ``masternode genkey``
-**command.** The public key will be used in following steps. The secret
-key must be entered in the ``dash.conf`` file on the masternode. This
-allows the masternode to watch the network for relevant Pro*Tx
+**command.** The public key will be used in following steps. The BLS
+secret key must be entered in the ``dash.conf`` file on the masternode.
+This allows the masternode to watch the blockchain for relevant Pro*Tx
 transactions, and will cause it to start serving as a masternode when
 the signed ProRegTx is broadcast by the owner (Step 5 below). Log in to
 your masternode using ssh or PuTTY and edit the configuration file on
