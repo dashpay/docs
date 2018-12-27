@@ -647,7 +647,7 @@ private keys required for a DIP3 deterministic masternode:
 - Operator private key
 - Voting private key
 
-.. figure:: img/setup-dmt-filled.png
+.. figure:: img/setup-dmt-full.png
    :width: 220px
 
    Dash Masternode Tool ready to register a new masternode
