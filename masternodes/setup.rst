@@ -693,7 +693,7 @@ around 30 minutes as the node passes through the PRE_ENABLED stage and
 finally reaches ENABLED. Give it some time, the final result should
 appear as follows:
 
-.. figure:: img/setup-dash-cli-started.png
+.. figure:: img/setup-dash-cli-start.png
    :width: 400px
 
    dash-cli masternode status output showing successfully started masternode
