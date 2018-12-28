@@ -749,7 +749,7 @@ similar to the value provided in the past by the** ``masternode genkey``
 Add the private key to your masternode configuration
 ----------------------------------------------------
 
- The public key will be used in following steps. The secret key must be
+The public key will be used in following steps. The secret key must be
 entered in the ``dash.conf`` file on the masternode. This allows the
 masternode to watch the network for relevant Pro*Tx transactions, and
 will cause it to start serving as a masternode when the signed ProRegTx
