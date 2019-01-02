@@ -523,7 +523,6 @@ copy the necessary files to the directory and set them as executable::
   tar xfv dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
   cp -f dashcore-0.13.0/bin/dashd ~/.dashcore/
   cp -f dashcore-0.13.0/bin/dash-cli ~/.dashcore/
-  chmod 777 ~/.dashcore/dash*
 
 Create a configuration file using the following command::
 
