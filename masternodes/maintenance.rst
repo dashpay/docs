@@ -69,6 +69,7 @@ BLS public key (e.g. to nominate a new operator), the voting address and
 their own payout address. The ProUpRegTx takes the following syntax::
 
   protx update_registrar proTxHash operatorKeyAddr votingKeyAddr payoutAddress
+  protx update_registrar proTxHash operatorKeyAddr votingKeyAddr payoutAddress (feeSourceAddress)
 
 Where:
 
@@ -79,6 +80,8 @@ Where:
   on-chain operator key
 - ``payoutAddress``: An updated Dash address for owner payments, or 0 to 
   use the last on-chain operator key
+- ``feeSourceAddress``: An (optional) address used to fund ProTx fee. 
+  ``payoutAddress`` will be used if not specified.
 
 Example to update payout address::
 
