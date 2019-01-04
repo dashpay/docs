@@ -300,9 +300,9 @@ The public key will be used in following steps. The BLS secret key must
 be entered in the ``dash.conf`` file on the masternode. This allows the
 masternode to watch the blockchain for relevant Pro*Tx transactions, and
 will cause it to start serving as a masternode when the signed ProRegTx
-is broadcast by the owner (Step 5 below). Log in to your masternode
-using ssh or PuTTY and edit the configuration file on your masternode as
-follows::
+is broadcast by the owner (final step below). Log in to your masternode
+using ``ssh`` or PuTTY and edit the configuration file on your 
+masternode as follows::
 
   nano ~/.dashcore/dash.conf
 
@@ -396,8 +396,9 @@ Output::
     "signMessage": "ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy|0|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz|54e34b8b996839c32f91e28a9e5806ec5ba5a1dadcffe47719f5b808219acf84"
   }
 
-We will use the ``collateralAddress`` and ``signMessage`` fields in Step
-4, and the output of the ``tx`` field in Step 5.
+Next we will use the ``collateralAddress`` and ``signMessage`` fields to
+sign the transaction, and the output of the ``tx`` field to submit the
+transaction.
 
 Sign the ProRegTx transaction
 -----------------------------
