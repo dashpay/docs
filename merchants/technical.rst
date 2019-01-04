@@ -92,17 +92,20 @@ Integration notes:
 1. `DIP002 Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ 
    are a foundational component of Dash Core v0.13.0 and introduce a new
    Transaction Version and related “Payload” to the network.
+
 2. Integrated Systems must be able to `serialize and deserialize <https://github.com/dashpay/dips/blob/master/dip-0002.md#serialization-hashing-and-signing>`__ 
    these new Transaction Types in order to accurately encode and decode
    Raw Transaction data.
+
 3. From a `backwards compatibility <https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ 
-   perspective, the 4 byte (32-bit) “version” field included in Legacy
-   Transactions has been split into two fields: “version” and “type”
+   perspective, the 4 byte (32-bit) ``version`` field included in Legacy
+   Transactions has been split into two fields: ``version`` and ``type``
    (each consisting of 2 bytes).
+
 4. `InstantSend <https://docs.dash.org/en/latest/merchants/technical.html#instantsend>`__ 
-   status and Payload JSON (e.g. “proRegTx”) is included in the JSON-RPC
-   response, please note that this data is not part of the calculated
-   hash and is provided for convenience.
+   status and Payload JSON (e.g. ``proRegTx``) is included in the 
+   JSON-RPC response, please note that this data is not part of the
+   calculated hash and is provided for convenience.
 
 Legacy transaction structure::
 
