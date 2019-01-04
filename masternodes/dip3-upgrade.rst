@@ -8,11 +8,11 @@
 Dash 0.13 Upgrade Procedure
 ===========================
 
-Dash 0.13.0 implements DIP3, which introduces several changes to how a
+Dash 0.13.0 implements DIP003, which introduces several changes to how a
 Dash masternode is set up and operated. A list of available
 documentation appears below:
 
-- `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
+- `DIP003 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
 - :ref:`dip3-changes`
 - :ref:`dip3-upgrade` (you are here)
 - :ref:`Full masternode setup guide <masternode-setup>`
@@ -21,14 +21,19 @@ documentation appears below:
 
 It is highly recommended to first read at least the list of changes
 before continuing in order to familiarize yourself with the new concepts
-in DIP3. This documentation describes the upgrade procedure in two steps:
+in DIP003. This documentation describes the upgrade procedure in two steps:
 
 1. :ref:`Update the masternode software <masternode-dip3-update>`
-2. Register the DIP3 masternode
+2. Register the DIP003 masternode
 
    - :ref:`From a hardware wallet <dmt-dip3-upgrade>`
    - :ref:`From the Dash Core wallet <dashcore-dip3-upgrade>`
 
+Step 1 should be done immediately as soon as Dash 0.13.0 is released.
+Once miners have updated and DIP003 has activated on the network, it
+will become possible to complete Step 2 and register a DIP003
+masternode. After enough masternodes have completed this step, Spork 15
+will be enabled and all new network functions will take effect.
 
 .. _masternode-dip3-update:
 
@@ -53,7 +58,12 @@ Check the status of your masternode::
 
   ~/dashman/dashman status
 
-The Dash software on the masternode is now updated.
+The Dash software on the masternode is now updated. Since Dash 0.13 also
+updates the protocol version, it is necessary to issue a ``masternode start`` 
+from Dash Core or DMT command to keep your masternode in the payment
+list during the transition period. See the `0.12.3 documentation
+<https://docs.dash.org/en/0.12.3/masternodes/setup.html#start-your-masternode>`__ 
+for more details.
 
 
 Option 2: Manual update
@@ -106,7 +116,12 @@ Finally, uncomment the line to automatically restart Dash in your
 crontab by invoking ``crontab -e`` again and deleting the ``#``
 character.
 
-The Dash software on the masternode is now updated.
+The Dash software on the masternode is now updated. Since Dash 0.13 also
+updates the protocol version, it is necessary to issue a ``masternode start`` 
+from Dash Core or DMT command to keep your masternode in the payment
+list during the transition period. See the `0.12.3 documentation
+<https://docs.dash.org/en/0.12.3/masternodes/setup.html#start-your-masternode>`__ 
+for more details.
 
 
 .. _dmt-dip3-upgrade:
@@ -116,9 +131,9 @@ Masternode Registration from DMT
 
 This documentation describes the procedure to register an existing
 masternode for the DIP003 masternode list if the collateral is held on a
-hardware wallet. DMT 0.9.21 or higher is required. You can update DMT by
-downloading the version appropriate for your system from the `DMT
-Releases page <https://github.com/Bertrand256/dash-masternode-tool/releases>`__. 
+hardware wallet. DIP003 must be activated and DMT 0.9.21 or higher is
+required. You can update DMT by downloading the version appropriate for
+your system from the `DMT Releases page <https://github.com/Bertrand256/dash-masternode-tool/releases>`__. 
 Open DMT and ensure your existing masternode configuration appears.
 
 Configuration
@@ -252,11 +267,11 @@ Masternode Registration from Dash Core
 
 This documentation describes the procedure to register an existing
 masternode for the DIP003 masternode list if the collateral is held in
-the Dash Core software full wallet. The commands are shown as if they
-were entered in the Dash Core GUI by opening the console from Tools >
-Debug console, but the same result can be achieved on a masternode by
-entering the same commands and adding the prefix 
-``~/.dashcore/dash-cli`` to each command.
+the Dash Core software full wallet. DIP003 must be activated. The
+commands are shown as if they were entered in the Dash Core GUI by
+opening the console from Tools > Debug console, but the same result can
+be achieved on a masternode by entering the same commands and adding the
+prefix  ``~/.dashcore/dash-cli`` to each command.
 
 
 Generate a BLS key pair

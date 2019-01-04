@@ -33,7 +33,7 @@ time. If you are updating a masternode, see  :ref:`here <masternode-update>`
 instead. If Spork 15 is not yet enabled, it is not possible to directly
 set up a DIP003 masternode. You will need to set up the masternode
 following the `old process
-<https://docs.dash.org/en/stable/masternodes/setup.html>`_ and then work
+<https://docs.dash.org/en/0.12.3/masternodes/setup.html>`_ and then work
 through the :ref:`upgrade procedure <dip3-upgrade>`. You will need:
 
 - 1000 Dash
