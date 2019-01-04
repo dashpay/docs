@@ -108,7 +108,7 @@ also possible to revoke a masternode's registered status (in the event
 of a security breach, for example) to force both owner and operator to
 update their details.
 
-.. _dip3-update-service
+.. _dip3-update-service:
 
 ProUpServTx
 -----------
