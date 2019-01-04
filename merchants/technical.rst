@@ -57,6 +57,82 @@ general information, are summarized below.
    major programming languages. These resources are outlined in the
    :ref:`SDK Resources <sdk-resources>` section of this document.
 
+.. _13-integration:
+
+v0.13.0 Integration Notes
+=========================
+
+This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__.
+
+Dash 0.13.0 implements `DIP002 Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, 
+which form a basis for new transaction types that will provide on-chain
+metadata to assist various consensus mechanisms. The following special
+transaction types exist:
+
++---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
+| Release | Version | Type | Payload Size   | Payload | Payload JSON | Transaction Purpose                                                                            |
++=========+=========+======+================+=========+==============+================================================================================================+
+| v0.13.0 | 3       | 0    | n/a            | n/a     | n/a          | Standard Transaction                                                                           |
++---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 1    | <variable int> | <hex>   | proRegTx     | `Masternode Registration <https://dash-docs.github.io/en/developer-reference#proregtx>`__      |
++---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 2    | <variable int> | <hex>   | proUpServTx  | `Update Masternode Service <https://dash-docs.github.io/en/developer-reference#proupservtx>`__ |
++---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 3    | <variable int> | <hex>   | proUpRegTx   | `Update Masternode Operator <https://dash-docs.github.io/en/developer-reference#proupregtx>`__ |
++---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 4    | <variable int> | <hex>   | proUpRevTx   | `Masternode Revocation <https://dash-docs.github.io/en/developer-reference#prouprevtx>`__      |
++---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 5    | <variable int> | <hex>   | cbTx         | `Masternode List Merkle Proof <https://dash-docs.github.io/en/developer-reference#cbtx>`__     |
++---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 6    | <variable int> | <hex>   | qcTx         | `Quorum Commitment <https://dash-docs.github.io/en/developer-reference#qctx>`__                |
++---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
+
+Integration notes:
+
+1. `DIP002 Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ 
+   are a foundational component of Dash Core v0.13.0 and introduce a new
+   Transaction Version and related “Payload” to the network.
+2. Integrated Systems must be able to `serialize and deserialize <https://github.com/dashpay/dips/blob/master/dip-0002.md#serialization-hashing-and-signing>`__ 
+   these new Transaction Types in order to accurately encode and decode
+   Raw Transaction data.
+3. From a `backwards compatibility <https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ 
+   perspective, the 4 byte (32-bit) “version” field included in Legacy
+   Transactions has been split into two fields: “version” and “type”
+   (each consisting of 2 bytes).
+4. `InstantSend <https://docs.dash.org/en/latest/merchants/technical.html#instantsend>`__ 
+   status and Payload JSON (e.g. “proRegTx”) is included in the JSON-RPC
+   response, please note that this data is not part of the calculated
+   hash and is provided for convenience.
+
+Legacy transaction structure::
+
+  {
+    "txid": <string>,
+    "size": <int>,
+    "version": 2,
+    "locktime": 0,
+    "vin": [],
+    "vout": [ … ]
+  }
+
+Updated transaction structure::
+
+  {
+    "txid": <string>,
+    "size": <int>,
+    "version": 3,
+    "type": <int>,
+    "locktime": 0,
+    "vin": [ … ],
+    "vout": [ … ],
+    "extraPayloadSize": <variable int>,
+    "extraPayload": …
+  }
+
+See the `Special Transactions developer documentation <https://dash-docs.github.io/en/developer-reference#special-transactions>`__ 
+for additional detail on these data types, e.g. ``<variable int>``. See 
+the `v0.13.0 transaction types integration documentation (PDF) <https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__
+for worked examples of each transaction type.
 
 .. _api-services:
 
