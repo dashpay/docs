@@ -57,7 +57,7 @@ general information, are summarized below.
    major programming languages. These resources are outlined in the
    :ref:`SDK Resources <sdk-resources>` section of this document.
 
-.. _13-integration:
+.. _013-integration:
 
 v0.13.0 Integration Notes
 =========================
