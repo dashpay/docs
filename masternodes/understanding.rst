@@ -120,11 +120,11 @@ Important concepts and changes:
      collateral. Because the owner uses the private key associated with
      this address to issue :ref:`ProUpRegTx <update-dip3-config>`
      transactions, it must be unique for each masternode.
-  2. ``operatorKeyAddr``: This is the BLS public key of the masternode
+  2. ``operatorPubKey``: This is the BLS public key of the masternode
      operator. Only the operator is allowed to issue :ref:`ProUpServTx
-     <update-dip3-config>` transactions. Because operator key is used
-     during live masternode operation to sign masternode-related P2P
-     messages, quorum-related messages and governance trigger votes,
+     <update-dip3-config>` transactions. Because the operator key is 
+     used during live masternode operation to sign masternode-related 
+     P2P messages, quorum-related messages and governance trigger votes,
      the BLS key must be unique for each masternode.
   3. ``votingKeyAddr``: This is a Dash address (public key) used for
      proposal voting. Votes signed with this key are valid while the
