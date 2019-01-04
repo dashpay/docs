@@ -15,6 +15,86 @@ addition, masternodes should vote on proposals and perform other tasks
 in the interest of the network and the value of the Dash they hold.
 
 
+.. _masternode-update:
+
+Masternode Software Update
+==========================
+
+The Dash Core software requires regular updates in order to remain
+consistent with the current network consensus. Depending on whether you
+installed Dash manually or using dashman, you must follow the procedure
+appropriate for your masternode, as described below.
+
+
+Option 1: Updating from dashman
+-------------------------------
+
+To update Dash using dashman, log in to your server and enter the
+following commands::
+
+  ~/dashman/dashman sync
+  ~/dashman/dashman update
+
+Check the status of your masternode::
+
+  ~/dashman/dashman status
+
+The Dash software on the masternode is now updated.
+
+
+Option 2: Manual update
+-----------------------
+
+To update Dash manually, log in to your server using ssh or PuTTY. If
+your crontab contains an entry to automatically restart dashd, invoke
+``crontab -e`` and comment out the appropriate line by adding the ``#``
+character. It should look something like this::
+
+  # * * * * * pidof dashd || ~/.dashcore/dashd
+
+Then stop Dash running::
+
+  ~/.dashcore/dash-cli stop
+
+Visit the `GitHub releases page
+<https://github.com/dashpay/dash/releases>`_ and copy the link to the
+latest x86_64-linux-gnu version. Go back to your terminal window and
+enter the following command, pasting in the address to the latest
+version of Dash Core by right clicking or pressing **Ctrl + V**::
+
+  cd /tmp
+  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc10/dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
+
+Verify the integrity of your download by running the following command
+and comparing the output against the value for the file as shown in the
+``SHA256SUMS.asc`` file::
+
+  sha256sum dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
+
+Extract the compressed archive and copy the new files to the directory::
+
+  tar xfv dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.13.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.13.0/bin/dash-cli ~/.dashcore/
+
+Restart Dash::
+
+  ~/.dashcore/dashd
+
+You will see a message reading "Dash Core server starting". We will now
+update Sentinel::
+
+  cd ~/.dashcore/sentinel/
+  git checkout master
+  git pull
+
+Finally, uncomment the line to automatically restart Dash in your
+crontab by invoking ``crontab -e`` again and deleting the ``#``
+character.
+
+The Dash software on the masternode is now updated.
+
+
 .. _update-dip3-config:
 
 Updating Masternode Information
@@ -27,6 +107,8 @@ or change in percentage of the reward allocated to an operator. It is
 also possible to revoke a masternode's registered status (in the event
 of a security breach, for example) to force both owner and operator to
 update their details.
+
+.. _dip3-update-service
 
 ProUpServTx
 -----------

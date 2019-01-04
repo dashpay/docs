@@ -23,14 +23,14 @@ It is highly recommended to first read at least the list of changes
 before continuing in order to familiarize yourself with the new concepts
 in DIP3. This documentation describes the upgrade procedure in two steps:
 
-1. :ref:`Update the masternode software <masternode-update>`
+1. :ref:`Update the masternode software <masternode-dip3-update>`
 2. Register the DIP3 masternode
 
    - :ref:`From a hardware wallet <dmt-dip3-upgrade>`
    - :ref:`From the Dash Core wallet <dashcore-dip3-upgrade>`
 
 
-.. _masternode-update:
+.. _masternode-dip3-update:
 
 Masternode Software Update
 ==========================
@@ -85,8 +85,7 @@ and comparing the output against the value for the file as shown in the
 
   sha256sum dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
 
-Extract the compressed archive, copy the new files to the directory and
-set them as executable::
+Extract the compressed archive and copy the new files to the directory::
 
   tar xfv dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
   cp -f dashcore-0.13.0/bin/dashd ~/.dashcore/
@@ -116,7 +115,7 @@ Masternode Registration from DMT
 ================================
 
 This documentation describes the procedure to register an existing
-masternode for the DIP3 masternode list if the collateral is held on a
+masternode for the DIP003 masternode list if the collateral is held on a
 hardware wallet. DMT 0.9.21 or higher is required. You can update DMT by
 downloading the version appropriate for your system from the `DMT
 Releases page <https://github.com/Bertrand256/dash-masternode-tool/releases>`__. 
@@ -167,7 +166,7 @@ or if you trust the operator of the node. You can see the name of the
 node you are connected to in the lower right corner of the main DMT
 window. The default nodes in DMT (named ``alice``, ``luna`` and
 ``suzy``) are maintained by the author of DMT, who has kindly offered to
-cover the transaction fees for the DIP3 upgrade.
+cover the transaction fees for the DIP003 upgrade.
 
 DMT will prepare a ProTx message and prompt you to confirm signing the
 message on your hardware wallet. The signed message will be registered
@@ -236,12 +235,12 @@ to give Dash Core time to shut down::
   ~/.dashcore/dash-cli stop
   ~/.dashcore/dashd
 
-Your masternode is now upgraded to DIP3 and will appear on the
+Your masternode is now upgraded to DIP003 and will appear on the
 Deterministic Masternode List. You can view this list on the
 **Masternodes -> DIP3 Masternodes** tab of the Dash Core wallet, or in
 the console using the command ``protx list valid``, where the txid of
-the final transaction in Step 5 identifies your DIP3 masternode. Note
-again that all functions related to DIP3 will only take effect once
+the final transaction in Step 5 identifies your DIP003 masternode. Note
+again that all functions related to DIP003 will only take effect once
 Spork 15 is enabled on the network. You can view the spork status using
 the ``spork active`` command.
 
@@ -252,12 +251,12 @@ Masternode Registration from Dash Core
 ======================================
 
 This documentation describes the procedure to register an existing
-masternode for the DIP3 masternode list if the collateral is held in the
-Dash Core software full wallet. The commands are shown as if they were
-entered in the Dash Core GUI by opening the console from Tools > Debug
-console, but the same result can be achieved on a masternode by entering
-the same commands and adding the prefix ``~/.dashcore/dash-cli`` to each
-command.
+masternode for the DIP003 masternode list if the collateral is held in
+the Dash Core software full wallet. The commands are shown as if they
+were entered in the Dash Core GUI by opening the console from Tools >
+Debug console, but the same result can be achieved on a masternode by
+entering the same commands and adding the prefix 
+``~/.dashcore/dash-cli`` to each command.
 
 
 Generate a BLS key pair
@@ -307,7 +306,7 @@ to give Dash Core time to shut down::
   ~/.dashcore/dash-cli stop
   ~/.dashcore/dashd
 
-We will now prepare the transaction used to register a DIP3 masternode
+We will now prepare the transaction used to register a DIP003 masternode
 on the network.
 
 
@@ -431,12 +430,12 @@ Output::
 
   9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6
 
-Your masternode is now upgraded to DIP3 and will appear on the
+Your masternode is now upgraded to DIP003 and will appear on the
 Deterministic Masternode List after the transaction is mined to a block.
 You can view this list on the **Masternodes -> DIP3 Masternodes** tab of
 the Dash Core wallet, or in the console using the command ``protx list
 valid``, where the txid of the final ``protx register_submit``
-transaction identifies your DIP3 masternode. Note again that all
-functions related to DIP3 will only take effect once Spork 15 is enabled
+transaction identifies your DIP003 masternode. Note again that all
+functions related to DIP003 will only take effect once Spork 15 is enabled
 on the network. You can view the spork status using the ``spork active``
 command.

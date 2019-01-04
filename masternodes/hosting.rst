@@ -136,16 +136,17 @@ https://masternodehosting.com
 - `Email <holger@masternodehosting.com>`__
 - `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
 
+
 .. _hosted-setup:
 
 Registering a hosted masternode
 ===============================
 
-Dash 0.13.0 implements DIP3, which introduces several changes to how a
+Dash 0.13.0 implements DIP003, which introduces several changes to how a
 Dash masternode is set up and operated. A list of available
 documentation appears below:
 
-- `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
+- `DIP003 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
 - :ref:`dip3-changes`
 - :ref:`dip3-upgrade`
 - :ref:`Full masternode setup guide <masternode-setup>`
@@ -154,7 +155,7 @@ documentation appears below:
 
 It is highly recommended to first read at least the list of changes
 before continuing in order to familiarize yourself with the new concepts
-in DIP3.
+in DIP003.
 
 Registering a hosted masternode is done in several steps:
 
@@ -188,7 +189,7 @@ This documentation is intended for operators managing nodes on behalf of
 owners. If you provide an IP address and port of a synchronized full
 node with your ``masternodeblsprivkey`` entered in the ``dash.conf``
 file as descibed :ref:`here <bls-generation>` to the masternode owner,
-it will appear in the DIP3 valid set immediately after they submit the
+it will appear in the DIP003 valid set immediately after they submit the
 ``protx register_submit`` command as described above. If the full node
 is not running, or if the owner submits ``0`` for the ``ipAndPort``,
 then the node will be registered in a PoSe-banned state. In this case,

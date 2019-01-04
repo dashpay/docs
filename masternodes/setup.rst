@@ -31,7 +31,7 @@ Before you begin
 This guide assumes you are setting up a single masternode for the first
 time. If you are updating a masternode, see  :ref:`here <masternode-update>` 
 instead. If Spork 15 is not yet enabled, it is not possible to directly
-set up a DIP3 masternode. You will need to set up the masternode
+set up a DIP003 masternode. You will need to set up the masternode
 following the `old process
 <https://docs.dash.org/en/stable/masternodes/setup.html>`_ and then work
 through the :ref:`upgrade procedure <dip3-upgrade>`. You will need:
@@ -41,11 +41,11 @@ through the :ref:`upgrade procedure <dip3-upgrade>`. You will need:
   Dash Core wallet is also supported
 - A Linux server, preferably a Virtual Private Server (VPS)
 
-Dash 0.13.0 implements DIP3, which introduces several changes to how a
+Dash 0.13.0 implements DIP003, which introduces several changes to how a
 Dash masternode is set up and operated. A list of available
 documentation appears below:
 
-- `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
+- `DIP003 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
 - :ref:`dip3-changes`
 - :ref:`dip3-upgrade`
 - :ref:`Full masternode setup guide <masternode-setup>` (you are here)
@@ -54,7 +54,7 @@ documentation appears below:
 
 It is highly recommended to first read at least the list of changes
 before continuing in order to familiarize yourself with the new concepts
-in DIP3. This documentation describes the commands as if they were
+in DIP003. This documentation describes the commands as if they were
 entered in the Dash Core GUI by opening the console from **Tools > Debug
 console**, but the same result can be achieved on a masternode by
 entering the same commands and adding the prefix 
@@ -334,7 +334,7 @@ working.
    Dash Masternode Tool successful connection confirmations
 
 We will now use DMT to extract the transaction ID and legacy masternode
-key (necessary for successful startup during the DIP3 transition
+key (necessary for successful startup during the DIP003 transition
 period). Carry out the following sequence of steps as shown in this
 screenshot:
 
@@ -379,8 +379,8 @@ It should look like this when ready:
 
 Click **Tools > Debug console** to open the console. Type the following
 two commands into the console to generate a legacy masternode key
-(necessary for successful startup during the DIP3 transition period) and
-a new Dash address for the collateral::
+(necessary for successful startup during the DIP003 transition period)
+and a new Dash address for the collateral::
 
   masternode genkey
   93PAqQsDjcVdYJHRfQPjsSt5338GCswMnUaSxoCD8J6fiLk4NHL
@@ -477,7 +477,7 @@ are complete::
 
    dashman status output showing masternode ready to be started
 
-Continue with the :ref:`next step to start your masternode
+Continue with the :ref:`next step to register your masternode
 <register-masternode>`.
 
 Option 2: Manual installation
@@ -516,8 +516,8 @@ follows::
 
    Downloading the PGP key and verifying the signed binary
 
-Create a working directory for Dash, extract the compressed archive,
-copy the necessary files to the directory and set them as executable::
+Create a working directory for Dash, extract the compressed archive and
+copy the necessary files to the directory::
 
   mkdir ~/.dashcore
   tar xfv dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
@@ -626,13 +626,13 @@ to enable your masternode.
 Register your masternode
 ========================
 
-DIP3 introduces several changes to how a masternode is set up and
+DIP003 introduces several changes to how a masternode is set up and
 operated. These are described briefly under :ref:`dip3-changes` in
-this documentation, or in full detail in `DIP3
+this documentation, or in full detail in `DIP003
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ itself. It
 is highly recommended to first read at least the brief documentation
 before continuing in order to familiarize yourself with the new concepts
-in DIP3.
+in DIP003.
 
 
 Option 1: Registering from a hardware wallet
@@ -640,7 +640,7 @@ Option 1: Registering from a hardware wallet
 
 Go back to DMT and ensure that all fields from the previous step are
 still filled out correctly.  Click **Generate new** for the three
-private keys required for a DIP3 deterministic masternode:
+private keys required for a DIP003 deterministic masternode:
 
 - Owner private key
 - Operator private key
@@ -685,12 +685,10 @@ to give Dash Core time to shut down::
   ~/.dashcore/dash-cli stop
   ~/.dashcore/dashd
 
-At this point you can monitor your masternode using ``dashman/dashman
-status``, by entering ``~/.dashcore/dash-cli masternode status`` or
-using the **Get status** function in DMT. You will probably need to wait
-around 30 minutes as the node passes through the PRE_ENABLED stage and
-finally reaches ENABLED. Give it some time, the final result should
-appear as follows:
+At this point you can monitor your masternode using 
+``dashman/dashman status``, by entering 
+``~/.dashcore/dash-cli masternode status`` or using the **Get status** 
+function in DMT. The final result should appear as follows:
 
 .. figure:: img/setup-dash-cli-start.png
    :width: 400px
@@ -699,6 +697,7 @@ appear as follows:
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
+
 
 .. _dashcore-protx:
 
@@ -721,7 +720,7 @@ This should return a string of characters similar to this::
   }
 
 The first long string is your transaction hash, while the last number is
-the index. 
+the index.
 
 
 .. _bls-generation:
@@ -730,9 +729,10 @@ Generate a BLS key pair
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 A public/private BLS key pair is required for the operator of the
-masternode. If you are using a hosting service, they will provide you
+masternode. If you are using a hosting service, they may provide you
 with their public key, and you can skip this step. If you are hosting
-your own masternode, generate a BLS public/private keypair as follows::
+your own masternode or have agreed to provide your host with the BLS
+private key, generate a BLS public/private keypair as follows::
 
   bls generate
 
@@ -746,13 +746,13 @@ similar to the value provided in the past by the** ``masternode genkey``
 **command.**
 
 Add the private key to your masternode configuration
-----------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The public key will be used in following steps. The secret key must be
+The public key will be used in following steps. The private key must be
 entered in the ``dash.conf`` file on the masternode. This allows the
 masternode to watch the network for relevant Pro*Tx transactions, and
 will cause it to start serving as a masternode when the signed ProRegTx
-is broadcast by the owner (Step 5 below). Log in to your masternode
+is broadcast by the owner (final step below). Log in to your masternode
 using ``ssh`` or PuTTY and edit the configuration file on your
 masternode as follows::
 
@@ -773,7 +773,7 @@ to give Dash Core time to shut down::
   ~/.dashcore/dash-cli stop
   ~/.dashcore/dashd
 
-We will now prepare the transaction used to register a DIP3 masternode
+We will now prepare the transaction used to register a DIP003 masternode
 on the network.
 
 Prepare a ProRegTx transaction
@@ -824,10 +824,11 @@ argument to the command as follows:
 - ``feeSourceAddress``: An (optional) address used to fund ProTx fee. 
   ``payoutAddress`` will be used if not specified.
 
-Note that the operator is responsible for specifying their own reward
-address in a separate ``update_service`` transaction if you specify a
-non-zero ``operatorReward``. The owner of the masternode collateral does
-not specify the operator's payout address.
+Note that the operator is responsible for :ref:`specifying their own
+reward <dip3-update-service>` address in a separate ``update_service``
+transaction if you specify a non-zero ``operatorReward``. The owner of
+the masternode collateral does not specify the operator's payout
+address.
 
 Example (remove line breaks if copying)::
 
@@ -849,13 +850,14 @@ Output::
     "signMessage": "yLqyR8PHEB7Fp1ue8nSuLfuxQhrj5PSTDv|0|yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5|yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5|4e00de34ee03d28adb4e1fdaec966ae239c11da7e6115f566fc4b3f75c8a5503"
   }
 
-We will use the ``collateralAddress`` and ``signMessage`` fields in Step
-4, and the output of the ``tx`` field in Step 5.
+Next we will use the ``collateralAddress`` and ``signMessage`` fields to
+sign the transaction, and the output of the ``tx`` field to submit the
+transaction.
 
 Sign the ProRegTx transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now we will sign the content of the ``signMessage`` field using the
+We will now sign the content of the ``signMessage`` field using the
 private key for the collateral address as specified in
 ``collateralAddress``. Note that no internet connection is required for
 this step, meaning that the wallet can remain disconnected from the
@@ -877,8 +879,8 @@ Output::
 Submit the signed message
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We will now register the ProRegTx special transaction on the blockchain
-to register the masternode. This command must be sent from a Dash Core
+We will now submit the ProRegTx special transaction to the blockchain to
+register the masternode. This command must be sent from a Dash Core
 wallet holding a balance, since a standard transaction fee is involved.
 The command takes the following syntax::
 
@@ -886,8 +888,8 @@ The command takes the following syntax::
 
 Where: 
 
-- ``tx``: The serialized transaction previously returned in the ``tx`` output field from ``protx register_prepare`` in Step 2
-- ``sig``: The message signed with the collateral key from Step 3
+- ``tx``: The serialized transaction previously returned in the ``tx`` output field from the ``protx register_prepare`` command
+- ``sig``: The message signed with the collateral key from the ``signmessage`` command
 
 Example::
 
@@ -897,22 +899,19 @@ Output::
 
   b823338301e47875493c20361a23aef034578030c639480203b394669ab05e09
 
-Your masternode is now upgraded to DIP3 and will appear on the
-Deterministic Masternode List after the transaction is mined to a block.
-You can view this list on the **Masternodes -> DIP3 Masternodes** tab of
-the Dash Core wallet, or in the console using the command ``protx list
-valid``, where the txid of the final ``protx register_submit``
-transaction identifies your DIP3 masternode. Note again that all
-functions related to DIP3 will only take effect once Spork 15 is enabled
-on the network. You can view the spork status using the ``spork active``
-command.
+Your masternode is now registered and will appear on the Deterministic
+Masternode List after the transaction is mined to a block. You can view
+this list on the **Masternodes -> DIP3 Masternodes** tab of the Dash
+Core wallet, or in the console using the command ``protx list valid``,
+where the txid of the final ``protx register_submit`` transaction
+identifies your DIP003 masternode. Note again that all functions related
+to DIP003 will only take effect once Spork 15 is enabled on the network.
+You can view the spork status using the ``spork active`` command.
 
 At this point you can go back to your terminal window and monitor your
 masternode using ``dashman/dashman status``, by entering
 ``~/.dashcore/dash-cli masternode status`` or using the **Get status**
-function in DMT. You will probably need to wait around 30 minutes as the
-node passes through the PRE_ENABLED stage and finally reaches ENABLED.
-Give it some time, the final result should appear as follows:
+function in DMT. The final result should appear as follows:
 
 .. figure:: img/setup-dashman-started.png
    :width: 400px
@@ -921,4 +920,3 @@ Give it some time, the final result should appear as follows:
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
-

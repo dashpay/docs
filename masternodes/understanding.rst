@@ -84,14 +84,14 @@ statistics on the masternode network.
 
 .. _dip3-changes:
 
-DIP3 Masternode Changes
-=======================
+DIP003 Masternode Changes
+=========================
 
-Dash 0.13.0 implements DIP3, which introduces several changes to how a
+Dash 0.13.0 implements DIP003, which introduces several changes to how a
 Dash masternode is set up and operated. A list of available
 documentation appears below:
 
-- `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
+- `DIP003 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
 - :ref:`dip3-changes` (you are here)
 - :ref:`dip3-upgrade`
 - :ref:`Full masternode setup guide <masternode-setup>`
@@ -103,9 +103,9 @@ Important concepts and changes:
 - It is possible to upgrade an existing masternode in-place without 
   starting a new server and without moving your 1000 DASH collateral.
 - A masternode was previously "started" using the ``masternode start-alias`` 
-  command based on a ``masternode.conf`` file. Under DIP3, this file is
-  no longer used, and masternodes are "registered" instead of "started".
-  Masternodes begin offering services when a `ProRegTx <https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a-masternode-proregtx>`_ 
+  command based on a ``masternode.conf`` file. Under DIP003, this file 
+  is no longer used, and masternodes are "registered" instead of 
+  "started". Masternodes begin offering services when a `ProRegTx <https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a-masternode-proregtx>`_ 
   `special transaction <https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ 
   containing a particular key is written to the blockchain.
 - As before in ``masternode.conf``, the ProRegTx references the
@@ -131,21 +131,21 @@ Important concepts and changes:
      masternode is in the registered set.
 
 - Masternode payments were previously sent to the address holding the
-  collateral. Under DIP3, the owner should specify a different address 
+  collateral. Under DIP003, the owner should specify a different address 
   to receive payments in the ProRegTx. The owner may optionally specify 
   a non-zero percentage as payment to a separate masternode operator, if
   applicable.
 - The masternode configuration can later be updated using ProUpServTx,
   ProUpRegTx and ProUpRevTx transactions. See `Updating Masternode
   Information <https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-masternode-information>`_ 
-  in DIP3 and :ref:`update-dip3-config` in this documentation for more
+  in DIP003 and :ref:`update-dip3-config` in this documentation for more
   details.
-- All functions related to DIP3 will only take effect once Spork 15 is
+- All functions related to DIP003 will only take effect once Spork 15 is
   enabled on the network. Until then, it is necessary to set up the
   masternode following the `old process <https://docs.dash.org/en/stable/masternodes/setup.html>`_ 
   and then work through the :ref:`upgrade procedure <dip3-upgrade>`. In
   this state, the masternode will continue to function in compatibility
-  mode, and all DIP3 related functions, such as payments to a separate
+  mode, and all DIP003 related functions, such as payments to a separate
   address or percentage payments to operators, will not yet have any
   effect. The ``ownerKeyAddr`` and ``votingKeyAddr`` must also be 
   identical until Spork 15 is enabled.
@@ -217,7 +217,7 @@ Masternode paymentss in Dash version 0.13.0 are entirely deterministic
 and based on a simple list sort algorithm. For documentation of version
 0.12.0 payment logic, see the `legacy masternode payment documentation
 <https://docs.dash.org/en/stable/masternodes/understanding.html#payment-logic>`_. 
-Dash version 0.13.0 implements `DIP3
+Dash version 0.13.0 implements `DIP003
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_  and defines
 two sets of masternodes.
 
