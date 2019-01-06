@@ -20,7 +20,7 @@ Introduction
 
 - DGBB consists of three components: Proposals, Votes, and Budgets
 - Anyone can submit a proposal for a small fee
-- Masternode owners can cast for, against or abstain votes on proposals
+- Each valid masternode can vote for, against or abstain on proposals
 - Approved proposals become budgets
 - Budgets are paid directly from the blockchain to the proposal owner
 
@@ -35,7 +35,8 @@ Proposals
 Votes
 -----
 
-- Votes are cast by masternode owners
+- Votes are cast using the registered voting address
+- The voting address can be delegated to a third party
 - Votes can be changed at any time
 - Votes are counted every 16616 blocks (approx. 30.29 days)
 
