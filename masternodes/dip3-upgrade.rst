@@ -344,9 +344,11 @@ owner's masternode payouts::
 
   ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy
 
-Next, we will prepare an unsigned ProRegTx special transaction using the
-``protx register_prepare`` command. This command has the following
-syntax::
+You can also optionally generate and fund a third address to pay the
+transaction fee. The private key to this address must be available to
+the wallet submitting the transaction to the network. We will now
+prepare an unsigned ProRegTx special transaction using the ``protx
+register_prepare`` command. This command has the following syntax::
 
   protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr 
     operatorPubKey votingKeyAddr operatorReward payoutAddress (feeSourceAddress)
