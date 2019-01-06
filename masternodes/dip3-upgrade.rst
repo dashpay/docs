@@ -349,7 +349,7 @@ Next, we will prepare an unsigned ProRegTx special transaction using the
 syntax::
 
   protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr 
-    operatorKeyAddr votingKeyAddr operatorReward payoutAddress
+    operatorPubKey votingKeyAddr operatorReward payoutAddress (feeSourceAddress)
 
 Open a text editor such as notepad to prepare this command. Replace each
 argument to the command as follows:
@@ -362,7 +362,7 @@ argument to the command as follows:
   ``x.x.x.x:yyyy``
 - ``ownerKeyAddr``: The new Dash address generated above for the 
   owner/voting address
-- ``operatorKeyAddr``: The BLS public key generated above (or provided 
+- ``operatorPubKey``: The BLS public key generated above (or provided 
   by your hosting service)
 - ``votingKeyAddr``: The new Dash address generated above, or the 
   address of a delegate, used for proposal voting
@@ -370,11 +370,14 @@ argument to the command as follows:
   the operator as payment
 - ``payoutAddress``: A new or existing Dash address to receive the 
   owner's masternode rewards
-
-Note that the operator is responsible for specifying their own reward
-address in a separate ``update_service`` transaction if you specify a
-non-zero ``operatorReward``. The owner of the masternode collateral does
-not specify the operator's payout address.
+- ``feeSourceAddress``: An (optional) address used to fund ProTx fee. 
+  ``payoutAddress`` will be used if not specified.
+  
+Note that the operator is responsible for :ref:`specifying their own
+reward <dip3-update-service>` address in a separate ``update_service``
+transaction if you specify a non-zero ``operatorReward``. The owner of
+the masternode collateral does not specify the operator's payout
+address.
 
 Example (remove line breaks if copying)::
 
