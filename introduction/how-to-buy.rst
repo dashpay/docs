@@ -1376,6 +1376,17 @@ Coinfinity
   Germany, as well as through their coupon-based `Bitcoinbon
   <https://www.bitcoinbon.at/>`_ service.
 
+Coinsave
+  .. image:: exchanges/coinsave.png
+     :width: 200px
+     :align: right
+     :target: https://coinsave.io
+
+  https://coinsave.io
+
+  Coinsave is a Canadian OTC retailer offering DASH and other
+  cryptocurrencies for CAD.
+
 Bitcoin Meester
   .. image:: exchanges/bitcoinmeester.png
      :width: 200px
