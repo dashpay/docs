@@ -549,7 +549,7 @@ masternode "command"...
       Print masternode compatible outputs
     start-alias
       Start single remote masternode by assigned alias configured in masternode.conf
-    start-<mode
+    start-<mode>
       Start remote masternodes configured in masternode.conf (<mode>: 'all', 'missing', 'disabled')
     status
       Print masternode status information
