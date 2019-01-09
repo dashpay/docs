@@ -299,6 +299,8 @@ tab to **Vote Yes**, **Vote No** or **Vote Abstain** directly from DMT.
 
    Voting interface in DMT
 
+.. _dash-core-voting:
+
 Dash Core wallet or masternode
 ------------------------------
 
@@ -345,3 +347,18 @@ You can also view a list of proposals in JSON format from the console to
 copy and paste the proposal hash for voting as follows::
 
   gobject list
+
+.. _delegating-votes:
+
+Delegating votes
+----------------
+
+:ref:`DIP003 masternodes <dip3-changes>` feature a separate voting key,
+which makes it possible to delegate your vote to a representative.
+Simply enter a Dash address provided by the delegate when
+:ref:`registering your masternode <masternode-setup>`, or :ref:`update
+<dip3-update-registrar>` your masternode registration to delegate the
+vote of a running masternode. The wallet controlling the private key to
+this address will then cast votes on behalf of this masternode owner
+simply by following the :ref:`Dash Core voting procedure <dash-core-voting>` 
+described above. No further configuration is required.

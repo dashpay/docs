@@ -142,6 +142,8 @@ Example::
 The masternode is now removed from the PoSe-banned list, and the IP:port
 and operator reward addresses are updated.
 
+.. _dip3-update-registrar:
+
 ProUpRegTx
 ----------
 
