@@ -121,7 +121,7 @@ set the scriptOperatorPayout field in the ProUpServTx. If
 scriptOperatorPayout is not set and operatorReward is non-zero, the
 owner gets the full masternode reward. The ProUpServTx takes the following syntax::
 
-  protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress)
+  protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress feeSoureceAddress)
 
 Where:
 
@@ -132,6 +132,8 @@ Where:
 - ``operatorPayoutAddress`` (optional): The address used for operator 
   reward payments. Only allowed when the ProRegTx had a non-zero 
   ``operatorReward`` value.
+- ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
+  ``operatorPayoutAddress`` will be used if not specified.
 
 Example::
 
@@ -152,7 +154,6 @@ information relating to the owner. An owner can update the operator's
 BLS public key (e.g. to nominate a new operator), the voting address and
 their own payout address. The ProUpRegTx takes the following syntax::
 
-  protx update_registrar proTxHash operatorKeyAddr votingKeyAddr payoutAddress
   protx update_registrar proTxHash operatorKeyAddr votingKeyAddr payoutAddress (feeSourceAddress)
 
 Where:
@@ -164,8 +165,8 @@ Where:
   on-chain operator key
 - ``payoutAddress``: An updated Dash address for owner payments, or 0 to 
   use the last on-chain operator key
-- ``feeSourceAddress``: An (optional) address used to fund ProTx fee. 
-  ``payoutAddress`` will be used if not specified.
+- ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
+  ``PayoutAddress`` will be used if not specified.
 
 Example to update payout address::
 
@@ -184,7 +185,7 @@ ProUpServTx to update the service-related metadata and clear the PoSe-
 banned state (revive the masternode). The ProUpRevTx takes the following
 syntax::
 
-  protx revoke proTxHash operatorKey reason
+  protx revoke proTxHash operatorKey (reason feeSourceAddress)
 
 Where:
 
@@ -192,6 +193,8 @@ Where:
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
 - ``reason`` (optional): Integer value indicating the revocation `reason <https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-for-self-revocation-of-operators>`__
+- ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
+  ``operatorPayoutAddress`` will be used if not specified.
 
 Example::
 
