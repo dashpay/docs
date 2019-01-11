@@ -74,33 +74,19 @@ Disclaimer: This list is provided for informational purposes only. Dash
 Core is not liable for any funds transmitted in error to these
 providers, or for the accuracy of information on this page.
 
-Shakepay
-  .. image:: img/shakepay.png
+PolisPay
+  .. image:: img/polispay.png
      :width: 200px
      :align: right
-     :target: https://shakepay.co
+     :target: https://polispay.com
 
-  https://shakepay.co
+  https://polispay.com
 
-  Shakepay is a virtual (Android & iOS) and plastic card backed by VISA
-  and usable in Canada. The card can be loaded with Bitcoin, Dash and
-  Ethereum, and balances tracked in USD, CAD and EUR. See `here
-  <https://www.dashforcenews.com /shakepay-card-review>`_ for a review
-  by Dash Force News.
-
-Wirex
-  .. image:: img/wirex.png
-     :width: 200px
-     :align: right
-     :target: https://wirexapp.com
-
-  https://wirexapp.com
-
-  Wirex offers a cryptocurrency wallet, money transfer and
-  cryptocurrency sales, with a physical card potentially available again
-  soon. On October 2, 2017 Wirex `announced <https://wirexapp.com/dash-
-  wallet-integration>`_ a partnership with Dash and integration of Dash
-  funding on Wirex cards.
+  The PolisPay Card is one of the fastest, easiest ways to turn your
+  Dash into fiat currency. You can use your PolisPay Card for online
+  shopping and at any brick and mortar retailer that accepts MasterCard®
+  debit cards. You can also withdraw cash at any MasterCard®-compatible
+  ATM.
 
 FuzeX
   .. image:: img/fuzex.png
@@ -120,9 +106,9 @@ Paycent
   .. image:: img/paycent.png
      :width: 200px
      :align: right
-     :target: https://paycent.com/
+     :target: https://paycent.com
 
-  https://paycent.com/
+  https://paycent.com
 
   Paycent provides Android and iOS wallets that can be funded using both
   fiat and cryptocurrency. Users can transact with one another within
@@ -142,20 +128,6 @@ SpectroCoin
   physical card potentially available again soon. Dash, Bitcoin and
   Ethereum are supported, as well as over 20 major fiat currencies.
 
-MoneyPolo
-  .. image:: img/moneypolo.png
-     :width: 200px
-     :align: right
-     :target: https://moneypolo.com
-
-  https://moneypolo.com
-
-  MoneyPolo offers currency exchange and transfer, prepaid cards and the
-  ability to hold accounts in a range of currencies. Deposits and
-  withdrawals are available in DASH, BTC, ETH, LTC, BCH and BTG, and it
-  is possible to transfer value to a prepaid card or any worldwide bank
-  account.
-
 Bitwala
   .. image:: img/bitwala.png
      :width: 200px
@@ -167,16 +139,6 @@ Bitwala
   Bitwala is currently preparing legal documentation to re-launch it's
   card service in Europe, and has supported Dash in the past.
 
-TenX
-  .. image:: img/tenx.png
-     :width: 100px
-     :align: right
-     :target: https://www.tenx.tech
-
-  https://www.tenx.tech
-
-  TenX is in discussions with regulatory authorities to launch an
-  integration of Dash with their wallet app and physical cards.
 
 Tax
 ===
