@@ -925,6 +925,19 @@ NegocieCoins
   Dash trading pairs. A premium service with higher withdrawal limits is
   available.
 
+XDEX
+  .. image:: exchanges/xdex.png
+     :width: 100px
+     :align: right
+     :target: https://www.xdex.com.br
+
+  https://www.xdex.com.br
+
+  Based in Brazil, XDEX offers both simple purchase and sale of
+  cryptocurrencies and an advanced trading platform with various order
+  types. Dash and several other cryptocurrencies are available for
+  trading against the Brazilian real.
+
 Bitcointoyou
   .. image:: exchanges/bitcointoyou.png
      :width: 200px
