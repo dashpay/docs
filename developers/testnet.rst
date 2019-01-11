@@ -58,19 +58,12 @@ specific service.
 Faucets
 -------
 
-- https://test.faucet.dash.org - by flare
-- http://test.faucet.dashninja.pl - by elbereth
-- http://t.f.masternode.io - by coingun
 - http://test.faucet.masternode.io - by coingun
 - http://faucet.test.dash.crowdnode.io - ndrezza
 
 Explorers
 ---------
 
-- https://test.explorer.dash.org - by flare
-- https://test.insight.dash.siampm.com - by thelazier
-- https://test.explorer.dashninja.pl - by elbereth
-- http://test.insight.masternode.io:3001 - by coingun
 - http://insight.test.dash.crowdnode.io
 - https://testnet-insight.dashevo.org/insight
 
