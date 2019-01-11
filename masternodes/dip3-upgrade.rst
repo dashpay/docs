@@ -166,8 +166,9 @@ transaction to register the masternode on the blockchain. This command
 must be sent from a Dash Core wallet holding a balance, since a standard
 transaction fee is involved. You can choose to send this from the DMT
 developer's remote RPC node (**automatic method**), or use your own Dash
-Core wallet to submit the transaction (**manual method**). Click
-**Continue** when you are ready.
+Core wallet to submit the transaction and specify the source of
+transaction fees (**manual method**). Click **Continue** when you are
+ready.
 
 Option 1: Automatic method
 --------------------------
@@ -202,20 +203,23 @@ The following window appears:
 
    Manual registration commands in the DMT Masternode migration wizard
 
-Open Dash Core, wait for the blockchain to synchronise and then click
-**Tools -> Debug console**. Complete the following steps:
+Open Dash Core and wait for the blockchain to synchronise. Complete the 
+following steps:
 
-1. Copy and paste the command from Step 1 into the Dash Core debug
-   console and press **Enter**.
-2. Copy and paste the output back into the Step 2 field of the DMT
+1. In your Dash Core wallet, select an address to use as the source for 
+   the transaction fee and paste it into Field 1.
+2. Open the Debug console by clicking **Tools -> Debug console**.
+3. Copy and paste the command from Field 2 of DMT into the Dash Core 
+   debug console and press **Enter**.
+4. Copy the output back and paste it into Field 3 field of the DMT
    Masternode migration wizard.
-3. Click **Sign message with hardware wallet** and confirm signing the
+5. Click **Sign message with hardware wallet** and confirm signing the
    message on your hardware wallet.
-4. Copy and paste the command from Step 3 into the Dash Core debug
-   console and press **Enter**. Dash Core will create a registration
-   transaction on the blockchain.
-5. Copy and paste the transaction hash back into the Step 4 field of the
-   DMT Masternode migration wizard and click **Continue**.
+6. Copy the command from Field 4 of DMT, paste it into the Dash Core 
+   debug console and press **Enter**. Dash Core will create a 
+   registration transaction on the blockchain.
+7. Copy and paste the transaction hash into Field 5 of the DMT 
+   Masternode migration wizard and click **Continue**.
 
 A window appears with the final configuration information. Click **Save
 to a file** and enter a new file name. This file contains various
