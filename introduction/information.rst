@@ -240,6 +240,7 @@ iOS
 - **Cryptonaut:** https://itunes.apple.com/app/id1312756405
 - **Quoinex:** https://itunes.apple.com/app/id1140955992
 - **Abra:** https://itunes.apple.com/app/id966301394
+- **BitUniverse:** https://itunes.apple.com/app/id1329338902
 
 
 Android
@@ -257,6 +258,7 @@ Android
 - **Quoinex:** https://play.google.com/store/apps/details?id=mobi.quoine
 - **Abra:** https://play.google.com/store/apps/details?id=com.plutus.wallet
 - **Bitcoin Ticker Widget:** https://play.google.com/store/apps/details?id=st.brothas.mtgoxwidget
+- **BitUniverse:** https://play.google.com/store/apps/details?id=com.bituniverse.portfolio
 
 
 .. _glossary:
