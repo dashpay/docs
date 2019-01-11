@@ -109,12 +109,39 @@ but with a few key differences:
   ``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf``
   instead of ``~/.dashcore/masternode.conf``.
 
-Testnet 12.3
-============
+Testnet 0.13.0
+==============
+
+In November 2018, the Dash team announced the start of testing of the
+upcoming Dash 0.13.0 release. Extensive internal testing has already been
+done on the 0.13.0 code, but there are numerous bugs that can only be
+revealed with actual use by real people. The Dash team invites anybody
+who is interested to download the software and become active on testnet.
+This release includes:
+
+- Automatic InstantSend for Simple Transactions
+- Deterministic Masternode List
+- 3 Masternode Keys: Owner, Operator and Voting
+- Special Transactions
+- PrivateSend Improvements
+
+Discussion: 
+
+- Testnet announcement: https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef
+- Product brief: https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef
+- Testnet tools: https://docs.dash.org/en/latest/developers/testnet.html
+- Issue tracking: https://github.com/dashpay/dash/issues/new
+
+Latest test binaries:
+
+- https://github.com/dashpay/dash/releases/tag/v0.13.0.0-rc11
+
+Testnet 0.12.3
+==============
 
 In June 2018, the Dash team announced the start of testing of the
-upcoming Dash 12.3 release. Extensive internal testing has already been
-done on the 12.2 code, but there are numerous bugs that can only be
+upcoming Dash 0.12.3 release. Extensive internal testing has already been
+done on the 0.12.2 code, but there are numerous bugs that can only be
 revealed with actual use by real people. The Dash team invites anybody
 who is interested to download the software and become active on testnet.
 This release includes:
@@ -139,12 +166,12 @@ Latest test binaries:
 - https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3
 
 
-Testnet 12.2
-============
+Testnet 0.12.2
+==============
 
 In October 2017, the Dash team announced the launch of a testnet for
-public testing of the upcoming 12.2 release of the Dash software.
-Extensive internal testing has already been done on the 12.2 code, but
+public testing of the upcoming 0.12.2 release of the Dash software.
+Extensive internal testing has already been done on the 0.12.2 code, but
 there are numerous bugs that can only be revealed with actual use by
 real people. The Dash team invites anybody who is interested to download
 the software and become active on testnet. This release includes:
