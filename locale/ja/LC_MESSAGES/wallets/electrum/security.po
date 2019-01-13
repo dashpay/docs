@@ -1,21 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"POT-Creation-Date: 2019-01-11 06:48+0000\n"
 "PO-Revision-Date: 2018-03-19 12:19+0000\n"
-"Language-Team: Japanese (https://www.transifex.com/dash/teams/37570/ja/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Team: Japanese (https://www.transifex.com/dash/teams/37570/ja/)\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../wallets/electrum/security.rst:1
 msgid "Security, backup and safety when using the Dash Electrum wallet"
@@ -36,10 +38,10 @@ msgstr ""
 #: ../../wallets/electrum/security.rst:13
 msgid ""
 "To change the wallet's password, select the **Wallet > Password** option "
-"from the main menu, or click on the lock icon in the lower right of the main"
-" window. Enter and confirm a new secure password. Should you forget your "
-"wallets' password, all is not lost. Your wallet can be restored in its "
-"entirety using the backup procedure described here."
+"from the main menu, or click on the lock icon in the lower right of the "
+"main window. Enter and confirm a new secure password. Should you forget "
+"your wallets' password, all is not lost. Your wallet can be restored in "
+"its entirety using the backup procedure described here."
 msgstr ""
 
 #: ../../wallets/electrum/security.rst:22
@@ -49,10 +51,10 @@ msgstr ""
 #: ../../wallets/electrum/security.rst:24
 msgid ""
 "In Dash Electrum, a seed is a complete backup of all addresses and "
-"transactions. Access your wallet's seed through the seed icon in the lower "
-"right of the main screen, or the **Wallet > Seed** main menu option. When "
-"prompted, enter the secure password you chose when setting up the Dash "
-"Electrum wallet."
+"transactions. Access your wallet's seed through the seed icon in the "
+"lower right of the main screen, or the **Wallet > Seed** main menu "
+"option. When prompted, enter the secure password you chose when setting "
+"up the Dash Electrum wallet."
 msgstr ""
 
 #: ../../wallets/electrum/security.rst:33
@@ -61,9 +63,9 @@ msgstr ""
 
 #: ../../wallets/electrum/security.rst:35
 msgid ""
-"Hand-copy the twelve words found in the box to a piece of paper and store it"
-" in a safe location. Remember, anyone who finds your seed can spend all of "
-"the funds in your wallet."
+"Hand-copy the twelve words found in the box to a piece of paper and store"
+" it in a safe location. Remember, anyone who finds your seed can spend "
+"all of the funds in your wallet."
 msgstr ""
 
 #: ../../wallets/electrum/security.rst:42
@@ -73,8 +75,8 @@ msgstr ""
 #: ../../wallets/electrum/security.rst:44
 msgid ""
 "Alternatively, a backup file can be saved using the **File > Save Copy** "
-"main menu option. This file stores the wallet's encrypted seed along with "
-"any imported addresses. Restoring this backup will require the wallet "
+"main menu option. This file stores the wallet's encrypted seed along with"
+" any imported addresses. Restoring this backup will require the wallet "
 "password."
 msgstr ""
 
@@ -84,84 +86,125 @@ msgstr ""
 
 #: ../../wallets/electrum/security.rst:53
 msgid ""
-"The only thing needed to recover a Dash Electrum wallet on another computer "
-"is its seed. You can test wallet recovery with your current installation of "
-"Dash Electrum by removing the wallet data from the application data folder. "
-"This optional procedure is described below. Before continuing, verify that "
-"your seed is written down clearly and correctly on paper."
+"The only thing needed to recover a Dash Electrum wallet on another "
+"computer is its seed. You can test wallet recovery with your current "
+"installation of Dash Electrum by selecting the **File > New/Restore** "
+"menu item. A dialog will appear asking you to name your new wallet. Enter"
+" a name, select **Standard wallet** as the wallet type and then choose "
+"**I already have a seed**."
 msgstr ""
 
-#: ../../wallets/electrum/security.rst:60
-msgid ""
-"To get Dash Electrum to generate a new wallet, the old wallet data needs to "
-"be deleted. Begin by closing Dash Electrum. Next, locate the application "
-"data folder according to your operating system:"
+#: ../../wallets/electrum/security.rst:63
+msgid "Restoring a wallet from an existing seed"
 msgstr ""
 
-#: ../../wallets/electrum/security.rst:64
-msgid "**Linux:**"
-msgstr ""
-
-#: ../../wallets/electrum/security.rst:66
-msgid ""
-"Open Files, select **Go > Go to folder**, copy the path ``~/.electrum`` and "
-"paste it into the dialog box"
-msgstr ""
-
-#: ../../wallets/electrum/security.rst:68
-#: ../../wallets/electrum/security.rst:74
-#: ../../wallets/electrum/security.rst:80
-msgid "Delete all files in the folder"
+#: ../../wallets/electrum/security.rst:65
+msgid "Next, copy the twelve word seed into the text field."
 msgstr ""
 
 #: ../../wallets/electrum/security.rst:70
-msgid "**macOS:**"
+msgid "Entering the recovery seed"
 msgstr ""
 
 #: ../../wallets/electrum/security.rst:72
 msgid ""
-"Open Finder, select **Go > Go to Folder**, copy the path ``~/.electrum`` and"
-" paste it into the dialog box"
+"If your seed was entered correctly, Dash Electrum gives you the option to"
+" add a password for your wallet. After restoring your wallet, Dash "
+"Electrum will list any existing transactions from this wallet. This "
+"process may take a few minutes, and the transactions may appear as **Not "
+"Verified**. This problem disappears after restarting the program."
 msgstr ""
 
-#: ../../wallets/electrum/security.rst:76
-msgid "**Windows:**"
+#: ../../wallets/electrum/security.rst:81
+msgid "Unverified transactions after recovery"
 msgstr ""
 
-#: ../../wallets/electrum/security.rst:78
+#: ../../wallets/electrum/security.rst:83
 msgid ""
-"Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and paste it in to"
-" the address bar"
+"To restore a wallet file without using the recovery seed, copy the file "
+"to the application data folder according to your operating system:"
 msgstr ""
 
-#: ../../wallets/electrum/security.rst:82
+#: ../../wallets/electrum/security.rst:86
 msgid ""
-"Having cleared the data directory, restart Dash Electrum. A dialog will "
-"appear asking you to name your new wallet. Enter a name, select **Standard "
-"wallet** as the wallet type and then choose **I already have a seed**."
+"**Linux:** Open Files, select **Go > Go to folder**, copy the path "
+"``~/.electrum-dash`` and paste it into the dialog box."
 msgstr ""
 
-#: ../../wallets/electrum/security.rst:90
-msgid "Restoring a wallet from an existing seed"
+#: ../../wallets/electrum/security.rst:89
+msgid ""
+"**macOS:** Open Finder, select **Go > Go to Folder**, copy the path "
+"``~/.electrum-dash`` and paste it into the dialog box."
 msgstr ""
 
 #: ../../wallets/electrum/security.rst:92
-msgid "Next, copy the twelve word seed into the text field."
-msgstr ""
-
-#: ../../wallets/electrum/security.rst:97
-msgid "Entering the recovery seed"
-msgstr ""
-
-#: ../../wallets/electrum/security.rst:99
 msgid ""
-"If your seed was entered correctly, Dash Electrum gives you the option to "
-"add a password for your wallet. After restoring your wallet, Dash Electrum "
-"will list any existing transactions from this wallet. This process may take "
-"a few minutes, and the transactions may appear as **Not Verified**. This "
-"problem disappears after restarting the program."
+"**Windows:** Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` "
+"and paste it in to the address bar."
 msgstr ""
 
-#: ../../wallets/electrum/security.rst:108
-msgid "Unverified transactions after recovery"
-msgstr ""
+#~ msgid ""
+#~ "The only thing needed to recover a"
+#~ " Dash Electrum wallet on another "
+#~ "computer is its seed. You can test"
+#~ " wallet recovery with your current "
+#~ "installation of Dash Electrum by "
+#~ "removing the wallet data from the "
+#~ "application data folder. This optional "
+#~ "procedure is described below. Before "
+#~ "continuing, verify that your seed is "
+#~ "written down clearly and correctly on"
+#~ " paper."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To get Dash Electrum to generate a"
+#~ " new wallet, the old wallet data "
+#~ "needs to be deleted. Begin by "
+#~ "closing Dash Electrum. Next, locate the"
+#~ " application data folder according to "
+#~ "your operating system:"
+#~ msgstr ""
+
+#~ msgid "**Linux:**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open Files, select **Go > Go to"
+#~ " folder**, copy the path ``~/.electrum``"
+#~ " and paste it into the dialog "
+#~ "box"
+#~ msgstr ""
+
+#~ msgid "Delete all files in the folder"
+#~ msgstr ""
+
+#~ msgid "**macOS:**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open Finder, select **Go > Go to"
+#~ " Folder**, copy the path ``~/.electrum``"
+#~ " and paste it into the dialog "
+#~ "box"
+#~ msgstr ""
+
+#~ msgid "**Windows:**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open Explorer, copy the path ``%APPDATA"
+#~ "%\\Electrum-DASH`` and paste it in to"
+#~ " the address bar"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Having cleared the data directory, "
+#~ "restart Dash Electrum. A dialog will "
+#~ "appear asking you to name your new"
+#~ " wallet. Enter a name, select "
+#~ "**Standard wallet** as the wallet type"
+#~ " and then choose **I already have "
+#~ "a seed**."
+#~ msgstr ""
+

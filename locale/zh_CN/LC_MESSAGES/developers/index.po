@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
 # Translators:
 # Alex.ys <silvershark.ys@gmail.com>, 2018
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"POT-Creation-Date: 2019-01-11 06:48+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: Chinese (China) "
+"(https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../developers/index.rst:1
 msgid "Developers guide and information about sporks and Dash version history"
@@ -36,12 +37,12 @@ msgstr "开发者"
 #: ../../developers/index.rst:11
 msgid ""
 "Dash Core has published an extensive `Developer Guide <https://dash-"
-"docs.github.io/en/>`_ to help new developers get started with the Dash code "
-"base, and as a reference for experienced developers. This guide can be "
-"leveraged to quickly and efficiently integrate external applications with "
-"the Dash ecosystem. Anyone can contribute to the guide by submitting an "
-"issue or pull request on GitHub. The documentation is available at: https"
-"://dash-docs.github.io/en/"
+"docs.github.io/en/>`_ to help new developers get started with the Dash "
+"code base, and as a reference for experienced developers. This guide can "
+"be leveraged to quickly and efficiently integrate external applications "
+"with the Dash ecosystem. Anyone can contribute to the guide by submitting"
+" an issue or pull request on GitHub. The documentation is available at: "
+"https://dash-docs.github.io/en/"
 msgstr ""
 "Dash Core发布了一项广泛性的 `开发者指南 <https://dash-docs.github.io/en/>`_ "
 "，旨在帮助新的开发者学习使用达世币代码库，同时也供经验丰富的开发人员参考。利用本指南可以快速有效地将外部应用程序整合入达世币生态系统。任何人都可以通过在GitHub上提交问题或拉取请求，为该指南提供建议。文档获取地址:"
@@ -52,10 +53,10 @@ msgid ""
 "The Dash Core Team also maintains the `Dash Roadmap "
 "<https://github.com/dashpay/dash-roadmap>`_, which sets out delivery "
 "milestones for future releases of Dash and includes specific technical "
-"details describing how the development team plans to realise each challenge."
-" The Dash Roadmap is complemented by the `Dash Improvement Proposals "
-"<https://github.com/dashpay/dips>`_, which contain detailed technical "
-"explanations of proposed changes to the Dash protocol itself."
+"details describing how the development team plans to realise each "
+"challenge. The Dash Roadmap is complemented by the `Dash Improvement "
+"Proposals <https://github.com/dashpay/dips>`_, which contain detailed "
+"technical explanations of proposed changes to the Dash protocol itself."
 msgstr ""
 "Dash Core团队还负责维护 `达世币路线图 <https://github.com/dashpay/dash-"
 "roadmap>`_，其中列有未来达世币版本交付时间表，以及关于开发团队如何攻克每一项挑战的特定技术细节。 `达世币改善提案 "
@@ -63,81 +64,80 @@ msgstr ""
 
 #: ../../developers/index.rst:27
 msgid ""
-"The remaining sections available below describe practical steps to carry out"
-" common development tasks in Dash."
+"The remaining sections available below describe practical steps to carry "
+"out common development tasks in Dash."
 msgstr "下文所述内容为在达世币中执行共同开发任务的实际步骤。"
 
-#: ../../developers/index.rst:40
+#: ../../developers/index.rst:41
 msgid "Sporks"
 msgstr "叉勺技术"
 
-#: ../../developers/index.rst:42
+#: ../../developers/index.rst:43
 msgid ""
 "A multi-phased fork, colloquially known as a \"spork\", is a mechanism "
 "unique to Dash used to safely deploy new features to the network through "
 "network-level variables to avoid the risk of unintended network forking "
 "during upgrades. It can also be used to disable certain features if a "
-"security vulnerability is discovered - see :ref:`here <sporks>` for a brief "
-"introduction to sporks. This documentation describes the meaning of each "
-"spork currently existing on the network, and how to check their respective "
-"statuses."
+"security vulnerability is discovered - see :ref:`here <sporks>` for a "
+"brief introduction to sporks. This documentation describes the meaning of"
+" each spork currently existing on the network, and how to check their "
+"respective statuses."
 msgstr ""
 "多阶段分叉，俗称 "
 "\"spork\"，是一种达世币独有的机制，通过网络层变量将新功能安全地部署到网络中，避免升级过程中出现意外的网络分叉风险。也可用于出现安全漏洞时，禁用某些功能——参考"
 " :ref:`此处 <sporks>` sporks简介。该文档描述了目前存在于网络上的每一个spork的含义，以及状态检查方法。"
 
-#: ../../developers/index.rst:52
+#: ../../developers/index.rst:53
 msgid "Spork functions"
 msgstr "Spork 函数"
 
-#: ../../developers/index.rst:54
+#: ../../developers/index.rst:55
 msgid ""
-"Sporks are set using integer values. Many sporks may be set to a particular "
-"epoch datetime (number of seconds that have elapsed since January 1, 1970) "
-"to specify the time at which they will active. Enabled sporks are set to 0 "
-"(seconds until activation). This function is often used to set a spork "
-"enable date so far in the future that it is effectively disabled until "
-"changed. The following sporks currently exist on the network and serve "
-"functions as described below:"
-msgstr ""
-"使用整数值设置Sporks。许多的sporks都可设置特定的新纪元时间（自1970年1月1日起走过的秒数），用作活动时间。启用的sporks设置为0（直至激活前的秒数）。该函数常用于设置未来的spork启用日期，在发生变更之前，一直保持有效。以下为目前网络上存在的sporks及其服务功能："
+"Sporks are set using integer values. Many sporks may be set to a "
+"particular epoch datetime (number of seconds that have elapsed since "
+"January 1, 1970) to specify the time at which they will active. Enabled "
+"sporks are set to 0 (seconds until activation). This function is often "
+"used to set a spork enable date so far in the future that it is "
+"effectively disabled until changed. The following sporks currently exist "
+"on the network and serve functions as described below:"
+msgstr "使用整数值设置Sporks。许多的sporks都可设置特定的新纪元时间（自1970年1月1日起走过的秒数），用作活动时间。启用的sporks设置为0（直至激活前的秒数）。该函数常用于设置未来的spork启用日期，在发生变更之前，一直保持有效。以下为目前网络上存在的sporks及其服务功能："
 
-#: ../../developers/index.rst:63
+#: ../../developers/index.rst:64
 msgid "SPORK_2_INSTANTSEND_ENABLED"
 msgstr "SPORK_2_即时发送_已启用"
 
-#: ../../developers/index.rst:63
+#: ../../developers/index.rst:64
 msgid "Governs the ability of Dash clients to use InstandSend functionality."
 msgstr "管理达世币客户端使用即时发送功能的能力。"
 
-#: ../../developers/index.rst:67
+#: ../../developers/index.rst:68
 msgid "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
 msgstr "SPORK_3_即时发送_区块_过滤"
 
-#: ../../developers/index.rst:66
+#: ../../developers/index.rst:67
 msgid ""
 "If enabled, masternodes will reject blocks containing transactions in "
 "conflict with locked but unconfirmed InstandSend transactions."
 msgstr "如果已启用，主节点将拒绝那些含有与已锁定但尚未被证实的即时发送相冲突的区块。"
 
-#: ../../developers/index.rst:71
+#: ../../developers/index.rst:72
 msgid "SPORK_5_INSTANTSEND_MAX_VALUE"
 msgstr "SPORK_5_即时发送_最大_值"
 
-#: ../../developers/index.rst:70
+#: ../../developers/index.rst:71
 msgid ""
-"Enforces the maximum value in Dash that can be included in an InstantSend "
-"transaction."
+"Enforces the maximum value in Dash that can be included in an InstantSend"
+" transaction."
 msgstr "强制执行即时发送交易中所包含的达世币最大值。"
 
-#: ../../developers/index.rst:77
+#: ../../developers/index.rst:78
 msgid "SPORK_6_NEW_SIGS"
 msgstr "SPORK_6_新_签名"
 
-#: ../../developers/index.rst:74
+#: ../../developers/index.rst:75
 msgid ""
-"Enables a new signature format for Dash-specific network messages introduced"
-" in Dash 12.3. For more information, see `here "
+"Enables a new signature format for Dash-specific network messages "
+"introduced in Dash 12.3. For more information, see `here "
 "<https://github.com/dashpay/dash/pull/1936>`__ and `here "
 "<https://github.com/dashpay/dash/pull/1937>`__."
 msgstr ""
@@ -145,115 +145,131 @@ msgstr ""
 "<https://github.com/dashpay/dash/pull/1936>`__ 和 `此处 "
 "<https://github.com/dashpay/dash/pull/1937>`__。"
 
-#: ../../developers/index.rst:81
+#: ../../developers/index.rst:82
 msgid "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT"
 msgstr "SPORK_8_MASTERNODE_支付_执行"
 
-#: ../../developers/index.rst:80
+#: ../../developers/index.rst:81
+#, python-format
 msgid ""
 "If enabled, miners must pay 50% of the block reward to a masternode "
 "currently pending selection or the block will be considered invalid."
 msgstr "如果已启用，挖矿机必须将区块奖励的50％支付给当前正在等待被选择的主节点，否则，该区块变为无效。"
 
-#: ../../developers/index.rst:85
+#: ../../developers/index.rst:86
 msgid "SPORK_9_SUPERBLOCKS_ENABLED"
 msgstr "SPORK_9_超级块_已启用"
 
-#: ../../developers/index.rst:84
-msgid ""
-"If enabled, superblocks are verified and issued to pay proposal winners."
+#: ../../developers/index.rst:85
+msgid "If enabled, superblocks are verified and issued to pay proposal winners."
 msgstr "如果已启用，则验证并发布超级块，以支付提案获胜者。"
 
-#: ../../developers/index.rst:90
+#: ../../developers/index.rst:91
 msgid "SPORK_10_MASTERNODE_PAY_UPDATED_NODES"
 msgstr "SPORK_10_MASTERNODE_支付_已更新_节点"
 
-#: ../../developers/index.rst:88
+#: ../../developers/index.rst:89
 msgid ""
 "Controls whether masternodes running an older protocol version are "
 "considered eligible for payment. This can be used as an incentive to "
 "encourage masternodes to update."
 msgstr "无论运行旧协议版本的主节点是否符合支付条件，都进行控制。使用奖励作为激励，促使主节点进行更新。"
 
-#: ../../developers/index.rst:94
+#: ../../developers/index.rst:95
 msgid "SPORK_12_RECONSIDER_BLOCKS"
 msgstr "SPORK_12_重新考虑_区块"
 
-#: ../../developers/index.rst:93
+#: ../../developers/index.rst:94
 msgid ""
-"Forces reindex of a specified number of blocks to recover from unintentional"
-" network forks."
+"Forces reindex of a specified number of blocks to recover from "
+"unintentional network forks."
 msgstr "强制性地为指定数量的区块重建索引，从偶然网络分叉中恢复过来。"
 
-#: ../../developers/index.rst:97
+#: ../../developers/index.rst:98
 msgid "SPORK_13_OLD_SUPERBLOCK_FLAG"
 msgstr "SPORK_13_旧式_超级块_标志"
 
-#: ../../developers/index.rst:97
+#: ../../developers/index.rst:98
 msgid "Deprecated. No network function since block 614820."
 msgstr "已弃用。自区块614820之后再无网络功能。"
 
-#: ../../developers/index.rst:101
+#: ../../developers/index.rst:102
 msgid "SPORK_14_REQUIRE_SENTINEL_FLAG"
 msgstr "SPORK_14_要求_哨兵_标志"
 
-#: ../../developers/index.rst:100
+#: ../../developers/index.rst:101
 msgid ""
-"Toggles whether masternodes with status are eligible for payment if status "
-"is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly."
+"Toggles whether masternodes with status are eligible for payment if "
+"status is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly."
 msgstr "如果状态为WATCHDOG_EXPIRED，即哨兵未正常运行，则进行切换，无论主节点是否符合奖励条件。"
 
-#: ../../developers/index.rst:108
+#: ../../developers/index.rst:109
 msgid "SPORK_15_DETERMINISTIC_MNS_ENABLED"
 msgstr "SPORK_15_确定性的_主节点_已启用"
 
-#: ../../developers/index.rst:104
+#: ../../developers/index.rst:105
 msgid ""
 "Controls whether `deterministic masternodes "
-"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ are required. "
-"When activated, the legacy masternode list logic will no longer run and non-"
-"updated masternodes will not be eligible for payment."
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ are required."
+" When activated, the legacy masternode list logic will no longer run and "
+"non-updated masternodes will not be eligible for payment."
 msgstr ""
 "进行控制，无论是否需要 `确定性主节点 "
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ "
 "。激活后，旧式主节点列表逻辑不再运行，未更新的主节点将变为不符合奖励条件。"
 
-#: ../../developers/index.rst:114
+#: ../../developers/index.rst:115
 msgid "SPORK_16_INSTANTSEND_AUTOLOCKS"
 msgstr "SPORK_16_即时发送_自动锁"
 
-#: ../../developers/index.rst:111
+#: ../../developers/index.rst:112
 msgid ""
 "Enables automatic transaction locking for transactions with less than a "
-"specified number of inputs, and removes the legacy InstantSend fee. Allows "
-"any node to request the transaction lock, not just the sending node."
+"specified number of inputs, and removes the legacy InstantSend fee. "
+"Allows any node to request the transaction lock, not just the sending "
+"node."
 msgstr "就输入数少于指定数目的交易，启用自动交易锁定，同时删除旧式即时发送费。除发送节点外，允许任一节点请求交易锁定。"
 
-#: ../../developers/index.rst:117
+#: ../../developers/index.rst:123
+msgid "SPORK_17_QUORUM_DKG_ENABLED"
+msgstr ""
+
+#: ../../developers/index.rst:118
+msgid ""
+"Enables the `DKG process to create LLMQ quorums "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. At the "
+"moment, this only activates a dummy DKG on testnet, which will later be "
+"replaced by the real DKG for mainnet and testnet. When enabled, simple "
+"PoSe scoring and banning is also active."
+msgstr ""
+
+#: ../../developers/index.rst:126
 msgid "Viewing spork status"
 msgstr "查看spork状态"
 
-#: ../../developers/index.rst:119
+#: ../../developers/index.rst:128
 msgid ""
-"The ``spork show`` and ``spork active`` commands issued in the debug window "
-"(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
-"You can open the debug window by selecting **Tools > Debug console**."
+"The ``spork show`` and ``spork active`` commands issued in the debug "
+"window (or from ``dash-cli`` on a masternode) allow you to interact with "
+"sporks. You can open the debug window by selecting **Tools > Debug "
+"console**."
 msgstr ""
 "调试窗口（或主节点上的 ``dash-cli`` ）发出的 ``spork show`` 和 ``spork active`` "
 "命令，允许您与sporks进行交互。您可以通过选择 **工具 > 调试控制台** ，打开调试窗口。"
 
-#: ../../developers/index.rst:127
+#: ../../developers/index.rst:136
 msgid "spork show and spork active output in the Dash Core debug console"
 msgstr "Dash Core调试控制台输出spork show和spork active "
 
-#: ../../developers/index.rst:131
+#: ../../developers/index.rst:140
 msgid "Version History"
 msgstr "版本历史"
 
-#: ../../developers/index.rst:133
+#: ../../developers/index.rst:142
 msgid "Full release notes and the version history of Dash are available here:"
 msgstr "有关达世币的完整发行说明和版本历史请参阅："
 
-#: ../../developers/index.rst:135
+#: ../../developers/index.rst:144
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
 msgstr "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
+

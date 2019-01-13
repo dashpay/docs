@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"POT-Creation-Date: 2019-01-11 06:48+0000\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -204,7 +204,7 @@ msgstr ""
 " moins d'argent (600 dollars) qu'aujourd'hui. Les masternodes ont aussi la "
 "possibilité future de gagner de l'argent sur les frais de transaction."
 
-#: ../../introduction/features.rst:82 ../../introduction/features.rst:512
+#: ../../introduction/features.rst:82 ../../introduction/features.rst:518
 msgid "PrivateSend"
 msgstr "PrivateSend"
 
@@ -240,12 +240,9 @@ msgstr "Le processus PrivateSend se déroule ainsi :"
 #: ../../introduction/features.rst:96
 msgid ""
 "PrivateSend begins by breaking your transaction inputs down into standard "
-"denominations. These denominations are 0.01 Dash, 0.1 DASH, 1 DASH and 10 "
-"DASH -- much like the paper money you use every day."
+"denominations. These denominations are 0.001, 0.01, 0.1, 1 and 10 DASH -- "
+"much like the paper money you use every day."
 msgstr ""
-"PrivateSend commence par fractionner les entrées de votre transaction en "
-"coupures standard. Ces coupures sont de 0,01, 0,1, 1 et 10 dashs -- un peu à"
-" la manière des billets de banque que vous utilisez tous les jours."
 
 #: ../../introduction/features.rst:99
 msgid ""
@@ -281,13 +278,8 @@ msgid ""
 " number of times with each denomination. Each time the process is completed,"
 " it's called a \"round\". Each round of PrivateSend makes it exponentially "
 "more difficult to determine where your funds originated. The user may choose"
-" between 2-8 rounds of mixing."
+" between 1-16 rounds of mixing."
 msgstr ""
-"Afin de mélanger entièrement vos fonds, votre portefeuille doit répéter ce "
-"processus un certain nombre de fois avec chaque coupure. On appelle "
-"\"cycle\" chaque processus accompli. Chaque cycle PrivateSend rend "
-"exponentiellement plus difficile de savoir d'où proviennent vos fonds. "
-"L'utilisateur peut choisir entre 2 et 8 cycles de mélange."
 
 #: ../../introduction/features.rst:116
 msgid ""
@@ -326,7 +318,7 @@ msgstr ""
 "utilisateurs qui ont désactivé les sauvegardes automatiques auront également"
 " l'option PrivateSend désactivée."
 
-#: ../../introduction/features.rst:135 ../../introduction/features.rst:510
+#: ../../introduction/features.rst:135 ../../introduction/features.rst:516
 msgid "InstantSend"
 msgstr "InstantSend"
 
@@ -1000,28 +992,9 @@ msgid ""
 "scarce commodity. Because miners are not obliged to include any transaction "
 "in the blocks they produce, once blocks are full, a voluntary transaction "
 "fee can be included as an incentive to the miner to process the transaction."
-" Most wallets include a small fee by default, although many miners will "
+" Most wallets include a small fee by default, although some miners will "
 "process transactions even if no fee is included."
 msgstr ""
-"Les transactions sur le réseau Dash sont inscrites dans des blocs, sur la "
-"blockchain (chaîne de blocs). La taille de chaque transaction est mesurée en"
-" octets, mais il n'y a pas forcément de corrélation entre des transactions "
-"de montant élevé et le nombre d'octets nécessaires pour opérer la "
-"transaction. La taille de la transaction dépend du nombre d'adresses "
-"d'entrée et de sortie impliquées : en effet, plus ou moins de données "
-"doivent être écrites dans le bloc pour stocker cette information. Chaque "
-"nouveau bloc est généré par un mineur, qui est rétribué par une récompense "
-"de bloc s'il achève ce travail de génération. Afin d'éviter que le réseau ne"
-" soit saturé de transactions \"spam\", la taille de chaque bloc est limitée "
-"de façon artificielle. Au fur et à mesure que le volume de transactions "
-"augmente, l'espace disponible dans chaque bloc se raréfie. Les mineurs ne "
-"sont pas contraints d'inclure toutes les transactions dans les blocs qu'ils "
-"produisent, et donc, une fois que les blocs sont pleins, des frais de "
-"transaction volontaires peuvent être ajoutés à la transaction, constituant "
-"une incitation pour que le mineur traite la transaction. La plupart des "
-"portefeuilles définissent de faibles frais de transaction par défaut ; "
-"cependant beaucoup de mineurs traiteront les transactions même si elles ne "
-"comportent pas de frais."
 
 #: ../../introduction/features.rst:497
 msgid ""
@@ -1030,113 +1003,91 @@ msgid ""
 " 1MB to 2MB to promote continued growth of low-cost transactions even as the"
 " cost of Dash rises. Dash also supports :ref:`instantsend` and "
 ":ref:`privatesend` transactions, which operate on a different and mandatory "
-"fee schedule. The fee schedule for Dash 12.2.x as of December 2017 is as "
-"follows:"
+"fee schedule. Dash 0.13.0.0 introduced InstantSend autolocks, which causes "
+"masternodes to automatically attempt to lock any transaction with 4 or fewer"
+" inputs — which are referred to as “simple” transactions — and removes the "
+"additional fee for InstantSend. The fee schedule for Dash 0.13.x as of "
+"December 2018 is as follows:"
 msgstr ""
-"La sortie de Dash 0.12.2.0 et l'activation de la DIP0001 ont entraîné une "
-"division des frais de transaction par 10, cependant que la taille de bloc a "
-"augmenté de 1 Mo à 2 Mo pour soutenir la croissance des transactions à frais"
-" bas, même si le cours de Dash augmente. Dash permet aussi des transactions "
-":ref:`InstantSend` et :ref:`PrivateSend` qui dépendent d'une grille de frais"
-" différente et obligatoire. La grille de frais pour Dash 12.2.x, en décembre"
-" 2017, est celle-ci :"
 
-#: ../../introduction/features.rst:506
+#: ../../introduction/features.rst:510
 msgid "Transaction type"
 msgstr "Type de transaction"
 
-#: ../../introduction/features.rst:506
+#: ../../introduction/features.rst:510
 msgid "Recommended fee"
 msgstr "Frais recommandés"
 
-#: ../../introduction/features.rst:506
+#: ../../introduction/features.rst:510
 msgid "Per unit"
 msgstr "Par unité"
 
-#: ../../introduction/features.rst:508
+#: ../../introduction/features.rst:512
 msgid "Standard transaction"
 msgstr "Transaction standard"
 
-#: ../../introduction/features.rst:508
+#: ../../introduction/features.rst:512 ../../introduction/features.rst:514
 msgid ".00001 DASH"
 msgstr "0,00001 DASH"
 
-#: ../../introduction/features.rst:508
+#: ../../introduction/features.rst:512 ../../introduction/features.rst:514
 msgid "Per kB of transaction data"
 msgstr "Par Ko de données de transaction"
 
-#: ../../introduction/features.rst:510
+#: ../../introduction/features.rst:514
+msgid "InstantSend autolock"
+msgstr ""
+
+#: ../../introduction/features.rst:516
 msgid ".0001 DASH"
 msgstr "0,0001 DASH"
 
-#: ../../introduction/features.rst:510
+#: ../../introduction/features.rst:516
 msgid "Per transaction input"
 msgstr "Par entrée de transaction"
 
-#: ../../introduction/features.rst:512
+#: ../../introduction/features.rst:518
 msgid ".001 DASH"
 msgstr "0,001 DASH"
 
-#: ../../introduction/features.rst:512
+#: ../../introduction/features.rst:518
 msgid "Per 10 rounds of mixing (average)"
 msgstr "Par 10 cycles de mélange (en moyenne)"
 
-#: ../../introduction/features.rst:515
+#: ../../introduction/features.rst:521
 msgid ""
 "As an example, a standard and relatively simple transaction on the Dash "
 "network with one input, one output and a possible change address typically "
-"fits in the range of 200 - 400 bytes. Assuming a price of US$800 per DASH, "
-"the fee falls in the range of $0.0015 - $0.0030, or well under half a cent. "
-"Processing the transaction using InstantSend at the same price would add "
-"$0.08 or eight cents to the transaction. These fees apply regardless of the "
-"Dash or dollar value of the transaction itself."
+"fits in the range of 200 - 400 bytes. Assuming a price of US$100 per DASH, "
+"the fee falls in the range of $0.0002 - $0.0004, or 1/50th of a cent. "
+"Processing a simple transaction using InstantSend at the same price is free "
+"of charge, while more complex InstantSend transactions may cost around 1-2 "
+"cents per transaction, depending on the number of inputs. These fees apply "
+"regardless of the Dash or dollar value of the transaction itself."
 msgstr ""
-"Par exemple, une transaction standard et relativement simple sur le réseau "
-"Dash comportant une entrée, une sortie et une adresse éventuelle de monnaie "
-"rendue représente en général une taille compris entre 200 et 400 octets. En "
-"supposant un cours de 800 dollars par dash, la transaction revient de 0,0015"
-" à 0,0030 dollar, c'est-à-dire bien moins de la moitié d'un centime. Traiter"
-" la transaction avec InstantSend, au même cours de Dash, ajouterait 0,08 "
-"dollars (8 centimes) à la transaction. Ces frais s'appliquent indépendamment"
-" du montant en Dash ou en dollars de la transaction elle-même."
 
-#: ../../introduction/features.rst:524
+#: ../../introduction/features.rst:531
 msgid ""
-"PrivateSend works by creating denominations of 10, 1, 0.1 and 0.01 DASH and "
-"then mixing these denominations with other users. Creation of the "
+"PrivateSend works by creating denominations of 10, 1, 0.1, 0.01 and 0.001 "
+"DASH and then mixing these denominations with other users. Creation of the "
 "denominations is charged at the default fee for a standard transaction. "
 "Mixing is free, but to prevent spam attacks, an average of one in ten mixing"
-" transactions are charged a fee of 0.001 DASH. Spending inputs mixed using "
+" transactions are charged a fee of 0.0001 DASH. Spending inputs mixed using "
 "PrivateSend incurs the usual standard or InstantSend fees, but to avoid "
 "creating a potentially identifiable change address, the fee is always "
-"rounded up to the lowest possible denomination. This is typically .01 DASH, "
-"so it is important to deduct the fee from the amount being sent if possible "
-"to minimise fees. Combining InstantSend and PrivateSend may be expensive due"
-" to this requirement and the fact that a PrivateSend transaction may require"
-" several inputs, while InstantSend charges a fee of 0.0001 DASH per input. "
-"Always check your fees before sending a transaction."
+"rounded up to the lowest possible denomination. This is typically .001 DASH,"
+" so it is important to deduct the fee from the amount being sent if possible"
+" to minimise fees. Combining InstantSend and PrivateSend may be expensive "
+"due to this requirement and the fact that a PrivateSend transaction may "
+"require several inputs, while InstantSend charges a fee of 0.0001 DASH per "
+"input. Always check your fees before sending a transaction."
 msgstr ""
-"PrivateSend fonctionne en créant des coupures de 10, 1, 0,1 et 0,01 dashs, "
-"puis en mélangeant ces coupures avec d'autres utilisateurs. La création des "
-"coupures coûte les frais par défaut pour une transaction standard. Le "
-"mélange est gratuit mais, pour empêcher les attaques \"spam\", environ une "
-"transaction de mélange sur dix doit régler des frais de 0,001 dash. Dépenser"
-" des entrées mélangées avec PrivateSend entraîne les frais habituels "
-"(standard ou InstantSend) mais, pour éviter de créer des adresses de monnaie"
-" rendue potentiellement identifiables, les frais sont toujours arrondis à la"
-" plus petite coupure possible supérieure. Cela représente typiquement 0,01 "
-"dash. Il est donc important de déduire les frais du montant envoyé, si "
-"possible, pour optimiser les frais. Combiner InstantSend et PrivateSend peut"
-" coûter cher pour cette raison, mais aussi parce qu'une transaction "
-"PrivateSend peut impliquer plusieurs entrées alors qu'InstantSend entraîne "
-"des frais de 0,0001 dash pour chaque entrée. Veuillez toujours vérifier vos "
-"frais avant d'envoyer une transaction."
 
-#: ../../introduction/features.rst:543
+#: ../../introduction/features.rst:550
 msgid "Evolution"
 msgstr "Evolution"
 
-#: ../../introduction/features.rst:545
+#: ../../introduction/features.rst:552
 msgid ""
 "`Dash Evolution <https://www.dash.org/evolution/>`_ is the code name for a "
 "decentralized currency platform built on Dash blockchain technology. The "
@@ -1154,7 +1105,7 @@ msgstr ""
 "utilisateurs d'exécuter différentes tâches pour le réseau, avec un accès par"
 " API décentralisée et un système de fichiers décentralisé."
 
-#: ../../introduction/features.rst:553
+#: ../../introduction/features.rst:560
 msgid ""
 "Dash Evolution will be released in stages. Dash Core releases 12.1 through "
 "to 12.4 will lay the groundwork for the decentralized features behind the "
@@ -1174,7 +1125,7 @@ msgstr ""
 " avec la plupart des fonctionnalités de base, puis une première sortie "
 "stable à l'été 2018."
 
-#: ../../introduction/features.rst:562
+#: ../../introduction/features.rst:569
 msgid ""
 "Included below is our current work on Evolution, that adds many components "
 "such as:"
@@ -1182,7 +1133,7 @@ msgstr ""
 "Notre travail actuel sur Evolution ajoute un grand nombre de composants, "
 "tels que :"
 
-#: ../../introduction/features.rst:565
+#: ../../introduction/features.rst:572
 msgid ""
 "**DashDrive:** A decentralized shared file system for user data that lives "
 "on the second tier network"
@@ -1190,7 +1141,7 @@ msgstr ""
 "**DashDrive** : un système de fichiers décentralisé et partagé, pour stocker"
 " les données utilisateurs sur le réseau de second niveau"
 
-#: ../../introduction/features.rst:567
+#: ../../introduction/features.rst:574
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the "
 "network securely"
@@ -1198,7 +1149,7 @@ msgstr ""
 "**DAPI** : une API décentralisée qui permet aux utilisateurs de troisième "
 "niveau d'accéder au réseau de manière sûre"
 
-#: ../../introduction/features.rst:569
+#: ../../introduction/features.rst:576
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients connected"
 " to the network via DAPI and run on various platforms"
@@ -1207,7 +1158,7 @@ msgstr ""
 " légers connectés au réseau à travers la DAPI, et qui tournent sur "
 "différentes plateformes"
 
-#: ../../introduction/features.rst:571
+#: ../../introduction/features.rst:578
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
@@ -1215,7 +1166,7 @@ msgstr ""
 "**Second niveau** : le réseau des masternodes, qui fournit une "
 "infrastructure rétribuée au projet"
 
-#: ../../introduction/features.rst:573
+#: ../../introduction/features.rst:580
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
@@ -1224,7 +1175,7 @@ msgstr ""
 " fonds à des projets spécifiques, à travers le système budgétaire intégré au"
 " réseau"
 
-#: ../../introduction/features.rst:575
+#: ../../introduction/features.rst:582
 msgid ""
 "**Governance:** The second tier is given voting power to govern the currency"
 " and chart the course the currency takes"
@@ -1232,7 +1183,7 @@ msgstr ""
 "**Gouvernance** : le réseau de second niveau a un droit de vote pour diriger"
 " ou réorienter l'évolution de la monnaie"
 
-#: ../../introduction/features.rst:577
+#: ../../introduction/features.rst:584
 msgid ""
 "**Quorum Chain:** This feature introduces a permanent stable masternode "
 "list, which can be used to calculate past and present quorums"
@@ -1241,7 +1192,7 @@ msgstr ""
 " stable et permanentes, qui peut être utilisée pour calculer les quorums "
 "passés et présents"
 
-#: ../../introduction/features.rst:579
+#: ../../introduction/features.rst:586
 msgid ""
 "**Social Wallet:** We introduce a social wallet, which allows friends lists,"
 " grouping of users and shared multisig accounts."
@@ -1249,11 +1200,11 @@ msgstr ""
 "**Portefeuille social** : ce portefeuille permet de créer des listes d'amis,"
 " de regrouper des utilisateurs et de créer des comptes partagés multi-signés"
 
-#: ../../introduction/features.rst:583
+#: ../../introduction/features.rst:590
 msgid "Evolution Previews"
 msgstr "Aperçus d'Evolution"
 
-#: ../../introduction/features.rst:585
+#: ../../introduction/features.rst:592
 msgid ""
 "The following videos featuring Dash Founder Evan Duffield and Head of UI/UX "
 "Development Chuck Williams describe the development process and upcoming "
@@ -1264,29 +1215,29 @@ msgstr ""
 " de programmation et les fonctionnalités futures de la plateforme Dash "
 "Evolution."
 
-#: ../../introduction/features.rst:589
+#: ../../introduction/features.rst:596
 msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
 msgstr ""
 "**Evolution Demo #1 - la première application décentralisée Dash**, 16 mars "
 "2018"
 
-#: ../../introduction/features.rst:597
+#: ../../introduction/features.rst:604
 msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr "**Evolution Demo #2 - Evolution sur mobilr**, 25 avril 2018"
 
-#: ../../introduction/features.rst:605
+#: ../../introduction/features.rst:612
 msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
 msgstr ""
 "**Evolution Demo #3 - l'expérience utilisateur sur Dashpay**, 15 mai 2018"
 
-#: ../../introduction/features.rst:613
+#: ../../introduction/features.rst:620
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr ""
 "**Chuck Williams à propos d'Evolution**, conférence Dash de Londres, 14 "
 "septembre 2017"
 
-#: ../../introduction/features.rst:621
+#: ../../introduction/features.rst:628
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""

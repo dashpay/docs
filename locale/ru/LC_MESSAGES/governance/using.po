@@ -1,26 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
 # Translators:
 # Julia Ogonkova <livingflcl@gmail.com>, 2018
 # Max Aronych <taofgoar@protonmail.com>, 2018
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"POT-Creation-Date: 2019-01-11 06:48+0000\n"
 "PO-Revision-Date: 2018-05-07 04:43+0000\n"
 "Last-Translator: Max Aronych <taofgoar@protonmail.com>, 2018\n"
-"Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) "
+"|| (n%100>=11 && n%100<=14)? 2 : 3)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../governance/using.rst:1
 msgid "Practical guide to using the Dash governance system and treasury"
@@ -36,9 +38,9 @@ msgstr "Использование Управления Dash"
 
 #: ../../governance/using.rst:11
 msgid ""
-"Dash's Decentralized Governance by Blockchain (DGBB) is a novel voting and "
-"funding platform. This documentation introduces and details the theory and "
-"practice to use the system."
+"Dash's Decentralized Governance by Blockchain (DGBB) is a novel voting "
+"and funding platform. This documentation introduces and details the "
+"theory and practice to use the system."
 msgstr ""
 "Децентрализированное Управление Блокчейном Dash (Dash's Decentralized "
 "Governance by Blockchain - DGBB) это новая платформа для голосований и "
@@ -62,9 +64,11 @@ msgid "Anyone can submit a proposal for a small fee"
 msgstr "Каждый может выдвинуть предложение, заплатив небольшую комиссию"
 
 #: ../../governance/using.rst:23
-msgid "Masternode owners can cast for, against or abstain votes on proposals"
+#, fuzzy
+msgid "Each valid masternode can vote for, against or abstain on proposals"
 msgstr ""
-"Владельцы мастернод могут отдать свой голос за, против или же, воздержаться"
+"Владельцы мастернод могут отдать свой голос за, против или же, "
+"воздержаться"
 
 #: ../../governance/using.rst:24
 msgid "Approved proposals become budgets"
@@ -72,8 +76,7 @@ msgstr "Одобренные предложения приобретают ст�
 
 #: ../../governance/using.rst:25
 msgid "Budgets are paid directly from the blockchain to the proposal owner"
-msgstr ""
-"Бюджеты выплачиваются владельцу предложения непосредственно из блокчейна "
+msgstr "Бюджеты выплачиваются владельцу предложения непосредственно из блокчейна "
 
 #: ../../governance/using.rst:28
 msgid "Proposals"
@@ -85,11 +88,11 @@ msgstr "Предложения это запросы на получение с�
 
 #: ../../governance/using.rst:31
 msgid ""
-"Proposals can be submitted by anyone for a fee of 5 Dash. The proposal fee "
-"is irreversibly destroyed on submission."
+"Proposals can be submitted by anyone for a fee of 5 Dash. The proposal "
+"fee is irreversibly destroyed on submission."
 msgstr ""
-"Каждый может подать предложение, заплатив комиссию в 5 DASH. В момент подачи"
-" эта комиссия необратимо сжигается."
+"Каждый может подать предложение, заплатив комиссию в 5 DASH. В момент "
+"подачи эта комиссия необратимо сжигается."
 
 #: ../../governance/using.rst:33
 msgid "Proposals cannot be altered once submitted"
@@ -100,114 +103,121 @@ msgid "Votes"
 msgstr "Голосования"
 
 #: ../../governance/using.rst:38
-msgid "Votes are cast by masternode owners"
-msgstr "Голосование производится владельцами мастернод"
+msgid "Votes are cast using the registered voting address"
+msgstr ""
 
 #: ../../governance/using.rst:39
+msgid "The voting address can be delegated to a third party"
+msgstr ""
+
+#: ../../governance/using.rst:40
 msgid "Votes can be changed at any time"
 msgstr "Мастерноды могут изменить свой голос в любое время"
 
-#: ../../governance/using.rst:40
+#: ../../governance/using.rst:41
 msgid "Votes are counted every 16616 blocks (approx. 30.29 days)"
 msgstr "Голоса подсчитываются каждые 16616 блоков (примерно 30.29 дней)"
 
-#: ../../governance/using.rst:43
+#: ../../governance/using.rst:44
 msgid "Budgets"
 msgstr "Бюджеты"
 
-#: ../../governance/using.rst:45
+#: ../../governance/using.rst:46
+#, python-format
 msgid ""
 "Budgets are proposals which receive a net total of yes votes equal to or "
-"greater than 10% of the total possible votes (for example over 448 out of "
-"4480)"
+"greater than 10% of the total possible votes (for example over 448 out of"
+" 4480)"
 msgstr ""
-"Бюджеты это предложения, которые получили общее число голосов \"за\" большее"
-" либо равное 10% всех возможных голосов (например 448 из 4480)"
+"Бюджеты это предложения, которые получили общее число голосов \"за\" "
+"большее либо равное 10% всех возможных голосов (например 448 из 4480)"
 
-#: ../../governance/using.rst:48
+#: ../../governance/using.rst:49
 msgid ""
-"Budgets can be nullified at any time if vote totals (cast or re-cast) fall "
-"below the approval threshold"
+"Budgets can be nullified at any time if vote totals (cast or re-cast) "
+"fall below the approval threshold"
 msgstr ""
-"Бюджеты могут быть обнулены в любое время, если общее число голосов \"за\" "
-"(поданных изначально или изменённых в последствии) упадёт за пределы, "
-"установленные для статуса \"одобренного\" предложения"
+"Бюджеты могут быть обнулены в любое время, если общее число голосов "
+"\"за\" (поданных изначально или изменённых в последствии) упадёт за "
+"пределы, установленные для статуса \"одобренного\" предложения"
 
-#: ../../governance/using.rst:50
+#: ../../governance/using.rst:51
 msgid ""
-"Budgets are processed (paid) in order of yes minus no votes. More popular "
-"budgets get payment priority."
+"Budgets are processed (paid) in order of yes minus no votes. More popular"
+" budgets get payment priority."
 msgstr ""
 "Бюджеты обрабатываются (выплачиваются) в зависимости от разницы между "
-"голосами \"за\" и \"против\". Более популярные бюджеты получают приоритетную"
-" выплату."
+"голосами \"за\" и \"против\". Более популярные бюджеты получают "
+"приоритетную выплату."
 
-#: ../../governance/using.rst:52
+#: ../../governance/using.rst:53
+#, python-format
 msgid ""
 "Approximately 6176 dash (in 2018) are available for each budget cycle, "
 "decreasing by 7.14% every 210240 blocks (approx. 383.25 days)."
 msgstr ""
-"Приблизительно 6176 DASH (в 2018 г) доступно в каждом бюджетном цикле, но "
-"эта сумма будет уменьшаться на 7,14% каждые 210240 блоков (примерно 383,25 "
-"дня)."
+"Приблизительно 6176 DASH (в 2018 г) доступно в каждом бюджетном цикле, но"
+" эта сумма будет уменьшаться на 7,14% каждые 210240 блоков (примерно "
+"383,25 дня)."
 
-#: ../../governance/using.rst:56
+#: ../../governance/using.rst:57
 msgid "Object structure"
 msgstr "Структура предмета"
 
-#: ../../governance/using.rst:58
+#: ../../governance/using.rst:59
 msgid "The following information is required to create a proposal:"
 msgstr "Для создания предложения необходима следующая информация:"
 
-#: ../../governance/using.rst:60
+#: ../../governance/using.rst:61
 msgid "proposal-name: a unique label, 20 characters or less"
 msgstr "proposal-name: название должно быть уникальным, менее 20 символов"
 
-#: ../../governance/using.rst:61
+#: ../../governance/using.rst:62
 msgid ""
-"url: a proposer-created webpage or forum post containing detailed proposal "
-"information"
+"url: a proposer-created webpage or forum post containing detailed "
+"proposal information"
 msgstr ""
-"url: веб-страница, созданная для предложения или пост на форуме, имеющий в "
-"себе подробную информацию о предложении"
+"url: веб-страница, созданная для предложения или пост на форуме, имеющий "
+"в себе подробную информацию о предложении"
 
-#: ../../governance/using.rst:63
+#: ../../governance/using.rst:64
 msgid "payment-count: how many cycles the proposal is requesting payment"
 msgstr ""
 "payment-count: на протяжении скольких циклов это предложение запрашивает "
 "выплаты"
 
-#: ../../governance/using.rst:64
+#: ../../governance/using.rst:65
 msgid "block-start: the requested start of proposal payments"
 msgstr ""
 "block-start: время начала выплат по предложению"
 "                               "
 
-#: ../../governance/using.rst:65
+#: ../../governance/using.rst:66
 msgid "dash-address: the address to receive proposal payments"
 msgstr "dash-address: адрес для получения выплат по предложению"
 
-#: ../../governance/using.rst:66
+#: ../../governance/using.rst:67
 msgid "monthly-payment-dash: the requested payment amount"
 msgstr "monthly-payment-dash: сумма, запрашиваемая в месяц"
 
-#: ../../governance/using.rst:69
+#: ../../governance/using.rst:70
 msgid "Persistence"
 msgstr "Продолжительность"
 
-#: ../../governance/using.rst:71
+#: ../../governance/using.rst:72
 msgid "Proposals become active one day after submission"
 msgstr "Предложения получают статус активных через один день после подачи"
 
-#: ../../governance/using.rst:72
+#: ../../governance/using.rst:73
 msgid ""
 "Proposals will remain visible on the network until they are either "
 "disapproved or the proposal's last payment-cycle is reached"
 msgstr ""
-"Предложения будут видимы в сети до тех пор пока не потеряют поддержку или не"
-" будет достигнут последний цикл выплат"
+"Предложения будут видимы в сети до тех пор пока не потеряют поддержку или"
+" не будет достигнут последний цикл выплат"
 
-#: ../../governance/using.rst:74
+#: ../../governance/using.rst:75
+#, python-format
 msgid ""
 "Approval occurs when yes votes minus no votes equals 10% or more of the "
 "total available votes."
@@ -215,42 +225,44 @@ msgstr ""
 "Одобрение предложения происходит, когда разница между голосами \"да\" и "
 "\"нет\" равна или более 10% от всех доступных голосов."
 
-#: ../../governance/using.rst:76
+#: ../../governance/using.rst:77
+#, python-format
 msgid ""
-"Disapproval occurs when no votes minus yes votes equals 10% or more of the "
-"total available votes."
+"Disapproval occurs when no votes minus yes votes equals 10% or more of "
+"the total available votes."
 msgstr ""
-"Отклонение происходит, когда разница между голосами \"нет\" и \"да\" равна "
-"или более 10% от  всех доступных голосов."
+"Отклонение происходит, когда разница между голосами \"нет\" и \"да\" "
+"равна или более 10% от  всех доступных голосов."
 
-#: ../../governance/using.rst:78
+#: ../../governance/using.rst:79
 msgid ""
-"The total available votes is the count of online and responding masternodes "
-"and can be seen by running the command ``masternode count`` in the Dash Core"
-" wallet debug window. A graph of the total masternode count can be found "
-"`here <http://178.254.23.111/~pub/masternode_count.png>`__"
+"The total available votes is the count of online and responding "
+"masternodes and can be seen by running the command ``masternode count`` "
+"in the Dash Core wallet debug window. A graph of the total masternode "
+"count can be found `here "
+"<http://178.254.23.111/~pub/masternode_count.png>`__"
 msgstr ""
-"Общее число доступных голосов считается по количеству работающих в сети и "
-"отвечающих на запросы мастернод. Это число можно увидеть, запустив команду "
-"\"masternode count\" в окне отладки кошелька Dash Core. Гафик общего числа "
-"мастернод можно найти `здесь "
+"Общее число доступных голосов считается по количеству работающих в сети и"
+" отвечающих на запросы мастернод. Это число можно увидеть, запустив "
+"команду \"masternode count\" в окне отладки кошелька Dash Core. Гафик "
+"общего числа мастернод можно найти `здесь "
 "<http://178.254.23.111/~pub/masternode_count.png>`__"
 
-#: ../../governance/using.rst:85
+#: ../../governance/using.rst:86
 msgid "Templates"
 msgstr "Заготовки"
 
-#: ../../governance/using.rst:87
+#: ../../governance/using.rst:88
 msgid ""
 "The following two Microsoft Word templates are available from Dash Core "
-"Group to help facilitate standardized proposal submission and updates. Usage"
-" is recommended, but not required."
+"Group to help facilitate standardized proposal submission and updates. "
+"Usage is recommended, but not required."
 msgstr ""
-"Для стандартизации процесса подачи и обновления бюджетных предложений Dash "
-"Core Group подготовила два шаблона Microsoft Word. Их использование "
+"Для стандартизации процесса подачи и обновления бюджетных предложений "
+"Dash Core Group подготовила два шаблона Microsoft Word. Их использование "
 "рекомендовано, но не обязательно."
 
-#: ../../governance/using.rst:91
+#: ../../governance/using.rst:92
 msgid ""
 "`Project Proposal Template "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Proposal%20Template%20v1.0.docx>`_"
@@ -258,7 +270,7 @@ msgstr ""
 "`Шаблон проекта предложения "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Proposal%20Template%20v1.0.docx>`_"
 
-#: ../../governance/using.rst:92
+#: ../../governance/using.rst:93
 msgid ""
 "`Project Status Update Template "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Status%20Update%20Template%20v1.0.docx>`_"
@@ -266,161 +278,145 @@ msgstr ""
 "`Шаблон новостей хода проекта "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Status%20Update%20Template%20v1.0.docx>`_"
 
-#: ../../governance/using.rst:97
+#: ../../governance/using.rst:98
 msgid "Budget cycles"
 msgstr "Бюджетные циклы"
 
-#: ../../governance/using.rst:99
+#: ../../governance/using.rst:100
 msgid ""
-"When preparing a proposal, be aware of when the next cycle will occur and "
-"plan accordingly. It is recommended to choose your proposal payment start "
-"block at least one cycle in the future to allow time for discussion and "
-"gathering support and votes. Note that votes will no longer be tallied 1662 "
-"blocks (approximately 3 days) prior to the superblock."
+"When preparing a proposal, be aware of when the next cycle will occur and"
+" plan accordingly. It is recommended to choose your proposal payment "
+"start block at least one cycle in the future to allow time for discussion"
+" and gathering support and votes. Note that votes will no longer be "
+"tallied 1662 blocks (approximately 3 days) prior to the superblock."
 msgstr ""
-"При подготовке предложения, осведомитесь, когда начнётся следующий цикл и "
-"действуйте в нужное время. Рекомендуется выбирать блок начала выплат по "
-"предложению как минимум через один цикл вперёд, для предоставления времени "
-"на обсуждение, набор поддержки и голосование. Обратите внимание, что голоса "
-"перестанут подсчитываться за 1662 блока (примерно 3 дня) перед суперблоком."
+"При подготовке предложения, осведомитесь, когда начнётся следующий цикл и"
+" действуйте в нужное время. Рекомендуется выбирать блок начала выплат по "
+"предложению как минимум через один цикл вперёд, для предоставления "
+"времени на обсуждение, набор поддержки и голосование. Обратите внимание, "
+"что голоса перестанут подсчитываться за 1662 блока (примерно 3 дня) перед"
+" суперблоком."
 
-#: ../../governance/using.rst:107
+#: ../../governance/using.rst:108
 msgid "Block height"
 msgstr "Block height"
 
-#: ../../governance/using.rst:107
+#: ../../governance/using.rst:108
 msgid "Approximate date"
 msgstr "Approximate date"
 
-#: ../../governance/using.rst:109
-msgid "747720"
-msgstr "747720"
-
-#: ../../governance/using.rst:109
-msgid "Tue Oct 3 20:17:56 UTC 2017"
-msgstr "Tue Oct 3 20:17:56 UTC 2017"
-
-#: ../../governance/using.rst:111
-msgid "764336"
-msgstr "764336"
-
-#: ../../governance/using.rst:111
-msgid "Fri Nov 3 03:22:58 UTC 2017"
-msgstr "Fri Nov 3 03:22:58 UTC 2017"
-
-#: ../../governance/using.rst:113
-msgid "780952"
-msgstr "780952"
-
-#: ../../governance/using.rst:113
-msgid "Sun Dec 3 10:28:00 UTC 2017"
-msgstr "Sun Dec 3 10:28:00 UTC 2017"
-
-#: ../../governance/using.rst:115
-msgid "797568"
-msgstr "797568"
-
-#: ../../governance/using.rst:115
-msgid "Tue Jan 2 17:33:02 UTC 2018"
-msgstr "Tue Jan 2 17:33:02 UTC 2018"
-
-#: ../../governance/using.rst:117
-msgid "814184"
-msgstr "814184"
-
-#: ../../governance/using.rst:117
-msgid "Fri Feb 2 00:38:04 UTC 2018"
-msgstr "Fri Feb 2 00:38:04 UTC 2018"
-
-#: ../../governance/using.rst:119
-msgid "830800"
-msgstr "830800"
-
-#: ../../governance/using.rst:119
-msgid "Sun Mar 4 07:43:06 UTC 2018"
-msgstr "Sun Mar 4 07:43:06 UTC 2018"
-
-#: ../../governance/using.rst:121
-msgid "847416"
-msgstr "847416"
-
-#: ../../governance/using.rst:121
-msgid "Tue Apr 3 14:48:08 UTC 2018"
-msgstr "Tue Apr 3 14:48:08 UTC 2018"
-
-#: ../../governance/using.rst:123
-msgid "864032"
-msgstr "864032"
-
-#: ../../governance/using.rst:123
-msgid "Thu May 3 21:53:10 UTC 2018"
-msgstr "Thu May 3 21:53:10 UTC 2018"
-
-#: ../../governance/using.rst:125
-msgid "880648"
-msgstr "880648"
-
-#: ../../governance/using.rst:125
-msgid "Sun Jun 3 04:58:12 UTC 2018"
-msgstr "Sun Jun 3 04:58:12 UTC 2018"
-
-#: ../../governance/using.rst:127
-msgid "897264"
-msgstr "897264"
-
-#: ../../governance/using.rst:127
-msgid "Tue Jul 3 12:03:14 UTC 2018"
-msgstr "Tue Jul 3 12:03:14 UTC 2018"
-
-#: ../../governance/using.rst:129
-msgid "913880"
-msgstr "913880"
-
-#: ../../governance/using.rst:129
-msgid "Thu Aug 2 19:08:16 UTC 2018"
-msgstr "Thu Aug 2 19:08:16 UTC 2018"
-
-#: ../../governance/using.rst:131
-msgid "930496"
-msgstr "930496"
-
-#: ../../governance/using.rst:131
-msgid "Sun Sep 2 02:13:18 UTC 2018"
-msgstr "Sun Sep 2 02:13:18 UTC 2018"
-
-#: ../../governance/using.rst:133
-msgid "947112"
-msgstr "947112"
-
-#: ../../governance/using.rst:133
-msgid "Tue Oct 2 09:18:20 UTC 2018"
-msgstr "Tue Oct 2 09:18:20 UTC 2018"
-
-#: ../../governance/using.rst:135
-msgid "963728"
-msgstr "963728"
-
-#: ../../governance/using.rst:135
-msgid "Thu Nov 1 16:23:22 UTC 2018"
-msgstr "Thu Nov 1 16:23:22 UTC 2018"
-
-#: ../../governance/using.rst:137
-msgid "980344"
-msgstr "980344"
-
-#: ../../governance/using.rst:137
-msgid "Sat Dec 1 23:28:24 UTC 2018"
-msgstr "Sat Dec 1 23:28:24 UTC 2018"
-
-#: ../../governance/using.rst:139
+#: ../../governance/using.rst:110
 msgid "996960"
 msgstr "996960"
 
-#: ../../governance/using.rst:139
+#: ../../governance/using.rst:110
 msgid "Tue Jan 1 06:33:26 UTC 2019"
 msgstr "Tue Jan 1 06:33:26 UTC 2019"
 
-#: ../../governance/using.rst:142
+#: ../../governance/using.rst:112
+msgid "1013576"
+msgstr ""
+
+#: ../../governance/using.rst:112
+#, fuzzy
+msgid "Thu Jan 31 13:38:28 UTC 2019"
+msgstr "Tue Jan 1 06:33:26 UTC 2019"
+
+#: ../../governance/using.rst:114
+msgid "1030192"
+msgstr ""
+
+#: ../../governance/using.rst:114
+msgid "Sat Mar 2 20:43:30 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:116
+msgid "1046808"
+msgstr ""
+
+#: ../../governance/using.rst:116
+msgid "Tue Apr 2 03:48:32 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:118
+#, fuzzy
+msgid "1063424"
+msgstr "980344"
+
+#: ../../governance/using.rst:118
+#, fuzzy
+msgid "Thu May 2 10:53:34 UTC 2019"
+msgstr "Thu May 3 21:53:10 UTC 2018"
+
+#: ../../governance/using.rst:120
+#, fuzzy
+msgid "1080040"
+msgstr "830800"
+
+#: ../../governance/using.rst:120
+msgid "Sat Jun 1 17:58:36 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:122
+msgid "1096656"
+msgstr ""
+
+#: ../../governance/using.rst:122
+#, fuzzy
+msgid "Tue Jul 2 01:03:38 UTC 2019"
+msgstr "Tue Jul 3 12:03:14 UTC 2018"
+
+#: ../../governance/using.rst:124
+msgid "1113272"
+msgstr ""
+
+#: ../../governance/using.rst:124
+msgid "Thu Aug 1 08:08:40 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:126
+msgid "1129888"
+msgstr ""
+
+#: ../../governance/using.rst:126
+msgid "Sat Aug 31 15:13:42 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:128
+msgid "1146504"
+msgstr ""
+
+#: ../../governance/using.rst:128
+msgid "Mon Sep 30 22:18:44 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:130
+msgid "1163120"
+msgstr ""
+
+#: ../../governance/using.rst:130
+msgid "Thu Oct 31 05:23:46 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:132
+#, fuzzy
+msgid "1179736"
+msgstr "797568"
+
+#: ../../governance/using.rst:132
+msgid "Sat Nov 30 12:28:48 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:134
+#, fuzzy
+msgid "1196352"
+msgstr "963728"
+
+#: ../../governance/using.rst:134
+msgid "Mon Dec 30 19:33:50 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:137
 msgid ""
 "You can view the source code for this calculation at this `GitHub gist "
 "<https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_"
@@ -428,212 +424,219 @@ msgstr ""
 "Вы можете посмотреть исходный код подсчётов на `GitHub gist "
 "<https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_"
 
-#: ../../governance/using.rst:148
+#: ../../governance/using.rst:143
 msgid "Creating proposals"
 msgstr "Создание предложений"
 
-#: ../../governance/using.rst:150
+#: ../../governance/using.rst:145
 msgid ""
 "Once you have prepared the text of your proposal and set up a website or "
-"forum post, it is time to submit your proposal to the blockchain for voting."
-" While all tasks involved with creating a budget proposal can be executed "
-"from the Dash Core wallet console, several tools providing a user interface "
-"have been developed to simplify this procedure."
+"forum post, it is time to submit your proposal to the blockchain for "
+"voting. While all tasks involved with creating a budget proposal can be "
+"executed from the Dash Core wallet console, several tools providing a "
+"user interface have been developed to simplify this procedure."
 msgstr ""
-"Как только вы подготовите текст вашего предложения и создадите веб-сайт или "
-"пост на форуме, то наступит время подачи вашего предложения в блокчейн для "
-"голосования. Все действия по созданию бюджетного предложения могут быть "
-"выполнены из консоли кошелька Dash Core, но для облегчения процедуры были "
-"разработаны несколько инструментов с пользовательским  интерфейсом."
+"Как только вы подготовите текст вашего предложения и создадите веб-сайт "
+"или пост на форуме, то наступит время подачи вашего предложения в "
+"блокчейн для голосования. Все действия по созданию бюджетного предложения"
+" могут быть выполнены из консоли кошелька Dash Core, но для облегчения "
+"процедуры были разработаны несколько инструментов с пользовательским  "
+"интерфейсом."
 
-#: ../../governance/using.rst:157
+#: ../../governance/using.rst:152
 msgid "Dash Budget Proposal Generator"
 msgstr "Создатель бюджетных предложений Dash"
 
-#: ../../governance/using.rst:159
+#: ../../governance/using.rst:154
 msgid "https://proposal.dash.org"
 msgstr "https://proposal.dash.org"
 
-#: ../../governance/using.rst:161
+#: ../../governance/using.rst:156
 msgid ""
-"The `Dash Budget Proposal Generator <https://proposal.dash.org>`__ supports "
-"creating budget proposals on both mainnet and testnet. In the first step, "
-"you must enter a short, clear and unique name for the proposal as it will "
-"appear on the blockchain. Proposal names are limited to 40 characters. You "
-"can then provide a link to the forum or DashCentral where your proposal is "
-"described in more detail (use a `URL shortening service <https://goo.gl>`_ "
-"if necessary), as well as select the amount of payment you are requesting, "
-"how often the payment should occur, and the superblock date on which you are"
-" requesting payment. This allows you to control in which budget period your "
-"proposal will appear, and gives you enough time to build support for your "
-"proposal by familiarising voters with your project. Note that the payment "
-"amount is fixed and cannot be modified after it has been submitted to the "
-"blockchain."
+"The `Dash Budget Proposal Generator <https://proposal.dash.org>`__ "
+"supports creating budget proposals on both mainnet and testnet. In the "
+"first step, you must enter a short, clear and unique name for the "
+"proposal as it will appear on the blockchain. Proposal names are limited "
+"to 40 characters. You can then provide a link to the forum or DashCentral"
+" where your proposal is described in more detail (use a `URL shortening "
+"service <https://goo.gl>`_ if necessary), as well as select the amount of"
+" payment you are requesting, how often the payment should occur, and the "
+"superblock date on which you are requesting payment. This allows you to "
+"control in which budget period your proposal will appear, and gives you "
+"enough time to build support for your proposal by familiarising voters "
+"with your project. Note that the payment amount is fixed and cannot be "
+"modified after it has been submitted to the blockchain."
 msgstr ""
 " `Создатель бюджетных предложений Dash <https://proposal.dash.org>`__ "
-"поддерживает создание предложений как в основной, так и в тестовой сети. В "
-"первом шаге от вас потребуется ввести короткое, ясное, уникальное название "
-"предложения, под которым оно появится в блокчейне. Название предложения "
-"ограничено 40 символами. Далее вы можете предоставить ссылку на форум или "
-"DashCentral, где ваше предложение обсуждается в подробностях (используйте "
-"`службу укорочения url <https://goo.gl>`_ при необходимости), после чего "
-"выбрать запрашиваемую сумму, частоту выплат и дату суперблока, с которого вы"
-" хотите получить выплаты. Это позволит вам контролировать, в каком бюджетном"
-" периоде появится ваше предложение и даст вам достаточно времени для "
-"получения поддержки через ознакомление голосующих с вашим проектом. Обратите"
-" внимание, что величина выплаты зафиксирована и не может быть изменена после"
-" подачи в блокчейн."
+"поддерживает создание предложений как в основной, так и в тестовой сети. "
+"В первом шаге от вас потребуется ввести короткое, ясное, уникальное "
+"название предложения, под которым оно появится в блокчейне. Название "
+"предложения ограничено 40 символами. Далее вы можете предоставить ссылку "
+"на форум или DashCentral, где ваше предложение обсуждается в подробностях"
+" (используйте `службу укорочения url <https://goo.gl>`_ при "
+"необходимости), после чего выбрать запрашиваемую сумму, частоту выплат и "
+"дату суперблока, с которого вы хотите получить выплаты. Это позволит вам "
+"контролировать, в каком бюджетном периоде появится ваше предложение и "
+"даст вам достаточно времени для получения поддержки через ознакомление "
+"голосующих с вашим проектом. Обратите внимание, что величина выплаты "
+"зафиксирована и не может быть изменена после подачи в блокчейн."
 
-#: ../../governance/using.rst:182
+#: ../../governance/using.rst:177
 msgid "Steps 1 & 2: Creating your proposal and preparing the command"
 msgstr "Шаги 1 и 2: Создание вашего предложения и подготовка команд"
 
-#: ../../governance/using.rst:184
+#: ../../governance/using.rst:179
 msgid ""
-"Next, the proposal generator will provide you with a command to run from the"
-" console of your Dash Core wallet to prepare your budget proposal governance"
-" object. Running this command will cost you 5 DASH, which will be \"burnt\" "
-"or permanently removed from circulation. This one-time fee protects the "
-"governance system from becoming overwhelmed by spam, poorly thought out "
-"proposals or users not acting in good faith. A small transaction fee is "
-"charged as well, so make sure slightly more than 5 DASH is available in your"
-" wallet. Many budget proposals request reimbursement of the 5 DASH fee."
+"Next, the proposal generator will provide you with a command to run from "
+"the console of your Dash Core wallet to prepare your budget proposal "
+"governance object. Running this command will cost you 5 DASH, which will "
+"be \"burnt\" or permanently removed from circulation. This one-time fee "
+"protects the governance system from becoming overwhelmed by spam, poorly "
+"thought out proposals or users not acting in good faith. A small "
+"transaction fee is charged as well, so make sure slightly more than 5 "
+"DASH is available in your wallet. Many budget proposals request "
+"reimbursement of the 5 DASH fee."
 msgstr ""
 "Далее, создатель предложений выдаст вам команду, которую необходимо "
-"запустить в консоли вашего кошелька Dash Core для подготовки объекта вашего "
-"бюджетного предложения. Запуск этой команды будет стоить вам 5 DASH, которые"
-" \"сожгутся\", это означает, что они будут навсегда удалены из денежной "
-"массы. Такая единоразовая плата защищет систему управления от \"спама\" из "
-"предложений, плохо продуманных предложений или пользователей, действующих из"
-" недобросовестных побуждений. Так же будет взята небольшая комиссия за "
-"транзакцию, поэтому проследите, чтобы в кошельке было чуть более 5 DASH. "
-"Многие бюджетные предложения запрашивают возмещение потраченных 5 DASH."
+"запустить в консоли вашего кошелька Dash Core для подготовки объекта "
+"вашего бюджетного предложения. Запуск этой команды будет стоить вам 5 "
+"DASH, которые \"сожгутся\", это означает, что они будут навсегда удалены "
+"из денежной массы. Такая единоразовая плата защищет систему управления от"
+" \"спама\" из предложений, плохо продуманных предложений или "
+"пользователей, действующих из недобросовестных побуждений. Так же будет "
+"взята небольшая комиссия за транзакцию, поэтому проследите, чтобы в "
+"кошельке было чуть более 5 DASH. Многие бюджетные предложения запрашивают"
+" возмещение потраченных 5 DASH."
 
-#: ../../governance/using.rst:194
+#: ../../governance/using.rst:189
 msgid ""
-"First unlock your wallet by clicking **Settings > Unlock wallet**, then open"
-" the console by clicking **Tools > Debug console** and paste the generated "
-"command. The transaction ID will appear. Copy and paste this into the "
-"proposal generator response window. As soon as you do this, the system will "
-"show a progress bar as it waits for 6 confirmations as follows:"
+"First unlock your wallet by clicking **Settings > Unlock wallet**, then "
+"open the console by clicking **Tools > Debug console** and paste the "
+"generated command. The transaction ID will appear. Copy and paste this "
+"into the proposal generator response window. As soon as you do this, the "
+"system will show a progress bar as it waits for 6 confirmations as "
+"follows:"
 msgstr ""
-"В первую очередь разблокируйте кошелёк, нажав **Settings > Unlock wallet**, "
-"далее откройте консоль, нажав на **Tools > Debug console** и скопируйте "
-"сгенерированную команду. Появится ID транзакции.  Скопируйте и вставьте его "
-"в окно ответа создателя предложений. Как только вы это сделаете, то система "
-"покажет полоску прогресса с ожиданием 6 необходимых подтверждений:"
+"В первую очередь разблокируйте кошелёк, нажав **Settings > Unlock "
+"wallet**, далее откройте консоль, нажав на **Tools > Debug console** и "
+"скопируйте сгенерированную команду. Появится ID транзакции.  Скопируйте и"
+" вставьте его в окно ответа создателя предложений. Как только вы это "
+"сделаете, то система покажет полоску прогресса с ожиданием 6 необходимых "
+"подтверждений:"
 
-#: ../../governance/using.rst:207
+#: ../../governance/using.rst:202
 msgid ""
-"Step 3: Creating the proposal transaction and waiting for 6 confirmations of"
-" the transaction ID"
+"Step 3: Creating the proposal transaction and waiting for 6 confirmations"
+" of the transaction ID"
 msgstr ""
 "Шаг 3: Создание транзакции предложения и ожидание 6 подтверждений ID "
 "транзакции"
 
-#: ../../governance/using.rst:210
+#: ../../governance/using.rst:205
 msgid ""
-"Once 6 block confirmations exist, another command will appear to submit the "
-"prepared governance object to the network for voting. Copy and paste this "
-"command, and your governance object ID will appear as follows:"
+"Once 6 block confirmations exist, another command will appear to submit "
+"the prepared governance object to the network for voting. Copy and paste "
+"this command, and your governance object ID will appear as follows:"
 msgstr ""
-"Когда выйдет подтверждение 6-го блока, появится ещё одна команда для подачи "
-"подготовленного объекта управления в сеть на голосование. Скопируйте и "
-"вставьте эту команду и появится ваш ID управления:"
+"Когда выйдет подтверждение 6-го блока, появится ещё одна команда для "
+"подачи подготовленного объекта управления в сеть на голосование. "
+"Скопируйте и вставьте эту команду и появится ваш ID управления:"
 
-#: ../../governance/using.rst:220
+#: ../../governance/using.rst:215
 msgid "Step 4: Submitting the governance object to the network"
 msgstr "Шаг4: Подача объекта управления в сеть"
 
-#: ../../governance/using.rst:222
+#: ../../governance/using.rst:217
 msgid ""
-"You can use this ID to track voting on the proposal until the budget closes "
-"and you receive your payout. You can also submit the ID to DashCentral to "
-"claim your proposal and enable simplified voting for masternodes using "
-"DashCentral voting services."
+"You can use this ID to track voting on the proposal until the budget "
+"closes and you receive your payout. You can also submit the ID to "
+"DashCentral to claim your proposal and enable simplified voting for "
+"masternodes using DashCentral voting services."
 msgstr ""
-"Вы можете использовать этот ID, чтобы следить за процессом голосования до "
-"тех пор, пока не закроется бюджет и вам не поступит выплата. Дополнительно, "
-"вы можете отправить ID в DashCentral, чтобы подтвердить себя как владельца "
-"предложения и использовать там упрощённый процесс голосоввания мастернод."
+"Вы можете использовать этот ID, чтобы следить за процессом голосования до"
+" тех пор, пока не закроется бюджет и вам не поступит выплата. "
+"Дополнительно, вы можете отправить ID в DashCentral, чтобы подтвердить "
+"себя как владельца предложения и использовать там упрощённый процесс "
+"голосоввания мастернод."
 
-#: ../../governance/using.rst:228
+#: ../../governance/using.rst:223
 msgid "DashCentral Proposal Generator"
 msgstr "Создатель бюджетных предложений DashCentral"
 
-#: ../../governance/using.rst:230
+#: ../../governance/using.rst:225
 msgid "https://www.dashcentral.org/budget/create"
 msgstr "https://www.dashcentral.org/budget/create"
 
-#: ../../governance/using.rst:232
+#: ../../governance/using.rst:227
 msgid ""
 "DashCentral also includes a tool to create budget proposals, or claim "
 "existing proposals so you can add a description on DashCentral and begin "
-"discussion with the community. The steps to be taken are almost identical to"
-" the procedure described above, and documentation is available `here "
+"discussion with the community. The steps to be taken are almost identical"
+" to the procedure described above, and documentation is available `here "
 "<https://www.dashcentral.org/about/contact>`_."
 msgstr ""
 "На DashCentral тоже имеется инструментарий для создания бюджетных "
-"предложений или работы с уже созданными предложениями, вы можете создать его"
-" описание на DashCentral и начать обсуждение с сообществом. Необходимые шаги"
-" почти одинаковы с описанными выше. Документация доступна `здесь "
-"<https://www.dashcentral.org/about/contact>`_."
+"предложений или работы с уже созданными предложениями, вы можете создать "
+"его описание на DashCentral и начать обсуждение с сообществом. "
+"Необходимые шаги почти одинаковы с описанными выше. Документация доступна"
+" `здесь <https://www.dashcentral.org/about/contact>`_."
 
-#: ../../governance/using.rst:240
+#: ../../governance/using.rst:235
 msgid "Voting on proposals"
 msgstr "Голосование по предложениям"
 
-#: ../../governance/using.rst:242
+#: ../../governance/using.rst:237
 msgid ""
-"**You must vote at least three days before the superblock is created or your"
-" vote will not be counted. The exact deadline is 1662 blocks before the "
-"superblock.**"
+"**You must vote at least three days before the superblock is created or "
+"your vote will not be counted. The exact deadline is 1662 blocks before "
+"the superblock.**"
 msgstr ""
-"**You must vote at least three days before the superblock is created or your"
-" vote will not be counted. The exact deadline is 1662 blocks before the "
-"superblock.**"
+"**You must vote at least three days before the superblock is created or "
+"your vote will not be counted. The exact deadline is 1662 blocks before "
+"the superblock.**"
 
-#: ../../governance/using.rst:246
+#: ../../governance/using.rst:241
 msgid ""
-"Note that if you do not operate a masternode, you may still be able to vote "
-"on DashBoost proposals. See https://www.dashboost.org for more information."
+"Note that if you do not operate a masternode, you may still be able to "
+"vote on DashBoost proposals. See https://www.dashboost.org for more "
+"information."
 msgstr ""
-"Обратите внимание: если вы не используете мастерноду, вы все равно сможете "
-"голосовать по предложениям на DashBoost. Дополнительную информацию смотрите "
-"на странице https://www.dashboost.org"
+"Обратите внимание: если вы не используете мастерноду, вы все равно "
+"сможете голосовать по предложениям на DashBoost. Дополнительную "
+"информацию смотрите на странице https://www.dashboost.org"
 
-#: ../../governance/using.rst:250
+#: ../../governance/using.rst:245
 msgid ""
 "Voting on DGBB proposals is an important part of operating a masternode. "
 "Since masternodes are heavily invested in Dash, they are expected to "
-"critically appraise proposals each month and vote in a manner they perceive "
-"to be consistent with the best interests of the network. Each masternode may"
-" vote once on each proposal, and the vote can be changed at any time before "
-"the voting deadline. The following sites and tools are available to view and"
-" manage proposals and voting:"
+"critically appraise proposals each month and vote in a manner they "
+"perceive to be consistent with the best interests of the network. Each "
+"masternode may vote once on each proposal, and the vote can be changed at"
+" any time before the voting deadline. The following sites and tools are "
+"available to view and manage proposals and voting:"
 msgstr ""
 "Голосование по предложениям DGBB является важной частью управления "
 "мастернодой. Поскольку владельцы мастернод вложили в сеть Dash большие "
 "средства, то ожидается, что они каждый месяц критически оценивают "
-"предложения и голосуют в соответствии со своим представлением о пользе для "
-"сети. Каждая мастернода может проголосовать за предложение лишь единожды, но"
-" может изменить свой голос до конца голосования. Доступны следующие сайты и "
-"инструменты для просмотра и организации предложений и голосования:"
+"предложения и голосуют в соответствии со своим представлением о пользе "
+"для сети. Каждая мастернода может проголосовать за предложение лишь "
+"единожды, но может изменить свой голос до конца голосования. Доступны "
+"следующие сайты и инструменты для просмотра и организации предложений и "
+"голосования:"
 
-#: ../../governance/using.rst:258
+#: ../../governance/using.rst:253
 msgid "`DashCentral <https://www.dashcentral.org/budget>`__"
 msgstr "`DashCentral <https://www.dashcentral.org/budget>`__"
 
-#: ../../governance/using.rst:259
+#: ../../governance/using.rst:254
 msgid "`Dash Nexus <https://dashnexus.org>`__"
 msgstr ""
 
-#: ../../governance/using.rst:260
+#: ../../governance/using.rst:255
 msgid "`Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`__"
-msgstr ""
-"`Dash Ninja - Управление <https://www.dashninja.pl/governance.html>`__"
+msgstr "`Dash Ninja - Управление <https://www.dashninja.pl/governance.html>`__"
 
-#: ../../governance/using.rst:261
+#: ../../governance/using.rst:256
 msgid ""
 "`Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-"
 "masternode-tool/releases>`__"
@@ -641,7 +644,7 @@ msgstr ""
 "`Dash Masternode Tool - Предложения <https://github.com/Bertrand256/dash-"
 "masternode-tool/releases>`__"
 
-#: ../../governance/using.rst:263
+#: ../../governance/using.rst:258
 msgid ""
 "For information on how to create a proposal, see :ref:`here <creating-"
 "proposals>`."
@@ -649,129 +652,130 @@ msgstr ""
 "Для информации о том, как создать предложение посмотрите :ref:`here "
 "<creating-proposals>`."
 
-#: ../../governance/using.rst:267
+#: ../../governance/using.rst:262
 msgid "DashCentral"
 msgstr "DashCentral"
 
-#: ../../governance/using.rst:269
+#: ../../governance/using.rst:264
 msgid ""
-"Many masternode operators store their password-protected masternode private "
-"key on `DashCentral <https://www.dashcentral.org>`__ to enable simple voting"
-" with a user-friendly interface. The popularity of this site has made it a "
-"common place for discussion of the proposals after they are submitted to the"
-" governance system. To vote from the DashCentral web interface, first add "
-"your masternode private key to your account according to the instructions "
-"here. Note that the masternode private key is not the same as the private "
-"key controlling the 1000 DASH collateral, so there is no risk of losing your"
-" collateral. A separate password is required to unlock the masternode "
-"private key for voting, so the risk of the site operator voting in your name"
-" is minimal."
+"Many masternode operators store their password-protected masternode "
+"private key on `DashCentral <https://www.dashcentral.org>`__ to enable "
+"simple voting with a user-friendly interface. The popularity of this site"
+" has made it a common place for discussion of the proposals after they "
+"are submitted to the governance system. To vote from the DashCentral web "
+"interface, first add your masternode private key to your account "
+"according to the instructions here. Note that the masternode private key "
+"is not the same as the private key controlling the 1000 DASH collateral, "
+"so there is no risk of losing your collateral. A separate password is "
+"required to unlock the masternode private key for voting, so the risk of "
+"the site operator voting in your name is minimal."
 msgstr ""
-"Для упрощённого процесса голосования с удобным интефейсом многие операторы "
-"мастернод хранят свои защищенные паролем приватные ключи на `DashCentral "
-"<https://www.dashcentral.org>`__. Популярность этого сайта сделала его "
-"привычным местом для обсуждения предложений после подачи их в систему "
-"управления. Для голосования через веб-интерфейс DashCentral, сначала "
-"добавьте в ваш профиль приватный ключ мастерноды по инструкции, предложенной"
-" здесь. Обратите внимание, что приватный ключ мастерноды не является ключем,"
-" который контролирует 1000 DASH, поэтому риска утери вашей суммы, "
-"обеспечивающей мастерноду нет. Для разблокирования приватного ключа к "
-"голосованию мастерноды необходим отдельный пароль, таким образом риск того, "
-"что за вас проголосует оператор сайта минимален."
+"Для упрощённого процесса голосования с удобным интефейсом многие "
+"операторы мастернод хранят свои защищенные паролем приватные ключи на "
+"`DashCentral <https://www.dashcentral.org>`__. Популярность этого сайта "
+"сделала его привычным местом для обсуждения предложений после подачи их в"
+" систему управления. Для голосования через веб-интерфейс DashCentral, "
+"сначала добавьте в ваш профиль приватный ключ мастерноды по инструкции, "
+"предложенной здесь. Обратите внимание, что приватный ключ мастерноды не "
+"является ключем, который контролирует 1000 DASH, поэтому риска утери "
+"вашей суммы, обеспечивающей мастерноду нет. Для разблокирования "
+"приватного ключа к голосованию мастерноды необходим отдельный пароль, "
+"таким образом риск того, что за вас проголосует оператор сайта минимален."
 
-#: ../../governance/using.rst:281
+#: ../../governance/using.rst:276
 msgid ""
 "When you are ready to vote, go to the `budget proposals page "
-"<https://www.dashcentral.org/budget>`_. Simply click to view the proposals, "
-"then click either **Vote YES**, **Vote ABSTAIN** or **Vote NO**."
+"<https://www.dashcentral.org/budget>`_. Simply click to view the "
+"proposals, then click either **Vote YES**, **Vote ABSTAIN** or **Vote "
+"NO**."
 msgstr ""
 "Когда вы будете готовы проголосовать, проследуйте на `страницу бюджетных "
 "предложений <https://www.dashcentral.org/budget>`_. На предложения можно "
-"нажимать для просмотра, далее следует нажать **Vote YES**, **Vote ABSTAIN** "
-"или **Vote NO**."
+"нажимать для просмотра, далее следует нажать **Vote YES**, **Vote "
+"ABSTAIN** или **Vote NO**."
 
-#: ../../governance/using.rst:289
+#: ../../governance/using.rst:284
 msgid "Voting interface on DashCentral"
 msgstr "Интерфейс голосований на DashCentral"
 
-#: ../../governance/using.rst:292
+#: ../../governance/using.rst:287
 msgid "Dash Masternode Tool (DMT)"
 msgstr "Dash Masternode Tool (DMT)"
 
-#: ../../governance/using.rst:294
+#: ../../governance/using.rst:289
 msgid ""
 "If you started your masternode from a hardware wallet using `DMT "
-"<https://github.com/Bertrand256/dash-masternode-tool/releases>`_, you can "
-"also use the tool to cast votes. Click **Tools > Proposals** and wait for "
-"the list of proposals to load. You can easily see the voting status of each "
-"proposal, and selecting a proposal shows details on the **Details** tab in "
-"the lower half of the window. Switch to the **Vote** tab to **Vote Yes**, "
-"**Vote No** or **Vote Abstain** directly from DMT."
+"<https://github.com/Bertrand256/dash-masternode-tool/releases>`_, you can"
+" also use the tool to cast votes. Click **Tools > Proposals** and wait "
+"for the list of proposals to load. You can easily see the voting status "
+"of each proposal, and selecting a proposal shows details on the "
+"**Details** tab in the lower half of the window. Switch to the **Vote** "
+"tab to **Vote Yes**, **Vote No** or **Vote Abstain** directly from DMT."
 msgstr ""
 "Если вы запустили мастерноду из физического кошелька, используя `DMT "
 "<https://github.com/Bertrand256/dash-masternode-tool/releases>`_, то с "
-"помощью этого инструмента тоже можно проводить голосование. Нажмите **Tools "
-"> Proposals** и дождитесь, пока загрузится список предложений. Статус "
-"голосования по каждому предложению виден сразу, а выбор предложения покажет "
-"подробности во вкладке **Details** в нижней части окна. Чтобы проголосовать "
-"напрямую из DMT, перейдите во вкладку **Vote**, чтобы **Vote Yes**, **Vote "
-"No** или **Vote Abstain**."
+"помощью этого инструмента тоже можно проводить голосование. Нажмите "
+"**Tools > Proposals** и дождитесь, пока загрузится список предложений. "
+"Статус голосования по каждому предложению виден сразу, а выбор "
+"предложения покажет подробности во вкладке **Details** в нижней части "
+"окна. Чтобы проголосовать напрямую из DMT, перейдите во вкладку **Vote**,"
+" чтобы **Vote Yes**, **Vote No** или **Vote Abstain**."
 
-#: ../../governance/using.rst:305
+#: ../../governance/using.rst:300
 msgid "Voting interface in DMT"
 msgstr "Интерфейс голосования в DMT"
 
-#: ../../governance/using.rst:308
+#: ../../governance/using.rst:305
 msgid "Dash Core wallet or masternode"
 msgstr "Кошелёк Dash Core или мастернода"
 
-#: ../../governance/using.rst:310
+#: ../../governance/using.rst:307
 msgid ""
-"If you started your masternode using the Dash Core Wallet (not recommended),"
-" you can vote manually from **Tools > Debug console**, or directly from your"
-" masternode via SSH using ``dash-cli``. First click on the proposal you want"
-" to vote on at either `DashCentral <https://www.dashcentral.org/budget>`__ "
-"or `Dash Ninja <https://www.dashninja.pl/governance.html>`__. You will see a"
-" command for manual voting below the proposal description. Copy and paste "
-"the command and modify it as necessary. As an example, take this proposal "
-"from `Dash Ninja "
-"<https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741 "
-"8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`__ (or "
+"If you started your masternode using the Dash Core Wallet (not "
+"recommended), you can vote manually from **Tools > Debug console**, or "
+"directly from your masternode via SSH using ``dash-cli``. First click on "
+"the proposal you want to vote on at either `DashCentral "
+"<https://www.dashcentral.org/budget>`__ or `Dash Ninja "
+"<https://www.dashninja.pl/governance.html>`__. You will see a command for"
+" manual voting below the proposal description. Copy and paste the command"
+" and modify it as necessary. As an example, take this proposal from `Dash"
+" Ninja <https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741"
+" 8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`__ (or "
 "`DashCentral "
-"<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__). The "
-"voting code for Dash Core Wallet is as follows::"
+"<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__). The"
+" voting code for Dash Core Wallet is as follows::"
 msgstr ""
 "Если вы запустили свою мастерноду через кошелёк Dash Core (что не "
-"рекомендуется), то можете голосовать вручную **Tools > Debug console**, или "
-"напрямую через мастерноду через SSH используя ``dash-cli``. Сперва нажмите "
-"на предложение, по которому хотите проголосовать на `DashCentral "
+"рекомендуется), то можете голосовать вручную **Tools > Debug console**, "
+"или напрямую через мастерноду через SSH используя ``dash-cli``. Сперва "
+"нажмите на предложение, по которому хотите проголосовать на `DashCentral "
 "<https://www.dashcentral.org/budget>`__ или `Dash Ninja "
-"<https://www.dashninja.pl/governance.html>`__. Под описанием предложения вы "
-"увидете команду для ручного голосования. Скопируйте и вставьте команду и "
-"модифицируйте её, если необходимо. В качестве примера, возьмите предложение "
-"от `Dash Ninja "
+"<https://www.dashninja.pl/governance.html>`__. Под описанием предложения "
+"вы увидете команду для ручного голосования. Скопируйте и вставьте команду"
+" и модифицируйте её, если необходимо. В качестве примера, возьмите "
+"предложение от `Dash Ninja "
 "<https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741 "
 "8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`__ (или "
 "`DashCentral "
-"<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__). Код "
-"голосования для кошелька Dash Core следующий::"
+"<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__). Код"
+" голосования для кошелька Dash Core следующий::"
 
-#: ../../governance/using.rst:329
+#: ../../governance/using.rst:326
 msgid ""
 "Note that to vote from your masternode directly, you need to prefix the "
 "command with ``dash-cli``, which is usually found in the ``.dashcore`` "
 "folder. The command should be similar to the following::"
 msgstr ""
 "Обратите внимание, что для голосования напрямую из мастерноды, перед "
-"командой будет необходим префикс ``dash-cli``, его легко можно найти в попке"
-" ``.dashcore``. Команда должна быть похожа на следующую::"
+"командой будет необходим префикс ``dash-cli``, его легко можно найти в "
+"попке ``.dashcore``. Команда должна быть похожа на следующую::"
 
-#: ../../governance/using.rst:337
+#: ../../governance/using.rst:334
 msgid ""
 "Note this command will trigger a vote from all masternodes configured in "
 "``dash.conf``. If you have multiple masternodes each with its own .conf "
-"file, or if you want to vote with only some of your masternodes, you must "
-"change the command from ``vote-many`` to ``vote``. If your vote was "
+"file, or if you want to vote with only some of your masternodes, you must"
+" change the command from ``vote-many`` to ``vote``. If your vote was "
 "successful, you should see a confirmation message reading **Voted "
 "successfully**."
 msgstr ""
@@ -782,11 +786,11 @@ msgstr ""
 "many`` на ``vote``. Если ваш голос успешно прошёл, то появится "
 "подтверждающее сообщение **Voted successfully**."
 
-#: ../../governance/using.rst:347
+#: ../../governance/using.rst:344
 msgid "Voting from the debug console in Dash Core Wallet"
 msgstr "Голосование через консоль отладки в кошельке Dash Core"
 
-#: ../../governance/using.rst:349
+#: ../../governance/using.rst:346
 msgid ""
 "You can also view a list of proposals in JSON format from the console to "
 "copy and paste the proposal hash for voting as follows::"
@@ -794,3 +798,96 @@ msgstr ""
 "Список предложений так же доступен в формате JSON из консоли, для "
 "голосования туда можно скопировать и вставить хэш предложения следющим "
 "образом::"
+
+#: ../../governance/using.rst:354
+msgid "Delegating votes"
+msgstr ""
+
+#: ../../governance/using.rst:356
+msgid ""
+":ref:`DIP003 masternodes <dip3-changes>` feature a separate voting key, "
+"which makes it possible to delegate your vote to a representative. Simply"
+" enter a Dash address provided by the delegate when :ref:`registering "
+"your masternode <masternode-setup>`, or :ref:`update <dip3-update-"
+"registrar>` your masternode registration to delegate the vote of a "
+"running masternode. The wallet controlling the private key to this "
+"address will then cast votes on behalf of this masternode owner simply by"
+" following the :ref:`Dash Core voting procedure <dash-core-voting>` "
+"described above. No further configuration is required."
+msgstr ""
+
+#~ msgid "Votes are cast by masternode owners"
+#~ msgstr "Голосование производится владельцами мастернод"
+
+#~ msgid "747720"
+#~ msgstr "747720"
+
+#~ msgid "Tue Oct 3 20:17:56 UTC 2017"
+#~ msgstr "Tue Oct 3 20:17:56 UTC 2017"
+
+#~ msgid "764336"
+#~ msgstr "764336"
+
+#~ msgid "Fri Nov 3 03:22:58 UTC 2017"
+#~ msgstr "Fri Nov 3 03:22:58 UTC 2017"
+
+#~ msgid "780952"
+#~ msgstr "780952"
+
+#~ msgid "Sun Dec 3 10:28:00 UTC 2017"
+#~ msgstr "Sun Dec 3 10:28:00 UTC 2017"
+
+#~ msgid "Tue Jan 2 17:33:02 UTC 2018"
+#~ msgstr "Tue Jan 2 17:33:02 UTC 2018"
+
+#~ msgid "814184"
+#~ msgstr "814184"
+
+#~ msgid "Fri Feb 2 00:38:04 UTC 2018"
+#~ msgstr "Fri Feb 2 00:38:04 UTC 2018"
+
+#~ msgid "Sun Mar 4 07:43:06 UTC 2018"
+#~ msgstr "Sun Mar 4 07:43:06 UTC 2018"
+
+#~ msgid "847416"
+#~ msgstr "847416"
+
+#~ msgid "Tue Apr 3 14:48:08 UTC 2018"
+#~ msgstr "Tue Apr 3 14:48:08 UTC 2018"
+
+#~ msgid "864032"
+#~ msgstr "864032"
+
+#~ msgid "880648"
+#~ msgstr "880648"
+
+#~ msgid "Sun Jun 3 04:58:12 UTC 2018"
+#~ msgstr "Sun Jun 3 04:58:12 UTC 2018"
+
+#~ msgid "897264"
+#~ msgstr "897264"
+
+#~ msgid "913880"
+#~ msgstr "913880"
+
+#~ msgid "Thu Aug 2 19:08:16 UTC 2018"
+#~ msgstr "Thu Aug 2 19:08:16 UTC 2018"
+
+#~ msgid "930496"
+#~ msgstr "930496"
+
+#~ msgid "Sun Sep 2 02:13:18 UTC 2018"
+#~ msgstr "Sun Sep 2 02:13:18 UTC 2018"
+
+#~ msgid "947112"
+#~ msgstr "947112"
+
+#~ msgid "Tue Oct 2 09:18:20 UTC 2018"
+#~ msgstr "Tue Oct 2 09:18:20 UTC 2018"
+
+#~ msgid "Thu Nov 1 16:23:22 UTC 2018"
+#~ msgstr "Thu Nov 1 16:23:22 UTC 2018"
+
+#~ msgid "Sat Dec 1 23:28:24 UTC 2018"
+#~ msgstr "Sat Dec 1 23:28:24 UTC 2018"
+

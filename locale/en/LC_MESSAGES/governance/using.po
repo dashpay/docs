@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-25 09:35+0000\n"
+"POT-Creation-Date: 2019-01-11 06:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgid "Anyone can submit a proposal for a small fee"
 msgstr ""
 
 #: ../../governance/using.rst:23
-msgid "Masternode owners can cast for, against or abstain votes on proposals"
+msgid "Each valid masternode can vote for, against or abstain on proposals"
 msgstr ""
 
 #: ../../governance/using.rst:24
@@ -87,22 +87,26 @@ msgid "Votes"
 msgstr ""
 
 #: ../../governance/using.rst:38
-msgid "Votes are cast by masternode owners"
+msgid "Votes are cast using the registered voting address"
 msgstr ""
 
 #: ../../governance/using.rst:39
-msgid "Votes can be changed at any time"
+msgid "The voting address can be delegated to a third party"
 msgstr ""
 
 #: ../../governance/using.rst:40
+msgid "Votes can be changed at any time"
+msgstr ""
+
+#: ../../governance/using.rst:41
 msgid "Votes are counted every 16616 blocks (approx. 30.29 days)"
 msgstr ""
 
-#: ../../governance/using.rst:43
+#: ../../governance/using.rst:44
 msgid "Budgets"
 msgstr ""
 
-#: ../../governance/using.rst:45
+#: ../../governance/using.rst:46
 #, python-format
 msgid ""
 "Budgets are proposals which receive a net total of yes votes equal to or "
@@ -110,88 +114,88 @@ msgid ""
 " 4480)"
 msgstr ""
 
-#: ../../governance/using.rst:48
+#: ../../governance/using.rst:49
 msgid ""
 "Budgets can be nullified at any time if vote totals (cast or re-cast) "
 "fall below the approval threshold"
 msgstr ""
 
-#: ../../governance/using.rst:50
+#: ../../governance/using.rst:51
 msgid ""
 "Budgets are processed (paid) in order of yes minus no votes. More popular"
 " budgets get payment priority."
 msgstr ""
 
-#: ../../governance/using.rst:52
+#: ../../governance/using.rst:53
 #, python-format
 msgid ""
 "Approximately 6176 dash (in 2018) are available for each budget cycle, "
 "decreasing by 7.14% every 210240 blocks (approx. 383.25 days)."
 msgstr ""
 
-#: ../../governance/using.rst:56
+#: ../../governance/using.rst:57
 msgid "Object structure"
 msgstr ""
 
-#: ../../governance/using.rst:58
+#: ../../governance/using.rst:59
 msgid "The following information is required to create a proposal:"
 msgstr ""
 
-#: ../../governance/using.rst:60
+#: ../../governance/using.rst:61
 msgid "proposal-name: a unique label, 20 characters or less"
 msgstr ""
 
-#: ../../governance/using.rst:61
+#: ../../governance/using.rst:62
 msgid ""
 "url: a proposer-created webpage or forum post containing detailed "
 "proposal information"
 msgstr ""
 
-#: ../../governance/using.rst:63
+#: ../../governance/using.rst:64
 msgid "payment-count: how many cycles the proposal is requesting payment"
 msgstr ""
 
-#: ../../governance/using.rst:64
+#: ../../governance/using.rst:65
 msgid "block-start: the requested start of proposal payments"
 msgstr ""
 
-#: ../../governance/using.rst:65
+#: ../../governance/using.rst:66
 msgid "dash-address: the address to receive proposal payments"
 msgstr ""
 
-#: ../../governance/using.rst:66
+#: ../../governance/using.rst:67
 msgid "monthly-payment-dash: the requested payment amount"
 msgstr ""
 
-#: ../../governance/using.rst:69
+#: ../../governance/using.rst:70
 msgid "Persistence"
 msgstr ""
 
-#: ../../governance/using.rst:71
+#: ../../governance/using.rst:72
 msgid "Proposals become active one day after submission"
 msgstr ""
 
-#: ../../governance/using.rst:72
+#: ../../governance/using.rst:73
 msgid ""
 "Proposals will remain visible on the network until they are either "
 "disapproved or the proposal's last payment-cycle is reached"
 msgstr ""
 
-#: ../../governance/using.rst:74
+#: ../../governance/using.rst:75
 #, python-format
 msgid ""
 "Approval occurs when yes votes minus no votes equals 10% or more of the "
 "total available votes."
 msgstr ""
 
-#: ../../governance/using.rst:76
+#: ../../governance/using.rst:77
 #, python-format
 msgid ""
 "Disapproval occurs when no votes minus yes votes equals 10% or more of "
 "the total available votes."
 msgstr ""
 
-#: ../../governance/using.rst:78
+#: ../../governance/using.rst:79
 msgid ""
 "The total available votes is the count of online and responding "
 "masternodes and can be seen by running the command ``masternode count`` "
@@ -200,34 +204,34 @@ msgid ""
 "<http://178.254.23.111/~pub/masternode_count.png>`__"
 msgstr ""
 
-#: ../../governance/using.rst:85
+#: ../../governance/using.rst:86
 msgid "Templates"
 msgstr ""
 
-#: ../../governance/using.rst:87
+#: ../../governance/using.rst:88
 msgid ""
 "The following two Microsoft Word templates are available from Dash Core "
 "Group to help facilitate standardized proposal submission and updates. "
 "Usage is recommended, but not required."
 msgstr ""
 
-#: ../../governance/using.rst:91
+#: ../../governance/using.rst:92
 msgid ""
 "`Project Proposal Template "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Proposal%20Template%20v1.0.docx>`_"
 msgstr ""
 
-#: ../../governance/using.rst:92
+#: ../../governance/using.rst:93
 msgid ""
 "`Project Status Update Template "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Status%20Update%20Template%20v1.0.docx>`_"
 msgstr ""
 
-#: ../../governance/using.rst:97
+#: ../../governance/using.rst:98
 msgid "Budget cycles"
 msgstr ""
 
-#: ../../governance/using.rst:99
+#: ../../governance/using.rst:100
 msgid ""
 "When preparing a proposal, be aware of when the next cycle will occur and"
 " plan accordingly. It is recommended to choose your proposal payment "
@@ -236,153 +240,129 @@ msgid ""
 "tallied 1662 blocks (approximately 3 days) prior to the superblock."
 msgstr ""
 
-#: ../../governance/using.rst:107
+#: ../../governance/using.rst:108
 msgid "Block height"
 msgstr ""
 
-#: ../../governance/using.rst:107
+#: ../../governance/using.rst:108
 msgid "Approximate date"
 msgstr ""
 
-#: ../../governance/using.rst:109
-msgid "747720"
-msgstr ""
-
-#: ../../governance/using.rst:109
-msgid "Tue Oct 3 20:17:56 UTC 2017"
-msgstr ""
-
-#: ../../governance/using.rst:111
-msgid "764336"
-msgstr ""
-
-#: ../../governance/using.rst:111
-msgid "Fri Nov 3 03:22:58 UTC 2017"
-msgstr ""
-
-#: ../../governance/using.rst:113
-msgid "780952"
-msgstr ""
-
-#: ../../governance/using.rst:113
-msgid "Sun Dec 3 10:28:00 UTC 2017"
-msgstr ""
-
-#: ../../governance/using.rst:115
-msgid "797568"
-msgstr ""
-
-#: ../../governance/using.rst:115
-msgid "Tue Jan 2 17:33:02 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:117
-msgid "814184"
-msgstr ""
-
-#: ../../governance/using.rst:117
-msgid "Fri Feb 2 00:38:04 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:119
-msgid "830800"
-msgstr ""
-
-#: ../../governance/using.rst:119
-msgid "Sun Mar 4 07:43:06 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:121
-msgid "847416"
-msgstr ""
-
-#: ../../governance/using.rst:121
-msgid "Tue Apr 3 14:48:08 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:123
-msgid "864032"
-msgstr ""
-
-#: ../../governance/using.rst:123
-msgid "Thu May 3 21:53:10 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:125
-msgid "880648"
-msgstr ""
-
-#: ../../governance/using.rst:125
-msgid "Sun Jun 3 04:58:12 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:127
-msgid "897264"
-msgstr ""
-
-#: ../../governance/using.rst:127
-msgid "Tue Jul 3 12:03:14 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:129
-msgid "913880"
-msgstr ""
-
-#: ../../governance/using.rst:129
-msgid "Thu Aug 2 19:08:16 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:131
-msgid "930496"
-msgstr ""
-
-#: ../../governance/using.rst:131
-msgid "Sun Sep 2 02:13:18 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:133
-msgid "947112"
-msgstr ""
-
-#: ../../governance/using.rst:133
-msgid "Tue Oct 2 09:18:20 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:135
-msgid "963728"
-msgstr ""
-
-#: ../../governance/using.rst:135
-msgid "Thu Nov 1 16:23:22 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:137
-msgid "980344"
-msgstr ""
-
-#: ../../governance/using.rst:137
-msgid "Sat Dec 1 23:28:24 UTC 2018"
-msgstr ""
-
-#: ../../governance/using.rst:139
+#: ../../governance/using.rst:110
 msgid "996960"
 msgstr ""
 
-#: ../../governance/using.rst:139
+#: ../../governance/using.rst:110
 msgid "Tue Jan 1 06:33:26 UTC 2019"
 msgstr ""
 
-#: ../../governance/using.rst:142
+#: ../../governance/using.rst:112
+msgid "1013576"
+msgstr ""
+
+#: ../../governance/using.rst:112
+msgid "Thu Jan 31 13:38:28 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:114
+msgid "1030192"
+msgstr ""
+
+#: ../../governance/using.rst:114
+msgid "Sat Mar 2 20:43:30 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:116
+msgid "1046808"
+msgstr ""
+
+#: ../../governance/using.rst:116
+msgid "Tue Apr 2 03:48:32 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:118
+msgid "1063424"
+msgstr ""
+
+#: ../../governance/using.rst:118
+msgid "Thu May 2 10:53:34 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:120
+msgid "1080040"
+msgstr ""
+
+#: ../../governance/using.rst:120
+msgid "Sat Jun 1 17:58:36 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:122
+msgid "1096656"
+msgstr ""
+
+#: ../../governance/using.rst:122
+msgid "Tue Jul 2 01:03:38 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:124
+msgid "1113272"
+msgstr ""
+
+#: ../../governance/using.rst:124
+msgid "Thu Aug 1 08:08:40 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:126
+msgid "1129888"
+msgstr ""
+
+#: ../../governance/using.rst:126
+msgid "Sat Aug 31 15:13:42 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:128
+msgid "1146504"
+msgstr ""
+
+#: ../../governance/using.rst:128
+msgid "Mon Sep 30 22:18:44 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:130
+msgid "1163120"
+msgstr ""
+
+#: ../../governance/using.rst:130
+msgid "Thu Oct 31 05:23:46 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:132
+msgid "1179736"
+msgstr ""
+
+#: ../../governance/using.rst:132
+msgid "Sat Nov 30 12:28:48 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:134
+msgid "1196352"
+msgstr ""
+
+#: ../../governance/using.rst:134
+msgid "Mon Dec 30 19:33:50 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:137
 msgid ""
 "You can view the source code for this calculation at this `GitHub gist "
 "<https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_"
 msgstr ""
 
-#: ../../governance/using.rst:148
+#: ../../governance/using.rst:143
 msgid "Creating proposals"
 msgstr ""
 
-#: ../../governance/using.rst:150
+#: ../../governance/using.rst:145
 msgid ""
 "Once you have prepared the text of your proposal and set up a website or "
 "forum post, it is time to submit your proposal to the blockchain for "
@@ -391,15 +371,15 @@ msgid ""
 "user interface have been developed to simplify this procedure."
 msgstr ""
 
-#: ../../governance/using.rst:157
+#: ../../governance/using.rst:152
 msgid "Dash Budget Proposal Generator"
 msgstr ""
 
-#: ../../governance/using.rst:159
+#: ../../governance/using.rst:154
 msgid "https://proposal.dash.org"
 msgstr ""
 
-#: ../../governance/using.rst:161
+#: ../../governance/using.rst:156
 msgid ""
 "The `Dash Budget Proposal Generator <https://proposal.dash.org>`__ "
 "supports creating budget proposals on both mainnet and testnet. In the "
@@ -416,11 +396,11 @@ msgid ""
 "modified after it has been submitted to the blockchain."
 msgstr ""
 
-#: ../../governance/using.rst:182
+#: ../../governance/using.rst:177
 msgid "Steps 1 & 2: Creating your proposal and preparing the command"
 msgstr ""
 
-#: ../../governance/using.rst:184
+#: ../../governance/using.rst:179
 msgid ""
 "Next, the proposal generator will provide you with a command to run from "
 "the console of your Dash Core wallet to prepare your budget proposal "
@@ -433,7 +413,7 @@ msgid ""
 "reimbursement of the 5 DASH fee."
 msgstr ""
 
-#: ../../governance/using.rst:194
+#: ../../governance/using.rst:189
 msgid ""
 "First unlock your wallet by clicking **Settings > Unlock wallet**, then "
 "open the console by clicking **Tools > Debug console** and paste the "
@@ -443,24 +423,24 @@ msgid ""
 "follows:"
 msgstr ""
 
-#: ../../governance/using.rst:207
+#: ../../governance/using.rst:202
 msgid ""
 "Step 3: Creating the proposal transaction and waiting for 6 confirmations"
 " of the transaction ID"
 msgstr ""
 
-#: ../../governance/using.rst:210
+#: ../../governance/using.rst:205
 msgid ""
 "Once 6 block confirmations exist, another command will appear to submit "
 "the prepared governance object to the network for voting. Copy and paste "
 "this command, and your governance object ID will appear as follows:"
 msgstr ""
 
-#: ../../governance/using.rst:220
+#: ../../governance/using.rst:215
 msgid "Step 4: Submitting the governance object to the network"
 msgstr ""
 
-#: ../../governance/using.rst:222
+#: ../../governance/using.rst:217
 msgid ""
 "You can use this ID to track voting on the proposal until the budget "
 "closes and you receive your payout. You can also submit the ID to "
@@ -468,15 +448,15 @@ msgid ""
 "masternodes using DashCentral voting services."
 msgstr ""
 
-#: ../../governance/using.rst:228
+#: ../../governance/using.rst:223
 msgid "DashCentral Proposal Generator"
 msgstr ""
 
-#: ../../governance/using.rst:230
+#: ../../governance/using.rst:225
 msgid "https://www.dashcentral.org/budget/create"
 msgstr ""
 
-#: ../../governance/using.rst:232
+#: ../../governance/using.rst:227
 msgid ""
 "DashCentral also includes a tool to create budget proposals, or claim "
 "existing proposals so you can add a description on DashCentral and begin "
@@ -485,25 +465,25 @@ msgid ""
 "<https://www.dashcentral.org/about/contact>`_."
 msgstr ""
 
-#: ../../governance/using.rst:240
+#: ../../governance/using.rst:235
 msgid "Voting on proposals"
 msgstr ""
 
-#: ../../governance/using.rst:242
+#: ../../governance/using.rst:237
 msgid ""
 "**You must vote at least three days before the superblock is created or "
 "your vote will not be counted. The exact deadline is 1662 blocks before "
 "the superblock.**"
 msgstr ""
 
-#: ../../governance/using.rst:246
+#: ../../governance/using.rst:241
 msgid ""
 "Note that if you do not operate a masternode, you may still be able to "
 "vote on DashBoost proposals. See https://www.dashboost.org for more "
 "information."
 msgstr ""
 
-#: ../../governance/using.rst:250
+#: ../../governance/using.rst:245
 msgid ""
 "Voting on DGBB proposals is an important part of operating a masternode. "
 "Since masternodes are heavily invested in Dash, they are expected to "
@@ -514,35 +494,35 @@ msgid ""
 "available to view and manage proposals and voting:"
 msgstr ""
 
-#: ../../governance/using.rst:258
+#: ../../governance/using.rst:253
 msgid "`DashCentral <https://www.dashcentral.org/budget>`__"
 msgstr ""
 
-#: ../../governance/using.rst:259
+#: ../../governance/using.rst:254
 msgid "`Dash Nexus <https://dashnexus.org>`__"
 msgstr ""
 
-#: ../../governance/using.rst:260
+#: ../../governance/using.rst:255
 msgid "`Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`__"
 msgstr ""
 
-#: ../../governance/using.rst:261
+#: ../../governance/using.rst:256
 msgid ""
 "`Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-"
 "masternode-tool/releases>`__"
 msgstr ""
 
-#: ../../governance/using.rst:263
+#: ../../governance/using.rst:258
 msgid ""
 "For information on how to create a proposal, see :ref:`here <creating-"
 "proposals>`."
 msgstr ""
 
-#: ../../governance/using.rst:267
+#: ../../governance/using.rst:262
 msgid "DashCentral"
 msgstr ""
 
-#: ../../governance/using.rst:269
+#: ../../governance/using.rst:264
 msgid ""
 "Many masternode operators store their password-protected masternode "
 "private key on `DashCentral <https://www.dashcentral.org>`__ to enable "
@@ -557,7 +537,7 @@ msgid ""
 "the site operator voting in your name is minimal."
 msgstr ""
 
-#: ../../governance/using.rst:281
+#: ../../governance/using.rst:276
 msgid ""
 "When you are ready to vote, go to the `budget proposals page "
 "<https://www.dashcentral.org/budget>`_. Simply click to view the "
@@ -565,15 +545,15 @@ msgid ""
 "NO**."
 msgstr ""
 
-#: ../../governance/using.rst:289
+#: ../../governance/using.rst:284
 msgid "Voting interface on DashCentral"
 msgstr ""
 
-#: ../../governance/using.rst:292
+#: ../../governance/using.rst:287
 msgid "Dash Masternode Tool (DMT)"
 msgstr ""
 
-#: ../../governance/using.rst:294
+#: ../../governance/using.rst:289
 msgid ""
 "If you started your masternode from a hardware wallet using `DMT "
 "<https://github.com/Bertrand256/dash-masternode-tool/releases>`_, you can"
@@ -584,15 +564,15 @@ msgid ""
 "tab to **Vote Yes**, **Vote No** or **Vote Abstain** directly from DMT."
 msgstr ""
 
-#: ../../governance/using.rst:305
+#: ../../governance/using.rst:300
 msgid "Voting interface in DMT"
 msgstr ""
 
-#: ../../governance/using.rst:308
+#: ../../governance/using.rst:305
 msgid "Dash Core wallet or masternode"
 msgstr ""
 
-#: ../../governance/using.rst:310
+#: ../../governance/using.rst:307
 msgid ""
 "If you started your masternode using the Dash Core Wallet (not "
 "recommended), you can vote manually from **Tools > Debug console**, or "
@@ -609,14 +589,14 @@ msgid ""
 " voting code for Dash Core Wallet is as follows::"
 msgstr ""
 
-#: ../../governance/using.rst:329
+#: ../../governance/using.rst:326
 msgid ""
 "Note that to vote from your masternode directly, you need to prefix the "
 "command with ``dash-cli``, which is usually found in the ``.dashcore`` "
 "folder. The command should be similar to the following::"
 msgstr ""
 
-#: ../../governance/using.rst:337
+#: ../../governance/using.rst:334
 msgid ""
 "Note this command will trigger a vote from all masternodes configured in "
 "``dash.conf``. If you have multiple masternodes each with its own .conf "
@@ -626,14 +606,31 @@ msgid ""
 "successfully**."
 msgstr ""
 
-#: ../../governance/using.rst:347
+#: ../../governance/using.rst:344
 msgid "Voting from the debug console in Dash Core Wallet"
 msgstr ""
 
-#: ../../governance/using.rst:349
+#: ../../governance/using.rst:346
 msgid ""
 "You can also view a list of proposals in JSON format from the console to "
 "copy and paste the proposal hash for voting as follows::"
+msgstr ""
+
+#: ../../governance/using.rst:354
+msgid "Delegating votes"
+msgstr ""
+
+#: ../../governance/using.rst:356
+msgid ""
+":ref:`DIP003 masternodes <dip3-changes>` feature a separate voting key, "
+"which makes it possible to delegate your vote to a representative. Simply"
+" enter a Dash address provided by the delegate when :ref:`registering "
+"your masternode <masternode-setup>`, or :ref:`update <dip3-update-"
+"registrar>` your masternode registration to delegate the vote of a "
+"running masternode. The wallet controlling the private key to this "
+"address will then cast votes on behalf of this masternode owner simply by"
+" following the :ref:`Dash Core voting procedure <dash-core-voting>` "
+"described above. No further configuration is required."
 msgstr ""
 
 #~ msgid ""
@@ -648,5 +645,101 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "`Dash Budget Proposal Vote Tracker <https://dashvotetracker.com/>`__"
+#~ msgstr ""
+
+#~ msgid "Masternode owners can cast for, against or abstain votes on proposals"
+#~ msgstr ""
+
+#~ msgid "Votes are cast by masternode owners"
+#~ msgstr ""
+
+#~ msgid "747720"
+#~ msgstr ""
+
+#~ msgid "Tue Oct 3 20:17:56 UTC 2017"
+#~ msgstr ""
+
+#~ msgid "764336"
+#~ msgstr ""
+
+#~ msgid "Fri Nov 3 03:22:58 UTC 2017"
+#~ msgstr ""
+
+#~ msgid "780952"
+#~ msgstr ""
+
+#~ msgid "Sun Dec 3 10:28:00 UTC 2017"
+#~ msgstr ""
+
+#~ msgid "797568"
+#~ msgstr ""
+
+#~ msgid "Tue Jan 2 17:33:02 UTC 2018"
+#~ msgstr ""
+
+#~ msgid "814184"
+#~ msgstr ""
+
+#~ msgid "Fri Feb 2 00:38:04 UTC 2018"
+#~ msgstr ""
+
+#~ msgid "830800"
+#~ msgstr ""
+
+#~ msgid "Sun Mar 4 07:43:06 UTC 2018"
+#~ msgstr ""
+
+#~ msgid "847416"
+#~ msgstr ""
+
+#~ msgid "Tue Apr 3 14:48:08 UTC 2018"
+#~ msgstr ""
+
+#~ msgid "864032"
+#~ msgstr ""
+
+#~ msgid "Thu May 3 21:53:10 UTC 2018"
+#~ msgstr ""
+
+#~ msgid "880648"
+#~ msgstr ""
+
+#~ msgid "Sun Jun 3 04:58:12 UTC 2018"
+#~ msgstr ""
+
+#~ msgid "897264"
+#~ msgstr ""
+
+#~ msgid "Tue Jul 3 12:03:14 UTC 2018"
+#~ msgstr ""
+
+#~ msgid "913880"
+#~ msgstr ""
+
+#~ msgid "Thu Aug 2 19:08:16 UTC 2018"
+#~ msgstr ""
+
+#~ msgid "930496"
+#~ msgstr ""
+
+#~ msgid "Sun Sep 2 02:13:18 UTC 2018"
+#~ msgstr ""
+
+#~ msgid "947112"
+#~ msgstr ""
+
+#~ msgid "Tue Oct 2 09:18:20 UTC 2018"
+#~ msgstr ""
+
+#~ msgid "963728"
+#~ msgstr ""
+
+#~ msgid "Thu Nov 1 16:23:22 UTC 2018"
+#~ msgstr ""
+
+#~ msgid "980344"
+#~ msgstr ""
+
+#~ msgid "Sat Dec 1 23:28:24 UTC 2018"
 #~ msgstr ""
 

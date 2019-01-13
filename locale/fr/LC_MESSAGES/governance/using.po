@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"POT-Creation-Date: 2019-01-11 06:48+0000\n"
 "PO-Revision-Date: 2018-05-07 04:43+0000\n"
 "Last-Translator: Daf Daf, 2018\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -67,10 +67,8 @@ msgstr ""
 " limités"
 
 #: ../../governance/using.rst:23
-msgid "Masternode owners can cast for, against or abstain votes on proposals"
+msgid "Each valid masternode can vote for, against or abstain on proposals"
 msgstr ""
-"Les opérateurs de masternode peuvent voter pour ou contre les propositions "
-"budgétaires, ou s'abstenir"
 
 #: ../../governance/using.rst:24
 msgid "Approved proposals become budgets"
@@ -111,23 +109,27 @@ msgid "Votes"
 msgstr "Votes"
 
 #: ../../governance/using.rst:38
-msgid "Votes are cast by masternode owners"
-msgstr "Les votes sont exprimés par les opérateurs de masternode"
+msgid "Votes are cast using the registered voting address"
+msgstr ""
 
 #: ../../governance/using.rst:39
+msgid "The voting address can be delegated to a third party"
+msgstr ""
+
+#: ../../governance/using.rst:40
 msgid "Votes can be changed at any time"
 msgstr "Les votes peuvent être modifiés à tout moment"
 
-#: ../../governance/using.rst:40
+#: ../../governance/using.rst:41
 msgid "Votes are counted every 16616 blocks (approx. 30.29 days)"
 msgstr ""
 "Les votes sont décomptés tous les 16616 blocs (tous les 30,29 jours environ)"
 
-#: ../../governance/using.rst:43
+#: ../../governance/using.rst:44
 msgid "Budgets"
 msgstr "Enveloppes budgétaires"
 
-#: ../../governance/using.rst:45
+#: ../../governance/using.rst:46
 msgid ""
 "Budgets are proposals which receive a net total of yes votes equal to or "
 "greater than 10% of the total possible votes (for example over 448 out of "
@@ -137,7 +139,7 @@ msgstr ""
 "de votes \"oui\" égal ou supérieur à 10% de tous les votes possibles (par "
 "exemple, 448 sur 4480)"
 
-#: ../../governance/using.rst:48
+#: ../../governance/using.rst:49
 msgid ""
 "Budgets can be nullified at any time if vote totals (cast or re-cast) fall "
 "below the approval threshold"
@@ -146,7 +148,7 @@ msgstr ""
 "des votes (exprimés ou ré-exprimés) tombe sous le seuil minimal "
 "d'approbation"
 
-#: ../../governance/using.rst:50
+#: ../../governance/using.rst:51
 msgid ""
 "Budgets are processed (paid) in order of yes minus no votes. More popular "
 "budgets get payment priority."
@@ -155,7 +157,7 @@ msgstr ""
 "votes \"oui\" soustrait du nombre de votes \"non\". Les enveloppes les plus "
 "populaires sont prioritaires pour le paiement."
 
-#: ../../governance/using.rst:52
+#: ../../governance/using.rst:53
 msgid ""
 "Approximately 6176 dash (in 2018) are available for each budget cycle, "
 "decreasing by 7.14% every 210240 blocks (approx. 383.25 days)."
@@ -164,21 +166,21 @@ msgstr ""
 "avec une diminution de 7,14% tous les 210240 blocs (soit environ tous les "
 "383,25 jours)."
 
-#: ../../governance/using.rst:56
+#: ../../governance/using.rst:57
 msgid "Object structure"
 msgstr "Structure d'objet"
 
-#: ../../governance/using.rst:58
+#: ../../governance/using.rst:59
 msgid "The following information is required to create a proposal:"
 msgstr ""
 "Les informations suivantes sont nécessaires pour créer une proposition "
 "budgétaire :"
 
-#: ../../governance/using.rst:60
+#: ../../governance/using.rst:61
 msgid "proposal-name: a unique label, 20 characters or less"
 msgstr "proposal-name : nom de la proposition, unique, 20 caractères ou moins"
 
-#: ../../governance/using.rst:61
+#: ../../governance/using.rst:62
 msgid ""
 "url: a proposer-created webpage or forum post containing detailed proposal "
 "information"
@@ -186,39 +188,39 @@ msgstr ""
 "url : adresse web d'une page créée par le proposeur ou d'un billet de forum "
 "contenant des informations détaillées sur la proposition budgétaire"
 
-#: ../../governance/using.rst:63
+#: ../../governance/using.rst:64
 msgid "payment-count: how many cycles the proposal is requesting payment"
 msgstr ""
 "payment-count : nombre de cycles pendant lequel la proposition budgétaire "
 "sollicite un paiement"
 
-#: ../../governance/using.rst:64
+#: ../../governance/using.rst:65
 msgid "block-start: the requested start of proposal payments"
 msgstr ""
 "block-start : début sollicité pour les paiements de la proposition "
 "budgétaire"
 
-#: ../../governance/using.rst:65
+#: ../../governance/using.rst:66
 msgid "dash-address: the address to receive proposal payments"
 msgstr ""
 "dash-address : l'adresse Dash où seront versés les paiements de la "
 "proposition budgétaire"
 
-#: ../../governance/using.rst:66
+#: ../../governance/using.rst:67
 msgid "monthly-payment-dash: the requested payment amount"
 msgstr "monthly-payment-dash : le montant mensuel du paiement sollicité"
 
-#: ../../governance/using.rst:69
+#: ../../governance/using.rst:70
 msgid "Persistence"
 msgstr "Durée de vie"
 
-#: ../../governance/using.rst:71
+#: ../../governance/using.rst:72
 msgid "Proposals become active one day after submission"
 msgstr ""
 "Les propositions budgétaires deviennent actives un jour après leur "
 "soumission"
 
-#: ../../governance/using.rst:72
+#: ../../governance/using.rst:73
 msgid ""
 "Proposals will remain visible on the network until they are either "
 "disapproved or the proposal's last payment-cycle is reached"
@@ -227,7 +229,7 @@ msgstr ""
 "qu'elles soient désapprouvées, ou bien à la fin du dernier cycle de la "
 "proposition"
 
-#: ../../governance/using.rst:74
+#: ../../governance/using.rst:75
 msgid ""
 "Approval occurs when yes votes minus no votes equals 10% or more of the "
 "total available votes."
@@ -235,7 +237,7 @@ msgstr ""
 "L'approbation a lieu lorsque le nombre de votes \"oui\" moins celui de votes"
 " \"non\" est égal à 10% ou plus du nombre total de votes possibles."
 
-#: ../../governance/using.rst:76
+#: ../../governance/using.rst:77
 msgid ""
 "Disapproval occurs when no votes minus yes votes equals 10% or more of the "
 "total available votes."
@@ -243,7 +245,7 @@ msgstr ""
 "La désapprobation a lieu lorsque le nombre de vites \"non\" moins celui de "
 "votes \"oui\" est égal à 10% ou plus du nombre total de votes possibles."
 
-#: ../../governance/using.rst:78
+#: ../../governance/using.rst:79
 msgid ""
 "The total available votes is the count of online and responding masternodes "
 "and can be seen by running the command ``masternode count`` in the Dash Core"
@@ -256,11 +258,11 @@ msgstr ""
 "nombre total de masternodes peut être consulté `ici "
 "<http://178.254.23.111/~pub/masternode_count.png>`__"
 
-#: ../../governance/using.rst:85
+#: ../../governance/using.rst:86
 msgid "Templates"
 msgstr "Modèles"
 
-#: ../../governance/using.rst:87
+#: ../../governance/using.rst:88
 msgid ""
 "The following two Microsoft Word templates are available from Dash Core "
 "Group to help facilitate standardized proposal submission and updates. Usage"
@@ -271,7 +273,7 @@ msgstr ""
 "propositions budgétaires standardisées. Son utilisation est recommandée mais"
 " n'est pas obligatoire."
 
-#: ../../governance/using.rst:91
+#: ../../governance/using.rst:92
 msgid ""
 "`Project Proposal Template "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Proposal%20Template%20v1.0.docx>`_"
@@ -279,7 +281,7 @@ msgstr ""
 "`Modèle de projet de proposition budgétaire "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Proposal%20Template%20v1.0.docx>`_"
 
-#: ../../governance/using.rst:92
+#: ../../governance/using.rst:93
 msgid ""
 "`Project Status Update Template "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Status%20Update%20Template%20v1.0.docx>`_"
@@ -287,11 +289,11 @@ msgstr ""
 "`Modèle de mise à jour de projet "
 "<https://github.com/dashpay/docs/raw/master/binary/Dash%20Project%20Status%20Update%20Template%20v1.0.docx>`_"
 
-#: ../../governance/using.rst:97
+#: ../../governance/using.rst:98
 msgid "Budget cycles"
 msgstr "Cycles budgétaires"
 
-#: ../../governance/using.rst:99
+#: ../../governance/using.rst:100
 msgid ""
 "When preparing a proposal, be aware of when the next cycle will occur and "
 "plan accordingly. It is recommended to choose your proposal payment start "
@@ -307,143 +309,119 @@ msgstr ""
 "noter que les votes ne seront plus décomptés 1662 blocs (environ 3 jours) "
 "avant le \"superbloc\"."
 
-#: ../../governance/using.rst:107
+#: ../../governance/using.rst:108
 msgid "Block height"
 msgstr "Hauteur de bloc"
 
-#: ../../governance/using.rst:107
+#: ../../governance/using.rst:108
 msgid "Approximate date"
 msgstr "Date approximative"
 
-#: ../../governance/using.rst:109
-msgid "747720"
-msgstr "747720"
-
-#: ../../governance/using.rst:109
-msgid "Tue Oct 3 20:17:56 UTC 2017"
-msgstr "Mar Oct 3 20:17:56 UTC 2017"
-
-#: ../../governance/using.rst:111
-msgid "764336"
-msgstr "764336"
-
-#: ../../governance/using.rst:111
-msgid "Fri Nov 3 03:22:58 UTC 2017"
-msgstr "Ven Nov 3 03:22:58 UTC 2017"
-
-#: ../../governance/using.rst:113
-msgid "780952"
-msgstr "780952"
-
-#: ../../governance/using.rst:113
-msgid "Sun Dec 3 10:28:00 UTC 2017"
-msgstr "Dim Dec 3 10:28:00 UTC 2017"
-
-#: ../../governance/using.rst:115
-msgid "797568"
-msgstr "797568"
-
-#: ../../governance/using.rst:115
-msgid "Tue Jan 2 17:33:02 UTC 2018"
-msgstr "Mar Jan 2 17:33:02 UTC 2018"
-
-#: ../../governance/using.rst:117
-msgid "814184"
-msgstr "814184"
-
-#: ../../governance/using.rst:117
-msgid "Fri Feb 2 00:38:04 UTC 2018"
-msgstr "Ven Fév 2 00:38:04 UTC 2018"
-
-#: ../../governance/using.rst:119
-msgid "830800"
-msgstr "830800"
-
-#: ../../governance/using.rst:119
-msgid "Sun Mar 4 07:43:06 UTC 2018"
-msgstr "Dim Mar 4 07:43:06 UTC 2018"
-
-#: ../../governance/using.rst:121
-msgid "847416"
-msgstr "847416"
-
-#: ../../governance/using.rst:121
-msgid "Tue Apr 3 14:48:08 UTC 2018"
-msgstr "Mar Avr 3 14:48:08 UTC 2018"
-
-#: ../../governance/using.rst:123
-msgid "864032"
-msgstr "864032"
-
-#: ../../governance/using.rst:123
-msgid "Thu May 3 21:53:10 UTC 2018"
-msgstr "Jeu Mai 3 21:53:10 UTC 2018"
-
-#: ../../governance/using.rst:125
-msgid "880648"
-msgstr "880648"
-
-#: ../../governance/using.rst:125
-msgid "Sun Jun 3 04:58:12 UTC 2018"
-msgstr "Dim Juin 3 04:58:12 UTC 2018"
-
-#: ../../governance/using.rst:127
-msgid "897264"
-msgstr "897264"
-
-#: ../../governance/using.rst:127
-msgid "Tue Jul 3 12:03:14 UTC 2018"
-msgstr "Mar Juil 3 12:03:14 UTC 2018"
-
-#: ../../governance/using.rst:129
-msgid "913880"
-msgstr "913880"
-
-#: ../../governance/using.rst:129
-msgid "Thu Aug 2 19:08:16 UTC 2018"
-msgstr "Jeu Août 2 19:08:16 UTC 2018"
-
-#: ../../governance/using.rst:131
-msgid "930496"
-msgstr "930496"
-
-#: ../../governance/using.rst:131
-msgid "Sun Sep 2 02:13:18 UTC 2018"
-msgstr "Dim Sep 2 02:13:18 UTC 2018"
-
-#: ../../governance/using.rst:133
-msgid "947112"
-msgstr "947112"
-
-#: ../../governance/using.rst:133
-msgid "Tue Oct 2 09:18:20 UTC 2018"
-msgstr "Mar Oct 2 09:18:20 UTC 2018"
-
-#: ../../governance/using.rst:135
-msgid "963728"
-msgstr "963728"
-
-#: ../../governance/using.rst:135
-msgid "Thu Nov 1 16:23:22 UTC 2018"
-msgstr "Jeu Nov 1 16:23:22 UTC 2018"
-
-#: ../../governance/using.rst:137
-msgid "980344"
-msgstr "980344"
-
-#: ../../governance/using.rst:137
-msgid "Sat Dec 1 23:28:24 UTC 2018"
-msgstr "Sam Dec 1 23:28:24 UTC 2018"
-
-#: ../../governance/using.rst:139
+#: ../../governance/using.rst:110
 msgid "996960"
 msgstr "996960"
 
-#: ../../governance/using.rst:139
+#: ../../governance/using.rst:110
 msgid "Tue Jan 1 06:33:26 UTC 2019"
 msgstr "Mar Jan 1 06:33:26 UTC 2019"
 
-#: ../../governance/using.rst:142
+#: ../../governance/using.rst:112
+msgid "1013576"
+msgstr ""
+
+#: ../../governance/using.rst:112
+msgid "Thu Jan 31 13:38:28 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:114
+msgid "1030192"
+msgstr ""
+
+#: ../../governance/using.rst:114
+msgid "Sat Mar 2 20:43:30 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:116
+msgid "1046808"
+msgstr ""
+
+#: ../../governance/using.rst:116
+msgid "Tue Apr 2 03:48:32 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:118
+msgid "1063424"
+msgstr ""
+
+#: ../../governance/using.rst:118
+msgid "Thu May 2 10:53:34 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:120
+msgid "1080040"
+msgstr ""
+
+#: ../../governance/using.rst:120
+msgid "Sat Jun 1 17:58:36 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:122
+msgid "1096656"
+msgstr ""
+
+#: ../../governance/using.rst:122
+msgid "Tue Jul 2 01:03:38 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:124
+msgid "1113272"
+msgstr ""
+
+#: ../../governance/using.rst:124
+msgid "Thu Aug 1 08:08:40 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:126
+msgid "1129888"
+msgstr ""
+
+#: ../../governance/using.rst:126
+msgid "Sat Aug 31 15:13:42 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:128
+msgid "1146504"
+msgstr ""
+
+#: ../../governance/using.rst:128
+msgid "Mon Sep 30 22:18:44 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:130
+msgid "1163120"
+msgstr ""
+
+#: ../../governance/using.rst:130
+msgid "Thu Oct 31 05:23:46 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:132
+msgid "1179736"
+msgstr ""
+
+#: ../../governance/using.rst:132
+msgid "Sat Nov 30 12:28:48 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:134
+msgid "1196352"
+msgstr ""
+
+#: ../../governance/using.rst:134
+msgid "Mon Dec 30 19:33:50 UTC 2019"
+msgstr ""
+
+#: ../../governance/using.rst:137
 msgid ""
 "You can view the source code for this calculation at this `GitHub gist "
 "<https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_"
@@ -451,11 +429,11 @@ msgstr ""
 "Le code source de ce calcul est disponible sur `GitHub "
 "<https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_"
 
-#: ../../governance/using.rst:148
+#: ../../governance/using.rst:143
 msgid "Creating proposals"
 msgstr "Création de propositions budgétaires"
 
-#: ../../governance/using.rst:150
+#: ../../governance/using.rst:145
 msgid ""
 "Once you have prepared the text of your proposal and set up a website or "
 "forum post, it is time to submit your proposal to the blockchain for voting."
@@ -470,15 +448,15 @@ msgstr ""
 "console du portefeuille logiciel Dash Core, mais plusieurs utilitaires avec "
 "une interface utilisateur ont été conçus pour simplifier cette procédure."
 
-#: ../../governance/using.rst:157
+#: ../../governance/using.rst:152
 msgid "Dash Budget Proposal Generator"
 msgstr "Générateur de proposition budgétaire Dash"
 
-#: ../../governance/using.rst:159
+#: ../../governance/using.rst:154
 msgid "https://proposal.dash.org"
 msgstr "https://proposal.dash.org"
 
-#: ../../governance/using.rst:161
+#: ../../governance/using.rst:156
 msgid ""
 "The `Dash Budget Proposal Generator <https://proposal.dash.org>`__ supports "
 "creating budget proposals on both mainnet and testnet. In the first step, "
@@ -510,13 +488,13 @@ msgstr ""
 "projet. Veuillez noter que le montant du paiement est fixé une fois pour "
 "toutes, et qu'il ne peut plus être modifié après soumission à la blockchain."
 
-#: ../../governance/using.rst:182
+#: ../../governance/using.rst:177
 msgid "Steps 1 & 2: Creating your proposal and preparing the command"
 msgstr ""
 "Étapes 1 & 2 : Création de votre proposition budgétaire et préparation de la"
 " commande"
 
-#: ../../governance/using.rst:184
+#: ../../governance/using.rst:179
 msgid ""
 "Next, the proposal generator will provide you with a command to run from the"
 " console of your Dash Core wallet to prepare your budget proposal governance"
@@ -539,7 +517,7 @@ msgstr ""
 "portefeuille logiciel. Beaucoup de propositions budgétaires sollicitent le "
 "remboursement des frais de 5 dashs."
 
-#: ../../governance/using.rst:194
+#: ../../governance/using.rst:189
 msgid ""
 "First unlock your wallet by clicking **Settings > Unlock wallet**, then open"
 " the console by clicking **Tools > Debug console** and paste the generated "
@@ -554,7 +532,7 @@ msgstr ""
 "de réponse du générateur de proposition. Dès lors, le système affichera une "
 "barre de progression, dans l'attente de 6 confirmations, comme suit :"
 
-#: ../../governance/using.rst:207
+#: ../../governance/using.rst:202
 msgid ""
 "Step 3: Creating the proposal transaction and waiting for 6 confirmations of"
 " the transaction ID"
@@ -562,7 +540,7 @@ msgstr ""
 "Étape 3 : Création de la transaction de proposition budgétaire et attente "
 "des 6 confirmations de l'identifiant de transaction"
 
-#: ../../governance/using.rst:210
+#: ../../governance/using.rst:205
 msgid ""
 "Once 6 block confirmations exist, another command will appear to submit the "
 "prepared governance object to the network for voting. Copy and paste this "
@@ -573,11 +551,11 @@ msgstr ""
 "du vote. Copiez-collez cette commande, et votre identifiant d'objet de "
 "gouvernance apparaîtra comme suit :"
 
-#: ../../governance/using.rst:220
+#: ../../governance/using.rst:215
 msgid "Step 4: Submitting the governance object to the network"
 msgstr "Étape 4 : Soumission de l'objet de gouvernance au réseau"
 
-#: ../../governance/using.rst:222
+#: ../../governance/using.rst:217
 msgid ""
 "You can use this ID to track voting on the proposal until the budget closes "
 "and you receive your payout. You can also submit the ID to DashCentral to "
@@ -591,15 +569,15 @@ msgstr ""
 " simplifié pour les masternodes, au moyen des services de vote de "
 "DashCentral."
 
-#: ../../governance/using.rst:228
+#: ../../governance/using.rst:223
 msgid "DashCentral Proposal Generator"
 msgstr "Générateur de proposition budgétaire de DashCentral"
 
-#: ../../governance/using.rst:230
+#: ../../governance/using.rst:225
 msgid "https://www.dashcentral.org/budget/create"
 msgstr "https://www.dashcentral.org/budget/create"
 
-#: ../../governance/using.rst:232
+#: ../../governance/using.rst:227
 msgid ""
 "DashCentral also includes a tool to create budget proposals, or claim "
 "existing proposals so you can add a description on DashCentral and begin "
@@ -614,11 +592,11 @@ msgstr ""
 "décrite ci-dessus, et la documentation est disponible `ici "
 "<https://www.dashcentral.org/about/contact>`_."
 
-#: ../../governance/using.rst:240
+#: ../../governance/using.rst:235
 msgid "Voting on proposals"
 msgstr "Voter sur les propositions budgétaires"
 
-#: ../../governance/using.rst:242
+#: ../../governance/using.rst:237
 msgid ""
 "**You must vote at least three days before the superblock is created or your"
 " vote will not be counted. The exact deadline is 1662 blocks before the "
@@ -628,7 +606,7 @@ msgstr ""
 "sinon votre vote ne sera pas décompté. La limite précise est 1662 blocs "
 "avant le \"superbloc\".**"
 
-#: ../../governance/using.rst:246
+#: ../../governance/using.rst:241
 msgid ""
 "Note that if you do not operate a masternode, you may still be able to vote "
 "on DashBoost proposals. See https://www.dashboost.org for more information."
@@ -637,7 +615,7 @@ msgstr ""
 "voter sur des propositions DashBoost. Pour en savoir plus, voir "
 "https://www.dashboost.org ."
 
-#: ../../governance/using.rst:250
+#: ../../governance/using.rst:245
 msgid ""
 "Voting on DGBB proposals is an important part of operating a masternode. "
 "Since masternodes are heavily invested in Dash, they are expected to "
@@ -657,20 +635,20 @@ msgstr ""
 "outils suivants sont disponibles pour visualiser et gérer les propositions "
 "budgétaires et le vote :"
 
-#: ../../governance/using.rst:258
+#: ../../governance/using.rst:253
 msgid "`DashCentral <https://www.dashcentral.org/budget>`__"
 msgstr "`DashCentral <https://www.dashcentral.org/budget>`__"
 
-#: ../../governance/using.rst:259
+#: ../../governance/using.rst:254
 msgid "`Dash Nexus <https://dashnexus.org>`__"
 msgstr "`Dash Nexus <https://dashnexus.org>`__"
 
-#: ../../governance/using.rst:260
+#: ../../governance/using.rst:255
 msgid "`Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`__"
 msgstr ""
 "`Dash Ninja - Gouvernance <https://www.dashninja.pl/governance.html>`__"
 
-#: ../../governance/using.rst:261
+#: ../../governance/using.rst:256
 msgid ""
 "`Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-"
 "masternode-tool/releases>`__"
@@ -678,7 +656,7 @@ msgstr ""
 "`Dash Masternode Tool - Propositions budgétaires "
 "<https://github.com/Bertrand256/dash-masternode-tool/releases>`__"
 
-#: ../../governance/using.rst:263
+#: ../../governance/using.rst:258
 msgid ""
 "For information on how to create a proposal, see :ref:`here <creating-"
 "proposals>`."
@@ -686,11 +664,11 @@ msgstr ""
 "Pour savoir comment créer une proposition budgétaire, voir :ref:`ici "
 "<creating-proposals>`."
 
-#: ../../governance/using.rst:267
+#: ../../governance/using.rst:262
 msgid "DashCentral"
 msgstr "DashCentral"
 
-#: ../../governance/using.rst:269
+#: ../../governance/using.rst:264
 msgid ""
 "Many masternode operators store their password-protected masternode private "
 "key on `DashCentral <https://www.dashcentral.org>`__ to enable simple voting"
@@ -718,7 +696,7 @@ msgstr ""
 "en vue de voter, donc le risque que le webmestre du site vote à votre place "
 "est très faible."
 
-#: ../../governance/using.rst:281
+#: ../../governance/using.rst:276
 msgid ""
 "When you are ready to vote, go to the `budget proposals page "
 "<https://www.dashcentral.org/budget>`_. Simply click to view the proposals, "
@@ -729,15 +707,15 @@ msgstr ""
 "afficher les propositions, puis cliquez selon votre choix sur **Voter OUI**,"
 " **Voter ABSTENTION** ou **Voter NON**."
 
-#: ../../governance/using.rst:289
+#: ../../governance/using.rst:284
 msgid "Voting interface on DashCentral"
 msgstr "Interface de vote sur DashCentral"
 
-#: ../../governance/using.rst:292
+#: ../../governance/using.rst:287
 msgid "Dash Masternode Tool (DMT)"
 msgstr "DashMasternodeTool (DMT)"
 
-#: ../../governance/using.rst:294
+#: ../../governance/using.rst:289
 msgid ""
 "If you started your masternode from a hardware wallet using `DMT "
 "<https://github.com/Bertrand256/dash-masternode-tool/releases>`_, you can "
@@ -757,15 +735,15 @@ msgstr ""
 "fenêtre. Allez sur l'onglet **Vote** pour **Voter Oui**, **Voter Non** ou "
 "**Voter Abstention** directement depuis DMT."
 
-#: ../../governance/using.rst:305
+#: ../../governance/using.rst:300
 msgid "Voting interface in DMT"
 msgstr "Interface de vote dans DMT"
 
-#: ../../governance/using.rst:308
+#: ../../governance/using.rst:305
 msgid "Dash Core wallet or masternode"
 msgstr "Portefeuille logiciel Dash Core ou masternode"
 
-#: ../../governance/using.rst:310
+#: ../../governance/using.rst:307
 msgid ""
 "If you started your masternode using the Dash Core Wallet (not recommended),"
 " you can vote manually from **Tools > Debug console**, or directly from your"
@@ -797,7 +775,7 @@ msgstr ""
 "<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__). Le "
 "code de vote pour le portefeuille logiciel Dash Core est comme suit ::"
 
-#: ../../governance/using.rst:329
+#: ../../governance/using.rst:326
 msgid ""
 "Note that to vote from your masternode directly, you need to prefix the "
 "command with ``dash-cli``, which is usually found in the ``.dashcore`` "
@@ -808,7 +786,7 @@ msgstr ""
 "général dans le répertoire ``.dashcore``. La commande devrait ressembler à "
 "cela ::"
 
-#: ../../governance/using.rst:337
+#: ../../governance/using.rst:334
 msgid ""
 "Note this command will trigger a vote from all masternodes configured in "
 "``dash.conf``. If you have multiple masternodes each with its own .conf "
@@ -824,11 +802,11 @@ msgstr ""
 "many`` en ``vote``. Si votre vote s'est bien passé, vous devriez voir un "
 "message de confirmation disant **Vote réussi**."
 
-#: ../../governance/using.rst:347
+#: ../../governance/using.rst:344
 msgid "Voting from the debug console in Dash Core Wallet"
 msgstr "Vote depuis la console de débogage du portefeuille logiciel Dash Core"
 
-#: ../../governance/using.rst:349
+#: ../../governance/using.rst:346
 msgid ""
 "You can also view a list of proposals in JSON format from the console to "
 "copy and paste the proposal hash for voting as follows::"
@@ -836,3 +814,20 @@ msgstr ""
 "Vous pouvez aussi afficher une liste des propositions budgétaires au format "
 "JSON depuis la console, afin de copier-coller l'empreinte de la proposition "
 "pour voter, comme suit ::"
+
+#: ../../governance/using.rst:354
+msgid "Delegating votes"
+msgstr ""
+
+#: ../../governance/using.rst:356
+msgid ""
+":ref:`DIP003 masternodes <dip3-changes>` feature a separate voting key, "
+"which makes it possible to delegate your vote to a representative. Simply "
+"enter a Dash address provided by the delegate when :ref:`registering your "
+"masternode <masternode-setup>`, or :ref:`update <dip3-update-registrar>` "
+"your masternode registration to delegate the vote of a running masternode. "
+"The wallet controlling the private key to this address will then cast votes "
+"on behalf of this masternode owner simply by following the :ref:`Dash Core "
+"voting procedure <dash-core-voting>` described above. No further "
+"configuration is required."
+msgstr ""

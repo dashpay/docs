@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-03 08:53+0000\n"
+"POT-Creation-Date: 2019-01-11 06:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -157,7 +157,7 @@ msgid ""
 "future."
 msgstr ""
 
-#: ../../introduction/features.rst:82 ../../introduction/features.rst:512
+#: ../../introduction/features.rst:82 ../../introduction/features.rst:518
 msgid "PrivateSend"
 msgstr ""
 
@@ -184,8 +184,8 @@ msgstr ""
 #: ../../introduction/features.rst:96
 msgid ""
 "PrivateSend begins by breaking your transaction inputs down into standard"
-" denominations. These denominations are 0.01 Dash, 0.1 DASH, 1 DASH and "
-"10 DASH -- much like the paper money you use every day."
+" denominations. These denominations are 0.001, 0.01, 0.1, 1 and 10 DASH "
+"-- much like the paper money you use every day."
 msgstr ""
 
 #: ../../introduction/features.rst:99
@@ -212,7 +212,7 @@ msgid ""
 "process a number of times with each denomination. Each time the process "
 "is completed, it's called a \"round\". Each round of PrivateSend makes it"
 " exponentially more difficult to determine where your funds originated. "
-"The user may choose between 2-8 rounds of mixing."
+"The user may choose between 1-16 rounds of mixing."
 msgstr ""
 
 #: ../../introduction/features.rst:116
@@ -239,7 +239,7 @@ msgid ""
 "PrivateSend disabled."
 msgstr ""
 
-#: ../../introduction/features.rst:135 ../../introduction/features.rst:510
+#: ../../introduction/features.rst:135 ../../introduction/features.rst:516
 msgid "InstantSend"
 msgstr ""
 
@@ -694,7 +694,7 @@ msgid ""
 "include any transaction in the blocks they produce, once blocks are full,"
 " a voluntary transaction fee can be included as an incentive to the miner"
 " to process the transaction. Most wallets include a small fee by default,"
-" although many miners will process transactions even if no fee is "
+" although some miners will process transactions even if no fee is "
 "included."
 msgstr ""
 
@@ -705,84 +705,93 @@ msgid ""
 "from 1MB to 2MB to promote continued growth of low-cost transactions even"
 " as the cost of Dash rises. Dash also supports :ref:`instantsend` and "
 ":ref:`privatesend` transactions, which operate on a different and "
-"mandatory fee schedule. The fee schedule for Dash 12.2.x as of December "
-"2017 is as follows:"
+"mandatory fee schedule. Dash 0.13.0.0 introduced InstantSend autolocks, "
+"which causes masternodes to automatically attempt to lock any transaction"
+" with 4 or fewer inputs — which are referred to as “simple” transactions "
+"— and removes the additional fee for InstantSend. The fee schedule for "
+"Dash 0.13.x as of December 2018 is as follows:"
 msgstr ""
 
-#: ../../introduction/features.rst:506
+#: ../../introduction/features.rst:510
 msgid "Transaction type"
 msgstr ""
 
-#: ../../introduction/features.rst:506
+#: ../../introduction/features.rst:510
 msgid "Recommended fee"
 msgstr ""
 
-#: ../../introduction/features.rst:506
+#: ../../introduction/features.rst:510
 msgid "Per unit"
 msgstr ""
 
-#: ../../introduction/features.rst:508
+#: ../../introduction/features.rst:512
 msgid "Standard transaction"
 msgstr ""
 
-#: ../../introduction/features.rst:508
+#: ../../introduction/features.rst:512 ../../introduction/features.rst:514
 msgid ".00001 DASH"
 msgstr ""
 
-#: ../../introduction/features.rst:508
+#: ../../introduction/features.rst:512 ../../introduction/features.rst:514
 msgid "Per kB of transaction data"
 msgstr ""
 
-#: ../../introduction/features.rst:510
+#: ../../introduction/features.rst:514
+msgid "InstantSend autolock"
+msgstr ""
+
+#: ../../introduction/features.rst:516
 msgid ".0001 DASH"
 msgstr ""
 
-#: ../../introduction/features.rst:510
+#: ../../introduction/features.rst:516
 msgid "Per transaction input"
 msgstr ""
 
-#: ../../introduction/features.rst:512
+#: ../../introduction/features.rst:518
 msgid ".001 DASH"
 msgstr ""
 
-#: ../../introduction/features.rst:512
+#: ../../introduction/features.rst:518
 msgid "Per 10 rounds of mixing (average)"
 msgstr ""
 
-#: ../../introduction/features.rst:515
+#: ../../introduction/features.rst:521
 msgid ""
 "As an example, a standard and relatively simple transaction on the Dash "
 "network with one input, one output and a possible change address "
 "typically fits in the range of 200 - 400 bytes. Assuming a price of "
-"US$800 per DASH, the fee falls in the range of $0.0015 - $0.0030, or well"
-" under half a cent. Processing the transaction using InstantSend at the "
-"same price would add $0.08 or eight cents to the transaction. These fees "
-"apply regardless of the Dash or dollar value of the transaction itself."
+"US$100 per DASH, the fee falls in the range of $0.0002 - $0.0004, or "
+"1/50th of a cent. Processing a simple transaction using InstantSend at "
+"the same price is free of charge, while more complex InstantSend "
+"transactions may cost around 1-2 cents per transaction, depending on the "
+"number of inputs. These fees apply regardless of the Dash or dollar value"
+" of the transaction itself."
 msgstr ""
 
-#: ../../introduction/features.rst:524
+#: ../../introduction/features.rst:531
 msgid ""
-"PrivateSend works by creating denominations of 10, 1, 0.1 and 0.01 DASH "
-"and then mixing these denominations with other users. Creation of the "
-"denominations is charged at the default fee for a standard transaction. "
-"Mixing is free, but to prevent spam attacks, an average of one in ten "
-"mixing transactions are charged a fee of 0.001 DASH. Spending inputs "
-"mixed using PrivateSend incurs the usual standard or InstantSend fees, "
-"but to avoid creating a potentially identifiable change address, the fee "
-"is always rounded up to the lowest possible denomination. This is "
-"typically .01 DASH, so it is important to deduct the fee from the amount "
-"being sent if possible to minimise fees. Combining InstantSend and "
-"PrivateSend may be expensive due to this requirement and the fact that a "
-"PrivateSend transaction may require several inputs, while InstantSend "
+"PrivateSend works by creating denominations of 10, 1, 0.1, 0.01 and 0.001"
+" DASH and then mixing these denominations with other users. Creation of "
+"the denominations is charged at the default fee for a standard "
+"transaction. Mixing is free, but to prevent spam attacks, an average of "
+"one in ten mixing transactions are charged a fee of 0.0001 DASH. Spending"
+" inputs mixed using PrivateSend incurs the usual standard or InstantSend "
+"fees, but to avoid creating a potentially identifiable change address, "
+"the fee is always rounded up to the lowest possible denomination. This is"
+" typically .001 DASH, so it is important to deduct the fee from the "
+"amount being sent if possible to minimise fees. Combining InstantSend and"
+" PrivateSend may be expensive due to this requirement and the fact that a"
+" PrivateSend transaction may require several inputs, while InstantSend "
 "charges a fee of 0.0001 DASH per input. Always check your fees before "
 "sending a transaction."
 msgstr ""
 
-#: ../../introduction/features.rst:543
+#: ../../introduction/features.rst:550
 msgid "Evolution"
 msgstr ""
 
-#: ../../introduction/features.rst:545
+#: ../../introduction/features.rst:552
 msgid ""
 "`Dash Evolution <https://www.dash.org/evolution/>`_ is the code name for "
 "a decentralized currency platform built on Dash blockchain technology. "
@@ -793,7 +802,7 @@ msgid ""
 " file system."
 msgstr ""
 
-#: ../../introduction/features.rst:553
+#: ../../introduction/features.rst:560
 msgid ""
 "Dash Evolution will be released in stages. Dash Core releases 12.1 "
 "through to 12.4 will lay the groundwork for the decentralized features "
@@ -804,88 +813,88 @@ msgid ""
 "with most basic functionality, and a first stable release in summer 2018."
 msgstr ""
 
-#: ../../introduction/features.rst:562
+#: ../../introduction/features.rst:569
 msgid ""
 "Included below is our current work on Evolution, that adds many "
 "components such as:"
 msgstr ""
 
-#: ../../introduction/features.rst:565
+#: ../../introduction/features.rst:572
 msgid ""
 "**DashDrive:** A decentralized shared file system for user data that "
 "lives on the second tier network"
 msgstr ""
 
-#: ../../introduction/features.rst:567
+#: ../../introduction/features.rst:574
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the"
 " network securely"
 msgstr ""
 
-#: ../../introduction/features.rst:569
+#: ../../introduction/features.rst:576
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients "
 "connected to the network via DAPI and run on various platforms"
 msgstr ""
 
-#: ../../introduction/features.rst:571
+#: ../../introduction/features.rst:578
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
 msgstr ""
 
-#: ../../introduction/features.rst:573
+#: ../../introduction/features.rst:580
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
 msgstr ""
 
-#: ../../introduction/features.rst:575
+#: ../../introduction/features.rst:582
 msgid ""
 "**Governance:** The second tier is given voting power to govern the "
 "currency and chart the course the currency takes"
 msgstr ""
 
-#: ../../introduction/features.rst:577
+#: ../../introduction/features.rst:584
 msgid ""
 "**Quorum Chain:** This feature introduces a permanent stable masternode "
 "list, which can be used to calculate past and present quorums"
 msgstr ""
 
-#: ../../introduction/features.rst:579
+#: ../../introduction/features.rst:586
 msgid ""
 "**Social Wallet:** We introduce a social wallet, which allows friends "
 "lists, grouping of users and shared multisig accounts."
 msgstr ""
 
-#: ../../introduction/features.rst:583
+#: ../../introduction/features.rst:590
 msgid "Evolution Previews"
 msgstr ""
 
-#: ../../introduction/features.rst:585
+#: ../../introduction/features.rst:592
 msgid ""
 "The following videos featuring Dash Founder Evan Duffield and Head of "
 "UI/UX Development Chuck Williams describe the development process and "
 "upcoming features of the Dash Evolution platform."
 msgstr ""
 
-#: ../../introduction/features.rst:589
+#: ../../introduction/features.rst:596
 msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
 msgstr ""
 
-#: ../../introduction/features.rst:597
+#: ../../introduction/features.rst:604
 msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr ""
 
-#: ../../introduction/features.rst:605
+#: ../../introduction/features.rst:612
 msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
 msgstr ""
 
-#: ../../introduction/features.rst:613
+#: ../../introduction/features.rst:620
 msgid "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr ""
 
-#: ../../introduction/features.rst:621
+#: ../../introduction/features.rst:628
 msgid "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""
 
@@ -1392,5 +1401,125 @@ msgstr ""
 #~ " on mining with X11 can be "
 #~ "found in the `Mining <mining>`_ section"
 #~ " of this documentation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "PrivateSend begins by breaking your "
+#~ "transaction inputs down into standard "
+#~ "denominations. These denominations are 0.01"
+#~ " Dash, 0.1 DASH, 1 DASH and 10"
+#~ " DASH -- much like the paper "
+#~ "money you use every day."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order to fully obscure your "
+#~ "funds, your wallet must repeat this "
+#~ "process a number of times with "
+#~ "each denomination. Each time the process"
+#~ " is completed, it's called a "
+#~ "\"round\". Each round of PrivateSend "
+#~ "makes it exponentially more difficult to"
+#~ " determine where your funds originated. "
+#~ "The user may choose between 2-8 "
+#~ "rounds of mixing."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Transactions on the Dash network are "
+#~ "recorded in blocks on the blockchain."
+#~ " The size of each transaction is "
+#~ "measured in bytes, but there is "
+#~ "not necessarily a correlation between "
+#~ "high value transactions and the number"
+#~ " of bytes required to process the "
+#~ "transaction. Instead, transaction size is "
+#~ "affected by how many input and "
+#~ "output addresses are involved, since "
+#~ "more data must be written in the"
+#~ " block to store this information. "
+#~ "Each new block is generated by a"
+#~ " miner, who is paid for completing"
+#~ " the work to generate the block "
+#~ "with a block reward. In order to"
+#~ " prevent the network from being "
+#~ "filled with spam transactions, the size"
+#~ " of each block is artificially "
+#~ "limited. As transaction volume increases, "
+#~ "the space in each block becomes a"
+#~ " scarce commodity. Because miners are "
+#~ "not obliged to include any transaction"
+#~ " in the blocks they produce, once "
+#~ "blocks are full, a voluntary transaction"
+#~ " fee can be included as an "
+#~ "incentive to the miner to process "
+#~ "the transaction. Most wallets include a"
+#~ " small fee by default, although many"
+#~ " miners will process transactions even "
+#~ "if no fee is included."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The release of Dash 0.12.2.0 and "
+#~ "activation of DIP0001 saw a simultaneous"
+#~ " reduction of fees by a factor "
+#~ "of 10, while the block size was"
+#~ " increased from 1MB to 2MB to "
+#~ "promote continued growth of low-cost "
+#~ "transactions even as the cost of "
+#~ "Dash rises. Dash also supports "
+#~ ":ref:`instantsend` and :ref:`privatesend` "
+#~ "transactions, which operate on a "
+#~ "different and mandatory fee schedule. "
+#~ "The fee schedule for Dash 12.2.x "
+#~ "as of December 2017 is as follows:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As an example, a standard and "
+#~ "relatively simple transaction on the "
+#~ "Dash network with one input, one "
+#~ "output and a possible change address "
+#~ "typically fits in the range of 200"
+#~ " - 400 bytes. Assuming a price "
+#~ "of US$800 per DASH, the fee falls"
+#~ " in the range of $0.0015 - "
+#~ "$0.0030, or well under half a "
+#~ "cent. Processing the transaction using "
+#~ "InstantSend at the same price would "
+#~ "add $0.08 or eight cents to the"
+#~ " transaction. These fees apply regardless"
+#~ " of the Dash or dollar value of"
+#~ " the transaction itself."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "PrivateSend works by creating denominations"
+#~ " of 10, 1, 0.1 and 0.01 DASH"
+#~ " and then mixing these denominations "
+#~ "with other users. Creation of the "
+#~ "denominations is charged at the default"
+#~ " fee for a standard transaction. "
+#~ "Mixing is free, but to prevent "
+#~ "spam attacks, an average of one in"
+#~ " ten mixing transactions are charged "
+#~ "a fee of 0.001 DASH. Spending "
+#~ "inputs mixed using PrivateSend incurs "
+#~ "the usual standard or InstantSend fees,"
+#~ " but to avoid creating a potentially"
+#~ " identifiable change address, the fee "
+#~ "is always rounded up to the lowest"
+#~ " possible denomination. This is typically"
+#~ " .01 DASH, so it is important "
+#~ "to deduct the fee from the amount"
+#~ " being sent if possible to minimise"
+#~ " fees. Combining InstantSend and "
+#~ "PrivateSend may be expensive due to "
+#~ "this requirement and the fact that "
+#~ "a PrivateSend transaction may require "
+#~ "several inputs, while InstantSend charges "
+#~ "a fee of 0.0001 DASH per input."
+#~ " Always check your fees before "
+#~ "sending a transaction."
 #~ msgstr ""
 

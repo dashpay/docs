@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-10 07:15+0000\n"
+"POT-Creation-Date: 2019-01-11 06:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,157 +40,26 @@ msgid ""
 "<https://github.com/dashpay/dash/releases>`_, and development builds "
 "using `Jenkins <https://jenkins.dash.org/blue/organizations/jenkins"
 "/dashpay-dash-gitian-nightly/activity/>`_, many users will also be "
-"interested in building Dash binaries for themselves. The following guides"
-" are available:"
-msgstr ""
-
-#: ../../developers/compiling.rst:18
-msgid ":ref:`Building on Linux <linux-build>`"
-msgstr ""
-
-#: ../../developers/compiling.rst:19
-msgid ":ref:`Building on macOS <macos-build>`"
-msgstr ""
-
-#: ../../developers/compiling.rst:20
-msgid ":ref:`Building on Windows <windows-build>`"
+"interested in building Dash binaries for themselves. This process has "
+"been greatly simplified with the release of Dash Core 0.13.0, and users "
+"who do not required deterministic builds can typically follow the "
+"`generic build notes <https://github.com/dashpay/dash/blob/develop/doc"
+"/build-generic.md>`__ available on GitHub to compile or cross-compile "
+"Dash for any platform."
 msgstr ""
 
 #: ../../developers/compiling.rst:21
-msgid ":ref:`Gitian deterministic builds <gitian-build>`"
-msgstr ""
-
-#: ../../developers/compiling.rst:23
 msgid ""
-"These guides describe how to build the current stable version. To build "
-"the latest version from the develop branch, replace the normal ``git "
-"clone`` command with the following command when pulling from GitHub::"
+"The instructions to build Dash Core 0.12.3 or older are available `here "
+"<https://docs.dash.org/en/0.12.3/developers/compiling.html>`__ on a "
+"previous version of this page."
 msgstr ""
 
-#: ../../developers/compiling.rst:32
-msgid "Linux"
-msgstr ""
-
-#: ../../developers/compiling.rst:34
-msgid ""
-"This guide describes how to build Dash Core wallet without the GUI from "
-"source under Ubuntu Linux. For a more detailed guide, see the `Unix Build"
-" Notes <https://github.com/dashpay/dash/blob/master/doc/build-"
-"unix.md>`__. The content on this page is intended to serve as a simple "
-"guide for general compilation of non-deterministic binary files from the "
-"stable source code. A standard installation of Ubuntu Linux 18.04 LTS "
-"will be used as an environment for the build. We assume you are running "
-"as a user with sudo permissions. First add the necessary extra repository"
-" and update all packages::"
-msgstr ""
-
-#: ../../developers/compiling.rst:48 ../../developers/compiling.rst:144
-msgid ""
-"Now install the dependencies as described in the installation "
-"documentation::"
-msgstr ""
-
-#: ../../developers/compiling.rst:54 ../../developers/compiling.rst:151
-msgid "Optionally install the Qt dependencies if you want to build the Dash GUI::"
-msgstr ""
-
-#: ../../developers/compiling.rst:59 ../../developers/compiling.rst:156
-msgid "Download the stable Dash repository::"
-msgstr ""
-
-#: ../../developers/compiling.rst:63 ../../developers/compiling.rst:168
-msgid "And build::"
-msgstr ""
-
-#: ../../developers/compiling.rst:71
-msgid "``/usr/local/bin`` now contains the compiled Dash binaries."
-msgstr ""
-
-#: ../../developers/compiling.rst:76
-msgid "macOS"
-msgstr ""
-
-#: ../../developers/compiling.rst:78
-msgid ""
-"This guide describes how to build Dash Core wallet from source under "
-"macOS. It is intended to serve as a simple guide for general compilation "
-"of non-deterministic binary files from the stable source code. For a more"
-" detailed guide, see the `macOS Build Notes "
-"<https://github.com/dashpay/dash/blob/master/doc/build-osx.md>`__. A "
-"standard installation of macOS 10.13 High Sierra will be used as an "
-"environment for the build. We assume you are running as a user with sudo "
-"permissions. First, open a the **Terminal** app and enter the following "
-"command to install the OS X command line tools::"
-msgstr ""
-
-#: ../../developers/compiling.rst:90
-msgid ""
-"When the popup appears, click **Install**. Then install `Homebrew "
-"<https://brew.sh>`__::"
-msgstr ""
-
-#: ../../developers/compiling.rst:95
-msgid "Install dependencies::"
-msgstr ""
-
-#: ../../developers/compiling.rst:99
-msgid "Clone the Dash Core source code and change to the ``dash`` directory::"
-msgstr ""
-
-#: ../../developers/compiling.rst:104
-msgid ""
-"Build Dash Core. Configure and build the headless dash binaries as well "
-"as the GUI (if Qt is found). You can disable the GUI build by passing "
-"``--without-gui`` to configure::"
-msgstr ""
-
-#: ../../developers/compiling.rst:112
-msgid "It is recommended to build and run the unit tests::"
-msgstr ""
-
-#: ../../developers/compiling.rst:116
-msgid ""
-"You can also create a ``.dmg`` that contains the ``.app`` bundle "
-"(optional)::"
-msgstr ""
-
-#: ../../developers/compiling.rst:121
-msgid "Dash Core is now available at ``./src/dashd``."
-msgstr ""
-
-#: ../../developers/compiling.rst:126
-msgid "Windows"
-msgstr ""
-
-#: ../../developers/compiling.rst:128
-msgid ""
-"This guide describes how to build Dash Core wallet from source for 64-bit"
-" Windows. Most developers use cross-compilation from Linux to build "
-"executables for Windows. The content on this page is intended to serve as"
-" a simple guide for general compilation of non-deterministic binary files"
-" from the stable source code. For a more detailed guide, see the `Windows"
-" Build Notes <https://github.com/dashpay/dash/blob/master/doc/build-"
-"windows.md>`__. A standard installation of Ubuntu Linux 18.04 LTS will be"
-" used as an environment for the build. We assume you are running as a "
-"user with sudo permissions. First add the necessary extra repository and "
-"update all packages::"
-msgstr ""
-
-#: ../../developers/compiling.rst:160
-msgid "Build and link the depends system::"
-msgstr ""
-
-#: ../../developers/compiling.rst:174
-msgid ""
-"``~/dash/src`` now contains the compiled Dash binaries, and "
-"``~/dash/src/qt`` contains the Dash GUI wallet."
-msgstr ""
-
-#: ../../developers/compiling.rst:180
+#: ../../developers/compiling.rst:28
 msgid "Gitian"
 msgstr ""
 
-#: ../../developers/compiling.rst:182
+#: ../../developers/compiling.rst:30
 msgid ""
 "Gitian is the deterministic build process that is used to build the Dash "
 "Core executables. It provides a way to be reasonably sure that the "
@@ -202,98 +71,13 @@ msgid ""
 "and only if they match, the build is accepted and uploaded to dash.org."
 msgstr ""
 
-#: ../../developers/compiling.rst:191
+#: ../../developers/compiling.rst:39
 msgid ""
-"More independent Gitian builders are needed, which is why this guide "
-"exists. It is preferred you follow these steps yourself instead of using "
-"someone else's VM image to avoid 'contaminating' the build."
-msgstr ""
-
-#: ../../developers/compiling.rst:196
-msgid "Setup the host environment"
-msgstr ""
-
-#: ../../developers/compiling.rst:198
-msgid ""
-"Gitian builds are known to be working on Debian 8.x. If your machine is "
-"already running this system, you can perform Gitian builds on the actual "
-"hardware. Alternatively, you can install it in a virtual machine. Follow "
-"the guide for :ref:`setting up a VPS for masternodes <vps-setup>`, "
-"selecting a Debian 8.x image during the installation process and naming "
-"your non-root user ``gitianuser``. Selecting a VPS with two processors "
-"will also greatly speed up the build process. If you cannot login to your"
-" VPS over SSH as root, access the terminal and issue the following "
-"command::"
-msgstr ""
-
-#: ../../developers/compiling.rst:211
-msgid ""
-"Log in to your new environment by SSH as root. Set up the dependencies "
-"first by pasting the following in the terminal::"
-msgstr ""
-
-#: ../../developers/compiling.rst:217
-msgid ""
-"Then set up LXC and the rest with the following, which is a complex "
-"jumble of settings and workarounds::"
-msgstr ""
-
-#: ../../developers/compiling.rst:238
-msgid ""
-"At the end Debian is rebooted to make sure that the changes take effect. "
-"Re-login as the user gitianuser that was created during installation. The"
-" rest of the steps in this guide will be performed as that user."
-msgstr ""
-
-#: ../../developers/compiling.rst:242
-msgid ""
-"There is no ``python-vm-builder`` package in Debian, so we need to "
-"install it from source ourselves::"
-msgstr ""
-
-#: ../../developers/compiling.rst:254
-msgid "Set up the environment and compile"
-msgstr ""
-
-#: ../../developers/compiling.rst:256
-msgid "Clone the Dash Core repository to your home directory::"
-msgstr ""
-
-#: ../../developers/compiling.rst:260
-msgid "Then create the script file::"
-msgstr ""
-
-#: ../../developers/compiling.rst:264
-msgid ""
-"And paste the following script in place (this will be automatic if/when "
-"the script is pulled into Dash Core)::"
-msgstr ""
-
-#: ../../developers/compiling.rst:269
-msgid "Save the file and set it executable::"
-msgstr ""
-
-#: ../../developers/compiling.rst:273
-msgid ""
-"Set up the environment, replacing the name and version with your name and"
-" target version::"
-msgstr ""
-
-#: ../../developers/compiling.rst:278
-msgid "Run the compilation script::"
-msgstr ""
-
-#: ../../developers/compiling.rst:282
-msgid ""
-"Your system will build all dependencies and Dash Core from scratch for "
-"Windows and Linux platforms (macOS if the dependencies were installed "
-"according to `these instructions "
-"<https://github.com/dashpay/dash/blob/master/doc/build-osx.md>`_). This "
-"can take some time. When complete, you will see the SHA256 checksums, "
-"which you can compare against the hashes available on the `Dash website "
-"<https://www.dash.org/wallets>`_. In this way, you can be sure that you "
-"are running original and untampered builds of the code as it exists on "
-"GitHub."
+"Instructions on how to build Dash Core 0.13.0 will appear here once the "
+"Docker build system for Gitian is available. Instructions to create "
+"deterministic builds of Dash Core 0.12.3 or older are available `here "
+"<https://docs.dash.org/en/0.12.3/developers/compiling.html#gitian-"
+"build>`__ on a previous version of this page."
 msgstr ""
 
 #~ msgid ""
@@ -439,5 +223,281 @@ msgstr ""
 #~ " will also be interested in building"
 #~ " Dash binaries for themselves. The "
 #~ "following guides are available:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "While Dash offers stable binary builds"
+#~ " on the `website <https://www.dash.org/wallets>`_"
+#~ " and on `GitHub "
+#~ "<https://github.com/dashpay/dash/releases>`_, and "
+#~ "development builds using `Jenkins "
+#~ "<https://jenkins.dash.org/blue/organizations/jenkins/dashpay-"
+#~ "dash-gitian-nightly/activity/>`_, many users "
+#~ "will also be interested in building "
+#~ "Dash binaries for themselves. The "
+#~ "following guides are available:"
+#~ msgstr ""
+
+#~ msgid ":ref:`Building on Linux <linux-build>`"
+#~ msgstr ""
+
+#~ msgid ":ref:`Building on macOS <macos-build>`"
+#~ msgstr ""
+
+#~ msgid ":ref:`Building on Windows <windows-build>`"
+#~ msgstr ""
+
+#~ msgid ":ref:`Gitian deterministic builds <gitian-build>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These guides describe how to build "
+#~ "the current stable version. To build "
+#~ "the latest version from the develop "
+#~ "branch, replace the normal ``git clone``"
+#~ " command with the following command "
+#~ "when pulling from GitHub::"
+#~ msgstr ""
+
+#~ msgid "Linux"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This guide describes how to build "
+#~ "Dash Core wallet without the GUI "
+#~ "from source under Ubuntu Linux. For "
+#~ "a more detailed guide, see the "
+#~ "`Unix Build Notes "
+#~ "<https://github.com/dashpay/dash/blob/master/doc/build-"
+#~ "unix.md>`__. The content on this page"
+#~ " is intended to serve as a "
+#~ "simple guide for general compilation of"
+#~ " non-deterministic binary files from "
+#~ "the stable source code. A standard "
+#~ "installation of Ubuntu Linux 18.04 LTS"
+#~ " will be used as an environment "
+#~ "for the build. We assume you are"
+#~ " running as a user with sudo "
+#~ "permissions. First add the necessary "
+#~ "extra repository and update all "
+#~ "packages::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now install the dependencies as "
+#~ "described in the installation documentation::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Optionally install the Qt dependencies "
+#~ "if you want to build the Dash "
+#~ "GUI::"
+#~ msgstr ""
+
+#~ msgid "Download the stable Dash repository::"
+#~ msgstr ""
+
+#~ msgid "And build::"
+#~ msgstr ""
+
+#~ msgid "``/usr/local/bin`` now contains the compiled Dash binaries."
+#~ msgstr ""
+
+#~ msgid "macOS"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This guide describes how to build "
+#~ "Dash Core wallet from source under "
+#~ "macOS. It is intended to serve as"
+#~ " a simple guide for general "
+#~ "compilation of non-deterministic binary "
+#~ "files from the stable source code. "
+#~ "For a more detailed guide, see the"
+#~ " `macOS Build Notes "
+#~ "<https://github.com/dashpay/dash/blob/master/doc/build-"
+#~ "osx.md>`__. A standard installation of "
+#~ "macOS 10.13 High Sierra will be "
+#~ "used as an environment for the "
+#~ "build. We assume you are running "
+#~ "as a user with sudo permissions. "
+#~ "First, open a the **Terminal** app "
+#~ "and enter the following command to "
+#~ "install the OS X command line "
+#~ "tools::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When the popup appears, click "
+#~ "**Install**. Then install `Homebrew "
+#~ "<https://brew.sh>`__::"
+#~ msgstr ""
+
+#~ msgid "Install dependencies::"
+#~ msgstr ""
+
+#~ msgid "Clone the Dash Core source code and change to the ``dash`` directory::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Build Dash Core. Configure and build "
+#~ "the headless dash binaries as well "
+#~ "as the GUI (if Qt is found). "
+#~ "You can disable the GUI build by"
+#~ " passing ``--without-gui`` to configure::"
+#~ msgstr ""
+
+#~ msgid "It is recommended to build and run the unit tests::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can also create a ``.dmg`` "
+#~ "that contains the ``.app`` bundle "
+#~ "(optional)::"
+#~ msgstr ""
+
+#~ msgid "Dash Core is now available at ``./src/dashd``."
+#~ msgstr ""
+
+#~ msgid "Windows"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This guide describes how to build "
+#~ "Dash Core wallet from source for "
+#~ "64-bit Windows. Most developers use "
+#~ "cross-compilation from Linux to build "
+#~ "executables for Windows. The content on"
+#~ " this page is intended to serve "
+#~ "as a simple guide for general "
+#~ "compilation of non-deterministic binary "
+#~ "files from the stable source code. "
+#~ "For a more detailed guide, see the"
+#~ " `Windows Build Notes "
+#~ "<https://github.com/dashpay/dash/blob/master/doc/build-"
+#~ "windows.md>`__. A standard installation of "
+#~ "Ubuntu Linux 18.04 LTS will be "
+#~ "used as an environment for the "
+#~ "build. We assume you are running "
+#~ "as a user with sudo permissions. "
+#~ "First add the necessary extra repository"
+#~ " and update all packages::"
+#~ msgstr ""
+
+#~ msgid "Build and link the depends system::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``~/dash/src`` now contains the compiled "
+#~ "Dash binaries, and ``~/dash/src/qt`` contains"
+#~ " the Dash GUI wallet."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "More independent Gitian builders are "
+#~ "needed, which is why this guide "
+#~ "exists. It is preferred you follow "
+#~ "these steps yourself instead of using"
+#~ " someone else's VM image to avoid "
+#~ "'contaminating' the build."
+#~ msgstr ""
+
+#~ msgid "Setup the host environment"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Gitian builds are known to be "
+#~ "working on Debian 8.x. If your "
+#~ "machine is already running this system,"
+#~ " you can perform Gitian builds on "
+#~ "the actual hardware. Alternatively, you "
+#~ "can install it in a virtual "
+#~ "machine. Follow the guide for "
+#~ ":ref:`setting up a VPS for masternodes"
+#~ " <vps-setup>`, selecting a Debian 8.x"
+#~ " image during the installation process "
+#~ "and naming your non-root user "
+#~ "``gitianuser``. Selecting a VPS with two"
+#~ " processors will also greatly speed "
+#~ "up the build process. If you "
+#~ "cannot login to your VPS over SSH"
+#~ " as root, access the terminal and "
+#~ "issue the following command::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Log in to your new environment by"
+#~ " SSH as root. Set up the "
+#~ "dependencies first by pasting the "
+#~ "following in the terminal::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Then set up LXC and the rest "
+#~ "with the following, which is a "
+#~ "complex jumble of settings and "
+#~ "workarounds::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "At the end Debian is rebooted to"
+#~ " make sure that the changes take "
+#~ "effect. Re-login as the user "
+#~ "gitianuser that was created during "
+#~ "installation. The rest of the steps "
+#~ "in this guide will be performed as"
+#~ " that user."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There is no ``python-vm-builder`` "
+#~ "package in Debian, so we need to"
+#~ " install it from source ourselves::"
+#~ msgstr ""
+
+#~ msgid "Set up the environment and compile"
+#~ msgstr ""
+
+#~ msgid "Clone the Dash Core repository to your home directory::"
+#~ msgstr ""
+
+#~ msgid "Then create the script file::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "And paste the following script in "
+#~ "place (this will be automatic if/when"
+#~ " the script is pulled into Dash "
+#~ "Core)::"
+#~ msgstr ""
+
+#~ msgid "Save the file and set it executable::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Set up the environment, replacing the"
+#~ " name and version with your name "
+#~ "and target version::"
+#~ msgstr ""
+
+#~ msgid "Run the compilation script::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your system will build all dependencies"
+#~ " and Dash Core from scratch for "
+#~ "Windows and Linux platforms (macOS if"
+#~ " the dependencies were installed according"
+#~ " to `these instructions "
+#~ "<https://github.com/dashpay/dash/blob/master/doc/build-"
+#~ "osx.md>`_). This can take some time. "
+#~ "When complete, you will see the "
+#~ "SHA256 checksums, which you can compare"
+#~ " against the hashes available on the"
+#~ " `Dash website <https://www.dash.org/wallets>`_. "
+#~ "In this way, you can be sure "
+#~ "that you are running original and "
+#~ "untampered builds of the code as "
+#~ "it exists on GitHub."
 #~ msgstr ""
 

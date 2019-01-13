@@ -1,28 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
 # Translators:
 # Damian Walker <damianwalkerstrauss@gmail.com>, 2018
 # Leon White <leon.white@dash.org>, 2018
 # Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018
 # Ivan SIerraalta <ivansierraalta@gmail.com>, 2018
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"POT-Creation-Date: 2019-01-11 06:48+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
 "Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2018\n"
-"Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../merchants/technical.rst:1
 msgid "Technical guides for merchants using Dash. API and SDK resources."
@@ -30,149 +30,511 @@ msgstr "Guías técnicas para comercios usando Dash. Recursos API y SDK"
 
 #: ../../merchants/technical.rst:1
 msgid ""
-"dash, merchants, payment processor, API, SDK, insight, blockcypher, gocoin, "
-"instantsend, vending machines"
+"dash, merchants, payment processor, API, SDK, insight, blockcypher, "
+"gocoin, instantsend, vending machines"
 msgstr ""
-"dash, comercios, procesador de pago, API, SDK, insight, blockcypher, gocoin,"
-" instantsend, máquinas expendedoras"
+"dash, comercios, procesador de pago, API, SDK, insight, blockcypher, "
+"gocoin, instantsend, máquinas expendedoras"
 
 #: ../../merchants/technical.rst:9
 msgid "Technical Guides"
 msgstr "Guías técnicas"
 
-#: ../../merchants/technical.rst:11
-msgid ""
-"Several API services exist to facilitate quick and easy integration with the"
-" Dash network for services including:"
+#: ../../merchants/technical.rst:12
+msgid "Dash Wallet Integration"
 msgstr ""
-"Existen varios servicios API para facilitar la integración rápida y sencilla"
-" con la red Dash para servicios que incluyen:"
 
 #: ../../merchants/technical.rst:14
-msgid "Transaction broadcasting"
+#, fuzzy
+msgid ""
+"This documentation is also available as a `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/merchants "
+"/Integration-Resources-Wallet-Integration.pdf>`__."
+msgstr ""
+"Esta documentación también está disponible en un `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/merchants "
+"/Integration-Resources-InstantSend.pdf>`__."
+
+#: ../../merchants/technical.rst:18
+msgid ""
+"`Dash Core <https://github.com/dashpay/dash/releases>`__ is a fork of "
+"Bitcoin and the majority of functionality included in the Dash Core "
+"Daemon can be integrated in a similar manner. Key differences relate to "
+"customizations to existing JSON-RPC commands to support unique "
+"functionalities such as InstantSend. These differences, as well as more "
+"general information, are summarized below."
+msgstr ""
+
+#: ../../merchants/technical.rst:25
+msgid ""
+"**General Information:** Dash is a “Proof of Work” blockchain with "
+"attributes similar to that of Bitcoin."
+msgstr ""
+
+#: ../../merchants/technical.rst:28
+msgid "Block Time: ~2.6 Minutes per Block"
+msgstr ""
+
+#: ../../merchants/technical.rst:29
+msgid ""
+"Blockchain Confirmations: 6 Confirmations (or 1 in the case of "
+"InstantSend)"
+msgstr ""
+
+#: ../../merchants/technical.rst:31
+#, fuzzy
+msgid "Github Source: https://github.com/dashpay/dash"
+msgstr "Nodo de repositorio: https://github.com/dashevo/dashcore-node"
+
+#: ../../merchants/technical.rst:32
+#, fuzzy
+msgid "Release Link: https://github.com/dashpay/dash/releases"
+msgstr "Libreria de repositorio: https://github.com/dashevo/dashcore-lib"
+
+#: ../../merchants/technical.rst:34
+msgid ""
+"**JSON-RPC Interface:** The majority of Bitcoin JSON-RPC commands are "
+"unchanged making integration into existing systems relatively "
+"straightforward. For a complete listing of RPC commands see the "
+"`Developer Guide <https://dash-docs.github.io/en/developer-guide>`__."
+msgstr ""
+
+#: ../../merchants/technical.rst:39
+msgid ""
+"It’s worth noting that several key Transaction-related JSON-RPC commands "
+"have been modified to support InstantSend through the addition of an "
+"“InstantLock” field and are listed below:"
+msgstr ""
+
+#: ../../merchants/technical.rst:43
+#, fuzzy
+msgid ""
+"`GetTransaction <https://dash-docs.github.io/en/developer-"
+"reference#gettransaction>`__"
+msgstr ""
+"Obtener transacción: https://dash-docs.github.io/en/developer-"
+"reference#gettransaction"
+
+#: ../../merchants/technical.rst:44
+#, fuzzy
+msgid ""
+"`ListTransactions <https://dash-docs.github.io/en/developer-"
+"reference#listtransactions>`__"
+msgstr ""
+"Enlistar transacciones: https://dash-docs.github.io/en/developer-"
+"reference#listtransactions"
+
+#: ../../merchants/technical.rst:45
+#, fuzzy
+msgid ""
+"`ListSinceBlock <https://dash-docs.github.io/en/developer-"
+"reference#listsinceblock>`__"
+msgstr ""
+"ListSinceBlock: https://dash-docs.github.io/en/developer-"
+"reference#listsinceblock"
+
+#: ../../merchants/technical.rst:47
+msgid ""
+"**Block Hashing Algorithm:** Dash uses the “X11” algorithm in place of "
+"SHA256 used in Bitcoin. It’s important to note, however, that this only "
+"affects the hashing of the Block itself. All other internals utilize "
+"SHA256 hashes (transactions, merkle root, etc) which allows for most "
+"existing libraries to work in the Dash ecosystem."
+msgstr ""
+
+#: ../../merchants/technical.rst:53
+msgid ""
+"**Supporting Libraries:** Due to the aforementioned differences in "
+"Hashing Algorithm only minor adjustments are required before using "
+"Bitcoin libraries on the Dash network. The most popular libraries have "
+"already been ported to Dash which has enabled support for most major "
+"programming languages. These resources are outlined in the :ref:`SDK "
+"Resources <sdk-resources>` section of this document."
+msgstr ""
+
+#: ../../merchants/technical.rst:63
+msgid "v0.13.0 Integration Notes"
+msgstr ""
+
+#: ../../merchants/technical.rst:65
+#, fuzzy
+msgid ""
+"This documentation is also available as a `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-"
+"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__."
+msgstr ""
+"Esta documentación también está disponible en un `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/merchants "
+"/Integration-Resources-InstantSend.pdf>`__."
+
+#: ../../merchants/technical.rst:67
+msgid ""
+"Dash 0.13.0 implements `DIP002 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, which form "
+"a basis for new transaction types that will provide on-chain metadata to "
+"assist various consensus mechanisms. The following special transaction "
+"types exist:"
+msgstr ""
+
+#: ../../merchants/technical.rst:73
+msgid "Release"
+msgstr ""
+
+#: ../../merchants/technical.rst:73
+msgid "Version"
+msgstr ""
+
+#: ../../merchants/technical.rst:73
+msgid "Type"
+msgstr ""
+
+#: ../../merchants/technical.rst:73
+msgid "Payload Size"
+msgstr ""
+
+#: ../../merchants/technical.rst:73
+msgid "Payload"
+msgstr ""
+
+#: ../../merchants/technical.rst:73
+msgid "Payload JSON"
+msgstr ""
+
+#: ../../merchants/technical.rst:73
+#, fuzzy
+msgid "Transaction Purpose"
 msgstr "Transmisión de transacciones"
 
-#: ../../merchants/technical.rst:15
-msgid "Exchange rates"
-msgstr "Tipo de cambio"
+#: ../../merchants/technical.rst:75 ../../merchants/technical.rst:77
+#: ../../merchants/technical.rst:79 ../../merchants/technical.rst:81
+#: ../../merchants/technical.rst:83 ../../merchants/technical.rst:85
+#: ../../merchants/technical.rst:87
+msgid "v0.13.0"
+msgstr ""
 
-#: ../../merchants/technical.rst:16
-msgid "Currency conversion"
-msgstr "Conversión de monedas"
+#: ../../merchants/technical.rst:75 ../../merchants/technical.rst:77
+#: ../../merchants/technical.rst:79 ../../merchants/technical.rst:81
+#: ../../merchants/technical.rst:83 ../../merchants/technical.rst:85
+#: ../../merchants/technical.rst:87
+msgid "3"
+msgstr ""
 
-#: ../../merchants/technical.rst:17
-msgid "Invoice generation"
-msgstr "Generación de facturas"
+#: ../../merchants/technical.rst:75
+msgid "0"
+msgstr ""
 
-#: ../../merchants/technical.rst:20
+#: ../../merchants/technical.rst:75
+msgid "n/a"
+msgstr ""
+
+#: ../../merchants/technical.rst:75
+msgid "Standard Transaction"
+msgstr ""
+
+#: ../../merchants/technical.rst:77
+msgid "1"
+msgstr ""
+
+#: ../../merchants/technical.rst:77 ../../merchants/technical.rst:79
+#: ../../merchants/technical.rst:81 ../../merchants/technical.rst:83
+#: ../../merchants/technical.rst:85 ../../merchants/technical.rst:87
+msgid "<variable int>"
+msgstr ""
+
+#: ../../merchants/technical.rst:77 ../../merchants/technical.rst:79
+#: ../../merchants/technical.rst:81 ../../merchants/technical.rst:83
+#: ../../merchants/technical.rst:85 ../../merchants/technical.rst:87
+msgid "<hex>"
+msgstr ""
+
+#: ../../merchants/technical.rst:77
+msgid "proRegTx"
+msgstr ""
+
+#: ../../merchants/technical.rst:77
+#, fuzzy
+msgid ""
+"`Masternode Registration <https://dash-docs.github.io/en/developer-"
+"reference#proregtx>`__"
+msgstr ""
+"Obtener transacción: https://dash-docs.github.io/en/developer-"
+"reference#gettransaction"
+
+#: ../../merchants/technical.rst:79
+msgid "2"
+msgstr ""
+
+#: ../../merchants/technical.rst:79
+msgid "proUpServTx"
+msgstr ""
+
+#: ../../merchants/technical.rst:79
+#, fuzzy
+msgid ""
+"`Update Masternode Service <https://dash-docs.github.io/en/developer-"
+"reference#proupservtx>`__"
+msgstr ""
+"Obtener transacción: https://dash-docs.github.io/en/developer-"
+"reference#gettransaction"
+
+#: ../../merchants/technical.rst:81
+msgid "proUpRegTx"
+msgstr ""
+
+#: ../../merchants/technical.rst:81
+#, fuzzy
+msgid ""
+"`Update Masternode Operator <https://dash-docs.github.io/en/developer-"
+"reference#proupregtx>`__"
+msgstr ""
+"Obtener transacción: https://dash-docs.github.io/en/developer-"
+"reference#gettransaction"
+
+#: ../../merchants/technical.rst:83
+msgid "4"
+msgstr ""
+
+#: ../../merchants/technical.rst:83
+msgid "proUpRevTx"
+msgstr ""
+
+#: ../../merchants/technical.rst:83
+#, fuzzy
+msgid ""
+"`Masternode Revocation <https://dash-docs.github.io/en/developer-"
+"reference#prouprevtx>`__"
+msgstr ""
+"Obtener transacción: https://dash-docs.github.io/en/developer-"
+"reference#gettransaction"
+
+#: ../../merchants/technical.rst:85
+msgid "5"
+msgstr ""
+
+#: ../../merchants/technical.rst:85
+msgid "cbTx"
+msgstr ""
+
+#: ../../merchants/technical.rst:85
+#, fuzzy
+msgid ""
+"`Masternode List Merkle Proof <https://dash-docs.github.io/en/developer-"
+"reference#cbtx>`__"
+msgstr ""
+"ListSinceBlock: https://dash-docs.github.io/en/developer-"
+"reference#listsinceblock"
+
+#: ../../merchants/technical.rst:87
+msgid "6"
+msgstr ""
+
+#: ../../merchants/technical.rst:87
+msgid "qcTx"
+msgstr ""
+
+#: ../../merchants/technical.rst:87
+#, fuzzy
+msgid ""
+"`Quorum Commitment <https://dash-docs.github.io/en/developer-"
+"reference#qctx>`__"
+msgstr ""
+"Enlistar transacciones: https://dash-docs.github.io/en/developer-"
+"reference#listtransactions"
+
+#: ../../merchants/technical.rst:90
+msgid "Integration notes:"
+msgstr ""
+
+#: ../../merchants/technical.rst:92
+msgid ""
+"`DIP002 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ are a "
+"foundational component of Dash Core v0.13.0 and introduce a new "
+"Transaction Version and related “Payload” to the network."
+msgstr ""
+
+#: ../../merchants/technical.rst:96
+msgid ""
+"Integrated Systems must be able to `serialize and deserialize "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#serialization-"
+"hashing-and-signing>`__ these new Transaction Types in order to "
+"accurately encode and decode Raw Transaction data."
+msgstr ""
+
+#: ../../merchants/technical.rst:100
+msgid ""
+"From a `backwards compatibility "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__"
+" perspective, the 4 byte (32-bit) ``version`` field included in Legacy "
+"Transactions has been split into two fields: ``version`` and ``type`` "
+"(each consisting of 2 bytes)."
+msgstr ""
+
+#: ../../merchants/technical.rst:105
+msgid ""
+"`InstantSend "
+"<https://docs.dash.org/en/latest/merchants/technical.html#instantsend>`__"
+" status and Payload JSON (e.g. ``proRegTx``) is included in the JSON-RPC "
+"response, please note that this data is not part of the calculated hash "
+"and is provided for convenience."
+msgstr ""
+
+#: ../../merchants/technical.rst:110
+msgid "Legacy transaction structure::"
+msgstr ""
+
+#: ../../merchants/technical.rst:121
+msgid "Updated transaction structure::"
+msgstr ""
+
+#: ../../merchants/technical.rst:135
+msgid ""
+"See the `Special Transactions developer documentation <https://dash-"
+"docs.github.io/en/developer-reference#special-transactions>`__ for "
+"additional detail on these data types, e.g. ``<variable int>``. See the "
+"`v0.13.0 transaction types integration documentation (PDF) "
+"<https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-"
+"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ for worked examples of "
+"each transaction type."
+msgstr ""
+
+#: ../../merchants/technical.rst:143
 msgid "API Services"
 msgstr "Servicios API"
 
-#: ../../merchants/technical.rst:22
+#: ../../merchants/technical.rst:145
 msgid ""
 "This documentation is also available as a `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/merchants /Integration-"
-"Resources-API.pdf>`__."
+"<https://github.com/dashpay/docs/raw/master/binary/merchants "
+"/Integration-Resources-API.pdf>`__."
 msgstr ""
 "Esta documentación también está disponible como un `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/merchants /Integration-"
-"Resources-API.pdf>`__."
+"<https://github.com/dashpay/docs/raw/master/binary/merchants "
+"/Integration-Resources-API.pdf>`__."
 
-#: ../../merchants/technical.rst:26
+#: ../../merchants/technical.rst:149
+msgid ""
+"Several API services exist to facilitate quick and easy integration with "
+"the Dash network for services including:"
+msgstr ""
+"Existen varios servicios API para facilitar la integración rápida y "
+"sencilla con la red Dash para servicios que incluyen:"
+
+#: ../../merchants/technical.rst:152
+msgid "Transaction broadcasting"
+msgstr "Transmisión de transacciones"
+
+#: ../../merchants/technical.rst:153
+msgid "Exchange rates"
+msgstr "Tipo de cambio"
+
+#: ../../merchants/technical.rst:154
+msgid "Currency conversion"
+msgstr "Conversión de monedas"
+
+#: ../../merchants/technical.rst:155
+msgid "Invoice generation"
+msgstr "Generación de facturas"
+
+#: ../../merchants/technical.rst:157
 msgid ""
 "API Services are typically leveraged to eliminate that requirement of "
 "running your own infrastructure to support blockchain interactions. This "
 "includes mechanisms such as:"
 msgstr ""
-"Los servicios de API generalmente se aprovechan para eliminar ese requisito "
-"de ejecutar tu propia infraestructura para admitir las interacciones de "
-"cadena de bloques. Esto incluye mecanismos tales como:"
+"Los servicios de API generalmente se aprovechan para eliminar ese "
+"requisito de ejecutar tu propia infraestructura para admitir las "
+"interacciones de cadena de bloques. Esto incluye mecanismos tales como:"
 
-#: ../../merchants/technical.rst:30
+#: ../../merchants/technical.rst:161
 msgid "Forming and Broadcasting a Transaction to the network."
 msgstr "Formar y transmitir una transacción a la red."
 
-#: ../../merchants/technical.rst:31
+#: ../../merchants/technical.rst:162
 msgid "Address generation using HD Wallets."
 msgstr "Generación de direcciones usando Billeteras HD."
 
-#: ../../merchants/technical.rst:32
+#: ../../merchants/technical.rst:163
 msgid "Payment Processing using WebHooks."
 msgstr "Procesamiento de pagos usando WebHooks."
 
-#: ../../merchants/technical.rst:34
+#: ../../merchants/technical.rst:165
 msgid ""
-"There are a variety of options for supporting these methods, with the key "
-"differentiator being the pricing model included and supported features. The "
-"following list of API Providers attempts to outline these key "
-"features/differentiators and also includes a link to related documentation."
+"There are a variety of options for supporting these methods, with the key"
+" differentiator being the pricing model included and supported features. "
+"The following list of API Providers attempts to outline these key "
+"features/differentiators and also includes a link to related "
+"documentation."
 msgstr ""
 "Hay una variedad de opciones para respaldar estos métodos, con el "
-"diferenciador clave como el modelo de fijación de precios y las funciones "
-"compatibles. La siguiente lista de proveedores de API intenta delinear estas"
-" características/diferenciadores claves y también incluye un enlace a la "
-"documentación relacionada."
+"diferenciador clave como el modelo de fijación de precios y las funciones"
+" compatibles. La siguiente lista de proveedores de API intenta delinear "
+"estas características/diferenciadores claves y también incluye un enlace "
+"a la documentación relacionada."
 
-#: ../../merchants/technical.rst:42
+#: ../../merchants/technical.rst:173
 msgid "Insight"
 msgstr "Insight"
 
-#: ../../merchants/technical.rst:49
+#: ../../merchants/technical.rst:180
 msgid "https://github.com/dashevo/insight-api"
 msgstr "https://github.com/dashevo/insight-api"
 
-#: ../../merchants/technical.rst:51
+#: ../../merchants/technical.rst:182
+#, fuzzy
 msgid ""
-"The open-source Insight REST API provides you with a convenient, powerful "
-"and simple way to read data from the Dash network and build your own "
-"services with it."
+"The open-source Insight REST API provides you with a convenient, powerful"
+" and simple way to read data from the Dash network and build your own "
+"services with it. A practical guide to getting started with the Insight "
+"API and Insight UI block explorer is available :ref:`here <insight-api>`."
 msgstr ""
-"El Insight REST API de fuente abierta te proporciona una forma conveniente, "
-"potente y sencilla de leer datos de la red de Dash y crear tus propios "
-"servicios con ella."
+"El Insight REST API de fuente abierta te proporciona una forma "
+"conveniente, potente y sencilla de leer datos de la red de Dash y crear "
+"tus propios servicios con ella."
 
-#: ../../merchants/technical.rst:55
+#: ../../merchants/technical.rst:188
 msgid "Features: Transaction Broadcast, WebSocket Notifications."
 msgstr ""
-"Características: Transmisión de transacciones, notificaciones de WebSocket."
+"Características: Transmisión de transacciones, notificaciones de "
+"WebSocket."
 
-#: ../../merchants/technical.rst:56
+#: ../../merchants/technical.rst:189
 msgid "Pricing Model: Free / Open Source"
 msgstr "Modelo de precios: Gratis / Fuente abierta"
 
-#: ../../merchants/technical.rst:57
+#: ../../merchants/technical.rst:190
 msgid "Documentation: https://github.com/dashevo/insight-api"
 msgstr "Documentación: https://github.com/dashevo/insight-api"
 
-#: ../../merchants/technical.rst:61 ../../merchants/technical.rst:248
+#: ../../merchants/technical.rst:194 ../../merchants/technical.rst:405
 msgid "BlockCypher"
 msgstr "BlockCypher"
 
-#: ../../merchants/technical.rst:68 ../../merchants/technical.rst:255
+#: ../../merchants/technical.rst:201 ../../merchants/technical.rst:412
 msgid "https://www.blockcypher.com"
 msgstr "https://www.blockcypher.com"
 
-#: ../../merchants/technical.rst:70
+#: ../../merchants/technical.rst:203
 msgid ""
 "BlockCypher is a simple, mostly RESTful JSON API for interacting with "
 "blockchains, accessed over HTTP or HTTPS from the api.blockcypher.com "
 "domain."
 msgstr ""
-"BlockCypher es un simple RESTful JSON API para interactuar con cadenas de "
-"bloques, que puede ser accedido a través de HTTP o HTTPS desde el dominio "
-"api.blockcypher.com."
+"BlockCypher es un simple RESTful JSON API para interactuar con cadenas de"
+" bloques, que puede ser accedido a través de HTTP o HTTPS desde el "
+"dominio api.blockcypher.com."
 
-#: ../../merchants/technical.rst:74
+#: ../../merchants/technical.rst:207
 msgid ""
-"Features: Transaction Broadcast, HD Wallet / Address Generation, WebSocket "
-"and WebHook Callbacks as well as Payment Forwarding. BlockCypher does not "
-"handle Private Keys."
+"Features: Transaction Broadcast, HD Wallet / Address Generation, "
+"WebSocket and WebHook Callbacks as well as Payment Forwarding. "
+"BlockCypher does not handle Private Keys."
 msgstr ""
-"Características: Transmisión de transacción, Billetera HD / Generación de "
-"direcciones, Retono de llamadas de WebSocket y WebHook, así como el reenvío "
-"de pagos. BlockCypher no maneja llaves privadas."
+"Características: Transmisión de transacción, Billetera HD / Generación de"
+" direcciones, Retono de llamadas de WebSocket y WebHook, así como el "
+"reenvío de pagos. BlockCypher no maneja llaves privadas."
 
-#: ../../merchants/technical.rst:77
+#: ../../merchants/technical.rst:210
 msgid ""
 "Pricing Model: Per API Call, 5000 Requests -> $85.00 per month "
 "(https://accounts.blockcypher.com/plans)"
@@ -180,76 +542,76 @@ msgstr ""
 "Modelo de precios: Por llamada API, 5000 Solicitudes -> $85.00 por mes "
 "(https://accounts.blockcypher.com/plans)"
 
-#: ../../merchants/technical.rst:79
+#: ../../merchants/technical.rst:212
 msgid "Documentation: https://www.blockcypher.com/dev/dash/"
 msgstr "Documentación: https://www.blockcypher.com/dev/dash/"
 
-#: ../../merchants/technical.rst:83
+#: ../../merchants/technical.rst:216
 msgid "ChainRider"
 msgstr "ChainRider"
 
-#: ../../merchants/technical.rst:90
+#: ../../merchants/technical.rst:223
 msgid "https://www.chainrider.io"
 msgstr "https://www.chainrider.io"
 
-#: ../../merchants/technical.rst:92
+#: ../../merchants/technical.rst:225
 msgid ""
 "ChainRider is a cloud service providing a set of REST APIs for digital "
 "currency management and exploration."
 msgstr ""
-"ChainRider es un servicio en la nube que provee un conjunto de REST API para"
-" el manejo y exploración de monedas digitales"
+"ChainRider es un servicio en la nube que provee un conjunto de REST API "
+"para el manejo y exploración de monedas digitales"
 
-#: ../../merchants/technical.rst:95
+#: ../../merchants/technical.rst:228
 msgid ""
-"Features: Blockchain queries, Event Notifications, Transaction Broadcast, "
-"Payment Processing, etc."
+"Features: Blockchain queries, Event Notifications, Transaction Broadcast,"
+" Payment Processing, etc."
 msgstr ""
 "Características: Consultas a la Cadena de Bloques, Notificaciones de "
 "Eventos, Transmisión de Transacciones, Procesamiento de Pago, etc."
 
-#: ../../merchants/technical.rst:97
+#: ../../merchants/technical.rst:230
 msgid "Pricing Model: Free trial, pay per API call"
 msgstr "Modelo de Precios: Prueba gratis, pago por llamada de API"
 
-#: ../../merchants/technical.rst:98
+#: ../../merchants/technical.rst:231
 msgid "Documentation: https://www.chainrider.io/docs/dash"
 msgstr "Documentación: https://www.chainrider.io/docs/dash"
 
-#: ../../merchants/technical.rst:102 ../../merchants/technical.rst:264
+#: ../../merchants/technical.rst:235 ../../merchants/technical.rst:420
 msgid "GoCoin"
 msgstr "GoCoin"
 
-#: ../../merchants/technical.rst:109 ../../merchants/technical.rst:271
+#: ../../merchants/technical.rst:242 ../../merchants/technical.rst:427
 msgid "https://gocoin.com"
 msgstr "https://gocoin.com"
 
-#: ../../merchants/technical.rst:111
+#: ../../merchants/technical.rst:244
 msgid ""
 "The GoCoin platform makes taking Dash as easy as installing a plugin. "
-"Payment processing is already implemented for every major shopping platform."
-" GoCoin is focused on helping merchants in privacy-related niches and "
-"specific industries, and handles all transaction risk for all payments from "
-"your customers."
+"Payment processing is already implemented for every major shopping "
+"platform. GoCoin is focused on helping merchants in privacy-related "
+"niches and specific industries, and handles all transaction risk for all "
+"payments from your customers."
 msgstr ""
 "La plataforma GoCoin hace que tomar Dash sea tan fácil como instalar un "
-"complemento. El procesamiento de pagos ya está implementado para todas las "
-"principales plataformas de compras. GoCoin se centra en ayudar a los "
+"complemento. El procesamiento de pagos ya está implementado para todas "
+"las principales plataformas de compras. GoCoin se centra en ayudar a los "
 "comerciantes en nichos relacionados con la privacidad e industrias "
-"específicas, y maneja todos los riesgos de transacción para todos los pagos "
-"de tus clientes."
+"específicas, y maneja todos los riesgos de transacción para todos los "
+"pagos de tus clientes."
 
-#: ../../merchants/technical.rst:117
+#: ../../merchants/technical.rst:250
 msgid ""
-"Features: Invoicing, Exchange Rates, WebHook Callbacks. GoCoin holds Private"
-" Keys on their server allowing the merchant to withdraw funds in "
+"Features: Invoicing, Exchange Rates, WebHook Callbacks. GoCoin holds "
+"Private Keys on their server allowing the merchant to withdraw funds in "
 "Cryptocurrency or convert to Fiat."
 msgstr ""
 "Características: Facturación, Tipos de cambio, Retorno de llamadas de "
 "WebHook. GoCoin posee llaves privadas en su servidor, lo que permite al "
 "comerciante retirar fondos en criptomonedas o convertir a Fiat."
 
-#: ../../merchants/technical.rst:120
+#: ../../merchants/technical.rst:253
 msgid ""
 "Integrations: WooCommerce, Magento, Prestashop, VirtueMart, ZenCart, "
 "OpenCart, OSCommerce, UberCart, nopCommerce, WHMCS, NATS4, Shopify."
@@ -257,47 +619,47 @@ msgstr ""
 "Integraciones: WooCommerce, Magento, Prestashop, VirtueMart, ZenCart, "
 "OpenCart, OSCommerce, UberCart, nopCommerce, WHMCS, NATS4, Shopify."
 
-#: ../../merchants/technical.rst:122
+#: ../../merchants/technical.rst:255
 msgid "Pricing Model: 1% Processing Fee (https://gocoin.com/fees)"
-msgstr ""
-"Modelo de precios: 1% comisión de procesamiento (https://gocoin.com/fees)"
+msgstr "Modelo de precios: 1% comisión de procesamiento (https://gocoin.com/fees)"
 
-#: ../../merchants/technical.rst:123
+#: ../../merchants/technical.rst:256
 msgid "Documentation: https://gocoin.com/docs"
 msgstr "Documentación: https://gocoin.com/docs"
 
-#: ../../merchants/technical.rst:127
+#: ../../merchants/technical.rst:260
 msgid "CoinPayments"
 msgstr "CoinPayments"
 
-#: ../../merchants/technical.rst:134
+#: ../../merchants/technical.rst:267
 msgid "https://www.coinpayments.net"
 msgstr "https://www.coinpayments.net"
 
-#: ../../merchants/technical.rst:136
+#: ../../merchants/technical.rst:269
 msgid ""
-"CoinPayments is an integrated payment gateway for cryptocurrencies such as "
-"Dash. Shopping cart plugins are available for all popular webcarts used "
-"today. CoinPayments can help you set up a new checkout, or integrate with "
-"your pre-existing checkout."
+"CoinPayments is an integrated payment gateway for cryptocurrencies such "
+"as Dash. Shopping cart plugins are available for all popular webcarts "
+"used today. CoinPayments can help you set up a new checkout, or integrate"
+" with your pre-existing checkout."
 msgstr ""
-"CoinPayments es una pasarela de pago integrada para las criptomonedas, como "
-"Dash. Los complementos del carrito de compras están disponibles para todos "
-"los webcarts populares que se usan hoy en día. CoinPayments puede ayudarte a"
-" configurar un nuevo sistema de pagos o integrarse con tu sistema de pago "
-"preexistente."
+"CoinPayments es una pasarela de pago integrada para las criptomonedas, "
+"como Dash. Los complementos del carrito de compras están disponibles para"
+" todos los webcarts populares que se usan hoy en día. CoinPayments puede "
+"ayudarte a configurar un nuevo sistema de pagos o integrarse con tu "
+"sistema de pago preexistente."
 
-#: ../../merchants/technical.rst:141
+#: ../../merchants/technical.rst:274
 msgid ""
-"Features: Invoicing, Exchange Rates, WebHook Callbacks. CoinPayments holds "
-"Private Keys on their server allowing merchant to withdraw funds in "
-"Cryptocurrency or convert to Fiat."
+"Features: Invoicing, Exchange Rates, WebHook Callbacks. CoinPayments "
+"holds Private Keys on their server allowing merchant to withdraw funds in"
+" Cryptocurrency or convert to Fiat."
 msgstr ""
 "Características: Facturación, Tipos de cambio, Retorno de llamadas de "
-"WebHook. CoinPayments tiene llaves privadas en su servidor, lo que permite "
-"al comerciante retirar fondos en criptomonedas o convertir a Fiat."
+"WebHook. CoinPayments tiene llaves privadas en su servidor, lo que "
+"permite al comerciante retirar fondos en criptomonedas o convertir a "
+"Fiat."
 
-#: ../../merchants/technical.rst:144
+#: ../../merchants/technical.rst:277
 msgid ""
 "Integrations: aMember Pro, Arastta, Blesta, BoxBilling, Drupal, Ecwid, "
 "Hikashop, Magento, OpenCart, OSCommerce, PrestaShop, Tomato Cart, "
@@ -307,166 +669,234 @@ msgstr ""
 "Hikashop, Magento, OpenCart, OSCommerce, PrestaShop, Tomato Cart, "
 "WooCommerce, Ubercart, XCart, ZenCart"
 
-#: ../../merchants/technical.rst:147
+#: ../../merchants/technical.rst:280
 msgid ""
-"Pricing Model: 0.5% Processing Fee (https://www.coinpayments.net/help-fees)"
+"Pricing Model: 0.5% Processing Fee (https://www.coinpayments.net/help-"
+"fees)"
 msgstr ""
 "Modelo de precios: 0.5% comisión de preocesamiento "
 "(https://www.coinpayments.net/help-fees)"
 
-#: ../../merchants/technical.rst:149
+#: ../../merchants/technical.rst:282
 msgid "Documentation: https://www.coinpayments.net/apidoc"
 msgstr "Documentación: https://www.coinpayments.net/apidoc"
 
-#: ../../merchants/technical.rst:153
+#: ../../merchants/technical.rst:288
 msgid "SDK Resources"
 msgstr "Recursos SDK "
 
-#: ../../merchants/technical.rst:155
+#: ../../merchants/technical.rst:290
 msgid ""
 "This documentation is also available as a `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/merchants /Integration-"
-"Resources-SDK.pdf>`__."
+"<https://github.com/dashpay/docs/raw/master/binary/merchants "
+"/Integration-Resources-SDK.pdf>`__."
 msgstr ""
 "Esta documentación también está disponible en un `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/merchants /Integration-"
-"Resources-SDK.pdf>`__."
+"<https://github.com/dashpay/docs/raw/master/binary/merchants "
+"/Integration-Resources-SDK.pdf>`__."
 
-#: ../../merchants/technical.rst:159
+#: ../../merchants/technical.rst:294
+#, fuzzy
 msgid ""
 "SDKs (Software Development Kits) are used to accelerate the design and "
-"development of a product for the Dash Network. These resources can either be"
-" used to interface with an API provider or for the creation of standalone "
-"applications."
+"development of a product for the Dash Network. These resources can either"
+" be used to interface with an API provider or for the creation of "
+"standalone applications by forming transactions and/or performing various"
+" wallet services."
 msgstr ""
-"Los SDK (kits de desarrollo de software) se utilizan para acelerar el diseño"
-" y el desarrollo de un producto para la red Dash. Estos recursos pueden "
-"usarse para interactuar con un proveedor de API o para la creación de "
-"aplicaciones independientes."
+"Los SDK (kits de desarrollo de software) se utilizan para acelerar el "
+"diseño y el desarrollo de un producto para la red Dash. Estos recursos "
+"pueden usarse para interactuar con un proveedor de API o para la creación"
+" de aplicaciones independientes."
 
-#: ../../merchants/technical.rst:166
+#: ../../merchants/technical.rst:302
 msgid "Dash Developer Guide"
 msgstr "Guía de desarrollador de Dash"
 
-#: ../../merchants/technical.rst:173
+#: ../../merchants/technical.rst:309
 msgid "https://dash-docs.github.io/en/developer-guide"
 msgstr "https://dash-docs.github.io/en/developer-guide"
 
-#: ../../merchants/technical.rst:175
+#: ../../merchants/technical.rst:311
 msgid ""
 "The Dash Developer Guide aims to provide the information you need to "
-"understand Dash and start building Dash-based applications. To make the best"
-" use of this documentation, you may want to install the current version of "
-"Dash Core, either from source or from a pre-compiled executable."
+"understand Dash and start building Dash-based applications. To make the "
+"best use of this documentation, you may want to install the current "
+"version of Dash Core, either from source or from a pre-compiled "
+"executable."
 msgstr ""
 "La Guía de desarrollador de Dash tiene como objetivo proporcionar la "
 "información que se necesita para comprender Dash y comenzar a crear "
-"aplicaciones basadas en Dash. Para hacer el mejor uso de esta documentación,"
-" es mejor que instales la versión actual de Dash Core, ya sea desde el "
-"origen o desde un ejecutable precompilado."
+"aplicaciones basadas en Dash. Para hacer el mejor uso de esta "
+"documentación, es mejor que instales la versión actual de Dash Core, ya "
+"sea desde el origen o desde un ejecutable precompilado."
 
-#: ../../merchants/technical.rst:181
+#: ../../merchants/technical.rst:317
 msgid "Documentation: https://dash-docs.github.io/en/developer-guide"
 msgstr "Documentación: https://dash-docs.github.io/en/developer-guide"
 
-#: ../../merchants/technical.rst:185
-msgid "Dashcore"
-msgstr "Dashcore"
+#: ../../merchants/technical.rst:320
+msgid "NodeJS/JavaScript: Bitcore (Dashcore)"
+msgstr ""
 
-#: ../../merchants/technical.rst:192
+#: ../../merchants/technical.rst:327
 msgid "https://bitcore.io"
 msgstr "https://bitcore.io"
 
-#: ../../merchants/technical.rst:194
+#: ../../merchants/technical.rst:329
+#, fuzzy
 msgid ""
-"Dashcore is a fork of Bitcore and operates as a full Dash node — your apps "
-"run directly on the  peer-to-peer network. For wallet application "
+"Dashcore is a fork of Bitcore and operates as a full Dash node — your "
+"apps run directly on the peer-to-peer network. For wallet application "
 "development, additional indexes have been added into Dash for querying "
 "address balances, transaction history, and unspent outputs."
 msgstr ""
-"Dashcore es una bifurcación de Bitcore y funciona como un nodo completo de "
-"Dash — tus aplicaciones se ejecutan directamente en la red persona persona. "
-"Para el desarrollo de aplicaciones de billetera, se han agregado índices "
-"adicionales en Dash para consultar saldos de direcciones, historial de "
-"transacciones y salidas no gastadas."
+"Dashcore es una bifurcación de Bitcore y funciona como un nodo completo "
+"de Dash — tus aplicaciones se ejecutan directamente en la red persona "
+"persona. Para el desarrollo de aplicaciones de billetera, se han agregado"
+" índices adicionales en Dash para consultar saldos de direcciones, "
+"historial de transacciones y salidas no gastadas."
 
-#: ../../merchants/technical.rst:199
+#: ../../merchants/technical.rst:334
 msgid "Platform: NodeJS / Javascript"
 msgstr "Plataforma: NodeJS / Javascript"
 
-#: ../../merchants/technical.rst:200
+#: ../../merchants/technical.rst:335
 msgid "Documentation: https://bitcore.io/api/lib"
 msgstr "Documentación: https://bitcore.io/api/lib"
 
-#: ../../merchants/technical.rst:201
+#: ../../merchants/technical.rst:336
 msgid "Repository lib: https://github.com/dashevo/dashcore-lib"
 msgstr "Libreria de repositorio: https://github.com/dashevo/dashcore-lib"
 
-#: ../../merchants/technical.rst:202
+#: ../../merchants/technical.rst:337
 msgid "Repository node: https://github.com/dashevo/dashcore-node"
 msgstr "Nodo de repositorio: https://github.com/dashevo/dashcore-node"
 
-#: ../../merchants/technical.rst:206
-msgid "DashJ"
-msgstr "DashJ"
+#: ../../merchants/technical.rst:340
+msgid "PHP: Bitcoin-PHP"
+msgstr ""
 
-#: ../../merchants/technical.rst:213
+#: ../../merchants/technical.rst:342
+#, fuzzy
+msgid "https://github.com/Bit-Wasp/bitcoin-php"
+msgstr "https://github.com/MetacoSA/NBitcoin"
+
+#: ../../merchants/technical.rst:344
+msgid ""
+"Bitcoin-PHP is an implementation of Bitcoin with support for Dash using "
+"mostly pure PHP."
+msgstr ""
+
+#: ../../merchants/technical.rst:347
+#, fuzzy
+msgid "Platform: PHP"
+msgstr "Plataforma: Java"
+
+#: ../../merchants/technical.rst:348
+#, fuzzy
+msgid ""
+"Documentation: https://github.com/Bit-Wasp/bitcoin-"
+"php/blob/master/doc/Introduction.md"
+msgstr "Documentación: https://github.com/dashevo/insight-api"
+
+#: ../../merchants/technical.rst:349
+#, fuzzy
+msgid "Repository: https://github.com/Bit-Wasp/bitcoin-php"
+msgstr "Repositorio: https://github.com/MetacoSA/NBitcoin"
+
+#: ../../merchants/technical.rst:352
+msgid "Python: PyCoin"
+msgstr ""
+
+#: ../../merchants/technical.rst:354
+#, fuzzy
+msgid "https://github.com/richardkiss/pycoin"
+msgstr "https://github.com/MetacoSA/NBitcoin"
+
+#: ../../merchants/technical.rst:356
+msgid ""
+"PyCoin is an implementation of a bunch of utility routines that may be "
+"useful when dealing with Bitcoin and Dash. It has been tested with Python"
+" 2.7, 3.6 and 3.7."
+msgstr ""
+
+#: ../../merchants/technical.rst:360
+#, fuzzy
+msgid "Platform: Python"
+msgstr "Plataforma: Java"
+
+#: ../../merchants/technical.rst:361
+#, fuzzy
+msgid "Documentation: https://pycoin.readthedocs.io/en/latest/"
+msgstr "Documentación: https://gocoin.com/docs"
+
+#: ../../merchants/technical.rst:362
+#, fuzzy
+msgid "Repository: https://github.com/richardkiss/pycoin"
+msgstr "Repositorio: https://github.com/MetacoSA/NBitcoin"
+
+#: ../../merchants/technical.rst:365
+msgid "Java: DashJ"
+msgstr ""
+
+#: ../../merchants/technical.rst:372
 msgid "https://github.com/HashEngineering/dashj"
 msgstr "https://github.com/HashEngineering/dashj"
 
-#: ../../merchants/technical.rst:215
+#: ../../merchants/technical.rst:374
 msgid ""
 "DashJ is a library for working with the Dash protocol. It can maintain a "
-"wallet, send/receive transactions (including InstantSend) without needing a "
-"local copy of Dash Core, and has many other advanced features. It's "
+"wallet, send/receive transactions (including InstantSend) without needing"
+" a local copy of Dash Core, and has many other advanced features. It's "
 "implemented in Java but can be used from any JVM compatible language: "
 "examples in Python and JavaScript are included."
 msgstr ""
-"DashJ es una librería para trabajar con el protocolo Dash. Puede mantener "
-"una billetera, enviar/recibir transacciones (incluye InstantSend) sin "
+"DashJ es una librería para trabajar con el protocolo Dash. Puede mantener"
+" una billetera, enviar/recibir transacciones (incluye InstantSend) sin "
 "necesidad de una copia local de Dash Core, y tiene muchas otras "
-"características avanzadas. Esta implementado en Java pero puede ser usado "
-"desde cualquier "
+"características avanzadas. Esta implementado en Java pero puede ser usado"
+" desde cualquier "
 
-#: ../../merchants/technical.rst:221
+#: ../../merchants/technical.rst:380
 msgid "Platform: Java"
 msgstr "Plataforma: Java"
 
-#: ../../merchants/technical.rst:222
+#: ../../merchants/technical.rst:381
 msgid "Documentation: https://bitcoinj.github.io/getting-started"
 msgstr "Documentación: https://bitcoinj.github.io/getting-started"
 
-#: ../../merchants/technical.rst:223
+#: ../../merchants/technical.rst:382
 msgid "Example application: https://github.com/tomasz-ludek/pocket-of-dash"
 msgstr "Aplicación de ejemplo: https://github.com/tomasz-ludek/pocket-of-dash"
 
-#: ../../merchants/technical.rst:227
-msgid "NBitcoin"
-msgstr "NBitcoin"
+#: ../../merchants/technical.rst:385
+msgid ".NET: NBitcoin"
+msgstr ""
 
-#: ../../merchants/technical.rst:234
+#: ../../merchants/technical.rst:392
 msgid "https://github.com/MetacoSA/NBitcoin"
 msgstr "https://github.com/MetacoSA/NBitcoin"
 
-#: ../../merchants/technical.rst:236
+#: ../../merchants/technical.rst:394
 msgid ""
-"NBitcoin is the most complete Bitcoin library for the .NET platform, and has"
-" been patched to include support for Dash. It implements all most relevant "
-"Bitcoin Improvement Proposals (BIPs) and Dash Improvement Proposals (DIPs). "
-"It also provides low level access to Dash primitives so you can easily build"
-" your application on top of it."
+"NBitcoin is the most complete Bitcoin library for the .NET platform, and "
+"has been patched to include support for Dash. It implements all most "
+"relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement "
+"Proposals (DIPs). It also provides low level access to Dash primitives so"
+" you can easily build your application on top of it."
 msgstr ""
-"NBitcoin es la biblioteca más completa de Bitcoin para la plataforma .NET, y"
-" se ha modificado para incluir soporte para Dash. Implementa todas las "
-"propuestas de mejora más relevantes para Bitcoin (PIF) y para Dash (DIP). "
-"También proporciona acceso de bajo nivel a los primitivos de Dash para que "
-"puedas construir fácilmente tu aplicación sobre ella."
+"NBitcoin es la biblioteca más completa de Bitcoin para la plataforma "
+".NET, y se ha modificado para incluir soporte para Dash. Implementa todas"
+" las propuestas de mejora más relevantes para Bitcoin (PIF) y para Dash "
+"(DIP). También proporciona acceso de bajo nivel a los primitivos de Dash "
+"para que puedas construir fácilmente tu aplicación sobre ella."
 
-#: ../../merchants/technical.rst:242
+#: ../../merchants/technical.rst:400
 msgid "Platform: .NET"
 msgstr "Plataforma: .NET"
 
-#: ../../merchants/technical.rst:243
+#: ../../merchants/technical.rst:401
 msgid ""
 "Documentation: "
 "https://programmingblockchain.gitbooks.io/programmingblockchain/content/"
@@ -474,132 +904,133 @@ msgstr ""
 "Documentación: "
 "https://programmingblockchain.gitbooks.io/programmingblockchain/content/"
 
-#: ../../merchants/technical.rst:244
+#: ../../merchants/technical.rst:402
 msgid "Repository: https://github.com/MetacoSA/NBitcoin"
 msgstr "Repositorio: https://github.com/MetacoSA/NBitcoin"
 
-#: ../../merchants/technical.rst:257
+#: ../../merchants/technical.rst:414
 msgid "BlockCypher also offers client SDKs."
 msgstr "BlockCypher también ofrece clientes SDK."
 
-#: ../../merchants/technical.rst:259
+#: ../../merchants/technical.rst:416
 msgid "Platform: Ruby, Python, Java, PHP, Go, NodeJS"
 msgstr "Plataforma: Ruby, Python, Java, PHP, Go, NodeJS"
 
-#: ../../merchants/technical.rst:260
+#: ../../merchants/technical.rst:417
 msgid ""
-"Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-supported-"
-"language-sdks"
+"Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-"
+"supported-language-sdks"
 msgstr ""
-"Repositorios: https://www.blockcypher.com/dev/dash/#blockcypher-supported-"
-"language-sdks"
+"Repositorios: https://www.blockcypher.com/dev/dash/#blockcypher-"
+"supported-language-sdks"
 
-#: ../../merchants/technical.rst:273
+#: ../../merchants/technical.rst:429
 msgid "Platform: JavaScript, PHP, Java, Ruby, .NET, Python"
 msgstr "Plataforma: JavaScript, PHP, Java, Ruby, .NET, Python"
 
-#: ../../merchants/technical.rst:274
+#: ../../merchants/technical.rst:430
 msgid "Repositories: https://gocoin.com/docs"
 msgstr "Repositorios: https://gocoin.com/docs"
 
-#: ../../merchants/technical.rst:278
+#: ../../merchants/technical.rst:434
 msgid "InstantSend"
 msgstr "InstantSend"
 
-#: ../../merchants/technical.rst:280
+#: ../../merchants/technical.rst:436
 msgid ""
 "This documentation is also available as a `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/merchants /Integration-"
-"Resources-InstantSend.pdf>`__."
+"<https://github.com/dashpay/docs/raw/master/binary/merchants "
+"/Integration-Resources-InstantSend.pdf>`__."
 msgstr ""
 "Esta documentación también está disponible en un `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/merchants /Integration-"
-"Resources-InstantSend.pdf>`__."
+"<https://github.com/dashpay/docs/raw/master/binary/merchants "
+"/Integration-Resources-InstantSend.pdf>`__."
 
-#: ../../merchants/technical.rst:284
+#: ../../merchants/technical.rst:440
 msgid ""
 "InstantSend is a feature provided by the Dash network that allows for "
 "0-confirmation transactions to be safely accepted by Merchants and other "
 "service providers. Secured by the Masternode Network, this mechanism "
-"eliminates the risk of a “Double Spend” by locking transaction inputs for a "
-"given transaction at a protocol level."
+"eliminates the risk of a “Double Spend” by locking transaction inputs for"
+" a given transaction at a protocol level."
 msgstr ""
-"InstantSend es una función proporcionada por la red Dash que permite que las"
-" transacciones de con 0 confirmaciones sean aceptadas de forma segura por "
-"los comerciantes y otros proveedores de servicios. Asegurado por la red de "
-"masternodes, este mecanismo elimina el riesgo de un \"gasto doble\" al "
-"bloquear las entradas de transacción para una transacción determinada en un "
-"nivel de protocolo."
+"InstantSend es una función proporcionada por la red Dash que permite que "
+"las transacciones de con 0 confirmaciones sean aceptadas de forma segura "
+"por los comerciantes y otros proveedores de servicios. Asegurado por la "
+"red de masternodes, este mecanismo elimina el riesgo de un \"gasto "
+"doble\" al bloquear las entradas de transacción para una transacción "
+"determinada en un nivel de protocolo."
 
-#: ../../merchants/technical.rst:292
+#: ../../merchants/technical.rst:448
 msgid "InstantSend Transactions vs. Standard Transactions"
 msgstr "Transacciones InstantSend vs. Transacciones estándares"
 
-#: ../../merchants/technical.rst:294
+#: ../../merchants/technical.rst:450
 msgid ""
-"From an integration perspective there are only minor differences between an "
-"InstantSend Transaction and a Standard Transaction. Both transaction types "
-"are formed in the same way and are signed using the same process; the key "
-"difference is the fee structure and input requirements for InstantSend."
+"From an integration perspective there are only minor differences between "
+"an InstantSend Transaction and a Standard Transaction. Both transaction "
+"types are formed in the same way and are signed using the same process; "
+"the key difference is the fee structure and input requirements for "
+"InstantSend."
 msgstr ""
 "Desde una perspectiva de integración, solo existen pequeñas diferencias "
-"entre una Transacción InstantSend y una Transacción Estándar. Ambos tipos de"
-" transacciones se forman de la misma manera y se firman usando el mismo "
-"proceso; la diferencia clave es la estructura de comisiones y los requisitos"
-" de entrada para InstantSend."
+"entre una Transacción InstantSend y una Transacción Estándar. Ambos tipos"
+" de transacciones se forman de la misma manera y se firman usando el "
+"mismo proceso; la diferencia clave es la estructura de comisiones y los "
+"requisitos de entrada para InstantSend."
 
-#: ../../merchants/technical.rst:300
+#: ../../merchants/technical.rst:456
 msgid ""
 "Fee Structure: InstantSend utilizes a “per-input” fee of 0.0001 DASH per "
 "Input."
 msgstr ""
-"Estructura de comisiones: InstantSend utiliza una comisión “por-entrada” de "
-"0.0001 DASH por entrada."
+"Estructura de comisiones: InstantSend utiliza una comisión “por-entrada” "
+"de 0.0001 DASH por entrada."
 
-#: ../../merchants/technical.rst:302
+#: ../../merchants/technical.rst:458
 msgid ""
-"Input Requirements: All inputs for an InstantSend transaction must have at "
-"least 6 confirmations."
+"Input Requirements: All inputs for an InstantSend transaction must have "
+"at least 6 confirmations."
 msgstr ""
 "Requisitos de entrada: todas las entradas para una transacción de "
 "InstantSend deben tener al menos 6 confirmaciones."
 
-#: ../../merchants/technical.rst:305
+#: ../../merchants/technical.rst:461
 msgid ""
-"In the event that a given transaction does not meet both criteria it will "
-"revert to a standard transaction."
+"In the event that a given transaction does not meet both criteria it will"
+" revert to a standard transaction."
 msgstr ""
-"En el caso de que una transacción determinada no cumpla con ambos criterios,"
-" se revertirá a una transacción estándar."
+"En el caso de que una transacción determinada no cumpla con ambos "
+"criterios, se revertirá a una transacción estándar."
 
-#: ../../merchants/technical.rst:309
+#: ../../merchants/technical.rst:465
 msgid "Receiving InstantSend Transactions"
 msgstr "Recibir transacciones InstantSend"
 
-#: ../../merchants/technical.rst:311
+#: ../../merchants/technical.rst:467
 msgid ""
 "InstantSend transactions are handled in the same way as a Standard "
 "Transaction, typically through JSON-RPC, Insight API, or an internal "
 "notification script / service that is configured at a server level."
 msgstr ""
 "Las transacciones de InstantSend se manejan de la misma manera que una "
-"transacción estándar, generalmente a través de JSON-RPC, Insight API o un "
-"script/servicio de notificación interno que está configurado a nivel de "
+"transacción estándar, generalmente a través de JSON-RPC, Insight API o un"
+" script/servicio de notificación interno que está configurado a nivel de "
 "servidor."
 
-#: ../../merchants/technical.rst:315
+#: ../../merchants/technical.rst:471
 msgid ""
 "JSON-RPC: The following RPC commands will include InstantSend-related "
 "information. Within the response you’ll find an “InstantLock” field the "
-"status of a given Transaction. This true/false (boolean) value will indicate"
-" whether an InstantSend has been observed."
+"status of a given Transaction. This true/false (boolean) value will "
+"indicate whether an InstantSend has been observed."
 msgstr ""
-"JSON-RPC: los siguientes comandos RPC incluirán información relacionada con "
-"InstantSend. Dentro de la respuesta encontrarás un campo \"InstantLock\" el "
-"estado de una transacción determinada. Este valor verdadero/falso (booleano)"
-" indicará si se ha observado una InstantSend."
+"JSON-RPC: los siguientes comandos RPC incluirán información relacionada "
+"con InstantSend. Dentro de la respuesta encontrarás un campo "
+"\"InstantLock\" el estado de una transacción determinada. Este valor "
+"verdadero/falso (booleano) indicará si se ha observado una InstantSend."
 
-#: ../../merchants/technical.rst:320
+#: ../../merchants/technical.rst:476
 msgid ""
 "GetTransaction: https://dash-docs.github.io/en/developer-"
 "reference#gettransaction"
@@ -607,7 +1038,7 @@ msgstr ""
 "Obtener transacción: https://dash-docs.github.io/en/developer-"
 "reference#gettransaction"
 
-#: ../../merchants/technical.rst:321
+#: ../../merchants/technical.rst:477
 msgid ""
 "ListTransactions: https://dash-docs.github.io/en/developer-"
 "reference#listtransactions"
@@ -615,7 +1046,7 @@ msgstr ""
 "Enlistar transacciones: https://dash-docs.github.io/en/developer-"
 "reference#listtransactions"
 
-#: ../../merchants/technical.rst:322
+#: ../../merchants/technical.rst:478
 msgid ""
 "ListSinceBlock: https://dash-docs.github.io/en/developer-"
 "reference#listsinceblock"
@@ -623,48 +1054,50 @@ msgstr ""
 "ListSinceBlock: https://dash-docs.github.io/en/developer-"
 "reference#listsinceblock"
 
-#: ../../merchants/technical.rst:324
+#: ../../merchants/technical.rst:480
 msgid ""
-"Insight API: Insight API can be used to detect InstantSend transactions and "
-"to push notifications to clients using WebSockets. The API can also be "
-"manually polled to retrieve Transaction information including InstantSend "
-"status."
+"Insight API: Insight API can be used to detect InstantSend transactions "
+"and to push notifications to clients using WebSockets. The API can also "
+"be manually polled to retrieve Transaction information including "
+"InstantSend status."
 msgstr ""
-"Insight API: la Insight API se puede utilizar para detectar transacciones de"
-" InstantSend y enviar notificaciones a los clientes que usan WebSockets. La "
-"API también se puede sondear manualmente para recuperar información de la "
-"transacción, incluido el estado de InstantSend."
+"Insight API: la Insight API se puede utilizar para detectar transacciones"
+" de InstantSend y enviar notificaciones a los clientes que usan "
+"WebSockets. La API también se puede sondear manualmente para recuperar "
+"información de la transacción, incluido el estado de InstantSend."
 
-#: ../../merchants/technical.rst:329
-msgid "Web Socket: https://github.com/dashpay/insight-api-dash#web-socket-api"
-msgstr ""
-"Web Socket: https://github.com/dashpay/insight-api-dash#web-socket-api"
+#: ../../merchants/technical.rst:485
+#, fuzzy
+msgid "Web Socket: https://github.com/dashevo/insight-api#web-socket-api"
+msgstr "Web Socket: https://github.com/dashpay/insight-api-dash#web-socket-api"
 
-#: ../../merchants/technical.rst:330
+#: ../../merchants/technical.rst:486
+#, fuzzy
 msgid ""
-"Transaction API: https://github.com/dashpay/insight-api-dash#instantsend-"
+"Transaction API: https://github.com/dashevo/insight-api#instantsend-"
 "transactions"
 msgstr ""
-"API transacción: https://github.com/dashpay/insight-api-dash#instantsend-"
-"transactions"
+"Más información: https://github.com/dashevo/insight-api#instantsend-"
+"transaction"
 
-#: ../../merchants/technical.rst:332
+#: ../../merchants/technical.rst:488
 msgid ""
-"Script Notify: The Dash Core Daemon can be configured to execute an external"
-" script whenever an InstantSend transaction relating to that wallet is "
-"observed. This is configured by adding the following line to the dash.conf "
-"file:"
+"Script Notify: The Dash Core Daemon can be configured to execute an "
+"external script whenever an InstantSend transaction relating to that "
+"wallet is observed. This is configured by adding the following line to "
+"the dash.conf file:"
 msgstr ""
-"Notificación de script: Dash Core Daemon se puede configurar para ejecutar "
-"un script externo siempre que se observe una transacción de InstantSend "
-"relacionada con esa billetera. Esto se configura agregando la siguiente "
-"línea al archivo dash.conf:"
+"Notificación de script: Dash Core Daemon se puede configurar para "
+"ejecutar un script externo siempre que se observe una transacción de "
+"InstantSend relacionada con esa billetera. Esto se configura agregando la"
+" siguiente línea al archivo dash.conf:"
 
-#: ../../merchants/technical.rst:337
+#: ../../merchants/technical.rst:493
+#, python-format
 msgid "``instantsendnotify=/path/to/concurrent/safe/handler %s``"
 msgstr "``instantsendnotify=/path/to/concurrent/safe/handler %s``"
 
-#: ../../merchants/technical.rst:339
+#: ../../merchants/technical.rst:495
 msgid ""
 "*Note that only addresses imported to the wallet will be monitored for "
 "InstantSend Transactions.*"
@@ -672,43 +1105,43 @@ msgstr ""
 "*Ten en cuenta que solo las direcciones importadas a la billetera serán "
 "monitoreadas para transacciones InstantSend.*"
 
-#: ../../merchants/technical.rst:343
+#: ../../merchants/technical.rst:499
 msgid "Broadcasting InstantSend Transactions"
 msgstr "Transmitir Transacciones InstantSend"
 
-#: ../../merchants/technical.rst:345
+#: ../../merchants/technical.rst:501
 msgid ""
-"InstantSend Transactions can be constructed and broadcast using an approach "
-"similar to Standard Transactions. Provided the InstantSend Fee Structure and"
-" Input Requirements are met, an InstantSend can be broadcast using JSON-RPC "
-"or Insight API as a Raw Transaction."
+"InstantSend Transactions can be constructed and broadcast using an "
+"approach similar to Standard Transactions. Provided the InstantSend Fee "
+"Structure and Input Requirements are met, an InstantSend can be broadcast"
+" using JSON-RPC or Insight API as a Raw Transaction."
 msgstr ""
-"Las Transacciones InstantSend se pueden construir y difundir utilizando un "
-"enfoque similar a las Transacciones Estándar. Siempre que se cumplan la "
-"Estructura de comisiones de InstantSend y los Requisitos de entrada, se "
-"puede transmitir una InstantSend usando JSON-RPC o Insight API como una "
-"Transacción sin procesar."
+"Las Transacciones InstantSend se pueden construir y difundir utilizando "
+"un enfoque similar a las Transacciones Estándar. Siempre que se cumplan "
+"la Estructura de comisiones de InstantSend y los Requisitos de entrada, "
+"se puede transmitir una InstantSend usando JSON-RPC o Insight API como "
+"una Transacción sin procesar."
 
-#: ../../merchants/technical.rst:350
+#: ../../merchants/technical.rst:506
 msgid ""
-"JSON-RPC: The “SendRawTransaction” RPC command can be utilized to broadcast "
-"a raw transaction using InstantSend. When utilizing this command be sure to "
-"set both optional parameters as “true”"
+"JSON-RPC: The “SendRawTransaction” RPC command can be utilized to "
+"broadcast a raw transaction using InstantSend. When utilizing this "
+"command be sure to set both optional parameters as “true”"
 msgstr ""
 "JSON-RPC: El comando RPC \"SendRawTransaction\" se puede utilizar para "
-"transmitir una transacción sin procesar con InstantSend. Al utilizar este "
-"comando, asegúrate de establecer ambos parámetros opcionales como "
+"transmitir una transacción sin procesar con InstantSend. Al utilizar este"
+" comando, asegúrate de establecer ambos parámetros opcionales como "
 "\"verdadero\""
 
-#: ../../merchants/technical.rst:354
+#: ../../merchants/technical.rst:510
 msgid ""
 "``sendrawtransaction \"hexstring\" ( allowhighfees instantsend )`` "
 "``sendrawtransaction \"hexstring\" true true``"
 msgstr ""
-"``sendrawtransaction \"hexstring\" ( permite comisiones altas instantsend "
-")`` ``sendrawtransaction \"hexstring\" true true``"
+"``sendrawtransaction \"hexstring\" ( permite comisiones altas instantsend"
+" )`` ``sendrawtransaction \"hexstring\" true true``"
 
-#: ../../merchants/technical.rst:357
+#: ../../merchants/technical.rst:513
 msgid ""
 "More Information: https://dash-docs.github.io/en/developer-"
 "reference#sendrawtransaction"
@@ -716,17 +1149,18 @@ msgstr ""
 "Más información: https://dash-docs.github.io/en/developer-"
 "reference#sendrawtransaction"
 
-#: ../../merchants/technical.rst:359
+#: ../../merchants/technical.rst:515
 msgid ""
-"Insight API: Raw Transactions can also be broadcast as an InstantSend using "
-"Insight API. In this case all that is required is to POST the raw "
+"Insight API: Raw Transactions can also be broadcast as an InstantSend "
+"using Insight API. In this case all that is required is to POST the raw "
 "transaction using the ``/tx/sendix`` route."
 msgstr ""
 "Insight API: las transacciones sin procesar también se pueden transmitir "
 "como InstantSend utilizando Insight API. En este caso, todo lo que se "
-"requiere es PUBLICAR la transacción sin procesar con la ruta ``/tx/sendix``."
+"requiere es PUBLICAR la transacción sin procesar con la ruta "
+"``/tx/sendix``."
 
-#: ../../merchants/technical.rst:363
+#: ../../merchants/technical.rst:519
 msgid ""
 "More Information: https://github.com/dashevo/insight-api#instantsend-"
 "transaction"
@@ -734,21 +1168,21 @@ msgstr ""
 "Más información: https://github.com/dashevo/insight-api#instantsend-"
 "transaction"
 
-#: ../../merchants/technical.rst:366
+#: ../../merchants/technical.rst:522
 msgid "Additional Resources"
 msgstr "Recursos adicionales"
 
-#: ../../merchants/technical.rst:368
+#: ../../merchants/technical.rst:524
 msgid ""
-"The following resources provide additional information about InstantSend and"
-" are intended to help provide a more complete understanding of the "
+"The following resources provide additional information about InstantSend "
+"and are intended to help provide a more complete understanding of the "
 "underlying technologies."
 msgstr ""
-"Los siguientes recursos proporcionan información adicional sobre InstantSend"
-" y están destinados a ayudar a proporcionar una comprensión más completa de "
-"las tecnologías subyacentes."
+"Los siguientes recursos proporcionan información adicional sobre "
+"InstantSend y están destinados a ayudar a proporcionar una comprensión "
+"más completa de las tecnologías subyacentes."
 
-#: ../../merchants/technical.rst:372
+#: ../../merchants/technical.rst:528
 msgid ""
 "`InstantSend Whitepaper "
 "<https://dashpay.atlassian.net/wiki/download/attachments/75530298/Dash%20Whitepaper%20-%20InstantTX.pdf>`_"
@@ -756,7 +1190,7 @@ msgstr ""
 "`Whitepaper InstantSend "
 "<https://dashpay.atlassian.net/wiki/download/attachments/75530298/Dash%20Whitepaper%20-%20InstantTX.pdf>`_"
 
-#: ../../merchants/technical.rst:373
+#: ../../merchants/technical.rst:529
 msgid ""
 "`How Dash InstantSend Protect Merchants from Double Spends "
 "<https://www.youtube.com/watch?v=HJx82On8jig>`_"
@@ -764,59 +1198,59 @@ msgstr ""
 "`Cómo Dash InstantSend protege a los comerciantes de los gastos dobles "
 "<https://www.youtube.com/watch?v=HJx82On8jig>`_"
 
-#: ../../merchants/technical.rst:374
+#: ../../merchants/technical.rst:530
 msgid ""
 "`InstantSend Presentation from the Dash Conference London 2017 "
 "<https://www.youtube.com/watch?v=n4PELomRiFY>`_"
 msgstr ""
-"`Presentación de InstantSend desde la conferencia de Dash en Londres 2017 "
-"<https://www.youtube.com/watch?v=n4PELomRiFY>`_"
+"`Presentación de InstantSend desde la conferencia de Dash en Londres 2017"
+" <https://www.youtube.com/watch?v=n4PELomRiFY>`_"
 
-#: ../../merchants/technical.rst:378
+#: ../../merchants/technical.rst:534
 msgid "Vending Machines"
 msgstr "Maquina expendedora"
 
-#: ../../merchants/technical.rst:380
+#: ../../merchants/technical.rst:536
 msgid ""
-"Community member moocowmoo has released code to help merchants build their "
-"own vending machine and set it up to receive Dash InstantSend payments. The "
-"Dashvend software can also be used to create any sort of payment system, "
-"including point-of-sale systems, that can accept InstantSend payments."
+"Community member moocowmoo has released code to help merchants build "
+"their own vending machine and set it up to receive Dash InstantSend "
+"payments. The Dashvend software can also be used to create any sort of "
+"payment system, including point-of-sale systems, that can accept "
+"InstantSend payments."
 msgstr ""
-"El miembro de la moocowmoo ha liberado codigo para ayudar a los comercios a "
-"contruir su propia mauina expendedora y configurarla para recibir pagos de  "
-"InstantSend de Dash. El software Dashvend tambien puede ser utilizado para "
-"crear cualquir tipo de sistema de pago, incluyendo sistemas de punto de "
-"venta, que puedan aceptar pagos con InstantSend."
+"El miembro de la moocowmoo ha liberado codigo para ayudar a los comercios"
+" a contruir su propia mauina expendedora y configurarla para recibir "
+"pagos de  InstantSend de Dash. El software Dashvend tambien puede ser "
+"utilizado para crear cualquir tipo de sistema de pago, incluyendo "
+"sistemas de punto de venta, que puedan aceptar pagos con InstantSend."
 
-#: ../../merchants/technical.rst:386
+#: ../../merchants/technical.rst:542
 msgid "`Open Source Code <https://github.com/moocowmoo/dashvend>`_"
 msgstr "`Codigo de fuente abierta <https://github.com/moocowmoo/dashvend>`_"
 
-#: ../../merchants/technical.rst:387
+#: ../../merchants/technical.rst:543
 msgid "`Demonstration website <http://code.dashndrink.com>`_"
 msgstr "`Demostración de sitios web <http://code.dashndrink.com>`_"
 
-#: ../../merchants/technical.rst:388
+#: ../../merchants/technical.rst:544
 msgid "`Demonstration video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_"
-msgstr ""
-"`Demostración en video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_"
+msgstr "`Demostración en video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_"
 
-#: ../../merchants/technical.rst:392
+#: ../../merchants/technical.rst:548
 msgid "Price Tickers"
 msgstr "Precio de tickers"
 
-#: ../../merchants/technical.rst:394
+#: ../../merchants/technical.rst:550
 msgid ""
-"You can add a simple price ticket widget to your website using the simple "
-"`code snippet generator from CoinGecko "
+"You can add a simple price ticket widget to your website using the simple"
+" `code snippet generator from CoinGecko "
 "<https://www.coingecko.com/en/widgets/ticker/dash/usd>`_."
 msgstr ""
-"Puedes agregar un widget de ticket de precio simple a tu sitio web usando el"
-" simple `generador de fragmentos de código de CoinGecko "
+"Puedes agregar un widget de ticket de precio simple a tu sitio web usando"
+" el simple `generador de fragmentos de código de CoinGecko "
 "<https://www.coingecko.com/en/widgets/ticker/dash/usd>`_."
 
-#: ../../merchants/technical.rst:404
+#: ../../merchants/technical.rst:560
 msgid ""
 "Similar widgets with different designs are available from `CoinLib "
 "<https://coinlib.io/widgets>`_, `WorldCoinIndex "
@@ -832,56 +1266,75 @@ msgstr ""
 "información similar esta disponible en `DashCentral "
 "<https://www.dashcentral.org/about/api>`_."
 
-#: ../../merchants/technical.rst:412
+#: ../../merchants/technical.rst:568
 msgid "QR Codes"
 msgstr "Códigos R"
 
-#: ../../merchants/technical.rst:414
+#: ../../merchants/technical.rst:570
 msgid ""
 "Many wallets are capable of generating QR codes which can be scanned to "
-"simplify entry of the Dash address. Printing these codes or posting the on "
-"your website makes it easy to receive payment and tips in Dash, both online "
-"and offline."
+"simplify entry of the Dash address. Printing these codes or posting the "
+"on your website makes it easy to receive payment and tips in Dash, both "
+"online and offline."
 msgstr ""
-"Muchas billeteras son capaces de generar codigos QR los cuales pueden ser "
-"escaneados para simplificar la entrada de la dirección Dash. Imprimiendo "
-"estos codigos o publicandolos en su pagina web se hace mas facil recibir "
-"pagos y propinas en Dash, tanto en linea como fuera de linea."
+"Muchas billeteras son capaces de generar codigos QR los cuales pueden ser"
+" escaneados para simplificar la entrada de la dirección Dash. Imprimiendo"
+" estos codigos o publicandolos en su pagina web se hace mas facil recibir"
+" pagos y propinas en Dash, tanto en linea como fuera de linea."
 
-#: ../../merchants/technical.rst:419
+#: ../../merchants/technical.rst:575
 msgid ""
-"In Dash Core, go to the **Receive** tab, generate an address if necessary, "
-"and double-click it to display a QR code. Right click on the QR code and "
-"select **Save Image** to save a PNG file."
+"In Dash Core, go to the **Receive** tab, generate an address if "
+"necessary, and double-click it to display a QR code. Right click on the "
+"QR code and select **Save Image** to save a PNG file."
 msgstr ""
-"En la Dash Core, vaya a la pestaña **Recibir**, genere una dirección si es "
-"necesario y haga doble clic para mostrar un codigo QR. Haga clic derecho en "
-"el codigo QR y seleccione **Guardar Imagen** para guardar en un archivo PNG."
+"En la Dash Core, vaya a la pestaña **Recibir**, genere una dirección si "
+"es necesario y haga doble clic para mostrar un codigo QR. Haga clic "
+"derecho en el codigo QR y seleccione **Guardar Imagen** para guardar en "
+"un archivo PNG."
 
-#: ../../merchants/technical.rst:422
+#: ../../merchants/technical.rst:578
 msgid ""
 "In Dash for Android, tap **Request Coins** and then tap the QR code to "
 "display a larger image. You can screenshot this to save an image."
 msgstr ""
-"En Dash para Android, toque **Solicitar Monedas** luego toque el codigo QR "
-"para mostrar la imagen mas grande. Puede hacer captura de pantalla para "
-"guardar una imagen."
+"En Dash para Android, toque **Solicitar Monedas** luego toque el codigo "
+"QR para mostrar la imagen mas grande. Puede hacer captura de pantalla "
+"para guardar una imagen."
 
-#: ../../merchants/technical.rst:424
+#: ../../merchants/technical.rst:580
 msgid ""
-"In Dash for iOS, swipe to the left to display the **Receive Dash** screen. A"
-" QR code and address will appear. You can screenshot this to save an image."
+"In Dash for iOS, swipe to the left to display the **Receive Dash** "
+"screen. A QR code and address will appear. You can screenshot this to "
+"save an image."
 msgstr ""
-"En Dash para iOS, deslice a la izquierda para mostrar la pantalla **Recibir "
-"Dash**. Un codigo QR y dirección aparecera. Puedes hacer una captura de "
-"pantalla para guardar una imagen."
+"En Dash para iOS, deslice a la izquierda para mostrar la pantalla "
+"**Recibir Dash**. Un codigo QR y dirección aparecera. Puedes hacer una "
+"captura de pantalla para guardar una imagen."
 
-#: ../../merchants/technical.rst:427
+#: ../../merchants/technical.rst:583
 msgid ""
-"To generate a QR code from any Dash address, visit `CWA QR Code Generator "
-"<https://cwaqrgen.com/dash>`_ and simply paste your Dash address to generate"
-" an image."
+"To generate a QR code from any Dash address, visit `CWA QR Code Generator"
+" <https://cwaqrgen.com/dash>`_ and simply paste your Dash address to "
+"generate an image."
 msgstr ""
 "Para generar un código QR de cualquier dirección, visita `CWA QR Code "
 "Generator <https://cwaqrgen.com/dash>`_ y simplemente pegue su dirección "
 "Dash para generar una imagen."
+
+#~ msgid "Dashcore"
+#~ msgstr "Dashcore"
+
+#~ msgid "DashJ"
+#~ msgstr "DashJ"
+
+#~ msgid "NBitcoin"
+#~ msgstr "NBitcoin"
+
+#~ msgid ""
+#~ "Transaction API: https://github.com/dashpay/insight-"
+#~ "api-dash#instantsend-transactions"
+#~ msgstr ""
+#~ "API transacción: https://github.com/dashpay/insight-"
+#~ "api-dash#instantsend-transactions"
+
