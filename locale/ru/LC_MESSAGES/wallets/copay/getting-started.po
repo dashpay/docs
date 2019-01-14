@@ -7,15 +7,17 @@
 # Max Aronych <taofgoar@protonmail.com>, 2018
 # Андрей Дегтяр <diusha1711@gmail.com>, 2018
 # Leon White <leon.white@dash.org>, 2018
+# Дмитрий <dmitry.zhludin@gmail.com>, 2018
+# Julia Ogonkova <livingflcl@gmail.com>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"POT-Creation-Date: 2019-01-14 06:24+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
+"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,13 +28,15 @@ msgstr ""
 #: ../../wallets/copay/getting-started.rst:1
 msgid ""
 "Getting started with sending and receiving Dash using the Dash Copay wallet"
-msgstr ""
+msgstr "Как отправлять и получать Dash на кошелёк Dash Copay"
 
 #: ../../wallets/copay/getting-started.rst:1
 msgid ""
 "dash, mobile, wallet, copay, multisig, ios, android, installation, send, "
 "receive, addresses, getting started"
 msgstr ""
+"dash, мобильный, кошелёк, copay, multisig, ios, android, установка, "
+"отправить, получить, адреса, начало работы"
 
 #: ../../wallets/copay/getting-started.rst:9
 msgid "Getting Started"
@@ -46,12 +50,19 @@ msgid ""
 "screenshots will reference the Android software, highlighting differences "
 "between the platforms where necessary."
 msgstr ""
+"В этом документе описывается, как пользоваться самыми распространёнными "
+"функциями кошелька Dash Copay. Поскольку на всех поддерживаемых платформах "
+"(Android, iOS, Windows, macOS, Linux) функционал кошелька похож, инструкции "
+"и скриншоты сделаны по версии для Android, а различия в работе на разных "
+"платформах освещены там, где это необходимо."
 
 #: ../../wallets/copay/getting-started.rst:17
 msgid ""
 "The easiest way to install the Dash Copay for Android is from the Google "
 "Play Store."
 msgstr ""
+"Самый простой способ установить кошелёк Dash Copay для Android - через "
+"Google Play Store."
 
 #: ../../wallets/copay/getting-started.rst:24
 msgid ""
@@ -61,10 +72,15 @@ msgid ""
 "yourself, please see the instructions on  `GitHub "
 "<https://github.com/dashevo/dash-copay>`__."
 msgstr ""
+"Dash Copay для iOS доступен на Apple TestFlight. Чтобы присоединиться к "
+"списку тестирующих, отправьте запрос на адрес elizabeth.robuck@dash.org, "
+"указав в нём свой Apple Account ID. Инструкции для других платформ, а также "
+"инструкции по компилированию из исходного кода, смотрите на  `GitHub "
+"<https://github.com/dashevo/dash-copay>`__."
 
 #: ../../wallets/copay/getting-started.rst:33
 msgid "Installation"
-msgstr "Installation"
+msgstr "Установка"
 
 #: ../../wallets/copay/getting-started.rst:35
 msgid ""
@@ -82,6 +98,21 @@ msgid ""
 "necessarily under your personal control. Confirm the recovery phrase and "
 "terms of use. Your Dash Copay wallet is now ready to go!"
 msgstr ""
+"Когда вы впервые запускаете кошелёк Dash Copay, вам предложат выбор - "
+"создать новый кошелёк или восстановить существующий кошелёк из бэкапа. Если "
+"у вас нет другого кошелька с хранящимися на нём средствами и кодовой фразы "
+"для восстановления, выберите **Начать**, чтобы создать новый кошелёк. Когда "
+"потребуется, введите и подтвердите пароль для расходов, чтобы зашифровать "
+"ключи вашего кошелька. Вам нужно будет вводить этот пароль каждый раз, когда"
+" вы захотите потратить Dash с этого кошелька. После этого вам предложат "
+"сделать бэкап вашего кошелька с помощью кодовой фразы. Настоятельно "
+"рекомендуется последовать совету и сделать бэкап, нажав кнопку **Бэкап "
+"кошелька**. Ознакомьтесь с предупреждениями, введите пароль и запишите фразу"
+" с экрана на бумажный носитель. Не делайте скриншот, поскольку ваше "
+"устройство скорее всего отправит копию картинки в облачное хранилище, "
+"которое, возможно, не находится под вашим личным контролем. Подтвердите "
+"кодовую фразу и условия использования. Теперь ваш кошелёк Dash Copay готов к"
+" использованию!"
 
 #: ../../wallets/copay/getting-started.rst:50
 msgid "|image2| |image3| |image4| |image5| |image6| |image7|"
@@ -91,7 +122,7 @@ msgstr "|image2| |image3| |image4| |image5| |image6| |image7|"
 msgid ""
 "*Creating a new wallet and generating the recovery phrase in Dash Copay "
 "wallet*"
-msgstr ""
+msgstr "*Создание нового кошелька и кодовой фразы в кошельке Dash Copay*"
 
 #: ../../wallets/copay/getting-started.rst:69
 msgid ""
@@ -99,6 +130,9 @@ msgid ""
 "from backup** and enter the 12 word recovery phrase. File/text backups are "
 "also supported."
 msgstr ""
+"Если вы хотите восстановить уже существующий кошелёк Dash Copay, просто "
+"нажмите **Восстановить из бэкапа** и введите кодовую фразу из 12 слов. Также"
+" поддерживаются файловые и текстовые бэкапы."
 
 #: ../../wallets/copay/getting-started.rst:74
 msgid "Receiving"
@@ -114,14 +148,21 @@ msgid ""
 "between wallets. The receiving address will change and you will receive a "
 "notification when you receive the transfer."
 msgstr ""
+"Чтобы получить Dash, просто нажмите на иконку **Получить** внизу экрана. "
+"Кошелёк сгенерирует и покажет QR код, который можно отсканировать другим "
+"устройством,  или можно тапнуть на высветившийся адрес, чтобы сохранить его "
+"в буфер обмена и вставить в другом приложении. Если у вас несколько "
+"кошельков, внизу экрана отображается имя кошелька. Чтобы переключиться между"
+" кошельками, нажмите на него. Адрес получателя изменится, а вы получите "
+"уведомление, когда придёт транзакция."
 
 #: ../../wallets/copay/getting-started.rst:84
 msgid "|image8| |image9|"
-msgstr ""
+msgstr "|image8| |image9|"
 
 #: ../../wallets/copay/getting-started.rst:91
 msgid "*Receiving dash and viewing your balance in Dash Copay wallet*"
-msgstr ""
+msgstr "*Получение dash и просмотр баланса в кошельке Dash Copay*"
 
 #: ../../wallets/copay/getting-started.rst:94
 msgid "Sending"
@@ -140,18 +181,29 @@ msgid ""
 "Once the transaction is complete, you will see a payment confirmation "
 "screen."
 msgstr ""
+"В зависимости от того, в каком виде вы получили адрес от получателя платежа,"
+" можно отправить Dash двумя способами - тапнув на иконку **Сканировать**, "
+"чтобы задействовать камеру устройства и отсканировать QR код, либо на иконку"
+" **Отправить**, чтобы вставить туда скопированный ранее адрес или выбрать "
+"адрес из адресной книги Dash Copay. После того, как вы ввели адрес, будет "
+"возможно или необходимо ввести количество отправляемого Dash и - по желанию "
+"- примечание для получателя, а также решить, хотите ли вы использовать и "
+"включить для этой транзакции InstantSend (по умолчанию - выключен). Если у "
+"вас несколько кошельков, вы также можете выбрать, каким кошельком "
+"воспользоваться для отправления средств. После того, как транзакция "
+"завершится, вы увидите экран с подтверждением платежа."
 
 #: ../../wallets/copay/getting-started.rst:107
 msgid "|image10| |image11| |image12| |image13| |image14| |image15|"
-msgstr ""
+msgstr "|image10| |image11| |image12| |image13| |image14| |image15|"
 
 #: ../../wallets/copay/getting-started.rst:123
 msgid "*Sending Dash from Dash Copay wallet*"
-msgstr ""
+msgstr "*Отправление Dash с помощью кошелька Dash Copay*"
 
 #: ../../wallets/copay/getting-started.rst:126
 msgid "Viewing transactions and balances"
-msgstr ""
+msgstr "Просмотр транзакций и балансов"
 
 #: ../../wallets/copay/getting-started.rst:128
 msgid ""
@@ -163,12 +215,20 @@ msgid ""
 "recent transactions on the **Home** screen. You can tap any wallet to view "
 "the balance and transaction history associated with that wallet only."
 msgstr ""
+"Ваши недавние транзакции отображаются на **Домашнем** экране. Чтобы увидеть "
+"подробности транзакции, можно на неё тапнуть или ввести **Мемо**, чтобы при "
+"необходимости вспомнить её назначение. Нажмите на **Посмотреть в "
+"блокчейне**, чтобы открыть блокчейн эксплорер Insight и посмотреть все "
+"детали транзакции. Все созданные вами кошельки и соответствующие им балансы "
+"отображаются под недавними транзакциями на **Домашнем** экране. Чтобы "
+"посмотреть баланс и историю транзакций отдельного кошелька, тапните на этот "
+"кошелёк."
 
 #: ../../wallets/copay/getting-started.rst:137
 msgid "|image16| |image17| |image18|"
-msgstr ""
+msgstr "|image16| |image17| |image18|"
 
 #: ../../wallets/copay/getting-started.rst:146
 msgid ""
 "*Home screen, transaction details and wallet details in Dash Copay wallet*"
-msgstr ""
+msgstr "**Домашний экран, детали транзакции и кошелька в Dash Copay*"

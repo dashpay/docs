@@ -5,17 +5,19 @@
 # 
 # Translators:
 # Max Aronych <taofgoar@protonmail.com>, 2018
+# Дмитрий <dmitry.zhludin@gmail.com>, 2018
 # Julia Ogonkova <livingflcl@gmail.com>, 2018
 # Leon White <leon.white@dash.org>, 2018
+# Андрей Дегтяр <diusha1711@gmail.com>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"POT-Creation-Date: 2019-01-14 06:24+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
+"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,16 +55,17 @@ msgid ""
 msgstr ""
 "В этой инструкции описано, как установить P2Pool ноду Dash, чтобы управлять "
 "пулом майнеров. В отличие от централизованных майнинговых пулов, P2Pool "
-"работает по той же пиринговой (P2P) модели, что и Dash, что делает пул в "
+"работает по той же peer-2-peer (P2P) модели, что и Dash, что делает пул в "
 "целом высокоусточивым к атакам злоумышленников, а также сохраняет и защищает"
 " децентрализованную природу Dash. Когда вы запускаете P2Pool ноду, она ищет,"
 " соединяется и обменивается данными с децентрализованной сетью других P2Pool"
 " нод (которые также известны как пиры). Подобно блокчейну Dash, P2Pool ноды "
 "обменивается криптографической цепочкой ценных данных. P2Pool версия "
 "называется шэрчейн. Майнинг с P2Pool настоятельно рекомендуется из-за его "
-"децентрализованной и честной модели. P2Pool для Dash использует p2pool-dash "
-"софт с GitHub, который является форком p2pool для Биткойна. Больше "
-"информации тут. "
+"децентрализованной и честной модели. P2Pool для Dash использует `p2pool-dash"
+" <https://github.com/dashpay/p2pool-dash>`_ софт с GitHub, который является "
+"форком p2pool для Биткойна. Больше информации `здесь "
+"<https://en.bitcoin.it/wiki/P2Pool>`__. "
 
 #: ../../mining/p2pool.rst:26
 msgid ""
@@ -123,14 +126,15 @@ msgid ""
 "``<username>`` with a username of your choice::"
 msgstr ""
 "Скачайте копию Ubuntu Server LTS с https://www.ubuntu.com/download/server и "
-"установите её на вашу систему по инструкции, приведённой тут. Если вы "
-"используете VPS, например, Vultr или AWS, скорее всего ваш провайдер "
-"предоставляет функцию установки этой системы. Убедитесь, что вы отметили "
+"установите её на вашу систему по инструкции, приведённой `здесь "
+"<https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu- server>`__. "
+"Если вы используете VPS, например, Vultr или AWS, скорее всего ваш провайдер"
+" предоставляет функцию установки этой системы. Убедитесь, что вы отметили "
 "опцию \"OpenSSH server\" в процессе установки - с ней вы сможете управлять "
 "вашим сервером с удалённой консоли. Когда вы получите доступ к серверу, "
-"создайте нового пользователя без рут-прав (если вы ещё этого не сделали), "
+"создайте нового пользователя без рут-прав, если вы ещё этого не сделали, "
 "через приведённую ниже команду, заменив ``<username>`` на выбранное вами имя"
-" пользователя."
+" пользователя::"
 
 #: ../../mining/p2pool.rst:62
 msgid ""
@@ -155,8 +159,9 @@ msgid ""
 "Windows) or ssh (for Linux and macOS) if you have not already done so."
 msgstr ""
 "Перезапустите ваш сервер и войдите от имени нового пользователя. Здесь "
-"рекомендуется подключаться удалённо через PuTTY (для Windows) или ssh (для "
-"Linux или macOS), если вы ещё этого не сделали."
+"рекомендуется подключаться удалённо через `PuTTY "
+"<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_ (для "
+"Windows) или ssh (для Linux или macOS), если вы ещё этого не сделали."
 
 #: ../../mining/p2pool.rst:76
 msgid "Setting up port forwarding"
@@ -181,7 +186,10 @@ msgstr ""
 "доступ. Как это сделать - зависит от вашего сетевого роутера, и потому за "
 "рамками охвата этой инструкции. Ниже описывается настройка переадресации на "
 "примере роутера DD-WRT с открытым кодом. Инструкции по настройке "
-"переадресации порта можно найти здесь и здесь. "
+"переадресации порта можно найти `здесь <https://www.wikihow.com/Set-Up-Port-"
+"Forwarding-on-a-Router>`__ и `здесь "
+"<http://www.noip.com/support/knowledgebase/general-port-forwarding- "
+"guide/>`__."
 
 #: ../../mining/p2pool.rst:89
 msgid ""
@@ -208,10 +216,12 @@ msgid ""
 "ubuntu.18376/>`_, or simply follow these instructions to get the script. To "
 "get fetch the script and get started, type::"
 msgstr ""
-"Участник сообщества Dash **dracocephalum** щедро поделился скриптом для "
+"Участник сообщества Dash **dracocephalum** щедро поделился скриптом для "
 "автоматической настройки всего, что требуется для работы p2pool-dash ноды "
-"под Ubuntu Server 16.04 и выше. Чтобы узнать больше, смотрите тут - или "
-"просто следуйте инструкции. Чтобы получить скрипт и начать, напечатайте::"
+"под Ubuntu Server 16.04 и выше. Чтобы узнать больше, смотрите `этот пост на "
+"форуме <https://www.dash.org/forum/threads/script-to-deploy-p2pool-on- "
+"ubuntu.18376/>`_ - или просто следуйте инструкции. Чтобы получить скрипт и "
+"начать, напечатайте::"
 
 #: ../../mining/p2pool.rst:110
 msgid ""
@@ -237,27 +247,30 @@ msgstr ""
 
 #: ../../mining/p2pool.rst:121
 msgid "``PUBLIC_IP`` = your public IP address from the previous step"
-msgstr ""
+msgstr "``PUBLIC_IP`` = ваш публичный IP-адрес из предыдущего шага"
 
 #: ../../mining/p2pool.rst:122
 msgid "``EMAIL`` = your email address"
-msgstr ""
+msgstr "``EMAIL`` = ваш электронный адрес"
 
 #: ../../mining/p2pool.rst:123
 msgid "``PAYOUT_ADDRESS`` = your DASH wallet address to receive fees"
-msgstr ""
+msgstr "``PAYOUT_ADDRESS`` = адрес вашего кошелька DASH для получения выплат"
 
 #: ../../mining/p2pool.rst:124
 msgid "``USER_NAME`` = linux user name"
-msgstr ""
+msgstr "``USER_NAME`` = имя пользователя Linux"
 
 #: ../../mining/p2pool.rst:125
 msgid "``RPCUSER`` = enter a random alphanumeric rpc user name"
 msgstr ""
+"``RPCUSER`` = введите случайное буквенно-цифровое имя пользователя для "
+"сервера RPC"
 
 #: ../../mining/p2pool.rst:126
 msgid "``RPCPASSWORD`` = enter a random alphanumeric rpc password"
 msgstr ""
+"``RPCPASSWORD`` = введите случайный буквенно-цифровой пароль для сервера RPC"
 
 #: ../../mining/p2pool.rst:128
 msgid ""
@@ -422,7 +435,8 @@ msgstr ""
 "работать по инструкции и периодически проверять синхронизацию, используя "
 "следующую команду. Синхронизация завершится, когда число ``blocks`` будет "
 "равно текущему числу блоков в блокчейне Dash - то же самое можно увидеть в "
-"любом синхронизированном кошельке Dash или эксплорере блоков::"
+"любом синхронизированном кошельке Dash или `обозревателе блоков "
+"<https://insight.dash.org/insight/>`_::"
 
 #: ../../mining/p2pool.rst:255
 msgid "Setting up P2Pool"
@@ -464,16 +478,16 @@ msgstr ""
 
 #: ../../mining/p2pool.rst:292
 msgid "Punchy interface: http://ip_address:7903/static"
-msgstr ""
+msgstr "Краткий интерфейс: http://ip_address:7903/static"
 
 #: ../../mining/p2pool.rst:293
 msgid "Legacy interface: http://ip_address:7903/static/legacy"
-msgstr ""
+msgstr "Старый интерфейс: http://ip_address:7903/static/legacy"
 
 #: ../../mining/p2pool.rst:294
 msgid "Status interface: http://ip_address:7903/static/status"
-msgstr ""
+msgstr "Статус: http://ip_address:7903/static/status"
 
 #: ../../mining/p2pool.rst:295
 msgid "Extended interface: http://ip_address:7903/static/ext"
-msgstr ""
+msgstr "Расширенный интерфейс: http://ip_address:7903/static/ext"

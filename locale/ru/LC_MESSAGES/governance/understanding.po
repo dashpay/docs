@@ -4,17 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Андрей Дегтяр <diusha1711@gmail.com>, 2018
+# Дмитрий <dmitry.zhludin@gmail.com>, 2018
 # Leon White <leon.white@dash.org>, 2018
+# Андрей Дегтяр <diusha1711@gmail.com>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-24 09:15+0000\n"
+"POT-Creation-Date: 2019-01-14 06:24+0000\n"
 "PO-Revision-Date: 2018-05-07 04:43+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
+"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,12 +28,16 @@ msgid ""
 "Discussion of theory and motivation behind the Dash governance system and "
 "treasury"
 msgstr ""
+"Обсуждение теории и стимулирования системы управления Dash и Бюджетной "
+"системы"
 
 #: ../../governance/understanding.rst:1
 msgid ""
 "dash, dgbb, governance, funding, voting, blockchain, development, block "
 "reward, treasury, budget"
 msgstr ""
+"dash, dgbb, управление, финансирование, голосование, блокчейн, развитие, "
+"разработка, награда за блок, бюджет"
 
 #: ../../governance/understanding.rst:9
 msgid "Understanding Dash Governance"
@@ -204,8 +209,8 @@ msgid ""
 msgstr ""
 "Мастерноды голосуют за предложение (технически это объект управления на "
 "блокчейне), используя такие команды как “masternode vote yes”, “masternode "
-"vote no” или “masternode vote abstain” (\"за\", \"против\", "
-"\"воздерживаюсь\"). Результаты голосования выкладываются в сети и "
+"vote no” или “masternode vote abstain”, то есть \"за\", \"против\", "
+"\"воздерживаюсь\". Результаты голосования выкладываются в сети и "
 "подсчитываются в соответствии с инструкциями, которым следует сама сеть. "
 "Обсуждаемые бюджеты и ход голосования можно просмотреть, используя, "
 "например, команду “masternode budget show”."
@@ -495,7 +500,7 @@ msgid ""
 "network in supporting roles."
 msgstr ""
 "После подачи предложения информация об этом распростаняется в сети через "
-"`Dash Forum <https://www.dash.org/forum/topic/approved-proposals-updates-"
+"`Dash Forum <https://www.dash.org/forum/topic/approved-proposals- updates-"
 "news.140>`__ либо через публичные каналы и социальные сети. Поскольку есть "
 "возможность создавать предложения, которые оплачиваются в течение нескольких"
 " месяцев, также есть возможность и отменять финансирование проекта, изменив "
@@ -596,6 +601,16 @@ msgid ""
 "unallocated budget is simply never created in the superblock, reducing "
 "unnecessary inflation."
 msgstr ""
+"Если предложение прошло порог голосования, но для оплаты всей запрашиваемой "
+"суммы нет достаточного количества средств, частичного финансирования оно не "
+"получит. Вместо этого любые более мелкие предложения, которые также прошли "
+"порог и вписались в существующий бюджет, будут финансироваться, даже если "
+"они имеют меньшее количество голосов \"за\", чем более крупное предложение. "
+"Предложения, запрашивающие оплату на несколько бюджетных периодов, будут "
+"оставаться в системе Бюджета в течение срока их действия, даже если они не "
+"прошли порог голосования и даже если для их финансирования недостаточно "
+"средств, как описано выше. Любой нераспределённый бюджет просто никогда не "
+"будет создан в суперблоке, что снижает ненужную инфляцию."
 
 #: ../../governance/understanding.rst:292
 msgid ""
