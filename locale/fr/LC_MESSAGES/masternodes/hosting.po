@@ -34,6 +34,8 @@ msgid ""
 "dash, cryptocurrency, hosting, server, linux, masternode, contact, trezor, "
 "setup, operator, owner, dip3, reward"
 msgstr ""
+"dash, cryptomonnaie, hébergement, serveur, linux, masternode, contact, "
+"trezor, installation, opérateur, propriétaire, dip3, récompense"
 
 #: ../../masternodes/hosting.rst:9
 msgid "Hosting Services"
@@ -87,7 +89,7 @@ msgstr "Services : Hébergement, Parts"
 
 #: ../../masternodes/hosting.rst:36
 msgid "Cost: 15% of masternode payments"
-msgstr ""
+msgstr "Coût : 15% des paiements de masternode"
 
 #: ../../masternodes/hosting.rst:37
 msgid "`Site <https://crowdnode.io>`__"
@@ -116,7 +118,7 @@ msgstr "Services : Hébergement"
 
 #: ../../masternodes/hosting.rst:52
 msgid "Cost: 0.1 Dash/month"
-msgstr ""
+msgstr "Coût : 0,1 dash/mois"
 
 #: ../../masternodes/hosting.rst:53
 msgid "`Site <http://dashmasternode.io>`__"
@@ -148,7 +150,7 @@ msgstr "Géré par : Sephiroth"
 
 #: ../../masternodes/hosting.rst:69
 msgid "Cost: $5/month (free during beta)"
-msgstr ""
+msgstr "Coût : 5 dollars/mois (gratuit pendant la période de bêta)"
 
 #: ../../masternodes/hosting.rst:70
 msgid "`Site <https://www.allnodes.com>`__"
@@ -188,7 +190,7 @@ msgstr "Services: Hébergement, Vote, Conseil fiscal"
 
 #: ../../masternodes/hosting.rst:88
 msgid "0.34 Dash/month (variable, discounts available)"
-msgstr ""
+msgstr "Coût : 0,34 dash/mois (variable, des réductions sont possibles)"
 
 #: ../../masternodes/hosting.rst:89
 msgid "`Site <https://node40.com>`__"
@@ -228,7 +230,7 @@ msgstr "Géré par : moocowmoo (membre de l'équipe Dash Core)"
 
 #: ../../masternodes/hosting.rst:106
 msgid "Cost: 10% of masternode payments"
-msgstr ""
+msgstr "Coût : 10% des paiements de masternode"
 
 #: ../../masternodes/hosting.rst:107
 msgid "`Site <https://masternode.me>`__"
@@ -288,7 +290,7 @@ msgstr "Géré par : flare (membre de l'équipe Dash Core)"
 
 #: ../../masternodes/hosting.rst:134
 msgid "Cost: €18/month"
-msgstr ""
+msgstr "Coût : 18 €/mois"
 
 #: ../../masternodes/hosting.rst:135
 msgid "`Site <https://masternodehosting.com>`__"
@@ -308,7 +310,7 @@ msgstr ""
 
 #: ../../masternodes/hosting.rst:143
 msgid "Registering a hosted masternode"
-msgstr ""
+msgstr "Enregistrer un masternode hébergé"
 
 #: ../../masternodes/hosting.rst:145
 msgid ""
@@ -346,6 +348,8 @@ msgid ""
 ":ref:`Information for users of hosted masternodes <hosted-setup>` (you are "
 "here)"
 msgstr ""
+":ref:`Informations pour les utilisateurs de masternodes hébergés <hosted-"
+"setup>` (vous êtes ici)"
 
 #: ../../masternodes/hosting.rst:154
 msgid ""
@@ -360,10 +364,14 @@ msgid ""
 "It is highly recommended to first read at least the list of changes before "
 "continuing in order to familiarize yourself with the new concepts in DIP003."
 msgstr ""
+"Il est hautement recommandé, avant de continuer, de lire d'abord la liste "
+"des changements, afin de se familiariser avec les nouveaux concepts de la "
+"DIP003."
 
 #: ../../masternodes/hosting.rst:160
 msgid "Registering a hosted masternode is done in several steps:"
 msgstr ""
+"L'enregistrement d'un masternode hébergé se fait en plusieurs étapes :"
 
 #: ../../masternodes/hosting.rst:162
 msgid ""
@@ -380,12 +388,18 @@ msgid ""
 "percentage or according to a separate contract, and whether the masternode "
 "will be set up before or after the registration transaction"
 msgstr ""
+"Correspondez avec votre hébergeur pour déterminer qui générera les clés BLS "
+"d'opérateur, si les frais de l'hébergeur seront payés par un pourcentage de "
+"la récompense ou selon un contrat séparé, et si le masternode sera mis en "
+"place avant ou après la transaction d'enregistrement"
 
 #: ../../masternodes/hosting.rst:169
 msgid ""
 "Prepare, sign and broadcast the registration transaction using Dash Core or "
 "DMT"
 msgstr ""
+"Préparez, signez et émettez la transaction d'enregistrement en utilisant le "
+"portefeuille logiciel Dash Core ou l'utilitaire DashMasternodeTool"
 
 #: ../../masternodes/hosting.rst:172
 msgid ""
@@ -398,10 +412,20 @@ msgid ""
 " process closely follows the :ref:`setup guide <masternode-setup>`, "
 "beginning from the :ref:`registration step <register-masternode>`."
 msgstr ""
+"Il est **hautement recommandé** de stocker les clés de votre caution de "
+"masternode sur un :ref:`portefeuille matériel <dash-hardware-wallet>` pour "
+"une meilleure sécurité contre les pirates. Comme le portefeuille matériel "
+"n'est utilisé que pour signer une transaction, il n'y a aucun besoin de "
+"connecter ce portefeuille à Internet. Cependant, un portefeuille logiciel "
+"Dash Core comportant des fonds (pour les frais de transaction) est "
+"obligatoire pour soumettre la transaction d'enregistrement. Le processus "
+"d'enregistrement de masternode suit pas à pas le :ref:`guide d'installation "
+"<masternode-setup>` à partir de :ref:`l'étape d'enregistrement <register-"
+"masternode>`."
 
 #: ../../masternodes/hosting.rst:186
 msgid "Operator transactions"
-msgstr ""
+msgstr "Transactions d'opérateur"
 
 #: ../../masternodes/hosting.rst:188
 msgid ""
@@ -416,6 +440,18 @@ msgid ""
 "need to issue a :ref:`ProUpServTx transaction <update-dip3-config>` to "
 "update the service features and register the masternode."
 msgstr ""
+"La présente section s'adresse aux opérateurs gérant des nœuds pour le compte"
+" de propriétaires. Si vous fournissez au propriétaire du masternode "
+"l'adresse IP et le port d'un nœud complet synchronisé dont le fichier "
+"``dash.conf`` comprend votre ``masternodeblsprivkey`` tel que décrit "
+":ref:`ici <bls-generation>`, le masternode apparaîtra dans le groupe des "
+"masternodes DIP003 valides immédiatement après que le propriétaire a soumis "
+"la commande ``protx register_submit`` telle que décrite ci-dessus. Si le "
+"nœud complet ne tourne pas, ou si le propriétaire indique ``0`` pour "
+"``ipAndPort``, alors le nœud sera enregistré dans un état de bannissement "
+"PoSe. Dans ce cas, l'opérateur doit émettre une :ref:`transaction "
+"ProUpServTx <update-dip3-config>` pour mettre à jour les caractéristiques du"
+" service et enregistrer le masternode."
 
 #: ../../masternodes/hosting.rst:200
 msgid ""
@@ -424,3 +460,9 @@ msgid ""
 "ProUpServTx is also required to claim this reward by specifying a Dash "
 "address. If the reward is not claimed, it will be paid to the owner in full."
 msgstr ""
+"La transaction ProRegTx soumise par le propriétaire indique également le "
+"pourcentage de récompense alloué à l'opérateur. Elle n'indique pas l'adresse"
+" où doit être versé ce pourcentage, donc une transaction ProUpServTx est "
+"également obligatoire pour réclamer cette récompense en indiquant une "
+"adresse Dash. Si la récompense n'est pas réclamée, elle sera payée "
+"intégralement au propriétaire."

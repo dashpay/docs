@@ -1061,6 +1061,10 @@ msgid ""
 "used as the voting address if Spork 15 is not yet active. Generate a new "
 "address as follows::"
 msgstr ""
+"Для начала необходимо задать новый, не использовавшийся ранее адрес address "
+"from the wallet to serve as the owner address. Он должен отличаться от "
+"залогового адреса. It must also be used as the voting address if Spork 15 is"
+" not yet active. Сгенерируйте новый адрес, как показно ниже::"
 
 #: ../../masternodes/setup.rst:791
 msgid ""
@@ -1078,6 +1082,12 @@ msgid ""
 "unsigned ProRegTx special transaction using the ``protx register_prepare`` "
 "command. This command has the following syntax::"
 msgstr ""
+"По желанию вы также можете сгенерировать и пополнить средствами третий "
+"адрес, с которого будут оплачиваться комисии за транзакции. Приватный ключ "
+"этого адреса должен быть доступен кошельку, с которого транзакции "
+"отправляются в сеть. Сейчас мы подготовим неподписанную специальную "
+"ProRegTx-транзакцию, использовав команду ``protx register_prepare``. This "
+"command has the following syntax::"
 
 #: ../../masternodes/setup.rst:807
 msgid ""
