@@ -890,8 +890,10 @@ The command takes the following syntax::
 
 Where: 
 
-- ``tx``: The serialized transaction previously returned in the ``tx`` output field from the ``protx register_prepare`` command
-- ``sig``: The message signed with the collateral key from the ``signmessage`` command
+- ``tx``: The serialized transaction previously returned in the ``tx`` 
+  output field from the ``protx register_prepare`` command
+- ``sig``: The message signed with the collateral key from the 
+  ``signmessage`` command
 
 Example::
 
