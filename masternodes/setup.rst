@@ -491,24 +491,24 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc10/dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0/dashcore-0.13.0.0-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc10/SHA256SUMS.asc
-  sha256sum dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0/SHA256SUMS.asc
+  sha256sum dashcore-0.13.0.0-x86_64-linux-gnu.tar.gz
   cat SHA256SUMS.asc
 
 You can also optionally verify the authenticity of your download as an
 official release by Dash Core Team. All releases of Dash are signed
-using GPG by UdjinM6 with the key ``8359 2BD1 400D 58D9``, `verifiable
-here on Keybase <https://keybase.io/udjinm6>`_. Import the key, download
+using GPG by Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, `verifiable
+here on Keybase <https://keybase.io/codablock>`_. Import the key, download
 the ASC file for the current release of Dash and verify the signature as
 follows::
 
-  curl https://keybase.io/udjinm6/pgp_keys.asc | gpg --import
+  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   gpg --verify SHA256SUMS.asc
 
 .. figure:: img/setup-manual-gpg.png
@@ -520,7 +520,7 @@ Create a working directory for Dash, extract the compressed archive and
 copy the necessary files to the directory::
 
   mkdir ~/.dashcore
-  tar xfv dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
+  tar xfv dashcore-0.13.0.0-x86_64-linux-gnu.tar.gz
   cp -f dashcore-0.13.0/bin/dashd ~/.dashcore/
   cp -f dashcore-0.13.0/bin/dash-cli ~/.dashcore/
 
