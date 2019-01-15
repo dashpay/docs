@@ -132,9 +132,11 @@ Masternode Registration from DMT
 This documentation describes the procedure to register an existing
 masternode for the DIP003 masternode list if the collateral is held on a
 hardware wallet. DIP003 must be activated and DMT 0.9.21 or higher is
-required. You can update DMT by downloading the version appropriate for
-your system from the `DMT Releases page <https://github.com/Bertrand256/dash-masternode-tool/releases>`__. 
-Open DMT and ensure your existing masternode configuration appears.
+required. It is not possible to issue the registration transactions if
+DIP003 is not yet active. You can update DMT by downloading the version
+appropriate for your system from the `DMT Releases page
+<https://github.com/Bertrand256/dash-masternode-tool/releases>`__.  Open
+DMT and ensure your existing masternode configuration appears.
 
 Configuration
 -------------
@@ -271,11 +273,12 @@ Masternode Registration from Dash Core
 
 This documentation describes the procedure to register an existing
 masternode for the DIP003 masternode list if the collateral is held in
-the Dash Core software full wallet. DIP003 must be activated. The
-commands are shown as if they were entered in the Dash Core GUI by
-opening the console from Tools > Debug console, but the same result can
-be achieved on a masternode by entering the same commands and adding the
-prefix  ``~/.dashcore/dash-cli`` to each command.
+the Dash Core software full wallet. It is not possible to issue the
+registration transactions if DIP003 is not yet active. The commands are
+shown as if they were entered in the Dash Core GUI by opening the
+console from Tools > Debug console, but the same result can be achieved
+on a masternode by entering the same commands and adding the prefix
+``~/.dashcore/dash-cli`` to each command.
 
 
 Generate a BLS key pair
