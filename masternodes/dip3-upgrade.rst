@@ -87,17 +87,17 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0-rc10/dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0/dashcore-0.13.0.0-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.13.0.0-x86_64-linux-gnu.tar.gz
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-0.13.0.0-rc10-x86_64-linux-gnu.tar.gz
+  tar xfv dashcore-0.13.0.0-x86_64-linux-gnu.tar.gz
   cp -f dashcore-0.13.0/bin/dashd ~/.dashcore/
   cp -f dashcore-0.13.0/bin/dash-cli ~/.dashcore/
 
@@ -117,11 +117,16 @@ crontab by invoking ``crontab -e`` again and deleting the ``#``
 character.
 
 The Dash software on the masternode is now updated. Since Dash 0.13 also
-updates the protocol version, it is necessary to issue a ``masternode start`` 
-from Dash Core or DMT command to keep your masternode in the payment
-list during the transition period. See the `0.12.3 documentation
-<https://docs.dash.org/en/0.12.3/masternodes/setup.html#start-your-masternode>`__ 
-for more details.
+updates the protocol version, it is necessary to issue a ``masternode
+start``  from Dash Core or DMT command to keep your masternode in the
+payment list during the transition period. Ensure the protocol version
+is set to ``70213`` if starting from DMT, or see the `legacy documentation
+<https://docs.dash.org/en/0.12.3/masternodes/setup.html#start-your-masternode>`__  
+for more details. After your masternode software is updated, it is
+necessary to wait until enough miners upgrade for DIP003 to activate
+before you can continue with the DIP0003 masternode registration process
+below. You can track DIP003 activation progress `here 
+<http://178.254.23.111/~pub/Dash/Dash_Info.html>`__.
 
 
 .. _dmt-dip3-upgrade:
@@ -132,9 +137,11 @@ Masternode Registration from DMT
 This documentation describes the procedure to register an existing
 masternode for the DIP003 masternode list if the collateral is held on a
 hardware wallet. DIP003 must be activated and DMT 0.9.21 or higher is
-required. You can update DMT by downloading the version appropriate for
-your system from the `DMT Releases page <https://github.com/Bertrand256/dash-masternode-tool/releases>`__. 
-Open DMT and ensure your existing masternode configuration appears.
+required. It is not possible to issue the registration transactions if
+DIP003 is not yet active. You can update DMT by downloading the version
+appropriate for your system from the `DMT Releases page
+<https://github.com/Bertrand256/dash-masternode-tool/releases>`__.  Open
+DMT and ensure your existing masternode configuration appears.
 
 Configuration
 -------------
@@ -271,11 +278,12 @@ Masternode Registration from Dash Core
 
 This documentation describes the procedure to register an existing
 masternode for the DIP003 masternode list if the collateral is held in
-the Dash Core software full wallet. DIP003 must be activated. The
-commands are shown as if they were entered in the Dash Core GUI by
-opening the console from Tools > Debug console, but the same result can
-be achieved on a masternode by entering the same commands and adding the
-prefix  ``~/.dashcore/dash-cli`` to each command.
+the Dash Core software full wallet. It is not possible to issue the
+registration transactions if DIP003 is not yet active. The commands are
+shown as if they were entered in the Dash Core GUI by opening the
+console from Tools > Debug console, but the same result can be achieved
+on a masternode by entering the same commands and adding the prefix
+``~/.dashcore/dash-cli`` to each command.
 
 
 Generate a BLS key pair
@@ -444,8 +452,9 @@ The command takes the following syntax::
 Where: 
 
 - ``tx``: The serialized transaction previously returned in the ``tx`` 
-  output field from ``protx register_prepare`` in Step 2
-- ``sig``: The message signed with the collateral key from Step 3
+  output field from the ``protx register_prepare`` command
+- ``sig``: The message signed with the collateral key from the 
+  ``signmessage`` command
 
 Example::
 

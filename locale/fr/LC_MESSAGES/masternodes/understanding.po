@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-11 06:48+0000\n"
+"POT-Creation-Date: 2019-01-14 06:24+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Daf Daf, 2019\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -35,6 +35,8 @@ msgid ""
 "dash, masternodes, hosting, linux, payment, instantsend, privatesend, "
 "governance, quorum, evolution, bls,"
 msgstr ""
+"dash, masternodes, hébergement, linux, paiement, instantsend, privatesend, "
+"gouvernance, quorum, evolution, bls"
 
 #: ../../masternodes/understanding.rst:9
 msgid "Understanding Masternodes"
@@ -118,6 +120,22 @@ msgid ""
 "masternodes are given incentive to provide efficient and reliable services "
 "to the network."
 msgstr ""
+"Les masternodes sont payés par le réseau pour les services PrivateSend, "
+"InstantSend et de gouvernance qu'ils fournissent. 45% de la récompense de "
+"bloc est versée aux masternodes, 45% aux mineurs et 10% au budget. En "
+"pratique, la moitié de la récompense d'un bloc normal va au mineur et "
+"l'autre moitié au masternode. Puis, tous les 16616 blocs (soit tous les "
+"30,29 jours environ), un \"superbloc\" est créé, contenant le versement "
+"entier de 10% aux propositions budgétaires gagnantes. Pour le paiement de "
+"chaque bloc (toutes les 2,6 minutes environ), les masternodes sont choisis "
+"dans une liste déterministe, puis ils sont rétrogradés au début de la file "
+"d'attente après avoir été payés. Au fur et à mesure que sont créés de "
+"nouveaux masternodes, la durée entre deux paiements augmente. Si la caution "
+"d'un masternode est dépensée, ou si un masternode cesse de fournir des "
+"services au réseau pendant plus d'une heure, il est retiré de la liste "
+"jusqu'à ce que les services normalement attendus reprennent. De cette façon,"
+" les masternodes sont incités à fournir des services efficaces et fiables au"
+" réseau."
 
 #: ../../masternodes/understanding.rst:58
 msgid ""
@@ -160,10 +178,25 @@ msgid ""
 "<http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various real-time "
 "statistics on the masternode network."
 msgstr ""
+"Au mois de novembre 2018, le réseau Dash dispose de `plus de 5000 "
+"masternodes <http://178.254.23.111/~pub/masternode_count.png>`_ dans plus de"
+" `45 pays <https://chainz.cryptoid.info/dash/masternodes.dws>`_ et hébergés "
+"par `plus de 140 hébergeurs "
+"<http://178.254.23.111/~pub/Dash/masternode_ISPs.html>`_. La récompense de "
+"bloc est d'environ 3,34 dashs, donc le masternode choisi reçoit 1,67 dash "
+"par paiement, ou environ 6 dashs par mois. La récompense de bloc décroît "
+"d'environ 7,14% une fois par an, donc le retour sur investissement annuel "
+"d'un opérateur de masternode est d'environ 7% de la caution, et il diminuera"
+" avec le temps, `tel que calculé ici <https://docs.google.com/spreadsheets/d"
+" /1HqgEkyfZDAA6pIZ3df2PwFE8Z430SVIzQ-mCQ6wGCh4/edit#gid=523620673>`_. "
+"Utilisez `cet outil <https://dash- news.de/dashtv/#value=1000>`_ pour "
+"calculer en temps réel les taux de retour, et `ce site "
+"<http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ pour différentes "
+"statistiques en temps réel sur le réseau des masternodes."
 
 #: ../../masternodes/understanding.rst:88
 msgid "DIP003 Masternode Changes"
-msgstr ""
+msgstr "Nouveautés des masternodes DIP003"
 
 #: ../../masternodes/understanding.rst:90
 msgid ""
@@ -185,7 +218,7 @@ msgstr ""
 
 #: ../../masternodes/understanding.rst:95
 msgid ":ref:`dip3-changes` (you are here)"
-msgstr ""
+msgstr ":ref:`dip3-changes` (vous êtes ici)"
 
 #: ../../masternodes/understanding.rst:96
 msgid ":ref:`dip3-upgrade`"
@@ -212,13 +245,16 @@ msgstr ""
 
 #: ../../masternodes/understanding.rst:101
 msgid "Important concepts and changes:"
-msgstr ""
+msgstr "Concepts et nouveautés importantes :"
 
 #: ../../masternodes/understanding.rst:103
 msgid ""
 "It is possible to upgrade an existing masternode in-place without starting a"
 " new server and without moving your 1000 DASH collateral."
 msgstr ""
+"Il est possible de mettre à jour un masternode déjà existant, directement "
+"sur son serveur, sans avoir à mettre en place un nouveau serveur ou à "
+"déplacer votre caution de 1000 dashs."
 
 #: ../../masternodes/understanding.rst:105
 msgid ""
@@ -231,6 +267,16 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ containing a "
 "particular key is written to the blockchain."
 msgstr ""
+"Auparavant, un masternode était \"démarré\" au moyen de la commande "
+"``masternode start-alias``, qui se basait sur un fichier "
+"``masternode.conf``. Avec la DIP003, ce fichier n'est plus utilisé, et les "
+"masternodes sont \"enregistrés\" au lieu d'être \"démarrés\". Les "
+"masternodes commencent à offrir leurs services lorsqu'une `transaction "
+"spéciale <https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ "
+"`ProRegTx "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a"
+"-masternode-proregtx>`_, contenant une clé particulière, est écrite sur la "
+"blockchain."
 
 #: ../../masternodes/understanding.rst:111
 msgid ""
@@ -238,6 +284,10 @@ msgid ""
 " (txid) and index holding the collateral. The IP address and port of the "
 "masternode are also defined in this transaction."
 msgstr ""
+"Comme c'était le cas avec ``masternode.conf``, la transaction ProRegTx "
+"contient une référence à l'identifiant de la transaction (txid) de la "
+"caution, et à son index. L'adresse IP et le port du masternode sont "
+"également spécifiés dans cette transaction."
 
 #: ../../masternodes/understanding.rst:114
 msgid ""
@@ -245,6 +295,10 @@ msgid ""
 " public key, which represent 3 different roles in the masternode and define "
 "update and voting rights. The keys are:"
 msgstr ""
+"La transaction ProRegTx spécifie 2 adresses Dash (également appelées clés "
+"publiques) et 1 clé publique BLS, qui représentent 3 rôles différents dans "
+"le masternode et définissent les droits de mise à jour et de vote. Ces clés "
+"sont :"
 
 #: ../../masternodes/understanding.rst:118
 msgid ""
@@ -254,6 +308,11 @@ msgid ""
 " :ref:`ProUpRegTx <update-dip3-config>` transactions, it must be unique for "
 "each masternode."
 msgstr ""
+"``ownerKeyAddr`` : il s'agit d'une adresse Dash (clé publique) contrôlée par"
+" le propriétaire du masternode. Elle est distincte de l'adresse où est "
+"stockée la caution. Le propriétaire utilise la clé privée associée à cette "
+"adresse pour émettre des transactions :ref:`ProUpRegTx <update-"
+"dip3-config>`, elle doit donc être unique et propre à chaque masternode."
 
 #: ../../masternodes/understanding.rst:123
 msgid ""
@@ -264,6 +323,13 @@ msgid ""
 " messages and governance trigger votes, the BLS key must be unique for each "
 "masternode."
 msgstr ""
+"``operatorPubKey`` : il s'agit de la clé publique BLS de l'opérateur du "
+"masternode. Seul l'opérateur est autorisé à émettre des transactions "
+":ref:`ProUpServTx <update-dip3-config>`. La clé de l'opérateur est utilisée "
+"au cours des opérations sur le masternode pour signer des messages "
+"pair-à-pair relatifs au masternode, des messages relatifs au quorum et aux "
+"votes de gouvernance. C'est pourquoi la clé BLS doit être unique et propre à"
+" chaque masternode."
 
 #: ../../masternodes/understanding.rst:129
 msgid ""
@@ -271,6 +337,10 @@ msgid ""
 "voting. Votes signed with this key are valid while the masternode is in the "
 "registered set."
 msgstr ""
+"``votingKeyAddr`` : il s'agit d'une adresse Dash (clé publique) utilisée "
+"pour voter sur les propositions budgétaires. Les votes sont signés avec "
+"cette clé et sont valides tant que le masternode est inclus dans la liste "
+"des masternodes enregistrés."
 
 #: ../../masternodes/understanding.rst:133
 msgid ""
@@ -279,6 +349,11 @@ msgid ""
 "receive payments in the ProRegTx. The owner may optionally specify a non-"
 "zero percentage as payment to a separate masternode operator, if applicable."
 msgstr ""
+"Les paiements de masternode étaient auparavant envoyés à l'adresse détenant "
+"la caution. Avec la DIP003, le propriétaire peut définir dans la transaction"
+" ProRegTx une adresse différente de réception des paiements. Le propriétaire"
+" peut aussi, facultativement, définir un pourcentage non nul qui sera alloué"
+" comme paiement à un opérateur tiers de masternode, si besoin est."
 
 #: ../../masternodes/understanding.rst:138
 msgid ""
@@ -288,6 +363,12 @@ msgid ""
 "masternode-information>`_ in DIP003 and :ref:`update-dip3-config` in this "
 "documentation for more details."
 msgstr ""
+"La configuration de masternode peut être mise à jour ultérieurement au moyen"
+" de transactions ProUpServTx, ProUpRegTx et ProUpRevTx. Pour en savoir plus,"
+" voir `Mise à jour de la configuration de masternode "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-"
+"masternode-information>`_ dans la DIP003 et :ref:`update-dip3-config` dans "
+"la présente documentation."
 
 #: ../../masternodes/understanding.rst:143
 msgid ""
@@ -301,22 +382,35 @@ msgid ""
 "payments to operators, will not yet have any effect. The ``ownerKeyAddr`` "
 "and ``votingKeyAddr`` must also be identical until Spork 15 is enabled."
 msgstr ""
+"Toutes les fonctions relatives à la DIP003 prendront effet seulement lorsque"
+" le Spork 15 sera activé sur le réseau. Avant cette date, il faut mettre en "
+"place le masternode en suivant `l'ancienne procédure "
+"<https://docs.dash.org/en/0.12.3/masternodes/setup.html>`_ puis en suivant "
+":ref:`la procédure de mise à jour <dip3-upgrade>`. Pendant cette période de "
+"transition, le masternode continuera de fonctionner en mode de "
+"compatibilité, et toutes les fonctions relatives à la DIP003, telles que les"
+" paiements à une adresse distincte ou le pourcentage des paiements alloué "
+"aux opérateurs, ne seront pas encore fonctionnelles. Les clés "
+"``ownerKeyAddr`` et ``votingKeyAddr`` doivent également être identiques "
+"d'ici à ce que le Spork 15 soit activé."
 
 #: ../../masternodes/understanding.rst:153
 msgid "The process of setting up or upgrading a masternode is as follows:"
 msgstr ""
+"Le processus pour mettre en place ou à jour un masternode est le suivant :"
 
 #: ../../masternodes/understanding.rst:155
 msgid "Set up your server and operating system"
-msgstr ""
+msgstr "Configurez votre serveur et votre système d'exploitation"
 
 #: ../../masternodes/understanding.rst:156
 msgid "Install the Dash software and synchronize the blockchain"
-msgstr ""
+msgstr "Installez le logiciel Dash et synchronisez-le avec la blockchain"
 
 #: ../../masternodes/understanding.rst:157
 msgid "Generate a BLS key pair and enter the private key on the masternode"
 msgstr ""
+"Générez une paire de clés BLS et indiquez la clé privée à votre masternode"
 
 #: ../../masternodes/understanding.rst:158
 msgid "Prepare a ProRegTx transaction"
@@ -328,7 +422,7 @@ msgstr "Signer la transaction ProRegTx"
 
 #: ../../masternodes/understanding.rst:160
 msgid "Submit the signed ProRegTx transaction"
-msgstr ""
+msgstr "Soumettez la transaction ProRegTx signée"
 
 #: ../../masternodes/understanding.rst:162
 msgid ""
@@ -337,6 +431,12 @@ msgid ""
 "Wallet (or DMT). Step 5 requires access to the wallet actually holding the "
 "collateral. Step 6 requires a Dash balance to pay the transaction fee."
 msgstr ""
+"L'étape 1 peut être omise si vous avez déjà un serveur existant. Les étapes "
+"2 et 3 impliquent un accès direct au masternode. Les étapes 3 et 4 "
+"impliquent l'accès à un portefeuille Dash (ou à DashMasternodeTool). L'étape"
+" 5 implique l'accès au portefeuille qui détient effectivement la caution. "
+"L'étape 6 implique d'avoir un solde Dash positif afin de régler les frais de"
+" transaction."
 
 #: ../../masternodes/understanding.rst:169
 msgid "Masternodes vs. mining"
@@ -443,18 +543,31 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ and defines two "
 "sets of masternodes."
 msgstr ""
+"Les paiements de masternode dans Dash 0.13.0 sont entièrement déterministes "
+"et se basent sur un simple algorithme de tri de liste. Pour en savoir plus "
+"sur la logique de paiement de la version précédente (0.12.0), voir "
+"`l'ancienne documentation sur la logique de paiement "
+"<https://docs.dash.org/en/0.12.3/masternodes/understanding.html#payment-"
+"logic>`_. Dash 0.13.0 implémente la `DIP003 "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ et définit deux "
+"groupes de masternodes."
 
 #: ../../masternodes/understanding.rst:224
 msgid ""
 "The full set, which contains all registered masternodes that have not spent "
 "their collateral funding transactions."
 msgstr ""
+"Le groupe complet, qui contient tous les masternodes enregistrés qui n'ont "
+"pas dépensé leur caution."
 
 #: ../../masternodes/understanding.rst:226
 msgid ""
 "The valid set, a subset of the full set which contains all masternodes which"
 " are not marked as Proof of Service (PoSe) banned."
 msgstr ""
+"Le groupe valide, qui est un sous-groupe du groupe complet, et qui contient "
+"tous les masternodes qui ne sont pas marqués comme étant bannis de la preuve"
+" de service (PoSe)."
 
 #: ../../masternodes/understanding.rst:229
 msgid ""
@@ -466,6 +579,14 @@ msgid ""
 "more than one masternode, then the hash of the masternode ProRegTx is sorted"
 " to break the tie."
 msgstr ""
+"Chaque masternode du groupe de masternodes valides est identifié par le bloc"
+" où il a reçu son plus récent paiement. S'il n'a jamais été payé ou s'il a "
+"été banni pour ne pas avoir rempli les conditions de la preuve de service "
+"(PoSe), il est identifié à la place par le bloc où il a été enregistré pour "
+"la première fois, ou par celui où la preuve de service a été rétablie. La "
+"liste est classée par ordre ascendant, et son premier élément est payé. Si "
+"cela implique plus d'un masternode, alors l'empreinte de la transaction "
+"ProRegTx est utilisée pour départager les masternodes."
 
 #: ../../masternodes/understanding.rst:239
 msgid "Quorum selection"
@@ -481,6 +602,14 @@ msgid ""
 " the mathematical distance between the hash of each input and of the set of "
 "masternode funding transactions."
 msgstr ""
+"Les transactions InstantSend dans la version 0.13.0 de Dash sont sécurisés "
+"par un consensus de masternodes choisis de manière déterministe. Ce jeu de "
+"masternodes est appelé \"quorum\" de manière informelle, et il doit aboutir "
+"à un accord majoritaire d'au moins six sur dix pour que soit opéré avec "
+"succès le verrouillage des entrées d'une transaction. Plusieurs quorums sont"
+" auto-choisis pour chaque entrée d'une transaction InstantSend sur la base "
+"de la distance mathématique entre l'empreinte de chaque entrée et celle des "
+"transactions de financement du jeu de masternodes."
 
 #: ../../masternodes/understanding.rst:249
 msgid ""
@@ -587,7 +716,7 @@ msgstr "2 Go"
 
 #: ../../masternodes/understanding.rst:283
 msgid "4 GB"
-msgstr ""
+msgstr "4 Go"
 
 #: ../../masternodes/understanding.rst:285
 msgid "Disk"
@@ -595,11 +724,11 @@ msgstr "Stockage disque"
 
 #: ../../masternodes/understanding.rst:285
 msgid "20 GB"
-msgstr ""
+msgstr "20 Go"
 
 #: ../../masternodes/understanding.rst:285
 msgid "40 GB"
-msgstr ""
+msgstr "40 Go"
 
 #: ../../masternodes/understanding.rst:287
 msgid "Network"
@@ -635,3 +764,11 @@ msgid ""
 " servers until the block size reaches approximately 20 MB, after which "
 "custom hardware such as GPUs and eventually ASICs may be required."
 msgstr ""
+"Les caractéristiques matérielles minimales pour Dash Evolution restent à "
+"déterminer, même si certains indices peuvent être trouvés dans la `feuille "
+"de route <https://github.com/dashpay/dash-roadmap>`_ et dans ce `billet de "
+"blog <https://medium.com/@eduffield222/how-to-enabling-on-chain-scaling-"
+"2ffab5997f8b>`_. Il devrait être possible de faire tourner des masternodes "
+"Dash sur des serveurs VPS normaux jusqu'à ce que la taille de blocs atteigne"
+" environ 20 Mo, après quoi du matériel spécialisé sera nécessaire, tel que "
+"des GPU voire des ASIC."
