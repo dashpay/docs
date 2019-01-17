@@ -398,7 +398,7 @@ Example (remove line breaks if copying)::
   protx register_prepare
     2c499e3862e5aa5f220278f42f9dfac32566d50f1e70ae0585dd13290227fdc7
     1
-    140.82.59.51:19999
+    140.82.59.51:9999
     yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
     01d2c43f022eeceaaf09532d84350feb49d7e72c183e56737c816076d0e803d4f86036bd4151160f5732ab4a461bd127
     yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
