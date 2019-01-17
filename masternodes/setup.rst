@@ -837,7 +837,7 @@ Example (remove line breaks if copying)::
   protx register_prepare
     ad308ec104bdf113444be609eb3dce9474a5550424204c6538843e3ccd3d4e78
     1
-    140.82.59.51:10004
+    140.82.59.51:9999
     yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5 
     144cbf4d472716b9504a54c7ca26906a3346253b787ffeb1a4999325049f5b2c51ef2e7c215d85f0a9142ec1c78db99b
     yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5 
