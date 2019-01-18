@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Daf Daf, 2018
 # Leon White <leon.white@dash.org>, 2018
+# Daf Daf, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-14 06:24+0000\n"
+"POT-Creation-Date: 2019-01-17 11:14+0000\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
+"Last-Translator: Daf Daf, 2019\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -137,7 +137,7 @@ msgstr "Arguments de ligne de commande"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:42
 msgid "These commands are accurate as of Dash Core version 0.13.0.0."
-msgstr ""
+msgstr "Ces commandes sont exactes pour la version 0.13.0.0 de Dash Core."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:44
 msgid "`dashd`_"
@@ -186,7 +186,7 @@ msgstr "Options"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:66
 msgid "Print this help message and exit"
-msgstr ""
+msgstr "Imprimer ce message d'aide et quitter"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:67
 msgid "Print version and exit"
@@ -275,6 +275,8 @@ msgid ""
 "Extra transactions to keep in memory for compact block reconstructions "
 "(default: 100)"
 msgstr ""
+"Transactions supplémentaires à conserver en mémoire pour les reconstructions"
+" en blocs compacts (défaut : 100)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:81
 msgid ""
@@ -299,6 +301,15 @@ msgid ""
 " = automatically prune block files to stay under the specified target size "
 "in MiB)"
 msgstr ""
+"Réduire les exigences de stockage en élaguant (effaçant) les vieux blocs. "
+"Cela permet à la commande RPC pruneblockchain d'être appelée pour effacer "
+"des blocs spécifiques, et cela active l'élagage automatique des vieux blocs "
+"si une taille cible en Mo est indiquée. Ce mode est incompatible avec "
+"-txindex et -rescan. Attention : annuler ce réglage implique de "
+"retélécharger la blockchain entière. (par défaut : 0 = désactiver l'élagage "
+"de blocs, 1 = permettre l'élagage manuel par RPC, >945 = élaguer "
+"automatiquement les fichiers de blocs pour rester en-dessous de la taille "
+"cible spécifiée en Mo)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:84
 msgid "Rebuild chain state from the currently indexed blocks"
@@ -366,6 +377,8 @@ msgstr ""
 #: ../../wallets/dashcore/cmd-rpc.rst:97
 msgid "Allow RFC1918 addresses to be relayed and connected to (default: 0)"
 msgstr ""
+"Permettre aux adresses RFC1918 d'être retransmises et permettre de s'y "
+"connecter (défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:98
 msgid "Threshold for disconnecting misbehaving peers (default: 100)"
@@ -392,6 +405,8 @@ msgid ""
 "Connect only to the specified node(s); -noconnect or -connect=0 alone to "
 "disable automatic connections"
 msgstr ""
+"Se connecter seulement au(x) nœud(s) spécifié(s) ; -noconnect ou -connect=0 "
+"seul pour désactiver les connexions automatiques"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:102
 msgid ""
@@ -412,6 +427,8 @@ msgid ""
 "Query for peer addresses via DNS lookup, if low on addresses (default: 1 "
 "unless -connect/-noconnect)"
 msgstr ""
+"Requête d'obtention d'adresses de pairs par une consultation DNS, en cas de "
+"nombre faible d'adresses (défaut : 1, sauf -connect/-noconnect)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:105
 msgid "Specify your own public address"
@@ -455,6 +472,9 @@ msgid ""
 "time may be influenced by peers forward or backward by this amount. "
 "(default: 4200 seconds)"
 msgstr ""
+"Ajustement horaire maximum autorisé par rapport aux pairs. La valeur locale "
+"de l'heure peut être arrondie par les pairs dans cette limite inférieure ou "
+"supérieure. (défaut : 4200 secondes)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:113
 msgid ""
@@ -536,6 +556,9 @@ msgid ""
 "Whitelist peers connecting from the given IP address (e.g. 1.2.3.4) or CIDR "
 "notated network (e.g. 1.2.3.0/24). Can be specified multiple times."
 msgstr ""
+"Pairs en liste blanche se connectant depuis l'adresse IP spécifiée (par ex. "
+"1.2.3.4) ou le réseau CIDR noté (par ex. 1.2.3.0/24). Peut être spécifié "
+"plusieurs fois."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:127
 msgid ""
@@ -550,6 +573,9 @@ msgid ""
 "Force relay of transactions from whitelisted peers even if they violate "
 "local relay policy (default: 1)"
 msgstr ""
+"Obliger la retransmission des transactions depuis les pairs en liste "
+"blanche, même si elles violent les règles locales de retransmission (défaut "
+": 1)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:129
 msgid ""
@@ -578,12 +604,16 @@ msgid ""
 "A fee rate (in DASH/kB) that will be used when fee estimation has "
 "insufficient data (default: 0.00001)"
 msgstr ""
+"Un taux de frais de transaction (en dashs/Ko) qui sera utilisé quand "
+"l'estimation des frais ne dispose pas d'assez de données (défaut : 0,00001)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:138
 msgid ""
 "Fees (in DASH/kB) smaller than this are considered zero fee for transaction "
 "creation (default: 0.00001)"
 msgstr ""
+"Seuil de frais de transaction (en dashs/Ko) en-deçà duquel les frais sont "
+"considérés nuls pour la création de transaction (défaut : 0,00001)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:139
 msgid "Fee (in DASH/kB) to add to transactions you send (default: 0.00)"
@@ -600,6 +630,8 @@ msgstr ""
 #: ../../wallets/dashcore/cmd-rpc.rst:141
 msgid "Attempt to recover private keys from a corrupt wallet on startup"
 msgstr ""
+"Essayer au démarrage de récupérer les clés privées d'un portefeuille "
+"corrompu"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:142
 msgid "Spend unconfirmed change when sending transactions (default: 1)"
@@ -612,24 +644,36 @@ msgid ""
 "If paytxfee is not set, include enough fee so transactions begin "
 "confirmation on average within n blocks (default: 6)"
 msgstr ""
+"Si paytxfee n'est pas défini, inclure suffisamment de frais pour que les "
+"transactions commencent à être confirmées en moyenne dans les n blocs "
+"(défaut : 6)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:144
 msgid ""
 "Use hierarchical deterministic key generation (HD) after BIP39/BIP44. Only "
 "has effect during wallet creation/first start (default: 0)"
 msgstr ""
+"Utiliser la génération hiérarchique déterministe (HD) de clés (BIP39/BIP44)."
+" N'a d'effet qu'à la création du portefeuille ou à son premier démarrage "
+"(défaut : 0)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:145
 msgid ""
 "User defined mnemonic for HD wallet (BIP39). Only has effect during wallet "
 "creation/first start (default: randomly generated)"
 msgstr ""
+"Graine mnémonique définie par l'utilisateur pour un portefeuille HD (BIP39)."
+" N'a d'effet qu'à la création du portefeuille ou à son premier démarrage "
+"(défaut : générée aléatoirement)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:146
 msgid ""
 "User defined mnemonic passphrase for HD wallet (BIP39). Only has effect "
 "during wallet creation/first start (default: empty string)"
 msgstr ""
+"Phrase de passe mnémonique définie par l'utilisateur pour un portefeuille HD"
+" (BIP39). N'a d'effet qu'à la création du portefeuille ou à son premier "
+"démarrage (défaut : chaîne vide)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:147
 msgid ""
@@ -787,6 +831,13 @@ msgid ""
 "rand, reindex, rpc, selectcoins, tor, zmq, dash (or specifically: gobject, "
 "instantsend, keepass, masternode, mnpayments, mnsync, privatesend, spork)."
 msgstr ""
+"Afficher les informations de débogage (défaut : 0, indiquer <category> est "
+"facultatif). Si <category> n'est pas indiqué ou si <category> = 1, afficher "
+"toutes les informations de débogage.<category> peut être : addrman, alert, "
+"bench, cmpctblock, coindb, db, http, leveldb, libevent, lock, mempool, "
+"mempoolrej, net, proxy, prune, rand, reindex, rpc, selectcoins, tor, zmq, "
+"dash (ou plus spécifiquement : gobject, instantsend, keepass, masternode, "
+"mnpayments, mnsync, privatesend, spork)."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:182
 msgid "Show all debugging options (usage: --help -help-debug)"
@@ -806,6 +857,9 @@ msgid ""
 "Fees (in DASH/kB) smaller than this are considered zero fee for relaying, "
 "mining and transaction creation (default: 0.00001)"
 msgstr ""
+"Seuil de frais de transaction (en dashs/Ko) en-deçà duquel les frais sont "
+"considérés nuls pour la création de transaction, la retransmission ou le "
+"minage (défaut : 0,00001)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:186
 msgid ""
@@ -813,6 +867,9 @@ msgid ""
 "transaction; setting this too low may abort large transactions (default: "
 "0.10)"
 msgstr ""
+"Maximum de frais de transaction totaux (en dashs) à utiliser en une seule "
+"transaction de portefeuille ou transaction brute ; définir une valeur trop "
+"basse peut empêcher les transactions larges (défaut : 0,10)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:187
 msgid "Send trace/debug info to console instead of debug.log file"
@@ -848,7 +905,7 @@ msgstr "Utiliser la chaîne de test"
 #: ../../wallets/dashcore/cmd-rpc.rst:327
 #: ../../wallets/dashcore/cmd-rpc.rst:367
 msgid "Use devnet chain with provided name"
-msgstr ""
+msgstr "Utiliser la chaîne du réseau de développement avec le nom fourni"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:197
 msgid ""
@@ -863,12 +920,17 @@ msgid ""
 "Override spork address. Only useful for regtest and devnet. Using this on "
 "mainnet or testnet will ban you."
 msgstr ""
+"Ignorer l'adresse spork. Utile seulement sur regtest et devnet. Utiliser "
+"ceci sur le réseau principal ou de test entraînera votre bannissement."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:199
 msgid ""
 "Overrides minimum spork signers to change spork value. Only useful for "
 "regtest and devnet. Using this on mainnet or testnet will ban you."
 msgstr ""
+"Ignorer le nombre minimal de signataires spork pouvant modifier la valeur de"
+" spork. Utile seulement sur regtest et devnet. Utiliser ceci sur le réseau "
+"principal ou de test entraînera votre bannissement."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:203
 msgid "Masternode options"
@@ -897,7 +959,7 @@ msgstr "Définir la clé privée de masternode"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:209
 msgid "Set the masternode BLS private key"
-msgstr ""
+msgstr "Définir la clé privée BLS du masternode"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:213
 msgid "PrivateSend options"
@@ -922,16 +984,20 @@ msgstr ""
 #: ../../wallets/dashcore/cmd-rpc.rst:217
 msgid "Use N separate masternodes in parallel to mix funds (1-10, default: 4)"
 msgstr ""
+"Utiliser N masternodes distincts en parallèle pour le mélange des fonds "
+"(1-10, défaut : 4)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:218
 msgid ""
 "Use N separate masternodes for each denominated input to mix funds (2-16, "
 "default: 4)"
 msgstr ""
+"Utiliser N masternodes distincts pour chaque entrée de coupure pour le "
+"mélange des fonds (2-16, défaut : 4)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:219
 msgid "Keep N DASH anonymized (2-21000000, default: 1000)"
-msgstr ""
+msgstr "Conserver N dashs anonymisés (2-21000000, défaut : 1000)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:220
 msgid ""
@@ -994,7 +1060,7 @@ msgstr "Options de création de bloc"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:241
 msgid "Set maximum block size in bytes (default: 2000000)"
-msgstr ""
+msgstr "Définir la taille maximale de bloc en octets (défaut : 2000000)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:242
 msgid ""
@@ -1009,6 +1075,8 @@ msgid ""
 "Set lowest fee rate (in DASH/kB) for transactions to be included in block "
 "creation. (default: 0.00001)"
 msgstr ""
+"Définir les frais de transaction minimaux (en dashs/Ko) pour que les "
+"transactions soient incluses lors de la création de bloc (défaut : 0,00001)"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:247
 msgid "RPC server options"
@@ -1055,6 +1123,12 @@ msgid ""
 "rpcuser=<USERNAME>/rpcpassword=<PASSWORD> pair of arguments. This option can"
 " be specified multiple times"
 msgstr ""
+"Nom d'utilisateur et mot de passe haché pour les connexions JSON-RPC. Le "
+"champ <userpw> a pour format : <USERNAME>:<SALT>$<HASH>. Un script canonique"
+" Python est inclus dans share/rpcuser. Le client se connecte alors "
+"normalement en utilisant les deux arguments "
+"rpcuser=<USERNAME>/rpcpassword=<PASSWORD>. Cette option peut être indiquée "
+"plusieurs fois."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:256
 msgid ""
