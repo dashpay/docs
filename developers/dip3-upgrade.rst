@@ -22,8 +22,8 @@ the network has upgraded. Please confirm the status of network uptake
 before proceeding as the upgrade path differs slightly depending on on
 your timing.
 
-- Activation status can be tracked in the image below or at 
-  http://178.254.23.111/~pub/Dash/13_adoption.html
+- Activation status can be tracked in the image below or at `this site 
+  <http://178.254.23.111/~pub/Dash/Dash_Info.html>`__.
 
 .. figure:: http://178.254.23.111/~pub/13_adoption.png
 
