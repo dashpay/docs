@@ -381,6 +381,23 @@ language: examples in Python and JavaScript are included.
 - Documentation: https://bitcoinj.github.io/getting-started 
 - Example application: https://github.com/tomasz-ludek/pocket-of-dash
 
+Objective-C: Dash-Sync
+----------------------
+
+.. image:: img/dash-logo.png
+   :width: 200px
+   :align: right
+   :target: https://github.com/dashevo/dashsync-iOS
+
+https://github.com/dashevo/dashsync-iOS
+
+Dash-Sync is an Objective-C Dash blockchain framework for iOS. It
+implements all most relevant Bitcoin Improvement Proposals (BIPs) and
+Dash Improvement Proposals (DIPs).
+
+- Platform: iOS
+- Repository: https://github.com/dashevo/dashsync-iOS
+
 .NET: NBitcoin
 --------------
 
