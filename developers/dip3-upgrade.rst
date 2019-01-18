@@ -2,6 +2,8 @@
    :description: The upgrade to Dash 0.13.0 involves changes to signature formats as defined in DIP3. This documentation highlights the upgrade steps and progress.
    :keywords: dash, cryptocurrency, masternode, miners, pools, exchanges, wallets, maintenance, dip3, upgrade, deterministic, dmt
 
+.. include:: <isopub.txt>
+
 .. _dip3-dev-upgrade:
 
 ============================
@@ -72,3 +74,24 @@ for a complete listing of RPC improvements, in summary:
   ``getmempooldescendants``, ``getmempoolentry``, ``getrawtransaction``, 
   ``decoderawtransaction``, ``gettransaction``, ``listtransactions``, 
   ``listsinceblock``.
+
+Libraries and APIs
+==================
+
+The following lists the current upgrade status for libraries and APIs:
+
++-------------------------------------------------------------------------------------------------------+----------------+
+| Name                                                                                                  | Upgraded?      |
++=======================================================================================================+================+
+| `DashJ <https://github.com/HashEngineering/dashj>`__ (Android)                                        | |check|        |
++-------------------------------------------------------------------------------------------------------+----------------+
+| `Dash-Sync <https://github.com/dashevo/dashsync-iOS/>`__ (iOS)                                        | |check|        |
++-------------------------------------------------------------------------------------------------------+----------------+
+| `Dashcore-Lib <https://github.com/dashevo/dashcore-lib>`__ (JavaScript / NodeJS)                      | |check|        |
++-------------------------------------------------------------------------------------------------------+----------------+
+| `NBitcoin <https://github.com/MetacoSA/NBitcoin>`__ (.Net)                                            | |check|        |
++-------------------------------------------------------------------------------------------------------+----------------+
+| `Bitcoin-PHP <https://github.com/Bit-Wasp/bitcoin-php>`__ (PHP)                                       | |check|        |
++-------------------------------------------------------------------------------------------------------+----------------+
+| `PyCoin <https://github.com/richardkiss/pycoin>`__ (Python)                                           | |check|        |
++-------------------------------------------------------------------------------------------------------+----------------+
