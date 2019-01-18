@@ -26,11 +26,9 @@ your timing.
 - Activation status can be tracked in the image below or at 
   http://178.254.23.111/~pub/Dash/13_adoption.html
 
-.. raw:: html
+.. figure:: http://178.254.23.111/~pub/13_adoption.png
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
-        <iframe src="http://178.254.23.111/~pub/Dash/13_adoption.html" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
+   Dash v0.13.0.0 adoption by miners
 
 - If you are updating to Dash Core v0.13.0.0 **prior** to this 80%
   threshold  you should be able to simply shut down the daemon and
