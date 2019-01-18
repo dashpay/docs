@@ -23,9 +23,48 @@ the network has upgraded. Please confirm the status of network uptake
 before proceeding as the upgrade path differs slightly depending on on
 your timing.
 
+- Activation status can be tracked in the image below or at 
+  http://178.254.23.111/~pub/Dash/13_adoption.html
+
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
         <iframe src="http://178.254.23.111/~pub/Dash/13_adoption.html" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
+- If you are updating to Dash Core v0.13.0.0 **prior** to this 80%
+  threshold  you should be able to simply shut down the daemon and
+  replace it with  the updated binary.
+
+- If you are updating to Dash Core v0.13.0.0 **after** this 80%
+  threshold is reached please note that you will need to re-index the
+  chainstate using the “-reindex-chainstate” command.
+
+Dependencies
+============
+
+Please note that Dash Core v0.13.0.0 requires a one-time upgrade to all
+related software and libraries to ensure continued compatibility.
+
+- `DIP002: Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ 
+  contains more information on backwards compatibility.
+
+
+- Please refer to the `Transaction Type Integration Guide <https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 
+  for information on the implementation of Special Transactions and for
+  examples of this new format.
+
+- Contact the `Support Desk <https://support.dash.org/en/support/home>`__ 
+  with any compatibility questions or for help upgrading.
+
+Please see the official `Release Notes <https://github.com/dashpay/dash/blob/v0.13.0.0/doc/release-notes.md#rpc-changes>`__ 
+for a complete listing of RPC improvements, in summary:
+
+- **Mining:** ``getBlockTemplate`` now returns an array for masternode 
+  payments instead of a single object.
+
+- **InstantSend:** instantlock status is now included in
+  **``getrawmempool``, ``getmempoolancestors``,
+  **``getmempooldescendants``, ``getmempoolentry``,
+  **``getrawtransaction``, ``decoderawtransaction``, ``gettransaction``,
+  **``listtransactions``, ``listsinceblock``.
