@@ -8,9 +8,7 @@
 Dash 0.13 Upgrade Informaion
 ============================
 
-**Official binaries are available at 
-`https://github.com/dashpay/dash/releases/tag/v0.13.0.0 
-<https://github.com/dashpay/dash/releases/tag/v0.13.0.0>`__**
+**Official binaries are available at** https://github.com/dashpay/dash/releases/tag/v0.13.0.0
 
 
 Installation notes
