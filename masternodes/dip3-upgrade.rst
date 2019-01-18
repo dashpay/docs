@@ -118,14 +118,14 @@ character.
 
 The Dash software on the masternode is now updated. Since Dash 0.13 also
 updates the protocol version, it is necessary to issue a ``masternode
-start``  from Dash Core or DMT command to keep your masternode in the
-payment list during the transition period. Ensure the protocol version
-is set to ``70213`` if starting from DMT, or see the `legacy documentation
-<https://docs.dash.org/en/0.12.3/masternodes/setup.html#start-your-masternode>`__  
+start`` command from an updated Dash Core wallet or DMT to keep your
+masternode in the payment list during the transition period. Ensure the
+protocol version is set to ``70213`` if starting from DMT; see the
+`legacy documentation <https://docs.dash.org/en/0.12.3/masternodes/setup.html#start-your-masternode>`__
 for more details. After your masternode software is updated, it is
 necessary to wait until enough miners upgrade for DIP003 to activate
 before you can continue with the DIP0003 masternode registration process
-below. You can track DIP003 activation progress `here 
+below. You can track DIP003 activation progress `here
 <http://178.254.23.111/~pub/Dash/Dash_Info.html>`__.
 
 
