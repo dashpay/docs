@@ -124,7 +124,7 @@ protocol version is set to ``70213`` if starting from DMT; see the
 `legacy documentation <https://docs.dash.org/en/0.12.3/masternodes/setup.html#start-your-masternode>`__
 for more details. After your masternode software is updated, it is
 necessary to wait until enough miners upgrade for DIP003 to activate
-before you can continue with the DIP0003 masternode registration process
+before you can continue with the DIP003 masternode registration process
 below. You can track DIP003 activation progress `here
 <http://178.254.23.111/~pub/Dash/Dash_Info.html>`__.
 
