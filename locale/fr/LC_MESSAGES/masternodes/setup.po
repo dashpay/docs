@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-14 06:24+0000\n"
+"POT-Creation-Date: 2019-01-17 11:14+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Daf Daf, 2019\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -909,17 +909,18 @@ msgstr ""
 msgid ""
 "You can also optionally verify the authenticity of your download as an "
 "official release by Dash Core Team. All releases of Dash are signed using "
-"GPG by UdjinM6 with the key ``8359 2BD1 400D 58D9``, `verifiable here on "
-"Keybase <https://keybase.io/udjinm6>`_. Import the key, download the ASC "
-"file for the current release of Dash and verify the signature as follows::"
+"GPG by Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, "
+"`verifiable here on Keybase <https://keybase.io/codablock>`_. Import the "
+"key, download the ASC file for the current release of Dash and verify the "
+"signature as follows::"
 msgstr ""
 "Vous pouvez aussi, de manière facultative mais conseillée, vérifier "
 "l'authenticité de votre téléchargement et son caractère officiel de logiciel"
 " de l'équipe Dash Core. Tous les logiciels Dash ont une signature GPG émise "
-"par UdjinM6 avec la clé ``8359 2BD1 400D 58D9``, `qu'on peut vérifier ici "
-"sur Keybase <https://keybase.io/udjinm6>`_. Importez la clé, téléchargez le "
-"fichier ASC pour la version la plus récente de Dash et vérifiez la signature"
-" comme ceci ::"
+"par Alexander Block (codablock) avec la clé ``63A9 6B40 6102 E091``, `qu'on "
+"peut vérifier ici sur Keybase <https://keybase.io/codablock>`_. Importez la "
+"clé, téléchargez le fichier ASC pour la version la plus récente de Dash et "
+"vérifiez la signature comme ceci :"
 
 #: ../../masternodes/setup.rst:517
 msgid "Downloading the PGP key and verifying the signed binary"
@@ -1184,7 +1185,7 @@ msgid ""
 "dash-cli masternode status output showing successfully started masternode"
 msgstr "Message d'état de dash-cli pour un masternode bien démarré"
 
-#: ../../masternodes/setup.rst:698 ../../masternodes/setup.rst:923
+#: ../../masternodes/setup.rst:698 ../../masternodes/setup.rst:925
 msgid ""
 "At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
@@ -1421,7 +1422,7 @@ msgid "Example (remove line breaks if copying)::"
 msgstr "Exemple (effacez les sauts de ligne si vous le copiez) ::"
 
 #: ../../masternodes/setup.rst:847 ../../masternodes/setup.rst:876
-#: ../../masternodes/setup.rst:900
+#: ../../masternodes/setup.rst:902
 msgid "Output::"
 msgstr "Sortie ::"
 
@@ -1458,7 +1459,7 @@ msgstr ""
 "Dash Core, mais il est également possible d'utiliser la fonction de "
 "signature d'un portefeuille matériel. La commande a la syntaxe suivante :"
 
-#: ../../masternodes/setup.rst:872 ../../masternodes/setup.rst:896
+#: ../../masternodes/setup.rst:872 ../../masternodes/setup.rst:898
 msgid "Example::"
 msgstr "Exemple ::"
 
@@ -1490,7 +1491,7 @@ msgstr ""
 "``tx`` : la transaction sérialisée précédemment renvoyée dans le champ de "
 "sortie ``tx`` par la commande ``protx register_prepare``"
 
-#: ../../masternodes/setup.rst:894
+#: ../../masternodes/setup.rst:895
 msgid ""
 "``sig``: The message signed with the collateral key from the ``signmessage``"
 " command"
@@ -1498,7 +1499,7 @@ msgstr ""
 "``sig`` : le message signé avec la clé de la caution par la commande "
 "``signmessage``"
 
-#: ../../masternodes/setup.rst:904
+#: ../../masternodes/setup.rst:906
 msgid ""
 "Your masternode is now registered and will appear on the Deterministic "
 "Masternode List after the transaction is mined to a block. You can view this"
@@ -1519,7 +1520,7 @@ msgstr ""
 " effet qu'une fois que le Spork 15 sera activé sur le réseau. Vous pouvez "
 "connaître l'état du spork avec la commande ``spork active``."
 
-#: ../../masternodes/setup.rst:913
+#: ../../masternodes/setup.rst:915
 msgid ""
 "At this point you can go back to your terminal window and monitor your "
 "masternode using ``dashman/dashman status``, by entering ``~/.dashcore/dash-"
@@ -1532,6 +1533,6 @@ msgstr ""
 "utilisant la fonction **Get status** (Voir l'état) dans DMT. Le résultat "
 "final devrait ressembler à ceci :"
 
-#: ../../masternodes/setup.rst:921
+#: ../../masternodes/setup.rst:923
 msgid "dashman status output showing successfully started masternode"
 msgstr "Message d'état de Dashman pour un masternode bien démarré"

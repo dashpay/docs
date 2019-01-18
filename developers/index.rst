@@ -30,6 +30,7 @@ carry out common development tasks in Dash.
 .. toctree::
    :maxdepth: 1
 
+   dip3-upgrade.rst
    translating.rst
    compiling.rst
    testnet.rst

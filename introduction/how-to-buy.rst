@@ -1391,7 +1391,7 @@ Coinfinity
 
 Coinsave
   .. image:: exchanges/coinsave.png
-     :width: 200px
+     :width: 80px
      :align: right
      :target: https://coinsave.io
 

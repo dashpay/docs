@@ -5,6 +5,8 @@
 # 
 # Translators:
 # Max Aronych <taofgoar@protonmail.com>, 2019
+# Дмитрий <dmitry.zhludin@gmail.com>, 2019
+# Alex-ru <mosprivat@gmail.com>, 2019
 # Андрей Дегтяр <diusha1711@gmail.com>, 2019
 # 
 #, fuzzy
@@ -12,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-14 06:24+0000\n"
+"POT-Creation-Date: 2019-01-17 11:14+0000\n"
 "PO-Revision-Date: 2019-01-11 06:53+0000\n"
 "Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -27,9 +29,9 @@ msgid ""
 "The upgrade to Dash 0.13.0 involves changes to signature formats as defined "
 "in DIP3. This documentation walks you through the upgrade process."
 msgstr ""
-"Обновление Dash до версии 0.13.0 включает в себя изменения в форматах "
-"подписи в соответствии с определёнными в DIP3. Данная документация пошагово "
-"познакомит вас с процессом обновления."
+"Обновление Dash до версии 0.13.0 включает изменения в форматах подписи, как "
+"это определено в DIP3. Данная документация пошагово познакомит вас с "
+"процессом обновления."
 
 #: ../../masternodes/dip3-upgrade.rst:1
 msgid ""
@@ -37,7 +39,7 @@ msgid ""
 " dmt"
 msgstr ""
 "dash, криптовалюта, мастернода, обслуживание, dip3, обновление, "
-"детерминирование, dmt"
+"детерминированный, dmt"
 
 #: ../../masternodes/dip3-upgrade.rst:9
 msgid "Dash 0.13 Upgrade Procedure"
@@ -49,7 +51,7 @@ msgid ""
 "Dash masternode is set up and operated. A list of available documentation "
 "appears below:"
 msgstr ""
-"В версии Dash 0.13.0 реализованы предложения по улучшению DIP003, в которые "
+"В версии Dash 0.13.0 реализовано предложение по улучшению DIP003, в которое "
 "внесены несколько изменений по настройке и управлению мастернодой Dash. "
 "Список имеющейся документации приведён ниже:"
 
@@ -75,16 +77,14 @@ msgstr ":ref:`Полное руководство по настройке мас
 
 #: ../../masternodes/dip3-upgrade.rst:19
 msgid ":ref:`Information for users of hosted masternodes <hosted-setup>`"
-msgstr ""
-":ref:`Информация для пользователей мастернод на хостинге <hosted-setup>`"
+msgstr ":ref:`Информация для пользователей активных мастернод <hosted-setup>`"
 
 #: ../../masternodes/dip3-upgrade.rst:20
 msgid ""
 ":ref:`Information for operators of hosted masternodes <operator-"
 "transactions>`"
 msgstr ""
-":ref:`Информация для операторов мастернод на хостинге <operator-"
-"transactions>`"
+":ref:`Информация для операторов активных мастернод <operator-transactions>`"
 
 #: ../../masternodes/dip3-upgrade.rst:22
 msgid ""
@@ -125,8 +125,8 @@ msgstr ""
 "Шаг 1 следует выполнить немедленно, сразу после релиза Dash версии 0.13.0. "
 "После обновления майнерами и активации в сети DIP003 станут возможными "
 "завершение Шага 2 и регистрация мастерноды DIP003. После того, как "
-"достаточное количество мастернод выполнит этот шаг, будет активирован Спорк "
-"15 и вступят в силу новые функции сети."
+"достаточное количество мастернод завершит этот этап, будет активирован Спорк"
+" 15 и вступят в силу новые функции сети."
 
 #: ../../masternodes/dip3-upgrade.rst:41
 msgid "Masternode Software Update"
@@ -160,7 +160,6 @@ msgid "Check the status of your masternode::"
 msgstr "Проверьте статус вашей мастерноды::"
 
 #: ../../masternodes/dip3-upgrade.rst:61
-#: ../../masternodes/dip3-upgrade.rst:119
 msgid ""
 "The Dash software on the masternode is now updated. Since Dash 0.13 also "
 "updates the protocol version, it is necessary to issue a ``masternode "
@@ -190,9 +189,9 @@ msgid ""
 msgstr ""
 "Для обновления Dash вручную, войдите в учётную запись вашего сервера, "
 "использовав ssh или PuTTY. Если в вашем файле crontab содержится запись для "
-"автоматического перезапуска dashd, запустите ``crontab -e`` и "
-"закомментируйте соответствующую строку добавлением символа ``#``. Это должно"
-" выглядеть вот так::"
+"автоматического перезапуска dashd, запустите ``crontab -e`` и пропишите "
+"соответствующую строку добавлением символа ``#``. Это должно выглядеть вот "
+"так::"
 
 #: ../../masternodes/dip3-upgrade.rst:79
 msgid "Then stop Dash running::"
@@ -243,37 +242,67 @@ msgid ""
 "Finally, uncomment the line to automatically restart Dash in your crontab by"
 " invoking ``crontab -e`` again and deleting the ``#`` character."
 msgstr ""
-"В завершение, удалите комментарий из строки для автоматического перезапуска "
-"Dash в файле crontab повторным запуском ``crontab -e`` и удалением символа "
-"``#``."
+"В завершение, раскомментируйте строку для автоматического перезапуска Dash в"
+" файле crontab повторным запуском ``crontab -e`` и удалением символа ``#``."
 
-#: ../../masternodes/dip3-upgrade.rst:130
+#: ../../masternodes/dip3-upgrade.rst:119
+msgid ""
+"The Dash software on the masternode is now updated. Since Dash 0.13 also "
+"updates the protocol version, it is necessary to issue a ``masternode "
+"start``  from Dash Core or DMT command to keep your masternode in the "
+"payment list during the transition period. Ensure the protocol version is "
+"set to ``70213`` if starting from DMT, or see the `legacy documentation "
+"<https://docs.dash.org/en/0.12.3/masternodes/setup.html#start-your-"
+"masternode>`__ for more details. After your masternode software is updated, "
+"it is necessary to wait until enough miners upgrade for DIP003 to activate "
+"before you can continue with the DIP0003 masternode registration process "
+"below. You can track DIP003 activation progress `here "
+"<http://178.254.23.111/~pub/Dash/Dash_Info.html>`__."
+msgstr ""
+"Теперь программное обеспечение Dash для мастерноды считается обновлённым. "
+"Так как в версии Dash 0.13 также обновлена версия протокола, необходимо из "
+"Dash Core или DMT ввести команду ``masternode start`` для сохранения вашей "
+"мастерноды в списке платежей в течение переходного периода. Убедитесь, что "
+"при запуске DMT для версии протокола установлено значение ``70213``, либо "
+"для получения дополнительной информации смотрите `вспомогательную "
+"документацию <https://docs.dash.org/en/0.12.3/masternodes/setup.html#start-"
+"your-masternode>`__ . После обновления программного обеспечения для вашей "
+"мастерноды, необходимо дождаться, пока достаточное количество майнеров "
+"обновится до версии DIP003 для её активации, прежде чем вы сможете "
+"продолжить процесс регистрации мастерноды DIP0003 описанный ниже. Прогресс "
+"активации версии DIP003 можно отслеживать `здесь "
+"<http://178.254.23.111/~pub/Dash/Dash_Info.html>`__."
+
+#: ../../masternodes/dip3-upgrade.rst:135
 msgid "Masternode Registration from DMT"
 msgstr "Регистрация мастерноды из DMT"
 
-#: ../../masternodes/dip3-upgrade.rst:132
+#: ../../masternodes/dip3-upgrade.rst:137
 msgid ""
 "This documentation describes the procedure to register an existing "
 "masternode for the DIP003 masternode list if the collateral is held on a "
 "hardware wallet. DIP003 must be activated and DMT 0.9.21 or higher is "
-"required. You can update DMT by downloading the version appropriate for your"
-" system from the `DMT Releases page <https://github.com/Bertrand256/dash-"
-"masternode-tool/releases>`__. Open DMT and ensure your existing masternode "
-"configuration appears."
+"required. It is not possible to issue the registration transactions if "
+"DIP003 is not yet active. You can update DMT by downloading the version "
+"appropriate for your system from the `DMT Releases page "
+"<https://github.com/Bertrand256/dash-masternode-tool/releases>`__.  Open DMT"
+" and ensure your existing masternode configuration appears."
 msgstr ""
 "В этой документации описывается процедура регистрации существующей "
-"мастерноды в списке мастернод DIP003 в случае удержания залога на аппаратном"
-" кошельке. Для этого требуется активировать DIP003 и установить DMT версии "
-"0.9.21 или выше. Вы можете обновить DMT, загрузив версию, подходящую для "
-"вашей системы со `страницы релизов <https://github.com/Bertrand256/dash-"
-"masternode-tool/releases>`__. Откройте DMT и убедитесь, что отображается "
-"ваша существующая конфигурация мастерноды."
+"мастерноды в списке мастернод DIP003 в случае хранения залога на аппаратном "
+"кошельке. Для этого требуется активировать DIP003 и установить DMT версии "
+"0.9.21 или выше. Регистрационные транзакции будет невозможно осуществить до "
+"тех пор, пока DIP003 не будет активирован. DMT можно обновить загрузив "
+"версию, подходящую для вашей системы со `страницы релизов DMT "
+"<https://github.com/Bertrand256/dash-masternode-tool/releases>`__.  Откройте"
+" DMT и убедитесь, что отображается ваша существующая конфигурация "
+"мастерноды."
 
-#: ../../masternodes/dip3-upgrade.rst:140
+#: ../../masternodes/dip3-upgrade.rst:147
 msgid "Configuration"
 msgstr "Конфигурация"
 
-#: ../../masternodes/dip3-upgrade.rst:142
+#: ../../masternodes/dip3-upgrade.rst:149
 msgid ""
 "Click the **Send ProRegTx** button to get started. The **Masternode "
 "migration wizard** appears."
@@ -281,15 +310,15 @@ msgstr ""
 "Для начала нажмите кнопку **Send ProRegTx**. Появится окно мастера "
 "**Masternode migration wizard**."
 
-#: ../../masternodes/dip3-upgrade.rst:148
+#: ../../masternodes/dip3-upgrade.rst:155
 msgid "The DMT Masternode migration wizard"
 msgstr "Мастер миграции мастерноды DMT"
 
-#: ../../masternodes/dip3-upgrade.rst:150
+#: ../../masternodes/dip3-upgrade.rst:157
 msgid "All fields are prefilled with suggested values."
 msgstr "Все поля предварительно заполнены предполагаемыми значениями."
 
-#: ../../masternodes/dip3-upgrade.rst:152
+#: ../../masternodes/dip3-upgrade.rst:159
 msgid ""
 "It should not be necessary to change the **Collateral Tx** or **IP/Port** "
 "fields if you are using your existing collateral and server."
@@ -297,7 +326,7 @@ msgstr ""
 "Если вы используете свой существующий залог и сервер, то не должно возникать"
 " необходимости изменять поля **Collateral Tx** или **IP/Port** "
 
-#: ../../masternodes/dip3-upgrade.rst:154
+#: ../../masternodes/dip3-upgrade.rst:161
 msgid ""
 "You can optionally modify the **Payout address** to any valid existing or "
 "new Dash address, since it is no longer mandatory to receive payouts at the "
@@ -305,19 +334,19 @@ msgid ""
 msgstr ""
 "По желанию вы можете изменить **Payout address** на любой действующий "
 "существующий или новый адрес Dash, поскольку более не обязательно получать "
-"выплаты на залоговый адрес."
+"выплаты только на адрес хранения залоговой суммы."
 
-#: ../../masternodes/dip3-upgrade.rst:157
+#: ../../masternodes/dip3-upgrade.rst:164
 msgid ""
 "If your masternode is hosted by an external operator, you can specify the "
 "percentage of the reward to allocate to the operator in the **Operator "
 "reward** field."
 msgstr ""
-"Если вы разместили мастерноду на сервисе хостинга с помощью внешнего "
-"оператора, то в поле **Operator reward** можно указать процент от получаемой"
-" награды, который будет получать оператор."
+"Если ваша мастернода запущена с помощью внешнего оператора, то в поле "
+"**Operator reward** можно указать процент от получаемой награды, который "
+"будет получать оператор."
 
-#: ../../masternodes/dip3-upgrade.rst:160
+#: ../../masternodes/dip3-upgrade.rst:167
 msgid ""
 "The three masternode keys (owner, operator, voting) are newly generated and "
 "do not need to be changed."
@@ -325,7 +354,7 @@ msgstr ""
 "Три ключа мастерноды (для владельца, оператора и голосования) являются вновь"
 " сгенерированными и изменять их не требуется."
 
-#: ../../masternodes/dip3-upgrade.rst:163
+#: ../../masternodes/dip3-upgrade.rst:170
 msgid ""
 "Click **Next** when you are ready to continue. DMT will verify the "
 "collateral is in place and prepare to create the ProRegTx special "
@@ -340,16 +369,16 @@ msgstr ""
 "подготовится к созданию специальной транзакции ProRegTx для регистрации "
 "мастерноды на блокчейне. Эта команда должна быть отправлена из кошелька Dash"
 " Core, на котором хранится баланс, поскольку взимается стандартная комиссия "
-"за транзакцию. Вы можете отправить её с удаленного RPC-узла разработчика DMT"
-" (**автоматический метод**) или использовать свой собственный кошелек Dash "
+"за транзакцию. Вы можете отправить её с удаленной RPC-ноды разработчика DMT "
+"(**автоматический метод**) или использовать свой собственный кошелек Dash "
 "Core для отправки транзакции и указать источник комиссии за транзакцию "
 "(**ручной метод**). Нажмите **Continue**, если готовы продолжить."
 
-#: ../../masternodes/dip3-upgrade.rst:174
+#: ../../masternodes/dip3-upgrade.rst:181
 msgid "Option 1: Automatic method"
 msgstr "Метод 1: Автоматический "
 
-#: ../../masternodes/dip3-upgrade.rst:176
+#: ../../masternodes/dip3-upgrade.rst:183
 msgid ""
 "Note that because Trezor does not yet support Dash `special transactions "
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, it is "
@@ -367,13 +396,13 @@ msgstr ""
 "подписания регистрационной транзакции необходимо передать приватный ключ "
 "владельца (НЕ залоговый приватный ключ) на удалённый сервер. Используйте "
 "автоматический метод только в том случае, если вы подключены к своему "
-"клиенту Dash RPC или доверяете оператору узла. Имя узла, к которому вы "
-"подключены, можно увидеть в правом нижнем углу главного окна DMT. Узлы по "
+"клиенту Dash RPC или доверяете оператору ноды. Имя ноды, к которой вы "
+"подключены, можно увидеть в правом нижнем углу главного окна DMT. Ноды по "
 "умолчанию в DMT (называемые ``alice``, ``luna`` и ``suzy``) поддерживаются "
 "автором DMT, который любезно предложил покрыть комиссионные расходы за "
 "транзакции для обновления DIP003."
 
-#: ../../masternodes/dip3-upgrade.rst:187
+#: ../../masternodes/dip3-upgrade.rst:194
 msgid ""
 "DMT will prepare a ProTx message and prompt you to confirm signing the "
 "message on your hardware wallet. The signed message will be registered on "
@@ -390,22 +419,22 @@ msgstr ""
 "конфигурации. Кликните **Save to a file** и введите имя для нового файла. "
 "Этот файл содержит различные приватные и публичные ключи связанные с "
 "владельцами, операторами и голосованием мастернод, поэтому храните его в "
-"безопасном месте. Для продолжения выполните :ref:`заключительный шаг <DMT-"
+"безопасном месте. Для продолжения выполните :ref:`заключительный этап <DMT-"
 "enter-BLS>` по введению BLS-ключа для мастерноды."
 
-#: ../../masternodes/dip3-upgrade.rst:197
+#: ../../masternodes/dip3-upgrade.rst:204
 msgid "Option 2: Manual method"
 msgstr "Метод 2: Ручной "
 
-#: ../../masternodes/dip3-upgrade.rst:199
+#: ../../masternodes/dip3-upgrade.rst:206
 msgid "The following window appears:"
 msgstr "Появится следующее окно:"
 
-#: ../../masternodes/dip3-upgrade.rst:204
+#: ../../masternodes/dip3-upgrade.rst:211
 msgid "Manual registration commands in the DMT Masternode migration wizard"
-msgstr "Команды ручной регистрации в мастере миграции мастерноды в DMT"
+msgstr "Команды ручной регистрации в мастере миграции мастерноды DMT"
 
-#: ../../masternodes/dip3-upgrade.rst:206
+#: ../../masternodes/dip3-upgrade.rst:213
 msgid ""
 "Open Dash Core and wait for the blockchain to synchronise. Complete the "
 "following steps:"
@@ -413,7 +442,7 @@ msgstr ""
 "Откройте Dash Core и дождитесь полной синхронизации с блокчейном. Далее "
 "выполните следующие шаги:"
 
-#: ../../masternodes/dip3-upgrade.rst:209
+#: ../../masternodes/dip3-upgrade.rst:216
 msgid ""
 "In your Dash Core wallet, select an address to use as the source for the "
 "transaction fee and paste it into Field 1."
@@ -421,11 +450,11 @@ msgstr ""
 "В кошельке Dash Core выберите адрес, который будет использован в качестве "
 "источника комиссий за транзакции и вставьте его в Поле 1."
 
-#: ../../masternodes/dip3-upgrade.rst:211
+#: ../../masternodes/dip3-upgrade.rst:218
 msgid "Open the Debug console by clicking **Tools -> Debug console**."
 msgstr "Откройте Консоль отладки кликнув **Инструменты -> Консоль отладки**."
 
-#: ../../masternodes/dip3-upgrade.rst:212
+#: ../../masternodes/dip3-upgrade.rst:219
 msgid ""
 "Copy and paste the command from Field 2 of DMT into the Dash Core debug "
 "console and press **Enter**."
@@ -433,7 +462,7 @@ msgstr ""
 "Скопируйте команду из Поля 2 DMT, вставьте её в консоль отладки кошелька "
 "Dash Core и нажмите **Enter**."
 
-#: ../../masternodes/dip3-upgrade.rst:214
+#: ../../masternodes/dip3-upgrade.rst:221
 msgid ""
 "Copy the output back and paste it into Field 3 field of the DMT Masternode "
 "migration wizard."
@@ -441,7 +470,7 @@ msgstr ""
 "Скопируйте выходное значение и вставьте его в Поле 3 в мастере миграции "
 "мастерноды DMT."
 
-#: ../../masternodes/dip3-upgrade.rst:216
+#: ../../masternodes/dip3-upgrade.rst:223
 msgid ""
 "Click **Sign message with hardware wallet** and confirm signing the message "
 "on your hardware wallet."
@@ -449,7 +478,7 @@ msgstr ""
 "Кликните **Sign message with hardware wallet** и подтвердите подпись "
 "сообщения на вашем аппаратном кошельке."
 
-#: ../../masternodes/dip3-upgrade.rst:218
+#: ../../masternodes/dip3-upgrade.rst:225
 msgid ""
 "Copy the command from Field 4 of DMT, paste it into the Dash Core debug "
 "console and press **Enter**. Dash Core will create a registration "
@@ -459,7 +488,7 @@ msgstr ""
 "Dash Core и нажмите **Enter**. Dash Core создаст на блокчейне "
 "регистрационную транзакцию."
 
-#: ../../masternodes/dip3-upgrade.rst:221
+#: ../../masternodes/dip3-upgrade.rst:228
 msgid ""
 "Copy and paste the transaction hash into Field 5 of the DMT Masternode "
 "migration wizard and click **Continue**."
@@ -467,7 +496,7 @@ msgstr ""
 "Скопируйте хеш транзакции, вставьте его в Поле 5 в мастере миграции "
 "мастерноды DMT и кликните **Continue**."
 
-#: ../../masternodes/dip3-upgrade.rst:224
+#: ../../masternodes/dip3-upgrade.rst:231
 msgid ""
 "A window appears with the final configuration information. Click **Save to a"
 " file** and enter a new file name. This file contains various private and "
@@ -479,11 +508,11 @@ msgstr ""
 "приватные и публичные ключи, связанные с владением, управлением и "
 "голосованием мастернод, поэтому храните его в безопасном месте."
 
-#: ../../masternodes/dip3-upgrade.rst:232
+#: ../../masternodes/dip3-upgrade.rst:239
 msgid "Enter the BLS key on the masternode"
 msgstr "Введите BLS-ключ для мастерноды"
 
-#: ../../masternodes/dip3-upgrade.rst:234
+#: ../../masternodes/dip3-upgrade.rst:241
 msgid ""
 "Finally, it is necessary to enter the BLS private key generated by DMT on "
 "the masternode itself, or send it to your hosting operator. If you are "
@@ -496,8 +525,8 @@ msgstr ""
 "используя ``ssh`` или PuTTY и отредактируйте конфигурационный файл "
 "мастерноды, как показано ниже::"
 
-#: ../../masternodes/dip3-upgrade.rst:242
-#: ../../masternodes/dip3-upgrade.rst:313
+#: ../../masternodes/dip3-upgrade.rst:249
+#: ../../masternodes/dip3-upgrade.rst:321
 msgid ""
 "The editor appears with the existing masternode configuration. Add this line"
 " to the end of the file, replacing the key with your BLS secret key "
@@ -507,8 +536,8 @@ msgstr ""
 "конце файла добавьте следующую строку, заменив ключ на секретный BLS-ключ, "
 "который был сгенерирован выше::"
 
-#: ../../masternodes/dip3-upgrade.rst:248
-#: ../../masternodes/dip3-upgrade.rst:319
+#: ../../masternodes/dip3-upgrade.rst:255
+#: ../../masternodes/dip3-upgrade.rst:327
 msgid ""
 "Press enter to make sure there is a blank line at the end of the file, then "
 "press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
@@ -522,7 +551,7 @@ msgstr ""
 " чтобы внесённые изменения вступили в силу. Выждав несколько секунд, чтобы "
 "дать время для Dash Core закрыться, введите следующие команды::"
 
-#: ../../masternodes/dip3-upgrade.rst:257
+#: ../../masternodes/dip3-upgrade.rst:264
 msgid ""
 "Your masternode is now upgraded to DIP003 and will appear on the "
 "Deterministic Masternode List. You can view this list on the **Masternodes "
@@ -532,42 +561,44 @@ msgid ""
 "related to DIP003 will only take effect once Spork 15 is enabled on the "
 "network. You can view the spork status using the ``spork active`` command."
 msgstr ""
-"Ваша мастернода теперь обновлена до DIP003 и появится Детерминированном "
-"Списке Мастернод. Этот список можно посмотреть, перейдя во вкладку "
+"Ваша мастернода теперь обновлена до DIP003 и появится в Детерминированном "
+"списке мастернод. Этот список можно посмотреть, перейдя во вкладку "
 "**Masternodes -> DIP3 Masternodes** кошелька Dash Core или в консоли, "
 "использовав команду ``protx list valid``, где txid последней транзакции в "
-"Шаге 5 является идентификатором вашей мастерноды DIP003. Ещё раз обратите "
+"Этапе 5 является идентификатором вашей мастерноды DIP003. Ещё раз обратите "
 "внимание, что все, относящиеся к DIP003 функции начнут работать только после"
 " активации в сети Спорка 15. Проверить статус спорка можно с помощью команды"
 " ``spork active``."
 
-#: ../../masternodes/dip3-upgrade.rst:270
+#: ../../masternodes/dip3-upgrade.rst:277
 msgid "Masternode Registration from Dash Core"
 msgstr "Регистрация мастерноды из Dash Core"
 
-#: ../../masternodes/dip3-upgrade.rst:272
+#: ../../masternodes/dip3-upgrade.rst:279
 msgid ""
 "This documentation describes the procedure to register an existing "
 "masternode for the DIP003 masternode list if the collateral is held in the "
-"Dash Core software full wallet. DIP003 must be activated. The commands are "
-"shown as if they were entered in the Dash Core GUI by opening the console "
-"from Tools > Debug console, but the same result can be achieved on a "
-"masternode by entering the same commands and adding the prefix  "
-"``~/.dashcore/dash-cli`` to each command."
+"Dash Core software full wallet. It is not possible to issue the registration"
+" transactions if DIP003 is not yet active. The commands are shown as if they"
+" were entered in the Dash Core GUI by opening the console from Tools > Debug"
+" console, but the same result can be achieved on a masternode by entering "
+"the same commands and adding the prefix ``~/.dashcore/dash-cli`` to each "
+"command."
 msgstr ""
 "В этой документации описывается процедура регистрации существующей "
-"мастерноды в списке мастернод DIP003 в случае удержания залога в полной "
-"версии кошелька Dash Core. Для этого требуется активировать DIP003. Команды "
-"приведены в формате, в котором они вводятся в графическом интерфейсе "
-"кошелька Dash Core в открытой из меню Инструменты > Консоль отладки консоли,"
-" но аналогичного результата можно достичь и на мастерноде, вводя те же "
-"команды с добавлением к каждой из них префикса ``~/.dashcore/dash-cli``."
+"мастерноды в списке мастернод DIP003 в случае хранения залога в полной "
+"версии кошелька Dash Core. Регистрационные транзакции будет невозможно "
+"осуществить до тех пор, пока DIP003 не будет активирован. Команды приведены "
+"в формате, в котором они вводятся в графическом интерфейсе кошелька Dash "
+"Core в открытой из меню Инструменты > Консоль отладки, но аналогичного "
+"результата можно достичь и на мастерноде, вводя те же команды с добавлением "
+"к каждой из них префикса ``~/.dashcore/dash-cli``."
 
-#: ../../masternodes/dip3-upgrade.rst:282
+#: ../../masternodes/dip3-upgrade.rst:290
 msgid "Generate a BLS key pair"
 msgstr "Генерация пары BLS-ключей"
 
-#: ../../masternodes/dip3-upgrade.rst:284
+#: ../../masternodes/dip3-upgrade.rst:292
 msgid ""
 "A public/private BLS key pair is required for the operator of the "
 "masternode. If you are using a hosting service, they will provide you with "
@@ -579,7 +610,7 @@ msgstr ""
 "можно пропустить. Если вы разместили на хостинге собственную мастерноду, "
 "сгенерируйте пару BLS-ключей публичный/приватный, как показано ниже::"
 
-#: ../../masternodes/dip3-upgrade.rst:296
+#: ../../masternodes/dip3-upgrade.rst:304
 msgid ""
 "**These keys are NOT stored by the wallet and must be kept secure, similar "
 "to the value provided in the past by the** ``masternode genkey`` "
@@ -587,13 +618,13 @@ msgid ""
 msgstr ""
 "**Эти ключи НЕ сохраняются в кошельке и должны храниться в безопасном месте,"
 " как и значение, предоставленное в одном из предыдущих шагов после "
-"выполнения **команды ``masternode genkey``.**"
+"выполнения ** ``masternode genkey`` **команды.**"
 
-#: ../../masternodes/dip3-upgrade.rst:301
+#: ../../masternodes/dip3-upgrade.rst:309
 msgid "Add the private key to your masternode configuration"
 msgstr "Добавьте приватный ключ в конфигурацию вашей мастерноды"
 
-#: ../../masternodes/dip3-upgrade.rst:303
+#: ../../masternodes/dip3-upgrade.rst:311
 msgid ""
 "The public key will be used in following steps. The BLS secret key must be "
 "entered in the ``dash.conf`` file on the masternode. This allows the "
@@ -606,13 +637,13 @@ msgstr ""
 "Публичный ключ будет использоваться в следующих шагах. Секретный BLS-ключ "
 "необходимо внести в файл ``dash.conf`` мастерноды. Это позволит мастерноде "
 "следить за блокчейном и выявлять в нём релевантные транзакции Pro*Tx, а "
-"также заставит узел начать выполнять функции мастерноды, после того, как "
+"также заставит ноду начать выполнять функции мастерноды, после того, как "
 "подписанная владельцем транзакция ProRegTx начнёт транслироваться в сеть "
 "(последний шаг ниже). Войдите в учётную запись своей мастерноды, используя "
 "``ssh`` или PuTTY и отредактируйте конфигурационный файл мастерноды, как "
 "показано ниже::"
 
-#: ../../masternodes/dip3-upgrade.rst:328
+#: ../../masternodes/dip3-upgrade.rst:336
 msgid ""
 "We will now prepare the transaction used to register a DIP003 masternode on "
 "the network."
@@ -620,11 +651,11 @@ msgstr ""
 "Теперь подготовим транзакцию, которая используется для регистрации в сети "
 "мастерноды DIP003."
 
-#: ../../masternodes/dip3-upgrade.rst:333
+#: ../../masternodes/dip3-upgrade.rst:341
 msgid "Prepare a ProRegTx transaction"
 msgstr "Подготовка транзакции ProRegTx"
 
-#: ../../masternodes/dip3-upgrade.rst:335
+#: ../../masternodes/dip3-upgrade.rst:343
 msgid ""
 "First, we need to get a new, unused address from the wallet to serve as the "
 "owner address. This is different to the collateral address. It must also be "
@@ -637,7 +668,7 @@ msgstr ""
 "голосования до тех пор, пока Спорк 15 ещё не активирован. Сгенерируйте новый"
 " адрес, как показно ниже::"
 
-#: ../../masternodes/dip3-upgrade.rst:344
+#: ../../masternodes/dip3-upgrade.rst:352
 msgid ""
 "Then either generate or choose an existing second address to receive the "
 "owner's masternode payouts::"
@@ -645,7 +676,7 @@ msgstr ""
 "Затем либо сгенерируйте, либо выберите из существующих второй адрес для "
 "получения платежей от владельца мастерноды::"
 
-#: ../../masternodes/dip3-upgrade.rst:351
+#: ../../masternodes/dip3-upgrade.rst:359
 msgid ""
 "You can also optionally generate and fund a third address to pay the "
 "transaction fee. The private key to this address must be available to the "
@@ -660,7 +691,7 @@ msgstr ""
 "ProRegTx-транзакцию, использовав команду ``protx register_prepare``. Эта "
 "команда имеет следующий синтаксис::"
 
-#: ../../masternodes/dip3-upgrade.rst:360
+#: ../../masternodes/dip3-upgrade.rst:368
 msgid ""
 "Open a text editor such as notepad to prepare this command. Replace each "
 "argument to the command as follows:"
@@ -668,25 +699,25 @@ msgstr ""
 "Откройте текстовый редактор, например Блокнот и подготовьте эту команду. "
 "Замените каждый аргумент команды следующим образом:"
 
-#: ../../masternodes/dip3-upgrade.rst:363
+#: ../../masternodes/dip3-upgrade.rst:371
 msgid ""
 "``collateralHash``: The txid of the 1000 Dash collateral funding transaction"
 msgstr ""
 "``collateralHash``: txid транзакции залогового финансирования на 1000 DASH"
 
-#: ../../masternodes/dip3-upgrade.rst:365
+#: ../../masternodes/dip3-upgrade.rst:373
 msgid ""
 "``collateralIndex``: The output index of the 1000 Dash funding transaction"
 msgstr ""
 "``collateralIndex``: Индекс выхода транзакции финансирования на 1000 DASH"
 
-#: ../../masternodes/dip3-upgrade.rst:367
+#: ../../masternodes/dip3-upgrade.rst:375
 msgid ""
 "``ipAndPort``: Masternode IP address and port, in the format "
 "``x.x.x.x:yyyy``"
 msgstr "``ipAndPort``: IP-адрес и порт мастерноды в формате ``x.x.x.x:yyyy``"
 
-#: ../../masternodes/dip3-upgrade.rst:369
+#: ../../masternodes/dip3-upgrade.rst:377
 msgid ""
 "``ownerKeyAddr``: The new Dash address generated above for the owner/voting "
 "address"
@@ -694,7 +725,7 @@ msgstr ""
 "``ownerKeyAddr``: Сгенерированный выше новый адрес Dash для "
 "владельца/голосования"
 
-#: ../../masternodes/dip3-upgrade.rst:371
+#: ../../masternodes/dip3-upgrade.rst:379
 msgid ""
 "``operatorPubKey``: The BLS public key generated above (or provided by your "
 "hosting service)"
@@ -702,7 +733,7 @@ msgstr ""
 "``operatorPubKey``: Публичный BLS-ключ, сгенерированный выше (или "
 "предоставленный хостинг-сервисом)"
 
-#: ../../masternodes/dip3-upgrade.rst:373
+#: ../../masternodes/dip3-upgrade.rst:381
 msgid ""
 "``votingKeyAddr``: The new Dash address generated above, or the address of a"
 " delegate, used for proposal voting"
@@ -710,15 +741,15 @@ msgstr ""
 "``votingKeyAddr``: Новый адрес Dash, сгенерированный выше или адрес "
 "делегата, используемый для голосования по предложениям"
 
-#: ../../masternodes/dip3-upgrade.rst:375
+#: ../../masternodes/dip3-upgrade.rst:383
 msgid ""
 "``operatorReward``: The percentage of the block reward allocated to the "
 "operator as payment"
 msgstr ""
-"``operatorReward``: Процент блочной награды, который выделен оператору в "
+"``operatorReward``: Процент награды за блок, который выделен оператору в "
 "качестве оплаты"
 
-#: ../../masternodes/dip3-upgrade.rst:377
+#: ../../masternodes/dip3-upgrade.rst:385
 msgid ""
 "``payoutAddress``: A new or existing Dash address to receive the owner's "
 "masternode rewards"
@@ -726,7 +757,7 @@ msgstr ""
 "``payoutAddress``: Новый или существующий адрес Dash для получения платежей "
 "от владельца мастерноды"
 
-#: ../../masternodes/dip3-upgrade.rst:379
+#: ../../masternodes/dip3-upgrade.rst:387
 msgid ""
 "``feeSourceAddress``: An (optional) address used to fund ProTx fee. "
 "``payoutAddress`` will be used if not specified."
@@ -735,7 +766,7 @@ msgstr ""
 "финансирования комиссий ProTx. Если не указан, то будет использоваться "
 "``payoutAddress``."
 
-#: ../../masternodes/dip3-upgrade.rst:382
+#: ../../masternodes/dip3-upgrade.rst:390
 msgid ""
 "Note that the operator is responsible for :ref:`specifying their own reward "
 "<dip3-update-service>` address in a separate ``update_service`` transaction "
@@ -748,17 +779,17 @@ msgstr ""
 "укажете отличную от нуля награду ``operatorReward``. Владелец залогового "
 "обеспечения не указывает адрес для выплаты оператору."
 
-#: ../../masternodes/dip3-upgrade.rst:388
+#: ../../masternodes/dip3-upgrade.rst:396
 msgid "Example (remove line breaks if copying)::"
 msgstr "Пример (удалите разрывы строк при копировании)::"
 
-#: ../../masternodes/dip3-upgrade.rst:400
-#: ../../masternodes/dip3-upgrade.rst:429
-#: ../../masternodes/dip3-upgrade.rst:454
+#: ../../masternodes/dip3-upgrade.rst:408
+#: ../../masternodes/dip3-upgrade.rst:437
+#: ../../masternodes/dip3-upgrade.rst:463
 msgid "Output::"
 msgstr "На выходе::"
 
-#: ../../masternodes/dip3-upgrade.rst:408
+#: ../../masternodes/dip3-upgrade.rst:416
 msgid ""
 "Next we will use the ``collateralAddress`` and ``signMessage`` fields to "
 "sign the transaction, and the output of the ``tx`` field to submit the "
@@ -767,11 +798,11 @@ msgstr ""
 "Теперь используем поля ``collateralAddress`` и ``signMessage`` для "
 "подписания транзакции и поле выхода ``tx`` для подтверждения транзакции."
 
-#: ../../masternodes/dip3-upgrade.rst:413
+#: ../../masternodes/dip3-upgrade.rst:421
 msgid "Sign the ProRegTx transaction"
-msgstr "Подписание транзакции ProRegTx"
+msgstr "Подпишите транзакцию ProRegTx"
 
-#: ../../masternodes/dip3-upgrade.rst:415
+#: ../../masternodes/dip3-upgrade.rst:423
 msgid ""
 "Now we will sign the content of the ``signMessage`` field using the private "
 "key for the collateral address as specified in ``collateralAddress``. Note "
@@ -789,16 +820,16 @@ msgstr ""
 "Core, но в равной степени возможно использовать функцию подписи аппаратного "
 "кошелька. Команда имеет следующий синтаксис::"
 
-#: ../../masternodes/dip3-upgrade.rst:425
-#: ../../masternodes/dip3-upgrade.rst:450
+#: ../../masternodes/dip3-upgrade.rst:433
+#: ../../masternodes/dip3-upgrade.rst:459
 msgid "Example::"
 msgstr "Пример::"
 
-#: ../../masternodes/dip3-upgrade.rst:435
+#: ../../masternodes/dip3-upgrade.rst:443
 msgid "Submit the signed message"
 msgstr "Подтвердите подписанное сообщение"
 
-#: ../../masternodes/dip3-upgrade.rst:437
+#: ../../masternodes/dip3-upgrade.rst:445
 msgid ""
 "We will now create the ProRegTx special transaction to register the "
 "masternode on the blockchain. This command must be sent from a Dash Core "
@@ -807,26 +838,30 @@ msgid ""
 msgstr ""
 "Теперь создадим специальную транзакцию ProRegTx для регистрации мастерноды "
 "на блокчейне. Данная команда должна быть отправлена из кошелька Dash Core, "
-"на котором удерживается баланс, поскольку в данном случае взимается "
-"стандартная комиссия за транзакцию. Команда имеет следующий синтаксис::"
+"на котором хранится баланс, поскольку в данном случае взимается стандартная "
+"комиссия за транзакцию. Команда имеет следующий синтаксис::"
 
-#: ../../masternodes/dip3-upgrade.rst:444
+#: ../../masternodes/dip3-upgrade.rst:452
 msgid "Where:"
 msgstr "Где:"
 
-#: ../../masternodes/dip3-upgrade.rst:446
+#: ../../masternodes/dip3-upgrade.rst:454
 msgid ""
 "``tx``: The serialized transaction previously returned in the ``tx`` output "
-"field from ``protx register_prepare`` in Step 2"
+"field from the ``protx register_prepare`` command"
 msgstr ""
 "``tx``: Сериализованная транзакция, ранее возвращённая в поле выхода ``tx`` "
-"из ``protx register_prepare`` в Шаге 2"
+"из ``protx register_prepare``"
 
-#: ../../masternodes/dip3-upgrade.rst:448
-msgid "``sig``: The message signed with the collateral key from Step 3"
-msgstr "``sig``: Сообщение, подписанное залоговым ключом из Шага 3"
+#: ../../masternodes/dip3-upgrade.rst:456
+msgid ""
+"``sig``: The message signed with the collateral key from the ``signmessage``"
+" command"
+msgstr ""
+"``sig``: Сообщение, подписанное залоговым ключом с помощью команды "
+"``signmessage``"
 
-#: ../../masternodes/dip3-upgrade.rst:458
+#: ../../masternodes/dip3-upgrade.rst:467
 msgid ""
 "Your masternode is now upgraded to DIP003 and will appear on the "
 "Deterministic Masternode List after the transaction is mined to a block. You"
