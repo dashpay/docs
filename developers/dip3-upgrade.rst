@@ -9,7 +9,8 @@ Dash 0.13 Upgrade Informaion
 ============================
 
 **Official binaries are available at 
-https://github.com/dashpay/dash/releases/tag/v0.13.0.0**
+`https://github.com/dashpay/dash/releases/tag/v0.13.0.0 
+<https://github.com/dashpay/dash/releases/tag/v0.13.0.0>`__**
 
 
 Installation notes
@@ -61,8 +62,8 @@ for a complete listing of RPC improvements, in summary:
 - **Mining:** ``getBlockTemplate`` now returns an array for masternode 
   payments instead of a single object.
 
-- **InstantSend:** instantlock status is now included in
-  **``getrawmempool``, ``getmempoolancestors``,
-  **``getmempooldescendants``, ``getmempoolentry``,
-  **``getrawtransaction``, ``decoderawtransaction``, ``gettransaction``,
-  **``listtransactions``, ``listsinceblock``.
+- **InstantSend**: instantlock status is now included in
+  ``getrawmempool``,   ``getmempoolancestors``, 
+  ``getmempooldescendants``, ``getmempoolentry``, ``getrawtransaction``, 
+  ``decoderawtransaction``, ``gettransaction``, ``listtransactions``, 
+  ``listsinceblock``.
