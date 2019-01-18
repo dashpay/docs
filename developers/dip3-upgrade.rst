@@ -83,15 +83,15 @@ The following lists the current upgrade status for libraries and APIs:
 +-------------------------------------------------------------------------------------------------------+----------------+
 | Name                                                                                                  | Upgraded?      |
 +=======================================================================================================+================+
-| `DashJ <https://github.com/HashEngineering/dashj>`__ (Android)                                        | |check|        |
+| `DashJ <https://github.com/HashEngineering/dashj>`__ (Android)                                        |                |
 +-------------------------------------------------------------------------------------------------------+----------------+
-| `Dash-Sync <https://github.com/dashevo/dashsync-iOS/>`__ (iOS)                                        | |check|        |
+| `Dash-Sync <https://github.com/dashevo/dashsync-iOS/>`__ (iOS)                                        |                |
 +-------------------------------------------------------------------------------------------------------+----------------+
-| `Dashcore-Lib <https://github.com/dashevo/dashcore-lib>`__ (JavaScript / NodeJS)                      | |check|        |
+| `Dashcore-Lib <https://github.com/dashevo/dashcore-lib>`__ (JavaScript / NodeJS)                      |                |
 +-------------------------------------------------------------------------------------------------------+----------------+
-| `NBitcoin <https://github.com/MetacoSA/NBitcoin>`__ (.Net)                                            | |check|        |
+| `NBitcoin <https://github.com/MetacoSA/NBitcoin>`__ (.Net)                                            |                |
 +-------------------------------------------------------------------------------------------------------+----------------+
-| `Bitcoin-PHP <https://github.com/Bit-Wasp/bitcoin-php>`__ (PHP)                                       | |check|        |
+| `Bitcoin-PHP <https://github.com/Bit-Wasp/bitcoin-php>`__ (PHP)                                       |                |
 +-------------------------------------------------------------------------------------------------------+----------------+
-| `PyCoin <https://github.com/richardkiss/pycoin>`__ (Python)                                           | |check|        |
+| `PyCoin <https://github.com/richardkiss/pycoin>`__ (Python)                                           |                |
 +-------------------------------------------------------------------------------------------------------+----------------+
