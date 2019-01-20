@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Dash Core Group, Inc
+# This file is distributed under the same license as the Dash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Alex.ys <silvershark.ys@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dash latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-20 14:39+0000\n"
+"PO-Revision-Date: 2019-01-20 14:41+0000\n"
+"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2019\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../developers/dip3-upgrade.rst:1
+msgid ""
+"The upgrade to Dash 0.13.0 involves changes to signature formats as defined "
+"in DIP3. This documentation highlights the upgrade steps and progress."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:1
+msgid ""
+"dash, cryptocurrency, masternode, miners, pools, exchanges, wallets, "
+"maintenance, dip3, upgrade, deterministic, dmt"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:11
+msgid "Dash 0.13 Upgrade Informaion"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:13
+msgid ""
+"**Official binaries are available at** "
+"https://github.com/dashpay/dash/releases/tag/v0.13.0.0"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:15
+msgid ""
+"Dash Core v0.13.0 is intended to serve as the foundation for Dash Evolution,"
+" a broadly scoped update to our network intended to facilitate and enable "
+"new payment methods and technologies. Please see the `Dash Core v0.13.0 "
+"Product Brief <https://blog.dash.org/product-brief-dash-core-"
+"release-v0-13-0-5d7fddffb7ef>`__ for an overview of new features, and "
+"complete this `3 question survey <https://goo.gl/forms/3BEo2MQYsZT5rwig1>`__"
+" to help us assess the impact of this upgrade."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:24
+msgid "Installation notes"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:26
+msgid ""
+"Dash Core v0.13.0.0 will automatically activate `DIP002 "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, `DIP003 "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__ and `DIP004 "
+"<https://github.com/dashpay/dips/blob/master/dip-0004.md>`__ once 80% of the"
+" network has upgraded. Please confirm the status of network uptake before "
+"proceeding as the upgrade path differs slightly depending on on your timing."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:34
+msgid ""
+"Activation status can be tracked in the image below or at `this site "
+"<http://178.254.23.111/~pub/Dash/Dash_Info.html>`__."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:39
+msgid "Dash v0.13.0.0 adoption by miners"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:41
+msgid ""
+"If you are updating to Dash Core v0.13.0.0 **prior** to this 80% threshold  "
+"you should be able to simply shut down the daemon and replace it with  the "
+"updated binary."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:45
+msgid ""
+"If you are updating to Dash Core v0.13.0.0 **after** this 80% threshold is "
+"reached please note that you will need to re-index the chainstate using the "
+"“-reindex-chainstate” command."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:50
+msgid "Dependencies"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:52
+msgid ""
+"Please note that Dash Core v0.13.0.0 requires a one-time upgrade to all "
+"related software and libraries to ensure continued compatibility."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:55
+msgid ""
+"`DIP002: Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ "
+"contains more information on backwards compatibility."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:59
+msgid ""
+"Please refer to the `Transaction Type Integration Guide "
+"<https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-"
+"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ for information on the "
+"implementation of Special Transactions and for examples of this new format."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:63
+msgid ""
+"Contact the `Support Desk <https://support.dash.org/en/support/home>`__ with"
+" any compatibility questions or for help upgrading."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:66
+msgid ""
+"Please see the official `Release Notes "
+"<https://github.com/dashpay/dash/blob/v0.13.0.0/doc/release-notes.md#rpc-"
+"changes>`__ for a complete listing of RPC improvements, in summary:"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:69
+msgid ""
+"**Mining:** ``getBlockTemplate`` now returns an array for masternode "
+"payments instead of a single object."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:72
+msgid ""
+"**InstantSend**: instantlock status is now included in ``getrawmempool``,   "
+"``getmempoolancestors``, ``getmempooldescendants``, ``getmempoolentry``, "
+"``getrawtransaction``, ``decoderawtransaction``, ``gettransaction``, "
+"``listtransactions``, ``listsinceblock``."
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:79
+msgid "Libraries and APIs"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:81
+msgid "The following lists the current upgrade status for libraries:"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:84
+msgid "Name"
+msgstr "名称"
+
+#: ../../developers/dip3-upgrade.rst:84
+msgid "Platform"
+msgstr "平台"
+
+#: ../../developers/dip3-upgrade.rst:84
+msgid "Upgraded?"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:86
+msgid "`DashJ <https://github.com/HashEngineering/dashj>`__"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:86
+msgid "Android"
+msgstr "安卓"
+
+#: ../../developers/dip3-upgrade.rst:88
+msgid "`Dash-Sync <https://github.com/dashevo/dashsync-iOS/>`__"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:88
+msgid "iOS"
+msgstr "iOS"
+
+#: ../../developers/dip3-upgrade.rst:90
+msgid "`Dashcore-Lib <https://github.com/dashevo/dashcore-lib>`__"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:90
+msgid "JavaScript / NodeJS"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:92
+msgid "`NBitcoin <https://github.com/MetacoSA/NBitcoin>`__"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:92
+msgid ".Net"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:94
+msgid "`Bitcoin-PHP <https://github.com/Bit-Wasp/bitcoin-php>`__"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:94
+msgid "PHP"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:96
+msgid "`PyCoin <https://github.com/richardkiss/pycoin>`__"
+msgstr ""
+
+#: ../../developers/dip3-upgrade.rst:96
+msgid "Python"
+msgstr ""
