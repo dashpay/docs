@@ -127,8 +127,8 @@ Important concepts and changes:
      P2P messages, quorum-related messages and governance trigger votes,
      the BLS key must be unique for each masternode.
   3. ``votingKeyAddr``: This is a Dash address (public key) used for
-     proposal voting. Votes signed with this key are valid while the
-     masternode is in the registered set.
+     proposal voting. Votes signed with the corresponding private key 
+     are valid while the masternode is in the registered set.
 
 - Masternode payments were previously sent to the address holding the
   collateral. Under DIP003, the owner should specify a different address 
