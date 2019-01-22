@@ -1285,45 +1285,17 @@ Uphold
   account or credit card to purchase and spend multiple cryptocurrencies
   including Dash.
 
-WeSellCrypto
-  .. image:: exchanges/wesellcrypto.png
+Kriptomat
+  .. image:: exchanges/kriptomat.png
      :width: 200px
      :align: right
-     :target: https://wesellcrypto.com
+     :target: https://kriptomat.io
 
-  https://wesellcrypto.com
+  https://kriptomat.io
 
-  WeSellCrypto is a broker service offering a range of cryptocurrency,
-  including Dash, paid using Paypal. Be sure to check the fees and rates
-  before purchasing.
-
-Kraken
-  .. image:: exchanges/kraken.png
-     :width: 200px
-     :align: right
-     :target: https://www.kraken.com
-
-  https://www.kraken.com
-
-  Kraken offers private, personalized OTC service with deep liquidity to
-  institutions and high net-worth individuals needing to fill orders in
-  excess of $100,000. Simply send an email to otc@kraken.com to get
-  started.
-
-Koi Trading
-  .. image:: exchanges/koi.png
-     :width: 200px
-     :align: right
-     :target: https://koi.trade
-
-  https://koi.trade
-
-  Based in San Francisco with satellite offices in Hong Kong and Europe,
-  Koi Trading offers a reliable, efficient, and compliant OTC pathway
-  for institutions and high net-worth individuals to engage with
-  cryptocurrency. Brokerages, exchanges, miners and funds worldwide
-  trust Koi Trading for its professional, high-touch services and robust
-  cryptocurrency liquidity.
+Kriptomat enables you to buy, sell and store cryptocurrencies in your
+local language - safe, simple and secure. Dash is available for exchange
+to and from EUR with bank accounts and credit cards.
 
 Bitpanda
   .. image:: exchanges/bitpanda.png
@@ -1376,6 +1348,33 @@ buycrypto
   towards giving Greeks easier access to economically sound money. Dash
   is available for purchase and sale against the Euro.
 
+Kraken
+  .. image:: exchanges/kraken.png
+     :width: 200px
+     :align: right
+     :target: https://www.kraken.com
+
+  https://www.kraken.com
+
+  Kraken offers private, personalized OTC service with deep liquidity to
+  institutions and high net-worth individuals needing to fill orders in
+  excess of $100,000. Simply send an email to otc@kraken.com to get
+  started.
+
+Koi Trading
+  .. image:: exchanges/koi.png
+     :width: 200px
+     :align: right
+     :target: https://koi.trade
+
+  https://koi.trade
+
+  Based in San Francisco with satellite offices in Hong Kong and Europe,
+  Koi Trading offers a reliable, efficient, and compliant OTC pathway
+  for institutions and high net-worth individuals to engage with
+  cryptocurrency. Brokerages, exchanges, miners and funds worldwide
+  trust Koi Trading for its professional, high-touch services and robust
+  cryptocurrency liquidity.
 
 Coinfinity
   .. image:: exchanges/coinfinity.png
