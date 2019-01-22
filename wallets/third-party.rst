@@ -1,6 +1,6 @@
 .. meta::
    :description: List and detailed information on third-party wallets supporting the Dash cryptocurrency
-   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, cryptonator
+   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, cryptonator, trust, kurepay, bitbill, abra
 
 .. _dash-third-party:
 
@@ -252,9 +252,9 @@ Download
 
 .. image:: img/google-play-badge.png
    :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.plutus.wallet
+   :target: https://play.google.com/store/apps/details?id=com.cryptonator.android
 
-Cryptonator is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.aev.cryptonator>`__
+Cryptonator is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.cryptonator.android>`__
 and online at https://www.cryptonator.com
 
 Documentation
@@ -670,7 +670,7 @@ https://trustwallet.com
    :align: right
    :target: https://trustwallet.com
 
-Backed by `Binance <>https://www.binance.com>`__, Trust wallet is a
+Backed by `Binance <https://www.binance.com>`__, Trust wallet is a
 secure and intuitive multi-currency mobile wallet with support for Dash,
 Bitcoin, Ethereum and a wide range of tokens and DApps.
 
