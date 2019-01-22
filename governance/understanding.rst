@@ -235,9 +235,9 @@ discussion and gradual improvement over time results in a close bond
 between the network and those working for the network in supporting
 roles.
 
-Voting on proposals is updated in real time every 2.5 minutes as blocks
-are mined, so current winning proposals and the total allocation of the
-available budget are always open and visible to everyone. `Dash Nexus
+Voting on proposals is updated in real time via P2P messages, so current
+winning proposals and the total allocation of the available budget are
+always open and visible to everyone. `Dash Nexus
 <https://dashnexus.org>`__ is a popular site used for this purpose.
 
 .. figure:: img/governance-dashnexus.png
