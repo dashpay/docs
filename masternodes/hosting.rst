@@ -49,7 +49,7 @@ http://dashmasternode.io
 
 - Operated by: splawik21 (Dash Core team member)
 - Services: Hosting
-- Cost: 0.1 Dash/month
+- Cost: €25/month, paid in Dash
 - `Site <http://dashmasternode.io>`__
 - `Email <splawik21@protonmail.com>`__
 - `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`__
