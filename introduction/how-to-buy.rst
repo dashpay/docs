@@ -1293,9 +1293,9 @@ Kriptomat
 
   https://kriptomat.io
 
-Kriptomat enables you to buy, sell and store cryptocurrencies in your
-local language - safe, simple and secure. Dash is available for exchange
-to and from EUR with bank accounts and credit cards.
+  Kriptomat enables you to buy, sell and store cryptocurrencies in your
+  local language - safe, simple and secure. Dash is available for
+  exchange to and from EUR with bank accounts and credit cards.
 
 Bitpanda
   .. image:: exchanges/bitpanda.png
