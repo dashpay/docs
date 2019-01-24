@@ -21,6 +21,7 @@ List of hosting services
 **Disclaimer**: Dash Core may be affiliated with these community
 members, but is not involved in the provision of any of these services.
 
+
 CrowdNode
 ---------
 
@@ -37,6 +38,7 @@ https://crowdnode.io
 - `Site <https://crowdnode.io>`__
 - `Email <hello@crowdnode.io>`__
 
+
 Splawik's Hosting Service
 -------------------------
 
@@ -49,10 +51,11 @@ http://dashmasternode.io
 
 - Operated by: splawik21 (Dash Core team member)
 - Services: Hosting
-- Cost: 0.1 Dash/month
+- Cost: €25/month, paid in Dash
 - `Site <http://dashmasternode.io>`__
 - `Email <splawik21@protonmail.com>`__
 - `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`__
+
 
 AllNodes
 --------
@@ -73,6 +76,24 @@ https://www.allnodes.com
 - `Telegram <https://t.me/allnodes>`__
 - `Discord <https://discord.allnodes.com>`__
 
+
+Gin
+---
+
+.. image:: img/gin.png
+   :width: 200px
+   :align: right
+   :target: https://ginplatform.io
+
+https://ginplatform.io
+
+- Operated by: GIN Platform Ltd.
+- Services: Hosting, Monitoring, One-click deployment
+- From $4.50/month (variable)
+- `Site <https://ginplatform.io>`__
+- `Email <info@ginplatform.io>`__
+
+
 Node40
 ------
 
@@ -90,6 +111,7 @@ https://node40.com
 - `Email <info@node40.com>`__
 - `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`__
 - `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`__
+
 
 Masternode.me
 -------------
@@ -109,6 +131,7 @@ https://masternode.me
 - `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`__
 - `Review <https://www.dashforcenews.com/masternode-trusted-masternode-shares-review/>`__
 
+
 币舫 (Bifun)
 -----------------
 
@@ -123,6 +146,7 @@ https://bifun.com
 - Services: Hosting, Shares
 - `Site <https://bifun.com>`__
 - `Email <business@bifun.com>`__
+
 
 Masternodehosting
 -----------------

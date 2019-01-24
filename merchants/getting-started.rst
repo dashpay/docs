@@ -144,6 +144,8 @@ particularly widespread.
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 | `QuikWallet <http://quikwallet.com>`_                         | |check| | |check|        |           |         | India only. Also supports SMS payment.                                                   |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
+| `Salamantex <https://www.salamantex.com>`_                    | |check| | |check|        | |check|   |         | Payments by app, web, software extension for existing POS or standalone POS terminal.    |
++---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 | `SetGetGo <https://setgetgo.com/>`_                           | |check| | |check|        |           |         | Available for Android, web and Android APIs, payment buttons, competitive fees           |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 | `Spark Payments <https://www.dash.org/forum/threads/39665/>`_ | |check| | |check|        |           |         | Available for Android, Windows, macOS, Linux. 94 exchange rates and Uphold.com supported |

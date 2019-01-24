@@ -41,6 +41,33 @@ A few general safety guidelines:
 A list of known scams, fake wallets and Ponzi or pyramid schemes can be
 seen below. Do NOT trust them.
 
+
+Impersonation
+=============
+
+Scammers may attempt to impersonate well-known community members and
+manipulate you into granting them access to your system or wallets. This
+is usually done via private messages on the forum, Discord or email. The
+attacks are often targeted against masternode owners. If you require
+technical assistance, it is best to ask in a public channel/forum or go
+to https://support.dash.org and open a ticket. If you engage in personal
+chat with a well-known community member, verify their identity by their
+chat history or through their publicly available cryptographic keys. All
+community members and `Dash Core Group staff <https://dash.org/team>`__
+will be able to verify their identity using signed PGP messages.
+Identities can also be verified on Keybase:
+
+- `moocowmoo <https://keybase.io/moocowmoo>`__
+- `strophy <https://keybase.io/strophy>`__
+- `tungfa <https://keybase.io/tungfa>`__
+- `codablock <https://keybase.io/codablock>`__
+- `UdjinM6 <https://keybase.io/udjinm6>`__
+- `Ryan Taylor <https://keybase.io/ryanptaylor>`__
+- `splawik21 <https://keybase.io/splawik21>`_
+- `Bertrand256 <https://keybase.io/bertrand256>`__
+- `akhavr <https://keybase.io/akhavr>`__
+
+
 Scams
 =====
 

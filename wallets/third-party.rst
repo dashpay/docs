@@ -1,6 +1,6 @@
 .. meta::
    :description: List and detailed information on third-party wallets supporting the Dash cryptocurrency
-   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, cryptonator
+   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, cryptonator, trust, kurepay, bitbill, abra
 
 .. _dash-third-party:
 
@@ -33,20 +33,19 @@ bank account, credit/debit card, cash (in the Philippines), Bitcoin,
 Bitcoin Cash, or Litecoin. Dash deposits and withdrawals are currently
 not supported.
 
-Download
---------
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://itunes.apple.com/US/app/id966301394
+Installation
+------------
 
 .. image:: img/google-play-badge.png
    :width: 200px
    :target: https://play.google.com/store/apps/details?id=com.plutus.wallet
 
-Abra is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.plutus.wallet>`__ and
-the `Apple App Store for iOS <https://itunes.apple.com/US/app/id966301394>`__.
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/US/app/id966301394
+
+Abra is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.plutus.wallet>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/US/app/id966301394>`__.
 
 Documentation
 -------------
@@ -78,8 +77,15 @@ to reduce effort spent on managing and exchanging crypto assets​.
 Installation
 ------------
 
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=io.atomicwallet
+
 All Atomic Wallet releases are available from https://atomicwallet.io -
 simply download and install the appropriate package for your system.
+Atomic Wallet is also available from the `Google Play Store for Android
+<https://play.google.com/store/apps/details?id=io.atomicwallet>`__ and
+coming soon to the Apple App Store for iOS.
 
 Documentation
 -------------
@@ -98,6 +104,46 @@ collected here:
 
    Atomic Wallet Portfolio screen
 
+
+BitBill
+=======
+
+https://www.bitbill.com
+
+.. image:: img/bitbill.png
+   :width: 100px
+   :align: right
+   :target: https://www.bitbill.com
+
+BitBill is a multi-currency and multi-signature capable mobile wallet
+with support for Dash. It allows you to manage multiple wallets and
+contacts to faciliate easy transactions.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.bitbill.www
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/bitbill/id1321798216
+
+BitBill is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.bitbill.www>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/us/app/bitbill/id1321798216>`__.
+
+Documentation
+-------------
+
+Join the `BitBill Telegram
+group <https://t.me/bitbill>`_ or send an email to hi@bitbill.com for
+support with BitBill.
+
+.. figure:: img/bitbill-wallet.png
+   :width: 180px
+
+   BitBill wallet
 
 Cobo
 ====
@@ -120,17 +166,16 @@ weekly returns.
 Installation
 ------------
 
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://itunes.apple.com/us/app/cobo-wallet-2/id1406282615
-
 .. image:: img/google-play-badge.png
    :width: 200px
    :target: https://play.google.com/store/apps/details?id=cobo.wallet
 
-Cobo is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=cobo.wallet>`__ and
-the `Apple App Store for iOS <https://itunes.apple.com/us/app/cobo-wallet-2/id1406282615>`__.
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/cobo-wallet-2/id1406282615
+
+Cobo is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=cobo.wallet>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/us/app/cobo-wallet-2/id1406282615>`__.
 
 Documentation
 -------------
@@ -163,18 +208,16 @@ through ShapeShift and Changelly integrations.
 Download
 --------
 
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://itunes.apple.com/us/app/coinomi-wallet/id1333588809
-
 .. image:: img/google-play-badge.png
    :width: 200px
    :target: https://play.google.com/store/apps/details?id=com.coinomi.wallet
 
-Coinomi is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.coinomi.wallet>`__
-and the `Apple App Store for iOS
-<https://itunes.apple.com/us/app/coinomi- wallet/id1333588809>`__.
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/coinomi-wallet/id1333588809
+
+Coinomi is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.coinomi.wallet>`__
+and the `Apple App Store for iOS <https://itunes.apple.com/us/app/coinomi- wallet/id1333588809>`__.
 
 Documentation
 -------------
@@ -209,10 +252,9 @@ Download
 
 .. image:: img/google-play-badge.png
    :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.plutus.wallet
+   :target: https://play.google.com/store/apps/details?id=com.cryptonator.android
 
-Cryptonator is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.aev.cryptonator>`__
+Cryptonator is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.cryptonator.android>`__
 and online at https://www.cryptonator.com
 
 Documentation
@@ -248,18 +290,16 @@ different cryptocurrencies.
 Installation
 ------------
 
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://itunes.apple.com/us/app/edge-bitcoin-wallet/id1344400091
-
 .. image:: img/google-play-badge.png
    :width: 200px
    :target: https://play.google.com/store/apps/details?id=co.edgesecure.app
 
-Edge is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=co.edgesecure.app>`__ and
-the `Apple App Store for iOS <https://itunes.apple.com/us/app/edge-
-bitcoin-wallet/id1344400091>`__.
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/edge-bitcoin-wallet/id1344400091
+
+Edge is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=co.edgesecure.app>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/us/app/edge-bitcoin-wallet/id1344400091>`__.
 
 Documentation
 -------------
@@ -297,19 +337,16 @@ and a portfolio tracker.
 
 Installation
 ------------
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=io.ethos.universalwallet
 
 .. image:: img/app-store.png
    :width: 180px
    :target: https://itunes.apple.com/us/app/ethos-universal-wallet/id1376959464
 
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=io.ethos.universalwallet
-
-Ethos Universal Wallet is available from the `Google Play Store for Android 
-<https://play.google.com/store/apps/details?id=io.ethos.universalwallet>`__ 
-and the `Apple App Store for iOS
-<https://itunes.apple.com/us/app/ethos-universal-wallet/id1376959464>`__.
+Ethos Universal Wallet is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=io.ethos.universalwallet>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/us/app/ethos-universal-wallet/id1376959464>`__.
 
 Documentation
 -------------
@@ -350,17 +387,16 @@ Evercoin hardware wallet is also due to launch soon.
 Installation
 ------------
 
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158
-
 .. image:: img/google-play-badge.png
    :width: 200px
    :target: https://play.google.com/store/apps/details?id=com.evercoin
 
-Evercoin is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.evercoin>`__ and the
-`Apple App Store for iOS <https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158>`__.
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158
+
+Evercoin is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.evercoin>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/us/app/evercoin-crypto-exchange/id1277924158>`__.
 
 Documentation
 -------------
@@ -430,9 +466,19 @@ ensuring the safety of your funds.
 Installation
 ------------
 
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.crypto.multiwallet
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/app/guarda-wallet/id1442083982
+
 Guarda desktop wallets are available from https://guarda.co/desktop for
 Linux, macOS and Windows, or you can use web wallet at
-https://guarda.co/app to create new or restore existing wallets.
+https://guarda.co/app to create new or restore existing wallets. Guarda
+is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.crypto.multiwallet>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/app/guarda-wallet/id1442083982>`__.
 
 Documentation
 -------------
@@ -468,8 +514,18 @@ software.
 Installation
 ------------
 
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.liberty.jaxx
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/jaxx-liberty/id1435383184
+
 All Jaxx releases are available from https://jaxx.io/downloads.html -
 simply download and install the appropriate package for your system.
+Jaxx is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.liberty.jaxx>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/us/app/jaxx-liberty/id1435383184>`__.
 
 Documentation
 -------------
@@ -486,6 +542,37 @@ here:
    :width: 400px
 
    Jaxx wallet running on various devices
+
+
+KurePay
+=======
+
+https://wallet.kurepay.com
+
+.. image:: img/kurepay.png
+   :width: 100px
+   :align: right
+   :target: https://wallet.kurepay.com
+
+KurePay offers a web and mobile wallet, with options to fund via
+credit/debit card and cryptocurrencies and withdrawals in Naira to
+Nigerian bank accounts. It is also possible to convert funds and pay
+utliities in Nigeria.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.kurewallet
+
+KurePay is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.btcc.wallet>`__.
+
+Documentation
+-------------
+
+Read the `FAQ <https://kurepay.com/ewallet.html>`__ or send an email to
+info@kurepay.com for support with KurePay.
 
 
 Mobi
@@ -509,18 +596,16 @@ you can use fiat currency to buy cryptocurrency in the app.
 Installation
 ------------
 
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://itunes.apple.com/us/app/mobi-your-money-anywhere/id1180017272
-
 .. image:: img/google-play-badge.png
    :width: 200px
    :target: https://play.google.com/store/apps/details?id=com.btcc.wallet
 
-Mobi is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.btcc.wallet>`__ and
-the `Apple App Store for iOS <https://itunes.apple.com/us/app/mobi-your-
-money-anywhere/id1180017272>`__.
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/mobi-your-money-anywhere/id1180017272
+
+Mobi is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.btcc.wallet>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/us/app/mobi-your-money-anywhere/id1180017272>`__.
 
 Documentation
 -------------
@@ -556,9 +641,12 @@ Installation
    :width: 200px
    :target: https://play.google.com/store/apps/details?id=com.paytomat
 
-Paytomat is available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=com.paytomat>`__ and
-coming soon on the Apple App Store for iOS.
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/paytomat-wallet/id1415300709
+
+Paytomat is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.paytomat>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/us/app/paytomat-wallet/id1415300709>`__.
 
 Documentation
 -------------
@@ -570,3 +658,44 @@ email to support@paytomat.com for support with Paytomat.
    :width: 133px
 
    Paytomat wallet running on Android
+
+
+Trust
+=====
+
+https://trustwallet.com
+
+.. image:: img/trust.png
+   :width: 100px
+   :align: right
+   :target: https://trustwallet.com
+
+Backed by `Binance <https://www.binance.com>`__, Trust wallet is a
+secure and intuitive multi-currency mobile wallet with support for Dash,
+Bitcoin, Ethereum and a wide range of tokens and DApps.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.wallet.crypto.trustapp
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/us/app/trust-ethereum-wallet/id1288339409
+
+Trust is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.wallet.crypto.trustapp>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/us/app/trust-ethereum-wallet/id1288339409>`__.
+
+Documentation
+-------------
+
+See the `Help Center <https://help.trustwalletapp.com>`__ or join the
+`Trust Telegram group <https://t.me/trustwallet>`_ for support with
+Trust.
+
+.. figure:: img/trust-wallet.png
+   :width: 133px
+
+   Trust wallet running on iOS
