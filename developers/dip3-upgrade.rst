@@ -27,9 +27,11 @@ Dash Core v0.13.0.0 will automatically activate `DIP002
 <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, `DIP003
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__ and `DIP004
 <https://github.com/dashpay/dips/blob/master/dip-0004.md>`__ once 80% of
-the network has upgraded. Please confirm the status of network uptake
-before proceeding as the upgrade path differs slightly depending on on
-your timing.
+the network has upgraded. Mining pools must mine an upgraded block and
+pay an upgraded masternode to successfully signal the upgrade in a
+block, and 80% of blocks in a window must signal in order to lock in the
+upgrade. Please confirm the status of network uptake before proceeding
+as the upgrade path differs slightly depending on on your timing.
 
 - Activation status can be tracked in the image below or at `this site 
   <http://178.254.23.111/~pub/Dash/Dash_Info.html>`__.
@@ -37,6 +39,8 @@ your timing.
 .. figure:: http://178.254.23.111/~pub/13_adoption.png
 
    Dash v0.13.0.0 adoption by miners
+
+- Masternode upgrade status can be tracked at `Dash Ninja <https://www.dashninja.pl/masternodes.html>`__
 
 - If you are updating to Dash Core v0.13.0.0 **prior** to this 80%
   threshold  you should be able to simply shut down the daemon and
