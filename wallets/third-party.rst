@@ -380,7 +380,7 @@ https://evercoin.com
 
 Evercoin is a multi-currency mobile wallet combined with the full power
 of an instant exchange, all in one app. Advanced features like limit
-orders allows you to execute advantageous trades without having to copy
+orders allow you to execute advantageous trades without having to copy
 addresses around and use complicated online exchanges. Private keys are
 stored on the device and backed up using a typical 12-word phrase. An
 Evercoin hardware wallet is also due to launch soon.
