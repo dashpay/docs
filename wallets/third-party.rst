@@ -216,7 +216,9 @@ Download
    :width: 180px
    :target: https://itunes.apple.com/us/app/coinomi-wallet/id1333588809
 
-Coinomi is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.coinomi.wallet>`__
+Coinomi desktop wallets are available from
+https://www.coinomi.com/downloads for Linux, macOS and Windows. Coinomi
+is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.coinomi.wallet>`__
 and the `Apple App Store for iOS <https://itunes.apple.com/us/app/coinomi- wallet/id1333588809>`__.
 
 Documentation
