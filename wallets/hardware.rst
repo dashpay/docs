@@ -312,19 +312,17 @@ Ledger
    :width: 200px
    :align: right
 
-Founded in 2014, French startup `Ledger <https://www.ledger.fr>`_
+Founded in 2014, French startup `Ledger <https://www.ledger.com>`_
 markets enterprise and consumer blockchain security solutions, including
-the €58 `Ledger Nano S <https://www.ledgerwallet.com/products/ledger-
-nano-s>`_ and upcoming `Ledger Blue
-<https://www.ledgerwallet.com/products/ledger-blue>`_. Ledger Nano S has
+the €58 `Ledger Nano S <https://www.ledger.com/products/ledger-nano-s>`_ and upcoming `Ledger Blue
+<https://www.ledger.com/products/ledger-blue>`_. Ledger Nano S has
 supported Dash since November 2016 and firmware version 1.2. Follow
 `these instructions
-<http://support.ledgerwallet.com/knowledge_base/topics/how-to-use-dash-
-with-a-nano-s>`_ to add Dash support to the device.
+<https://support.ledger.com/hc/en-us/articles/115005308185-Dash-DASH->`_ to add Dash support to the device.
 
-- Site: https://www.ledgerwallet.com
+- Site: https://www.ledger.com
 - Review: https://www.dashforcenews.com/ledger-nano-s-review
-- Shop: https://www.ledgerwallet.com/products
+- Shop: https://www.ledger.com/collections/all-products
 
 Product video:
 
