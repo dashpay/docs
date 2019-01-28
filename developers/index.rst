@@ -62,11 +62,11 @@ effectively disabled until changed. The following sporks currently exist
 on the network and serve functions as described below:
 
 SPORK_2_INSTANTSEND_ENABLED
-  Governs the ability of Dash clients to use InstandSend functionality.
+  Governs the ability of Dash clients to use InstantSend functionality.
 
 SPORK_3_INSTANTSEND_BLOCK_FILTERING
   If enabled, masternodes will reject blocks containing transactions in
-  conflict with locked but unconfirmed InstandSend transactions.
+  conflict with locked but unconfirmed InstantSend transactions.
 
 SPORK_5_INSTANTSEND_MAX_VALUE
   Enforces the maximum value in Dash that can be included in an

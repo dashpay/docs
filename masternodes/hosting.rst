@@ -68,7 +68,7 @@ AllNodes
 https://www.allnodes.com
 
 - Operated by: Sephiroth
-- Services: Hosting
+- Services: Monitoring, Hosting
 - Cost: $5/month (free during beta)
 - `Site <https://www.allnodes.com>`__
 - `Email <info@allnodes.com>`__
@@ -89,7 +89,7 @@ https://ginplatform.io
 
 - Operated by: GIN Platform Ltd.
 - Services: Hosting, Monitoring, One-click deployment
-- From $4.50/month (variable)
+- From $12.60/month (variable)
 - `Site <https://ginplatform.io>`__
 - `Email <info@ginplatform.io>`__
 

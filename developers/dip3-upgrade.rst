@@ -17,7 +17,10 @@ Evolution, a broadly scoped update to our network intended to facilitate
 and enable new payment methods and technologies. Please see the `Dash
 Core v0.13.0 Product Brief <https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef>`__ 
 for an overview of new features, and complete this `3 question survey <https://goo.gl/forms/3BEo2MQYsZT5rwig1>`__
-to help us assess the impact of this upgrade.
+to help us assess the impact of this upgrade. The upgrade will take 
+place in phases, as shown in the following diagram:
+
+.. image:: img/013-upgrade-procedure.png
 
 
 Installation notes

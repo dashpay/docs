@@ -60,7 +60,7 @@ Sending
 
 The Send DASH screen gives you two options to enter the payment address:
 **Scan QR Code** or **Pay Address From Clipboard**. You can choose to
-use **InstandSend** for instant confirmation, or disable this to send a
+use **InstantSend** for instant confirmation, or disable this to send a
 normal transaction which will require more time for confirmation.
 Depending on the code you are scanning, the amount of Dash requested may
 be included, or you can enter it yourself. A confirmation screen will

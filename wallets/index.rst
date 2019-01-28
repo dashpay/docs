@@ -45,7 +45,7 @@ and Windows.
 Features:
 
 -  PrivateSend
--  InstandSend
+-  InstantSend
 -  Wallet encryption
 -  Coin control and fee control
 -  QR code generation and address book
@@ -113,7 +113,7 @@ Dash Android Wallet
 
 Dash offers a standalone wallet for Android, with development supported 
 by the Dash budget. The Dash Android Wallet supports advanced Dash 
-features, including contact management and InstandSend. You can scan and 
+features, including contact management and InstantSend. You can scan and 
 display QR codes for quick transfers, backup and restore your wallet, 
 keep an address book of frequently used addresses, pay with NFC, sweep 
 paper wallets and more.
@@ -141,9 +141,9 @@ Dash iOS Wallet
 
 Dash offers a standalone wallet for iOS, with development supported by
 the Dash budget. The official Dash Wallet supports advanced Dash
-features such as InstandSend. You can scan and display QR codes for
-quick transfers, backup your wallet using a recovery phrase and even pay
-to Bitcoin addresses through native integration with ShapeShift.
+features such as InstantSend sending and receiving. You can also scan
+and display QR codes for quick transfers and backup your wallet using a
+secure recovery phrase.
 
 .. toctree::
    :includehidden:

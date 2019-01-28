@@ -216,7 +216,9 @@ Download
    :width: 180px
    :target: https://itunes.apple.com/us/app/coinomi-wallet/id1333588809
 
-Coinomi is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.coinomi.wallet>`__
+Coinomi desktop wallets are available from
+https://www.coinomi.com/downloads for Linux, macOS and Windows. Coinomi
+is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.coinomi.wallet>`__
 and the `Apple App Store for iOS <https://itunes.apple.com/us/app/coinomi- wallet/id1333588809>`__.
 
 Documentation
@@ -272,12 +274,12 @@ https://cryptonator.zendesk.com/hc
 Edge
 ====
 
-https://edgesecure.co
+https://edge.app
 
 .. image:: img/edge.png
    :width: 100px
    :align: right
-   :target: https://edgesecure.co
+   :target: https://edge.app
 
 Edge is a secure multi-currency wallet for iOS and Android. It offers a
 unique login system to store your encrypted HD seed on the cloud while
@@ -305,14 +307,13 @@ Documentation
 -------------
 
 Edge offers detailed documentation of all functions at
-https://support.edgesecure.co and a few quick links are also collected
+https://support.edge.app and a few quick links are also collected
 here:
 
-- `Getting started <https://support.edgesecure.co/support/solutions/8000051596>`__
-- `How do I create a new wallet? <https://support.edgesecure.co/support/solutions/8000051596>`_
-- `How do I send money? <https://support.edgesecure.co/support/solutions/articles/8000058750>`_
-- `How do I receive money into my account? <https://support.edgesecure.co/support/solutions/articles/8000058749>`_
-- `What is ShapeShift and how does it work? <https://support.edgesecure.co/support/solutions/articles/8000060525>`_
+- `Getting started <https://support.edge.app/support/solutions/8000051596>`__
+- `How do I create a new wallet? <https://support.edge.app/support/solutions/articles/8000058907>`_
+- `How do I send money? <https://support.edge.app/support/solutions/articles/8000058750>`_
+- `How do I receive money into my account? <https://support.edge.app/support/solutions/articles/8000058749>`_
 
 .. figure:: img/edge-wallet.png
    :width: 400px
@@ -379,7 +380,7 @@ https://evercoin.com
 
 Evercoin is a multi-currency mobile wallet combined with the full power
 of an instant exchange, all in one app. Advanced features like limit
-orders allows you to execute advantageous trades without having to copy
+orders allow you to execute advantageous trades without having to copy
 addresses around and use complicated online exchanges. Private keys are
 stored on the device and backed up using a typical 12-word phrase. An
 Evercoin hardware wallet is also due to launch soon.
