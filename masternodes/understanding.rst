@@ -93,7 +93,8 @@ documentation appears below:
 
 - `DIP003 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
 - :ref:`dip3-changes` (you are here)
-- :ref:`dip3-upgrade`
+- :ref:`dip3-dev-upgrade`
+- :ref:`Dash 0.13 Upgrade Procedure for Masternodes <dip3-upgrade>`
 - :ref:`Full masternode setup guide <masternode-setup>`
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
 - :ref:`Information for operators of hosted masternodes <operator-transactions>`
