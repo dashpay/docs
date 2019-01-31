@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 13:58+0000\n"
+"POT-Creation-Date: 2019-01-31 04:56+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -149,34 +149,38 @@ msgid ":ref:`dip3-changes` (you are here)"
 msgstr ""
 
 #: ../../masternodes/understanding.rst:96
-msgid ":ref:`dip3-upgrade`"
+msgid ":ref:`dip3-dev-upgrade`"
 msgstr ""
 
 #: ../../masternodes/understanding.rst:97
-msgid ":ref:`Full masternode setup guide <masternode-setup>`"
+msgid ":ref:`Dash 0.13 Upgrade Procedure for Masternodes <dip3-upgrade>`"
 msgstr ""
 
 #: ../../masternodes/understanding.rst:98
-msgid ":ref:`Information for users of hosted masternodes <hosted-setup>`"
+msgid ":ref:`Full masternode setup guide <masternode-setup>`"
 msgstr ""
 
 #: ../../masternodes/understanding.rst:99
+msgid ":ref:`Information for users of hosted masternodes <hosted-setup>`"
+msgstr ""
+
+#: ../../masternodes/understanding.rst:100
 msgid ""
 ":ref:`Information for operators of hosted masternodes <operator-"
 "transactions>`"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:101
+#: ../../masternodes/understanding.rst:102
 msgid "Important concepts and changes:"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:103
+#: ../../masternodes/understanding.rst:104
 msgid ""
 "It is possible to upgrade an existing masternode in-place without starting a"
 " new server and without moving your 1000 DASH collateral."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:105
+#: ../../masternodes/understanding.rst:106
 msgid ""
 "A masternode was previously \"started\" using the ``masternode start-alias``"
 " command based on a ``masternode.conf`` file. Under DIP003, this file is no "
@@ -188,21 +192,21 @@ msgid ""
 "particular key is written to the blockchain."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:111
+#: ../../masternodes/understanding.rst:112
 msgid ""
 "As before in ``masternode.conf``, the ProRegTx references the transaction id"
 " (txid) and index holding the collateral. The IP address and port of the "
 "masternode are also defined in this transaction."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:114
+#: ../../masternodes/understanding.rst:115
 msgid ""
 "The ProRegTx contains 2 Dash addresses (also called public keys) and one BLS"
 " public key, which represent 3 different roles in the masternode and define "
 "update and voting rights. The keys are:"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:118
+#: ../../masternodes/understanding.rst:119
 msgid ""
 "``ownerKeyAddr``: This is a Dash address (public key) controlled by the "
 "masternode owner. It is different from the address used for the collateral. "
@@ -211,7 +215,7 @@ msgid ""
 "each masternode."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:123
+#: ../../masternodes/understanding.rst:124
 msgid ""
 "``operatorPubKey``: This is the BLS public key of the masternode operator. "
 "Only the operator is allowed to issue :ref:`ProUpServTx <update-"
@@ -221,14 +225,14 @@ msgid ""
 "masternode."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:129
+#: ../../masternodes/understanding.rst:130
 msgid ""
 "``votingKeyAddr``: This is a Dash address (public key) used for proposal "
 "voting. Votes signed with the corresponding private key are valid while the "
 "masternode is in the registered set."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:133
+#: ../../masternodes/understanding.rst:134
 msgid ""
 "Masternode payments were previously sent to the address holding the "
 "collateral. Under DIP003, the owner should specify a different address to "
@@ -236,7 +240,7 @@ msgid ""
 "zero percentage as payment to a separate masternode operator, if applicable."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:138
+#: ../../masternodes/understanding.rst:139
 msgid ""
 "The masternode configuration can later be updated using ProUpServTx, "
 "ProUpRegTx and ProUpRevTx transactions. See `Updating Masternode Information"
@@ -245,7 +249,7 @@ msgid ""
 "documentation for more details."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:143
+#: ../../masternodes/understanding.rst:144
 msgid ""
 "All functions related to DIP003 will only take effect once Spork 15 is "
 "enabled on the network. Until then, it is necessary to set up the masternode"
@@ -258,35 +262,35 @@ msgid ""
 "and ``votingKeyAddr`` must also be identical until Spork 15 is enabled."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:153
+#: ../../masternodes/understanding.rst:154
 msgid "The process of setting up or upgrading a masternode is as follows:"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:155
+#: ../../masternodes/understanding.rst:156
 msgid "Set up your server and operating system"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:156
+#: ../../masternodes/understanding.rst:157
 msgid "Install the Dash software and synchronize the blockchain"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:157
+#: ../../masternodes/understanding.rst:158
 msgid "Generate a BLS key pair and enter the private key on the masternode"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:158
+#: ../../masternodes/understanding.rst:159
 msgid "Prepare a ProRegTx transaction"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:159
+#: ../../masternodes/understanding.rst:160
 msgid "Sign the ProRegTx transaction"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:160
+#: ../../masternodes/understanding.rst:161
 msgid "Submit the signed ProRegTx transaction"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:162
+#: ../../masternodes/understanding.rst:163
 msgid ""
 "Step 1 can be omitted if you have an existing server. Steps 2 and 3 require "
 "direct access to the masternode. Steps 3 and 4 require access to a Dash "
@@ -294,11 +298,11 @@ msgid ""
 "collateral. Step 6 requires a Dash balance to pay the transaction fee."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:169
+#: ../../masternodes/understanding.rst:170
 msgid "Masternodes vs. mining"
 msgstr "主节点 vs. 挖矿"
 
-#: ../../masternodes/understanding.rst:171
+#: ../../masternodes/understanding.rst:172
 msgid ""
 "Dash, like Bitcoin and most other cryptocurrencies, is based on a "
 "decentralized ledger of all transactions, known as a blockchain. This "
@@ -314,7 +318,7 @@ msgstr ""
 " :ref:`矿工 <mining>`\\ "
 "通过专用的设备来解决难题，在难题解决后，他们有权向区块链添加新的区块。如果运行软件的其他用户认为难题已经得到了恰当的解决，那么新的区块将会被添加到区块链上，而矿工也将得到区块奖励。"
 
-#: ../../masternodes/understanding.rst:181
+#: ../../masternodes/understanding.rst:182
 msgid ""
 "Dash works a little differently from Bitcoin, however, because it has a two-"
 "tier network. The second tier is powered by masternodes (Full Nodes), which "
@@ -327,7 +331,7 @@ msgid ""
 msgstr ""
 "和比特币相比，达世币有所不同，因为它拥有一个双层网络。第二层级的网络由主节点（也称全节点）提供支持，从而具备财务隐私（匿名发送）、即时交易（即时发送）、去中心化管理以及预算提案系统。正因为第二层级非常重要，因此主节点将从区块奖励中分得一部分。具体来说，区块奖励的划分如下所示：45%分给矿工，45%分给主节点持有人，剩余的10%则划拨给预算提案系统（由超级块按月创建）。"
 
-#: ../../masternodes/understanding.rst:191
+#: ../../masternodes/understanding.rst:192
 msgid ""
 "The masternode system is referred to as Proof of Service (PoSe), since the "
 "masternodes provide crucial services to the network. In fact, the entire "
@@ -339,7 +343,7 @@ msgid ""
 msgstr ""
 "主节点系统也称服务量证明（PoSe），因为主节点的实质正是为网络提供关键的服务。事实上，整个达世币网络都由主节点监督，它们有权驳回由矿工创建的不合格的区块。如果矿工尝试占有全部的区块奖励或运行旧版的达世币软件，那么主节点网络就会孤立该区块，使它无法添加到区块链上。"
 
-#: ../../masternodes/understanding.rst:199
+#: ../../masternodes/understanding.rst:200
 msgid ""
 "In short, miners power the first tier, which is the basic sending and "
 "receiving of funds and prevention of doublespending. Masternodes power the "
@@ -353,11 +357,11 @@ msgid ""
 msgstr ""
 "简而言之，矿工组成了网络的第一层级，为用户提供资金的发送和接收服务并防止双花支付的发生。主节点则构成了网络的第二层级，为达世币与众不同的性能提供支持。主节点不参与挖矿活动，因此挖矿的设备并不能充当主节点。要想持有主节点，用户必须持有1000达世币作为\"保证金\"。这笔保证金始终由持有人全权掌控，并且可以被持有人自由支配。换言之，保证金不会以任何方式予以锁定。不过，一旦保证金被转移或支付，对应的主节点将会下线并停止接收区块链奖励。"
 
-#: ../../masternodes/understanding.rst:214
+#: ../../masternodes/understanding.rst:215
 msgid "Payment logic"
 msgstr "有关支付的逻辑"
 
-#: ../../masternodes/understanding.rst:216
+#: ../../masternodes/understanding.rst:217
 msgid ""
 "Masternode paymentss in Dash version 0.13.0 are entirely deterministic and "
 "based on a simple list sort algorithm. For documentation of version 0.12.0 "
@@ -368,19 +372,19 @@ msgid ""
 "sets of masternodes."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:224
+#: ../../masternodes/understanding.rst:225
 msgid ""
 "The full set, which contains all registered masternodes that have not spent "
 "their collateral funding transactions."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:226
+#: ../../masternodes/understanding.rst:227
 msgid ""
 "The valid set, a subset of the full set which contains all masternodes which"
 " are not marked as Proof of Service (PoSe) banned."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:229
+#: ../../masternodes/understanding.rst:230
 msgid ""
 "Each masternode in the set of valid masternodes is identified by the block "
 "at which it was last paid. If it has never received payment or was banned "
@@ -391,11 +395,11 @@ msgid ""
 " to break the tie."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:239
+#: ../../masternodes/understanding.rst:240
 msgid "Quorum selection"
 msgstr "仲裁连的选取"
 
-#: ../../masternodes/understanding.rst:241
+#: ../../masternodes/understanding.rst:242
 msgid ""
 "InstantSend transactions in Dash version 0.13.0 are secured using a "
 "consensus of deterministically selected masternodes. This set of masternodes"
@@ -406,7 +410,7 @@ msgid ""
 "masternode funding transactions."
 msgstr ""
 
-#: ../../masternodes/understanding.rst:249
+#: ../../masternodes/understanding.rst:250
 msgid ""
 "Each masternode receiving the InstantSend transaction lock request compares "
 "the hash of the masternode's funding transaction to the hash of the input "
@@ -415,17 +419,17 @@ msgid ""
 msgstr ""
 "接收到即时发送交易锁定申请的各个主节点需要比较主节点交易与锁定申请的哈希值。在证实输入资金未经支出后，距离该哈希值最远的十个主节点将公告对交易锁定的确认。"
 
-#: ../../masternodes/understanding.rst:255
+#: ../../masternodes/understanding.rst:256
 msgid ""
 "All InstantSend inputs must be at least six blocks old or the transaction "
 "will be rejected."
 msgstr "所有的即时发送输入都必须至少拥有6个成熟的确认，否则，交易将被驳回。"
 
-#: ../../masternodes/understanding.rst:260
+#: ../../masternodes/understanding.rst:261
 msgid "Masternode requirements"
 msgstr "主节点的相关要求"
 
-#: ../../masternodes/understanding.rst:262
+#: ../../masternodes/understanding.rst:263
 msgid ""
 "1000 Dash: Arguably the hardest part. Dash can be obtained from exchanges "
 "such as Poloniex, Bittrex, Kraken and LiveCoin. Shapeshift's service is also"
@@ -433,7 +437,7 @@ msgid ""
 msgstr ""
 "用户必须存入1000个达世币作为保证金才能有资格运营主节点。用户可以借助Poloniex、Bittrex、Kraken、LiveCoin和Shapeshift等交易平台获取达世币。"
 
-#: ../../masternodes/understanding.rst:265
+#: ../../masternodes/understanding.rst:266
 msgid ""
 "A server or VPS running Linux: Most recent guides use Ubuntu 16.04 LTS. We "
 "recommend VPS services such as Vultr and DigitalOcean, although any decent "
@@ -444,90 +448,90 @@ msgstr ""
 "运行Linux的服务器或虚拟专用服务器。最新版的指南使用的是Ubuntu 16.04 "
 "LTS。推荐用户使用Vultr、DigitalOcean或其它性能优越的虚拟专用服务器。通常情况下，只需达到平均规格的服务器就能满足需求了，但达世币的发展将对服务器的性能提出更高的要求。"
 
-#: ../../masternodes/understanding.rst:270
+#: ../../masternodes/understanding.rst:271
 msgid "A dedicated IP address: These usually come with the VPS/server."
 msgstr "专用IP地址通常随服务器/虚拟专用服务器一起提供。"
 
-#: ../../masternodes/understanding.rst:271
+#: ../../masternodes/understanding.rst:272
 msgid ""
 "A little time and (heart): Masternodes used to require complex setup, but "
 "tools such as dashman now greatly simplify the process."
 msgstr "额外付出的时间（和精力）：主节点曾经需要复杂的设置，但是dashman等工具现在已经大大简化了设置过程。"
 
-#: ../../masternodes/understanding.rst:274
+#: ../../masternodes/understanding.rst:275
 msgid ""
 "In addition to the 1000 Dash held in collateral, masternodes also have "
 "minimum hardware requirements. As of version 12.1, these requirements are as"
 " follows:"
 msgstr "除了1000达世币的保证金之外，主节点还在硬件方面提出了最低要求。以12.1版本为例，主节点对硬件的最低要求包括："
 
-#: ../../masternodes/understanding.rst:279
+#: ../../masternodes/understanding.rst:280
 msgid "Minimum"
 msgstr "最低配"
 
-#: ../../masternodes/understanding.rst:279
+#: ../../masternodes/understanding.rst:280
 msgid "Recommended"
 msgstr "推荐"
 
-#: ../../masternodes/understanding.rst:281
+#: ../../masternodes/understanding.rst:282
 msgid "CPU"
 msgstr "CPU"
 
-#: ../../masternodes/understanding.rst:281
+#: ../../masternodes/understanding.rst:282
 msgid "1x 1 GHz"
 msgstr "1x 1 GHz"
 
-#: ../../masternodes/understanding.rst:281
+#: ../../masternodes/understanding.rst:282
 msgid "1x 2 GHz"
 msgstr "1x 2 GHz"
 
-#: ../../masternodes/understanding.rst:283
+#: ../../masternodes/understanding.rst:284
 msgid "RAM"
 msgstr "RAM"
 
-#: ../../masternodes/understanding.rst:283
+#: ../../masternodes/understanding.rst:284
 msgid "2 GB"
 msgstr "2 GB"
 
-#: ../../masternodes/understanding.rst:283
+#: ../../masternodes/understanding.rst:284
 msgid "4 GB"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:285
+#: ../../masternodes/understanding.rst:286
 msgid "Disk"
 msgstr "Disk"
 
-#: ../../masternodes/understanding.rst:285
+#: ../../masternodes/understanding.rst:286
 msgid "20 GB"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:285
+#: ../../masternodes/understanding.rst:286
 msgid "40 GB"
 msgstr ""
 
-#: ../../masternodes/understanding.rst:287
+#: ../../masternodes/understanding.rst:288
 msgid "Network"
 msgstr "Network"
 
-#: ../../masternodes/understanding.rst:287
+#: ../../masternodes/understanding.rst:288
 msgid "400 GB/mth"
 msgstr "400 GB/mth"
 
-#: ../../masternodes/understanding.rst:287
+#: ../../masternodes/understanding.rst:288
 msgid "1 TB/mth"
 msgstr "1 TB/mth"
 
-#: ../../masternodes/understanding.rst:290
+#: ../../masternodes/understanding.rst:291
 msgid ""
 "Masternode bandwidth use ranges between 300-500 GB per month and will grow "
 "as the network does."
 msgstr "达世币的带宽使用约为每个月300-500 GB，并且这一数字还将随着网络的发展而增长。"
 
-#: ../../masternodes/understanding.rst:294
+#: ../../masternodes/understanding.rst:295
 msgid "Dash Evolution"
 msgstr "Dash Evolution"
 
-#: ../../masternodes/understanding.rst:296
+#: ../../masternodes/understanding.rst:297
 msgid ""
 "The exact hardware requirements for Dash Evolution masternodes have yet to "
 "be determined, although some pointers can be taken from the `roadmap "
