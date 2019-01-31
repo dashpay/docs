@@ -6,17 +6,18 @@
 # Translators:
 # Julia Ogonkova <livingflcl@gmail.com>, 2018
 # Leon White <leon.white@dash.org>, 2018
-# Max Aronych <taofgoar@protonmail.com>, 2018
 # Андрей Дегтяр <diusha1711@gmail.com>, 2019
+# Max Aronych <taofgoar@protonmail.com>, 2019
+# Дмитрий <dmitry.zhludin@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 13:58+0000\n"
+"POT-Creation-Date: 2019-01-31 04:56+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2019\n"
+"Last-Translator: Дмитрий <dmitry.zhludin@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +38,8 @@ msgid ""
 "dash, cryptocurrency, masternode, maintenance, maintain, payments, "
 "withdrawal, voting, monitoring, dip3, upgrade, deterministic"
 msgstr ""
+"dash, криптовалюта, мастернода, обслуживание, обслуживать, платежи, вывод, "
+"голосование, мониторинг, dip3, обновление, детерминированный"
 
 #: ../../masternodes/maintenance.rst:9
 msgid "Maintenance"
@@ -68,6 +71,11 @@ msgid ""
 "installed Dash manually or using dashman, you must follow the procedure "
 "appropriate for your masternode, as described below."
 msgstr ""
+"Программное обеспечение Dash Core нуждается в регулярных обновлениях для "
+"поддержания соответствия с консенсусом сети. В зависимости от того, "
+"установили ли вы Dash вручную или использовали dashman, вам необходимо "
+"провести процедуру, подходящую вашей мастерноде, описание этой процедуры "
+"приведено ниже."
 
 #: ../../masternodes/maintenance.rst:30
 msgid "Option 1: Updating from dashman"
@@ -88,6 +96,8 @@ msgstr "Проверьте статус вашей мастерноды::"
 #: ../../masternodes/maintenance.rst:42 ../../masternodes/maintenance.rst:95
 msgid "The Dash software on the masternode is now updated."
 msgstr ""
+"Теперь программное обеспечение Dash на мастерноде обновлено до последней "
+"версии."
 
 #: ../../masternodes/maintenance.rst:46
 msgid "Option 2: Manual update"
@@ -160,7 +170,7 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:101
 msgid "Updating Masternode Information"
-msgstr ""
+msgstr "Информация по обновлению мастеноды"
 
 #: ../../masternodes/maintenance.rst:103
 msgid ""
@@ -171,10 +181,17 @@ msgid ""
 " revoke a masternode's registered status (in the event of a security breach,"
 " for example) to force both owner and operator to update their details."
 msgstr ""
+"Периодическии будет необходимо обновлять информацию о мастерноде, если "
+"какие-либо данные о владельце или операторе мастерноды изменятся. Например, "
+"это может быть IP адрес, изменение адреса выплат владельца/оператора или "
+"изменение процента награды, полагающейся оператору. Также есть возможность "
+"отозвать зарегистистрированный статус мастерноды (например, в случае проблем"
+" с безопасностью) для того, чтобы принудить и владельца и оператора обновить"
+" данные."
 
 #: ../../masternodes/maintenance.rst:114
 msgid "ProUpServTx"
-msgstr ""
+msgstr "ProUpServTx"
 
 #: ../../masternodes/maintenance.rst:116
 msgid ""
@@ -186,6 +203,14 @@ msgid ""
 "operatorReward is non-zero, the owner gets the full masternode reward. The "
 "ProUpServTx takes the following syntax::"
 msgstr ""
+"Служебная Транзакция Обновления Информации о Поставщике Услуг или Provider "
+"Update Service Transaction (ProUpServTx) используется для обновления "
+"информации, касающейся оператора. Оператор может обновить IP адрес и "
+"входящие порты мастерноды. Если в изначальном ProRegTX была выставлена "
+"operatorReward отличная от нуля, то оператор может настроить поле "
+"scriptOperatorPayout в ProUpServTx. Если scriptOperatorPayout не установлена"
+" или operatorPayout не равна нулю, то владелец получает полную награду от "
+"мастерноды. ProUpServTx использует следующий синтаксис::"
 
 #: ../../masternodes/maintenance.rst:126 ../../masternodes/maintenance.rst:159
 #: ../../masternodes/maintenance.rst:190
@@ -194,17 +219,19 @@ msgstr "Где:"
 
 #: ../../masternodes/maintenance.rst:128
 msgid "``proTxHash``: The hash of the initial ProRegTx"
-msgstr ""
+msgstr "``proTxHash``: хеш изначального ProRegTx"
 
 #: ../../masternodes/maintenance.rst:129
 msgid "``ipAndPort``: IP and port in the form \"ip:port\""
-msgstr ""
+msgstr "``ipAndPort``: IP и порт из \"ip:port\""
 
 #: ../../masternodes/maintenance.rst:130 ../../masternodes/maintenance.rst:193
 msgid ""
 "``operatorKey``: The operator BLS private key associated with the registered"
 " operator public key"
 msgstr ""
+"``operatorKey``: BLS приватный ключ оператора, привязанный к "
+"зарегистрированному публичному ключу оператора"
 
 #: ../../masternodes/maintenance.rst:132
 msgid ""
@@ -212,12 +239,18 @@ msgid ""
 "payments. Only allowed when the ProRegTx had a non-zero ``operatorReward`` "
 "value."
 msgstr ""
+"``operatorPayoutAddress`` (по желанию): адрес, использующийся для выплаты "
+"награды оператору. Его использование разрешено только, когда ProRegTx имеет "
+"ненулевое значение в \"operatorReward\"."
 
 #: ../../masternodes/maintenance.rst:135 ../../masternodes/maintenance.rst:196
 msgid ""
 "``feeSourceAddress`` (optional): An address used to fund ProTx fee. "
 "``operatorPayoutAddress`` will be used if not specified."
 msgstr ""
+"``feeSourceAddress`` (по желанию): адрес, использующийся для оплаты комиссии"
+" за ProTx. Будет использоваться ``operatorPayoutAddress``, если не указано "
+"другое."
 
 #: ../../masternodes/maintenance.rst:138 ../../masternodes/maintenance.rst:199
 msgid "Example::"
@@ -228,10 +261,12 @@ msgid ""
 "The masternode is now removed from the PoSe-banned list, and the IP:port and"
 " operator reward addresses are updated."
 msgstr ""
+"Теперь мастернода удалена из бан-списка PoSe, а IP:port и адрес награды "
+"оператора обновлены."
 
 #: ../../masternodes/maintenance.rst:150
 msgid "ProUpRegTx"
-msgstr ""
+msgstr "ProUpRegTx"
 
 #: ../../masternodes/maintenance.rst:152
 msgid ""
@@ -240,42 +275,55 @@ msgid ""
 "public key (e.g. to nominate a new operator), the voting address and their "
 "own payout address. The ProUpRegTx takes the following syntax::"
 msgstr ""
+"Регистрационная транзакция обновления информации о провайдере или Provider "
+"Update Registrar Transaction (ProUpRegTx) используется для обновления "
+"информации, касающейся владельца. Владелец может обновить публичный BLS ключ"
+" оператора (например, чтобы назначить нового оператора), адрес голосования и"
+" адреса выплат операторов. ProUpRegTx использует следующий синтаксис::"
 
 #: ../../masternodes/maintenance.rst:161 ../../masternodes/maintenance.rst:192
 msgid "``proTxHash``: The transaction id of the initial ProRegTx"
-msgstr ""
+msgstr "``proTxHash``: id транзакции изначального ProRegTx"
 
 #: ../../masternodes/maintenance.rst:162
 msgid ""
 "``operatorKeyAddr``: An updated BLS public key, or 0 to use the last on-"
 "chain operator key"
 msgstr ""
+"``operatorKeyAddr``: Обновленный BLS публичный ключ или значение 0 для "
+"использования ключа последнего оператора в цепи."
 
 #: ../../masternodes/maintenance.rst:164
 msgid ""
 "``votingKeyAddr``: An updated voting key address, or 0 to use the last on-"
 "chain operator key"
 msgstr ""
+"``votingKeyAddr``: обновлённый адрес для ключа голосования или значение 0 "
+"для использования ключа последнего оператора в цепи."
 
 #: ../../masternodes/maintenance.rst:166
 msgid ""
 "``payoutAddress``: An updated Dash address for owner payments, or 0 to use "
 "the last on-chain operator key"
 msgstr ""
+"``payoutAddress``: обновлённый адрес для выплат владельцу или значение 0 для"
+" использования ключа последнего оператора в цепи."
 
 #: ../../masternodes/maintenance.rst:168
 msgid ""
 "``feeSourceAddress`` (optional): An address used to fund ProTx fee. "
 "``PayoutAddress`` will be used if not specified."
 msgstr ""
+"``feeSourceAddress`` (по желанию): адрес для оплаты комиссии за ProTx. Если "
+"не указано иное, то будет использоваться``PayoutAddress``."
 
 #: ../../masternodes/maintenance.rst:171
 msgid "Example to update payout address::"
-msgstr ""
+msgstr "Пример обновления адреса выплат::"
 
 #: ../../masternodes/maintenance.rst:177
 msgid "ProUpRevTx"
-msgstr ""
+msgstr "ProUpRevTx"
 
 #: ../../masternodes/maintenance.rst:179
 msgid ""
@@ -287,6 +335,14 @@ msgid ""
 " update the service-related metadata and clear the PoSe- banned state "
 "(revive the masternode). The ProUpRevTx takes the following syntax::"
 msgstr ""
+"Транзакция отзыва обновления информации о провайдере или Provider Update "
+"Revocation Transaction (ProUpRevTx) используется оператором для прекращения "
+"услуг или сигнализации владельцу о том, что необходим новый BLS ключ. Данная"
+" транзакция немедленно поместит мастерноду в бан PoSe. Владелец должен будет"
+" отправить ProUpRegTx для назначения нового ключа оператора. После того как "
+"ProUpRegTX будет включена в блок, новый оператор должен будет отправить "
+"ProUpServTx для обновления метаданных и исключения из бана PoSe "
+"(восстановить мастерноду). ProUpRevTx использует следующий синтаксис::"
 
 #: ../../masternodes/maintenance.rst:195
 msgid ""
@@ -294,6 +350,9 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-"
 "for-self-revocation-of-operators>`__"
 msgstr ""
+"``reason`` (по желанию): целочисленное значение, обозначающее `причину "
+"отзыва <https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a"
+"-reasons-for-self-revocation-of-operators>`__"
 
 #: ../../masternodes/maintenance.rst:205
 msgid "DashCentral voting, verification and monitoring"
