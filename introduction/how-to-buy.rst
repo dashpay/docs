@@ -1495,6 +1495,17 @@ Cryptomate
   fastest transactions - coins can be in your wallet as soon as 5
   minutes after ordering.
 
+Easy Crypto
+  .. image:: exchanges/easycrypto.png
+     :width: 200px
+     :align: right
+     :target: https://www.easycrypto.nz
+
+  https://www.easycrypto.nz
+
+  Easy Crypto allows New Zealanders to buy and sell Dash and 45 other
+  cryptocurrencies instantly, with fast and friendly service.
+
 BitPrime
   .. image:: exchanges/bitprime.png
      :width: 200px

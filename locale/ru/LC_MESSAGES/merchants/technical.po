@@ -5,18 +5,19 @@
 # 
 # Translators:
 # Tikhon Skudarnov <semargsemarg@gmail.com>, 2018
-# Дмитрий <dmitry.zhludin@gmail.com>, 2018
 # Max Aronych <taofgoar@protonmail.com>, 2019
 # Андрей Дегтяр <diusha1711@gmail.com>, 2019
+# Julia Ogonkova <livingflcl@gmail.com>, 2019
+# Дмитрий <dmitry.zhludin@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-22 13:58+0000\n"
+"POT-Creation-Date: 2019-01-31 04:56+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
-"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2019\n"
+"Last-Translator: Дмитрий <dmitry.zhludin@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,7 +45,7 @@ msgstr "Техническое руководство"
 
 #: ../../merchants/technical.rst:12
 msgid "Dash Wallet Integration"
-msgstr ""
+msgstr "Интеграция Dash Wallet"
 
 #: ../../merchants/technical.rst:14
 msgid ""
@@ -52,6 +53,9 @@ msgid ""
 "<https://github.com/dashpay/docs/raw/master/binary/merchants /Integration-"
 "Resources-Wallet-Integration.pdf>`__."
 msgstr ""
+"Этот документ также доступен в формате `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/merchants /Integration-"
+"Resources-Wallet-Integration.pdf>`__."
 
 #: ../../merchants/technical.rst:18
 msgid ""
@@ -62,29 +66,37 @@ msgid ""
 "functionalities such as InstantSend. These differences, as well as more "
 "general information, are summarized below."
 msgstr ""
+"`Dash Core <https://github.com/dashpay/dash/releases>`__  -это форк "
+"Биткойна, следовательно, большую часть функционала Dash Core Daemon можно "
+"внедрить похожим образом. Ключевые отличия лишь в изменении существующих "
+"JSON-RPC команд, чтобы можно было поддерживать такие уникальные функции, как"
+" InstantSend. Эти отличия, а также общая информация, приведены ниже."
 
 #: ../../merchants/technical.rst:25
 msgid ""
 "**General Information:** Dash is a “Proof of Work” blockchain with "
 "attributes similar to that of Bitcoin."
 msgstr ""
+"**Общая информация:** Dash - блокчейн, работающий на основе “Доказательства "
+"Работы” и имеющий похожие на Биткойн характеристики."
 
 #: ../../merchants/technical.rst:28
 msgid "Block Time: ~2.6 Minutes per Block"
-msgstr ""
+msgstr "Время блока: ~2,6 минуты на блок"
 
 #: ../../merchants/technical.rst:29
 msgid ""
 "Blockchain Confirmations: 6 Confirmations (or 1 in the case of InstantSend)"
 msgstr ""
+"Подтверждения блокчейна: 6 подтверждений (или 1, в случае InstantSend)"
 
 #: ../../merchants/technical.rst:31
 msgid "Github Source: https://github.com/dashpay/dash"
-msgstr ""
+msgstr "Github: https://github.com/dashpay/dash"
 
 #: ../../merchants/technical.rst:32
 msgid "Release Link: https://github.com/dashpay/dash/releases"
-msgstr ""
+msgstr "Ссылка на релиз: https://github.com/dashpay/dash/releases"
 
 #: ../../merchants/technical.rst:34
 msgid ""
@@ -93,6 +105,11 @@ msgid ""
 "straightforward. For a complete listing of RPC commands see the `Developer "
 "Guide <https://dash-docs.github.io/en/developer-guide>`__."
 msgstr ""
+"**Интерфейс JSON-RPC:** Большинство свойственных Биткойну JSON-RPC команд не"
+" поменялись, благодаря чему интеграция в существующие системы остаётся "
+"относительно простой. Полный список RPC команд можно посмотреть в "
+"`Инструкции Разработчика <https://dash-docs.github.io/en/developer-"
+"guide>`__."
 
 #: ../../merchants/technical.rst:39
 msgid ""
@@ -100,24 +117,33 @@ msgid ""
 "have been modified to support InstantSend through the addition of an "
 "“InstantLock” field and are listed below:"
 msgstr ""
+"Стоит упомянуть, что несколько важных JSON-RPC команд, работающих с "
+"Транзакциями, были изменены, чтобы они могли поддерживать InstantSend - было"
+" добавлено поле “InstantLock”. Ниже приведены эти команды:"
 
 #: ../../merchants/technical.rst:43
 msgid ""
 "`GetTransaction <https://dash-docs.github.io/en/developer-"
 "reference#gettransaction>`__"
 msgstr ""
+"`GetTransaction <https://dash-docs.github.io/en/developer-"
+"reference#gettransaction>`__"
 
 #: ../../merchants/technical.rst:44
 msgid ""
 "`ListTransactions <https://dash-docs.github.io/en/developer-"
 "reference#listtransactions>`__"
 msgstr ""
+"`ListTransactions <https://dash-docs.github.io/en/developer-"
+"reference#listtransactions>`__"
 
 #: ../../merchants/technical.rst:45
 msgid ""
 "`ListSinceBlock <https://dash-docs.github.io/en/developer-"
 "reference#listsinceblock>`__"
 msgstr ""
+"`ListSinceBlock <https://dash-docs.github.io/en/developer-"
+"reference#listsinceblock>`__"
 
 #: ../../merchants/technical.rst:47
 msgid ""
@@ -127,6 +153,11 @@ msgid ""
 "hashes (transactions, merkle root, etc) which allows for most existing "
 "libraries to work in the Dash ecosystem."
 msgstr ""
+"**Алгоритм хеширования блока:** Dash использует алгоритм X11, вместо SHA256,"
+" который используется в Биткойне. Однако стоит отметить, что это относится "
+"только к хешированию Блока. Все прочие внутренние функции работают с хешами "
+"SHA256 (транзакции, корни merkle, и т.д.), благодаря чему большинство "
+"существующих библиотек совместимы с экосистемой Dash."
 
 #: ../../merchants/technical.rst:53
 msgid ""
@@ -137,10 +168,16 @@ msgid ""
 "resources are outlined in the :ref:`SDK Resources <sdk-resources>` section "
 "of this document."
 msgstr ""
+"**Поддержка библиотек:** Из-за вышеупомянутых различий в алгоритмах "
+"хеширования, потребуется сделать несколько небольших настроек, чтобы "
+"библиотеки Биткойна работали в сети Dash. Самые популярные библиотеки уже "
+"были перенесены в Dash, и поэтому стала возможна поддержка большинства "
+"основных языков программирования. Эти ресурсы отмечены в этом документе в "
+"разделе :ref:`SDK Ресурсы <sdk-resources>`."
 
 #: ../../merchants/technical.rst:63
 msgid "v0.13.0 Integration Notes"
-msgstr ""
+msgstr "Примечания по интеграции с v0.13.0"
 
 #: ../../merchants/technical.rst:65
 msgid ""
@@ -148,6 +185,9 @@ msgid ""
 "<https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-"
 "Resources-Dash-v0.13.0-Transaction-Types.pdf>`__."
 msgstr ""
+"Этот документ также доступен в формате `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-"
+"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__."
 
 #: ../../merchants/technical.rst:67
 msgid ""
@@ -157,10 +197,15 @@ msgid ""
 "assist various consensus mechanisms. The following special transaction types"
 " exist:"
 msgstr ""
+"Dash 0.13.0 внедряет `DIP002 Специальные транзакции "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, который "
+"формирует основу для новых типов транзакций, с помощью которых можно будет "
+"обмениваться метаданными и поддерживать различные консенсусные механизмы. "
+"Существуют следующие типы специальных транзакций:"
 
 #: ../../merchants/technical.rst:73
 msgid "Release"
-msgstr ""
+msgstr "Релиз"
 
 #: ../../merchants/technical.rst:73
 msgid "Version"
@@ -168,30 +213,30 @@ msgstr "Версия"
 
 #: ../../merchants/technical.rst:73
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #: ../../merchants/technical.rst:73
 msgid "Payload Size"
-msgstr ""
+msgstr "Размер нагрузки"
 
 #: ../../merchants/technical.rst:73
 msgid "Payload"
-msgstr ""
+msgstr "Нагрузка"
 
 #: ../../merchants/technical.rst:73
 msgid "Payload JSON"
-msgstr ""
+msgstr "Нагрузка JSON"
 
 #: ../../merchants/technical.rst:73
 msgid "Transaction Purpose"
-msgstr ""
+msgstr "Назначение транзакции"
 
 #: ../../merchants/technical.rst:75 ../../merchants/technical.rst:77
 #: ../../merchants/technical.rst:79 ../../merchants/technical.rst:81
 #: ../../merchants/technical.rst:83 ../../merchants/technical.rst:85
 #: ../../merchants/technical.rst:87
 msgid "v0.13.0"
-msgstr ""
+msgstr "v0.13.0"
 
 #: ../../merchants/technical.rst:75 ../../merchants/technical.rst:77
 #: ../../merchants/technical.rst:79 ../../merchants/technical.rst:81
@@ -202,16 +247,16 @@ msgstr "3"
 
 #: ../../merchants/technical.rst:75
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../../merchants/technical.rst:75 ../../merchants/technical.rst:75
 #: ../../merchants/technical.rst:75
 msgid "n/a"
-msgstr ""
+msgstr "n/a"
 
 #: ../../merchants/technical.rst:75
 msgid "Standard Transaction"
-msgstr ""
+msgstr "Стандартная транзакция"
 
 #: ../../merchants/technical.rst:77
 msgid "1"
@@ -221,23 +266,25 @@ msgstr "1"
 #: ../../merchants/technical.rst:81 ../../merchants/technical.rst:83
 #: ../../merchants/technical.rst:85 ../../merchants/technical.rst:87
 msgid "<variable int>"
-msgstr ""
+msgstr "<variable int>"
 
 #: ../../merchants/technical.rst:77 ../../merchants/technical.rst:79
 #: ../../merchants/technical.rst:81 ../../merchants/technical.rst:83
 #: ../../merchants/technical.rst:85 ../../merchants/technical.rst:87
 msgid "<hex>"
-msgstr ""
+msgstr "<hex>"
 
 #: ../../merchants/technical.rst:77
 msgid "proRegTx"
-msgstr ""
+msgstr "proRegTx"
 
 #: ../../merchants/technical.rst:77
 msgid ""
 "`Masternode Registration <https://dash-docs.github.io/en/developer-"
 "reference#proregtx>`__"
 msgstr ""
+"`Регистрация мастерноды <https://dash-docs.github.io/en/developer-"
+"reference#proregtx>`__"
 
 #: ../../merchants/technical.rst:79
 msgid "2"
@@ -245,23 +292,27 @@ msgstr "2"
 
 #: ../../merchants/technical.rst:79
 msgid "proUpServTx"
-msgstr ""
+msgstr "proUpServTx"
 
 #: ../../merchants/technical.rst:79
 msgid ""
 "`Update Masternode Service <https://dash-docs.github.io/en/developer-"
 "reference#proupservtx>`__"
 msgstr ""
+"`Обновление услуг мастерноды <https://dash-docs.github.io/en/developer-"
+"reference#proupservtx>`__"
 
 #: ../../merchants/technical.rst:81
 msgid "proUpRegTx"
-msgstr ""
+msgstr "proUpRegTx"
 
 #: ../../merchants/technical.rst:81
 msgid ""
 "`Update Masternode Operator <https://dash-docs.github.io/en/developer-"
 "reference#proupregtx>`__"
 msgstr ""
+"`Обновление оператора мастерноды <https://dash-docs.github.io/en/developer-"
+"reference#proupregtx>`__"
 
 #: ../../merchants/technical.rst:83
 msgid "4"
@@ -269,27 +320,31 @@ msgstr "4"
 
 #: ../../merchants/technical.rst:83
 msgid "proUpRevTx"
-msgstr ""
+msgstr "proUpRevTx"
 
 #: ../../merchants/technical.rst:83
 msgid ""
 "`Masternode Revocation <https://dash-docs.github.io/en/developer-"
 "reference#prouprevtx>`__"
 msgstr ""
+"`Аннулирование мастерноды <https://dash-docs.github.io/en/developer-"
+"reference#prouprevtx>`__"
 
 #: ../../merchants/technical.rst:85
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: ../../merchants/technical.rst:85
 msgid "cbTx"
-msgstr ""
+msgstr "cbTx"
 
 #: ../../merchants/technical.rst:85
 msgid ""
 "`Masternode List Merkle Proof <https://dash-docs.github.io/en/developer-"
 "reference#cbtx>`__"
 msgstr ""
+"`Мёркл-подтверждение списка мастернод <https://dash-docs.github.io/en"
+"/developer-reference#cbtx>`__"
 
 #: ../../merchants/technical.rst:87
 msgid "6"
@@ -297,17 +352,19 @@ msgstr "6"
 
 #: ../../merchants/technical.rst:87
 msgid "qcTx"
-msgstr ""
+msgstr "qcTx"
 
 #: ../../merchants/technical.rst:87
 msgid ""
 "`Quorum Commitment <https://dash-docs.github.io/en/developer-"
 "reference#qctx>`__"
 msgstr ""
+"`Формирование кворума <https://dash-docs.github.io/en/developer-"
+"reference#qctx>`__"
 
 #: ../../merchants/technical.rst:90
 msgid "Integration notes:"
-msgstr ""
+msgstr "Примечания по интеграции:"
 
 #: ../../merchants/technical.rst:92
 msgid ""
@@ -316,6 +373,10 @@ msgid ""
 "foundational component of Dash Core v0.13.0 and introduce a new Transaction "
 "Version and related “Payload” to the network."
 msgstr ""
+"`DIP002 Специальные тразакции "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ - основной "
+"компонент Dash Core v0.13.0, он вводит новые версии транзакций и "
+"соответствующую им \"Нагрузку\" сети"
 
 #: ../../merchants/technical.rst:96
 msgid ""
@@ -324,6 +385,10 @@ msgid ""
 "hashing-and-signing>`__ these new Transaction Types in order to accurately "
 "encode and decode Raw Transaction data."
 msgstr ""
+"Интегрированные системы должны быть способны к `сериализации и "
+"десериализации <https://github.com/dashpay/dips/blob/master/dip-0002.md"
+"#serialization-hashing-and-signing>`__ этих новых Типов Транзакций, чтобы "
+"шифрование и дешифровка данных Исходных Транзакций происходила успешно."
 
 #: ../../merchants/technical.rst:100
 msgid ""
@@ -333,6 +398,10 @@ msgid ""
 "Transactions has been split into two fields: ``version`` and ``type`` (each "
 "consisting of 2 bytes)."
 msgstr ""
+"С точки зрения `обратной совместимости "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__, "
+"4-байтная (32-bit) поле ``версии``, включённое в Старые Транзакции, было "
+"разделено на два поля: ``версия`` и ``тип`` (каждое состоит из 2 байтов)."
 
 #: ../../merchants/technical.rst:105
 msgid ""
@@ -342,14 +411,19 @@ msgid ""
 "response, please note that this data is not part of the calculated hash and "
 "is provided for convenience."
 msgstr ""
+"Статус `InstantSend "
+"<https://docs.dash.org/en/latest/merchants/technical.html#instantsend>`__ и "
+"Нагрузки JSON (например, ``proRegTx``) включён в ответ JSON-RPC. Пожалуйста,"
+" обратите внимание, что эти данные не являются частью рассчитываемого хеша и"
+" предоставлены для удобства."
 
 #: ../../merchants/technical.rst:110
 msgid "Legacy transaction structure::"
-msgstr ""
+msgstr "Старая структура транзакций::"
 
 #: ../../merchants/technical.rst:121
 msgid "Updated transaction structure::"
-msgstr ""
+msgstr "Обновлённая структура транзакций::"
 
 #: ../../merchants/technical.rst:135
 msgid ""
@@ -361,6 +435,13 @@ msgid ""
 "Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ for worked examples of each"
 " transaction type."
 msgstr ""
+"Чтобы узнать подробности об этих типах данных, сморите `Документацию "
+"разработчиков по Специальным Транзакциям <https://dash-docs.github.io/en"
+"/developer-reference#special-transactions>`__ , например ``<variable int>``."
+" Смотрите документацию по `интеграции различных типов транзакций в v0.13.0 "
+"(PDF) <https://github.com/dashpay/docs/raw/master/binary/merchants"
+"/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__, где есть "
+"рабочие примеры каждого типа транзакций."
 
 #: ../../merchants/technical.rst:143
 msgid "API Services"
@@ -450,6 +531,10 @@ msgid ""
 "services with it. A practical guide to getting started with the Insight API "
 "and Insight UI block explorer is available :ref:`here <insight-api>`."
 msgstr ""
+"Dash Insight REST API c открытым кодом - это удобный, мощный и простой "
+"способ считывать данные из сети Dash и разрабатывать с его помощью свои "
+"собственные сервисы. Практическое руководство по Insight API и Insight UI "
+"обозревателю блоков для начинающих доступен :ref:`тут <insight-api>`."
 
 #: ../../merchants/technical.rst:188
 msgid "Features: Transaction Broadcast, WebSocket Notifications."
@@ -660,6 +745,11 @@ msgid ""
 "applications by forming transactions and/or performing various wallet "
 "services."
 msgstr ""
+"Средства SDK (набор средств для разработки) используются для ускорения "
+"проектирования и разработки продуктов в сети Dash. Эти ресурсы могут "
+"использоваться для взаимодействия с провайдером API или для создания "
+"автономных приложений. С их помощью можно формировать транзакции и/или "
+"предоставлять различные связанные с кошельками услуги."
 
 #: ../../merchants/technical.rst:302
 msgid "Dash Developer Guide"
@@ -688,7 +778,7 @@ msgstr "Документация: https://dash-docs.github.io/en/developer-guide
 
 #: ../../merchants/technical.rst:320
 msgid "NodeJS/JavaScript: Bitcore (Dashcore)"
-msgstr ""
+msgstr "NodeJS/JavaScript: Bitcore (Dashcore)"
 
 #: ../../merchants/technical.rst:327
 msgid "https://bitcore.io"
@@ -701,6 +791,11 @@ msgid ""
 "development, additional indexes have been added into Dash for querying "
 "address balances, transaction history, and unspent outputs."
 msgstr ""
+"Dashcore является форком Bitcore и работает как полный нода Dash - ваши "
+"приложения запускаются непосредственно в децентрализованной сети. Для "
+"разработки приложений кошелька в Dash были добавлены дополнительные индексы "
+"для запроса балансов адресов, истории транзакций и неизрасходованных "
+"выходов."
 
 #: ../../merchants/technical.rst:334
 msgid "Platform: NodeJS / Javascript"
@@ -720,39 +815,43 @@ msgstr "Репозиторий модулей: https://github.com/dashevo/dashco
 
 #: ../../merchants/technical.rst:340
 msgid "PHP: Bitcoin-PHP"
-msgstr ""
+msgstr "PHP: Bitcoin-PHP"
 
 #: ../../merchants/technical.rst:342
 msgid "https://github.com/Bit-Wasp/bitcoin-php"
-msgstr ""
+msgstr "https://github.com/Bit-Wasp/bitcoin-php"
 
 #: ../../merchants/technical.rst:344
 msgid ""
 "Bitcoin-PHP is an implementation of Bitcoin with support for Dash using "
 "mostly pure PHP."
 msgstr ""
+"Bitcoin-PHP - это реализация Биткойна с поддержкой Dash, которая в основном "
+"использует только PHP."
 
 #: ../../merchants/technical.rst:347
 msgid "Platform: PHP"
-msgstr ""
+msgstr "Платформа: PHP"
 
 #: ../../merchants/technical.rst:348
 msgid ""
 "Documentation: https://github.com/Bit-Wasp/bitcoin-"
 "php/blob/master/doc/Introduction.md"
 msgstr ""
+"Документация: https://github.com/Bit-Wasp/bitcoin-"
+"php/blob/master/doc/Introduction.md"
 
 #: ../../merchants/technical.rst:349
 msgid "Repository: https://github.com/Bit-Wasp/bitcoin-php"
-msgstr ""
+msgstr "Репозиторий: https://github.com/Bit-Wasp/bitcoin-php"
 
 #: ../../merchants/technical.rst:352
 msgid "Python: PyCoin"
-msgstr ""
+msgstr "Python: PyCoin"
 
 #: ../../merchants/technical.rst:354
 msgid "https://github.com/richardkiss/pycoin"
-msgstr ""
+msgstr "https://github.com/richardkiss/pycoin"
 
 #: ../../merchants/technical.rst:356
 msgid ""
@@ -760,22 +859,25 @@ msgid ""
 "useful when dealing with Bitcoin and Dash. It has been tested with Python "
 "2.7, 3.6 and 3.7."
 msgstr ""
+"PyCoin это реализация ряда вспомогательных утилит, которые могут быть "
+"полезны при работе с Биткойном и Dash. Он тестировался с Python 2.7, 3.6 и "
+"3.7."
 
 #: ../../merchants/technical.rst:360
 msgid "Platform: Python"
-msgstr ""
+msgstr "Платформа: Python"
 
 #: ../../merchants/technical.rst:361
 msgid "Documentation: https://pycoin.readthedocs.io/en/latest/"
-msgstr ""
+msgstr "Документация: https://pycoin.readthedocs.io/en/latest/"
 
 #: ../../merchants/technical.rst:362
 msgid "Repository: https://github.com/richardkiss/pycoin"
-msgstr ""
+msgstr "Репозиторий: https://github.com/richardkiss/pycoin"
 
 #: ../../merchants/technical.rst:365
 msgid "Java: DashJ"
-msgstr ""
+msgstr "Java: DashJ"
 
 #: ../../merchants/technical.rst:372
 msgid "https://github.com/HashEngineering/dashj"
@@ -810,11 +912,11 @@ msgstr "Образец приложения: https://github.com/tomasz-ludek/poc
 
 #: ../../merchants/technical.rst:385
 msgid "Objective-C: Dash-Sync"
-msgstr ""
+msgstr "Objective-C: Dash-Sync"
 
 #: ../../merchants/technical.rst:392
 msgid "https://github.com/dashevo/dashsync-iOS"
-msgstr ""
+msgstr "https://github.com/dashevo/dashsync-iOS"
 
 #: ../../merchants/technical.rst:394
 msgid ""
@@ -822,18 +924,21 @@ msgid ""
 " all most relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement"
 " Proposals (DIPs)."
 msgstr ""
+"Dash-Sync это блокчейн-фреймворк Dash для iOS на Objective-C. Он реализует "
+"большинство релевантных Предложений по улучшению Биткойна (BIPs) и "
+"Предложений по улучшению Dash (DIPs)."
 
 #: ../../merchants/technical.rst:398
 msgid "Platform: iOS"
-msgstr ""
+msgstr "Платформа: iOS"
 
 #: ../../merchants/technical.rst:399
 msgid "Repository: https://github.com/dashevo/dashsync-iOS"
-msgstr ""
+msgstr "Репозиторий: https://github.com/dashevo/dashsync-iOS"
 
 #: ../../merchants/technical.rst:402
 msgid ".NET: NBitcoin"
-msgstr ""
+msgstr ".NET: NBitcoin"
 
 #: ../../merchants/technical.rst:409
 msgid "https://github.com/MetacoSA/NBitcoin"
@@ -1027,13 +1132,15 @@ msgstr ""
 
 #: ../../merchants/technical.rst:502
 msgid "Web Socket: https://github.com/dashevo/insight-api#web-socket-api"
-msgstr ""
+msgstr "Web Socket: https://github.com/dashevo/insight-api#web-socket-api"
 
 #: ../../merchants/technical.rst:503
 msgid ""
 "Transaction API: https://github.com/dashevo/insight-api#instantsend-"
 "transactions"
 msgstr ""
+"API Транзакций: https://github.com/dashevo/insight-api#instantsend-"
+"transactions"
 
 #: ../../merchants/technical.rst:505
 msgid ""
