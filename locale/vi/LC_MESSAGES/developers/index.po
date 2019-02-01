@@ -1,26 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Kien Bui <kientemp2@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 04:56+0000\n"
+"POT-Creation-Date: 2019-02-01 08:03+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
 "Last-Translator: Kien Bui <kientemp2@gmail.com>, 2018\n"
-"Language: vi\n"
-"Language-Team: Vietnamese "
-"(https://www.transifex.com/dash/teams/37570/vi/)\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../developers/index.rst:1
 msgid "Developers guide and information about sporks and Dash version history"
@@ -37,12 +36,12 @@ msgstr "Các nhà phát triển"
 #: ../../developers/index.rst:11
 msgid ""
 "Dash Core has published an extensive `Developer Guide <https://dash-"
-"docs.github.io/en/>`_ to help new developers get started with the Dash "
-"code base, and as a reference for experienced developers. This guide can "
-"be leveraged to quickly and efficiently integrate external applications "
-"with the Dash ecosystem. Anyone can contribute to the guide by submitting"
-" an issue or pull request on GitHub. The documentation is available at: "
-"https://dash-docs.github.io/en/"
+"docs.github.io/en/>`_ to help new developers get started with the Dash code "
+"base, and as a reference for experienced developers. This guide can be "
+"leveraged to quickly and efficiently integrate external applications with "
+"the Dash ecosystem. Anyone can contribute to the guide by submitting an "
+"issue or pull request on GitHub. The documentation is available at: https"
+"://dash-docs.github.io/en/"
 msgstr ""
 
 #: ../../developers/index.rst:19
@@ -50,16 +49,16 @@ msgid ""
 "The Dash Core Team also maintains the `Dash Roadmap "
 "<https://github.com/dashpay/dash-roadmap>`_, which sets out delivery "
 "milestones for future releases of Dash and includes specific technical "
-"details describing how the development team plans to realise each "
-"challenge. The Dash Roadmap is complemented by the `Dash Improvement "
-"Proposals <https://github.com/dashpay/dips>`_, which contain detailed "
-"technical explanations of proposed changes to the Dash protocol itself."
+"details describing how the development team plans to realise each challenge."
+" The Dash Roadmap is complemented by the `Dash Improvement Proposals "
+"<https://github.com/dashpay/dips>`_, which contain detailed technical "
+"explanations of proposed changes to the Dash protocol itself."
 msgstr ""
 
 #: ../../developers/index.rst:27
 msgid ""
-"The remaining sections available below describe practical steps to carry "
-"out common development tasks in Dash."
+"The remaining sections available below describe practical steps to carry out"
+" common development tasks in Dash."
 msgstr ""
 
 #: ../../developers/index.rst:42
@@ -72,10 +71,10 @@ msgid ""
 "unique to Dash used to safely deploy new features to the network through "
 "network-level variables to avoid the risk of unintended network forking "
 "during upgrades. It can also be used to disable certain features if a "
-"security vulnerability is discovered - see :ref:`here <sporks>` for a "
-"brief introduction to sporks. This documentation describes the meaning of"
-" each spork currently existing on the network, and how to check their "
-"respective statuses."
+"security vulnerability is discovered - see :ref:`here <sporks>` for a brief "
+"introduction to sporks. This documentation describes the meaning of each "
+"spork currently existing on the network, and how to check their respective "
+"statuses."
 msgstr ""
 
 #: ../../developers/index.rst:54
@@ -84,13 +83,13 @@ msgstr ""
 
 #: ../../developers/index.rst:56
 msgid ""
-"Sporks are set using integer values. Many sporks may be set to a "
-"particular epoch datetime (number of seconds that have elapsed since "
-"January 1, 1970) to specify the time at which they will active. Enabled "
-"sporks are set to 0 (seconds until activation). This function is often "
-"used to set a spork enable date so far in the future that it is "
-"effectively disabled until changed. The following sporks currently exist "
-"on the network and serve functions as described below:"
+"Sporks are set using integer values. Many sporks may be set to a particular "
+"epoch datetime (number of seconds that have elapsed since January 1, 1970) "
+"to specify the time at which they will active. Enabled sporks are set to 0 "
+"(seconds until activation). This function is often used to set a spork "
+"enable date so far in the future that it is effectively disabled until "
+"changed. The following sporks currently exist on the network and serve "
+"functions as described below:"
 msgstr ""
 
 #: ../../developers/index.rst:65
@@ -117,8 +116,8 @@ msgstr ""
 
 #: ../../developers/index.rst:72
 msgid ""
-"Enforces the maximum value in Dash that can be included in an InstantSend"
-" transaction."
+"Enforces the maximum value in Dash that can be included in an InstantSend "
+"transaction."
 msgstr ""
 
 #: ../../developers/index.rst:79
@@ -127,8 +126,8 @@ msgstr ""
 
 #: ../../developers/index.rst:76
 msgid ""
-"Enables a new signature format for Dash-specific network messages "
-"introduced in Dash 12.3. For more information, see `here "
+"Enables a new signature format for Dash-specific network messages introduced"
+" in Dash 12.3. For more information, see `here "
 "<https://github.com/dashpay/dash/pull/1936>`__ and `here "
 "<https://github.com/dashpay/dash/pull/1937>`__."
 msgstr ""
@@ -138,7 +137,6 @@ msgid "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT"
 msgstr ""
 
 #: ../../developers/index.rst:82
-#, python-format
 msgid ""
 "If enabled, miners must pay 50% of the block reward to a masternode "
 "currently pending selection or the block will be considered invalid."
@@ -149,7 +147,8 @@ msgid "SPORK_9_SUPERBLOCKS_ENABLED"
 msgstr ""
 
 #: ../../developers/index.rst:86
-msgid "If enabled, superblocks are verified and issued to pay proposal winners."
+msgid ""
+"If enabled, superblocks are verified and issued to pay proposal winners."
 msgstr ""
 
 #: ../../developers/index.rst:92
@@ -169,8 +168,8 @@ msgstr ""
 
 #: ../../developers/index.rst:95
 msgid ""
-"Forces reindex of a specified number of blocks to recover from "
-"unintentional network forks."
+"Forces reindex of a specified number of blocks to recover from unintentional"
+" network forks."
 msgstr ""
 
 #: ../../developers/index.rst:99
@@ -187,8 +186,8 @@ msgstr ""
 
 #: ../../developers/index.rst:102
 msgid ""
-"Toggles whether masternodes with status are eligible for payment if "
-"status is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly."
+"Toggles whether masternodes with status are eligible for payment if status "
+"is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly."
 msgstr ""
 
 #: ../../developers/index.rst:110
@@ -198,9 +197,9 @@ msgstr ""
 #: ../../developers/index.rst:106
 msgid ""
 "Controls whether `deterministic masternodes "
-"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ are required."
-" When activated, the legacy masternode list logic will no longer run and "
-"non-updated masternodes will not be eligible for payment."
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ are required. "
+"When activated, the legacy masternode list logic will no longer run and non-"
+"updated masternodes will not be eligible for payment."
 msgstr ""
 
 #: ../../developers/index.rst:116
@@ -210,9 +209,8 @@ msgstr ""
 #: ../../developers/index.rst:113
 msgid ""
 "Enables automatic transaction locking for transactions with less than a "
-"specified number of inputs, and removes the legacy InstantSend fee. "
-"Allows any node to request the transaction lock, not just the sending "
-"node."
+"specified number of inputs, and removes the legacy InstantSend fee. Allows "
+"any node to request the transaction lock, not just the sending node."
 msgstr ""
 
 #: ../../developers/index.rst:124
@@ -222,10 +220,10 @@ msgstr ""
 #: ../../developers/index.rst:119
 msgid ""
 "Enables the `DKG process to create LLMQ quorums "
-"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. At the "
-"moment, this only activates a dummy DKG on testnet, which will later be "
-"replaced by the real DKG for mainnet and testnet. When enabled, simple "
-"PoSe scoring and banning is also active."
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. At the moment, "
+"this only activates a dummy DKG on testnet, which will later be replaced by "
+"the real DKG for mainnet and testnet. When enabled, simple PoSe scoring and "
+"banning is also active."
 msgstr ""
 
 #: ../../developers/index.rst:127
@@ -234,10 +232,9 @@ msgstr ""
 
 #: ../../developers/index.rst:129
 msgid ""
-"The ``spork show`` and ``spork active`` commands issued in the debug "
-"window (or from ``dash-cli`` on a masternode) allow you to interact with "
-"sporks. You can open the debug window by selecting **Tools > Debug "
-"console**."
+"The ``spork show`` and ``spork active`` commands issued in the debug window "
+"(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
+"You can open the debug window by selecting **Tools > Debug console**."
 msgstr ""
 
 #: ../../developers/index.rst:137
@@ -255,14 +252,3 @@ msgstr ""
 #: ../../developers/index.rst:145
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
 msgstr ""
-
-#~ msgid "Governs the ability of Dash clients to use InstandSend functionality."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If enabled, masternodes will reject "
-#~ "blocks containing transactions in conflict "
-#~ "with locked but unconfirmed InstandSend "
-#~ "transactions."
-#~ msgstr ""
-

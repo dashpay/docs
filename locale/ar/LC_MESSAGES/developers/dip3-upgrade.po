@@ -1,32 +1,30 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2018, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Hasna Brania <hasna.brania19@gmail.com>, 2019
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 04:56+0000\n"
+"POT-Creation-Date: 2019-02-01 08:03+0000\n"
 "PO-Revision-Date: 2019-01-20 14:41+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2019\n"
-"Language: ar\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
-"n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: ../../developers/dip3-upgrade.rst:1
 msgid ""
-"The upgrade to Dash 0.13.0 involves changes to signature formats as "
-"defined in DIP3. This documentation highlights the upgrade steps and "
-"progress."
+"The upgrade to Dash 0.13.0 involves changes to signature formats as defined "
+"in DIP3. This documentation highlights the upgrade steps and progress."
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:1
@@ -36,7 +34,7 @@ msgid ""
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:11
-msgid "Dash 0.13 Upgrade Informaion"
+msgid "Dash 0.13 Upgrade Information"
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:13
@@ -47,15 +45,14 @@ msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:15
 msgid ""
-"Dash Core v0.13.0 is intended to serve as the foundation for Dash "
-"Evolution, a broadly scoped update to our network intended to facilitate "
-"and enable new payment methods and technologies. Please see the `Dash "
-"Core v0.13.0 Product Brief <https://blog.dash.org/product-brief-dash-"
-"core-release-v0-13-0-5d7fddffb7ef>`__ for an overview of new features, "
-"and complete this `3 question survey "
-"<https://goo.gl/forms/3BEo2MQYsZT5rwig1>`__ to help us assess the impact "
-"of this upgrade. The upgrade will take place in phases, as shown in the "
-"following diagram:"
+"Dash Core v0.13.0 is intended to serve as the foundation for Dash Evolution,"
+" a broadly scoped update to our network intended to facilitate and enable "
+"new payment methods and technologies. Please see the `Dash Core v0.13.0 "
+"Product Brief <https://blog.dash.org/product-brief-dash-core-"
+"release-v0-13-0-5d7fddffb7ef>`__ for an overview of new features, and "
+"complete this `3 question survey <https://goo.gl/forms/3BEo2MQYsZT5rwig1>`__"
+" to help us assess the impact of this upgrade. The upgrade will take place "
+"in phases, as shown in the following diagram:"
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:27
@@ -63,17 +60,16 @@ msgid "Installation notes"
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:29
-#, python-format
 msgid ""
 "Dash Core v0.13.0.0 will automatically activate `DIP002 "
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, `DIP003 "
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__ and `DIP004 "
-"<https://github.com/dashpay/dips/blob/master/dip-0004.md>`__ once 80% of "
-"the network has upgraded. Mining pools must mine an upgraded block and "
-"pay an upgraded masternode to successfully signal the upgrade in a block,"
-" and 80% of blocks in a window must signal in order to lock in the "
-"upgrade. Please confirm the status of network uptake before proceeding as"
-" the upgrade path differs slightly depending on on your timing."
+"<https://github.com/dashpay/dips/blob/master/dip-0004.md>`__ once 80% of the"
+" network has upgraded. Mining pools must mine an upgraded block and pay an "
+"upgraded masternode to successfully signal the upgrade in a block, and 80% "
+"of blocks in a window must signal in order to lock in the upgrade. Please "
+"confirm the status of network uptake before proceeding as the upgrade path "
+"differs slightly depending on on your timing."
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:39
@@ -94,16 +90,16 @@ msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:48
 msgid ""
-"If you are updating to Dash Core v0.13.0.0 **prior** to this 80% "
-"threshold  you should be able to simply shut down the daemon and replace "
-"it with  the updated binary."
+"If you are updating to Dash Core v0.13.0.0 **prior** to this 80% threshold  "
+"you should be able to simply shut down the daemon and replace it with  the "
+"updated binary."
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:52
 msgid ""
-"If you are updating to Dash Core v0.13.0.0 **after** this 80% threshold "
-"is reached please note that you will need to re-index the chainstate "
-"using the “-reindex-chainstate” command."
+"If you are updating to Dash Core v0.13.0.0 **after** this 80% threshold is "
+"reached please note that you will need to re-index the chainstate using the "
+"“-reindex-chainstate” command."
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:57
@@ -119,8 +115,8 @@ msgstr ""
 #: ../../developers/dip3-upgrade.rst:62
 msgid ""
 "`DIP002: Special Transactions "
-"<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__"
-" contains more information on backwards compatibility."
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ "
+"contains more information on backwards compatibility."
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:66
@@ -128,14 +124,13 @@ msgid ""
 "Please refer to the `Transaction Type Integration Guide "
 "<https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-"
 "Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ for information on the "
-"implementation of Special Transactions and for examples of this new "
-"format."
+"implementation of Special Transactions and for examples of this new format."
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:70
 msgid ""
-"Contact the `Support Desk <https://support.dash.org/en/support/home>`__ "
-"with any compatibility questions or for help upgrading."
+"Contact the `Support Desk <https://support.dash.org/en/support/home>`__ with"
+" any compatibility questions or for help upgrading."
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:73
@@ -153,10 +148,10 @@ msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:79
 msgid ""
-"**InstantSend**: instantlock status is now included in ``getrawmempool``,"
-"   ``getmempoolancestors``, ``getmempooldescendants``, "
-"``getmempoolentry``, ``getrawtransaction``, ``decoderawtransaction``, "
-"``gettransaction``, ``listtransactions``, ``listsinceblock``."
+"**InstantSend**: instantlock status is now included in ``getrawmempool``,   "
+"``getmempoolancestors``, ``getmempooldescendants``, ``getmempoolentry``, "
+"``getrawtransaction``, ``decoderawtransaction``, ``gettransaction``, "
+"``listtransactions``, ``listsinceblock``."
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:86
@@ -195,6 +190,11 @@ msgstr ""
 msgid "iOS"
 msgstr "الأيفون"
 
+#: ../../developers/dip3-upgrade.rst:95 ../../developers/dip3-upgrade.rst:97
+#: ../../developers/dip3-upgrade.rst:99 ../../developers/dip3-upgrade.rst:103
+msgid "|check|"
+msgstr "|check|"
+
 #: ../../developers/dip3-upgrade.rst:97
 msgid "`Dashcore-Lib <https://github.com/dashevo/dashcore-lib>`__"
 msgstr ""
@@ -220,42 +220,9 @@ msgid "PHP"
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:103
-msgid "`PyCoin <https://github.com/richardkiss/pycoin>`__"
+msgid "`PyCoin <https://github.com/DeltaEngine/pycoin>`__"
 msgstr ""
 
 #: ../../developers/dip3-upgrade.rst:103
 msgid "Python"
 msgstr ""
-
-#~ msgid ""
-#~ "Dash Core v0.13.0 is intended to "
-#~ "serve as the foundation for Dash "
-#~ "Evolution, a broadly scoped update to"
-#~ " our network intended to facilitate "
-#~ "and enable new payment methods and "
-#~ "technologies. Please see the `Dash Core"
-#~ " v0.13.0 Product Brief <https://blog.dash.org"
-#~ "/product-brief-dash-core-"
-#~ "release-v0-13-0-5d7fddffb7ef>`__ for an overview "
-#~ "of new features, and complete this "
-#~ "`3 question survey "
-#~ "<https://goo.gl/forms/3BEo2MQYsZT5rwig1>`__ to help "
-#~ "us assess the impact of this "
-#~ "upgrade."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Dash Core v0.13.0.0 will automatically "
-#~ "activate `DIP002 "
-#~ "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, "
-#~ "`DIP003 "
-#~ "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__ and"
-#~ " `DIP004 "
-#~ "<https://github.com/dashpay/dips/blob/master/dip-0004.md>`__ "
-#~ "once 80% of the network has "
-#~ "upgraded. Please confirm the status of"
-#~ " network uptake before proceeding as "
-#~ "the upgrade path differs slightly "
-#~ "depending on on your timing."
-#~ msgstr ""
-
