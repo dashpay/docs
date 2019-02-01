@@ -248,8 +248,9 @@ service results in an increase in the PoSe score relative to the maximum
 score, which is equal to the number of masternodes in the valid set. If
 the score reaches the number of masternodes in the valid set, a PoSe ban
 is enacted and the masternode must be repaired to ensure it provides
-reliable service and registered in the list again using a :ref:`<dip3-update-service>`. 
-The current scoring rules as of Dash 0.14 are:
+reliable service and registered in the list again using a
+:ref:`ProUpServTx <dip3-update-service>`.  The current scoring rules as
+of Dash 0.14 are:
 
 - Failure to participate in `DKG <https://github.com/dashpay/dips/blob/master/dip-0006.md#llmq-dkg-network-protocol>`__\ = 66% punishment
 - Each subsequent block reduces PoSe score by 1
