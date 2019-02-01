@@ -11,7 +11,7 @@ $(document).ready(function() {
 		link.rel = "alternate";
 		link.hreflang = value;
 		if (value == "x-default") {
-			link.href = "https://docs.dash.org/en/" + pageURL;
+			link.href = "https://docs.dash.org/en" + pageURL;
 		} else if (value == "zh-Hans") {
 			link.href = "https://docs.dash.org/zh_CN" + pageURL;
 		} else if (value == "zh-Hant") {
