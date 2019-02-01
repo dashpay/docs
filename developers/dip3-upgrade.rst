@@ -6,9 +6,9 @@
 
 .. _dip3-dev-upgrade:
 
-============================
-Dash 0.13 Upgrade Informaion
-============================
+=============================
+Dash 0.13 Upgrade Information
+=============================
 
 **Official binaries are available at** https://github.com/dashpay/dash/releases/tag/v0.13.0.0
 
@@ -92,15 +92,15 @@ The following lists the current upgrade status for libraries:
 +============================================================+=====================+===========+
 | `DashJ <https://github.com/HashEngineering/dashj>`__       | Android             |           |
 +------------------------------------------------------------+---------------------+-----------+
-| `Dash-Sync <https://github.com/dashevo/dashsync-iOS/>`__   | iOS                 |           |
+| `Dash-Sync <https://github.com/dashevo/dashsync-iOS/>`__   | iOS                 | |check|   |
 +------------------------------------------------------------+---------------------+-----------+
-| `Dashcore-Lib <https://github.com/dashevo/dashcore-lib>`__ | JavaScript / NodeJS |           |
+| `Dashcore-Lib <https://github.com/dashevo/dashcore-lib>`__ | JavaScript / NodeJS | |check|   |
 +------------------------------------------------------------+---------------------+-----------+
-| `NBitcoin <https://github.com/MetacoSA/NBitcoin>`__        | .Net                |           |
+| `NBitcoin <https://github.com/MetacoSA/NBitcoin>`__        | .Net                | |check|   |
 +------------------------------------------------------------+---------------------+-----------+
 | `Bitcoin-PHP <https://github.com/Bit-Wasp/bitcoin-php>`__  | PHP                 |           |
 +------------------------------------------------------------+---------------------+-----------+
-| `PyCoin <https://github.com/richardkiss/pycoin>`__         | Python              |           |
+| `PyCoin <https://github.com/DeltaEngine/pycoin>`__         | Python              | |check|   |
 +------------------------------------------------------------+---------------------+-----------+
  
 .. The following lists the current upgrade status for APIs
