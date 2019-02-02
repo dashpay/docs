@@ -125,7 +125,7 @@ https://masternode.me
 
 - Operated by: moocowmoo (Dash Core team member)
 - Services: Hosting
-- Cost: 10% of masternode payments
+- Cost: $35 per quarter
 - `Site <https://masternode.me>`__
 - `Email <moocowmoo@masternode.me>`__
 - `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`__
