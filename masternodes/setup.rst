@@ -234,33 +234,51 @@ each word/number), then press **Ctrl + X** to close the editor, then
 
   /swapfile none swap sw 0 0
 
-Finally, in order to prevent brute force password hacking attacks, open
-the SSH configuration file to disable root login over SSH::
+Finally, in order to prevent brute force password hacking attacks, we
+will install fail2ban and disable root login over ssh. These steps are
+optional, but highly recommended. Start with fail2ban::
+
+  apt install fail2ban
+
+Create a new configuration file::
+
+  nano /etc/fail2ban/jail.local
+
+And paste in the following configuration::
+
+  [sshd]
+  enabled = true
+  port = 22
+  filter = sshd
+  logpath = /var/log/auth.log
+  maxretry = 3
+
+Then press **Ctrl + X** to close the editor, then **Y** and **Enter**
+save the file. Start and enable the fail2ban service::
+
+  systemctl start fail2ban
+  systemctl enable fail2ban
+
+Next, open the SSH configuration file to disable root login over SSH::
 
   nano /etc/ssh/sshd_config
 
 Locate the line that reads ``PermitRootLogin yes`` and set it to
 ``PermitRootLogin no``. Directly below this, add a line which reads
 ``AllowUsers <username>``, replacing ``<username>`` with the username
-you selected above. The press **Ctrl + X** to close the editor, then
+you selected above. Then press **Ctrl + X** to close the editor, then
 **Y** and **Enter** save the file.
 
-Then reboot the server:
-
-::
+Then reboot the server::
 
   reboot now
 
 PuTTY will disconnect when the server reboots.
 
 While this setup includes basic steps to protect your server against
-attacks, much more can be done. In particular, `authenticating with a
-public key <https://help.ubuntu.com/community/SSH/OpenSSH/Keys>`_
-instead of a username/password combination, `installing fail2ban
-<https://www.linode.com/docs/security/using-fail2ban-for-security>`_ to
-block login brute force attacks and `enabling automatic security updates
-<https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ is
-advisable. More tips are available `here <https://www.cyberciti.biz/tips/linux-security.html>`__. 
+attacks, much more can be done. In particular, `authenticating with a public key <https://help.ubuntu.com/community/SSH/OpenSSH/Keys>`_
+instead of a username/password combination and `enabling automatic security updates <https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ 
+is advisable. More tips are available `here <https://www.cyberciti.biz/tips/linux-security.html>`__. 
 However, since the masternode does not actually store the keys to any
 Dash, these steps are considered beyond the scope of this guide.
 
