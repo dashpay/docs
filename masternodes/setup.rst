@@ -254,9 +254,9 @@ And paste in the following configuration::
   maxretry = 3
 
 Then press **Ctrl + X** to close the editor, then **Y** and **Enter**
-save the file. Start and enable the fail2ban service::
+save the file. Retart and enable the fail2ban service::
 
-  systemctl start fail2ban
+  systemctl restart fail2ban
   systemctl enable fail2ban
 
 Next, open the SSH configuration file to disable root login over SSH::
