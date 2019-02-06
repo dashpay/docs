@@ -59,7 +59,8 @@ Faucets
 -------
 
 - http://test.faucet.masternode.io - by coingun
-- http://faucet.test.dash.crowdnode.io - ndrezza
+- http://faucet.test.dash.crowdnode.io - by ndrezza
+- https://test.faucet.dashninja.pl - by elbereth
 
 Explorers
 ---------
