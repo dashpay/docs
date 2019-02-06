@@ -54,6 +54,8 @@ Change paths in the configuration file as follows::
 
 - Change the value of ``datadir`` to ``../.dashcore``
 - Change the value of ``exec`` to ``../dashcore-0.13.0/bin/dashd``
+- **Optionally** change the value of ``network`` to ``testnet`` if you 
+  want to run Insight on testnet
 
 Run it::
 
@@ -68,4 +70,4 @@ will be available at::
 
 The Insight UI block explorer will be available at::
 
-  http://<ip-address:3001/insight/
+  http://<ip-address>:3001/insight/
