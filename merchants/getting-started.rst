@@ -148,7 +148,7 @@ particularly widespread.
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 | `SetGetGo <https://setgetgo.com/>`_                           | |check| | |check|        |           |         | Available for Android, web and Android APIs, payment buttons, competitive fees           |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `Spark Payments <https://www.dash.org/forum/threads/39665/>`_ | |check| | |check|        |           |         | Available for Android, Windows, macOS, Linux. 94 exchange rates and Uphold.com supported |
+| `Spark Payments <https://get-spark.com>`_                     | |check| | |check|        |           |         | Available for Android, Windows, macOS, Linux. 94 exchange rates and Uphold.com supported |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 
 Installation Examples
