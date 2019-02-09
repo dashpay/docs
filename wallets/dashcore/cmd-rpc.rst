@@ -753,6 +753,8 @@ getreceivedbyaccount "account" ( minconf addlocked )
   DEPRECATED. Returns the total amount received by addresses with <account> in transactions with specified minimum number of confirmations.
 getreceivedbyaddress "address" ( minconf addlocked )
   Returns the total amount received by the given address in transactions with at least minconf confirmations.
+getspecialtxes "blockhash" ( type count skip verbosity ) 
+  Returns an array of special transactions found in the specified block
 gettransaction "txid" ( include_watchonly )
   Get detailed information about in-wallet transaction <txid>
 getunconfirmedbalance
