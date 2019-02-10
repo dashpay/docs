@@ -32,8 +32,7 @@ Option 1: Updating from dashman
 To update Dash using dashman, log in to your server and enter the
 following commands::
 
-  ~/dashman/dashman sync
-  ~/dashman/dashman update
+  ~/dashman/dashman sync update -y
 
 Check the status of your masternode::
 
