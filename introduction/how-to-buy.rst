@@ -1324,6 +1324,20 @@ Bitnovo
   Europe. They also offer reloadable cards, vouchers and cryptocurrency
   wallets.
 
+Cointree
+  .. image:: exchanges/cointree.png
+     :width: 200px
+     :align: right
+     :target: https://www.cointree.com
+
+  https://www.cointree.com
+
+  Cointree offers services to buy, sell and trade Bitcoin, Dash and many
+  other cryptocurrencies in Australia on a simple and attractive web
+  platform. Cointree offers multiple payment methods, low fees, bill
+  payment options and a range of learning materials to help get started
+  with cryptocurrencies.
+
 Bitit
   .. image:: exchanges/bitit.png
      :width: 150px
