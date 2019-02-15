@@ -39,8 +39,8 @@ https://crowdnode.io
 - `Email <hello@crowdnode.io>`__
 
 
-Splawik's Hosting Service
--------------------------
+SID Hosting Service
+-------------------
 
 .. image:: img/splawik.png
    :width: 200px
@@ -53,8 +53,7 @@ http://dashmasternode.io
 - Services: Hosting
 - Cost: €25/month, paid in Dash
 - `Site <http://dashmasternode.io>`__
-- `Email <splawik21@protonmail.com>`__
-- `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`__
+- `Email <sidhosting@protonmail.com>`__
 
 
 AllNodes
