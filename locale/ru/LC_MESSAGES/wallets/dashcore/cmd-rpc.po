@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-01 08:03+0000\n"
+"POT-Creation-Date: 2019-02-17 06:48+0000\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Дмитрий <dmitry.zhludin@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -138,7 +138,7 @@ msgstr "Аргументы командной строки"
 
 #: ../../wallets/dashcore/cmd-rpc.rst:42
 msgid "These commands are accurate as of Dash Core version 0.13.0.0."
-msgstr "Эти команды действительный для Dash Core версии 0.13.0.0."
+msgstr "Эти команды действительны для Dash Core версии 0.13.0.0."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:44
 msgid "`dashd`_"
@@ -2970,34 +2970,42 @@ msgstr ""
 "минимальным количеством подтверждений."
 
 #: ../../wallets/dashcore/cmd-rpc.rst:756
+msgid "getspecialtxes \"blockhash\" ( type count skip verbosity )"
+msgstr ""
+
+#: ../../wallets/dashcore/cmd-rpc.rst:757
+msgid "Returns an array of special transactions found in the specified block"
+msgstr ""
+
+#: ../../wallets/dashcore/cmd-rpc.rst:758
 msgid "gettransaction \"txid\" ( include_watchonly )"
 msgstr "gettransaction \"txid\" ( include_watchonly )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:757
+#: ../../wallets/dashcore/cmd-rpc.rst:759
 msgid "Get detailed information about in-wallet transaction <txid>"
 msgstr "Получить детальную информацию о транзакции <txid> внутри кошелька"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:758
+#: ../../wallets/dashcore/cmd-rpc.rst:760
 msgid "getunconfirmedbalance"
 msgstr "getunconfirmedbalance"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:759
+#: ../../wallets/dashcore/cmd-rpc.rst:761
 msgid "Returns the server's total unconfirmed balance"
 msgstr "Выводит общий неподтверждённый баланс сервера."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:760
+#: ../../wallets/dashcore/cmd-rpc.rst:762
 msgid "getwalletinfo"
 msgstr "getwalletinfo"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:761
+#: ../../wallets/dashcore/cmd-rpc.rst:763
 msgid "Returns an object containing various wallet state info."
 msgstr "Выводит объект, содержащий различную информацию о состоянии кошелька."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:762
+#: ../../wallets/dashcore/cmd-rpc.rst:764
 msgid "importaddress \"address\" ( \"label\" rescan p2sh )"
 msgstr "importaddress \"address\" ( \"label\" rescan p2sh )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:763
+#: ../../wallets/dashcore/cmd-rpc.rst:765
 msgid ""
 "Adds a script (in hex) or address that can be watched as if it were in your "
 "wallet but cannot be used to spend."
@@ -3006,21 +3014,21 @@ msgstr ""
 "можно наблюдать так же, как если бы он был в вашем кошельке, но его нельзя "
 "использовать для траты средств."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:764
+#: ../../wallets/dashcore/cmd-rpc.rst:766
 msgid "importelectrumwallet \"filename\" index"
 msgstr "importelectrumwallet \"filename\" index"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:765
+#: ../../wallets/dashcore/cmd-rpc.rst:767
 msgid "Imports keys from an Electrum wallet export file (.csv or .json)"
 msgstr ""
 "Импортирует ключи из экспортированного файла кошелька Electrum (.csv or "
 ".json)"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:766
+#: ../../wallets/dashcore/cmd-rpc.rst:768
 msgid "importmulti \"requests\" \"options\""
 msgstr "importmulti \"requests\" \"options\""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:767
+#: ../../wallets/dashcore/cmd-rpc.rst:769
 msgid ""
 "Import addresses/scripts (with private or public keys, redeem script "
 "(P2SH)), rescanning all addresses in one-shot-only (rescan can be disabled "
@@ -3030,21 +3038,21 @@ msgstr ""
 " скрипт (P2SH)), с повторным сканированием всех адресов (повторное "
 "сканирование может быть отключено с помощью опций)"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:768
+#: ../../wallets/dashcore/cmd-rpc.rst:770
 msgid "importprivkey \"dashprivkey\" ( \"label\" ) ( rescan )"
 msgstr "importprivkey \"dashprivkey\" ( \"label\" ) ( rescan )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:769
+#: ../../wallets/dashcore/cmd-rpc.rst:771
 msgid "Adds a private key (as returned by dumpprivkey) to your wallet."
 msgstr ""
 "Добавляет в ваш кошелёк приватный ключ (в том виде, в котором был выведен "
 "dumpprivkey)"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:770
+#: ../../wallets/dashcore/cmd-rpc.rst:772
 msgid "importprunedfunds"
 msgstr "importprunedfunds"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:771
+#: ../../wallets/dashcore/cmd-rpc.rst:773
 msgid ""
 "Imports funds without rescan. Corresponding address or script must "
 "previously be included in wallet. Aimed towards pruned wallets. The end-user"
@@ -3059,11 +3067,11 @@ msgstr ""
 "тратам импортированных выходов или повторному сканированию после того, как "
 "транзакция будет включена в блокчейн. "
 
-#: ../../wallets/dashcore/cmd-rpc.rst:772
+#: ../../wallets/dashcore/cmd-rpc.rst:774
 msgid "importpubkey \"pubkey\" ( \"label\" rescan )"
 msgstr "importpubkey \"pubkey\" ( \"label\" rescan )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:773
+#: ../../wallets/dashcore/cmd-rpc.rst:775
 msgid ""
 "Adds a public key (in hex) that can be watched as if it were in your wallet "
 "but cannot be used to spend."
@@ -3072,15 +3080,15 @@ msgstr ""
 "наблюдать так же, как если бы он был в вашем кошельке, но его нельзя "
 "использовать для траты средств."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:774
+#: ../../wallets/dashcore/cmd-rpc.rst:776
 msgid "importwallet \"filename\""
 msgstr "importwallet \"filename\""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:775
+#: ../../wallets/dashcore/cmd-rpc.rst:777
 msgid "Imports keys from a wallet dump file (see dumpwallet)."
 msgstr "Импортирует ключи из дамп-файла кошелька (см. dumpwallet)."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:776
+#: ../../wallets/dashcore/cmd-rpc.rst:778
 msgid ""
 "instantsendtoaddress \"address\" amount ( \"comment\" \"comment-to\" "
 "subtractfeefromamount )"
@@ -3088,7 +3096,7 @@ msgstr ""
 "instantsendtoaddress \"address\" amount ( \"comment\" \"comment-to\" "
 "subtractfeefromamount )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:777
+#: ../../wallets/dashcore/cmd-rpc.rst:779
 msgid ""
 "Send an amount to a given address. The amount is a real and is rounded to "
 "the nearest 0.00000001"
@@ -3096,19 +3104,19 @@ msgstr ""
 "Отправить сумму на заданный адрес. Сумма является реальной и округляется до "
 "ближайшего 0.00000001"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:778
+#: ../../wallets/dashcore/cmd-rpc.rst:780
 msgid "keepass <genkey | init | setpassphrase>"
 msgstr "keepass <genkey | init | setpassphrase>"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:779
+#: ../../wallets/dashcore/cmd-rpc.rst:781
 msgid "Keepass settings."
 msgstr "Настройки keepass. "
 
-#: ../../wallets/dashcore/cmd-rpc.rst:780
+#: ../../wallets/dashcore/cmd-rpc.rst:782
 msgid "keypoolrefill ( newsize )"
 msgstr "keypoolrefill ( newsize )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:781
+#: ../../wallets/dashcore/cmd-rpc.rst:783
 msgid ""
 "Fills the keypool. Requires wallet passphrase to be set with "
 "walletpassphrase call."
@@ -3116,11 +3124,11 @@ msgstr ""
 "Заполняет пул ключей. Требует, чтобы кодовая фраза кошелька была задана "
 "через walletpassphrase."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:782
+#: ../../wallets/dashcore/cmd-rpc.rst:784
 msgid "listaccounts ( minconf addlocked include_watchonly)"
 msgstr "listaccounts ( minconf addlocked include_watchonly)"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:783
+#: ../../wallets/dashcore/cmd-rpc.rst:785
 msgid ""
 "DEPRECATED. Returns Object that has account names as keys, account balances "
 "as values."
@@ -3128,19 +3136,19 @@ msgstr ""
 "УСТАРЕЛО. Выводит объект, который содержит имя аккаунта в качестве ключа, а "
 "баланс аккаунта в качестве значения."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:784
+#: ../../wallets/dashcore/cmd-rpc.rst:786
 msgid "listaddressbalances ( minamount )"
 msgstr "listaddressbalances ( minamount )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:785
+#: ../../wallets/dashcore/cmd-rpc.rst:787
 msgid "Lists addresses of this wallet and their balances"
 msgstr "Выводит список адресов этого кошелька и их балансов"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:786
+#: ../../wallets/dashcore/cmd-rpc.rst:788
 msgid "listaddressgroupings"
 msgstr "listaddressgroupings"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:787
+#: ../../wallets/dashcore/cmd-rpc.rst:789
 msgid ""
 "Lists groups of addresses which have had their common ownership made public "
 "by common use as inputs or as the resulting change in past transactions"
@@ -3148,11 +3156,11 @@ msgstr ""
 "Выводит список групп адресов, общее владение которыми стало публичным из-за "
 "общего использования их входов или для сдачи в прошлых транзакциях. "
 
-#: ../../wallets/dashcore/cmd-rpc.rst:788
+#: ../../wallets/dashcore/cmd-rpc.rst:790
 msgid "listlockunspent"
 msgstr "listlockunspent"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:789
+#: ../../wallets/dashcore/cmd-rpc.rst:791
 msgid ""
 "Returns list of temporarily unspendable outputs. See the lockunspent call to"
 " lock and unlock transactions for spending."
@@ -3160,33 +3168,33 @@ msgstr ""
 "Выводит список временно недоступных к использованию выводов. См. вызов "
 "lockunspent, чтобы заблокировать или разблокировать транзакции от трат. "
 
-#: ../../wallets/dashcore/cmd-rpc.rst:790
+#: ../../wallets/dashcore/cmd-rpc.rst:792
 msgid ""
 "listreceivedbyaccount ( minconf addlocked include_empty include_watchonly)"
 msgstr ""
 "listreceivedbyaccount ( minconf addlocked include_empty include_watchonly)"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:791
+#: ../../wallets/dashcore/cmd-rpc.rst:793
 msgid "DEPRECATED. List incoming payments grouped by account."
 msgstr ""
 "УСТАРЕЛО. Вывести список входящих платежей, сгруппированных по аккаунту."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:792
+#: ../../wallets/dashcore/cmd-rpc.rst:794
 msgid ""
 "listreceivedbyaddress ( minconf addlocked include_empty include_watchonly)"
 msgstr ""
 "listreceivedbyaddress ( minconf addlocked include_empty include_watchonly)"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:793
+#: ../../wallets/dashcore/cmd-rpc.rst:795
 msgid "List incoming payments grouped by receiving address."
 msgstr ""
 "Вывести список входящих платежей, сгруппированных по получающему адресу."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:794
+#: ../../wallets/dashcore/cmd-rpc.rst:796
 msgid "listsinceblock ( \"blockhash\" target_confirmations include_watchonly)"
 msgstr "listsinceblock ( \"blockhash\" target_confirmations include_watchonly)"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:795
+#: ../../wallets/dashcore/cmd-rpc.rst:797
 msgid ""
 "Get all transactions in blocks since block [blockhash], or all transactions "
 "if omitted"
@@ -3194,11 +3202,11 @@ msgstr ""
 "Получить все транзакции в блоках, начиная с блока [blockhash], или все "
 "транзакции, если параметр опущен"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:796
+#: ../../wallets/dashcore/cmd-rpc.rst:798
 msgid "listtransactions ( \"account\" count skip include_watchonly)"
 msgstr "listtransactions ( \"account\" count skip include_watchonly)"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:797
+#: ../../wallets/dashcore/cmd-rpc.rst:799
 msgid ""
 "Returns up to 'count' most recent transactions skipping the first 'from' "
 "transactions for account 'account'."
@@ -3206,11 +3214,11 @@ msgstr ""
 "Выводит последние транзакции до 'count', пропуская первые транзакции 'from' "
 "для аккаунта 'account'."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:798
+#: ../../wallets/dashcore/cmd-rpc.rst:800
 msgid "listunspent ( minconf maxconf  [\"addresses\",...] [include_unsafe] )"
 msgstr "listunspent ( minconf maxconf  [\"addresses\",...] [include_unsafe] )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:799
+#: ../../wallets/dashcore/cmd-rpc.rst:801
 msgid ""
 "Returns array of unspent transaction outputs with between minconf and "
 "maxconf (inclusive) confirmations. Optionally filter to only include txouts "
@@ -3221,11 +3229,11 @@ msgstr ""
 "фильтрует информацию и выводит только txouts, выплаченные определённым "
 "адресам."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:800
+#: ../../wallets/dashcore/cmd-rpc.rst:802
 msgid "lockunspent unlock ([{\"txid\":\"txid\",\"vout\":n},...])"
 msgstr "lockunspent unlock ([{\"txid\":\"txid\",\"vout\":n},...])"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:801
+#: ../../wallets/dashcore/cmd-rpc.rst:803
 msgid ""
 "Updates list of temporarily unspendable outputs. Temporarily lock "
 "(unlock=false) or unlock (unlock=true) specified transaction outputs."
@@ -3234,11 +3242,11 @@ msgstr ""
 "блокирует (unlock=false) или снимает блокировку (unlock=true) с заданных "
 "выводов транзакции."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:802
+#: ../../wallets/dashcore/cmd-rpc.rst:804
 msgid "move \"fromaccount\" \"toaccount\" amount ( minconf \"comment\" )"
 msgstr "move \"fromaccount\" \"toaccount\" amount ( minconf \"comment\" )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:803
+#: ../../wallets/dashcore/cmd-rpc.rst:805
 msgid ""
 "DEPRECATED. Move a specified amount from one account in your wallet to "
 "another."
@@ -3246,11 +3254,11 @@ msgstr ""
 "УСТАРЕЛО. Перенести заданную сумму с одного аккаунта вашего кошелька на "
 "другой."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:804
+#: ../../wallets/dashcore/cmd-rpc.rst:806
 msgid "removeprunedfunds \"txid\""
 msgstr "removeprunedfunds \"txid\""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:805
+#: ../../wallets/dashcore/cmd-rpc.rst:807
 msgid ""
 "Deletes the specified transaction from the wallet. Meant for use with pruned"
 " wallets and as a companion to importprunedfunds. This will effect wallet "
@@ -3260,7 +3268,7 @@ msgstr ""
 "сокращёнными кошельками вместе с importprunedfunds. Использование этой "
 "команды повлияет на балансы кошелька."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:806
+#: ../../wallets/dashcore/cmd-rpc.rst:808
 msgid ""
 "sendfrom \"fromaccount\" \"toaddress\" amount ( minconf addlocked "
 "\"comment\" \"comment_to\" )"
@@ -3268,7 +3276,7 @@ msgstr ""
 "sendfrom \"fromaccount\" \"toaddress\" amount ( minconf addlocked "
 "\"comment\" \"comment_to\" )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:807
+#: ../../wallets/dashcore/cmd-rpc.rst:809
 msgid ""
 "DEPRECATED (use sendtoaddress). Sent an amount from an account to a dash "
 "address. Requires wallet passphrase to be set with walletpassphrase call."
@@ -3277,7 +3285,7 @@ msgstr ""
 "dash. Требует, чтобы кодовая фраза кошелька была установлена с помощью "
 "вызова walletpassphrase."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:808
+#: ../../wallets/dashcore/cmd-rpc.rst:810
 msgid ""
 "sendmany \"fromaccount\" {\"address\":amount,...} ( minconf addlocked "
 "\"comment\" [\"address\",...] subtractfeefromamount use_is use_ps )"
@@ -3285,7 +3293,7 @@ msgstr ""
 "sendmany \"fromaccount\" {\"address\":amount,...} ( minconf addlocked "
 "\"comment\" [\"address\",...] subtractfeefromamount use_is use_ps )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:809
+#: ../../wallets/dashcore/cmd-rpc.rst:811
 msgid ""
 "Send multiple times. Amounts are double-precision floating point numbers. "
 "Requires wallet passphrase to be set with walletpassphrase call."
@@ -3294,7 +3302,7 @@ msgstr ""
 "Требует, чтобы кодовая фраза кошелька была установлена с помощью вызова "
 "walletpassphrase."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:810
+#: ../../wallets/dashcore/cmd-rpc.rst:812
 msgid ""
 "sendtoaddress \"address\" amount ( \"comment\" \"comment_to\" "
 "subtractfeefromamount use_is use_ps )"
@@ -3302,47 +3310,47 @@ msgstr ""
 "sendtoaddress \"address\" amount ( \"comment\" \"comment_to\" "
 "subtractfeefromamount use_is use_ps )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:811
+#: ../../wallets/dashcore/cmd-rpc.rst:813
 msgid "Send an amount to a given address."
 msgstr "Отправить сумму на заданный адрес."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:812
+#: ../../wallets/dashcore/cmd-rpc.rst:814
 msgid "setaccount \"address\" \"account\""
 msgstr "setaccount \"address\" \"account\""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:813
+#: ../../wallets/dashcore/cmd-rpc.rst:815
 msgid "DEPRECATED. Sets the account associated with the given address."
 msgstr "УСТАРЕЛО. Задаёт аккаунт, связанный с данным адресом."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:814
+#: ../../wallets/dashcore/cmd-rpc.rst:816
 msgid "setprivatesendamount amount"
 msgstr "setprivatesendamount amount"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:815
+#: ../../wallets/dashcore/cmd-rpc.rst:817
 msgid "Set the goal amount in DASH for PrivateSend mixing."
 msgstr "Задать целевую сумму в DASH для перемешивания через PrivateSend."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:816
+#: ../../wallets/dashcore/cmd-rpc.rst:818
 msgid "setprivatesendrounds rounds"
 msgstr "setprivatesendrounds rounds"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:817
+#: ../../wallets/dashcore/cmd-rpc.rst:819
 msgid "Set the number of rounds for PrivateSend mixing."
 msgstr "Задать количество раундов смешивания для PrivateSend."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:818
+#: ../../wallets/dashcore/cmd-rpc.rst:820
 msgid "settxfee amount"
 msgstr "settxfee amount"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:819
+#: ../../wallets/dashcore/cmd-rpc.rst:821
 msgid "Set the transaction fee per kB. Overwrites the paytxfee parameter."
 msgstr "Задать комиссию транзакции за kB. Перезаписывает параметр paytxfee."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:820
+#: ../../wallets/dashcore/cmd-rpc.rst:822
 msgid "signmessage \"address\" \"message\""
 msgstr "signmessage \"address\" \"message\""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:821
+#: ../../wallets/dashcore/cmd-rpc.rst:823
 msgid ""
 "Sign a message with the private key of an address Requires wallet passphrase"
 " to be set with walletpassphrase call."
@@ -3350,11 +3358,11 @@ msgstr ""
 "Подписать сообщение приватным ключом адреса. Требует, чтобы кодовая фраза "
 "кошелька была задана через walletpassphrase."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:822
+#: ../../wallets/dashcore/cmd-rpc.rst:824
 msgid "walletlock"
 msgstr "walletlock"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:823
+#: ../../wallets/dashcore/cmd-rpc.rst:825
 msgid ""
 "Removes the wallet encryption key from memory, locking the wallet. After "
 "calling this method, you will need to call walletpassphrase again before "
@@ -3365,11 +3373,11 @@ msgstr ""
 "вызывать какие-либо другие методы, потому что для этого требуется "
 "разблокировать кошелёк."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:824
+#: ../../wallets/dashcore/cmd-rpc.rst:826
 msgid "walletpassphrase \"passphrase\" timeout ( mixingonly )"
 msgstr "walletpassphrase \"passphrase\" timeout ( mixingonly )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:825
+#: ../../wallets/dashcore/cmd-rpc.rst:827
 msgid ""
 "Stores the wallet decryption key in memory for 'timeout' seconds. This is "
 "needed prior to performing transactions related to private keys such as "
@@ -3379,11 +3387,11 @@ msgstr ""
 "необходимо делать, прежде чем выполнять транзакции, связанные с приватными "
 "ключами, например отправление dashs."
 
-#: ../../wallets/dashcore/cmd-rpc.rst:826
+#: ../../wallets/dashcore/cmd-rpc.rst:828
 msgid "walletpassphrasechange \"oldpassphrase\" \"newpassphrase\""
 msgstr "walletpassphrasechange \"oldpassphrase\" \"newpassphrase\""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:827
+#: ../../wallets/dashcore/cmd-rpc.rst:829
 msgid "Changes the wallet passphrase from 'oldpassphrase' to 'newpassphrase'."
 msgstr ""
 "Изменяет кодовую фразу кошелька со 'oldpassphrase' на 'newpassphrase'. "

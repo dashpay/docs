@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-01 08:03+0000\n"
+"POT-Creation-Date: 2019-02-17 06:48+0000\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -2560,71 +2560,79 @@ msgid ""
 msgstr ""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:756
-msgid "gettransaction \"txid\" ( include_watchonly )"
+msgid "getspecialtxes \"blockhash\" ( type count skip verbosity )"
 msgstr ""
 
 #: ../../wallets/dashcore/cmd-rpc.rst:757
+msgid "Returns an array of special transactions found in the specified block"
+msgstr ""
+
+#: ../../wallets/dashcore/cmd-rpc.rst:758
+msgid "gettransaction \"txid\" ( include_watchonly )"
+msgstr ""
+
+#: ../../wallets/dashcore/cmd-rpc.rst:759
 msgid "Get detailed information about in-wallet transaction <txid>"
 msgstr "获取有关钱包内部交易<txid>的相关信息。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:758
+#: ../../wallets/dashcore/cmd-rpc.rst:760
 msgid "getunconfirmedbalance"
 msgstr "getunconfirmedbalance"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:759
+#: ../../wallets/dashcore/cmd-rpc.rst:761
 msgid "Returns the server's total unconfirmed balance"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:760
+#: ../../wallets/dashcore/cmd-rpc.rst:762
 msgid "getwalletinfo"
 msgstr "getwalletinfo"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:761
+#: ../../wallets/dashcore/cmd-rpc.rst:763
 msgid "Returns an object containing various wallet state info."
 msgstr "返回包含各种钱包状态信息的对象。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:762
+#: ../../wallets/dashcore/cmd-rpc.rst:764
 msgid "importaddress \"address\" ( \"label\" rescan p2sh )"
 msgstr "importaddress \"address\" ( \"label\" rescan p2sh )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:763
+#: ../../wallets/dashcore/cmd-rpc.rst:765
 msgid ""
 "Adds a script (in hex) or address that can be watched as if it were in your "
 "wallet but cannot be used to spend."
 msgstr "添加一个（十六进制的）脚本或可以浏览的地址，这个地址存在于钱包当中，但不能用于消费。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:764
+#: ../../wallets/dashcore/cmd-rpc.rst:766
 msgid "importelectrumwallet \"filename\" index"
 msgstr "importelectrumwallet \"filename\" index"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:765
+#: ../../wallets/dashcore/cmd-rpc.rst:767
 msgid "Imports keys from an Electrum wallet export file (.csv or .json)"
 msgstr "从轻钱包输出文件中导入地址（.csv或.json）。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:766
+#: ../../wallets/dashcore/cmd-rpc.rst:768
 msgid "importmulti \"requests\" \"options\""
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:767
+#: ../../wallets/dashcore/cmd-rpc.rst:769
 msgid ""
 "Import addresses/scripts (with private or public keys, redeem script "
 "(P2SH)), rescanning all addresses in one-shot-only (rescan can be disabled "
 "via options)."
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:768
+#: ../../wallets/dashcore/cmd-rpc.rst:770
 msgid "importprivkey \"dashprivkey\" ( \"label\" ) ( rescan )"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:769
+#: ../../wallets/dashcore/cmd-rpc.rst:771
 msgid "Adds a private key (as returned by dumpprivkey) to your wallet."
 msgstr "把（由dumpprivkey返回的）一个私钥添加钱包。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:770
+#: ../../wallets/dashcore/cmd-rpc.rst:772
 msgid "importprunedfunds"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:771
+#: ../../wallets/dashcore/cmd-rpc.rst:773
 msgid ""
 "Imports funds without rescan. Corresponding address or script must "
 "previously be included in wallet. Aimed towards pruned wallets. The end-user"
@@ -2633,274 +2641,274 @@ msgid ""
 "transaction is included."
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:772
+#: ../../wallets/dashcore/cmd-rpc.rst:774
 msgid "importpubkey \"pubkey\" ( \"label\" rescan )"
 msgstr "importpubkey \"pubkey\" ( \"label\" rescan )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:773
+#: ../../wallets/dashcore/cmd-rpc.rst:775
 msgid ""
 "Adds a public key (in hex) that can be watched as if it were in your wallet "
 "but cannot be used to spend."
 msgstr "添加一个（十六进制的）可以浏览的公钥，这个地址存在于钱包当中，但不能用于消费。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:774
+#: ../../wallets/dashcore/cmd-rpc.rst:776
 msgid "importwallet \"filename\""
 msgstr "importwallet \"filename\""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:775
+#: ../../wallets/dashcore/cmd-rpc.rst:777
 msgid "Imports keys from a wallet dump file (see dumpwallet)."
 msgstr "从钱包转存文件导入私钥（更多信息请参阅dumpwallet）。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:776
+#: ../../wallets/dashcore/cmd-rpc.rst:778
 msgid ""
 "instantsendtoaddress \"address\" amount ( \"comment\" \"comment-to\" "
 "subtractfeefromamount )"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:777
+#: ../../wallets/dashcore/cmd-rpc.rst:779
 msgid ""
 "Send an amount to a given address. The amount is a real and is rounded to "
 "the nearest 0.00000001"
 msgstr "将金额发送到既定地址。金额应为实数，并四舍五入到0.00000001。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:778
+#: ../../wallets/dashcore/cmd-rpc.rst:780
 msgid "keepass <genkey | init | setpassphrase>"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:779
+#: ../../wallets/dashcore/cmd-rpc.rst:781
 msgid "Keepass settings."
 msgstr "Keepass 设置。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:780
+#: ../../wallets/dashcore/cmd-rpc.rst:782
 msgid "keypoolrefill ( newsize )"
 msgstr "keypoolrefill ( newsize )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:781
+#: ../../wallets/dashcore/cmd-rpc.rst:783
 msgid ""
 "Fills the keypool. Requires wallet passphrase to be set with "
 "walletpassphrase call."
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:782
+#: ../../wallets/dashcore/cmd-rpc.rst:784
 msgid "listaccounts ( minconf addlocked include_watchonly)"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:783
+#: ../../wallets/dashcore/cmd-rpc.rst:785
 msgid ""
 "DEPRECATED. Returns Object that has account names as keys, account balances "
 "as values."
 msgstr "超时。返回以账户名称为私钥、以账户余额为价值的对象。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:784
+#: ../../wallets/dashcore/cmd-rpc.rst:786
 msgid "listaddressbalances ( minamount )"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:785
+#: ../../wallets/dashcore/cmd-rpc.rst:787
 msgid "Lists addresses of this wallet and their balances"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:786
+#: ../../wallets/dashcore/cmd-rpc.rst:788
 msgid "listaddressgroupings"
 msgstr "listaddressgroupings"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:787
+#: ../../wallets/dashcore/cmd-rpc.rst:789
 msgid ""
 "Lists groups of addresses which have had their common ownership made public "
 "by common use as inputs or as the resulting change in past transactions"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:788
+#: ../../wallets/dashcore/cmd-rpc.rst:790
 msgid "listlockunspent"
 msgstr "listlockunspent"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:789
+#: ../../wallets/dashcore/cmd-rpc.rst:791
 msgid ""
 "Returns list of temporarily unspendable outputs. See the lockunspent call to"
 " lock and unlock transactions for spending."
 msgstr "返回暂时不能支出的输出的列表。请参考lockunspent调用来锁定和解锁支出交易。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:790
+#: ../../wallets/dashcore/cmd-rpc.rst:792
 msgid ""
 "listreceivedbyaccount ( minconf addlocked include_empty include_watchonly)"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:791
+#: ../../wallets/dashcore/cmd-rpc.rst:793
 msgid "DEPRECATED. List incoming payments grouped by account."
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:792
+#: ../../wallets/dashcore/cmd-rpc.rst:794
 msgid ""
 "listreceivedbyaddress ( minconf addlocked include_empty include_watchonly)"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:793
+#: ../../wallets/dashcore/cmd-rpc.rst:795
 msgid "List incoming payments grouped by receiving address."
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:794
+#: ../../wallets/dashcore/cmd-rpc.rst:796
 msgid "listsinceblock ( \"blockhash\" target_confirmations include_watchonly)"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:795
+#: ../../wallets/dashcore/cmd-rpc.rst:797
 msgid ""
 "Get all transactions in blocks since block [blockhash], or all transactions "
 "if omitted"
 msgstr "从[blockhash]区块中获取所有交易或省略所有交易。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:796
+#: ../../wallets/dashcore/cmd-rpc.rst:798
 msgid "listtransactions ( \"account\" count skip include_watchonly)"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:797
+#: ../../wallets/dashcore/cmd-rpc.rst:799
 msgid ""
 "Returns up to 'count' most recent transactions skipping the first 'from' "
 "transactions for account 'account'."
 msgstr "返回计算最近的交易，跳过来自 '账户' 的第一笔交易。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:798
+#: ../../wallets/dashcore/cmd-rpc.rst:800
 msgid "listunspent ( minconf maxconf  [\"addresses\",...] [include_unsafe] )"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:799
+#: ../../wallets/dashcore/cmd-rpc.rst:801
 msgid ""
 "Returns array of unspent transaction outputs with between minconf and "
 "maxconf (inclusive) confirmations. Optionally filter to only include txouts "
 "paid to specified addresses."
 msgstr "返回在minconf和maxconf之间（包含）没有支出的交易输出数组。可过滤除向指定地址的支付之外的其它交易。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:800
+#: ../../wallets/dashcore/cmd-rpc.rst:802
 msgid "lockunspent unlock ([{\"txid\":\"txid\",\"vout\":n},...])"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:801
+#: ../../wallets/dashcore/cmd-rpc.rst:803
 msgid ""
 "Updates list of temporarily unspendable outputs. Temporarily lock "
 "(unlock=false) or unlock (unlock=true) specified transaction outputs."
 msgstr "更新暂时不能输出的列表。暂时锁定（unlock = false）或解锁（unlock = true）指定的交易输出。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:802
+#: ../../wallets/dashcore/cmd-rpc.rst:804
 msgid "move \"fromaccount\" \"toaccount\" amount ( minconf \"comment\" )"
 msgstr "move \"fromaccount\" \"toaccount\" amount ( minconf \"comment\" )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:803
+#: ../../wallets/dashcore/cmd-rpc.rst:805
 msgid ""
 "DEPRECATED. Move a specified amount from one account in your wallet to "
 "another."
 msgstr "超时。将指定金额从钱包中的一个帐户移动到另一个帐户。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:804
+#: ../../wallets/dashcore/cmd-rpc.rst:806
 msgid "removeprunedfunds \"txid\""
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:805
+#: ../../wallets/dashcore/cmd-rpc.rst:807
 msgid ""
 "Deletes the specified transaction from the wallet. Meant for use with pruned"
 " wallets and as a companion to importprunedfunds. This will effect wallet "
 "balances."
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:806
+#: ../../wallets/dashcore/cmd-rpc.rst:808
 msgid ""
 "sendfrom \"fromaccount\" \"toaddress\" amount ( minconf addlocked "
 "\"comment\" \"comment_to\" )"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:807
+#: ../../wallets/dashcore/cmd-rpc.rst:809
 msgid ""
 "DEPRECATED (use sendtoaddress). Sent an amount from an account to a dash "
 "address. Requires wallet passphrase to be set with walletpassphrase call."
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:808
+#: ../../wallets/dashcore/cmd-rpc.rst:810
 msgid ""
 "sendmany \"fromaccount\" {\"address\":amount,...} ( minconf addlocked "
 "\"comment\" [\"address\",...] subtractfeefromamount use_is use_ps )"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:809
+#: ../../wallets/dashcore/cmd-rpc.rst:811
 msgid ""
 "Send multiple times. Amounts are double-precision floating point numbers. "
 "Requires wallet passphrase to be set with walletpassphrase call."
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:810
+#: ../../wallets/dashcore/cmd-rpc.rst:812
 msgid ""
 "sendtoaddress \"address\" amount ( \"comment\" \"comment_to\" "
 "subtractfeefromamount use_is use_ps )"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:811
+#: ../../wallets/dashcore/cmd-rpc.rst:813
 msgid "Send an amount to a given address."
 msgstr "将金额发送到指定地址。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:812
+#: ../../wallets/dashcore/cmd-rpc.rst:814
 msgid "setaccount \"address\" \"account\""
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:813
+#: ../../wallets/dashcore/cmd-rpc.rst:815
 msgid "DEPRECATED. Sets the account associated with the given address."
 msgstr "超时。设置与既定地址关联的账户。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:814
+#: ../../wallets/dashcore/cmd-rpc.rst:816
 msgid "setprivatesendamount amount"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:815
+#: ../../wallets/dashcore/cmd-rpc.rst:817
 msgid "Set the goal amount in DASH for PrivateSend mixing."
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:816
+#: ../../wallets/dashcore/cmd-rpc.rst:818
 msgid "setprivatesendrounds rounds"
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:817
+#: ../../wallets/dashcore/cmd-rpc.rst:819
 msgid "Set the number of rounds for PrivateSend mixing."
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:818
+#: ../../wallets/dashcore/cmd-rpc.rst:820
 msgid "settxfee amount"
 msgstr "settxfee amount"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:819
+#: ../../wallets/dashcore/cmd-rpc.rst:821
 msgid "Set the transaction fee per kB. Overwrites the paytxfee parameter."
 msgstr "设置每千字节的交易费用。覆盖paytxfee参数。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:820
+#: ../../wallets/dashcore/cmd-rpc.rst:822
 msgid "signmessage \"address\" \"message\""
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:821
+#: ../../wallets/dashcore/cmd-rpc.rst:823
 msgid ""
 "Sign a message with the private key of an address Requires wallet passphrase"
 " to be set with walletpassphrase call."
 msgstr ""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:822
+#: ../../wallets/dashcore/cmd-rpc.rst:824
 msgid "walletlock"
 msgstr "walletlock"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:823
+#: ../../wallets/dashcore/cmd-rpc.rst:825
 msgid ""
 "Removes the wallet encryption key from memory, locking the wallet. After "
 "calling this method, you will need to call walletpassphrase again before "
 "being able to call any methods which require the wallet to be unlocked."
 msgstr "从内存中删除钱包的加密私钥并锁定钱包。调用这一方法后，用户需要再次调用walletpassphrase才能调用任何需要解锁钱包的方法。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:824
+#: ../../wallets/dashcore/cmd-rpc.rst:826
 msgid "walletpassphrase \"passphrase\" timeout ( mixingonly )"
 msgstr "walletpassphrase \"passphrase\" timeout ( mixingonly )"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:825
+#: ../../wallets/dashcore/cmd-rpc.rst:827
 msgid ""
 "Stores the wallet decryption key in memory for 'timeout' seconds. This is "
 "needed prior to performing transactions related to private keys such as "
 "sending dashs"
 msgstr "在内存中存储钱包解密私钥。在执行与私钥相关的交易，例如发送达世币之前，用户需要完成这项操作。"
 
-#: ../../wallets/dashcore/cmd-rpc.rst:826
+#: ../../wallets/dashcore/cmd-rpc.rst:828
 msgid "walletpassphrasechange \"oldpassphrase\" \"newpassphrase\""
 msgstr "walletpassphrasechange \"oldpassphrase\" \"newpassphrase\""
 
-#: ../../wallets/dashcore/cmd-rpc.rst:827
+#: ../../wallets/dashcore/cmd-rpc.rst:829
 msgid "Changes the wallet passphrase from 'oldpassphrase' to 'newpassphrase'."
 msgstr "将钱包密码从'oldpassphrase'更改为'newpassphrase'。"
