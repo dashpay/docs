@@ -45,7 +45,7 @@ SID Hosting Service
 .. image:: img/splawik.png
    :width: 200px
    :align: right
-   :target: http://dashmasternode.io
+   :target: https://dashmasternode.io
 
 http://dashmasternode.io
 
