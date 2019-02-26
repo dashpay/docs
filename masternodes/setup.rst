@@ -808,17 +808,23 @@ Generate a new address as follows::
   yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5
 
 Then either generate or choose an existing second address to receive the
-owner's masternode payouts::
+owner's masternode payouts. It is also possible to use an address
+external to the wallet::
 
   getnewaddress
 
   yLqyR8PHEB7Fp1ue8nSuLfuxQhrj5PSTDv
 
 You can also optionally generate and fund a third address to pay the
-transaction fee. The private keys to the owner and fee source addresses
-must exist in the wallet submitting the transaction to the network. If
-your wallet is protect by a password, it must now be unlocked to perform
-the following commands. Unlock your wallet for 5 minutes::
+transaction fee. If you selected an external payout address, you must
+specify a fee source address. Either the payout address or fee source
+address must have enough balance to pay the transaction fee, or the
+final `register_submit` transaction will fail.
+
+The private keys to the owner and fee source addresses must exist in the
+wallet submitting the transaction to the network. If your wallet is
+protected by a password, it must now be unlocked to perform the
+following commands. Unlock your wallet for 5 minutes::
 
   walletpassphrase yourSecretPassword 300
 

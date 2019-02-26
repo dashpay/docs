@@ -136,7 +136,7 @@ Masternode Registration from DMT
 
 This documentation describes the procedure to register an existing
 masternode for the DIP003 masternode list if the collateral is held on a
-hardware wallet. DIP003 must be activated and DMT 0.9.21 or higher is
+hardware wallet. DIP003 must be activated and DMT 0.9.22 or higher is
 required. It is not possible to issue the registration transactions if
 DIP003 is not yet active. You can update DMT by downloading the version
 appropriate for your system from the `DMT Releases page
@@ -350,17 +350,23 @@ Generate a new address as follows::
   yc98KR6YQRo1qZVBhp2ZwuiNM7hcrMfGfz
 
 Then either generate or choose an existing second address to receive the
-owner's masternode payouts::
+owner's masternode payouts. It is also possible to use an address
+external to the wallet::
 
   getnewaddress
 
   ycBFJGv7V95aSs6XvMewFyp1AMngeRHBwy
 
 You can also optionally generate and fund a third address to pay the
-transaction fee. The private keys to the owner and fee source addresses
-must exist in the wallet submitting the transaction to the network. If
-your wallet is protect by a password, it must now be unlocked to perform
-the following commands. Unlock your wallet for 5 minutes::
+transaction fee. If you selected an external payout address, you must
+specify a fee source address. Either the payout address or fee source
+address must have enough balance to pay the transaction fee, or the
+final `register_submit` transaction will fail.
+
+The private keys to the owner and fee source addresses must exist in the
+wallet submitting the transaction to the network. If your wallet is
+protected by a password, it must now be unlocked to perform the
+following commands. Unlock your wallet for 5 minutes::
 
   walletpassphrase yourSecretPassword 300
 
