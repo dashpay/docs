@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	/* Select currently language */
+	/* Select current language */
 	$('#langselect').val(DOCUMENTATION_OPTIONS['LANGUAGE']);
 	
 	/* Set alternate links */
@@ -23,7 +23,7 @@ $(document).ready(function() {
 	});
 });
 
-$('#langselect').change(function(){
+$("#langselect").on('change', function() {
 	var pageURL = $(location).attr("href");
 	pageURL = pageURL.replace("https://docs.dash.org/" + DOCUMENTATION_OPTIONS['LANGUAGE'], "");
 	window.location.href = "https://docs.dash.org/" + $('#langselect').val() + pageURL;
