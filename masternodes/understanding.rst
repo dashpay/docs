@@ -214,7 +214,7 @@ rewards.
 Payment logic
 =============
 
-Masternode paymentss in Dash version 0.13.0 are entirely deterministic
+Masternode payments in Dash version 0.13.0 are entirely deterministic
 and based on a simple list sort algorithm. For documentation of version
 0.12.0 payment logic, see the `legacy masternode payment documentation
 <https://docs.dash.org/en/0.12.3/masternodes/understanding.html#payment-logic>`_. 

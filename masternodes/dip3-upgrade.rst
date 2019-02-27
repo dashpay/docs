@@ -169,7 +169,7 @@ All fields are prefilled with suggested values.
 - The three masternode keys (owner, operator, voting) are newly 
   generated and do not need to be changed.
 
-Click **Next** when you are ready to continue. DMT will verify the
+Click **Continue** when you are ready to continue. DMT will verify the
 collateral is in place and prepare to create the ProRegTx special
 transaction to register the masternode on the blockchain. This command
 must be sent from a Dash Core wallet holding a balance, since a standard
