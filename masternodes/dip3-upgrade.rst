@@ -146,8 +146,10 @@ DMT and ensure your existing masternode configuration appears.
 Configuration
 -------------
 
-Click the **Send ProRegTx** button to get started. The **Masternode
-migration wizard** appears.
+Plug in your hardware wallet and click the **Check Dash Network
+Connection** and **Test Hardware Wallet Connection** buttons. Then click
+the **Send ProRegTx** button to get started. The **Masternode migration
+wizard** appears.
 
 .. figure:: img/dmt-dip3-wizard.png
    :width: 400px
