@@ -281,6 +281,17 @@ Koineks
   Koineks serves the Turkish market and offers trading pairs for DASH
   against the Turkish Lira and Bitcoin.
 
+Bitci
+  .. image:: exchanges/bitci.png
+     :width: 200px
+     :align: right
+     :target: https://bitci.com
+
+  https://bitci.com
+
+  Bitci offers DASH trading in Turkey against BTC, Turkish Lira (TRY)
+  and CHFT.
+
 Sistemkoin
   .. image:: exchanges/sistemkoin.png
      :width: 200px
