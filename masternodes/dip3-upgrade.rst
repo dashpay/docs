@@ -263,6 +263,7 @@ effect. Enter the following commands, waiting a few seconds in between
 to give Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
+  sleep 5
   ~/.dashcore/dashd
 
 Your masternode is now upgraded to DIP003 and will appear on the
@@ -337,6 +338,7 @@ following commands, waiting a few seconds in between to give Dash Core
 time to shut down::
 
   ~/.dashcore/dash-cli stop
+  sleep 5
   ~/.dashcore/dashd
 
 We will now prepare the transaction used to register a DIP003 masternode
