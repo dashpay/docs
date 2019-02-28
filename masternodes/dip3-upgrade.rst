@@ -254,7 +254,9 @@ generated above::
 
   masternodeblsprivkey=6708c32427c464fc360d76d36b73585b158b46a1f2e24dfce19db4f48d47270b
 
-Press enter to make sure there is a blank line at the end of the file,
+Do not delete your old ``masternodeprivkey``, since this is still needed
+while the network is in transition to the new list. When you are done,
+press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
 the file. We now need to restart the masternode for this change to take
 effect. Enter the following commands, waiting a few seconds in between
@@ -326,11 +328,13 @@ generated above::
 
   masternodeblsprivkey=565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101
 
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. We now need to restart the masternode for this change to take
-effect. Enter the following commands, waiting a few seconds in between
-to give Dash Core time to shut down::
+Do not delete your old ``masternodeprivkey``, since this is still needed
+while the network is in transition to the new list. Press enter to make
+sure there is a blank line at the end of the file, then press **Ctrl +
+X** to close the editor and **Y** and **Enter** save the file. We now
+need to restart the masternode for this change to take effect. Enter the
+following commands, waiting a few seconds in between to give Dash Core
+time to shut down::
 
   ~/.dashcore/dash-cli stop
   ~/.dashcore/dashd
