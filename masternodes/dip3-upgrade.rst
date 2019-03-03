@@ -454,7 +454,7 @@ internet in cold storage to sign the message. In this example we will
 again use Dash Core, but it is equally possible to use the signing
 function of a hardware wallet. The command takes the following syntax::
 
-  signmessage address message
+  signmessage collateralAddress signMessage
 
 Example::
 
