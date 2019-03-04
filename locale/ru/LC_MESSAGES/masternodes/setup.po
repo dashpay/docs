@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-17 06:48+0000\n"
+"POT-Creation-Date: 2019-03-04 06:56+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Дмитрий <dmitry.zhludin@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -1114,7 +1114,7 @@ msgstr ""
 "начнёт транслироваться в сеть, что мы только что сделали выше. "
 "Отредактируйте конфигурационный файл мастерноды, как показано ниже::"
 
-#: ../../masternodes/setup.rst:692 ../../masternodes/setup.rst:780
+#: ../../masternodes/setup.rst:692 ../../masternodes/setup.rst:781
 msgid ""
 "The editor appears with the existing masternode configuration. Add this line"
 " to the end of the file, replacing the key with your BLS secret key "
@@ -1124,7 +1124,7 @@ msgstr ""
 "конце файла добавьте следующую строку, заменив ключ на секретный BLS-ключ, "
 "который был сгенерирован выше::"
 
-#: ../../masternodes/setup.rst:698 ../../masternodes/setup.rst:786
+#: ../../masternodes/setup.rst:698 ../../masternodes/setup.rst:787
 msgid ""
 "Press enter to make sure there is a blank line at the end of the file, then "
 "press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
@@ -1138,7 +1138,7 @@ msgstr ""
 " чтобы внесённые изменения вступили в силу. Выждав несколько секунд, чтобы "
 "дать время для Dash Core закрыться, введите следующие команды::"
 
-#: ../../masternodes/setup.rst:707
+#: ../../masternodes/setup.rst:708
 msgid ""
 "At this point you can monitor your masternode using ``dashman/dashman "
 "status``, by entering ``~/.dashcore/dash-cli masternode status`` or using "
@@ -1150,14 +1150,14 @@ msgstr ""
 " или используя функцию **Get status** в DMT. Конечный результат должен быть "
 "таким, как показано ниже:"
 
-#: ../../masternodes/setup.rst:715
+#: ../../masternodes/setup.rst:716
 msgid ""
 "dash-cli masternode status output showing successfully started masternode"
 msgstr ""
 "Статус мастерноды dash-cli, который сообщает об успешно запущенной "
 "мастерноде"
 
-#: ../../masternodes/setup.rst:717 ../../masternodes/setup.rst:950
+#: ../../masternodes/setup.rst:718 ../../masternodes/setup.rst:958
 msgid ""
 "At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
@@ -1165,15 +1165,15 @@ msgstr ""
 "На этом этапе можно безопасно совершить выход из сервера, набрав ``exit``. "
 "Поздравляем! Ваша мастернода теперь работает."
 
-#: ../../masternodes/setup.rst:724
+#: ../../masternodes/setup.rst:725
 msgid "Option 2: Registering from Dash Core wallet"
 msgstr "Способ 2: Регистрация из кошелька Dash Core"
 
-#: ../../masternodes/setup.rst:727
+#: ../../masternodes/setup.rst:728
 msgid "Identify the funding transaction"
 msgstr "Идентификация транзакции финансирования"
 
-#: ../../masternodes/setup.rst:729
+#: ../../masternodes/setup.rst:730
 msgid ""
 "If you used an address in Dash Core wallet for your collateral transaction, "
 "you now need to find the txid of the transaction. Click **Tools > Debug "
@@ -1183,11 +1183,11 @@ msgstr ""
 " Core, то теперь необходимо найти txid этой транзакции. Кликните "
 "**Инструменты > Консоль отладки** и введите следующую команду::"
 
-#: ../../masternodes/setup.rst:735
+#: ../../masternodes/setup.rst:736
 msgid "This should return a string of characters similar to this::"
 msgstr "Консоль должна вернуть строку символов, аналогичную этой::"
 
-#: ../../masternodes/setup.rst:741
+#: ../../masternodes/setup.rst:742
 msgid ""
 "The first long string is your transaction hash, while the last number is the"
 " index."
@@ -1195,11 +1195,11 @@ msgstr ""
 "Первая длинная строка - это хеш вашей транзакции, последние цифры в ней - "
 "это индекс."
 
-#: ../../masternodes/setup.rst:748
+#: ../../masternodes/setup.rst:749
 msgid "Generate a BLS key pair"
 msgstr "Генерация пары BLS-ключей"
 
-#: ../../masternodes/setup.rst:750
+#: ../../masternodes/setup.rst:751
 msgid ""
 "A public/private BLS key pair is required for the operator of the "
 "masternode. If you are using a hosting service, they may provide you with "
@@ -1213,7 +1213,7 @@ msgstr ""
 "мастерноду или согласились предоставить вашему хосту приватный BLS-ключ, "
 "сгенерируйте пару BLS-ключей публичный/приватный, как показано ниже::"
 
-#: ../../masternodes/setup.rst:763
+#: ../../masternodes/setup.rst:764
 msgid ""
 "**These keys are NOT stored by the wallet and must be kept secure, similar "
 "to the value provided in the past by the** ``masternode genkey`` "
@@ -1223,11 +1223,11 @@ msgstr ""
 " как и значение, предоставленное в одном из предыдущих шагов после "
 "выполнения** ``masternode genkey`` **команды.**"
 
-#: ../../masternodes/setup.rst:768
+#: ../../masternodes/setup.rst:769
 msgid "Add the private key to your masternode configuration"
 msgstr "Добавьте приватный ключ в конфигурацию вашей мастерноды"
 
-#: ../../masternodes/setup.rst:770
+#: ../../masternodes/setup.rst:771
 msgid ""
 "The public key will be used in following steps. The private key must be "
 "entered in the ``dash.conf`` file on the masternode. This allows the "
@@ -1246,7 +1246,7 @@ msgstr ""
 "``ssh`` или PuTTY и отредактируйте конфигурационный файл мастерноды, как "
 "показано ниже::"
 
-#: ../../masternodes/setup.rst:795
+#: ../../masternodes/setup.rst:797
 msgid ""
 "We will now prepare the transaction used to register a DIP003 masternode on "
 "the network."
@@ -1254,11 +1254,11 @@ msgstr ""
 "Теперь подготовим транзакцию, которая используется для регистрации в сети "
 "мастерноды DIP003."
 
-#: ../../masternodes/setup.rst:799
+#: ../../masternodes/setup.rst:801
 msgid "Prepare a ProRegTx transaction"
 msgstr "Подготовка транзакции ProRegTx"
 
-#: ../../masternodes/setup.rst:801
+#: ../../masternodes/setup.rst:803
 msgid ""
 "First, we need to get a new, unused address from the wallet to serve as the "
 "owner address. This is different to the collateral address. It must also be "
@@ -1271,30 +1271,31 @@ msgstr ""
 "голосования до тех пор, пока Спорк 15 ещё не активирован. Сгенерируйте новый"
 " адрес, как показно ниже::"
 
-#: ../../masternodes/setup.rst:810
+#: ../../masternodes/setup.rst:812
 msgid ""
 "Then either generate or choose an existing second address to receive the "
-"owner's masternode payouts::"
+"owner's masternode payouts. It is also possible to use an address external "
+"to the wallet::"
 msgstr ""
-"Затем либо сгенерируйте, либо выберите из существующих второй адрес для "
-"получения платежей от владельца мастерноды::"
 
-#: ../../masternodes/setup.rst:817
+#: ../../masternodes/setup.rst:820
 msgid ""
 "You can also optionally generate and fund a third address to pay the "
-"transaction fee. The private keys to the owner and fee source addresses must"
-" exist in the wallet submitting the transaction to the network. If your "
-"wallet is protect by a password, it must now be unlocked to perform the "
-"following commands. Unlock your wallet for 5 minutes::"
+"transaction fee. If you selected an external payout address, you must "
+"specify a fee source address. Either the payout address or fee source "
+"address must have enough balance to pay the transaction fee, or the final "
+"`register_submit` transaction will fail."
 msgstr ""
-"По желанию вы также можете сгенерировать и пополнить средствами третий "
-"адрес, с которого будут оплачиваться комисии за транзакции. Приватные ключи "
-"владельца и адреса источника оплаты комиссий должны присутствовать в "
-"кошельке, отправляющем транзакцию в сеть. Если ваш кошелёк защищен паролем, "
-"то для выполнения указанных команд его необходимо разблокировать. "
-"Разблокируйте свой кошелек на 5 минут::"
 
-#: ../../masternodes/setup.rst:825
+#: ../../masternodes/setup.rst:826
+msgid ""
+"The private keys to the owner and fee source addresses must exist in the "
+"wallet submitting the transaction to the network. If your wallet is "
+"protected by a password, it must now be unlocked to perform the following "
+"commands. Unlock your wallet for 5 minutes::"
+msgstr ""
+
+#: ../../masternodes/setup.rst:833
 msgid ""
 "We will now prepare an unsigned ProRegTx special transaction using the "
 "``protx register_prepare`` command. This command has the following syntax::"
@@ -1303,7 +1304,7 @@ msgstr ""
 "использовав команду ``protx register_prepare``. Эта команда имеет следующий "
 "синтаксис::"
 
-#: ../../masternodes/setup.rst:832
+#: ../../masternodes/setup.rst:840
 msgid ""
 "Open a text editor such as notepad to prepare this command. Replace each "
 "argument to the command as follows:"
@@ -1311,26 +1312,26 @@ msgstr ""
 "Откройте текстовый редактор, например Блокнот и подготовьте эту команду. "
 "Замените каждый аргумент команды следующим образом:"
 
-#: ../../masternodes/setup.rst:835
+#: ../../masternodes/setup.rst:843
 msgid ""
 "``collateralHash``: The txid of the 1000 Dash collateral funding transaction"
 msgstr ""
 "``collateralHash``: txid транзакции залогового финасирования в размере 1000 "
 "DASH"
 
-#: ../../masternodes/setup.rst:837
+#: ../../masternodes/setup.rst:845
 msgid ""
 "``collateralIndex``: The output index of the 1000 Dash funding transaction"
 msgstr ""
 "``collateralIndex``: Индекс выхода транзакции финансирования на 1000 DASH"
 
-#: ../../masternodes/setup.rst:839
+#: ../../masternodes/setup.rst:847
 msgid ""
 "``ipAndPort``: Masternode IP address and port, in the format "
 "``x.x.x.x:yyyy``"
 msgstr "``ipAndPort``: IP-адрес и порт мастерноды в формате ``x.x.x.x:yyyy``"
 
-#: ../../masternodes/setup.rst:841
+#: ../../masternodes/setup.rst:849
 msgid ""
 "``ownerKeyAddr``: The new Dash address generated above for the owner/voting "
 "address"
@@ -1338,7 +1339,7 @@ msgstr ""
 "``ownerKeyAddr``: Сгенерированный выше новый адрес Dash для "
 "владельца/голосования"
 
-#: ../../masternodes/setup.rst:843
+#: ../../masternodes/setup.rst:851
 msgid ""
 "``operatorPubKey``: The BLS public key generated above (or provided by your "
 "hosting service)"
@@ -1346,7 +1347,7 @@ msgstr ""
 "``operatorPubKey``: Публичный BLS-ключ, сгенерированный выше (или "
 "предоставленный хостинг-сервисом)"
 
-#: ../../masternodes/setup.rst:845
+#: ../../masternodes/setup.rst:853
 msgid ""
 "``votingKeyAddr``: The new Dash address generated above, or the address of a"
 " delegate, used for proposal voting"
@@ -1354,7 +1355,7 @@ msgstr ""
 "``votingKeyAddr``: Новый адрес Dash, сгенерированный выше или адрес "
 "делегата, используемый для голосования по предложениям"
 
-#: ../../masternodes/setup.rst:847
+#: ../../masternodes/setup.rst:855
 msgid ""
 "``operatorReward``: The percentage of the block reward allocated to the "
 "operator as payment"
@@ -1362,7 +1363,7 @@ msgstr ""
 "``operatorReward``: Процент блочной награды, который выделен оператору в "
 "качестве оплаты"
 
-#: ../../masternodes/setup.rst:849
+#: ../../masternodes/setup.rst:857
 msgid ""
 "``payoutAddress``: A new or existing Dash address to receive the owner's "
 "masternode rewards"
@@ -1370,7 +1371,7 @@ msgstr ""
 "``payoutAddress``: Новый или существующий адрес Dash для получения платежей "
 "от владельца мастерноды"
 
-#: ../../masternodes/setup.rst:851
+#: ../../masternodes/setup.rst:859
 msgid ""
 "``feeSourceAddress``: An (optional) address used to fund ProTx fee. "
 "``payoutAddress`` will be used if not specified."
@@ -1379,7 +1380,7 @@ msgstr ""
 "финансирования комиссий ProTx. Если не указан, то будет использоваться "
 "``payoutAddress``."
 
-#: ../../masternodes/setup.rst:854
+#: ../../masternodes/setup.rst:862
 msgid ""
 "Note that the operator is responsible for :ref:`specifying their own reward "
 "<dip3-update-service>` address in a separate ``update_service`` transaction "
@@ -1392,16 +1393,16 @@ msgstr ""
 "укажете отличную от нуля награду ``operatorReward``. Владелец залогового "
 "подтверждения не указывает адрес для выплаты оператору."
 
-#: ../../masternodes/setup.rst:860
+#: ../../masternodes/setup.rst:868
 msgid "Example (remove line breaks if copying)::"
 msgstr "Пример (удалите разрывы строк при копировании)::"
 
-#: ../../masternodes/setup.rst:872 ../../masternodes/setup.rst:901
-#: ../../masternodes/setup.rst:927
+#: ../../masternodes/setup.rst:880 ../../masternodes/setup.rst:909
+#: ../../masternodes/setup.rst:935
 msgid "Output::"
 msgstr "Выход::"
 
-#: ../../masternodes/setup.rst:880
+#: ../../masternodes/setup.rst:888
 msgid ""
 "Next we will use the ``collateralAddress`` and ``signMessage`` fields to "
 "sign the transaction, and the output of the ``tx`` field to submit the "
@@ -1410,11 +1411,11 @@ msgstr ""
 "Теперь используем поля ``collateralAddress`` и ``signMessage`` для "
 "подписания транзакции и поле выхода ``tx`` для отправления транзакции."
 
-#: ../../masternodes/setup.rst:885
+#: ../../masternodes/setup.rst:893
 msgid "Sign the ProRegTx transaction"
 msgstr "Подписание транзакции ProRegTx"
 
-#: ../../masternodes/setup.rst:887
+#: ../../masternodes/setup.rst:895
 msgid ""
 "We will now sign the content of the ``signMessage`` field using the private "
 "key for the collateral address as specified in ``collateralAddress``. Note "
@@ -1432,15 +1433,15 @@ msgstr ""
 "Core, но в равной степени возможно использовать функцию подписи аппаратного "
 "кошелька. Команда имеет следующий синтаксис::"
 
-#: ../../masternodes/setup.rst:897 ../../masternodes/setup.rst:923
+#: ../../masternodes/setup.rst:905 ../../masternodes/setup.rst:931
 msgid "Example::"
 msgstr "Пример::"
 
-#: ../../masternodes/setup.rst:907
+#: ../../masternodes/setup.rst:915
 msgid "Submit the signed message"
 msgstr "Подтвердите подписанное сообщение"
 
-#: ../../masternodes/setup.rst:909
+#: ../../masternodes/setup.rst:917
 msgid ""
 "We will now submit the ProRegTx special transaction to the blockchain to "
 "register the masternode. This command must be sent from a Dash Core wallet "
@@ -1452,11 +1453,11 @@ msgstr ""
 "на котором хранится баланс, поскольку в данном случае взимается стандартная "
 "комиссия за транзакцию. Команда имеет следующий синтаксис::"
 
-#: ../../masternodes/setup.rst:916
+#: ../../masternodes/setup.rst:924
 msgid "Where:"
 msgstr "Где:"
 
-#: ../../masternodes/setup.rst:918
+#: ../../masternodes/setup.rst:926
 msgid ""
 "``tx``: The serialized transaction previously returned in the ``tx`` output "
 "field from the ``protx register_prepare`` command"
@@ -1464,7 +1465,7 @@ msgstr ""
 "``tx``: Сериализованная транзакция, ранее возвращённая в поле выхода ``tx`` "
 "из ``protx register_prepare``"
 
-#: ../../masternodes/setup.rst:920
+#: ../../masternodes/setup.rst:928
 msgid ""
 "``sig``: The message signed with the collateral key from the ``signmessage``"
 " command"
@@ -1472,7 +1473,7 @@ msgstr ""
 "``sig``: Сообщение, подписанное залоговым ключом с помощью команды "
 "``signmessage``"
 
-#: ../../masternodes/setup.rst:931
+#: ../../masternodes/setup.rst:939
 msgid ""
 "Your masternode is now registered and will appear on the Deterministic "
 "Masternode List after the transaction is mined to a block. You can view this"
@@ -1493,7 +1494,7 @@ msgstr ""
 "активации в сети Спорка 15. Проверить статус спорка можно с помощью команды "
 "``spork active``."
 
-#: ../../masternodes/setup.rst:940
+#: ../../masternodes/setup.rst:948
 msgid ""
 "At this point you can go back to your terminal window and monitor your "
 "masternode using ``dashman/dashman status``, by entering ``~/.dashcore/dash-"
@@ -1505,7 +1506,7 @@ msgstr ""
 "cli masternode status`` или используя функцию **Get status** в DMT. Конечный"
 " результат должен быть таким, как показано ниже:"
 
-#: ../../masternodes/setup.rst:948
+#: ../../masternodes/setup.rst:956
 msgid "dashman status output showing successfully started masternode"
 msgstr ""
 "Выведенный статус dashman, который сообщает об успешно запущенной мастерноде"
