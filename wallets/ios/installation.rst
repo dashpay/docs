@@ -10,9 +10,9 @@ Installation
 App Store
 ---------
 
-The easiest way to install the Dash Wallet for iOS is from the App
-Store. While older versions of iOS are supported, you will need to be
-using iOS 10.0 or newer to use the latest version.
+The easiest way to install the Dash Wallet for iOS is from the `App Store <https://itunes.apple.com/app/id1206647026>`__. 
+While older versions of iOS are supported, you will need to be using iOS
+10.0 or newer to use the latest version.
 
 .. image:: img/app-store.png
     :width: 250 px
