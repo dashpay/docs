@@ -115,8 +115,10 @@ offering Dash.
 List of exchanges
 -----------------
 
-The exchanges listed here are for informational purposes only and do not
-indicate endorsement or affiliation with any particular platform.
+Please see `here <https://coincodex.com/article/3063/how-to-buy-dash-dash-on-kraken/>`__
+for a detailed guide on how to buy Dash on an exchange. The exchanges 
+listed here are for informational purposes only and do not indicate 
+endorsement or affiliation with any particular platform.
 
 Poloniex
   .. image:: exchanges/poloniex.png
