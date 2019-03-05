@@ -1166,7 +1166,20 @@ ShapeShift
   another without creating any account, albeit with a higher markup than
   most exchanges. ShapeShift supports Dash and over 70 other
   cryptocurrencies.
-  
+
+ChangeHero
+  .. image:: exchanges/changehero.png
+     :width: 200px
+     :align: right
+     :target: https://changehero.io
+
+  https://changehero.io
+
+  ChangeHero is a broker service and instant exchange with a clear fee
+  structure, allowing users to quickly and efficiently exchange Dash for
+  many other cryptocurrencies. It is also possible to purchase directly
+  using a credit card.
+
 SimpleSwap
   .. image:: exchanges/simpleswap.png
      :width: 200px
@@ -1372,6 +1385,19 @@ buycrypto
   Buycrypto is a peer-to-peer cryptocurrency-fiat exchange geared
   towards giving Greeks easier access to economically sound money. Dash
   is available for purchase and sale against the Euro.
+
+ChangeHero
+  .. image:: exchanges/changehero.png
+     :width: 200px
+     :align: right
+     :target: https://changehero.io
+
+  https://changehero.io
+
+  ChangeHero is a broker service and instant exchange with a clear fee
+  structure, allowing users to quickly and efficiently exchange Dash for
+  many other cryptocurrencies. It is also possible to purchase directly
+  using a credit card.
 
 Kraken
   .. image:: exchanges/kraken.png
