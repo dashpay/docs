@@ -974,6 +974,17 @@ Miami Crypto Exchange
   gateway between the U.S. and the world, with a specific focus on Latin
   America and the Caribbean. DASH can be traded against USD and BTC.
 
+BW
+  .. image:: exchanges/bw.png
+     :width: 120px
+     :align: right
+     :target: https://bw.com
+
+  https://bw.com
+
+  BW exchange focuses on the Chinese and Korean market, with Dash
+  available for exchange against USDT and the QC exchange token.
+
 SatoWallet
   .. image:: exchanges/satowallet.png
      :width: 120px
