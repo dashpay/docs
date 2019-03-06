@@ -1,6 +1,6 @@
 .. meta::
    :description: List and detailed information on third-party wallets supporting the Dash cryptocurrency
-   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, cryptonator, trust, kurepay, ownbit, abra
+   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, cryptonator, trust, kurepay, ownbit, abra, vegawallet
 
 .. _dash-third-party:
 
@@ -699,3 +699,46 @@ Trust.
    :width: 133px
 
    Trust wallet running on iOS
+
+
+VegaWallet
+==========
+
+https://vegawallet.com
+
+.. image:: img/vegawallet.png
+   :width: 200px
+   :align: right
+   :target: https://vegawallet.com
+
+VegaWallet offers a secure multi-asset, multi-currency wallet with
+support for Dash InstantSend and multi-signature wallets. The wallet
+integrates with several exchanges and price sources, as well as offering
+advanced NFC functionality for payments.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.vegawallet.in
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/app/id1449594992
+
+VegaWallet is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.vegawallet.in>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/app/id1449594992>`__.
+
+Documentation
+-------------
+
+VegaWallet maintains a `FAQ <https://vegawallet.com/faq.html>`__ and a
+`Telegram group <https://t.me/VegaWalletSupport>`_ for support. The team
+also responds to support queries by email at 
+`support@vegawallet.com <support@vegawallet.com>`__
+
+.. figure:: img/vegawallet-wallet.png
+   :width: 200px
+
+   VegaWallet wallet running on iOS
