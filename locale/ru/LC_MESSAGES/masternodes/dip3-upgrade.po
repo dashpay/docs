@@ -6,8 +6,8 @@
 # Translators:
 # Max Aronych <taofgoar@protonmail.com>, 2019
 # Alex-ru <mosprivat@gmail.com>, 2019
-# Андрей Дегтяр <diusha1711@gmail.com>, 2019
 # Дмитрий <dmitry.zhludin@gmail.com>, 2019
+# Андрей Дегтяр <diusha1711@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-04 06:56+0000\n"
 "PO-Revision-Date: 2019-01-11 06:53+0000\n"
-"Last-Translator: Дмитрий <dmitry.zhludin@gmail.com>, 2019\n"
+"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -674,6 +674,9 @@ msgid ""
 "owner's masternode payouts. It is also possible to use an address external "
 "to the wallet::"
 msgstr ""
+"Затем либо сгенерируйте, либо выберите из существующих второй адрес для "
+"получения платежей от владельца мастерноды. Также возможно использовать "
+"адрес внешнего кошелька::"
 
 #: ../../masternodes/dip3-upgrade.rst:374
 msgid ""
@@ -683,6 +686,12 @@ msgid ""
 "address must have enough balance to pay the transaction fee, or the final "
 "`register_submit` transaction will fail."
 msgstr ""
+"Вы также можете дополнительно создать и пополнить третий адрес для оплаты "
+"комиссии за транзакцию. Если вы выбрали внешний адрес выплаты, вы должны "
+"указать адрес источника оплаты. Либо адрес выплаты, либо адрес источника "
+"комиссии должен иметь достаточный баланс для оплаты комиссии за транзакцию, "
+"в противном случае последняя транзакция `register_submit` завершится "
+"неудачно."
 
 #: ../../masternodes/dip3-upgrade.rst:380
 msgid ""
@@ -691,6 +700,10 @@ msgid ""
 "protected by a password, it must now be unlocked to perform the following "
 "commands. Unlock your wallet for 5 minutes::"
 msgstr ""
+"Приватные ключи владельца и адреса источника оплаты комиссий должны "
+"присутствовать в кошельке, отправляющем транзакцию в сеть. Если ваш кошелёк "
+"защищен паролем, то для выполнения указанных команд его необходимо "
+"разблокировать. Разблокируйте свой кошелёк на 5 минут::"
 
 #: ../../masternodes/dip3-upgrade.rst:387
 msgid ""

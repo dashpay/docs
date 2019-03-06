@@ -4,10 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Julia Ogonkova <livingflcl@gmail.com>, 2018
 # Max Aronych <taofgoar@protonmail.com>, 2018
 # Андрей Дегтяр <diusha1711@gmail.com>, 2019
 # Дмитрий <dmitry.zhludin@gmail.com>, 2019
+# Julia Ogonkova <livingflcl@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-04 06:56+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Дмитрий <dmitry.zhludin@gmail.com>, 2019\n"
+"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -531,6 +531,14 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ and defines two "
 "sets of masternodes."
 msgstr ""
+"Платежи мастернод в версии Dash 0.13.0 являются полностью детерминированными"
+" и основаны на простом алгоритме сортировки списка. Документация о принципах"
+" оплаты в версии 0.12.0 приведена в `документации по оплате для старых "
+"версий мастернод "
+"<https://docs.dash.org/en/0.12.3/masternodes/understanding.html#payment-"
+"logic>`_. В версии Dash 0.13.0 реализован `DIP003 "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_, в котором "
+"определено два набора мастернод."
 
 #: ../../masternodes/understanding.rst:225
 msgid ""
@@ -559,10 +567,19 @@ msgid ""
 "case two masternodes were registered in the same block), and the first entry"
 " is selected for payment."
 msgstr ""
+"Каждая мастернода в наборе допустимых мастернод  имеет свой ID, присвоенный "
+"ей при регистрационной транзакции и ассоциируется с блоком, в котором "
+"мастернодой последний раз была получена выплата. Если мастернода ни разу не "
+"получала выплату или была заблокирована за несоблюдение требований PoSe, то "
+"вместо блока последней выплаты используется блок, в котором мастернода была "
+"впервые зарегистрирована или в котором была восстановлена блокирования. "
+"Список сортируется в порядке возрастания по высоте блока и хешу ProRegTx (в "
+"качестве идентификатора для случаев, когда две мастерноды были "
+"зарегистрированы в одном блоке), и выплата отравляется первой записи в нём. "
 
 #: ../../masternodes/understanding.rst:240
 msgid "Proof of Service"
-msgstr ""
+msgstr "Доказательство предоставления услуги"
 
 #: ../../masternodes/understanding.rst:242
 msgid ""
@@ -578,6 +595,19 @@ msgid ""
 "the list again using a :ref:`ProUpServTx <dip3-update-service>`.  The "
 "current scoring rules as of Dash 0.14 are:"
 msgstr ""
+"PoSe - это балловая система, в рамках которой определяется, находится ли "
+"мастернода на хорошем счету в сети и предоставляет ли качественные услуги. В"
+" этом расчёте участвует множество характеристик, поэтому невозможно обмануть"
+" систему, подставив мастерноду под бан по несоответствию требований PoSe - "
+"например, из-за того, что мастернода не отвечает на запросы, потому что "
+"подверглась DDOS-атаке прямо перед осуществлением платежа. Каждое "
+"непредоставление услуги повышает количество баллов в PoSe по отношению к "
+"максимальному количеству баллов, которое равно количеству мастернод в "
+"действительном наборе. Если чьи-либо баллы достигают количества мастернод в "
+"действительном наборе, происходит бан PoSe, а мастернода должна будет "
+"перенастроиться, чтобы предоставлять сети надёжные услуги, и снова "
+"зарегистрироваться в списке через :ref:`ProUpServTx <dip3-update-service>`. "
+"На текущий момент правила начисления баллов в Dash 0.14 таковы: "
 
 #: ../../masternodes/understanding.rst:255
 msgid ""
@@ -585,10 +615,13 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0006.md#llmq-dkg-network-"
 "protocol>`__\\ = 66% punishment"
 msgstr ""
+"Проблемы при участии в `DKG "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md#llmq-dkg-network-"
+"protocol>`__\\ = 66% наказания"
 
 #: ../../masternodes/understanding.rst:256
 msgid "Each subsequent block reduces PoSe score by 1"
-msgstr ""
+msgstr "Каждый последующий блок снижает количество баллов PoSe на 1"
 
 #: ../../masternodes/understanding.rst:259
 msgid "Quorum selection"
