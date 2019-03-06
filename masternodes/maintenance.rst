@@ -120,7 +120,7 @@ set the scriptOperatorPayout field in the ProUpServTx. If
 scriptOperatorPayout is not set and operatorReward is non-zero, the
 owner gets the full masternode reward. The ProUpServTx takes the following syntax::
 
-  protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress feeSoureceAddress)
+  protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress feeSourceAddress)
 
 Where:
 
