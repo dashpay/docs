@@ -1,6 +1,6 @@
 .. meta::
    :description: List and detailed information on third-party wallets supporting the Dash cryptocurrency
-   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, cryptonator, trust, kurepay, bitbill, abra
+   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, cryptonator, trust, kurepay, ownbit, abra
 
 .. _dash-third-party:
 
@@ -110,7 +110,7 @@ Ownbit
 
 https://ownbit.io
 
-.. image:: img/bitbill.png
+.. image:: img/ownbit.png
    :width: 100px
    :align: right
    :target: https://ownbit.io
