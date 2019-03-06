@@ -720,7 +720,7 @@ Installation
 ------------
 
 .. image:: img/google-play-badge.png
-   :width: 200px
+   :width: 100px
    :target: https://play.google.com/store/apps/details?id=com.vegawallet.in
 
 .. image:: img/app-store.png
