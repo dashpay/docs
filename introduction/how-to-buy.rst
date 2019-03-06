@@ -1241,6 +1241,18 @@ Flyp.me
   multicurrency web wallet. It offers instant exchange services between
   18 different cryptocurrencies without creating an account.
 
+OnePageX
+  .. image:: exchanges/onepagex.png
+     :width: 200px
+     :align: right
+     :target: https://onepagex.com
+
+  https://onepagex.com
+
+  One Page Exchange is a single-page instant exchange allowing users to
+  convert Dash into over 140 different cryptocurrencies without
+  registration.
+
 CoinSwitch
   .. image:: exchanges/coinswitch.png
      :width: 200px
