@@ -1176,9 +1176,8 @@ ShapeShift
   https://shapeshift.io
 
   ShapeShift allows users to directly exchange one crypto asset for
-  another without creating any account, albeit with a higher markup than
-  most exchanges. ShapeShift supports Dash and over 70 other
-  cryptocurrencies.
+  another, albeit with a higher markup than most exchanges. ShapeShift
+  supports Dash and over 70 other cryptocurrencies.
 
 ChangeHero
   .. image:: exchanges/changehero.png
