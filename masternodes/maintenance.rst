@@ -184,20 +184,20 @@ ProUpServTx to update the service-related metadata and clear the PoSe-
 banned state (revive the masternode). The ProUpRevTx takes the following
 syntax::
 
-  protx revoke proTxHash operatorKey (reason feeSourceAddress)
+  protx revoke proTxHash operatorKey reason (feeSourceAddress)
 
 Where:
 
 - ``proTxHash``: The transaction id of the initial ProRegTx
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
-- ``reason`` (optional): Integer value indicating the revocation `reason <https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-for-self-revocation-of-operators>`__
+- ``reason``: Integer value indicating the revocation `reason <https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-for-self-revocation-of-operators>`__
 - ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
   ``operatorPayoutAddress`` will be used if not specified.
 
 Example::
 
-  protx revoke 9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6 565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101
+  protx revoke 9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6 565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101 0
 
 
 DashCentral voting, verification and monitoring
