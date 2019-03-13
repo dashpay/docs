@@ -410,6 +410,10 @@ transactions entered in any given block. Each unique transaction is also
 searchable by its txid. A number of block explorers are available for
 the Dash network.
 
+- `Blockchair <https://blockchair.com/dash>`__ offers a block explorer
+  with detailed visualizations to analyse the Dash blockchain.
+
+
 - `CryptoID <https://chainz.cryptoid.info/>`__ offers a `Dash blockchain
   explorer <https://chainz.cryptoid.info/dash/>`__ and a `function
   <https://chainz.cryptoid.info/dash/masternodes.dws>`__ to view and map

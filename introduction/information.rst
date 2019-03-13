@@ -166,6 +166,7 @@ Block explorers, statistics and visualizations
 
 - https://explorer.dash.org
 - https://insight.dash.org/insight
+- https://blockchair.com/dash
 - https://chainz.cryptoid.info/dash
 - https://www.coinexplorer.net/dash
 - https://bitinfocharts.com/dash/explorer
