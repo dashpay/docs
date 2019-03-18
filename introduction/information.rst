@@ -983,6 +983,13 @@ SDK
   by developers to create apps targeting a specific hardware or software
   platform.
 
+Signaling
+  An indication, flag, or signal of support for a feature or fork.
+  The term signaling is most often used in the context of miners delivering
+  this indication of support or agreement. The message is generally delivered
+  through their adoption of updated software in support of a particular
+  protocol and/or by setting a specific version bit within discovered blocks.
+
 State View
   The current state of all data objects once all changes from state
   transitions have been applied. Used in Evolution to determine what
