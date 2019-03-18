@@ -36,11 +36,10 @@ connection so geographically close miners can mine to your pool with
 relatively low latency.
 
 This following section describes the steps to setup an Ubuntu Server
-running P2Pool for Dash. It has been tested with Ubuntu 16.04 LTS and
-18.04 LTS and Dash 0.12.2.3. While a reasonable effort will be made to
-keep it up to date, it should be possible to modify the instructions
-slightly to support different versions or operating systems as
-necessary.
+running P2Pool for Dash. It has been tested with Ubuntu 18.04 LTS and
+Dash 0.13.1.0. While a reasonable effort will be made to keep it up to
+date, it should be possible to modify the instructions slightly to
+support different versions or operating systems as necessary.
 
 Setting up the host server
 ==========================
@@ -167,20 +166,20 @@ P2Pool requires a full Dash node to be running to get block and
 transaction data. To download and install Dash, visit
 https://www.dash.org/wallets on your computer to find the link to the
 latest Dash Core wallet. Click **Linux**, then right-click on **Download
-TGZ** for **Dash Core Linux 64 Bit** and select **Copy link address**.
-Go back to your terminal window and enter the following command, pasting
-in the address to the latest version of Dash Core by right clicking or
-pressing **Ctrl + V**::
+TGZ** for **Dash Core x64** and select **Copy link address**. Go back to
+your terminal window and enter the following command, pasting in the
+address to the latest version of Dash Core by right clicking or pressing
+**Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.12.2.3/dashcore-0.12.2.3-linux64.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.2.0/dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
 
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown on the
 Dash website under **Hash File**::
 
-  sha256sum dashcore-0.12.2.3-linux64.tar.gz
+  sha256sum dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
 
 .. figure:: img/setup-manual-download.png
    :width: 250px
@@ -191,15 +190,14 @@ Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
   mkdir .dashcore
-  tar xfvz dashcore-0.12.2.3-linux64.tar.gz
-  cp dashcore-0.12.2/bin/dashd .dashcore/
-  cp dashcore-0.12.2/bin/dash-cli .dashcore/
-  chmod 777 .dashcore/dash*
+  tar xfvz dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
+  cp dashcore-0.13.2/bin/dashd .dashcore/
+  cp dashcore-0.13.2/bin/dash-cli .dashcore/
 
 Clean up unneeded files::
 
-  rm dashcore-0.12.2.3-linux64.tar.gz
-  rm -r dashcore-0.12.2/
+  rm dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
+  rm -r dashcore-0.13.2/
 
 Create a configuration file using the following command::
 
@@ -257,8 +255,7 @@ Setting up P2Pool
 We will now set up the P2Pool software and its dependencies. Begin with
 the dependencies::
 
-  sudo apt install python-zope.interface python-twisted python-twisted-web python-dev
-  sudo apt install gcc g++ git
+  sudo apt install python-zope.interface python-twisted python-twisted-web python-dev gcc g++ git
 
 Create working directories and set up p2pool-dash::
 

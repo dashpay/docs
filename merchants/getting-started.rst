@@ -70,7 +70,7 @@ table is intended to help you select an appropriate payment processor
 for your existing store.
 
 +--------------------------------------------------------------+------------------------------------------------+--------------------------------+-------------------------------------+------------------------------------+-----------------------------+
-|                                                              | `CoinPayments <https://www.coinpayments.net>`_ | `GoCoin <https://gocoin.com>`_ | `PayBear <https://www.paybear.io>`_ | `Coingate <https://coingate.com>`_ | `GoURL <https://gourl.io>`_ |
+|                                                              | `CoinPayments <https://www.coinpayments.net>`_ | `GoCoin <https://gocoin.com>`_ | `Savvy <https://www.savvy.io>`_     | `Coingate <https://coingate.com>`_ | `GoURL <https://gourl.io>`_ |
 +==============================================================+================================================+================================+=====================================+====================================+=============================+
 | `Blesta <https://www.blesta.com>`_                           | |check|                                        |                                |                                     | |check|                            |                             |
 +--------------------------------------------------------------+------------------------------------------------+--------------------------------+-------------------------------------+------------------------------------+-----------------------------+
@@ -138,7 +138,7 @@ particularly widespread.
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 | `GB CortexPay <https://www.generalbytes.com/pos>`_            |         |                | |check|   |         | Professional hardware terminal with multiple payment options.                            |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `Paytomat <https://paytomat.com>`_                            |         |                |           |         | Token rewards for crypto payments.                                                       |
+| `Paytomat <https://paytomat.com>`_                            | |check| | |check|        |           |         | Token rewards for crypto payments.                                                       |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 | `QR.cr <https://qr.cr/>`_                                     | |check| | |check|        |           |         | Cheap solution with many features to use a mobile phone as a POS terminal.               |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
@@ -148,7 +148,7 @@ particularly widespread.
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 | `SetGetGo <https://setgetgo.com/>`_                           | |check| | |check|        |           |         | Available for Android, web and Android APIs, payment buttons, competitive fees           |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `Spark Payments <https://www.dash.org/forum/threads/39665/>`_ | |check| | |check|        |           |         | Available for Android, Windows, macOS, Linux. 94 exchange rates and Uphold.com supported |
+| `Spark Payments <https://get-spark.com>`_                     | |check| | |check|        |           |         | Available for Android, Windows, macOS, Linux. 94 exchange rates and Uphold.com supported |
 +---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
 
 Installation Examples
@@ -343,10 +343,10 @@ specified shortly after payment is complete.
 Point-of-Sale with Spark
 ------------------------
 
-`Spark Payments <https://www.dash.org/forum/threads/39665/>`_ allows you
-to quickly start accepting point-of-sale payments in Dash at a physical
-store. The system works as an app, and is available for Android, macOS,
-Windows and Linux, with an iOS progressive web app (`PWA
+`Spark Payments <https://www.dash.org/forum/threads/39665/>`__ allows
+you to quickly start accepting point-of-sale payments in Dash at a
+physical store. The system works as an app, and is available for
+Android, macOS, Windows and Linux, with an iOS progressive web app (`PWA
 <https://en.wikipedia.org/wiki/Progressive_Web_Apps>`_) in development.
 
 The project is an external terminal application for processing Dash

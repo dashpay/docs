@@ -31,6 +31,7 @@ Community sites
 - https://www.dashnexus.org
 - https://www.dashwatch.org
 - https://www.dashboost.org
+- https://www.boostinsight.org
 - https://dashroots.fund
 - https://www.dashcentral.org
 - https://www.dashninja.pl
@@ -165,6 +166,7 @@ Block explorers, statistics and visualizations
 
 - https://explorer.dash.org
 - https://insight.dash.org/insight
+- https://blockchair.com/dash
 - https://chainz.cryptoid.info/dash
 - https://www.coinexplorer.net/dash
 - https://bitinfocharts.com/dash/explorer

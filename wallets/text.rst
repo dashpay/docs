@@ -44,7 +44,7 @@ send and receive payments, see the links below:
 DashText
 ========
 
-http://dashtext.com
+https://dashtext.io
 
 .. image:: img/dashtext.png
    :width: 150px

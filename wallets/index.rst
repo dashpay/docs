@@ -1,6 +1,6 @@
 .. meta::
    :description: Description of different wallets available to use and spend Dash cryptocurrency
-   :keywords: dash, wallet, core, electrum, android, ios, copay, paper, hardware, trezor, ledger, web, recovery, text, sms
+   :keywords: dash, wallet, core, electrum, android, ios, paper, hardware, trezor, ledger, web, recovery, text, sms
 
 .. _wallets:
 
@@ -160,32 +160,6 @@ secure recovery phrase.
 
 *Dash iOS Wallet*
 
-.. _dash-copay-wallet:
-
-Dash Copay Wallet
-=================
-
-The Dash Copay wallet is a modern and feature-rich wallet available for
-both mobile and desktop devices. It supports advanced Dash features
-including InstantSend, HD address generation, user-friendly address
-books, multiple wallets in one app and easy to use multi-signature
-wallets. Dash Copay is a light wallet, meaning that even though a full
-copy of the blockchain is not required for use, the private keys to your
-addresses are stored securely on your device and under your control at
-all times.
-
-.. toctree::
-   :maxdepth: 1
-
-   copay/getting-started.rst
-   copay/shared-wallets.rst
-
-.. image:: copay/img/setup-splash.png
-    :width: 160 px
-.. image:: copay/img/details.png
-    :width: 160 px
-
-*Dash Copay Wallet*
 
 .. _paper-wallets:
 

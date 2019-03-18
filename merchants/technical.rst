@@ -212,6 +212,25 @@ domain.
 - Documentation: https://www.blockcypher.com/dev/dash/
 
 
+BitGo
+-----
+
+.. image:: img/bitgo.png
+   :width: 200px
+   :align: right
+   :target: https://www.bitgo.com
+
+https://www.bitgo.com
+
+BitGo provides a simple and robust RESTful API and client SDK to
+integrate digital currency wallets with your application. Support for
+Dash InstantSend is available.
+
+- Features: Multi-Signature HD Wallets, Wallet Operations, WebSocket and
+  WebHook Notifications, Custody Solutions
+- Pricing Model: Per API Call
+- Documentation: https://www.bitgo.com/api/v2/
+
 ChainRider
 ----------
 

@@ -234,33 +234,51 @@ each word/number), then press **Ctrl + X** to close the editor, then
 
   /swapfile none swap sw 0 0
 
-Finally, in order to prevent brute force password hacking attacks, open
-the SSH configuration file to disable root login over SSH::
+Finally, in order to prevent brute force password hacking attacks, we
+will install fail2ban and disable root login over ssh. These steps are
+optional, but highly recommended. Start with fail2ban::
+
+  apt install fail2ban
+
+Create a new configuration file::
+
+  nano /etc/fail2ban/jail.local
+
+And paste in the following configuration::
+
+  [sshd]
+  enabled = true
+  port = 22
+  filter = sshd
+  logpath = /var/log/auth.log
+  maxretry = 3
+
+Then press **Ctrl + X** to close the editor, then **Y** and **Enter**
+save the file. Retart and enable the fail2ban service::
+
+  systemctl restart fail2ban
+  systemctl enable fail2ban
+
+Next, open the SSH configuration file to disable root login over SSH::
 
   nano /etc/ssh/sshd_config
 
 Locate the line that reads ``PermitRootLogin yes`` and set it to
 ``PermitRootLogin no``. Directly below this, add a line which reads
 ``AllowUsers <username>``, replacing ``<username>`` with the username
-you selected above. The press **Ctrl + X** to close the editor, then
+you selected above. Then press **Ctrl + X** to close the editor, then
 **Y** and **Enter** save the file.
 
-Then reboot the server:
-
-::
+Then reboot the server::
 
   reboot now
 
 PuTTY will disconnect when the server reboots.
 
 While this setup includes basic steps to protect your server against
-attacks, much more can be done. In particular, `authenticating with a
-public key <https://help.ubuntu.com/community/SSH/OpenSSH/Keys>`_
-instead of a username/password combination, `installing fail2ban
-<https://www.linode.com/docs/security/using-fail2ban-for-security>`_ to
-block login brute force attacks and `enabling automatic security updates
-<https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ is
-advisable. More tips are available `here <https://www.cyberciti.biz/tips/linux-security.html>`__. 
+attacks, much more can be done. In particular, `authenticating with a public key <https://help.ubuntu.com/community/SSH/OpenSSH/Keys>`_
+instead of a username/password combination and `enabling automatic security updates <https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ 
+is advisable. More tips are available `here <https://www.cyberciti.biz/tips/linux-security.html>`__. 
 However, since the masternode does not actually store the keys to any
 Dash, these steps are considered beyond the scope of this guide.
 
@@ -492,14 +510,14 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0/dashcore-0.13.0.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.2.0/dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  wget https://github.com/dashpay/dash/releases/download/v0.13.0.0/SHA256SUMS.asc
-  sha256sum dashcore-0.13.0.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.2.0/SHA256SUMS.asc
+  sha256sum dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
   cat SHA256SUMS.asc
 
 You can also optionally verify the authenticity of your download as an
@@ -521,9 +539,9 @@ Create a working directory for Dash, extract the compressed archive and
 copy the necessary files to the directory::
 
   mkdir ~/.dashcore
-  tar xfv dashcore-0.13.0.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-0.13.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-0.13.0/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.13.2/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.13.2/bin/dash-cli ~/.dashcore/
 
 Create a configuration file using the following command::
 
@@ -684,6 +702,7 @@ effect. Enter the following commands, waiting a few seconds in between
 to give Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
+  sleep 5
   ~/.dashcore/dashd
 
 At this point you can monitor your masternode using 
@@ -772,6 +791,7 @@ effect. Enter the following commands, waiting a few seconds in between
 to give Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
+  sleep 5
   ~/.dashcore/dashd
 
 We will now prepare the transaction used to register a DIP003 masternode
@@ -790,17 +810,23 @@ Generate a new address as follows::
   yMwR1zf2Cv9gcMdHULRVbTTMGw7arvpbM5
 
 Then either generate or choose an existing second address to receive the
-owner's masternode payouts::
+owner's masternode payouts. It is also possible to use an address
+external to the wallet::
 
   getnewaddress
 
   yLqyR8PHEB7Fp1ue8nSuLfuxQhrj5PSTDv
 
 You can also optionally generate and fund a third address to pay the
-transaction fee. The private keys to the owner and fee source addresses
-must exist in the wallet submitting the transaction to the network. If
-your wallet is protect by a password, it must now be unlocked to perform
-the following commands. Unlock your wallet for 5 minutes::
+transaction fee. If you selected an external payout address, you must
+specify a fee source address. Either the payout address or fee source
+address must have enough balance to pay the transaction fee, or the
+final `register_submit` transaction will fail.
+
+The private keys to the owner and fee source addresses must exist in the
+wallet submitting the transaction to the network. If your wallet is
+protected by a password, it must now be unlocked to perform the
+following commands. Unlock your wallet for 5 minutes::
 
   walletpassphrase yourSecretPassword 300
 
@@ -874,7 +900,7 @@ internet in cold storage to sign the message. In this example we will
 again use Dash Core, but it is equally possible to use the signing
 function of a hardware wallet. The command takes the following syntax::
 
-  signmessage address message
+  signmessage collateralAddress signMessage
 
 Example::
 

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 04:56+0000\n"
+"POT-Creation-Date: 2019-03-04 06:56+0000\n"
 "PO-Revision-Date: 2018-04-16 05:42+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -39,6 +39,53 @@ msgstr "测试网络和开发者网络"
 
 #: ../../developers/testnet.rst:11
 msgid ""
+"Testnet is a fully functioning Dash blockchain with the one key exception "
+"that because the Dash on the network can be created freely, it has no value."
+" This currency, known as tDASH, can be requested from a faucet to help "
+"developers test new versions of Dash, as well as test network operations "
+"using identical versions of the software before they are carried out on the "
+"mainnet. There are a few other key differences:"
+msgstr ""
+"测试网络是一个拥有完整达世币区块链功能的网络，唯一的区别是测试网络中的达世币可以随意创建，没有任何价值。这种货币称为tDASH，可从内接头处请求获取，它可以帮助开发人员测试新版本的达世币，还可在相同的软件版本进入主网络之前，测试它们的网络运行。当然还有一些其他的主要差异："
+
+#: ../../developers/testnet.rst:18
+msgid "Testnet operates on port 19999 (instead of 9999)"
+msgstr "测试网络于端口19999上运行（而非9999）"
+
+#: ../../developers/testnet.rst:19
+msgid ""
+"Testnet addresses start with \"y\" instead of \"X\", ADDRESSVERSION is 140 "
+"(instead of 76)"
+msgstr "Testnet地址以 \"y\" 开头，而非 \"X\"，ADDRESSVERSION为140（而非76）"
+
+#: ../../developers/testnet.rst:21
+msgid "Testnet balances are denominated in tDASH (instead of DASH)"
+msgstr "Testnet余额以tDASH显示（而非DASH）"
+
+#: ../../developers/testnet.rst:22
+msgid "Protocol message header bytes are 0xcee2caff (instead of 0xbf0c6bbd)"
+msgstr "协议消息首标字节为0xcee2caff（而非0xbf0c6bbd）"
+
+#: ../../developers/testnet.rst:23
+msgid ""
+"Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, testnet-"
+"seed.darkcoin.qa, testnet-seed.dashpay.io"
+msgstr ""
+"Bootstrapping使用不同的DNS种子：test.dnsseed.masternode.io, testnet-"
+"seed.darkcoin.qa, testnet-seed.dashpay.io"
+
+#: ../../developers/testnet.rst:25
+msgid "Launching Dash Core in testnet mode shows an orange splash screen"
+msgstr "在测试网络模式下启动Dash Core，会显示橙色的启动画面"
+
+#: ../../developers/testnet.rst:27
+msgid ""
+"To start Dash Core in testnet mode, find your dash.conf file and enter the "
+"following line::"
+msgstr "要在测试网络模式下启动Dash Core，首先请找到您的dash.conf文件，然后输入::"
+
+#: ../../developers/testnet.rst:32
+msgid ""
 "With the release of Dash Core 12.3, Dash added support for a great new "
 "feature — **named devnets**. Devnets are developer networks that combine "
 "some aspects of testnet (the global and public testing network) and some "
@@ -53,53 +100,6 @@ msgstr ""
 "。开发者网络结合了测试网络（全局及公共测试网络）的部分性能以及regtest的部分性能（局部回归测试模式，提供受控区块生成）。不同于测试网络的是，可以创建多个独立的开发者网络，这些独立的开发者网络能够实现共存，且无干扰。关于如何使用开发者网络的实用文档，请参阅"
 " `开发者文档 <https://dash-docs.github.io/en/developer-examples#devnet-mode>`__ 或"
 " 此 `博客文章 <https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
-
-#: ../../developers/testnet.rst:21
-msgid ""
-"Testnet is a fully functioning Dash blockchain with the one key exception "
-"that because the Dash on the network can be created freely, it has no value."
-" This currency, known as tDASH, can be requested from a faucet to help "
-"developers test new versions of Dash, as well as test network operations "
-"using identical versions of the software before they are carried out on the "
-"mainnet. There are a few other key differences:"
-msgstr ""
-"测试网络是一个拥有完整达世币区块链功能的网络，唯一的区别是测试网络中的达世币可以随意创建，没有任何价值。这种货币称为tDASH，可从内接头处请求获取，它可以帮助开发人员测试新版本的达世币，还可在相同的软件版本进入主网络之前，测试它们的网络运行。当然还有一些其他的主要差异："
-
-#: ../../developers/testnet.rst:28
-msgid "Testnet operates on port 19999 (instead of 9999)"
-msgstr "测试网络于端口19999上运行（而非9999）"
-
-#: ../../developers/testnet.rst:29
-msgid ""
-"Testnet addresses start with \"y\" instead of \"X\", ADDRESSVERSION is 140 "
-"(instead of 76)"
-msgstr "Testnet地址以 \"y\" 开头，而非 \"X\"，ADDRESSVERSION为140（而非76）"
-
-#: ../../developers/testnet.rst:31
-msgid "Testnet balances are denominated in tDASH (instead of DASH)"
-msgstr "Testnet余额以tDASH显示（而非DASH）"
-
-#: ../../developers/testnet.rst:32
-msgid "Protocol message header bytes are 0xcee2caff (instead of 0xbf0c6bbd)"
-msgstr "协议消息首标字节为0xcee2caff（而非0xbf0c6bbd）"
-
-#: ../../developers/testnet.rst:33
-msgid ""
-"Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, testnet-"
-"seed.darkcoin.qa, testnet-seed.dashpay.io"
-msgstr ""
-"Bootstrapping使用不同的DNS种子：test.dnsseed.masternode.io, testnet-"
-"seed.darkcoin.qa, testnet-seed.dashpay.io"
-
-#: ../../developers/testnet.rst:35
-msgid "Launching Dash Core in testnet mode shows an orange splash screen"
-msgstr "在测试网络模式下启动Dash Core，会显示橙色的启动画面"
-
-#: ../../developers/testnet.rst:37
-msgid ""
-"To start Dash Core in testnet mode, find your dash.conf file and enter the "
-"following line::"
-msgstr "要在测试网络模式下启动Dash Core，首先请找到您的dash.conf文件，然后输入::"
 
 #: ../../developers/testnet.rst:43
 msgid "Tools and links"
@@ -153,59 +153,63 @@ msgid "http://test.faucet.masternode.io - by coingun"
 msgstr "http://test.faucet.masternode.io - by coingun"
 
 #: ../../developers/testnet.rst:62
-msgid "http://faucet.test.dash.crowdnode.io - ndrezza"
-msgstr "http://faucet.test.dash.crowdnode.io - ndrezza"
+msgid "http://faucet.test.dash.crowdnode.io - by ndrezza"
+msgstr ""
 
-#: ../../developers/testnet.rst:65
+#: ../../developers/testnet.rst:63
+msgid "https://test.faucet.dashninja.pl - by elbereth"
+msgstr ""
+
+#: ../../developers/testnet.rst:66
 msgid "Explorers"
 msgstr "浏览器"
 
-#: ../../developers/testnet.rst:67
+#: ../../developers/testnet.rst:68
 msgid "http://insight.test.dash.crowdnode.io"
 msgstr "http://insight.test.dash.crowdnode.io"
 
-#: ../../developers/testnet.rst:68
+#: ../../developers/testnet.rst:69
 msgid "https://testnet-insight.dashevo.org/insight"
 msgstr "https://testnet-insight.dashevo.org/insight"
 
-#: ../../developers/testnet.rst:71
+#: ../../developers/testnet.rst:72
 msgid "Pools"
 msgstr "矿池"
 
-#: ../../developers/testnet.rst:73
-msgid ""
-"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare"
-msgstr ""
-"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare"
-
 #: ../../developers/testnet.rst:74
 msgid ""
+"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare"
+msgstr ""
+"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare"
+
+#: ../../developers/testnet.rst:75
+msgid ""
 "http://test.p2pool.dash.siampm.com "
 "[stratum+tcp://test.p2pool.dash.siampm.com:17903] by thelazier"
 msgstr ""
 "http://test.p2pool.dash.siampm.com "
 "[stratum+tcp://test.p2pool.dash.siampm.com:17903] by thelazier"
 
-#: ../../developers/testnet.rst:75
+#: ../../developers/testnet.rst:76
 msgid "http://p2pool.dashninja.pl:17903/static - by elbereth"
 msgstr "http://p2pool.dashninja.pl:17903/static - by elbereth"
 
-#: ../../developers/testnet.rst:76
+#: ../../developers/testnet.rst:77
 msgid "http://test.p2pool.masternode.io:18998/static - by coingun"
 msgstr "http://test.p2pool.masternode.io:18998/static - by coingun"
 
-#: ../../developers/testnet.rst:79
+#: ../../developers/testnet.rst:80
 msgid "Masternodes"
 msgstr "主节点"
 
-#: ../../developers/testnet.rst:81
+#: ../../developers/testnet.rst:82
 msgid ""
 "Installing a masternode under testnet generally follows the same steps as "
 "the :ref:`mainnet masternode installation guide <masternode-setup>`, but "
 "with a few key differences:"
 msgstr "在测试网络下安装主节点，步骤一般与 :ref:`主网主节点安装指南 <masternode-setup>` 所述相同，除了一些关键的区别："
 
-#: ../../developers/testnet.rst:85
+#: ../../developers/testnet.rst:86
 msgid ""
 "You will probably be running a development version of Dash instead of the "
 "stable release. See `here "
@@ -217,44 +221,44 @@ msgstr ""
 "<https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-"
 "nightly/activity>`__\\ 获取构建列表，选择最新的成功构建，单击 **Artifacts** 查看二进制文件列表。"
 
-#: ../../developers/testnet.rst:89
+#: ../../developers/testnet.rst:90
 msgid ""
 "When opening the firewall, port 19999 must be opened instead of (or in "
 "addition to) 9999. Use this command: ``ufw allow 19999/tcp``"
 msgstr "打开防火墙时，必须也打开端口19999，不要打开（或除了）端口9999。使用此指令： ``ufw allow 19999/tcp``"
 
-#: ../../developers/testnet.rst:91
+#: ../../developers/testnet.rst:92
 msgid ""
 "Your desktop wallet must be running in testnet mode. Add the following line "
 "to *dash.conf*: ``testnet = 1``"
 msgstr "您的桌面钱包必须以测试网络模式运行。添加 *dash.conf*: ``testnet = 1``"
 
-#: ../../developers/testnet.rst:93
+#: ../../developers/testnet.rst:94
 msgid ""
 "When sending the collateral, you can get the 1000 tDASH for free from a "
 "faucet (see above)"
 msgstr "发送保证金时，您可以从内接头处免费获得1000 tDASH（见上文）"
 
-#: ../../developers/testnet.rst:95
+#: ../../developers/testnet.rst:96
 msgid ""
 "You cannot use dashman to install development versions of Dash. See the link"
 " to downloadable builds above."
 msgstr "您不能使用dashman安装达世币开发版。参见上文所述链接，获取可下载的构建。"
 
-#: ../../developers/testnet.rst:97
+#: ../../developers/testnet.rst:98
 msgid ""
 "Your masternode configuration file must also specify testnet mode. Add the "
 "following line when setting up *dash.conf* on the masternode: ``testnet = "
 "1``"
 msgstr "您的主节点配置文件必须指定测试网络模式。在设置 *dash.conf* 时，请在主节点上添加: ``testnet = 1``"
 
-#: ../../developers/testnet.rst:100
+#: ../../developers/testnet.rst:101
 msgid ""
 "As for mainnet masternodes, the RPC username and password must contain "
 "alphanumeric characters only"
 msgstr "对于主网的主节点，RPC用户名和密码只能包含字母数字字符"
 
-#: ../../developers/testnet.rst:102
+#: ../../developers/testnet.rst:103
 msgid ""
 "When cloning sentinel, you may need to clone the development branch using "
 "the ``-b`` option, for example: ``git clone -b core-v0.12.2.x "
@@ -263,7 +267,7 @@ msgstr ""
 "复制哨兵时，您可能需要使用 ``-b`` 选项，复制开发分支，例如：``git clone -b core-v0.12.2.x "
 "https://github.com/dashpay/sentinel.git``"
 
-#: ../../developers/testnet.rst:105
+#: ../../developers/testnet.rst:106
 msgid ""
 "Once sentinel is installed, modify ``~/.dashcore/sentinel/sentinel.conf``, "
 "comment the mainnet line and uncomment: ``network=testnet``"
@@ -271,7 +275,7 @@ msgstr ""
 "哨兵安装成功后，修改 "
 "``~/.dashcore/sentinel/sentinel.conf``，对主网线路作注释，同时取消注释：``network=testnet``"
 
-#: ../../developers/testnet.rst:108
+#: ../../developers/testnet.rst:109
 msgid ""
 "The wallet holding the masternode collateral will expect to find the "
 "``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf`` instead"
@@ -280,11 +284,11 @@ msgstr ""
 "持有主节点保证金的钱包找到 ``~/.dashcore/testnet3/masternode.conf`` 中的 "
 "``masternode.conf`` 文件，而非 ``~/.dashcore/masternode.conf`` 中的。"
 
-#: ../../developers/testnet.rst:113
+#: ../../developers/testnet.rst:114
 msgid "Testnet 0.13.0"
 msgstr ""
 
-#: ../../developers/testnet.rst:115
+#: ../../developers/testnet.rst:116
 msgid ""
 "In November 2018, the Dash team announced the start of testing of the "
 "upcoming Dash 0.13.0 release. Extensive internal testing has already been "
@@ -294,65 +298,65 @@ msgid ""
 "release includes:"
 msgstr ""
 
-#: ../../developers/testnet.rst:122
+#: ../../developers/testnet.rst:123
 msgid "Automatic InstantSend for Simple Transactions"
 msgstr ""
 
-#: ../../developers/testnet.rst:123
+#: ../../developers/testnet.rst:124
 msgid "Deterministic Masternode List"
 msgstr ""
 
-#: ../../developers/testnet.rst:124
+#: ../../developers/testnet.rst:125
 msgid "3 Masternode Keys: Owner, Operator and Voting"
 msgstr ""
 
-#: ../../developers/testnet.rst:125
+#: ../../developers/testnet.rst:126
 msgid "Special Transactions"
 msgstr ""
 
-#: ../../developers/testnet.rst:126
+#: ../../developers/testnet.rst:127
 msgid "PrivateSend Improvements"
 msgstr ""
 
-#: ../../developers/testnet.rst:128 ../../developers/testnet.rst:158
-#: ../../developers/testnet.rst:185
+#: ../../developers/testnet.rst:129 ../../developers/testnet.rst:159
+#: ../../developers/testnet.rst:186
 msgid "Discussion:"
 msgstr "讨论:"
 
-#: ../../developers/testnet.rst:130
+#: ../../developers/testnet.rst:131
 msgid ""
 "Testnet announcement: https://blog.dash.org/product-brief-dash-core-"
 "release-v0-13-0-5d7fddffb7ef"
 msgstr ""
 
-#: ../../developers/testnet.rst:131
+#: ../../developers/testnet.rst:132
 msgid ""
 "Product brief: https://blog.dash.org/product-brief-dash-core-"
 "release-v0-13-0-5d7fddffb7ef"
 msgstr ""
 
-#: ../../developers/testnet.rst:132 ../../developers/testnet.rst:161
+#: ../../developers/testnet.rst:133 ../../developers/testnet.rst:162
 msgid "Testnet tools: https://docs.dash.org/en/latest/developers/testnet.html"
 msgstr "测试网工具: https://docs.dash.org/en/latest/developers/testnet.html"
 
-#: ../../developers/testnet.rst:133 ../../developers/testnet.rst:162
-#: ../../developers/testnet.rst:189
+#: ../../developers/testnet.rst:134 ../../developers/testnet.rst:163
+#: ../../developers/testnet.rst:190
 msgid "Issue tracking: https://github.com/dashpay/dash/issues/new"
 msgstr "问题追踪: https://github.com/dashpay/dash/issues/new"
 
-#: ../../developers/testnet.rst:135 ../../developers/testnet.rst:164
+#: ../../developers/testnet.rst:136 ../../developers/testnet.rst:165
 msgid "Latest test binaries:"
 msgstr "最新的试验二进制文件："
 
-#: ../../developers/testnet.rst:137
+#: ../../developers/testnet.rst:138
 msgid "https://github.com/dashpay/dash/releases/tag/v0.13.0.0-rc11"
 msgstr ""
 
-#: ../../developers/testnet.rst:140
+#: ../../developers/testnet.rst:141
 msgid "Testnet 0.12.3"
 msgstr ""
 
-#: ../../developers/testnet.rst:142
+#: ../../developers/testnet.rst:143
 msgid ""
 "In June 2018, the Dash team announced the start of testing of the upcoming "
 "Dash 0.12.3 release. Extensive internal testing has already been done on the"
@@ -362,49 +366,49 @@ msgid ""
 "includes:"
 msgstr ""
 
-#: ../../developers/testnet.rst:149
+#: ../../developers/testnet.rst:150
 msgid ""
 "Named Devnets, to help developers quickly create multiple independent "
 "devnets"
 msgstr "命名Devnets，帮助开发者快速创建多个独立的开发者网络"
 
-#: ../../developers/testnet.rst:151
+#: ../../developers/testnet.rst:152
 msgid "New format of network message signatures"
 msgstr "新的网络消息签名格式"
 
-#: ../../developers/testnet.rst:152
+#: ../../developers/testnet.rst:153
 msgid "Governance system improvements"
 msgstr "管理系统优化"
 
-#: ../../developers/testnet.rst:153
+#: ../../developers/testnet.rst:154
 msgid "PrivateSend improvements"
 msgstr "匿名发送优化"
 
-#: ../../developers/testnet.rst:154
+#: ../../developers/testnet.rst:155
 msgid "Additional indexes cover P2PK now"
 msgstr "附加索引现涵盖P2PK"
 
-#: ../../developers/testnet.rst:155
+#: ../../developers/testnet.rst:156
 msgid "Support for pruned nodes in Lite Mode"
 msgstr "支持Lite模式下的精简节点"
 
-#: ../../developers/testnet.rst:156
+#: ../../developers/testnet.rst:157
 msgid "New Masternode Information Dialog"
 msgstr "新的主节点信息对话框"
 
-#: ../../developers/testnet.rst:160
+#: ../../developers/testnet.rst:161
 msgid "https://www.dash.org/forum/threads/v12-3-testing.38475"
 msgstr "https://www.dash.org/forum/threads/v12-3-testing.38475"
 
-#: ../../developers/testnet.rst:166
+#: ../../developers/testnet.rst:167
 msgid "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
 msgstr "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
 
-#: ../../developers/testnet.rst:170
+#: ../../developers/testnet.rst:171
 msgid "Testnet 0.12.2"
 msgstr ""
 
-#: ../../developers/testnet.rst:172
+#: ../../developers/testnet.rst:173
 msgid ""
 "In October 2017, the Dash team announced the launch of a testnet for public "
 "testing of the upcoming 0.12.2 release of the Dash software. Extensive "
@@ -414,48 +418,48 @@ msgid ""
 "become active on testnet. This release includes:"
 msgstr ""
 
-#: ../../developers/testnet.rst:179
+#: ../../developers/testnet.rst:180
 msgid ""
 "DIP0001 implementation "
 "https://github.com/dashpay/dips/blob/master/dip-0001.md"
 msgstr "DIP0001 实施 https://github.com/dashpay/dips/blob/master/dip-0001.md"
 
-#: ../../developers/testnet.rst:180
+#: ../../developers/testnet.rst:181
 msgid "10x transaction fee reduction (including InstantSend fee)"
 msgstr "10x交易费减免（含即时发送费）"
 
-#: ../../developers/testnet.rst:181
+#: ../../developers/testnet.rst:182
 msgid "InstantSend vulnerability fix"
 msgstr "即时发送弱点修复"
 
-#: ../../developers/testnet.rst:182
+#: ../../developers/testnet.rst:183
 msgid "Lots of other bug fixes and performance improvements"
 msgstr "其他诸多漏洞的修复及性能改进"
 
-#: ../../developers/testnet.rst:183
+#: ../../developers/testnet.rst:184
 msgid ""
 "Experimental BIP39/BIP44 complaint HD wallet (disabled by default, should be"
 " fully functional but there is no GUI yet)"
 msgstr "试验版 BIP39/BIP44 投诉HD钱包（默认禁用，应具备完善的功能，但暂缺GUI）"
 
-#: ../../developers/testnet.rst:187
+#: ../../developers/testnet.rst:188
 msgid ""
 "Testnet 12.2 discussion: "
 "https://www.dash.org/forum/threads/v12-2-testing.17412/"
 msgstr "测试网12.2 讨论: https://www.dash.org/forum/threads/v12-2-testing.17412/"
 
-#: ../../developers/testnet.rst:188
+#: ../../developers/testnet.rst:189
 msgid ""
 "Testnet tools: https://www.dash.org/forum/threads/testnet-tools-"
 "resources.1768/"
 msgstr ""
 "测试网工具: https://www.dash.org/forum/threads/testnet-tools-resources.1768/"
 
-#: ../../developers/testnet.rst:191
+#: ../../developers/testnet.rst:192
 msgid "Latest successfully built develop branch binaries:"
 msgstr "最新成功构建的开发分支二进制文件："
 
-#: ../../developers/testnet.rst:193
+#: ../../developers/testnet.rst:194
 msgid ""
 "Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-"
 "gitian-nightly"
@@ -463,6 +467,6 @@ msgstr ""
 "Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-"
 "gitian-nightly"
 
-#: ../../developers/testnet.rst:194
+#: ../../developers/testnet.rst:195
 msgid "Sentinel: https://github.com/dashpay/sentinel/tree/develop"
 msgstr "Sentinel: https://github.com/dashpay/sentinel/tree/develop"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-31 04:56+0000\n"
+"POT-Creation-Date: 2019-03-04 06:56+0000\n"
 "PO-Revision-Date: 2019-01-11 06:53+0000\n"
 "Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
@@ -127,11 +127,11 @@ msgid ""
 "commands::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:58
+#: ../../masternodes/dip3-upgrade.rst:57
 msgid "Check the status of your masternode::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:62
+#: ../../masternodes/dip3-upgrade.rst:61
 msgid ""
 "The Dash software on the masternode is now updated. Since Dash 0.13 also "
 "updates the protocol version, it is necessary to issue a ``masternode "
@@ -141,11 +141,11 @@ msgid ""
 "masternode>`__ for more details."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:71
+#: ../../masternodes/dip3-upgrade.rst:70
 msgid "Option 2: Manual update"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:73
+#: ../../masternodes/dip3-upgrade.rst:72
 msgid ""
 "To update Dash manually, log in to your server using ssh or PuTTY. If your "
 "crontab contains an entry to automatically restart dashd, invoke ``crontab "
@@ -153,11 +153,11 @@ msgid ""
 "should look something like this::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:80
+#: ../../masternodes/dip3-upgrade.rst:79
 msgid "Then stop Dash running::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:84
+#: ../../masternodes/dip3-upgrade.rst:83
 msgid ""
 "Visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_"
 " and copy the link to the latest x86_64-linux-gnu version. Go back to your "
@@ -165,35 +165,35 @@ msgid ""
 "the latest version of Dash Core by right clicking or pressing **Ctrl + V**::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:93
+#: ../../masternodes/dip3-upgrade.rst:92
 msgid ""
 "Verify the integrity of your download by running the following command and "
 "comparing the output against the value for the file as shown in the "
 "``SHA256SUMS.asc`` file::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:99
+#: ../../masternodes/dip3-upgrade.rst:98
 msgid ""
 "Extract the compressed archive and copy the new files to the directory::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:105
+#: ../../masternodes/dip3-upgrade.rst:104
 msgid "Restart Dash::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:109
+#: ../../masternodes/dip3-upgrade.rst:108
 msgid ""
 "You will see a message reading \"Dash Core server starting\". We will now "
 "update Sentinel::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:116
+#: ../../masternodes/dip3-upgrade.rst:115
 msgid ""
 "Finally, uncomment the line to automatically restart Dash in your crontab by"
 " invoking ``crontab -e`` again and deleting the ``#`` character."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:120
+#: ../../masternodes/dip3-upgrade.rst:119
 msgid ""
 "The Dash software on the masternode is now updated. Since Dash 0.13 also "
 "updates the protocol version, it is necessary to issue a ``masternode "
@@ -208,15 +208,15 @@ msgid ""
 "<http://178.254.23.111/~pub/Dash/Dash_Info.html>`__."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:136
+#: ../../masternodes/dip3-upgrade.rst:135
 msgid "Masternode Registration from DMT"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:138
+#: ../../masternodes/dip3-upgrade.rst:137
 msgid ""
 "This documentation describes the procedure to register an existing "
 "masternode for the DIP003 masternode list if the collateral is held on a "
-"hardware wallet. DIP003 must be activated and DMT 0.9.21 or higher is "
+"hardware wallet. DIP003 must be activated and DMT 0.9.22 or higher is "
 "required. It is not possible to issue the registration transactions if "
 "DIP003 is not yet active. You can update DMT by downloading the version "
 "appropriate for your system from the `DMT Releases page "
@@ -224,53 +224,63 @@ msgid ""
 " and ensure your existing masternode configuration appears."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:148
+#: ../../masternodes/dip3-upgrade.rst:147
 msgid "Configuration"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:150
+#: ../../masternodes/dip3-upgrade.rst:149
 msgid ""
-"Click the **Send ProRegTx** button to get started. The **Masternode "
-"migration wizard** appears."
+"Plug in your hardware wallet and click the **Check Dash Network Connection**"
+" and **Test Hardware Wallet Connection** buttons. Then click the **Send "
+"ProRegTx** button to get started. The **Masternode migration wizard** "
+"appears."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:156
+#: ../../masternodes/dip3-upgrade.rst:157
 msgid "The DMT Masternode migration wizard"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:158
+#: ../../masternodes/dip3-upgrade.rst:159
 msgid "All fields are prefilled with suggested values."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:160
+#: ../../masternodes/dip3-upgrade.rst:161
 msgid ""
 "It should not be necessary to change the **Collateral Tx** or **IP/Port** "
 "fields if you are using your existing collateral and server."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:162
+#: ../../masternodes/dip3-upgrade.rst:163
 msgid ""
 "You can optionally modify the **Payout address** to any valid existing or "
 "new Dash address, since it is no longer mandatory to receive payouts at the "
 "collateral address."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:165
+#: ../../masternodes/dip3-upgrade.rst:166
+msgid ""
+"The three masternode keys (owner, operator, voting) are newly generated and "
+"usually do not need to be changed."
+msgstr ""
+
+#: ../../masternodes/dip3-upgrade.rst:168
+msgid ""
+"If your masternode is hosted by an external operator, you may need to enter "
+"the BLS public key provider by your operator instead of using the "
+"automatically generated key. Click **use pubkey** and enter the provided "
+"pubkey instead."
+msgstr ""
+
+#: ../../masternodes/dip3-upgrade.rst:172
 msgid ""
 "If your masternode is hosted by an external operator, you can specify the "
 "percentage of the reward to allocate to the operator in the **Operator "
 "reward** field."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:168
+#: ../../masternodes/dip3-upgrade.rst:176
 msgid ""
-"The three masternode keys (owner, operator, voting) are newly generated and "
-"do not need to be changed."
-msgstr ""
-
-#: ../../masternodes/dip3-upgrade.rst:171
-msgid ""
-"Click **Next** when you are ready to continue. DMT will verify the "
+"Click **Continue** when you are ready to continue. DMT will verify the "
 "collateral is in place and prepare to create the ProRegTx special "
 "transaction to register the masternode on the blockchain. This command must "
 "be sent from a Dash Core wallet holding a balance, since a standard "
@@ -280,11 +290,11 @@ msgid ""
 "fees (**manual method**). Click **Continue** when you are ready."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:182
+#: ../../masternodes/dip3-upgrade.rst:187
 msgid "Option 1: Automatic method"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:184
+#: ../../masternodes/dip3-upgrade.rst:189
 msgid ""
 "Note that because Trezor does not yet support Dash `special transactions "
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, it is "
@@ -298,7 +308,7 @@ msgid ""
 "DIP003 upgrade."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:195
+#: ../../masternodes/dip3-upgrade.rst:200
 msgid ""
 "DMT will prepare a ProTx message and prompt you to confirm signing the "
 "message on your hardware wallet. The signed message will be registered on "
@@ -310,66 +320,66 @@ msgid ""
 "the masternode."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:205
+#: ../../masternodes/dip3-upgrade.rst:210
 msgid "Option 2: Manual method"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:207
+#: ../../masternodes/dip3-upgrade.rst:212
 msgid "The following window appears:"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:212
+#: ../../masternodes/dip3-upgrade.rst:217
 msgid "Manual registration commands in the DMT Masternode migration wizard"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:214
+#: ../../masternodes/dip3-upgrade.rst:219
 msgid ""
 "Open Dash Core and wait for the blockchain to synchronise. Complete the "
 "following steps:"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:217
+#: ../../masternodes/dip3-upgrade.rst:222
 msgid ""
 "In your Dash Core wallet, select an address to use as the source for the "
 "transaction fee and paste it into Field 1."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:219
+#: ../../masternodes/dip3-upgrade.rst:224
 msgid "Open the Debug console by clicking **Tools -> Debug console**."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:220
+#: ../../masternodes/dip3-upgrade.rst:225
 msgid ""
 "Copy and paste the command from Field 2 of DMT into the Dash Core debug "
 "console and press **Enter**."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:222
+#: ../../masternodes/dip3-upgrade.rst:227
 msgid ""
 "Copy the output back and paste it into Field 3 field of the DMT Masternode "
 "migration wizard."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:224
+#: ../../masternodes/dip3-upgrade.rst:229
 msgid ""
 "Click **Sign message with hardware wallet** and confirm signing the message "
 "on your hardware wallet."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:226
+#: ../../masternodes/dip3-upgrade.rst:231
 msgid ""
 "Copy the command from Field 4 of DMT, paste it into the Dash Core debug "
 "console and press **Enter**. Dash Core will create a registration "
 "transaction on the blockchain."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:229
+#: ../../masternodes/dip3-upgrade.rst:234
 msgid ""
 "Copy and paste the transaction hash into Field 5 of the DMT Masternode "
 "migration wizard and click **Continue**."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:232
+#: ../../masternodes/dip3-upgrade.rst:237
 msgid ""
 "A window appears with the final configuration information. Click **Save to a"
 " file** and enter a new file name. This file contains various private and "
@@ -377,37 +387,41 @@ msgid ""
 "masternode, so keep it in a secure location."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:240
+#: ../../masternodes/dip3-upgrade.rst:245
 msgid "Enter the BLS key on the masternode"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:242
+#: ../../masternodes/dip3-upgrade.rst:247
 msgid ""
-"Finally, it is necessary to enter the BLS private key generated by DMT on "
-"the masternode itself, or send it to your hosting operator. If you are "
-"operating the masternode yourself, log in to your masternode using ``ssh`` "
-"or PuTTY and edit the configuration file on your masternode as follows::"
+"Finally, it is necessary to enter the BLS private key on the masternode "
+"itself. If your masternode is hosted and your operator provided you with a "
+"BLS public key, they will enter the private key themselves. If you generated"
+" the BLS key yourself, you may need to provide this to your operator. If you"
+" are operating the masternode yourself, log in to your masternode using "
+"``ssh`` or PuTTY and edit the configuration file on your masternode as "
+"follows::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:250
-#: ../../masternodes/dip3-upgrade.rst:322
+#: ../../masternodes/dip3-upgrade.rst:257
+#: ../../masternodes/dip3-upgrade.rst:332
 msgid ""
 "The editor appears with the existing masternode configuration. Add this line"
 " to the end of the file, replacing the key with your BLS secret key "
 "generated above::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:256
-#: ../../masternodes/dip3-upgrade.rst:328
+#: ../../masternodes/dip3-upgrade.rst:263
 msgid ""
-"Press enter to make sure there is a blank line at the end of the file, then "
-"press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
-"file. We now need to restart the masternode for this change to take effect. "
-"Enter the following commands, waiting a few seconds in between to give Dash "
-"Core time to shut down::"
+"Do not delete your old ``masternodeprivkey``, since this is still needed "
+"while the network is in transition to the new list. When you are done, press"
+" enter to make sure there is a blank line at the end of the file, then press"
+" **Ctrl + X** to close the editor and **Y** and **Enter** save the file. We "
+"now need to restart the masternode for this change to take effect. Enter the"
+" following commands, waiting a few seconds in between to give Dash Core time"
+" to shut down::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:265
+#: ../../masternodes/dip3-upgrade.rst:275
 msgid ""
 "Your masternode is now upgraded to DIP003 and will appear on the "
 "Deterministic Masternode List. You can view this list on the **Masternodes "
@@ -418,11 +432,11 @@ msgid ""
 "network. You can view the spork status using the ``spork active`` command."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:278
+#: ../../masternodes/dip3-upgrade.rst:288
 msgid "Masternode Registration from Dash Core"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:280
+#: ../../masternodes/dip3-upgrade.rst:290
 msgid ""
 "This documentation describes the procedure to register an existing "
 "masternode for the DIP003 masternode list if the collateral is held in the "
@@ -434,11 +448,11 @@ msgid ""
 "command."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:291
+#: ../../masternodes/dip3-upgrade.rst:301
 msgid "Generate a BLS key pair"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:293
+#: ../../masternodes/dip3-upgrade.rst:303
 msgid ""
 "A public/private BLS key pair is required for the operator of the "
 "masternode. If you are using a hosting service, they will provide you with "
@@ -446,18 +460,18 @@ msgid ""
 "masternode, generate a BLS public/private keypair as follows::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:305
+#: ../../masternodes/dip3-upgrade.rst:315
 msgid ""
 "**These keys are NOT stored by the wallet and must be kept secure, similar "
 "to the value provided in the past by the** ``masternode genkey`` "
 "**command.**"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:310
+#: ../../masternodes/dip3-upgrade.rst:320
 msgid "Add the private key to your masternode configuration"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:312
+#: ../../masternodes/dip3-upgrade.rst:322
 msgid ""
 "The public key will be used in following steps. The BLS secret key must be "
 "entered in the ``dash.conf`` file on the masternode. This allows the "
@@ -468,17 +482,28 @@ msgid ""
 "follows::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:337
+#: ../../masternodes/dip3-upgrade.rst:338
+msgid ""
+"Do not delete your old ``masternodeprivkey``, since this is still needed "
+"while the network is in transition to the new list. Press enter to make sure"
+" there is a blank line at the end of the file, then press **Ctrl + X** to "
+"close the editor and **Y** and **Enter** save the file. We now need to "
+"restart the masternode for this change to take effect. Enter the following "
+"commands, waiting a few seconds in between to give Dash Core time to shut "
+"down::"
+msgstr ""
+
+#: ../../masternodes/dip3-upgrade.rst:350
 msgid ""
 "We will now prepare the transaction used to register a DIP003 masternode on "
 "the network."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:342
+#: ../../masternodes/dip3-upgrade.rst:355
 msgid "Prepare a ProRegTx transaction"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:344
+#: ../../masternodes/dip3-upgrade.rst:357
 msgid ""
 "First, we need to get a new, unused address from the wallet to serve as the "
 "owner address. This is different to the collateral address. It must also be "
@@ -486,86 +511,95 @@ msgid ""
 "address as follows::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:353
+#: ../../masternodes/dip3-upgrade.rst:366
 msgid ""
 "Then either generate or choose an existing second address to receive the "
-"owner's masternode payouts::"
+"owner's masternode payouts. It is also possible to use an address external "
+"to the wallet::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:360
+#: ../../masternodes/dip3-upgrade.rst:374
 msgid ""
 "You can also optionally generate and fund a third address to pay the "
-"transaction fee. The private keys to the owner and fee source addresses must"
-" exist in the wallet submitting the transaction to the network. If your "
-"wallet is protect by a password, it must now be unlocked to perform the "
-"following commands. Unlock your wallet for 5 minutes::"
+"transaction fee. If you selected an external payout address, you must "
+"specify a fee source address. Either the payout address or fee source "
+"address must have enough balance to pay the transaction fee, or the final "
+"`register_submit` transaction will fail."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:368
+#: ../../masternodes/dip3-upgrade.rst:380
+msgid ""
+"The private keys to the owner and fee source addresses must exist in the "
+"wallet submitting the transaction to the network. If your wallet is "
+"protected by a password, it must now be unlocked to perform the following "
+"commands. Unlock your wallet for 5 minutes::"
+msgstr ""
+
+#: ../../masternodes/dip3-upgrade.rst:387
 msgid ""
 "We will now prepare an unsigned ProRegTx special transaction using the "
 "``protx register_prepare`` command. This command has the following syntax::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:375
+#: ../../masternodes/dip3-upgrade.rst:394
 msgid ""
 "Open a text editor such as notepad to prepare this command. Replace each "
 "argument to the command as follows:"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:378
+#: ../../masternodes/dip3-upgrade.rst:397
 msgid ""
 "``collateralHash``: The txid of the 1000 Dash collateral funding transaction"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:380
+#: ../../masternodes/dip3-upgrade.rst:399
 msgid ""
 "``collateralIndex``: The output index of the 1000 Dash funding transaction"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:382
+#: ../../masternodes/dip3-upgrade.rst:401
 msgid ""
 "``ipAndPort``: Masternode IP address and port, in the format "
 "``x.x.x.x:yyyy``"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:384
+#: ../../masternodes/dip3-upgrade.rst:403
 msgid ""
 "``ownerKeyAddr``: The new Dash address generated above for the owner/voting "
 "address"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:386
+#: ../../masternodes/dip3-upgrade.rst:405
 msgid ""
 "``operatorPubKey``: The BLS public key generated above (or provided by your "
 "hosting service)"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:388
+#: ../../masternodes/dip3-upgrade.rst:407
 msgid ""
 "``votingKeyAddr``: The new Dash address generated above, or the address of a"
 " delegate, used for proposal voting"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:390
+#: ../../masternodes/dip3-upgrade.rst:409
 msgid ""
 "``operatorReward``: The percentage of the block reward allocated to the "
 "operator as payment"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:392
+#: ../../masternodes/dip3-upgrade.rst:411
 msgid ""
 "``payoutAddress``: A new or existing Dash address to receive the owner's "
 "masternode rewards"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:394
+#: ../../masternodes/dip3-upgrade.rst:413
 msgid ""
 "``feeSourceAddress``: An (optional) address used to fund ProTx fee. "
 "``payoutAddress`` will be used if not specified."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:397
+#: ../../masternodes/dip3-upgrade.rst:416
 msgid ""
 "Note that the operator is responsible for :ref:`specifying their own reward "
 "<dip3-update-service>` address in a separate ``update_service`` transaction "
@@ -573,28 +607,28 @@ msgid ""
 "collateral does not specify the operator's payout address."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:403
+#: ../../masternodes/dip3-upgrade.rst:422
 msgid "Example (remove line breaks if copying)::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:415
-#: ../../masternodes/dip3-upgrade.rst:444
-#: ../../masternodes/dip3-upgrade.rst:470
+#: ../../masternodes/dip3-upgrade.rst:434
+#: ../../masternodes/dip3-upgrade.rst:463
+#: ../../masternodes/dip3-upgrade.rst:489
 msgid "Output::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:423
+#: ../../masternodes/dip3-upgrade.rst:442
 msgid ""
 "Next we will use the ``collateralAddress`` and ``signMessage`` fields to "
 "sign the transaction, and the output of the ``tx`` field to submit the "
 "transaction."
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:428
+#: ../../masternodes/dip3-upgrade.rst:447
 msgid "Sign the ProRegTx transaction"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:430
+#: ../../masternodes/dip3-upgrade.rst:449
 msgid ""
 "Now we will sign the content of the ``signMessage`` field using the private "
 "key for the collateral address as specified in ``collateralAddress``. Note "
@@ -605,16 +639,16 @@ msgid ""
 " the following syntax::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:440
-#: ../../masternodes/dip3-upgrade.rst:466
+#: ../../masternodes/dip3-upgrade.rst:459
+#: ../../masternodes/dip3-upgrade.rst:485
 msgid "Example::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:450
+#: ../../masternodes/dip3-upgrade.rst:469
 msgid "Submit the signed message"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:452
+#: ../../masternodes/dip3-upgrade.rst:471
 msgid ""
 "We will now create the ProRegTx special transaction to register the "
 "masternode on the blockchain. This command must be sent from a Dash Core "
@@ -622,23 +656,23 @@ msgid ""
 "command takes the following syntax::"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:459
+#: ../../masternodes/dip3-upgrade.rst:478
 msgid "Where:"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:461
+#: ../../masternodes/dip3-upgrade.rst:480
 msgid ""
 "``tx``: The serialized transaction previously returned in the ``tx`` output "
 "field from the ``protx register_prepare`` command"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:463
+#: ../../masternodes/dip3-upgrade.rst:482
 msgid ""
 "``sig``: The message signed with the collateral key from the ``signmessage``"
 " command"
 msgstr ""
 
-#: ../../masternodes/dip3-upgrade.rst:474
+#: ../../masternodes/dip3-upgrade.rst:493
 msgid ""
 "Your masternode is now upgraded to DIP003 and will appear on the "
 "Deterministic Masternode List after the transaction is mined to a block. You"

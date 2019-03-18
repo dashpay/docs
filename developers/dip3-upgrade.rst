@@ -10,7 +10,7 @@
 Dash 0.13 Upgrade Information
 =============================
 
-**Official binaries are available at** https://github.com/dashpay/dash/releases/tag/v0.13.0.0
+**Official binaries are available at** https://github.com/dashpay/dash/releases/tag/v0.13.2.0
 
 Dash Core v0.13.0 is intended to serve as the foundation for Dash
 Evolution, a broadly scoped update to our network intended to facilitate

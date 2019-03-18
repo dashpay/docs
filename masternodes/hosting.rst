@@ -39,13 +39,13 @@ https://crowdnode.io
 - `Email <hello@crowdnode.io>`__
 
 
-Splawik's Hosting Service
--------------------------
+SID Hosting Service
+-------------------
 
 .. image:: img/splawik.png
    :width: 200px
    :align: right
-   :target: http://dashmasternode.io
+   :target: https://dashmasternode.io
 
 http://dashmasternode.io
 
@@ -53,8 +53,7 @@ http://dashmasternode.io
 - Services: Hosting
 - Cost: €25/month, paid in Dash
 - `Site <http://dashmasternode.io>`__
-- `Email <splawik21@protonmail.com>`__
-- `Forum <https://www.dash.org/forum/threads/splawik-s-supershares-hosting-service.3195/>`__
+- `Email <sidhosting@protonmail.com>`__
 
 
 AllNodes
@@ -125,7 +124,7 @@ https://masternode.me
 
 - Operated by: moocowmoo (Dash Core team member)
 - Services: Hosting
-- Cost: 10% of masternode payments
+- Cost: $35 per quarter
 - `Site <https://masternode.me>`__
 - `Email <moocowmoo@masternode.me>`__
 - `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`__
