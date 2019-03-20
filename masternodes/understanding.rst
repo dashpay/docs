@@ -282,7 +282,7 @@ Masternode requirements
 - 1000 Dash: Arguably the hardest part. Dash can be obtained from
   exchanges such as Poloniex, Bittrex, Kraken and LiveCoin. Shapeshift's
   service is also an excellent way.
-- A server or VPS running Linux: Most recent guides use Ubuntu 16.04
+- A server or VPS running Linux: Most recent guides use Ubuntu 18.04
   LTS. We recommend VPS services such as Vultr and DigitalOcean,
   although any decent provider will do. Generally an instance with low
   to average specifications will do, although performance requirements
@@ -315,8 +315,8 @@ Dash Evolution
 
 The exact hardware requirements for Dash Evolution masternodes have yet
 to be determined, although some pointers can be taken from the `roadmap
-<https://github.com/dashpay/dash-roadmap>`_ and this `blog post
-<https://medium.com/@eduffield222/how-to-enabling-on-chain-scaling-2ffab5997f8b>`_. 
+<https://www.dash.org/roadmap>`_ and this `blog post
+<https://medium.com/@eduffield222/how-to-enabling-on-chain-scaling-2ffab5997f8b>`_.
 It should be possible to run Dash masternodes on normal VPS servers
 until the block size reaches approximately 20 MB, after which custom
 hardware such as GPUs and eventually ASICs may be required.
