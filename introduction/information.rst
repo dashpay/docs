@@ -22,7 +22,7 @@ Official sites
 - **Foundation:** https://www.dashfoundation.io
 - **GitHub:** https://github.com/dashpay
 - **GitHub (Evolution):** https://github.com/dashevo
-- **Roadmap:** https://github.com/dashpay/dash-roadmap
+- **Roadmap:** https://www.dash.org/roadmap
 - **DIPs:** https://github.com/dashpay/dips
 
 Community sites
@@ -166,6 +166,7 @@ Block explorers, statistics and visualizations
 
 - https://explorer.dash.org
 - https://insight.dash.org/insight
+- https://blockchair.com/dash
 - https://chainz.cryptoid.info/dash
 - https://www.coinexplorer.net/dash
 - https://bitinfocharts.com/dash/explorer
@@ -981,6 +982,13 @@ SDK
   Software Development Kit. A set of tools, code and documentation used
   by developers to create apps targeting a specific hardware or software
   platform.
+
+Signaling
+  An indication, flag, or signal of support for a feature or fork.
+  The term signaling is most often used in the context of miners delivering
+  this indication of support or agreement. The message is generally delivered
+  through their adoption of updated software in support of a particular
+  protocol and/or by setting a specific version bit within discovered blocks.
 
 State View
   The current state of all data objects once all changes from state

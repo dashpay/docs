@@ -115,8 +115,10 @@ offering Dash.
 List of exchanges
 -----------------
 
-The exchanges listed here are for informational purposes only and do not
-indicate endorsement or affiliation with any particular platform.
+Please see `here <https://coincodex.com/article/3063/how-to-buy-dash-dash-on-kraken/>`__
+for a detailed guide on how to buy Dash on an exchange. The exchanges 
+listed here are for informational purposes only and do not indicate 
+endorsement or affiliation with any particular platform.
 
 Poloniex
   .. image:: exchanges/poloniex.png
@@ -974,6 +976,17 @@ Miami Crypto Exchange
   gateway between the U.S. and the world, with a specific focus on Latin
   America and the Caribbean. DASH can be traded against USD and BTC.
 
+BW
+  .. image:: exchanges/bw.png
+     :width: 120px
+     :align: right
+     :target: https://bw.com
+
+  https://bw.com
+
+  BW exchange focuses on the Chinese and Korean market, with Dash
+  available for exchange against USDT and the QC exchange token.
+
 SatoWallet
   .. image:: exchanges/satowallet.png
      :width: 120px
@@ -1163,10 +1176,22 @@ ShapeShift
   https://shapeshift.io
 
   ShapeShift allows users to directly exchange one crypto asset for
-  another without creating any account, albeit with a higher markup than
-  most exchanges. ShapeShift supports Dash and over 70 other
-  cryptocurrencies.
-  
+  another, albeit with a higher markup than most exchanges. ShapeShift
+  supports Dash and over 70 other cryptocurrencies.
+
+ChangeHero
+  .. image:: exchanges/changehero.png
+     :width: 200px
+     :align: right
+     :target: https://changehero.io
+
+  https://changehero.io
+
+  ChangeHero is a broker service and instant exchange with a clear fee
+  structure, allowing users to quickly and efficiently exchange Dash for
+  many other cryptocurrencies. It is also possible to purchase directly
+  using a credit card.
+
 SimpleSwap
   .. image:: exchanges/simpleswap.png
      :width: 200px
@@ -1214,6 +1239,18 @@ Flyp.me
   Flyp.me is developed by the team at HolyTransaction, the first
   multicurrency web wallet. It offers instant exchange services between
   18 different cryptocurrencies without creating an account.
+
+OnePageX
+  .. image:: exchanges/onepagex.png
+     :width: 200px
+     :align: right
+     :target: https://onepagex.com
+
+  https://onepagex.com
+
+  One Page Exchange is a single-page instant exchange allowing users to
+  convert Dash into over 140 different cryptocurrencies without
+  registration.
 
 CoinSwitch
   .. image:: exchanges/coinswitch.png
@@ -1372,6 +1409,19 @@ buycrypto
   Buycrypto is a peer-to-peer cryptocurrency-fiat exchange geared
   towards giving Greeks easier access to economically sound money. Dash
   is available for purchase and sale against the Euro.
+
+ChangeHero
+  .. image:: exchanges/changehero.png
+     :width: 200px
+     :align: right
+     :target: https://changehero.io
+
+  https://changehero.io
+
+  ChangeHero is a broker service and instant exchange with a clear fee
+  structure, allowing users to quickly and efficiently exchange Dash for
+  many other cryptocurrencies. It is also possible to purchase directly
+  using a credit card.
 
 Kraken
   .. image:: exchanges/kraken.png

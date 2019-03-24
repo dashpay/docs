@@ -62,19 +62,19 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.13.1.0/dashcore-0.13.1.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.2.0/dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.13.1.0-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-0.13.1.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-0.13.1/bin/dashd ~/.dashcore/
-  cp -f dashcore-0.13.1/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.13.2/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.13.2/bin/dash-cli ~/.dashcore/
 
 Restart Dash::
 
@@ -120,7 +120,7 @@ set the scriptOperatorPayout field in the ProUpServTx. If
 scriptOperatorPayout is not set and operatorReward is non-zero, the
 owner gets the full masternode reward. The ProUpServTx takes the following syntax::
 
-  protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress feeSoureceAddress)
+  protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress feeSourceAddress)
 
 Where:
 
@@ -184,20 +184,20 @@ ProUpServTx to update the service-related metadata and clear the PoSe-
 banned state (revive the masternode). The ProUpRevTx takes the following
 syntax::
 
-  protx revoke proTxHash operatorKey (reason feeSourceAddress)
+  protx revoke proTxHash operatorKey reason (feeSourceAddress)
 
 Where:
 
 - ``proTxHash``: The transaction id of the initial ProRegTx
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
-- ``reason`` (optional): Integer value indicating the revocation `reason <https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-for-self-revocation-of-operators>`__
+- ``reason``: Integer value indicating the revocation `reason <https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-for-self-revocation-of-operators>`__
 - ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
   ``operatorPayoutAddress`` will be used if not specified.
 
 Example::
 
-  protx revoke 9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6 565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101
+  protx revoke 9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6 565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101 0
 
 
 DashCentral voting, verification and monitoring
@@ -409,6 +409,10 @@ to view the balances of any Dash public address, as well as examine the
 transactions entered in any given block. Each unique transaction is also
 searchable by its txid. A number of block explorers are available for
 the Dash network.
+
+- `Blockchair <https://blockchair.com/dash>`__ offers a block explorer
+  with detailed visualizations to analyse the Dash blockchain.
+
 
 - `CryptoID <https://chainz.cryptoid.info/>`__ offers a `Dash blockchain
   explorer <https://chainz.cryptoid.info/dash/>`__ and a `function

@@ -15,13 +15,13 @@ protection, :ref:`anonymity <privatesend>` equal to that of physical
 cash, a 
 :ref:`self-governing, self-funding model <decentralized-governance>` 
 driven by :ref:`incentivized full nodes <masternode-network>` and a 
-`clear roadmap <https://github.com/dashpay/dash-roadmap>`_ for on-chain
-scaling to up to 400MB blocks using custom-developed open source
-hardware. While Dash is based on Bitcoin and compatible with many key
-components of the Bitcoin ecosystem, its two-tier network structure
-offers significant improvements in transaction speed, anonymity and
-governance. This section of the documentation describes these and many
-more key features that set Dash apart in the blockchain economy.
+`clear roadmap <https://www.dash.org/roadmap/>`_ for on-chain scaling to
+up to 400MB blocks using custom-developed open source hardware. While
+Dash is based on Bitcoin and compatible with many key components of the
+Bitcoin ecosystem, its two-tier network structure offers significant
+improvements in transaction speed, anonymity and governance. This
+section of the documentation describes these and many more key features
+that set Dash apart in the blockchain economy.
 
 The videos, links and documentation collected here can help you get
 started, or use the table of contents on the left to find a specific
@@ -91,7 +91,6 @@ Roadmap
 
 The Dash Roadmap sets out delivery milestones for future releases of
 Dash and includes specific technical details describing how the
-development team plans to realise each challenge. Like the Whitepaper,
-it is versioned and maintained as a project on GitHub.
+development team plans to realise each challenge.
 
-- `Dash Roadmap <https://github.com/dashpay/dash-roadmap>`_
+- `Dash Roadmap <https://www.dash.org/roadmap>`_
