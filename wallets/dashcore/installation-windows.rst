@@ -14,7 +14,7 @@ should be similar for Windows XP, Vista, 7 and 8.
 Downloading the Dash Core wallet
 --------------------------------
 
-Visit https://www.dash.org/get-dash to download the latest Dash Core
+Visit https://www.dash.org/downloads to download the latest Dash Core
 wallet. In most cases, the website will properly detect which version
 you need. Click the blue **Dash Core** button to download the installer
 directly.
