@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Leon White <leon.white@dash.org>, 2018
 # Alex.ys <silvershark.ys@gmail.com>, 2019
+# Leon White <leon.white@dash.org>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-04 06:56+0000\n"
+"POT-Creation-Date: 2019-03-25 04:40+0000\n"
 "PO-Revision-Date: 2018-02-08 10:31+0000\n"
-"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2019\n"
+"Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,9 +30,10 @@ msgstr "可使用达世币的各款钱包的相关描述"
 
 #: ../../wallets/index.rst:1
 msgid ""
-"dash, wallet, core, electrum, android, ios, copay, paper, hardware, trezor, "
-"ledger, web, recovery, text, sms"
-msgstr "dash，钱包，core，轻钱包，android，ios，copay，纸，硬件，trezor，ledger，网页，恢复，短信，手机短信服务"
+"dash, wallet, core, electrum, android, ios, paper, hardware, trezor, ledger,"
+" web, recovery, text, sms"
+msgstr ""
+"dash, 钱包, core, 轻钱包, android, ios, 纸, 硬件, trezor, ledger, 网页, 恢复, 短信, 手机短信服务"
 
 #: ../../wallets/index.rst:9
 msgid "Wallets"
@@ -164,6 +165,7 @@ msgid ""
 "book of frequently used addresses, pay with NFC, sweep paper wallets and "
 "more."
 msgstr ""
+"通过预算系统的支持，达世币为安卓系统提供了独立的钱包。达世币安卓钱包支持达世币的高级功能，包括联系人管理和即时支付。你可以利用扫描和出示二维码来实现快速转账、备份和存储你的钱包、保留常用地址、利用NFC手环支付、扫描纸钱包以及更多。"
 
 #: ../../wallets/index.rst:134
 msgid "*Dash Android Wallet*"
@@ -185,31 +187,11 @@ msgstr ""
 msgid "*Dash iOS Wallet*"
 msgstr "*达世币iOS钱包*"
 
-#: ../../wallets/index.rst:166
-msgid "Dash Copay Wallet"
-msgstr "达世币Copay钱包"
-
-#: ../../wallets/index.rst:168
-msgid ""
-"The Dash Copay wallet is a modern and feature-rich wallet available for both"
-" mobile and desktop devices. It supports advanced Dash features including "
-"InstantSend, HD address generation, user-friendly address books, multiple "
-"wallets in one app and easy to use multi-signature wallets. Dash Copay is a "
-"light wallet, meaning that even though a full copy of the blockchain is not "
-"required for use, the private keys to your addresses are stored securely on "
-"your device and under your control at all times."
-msgstr ""
-"达世币Copay钱包是一个同时为手机和台式机提供的新式多功能钱包。它支持达世币的高级功能，包括即时支付、HD地址生成、用户友好界面的地址簿、同一APP下的多个钱包以及方便使用的多重签名钱包。达世币Copay是一个轻钱包，这意味着虽然在应用时不需要整个区块链的拷贝，但是接入地址的私钥会安全地保存在你的设备上，随时在你的掌控之下。"
-
-#: ../../wallets/index.rst:188
-msgid "*Dash Copay Wallet*"
-msgstr "*达世币Copay钱包*"
-
-#: ../../wallets/index.rst:193 ../../wallets/index.rst:208
+#: ../../wallets/index.rst:167 ../../wallets/index.rst:182
 msgid "Dash Paper Wallet"
 msgstr "达世币纸钱包"
 
-#: ../../wallets/index.rst:195
+#: ../../wallets/index.rst:169
 msgid ""
 "The `Dash Paper Wallet generator <https://paper.dash.org>`_ allows you to "
 "generate, encrypt and secure the keys to a single Dash address on a clean "
@@ -219,11 +201,11 @@ msgstr ""
 "`达世币纸钱包生成器 <https://paper.dash.org>`_\\ "
 "允许你在一台干净的不连接外网的计算机上生成、加密和保存一个能连接到单一达世币地址的密钥。适用于长期的安全存储。"
 
-#: ../../wallets/index.rst:214
+#: ../../wallets/index.rst:188
 msgid "Hardware Wallets"
 msgstr "硬件钱包"
 
-#: ../../wallets/index.rst:216
+#: ../../wallets/index.rst:190
 msgid ""
 "A hardware wallet is a type of device which stores private keys for a "
 "blockchain in a secure hardware device, instead of in a database file such "
@@ -236,7 +218,7 @@ msgid ""
 msgstr ""
 "硬件钱包是一种可以存储区域链密钥的安全的硬件设备，而不是像普通软件钱包那样的wallet.dat数据库文件。它具有比软件钱包更优的安全性，和对比纸钱包的实用价值。迄今为止，还没有确切的证据显示硬件钱包会被病毒破解，另外，它对键盘记录攻击也是免疫的，防止有人利用此方法盗取密码来破译软件钱包的私钥。"
 
-#: ../../wallets/index.rst:225
+#: ../../wallets/index.rst:199
 msgid ""
 "Hardware wallets function by storing your private keys in a protected area "
 "of a microcontroller. It is impossible for the private key to leave the "
@@ -247,36 +229,36 @@ msgid ""
 msgstr ""
 "硬件钱包会把你的私钥存放在微型处理器的一个受保护区域。它不会让你的私钥以简单字符的方式离开设备，只有加密哈希的签名输出会被发送到与区块链相连的设备，如你的计算机或智能手机上。多数的硬件钱包都带有一个屏幕，使你能各自地确认发出地址是否正确。"
 
-#: ../../wallets/index.rst:233
+#: ../../wallets/index.rst:207
 msgid ""
 "This section lists the most common commercial hardware wallets supporting "
 "Dash, although some other enthusiast projects may also be available."
 msgstr "这一部分的内容列出了支持达世币的一些最普通的商业硬件钱包。当然这些设备也可能支持其他币种。"
 
-#: ../../wallets/index.rst:244
+#: ../../wallets/index.rst:218
 msgid "Trezor Web Wallet"
 msgstr "Trezor 网页钱包"
 
-#: ../../wallets/index.rst:249
+#: ../../wallets/index.rst:223
 msgid "Third Party Wallets"
 msgstr "第三方钱包"
 
-#: ../../wallets/index.rst:251
+#: ../../wallets/index.rst:225
 msgid ""
 "These wallets have been developed by external developers to support Dash. "
 "Many third party wallets support multiple different cryptocurrencies at the "
 "same time, or integrate instant cryptocurrency exchanges."
 msgstr "这些钱包是由支持达世币的外部开发者开发的。很多第三方钱包同时支持多种不同的加密数字货币，或者整合了加密数字货币即时兑换功能。"
 
-#: ../../wallets/index.rst:264
+#: ../../wallets/index.rst:238
 msgid "Edge Wallet"
 msgstr "Edge钱包"
 
-#: ../../wallets/index.rst:270
+#: ../../wallets/index.rst:244
 msgid "Web Wallets"
 msgstr "网页钱包"
 
-#: ../../wallets/index.rst:272
+#: ../../wallets/index.rst:246
 msgid ""
 "Web wallets are services which keep a Dash balance for you, while "
 "maintaining control of the private keys on your behalf. Any Dash stored on "
@@ -290,15 +272,15 @@ msgstr ""
 "网页钱包可为你保存达世币资金，同时替你来保管私钥，任何存在\\ :ref:`交易平台 <exchanges>`\\ "
 "上的达世币都属于这一类。除此之外还有其它一些服务仅通过简单的Google/Facebook登录，也能让你存放达世币。要特别小心这些网页存储，达世币在这里的安全性只能靠这些公司的声誉来保证。MyDashWallet.org是个特例，它提供了一个达世币区块链的安全网页接口，让你自己全权掌控你的密钥。"
 
-#: ../../wallets/index.rst:290
+#: ../../wallets/index.rst:264
 msgid "My Dash Wallet"
 msgstr "My Dash Wallet"
 
-#: ../../wallets/index.rst:294
+#: ../../wallets/index.rst:268
 msgid "Text Wallets"
 msgstr "短信钱包"
 
-#: ../../wallets/index.rst:296
+#: ../../wallets/index.rst:270
 msgid ""
 "Text wallets (or SMS wallets) allow users without smartphones or internet "
 "access to transact in Dash using text messages on simple feature phones. "
@@ -308,15 +290,15 @@ msgid ""
 msgstr ""
 "手机短信服务钱包可以帮助没有智能手机或网络连接的用户通过短信服务或基本的手机功能完成达世币交易。新颖的简码通常与国内的手机服务运营一起使用，使达世币的发送和接收变得更加简单。"
 
-#: ../../wallets/index.rst:310
+#: ../../wallets/index.rst:284
 msgid "Dash CoinText"
 msgstr "达世币 CoinText"
 
-#: ../../wallets/index.rst:314
+#: ../../wallets/index.rst:288
 msgid "Wallet Guides"
 msgstr "钱包指南"
 
-#: ../../wallets/index.rst:316
+#: ../../wallets/index.rst:290
 msgid ""
 "Documentation in this section describes common tasks and questions relating "
 "to all wallets."

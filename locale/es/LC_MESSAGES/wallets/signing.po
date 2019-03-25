@@ -6,15 +6,16 @@
 # Translators:
 # Ivan SIerraalta <ivansierraalta@gmail.com>, 2018
 # Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018
+# Leon White <leon.white@dash.org>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-04 06:56+0000\n"
+"POT-Creation-Date: 2019-03-25 04:40+0000\n"
 "PO-Revision-Date: 2018-04-09 11:00+0000\n"
-"Last-Translator: Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018\n"
+"Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,6 +75,17 @@ msgid ""
 "example, you can test the following message and signature and verify that it"
 " was signed by the given address::"
 msgstr ""
+"La firma de mensajes requiere una llave privada. La verificación de mensajes"
+" requiere una dirección pública. De esta forma, puedes escribir un mensaje "
+"arbitrario y generar una firma que solo podría haber sido creada por un "
+"usuario con control de la llave privada para esta dirección. Cualquier "
+"usuario con el mensaje, la dirección pública y la firma puede verificar "
+"fácilmente que solo tu pudiste haber creado la firma. Los mensajes no se "
+"almacenan en la cadena de bloques. En su lugar, debes enviar estos tres "
+"fragmentos de texto (mensaje, dirección y firma) a tu destinatario "
+"utilizando otro canal de comunicación, como el correo electrónico. Como "
+"ejemplo, puedes probar el siguiente mensaje y firma, y verificar que haya "
+"sido firmado por la dirección indicada::"
 
 #: ../../wallets/signing.rst:39
 msgid "Signing a Message"
