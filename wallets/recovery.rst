@@ -139,8 +139,8 @@ restart and perform a full scan of the blockchain.
 At this stage, recovery is complete and you should make another backup
 using **File > Backup Wallet** or following the instructions :ref:`here
 <dashcore-backup>`. If you have any further problems, try asking on the
-`forum <https://www.dash.org/forum/topic/daemon-and-qt-wallet-
-support.64/>`_, `Reddit <https://www.reddit.com/r/dashpay/>`_ or the
+`forum <https://www.dash.org/forum/topic/daemon-and-qt-wallet-support.64/>`_, 
+`Reddit <https://www.reddit.com/r/dashpay/>`_ or the
 #dash-support-desk channel at `Dash Nation Discord
 <http://dashchat.org/>`_.
 
