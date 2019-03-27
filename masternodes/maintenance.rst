@@ -158,12 +158,12 @@ their own payout address. The ProUpRegTx takes the following syntax::
 Where:
 
 - ``proTxHash``: The transaction id of the initial ProRegTx
-- ``operatorKeyAddr``: An updated BLS public key, or 0 to use the last 
-  on-chain operator key
-- ``votingKeyAddr``: An updated voting key address, or 0 to use the last 
-  on-chain operator key
-- ``payoutAddress``: An updated Dash address for owner payments, or 0 to 
-  use the last on-chain operator key
+- ``operatorKeyAddr``: An updated BLS public key, or ``""`` to use the
+  last on-chain operator key
+- ``votingKeyAddr``: An updated voting key address, or ``""`` to use the
+  last on-chain operator key
+- ``payoutAddress``: An updated Dash address for owner payments, or 
+  ``""`` to use the last on-chain operator key
 - ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
   ``PayoutAddress`` will be used if not specified.
 
