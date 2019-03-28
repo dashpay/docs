@@ -56,12 +56,15 @@ Magnum Wallet
 `Magnum Wallet <https://magnumwallet.co/>`_ is a web wallet with support
 for 20+ cryptocurrencies, including Dash. The wallet stores encrypted
 private keys in a simple downloadable text file, which can only be
-decrypted with the users password. Instant exchange functionality is
-also available. Magnum Wallet presents a clean and simple interface,
-allowing users to transact quickly and easily in Dash.
+decrypted with the users password. Hardware wallets are also supported,
+and in-wallet staking and exchange functionality is available. Magnum
+Wallet presents a clean and simple interface, allowing users to transact
+quickly and easily in Dash.
 
 Support for Magnum Wallet is available at 
 `support@magnumwallet.co <support@magnumwallet.co>`_.
+
+- `Magnum Dash Wallet <https://app.magnumwallet.co/?coin=dash>`__
 
 .. image:: img/magnum-wallet.png
    :width: 400px
