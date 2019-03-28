@@ -328,6 +328,19 @@ Exmo
   USD and UAH (Ukrainian Hryvnia). DASH trading pairs exist for BTC, USD
   and RUB.
 
+Coinvest
+  .. image:: exchanges/coinvest.png
+     :width: 100px
+     :align: right
+     :target: https://coinve.st
+
+  https://coinve.st
+
+  Coinvest offers a range of products and research targeting both
+  consumers and institutional investors, as well as a wallet built
+  around smart contracts. DASH is available for trade against BTC, ETH,
+  GUSD and COIN.
+
 BitBay
   .. image:: exchanges/bitbay.png
      :width: 200px
