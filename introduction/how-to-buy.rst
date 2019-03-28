@@ -1386,6 +1386,18 @@ Cointree
   payment options and a range of learning materials to help get started
   with cryptocurrencies.
 
+Crypto Voucher
+  .. image:: exchanges/cryptovoucher.png
+     :width: 200px
+     :align: right
+     :target: https://cryptovoucher.io
+
+  https://cryptovoucher.io
+
+  Crypto Voucher allows you to instantly buy Dash and other
+  cryptocurrencies using credit cards, SEPA transfers, giftcards and in
+  offline stores. A number of online distributors are also supported.
+
 Bitit
   .. image:: exchanges/bitit.png
      :width: 150px
