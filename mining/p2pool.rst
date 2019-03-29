@@ -164,7 +164,7 @@ Setting up dashd
 
 P2Pool requires a full Dash node to be running to get block and
 transaction data. To download and install Dash, visit
-https://www.dash.org/wallets on your computer to find the link to the
+https://www.dash.org/downloads on your computer to find the link to the
 latest Dash Core wallet. Click **Linux**, then right-click on **Download
 TGZ** for **Dash Core x64** and select **Copy link address**. Go back to
 your terminal window and enter the following command, pasting in the

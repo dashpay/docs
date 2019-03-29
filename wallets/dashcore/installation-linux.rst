@@ -16,10 +16,10 @@ Downloading the Dash Core wallet
 
 Visit https://www.dash.org/downloads to download the latest Dash Core
 wallet. In most cases, the website will properly detect which version
-you need. Click the blue Dash Core button to download the package
+you need. Click Dash Core button to download the package
 directly.
 
-.. figure:: img/linux/106330106.png
+.. figure:: img/linux/download.png
    :height: 250px
 
    The website properly detects the wallet appropriate for your system
@@ -37,14 +37,8 @@ how to check this in other versions of Linux, see
    Ubuntu System Overview. This is a 64 bit system.
 
 Once you know which version you need, download Dash Core to your
-computer from `https://www.dash.org/wallets <https://www.dash.org/wallets>`__.
-
-.. figure:: img/linux/106329738.png
-   :height: 250px
-
-   Manually selecting and downloading Dash Core
-
-Save the file you downloaded to your Downloads folder.
+computer from https://www.dash.org/downloads and save the file you
+downloaded to your Downloads folder.
 
 Verifying Dash Core
 ----------------------

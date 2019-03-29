@@ -68,7 +68,7 @@ know to regain access to your Dash funds. If you already have Dash Core
 installed, first ensure it has been updated to the latest version by
 clicking **Help > About Dash Core**. Compare this with the latest
 available version of `Dash Core on the website
-<https://www.dash.org/wallets/#wallets>`_ as follows:
+<https://www.dash.org/downloads>`_ as follows:
 
 .. image:: img/recovery-dashcore-version.png
    :width: 300px

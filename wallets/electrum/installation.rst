@@ -14,7 +14,7 @@ Download
 You can download Dash Electrum from the official Dash website or the
 Dash Electrum minisite.
 
-- https://www.dash.org/wallets
+- https://www.dash.org/downloads
 - https://electrum.dash.org
 
 Dash Electrum is developed by community member **akhavr** and is
