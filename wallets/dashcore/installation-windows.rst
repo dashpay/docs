@@ -55,11 +55,6 @@ the hash published by the Dash Core development team. To view the
 published hash, click the **Hash file** button on the wallet download
 page.
 
-.. figure:: img/windows/112789205.png
-   :height: 250px
-
-   Downloading the Dash Core hash file
-
 Once both the Dash Core file and the hash file have downloaded, open the
 hash file in a text editor or your browser and find the hash value for
 the Dash Core file you downloaded.

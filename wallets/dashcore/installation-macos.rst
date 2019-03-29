@@ -38,11 +38,6 @@ the hash published by the Dash Core development team. To view the
 published hash, click the **Hash file** button on the wallet download
 page.
 
-.. figure:: img/macos/112414700.png
-   :width: 451px
-
-   Downloading the Dash Core hash file
-
 Once both the Dash Core file and the hash file have downloaded,
 double-click the hash file or view it in your browser and find the hash
 value for the Dash Core file you downloaded.
