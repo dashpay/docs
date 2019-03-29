@@ -176,8 +176,9 @@ Binance
   
   https://www.binance.com
 
-  Binance is a pure-crypto with a focus on ICOs and the Chinese market.
-  DASH is available for funding and can be traded against BTC.
+  Binance is a high-volume exchange with a very wide range of trading
+  pairs available. DASH is available for funding and can be traded
+  against BTC, ETH, TUSD and BNB.
 
 HitBTC
   .. image:: exchanges/hitbtc.png
