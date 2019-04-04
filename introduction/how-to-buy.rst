@@ -1682,6 +1682,18 @@ BasiChange
   BasiChange offers exchange, trading and OTC crypto sales with a focus
   on Venezuela and Colombia.
 
+Daexs
+  .. image:: exchanges/daexs.png
+     :width: 200px
+     :align: right
+     :target: https://daexs.com
+
+  https://daexs.com
+
+  Daexs is a cryptocurrency exchange based in Colombia with Dash and
+  Bitcoin markets trading against the Colombian Peso (COP).
+
+
 CryptoWay
   .. image:: exchanges/cryptoway.png
      :width: 200px
