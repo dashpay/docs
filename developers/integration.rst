@@ -4,6 +4,7 @@
 
 .. _integration:
 
+====================
 Integration Overview
 ====================
 
