@@ -32,7 +32,7 @@ supports InstantSend. Larger integrations may require some customisation
 or cooperation with a specialist payment processor such as `ePaymints
 <http://epaymints.com>`__. This documentation also describes the
 :ref:`administrative <merchants-administrative>` and  :ref:`technical
-<merchants-technical>` steps required to integrate  various Dash
+<integration>` steps required to integrate various Dash
 services.
 
 Any Dash received in payment can be automatically converted to the fiat
