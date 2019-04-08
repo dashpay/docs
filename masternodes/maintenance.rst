@@ -169,7 +169,7 @@ Where:
 
 Example to update payout address::
 
-  protx update_registrar cedce432ebabc9366f5eb1e3abc219558de9fbd2530a13589b698e4bf917b8ae 0 0 yi5kVoPQQ8xaVoriytJFzpvKomAQxg6zea
+  protx update_registrar cedce432ebabc9366f5eb1e3abc219558de9fbd2530a13589b698e4bf917b8ae "" "" yi5kVoPQQ8xaVoriytJFzpvKomAQxg6zea
 
 
 ProUpRevTx
