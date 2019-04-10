@@ -43,7 +43,7 @@ how to check this in other versions of Windows, see
    a 64 bit system.
 
 Once you know which version you need, download the Dash Core Installer
-to your computer from https://www.dash.org/download and save the file
+to your computer from https://www.dash.org/downloads and save the file
 you downloaded to your Downloads folder.
 
 Verifying Dash Core
