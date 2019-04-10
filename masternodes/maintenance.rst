@@ -101,11 +101,11 @@ Updating Masternode Information
 
 Periodically, it may be necessary to update masternode information if
 any information relating to the owner or operator changes. Examples may
-include a change in IP address, change in owner/operator payout address,
-or change in percentage of the reward allocated to an operator. It is
-also possible to revoke a masternode's registered status (in the event
-of a security breach, for example) to force both owner and operator to
-update their details.
+include a change in IP address, change in owner/operator payout address
+or changes to the nominated voting/operator keys. It is also possible to
+revoke a masternode's registered status (in the event of a security
+breach, for example) to force both owner and operator to update their
+details.
 
 .. _dip3-update-service:
 
