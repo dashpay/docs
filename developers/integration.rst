@@ -335,7 +335,7 @@ BitGo provides a simple and robust RESTful API and client SDK to
 integrate digital currency wallets with your application. Support for
 Dash InstantSend is available.
 
-- Features: Multi-Signature HD Wallets, Wallet Operations, WebSocket and
+- Features: Multi-Signature HD Wallets, Wallet Operations, WebSocket and
   WebHook Notifications, Custody Solutions
 - Pricing Model: Per API Call
 - Documentation: https://www.bitgo.com/api/v2/
@@ -594,7 +594,7 @@ InstantSend payments.
 Price Tickers
 =============
 
-You can add a simple price ticket widget to your website using the
+You can add a simple price ticker widget to your website using the
 simple `code snippet generator from CoinGecko
 <https://www.coingecko.com/en/widgets/ticker/dash/usd>`_.
 
