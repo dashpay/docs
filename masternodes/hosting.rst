@@ -47,7 +47,7 @@ SID Hosting Service
    :align: right
    :target: https://dashmasternode.io
 
-http://dashmasternode.io
+https://dashmasternode.io
 
 - Operated by: splawik21 (Dash Core team member)
 - Services: Hosting
