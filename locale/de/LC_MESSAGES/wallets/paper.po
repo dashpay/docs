@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Manuel Herrmann <manuel.herrmann@dash-embassy.org>, 2018
+# Nils Hermann <vk.translation@protonmail.ch>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-10 06:33+0000\n"
+"POT-Creation-Date: 2019-04-15 06:00+0000\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
-"Last-Translator: Manuel Herrmann <manuel.herrmann@dash-embassy.org>, 2018\n"
+"Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2019\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,11 +24,11 @@ msgstr ""
 
 #: ../../wallets/paper.rst:1
 msgid "Guides to secure paper wallets for Dash cryptocurrency"
-msgstr ""
+msgstr "Anleitung zum Erstellen einer Dash Paper Wallet"
 
 #: ../../wallets/paper.rst:1
 msgid "dash, paper, wallet, encryption"
-msgstr ""
+msgstr "dash, paper, wallet, verschlüsselung"
 
 #: ../../wallets/paper.rst:8
 msgid "Introduction"
@@ -70,10 +71,19 @@ msgid ""
 "(e.g. robbery/home invasion) could bypass this encryption using the "
 "proverbial \"$5 wrench attack\"."
 msgstr ""
+"Paper Wallets verwenden zufällige Eingaben von Nutzern und Maschinen, um "
+"eine Reihe von Schlüsseln/Adressen zu generieren, die dann ausgedruckt "
+"werden können. Der Generator kann niemals zweimal die gleiche Paper Wallet "
+"erstellen. Wenn eine Paper Wallet nicht ausgedruckt wird, kann sie nicht "
+"wiederhergestellt werden. Daher sind Paper Wallets anfällig und bedürfen "
+"einer besonderen Sorgfalt, damit sie nicht beschädigt, verloren, zerstört "
+"oder gestohlen werden. Auch wenn du sie mit BIP38 verschlüsselst (was du "
+"machen solltest), könnte ein Angreifer (z.B. ein Einbrecher) diese "
+"Verschlüsselung durch die \"$5 Wrench-Attack\" umgehen."
 
 #: ../../wallets/paper.rst:33
 msgid "The $5 wrench attack. Credit: xkcd.com"
-msgstr ""
+msgstr "Die $5 Wrench-Attacke. Credit: xkcd.com"
 
 #: ../../wallets/paper.rst:35
 msgid ""
@@ -115,6 +125,15 @@ msgid ""
 "desktops can be used if you can ensure that all networking hardware is "
 "disabled when you get to the stage of actually generating your keys."
 msgstr ""
+"Eine einfache Methode ist das Brennen einer Linux CD. `Ubuntu Desktop "
+"<https://www.ubuntu.com/download/desktop>`_ lässt sich hierfür empfehlen, da"
+" es über die meisten Treiber verfügt, während `Tails "
+"<https://tails.boum.org/>`_ und `Kali Linux "
+"<https://www.kali.org/downloads/>`_ einen höheren Grad an Sicherheit bieten."
+" Von einer CD zu booten wird empfohlen, da diese read-only ist, doch auch "
+"ein USB-Stick sollte in den meisten Fällen funktionieren. Es macht keinen "
+"Unterschied, ob ein Laptop oder ein Desktop PC verwendet wird, solange die "
+"Netzwerkverbindung während des Generierens der Keys unterbrochen ist."
 
 #: ../../wallets/paper.rst:58
 msgid ""
@@ -160,17 +179,21 @@ msgstr "Eine Dash Paper-Wallet kann auf verschiedene Arten erstellt werden."
 
 #: ../../wallets/paper.rst:78
 msgid "Using the generator at https://paper.dash.org"
-msgstr ""
+msgstr "Den Generator auf https://paper.dash.org verwenden"
 
 #: ../../wallets/paper.rst:79
 msgid "Using the generator at https://walletgenerator.net/?currency=Dash"
 msgstr ""
+"Den Generator auf https://walletgenerator.net/?currency=Dash verwenden"
 
 #: ../../wallets/paper.rst:80
 msgid ""
 "Offline using the Dash Paper Wallet source code from GitHub at "
 "https://github.com/dashpay/paper.dash.org/releases/latest"
 msgstr ""
+"GitHub-Quellcode auf "
+"https://github.com/dashpay/paper.dash.org/releases/latest, um die Dash Paper"
+" Wallet offline zu erstellen"
 
 #: ../../wallets/paper.rst:82
 msgid ""
@@ -179,6 +202,11 @@ msgid ""
 "`downloading directly "
 "<https://github.com/MichaelMure/WalletGenerator.net/archive/master.zip>`_"
 msgstr ""
+"Der Code, der auf beiden Seiten verwendet wird, kann auf `GitHub "
+"<https://github.com/MichaelMure/WalletGenerator.net>`_ eingesehen oder "
+"`direkt heruntergeladen "
+"<https://github.com/MichaelMure/WalletGenerator.net/archive/master.zip>`_ "
+"werden"
 
 #: ../../wallets/paper.rst:86
 msgid ""
@@ -189,16 +217,24 @@ msgid ""
 "generator and run it on a computer with a freshly installed operating system"
 " that is not connected to the internet."
 msgstr ""
+"Da der Quellcode aller drei Optionen ähnlich ist, verwendet diese Anleitung "
+"https://paper.dash.org als Beispiel. Die Seiten generieren die Keys direkt "
+"im Internetbrowser und senden keine Daten an einen externen Server. Am "
+"sichersten ist es allerdings, die Software herunterzuladen und über einen "
+"unberührten PC zu starten, der nicht mit dem Internet verbunden ist."
 
 #: ../../wallets/paper.rst:93
 msgid ""
 "This guide is based on the guide available from https://walletgenerator.net."
 " Please donate if you find this project useful!"
 msgstr ""
+"Diese Anleitung basiert auf der Anleitung von https://walletgenerator.net. "
+"Falls du das Projekt für unterstützenswert hältst, kannst du den Betreibern "
+"dort eine kleine Spende zukommen lassen!"
 
 #: ../../wallets/paper.rst:98
 msgid "Address generation"
-msgstr ""
+msgstr "Adressen generieren"
 
 #: ../../wallets/paper.rst:100
 msgid ""
@@ -206,10 +242,13 @@ msgid ""
 "downloaded the wallet generator). Select your language and choose Dash as "
 "the currency if necessary. The following screen will appear:"
 msgstr ""
+"Rufe https://paper.dash.org über deinen Browser auf (oder öffne index.html, "
+"wenn du den Wallet Generator heruntergeladen hast). Wähle eine Sprache aus "
+"und setze den Generator auf Dash. Das folgende Bild wird nun erscheinen:"
 
 #: ../../wallets/paper.rst:107
 msgid "The Dash Paper Wallet Generator at paper.dash.org"
-msgstr ""
+msgstr "Der Dash Paper Wallet Generator von paper.dash.org"
 
 #: ../../wallets/paper.rst:109
 msgid ""
@@ -306,6 +345,11 @@ msgid ""
 "begins with \"6P\". See `here <https://bitcoinpaperwallet.com/bip38 "
 "-password-encrypted-wallets/>`_ to learn more about BIP38."
 msgstr ""
+"Eine Dash WIF Adresse kann dadurch identifiziert werden, dass sie mit einer "
+"\"7\" beginnt. Ein mit BIP38 verschlüsselter Key kann dadurch identifiziert "
+"werden, dass er mit \"6P\" beginnt. `Hier "
+"<https://bitcoinpaperwallet.com/bip38 -password-encrypted-wallets/>`_ kannst"
+" du mehr über BIP38 erfahren."
 
 #: ../../wallets/paper.rst:162
 msgid "Encrypted paper wallet generated using Dash Paper Wallet Generator"
@@ -343,48 +387,56 @@ msgid ""
 "Viewing the balance of the paper wallet using the Dash Block Explorer at "
 "explorer.dash.org"
 msgstr ""
+"Das Gesamtguthaben einer Paper Wallet kann jederzeit über den Dash Block "
+"Explorer auf explorer.dash.org eingesehen werden."
 
 #: ../../wallets/paper.rst:183
 msgid "Spending from a paper wallet"
-msgstr ""
+msgstr "Mit einer Paper Wallet bezahlen"
 
 #: ../../wallets/paper.rst:185
 msgid ""
 "In order to access the funds stored on the paper wallet address, you will "
 "need the following:"
 msgstr ""
+"Um das Guthaben einer Paper Wallet zu verwenden, benötigst du folgendes:"
 
 #: ../../wallets/paper.rst:188
 msgid "The public address"
-msgstr ""
+msgstr "Den Public Key"
 
 #: ../../wallets/paper.rst:189
 msgid "The private key in WIF"
-msgstr ""
+msgstr "Den Private Key als WIF"
 
 #: ../../wallets/paper.rst:191
 msgid ""
 "If you encrypted the wallet, you will additionally need the following to "
 "convert the BIP38 key into the WIF key:"
 msgstr ""
+"Folgendes ist nötig, um den BIP38 Key in einen WIF Key umzuwandeln, falls "
+"die Wallet verschlüsselt wurde:"
 
 #: ../../wallets/paper.rst:194
 msgid "The encrypted private key in BIP38 format"
-msgstr ""
+msgstr "Den verschlüsselten Private Key im BIP38 Format"
 
 #: ../../wallets/paper.rst:195
 msgid "The passphrase you used to encrypt the key"
-msgstr ""
+msgstr "Das Passwort, mit dem der Schlüssel verschlüsselt wurde"
 
 #: ../../wallets/paper.rst:198
 msgid "Optional: Decrypt BIP38 key to WIF"
-msgstr ""
+msgstr "Optional: BIP38 Key entschlüsseln, um den WIF Key zu erhalten"
 
 #: ../../wallets/paper.rst:200
 msgid ""
 "If you encrypted your paper wallet, you will first need to decrypt the BIP38"
 " key. You can skip this step if your private key was not encrypted."
 msgstr ""
+"Falls die Paper Wallet verschlüsselt wurde, musst du zuerst den BIP38 Key "
+"entschlüsseln. Diesen Schritt kannst du überspringen, falls der Private Key "
+"nicht verschlüsselt wurde."
 
 #: ../../wallets/paper.rst:203
 msgid ""
@@ -395,16 +447,25 @@ msgid ""
 "information required to access the funds on the public address appears under"
 " **Private Key WIF**. Copy the Private Key WIF and use it in the next step."
 msgstr ""
+"Öffne die **Wallet Details** Registerkarte, trage den verschlüsselten Key in"
+" das Feld **Enter Private Key** ein und klicke auf **View Details**. Nun "
+"musst du das Passwort in das Feld mit der Aufschrift **Enter BIP38 "
+"Passphrase** eintragen und auf **Decrypt BIP38** klicken. Hierdurch werden "
+"verschiedene Informationen angezeigt, die zu dem Key gehören. Um auf das "
+"Guthaben zuzugreifen ist die Zeichenfolge unter **Private Key WIF** von "
+"Bedeutung. Kopiere den WIF Private Key und verwende ihn im nächsten Schritt."
 
 #: ../../wallets/paper.rst:214
 msgid ""
 "Dash Paper Wallet Generator displaying information derived from an encrypted"
 " private key"
 msgstr ""
+"Der Dash Paper Wallet Generator zeigt Informationen an, die zu dem "
+"verschlüsselten Private Key gehören"
 
 #: ../../wallets/paper.rst:218
 msgid "Importing the private key to your live wallet"
-msgstr ""
+msgstr "Den Private Key in die Wallet importieren"
 
 #: ../../wallets/paper.rst:220
 msgid ""
