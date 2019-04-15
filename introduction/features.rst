@@ -562,7 +562,7 @@ through to 0.12.3 lay the groundwork for the decentralized features
 behind the scenes. Version 0.13 introduces the foundation of Evolution,
 specifically `DIP2 Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ 
 and `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__.
-Version 0.14 establishes ` DIP6 Long Living Masternode Quorums <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__.
+Version 0.14 establishes `DIP6 Long Living Masternode Quorums <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__.
 Expected in late 2019, Dash Core 1.0 will introduce key Evolution
 features such as username-based payments, the world's first
 decentralized API (DAPI) and a decentralized data storage system (Dash
