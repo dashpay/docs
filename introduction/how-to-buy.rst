@@ -607,6 +607,17 @@ ACX
   ACX is an Australian exchange accepting fiat deposits from Australian
   bank accounts. DASH is available to trade against BTC.
 
+Jinanace
+  .. image:: exchanges/jinance.png
+     :width: 200px
+     :align: right
+     :target: https://jinance.com.au
+
+  https://jinance.com.au
+
+  Jinance is an Australian exchange accepting fiat deposits from
+  Australian bank accounts. DASH is available to trade against AUD.
+
 OKEX
   .. image:: exchanges/okex.png
      :width: 200px
