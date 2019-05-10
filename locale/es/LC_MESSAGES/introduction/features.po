@@ -9,15 +9,16 @@
 # Ivan SIerraalta <ivansierraalta@gmail.com>, 2018
 # Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018
 # Leon White <leon.white@dash.org>, 2018
+# JZA <jza@oooes.org>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-15 06:00+0000\n"
+"POT-Creation-Date: 2019-05-10 10:25+0000\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
+"Last-Translator: JZA <jza@oooes.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -246,6 +247,9 @@ msgid ""
 "denominations. These denominations are 0.001, 0.01, 0.1, 1 and 10 DASH -- "
 "much like the paper money you use every day."
 msgstr ""
+"PrivateSend comienza reorganizando las entradas de las transacciones en "
+"denominaciones estándar. Esas denominaciones son 0.001, 0.01 DASH, 0.1 DASH,"
+" 1 y 10 DASH -- muy parecido al dinero en papel que usas diariamente."
 
 #: ../../introduction/features.rst:99
 msgid ""
@@ -283,6 +287,11 @@ msgid ""
 "more difficult to determine where your funds originated. The user may choose"
 " between 1-16 rounds of mixing."
 msgstr ""
+"Con el fin de ocultar completamente sus fondos, su billetera debe repetir "
+"este proceso un número de veces con cada denominación. Cada vez que se "
+"completa el proceso, se le llama una \"ronda\". Cada ronda de PrivateSend "
+"hace exponencialmente más difícil determinar de dónde se originaron sus "
+"fondos. El usuario puede elegir entre 1-16 rondas de mezclado."
 
 #: ../../introduction/features.rst:116
 msgid ""
@@ -918,6 +927,11 @@ msgid ""
 "application that binds to a local version 12.1 dashd instance on each Dash "
 "12.1 masternode."
 msgstr ""
+"Sentinel es un agente autónomo para persistir, procesar y automatizar los "
+"objetos y tareas de la governanza de Dash 12.1, y para expandir las "
+"funciones del próximo lanzamiento de Dash V1.0 (Evolution). Sentinel es "
+"implementado como una aplicación de Python que se une a una instancia de una"
+" versión local de Dash 12.1 de dashd en cada Masternode de Dash 12.1."
 
 #: ../../introduction/features.rst:444
 msgid ""
@@ -1033,7 +1047,7 @@ msgstr "Por Kb de data de transacción"
 
 #: ../../introduction/features.rst:514
 msgid "InstantSend autolock"
-msgstr ""
+msgstr "Seguro automático de InstantSend"
 
 #: ../../introduction/features.rst:516
 msgid ".0001 DASH"
@@ -1062,6 +1076,14 @@ msgid ""
 "cents per transaction, depending on the number of inputs. These fees apply "
 "regardless of the Dash or dollar value of the transaction itself."
 msgstr ""
+"Como ejemplo, una transacción estándar y relativamente simple en la red de "
+"Dash con una entrada, una salida y una posible dirección de cambio "
+"típicamente se ajusta en el rango de 200 - 400 bytes. Suponiendo un precio "
+"de US $ 100 por DASH, la comisión cae en el rango de $ 0.0002 - $ 0.0004, o "
+"menos de 1/50vo a un centavo. Procesar la transacción usando InstantSend al "
+"mismo precio agregaría 1 o 2 centavos a la transacción en los números de "
+"ingresos. Estas comisiones se aplican independientemente del valor Dash o en"
+" dólares de la transacción en sí."
 
 #: ../../introduction/features.rst:531
 msgid ""
@@ -1104,7 +1126,7 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ and `DIP3 "
 "Deterministic Masternode Lists "
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__. Version 0.14 "
-"establishes ` DIP6 Long Living Masternode Quorums "
+"establishes `DIP6 Long Living Masternode Quorums "
 "<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__. Expected in "
 "late 2019, Dash Core 1.0 will introduce key Evolution features such as "
 "username-based payments, the world's first decentralized API (DAPI) and a "
@@ -1124,6 +1146,8 @@ msgid ""
 "**Dash Drive:** A decentralized shared file system for user data that lives "
 "on the second tier network"
 msgstr ""
+"**Dash Drive:** Un sistema de archivos descentralizados para los datos de "
+"los usuarios que vive en la segunda capa de la red."
 
 #: ../../introduction/features.rst:576
 msgid ""
@@ -1170,12 +1194,18 @@ msgid ""
 "**Deterministic Masternode Lists:** This feature introduces an on-chain "
 "masternode list, which can be used to calculate past and present quorums"
 msgstr ""
+"**Deterministic Masternode Lists (Listas de nodos maestros determinados):** "
+"Esta funcionalidad introduce una lista de nodos maestros en la cadena, la "
+"cual puede ser usada para calcular el quorum pasado y presente."
 
 #: ../../introduction/features.rst:589
 msgid ""
 "**Social Wallet:** We introduce a social wallet, which allows friends lists,"
 " grouping of users and shared multisig accounts"
 msgstr ""
+"**Wallet Social:** Introdujimos una wallet social, la cual permite las "
+"listas de amigos, agrupando con los usuarios y compartió una cuenta "
+"multifirma"
 
 #: ../../introduction/features.rst:593
 msgid "Evolution Previews"

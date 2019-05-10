@@ -7,15 +7,16 @@
 # Alejandro Echeverria <alejem93@gmail.com>, 2018
 # Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018
 # Ivan SIerraalta <ivansierraalta@gmail.com>, 2019
+# JZA <jza@oooes.org>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-15 06:00+0000\n"
+"POT-Creation-Date: 2019-05-10 10:25+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2019\n"
+"Last-Translator: JZA <jza@oooes.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,6 +37,8 @@ msgid ""
 "dash, cryptocurrency, masternode, maintenance, maintain, payments, "
 "withdrawal, voting, monitoring, dip3, upgrade, deterministic"
 msgstr ""
+"dash, criptodivisas, masternode, mantenimiento, mantener, pagos, retiros, "
+"votación, monitoreo, dip3, actualización, deterministico"
 
 #: ../../masternodes/maintenance.rst:9
 msgid "Maintenance"
@@ -57,7 +60,7 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:21
 msgid "Masternode Software Update"
-msgstr ""
+msgstr "Software de actualización de Masternode"
 
 #: ../../masternodes/maintenance.rst:23
 msgid ""
@@ -69,7 +72,7 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:30
 msgid "Option 1: Updating from dashman"
-msgstr ""
+msgstr "Opción 1: Actualizar de dashman"
 
 #: ../../masternodes/maintenance.rst:32
 msgid ""
@@ -85,7 +88,7 @@ msgstr "Revisa el estado de tu masternode::"
 
 #: ../../masternodes/maintenance.rst:41 ../../masternodes/maintenance.rst:94
 msgid "The Dash software on the masternode is now updated."
-msgstr ""
+msgstr "El software de Dash en los masternodes está ahora actualizado."
 
 #: ../../masternodes/maintenance.rst:45
 msgid "Option 2: Manual update"
@@ -101,7 +104,7 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:54
 msgid "Then stop Dash running::"
-msgstr ""
+msgstr "Entonces detiene Dash ejecutado::"
 
 #: ../../masternodes/maintenance.rst:58
 msgid ""
@@ -117,11 +120,15 @@ msgid ""
 "comparing the output against the value for the file as shown in the "
 "``SHA256SUMS.asc`` file::"
 msgstr ""
+"Verifica la integridad de tu descarga ejecutando el siguiente comando y "
+"compara la salida con el valor del archivo como se muestra en el archivo de "
+"``SHA256SUMS.asc``::"
 
 #: ../../masternodes/maintenance.rst:73
 msgid ""
 "Extract the compressed archive and copy the new files to the directory::"
 msgstr ""
+"Extrae los archivos comprimidos y copia los nuevos archivos al directorio::"
 
 #: ../../masternodes/maintenance.rst:79
 msgid "Restart Dash::"
@@ -140,10 +147,12 @@ msgid ""
 "Finally, uncomment the line to automatically restart Dash in your crontab by"
 " invoking ``crontab -e`` again and deleting the ``#`` character."
 msgstr ""
+"Finalmente, des-comenta la línea para automáticamente reinicia Dash en el "
+"crontab al invocar ``crontab -e`` de nuevo y borra el carácter ``#``."
 
 #: ../../masternodes/maintenance.rst:100
 msgid "Updating Masternode Information"
-msgstr ""
+msgstr "Actualizando información de Masternode"
 
 #: ../../masternodes/maintenance.rst:102
 msgid ""
@@ -157,7 +166,7 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:113
 msgid "ProUpServTx"
-msgstr ""
+msgstr "ProUpServTx"
 
 #: ../../masternodes/maintenance.rst:115
 msgid ""
@@ -177,11 +186,11 @@ msgstr "Donde:"
 
 #: ../../masternodes/maintenance.rst:127
 msgid "``proTxHash``: The hash of the initial ProRegTx"
-msgstr ""
+msgstr "``proTxHash``: El hash del ProRegTx inicial"
 
 #: ../../masternodes/maintenance.rst:128
 msgid "``ipAndPort``: IP and port in the form \"ip:port\""
-msgstr ""
+msgstr "``ipAndPort``: IP y puerto de la forma \"ip:port\""
 
 #: ../../masternodes/maintenance.rst:129 ../../masternodes/maintenance.rst:192
 msgid ""
@@ -204,17 +213,19 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:137 ../../masternodes/maintenance.rst:198
 msgid "Example::"
-msgstr ""
+msgstr "Ejemplo::"
 
 #: ../../masternodes/maintenance.rst:143
 msgid ""
 "The masternode is now removed from the PoSe-banned list, and the IP:port and"
 " operator reward addresses are updated."
 msgstr ""
+"Los masternode ahora son eliminados desde la lista baneada de PoSe, y el "
+"IP:port y direcciones de recompensa operada y actualizado."
 
 #: ../../masternodes/maintenance.rst:149
 msgid "ProUpRegTx"
-msgstr ""
+msgstr "ProUpRegTx"
 
 #: ../../masternodes/maintenance.rst:151
 msgid ""
@@ -254,11 +265,11 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:170
 msgid "Example to update payout address::"
-msgstr ""
+msgstr "Ejemplo para actualizar las direcciones de pagos::"
 
 #: ../../masternodes/maintenance.rst:176
 msgid "ProUpRevTx"
-msgstr ""
+msgstr "ProUpRevTx"
 
 #: ../../masternodes/maintenance.rst:178
 msgid ""
@@ -598,6 +609,8 @@ msgid ""
 "`Blockchair <https://blockchair.com/dash>`__ offers a block explorer with "
 "detailed visualizations to analyse the Dash blockchain."
 msgstr ""
+"`Blockchair <https://blockchair.com/dash>`__ ofrece un explorador de bloques"
+" con visualización detallado para analizar el blockchain de Dash."
 
 #: ../../masternodes/maintenance.rst:417
 msgid ""

@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Ivan SIerraalta <ivansierraalta@gmail.com>, 2019
+# JZA <jza@oooes.org>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-15 06:00+0000\n"
+"POT-Creation-Date: 2019-05-10 10:25+0000\n"
 "PO-Revision-Date: 2019-01-11 06:53+0000\n"
-"Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2019\n"
+"Last-Translator: JZA <jza@oooes.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +36,7 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:9
 msgid "Dash 0.13 Upgrade Procedure"
-msgstr ""
+msgstr "Dash 0.13 proceso de actualización"
 
 #: ../../masternodes/dip3-upgrade.rst:11
 msgid ""
@@ -52,11 +53,11 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:16
 msgid ":ref:`dip3-changes`"
-msgstr ""
+msgstr ":ref:`cambios-dip3`"
 
 #: ../../masternodes/dip3-upgrade.rst:17
 msgid ":ref:`dip3-dev-upgrade`"
-msgstr ""
+msgstr ":ref:`actualización-desarrollo-dip3`"
 
 #: ../../masternodes/dip3-upgrade.rst:18
 msgid ""
@@ -71,12 +72,15 @@ msgstr ""
 #: ../../masternodes/dip3-upgrade.rst:20
 msgid ":ref:`Information for users of hosted masternodes <hosted-setup>`"
 msgstr ""
+":ref:`Información para usuarios de masternodes hospedados <hosted-setup>`"
 
 #: ../../masternodes/dip3-upgrade.rst:21
 msgid ""
 ":ref:`Information for operators of hosted masternodes <operator-"
 "transactions>`"
 msgstr ""
+":ref:`Información de operadores hospedando masternodes <operator-"
+"transactions>`"
 
 #: ../../masternodes/dip3-upgrade.rst:23
 msgid ""
@@ -112,7 +116,7 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:42
 msgid "Masternode Software Update"
-msgstr ""
+msgstr "Software de actualización de Masternode"
 
 #: ../../masternodes/dip3-upgrade.rst:44
 msgid ""
@@ -123,7 +127,7 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:50
 msgid "Option 1: Updating from dashman"
-msgstr ""
+msgstr "Opción 1: Actualizar de dashman"
 
 #: ../../masternodes/dip3-upgrade.rst:52
 msgid ""
@@ -161,7 +165,7 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:79
 msgid "Then stop Dash running::"
-msgstr ""
+msgstr "Entonces detiene Dash ejecutado::"
 
 #: ../../masternodes/dip3-upgrade.rst:83
 msgid ""
@@ -177,11 +181,15 @@ msgid ""
 "comparing the output against the value for the file as shown in the "
 "``SHA256SUMS.asc`` file::"
 msgstr ""
+"Verifica la integridad de tu descarga ejecutando el siguiente comando y "
+"compara la salida con el valor del archivo como se muestra en el archivo de "
+"``SHA256SUMS.asc``::"
 
 #: ../../masternodes/dip3-upgrade.rst:98
 msgid ""
 "Extract the compressed archive and copy the new files to the directory::"
 msgstr ""
+"Extrae los archivos comprimidos y copia los nuevos archivos al directorio::"
 
 #: ../../masternodes/dip3-upgrade.rst:104
 msgid "Restart Dash::"
@@ -200,6 +208,8 @@ msgid ""
 "Finally, uncomment the line to automatically restart Dash in your crontab by"
 " invoking ``crontab -e`` again and deleting the ``#`` character."
 msgstr ""
+"Finalmente, descomenta la línea para automáticamente reinicia Dash en el "
+"crontab al invocar ``crontab -e`` de nuevo y borra el caracter ``#``."
 
 #: ../../masternodes/dip3-upgrade.rst:119
 msgid ""
@@ -218,7 +228,7 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:135
 msgid "Masternode Registration from DMT"
-msgstr ""
+msgstr "Masternode registrado del DMT"
 
 #: ../../masternodes/dip3-upgrade.rst:137
 msgid ""
@@ -246,11 +256,11 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:157
 msgid "The DMT Masternode migration wizard"
-msgstr ""
+msgstr "El asistente de migración a DMT Masternode"
 
 #: ../../masternodes/dip3-upgrade.rst:159
 msgid "All fields are prefilled with suggested values."
-msgstr ""
+msgstr "Todos los campos están pre-llenados con el valor sugerido."
 
 #: ../../masternodes/dip3-upgrade.rst:161
 msgid ""
@@ -300,7 +310,7 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:187
 msgid "Option 1: Automatic method"
-msgstr ""
+msgstr "Opción 1: Método automático"
 
 #: ../../masternodes/dip3-upgrade.rst:189
 msgid ""
@@ -330,11 +340,11 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:210
 msgid "Option 2: Manual method"
-msgstr ""
+msgstr "Opción 2: Método manual"
 
 #: ../../masternodes/dip3-upgrade.rst:212
 msgid "The following window appears:"
-msgstr ""
+msgstr "Los siguientes ejemplos lo usan"
 
 #: ../../masternodes/dip3-upgrade.rst:217
 msgid "Manual registration commands in the DMT Masternode migration wizard"
@@ -458,7 +468,7 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:301
 msgid "Generate a BLS key pair"
-msgstr ""
+msgstr "Genera un par de llaves BLS"
 
 #: ../../masternodes/dip3-upgrade.rst:303
 msgid ""
@@ -477,7 +487,7 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:320
 msgid "Add the private key to your masternode configuration"
-msgstr ""
+msgstr "Agrega la llave privada para la configuración de masternodes"
 
 #: ../../masternodes/dip3-upgrade.rst:322
 msgid ""
@@ -509,7 +519,7 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:355
 msgid "Prepare a ProRegTx transaction"
-msgstr ""
+msgstr "Prepara una transacción de ProRegTx"
 
 #: ../../masternodes/dip3-upgrade.rst:357
 msgid ""
@@ -554,6 +564,8 @@ msgid ""
 "Open a text editor such as notepad to prepare this command. Replace each "
 "argument to the command as follows:"
 msgstr ""
+"Abre un editor de texto tal como un bloq de notas para preparar este "
+"comando. Reemplaza cada argumento para los comandos siguientes:"
 
 #: ../../masternodes/dip3-upgrade.rst:397
 msgid ""
@@ -617,13 +629,13 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:422
 msgid "Example (remove line breaks if copying)::"
-msgstr ""
+msgstr "Ejemplo (elimina salto de lineas de copiado)::"
 
 #: ../../masternodes/dip3-upgrade.rst:434
 #: ../../masternodes/dip3-upgrade.rst:463
 #: ../../masternodes/dip3-upgrade.rst:489
 msgid "Output::"
-msgstr ""
+msgstr "Salida::"
 
 #: ../../masternodes/dip3-upgrade.rst:442
 msgid ""
@@ -634,7 +646,7 @@ msgstr ""
 
 #: ../../masternodes/dip3-upgrade.rst:447
 msgid "Sign the ProRegTx transaction"
-msgstr ""
+msgstr "Firma la transacción ProRegTx"
 
 #: ../../masternodes/dip3-upgrade.rst:449
 msgid ""
@@ -650,11 +662,11 @@ msgstr ""
 #: ../../masternodes/dip3-upgrade.rst:459
 #: ../../masternodes/dip3-upgrade.rst:485
 msgid "Example::"
-msgstr ""
+msgstr "Ejemplo::"
 
 #: ../../masternodes/dip3-upgrade.rst:469
 msgid "Submit the signed message"
-msgstr ""
+msgstr "Ingresa el mensaje firmado"
 
 #: ../../masternodes/dip3-upgrade.rst:471
 msgid ""
