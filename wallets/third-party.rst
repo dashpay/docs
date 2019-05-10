@@ -422,14 +422,16 @@ http://www.exodus.io
 
 The Exodus wallet features an engaging visual design and can
 simultaneously store multiple currencies. It is available for Windows,
-Mac and Linux. It is also fully integrated with Shapeshift to offer
+Mac, Linux and iOS. It is also fully integrated with Shapeshift to offer
 exchange between the different currencies.
 
 Installation
 ------------
 
-All Exodus releases are available from https://www.exodus.io/releases -
+All Exodus releases are available from https://www.exodus.io/download -
 simply download and install the appropriate package for your system.
+Exodus is also available from the `Apple App Store for iOS
+<https://itunes.apple.com/app/id1414384820>`__.
 
 Documentation
 -------------
@@ -437,7 +439,6 @@ Documentation
 Exodus offers detailed documentation of all functions at
 http://support.exodus.io and a few quick links are also collected here:
 
-- `What is Exodus? <https://support.exodus.io/article/30-what-is-exodus>`_
 - `How do I install Exodus? <https://support.exodus.io/article/36-how-do-i-install-exodus>`_
 - `How do I get started with Exodus? <https://support.exodus.io/article/37-how-do-i-get-started-with-exodus>`_
 
