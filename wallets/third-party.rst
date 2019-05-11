@@ -537,6 +537,43 @@ Read the `FAQ <https://kurepay.com/ewallet.html>`__ or send an email to
 info@kurepay.com for support with KurePay.
 
 
+Magnum
+======
+
+https://magnumwallet.co
+
+.. image:: img/magnum.png
+   :width: 100px
+   :align: right
+   :target: https://magnumwallet.co
+
+Magnum is a multi-currency web and mobile wallet with support for 100+
+cryptocurrencies, including Dash. The wallet integrates Changelly for
+in-app exchange and supports staking, delegation and airdrop functions.
+Magnum focuses on providing a simple and secure interface to store and
+interact with your digital assets.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.magnum.wallet
+
+Magnum is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.btcc.wallet>`__.
+
+Documentation
+-------------
+
+Join the `Magnum Telegram group <https://t.me/magnumwalletco>`_ for
+Magnum support.
+
+.. figure:: img/magnum-wallet-mobile.png
+   :width: 133px
+
+   Magnum wallet running on Android
+
+
 Mobi
 ====
 
