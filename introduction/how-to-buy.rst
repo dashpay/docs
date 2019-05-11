@@ -1718,6 +1718,16 @@ CryptoWay
   and simple platform. You can also link your bank account for efficient
   processing of deposits and withdrawals.
 
+BitJá
+  .. image:: exchanges/bitja.png
+     :width: 200px
+     :align: right
+     :target: https://www.bitja.com.br
+
+  https://www.bitja.com.br
+
+  BitJá is a Brazil-based cryptocurrency vendor offering services to buy
+  and sell Dash, Bitcoin and Ethereum in exchange for Brazilian real.
 
 Stratum CoinBR
   .. image:: exchanges/stratum.png
