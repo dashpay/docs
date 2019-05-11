@@ -759,14 +759,15 @@ Installation
 ------------
 
 .. image:: img/google-play-badge.png
-   :width: 100px
+   :width: 200px
    :target: https://play.google.com/store/apps/details?id=com.vegawallet.in
 
 .. image:: img/app-store.png
    :width: 180px
    :target: https://itunes.apple.com/app/id1449594992
 
-VegaWallet is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.vegawallet.in>`__ 
+VegaWallet desktop wallets are available from https://vegawallet.com for
+macOS and Windows. VegaWallet is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.vegawallet.in>`__ 
 and the `Apple App Store for iOS <https://itunes.apple.com/app/id1449594992>`__.
 
 Documentation
