@@ -6,17 +6,17 @@
 # Translators:
 # Tikhon Skudarnov <semargsemarg@gmail.com>, 2018
 # Андрей Дегтяр <diusha1711@gmail.com>, 2018
-# Leon White <leon.white@dash.org>, 2018
 # Дмитрий <dmitry.zhludin@gmail.com>, 2018
+# Leon White <leon.white@dash.org>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-11 06:36+0000\n"
+"POT-Creation-Date: 2019-05-13 04:51+0000\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
-"Last-Translator: Дмитрий <dmitry.zhludin@gmail.com>, 2018\n"
+"Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -250,6 +250,10 @@ msgid ""
 "denominations. These denominations are 0.001, 0.01, 0.1, 1 and 10 DASH -- "
 "much like the paper money you use every day."
 msgstr ""
+"Работа PrivateSend начинается с разбивки ваших транзакционных входов на "
+"стандартные номиналы. Такими номиналами являются: 0,001 DASH, 0,01 DASH, 0,1"
+" DASH, 1 DASH и 10 DASH - это почти похоже на номиналы обычных купюр, "
+"которыми вы ежедневно пользуетесь."
 
 #: ../../introduction/features.rst:99
 msgid ""
@@ -287,6 +291,11 @@ msgid ""
 "more difficult to determine where your funds originated. The user may choose"
 " between 1-16 rounds of mixing."
 msgstr ""
+"Чтобы надёжно скрыть ваши средства, кошелёк должен повторить выполнение "
+"этого процесса несколько раз с каждым номиналом. Каждый цикл этого процесса "
+"называется \"раундом\". Каждый следующий раунд PrivateSend экпоненциально "
+"усложняет возможность отследить происхождение ваших средств. Пользователь "
+"может выбрать 1-16, от 1 до 16 раундов перемешивания."
 
 #: ../../introduction/features.rst:116
 msgid ""
@@ -1083,6 +1092,21 @@ msgid ""
 "require several inputs, while InstantSend charges a fee of 0.0001 DASH per "
 "input. Always check your fees before sending a transaction."
 msgstr ""
+"PrivateSend работает, создавая номиналы 10, 1, 0,1, 0,01 и 0,001 DASH, а "
+"затем смешивая эти номиналы с монетами других пользователей. Создание "
+"номиналов оплачивается по стандартной ставке за стандартную транзакцию. "
+"Смешивание бесплатное, но для предотвращения спам-атак в среднем по одной из"
+" десяти транзакций смешивания взимается комиссия в размере 0,0001 DASH. За "
+"перемешивание входов с использованием PrivateSend взимаются обычные "
+"стандартные комиссии или комиссии InstantSend, но для избежания создания "
+"потенциально идентифицируемого адреса сдачи, плата всегда округляется до "
+"наименьшего возможного номинала. Обычно это 0,001 DASH, поэтому важно "
+"вычесть комиссию за отправленную сумму, если это возможно, чтобы свести к "
+"минимуму комиссионные сборы. Сочетание функций InstantSend и PrivateSend "
+"может оказаться дорогим из-за этого требования, а также того факта, что для "
+"транзакции PrivateSend может потребоваться несколько входов, а InstantSend "
+"взимает плату в размере 0,0001 DASH за каждый вход. Всегда проверяйте "
+"комиссию перед отправкой транзакции."
 
 #: ../../introduction/features.rst:550
 msgid "Evolution"
@@ -1098,6 +1122,14 @@ msgid ""
 "network, along with decentralized API access and a decentralized file "
 "system."
 msgstr ""
+"`Dash Evolution <https://www.dash.org/ru/roadmap/>`_ это кодовое название "
+"децентрализованной валютной платформы, построенной на технологии блокчейна "
+"Dash. Её цель состоит в том, чтобы обеспечить простой доступ к уникальным "
+"функциям и преимуществам Dash, которые оказали помощь в создании "
+"децентрализованной технологии. Dash представляет собой многоуровневый "
+"сетевой проект, который позволяет пользователям выполнять различные задания "
+"для сети, а также обеспечивает децентрализованный доступ к API и имеет "
+"децентрализованную файловую систему."
 
 #: ../../introduction/features.rst:560
 msgid ""
@@ -1128,6 +1160,8 @@ msgid ""
 "**Dash Drive:** A decentralized shared file system for user data that lives "
 "on the second tier network"
 msgstr ""
+"**Dash Drive:** Децентрализованная общая файловая система для "
+"пользовательских данных, которая расположена в сети второго уровня"
 
 #: ../../introduction/features.rst:576
 msgid ""
@@ -1182,6 +1216,9 @@ msgid ""
 "**Social Wallet:** We introduce a social wallet, which allows friends lists,"
 " grouping of users and shared multisig accounts"
 msgstr ""
+"**Социальный кошелёк:** Представляем социальный кошелёк, в котором доступен "
+"список друзей, группировка пользователей и совместные учётные записи с "
+"мультиподписью."
 
 #: ../../introduction/features.rst:593
 msgid "Evolution Previews"
