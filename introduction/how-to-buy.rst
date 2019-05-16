@@ -1718,9 +1718,21 @@ CryptoWay
   and simple platform. You can also link your bank account for efficient
   processing of deposits and withdrawals.
 
+Kamoney
+  .. image:: exchanges/kamoney.png
+     :width: 200px
+     :align: right
+     :target: https://www.kamoney.com.br
+
+  https://www.kamoney.com.br
+
+  Kamoney is a Brazil-based cryptocurrency vendor offering services to
+  buy and sell Dash, Bitcoin and Ethereum in exchange for Brazilian
+  real, as well as payment services in Brazil.
+
 BitJá
   .. image:: exchanges/bitja.png
-     :width: 200px
+     :width: 80px
      :align: right
      :target: https://www.bitja.com.br
 
@@ -1729,15 +1741,15 @@ BitJá
   BitJá is a Brazil-based cryptocurrency vendor offering services to buy
   and sell Dash, Bitcoin and Ethereum in exchange for Brazilian real.
 
-Stratum CoinBR
+Stratum
   .. image:: exchanges/stratum.png
      :width: 200px
      :align: right
-     :target: https://coinbr.io
+     :target: https://stratum.hk
 
-  https://coinbr.io
+  https://stratum.hk
 
-  CoinBR is a Brazil-based cryptocurrency company offering a variety of
+  Stratum is a Brazil-based cryptocurrency company offering a variety of
   services including an exchange, mining, bill payment, point-of-sale,
   and more. Dash is available for purchase at over 13,000 locations
   around Brazil.
