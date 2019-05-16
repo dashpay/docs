@@ -1643,6 +1643,18 @@ Mercury Cash
   Ethereum and Dash, and deposited or withdrawn in local currencies
   through a number of methods, including credit cards.
 
+Bitcoin.de
+  .. image:: exchanges/bitcoin-de.png
+     :width: 200px
+     :align: right
+     :target: https://www.bitcoin.de
+
+  https://www.bitcoin.de
+
+  Bitcoin.de allows user to post offers to buy or sell Dash and Bitcoin
+  within their region or country. The users then arrange the deal
+  between themselves.
+
 cryptomonster
   .. image:: exchanges/cryptomonster.png
      :width: 200px
