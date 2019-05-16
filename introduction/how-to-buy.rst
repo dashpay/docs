@@ -1720,7 +1720,7 @@ CryptoWay
 
 Kamoney
   .. image:: exchanges/kamoney.png
-     :width: 200px
+     :width: 148px
      :align: right
      :target: https://www.kamoney.com.br
 
