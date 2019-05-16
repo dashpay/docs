@@ -549,7 +549,7 @@ input. Always check your fees before sending a transaction.
 Evolution
 ==========
 
-`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a
+`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a
 decentralized currency platform built on Dash blockchain technology. The
 goal is to provide simple access to the unique features and benefits of
 Dash to assist in the creation of decentralized technology. Dash
