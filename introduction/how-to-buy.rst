@@ -951,6 +951,17 @@ RealExchange
   of currencies including Dash, Bitcoin, Litecoin, and SmartCash. The
   exchange also supports fiat trading pairs with the Brazilian real.
 
+3xBit
+  .. image:: exchanges/3xbit.png
+     :width: 200px
+     :align: right
+     :target: https://3xbit.com.br
+
+  https://3xbit.com.br
+
+  3xBit is a Brazil-based exchange offering many Dash pairs, as well as
+  trading against BTC and the dollar-proxy CREDIT coin.
+
 NegocieCoins
   .. image:: exchanges/negociecoins.png
      :width: 200px
