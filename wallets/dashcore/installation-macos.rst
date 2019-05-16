@@ -14,7 +14,7 @@ should be similar for other versions.
 Downloading the Dash Core wallet
 --------------------------------
 
-Visit https://www.dash.org/downloads to download the latest Dash Core
+Visit https://www.dash.org/downloads to download the latest Dash Core
 wallet. In most cases, the website will properly detect which version
 you need. Click **Download Installer** to download the installer
 directly.
