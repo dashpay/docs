@@ -65,10 +65,9 @@ Dependencies
 - `DIP0010: LLMQ InstantSend <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__
   contains more information on the updated LLMQ-based InstantSend system.
 
-.. Replace following with 0.14 link if one becomes available
-.. - Please refer to the `Transaction Type Integration Guide <https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__
-  for information on the implementation of Special Transactions and for
-  examples of this new format.
+- Please refer to the `ChainLocks Integration Guide <https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-Resources-Dash-v0.14.0-ChainLocks.pdf>`__
+  for information on the implementation of ChainLocks and for examples
+  of this new format.
 
 - Contact the `Support Desk <https://support.dash.org/en/support/home>`__
   with any compatibility questions or for help upgrading.
