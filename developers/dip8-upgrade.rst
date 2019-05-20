@@ -79,26 +79,3 @@ for a complete listing of RPC improvements, in summary:
 - **ChainLocks**: chainlock status is now included in
   ``getrawtransaction``, ``decoderawtransaction``, ``gettransaction``,
   ``listtransactions``, ``listsinceblock``. ``getblock``
-
-Libraries and APIs
-==================
-
-The following lists the current upgrade status for libraries:
-
-+------------------------------------------------------------+---------------------+-----------+
-| Name                                                       | Platform            | Upgraded? |
-+============================================================+=====================+===========+
-| `DashJ <https://github.com/HashEngineering/dashj>`__       | Android             |           |
-+------------------------------------------------------------+---------------------+-----------+
-| `Dash-Sync <https://github.com/dashevo/dashsync-iOS/>`__   | iOS                 |           |
-+------------------------------------------------------------+---------------------+-----------+
-| `Dashcore-Lib <https://github.com/dashevo/dashcore-lib>`__ | JavaScript / NodeJS |           |
-+------------------------------------------------------------+---------------------+-----------+
-| `NBitcoin <https://github.com/MetacoSA/NBitcoin>`__        | .Net                |           |
-+------------------------------------------------------------+---------------------+-----------+
-| `Bitcoin-PHP <https://github.com/Bit-Wasp/bitcoin-php>`__  | PHP                 |           |
-+------------------------------------------------------------+---------------------+-----------+
-| `PyCoin <https://github.com/DeltaEngine/pycoin>`__         | Python              |           |
-+------------------------------------------------------------+---------------------+-----------+
-
-.. The following lists the current upgrade status for APIs
