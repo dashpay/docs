@@ -17,12 +17,12 @@ the guide by submitting an issue or pull request on GitHub. The
 documentation is available at: https://dash-docs.github.io/en/
 
 The Dash Core Team also maintains the `Dash Roadmap
-<https://github.com/dashpay/dash-roadmap>`_, which sets out delivery
-milestones for future releases of Dash and includes specific technical
-details describing how the development team plans to realise each
-challenge. The Dash Roadmap is complemented by the `Dash Improvement
-Proposals <https://github.com/dashpay/dips>`_, which contain detailed
-technical explanations of proposed changes to the Dash protocol itself.
+<https://www.dash.org/roadmap>`_, which sets out delivery milestones for
+future releases of Dash and includes specific technical details
+describing how the development team plans to realise each challenge. The
+Dash Roadmap is complemented by the `Dash Improvement Proposals
+<https://github.com/dashpay/dips>`_, which contain detailed technical
+explanations of proposed changes to the Dash protocol itself.
 
 The remaining sections available below describe practical steps to
 carry out common development tasks in Dash.
@@ -30,6 +30,7 @@ carry out common development tasks in Dash.
 .. toctree::
    :maxdepth: 1
 
+   integration.rst
    dip3-upgrade.rst
    translating.rst
    compiling.rst

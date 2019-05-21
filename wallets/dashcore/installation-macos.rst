@@ -14,26 +14,20 @@ should be similar for other versions.
 Downloading the Dash Core wallet
 --------------------------------
 
-Visit https://www.dash.org/get-dash to download the latest Dash
-Core wallet. In most cases, the website will properly detect which
-version you need. Click the blue **Dash Core** button to download
-the installer directly.
+Visit https://www.dash.org/downloads to download the latest Dash Core
+wallet. In most cases, the website will properly detect which version
+you need. Click **Download Installer** to download the installer
+directly.
 
-.. figure:: img/macos/112414571.png
-   :width: 451px
+.. figure:: img/macos/download.png
+   :height: 250px
 
    The website properly detects the wallet appropriate for your system
 
 If detection does not work, you will need to manually choose your
-operating system. Go to https://www.dash.org/wallets and select the 
-**OSX** tab, then click **Download DMG**.
-
-.. figure:: img/macos/112414634.png
-   :width: 451px
-
-   Manually selecting and downloading an installer
-
-Save the file you downloaded to your Downloads folder.
+operating system. Go to https://www.dash.org/downloads and select the 
+**macOS** tab, then click **Download Installer**. Save the file you
+downloaded to your Downloads folder.
 
 Verifying Dash Core
 -------------------
@@ -43,11 +37,6 @@ file you downloaded. This is done by checking its SHA256 hash against
 the hash published by the Dash Core development team. To view the
 published hash, click the **Hash file** button on the wallet download
 page.
-
-.. figure:: img/macos/112414700.png
-   :width: 451px
-
-   Downloading the Dash Core hash file
 
 Once both the Dash Core file and the hash file have downloaded,
 double-click the hash file or view it in your browser and find the hash

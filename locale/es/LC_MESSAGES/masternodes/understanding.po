@@ -5,18 +5,19 @@
 # 
 # Translators:
 # Alejandro Echeverria <alejem93@gmail.com>, 2018
-# Leon White <leon.white@dash.org>, 2018
 # Ivan SIerraalta <ivansierraalta@gmail.com>, 2018
 # Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018
+# Leon White <leon.white@dash.org>, 2019
+# JZA <jza@oooes.org>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-04 06:56+0000\n"
+"POT-Creation-Date: 2019-05-13 04:51+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Jahlexis Tafari <ras.alexislugo.i@gmail.com>, 2018\n"
+"Last-Translator: JZA <jza@oooes.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +38,8 @@ msgid ""
 "dash, masternodes, hosting, linux, payment, instantsend, privatesend, "
 "governance, quorum, evolution, bls,"
 msgstr ""
+"dash, masternodes, alojamiento, linux, pago, instantsend, privatesend, "
+"gobernanza, quorum, evolution, bls"
 
 #: ../../masternodes/understanding.rst:9
 msgid "Understanding Masternodes"
@@ -183,11 +186,11 @@ msgstr ""
 
 #: ../../masternodes/understanding.rst:96
 msgid ":ref:`dip3-dev-upgrade`"
-msgstr ""
+msgstr ":ref:`actualización-desarrollo-dip3`"
 
 #: ../../masternodes/understanding.rst:97
 msgid ":ref:`Dash 0.13 Upgrade Procedure for Masternodes <dip3-upgrade>`"
-msgstr ""
+msgstr ":ref:`Dash 0.13 Actualiza procesos para Masternodes <dip3-upgrade>`"
 
 #: ../../masternodes/understanding.rst:98
 msgid ":ref:`Full masternode setup guide <masternode-setup>`"
@@ -196,12 +199,15 @@ msgstr ""
 #: ../../masternodes/understanding.rst:99
 msgid ":ref:`Information for users of hosted masternodes <hosted-setup>`"
 msgstr ""
+":ref:`Información para usuarios de masternodes hospedados <hosted-setup>`"
 
 #: ../../masternodes/understanding.rst:100
 msgid ""
 ":ref:`Information for operators of hosted masternodes <operator-"
 "transactions>`"
 msgstr ""
+":ref:`Información de operadores hospedando masternodes <operator-"
+"transactions>`"
 
 #: ../../masternodes/understanding.rst:102
 msgid "Important concepts and changes:"
@@ -313,11 +319,11 @@ msgstr ""
 
 #: ../../masternodes/understanding.rst:159
 msgid "Prepare a ProRegTx transaction"
-msgstr ""
+msgstr "Prepara una transacción de ProRegTx"
 
 #: ../../masternodes/understanding.rst:160
 msgid "Sign the ProRegTx transaction"
-msgstr ""
+msgstr "Firma la transacción ProRegTx"
 
 #: ../../masternodes/understanding.rst:161
 msgid "Submit the signed ProRegTx transaction"
@@ -542,14 +548,14 @@ msgstr ""
 
 #: ../../masternodes/understanding.rst:285
 msgid ""
-"A server or VPS running Linux: Most recent guides use Ubuntu 16.04 LTS. We "
+"A server or VPS running Linux: Most recent guides use Ubuntu 18.04 LTS. We "
 "recommend VPS services such as Vultr and DigitalOcean, although any decent "
 "provider will do. Generally an instance with low to average specifications "
 "will do, although performance requirements will increase according to this "
 "roadmap."
 msgstr ""
 "Un servidor o VPS que ejecuta Linux: las guías más recientes usan Ubuntu "
-"16.04 LTS. Recomendamos servicios de VPS como Vultr y DigitalOcean, aunque "
+"18.04 LTS. Recomendamos servicios de VPS como Vultr y DigitalOcean, aunque "
 "cualquier proveedor decente lo hará. Por lo general, una instancia con "
 "especificaciones por debajo del promedio lo hará, aunque los requisitos de "
 "rendimiento aumentarán de acuerdo con esta hoja de ruta."
@@ -650,9 +656,17 @@ msgstr "Evolución de Dash"
 msgid ""
 "The exact hardware requirements for Dash Evolution masternodes have yet to "
 "be determined, although some pointers can be taken from the `roadmap "
-"<https://github.com/dashpay/dash-roadmap>`_ and this `blog post "
+"<https://www.dash.org/roadmap>`_ and this `blog post "
 "<https://medium.com/@eduffield222/how-to-enabling-on-chain-scaling-"
 "2ffab5997f8b>`_. It should be possible to run Dash masternodes on normal VPS"
 " servers until the block size reaches approximately 20 MB, after which "
 "custom hardware such as GPUs and eventually ASICs may be required."
 msgstr ""
+"Los requisitos de hardware exactos para los masternodes de Dash Evolution "
+"aún no se han determinado, aunque se pueden tomar algunos indicadores del "
+"`Plan de trabajo <https://www.dash.org/es/hoja-de-ruta/>`_ y esta "
+"`publicación de blog <https://medium.com/@eduffield222/how-to-enabling-on-"
+"chain-scaling-2ffab5997f8b>`_. Debería ser posible ejecutar los masternodes "
+"de Dash en servidores VPS normales hasta que el tamaño del bloque alcance "
+"aproximadamente 20 MB, después de lo cuál se requerirán hardwarse "
+"personalizados como GPUs y eventualmente ASICs."

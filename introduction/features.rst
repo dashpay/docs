@@ -437,7 +437,7 @@ Sentinel
 
 Sentinel is an autonomous agent for persisting, processing and
 automating Dash 12.1 governance objects and tasks, and for expanded
-functions in the upcoming Dash V13 release (Evolution). Sentinel is
+functions in the upcoming Dash 1.0 release (Evolution). Sentinel is
 implemented as a Python application that binds to a local version 12.1
 dashd instance on each Dash 12.1 masternode.
 
@@ -549,27 +549,29 @@ input. Always check your fees before sending a transaction.
 Evolution
 ==========
 
-`Dash Evolution <https://www.dash.org/evolution/>`_ is the code
-name for a decentralized currency platform built on Dash blockchain
-technology. The goal is to provide simple access to the unique features
-and benefits of Dash to assist in the creation of decentralized
-technology. Dash introduces a tiered network design, which allows users
-to do various jobs for the network, along with decentralized API access
-and a decentralized file system.
+`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a
+decentralized currency platform built on Dash blockchain technology. The
+goal is to provide simple access to the unique features and benefits of
+Dash to assist in the creation of decentralized technology. Dash
+introduces a tiered network design, which allows users to do various
+jobs for the network, along with decentralized API access and a
+decentralized file system.
 
-Dash Evolution will be released in stages. Dash Core releases 12.1 
-through to 12.4 will lay the groundwork for the decentralized features 
-behind the scenes. An alpha version of Evolution is expected in the 
-first half of 2018, including a basic implementation of DashDrive, 
-Primitives, DAPI and a simple T3 wallet. This will be released together 
-with a series of Dash Improvement Proposals (DIPs), followed by a 
-testnet phase with most basic functionality, and a first stable release 
-in summer 2018.
+Dash Evolution will be released in stages. Dash Core releases 0.12.1 
+through to 0.12.3 lay the groundwork for the decentralized features 
+behind the scenes. Version 0.13 introduces the foundation of Evolution,
+specifically `DIP2 Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ 
+and `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__.
+Version 0.14 establishes `DIP6 Long Living Masternode Quorums <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__.
+Expected in late 2019, Dash Core 1.0 will introduce key Evolution
+features such as username-based payments, the world's first
+decentralized API (DAPI) and a decentralized data storage system (Dash
+Drive) based on IPFS.
 
 Included below is our current work on Evolution, that adds many
 components such as:
 
-- **DashDrive:** A decentralized shared file system for user data that
+- **Dash Drive:** A decentralized shared file system for user data that
   lives on the second tier network
 - **DAPI:** A decentralized API which allows third tier users to access
   the network securely
@@ -581,10 +583,11 @@ components such as:
   for specific projects on the network via the budget system
 - **Governance:** The second tier is given voting power to govern the
   currency and chart the course the currency takes
-- **Quorum Chain:** This feature introduces a permanent stable masternode
-  list, which can be used to calculate past and present quorums
+- **Deterministic Masternode Lists:** This feature introduces an 
+  on-chain masternode list, which can be used to calculate past and 
+  present quorums
 - **Social Wallet:** We introduce a social wallet, which allows friends
-  lists, grouping of users and shared multisig accounts.
+  lists, grouping of users and shared multisig accounts
 
 Evolution Previews
 ------------------

@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Nils Hermann <vk.translation@protonmail.ch>, 2018
 # Leon White <leon.white@dash.org>, 2019
+# Nils Hermann <vk.translation@protonmail.ch>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-04 06:56+0000\n"
+"POT-Creation-Date: 2019-05-13 04:51+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
+"Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2019\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,8 +88,24 @@ msgid ""
 "cooperation with a specialist payment processor such as `ePaymints "
 "<http://epaymints.com>`__. This documentation also describes the "
 ":ref:`administrative <merchants-administrative>` and  :ref:`technical "
-"<merchants-technical>` steps required to integrate  various Dash services."
+"<integration>` steps required to integrate various Dash services."
 msgstr ""
+"Ein dreiteiliger Kurs über die Vorteile von Dash als Zahlungsmethode und die"
+" technischen Schritte, die zur Integration notwendig sind, kann auf "
+"`DashAcademy.com <http://www.dashacademy.com>`_ in Englisch und Spanisch "
+"angesehen werden. Um mit der Integration in den bestehenden Zahlungsablauf "
+"zu beginnen, muss eine der unten aufgeführten Online oder Point-of-Sale "
+"Lösungen ausgewählt werden. GoCoin ist die populärste Lösung, da es "
+":ref:`InstantSend <instantsend>` unterstützt, während CoinPayments bei "
+"manchen Online-Shop-Plattformen die einzige Möglichkeit darstellt. Anypay "
+"ist eine sehr einfache Möglichkeit, um Dash in den Einzelhandel zu "
+"integrieren, und unterstützt ebenfalls InstantSend. Größere "
+"Integrationsprojekte, die einer maßgeschneiderten Lösung oder Kooperation "
+"bedürfen, können sich hierfür an einen spezialisierten Zahlungsdienstleister"
+" wenden, wie z.B. `ePaymints <http://epaymints.com>`__. Im Folgenden werden "
+"zudem die :ref:`administrativen <merchants-administrative>` und "
+":ref:`technischen <integration>` Schritte geschildert, die zur Integration "
+"der verschiedenen Dienste nötig sind."
 
 #: ../../merchants/getting-started.rst:38
 msgid ""
@@ -100,6 +116,12 @@ msgid ""
 " to this address will immediately be converted to the target fiat currency "
 "at the time of deposit."
 msgstr ""
+"Alle Dash, die als Zahlungsmittel empfangen wurden, können automatisch in "
+"eine Fiatwährung konvertiert werden. Hierzu muss ein Drittanbieter, wie z.B."
+" `Uphold <https://uphold.com>`_, verwendet werden. Wähle hierzu die Karte "
+"der Zielwährung aus und klicke auf **Add funds** -> **With cryptocurrency**."
+" Jede Einheit der entsprechenden Kryptowährung, die an diese Adresse "
+"geschickt wird, wird sofort in die entsprechende Fiatwährung umgewandelt."
 
 #: ../../merchants/getting-started.rst:45
 msgid ""
@@ -138,6 +160,10 @@ msgid ""
 "accounts in industries challenged with high levels of chargebacks, it is "
 "recommended to contact Dash partner `ePaymints <http://epaymints.com>`__."
 msgstr ""
+"Bei erweiterten Anforderungen an den Zahlungsprozess, wie etwa dem Risiko, "
+"welchem sich Händler in Industriezweigen, die unter einem hohen Grad an "
+"Rückbuchungen zu leiden haben, ausgesetzt sehen, empfehlen wir den Kontakt "
+"mit dem Dash-Partner `ePaymints <http://epaymints.com>`__ aufzunehmen."
 
 #: ../../merchants/getting-started.rst:66
 msgid "Online Stores"
@@ -165,7 +191,7 @@ msgstr "`GoCoin <https://gocoin.com>`_"
 
 #: ../../merchants/getting-started.rst:73
 msgid "`Savvy <https://www.savvy.io>`_"
-msgstr ""
+msgstr "`Savvy <https://www.savvy.io>`_"
 
 #: ../../merchants/getting-started.rst:73
 msgid "`Coingate <https://coingate.com>`_"
@@ -338,7 +364,7 @@ msgstr "App?"
 
 #: ../../merchants/getting-started.rst:121
 msgid "Web?"
-msgstr ""
+msgstr "Web?"
 
 #: ../../merchants/getting-started.rst:121
 msgid "Hardware?"
@@ -444,27 +470,31 @@ msgstr "Nur in Indien. Auch Zahlungen per SMS möglich."
 
 #: ../../merchants/getting-started.rst:147
 msgid "`Salamantex <https://www.salamantex.com>`_"
-msgstr ""
+msgstr "`Salamantex <https://www.salamantex.com>`_"
 
 #: ../../merchants/getting-started.rst:147
 msgid ""
 "Payments by app, web, software extension for existing POS or standalone POS "
 "terminal."
 msgstr ""
+"Zahlung per App, Web, Software-Erweiterung für ein existierendes POS oder "
+"eigenständigem POS-Terminal."
 
 #: ../../merchants/getting-started.rst:149
 msgid "`SetGetGo <https://setgetgo.com/>`_"
-msgstr ""
+msgstr "`SetGetGo <https://setgetgo.com/>`_"
 
 #: ../../merchants/getting-started.rst:149
 msgid ""
 "Available for Android, web and Android APIs, payment buttons, competitive "
 "fees"
 msgstr ""
+"Verfügbar für Android, Web, und Android APIs; Zahlungsbuttons; "
+"wettbewerbsfähige Gebühren"
 
 #: ../../merchants/getting-started.rst:151
 msgid "`Spark Payments <https://get-spark.com>`_"
-msgstr ""
+msgstr "`Spark Payments <https://get-spark.com>`_"
 
 #: ../../merchants/getting-started.rst:151
 msgid ""
@@ -764,6 +794,12 @@ msgid ""
 "and Linux, with an iOS progressive web app (`PWA "
 "<https://en.wikipedia.org/wiki/Progressive_Web_Apps>`_) in development."
 msgstr ""
+"`Spark Payments <https://www.dash.org/forum/threads/39665/>`__ erlaubt es "
+"Händlern, Dash sehr einfach in einem Einzelhandelsgeschäft zu akzeptieren. "
+"Das System läuft über eine App, die für Android, macOS, Windows und Linux "
+"heruntergeladen werden kann. Außerdem befindet sich eine iOS Progressive Web"
+" App (`PWA <https://en.wikipedia.org/wiki/Progressive_Web_Apps>`_) in der "
+"Entwicklungsphase."
 
 #: ../../merchants/getting-started.rst:352
 msgid ""

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-04 06:56+0000\n"
+"POT-Creation-Date: 2019-05-13 04:51+0000\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -684,12 +684,10 @@ msgstr "哨兵"
 msgid ""
 "Sentinel is an autonomous agent for persisting, processing and automating "
 "Dash 12.1 governance objects and tasks, and for expanded functions in the "
-"upcoming Dash V13 release (Evolution). Sentinel is implemented as a Python "
+"upcoming Dash 1.0 release (Evolution). Sentinel is implemented as a Python "
 "application that binds to a local version 12.1 dashd instance on each Dash "
 "12.1 masternode."
 msgstr ""
-"哨兵是一个自治代理系统，用于维护、处理和自动操作 Dash 12.1 版本的管理对象和任务，以及在即将发布的 Dash V13 (Evolution) "
-"中做功能扩展。哨兵的执行就像在每个 Dash 12.1 版本的主节点上，结合本地 Dash 12.1 把本实例的一个Python应用。"
 
 #: ../../introduction/features.rst:444
 msgid ""
@@ -845,7 +843,7 @@ msgstr "进化版"
 
 #: ../../introduction/features.rst:552
 msgid ""
-"`Dash Evolution <https://www.dash.org/evolution/>`_ is the code name for a "
+"`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a "
 "decentralized currency platform built on Dash blockchain technology. The "
 "goal is to provide simple access to the unique features and benefits of Dash"
 " to assist in the creation of decentralized technology. Dash introduces a "
@@ -853,81 +851,82 @@ msgid ""
 "network, along with decentralized API access and a decentralized file "
 "system."
 msgstr ""
-"`达世币进化版 <https://www.dash.org/evolution/>`_\\ "
-"是建立在达世币区块链技术上一个去中心化货币平台的代码名称。其目标是为大家提供一个简单的接口，利用达世币独一无二的功能和有利条件，协助去中心化技术继续创新。达世币引入了多层网络设计，从而允许用户通过分布式应用程序接口DAPI和分布式文件系统为网络做各种工作。"
 
 #: ../../introduction/features.rst:560
 msgid ""
-"Dash Evolution will be released in stages. Dash Core releases 12.1 through "
-"to 12.4 will lay the groundwork for the decentralized features behind the "
-"scenes. An alpha version of Evolution is expected in the first half of 2018,"
-" including a basic implementation of DashDrive, Primitives, DAPI and a "
-"simple T3 wallet. This will be released together with a series of Dash "
-"Improvement Proposals (DIPs), followed by a testnet phase with most basic "
-"functionality, and a first stable release in summer 2018."
+"Dash Evolution will be released in stages. Dash Core releases 0.12.1 through"
+" to 0.12.3 lay the groundwork for the decentralized features behind the "
+"scenes. Version 0.13 introduces the foundation of Evolution, specifically "
+"`DIP2 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ and `DIP3 "
+"Deterministic Masternode Lists "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__. Version 0.14 "
+"establishes `DIP6 Long Living Masternode Quorums "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__. Expected in "
+"late 2019, Dash Core 1.0 will introduce key Evolution features such as "
+"username-based payments, the world's first decentralized API (DAPI) and a "
+"decentralized data storage system (Dash Drive) based on IPFS."
 msgstr ""
-"达世币进化版将会分阶段发布。Dash Core通过发布 12.1 到 12.4 "
-"在幕后为去中心化功能打下了基础。进化版的初始版本预期在2018年的下半年发布，包括DashDrive达世币驱动，Primitives基元，DAPI分布式应用程序接口以及简易的T3钱包等基本功能。这将与一系列的达世币改进提案（DIPs）一起发布，随后是基础功能的测试网络运行阶段，在2018年冬天发布第一个稳定版本。"
 
-#: ../../introduction/features.rst:569
+#: ../../introduction/features.rst:571
 msgid ""
 "Included below is our current work on Evolution, that adds many components "
 "such as:"
 msgstr "以下便是我们目前在Evolution上所做的工作，增加了许多单元如："
 
-#: ../../introduction/features.rst:572
-msgid ""
-"**DashDrive:** A decentralized shared file system for user data that lives "
-"on the second tier network"
-msgstr "**DashDrive达世币驱动：**\\ 一个分布式用户数据共享文件系统，在第二层网络上实时更新"
-
 #: ../../introduction/features.rst:574
+msgid ""
+"**Dash Drive:** A decentralized shared file system for user data that lives "
+"on the second tier network"
+msgstr ""
+
+#: ../../introduction/features.rst:576
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the "
 "network securely"
 msgstr "**DAPI：**\\ 分布式应用程序接口，允许第三层用户安全接入网络"
 
-#: ../../introduction/features.rst:576
+#: ../../introduction/features.rst:578
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients connected"
 " to the network via DAPI and run on various platforms"
 msgstr "**分布式DashPay钱包：**\\ 用户可通过DAPI在不同操作平台接入这些轻钱包"
 
-#: ../../introduction/features.rst:578
+#: ../../introduction/features.rst:580
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
 msgstr "**第二层网络：**\\ 主节点网络 - 可为项目提供有偿的基础设施建设"
 
-#: ../../introduction/features.rst:580
+#: ../../introduction/features.rst:582
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
 msgstr "**预算：**\\ 主节点网络被赋予了投票的权力，从而可以通过预算系统为网络上具体的项目提供资金"
 
-#: ../../introduction/features.rst:582
+#: ../../introduction/features.rst:584
 msgid ""
 "**Governance:** The second tier is given voting power to govern the currency"
 " and chart the course the currency takes"
 msgstr "**管理：**\\ 主节点网络被赋予了投票的权力从而管理达世币项目及发展方向"
 
-#: ../../introduction/features.rst:584
-msgid ""
-"**Quorum Chain:** This feature introduces a permanent stable masternode "
-"list, which can be used to calculate past and present quorums"
-msgstr "**仲裁链：**\\ 这个功能引入了长久固定的主节点列表，用于计算以往的和当前的仲裁链"
-
 #: ../../introduction/features.rst:586
 msgid ""
-"**Social Wallet:** We introduce a social wallet, which allows friends lists,"
-" grouping of users and shared multisig accounts."
-msgstr "**社交钱包：**\\ 我们引入了社会钱包，增添朋友列表，用户群和共享的多重签名账户。"
+"**Deterministic Masternode Lists:** This feature introduces an on-chain "
+"masternode list, which can be used to calculate past and present quorums"
+msgstr ""
 
-#: ../../introduction/features.rst:590
+#: ../../introduction/features.rst:589
+msgid ""
+"**Social Wallet:** We introduce a social wallet, which allows friends lists,"
+" grouping of users and shared multisig accounts"
+msgstr ""
+
+#: ../../introduction/features.rst:593
 msgid "Evolution Previews"
 msgstr "进化版预览"
 
-#: ../../introduction/features.rst:592
+#: ../../introduction/features.rst:595
 msgid ""
 "The following videos featuring Dash Founder Evan Duffield and Head of UI/UX "
 "Development Chuck Williams describe the development process and upcoming "
@@ -936,24 +935,24 @@ msgstr ""
 "以下的视频是达世币创始人Evan Duffield和用户体验/用户界面设计开发部门负责人Chuck Williams对Dash "
 "Evolution平台开发流程和即将呈现的功能所做的描述。"
 
-#: ../../introduction/features.rst:596
+#: ../../introduction/features.rst:599
 msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
 msgstr "**Evolution Demo #1 - The First Dash DAP** , 2018年3月16日"
 
-#: ../../introduction/features.rst:604
+#: ../../introduction/features.rst:607
 msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr "**Evolution Demo #2 - Mobile Evolution**, 2018年4月25日"
 
-#: ../../introduction/features.rst:612
+#: ../../introduction/features.rst:615
 msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
 msgstr "**Evolution Demo #3 - Dashpay User Experience**, 2018年5月15日"
 
-#: ../../introduction/features.rst:620
+#: ../../introduction/features.rst:623
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr "**Chuck Williams on Evolution**, Dash Conference London, 2017年9月14日"
 
-#: ../../introduction/features.rst:628
+#: ../../introduction/features.rst:631
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""

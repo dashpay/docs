@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-04 06:56+0000\n"
+"POT-Creation-Date: 2019-05-13 04:51+0000\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
 "Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2019\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
@@ -285,6 +285,12 @@ msgid ""
 "more difficult to determine where your funds originated. The user may choose"
 " between 1-16 rounds of mixing."
 msgstr ""
+"Um die Beträge wirklich zu verschleiern, muss die Wallet diesen Vorgang "
+"mehrmals mit allen Denominationen wiederholen. Jedes Mal, wenn der Prozess "
+"vollständig durchgeführt wurde, wird dies als eine „Runde“ bezeichnet. Jede "
+"PrivateSend-Runde erhöht die Schwierigkeit den Ursprung eines Betrages "
+"herauszufinden. Die Nutzer können sich dafür entscheiden, den Mischvorgang "
+"1-16 Runden zu wiederholen."
 
 #: ../../introduction/features.rst:116
 msgid ""
@@ -917,15 +923,10 @@ msgstr "Sentinel"
 msgid ""
 "Sentinel is an autonomous agent for persisting, processing and automating "
 "Dash 12.1 governance objects and tasks, and for expanded functions in the "
-"upcoming Dash V13 release (Evolution). Sentinel is implemented as a Python "
+"upcoming Dash 1.0 release (Evolution). Sentinel is implemented as a Python "
 "application that binds to a local version 12.1 dashd instance on each Dash "
 "12.1 masternode."
 msgstr ""
-"Sentinel ist ein autonomer Prozessor zum persistieren, verarbeiten und "
-"automatisieren der Dash 12.1 Governance-Objekte und -Aufgaben sowie der "
-"erweiterten Funktionen der baldigen Dash V13 Veröffentlichung (Evolution). "
-"Sentinel ist als Python-Applikation implementiert, die an die lokale 12.1 "
-"dashd Version jeder Dash 12.1 Masternode gebunden ist."
 
 #: ../../introduction/features.rst:444
 msgid ""
@@ -1002,6 +1003,22 @@ msgid ""
 " Most wallets include a small fee by default, although some miners will "
 "process transactions even if no fee is included."
 msgstr ""
+"Transaktionen über das Dash-Netzwerk werden in den Blöcken der Blockchain "
+"aufgezeichnet. Die Größe jeder Transaktion wird in Bytes gemessen und es "
+"gibt keinen notwendigen Zusammenhang zwischen dem hohen Wert einer "
+"Transaktion und der Menge an Bytes, die zum Ausführen benötigt wird. Die "
+"Größe einer Transaktion hängt vielmehr von der Zahl der Inputs und Outputs "
+"an, die verwendet werden, da durch diese mehr Daten in den Block "
+"eingeschrieben werden müssen. Jeder neue Block wird von einem Miner "
+"generiert, der für die Schaffung des Blocks mit dem Block-Reward belohnt "
+"wird. Damit das Netzwerk nicht von Spam-Transaktionen überflutet werden "
+"kann, ist die Größe eines Blocks limitiert. Wenn die Menge an Transaktionen "
+"zunimmt, wird die Speicherkapazität des Blocks zu einem knappen Gut. Da "
+"Miner nicht dazu verpflichtet sind Transaktionen in die Blöcke aufzunehmen, "
+"kann eine freiwillige Transaktionsgebühr hinzugefügt werden, welche dem "
+"Miner einen Anreiz bietet, die Transaktion zu verarbeiten. Die meisten "
+"Wallets setzen von sich aus eine Transaktionsgebühr fest, auch wenn manche "
+"Miner eine Transaktion auch ohne Gebühren akzeptieren würden."
 
 #: ../../introduction/features.rst:497
 msgid ""
@@ -1016,6 +1033,17 @@ msgid ""
 "additional fee for InstantSend. The fee schedule for Dash 0.13.x as of "
 "December 2018 is as follows:"
 msgstr ""
+"Die Veröffentlichung von Dash 0.12.2.0 und die Aktivierung von DIP0001 "
+"reduzierte gleichzeitig die Gebühr um den Faktor 10 und erhöhte die maximale"
+" Blockgröße von 1MB auf 2MB, damit eine größere Zahl an günstigen "
+"Transaktionen verarbeitet werden konnte, auch wenn der Dash-Preis steigen "
+"sollte. Dash unterstützt außerdem :ref:`instantsend` und :ref:`privatesend` "
+"Transaktionen, welche eine andere und nicht-freiwillige Gebührenstruktur "
+"verwenden. Dash 0.13.0.0 führte den automatischen InstantSend ein, durch den"
+" die Masternodes jede Transaktion mit 4 oder weniger Inputs - die auch als "
+"\"einfache\" Transaktion bezeichnet werden - sichern, wodurch die "
+"Zusatzkosten für InstantSend entfallen. Die Gebührenstruktur für Dash 0.13.x"
+" sieht seit Dezember 2018 wie folgt aus: "
 
 #: ../../introduction/features.rst:510
 msgid "Transaction type"
@@ -1043,7 +1071,7 @@ msgstr "Pro kb versendeter Daten"
 
 #: ../../introduction/features.rst:514
 msgid "InstantSend autolock"
-msgstr ""
+msgstr "InstantSend Autolock"
 
 #: ../../introduction/features.rst:516
 msgid ".0001 DASH"
@@ -1072,6 +1100,16 @@ msgid ""
 "cents per transaction, depending on the number of inputs. These fees apply "
 "regardless of the Dash or dollar value of the transaction itself."
 msgstr ""
+"Nehmen wir als Beispiel eine einfache Standardtransaktion im Dash-Netzwerk "
+"mit einem Input, einem Output und einer Wechselgeldadresse, deren Größe "
+"meistens zwischen 200 und 400 Bytes liegt. Bei einem Preis von $100 pro Dash"
+" liegen die Gebühren zwischen $0.0002 - $0.0004, also bei etwa einem 1/50 "
+"Cent. Soll die Transaktion beim selben Dash-Preis mit InstantSend "
+"durchgeführt werden, fällt keine zusätzliche Gebühr mehr an, solange die "
+"Zahl der Inputs 4 nicht übersteigt. Eine komplexere InstantSend-Transaktion "
+"würde zwischen 1 und 2 Cent pro Transaktion kosten, je nach Anzahl der "
+"Inputs. Diese Gebühr wird erhoben, egal wie hoch der eigentliche Wert der "
+"Transaktion in Dash oder Dollar ist."
 
 #: ../../introduction/features.rst:531
 msgid ""
@@ -1089,6 +1127,21 @@ msgid ""
 "require several inputs, while InstantSend charges a fee of 0.0001 DASH per "
 "input. Always check your fees before sending a transaction."
 msgstr ""
+"PrivateSend kreiert Denominationen zu je 10, 1, 0.1, 0.01 und 0.001 Dash und"
+" mischt diese Denominationen mit denen anderer Nutzer. Die Schaffung der "
+"Denomination wird als normale Transaktionsgebühr verrechnet. Das Mischen ist"
+" kostenlos, doch um Spam-Angriffe zu verhindern, muss ca. jede zehnte Runde "
+"eine Gebühr von 0.0001 Dash bezahlt werden. Das Versenden einer PrivateSend-"
+"Transaktion kostet die gleiche Gebühr, wie eine normale Transaktion, doch um"
+" das Identifizieren des Nutzers durch die Wechselgeldadresse zu verhindern, "
+"wird die Gebühr immer auf die nächst-höhere Denomination aufgerundet. Dies "
+"ist typischerweise .001 Dash, weswegen es wichtig ist, die Gebühr vom "
+"Transaktionsbetrag abzuziehen, damit die Gebühr minimiert werden kann, wenn "
+"dies möglich ist. InstantSend und PrivateSend zu verbinden kann aus diesem "
+"Grund erhöhte Kosten verursachen, aber auch aus dem Grund, dass eine "
+"PrivateSend-Transaktion meistens mehrere Inputs benötigt und InstantSend pro"
+" Input 0.0001 Dash berechnet. Daher sollten die Nutzer jedes Mal die Gebühr "
+"im Auge behalten, wenn sie eine Transaktion durchführen."
 
 #: ../../introduction/features.rst:550
 msgid "Evolution"
@@ -1096,7 +1149,7 @@ msgstr "Evolution"
 
 #: ../../introduction/features.rst:552
 msgid ""
-"`Dash Evolution <https://www.dash.org/evolution/>`_ is the code name for a "
+"`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a "
 "decentralized currency platform built on Dash blockchain technology. The "
 "goal is to provide simple access to the unique features and benefits of Dash"
 " to assist in the creation of decentralized technology. Dash introduces a "
@@ -1104,36 +1157,24 @@ msgid ""
 "network, along with decentralized API access and a decentralized file "
 "system."
 msgstr ""
-"`Dash Evolution <https://www.dash.org/evolution/>`_ ist der Codename einer "
-"dezentralisierten Währungsplattform, die auf der Dash-Blockchaintechnologie "
-"aufbaut. Das Ziel ist es den einfachen Zugang zu den einzigartigen "
-"Funktionen und Vorteilen von Dash zu ermöglichen, um zur Schaffung "
-"dezentraler Technologie beizutragen. Dash verwendet ein Netzwerkdesign mit "
-"mehreren Ebenen, welche es den Nutzern erlauben verschiedene Dienste für das"
-" Netzwerk durchzuführen, wozu auch ein dezentralisierter API-Zugang und ein "
-"dezentralisiertes Speichersystem gehören werden. "
 
 #: ../../introduction/features.rst:560
 msgid ""
-"Dash Evolution will be released in stages. Dash Core releases 12.1 through "
-"to 12.4 will lay the groundwork for the decentralized features behind the "
-"scenes. An alpha version of Evolution is expected in the first half of 2018,"
-" including a basic implementation of DashDrive, Primitives, DAPI and a "
-"simple T3 wallet. This will be released together with a series of Dash "
-"Improvement Proposals (DIPs), followed by a testnet phase with most basic "
-"functionality, and a first stable release in summer 2018."
+"Dash Evolution will be released in stages. Dash Core releases 0.12.1 through"
+" to 0.12.3 lay the groundwork for the decentralized features behind the "
+"scenes. Version 0.13 introduces the foundation of Evolution, specifically "
+"`DIP2 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ and `DIP3 "
+"Deterministic Masternode Lists "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__. Version 0.14 "
+"establishes `DIP6 Long Living Masternode Quorums "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__. Expected in "
+"late 2019, Dash Core 1.0 will introduce key Evolution features such as "
+"username-based payments, the world's first decentralized API (DAPI) and a "
+"decentralized data storage system (Dash Drive) based on IPFS."
 msgstr ""
-"Dash Evolution wird in Phasen veröffentlicht werden. Die Dash Core "
-"Veröffentlichungen 12.1 bis 12.4 werden das Fundament für die "
-"dezentralisierten Funktionen im Hintergrund legen. Die Alpha-Version von "
-"Evolution soll im ersten Halbjahr 2018 veröffentlicht werden und einfache "
-"Versionen von DashDrive, Primitives, DAPI und der einfachen T3 Wallet "
-"beinhalten. Zusätzlich wird eine Reihe von Dash Improvement Proposals (DIPs)"
-" eingeführt werden, wodrauf eine Testnet-Phase mit den meisten "
-"Grundfunktionen und die erste stabile Veröffentlichung im Sommer 2018 folgen"
-" werden."
 
-#: ../../introduction/features.rst:569
+#: ../../introduction/features.rst:571
 msgid ""
 "Included below is our current work on Evolution, that adds many components "
 "such as:"
@@ -1141,15 +1182,13 @@ msgstr ""
 "Weiter unten befindet sich unsere momentane Arbeit an Evolution, durch "
 "welches folgende Komponenten integriert werden:"
 
-#: ../../introduction/features.rst:572
+#: ../../introduction/features.rst:574
 msgid ""
-"**DashDrive:** A decentralized shared file system for user data that lives "
+"**Dash Drive:** A decentralized shared file system for user data that lives "
 "on the second tier network"
 msgstr ""
-"**DashDrive:** Ein dezentralisiertes Cluster-Dateisystem, welches die "
-"Dateien der Nutzer auf der zweiten Netzwerksebene speichert"
 
-#: ../../introduction/features.rst:574
+#: ../../introduction/features.rst:576
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the "
 "network securely"
@@ -1157,7 +1196,7 @@ msgstr ""
 "**DAPI:** Eine dezentralisierte API, welches Nutzern der dritten Ebene den "
 "sicheren Zugang zum Netzwerk ermöglicht"
 
-#: ../../introduction/features.rst:576
+#: ../../introduction/features.rst:578
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients connected"
 " to the network via DAPI and run on various platforms"
@@ -1165,7 +1204,7 @@ msgstr ""
 "**DashPay Dezentralisierte Wallets:** Diese Wallets sind Light Clients, die "
 "sich über DAPI mit dem Netzwerk verbinden und auf diversen Plattform laufen"
 
-#: ../../introduction/features.rst:578
+#: ../../introduction/features.rst:580
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
@@ -1173,7 +1212,7 @@ msgstr ""
 "**Zweite Ebene:** Das Masternode-Netzwerk, welches die vergütete "
 "Infrastruktur des Projektes ermöglicht"
 
-#: ../../introduction/features.rst:580
+#: ../../introduction/features.rst:582
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
@@ -1181,7 +1220,7 @@ msgstr ""
 "**Budgets:** Die zweite Ebene hat Wahlrecht, um bestimmten Projekten des "
 "Netzwerks die Finanzierung durch das Budgetsystem zu ermöglichen"
 
-#: ../../introduction/features.rst:582
+#: ../../introduction/features.rst:584
 msgid ""
 "**Governance:** The second tier is given voting power to govern the currency"
 " and chart the course the currency takes"
@@ -1189,27 +1228,23 @@ msgstr ""
 "**Governance:** Die zweite Ebene hat Wahlrecht, um die Währung zu verwalten "
 "und Entscheidungen über die Richtung der Währung zu treffen"
 
-#: ../../introduction/features.rst:584
-msgid ""
-"**Quorum Chain:** This feature introduces a permanent stable masternode "
-"list, which can be used to calculate past and present quorums"
-msgstr ""
-"**Quorum Chain:** Diese Funktion führt eine permanente Masternode Liste ein,"
-" durch welche vergangene und momentane Quorums berechnet werden können"
-
 #: ../../introduction/features.rst:586
 msgid ""
-"**Social Wallet:** We introduce a social wallet, which allows friends lists,"
-" grouping of users and shared multisig accounts."
+"**Deterministic Masternode Lists:** This feature introduces an on-chain "
+"masternode list, which can be used to calculate past and present quorums"
 msgstr ""
-"**Social Wallet:** Wir wollen eine Social Wallet einführen, welche "
-"Freundeslisten, Gruppen und gemeinsame Multisig Accounts unterstützt."
 
-#: ../../introduction/features.rst:590
+#: ../../introduction/features.rst:589
+msgid ""
+"**Social Wallet:** We introduce a social wallet, which allows friends lists,"
+" grouping of users and shared multisig accounts"
+msgstr ""
+
+#: ../../introduction/features.rst:593
 msgid "Evolution Previews"
 msgstr "Evolution Previews"
 
-#: ../../introduction/features.rst:592
+#: ../../introduction/features.rst:595
 msgid ""
 "The following videos featuring Dash Founder Evan Duffield and Head of UI/UX "
 "Development Chuck Williams describe the development process and upcoming "
@@ -1219,25 +1254,25 @@ msgstr ""
 "Entwickler Chuck Williams den Entwicklungsprozess und die kommenden "
 "Funktionen der Dash Evolution Plattform."
 
-#: ../../introduction/features.rst:596
+#: ../../introduction/features.rst:599
 msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
 msgstr "**Evolution Demo #1 - Die erste Dash DAP**, 16 März 2018"
 
-#: ../../introduction/features.rst:604
+#: ../../introduction/features.rst:607
 msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 
-#: ../../introduction/features.rst:612
+#: ../../introduction/features.rst:615
 msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
 msgstr "**Evolution Demo #3 - Dashpay Benutzerfreundlichkeit**, 15 Mai 2018"
 
-#: ../../introduction/features.rst:620
+#: ../../introduction/features.rst:623
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr ""
 "**Chuck Williams über Evolution**, Dash Conference London, 14 September 2017"
 
-#: ../../introduction/features.rst:628
+#: ../../introduction/features.rst:631
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""

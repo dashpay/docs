@@ -105,45 +105,6 @@ collected here:
    Atomic Wallet Portfolio screen
 
 
-Ownbit
-======
-
-https://ownbit.io
-
-.. image:: img/ownbit.png
-   :width: 100px
-   :align: right
-   :target: https://ownbit.io
-
-Ownbit is a multi-currency and multi-signature capable mobile wallet
-with support for Dash. It allows you to manage multiple wallets and
-contacts to faciliate easy transactions.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.bitbill.www
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://itunes.apple.com/app/id1321798216
-
-Ownbit is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.bitbill.www>`__ 
-and the `Apple App Store for iOS <https://itunes.apple.com/app/id1321798216>`__.
-
-Documentation
--------------
-
-Join the `Ownbit Telegram group <https://t.me/bitbill>`_ or send an
-email to hi@bitbill.com for support with Ownbit.
-
-.. figure:: img/ownbit-wallet.png
-   :width: 180px
-
-   Ownbit wallet
-
 Cobo
 ====
 
@@ -422,14 +383,16 @@ http://www.exodus.io
 
 The Exodus wallet features an engaging visual design and can
 simultaneously store multiple currencies. It is available for Windows,
-Mac and Linux. It is also fully integrated with Shapeshift to offer
+Mac, Linux and iOS. It is also fully integrated with Shapeshift to offer
 exchange between the different currencies.
 
 Installation
 ------------
 
-All Exodus releases are available from https://www.exodus.io/releases -
+All Exodus releases are available from https://www.exodus.io/download -
 simply download and install the appropriate package for your system.
+Exodus is also available from the `Apple App Store for iOS
+<https://itunes.apple.com/app/id1414384820>`__.
 
 Documentation
 -------------
@@ -437,7 +400,6 @@ Documentation
 Exodus offers detailed documentation of all functions at
 http://support.exodus.io and a few quick links are also collected here:
 
-- `What is Exodus? <https://support.exodus.io/article/30-what-is-exodus>`_
 - `How do I install Exodus? <https://support.exodus.io/article/36-how-do-i-install-exodus>`_
 - `How do I get started with Exodus? <https://support.exodus.io/article/37-how-do-i-get-started-with-exodus>`_
 
@@ -575,6 +537,43 @@ Read the `FAQ <https://kurepay.com/ewallet.html>`__ or send an email to
 info@kurepay.com for support with KurePay.
 
 
+Magnum
+======
+
+https://magnumwallet.co
+
+.. image:: img/magnum.png
+   :width: 100px
+   :align: right
+   :target: https://magnumwallet.co
+
+Magnum is a multi-currency web and mobile wallet with support for 100+
+cryptocurrencies, including Dash. The wallet integrates Changelly for
+in-app exchange and supports staking, delegation and airdrop functions.
+Magnum focuses on providing a simple and secure interface to store and
+interact with your digital assets.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.magnum.wallet
+
+Magnum is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.btcc.wallet>`__.
+
+Documentation
+-------------
+
+Join the `Magnum Telegram group <https://t.me/magnumwalletco>`_ for
+Magnum support.
+
+.. figure:: img/magnum-wallet-mobile.png
+   :width: 133px
+
+   Magnum wallet running on Android
+
+
 Mobi
 ====
 
@@ -618,6 +617,46 @@ support with Mobi.
    :width: 133px
 
    Mobi wallet running on Android
+
+
+Ownbit
+======
+
+https://ownbit.io
+
+.. image:: img/ownbit.png
+   :width: 100px
+   :align: right
+   :target: https://ownbit.io
+
+Ownbit is a multi-currency and multi-signature capable mobile wallet
+with support for Dash. It allows you to manage multiple wallets and
+contacts to faciliate easy transactions.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.bitbill.www
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/app/id1321798216
+
+Ownbit is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.bitbill.www>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/app/id1321798216>`__.
+
+Documentation
+-------------
+
+Join the `Ownbit Telegram group <https://t.me/bitbill>`_ or send an
+email to hi@bitbill.com for support with Ownbit.
+
+.. figure:: img/ownbit-wallet.png
+   :width: 180px
+
+   Ownbit wallet
 
 
 Paytomat
@@ -720,14 +759,15 @@ Installation
 ------------
 
 .. image:: img/google-play-badge.png
-   :width: 100px
+   :width: 200px
    :target: https://play.google.com/store/apps/details?id=com.vegawallet.in
 
 .. image:: img/app-store.png
    :width: 180px
    :target: https://itunes.apple.com/app/id1449594992
 
-VegaWallet is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.vegawallet.in>`__ 
+VegaWallet desktop wallets are available from https://vegawallet.com for
+macOS and Windows. VegaWallet is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.vegawallet.in>`__ 
 and the `Apple App Store for iOS <https://itunes.apple.com/app/id1449594992>`__.
 
 Documentation

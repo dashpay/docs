@@ -62,19 +62,19 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.13.2.0/dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.3.0/dashcore-0.13.3.0-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.13.3.0-x86_64-linux-gnu.tar.gz
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-0.13.2/bin/dashd ~/.dashcore/
-  cp -f dashcore-0.13.2/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-0.13.3.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.13.3/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.13.3/bin/dash-cli ~/.dashcore/
 
 Restart Dash::
 
@@ -101,11 +101,11 @@ Updating Masternode Information
 
 Periodically, it may be necessary to update masternode information if
 any information relating to the owner or operator changes. Examples may
-include a change in IP address, change in owner/operator payout address,
-or change in percentage of the reward allocated to an operator. It is
-also possible to revoke a masternode's registered status (in the event
-of a security breach, for example) to force both owner and operator to
-update their details.
+include a change in IP address, change in owner/operator payout address
+or changes to the nominated voting/operator keys. It is also possible to
+revoke a masternode's registered status (in the event of a security
+breach, for example) to force both owner and operator to update their
+details.
 
 .. _dip3-update-service:
 
@@ -158,18 +158,18 @@ their own payout address. The ProUpRegTx takes the following syntax::
 Where:
 
 - ``proTxHash``: The transaction id of the initial ProRegTx
-- ``operatorKeyAddr``: An updated BLS public key, or 0 to use the last 
-  on-chain operator key
-- ``votingKeyAddr``: An updated voting key address, or 0 to use the last 
-  on-chain operator key
-- ``payoutAddress``: An updated Dash address for owner payments, or 0 to 
-  use the last on-chain operator key
+- ``operatorKeyAddr``: An updated BLS public key, or ``""`` to use the
+  last on-chain operator key
+- ``votingKeyAddr``: An updated voting key address, or ``""`` to use the
+  last on-chain operator key
+- ``payoutAddress``: An updated Dash address for owner payments, or 
+  ``""`` to use the last on-chain operator key
 - ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
   ``PayoutAddress`` will be used if not specified.
 
 Example to update payout address::
 
-  protx update_registrar cedce432ebabc9366f5eb1e3abc219558de9fbd2530a13589b698e4bf917b8ae 0 0 yi5kVoPQQ8xaVoriytJFzpvKomAQxg6zea
+  protx update_registrar cedce432ebabc9366f5eb1e3abc219558de9fbd2530a13589b698e4bf917b8ae "" "" yi5kVoPQQ8xaVoriytJFzpvKomAQxg6zea
 
 
 ProUpRevTx

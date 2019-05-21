@@ -130,7 +130,7 @@ Discussion:
 
 - Testnet announcement: https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef
 - Product brief: https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef
-- Testnet tools: https://docs.dash.org/en/latest/developers/testnet.html
+- Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
 - Issue tracking: https://github.com/dashpay/dash/issues/new
 
 Latest test binaries:
@@ -159,7 +159,7 @@ This release includes:
 Discussion:
 
 - https://www.dash.org/forum/threads/v12-3-testing.38475
-- Testnet tools: https://docs.dash.org/en/latest/developers/testnet.html
+- Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
 - Issue tracking: https://github.com/dashpay/dash/issues/new
 
 Latest test binaries:

@@ -4,20 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Julia Ogonkova <livingflcl@gmail.com>, 2018
-# Leon White <leon.white@dash.org>, 2018
 # Андрей Дегтяр <diusha1711@gmail.com>, 2019
 # Max Aronych <taofgoar@protonmail.com>, 2019
+# Leon White <leon.white@dash.org>, 2019
 # Дмитрий <dmitry.zhludin@gmail.com>, 2019
+# Julia Ogonkova <livingflcl@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-04 06:56+0000\n"
+"POT-Creation-Date: 2019-05-13 04:51+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Дмитрий <dmitry.zhludin@gmail.com>, 2019\n"
+"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -176,18 +176,18 @@ msgstr "Информация по обновлению мастеноды"
 msgid ""
 "Periodically, it may be necessary to update masternode information if any "
 "information relating to the owner or operator changes. Examples may include "
-"a change in IP address, change in owner/operator payout address, or change "
-"in percentage of the reward allocated to an operator. It is also possible to"
-" revoke a masternode's registered status (in the event of a security breach,"
-" for example) to force both owner and operator to update their details."
+"a change in IP address, change in owner/operator payout address or changes "
+"to the nominated voting/operator keys. It is also possible to revoke a "
+"masternode's registered status (in the event of a security breach, for "
+"example) to force both owner and operator to update their details."
 msgstr ""
-"Периодическии будет необходимо обновлять информацию о мастерноде, если "
-"какие-либо данные о владельце или операторе мастерноды изменятся. Например, "
-"это может быть IP адрес, изменение адреса выплат владельца/оператора или "
-"изменение процента награды, полагающейся оператору. Также есть возможность "
-"отозвать зарегистистрированный статус мастерноды (например, в случае проблем"
-" с безопасностью) для того, чтобы принудить и владельца и оператора обновить"
-" данные."
+"Периодически может возникнуть необходимость обновить информацию о "
+"мастерноде, если какие-либо данные о владельце или операторе мастерноды "
+"изменились. Например, это может быть IP адрес, изменение адреса выплат "
+"владельца/оператора или изменение назначенных для голосующего/оператора "
+"ключей. Также есть возможность отозвать зарегистрированный статус мастерноды"
+" (например, в случае проблем с безопасностью) для того, чтобы принудить и "
+"владельца, и оператора обновить данные."
 
 #: ../../masternodes/maintenance.rst:113
 msgid "ProUpServTx"
@@ -287,27 +287,27 @@ msgstr "``proTxHash``: id транзакции изначального ProRegTx
 
 #: ../../masternodes/maintenance.rst:161
 msgid ""
-"``operatorKeyAddr``: An updated BLS public key, or 0 to use the last on-"
-"chain operator key"
+"``operatorKeyAddr``: An updated BLS public key, or ``\"\"`` to use the last "
+"on-chain operator key"
 msgstr ""
-"``operatorKeyAddr``: Обновленный BLS публичный ключ или значение 0 для "
-"использования ключа последнего оператора в цепи."
+"``operatorKeyAddr``: Обновленный BLS публичный ключ или значение ``\"\"`` "
+"для использования ключа последнего оператора в цепи."
 
 #: ../../masternodes/maintenance.rst:163
 msgid ""
-"``votingKeyAddr``: An updated voting key address, or 0 to use the last on-"
-"chain operator key"
+"``votingKeyAddr``: An updated voting key address, or ``\"\"`` to use the "
+"last on-chain operator key"
 msgstr ""
-"``votingKeyAddr``: обновлённый адрес для ключа голосования или значение 0 "
-"для использования ключа последнего оператора в цепи."
+"``votingKeyAddr``: обновлённый адрес для ключа голосования или значение "
+"``\"\"`` для использования ключа последнего оператора в цепи."
 
 #: ../../masternodes/maintenance.rst:165
 msgid ""
-"``payoutAddress``: An updated Dash address for owner payments, or 0 to use "
-"the last on-chain operator key"
+"``payoutAddress``: An updated Dash address for owner payments, or ``\"\"`` "
+"to use the last on-chain operator key"
 msgstr ""
-"``payoutAddress``: обновлённый адрес для выплат владельцу или значение 0 для"
-" использования ключа последнего оператора в цепи."
+"``payoutAddress``: обновлённый адрес для выплат владельцу или значение "
+"``\"\"`` для использования ключа последнего оператора в цепи."
 
 #: ../../masternodes/maintenance.rst:167
 msgid ""
@@ -346,13 +346,13 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:194
 msgid ""
-"``reason`` (optional): Integer value indicating the revocation `reason "
+"``reason``: Integer value indicating the revocation `reason "
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-"
 "for-self-revocation-of-operators>`__"
 msgstr ""
-"``reason`` (по желанию): целочисленное значение, обозначающее `причину "
-"отзыва <https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a"
-"-reasons-for-self-revocation-of-operators>`__"
+"``reason``: целочисленное значение, обозначающее `причину отзыва "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-"
+"for-self-revocation-of-operators>`__"
 
 #: ../../masternodes/maintenance.rst:204
 msgid "DashCentral voting, verification and monitoring"
@@ -667,6 +667,14 @@ msgstr ""
 
 #: ../../masternodes/maintenance.rst:413
 msgid ""
+"`Blockchair <https://blockchair.com/dash>`__ offers a block explorer with "
+"detailed visualizations to analyse the Dash blockchain."
+msgstr ""
+"`Blockchair <https://blockchair.com/dash>`__ предлагает обозреватель блоков "
+"с подробными визуальными данными для анализа блокчейна Dash."
+
+#: ../../masternodes/maintenance.rst:417
+msgid ""
 "`CryptoID <https://chainz.cryptoid.info/>`__ offers a `Dash blockchain "
 "explorer <https://chainz.cryptoid.info/dash/>`__ and a `function "
 "<https://chainz.cryptoid.info/dash/masternodes.dws>`__ to view and map Dash "
@@ -677,7 +685,7 @@ msgstr ""
 "<https://chainz.cryptoid.info/dash/masternodes.dws>`__ для просмотра "
 "местоположения мастернод Dash."
 
-#: ../../masternodes/maintenance.rst:417
+#: ../../masternodes/maintenance.rst:421
 msgid ""
 "`BitInfoCharts <https://bitinfocharts.com>`_ offers a `page "
 "<https://bitinfocharts.com/dash/>`_ of price statistics and information and "
@@ -687,7 +695,7 @@ msgstr ""
 "<https://bitinfocharts.com/dash/>`_ со статистикой по ценам и `обозреватель "
 "блоков <https://bitinfocharts.com/dash/explorer/>`__."
 
-#: ../../masternodes/maintenance.rst:421
+#: ../../masternodes/maintenance.rst:425
 msgid ""
 "`CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ offers a range "
 "of statistics and data on most blockchains, including Dash."
@@ -696,7 +704,7 @@ msgstr ""
 "ряд статистических данных и информации по большинству блокчейнов, включая "
 "Dash."
 
-#: ../../masternodes/maintenance.rst:423
+#: ../../masternodes/maintenance.rst:427
 msgid ""
 "`CoinPayments <https://www.coinpayments.net/>`__ offers a simple `Dash "
 "blockchain explorer <http://explorer.coinpayments.net/index.php?chain=7>`__."
@@ -705,7 +713,7 @@ msgstr ""
 "`обозреватель блоков Dash "
 "<http://explorer.coinpayments.net/index.php?chain=7>`__."
 
-#: ../../masternodes/maintenance.rst:426
+#: ../../masternodes/maintenance.rst:430
 msgid ""
 "`Dash.org <https://www.dash.org/>`__ includes two blockchain explorers at "
 "`explorer.dash.org <http://explorer.dash.org/>`__ and `insight.dash.org "
@@ -715,7 +723,7 @@ msgstr ""
 "блоков: `explorer.dash.org <http://explorer.dash.org/>`__ и "
 "`insight.dash.org <http://insight.dash.org/>`__."
 
-#: ../../masternodes/maintenance.rst:429
+#: ../../masternodes/maintenance.rst:433
 msgid ""
 "`Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https "
 "://dash-bitcore1.trezor.io/>`__ powered by a `Dash fork "
@@ -727,15 +735,15 @@ msgstr ""
 "<https://github.com/dashpay/insight-ui-dash>`__ от `insight "
 "<https://insight.is/>`__, продвинутом инструменте API для блокчейна."
 
-#: ../../masternodes/maintenance.rst:435
+#: ../../masternodes/maintenance.rst:439
 msgid "Dash Masternode Tool"
 msgstr "Dash Masternode Tool"
 
-#: ../../masternodes/maintenance.rst:437
+#: ../../masternodes/maintenance.rst:441
 msgid "https://github.com/Bertrand256/dash-masternode-tool"
 msgstr "https://github.com/Bertrand256/dash-masternode-tool"
 
-#: ../../masternodes/maintenance.rst:439
+#: ../../masternodes/maintenance.rst:443
 msgid ""
 "Written and maintained by community member Bertrand256, Dash Masternode Tool"
 " (DMT) allows you to start a masternode from all major hardware wallets such"
@@ -750,15 +758,15 @@ msgstr ""
 "предложениям и вывода выплат для мастернод, не затрагивая залоговое "
 "подтверждение."
 
-#: ../../masternodes/maintenance.rst:446
+#: ../../masternodes/maintenance.rst:450
 msgid "DASH Ninja"
 msgstr "DASH Ninja"
 
-#: ../../masternodes/maintenance.rst:448
+#: ../../masternodes/maintenance.rst:452
 msgid "https://www.dashninja.pl"
 msgstr "https://www.dashninja.pl"
 
-#: ../../masternodes/maintenance.rst:450
+#: ../../masternodes/maintenance.rst:454
 msgid ""
 "DASH Ninja, operated by forum member and Dash Core developer elbereth, "
 "offers key statistics on the adoption of different versions of Dash across "
@@ -772,15 +780,15 @@ msgstr ""
 " управлением Dash, расписанием вылат и географическим распределением "
 "мастернод. Доступен простой обозреватель блоков."
 
-#: ../../masternodes/maintenance.rst:458
+#: ../../masternodes/maintenance.rst:462
 msgid "DashCentral"
 msgstr "DashCentral"
 
-#: ../../masternodes/maintenance.rst:460
+#: ../../masternodes/maintenance.rst:464
 msgid "https://www.dashcentral.org"
 msgstr "https://www.dashcentral.org"
 
-#: ../../masternodes/maintenance.rst:462
+#: ../../masternodes/maintenance.rst:466
 msgid ""
 "DashCentral, operated by forum member rango, offers an advanced service to "
 "monitor masternodes and vote on budget proposals through an advanced web "
@@ -794,15 +802,15 @@ msgstr ""
 "<https://play.google.com/store/apps/detai "
 "ls?id=net.paregov.android.dashcentral>`_."
 
-#: ../../masternodes/maintenance.rst:468
+#: ../../masternodes/maintenance.rst:472
 msgid "Masternode.me"
 msgstr "Masternode.me"
 
-#: ../../masternodes/maintenance.rst:470
+#: ../../masternodes/maintenance.rst:474
 msgid "https://stats.masternode.me"
 msgstr "https://stats.masternode.me"
 
-#: ../../masternodes/maintenance.rst:472
+#: ../../masternodes/maintenance.rst:476
 msgid ""
 "Masternode.me, operated by forum member and Dash Core developer moocowmoo, "
 "offers sequential reports on the price, generation rate, blockchain "
@@ -812,15 +820,15 @@ msgstr ""
 " moocowmoo. Предлагается информация по цене, скорости генерации блоков, "
 "информация по блокчейну и некоторая информация по мастернодам."
 
-#: ../../masternodes/maintenance.rst:477
+#: ../../masternodes/maintenance.rst:481
 msgid "Dash Masternode Information"
 msgstr "Dash Masternode Information"
 
-#: ../../masternodes/maintenance.rst:479
+#: ../../masternodes/maintenance.rst:483
 msgid "http://178.254.23.111/~pub/Dash/Dash_Info.html"
 msgstr "http://178.254.23.111/~pub/Dash/Dash_Info.html"
 
-#: ../../masternodes/maintenance.rst:481
+#: ../../masternodes/maintenance.rst:485
 msgid ""
 "This site, operated by forum member and Dash Core developer crowning, offers"
 " a visual representation of many key statistics of the Dash masternode "

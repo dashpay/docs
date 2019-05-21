@@ -75,7 +75,6 @@ Contents
 
    merchants/getting-started
    merchants/administrative
-   merchants/technical
 
 .. _network-docs:
 

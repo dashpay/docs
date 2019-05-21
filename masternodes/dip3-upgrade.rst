@@ -87,19 +87,19 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.13.2.0/dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.3.0/dashcore-0.13.3.0-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.13.3.0-x86_64-linux-gnu.tar.gz
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-0.13.2/bin/dashd ~/.dashcore/
-  cp -f dashcore-0.13.2/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-0.13.3.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.13.3/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.13.3/bin/dash-cli ~/.dashcore/
 
 Restart Dash::
 

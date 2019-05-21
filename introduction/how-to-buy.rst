@@ -176,8 +176,9 @@ Binance
   
   https://www.binance.com
 
-  Binance is a pure-crypto with a focus on ICOs and the Chinese market.
-  DASH is available for funding and can be traded against BTC.
+  Binance is a high-volume exchange with a very wide range of trading
+  pairs available. DASH is available for funding and can be traded
+  against BTC, ETH, TUSD and BNB.
 
 HitBTC
   .. image:: exchanges/hitbtc.png
@@ -327,6 +328,19 @@ Exmo
   Exmo is a UK-registered exchange offering fiat deposits in USD, EUR,
   USD and UAH (Ukrainian Hryvnia). DASH trading pairs exist for BTC, USD
   and RUB.
+
+Coinvest
+  .. image:: exchanges/coinvest.png
+     :width: 100px
+     :align: right
+     :target: https://coinve.st
+
+  https://coinve.st
+
+  Coinvest offers a range of products and research targeting both
+  consumers and institutional investors, as well as a wallet built
+  around smart contracts. DASH is available for trade against BTC, ETH,
+  GUSD and COIN.
 
 BitBay
   .. image:: exchanges/bitbay.png
@@ -592,6 +606,17 @@ ACX
 
   ACX is an Australian exchange accepting fiat deposits from Australian
   bank accounts. DASH is available to trade against BTC.
+
+Jinanace
+  .. image:: exchanges/jinance.png
+     :width: 200px
+     :align: right
+     :target: https://jinance.com.au
+
+  https://jinance.com.au
+
+  Jinance is an Australian exchange accepting fiat deposits from
+  Australian bank accounts. DASH is available to trade against AUD.
 
 OKEX
   .. image:: exchanges/okex.png
@@ -925,6 +950,17 @@ RealExchange
   RealExchange is a Brazil-based exchange offering support for a handful
   of currencies including Dash, Bitcoin, Litecoin, and SmartCash. The
   exchange also supports fiat trading pairs with the Brazilian real.
+
+3xBit
+  .. image:: exchanges/3xbit.png
+     :width: 200px
+     :align: right
+     :target: https://3xbit.com.br
+
+  https://3xbit.com.br
+
+  3xBit is a Brazil-based exchange offering many Dash pairs, as well as
+  trading against BTC and the dollar-proxy CREDIT coin.
 
 NegocieCoins
   .. image:: exchanges/negociecoins.png
@@ -1386,6 +1422,18 @@ Cointree
   payment options and a range of learning materials to help get started
   with cryptocurrencies.
 
+Crypto Voucher
+  .. image:: exchanges/cryptovoucher.png
+     :width: 200px
+     :align: right
+     :target: https://cryptovoucher.io
+
+  https://cryptovoucher.io
+
+  Crypto Voucher allows you to instantly buy Dash and other
+  cryptocurrencies using credit cards, SEPA transfers, giftcards and in
+  offline stores. A number of online distributors are also supported.
+
 Bitit
   .. image:: exchanges/bitit.png
      :width: 150px
@@ -1606,6 +1654,18 @@ Mercury Cash
   Ethereum and Dash, and deposited or withdrawn in local currencies
   through a number of methods, including credit cards.
 
+Bitcoin.de
+  .. image:: exchanges/bitcoin-de.png
+     :width: 200px
+     :align: right
+     :target: https://www.bitcoin.de
+
+  https://www.bitcoin.de
+
+  Bitcoin.de allows user to post offers to buy or sell Dash and Bitcoin
+  within their region or country. The users then arrange the deal
+  between themselves.
+
 cryptomonster
   .. image:: exchanges/cryptomonster.png
      :width: 200px
@@ -1656,6 +1716,18 @@ BasiChange
   BasiChange offers exchange, trading and OTC crypto sales with a focus
   on Venezuela and Colombia.
 
+Daexs
+  .. image:: exchanges/daexs.png
+     :width: 200px
+     :align: right
+     :target: https://daexs.com
+
+  https://daexs.com
+
+  Daexs is a cryptocurrency exchange based in Colombia with Dash and
+  Bitcoin markets trading against the Colombian Peso (COP).
+
+
 CryptoWay
   .. image:: exchanges/cryptoway.png
      :width: 200px
@@ -1669,16 +1741,38 @@ CryptoWay
   and simple platform. You can also link your bank account for efficient
   processing of deposits and withdrawals.
 
+Kamoney
+  .. image:: exchanges/kamoney.png
+     :width: 148px
+     :align: right
+     :target: https://www.kamoney.com.br
 
-Stratum CoinBR
+  https://www.kamoney.com.br
+
+  Kamoney is a Brazil-based cryptocurrency vendor offering services to
+  buy and sell Dash, Bitcoin and Ethereum in exchange for Brazilian
+  real, as well as payment services in Brazil.
+
+BitJá
+  .. image:: exchanges/bitja.png
+     :width: 80px
+     :align: right
+     :target: https://www.bitja.com.br
+
+  https://www.bitja.com.br
+
+  BitJá is a Brazil-based cryptocurrency vendor offering services to buy
+  and sell Dash, Bitcoin and Ethereum in exchange for Brazilian real.
+
+Stratum
   .. image:: exchanges/stratum.png
      :width: 200px
      :align: right
-     :target: https://coinbr.io
+     :target: https://stratum.hk
 
-  https://coinbr.io
+  https://stratum.hk
 
-  CoinBR is a Brazil-based cryptocurrency company offering a variety of
+  Stratum is a Brazil-based cryptocurrency company offering a variety of
   services including an exchange, mining, bill payment, point-of-sale,
   and more. Dash is available for purchase at over 13,000 locations
   around Brazil.

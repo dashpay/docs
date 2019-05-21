@@ -422,7 +422,7 @@ instructions linked below:
 
 - KeePass: https://keepass.info/help/v2/setup.html
 - KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md
-- Dash Core: https://docs.dash.org/en/latest/wallets/dashcore/installation.html
+- Dash Core: https://docs.dash.org/en/stable/wallets/dashcore/installation.html
 
 Commands
 --------

@@ -32,7 +32,7 @@ supports InstantSend. Larger integrations may require some customisation
 or cooperation with a specialist payment processor such as `ePaymints
 <http://epaymints.com>`__. This documentation also describes the
 :ref:`administrative <merchants-administrative>` and  :ref:`technical
-<merchants-technical>` steps required to integrate  various Dash
+<integration>` steps required to integrate various Dash
 services.
 
 Any Dash received in payment can be automatically converted to the fiat
@@ -343,10 +343,10 @@ specified shortly after payment is complete.
 Point-of-Sale with Spark
 ------------------------
 
-`Spark Payments <https://www.dash.org/forum/threads/39665/>`__ allows
-you to quickly start accepting point-of-sale payments in Dash at a
-physical store. The system works as an app, and is available for
-Android, macOS, Windows and Linux, with an iOS progressive web app (`PWA
+`Spark Payments <https://get-spark.com>`__ allows you to quickly start
+accepting point-of-sale payments in Dash at a physical store. The system
+works as an app, and is available for Android, macOS, Windows and Linux,
+with an iOS progressive web app (`PWA
 <https://en.wikipedia.org/wiki/Progressive_Web_Apps>`_) in development.
 
 The project is an external terminal application for processing Dash

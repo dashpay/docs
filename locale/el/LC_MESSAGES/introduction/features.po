@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-04 06:56+0000\n"
+"POT-Creation-Date: 2019-05-13 04:51+0000\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
 "Last-Translator: John Theman <Grdash@mail.com>, 2018\n"
 "Language-Team: Greek (https://www.transifex.com/dash/teams/37570/el/)\n"
@@ -619,7 +619,7 @@ msgstr "Sentinel"
 msgid ""
 "Sentinel is an autonomous agent for persisting, processing and automating "
 "Dash 12.1 governance objects and tasks, and for expanded functions in the "
-"upcoming Dash V13 release (Evolution). Sentinel is implemented as a Python "
+"upcoming Dash 1.0 release (Evolution). Sentinel is implemented as a Python "
 "application that binds to a local version 12.1 dashd instance on each Dash "
 "12.1 masternode."
 msgstr ""
@@ -772,7 +772,7 @@ msgstr ""
 
 #: ../../introduction/features.rst:552
 msgid ""
-"`Dash Evolution <https://www.dash.org/evolution/>`_ is the code name for a "
+"`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a "
 "decentralized currency platform built on Dash blockchain technology. The "
 "goal is to provide simple access to the unique features and benefits of Dash"
 " to assist in the creation of decentralized technology. Dash introduces a "
@@ -783,98 +783,103 @@ msgstr ""
 
 #: ../../introduction/features.rst:560
 msgid ""
-"Dash Evolution will be released in stages. Dash Core releases 12.1 through "
-"to 12.4 will lay the groundwork for the decentralized features behind the "
-"scenes. An alpha version of Evolution is expected in the first half of 2018,"
-" including a basic implementation of DashDrive, Primitives, DAPI and a "
-"simple T3 wallet. This will be released together with a series of Dash "
-"Improvement Proposals (DIPs), followed by a testnet phase with most basic "
-"functionality, and a first stable release in summer 2018."
+"Dash Evolution will be released in stages. Dash Core releases 0.12.1 through"
+" to 0.12.3 lay the groundwork for the decentralized features behind the "
+"scenes. Version 0.13 introduces the foundation of Evolution, specifically "
+"`DIP2 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ and `DIP3 "
+"Deterministic Masternode Lists "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__. Version 0.14 "
+"establishes `DIP6 Long Living Masternode Quorums "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__. Expected in "
+"late 2019, Dash Core 1.0 will introduce key Evolution features such as "
+"username-based payments, the world's first decentralized API (DAPI) and a "
+"decentralized data storage system (Dash Drive) based on IPFS."
 msgstr ""
 
-#: ../../introduction/features.rst:569
+#: ../../introduction/features.rst:571
 msgid ""
 "Included below is our current work on Evolution, that adds many components "
 "such as:"
 msgstr ""
 
-#: ../../introduction/features.rst:572
+#: ../../introduction/features.rst:574
 msgid ""
-"**DashDrive:** A decentralized shared file system for user data that lives "
+"**Dash Drive:** A decentralized shared file system for user data that lives "
 "on the second tier network"
 msgstr ""
 
-#: ../../introduction/features.rst:574
+#: ../../introduction/features.rst:576
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the "
 "network securely"
 msgstr ""
 
-#: ../../introduction/features.rst:576
+#: ../../introduction/features.rst:578
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients connected"
 " to the network via DAPI and run on various platforms"
 msgstr ""
 
-#: ../../introduction/features.rst:578
+#: ../../introduction/features.rst:580
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
 msgstr ""
 
-#: ../../introduction/features.rst:580
+#: ../../introduction/features.rst:582
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
 msgstr ""
 
-#: ../../introduction/features.rst:582
+#: ../../introduction/features.rst:584
 msgid ""
 "**Governance:** The second tier is given voting power to govern the currency"
 " and chart the course the currency takes"
 msgstr ""
 
-#: ../../introduction/features.rst:584
-msgid ""
-"**Quorum Chain:** This feature introduces a permanent stable masternode "
-"list, which can be used to calculate past and present quorums"
-msgstr ""
-
 #: ../../introduction/features.rst:586
 msgid ""
-"**Social Wallet:** We introduce a social wallet, which allows friends lists,"
-" grouping of users and shared multisig accounts."
+"**Deterministic Masternode Lists:** This feature introduces an on-chain "
+"masternode list, which can be used to calculate past and present quorums"
 msgstr ""
 
-#: ../../introduction/features.rst:590
+#: ../../introduction/features.rst:589
+msgid ""
+"**Social Wallet:** We introduce a social wallet, which allows friends lists,"
+" grouping of users and shared multisig accounts"
+msgstr ""
+
+#: ../../introduction/features.rst:593
 msgid "Evolution Previews"
 msgstr ""
 
-#: ../../introduction/features.rst:592
+#: ../../introduction/features.rst:595
 msgid ""
 "The following videos featuring Dash Founder Evan Duffield and Head of UI/UX "
 "Development Chuck Williams describe the development process and upcoming "
 "features of the Dash Evolution platform."
 msgstr ""
 
-#: ../../introduction/features.rst:596
+#: ../../introduction/features.rst:599
 msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
 msgstr ""
 
-#: ../../introduction/features.rst:604
+#: ../../introduction/features.rst:607
 msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr ""
 
-#: ../../introduction/features.rst:612
+#: ../../introduction/features.rst:615
 msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
 msgstr ""
 
-#: ../../introduction/features.rst:620
+#: ../../introduction/features.rst:623
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr ""
 
-#: ../../introduction/features.rst:628
+#: ../../introduction/features.rst:631
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""

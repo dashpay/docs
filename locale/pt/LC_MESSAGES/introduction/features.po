@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-04 06:56+0000\n"
+"POT-Creation-Date: 2019-05-13 04:51+0000\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
 "Last-Translator: oscar junior <geleira@gmail.com>, 2018\n"
 "Language-Team: Portuguese (https://www.transifex.com/dash/teams/37570/pt/)\n"
@@ -893,15 +893,10 @@ msgstr "Sentinel"
 msgid ""
 "Sentinel is an autonomous agent for persisting, processing and automating "
 "Dash 12.1 governance objects and tasks, and for expanded functions in the "
-"upcoming Dash V13 release (Evolution). Sentinel is implemented as a Python "
+"upcoming Dash 1.0 release (Evolution). Sentinel is implemented as a Python "
 "application that binds to a local version 12.1 dashd instance on each Dash "
 "12.1 masternode."
 msgstr ""
-"O Sentinel é um agente autônomo para persistir, processar e automatizar "
-"objetos e tarefas de controle do Dash 12.1 e para funções expandidas na "
-"próxima versão do Dash V13 (Evolution). O Sentinel é implementado como um "
-"aplicativo Python que se liga a uma instância dashd da versão 12.1 local em "
-"cada masternode do Dash 12.1."
 
 #: ../../introduction/features.rst:444
 msgid ""
@@ -1070,7 +1065,7 @@ msgstr "Evolution"
 
 #: ../../introduction/features.rst:552
 msgid ""
-"`Dash Evolution <https://www.dash.org/evolution/>`_ is the code name for a "
+"`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a "
 "decentralized currency platform built on Dash blockchain technology. The "
 "goal is to provide simple access to the unique features and benefits of Dash"
 " to assist in the creation of decentralized technology. Dash introduces a "
@@ -1078,33 +1073,24 @@ msgid ""
 "network, along with decentralized API access and a decentralized file "
 "system."
 msgstr ""
-"`Dash Evolution <https://www.dash.org/evolution/>`_ é o nome de código para "
-"uma plataforma de moeda descentralizada construída na tecnologia Dash "
-"blockchain. O objetivo é fornecer acesso simples aos recursos e benefícios "
-"exclusivos do Dash para auxiliar na criação de tecnologia descentralizada. O"
-" Dash apresenta um projeto de rede em camadas, que permite que os usuários "
-"façam vários trabalhos para a rede, juntamente com o acesso descentralizado "
-"à API e um sistema de arquivos descentralizado."
 
 #: ../../introduction/features.rst:560
 msgid ""
-"Dash Evolution will be released in stages. Dash Core releases 12.1 through "
-"to 12.4 will lay the groundwork for the decentralized features behind the "
-"scenes. An alpha version of Evolution is expected in the first half of 2018,"
-" including a basic implementation of DashDrive, Primitives, DAPI and a "
-"simple T3 wallet. This will be released together with a series of Dash "
-"Improvement Proposals (DIPs), followed by a testnet phase with most basic "
-"functionality, and a first stable release in summer 2018."
+"Dash Evolution will be released in stages. Dash Core releases 0.12.1 through"
+" to 0.12.3 lay the groundwork for the decentralized features behind the "
+"scenes. Version 0.13 introduces the foundation of Evolution, specifically "
+"`DIP2 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ and `DIP3 "
+"Deterministic Masternode Lists "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__. Version 0.14 "
+"establishes `DIP6 Long Living Masternode Quorums "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__. Expected in "
+"late 2019, Dash Core 1.0 will introduce key Evolution features such as "
+"username-based payments, the world's first decentralized API (DAPI) and a "
+"decentralized data storage system (Dash Drive) based on IPFS."
 msgstr ""
-"Dash Evolution será lançado em etapas. Os lançamentos do Dash Core de 12.1 a"
-" 12.4 lançarão as bases para os recursos descentralizados. Espera-se uma "
-"versão alfa do Evolution no primeiro semestre de 2018, incluindo uma "
-"implementação básica do DashDrive, Primitives, DAPI e uma simples carteira "
-"T3. Este será lançado juntamente com uma série de Propostas de Melhoria do "
-"Dash (DIPs), seguido por uma fase de teste com a funcionalidade mais básica,"
-" e uma primeira versão estável no verão de 2018."
 
-#: ../../introduction/features.rst:569
+#: ../../introduction/features.rst:571
 msgid ""
 "Included below is our current work on Evolution, that adds many components "
 "such as:"
@@ -1112,15 +1098,13 @@ msgstr ""
 "Incluído abaixo está o nosso trabalho atual no Evolution, que adiciona "
 "muitos componentes como:"
 
-#: ../../introduction/features.rst:572
+#: ../../introduction/features.rst:574
 msgid ""
-"**DashDrive:** A decentralized shared file system for user data that lives "
+"**Dash Drive:** A decentralized shared file system for user data that lives "
 "on the second tier network"
 msgstr ""
-"**DashDrive:** Um sistema de arquivos compartilhados descentralizado para "
-"dados do usuário que residem na rede de segundo nível"
 
-#: ../../introduction/features.rst:574
+#: ../../introduction/features.rst:576
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the "
 "network securely"
@@ -1128,7 +1112,7 @@ msgstr ""
 "**DAPI:** Uma API descentralizada que permite que usuários de terceira "
 "camada acessem a rede com segurança"
 
-#: ../../introduction/features.rst:576
+#: ../../introduction/features.rst:578
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients connected"
 " to the network via DAPI and run on various platforms"
@@ -1136,7 +1120,7 @@ msgstr ""
 "**DashPay Carteiras Descentralizadas:** Essas carteiras são clientes leves "
 "conectados à rede via DAPI e executados em várias plataformas"
 
-#: ../../introduction/features.rst:578
+#: ../../introduction/features.rst:580
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
@@ -1144,7 +1128,7 @@ msgstr ""
 "**Segunda Camada:** A rede masternode, que fornece infraestrutura compensada"
 " para o projeto"
 
-#: ../../introduction/features.rst:580
+#: ../../introduction/features.rst:582
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
@@ -1152,7 +1136,7 @@ msgstr ""
 "**Budgets:** O segundo nível é dado o poder de voto para alocar fundos para "
 "projetos específicos na rede através do sistema de orçamento"
 
-#: ../../introduction/features.rst:582
+#: ../../introduction/features.rst:584
 msgid ""
 "**Governance:** The second tier is given voting power to govern the currency"
 " and chart the course the currency takes"
@@ -1160,28 +1144,23 @@ msgstr ""
 "**Governanca:** O segundo escalão tem poder de voto para governar a moeda e "
 "traçar o rumo que a moeda leva."
 
-#: ../../introduction/features.rst:584
-msgid ""
-"**Quorum Chain:** This feature introduces a permanent stable masternode "
-"list, which can be used to calculate past and present quorums"
-msgstr ""
-"**Quorum Chain:** Esse recurso introduz uma lista de masternodes estáveis "
-"permanentes, que pode ser usada para calcular os quóruns passados e "
-"presentes"
-
 #: ../../introduction/features.rst:586
 msgid ""
-"**Social Wallet:** We introduce a social wallet, which allows friends lists,"
-" grouping of users and shared multisig accounts."
+"**Deterministic Masternode Lists:** This feature introduces an on-chain "
+"masternode list, which can be used to calculate past and present quorums"
 msgstr ""
-"**Carteira Social:** Introduzimos uma carteira social, que permite listas de"
-" amigos, agrupamento de usuários e contas compartilhadas multisig."
 
-#: ../../introduction/features.rst:590
+#: ../../introduction/features.rst:589
+msgid ""
+"**Social Wallet:** We introduce a social wallet, which allows friends lists,"
+" grouping of users and shared multisig accounts"
+msgstr ""
+
+#: ../../introduction/features.rst:593
 msgid "Evolution Previews"
 msgstr "Evolution Previews"
 
-#: ../../introduction/features.rst:592
+#: ../../introduction/features.rst:595
 msgid ""
 "The following videos featuring Dash Founder Evan Duffield and Head of UI/UX "
 "Development Chuck Williams describe the development process and upcoming "
@@ -1191,26 +1170,26 @@ msgstr ""
 "Desenvolvimento UI/UX, Chuck Williams, descrevem o processo de "
 "desenvolvimento e os recursos futuros da plataforma Dash Evolution."
 
-#: ../../introduction/features.rst:596
+#: ../../introduction/features.rst:599
 msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
 msgstr "**Evolution Demo #1 - O Primeiro Dash DAP**, 16 Março 2018"
 
-#: ../../introduction/features.rst:604
+#: ../../introduction/features.rst:607
 msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr "**Evolution Demo #2 - Mobile Evolution**, 25 Abril2018"
 
-#: ../../introduction/features.rst:612
+#: ../../introduction/features.rst:615
 msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
 msgstr "**Evolution Demo #3 - Dashpay User Experience**, 15 Maio2018"
 
-#: ../../introduction/features.rst:620
+#: ../../introduction/features.rst:623
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr ""
 "**Chuck Williams on Evolution**, Dash Conferencia em London, 14 Setembro de "
 "2017"
 
-#: ../../introduction/features.rst:628
+#: ../../introduction/features.rst:631
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""

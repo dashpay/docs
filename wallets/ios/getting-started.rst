@@ -77,31 +77,3 @@ TouchID). The transaction will then be sent.
     :width: 160 px
 
 *Sending Dash from iOS Dash Wallet*
-
-
-Sending to a Bitcoin address
-----------------------------
-
-You can also send from your Dash Wallet directly to a Bitcoin address
-using services provided by ShapeShift that are integrated directly in
-the wallet. If you scan or enter a Bitcoin address, you will be asked to
-enter the amount to be send in Bitcoin instead of Dash. Once you have
-entered the amount, click the **Shapeshift!** button shown an additional
-confirmation screen to confirm the ShapeShift fees before the
-transaction is processed. Make sure your destination Bitcoin address on
-this screen is correct. (If you see an error message about the value
-being too low, tap the greyed out Dash amount at the top to specify the
-amount to be transferred in Dash instead of Bitcoin.) Once your
-transaction is accepted, the Dash Wallet for iOS will display
-**Shapeshift in progress** until the transaction is complete.
-
-.. image:: img/ios-shapeshift1.png
-    :width: 160 px
-.. image:: img/ios-shapeshift2.png
-    :width: 160 px
-.. image:: img/ios-shapeshift3.png
-    :width: 160 px
-.. image:: img/ios-shapeshift4.png
-    :width: 160 px
-
-*Sending Dash to a Bitcoin address via ShapeShift from iOS Dash Wallet*

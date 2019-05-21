@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Leon White <leon.white@dash.org>, 2018
 # Kien Bui <kientemp2@gmail.com>, 2018
+# Leon White <leon.white@dash.org>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-04 06:56+0000\n"
+"POT-Creation-Date: 2019-05-13 04:51+0000\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
-"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2018\n"
+"Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -897,15 +897,10 @@ msgstr "Sentinel"
 msgid ""
 "Sentinel is an autonomous agent for persisting, processing and automating "
 "Dash 12.1 governance objects and tasks, and for expanded functions in the "
-"upcoming Dash V13 release (Evolution). Sentinel is implemented as a Python "
+"upcoming Dash 1.0 release (Evolution). Sentinel is implemented as a Python "
 "application that binds to a local version 12.1 dashd instance on each Dash "
 "12.1 masternode."
 msgstr ""
-"SentinelSentinel là một tác nhân động để duy trì, xử lý và tự động hóa các "
-"đối tượng quản trị và các nhiệm vụ của Dash 12.1 và các chức năng mở rộng "
-"phiên bản Dash V13 sắp tới (Evolution). Sentinel được thực hiện như một ứng "
-"dụng Python liên kết với một phiên phiên bản cục bộ của dashd 12.1 hiện diện"
-" trên mỗi Dash masternode 12.1."
 
 #: ../../introduction/features.rst:444
 msgid ""
@@ -1075,7 +1070,7 @@ msgstr "Evolution"
 
 #: ../../introduction/features.rst:552
 msgid ""
-"`Dash Evolution <https://www.dash.org/evolution/>`_ is the code name for a "
+"`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a "
 "decentralized currency platform built on Dash blockchain technology. The "
 "goal is to provide simple access to the unique features and benefits of Dash"
 " to assist in the creation of decentralized technology. Dash introduces a "
@@ -1083,33 +1078,24 @@ msgid ""
 "network, along with decentralized API access and a decentralized file "
 "system."
 msgstr ""
-"`Dash Evolution <https://www.dash.org/evolution/>`_ là tên mã cho một nền "
-"tảng tiền phi tập trung được xây dựng trên công nghệ blockchain của Dash. "
-"Mục đích là cung cấp cách truy cập đơn giản đến những tính năng độc đáo và "
-"lợi ích của Dash nhằm hỗ trợ việc tạo ra công nghệ phi tập trung. Dash giới "
-"thiệu một thiết kế mạng phân tầng, nó cho phép người dùng thực hiện rất "
-"nhiều công việc trên mạng lưới, cùng với việc truy cập một phi tập trung và "
-"một hệ thống file phi tập trung."
 
 #: ../../introduction/features.rst:560
 msgid ""
-"Dash Evolution will be released in stages. Dash Core releases 12.1 through "
-"to 12.4 will lay the groundwork for the decentralized features behind the "
-"scenes. An alpha version of Evolution is expected in the first half of 2018,"
-" including a basic implementation of DashDrive, Primitives, DAPI and a "
-"simple T3 wallet. This will be released together with a series of Dash "
-"Improvement Proposals (DIPs), followed by a testnet phase with most basic "
-"functionality, and a first stable release in summer 2018."
+"Dash Evolution will be released in stages. Dash Core releases 0.12.1 through"
+" to 0.12.3 lay the groundwork for the decentralized features behind the "
+"scenes. Version 0.13 introduces the foundation of Evolution, specifically "
+"`DIP2 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ and `DIP3 "
+"Deterministic Masternode Lists "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__. Version 0.14 "
+"establishes `DIP6 Long Living Masternode Quorums "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__. Expected in "
+"late 2019, Dash Core 1.0 will introduce key Evolution features such as "
+"username-based payments, the world's first decentralized API (DAPI) and a "
+"decentralized data storage system (Dash Drive) based on IPFS."
 msgstr ""
-"Dash Evolution sẽ được công bố theo các giai đoạn. Dash Core với các phiên "
-"bản từ 12.1 đến 12.4 sẽ đặt nền tảng cho các tính năng phi tập trung ở phần "
-"hậu cảnh. Phiên bản Alpha của Evolution dự kiến sẽ ra mắt vào nửa đầu năm "
-"2018, bao gồm tính năng cơ bản của DashDrive, Primitives, DAPI và một ví T3 "
-"đơn giản. Nó cũng được giới thiệu cùng với một loạt các Đề xuất Cải tiến "
-"Dash (DIPs), tiếp theo bởi giai đoạn testnet cùng với những tính năng cơ bản"
-" nhất, và phiên bản ổn định đầu tiên sẽ được ra mắt vào mùa hè năm 2018."
 
-#: ../../introduction/features.rst:569
+#: ../../introduction/features.rst:571
 msgid ""
 "Included below is our current work on Evolution, that adds many components "
 "such as:"
@@ -1117,15 +1103,13 @@ msgstr ""
 "Dưới đây là công việc hiện tại của chúng tôi về Evolution, ngoài ra còn có "
 "thêm nhiều thành phần như:"
 
-#: ../../introduction/features.rst:572
+#: ../../introduction/features.rst:574
 msgid ""
-"**DashDrive:** A decentralized shared file system for user data that lives "
+"**Dash Drive:** A decentralized shared file system for user data that lives "
 "on the second tier network"
 msgstr ""
-"**DashDrive:** Một hệ thống chia sẻ file cho dữ liệu của người dùng được lưu"
-" trữ trên mạng bậc hai"
 
-#: ../../introduction/features.rst:574
+#: ../../introduction/features.rst:576
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the "
 "network securely"
@@ -1133,7 +1117,7 @@ msgstr ""
 "**DAPI:** Là giao diện lập trình phi tập trung cho phép người dùng trên các "
 "ứng dụng bậc 3 có thể truy cập mạng lưới một cách an toàn"
 
-#: ../../introduction/features.rst:576
+#: ../../introduction/features.rst:578
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients connected"
 " to the network via DAPI and run on various platforms"
@@ -1141,14 +1125,14 @@ msgstr ""
 "**DashPay Decentralized Wallets:** Là những ví nhẹ được kết nối với mạng "
 "thông qua DAPI và chạy trên nhiều nền tảng khác nhau"
 
-#: ../../introduction/features.rst:578
+#: ../../introduction/features.rst:580
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
 msgstr ""
 "**Bậc hai:** Là mạng lưới masternode, nó cung cấp hạ tầng bổ sung cho dự án"
 
-#: ../../introduction/features.rst:580
+#: ../../introduction/features.rst:582
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
@@ -1156,7 +1140,7 @@ msgstr ""
 "**Ngân sách:** Mạng bậc hai cho phép việc bỏ phiếu để cấp phát ngân sách cho"
 " những dự án cụ thể của mạng lưới qua hệ thống ngân sách"
 
-#: ../../introduction/features.rst:582
+#: ../../introduction/features.rst:584
 msgid ""
 "**Governance:** The second tier is given voting power to govern the currency"
 " and chart the course the currency takes"
@@ -1164,28 +1148,23 @@ msgstr ""
 "**Quản trị:** Mạng bậc hai cho phép việc bỏ phiếu để quản trị hệ thống tiền "
 "tệ và quản lý các hoạt động cần thiết của hệ thống tiền tệ"
 
-#: ../../introduction/features.rst:584
-msgid ""
-"**Quorum Chain:** This feature introduces a permanent stable masternode "
-"list, which can be used to calculate past and present quorums"
-msgstr ""
-"**Chuỗi quorum:** Tính năng này đưa ra một danh sách masternode ổn định, nó "
-"có thể được dùng để tính toán những quorum trong quá khứ và hiện tại"
-
 #: ../../introduction/features.rst:586
 msgid ""
-"**Social Wallet:** We introduce a social wallet, which allows friends lists,"
-" grouping of users and shared multisig accounts."
+"**Deterministic Masternode Lists:** This feature introduces an on-chain "
+"masternode list, which can be used to calculate past and present quorums"
 msgstr ""
-"**Social Wallet:** Chúng tôi giới thiệu một social wallet hay còn gọi là ví "
-"xã hội, nó cung cấp tính năng danh sách bạn bè, nhóm người dùng, và các tài "
-"khoản chia sẻ đa chữ ký."
 
-#: ../../introduction/features.rst:590
+#: ../../introduction/features.rst:589
+msgid ""
+"**Social Wallet:** We introduce a social wallet, which allows friends lists,"
+" grouping of users and shared multisig accounts"
+msgstr ""
+
+#: ../../introduction/features.rst:593
 msgid "Evolution Previews"
 msgstr "Xem trước về Evolution"
 
-#: ../../introduction/features.rst:592
+#: ../../introduction/features.rst:595
 msgid ""
 "The following videos featuring Dash Founder Evan Duffield and Head of UI/UX "
 "Development Chuck Williams describe the development process and upcoming "
@@ -1195,27 +1174,27 @@ msgstr ""
 " và trưởng nhóm phát triển UI/UX là Chuck Williams mô tả quy trình phát "
 "triển và những tính năng dự kiến của nền tảng Dash Evolution."
 
-#: ../../introduction/features.rst:596
+#: ../../introduction/features.rst:599
 msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
 msgstr "**Evolution Demo #1 - The First Dash DAP**, 16 tháng 3 năm 2018"
 
-#: ../../introduction/features.rst:604
+#: ../../introduction/features.rst:607
 msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr "**Evolution Demo #2 - Mobile Evolution**, 25 tháng 4 năm 2018"
 
-#: ../../introduction/features.rst:612
+#: ../../introduction/features.rst:615
 msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
 msgstr ""
 "**Evolution Demo #3 - Trải nghiệm người dùng Dashpay**, 15 tháng 5 năm 2018"
 
-#: ../../introduction/features.rst:620
+#: ../../introduction/features.rst:623
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr ""
 "**Chuck Williams với Evolution**, Hội thảo của Dash ở London, 14 tháng 9 năm"
 " 2017"
 
-#: ../../introduction/features.rst:628
+#: ../../introduction/features.rst:631
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""

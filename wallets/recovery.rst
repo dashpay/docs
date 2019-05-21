@@ -68,7 +68,7 @@ know to regain access to your Dash funds. If you already have Dash Core
 installed, first ensure it has been updated to the latest version by
 clicking **Help > About Dash Core**. Compare this with the latest
 available version of `Dash Core on the website
-<https://www.dash.org/wallets/#wallets>`_ as follows:
+<https://www.dash.org/downloads>`_ as follows:
 
 .. image:: img/recovery-dashcore-version.png
    :width: 300px
@@ -139,8 +139,8 @@ restart and perform a full scan of the blockchain.
 At this stage, recovery is complete and you should make another backup
 using **File > Backup Wallet** or following the instructions :ref:`here
 <dashcore-backup>`. If you have any further problems, try asking on the
-`forum <https://www.dash.org/forum/topic/daemon-and-qt-wallet-
-support.64/>`_, `Reddit <https://www.reddit.com/r/dashpay/>`_ or the
+`forum <https://www.dash.org/forum/topic/daemon-and-qt-wallet-support.64/>`_, 
+`Reddit <https://www.reddit.com/r/dashpay/>`_ or the
 #dash-support-desk channel at `Dash Nation Discord
 <http://dashchat.org/>`_.
 

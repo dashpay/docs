@@ -1,71 +1,62 @@
 .. meta::
    :description: Technical guides for merchants using Dash. API and SDK resources.
-   :keywords: dash, merchants, payment processor, API, SDK, insight, blockcypher, gocoin, instantsend, vending machines
+   :keywords: dash, merchants, payment processor, API, SDK, insight, blockcypher, gocoin, instantsend, python, .NET, java, javascript, nodejs, php, objective-c, vending machines
 
-.. _merchants-technical:
+.. _integration:
 
-================
-Technical Guides
-================
+====================
+Integration Overview
+====================
 
-Dash Wallet Integration
-=======================
+This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_IntegrationOverview.pdf>`__.
 
-This documentation is also available as a `PDF
-<https://github.com/dashpay/docs/raw/master/binary/merchants
-/Integration-Resources-Wallet-Integration.pdf>`__.
+Dash Core `v0.13.x <https://github.com/dashpay/dash/releases>`__ is a
+“fork” of Bitcoin and shares many common functionalities. Key
+differences relate to existing JSON-RPC commands which have been
+customized to support unique functionalities such as InstantSend.
 
-`Dash Core <https://github.com/dashpay/dash/releases>`__ is a fork of
-Bitcoin and the majority of functionality included in the Dash Core
-Daemon can be integrated in a similar manner. Key differences relate to
-customizations to existing JSON-RPC commands to support unique
-functionalities such as InstantSend. These differences, as well as more
-general information, are summarized below.
-
-1. **General Information:** Dash is a “Proof of Work” blockchain with
-   attributes similar to that of Bitcoin.
+1. **General Information:** Dash is a “Proof of Work” network and is
+   similar to Bitcoin.
 
    a. Block Time: ~2.6 Minutes per Block
-   b. Blockchain Confirmations: 6 Confirmations (or 1 in the case of 
-      InstantSend)
-   c. Github Source: https://github.com/dashpay/dash
-   d. Release Link: https://github.com/dashpay/dash/releases
+   b. Github Source: https://github.com/dashpay/dash
+   c. Latest Release: https://github.com/dashpay/dash/releases
 
-2. **JSON-RPC Interface:** The majority of Bitcoin JSON-RPC commands are
-   unchanged making integration into existing systems relatively
-   straightforward. For a complete listing of RPC commands see the 
-   `Developer Guide <https://dash-docs.github.io/en/developer-guide>`__.
+2. **JSON-RPC Interface:** The majority of commands are unchanged from
+   Bitcoin making integration into existing systems relatively
+   straightforward. Note that the following commands have been modified 
+   to support InstantSend:
 
-   It’s worth noting that several key Transaction-related JSON-RPC
-   commands have been modified to support InstantSend through the
-   addition of an “InstantLock” field and are listed below:
-
-   a. `GetTransaction <https://dash-docs.github.io/en/developer-reference#gettransaction>`__
-   b. `ListTransactions <https://dash-docs.github.io/en/developer-reference#listtransactions>`__
-   c. `ListSinceBlock <https://dash-docs.github.io/en/developer-reference#listsinceblock>`__
+   - `getrawmempool <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
+   - `getmempoolancestors <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
+   - `getmempooldescendants <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
+   - `getmempoolentry <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
+   - `getrawtransaction <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
+   - `decoderawtransaction <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
+   - `gettransaction <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
+   - `listtransactions <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
+   - `listsinceblock <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
 
 3. **Block Hashing Algorithm:** Dash uses the “X11” algorithm in place
    of SHA256 used in Bitcoin. It’s important to note, however, that this
    only affects the hashing of the Block itself. All other internals
-   utilize SHA256 hashes (transactions, merkle root, etc) which allows 
-   for most existing libraries to work in the Dash ecosystem.
+   utilize SHA256 hashes (transactions, merkle root, etc) which allows
+   for most existing libraries to work in the Dash ecosystem. 
 
-4. **Supporting Libraries:** Due to the aforementioned differences in
-   Hashing Algorithm only minor adjustments are required before using
-   Bitcoin libraries on the Dash network. The most popular libraries
-   have already been ported to Dash which has enabled support for most
-   major programming languages. These resources are outlined in the
-   :ref:`SDK Resources <sdk-resources>` section of this document.
+4. **Special Transactions:** Dash Core v0.13.x introduces the concept of
+   “Special Transactions”. Please see the `Transaction Type Integration Guide <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 
+   for more information.
+
 
 .. _013-integration:
 
 v0.13.0 Integration Notes
 =========================
 
-This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__.
+This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__.
 
 Dash 0.13.0 implements `DIP002 Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, 
-which form a basis for new transaction types that will provide on-chain
+which form a basis for new transaction types that provide on-chain
 metadata to assist various consensus mechanisms. The following special
 transaction types exist:
 
@@ -102,49 +93,167 @@ Integration notes:
    Transactions has been split into two fields: ``version`` and ``type``
    (each consisting of 2 bytes).
 
-4. `InstantSend <https://docs.dash.org/en/latest/merchants/technical.html#instantsend>`__ 
+4. Refer to the `Special Transactions <https://dash-docs.github.io/en/developer-reference#special-transactions>`__ 
+   section of the dash developer reference for additional detail on
+   these data types, e.g. <variable int>.
+
+5. `InstantSend <https://docs.dash.org/en/stable/integration/technical.html#instantsend>`__ 
    status and Payload JSON (e.g. ``proRegTx``) is included in the 
    JSON-RPC response, please note that this data is not part of the
    calculated hash and is provided for convenience.
 
-Legacy transaction structure::
-
-  {
-    "txid": <string>,
-    "size": <int>,
-    "version": 2,
-    "locktime": 0,
-    "vin": [],
-    "vout": [ … ]
-  }
-
-Updated transaction structure::
-
-  {
-    "txid": <string>,
-    "size": <int>,
-    "version": 3,
-    "type": <int>,
-    "locktime": 0,
-    "vin": [ … ],
-    "vout": [ … ],
-    "extraPayloadSize": <variable int>,
-    "extraPayload": …
-  }
-
-See the `Special Transactions developer documentation <https://dash-docs.github.io/en/developer-reference#special-transactions>`__ 
-for additional detail on these data types, e.g. ``<variable int>``. See 
-the `v0.13.0 transaction types integration documentation (PDF) <https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__
+See the `v0.13.0 transaction types integration documentation (PDF) <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__
 for worked examples of each transaction type.
+
+
+.. _integration-instantsend:
+
+InstantSend Overview
+====================
+
+This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_InstantSend.pdf>`__.
+
+InstantSend is a feature provided by the Dash network that allows for
+zero-confirmation transactions to be safely accepted by Merchants and
+other service providers. All InstantSend Transactions are secured for 25
+blocks by the “Masternode Network” at the moment of broadcast. The
+transaction is mined into the next block in accordance with standard
+blockchain principles.
+
+InstantSend is enabled by the Masternode Network which comprises
+approximately 4,800 masternode servers. These nodes are differentiated
+from standard nodes by having proven ownership of 1,000 Dash. One
+responsibility that is appointed to this special type of server is to
+perform "Transaction Locking", also known as InstantSend.
+
+This concept works as an extension to network consensus. When an
+"InstantSend" transaction occurs the network goes through an extra
+validation process which examines the following two properties of the
+transaction:
+
+1. **Input Maturity:** the network will require all inputs to have at
+   least 6 confirmations.
+
+2. **Input Composition:** the number of inputs in use dictates fee 
+   requirements.
+
+   a. **1 - 4 inputs:** per-kB fee of 0.00001 DASH using Automatic 
+      InstantSend.
+   b. **5+ inputs:** per-input fee of 0.0001 DASH is required.
+
+Assuming the **Input Maturity** and **Input Composition** requirements
+are met, the network will "lock" the inputs related to this transaction
+for 25 blocks. Transactions carrying 4 or fewer inputs are referred to
+as a “simple transaction” and carry no extra fee.
+
+
+Automatic InstantSend
+---------------------
+
+Dash Core v0.13.x introduces the process of Automatic InstantSend. Any
+transaction which is classified as a “simple transaction” will
+automatically be broadcast as an InstantSend transaction when using
+standard transaction broadcast endpoints.
+
+InstantSend vs. Standard Transactions
+-------------------------------------
+
+The term “InstantSend” is used to describe a standard transaction that
+has been provided additional assurances by the Masternode Network. As a
+result, and from an integration perspective, there is no technical
+difference between the two types of transactions.
+
+The most notable difference relates to the way that confirmation policy
+is applied within an integrated system. The receiving system must be
+aware of InstantSend Status in order to safely apply transaction
+confirmation policies that are enabled using this technology.
+
+Receiving InstantSend Transactions
+----------------------------------
+
+Receiving an InstantSend Transaction introduces two requirements:
+
+1. The ability to determine the “InstantSend Status” of a given 
+   transaction.
+
+2. The ability to adjust “Confirmation Status” independently of block 
+   confirmation.
+
+InstantSend Status is typically determined through direct connection
+with the dash daemon, `ZMQ notification <https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__,
+or through the usage of an external wallet notification script.
+
+**Direct Connection:** InstantSend Status can be identified through
+direct connection with the Dash daemon using JSON-RPC protocol. The
+“instantlock” attribute of the JSON response reflects the status of the
+transaction and is included in the following commands:
+
+- `getrawmempool <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
+- `getmempoolancestors <https://dash-docs.github.io/en/developer-reference#getmempoolancestors>`__
+- `getmempooldescendants <https://dash-docs.github.io/en/developer-reference#getmempooldescendants>`__
+- `getmempoolentry <https://dash-docs.github.io/en/developer-reference#getmempoolentry>`__
+- `getrawtransaction <https://dash-docs.github.io/en/developer-reference#getrawtransaction>`__
+- `decoderawtransaction <https://dash-docs.github.io/en/developer-reference#decoderawtransaction>`__
+- `gettransaction <https://dash-docs.github.io/en/developer-reference#gettransaction>`__
+- `listtransactions <https://dash-docs.github.io/en/developer-reference#listtransactions>`__
+- `listsinceblock <https://dash-docs.github.io/en/developer-reference#listsinceblock>`__
+
+**Wallet Notification:** The Dash Core Daemon can be configured to 
+execute an external script whenever an InstantSend transaction relating
+to that wallet is observed. This is configured by adding the following
+line to the dash.conf file::
+
+  instantsendnotify=/path/to/concurrent/safe/handler %s
+
+This is typically used with a wallet that has been populated with 
+`watch-only <https://dash-docs.github.io/en/glossary/watch-only-address>`__ 
+addresses.
+
+Broadcasting InstantSend Transactions
+-------------------------------------
+
+Automatic InstantSend introduces two requirements into the system being
+integrated:
+
+1. The ability to evaluate the number of inputs in a given transaction.
+
+2. The ability to apply an increased fee-level in cases of 5+ inputs.
+
+In many cases an integrated system will already contain logic intended
+to keep transaction fees to a minimum by optimizing input usage. If this
+is true, and it can be assumed that only “simple transactions” are being
+formed, no additional development effort is required.
+
+In cases where this is not possible or will be unknown, the integrated
+system should be able to calculate a fee based on the number of inputs
+being used to form the transaction. This per-input fee of 0.0001 DASH
+must be applied in order for the transaction to be successfully
+broadcast as an InstantSend. In these cases, it’s important to note that
+the “instantsend” flag must be set as “true” when issuing the
+`sendrawtransaction <https://dash-docs.github.io/en/developer-reference#sendrawtransaction>`__ 
+command, e.g.::
+
+  sendrawtransaction "hexstring" false true
+
+Additional Resources
+--------------------
+
+The following resources provide additional information about InstantSend
+and are intended to help provide a more complete understanding of the
+underlying technologies.
+
+- `InstantSend Whitepaper <https://dashpay.atlassian.net/wiki/download/attachments/75530298/Dash%20Whitepaper%20-%20InstantTX.pdf>`_
+- `InstantSend Technical Information <https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__
+- `InstantSend Developer Documentation <https://dash-docs.github.io/en/glossary/instantsend>`__
+- `Product Brief: Dash Core v0.13 Release <https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef>`__
+
 
 .. _api-services:
 
 API Services
 ============
 
-This documentation is also available as a `PDF
-<https://github.com/dashpay/docs/raw/master/binary/merchants
-/Integration-Resources-API.pdf>`__.
+This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-API.pdf>`__.
 
 Several API services exist to facilitate quick and easy integration with
 the Dash network for services including:
@@ -226,7 +335,7 @@ BitGo provides a simple and robust RESTful API and client SDK to
 integrate digital currency wallets with your application. Support for
 Dash InstantSend is available.
 
-- Features: Multi-Signature HD Wallets, Wallet Operations, WebSocket and
+- Features: Multi-Signature HD Wallets, Wallet Operations, WebSocket and
   WebHook Notifications, Custody Solutions
 - Pricing Model: Per API Call
 - Documentation: https://www.bitgo.com/api/v2/
@@ -306,15 +415,13 @@ or integrate with your pre-existing checkout.
 SDK Resources
 =============
 
-This documentation is also available as a `PDF
-<https://github.com/dashpay/docs/raw/master/binary/merchants
-/Integration-Resources-SDK.pdf>`__.
+This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-SDK.pdf>`__.
 
 SDKs (Software Development Kits) are used to accelerate the design and
 development of a product for the Dash Network. These resources can
 either be used to interface with an API provider or for the creation of
 standalone applications by forming transactions and/or performing
-various wallet services.
+various wallet functions.
 
 
 Dash Developer Guide
@@ -335,7 +442,7 @@ executable.
 
 - Documentation: https://dash-docs.github.io/en/developer-guide
 
-NodeJS/JavaScript: Bitcore (Dashcore)
+NodeJS/JavaScript: Dashcore
 -------------------------------------
 
 .. image:: img/bitcore.png
@@ -354,23 +461,24 @@ address balances, transaction history, and unspent outputs.
 - Documentation: https://bitcore.io/api/lib
 - Repository lib: https://github.com/dashevo/dashcore-lib
 - Repository node: https://github.com/dashevo/dashcore-node
+- See also: `Insight API <https://github.com/dashevo/insight-api>`__
 
 PHP: Bitcoin-PHP
 ----------------
 
-https://github.com/Bit-Wasp/bitcoin-php
+https://github.com/snogcel/bitcoin-php
 
 Bitcoin-PHP is an implementation of Bitcoin with support for Dash using
 mostly pure PHP.
 
 - Platform: PHP
 - Documentation: https://github.com/Bit-Wasp/bitcoin-php/blob/master/doc/Introduction.md
-- Repository: https://github.com/Bit-Wasp/bitcoin-php
+- Repository: https://github.com/snogcel/bitcoin-php
 
 Python: PyCoin
 --------------
 
-https://github.com/richardkiss/pycoin
+https://github.com/DeltaEngine/pycoin
 
 PyCoin is an implementation of a bunch of utility routines that may be
 useful when dealing with Bitcoin and Dash. It has been tested
@@ -378,7 +486,8 @@ with Python 2.7, 3.6 and 3.7.
 
 - Platform: Python
 - Documentation: https://pycoin.readthedocs.io/en/latest/
-- Repository: https://github.com/richardkiss/pycoin
+- Repository: https://github.com/DeltaEngine/pycoin
+- See also: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-dashrpc>`__
 
 Java: DashJ
 -----------
@@ -397,7 +506,8 @@ It's implemented in Java but can be used from any JVM compatible
 language: examples in Python and JavaScript are included.
 
 - Platform: Java
-- Documentation: https://bitcoinj.github.io/getting-started 
+- Documentation: https://bitcoinj.github.io/getting-started
+- Repository: https://github.com/HashEngineering/dashj
 - Example application: https://github.com/tomasz-ludek/pocket-of-dash
 
 Objective-C: Dash-Sync
@@ -436,6 +546,7 @@ so you can easily build your application on top of it.
 - Platform: .NET
 - Documentation: https://programmingblockchain.gitbooks.io/programmingblockchain/content/ 
 - Repository: https://github.com/MetacoSA/NBitcoin
+- See also: `JSON-RPC Utilities <https://github.com/cryptean/bitcoinlib>`__
 
 BlockCypher
 -----------
@@ -466,106 +577,6 @@ https://gocoin.com
 - Repositories: https://gocoin.com/docs 
 
 
-InstantSend
-===========
-
-This documentation is also available as a `PDF
-<https://github.com/dashpay/docs/raw/master/binary/merchants
-/Integration-Resources-InstantSend.pdf>`__.
-
-InstantSend is a feature provided by the Dash network that allows for
-0-confirmation transactions to be safely accepted by Merchants and other
-service providers. Secured by the Masternode Network, this mechanism
-eliminates the risk of a “Double Spend” by locking transaction inputs
-for a given transaction at a protocol level.
-
-
-InstantSend Transactions vs. Standard Transactions
---------------------------------------------------
-
-From an integration perspective there are only minor differences between
-an InstantSend Transaction and a Standard Transaction. Both transaction
-types are formed in the same way and are signed using the same process;
-the key difference is the fee structure and input requirements for
-InstantSend. 
-
-#. Fee Structure: InstantSend utilizes a “per-input” fee of 0.0001 DASH
-   per Input.
-#. Input Requirements: All inputs for an InstantSend transaction must
-   have at least 6 confirmations.
-
-In the event that a given transaction does not meet both criteria it
-will revert to a standard transaction.
-
-Receiving InstantSend Transactions
-----------------------------------
-
-InstantSend transactions are handled in the same way as a Standard
-Transaction, typically through JSON-RPC, Insight API, or an internal
-notification script / service that is configured at a server level.
-
-#. JSON-RPC: The following RPC commands will include InstantSend-related
-   information. Within the response you’ll find an “InstantLock” field
-   the status of a given Transaction. This true/false (boolean) value
-   will indicate whether an InstantSend has been observed.
-
-   a. GetTransaction: https://dash-docs.github.io/en/developer-reference#gettransaction 
-   b. ListTransactions: https://dash-docs.github.io/en/developer-reference#listtransactions 
-   c. ListSinceBlock: https://dash-docs.github.io/en/developer-reference#listsinceblock 	
-
-#. Insight API: Insight API can be used to detect InstantSend
-   transactions and to push notifications to clients using WebSockets.
-   The API can also be manually polled to retrieve Transaction
-   information including InstantSend status.
-
-   a. Web Socket: https://github.com/dashevo/insight-api#web-socket-api
-   b. Transaction API: https://github.com/dashevo/insight-api#instantsend-transactions
-
-#. Script Notify: The Dash Core Daemon can be configured to execute an
-   external script whenever an InstantSend transaction relating to that
-   wallet is observed. This is configured by adding the following line
-   to the dash.conf file:
-
-   ``instantsendnotify=/path/to/concurrent/safe/handler %s``
-
-   *Note that only addresses imported to the wallet will be monitored for
-   InstantSend Transactions.*
-
-Broadcasting InstantSend Transactions
--------------------------------------
-
-InstantSend Transactions can be constructed and broadcast using an
-approach similar to Standard Transactions. Provided the InstantSend Fee
-Structure and Input Requirements are met, an InstantSend can be
-broadcast using JSON-RPC or Insight API as a Raw Transaction.
-
-#. JSON-RPC: The “SendRawTransaction” RPC command can be utilized to
-   broadcast a raw transaction using InstantSend. When utilizing this
-   command be sure to set both optional parameters as “true”
-
-   ``sendrawtransaction "hexstring" ( allowhighfees instantsend )``
-   ``sendrawtransaction "hexstring" true true``
-
-   More Information: https://dash-docs.github.io/en/developer-reference#sendrawtransaction 
-
-#. Insight API: Raw Transactions can also be broadcast as an InstantSend
-   using Insight API. In this case all that is required is to POST the
-   raw transaction using the ``/tx/sendix`` route.
-
-   More Information: https://github.com/dashevo/insight-api#instantsend-transaction 
-
-Additional Resources
---------------------
-
-The following resources provide additional information about InstantSend
-and are intended to help provide a more complete understanding of the
-underlying technologies.
-
-- `InstantSend Whitepaper <https://dashpay.atlassian.net/wiki/download/attachments/75530298/Dash%20Whitepaper%20-%20InstantTX.pdf>`_
-- `How Dash InstantSend Protect Merchants from Double Spends <https://www.youtube.com/watch?v=HJx82On8jig>`_
-- `InstantSend Presentation from the Dash Conference London 2017 <https://www.youtube.com/watch?v=n4PELomRiFY>`_
-
-
 Vending Machines
 ================
 
@@ -583,7 +594,7 @@ InstantSend payments.
 Price Tickers
 =============
 
-You can add a simple price ticket widget to your website using the
+You can add a simple price ticker widget to your website using the
 simple `code snippet generator from CoinGecko
 <https://www.coingecko.com/en/widgets/ticker/dash/usd>`_.
 

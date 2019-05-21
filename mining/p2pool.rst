@@ -164,7 +164,7 @@ Setting up dashd
 
 P2Pool requires a full Dash node to be running to get block and
 transaction data. To download and install Dash, visit
-https://www.dash.org/wallets on your computer to find the link to the
+https://www.dash.org/downloads on your computer to find the link to the
 latest Dash Core wallet. Click **Linux**, then right-click on **Download
 TGZ** for **Dash Core x64** and select **Copy link address**. Go back to
 your terminal window and enter the following command, pasting in the
@@ -172,14 +172,14 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.13.2.0/dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.13.3.0/dashcore-0.13.3.0-x86_64-linux-gnu.tar.gz
 
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown on the
 Dash website under **Hash File**::
 
-  sha256sum dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.13.3.0-x86_64-linux-gnu.tar.gz
 
 .. figure:: img/setup-manual-download.png
    :width: 250px
@@ -190,14 +190,14 @@ Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
   mkdir .dashcore
-  tar xfvz dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
-  cp dashcore-0.13.2/bin/dashd .dashcore/
-  cp dashcore-0.13.2/bin/dash-cli .dashcore/
+  tar xfvz dashcore-0.13.3.0-x86_64-linux-gnu.tar.gz
+  cp dashcore-0.13.3/bin/dashd .dashcore/
+  cp dashcore-0.13.3/bin/dash-cli .dashcore/
 
 Clean up unneeded files::
 
-  rm dashcore-0.13.2.0-x86_64-linux-gnu.tar.gz
-  rm -r dashcore-0.13.2/
+  rm dashcore-0.13.3.0-x86_64-linux-gnu.tar.gz
+  rm -r dashcore-0.13.3/
 
 Create a configuration file using the following command::
 
