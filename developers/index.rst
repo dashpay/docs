@@ -117,13 +117,22 @@ SPORK_16_INSTANTSEND_AUTOLOCKS
   Allows any node to request the transaction lock, not just the sending
   node.
 
-SPORK_17_QUORUM_DKG_ENABLED
+SPORK_17_QUORUM_DKG_ENABLED 
   Enables the `DKG process to create LLMQ quorums
-  <https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. At the
-  moment, this only activates a dummy DKG on testnet, which will later
-  be replaced by the real DKG for mainnet and testnet. When enabled, 
-  simple PoSe scoring and banning is also active.
-  
+  <https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. This
+  spork will be turned on once 80% masternodes are upgraded to v0.14,
+  which will enable DKG and DKG-based PoSe.
+
+SPORK_19_CHAINLOCKS_ENABLED
+  Enables :ref:`ChainLocks <chainlocks`, a mechanism of preventing the
+  risk to payments introduced by blockchain reorganization events. 
+  ChainLocks are described in `DIP0008 ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__.
+
+SPORK_20_INSTANTSEND_LLMQ_BASED
+  When enabled, legacy InstantSend is superseded by LLMQ-based
+  InstantSend, as described in `DIP0010 LLMQ-based InstantSend
+  <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__.
+
 
 Viewing spork status
 --------------------
