@@ -32,6 +32,7 @@ carry out common development tasks in Dash.
 
    integration.rst
    dip3-upgrade.rst
+   dip8-upgrade.rst
    translating.rst
    compiling.rst
    testnet.rst
