@@ -176,6 +176,49 @@ Dash Detailed by Amanda B. Johnson, 16 September 2016
     </div>
 
 
+.. _chainlocks:
+
+ChainLocks
+==========
+
+ChainLocks are a feature provided by the Dash Network which provides
+certainty when accepting payments. This technology, particularly when
+used in parallel with :ref:`InstantSend <instantsend>`, creates an
+environment in which payments can be accepted immediately and without
+the risk of “Blockchain Reorganization Events”.
+
+The risk of blockchain reorganization is typically addressed by
+requiring multiple “confirmations” before a transaction can be safely
+accepted as payment. This type of indirect security is effective, but at
+a cost of time and user experience. ChainLocks are a solution for this
+problem.
+
+ChainLocks Process Overview
+---------------------------
+
+Every twelve hours a new “LLMQ” (Long-Lasting Masternode Quorum) is
+formed using a “DKG” (Distributed Key Generation) process. All members
+of this Quorum are responsible for observing, and subsequently
+affirming, newly mined blocks:
+  
+  1. Whenever a block is mined, Quorum Members will broadcast a signed
+     message containing the observed block to the rest of the Quorum.
+
+  2. If 60% or more of the Quorum sees the same new block they will
+     collectively form a “CLSIG” (ChainLock Signature) message which
+     will be broadcast to the remainder of the network.
+
+  3. When a valid ChainLock Signature is received by a client on the network,
+     it will reject all blocks at the same height that do not match the block
+     specified in that message.
+
+The result is a quick and unambiguous decision on the “correct”
+blockchain for integrated clients and wallets. From a security
+perspective, this also makes reorganizations prior to this block
+impossible. See `DIP0008 ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__ 
+for a full description of how ChainLocks work.
+
+
 .. _sporks:
 
 Sporks
