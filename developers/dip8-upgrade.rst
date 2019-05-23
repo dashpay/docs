@@ -31,13 +31,12 @@ the network has upgraded. Mining pools must mine an upgraded block to
 successfully signal the upgrade in a block, and 80% of blocks in a window
 must signal in order to lock in the upgrade.
 
-.. Remove this comment and de-dent following lines if/when this site shows 0.14 progress
-  - Activation status can be tracked in the image below or at `this site
-    <http://178.254.23.111/~pub/Dash/Dash_Info.html>`__.
+- Activation status can be tracked in the image below or at `this site
+  <http://178.254.23.111/~pub/Dash/Dash_Info.html>`__.
 
-  .. figure:: http://178.254.23.111/~pub/13_adoption.png
+.. figure:: http://178.254.23.111/~pub/14_adoption.png
 
-     Dash v0.14.0.0 adoption by miners
+   Dash v0.14.0.0 adoption by miners
 
 - Masternode upgrade status can be tracked at `Dash Ninja <https://www.dashninja.pl/masternodes.html>`__
 
@@ -64,6 +63,7 @@ Dependencies
 
 - `DIP0010: LLMQ InstantSend <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__
   contains more information on the updated LLMQ-based InstantSend system.
+
 
 - Please refer to the `ChainLocks Integration Guide <https://github.com/dashpay/docs/blob/master/binary/integration/Integration-Resources-Dash-v0.14-ChainLocks.pdf>`__
   for information on the implementation of ChainLocks and for examples
