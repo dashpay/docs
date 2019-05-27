@@ -827,6 +827,17 @@ OOOBTC
   OOOBTC offers DASH trading against BTC and ETH, with a user interface
   available in Russian, Arabic and many East Asian languages.
 
+ExchangeAssets
+  .. image:: exchanges/exchange-assets.png
+     :width: 80px
+     :align: right
+     :target: https://exchange-assets.com
+
+  https://exchange-assets.com
+
+  ExchangeAssets is available in Russian and English, and offers DASH
+  trading against BTC.
+
 ABCC
   .. image:: exchanges/abcc.png
      :width: 200px
