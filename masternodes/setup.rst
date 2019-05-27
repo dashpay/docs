@@ -286,8 +286,8 @@ exactly 1000 DASH is required to operate a masternode. Once it has been
 sent, various keys regarding the transaction must be extracted for later
 entry in a configuration file and registration transaction as proof to
 write the configuration to the blockchain so the masternode can be
-included in the deterministic list. A masternode can be started from a
-hardware wallet or the official Dash Core wallet, although a hardware
+included in the deterministic list. A masternode can be registered from
+a hardware wallet or the official Dash Core wallet, although a hardware
 wallet is highly recommended to enhance security and protect yourself
 against hacking. This guide will describe the steps for both hardware
 wallets and Dash Core.
@@ -347,10 +347,9 @@ working.
 
    Dash Masternode Tool successful connection confirmations
 
-We will now use DMT to extract the transaction ID and legacy masternode
-key (necessary for successful startup during the DIP003 transition
-period). Carry out the following sequence of steps as shown in this
-screenshot:
+We will now use DMT to enter some basic information about the masternode
+and extract the transaction ID. Carry out the following sequence of
+steps as shown in this screenshot:
 
 .. figure:: img/setup-collateral-dmt-steps.png
    :width: 400px
@@ -358,24 +357,21 @@ screenshot:
    Dash Masternode Tool configuration steps
 
 #. Click the **New** button.
-#. Ensure you are on the settings page for a Non-deterministic 
-   masternode and click **Generate new** to generate a legacy masternode
-   key. Copy this key into a text editor.
-#. Click **Alter configuration to deterministic**
 #. Enter a name for your masternode. The host name you specified 
    for your VPS above is a good choice.
 #. Enter the IP address of your masternode. This was given to you
-   by the VPS provider when you set up the server.
-#. Enter the TCP port number. This should be 9999.
+   by the VPS provider when you set up the server. Then enter the TCP 
+   port number. This should be 9999.
 #. Click **Locate collateral** to view unused collateral funding 
-   transactions available on the connected hardware wallet. The 
-   **Collateral address**, **index** and **Collateral TX hash** fields 
-   should be filled automatically
+   transactions available on the connected hardware wallet. Select the 
+   address to which you sent 1000 Dash and click **Apply**. The 
+   **Collateral address**, **path**, **Collateral TX hash** and
+   **index** fields should be filled automatically.
 
 .. figure:: img/setup-collateral-dmt-ready.png
    :width: 400px
 
-   Dash Masternode Tool with configuration ready to start masternode
+   Dash Masternode Tool with masternode configuration
 
 Leave DMT open and continue with the next step: :ref:`installing Dash
 Core on your VPS <masternode-setup-install-dashcore>`.
@@ -415,9 +411,9 @@ you generated in the previous step. This may be sent from another
 wallet, or from funds already held in your current wallet. Once the
 transaction is complete, view the transaction in a `blockchain explorer
 <http://insight.dash.org/insight/>`_ by searching for the address. You
-will need 15 confirmations before you can start the masternode, but you
-can continue with the next step at this point already: generating your
-masternode operator key.
+will need 15 confirmations before you can register the masternode, but
+you can continue with the next step at this point already: generating
+your masternode operator key.
 
 .. figure:: img/setup-collateral-blocks.png
    :width: 400px
@@ -485,7 +481,7 @@ are complete::
 .. figure:: img/setup-dashman-done.png
    :width: 400px
 
-   dashman status output showing masternode ready to be started
+   dashman status output showing masternode ready to be registered
 
 Continue with the :ref:`next step to register your masternode
 <register-masternode>`.
@@ -513,10 +509,10 @@ and comparing the output against the value for the file as shown in the
 
 You can also optionally verify the authenticity of your download as an
 official release by Dash Core Team. All releases of Dash are signed
-using GPG by Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, `verifiable
-here on Keybase <https://keybase.io/codablock>`_. Import the key, download
-the ASC file for the current release of Dash and verify the signature as
-follows::
+using GPG by Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, 
+`verifiable here on Keybase <https://keybase.io/codablock>`_. Import the
+key, download the ASC file for the current release of Dash and verify
+the signature as follows::
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   gpg --verify SHA256SUMS.asc
@@ -656,7 +652,11 @@ private keys required for a DIP003 deterministic masternode:
 
    Dash Masternode Tool ready to register a new masternode
 
-Then click **Send ProRegTx** and confirm the following two messages:
+Then click **Register masternode**. Optionally specify a different
+**Payout address** and/or **Operator reward**, then click **Continue**.
+Select **Remote Dash RPC Node (automatic method)**. (See `here <https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-connection-direct.md>`__ 
+for documentation on using your own local RPC node.) and confirm the
+following two messages:
 
 .. image:: img/setup-dmt-send.png
    :width: 220px
@@ -680,7 +680,7 @@ uncomment these lines in the file, replacing the key with your BLS
 private key generated above::
 
   masternode=1
-  masternodeblsprivkey=21e27edbabf70a677303d527d750b502628e1c51d66d3bfd2b4583f690fbd14e
+  masternodeblsprivkey=24c1fa3c22c6ea6b1cc68a37be18acb51042b19465fe0a26301c8717bf939805
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
@@ -689,18 +689,18 @@ effect. Enter the following commands, waiting a few seconds in between
 to give Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
-  sleep 5
+  sleep 15
   ~/.dashcore/dashd
 
 At this point you can monitor your masternode using 
-``dashman/dashman status``, by entering 
+``~/dashman/dashman status``, by entering 
 ``~/.dashcore/dash-cli masternode status`` or using the **Get status** 
 function in DMT. The final result should appear as follows:
 
 .. figure:: img/setup-dash-cli-start.png
    :width: 400px
 
-   dash-cli masternode status output showing successfully started masternode
+   dash-cli masternode status output showing successfully registered masternode
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
@@ -775,7 +775,7 @@ uncomment these lines in the file, replacing the key with your BLS
 private key generated above::
 
   masternode=1
-  masternodeblsprivkey=28a85abb5aa8e820f65e33974cef0ab0bf06195f61454d2feb7fa578612d2228
+  masternodeblsprivkey=395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
@@ -784,7 +784,7 @@ effect. Enter the following commands, waiting a few seconds in between
 to give Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
-  sleep 5
+  sleep 15
   ~/.dashcore/dashd
 
 We will now prepare the transaction used to register the masternode on
@@ -924,8 +924,9 @@ Submit the signed message
 
 We will now submit the ProRegTx special transaction to the blockchain to
 register the masternode. This command must be sent from a Dash Core
-wallet holding a balance, since a standard transaction fee is involved.
-The command takes the following syntax::
+wallet holding a balance on either the ``feeSourceAddress`` or
+``payoutAddress``, since a standard transaction fee is involved. The
+command takes the following syntax::
 
   protx register_submit tx sig
 
@@ -952,14 +953,14 @@ where the txid of the final ``protx register_submit`` transaction
 identifies your masternode.
 
 At this point you can go back to your terminal window and monitor your
-masternode using ``dashman/dashman status``, by entering
+masternode using ``~/dashman/dashman status``, by entering
 ``~/.dashcore/dash-cli masternode status`` or using the **Get status**
 function in DMT. The final result should appear as follows:
 
 .. figure:: img/setup-dashman-started.png
    :width: 400px
 
-   dashman status output showing successfully started masternode
+   dashman status output showing successfully registered masternode
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
