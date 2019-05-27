@@ -699,6 +699,43 @@ email to support@paytomat.com for support with Paytomat.
    Paytomat wallet running on Android
 
 
+Spend
+=====
+
+https://www.spend.com
+
+.. image:: img/spend.png
+   :width: 200px
+   :align: right
+   :target: https://www.spend.com
+
+Spend offers a multicurrency wallet for Android and iOS, which is also
+used to manage balance for the Spend Visa Card and loyalty program.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.spend.app
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/app/id1357740381
+
+Spend is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.spend.app>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/app/id1357740381>`__.
+
+Documentation
+-------------
+
+Support for Spend is available at https://help.spend.com
+
+.. figure:: img/spend-wallet.png
+   :width: 133px
+
+   Spend wallet running on iOS
+
 Trust
 =====
 

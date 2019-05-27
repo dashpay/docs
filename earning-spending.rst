@@ -74,6 +74,20 @@ Disclaimer: This list is provided for informational purposes only. Dash
 Core is not liable for any funds transmitted in error to these
 providers, or for the accuracy of information on this page.
 
+Spend
+  .. image:: img/spend.png
+     :width: 200px
+     :align: right
+     :target: https://www.spend.com
+
+  https://www.spend.com
+
+  Spend offers Simple, Preferred and Black Visa cards accepted at over
+  40 million locations worldwide. Linked with the Spend Wallet, the
+  system allows you to buy or deposit Dash, which is then converted to
+  the appropriate local fiat currency and loaded on the Spend Visa Card
+  for use in purchase and ATM withdrawals.
+
 PolisPay
   .. image:: img/polispay.png
      :width: 200px
