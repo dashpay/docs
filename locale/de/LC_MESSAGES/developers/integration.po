@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-13 04:51+0000\n"
+"POT-Creation-Date: 2019-05-28 01:50+0000\n"
 "PO-Revision-Date: 2019-04-08 11:33+0000\n"
 "Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2019\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
@@ -438,16 +438,11 @@ msgstr ""
 #: ../../developers/integration.rst:100
 msgid ""
 "`InstantSend "
-"<https://docs.dash.org/en/latest/integration/technical.html#instantsend>`__ "
+"<https://docs.dash.org/en/stable/integration/technical.html#instantsend>`__ "
 "status and Payload JSON (e.g. ``proRegTx``) is included in the JSON-RPC "
 "response, please note that this data is not part of the calculated hash and "
 "is provided for convenience."
 msgstr ""
-"`InstantSend "
-"<https://docs.dash.org/en/latest/integration/technical.html#instantsend>`__ "
-"Status und Payload JSON (e.g. ``proRegTx``) sind in der JSON-RPC Antwort "
-"enthalten. Diese Daten sind nicht Teil des berechneten Hash und werden nur "
-"der Einfachheit halber zur Verfügung gestellt. "
 
 #: ../../developers/integration.rst:105
 msgid ""
@@ -777,6 +772,13 @@ msgid ""
 "://dash-docs.github.io/en/developer-reference#sendrawtransaction>`__ "
 "command, e.g.::"
 msgstr ""
+"Wenn diese unbekannt oder nicht möglich ist, wird das integrierte System die"
+" Gebühren anhand der Inputs der Transaktion berechnen. Diese Gebühr von "
+"0.0001 Dash pro Input ist notwendig, damit die Transaktion als InstantSend "
+"wahrgenommen wird. In diesen Fällen ist es notwendig, dass die “instantsend”"
+" Markierung als “true” vermerkt ist, wenn der Befehl `sendrawtransaction "
+"<https://dash-docs.github.io/en/developer-reference#sendrawtransaction>`__ "
+"verwendet wird, z.B.::"
 
 #: ../../developers/integration.rst:239
 msgid "Additional Resources"
@@ -999,7 +1001,7 @@ msgstr ""
 
 #: ../../developers/integration.rst:340
 msgid "Pricing Model: Per API Call"
-msgstr "Preismodell: Pro API-Anfrage"
+msgstr "Preisgestaltung: Pro API-Anfrage"
 
 #: ../../developers/integration.rst:341
 msgid "Documentation: https://www.bitgo.com/api/v2/"
@@ -1018,20 +1020,24 @@ msgid ""
 "ChainRider is a cloud service providing a set of REST APIs for digital "
 "currency management and exploration."
 msgstr ""
+"ChainRider ist ein Cloud-Dienst, der eine Reihe von REST APIs zum Verwalten "
+"und Analysieren digitaler Währungen bietet."
 
 #: ../../developers/integration.rst:356
 msgid ""
 "Features: Blockchain queries, Event Notifications, Transaction Broadcast, "
 "Payment Processing, etc."
 msgstr ""
+"Funktionen: Blockchain Queries, Event-Benachrichtigungen, Transaktions-"
+"Übermittlung, Zahlungsverarbeitung, usw."
 
 #: ../../developers/integration.rst:358
 msgid "Pricing Model: Free trial, pay per API call"
-msgstr ""
+msgstr "Preisgestaltung: Kostenlose Testperiode, pro API-Anfrage"
 
 #: ../../developers/integration.rst:359
 msgid "Documentation: https://www.chainrider.io/docs/dash"
-msgstr ""
+msgstr "Dokumentation: https://www.chainrider.io/docs/dash"
 
 #: ../../developers/integration.rst:363 ../../developers/integration.rst:567
 msgid "GoCoin"
@@ -1142,6 +1148,9 @@ msgid ""
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
 "Resources-SDK.pdf>`__."
 msgstr ""
+"Diese Dokumentation ist auch als englischsprachiges `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-SDK.pdf>`__ verfügbar."
 
 #: ../../developers/integration.rst:420
 msgid ""
@@ -1151,6 +1160,11 @@ msgid ""
 "applications by forming transactions and/or performing various wallet "
 "functions."
 msgstr ""
+"SDKs (Software Development Kits) werden verwendet um die Entwicklung und "
+"Gestaltung eines Produktes für das Dash-Netzwerk zu vereinfachen. Diese "
+"Ressourcen können entweder verwendet werden, um mit einer API zu "
+"interagieren, oder, um eine selbständige Applikation zu schaffen, indem "
+"Transaktionen oder andere Wallet-Funktionen ermöglicht werden."
 
 #: ../../developers/integration.rst:428
 msgid "Dash Developer Guide"
@@ -1179,7 +1193,7 @@ msgstr "Dokumentation: https://dash-docs.github.io/en/developer-guide"
 
 #: ../../developers/integration.rst:446
 msgid "NodeJS/JavaScript: Dashcore"
-msgstr ""
+msgstr "NodeJS/JavaScript: Dashcore"
 
 #: ../../developers/integration.rst:453
 msgid "https://bitcore.io"
@@ -1192,6 +1206,11 @@ msgid ""
 "development, additional indexes have been added into Dash for querying "
 "address balances, transaction history, and unspent outputs."
 msgstr ""
+"Bei Dashcore handelt es sich um eine Bitcore-Fork, die als Dash Fullnode "
+"fungiert, weswegen Applikationen direkt über das Peer-to-Peer-Netzwerk "
+"laufen. Für Wallet Applikationen gibt es zusätzliche Indices, durch die "
+"Adressen, Transaktionsaufzeichnungen und ungenutzte Outputs abgefragt werden"
+" können. "
 
 #: ../../developers/integration.rst:460
 msgid "Platform: NodeJS / Javascript"
@@ -1203,51 +1222,55 @@ msgstr "Dokumentation: https://bitcore.io/api/lib"
 
 #: ../../developers/integration.rst:462
 msgid "Repository lib: https://github.com/dashevo/dashcore-lib"
-msgstr ""
+msgstr "Lib-Repositorien: https://github.com/dashevo/dashcore-lib"
 
 #: ../../developers/integration.rst:463
 msgid "Repository node: https://github.com/dashevo/dashcore-node"
-msgstr ""
+msgstr "Node-Repositorien: https://github.com/dashevo/dashcore-node"
 
 #: ../../developers/integration.rst:464
 msgid "See also: `Insight API <https://github.com/dashevo/insight-api>`__"
-msgstr ""
+msgstr "Siehe auch: `Insight API <https://github.com/dashevo/insight-api>`__"
 
 #: ../../developers/integration.rst:467
 msgid "PHP: Bitcoin-PHP"
-msgstr ""
+msgstr "PHP: Bitcoin-PHP"
 
 #: ../../developers/integration.rst:469
 msgid "https://github.com/snogcel/bitcoin-php"
-msgstr ""
+msgstr "https://github.com/snogcel/bitcoin-php"
 
 #: ../../developers/integration.rst:471
 msgid ""
 "Bitcoin-PHP is an implementation of Bitcoin with support for Dash using "
 "mostly pure PHP."
 msgstr ""
+"Bitcoin-PHP ist eine Bitcoin-Implementierung, die Dash unterstützt und "
+"mehrheitlich PHP verwendet."
 
 #: ../../developers/integration.rst:474
 msgid "Platform: PHP"
-msgstr ""
+msgstr "Plattform: PHP"
 
 #: ../../developers/integration.rst:475
 msgid ""
 "Documentation: https://github.com/Bit-Wasp/bitcoin-"
 "php/blob/master/doc/Introduction.md"
 msgstr ""
+"Dokumentation: https://github.com/Bit-Wasp/bitcoin-"
+"php/blob/master/doc/Introduction.md"
 
 #: ../../developers/integration.rst:476
 msgid "Repository: https://github.com/snogcel/bitcoin-php"
-msgstr ""
+msgstr "Repositorien: https://github.com/snogcel/bitcoin-php"
 
 #: ../../developers/integration.rst:479
 msgid "Python: PyCoin"
-msgstr ""
+msgstr "Python: PyCoin"
 
 #: ../../developers/integration.rst:481
 msgid "https://github.com/DeltaEngine/pycoin"
-msgstr ""
+msgstr "https://github.com/DeltaEngine/pycoin"
 
 #: ../../developers/integration.rst:483
 msgid ""
@@ -1255,28 +1278,32 @@ msgid ""
 "useful when dealing with Bitcoin and Dash. It has been tested with Python "
 "2.7, 3.6 and 3.7."
 msgstr ""
+"PyCoin bietet eine Reihe von Dienstroutinen, die im Umgang mit Bitcoin und "
+"Dash von Nutzen sind. Es wurde mit Python 2.7, 3.6 und 3.7 getestet."
 
 #: ../../developers/integration.rst:487
 msgid "Platform: Python"
-msgstr ""
+msgstr "Plattform: Python"
 
 #: ../../developers/integration.rst:488
 msgid "Documentation: https://pycoin.readthedocs.io/en/latest/"
-msgstr ""
+msgstr "Dokumentation: https://pycoin.readthedocs.io/en/latest/"
 
 #: ../../developers/integration.rst:489
 msgid "Repository: https://github.com/DeltaEngine/pycoin"
-msgstr ""
+msgstr "Repositorien: https://github.com/DeltaEngine/pycoin"
 
 #: ../../developers/integration.rst:490
 msgid ""
 "See also: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-"
 "dashrpc>`__"
 msgstr ""
+"Siehe auch: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-"
+"dashrpc>`__"
 
 #: ../../developers/integration.rst:493
 msgid "Java: DashJ"
-msgstr ""
+msgstr "Java: DashJ"
 
 #: ../../developers/integration.rst:500
 msgid "https://github.com/HashEngineering/dashj"
@@ -1290,6 +1317,11 @@ msgid ""
 "implemented in Java but can be used from any JVM compatible language: "
 "examples in Python and JavaScript are included."
 msgstr ""
+"DashJ ist eine Library, um mit dem Dash-Protokoll zu interagieren. Dadurch "
+"kann unter anderem eine Wallet betrieben werden (inklusive InstantSend), "
+"ohne eine Dash Core Kopie zu speichern. Es wird in Java implementiert, kann "
+"aber mit allen JVM-kompatiblen Sprachen verwendet werden: Python- und "
+"JavaScript-Beispiele sind beigefügt."
 
 #: ../../developers/integration.rst:508
 msgid "Platform: Java"
@@ -1301,19 +1333,19 @@ msgstr "Dokumentation: https://bitcoinj.github.io/getting-started"
 
 #: ../../developers/integration.rst:510
 msgid "Repository: https://github.com/HashEngineering/dashj"
-msgstr ""
+msgstr "Repositorien: https://github.com/HashEngineering/dashj"
 
 #: ../../developers/integration.rst:511
 msgid "Example application: https://github.com/tomasz-ludek/pocket-of-dash"
-msgstr ""
+msgstr "Beispielanwendung: https://github.com/tomasz-ludek/pocket-of-dash"
 
 #: ../../developers/integration.rst:514
 msgid "Objective-C: Dash-Sync"
-msgstr ""
+msgstr "Objective-C: Dash-Sync"
 
 #: ../../developers/integration.rst:521
 msgid "https://github.com/dashevo/dashsync-iOS"
-msgstr ""
+msgstr "https://github.com/dashevo/dashsync-iOS"
 
 #: ../../developers/integration.rst:523
 msgid ""
@@ -1321,18 +1353,21 @@ msgid ""
 " all most relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement"
 " Proposals (DIPs)."
 msgstr ""
+"Dash-Sync ist ein Objective-C Dash Blockchain-Framework für iOS. Es "
+"beinhaltet die wichtigsten Bitcoin Improvement Proposals (BIPs) und Dash "
+"Improvement Proposals (DIPs)."
 
 #: ../../developers/integration.rst:527
 msgid "Platform: iOS"
-msgstr ""
+msgstr "Plattform: iOS"
 
 #: ../../developers/integration.rst:528
 msgid "Repository: https://github.com/dashevo/dashsync-iOS"
-msgstr ""
+msgstr "Repositorien: https://github.com/dashevo/dashsync-iOS"
 
 #: ../../developers/integration.rst:531
 msgid ".NET: NBitcoin"
-msgstr ""
+msgstr ".NET: NBitcoin"
 
 #: ../../developers/integration.rst:538
 msgid "https://github.com/MetacoSA/NBitcoin"
@@ -1372,6 +1407,7 @@ msgstr "Repositorien: https://github.com/MetacoSA/NBitcoin"
 msgid ""
 "See also: `JSON-RPC Utilities <https://github.com/cryptean/bitcoinlib>`__"
 msgstr ""
+"Siehe auch: `JSON-RPC Utilities <https://github.com/cryptean/bitcoinlib>`__"
 
 #: ../../developers/integration.rst:561
 msgid "BlockCypher also offers client SDKs."
@@ -1399,7 +1435,7 @@ msgstr "Repositorien: https://gocoin.com/docs"
 
 #: ../../developers/integration.rst:581
 msgid "Vending Machines"
-msgstr ""
+msgstr "Verkaufsautomat"
 
 #: ../../developers/integration.rst:583
 msgid ""
@@ -1408,18 +1444,23 @@ msgid ""
 "Dashvend software can also be used to create any sort of payment system, "
 "including point-of-sale systems, that can accept InstantSend payments."
 msgstr ""
+"Das Community-Mitglied moocowmoo hat einen Quellcode veröffentlicht, der "
+"Händlern dabei helfen soll, einen Automaten aufzusetzen, der Zahlungen mit "
+"Dash-InstantSend unterstützt. Die Dashvend Software kann auch für andere "
+"Zahlungssystem verwendet werden, wie z.B. Point-of-Sale Systeme, die "
+"InstantSend-Zahlungen akzeptieren wollen."
 
 #: ../../developers/integration.rst:589
 msgid "`Open Source Code <https://github.com/moocowmoo/dashvend>`_"
-msgstr ""
+msgstr "`Open Source Code <https://github.com/moocowmoo/dashvend>`_"
 
 #: ../../developers/integration.rst:590
 msgid "`Demonstration website <http://code.dashndrink.com>`_"
-msgstr ""
+msgstr "`Demonstrations-Webseite <http://code.dashndrink.com>`_"
 
 #: ../../developers/integration.rst:591
 msgid "`Demonstration video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_"
-msgstr ""
+msgstr "`Demonstration-Video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_"
 
 #: ../../developers/integration.rst:595
 msgid "Price Tickers"
@@ -1431,6 +1472,9 @@ msgid ""
 "`code snippet generator from CoinGecko "
 "<https://www.coingecko.com/en/widgets/ticker/dash/usd>`_."
 msgstr ""
+"Ein einfaches Preisticker-Widget kann mit der Hilfe von `CoinGecko "
+"<https://www.coingecko.com/en/widgets/ticker/dash/usd>`_ in jede Seite "
+"implementiert werden."
 
 #: ../../developers/integration.rst:607
 msgid ""
@@ -1441,10 +1485,16 @@ msgid ""
 "information is available from `DashCentral "
 "<https://www.dashcentral.org/about/api>`_."
 msgstr ""
+"Ähnliche Widgets sind verfügbar über `CoinLib "
+"<https://coinlib.io/widgets>`_, `WorldCoinIndex "
+"<https://www.worldcoinindex.com/Widget>`_ und `Cryptonator "
+"<https://www.cryptonator.com/widget>`_. Eine API mit der selben Funktionen "
+"wird von `DashCentral <https://www.dashcentral.org/about/api>`_ "
+"bereitgestellt."
 
 #: ../../developers/integration.rst:615
 msgid "QR Codes"
-msgstr ""
+msgstr "QR-Codes"
 
 #: ../../developers/integration.rst:617
 msgid ""
@@ -1453,6 +1503,11 @@ msgid ""
 "your website makes it easy to receive payment and tips in Dash, both online "
 "and offline."
 msgstr ""
+"Die meisten Wallets können einen QR-Code generieren, der eingescannt werden "
+"kann, um eine Dash-Adresse zu übermitteln. Diese QR-Codes können ausgedruckt"
+" oder auf einer Webseite veröffentlicht werden, wodurch es einfach ist, "
+"Zahlungen und Trinkgelder in Dash zu erhalten, sowohl online als auch "
+"offline."
 
 #: ../../developers/integration.rst:622
 msgid ""
@@ -1460,18 +1515,27 @@ msgid ""
 "and double-click it to display a QR code. Right click on the QR code and "
 "select **Save Image** to save a PNG file."
 msgstr ""
+"Über die Registerkarte **Empfangen** der Dash Core Wallet, kann eine Adresse"
+" mit zugehörigem QR-Code generiert werden. Dieser kann per Rechtsklick und "
+"**Bild speichern** als PNG-Datei gespeichert werden."
 
 #: ../../developers/integration.rst:625
 msgid ""
 "In Dash for Android, tap **Request Coins** and then tap the QR code to "
 "display a larger image. You can screenshot this to save an image."
 msgstr ""
+"In der Dash Android Wallet kannst du über **Dash empfangen** einen QR-Code "
+"erzeugen und durch Antippen vergrößern. Du kannst das Bild als Screenshot "
+"speichern."
 
 #: ../../developers/integration.rst:627
 msgid ""
 "In Dash for iOS, swipe to the left to display the **Receive Dash** screen. A"
 " QR code and address will appear. You can screenshot this to save an image."
 msgstr ""
+"In der Dash Android Wallet kannst du links über **Dash empfangen** eine "
+"Adresse und einen QR-Code erzeugen. Du kannst das Bild als Screenshot "
+"speichern."
 
 #: ../../developers/integration.rst:630
 msgid ""
@@ -1479,3 +1543,6 @@ msgid ""
 "<https://cwaqrgen.com/dash>`_ and simply paste your Dash address to generate"
 " an image."
 msgstr ""
+"Über `CWA QR Code Generator <https://cwaqrgen.com/dash>`_ kannst du "
+"jederzeit einen QR-Code für jede beliebige Adresse erzeugen und als Bild "
+"speichern."
