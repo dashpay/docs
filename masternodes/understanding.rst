@@ -93,8 +93,7 @@ documentation appears below:
 
 - `DIP003 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
 - :ref:`dip3-changes` (you are here)
-- :ref:`dip3-dev-upgrade`
-- :ref:`Dash 0.13 Upgrade Procedure for Masternodes <dip3-upgrade>`
+- `Dash 0.13 Upgrade Procedure for Masternodes (legacy documentation) <https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__
 - :ref:`Full masternode setup guide <masternode-setup>`
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
 - :ref:`Information for operators of hosted masternodes <operator-transactions>`
@@ -144,12 +143,12 @@ Important concepts and changes:
 - All functions related to DIP003 will only take effect once Spork 15 is
   enabled on the network. Until then, it is necessary to set up the
   masternode following the `old process <https://docs.dash.org/en/0.12.3/masternodes/setup.html>`_ 
-  and then work through the :ref:`upgrade procedure <dip3-upgrade>`. In
-  this state, the masternode will continue to function in compatibility
-  mode, and all DIP003 related functions, such as payments to a separate
-  address or percentage payments to operators, will not yet have any
-  effect. The ``ownerKeyAddr`` and ``votingKeyAddr`` must also be 
-  identical until Spork 15 is enabled.
+  and then work through the `upgrade procedure <https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__. 
+  In this state, the masternode will continue to function in
+  compatibility mode, and all DIP003 related functions, such as payments
+  to a separate address or percentage payments to operators, will not
+  yet have any effect. The ``ownerKeyAddr`` and ``votingKeyAddr`` must
+  also be  identical until Spork 15 is enabled.
 
 The process of setting up or upgrading a masternode is as follows:
 

@@ -44,7 +44,6 @@ appears below:
 
 - `DIP003 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
 - :ref:`dip3-changes`
-- :ref:`dip3-dev-upgrade`
 - `Dash 0.13 Upgrade Procedure for Masternodes (legacy documentation) <https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__
 - :ref:`Full masternode setup guide <masternode-setup>` (you are here)
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
