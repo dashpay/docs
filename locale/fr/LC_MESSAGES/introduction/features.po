@@ -409,7 +409,7 @@ msgstr ""
 
 #: ../../introduction/features.rst:182
 msgid "ChainLocks"
-msgstr ""
+msgstr "ChainLocks"
 
 #: ../../introduction/features.rst:184
 msgid ""
@@ -419,6 +419,12 @@ msgid ""
 " which payments can be accepted immediately and without the risk of "
 "“Blockchain Reorganization Events”."
 msgstr ""
+"ChainLocks est une fonctionnalité fournie par le réseau Dash, qui garantit "
+"totalement l'acceptation des paiements. Cette technologie, notamment "
+"lorsqu'elle est utilisée conjointement avec :ref:`InstantSend "
+"<instantsend>`, crée un environnement dans lequel les paiements peuvent être"
+" acceptés immédiatement et sans aucun risque de “réorganisation de "
+"blockchain”."
 
 #: ../../introduction/features.rst:190
 msgid ""
@@ -427,10 +433,15 @@ msgid ""
 "payment. This type of indirect security is effective, but at a cost of time "
 "and user experience. ChainLocks are a solution for this problem."
 msgstr ""
+"Le risque de réorganisation de blockchain est classiquement mitigé par "
+"l'attente de nombreuses \"confirmations\" avant qu'une transaction soit "
+"acceptée en toute sécurité comme paiement. Ce type de sécurité indirecte est"
+" efficace, mais il implique une attente et une expérience utilisateur "
+"médiocre. ChainLocks est une solution à ce problème."
 
 #: ../../introduction/features.rst:197
 msgid "ChainLocks Process Overview"
-msgstr ""
+msgstr "Aperçu du processus ChainLocks"
 
 #: ../../introduction/features.rst:199
 msgid ""
@@ -439,12 +450,19 @@ msgid ""
 "Quorum are responsible for observing, and subsequently affirming, newly "
 "mined blocks:"
 msgstr ""
+"Toutes les douze heures, un nouveau \"quorum de masternodes de longue "
+"durée\" (long-lasting masternode quorum, LLMQ) est établi au moyen d'un "
+"processus de génération de clé distribuée (distributed key generation, DKG)."
+" Tous les membres de ce quorum doivent observer, puis confirmer, les blocs "
+"nouvellement minés :"
 
 #: ../../introduction/features.rst:204
 msgid ""
 "Whenever a block is mined, Quorum Members will broadcast a signed message "
 "containing the observed block to the rest of the Quorum."
 msgstr ""
+"À chaque fois qu'un bloc est miné, des membres du quorum diffusent au reste "
+"du quorum un message signé contenant le bloc observé."
 
 #: ../../introduction/features.rst:207
 msgid ""
@@ -452,6 +470,9 @@ msgid ""
 "form a “CLSIG” (ChainLock Signature) message which will be broadcast to the "
 "remainder of the network."
 msgstr ""
+"Si 60% ou plus du quorum observe le même nouveau bloc, ils formeront "
+"collectivement une signature ChainLocks (“CLSIG”) sous forme de message qui "
+"sera diffusé au reste du réseau."
 
 #: ../../introduction/features.rst:211
 msgid ""
@@ -459,6 +480,9 @@ msgid ""
 "will reject all blocks at the same height that do not match the block "
 "specified in that message."
 msgstr ""
+"Quand une signature ChainLocks valide est reçue par un client du réseau, il "
+"rejettera tous les blocs de même hauteur qui ne coïncident pas avec le bloc "
+"indiqué dans ce message."
 
 #: ../../introduction/features.rst:215
 msgid ""
@@ -468,6 +492,12 @@ msgid ""
 "ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__ for "
 "a full description of how ChainLocks work."
 msgstr ""
+"Le résultat est une décision rapide et sans ambiguïté, pour les clients et "
+"portefeuilles intégrés, concernant la blockchain \"correcte\". Du point de "
+"vue de la sécurité, cela rend impossible les réorganisations antérieures à "
+"ce bloc. Voir la `DIP0008 ChainLocks "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__ pour une "
+"description complète du fonctionnement de ChainLocks."
 
 #: ../../introduction/features.rst:225
 msgid "Sporks"
@@ -1221,6 +1251,13 @@ msgid ""
 "network, along with decentralized API access and a decentralized file "
 "system."
 msgstr ""
+"`Dash Evolution <https://www.dash.org/fr/feuille-de-route/>`_ est le nom de "
+"code d'une plateforme monétaire décentralisée, bâtie sur la technologie "
+"blockchain Dash. L'objectif est de fournir un accès simple aux "
+"fonctionnalités et aux avantages uniques de Dash, et de faciliter l'usage "
+"des technologies décentralisées. Dash propose un réseau à niveaux multiples "
+"qui permet aux utilisateurs d'exécuter différentes tâches pour le réseau, "
+"avec un accès par API décentralisée et un système de fichiers décentralisé."
 
 #: ../../introduction/features.rst:603
 msgid ""

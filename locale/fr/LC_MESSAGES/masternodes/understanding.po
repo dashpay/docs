@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Daf Daf, 2019
 # Leon White <leon.white@dash.org>, 2019
+# Daf Daf, 2019
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-28 01:50+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
+"Last-Translator: Daf Daf, 2019\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -226,6 +226,8 @@ msgid ""
 "`Dash 0.13 Upgrade Procedure for Masternodes (legacy documentation) "
 "<https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__"
 msgstr ""
+":ref:`Procédure de mise à jour Dash 0.13 pour les masternodes (documentation"
+" archivée) <dip3-upgrade>`"
 
 #: ../../masternodes/understanding.rst:97
 msgid ":ref:`Full masternode setup guide <masternode-setup>`"
@@ -387,6 +389,18 @@ msgid ""
 "``ownerKeyAddr`` and ``votingKeyAddr`` must also be  identical until Spork "
 "15 is enabled."
 msgstr ""
+"Toutes les fonctions relatives à la DIP003 prendront effet seulement lorsque"
+" le Spork 15 sera activé sur le réseau. Avant cette date, il faut mettre en "
+"place le masternode en suivant `l'ancienne procédure "
+"<https://docs.dash.org/en/0.12.3/masternodes/setup.html>`_ puis en suivant "
+":ref:`la procédure de mise à jour "
+"<https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`. Pendant "
+"cette période de transition, le masternode continuera de fonctionner en mode"
+" de compatibilité, et toutes les fonctions relatives à la DIP003, telles que"
+" les paiements à une adresse distincte ou le pourcentage des paiements "
+"alloué aux opérateurs, ne seront pas encore fonctionnelles. Les clés "
+"``ownerKeyAddr`` et ``votingKeyAddr`` doivent également être identiques "
+"d'ici à ce que le Spork 15 soit activé."
 
 #: ../../masternodes/understanding.rst:153
 msgid "The process of setting up or upgrading a masternode is as follows:"

@@ -26,23 +26,23 @@ msgid ""
 "The upgrade to Dash 0.14.0 involves the introduction of Long-Living "
 "Masternode Quourums as defined in DIP8. This documentation highlights the "
 "upgrade steps and progress."
-msgstr ""
+msgstr "Dash 0.14.0的升级引入了 DIP8 中定义的长效主节点仲裁团。本文档强调了升级步骤与过程。"
 
 #: ../../developers/dip8-upgrade.rst:1
 msgid ""
 "dash, cryptocurrency, masternode, miners, pools, exchanges, wallets, "
 "maintenance, dip8, upgrade"
-msgstr ""
+msgstr "dash, 加密货币, 主节点, 矿工, 矿池, 交易所, 钱包, 维护, dip8, 升级"
 
 #: ../../developers/dip8-upgrade.rst:11
 msgid "Dash 0.14 Upgrade Information"
-msgstr ""
+msgstr "Dash 0.14 升级信息"
 
 #: ../../developers/dip8-upgrade.rst:13
 msgid ""
 "**Official binaries are available at** "
 "https://github.com/dashpay/dash/releases/tag/v0.14.0.0"
-msgstr ""
+msgstr "**官方二进制文件获取** https://github.com/dashpay/dash/releases/tag/v0.14.0.0"
 
 #: ../../developers/dip8-upgrade.rst:15
 msgid ""
@@ -53,6 +53,10 @@ msgid ""
 "-now-on-testnet-8f5f4ad45c96>`__ for an overview of new features. The "
 "upgrade will take place in phases, as shown in the following diagram:"
 msgstr ""
+"Dash Core v0.14.0 旨在为Dash "
+"Evolution提供基石，一个为促进激活新支付方式和技术的全方位网络升级。了解新功能请参考`Dash Core v0.14.0 Product "
+"Brief <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-"
+"testnet-8f5f4ad45c96>`__。该升级将分阶段进行，按如下示意图："
 
 #: ../../developers/dip8-upgrade.rst:26
 msgid "Installation notes"
@@ -66,6 +70,9 @@ msgid ""
 "successfully signal the upgrade in a block, and 80% of blocks in a window "
 "must signal in order to lock in the upgrade."
 msgstr ""
+"Dash Core v0.14.0.0 将在 80%的网络完成升级后自动激活`DIP0008 "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__。矿池必须在升级区块里面发出升级信号，在一个窗口期内"
+" 80%的区块发出升级信号方能锁定升级。"
 
 #: ../../developers/dip8-upgrade.rst:34
 msgid ""
@@ -75,7 +82,7 @@ msgstr "激活状态可在如下图片或者网站<http://178.254.23.111/~pub/Da
 
 #: ../../developers/dip8-upgrade.rst:39
 msgid "Dash v0.14.0.0 adoption by miners"
-msgstr ""
+msgstr "Dash v0.14.0.0 矿工应用"
 
 #: ../../developers/dip8-upgrade.rst:41
 msgid ""
@@ -88,7 +95,7 @@ msgstr ""
 msgid ""
 "If you are updating to Dash Core v0.14.0.0 from version 0.13.x you should be"
 " able to simply shut down the daemon and replace it with the updated binary."
-msgstr ""
+msgstr "如果你是从 0.13.x 升级到Dash Core v0.14.0.0，你可以简单地关闭进程然后替换升级后的程序。"
 
 #: ../../developers/dip8-upgrade.rst:47
 msgid ""
@@ -96,6 +103,7 @@ msgid ""
 "that you will also need to re-index the chainstate using the “-reindex-"
 "chainstate” command."
 msgstr ""
+"如果你从低于0.13的版本升级到Dash Core v0.14.0.0，你将需要使用“-reindex-chainstate”命令来重新索引链状态。"
 
 #: ../../developers/dip8-upgrade.rst:52
 msgid "Dependencies"
@@ -107,6 +115,8 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__ contains more "
 "information on Long-Living Masternode Quorums."
 msgstr ""
+"关于长效主节点仲裁团的信息参考 `DIP0006: Long-Living Masternode Quorums "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__。"
 
 #: ../../developers/dip8-upgrade.rst:57
 msgid ""
@@ -115,6 +125,8 @@ msgid ""
 "information on the signing request / session process that supports the use "
 "of LLMQs."
 msgstr ""
+"支持使用 LLMQ 的请求 / 会话签名过程的更多信息参考 `DIP0007: LLMQ Signing Requests / Sessions "
+"<https://github.com/dashpay/dips/blob/master/dip-0007.md>`__ 。"
 
 #: ../../developers/dip8-upgrade.rst:61
 msgid ""
@@ -122,6 +134,9 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__ contains more "
 "information on ChainLocks."
 msgstr ""
+"`DIP0008: ChainLocks "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__ "
+"有更多关于ChainLocks的信息。"
 
 #: ../../developers/dip8-upgrade.rst:64
 msgid ""
@@ -129,6 +144,8 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__ contains more "
 "information on the updated LLMQ-based InstantSend system."
 msgstr ""
+" 基于 LLMQ 的即时发送系统相关的更多信息参考`DIP0010: LLMQ InstantSend "
+"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__"
 
 #: ../../developers/dip8-upgrade.rst:68
 msgid ""
@@ -137,6 +154,9 @@ msgid ""
 "Resources-Dash-v0.14-ChainLocks.pdf>`__ for information on the "
 "implementation of ChainLocks and for examples of this new format."
 msgstr ""
+"关于ChainLocks的实现和这类新格式的例子请参考`ChainLocks Integration Guide "
+"<https://github.com/dashpay/docs/blob/master/binary/integration/Integration-"
+"Resources-Dash-v0.14-ChainLocks.pdf>`__。"
 
 #: ../../developers/dip8-upgrade.rst:72
 msgid ""
@@ -151,6 +171,9 @@ msgid ""
 "<https://github.com/dashpay/dash/blob/v0.14.0.0/doc/release-notes.md#rpc-"
 "changes>`__ for a complete listing of RPC improvements, in summary:"
 msgstr ""
+"完整的 RPC 改进列表参考官方  `Release Notes "
+"<https://github.com/dashpay/dash/blob/v0.14.0.0/doc/release-notes.md#rpc-"
+"changes>`__。"
 
 #: ../../developers/dip8-upgrade.rst:78
 msgid ""
@@ -158,3 +181,6 @@ msgid ""
 "``decoderawtransaction``, ``gettransaction``, ``listtransactions``, "
 "``listsinceblock``. ``getblock``"
 msgstr ""
+"**ChainLocks**: chainlock 状态被包含于 ``getrawtransaction``, "
+"``decoderawtransaction``, ``gettransaction``, ``listtransactions``, "
+"``listsinceblock``. ``getblock`` 命令中。"
