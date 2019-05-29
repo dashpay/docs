@@ -124,7 +124,7 @@ SPORK_17_QUORUM_DKG_ENABLED
   which will enable DKG and DKG-based PoSe.
 
 SPORK_19_CHAINLOCKS_ENABLED
-  Enables :ref:`ChainLocks <chainlocks`, a mechanism of preventing the
+  Enables :ref:`ChainLocks <chainlocks>`, a mechanism of preventing the
   risk to payments introduced by blockchain reorganization events. 
   ChainLocks are described in `DIP0008 ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__.
 

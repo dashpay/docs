@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Dash Core Group, Inc
+# This file is distributed under the same license as the Dash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dash latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-28 01:50+0000\n"
+"PO-Revision-Date: 2019-05-28 01:52+0000\n"
+"Language-Team: Portuguese (https://www.transifex.com/dash/teams/37570/pt/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../developers/dip8-upgrade.rst:1
+msgid ""
+"The upgrade to Dash 0.14.0 involves the introduction of Long-Living "
+"Masternode Quourums as defined in DIP8. This documentation highlights the "
+"upgrade steps and progress."
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:1
+msgid ""
+"dash, cryptocurrency, masternode, miners, pools, exchanges, wallets, "
+"maintenance, dip8, upgrade"
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:11
+msgid "Dash 0.14 Upgrade Information"
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:13
+msgid ""
+"**Official binaries are available at** "
+"https://github.com/dashpay/dash/releases/tag/v0.14.0.0"
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:15
+msgid ""
+"Dash Core v0.14.0 is intended to serve as the foundation for Dash Evolution,"
+" a broadly scoped update to our network intended to facilitate and enable "
+"new payment methods and technologies. Please see the `Dash Core v0.14.0 "
+"Product Brief <https://blog.dash.org/product-brief-dash-core-release-v0-14-0"
+"-now-on-testnet-8f5f4ad45c96>`__ for an overview of new features. The "
+"upgrade will take place in phases, as shown in the following diagram:"
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:26
+msgid "Installation notes"
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:28
+msgid ""
+"Dash Core v0.14.0.0 will automatically activate `DIP0008 "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__ once 80% of the"
+" network has upgraded. Mining pools must mine an upgraded block to "
+"successfully signal the upgrade in a block, and 80% of blocks in a window "
+"must signal in order to lock in the upgrade."
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:34
+msgid ""
+"Activation status can be tracked in the image below or at `this site "
+"<http://178.254.23.111/~pub/Dash/Dash_Info.html>`__."
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:39
+msgid "Dash v0.14.0.0 adoption by miners"
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:41
+msgid ""
+"Masternode upgrade status can be tracked at `Dash Ninja "
+"<https://www.dashninja.pl/masternodes.html>`__"
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:43
+msgid ""
+"If you are updating to Dash Core v0.14.0.0 from version 0.13.x you should be"
+" able to simply shut down the daemon and replace it with the updated binary."
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:47
+msgid ""
+"If you are updating to Dash Core v0.14.0.0 from version < 0.13 please note "
+"that you will also need to re-index the chainstate using the “-reindex-"
+"chainstate” command."
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:52
+msgid "Dependencies"
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:54
+msgid ""
+"`DIP0006: Long-Living Masternode Quorums "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__ contains more "
+"information on Long-Living Masternode Quorums."
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:57
+msgid ""
+"`DIP0007: LLMQ Signing Requests / Sessions "
+"<https://github.com/dashpay/dips/blob/master/dip-0007.md>`__ contains more "
+"information on the signing request / session process that supports the use "
+"of LLMQs."
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:61
+msgid ""
+"`DIP0008: ChainLocks "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__ contains more "
+"information on ChainLocks."
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:64
+msgid ""
+"`DIP0010: LLMQ InstantSend "
+"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__ contains more "
+"information on the updated LLMQ-based InstantSend system."
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:68
+msgid ""
+"Please refer to the `ChainLocks Integration Guide "
+"<https://github.com/dashpay/docs/blob/master/binary/integration/Integration-"
+"Resources-Dash-v0.14-ChainLocks.pdf>`__ for information on the "
+"implementation of ChainLocks and for examples of this new format."
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:72
+msgid ""
+"Contact the `Support Desk <https://support.dash.org/en/support/home>`__ with"
+" any compatibility questions or for help upgrading."
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:75
+msgid ""
+"Please see the official `Release Notes "
+"<https://github.com/dashpay/dash/blob/v0.14.0.0/doc/release-notes.md#rpc-"
+"changes>`__ for a complete listing of RPC improvements, in summary:"
+msgstr ""
+
+#: ../../developers/dip8-upgrade.rst:78
+msgid ""
+"**ChainLocks**: chainlock status is now included in ``getrawtransaction``, "
+"``decoderawtransaction``, ``gettransaction``, ``listtransactions``, "
+"``listsinceblock``. ``getblock``"
+msgstr ""

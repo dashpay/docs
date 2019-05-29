@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Alex.ys <silvershark.ys@gmail.com>, 2019
+# Eamon Young <xsrf@icloud.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-13 04:51+0000\n"
+"POT-Creation-Date: 2019-05-28 01:50+0000\n"
 "PO-Revision-Date: 2019-04-08 11:33+0000\n"
-"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2019\n"
+"Last-Translator: Eamon Young <xsrf@icloud.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,16 +32,19 @@ msgid ""
 "instantsend, python, .NET, java, javascript, nodejs, php, objective-c, "
 "vending machines"
 msgstr ""
+"达世，商家，交易处理，API，SDK，insight，blockcypher，gocoin，即时发送，python，.NET，java，javascript，nodejs，php，objective-c，贩卖机"
 
 #: ../../developers/integration.rst:9
 msgid "Integration Overview"
-msgstr ""
+msgstr "整合介绍"
 
 #: ../../developers/integration.rst:11
 msgid ""
 "This documentation is also available as a `PDF "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_IntegrationOverview.pdf>`__."
 msgstr ""
+"此文档的 PDF 格式 `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_IntegrationOverview.pdf>`__。"
 
 #: ../../developers/integration.rst:13
 msgid ""
@@ -49,12 +53,14 @@ msgid ""
 "to existing JSON-RPC commands which have been customized to support unique "
 "functionalities such as InstantSend."
 msgstr ""
+"Dash Core `v0.13.x <https://github.com/dashpay/dash/releases>`__ 是 Bitcoin "
+"分叉并且与之共享很多功能。与现有 JSON-RPC 命令有关的关键区别被用来支持特有功能如即时发送。"
 
 #: ../../developers/integration.rst:18
 msgid ""
 "**General Information:** Dash is a “Proof of Work” network and is similar to"
 " Bitcoin."
-msgstr ""
+msgstr "**简要信息：**Dash 是一个与 Bitcoin 类似的”工作量证明“网络。"
 
 #: ../../developers/integration.rst:21
 msgid "Block Time: ~2.6 Minutes per Block"
@@ -66,68 +72,86 @@ msgstr "Github 源代码: https://github.com/dashpay/dash"
 
 #: ../../developers/integration.rst:23
 msgid "Latest Release: https://github.com/dashpay/dash/releases"
-msgstr ""
+msgstr "最新发布：https://github.com/dashpay/dash/releases"
 
 #: ../../developers/integration.rst:25
 msgid ""
 "**JSON-RPC Interface:** The majority of commands are unchanged from Bitcoin "
 "making integration into existing systems relatively straightforward. Note "
 "that the following commands have been modified to support InstantSend:"
-msgstr ""
+msgstr "**JSON-RPC 接口：**大部分命令直接简单地从已有 Bitcoin 系统引入而没有修改。注意以下命令为了支持即时发送已作修改："
 
 #: ../../developers/integration.rst:30 ../../developers/integration.rst:191
 msgid ""
 "`getrawmempool <https://dash-docs.github.io/en/developer-"
 "reference#getrawmempool>`__"
 msgstr ""
+"`getrawmempool <https://dash-docs.github.io/en/developer-"
+"reference#getrawmempool>`__"
 
 #: ../../developers/integration.rst:31
 msgid ""
 "`getmempoolancestors <https://dash-docs.github.io/en/developer-"
 "reference#getrawmempool>`__"
 msgstr ""
+"`getmempoolancestors <https://dash-docs.github.io/en/developer-"
+"reference#getrawmempool>`__"
 
 #: ../../developers/integration.rst:32
 msgid ""
 "`getmempooldescendants <https://dash-docs.github.io/en/developer-"
 "reference#getrawmempool>`__"
 msgstr ""
+"`getmempooldescendants <https://dash-docs.github.io/en/developer-"
+"reference#getrawmempool>`__"
 
 #: ../../developers/integration.rst:33
 msgid ""
 "`getmempoolentry <https://dash-docs.github.io/en/developer-"
 "reference#getrawmempool>`__"
 msgstr ""
+"`getmempoolentry <https://dash-docs.github.io/en/developer-"
+"reference#getrawmempool>`__"
 
 #: ../../developers/integration.rst:34
 msgid ""
 "`getrawtransaction <https://dash-docs.github.io/en/developer-"
 "reference#getrawmempool>`__"
 msgstr ""
+"`getrawtransaction <https://dash-docs.github.io/en/developer-"
+"reference#getrawmempool>`__"
 
 #: ../../developers/integration.rst:35
 msgid ""
 "`decoderawtransaction <https://dash-docs.github.io/en/developer-"
 "reference#getrawmempool>`__"
 msgstr ""
+"`decoderawtransaction <https://dash-docs.github.io/en/developer-"
+"reference#getrawmempool>`__"
 
 #: ../../developers/integration.rst:36
 msgid ""
 "`gettransaction <https://dash-docs.github.io/en/developer-"
 "reference#getrawmempool>`__"
 msgstr ""
+"`gettransaction <https://dash-docs.github.io/en/developer-"
+"reference#getrawmempool>`__"
 
 #: ../../developers/integration.rst:37
 msgid ""
 "`listtransactions <https://dash-docs.github.io/en/developer-"
 "reference#getrawmempool>`__"
 msgstr ""
+"`listtransactions <https://dash-docs.github.io/en/developer-"
+"reference#getrawmempool>`__"
 
 #: ../../developers/integration.rst:38
 msgid ""
 "`listsinceblock <https://dash-docs.github.io/en/developer-"
 "reference#getrawmempool>`__"
 msgstr ""
+"`listsinceblock <https://dash-docs.github.io/en/developer-"
+"reference#getrawmempool>`__"
 
 #: ../../developers/integration.rst:40
 msgid ""
@@ -137,6 +161,8 @@ msgid ""
 "hashes (transactions, merkle root, etc) which allows for most existing "
 "libraries to work in the Dash ecosystem."
 msgstr ""
+"**区块 Hashing 算法：** Dash 使用 ”X11“ 算法代替 Bitcoin 中使用的 SHA256。值得注意的是这仅仅影响区块头本身的 "
+"Hash。所有其它内部依然使用 SHA256 （交易，Merkle 根等等）因此允许大多现有的库能在 Dash 生态中正常工作。"
 
 #: ../../developers/integration.rst:46
 msgid ""
@@ -145,10 +171,14 @@ msgid ""
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
 "Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ for more information."
 msgstr ""
+"**特殊交易：** Dash Core v0.13.x 引入了”特殊交易“的概念。更多信息请查阅  `Transaction Type "
+"Integration Guide "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 。 "
 
 #: ../../developers/integration.rst:54
 msgid "v0.13.0 Integration Notes"
-msgstr ""
+msgstr "v0.13.0 整合须知"
 
 #: ../../developers/integration.rst:56
 msgid ""
@@ -156,6 +186,9 @@ msgid ""
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
 "Resources-Dash-v0.13.0-Transaction-Types.pdf>`__."
 msgstr ""
+"该文档的 PDF 版本 `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__。"
 
 #: ../../developers/integration.rst:58
 msgid ""
@@ -164,10 +197,12 @@ msgid ""
 "basis for new transaction types that provide on-chain metadata to assist "
 "various consensus mechanisms. The following special transaction types exist:"
 msgstr ""
+"Dash 0.13.0 实现了 `DIP002 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__，它构建了一种新的交易类型来提供线上元数据从而帮助不同的共识机制。存在如下特殊交易类型："
 
 #: ../../developers/integration.rst:64
 msgid "Release"
-msgstr ""
+msgstr "发布"
 
 #: ../../developers/integration.rst:64
 msgid "Version"
@@ -175,30 +210,30 @@ msgstr "版本"
 
 #: ../../developers/integration.rst:64
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #: ../../developers/integration.rst:64
 msgid "Payload Size"
-msgstr ""
+msgstr "载荷大小"
 
 #: ../../developers/integration.rst:64
 msgid "Payload"
-msgstr ""
+msgstr "载荷"
 
 #: ../../developers/integration.rst:64
 msgid "Payload JSON"
-msgstr ""
+msgstr " JSON 载荷"
 
 #: ../../developers/integration.rst:64
 msgid "Transaction Purpose"
-msgstr ""
+msgstr "交易目的"
 
 #: ../../developers/integration.rst:66 ../../developers/integration.rst:68
 #: ../../developers/integration.rst:70 ../../developers/integration.rst:72
 #: ../../developers/integration.rst:74 ../../developers/integration.rst:76
 #: ../../developers/integration.rst:78
 msgid "v0.13.0"
-msgstr ""
+msgstr "v0.13.0"
 
 #: ../../developers/integration.rst:66 ../../developers/integration.rst:68
 #: ../../developers/integration.rst:70 ../../developers/integration.rst:72
@@ -209,16 +244,16 @@ msgstr "3"
 
 #: ../../developers/integration.rst:66
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../../developers/integration.rst:66 ../../developers/integration.rst:66
 #: ../../developers/integration.rst:66
 msgid "n/a"
-msgstr ""
+msgstr "无"
 
 #: ../../developers/integration.rst:66
 msgid "Standard Transaction"
-msgstr ""
+msgstr "标准交易"
 
 #: ../../developers/integration.rst:68
 msgid "1"
@@ -228,23 +263,24 @@ msgstr "1"
 #: ../../developers/integration.rst:72 ../../developers/integration.rst:74
 #: ../../developers/integration.rst:76 ../../developers/integration.rst:78
 msgid "<variable int>"
-msgstr ""
+msgstr "<variable int>"
 
 #: ../../developers/integration.rst:68 ../../developers/integration.rst:70
 #: ../../developers/integration.rst:72 ../../developers/integration.rst:74
 #: ../../developers/integration.rst:76 ../../developers/integration.rst:78
 msgid "<hex>"
-msgstr ""
+msgstr "<hex>"
 
 #: ../../developers/integration.rst:68
 msgid "proRegTx"
-msgstr ""
+msgstr "proRegTx"
 
 #: ../../developers/integration.rst:68
 msgid ""
 "`Masternode Registration <https://dash-docs.github.io/en/developer-"
 "reference#proregtx>`__"
 msgstr ""
+"`主节点注册 <https://dash-docs.github.io/en/developer-reference#proregtx>`__"
 
 #: ../../developers/integration.rst:70
 msgid "2"
@@ -252,23 +288,25 @@ msgstr "2"
 
 #: ../../developers/integration.rst:70
 msgid "proUpServTx"
-msgstr ""
+msgstr "proUpServTx"
 
 #: ../../developers/integration.rst:70
 msgid ""
 "`Update Masternode Service <https://dash-docs.github.io/en/developer-"
 "reference#proupservtx>`__"
 msgstr ""
+"`主节点服务更新 <https://dash-docs.github.io/en/developer-reference#proupservtx>`__"
 
 #: ../../developers/integration.rst:72
 msgid "proUpRegTx"
-msgstr ""
+msgstr "proUpRegTx"
 
 #: ../../developers/integration.rst:72
 msgid ""
 "`Update Masternode Operator <https://dash-docs.github.io/en/developer-"
 "reference#proupregtx>`__"
 msgstr ""
+"`更新主节点操作者 <https://dash-docs.github.io/en/developer-reference#proupregtx>`__"
 
 #: ../../developers/integration.rst:74
 msgid "4"
@@ -276,27 +314,30 @@ msgstr "4"
 
 #: ../../developers/integration.rst:74
 msgid "proUpRevTx"
-msgstr ""
+msgstr "proUpRevTx"
 
 #: ../../developers/integration.rst:74
 msgid ""
 "`Masternode Revocation <https://dash-docs.github.io/en/developer-"
 "reference#prouprevtx>`__"
 msgstr ""
+"`主节点取消 <https://dash-docs.github.io/en/developer-reference#prouprevtx>`__"
 
 #: ../../developers/integration.rst:76
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: ../../developers/integration.rst:76
 msgid "cbTx"
-msgstr ""
+msgstr "cbTx"
 
 #: ../../developers/integration.rst:76
 msgid ""
 "`Masternode List Merkle Proof <https://dash-docs.github.io/en/developer-"
 "reference#cbtx>`__"
 msgstr ""
+"`主节点列表 Merkle 证明 <https://dash-docs.github.io/en/developer-"
+"reference#cbtx>`__"
 
 #: ../../developers/integration.rst:78
 msgid "6"
@@ -304,17 +345,17 @@ msgstr "6"
 
 #: ../../developers/integration.rst:78
 msgid "qcTx"
-msgstr ""
+msgstr "qcTx"
 
 #: ../../developers/integration.rst:78
 msgid ""
 "`Quorum Commitment <https://dash-docs.github.io/en/developer-"
 "reference#qctx>`__"
-msgstr ""
+msgstr "`仲裁团承诺 <https://dash-docs.github.io/en/developer-reference#qctx>`__"
 
 #: ../../developers/integration.rst:81
 msgid "Integration notes:"
-msgstr ""
+msgstr "整合须知："
 
 #: ../../developers/integration.rst:83
 msgid ""
@@ -323,6 +364,8 @@ msgid ""
 "foundational component of Dash Core v0.13.0 and introduce a new Transaction "
 "Version and related “Payload” to the network."
 msgstr ""
+"`DIP002 特殊交易 <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ 是 "
+"Dash Core v0.13.0 的一个基础部分，它引入一个新的交易版本和相关”载荷“到网络。"
 
 #: ../../developers/integration.rst:87
 msgid ""
@@ -331,6 +374,8 @@ msgid ""
 "hashing-and-signing>`__ these new Transaction Types in order to accurately "
 "encode and decode Raw Transaction data."
 msgstr ""
+"整合系统必须能够 `序列和反序列 <https://github.com/dashpay/dips/blob/master/dip-0002.md"
+"#serialization-hashing-and-signing>`__ 这些新的交易类型从而能精确地编码和解码交易元数据。"
 
 #: ../../developers/integration.rst:91
 msgid ""
@@ -340,6 +385,9 @@ msgid ""
 "Transactions has been split into two fields: ``version`` and ``type`` (each "
 "consisting of 2 bytes)."
 msgstr ""
+"从一个 `向下兼容 "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ "
+"的角度, 旧交易中包含的 4 字节 (32位) ``版本`` 字段被分为两个字段: ``版本`` 和 ``类型`` (均由两个字节构成)。"
 
 #: ../../developers/integration.rst:96
 msgid ""
@@ -347,15 +395,21 @@ msgid ""
 "/developer-reference#special-transactions>`__ section of the dash developer "
 "reference for additional detail on these data types, e.g. <variable int>."
 msgstr ""
+"关于这些数据类型的更多细节请参考开发者指导章节 `Special Transactions <https://dash-"
+"docs.github.io/en/developer-reference#special-transactions>`__ ，例如 <variable"
+" int>。"
 
 #: ../../developers/integration.rst:100
 msgid ""
 "`InstantSend "
-"<https://docs.dash.org/en/latest/integration/technical.html#instantsend>`__ "
+"<https://docs.dash.org/en/stable/integration/technical.html#instantsend>`__ "
 "status and Payload JSON (e.g. ``proRegTx``) is included in the JSON-RPC "
 "response, please note that this data is not part of the calculated hash and "
 "is provided for convenience."
 msgstr ""
+"`即时发送 "
+"<https://docs.dash.org/en/stable/integration/technical.html#instantsend>`__ "
+"状态和 JSON 载荷 (如 ``proRegTx``) 被包含在 JSON-RPC 返回中, 请注意该数据仅为方便用途，不用于 hash 计算。"
 
 #: ../../developers/integration.rst:105
 msgid ""
@@ -364,16 +418,21 @@ msgid ""
 "Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ for worked examples of each"
 " transaction type."
 msgstr ""
+"参考 `v0.13.0 交易类型整合文档 (PDF) "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 来获取每个交易类型的可用实例。"
 
 #: ../../developers/integration.rst:112
 msgid "InstantSend Overview"
-msgstr ""
+msgstr "即时发送概述"
 
 #: ../../developers/integration.rst:114
 msgid ""
 "This documentation is also available as a `PDF "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_InstantSend.pdf>`__."
 msgstr ""
+"本文档的 PDF 版本 `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_InstantSend.pdf>`__."
 
 #: ../../developers/integration.rst:116
 msgid ""
@@ -383,6 +442,8 @@ msgid ""
 " the “Masternode Network” at the moment of broadcast. The transaction is "
 "mined into the next block in accordance with standard blockchain principles."
 msgstr ""
+"即时发送是 Dash 网络提供的为方便商家与其它服务提供者安全接收零确认交易的功能。所有即时发送交易在被广播的时候立刻被”主节点网络“确认 25 "
+"个区块。该交易将依照标准区块链原则被打包进下一个区块。"
 
 #: ../../developers/integration.rst:123
 msgid ""
@@ -392,6 +453,8 @@ msgid ""
 "that is appointed to this special type of server is to perform \"Transaction"
 " Locking\", also known as InstantSend."
 msgstr ""
+"即时交易由接近 4,800 个主节点服务器激活。这些节点与普通节点不同的是它们被证明拥有 1,000 "
+"Dash。这类特殊服务器的责任之一就是执行”交易锁定“，也被称为即时发送。"
 
 #: ../../developers/integration.rst:129
 msgid ""
@@ -399,28 +462,28 @@ msgid ""
 "\"InstantSend\" transaction occurs the network goes through an extra "
 "validation process which examines the following two properties of the "
 "transaction:"
-msgstr ""
+msgstr "本概念为网络共识的扩展。当一个”即时发送“交易出现，网络执行一个额外的验证过程来检查交易的以下两个属性："
 
 #: ../../developers/integration.rst:134
 msgid ""
 "**Input Maturity:** the network will require all inputs to have at least 6 "
 "confirmations."
-msgstr ""
+msgstr "**输入成熟度:** 网络将要求所有输入至少有 6 个确认。"
 
 #: ../../developers/integration.rst:137
 msgid ""
 "**Input Composition:** the number of inputs in use dictates fee "
 "requirements."
-msgstr ""
+msgstr "**输入构成:** 使用中的输入数量满足费用要求。"
 
 #: ../../developers/integration.rst:140
 msgid ""
 "**1 - 4 inputs:** per-kB fee of 0.00001 DASH using Automatic InstantSend."
-msgstr ""
+msgstr "**1 - 4 输入:**  自动即时发送 手续费 0.00001 DASH 每 kB。"
 
 #: ../../developers/integration.rst:142
 msgid "**5+ inputs:** per-input fee of 0.0001 DASH is required."
-msgstr ""
+msgstr "**5+ 输入:** 要求 0.0001 DASH 手续费每个输入。"
 
 #: ../../developers/integration.rst:144
 msgid ""
@@ -429,10 +492,11 @@ msgid ""
 " blocks. Transactions carrying 4 or fewer inputs are referred to as a "
 "“simple transaction” and carry no extra fee."
 msgstr ""
+"假如**输入成熟度**与**输入构成**满足要求，网络将”锁定“交易相关输入25 个区块。包含4个或更少输入的交易被称为”简单交易“，它们无需额外费用。"
 
 #: ../../developers/integration.rst:151
 msgid "Automatic InstantSend"
-msgstr ""
+msgstr " 自动即时发送"
 
 #: ../../developers/integration.rst:153
 msgid ""
@@ -440,11 +504,11 @@ msgid ""
 "transaction which is classified as a “simple transaction” will automatically"
 " be broadcast as an InstantSend transaction when using standard transaction "
 "broadcast endpoints."
-msgstr ""
+msgstr "Dash Core v0.13.x 引入自动即时发送。 任何被识别为”简单交易“的交易在使用标准交易广播节点时将自动被广播为即时交易。"
 
 #: ../../developers/integration.rst:159
 msgid "InstantSend vs. Standard Transactions"
-msgstr ""
+msgstr "即时发送 与 标准交易"
 
 #: ../../developers/integration.rst:161
 msgid ""
@@ -452,7 +516,7 @@ msgid ""
 "been provided additional assurances by the Masternode Network. As a result, "
 "and from an integration perspective, there is no technical difference "
 "between the two types of transactions."
-msgstr ""
+msgstr "”即时发送“指被主节点网络提供额外保证的一个标准交易。因此从整合的角度来说，这两种类型的交易并没有技术差异。"
 
 #: ../../developers/integration.rst:166
 msgid ""
@@ -460,7 +524,7 @@ msgid ""
 "applied within an integrated system. The receiving system must be aware of "
 "InstantSend Status in order to safely apply transaction confirmation "
 "policies that are enabled using this technology."
-msgstr ""
+msgstr "最大的区别在于如何将确认策略应用于一个整合系统内。接收系统必须清楚”即时发送“状态从而安全的应用该技术激活的交易确认策略。"
 
 #: ../../developers/integration.rst:172
 msgid "Receiving InstantSend Transactions"
@@ -468,18 +532,18 @@ msgstr "接收即时发送交易"
 
 #: ../../developers/integration.rst:174
 msgid "Receiving an InstantSend Transaction introduces two requirements:"
-msgstr ""
+msgstr "接收一个即时发送交易需要两个条件："
 
 #: ../../developers/integration.rst:176
 msgid ""
 "The ability to determine the “InstantSend Status” of a given transaction."
-msgstr ""
+msgstr "确认一个交易的”即时发送状态“"
 
 #: ../../developers/integration.rst:179
 msgid ""
 "The ability to adjust “Confirmation Status” independently of block "
 "confirmation."
-msgstr ""
+msgstr "独立地调整区块确认数与”确认状态“。"
 
 #: ../../developers/integration.rst:182
 msgid ""
@@ -488,6 +552,8 @@ msgid ""
 "<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__, or "
 "through the usage of an external wallet notification script."
 msgstr ""
+"”即时发送“状态通常可以通过与 dash 进程的直接连接来判断，`ZMQ notification "
+"<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__，或使用一个外部钱包通知脚本。"
 
 #: ../../developers/integration.rst:186
 msgid ""
@@ -496,54 +562,72 @@ msgid ""
 "attribute of the JSON response reflects the status of the transaction and is"
 " included in the following commands:"
 msgstr ""
+"**直接连接：**即时发送状态能通过使用 JSON-RPC 协议与 Dash 进程直接连接来判断。JSON "
+"返回的交易”即时锁“属性反应了交易的状态，它被包含在如下命令："
 
 #: ../../developers/integration.rst:192
 msgid ""
 "`getmempoolancestors <https://dash-docs.github.io/en/developer-"
 "reference#getmempoolancestors>`__"
 msgstr ""
+"`getmempoolancestors <https://dash-docs.github.io/en/developer-"
+"reference#getmempoolancestors>`__"
 
 #: ../../developers/integration.rst:193
 msgid ""
 "`getmempooldescendants <https://dash-docs.github.io/en/developer-"
 "reference#getmempooldescendants>`__"
 msgstr ""
+"`getmempooldescendants <https://dash-docs.github.io/en/developer-"
+"reference#getmempooldescendants>`__"
 
 #: ../../developers/integration.rst:194
 msgid ""
 "`getmempoolentry <https://dash-docs.github.io/en/developer-"
 "reference#getmempoolentry>`__"
 msgstr ""
+"`getmempoolentry <https://dash-docs.github.io/en/developer-"
+"reference#getmempoolentry>`__"
 
 #: ../../developers/integration.rst:195
 msgid ""
 "`getrawtransaction <https://dash-docs.github.io/en/developer-"
 "reference#getrawtransaction>`__"
 msgstr ""
+"`getrawtransaction <https://dash-docs.github.io/en/developer-"
+"reference#getrawtransaction>`__"
 
 #: ../../developers/integration.rst:196
 msgid ""
 "`decoderawtransaction <https://dash-docs.github.io/en/developer-"
 "reference#decoderawtransaction>`__"
 msgstr ""
+"`decoderawtransaction <https://dash-docs.github.io/en/developer-"
+"reference#decoderawtransaction>`__"
 
 #: ../../developers/integration.rst:197
 msgid ""
 "`gettransaction <https://dash-docs.github.io/en/developer-"
 "reference#gettransaction>`__"
 msgstr ""
+"`gettransaction <https://dash-docs.github.io/en/developer-"
+"reference#gettransaction>`__"
 
 #: ../../developers/integration.rst:198
 msgid ""
 "`listtransactions <https://dash-docs.github.io/en/developer-"
 "reference#listtransactions>`__"
 msgstr ""
+"`listtransactions <https://dash-docs.github.io/en/developer-"
+"reference#listtransactions>`__"
 
 #: ../../developers/integration.rst:199
 msgid ""
 "`listsinceblock <https://dash-docs.github.io/en/developer-"
 "reference#listsinceblock>`__"
 msgstr ""
+"`listsinceblock <https://dash-docs.github.io/en/developer-"
+"reference#listsinceblock>`__"
 
 #: ../../developers/integration.rst:201
 msgid ""
@@ -552,6 +636,7 @@ msgid ""
 "wallet is observed. This is configured by adding the following line to the "
 "dash.conf file::"
 msgstr ""
+"**钱包通知：** Dash 进程被配置为只要观察到一个与钱包相关的即时发送交易时执行一个外部脚本。在配置文件 dash.conf 添加如下行："
 
 #: ../../developers/integration.rst:208
 msgid ""
@@ -559,6 +644,8 @@ msgid ""
 "only <https://dash-docs.github.io/en/glossary/watch-only-address>`__ "
 "addresses."
 msgstr ""
+"这常常被用于包含`只读 <https://dash-docs.github.io/en/glossary/watch-only-address>`__ "
+"地址的钱包。"
 
 #: ../../developers/integration.rst:213
 msgid "Broadcasting InstantSend Transactions"
@@ -568,15 +655,15 @@ msgstr "广播即时发送功能的交易信息"
 msgid ""
 "Automatic InstantSend introduces two requirements into the system being "
 "integrated:"
-msgstr ""
+msgstr "自动即时发送要求整合的系统满足两个条件："
 
 #: ../../developers/integration.rst:218
 msgid "The ability to evaluate the number of inputs in a given transaction."
-msgstr ""
+msgstr "能评估一个交易的输入数量。"
 
 #: ../../developers/integration.rst:220
 msgid "The ability to apply an increased fee-level in cases of 5+ inputs."
-msgstr ""
+msgstr "能为输入数量不低于 5 个的交易动态调整手续费。"
 
 #: ../../developers/integration.rst:222
 msgid ""
@@ -584,7 +671,7 @@ msgid ""
 "keep transaction fees to a minimum by optimizing input usage. If this is "
 "true, and it can be assumed that only “simple transactions” are being "
 "formed, no additional development effort is required."
-msgstr ""
+msgstr "在很多情况下一个整合系统已经包含了为了降低费用而优化输入的相关过程，它能确保只构造”简单交易“，因此无须额外开发工作。"
 
 #: ../../developers/integration.rst:227
 msgid ""
@@ -597,6 +684,10 @@ msgid ""
 "://dash-docs.github.io/en/developer-reference#sendrawtransaction>`__ "
 "command, e.g.::"
 msgstr ""
+"在一些未知的情况下，整合系统应当能够根据交易输入的数量计算手续费。必须使用0.0001 "
+"DASH每个输入的手续费方能使交易作为即时发送被正常广播。在这种情况下，值得注意的是在签署 `sendrawtransaction <https"
+"://dash-docs.github.io/en/developer-reference#sendrawtransaction>`__  时必须设置 "
+"”即时发送“标志位。例如："
 
 #: ../../developers/integration.rst:239
 msgid "Additional Resources"
@@ -622,18 +713,22 @@ msgid ""
 "`InstantSend Technical Information "
 "<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__"
 msgstr ""
+"`即时发送技术信息 "
+"<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__"
 
 #: ../../developers/integration.rst:247
 msgid ""
 "`InstantSend Developer Documentation <https://dash-"
 "docs.github.io/en/glossary/instantsend>`__"
-msgstr ""
+msgstr "`即时发送开发文档 <https://dash-docs.github.io/en/glossary/instantsend>`__"
 
 #: ../../developers/integration.rst:248
 msgid ""
 "`Product Brief: Dash Core v0.13 Release <https://blog.dash.org/product-"
 "brief-dash-core-release-v0-13-0-5d7fddffb7ef>`__"
 msgstr ""
+"`产品概述: Dash Core v0.13 发布 <https://blog.dash.org/product-brief-dash-core-"
+"release-v0-13-0-5d7fddffb7ef>`__"
 
 #: ../../developers/integration.rst:254
 msgid "API Services"
@@ -645,6 +740,9 @@ msgid ""
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
 "Resources-API.pdf>`__."
 msgstr ""
+"该文档的 PDF 版本 `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-API.pdf>`__。"
 
 #: ../../developers/integration.rst:258
 msgid ""
@@ -710,6 +808,8 @@ msgid ""
 "services with it. A practical guide to getting started with the Insight API "
 "and Insight UI block explorer is available :ref:`here <insight-api>`."
 msgstr ""
+"开源 REST API 给你提供一个方便强大而简单的读取 Dash 网络和利用它构建你自己服务的方式。开始使用 Insight API 和 "
+"Insight UI 区块浏览器的实用手册 :ref:`<insight-api>`。"
 
 #: ../../developers/integration.rst:297
 msgid "Features: Transaction Broadcast, WebSocket Notifications."
@@ -760,32 +860,32 @@ msgstr "说明文档的链接: https://www.blockcypher.com/dev/dash/"
 
 #: ../../developers/integration.rst:325
 msgid "BitGo"
-msgstr ""
+msgstr "BitGo"
 
 #: ../../developers/integration.rst:332
 msgid "https://www.bitgo.com"
-msgstr ""
+msgstr "https://www.bitgo.com"
 
 #: ../../developers/integration.rst:334
 msgid ""
 "BitGo provides a simple and robust RESTful API and client SDK to integrate "
 "digital currency wallets with your application. Support for Dash InstantSend"
 " is available."
-msgstr ""
+msgstr "BitGo 提供一个简单有力的 RESTful API 和用户 SDK 来为你的应用整合数字货币钱包。同时支持 Dash 即时发送。"
 
 #: ../../developers/integration.rst:338
 msgid ""
 "Features: Multi-Signature HD Wallets, Wallet Operations, WebSocket and "
 "WebHook Notifications, Custody Solutions"
-msgstr ""
+msgstr "功能：多用户签名 HD 钱包，钱包操作，WebSocket 和 WebHook 通知，保管解决方案"
 
 #: ../../developers/integration.rst:340
 msgid "Pricing Model: Per API Call"
-msgstr ""
+msgstr "价值模型: 每个 API 调用"
 
 #: ../../developers/integration.rst:341
 msgid "Documentation: https://www.bitgo.com/api/v2/"
-msgstr ""
+msgstr "文档: https://www.bitgo.com/api/v2/"
 
 #: ../../developers/integration.rst:344
 msgid "ChainRider"
@@ -911,6 +1011,9 @@ msgid ""
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
 "Resources-SDK.pdf>`__."
 msgstr ""
+"本文档PDF 版本 `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-SDK.pdf>`__."
 
 #: ../../developers/integration.rst:420
 msgid ""
@@ -920,6 +1023,8 @@ msgid ""
 "applications by forming transactions and/or performing various wallet "
 "functions."
 msgstr ""
+"SDKs ( 软件开发包) 用来加速设计和开发一个 Dash 网络产品。这些资源可被用来与一个 API "
+"提供者交互或通过构造交易与执行不同的钱包功能来创建独立应用。"
 
 #: ../../developers/integration.rst:428
 msgid "Dash Developer Guide"
@@ -945,7 +1050,7 @@ msgstr "说明文档的链接： https://dash-docs.github.io/en/developer-guide"
 
 #: ../../developers/integration.rst:446
 msgid "NodeJS/JavaScript: Dashcore"
-msgstr ""
+msgstr "NodeJS/JavaScript: Dashcore"
 
 #: ../../developers/integration.rst:453
 msgid "https://bitcore.io"
@@ -979,7 +1084,7 @@ msgstr "存储节点：https://github.com/dashevo/dashcore-node"
 
 #: ../../developers/integration.rst:464
 msgid "See also: `Insight API <https://github.com/dashevo/insight-api>`__"
-msgstr ""
+msgstr "参考: `Insight API <https://github.com/dashevo/insight-api>`__"
 
 #: ../../developers/integration.rst:467
 msgid "PHP: Bitcoin-PHP"
@@ -987,13 +1092,13 @@ msgstr "PHP: Bitcoin-PHP"
 
 #: ../../developers/integration.rst:469
 msgid "https://github.com/snogcel/bitcoin-php"
-msgstr ""
+msgstr "https://github.com/snogcel/bitcoin-php"
 
 #: ../../developers/integration.rst:471
 msgid ""
 "Bitcoin-PHP is an implementation of Bitcoin with support for Dash using "
 "mostly pure PHP."
-msgstr ""
+msgstr "Bitcoin-PHP 是纯PHP 实现的支持 Dash 的 Bitcoin。"
 
 #: ../../developers/integration.rst:474
 msgid "Platform: PHP"
@@ -1008,7 +1113,7 @@ msgstr ""
 
 #: ../../developers/integration.rst:476
 msgid "Repository: https://github.com/snogcel/bitcoin-php"
-msgstr ""
+msgstr "仓库: https://github.com/snogcel/bitcoin-php"
 
 #: ../../developers/integration.rst:479
 msgid "Python: PyCoin"
@@ -1016,7 +1121,7 @@ msgstr "Python: PyCoin"
 
 #: ../../developers/integration.rst:481
 msgid "https://github.com/DeltaEngine/pycoin"
-msgstr ""
+msgstr "https://github.com/DeltaEngine/pycoin"
 
 #: ../../developers/integration.rst:483
 msgid ""
@@ -1024,6 +1129,7 @@ msgid ""
 "useful when dealing with Bitcoin and Dash. It has been tested with Python "
 "2.7, 3.6 and 3.7."
 msgstr ""
+"PyCoin 是一个在处理 Bitcoin 与 Dash 时很有用的一系列工具。已在 Python 2.7, 3.6 和 3.7环境下测试。"
 
 #: ../../developers/integration.rst:487
 msgid "Platform: Python"
@@ -1035,13 +1141,14 @@ msgstr "文档: https://pycoin.readthedocs.io/en/latest/"
 
 #: ../../developers/integration.rst:489
 msgid "Repository: https://github.com/DeltaEngine/pycoin"
-msgstr ""
+msgstr "仓库: https://github.com/DeltaEngine/pycoin"
 
 #: ../../developers/integration.rst:490
 msgid ""
 "See also: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-"
 "dashrpc>`__"
 msgstr ""
+"参考: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-dashrpc>`__"
 
 #: ../../developers/integration.rst:493
 msgid "Java: DashJ"
@@ -1072,7 +1179,7 @@ msgstr "说明文档的链接：https://bitcoinj.github.io/getting-started"
 
 #: ../../developers/integration.rst:510
 msgid "Repository: https://github.com/HashEngineering/dashj"
-msgstr ""
+msgstr "仓库: https://github.com/HashEngineering/dashj"
 
 #: ../../developers/integration.rst:511
 msgid "Example application: https://github.com/tomasz-ludek/pocket-of-dash"
@@ -1080,11 +1187,11 @@ msgstr "应用示例：https://github.com/tomasz-ludek/pocket-of-dash"
 
 #: ../../developers/integration.rst:514
 msgid "Objective-C: Dash-Sync"
-msgstr ""
+msgstr "Objective-C: Dash-Sync"
 
 #: ../../developers/integration.rst:521
 msgid "https://github.com/dashevo/dashsync-iOS"
-msgstr ""
+msgstr "https://github.com/dashevo/dashsync-iOS"
 
 #: ../../developers/integration.rst:523
 msgid ""
@@ -1092,14 +1199,16 @@ msgid ""
 " all most relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement"
 " Proposals (DIPs)."
 msgstr ""
+"Dash-Sync 是一个用于 iOS 的 Objective-C Dash 区块链框架。它实现了所有与 Bitcoin 改进提案 (BIPs) 和 "
+"Dash 改进提案 (DIPs)相关的内容。"
 
 #: ../../developers/integration.rst:527
 msgid "Platform: iOS"
-msgstr ""
+msgstr "平台: iOS"
 
 #: ../../developers/integration.rst:528
 msgid "Repository: https://github.com/dashevo/dashsync-iOS"
-msgstr ""
+msgstr "仓库: https://github.com/dashevo/dashsync-iOS"
 
 #: ../../developers/integration.rst:531
 msgid ".NET: NBitcoin"
@@ -1138,7 +1247,7 @@ msgstr "存储库：https://github.com/MetacoSA/NBitcoin"
 #: ../../developers/integration.rst:549
 msgid ""
 "See also: `JSON-RPC Utilities <https://github.com/cryptean/bitcoinlib>`__"
-msgstr ""
+msgstr "参考: `JSON-RPC Utilities <https://github.com/cryptean/bitcoinlib>`__"
 
 #: ../../developers/integration.rst:561
 msgid "BlockCypher also offers client SDKs."
@@ -1200,6 +1309,8 @@ msgid ""
 "`code snippet generator from CoinGecko "
 "<https://www.coingecko.com/en/widgets/ticker/dash/usd>`_."
 msgstr ""
+"你可以利用这些代码为你的网站添加一个简单的价格小标签  `code snippet generator from CoinGecko "
+"<https://www.coingecko.com/en/widgets/ticker/dash/usd>`_。"
 
 #: ../../developers/integration.rst:607
 msgid ""

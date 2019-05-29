@@ -6,15 +6,16 @@
 # Translators:
 # Alex.ys <silvershark.ys@gmail.com>, 2018
 # Leon White <leon.white@dash.org>, 2019
+# Eamon Young <xsrf@icloud.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-13 04:51+0000\n"
+"POT-Creation-Date: 2019-05-28 01:50+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
+"Last-Translator: Eamon Young <xsrf@icloud.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1005,7 +1006,7 @@ msgstr ""
 
 #: ../../introduction/information.rst:385
 msgid "ChainLock"
-msgstr ""
+msgstr "ChainLock"
 
 #: ../../introduction/information.rst:380
 msgid ""
@@ -1016,6 +1017,9 @@ msgid ""
 "powerful method of mitigating 51% mining attacks, which are associated with "
 "double spending."
 msgstr ""
+"定义于`DIP8 "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__，ChainLocks "
+"是在区块被矿工传播后立即用 LLMQ来 签名以确保最先见证规则的一种方式。这是一种有效缓解 51%攻击的方式，该攻击通常与双花相关。"
 
 #: ../../introduction/information.rst:395
 msgid "Cloud Wallet"
@@ -1502,7 +1506,7 @@ msgstr ""
 
 #: ../../introduction/information.rst:653
 msgid "DKG"
-msgstr ""
+msgstr "DKG"
 
 #: ../../introduction/information.rst:646
 msgid ""
@@ -1515,6 +1519,10 @@ msgid ""
 "Threshold Scheme and Distributed Key Generation, which is an implementation "
 "of Shamir’s Secret Sharing."
 msgstr ""
+"定义于`DIP6 <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__，分布式 "
+"Key 生成(`DKG <https://github.com/dashpay/dips/blob/master/dip-0006.md#llmq-"
+"dkg-network-protocol>`__) 是一种生成 用来在 LLMQ 中进行网络消息签名的BLS 密钥对。它基于 M-N "
+"策略和分布式生成，是 Shamir 的秘密分享技术的实现。"
 
 #: ../../introduction/information.rst:663
 msgid "Digital Signature"
@@ -1868,7 +1876,7 @@ msgstr ""
 
 #: ../../introduction/information.rst:844
 msgid "LLMQ"
-msgstr ""
+msgstr "LLMQ"
 
 #: ../../introduction/information.rst:836
 msgid ""
@@ -1881,6 +1889,9 @@ msgid ""
 "allowing load balancing between these quorums. The main task of a LLMQ is to"
 " perform threshold signing of consensus related messages."
 msgstr ""
+"定义与`DIP6 "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__，一个长效主节点仲裁团（LLMQ）是一个确定性的全节点子集。此仲裁团在分布式密钥生成（DKG）协议的帮助下生成并且存在很长时间（例如数天）。多个仲裁团同时处于激活状态，允许这些仲裁团之前负载均衡。LLMQ"
+" 的主要任务就是共识相关消息的签名工作。"
 
 #: ../../introduction/information.rst:852
 msgid "Masternode"
@@ -2164,7 +2175,7 @@ msgstr "软件开发工具包是软件工程师在为特定的软件包和软硬
 
 #: ../../introduction/information.rst:991
 msgid "Signaling"
-msgstr ""
+msgstr "信号"
 
 #: ../../introduction/information.rst:987
 msgid ""
@@ -2174,6 +2185,7 @@ msgid ""
 "through their adoption of updated software in support of a particular "
 "protocol and/or by setting a specific version bit within discovered blocks."
 msgstr ""
+"一个支持某个功能或分叉的迹象，标识或者信号。常常用于那些发布支持同意信号的矿工。该消息往往通过他们应用更新版本的软件支持某个协议和/或在产生的区块中设置某个特殊的标志位来传送。"
 
 #: ../../introduction/information.rst:996
 msgid "State View"

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-13 04:51+0000\n"
+"POT-Creation-Date: 2019-05-28 01:50+0000\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
 "Last-Translator: JZA <jza@oooes.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
@@ -209,7 +209,7 @@ msgstr ""
 " 600 USD por mes. También está la posibilidad de que los masternodes ganen "
 "dinero de comisiones en un futuro."
 
-#: ../../introduction/features.rst:82 ../../introduction/features.rst:518
+#: ../../introduction/features.rst:82 ../../introduction/features.rst:561
 msgid "PrivateSend"
 msgstr "PrivateSend"
 
@@ -329,7 +329,7 @@ msgstr ""
 "usuarios que tienen las copias de seguridad deshabilitadas también tendrán "
 "PrivateSend deshabilitado."
 
-#: ../../introduction/features.rst:135 ../../introduction/features.rst:516
+#: ../../introduction/features.rst:135 ../../introduction/features.rst:559
 msgid "InstantSend"
 msgstr "InstantSend"
 
@@ -410,10 +410,72 @@ msgstr ""
 "detallado por Amanda B. Johnson, 16 de Septiembre 2016"
 
 #: ../../introduction/features.rst:182
+msgid "ChainLocks"
+msgstr ""
+
+#: ../../introduction/features.rst:184
+msgid ""
+"ChainLocks are a feature provided by the Dash Network which provides "
+"certainty when accepting payments. This technology, particularly when used "
+"in parallel with :ref:`InstantSend <instantsend>`, creates an environment in"
+" which payments can be accepted immediately and without the risk of "
+"“Blockchain Reorganization Events”."
+msgstr ""
+
+#: ../../introduction/features.rst:190
+msgid ""
+"The risk of blockchain reorganization is typically addressed by requiring "
+"multiple “confirmations” before a transaction can be safely accepted as "
+"payment. This type of indirect security is effective, but at a cost of time "
+"and user experience. ChainLocks are a solution for this problem."
+msgstr ""
+
+#: ../../introduction/features.rst:197
+msgid "ChainLocks Process Overview"
+msgstr ""
+
+#: ../../introduction/features.rst:199
+msgid ""
+"Every twelve hours a new “LLMQ” (Long-Lasting Masternode Quorum) is formed "
+"using a “DKG” (Distributed Key Generation) process. All members of this "
+"Quorum are responsible for observing, and subsequently affirming, newly "
+"mined blocks:"
+msgstr ""
+
+#: ../../introduction/features.rst:204
+msgid ""
+"Whenever a block is mined, Quorum Members will broadcast a signed message "
+"containing the observed block to the rest of the Quorum."
+msgstr ""
+
+#: ../../introduction/features.rst:207
+msgid ""
+"If 60% or more of the Quorum sees the same new block they will collectively "
+"form a “CLSIG” (ChainLock Signature) message which will be broadcast to the "
+"remainder of the network."
+msgstr ""
+
+#: ../../introduction/features.rst:211
+msgid ""
+"When a valid ChainLock Signature is received by a client on the network, it "
+"will reject all blocks at the same height that do not match the block "
+"specified in that message."
+msgstr ""
+
+#: ../../introduction/features.rst:215
+msgid ""
+"The result is a quick and unambiguous decision on the “correct” blockchain "
+"for integrated clients and wallets. From a security perspective, this also "
+"makes reorganizations prior to this block impossible. See `DIP0008 "
+"ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__ for "
+"a full description of how ChainLocks work."
+msgstr ""
+
+#: ../../introduction/features.rst:225
 msgid "Sporks"
 msgstr "Sporks"
 
-#: ../../introduction/features.rst:184
+#: ../../introduction/features.rst:227
 msgid ""
 "In response to unforeseen issues with the rollout of the major \"RC3\" "
 "update in June 2014, the Dash development team created a mechanism by which "
@@ -434,7 +496,7 @@ msgstr ""
 "forking\", pero la comunidad cariñosamente lo denominó \"el spork\" y el "
 "nombre se quedó."
 
-#: ../../introduction/features.rst:193
+#: ../../introduction/features.rst:236
 msgid ""
 "New features or versions of Dash undergo extensive testing on testnet before"
 " they are released to the main network. When a new feature or version of "
@@ -475,11 +537,11 @@ msgstr ""
 "obtener detalles técnicos sobre sporks individuales, ver :ref:`here "
 "<understanding-sporks>`."
 
-#: ../../introduction/features.rst:216
+#: ../../introduction/features.rst:259
 msgid "X11 Hash Algorithm"
 msgstr "Algoritmo X11"
 
-#: ../../introduction/features.rst:218
+#: ../../introduction/features.rst:261
 msgid ""
 "X11 is a widely used hashing algorithm created by Dash core developer Evan "
 "Duffield. X11’s chained hashing algorithm utilizes a sequence of eleven "
@@ -508,7 +570,7 @@ msgstr ""
 "con X11 se puede encontrar en la sección :ref:`Minería <mining>` de esta "
 "documentación."
 
-#: ../../introduction/features.rst:231
+#: ../../introduction/features.rst:274
 msgid ""
 "X11 is the name of the chained proof-of-work (**PoW**) algorithm that was "
 "introduced in Dash (launched January 2014 as \"Xcoin\"). It was partially "
@@ -524,7 +586,7 @@ msgstr ""
 "difiere con respecto a Quark en que las rondas de hash son determinadas *a "
 "priori* en vez de ser seleccionadas aleatoriamente. "
 
-#: ../../introduction/features.rst:238
+#: ../../introduction/features.rst:281
 msgid ""
 "The X11 algorithm uses multiple rounds of 11 different hashes (blake, bmw, "
 "groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, echo), thus "
@@ -539,11 +601,11 @@ msgstr ""
 "está relacionado con el sistema de código abierto X11, común en los sistemas"
 " operativos tipo UNIX."
 
-#: ../../introduction/features.rst:246
+#: ../../introduction/features.rst:289
 msgid "Advantages of X11"
 msgstr "Ventajas de X11"
 
-#: ../../introduction/features.rst:248
+#: ../../introduction/features.rst:291
 msgid ""
 "The increased complexity and sophistication of the chained algorithm "
 "provides enhanced levels of security and less uncertainty for a digital "
@@ -561,7 +623,7 @@ msgstr ""
 "logre vulnerar el SHA-256 puede arriesgar toda la red Bitcoin hasta que la "
 "red migre a través de un hard fork a otro algoritmo criptográfico. "
 
-#: ../../introduction/features.rst:256
+#: ../../introduction/features.rst:299
 msgid ""
 "In the event of a similar computing breakthrough, a digital currency using "
 "the X11 PoW would continue to function securely unless all 11 hashes were "
@@ -577,7 +639,7 @@ msgstr ""
 "como algoritmo, la moneda debería reemplazar la función problemática con "
 "algún otro algoritmo más confiable.  "
 
-#: ../../introduction/features.rst:263
+#: ../../introduction/features.rst:306
 msgid ""
 "Given the speculative nature of digital currencies and their inherent "
 "uncertainties as a new field, the X11 algorithm can provide increased "
@@ -595,7 +657,7 @@ msgstr ""
 "diversificación de inversiones y cobertura contra los riesgos asociados a "
 "estos algoritmos afectados por SPOF (Puntos individuales de fallo)."
 
-#: ../../introduction/features.rst:271
+#: ../../introduction/features.rst:314
 msgid ""
 "Evan Duffield, the creator of Dash and X11 chained-hash, has written on "
 "several occasions that X11 was integrated into Dash not with the intention "
@@ -608,11 +670,11 @@ msgstr ""
 "de ASIC crearan  ASICs para X11 en el futuro, sino buscando proveer el mismo"
 " camino migratorio que tuvo Bitcoin. (CPUs, GPUs y ASICs). "
 
-#: ../../introduction/features.rst:281
+#: ../../introduction/features.rst:324
 msgid "Dark Gravity Wave"
 msgstr "Dark Gravity Wave"
 
-#: ../../introduction/features.rst:283
+#: ../../introduction/features.rst:326
 msgid ""
 "**DGW** or *Dark Gravity Wave* is an open source difficulty-adjusting "
 "algorithm for Bitcoin-based cryptocurrencies that was first used in Dash and"
@@ -637,7 +699,7 @@ msgstr ""
 "constantes, incluso si la potencia de hashing experimenta altas "
 "fluctuaciones, sin sufrir una variación temporal."
 
-#: ../../introduction/features.rst:295
+#: ../../introduction/features.rst:338
 msgid ""
 "Version 2.0 of DGW was implemented in Dash from block 45,000 onwards in "
 "order to completely alleviate the time-warp exploit."
@@ -646,7 +708,7 @@ msgstr ""
 " objetivo de aliviar completamente la vulnerabilidad ante la variación "
 "temporal."
 
-#: ../../introduction/features.rst:298
+#: ../../introduction/features.rst:341
 msgid ""
 "Version 3.0 was implemented on May 14 of 2014 to further improve difficulty "
 "re-targeting with smoother transitions. It also fixes issues with various "
@@ -658,11 +720,11 @@ msgstr ""
 "problemas de arquitectura que tenía diferentes niveles de precisión de punto"
 " flotante a través del uso de enteros."
 
-#: ../../introduction/features.rst:307
+#: ../../introduction/features.rst:350
 msgid "Emission Rate"
 msgstr "Tasa de Emisión"
 
-#: ../../introduction/features.rst:309
+#: ../../introduction/features.rst:352
 msgid ""
 "Cryptocurrencies such as Dash and Bitcoin are created through a "
 "cryptographically difficult process known as mining. Mining involves "
@@ -689,7 +751,7 @@ msgstr ""
 "que muestra las monedas en circulación, conocida como la tasa de emisión de "
 "moneda. "
 
-#: ../../introduction/features.rst:322
+#: ../../introduction/features.rst:365
 msgid ""
 "While Dash is based on Bitcoin, it significantly modifies the coin emission "
 "rate to offer a smoother reduction in coin emission over time. While Bitcoin"
@@ -707,15 +769,15 @@ msgstr ""
 "lentamente ofrece una transición más suave a una economía basada en "
 "comisiones en comparación con Bitcoin."
 
-#: ../../introduction/features.rst:333
+#: ../../introduction/features.rst:376
 msgid "Bitcoin vs. Dash coin emission rate"
 msgstr "Tasa de emisión de monedas Bitcoin vs. Dash"
 
-#: ../../introduction/features.rst:337
+#: ../../introduction/features.rst:380
 msgid "Total coin emission"
 msgstr "Emisión total de monedas"
 
-#: ../../introduction/features.rst:339
+#: ../../introduction/features.rst:382
 msgid ""
 "`Bitcoin's total coin emission <https://docs.google.com/spreadsheets/d/1 "
 "2tR_9WrY0Hj4AQLoJYj9EDBzfA38XIVLQSOOOVePNm0/pubhtml?gid=0&single=true>`_ can"
@@ -733,7 +795,7 @@ msgstr ""
 "que el 99% de todos los Bitcoins estarán en circulación para el 2036, y el "
 "99.9% para el 2048."
 
-#: ../../introduction/features.rst:346
+#: ../../introduction/features.rst:389
 msgid ""
 "`Dash's total coin emission <https://docs.google.com/spreadsheets/d "
 "/1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`_ is also "
@@ -761,27 +823,27 @@ msgstr ""
 " base en estos números, se puede calcular una oferta de monedas máxima y "
 "mínima posible en el año 2254 entre:"
 
-#: ../../introduction/features.rst:360
+#: ../../introduction/features.rst:403
 msgid "17,742,696 DASH"
 msgstr "17,742,696 DASH"
 
-#: ../../introduction/features.rst:360
+#: ../../introduction/features.rst:403
 msgid "Assuming zero treasury allocation"
 msgstr "Asumiendo una asignación nula de tesorería "
 
-#: ../../introduction/features.rst:362
+#: ../../introduction/features.rst:405
 msgid "18,921,005 DASH"
 msgstr "18,921,005 DASH"
 
-#: ../../introduction/features.rst:362
+#: ../../introduction/features.rst:405
 msgid "Assuming full treasury allocation"
 msgstr "Asumiendo un asignación completa de tesorería"
 
-#: ../../introduction/features.rst:366
+#: ../../introduction/features.rst:409
 msgid "Block reward allocation"
 msgstr "Asignación de recompensa de bloque"
 
-#: ../../introduction/features.rst:368
+#: ../../introduction/features.rst:411
 msgid ""
 "Unlike Bitcoin, which allocates 100% of the block reward to miners, Dash "
 "holds back 10% of the block reward for use in the decentralized :ref:`budget"
@@ -809,27 +871,27 @@ msgstr ""
 "resulta en una asignación de recompensa de monedas aproximada a lo largo de "
 "un ciclo presupuestario de la siguiente manera:"
 
-#: ../../introduction/features.rst:382 ../../introduction/features.rst:384
+#: ../../introduction/features.rst:425 ../../introduction/features.rst:427
 msgid "45%"
 msgstr "45%"
 
-#: ../../introduction/features.rst:382
+#: ../../introduction/features.rst:425
 msgid "Mining Reward"
 msgstr "Recompensa por minería"
 
-#: ../../introduction/features.rst:384
+#: ../../introduction/features.rst:427
 msgid "Masternode Reward for Proof-of-service"
 msgstr "Recompensa de los masternodes por su Prueba-de-Servicio"
 
-#: ../../introduction/features.rst:386
+#: ../../introduction/features.rst:429
 msgid "10%"
 msgstr "10%"
 
-#: ../../introduction/features.rst:386
+#: ../../introduction/features.rst:429
 msgid "Decentralized Governance Budget"
 msgstr "Presupuesto de governanza descentralizada"
 
-#: ../../introduction/features.rst:389
+#: ../../introduction/features.rst:432
 msgid ""
 "This documentation is based on calculations and posts by moocowmoo. Please "
 "see `this reddit post <https://www.reddit.com/r/dashpay/comments/ "
@@ -847,11 +909,11 @@ msgstr ""
 "web <https://stats.masternode.me>`_ para datos en vivo sobre las "
 "estadísticas actuales de la red."
 
-#: ../../introduction/features.rst:400
+#: ../../introduction/features.rst:443
 msgid "Decentralized Governance"
 msgstr "Gobernanza descentralizada"
 
-#: ../../introduction/features.rst:402
+#: ../../introduction/features.rst:445
 msgid ""
 "Decentralized Governance by Blockchain, or DGBB, is Dash's attempt to solve "
 "two important problems in cryptocurrency: governance and funding. Governance"
@@ -880,7 +942,7 @@ msgstr ""
 "alcanzaron los votos para aprobar este cambio. Comparando con Bitcoin donde "
 "el debate del tamaño del bloque está sucediendo desde hace 3 años."
 
-#: ../../introduction/features.rst:416
+#: ../../introduction/features.rst:459
 msgid ""
 "DGBB also provides a means for Dash to fund its own development. While other"
 " projects have to depend on donations or premined endowments, Dash uses 10% "
@@ -907,7 +969,7 @@ msgstr ""
 " a sí misma al reservar el 10% de la recompensa en bloque para proyectos de "
 "presupuesto."
 
-#: ../../introduction/features.rst:429
+#: ../../introduction/features.rst:472
 msgid ""
 "You can read more about Dash governance in the :ref:`governance` section of "
 "this documentation."
@@ -915,11 +977,11 @@ msgstr ""
 "Puedes leer más sobre la governanza de Dash en la sección :ref:`governance` "
 "de esta documentación."
 
-#: ../../introduction/features.rst:436
+#: ../../introduction/features.rst:479
 msgid "Sentinel"
 msgstr "Sentinela"
 
-#: ../../introduction/features.rst:438
+#: ../../introduction/features.rst:481
 msgid ""
 "Sentinel is an autonomous agent for persisting, processing and automating "
 "Dash 12.1 governance objects and tasks, and for expanded functions in the "
@@ -933,7 +995,7 @@ msgstr ""
 "implementado como una aplicación de Python que se une a una instancia de una"
 " versión local de Dash 12.1 de dashd en cada Masternode de Dash 12.1."
 
-#: ../../introduction/features.rst:444
+#: ../../introduction/features.rst:487
 msgid ""
 "A Governance Object (or \"govObject\") is a generic structure introduced in "
 "Dash Core 12.1 to allow for the creation of Budget Proposals, Triggers, and "
@@ -946,11 +1008,11 @@ msgstr ""
 "ha utilizado para extender este objeto genérico a un objeto \"Propuesta\" "
 "para suplantar el sistema presupuestario actual de Dash."
 
-#: ../../introduction/features.rst:453
+#: ../../introduction/features.rst:496
 msgid "Diagram highlighting the relationship between Dash Sentinel and Core"
 msgstr "Diagrama que destaca la relación entre Dash Sentinel y Core"
 
-#: ../../introduction/features.rst:457
+#: ../../introduction/features.rst:500
 msgid ""
 "*\"The differences with Sentinel are really architectural and not easy/ "
 "interesting to explain to users as they are a bridge from 12.0 towards Evo "
@@ -980,15 +1042,15 @@ msgstr ""
 "varios documentos para Evo en un proceso continuo de RFC que se utilizan "
 "como base para el desarrollo de Evo.\"*"
 
-#: ../../introduction/features.rst:489
+#: ../../introduction/features.rst:532
 msgid "Andy Freer, Evolution Developer"
 msgstr "Andy Freer, desarrollador de Evolution "
 
-#: ../../introduction/features.rst:478
+#: ../../introduction/features.rst:521
 msgid "Fees"
 msgstr "Comisiones"
 
-#: ../../introduction/features.rst:480
+#: ../../introduction/features.rst:523
 msgid ""
 "Transactions on the Dash network are recorded in blocks on the blockchain. "
 "The size of each transaction is measured in bytes, but there is not "
@@ -1007,7 +1069,7 @@ msgid ""
 "process transactions even if no fee is included."
 msgstr ""
 
-#: ../../introduction/features.rst:497
+#: ../../introduction/features.rst:540
 msgid ""
 "The release of Dash 0.12.2.0 and activation of DIP0001 saw a simultaneous "
 "reduction of fees by a factor of 10, while the block size was increased from"
@@ -1021,51 +1083,51 @@ msgid ""
 "December 2018 is as follows:"
 msgstr ""
 
-#: ../../introduction/features.rst:510
+#: ../../introduction/features.rst:553
 msgid "Transaction type"
 msgstr "Tipo de transacción"
 
-#: ../../introduction/features.rst:510
+#: ../../introduction/features.rst:553
 msgid "Recommended fee"
 msgstr "Comisión recomendada"
 
-#: ../../introduction/features.rst:510
+#: ../../introduction/features.rst:553
 msgid "Per unit"
 msgstr "Por unidad"
 
-#: ../../introduction/features.rst:512
+#: ../../introduction/features.rst:555
 msgid "Standard transaction"
 msgstr "Transacción estándar"
 
-#: ../../introduction/features.rst:512 ../../introduction/features.rst:514
+#: ../../introduction/features.rst:555 ../../introduction/features.rst:557
 msgid ".00001 DASH"
 msgstr ".00001 DASH"
 
-#: ../../introduction/features.rst:512 ../../introduction/features.rst:514
+#: ../../introduction/features.rst:555 ../../introduction/features.rst:557
 msgid "Per kB of transaction data"
 msgstr "Por Kb de data de transacción"
 
-#: ../../introduction/features.rst:514
+#: ../../introduction/features.rst:557
 msgid "InstantSend autolock"
 msgstr "Seguro automático de InstantSend"
 
-#: ../../introduction/features.rst:516
+#: ../../introduction/features.rst:559
 msgid ".0001 DASH"
 msgstr ".0001 DASH"
 
-#: ../../introduction/features.rst:516
+#: ../../introduction/features.rst:559
 msgid "Per transaction input"
 msgstr "Por entrada de transacción"
 
-#: ../../introduction/features.rst:518
+#: ../../introduction/features.rst:561
 msgid ".001 DASH"
 msgstr ".001 DASH"
 
-#: ../../introduction/features.rst:518
+#: ../../introduction/features.rst:561
 msgid "Per 10 rounds of mixing (average)"
 msgstr "Por 10 rondas de mezcla (promedio)"
 
-#: ../../introduction/features.rst:521
+#: ../../introduction/features.rst:564
 msgid ""
 "As an example, a standard and relatively simple transaction on the Dash "
 "network with one input, one output and a possible change address typically "
@@ -1085,7 +1147,7 @@ msgstr ""
 "ingresos. Estas comisiones se aplican independientemente del valor Dash o en"
 " dólares de la transacción en sí."
 
-#: ../../introduction/features.rst:531
+#: ../../introduction/features.rst:574
 msgid ""
 "PrivateSend works by creating denominations of 10, 1, 0.1, 0.01 and 0.001 "
 "DASH and then mixing these denominations with other users. Creation of the "
@@ -1102,13 +1164,13 @@ msgid ""
 "input. Always check your fees before sending a transaction."
 msgstr ""
 
-#: ../../introduction/features.rst:550
+#: ../../introduction/features.rst:593
 msgid "Evolution"
 msgstr "Evolution"
 
-#: ../../introduction/features.rst:552
+#: ../../introduction/features.rst:595
 msgid ""
-"`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a "
+"`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a "
 "decentralized currency platform built on Dash blockchain technology. The "
 "goal is to provide simple access to the unique features and benefits of Dash"
 " to assist in the creation of decentralized technology. Dash introduces a "
@@ -1117,7 +1179,7 @@ msgid ""
 "system."
 msgstr ""
 
-#: ../../introduction/features.rst:560
+#: ../../introduction/features.rst:603
 msgid ""
 "Dash Evolution will be released in stages. Dash Core releases 0.12.1 through"
 " to 0.12.3 lay the groundwork for the decentralized features behind the "
@@ -1133,7 +1195,7 @@ msgid ""
 "decentralized data storage system (Dash Drive) based on IPFS."
 msgstr ""
 
-#: ../../introduction/features.rst:571
+#: ../../introduction/features.rst:614
 msgid ""
 "Included below is our current work on Evolution, that adds many components "
 "such as:"
@@ -1141,7 +1203,7 @@ msgstr ""
 "A continuación se incluye nuestro trabajo actual sobre Evolution, que agrega"
 " muchos componentes tales como:"
 
-#: ../../introduction/features.rst:574
+#: ../../introduction/features.rst:617
 msgid ""
 "**Dash Drive:** A decentralized shared file system for user data that lives "
 "on the second tier network"
@@ -1149,7 +1211,7 @@ msgstr ""
 "**Dash Drive:** Un sistema de archivos descentralizados para los datos de "
 "los usuarios que vive en la segunda capa de la red."
 
-#: ../../introduction/features.rst:576
+#: ../../introduction/features.rst:619
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the "
 "network securely"
@@ -1157,7 +1219,7 @@ msgstr ""
 "**DAPI:** Una API descentralizada que permite a los usuarios de tercer nivel"
 " acceder a la red de forma segura"
 
-#: ../../introduction/features.rst:578
+#: ../../introduction/features.rst:621
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients connected"
 " to the network via DAPI and run on various platforms"
@@ -1165,7 +1227,7 @@ msgstr ""
 "**DashPay Decentralized Wallets:** Estas carteras son clientes ligeros "
 "conectados a la red a través de DAPI y se ejecutan en varias plataformas"
 
-#: ../../introduction/features.rst:580
+#: ../../introduction/features.rst:623
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
@@ -1173,7 +1235,7 @@ msgstr ""
 "**Segundo nivel:** La red de masternode, que proporciona una infraestructura"
 " compensada para el proyecto"
 
-#: ../../introduction/features.rst:582
+#: ../../introduction/features.rst:625
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
@@ -1181,7 +1243,7 @@ msgstr ""
 "**Presupuestos:** El segundo nivel tiene poder de voto para asignar fondos "
 "para proyectos específicos en la red a través del sistema de presupuesto"
 
-#: ../../introduction/features.rst:584
+#: ../../introduction/features.rst:627
 msgid ""
 "**Governance:** The second tier is given voting power to govern the currency"
 " and chart the course the currency takes"
@@ -1189,7 +1251,7 @@ msgstr ""
 "**Governanza:** Al segundo nivel se le otorga el poder de voto para gobernar"
 " la moneda y trazar el rumbo que tome la moneda."
 
-#: ../../introduction/features.rst:586
+#: ../../introduction/features.rst:629
 msgid ""
 "**Deterministic Masternode Lists:** This feature introduces an on-chain "
 "masternode list, which can be used to calculate past and present quorums"
@@ -1198,7 +1260,7 @@ msgstr ""
 "Esta funcionalidad introduce una lista de nodos maestros en la cadena, la "
 "cual puede ser usada para calcular el quorum pasado y presente."
 
-#: ../../introduction/features.rst:589
+#: ../../introduction/features.rst:632
 msgid ""
 "**Social Wallet:** We introduce a social wallet, which allows friends lists,"
 " grouping of users and shared multisig accounts"
@@ -1207,11 +1269,11 @@ msgstr ""
 "listas de amigos, agrupando con los usuarios y compartió una cuenta "
 "multifirma"
 
-#: ../../introduction/features.rst:593
+#: ../../introduction/features.rst:636
 msgid "Evolution Previews"
 msgstr "Avances de Evolution"
 
-#: ../../introduction/features.rst:595
+#: ../../introduction/features.rst:638
 msgid ""
 "The following videos featuring Dash Founder Evan Duffield and Head of UI/UX "
 "Development Chuck Williams describe the development process and upcoming "
@@ -1221,26 +1283,26 @@ msgstr ""
 "Desarrollo de UI / UX, Chuck Williams, describen el proceso de desarrollo y "
 "las próximas características de la plataforma Dash Evolution."
 
-#: ../../introduction/features.rst:599
+#: ../../introduction/features.rst:642
 msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
 msgstr "**Evolution Demo #1 - El primer Dash DAP**, 16 Marzo 2018"
 
-#: ../../introduction/features.rst:607
+#: ../../introduction/features.rst:650
 msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr "**Evolution Demo #2 - Móvil Evolution**, 25 Abril 2018"
 
-#: ../../introduction/features.rst:615
+#: ../../introduction/features.rst:658
 msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
 msgstr "**Evolution Demo #3 - Dashpay experiencia de usuario**, 15 Mayo 2018"
 
-#: ../../introduction/features.rst:623
+#: ../../introduction/features.rst:666
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr ""
 "**Chuck Williams en Evolution**, Conferencia de Dash Londres, 14 Septiembre "
 "2017"
 
-#: ../../introduction/features.rst:631
+#: ../../introduction/features.rst:674
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""

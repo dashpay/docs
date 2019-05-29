@@ -215,6 +215,20 @@ Huobi
   Huobi is a major Chinese exchange offering high volume DASH trading
   against BTC. A native app is available for both iOS and Android.
 
+BitKan
+  .. image:: exchanges/bitkan.png
+     :width: 200px
+     :align: right
+     :target: https://bitkan.com
+
+  https://bitkan.com
+
+  Founded in 2012, BitKan offers a one-stop platform for smart trading,
+  “K-Site” community, market data, industry news, a multi-cryptocurrency
+  wallet and mining monitor for millions of global users. BitKan also
+  features a Smart Trade platform to help users get the fastest trade at
+  the best price by aggregating the liquidity of multiple exchanges.
+
 CEX.IO
   .. image:: exchanges/cex.png
      :width: 200px
@@ -826,6 +840,17 @@ OOOBTC
 
   OOOBTC offers DASH trading against BTC and ETH, with a user interface
   available in Russian, Arabic and many East Asian languages.
+
+ExchangeAssets
+  .. image:: exchanges/exchange-assets.png
+     :width: 80px
+     :align: right
+     :target: https://exchange-assets.com
+
+  https://exchange-assets.com
+
+  ExchangeAssets is available in Russian and English, and offers DASH
+  trading against BTC.
 
 ABCC
   .. image:: exchanges/abcc.png

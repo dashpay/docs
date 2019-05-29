@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-13 04:51+0000\n"
+"POT-Creation-Date: 2019-05-28 01:50+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
 "Last-Translator: Yujin Joe <chichimakko@gmail.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/dash/teams/37570/ko/)\n"
@@ -61,11 +61,11 @@ msgid ""
 " common development tasks in Dash."
 msgstr ""
 
-#: ../../developers/index.rst:43
+#: ../../developers/index.rst:44
 msgid "Sporks"
 msgstr "스포크"
 
-#: ../../developers/index.rst:45
+#: ../../developers/index.rst:46
 msgid ""
 "A multi-phased fork, colloquially known as a \"spork\", is a mechanism "
 "unique to Dash used to safely deploy new features to the network through "
@@ -77,11 +77,11 @@ msgid ""
 "statuses."
 msgstr ""
 
-#: ../../developers/index.rst:55
+#: ../../developers/index.rst:56
 msgid "Spork functions"
 msgstr ""
 
-#: ../../developers/index.rst:57
+#: ../../developers/index.rst:58
 msgid ""
 "Sporks are set using integer values. Many sporks may be set to a particular "
 "epoch datetime (number of seconds that have elapsed since January 1, 1970) "
@@ -92,39 +92,39 @@ msgid ""
 "functions as described below:"
 msgstr ""
 
-#: ../../developers/index.rst:66
+#: ../../developers/index.rst:67
 msgid "SPORK_2_INSTANTSEND_ENABLED"
 msgstr ""
 
-#: ../../developers/index.rst:66
+#: ../../developers/index.rst:67
 msgid "Governs the ability of Dash clients to use InstantSend functionality."
 msgstr ""
 
-#: ../../developers/index.rst:70
+#: ../../developers/index.rst:71
 msgid "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
 msgstr ""
 
-#: ../../developers/index.rst:69
+#: ../../developers/index.rst:70
 msgid ""
 "If enabled, masternodes will reject blocks containing transactions in "
 "conflict with locked but unconfirmed InstantSend transactions."
 msgstr ""
 
-#: ../../developers/index.rst:74
+#: ../../developers/index.rst:75
 msgid "SPORK_5_INSTANTSEND_MAX_VALUE"
 msgstr ""
 
-#: ../../developers/index.rst:73
+#: ../../developers/index.rst:74
 msgid ""
 "Enforces the maximum value in Dash that can be included in an InstantSend "
 "transaction."
 msgstr ""
 
-#: ../../developers/index.rst:80
+#: ../../developers/index.rst:81
 msgid "SPORK_6_NEW_SIGS"
 msgstr ""
 
-#: ../../developers/index.rst:77
+#: ../../developers/index.rst:78
 msgid ""
 "Enables a new signature format for Dash-specific network messages introduced"
 " in Dash 12.3. For more information, see `here "
@@ -132,69 +132,69 @@ msgid ""
 "<https://github.com/dashpay/dash/pull/1937>`__."
 msgstr ""
 
-#: ../../developers/index.rst:84
+#: ../../developers/index.rst:85
 msgid "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT"
 msgstr ""
 
-#: ../../developers/index.rst:83
+#: ../../developers/index.rst:84
 msgid ""
 "If enabled, miners must pay 50% of the block reward to a masternode "
 "currently pending selection or the block will be considered invalid."
 msgstr ""
 
-#: ../../developers/index.rst:88
+#: ../../developers/index.rst:89
 msgid "SPORK_9_SUPERBLOCKS_ENABLED"
 msgstr ""
 
-#: ../../developers/index.rst:87
+#: ../../developers/index.rst:88
 msgid ""
 "If enabled, superblocks are verified and issued to pay proposal winners."
 msgstr ""
 
-#: ../../developers/index.rst:93
+#: ../../developers/index.rst:94
 msgid "SPORK_10_MASTERNODE_PAY_UPDATED_NODES"
 msgstr ""
 
-#: ../../developers/index.rst:91
+#: ../../developers/index.rst:92
 msgid ""
 "Controls whether masternodes running an older protocol version are "
 "considered eligible for payment. This can be used as an incentive to "
 "encourage masternodes to update."
 msgstr ""
 
-#: ../../developers/index.rst:97
+#: ../../developers/index.rst:98
 msgid "SPORK_12_RECONSIDER_BLOCKS"
 msgstr ""
 
-#: ../../developers/index.rst:96
+#: ../../developers/index.rst:97
 msgid ""
 "Forces reindex of a specified number of blocks to recover from unintentional"
 " network forks."
 msgstr ""
 
-#: ../../developers/index.rst:100
+#: ../../developers/index.rst:101
 msgid "SPORK_13_OLD_SUPERBLOCK_FLAG"
 msgstr ""
 
-#: ../../developers/index.rst:100
+#: ../../developers/index.rst:101
 msgid "Deprecated. No network function since block 614820."
 msgstr ""
 
-#: ../../developers/index.rst:104
+#: ../../developers/index.rst:105
 msgid "SPORK_14_REQUIRE_SENTINEL_FLAG"
 msgstr ""
 
-#: ../../developers/index.rst:103
+#: ../../developers/index.rst:104
 msgid ""
 "Toggles whether masternodes with status are eligible for payment if status "
 "is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly."
 msgstr ""
 
-#: ../../developers/index.rst:111
+#: ../../developers/index.rst:112
 msgid "SPORK_15_DETERMINISTIC_MNS_ENABLED"
 msgstr ""
 
-#: ../../developers/index.rst:107
+#: ../../developers/index.rst:108
 msgid ""
 "Controls whether `deterministic masternodes "
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ are required. "
@@ -202,53 +202,75 @@ msgid ""
 "updated masternodes will not be eligible for payment."
 msgstr ""
 
-#: ../../developers/index.rst:117
+#: ../../developers/index.rst:118
 msgid "SPORK_16_INSTANTSEND_AUTOLOCKS"
 msgstr ""
 
-#: ../../developers/index.rst:114
+#: ../../developers/index.rst:115
 msgid ""
 "Enables automatic transaction locking for transactions with less than a "
 "specified number of inputs, and removes the legacy InstantSend fee. Allows "
 "any node to request the transaction lock, not just the sending node."
 msgstr ""
 
-#: ../../developers/index.rst:125
+#: ../../developers/index.rst:124
 msgid "SPORK_17_QUORUM_DKG_ENABLED"
 msgstr ""
 
-#: ../../developers/index.rst:120
+#: ../../developers/index.rst:121
 msgid ""
 "Enables the `DKG process to create LLMQ quorums "
-"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. At the moment, "
-"this only activates a dummy DKG on testnet, which will later be replaced by "
-"the real DKG for mainnet and testnet. When enabled, simple PoSe scoring and "
-"banning is also active."
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. This spork will"
+" be turned on once 80% masternodes are upgraded to v0.14, which will enable "
+"DKG and DKG-based PoSe."
 msgstr ""
 
-#: ../../developers/index.rst:128
+#: ../../developers/index.rst:129
+msgid "SPORK_19_CHAINLOCKS_ENABLED"
+msgstr ""
+
+#: ../../developers/index.rst:127
+msgid ""
+"Enables :ref:`ChainLocks <chainlocks>`, a mechanism of preventing the risk "
+"to payments introduced by blockchain reorganization events. ChainLocks are "
+"described in `DIP0008 ChainLocks "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__."
+msgstr ""
+
+#: ../../developers/index.rst:135
+msgid "SPORK_20_INSTANTSEND_LLMQ_BASED"
+msgstr ""
+
+#: ../../developers/index.rst:132
+msgid ""
+"When enabled, legacy InstantSend is superseded by LLMQ-based InstantSend, as"
+" described in `DIP0010 LLMQ-based InstantSend "
+"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__."
+msgstr ""
+
+#: ../../developers/index.rst:138
 msgid "Viewing spork status"
 msgstr ""
 
-#: ../../developers/index.rst:130
+#: ../../developers/index.rst:140
 msgid ""
 "The ``spork show`` and ``spork active`` commands issued in the debug window "
 "(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
 "You can open the debug window by selecting **Tools > Debug console**."
 msgstr ""
 
-#: ../../developers/index.rst:138
+#: ../../developers/index.rst:148
 msgid "spork show and spork active output in the Dash Core debug console"
 msgstr ""
 
-#: ../../developers/index.rst:142
+#: ../../developers/index.rst:152
 msgid "Version History"
 msgstr ""
 
-#: ../../developers/index.rst:144
+#: ../../developers/index.rst:154
 msgid "Full release notes and the version history of Dash are available here:"
 msgstr ""
 
-#: ../../developers/index.rst:146
+#: ../../developers/index.rst:156
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
 msgstr ""
