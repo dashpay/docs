@@ -1447,6 +1447,17 @@ Cointree
   payment options and a range of learning materials to help get started
   with cryptocurrencies.
 
+Voyager
+  .. image:: exchanges/voyager.png
+     :width: 200px
+     :align: right
+     :target: https://www.investvoyager.com
+
+  https://www.investvoyager.com
+
+  Voyager is a crypto asset broker that connects to multiple exchanges
+  commission-free. Dash can be traded and purchased directly with USD.
+
 Crypto Voucher
   .. image:: exchanges/cryptovoucher.png
      :width: 200px
