@@ -1558,6 +1558,17 @@ Coinsave
   Coinsave is a Canadian OTC retailer offering DASH and other
   cryptocurrencies for CAD.
 
+Coinrex
+  .. image:: exchanges/coinrex.png
+     :width: 200px
+     :align: right
+     :target: https://coinrex.io
+
+  https://coinrex.io
+
+  Coinrex allows you to sell and buy Dash and other cryptocurrencies
+  OTC with Mexican pesos.
+
 Bitcoin Meester
   .. image:: exchanges/bitcoinmeester.png
      :width: 200px
