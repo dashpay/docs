@@ -1024,6 +1024,19 @@ Bitcointoyou
   offers trading of a number of cryptocurrencies, including Dash,
   against the Brazilian real.
 
+Exscudo
+  .. image:: exchanges/exscudo.png
+     :width: 110px
+     :align: right
+     :target: https://exscudo.com
+
+  https://exscudo.com
+
+  Exscudo offers an exchange trading Dash against BTC and EUR, as well
+  as cash-settled merchant services and a wallet ecosystem based on the
+  EON token, which allows users to seamlessly transmit money to one
+  another in a chat environment.
+
 Miami Crypto Exchange
   .. image:: exchanges/mcex.png
      :width: 110px

@@ -105,6 +105,45 @@ collected here:
    Atomic Wallet Portfolio screen
 
 
+Channels
+========
+
+https://exscudo.com/chat.html
+
+.. image:: img/exscudo.png
+   :width: 200px
+   :align: right
+   :target: https://exscudo.com/chat.html
+
+Built by Exscudo, Channels is a secure messaging system with a built-in
+money transfer for many cryptocurrencies, including Dash. The underlying
+EON token facilitates secure identity verification to reduce fraud.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.exscudo.channels
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/app/id1367425342
+
+Channels is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.exscudo.channels>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/app/id1367425342>`__.
+
+Documentation
+-------------
+
+Channels offers a FAQ at https://exscudo.com/faq.html
+
+.. figure:: img/exscudo-wallet.png
+   :width: 200px
+
+   Channels running on iOS
+
+
 Cobo
 ====
 
