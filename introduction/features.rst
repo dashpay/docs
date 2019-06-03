@@ -64,7 +64,7 @@ vote can be used on budget proposals or important decisions that affect
 Dash.
 
 Masternodes cost money and effort to host so they are paid a percentage
-of the block reward as an incentivize. With current masternode numbers
+of the block reward as an incentive. With current masternode numbers
 and rewards, masternodes earn approximately a 8% return on 1000 Dash
 (which means 6.97 Dash or USD1360 in July 2017) for the year of 2017.
 This `tool <https://stats.masternode.me/>`_ shows a live calculation of
