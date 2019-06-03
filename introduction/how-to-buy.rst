@@ -1014,7 +1014,7 @@ XDEX
 
 Bitcointoyou
   .. image:: exchanges/bitcointoyou.png
-     :width: 200px
+     :width: 120px
      :align: right
      :target: https://bitcointoyou.com
 
@@ -1026,7 +1026,7 @@ Bitcointoyou
 
 Exscudo
   .. image:: exchanges/exscudo.png
-     :width: 110px
+     :width: 200px
      :align: right
      :target: https://exscudo.com
 
