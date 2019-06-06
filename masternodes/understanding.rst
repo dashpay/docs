@@ -244,8 +244,8 @@ calculation, so it is not possible to game the system by causing
 masternodes to be PoSe banned for failing to respond to ping requests by
 e.g. a DDoS attack just prior to payment. Each failure to provide
 service results in an increase in the PoSe score relative to the maximum
-score, which is equal to the number of masternodes in the valid set. If
-the score reaches the number of masternodes in the valid set, a PoSe ban
+score, which is equal to the number of registered masternodes. If
+the score reaches the number of registered masternodes, a PoSe ban
 is enacted and the masternode must be repaired to ensure it provides
 reliable service and registered in the list again using a
 :ref:`ProUpServTx <dip3-update-service>`.  The current scoring rules as
