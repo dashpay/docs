@@ -63,7 +63,7 @@ related software and libraries to ensure continued compatibility.
   contains more information on backwards compatibility.
 
 
-- Please refer to the `Transaction Type Integration Guide <https://github.com/dashpay/docs/raw/master/binary/merchants/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 
+- Please refer to the `Transaction Type Integration Guide <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 
   for information on the implementation of Special Transactions and for
   examples of this new format.
 

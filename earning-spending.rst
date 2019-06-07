@@ -102,6 +102,20 @@ PolisPay
   debit cards. You can also withdraw cash at any MasterCard®-compatible
   ATM.
 
+Bitsa
+  .. image:: img/bitsa.png
+     :width: 200px
+     :align: right
+     :target: https://www.bitsacard.com
+
+  https://www.bitsacard.com
+
+  The new Bitsa prepaid card allows you to buy online or at any store.
+  You can withdraw cash from any ATM, make transfers between cards or
+  top it up with redeemable vouchers, bank card, transfer, cash or
+  blockchain tokens. Bitsa is a prepaid card topped up using the app,
+  and is not linked to any bank account.
+
 FuzeX
   .. image:: img/fuzex.png
      :width: 200px

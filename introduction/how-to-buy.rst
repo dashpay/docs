@@ -1014,7 +1014,7 @@ XDEX
 
 Bitcointoyou
   .. image:: exchanges/bitcointoyou.png
-     :width: 200px
+     :width: 120px
      :align: right
      :target: https://bitcointoyou.com
 
@@ -1023,6 +1023,19 @@ Bitcointoyou
   Based in Brazil, Bitcointoyou has been in operation since 2010 and
   offers trading of a number of cryptocurrencies, including Dash,
   against the Brazilian real.
+
+Exscudo
+  .. image:: exchanges/exscudo.png
+     :width: 200px
+     :align: right
+     :target: https://exscudo.com
+
+  https://exscudo.com
+
+  Exscudo offers an exchange trading Dash against BTC and EUR, as well
+  as cash-settled merchant services and a wallet ecosystem based on the
+  EON token, which allows users to seamlessly transmit money to one
+  another in a chat environment.
 
 Miami Crypto Exchange
   .. image:: exchanges/mcex.png
@@ -1447,6 +1460,17 @@ Cointree
   payment options and a range of learning materials to help get started
   with cryptocurrencies.
 
+Voyager
+  .. image:: exchanges/voyager.png
+     :width: 200px
+     :align: right
+     :target: https://www.investvoyager.com
+
+  https://www.investvoyager.com
+
+  Voyager is a crypto asset broker that connects to multiple exchanges
+  commission-free. Dash can be traded and purchased directly with USD.
+
 Crypto Voucher
   .. image:: exchanges/cryptovoucher.png
      :width: 200px
@@ -1546,6 +1570,17 @@ Coinsave
 
   Coinsave is a Canadian OTC retailer offering DASH and other
   cryptocurrencies for CAD.
+
+Coinrex
+  .. image:: exchanges/coinrex.png
+     :width: 200px
+     :align: right
+     :target: https://coinrex.io
+
+  https://coinrex.io
+
+  Coinrex allows you to sell and buy Dash and other cryptocurrencies
+  OTC with Mexican pesos.
 
 Bitcoin Meester
   .. image:: exchanges/bitcoinmeester.png
