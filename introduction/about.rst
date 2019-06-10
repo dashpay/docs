@@ -23,13 +23,15 @@ improvements in transaction speed, anonymity and governance. This
 section of the documentation describes these and many more key features
 that set Dash apart in the blockchain economy.
 
-The videos, links and documentation collected here can help you get
-started, or use the table of contents on the left to find a specific
-topic of interest. New users may be interested in getting started with
-an appropriate :ref:`wallet <wallets>`, learning about 
-:ref:`how to buy Dash <how-to-buy>` and 
-:ref:`where to spend Dash <earning-spending>`, learning about 
-:ref:`safety <safety>` or joining one of the many 
+Check out the `official Dash website <https://www.dash.org/>`__ to learn
+how `individuals <https://www.dash.org/individuals/>`__ and `businesses
+<https://www.dash.org/businesses/>`__ can use Dash. The videos, links
+and documentation collected here can help you get started, or use the
+table of contents on the left to find a specific topic of interest. New
+users may be interested in getting started with an appropriate
+:ref:`wallet <wallets>`, learning about :ref:`how to buy Dash
+<how-to-buy>` and :ref:`where to spend Dash <earning-spending>`, 
+learning about :ref:`safety <safety>` or joining one of the many 
 :ref:`Dash community sites <information>`.
 
 Dash Videos
