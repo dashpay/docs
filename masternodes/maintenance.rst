@@ -217,6 +217,8 @@ the following settings are configured correctly:
 - Ensure you are running the :ref:`latest version of Dash <masternode-update>`
 - Ensure your masternode has sufficient memory, swap, processing power 
   and hard drive space
+- Ensure you are fully synced to the `correct blockheight <https://insight.dash.org/insight/>`__, 
+  and that you are on the correct chain and not forked off
 - Ensure that a BLS private key is specified using the 
   ``masternodeblsprivkey`` option in the masternode's ``dash.conf`` file
 - Ensure that the BLS private key on the masternode is unique on the 
