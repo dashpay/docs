@@ -225,17 +225,17 @@ the following settings are configured correctly:
 - Ensure that the ``externalip`` (and ``port`` if using testnet) are 
   specified correctly and not blocked by a firewall or port forwarding 
   service
-- Ensure that Sentinel is installed, not exiting with an error and is 
-  entered in your crontab to run every 1-2 minutes
-- For further debugging, check the output of ``masternode status`` 
-  and/or the content of your ``debug.log`` file
+- Ensure that Sentinel is installed, updated, not exiting with an error 
+  and is entered in your crontab to run every 1-2 minutes
 
 Once you are certain these settings are correct, you can update your
 service status on the network and return to the valid set of masternodes
 by creating a :ref:`ProUpServTx <dip3-update-service>`. Monitor your
 masternode closely using ``masternode status`` and/or the ``debug.log``
-file after restoring service. The masternode will be banned again if it
-continues to fail to provide service.
+file after restoring service. This information can help you pinpoint the
+specific misconfiguration that is causing the masternode to be banned.
+The masternode will be banned again if it continues to fail to provide
+service.
 
 
 DashCentral voting, verification and monitoring
