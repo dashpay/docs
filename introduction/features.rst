@@ -50,30 +50,25 @@ Masternodes enable the following services:
    funds on the blockchain.
 -  **Governance and Treasury** allows stakeholders in Dash to determine
    the direction of the project and devotes 10% of the block reward to
-   development of the project and ecosystem (as of May 2018, our
-   annual budget exceeds $30 million).
+   development of the project and ecosystem.
 -  **Dash Evolution** will make using cryptocurrency as easy as using
    PayPal.
 
 Masternode owners must have possession of 1000 DASH, which they prove by
-signing a message and broadcasting to the network. Those coins can be
-moved at any time, but moving them will cause the masternode to fall out
-of queue and stop earning rewards. Masternode users are also given 
-**voting rights** on proposals. Each masternode has one vote and this 
-vote can be used on budget proposals or important decisions that affect 
-Dash.
+signing a message included in a special transaction written to the
+blockchain. The Dash can be moved or spent at any time, but doing so
+will cause the masternode to fall out of queue and stop earning rewards.
+Masternode users are also given **voting rights** on proposals. Each
+masternode has one vote and this vote can be used on budget proposals or
+important decisions that affect Dash.
 
 Masternodes cost money and effort to host so they are paid a percentage
-of the block reward as an incentive. With current masternode numbers
-and rewards, masternodes earn approximately a 8% return on 1000 Dash
-(which means 6.97 Dash or USD1360 in July 2017) for the year of 2017.
-This `tool <https://stats.masternode.me/>`_ shows a live calculation of
-masternode earnings. These rewards decrease by 7% each year, but the
-rising value of Dash may offset these reductions. As a matter of fact,
-masternodes were receiving 140 Dash per month at the beginning of 2016,
-but this was actually less money than today: USD600 per month. There is
-also the possibility for masternodes to earn money from fees in the
-future.
+of the block reward as an incentive. Because only one masternode is paid
+in each block, the frequency of the payment can vary, as well as the
+value of the Dash paid out. This `tool <https://stats.masternode.me/>`_
+shows a live calculation of masternode earnings. These rewards decrease
+by 7% each year, together with the block reward. There is also the
+possibility for masternodes to earn money from fees in the future.
 
 
 .. _privatesend:
@@ -84,9 +79,10 @@ PrivateSend
 PrivateSend gives you true financial privacy by obscuring the origins of
 your funds. All the Dash in your wallet is comprised of different
 "inputs", which you can think of as separate, discrete coins.
-PrivateSend uses an innovative process to mix your inputs with the inputs
-of two other people, without having your coins ever leave your wallet.
-You retain control of your money at all times.
+PrivateSend uses an innovative process to mix your inputs with the
+inputs of at least two other people in a single transaction, so the
+value in Dash never leaves your wallet. You retain control of your money
+at all times.
 
 You can view a practical guide to use PrivateSend 
 :ref:`here <dashcore-privatesend-instantsend>`.
@@ -478,41 +474,21 @@ of this documentation.
 Sentinel
 =========
 
-Sentinel is an autonomous agent for persisting, processing and
-automating Dash 12.1 governance objects and tasks, and for expanded
-functions in the upcoming Dash 1.0 release (Evolution). Sentinel is
-implemented as a Python application that binds to a local version 12.1
-dashd instance on each Dash 12.1 masternode.
+Introduced in Dash 0.12.1, Sentinel is an autonomous agent for
+persisting, processing and automating Dash governance objects and tasks.
+Sentinel is implemented as a Python application that binds to a local
+version dashd instance on each Dash masternode.
 
 A Governance Object (or "govObject") is a generic structure introduced
-in Dash Core 12.1 to allow for the creation of Budget Proposals,
-Triggers, and Watchdogs. Class inheritance has been utilized to extend 
-this generic object into a "Proposal" object to supplant the current 
-Dash budget system.
+in Dash 0.12.1 to allow for the creation of Budget Proposals and
+Triggers. Class inheritance has been utilized to extend this generic
+object into a "Proposal" object to supplant the current Dash budget
+system.
 
 .. figure:: img/sentinel.png
    :width: 500px
 
    Diagram highlighting the relationship between Dash Sentinel and Core
-
-.. epigraph::
-
-   *"The differences with Sentinel are really architectural and not easy/
-   interesting to explain to users as they are a bridge from 12.0 
-   towards Evo features (but not fully implementing them), and Sentinel 
-   was only a part of 12.1 improvements anyway. Pre-Sentinel, governance 
-   functions were 'hard wired' into core code. Sentinel abstracts this 
-   process because in Evolution there are many Object types from Users 
-   to Accounts to Contacts etc, and if we didn't make this change first,
-   future changes / improvements in Evolution (e.g. adding a new type of 
-   Object) would require changing core code. Now Core is agnostic to 
-   types of objects and we can take this forward for user experience and
-   not just governance. In terms of documentation, there is no 
-   whitepaper specific to Sentinel, but we have various docs for Evo in
-   an on-going RFC process which are used as the basis for Evo 
-   development."*
-
-   -- Andy Freer, Evolution Developer
 
 
 .. _fees:
@@ -546,8 +522,7 @@ a different and mandatory fee schedule. Dash 0.13.0.0 introduced
 InstantSend autolocks, which causes masternodes to automatically attempt
 to lock any transaction with 4 or fewer inputs — which are referred to
 as “simple” transactions — and removes the additional fee for
-InstantSend. The fee schedule for Dash 0.13.x as of December 2018 is as
-follows:
+InstantSend. The current fee schedule for Dash is as follows:
 
 +----------------------+-----------------+-----------------------------------+
 | Transaction type     | Recommended fee | Per unit                          |
@@ -593,12 +568,12 @@ Evolution
 ==========
 
 `Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a
-decentralized currency platform built on Dash blockchain technology. The
-goal is to provide simple access to the unique features and benefits of
-Dash to assist in the creation of decentralized technology. Dash
-introduces a tiered network design, which allows users to do various
-jobs for the network, along with decentralized API access and a
-decentralized file system.
+decentralized platform built on Dash blockchain technology. The goal is
+to provide simple access to the unique features and benefits of Dash to
+assist in the creation of decentralized technology. Dash introduces a
+tiered network design, which allows users to do various jobs for the
+network, along with decentralized API access and a decentralized file
+system.
 
 Dash Evolution will be released in stages. Dash Core releases 0.12.1 
 through to 0.12.3 lay the groundwork for the decentralized features 
@@ -608,13 +583,13 @@ and `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/m
 Version 0.14 establishes `DIP6 Long Living Masternode Quorums <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__.
 Expected in late 2019, Dash Core 1.0 will introduce key Evolution
 features such as username-based payments, the world's first
-decentralized API (DAPI) and a decentralized data storage system (Dash
-Drive) based on IPFS.
+decentralized API (DAPI) and a decentralized data storage system (Drive)
+based on IPFS.
 
 Included below is our current work on Evolution, that adds many
 components such as:
 
-- **Dash Drive:** A decentralized shared file system for user data that
+- **Drive:** A decentralized shared file system for user data that
   lives on the second tier network
 - **DAPI:** A decentralized API which allows third tier users to access
   the network securely
