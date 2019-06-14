@@ -88,6 +88,20 @@ Spend
   the appropriate local fiat currency and loaded on the Spend Visa Card
   for use in purchase and ATM withdrawals.
 
+Crypto.com
+  .. image:: img/crypto.png
+     :width: 200px
+     :align: right
+     :target: https://www.crypto.com
+
+  https://www.crypto.com
+
+  In the Crypto.com Wallet & Card App, users can purchase DASH at true
+  cost with no fees - with credit card and bank transfer both supported.
+  Holders of Crypto.com’s MCO Visa card can also use DASH, making it
+  easy to convert cryptocurrencies into fiat currencies and spend at
+  over 40 million merchants globally.
+
 PolisPay
   .. image:: img/polispay.png
      :width: 200px
