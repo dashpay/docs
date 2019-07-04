@@ -294,20 +294,20 @@ Masternode requirements
   but tools such as dashman now greatly simplify the process.
 
 In addition to the 1000 Dash held in collateral, masternodes also have
-minimum hardware requirements. As of version 12.1, these requirements
-are as follows:
+minimum hardware requirements. For Dash versions 0.14 and higher, these
+requirements are as follows:
 
-+---------+------------+-------------+
-|         | Minimum    | Recommended |
-+=========+============+=============+
-| CPU     | 1x 1 GHz   | 1x 2 GHz    |
-+---------+------------+-------------+
-| RAM     | 2 GB       | 4 GB        |
-+---------+------------+-------------+
-| Disk    | 20 GB      | 40 GB       |
-+---------+------------+-------------+
-| Network | 400 GB/mth | 1 TB/mth    |
-+---------+------------+-------------+
++---------+------------------+------------------+
+|         | Minimum          | Recommended      |
++=========+==================+==================+
+| CPU     | 1x 1 GHz         | 1x 2 GHz         |
++---------+------------------+------------------+
+| RAM     | 2 GB + 2 GB swap | 4 GB + 2 GB swap |
++---------+------------------+------------------+
+| Disk    | 40 GB            | 60 GB            |
++---------+------------------+------------------+
+| Network | 400 GB/mth       | 1 TB/mth         |
++---------+------------------+------------------+
 
 Masternode bandwidth use ranges between 300-500 GB per month and will
 grow as the network does.
