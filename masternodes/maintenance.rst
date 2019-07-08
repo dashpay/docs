@@ -62,17 +62,17 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.14.0.1/dashcore-0.14.0.1-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.14.0.2/dashcore-0.14.0.2-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.14.0.1-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.14.0.2-x86_64-linux-gnu.tar.gz
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-0.14.0.1-x86_64-linux-gnu.tar.gz
+  tar xfv dashcore-0.14.0.2-x86_64-linux-gnu.tar.gz
   cp -f dashcore-0.14.0/bin/dashd ~/.dashcore/
   cp -f dashcore-0.14.0/bin/dash-cli ~/.dashcore/
 
@@ -115,10 +115,12 @@ ProUpServTx
 A Provider Update Service Transaction (ProUpServTx) is used to update
 information relating to the operator. An operator can update the IP
 address and port fields of a masternode entry. If a non-zero
-operatorReward was set in the initial ProRegTx, the operator may also
-set the scriptOperatorPayout field in the ProUpServTx. If
-scriptOperatorPayout is not set and operatorReward is non-zero, the
-owner gets the full masternode reward. The ProUpServTx takes the following syntax::
+``operatorReward`` was set in the initial ProRegTx, the operator may
+also set the ``operatorPayoutAddress`` field in the ProUpServTx. If
+``operatorPayoutAddress`` is not set and ``operatorReward`` is non-zero,
+the owner gets the full masternode reward. A ProUpServTx can be created
+from DMT by clicking the **Update service** button, or from Dash Core
+using the following syntax::
 
   protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress feeSourceAddress)
 
@@ -130,7 +132,8 @@ Where:
   registered operator public key
 - ``operatorPayoutAddress`` (optional): The address used for operator 
   reward payments. Only allowed when the ProRegTx had a non-zero 
-  ``operatorReward`` value.
+  ``operatorReward`` value. Enter ``""`` to use the
+  last on-chain operator payout address.
 - ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
   ``operatorPayoutAddress`` will be used if not specified.
 
@@ -151,7 +154,9 @@ ProUpRegTx
 A Provider Update Registrar Transaction (ProUpRegTx) is used to update
 information relating to the owner. An owner can update the operator's
 BLS public key (e.g. to nominate a new operator), the voting address and
-their own payout address. The ProUpRegTx takes the following syntax::
+their own payout address. A ProUpRegTx can be created from DMT by
+clicking the **Update operator key**, **Update voting key** or **Update
+payout addr.** buttons, or from Dash Core using the following syntax::
 
   protx update_registrar proTxHash operatorKeyAddr votingKeyAddr payoutAddress (feeSourceAddress)
 
@@ -161,7 +166,7 @@ Where:
 - ``operatorKeyAddr``: An updated BLS public key, or ``""`` to use the
   last on-chain operator key
 - ``votingKeyAddr``: An updated voting key address, or ``""`` to use the
-  last on-chain operator key
+  last on-chain voting key
 - ``payoutAddress``: An updated Dash address for owner payments, or 
   ``""`` to use the last on-chain operator key
 - ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
@@ -181,8 +186,9 @@ required. It will immediately put the masternode in the PoSe-banned
 state. The owner must then issue a ProUpRegTx to set a new operator key.
 After the ProUpRegTx is mined to a block, the new operator must issue a
 ProUpServTx to update the service-related metadata and clear the PoSe-
-banned state (revive the masternode). The ProUpRevTx takes the following
-syntax::
+banned state (revive the masternode). A ProUpRevTx can be created from
+DMT by clicking the **Revoke operator** button, or from Dash Core using
+the following syntax::
 
   protx revoke proTxHash operatorKey reason (feeSourceAddress)
 
@@ -198,6 +204,42 @@ Where:
 Example::
 
   protx revoke 9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6 565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101 0
+
+
+Proof of Service Bans
+=====================
+
+If your masternode fails to provide service to the network in accordance
+with the current consensus rules, it will receive a :ref:`Proof of Service Ban <proof-of-service>`.
+If your masternode is in the ``POSE_BANNED`` status, you should check
+the following settings are configured correctly:
+
+- Ensure you are running the :ref:`latest version of Dash <masternode-update>`
+- Ensure your masternode has sufficient memory, swap, processing power 
+  and hard drive space
+- Ensure you are fully synced to the `correct blockheight <https://insight.dash.org/insight/>`__, 
+  and that you are on the correct chain and not forked off
+- Ensure that a BLS private key is specified using the 
+  ``masternodeblsprivkey`` option in the masternode's ``dash.conf`` file
+- Ensure that the BLS private key on the masternode is unique on the 
+  network and not shared with any other masternodes
+- Ensure that the BLS private key on the masternode corresponds to the 
+  BLS public key registered on the blockchain in the ``ProRegTx`` or 
+  ``ProUpRegTx``
+- Ensure that the ``externalip`` (and ``port`` if using testnet) are 
+  specified correctly and not blocked by a firewall or port forwarding 
+  service
+- Ensure that Sentinel is installed, updated, not exiting with an error 
+  and is entered in your crontab to run every 1-2 minutes
+
+Once you are certain these settings are correct, you can update your
+service status on the network and return to the valid set of masternodes
+by creating a :ref:`ProUpServTx <dip3-update-service>`. Monitor your
+masternode closely using ``masternode status`` and/or the ``debug.log``
+file after restoring service. This information can help you pinpoint the
+specific misconfiguration that is causing the masternode to be banned.
+The masternode will be banned again if it continues to fail to provide
+service.
 
 
 DashCentral voting, verification and monitoring

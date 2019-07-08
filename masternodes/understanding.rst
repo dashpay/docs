@@ -235,21 +235,24 @@ list is sorted in ascending order by this block height and ProRegTx hash
 (as a tie breaker in case two masternodes were registered in the same
 block), and the first entry is selected for payment.
 
+
+.. _proof-of-service:
+
 Proof of Service
 ================
 
-PoSe is a scoring system used to determine if a masternode is providing
-network services in good faith. A number of metrics are involved in the
-calculation, so it is not possible to game the system by causing
-masternodes to be PoSe banned for failing to respond to ping requests by
-e.g. a DDoS attack just prior to payment. Each failure to provide
-service results in an increase in the PoSe score relative to the maximum
-score, which is equal to the number of registered masternodes. If
-the score reaches the number of registered masternodes, a PoSe ban
-is enacted and the masternode must be repaired to ensure it provides
-reliable service and registered in the list again using a
-:ref:`ProUpServTx <dip3-update-service>`.  The current scoring rules as
-of Dash 0.14 are:
+Proof of Service (PoSe) is a scoring system used to determine if a
+masternode is providing network services in good faith. A number of
+metrics are involved in the calculation, so it is not possible to game
+the system by causing masternodes to be PoSe banned for failing to
+respond to ping requests by e.g. a DDoS attack just prior to payment.
+Each failure to provide service results in an increase in the PoSe score
+relative to the maximum score, which is equal to the number of
+registered masternodes. If the score reaches the number of registered
+masternodes, a PoSe ban is enacted and the masternode must be repaired
+to ensure it provides reliable service and registered in the list again
+using a :ref:`ProUpServTx <dip3-update-service>`. The current scoring
+rules as of Dash 0.14 are:
 
 - Failure to participate in `DKG <https://github.com/dashpay/dips/blob/master/dip-0006.md#llmq-dkg-network-protocol>`__\ = 66% punishment
 - Each subsequent block reduces PoSe score by 1
@@ -291,20 +294,20 @@ Masternode requirements
   but tools such as dashman now greatly simplify the process.
 
 In addition to the 1000 Dash held in collateral, masternodes also have
-minimum hardware requirements. As of version 12.1, these requirements
-are as follows:
+minimum hardware requirements. For Dash versions 0.14 and higher, these
+requirements are as follows:
 
-+---------+------------+-------------+
-|         | Minimum    | Recommended |
-+=========+============+=============+
-| CPU     | 1x 1 GHz   | 1x 2 GHz    |
-+---------+------------+-------------+
-| RAM     | 2 GB       | 4 GB        |
-+---------+------------+-------------+
-| Disk    | 20 GB      | 40 GB       |
-+---------+------------+-------------+
-| Network | 400 GB/mth | 1 TB/mth    |
-+---------+------------+-------------+
++---------+------------------+------------------+
+|         | Minimum          | Recommended      |
++=========+==================+==================+
+| CPU     | 1x 1 GHz         | 1x 2 GHz         |
++---------+------------------+------------------+
+| RAM     | 2 GB + 2 GB swap | 4 GB + 2 GB swap |
++---------+------------------+------------------+
+| Disk    | 40 GB            | 60 GB            |
++---------+------------------+------------------+
+| Network | 400 GB/mth       | 1 TB/mth         |
++---------+------------------+------------------+
 
 Masternode bandwidth use ranges between 300-500 GB per month and will
 grow as the network does.

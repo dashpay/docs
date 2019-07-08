@@ -57,6 +57,8 @@ translation is complete to request layout of the completed translation.
 +============+====================================================================================================+
 | English    | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_GB_RZ_2018.pdf>`__ |
 +------------+----------------------------------------------------------------------------------------------------+
+| Dutch      | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_NL_RZ_2018.pdf>`__ |
++------------+----------------------------------------------------------------------------------------------------+
 | French     | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_FR_RZ_2018.pdf>`__ |
 +------------+----------------------------------------------------------------------------------------------------+
 | German     | `PDF <https://github.com/dashpay/docs/raw/master/binary/brochures/DASH-Broschur_RZ_2018.pdf>`__    |
