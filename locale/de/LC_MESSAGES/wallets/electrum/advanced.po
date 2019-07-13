@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Nils Hermann <vk.translation@protonmail.ch>, 2018
+# Nils Hermann <vk.translation@protonmail.ch>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-07 07:43+0000\n"
+"POT-Creation-Date: 2019-07-13 05:58+0000\n"
 "PO-Revision-Date: 2018-03-19 12:19+0000\n"
-"Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2018\n"
+"Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2019\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,16 +26,20 @@ msgid ""
 "Masternodes, multisig, sweeping paper wallets, cold storage and command line"
 " in the Dash Electrum wallet."
 msgstr ""
+"Masternodes, Multisig, Paper Wallet leeren, Cold Storage und Befehlszeilen "
+"in der Dash Electrum Wallet"
 
 #: ../../wallets/electrum/advanced.rst:1
 msgid ""
 "dash, wallet, electrum, masternode, multisig, paper, cold storage, command "
 "line"
 msgstr ""
+"dash, wallet, electrum, masternode, multisig, paper, cold storage, "
+"befehlszeile"
 
 #: ../../wallets/electrum/advanced.rst:9
 msgid "Advanced functions"
-msgstr ""
+msgstr "Erweiterte Funktionen"
 
 #: ../../wallets/electrum/advanced.rst:11
 msgid ""
@@ -46,47 +50,63 @@ msgid ""
 "details on other advanced functions in Electrum for both Bitcoin and Dash, "
 "please click the links below."
 msgstr ""
+"Dash Electrum basiert auf `Electrum <https://electrum.org>`_, einer Bitcoin "
+"Wallet. Die meisten Funktionen sind identisch, was bedeutet, dass es nicht "
+"notwendig ist, die gesamte Electrum-Dokumentation hier wiederzugeben. Die "
+"folgende Sektion beschreibt einige häufig genutzte Sonderfunktionen. Für "
+"weitere Details zu den Sonderfunktionen von Electrum, sowohl für Bitcoin, "
+"als auch für Dash, klicke bitte auf einen der folgenden Links."
 
 #: ../../wallets/electrum/advanced.rst:18
 msgid "`Electrum documentation <http://docs.electrum.org>`_"
-msgstr ""
+msgstr "`Electrum-Dokumentation <http://docs.electrum.org>`_"
 
 #: ../../wallets/electrum/advanced.rst:19
 msgid ""
 "`Electrum seed version system "
 "<http://docs.electrum.org/en/latest/seedphrase.html>`_"
 msgstr ""
+"`Electrum Seed Versionssystem "
+"<http://docs.electrum.org/en/latest/seedphrase.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:20
 msgid ""
 "`Electrum protocol specification "
 "<http://docs.electrum.org/en/latest/protocol.html>`_"
 msgstr ""
+"`Electrum-Protokollspezifizierung "
+"<http://docs.electrum.org/en/latest/protocol.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:21
 msgid ""
 "`Serialization of unsigned or partially signed transactions "
 "<http://docs.electrum.org/en/latest/transactions.html>`_"
 msgstr ""
+"`Anordnung unsignierter oder teilweise signierter Transaktionen "
+"<http://docs.electrum.org/en/latest/transactions.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:22
 msgid ""
 "`Simple Payment Verification <http://docs.electrum.org/en/latest/spv.html>`_"
 msgstr ""
+"`Einfache Zahlungsverifikation "
+"<http://docs.electrum.org/en/latest/spv.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:23
 msgid ""
 "`The Python Console <http://docs.electrum.org/en/latest/console.html>`_"
 msgstr ""
+"`Die Python-Konsole <http://docs.electrum.org/en/latest/console.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:24
 msgid ""
 "`Using Electrum Through Tor <http://docs.electrum.org/en/latest/tor.html>`_"
 msgstr ""
+"`Electrum über Tor verwenden <http://docs.electrum.org/en/latest/tor.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:27
 msgid "Masternodes in Dash Electrum"
-msgstr ""
+msgstr "Masternodes in Dash Electrum"
 
 #: ../../wallets/electrum/advanced.rst:29
 msgid ""
@@ -94,10 +114,13 @@ msgid ""
 "**Masternode Manager**. The functionality is available starting from the "
 "protocol version 70201."
 msgstr ""
+"Dash Electrum unterstützt die Schaffung von Masternodes durch ein Interface,"
+" welches **Masternode Manager** genannt wird. Die Funktion ist ab der "
+"Protokollversion 70201 verfügbar."
 
 #: ../../wallets/electrum/advanced.rst:34
 msgid "Masternode Manager"
-msgstr ""
+msgstr "Masternode Manager"
 
 #: ../../wallets/electrum/advanced.rst:36
 msgid ""
@@ -106,40 +129,48 @@ msgid ""
 "status of your masternode(s). A wallet with no masternodes will begin with a"
 " default masternode for which you can fill in the necessary information."
 msgstr ""
+"Der Masternode Manger kann entweder über das Menü **Wallet >Masternodes** "
+"oder durch Drücken von **Strg+M** geöffnet werden. Der Manager zeigt den "
+"Status deiner Masternode(s) an. Eine Wallet ohne Masternodes wird mit einer "
+"Default-Masternode beginnen, in die alle notwendigen Informationen "
+"eingetragen werden können."
 
 #: ../../wallets/electrum/advanced.rst:42
 msgid ""
 "The manager displays the following data about each masternode you have set "
 "up:"
 msgstr ""
+"Der Manager zeigt die folgenden Daten über jede Masternode, die du "
+"aufgesetzt hast:"
 
 #: ../../wallets/electrum/advanced.rst:45
 msgid "The alias (name) of the masternode."
-msgstr ""
+msgstr "Den Alias (Namen) der Masternode."
 
 #: ../../wallets/electrum/advanced.rst:46
 msgid "The status of the masternode (e.g. whether it has been activated)."
-msgstr ""
+msgstr "Den Status der Masternode (z.B. ob sie aktiviert wurde)."
 
 #: ../../wallets/electrum/advanced.rst:47
 msgid "The collateral payment of the masternode."
-msgstr ""
+msgstr "Die Kollateralzahlung der Masternode."
 
 #: ../../wallets/electrum/advanced.rst:48
 msgid "The private delegate key."
-msgstr ""
+msgstr "Den Private Delegate Key."
 
 #: ../../wallets/electrum/advanced.rst:49
 msgid "The IP address and port that your masternode can be reached at."
 msgstr ""
+"Die IP-Adresse und den Port, über den die Masternode erreicht werden kann."
 
 #: ../../wallets/electrum/advanced.rst:50
 msgid "The protocol version that your masternode supports."
-msgstr ""
+msgstr "Die Protokollversion, welche die Masternode unterstützt."
 
 #: ../../wallets/electrum/advanced.rst:53
 msgid "Masternode setup"
-msgstr ""
+msgstr "Masternode Setup"
 
 #: ../../wallets/electrum/advanced.rst:55
 msgid ""
@@ -150,16 +181,25 @@ msgid ""
 "key. Either way, your masternode and Dash Electrum will both need to know "
 "the private key."
 msgstr ""
+"Eine Masternode erfordert einen \"Delegate\" Key, der sowohl Dash Electrum "
+"als auch der Masternode bekannt ist. Die Masternode verwendet den Key, um "
+"eine Nachricht zu signieren, damit das Dash-Netzwerk weiß, dass du sie "
+"autorisiert hast. Der Delegate Key kann entweder einer deiner Dash Electrum "
+"Keys oder ein importierter Key sein. In beiden Fällen müssen sowohl die "
+"Masternode als auch Dash Electrum den Private Key kennen."
 
 #: ../../wallets/electrum/advanced.rst:62
 msgid ""
 "To use one of your Dash Electrum keys as a delegate key, put its private key"
 " in the **Masternode Private Key** field of the **View Masternode** tab."
 msgstr ""
+"Um einen deiner Dash Electrum Keys als Delegate Key zu verwenden, musst du "
+"seinen Private Key in das **Masternode Private Key** Feld des **View "
+"Masternodes** Tabs einfügen."
 
 #: ../../wallets/electrum/advanced.rst:67
 msgid "IP address and protocol version"
-msgstr ""
+msgstr "IP-Adresse und Protokollversion"
 
 #: ../../wallets/electrum/advanced.rst:69
 msgid ""
@@ -168,16 +208,21 @@ msgid ""
 "that your masternode supports is required. This information is filled in "
 "automatically if you import a \"masternode.conf\" file."
 msgstr ""
+"Bestimmte Informationen zu deiner Masternode sind notwendig. Die IP-Adresse "
+"und der Port deiner Masternode müssen bereitgestellt werden. Die "
+"Protokollversion der Masternode muss ebenfalls angegeben werden. Diese "
+"Information wird automatisch eingetragen, wenn die Datei \"masternode.conf\""
+" importiert wird."
 
 #: ../../wallets/electrum/advanced.rst:77
 #: ../../wallets/electrum/advanced.rst:94
 #: ../../wallets/electrum/advanced.rst:115
 msgid "Entering IP and protocol information"
-msgstr ""
+msgstr "IP und Protokollinformationen eingeben"
 
 #: ../../wallets/electrum/advanced.rst:80
 msgid "Collateral"
-msgstr ""
+msgstr "Kollateral"
 
 #: ../../wallets/electrum/advanced.rst:82
 msgid ""
@@ -185,6 +230,9 @@ msgid ""
 "wallet. You can scan your wallet for 1000 DASH payments in the **Choose "
 "Collateral** tab of the Masternode Manager."
 msgstr ""
+"Um die Masternode zu starten, musst du eine 1000 Dash Zahlung in deiner "
+"Wallet haben. Du kannst über den **Choose Collateral** Tab des Masternode "
+"Managers nach einer 1000 Dash Zahlung suchen."
 
 #: ../../wallets/electrum/advanced.rst:86
 msgid ""

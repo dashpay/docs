@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kien Bui <kientemp2@gmail.com>, 2018
+# Kien Bui <kientemp2@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-07 07:43+0000\n"
+"POT-Creation-Date: 2019-07-13 05:58+0000\n"
 "PO-Revision-Date: 2018-04-16 05:42+0000\n"
-"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2018\n"
+"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2019\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,12 +25,15 @@ msgstr ""
 msgid ""
 "Compile Dash Core for Linux, macOS, Windows and Gitian deterministic builds"
 msgstr ""
+"Biên dịch Dash Core cho Linux, macOS, Windows và Gitian deterministic builds"
 
 #: ../../developers/compiling.rst:1
 msgid ""
 "dash, build, compile, linux, Jenkins, macOS, windows, binary, Gitian, "
 "developers"
 msgstr ""
+"dash, build, compile, linux, Jenkins, macOS, windows, binary, Gitian, "
+"developers"
 
 #: ../../developers/compiling.rst:9
 msgid "Compiling Dash Core"
@@ -49,6 +52,17 @@ msgid ""
 "<https://github.com/dashpay/dash/blob/develop/doc/build-generic.md>`__ "
 "available on GitHub to compile or cross-compile Dash for any platform."
 msgstr ""
+"Trong khi Dash cung cấp các phiên đã biên dịch ra mã máy ở `trang web  "
+"<https://www.dash.org/downloads>`_ và trên `GitHub "
+"<https://github.com/dashpay/dash/releases>`_, và development builds sử dụng "
+"`Jenkins <https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-"
+"gitian-nightly/activity/>`_, rất nhiều người dùng cũng sẽ quan tâm đến việc "
+"tự biên dịch từ mã nguồn Dash ra mã máy để chạy cho an toàn. Quá trình này "
+"đã trở nên đơn giản hoá được rất nhiều với phiên bản Dash Core 0.13.0 và "
+"người dùng mà không cần đến các dêtrministic build có thể làm theo `hướng "
+"dẫn biên dịch chung <https://github.com/dashpay/dash/blob/develop/doc/build-"
+"generic.md>`__ có trên GitHub để biên dịch hoặc biên Dash cho bất cứ nền "
+"tảng nào khác mà không cần phải thay đổi nền tảng sử dụng để biên dịch."
 
 #: ../../developers/compiling.rst:21
 msgid ""
@@ -56,10 +70,13 @@ msgid ""
 "<https://docs.dash.org/en/0.12.3/developers/compiling.html>`__ on a previous"
 " version of this page."
 msgstr ""
+"Hướng dẫn để biên dịch Dash Core 0.12.3 hoặc cũ hơn có sẵn `ở đây "
+"<https://docs.dash.org/vi/0.12.3/developers/compiling.html>`__ trên phần "
+"phiên bản trước của trang đó."
 
 #: ../../developers/compiling.rst:28
 msgid "Gitian"
-msgstr ""
+msgstr "Gitian"
 
 #: ../../developers/compiling.rst:30
 msgid ""
@@ -72,6 +89,14 @@ msgid ""
 "upload the resulting signature. These results are compared and only if they "
 "match, the build is accepted and uploaded to dash.org."
 msgstr ""
+"Gitian là quá trình biên dịch định sẵn mà nó được dùng để biên dịch ra phần "
+"mềm Dash Core. Nó cung cấp một cách hợp lý để đảm bảo rằng các mã thực thi "
+"được biên dịch từ mã nguồn trên Github. Nó cũng đảm bảo rằng các thành phần "
+"phụ thuộc được dùng trong phần mềm được biên dịch và kiểm tra một cách cơ "
+"bản trong các mã thực thi. Nhiều lâp trình viên biên dịch mã nguồn bằng việc"
+" làm theo mô tả cụ thể trong (\"công thức\"), ký số lên kết quả, và tải nó "
+"lên. Kết quả được so sánh và chỉ khi nó tương ứng thì kết quả đó mới được "
+"chấp nhận và tải lên dash.org."
 
 #: ../../developers/compiling.rst:39
 msgid ""
@@ -81,3 +106,8 @@ msgid ""
 "<https://docs.dash.org/en/0.12.3/developers/compiling.html#gitian-build>`__ "
 "on a previous version of this page."
 msgstr ""
+"Hướng dẫn cách biên dịch Dash Core 0.13.0 sẽ xuất hiện ở đây khi trên hệ "
+"thống biên dịch Docker cho Gitian được sẵn sàng. Hướng dẫn để biên dịch cho "
+"Dash Core 0.12.3 hoặc cũ hơn có `ở đây "
+"<https://docs.dash.org/vi/0.12.3/developers/compiling.html#gitian-build>`__ "
+"trên phần phiên bản trước của trang đó."
