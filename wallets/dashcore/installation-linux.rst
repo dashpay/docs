@@ -95,7 +95,7 @@ create the folder.
    Renaming the folder to Dash
 
 Next, open the archive by double-clicking on it. The Archive Manager
-will appear. Browse to the dashcore-0.12.1/bin/ folder and extract the
+will appear. Browse to the dashcore-0.14.0/bin/ folder and extract the
 dash-qt file to the Dash folder you created on the Desktop by drag and
 drop.
 
