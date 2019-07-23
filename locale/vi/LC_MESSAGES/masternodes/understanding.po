@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-13 05:58+0000\n"
+"POT-Creation-Date: 2019-07-23 05:58+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Kien Bui <kientemp2@gmail.com>, 2019\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
@@ -587,6 +587,18 @@ msgid ""
 "service and registered in the list again using a :ref:`ProUpServTx <dip3"
 "-update-service>`. The current scoring rules as of Dash 0.14 are:"
 msgstr ""
+"Proof of Service (PoSe)  là một hệ thống tính điểm dùng để xác định liệu một"
+" masternode có cung cấp các dịch vụ một cách trung thực không. Một số tiêu "
+"chí được cậy cho việc tính toán, do vậy không thể chơi trò với hệ thống bằng"
+" việc làm cho các masternode có thể bị cấm PoSe vì không trả lời các yêu cầu"
+" ping bằng việc, ví dụ việc tấn công từ chối dịch vụ DDoS trước khi thanh "
+"toán. Mỗi lần thất bại trong việc cung cấp dịch vụ dẫn đến việc tăng điểm "
+"PoSe so với điểm tối đa, nó bằng với số lượng masternode đã đăng ký. Nếu "
+"điểm số bằng với số masternode được được đăng ký thì một lệnh cấm PoSe sẽ "
+"được kích hoạt và masternode phải được sửa chữa để đảm bảo cung cấp những "
+"dịch vụ đáng tin cậy và đăng ký vào danh sách lại sử dụng một lệnh "
+":ref:`ProUpServTx <dip3-update-service>`. Quy luật tính điểm hiện tại trong "
+"Dash 0.14 là:"
 
 #: ../../masternodes/understanding.rst:257
 msgid ""
@@ -695,6 +707,9 @@ msgid ""
 "minimum hardware requirements. For Dash versions 0.14 and higher, these "
 "requirements are as follows:"
 msgstr ""
+"Thêm vào với 1000 Dash được giữ trong khoản đặt cọc, các masternode cũng cần"
+" đảm bảo yêu cầu phần cứng tối thiểu. Với Dash phiên bản 0.14 hoặc cao hơn, "
+"thì phần cứng yêu cầu là như sau:"
 
 #: ../../masternodes/understanding.rst:301
 msgid "Minimum"
@@ -722,11 +737,11 @@ msgstr "RAM"
 
 #: ../../masternodes/understanding.rst:305
 msgid "2 GB + 2 GB swap"
-msgstr ""
+msgstr "2 GB + 2 GB swap"
 
 #: ../../masternodes/understanding.rst:305
 msgid "4 GB + 2 GB swap"
-msgstr ""
+msgstr "4 GB + 2 GB swap"
 
 #: ../../masternodes/understanding.rst:307
 msgid "Disk"
@@ -738,7 +753,7 @@ msgstr "40 GB"
 
 #: ../../masternodes/understanding.rst:307
 msgid "60 GB"
-msgstr ""
+msgstr "60 GB"
 
 #: ../../masternodes/understanding.rst:309
 msgid "Network"
