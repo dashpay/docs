@@ -34,8 +34,7 @@ installing an APK file. Follow these instructions:
    link <https://github.com/HashEngineering/dash-wallet/releases/latest>`_.
 #. If you cannot use your phone to go online, download the APK using
    your PC instead and copy it to your phone using a cable or Bluetooth.
-   You may need a file browser to find the copied file. `ES File
-   Explorer <http://www.estrongs.com/>`_ is recommended for this.
+   You may need a file browser to find the copied file.
 
 You can also install an APK file directly from your computer using the
 Android Debug Bridge (ADB). Follow these instructions:
