@@ -112,41 +112,6 @@ https://node40.com
 - `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`__
 
 
-Masternode.me
--------------
-
-.. image:: img/moocowmoo.png
-   :width: 200px
-   :align: right
-   :target: https://masternode.me
-
-https://masternode.me
-
-- Operated by: moocowmoo (Dash Core team member)
-- Services: Hosting
-- Cost: $35 per quarter
-- `Site <https://masternode.me>`__
-- `Email <moocowmoo@masternode.me>`__
-- `Forum <https://www.dash.org/forum/threads/moocowmoos-magic-masternode-maker.3305/>`__
-- `Review <https://www.dashforcenews.com/masternode-trusted-masternode-shares-review/>`__
-
-
-币舫 (Bifun)
------------------
-
-.. image:: img/bifun.png
-   :width: 200px
-   :align: right
-   :target: https://bifun.com
-
-https://bifun.com
-
-- Operated by: BiFun (Hainan) Network Technology Co, Ltd.
-- Services: Hosting, Shares
-- `Site <https://bifun.com>`__
-- `Email <business@bifun.com>`__
-
-
 Masternodehosting
 -----------------
 
