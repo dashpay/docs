@@ -63,6 +63,7 @@ from the source tarball::
   cd Electrum-DASH-3.3.6
   sudo python3 setup.py install
 
+You can then run ``electrum-dash`` from the terminal.
 
 macOS
 -----
