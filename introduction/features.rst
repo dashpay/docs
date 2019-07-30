@@ -23,6 +23,8 @@ Specifications
 - Decentralized second-tier masternode network
 - Superior transaction anonymity using PrivateSend
 - Instant transactions using InstantSend
+- Protection against blockchain reorganization events (commonly called 
+  51% attacks) using ChainLocks
 - Decentralized Governance By Blockchain allows masternode owners to
   vote on budget proposals and decisions that affect Dash
 
