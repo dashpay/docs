@@ -192,7 +192,7 @@ addresses.
 Broadcasting InstantSend Transactions
 -------------------------------------
 
-Since Dash 0.14.0 established LLMQ on the Dash network, quorums will now
+Since Dash v0.14.0 established LLMQs on the Dash network, quorums will now
 attempt to lock every valid transaction by default without any
 additional fee or action by the sending wallet or user. A transaction is
 eligible for InstantSend when each of its inputs is considered
