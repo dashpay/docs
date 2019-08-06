@@ -112,7 +112,7 @@ for worked examples of each transaction type.
 InstantSend
 ===========
 
-This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_InstantSend.pdf>`__.
+This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend.pdf>`__.
 
 InstantSend is a feature provided by the Dash network that allows for
 zero-confirmation transactions to be safely accepted and re-spent. The
