@@ -124,7 +124,7 @@ approximately 5,000 masternode servers. These nodes are differentiated
 from standard nodes by having proven ownership of 1,000 Dash, making the
 network `highly resistant to Sybil attacks <https://en.wikipedia.org/wiki/Sybil_attack>`__. 
 Masternodes form `Long-Living Masternode Quorums (LLMQs) <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, 
-which are responsible for providing instant certainty to the transaction
+which are responsible for providing near instant certainty to the transaction
 participants that the transaction inputs cannot be respent, and that the
 transaction will be included in a following block instead of a conflicting
 transaction. 
