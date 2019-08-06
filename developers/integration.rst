@@ -10,10 +10,11 @@ Integration Overview
 
 This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_IntegrationOverview.pdf>`__.
 
-`Dash Core <https://github.com/dashpay/dash>`__ is a “fork” of
-`Bitcoin Core <https://github.com/bitcoin/bitcoin>`__ and shares many common functionalities. Key differences relate
-to existing JSON-RPC commands which have been customized to support
-unique functionalities such as InstantSend.
+`Dash Core <https://github.com/dashpay/dash>`__ is a “fork” of 
+`Bitcoin Core <https://github.com/bitcoin/bitcoin>`__ and shares many
+common functionalities. Key differences relate to existing JSON-RPC
+commands which have been customized to support unique functionalities
+such as InstantSend.
 
 1. **General Information:** Dash is a “Proof of Work” network and is
    similar to Bitcoin.
@@ -114,10 +115,10 @@ InstantSend
 This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_InstantSend.pdf>`__.
 
 InstantSend is a feature provided by the Dash network that allows for
-zero-confirmation transactions to be safely accepted and re-spent. All
-valid transactions are secured by the Dash network at the moment of
-broadcast. Every secured transaction is included in the next block in
-accordance with standard blockchain principles.
+zero-confirmation transactions to be safely accepted and re-spent. The
+network attempts to lock the inputs of every valid transaction when it
+is broadcast to the network. Every secured transaction is included in a
+following block in accordance with standard blockchain principles.
 
 InstantSend is enabled by the Masternode Network which comprises
 approximately 5,000 masternode servers. These nodes are differentiated
