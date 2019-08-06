@@ -95,7 +95,7 @@ create the folder.
    Renaming the folder to Dash
 
 Next, open the archive by double-clicking on it. The Archive Manager
-will appear. Browse to the dashcore-0.12.1/bin/ folder and extract the
+will appear. Browse to the dashcore-0.14.0/bin/ folder and extract the
 dash-qt file to the Dash folder you created on the Desktop by drag and
 drop.
 
@@ -120,7 +120,7 @@ Dash folder on the Desktop, or where you chose to extract the file. Type
 
 The first time the program is launched, you will be offered a choice of
 where you want to store your blockchain and wallet data. Choose a
-location with enough free space, as the blockchain can reach 10GB+ in
+location with enough free space, as the blockchain can reach 30GB+ in
 size. It is recommended to use the default data folder if possible.
 
 .. figure:: img/linux/106329842.png
