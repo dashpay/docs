@@ -10,10 +10,11 @@ Integration Overview
 
 This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_IntegrationOverview.pdf>`__.
 
-Dash Core `v0.13.x <https://github.com/dashpay/dash/releases>`__ is a
-“fork” of Bitcoin and shares many common functionalities. Key
-differences relate to existing JSON-RPC commands which have been
-customized to support unique functionalities such as InstantSend.
+`Dash Core <https://github.com/dashpay/dash>`__ is a “fork” of 
+`Bitcoin Core <https://github.com/bitcoin/bitcoin>`__ and shares many
+common functionalities. Key differences relate to existing JSON-RPC
+commands which have been customized to support unique functionalities
+such as InstantSend.
 
 1. **General Information:** Dash is a “Proof of Work” network and is
    similar to Bitcoin.
@@ -48,14 +49,14 @@ customized to support unique functionalities such as InstantSend.
    for more information.
 
 
-.. _013-integration:
+.. _integration-special-transactions:
 
-v0.13.0 Integration Notes
-=========================
+Special Transactions
+====================
 
 This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__.
 
-Dash 0.13.0 implements `DIP002 Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, 
+Dash 0.13.0 and higher implement `DIP002 Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, 
 which form a basis for new transaction types that provide on-chain
 metadata to assist various consensus mechanisms. The following special
 transaction types exist:
@@ -108,65 +109,31 @@ for worked examples of each transaction type.
 
 .. _integration-instantsend:
 
-InstantSend Overview
-====================
+InstantSend
+===========
 
 This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_InstantSend.pdf>`__.
 
 InstantSend is a feature provided by the Dash network that allows for
-zero-confirmation transactions to be safely accepted by Merchants and
-other service providers. All InstantSend Transactions are secured for 25
-blocks by the “Masternode Network” at the moment of broadcast. The
-transaction is mined into the next block in accordance with standard
-blockchain principles.
+zero-confirmation transactions to be safely accepted and re-spent. The
+network attempts to lock the inputs of every valid transaction when it
+is broadcast to the network. Every secured transaction is included in a
+following block in accordance with standard blockchain principles.
 
 InstantSend is enabled by the Masternode Network which comprises
-approximately 4,800 masternode servers. These nodes are differentiated
-from standard nodes by having proven ownership of 1,000 Dash. One
-responsibility that is appointed to this special type of server is to
-perform "Transaction Locking", also known as InstantSend.
+approximately 5,000 masternode servers. These nodes are differentiated
+from standard nodes by having proven ownership of 1,000 Dash, making the
+network `highly resistant to Sybil attacks <https://en.wikipedia.org/wiki/Sybil_attack>`__. 
+Masternodes form `Long-Living Masternode Quorums (LLMQs) <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, 
+which are responsible for providing near instant certainty to the transaction
+participants that the transaction inputs cannot be respent, and that the
+transaction will be included in a following block instead of a conflicting
+transaction. 
 
-This concept works as an extension to network consensus. When an
-"InstantSend" transaction occurs the network goes through an extra
-validation process which examines the following two properties of the
-transaction:
+This concept works as an extension to Nakamoto Consensus. InstantSend
+enables transacted funds to be immediately and securely respent by the
+recipient, even before the transaction is included in a block.
 
-1. **Input Maturity:** the network will require all inputs to have at
-   least 6 confirmations.
-
-2. **Input Composition:** the number of inputs in use dictates fee 
-   requirements.
-
-   a. **1 - 4 inputs:** per-kB fee of 0.00001 DASH using Automatic 
-      InstantSend.
-   b. **5+ inputs:** per-input fee of 0.0001 DASH is required.
-
-Assuming the **Input Maturity** and **Input Composition** requirements
-are met, the network will "lock" the inputs related to this transaction
-for 25 blocks. Transactions carrying 4 or fewer inputs are referred to
-as a “simple transaction” and carry no extra fee.
-
-
-Automatic InstantSend
----------------------
-
-Dash Core v0.13.x introduces the process of Automatic InstantSend. Any
-transaction which is classified as a “simple transaction” will
-automatically be broadcast as an InstantSend transaction when using
-standard transaction broadcast endpoints.
-
-InstantSend vs. Standard Transactions
--------------------------------------
-
-The term “InstantSend” is used to describe a standard transaction that
-has been provided additional assurances by the Masternode Network. As a
-result, and from an integration perspective, there is no technical
-difference between the two types of transactions.
-
-The most notable difference relates to the way that confirmation policy
-is applied within an integrated system. The receiving system must be
-aware of InstantSend Status in order to safely apply transaction
-confirmation policies that are enabled using this technology.
 
 Receiving InstantSend Transactions
 ----------------------------------
@@ -198,6 +165,20 @@ transaction and is included in the following commands:
 - `listtransactions <https://dash-docs.github.io/en/developer-reference#listtransactions>`__
 - `listsinceblock <https://dash-docs.github.io/en/developer-reference#listsinceblock>`__
 
+
+**ZMQ Notification:** Whenever a transaction enters the mempool and
+whenever a transaction is locked in the mempool, ZMQ notifications can
+be broadcast by the node. A list of possible ZMQ notifications can be
+found `here <https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__. 
+
+The following notifications are relevant for recognizing transactions
+and their corresponding instantlocks:
+
+- zmqpubhashtx
+- zmqpubhashtxlock
+- zmqpubrawtx
+- zmqpubrawtxlock
+
 **Wallet Notification:** The Dash Core Daemon can be configured to 
 execute an external script whenever an InstantSend transaction relating
 to that wallet is observed. This is configured by adding the following
@@ -212,28 +193,22 @@ addresses.
 Broadcasting InstantSend Transactions
 -------------------------------------
 
-Automatic InstantSend introduces two requirements into the system being
-integrated:
+Since Dash v0.14.0 established LLMQs on the Dash network, quorums will now
+attempt to lock every valid transaction by default without any
+additional fee or action by the sending wallet or user. A transaction is
+eligible for InstantSend when each of its inputs is considered
+confirmed. This is the case when at least one of the following circumstances is true: 
 
-1. The ability to evaluate the number of inputs in a given transaction.
+- the previous transaction referred to by the input is confirmed with 6 
+  blocks
+- the previous transaction is confirmed through an older InstantSend 
+  lock
+- the block containing the previous transaction is `ChainLocked <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__
 
-2. The ability to apply an increased fee-level in cases of 5+ inputs.
+When checking the previous transaction for an InstantSend lock, it is
+important to also do this on mempool (non-mined) transactions. This
+allows chained InstantSend locking.
 
-In many cases an integrated system will already contain logic intended
-to keep transaction fees to a minimum by optimizing input usage. If this
-is true, and it can be assumed that only “simple transactions” are being
-formed, no additional development effort is required.
-
-In cases where this is not possible or will be unknown, the integrated
-system should be able to calculate a fee based on the number of inputs
-being used to form the transaction. This per-input fee of 0.0001 DASH
-must be applied in order for the transaction to be successfully
-broadcast as an InstantSend. In these cases, it’s important to note that
-the “instantsend” flag must be set as “true” when issuing the
-`sendrawtransaction <https://dash-docs.github.io/en/developer-reference#sendrawtransaction>`__ 
-command, e.g.::
-
-  sendrawtransaction "hexstring" false true
 
 Additional Resources
 --------------------
@@ -242,10 +217,10 @@ The following resources provide additional information about InstantSend
 and are intended to help provide a more complete understanding of the
 underlying technologies.
 
-- `InstantSend Whitepaper <https://dashpay.atlassian.net/wiki/download/attachments/75530298/Dash%20Whitepaper%20-%20InstantTX.pdf>`_
 - `InstantSend Technical Information <https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__
-- `InstantSend Developer Documentation <https://dash-docs.github.io/en/glossary/instantsend>`__
-- `Product Brief: Dash Core v0.13 Release <https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef>`__
+- `InstantSend Developer Documentation <https://dash-docs.github.io/en/developer-guide#llmq-instantsend>`__
+- `DIP0010: LLMQ InstantSend <https://github.com/dashpay/dips/blob/master/dip-0010.md>__
+- `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__
 
 
 .. _api-services:
