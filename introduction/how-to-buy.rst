@@ -128,9 +128,12 @@ Poloniex
 
   https://poloniex.com
 
-  Poloniex is a US-based pure-crypto exchange offering high volume DASH
-  pairs for BTC, XMR and USDT. Leveraged margin trading and lending is
-  also available for DASH.
+  Poloniex is a US-based cryptocurrency exchange operated by `Circle
+  <https://www.circle.com>`__ offering high volume DASH pairs for BTC,
+  USDC, USDT and XMR. Poloniex also supports deposits in USD by bank
+  transfer and allows cryptocurrency purchases with debit and credit
+  cards. Leveraged margin trading and lending is also available for
+  DASH.
 
 Bittrex
   .. image:: exchanges/bittrex.png
