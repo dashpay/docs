@@ -31,7 +31,7 @@ variety of wallet formats:
 Please note that web wallets may not be as secure as alternatives such
 as hardware wallets. Be aware of the risk of storing large amounts of
 Dash in keyfile wallets, since they are an easier target to attack than
-mobile or hareware wallets. 
+mobile or hardware wallets. 
 
 MyDashWallet offers complete and detailed documentation for all functions.
 
@@ -69,7 +69,7 @@ quickly and easily in Dash.
 Please note that web wallets may not be as secure as alternatives such
 as hardware wallets. Be aware of the risk of storing large amounts of
 Dash in keyfile wallets, since they are an easier target to attack than
-mobile or hareware wallets. 
+mobile or hardware wallets. 
 
 Support for Magnum Wallet is available at 
 `support@magnumwallet.co <support@magnumwallet.co>`_.
