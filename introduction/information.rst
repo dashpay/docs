@@ -206,7 +206,6 @@ Masternode management
 Price monitoring and statistics
 -------------------------------
 
-- http://www.dash.dog
 - https://coinmarketcap.com/currencies/dash
 - https://bitinfocharts.com/dash
 - https://www.cryptonator.com/widget
