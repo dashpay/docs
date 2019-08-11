@@ -708,18 +708,6 @@ Cubobit
   Cubobit allows you to exchange Dash and other cryptocurrencies against
   Mexican pesos.
 
-Whaleclub
-  .. image:: exchanges/whaleclub.png
-     :width: 200px
-     :align: right
-     :target: https://whaleclub.co
-
-  https://whaleclub.co
-
-  Based in Hong Kong, Whaleclub offers an advanced platform that allows
-  highly leveraged trading of cryptocurrency including DASH against
-  other cryptocurrencies, forex, metals, stocks and bonds.
-
 Golix
   .. image:: exchanges/golix.png
      :width: 200px
