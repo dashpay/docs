@@ -697,6 +697,17 @@ Panda.exchange
   assets such as Dash available in Latin America and, through a branch
   in Portugal, the EU market.
 
+Cubobit
+  .. image:: exchanges/cubobit.png
+     :width: 200px
+     :align: right
+     :target: https://cubobit.com/
+
+  https://cubobit.com/
+
+  Cubobit allows you to exchange Dash and other cryptocurrencies against
+  Mexican pesos.
+
 Whaleclub
   .. image:: exchanges/whaleclub.png
      :width: 200px
