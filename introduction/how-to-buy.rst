@@ -1222,6 +1222,16 @@ OceanEx
 
   OceanEx offers DASH trading against VET and USDT.
 
+BTC-Alpha
+  .. image:: exchanges/btc-alpha.png
+     :width: 200px
+     :align: right
+     :target: https://btc-alpha.com
+
+  https://btc-alpha.com
+
+  BTC-Alpha is an exchange serving Russian-speakers and offering DASH
+  trading pairs against BTC and USDT.
 
 .. _instant_exchanges:
 
