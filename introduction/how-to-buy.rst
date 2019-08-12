@@ -1212,17 +1212,6 @@ Laissez Faire
 
   Laissez Faire offers incentivized trading which includes DASH.
 
-Bitsane
-  .. image:: exchanges/bitsane.png
-     :width: 200px
-     :align: right
-     :target: https://bitsane.com
-
-  https://bitsane.com
-
-  Bitsane (and its altcoin sister site `Anybits <https://anybits.com>`_)
-  offer trading pairs for Dash and allows deposits in EUR and USD.
-
 
 
 .. _instant_exchanges:
