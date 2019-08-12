@@ -1039,19 +1039,6 @@ Exscudo
   EON token, which allows users to seamlessly transmit money to one
   another in a chat environment.
 
-Miami Crypto Exchange
-  .. image:: exchanges/mcex.png
-     :width: 110px
-     :align: right
-     :target: https://www.miami.exchange
-
-  https://www.miami.exchange
-
-  Miami Crypto Exchange (MCEX), operated by Dash partner `Mercury Cash
-  <https://www.mercury.cash>`_, is a legal and fully compliant crypto
-  gateway between the U.S. and the world, with a specific focus on Latin
-  America and the Caribbean. DASH can be traded against USD and BTC.
-
 BW
   .. image:: exchanges/bw.png
      :width: 120px
