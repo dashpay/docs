@@ -1212,6 +1212,15 @@ Laissez Faire
 
   Laissez Faire offers incentivized trading which includes DASH.
 
+OceanEx
+  .. image:: exchanges/oceanex.png
+     :width: 200px
+     :align: right
+     :target: https://oceanex.pro
+
+  https://oceanex.pro
+
+  OceanEx offers DASH trading against VET and USDT.
 
 
 .. _instant_exchanges:
