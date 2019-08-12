@@ -1348,6 +1348,17 @@ CoinSwitch
   different coins and tokens listed. Also offers purchases through
   credit/debit cards.
 
+fox.exchange
+  .. image:: exchanges/foxexchange.png
+     :width: 100px
+     :align: right
+     :target: https://fox.exchange
+
+  https://fox.exchange
+
+  fox.exchange is a crypto to crypto exchange allowing instant exchange
+  between DASH, BTC, LTC, BCH, BSV, ETH and BAT.
+
 MorphToken
   .. image:: exchanges/morphtoken.png
      :width: 200px
