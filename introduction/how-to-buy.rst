@@ -1039,6 +1039,16 @@ Exscudo
   EON token, which allows users to seamlessly transmit money to one
   another in a chat environment.
 
+LATOKEN
+  .. image:: exchanges/latoken.png
+     :width: 200px
+     :align: right
+     :target: https://latoken.com
+
+  https://latoken.com
+
+  LATOKEN offers DASH trading against USDT and BTC.
+
 BW
   .. image:: exchanges/bw.png
      :width: 120px
