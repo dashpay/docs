@@ -1049,6 +1049,16 @@ LATOKEN
 
   LATOKEN offers DASH trading against USDT and BTC.
 
+BitOffer
+  .. image:: exchanges/bitoffer.png
+     :width: 200px
+     :align: right
+     :target: https://bitoffer.com
+
+  https://bitoffer.com
+
+  BitOffer offers DASH trading against USDT, ETH and BTC.
+
 BW
   .. image:: exchanges/bw.png
      :width: 120px
