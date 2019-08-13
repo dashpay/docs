@@ -51,10 +51,10 @@ https://dashtext.io
    :align: right
    :target: http://dashtext.com
 
-DashText is a service available in Venezuela to allow users to transact
-in Dash using text messages. The only fees are the cost of a standard
-SMS, incurred by the network operator. Users can send Dash to innovative
-shortcodes to securely confirm transactions.
+DashText is a service available in Venezuela, Colombia and Spain to
+allow users to transact in Dash using text messages. The only fees are
+the cost of a standard SMS, incurred by the network operator. Users can
+send Dash to innovative shortcodes to securely confirm transactions.
 
 Instructions
 ------------
