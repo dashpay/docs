@@ -172,14 +172,14 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.14.0.2/dashcore-0.14.0.2-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.14.0.3/dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
 
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown on the
 Dash website under **Hash File**::
 
-  sha256sum dashcore-0.14.0.2-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
 
 .. figure:: img/setup-manual-download.png
    :width: 250px
@@ -190,13 +190,13 @@ Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
   mkdir .dashcore
-  tar xfvz dashcore-0.14.0.2-x86_64-linux-gnu.tar.gz
+  tar xfvz dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
   cp dashcore-0.14.0/bin/dashd .dashcore/
   cp dashcore-0.14.0/bin/dash-cli .dashcore/
 
 Clean up unneeded files::
 
-  rm dashcore-0.14.0.2-x86_64-linux-gnu.tar.gz
+  rm dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
   rm -r dashcore-0.14.0/
 
 Create a configuration file using the following command::
