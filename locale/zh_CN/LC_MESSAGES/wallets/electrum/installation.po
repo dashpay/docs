@@ -5,16 +5,16 @@
 # 
 # Translators:
 # Alex.ys <silvershark.ys@gmail.com>, 2018
-# Eamon Young <xsrf@icloud.com>, 2019
+# jmp2esp <xsrf@icloud.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-25 06:01+0000\n"
+"POT-Creation-Date: 2019-08-16 08:18+0000\n"
 "PO-Revision-Date: 2018-03-19 12:19+0000\n"
-"Last-Translator: Eamon Young <xsrf@icloud.com>, 2019\n"
+"Last-Translator: jmp2esp <xsrf@icloud.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -106,11 +106,15 @@ msgid ""
 "the source tarball::"
 msgstr "用户需要在终端中输入以下命令（根据需要更改版本号以匹配当前版本），从而借助源文件安装达世币轻钱包::"
 
-#: ../../wallets/electrum/installation.rst:68
+#: ../../wallets/electrum/installation.rst:66
+msgid "You can then run ``electrum-dash`` from the terminal."
+msgstr ""
+
+#: ../../wallets/electrum/installation.rst:69
 msgid "macOS"
 msgstr "macOS"
 
-#: ../../wallets/electrum/installation.rst:70
+#: ../../wallets/electrum/installation.rst:71
 msgid ""
 "Simply download and run the DMG file. You may need to grant permission to "
 "install, depending on your security settings. Click through the installation"
@@ -118,11 +122,11 @@ msgid ""
 msgstr ""
 "用户需要下载并运行DMG文件。基于系统的安全设置，用户可能需要授权安装。完成上述步骤后，用户应单击安装向导并通过Applications文件夹运行达世币轻钱包。"
 
-#: ../../wallets/electrum/installation.rst:77
+#: ../../wallets/electrum/installation.rst:78
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../wallets/electrum/installation.rst:79
+#: ../../wallets/electrum/installation.rst:80
 msgid ""
 "Simply download and run the installer file to set up Dash Electrum. You may "
 "need to grant permission to install, depending on your security settings. "
@@ -131,11 +135,11 @@ msgid ""
 msgstr ""
 "用户只需下载并运行安装程序文件就能设置达世币轻钱包了。基于系统的安全设置，用户可能需要授权安装。完成上述步骤后，用户应单击安装向导并通过开始菜单运行达世币轻钱包。"
 
-#: ../../wallets/electrum/installation.rst:85
+#: ../../wallets/electrum/installation.rst:86
 msgid "Android"
 msgstr "安卓"
 
-#: ../../wallets/electrum/installation.rst:87
+#: ../../wallets/electrum/installation.rst:88
 msgid ""
 "Download and run the APK file from https://electrum.dash.org to set up Dash "
 "Electrum. You may need to grant permission to install from unknown sources, "
@@ -145,11 +149,11 @@ msgstr ""
 "用户应从 https://electrum.dash.org "
 "网站上下载和运行APK文件，以便安装达世币轻钱包。基于系统的安全设置，用户可能需要授权未知来源的安装。完成上述步骤后，用户应单击安装向导并运行达世币轻钱包。"
 
-#: ../../wallets/electrum/installation.rst:94
+#: ../../wallets/electrum/installation.rst:95
 msgid "Creating a New Wallet"
 msgstr "创建新钱包"
 
-#: ../../wallets/electrum/installation.rst:96
+#: ../../wallets/electrum/installation.rst:97
 msgid ""
 "Dash Electrum gathers configuration data when run for the first time. For "
 "more on the concepts behind this process, skip to the later sections of this"
@@ -165,11 +169,11 @@ msgstr ""
 " **自动连接”** ，再点击 **下一步**。此时，您将会看到一则当前没有钱包的通知。接下来，您可以为个人钱包输入名称（或使用默认名称），并点击 "
 "**下一步** 来创建钱包。"
 
-#: ../../wallets/electrum/installation.rst:112
+#: ../../wallets/electrum/installation.rst:113
 msgid "Selecting the server and naming your first wallet"
 msgstr "选择服务器并命名您的第一个钱包"
 
-#: ../../wallets/electrum/installation.rst:114
+#: ../../wallets/electrum/installation.rst:115
 msgid ""
 "You will be asked what kind of wallet you want to create. Choose between "
 "**Standard wallet**, **Multi-signature wallet** and **Watch Dash "
@@ -187,11 +191,11 @@ msgstr ""
 "**创建新的种子**、**使用已有的种子**、**使用公钥或私钥** 或 "
 "**使用硬件设备**。如果您是初次使用达世币轻钱包而不是恢复已有的钱包，那么您应选择 **创建新的种子** 并单击 **下一步** 进行后续操作。"
 
-#: ../../wallets/electrum/installation.rst:131
+#: ../../wallets/electrum/installation.rst:132
 msgid "Selecting the wallet type and keystore"
 msgstr "选择钱包种类和密钥库"
 
-#: ../../wallets/electrum/installation.rst:133
+#: ../../wallets/electrum/installation.rst:134
 msgid ""
 "Electrum Dash will generate your wallet and display the recovery seed. Write"
 " this seed down, ideally on paper and not in an electronic format, and store"
@@ -203,11 +207,11 @@ msgstr ""
 "达世币轻钱包将生成钱包并显示恢复种子。此时，您应当清晰无误地将种子记录到纸上并妥善保管，请不要以电子格式进行存储。无论您因何缘由、以何种方式丢失钱包，种子都是用户恢复钱包的唯一途径。为了确保您已经妥善保存恢复种子，达世币轻钱包会要求您输入种子。您应以正确的顺序输入，然后单击"
 " **下一步** 进行后续操作。"
 
-#: ../../wallets/electrum/installation.rst:147
+#: ../../wallets/electrum/installation.rst:148
 msgid "Generating and confirming the recovery seed"
 msgstr "生成并确认恢复种子"
 
-#: ../../wallets/electrum/installation.rst:149
+#: ../../wallets/electrum/installation.rst:150
 msgid ""
 "A password optionally secures your wallet against unauthorized access. "
 "Adding a memorable, strong password now improves the security of your wallet"
@@ -219,14 +223,14 @@ msgstr ""
 "选用密码可以保护您的钱包免受未经授权的访问。添加便于记忆的强化密码可以从一开始就对种子进行加密并提高钱包的安全性。如果您此时直接跳过密码设置和加密保护，那么未来就有可能遭遇资金盗窃，虽然这个威胁现在听起来还不太严重。您需要输入并确认密码，确保已勾选"
 " **加密钱包文件**， 然后单击 **下一步** 进行后续操作。"
 
-#: ../../wallets/electrum/installation.rst:160
+#: ../../wallets/electrum/installation.rst:161
 msgid "Entering and confirming a wallet encryption password"
 msgstr "输入并确认钱包加密密码"
 
-#: ../../wallets/electrum/installation.rst:162
+#: ../../wallets/electrum/installation.rst:163
 msgid "Your Dash Electrum wallet is now set up and ready for use."
 msgstr "达世币轻钱包已安装完毕，您可以使用它了。"
 
-#: ../../wallets/electrum/installation.rst:167
+#: ../../wallets/electrum/installation.rst:168
 msgid "Dash Electrum after setup is complete"
 msgstr "达世币轻钱包已安装完成。"

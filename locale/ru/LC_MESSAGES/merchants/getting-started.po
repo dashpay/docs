@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-25 06:01+0000\n"
+"POT-Creation-Date: 2019-08-16 08:18+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
 "Last-Translator: Дмитрий <dmitry.zhludin@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -270,6 +270,8 @@ msgstr "`Blesta <https://www.blesta.com>`_"
 #: ../../merchants/getting-started.rst:149
 #: ../../merchants/getting-started.rst:151
 #: ../../merchants/getting-started.rst:151
+#: ../../merchants/getting-started.rst:153
+#: ../../merchants/getting-started.rst:153
 msgid "|check|"
 msgstr "|check|"
 
@@ -506,11 +508,19 @@ msgstr ""
 "Доступны для Android, Windows, macOS, Linux. Обменные курсы с 94 валютами и "
 "поддержка Uphold.com"
 
-#: ../../merchants/getting-started.rst:155
+#: ../../merchants/getting-started.rst:153
+msgid "`Xpay <https://xpay.cash>`_"
+msgstr ""
+
+#: ../../merchants/getting-started.rst:153
+msgid "Popular point of sale device in Venezuela and Colombia."
+msgstr ""
+
+#: ../../merchants/getting-started.rst:157
 msgid "Installation Examples"
 msgstr "Примеры установки"
 
-#: ../../merchants/getting-started.rst:157
+#: ../../merchants/getting-started.rst:159
 msgid ""
 "This section contains worked examples of how to install, configure and "
 "process your first payment using the payment processors listed in this "
@@ -520,11 +530,11 @@ msgstr ""
 " первый платёж через сервисы обратотки платежей, представленные в списках "
 "данной документации."
 
-#: ../../merchants/getting-started.rst:162
+#: ../../merchants/getting-started.rst:164
 msgid "WooCommerce and GoCoin"
 msgstr "WooCommerce и GoCoin"
 
-#: ../../merchants/getting-started.rst:164
+#: ../../merchants/getting-started.rst:166
 msgid ""
 "If your online store is built on WooCommerce, you can simply install GoCoin "
 "as an additional payment gateway and immediately begin accepting Dash. This "
@@ -542,7 +552,7 @@ msgstr ""
 "uninstalling-woocommerce/>`_ и  `в вашем магазине создан как минимум один "
 "продукт <https://docs.woocommerce.com/document/managing-products>`_."
 
-#: ../../merchants/getting-started.rst:173
+#: ../../merchants/getting-started.rst:175
 msgid ""
 "Go to the `gocoin-woocommerce GitHub Releases page "
 "<https://github.com/GoCoin/gocoin-woocommerce/releases>`_ and download a zip"
@@ -558,7 +568,7 @@ msgstr ""
 " **Upload Plugin**. Нажмите на **Choose File** и выберите файл, который "
 "только что скачали, потом нажмите **Install Now** и **Activate Plugin**."
 
-#: ../../merchants/getting-started.rst:185
+#: ../../merchants/getting-started.rst:187
 msgid ""
 "Next, go to the `GoCoin merchant sign up page "
 "<https://gocoin.com/merchant_signup>`_ and create an account. Once you are "
@@ -581,7 +591,7 @@ msgstr ""
 "текстовый файл. Наконец, у вас есть возможность добавить логотип Dash на "
 "страницу расчёта, зайдя в раздел **Profile** и нажав **Logo -> Upload**."
 
-#: ../../merchants/getting-started.rst:200
+#: ../../merchants/getting-started.rst:202
 msgid ""
 "Back in the WordPress plugins section, click the **Settings** button for the"
 " WooCommerce plugin and navigate to **Checkout -> GoCoin** section. Ensure "
@@ -596,7 +606,7 @@ msgstr ""
 "измените содержание этих полей. Когда закончите, то нажмите на **Save "
 "changes**."
 
-#: ../../merchants/getting-started.rst:209
+#: ../../merchants/getting-started.rst:211
 msgid ""
 "Your customers will now see an option to pay with Dash when completing the "
 "checkout process for an order. The payment will be processed by GoCoin, and "
@@ -612,15 +622,15 @@ msgstr ""
 "разделе GoCoin будут доступны прочие различные опции. Для более подробной "
 "информации, обратитесь к ` документации GoCoin <https://gocoin.com/docs>`_."
 
-#: ../../merchants/getting-started.rst:227
+#: ../../merchants/getting-started.rst:229
 msgid "Completing payment through the GoCoin payment processor"
 msgstr "Завершение платежа через обработчик платежей GoCoin."
 
-#: ../../merchants/getting-started.rst:231
+#: ../../merchants/getting-started.rst:233
 msgid "WooCommerce and CoinPayments.net"
 msgstr "WooCommerce и CoinPayments.net"
 
-#: ../../merchants/getting-started.rst:233
+#: ../../merchants/getting-started.rst:235
 msgid ""
 "If your online store is built on WooCommerce, you can simply install "
 "CoinPayments as an additional payment gateway and immediately begin "
@@ -643,7 +653,7 @@ msgstr ""
 " Доступно `видео <https://www.youtube.com/watch?v=Xa2o_8s3RNY>`_, оно "
 "показывает процесс установки CoinPayments в качестве обработчика платежей."
 
-#: ../../merchants/getting-started.rst:243
+#: ../../merchants/getting-started.rst:245
 msgid ""
 "In your WordPress administration backend, select **Plugins -> Add New** and "
 "type \"coinpayments.net\" into the search box. A plugin named "
@@ -664,11 +674,11 @@ msgstr ""
 "плагин установится, необходимо будет нажать **Activate** для начала его "
 "настройки."
 
-#: ../../merchants/getting-started.rst:255
+#: ../../merchants/getting-started.rst:257
 msgid "Installing the CoinPayments.net WooCommerce plugin"
 msgstr "Установка плагина CoinPayments.net WooCommerce"
 
-#: ../../merchants/getting-started.rst:257
+#: ../../merchants/getting-started.rst:259
 msgid ""
 "Next, go to CoinPayments.net and `sign up "
 "<https://www.coinpayments.net/register>`_ to create an account. Once you are"
@@ -688,7 +698,7 @@ msgstr ""
 " введите длинний случайный набор символов в **IPN Secret**. Скопируйте и "
 "этот код в ваш временный текстовый файл."
 
-#: ../../merchants/getting-started.rst:267
+#: ../../merchants/getting-started.rst:269
 msgid ""
 "Back in the WordPress plugins section, click the **Settings** button for the"
 " WooCommerce plugin and navigate to **Checkout -> CoinPayments.net** "
@@ -702,11 +712,11 @@ msgstr ""
 "**Merchant ID**, **IPN Secret** и **Description** в соответствующих полях, "
 "как показано ниже. Нажмите **Save Changes**, когда будете готовы."
 
-#: ../../merchants/getting-started.rst:276
+#: ../../merchants/getting-started.rst:278
 msgid "Configuring the CoinPayments.net WooCommerce plugin"
 msgstr "Настройка плагина CoinPayments.net WooCommerce"
 
-#: ../../merchants/getting-started.rst:278
+#: ../../merchants/getting-started.rst:280
 msgid ""
 "Your customers will now see an option to pay with Dash when completing the "
 "checkout process for an order. The payment will be processed by "
@@ -726,15 +736,15 @@ msgstr ""
 "или `Merchant Tools <https://www.coinpayments.net/merchant-tools>`_ для "
 "более подробной информации."
 
-#: ../../merchants/getting-started.rst:297
+#: ../../merchants/getting-started.rst:299
 msgid "Completing payment through the CoinPayments.net payment processor"
 msgstr "Завершение платежа через обработцик платежей CoinPayments.net"
 
-#: ../../merchants/getting-started.rst:301
+#: ../../merchants/getting-started.rst:303
 msgid "Point-of-Sale with Anypay"
 msgstr "Точка продажи с Anypay"
 
-#: ../../merchants/getting-started.rst:303
+#: ../../merchants/getting-started.rst:305
 msgid ""
 "`Anypay.global <http://anypay.global>`_ allows you to quickly start "
 "accepting point-of-sale payments in Dash at a physical store. The service "
@@ -746,7 +756,7 @@ msgstr ""
 "доступны на любом устройстве, подключенном к интернету и обладающим тач-"
 "скрином, например на смартфоне или планшете."
 
-#: ../../merchants/getting-started.rst:308
+#: ../../merchants/getting-started.rst:310
 msgid ""
 "Begin by registering an account with Anypay. You will be asked to specify an"
 " email address and password. Once you are signed in, you must add a Dash "
@@ -756,11 +766,11 @@ msgstr ""
 "электронной почты и пароль. как только вы войдёте в профиль, то добавьте "
 "адрес для вывода Dash."
 
-#: ../../merchants/getting-started.rst:322
+#: ../../merchants/getting-started.rst:324
 msgid "Setting up Anypay"
 msgstr "Настройка Anypay"
 
-#: ../../merchants/getting-started.rst:324
+#: ../../merchants/getting-started.rst:326
 msgid ""
 "Once this has been set up, you can begin processing payments immediately. "
 "Simply log in to https://pos.anypay.global or tap **Merchant Point of Sale "
@@ -785,11 +795,11 @@ msgstr ""
 "**Invoices** интерфейса администрирования. Снятие средств производится на "
 "указанный вами адрес и выполняется почти сразу после завершения платежа."
 
-#: ../../merchants/getting-started.rst:344
+#: ../../merchants/getting-started.rst:346
 msgid "Point-of-Sale with Spark"
 msgstr "Точка продажи на основе Spark"
 
-#: ../../merchants/getting-started.rst:346
+#: ../../merchants/getting-started.rst:348
 msgid ""
 "`Spark Payments <https://get-spark.com>`__ allows you to quickly start "
 "accepting point-of-sale payments in Dash at a physical store. The system "
@@ -798,7 +808,7 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Progressive_Web_Apps>`_) in development."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:352
+#: ../../merchants/getting-started.rst:354
 msgid ""
 "The project is an external terminal application for processing Dash payments"
 " in brick and mortar stores. The merchant types the sale amount in their "
@@ -826,7 +836,7 @@ msgstr ""
 "<https://github.com/dashpay/docs/raw/master/merchants/Spark-Payments-Uphold-"
 "German.pdf>`__."
 
-#: ../../merchants/getting-started.rst:365
+#: ../../merchants/getting-started.rst:367
 msgid ""
 "To use Spark, open the app on your device. If this is the first time you are"
 " using the app, you will need to specify a Dash address to receive payments "
@@ -846,12 +856,12 @@ msgstr ""
 "сумму, пересчитанную в Dash. Когда клиент сканирует QR-код, то по факту "
 "завершения платежа, приложение покажет соответствующий экран."
 
-#: ../../merchants/getting-started.rst:377
+#: ../../merchants/getting-started.rst:379
 msgid "Configuring and receiving payment using Spark Payments"
 msgstr ""
 "Конфигурирование Spark Payments и получение платежей через эту систему"
 
-#: ../../merchants/getting-started.rst:379
+#: ../../merchants/getting-started.rst:381
 msgid ""
 "Payment systems like Anypay and Spark can be integrated with your existing "
 "terminal and/or accounting software (such as Square Register, by recording "
