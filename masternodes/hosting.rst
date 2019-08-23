@@ -93,6 +93,23 @@ https://ginplatform.io
 - `Email <info@ginplatform.io>`__
 
 
+Snode
+-----
+
+.. image:: img/snode.png
+   :width: 200px
+   :align: right
+   :target: https://snode.co
+
+https://snode.co
+
+- Operated by: Snode Co.
+- Services: Hosting, Monitoring, Shares
+- From $1.50/month
+- `Site <https://snode.co>`__
+- `Email <support@snode.co>`__
+
+
 Node40
 ------
 
