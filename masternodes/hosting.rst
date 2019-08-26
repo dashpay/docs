@@ -105,7 +105,7 @@ https://snode.co
 
 - Operated by: Snode Co.
 - Services: Hosting, Monitoring, Shares
-- From $1.50/month
+- From $1.50/month + 4% of node income
 - `Site <https://snode.co>`__
 - `Email <support@snode.co>`__
 
