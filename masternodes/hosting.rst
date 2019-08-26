@@ -56,7 +56,7 @@ https://dashmasternode.io
 - `Email <sidhosting@protonmail.com>`__
 
 
-AllNodes
+Allnodes
 --------
 
 .. image:: img/allnodes.png
