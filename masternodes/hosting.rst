@@ -76,23 +76,6 @@ https://www.allnodes.com
 - `Discord <https://discord.allnodes.com>`__
 
 
-Gin
----
-
-.. image:: img/gin.png
-   :width: 200px
-   :align: right
-   :target: https://ginplatform.io
-
-https://ginplatform.io
-
-- Operated by: GIN Platform Ltd.
-- Services: Hosting, Monitoring, One-click deployment
-- From $12.60/month (variable)
-- `Site <https://ginplatform.io>`__
-- `Email <info@ginplatform.io>`__
-
-
 Snode
 -----
 
