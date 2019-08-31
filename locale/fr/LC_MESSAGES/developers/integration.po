@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-16 08:18+0000\n"
+"POT-Creation-Date: 2019-08-31 04:43+0000\n"
 "PO-Revision-Date: 2019-04-08 11:33+0000\n"
 "Last-Translator: Daf Daf, 2019\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -55,6 +55,11 @@ msgid ""
 "functionalities. Key differences relate to existing JSON-RPC commands which "
 "have been customized to support unique functionalities such as InstantSend."
 msgstr ""
+"`Dash Core <https://github.com/dashpay/dash>`__ est un “fork\" de `Bitcoin "
+"Core <https://github.com/bitcoin/bitcoin>`__ et partage avec lui beaucoup de"
+" fonctionnalités. Les différences principales sont relatives aux commandes "
+"JSON-RPC, qui ont été personnalisées pour être compatibles avec des "
+"fonctionnalités uniques à Dash telles qu'InstantSend."
 
 #: ../../developers/integration.rst:19
 msgid ""
@@ -209,6 +214,12 @@ msgid ""
 "basis for new transaction types that provide on-chain metadata to assist "
 "various consensus mechanisms. The following special transaction types exist:"
 msgstr ""
+"Dash, dans sa version 0.13.0 et ultérieure, implémente les `transactions "
+"spéciales DIP002 "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, qui forment la"
+" base de nouveaux types de transactions fournissant des métadonnées sur "
+"chaîne, pour rendre possibles différents mécanismes de consensus. Les types "
+"de transactions spéciales sont les suivants :"
 
 #: ../../developers/integration.rst:65
 msgid "Release"
@@ -457,6 +468,8 @@ msgid ""
 "This documentation is also available as a `PDF "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend.pdf>`__."
 msgstr ""
+"Cette documentation est aussi disponible au `format PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend.pdf>`__."
 
 #: ../../developers/integration.rst:117
 msgid ""
@@ -466,6 +479,12 @@ msgid ""
 "to the network. Every secured transaction is included in a following block "
 "in accordance with standard blockchain principles."
 msgstr ""
+"InstantSend est une fonctionnalité fournie par le réseau Dash qui permet aux"
+" transactions à 0 confirmation d'être acceptées et aussitôt dépensées à "
+"nouveau, en toute sécurité. Le réseau tâche de verrouiller les entrées de "
+"chaque transaction valide lorsqu'elle est diffusée au réseau. Chaque "
+"transaction sécurisée est incluse dans un bloc suivant, conformément aux "
+"principes standard de la blockchain."
 
 #: ../../developers/integration.rst:123
 msgid ""
@@ -481,6 +500,17 @@ msgid ""
 "transaction will be included in a following block instead of a conflicting "
 "transaction."
 msgstr ""
+"InstantSend est rendu possible par le réseau des masternodes, qui comprend "
+"environ 5000 serveurs. Ces nœuds se différencient des nœuds standard en "
+"prouvant qu'ils possèdent 1000 dashs, ce qui rend le réseau `hautement "
+"résistant aux attaques Sybil "
+"<https://fr.wikipedia.org/wiki/Attaque_Sybil>`__. Les masternodes forment "
+"des `quorums de masternode de longue durée (Long-Living Masternode Quorums, "
+"LLMQ) <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__ dont la "
+"mission est de garantir presque instantanément aux participants de la "
+"transaction que ses entrées ne peuvent pas être dépensées à nouveau, et que "
+"la transaction sera incluse dans un bloc ultérieur, sans pouvoir faire "
+"l'objet d'une contestation."
 
 #: ../../developers/integration.rst:133
 msgid ""
@@ -488,6 +518,10 @@ msgid ""
 "enables transacted funds to be immediately and securely respent by the "
 "recipient, even before the transaction is included in a block."
 msgstr ""
+"Ce concept constitue une extension du consensus Nakamoto. InstantSend permet"
+" aux fonds de la transaction d'être immédiatement retransmis par le "
+"destinataire en toute sécurité, avant même que la transaction ne soit "
+"incluse dans un bloc."
 
 #: ../../developers/integration.rst:139
 msgid "Receiving InstantSend Transactions"
@@ -605,28 +639,34 @@ msgid ""
 "by the node. A list of possible ZMQ notifications can be found `here "
 "<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__."
 msgstr ""
+"**Notification ZMQ :** dès qu'une transaction est incluse ou verrouillée "
+"dans le tampon mémoire, les notifications ZMQ peuvent être diffusées par le "
+"nœud. Une liste des notifications ZMQ possibles peut être consultée `ici "
+"<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__."
 
 #: ../../developers/integration.rst:174
 msgid ""
 "The following notifications are relevant for recognizing transactions and "
 "their corresponding instantlocks:"
 msgstr ""
+"Les notifications suivantes sont utiles pour reconnaître les transactions et"
+" leurs verrouillages instantanés correspondants :"
 
 #: ../../developers/integration.rst:177
 msgid "zmqpubhashtx"
-msgstr ""
+msgstr "zmqpubhashtx"
 
 #: ../../developers/integration.rst:178
 msgid "zmqpubhashtxlock"
-msgstr ""
+msgstr "zmqpubhashtxlock"
 
 #: ../../developers/integration.rst:179
 msgid "zmqpubrawtx"
-msgstr ""
+msgstr "zmqpubrawtx"
 
 #: ../../developers/integration.rst:180
 msgid "zmqpubrawtxlock"
-msgstr ""
+msgstr "zmqpubrawtxlock"
 
 #: ../../developers/integration.rst:182
 msgid ""
@@ -662,22 +702,34 @@ msgid ""
 "InstantSend when each of its inputs is considered confirmed. This is the "
 "case when at least one of the following circumstances is true:"
 msgstr ""
+"Depuis que la version 0.14.0 de Dash a lancé les LLMQ sur le réseau Dash, "
+"les quorums tentent par défaut de verrouiller chaque transaction valide, "
+"sans frais supplémentaires ni action à effectuer par le portefeuille d'envoi"
+" ou l'utilisateur. Une transaction est éligible pour InstantSend quand "
+"chacune de ses entrées est considérée comme confirmée. Cela est le cas dès "
+"qu'une des conditions suivantes est vraie :"
 
 #: ../../developers/integration.rst:202
 msgid ""
 "the previous transaction referred to by the input is confirmed with 6 blocks"
 msgstr ""
+"la transaction précédente à laquelle l'entrée fait référence est confirmée "
+"par 6 blocs"
 
 #: ../../developers/integration.rst:204
 msgid ""
 "the previous transaction is confirmed through an older InstantSend lock"
 msgstr ""
+"la transaction précédente est confirmée par un verrouillage InstantSend "
+"antérieur"
 
 #: ../../developers/integration.rst:206
 msgid ""
 "the block containing the previous transaction is `ChainLocked "
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"
 msgstr ""
+"le bloc contenant la transaction précédente est `verrouillé sur chaîne "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"
 
 #: ../../developers/integration.rst:208
 msgid ""
@@ -685,6 +737,10 @@ msgid ""
 "important to also do this on mempool (non-mined) transactions. This allows "
 "chained InstantSend locking."
 msgstr ""
+"Lorsqu'on vérifie le verrouillage InstantSend d'une transaction précédente, "
+"il est important de le faire également sur des transactions non encore "
+"minées (dans le tampon mémoire). Cela rend possible le verrouillage "
+"InstantSend chaîné."
 
 #: ../../developers/integration.rst:214
 msgid "Additional Resources"
@@ -713,18 +769,24 @@ msgid ""
 "`InstantSend Developer Documentation <https://dash-docs.github.io/en"
 "/developer-guide#llmq-instantsend>`__"
 msgstr ""
+"`Documentation InstantSend pour les développeurs <https://dash-"
+"docs.github.io/en/developer-guide#llmq-instantsend>`__"
 
 #: ../../developers/integration.rst:222
 msgid ""
 "`DIP0010: LLMQ InstantSend "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__"
 msgstr ""
+"`DIP0010 : InstantSend LLMQ "
+"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__"
 
 #: ../../developers/integration.rst:223
 msgid ""
 "`Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-"
 "brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__"
 msgstr ""
+"`Résumé de produit : Dash Core version 0.14 <https://blog.dash.org/product-"
+"brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__"
 
 #: ../../developers/integration.rst:229
 msgid "API Services"
