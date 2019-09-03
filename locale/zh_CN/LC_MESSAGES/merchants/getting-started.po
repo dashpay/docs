@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-25 06:01+0000\n"
+"POT-Creation-Date: 2019-08-31 04:43+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -223,6 +223,8 @@ msgstr "`Blesta <https://www.blesta.com>`_"
 #: ../../merchants/getting-started.rst:149
 #: ../../merchants/getting-started.rst:151
 #: ../../merchants/getting-started.rst:151
+#: ../../merchants/getting-started.rst:153
+#: ../../merchants/getting-started.rst:153
 msgid "|check|"
 msgstr "|check|"
 
@@ -442,22 +444,30 @@ msgid ""
 "Uphold.com supported"
 msgstr "适用于安卓、Windows、Mac和Linux系统。提供94种汇率并支持Uphold.com"
 
-#: ../../merchants/getting-started.rst:155
+#: ../../merchants/getting-started.rst:153
+msgid "`Xpay <https://xpay.cash>`_"
+msgstr ""
+
+#: ../../merchants/getting-started.rst:153
+msgid "Popular point of sale device in Venezuela and Colombia."
+msgstr ""
+
+#: ../../merchants/getting-started.rst:157
 msgid "Installation Examples"
 msgstr "安装示例"
 
-#: ../../merchants/getting-started.rst:157
+#: ../../merchants/getting-started.rst:159
 msgid ""
 "This section contains worked examples of how to install, configure and "
 "process your first payment using the payment processors listed in this "
 "documentation."
 msgstr "本章节通过示例向商家介绍如何安装、配置和使用本文档中列出的支付处理器。"
 
-#: ../../merchants/getting-started.rst:162
+#: ../../merchants/getting-started.rst:164
 msgid "WooCommerce and GoCoin"
 msgstr "WooCommerce和GoCoin"
 
-#: ../../merchants/getting-started.rst:164
+#: ../../merchants/getting-started.rst:166
 msgid ""
 "If your online store is built on WooCommerce, you can simply install GoCoin "
 "as an additional payment gateway and immediately begin accepting Dash. This "
@@ -474,7 +484,7 @@ msgstr ""
 "woocommerce/>`_ ，并且\\ `在个人商店中新建了至少一个产品 "
 "<https://docs.woocommerce.com/document/managing-products>`_ 。"
 
-#: ../../merchants/getting-started.rst:173
+#: ../../merchants/getting-started.rst:175
 msgid ""
 "Go to the `gocoin-woocommerce GitHub Releases page "
 "<https://github.com/GoCoin/gocoin-woocommerce/releases>`_ and download a zip"
@@ -488,7 +498,7 @@ msgstr ""
 "页面并下载最新版插件的压缩文件。在个人的WordPress管理后端，商家应选择 **插件 -> 新增** ，单击 **上传插件** ，单击 "
 "**选择文件** 并选择刚下载的文件，再单击 **立即安装** 和 **激活插件** 。"
 
-#: ../../merchants/getting-started.rst:185
+#: ../../merchants/getting-started.rst:187
 msgid ""
 "Next, go to the `GoCoin merchant sign up page "
 "<https://gocoin.com/merchant_signup>`_ and create an account. Once you are "
@@ -507,7 +517,7 @@ msgstr ""
 "，以便显示有效的API密匙并将它复制到临时文本文件中。最后，商家还可以在 **个人资料** 上点击 **图标 -> 上传** "
 "，从而在结账页面添加达世币的标志。"
 
-#: ../../merchants/getting-started.rst:200
+#: ../../merchants/getting-started.rst:202
 msgid ""
 "Back in the WordPress plugins section, click the **Settings** button for the"
 " WooCommerce plugin and navigate to **Checkout -> GoCoin** section. Ensure "
@@ -519,7 +529,7 @@ msgstr ""
 "部分。商家需要确保GoCoin插件已被启用，然后在相应字段中输入**商家ID** 和 **API密钥** "
 "如下所示。然后，商家还可以根据需要修改其它字段。准备就绪之后，商家可以单击 **保存更改** 。"
 
-#: ../../merchants/getting-started.rst:209
+#: ../../merchants/getting-started.rst:211
 msgid ""
 "Your customers will now see an option to pay with Dash when completing the "
 "checkout process for an order. The payment will be processed by GoCoin, and "
@@ -531,15 +541,15 @@ msgstr ""
 "完成上述步骤后，商家的客户可以在完成订单的结帐流程时看到达世币支付选项。此时，支付将由GoCoin处理，商家将收到详细说明各个购买程序的电子邮件。商家可以选定付款提现的频率、收取付款的达世币地址和，以及GoCoin的管理选项设置。如需了解详细的信息，请阅读\\"
 " `GoCoin Documentation <https://gocoin.com/docs>`_ 。"
 
-#: ../../merchants/getting-started.rst:227
+#: ../../merchants/getting-started.rst:229
 msgid "Completing payment through the GoCoin payment processor"
 msgstr "通过GoCoin支付处理器完成付款"
 
-#: ../../merchants/getting-started.rst:231
+#: ../../merchants/getting-started.rst:233
 msgid "WooCommerce and CoinPayments.net"
 msgstr "WooCommerce和CoinPayments.net"
 
-#: ../../merchants/getting-started.rst:233
+#: ../../merchants/getting-started.rst:235
 msgid ""
 "If your online store is built on WooCommerce, you can simply install "
 "CoinPayments as an additional payment gateway and immediately begin "
@@ -560,7 +570,7 @@ msgstr ""
 " <https://www.youtube.com/watch?v=Xa2o_8s3RNY>`_\\ "
 "也可以向商家介绍如何安装CoinPayments支付处理器。"
 
-#: ../../merchants/getting-started.rst:243
+#: ../../merchants/getting-started.rst:245
 msgid ""
 "In your WordPress administration backend, select **Plugins -> Add New** and "
 "type \"coinpayments.net\" into the search box. A plugin named "
@@ -577,11 +587,11 @@ msgstr ""
 "<https://wordpress.org/plugins/coinpayments- payment-gateway-for-"
 "woocommerce>`_\\ ，然后再单击 **上传插件** 。在插件安装完毕后，商家需要点击 **激活** 并开始设置。"
 
-#: ../../merchants/getting-started.rst:255
+#: ../../merchants/getting-started.rst:257
 msgid "Installing the CoinPayments.net WooCommerce plugin"
 msgstr "安装CoinPayments.net WooCommerce插件"
 
-#: ../../merchants/getting-started.rst:257
+#: ../../merchants/getting-started.rst:259
 msgid ""
 "Next, go to CoinPayments.net and `sign up "
 "<https://www.coinpayments.net/register>`_ to create an account. Once you are"
@@ -598,7 +608,7 @@ msgstr ""
 "**商家ID** 复制到文本文件中。商家还需要访问 **商家设置** 并为 **IPN Secret** "
 "输入一长串随机字符。随后，用户还需将其复制到临时文件中。"
 
-#: ../../merchants/getting-started.rst:267
+#: ../../merchants/getting-started.rst:269
 msgid ""
 "Back in the WordPress plugins section, click the **Settings** button for the"
 " WooCommerce plugin and navigate to **Checkout -> CoinPayments.net** "
@@ -610,11 +620,11 @@ msgstr ""
 "部分。商家需要确保CoinPayments插件已经启用，然后在相应字段中输入**商家ID** 、 **IPN Secret** 和 **描述** "
 "如下所示。准备就绪之后，商家可以单击 **保存更改** 。"
 
-#: ../../merchants/getting-started.rst:276
+#: ../../merchants/getting-started.rst:278
 msgid "Configuring the CoinPayments.net WooCommerce plugin"
 msgstr "配置CoinPayments.net WooCommerce插件"
 
-#: ../../merchants/getting-started.rst:278
+#: ../../merchants/getting-started.rst:280
 msgid ""
 "Your customers will now see an option to pay with Dash when completing the "
 "checkout process for an order. The payment will be processed by "
@@ -629,15 +639,15 @@ msgstr ""
 " `CoinPayments 文档 <https://www.coinpayments.net/help>`_\\ 或\\ `商户工具 "
 "<https://www.coinpayments.net/merchant-tools>`_ 。"
 
-#: ../../merchants/getting-started.rst:297
+#: ../../merchants/getting-started.rst:299
 msgid "Completing payment through the CoinPayments.net payment processor"
 msgstr "通过CoinPayments.net支付处理器完成付款"
 
-#: ../../merchants/getting-started.rst:301
+#: ../../merchants/getting-started.rst:303
 msgid "Point-of-Sale with Anypay"
 msgstr "Anypay的POS服务"
 
-#: ../../merchants/getting-started.rst:303
+#: ../../merchants/getting-started.rst:305
 msgid ""
 "`Anypay.global <http://anypay.global>`_ allows you to quickly start "
 "accepting point-of-sale payments in Dash at a physical store. The service "
@@ -647,18 +657,18 @@ msgstr ""
 "`Anypay.global <http://anypay.global>`_ "
 "可以帮助商家在实体店里快速地完成达世币支付。商家可以在联网和触屏的设备上加载网页并享受Anypay的服务。可用设备包括智能手机或平板电脑。"
 
-#: ../../merchants/getting-started.rst:308
+#: ../../merchants/getting-started.rst:310
 msgid ""
 "Begin by registering an account with Anypay. You will be asked to specify an"
 " email address and password. Once you are signed in, you must add a Dash "
 "payment withdrawal address."
 msgstr "首先，商家需要注册Anypay的账户，尤其需要指定电子邮箱地址和密码。完成注册之后，商家需要添加一个达世币支付的提款地址。"
 
-#: ../../merchants/getting-started.rst:322
+#: ../../merchants/getting-started.rst:324
 msgid "Setting up Anypay"
 msgstr "设置Anypay"
 
-#: ../../merchants/getting-started.rst:324
+#: ../../merchants/getting-started.rst:326
 msgid ""
 "Once this has been set up, you can begin processing payments immediately. "
 "Simply log in to https://pos.anypay.global or tap **Merchant Point of Sale "
@@ -676,11 +686,11 @@ msgstr ""
 "按键。这时，应用软件将生成可供客户扫描的二维码。在支付完成后，商家还可以点击 **下一次付款** 来创建发票，通过点击键盘左上角的 **菜单** "
 "按键来查看发票的状态，或在管理后端查看 **发票** 部分的信息。在支付完成后，提款将在商家指定的地址上立即处理。"
 
-#: ../../merchants/getting-started.rst:344
+#: ../../merchants/getting-started.rst:346
 msgid "Point-of-Sale with Spark"
 msgstr "Spark的POS服务"
 
-#: ../../merchants/getting-started.rst:346
+#: ../../merchants/getting-started.rst:348
 msgid ""
 "`Spark Payments <https://get-spark.com>`__ allows you to quickly start "
 "accepting point-of-sale payments in Dash at a physical store. The system "
@@ -689,7 +699,7 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Progressive_Web_Apps>`_) in development."
 msgstr ""
 
-#: ../../merchants/getting-started.rst:352
+#: ../../merchants/getting-started.rst:354
 msgid ""
 "The project is an external terminal application for processing Dash payments"
 " in brick and mortar stores. The merchant types the sale amount in their "
@@ -712,7 +722,7 @@ msgstr ""
 "<https://github.com/dashpay/docs/raw/master/merchants/Spark-Payments-Uphold-"
 "German.pdf>`__\\ 。"
 
-#: ../../merchants/getting-started.rst:365
+#: ../../merchants/getting-started.rst:367
 msgid ""
 "To use Spark, open the app on your device. If this is the first time you are"
 " using the app, you will need to specify a Dash address to receive payments "
@@ -725,11 +735,11 @@ msgid ""
 msgstr ""
 "如需使用Spark，用户要在个人设备上打开该应用程序。如果是初次运行，用户需要指定一个达世币地址，以便接收系统发送的达世币付款或个人选定的法定货币支付。用户随时可以通过菜单更改指定的达世币地址。如果需要生成与支付款项对应的发票，用户需要输入相应的法定货币数目。此后，Spark将生成一个二维码，其中包含用户指定的地址和申请以达世币支付的金额。在客户扫描二维码后，应用程序将在付款完毕之后显示可视化的数据。"
 
-#: ../../merchants/getting-started.rst:377
+#: ../../merchants/getting-started.rst:379
 msgid "Configuring and receiving payment using Spark Payments"
 msgstr "使用Spark Payments完成设置和接收付款"
 
-#: ../../merchants/getting-started.rst:379
+#: ../../merchants/getting-started.rst:381
 msgid ""
 "Payment systems like Anypay and Spark can be integrated with your existing "
 "terminal and/or accounting software (such as Square Register, by recording "

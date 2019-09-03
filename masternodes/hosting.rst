@@ -56,7 +56,7 @@ https://dashmasternode.io
 - `Email <sidhosting@protonmail.com>`__
 
 
-AllNodes
+Allnodes
 --------
 
 .. image:: img/allnodes.png
@@ -76,21 +76,21 @@ https://www.allnodes.com
 - `Discord <https://discord.allnodes.com>`__
 
 
-Gin
----
+Snode
+-----
 
-.. image:: img/gin.png
+.. image:: img/snode.png
    :width: 200px
    :align: right
-   :target: https://ginplatform.io
+   :target: https://snode.co
 
-https://ginplatform.io
+https://snode.co
 
-- Operated by: GIN Platform Ltd.
-- Services: Hosting, Monitoring, One-click deployment
-- From $12.60/month (variable)
-- `Site <https://ginplatform.io>`__
-- `Email <info@ginplatform.io>`__
+- Operated by: Snode Co.
+- Services: Hosting, Monitoring, Shares
+- 4% of masternode payments
+- `Site <https://snode.co>`__
+- `Email <support@snode.co>`__
 
 
 Node40

@@ -28,6 +28,11 @@ variety of wallet formats:
 - BIP39/44 HD recovery phrase (coming soon)
 - BIP32 HD recovery phrase (coming soon)
 
+Please note that web wallets may not be as secure as alternatives such
+as hardware wallets. Be aware of the risk of storing large amounts of
+Dash in keyfile wallets, since they are an easier target to attack than
+mobile or hardware wallets. 
+
 MyDashWallet offers complete and detailed documentation for all functions.
 
 - `Getting started <https://mydashwallet.org/About>`_
@@ -60,6 +65,11 @@ decrypted with the users password. Hardware wallets are also supported,
 and in-wallet staking and exchange functionality is available. Magnum
 Wallet presents a clean and simple interface, allowing users to transact
 quickly and easily in Dash.
+
+Please note that web wallets may not be as secure as alternatives such
+as hardware wallets. Be aware of the risk of storing large amounts of
+Dash in keyfile wallets, since they are an easier target to attack than
+mobile or hardware wallets. 
 
 Support for Magnum Wallet is available at 
 `support@magnumwallet.co <support@magnumwallet.co>`_.

@@ -185,6 +185,17 @@ on this difference below:
   identifying counterparties to transactions in other virtual currencies
   when relying on blockchain forensics.
 
+PrivateSend Legal Position
+==========================
+
+Dash’s transaction rules are identical to Bitcoin, and therefore for
+regulatory and compliance purposes Dash can and should be treated
+identically to Bitcoin. `BlockchainIntel <https://blockchainintel.com/>`__
+and `Coinfirm <https://www.coinfirm.com/>`__ are KYC/AML service
+providers that offer services covering the Dash blockchain.
+
+This PDF document offers a full overview of the `Dash PrivateSend Legal Position <https://media.dash.org/wp-content/uploads/Dash-PrivateSend-Position.pdf>`__.
+
 ATM & Fiat Compliance
 =====================
 

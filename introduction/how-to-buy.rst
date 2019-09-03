@@ -128,9 +128,12 @@ Poloniex
 
   https://poloniex.com
 
-  Poloniex is a US-based pure-crypto exchange offering high volume DASH
-  pairs for BTC, XMR and USDT. Leveraged margin trading and lending is
-  also available for DASH.
+  Poloniex is a US-based cryptocurrency exchange operated by `Circle
+  <https://www.circle.com>`__ offering high volume DASH pairs for BTC,
+  USDC, USDT and XMR. Poloniex also supports deposits in USD by bank
+  transfer and allows cryptocurrency purchases with debit and credit
+  cards. Leveraged margin trading and lending is also available for
+  DASH.
 
 Bittrex
   .. image:: exchanges/bittrex.png
@@ -495,6 +498,17 @@ Coinome
   Coinome is an Indian exchange offering DASH trading against the Indian
   Rupee (INR).
 
+Bitcoin.com
+  .. image:: exchanges/bitcoincom.png
+     :width: 200px
+     :align: right
+     :target: https://exchange.bitcoin.com/
+
+  https://exchange.bitcoin.com/
+
+  Bitcoin.com allows you to buy, sell and store cryptocurrencies. DASH
+  can be traded against BCH, BTC, ETH and USDT.
+
 WazirX
   .. image:: exchanges/wazirx.png
      :width: 200px
@@ -694,17 +708,16 @@ Panda.exchange
   assets such as Dash available in Latin America and, through a branch
   in Portugal, the EU market.
 
-Whaleclub
-  .. image:: exchanges/whaleclub.png
+Cubobit
+  .. image:: exchanges/cubobit.png
      :width: 200px
      :align: right
-     :target: https://whaleclub.co
+     :target: https://cubobit.com/
 
-  https://whaleclub.co
+  https://cubobit.com/
 
-  Based in Hong Kong, Whaleclub offers an advanced platform that allows
-  highly leveraged trading of cryptocurrency including DASH against
-  other cryptocurrencies, forex, metals, stocks and bonds.
+  Cubobit allows you to exchange Dash and other cryptocurrencies against
+  Mexican pesos.
 
 Golix
   .. image:: exchanges/golix.png
@@ -1037,18 +1050,25 @@ Exscudo
   EON token, which allows users to seamlessly transmit money to one
   another in a chat environment.
 
-Miami Crypto Exchange
-  .. image:: exchanges/mcex.png
-     :width: 110px
+LATOKEN
+  .. image:: exchanges/latoken.png
+     :width: 200px
      :align: right
-     :target: https://www.miami.exchange
+     :target: https://latoken.com
 
-  https://www.miami.exchange
+  https://latoken.com
 
-  Miami Crypto Exchange (MCEX), operated by Dash partner `Mercury Cash
-  <https://www.mercury.cash>`_, is a legal and fully compliant crypto
-  gateway between the U.S. and the world, with a specific focus on Latin
-  America and the Caribbean. DASH can be traded against USD and BTC.
+  LATOKEN offers DASH trading against USDT and BTC.
+
+BitOffer
+  .. image:: exchanges/bitoffer.png
+     :width: 200px
+     :align: right
+     :target: https://bitoffer.com
+
+  https://bitoffer.com
+
+  BitOffer offers DASH trading against USDT, ETH and BTC.
 
 BW
   .. image:: exchanges/bw.png
@@ -1210,18 +1230,26 @@ Laissez Faire
 
   Laissez Faire offers incentivized trading which includes DASH.
 
-Bitsane
-  .. image:: exchanges/bitsane.png
+OceanEx
+  .. image:: exchanges/oceanex.png
      :width: 200px
      :align: right
-     :target: https://bitsane.com
+     :target: https://oceanex.pro
 
-  https://bitsane.com
+  https://oceanex.pro
 
-  Bitsane (and its altcoin sister site `Anybits <https://anybits.com>`_)
-  offer trading pairs for Dash and allows deposits in EUR and USD.
+  OceanEx offers DASH trading against VET and USDT.
 
+BTC-Alpha
+  .. image:: exchanges/btc-alpha.png
+     :width: 200px
+     :align: right
+     :target: https://btc-alpha.com
 
+  https://btc-alpha.com
+
+  BTC-Alpha is an exchange serving Russian-speakers and offering DASH
+  trading pairs against BTC and USDT.
 
 .. _instant_exchanges:
 
@@ -1337,6 +1365,17 @@ CoinSwitch
   CoinSwitch is a crypto to crypto exchange aggregate with more than 300
   different coins and tokens listed. Also offers purchases through
   credit/debit cards.
+
+fox.exchange
+  .. image:: exchanges/foxexchange.png
+     :width: 100px
+     :align: right
+     :target: https://fox.exchange
+
+  https://fox.exchange
+
+  fox.exchange is a crypto to crypto exchange allowing instant exchange
+  between DASH, BTC, LTC, BCH, BSV, ETH and BAT.
 
 MorphToken
   .. image:: exchanges/morphtoken.png

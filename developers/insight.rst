@@ -32,9 +32,9 @@ dependencies::
 Download and extract the latest version of Dash Core::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.14.0.2/dashcore-0.14.0.2-x86_64-linux-gnu.tar.gz
-  tar -xvzf dashcore-0.14.0.2-x86_64-linux-gnu.tar.gz
-  rm dashcore-0.14.0.2-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.14.0.3/dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
+  tar -xvzf dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
+  rm dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
 
 Install `Dashcore Node <https://github.com/dashevo/dashcore-node>`_ and
 create your configuration::

@@ -102,6 +102,19 @@ Crypto.com
   easy to convert cryptocurrencies into fiat currencies and spend at
   over 40 million merchants globally.
 
+Change
+  .. image:: img/change.png
+     :width: 200px
+     :align: right
+     :target: https://www.getchange.com
+
+  https://www.getchange.com
+
+  The Change Wallet & Card App allows you to convert instantly between
+  all of your currencies and spend with your card worldwide. No
+  commission fees for buying and selling cryptocurrency. Lock your card
+  conveniently from the app in case it gets lost or stolen.
+
 PolisPay
   .. image:: img/polispay.png
      :width: 200px
