@@ -498,6 +498,17 @@ Coinome
   Coinome is an Indian exchange offering DASH trading against the Indian
   Rupee (INR).
 
+Bitcoin.com
+  .. image:: exchanges/bitcoincom.png
+     :width: 200px
+     :align: right
+     :target: https://exchange.bitcoin.com/
+
+  https://exchange.bitcoin.com/
+
+  Bitcoin.com allows you to buy, sell and store cryptocurrencies. DASH
+  can be traded against BCH, BTC, ETH and USDT.
+
 WazirX
   .. image:: exchanges/wazirx.png
      :width: 200px
