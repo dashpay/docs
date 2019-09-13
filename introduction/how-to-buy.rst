@@ -977,6 +977,18 @@ Holy Transaction
   Holy Transaction offers DASH trading pairs for BTC, USD and EUR, as
   well as over ten other altcoins.
 
+NovaDAX
+  .. image:: exchanges/novadax.png
+     :width: 200px
+     :align: right
+     :target: https://www.novadax.com.br
+
+  https://www.novadax.com.br
+
+  NovaDAX offers BTC, USDT and BRL trading pairs for Dash, with rapid
+  deposits and withdrawals in Brazilian real. Trading compeitions and
+  OTC services are also available.
+
 RealExchange
   .. image:: exchanges/real-exchange.png
      :width: 200px
