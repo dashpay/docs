@@ -1978,18 +1978,6 @@ MegaChange
   currency in a simple market system. It supports Dash and multiple
   methods of adding fiat currency, including USD, RMB and RUB.
 
-Dashous
-  .. image:: exchanges/dashous.png
-     :width: 200px
-     :align: right
-     :target: https://www.dashous.com
-
-  https://www.dashous.com
-
-  Dashous allows user to post offers to buy or sell Dash and Bitcoin
-  within their region or country. The users then arrange the deal
-  between themselves.
-
 Magnetic Exchange
   .. image:: exchanges/magnetic.png
      :width: 200px
