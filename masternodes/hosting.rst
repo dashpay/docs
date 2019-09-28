@@ -127,7 +127,7 @@ https://masternodehosting.com
 NodeHub.io
 --------
 
-.. image:: https://cdn.nodehub.io/img/brand/nodehub_512_no_border.png
+.. image:: img/nodehub.png
    :width: 200px
    :align: right
    :target: https://nodehub.io
@@ -136,7 +136,7 @@ https://nodehub.io
 
 - Operated by: NodeHub.io Platform
 - Services: Hosting, Governance, Stats
-- Cost: $9,90/month (charged daily at $0.33)
+- Cost: $9.90/month (charged daily at $0.33)
 - `Site <https://nodehub.io>`__
 - `Email <hello@nodehub.io>`__
 - `Twitter <https://twitter.com/nodehubio>`__
