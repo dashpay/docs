@@ -124,6 +124,24 @@ https://masternodehosting.com
 - `Email <holger@masternodehosting.com>`__
 - `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
 
+NodeHub.io
+----------
+
+.. image:: img/nodehub.png
+   :width: 200px
+   :align: right
+   :target: https://nodehub.io
+
+https://nodehub.io
+
+- Operated by: NodeHub.io Platform
+- Services: Hosting, Governance, Stats
+- Cost: $9.90/month (charged daily at $0.33)
+- `Site <https://nodehub.io>`__
+- `Email <hello@nodehub.io>`__
+- `Twitter <https://twitter.com/nodehubio>`__
+- `Discord <https://discord.nodehub.io>`__
+
 
 .. _hosted-setup:
 

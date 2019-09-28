@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Nils Hermann <vk.translation@protonmail.ch>, 2019
 # Leon White <leon.white@dash.org>, 2019
+# Nils Hermann <vk.translation@protonmail.ch>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-31 04:43+0000\n"
+"POT-Creation-Date: 2019-09-28 20:38+0000\n"
 "PO-Revision-Date: 2019-04-08 11:33+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
+"Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2019\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,6 +58,11 @@ msgid ""
 "functionalities. Key differences relate to existing JSON-RPC commands which "
 "have been customized to support unique functionalities such as InstantSend."
 msgstr ""
+"`Dash Core <https://github.com/dashpay/dash>`__ ist eine “Fork” von `Bitcoin"
+" Core <https://github.com/bitcoin/bitcoin>` und verfügt über gemeinsame "
+"Funktionen. Die Hauptunterschiede beziehen sich auf existierende JSON-RPC "
+"Befehle, welche angepasst wurden, um Sonderfunktionen, wie z.B. InstantSend,"
+" zu unterstützen."
 
 #: ../../developers/integration.rst:19
 msgid ""
@@ -191,7 +196,7 @@ msgstr ""
 
 #: ../../developers/integration.rst:55
 msgid "Special Transactions"
-msgstr ""
+msgstr "Spezielle Transaktionen"
 
 #: ../../developers/integration.rst:57
 msgid ""
@@ -210,6 +215,11 @@ msgid ""
 "basis for new transaction types that provide on-chain metadata to assist "
 "various consensus mechanisms. The following special transaction types exist:"
 msgstr ""
+"Dash 0.13.0 und höher implementieren `DIP002 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, welches die "
+"Grundlage für neue Transaktionstypen ist, die On-Chain Metadaten für "
+"verschiedene Konsens-Mechanismen zur Verfügung stellt. Die folgenden "
+"speziellen Transaktionstypen existieren:"
 
 #: ../../developers/integration.rst:65
 msgid "Release"
@@ -460,6 +470,9 @@ msgid ""
 "This documentation is also available as a `PDF "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend.pdf>`__."
 msgstr ""
+"Diese Dokumentation ist ebenfalls als englischsprachige `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend.pdf>`__"
+" verfügbar."
 
 #: ../../developers/integration.rst:117
 msgid ""
@@ -469,6 +482,11 @@ msgid ""
 "to the network. Every secured transaction is included in a following block "
 "in accordance with standard blockchain principles."
 msgstr ""
+"InstantSend ist ein Feature des Dash-Netzwerks, welches Transaktionen mit 0 "
+"Bestätigungen erlaubt, die gefahrlos akzeptiert werden können. Alle "
+"InstantSend-Transaktionen werden vom Netzwerk abgesichert. Die Transaktion "
+"wird in den nächsten Block eingefügt, wie dies den Prinzipien der "
+"Blockchain-Technologie entspricht."
 
 #: ../../developers/integration.rst:123
 msgid ""
@@ -484,6 +502,16 @@ msgid ""
 "transaction will be included in a following block instead of a conflicting "
 "transaction."
 msgstr ""
+"InstantSend wird durch das Masternode-Netzwerk ermöglicht, das momentan aus "
+"etwa 5000 Masternodes besteht. Diese Nodes unterscheiden sich von anderen "
+"Nodes, da die Betreiber den Besitz von 1000 Dash nachweisen müssen, was das "
+"Netzwerk `gegen Sybil-Angriffe absichert "
+"<https://en.wikipedia.org/wiki/Sybil_attack>`__. Masternodes bilden  `Long-"
+"Living Masternode Quorums (LLMQs) "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, deren Aufgabe "
+"es ist, abzusichern, dass ein Transaktionsguthaben nicht erneut ausgegeben "
+"wird und die Transaktion anstelle einer konkurrierenden Transaktion in einen"
+" Block eingefügt wird."
 
 #: ../../developers/integration.rst:133
 msgid ""
@@ -491,6 +519,9 @@ msgid ""
 "enables transacted funds to be immediately and securely respent by the "
 "recipient, even before the transaction is included in a block."
 msgstr ""
+"Dieses Konzept fungiert als eine Erweiterung des Nakamoto Consensus. "
+"InstantSend ermöglicht es dem Empfänger das Geld sofort und sicher "
+"auszugeben, selbst wenn es noch nicht in einen Block eingetragen wurde."
 
 #: ../../developers/integration.rst:139
 msgid "Receiving InstantSend Transactions"

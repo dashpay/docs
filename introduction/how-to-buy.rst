@@ -72,13 +72,26 @@ introduces some of the most popular exchanges for trading Dash.
 Marketplace comparison websites
 -------------------------------
 
+Coinpaprika
+  .. image:: exchanges/coinpaprika.png
+     :width: 200px
+     :align: right
+     :target: https://coinpaprika.com/coin/dash-dash/
+
+  https://coinpaprika.com
+
+  Coinpaprika lists hundreds of cryptocurrencies by their market
+  capitalization, traded volume and recent price performance. A number
+  of advanced features to research cryptocurrency projects and exchanges
+  are also available.
+
 Cryptoradar
   .. image:: exchanges/cryptoradar.png
      :width: 200px
      :align: right
      :target: https://cryptoradar.co/buy-dash
 
-  https://cryptoradar.co/buy-dash
+  https://cryptoradar.co
 
   Cryptoradar is a real-time cryptocurrency marketplace price comparison
   and review platform. The website compares dozens of Dash markets based
@@ -88,9 +101,9 @@ CoinMarketCap
   .. image:: exchanges/coinmarketcap.png
      :width: 200px
      :align: right
-     :target: https://coinmarketcap.com
+     :target: https://coinmarketcap.com/currencies/dash/#markets
 
-  https://coinmarketcap.com/currencies/dash/#markets
+  https://coinmarketcap.com
 
   CoinMarketCap lists all cryptocurrencies by their market capitalization.
   Clicking one of these currencies allows you to view price charts, and
@@ -119,6 +132,31 @@ Please see `here <https://coincodex.com/article/3063/how-to-buy-dash-dash-on-kra
 for a detailed guide on how to buy Dash on an exchange. The exchanges 
 listed here are for informational purposes only and do not indicate 
 endorsement or affiliation with any particular platform.
+
+Kraken
+  .. image:: exchanges/kraken.png
+     :width: 200px
+     :align: right
+     :target: https://www.kraken.com
+
+  https://www.kraken.com
+
+  Kraken is a high-volume US-based exchange offering fiat currency
+  deposits in EUR, USD, JPY and GBP. DASH can be traded against EUR, USD
+  and BTC.
+
+Coinbase Pro
+  .. image:: exchanges/coinbase-pro.png
+     :width: 200px
+     :align: right
+     :target: https://pro.coinbase.com
+
+  https://pro.coinbase.com/
+
+  Coinbase Pro is a major cryptocurrency trading platform offering high
+  Volume DASH trading pairs for USD and BTC. Coinbase Pro supports
+  deposits and withdrawals in cryptocurrency as well as USD, GBP and
+  EUR.
 
 Poloniex
   .. image:: exchanges/poloniex.png
@@ -159,17 +197,7 @@ Bitfinex
   volume BTC and USD trading pairs for DASH, as well as leveraged
   trading.
 
-Kraken
-  .. image:: exchanges/kraken.png
-     :width: 200px
-     :align: right
-     :target: https://www.kraken.com
 
-  https://www.kraken.com
-
-  Kraken is a high-volume US-based exchange offering fiat currency
-  deposits in EUR, USD, JPY and GBP. DASH can be traded against EUR, USD
-  and BTC.
 
 Binance
   .. image:: exchanges/binance.png
@@ -977,6 +1005,18 @@ Holy Transaction
   Holy Transaction offers DASH trading pairs for BTC, USD and EUR, as
   well as over ten other altcoins.
 
+NovaDAX
+  .. image:: exchanges/novadax.png
+     :width: 200px
+     :align: right
+     :target: https://www.novadax.com.br
+
+  https://www.novadax.com.br
+
+  NovaDAX offers BTC, USDT and BRL trading pairs for Dash, with rapid
+  deposits and withdrawals in Brazilian real. Trading compeitions and
+  OTC services are also available.
+
 RealExchange
   .. image:: exchanges/real-exchange.png
      :width: 200px
@@ -1433,6 +1473,20 @@ BlockTrades
 
 Over the Counter
 ================
+
+Coinbase
+  .. image:: exchanges/coinbase.png
+     :width: 200px
+     :align: right
+     :target: https://www.coinbase.com
+
+  https://www.coinbase.com
+
+  Coinbase is a large US-based cryptocurrency exchange with a focus on
+  making it easy to buy, sell and manage your cryptocurrency portfolio.
+  With trading allowed between any of the 17+ cryptocurrencies supported
+  and many major fiat currencies including EUR, USD and GBP, Coinbase is
+  a great place to buy your first cryptocurrency.
 
 Uphold
   .. image:: exchanges/uphold.png
@@ -1923,18 +1977,6 @@ MegaChange
   MegaChange offers direct sale and exchange of various digital forms of
   currency in a simple market system. It supports Dash and multiple
   methods of adding fiat currency, including USD, RMB and RUB.
-
-Dashous
-  .. image:: exchanges/dashous.png
-     :width: 200px
-     :align: right
-     :target: https://www.dashous.com
-
-  https://www.dashous.com
-
-  Dashous allows user to post offers to buy or sell Dash and Bitcoin
-  within their region or country. The users then arrange the deal
-  between themselves.
 
 Magnetic Exchange
   .. image:: exchanges/magnetic.png
