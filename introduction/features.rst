@@ -21,7 +21,7 @@ Specifications
 - Dark Gravity Wave difficulty adjustment algorithm
 - Between 17.74M and 18.92M total coin supply
 - Decentralized second-tier masternode network
-- Superior transaction anonymity using PrivateSend
+- Superior privacy using PrivateSend
 - Instant transactions using InstantSend
 - Protection against blockchain reorganization events (commonly called 
   51% attacks) using ChainLocks
@@ -48,8 +48,8 @@ Masternodes enable the following services:
 
 -  **InstantSend** allows for near-instant transactions. Dash
    InstantSend transactions are fully confirmed within two seconds.
--  **PrivateSend** gives financial privacy by obscuring the source of
-   funds on the blockchain.
+-  **PrivateSend** gives financial privacy through a decentralized 
+   implmentation of CoinJoin.
 -  **ChainLocks**, which protects the blockchain against 51% mining 
    attacks by signing blocks as they are mined.
 -  **Governance and Treasury** allows stakeholders in Dash to determine
@@ -107,15 +107,15 @@ The PrivateSend process works like this:
    to pay the now-transformed input back to themselves. Your wallet pays
    that denomination directly to itself, but in a different address
    (called a change address).
-#. In order to fully obscure your funds, your wallet must repeat this
-   process a number of times with each denomination. Each time the
-   process is completed, it's called a "round". Each round of
-   PrivateSend makes it exponentially more difficult to determine where
-   your funds originated. The user may choose between 1-16 rounds of
-   mixing.
+#. Your wallet must repeat this process a number of times with each
+   denomination. Each time the process is completed, it's called a
+   "round". Each round of PrivateSend makes it exponentially more
+   difficult to determine where your funds originated. The user may
+   choose between 1-16 rounds of mixing.
 #. This mixing process happens in the background without any
-   intervention on your part. When you wish to make a transaction, your
-   funds will already be anonymized. No additional waiting is required.
+   intervention on your part. When you wish to make a private
+   transaction, your funds will be ready to spend. No additional waiting
+   is required.
 
 Note that PrivateSend transactions will be rounded up so that all
 transaction inputs are spent. Any excess Dash will be spent on the
