@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-31 04:43+0000\n"
+"POT-Creation-Date: 2019-09-28 20:38+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2019\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
@@ -261,66 +261,102 @@ msgid ""
 "service.2648/>`__"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:131
+#: ../../masternodes/hosting.rst:128
+msgid "NodeHub.io"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:135
+msgid "https://nodehub.io"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:137
+msgid "Operated by: NodeHub.io Platform"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:138
+msgid "Services: Hosting, Governance, Stats"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:139
+msgid "Cost: $9.90/month (charged daily at $0.33)"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:140
+msgid "`Site <https://nodehub.io>`__"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:141
+msgid "`Email <hello@nodehub.io>`__"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:142
+msgid "`Twitter <https://twitter.com/nodehubio>`__"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:143
+msgid "`Discord <https://discord.nodehub.io>`__"
+msgstr ""
+
+#: ../../masternodes/hosting.rst:149
 msgid "Registering a hosted masternode"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:133
+#: ../../masternodes/hosting.rst:151
 msgid ""
 "Dash 0.13.0 implements DIP003, which introduces several changes to how a "
 "Dash masternode is set up and operated. A list of available documentation "
 "appears below:"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:137
+#: ../../masternodes/hosting.rst:155
 msgid ""
 "`DIP003 Deterministic Masternode Lists "
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:138
+#: ../../masternodes/hosting.rst:156
 msgid ":ref:`dip3-changes`"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:139
+#: ../../masternodes/hosting.rst:157
 msgid ""
 "`Dash 0.13 Upgrade Procedure for Masternodes (legacy documentation) "
 "<https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:140
+#: ../../masternodes/hosting.rst:158
 msgid ":ref:`Full masternode setup guide <masternode-setup>`"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:141
+#: ../../masternodes/hosting.rst:159
 msgid ""
 ":ref:`Information for users of hosted masternodes <hosted-setup>` (you are "
 "here)"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:142
+#: ../../masternodes/hosting.rst:160
 msgid ""
 ":ref:`Information for operators of hosted masternodes <operator-"
 "transactions>`"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:144
+#: ../../masternodes/hosting.rst:162
 msgid ""
 "It is highly recommended to first read at least the list of changes before "
 "continuing in order to familiarize yourself with the new concepts in DIP003."
 msgstr ""
 
-#: ../../masternodes/hosting.rst:148
+#: ../../masternodes/hosting.rst:166
 msgid "Registering a hosted masternode is done in several steps:"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:150
+#: ../../masternodes/hosting.rst:168
 msgid ""
 "Send 1000 DASH to an address you control in a single transaction and wait "
 "for 15 confirmations"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:152
+#: ../../masternodes/hosting.rst:170
 msgid ""
 "Correspond with your hosting provider to determine who will generate the "
 "operator BLS keys, whether their fee will be paid by an operator reward "
@@ -328,13 +364,13 @@ msgid ""
 "will be set up before or after the registration transaction"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:157
+#: ../../masternodes/hosting.rst:175
 msgid ""
 "Prepare, sign and broadcast the registration transaction using Dash Core or "
 "DMT"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:160
+#: ../../masternodes/hosting.rst:178
 msgid ""
 "It is **highly recommended** to store the keys to your masternode collateral"
 " on a :ref:`hardware wallet <dash-hardware-wallet>` for added security "
@@ -346,11 +382,11 @@ msgid ""
 "beginning from the :ref:`registration step <register-masternode>`."
 msgstr ""
 
-#: ../../masternodes/hosting.rst:174
+#: ../../masternodes/hosting.rst:192
 msgid "Operator transactions"
 msgstr ""
 
-#: ../../masternodes/hosting.rst:176
+#: ../../masternodes/hosting.rst:194
 msgid ""
 "This documentation is intended for operators managing nodes on behalf of "
 "owners. If you provide an IP address and port of a synchronized full node "
@@ -364,7 +400,7 @@ msgid ""
 "update the service features and register the masternode."
 msgstr ""
 
-#: ../../masternodes/hosting.rst:188
+#: ../../masternodes/hosting.rst:206
 msgid ""
 "The ProRegTx submitted by the owner also specifies the percentage reward for"
 " the operator. It does not specify the operator's reward address, so a "
