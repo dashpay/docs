@@ -125,7 +125,7 @@ https://masternodehosting.com
 - `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
 
 NodeHub.io
---------
+----------
 
 .. image:: img/nodehub.png
    :width: 200px
