@@ -49,7 +49,7 @@ Masternodes enable the following services:
 -  **InstantSend** allows for near-instant transactions. Dash
    InstantSend transactions are fully confirmed within two seconds.
 -  **PrivateSend** gives financial privacy through a decentralized 
-   implmentation of CoinJoin.
+   implementation of CoinJoin.
 -  **ChainLocks**, which protects the blockchain against 51% mining 
    attacks by signing blocks as they are mined.
 -  **Governance and Treasury** allows stakeholders in Dash to determine
