@@ -97,7 +97,7 @@ BTCPay Server
 
 
 CDPay
-  .. image:: img/cdpay.svg
+  .. image:: img/cdpay.png
      :width: 120px
      :align: right
      :target: https://www.cdpay.eu
