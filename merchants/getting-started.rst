@@ -54,105 +54,293 @@ Payment Processors
 
 This section lists known payment processors supporting Dash and the
 business platforms they support. Please conduct thorough research before
-choosing a payment provider to ensure your needs will be met. 
+choosing a payment provider to ensure your needs will be met.
 
-For more advanced payment processing needs, such as for high risk
-merchant accounts in industries challenged with high levels of
-chargebacks, it is recommended to contact Dash partner `ePaymints
-<http://epaymints.com>`__.
+alt thirty six
+  .. image:: img/alt36.svg
+     :width: 200px
+     :align: right
+     :target: https://www.alt36.com
+
+  https://www.alt36.com
+
+  Alt Thirty Six allows any business (including those involved in
+  cannabis) to accept digital payments at the point of sale and online
+  using Dash or USD.
 
 
-Online Stores
--------------
+Anypay
+  .. image:: img/anypay.svg
+     :width: 200px
+     :align: right
+     :target: https://anypayinc.com
 
-Due to the wide range of platforms for online stores, the following
-table is intended to help you select an appropriate payment processor
-for your existing store.
+  https://anypayinc.com
 
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-|                                                              | `CoinPayments <https://www.coinpayments.net>`_ | `GoCoin <https://gocoin.com>`_ | `iQCashNow <https://www.iqcashnow.com>`_ | `Coingate <https://coingate.com>`_ | `GoURL <https://gourl.io>`_ |
-+==============================================================+================================================+================================+==========================================+====================================+=============================+
-| `Blesta <https://www.blesta.com>`_                           | |check|                                        |                                |                                          | |check|                            |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `BoxBilling <http://www.boxbilling.com>`_                    | |check|                                        |                                |                                          |                                    |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `Easy Digital Downloads <https://easydigitaldownloads.com>`_ | |check|                                        |                                |                                          |                                    | |check|                     |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `Ecwid <https://www.ecwid.com>`_                             | |check|                                        |                                |                                          |                                    |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `Jigoshop <https://www.jigoshop.com/>`_                      |                                                |                                |                                          |                                    | |check|                     |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `Magento <https://magento.com>`_                             | |check|                                        | |check|                        | |check|                                  | |check|                            |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `OpenCart <https://www.opencart.com>`_                       | |check|                                        | |check|                        | |check|                                  | |check|                            |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `osCommerce <https://www.oscommerce.com>`_                   | |check|                                        | |check|                        |                                          | |check|                            |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `PrestaShop <https://www.prestashop.com>`_                   | |check|                                        | |check|                        | |check|                                  | |check|                            |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `Shopify <https://www.shopify.com>`_                         |                                                | |check|                        |                                          |                                    |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `Tomato Cart <https://sourceforge.net/projects/tomatocart>`_ | |check|                                        |                                |                                          |                                    |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `Ubercart <https://www.drupal.org/project/ubercart>`_        | |check|                                        | |check|                        |                                          |                                    |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `VirtueMart <http://virtuemart.net>`_                        |                                                | |check|                        |                                          | |check|                            |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `WHMCS <https://www.whmcs.com>`_                             | |check|                                        | |check|                        |                                          | |check|                            |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `WooCommerce <https://woocommerce.com>`_                     | |check|                                        | |check|                        | |check|                                  | |check|                            | |check|                     |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `WP eCommerce <https://wpecommerce.org>`_                    | |check|                                        |                                |                                          |                                    | |check|                     |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
-| `ZenCart <https://www.zen-cart.com>`_                        | |check|                                        | |check|                        |                                          | |check|                            |                             |
-+--------------------------------------------------------------+------------------------------------------------+--------------------------------+------------------------------------------+------------------------------------+-----------------------------+
+  Anypay offers easy, professional tools for retail, as well as Dash
+  rewards for users shopping at your store. Anypay is enjoys broad
+  support from the Dash community, works to bring you new customers and
+  is cheap and easy to set up.
 
-Point of Sale
--------------
 
-A range of Point of Sale systems are available. Many function as an app
-or simple website serving a checkout interface and QR code generator,
-while others support custom features such as NFC or a rewards scheme.
-QR.cr, Spark Payments and Anypay are supported by the community and are
-particularly widespread.
+BTCPay Server
+  .. image:: img/btcpayserver.svg
+     :width: 200px
+     :align: right
+     :target: https://btcpayserver.org
 
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| Name                                                          | App?    | Web?           | Hardware? | NFC?    | Notes                                                                                    |
-+===============================================================+=========+================+===========+=========+==========================================================================================+
-| `34 Bytes <https://34bytes.com>`_                             |         |                | |check|   |         | Hardware terminal capable of printing receipts.                                          |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `Alt36 <http://www.alt36.com>`_                               |         |                |           |         | Full stack system. Supports integration of suppliers and employees.                      |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `Anypay <http://anypay.global>`_                              | |check| | |check|        |           |         | Popular solution for smartphones with web interface and backend.                         |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `CDPay <https://www.cdpay.eu>`_                               | |check| |                |           |         |                                                                                          |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `CoinPayments <https://www.coinpayments.net>`_                | |check| | |check|        |           |         |                                                                                          |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `CopPay <https://coppay.io>`_                                 |         | |check|        |           |         |                                                                                          |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `EletroPay <https://www.eletropay.com/>`_                     |         |                | |check|   |         | POS device with ePaper display for unique QR codes and built-in receipt printer.         |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `Festy <https://festy.ie>`_                                   |         |                |           | |check| | NFC wristband payments for festivals.                                                    |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `GB CortexPay <https://www.generalbytes.com/pos>`_            |         |                | |check|   |         | Professional hardware terminal with multiple payment options.                            |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `iQCashNow <https://www.iqcashnow.com>`_                      | |check| | |check|        | |check|   |         | Web and POS payments processor with multiple options to convert crypto and fiat.         |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `Paytomat <https://paytomat.com>`_                            | |check| | |check|        |           |         | Token rewards for crypto payments.                                                       |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `QR.cr <https://qr.cr/>`_                                     | |check| | |check|        |           |         | Cheap solution with many features to use a mobile phone as a POS terminal.               |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `QuikWallet <http://quikwallet.com>`_                         | |check| | |check|        |           |         | India only. Also supports SMS payment.                                                   |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `Salamantex <https://www.salamantex.com>`_                    | |check| | |check|        | |check|   |         | Payments by app, web, software extension for existing POS or standalone POS terminal.    |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `SetGetGo <https://setgetgo.com/>`_                           | |check| | |check|        |           |         | Available for Android, web and Android APIs, payment buttons, competitive fees           |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `Spark Payments <https://get-spark.com>`_                     | |check| | |check|        |           |         | Available for Android, Windows, macOS, Linux. 94 exchange rates and Uphold.com supported |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
-| `Xpay <https://xpay.cash>`_                                   | |check| |                | |check|   |         | Popular point of sale device in Venezuela and Colombia.                                  |
-+---------------------------------------------------------------+---------+----------------+-----------+---------+------------------------------------------------------------------------------------------+
+  https://btcpayserver.org
+
+  BTCPay Server is a free, self-hosted and fully open-source
+  cryptocurrency payment processor designed with security, privacy and
+  censorship-resistance at its core.
+
+
+CDPay
+  .. image:: img/cdpay.svg
+     :width: 120px
+     :align: right
+     :target: https://www.cdpay.eu
+
+  https://www.cdpay.eu
+
+  CDPay offers API to accept Dash on your website, as well as an
+  automated fiat exchange service to convert the payments you receive to
+  EUR or CZK.
+
+
+CoinGate
+  .. image:: img/coingate.svg
+     :width: 200px
+     :align: right
+     :target: https://coingate.com
+
+  https://coingate.com
+
+  CoinGate offers point of sale apps, payment buttons, e-commerce
+  plugins and an API to accept payments in Dash, with payouts in EUR,
+  USD or Dash.
+
+
+Coinify
+  .. image:: img/coinify.png
+     :width: 200px
+     :align: right
+     :target: https://coinify.com
+
+  https://coinify.com
+
+  Coinify offers a variety of two-way virtual currency services tailored
+  to businesses and customers of different sizes and needs. A simple,
+  secure and compliant solution that allows you to accept virtual
+  currencies without having to hold any currencies yourself, and get
+  payouts in your preferred local currencies.
+
+
+CoinPayments
+  .. image:: img/coinpayments.png
+     :width: 200px
+     :align: right
+     :target: https://www.coinpayments.net
+
+  https://www.coinpayments.net
+
+  CoinPayments is an integrated payment gateway with a `wide range of
+  plugins <https://www.coinpayments.net/merchant-tools>`__ available for
+  popular webcarts, as well as fiat settlement in the US and Europe.
+
+
+CoinsPaid
+  .. image:: img/coinspaid.svg
+     :width: 200px
+     :align: right
+     :target: https://coinspaid.com
+
+  https://coinspaid.com
+
+  Coinspaid offers a white label backoffice payments solution with
+  on-the-fly Fiat (EUR) conversion and instant transaction
+  confirmations.
+
+CopPay
+  .. image:: img/coppay.svg
+     :width: 200px
+     :align: right
+     :target: https://coppay.io
+
+  https://coppay.io
+
+  CopPay allows you to accept Dash and receive EUR, GBP and USD,
+  eliminating volatility risks. CopPay is absolutely free with 0%
+  transaction fee for merchants.
+
+
+EletroPay
+  .. image:: img/eletropay.png
+     :width: 200px
+     :align: right
+     :target: https://eletropay.com
+
+  https://eletropay.com
+
+  EletroPay is a hardware point of sale device with an ePaper display
+  and built-in receipt printer designed to bring businesses into the
+  digital economy in style.
+
+
+ePaymints
+  .. image:: img/epaymints.png
+     :width: 200px
+     :align: right
+     :target: http://epaymints.com
+
+  http://epaymints.com
+
+  ePaymints specializes in highly customized payment processing for high
+  risk merchant accounts in industries challenged with high levels of
+  chargebacks.
+
+
+Festy
+  .. image:: img/festy.png
+     :width: 200px
+     :align: right
+     :target: https://www.festy.ie
+
+  https://www.festy.ie
+
+  Festy is a data monetisation platform used for payments, ticketing and
+  events. Festy allows you to accept cryptocurrencies at festivals using
+  innovative card or NFC wristbands.
+
+
+GB CortexPay
+  .. image:: img/gbcortexpay.png
+     :width: 80px
+     :align: right
+     :target: https://www.generalbytes.com/pos
+
+  https://www.generalbytes.com/pos
+
+  Take the professional approach and start accepting Dash with a
+  dedicated CortexPay terminal. his terminal can also be used to sell
+  Dash to clients visiting your location.
+
+
+GoCoin
+  .. image:: img/gocoin.svg
+     :width: 200px
+     :align: right
+     :target: https://gocoin.com
+
+  https://gocoin.com
+
+  The GoCoin platform makes taking Dash as easy as installing a plugin
+  in your webshop. Payment processing is already implemented for every
+  major shopping platform.
+
+
+GoURL
+  .. image:: img/gourl.png
+     :width: 200px
+     :align: right
+     :target: https://gourl.io
+
+  https://gourl.io
+
+  GoURL offers a range of plugins and APIs to accept Dash online. White
+  label solutions to process payments with your logo and on your server
+  are also available.
+
+
+iQCashNow
+  .. image:: img/iqcashnow.png
+     :width: 120px
+     :align: right
+     :target: https://www.iqcashnow.com
+
+  https://www.iqcashnow.com
+
+  iQCashNow offers ATMs and mobile POS terminal systems that combine
+  traditional payment methods and crypto-payments into a unique complete
+  package of software, hardware and services.
+
+
+Paybyte
+  .. image:: img/paybyte.png
+     :width: 200px
+     :align: right
+     :target: https://paybyte.io
+
+  https://paybyte.io
+
+  Paybyte allows you to accept cryptocurrency payments through an API or
+  payment buttons for a flat monthly fee.
+
+
+Paytomat
+  .. image:: img/paytomat.svg
+     :width: 200px
+     :align: right
+     :target: https://paytomat.com
+
+  https://paytomat.com
+
+  Paytomat provides software for integration into existing merchant
+  systems without the need to purchase additional hardware or install
+  third-party software.
+
+QR.cr
+  .. image:: img/qrcr.svg
+     :width: 100px
+     :align: right
+     :target: https://qr.cr
+
+  https://qr.cr
+
+  QR.cr is a popular and well-supported dynamic QR code system designed
+  to provide multilingual content and payment services for businesses
+  via mobile friendly landing pages.
+
+
+Salamantex
+  .. image:: img/salamantex.png
+     :width: 100px
+     :align: right
+     :target: https://www.salamantex.com
+
+  https://www.salamantex.com
+
+  The Salamantex crypto payment service is available as a hardware
+  terminal or software for installation on existing POS systems or
+  mobile devices.
+
+
+Spark
+  .. image:: img/spark.png
+     :width: 200px
+     :align: right
+     :target: https://get-spark.com
+
+  https://get-spark.com
+
+  Spark is simple, 100% open source software for accepting Dash
+  payments. Designed from the ground up to be familiar and with wide
+  community support, all keys and funds remain in your control at all
+  times.
+
+
+Xpay
+  .. image:: img/xpay.png
+     :width: 200px
+     :align: right
+     :target: https://xpay.cash
+
+  https://xpay.cash
+
+  Xpay is a popular point of sale device in Venezuela and Colombia,
+  allowing you to quickly accept Dash using QR codes.
+
 
 Installation Examples
 =====================
@@ -374,7 +562,7 @@ code containing your specified address and the requested amount,
 denominated in Dash. The customer scans the QR code, and the app will
 display a visual indication when payment is complete.
 
-.. figure:: img/spark.png
+.. figure:: img/spark-pay.png
    :width: 600px
 
    Configuring and receiving payment using Spark Payments
