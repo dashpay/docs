@@ -266,6 +266,19 @@ iQCashNow
   package of software, hardware and services.
 
 
+NOWPayments
+  .. image:: img/nowpayments.png
+     :width: 200px
+     :align: right
+     :target: https://nowpayments.io
+
+  https://nowpayments.io
+
+  NOWPayments is an easy way to accept cryptocurrency payments with
+  native integration into your platform or a neat widget. Auto coin
+  conversion keeps you safe from any dramatic rate fluctuations.
+
+
 Paybyte
   .. image:: img/paybyte.png
      :width: 200px
@@ -289,6 +302,20 @@ Paytomat
   Paytomat provides software for integration into existing merchant
   systems without the need to purchase additional hardware or install
   third-party software.
+
+
+PumaPay
+  .. image:: img/pumapay.png
+     :width: 200px
+     :align: right
+     :target: https://pumapay.io
+
+  https://pumapay.io
+
+  PumaPay provides a fast, efficient and inexpensive alternative to
+  credit cards to empower your digital customer. We provide the all the
+  tools enabling you to start accepting cryptopayments today.
+
 
 QR.cr
   .. image:: img/qrcr.svg
