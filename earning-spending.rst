@@ -115,6 +115,19 @@ Change
   commission fees for buying and selling cryptocurrency. Lock your card
   conveniently from the app in case it gets lost or stolen.
 
+2gether
+  .. image:: img/2gether.svg
+     :width: 200px
+     :align: right
+     :target: https://www.2gether.global
+
+  https://www.2gether.global
+
+  2gether is a next generation financial platform that works solely for
+  the benefit of its customers, who are also its owners. A collaborative
+  banking app and cryptocurrency debit card solution are currently
+  available for Eurozone customers.
+
 PolisPay
   .. image:: img/polispay.png
      :width: 200px
