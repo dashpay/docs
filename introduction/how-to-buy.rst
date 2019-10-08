@@ -1017,18 +1017,6 @@ NovaDAX
   deposits and withdrawals in Brazilian real. Trading compeitions and
   OTC services are also available.
 
-RealExchange
-  .. image:: exchanges/real-exchange.png
-     :width: 200px
-     :align: right
-     :target: https://realexchange.com.br
-
-  https://realexchange.com.br
-
-  RealExchange is a Brazil-based exchange offering support for a handful
-  of currencies including Dash, Bitcoin, Litecoin, and SmartCash. The
-  exchange also supports fiat trading pairs with the Brazilian real.
-
 3xBit
   .. image:: exchanges/3xbit.png
      :width: 200px
