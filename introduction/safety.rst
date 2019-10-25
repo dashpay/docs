@@ -89,7 +89,8 @@ List of known Dash-related scams:
 - **dashcoinclub dot com** is a Ponzi scheme not affiliated with Dash!
 - **dash-coin dot net** is a fake web wallet, do not send them money!
 - **coinvert dot io** is a fake exchange!
-- **dashcash dot io** is not affiliated with Dash and may be 
+- **dashcash dot io** is not affiliated with Dash and may be
+- **dashdaowallet dot com** is a scam clone of mydashwallet
   distributing a compromised wallet!
 
 Beware of fake Twitter accounts impersonating Dash! The official Twitter
