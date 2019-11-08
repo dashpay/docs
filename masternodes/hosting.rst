@@ -59,7 +59,7 @@ https://dashmasternode.io
 Allnodes
 --------
 
-.. image:: img/allnodes.png
+.. image:: img/allnodes.svg
    :width: 200px
    :align: right
    :target: https://www.allnodes.com
