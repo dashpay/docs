@@ -22,7 +22,7 @@ the services they provide to the Dash network specifically.
 Simply put, a masternode is a server with a full copy of the Dash
 blockchain, which guarantees a certain minimum level of performance and
 functionality to perform certain tasks related to block validation, as
-well as PrivateSend and InstantSend, as the anonymity and instant
+well as PrivateSend and InstantSend, as the privacy and instant
 transaction features in Dash are called. The masternodes are paid for
 this service, using a concept known as Proof of Service. This is in
 addition to the Proof of Work done by miners to secure the blockchain.

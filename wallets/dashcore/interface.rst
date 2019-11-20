@@ -322,13 +322,13 @@ PrivateSend rounds to use
   expense of more time required for mixing and potentially higher fees.
   See here for a full explanation of how to use PrivateSend.
 
-Amount of Dash to keep anonymized
+Amount of Dash to keep mixed
   This option allows you to specify how much Dash should be kept on
-  balance in a ready-to-use anonymized state, meaning it has already
-  passed through the PrivateSend mixing process. If you do not have
-  sufficient Dash available in your balance of unlocked inputs, the amount
-  will be automatically reduced to the available balance and shown in red
-  in the PrivateSend interface on the Overview tab.
+  balance in a ready-to-use mixed state, meaning it has already passed
+  through the PrivateSend mixing process. If you do not have sufficient
+  Dash available in your balance of unlocked inputs, the amount will be
+  automatically reduced to the available balance and shown in red in the
+  PrivateSend interface on the Overview tab.
 
 Network tab
 -----------------------

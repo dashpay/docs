@@ -216,7 +216,7 @@ PrivateSend options
 --privatesendmultisession=<n>          Enable multiple PrivateSend mixing sessions per block, experimental (0-1, default: 0)
 --privatesendsessions=<n>              Use N separate masternodes in parallel to mix funds (1-10, default: 4)
 --privatesendrounds=<n>                Use N separate masternodes for each denominated input to mix funds (2-16, default: 4)
---privatesendamount=<n>                Keep N DASH anonymized (2-21000000, default: 1000)
+--privatesendamount=<n>                Keep N DASH mixed (2-21000000, default: 1000)
 --liquidityprovider=<n>                Provide liquidity to PrivateSend by infrequently mixing coins on a continual basis (0-100, default: 0, 1=very frequent, high fees, 100=very infrequent, low fees)
 
 
