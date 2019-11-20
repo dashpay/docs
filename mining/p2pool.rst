@@ -275,7 +275,6 @@ We will add some optional extra interfaces to the control panel::
   git clone https://github.com/justino/p2pool-ui-punchy web-static
   mv web-static.old web-static/legacy
   cd web-static
-  git clone https://github.com/johndoe75/p2pool-node-status status
   git clone https://github.com/hardcpp/P2PoolExtendedFrontEnd ext
 
 You can now start p2pool and optionally specify the payout address,
