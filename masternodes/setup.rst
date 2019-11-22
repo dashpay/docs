@@ -496,14 +496,14 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.14.0.3/dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.14.0.4/dashcore-0.14.0.4-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  wget https://github.com/dashpay/dash/releases/download/v0.14.0.3/SHA256SUMS.asc
-  sha256sum dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.14.0.4/SHA256SUMS.asc
+  sha256sum dashcore-0.14.0.4-x86_64-linux-gnu.tar.gz
   cat SHA256SUMS.asc
 
 You can also optionally verify the authenticity of your download as an
@@ -525,7 +525,7 @@ Create a working directory for Dash, extract the compressed archive and
 copy the necessary files to the directory::
 
   mkdir ~/.dashcore
-  tar xfv dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
+  tar xfv dashcore-0.14.0.4-x86_64-linux-gnu.tar.gz
   cp -f dashcore-0.14.0/bin/dashd ~/.dashcore/
   cp -f dashcore-0.14.0/bin/dash-cli ~/.dashcore/
 
