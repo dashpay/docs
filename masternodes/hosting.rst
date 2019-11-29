@@ -76,23 +76,6 @@ https://www.allnodes.com
 - `Discord <https://discord.allnodes.com>`__
 
 
-Snode
------
-
-.. image:: img/snode.png
-   :width: 200px
-   :align: right
-   :target: https://snode.co
-
-https://snode.co
-
-- Operated by: Snode Co.
-- Services: Hosting, Monitoring, Shares
-- 4% of masternode payments
-- `Site <https://snode.co>`__
-- `Email <support@snode.co>`__
-
-
 Node40
 ------
 
