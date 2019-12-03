@@ -433,9 +433,8 @@ masternodes. If not displaying a GUI, it runs as a daemon on your VPS
 Open PuTTY or a console again and connect using the username and
 password you just created for your new, non-root user. There are two
 options to install Dash Core, an automated option using a script utility
-called dashman by Dash Core Team member moocowmoo, and a more
-complicated option which will allow you to understand all of the key
-steps involved in preparing your masternode.
+called dashman, and a more complicated option which will allow you to
+understand all of the key steps involved in preparing your masternode.
 
 Option 1: Automated installation using dashman
 ----------------------------------------------

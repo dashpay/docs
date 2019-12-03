@@ -515,9 +515,9 @@ Masternode.me
 
 https://stats.masternode.me
 
-Masternode.me, operated by forum member and Dash Core developer
-moocowmoo, offers sequential reports on the price, generation rate,
-blockchain information and some information on masternodes.
+Masternode.me, operated by Dash community member moocowmoo, offers
+sequential reports on the price, generation rate, blockchain information
+and some information on masternodes.
 
 Dash Masternode Information
 ---------------------------
