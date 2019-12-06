@@ -422,6 +422,20 @@ xBTCe
   available for currencies including CNH (Chinese Offshore Yuan), EUR,
   GBP, JPY, IDR and RUB. DASH trading pairs include BTC, USD and CNH.
 
+BitMax
+  .. image:: exchanges/bitmax.png
+     :width: 200px
+     :align: right
+     :target: https://bitmax.io
+
+  https://bitmax.io
+
+  BitMax is a global operator of digital asset exchanges for a diverse
+  groups of clients, from retail to institutions. The trading platform,
+  architected by a group of Wall Street quant trading veterans, is
+  designed for reliability and speed of trade execution, and ease of
+  connectivity.
+
 IDAX
   .. image:: exchanges/idax.png
      :width: 200px
