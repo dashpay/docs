@@ -101,7 +101,7 @@ but with a few key differences:
 - As for mainnet masternodes, the RPC username and password must contain
   alphanumeric characters only
 - When cloning sentinel, you may need to clone the development branch
-  using the ``-b`` option, for example: ``git clone -b core-v0.12.2.x
+  using the ``-b`` option, for example: ``git clone -b develop
   https://github.com/dashpay/sentinel.git``
 - Once sentinel is installed, modify
   ``~/.dashcore/sentinel/sentinel.conf``, comment the mainnet line and
