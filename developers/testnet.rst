@@ -110,6 +110,58 @@ but with a few key differences:
   ``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf``
   instead of ``~/.dashcore/masternode.conf``.
 
+
+Testnet 0.15.0
+==============
+
+In December 2019, the Dash team announced the start of testing of the
+upcoming Dash 0.15.0 release. Extensive internal testing has already been
+done on the 0.15.0 code, but there are numerous bugs that can only be
+revealed with actual use by real people. The Dash team invites anybody
+who is interested to download the software and become active on testnet.
+This release includes:
+
+- Bitcoin 0.15 backports
+- Removal of legacy code
+
+Discussion:
+
+- Testnet announcement: https://www.dash.org/forum/threads/v15-0-testing.49140/
+- Product brief: 
+- Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
+- Issue tracking: https://github.com/dashpay/dash/issues/new
+
+Latest test binaries:
+
+- https://github.com/dashpay/dash/tree/v0.15.0.0-rc1
+
+
+Testnet 0.14.0
+==============
+
+In March 2019, the Dash team announced the start of testing of the
+upcoming Dash 0.14.0 release. Extensive internal testing has already been
+done on the 0.14.0 code, but there are numerous bugs that can only be
+revealed with actual use by real people. The Dash team invites anybody
+who is interested to download the software and become active on testnet.
+This release includes:
+
+- LLMQ DKGs
+- LLMQ based ChainLocks
+- LLMQ based InstantSend
+
+Discussion:
+
+- Testnet announcement: https://www.dash.org/forum/threads/v14-0-testing.44047/
+- Product brief: https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96
+- Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
+- Issue tracking: https://github.com/dashpay/dash/issues/new
+
+Latest test binaries:
+
+- https://github.com/dashpay/dash/releases/tag/v0.14.0.0-rc6
+
+
 Testnet 0.13.0
 ==============
 
@@ -128,7 +180,7 @@ This release includes:
 
 Discussion: 
 
-- Testnet announcement: https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef
+- Testnet announcement: https://www.dash.org/forum/threads/v13-0-testing.41945/
 - Product brief: https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef
 - Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
 - Issue tracking: https://github.com/dashpay/dash/issues/new
