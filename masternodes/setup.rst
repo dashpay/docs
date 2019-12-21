@@ -466,7 +466,7 @@ ensure your masternode is still running::
 Choose nano as your editor and enter the following line at the end of
 the file, after the line for sentinel::
 
-  * * * * * pidof dashd || ~/.dashcore/dashd
+  * * * * * { pidof dashd || ~/.dashcore/dashd;} >/dev/null 2>&1
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
