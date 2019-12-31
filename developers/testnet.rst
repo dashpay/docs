@@ -48,7 +48,7 @@ not necessarily be online or functioning at any given time. Please join
 <https://www.dash.org/forum/>`_ if you have a question relating to a
 specific service.
 
-- **Test builds:** https://jenkins.dash.org/blue/
+- **Test builds:** https://gitlab.com/dashpay/dash/pipelines
 - **Bugtracker:** https://github.com/dashpay/dash/issues/new
 - **Discussion and help:** https://www.dash.org/forum/topic/testing.53/
 - **Masternode tools:** https://test.dashninja.pl/masternodes.html
@@ -84,9 +84,9 @@ as the :ref:`mainnet masternode installation guide <masternode-setup>`,
 but with a few key differences:
 
 - You will probably be running a development version of Dash instead of
-  the stable release. See `here <https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-nightly/activity>`__
-  for a list of builds, then choose the latest successful build and
-  click **Artifacts** to view a list of binaries.
+  the stable release. See `here <https://gitlab.com/dashpay/dash/pipelines>`__
+  for a list of builds, then choose the latest successful ``develop`` 
+  build and click **Artifacts** to view a list of binaries.
 - When opening the firewall, port 19999 must be opened instead of (or in
   addition to) 9999. Use this command: ``ufw allow 19999/tcp``
 - Your desktop wallet must be running in testnet mode. Add the following
@@ -243,5 +243,5 @@ Discussion:
 
 Latest successfully built develop branch binaries:
 
-- Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-nightly
+- Dash Core: https://gitlab.com/dashpay/dash/pipelines
 - Sentinel: https://github.com/dashpay/sentinel/tree/develop
