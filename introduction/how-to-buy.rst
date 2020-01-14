@@ -1590,6 +1590,19 @@ Bitit
   cryptocurrencies for sale online. Payment in a range of currencies is
   support using both direct banking, credit cards and vouchers.
 
+RenrenBit
+  .. image:: exchanges/renrenbit.png
+     :width: 150px
+     :align: right
+     :target: https://renrenbit.com
+
+  https://renrenbit.com
+
+  RenrenBit is a digital asset management platform offering 100%
+  reserve. With its official launch in 2018, RenrenBit now provides
+  financial services including wallet, trading markets and crypto asset
+  loans.
+
 buycrypto
   .. image:: exchanges/buycrypto.png
      :width: 64px
