@@ -190,6 +190,8 @@ This is typically used with a wallet that has been populated with
 `watch-only <https://dash-docs.github.io/en/glossary/watch-only-address>`__ 
 addresses.
 
+.. _is-broadcast:
+
 Broadcasting InstantSend Transactions
 -------------------------------------
 
