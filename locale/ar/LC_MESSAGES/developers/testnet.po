@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 12:07+0000\n"
+"POT-Creation-Date: 2020-01-09 21:00+0000\n"
 "PO-Revision-Date: 2018-04-16 05:42+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
@@ -129,8 +129,8 @@ msgstr ""
 "<https://www.dash.org/forum/>`_ إذا كان لديك سؤال يتعلق بخدمة معينة."
 
 #: ../../developers/testnet.rst:51
-msgid "**Test builds:** https://jenkins.dash.org/blue/"
-msgstr "**بناء التحقق** https://jenkins.dash.org/blue/"
+msgid "**Test builds:** https://gitlab.com/dashpay/dash/pipelines"
+msgstr ""
 
 #: ../../developers/testnet.rst:52
 msgid "**Bugtracker:** https://github.com/dashpay/dash/issues/new"
@@ -226,15 +226,10 @@ msgstr ""
 #: ../../developers/testnet.rst:86
 msgid ""
 "You will probably be running a development version of Dash instead of the "
-"stable release. See `here "
-"<https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-"
-"nightly/activity>`__ for a list of builds, then choose the latest successful"
-" build and click **Artifacts** to view a list of binaries."
+"stable release. See `here <https://gitlab.com/dashpay/dash/pipelines>`__ for"
+" a list of builds, then choose the latest successful ``develop`` build and "
+"click **Artifacts** to view a list of binaries."
 msgstr ""
-"من المحتمل أنك ستشغل إصدارًا مطورًا من داش بدلاً من الإصدار الثابت. نرى `هنا"
-" <https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-"
-"nightly/activity>`__ للحصول على قائمة بالبنيات ، اختر أحدث البنية الناجحة "
-"وانقر **الأتار**  لعرض قائمة من الثنائيات."
 
 #: ../../developers/testnet.rst:90
 msgid ""
@@ -288,12 +283,9 @@ msgstr ""
 #: ../../developers/testnet.rst:103
 msgid ""
 "When cloning sentinel, you may need to clone the development branch using "
-"the ``-b`` option, for example: ``git clone -b core-v0.12.2.x "
+"the ``-b`` option, for example: ``git clone -b develop "
 "https://github.com/dashpay/sentinel.git``"
 msgstr ""
-"عند استنساخ الحارس ، قد تحتاج إلى استنساخ فرع التطوير باستخدام الخيار `'-b``"
-" ، على سبيل المثال: ``git clone -b core-v0.12.2.x "
-"https://github.com/dashpay/sentinel.git``"
 
 #: ../../developers/testnet.rst:106
 msgid ""
@@ -313,11 +305,111 @@ msgstr ""
 "``masternode.conf`` في ``~/.dashcore/testnet3/masternode.conf`` بدلاً من"
 "     ``~/.dashcore/masternode.conf``."
 
-#: ../../developers/testnet.rst:114
+#: ../../developers/testnet.rst:115
+msgid "Testnet 0.15.0"
+msgstr ""
+
+#: ../../developers/testnet.rst:117
+msgid ""
+"In December 2019, the Dash team announced the start of testing of the "
+"upcoming Dash 0.15.0 release. Extensive internal testing has already been "
+"done on the 0.15.0 code, but there are numerous bugs that can only be "
+"revealed with actual use by real people. The Dash team invites anybody who "
+"is interested to download the software and become active on testnet. This "
+"release includes:"
+msgstr ""
+
+#: ../../developers/testnet.rst:124
+msgid "Bitcoin 0.15 backports"
+msgstr ""
+
+#: ../../developers/testnet.rst:125
+msgid "Removal of legacy code"
+msgstr ""
+
+#: ../../developers/testnet.rst:127 ../../developers/testnet.rst:153
+#: ../../developers/testnet.rst:181 ../../developers/testnet.rst:211
+#: ../../developers/testnet.rst:238
+msgid "Discussion:"
+msgstr "المحادتات:"
+
+#: ../../developers/testnet.rst:129
+msgid ""
+"Testnet announcement: "
+"https://www.dash.org/forum/threads/v15-0-testing.49140/"
+msgstr ""
+
+#: ../../developers/testnet.rst:130
+msgid "Product brief:"
+msgstr ""
+
+#: ../../developers/testnet.rst:131 ../../developers/testnet.rst:157
+#: ../../developers/testnet.rst:185 ../../developers/testnet.rst:214
+msgid "Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html"
+msgstr ""
+
+#: ../../developers/testnet.rst:132 ../../developers/testnet.rst:158
+#: ../../developers/testnet.rst:186 ../../developers/testnet.rst:215
+#: ../../developers/testnet.rst:242
+msgid "Issue tracking: https://github.com/dashpay/dash/issues/new"
+msgstr "تتبع القضية: https://github.com/dashpay/dash/issues/new"
+
+#: ../../developers/testnet.rst:134 ../../developers/testnet.rst:160
+#: ../../developers/testnet.rst:188 ../../developers/testnet.rst:217
+msgid "Latest test binaries:"
+msgstr "أحدث ثنائيات الاختبار:"
+
+#: ../../developers/testnet.rst:136
+msgid "https://github.com/dashpay/dash/tree/v0.15.0.0-rc1"
+msgstr ""
+
+#: ../../developers/testnet.rst:140
+msgid "Testnet 0.14.0"
+msgstr ""
+
+#: ../../developers/testnet.rst:142
+msgid ""
+"In March 2019, the Dash team announced the start of testing of the upcoming "
+"Dash 0.14.0 release. Extensive internal testing has already been done on the"
+" 0.14.0 code, but there are numerous bugs that can only be revealed with "
+"actual use by real people. The Dash team invites anybody who is interested "
+"to download the software and become active on testnet. This release "
+"includes:"
+msgstr ""
+
+#: ../../developers/testnet.rst:149
+msgid "LLMQ DKGs"
+msgstr ""
+
+#: ../../developers/testnet.rst:150
+msgid "LLMQ based ChainLocks"
+msgstr ""
+
+#: ../../developers/testnet.rst:151
+msgid "LLMQ based InstantSend"
+msgstr ""
+
+#: ../../developers/testnet.rst:155
+msgid ""
+"Testnet announcement: "
+"https://www.dash.org/forum/threads/v14-0-testing.44047/"
+msgstr ""
+
+#: ../../developers/testnet.rst:156
+msgid ""
+"Product brief: https://blog.dash.org/product-brief-dash-core-release-v0-14-0"
+"-now-on-testnet-8f5f4ad45c96"
+msgstr ""
+
+#: ../../developers/testnet.rst:162
+msgid "https://github.com/dashpay/dash/releases/tag/v0.14.0.0-rc6"
+msgstr ""
+
+#: ../../developers/testnet.rst:166
 msgid "Testnet 0.13.0"
 msgstr ""
 
-#: ../../developers/testnet.rst:116
+#: ../../developers/testnet.rst:168
 msgid ""
 "In November 2018, the Dash team announced the start of testing of the "
 "upcoming Dash 0.13.0 release. Extensive internal testing has already been "
@@ -327,65 +419,47 @@ msgid ""
 "release includes:"
 msgstr ""
 
-#: ../../developers/testnet.rst:123
+#: ../../developers/testnet.rst:175
 msgid "Automatic InstantSend for Simple Transactions"
 msgstr ""
 
-#: ../../developers/testnet.rst:124
+#: ../../developers/testnet.rst:176
 msgid "Deterministic Masternode List"
 msgstr ""
 
-#: ../../developers/testnet.rst:125
+#: ../../developers/testnet.rst:177
 msgid "3 Masternode Keys: Owner, Operator and Voting"
 msgstr ""
 
-#: ../../developers/testnet.rst:126
+#: ../../developers/testnet.rst:178
 msgid "Special Transactions"
 msgstr ""
 
-#: ../../developers/testnet.rst:127
+#: ../../developers/testnet.rst:179
 msgid "PrivateSend Improvements"
 msgstr ""
 
-#: ../../developers/testnet.rst:129 ../../developers/testnet.rst:159
-#: ../../developers/testnet.rst:186
-msgid "Discussion:"
-msgstr "المحادتات:"
-
-#: ../../developers/testnet.rst:131
+#: ../../developers/testnet.rst:183
 msgid ""
-"Testnet announcement: https://blog.dash.org/product-brief-dash-core-"
-"release-v0-13-0-5d7fddffb7ef"
+"Testnet announcement: "
+"https://www.dash.org/forum/threads/v13-0-testing.41945/"
 msgstr ""
 
-#: ../../developers/testnet.rst:132
+#: ../../developers/testnet.rst:184
 msgid ""
 "Product brief: https://blog.dash.org/product-brief-dash-core-"
 "release-v0-13-0-5d7fddffb7ef"
 msgstr ""
 
-#: ../../developers/testnet.rst:133 ../../developers/testnet.rst:162
-msgid "Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html"
-msgstr ""
-
-#: ../../developers/testnet.rst:134 ../../developers/testnet.rst:163
 #: ../../developers/testnet.rst:190
-msgid "Issue tracking: https://github.com/dashpay/dash/issues/new"
-msgstr "تتبع القضية: https://github.com/dashpay/dash/issues/new"
-
-#: ../../developers/testnet.rst:136 ../../developers/testnet.rst:165
-msgid "Latest test binaries:"
-msgstr "أحدث ثنائيات الاختبار:"
-
-#: ../../developers/testnet.rst:138
 msgid "https://github.com/dashpay/dash/releases/tag/v0.13.0.0-rc11"
 msgstr ""
 
-#: ../../developers/testnet.rst:141
+#: ../../developers/testnet.rst:193
 msgid "Testnet 0.12.3"
 msgstr ""
 
-#: ../../developers/testnet.rst:143
+#: ../../developers/testnet.rst:195
 msgid ""
 "In June 2018, the Dash team announced the start of testing of the upcoming "
 "Dash 0.12.3 release. Extensive internal testing has already been done on the"
@@ -395,49 +469,49 @@ msgid ""
 "includes:"
 msgstr ""
 
-#: ../../developers/testnet.rst:150
+#: ../../developers/testnet.rst:202
 msgid ""
 "Named Devnets, to help developers quickly create multiple independent "
 "devnets"
 msgstr "اسمه Devnets ، لمساعدة المطورين بسرعة إنشاء devnets مستقلة متعددة"
 
-#: ../../developers/testnet.rst:152
+#: ../../developers/testnet.rst:204
 msgid "New format of network message signatures"
 msgstr "تنسيق جديد لتواقيع رسائل الشبكة"
 
-#: ../../developers/testnet.rst:153
+#: ../../developers/testnet.rst:205
 msgid "Governance system improvements"
 msgstr "تحسينات نظام الحوكمة"
 
-#: ../../developers/testnet.rst:154
+#: ../../developers/testnet.rst:206
 msgid "PrivateSend improvements"
 msgstr "التحسينات للإرسال المخفي"
 
-#: ../../developers/testnet.rst:155
+#: ../../developers/testnet.rst:207
 msgid "Additional indexes cover P2PK now"
 msgstr "تغطي الفهارس الإضافية P2PK الآن"
 
-#: ../../developers/testnet.rst:156
+#: ../../developers/testnet.rst:208
 msgid "Support for pruned nodes in Lite Mode"
 msgstr "دعم العقد المبردة في الوضع البسيط"
 
-#: ../../developers/testnet.rst:157
+#: ../../developers/testnet.rst:209
 msgid "New Masternode Information Dialog"
 msgstr "حوار معلومات ماسترنود جديد"
 
-#: ../../developers/testnet.rst:161
+#: ../../developers/testnet.rst:213
 msgid "https://www.dash.org/forum/threads/v12-3-testing.38475"
 msgstr "https://www.dash.org/forum/threads/v12-3-testing.38475"
 
-#: ../../developers/testnet.rst:167
+#: ../../developers/testnet.rst:219
 msgid "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
 msgstr "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
 
-#: ../../developers/testnet.rst:171
+#: ../../developers/testnet.rst:223
 msgid "Testnet 0.12.2"
 msgstr ""
 
-#: ../../developers/testnet.rst:173
+#: ../../developers/testnet.rst:225
 msgid ""
 "In October 2017, the Dash team announced the launch of a testnet for public "
 "testing of the upcoming 0.12.2 release of the Dash software. Extensive "
@@ -447,26 +521,26 @@ msgid ""
 "become active on testnet. This release includes:"
 msgstr ""
 
-#: ../../developers/testnet.rst:180
+#: ../../developers/testnet.rst:232
 msgid ""
 "DIP0001 implementation "
 "https://github.com/dashpay/dips/blob/master/dip-0001.md"
 msgstr ""
 "تنفيذ DIP0001: https://github.com/dashpay/dips/blob/master/dip-0001.md"
 
-#: ../../developers/testnet.rst:181
+#: ../../developers/testnet.rst:233
 msgid "10x transaction fee reduction (including InstantSend fee)"
 msgstr "تخفيض رسوم المعاملة بمقدار 10x (بما في ذلك رسوم الإرسال الفوري)"
 
-#: ../../developers/testnet.rst:182
+#: ../../developers/testnet.rst:234
 msgid "InstantSend vulnerability fix"
 msgstr "إصلاح الثغرة الأمنية في الإرسال الفوري"
 
-#: ../../developers/testnet.rst:183
+#: ../../developers/testnet.rst:235
 msgid "Lots of other bug fixes and performance improvements"
 msgstr "الكثير من إصلاحات الأخطاء الأخرى وتحسينات الأداء"
 
-#: ../../developers/testnet.rst:184
+#: ../../developers/testnet.rst:236
 msgid ""
 "Experimental BIP39/BIP44 complaint HD wallet (disabled by default, should be"
 " fully functional but there is no GUI yet)"
@@ -474,32 +548,28 @@ msgstr ""
 "يجب أن تكون محفظة HD التجريبية BIP39 / BIP44 التجريبية (تعطيلها بشكل افتراضي"
 " ، تعمل بكامل طاقتها ولكن لا يوجد واجهة مستخدم رسومية حتى الآن)"
 
-#: ../../developers/testnet.rst:188
+#: ../../developers/testnet.rst:240
 msgid ""
 "Testnet 12.2 discussion: "
 "https://www.dash.org/forum/threads/v12-2-testing.17412/"
 msgstr ""
 "المحادتات 12.2: https://www.dash.org/forum/threads/v12-2-testing.17412/"
 
-#: ../../developers/testnet.rst:189
+#: ../../developers/testnet.rst:241
 msgid ""
 "Testnet tools: https://www.dash.org/forum/threads/testnet-tools-"
 "resources.1768/"
 msgstr ""
 "الأدوات: https://www.dash.org/forum/threads/testnet-tools-resources.1768/"
 
-#: ../../developers/testnet.rst:192
+#: ../../developers/testnet.rst:244
 msgid "Latest successfully built develop branch binaries:"
 msgstr "أحدث بنيت بنجاح تطوير ثنائيات فرع:"
 
-#: ../../developers/testnet.rst:194
-msgid ""
-"Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-"
-"gitian-nightly"
+#: ../../developers/testnet.rst:246
+msgid "Dash Core: https://gitlab.com/dashpay/dash/pipelines"
 msgstr ""
-"داش كور: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-"
-"gitian-nightly"
 
-#: ../../developers/testnet.rst:195
+#: ../../developers/testnet.rst:247
 msgid "Sentinel: https://github.com/dashpay/sentinel/tree/develop"
 msgstr "الحماية: https://github.com/dashpay/sentinel/tree/develop"
