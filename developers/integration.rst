@@ -193,11 +193,12 @@ addresses.
 Broadcasting InstantSend Transactions
 -------------------------------------
 
-Since Dash v0.14.0 established LLMQs on the Dash network, quorums will now
-attempt to lock every valid transaction by default without any
+Since Dash v0.14.0 established LLMQs on the Dash network, quorums will
+now attempt to lock every valid transaction by default without any
 additional fee or action by the sending wallet or user. A transaction is
 eligible for InstantSend when each of its inputs is considered
-confirmed. This is the case when at least one of the following circumstances is true: 
+confirmed. This is the case when at least one of the following
+circumstances is true: 
 
 - the previous transaction referred to by the input is confirmed with 6 
   blocks
@@ -208,7 +209,6 @@ confirmed. This is the case when at least one of the following circumstances is 
 When checking the previous transaction for an InstantSend lock, it is
 important to also do this on mempool (non-mined) transactions. This
 allows chained InstantSend locking.
-
 
 Additional Resources
 --------------------
