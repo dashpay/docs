@@ -546,7 +546,6 @@ follows::
   server=1
   daemon=1
   #----
-  #masternode=1
   #masternodeblsprivkey=
   externalip=XXX.XXX.XXX.XXX
   #----
@@ -559,8 +558,8 @@ Replace the fields marked with ``XXXXXXX`` as follows:
   characters allowed
 - ``externalip``: this is the IP address of your VPS
 
-Leave the ``masternode`` and ``masternodeblsprivkey`` fields commented
-out for now. The result should look something like this:
+Leave the ``masternodeblsprivkey`` field commented out for now. The
+result should look something like this:
 
 .. figure:: img/setup-manual-conf.png
    :width: 400px
@@ -673,17 +672,19 @@ edit the configuration file as follows::
   nano ~/.dashcore/dash.conf
 
 The editor appears with the existing masternode configuration. Add or
-uncomment these lines in the file, replacing the key with your BLS
+uncomment this lines in the file, replacing the key with your BLS
 private key generated above::
 
-  masternode=1
   masternodeblsprivkey=24c1fa3c22c6ea6b1cc68a37be18acb51042b19465fe0a26301c8717bf939805
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. We now need to restart the masternode for this change to take
-effect. Enter the following commands, waiting a few seconds in between
-to give Dash Core time to shut down::
+the file. Note that providing a ``masternodeblsprivkey`` enables
+masternode mode, which will automatically force the ``txindex=1``,
+``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
+masternode service. We now need to restart the masternode for this
+change to take effect. Enter the following commands, waiting a few
+seconds in between to give Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
   sleep 15
