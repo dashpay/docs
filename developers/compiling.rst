@@ -1,6 +1,6 @@
 .. meta::
    :description: Compile Dash Core for Linux, macOS, Windows and Gitian deterministic builds
-   :keywords: dash, build, compile, linux, Jenkins, macOS, windows, binary, Gitian, developers
+   :keywords: dash, build, compile, linux, macOS, windows, binary, Gitian, developers
 
 .. _compiling-dash:
 
@@ -11,11 +11,11 @@ Compiling Dash Core
 While Dash offers stable binary builds on the `website
 <https://www.dash.org/downloads>`_ and on `GitHub
 <https://github.com/dashpay/dash/releases>`_, and development builds
-using `Jenkins <https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-nightly/activity/>`_, 
-many users will also be interested in building Dash binaries for
-themselves. This process has been greatly simplified with the release of
-Dash Core 0.13.0, and users who do not required deterministic builds can
-typically follow the `generic build notes <https://github.com/dashpay/dash/blob/develop/doc/build-generic.md>`__
+using `GitLab CI <https://gitlab.com/dashpay/dash/pipelines>`_,  many
+users will also be interested in building Dash binaries for themselves.
+This process has been greatly simplified with the release of Dash Core
+0.13.0, and users who do not required deterministic builds can typically
+follow the `generic build notes <https://github.com/dashpay/dash/blob/develop/doc/build-generic.md>`__
 available on GitHub to compile or cross-compile Dash for any platform.
 
 The instructions to build Dash Core 0.12.3 or older are available `here

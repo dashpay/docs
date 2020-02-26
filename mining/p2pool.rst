@@ -172,14 +172,14 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.14.0.3/dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.15.0.0/dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
 
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown on the
 Dash website under **Hash File**::
 
-  sha256sum dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
 
 .. figure:: img/setup-manual-download.png
    :width: 250px
@@ -190,14 +190,14 @@ Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
   mkdir .dashcore
-  tar xfvz dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
-  cp dashcore-0.14.0/bin/dashd .dashcore/
-  cp dashcore-0.14.0/bin/dash-cli .dashcore/
+  tar xfvz dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
+  cp dashcore-0.15.0/bin/dashd .dashcore/
+  cp dashcore-0.15.0/bin/dash-cli .dashcore/
 
 Clean up unneeded files::
 
-  rm dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
-  rm -r dashcore-0.14.0/
+  rm dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
+  rm -r dashcore-0.15.0/
 
 Create a configuration file using the following command::
 
@@ -275,7 +275,6 @@ We will add some optional extra interfaces to the control panel::
   git clone https://github.com/justino/p2pool-ui-punchy web-static
   mv web-static.old web-static/legacy
   cd web-static
-  git clone https://github.com/johndoe75/p2pool-node-status status
   git clone https://github.com/hardcpp/P2PoolExtendedFrontEnd ext
 
 You can now start p2pool and optionally specify the payout address,

@@ -22,7 +22,7 @@ the services they provide to the Dash network specifically.
 Simply put, a masternode is a server with a full copy of the Dash
 blockchain, which guarantees a certain minimum level of performance and
 functionality to perform certain tasks related to block validation, as
-well as PrivateSend and InstantSend, as the anonymity and instant
+well as PrivateSend and InstantSend, as the privacy and instant
 transaction features in Dash are called. The masternodes are paid for
 this service, using a concept known as Proof of Service. This is in
 addition to the Proof of Work done by miners to secure the blockchain.
@@ -260,22 +260,18 @@ rules as of Dash 0.14 are:
 Quorum selection
 ================
 
-InstantSend transactions in Dash version 0.13.0 are secured using a
-consensus of deterministically selected masternodes. This set of
-masternodes is informally termed a quorum and must be in a majority
-agreement, at least six out of ten, for a successful lock of the
-transaction inputs. Multiple quorums are self-selected for each input in
-an InstantSend transaction using the mathematical distance between the
-hash of each input and of the set of masternode funding transactions.
-
-Each masternode receiving the InstantSend transaction lock request
-compares the hash of the masternode's funding transaction to the hash of
-the input requesting the lock. After validating the inputs are not
-spent, the ten masternodes furthest from this hash broadcast their
-acceptance of the lock.
-
-All InstantSend inputs must be at least six blocks old or the
-transaction will be rejected.
+In past versions of Dash, quorums of 10 masternodes were formed
+spontaneously to lock InstantSend transactions. As of Dash 0.14, quorums
+are deterministically formed, contain more masternodes and remain alive
+for a longer period of time. While they remain responsible for
+InstantSend transactions, the locking mechanism has changed to
+automatically attempt locks on most network transactions according to
+the requirements described :ref:`here <is-broadcast>`. Masternodes are
+now also responsible for more network consensus functions, such as
+:ref:`ChainLocks <chainlocks>`. Masternode quorums are formed through a
+process of `distributed key generation <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__.  
+Failure to participate in DKG will eventually result in a PoSe ban as
+described above.
 
 
 Masternode requirements

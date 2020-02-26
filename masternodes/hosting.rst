@@ -59,7 +59,7 @@ https://dashmasternode.io
 Allnodes
 --------
 
-.. image:: img/allnodes.png
+.. image:: img/allnodes.svg
    :width: 200px
    :align: right
    :target: https://www.allnodes.com
@@ -74,23 +74,6 @@ https://www.allnodes.com
 - `Twitter <https://twitter.com/allnodes>`__
 - `Telegram <https://t.me/allnodes>`__
 - `Discord <https://discord.allnodes.com>`__
-
-
-Snode
------
-
-.. image:: img/snode.png
-   :width: 200px
-   :align: right
-   :target: https://snode.co
-
-https://snode.co
-
-- Operated by: Snode Co.
-- Services: Hosting, Monitoring, Shares
-- 4% of masternode payments
-- `Site <https://snode.co>`__
-- `Email <support@snode.co>`__
 
 
 Node40
@@ -124,6 +107,7 @@ https://masternodehosting.com
 - `Email <holger@masternodehosting.com>`__
 - `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
 
+
 NodeHub.io
 ----------
 
@@ -141,6 +125,25 @@ https://nodehub.io
 - `Email <hello@nodehub.io>`__
 - `Twitter <https://twitter.com/nodehubio>`__
 - `Discord <https://discord.nodehub.io>`__
+
+
+Gentarium
+---------
+
+.. image:: img/gentarium.svg
+   :width: 200px
+   :align: right
+   :target: https://mn.gtmcoin.io
+
+https://mn.gtmcoin.io
+
+- Operated by: Gentarium International OÜ
+- Services: Hosting, Shares
+- Cost: $3.99/month (charged daily at $0.15)
+- `Site <https://mn.gtmcoin.io>`__
+- `Email <info@gtmcoin.io>`__
+- `Twitter <https://twitter.com/GTM_Gentarium>`__
+- `Discord <https://discordapp.com/invite/vErwUSC>`__
 
 
 .. _hosted-setup:

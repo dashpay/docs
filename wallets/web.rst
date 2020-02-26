@@ -35,12 +35,12 @@ mobile or hardware wallets.
 
 MyDashWallet offers complete and detailed documentation for all functions.
 
-- `Getting started <https://mydashwallet.org/About>`_
-- `How to Create a Wallet via Keystore file <https://mydashwallet.org/AboutCreateNewWallet>`_
-- `Using the Ledger Hardware Wallet on MyDashWallet <https://mydashwallet.org/AboutLedgerHardwareWallet>`_
-- `Using the Trezor Hardware Wallet on MyDashWallet <https://mydashwallet.org/AboutTrezorHardwareWallet>`_
-- `How to does DASH InstantSend work on MyDashWallet? <https://mydashwallet.org/AboutInstantSend>`_
-- `How to does DASH PrivateSend work on MyDashWallet? <https://mydashwallet.org/AboutPrivateSend>`_
+- `Getting started <https://mydashwallet.org/help>`_
+- `How to Create a Wallet via Keystore file <https://old.mydashwallet.org/AboutCreateNewWallet>`_
+- `Using the Ledger Hardware Wallet on MyDashWallet <https://old.mydashwallet.org/AboutLedgerHardwareWallet>`_
+- `Using the Trezor Hardware Wallet on MyDashWallet <https://old.mydashwallet.org/AboutTrezorHardwareWallet>`_
+- `How to does DASH InstantSend work on MyDashWallet? <https://old.mydashwallet.org/AboutInstantSend>`_
+- `How to does DASH PrivateSend work on MyDashWallet? <https://old.mydashwallet.org/AboutPrivateSend>`_
 
 
 .. image:: img/mydashwallet-start.png

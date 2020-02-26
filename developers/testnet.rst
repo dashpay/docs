@@ -48,7 +48,7 @@ not necessarily be online or functioning at any given time. Please join
 <https://www.dash.org/forum/>`_ if you have a question relating to a
 specific service.
 
-- **Test builds:** https://jenkins.dash.org/blue/
+- **Test builds:** https://gitlab.com/dashpay/dash/pipelines
 - **Bugtracker:** https://github.com/dashpay/dash/issues/new
 - **Discussion and help:** https://www.dash.org/forum/topic/testing.53/
 - **Masternode tools:** https://test.dashninja.pl/masternodes.html
@@ -84,9 +84,9 @@ as the :ref:`mainnet masternode installation guide <masternode-setup>`,
 but with a few key differences:
 
 - You will probably be running a development version of Dash instead of
-  the stable release. See `here <https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-nightly/activity>`__
-  for a list of builds, then choose the latest successful build and
-  click **Artifacts** to view a list of binaries.
+  the stable release. See `here <https://gitlab.com/dashpay/dash/pipelines>`__
+  for a list of builds, then choose the latest successful ``develop`` 
+  build and click **Artifacts** to view a list of binaries.
 - When opening the firewall, port 19999 must be opened instead of (or in
   addition to) 9999. Use this command: ``ufw allow 19999/tcp``
 - Your desktop wallet must be running in testnet mode. Add the following
@@ -101,7 +101,7 @@ but with a few key differences:
 - As for mainnet masternodes, the RPC username and password must contain
   alphanumeric characters only
 - When cloning sentinel, you may need to clone the development branch
-  using the ``-b`` option, for example: ``git clone -b core-v0.12.2.x
+  using the ``-b`` option, for example: ``git clone -b develop
   https://github.com/dashpay/sentinel.git``
 - Once sentinel is installed, modify
   ``~/.dashcore/sentinel/sentinel.conf``, comment the mainnet line and
@@ -109,6 +109,58 @@ but with a few key differences:
 - The wallet holding the masternode collateral will expect to find the
   ``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf``
   instead of ``~/.dashcore/masternode.conf``.
+
+
+Testnet 0.15.0
+==============
+
+In December 2019, the Dash team announced the start of testing of the
+upcoming Dash 0.15.0 release. Extensive internal testing has already been
+done on the 0.15.0 code, but there are numerous bugs that can only be
+revealed with actual use by real people. The Dash team invites anybody
+who is interested to download the software and become active on testnet.
+This release includes:
+
+- Bitcoin 0.15 backports
+- Removal of legacy code
+
+Discussion:
+
+- Testnet announcement: https://www.dash.org/forum/threads/v15-0-testing.49140/
+- Product brief: 
+- Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
+- Issue tracking: https://github.com/dashpay/dash/issues/new
+
+Latest test binaries:
+
+- https://github.com/dashpay/dash/tree/v0.15.0.0-rc1
+
+
+Testnet 0.14.0
+==============
+
+In March 2019, the Dash team announced the start of testing of the
+upcoming Dash 0.14.0 release. Extensive internal testing has already been
+done on the 0.14.0 code, but there are numerous bugs that can only be
+revealed with actual use by real people. The Dash team invites anybody
+who is interested to download the software and become active on testnet.
+This release includes:
+
+- LLMQ DKGs
+- LLMQ based ChainLocks
+- LLMQ based InstantSend
+
+Discussion:
+
+- Testnet announcement: https://www.dash.org/forum/threads/v14-0-testing.44047/
+- Product brief: https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96
+- Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
+- Issue tracking: https://github.com/dashpay/dash/issues/new
+
+Latest test binaries:
+
+- https://github.com/dashpay/dash/releases/tag/v0.14.0.0-rc6
+
 
 Testnet 0.13.0
 ==============
@@ -128,7 +180,7 @@ This release includes:
 
 Discussion: 
 
-- Testnet announcement: https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef
+- Testnet announcement: https://www.dash.org/forum/threads/v13-0-testing.41945/
 - Product brief: https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef
 - Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
 - Issue tracking: https://github.com/dashpay/dash/issues/new
@@ -191,5 +243,5 @@ Discussion:
 
 Latest successfully built develop branch binaries:
 
-- Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-nightly
+- Dash Core: https://gitlab.com/dashpay/dash/pipelines
 - Sentinel: https://github.com/dashpay/sentinel/tree/develop

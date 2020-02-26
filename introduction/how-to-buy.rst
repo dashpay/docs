@@ -422,6 +422,20 @@ xBTCe
   available for currencies including CNH (Chinese Offshore Yuan), EUR,
   GBP, JPY, IDR and RUB. DASH trading pairs include BTC, USD and CNH.
 
+BitMax
+  .. image:: exchanges/bitmax.png
+     :width: 200px
+     :align: right
+     :target: https://bitmax.io
+
+  https://bitmax.io
+
+  BitMax is a global operator of digital asset exchanges for a diverse
+  groups of clients, from retail to institutions. The trading platform,
+  architected by a group of Wall Street quant trading veterans, is
+  designed for reliability and speed of trade execution, and ease of
+  connectivity.
+
 IDAX
   .. image:: exchanges/idax.png
      :width: 200px
@@ -1017,18 +1031,6 @@ NovaDAX
   deposits and withdrawals in Brazilian real. Trading compeitions and
   OTC services are also available.
 
-RealExchange
-  .. image:: exchanges/real-exchange.png
-     :width: 200px
-     :align: right
-     :target: https://realexchange.com.br
-
-  https://realexchange.com.br
-
-  RealExchange is a Brazil-based exchange offering support for a handful
-  of currencies including Dash, Bitcoin, Litecoin, and SmartCash. The
-  exchange also supports fiat trading pairs with the Brazilian real.
-
 3xBit
   .. image:: exchanges/3xbit.png
      :width: 200px
@@ -1587,6 +1589,19 @@ Bitit
   Bitit is a broker service offering Bitcoin, Dash and several other
   cryptocurrencies for sale online. Payment in a range of currencies is
   support using both direct banking, credit cards and vouchers.
+
+RenrenBit
+  .. image:: exchanges/renrenbit.png
+     :width: 150px
+     :align: right
+     :target: https://renrenbit.com
+
+  https://renrenbit.com
+
+  RenrenBit is a digital asset management platform offering 100%
+  reserve. With its official launch in 2018, RenrenBit now provides
+  financial services including wallet, trading markets and crypto asset
+  loans.
 
 buycrypto
   .. image:: exchanges/buycrypto.png

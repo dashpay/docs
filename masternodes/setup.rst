@@ -433,9 +433,8 @@ masternodes. If not displaying a GUI, it runs as a daemon on your VPS
 Open PuTTY or a console again and connect using the username and
 password you just created for your new, non-root user. There are two
 options to install Dash Core, an automated option using a script utility
-called dashman by Dash Core Team member moocowmoo, and a more
-complicated option which will allow you to understand all of the key
-steps involved in preparing your masternode.
+called dashman, and a more complicated option which will allow you to
+understand all of the key steps involved in preparing your masternode.
 
 Option 1: Automated installation using dashman
 ----------------------------------------------
@@ -467,7 +466,7 @@ ensure your masternode is still running::
 Choose nano as your editor and enter the following line at the end of
 the file, after the line for sentinel::
 
-  * * * * * pidof dashd || ~/.dashcore/dashd
+  * * * * * { pidof dashd || ~/.dashcore/dashd;} >/dev/null 2>&1
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
@@ -496,14 +495,14 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.14.0.3/dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.15.0.0/dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  wget https://github.com/dashpay/dash/releases/download/v0.14.0.3/SHA256SUMS.asc
-  sha256sum dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.15.0.0/SHA256SUMS.asc
+  sha256sum dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
   cat SHA256SUMS.asc
 
 You can also optionally verify the authenticity of your download as an
@@ -525,9 +524,9 @@ Create a working directory for Dash, extract the compressed archive and
 copy the necessary files to the directory::
 
   mkdir ~/.dashcore
-  tar xfv dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-0.14.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-0.14.0/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.15.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.15.0/bin/dash-cli ~/.dashcore/
 
 Create a configuration file using the following command::
 

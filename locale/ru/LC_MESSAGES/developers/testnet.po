@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-28 20:38+0000\n"
+"POT-Creation-Date: 2020-01-09 21:00+0000\n"
 "PO-Revision-Date: 2018-04-16 05:42+0000\n"
 "Last-Translator: Дмитрий <dmitry.zhludin@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -148,8 +148,8 @@ msgstr ""
 "конкретными услугами."
 
 #: ../../developers/testnet.rst:51
-msgid "**Test builds:** https://jenkins.dash.org/blue/"
-msgstr "**Тестовые билды:** https://jenkins.dash.org/blue/"
+msgid "**Test builds:** https://gitlab.com/dashpay/dash/pipelines"
+msgstr ""
 
 #: ../../developers/testnet.rst:52
 msgid "**Bugtracker:** https://github.com/dashpay/dash/issues/new"
@@ -248,17 +248,10 @@ msgstr ""
 #: ../../developers/testnet.rst:86
 msgid ""
 "You will probably be running a development version of Dash instead of the "
-"stable release. See `here "
-"<https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-"
-"nightly/activity>`__ for a list of builds, then choose the latest successful"
-" build and click **Artifacts** to view a list of binaries."
+"stable release. See `here <https://gitlab.com/dashpay/dash/pipelines>`__ for"
+" a list of builds, then choose the latest successful ``develop`` build and "
+"click **Artifacts** to view a list of binaries."
 msgstr ""
-"Вероятно, вы будете запускать версию Dash, находящуюся в разработке вместо "
-"стабильного релиза. Перейдите `сюда "
-"<https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-gitian-"
-"nightly/activity>`__ для выбора сборки из списка, из него выберите последнюю"
-" нормально работающую сборку и кликните **Artifacts** для просмотра списка "
-"бинарных файлов."
 
 #: ../../developers/testnet.rst:90
 msgid ""
@@ -313,12 +306,9 @@ msgstr ""
 #: ../../developers/testnet.rst:103
 msgid ""
 "When cloning sentinel, you may need to clone the development branch using "
-"the ``-b`` option, for example: ``git clone -b core-v0.12.2.x "
+"the ``-b`` option, for example: ``git clone -b develop "
 "https://github.com/dashpay/sentinel.git``"
 msgstr ""
-"При клонировании sentinel вам может понадобиться клонировать ветвь "
-"разработки, используя опцию ``-b``, например: ``git clone -b core-v0.12.2.x "
-"https://github.com/dashpay/sentinel.git``"
 
 #: ../../developers/testnet.rst:106
 msgid ""
@@ -340,11 +330,111 @@ msgstr ""
 "``~/.dashcore/testnet3/masternode.conf`` "
 "вместо``~/.dashcore/masternode.conf``."
 
-#: ../../developers/testnet.rst:114
+#: ../../developers/testnet.rst:115
+msgid "Testnet 0.15.0"
+msgstr ""
+
+#: ../../developers/testnet.rst:117
+msgid ""
+"In December 2019, the Dash team announced the start of testing of the "
+"upcoming Dash 0.15.0 release. Extensive internal testing has already been "
+"done on the 0.15.0 code, but there are numerous bugs that can only be "
+"revealed with actual use by real people. The Dash team invites anybody who "
+"is interested to download the software and become active on testnet. This "
+"release includes:"
+msgstr ""
+
+#: ../../developers/testnet.rst:124
+msgid "Bitcoin 0.15 backports"
+msgstr ""
+
+#: ../../developers/testnet.rst:125
+msgid "Removal of legacy code"
+msgstr ""
+
+#: ../../developers/testnet.rst:127 ../../developers/testnet.rst:153
+#: ../../developers/testnet.rst:181 ../../developers/testnet.rst:211
+#: ../../developers/testnet.rst:238
+msgid "Discussion:"
+msgstr "Обсуждение:"
+
+#: ../../developers/testnet.rst:129
+msgid ""
+"Testnet announcement: "
+"https://www.dash.org/forum/threads/v15-0-testing.49140/"
+msgstr ""
+
+#: ../../developers/testnet.rst:130
+msgid "Product brief:"
+msgstr ""
+
+#: ../../developers/testnet.rst:131 ../../developers/testnet.rst:157
+#: ../../developers/testnet.rst:185 ../../developers/testnet.rst:214
+msgid "Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html"
+msgstr ""
+
+#: ../../developers/testnet.rst:132 ../../developers/testnet.rst:158
+#: ../../developers/testnet.rst:186 ../../developers/testnet.rst:215
+#: ../../developers/testnet.rst:242
+msgid "Issue tracking: https://github.com/dashpay/dash/issues/new"
+msgstr "Отслеживание проблем: https://github.com/dashpay/dash/issues/new"
+
+#: ../../developers/testnet.rst:134 ../../developers/testnet.rst:160
+#: ../../developers/testnet.rst:188 ../../developers/testnet.rst:217
+msgid "Latest test binaries:"
+msgstr "Последние тестовые двоичные файлы:"
+
+#: ../../developers/testnet.rst:136
+msgid "https://github.com/dashpay/dash/tree/v0.15.0.0-rc1"
+msgstr ""
+
+#: ../../developers/testnet.rst:140
+msgid "Testnet 0.14.0"
+msgstr ""
+
+#: ../../developers/testnet.rst:142
+msgid ""
+"In March 2019, the Dash team announced the start of testing of the upcoming "
+"Dash 0.14.0 release. Extensive internal testing has already been done on the"
+" 0.14.0 code, but there are numerous bugs that can only be revealed with "
+"actual use by real people. The Dash team invites anybody who is interested "
+"to download the software and become active on testnet. This release "
+"includes:"
+msgstr ""
+
+#: ../../developers/testnet.rst:149
+msgid "LLMQ DKGs"
+msgstr ""
+
+#: ../../developers/testnet.rst:150
+msgid "LLMQ based ChainLocks"
+msgstr ""
+
+#: ../../developers/testnet.rst:151
+msgid "LLMQ based InstantSend"
+msgstr ""
+
+#: ../../developers/testnet.rst:155
+msgid ""
+"Testnet announcement: "
+"https://www.dash.org/forum/threads/v14-0-testing.44047/"
+msgstr ""
+
+#: ../../developers/testnet.rst:156
+msgid ""
+"Product brief: https://blog.dash.org/product-brief-dash-core-release-v0-14-0"
+"-now-on-testnet-8f5f4ad45c96"
+msgstr ""
+
+#: ../../developers/testnet.rst:162
+msgid "https://github.com/dashpay/dash/releases/tag/v0.14.0.0-rc6"
+msgstr ""
+
+#: ../../developers/testnet.rst:166
 msgid "Testnet 0.13.0"
 msgstr "Тестовая сеть версии 0.13.0"
 
-#: ../../developers/testnet.rst:116
+#: ../../developers/testnet.rst:168
 msgid ""
 "In November 2018, the Dash team announced the start of testing of the "
 "upcoming Dash 0.13.0 release. Extensive internal testing has already been "
@@ -361,41 +451,34 @@ msgstr ""
 "программное обеспечение и проявить активность в тестовой сети. Этот выпуск "
 "включает:"
 
-#: ../../developers/testnet.rst:123
+#: ../../developers/testnet.rst:175
 msgid "Automatic InstantSend for Simple Transactions"
 msgstr ""
 "Автоматическое задействование функции InstantSend для простых транзакций"
 
-#: ../../developers/testnet.rst:124
+#: ../../developers/testnet.rst:176
 msgid "Deterministic Masternode List"
 msgstr "Детерминированный список мастернод"
 
-#: ../../developers/testnet.rst:125
+#: ../../developers/testnet.rst:177
 msgid "3 Masternode Keys: Owner, Operator and Voting"
 msgstr "3 ключа мастерноды: для владельца, оператора и голосования"
 
-#: ../../developers/testnet.rst:126
+#: ../../developers/testnet.rst:178
 msgid "Special Transactions"
 msgstr "Специальные транзакции"
 
-#: ../../developers/testnet.rst:127
+#: ../../developers/testnet.rst:179
 msgid "PrivateSend Improvements"
 msgstr "Улучшения в функции PrivateSend"
 
-#: ../../developers/testnet.rst:129 ../../developers/testnet.rst:159
-#: ../../developers/testnet.rst:186
-msgid "Discussion:"
-msgstr "Обсуждение:"
-
-#: ../../developers/testnet.rst:131
+#: ../../developers/testnet.rst:183
 msgid ""
-"Testnet announcement: https://blog.dash.org/product-brief-dash-core-"
-"release-v0-13-0-5d7fddffb7ef"
+"Testnet announcement: "
+"https://www.dash.org/forum/threads/v13-0-testing.41945/"
 msgstr ""
-"Объявление о тестировании в тестовой сети: https://blog.dash.org/product-"
-"brief-dash-core-release-v0-13-0-5d7fddffb7ef"
 
-#: ../../developers/testnet.rst:132
+#: ../../developers/testnet.rst:184
 msgid ""
 "Product brief: https://blog.dash.org/product-brief-dash-core-"
 "release-v0-13-0-5d7fddffb7ef"
@@ -403,28 +486,15 @@ msgstr ""
 "Кратко о продукте: https://blog.dash.org/product-brief-dash-core-"
 "release-v0-13-0-5d7fddffb7ef"
 
-#: ../../developers/testnet.rst:133 ../../developers/testnet.rst:162
-msgid "Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html"
-msgstr ""
-
-#: ../../developers/testnet.rst:134 ../../developers/testnet.rst:163
 #: ../../developers/testnet.rst:190
-msgid "Issue tracking: https://github.com/dashpay/dash/issues/new"
-msgstr "Отслеживание проблем: https://github.com/dashpay/dash/issues/new"
-
-#: ../../developers/testnet.rst:136 ../../developers/testnet.rst:165
-msgid "Latest test binaries:"
-msgstr "Последние тестовые двоичные файлы:"
-
-#: ../../developers/testnet.rst:138
 msgid "https://github.com/dashpay/dash/releases/tag/v0.13.0.0-rc11"
 msgstr "https://github.com/dashpay/dash/releases/tag/v0.13.0.0-rc11"
 
-#: ../../developers/testnet.rst:141
+#: ../../developers/testnet.rst:193
 msgid "Testnet 0.12.3"
 msgstr "Тестовая сеть версии 0.12.3"
 
-#: ../../developers/testnet.rst:143
+#: ../../developers/testnet.rst:195
 msgid ""
 "In June 2018, the Dash team announced the start of testing of the upcoming "
 "Dash 0.12.3 release. Extensive internal testing has already been done on the"
@@ -441,7 +511,7 @@ msgstr ""
 "программное обеспечение и проявить активность в тестовой сети, принять в "
 "этом участие. Этот выпуск включает:"
 
-#: ../../developers/testnet.rst:150
+#: ../../developers/testnet.rst:202
 msgid ""
 "Named Devnets, to help developers quickly create multiple independent "
 "devnets"
@@ -449,43 +519,43 @@ msgstr ""
 "Именованные Devnets, которые помогают разработчикам быстро создавать "
 "несколько независимых devnets"
 
-#: ../../developers/testnet.rst:152
+#: ../../developers/testnet.rst:204
 msgid "New format of network message signatures"
 msgstr "Новый формат подписей сетевых сообщений"
 
-#: ../../developers/testnet.rst:153
+#: ../../developers/testnet.rst:205
 msgid "Governance system improvements"
 msgstr "Усовершенствованную систему управления"
 
-#: ../../developers/testnet.rst:154
+#: ../../developers/testnet.rst:206
 msgid "PrivateSend improvements"
 msgstr "Усовершенствованную функцию PrivateSend"
 
-#: ../../developers/testnet.rst:155
+#: ../../developers/testnet.rst:207
 msgid "Additional indexes cover P2PK now"
 msgstr "Дополнительные индексы, которые теперь охватывают P2PK"
 
-#: ../../developers/testnet.rst:156
+#: ../../developers/testnet.rst:208
 msgid "Support for pruned nodes in Lite Mode"
 msgstr "Поддержку урезанных узлов в режиме Lite"
 
-#: ../../developers/testnet.rst:157
+#: ../../developers/testnet.rst:209
 msgid "New Masternode Information Dialog"
 msgstr "Новое окно информационного диалога Мастернод"
 
-#: ../../developers/testnet.rst:161
+#: ../../developers/testnet.rst:213
 msgid "https://www.dash.org/forum/threads/v12-3-testing.38475"
 msgstr "https://www.dash.org/forum/threads/v12-3-testing.38475"
 
-#: ../../developers/testnet.rst:167
+#: ../../developers/testnet.rst:219
 msgid "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
 msgstr "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
 
-#: ../../developers/testnet.rst:171
+#: ../../developers/testnet.rst:223
 msgid "Testnet 0.12.2"
 msgstr "Тестовая сеть версии 0.12.2"
 
-#: ../../developers/testnet.rst:173
+#: ../../developers/testnet.rst:225
 msgid ""
 "In October 2017, the Dash team announced the launch of a testnet for public "
 "testing of the upcoming 0.12.2 release of the Dash software. Extensive "
@@ -502,7 +572,7 @@ msgstr ""
 "любого, кто заинтересован скачать программное обеспечение и стать его "
 "активным пользователем в тестовой сети. Этот выпуск включает:"
 
-#: ../../developers/testnet.rst:180
+#: ../../developers/testnet.rst:232
 msgid ""
 "DIP0001 implementation "
 "https://github.com/dashpay/dips/blob/master/dip-0001.md"
@@ -510,20 +580,20 @@ msgstr ""
 "Имплементацию DIP0001 "
 "https://github.com/dashpay/dips/blob/master/dip-0001.md"
 
-#: ../../developers/testnet.rst:181
+#: ../../developers/testnet.rst:233
 msgid "10x transaction fee reduction (including InstantSend fee)"
 msgstr ""
 "Уменьшение комиссии за транзакцию в 10 раз (включая комиссию InstantSend)"
 
-#: ../../developers/testnet.rst:182
+#: ../../developers/testnet.rst:234
 msgid "InstantSend vulnerability fix"
 msgstr "Исправление уязвимости InstantSend"
 
-#: ../../developers/testnet.rst:183
+#: ../../developers/testnet.rst:235
 msgid "Lots of other bug fixes and performance improvements"
 msgstr "Многие другие исправления ошибок и улучшения производительности"
 
-#: ../../developers/testnet.rst:184
+#: ../../developers/testnet.rst:236
 msgid ""
 "Experimental BIP39/BIP44 complaint HD wallet (disabled by default, should be"
 " fully functional but there is no GUI yet)"
@@ -532,7 +602,7 @@ msgstr ""
 "(который отключён по умолчанию и должен стать полностью функциональным, но "
 "пока не имеет своего графического интерфейса)"
 
-#: ../../developers/testnet.rst:188
+#: ../../developers/testnet.rst:240
 msgid ""
 "Testnet 12.2 discussion: "
 "https://www.dash.org/forum/threads/v12-2-testing.17412/"
@@ -540,7 +610,7 @@ msgstr ""
 "Обсуждение Testnet версии 12.2: "
 "https://www.dash.org/forum/threads/v12-2-testing.17412/"
 
-#: ../../developers/testnet.rst:189
+#: ../../developers/testnet.rst:241
 msgid ""
 "Testnet tools: https://www.dash.org/forum/threads/testnet-tools-"
 "resources.1768/"
@@ -548,18 +618,14 @@ msgstr ""
 "Инструменты для тестовой сети: https://www.dash.org/forum/threads/testnet-"
 "tools-resources.1768/"
 
-#: ../../developers/testnet.rst:192
+#: ../../developers/testnet.rst:244
 msgid "Latest successfully built develop branch binaries:"
 msgstr "Последние успешные сборки версий разработки:"
 
-#: ../../developers/testnet.rst:194
-msgid ""
-"Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-"
-"gitian-nightly"
+#: ../../developers/testnet.rst:246
+msgid "Dash Core: https://gitlab.com/dashpay/dash/pipelines"
 msgstr ""
-"Dash Core: https://jenkins.dash.org/blue/organizations/jenkins/dashpay-dash-"
-"gitian-nightly"
 
-#: ../../developers/testnet.rst:195
+#: ../../developers/testnet.rst:247
 msgid "Sentinel: https://github.com/dashpay/sentinel/tree/develop"
 msgstr "Sentinel: https://github.com/dashpay/sentinel/tree/develop"

@@ -92,7 +92,7 @@ replacing or renaming the existing file.
 +==========+================================+===============================================================================================+
 | Linux    | ~/                             | Go to your home folder and press **Ctrl+H** to show hidden files, then open ``.dashcore``     |
 +----------+--------------------------------+-----------------------------------------------------------------------------------------------+
-| macOS    | ~/Library/Application Support/ | Press **Shift + Control + G**, type ``~/Library/Application Support``, then open ``DashCore`` |
+| macOS    | ~/Library/Application Support/ | Press **Shift + Command + G**, type ``~/Library/Application Support``, then open ``DashCore`` |
 +----------+--------------------------------+-----------------------------------------------------------------------------------------------+
 | Windows  | %APPDATA%                      | Press **Windows Key + R** and type ``%APPDATA%``, then open ``DashCore``                      |
 +----------+--------------------------------+-----------------------------------------------------------------------------------------------+

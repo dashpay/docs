@@ -12,12 +12,12 @@ PrivateSend
 ===========
 
 This documentation describes how to use Dash Core to send Dash
-anonymously. PrivateSend, released as DarkSend in RC4 of the DarkCoin
+privately. PrivateSend, released as DarkSend in RC4 of the DarkCoin
 client and rebranded to PrivateSend in May 2016, is a trustless method
 of running a sequence of transactions (known as "mixing") such that an
 external observer is unable to determine the source of funding when a
 PrivateSend transaction is created. This gives your Dash the same
-anonymous properties as cash withdrawn from an ATM, for example. The
+privacy properties as cash withdrawn from an ATM, for example. The
 mixing and denomination process is seamless, automatic, and requires no
 intervention on the part of the user. The current implementation of
 PrivateSend in the Dash Core wallet allows any amount of Dash to be
@@ -47,19 +47,19 @@ Configuration
 2. Next to **PrivateSend rounds to use**, enter a value between 1-16.
    Each round of PrivateSend performs one denominated fund mixing
    transaction. Higher numbers of rounds increase your overall level of
-   anonymity while decreasing the chance of detection via node
+   privacy while decreasing the chance of detection via node
    collusion. 16 is the highest number of rounds currently available.
 
    NOTE: To prevent system abuse, an average of one in ten rounds of
    masternode mixing incurs a fee of .0001 DASH.
 
-3. Enter a target value for **Amount of Dash to keep anonymized**. This
+3. Enter a target value for **Amount of Dash to keep mixed**. This
    value provides a lower boundary on the final amount of funds to be
-   anonymized. Depending on how the client splits your wallet balance,
-   you may end up with denominated inputs whose sum total is greater
-   than the target amount. In this case the client will use all existing
-   denominated inputs in the PrivateSend process. The final anonymized
-   amount may be higher than your target, but should be close.
+   mixed. Depending on how the client splits your wallet balance, you
+   may end up with denominated inputs whose sum total is greater than
+   the target amount. In this case the client will use all existing
+   denominated inputs in the PrivateSend process. The final mixed amount
+   may be higher than your target, but should be close.
 
 4. Click **OK** to save settings.
 
@@ -76,11 +76,11 @@ The PrivateSend process is initiated by clicking the **Start Mixing**
 button on the **Overview** tab of the Dash Core wallet. Mixing is
 possible once the following conditions have been met:
 
-- The wallet contains sufficient non-anonymized funds to create the
-  minimum required denominated values
+- The wallet contains sufficient non-mixed funds to create the minimum
+  required denominated values
 - The user has not disabled PrivateSend in the Options dialog
-- The target value for anonymized Funds in the Options dialog is greater
-  than zero
+- The target value for mixed Funds in the Options dialog is greater than
+  zero
 
 If your wallet is encrypted (highly recommended), you will be asked to
 enter your wallet passphrase. Enable the **Only for mixing via
@@ -141,7 +141,7 @@ operations PrivateSend is carrying out in the background.
    Monitoring PrivateSend progress
 
 Since PrivateSend mixing creates a lot of new address keys to send and
-receive the anonymized denominations, you may receive a warning when the
+receive the mixed denominations, you may receive a warning when the
 number of remaining keys runs low. This is nothing to be worried about,
 since the wallet will simply create more keys as necessary. However,
 these keys will not exist in any previous backups of your wallet. For
@@ -212,7 +212,7 @@ process takes time, it must be done in advance before you create the
 send transaction. A PrivateSend transaction is effectively the same as
 any other transaction on the blockchain, but it draws only from input
 addresses where the denomination has previously been mixed to ensure
-anonymity of funds. Because several input addresses are usually required
+privacy of funds. Because several input addresses are usually required
 to make up the amount you are trying to send, a PrivateSend transaction
 will usually take up more space (in kilobytes) on the blockchain, and
 therefore will be charged a slightly higher fee. 

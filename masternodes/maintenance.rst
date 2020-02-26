@@ -62,19 +62,19 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.14.0.3/dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.15.0.0/dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-0.14.0.3-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-0.14.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-0.14.0/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.15.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.15.0/bin/dash-cli ~/.dashcore/
 
 Restart Dash::
 
@@ -106,6 +106,11 @@ or changes to the nominated voting/operator keys. It is also possible to
 revoke a masternode's registered status (in the event of a security
 breach, for example) to force both owner and operator to update their
 details.
+
+Configuration changes which affect the provision of service to the
+network, such as the BLS operator key and IP address, will reset your
+position in the payment queue. Changes to the voting or various payout
+addresses will not reset your position in the payment queue.
 
 .. _dip3-update-service:
 
@@ -515,9 +520,9 @@ Masternode.me
 
 https://stats.masternode.me
 
-Masternode.me, operated by forum member and Dash Core developer
-moocowmoo, offers sequential reports on the price, generation rate,
-blockchain information and some information on masternodes.
+Masternode.me, operated by Dash community member moocowmoo, offers
+sequential reports on the price, generation rate, blockchain information
+and some information on masternodes.
 
 Dash Masternode Information
 ---------------------------
