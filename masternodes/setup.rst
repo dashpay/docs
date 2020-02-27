@@ -769,17 +769,19 @@ using ``ssh`` or PuTTY and edit the configuration file as follows::
   nano ~/.dashcore/dash.conf
 
 The editor appears with the existing masternode configuration. Add or
-uncomment these lines in the file, replacing the key with your BLS
-private key generated above::
+uncomment this line in the file, replacing the key with your BLS private
+key generated above::
 
-  masternode=1
   masternodeblsprivkey=395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e
 
 Press enter to make sure there is a blank line at the end of the file,
 then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. We now need to restart the masternode for this change to take
-effect. Enter the following commands, waiting a few seconds in between
-to give Dash Core time to shut down::
+the file. Note that providing a ``masternodeblsprivkey`` enables
+masternode mode, which will automatically force the ``txindex=1``,
+``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
+masternode service. We now need to restart the masternode for this
+change to take effect. Enter the following commands, waiting a few
+seconds in between to give Dash Core time to shut down::
 
   ~/.dashcore/dash-cli stop
   sleep 15
