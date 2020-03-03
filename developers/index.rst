@@ -8,13 +8,15 @@
 Developers
 ==========
 
-Dash Core has published an extensive `Developer Guide 
-<https://dash-docs.github.io/en/>`_ to help new developers get started
-with the Dash code base, and as a reference for experienced developers.
-This guide can be leveraged to quickly and efficiently integrate
-external applications with the Dash ecosystem. Anyone can contribute to
-the guide by submitting an issue or pull request on GitHub. The
-documentation is available at: https://dash-docs.github.io/en/
+The `Dash Platform Developer Documentation <https://dashplatform.readme.io/>` 
+contains technical documentation intended to help developers quickly and
+easily get started with Dash Platform. The `Dash Core Developer
+Documentation <https://dashcore.readme.io/>` provides detailed
+documentation on the Dash Core code base, and serves as a reference for
+experienced developers. These documentation portals can help developers
+to quickly and efficiently integrate external applications with the Dash
+ecosystem. Anyone can contribute to the documentation by suggesting
+edits in the documentation system.
 
 The Dash Core Team also maintains the `Dash Roadmap
 <https://www.dash.org/roadmap>`_, which sets out delivery milestones for

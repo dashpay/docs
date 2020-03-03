@@ -28,15 +28,15 @@ such as InstantSend.
    straightforward. Note that the following commands have been modified 
    to support InstantSend:
 
-   - `getrawmempool <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
-   - `getmempoolancestors <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
-   - `getmempooldescendants <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
-   - `getmempoolentry <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
-   - `getrawtransaction <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
-   - `decoderawtransaction <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
-   - `gettransaction <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
-   - `listtransactions <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
-   - `listsinceblock <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
+   - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-raw-mem-pool>`__
+   - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-ancestors>`__
+   - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-descendants>`__
+   - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-entry>`__
+   - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-get-raw-transaction>`__
+   - `decoderawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-decode-raw-transaction>`__
+   - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-get-transaction>`__
+   - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-transactions>`__
+   - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
 
 3. **Block Hashing Algorithm:** Dash uses the “X11” algorithm in place
    of SHA256 used in Bitcoin. It’s important to note, however, that this
@@ -61,23 +61,23 @@ which form a basis for new transaction types that provide on-chain
 metadata to assist various consensus mechanisms. The following special
 transaction types exist:
 
-+---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
-| Release | Version | Type | Payload Size   | Payload | Payload JSON | Transaction Purpose                                                                            |
-+=========+=========+======+================+=========+==============+================================================================================================+
-| v0.13.0 | 3       | 0    | n/a            | n/a     | n/a          | Standard Transaction                                                                           |
-+---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 1    | <variable int> | <hex>   | proRegTx     | `Masternode Registration <https://dash-docs.github.io/en/developer-reference#proregtx>`__      |
-+---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 2    | <variable int> | <hex>   | proUpServTx  | `Update Masternode Service <https://dash-docs.github.io/en/developer-reference#proupservtx>`__ |
-+---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 3    | <variable int> | <hex>   | proUpRegTx   | `Update Masternode Operator <https://dash-docs.github.io/en/developer-reference#proupregtx>`__ |
-+---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 4    | <variable int> | <hex>   | proUpRevTx   | `Masternode Revocation <https://dash-docs.github.io/en/developer-reference#prouprevtx>`__      |
-+---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 5    | <variable int> | <hex>   | cbTx         | `Masternode List Merkle Proof <https://dash-docs.github.io/en/developer-reference#cbtx>`__     |
-+---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 6    | <variable int> | <hex>   | qcTx         | `Quorum Commitment <https://dash-docs.github.io/en/developer-reference#qctx>`__                |
-+---------+---------+------+----------------+---------+--------------+------------------------------------------------------------------------------------------------+
++---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| Release | Version | Type | Payload Size   | Payload | Payload JSON | Transaction Purpose                                                                                                               |
++=========+=========+======+================+=========+==============+===================================================================================================================================+
+| v0.13.0 | 3       | 0    | n/a            | n/a     | n/a          | Standard Transaction                                                                                                              |
++---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 1    | <variable int> | <hex>   | proRegTx     | `Masternode Registration <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-reg-tx>`__       |
++---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 2    | <variable int> | <hex>   | proUpServTx  | `Update Masternode Service <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-serv-tx>`__ |
++---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 3    | <variable int> | <hex>   | proUpRegTx   | `Update Masternode Operator <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-reg-tx>`__ |
++---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 4    | <variable int> | <hex>   | proUpRevTx   | `Masternode Revocation <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-rev-tx>`__      |
++---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 5    | <variable int> | <hex>   | cbTx         | `Masternode List Merkle Proof <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-cb-tx>`__       |
++---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| v0.13.0 | 3       | 6    | <variable int> | <hex>   | qcTx         | `Quorum Commitment <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-qc-tx>`__                  |
++---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
 
 Integration notes:
 
@@ -94,7 +94,7 @@ Integration notes:
    Transactions has been split into two fields: ``version`` and ``type``
    (each consisting of 2 bytes).
 
-4. Refer to the `Special Transactions <https://dash-docs.github.io/en/developer-reference#special-transactions>`__ 
+4. Refer to the `Special Transactions <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions>`__ 
    section of the dash developer reference for additional detail on
    these data types, e.g. <variable int>.
 
@@ -155,16 +155,15 @@ direct connection with the Dash daemon using JSON-RPC protocol. The
 “instantlock” attribute of the JSON response reflects the status of the
 transaction and is included in the following commands:
 
-- `getrawmempool <https://dash-docs.github.io/en/developer-reference#getrawmempool>`__
-- `getmempoolancestors <https://dash-docs.github.io/en/developer-reference#getmempoolancestors>`__
-- `getmempooldescendants <https://dash-docs.github.io/en/developer-reference#getmempooldescendants>`__
-- `getmempoolentry <https://dash-docs.github.io/en/developer-reference#getmempoolentry>`__
-- `getrawtransaction <https://dash-docs.github.io/en/developer-reference#getrawtransaction>`__
-- `decoderawtransaction <https://dash-docs.github.io/en/developer-reference#decoderawtransaction>`__
-- `gettransaction <https://dash-docs.github.io/en/developer-reference#gettransaction>`__
-- `listtransactions <https://dash-docs.github.io/en/developer-reference#listtransactions>`__
-- `listsinceblock <https://dash-docs.github.io/en/developer-reference#listsinceblock>`__
-
+- `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-raw-mem-pool>`__
+- `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-ancestors>`__
+- `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-descendants>`__
+- `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-entry>`__
+- `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-get-raw-transaction>`__
+- `decoderawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-decode-raw-transaction>`__
+- `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-get-transaction>`__
+- `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-transactions>`__
+- `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
 
 **ZMQ Notification:** Whenever a transaction enters the mempool and
 whenever a transaction is locked in the mempool, ZMQ notifications can
@@ -220,7 +219,7 @@ and are intended to help provide a more complete understanding of the
 underlying technologies.
 
 - `InstantSend Technical Information <https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__
-- `InstantSend Developer Documentation <https://dash-docs.github.io/en/developer-guide#llmq-instantsend>`__
+- `InstantSend Developer Documentation <https://dashcore.readme.io/docs/core-guide-dash-features-instantsend>`__
 - `DIP0010: LLMQ InstantSend <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__
 - `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__
 
@@ -407,17 +406,18 @@ Dash Developer Guide
 .. image:: img/dash-logo.png
    :width: 200px
    :align: right
-   :target: https://dash-docs.github.io/en/developer-guide
+   :target: https://dashcore.readme.io/
 
-https://dash-docs.github.io/en/developer-guide
+https://dashcore.readme.io/
 
-The Dash Developer Guide aims to provide the information you need to
+The Dash Developer Portal aims to provide the information you need to
 understand Dash and start building Dash-based applications. To make the
 best use of this documentation, you may want to install the current
-version of Dash Core, either from source or from a pre-compiled
-executable.
+version of Dash Core and Dash Platform, either from source, from a
+pre-compiled executable or from Docker Hub.
 
-- Documentation: https://dash-docs.github.io/en/developer-guide
+- Dash Core: https://dashcore.readme.io/
+- Dash Platform: https://dashplatform.readme.io/
 
 NodeJS/JavaScript: Dashcore
 -------------------------------------

@@ -36,8 +36,8 @@ aspects of regtest (the local-only regression testing mode that provides
 controlled block generation). Unlike testnet, multiple independent
 devnets can be created and coexist without interference. For practical
 documentation on how to use devnets, see the `developer documentation
-<https://dash-docs.github.io/en/developer-examples#devnet-mode>`__ or
-this `blog post <https://blog.dash.org/dash-devnets-bc27ecbf0085>`__.
+<https://dashcore.readme.io/docs/core-examples-testing-applications>`__
+or this `blog post <https://blog.dash.org/dash-devnets-bc27ecbf0085>`__.
 
 Tools and links
 ===============

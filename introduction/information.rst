@@ -18,7 +18,8 @@ Official sites
 
 - **Website:** https://www.dash.org
 - **User documentation:** https://docs.dash.org
-- **Protocol documentation:** https://dash-docs.github.io
+- **Dash Core Documentation:** https://dashcore.readme.io
+- **Dash Platform Documentation:** https://dashplatform.readme.io
 - **Foundation:** https://www.dashfoundation.io
 - **GitHub:** https://github.com/dashpay
 - **GitHub (Evolution):** https://github.com/dashevo
