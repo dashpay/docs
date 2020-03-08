@@ -186,7 +186,7 @@ line to the dash.conf file::
   instantsendnotify=/path/to/concurrent/safe/handler %s
 
 This is typically used with a wallet that has been populated with 
-`watch-only <https://dash-docs.github.io/en/glossary/watch-only-address>`__ 
+`watch-only <https://dashcore.readme.io/docs/core-additional-resources-glossary#section-watch-only-address>`__ 
 addresses.
 
 .. _is-broadcast:
