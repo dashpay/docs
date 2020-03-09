@@ -95,6 +95,17 @@ https://node40.com
 - `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`__
 
 
+Penny Scavengers
+----------------
+
+https://pennyscavs.com
+
+- Operated by: p5yc071c
+- Services: Hosting
+- Cost: 50 CHF/month
+- `Site <https://pennyscavs.com>`__
+
+
 Masternodehosting
 -----------------
 
