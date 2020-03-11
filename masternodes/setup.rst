@@ -825,9 +825,10 @@ to use an address external to the wallet::
 
 You can also optionally generate and fund another address as the
 **transaction fee source** (``feeSourceAddress``). If you selected an
-external payout address, you must specify a fee source address. Either
-the payout address or fee source address must have enough balance to pay
-the transaction fee, or the final ``register_submit`` transaction will
+external payout address, you must specify a fee source address. 
+
+Either the payout address or fee source address must have enough balance
+to pay the transaction fee, or the ``register_prepare`` transaction will
 fail.
 
 The private keys to the owner and fee source addresses must exist in the
