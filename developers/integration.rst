@@ -420,7 +420,7 @@ pre-compiled executable or from Docker Hub.
 - Dash Platform: https://dashplatform.readme.io/
 
 NodeJS/JavaScript: Dashcore
--------------------------------------
+---------------------------
 
 .. image:: img/bitcore.png
    :width: 200px
@@ -439,6 +439,17 @@ address balances, transaction history, and unspent outputs.
 - Repository lib: https://github.com/dashevo/dashcore-lib
 - Repository node: https://github.com/dashevo/dashcore-node
 - See also: `Insight API <https://github.com/dashevo/insight-api>`__
+
+NodeJS/JavaScript: DashJS
+-------------------------
+
+DashJS allows you to transact on L1 or fetch/register documents on L2
+within a single library, including management and signing of your
+documents.
+
+- Platform: NodeJS / Javascript
+- Documentation: https://dashevo.github.io/DashJS
+- Repository: https://github.com/dashevo/DashJS
 
 PHP: Bitcoin-PHP
 ----------------
