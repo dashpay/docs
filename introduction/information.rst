@@ -37,7 +37,7 @@ Community sites
 - https://www.dashninja.pl
 - https://www.dashnews.org
 - https://dashthailand.org
-- http://www.dashnation.com
+- https://www.dashnation.com
 - https://dashvotetracker.com
 - https://www.dashspain.org
 - http://www.dashhaiti.com
@@ -173,7 +173,6 @@ Block explorers, statistics and visualizations
 - https://bitinfocharts.com/dash/explorer
 - https://dashblockexplorer.com
 - https://live.blockcypher.com/dash
-- https://dash.holytransaction.com
 - https://dashradar.com
 - http://udjinm6.github.io/bitlisten
 - http://insight.dash.crowdnode.io
