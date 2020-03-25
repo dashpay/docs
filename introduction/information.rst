@@ -29,6 +29,7 @@ Official sites
 Community sites
 ---------------
 
+- https://dashdevs.org
 - https://www.dashnexus.org
 - https://www.dashwatch.org
 - https://www.dashboost.org
@@ -59,6 +60,7 @@ Chat
 
 - **Dash Nation Discord:** https://discordapp.com/invite/9z8zX5j
 - **Dash Talk Discord:** https://discordapp.com/invite/PXbUxJB
+- **Dash Dapp Devs Discord:** https://chat.dashdevs.org
 - **Dash English Telegram:** https://t.me/dash_chat
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil
 - **Dash Russia Telegram:** https://telegram.me/Dash_Ru

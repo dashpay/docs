@@ -26,6 +26,13 @@ Dash Roadmap is complemented by the `Dash Improvement Proposals
 <https://github.com/dashpay/dips>`_, which contain detailed technical
 explanations of proposed changes to the Dash protocol itself.
 
+The Dash community organise discussion and development of Dash apps
+using the following resources:
+
+- `Awesome Dash Platform <https://dashdevs.org/>`__
+- `Dash Dapp Devs Discord <https://chat.dashdevs.org>`__
+- `Dash Bounty Board <https://trello.com/invite/b/FPJzDcok/ea9fc798043d35d61aa8a5df0917cba7/dash-bounty-board>`__
+
 The remaining sections available below describe practical steps to
 carry out common development tasks in Dash.
 
