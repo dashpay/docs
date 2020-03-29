@@ -39,6 +39,26 @@ https://crowdnode.io
 - `Email <hello@crowdnode.io>`__
 
 
+Allnodes
+--------
+
+.. image:: img/allnodes.svg
+   :width: 200px
+   :align: right
+   :target: https://www.allnodes.com
+
+https://www.allnodes.com
+
+- Operated by: Sephiroth
+- Services: Monitoring, Hosting
+- Cost: from $3/month
+- `Site <https://www.allnodes.com>`__
+- `Email <info@allnodes.com>`__
+- `Twitter <https://twitter.com/allnodes>`__
+- `Telegram <https://t.me/allnodes>`__
+- `Discord <https://discord.allnodes.com>`__
+
+
 SID Hosting Service
 -------------------
 
@@ -54,26 +74,6 @@ https://dashmasternode.io
 - Cost: €25/month, paid in Dash
 - `Site <http://dashmasternode.io>`__
 - `Email <sidhosting@protonmail.com>`__
-
-
-Allnodes
---------
-
-.. image:: img/allnodes.svg
-   :width: 200px
-   :align: right
-   :target: https://www.allnodes.com
-
-https://www.allnodes.com
-
-- Operated by: Sephiroth
-- Services: Monitoring, Hosting
-- Cost: $5/month (free during beta)
-- `Site <https://www.allnodes.com>`__
-- `Email <info@allnodes.com>`__
-- `Twitter <https://twitter.com/allnodes>`__
-- `Telegram <https://t.me/allnodes>`__
-- `Discord <https://discord.allnodes.com>`__
 
 
 Node40
