@@ -18,7 +18,8 @@ Official sites
 
 - **Website:** https://www.dash.org
 - **User documentation:** https://docs.dash.org
-- **Protocol documentation:** https://dash-docs.github.io
+- **Dash Core Documentation:** https://dashcore.readme.io
+- **Dash Platform Documentation:** https://dashplatform.readme.io
 - **Foundation:** https://www.dashfoundation.io
 - **GitHub:** https://github.com/dashpay
 - **GitHub (Evolution):** https://github.com/dashevo
@@ -28,15 +29,15 @@ Official sites
 Community sites
 ---------------
 
+- https://dashdevs.org
 - https://www.dashnexus.org
 - https://www.dashwatch.org
 - https://www.dashboost.org
-- https://www.boostinsight.org
-- https://dashroots.fund
 - https://www.dashcentral.org
 - https://www.dashninja.pl
-- https://www.dashforcenews.com
-- http://www.dashnation.com
+- https://www.dashnews.org
+- https://dashthailand.org
+- https://www.dashnation.com
 - https://dashvotetracker.com
 - https://www.dashspain.org
 - http://www.dashhaiti.com
@@ -58,6 +59,7 @@ Chat
 
 - **Dash Nation Discord:** https://discordapp.com/invite/9z8zX5j
 - **Dash Talk Discord:** https://discordapp.com/invite/PXbUxJB
+- **Dash Dapp Devs Discord:** https://chat.dashdevs.org
 - **Dash English Telegram:** https://t.me/dash_chat
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil
 - **Dash Russia Telegram:** https://telegram.me/Dash_Ru
@@ -90,14 +92,14 @@ Facebook
 
 - **English (Official):** https://www.facebook.com/DashPay
 - **Dash News En Español:** https://www.facebook.com/DashNewsEspanol
-- **Dash Embassy Thailand:** https://www.facebook.com/DashEmbassyThailand
+- **Dash Thailand:** https://www.facebook.com/DashDigitalCashTh/
 - **Brazil:** https://www.facebook.com/DashBrazil
 - **Denmark:** https://www.facebook.com/DashDenmark
 - **Germany:** https://www.facebook.com/dashgermany
 - **Greece:** https://www.facebook.com/DashGreece
 - **Poland:** https://www.facebook.com/Dash.Polska
 - **Russia:** https://www.facebook.com/Dash.Russia
-- **Thailand:** https://www.facebook.com/groups/1127359790623640
+- **Thailand:** https://www.facebook.com/groups/dashembassythailand
 - **Venezuela:** https://www.facebook.com/groups/DarkcoinVenezuela
 - **Vietnam:** https://www.facebook.com/dashvietnam
 
@@ -119,13 +121,12 @@ Twitter
 News
 ----
 
-- **Dash Force News:** https://www.dashforcenews.com
+- **Dash Force News:** https://www.dashnews.org
 - **Dash News En Español:** https://dashnewsespanol.com
 - **Dash News En Español (YouTube):** https://www.youtube.com/channel/UCG6Cuh8Q2eUt4NlZu4K-u8g
 - **Dash News Korea:** https://dashnewskorea.com
 - **Cointelegraph:** https://cointelegraph.com/tags/dash
 - **巴比特 (8BTC):** http://www.8btc.com/dash
-- **比特时代 (BTC38):** http://www.btc38.com/altcoin/dash
 - **Dash Embassy D-A-CH:** http://www.dash-embassy.org/
 - **Dash News Germany:** https://dash-news.de
 - **Dash Vietnam:** https://dashvn.blogspot.com
@@ -172,9 +173,7 @@ Block explorers, statistics and visualizations
 - https://bitinfocharts.com/dash/explorer
 - https://dashblockexplorer.com
 - https://live.blockcypher.com/dash
-- https://dash.holytransaction.com
 - https://dashradar.com
-- http://explorer.coinpayments.net/index.php?chain=7
 - http://udjinm6.github.io/bitlisten
 - http://insight.dash.crowdnode.io
 
@@ -185,7 +184,6 @@ Treasury tools
 - https://www.dashwatch.org
 - https://www.dashcentral.org
 - https://www.dashboost.org
-- https://dashroots.fund
 - https://dashnexus.org
 - https://dashvotetracker.com
 - https://proposal.dash.org
@@ -232,14 +230,14 @@ iOS
 ---
 
 - **Dash Wallet:** https://itunes.apple.com/app/id1206647026
-- **Edge Wallet:** https://itunes.apple.com/app/id1344400091
-- **Jaxx Wallet:** https://itunes.apple.com/app/id1084514516
-- **Coinomi Wallet:** https://itunes.apple.com/app/id1333588809
-- **Dashy:** https://itunes.apple.com/app/id1033268631
+- **Edge:** https://itunes.apple.com/app/id1344400091
+- **Jaxx:** https://itunes.apple.com/app/id1435383184
+- **Coinomi:** https://itunes.apple.com/app/id1333588809
+- **Exodus:** https://itunes.apple.com/app/id1414384820
+- **Bitnovo:** https://itunes.apple.com/app/id1220883632
 - **CoinCap:** https://itunes.apple.com/app/id1074052280
 - **Blockfolio:** https://itunes.apple.com/app/id1095564685
 - **Cryptonaut:** https://itunes.apple.com/app/id1312756405
-- **Quoinex:** https://itunes.apple.com/app/id1140955992
 - **Abra:** https://itunes.apple.com/app/id966301394
 - **BitUniverse:** https://itunes.apple.com/app/id1329338902
 
@@ -248,15 +246,15 @@ Android
 -------
 
 - **Dash Wallet:** https://play.google.com/store/apps/details?id=hashengineering.darkcoin.wallet
-- **Edge Wallet:** https://play.google.com/store/apps/details?id=co.edgesecure.app
-- **Jaxx Wallet:** https://play.google.com/store/apps/details?id=com.kryptokit.jaxx
-- **Coinomi Wallet:** https://play.google.com/store/apps/details?id=com.coinomi.wallet
-- **Cryptonator Wallet:** https://play.google.com/store/apps/details?id=com.aev.cryptonator
-- **DashCentral:** https://play.google.com/store/apps/details?id=net.paregov.android.dashcentral
+- **Edge:** https://play.google.com/store/apps/details?id=co.edgesecure.app
+- **Jaxx:** https://play.google.com/store/apps/details?id=com.liberty.jaxx
+- **Coinomi:** https://play.google.com/store/apps/details?id=com.coinomi.wallet
+- **Cryptonator:** https://play.google.com/store/apps/details?id=com.aev.cryptonator
+- **Exodus:** https://play.google.com/store/apps/details?id=exodusmovement.exodus
+- **Bitnovo:** https://play.google.com/store/apps/details?id=com.bitnovo.app
 - **CoinCap:** https://play.google.com/store/apps/details?id=io.coinCap.coinCap
 - **Blockfolio:** https://play.google.com/store/apps/details?id=com.blockfolio.blockfolio
 - **Cryptonaut:** https://play.google.com/store/apps/details?id=org.cryptonaut.app
-- **Quoinex:** https://play.google.com/store/apps/details?id=mobi.quoine
 - **Abra:** https://play.google.com/store/apps/details?id=com.plutus.wallet
 - **Bitcoin Ticker Widget:** https://play.google.com/store/apps/details?id=st.brothas.mtgoxwidget
 - **BitUniverse:** https://play.google.com/store/apps/details?id=com.bituniverse.portfolio

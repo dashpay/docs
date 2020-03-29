@@ -8,13 +8,15 @@
 Developers
 ==========
 
-Dash Core has published an extensive `Developer Guide 
-<https://dash-docs.github.io/en/>`_ to help new developers get started
-with the Dash code base, and as a reference for experienced developers.
-This guide can be leveraged to quickly and efficiently integrate
-external applications with the Dash ecosystem. Anyone can contribute to
-the guide by submitting an issue or pull request on GitHub. The
-documentation is available at: https://dash-docs.github.io/en/
+The `Dash Platform Developer Documentation <https://dashplatform.readme.io/>` 
+contains technical documentation intended to help developers quickly and
+easily get started with Dash Platform. The `Dash Core Developer
+Documentation <https://dashcore.readme.io/>` provides detailed
+documentation on the Dash Core code base, and serves as a reference for
+experienced developers. These documentation portals can help developers
+to quickly and efficiently integrate external applications with the Dash
+ecosystem. Anyone can contribute to the documentation by suggesting
+edits in the documentation system.
 
 The Dash Core Team also maintains the `Dash Roadmap
 <https://www.dash.org/roadmap>`_, which sets out delivery milestones for
@@ -23,6 +25,13 @@ describing how the development team plans to realise each challenge. The
 Dash Roadmap is complemented by the `Dash Improvement Proposals
 <https://github.com/dashpay/dips>`_, which contain detailed technical
 explanations of proposed changes to the Dash protocol itself.
+
+The Dash community organise discussion and development of Dash apps
+using the following resources:
+
+- `Awesome Dash Platform <https://dashdevs.org/>`__
+- `Dash Dapp Devs Discord <https://chat.dashdevs.org>`__
+- `Dash Bounty Board <https://trello.com/invite/b/FPJzDcok/ea9fc798043d35d61aa8a5df0917cba7/dash-bounty-board>`__
 
 The remaining sections available below describe practical steps to
 carry out common development tasks in Dash.
