@@ -335,6 +335,26 @@ currency management and exploration.
 - Documentation: https://www.chainrider.io/docs/dash
 
 
+NOWNodes
+--------
+
+.. image:: img/nownodes.png
+   :width: 200px
+   :align: right
+   :target: https://nownodes.io
+
+https://nownodes.io/
+
+NOWNodes provides simple, fast, and secure RPC access to Dash full
+nodes. The low latency and high performance is of great use to
+researchers and businesses such as crypto miners or hardware wallet
+providers.
+
+- Features: All Dash RPC commands
+- Pricing Model: Free up to 20k requests, Pricing tiers
+- Documentation: https://nownodes.io/documentation
+
+
 GoCoin
 ------
 
