@@ -46,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Dash'
-copyright = u'2018, Dash Core Group, Inc'
+copyright = u'2020, Dash Core Group, Inc'
 author = u'strophy'
 
 # The version info for the project you're documenting, acts as replacement for
