@@ -58,6 +58,7 @@ specific service.
 Faucets
 -------
 
+- https://testnet-faucet.dash.org - by Dash Core Group
 - http://test.faucet.masternode.io - by coingun
 - http://faucet.test.dash.crowdnode.io - by ndrezza
 - https://test.faucet.dashninja.pl - by elbereth
