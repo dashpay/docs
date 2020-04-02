@@ -79,39 +79,15 @@ SPORK_3_INSTANTSEND_BLOCK_FILTERING
   If enabled, masternodes will reject blocks containing transactions in
   conflict with locked but unconfirmed InstantSend transactions.
 
-SPORK_5_INSTANTSEND_MAX_VALUE
-  Enforces the maximum value in Dash that can be included in an
-  InstantSend transaction.
-
 SPORK_6_NEW_SIGS
   Enables a new signature format for Dash-specific network messages
   introduced in Dash 12.3. For more information, see `here
   <https://github.com/dashpay/dash/pull/1936>`__ and `here
   <https://github.com/dashpay/dash/pull/1937>`__.
 
-SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT
-  If enabled, miners must pay 50% of the block reward to a masternode
-  currently pending selection or the block will be considered invalid.
-
 SPORK_9_SUPERBLOCKS_ENABLED
   If enabled, superblocks are verified and issued to pay proposal
   winners.
-
-SPORK_10_MASTERNODE_PAY_UPDATED_NODES
-  Controls whether masternodes running an older protocol version are
-  considered eligible for payment. This can be used as an incentive to
-  encourage masternodes to update.
-
-SPORK_12_RECONSIDER_BLOCKS
-  Forces reindex of a specified number of blocks to recover from
-  unintentional network forks.
-
-SPORK_13_OLD_SUPERBLOCK_FLAG
-  Deprecated. No network function since block 614820.
-
-SPORK_14_REQUIRE_SENTINEL_FLAG
-  Toggles whether masternodes with status are eligible for payment if
-  status is WATCHDOG_EXPIRED, i.e. Sentinel is not running properly.
 
 SPORK_15_DETERMINISTIC_MNS_ENABLED
   Controls whether `deterministic masternodes
