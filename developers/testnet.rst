@@ -52,7 +52,7 @@ specific service.
 - **Bugtracker:** https://github.com/dashpay/dash/issues/new
 - **Discussion and help:** https://www.dash.org/forum/topic/testing.53/
 - **Masternode tools:** https://test.dashninja.pl/masternodes.html
-- **Android wallet:** https://www.dash.org/forum/threads/dash-wallet-for-android-v5-testnet.14775/
+- **Android wallet:** https://github.com/dashevo/dash-wallet/releases/tag/v7.0.2
 - **Testnet for Bitcoin:** https://en.bitcoin.it/wiki/Testnet
 
 Faucets
