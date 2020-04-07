@@ -335,6 +335,26 @@ currency management and exploration.
 - Documentation: https://www.chainrider.io/docs/dash
 
 
+Blockmove
+---------
+
+.. image:: img/blockmove.png
+   :width: 200px
+   :align: right
+   :target: https://blockmove.io
+
+https://blockmove.io
+
+Сryptocurrency wallet, merchant & API provider. Blockmove is a simple
+and easy way to start accepting payments in cryptocurrency.
+
+- Features: Non-custodial wallet, HD Wallet, High anonymity, Low fees. 
+  Private keys are not stored and are available only to the user. 
+- Pricing Model: API - 0.3% for withdrawal transactions. Merchant - 1 
+  year free, then $49/month 
+- Documentation: https://docs.blockmove.io
+
+
 NOWNodes
 --------
 
