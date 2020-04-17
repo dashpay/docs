@@ -25,9 +25,9 @@ released through his GitHub account.
 You can optionally verify the integrity of your download by running the
 following commands (example for Linux)::
 
-  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.3/Dash-Electrum-3.3.8.3.tar.gz
-  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.3/SHA256SUMS.txt.asc
-  sha256sum Dash-Electrum-3.3.8.3.tar.gz
+  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.4/Dash-Electrum-3.3.8.4.tar.gz
+  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.4/SHA256SUMS.txt.asc
+  sha256sum Dash-Electrum-3.3.8.4.tar.gz
   cat SHA256SUMS.txt.asc
 
 You can also optionally verify the authenticity of your download as an
@@ -58,9 +58,9 @@ current version as necessary) in the terminal to install Dash Electrum
 from the source tarball::
 
   sudo apt install python3-pyqt5 python3-pip python3-setuptools
-  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.3/Dash-Electrum-3.3.8.3.tar.gz
-  tar -zxvf Dash-Electrum-3.3.8.3.tar.gz
-  cd Dash-Electrum-3.3.8.3
+  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.4/Dash-Electrum-3.3.8.4.tar.gz
+  tar -zxvf Dash-Electrum-3.3.8.4.tar.gz
+  cd Dash-Electrum-3.3.8.4
   sudo python3 setup.py install
 
 You can then run ``electrum-dash`` from the terminal.
