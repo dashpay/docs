@@ -51,7 +51,7 @@ https://www.allnodes.com
 
 - Operated by: Sephiroth
 - Services: Monitoring, Hosting
-- Cost: from $3/month
+- Cost: from $4/month
 - `Site <https://www.allnodes.com>`__
 - `Email <info@allnodes.com>`__
 - `Twitter <https://twitter.com/allnodes>`__
