@@ -497,6 +497,46 @@ here:
    Guarda wallet
 
 
+Huobi Wallet
+============
+
+https://www.huobiwallet.com
+
+.. image:: img/huobi-wallet.png
+   :width: 100px
+   :align: right
+   :target: https://www.huobiwallet.com
+
+Huobi Wallet is a professional, convenient, safe and secure solution to
+secure your cryptocurrency assets. Users have full control over their
+assets, since they manage their own private keys. The wallet supports
+multisig and a built-in one-click exchange.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.huobionchainwallet.gp
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/app/id1433883012
+
+Huobi Wallet is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.huobionchainwallet.gp>`__ 
+and the `Apple App Store for iOS <https://itunes.apple.com/app/id1433883012>`__.
+
+Documentation
+-------------
+
+Huobi offers detailed documentation of all functions at
+https://support.huobiwallet.com and a few quick links are also collected
+here:
+
+- `Basic Tutorial <https://support.huobiwallet.com/hc/en-us/categories/360000036582-Basic-Tutorial>`_
+- `Wallet Security <https://support.huobiwallet.com/hc/en-us/categories/360000036622-Wallet-Security>`_
+
+
 Jaxx
 ====
 
