@@ -78,3 +78,25 @@ Support for Magnum Wallet is available at
 
 .. image:: img/magnum-wallet.png
    :width: 400px
+
+.. _westwallet:
+
+WestWallet
+==========
+
+.. image:: img/westwallet.png
+   :width: 120px
+   :align: right
+
+`WestWallet <https://westwallet.info/>`_ is a multicurrency web wallet
+for storing, sharing and transferring the most popular cryptocurrencies.
+The wallet includes an automatable instant exchange, instant transfers
+between users and automatic withdrawal.
+
+Please note that web wallets may not be as secure as alternatives such
+as hardware wallets. Be aware of the risk of storing large amounts of
+Dash in keyfile wallets, since they are an easier target to attack than
+mobile or hardware wallets. 
+
+Support for Magnum Wallet is available at 
+`info@westwallet.info <info@westwallet.info>`_.
