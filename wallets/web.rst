@@ -8,7 +8,7 @@ MyDashWallet
 ============
 
 .. image:: img/mydashwallet.png
-   :width: 120px
+   :width: 160px
    :align: right
 
 `MyDashWallet <https://mydashwallet.org/>`_ is a web interface to the
@@ -85,7 +85,7 @@ WestWallet
 ==========
 
 .. image:: img/westwallet.png
-   :width: 120px
+   :width: 160px
    :align: right
 
 `WestWallet <https://westwallet.info/>`_ is a multicurrency web wallet
@@ -98,5 +98,5 @@ as hardware wallets. Be aware of the risk of storing large amounts of
 Dash in keyfile wallets, since they are an easier target to attack than
 mobile or hardware wallets. 
 
-Support for Magnum Wallet is available at 
+Support for WestWallet is available at 
 `info@westwallet.info <info@westwallet.info>`_.
