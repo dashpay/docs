@@ -105,7 +105,7 @@ Other pools are also available and may be advantageous for different
 reasons such as ping latency, uptime, fee, users, etc.:
 
 - https://coinfoundry.org
-- https://mining.luxor.tech/
+- https://mining.luxor.tech
 - https://dash.suprnova.cc
 - https://www.nicehash.com
 - https://www.coinotron.com
@@ -119,7 +119,6 @@ reasons such as ping latency, uptime, fee, users, etc.:
 - https://avalon-life.io
 - https://www.genesis-mining.com
 - https://www.viabtc.com
-- http://dash.cybtc.info
 - http://zpool.ca
 
 DISCLAIMER: This list is provided for informational purposes only.
