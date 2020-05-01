@@ -79,7 +79,7 @@ Support for Magnum Wallet is available at
 .. image:: img/magnum-wallet.png
    :width: 400px
 
-.. _westwallet:
+.. _west-wallet:
 
 WestWallet
 ==========
