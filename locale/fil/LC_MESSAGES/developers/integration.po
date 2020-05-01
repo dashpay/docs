@@ -1,0 +1,1222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Dash Core Group, Inc
+# This file is distributed under the same license as the Dash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dash latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-01 02:11+0000\n"
+"PO-Revision-Date: 2019-04-08 11:33+0000\n"
+"Language-Team: Filipino (https://www.transifex.com/dash/teams/37570/fil/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fil\n"
+"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
+
+#: ../../developers/integration.rst:1
+msgid "Technical guides for merchants using Dash. API and SDK resources."
+msgstr ""
+
+#: ../../developers/integration.rst:1
+msgid ""
+"dash, merchants, payment processor, API, SDK, insight, blockcypher, gocoin, "
+"instantsend, python, .NET, java, javascript, nodejs, php, objective-c, "
+"vending machines"
+msgstr ""
+
+#: ../../developers/integration.rst:9
+msgid "Integration Overview"
+msgstr ""
+
+#: ../../developers/integration.rst:11
+msgid ""
+"This documentation is also available as a `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_IntegrationOverview.pdf>`__."
+msgstr ""
+
+#: ../../developers/integration.rst:13
+msgid ""
+"`Dash Core <https://github.com/dashpay/dash>`__ is a “fork” of `Bitcoin Core"
+" <https://github.com/bitcoin/bitcoin>`__ and shares many common "
+"functionalities. Key differences relate to existing JSON-RPC commands which "
+"have been customized to support unique functionalities such as InstantSend."
+msgstr ""
+
+#: ../../developers/integration.rst:19
+msgid ""
+"**General Information:** Dash is a “Proof of Work” network and is similar to"
+" Bitcoin."
+msgstr ""
+
+#: ../../developers/integration.rst:22
+msgid "Block Time: ~2.6 Minutes per Block"
+msgstr ""
+
+#: ../../developers/integration.rst:23
+msgid "Github Source: https://github.com/dashpay/dash"
+msgstr ""
+
+#: ../../developers/integration.rst:24
+msgid "Latest Release: https://github.com/dashpay/dash/releases"
+msgstr ""
+
+#: ../../developers/integration.rst:26
+msgid ""
+"**JSON-RPC Interface:** The majority of commands are unchanged from Bitcoin "
+"making integration into existing systems relatively straightforward. Note "
+"that the following commands have been modified to support InstantSend:"
+msgstr ""
+
+#: ../../developers/integration.rst:31 ../../developers/integration.rst:158
+msgid ""
+"`getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-"
+"procedure-calls-blockchain#section-get-raw-mem-pool>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:32 ../../developers/integration.rst:159
+msgid ""
+"`getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-"
+"procedure-calls-blockchain#section-get-mem-pool-ancestors>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:33 ../../developers/integration.rst:160
+msgid ""
+"`getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-"
+"procedure-calls-blockchain#section-get-mem-pool-descendants>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:34 ../../developers/integration.rst:161
+msgid ""
+"`getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-"
+"procedure-calls-blockchain#section-get-mem-pool-entry>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:35 ../../developers/integration.rst:162
+msgid ""
+"`getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-"
+"procedure-calls-raw-transactions#section-get-raw-transaction>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:36 ../../developers/integration.rst:163
+msgid ""
+"`decoderawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-"
+"procedure-calls-raw-transactions#section-decode-raw-transaction>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:37 ../../developers/integration.rst:164
+msgid ""
+"`gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-"
+"procedure-calls-wallet#section-get-transaction>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:38 ../../developers/integration.rst:165
+msgid ""
+"`listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-"
+"procedure-calls-wallet#section-list-transactions>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:39 ../../developers/integration.rst:166
+msgid ""
+"`listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-"
+"procedure-calls-wallet#section-list-since-block>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:41
+msgid ""
+"**Block Hashing Algorithm:** Dash uses the “X11” algorithm in place of "
+"SHA256 used in Bitcoin. It’s important to note, however, that this only "
+"affects the hashing of the Block itself. All other internals utilize SHA256 "
+"hashes (transactions, merkle root, etc) which allows for most existing "
+"libraries to work in the Dash ecosystem."
+msgstr ""
+
+#: ../../developers/integration.rst:47
+msgid ""
+"**Special Transactions:** Dash Core v0.13.x introduces the concept of "
+"“Special Transactions”. Please see the `Transaction Type Integration Guide "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ for more information."
+msgstr ""
+
+#: ../../developers/integration.rst:55
+msgid "Special Transactions"
+msgstr ""
+
+#: ../../developers/integration.rst:57
+msgid ""
+"This documentation is also available as a `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__."
+msgstr ""
+
+#: ../../developers/integration.rst:59
+msgid ""
+"Dash 0.13.0 and higher implement `DIP002 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, which form a "
+"basis for new transaction types that provide on-chain metadata to assist "
+"various consensus mechanisms. The following special transaction types exist:"
+msgstr ""
+
+#: ../../developers/integration.rst:65
+msgid "Release"
+msgstr ""
+
+#: ../../developers/integration.rst:65
+msgid "Version"
+msgstr ""
+
+#: ../../developers/integration.rst:65
+msgid "Type"
+msgstr ""
+
+#: ../../developers/integration.rst:65
+msgid "Payload Size"
+msgstr ""
+
+#: ../../developers/integration.rst:65
+msgid "Payload"
+msgstr ""
+
+#: ../../developers/integration.rst:65
+msgid "Payload JSON"
+msgstr ""
+
+#: ../../developers/integration.rst:65
+msgid "Transaction Purpose"
+msgstr ""
+
+#: ../../developers/integration.rst:67 ../../developers/integration.rst:69
+#: ../../developers/integration.rst:71 ../../developers/integration.rst:73
+#: ../../developers/integration.rst:75 ../../developers/integration.rst:77
+#: ../../developers/integration.rst:79
+msgid "v0.13.0"
+msgstr ""
+
+#: ../../developers/integration.rst:67 ../../developers/integration.rst:69
+#: ../../developers/integration.rst:71 ../../developers/integration.rst:73
+#: ../../developers/integration.rst:73 ../../developers/integration.rst:75
+#: ../../developers/integration.rst:77 ../../developers/integration.rst:79
+msgid "3"
+msgstr ""
+
+#: ../../developers/integration.rst:67
+msgid "0"
+msgstr ""
+
+#: ../../developers/integration.rst:67 ../../developers/integration.rst:67
+#: ../../developers/integration.rst:67
+msgid "n/a"
+msgstr ""
+
+#: ../../developers/integration.rst:67
+msgid "Standard Transaction"
+msgstr ""
+
+#: ../../developers/integration.rst:69
+msgid "1"
+msgstr ""
+
+#: ../../developers/integration.rst:69 ../../developers/integration.rst:71
+#: ../../developers/integration.rst:73 ../../developers/integration.rst:75
+#: ../../developers/integration.rst:77 ../../developers/integration.rst:79
+msgid "<variable int>"
+msgstr ""
+
+#: ../../developers/integration.rst:69 ../../developers/integration.rst:71
+#: ../../developers/integration.rst:73 ../../developers/integration.rst:75
+#: ../../developers/integration.rst:77 ../../developers/integration.rst:79
+msgid "<hex>"
+msgstr ""
+
+#: ../../developers/integration.rst:69
+msgid "proRegTx"
+msgstr ""
+
+#: ../../developers/integration.rst:69
+msgid ""
+"`Masternode Registration <https://dashcore.readme.io/docs/core-ref-"
+"transactions-special-transactions#section-pro-reg-tx>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:71
+msgid "2"
+msgstr ""
+
+#: ../../developers/integration.rst:71
+msgid "proUpServTx"
+msgstr ""
+
+#: ../../developers/integration.rst:71
+msgid ""
+"`Update Masternode Service <https://dashcore.readme.io/docs/core-ref-"
+"transactions-special-transactions#section-pro-up-serv-tx>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:73
+msgid "proUpRegTx"
+msgstr ""
+
+#: ../../developers/integration.rst:73
+msgid ""
+"`Update Masternode Operator <https://dashcore.readme.io/docs/core-ref-"
+"transactions-special-transactions#section-pro-up-reg-tx>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:75
+msgid "4"
+msgstr ""
+
+#: ../../developers/integration.rst:75
+msgid "proUpRevTx"
+msgstr ""
+
+#: ../../developers/integration.rst:75
+msgid ""
+"`Masternode Revocation <https://dashcore.readme.io/docs/core-ref-"
+"transactions-special-transactions#section-pro-up-rev-tx>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:77
+msgid "5"
+msgstr ""
+
+#: ../../developers/integration.rst:77
+msgid "cbTx"
+msgstr ""
+
+#: ../../developers/integration.rst:77
+msgid ""
+"`Masternode List Merkle Proof <https://dashcore.readme.io/docs/core-ref-"
+"transactions-special-transactions#section-cb-tx>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:79
+msgid "6"
+msgstr ""
+
+#: ../../developers/integration.rst:79
+msgid "qcTx"
+msgstr ""
+
+#: ../../developers/integration.rst:79
+msgid ""
+"`Quorum Commitment <https://dashcore.readme.io/docs/core-ref-transactions-"
+"special-transactions#section-qc-tx>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:82
+msgid "Integration notes:"
+msgstr ""
+
+#: ../../developers/integration.rst:84
+msgid ""
+"`DIP002 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ are a "
+"foundational component of Dash Core v0.13.0 and introduce a new Transaction "
+"Version and related “Payload” to the network."
+msgstr ""
+
+#: ../../developers/integration.rst:88
+msgid ""
+"Integrated Systems must be able to `serialize and deserialize "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#serialization-"
+"hashing-and-signing>`__ these new Transaction Types in order to accurately "
+"encode and decode Raw Transaction data."
+msgstr ""
+
+#: ../../developers/integration.rst:92
+msgid ""
+"From a `backwards compatibility "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ "
+"perspective, the 4 byte (32-bit) ``version`` field included in Legacy "
+"Transactions has been split into two fields: ``version`` and ``type`` (each "
+"consisting of 2 bytes)."
+msgstr ""
+
+#: ../../developers/integration.rst:97
+msgid ""
+"Refer to the `Special Transactions <https://dashcore.readme.io/docs/core-"
+"ref-transactions-special-transactions>`__ section of the dash developer "
+"reference for additional detail on these data types, e.g. <variable int>."
+msgstr ""
+
+#: ../../developers/integration.rst:101
+msgid ""
+"`InstantSend "
+"<https://docs.dash.org/en/stable/integration/technical.html#instantsend>`__ "
+"status and Payload JSON (e.g. ``proRegTx``) is included in the JSON-RPC "
+"response, please note that this data is not part of the calculated hash and "
+"is provided for convenience."
+msgstr ""
+
+#: ../../developers/integration.rst:106
+msgid ""
+"See the `v0.13.0 transaction types integration documentation (PDF) "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ for worked examples of each"
+" transaction type."
+msgstr ""
+
+#: ../../developers/integration.rst:113
+msgid "InstantSend"
+msgstr ""
+
+#: ../../developers/integration.rst:115
+msgid ""
+"This documentation is also available as a `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend.pdf>`__."
+msgstr ""
+
+#: ../../developers/integration.rst:117
+msgid ""
+"InstantSend is a feature provided by the Dash network that allows for zero-"
+"confirmation transactions to be safely accepted and re-spent. The network "
+"attempts to lock the inputs of every valid transaction when it is broadcast "
+"to the network. Every secured transaction is included in a following block "
+"in accordance with standard blockchain principles."
+msgstr ""
+
+#: ../../developers/integration.rst:123
+msgid ""
+"InstantSend is enabled by the Masternode Network which comprises "
+"approximately 5,000 masternode servers. These nodes are differentiated from "
+"standard nodes by having proven ownership of 1,000 Dash, making the network "
+"`highly resistant to Sybil attacks "
+"<https://en.wikipedia.org/wiki/Sybil_attack>`__. Masternodes form `Long-"
+"Living Masternode Quorums (LLMQs) "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, which are "
+"responsible for providing near instant certainty to the transaction "
+"participants that the transaction inputs cannot be respent, and that the "
+"transaction will be included in a following block instead of a conflicting "
+"transaction."
+msgstr ""
+
+#: ../../developers/integration.rst:133
+msgid ""
+"This concept works as an extension to Nakamoto Consensus. InstantSend "
+"enables transacted funds to be immediately and securely respent by the "
+"recipient, even before the transaction is included in a block."
+msgstr ""
+
+#: ../../developers/integration.rst:139
+msgid "Receiving InstantSend Transactions"
+msgstr ""
+
+#: ../../developers/integration.rst:141
+msgid "Receiving an InstantSend Transaction introduces two requirements:"
+msgstr ""
+
+#: ../../developers/integration.rst:143
+msgid ""
+"The ability to determine the “InstantSend Status” of a given transaction."
+msgstr ""
+
+#: ../../developers/integration.rst:146
+msgid ""
+"The ability to adjust “Confirmation Status” independently of block "
+"confirmation."
+msgstr ""
+
+#: ../../developers/integration.rst:149
+msgid ""
+"InstantSend Status is typically determined through direct connection with "
+"the dash daemon, `ZMQ notification "
+"<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__, or "
+"through the usage of an external wallet notification script."
+msgstr ""
+
+#: ../../developers/integration.rst:153
+msgid ""
+"**Direct Connection:** InstantSend Status can be identified through direct "
+"connection with the Dash daemon using JSON-RPC protocol. The “instantlock” "
+"attribute of the JSON response reflects the status of the transaction and is"
+" included in the following commands:"
+msgstr ""
+
+#: ../../developers/integration.rst:168
+msgid ""
+"**ZMQ Notification:** Whenever a transaction enters the mempool and whenever"
+" a transaction is locked in the mempool, ZMQ notifications can be broadcast "
+"by the node. A list of possible ZMQ notifications can be found `here "
+"<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__."
+msgstr ""
+
+#: ../../developers/integration.rst:173
+msgid ""
+"The following notifications are relevant for recognizing transactions and "
+"their corresponding instantlocks:"
+msgstr ""
+
+#: ../../developers/integration.rst:176
+msgid "zmqpubhashtx"
+msgstr ""
+
+#: ../../developers/integration.rst:177
+msgid "zmqpubhashtxlock"
+msgstr ""
+
+#: ../../developers/integration.rst:178
+msgid "zmqpubrawtx"
+msgstr ""
+
+#: ../../developers/integration.rst:179
+msgid "zmqpubrawtxlock"
+msgstr ""
+
+#: ../../developers/integration.rst:181
+msgid ""
+"**Wallet Notification:** The Dash Core Daemon can be configured to execute "
+"an external script whenever an InstantSend transaction relating to that "
+"wallet is observed. This is configured by adding the following line to the "
+"dash.conf file::"
+msgstr ""
+
+#: ../../developers/integration.rst:188
+msgid ""
+"This is typically used with a wallet that has been populated with `watch-"
+"only <https://dashcore.readme.io/docs/core-additional-resources-glossary"
+"#section-watch-only-address>`__ addresses."
+msgstr ""
+
+#: ../../developers/integration.rst:195
+msgid "Broadcasting InstantSend Transactions"
+msgstr ""
+
+#: ../../developers/integration.rst:197
+msgid ""
+"Since Dash v0.14.0 established LLMQs on the Dash network, quorums will now "
+"attempt to lock every valid transaction by default without any additional "
+"fee or action by the sending wallet or user. A transaction is eligible for "
+"InstantSend when each of its inputs is considered confirmed. This is the "
+"case when at least one of the following circumstances is true:"
+msgstr ""
+
+#: ../../developers/integration.rst:204
+msgid ""
+"the previous transaction referred to by the input is confirmed with 6 blocks"
+msgstr ""
+
+#: ../../developers/integration.rst:206
+msgid ""
+"the previous transaction is confirmed through an older InstantSend lock"
+msgstr ""
+
+#: ../../developers/integration.rst:208
+msgid ""
+"the block containing the previous transaction is `ChainLocked "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:210
+msgid ""
+"When checking the previous transaction for an InstantSend lock, it is "
+"important to also do this on mempool (non-mined) transactions. This allows "
+"chained InstantSend locking."
+msgstr ""
+
+#: ../../developers/integration.rst:215
+msgid "Additional Resources"
+msgstr ""
+
+#: ../../developers/integration.rst:217
+msgid ""
+"The following resources provide additional information about InstantSend and"
+" are intended to help provide a more complete understanding of the "
+"underlying technologies."
+msgstr ""
+
+#: ../../developers/integration.rst:221
+msgid ""
+"`InstantSend Technical Information "
+"<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:222
+msgid ""
+"`InstantSend Developer Documentation <https://dashcore.readme.io/docs/core-"
+"guide-dash-features-instantsend>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:223
+msgid ""
+"`DIP0010: LLMQ InstantSend "
+"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:224
+msgid ""
+"`Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-"
+"brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:230
+msgid "API Services"
+msgstr ""
+
+#: ../../developers/integration.rst:232
+msgid ""
+"This documentation is also available as a `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-API.pdf>`__."
+msgstr ""
+
+#: ../../developers/integration.rst:234
+msgid ""
+"Several API services exist to facilitate quick and easy integration with the"
+" Dash network for services including:"
+msgstr ""
+
+#: ../../developers/integration.rst:237
+msgid "Transaction broadcasting"
+msgstr ""
+
+#: ../../developers/integration.rst:238
+msgid "Exchange rates"
+msgstr ""
+
+#: ../../developers/integration.rst:239
+msgid "Currency conversion"
+msgstr ""
+
+#: ../../developers/integration.rst:240
+msgid "Invoice generation"
+msgstr ""
+
+#: ../../developers/integration.rst:242
+msgid ""
+"API Services are typically leveraged to eliminate that requirement of "
+"running your own infrastructure to support blockchain interactions. This "
+"includes mechanisms such as:"
+msgstr ""
+
+#: ../../developers/integration.rst:246
+msgid "Forming and Broadcasting a Transaction to the network."
+msgstr ""
+
+#: ../../developers/integration.rst:247
+msgid "Address generation using HD Wallets."
+msgstr ""
+
+#: ../../developers/integration.rst:248
+msgid "Payment Processing using WebHooks."
+msgstr ""
+
+#: ../../developers/integration.rst:250
+msgid ""
+"There are a variety of options for supporting these methods, with the key "
+"differentiator being the pricing model included and supported features. The "
+"following list of API Providers attempts to outline these key "
+"features/differentiators and also includes a link to related documentation."
+msgstr ""
+
+#: ../../developers/integration.rst:258
+msgid "Insight"
+msgstr ""
+
+#: ../../developers/integration.rst:265
+msgid "https://github.com/dashevo/insight-api"
+msgstr ""
+
+#: ../../developers/integration.rst:267
+msgid ""
+"The open-source Insight REST API provides you with a convenient, powerful "
+"and simple way to read data from the Dash network and build your own "
+"services with it. A practical guide to getting started with the Insight API "
+"and Insight UI block explorer is available :ref:`here <insight-api>`."
+msgstr ""
+
+#: ../../developers/integration.rst:273
+msgid "Features: Transaction Broadcast, WebSocket Notifications."
+msgstr ""
+
+#: ../../developers/integration.rst:274
+msgid "Pricing Model: Free / Open Source"
+msgstr ""
+
+#: ../../developers/integration.rst:275
+msgid "Documentation: https://github.com/dashevo/insight-api"
+msgstr ""
+
+#: ../../developers/integration.rst:279 ../../developers/integration.rst:580
+msgid "BlockCypher"
+msgstr ""
+
+#: ../../developers/integration.rst:286 ../../developers/integration.rst:587
+msgid "https://www.blockcypher.com"
+msgstr ""
+
+#: ../../developers/integration.rst:288
+msgid ""
+"BlockCypher is a simple, mostly RESTful JSON API for interacting with "
+"blockchains, accessed over HTTP or HTTPS from the api.blockcypher.com "
+"domain."
+msgstr ""
+
+#: ../../developers/integration.rst:292
+msgid ""
+"Features: Transaction Broadcast, HD Wallet / Address Generation, WebSocket "
+"and WebHook Callbacks as well as Payment Forwarding. BlockCypher does not "
+"handle Private Keys."
+msgstr ""
+
+#: ../../developers/integration.rst:295
+msgid ""
+"Pricing Model: Per API Call, 5000 Requests -> $85.00 per month "
+"(https://accounts.blockcypher.com/plans)"
+msgstr ""
+
+#: ../../developers/integration.rst:297
+msgid "Documentation: https://www.blockcypher.com/dev/dash/"
+msgstr ""
+
+#: ../../developers/integration.rst:301
+msgid "BitGo"
+msgstr ""
+
+#: ../../developers/integration.rst:308
+msgid "https://www.bitgo.com"
+msgstr ""
+
+#: ../../developers/integration.rst:310
+msgid ""
+"BitGo provides a simple and robust RESTful API and client SDK to integrate "
+"digital currency wallets with your application. Support for Dash InstantSend"
+" is available."
+msgstr ""
+
+#: ../../developers/integration.rst:314
+msgid ""
+"Features: Multi-Signature HD Wallets, Wallet Operations, WebSocket and "
+"WebHook Notifications, Custody Solutions"
+msgstr ""
+
+#: ../../developers/integration.rst:316
+msgid "Pricing Model: Per API Call"
+msgstr ""
+
+#: ../../developers/integration.rst:317
+msgid "Documentation: https://www.bitgo.com/api/v2/"
+msgstr ""
+
+#: ../../developers/integration.rst:320
+msgid "ChainRider"
+msgstr ""
+
+#: ../../developers/integration.rst:327
+msgid "https://www.chainrider.io"
+msgstr ""
+
+#: ../../developers/integration.rst:329
+msgid ""
+"ChainRider is a cloud service providing a set of REST APIs for digital "
+"currency management and exploration."
+msgstr ""
+
+#: ../../developers/integration.rst:332
+msgid ""
+"Features: Blockchain queries, Event Notifications, Transaction Broadcast, "
+"Payment Processing, etc."
+msgstr ""
+
+#: ../../developers/integration.rst:334
+msgid "Pricing Model: Free trial, pay per API call"
+msgstr ""
+
+#: ../../developers/integration.rst:335
+msgid "Documentation: https://www.chainrider.io/docs/dash"
+msgstr ""
+
+#: ../../developers/integration.rst:339
+msgid "Blockmove"
+msgstr ""
+
+#: ../../developers/integration.rst:346
+msgid "https://blockmove.io"
+msgstr ""
+
+#: ../../developers/integration.rst:348
+msgid ""
+"Сryptocurrency wallet, merchant & API provider. Blockmove is a simple and "
+"easy way to start accepting payments in cryptocurrency."
+msgstr ""
+
+#: ../../developers/integration.rst:351
+msgid ""
+"Features: Non-custodial wallet, HD Wallet, High anonymity, Low fees. Private"
+" keys are not stored and are available only to the user."
+msgstr ""
+
+#: ../../developers/integration.rst:353
+msgid ""
+"Pricing Model: API - 0.3% for withdrawal transactions. Merchant - 1 year "
+"free, then $49/month"
+msgstr ""
+
+#: ../../developers/integration.rst:355
+msgid "Documentation: https://docs.blockmove.io"
+msgstr ""
+
+#: ../../developers/integration.rst:359
+msgid "NOWNodes"
+msgstr ""
+
+#: ../../developers/integration.rst:366
+msgid "https://nownodes.io/"
+msgstr ""
+
+#: ../../developers/integration.rst:368
+msgid ""
+"NOWNodes provides simple, fast, and secure RPC access to Dash full nodes. "
+"The low latency and high performance is of great use to researchers and "
+"businesses such as crypto miners or hardware wallet providers."
+msgstr ""
+
+#: ../../developers/integration.rst:373
+msgid "Features: All Dash RPC commands"
+msgstr ""
+
+#: ../../developers/integration.rst:374
+msgid "Pricing Model: Free up to 20k requests, Pricing tiers"
+msgstr ""
+
+#: ../../developers/integration.rst:375
+msgid "Documentation: https://nownodes.io/documentation"
+msgstr ""
+
+#: ../../developers/integration.rst:379 ../../developers/integration.rst:595
+msgid "GoCoin"
+msgstr ""
+
+#: ../../developers/integration.rst:386 ../../developers/integration.rst:602
+msgid "https://gocoin.com"
+msgstr ""
+
+#: ../../developers/integration.rst:388
+msgid ""
+"The GoCoin platform makes taking Dash as easy as installing a plugin. "
+"Payment processing is already implemented for every major shopping platform."
+" GoCoin is focused on helping merchants in privacy-related niches and "
+"specific industries, and handles all transaction risk for all payments from "
+"your customers."
+msgstr ""
+
+#: ../../developers/integration.rst:394
+msgid ""
+"Features: Invoicing, Exchange Rates, WebHook Callbacks. GoCoin holds Private"
+" Keys on their server allowing the merchant to withdraw funds in "
+"Cryptocurrency or convert to Fiat."
+msgstr ""
+
+#: ../../developers/integration.rst:397
+msgid ""
+"Integrations: WooCommerce, Magento, Prestashop, VirtueMart, ZenCart, "
+"OpenCart, OSCommerce, UberCart, nopCommerce, WHMCS, NATS4, Shopify."
+msgstr ""
+
+#: ../../developers/integration.rst:399
+msgid "Pricing Model: 1% Processing Fee (https://gocoin.com/fees)"
+msgstr ""
+
+#: ../../developers/integration.rst:400
+msgid "Documentation: https://gocoin.com/docs"
+msgstr ""
+
+#: ../../developers/integration.rst:404
+msgid "CoinPayments"
+msgstr ""
+
+#: ../../developers/integration.rst:411
+msgid "https://www.coinpayments.net"
+msgstr ""
+
+#: ../../developers/integration.rst:413
+msgid ""
+"CoinPayments is an integrated payment gateway for cryptocurrencies such as "
+"Dash. Shopping cart plugins are available for all popular webcarts used "
+"today. CoinPayments can help you set up a new checkout, or integrate with "
+"your pre-existing checkout."
+msgstr ""
+
+#: ../../developers/integration.rst:418
+msgid ""
+"Features: Invoicing, Exchange Rates, WebHook Callbacks. CoinPayments holds "
+"Private Keys on their server allowing merchant to withdraw funds in "
+"Cryptocurrency or convert to Fiat."
+msgstr ""
+
+#: ../../developers/integration.rst:421
+msgid ""
+"Integrations: aMember Pro, Arastta, Blesta, BoxBilling, Drupal, Ecwid, "
+"Hikashop, Magento, OpenCart, OSCommerce, PrestaShop, Tomato Cart, "
+"WooCommerce, Ubercart, XCart, ZenCart"
+msgstr ""
+
+#: ../../developers/integration.rst:424
+msgid ""
+"Pricing Model: 0.5% Processing Fee (https://www.coinpayments.net/help-fees)"
+msgstr ""
+
+#: ../../developers/integration.rst:426
+msgid "Documentation: https://www.coinpayments.net/apidoc"
+msgstr ""
+
+#: ../../developers/integration.rst:432
+msgid "SDK Resources"
+msgstr ""
+
+#: ../../developers/integration.rst:434
+msgid ""
+"This documentation is also available as a `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-SDK.pdf>`__."
+msgstr ""
+
+#: ../../developers/integration.rst:436
+msgid ""
+"SDKs (Software Development Kits) are used to accelerate the design and "
+"development of a product for the Dash Network. These resources can either be"
+" used to interface with an API provider or for the creation of standalone "
+"applications by forming transactions and/or performing various wallet "
+"functions."
+msgstr ""
+
+#: ../../developers/integration.rst:444
+msgid "Dash Developer Guide"
+msgstr ""
+
+#: ../../developers/integration.rst:451
+msgid "https://dashcore.readme.io/"
+msgstr ""
+
+#: ../../developers/integration.rst:453
+msgid ""
+"The Dash Developer Portal aims to provide the information you need to "
+"understand Dash and start building Dash-based applications. To make the best"
+" use of this documentation, you may want to install the current version of "
+"Dash Core and Dash Platform, either from source, from a pre-compiled "
+"executable or from Docker Hub."
+msgstr ""
+
+#: ../../developers/integration.rst:459
+msgid "Dash Core: https://dashcore.readme.io/"
+msgstr ""
+
+#: ../../developers/integration.rst:460
+msgid "Dash Platform: https://dashplatform.readme.io/"
+msgstr ""
+
+#: ../../developers/integration.rst:463
+msgid "NodeJS/JavaScript: Dashcore"
+msgstr ""
+
+#: ../../developers/integration.rst:470
+msgid "https://bitcore.io"
+msgstr ""
+
+#: ../../developers/integration.rst:472
+msgid ""
+"Dashcore is a fork of Bitcore and operates as a full Dash node — your apps "
+"run directly on the peer-to-peer network. For wallet application "
+"development, additional indexes have been added into Dash for querying "
+"address balances, transaction history, and unspent outputs."
+msgstr ""
+
+#: ../../developers/integration.rst:477 ../../developers/integration.rst:490
+msgid "Platform: NodeJS / Javascript"
+msgstr ""
+
+#: ../../developers/integration.rst:478
+msgid "Documentation: https://bitcore.io/api/lib"
+msgstr ""
+
+#: ../../developers/integration.rst:479
+msgid "Repository lib: https://github.com/dashevo/dashcore-lib"
+msgstr ""
+
+#: ../../developers/integration.rst:480
+msgid "Repository node: https://github.com/dashevo/dashcore-node"
+msgstr ""
+
+#: ../../developers/integration.rst:481
+msgid "See also: `Insight API <https://github.com/dashevo/insight-api>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:484
+msgid "NodeJS/JavaScript: DashJS"
+msgstr ""
+
+#: ../../developers/integration.rst:486
+msgid ""
+"DashJS allows you to transact on L1 or fetch/register documents on L2 within"
+" a single library, including management and signing of your documents."
+msgstr ""
+
+#: ../../developers/integration.rst:491
+msgid "Documentation: https://dashevo.github.io/DashJS"
+msgstr ""
+
+#: ../../developers/integration.rst:492
+msgid "Repository: https://github.com/dashevo/DashJS"
+msgstr ""
+
+#: ../../developers/integration.rst:495
+msgid "PHP: Bitcoin-PHP"
+msgstr ""
+
+#: ../../developers/integration.rst:497
+msgid "https://github.com/snogcel/bitcoin-php"
+msgstr ""
+
+#: ../../developers/integration.rst:499
+msgid ""
+"Bitcoin-PHP is an implementation of Bitcoin with support for Dash using "
+"mostly pure PHP."
+msgstr ""
+
+#: ../../developers/integration.rst:502
+msgid "Platform: PHP"
+msgstr ""
+
+#: ../../developers/integration.rst:503
+msgid ""
+"Documentation: https://github.com/Bit-Wasp/bitcoin-"
+"php/blob/master/doc/Introduction.md"
+msgstr ""
+
+#: ../../developers/integration.rst:504
+msgid "Repository: https://github.com/snogcel/bitcoin-php"
+msgstr ""
+
+#: ../../developers/integration.rst:507
+msgid "Python: PyCoin"
+msgstr ""
+
+#: ../../developers/integration.rst:509
+msgid "https://github.com/DeltaEngine/pycoin"
+msgstr ""
+
+#: ../../developers/integration.rst:511
+msgid ""
+"PyCoin is an implementation of a bunch of utility routines that may be "
+"useful when dealing with Bitcoin and Dash. It has been tested with Python "
+"2.7, 3.6 and 3.7."
+msgstr ""
+
+#: ../../developers/integration.rst:515
+msgid "Platform: Python"
+msgstr ""
+
+#: ../../developers/integration.rst:516
+msgid "Documentation: https://pycoin.readthedocs.io/en/latest/"
+msgstr ""
+
+#: ../../developers/integration.rst:517
+msgid "Repository: https://github.com/DeltaEngine/pycoin"
+msgstr ""
+
+#: ../../developers/integration.rst:518
+msgid ""
+"See also: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-"
+"dashrpc>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:521
+msgid "Java: DashJ"
+msgstr ""
+
+#: ../../developers/integration.rst:528
+msgid "https://github.com/HashEngineering/dashj"
+msgstr ""
+
+#: ../../developers/integration.rst:530
+msgid ""
+"DashJ is a library for working with the Dash protocol. It can maintain a "
+"wallet, send/receive transactions (including InstantSend) without needing a "
+"local copy of Dash Core, and has many other advanced features. It's "
+"implemented in Java but can be used from any JVM compatible language: "
+"examples in Python and JavaScript are included."
+msgstr ""
+
+#: ../../developers/integration.rst:536
+msgid "Platform: Java"
+msgstr ""
+
+#: ../../developers/integration.rst:537
+msgid "Documentation: https://bitcoinj.github.io/getting-started"
+msgstr ""
+
+#: ../../developers/integration.rst:538
+msgid "Repository: https://github.com/HashEngineering/dashj"
+msgstr ""
+
+#: ../../developers/integration.rst:539
+msgid "Example application: https://github.com/tomasz-ludek/pocket-of-dash"
+msgstr ""
+
+#: ../../developers/integration.rst:542
+msgid "Objective-C: Dash-Sync"
+msgstr ""
+
+#: ../../developers/integration.rst:549
+msgid "https://github.com/dashevo/dashsync-iOS"
+msgstr ""
+
+#: ../../developers/integration.rst:551
+msgid ""
+"Dash-Sync is an Objective-C Dash blockchain framework for iOS. It implements"
+" all most relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement"
+" Proposals (DIPs)."
+msgstr ""
+
+#: ../../developers/integration.rst:555
+msgid "Platform: iOS"
+msgstr ""
+
+#: ../../developers/integration.rst:556
+msgid "Repository: https://github.com/dashevo/dashsync-iOS"
+msgstr ""
+
+#: ../../developers/integration.rst:559
+msgid ".NET: NBitcoin"
+msgstr ""
+
+#: ../../developers/integration.rst:566
+msgid "https://github.com/MetacoSA/NBitcoin"
+msgstr ""
+
+#: ../../developers/integration.rst:568
+msgid ""
+"NBitcoin is the most complete Bitcoin library for the .NET platform, and has"
+" been patched to include support for Dash. It implements all most relevant "
+"Bitcoin Improvement Proposals (BIPs) and Dash Improvement Proposals (DIPs). "
+"It also provides low level access to Dash primitives so you can easily build"
+" your application on top of it."
+msgstr ""
+
+#: ../../developers/integration.rst:574
+msgid "Platform: .NET"
+msgstr ""
+
+#: ../../developers/integration.rst:575
+msgid ""
+"Documentation: "
+"https://programmingblockchain.gitbooks.io/programmingblockchain/content/"
+msgstr ""
+
+#: ../../developers/integration.rst:576
+msgid "Repository: https://github.com/MetacoSA/NBitcoin"
+msgstr ""
+
+#: ../../developers/integration.rst:577
+msgid ""
+"See also: `JSON-RPC Utilities <https://github.com/cryptean/bitcoinlib>`__"
+msgstr ""
+
+#: ../../developers/integration.rst:589
+msgid "BlockCypher also offers client SDKs."
+msgstr ""
+
+#: ../../developers/integration.rst:591
+msgid "Platform: Ruby, Python, Java, PHP, Go, NodeJS"
+msgstr ""
+
+#: ../../developers/integration.rst:592
+msgid ""
+"Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-supported-"
+"language-sdks"
+msgstr ""
+
+#: ../../developers/integration.rst:604
+msgid "Platform: JavaScript, PHP, Java, Ruby, .NET, Python"
+msgstr ""
+
+#: ../../developers/integration.rst:605
+msgid "Repositories: https://gocoin.com/docs"
+msgstr ""
+
+#: ../../developers/integration.rst:609
+msgid "Vending Machines"
+msgstr ""
+
+#: ../../developers/integration.rst:611
+msgid ""
+"Community member moocowmoo has released code to help merchants build their "
+"own vending machine and set it up to receive Dash InstantSend payments. The "
+"Dashvend software can also be used to create any sort of payment system, "
+"including point-of-sale systems, that can accept InstantSend payments."
+msgstr ""
+
+#: ../../developers/integration.rst:617
+msgid "`Open Source Code <https://github.com/moocowmoo/dashvend>`_"
+msgstr ""
+
+#: ../../developers/integration.rst:618
+msgid "`Demonstration website <http://code.dashndrink.com>`_"
+msgstr ""
+
+#: ../../developers/integration.rst:619
+msgid "`Demonstration video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_"
+msgstr ""
+
+#: ../../developers/integration.rst:623
+msgid "Price Tickers"
+msgstr ""
+
+#: ../../developers/integration.rst:625
+msgid ""
+"You can add a simple price ticker widget to your website using the simple "
+"`code snippet generator from CoinGecko "
+"<https://www.coingecko.com/en/widgets/ticker/dash/usd>`_."
+msgstr ""
+
+#: ../../developers/integration.rst:635
+msgid ""
+"Similar widgets with different designs are available from `CoinLib "
+"<https://coinlib.io/widgets>`_, `WorldCoinIndex "
+"<https://www.worldcoinindex.com/Widget>`_ and `Cryptonator "
+"<https://www.cryptonator.com/widget>`_, while an API providing similar "
+"information is available from `DashCentral "
+"<https://www.dashcentral.org/about/api>`_."
+msgstr ""
+
+#: ../../developers/integration.rst:643
+msgid "QR Codes"
+msgstr ""
+
+#: ../../developers/integration.rst:645
+msgid ""
+"Many wallets are capable of generating QR codes which can be scanned to "
+"simplify entry of the Dash address. Printing these codes or posting the on "
+"your website makes it easy to receive payment and tips in Dash, both online "
+"and offline."
+msgstr ""
+
+#: ../../developers/integration.rst:650
+msgid ""
+"In Dash Core, go to the **Receive** tab, generate an address if necessary, "
+"and double-click it to display a QR code. Right click on the QR code and "
+"select **Save Image** to save a PNG file."
+msgstr ""
+
+#: ../../developers/integration.rst:653
+msgid ""
+"In Dash for Android, tap **Request Coins** and then tap the QR code to "
+"display a larger image. You can screenshot this to save an image."
+msgstr ""
+
+#: ../../developers/integration.rst:655
+msgid ""
+"In Dash for iOS, swipe to the left to display the **Receive Dash** screen. A"
+" QR code and address will appear. You can screenshot this to save an image."
+msgstr ""
+
+#: ../../developers/integration.rst:658
+msgid ""
+"To generate a QR code from any Dash address, visit `CWA QR Code Generator "
+"<https://cwaqrgen.com/dash>`_ and simply paste your Dash address to generate"
+" an image."
+msgstr ""

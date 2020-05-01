@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, Dash Core Group, Inc
+# Copyright (C) 2020, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-26 02:41+0000\n"
+"POT-Creation-Date: 2020-05-01 02:11+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Kien Bui <kientemp2@gmail.com>, 2019\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
@@ -756,11 +756,11 @@ msgid ""
 "follows::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:554
+#: ../../masternodes/setup.rst:553
 msgid "Replace the fields marked with ``XXXXXXX`` as follows:"
 msgstr "Thay những trường được đánh dâu với ``XXXXXXX`` như sau:"
 
-#: ../../masternodes/setup.rst:556
+#: ../../masternodes/setup.rst:555
 msgid ""
 "``rpcuser``: enter any string of numbers or letters, no special characters "
 "allowed"
@@ -768,7 +768,7 @@ msgstr ""
 "``rpcuser``: nhập vào bất kỳ xâu các chữ số hoặc chữ cái nào, không dùng các"
 " ký tự đặc biệt"
 
-#: ../../masternodes/setup.rst:558
+#: ../../masternodes/setup.rst:557
 msgid ""
 "``rpcpassword``: enter any string of numbers or letters, no special "
 "characters allowed"
@@ -776,23 +776,21 @@ msgstr ""
 "``rpcpassword``: nhập vào bất kỳ xâu các chữ số hoặc chữ cái nào, không dùng"
 " các ký tự đặc biệt"
 
-#: ../../masternodes/setup.rst:560
+#: ../../masternodes/setup.rst:559
 msgid "``externalip``: this is the IP address of your VPS"
 msgstr "``externalip``: đây là địa chỉ IP của máy chủ của bạn"
 
-#: ../../masternodes/setup.rst:562
+#: ../../masternodes/setup.rst:561
 msgid ""
-"Leave the ``masternode`` and ``masternodeblsprivkey`` fields commented out "
-"for now. The result should look something like this:"
+"Leave the ``masternodeblsprivkey`` field commented out for now. The result "
+"should look something like this:"
 msgstr ""
-"Tạm thời cứ để mặc các trường ``masternode`` và ``masternodeblsprivkey`` "
-"dưới dấu comment. Kết quả sẽ có dạng như sau:"
 
-#: ../../masternodes/setup.rst:568
+#: ../../masternodes/setup.rst:567
 msgid "Entering key data in dash.conf on the masternode"
 msgstr "Nhập vào những dữ liệu quan trọng vào file dash.conf trên masternode"
 
-#: ../../masternodes/setup.rst:570
+#: ../../masternodes/setup.rst:569
 msgid ""
 "Press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
 "file. You can now start running Dash on the masternode to begin "
@@ -802,14 +800,14 @@ msgstr ""
 "để lưu file. Bây giờ bạn có thể bắt đầu chạy Dash trên masternode để bắt đầu"
 " đồng bộ blockchain::"
 
-#: ../../masternodes/setup.rst:576
+#: ../../masternodes/setup.rst:575
 msgid ""
 "You will see a message reading **Dash Core server starting**. We will now "
 "install Sentinel, a piece of software which operates as a watchdog to "
 "communicate to the network that your node is working properly::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:587
+#: ../../masternodes/setup.rst:586
 msgid ""
 "You will see a message reading **dashd not synced with network! Awaiting "
 "full sync before running Sentinel.** Add dashd and sentinel to crontab to "
@@ -819,7 +817,7 @@ msgstr ""
 "full sync before running Sentinel.** Thêm dashd và sentinel vào crontab để "
 "đảm bảo rằng nó sẽ chạy mỗi phút để kiểm tra masternode của bạn::"
 
-#: ../../masternodes/setup.rst:593
+#: ../../masternodes/setup.rst:592
 msgid ""
 "Choose nano as your editor and enter the following lines at the end of the "
 "file::"
@@ -827,7 +825,7 @@ msgstr ""
 "Chọn nano làm trình soạn thảo của bạn và nhập vào các dòng sau đây vào phần "
 "cuối của file::"
 
-#: ../../masternodes/setup.rst:599
+#: ../../masternodes/setup.rst:598
 msgid ""
 "Press enter to make sure there is a blank line at the end of the file, then "
 "press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
@@ -836,12 +834,12 @@ msgid ""
 "masternode. You can use the following commands to monitor progress::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:608
+#: ../../masternodes/setup.rst:607
 msgid ""
 "When synchronisation is complete, you should see the following response::"
 msgstr "Khi quá trình đồng bộ hoàn tất, bạn sẽ thấy những phản hồi như sau::"
 
-#: ../../masternodes/setup.rst:621
+#: ../../masternodes/setup.rst:620
 msgid ""
 "Continue with the next step to construct the ProTx transaction required to "
 "enable your masternode."
@@ -849,11 +847,11 @@ msgstr ""
 "Tiếp tục với bước tiếp theo để thiết lâu giao dịch ProTx cần cho việc kích "
 "hoạt masternode của bạn."
 
-#: ../../masternodes/setup.rst:628
+#: ../../masternodes/setup.rst:627
 msgid "Register your masternode"
 msgstr "Đăng ký masternode của bạn"
 
-#: ../../masternodes/setup.rst:630
+#: ../../masternodes/setup.rst:629
 msgid ""
 "DIP003 introduced several changes to how a masternode is set up and "
 "operated. These changes and the three keys required for the different "
@@ -861,34 +859,34 @@ msgid ""
 "documentation."
 msgstr ""
 
-#: ../../masternodes/setup.rst:637
+#: ../../masternodes/setup.rst:636
 msgid "Option 1: Registering from a hardware wallet"
 msgstr "Tuỳ chọn 1: Đăng ký từ một ví phần cứng"
 
-#: ../../masternodes/setup.rst:639
+#: ../../masternodes/setup.rst:638
 msgid ""
 "Go back to DMT and ensure that all fields from the previous step are still "
 "filled out correctly.  Click **Generate new** for the three private keys "
 "required for a DIP003 deterministic masternode:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:643
+#: ../../masternodes/setup.rst:642
 msgid "Owner private key"
 msgstr "Khoá riêng của chủ sở hữu"
 
-#: ../../masternodes/setup.rst:644
+#: ../../masternodes/setup.rst:643
 msgid "Operator private key"
 msgstr "Khoá riêng của người vận hành"
 
-#: ../../masternodes/setup.rst:645
+#: ../../masternodes/setup.rst:644
 msgid "Voting private key"
 msgstr "Khoá riêng bỏ phiếu"
 
-#: ../../masternodes/setup.rst:650
+#: ../../masternodes/setup.rst:649
 msgid "Dash Masternode Tool ready to register a new masternode"
 msgstr "Dash Masternode Tool sẵn sàng cho việc đăng ký một masternode mới"
 
-#: ../../masternodes/setup.rst:652
+#: ../../masternodes/setup.rst:651
 msgid ""
 "Then click **Register masternode**. Optionally specify a different **Payout "
 "address** and/or **Operator reward**, then click **Continue**. Select "
@@ -898,13 +896,13 @@ msgid ""
 "node.) and confirm the following two messages:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:664
+#: ../../masternodes/setup.rst:663
 msgid "Dash Masternode Tool confirmation dialogs to register a masternode"
 msgstr ""
 "Các bảng hội thoại của Dash Masternode Tool xác nhận việc đăng ký một "
 "masternode"
 
-#: ../../masternodes/setup.rst:666
+#: ../../masternodes/setup.rst:665
 msgid ""
 "The BLS private key must be entered in the ``dash.conf`` file on the "
 "masternode. This allows the masternode to watch the blockchain for relevant "
@@ -914,23 +912,26 @@ msgid ""
 "as follows::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:675 ../../masternodes/setup.rst:770
+#: ../../masternodes/setup.rst:674
 msgid ""
 "The editor appears with the existing masternode configuration. Add or "
-"uncomment these lines in the file, replacing the key with your BLS private "
+"uncomment this lines in the file, replacing the key with your BLS private "
 "key generated above::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:682 ../../masternodes/setup.rst:777
+#: ../../masternodes/setup.rst:680 ../../masternodes/setup.rst:777
 msgid ""
 "Press enter to make sure there is a blank line at the end of the file, then "
 "press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
-"file. We now need to restart the masternode for this change to take effect. "
-"Enter the following commands, waiting a few seconds in between to give Dash "
-"Core time to shut down::"
+"file. Note that providing a ``masternodeblsprivkey`` enables masternode "
+"mode, which will automatically force the ``txindex=1``, "
+"``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide "
+"masternode service. We now need to restart the masternode for this change to"
+" take effect. Enter the following commands, waiting a few seconds in between"
+" to give Dash Core time to shut down::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:692
+#: ../../masternodes/setup.rst:693
 msgid ""
 "At this point you can monitor your masternode using ``~/dashman/dashman "
 "status``, by entering ``~/.dashcore/dash-cli masternode status`` or using "
@@ -938,14 +939,14 @@ msgid ""
 "follows:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:700
+#: ../../masternodes/setup.rst:701
 msgid ""
 "dash-cli masternode status output showing successfully registered masternode"
 msgstr ""
 "dash-cli masternode status output hiển thị masternode được đăng ký thành "
 "công"
 
-#: ../../masternodes/setup.rst:702 ../../masternodes/setup.rst:962
+#: ../../masternodes/setup.rst:703 ../../masternodes/setup.rst:966
 msgid ""
 "At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
@@ -953,26 +954,26 @@ msgstr ""
 "Ở thời điểm này bạn có thể thoát khỏi máy chủ của bạn bằng việc gõ ``exit``."
 " Chúc mừng bạn! Masternode của bạn bây giờ đang được chạy."
 
-#: ../../masternodes/setup.rst:709
+#: ../../masternodes/setup.rst:710
 msgid "Option 2: Registering from Dash Core wallet"
 msgstr "Tuỳ chọn 2: Đăng ký từ ví Dash Core"
 
-#: ../../masternodes/setup.rst:712
+#: ../../masternodes/setup.rst:713
 msgid "Identify the funding transaction"
 msgstr "Xác định giao dịch cấp vốn"
 
-#: ../../masternodes/setup.rst:714
+#: ../../masternodes/setup.rst:715
 msgid ""
 "If you used an address in Dash Core wallet for your collateral transaction, "
 "you now need to find the txid of the transaction. Click **Tools > Debug "
 "console** and enter the following command::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:720
+#: ../../masternodes/setup.rst:721
 msgid "This should return a string of characters similar to the following::"
 msgstr "Điều này sẽ trả về một chuỗi các ký tự tương tự như sau ::"
 
-#: ../../masternodes/setup.rst:726
+#: ../../masternodes/setup.rst:727
 msgid ""
 "The first long string is your ``collateralHash``, while the last number is "
 "the ``collateralIndex``."
@@ -980,11 +981,11 @@ msgstr ""
 "Dòng dài đầu tiên là ``collateralHash`` của bạn, còn số cuối cùng là "
 "``collateralIndex``."
 
-#: ../../masternodes/setup.rst:733
+#: ../../masternodes/setup.rst:734
 msgid "Generate a BLS key pair"
 msgstr "Sinh một cặp khoá BLS"
 
-#: ../../masternodes/setup.rst:735
+#: ../../masternodes/setup.rst:736
 msgid ""
 "A public/private BLS key pair is required to operate a masternode. The "
 "private key is specified on the masternode itself, and allows it to be "
@@ -992,7 +993,7 @@ msgid ""
 "transaction with the corresponding public key has been created."
 msgstr ""
 
-#: ../../masternodes/setup.rst:741
+#: ../../masternodes/setup.rst:742
 msgid ""
 "If you are using a hosting service, they may provide you with their public "
 "key, and you can skip this step. If you are hosting your own masternode or "
@@ -1001,7 +1002,7 @@ msgid ""
 "and entering the following command::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:754
+#: ../../masternodes/setup.rst:755
 msgid ""
 "**These keys are NOT stored by the wallet and must be kept secure, similar "
 "to the value provided in the past by the** ``masternode genkey`` "
@@ -1011,11 +1012,11 @@ msgstr ""
 "tương tự như giá trị được cung cấp bởi câu lệnh** ``masternode genkey`` "
 "trước đây"
 
-#: ../../masternodes/setup.rst:759
+#: ../../masternodes/setup.rst:760
 msgid "Add the private key to your masternode configuration"
 msgstr "Thêm khoá riêng vào cấu hình masternode của bạn"
 
-#: ../../masternodes/setup.rst:761
+#: ../../masternodes/setup.rst:762
 msgid ""
 "The public key will be used in following steps. The private key must be "
 "entered in the ``dash.conf`` file on the masternode. This allows the "
@@ -1025,32 +1026,39 @@ msgid ""
 "``ssh`` or PuTTY and edit the configuration file as follows::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:787
+#: ../../masternodes/setup.rst:771
+msgid ""
+"The editor appears with the existing masternode configuration. Add or "
+"uncomment this line in the file, replacing the key with your BLS private key"
+" generated above::"
+msgstr ""
+
+#: ../../masternodes/setup.rst:790
 msgid ""
 "We will now prepare the transaction used to register the masternode on the "
 "network."
 msgstr ""
 "Chúng ta sẽ chuẩn bị giao dịch được dùng để đăng ký masternode lên mạng."
 
-#: ../../masternodes/setup.rst:791
+#: ../../masternodes/setup.rst:794
 msgid "Prepare a ProRegTx transaction"
 msgstr "Chuẩn bị cho một giao dịch ProRegTx "
 
-#: ../../masternodes/setup.rst:793
+#: ../../masternodes/setup.rst:796
 msgid ""
 "A pair of BLS keys for the operator were already generated above, and the "
 "private key was entered on the masternode. The public key is used in this "
 "transaction as the ``operatorPubKey``."
 msgstr ""
 
-#: ../../masternodes/setup.rst:797
+#: ../../masternodes/setup.rst:800
 msgid ""
 "First, we need to get a new, unused address from the wallet to serve as the "
 "**owner key address** (``ownerKeyAddr``). This is not the same as the "
 "collateral address holding 1000 Dash. Generate a new address as follows::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:806
+#: ../../masternodes/setup.rst:809
 msgid ""
 "This address can also be used as the **voting key address** "
 "(``votingKeyAddr``). Alternatively, you can specify an address provided to "
@@ -1058,23 +1066,27 @@ msgid ""
 "address as follows::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:815
+#: ../../masternodes/setup.rst:818
 msgid ""
 "Then either generate or choose an existing address to receive the **owner's "
 "masternode payouts** (``payoutAddress``). It is also possible to use an "
 "address external to the wallet::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:823
+#: ../../masternodes/setup.rst:826
 msgid ""
 "You can also optionally generate and fund another address as the "
 "**transaction fee source** (``feeSourceAddress``). If you selected an "
-"external payout address, you must specify a fee source address. Either the "
-"payout address or fee source address must have enough balance to pay the "
-"transaction fee, or the final ``register_submit`` transaction will fail."
+"external payout address, you must specify a fee source address."
 msgstr ""
 
 #: ../../masternodes/setup.rst:830
+msgid ""
+"Either the payout address or fee source address must have enough balance to "
+"pay the transaction fee, or the ``register_prepare`` transaction will fail."
+msgstr ""
+
+#: ../../masternodes/setup.rst:834
 msgid ""
 "The private keys to the owner and fee source addresses must exist in the "
 "wallet submitting the transaction to the network. If your wallet is "
@@ -1082,29 +1094,29 @@ msgid ""
 "commands. Unlock your wallet for 5 minutes::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:837
+#: ../../masternodes/setup.rst:841
 msgid ""
 "We will now prepare an unsigned ProRegTx special transaction using the "
 "``protx register_prepare`` command. This command has the following syntax::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:844
+#: ../../masternodes/setup.rst:848
 msgid ""
 "Open a text editor such as notepad to prepare this command. Replace each "
 "argument to the command as follows:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:847
+#: ../../masternodes/setup.rst:851
 msgid ""
 "``collateralHash``: The txid of the 1000 Dash collateral funding transaction"
 msgstr "``collateralHash``: Mã txid của giao dịch đặt cọc 1000 Dash"
 
-#: ../../masternodes/setup.rst:849
+#: ../../masternodes/setup.rst:853
 msgid ""
 "``collateralIndex``: The output index of the 1000 Dash funding transaction"
 msgstr "``collateralIndex``: Chỉ số đầu ra của giao dịch cấp vốn 1000 Dash"
 
-#: ../../masternodes/setup.rst:851
+#: ../../masternodes/setup.rst:855
 msgid ""
 "``ipAndPort``: Masternode IP address and port, in the format "
 "``x.x.x.x:yyyy``"
@@ -1112,7 +1124,7 @@ msgstr ""
 "``ipAndPort``: Địa chỉ IP và cổng của masternode, theo định dạng "
 "``x.x.x.x:yyyy``"
 
-#: ../../masternodes/setup.rst:853
+#: ../../masternodes/setup.rst:857
 msgid ""
 "``ownerKeyAddr``: The new Dash address generated above for the owner/voting "
 "address"
@@ -1120,7 +1132,7 @@ msgstr ""
 "``ownerKeyAddr``: Địa chỉ Dash mới được sinh ở trên cho địa chỉ sở hữu/bỏ "
 "phiếu"
 
-#: ../../masternodes/setup.rst:855
+#: ../../masternodes/setup.rst:859
 msgid ""
 "``operatorPubKey``: The BLS public key generated above (or provided by your "
 "hosting service)"
@@ -1128,7 +1140,7 @@ msgstr ""
 "``operatorPubKey``: Khoá công khai BLS được sinh ở trên (hoặc được cung cấp "
 "bởi nhà cung cấp dịch vụ lưu trữ)"
 
-#: ../../masternodes/setup.rst:857
+#: ../../masternodes/setup.rst:861
 msgid ""
 "``votingKeyAddr``: The new Dash address generated above, or the address of a"
 " delegate, used for proposal voting"
@@ -1136,7 +1148,7 @@ msgstr ""
 "``votingKeyAddr``: Địa chỉ Dash mới được sinh ở trên, hoặc địa chỉ uỷ nhiệm "
 "cho việc bỏ phiếu các đề xuất"
 
-#: ../../masternodes/setup.rst:859
+#: ../../masternodes/setup.rst:863
 msgid ""
 "``operatorReward``: The percentage of the block reward allocated to the "
 "operator as payment"
@@ -1144,7 +1156,7 @@ msgstr ""
 "``operatorReward``: Phần trăm phần thưởng khối sẽ được trả cho người vận "
 "hành"
 
-#: ../../masternodes/setup.rst:861
+#: ../../masternodes/setup.rst:865
 msgid ""
 "``payoutAddress``: A new or existing Dash address to receive the owner's "
 "masternode rewards"
@@ -1152,7 +1164,7 @@ msgstr ""
 "``payoutAddress``: Một địa chỉ mới hoặc cũ để nhận phần thưởng khối cho "
 "người chủ sở hữu"
 
-#: ../../masternodes/setup.rst:863
+#: ../../masternodes/setup.rst:867
 msgid ""
 "``feeSourceAddress``: An (optional) address used to fund ProTx fee. "
 "``payoutAddress`` will be used if not specified."
@@ -1161,7 +1173,7 @@ msgstr ""
 "ProTx. Nếu ``feeSourceAddress`` không được cung cấp nó sẽ lấy tiền phí từ "
 "địa chỉ ``payoutAddress``."
 
-#: ../../masternodes/setup.rst:866
+#: ../../masternodes/setup.rst:870
 msgid ""
 "Note that the operator is responsible for :ref:`specifying their own reward "
 "<dip3-update-service>` address in a separate ``update_service`` transaction "
@@ -1169,27 +1181,27 @@ msgid ""
 "collateral does not specify the operator's payout address."
 msgstr ""
 
-#: ../../masternodes/setup.rst:872
+#: ../../masternodes/setup.rst:876
 msgid "Example (remove line breaks if copying)::"
 msgstr "Ví dụ (hãy xoá các xuống dòng nếu copy)::"
 
-#: ../../masternodes/setup.rst:885 ../../masternodes/setup.rst:914
-#: ../../masternodes/setup.rst:941
+#: ../../masternodes/setup.rst:889 ../../masternodes/setup.rst:918
+#: ../../masternodes/setup.rst:945
 msgid "Output::"
 msgstr "Đầu ra::"
 
-#: ../../masternodes/setup.rst:893
+#: ../../masternodes/setup.rst:897
 msgid ""
 "Next we will use the ``collateralAddress`` and ``signMessage`` fields to "
 "sign the transaction, and the output of the ``tx`` field to submit the "
 "transaction."
 msgstr ""
 
-#: ../../masternodes/setup.rst:898
+#: ../../masternodes/setup.rst:902
 msgid "Sign the ProRegTx transaction"
 msgstr "Ký cho giao dịch ProRegTx"
 
-#: ../../masternodes/setup.rst:900
+#: ../../masternodes/setup.rst:904
 msgid ""
 "We will now sign the content of the ``signMessage`` field using the private "
 "key for the collateral address as specified in ``collateralAddress``. Note "
@@ -1200,15 +1212,15 @@ msgid ""
 " the following syntax::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:910 ../../masternodes/setup.rst:937
+#: ../../masternodes/setup.rst:914 ../../masternodes/setup.rst:941
 msgid "Example::"
 msgstr "Ví dụ:"
 
-#: ../../masternodes/setup.rst:920
+#: ../../masternodes/setup.rst:924
 msgid "Submit the signed message"
 msgstr "Gửi thông điệp đã được ký"
 
-#: ../../masternodes/setup.rst:922
+#: ../../masternodes/setup.rst:926
 msgid ""
 "We will now submit the ProRegTx special transaction to the blockchain to "
 "register the masternode. This command must be sent from a Dash Core wallet "
@@ -1217,11 +1229,11 @@ msgid ""
 "following syntax::"
 msgstr ""
 
-#: ../../masternodes/setup.rst:930
+#: ../../masternodes/setup.rst:934
 msgid "Where:"
 msgstr "Ở đó:"
 
-#: ../../masternodes/setup.rst:932
+#: ../../masternodes/setup.rst:936
 msgid ""
 "``tx``: The serialized transaction previously returned in the ``tx`` output "
 "field from the ``protx register_prepare`` command"
@@ -1229,14 +1241,14 @@ msgstr ""
 "``tx``: Kết quả trường đầu ra ``tx`` được trả về từ câu lệnh ``protx "
 "register_prepare``"
 
-#: ../../masternodes/setup.rst:934
+#: ../../masternodes/setup.rst:938
 msgid ""
 "``sig``: The message signed with the collateral key from the ``signmessage``"
 " command"
 msgstr ""
 "``sig``: Là thông điệp được ký với khoá đặt cọc từ câu lệnh ``signmessage``"
 
-#: ../../masternodes/setup.rst:945
+#: ../../masternodes/setup.rst:949
 msgid ""
 "Your masternode is now registered and will appear on the Deterministic "
 "Masternode List after the transaction is mined to a block. You can view this"
@@ -1246,7 +1258,7 @@ msgid ""
 "masternode."
 msgstr ""
 
-#: ../../masternodes/setup.rst:952
+#: ../../masternodes/setup.rst:956
 msgid ""
 "At this point you can go back to your terminal window and monitor your "
 "masternode using ``~/dashman/dashman status``, by entering ``~/.dashcore"
@@ -1254,6 +1266,6 @@ msgid ""
 "The final result should appear as follows:"
 msgstr ""
 
-#: ../../masternodes/setup.rst:960
+#: ../../masternodes/setup.rst:964
 msgid "dashman status output showing successfully registered masternode"
 msgstr "dashman status output hiển thị masternode được đăng ký thành công"
