@@ -370,6 +370,20 @@ Spark
   times.
 
 
+VegaPay
+  .. image:: img/vegapay.png
+     :width: 100px
+     :align: right
+     :target: https://vegapay.vegawallet.com/
+
+  https://vegapay.vegawallet.com/
+
+  VegaPay provides the perfect way to prepare your business for the
+  future. Start accepting cryptocurrency payments to reduce costs and
+  improve customer conversion rates with the full Point of Sale or other
+  business solutions.
+
+
 Xpay
   .. image:: img/xpay.png
      :width: 200px
