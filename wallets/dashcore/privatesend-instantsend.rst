@@ -21,8 +21,8 @@ privacy properties as cash withdrawn from an ATM, for example. The
 mixing and denomination process is seamless, automatic, and requires no
 intervention on the part of the user. The current implementation of
 PrivateSend in the Dash Core wallet allows any amount of Dash to be
-mixed for later use in PrivateSend transactions. As of December 2018,
-PrivateSend is not currently available in other Dash wallets.
+mixed for later use in PrivateSend transactions. PrivateSend is also
+available in the :ref:`Dash Electrum <dash-electrum-wallet>` wallet.
 
 Knowledge of the exact number of rounds of PrivateSend mixing used in
 any given PrivateSend transaction has a `quantifiable effect
@@ -242,9 +242,19 @@ Introduction
 ------------
 
 This documentation describes how to use InstantSend to instantly send
-funds to any other Dash user around the world. Dash InstantSend is
-supported by many wallets and vendors, including (but not limited to)
-the following:
+funds to any other Dash user around the world. Since the release of
+InstantSend based on Long Living Masternode Quorums (`LLMQ-IS <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__)
+in Dash 0.14, the Dash network itself will attempt to generate an
+InstantSend lock for almost every transaction processed by the network,
+according to :ref:`these rules <is-broadcast>`. Unlike the prior
+implementation of InstantSend, which required a higher fee, LLMQ-IS
+locks transactions without any action taken by the user. For this
+reason, only the recipient needs to monitor the network for the
+transaction lock in order to be able to receive funds and process
+transactions with immediate settlement.
+
+Dash InstantSend is supported by many wallets and vendors, including
+(but not limited to) the following:
 
 - Dash Core Wallet
 - Dash Android Wallet
@@ -257,37 +267,14 @@ the following:
 You can read more about InstantSend theory and processes :ref:`here
 <instantsend>`.
 
-Paying with InstantSend
------------------------
+InstantSend Transactions
+------------------------
 
-InstantSend functions by setting a flag on the transaction, causing
-deterministic selection of a quorum of 10 masternodes for each input
-spent in an InstantSend transaction. The masternodes examine the input,
-and if a majority determines it has at least six confirmations, they
-then accept the transaction. The input is then locked until the
-transaction has been confirmed in six mined blocks, at which point the
-output can be used as an input in another InstantSend transaction. This
-differs from inputs used in normal transactions, which can be spent
-after just one confirmation regardless of whether the Dash was received
-using InstantSend or not. A higher fee will be charged for InstantSend
-transactions with more than four inputs, according to the :ref:`fee
-schedule <fees>`. Note that the receiving wallet must also be aware of
-InstantSend in order to be able to immediately continue with the
-transaction or display an appropriate notification that the transaction
-should be considered locked. If the receiving wallet is not aware of
-InstantSend, it will simply appear as a normal transaction and you will
-need to wait for standard block confirmations.
-
-To pay with InstantSend, simply check the relevant checkbox in your app.
-The following screenshots indicate where this setting can be found in
-the Dash Core, iOS and Android wallets.
-
-.. image:: ../img/instantsend-android.png
-   :width: 200px
-.. image:: ../img/instantsend-ios.png
-   :width: 200px
-
-.. figure:: ../img/instantsend-dashcore.png
-   :width: 400px
-
-   Dash Wallets showing InstantSend option
+Since Dash 0.14, all user-facing interface options to create an
+InstantSend transaction have been removed, because all transactions are
+effectively InstantSend transactions. As before, the recipient is
+responsible for monitoring the network for the InstantSend lock and
+implementing user-facing logic and interfaces to continue with
+transaction processing after payment has been recieved. See the
+:ref:`InstantSend Integration <integration-instantsend>` documentation
+for more information on how to monitor for InstandSend locks.

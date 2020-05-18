@@ -144,13 +144,13 @@ transaction confirmation time by centralizing authority on the network
 to various degrees.
 
 Dash suffers from neither of these limitations thanks to its 
-second-layer network of masternodes. Masternodes can be called upon to 
-form voting quorums to check whether or not a submitted transaction is 
-valid. If it is valid, the masternodes "lock" the inputs for the 
-transaction and broadcast this information to the network, effectively 
-promising that the transaction will be included in subsequently mined 
-blocks and not allowing any other spending of these inputs during the 
-confirmation time period.
+second-layer network of masternodes. Masternodes regularly form voting
+quorums to check whether or not a submitted transaction is valid. If it
+is valid, the masternodes "lock" the inputs for the transaction and
+broadcast this information to the network, effectively promising that
+the transaction will be included in subsequently mined blocks and not
+allowing any other spending of these inputs during the confirmation time
+period.
 
 InstantSend technology will allow for cryptocurrencies such as Dash to 
 compete with nearly instantaneous transaction systems such as credit 
@@ -163,7 +163,10 @@ few seconds.
 You can view a practical guide to use InstantSend 
 :ref:`here <dashcore-privatesend-instantsend>`. InstantSend was 
 introduced in a whitepaper called `Transaction Locking and Masternode 
-Consensus: A Mechanism for Mitigating Double Spending Attacks <https://github.com/dashpay/docs/blob/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_.
+Consensus: A Mechanism for Mitigating Double Spending Attacks <https://github.com/dashpay/docs/blob/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_, 
+and further improved through the introduction of `LLMQ-based InstantSend
+<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__ in Dash
+0.14.
 
 
 **How Dash 'InstantSend' Protects Merchants from Double Spends**,
