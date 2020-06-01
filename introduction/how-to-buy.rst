@@ -1031,17 +1031,6 @@ NovaDAX
   deposits and withdrawals in Brazilian real. Trading compeitions and
   OTC services are also available.
 
-3xBit
-  .. image:: exchanges/3xbit.png
-     :width: 200px
-     :align: right
-     :target: https://3xbit.com.br
-
-  https://3xbit.com.br
-
-  3xBit is a Brazil-based exchange offering many Dash pairs, as well as
-  trading against BTC and the dollar-proxy CREDIT coin.
-
 NegocieCoins
   .. image:: exchanges/negociecoins.png
      :width: 200px
