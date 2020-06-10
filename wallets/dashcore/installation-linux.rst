@@ -44,33 +44,28 @@ https://www.dash.org/downloads and save it to your Downloads folder.
 Verifying Dash Core
 ----------------------
 
-This step is optional, but recommended to verify the integrity of the
-file you downloaded. This is done by checking its SHA256 hash against
-the hash published by the Dash Core development team. To view the
-published hash, click the **Hash file** button on the wallet download
-page.
+This step is optional, but recommended to verify the authenticity of the
+file you downloaded. This is done by checking its detached signature 
+against the public key published by the Dash Core development team. 
+To download the detached signature, click the **Signature** button on the 
+wallet download page and save it to the same folder as the downloaded
+binary.
 
-Once both the Dash Core file and the hash file have downloaded,
-double-click the hash file or view it in your browser and find the hash
-value for the Dash Core file you downloaded.
+All releases of Dash are signed using GPG by Alexander Block (codablock) 
+with the key ``63A9 6B40 6102 E091``, `verifiable here on Keybase <https://keybase.io/codablock>`_. 
+Import the key and verify the authenticity of your download as follows::
 
-.. figure:: img/linux/106329757.png
-   :height: 250px
+  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
+  gpg --verify dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz.asc
 
-   Viewing the Dash Core hash file
+.. figure:: img/setup-linux-gpg.png
+   :width: 400px
 
-This hash value should correspond with the hash value of the file you
-have downloaded to ensure it is authentic and was not corrupted during
-transit. To do this, open Terminal, browse to the location where you
-saved the file, and run the ``sha256sum`` command.
+   Downloading the PGP key and verifying the signed binary
 
-.. figure:: img/linux/106329766.png
-   :width: 486px
-
-   Generating an SHA256 hash for the downloaded file
-
-If the hashes match, then you have an authentic copy of Dash Core for
-Linux.
+If you see the message ``Good signature from "Alexander Block (codablock) 
+<alexander.block@dash.org>" [unknown]`` then you have an authentic copy 
+of Dash Core for Linux.
 
 Extracting Dash Core
 ----------------------
