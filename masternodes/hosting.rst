@@ -22,23 +22,6 @@ List of hosting services
 members, but is not involved in the provision of any of these services.
 
 
-Staked
----------
-
-.. image:: img/staked.png
-   :width: 200px
-   :align: right
-   :target: https://staked.us
-
-https://staked.us
-
-- Operated by: Staked
-- Services: Hosting, Reporting
-- Cost: 10% of rewards
-- `Site <https://staked.us>`__
-- `Email <sales@staked.us>`__
-
-
 CrowdNode
 ---------
 
@@ -129,6 +112,23 @@ https://www.poolofstake.io
 - `Email <mail@poolofstake.io>`__
 - `Twitter <https://twitter.com/poolofstake>`__
 - `Telegram <https://telegram.me/poolofstake>`__
+
+
+Staked
+------
+
+.. image:: img/staked.png
+   :width: 200px
+   :align: right
+   :target: https://staked.us
+
+https://staked.us
+
+- Operated by: Staked
+- Services: Hosting, Reporting
+- Cost: 10% of rewards
+- `Site <https://staked.us>`__
+- `Email <sales@staked.us>`__
 
 
 NodeHub.io
