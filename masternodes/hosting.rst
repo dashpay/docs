@@ -95,28 +95,23 @@ https://node40.com
 - `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`__
 
 
-Penny Scavengers
-----------------
+Pool of Stake
+-------------
 
-https://pennyscavs.com
+.. image:: img/pool-of-stake.svg
+   :width: 200px
+   :align: right
+   :target: https://www.poolofstake.io
 
-- Operated by: p5yc071c
-- Services: Hosting
-- Cost: 50 CHF/month
-- `Site <https://pennyscavs.com>`__
+https://www.poolofstake.io
 
-
-Masternodehosting
------------------
-
-https://masternodehosting.com
-
-- Operated by: flare (Dash Core team member)
-- Services: Hosting
-- Cost: €18/month
-- `Site <https://masternodehosting.com>`__
-- `Email <holger@masternodehosting.com>`__
-- `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
+- Operated by: Pool of Stake OÜ
+- Services: Hosting, Shares
+- 15% of masternode payments (5% with tokens)
+- `Site <https://www.poolofstake.io>`__
+- `Email <mail@poolofstake.io>`__
+- `Twitter <https://twitter.com/poolofstake>`__
+- `Telegram <https://telegram.me/poolofstake>`__
 
 
 NodeHub.io
@@ -155,6 +150,30 @@ https://mn.gtmcoin.io
 - `Email <info@gtmcoin.io>`__
 - `Twitter <https://twitter.com/GTM_Gentarium>`__
 - `Discord <https://discordapp.com/invite/vErwUSC>`__
+
+
+Penny Scavengers
+----------------
+
+https://pennyscavs.com
+
+- Operated by: p5yc071c
+- Services: Hosting
+- Cost: 50 CHF/month
+- `Site <https://pennyscavs.com>`__
+
+
+Masternodehosting
+-----------------
+
+https://masternodehosting.com
+
+- Operated by: flare (Dash Core team member)
+- Services: Hosting
+- Cost: €18/month
+- `Site <https://masternodehosting.com>`__
+- `Email <holger@masternodehosting.com>`__
+- `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
 
 
 .. _hosted-setup:
