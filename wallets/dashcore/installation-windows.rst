@@ -49,38 +49,46 @@ you downloaded to your Downloads folder.
 Verifying Dash Core
 -------------------
 
-This step is optional, but recommended to verify the integrity of the
-file you downloaded. This is done by checking its SHA256 hash against
-the hash published by the Dash Core development team. To view the
-published hash, click the **Hash file** button on the wallet download
-page.
+This step is optional, but recommended to verify the authenticity of the
+file you downloaded. This is done by checking its detached signature 
+against the public key published by the Dash Core development team. 
+To download the detached signature, click the **Signature** button on the 
+wallet download page and save it to the same folder as the downloaded
+binary.
 
-Once both the Dash Core file and the hash file have downloaded, open the
-hash file in a text editor or your browser and find the hash value for
-the Dash Core file you downloaded.
+All releases of Dash are signed using GPG by Alexander Block (codablock)
+with the key ``63A9 6B40 6102 E091``, `verifiable here on Keybase
+<https://keybase.io/codablock>`_. Install `Gpg4win
+<https://gpg4win.org/>`__ if it is not already available on your
+computer. Once it is installed, open the **Kleopatra** certificate
+manager and click **Lookup on Server**. Type ``codablock`` in the
+**Find** field and click **Search**. Verify the Key-ID matches the ID
+above, then click **Import**. 
 
-.. figure:: img/windows/112789262.png
+.. figure:: img/windows/setup-windows-kleopatra-import.png
    :height: 250px
 
-   Viewing the Dash Core hash file
+   Importing codablock's GPG public key
 
-This hash value should correspond with the hash value of the file you
-have downloaded to ensure it is authentic and was not corrupted during
-transit. To do this, open **Command Prompt**, browse to the location 
-where you saved the file, and run the following command, replacing the 
-version with the specific version of the file you downloaded.
+Skip any requests to certify the certificate with your own key. Next,
+click **Decrypt/Verify...** and select the detached signature file named
+``dashcore-0.15.0.0-win64-setup.exe.asc`` in the same folder as the
+downloaded installer.
 
-::
+.. figure:: img/windows/setup-windows-kleopatra-verify.png
+   :height: 250px
 
-    certutil -hashfile <dashcore-version-windows>.exe SHA256
+   Selecting the signature file for verification
 
-.. figure:: img/windows/112789384.png
-   :width: 470px
+If you see the first line of the message reads ``Verified
+dashcore-0.15.0.0-win64-setup.exe with
+dashcore-0.15.0.0-win64-setup.exe.asc`` then you have an authentic copy
+of Dash Core for Windows.
 
-   Generating an SHA256 hash for the downloaded file
+.. figure:: img/windows/setup-windows-kleopatra-verified.png
+   :height: 250px
 
-If the hashes match, then you have an authentic copy of Dash Core for
-Windows.
+   The binary installer has been verified
 
 Running the Dash Core installer
 -------------------------------
