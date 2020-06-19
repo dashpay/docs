@@ -42,7 +42,7 @@ you need, download the Dash Core TGZ file to your computer from
 https://www.dash.org/downloads and save it to your Downloads folder.
 
 Verifying Dash Core
-----------------------
+-------------------
 
 This step is optional, but recommended to verify the authenticity of the
 file you downloaded. This is done by checking its detached signature 
@@ -51,9 +51,10 @@ To download the detached signature, click the **Signature** button on the
 wallet download page and save it to the same folder as the downloaded
 binary.
 
-All releases of Dash are signed using GPG by Alexander Block (codablock) 
-with the key ``63A9 6B40 6102 E091``, `verifiable here on Keybase <https://keybase.io/codablock>`_. 
-Import the key and verify the authenticity of your download as follows::
+All releases of Dash are signed using GPG by Alexander Block (codablock)
+with the key ``63A9 6B40 6102 E091``, `verifiable here on Keybase
+<https://keybase.io/codablock>`_. Open a terminal, import the key and
+verify the authenticity of your download as follows::
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   gpg --verify dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz.asc
