@@ -59,7 +59,7 @@ verify the authenticity of your download as follows::
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   gpg --verify dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz.asc
 
-.. figure:: img/setup-linux-gpg.png
+.. figure:: img/linux/setup-linux-gpg.png
    :width: 400px
 
    Downloading the PGP key and verifying the signed binary
