@@ -121,7 +121,9 @@ Twitter
 News
 ----
 
-- **Dash Force News:** https://www.dashnews.org
+- **Digital Cash Network:** https://www.youtube.com/channel/UCduLugW5-tkzxIde8Iz72mw
+- **Cash Alternative TV:** https://www.youtube.com/channel/UCeFCPtS8sViGO_NpKnS2rpg
+- **Dash News:** https://www.dashnews.org
 - **Dash News En Español:** https://dashnewsespanol.com
 - **Dash News En Español (YouTube):** https://www.youtube.com/channel/UCG6Cuh8Q2eUt4NlZu4K-u8g
 - **Dash News Korea:** https://dashnewskorea.com

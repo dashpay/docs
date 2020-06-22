@@ -36,6 +36,19 @@ learning about :ref:`safety <safety>` or joining one of the many
 Dash Videos
 -----------
 
+What is Dash?
+~~~~~~~~~~~~~
+
+Armenian Crypto School has produced an in-depth video describing Dash
+and its many distinguishing features.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/vItzmZo_eWw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+
 Dash School
 ~~~~~~~~~~~
 
