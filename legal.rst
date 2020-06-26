@@ -194,7 +194,7 @@ identically to Bitcoin. `BlockchainIntel <https://blockchainintel.com/>`__
 and `Coinfirm <https://www.coinfirm.com/>`__ are KYC/AML service
 providers that offer services covering the Dash blockchain.
 
-This PDF document offers a full overview of the `Dash PrivateSend Legal Position <https://media.dash.org/wp-content/uploads/Dash-PrivateSend-Position.pdf>`__.
+This PDF document offers a full overview of the `Dash PrivateSend Legal Position <https://media.dash.org/wp-content/uploads/Dash-PrivateSend-Legal-Position-EN.pdf>`__.
 
 ATM & Fiat Compliance
 =====================
