@@ -358,9 +358,9 @@ Linux as described in the :ref:`dashcore-installation-linux`.
      User=dash
      Group=dash
      OOMScoreAdjust=-1000
-     ExecStart=/opt/dash/bin/dashd -pid=/home/dash/.dashcore/dashd.pid
+     ExecStart=/usr/local/bin/dashd -pid=/home/dash/.dashcore/dashd.pid
      TimeoutStartSec=10m
-     ExecStop=/opt/dash/bin/dash-cli stop
+     ExecStop=/usr/local/bin/dash-cli stop
      TimeoutStopSec=120
      Restart=on-failure
      RestartSec=120
