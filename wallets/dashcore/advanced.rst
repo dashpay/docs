@@ -322,8 +322,7 @@ Daemon
 Dash can be run as a background process (or daemon) on Linux systems.
 This is particularly useful if you are running Dash as a server instead
 of as a GUI node. This guide assumes you have installed Dash Core for
-Linux as described in the :ref:`dashcore-installation-linux`. Follow
-these steps::
+Linux as described in the :ref:`dashcore-installation-linux`.
 
 #. Create a user and group to run the daemon::
 
@@ -344,7 +343,7 @@ these steps::
      server=1
      daemon=1
 
-#. Register the ``dashd`` daemon as a system process by creating the following file::
+#. Register the ``dashd`` daemon as a system service by creating the following file::
 
      sudo nano /etc/systemd/system/dashd.service
 
@@ -388,12 +387,12 @@ View logs as follows::
 Tor
 ===
 
-Tor is free and open-source software for enabling anonymous
-communication. The name derived from the acronym for the original
-software project name "The Onion Router". Tor directs Internet traffic
-through a free, worldwide, volunteer overlay network consisting of more
-than seven thousand relays to conceal a user's location and usage from
-anyone conducting network surveillance or traffic analysis.
+`Tor <torproject.org/>`__ is free and open-source software for enabling
+anonymous communication. The name derived from the acronym for the
+original software project name "The Onion Router". Tor directs Internet
+traffic through a free, worldwide, volunteer overlay network consisting
+of more than seven thousand relays to conceal a user's location and
+usage from anyone conducting network surveillance or traffic analysis.
 
 Dash Core GUI
 -------------
@@ -415,7 +414,7 @@ to use Tor for network traffic.
    Specify ``127.0.0.1`` for the **Proxy IP** and ``9150`` for the
    **Port**. Click **OK** and restart Dash Core.
 
-2. **Using ``dash.conf``:** Ensure Dash Core is not running and edit
+2. **Using dash.conf:** Ensure Dash Core is not running and edit
    your ``dash.conf`` settings file. Add the line
    ``proxy=127.0.0.1:9150``, save the file and start Dash Core.
 
