@@ -463,7 +463,7 @@ Linux:
 
      grep -i onion ~/.dashcore/debug.log
 
-   You should see a line similar to the followin::
+   You should see a line similar to the following::
 
      2020-06-29 03:43:57 tor: Got service ID knup3fvr6fyvypu7, advertising service knup3fvr6fyvypu7.onion:19999
 
