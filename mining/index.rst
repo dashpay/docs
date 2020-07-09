@@ -100,12 +100,10 @@ as password.
 If you would like to set up your own P2Pool, documentation of the
 process is available :ref:`here <p2pool>` and the code for p2pool-dash
 is available on `GitHub <https://github.com/dashpay/p2pool-dash>`_.
+Other mining pools are listed below and may be advantageous for
+different reasons such as ping latency, uptime, fee, users, etc. A guide
+to using a typical mining pool can be found :ref:`here <mining-pools>`.
 
-Other mining pools are listed below. A guide to using a typical mining
-pool can be found :ref:`here <mining-pools>`.
-
-Other pools are also available and may be advantageous for different
-reasons such as ping latency, uptime, fee, users, etc.:
 
 - https://coinfoundry.org
 - https://mining.luxor.tech
@@ -115,7 +113,6 @@ reasons such as ping latency, uptime, fee, users, etc.:
 - https://dash.miningpoolhub.com
 - https://www.multipool.us
 - https://www.f2pool.com
-- https://dash.miningfield.com
 - https://www2.coinmine.pl/dash
 - https://aikapool.com/dash
 - https://www.antpool.com
@@ -140,6 +137,7 @@ address to receive your payout. To do this in Dash Core wallet, see
    :includehidden:
    :maxdepth: 1
 
+   pools.rst
    p2pool.rst
 
 
