@@ -199,7 +199,7 @@ problem.
 ChainLocks Process Overview
 ---------------------------
 
-Every twelve hours a new “LLMQ” (Long-Lasting Masternode Quorum) is
+Every twelve hours a new “LLMQ” (Long-Living Masternode Quorum) is
 formed using a “DKG” (Distributed Key Generation) process. All members
 of this Quorum are responsible for observing, and subsequently
 affirming, newly mined blocks:
