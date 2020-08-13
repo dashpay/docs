@@ -523,9 +523,7 @@ process transactions even if no fee is included.
 The release of Dash 0.12.2.0 and activation of DIP0001 saw a
 simultaneous reduction of fees by a factor of 10, while the block size
 was increased from 1MB to 2MB to promote continued growth of low-cost
-transactions even as the cost of Dash rises. Dash also supports
-:ref:`instantsend` and :ref:`privatesend` transactions, which operate on
-a different and mandatory fee schedule. Dash 0.13.0.0 introduced
+transactions even as the cost of Dash rises. Dash 0.13.0.0 introduced
 InstantSend autolocks, which causes masternodes to automatically attempt
 to lock any transaction with 4 or fewer inputs — which are referred to
 as “simple” transactions — and removes the additional fee for
@@ -553,8 +551,8 @@ transactions may cost around 1-2 cents per transaction, depending on the
 number of inputs. These fees apply regardless of the Dash or dollar
 value of the transaction itself.
 
-PrivateSend works by creating denominations of 10, 1, 0.1, 0.01 and
-0.001 DASH and then mixing these denominations with other users.
+:ref:`PrivateSend` works by creating denominations of 10, 1, 0.1, 0.01
+and 0.001 DASH and then mixing these denominations with other users.
 Creation of the denominations is charged at the default fee for a
 standard transaction. Mixing is free, but to prevent spam attacks, an
 average of one in ten mixing transactions are charged a fee of 0.0001
