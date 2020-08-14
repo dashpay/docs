@@ -37,9 +37,10 @@ Community sites
 - https://www.dashninja.pl
 - https://www.dashnews.org
 - https://dashthailand.org
+- https://dashnigeria.com/
 - https://www.dashnation.com
 - https://dashvotetracker.com
-- https://www.dashspain.org
+- http://www.dashspain.org
 - http://www.dashhaiti.com
 - http://thedashbrain.com
 
