@@ -10,10 +10,9 @@ Marketing
 
 This page includes downloads of various templates and designs intended
 for use as office stationary and presentations. For a visual overview of
-existing web and sticker designs, please see the following links.
+existing web and sticker designs, please see the following link.
 
-- `Rendered designs, badges and stickers <https://www.dash.org/graphics>`_
-- `Vector art package for designers <https://www.dash.org/assets/Dash_Vector_Graphics_Collection.zip>`_
+- `Dash Brand Guidelines <https://www.dash.org/brand-guidelines>`_
 
 Dash uses the following color scheme to promote a consistent visual
 identity.
