@@ -87,19 +87,20 @@ and is available in
 Whitepaper
 ----------
 
-The Dash Whitepaper describes the original unique value proposition and key
-innovations in Dash from an academic and theoretical perspective. It is 
-a historical document available as a GitHub wiki, and no longer receives updates 
-and as new features are implemented. Instead, these features are described in 
-successive Dash Improvement Proposals (DIPs), while larger architectural changes
-are described in separate whitepapers. Features backported from Bitcoin are 
+The Dash Whitepaper describes the original unique value proposition and
+key innovations in Dash from an academic and theoretical perspective. It
+is a historical document available as a GitHub wiki, and no longer
+receives updates as new features or architectural changes are
+implemented. Instead, these features are described in successive Dash
+Improvement Proposals (DIPs), while larger architectural changes are
+described in separate whitepapers. Features backported from Bitcoin are
 described in Bitcoin Improvement Proposals (BIPs).
 
 - `Whitepaper and translations <https://github.com/dashpay/dash/wiki/Whitepaper>`_
 - `PDF whitepaper <https://github.com/dashpay/docs/raw/master/binary/Dash%20Whitepaper%20-%20V2.pdf>`_
 - `Dash Improvement Proposals (DIPs) <https://github.com/dashpay/dips>`_
 - `Bitcoin Improvement Proposals (BIPs) <https://github.com/bitcoin/bips>`_
-- `Evoluation Initial Design Document <https://www.dash.org/wp-content/uploads/Dash-Evolution-Initial-Design-Document.pdf>`_
+- `Evolution Initial Design Document <https://www.dash.org/wp-content/uploads/Dash-Evolution-Initial-Design-Document.pdf>`_
 - `Original Darkcoin whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/binary/Dash%20Whitepaper%20-%20Darkcoin.pdf>`_
 - `InstantSend whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_
 
