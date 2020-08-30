@@ -618,6 +618,8 @@ Evolution Previews
 **Dash Dapps - Demoing Community Development on environment**, 17 August
 2020
 
+.. raw:: html
+
     <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 70%; height: auto;">
         <iframe src="//www.youtube.com/embed/yy8gO1C8fTs" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
@@ -625,11 +627,15 @@ Evolution Previews
 **Let's Talk Dash Dapps feat. Sample Dapps & Wallet API (Ep 2)**, 6
 August 2020
 
+.. raw:: html
+
     <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 70%; height: auto;">
         <iframe src="//www.youtube.com/embed/76pYX44o_j8" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
 **Let's Talk Dash Dapps feat. Chrome Wallet (Ep 1)**, 28 July 2020
+
+.. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 70%; height: auto;">
         <iframe src="//www.youtube.com/embed/IjjsQNd3Zto" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
