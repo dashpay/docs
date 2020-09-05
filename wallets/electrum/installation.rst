@@ -22,24 +22,18 @@ released through his GitHub account.
 
 - https://github.com/akhavr/electrum-dash/releases
 
-You can optionally verify the integrity of your download by running the
-following commands (example for Linux)::
+You can optionally verify the authenticity of your download by checking
+its detached signature against the public key published by akhavr. Run
+the following commands (example for Linux)::
 
-  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.5/Dash-Electrum-3.3.8.5.tar.gz
-  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.5/SHA256SUMS.txt.asc
-  sha256sum Dash-Electrum-3.3.8.5.tar.gz
-  cat SHA256SUMS.txt.asc
-
-You can also optionally verify the authenticity of your download as an
-official release by akhavr. All releases of Dash Electrum are signed by
-akhavr using GPG with the key ``64A3 BA82 2F44 9D50``, `verifiable here
-on Keybase <https://keybase.io/akhavr>`_. Import the key, download the
-ASC file for the current release of Dash Electrum and verify the
-signature as follows::
-
+  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.7/Dash-Electrum-3.3.8.7.tar.gz
+  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.7/Dash-Electrum-3.3.8.7.tar.gz.asc
   curl https://keybase.io/akhavr/pgp_keys.asc | gpg --import
-  gpg --verify SHA256SUMS.txt.asc
+  gpg --verify Dash-Electrum-3.3.8.7.tar.gz.asc
 
+The output should contain the following line::
+
+  Good signature from "Andriy Khavryuchenko <akhavr@khavr.com>"
 
 Linux
 -----
@@ -53,14 +47,21 @@ PPA::
   sudo apt update
   sudo apt install electrum-dash
 
-Enter the following commands (changing the version number to match the
-current version as necessary) in the terminal to install Dash Electrum
-from the source tarball::
+You can also download the official package, unpack it and run it from
+its root directory with installation as follows::
 
-  sudo apt install python3-pyqt5 python3-pip python3-setuptools
-  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.5/Dash-Electrum-3.3.8.5.tar.gz
-  tar -zxvf Dash-Electrum-3.3.8.5.tar.gz
-  cd Dash-Electrum-3.3.8.5
+  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.7/Dash-Electrum-3.3.8.7.tar.gz
+  tar -zxvf Dash-Electrum-3.3.8.7.tar.gz
+  cd Dash-Electrum-3.3.8.7
+  ./electrum-dash
+
+Finally, you can install Dash Electrum to your system from the source
+tarball as follows::
+
+  sudo apt install python3-pyqt5 python3-pip python3-setuptools libgmp3-dev
+  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.7/Dash-Electrum-3.3.8.7.tar.gz
+  tar -zxvf Dash-Electrum-3.3.8.7.tar.gz
+  cd Dash-Electrum-3.3.8.7
   sudo python3 setup.py install
 
 You can then run ``electrum-dash`` from the terminal.
