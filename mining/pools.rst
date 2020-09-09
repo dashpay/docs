@@ -39,13 +39,16 @@ There are many hosting options available in the US / Canada such as
 <https://www.bitcoinmined.net/>`__, `Core Scientific
 <https://www.corescientific.com/>`__, `Lightspeed
 <https://www.lightspeedhosting.com/>`__, and many more. `Crypto Mining
-Tools <https://cryptomining.tools/>`__ recently came out with a `mining
-map <https://cryptomining.tools/directory/map/1541>`__ with more options
-in North America. `F2Pool <https://www.f2pool.com/>`__ has a `list of
-hosting locations <https://www.f2pool.com/>`__ in China and the CIS
-region. `BC Mining <https://bcmining.uy/>`__ is an upcoming facility in
-Paraguay, South America. Please make sure to do your own research
-before making any decision on engaging a colocation business.
+Tools <https://cryptomining.tools/>`__ offers a `mining map
+<https://cryptomining.tools/directory/map/1541>`__ with more options in
+North America. `Hashrate Index <https://hashrateindex.com>`__ provides a
+`database of hosted colocations <https://hashrateindex.com/farms>`__ in
+the US, Canada, Russia, Paraguay and more. `F2Pool
+<https://www.f2pool.com/>`__ has a `list of hosting locations
+<https://www.f2pool.com/>`__ in China and the CIS region. `BC Mining
+<https://bcmining.uy/>`__ offers multiple projects in South America.
+Please make sure to do your own research before making any decision on
+engaging a colocation business.
 
 Setting up your miner
 =====================
