@@ -97,7 +97,7 @@ Join the `ADAMANT Telegram group <https://t.me/adamant_en>`_ for
 ADAMANT support.
 
 .. figure:: img/adamant-wallet.png
-   :width: 400px
+   :width: 200px
 
    ADAMANT Wallet Dash screen
 
