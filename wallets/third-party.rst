@@ -59,6 +59,48 @@ https://abra.zendesk.com
    Abra wallet running on iOS
 
 
+ADAMANT
+=======
+
+https://adamant.im
+
+ADAMANT is a web wallet and messaging application with a strong focus on
+privacy. The app allows users to transfer Dash within a chat
+application. No registration or KYC is required, and the app is entirely
+open source.
+
+.. image:: img/adamant.png
+   :width: 100px
+   :align: right
+   :target: https://adamant.im
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=im.adamant.adamantmessengerpwa
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://itunes.apple.com/app/id1341473829
+
+ADAMANT desktop wallets are available from https://adamant.im/#adm-apps
+for Linux, macOS and Windows. ADAMANT is also available from the 
+`Google Play Store for Android <https://play.google.com/store/apps/details?id=im.adamant.adamantmessengerpwa>`__
+and the `Apple App Store for iOS <https://itunes.apple.com/app/id1341473829>`__.
+
+Documentation
+-------------
+
+Join the `ADAMANT Telegram group <https://t.me/adamant_en>`_ for
+ADAMANT support.
+
+.. figure:: img/adamant-wallet.png
+   :width: 400px
+
+   ADAMANT Wallet Dash screen
+
 Atomic Wallet
 =============
 
