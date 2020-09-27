@@ -1,6 +1,6 @@
 .. meta::
    :description: Glossary and collection of links to other parts of the Dash ecosystem and network
-   :keywords: dash, cryptocurrency, glossary, links, community, official, github, roadmap, chat, discord, facebook, twitter, social media
+   :keywords: dash, cryptocurrency, glossary, links, community, official, github, roadmap, chat, discord, facebook, twitter, telegram, social media
 
 .. _information:
 
@@ -63,9 +63,18 @@ Chat
 - **Dash Dapp Devs Discord:** https://chat.dashdevs.org
 - **Dash English Telegram:** https://t.me/dash_chat
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil
+- **Dash Dinheiro Digital:** https://t.me/DashDinheiroDigital
 - **Dash Russia Telegram:** https://telegram.me/Dash_Ru
-- **Dash en Español Telegram:** http://unete.dashespanol.com
-- **Dash Embassy D-A-CH auf Deutsch Telegram:** https://t.me/dashembassydach 
+- **Dash en Español Telegram:** https://t.me/dashpayES
+- **Dash Embassy D-A-CH auf Deutsch Telegram:** https://t.me/dashembassydach
+- **Dash France Telegram:** https://t.me/DashFrance
+- **Dash Indonesia Telegram:** https://t.me/dashindonesia
+- **Dash Iran Telegram:** https://t.me/IranianDash
+- **Dash Italy Telegram:** https://t.me/dash_chat_italia
+- **Dash LatAm Telegram:** https://t.me/DashAmericaLatina
+- **Dash Philippines Telegram:** https://t.me/dashphp
+- **Dash Thailand Telegram:** https://t.me/dashthailand
+- **Dash Turkey Telegram:** https://t.me/dashturkey
 - **Dash Telegram News Bot:** https://telegram.me/dashnews
 - **QQ 达世币官方群 DASH.China:** 419967021
 - **Freenode IRC:** #dashpay
