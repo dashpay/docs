@@ -10,13 +10,13 @@ Installation
 App Store
 ---------
 
-The easiest way to install the Dash Wallet for iOS is from the `App Store <https://itunes.apple.com/app/id1206647026>`__. 
+The easiest way to install the Dash Wallet for iOS is from the `App Store <https://apps.apple.com/app/id1206647026>`__. 
 While older versions of iOS are supported, you will need to be using iOS
 10.0 or newer to use the latest version.
 
 .. image:: img/app-store.png
     :width: 250 px
-    :target: https://itunes.apple.com/app/id1206647026
+    :target: https://apps.apple.com/app/id1206647026
 
 Compiling from source
 ---------------------
@@ -25,7 +25,7 @@ The source code for the wallet is available `here
 <https://github.com/QuantumExplorer/dashwallet>`_. The following steps
 describe how to download and compile the wallet from source.
 
-1. Install `Xcode <https://itunes.apple.com/us/app/xcode/id497799835?mt=12>`_ 
+1. Install `Xcode <https://apps.apple.com/us/app/xcode/id497799835?mt=12>`_ 
    from the App Store. The download is about 5GB, so this step may take
    some time.
 
