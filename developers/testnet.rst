@@ -135,7 +135,7 @@ Discussion:
 
 Latest test binaries:
 
-- https://github.com/dashpay/dash/releases/tag/v0.16.0.0-rc3
+- https://github.com/dashpay/dash/releases/tag/v0.16.0.1-rc3
 
 Testnet 0.15.0
 ==============
