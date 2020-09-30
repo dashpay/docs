@@ -329,7 +329,7 @@ Older versions of the Dash iOS wallet used **BIP32** addresses under the
 BIP44 addresses during normal use, but some residual balance may be
 under this derivation path, so restoring the **BIP32 Extended Private
 Key** may be helpful in some situations. Please see `this forum thread
-<https://www.dash.org/forum/threads/restore-breadwallet-dash-funds-to-your-electrum-dash-wallet-tested.8335>`_ 
+<https://www.dash.org/forum/threads/restore-breadwallet-dash-funds-to-your-electrum-dash-wallet-tested.8335/>`_ 
 for further discussion on this process.
 
 

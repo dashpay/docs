@@ -19,7 +19,7 @@ ecosystem. Anyone can contribute to the documentation by suggesting
 edits in the documentation system.
 
 The Dash Core Team also maintains the `Dash Roadmap
-<https://www.dash.org/roadmap>`_, which sets out delivery milestones for
+<https://www.dash.org/roadmap/>`_, which sets out delivery milestones for
 future releases of Dash and includes specific technical details
 describing how the development team plans to realise each challenge. The
 Dash Roadmap is complemented by the `Dash Improvement Proposals

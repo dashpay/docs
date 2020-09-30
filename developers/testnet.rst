@@ -236,7 +236,7 @@ This release includes:
 
 Discussion:
 
-- https://www.dash.org/forum/threads/v12-3-testing.38475
+- https://www.dash.org/forum/threads/v12-3-testing.38475/
 - Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
 - Issue tracking: https://github.com/dashpay/dash/issues/new
 

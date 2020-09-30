@@ -137,9 +137,9 @@ CoinFlip
   .. image:: exchanges/coinflip.png
      :width: 200px
      :align: right
-     :target: https://coinflip.tech
+     :target: https://www.coinflip.tech
 
-  https://coinflip.tech
+  https://www.coinflip.tech
 
   CoinFlip operates a network of ATMs across the USA and offers hosted
   ATMs for businesses.

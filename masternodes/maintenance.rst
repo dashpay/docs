@@ -459,9 +459,9 @@ the Dash network.
 - `CoinPayments <https://www.coinpayments.net/>`__ offers a simple `Dash
   blockchain explorer
   <http://explorer.coinpayments.net/index.php?chain=7>`__.
-- `Dash.org <https://www.dash.org/>`__ includes two blockchain explorers
-  at `explorer.dash.org <http://explorer.dash.org/>`__ and
-  `insight.dash.org <http://insight.dash.org/>`__.
+- `Dash.org <https://www.dash.org/>`__ includes a blockchain explorer
+  at `explorer.dash.org <http://explorer.dash.org/insight/>`__ and
+  `insight.dash.org <http://insight.dash.org/insight/>`__.
 - `Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https
   ://dash-bitcore1.trezor.io/>`__ powered by a `Dash fork
   <https://github.com/dashpay/insight-ui-dash>`__ of `insight

@@ -311,7 +311,7 @@ Dash Evolution
 
 The exact hardware requirements for Dash Evolution masternodes have yet
 to be determined, although some pointers can be taken from the `roadmap
-<https://www.dash.org/roadmap>`_ and this `blog post
+<https://www.dash.org/roadmap/>`_ and this `blog post
 <https://medium.com/@eduffield222/how-to-enabling-on-chain-scaling-2ffab5997f8b>`_.
 It should be possible to run Dash masternodes on normal VPS servers
 until the block size reaches approximately 20 MB, after which custom

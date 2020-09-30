@@ -23,7 +23,7 @@ Official sites
 - **Foundation:** https://www.dashfoundation.io
 - **GitHub:** https://github.com/dashpay
 - **GitHub (Evolution):** https://github.com/dashevo
-- **Roadmap:** https://www.dash.org/roadmap
+- **Roadmap:** https://www.dash.org/roadmap/
 - **DIPs:** https://github.com/dashpay/dips
 
 Community sites
@@ -46,13 +46,11 @@ Community sites
 Forums
 ------
 
-- **Dash Forum**: https://www.dash.org/forum
+- **Dash Forum**: https://www.dash.org/forum/
 - **BitcoinTalk thread:** https://bitcointalk.org/index.php?topic=421615.0
 - **Cryptocurrencytalk.com:** https://cryptocurrencytalk.com/forum/693-dash
 - **链节点 (ChainNode) Forum:** https://www.chainnode.com/forum/115
 - **百度贴吧 达世币吧 (Baidu Tieba):** `https://tieba.baidu.com/f?kw=达世币 <https://tieba.baidu.com/f?kw=达世币>`_
-- **彩云比特 达世币 (CYBTC Dash):** http://www.cybtc.com/forum-123-1.html
-
 
 Chat
 ----
@@ -85,13 +83,11 @@ Social media
 - **Reddit:** https://www.reddit.com/r/dashpay
 - **Twitter:** https://twitter.com/dashpay
 - **Steemit:** https://steemit.com/@dashpay
-- **LinkedIn:** https://www.linkedin.com/company/dash---digitalcash-cryptocurrency-
+- **LinkedIn:** https://www.linkedin.com/company/dash---digitalcash-cryptocurrency-/
 - **YouTube:** https://www.youtube.com/c/DashOrg
-- **Instagram:** https://www.instagram.com/dashpay
+- **Instagram:** https://www.instagram.com/dashpay/
 - **Dailymotion:** http://www.dailymotion.com/dashworld
-- **Youku:** http://i.youku.com/dashpay
 - **Soundcloud:** https://soundcloud.com/dashpay
-- **Google+:** https://plus.google.com/+DashOrg
 - **Minds:** https://www.minds.com/Dashpay
 - **Pinterest:** https://www.pinterest.com/dashdigitalcash
 
@@ -176,17 +172,16 @@ Tools
 Block explorers, statistics and visualizations
 ----------------------------------------------
 
-- https://explorer.dash.org
-- https://insight.dash.org/insight
+- https://explorer.dash.org/insight/
+- https://insight.dash.org/insight/
 - https://blockchair.com/dash
-- https://chainz.cryptoid.info/dash
+- https://chainz.cryptoid.info/dash/
 - https://www.coinexplorer.net/dash
 - https://bitinfocharts.com/dash/explorer
 - https://dashblockexplorer.com
-- https://live.blockcypher.com/dash
+- https://live.blockcypher.com/dash/
 - https://dashradar.com
-- https://udjinm6.github.io/bitlisten
-- http://insight.dash.crowdnode.io
+- https://udjinm6.github.io/bitlisten/
 
 
 Treasury tools
@@ -215,7 +210,7 @@ Price monitoring and statistics
 -------------------------------
 
 - https://coinmarketcap.com/currencies/dash
-- https://bitinfocharts.com/dash
+- https://bitinfocharts.com/dash/
 - https://www.cryptonator.com/widget
 
 

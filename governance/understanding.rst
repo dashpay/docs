@@ -222,7 +222,7 @@ are broadcast and the budget is allocated soon after in a superblock.
 
 Once passed, proposals are able to report back to the network on the
 `Dash Forum <https://www.dash.org/forum/topic/approved-proposals-
-updates-news.140>`__ or via published public channels and social media.
+updates-news.140/>`__ or via published public channels and social media.
 Since it is possible to create proposals that pay out over several
 months, it is also possible to revoke funding from a project by changing
 the vote if development or spending of already allocated funds is
