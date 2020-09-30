@@ -179,7 +179,7 @@ in the visual design.
 Dash iOS Wallet
 ===============
 
-https://www.transifex.com/dash/dash-ios-wallet
+https://www.transifex.com/dash/dash-mobile-wallets
 
 All language content from the :ref:`Dash iOS Wallet <dash-ios-wallet>`
 are available for translation in this project. Please have a device
@@ -191,7 +191,7 @@ to the instructions above for Dash Core Wallet.
 Dash Android Wallet
 ===================
 
-https://www.transifex.com/dash/dash-wallet
+https://www.transifex.com/dash/dash-mobile-wallets
 
 All language content from the 
 :ref:`Dash Android Wallet <dash-android-wallet>` are available for

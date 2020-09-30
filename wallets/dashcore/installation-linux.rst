@@ -8,7 +8,7 @@ Linux Installation Guide
 ========================
 
 This guide describes how to download, verify, install and encrypt the
-Dash Core wallet for Linux. The guide is written for Ubuntu 16.04 LTS,
+Dash Core wallet for Linux. The guide is written for Ubuntu 20.04 LTS,
 but the steps should be similar for other Linux distributions.
 
 Downloading the Dash Core wallet
@@ -16,7 +16,7 @@ Downloading the Dash Core wallet
 
 Visit https://www.dash.org/downloads to download the latest Dash Core
 wallet. In most cases, the website will properly detect which version
-you need. Click Dash Core button to download the package
+you need. Click the Dash Core button to download the package
 directly.
 
 .. figure:: img/linux/download.png
@@ -27,49 +27,46 @@ directly.
 If detection does not work, you will need to manually choose your
 operating system and whether you need a 32 or 64 bit version. If you are
 unsure whether your version of Linux is 32 or 64 bit, you can check in
-Ubuntu under the **System menu > About This Computer**. For details on
-how to check this in other versions of Linux, see
-`here <https://www.howtogeek.com/198615/how-to-check-if-your-linux-system-is-32-bit-or-64-bit/>`__.
+Ubuntu under the **Settings > About > OS Type**. For details on how to
+check this in other versions of Linux, see `here
+<https://www.howtogeek.com/198615/how-to-check-if-your-linux-system-is-32-bit-or-64-bit/>`__.
 
-.. figure:: img/linux/106329727.png
+.. figure:: img/linux/linux-checkbits.png
    :height: 250px
 
    Ubuntu System Overview. This is a 64 bit system.
 
-Once you know which version you need, download Dash Core to your
-computer from https://www.dash.org/downloads and save the file you
-downloaded to your Downloads folder.
+If you have a 32-bit system, download **Dash Core x86**. If you have a
+64-bit system, download **Dash Core x64**. Once you know which version
+you need, download the Dash Core TGZ file to your computer from
+https://www.dash.org/downloads and save it to your Downloads folder.
 
 Verifying Dash Core
-----------------------
+-------------------
 
-This step is optional, but recommended to verify the integrity of the
-file you downloaded. This is done by checking its SHA256 hash against
-the hash published by the Dash Core development team. To view the
-published hash, click the **Hash file** button on the wallet download
-page.
+This step is optional, but recommended to verify the authenticity of the
+file you downloaded. This is done by checking its detached signature 
+against the public key published by the Dash Core development team. 
+To download the detached signature, click the **Signature** button on the 
+wallet download page and save it to the same folder as the downloaded
+binary.
 
-Once both the Dash Core file and the hash file have downloaded,
-double-click the hash file or view it in your browser and find the hash
-value for the Dash Core file you downloaded.
+All releases of Dash are signed using GPG by Alexander Block (codablock)
+with the key ``63A9 6B40 6102 E091``, `verifiable here on Keybase
+<https://keybase.io/codablock>`_. Open a terminal, import the key and
+verify the authenticity of your download as follows::
 
-.. figure:: img/linux/106329757.png
-   :height: 250px
+  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
+  gpg --verify dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz.asc
 
-   Viewing the Dash Core hash file
+.. figure:: img/linux/setup-linux-gpg.png
+   :width: 400px
 
-This hash value should correspond with the hash value of the file you
-have downloaded to ensure it is authentic and was not corrupted during
-transit. To do this, open Terminal, browse to the location where you
-saved the file, and run the sha256sum command.
+   Downloading the PGP key and verifying the signed binary
 
-.. figure:: img/linux/106329766.png
-   :width: 486px
-
-   Generating an SHA256 hash for the downloaded file
-
-If the hashes match, then you have an authentic copy of Dash Core for
-Linux.
+If you see the message ``Good signature from "Alexander Block (codablock) 
+<alexander.block@dash.org>" [unknown]`` then you have an authentic copy 
+of Dash Core for Linux.
 
 Extracting Dash Core
 ----------------------
@@ -80,43 +77,19 @@ built for running a masternode on a server, for example. In this guide,
 we will extract the executable file with a graphical user interface
 (GUI) designed for use by end users as a wallet.
 
-Begin by creating a folder for the Dash Core executable file on the
-Desktop. Browse to the Desktop (or the location of your choice) and
-create the folder.
+Extract Dash Core as follows::
 
-.. figure:: img/linux/106329782.png
-   :height: 250px
+  tar xzf dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
 
-   Creating a folder on the Desktop
+This will create a folder named ``dashcore-0.15.0`` in the current working
+directory. We will now install the executable binaries to
+``/usr/local/bin`` using the ``install`` command::
 
-.. figure:: img/linux/106329798.png
-   :height: 250px
+  sudo install -m 0755 -o root -g root -t /usr/local/bin dashcore-0.15.0/bin/*
 
-   Renaming the folder to Dash
-
-Next, open the archive by double-clicking on it. The Archive Manager
-will appear. Browse to the dashcore-0.14.0/bin/ folder and extract the
-dash-qt file to the Dash folder you created on the Desktop by drag and
-drop.
-
-.. figure:: img/linux/106329807.png
-   :height: 250px
-
-   The dash-qt file in Archive Manager
-
-.. figure:: img/linux/106329816.png
-   :height: 250px
-
-   The dash-qt file in the Dash folder on the Desktop
-
-To run Dash Core for the first time, open Terminal and browse to the
-Dash folder on the Desktop, or where you chose to extract the file. Type
-``./dash-qt`` to run the file.
-
-.. figure:: img/linux/106329833.png
-   :width: 486px
-
-   Running Dash Core from the Terminal
+Start Dash Core from the terminal with the following command::
+  
+  dash-qt
 
 The first time the program is launched, you will be offered a choice of
 where you want to store your blockchain and wallet data. Choose a

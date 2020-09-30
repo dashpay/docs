@@ -236,10 +236,6 @@ Voting on proposals
 your vote will not be counted. The exact deadline is 1662 blocks before
 the superblock.**
 
-Note that if you do not operate a masternode, you may still be able to
-vote on DashBoost proposals. See https://www.dashboost.org for more
-information.
-
 Voting on DGBB proposals is an important part of operating a masternode.
 Since masternodes are heavily invested in Dash, they are expected to
 critically appraise proposals each month and vote in a manner they
@@ -249,7 +245,7 @@ at any time before the voting deadline. The following sites and tools
 are available to view and manage proposals and voting:
 
 - `DashCentral <https://www.dashcentral.org/budget>`__
-- `Dash Nexus <https://dashnexus.org>`__
+- `Dash Nexus <https://app.dashnexus.org/>`__
 - `Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`__
 - `Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-masternode-tool/releases>`__
 

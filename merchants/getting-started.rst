@@ -109,19 +109,6 @@ CDPay
   EUR or CZK.
 
 
-CoinGate
-  .. image:: img/coingate.svg
-     :width: 200px
-     :align: right
-     :target: https://coingate.com
-
-  https://coingate.com
-
-  CoinGate offers point of sale apps, payment buttons, e-commerce
-  plugins and an API to accept payments in Dash, with payouts in EUR,
-  USD or Dash.
-
-
 Coinify
   .. image:: img/coinify.png
      :width: 200px
@@ -368,6 +355,20 @@ Spark
   payments. Designed from the ground up to be familiar and with wide
   community support, all keys and funds remain in your control at all
   times.
+
+
+VegaPay
+  .. image:: img/vegapay.png
+     :width: 100px
+     :align: right
+     :target: https://vegapay.vegawallet.com/
+
+  https://vegapay.vegawallet.com/
+
+  VegaPay provides the perfect way to prepare your business for the
+  future. Start accepting cryptocurrency payments to reduce costs and
+  improve customer conversion rates with the full Point of Sale or other
+  business solutions.
 
 
 Xpay

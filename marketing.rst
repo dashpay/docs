@@ -10,10 +10,9 @@ Marketing
 
 This page includes downloads of various templates and designs intended
 for use as office stationary and presentations. For a visual overview of
-existing web and sticker designs, please see the following links.
+existing web and sticker designs, please see the following link.
 
-- `Rendered designs, badges and stickers <https://www.dash.org/graphics>`_
-- `Vector art package for designers <https://www.dash.org/assets/Dash_Vector_Graphics_Collection.zip>`_
+- `Dash Brand Guidelines <https://www.dash.org/brand-guidelines>`_
 
 Dash uses the following color scheme to promote a consistent visual
 identity.
@@ -44,7 +43,7 @@ Brochures
 An attractive brochure about Dash, designed for handing out at
 conferences and events. Prepared by community member Essra in 2018
 following proposal sponsorship for the German `Dash Embassy D-A-CH
-<http://www.dash-embassy.org>`__.
+<https://www.dash-embassy.org/>`__.
 
 This design can be translated into your language at `Transifex here
 <https://www.transifex.com/dash/dash-graphics/dash-brochurexlsx/>`__.
@@ -77,7 +76,7 @@ Flyers
 An attractive flyer about Dash, designed to be folded in half and placed
 on flat surfaces at conferences and events. Prepared by community member
 Essra in 2018 following proposal sponsorship for the German `Dash
-Embassy D-A-CH <http://www.dash-embassy.org>`__.
+Embassy D-A-CH <https://www.dash-embassy.org/>`__.
 
 This design can be translated into your language at `Transifex here
 <https://www.transifex.com/dash/dash-graphics/dash-flyerxlsx/>`__.
@@ -304,7 +303,7 @@ Dash Meetup
 An attractive presentation about Dash, designed to guide the audience
 through the basics of cryptocurrency and advantages of Dash. Prepared by
 community member Essra in 2018 following proposal sponsorship for the
-German `Dash Embassy D-A-CH <http://www.dash-embassy.org>`__.
+German `Dash Embassy D-A-CH <https://www.dash-embassy.org/>`__.
 
 +------------------------+--------------------------------------------------------------------------------------------------------------+
 | Language               | Download                                                                                                     |

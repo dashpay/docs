@@ -8,7 +8,7 @@ MyDashWallet
 ============
 
 .. image:: img/mydashwallet.png
-   :width: 120px
+   :width: 160px
    :align: right
 
 `MyDashWallet <https://mydashwallet.org/>`_ is a web interface to the
@@ -78,3 +78,25 @@ Support for Magnum Wallet is available at
 
 .. image:: img/magnum-wallet.png
    :width: 400px
+
+.. _west-wallet:
+
+WestWallet
+==========
+
+.. image:: img/westwallet.png
+   :width: 160px
+   :align: right
+
+`WestWallet <https://westwallet.info/>`_ is a multicurrency web wallet
+for storing, sharing and transferring the most popular cryptocurrencies.
+The wallet includes an automatable instant exchange, instant transfers
+between users and automatic withdrawal.
+
+Please note that web wallets may not be as secure as alternatives such
+as hardware wallets. Be aware of the risk of storing large amounts of
+Dash in keyfile wallets, since they are an easier target to attack than
+mobile or hardware wallets. 
+
+Support for WestWallet is available at 
+`info@westwallet.info <info@westwallet.info>`_.

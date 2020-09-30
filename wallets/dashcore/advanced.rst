@@ -314,6 +314,162 @@ Seller::
   ]
 
 
+.. _dashcore-daemon:
+
+Daemon
+======
+
+Dash can be run as a background process (or daemon) on Linux systems.
+This is particularly useful if you are running Dash as a server instead
+of as a GUI node. This guide assumes you have installed Dash Core for
+Linux as described in the :ref:`dashcore-installation-linux`.
+
+#. Create a user and group to run the daemon::
+
+     sudo useradd -m dash -s /bin/bash
+
+#. Create a data directory for Dash in the new user's home directory::
+
+     sudo -u dash mkdir -p /home/dash/.dashcore
+
+#. Create a configuration file in the new Dash data directory::
+
+     sudo -u dash nano /home/dash/.dashcore/dash.conf
+
+#. Paste the following basic configuration to your ``dash.conf`` file,
+   replacing the password with a long and random password::
+
+     listen=1
+     server=1
+     daemon=1
+
+#. Register the ``dashd`` daemon as a system service by creating the following file::
+
+     sudo nano /etc/systemd/system/dashd.service
+
+#. Paste the following daemon configuration into the file::
+
+     [Unit]
+     Description=Dash Core Daemon
+     After=syslog.target network-online.target
+  
+     [Service]
+     Type=forking
+     User=dash
+     Group=dash
+     OOMScoreAdjust=-1000
+     ExecStart=/usr/local/bin/dashd -pid=/home/dash/.dashcore/dashd.pid
+     TimeoutStartSec=10m
+     ExecStop=/usr/local/bin/dash-cli stop
+     TimeoutStopSec=120
+     Restart=on-failure
+     RestartSec=120
+     StartLimitInterval=300
+     StartLimitBurst=3
+  
+     [Install]
+     WantedBy=multi-user.target
+
+#. Register and start the daemon with systemd::
+
+     sudo systemctl daemon-reload
+     sudo systemctl enable dashd
+     sudo systemctl start dashd
+
+Dash is now installed as a system daemon. View the status as follows::
+
+  systemctl status dashd
+
+View logs as follows::
+
+  sudo journalctl -u dashd
+
+Tor
+===
+
+`Tor <torproject.org/>`__ is free and open-source software for enabling
+anonymous communication. The name derived from the acronym for the
+original software project name "The Onion Router". Tor directs Internet
+traffic through a free, worldwide, volunteer overlay network consisting
+of more than seven thousand relays to conceal a user's location and
+usage from anyone conducting network surveillance or traffic analysis.
+
+Dash Core GUI
+-------------
+
+Dash Core traffic can be directed to pass through Tor by specifying a
+running Tor service as a proxy. First install Tor by visiting
+https://www.torproject.org/download/ and downloading the appropriate Tor
+Browser bundle for your system. Set up the Tor browser by following the
+documentation on `Installation
+<https://tb-manual.torproject.org/installation/>`__ and `Running Tor
+Browser for the First Time
+<https://tb-manual.torproject.org/running-tor-browser/>`__. 
+
+Once Tor Browser is running, you have two options to configure Dash Core
+to use Tor for network traffic.
+
+1. **Using the GUI:** Start Dash Core and go to **Settings > Options >
+   Network** and enable the **Connect through SOCKS5 proxy** setting.
+   Specify ``127.0.0.1`` for the **Proxy IP** and ``9150`` for the
+   **Port**. Click **OK** and restart Dash Core.
+
+2. **Using dash.conf:** Ensure Dash Core is not running and edit
+   your ``dash.conf`` settings file. Add the line
+   ``proxy=127.0.0.1:9150``, save the file and start Dash Core.
+
+You are now connected through the Tor network. You will need to remember
+to start the Tor Browser each time before you start Dash Core or you will
+not be able to sync.
+
+Tor onion service
+-----------------
+
+Tor onion services allows other users to connect to your Dash node using
+an onion address, providing further anonymity by concealing your IP
+address. Follow these steps to set up an onion service under Ubuntu
+Linux:
+
+#. Install tor::
+
+     sudo apt install tor
+
+#. Add the following line to the ``torrc`` file::
+
+     sudo bash -c "echo -e 'ControlPort 9051\nCookieAuthentication 1\nCookieAuthFileGroupReadable 1' >> /etc/tor/torrc"
+
+#. Restart Tor::
+
+     sudo systemctl restart tor
+
+#. Determine the group Tor is running under (usually the last entry in
+   your groups file)::
+
+     tail /etc/group
+
+   The group is usually ``debian-tor`` under Debian-based Linux
+   distributions.
+
+#. Add the user running Dash to the Tor group::
+
+     sudo usermod -aG debian-tor dash
+
+#. Add the following two lines to ``dash.conf``::
+
+     proxy=127.0.0.1:9050
+     torcontrol=127.0.0.1:9051
+
+#. Restart Dash and monitor ``debug.log`` for onion informatoin::
+
+     grep -i onion ~/.dashcore/debug.log
+
+   You should see a line similar to the following::
+
+     2020-06-29 03:43:57 tor: Got service ID knup3fvr6fyvypu7, advertising service knup3fvr6fyvypu7.onion:19999
+
+Your onion service is now available at the shown address.
+
+
 Multiple wallets
 ================
 

@@ -4,9 +4,9 @@
 
 .. _p2pool:
 
-======================
-Dash P2Pool Node Setup 
-======================
+=================
+P2Pool Node Setup 
+=================
 
 This guide describes how to set up a Dash P2Pool node to manage a pool
 of miners. Unlike centralized mining pools, P2Pool is based on the same

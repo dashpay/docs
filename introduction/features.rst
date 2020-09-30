@@ -144,13 +144,13 @@ transaction confirmation time by centralizing authority on the network
 to various degrees.
 
 Dash suffers from neither of these limitations thanks to its 
-second-layer network of masternodes. Masternodes can be called upon to 
-form voting quorums to check whether or not a submitted transaction is 
-valid. If it is valid, the masternodes "lock" the inputs for the 
-transaction and broadcast this information to the network, effectively 
-promising that the transaction will be included in subsequently mined 
-blocks and not allowing any other spending of these inputs during the 
-confirmation time period.
+second-layer network of masternodes. Masternodes regularly form voting
+quorums to check whether or not a submitted transaction is valid. If it
+is valid, the masternodes "lock" the inputs for the transaction and
+broadcast this information to the network, effectively promising that
+the transaction will be included in subsequently mined blocks and not
+allowing any other spending of these inputs during the confirmation time
+period.
 
 InstantSend technology will allow for cryptocurrencies such as Dash to 
 compete with nearly instantaneous transaction systems such as credit 
@@ -163,7 +163,10 @@ few seconds.
 You can view a practical guide to use InstantSend 
 :ref:`here <dashcore-privatesend-instantsend>`. InstantSend was 
 introduced in a whitepaper called `Transaction Locking and Masternode 
-Consensus: A Mechanism for Mitigating Double Spending Attacks <https://github.com/dashpay/docs/blob/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_.
+Consensus: A Mechanism for Mitigating Double Spending Attacks <https://github.com/dashpay/docs/blob/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_, 
+and further improved through the introduction of `LLMQ-based InstantSend
+<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__ in Dash
+0.14.
 
 
 **How Dash 'InstantSend' Protects Merchants from Double Spends**,
@@ -196,7 +199,7 @@ problem.
 ChainLocks Process Overview
 ---------------------------
 
-Every twelve hours a new “LLMQ” (Long-Lasting Masternode Quorum) is
+Every twelve hours a new “LLMQ” (Long-Living Masternode Quorum) is
 formed using a “DKG” (Distributed Key Generation) process. All members
 of this Quorum are responsible for observing, and subsequently
 affirming, newly mined blocks:
@@ -520,9 +523,7 @@ process transactions even if no fee is included.
 The release of Dash 0.12.2.0 and activation of DIP0001 saw a
 simultaneous reduction of fees by a factor of 10, while the block size
 was increased from 1MB to 2MB to promote continued growth of low-cost
-transactions even as the cost of Dash rises. Dash also supports
-:ref:`instantsend` and :ref:`privatesend` transactions, which operate on
-a different and mandatory fee schedule. Dash 0.13.0.0 introduced
+transactions even as the cost of Dash rises. Dash 0.13.0.0 introduced
 InstantSend autolocks, which causes masternodes to automatically attempt
 to lock any transaction with 4 or fewer inputs — which are referred to
 as “simple” transactions — and removes the additional fee for
@@ -550,8 +551,8 @@ transactions may cost around 1-2 cents per transaction, depending on the
 number of inputs. These fees apply regardless of the Dash or dollar
 value of the transaction itself.
 
-PrivateSend works by creating denominations of 10, 1, 0.1, 0.01 and
-0.001 DASH and then mixing these denominations with other users.
+:ref:`PrivateSend` works by creating denominations of 10, 1, 0.1, 0.01
+and 0.001 DASH and then mixing these denominations with other users.
 Creation of the denominations is charged at the default fee for a
 standard transaction. Mixing is free, but to prevent spam attacks, an
 average of one in ten mixing transactions are charged a fee of 0.0001
@@ -613,6 +614,32 @@ components such as:
 
 Evolution Previews
 ------------------
+
+**Dash Dapps - Demoing Community Development on environment**, 17 August
+2020
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/yy8gO1C8fTs" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+**Let's Talk Dash Dapps feat. Sample Dapps & Wallet API (Ep 2)**, 6
+August 2020
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/76pYX44o_j8" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+**Let's Talk Dash Dapps feat. Chrome Wallet (Ep 1)**, 28 July 2020
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/IjjsQNd3Zto" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
 The following videos featuring Dash Founder Evan Duffield and Head of
 UI/UX Development Chuck Williams describe the development process and

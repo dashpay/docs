@@ -81,9 +81,9 @@ index the blockchain, while still securing the keys on your personal
 computer. Transactions are verified on the Dash blockchain using a
 technique called Secure Payment Verification (SPV), which only requires
 the block headers and not the full block. This means that wallet startup
-is almost instant, while still keeping your funds secure and mobile. It
-does not currently support advanced InstantSend and PrivateSend
-features.
+is almost instant, while still keeping your funds secure and mobile.
+Dash Electrum also supports advanced InstantSend, PrivateSend and
+masternode features.
 
 Dash Electrum is a fork of the Electrum wallet for Bitcoin. While this
 documentation focuses on using Dash Electrum, full documentation of all

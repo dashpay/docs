@@ -344,7 +344,7 @@ private keys can be stored in many ways, in this example we will work
 through the process of restoring a private key from a paper wallet using
 Dash Core. If you only have a QR code and not the key, use a barcode
 scanning app (`Android <https://play.google.com/store/apps/details?id=com.google.zxing.client.android>`_
-or `iOS <https://itunes.apple.com/us/app/quick-scan-qr-code-reader/id483336864>`_) 
+or `iOS <https://apps.apple.com/us/app/quick-scan-qr-code-reader/id483336864>`_) 
 to read the code first.
 
 First, start Dash Core and unlock your wallet by selecting **Settings >

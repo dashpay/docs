@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, Dash Core Group, Inc
+# Copyright (C) 2020, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-26 02:41+0000\n"
+"POT-Creation-Date: 2020-05-01 03:43+0000\n"
 "PO-Revision-Date: 2018-02-08 10:31+0000\n"
 "Last-Translator: Yujin Joe <chichimakko@gmail.com>, 2018\n"
 "Language-Team: Korean (https://www.transifex.com/dash/teams/37570/ko/)\n"
@@ -36,7 +36,7 @@ msgstr ""
 #: ../../wallets/dashcore/installation-linux.rst:10
 msgid ""
 "This guide describes how to download, verify, install and encrypt the Dash "
-"Core wallet for Linux. The guide is written for Ubuntu 16.04 LTS, but the "
+"Core wallet for Linux. The guide is written for Ubuntu 20.04 LTS, but the "
 "steps should be similar for other Linux distributions."
 msgstr ""
 
@@ -48,7 +48,7 @@ msgstr "대시 코어 지갑 다운로드 하기"
 msgid ""
 "Visit https://www.dash.org/downloads to download the latest Dash Core "
 "wallet. In most cases, the website will properly detect which version you "
-"need. Click Dash Core button to download the package directly."
+"need. Click the Dash Core button to download the package directly."
 msgstr ""
 
 #: ../../wallets/dashcore/installation-linux.rst:25
@@ -60,9 +60,9 @@ msgid ""
 "If detection does not work, you will need to manually choose your operating "
 "system and whether you need a 32 or 64 bit version. If you are unsure "
 "whether your version of Linux is 32 or 64 bit, you can check in Ubuntu under"
-" the **System menu > About This Computer**. For details on how to check this"
-" in other versions of Linux, see `here <https://www.howtogeek.com/198615"
-"/how-to-check-if-your-linux-system-is-32-bit-or-64-bit/>`__."
+" the **Settings > About > OS Type**. For details on how to check this in "
+"other versions of Linux, see `here <https://www.howtogeek.com/198615/how-to-"
+"check-if-your-linux-system-is-32-bit-or-64-bit/>`__."
 msgstr ""
 
 #: ../../wallets/dashcore/installation-linux.rst:37
@@ -71,16 +71,17 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-linux.rst:39
 msgid ""
-"Once you know which version you need, download Dash Core to your computer "
-"from https://www.dash.org/downloads and save the file you downloaded to your"
-" Downloads folder."
+"If you have a 32-bit system, download **Dash Core x86**. If you have a "
+"64-bit system, download **Dash Core x64**. Once you know which version you "
+"need, download the Dash Core TGZ file to your computer from "
+"https://www.dash.org/downloads and save it to your Downloads folder."
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:44
+#: ../../wallets/dashcore/installation-linux.rst:45
 msgid "Verifying Dash Core"
 msgstr "대시 코어 인증하기"
 
-#: ../../wallets/dashcore/installation-linux.rst:46
+#: ../../wallets/dashcore/installation-linux.rst:47
 msgid ""
 "This step is optional, but recommended to verify the integrity of the file "
 "you downloaded. This is done by checking its SHA256 hash against the hash "
@@ -91,39 +92,39 @@ msgstr ""
 "해시와 지갑을 확인함으로써 완료됩니다. 코어 팀이 게재한 해시를 확인하시려면 지갑 다운로드 페이지에 있는 **해시 파일** 버튼을 "
 "클릭하십시오."
 
-#: ../../wallets/dashcore/installation-linux.rst:52
+#: ../../wallets/dashcore/installation-linux.rst:53
 msgid ""
 "Once both the Dash Core file and the hash file have downloaded, double-click"
 " the hash file or view it in your browser and find the hash value for the "
 "Dash Core file you downloaded."
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:59
+#: ../../wallets/dashcore/installation-linux.rst:60
 msgid "Viewing the Dash Core hash file"
 msgstr "대시 코어 해시 파일 확인하기"
 
-#: ../../wallets/dashcore/installation-linux.rst:61
+#: ../../wallets/dashcore/installation-linux.rst:62
 msgid ""
 "This hash value should correspond with the hash value of the file you have "
 "downloaded to ensure it is authentic and was not corrupted during transit. "
 "To do this, open Terminal, browse to the location where you saved the file, "
-"and run the sha256sum command."
+"and run the ``sha256sum`` command."
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:69
+#: ../../wallets/dashcore/installation-linux.rst:70
 msgid "Generating an SHA256 hash for the downloaded file"
 msgstr "다운로드 받은 파일을 위해 SHA256 해시를 생성하기"
 
-#: ../../wallets/dashcore/installation-linux.rst:71
+#: ../../wallets/dashcore/installation-linux.rst:72
 msgid ""
 "If the hashes match, then you have an authentic copy of Dash Core for Linux."
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:75
+#: ../../wallets/dashcore/installation-linux.rst:76
 msgid "Extracting Dash Core"
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:77
+#: ../../wallets/dashcore/installation-linux.rst:78
 msgid ""
 "Dash Core for Linux is distributed as a compressed archive and not an "
 "installer. This is because this same archive also contains other files built"
@@ -132,48 +133,22 @@ msgid ""
 "for use by end users as a wallet."
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:83
+#: ../../wallets/dashcore/installation-linux.rst:84
+msgid "Extract Dash Core as follows::"
+msgstr ""
+
+#: ../../wallets/dashcore/installation-linux.rst:88
 msgid ""
-"Begin by creating a folder for the Dash Core executable file on the Desktop."
-" Browse to the Desktop (or the location of your choice) and create the "
-"folder."
+"This will create a folder named ``dashcore-0.15.0`` in the current working "
+"directory. We will now install the executable binaries to ``/usr/local/bin``"
+" using the ``install`` command::"
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:90
-msgid "Creating a folder on the Desktop"
+#: ../../wallets/dashcore/installation-linux.rst:94
+msgid "Start Dash Core from the terminal with the following command::"
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:95
-msgid "Renaming the folder to Dash"
-msgstr ""
-
-#: ../../wallets/dashcore/installation-linux.rst:97
-msgid ""
-"Next, open the archive by double-clicking on it. The Archive Manager will "
-"appear. Browse to the dashcore-0.14.0/bin/ folder and extract the dash-qt "
-"file to the Dash folder you created on the Desktop by drag and drop."
-msgstr ""
-
-#: ../../wallets/dashcore/installation-linux.rst:105
-msgid "The dash-qt file in Archive Manager"
-msgstr ""
-
-#: ../../wallets/dashcore/installation-linux.rst:110
-msgid "The dash-qt file in the Dash folder on the Desktop"
-msgstr ""
-
-#: ../../wallets/dashcore/installation-linux.rst:112
-msgid ""
-"To run Dash Core for the first time, open Terminal and browse to the Dash "
-"folder on the Desktop, or where you chose to extract the file. Type "
-"``./dash-qt`` to run the file."
-msgstr ""
-
-#: ../../wallets/dashcore/installation-linux.rst:119
-msgid "Running Dash Core from the Terminal"
-msgstr ""
-
-#: ../../wallets/dashcore/installation-linux.rst:121
+#: ../../wallets/dashcore/installation-linux.rst:98
 msgid ""
 "The first time the program is launched, you will be offered a choice of "
 "where you want to store your blockchain and wallet data. Choose a location "
@@ -181,11 +156,11 @@ msgid ""
 "recommended to use the default data folder if possible."
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:129
+#: ../../wallets/dashcore/installation-linux.rst:106
 msgid "Choosing the Dash Core data folder"
 msgstr "대시 코어 데이터 폴더 선택하기"
 
-#: ../../wallets/dashcore/installation-linux.rst:131
+#: ../../wallets/dashcore/installation-linux.rst:108
 msgid ""
 "Dash Core will then start up. This will take a little longer than usual the "
 "first time you run it, since Dash Core needs to generate cryptographic data "
@@ -194,15 +169,15 @@ msgstr ""
 "이후 대시 코어가 실행될 것입니다. 첫 실행 시에는 다소 긴 시간이 소요되는데, 이는 대시 코어가 당신의 지갑을 안전하게 보호하기 위하여"
 " 암호화된 데이터를 생성하기 때문입니다."
 
-#: ../../wallets/dashcore/installation-linux.rst:138
+#: ../../wallets/dashcore/installation-linux.rst:115
 msgid "Starting Dash Core"
 msgstr "대시 코어 시작하기"
 
-#: ../../wallets/dashcore/installation-linux.rst:141
+#: ../../wallets/dashcore/installation-linux.rst:118
 msgid "Synchronizing Dash Core to the Dash network"
 msgstr "대시 코어와 대시 네트워크 동기화하기"
 
-#: ../../wallets/dashcore/installation-linux.rst:143
+#: ../../wallets/dashcore/installation-linux.rst:120
 msgid ""
 "Once Dash Core is successfully installed and started, you will see the "
 "wallet overview screen. You will notice that the wallet is “out of sync”, "
@@ -212,11 +187,11 @@ msgstr ""
 "대시 코어가 성공적으로 설치 및 시작되는 경우, 당신은 지갑 개요 화면을 보게 될 것입니다. 당신은 지갑이 동기화 되지 않은 상태이며 "
 "창의 하단 상태 바가 동기화 진행 상황을 보여주고 있음을 확인할 수 있습니다."
 
-#: ../../wallets/dashcore/installation-linux.rst:151
+#: ../../wallets/dashcore/installation-linux.rst:128
 msgid "Dash Core begins synchronizing with the Dash network"
 msgstr "대시 코어가 대시 네트워크와 동기화를 진행하고 있습니다."
 
-#: ../../wallets/dashcore/installation-linux.rst:153
+#: ../../wallets/dashcore/installation-linux.rst:130
 msgid ""
 "During this process, Dash Core will download a full copy of the Dash "
 "blockchain from other nodes to your device. Depending on your internet "
@@ -228,19 +203,19 @@ msgstr ""
 "따라 이 과정은 긴 시간이 소요될 수 있습니다. 만일 당신이 '사용할 수 있는 블록 소스 없음' 메시지를 받는다면, 당신의 인터넷 연결 "
 "상황을 확인하십시오. 동기화가 완료되면 당신은 작은 파란색 체크 표시를 볼 수 있을 것입니다. "
 
-#: ../../wallets/dashcore/installation-linux.rst:162
+#: ../../wallets/dashcore/installation-linux.rst:139
 msgid "Dash Core synchronization is complete"
 msgstr "대시 코어 동기화가 완료되었습니다."
 
-#: ../../wallets/dashcore/installation-linux.rst:164
+#: ../../wallets/dashcore/installation-linux.rst:141
 msgid "You can now begin to use your wallet to send and receive funds."
 msgstr "이제 당신은 당신의 지갑을 이용하여 돈을 보내고 받을 수 있습니다."
 
-#: ../../wallets/dashcore/installation-linux.rst:167
+#: ../../wallets/dashcore/installation-linux.rst:144
 msgid "Encrypting your Dash wallet"
 msgstr "당신의 대시 지갑 암호화하기"
 
-#: ../../wallets/dashcore/installation-linux.rst:169
+#: ../../wallets/dashcore/installation-linux.rst:146
 msgid ""
 "After your wallet has synchronized with the Dash network, it is strongly "
 "advised to encrypt the wallet with a password or passphrase to prevent "
@@ -253,27 +228,27 @@ msgstr ""
 "곳에서 사용한 적 없는 강력하고 새로운 암호를 사용하여야 합니다. 당신의 암호를 별도로 적어 안전한 곳에 저장하십시오. 그렇지 않으면 "
 "지갑이 잠기게 되어 당신의 자금에 접근할 수 없게 됩니다."
 
-#: ../../wallets/dashcore/installation-linux.rst:176
+#: ../../wallets/dashcore/installation-linux.rst:153
 msgid "To encrypt your wallet, click **Settings** > **Encrypt wallet**."
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:181
+#: ../../wallets/dashcore/installation-linux.rst:158
 msgid "Encrypting the Dash wallet with a password"
 msgstr "대시 지갑을 암호문으로 암호화하기"
 
-#: ../../wallets/dashcore/installation-linux.rst:183
+#: ../../wallets/dashcore/installation-linux.rst:160
 msgid "You will be asked to enter and verify a password."
 msgstr "암호문을 입력하고 확인하십시오."
 
-#: ../../wallets/dashcore/installation-linux.rst:188
+#: ../../wallets/dashcore/installation-linux.rst:165
 msgid "Entering a password"
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:193
+#: ../../wallets/dashcore/installation-linux.rst:170
 msgid "Confirm you want to encrypt your wallet"
 msgstr "당신이 지갑을 암호화하고 싶은 것이 맞는지 확인합니다."
 
-#: ../../wallets/dashcore/installation-linux.rst:195
+#: ../../wallets/dashcore/installation-linux.rst:172
 msgid ""
 "When the encryption process is complete, you will see a warning that past "
 "backups of your wallet will no longer be usable, and be asked to shut down "
@@ -283,15 +258,15 @@ msgstr ""
 "지갑 암호화 과정이 완료되면, 당신은 지갑의 지난 백업을 더이상 사용할 수 없다는 경고문을 받게 됩니다. 또한 대시 코어를 종료하라는 "
 "메시지 역시 받게 될 것입니다. 대시 코어를 재시작하면 작은 파란색 자물쇠가 우측 하단 코너에 표시됩니다."
 
-#: ../../wallets/dashcore/installation-linux.rst:203
+#: ../../wallets/dashcore/installation-linux.rst:180
 msgid "Fully encrypted and synchronized Dash Core wallet"
 msgstr "대시 코어 지갑이 완전히 암호화되고 동기화되었습니다."
 
-#: ../../wallets/dashcore/installation-linux.rst:206
+#: ../../wallets/dashcore/installation-linux.rst:183
 msgid "Using the Ubuntu Repository to install Dash Core"
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:208
+#: ../../wallets/dashcore/installation-linux.rst:185
 msgid ""
 "Ubuntu allows you to add third-party repositories to install and update "
 "software using the apt command line utility. Dash Core team maintains such a"

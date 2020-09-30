@@ -335,6 +335,46 @@ currency management and exploration.
 - Documentation: https://www.chainrider.io/docs/dash
 
 
+Blockmove
+---------
+
+.. image:: img/blockmove.png
+   :width: 200px
+   :align: right
+   :target: https://blockmove.io
+
+https://blockmove.io
+
+Сryptocurrency wallet, merchant & API provider. Blockmove is a simple
+and easy way to start accepting payments in cryptocurrency.
+
+- Features: Non-custodial wallet, HD Wallet, High anonymity, Low fees. 
+  Private keys are not stored and are available only to the user. 
+- Pricing Model: API - 0.3% for withdrawal transactions. Merchant - 1 
+  year free, then $49/month 
+- Documentation: https://docs.blockmove.io
+
+
+NOWNodes
+--------
+
+.. image:: img/nownodes.png
+   :width: 200px
+   :align: right
+   :target: https://nownodes.io
+
+https://nownodes.io/
+
+NOWNodes provides simple, fast, and secure RPC access to Dash full
+nodes. The low latency and high performance is of great use to
+researchers and businesses such as crypto miners or hardware wallet
+providers.
+
+- Features: All Dash RPC commands
+- Pricing Model: Free up to 20k requests, Pricing tiers
+- Documentation: https://nownodes.io/documentation
+
+
 GoCoin
 ------
 

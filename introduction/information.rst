@@ -1,6 +1,6 @@
 .. meta::
    :description: Glossary and collection of links to other parts of the Dash ecosystem and network
-   :keywords: dash, cryptocurrency, glossary, links, community, official, github, roadmap, chat, discord, facebook, twitter, social media
+   :keywords: dash, cryptocurrency, glossary, links, community, official, github, roadmap, chat, discord, facebook, twitter, telegram, social media
 
 .. _information:
 
@@ -30,17 +30,17 @@ Community sites
 ---------------
 
 - https://dashdevs.org
-- https://www.dashnexus.org
+- https://app.dashnexus.org
 - https://www.dashwatch.org
-- https://www.dashboost.org
 - https://www.dashcentral.org
 - https://www.dashninja.pl
-- https://www.dashnews.org
+- https://dashnews.org
 - https://dashthailand.org
+- https://dashnigeria.com/
 - https://www.dashnation.com
 - https://dashvotetracker.com
-- https://www.dashspain.org
-- http://www.dashhaiti.com
+- http://www.dashspain.org
+- https://www.dashhaiti.com
 - http://thedashbrain.com
 
 Forums
@@ -49,7 +49,7 @@ Forums
 - **Dash Forum**: https://www.dash.org/forum
 - **BitcoinTalk thread:** https://bitcointalk.org/index.php?topic=421615.0
 - **Cryptocurrencytalk.com:** https://cryptocurrencytalk.com/forum/693-dash
-- **巴比特 (8BTC) Forum:** http://8btc.com/forum-115-1.html
+- **链节点 (ChainNode) Forum:** https://www.chainnode.com/forum/115
 - **百度贴吧 达世币吧 (Baidu Tieba):** `https://tieba.baidu.com/f?kw=达世币 <https://tieba.baidu.com/f?kw=达世币>`_
 - **彩云比特 达世币 (CYBTC Dash):** http://www.cybtc.com/forum-123-1.html
 
@@ -57,14 +57,23 @@ Forums
 Chat
 ----
 
-- **Dash Nation Discord:** https://discordapp.com/invite/9z8zX5j
-- **Dash Talk Discord:** https://discordapp.com/invite/PXbUxJB
+- **Dash Nation Discord:** https://discord.com/invite/9z8zX5j
+- **Dash Talk Discord:** https://discord.com/invite/PXbUxJB
 - **Dash Dapp Devs Discord:** https://chat.dashdevs.org
 - **Dash English Telegram:** https://t.me/dash_chat
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil
+- **Dash Dinheiro Digital:** https://t.me/DashDinheiroDigital
 - **Dash Russia Telegram:** https://telegram.me/Dash_Ru
-- **Dash en Español Telegram:** http://unete.dashespanol.com
-- **Dash Embassy D-A-CH auf Deutsch Telegram:** https://t.me/dashembassydach 
+- **Dash en Español Telegram:** https://t.me/dashpayES
+- **Dash Embassy D-A-CH auf Deutsch Telegram:** https://t.me/dashembassydach
+- **Dash France Telegram:** https://t.me/DashFrance
+- **Dash Indonesia Telegram:** https://t.me/dashindonesia
+- **Dash Iran Telegram:** https://t.me/IranianDash
+- **Dash Italy Telegram:** https://t.me/dash_chat_italia
+- **Dash LatAm Telegram:** https://t.me/DashAmericaLatina
+- **Dash Philippines Telegram:** https://t.me/dashphp
+- **Dash Thailand Telegram:** https://t.me/dashthailand
+- **Dash Turkey Telegram:** https://t.me/dashturkey
 - **Dash Telegram News Bot:** https://telegram.me/dashnews
 - **QQ 达世币官方群 DASH.China:** 419967021
 - **Freenode IRC:** #dashpay
@@ -76,7 +85,7 @@ Social media
 - **Reddit:** https://www.reddit.com/r/dashpay
 - **Twitter:** https://twitter.com/dashpay
 - **Steemit:** https://steemit.com/@dashpay
-- **LinkedIn:** https://www.linkedin.com/company/10424093
+- **LinkedIn:** https://www.linkedin.com/company/dash---digitalcash-cryptocurrency-
 - **YouTube:** https://www.youtube.com/c/DashOrg
 - **Instagram:** https://www.instagram.com/dashpay
 - **Dailymotion:** http://www.dailymotion.com/dashworld
@@ -121,13 +130,15 @@ Twitter
 News
 ----
 
-- **Dash Force News:** https://www.dashnews.org
+- **Digital Cash Network:** https://www.youtube.com/channel/UCduLugW5-tkzxIde8Iz72mw
+- **Cash Alternative TV:** https://www.youtube.com/channel/UCeFCPtS8sViGO_NpKnS2rpg
+- **Dash News:** https://dashnews.org
 - **Dash News En Español:** https://dashnewsespanol.com
 - **Dash News En Español (YouTube):** https://www.youtube.com/channel/UCG6Cuh8Q2eUt4NlZu4K-u8g
 - **Dash News Korea:** https://dashnewskorea.com
 - **Cointelegraph:** https://cointelegraph.com/tags/dash
-- **巴比特 (8BTC):** http://www.8btc.com/dash
-- **Dash Embassy D-A-CH:** http://www.dash-embassy.org/
+- **巴比特 (8BTC):** https://www.8btc.com/p/dash
+- **Dash Embassy D-A-CH:** https://www.dash-embassy.org/
 - **Dash News Germany:** https://dash-news.de
 - **Dash Vietnam:** https://dashvn.blogspot.com
 - **Dash France:** https://dashfrance.com/
@@ -174,7 +185,7 @@ Block explorers, statistics and visualizations
 - https://dashblockexplorer.com
 - https://live.blockcypher.com/dash
 - https://dashradar.com
-- http://udjinm6.github.io/bitlisten
+- https://udjinm6.github.io/bitlisten
 - http://insight.dash.crowdnode.io
 
 
@@ -183,8 +194,7 @@ Treasury tools
 
 - https://www.dashwatch.org
 - https://www.dashcentral.org
-- https://www.dashboost.org
-- https://dashnexus.org
+- https://app.dashnexus.org
 - https://dashvotetracker.com
 - https://proposal.dash.org
 - https://www.dashninja.pl/governance.html
@@ -194,11 +204,11 @@ Masternode management
 ---------------------
 
 - http://dashmasternode.org
-- https://dashninja.pl
+- https://www.dashninja.pl
 - https://stats.masternode.me
 - https://github.com/Bertrand256/dash-masternode-tool
 - http://178.254.23.111/~pub/Dash/Dash_Info.html
-- https://m1.dash-news.de/dashtv/#value=1000
+- https://dash-news.de/dashtv/
 
 
 Price monitoring and statistics
@@ -229,17 +239,16 @@ Mobile Apps
 iOS
 ---
 
-- **Dash Wallet:** https://itunes.apple.com/app/id1206647026
-- **Edge:** https://itunes.apple.com/app/id1344400091
-- **Jaxx:** https://itunes.apple.com/app/id1435383184
-- **Coinomi:** https://itunes.apple.com/app/id1333588809
-- **Exodus:** https://itunes.apple.com/app/id1414384820
-- **Bitnovo:** https://itunes.apple.com/app/id1220883632
-- **CoinCap:** https://itunes.apple.com/app/id1074052280
-- **Blockfolio:** https://itunes.apple.com/app/id1095564685
-- **Cryptonaut:** https://itunes.apple.com/app/id1312756405
-- **Abra:** https://itunes.apple.com/app/id966301394
-- **BitUniverse:** https://itunes.apple.com/app/id1329338902
+- **Dash Wallet:** https://apps.apple.com/app/id1206647026
+- **Edge:** https://apps.apple.com/app/id1344400091
+- **Jaxx:** https://apps.apple.com/app/id1435383184
+- **Coinomi:** https://apps.apple.com/app/id1333588809
+- **Exodus:** https://apps.apple.com/app/id1414384820
+- **Bitnovo:** https://apps.apple.com/app/id1220883632
+- **CoinCap:** https://apps.apple.com/app/id1074052280
+- **Blockfolio:** https://apps.apple.com/app/id1095564685
+- **Abra:** https://apps.apple.com/app/id966301394
+- **BitUniverse:** https://apps.apple.com/app/id1329338902
 
 
 Android
@@ -249,12 +258,11 @@ Android
 - **Edge:** https://play.google.com/store/apps/details?id=co.edgesecure.app
 - **Jaxx:** https://play.google.com/store/apps/details?id=com.liberty.jaxx
 - **Coinomi:** https://play.google.com/store/apps/details?id=com.coinomi.wallet
-- **Cryptonator:** https://play.google.com/store/apps/details?id=com.aev.cryptonator
+- **Cryptonator:** https://play.google.com/store/apps/details?id=com.cryptonator.android
 - **Exodus:** https://play.google.com/store/apps/details?id=exodusmovement.exodus
 - **Bitnovo:** https://play.google.com/store/apps/details?id=com.bitnovo.app
 - **CoinCap:** https://play.google.com/store/apps/details?id=io.coinCap.coinCap
 - **Blockfolio:** https://play.google.com/store/apps/details?id=com.blockfolio.blockfolio
-- **Cryptonaut:** https://play.google.com/store/apps/details?id=org.cryptonaut.app
 - **Abra:** https://play.google.com/store/apps/details?id=com.plutus.wallet
 - **Bitcoin Ticker Widget:** https://play.google.com/store/apps/details?id=st.brothas.mtgoxwidget
 - **BitUniverse:** https://play.google.com/store/apps/details?id=com.bituniverse.portfolio

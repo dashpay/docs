@@ -131,7 +131,7 @@ using the following syntax::
 
 Where:
 
-- ``proTxHash``: The hash of the initial ProRegTx
+- ``proTxHash``: The transaction id of the initial ProRegTx
 - ``ipAndPort``: IP and port in the form "ip:port"
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key

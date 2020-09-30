@@ -91,7 +91,8 @@ List of known Dash-related scams:
 - **coinvert dot io** is a fake exchange!
 - **dashcash dot io** is not affiliated with Dash and may be 
   distributing a compromised wallet!
-- **dashdaowallet dot com** is a mydashwallet clone and confirmed scam
+- **dashdaowallet dot com** is a mydashwallet clone and confirmed scam!
+- **mydashwallets dot com** is a mydashwallet clone and confirmed scam!
 
 Beware of fake Twitter accounts impersonating Dash! The official Twitter
 account is: https://twitter.com/Dashpay
@@ -99,7 +100,7 @@ account is: https://twitter.com/Dashpay
 Please report these and any others scams you encounter as follows:
 
 #. Report phishing and scams to Google: 
-   https://www.google.com/safebrowsing/report_phish
+   https://safebrowsing.google.com/safebrowsing/report_phish/
 #. Look up the registrar of the domain and send a complaint: 
    https://www.whois.com/whois
 #. Report phishing to Netcraft: https://www.netcraft.com

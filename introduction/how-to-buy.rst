@@ -227,7 +227,7 @@ Bithumb
   .. image:: exchanges/bithumb.png
      :width: 200px
      :align: right
-     :target: https://bithumb.com
+     :target: https://www.bithumb.com
 
   https://www.bithumb.com
 
@@ -333,9 +333,9 @@ Bitci
   .. image:: exchanges/bitci.png
      :width: 200px
      :align: right
-     :target: https://bitci.com
+     :target: https://www.bitci.com
 
-  https://bitci.com
+  https://www.bitci.com
 
   Bitci offers DASH trading in Turkey against BTC, Turkish Lira (TRY)
   and CHFT.
@@ -677,17 +677,6 @@ ACX
   ACX is an Australian exchange accepting fiat deposits from Australian
   bank accounts. DASH is available to trade against BTC.
 
-Jinanace
-  .. image:: exchanges/jinance.png
-     :width: 200px
-     :align: right
-     :target: https://jinance.com.au
-
-  https://jinance.com.au
-
-  Jinance is an Australian exchange accepting fiat deposits from
-  Australian bank accounts. DASH is available to trade against AUD.
-
 OKEX
   .. image:: exchanges/okex.png
      :width: 200px
@@ -765,9 +754,9 @@ Golix
   .. image:: exchanges/golix.png
      :width: 200px
      :align: right
-     :target: https://golix.com
+     :target: https://golix.co.zw
 
-  https://golix.com
+  https://golix.co.zw
 
   Based in Zimbabwe, Golix is a digital currency exchange that helps
   people in Sub-Saharan Africa buy and sell DASH and other
@@ -1030,17 +1019,6 @@ NovaDAX
   NovaDAX offers BTC, USDT and BRL trading pairs for Dash, with rapid
   deposits and withdrawals in Brazilian real. Trading compeitions and
   OTC services are also available.
-
-3xBit
-  .. image:: exchanges/3xbit.png
-     :width: 200px
-     :align: right
-     :target: https://3xbit.com.br
-
-  https://3xbit.com.br
-
-  3xBit is a Brazil-based exchange offering many Dash pairs, as well as
-  trading against BTC and the dollar-proxy CREDIT coin.
 
 NegocieCoins
   .. image:: exchanges/negociecoins.png
@@ -1448,9 +1426,9 @@ Guarda
   .. image:: exchanges/guarda.png
      :width: 140px
      :align: right
-     :target: https://guarda.co
+     :target: https://guarda.com
 
-  https://guarda.co
+  https://guarda.com
 
   Guarda offers an entire blockchain ecosystem consisting of desktop,
   web and mobile wallets, OTC crypto sales and instant crypto exchange.

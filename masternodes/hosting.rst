@@ -39,6 +39,26 @@ https://crowdnode.io
 - `Email <hello@crowdnode.io>`__
 
 
+Allnodes
+--------
+
+.. image:: img/allnodes.svg
+   :width: 200px
+   :align: right
+   :target: https://www.allnodes.com
+
+https://www.allnodes.com
+
+- Operated by: Sephiroth
+- Services: Monitoring, Hosting
+- Cost: from $4/month
+- `Site <https://www.allnodes.com>`__
+- `Email <info@allnodes.com>`__
+- `Twitter <https://twitter.com/allnodes>`__
+- `Telegram <https://t.me/allnodes>`__
+- `Discord <https://discord.allnodes.com>`__
+
+
 SID Hosting Service
 -------------------
 
@@ -54,26 +74,6 @@ https://dashmasternode.io
 - Cost: €25/month, paid in Dash
 - `Site <http://dashmasternode.io>`__
 - `Email <sidhosting@protonmail.com>`__
-
-
-Allnodes
---------
-
-.. image:: img/allnodes.svg
-   :width: 200px
-   :align: right
-   :target: https://www.allnodes.com
-
-https://www.allnodes.com
-
-- Operated by: Sephiroth
-- Services: Monitoring, Hosting
-- Cost: $5/month (free during beta)
-- `Site <https://www.allnodes.com>`__
-- `Email <info@allnodes.com>`__
-- `Twitter <https://twitter.com/allnodes>`__
-- `Telegram <https://t.me/allnodes>`__
-- `Discord <https://discord.allnodes.com>`__
 
 
 Node40
@@ -95,28 +95,40 @@ https://node40.com
 - `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`__
 
 
-Penny Scavengers
-----------------
+Pool of Stake
+-------------
 
-https://pennyscavs.com
+.. image:: img/pool-of-stake.svg
+   :width: 200px
+   :align: right
+   :target: https://www.poolofstake.io
 
-- Operated by: p5yc071c
-- Services: Hosting
-- Cost: 50 CHF/month
-- `Site <https://pennyscavs.com>`__
+https://www.poolofstake.io
+
+- Operated by: Pool of Stake OÜ
+- Services: Hosting, Shares
+- 15% of masternode payments (5% with tokens)
+- `Site <https://www.poolofstake.io>`__
+- `Email <mail@poolofstake.io>`__
+- `Twitter <https://twitter.com/poolofstake>`__
+- `Telegram <https://telegram.me/poolofstake>`__
 
 
-Masternodehosting
------------------
+Staked
+------
 
-https://masternodehosting.com
+.. image:: img/staked.png
+   :width: 200px
+   :align: right
+   :target: https://staked.us
 
-- Operated by: flare (Dash Core team member)
-- Services: Hosting
-- Cost: €18/month
-- `Site <https://masternodehosting.com>`__
-- `Email <holger@masternodehosting.com>`__
-- `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
+https://staked.us
+
+- Operated by: Staked
+- Services: Hosting, Reporting
+- Cost: 10% of rewards
+- `Site <https://staked.us>`__
+- `Email <sales@staked.us>`__
 
 
 NodeHub.io
@@ -155,6 +167,30 @@ https://mn.gtmcoin.io
 - `Email <info@gtmcoin.io>`__
 - `Twitter <https://twitter.com/GTM_Gentarium>`__
 - `Discord <https://discordapp.com/invite/vErwUSC>`__
+
+
+Penny Scavengers
+----------------
+
+https://pennyscavs.com
+
+- Operated by: p5yc071c
+- Services: Hosting
+- Cost: 50 CHF/month
+- `Site <https://pennyscavs.com>`__
+
+
+Masternodehosting
+-----------------
+
+https://masternodehosting.com
+
+- Operated by: flare (Dash Core team member)
+- Services: Hosting
+- Cost: €18/month
+- `Site <https://masternodehosting.com>`__
+- `Email <holger@masternodehosting.com>`__
+- `Forum <https://www.dash.org/forum/threads/service-masternode-hosting-service.2648/>`__
 
 
 .. _hosted-setup:

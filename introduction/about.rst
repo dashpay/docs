@@ -36,6 +36,19 @@ learning about :ref:`safety <safety>` or joining one of the many
 Dash Videos
 -----------
 
+What is Dash?
+~~~~~~~~~~~~~
+
+Armenian Crypto School has produced an in-depth video describing Dash
+and its many distinguishing features.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe src="//www.youtube.com/embed/vItzmZo_eWw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+
 Dash School
 ~~~~~~~~~~~
 
@@ -74,16 +87,20 @@ and is available in
 Whitepaper
 ----------
 
-The Dash Whitepaper describes the unique value proposition and key
-innovations in Dash from an academic and theoretical perspective. It is 
-a living document maintained as a GitHub wiki, receiving ongoing updates 
-and frequent community translations as new features are implemented. 
-Various other whitepapers describing particular features in additional 
-detail and (for historical reasons) the original whitepaper are 
-available for download as PDF files.
+The Dash Whitepaper describes the original unique value proposition and
+key innovations in Dash from an academic and theoretical perspective. It
+is a historical document available as a GitHub wiki, and no longer
+receives updates as new features or architectural changes are
+implemented. Instead, these features are described in successive Dash
+Improvement Proposals (DIPs), while larger architectural changes are
+described in separate whitepapers. Features backported from Bitcoin are
+described in Bitcoin Improvement Proposals (BIPs).
 
-- `Latest whitepaper and official translations <https://github.com/dashpay/dash/wiki/Whitepaper>`_
+- `Whitepaper and translations <https://github.com/dashpay/dash/wiki/Whitepaper>`_
 - `PDF whitepaper <https://github.com/dashpay/docs/raw/master/binary/Dash%20Whitepaper%20-%20V2.pdf>`_
+- `Dash Improvement Proposals (DIPs) <https://github.com/dashpay/dips>`_
+- `Bitcoin Improvement Proposals (BIPs) <https://github.com/bitcoin/bips>`_
+- `Evolution Initial Design Document <https://www.dash.org/wp-content/uploads/Dash-Evolution-Initial-Design-Document.pdf>`_
 - `Original Darkcoin whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/binary/Dash%20Whitepaper%20-%20Darkcoin.pdf>`_
 - `InstantSend whitepaper (PDF) <https://github.com/dashpay/docs/raw/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_
 
