@@ -30,7 +30,8 @@ any given PrivateSend transaction has a `quantifiable effect
 privatesend.32472/>`_ on the confidence an adversary may have when
 attempting to guess the source of a PrivateSend transaction. For this
 reason, the recommended (and default) number of rounds of PrivateSend
-mixing is set to four.
+mixing is set to four, and some inputs may be mixed by additional rounds
+to further improve privacy.
 
 You can read more about PrivateSend theory and processes :ref:`here
 <privatesend>`.
