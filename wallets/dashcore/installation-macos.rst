@@ -39,22 +39,27 @@ download the detached signature, click the **Installer Signature**
 button on the wallet download page and save it to the same folder as the
 downloaded binary.
 
-All releases of Dash are signed using GPG by Alexander Block (codablock)
-with the key ``63A9 6B40 6102 E091``, `verifiable here on Keybase
-<https://keybase.io/codablock>`_. Open a terminal, import the key and
-verify the authenticity of your download as follows::
+All releases of Dash are signed using GPG with one of the following keys:
+
+- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
+  `verifiable here on Keybase <https://keybase.io/codablock>`_
+- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
+  on Keybase <https://keybase.io/pasta>`_
+
+Open a terminal, import the keys and verify the authenticity of your
+download as follows::
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
-  gpg --verify dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz.asc
+  curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
+  gpg --verify dashcore-0.16.0.0-x86_64-linux-gnu.tar.gz.asc
 
 .. figure:: img/linux/setup-linux-gpg.png
    :width: 400px
 
    Downloading the PGP key and verifying the signed binary
 
-If you see the message ``Good signature from "Alexander Block (codablock) 
-<alexander.block@dash.org>" [unknown]`` then you have an authentic copy 
-of Dash Core for macOS.
+If you see the message ``Good signature from ...`` then you have an
+authentic copy of Dash Core for macOS.
 
 Installing Dash Core
 --------------------

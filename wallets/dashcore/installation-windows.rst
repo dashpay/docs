@@ -56,14 +56,17 @@ download the detached signature, click the **Installer Signature**
 button on the wallet download page and save it to the same folder as the
 downloaded binary.
 
-All releases of Dash are signed using GPG by Alexander Block (codablock)
-with the key ``63A9 6B40 6102 E091``, `verifiable here on Keybase
-<https://keybase.io/codablock>`_. Install `Gpg4win
-<https://gpg4win.org/>`__ if it is not already available on your
-computer. Once it is installed, open the **Kleopatra** certificate
-manager and click **Lookup on Server**. Type ``codablock`` in the
-**Find** field and click **Search**. Verify the Key-ID matches the ID
-above, then click **Import**. 
+All releases of Dash are signed using GPG with one of the following keys:
+
+- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
+  `verifiable here on Keybase <https://keybase.io/codablock>`_ (`download <https://keybase.io/codablock/pgp_keys.asc>`_)
+- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
+  on Keybase <https://keybase.io/pasta>`_ (`download <https://keybase.io/pasta/pgp_keys.asc>`_)
+
+Download the key files above. Install `Gpg4win <https://gpg4win.org/>`__
+if it is not already available on your computer. Once it is installed,
+open the **Kleopatra** certificate manager and click **File -> Import**.
+Import the key files and verify the Key-ID matches the ID above. 
 
 .. figure:: img/windows/setup-windows-kleopatra-import.png
    :height: 250px
@@ -72,7 +75,7 @@ above, then click **Import**.
 
 Skip any requests to certify the certificate with your own key. Next,
 click **Decrypt/Verify...** and select the detached signature file named
-``dashcore-0.15.0.0-win64-setup.exe.asc`` in the same folder as the
+``dashcore-0.16.0.0-win64-setup.exe.asc`` in the same folder as the
 downloaded installer.
 
 .. figure:: img/windows/setup-windows-kleopatra-verify.png
@@ -81,8 +84,8 @@ downloaded installer.
    Selecting the signature file for verification
 
 If you see the first line of the message reads ``Verified
-dashcore-0.15.0.0-win64-setup.exe with
-dashcore-0.15.0.0-win64-setup.exe.asc`` then you have an authentic copy
+dashcore-0.16.0.0-win64-setup.exe with
+dashcore-0.16.0.0-win64-setup.exe.asc`` then you have an authentic copy
 of Dash Core for Windows.
 
 .. figure:: img/windows/setup-windows-kleopatra-verified.png

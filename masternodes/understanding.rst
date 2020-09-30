@@ -286,8 +286,6 @@ Masternode requirements
   to average specifications will do, although performance requirements
   will increase according to this roadmap.
 - A dedicated IP address: These usually come with the VPS/server.
-- A little time and (heart): Masternodes used to require complex setup,
-  but tools such as dashman now greatly simplify the process.
 
 In addition to the 1000 Dash held in collateral, masternodes also have
 minimum hardware requirements. For Dash versions 0.14 and higher, these

@@ -431,60 +431,15 @@ masternodes. If not displaying a GUI, it runs as a daemon on your VPS
 (dashd), controlled by a simple command interface (dash-cli).
 
 Open PuTTY or a console again and connect using the username and
-password you just created for your new, non-root user. There are two
-options to install Dash Core, an automated option using a script utility
-called dashman, and a more complicated option which will allow you to
-understand all of the key steps involved in preparing your masternode.
+password you just created for your new, non-root user. The following
+options are available for installing a Dash masternode:
 
-Option 1: Automated installation using dashman
-----------------------------------------------
+- Manual installation (this guide)
+- `xkcd's installation guide <https://www.dash.org/forum/threads/system-wide-masternode-setup-with-systemd-auto-re-start-rfc.39460/>`__
+- `dashman installation <https://docs.dash.org/en/0.15.0/masternodes/setup.html#option-1-automated-installation-using-dashman>`__ (deprecated)
+- `mn-bootstrap installation <https://docs.dash.org/en/mn-bootstrap/masternodes/setup.html#install-mn-bootstrap>`__ (beta version, currently testnet only)
 
-To install Dash using dashman, enter the following commands after
-logging in::
-
-  cd ~
-  git clone https://github.com/moocowmoo/dashman
-  ~/dashman/dashman install
-
-(press **Y** and **Enter** to confirm)
-
-dashman will download the latest version of Dash Core for your system,
-as well as an initial snapshot of the blockchain to speed up the
-bootstrapping process. Next download and install Sentinel, which is
-required for masternodes at version 0.12.1 or higher::
-
-  ~/dashman/dashman install sentinel
-
-Your system is now running as a standard Dash node, and is busy
-completing synchronisation with the blockchain. Since dashman does not
-automatically restart your masternode in the event of a system error,
-add a check function to crontab to make sure it checks every minute to
-ensure your masternode is still running::
-
-  crontab -e
-
-Choose nano as your editor and enter the following line at the end of
-the file, after the line for sentinel::
-
-  * * * * * { pidof dashd || ~/.dashcore/dashd;} >/dev/null 2>&1
-
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. Check the sync status and wait until all blockchain
-synchronisation and the 15 confirmations for the collateral transaction
-are complete::
-
-  ~/dashman/dashman status
-
-.. figure:: img/setup-dashman-done.png
-   :width: 400px
-
-   dashman status output showing masternode ready to be registered
-
-Continue with the :ref:`next step to register your masternode
-<register-masternode>`.
-
-Option 2: Manual installation
+Manual installation
 -----------------------------
 
 To manually download and install the components of your Dash masternode,
@@ -495,38 +450,30 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.15.0.0/dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.16.0.0/dashcore-0.16.0.0-x86_64-linux-gnu.tar.gz
 
-Verify the integrity of your download by running the following command
-and comparing the output against the value for the file as shown in the
-``SHA256SUMS.asc`` file::
+Verify the authenticity of your download by checking its detached
+signature against the public key published by the Dash Core development
+team. All releases of Dash are signed using GPG with one of the
+following keys:
 
-  wget https://github.com/dashpay/dash/releases/download/v0.15.0.0/SHA256SUMS.asc
-  sha256sum dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
-  cat SHA256SUMS.asc
-
-You can also optionally verify the authenticity of your download as an
-official release by Dash Core Team. All releases of Dash are signed
-using GPG by Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, 
-`verifiable here on Keybase <https://keybase.io/codablock>`_. Import the
-key, download the ASC file for the current release of Dash and verify
-the signature as follows::
+- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
+  `verifiable here on Keybase <https://keybase.io/codablock>`_
+- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
+  on Keybase <https://keybase.io/pasta>`_
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
-  gpg --verify SHA256SUMS.asc
-
-.. figure:: img/setup-manual-gpg.png
-   :width: 400px
-
-   Downloading the PGP key and verifying the signed binary
+  curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
+  wget https://github.com/dashpay/dash/releases/download/v0.16.0.0/dashcore-0.16.0.0-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-0.16.0.0-x86_64-linux-gnu.tar.gz.asc
 
 Create a working directory for Dash, extract the compressed archive and
 copy the necessary files to the directory::
 
   mkdir ~/.dashcore
-  tar xfv dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-0.15.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-0.15.0/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-0.16.0.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.16.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.16.0/bin/dash-cli ~/.dashcore/
 
 Create a configuration file using the following command::
 
@@ -690,9 +637,8 @@ seconds in between to give Dash Core time to shut down::
   sleep 15
   ~/.dashcore/dashd
 
-At this point you can monitor your masternode using 
-``~/dashman/dashman status``, by entering 
-``~/.dashcore/dash-cli masternode status`` or using the **Get status** 
+At this point you can monitor your masternode by entering
+``~/.dashcore/dash-cli masternode status`` or using the **Get status**
 function in DMT. The final result should appear as follows:
 
 .. figure:: img/setup-dash-cli-start.png
@@ -954,14 +900,8 @@ where the txid of the final ``protx register_submit`` transaction
 identifies your masternode.
 
 At this point you can go back to your terminal window and monitor your
-masternode using ``~/dashman/dashman status``, by entering
-``~/.dashcore/dash-cli masternode status`` or using the **Get status**
-function in DMT. The final result should appear as follows:
-
-.. figure:: img/setup-dashman-started.png
-   :width: 400px
-
-   dashman status output showing successfully registered masternode
+masternode by entering ``~/.dashcore/dash-cli masternode status`` or
+using the **Get status** function in DMT. 
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.

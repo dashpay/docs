@@ -21,28 +21,13 @@ Masternode Software Update
 ==========================
 
 The Dash Core software requires regular updates in order to remain
-consistent with the current network consensus. Depending on whether you
-installed Dash manually or using dashman, you must follow the procedure
-appropriate for your masternode, as described below.
+consistent with the current network consensus. Follow the procedure
+described below to manually update your masternode. If you are still
+using the legacy dashman installer, see the legacy update documentation
+`here <https://docs.dash.org/en/0.15.0/masternodes/maintenance.html#masternode-software-update>`__.
 
-
-Option 1: Updating from dashman
--------------------------------
-
-To update Dash using dashman, log in to your server and enter the
-following commands::
-
-  ~/dashman/dashman sync update -y
-
-Check the status of your masternode::
-
-  ~/dashman/dashman status
-
-The Dash software on the masternode is now updated.
-
-
-Option 2: Manual update
------------------------
+Manual update
+-------------
 
 To update Dash manually, log in to your server using ssh or PuTTY. If
 your crontab contains an entry to automatically restart dashd, invoke
@@ -62,19 +47,19 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.15.0.0/dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.16.0.0/dashcore-0.16.0.0-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.16.0.0-x86_64-linux-gnu.tar.gz
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-0.15.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-0.15.0/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-0.16.0.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.16.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.16.0/bin/dash-cli ~/.dashcore/
 
 Restart Dash::
 
