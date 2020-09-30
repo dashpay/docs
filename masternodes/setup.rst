@@ -462,6 +462,8 @@ following keys:
 - Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
   on Keybase <https://keybase.io/pasta>`_
 
+::
+
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
   wget https://github.com/dashpay/dash/releases/download/v0.16.0.1/dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz.asc
