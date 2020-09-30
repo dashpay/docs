@@ -66,7 +66,6 @@ Faucets
 Explorers
 ---------
 
-- http://insight.test.dash.crowdnode.io
 - https://testnet-insight.dashevo.org/insight
 
 Pools

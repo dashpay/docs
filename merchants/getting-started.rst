@@ -109,19 +109,6 @@ CDPay
   EUR or CZK.
 
 
-CoinGate
-  .. image:: img/coingate.svg
-     :width: 200px
-     :align: right
-     :target: https://coingate.com
-
-  https://coingate.com
-
-  CoinGate offers point of sale apps, payment buttons, e-commerce
-  plugins and an API to accept payments in Dash, with payouts in EUR,
-  USD or Dash.
-
-
 Coinify
   .. image:: img/coinify.png
      :width: 200px

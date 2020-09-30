@@ -64,9 +64,6 @@ the budgets and projects. This guarantees there is a working system of
 maintenance as people come and go, making the network capable of
 sustaining itself on its own without depending on specific actors.
 
-Note that if you do not operate a masternode, you may still be able to
-vote on DashBoost proposals. See https://www.dashboost.org for more
-information.
 
 Budgets and masternode voting
 =============================
@@ -193,7 +190,7 @@ The community has gathered around `DashCentral
 <https://www.dashcentral.org>`__ as a website to facilitate discussion
 and voting on proposals formally entered on the Dash blockchain. Other
 websites, such as `Dash Ninja <https://www.dashninja.pl>`__ and `Dash
-Nexus <https://dashnexus.org>`__ are available to monitor progress over
+Nexus <https://app.dashnexus.org/>`__ are available to monitor progress over
 time and gather more detailed statistics. `Dash Masternode Tool
 <https://github.com/Bertrand256/dash-masternode-tool/releases>`__ also
 allows for voting without the need to share masternode private keys with
@@ -238,7 +235,7 @@ roles.
 Voting on proposals is updated in real time via P2P messages and stored
 by Dash in cache files, so current winning proposals and the total
 allocation of the available budget are always open and visible to
-everyone. `Dash Nexus <https://dashnexus.org>`__ is a popular site used
+everyone. `Dash Nexus <https://app.dashnexus.org/>`__ is a popular site used
 for to view progress on proposal voting.
 
 .. figure:: img/governance-dashnexus.png

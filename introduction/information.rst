@@ -30,12 +30,11 @@ Community sites
 ---------------
 
 - https://dashdevs.org
-- https://www.dashnexus.org
+- https://app.dashnexus.org
 - https://www.dashwatch.org
-- https://www.dashboost.org
 - https://www.dashcentral.org
 - https://www.dashninja.pl
-- https://www.dashnews.org
+- https://dashnews.org
 - https://dashthailand.org
 - https://dashnigeria.com/
 - https://www.dashnation.com
@@ -58,8 +57,8 @@ Forums
 Chat
 ----
 
-- **Dash Nation Discord:** https://discordapp.com/invite/9z8zX5j
-- **Dash Talk Discord:** https://discordapp.com/invite/PXbUxJB
+- **Dash Nation Discord:** https://discord.com/invite/9z8zX5j
+- **Dash Talk Discord:** https://discord.com/invite/PXbUxJB
 - **Dash Dapp Devs Discord:** https://chat.dashdevs.org
 - **Dash English Telegram:** https://t.me/dash_chat
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil
@@ -86,7 +85,7 @@ Social media
 - **Reddit:** https://www.reddit.com/r/dashpay
 - **Twitter:** https://twitter.com/dashpay
 - **Steemit:** https://steemit.com/@dashpay
-- **LinkedIn:** https://www.linkedin.com/company/10424093
+- **LinkedIn:** https://www.linkedin.com/company/dash---digitalcash-cryptocurrency-
 - **YouTube:** https://www.youtube.com/c/DashOrg
 - **Instagram:** https://www.instagram.com/dashpay
 - **Dailymotion:** http://www.dailymotion.com/dashworld
@@ -133,7 +132,7 @@ News
 
 - **Digital Cash Network:** https://www.youtube.com/channel/UCduLugW5-tkzxIde8Iz72mw
 - **Cash Alternative TV:** https://www.youtube.com/channel/UCeFCPtS8sViGO_NpKnS2rpg
-- **Dash News:** https://www.dashnews.org
+- **Dash News:** https://dashnews.org
 - **Dash News En Español:** https://dashnewsespanol.com
 - **Dash News En Español (YouTube):** https://www.youtube.com/channel/UCG6Cuh8Q2eUt4NlZu4K-u8g
 - **Dash News Korea:** https://dashnewskorea.com
@@ -195,8 +194,7 @@ Treasury tools
 
 - https://www.dashwatch.org
 - https://www.dashcentral.org
-- https://www.dashboost.org
-- https://dashnexus.org
+- https://app.dashnexus.org
 - https://dashvotetracker.com
 - https://proposal.dash.org
 - https://www.dashninja.pl/governance.html
@@ -206,11 +204,11 @@ Masternode management
 ---------------------
 
 - http://dashmasternode.org
-- https://dashninja.pl
+- https://www.dashninja.pl
 - https://stats.masternode.me
 - https://github.com/Bertrand256/dash-masternode-tool
 - http://178.254.23.111/~pub/Dash/Dash_Info.html
-- https://m1.dash-news.de/dashtv/#value=1000
+- https://dash-news.de/dashtv/
 
 
 Price monitoring and statistics
