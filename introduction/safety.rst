@@ -100,7 +100,7 @@ account is: https://twitter.com/Dashpay
 Please report these and any others scams you encounter as follows:
 
 #. Report phishing and scams to Google: 
-   https://www.google.com/safebrowsing/report_phish
+   https://safebrowsing.google.com/safebrowsing/report_phish/
 #. Look up the registrar of the domain and send a complaint: 
    https://www.whois.com/whois
 #. Report phishing to Netcraft: https://www.netcraft.com
