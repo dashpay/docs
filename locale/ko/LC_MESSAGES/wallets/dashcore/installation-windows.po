@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 03:43+0000\n"
+"POT-Creation-Date: 2020-10-01 01:04+0000\n"
 "PO-Revision-Date: 2018-02-08 10:31+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/dash/teams/37570/ko/)\n"
@@ -98,63 +98,81 @@ msgstr "대시 코어 검증하기"
 
 #: ../../wallets/dashcore/installation-windows.rst:52
 msgid ""
-"This step is optional, but recommended to verify the integrity of the file "
-"you downloaded. This is done by checking its SHA256 hash against the hash "
-"published by the Dash Core development team. To view the published hash, "
-"click the **Hash file** button on the wallet download page."
+"This step is optional, but recommended to verify the authenticity of the "
+"file you downloaded. This is done by checking its detached signature against"
+" the public key published by the Dash Core development team. To download the"
+" detached signature, click the **Installer Signature** button on the wallet "
+"download page and save it to the same folder as the downloaded binary."
 msgstr ""
-"이 단계는 선택적입니다. 그러나 다운로드 받은 파일의 완전성을 검증할 것을 권장합니다. 이는 대시 코어 개발팀이 게재한 SHA256 "
-"해시와 지갑을 확인함으로써 완료됩니다. 코어 팀이 게재한 해시를 확인하시려면 지갑 다운로드 페이지에 있는 **해시 파일** 버튼을 "
-"클릭하십시오."
 
-#: ../../wallets/dashcore/installation-windows.rst:58
+#: ../../wallets/dashcore/installation-windows.rst:59
 msgid ""
-"Once both the Dash Core file and the hash file have downloaded, open the "
-"hash file in a text editor or your browser and find the hash value for the "
-"Dash Core file you downloaded."
+"All releases of Dash are signed using GPG with one of the following keys:"
 msgstr ""
-"대시 코어 파이로가 해시 파일을 모두 다운로드 받으면, 해시 파일을 텍스트 편집기 혹은 브라우저를 통해 열고, 다운 받은 대시 코어 "
-"파일을 위한 해시 밸류를 찾으십시오."
 
-#: ../../wallets/dashcore/installation-windows.rst:65
-msgid "Viewing the Dash Core hash file"
-msgstr "대시 코어 해시 파일 확인하기"
-
-#: ../../wallets/dashcore/installation-windows.rst:67
+#: ../../wallets/dashcore/installation-windows.rst:61
 msgid ""
-"This hash value should correspond with the hash value of the file you have "
-"downloaded to ensure it is authentic and was not corrupted during transit. "
-"To do this, open **Command Prompt**, browse to the location where you saved "
-"the file, and run the following command, replacing the version with the "
-"specific version of the file you downloaded."
+"Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, "
+"`verifiable here on Keybase <https://keybase.io/codablock>`__ (`download "
+"<https://keybase.io/codablock/pgp_keys.asc>`__)"
 msgstr ""
-"이 해시값은 다운로드 받은 파일의 해시값과  상응해야 합니다. 이는 파일의 진위 여부를 확인하고 혹시 파일이 다운 받는 과정에서 손상되지"
-" 않았는지 여부를 확인하기 위한 것입니다. 이를 위해서는 **명령 프롬프트**\\ 를 열어 당신이 파일을 저장한 장소를 확인하고, 다음의"
-" 명령을 실행한 다음, 이 버전과 다운로드 받은 파일의 특정 버전을 대체합니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:80
-msgid "Generating an SHA256 hash for the downloaded file"
-msgstr "다운로드 받은 파일을 위한 SHA256 해시 생성하기"
-
-#: ../../wallets/dashcore/installation-windows.rst:82
+#: ../../wallets/dashcore/installation-windows.rst:63
 msgid ""
-"If the hashes match, then you have an authentic copy of Dash Core for "
-"Windows."
-msgstr "만일 이 해시값이 동일하다면, 당신은 확실한 윈도우 버전 대시 코어를 다운 받은 것입니다."
+"Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here on "
+"Keybase <https://keybase.io/pasta>`__ (`download "
+"<https://keybase.io/pasta/pgp_keys.asc>`__)"
+msgstr ""
+
+#: ../../wallets/dashcore/installation-windows.rst:66
+msgid ""
+"Download the key files above. Install `Gpg4win <https://gpg4win.org/>`__ if "
+"it is not already available on your computer. Once it is installed, open the"
+" **Kleopatra** certificate manager and click **File -> Import**. Import the "
+"key files and verify the Key-ID matches the ID above."
+msgstr ""
+
+#: ../../wallets/dashcore/installation-windows.rst:74
+msgid "Importing codablock's GPG public key"
+msgstr ""
+
+#: ../../wallets/dashcore/installation-windows.rst:76
+msgid ""
+"Skip any requests to certify the certificate with your own key. Next, click "
+"**Decrypt/Verify...** and select the detached signature file named "
+"``dashcore-0.16.0.1-win64-setup.exe.asc`` in the same folder as the "
+"downloaded installer."
+msgstr ""
+
+#: ../../wallets/dashcore/installation-windows.rst:84
+msgid "Selecting the signature file for verification"
+msgstr ""
 
 #: ../../wallets/dashcore/installation-windows.rst:86
+msgid ""
+"If you see the first line of the message reads ``Verified "
+"dashcore-0.16.0.1-win64-setup.exe with "
+"dashcore-0.16.0.1-win64-setup.exe.asc`` then you have an authentic copy of "
+"Dash Core for Windows."
+msgstr ""
+
+#: ../../wallets/dashcore/installation-windows.rst:94
+msgid "The binary installer has been verified"
+msgstr ""
+
+#: ../../wallets/dashcore/installation-windows.rst:97
 msgid "Running the Dash Core installer"
 msgstr "대시 코어 인스톨러 실행하기"
 
-#: ../../wallets/dashcore/installation-windows.rst:88
+#: ../../wallets/dashcore/installation-windows.rst:99
 msgid "Double-click the file to start installing Dash Core."
 msgstr "대시 코어를 설치하기 위해 파일을 더블클릭 하십시오."
 
-#: ../../wallets/dashcore/installation-windows.rst:93
+#: ../../wallets/dashcore/installation-windows.rst:104
 msgid "The Dash Core installer in the Downloads folder"
 msgstr "다운로드 폴더의 대시 코어 인스톨러"
 
-#: ../../wallets/dashcore/installation-windows.rst:95
+#: ../../wallets/dashcore/installation-windows.rst:106
 msgid ""
 "At this point, you may see a warning from Windows SmartScreen that the app "
 "is unrecognized. You can safely skip past this warning by clicking **More "
@@ -163,48 +181,48 @@ msgstr ""
 "이 단계에서 당신은 윈도우 스마트스크린(SmartScreens)으로부터 이 응용 프로그랩을 인식할 수 없다는 경고를 받을 지 모릅니다. "
 "이 경우 **더 알아보기**, 그리고 **계속 실행하기**\\ 를 클릭함으로써 이 경고를 안전하게 통과할 수 있습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:105
+#: ../../wallets/dashcore/installation-windows.rst:116
 msgid ""
 "Bypassing Windows SmartScreen to run the app. This warning is known as a "
 "“false positive”."
 msgstr "이 응용 프로그램을 실항하기 위해서 윈도우 스마트스크린을 우회합니다. 이 경고 메시지는 '긍정 오류'라고도 알려져 있습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:108
+#: ../../wallets/dashcore/installation-windows.rst:119
 msgid "The installer will then guide you through the installation process."
 msgstr "그 다음에는 인스톨러가 당신을 설치 과정으로 안내할 것입니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:113
+#: ../../wallets/dashcore/installation-windows.rst:124
 msgid "The Dash Core installer welcome screen"
 msgstr "대시 코어 인스톨러 환영 화면"
 
-#: ../../wallets/dashcore/installation-windows.rst:115
+#: ../../wallets/dashcore/installation-windows.rst:126
 msgid ""
 "Click through the following screens. All settings can be left at their "
 "default values unless you have a specific reason to change something."
 msgstr ""
 "다음의 화면에 따라 클릭합니다. 당신이 설정을 변경하기 위한 특정한 이유가 있지 않은 한, 모든 설정은 기본값으로 둘 수 있습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:121
+#: ../../wallets/dashcore/installation-windows.rst:132
 msgid "Select the installation location"
 msgstr "설치 경로를 지정합니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:126
+#: ../../wallets/dashcore/installation-windows.rst:137
 msgid "Select the Start menu folder"
 msgstr "시작 메뉴 폴더를 선택합니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:131
+#: ../../wallets/dashcore/installation-windows.rst:142
 msgid "Dash Core is being installed"
 msgstr "대시 코어가 설치되고 있습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:136
+#: ../../wallets/dashcore/installation-windows.rst:147
 msgid "Installation is complete"
 msgstr "설치가 완료되었습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:139
+#: ../../wallets/dashcore/installation-windows.rst:150
 msgid "Running Dash Core for the first time"
 msgstr "처음으로 대시 코어 실행하기"
 
-#: ../../wallets/dashcore/installation-windows.rst:141
+#: ../../wallets/dashcore/installation-windows.rst:152
 msgid ""
 "Once installation is complete, Dash Core will start up immediately. If it "
 "does not, click **Start > Dash Core > Dash Core** to start the application. "
@@ -218,11 +236,11 @@ msgstr ""
 "있습니다. 블록체인이 30GB+를 차지할 수 있는 만큼, 충분한 사용 공간이 있는 장소를 선택하십시오, 가능하다면 기본 데이터 폴더를 "
 "사용하시는 것을 권장합니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:152
+#: ../../wallets/dashcore/installation-windows.rst:163
 msgid "Choosing the Dash Core data folder"
 msgstr "대시 코어 데이터 폴더 선택하기"
 
-#: ../../wallets/dashcore/installation-windows.rst:154
+#: ../../wallets/dashcore/installation-windows.rst:165
 msgid ""
 "Dash Core will then start up. This will take a little longer than usual the "
 "first time you run it, since Dash Core needs to generate cryptographic data "
@@ -231,15 +249,15 @@ msgstr ""
 "이후 대시 코어가 실행될 것입니다. 첫 실행 시에는 다소 긴 시간이 소요되는데, 이는 대시 코어가 당신의 지갑을 안전하게 보호하기 위하여"
 " 암호화된 데이터를 생성하기 때문입니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:161
+#: ../../wallets/dashcore/installation-windows.rst:172
 msgid "Starting Dash Core"
 msgstr "대시 코어 시작하기"
 
-#: ../../wallets/dashcore/installation-windows.rst:164
+#: ../../wallets/dashcore/installation-windows.rst:175
 msgid "Synchronizing Dash Core to the Dash network"
 msgstr "대시 코어와 대시 네트워크 동기화하기"
 
-#: ../../wallets/dashcore/installation-windows.rst:166
+#: ../../wallets/dashcore/installation-windows.rst:177
 msgid ""
 "Once Dash Core is successfully installed and started, you will see the "
 "wallet overview screen. You will notice that the wallet is “out of sync”, "
@@ -249,11 +267,11 @@ msgstr ""
 "대시 코어가 성공적으로 설치 및 시작되는 경우, 당신은 지갑 개요 화면을 보게 될 것입니다. 또한 당신의 지갑이 동기화 되지 않은 "
 "상태임을 확인할 수 있으며, 또한 창의 하단 상태 바에서 동기화 진행 상황을 보실 수 있습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:174
+#: ../../wallets/dashcore/installation-windows.rst:185
 msgid "Dash Core begins synchronizing with the Dash network"
 msgstr "대시 코어가 대시 네트워크와 동기화를 진행하고 있습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:176
+#: ../../wallets/dashcore/installation-windows.rst:187
 msgid ""
 "During this process, Dash Core will download a full copy of the Dash "
 "blockchain from other nodes to your device. Depending on your internet "
@@ -265,19 +283,19 @@ msgstr ""
 "따라 이 과정은 긴 시간이 소요될 수 있습니다. 만일 당신이 '사용할 수 있는 블록 소스 없음' 메시지를 받는다면, 당신의 인터넷 연결 "
 "상황을 확인하십시오. 동기화가 완료되면, 작은 파란색 체크 표시를 볼 수 있을 것입니다. "
 
-#: ../../wallets/dashcore/installation-windows.rst:186
+#: ../../wallets/dashcore/installation-windows.rst:197
 msgid "Dash Core synchronization is complete"
 msgstr "대시 코어 동기화가 완료되었습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:188
+#: ../../wallets/dashcore/installation-windows.rst:199
 msgid "You can now begin to use your wallet to send and receive funds."
 msgstr "이제 당신은 당신의 지갑을 이용하여 자금을 보내고 받을 수 있습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:191
+#: ../../wallets/dashcore/installation-windows.rst:202
 msgid "Encrypting your Dash wallet"
 msgstr "당신의 대시 지갑 암호화하기"
 
-#: ../../wallets/dashcore/installation-windows.rst:193
+#: ../../wallets/dashcore/installation-windows.rst:204
 msgid ""
 "After your wallet has synchronized with the Dash network, it is strongly "
 "advised to encrypt the wallet with a password or passphrase to prevent "
@@ -290,27 +308,27 @@ msgstr ""
 "곳에서 사용한 적 없는 강력하고 새로운 암호를 사용하여야 합니다. 당신의 암호를 별도로 적어 안전한 곳에 저장하십시오. 그렇지 않으면 "
 "지갑이 잠기게 되어 스스로의 자금에 접근할 수 없게 됩니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:200
+#: ../../wallets/dashcore/installation-windows.rst:211
 msgid "To encrypt your wallet, click **Settings > Encrypt Wallet**."
 msgstr "지갑을 암호화하기 위해서는 **설정>지갑 암호화** 를 클릭하십시오."
 
-#: ../../wallets/dashcore/installation-windows.rst:205
+#: ../../wallets/dashcore/installation-windows.rst:216
 msgid "Encrypting the Dash wallet with a password"
 msgstr "대시 지갑을 암호문으로 암호화하고 있습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:207
+#: ../../wallets/dashcore/installation-windows.rst:218
 msgid "You will be asked to enter and verify a password."
 msgstr "암호문을 입력하고 확인하십시오."
 
-#: ../../wallets/dashcore/installation-windows.rst:212
+#: ../../wallets/dashcore/installation-windows.rst:223
 msgid "Enter a password"
 msgstr "암호문을 입력합니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:217
+#: ../../wallets/dashcore/installation-windows.rst:228
 msgid "Confirm you want to encrypt your wallet"
 msgstr "당신이 지갑을 암호화하고 싶은 것이 맞는지 확인합니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:219
+#: ../../wallets/dashcore/installation-windows.rst:230
 msgid ""
 "When the encryption process is complete, you will see a warning that past "
 "backups of your wallet will no longer be usable, and be asked to shut down "
@@ -320,10 +338,10 @@ msgstr ""
 "지갑 암호화 과정이 완료되면, 당신은 지갑의 지난 백업을 더이상 사용할 수 없다는 경고문을 받게 됩니다. 또한 대시 코어를 종료하라는 "
 "메시지 역시 받게 될 것입니다. 대시 코어를 재시작하면 우측 하단 코너에서 작은 파란색 자물쇠 표시를 확인하실 수 있습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:227
+#: ../../wallets/dashcore/installation-windows.rst:238
 msgid "Fully encrypted and synchronized Dash Core wallet"
 msgstr "대시 코어 지갑이 완전히 암호화되고 동기화되었습니다."
 
-#: ../../wallets/dashcore/installation-windows.rst:229
+#: ../../wallets/dashcore/installation-windows.rst:240
 msgid "You can now begin to use your wallet to safely send and receive funds."
 msgstr "이제 당신은 지갑을 이용하여 자금을 안전하게 보내고 받을 수 있습니다."

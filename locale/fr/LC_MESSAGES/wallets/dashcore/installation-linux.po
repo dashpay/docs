@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Daf Daf, 2018
 # Leon White <leon.white@dash.org>, 2019
+# Daf Daf, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 03:43+0000\n"
+"POT-Creation-Date: 2020-10-01 01:04+0000\n"
 "PO-Revision-Date: 2018-02-08 10:31+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
+"Last-Translator: Daf Daf, 2020\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,6 +42,10 @@ msgid ""
 "Core wallet for Linux. The guide is written for Ubuntu 20.04 LTS, but the "
 "steps should be similar for other Linux distributions."
 msgstr ""
+"Ce guide explique comment télécharger, vérifier, installer et chiffrer le "
+"portefeuille Dash Core pour Linux. Ce guide est écrit pour Ubuntu 20.04 LTS,"
+" mais les étapes devraient être similaires pour d'autres distributions "
+"Linux."
 
 #: ../../wallets/dashcore/installation-linux.rst:15
 msgid "Downloading the Dash Core wallet"
@@ -53,6 +57,10 @@ msgid ""
 "wallet. In most cases, the website will properly detect which version you "
 "need. Click the Dash Core button to download the package directly."
 msgstr ""
+"Visitez https://www.dash.org/fr/telechargements pour télécharger le "
+"portefeuille logiciel Dash Core le plus récent. Dans la plupart des cas, le "
+"site détectera correctement la version dont vous avez besoin. Cliquez sur le"
+" bouton Dash Core pour télécharger directement le paquet."
 
 #: ../../wallets/dashcore/installation-linux.rst:25
 msgid "The website properly detects the wallet appropriate for your system"
@@ -69,6 +77,13 @@ msgid ""
 "other versions of Linux, see `here <https://www.howtogeek.com/198615/how-to-"
 "check-if-your-linux-system-is-32-bit-or-64-bit/>`__."
 msgstr ""
+"Si la détection ne fonctionne pas, vous devrez choisir manuellement votre "
+"système d'exploitation et si vous avez besoin d'une version 32 ou 64 bits. "
+"Si vous ne savez pas si votre version de Linux est 32 ou 64 bits, vous "
+"pouvez le vérifier dans Ubuntu dans **Réglages > À propos > Type de système "
+"d'exploitation**. Pour plus de détails sur les autres versions de Linux, "
+"voir `ici <https://www.howtogeek.com/198615/how-to-check-if-your-linux-"
+"system-is-32-bit-or-64-bit/>`__."
 
 #: ../../wallets/dashcore/installation-linux.rst:37
 msgid "Ubuntu System Overview. This is a 64 bit system."
@@ -81,6 +96,11 @@ msgid ""
 "need, download the Dash Core TGZ file to your computer from "
 "https://www.dash.org/downloads and save it to your Downloads folder."
 msgstr ""
+"Si vous avez un système 32 bits, téléchargez **Dash Core x86**. Si vous avez"
+" un système 64 bits, téléchargez **Dash Core x64**. Une fois que vous savez "
+"de quelle version vous avez besoin, téléchargez le fichier TGZ Dash Core "
+"depuis l'adresse https://www.dash.org/fr/telechargements et enregistrez le "
+"fichier téléchargé dans votre dossier Téléchargements."
 
 #: ../../wallets/dashcore/installation-linux.rst:45
 msgid "Verifying Dash Core"
@@ -88,57 +108,51 @@ msgstr "Vérifier Dash Core"
 
 #: ../../wallets/dashcore/installation-linux.rst:47
 msgid ""
-"This step is optional, but recommended to verify the integrity of the file "
-"you downloaded. This is done by checking its SHA256 hash against the hash "
-"published by the Dash Core development team. To view the published hash, "
-"click the **Hash file** button on the wallet download page."
+"This step is optional, but recommended to verify the authenticity of the "
+"file you downloaded. This is done by checking its detached signature against"
+" the public key published by the Dash Core development team. To download the"
+" detached signature, click the **Signature** button on the wallet download "
+"page and save it to the same folder as the downloaded binary."
 msgstr ""
-"Cette étape est facultative, mais recommandée. Elle consiste à vérifier "
-"l'authenticité du fichier que vous avez téléchargé. Cela se fait en "
-"comparant sa signature de hachage SHA256 et celle publiée par l'équipe de "
-"développement Dash Core. Pour afficher la signature publiée, cliquez sur le "
-"bouton **Fichier de hachage** sur la page de téléchargement du portefeuille."
 
-#: ../../wallets/dashcore/installation-linux.rst:53
+#: ../../wallets/dashcore/installation-linux.rst:54
 msgid ""
-"Once both the Dash Core file and the hash file have downloaded, double-click"
-" the hash file or view it in your browser and find the hash value for the "
-"Dash Core file you downloaded."
+"All releases of Dash are signed using GPG with one of the following keys:"
 msgstr ""
-"Une fois que vous avez téléchargé les deux fichiers (Dash Core et sa "
-"signature), ouvrez le fichier signature dans un éditeur de texte, ou dans "
-"votre navigateur, et repérez la signature correspondant au fichier Dash Core"
-" téléchargé."
 
-#: ../../wallets/dashcore/installation-linux.rst:60
-msgid "Viewing the Dash Core hash file"
-msgstr "Affichage du fichier de signature de hachage de Dash Core"
-
-#: ../../wallets/dashcore/installation-linux.rst:62
+#: ../../wallets/dashcore/installation-linux.rst:56
 msgid ""
-"This hash value should correspond with the hash value of the file you have "
-"downloaded to ensure it is authentic and was not corrupted during transit. "
-"To do this, open Terminal, browse to the location where you saved the file, "
-"and run the ``sha256sum`` command."
+"Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, "
+"`verifiable here on Keybase <https://keybase.io/codablock>`__"
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:70
-msgid "Generating an SHA256 hash for the downloaded file"
-msgstr ""
-"Génération d'une signature de hachage SHA256 pour le fichier téléchargé"
-
-#: ../../wallets/dashcore/installation-linux.rst:72
+#: ../../wallets/dashcore/installation-linux.rst:58
 msgid ""
-"If the hashes match, then you have an authentic copy of Dash Core for Linux."
+"Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here on "
+"Keybase <https://keybase.io/pasta>`__"
 msgstr ""
-"Si les signatures sont identiques, vous disposez du fichier authentique de "
-"Dash Core pour Linux."
 
-#: ../../wallets/dashcore/installation-linux.rst:76
+#: ../../wallets/dashcore/installation-linux.rst:61
+msgid ""
+"Open a terminal, import the keys and verify the authenticity of your "
+"download as follows::"
+msgstr ""
+
+#: ../../wallets/dashcore/installation-linux.rst:71
+msgid "Downloading the PGP key and verifying the signed binary"
+msgstr "Téléchargement de la clé PGP et vérification de l'exécutable signé"
+
+#: ../../wallets/dashcore/installation-linux.rst:73
+msgid ""
+"If you see the message ``Good signature from ...`` then you have an "
+"authentic copy of Dash Core for Linux."
+msgstr ""
+
+#: ../../wallets/dashcore/installation-linux.rst:77
 msgid "Extracting Dash Core"
 msgstr "Extraction de Dash Core"
 
-#: ../../wallets/dashcore/installation-linux.rst:78
+#: ../../wallets/dashcore/installation-linux.rst:79
 msgid ""
 "Dash Core for Linux is distributed as a compressed archive and not an "
 "installer. This is because this same archive also contains other files built"
@@ -153,22 +167,22 @@ msgstr ""
 "exécutable avec une interface utilisateur graphique (GUI), conçu pour "
 "l'utilisation en tant que portefeuille par l'utilisateur final."
 
-#: ../../wallets/dashcore/installation-linux.rst:84
+#: ../../wallets/dashcore/installation-linux.rst:85
 msgid "Extract Dash Core as follows::"
-msgstr ""
+msgstr "Extraction de Dash Core comme suit :"
 
-#: ../../wallets/dashcore/installation-linux.rst:88
+#: ../../wallets/dashcore/installation-linux.rst:89
 msgid ""
-"This will create a folder named ``dashcore-0.15.0`` in the current working "
+"This will create a folder named ``dashcore-0.16.0`` in the current working "
 "directory. We will now install the executable binaries to ``/usr/local/bin``"
 " using the ``install`` command::"
 msgstr ""
 
-#: ../../wallets/dashcore/installation-linux.rst:94
+#: ../../wallets/dashcore/installation-linux.rst:95
 msgid "Start Dash Core from the terminal with the following command::"
-msgstr ""
+msgstr "Démarrez Dash Core depuis le terminal avec la commande suivante :"
 
-#: ../../wallets/dashcore/installation-linux.rst:98
+#: ../../wallets/dashcore/installation-linux.rst:99
 msgid ""
 "The first time the program is launched, you will be offered a choice of "
 "where you want to store your blockchain and wallet data. Choose a location "
@@ -181,11 +195,11 @@ msgstr ""
 "atteindre une taille de 30+ Go. Il est recommandé d'utiliser le dossier "
 "proposé par défaut, dans la mesure du possible."
 
-#: ../../wallets/dashcore/installation-linux.rst:106
+#: ../../wallets/dashcore/installation-linux.rst:107
 msgid "Choosing the Dash Core data folder"
 msgstr "Sélection du dossier de données Dash Core"
 
-#: ../../wallets/dashcore/installation-linux.rst:108
+#: ../../wallets/dashcore/installation-linux.rst:109
 msgid ""
 "Dash Core will then start up. This will take a little longer than usual the "
 "first time you run it, since Dash Core needs to generate cryptographic data "
@@ -195,15 +209,15 @@ msgstr ""
 "première fois, car Dash Core doit générer des données cryptographiques pour "
 "sécuriser votre portefeuille."
 
-#: ../../wallets/dashcore/installation-linux.rst:115
+#: ../../wallets/dashcore/installation-linux.rst:116
 msgid "Starting Dash Core"
 msgstr "Démarrage de Dash Core"
 
-#: ../../wallets/dashcore/installation-linux.rst:118
+#: ../../wallets/dashcore/installation-linux.rst:119
 msgid "Synchronizing Dash Core to the Dash network"
 msgstr "Synchronisation de Dash Core avec le réseau Dash"
 
-#: ../../wallets/dashcore/installation-linux.rst:120
+#: ../../wallets/dashcore/installation-linux.rst:121
 msgid ""
 "Once Dash Core is successfully installed and started, you will see the "
 "wallet overview screen. You will notice that the wallet is “out of sync”, "
@@ -215,11 +229,11 @@ msgstr ""
 " \"pas encore synchronisé\", et que la barre de progression en bas de la "
 "fenêtre montre la progression de la synchronisation."
 
-#: ../../wallets/dashcore/installation-linux.rst:128
+#: ../../wallets/dashcore/installation-linux.rst:129
 msgid "Dash Core begins synchronizing with the Dash network"
 msgstr "Dash Core démarre la synchronisation avec le réseau Dash"
 
-#: ../../wallets/dashcore/installation-linux.rst:130
+#: ../../wallets/dashcore/installation-linux.rst:131
 msgid ""
 "During this process, Dash Core will download a full copy of the Dash "
 "blockchain from other nodes to your device. Depending on your internet "
@@ -234,21 +248,21 @@ msgstr ""
 "connexion Internet. Quand la synchronisation est achevée, vous verrez une "
 "petite coche bleue dans le coin inférieur droit."
 
-#: ../../wallets/dashcore/installation-linux.rst:139
+#: ../../wallets/dashcore/installation-linux.rst:140
 msgid "Dash Core synchronization is complete"
 msgstr "La synchronisation de Dash Core est achevée"
 
-#: ../../wallets/dashcore/installation-linux.rst:141
+#: ../../wallets/dashcore/installation-linux.rst:142
 msgid "You can now begin to use your wallet to send and receive funds."
 msgstr ""
 "Vous pouvez à présent utiliser votre portefeuille pour envoyer et recevoir "
 "des fonds."
 
-#: ../../wallets/dashcore/installation-linux.rst:144
+#: ../../wallets/dashcore/installation-linux.rst:145
 msgid "Encrypting your Dash wallet"
 msgstr "Chiffrage de votre portefeuille Dash"
 
-#: ../../wallets/dashcore/installation-linux.rst:146
+#: ../../wallets/dashcore/installation-linux.rst:147
 msgid ""
 "After your wallet has synchronized with the Dash network, it is strongly "
 "advised to encrypt the wallet with a password or passphrase to prevent "
@@ -265,29 +279,29 @@ msgstr ""
 "endroit sûr, ou bien vous serez interdit d'accès à votre propre "
 "portefeuille, et vous perdrez tous vos fonds."
 
-#: ../../wallets/dashcore/installation-linux.rst:153
+#: ../../wallets/dashcore/installation-linux.rst:154
 msgid "To encrypt your wallet, click **Settings** > **Encrypt wallet**."
 msgstr ""
 "Pour chiffrer votre portefeuille, cliquez sur **Réglages > Chiffrer le "
 "portefeuille**."
 
-#: ../../wallets/dashcore/installation-linux.rst:158
+#: ../../wallets/dashcore/installation-linux.rst:159
 msgid "Encrypting the Dash wallet with a password"
 msgstr "Chiffrage du portefeuille Dash avec un mot de passe"
 
-#: ../../wallets/dashcore/installation-linux.rst:160
+#: ../../wallets/dashcore/installation-linux.rst:161
 msgid "You will be asked to enter and verify a password."
 msgstr "Il vous sera demandé de saisir et de vérifier votre mot de passe."
 
-#: ../../wallets/dashcore/installation-linux.rst:165
+#: ../../wallets/dashcore/installation-linux.rst:166
 msgid "Entering a password"
 msgstr "Saisie d'un mot de passe"
 
-#: ../../wallets/dashcore/installation-linux.rst:170
+#: ../../wallets/dashcore/installation-linux.rst:171
 msgid "Confirm you want to encrypt your wallet"
 msgstr "Confirmez que vous souhaitez chiffrer votre portefeuille"
 
-#: ../../wallets/dashcore/installation-linux.rst:172
+#: ../../wallets/dashcore/installation-linux.rst:173
 msgid ""
 "When the encryption process is complete, you will see a warning that past "
 "backups of your wallet will no longer be usable, and be asked to shut down "
@@ -300,15 +314,15 @@ msgstr ""
 "redémarrage de Dash Core, vous verrez un petit cadenas bleu dans le coin "
 "inférieur droit."
 
-#: ../../wallets/dashcore/installation-linux.rst:180
+#: ../../wallets/dashcore/installation-linux.rst:181
 msgid "Fully encrypted and synchronized Dash Core wallet"
 msgstr "Portefeuille Dash Core entièrement chiffré et synchronisé"
 
-#: ../../wallets/dashcore/installation-linux.rst:183
+#: ../../wallets/dashcore/installation-linux.rst:184
 msgid "Using the Ubuntu Repository to install Dash Core"
 msgstr "Utiliser le dépôt Ubuntu pour installer Dash Core"
 
-#: ../../wallets/dashcore/installation-linux.rst:185
+#: ../../wallets/dashcore/installation-linux.rst:186
 msgid ""
 "Ubuntu allows you to add third-party repositories to install and update "
 "software using the apt command line utility. Dash Core team maintains such a"

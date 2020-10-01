@@ -5,16 +5,16 @@
 # 
 # Translators:
 # Tuan Nguyen <tuan331@gmail.com>, 2019
-# Kien Bui <kientemp2@gmail.com>, 2019
+# Kien Bui <kientemp2@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 03:43+0000\n"
+"POT-Creation-Date: 2020-10-01 01:04+0000\n"
 "PO-Revision-Date: 2019-04-08 11:33+0000\n"
-"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2019\n"
+"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2020\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -384,6 +384,11 @@ msgid ""
 "to the network. Every secured transaction is included in a following block "
 "in accordance with standard blockchain principles."
 msgstr ""
+"InstantSend là một tính năng được cung cấp bởi mạng lưới Dash mà nó cho phép"
+" các giao dịch không-xác thực có thể chấp nhận được một cách an toàn và có "
+"thể để tiêu tiếp. Mạng lưới sẽ cố gắng khoá các đầu vào cho mọi giao dịch "
+"hợp lệ khi chúng được phát lên trên mạng. Mỗi một giao dịch được đảm bảo là "
+"được gộp trong một khối đi sau theo những nguyên tắc blockchain tiêu chuẩn."
 
 #: ../../developers/integration.rst:123
 msgid ""
@@ -409,22 +414,24 @@ msgstr ""
 
 #: ../../developers/integration.rst:139
 msgid "Receiving InstantSend Transactions"
-msgstr ""
+msgstr "Nhận các giao dịch InstantSend"
 
 #: ../../developers/integration.rst:141
 msgid "Receiving an InstantSend Transaction introduces two requirements:"
-msgstr ""
+msgstr "Nhận một giao dịch InstantSend đứng trước hai yêu cầu:"
 
 #: ../../developers/integration.rst:143
 msgid ""
 "The ability to determine the “InstantSend Status” of a given transaction."
-msgstr ""
+msgstr "Khả năng xác định \"Tình trạng InstantSend\" của một giao dịch."
 
 #: ../../developers/integration.rst:146
 msgid ""
 "The ability to adjust “Confirmation Status” independently of block "
 "confirmation."
 msgstr ""
+"Khả năng thay đổi \"Tình trạng Xác nhận\" một cách độc lập của xác thực "
+"khôi."
 
 #: ../../developers/integration.rst:149
 msgid ""
@@ -455,6 +462,8 @@ msgid ""
 "The following notifications are relevant for recognizing transactions and "
 "their corresponding instantlocks:"
 msgstr ""
+"Những thông báo sau là liên quan đến việc nhận dạng những giao dịch và các "
+"instantlocks tương ứng của chúng:"
 
 #: ../../developers/integration.rst:176
 msgid "zmqpubhashtx"
@@ -489,7 +498,7 @@ msgstr ""
 
 #: ../../developers/integration.rst:195
 msgid "Broadcasting InstantSend Transactions"
-msgstr ""
+msgstr "Quảng bá về các giao dịch InstantSend"
 
 #: ../../developers/integration.rst:197
 msgid ""
@@ -499,16 +508,24 @@ msgid ""
 "InstantSend when each of its inputs is considered confirmed. This is the "
 "case when at least one of the following circumstances is true:"
 msgstr ""
+"Từ khi Dash v0.14.0 thiết lập LLMQ trên mạng lưới Dash, quorum bây giờ sẽ "
+"thử khoá mọi giao dịch hợp lệ nào một cách ngầm định mà không tính thêm phí "
+"bổ sung hoặc yêu cầu các hành động bổ sung từ phía ví hay người dùng. Một "
+"giao dịch được coi là hợp lệ cho InstantSend khi mỗi đầu vào của nó được xem"
+" như là đã được xác thực. Đây là trường hợp mà ít nhất một trong các tình "
+"huống sau là đúng:"
 
 #: ../../developers/integration.rst:204
 msgid ""
 "the previous transaction referred to by the input is confirmed with 6 blocks"
 msgstr ""
+"giao dịch trước đó được tham chiếu đên bởi đầu vào được xác nhận với 6 khối."
 
 #: ../../developers/integration.rst:206
 msgid ""
 "the previous transaction is confirmed through an older InstantSend lock"
 msgstr ""
+"giao dịch trước đó được xác nhận thông qua một khoá InstantSend trước hơn"
 
 #: ../../developers/integration.rst:208
 msgid ""
@@ -522,10 +539,13 @@ msgid ""
 "important to also do this on mempool (non-mined) transactions. This allows "
 "chained InstantSend locking."
 msgstr ""
+"Khi kiểm tra những giao dịch trước đó cho việc khoá InstantSend, điều quan "
+"trọng cũng là làm như vậy với các giao dịch trong mempool (chưa được khai "
+"thác). Điều này cho phép khoá liên tiếp InstantSend."
 
 #: ../../developers/integration.rst:215
 msgid "Additional Resources"
-msgstr ""
+msgstr "Những tài nguyên bổ sung"
 
 #: ../../developers/integration.rst:217
 msgid ""
@@ -533,6 +553,8 @@ msgid ""
 " are intended to help provide a more complete understanding of the "
 "underlying technologies."
 msgstr ""
+"Những tài nguyên sau cung cấp thêm thông tin về InstantSend và có ý định "
+"giúp cung cấp sự hiểu biết đầy đủ về những công nghệ nền ở dưới."
 
 #: ../../developers/integration.rst:221
 msgid ""

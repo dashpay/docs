@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kien Bui <kientemp2@gmail.com>, 2019
+# Kien Bui <kientemp2@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 03:43+0000\n"
+"POT-Creation-Date: 2020-10-01 01:04+0000\n"
 "PO-Revision-Date: 2018-02-08 10:31+0000\n"
-"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2019\n"
+"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2020\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,12 +26,16 @@ msgid ""
 "Description of different wallets available to use and spend Dash "
 "cryptocurrency"
 msgstr ""
+"Miêu tả về những ví khác nhau hiện có cho việc sử dụng và chi tiêu tiền số "
+"Dash"
 
 #: ../../wallets/index.rst:1
 msgid ""
 "dash, wallet, core, electrum, android, ios, paper, hardware, trezor, ledger,"
 " web, recovery, text, sms"
 msgstr ""
+"dash, ví, core, electrum, android, ios, paper, hardware, trezor, ledger, "
+"web, khôi phục, text, sms"
 
 #: ../../wallets/index.rst:9
 msgid "Wallets"
@@ -49,6 +53,16 @@ msgid ""
 "keeping these keys safe in wallets, while still remaining useful for day-to-"
 "day needs."
 msgstr ""
+"Bất cứ khi nào bạn lưu trữ những gì có giá trị trên thị trường thì bảo mật "
+"luôn là điều cần thiết. Điều này cũng đúng đối với các hệ thống trao đổi "
+"cũng như các nền kinh tế sử dụng đồng tiền như là một phương tiện để trao "
+"đổi. Trong khi các ngân hàng lưu trữ số dư tiền trong các sổ cái riêng thì "
+"tiền kỹ thuật số lại lưu trữ các số dư dưới các địa chỉ duy nhất trong một "
+"sổ cái phân tán công khai. Các khoá riêng trong mã hoá dùng để truy cập số "
+"dư được lưu trữ trên mỗi địa chỉ công khai và đó là các đối tượng có giá "
+"trong hệ thống này. Phần này của tài liệu sẽ thảo luận về những phương thức "
+"thực tế khác nhau trong việc giữ các chìa khoá này một cách an toàn trong "
+"các ví, và vẫn đảm bảo tính hữu dụng cho các nhu cầu hàng ngày."
 
 #: ../../wallets/index.rst:21
 msgid ""
@@ -141,8 +155,8 @@ msgid ""
 "computer. Transactions are verified on the Dash blockchain using a technique"
 " called Secure Payment Verification (SPV), which only requires the block "
 "headers and not the full block. This means that wallet startup is almost "
-"instant, while still keeping your funds secure and mobile. It does not "
-"currently support advanced InstantSend and PrivateSend features."
+"instant, while still keeping your funds secure and mobile. Dash Electrum "
+"also supports advanced InstantSend, PrivateSend and masternode features."
 msgstr ""
 
 #: ../../wallets/index.rst:88
@@ -171,6 +185,12 @@ msgid ""
 "book of frequently used addresses, pay with NFC, sweep paper wallets and "
 "more."
 msgstr ""
+"Dash cũng cung cấp một ví độc lập cho Android, với việc phát triển được cấp "
+"vốn từ ngân sách của Dash. Ví Dash cho Android hỗ trợ các tính năng tiên "
+"tiến của Dash, bao gồm quản lý danh bạ, giao dịch tức thời. Bạn có thể quét "
+"và hiển thị mã QR dùng cho việc thực hiện giao dịch nhanh chóng, sao lưu và "
+"khôi phục ví, lưu giữ danh bạ các địa chỉ thường xuyên giao dịch, thanh toán"
+" với NFC, cũng như quét ví từ ví giấy và những tính năng khác nữa."
 
 #: ../../wallets/index.rst:134
 msgid "*Dash Android Wallet*"
@@ -187,6 +207,11 @@ msgid ""
 "as InstantSend sending and receiving. You can also scan and display QR codes"
 " for quick transfers and backup your wallet using a secure recovery phrase."
 msgstr ""
+"Dash cung cấp một ví độc lập cho iOS, với kinh phí phát triển từ ngân sách "
+"của Dash. Ví chính thức này của Dash hỗ trợ những tính năng tiên tiến của "
+"Dash như InstantSend cho việc gửi và nhận. Bạn cũng có thể quét và hiển thị "
+"mã QR cho việc thực hiện giao dịch nhanh chóng, hay sao lưu và phục hồi ví "
+"sử dụng dòng chữ phục hồi."
 
 #: ../../wallets/index.rst:161
 msgid "*Dash iOS Wallet*"
@@ -223,6 +248,14 @@ msgid ""
 "could be used to steal passwords to unlock the private keys used with "
 "software wallets."
 msgstr ""
+"Một ví phần cứng là một loại thiết bị lưu trữ khoá riêng của một blockchain "
+"trong một thiết bị phần cứng bảo mật, thay vì một file cơ sở dữ liệu như là "
+"file wallet.dat trong các phần mềm ví thông thường. Ví cứng mang đến những "
+"tính năng bảo mật tiên tiến so với các ví phầm mềm, cũng như những lợi ích "
+"thiết thực hơn so với các ví giấy. Cho đến hiện nay, không có những bằng "
+"chứng xác thực về việc ví phần cứng bị bẻ khoá bởi virus, và nó cũng miễn "
+"nhiễm với các phần mềm theo dõi bàn phím có thể đánh cắp mật khẩu để mở khoá"
+" các chìa khoá riêng trong các ví phần mềm."
 
 #: ../../wallets/index.rst:199
 msgid ""
@@ -285,6 +318,15 @@ msgid ""
 "exception is MyDashWallet.org, which provides a secure web interface to the "
 "Dash blockchain while leaving you with full control of your private keys."
 msgstr ""
+"Ví web là các dịch vụ để giữ số tiền bằng Dash cho bạn trên web, trong khi "
+"vẫn kiểm soát các khoá riêng dưới sự cho phép của bạn. Bất kỳ khoản Dash nào"
+" được lưu trữ trên :ref:`các sàn giao dịch<exchanges>` cũng nằm trong loại "
+"hình này. Tuy nhiên, có những dịch vụ có thể lưu giữ Dash cho bạn thông qua "
+"hệ thống đăng nhập bằng tài khoản Google/Facebook. Hãy cực kỳ cẩn thận với "
+"việc lưu trữ tiền hay Dash trên web. Bạn chỉ nên để Dash trên web của những "
+"công ty danh tiếng. Có một ngoại lệ đặc biệt đó là MyDashWallet.org. Nơi này"
+" cung cấp một giao diện web an toàn cho blockchain của Dash trong khi vẫn để"
+" cho bạn toàn quyền kiểm soát những khoá riêng của mình."
 
 #: ../../wallets/index.rst:264
 msgid "My Dash Wallet"
@@ -292,7 +334,7 @@ msgstr "Ví My Dash Wallet"
 
 #: ../../wallets/index.rst:268
 msgid "Text Wallets"
-msgstr ""
+msgstr "Ví SMS"
 
 #: ../../wallets/index.rst:270
 msgid ""
@@ -302,10 +344,15 @@ msgid ""
 " providers, make it relatively simple to create transactions to both send "
 "and receive Dash."
 msgstr ""
+"Ví SMS (hay ví Text) cho phép người dùng mà không có điện thoại thông minh "
+"hay Internet có thể truy cập và giao dịch với Dash bằng việc sử dụng các tin"
+" nhắn trên điện thoại di động thông thường. Các mã ngắn sáng tạo thường được"
+" dùng trong việc phối hợp giữa các mạng điện thoại di động quốc gia, làm cho"
+" nó trở nên tương đối đơn giản để tạo các giao dịch cả để gửi và nhận Dash."
 
 #: ../../wallets/index.rst:284
 msgid "Dash CoinText"
-msgstr ""
+msgstr "Dash CoinText"
 
 #: ../../wallets/index.rst:288
 msgid "Wallet Guides"

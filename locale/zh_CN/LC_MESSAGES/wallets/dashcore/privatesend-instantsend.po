@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 03:43+0000\n"
+"POT-Creation-Date: 2020-10-01 01:04+0000\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -50,8 +50,8 @@ msgid ""
 " is seamless, automatic, and requires no intervention on the part of the "
 "user. The current implementation of PrivateSend in the Dash Core wallet "
 "allows any amount of Dash to be mixed for later use in PrivateSend "
-"transactions. As of December 2018, PrivateSend is not currently available in"
-" other Dash wallets."
+"transactions. PrivateSend is also available in the :ref:`Dash Electrum "
+"<dash-electrum-wallet>` wallet."
 msgstr ""
 
 #: ../../wallets/dashcore/privatesend-instantsend.rst:27
@@ -62,29 +62,27 @@ msgid ""
 "privatesend.32472/>`_ on the confidence an adversary may have when "
 "attempting to guess the source of a PrivateSend transaction. For this "
 "reason, the recommended (and default) number of rounds of PrivateSend mixing"
-" is set to four."
+" is set to four, and some inputs may be mixed by additional rounds to "
+"further improve privacy."
 msgstr ""
-"对于任何既定匿名发送交易来说，有关匿名发送功能的具体混币次数取决于\\ `量化效果 "
-"<https://www.dash.org/forum/threads/evaluating-the-privacy-of- "
-"privatesend.32472/>`_\\ ，它涉及到对手追溯匿名发送资金来源时的可能性。考虑到这一点，匿名发送功能的混币环节通常（默认）为四轮。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:35
+#: ../../wallets/dashcore/privatesend-instantsend.rst:36
 msgid ""
 "You can read more about PrivateSend theory and processes :ref:`here "
 "<privatesend>`."
 msgstr "如需了解有关匿名发送功能的更多理论知识和流程，请\\ :ref:`点击此处 <privatesend>`\\ 。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:39
+#: ../../wallets/dashcore/privatesend-instantsend.rst:40
 msgid "Configuration"
 msgstr "配置"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:41
+#: ../../wallets/dashcore/privatesend-instantsend.rst:42
 msgid ""
 "Open your Dash Core wallet, go to **Settings** and select **Options**. Go to"
 " the **Wallet** tab."
 msgstr "用户需要打开\\ **设置**\\ 并选择\\ **选项**\\ ，然后再打开\\ **钱包**\\ 选项卡。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:47
+#: ../../wallets/dashcore/privatesend-instantsend.rst:48
 msgid ""
 "Next to **PrivateSend rounds to use**, enter a value between 1-16. Each "
 "round of PrivateSend performs one denominated fund mixing transaction. "
@@ -93,13 +91,13 @@ msgid ""
 "number of rounds currently available."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:53
+#: ../../wallets/dashcore/privatesend-instantsend.rst:54
 msgid ""
 "NOTE: To prevent system abuse, an average of one in ten rounds of masternode"
 " mixing incurs a fee of .0001 DASH."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:56
+#: ../../wallets/dashcore/privatesend-instantsend.rst:57
 msgid ""
 "Enter a target value for **Amount of Dash to keep mixed**. This value "
 "provides a lower boundary on the final amount of funds to be mixed. "
@@ -110,11 +108,11 @@ msgid ""
 "but should be close."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:64
+#: ../../wallets/dashcore/privatesend-instantsend.rst:65
 msgid "Click **OK** to save settings."
 msgstr "点击 **OK** 来保存设置。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:66
+#: ../../wallets/dashcore/privatesend-instantsend.rst:67
 msgid ""
 "PrivateSend is disabled by default when you open the wallet. It will only "
 "start after you set the number of rounds and number of Dash to mix under "
@@ -123,11 +121,11 @@ msgstr ""
 "当用户启动钱包后，匿名发送功能是默认禁用的。只有用户在选项中设定混币轮数、数量并点击钱包\\ **概览**\\ 中的\\ **开始混币**\\ "
 "后，这项功能才会被激活。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:73
+#: ../../wallets/dashcore/privatesend-instantsend.rst:74
 msgid "Starting Mixing"
 msgstr "开始混币"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:75
+#: ../../wallets/dashcore/privatesend-instantsend.rst:76
 msgid ""
 "The PrivateSend process is initiated by clicking the **Start Mixing** button"
 " on the **Overview** tab of the Dash Core wallet. Mixing is possible once "
@@ -136,22 +134,22 @@ msgstr ""
 "在用户点击Dash Core钱包的\\ **概览**\\ 中的\\ **开始混币**\\ "
 "后，匿名发送功能就会启用。一旦满足以下条件，用户就可以进行混币了："
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:79
+#: ../../wallets/dashcore/privatesend-instantsend.rst:80
 msgid ""
 "The wallet contains sufficient non-mixed funds to create the minimum "
 "required denominated values"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:81
+#: ../../wallets/dashcore/privatesend-instantsend.rst:82
 msgid "The user has not disabled PrivateSend in the Options dialog"
 msgstr "用户没有在选项中禁用匿名发送功能"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:82
+#: ../../wallets/dashcore/privatesend-instantsend.rst:83
 msgid ""
 "The target value for mixed Funds in the Options dialog is greater than zero"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:85
+#: ../../wallets/dashcore/privatesend-instantsend.rst:86
 msgid ""
 "If your wallet is encrypted (highly recommended), you will be asked to enter"
 " your wallet passphrase. Enable the **Only for mixing via PrivateSend** "
@@ -160,11 +158,11 @@ msgstr ""
 "如果用户的钱包已经加密（强烈推荐进行加密），那么钱包将要求用户输入钱包密码。启用\\ **仅用于通过匿名发送功能进行混币**\\ "
 "复选框，以便解锁钱包的混币功能。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:92
+#: ../../wallets/dashcore/privatesend-instantsend.rst:93
 msgid "Entering a password for PrivateSend mixing only"
 msgstr "输入匿名发送功能混币环节所需的密码"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:94
+#: ../../wallets/dashcore/privatesend-instantsend.rst:95
 msgid ""
 "This will unlock your wallet, and the PrivateSend mixing process will begin."
 " The wallet will remain unlocked until PrivateSend mixing is complete, at "
@@ -172,13 +170,13 @@ msgid ""
 msgstr ""
 "这一步骤不仅会解锁钱包，而且还意味着匿名发送功能的混币流程已经开始了。在该流程完成之前，钱包将会维持已解锁的状态。混币完成后，钱包将自动结束解锁状态。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:101
+#: ../../wallets/dashcore/privatesend-instantsend.rst:102
 msgid ""
 "PrivateSend interface after clicking the **Start Mixing** button. Note the "
 "**Status** is **Enabled**."
 msgstr "匿名发送功能的界面将在点击\\ **开始混币**\\ 后出现。请注意，此时的\\ **状态**\\ 显示为\\ **启用**\\ 。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:104
+#: ../../wallets/dashcore/privatesend-instantsend.rst:105
 msgid ""
 "PrivateSend will begin creating transactions and your PrivateSend balance "
 "will gradually increase. This process can take some time, so be patient. You"
@@ -187,7 +185,7 @@ msgid ""
 msgstr ""
 "匿名发送功能将开始创建交易，用户的匿名发送金额将会逐渐增加。这个过程可能需要花费一些时间，所以用户需要一些耐心。在此期间，用户可以对整个流程进行监控，具体细节如下所述。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:109
+#: ../../wallets/dashcore/privatesend-instantsend.rst:110
 msgid ""
 "Any of the following actions will interrupt the mixing process. Because the "
 "transactions are atomic (they either take place completely, or do not take "
@@ -196,29 +194,29 @@ msgid ""
 msgstr ""
 "以下行为都有可能会造成混币流程的中断。由于交易是由众多币混合形成的（因此它要么处于完成的状态，要么就处于没有完成的状态）。正因为这样，用户可以安全地中断匿名发送功能的混币流程。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:114
+#: ../../wallets/dashcore/privatesend-instantsend.rst:115
 msgid "Clicking the Stop Mixing button on the Overview tab"
 msgstr "点击概览中的停止混币按键"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:115
+#: ../../wallets/dashcore/privatesend-instantsend.rst:116
 msgid "Closing the client before PrivateSend mixing is completed"
 msgstr "在匿名发送功能的混币流程完成之前关闭客户端"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:116
+#: ../../wallets/dashcore/privatesend-instantsend.rst:117
 msgid ""
 "Sending PrivateSend funds from the wallet before PrivateSend rounds are "
 "completed"
 msgstr "在混币流程完成之前用钱包进行匿名发送"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:118
+#: ../../wallets/dashcore/privatesend-instantsend.rst:119
 msgid "Disabling PrivateSend before the process is complete"
 msgstr "在混币结束后禁用匿名发送"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:121
+#: ../../wallets/dashcore/privatesend-instantsend.rst:122
 msgid "Monitoring Mixing"
 msgstr "对混币的监控"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:123
+#: ../../wallets/dashcore/privatesend-instantsend.rst:124
 msgid ""
 "If you want to monitor PrivateSend in more detail, you need to enable some "
 "advanced features of the wallet. Go to **Settings**, select **Options** and "
@@ -228,22 +226,22 @@ msgstr ""
 "如果想要对匿名发送功能进行更细致的监控，用户就需要启用一些更加高级的钱包功能。用户需要访问\\ **设置**\\ ，选中\\ **选项**\\ "
 "，再打开\\ **钱包**\\ 选项卡。接下来，用户需要选中\\ **启用混币管控功能**\\ 和\\ **启用高级的匿名发送界面**\\ 。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:132
+#: ../../wallets/dashcore/privatesend-instantsend.rst:133
 msgid ""
 "Enabling advanced options for PrivateSend in the Dash Core wallet settings"
 msgstr "在Dash Core钱包的设置中启用匿名发送的高级选项"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:135
+#: ../../wallets/dashcore/privatesend-instantsend.rst:136
 msgid ""
 "This will allow you to monitor progress and see which individual operations "
 "PrivateSend is carrying out in the background."
 msgstr "这将帮助用户监控混币流程，跟进匿名发送在后台的进展。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:141
+#: ../../wallets/dashcore/privatesend-instantsend.rst:142
 msgid "Monitoring PrivateSend progress"
 msgstr "监控匿名发送的进程"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:143
+#: ../../wallets/dashcore/privatesend-instantsend.rst:144
 msgid ""
 "Since PrivateSend mixing creates a lot of new address keys to send and "
 "receive the mixed denominations, you may receive a warning when the number "
@@ -253,81 +251,81 @@ msgid ""
 "important to backup your wallet again after mixing is complete."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:151
+#: ../../wallets/dashcore/privatesend-instantsend.rst:152
 msgid ""
 "You can also monitor PrivateSend progress by viewing the transactions "
 "created by the mixing process on the **Transactions** tab."
 msgstr "用户也可以通过在\\ **交易**\\ 选项中浏览混币流程创建的交易来监控匿名发送功能。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:157
+#: ../../wallets/dashcore/privatesend-instantsend.rst:158
 msgid "Transactions created by PrivateSend on the Transactions tab"
 msgstr "交易选项中由匿名发送产生的交易"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:159
+#: ../../wallets/dashcore/privatesend-instantsend.rst:160
 msgid ""
 "The following table describes the PrivateSend-related transactions displayed"
 " in the Type column of the **Transactions** tab:"
 msgstr "以下表格显示了与匿名发送功能相关的交易，它将显示在\\ **交易**\\ 选项中的类型列表当中："
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:163
+#: ../../wallets/dashcore/privatesend-instantsend.rst:164
 msgid "PrivateSend Transaction Type"
 msgstr "匿名发送交易类型"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:163
+#: ../../wallets/dashcore/privatesend-instantsend.rst:164
 msgid "Transaction Description"
 msgstr "交易描述"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:165
+#: ../../wallets/dashcore/privatesend-instantsend.rst:166
 msgid "PrivateSend Make Collateral Inputs (*Mixing*)"
 msgstr "匿名发送功能创建的保证金输入（\\ *混币*\\ ）"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:165
+#: ../../wallets/dashcore/privatesend-instantsend.rst:166
 msgid ""
 "Wallet funds were moved to collateral inputs that will be used to make "
 "collateral payments. This is done to minimize traceability of collaterals."
 msgstr "钱包的资金将被移用作保证金输入，从而完成有担保的支付。这将降低他人追溯资金来源的可能性。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:170
+#: ../../wallets/dashcore/privatesend-instantsend.rst:171
 msgid "PrivateSend Create Denominations (*Mixing*)"
 msgstr "匿名发送功能创建的交易面值（\\ *混币*\\ ）"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:170
+#: ../../wallets/dashcore/privatesend-instantsend.rst:171
 msgid ""
 "Wallet funds were broken into PrivateSend denominations (Step 1 :ref:`here "
 "<privatesend>`)"
 msgstr "钱包中的资金面额化（步骤1 请参考\\ :ref:`这里 <privatesend>`\\ ）"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:174
+#: ../../wallets/dashcore/privatesend-instantsend.rst:175
 msgid "PrivateSend Denominate (*Mixing*)"
 msgstr "匿名发送的面额化（\\ *混币*\\ ）"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:174
+#: ../../wallets/dashcore/privatesend-instantsend.rst:175
 msgid ""
 "A transaction was sent to a masternode in order to participate in a mixing "
 "session (Step 3 :ref:`here <privatesend>`)"
 msgstr "交易将被发送到主节点上，以便参与到混币流程当中（步骤3 请参考\\ :ref:`这里 <privatesend>`\\ ）"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:178
+#: ../../wallets/dashcore/privatesend-instantsend.rst:179
 msgid "PrivateSend Collateral Payment (*Mixing*)"
 msgstr "匿名发送功能的保证金发送（\\ *混币*\\ ）"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:178
+#: ../../wallets/dashcore/privatesend-instantsend.rst:179
 msgid ""
 "The mixing session collateral was claimed. This fee is charged in ~10% of "
 "mixing sessions to prevent spam attacks."
 msgstr "收取混币流程的保证金。为了避免垃圾邮件的攻击，混币流程需要用户支付混币金额的~10%作为保证金。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:183
+#: ../../wallets/dashcore/privatesend-instantsend.rst:184
 msgid "PrivateSend (*Spending*)"
 msgstr "匿名发送（\\ *发送*\\ ）"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:183
+#: ../../wallets/dashcore/privatesend-instantsend.rst:184
 msgid ""
 "Mixed funds were used to send a payment to someone. Note: Unlike the "
 "previous 4 transaction types, this is not a mixing process transaction."
 msgstr "完成混币后的资金将被发送给其他用户。请注意：与上述的4种交易类型不同的是，这是一个不涉及混币流程的交易。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:189
+#: ../../wallets/dashcore/privatesend-instantsend.rst:190
 msgid ""
 "You can also use the coin control feature to view which addresses hold mixed"
 " denominations ready to be used for PrivateSend transactions. Go to the "
@@ -341,17 +339,17 @@ msgid ""
 "transaction is 0.00100010 DASH."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:203
+#: ../../wallets/dashcore/privatesend-instantsend.rst:204
 msgid ""
 "Coin Selection dialog showing addresses holding PrivateSend mixed balances "
 "in different denominations"
 msgstr "货币选择对话框显示了不同地址上以不同面额显示的匿名发送资金的余额"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:207
+#: ../../wallets/dashcore/privatesend-instantsend.rst:208
 msgid "Paying with PrivateSend"
 msgstr "通过匿名发送功能进行支付"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:209
+#: ../../wallets/dashcore/privatesend-instantsend.rst:210
 msgid ""
 "You can only use PrivateSend for payments once you have mixed enough Dash to"
 " make up the amount you are trying to send. Because the mixing process takes"
@@ -365,7 +363,7 @@ msgid ""
 "higher fee."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:220
+#: ../../wallets/dashcore/privatesend-instantsend.rst:221
 msgid ""
 "To send a payment using PrivateSend, go to the **Send** tab of the Dash Core"
 " wallet and enable the **PrivateSend** option. The balance displayed will "
@@ -377,94 +375,88 @@ msgid ""
 " a detailed breakdown of the fee structure for PrivateSend before sending."
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:233
+#: ../../wallets/dashcore/privatesend-instantsend.rst:234
 msgid ""
 "Dash Core ready to send a PrivateSend transaction. Note PrivateSend is "
 "enabled and the amount to be sent is less than the available PrivateSend "
 "balance"
 msgstr "Dash Core钱包已经做好了匿名发送的准备。值得注意的是，匿名发送功能已经启用了，发送的金额比余额少"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:239
+#: ../../wallets/dashcore/privatesend-instantsend.rst:240
 msgid "InstantSend"
 msgstr "即时支付"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:242
+#: ../../wallets/dashcore/privatesend-instantsend.rst:243
 msgid "Introduction"
 msgstr "介绍"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:244
+#: ../../wallets/dashcore/privatesend-instantsend.rst:245
 msgid ""
 "This documentation describes how to use InstantSend to instantly send funds "
-"to any other Dash user around the world. Dash InstantSend is supported by "
-"many wallets and vendors, including (but not limited to) the following:"
-msgstr "本文档阐述了如何使用即时发送功能立即完成对全球其它用户的支付。达世币的即时发送功能涉及多个钱包和代理服务器，其中包括（不仅限）："
+"to any other Dash user around the world. Since the release of InstantSend "
+"based on Long Living Masternode Quorums (`LLMQ-IS "
+"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__) in Dash 0.14, "
+"the Dash network itself will attempt to generate an InstantSend lock for "
+"almost every transaction processed by the network, according to :ref:`these "
+"rules <is-broadcast>`. Unlike the prior implementation of InstantSend, which"
+" required a higher fee, LLMQ-IS locks transactions without any action taken "
+"by the user. For this reason, only the recipient needs to monitor the "
+"network for the transaction lock in order to be able to receive funds and "
+"process transactions with immediate settlement."
+msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:249
+#: ../../wallets/dashcore/privatesend-instantsend.rst:257
+msgid ""
+"Dash InstantSend is supported by many wallets and vendors, including (but "
+"not limited to) the following:"
+msgstr ""
+
+#: ../../wallets/dashcore/privatesend-instantsend.rst:260
 msgid "Dash Core Wallet"
 msgstr "达世币核心钱包"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:250
+#: ../../wallets/dashcore/privatesend-instantsend.rst:261
 msgid "Dash Android Wallet"
 msgstr "达世币安卓钱包"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:251
+#: ../../wallets/dashcore/privatesend-instantsend.rst:262
 msgid "Dash iOS Wallet"
 msgstr "达世币iOS钱包"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:252
+#: ../../wallets/dashcore/privatesend-instantsend.rst:263
 msgid "My Dash Wallet"
 msgstr "My Dash Wallet"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:253
+#: ../../wallets/dashcore/privatesend-instantsend.rst:264
 msgid "Kraken"
 msgstr "Kraken"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:254
+#: ../../wallets/dashcore/privatesend-instantsend.rst:265
 msgid "Bitrefill"
 msgstr "Bitrefill"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:255
+#: ../../wallets/dashcore/privatesend-instantsend.rst:266
 msgid "and many more..."
 msgstr "还有更多..."
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:257
+#: ../../wallets/dashcore/privatesend-instantsend.rst:268
 msgid ""
 "You can read more about InstantSend theory and processes :ref:`here "
 "<instantsend>`."
 msgstr "请\\ :ref:`点击此处 <instantsend>`\\ 阅读有关即时发送功能的更多理论知识和应用流程。"
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:261
-msgid "Paying with InstantSend"
-msgstr "通过即时发送支付"
-
-#: ../../wallets/dashcore/privatesend-instantsend.rst:263
-msgid ""
-"InstantSend functions by setting a flag on the transaction, causing "
-"deterministic selection of a quorum of 10 masternodes for each input spent "
-"in an InstantSend transaction. The masternodes examine the input, and if a "
-"majority determines it has at least six confirmations, they then accept the "
-"transaction. The input is then locked until the transaction has been "
-"confirmed in six mined blocks, at which point the output can be used as an "
-"input in another InstantSend transaction. This differs from inputs used in "
-"normal transactions, which can be spent after just one confirmation "
-"regardless of whether the Dash was received using InstantSend or not. A "
-"higher fee will be charged for InstantSend transactions with more than four "
-"inputs, according to the :ref:`fee schedule <fees>`. Note that the receiving"
-" wallet must also be aware of InstantSend in order to be able to immediately"
-" continue with the transaction or display an appropriate notification that "
-"the transaction should be considered locked. If the receiving wallet is not "
-"aware of InstantSend, it will simply appear as a normal transaction and you "
-"will need to wait for standard block confirmations."
+#: ../../wallets/dashcore/privatesend-instantsend.rst:272
+msgid "InstantSend Transactions"
 msgstr ""
 
-#: ../../wallets/dashcore/privatesend-instantsend.rst:281
+#: ../../wallets/dashcore/privatesend-instantsend.rst:274
 msgid ""
-"To pay with InstantSend, simply check the relevant checkbox in your app. The"
-" following screenshots indicate where this setting can be found in the Dash "
-"Core, iOS and Android wallets."
+"Since Dash 0.14, all user-facing interface options to create an InstantSend "
+"transaction have been removed, because all transactions are effectively "
+"InstantSend transactions. As before, the recipient is responsible for "
+"monitoring the network for the InstantSend lock and implementing user-facing"
+" logic and interfaces to continue with transaction processing after payment "
+"has been recieved. See the :ref:`InstantSend Integration <integration-"
+"instantsend>` documentation for more information on how to monitor for "
+"InstandSend locks."
 msgstr ""
-"如需使用即时发送功能，用户只要选中应用中的相关复选框就可以了。以下截屏显示了在Dash Core钱包、IOS和安卓钱包中找到相关设置的位置。"
-
-#: ../../wallets/dashcore/privatesend-instantsend.rst:293
-msgid "Dash Wallets showing InstantSend option"
-msgstr "达世币钱包中显示即时发送功能的选项"
