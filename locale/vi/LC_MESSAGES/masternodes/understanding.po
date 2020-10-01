@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kien Bui <kientemp2@gmail.com>, 2019
+# Kien Bui <kientemp2@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-01 03:43+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2019\n"
+"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2020\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -66,6 +66,17 @@ msgid ""
 "with each masternode receiving one vote (yes/no/abstain) on each proposal "
 "submitted to the system."
 msgstr ""
+"Nói một cách dễ hiểu, một masternode là một máy chủ với một phiên bản đầy đủ"
+" của blockchain của Dash, cần bảo đảm một mức độ tối thiểu về tốc độ và chức"
+" năng để thực hiện những nhiệm vụ liên quan đến kiểm tra khối, cũng như là "
+"các dịch vụ như PrivateSend và InstantSend, đó là các tính năng về giao dịch"
+" riêng tư và tức thời của Dash. Các masternode cũng được trả công cho dịch "
+"vụ của mình, bằng việc sử dụng cơ chế có tên Proof of Service. Đây là một cơ"
+" chế bổ sung cho Proof of Work thực hiện bởi các thợ mỏ để bảo đảm cho "
+"blockchain. Masternode cũng được quyền bỏ phiếu cho :ref:`các đề xuất quản "
+"trị hoặc cấp vốn cho các dự án <governance>`, với mỗi masternode có được một"
+" phiếu bầu (yes/no/abstain tương đương với ủng hộ/phản đối/không ý kiến) cho"
+" mỗi một đề xuất được gửi lên hệ thống."
 
 #: ../../masternodes/understanding.rst:33
 msgid ""
@@ -209,7 +220,7 @@ msgid ""
 "<https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__"
 msgstr ""
 "`Dash 0.13 Các bước nâng cấp cho masternode (tài liệu cập nhật) "
-"<https://docs.dash.org/vi/0.13.0/masternodes/dip3-upgrade.html>`__"
+"<https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__"
 
 #: ../../masternodes/understanding.rst:97
 msgid ":ref:`Full masternode setup guide <masternode-setup>`"
@@ -622,6 +633,18 @@ msgid ""
 "Failure to participate in DKG will eventually result in a PoSe ban as "
 "described above."
 msgstr ""
+"Trong những phiên bản trước của Dash, một nhóm tối thiểu 10 masternode được "
+"lựa chọn một cách tức thời để khoá các giao dịch InstantSend. Từ phiên bản "
+"0.14 của Dash, một nhóm tối thiểu được xác định trước, gồm có các masternode"
+" đang và có thời gian hoạt động lâu nhất trên mạng. Trong khi chúng vẫn có "
+"nhiệm vụ cho các giao dịch InstantSend, cơ chế khoá này đã thay đổi để tự "
+"động khoá một cách tối đa các giao dịch trên mạng mà đạt được những yêu cầu "
+"theo như mô tả :ref:`ở đây <is-broadcast>`. Các Masternode bây giờ cũng chịu"
+" trách nhiệm cho nhiều chức năng đồng thuận hơn, như :ref:`ChainLocks "
+"<chainlocks>`. Các nhóm tối thiểu các masternode được lập nên thông qua một "
+"quá trình `sinh khoá phân tán  "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__. Nếu không tham"
+" gia được vào DKG thì thậm chí kết quả sẽ bị khoá PoSe như đã mô tả ở trên."
 
 #: ../../masternodes/understanding.rst:278
 msgid "Masternode requirements"

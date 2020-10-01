@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kien Bui <kientemp2@gmail.com>, 2018
+# Kien Bui <kientemp2@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-01 03:43+0000\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
-"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2018\n"
+"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2020\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:1
 msgid "Guide to sending and receiving Dash using the Dash Core wallet"
-msgstr ""
+msgstr "Hướng dẫn Gửi và Nhận Dash sử dụng ví Dash Core"
 
 #: ../../wallets/dashcore/send-receive.rst:1
 msgid "dash, core, wallet, send, receive, transaction"
-msgstr ""
+msgstr "dash, core, ví, gửi, nhận, giao dịch"
 
 #: ../../wallets/dashcore/send-receive.rst:9
 msgid "Sending and receiving"
@@ -57,6 +57,7 @@ msgstr ""
 #: ../../wallets/dashcore/send-receive.rst:28
 msgid "Dash addresses are 34 characters long and begin with an uppercase X."
 msgstr ""
+"Địa chỉ Dash là đoạn văn bản dài 34 kỹ tự và bắt đầu với ký tự X viết hoa."
 
 #: ../../wallets/dashcore/send-receive.rst:31
 msgid "Sending Dash"
@@ -69,10 +70,14 @@ msgid ""
 " the funds. Click the **Send** tab in the tab bar and enter the destination "
 "address in the **Pay To** field."
 msgstr ""
+"Bạn có thể dùng Dash Core để gửi Dash từ số dư của bạn cho người khác. Người"
+" nhận sẽ cần phải cung cấp cho bạn một địa chỉ Dash để bạn có thể gửi tiền "
+"vào nó. Hãy bấm vào trang **Gửi** trên thanh tab bar và nhập vào địa chỉ cần"
+" gửi đến trong ô **Gửi cho**."
 
 #: ../../wallets/dashcore/send-receive.rst:41
 msgid "The Dash Core Send tab"
-msgstr ""
+msgstr "Trang Gửi trên Dash Core"
 
 #: ../../wallets/dashcore/send-receive.rst:43
 msgid ""
@@ -104,10 +109,14 @@ msgid ""
 " can be seen in the following window beginning with *Xpa*. The invoice is "
 "for 2.45 Dash, which you fill in the **Amount** field."
 msgstr ""
+"Chúng ta cùng thử một ví dụ. Ví dụ bạn nhận được một hoá đơn mà bạn sẽ trả "
+"bằng Dash. Người viết hoá đơn đã gửi sẵn trong đó một địa chỉ Dash, mà bạn "
+"thấy trong cửa sổ dưới dây bắt đầu với *Xpa*. Hoá đơn này yêu cầu 2.45 Dash,"
+" bạn sẽ điền số đó vào ô **Số tiền**."
 
 #: ../../wallets/dashcore/send-receive.rst:72
 msgid "The Send tab filled out for a transaction"
-msgstr ""
+msgstr "Trang Gửi điền thông tin cho một giao dịch"
 
 #: ../../wallets/dashcore/send-receive.rst:74
 msgid ""
@@ -115,6 +124,9 @@ msgid ""
 "**Send** button. If you have encrypted your wallet, you will now be required"
 " to enter your password to unlock the wallet."
 msgstr ""
+"Khi bạn đã nhập địa chỉ nhận và số tiền, click vào nút **Gửi**. Nếu bạn đã "
+"mã hoá ví với mật khẩu, thì bây giờ bạn được yêu cầu nhập mật khẩu để mở "
+"khoá cho ví."
 
 #: ../../wallets/dashcore/send-receive.rst:81
 msgid "Entering the password to unlock the wallet"
@@ -125,10 +137,12 @@ msgid ""
 "Finally, you are given one final confirmation and chance to cancel your send"
 " transaction before Dash Core processes the transaction on the blockchain."
 msgstr ""
+"Cuối cùng, bạn sẽ nhận được một xác nhận cuối cùng và có cơ hội để huỷ việc "
+"gửi này trước khi Dash Core tiến hành giao dịch trên blockchain."
 
 #: ../../wallets/dashcore/send-receive.rst:90
 msgid "Final confirmation window"
-msgstr ""
+msgstr "Cửa sổ xác nhận cuối cùng"
 
 #: ../../wallets/dashcore/send-receive.rst:92
 msgid ""
@@ -136,10 +150,13 @@ msgid ""
 "operating system may display a notification, and the transaction will appear"
 " on the Transactions tab, where you can monitor its progress."
 msgstr ""
+"Nếu bạn trả lời với **Yes** hay Đồng ý, giao dịch của bạn sẽ được xử lý. Hệ "
+"điều hành của bạn có thể hiển thị một thông báo, và giao dịch sẽ được xuất "
+"hiện ở trang Giao Dịch, ở đây bạn có thể theo dõi quá trình gửi của nó."
 
 #: ../../wallets/dashcore/send-receive.rst:99
 msgid "The Windows 10 sent transaction confirmation notification"
-msgstr ""
+msgstr "Thông báo về giao dịch đã được gửi trên Windows 10"
 
 #: ../../wallets/dashcore/send-receive.rst:101
 msgid ""
@@ -147,6 +164,9 @@ msgid ""
 "the transaction fee. In the next section, we will see what this procedure "
 "looks like from the receiving side."
 msgstr ""
+"Chú ý rằng số tiền trong giao dịch được tăng lên .000045 Dash. Đây chính là "
+"khoản phí giao dịch. Trong phần tiếp theo, chúng ta sẽ thấy quá trình này sẽ"
+" như thế nào từ phía người nhận."
 
 #: ../../wallets/dashcore/send-receive.rst:106
 msgid "Receiving Dash"
@@ -158,10 +178,13 @@ msgid ""
 "sending party. To do this, click **File > Receiving addresses**. The "
 "**Receiving addresses** window appears."
 msgstr ""
+"Để nhận Dash, bạn cần phải tạo một địa chỉ nhận và gửi cho cho phía người "
+"gửi. Để làm việc này, bạn hãy click vào **File > Địa chỉ nhận**. Cửa sổ "
+"**Địa chỉ nhận** sẽ xuất hiện."
 
 #: ../../wallets/dashcore/send-receive.rst:115
 msgid "The Receiving addresses window"
-msgstr ""
+msgstr "Cửa sổ địa chỉ nhận"
 
 #: ../../wallets/dashcore/send-receive.rst:117
 msgid ""
@@ -178,18 +201,20 @@ msgstr ""
 
 #: ../../wallets/dashcore/send-receive.rst:130
 msgid "The Windows 10 received transaction confirmation notification"
-msgstr ""
+msgstr "Thông báo về nhận được giao dịch trên Windows 10"
 
 #: ../../wallets/dashcore/send-receive.rst:132
 msgid ""
 "Once you have been paid, you can see the balance both on the **Overview** "
 "tab and on the **Transactions** tab."
 msgstr ""
+"Bạn đã được nhận Dash, bạn có thể thấy số dư của mình cả ở trang **Tổng "
+"quan** và ở trang **Giao dịch**."
 
 #: ../../wallets/dashcore/send-receive.rst:138
 msgid "The received transaction"
-msgstr ""
+msgstr "Giao dịch được nhận"
 
 #: ../../wallets/dashcore/send-receive.rst:140
 msgid "**How to Create New Receiving Addresses in DashQT**"
-msgstr ""
+msgstr "**Làm thế nào để tạo một địa chỉ nhận mới trong DashQT**"

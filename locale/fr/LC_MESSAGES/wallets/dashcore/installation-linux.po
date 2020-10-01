@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Daf Daf, 2018
 # Leon White <leon.white@dash.org>, 2019
+# Daf Daf, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-01 03:43+0000\n"
 "PO-Revision-Date: 2018-02-08 10:31+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
+"Last-Translator: Daf Daf, 2020\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,6 +42,10 @@ msgid ""
 "Core wallet for Linux. The guide is written for Ubuntu 20.04 LTS, but the "
 "steps should be similar for other Linux distributions."
 msgstr ""
+"Ce guide explique comment télécharger, vérifier, installer et chiffrer le "
+"portefeuille Dash Core pour Linux. Ce guide est écrit pour Ubuntu 20.04 LTS,"
+" mais les étapes devraient être similaires pour d'autres distributions "
+"Linux."
 
 #: ../../wallets/dashcore/installation-linux.rst:15
 msgid "Downloading the Dash Core wallet"
@@ -53,6 +57,10 @@ msgid ""
 "wallet. In most cases, the website will properly detect which version you "
 "need. Click the Dash Core button to download the package directly."
 msgstr ""
+"Visitez https://www.dash.org/fr/telechargements pour télécharger le "
+"portefeuille logiciel Dash Core le plus récent. Dans la plupart des cas, le "
+"site détectera correctement la version dont vous avez besoin. Cliquez sur le"
+" bouton Dash Core pour télécharger directement le paquet."
 
 #: ../../wallets/dashcore/installation-linux.rst:25
 msgid "The website properly detects the wallet appropriate for your system"
@@ -69,6 +77,13 @@ msgid ""
 "other versions of Linux, see `here <https://www.howtogeek.com/198615/how-to-"
 "check-if-your-linux-system-is-32-bit-or-64-bit/>`__."
 msgstr ""
+"Si la détection ne fonctionne pas, vous devrez choisir manuellement votre "
+"système d'exploitation et si vous avez besoin d'une version 32 ou 64 bits. "
+"Si vous ne savez pas si votre version de Linux est 32 ou 64 bits, vous "
+"pouvez le vérifier dans Ubuntu dans **Réglages > À propos > Type de système "
+"d'exploitation**. Pour plus de détails sur les autres versions de Linux, "
+"voir `ici <https://www.howtogeek.com/198615/how-to-check-if-your-linux-"
+"system-is-32-bit-or-64-bit/>`__."
 
 #: ../../wallets/dashcore/installation-linux.rst:37
 msgid "Ubuntu System Overview. This is a 64 bit system."
@@ -81,6 +96,11 @@ msgid ""
 "need, download the Dash Core TGZ file to your computer from "
 "https://www.dash.org/downloads and save it to your Downloads folder."
 msgstr ""
+"Si vous avez un système 32 bits, téléchargez **Dash Core x86**. Si vous avez"
+" un système 64 bits, téléchargez **Dash Core x64**. Une fois que vous savez "
+"de quelle version vous avez besoin, téléchargez le fichier TGZ Dash Core "
+"depuis l'adresse https://www.dash.org/fr/telechargements et enregistrez le "
+"fichier téléchargé dans votre dossier Téléchargements."
 
 #: ../../wallets/dashcore/installation-linux.rst:45
 msgid "Verifying Dash Core"
@@ -121,6 +141,10 @@ msgid ""
 "To do this, open Terminal, browse to the location where you saved the file, "
 "and run the ``sha256sum`` command."
 msgstr ""
+"La signature devrait correspondre à celle du fichier téléchargé, pour vous "
+"assurer que ce fichier est authentique et n'a pas été modifié pendant sa "
+"transmission. Pour cela, ouvrez le Terminal, naviguez jusqu'à l'emplacement "
+"de sauvegarde du fichier et lancez la commande ``sha256sum``."
 
 #: ../../wallets/dashcore/installation-linux.rst:70
 msgid "Generating an SHA256 hash for the downloaded file"
@@ -155,7 +179,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/installation-linux.rst:84
 msgid "Extract Dash Core as follows::"
-msgstr ""
+msgstr "Extraction de Dash Core comme suit :"
 
 #: ../../wallets/dashcore/installation-linux.rst:88
 msgid ""
@@ -163,10 +187,13 @@ msgid ""
 "directory. We will now install the executable binaries to ``/usr/local/bin``"
 " using the ``install`` command::"
 msgstr ""
+"Cela créera un dossier intitulé ``dashcore-0.15.0`` dans le répertoire de "
+"travail courant. Nous allons ensuite installer les binaires exécutables dans"
+" ``/usr/local/bin`` au moyen de la commande ``install`` :"
 
 #: ../../wallets/dashcore/installation-linux.rst:94
 msgid "Start Dash Core from the terminal with the following command::"
-msgstr ""
+msgstr "Démarrez Dash Core depuis le terminal avec la commande suivante :"
 
 #: ../../wallets/dashcore/installation-linux.rst:98
 msgid ""

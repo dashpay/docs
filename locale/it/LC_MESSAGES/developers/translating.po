@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Alessandro Lotta <mediterraneo9000@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-01 03:43+0000\n"
 "PO-Revision-Date: 2018-04-16 05:42+0000\n"
+"Last-Translator: Alessandro Lotta <mediterraneo9000@gmail.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,16 +26,20 @@ msgid ""
 "Translate Dash products such as wallets, websites and documentation using "
 "Transifex"
 msgstr ""
+"Traduci prodotti Dash come wallet, siti Web e documentazione utilizzando "
+"Transifex"
 
 #: ../../developers/translating.rst:1
 msgid ""
 "dash, translate, localize, syntax, website, android, ios, wallets, "
 "documentation, dash core"
 msgstr ""
+"dash, traduci, localizza, sintassi, sito web, android, ios, portafogli, "
+"documentazione, core di dash"
 
 #: ../../developers/translating.rst:9
 msgid "Translating Dash"
-msgstr ""
+msgstr "Traduzione di Dash"
 
 #: ../../developers/translating.rst:11
 msgid ""
@@ -44,22 +52,31 @@ msgid ""
 "languages they feel able to translate. They can then work on any projects "
 "specifying this language as a target language."
 msgstr ""
+"Le traduzioni di tutti i prodotti Dash sono gestite per gentile concessione "
+"di Transifex, che offre la propria documentazione dettagliata di tutte le "
+"funzioni e caratteristiche. All'interno di Transifex, Dash mantiene "
+"un'organizzazione che contiene più progetti e un team di traduttori "
+"assegnati a tutti i progetti. Ad ogni progetto viene assegnata una o più "
+"lingue di destinazione per la traduzione da parte del manutentore del "
+"progetto. Quando un traduttore si unisce al team, è in grado di scegliere le"
+" lingue che si sente in grado di tradurre. Possono quindi lavorare su "
+"qualsiasi progetto specificando questa lingua come lingua di destinazione."
 
 #: ../../developers/translating.rst:21
 msgid "`Transifex <https://www.transifex.com>`_"
-msgstr ""
+msgstr "`Transifex <https://www.transifex.com>`_"
 
 #: ../../developers/translating.rst:22
 msgid "`Transifex Documentation <https://docs.transifex.com>`_"
-msgstr ""
+msgstr "`Documentazione Transifex <https://docs.transifex.com>`_"
 
 #: ../../developers/translating.rst:23
 msgid "`Dash translation projects <https://www.transifex.com/dash>`_"
-msgstr ""
+msgstr "`Progetti di traduzione Dash <https://www.transifex.com/dash>`_"
 
 #: ../../developers/translating.rst:24
 msgid "`Dash translators team <https://www.transifex.com/dash/teams>`_"
-msgstr ""
+msgstr "`Team di traduzione Dash <https://www.transifex.com/dash/teams>`_"
 
 #: ../../developers/translating.rst:26
 msgid ""
@@ -73,6 +90,16 @@ msgid ""
 "written differently, such as ``zh_CN`` and ``zh_TW`` for Simplified Chinese "
 "and Traditional Chinese."
 msgstr ""
+"In generale, le lingue con variazioni regionali minime devono essere "
+"tradotte nella lingua comune (piuttosto che regionale). Il portoghese, ad "
+"esempio, viene semplicemente tradotto nella lingua di destinazione ``pt``, "
+"piuttosto che in due lingue di destinazione separate ``pt_BR`` e ``pt_PT``, "
+"per il portoghese parlato rispettivamente in Brasile e Portogallo. Man mano "
+"che Dash cresce, queste lingue possono essere separate nelle loro varianti "
+"regionali dai correttori di bozze, a seconda della richiesta. Le eccezioni a"
+" questa regola si applicano quando la stessa lingua parlata è scritta in "
+"modo diverso, come ``zh_CN`` e ``zh_TW`` per il cinese semplificato e il "
+"cinese tradizionale."
 
 #: ../../developers/translating.rst:37
 msgid ""
@@ -86,6 +113,15 @@ msgid ""
 "language use, but also ensure your terminology is up to date with current "
 "use!"
 msgstr ""
+"Mantenere le traduzioni coerenti nel tempo, poiché più traduttori lavorano "
+"su ciascuna lingua di destinazione, è una parte molto importante per offrire"
+" un'esperienza utente di qualità. Per questo motivo, se ti imbatti in una "
+"terminologia specifica per Dash come `masternodes`, dovresti usare la "
+"funzione di ricerca ** Concordance ** per vedere come il termine è stato "
+"tradotto in passato. Transifex fornirà anche ** Suggerimenti ** e ** "
+"Cronologia ** se riconosce una stringa simile nel database delle traduzioni "
+"precedenti. Rimani coerente con l'uso della lingua passato, ma assicurati "
+"anche che la tua terminologia sia aggiornata con l'uso corrente!"
 
 #: ../../developers/translating.rst:52
 msgid ""
@@ -93,14 +129,17 @@ msgid ""
 "features specific to the programming language in which the product is "
 "written."
 msgstr ""
+"La seguente documentazione descrive i vari progetti e le eventuali "
+"caratteristiche speciali specifiche del linguaggio di programmazione in cui "
+"il prodotto è scritto."
 
 #: ../../developers/translating.rst:57
 msgid "Dash Core"
-msgstr ""
+msgstr "Core Dash"
 
 #: ../../developers/translating.rst:59
 msgid "https://www.transifex.com/dash/dash/"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash/"
 
 #: ../../developers/translating.rst:61
 msgid ""
@@ -116,18 +155,30 @@ msgid ""
 "order of the placeholders as necessary, according to the grammar of your "
 "target language."
 msgstr ""
+"Questo progetto contiene un file denominato ``dash_en.ts``, che è "
+"un'esportazione di tutto il contenuto traducibile rivolto agli utenti nel: "
+"ref: `Dash Core Wallet <dash-core-wallet>`. Le lingue con l'80% o più delle "
+"traduzioni completate verranno integrate nella prossima versione. Si noti "
+"che il software sostituirà spesso i segnaposto nel testo con numeri, "
+"indirizzi o nomi utente effettivi. Se vedi un segnaposto nel testo di "
+"origine, deve apparire anche nel testo di destinazione. In caso contrario, "
+"la tua traduzione non può essere utilizzata. Il pulsante ** Copia stringa "
+"sorgente ** può aiutarti a copiare tutto, quindi tutto ciò che devi fare è "
+"sostituire le parole inglesi che circondano i segnaposto. È possibile "
+"modificare l'ordine dei segnaposto secondo necessità, in base alla "
+"grammatica della lingua di destinazione."
 
 #: ../../developers/translating.rst:86
 msgid "Placeholders"
-msgstr ""
+msgstr "segnaposti"
 
 #: ../../developers/translating.rst:75
 msgid "**Source:** ``E&xit``"
-msgstr ""
+msgstr "** Fonte: ** `` E & xit``"
 
 #: ../../developers/translating.rst:77
 msgid "**Target:** ``&Beenden``"
-msgstr ""
+msgstr "**Target:** ``&Beenden``"
 
 #: ../../developers/translating.rst:79
 msgid ""
@@ -139,32 +190,42 @@ msgid ""
 "insert these placeholders in the grammatically appropriate position in your "
 "target text."
 msgstr ""
+"Nota che il carattere `` & '' è un segnaposto utilizzato per indicare una "
+"scorciatoia da tastiera in un menu di programma e deve apparire accanto al "
+"carattere appropriato nella lingua di destinazione senza spazi adiacenti. "
+"Segnaposti come ``% 1 '' o ``%s`` verranno sostituiti dal software mentre è "
+"in esecuzione per indicare un nome o un numero di qualcosa relativo al "
+"messaggio. È necessario inserire questi segnaposto nella posizione "
+"grammaticalmente appropriata nel testo di destinazione."
 
 #: ../../developers/translating.rst:94
 msgid "Punctuation"
-msgstr ""
+msgstr "Punteggiatura"
 
 #: ../../developers/translating.rst:89
 msgid "**Source:** ``change from %1 (%2)``"
-msgstr ""
+msgstr "** Fonte: ** `` modifica da% 1 (% 2) ``"
 
 #: ../../developers/translating.rst:91
 msgid "**Target:** ``Wechselgeld von %1 (%2)``"
-msgstr ""
+msgstr "**Target:** ``Wechselgeld von %1 (%2)``"
 
 #: ../../developers/translating.rst:93
 msgid ""
 "Note that any brackets ``()`` and punctuation such as full stops ``.`` at "
 "the end of a sentence must also exist in the target text."
 msgstr ""
+"Nota che qualsiasi parentesi `` () '' e punteggiatura come i punti ``. '' "
+"alla fine di una frase devono essere presenti anche nel testo di "
+"destinazione."
 
 #: ../../developers/translating.rst:97
 msgid "Dash Docs"
-msgstr ""
+msgstr "Dash Docs"
 
 #: ../../developers/translating.rst:99
 msgid "https://www.transifex.com/dash/dash-docs"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash-docs"
 
 #: ../../developers/translating.rst:101
 msgid ""
@@ -179,18 +240,29 @@ msgid ""
 " at all, but hyperlinks and certain formatting must be reproduced in the "
 "target language as follows:"
 msgstr ""
+"Questo progetto contiene tutto il contenuto della documentazione di Dash "
+"ospitata su https://docs.dash.org (probabilmente il sito che stai leggendo "
+"ora). Ogni pagina ``.html`` nella documentazione appare come un file nella "
+"sezione delle risorse, denominata in base ai passaggi di navigazione "
+"richiesti per aprire la pagina. La documentazione di Dash è scritta in un "
+"linguaggio di documentazione chiamato `reStructuredText "
+"<http://docutils.sourceforge.net/rst.html>` _ e costruita utilizzando il "
+"`Sphinx Documentation Generator <http://www.sphinx-doc.org>`_. Per "
+"semplificare il layout, la maggior parte del testo non ha alcun markup o "
+"segni di codice, ma i collegamenti ipertestuali e determinate formattazioni "
+"devono essere riprodotti nella lingua di destinazione come segue:"
 
 #: ../../developers/translating.rst:119
 msgid "Inline literals"
-msgstr ""
+msgstr "Inline letterali"
 
 #: ../../developers/translating.rst:113
 msgid "**Source:** Type \\`\\`./dash-qt\\`\\` to run the file."
-msgstr ""
+msgstr "** Fonte: ** Digita \\ `\\` ./dash-qt \\ `\\` per eseguire il file."
 
 #: ../../developers/translating.rst:115
 msgid "**Target:** Escriba \\`\\`./dash-qt\\`\\` para correr el archivo."
-msgstr ""
+msgstr "** Fonte: ** Digita \\ `\\` ./dash-qt \\ `\\` per eseguire il file."
 
 #: ../../developers/translating.rst:117
 msgid ""
@@ -198,43 +270,58 @@ msgid ""
 "that text to appear as an ``inline literal``. This is commonly used to "
 "highlight code or commands to be typed by the user."
 msgstr ""
+"Nota che due backtick `` `` `` prima e dopo una parola o una frase faranno "
+"apparire quel testo come un `` inline letterale ''. Questo è comunemente "
+"usato per evidenziare codici o comandi che devono essere digitati "
+"dall'utente."
 
 #: ../../developers/translating.rst:129
 msgid "Bold and italic"
-msgstr ""
+msgstr "Grassetto e corsivo"
 
 #: ../../developers/translating.rst:122
 msgid ""
 "**Source:** ``To encrypt your wallet, click **Settings** > **Encrypt** "
 "wallet.``"
 msgstr ""
+"** Fonte: ** `` Per crittografare il tuo portafoglio, fai clic su ** "
+"Impostazioni **> ** Crittografa ** portafoglio. ''"
 
 #: ../../developers/translating.rst:125
 msgid ""
 "**Target:** ``Para encriptar su billetera, haga click en **Settings** > "
 "**Encrypt** billetera.``"
 msgstr ""
+"** Destinazione: ** `` Per crittografare il tuo portafoglio, fai clic su ** "
+"Impostazioni **> ** Crittografa ** portafoglio. ''"
 
 #: ../../developers/translating.rst:128
 msgid ""
 "A single ``*`` before and after a word or phrase will render it in an "
 "*italic* font, while a double ``**`` will render it in **bold**."
 msgstr ""
+"Un singolo ``*`` prima e dopo una parola o una frase renderà questa in un "
+"carattere * corsivo *, mentre un doppio ``**`` la convertirà in ** grassetto"
+" **."
 
 #: ../../developers/translating.rst:140
 msgid "Internal hyperlinks"
-msgstr ""
+msgstr "Collegamenti ipertestuali interni"
 
 #: ../../developers/translating.rst:132
 msgid ""
 "**Source:** ``See :ref:`here <sporks>` for a brief introduction to sporks.``"
 msgstr ""
+"** Fonte: ** `` Vedi: ref: `qui <sporks>` per una breve introduzione agli "
+"spork.``"
 
 #: ../../developers/translating.rst:134
 msgid ""
 "**Target:** ``Ver :ref:`aquí <sporks>` para una breve introducción a "
 "sporks``"
 msgstr ""
+"** Destinazione: ** `` Vedi: ref: `qui <sporks>` per una breve introduzione "
+"agli spork.``"
 
 #: ../../developers/translating.rst:136
 msgid ""
@@ -244,16 +331,23 @@ msgid ""
 "`````. Translate the text, but do not translate the text inside the angle "
 "brackets."
 msgstr ""
+"Un collegamento ipertestuale interno è costituito dalla frase ``:ref:``, "
+"seguita da un singolo backtick `````, seguito da un testo che deve essere "
+"tradotto, seguito da parentesi angolari con l'obiettivo del collegamento ``<"
+" >``, seguito da un altro backtick `````. Traduci il testo, ma non tradurre "
+"il testo all'interno delle parentesi angolari."
 
 #: ../../developers/translating.rst:156
 msgid "External hyperlinks"
-msgstr ""
+msgstr "Collegamenti ipertestuali esterni"
 
 #: ../../developers/translating.rst:143
 msgid ""
 "**Source:** ``The `official Dash website <https://www.dash.org>`_ also "
 "provides a list of major exchanges offering Dash.``"
 msgstr ""
+"** Fonte: ** `` Il `sito web ufficiale di Dash <https://www.dash.org>` _ "
+"fornisce anche un elenco dei principali exchange che offrono Dash. ``"
 
 #: ../../developers/translating.rst:146
 msgid ""
@@ -261,6 +355,9 @@ msgid ""
 " proporciona una lista de las principales Casas de cambio o Exchanges que "
 "ofrecen Dash.``"
 msgstr ""
+"** Destinazione: ** `` Il `sito web ufficiale di Dash "
+"<https://www.dash.org>` _ fornisce anche un elenco dei principali exchange "
+"che offrono Dash. ``"
 
 #: ../../developers/translating.rst:150
 msgid ""
@@ -271,14 +368,21 @@ msgid ""
 "hyperlink (unless you want to link to a version of the page in the target "
 "language)."
 msgstr ""
+"Un collegamento ipertestuale esterno è costituito da un singolo backtick "
+"`````, seguito da un testo che deve essere tradotto, seguito da parentesi "
+"angolari con la destinazione del collegamento``<>``, seguito da un altro "
+"backtick e un carattere di sottolineatura singolo o doppio:```_`` o ```__``."
+" Traduci il testo, ma non tradurre il collegamento ipertestuale (a meno che "
+"tu non voglia collegarti a una versione della pagina nella lingua di "
+"destinazione)."
 
 #: ../../developers/translating.rst:159
 msgid "Dash Graphics"
-msgstr ""
+msgstr "Dash Graphics"
 
 #: ../../developers/translating.rst:161
 msgid "https://www.transifex.com/dash/dash-graphics"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash-graphics"
 
 #: ../../developers/translating.rst:163
 msgid ""
@@ -290,6 +394,14 @@ msgid ""
 "translating. For example, many words should be translated differently "
 "depending if they are a heading, a sentence or an item in a diagram."
 msgstr ""
+"I prodotti visivi Dash come infografiche, volantini e dispense per "
+"conferenze sono prodotti utilizzando Adobe InDesign, Adobe Illustrator o "
+"Microsoft Word e sono disponibili per l'uso nella: ref: `Marketing section "
+"<marketing>` della documentazione Dash. È importante visualizzare il layout "
+"in inglese finito durante la traduzione per comprendere il contesto del "
+"testo che stai traducendo. Ad esempio, molte parole dovrebbero essere "
+"tradotte in modo diverso a seconda che si tratti di un'intestazione, una "
+"frase o un elemento in un diagramma."
 
 #: ../../developers/translating.rst:172
 msgid ""
@@ -300,14 +412,20 @@ msgid ""
 "<http://dashchat.org>`_ when you are finished to request layout in the "
 "visual design."
 msgstr ""
+"Poiché questi formati di file proprietari non sono facilmente gestiti da "
+"Transifex, il contenuto della lingua viene esportato in un file di testo o "
+"Microsoft Excel e caricato su Transifex per l'elaborazione. Se traduci Dash "
+"Graphics, invia un'e-mail a leon.white@dash.org o @strophy su `Discord "
+"<http://dashchat.org>` _ quando hai finito di richiedere il layout nel "
+"design visivo."
 
 #: ../../developers/translating.rst:180
 msgid "Dash iOS Wallet"
-msgstr ""
+msgstr "Portafoglio Dash iOS"
 
 #: ../../developers/translating.rst:182 ../../developers/translating.rst:194
 msgid "https://www.transifex.com/dash/dash-mobile-wallets"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash-mobile-wallets"
 
 #: ../../developers/translating.rst:184
 msgid ""
@@ -318,10 +436,17 @@ msgid ""
 "segment must also appear in the target language, similar to the instructions"
 " above for Dash Core Wallet."
 msgstr ""
+"Tutti i contenuti in lingua da: ref: `Dash iOS Wallet <dash-ios-wallet>` "
+"sono disponibili per la traduzione in questo progetto. Tieni a disposizione "
+"un dispositivo che esegue il portafoglio iOS durante la traduzione per "
+"comprendere il contesto del testo che stai traducendo. Tieni presente che "
+"tutti i segnaposto nel segmento di testo di origine devono apparire anche "
+"nella lingua di destinazione, in modo simile alle istruzioni per Dash Core "
+"Wallet."
 
 #: ../../developers/translating.rst:192
 msgid "Dash Android Wallet"
-msgstr ""
+msgstr "Portafoglio Dash Android"
 
 #: ../../developers/translating.rst:196
 msgid ""
@@ -332,14 +457,21 @@ msgid ""
 "source text segment must also appear in the target language, similar to the "
 "instructions above for Dash Core Wallet."
 msgstr ""
+"Tutti i contenuti di lingua da: ref: `Dash Android Wallet <dash-android-"
+"wallet>` sono disponibili per la traduzione in questo progetto. Tieni a "
+"disposizione un dispositivo che esegue il portafoglio Android durante la "
+"traduzione per comprendere il contesto del testo che stai traducendo. Tieni "
+"presente che tutti i segnaposto nel segmento di testo di origine devono "
+"apparire anche nella lingua di destinazione, in modo simile alle istruzioni "
+"per Dash Core Wallet."
 
 #: ../../developers/translating.rst:205
 msgid "Dash Videos"
-msgstr ""
+msgstr "Video Dash"
 
 #: ../../developers/translating.rst:207
 msgid "https://www.transifex.com/dash/dash-videos"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash-videos"
 
 #: ../../developers/translating.rst:209
 msgid ""
@@ -351,14 +483,22 @@ msgid ""
 " to leon.white@dash.org or @strophy on `Discord <http://dashchat.org>`_ to "
 "request inclusion of the subtitles on YouTube."
 msgstr ""
+"Questa sezione contiene principalmente contenuti provenienti dalla popolare "
+"serie di video `Dash School <https://www.youtube.com/watch?v=e7UwwcCK j4Y & "
+"list = PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod>` _ di Amanda B. Johnson. Si prega"
+" di tradurre con i video aperti su YouTube per comprendere correttamente il "
+"contesto del testo di origine. Una volta completata la traduzione, invia "
+"un'e-mail a leon.white@dash.org o @strophy su `Discord "
+"<http://dashchat.org>` _ per richiedere l'inclusione dei sottotitoli su "
+"YouTube."
 
 #: ../../developers/translating.rst:219
 msgid "Dash Website"
-msgstr ""
+msgstr "Sito Dash"
 
 #: ../../developers/translating.rst:221
 msgid "https://www.transifex.com/dash/dash-website"
-msgstr ""
+msgstr "https://www.transifex.com/dash/dash-website"
 
 #: ../../developers/translating.rst:223
 msgid ""
@@ -369,3 +509,9 @@ msgid ""
 "`Discord <http://dashchat.org>`_ to request a build of your translation onto"
 " the website."
 msgstr ""
+"Il sito Web di Dash all'indirizzo https://www.dash.org è disponibile per la "
+"traduzione in Transifex. Tieni aperto il sito web durante la traduzione per "
+"comprendere correttamente il contesto del testo di origine. Una volta "
+"completata la traduzione, invia un'e-mail a leon.white@dash.org o @strophy "
+"su `Discord <http://dashchat.org>` _ per richiedere una build della tua "
+"traduzione sul sito web."

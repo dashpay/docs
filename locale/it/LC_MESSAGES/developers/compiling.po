@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Gleb Golov <gleb.golov@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-01 03:43+0000\n"
 "PO-Revision-Date: 2018-04-16 05:42+0000\n"
+"Last-Translator: Gleb Golov <gleb.golov@gmail.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,15 +25,18 @@ msgstr ""
 msgid ""
 "Compile Dash Core for Linux, macOS, Windows and Gitian deterministic builds"
 msgstr ""
+"Compila Dash Core per Linux, macOS, Windows e build deterministiche Gitian"
 
 #: ../../developers/compiling.rst:1
 msgid ""
 "dash, build, compile, linux, macOS, windows, binary, Gitian, developers"
 msgstr ""
+"dash, build, compilazione, linux, macOS, windows, binario, Gitian, "
+"sviluppatori"
 
 #: ../../developers/compiling.rst:9
 msgid "Compiling Dash Core"
-msgstr ""
+msgstr "Compilazione Dash Core"
 
 #: ../../developers/compiling.rst:11
 msgid ""
@@ -44,6 +51,16 @@ msgid ""
 "generic.md>`__ available on GitHub to compile or cross-compile Dash for any "
 "platform."
 msgstr ""
+"Dash offre build binarie stabili sul `sito "
+"<https://www.dash.org/downloads>`_ e su `GitHub "
+"<https://github.com/dashpay/dash/releases>`_ e build di sviluppo su `GitLab "
+"CI <https://gitlab.com/dashpay/dash/pipelines>`_; molti utenti potrebbero "
+"essere interessati a far da sé il building dei binari di Dash. Questo "
+"processo è stato semplificato con la release di Dash Core 0.13.0 e gli "
+"utenti che non richiedano build deterministiche possono seguire le `note "
+"generali di building <https://github.com/dashpay/dash/blob/develop/doc"
+"/build-generic.md>`__ disponibili su GitHub per la compilazione od il cross-"
+"compile su qualsiasi piattaforma."
 
 #: ../../developers/compiling.rst:21
 msgid ""
@@ -51,10 +68,13 @@ msgid ""
 "<https://docs.dash.org/en/0.12.3/developers/compiling.html>`__ on a previous"
 " version of this page."
 msgstr ""
+"Le istruzioni per la build di Dash Core 0.12.3 o precedenti sono disponibili"
+" `qui <https://docs.dash.org/en/0.12.3/developers/compiling.html>`__ su una "
+"versione precedente di questa pagina."
 
 #: ../../developers/compiling.rst:28
 msgid "Gitian"
-msgstr ""
+msgstr "Gitian"
 
 #: ../../developers/compiling.rst:30
 msgid ""
@@ -67,6 +87,15 @@ msgid ""
 "upload the resulting signature. These results are compared and only if they "
 "match, the build is accepted and uploaded to dash.org."
 msgstr ""
+"Gitian è il processo di building deterministico che è utilizzato per il "
+"building degli eseguibili di Dash Core. Offre un modo ragionevolmente sicuro"
+" per dimostrare che la build dell'eseguibile è stata eseguita dal sorgente "
+"su GitHub. Esso assicura anche che le stesse comprovate dipendenze siano "
+"utilizzate ed inserite nella build. Molteplici sviluppatori, per le build "
+"del codice sorgente, seguono uno specifico descriptor (\"recipe\"), segnano "
+"crittograficamente il risultato e caricano la firma. Questi risultati sono "
+"comparati e, solamente se corrispondono, vengono accettati e caricati su "
+"dash.org."
 
 #: ../../developers/compiling.rst:39
 msgid ""
@@ -76,3 +105,8 @@ msgid ""
 "<https://docs.dash.org/en/0.12.3/developers/compiling.html#gitian-build>`__ "
 "on a previous version of this page."
 msgstr ""
+"Le istruzioni su come eseguire la build di Dash Core 0.13.0 appariranno qui "
+"quando il build system di Docker per Gitian sarà disponibile. Le istruzioni "
+"per creare build deterministiche di Dash Core 0.12.3 o precedenti sono "
+"disponibili `qui <https://docs.dash.org/en/0.12.3/developers/compiling.html"
+"#gitian-build>`__ su una versione precedente di questa pagina."

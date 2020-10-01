@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Alex.ys <silvershark.ys@gmail.com>, 2019
+# jmp2esp <xsrf@icloud.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-06 04:12+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
-"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2019\n"
+"Last-Translator: jmp2esp <xsrf@icloud.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,6 +135,8 @@ msgid ""
 "hashes (transactions, merkle root, etc) which allows for most existing "
 "libraries to work in the Dash ecosystem."
 msgstr ""
+"**区块 Hashing 算法：** Dash 使用 ”X11“ 算法代替 Bitcoin 中使用的 SHA256。值得注意的是这仅仅影响区块头本身的 "
+"Hash。所有其它内部依然使用 SHA256 （交易，Merkle 根等等）因此允许大多现有的库能在 Dash 生态中正常工作。"
 
 #: ../../merchants/technical.rst:53
 msgid ""
@@ -150,7 +153,7 @@ msgstr ""
 
 #: ../../merchants/technical.rst:63
 msgid "v0.13.0 Integration Notes"
-msgstr ""
+msgstr "v0.13.0 整合须知"
 
 #: ../../merchants/technical.rst:65
 msgid ""
@@ -170,7 +173,7 @@ msgstr ""
 
 #: ../../merchants/technical.rst:73
 msgid "Release"
-msgstr ""
+msgstr "发布"
 
 #: ../../merchants/technical.rst:73
 msgid "Version"
@@ -178,30 +181,30 @@ msgstr "版本"
 
 #: ../../merchants/technical.rst:73
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #: ../../merchants/technical.rst:73
 msgid "Payload Size"
-msgstr ""
+msgstr "载荷大小"
 
 #: ../../merchants/technical.rst:73
 msgid "Payload"
-msgstr ""
+msgstr "载荷"
 
 #: ../../merchants/technical.rst:73
 msgid "Payload JSON"
-msgstr ""
+msgstr " JSON 载荷"
 
 #: ../../merchants/technical.rst:73
 msgid "Transaction Purpose"
-msgstr ""
+msgstr "交易目的"
 
 #: ../../merchants/technical.rst:75 ../../merchants/technical.rst:77
 #: ../../merchants/technical.rst:79 ../../merchants/technical.rst:81
 #: ../../merchants/technical.rst:83 ../../merchants/technical.rst:85
 #: ../../merchants/technical.rst:87
 msgid "v0.13.0"
-msgstr ""
+msgstr "v0.13.0"
 
 #: ../../merchants/technical.rst:75 ../../merchants/technical.rst:77
 #: ../../merchants/technical.rst:79 ../../merchants/technical.rst:81
@@ -212,16 +215,16 @@ msgstr "3"
 
 #: ../../merchants/technical.rst:75
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../../merchants/technical.rst:75 ../../merchants/technical.rst:75
 #: ../../merchants/technical.rst:75
 msgid "n/a"
-msgstr ""
+msgstr "无"
 
 #: ../../merchants/technical.rst:75
 msgid "Standard Transaction"
-msgstr ""
+msgstr "标准交易"
 
 #: ../../merchants/technical.rst:77
 msgid "1"
@@ -231,23 +234,24 @@ msgstr "1"
 #: ../../merchants/technical.rst:81 ../../merchants/technical.rst:83
 #: ../../merchants/technical.rst:85 ../../merchants/technical.rst:87
 msgid "<variable int>"
-msgstr ""
+msgstr "<variable int>"
 
 #: ../../merchants/technical.rst:77 ../../merchants/technical.rst:79
 #: ../../merchants/technical.rst:81 ../../merchants/technical.rst:83
 #: ../../merchants/technical.rst:85 ../../merchants/technical.rst:87
 msgid "<hex>"
-msgstr ""
+msgstr "<hex>"
 
 #: ../../merchants/technical.rst:77
 msgid "proRegTx"
-msgstr ""
+msgstr "proRegTx"
 
 #: ../../merchants/technical.rst:77
 msgid ""
 "`Masternode Registration <https://dash-docs.github.io/en/developer-"
 "reference#proregtx>`__"
 msgstr ""
+"`主节点注册 <https://dash-docs.github.io/en/developer-reference#proregtx>`__"
 
 #: ../../merchants/technical.rst:79
 msgid "2"
@@ -255,23 +259,25 @@ msgstr "2"
 
 #: ../../merchants/technical.rst:79
 msgid "proUpServTx"
-msgstr ""
+msgstr "proUpServTx"
 
 #: ../../merchants/technical.rst:79
 msgid ""
 "`Update Masternode Service <https://dash-docs.github.io/en/developer-"
 "reference#proupservtx>`__"
 msgstr ""
+"`主节点服务更新 <https://dash-docs.github.io/en/developer-reference#proupservtx>`__"
 
 #: ../../merchants/technical.rst:81
 msgid "proUpRegTx"
-msgstr ""
+msgstr "proUpRegTx"
 
 #: ../../merchants/technical.rst:81
 msgid ""
 "`Update Masternode Operator <https://dash-docs.github.io/en/developer-"
 "reference#proupregtx>`__"
 msgstr ""
+"`更新主节点操作者 <https://dash-docs.github.io/en/developer-reference#proupregtx>`__"
 
 #: ../../merchants/technical.rst:83
 msgid "4"
@@ -279,27 +285,30 @@ msgstr "4"
 
 #: ../../merchants/technical.rst:83
 msgid "proUpRevTx"
-msgstr ""
+msgstr "proUpRevTx"
 
 #: ../../merchants/technical.rst:83
 msgid ""
 "`Masternode Revocation <https://dash-docs.github.io/en/developer-"
 "reference#prouprevtx>`__"
 msgstr ""
+"`主节点取消 <https://dash-docs.github.io/en/developer-reference#prouprevtx>`__"
 
 #: ../../merchants/technical.rst:85
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: ../../merchants/technical.rst:85
 msgid "cbTx"
-msgstr ""
+msgstr "cbTx"
 
 #: ../../merchants/technical.rst:85
 msgid ""
 "`Masternode List Merkle Proof <https://dash-docs.github.io/en/developer-"
 "reference#cbtx>`__"
 msgstr ""
+"`主节点列表 Merkle 证明 <https://dash-docs.github.io/en/developer-"
+"reference#cbtx>`__"
 
 #: ../../merchants/technical.rst:87
 msgid "6"
@@ -307,17 +316,17 @@ msgstr "6"
 
 #: ../../merchants/technical.rst:87
 msgid "qcTx"
-msgstr ""
+msgstr "qcTx"
 
 #: ../../merchants/technical.rst:87
 msgid ""
 "`Quorum Commitment <https://dash-docs.github.io/en/developer-"
 "reference#qctx>`__"
-msgstr ""
+msgstr "`仲裁团承诺 <https://dash-docs.github.io/en/developer-reference#qctx>`__"
 
 #: ../../merchants/technical.rst:90
 msgid "Integration notes:"
-msgstr ""
+msgstr "整合须知："
 
 #: ../../merchants/technical.rst:92
 msgid ""
@@ -326,6 +335,8 @@ msgid ""
 "foundational component of Dash Core v0.13.0 and introduce a new Transaction "
 "Version and related “Payload” to the network."
 msgstr ""
+"`DIP002 特殊交易 <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ 是 "
+"Dash Core v0.13.0 的一个基础部分，它引入一个新的交易版本和相关”载荷“到网络。"
 
 #: ../../merchants/technical.rst:96
 msgid ""
@@ -334,6 +345,8 @@ msgid ""
 "hashing-and-signing>`__ these new Transaction Types in order to accurately "
 "encode and decode Raw Transaction data."
 msgstr ""
+"整合系统必须能够 `序列和反序列 <https://github.com/dashpay/dips/blob/master/dip-0002.md"
+"#serialization-hashing-and-signing>`__ 这些新的交易类型从而能精确地编码和解码交易元数据。"
 
 #: ../../merchants/technical.rst:100
 msgid ""
@@ -343,6 +356,9 @@ msgid ""
 "Transactions has been split into two fields: ``version`` and ``type`` (each "
 "consisting of 2 bytes)."
 msgstr ""
+"从一个 `向下兼容 "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ "
+"的角度, 旧交易中包含的 4 字节 (32位) ``版本`` 字段被分为两个字段: ``版本`` 和 ``类型`` (均由两个字节构成)。"
 
 #: ../../merchants/technical.rst:105
 msgid ""
@@ -449,6 +465,8 @@ msgid ""
 "services with it. A practical guide to getting started with the Insight API "
 "and Insight UI block explorer is available :ref:`here <insight-api>`."
 msgstr ""
+"开源 REST API 给你提供一个方便强大而简单的读取 Dash 网络和利用它构建你自己服务的方式。开始使用 Insight API 和 "
+"Insight UI 区块浏览器的实用手册 :ref:`<insight-api>`。"
 
 #: ../../merchants/technical.rst:188
 msgid "Features: Transaction Broadcast, WebSocket Notifications."
@@ -499,18 +517,18 @@ msgstr "说明文档的链接: https://www.blockcypher.com/dev/dash/"
 
 #: ../../merchants/technical.rst:216
 msgid "BitGo"
-msgstr ""
+msgstr "BitGo"
 
 #: ../../merchants/technical.rst:223
 msgid "https://www.bitgo.com"
-msgstr ""
+msgstr "https://www.bitgo.com"
 
 #: ../../merchants/technical.rst:225
 msgid ""
 "BitGo provides a simple and robust RESTful API and client SDK to integrate "
 "digital currency wallets with your application. Support for Dash InstantSend"
 " is available."
-msgstr ""
+msgstr "BitGo 提供一个简单有力的 RESTful API 和用户 SDK 来为你的应用整合数字货币钱包。同时支持 Dash 即时发送。"
 
 #: ../../merchants/technical.rst:229
 msgid ""
@@ -520,11 +538,11 @@ msgstr ""
 
 #: ../../merchants/technical.rst:231
 msgid "Pricing Model: Per API Call"
-msgstr ""
+msgstr "价值模型: 每个 API 调用"
 
 #: ../../merchants/technical.rst:232
 msgid "Documentation: https://www.bitgo.com/api/v2/"
-msgstr ""
+msgstr "文档: https://www.bitgo.com/api/v2/"
 
 #: ../../merchants/technical.rst:235
 msgid "ChainRider"
@@ -730,7 +748,7 @@ msgstr "https://github.com/Bit-Wasp/bitcoin-php"
 msgid ""
 "Bitcoin-PHP is an implementation of Bitcoin with support for Dash using "
 "mostly pure PHP."
-msgstr ""
+msgstr "Bitcoin-PHP 是纯PHP 实现的支持 Dash 的 Bitcoin。"
 
 #: ../../merchants/technical.rst:366
 msgid "Platform: PHP"
@@ -761,6 +779,7 @@ msgid ""
 "useful when dealing with Bitcoin and Dash. It has been tested with Python "
 "2.7, 3.6 and 3.7."
 msgstr ""
+"PyCoin 是一个在处理 Bitcoin 与 Dash 时很有用的一系列工具。已在 Python 2.7, 3.6 和 3.7环境下测试。"
 
 #: ../../merchants/technical.rst:379
 msgid "Platform: Python"
@@ -807,11 +826,11 @@ msgstr "应用示例：https://github.com/tomasz-ludek/pocket-of-dash"
 
 #: ../../merchants/technical.rst:404
 msgid "Objective-C: Dash-Sync"
-msgstr ""
+msgstr "Objective-C: Dash-Sync"
 
 #: ../../merchants/technical.rst:411
 msgid "https://github.com/dashevo/dashsync-iOS"
-msgstr ""
+msgstr "https://github.com/dashevo/dashsync-iOS"
 
 #: ../../merchants/technical.rst:413
 msgid ""
@@ -819,14 +838,16 @@ msgid ""
 " all most relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement"
 " Proposals (DIPs)."
 msgstr ""
+"Dash-Sync 是一个用于 iOS 的 Objective-C Dash 区块链框架。它实现了所有与 Bitcoin 改进提案 (BIPs) 和 "
+"Dash 改进提案 (DIPs)相关的内容。"
 
 #: ../../merchants/technical.rst:417
 msgid "Platform: iOS"
-msgstr ""
+msgstr "平台: iOS"
 
 #: ../../merchants/technical.rst:418
 msgid "Repository: https://github.com/dashevo/dashsync-iOS"
-msgstr ""
+msgstr "仓库: https://github.com/dashevo/dashsync-iOS"
 
 #: ../../merchants/technical.rst:421
 msgid ".NET: NBitcoin"
