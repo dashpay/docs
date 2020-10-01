@@ -387,12 +387,13 @@ View logs as follows::
 Tor
 ===
 
-`Tor <torproject.org/>`__ is free and open-source software for enabling
-anonymous communication. The name derived from the acronym for the
-original software project name "The Onion Router". Tor directs Internet
-traffic through a free, worldwide, volunteer overlay network consisting
-of more than seven thousand relays to conceal a user's location and
-usage from anyone conducting network surveillance or traffic analysis.
+`Tor <https://www.torproject.org/>`__ is free and open-source software
+for enabling anonymous communication. The name derived from the acronym
+for the original software project name "The Onion Router". Tor directs
+Internet traffic through a free, worldwide, volunteer overlay network
+consisting of more than seven thousand relays to conceal a user's
+location and usage from anyone conducting network surveillance or
+traffic analysis.
 
 Dash Core GUI
 -------------

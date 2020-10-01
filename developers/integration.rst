@@ -98,10 +98,10 @@ Integration notes:
    section of the dash developer reference for additional detail on
    these data types, e.g. <variable int>.
 
-5. `InstantSend <https://docs.dash.org/en/stable/integration/technical.html#instantsend>`__ 
-   status and Payload JSON (e.g. ``proRegTx``) is included in the 
-   JSON-RPC response, please note that this data is not part of the
-   calculated hash and is provided for convenience.
+5. :ref:`InstantSend <integration-instantsend>` status and Payload JSON
+   (e.g. ``proRegTx``) is included in the JSON-RPC response, please note
+   that this data is not part of the calculated hash and is provided for
+   convenience.
 
 See the `v0.13.0 transaction types integration documentation (PDF) <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__
 for worked examples of each transaction type.
