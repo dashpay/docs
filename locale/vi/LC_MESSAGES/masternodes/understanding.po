@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kien Bui <kientemp2@gmail.com>, 2019
+# Kien Bui <kientemp2@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 03:43+0000\n"
+"POT-Creation-Date: 2020-10-01 01:04+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2019\n"
+"Last-Translator: Kien Bui <kientemp2@gmail.com>, 2020\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -66,6 +66,17 @@ msgid ""
 "with each masternode receiving one vote (yes/no/abstain) on each proposal "
 "submitted to the system."
 msgstr ""
+"Nói một cách dễ hiểu, một masternode là một máy chủ với một phiên bản đầy đủ"
+" của blockchain của Dash, cần bảo đảm một mức độ tối thiểu về tốc độ và chức"
+" năng để thực hiện những nhiệm vụ liên quan đến kiểm tra khối, cũng như là "
+"các dịch vụ như PrivateSend và InstantSend, đó là các tính năng về giao dịch"
+" riêng tư và tức thời của Dash. Các masternode cũng được trả công cho dịch "
+"vụ của mình, bằng việc sử dụng cơ chế có tên Proof of Service. Đây là một cơ"
+" chế bổ sung cho Proof of Work thực hiện bởi các thợ mỏ để bảo đảm cho "
+"blockchain. Masternode cũng được quyền bỏ phiếu cho :ref:`các đề xuất quản "
+"trị hoặc cấp vốn cho các dự án <governance>`, với mỗi masternode có được một"
+" phiếu bầu (yes/no/abstain tương đương với ủng hộ/phản đối/không ý kiến) cho"
+" mỗi một đề xuất được gửi lên hệ thống."
 
 #: ../../masternodes/understanding.rst:33
 msgid ""
@@ -209,7 +220,7 @@ msgid ""
 "<https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__"
 msgstr ""
 "`Dash 0.13 Các bước nâng cấp cho masternode (tài liệu cập nhật) "
-"<https://docs.dash.org/vi/0.13.0/masternodes/dip3-upgrade.html>`__"
+"<https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__"
 
 #: ../../masternodes/understanding.rst:97
 msgid ":ref:`Full masternode setup guide <masternode-setup>`"
@@ -622,6 +633,18 @@ msgid ""
 "Failure to participate in DKG will eventually result in a PoSe ban as "
 "described above."
 msgstr ""
+"Trong những phiên bản trước của Dash, một nhóm tối thiểu 10 masternode được "
+"lựa chọn một cách tức thời để khoá các giao dịch InstantSend. Từ phiên bản "
+"0.14 của Dash, một nhóm tối thiểu được xác định trước, gồm có các masternode"
+" đang và có thời gian hoạt động lâu nhất trên mạng. Trong khi chúng vẫn có "
+"nhiệm vụ cho các giao dịch InstantSend, cơ chế khoá này đã thay đổi để tự "
+"động khoá một cách tối đa các giao dịch trên mạng mà đạt được những yêu cầu "
+"theo như mô tả :ref:`ở đây <is-broadcast>`. Các Masternode bây giờ cũng chịu"
+" trách nhiệm cho nhiều chức năng đồng thuận hơn, như :ref:`ChainLocks "
+"<chainlocks>`. Các nhóm tối thiểu các masternode được lập nên thông qua một "
+"quá trình `sinh khoá phân tán  "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__. Nếu không tham"
+" gia được vào DKG thì thậm chí kết quả sẽ bị khoá PoSe như đã mô tả ở trên."
 
 #: ../../masternodes/understanding.rst:278
 msgid "Masternode requirements"
@@ -658,16 +681,7 @@ msgstr ""
 "Có một địa chỉ IP dành riêng: Thường được đi cùng với một máy chủ/máy chủ "
 "ảo."
 
-#: ../../masternodes/understanding.rst:289
-msgid ""
-"A little time and (heart): Masternodes used to require complex setup, but "
-"tools such as dashman now greatly simplify the process."
-msgstr ""
-"Trong thời gian ngắn ban đầu (và cốt lõi): Các masternode thường yêu cầu "
-"việc cài đặt phức tạp, nhưng công cụ như Dashman hiện nay đã đơn giản hoá "
-"rất nhiều cho công đoạn này."
-
-#: ../../masternodes/understanding.rst:292
+#: ../../masternodes/understanding.rst:290
 msgid ""
 "In addition to the 1000 Dash held in collateral, masternodes also have "
 "minimum hardware requirements. For Dash versions 0.14 and higher, these "
@@ -677,63 +691,63 @@ msgstr ""
 " đảm bảo yêu cầu phần cứng tối thiểu. Với Dash phiên bản 0.14 hoặc cao hơn, "
 "thì phần cứng yêu cầu là như sau:"
 
-#: ../../masternodes/understanding.rst:297
+#: ../../masternodes/understanding.rst:295
 msgid "Minimum"
 msgstr "Tối thiểu"
 
-#: ../../masternodes/understanding.rst:297
+#: ../../masternodes/understanding.rst:295
 msgid "Recommended"
 msgstr "Đề xuất"
 
-#: ../../masternodes/understanding.rst:299
+#: ../../masternodes/understanding.rst:297
 msgid "CPU"
 msgstr "CPU"
 
-#: ../../masternodes/understanding.rst:299
+#: ../../masternodes/understanding.rst:297
 msgid "1x 1 GHz"
 msgstr "1x 1 GHz"
 
-#: ../../masternodes/understanding.rst:299
+#: ../../masternodes/understanding.rst:297
 msgid "1x 2 GHz"
 msgstr "1x 2 GHz"
 
-#: ../../masternodes/understanding.rst:301
+#: ../../masternodes/understanding.rst:299
 msgid "RAM"
 msgstr "RAM"
 
-#: ../../masternodes/understanding.rst:301
+#: ../../masternodes/understanding.rst:299
 msgid "2 GB + 2 GB swap"
 msgstr "2 GB + 2 GB swap"
 
-#: ../../masternodes/understanding.rst:301
+#: ../../masternodes/understanding.rst:299
 msgid "4 GB + 2 GB swap"
 msgstr "4 GB + 2 GB swap"
 
-#: ../../masternodes/understanding.rst:303
+#: ../../masternodes/understanding.rst:301
 msgid "Disk"
 msgstr "Ổ Đĩa"
 
-#: ../../masternodes/understanding.rst:303
+#: ../../masternodes/understanding.rst:301
 msgid "40 GB"
 msgstr "40 GB"
 
-#: ../../masternodes/understanding.rst:303
+#: ../../masternodes/understanding.rst:301
 msgid "60 GB"
 msgstr "60 GB"
 
-#: ../../masternodes/understanding.rst:305
+#: ../../masternodes/understanding.rst:303
 msgid "Network"
 msgstr "Mạng"
 
-#: ../../masternodes/understanding.rst:305
+#: ../../masternodes/understanding.rst:303
 msgid "400 GB/mth"
 msgstr "400 GB/mth"
 
-#: ../../masternodes/understanding.rst:305
+#: ../../masternodes/understanding.rst:303
 msgid "1 TB/mth"
 msgstr "1 TB/mth"
 
-#: ../../masternodes/understanding.rst:308
+#: ../../masternodes/understanding.rst:306
 msgid ""
 "Masternode bandwidth use ranges between 300-500 GB per month and will grow "
 "as the network does."
@@ -741,25 +755,17 @@ msgstr ""
 "Masternode sử dụng băng thông vào khoảng 300-500 GB cho mỗi tháng và sẽ tăng"
 " lên khi mạng lưới phát triển."
 
-#: ../../masternodes/understanding.rst:312
+#: ../../masternodes/understanding.rst:310
 msgid "Dash Evolution"
 msgstr "Dash Evolution"
 
-#: ../../masternodes/understanding.rst:314
+#: ../../masternodes/understanding.rst:312
 msgid ""
 "The exact hardware requirements for Dash Evolution masternodes have yet to "
 "be determined, although some pointers can be taken from the `roadmap "
-"<https://www.dash.org/roadmap>`_ and this `blog post "
+"<https://www.dash.org/roadmap/>`_ and this `blog post "
 "<https://medium.com/@eduffield222/how-to-enabling-on-chain-scaling-"
 "2ffab5997f8b>`_. It should be possible to run Dash masternodes on normal VPS"
 " servers until the block size reaches approximately 20 MB, after which "
 "custom hardware such as GPUs and eventually ASICs may be required."
 msgstr ""
-"Yêu cầu chính xác cho phần cứng cho các masternode của Dash Masternode vẫn "
-"chưa được xác định, mặc dầu một số tham chiếu có thể lấy ra từ `lộ trình "
-"<https://www.dash.org/roadmap>`_ và trong `bài viết blog "
-"<https://medium.com/@eduffield222/how-to-enabling-on-chain-scaling-"
-"2ffab5997f8b>`_. Ta vẫn có thể chạy một masternode của Dash trên các máy chủ"
-" ảo thông thường cho đến khi kích thước mỗi khối lên đến xấp xỉ 20 MB, sau "
-"đó có thể cần đến những phần cứng tuỳ chỉnh như GPU và thậm chí có thể cần "
-"đến cả ASIC."
