@@ -115,7 +115,7 @@ The PrivateSend process works like this:
 #. Your funds will be mixed by at least the number of rounds you
    specify. Dash 0.16 includes an update known as `Random Round Mixing
    <https://github.com/dashpay/dash/pull/3661>`__ which will mix a given
-   denomination by up to two extra rounds to further improve privacy.
+   denomination by up to three extra rounds to further improve privacy.
 #. This mixing process happens in the background without any
    intervention on your part. When you wish to make a private
    transaction, your funds will be ready to spend. No additional waiting
