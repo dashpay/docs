@@ -20,20 +20,17 @@ in Dash and enjoy the following benefits:
 - Advanced privacy for both customers and merchants
 - Lowest fees in the industry
 
-A three-part course on why Dash is a popular choice for payments and how
-integration takes place is available in English and Spanish on
-`DashAcademy.com <http://www.dashacademy.com>`_. To get started with an
-integration in your sales system, simply select an online or point of
-sale payment solution from the lists below. If you are unsure, GoCoin is
-a popular choice due its support for :ref:`InstantSend <instantsend>`,
-while CoinPayments supports the largest range of online shop software.
-Anypay is an incredibly simple solution for retail stores, and also
-supports InstantSend. Larger integrations may require some customisation
-or cooperation with a specialist payment processor such as `ePaymints
+To get started with an integration in your sales system, simply select
+an online or point of sale payment solution from the lists below. If you
+are unsure, GoCoin is a popular choice due its support for
+:ref:`InstantSend <instantsend>`, while CoinPayments supports the
+largest range of online shop software. Anypay is an incredibly simple
+solution for retail stores, and also supports InstantSend. Larger
+integrations may require some customisation or cooperation with a
+specialist payment processor such as `ePaymints
 <http://epaymints.com>`__. This documentation also describes the
 :ref:`administrative <merchants-administrative>` and  :ref:`technical
-<integration>` steps required to integrate various Dash
-services.
+<integration>` steps required to integrate various Dash services.
 
 Any Dash received in payment can be automatically converted to the fiat
 currency of your choice using services such as `Uphold
