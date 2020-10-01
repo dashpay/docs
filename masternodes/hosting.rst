@@ -92,7 +92,7 @@ https://node40.com
 - `Site <https://node40.com>`__
 - `Email <info@node40.com>`__
 - `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`__
-- `Review <https://www.dashforcenews.com/interview-perry-woodin-node40-dash-compliance/>`__
+- `Review <https://dashnews.org/interview-perry-woodin-node40-dash-compliance/>`__
 
 
 Pool of Stake

@@ -497,8 +497,8 @@ https://www.dashcentral.org
 
 DashCentral, operated by forum member rango, offers an advanced service
 to monitor masternodes and vote on budget proposals through an advanced
-web interface. An `Android app <https://play.google.com/store/apps/detai
-ls?id=net.paregov.android.dashcentral>`_ is also available.
+web interface. A `mobile monitoring interface
+<https://www.dashcentral.org/account/mobile>`_ is also available.
 
 Masternode.me
 -------------

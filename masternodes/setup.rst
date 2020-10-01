@@ -78,10 +78,10 @@ We will use `Vultr <https://www.vultr.com/>`_ hosting as an example of a
 VPS, although `DigitalOcean <https://www.digitalocean.com/>`_, `Amazon
 EC2 <https://aws.amazon.com/ec2>`_, `Google Cloud
 <https://cloud.google.com/compute/>`_, `Choopa
-<https://www.choopa.com/>`_ and `OVH <https://www.ovh.com/>`_ are also
-popular choices. First create an account and add credit. Then go to the
-**Servers** menu item on the left and click **+** to add a new server.
-Select a location for your new server on the following screen:
+<https://www.choopa.com/>`_ and `OVH <https://www.ovh.com.au/>`_ are
+also popular choices. First create an account and add credit. Then go to
+the **Servers** menu item on the left and click **+** to add a new
+server. Select a location for your new server on the following screen:
 
 .. figure:: img/setup-server-location.png
    :width: 400px
@@ -297,7 +297,7 @@ Option 1: Sending from a hardware wallet
 Set up your Trezor using the Trezor wallet at https://wallet.trezor.io/
 and send a test transaction to verify that it is working properly. For
 help on this, see :ref:`this guide <hardware-trezor>` - you may also
-choose to (carefully!) `add a passphrase <https://blog.trezor.io/hide-your-trezor-wallets-with-multiple-passphrases-f2e0834026eb>`_
+choose to (carefully!) `add a passphrase <https://blog.trezor.io/passphrase-the-ultimate-protection-for-your-accounts-3a311990925b>`_
 to your Trezor to further protect your collateral. Create a new account
 in your Trezor wallet by clicking **Add account**. Then click the
 **Receive** tab and send exactly 1000 DASH to the address displayed. If

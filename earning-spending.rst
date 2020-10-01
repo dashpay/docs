@@ -28,7 +28,7 @@ or saving. For more information, see the following blog posts:
 
  - **Bitwage:** https://blog.bitwage.com/2018/03/12/get-dash
  - **Uphold:** https://uphold.com/en/blog/posts/uphold/bitwage-launches-support-of-dash-powered-by-uphold
- - **Dash Force News:** https://www.dashforcenews.com/can-get-salary-dash-right-now
+ - **Dash Force News:** https://dashnews.org/can-get-salary-dash-right-now/
 
 
 Spending
@@ -48,8 +48,7 @@ physical locations.
 sorted by category. It's easy to add your business to the list, and also
 features a short introduction for new Dash users. The site is maintained
 by Dash Force, and has been `featured on Dash Force News
-<https://www.dashforcenews.com/300-businesses-accept-dash-worldwide-
-come-blockcypher-grants>`_.
+<https://dashnews.org/300-businesses-accept-dash-worldwide-come-blockcypher-grants/>`_.
 
 - `Discover Dash <https://discoverdash.com>`_
 - `Dash Merchants <https://www.dash.org/merchants>`_
@@ -62,7 +61,7 @@ withdrawing cash from an ATM or spending online or anywhere debit/credit
 cards are supported. The Dash is either exchanged at the time of
 purchase or in advance. For an overview and review of all available and
 upcoming cards, including cards funded by the Dash budget system, see
-`this article on Dash Force News <https://www.dashforcenews.com/debit-card-proposal-reviews/>`_.
+`this article on Dash Force News <https://dashnews.org/debit-card-proposal-reviews/>`_.
 
 The rapidly evolving approach to regulation of cryptocurrencies such as
 Dash and instant exchange solutions such as ShapeShift means that

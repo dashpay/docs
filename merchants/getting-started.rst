@@ -276,18 +276,6 @@ NOWPayments
   conversion keeps you safe from any dramatic rate fluctuations.
 
 
-Paybyte
-  .. image:: img/paybyte.png
-     :width: 200px
-     :align: right
-     :target: https://paybyte.io
-
-  https://paybyte.io
-
-  Paybyte allows you to accept cryptocurrency payments through an API or
-  payment buttons for a flat monthly fee.
-
-
 Paytomat
   .. image:: img/paytomat.svg
      :width: 200px

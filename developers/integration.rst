@@ -332,7 +332,7 @@ currency management and exploration.
 - Features: Blockchain queries, Event Notifications, Transaction
   Broadcast, Payment Processing, etc.
 - Pricing Model: Free trial, pay per API call
-- Documentation: https://www.chainrider.io/docs/dash
+- Documentation: https://www.chainrider.io/docs/dash/
 
 
 Blockmove
@@ -488,8 +488,8 @@ within a single library, including management and signing of your
 documents.
 
 - Platform: NodeJS / Javascript
-- Documentation: https://dashevo.github.io/DashJS
-- Repository: https://github.com/dashevo/DashJS
+- Documentation: https://dashevo.github.io/js-dash-sdk/
+- Repository: https://github.com/dashevo/js-dash-sdk
 
 PHP: Bitcoin-PHP
 ----------------
@@ -500,7 +500,7 @@ Bitcoin-PHP is an implementation of Bitcoin with support for Dash using
 mostly pure PHP.
 
 - Platform: PHP
-- Documentation: https://github.com/Bit-Wasp/bitcoin-php/blob/master/doc/Introduction.md
+- Documentation: https://github.com/Bit-Wasp/bitcoin-php/blob/1.0/doc/documentation/Introduction.md
 - Repository: https://github.com/snogcel/bitcoin-php
 
 Python: PyCoin
@@ -572,7 +572,7 @@ Proposals (DIPs). It also provides low level access to Dash primitives
 so you can easily build your application on top of it.
 
 - Platform: .NET
-- Documentation: https://programmingblockchain.gitbooks.io/programmingblockchain/content/ 
+- Documentation: https://programmingblockchain.gitbook.io/programmingblockchain/
 - Repository: https://github.com/MetacoSA/NBitcoin
 - See also: `JSON-RPC Utilities <https://github.com/cryptean/bitcoinlib>`__
 

@@ -101,7 +101,7 @@ and commands are the same. The example demonstrates how to set up a
 2-of-3 multisig address and create a transaction. The example parties
 involved are a buyer, a seller and an arbiter. This example is based on:
 
-- https://people.xiph.org/~greg/escrowexample.txt
+- https://gist.github.com/jashmenn/9811198
 - https://gist.github.com/gavinandresen/3966071
 - https://bitcoin.org/en/developer-examples#p2sh-multisig
 
