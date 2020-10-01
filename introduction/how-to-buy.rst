@@ -11,6 +11,8 @@ How To Buy
 Dash can be purchased and sold in several ways, each with different
 advantages and disadvantages. The following options are available:
 
+.. _exchanges:
+
 - Exchanges are one of the most popular ways to trade cryptocurrency. A
   wide range of exchanges exist, each offering slightly different
   features. Some serve different markets, some are in direct

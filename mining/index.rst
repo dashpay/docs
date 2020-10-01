@@ -82,8 +82,6 @@ funds are not locked in any way. However, if the funds are moved or
 spent, the associated masternode will go offline and stop receiving
 rewards.
 
-.. _mining-pools:
-
 Mining Pools
 ============
 

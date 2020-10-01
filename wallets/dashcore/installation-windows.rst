@@ -59,9 +59,9 @@ downloaded binary.
 All releases of Dash are signed using GPG with one of the following keys:
 
 - Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
-  `verifiable here on Keybase <https://keybase.io/codablock>`_ (`download <https://keybase.io/codablock/pgp_keys.asc>`_)
+  `verifiable here on Keybase <https://keybase.io/codablock>`__ (`download <https://keybase.io/codablock/pgp_keys.asc>`__)
 - Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
-  on Keybase <https://keybase.io/pasta>`_ (`download <https://keybase.io/pasta/pgp_keys.asc>`_)
+  on Keybase <https://keybase.io/pasta>`__ (`download <https://keybase.io/pasta/pgp_keys.asc>`__)
 
 Download the key files above. Install `Gpg4win <https://gpg4win.org/>`__
 if it is not already available on your computer. Once it is installed,

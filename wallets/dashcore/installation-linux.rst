@@ -54,9 +54,9 @@ binary.
 All releases of Dash are signed using GPG with one of the following keys:
 
 - Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
-  `verifiable here on Keybase <https://keybase.io/codablock>`_
+  `verifiable here on Keybase <https://keybase.io/codablock>`__
 - Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
-  on Keybase <https://keybase.io/pasta>`_
+  on Keybase <https://keybase.io/pasta>`__
 
 Open a terminal, import the keys and verify the authenticity of your
 download as follows::
