@@ -179,16 +179,3 @@ blue lock in the lower right corner.
    :height: 250px
 
    Fully encrypted and synchronized Dash Core wallet
-
-Using the Ubuntu Repository to install Dash Core
-------------------------------------------------
-
-Ubuntu allows you to add third-party repositories to install and update
-software using the apt command line utility. Dash Core team maintains
-such a repository, although the software version included here may be
-older than what is available on the website. To install Dash Core from
-the repository, open the Terminal and enter the following commands::
-
-    sudo add-apt-repository ppa:dash.org/dash
-    sudo apt update
-    sudo apt install dashd dash-qt
