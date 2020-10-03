@@ -444,8 +444,6 @@ the Dash network.
 
 - `Blockchair <https://blockchair.com/dash>`__ offers a block explorer
   with detailed visualizations to analyse the Dash blockchain.
-
-
 - `CryptoID <https://chainz.cryptoid.info/>`__ offers a `Dash blockchain
   explorer <https://chainz.cryptoid.info/dash/>`__ and a `function
   <https://chainz.cryptoid.info/dash/masternodes.dws>`__ to view and map
@@ -456,15 +454,12 @@ the Dash network.
   <https://bitinfocharts.com/dash/explorer/>`__.
 - `CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ offers a
   range of statistics and data on most blockchains, including Dash.
-- `CoinPayments <https://www.coinpayments.net/>`__ offers a simple `Dash
-  blockchain explorer
-  <http://explorer.coinpayments.net/index.php?chain=7>`__.
 - `Dash.org <https://www.dash.org/>`__ includes a blockchain explorer
   at `explorer.dash.org <http://explorer.dash.org/insight/>`__ and
   `insight.dash.org <http://insight.dash.org/insight/>`__.
 - `Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https
   ://dash-bitcore1.trezor.io/>`__ powered by a `Dash fork
-  <https://github.com/dashpay/insight-ui-dash>`__ of `insight
+  <https://github.com/dashevo/insight-ui>`__ of `insight
   <https://insight.is/>`__, an advanced blockchain API tool
 
 Dash Masternode Tool

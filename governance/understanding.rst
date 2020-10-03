@@ -243,7 +243,7 @@ for to view progress on proposal voting.
 
    Monitoring budget allocation on Dash Nexus
 
-Finally, `Dash Watch <http://dashwatch.org>`__ (which was itself funded
+Finally, `Dash Watch <https://dashwatch.org>`__ (which was itself funded
 through a budget proposal) exists to monitor the ability of blockchain
 contractors to deliver on their promises with respect to delivery dates
 and the total amounts of budget allocated over multiple voting periods.
@@ -254,7 +254,7 @@ performance of your proposal to Dash Watch is optional, many masternode
 owners take advantage of the data they make available to make their
 voting decisions. The Dash Watch team may be contacted at
 team@dashwatch.org email address or through their `website
-<http://dashwatch.org>`__.
+<https://dashwatch.org>`__.
 
 .. figure:: img/governance-dashwatch.png
    :width: 400px

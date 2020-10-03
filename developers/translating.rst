@@ -20,8 +20,8 @@ as a target language.
 
 - `Transifex <https://www.transifex.com>`_
 - `Transifex Documentation <https://docs.transifex.com>`_
-- `Dash translation projects <https://www.transifex.com/dash>`_
-- `Dash translators team <https://www.transifex.com/dash/teams>`_
+- `Dash translation projects <https://www.transifex.com/dash/>`_
+- `Dash translators team <https://www.transifex.com/dash/teams/>`_
 
 In general, languages with minimal regional variation are to be
 translated into the common language (rather than regional) target.
@@ -96,16 +96,16 @@ Punctuation
 Dash Docs
 =========
 
-https://www.transifex.com/dash/dash-docs
+https://www.transifex.com/dash/dash-docs/
 
 This project contains all content from the Dash Documentation hosted at
 https://docs.dash.org (probably the site you are reading now). Each
 ``.html`` page in the documentation appears as a file in the resources
 section, named according to the navigation steps required to open the
 page. The Dash Documentation is written in a documentation language
-called `reStructuredText <http://docutils.sourceforge.net/rst.html>`_
+called `reStructuredText <https://docutils.sourceforge.io/rst.html>`_
 and built using the open-source `Sphinx Documentation Generator
-<http://www.sphinx-doc.org>`_. To simplify layout, most of the text has
+<https://www.sphinx-doc.org>`_. To simplify layout, most of the text has
 no markup or code marks at all, but hyperlinks and certain formatting
 must be reproduced in the target language as follows:
 
@@ -158,7 +158,7 @@ External hyperlinks
 Dash Graphics
 =============
 
-https://www.transifex.com/dash/dash-graphics
+https://www.transifex.com/dash/dash-graphics/
 
 Dash visual products such as infographics, flyers and conference
 handouts are produced using Adobe InDesign, Adobe Illustrator or
@@ -179,7 +179,7 @@ in the visual design.
 Dash iOS Wallet
 ===============
 
-https://www.transifex.com/dash/dash-mobile-wallets
+https://www.transifex.com/dash/dash-mobile-wallets/
 
 All language content from the :ref:`Dash iOS Wallet <dash-ios-wallet>`
 are available for translation in this project. Please have a device
@@ -191,7 +191,7 @@ to the instructions above for Dash Core Wallet.
 Dash Android Wallet
 ===================
 
-https://www.transifex.com/dash/dash-mobile-wallets
+https://www.transifex.com/dash/dash-mobile-wallets/
 
 All language content from the 
 :ref:`Dash Android Wallet <dash-android-wallet>` are available for
@@ -204,7 +204,7 @@ instructions above for Dash Core Wallet.
 Dash Videos
 ===========
 
-https://www.transifex.com/dash/dash-videos
+https://www.transifex.com/dash/dash-videos/
 
 This section primarily contains language content from Amanda B.
 Johnson's popular `Dash School <https://www.youtube.com/watch?v=e7UwwcCK
@@ -218,7 +218,7 @@ YouTube.
 Dash Website
 ============
 
-https://www.transifex.com/dash/dash-website
+https://www.transifex.com/dash/dash-website/
 
 The Dash website at https://www.dash.org is available for translation in
 Transifex. Please have the website open while you translate to correctly

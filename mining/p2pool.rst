@@ -45,16 +45,15 @@ Setting up the host server
 ==========================
 
 Download a copy of Ubuntu Server LTS from
-https://www.ubuntu.com/download/server and install it on your system
+https://ubuntu.com/download/server and install it on your system
 according to the steps described `here
-<https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-
-server>`__. If you are using a VPS such as Vultr or AWS, your provider
-will most likely provide an option to install this system during
-provisioning. Ensure you enable OpenSSH server during setup so you can
-control your server from a remote console. Once you have access to your
-server, create a new non-root user if you have not already done so using
-the following command, replacing ``<username>`` with a username of your
-choice::
+<https://ubuntu.com/tutorials/install-ubuntu-server>`__. If you are
+using a VPS such as Vultr or AWS, your provider will most likely provide
+an option to install this system during provisioning. Ensure you enable
+OpenSSH server during setup so you can control your server from a remote
+console. Once you have access to your server, create a new non-root user
+if you have not already done so using the following command, replacing
+``<username>`` with a username of your choice::
 
   adduser <username>
 
@@ -164,7 +163,7 @@ Setting up dashd
 
 P2Pool requires a full Dash node to be running to get block and
 transaction data. To download and install Dash, visit
-https://www.dash.org/downloads on your computer to find the link to the
+https://www.dash.org/downloads/ on your computer to find the link to the
 latest Dash Core wallet. Click **Linux**, then right-click on **Download
 TGZ** for **Dash Core x64** and select **Copy link address**. Go back to
 your terminal window and enter the following command, pasting in the

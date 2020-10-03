@@ -48,7 +48,7 @@ Getting Started
 ---------------
 
 Once you have bought your Trezor from https://shop.trezor.io or an
-`authorized reseller <https://trezor.io/resellers>`_, you will need a
+`authorized reseller <https://trezor.io/resellers/>`_, you will need a
 wallet to use it with. Trezor supports the following Dash wallets:
 
 - `Trezor Wallet <https://wallet.trezor.io>`_ (`documentation
@@ -297,7 +297,7 @@ released on September 5, 2018. Follow these instructions to begin using
 Dash on your KeepKey device.
 
 - Site: https://shapeshift.com/keepkey
-- Review: https://coincentral.com/keepkey-wallet-review
+- Review: https://coincentral.com/keepkey-wallet-review/
 - Shop: https://keepkey.myshopify.com/
 - Product video: https://vimeo.com/289712840
 
@@ -313,15 +313,16 @@ Ledger
 
 Founded in 2014, French startup `Ledger <https://www.ledger.com>`_
 markets enterprise and consumer blockchain security solutions, including
-the €58 `Ledger Nano S <https://www.ledger.com/products/ledger-nano-s>`_ and upcoming `Ledger Blue
-<https://www.ledger.com/products/ledger-blue>`_. Ledger Nano S has
-supported Dash since November 2016 and firmware version 1.2. Follow
-`these instructions
-<https://support.ledger.com/hc/en-us/articles/115005308185-Dash-DASH->`_ to add Dash support to the device.
+the €58 `Ledger Nano S <https://shop.ledger.com/products/ledger-nano-s>`_
+and upcoming `Ledger Blue <https://shop.ledger.com/products/ledger-blue>`_. 
+Ledger Nano S has supported Dash since November 2016 and firmware
+version 1.2. Follow `these instructions 
+<https://support.ledger.com/hc/en-us/articles/115005308185-Dash-DASH->`_
+to add Dash support to the device.
 
 - Site: https://www.ledger.com
 - Review: https://dashnews.org/ledger-nano-s-review/
-- Shop: https://www.ledger.com/collections/all-products
+- Shop: https://shop.ledger.com/collections/all-products
 
 Product video:
 

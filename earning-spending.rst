@@ -26,8 +26,8 @@ in the world, and have a percentage of your wage immediately converted
 to Dash. You can then withdraw your wage to any Dash wallet for spending
 or saving. For more information, see the following blog posts:
 
- - **Bitwage:** https://blog.bitwage.com/2018/03/12/get-dash
- - **Uphold:** https://uphold.com/en/blog/posts/uphold/bitwage-launches-support-of-dash-powered-by-uphold
+ - **Bitwage:** https://blog.bitwage.com/2018/03/12/get-dash/
+ - **Uphold:** https://uphold.com/en/blog/bitwage-launches-support-of-dash-powered-by-uphold
  - **Dash Force News:** https://dashnews.org/can-get-salary-dash-right-now/
 
 
@@ -51,7 +51,7 @@ by Dash Force, and has been `featured on Dash Force News
 <https://dashnews.org/300-businesses-accept-dash-worldwide-come-blockcypher-grants/>`_.
 
 - `Discover Dash <https://discoverdash.com>`_
-- `Dash Merchants <https://www.dash.org/merchants>`_
+- `Where to Spend Dash <https://www.dash.org/where-to-spend/>`_
 
 Debit Cards
 -----------
@@ -91,9 +91,9 @@ Crypto.com
   .. image:: img/crypto.png
      :width: 200px
      :align: right
-     :target: https://www.crypto.com
+     :target: https://crypto.com
 
-  https://www.crypto.com
+  https://crypto.com
 
   In the Crypto.com Wallet & Card App, users can purchase DASH at true
   cost with no fees - with credit card and bank transfer both supported.
@@ -105,9 +105,9 @@ Change
   .. image:: img/change.png
      :width: 200px
      :align: right
-     :target: https://www.getchange.com
+     :target: https://www.changeinvest.com
 
-  https://www.getchange.com
+  https://www.changeinvest.com
 
   The Change Wallet & Card App allows you to convert instantly between
   all of your currencies and spend with your card worldwide. No

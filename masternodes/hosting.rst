@@ -72,7 +72,7 @@ https://dashmasternode.io
 - Operated by: splawik21 (Dash Core team member)
 - Services: Hosting
 - Cost: €25/month, paid in Dash
-- `Site <http://dashmasternode.io>`__
+- `Site <https://dashmasternode.io>`__
 - `Email <sidhosting@protonmail.com>`__
 
 
@@ -82,9 +82,9 @@ Node40
 .. image:: img/node40.png
    :width: 200px
    :align: right
-   :target: https://node40.com
+   :target: https://www.node40.com
 
-https://node40.com
+https://www.node40.com
 
 - Operated by: Perry Woodin
 - Services: Hosting, Voting, Tax Compliance
@@ -166,7 +166,7 @@ https://mn.gtmcoin.io
 - `Site <https://mn.gtmcoin.io>`__
 - `Email <info@gtmcoin.io>`__
 - `Twitter <https://twitter.com/GTM_Gentarium>`__
-- `Discord <https://discordapp.com/invite/vErwUSC>`__
+- `Discord <https://discord.com/invite/vErwUSC>`__
 
 
 Penny Scavengers

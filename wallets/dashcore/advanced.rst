@@ -570,7 +570,7 @@ Installation
 
 You will need the following:
 
-- KeePass 2: http://keepass.info
+- KeePass 2: https://keepass.info
 - KeePassHttp plugin: https://github.com/pfn/keepasshttp
 - Dash Core: https://www.dash.org
 

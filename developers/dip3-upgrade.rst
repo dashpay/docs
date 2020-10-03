@@ -89,7 +89,7 @@ The following lists the current upgrade status for libraries:
 +------------------------------------------------------------+---------------------+-----------+
 | Name                                                       | Platform            | Upgraded? |
 +============================================================+=====================+===========+
-| `DashJ <https://github.com/HashEngineering/dashj>`__       | Android             |           |
+| `DashJ <https://github.com/dashevo/dashj>`__               | Android             |           |
 +------------------------------------------------------------+---------------------+-----------+
 | `Dash-Sync <https://github.com/dashevo/dashsync-iOS/>`__   | iOS                 | |check|   |
 +------------------------------------------------------------+---------------------+-----------+

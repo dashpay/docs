@@ -233,7 +233,7 @@ https://support.cobo.com
 Coinomi
 =======
 
-https://coinomi.com
+https://www.coinomi.com
 
 .. image:: img/coinomi.png
    :width: 100px
@@ -258,7 +258,7 @@ Download
    :target: https://apps.apple.com/app/id1333588809
 
 Coinomi desktop wallets are available from
-https://www.coinomi.com/downloads for Linux, macOS and Windows. Coinomi
+https://www.coinomi.com/downloads/ for Linux, macOS and Windows. Coinomi
 is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.coinomi.wallet>`__
 and the `Apple App Store for iOS <https://apps.apple.com/app/id1333588809>`__.
 
@@ -304,7 +304,7 @@ Documentation
 -------------
 
 Cryptonator offers detailed documentation of all functions at
-https://cryptonator.zendesk.com/hc
+https://cryptonator.zendesk.com
 
 .. figure:: img/cryptonator-wallet.png
    :width: 400px
@@ -518,7 +518,7 @@ Installation
 
 Guarda desktop wallets are available from https://guarda.com/desktop for
 Linux, macOS and Windows, or you can use web wallet at
-https://guarda.co/app to create new or restore existing wallets. Guarda
+https://guarda.co/app/ to create new or restore existing wallets. Guarda
 is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.crypto.multiwallet>`__ 
 and the `Apple App Store for iOS <https://apps.apple.com/app/id1442083982>`__.
 
@@ -612,12 +612,9 @@ Documentation
 -------------
 
 Jaxx offers detailed documentation of all functions at
-https://decentral.zendesk.com and a few quick links are also collected
-here:
+https://support.decentral.ca and the getting started link is below:
 
-- `Getting started <https://decentral.zendesk.com/hc/en-us/sections/204038798-Getting-Started>`__
-- `How do I send currency? <https://decentral.zendesk.com/hc/en-us/articles/217873878-How-do-I-send-currency->`_
-- `How do I receive currency? <https://decentral.zendesk.com/hc/en-us/articles/218364217-How-do-I-receive-currency->`_
+- `Getting started <https://support.decentral.ca/hc/en-us/sections/204038798-Getting-Started>`__
 
 .. figure:: img/jaxx-wallet.png
    :width: 400px
@@ -899,12 +896,12 @@ Trust.
 VegaWallet
 ==========
 
-https://vegawallet.com
+https://www.vegawallet.com
 
 .. image:: img/vegawallet.png
    :width: 200px
    :align: right
-   :target: https://vegawallet.com
+   :target: https://www.vegawallet.com
 
 VegaWallet offers a secure multi-asset, multi-currency wallet with
 support for Dash InstantSend and multi-signature wallets. The wallet

@@ -106,7 +106,7 @@ Please report these and any others scams you encounter as follows:
 #. Report phishing to Netcraft: https://www.netcraft.com
 #. Report scams to the BadBitcoin Project: https://www.badbitcoin.org
 #. If in doubt, use Crypto Scam Checker to see if already report and 
-   report there as well: https://fried.com/crypto-scam-checker
+   report there as well: https://fried.com/crypto-scam-checker/
 
 Feel free to report any new scams you find on the forum in our "swat
 team" thread: https://www.dash.org/forum/threads/www-dash-wallet-com-is-a-scam-website.8267/

@@ -89,7 +89,7 @@ Social media
 - **Dailymotion:** http://www.dailymotion.com/dashworld
 - **Soundcloud:** https://soundcloud.com/dashpay
 - **Minds:** https://www.minds.com/Dashpay
-- **Pinterest:** https://www.pinterest.com/dashdigitalcash
+- **Pinterest:** https://www.pinterest.com/dashdigitalcash/
 
 
 Facebook
@@ -177,7 +177,7 @@ Block explorers, statistics and visualizations
 - https://blockchair.com/dash
 - https://chainz.cryptoid.info/dash/
 - https://www.coinexplorer.net/dash
-- https://bitinfocharts.com/dash/explorer
+- https://bitinfocharts.com/dash/explorer/
 - https://dashblockexplorer.com
 - https://live.blockcypher.com/dash/
 - https://dashradar.com
@@ -209,7 +209,7 @@ Masternode management
 Price monitoring and statistics
 -------------------------------
 
-- https://coinmarketcap.com/currencies/dash
+- https://coinmarketcap.com/currencies/dash/
 - https://bitinfocharts.com/dash/
 - https://www.cryptonator.com/widget
 

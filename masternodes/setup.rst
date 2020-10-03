@@ -76,7 +76,7 @@ to home users.
 
 We will use `Vultr <https://www.vultr.com/>`_ hosting as an example of a
 VPS, although `DigitalOcean <https://www.digitalocean.com/>`_, `Amazon
-EC2 <https://aws.amazon.com/ec2>`_, `Google Cloud
+EC2 <https://aws.amazon.com/ec2/>`_, `Google Cloud
 <https://cloud.google.com/compute/>`_, `Choopa
 <https://www.choopa.com/>`_ and `OVH <https://www.ovh.com.au/>`_ are
 also popular choices. First create an account and add credit. Then go to

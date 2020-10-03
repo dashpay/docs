@@ -12,7 +12,7 @@ This page includes downloads of various templates and designs intended
 for use as office stationary and presentations. For a visual overview of
 existing web and sticker designs, please see the following link.
 
-- `Dash Brand Guidelines <https://www.dash.org/brand-guidelines>`_
+- `Dash Brand Guidelines <https://www.dash.org/brand-guidelines/>`_
 
 Dash uses the following color scheme to promote a consistent visual
 identity.
@@ -359,7 +359,7 @@ Dash 101 Presentation
 
 Prepared by community member Essra in 2017 following proposal
 sponsorship for the German `Dash Embassy D-A-CH 
-<http://www.dash-embassy.org>`__.
+<https://www.dash-embassy.org>`__.
 
 +----------+---------------------------------------------------------------------------------------------+
 | Language | Download                                                                                    |
@@ -397,8 +397,8 @@ Presentation templates
 
 Official Dash presentation templates. We strongly recommend using
 predefined presentation slide layouts (check `here
-<https://support.office.com/en-us/article/Apply-or-change-a-slide-
-layout-158E6DBA-E53E-479B-A6FC-CAAB72609689>`_ for instructions).
+<https://support.office.com/en-us/article/apply-a-slide-layout-158e6dba-e53e-479b-a6fc-caab72609689?ui=en-US&rs=en-US&ad=US>`_
+for instructions).
 
 +------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
 | Name                                                       | Download                                                                                                             |

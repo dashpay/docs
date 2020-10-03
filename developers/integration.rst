@@ -314,7 +314,7 @@ Dash InstantSend is available.
 - Features: Multi-Signature HD Wallets, Wallet Operations, WebSocket and
   WebHook Notifications, Custody Solutions
 - Pricing Model: Per API Call
-- Documentation: https://www.bitgo.com/api/v2/
+- Documentation: https://app.bitgo.com/docs/
 
 ChainRider
 ----------
@@ -523,9 +523,9 @@ Java: DashJ
 .. image:: img/bitcoinj.png
    :width: 200px
    :align: right
-   :target: https://github.com/HashEngineering/dashj 
+   :target: https://github.com/dashevo/dashj
 
-https://github.com/HashEngineering/dashj 
+https://github.com/dashevo/dashj
 
 DashJ is a library for working with the Dash protocol. It can maintain a
 wallet, send/receive transactions (including InstantSend) without
@@ -534,8 +534,8 @@ It's implemented in Java but can be used from any JVM compatible
 language: examples in Python and JavaScript are included.
 
 - Platform: Java
-- Documentation: https://bitcoinj.github.io/getting-started
-- Repository: https://github.com/HashEngineering/dashj
+- Documentation: https://bitcoinj.org/getting-started
+- Repository: https://github.com/dashevo/dashj
 - Example application: https://github.com/tomasz-ludek/pocket-of-dash
 
 Objective-C: Dash-Sync
@@ -624,7 +624,7 @@ Price Tickers
 
 You can add a simple price ticker widget to your website using the
 simple `code snippet generator from CoinGecko
-<https://www.coingecko.com/en/widgets/ticker/dash/usd>`_.
+<https://www.coingecko.com/en/widgets/coin_ticker_widget>`_.
 
 .. raw:: html
 

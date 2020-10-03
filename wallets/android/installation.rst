@@ -31,7 +31,7 @@ installing an APK file. Follow these instructions:
 #. Enable Unknown sources by going to **Settings → Security → Unknown
    sources**. Read and accept the warning.
 #. Using your phone, download the latest version of the APK from `this
-   link <https://github.com/HashEngineering/dash-wallet/releases/latest>`_.
+   link <https://github.com/dashevo/dash-wallet/releases/latest>`_.
 #. If you cannot use your phone to go online, download the APK using
    your PC instead and copy it to your phone using a cable or Bluetooth.
    You may need a file browser to find the copied file.
@@ -52,7 +52,7 @@ Android Debug Bridge (ADB). Follow these instructions:
    phone** instead, scroll down, and tap on the **Build number** seven
    times.
 #. Using your PC, download the latest version of the APK from `this link
-   <https://github.com/HashEngineering/dash-wallet/releases/latest>`_.
+   <https://github.com/dashevo/dash-wallet/releases/latest>`_.
 #. Connect your phone to the PC, open a terminal/command prompt window
    and type::
 
@@ -63,7 +63,7 @@ From source
 -----------
 
 The source code for the Dash Android wallet is available on `GitHub
-<https://github.com/HashEngineering/dash-wallet>`__. The following
+<https://github.com/dashevo/dash-wallet>`__. The following
 instructions describe how to compile an APK from source under an up-to-
 date installation of Ubuntu 18.04 LTS with a single non-root user. Note
 that NDK version 12b is required, instead of installing the latest
@@ -92,7 +92,7 @@ variables::
 Now that the build environment is ready, download and build the Dash
 Android Wallet source::
 
-  git clone https://github.com/HashEngineering/dash-wallet.git
+  git clone https://github.com/dashevo/dash-wallet.git
   cd dash-wallet
   ./gradlew clean build -x test
 
