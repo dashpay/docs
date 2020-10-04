@@ -62,7 +62,7 @@ mixing.
 
 .. figure:: img/overview.png
 
-   The Dash Core Overview tab
+   The Overview tab
 
 The left part of the main area is divided into two areas. The upper area
 shows your balances, which may be divided into **Spendable** and
@@ -96,13 +96,26 @@ The Send Tab
 The Send tab allows you to send funds to another address on the Dash
 network. It contains fields to enter the recipient’s address, a label
 for the address, and the amount of Dash you wish to send. Options
-related to the transaction fee and PrivateSend are also available. A
-quick view of your total balance is also available in the lower right
-corner.
+related to the transaction fee are also available. A quick view of your
+total balance is also available in the lower right corner.
 
 .. figure:: img/send.png
 
    The Send tab
+
+The PrivateSend Tab
+~~~~~~~~~~~~~~~~~~~
+
+The PrivateSend tab allows you to send funds to another address on the
+Dash network with enhanced privacy. It contains fields to enter the
+recipient’s address, a label for the address, and the amount of Dash you
+wish to send. Options related to the transaction fee are also available.
+A quick view of your total PrivateSend balance is also available in the
+lower right corner.
+
+.. figure:: img/privatesend.png
+
+   The PrivateSend tab
 
 The Receive Tab
 ~~~~~~~~~~~~~~~
@@ -118,7 +131,7 @@ message, and send it to another user as a link or QR code.
 The Transactions Tab
 ~~~~~~~~~~~~~~~~~~~~
 
-The transactions tab shows the entire transaction history for all
+The Transactions tab shows the entire transaction history for all
 addresses associated with your wallet. This appears as a table showing
 the time, type, label and amount of Dash for each transaction. You can
 also export the transaction history as a CSV file by clicking the Export
@@ -126,12 +139,26 @@ button in the bottom right corner of the window.
 
 The icons in the leftmost column indicate the status of the transaction.
 A tick indicates that the recommended number of confirmations has been
-passed, while a clock indicates that the transaction has yet to reach
-six confirmations.
+passed, while a circular progress indicator indicates the nubmer of
+confirmations. A lightning bolt indicates a transaction with an existing
+InstantSend lock.
 
 .. figure:: img/transactions.png
 
-   The transactions tab
+   The Transactions tab
+
+The Masternodes Tab
+~~~~~~~~~~~~~~~~~~~
+
+The Masternodes tab shows an overview of the masternodes currently
+registered on the Dash network. You can filter the data by entering a
+value in the Filter List field, or display only masternodes with owner
+keys stored in the loaded wallet.
+
+.. figure:: img/masternodes.png
+
+   The Masternodes tab
+
 
 The Status Bar
 -----------------------
