@@ -397,7 +397,7 @@ Presentation templates
 
 Official Dash presentation templates. We strongly recommend using
 predefined presentation slide layouts (check `here
-<https://support.office.com/en-us/article/apply-a-slide-layout-158e6dba-e53e-479b-a6fc-caab72609689?ui=en-US&rs=en-US&ad=US>`_
+<https://support.microsoft.com/en-us/office/apply-a-slide-layout-158e6dba-e53e-479b-a6fc-caab72609689>`_
 for instructions).
 
 +------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+

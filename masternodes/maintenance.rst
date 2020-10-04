@@ -455,8 +455,8 @@ the Dash network.
 - `CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ offers a
   range of statistics and data on most blockchains, including Dash.
 - `Dash.org <https://www.dash.org/>`__ includes a blockchain explorer
-  at `explorer.dash.org <http://explorer.dash.org/insight/>`__ and
-  `insight.dash.org <http://insight.dash.org/insight/>`__.
+  at `explorer.dash.org <https://explorer.dash.org/insight/>`__ and
+  `insight.dash.org <https://insight.dash.org/insight/>`__.
 - `Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https
   ://dash-bitcore1.trezor.io/>`__ powered by a `Dash fork
   <https://github.com/dashevo/insight-ui>`__ of `insight

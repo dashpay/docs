@@ -238,7 +238,7 @@ https://www.coinomi.com
 .. image:: img/coinomi.png
    :width: 100px
    :align: right
-   :target: https://coinomi.com
+   :target: https://www.coinomi.com
 
 Coinomi is an open-source multi-currency mobile wallet available for iOS
 and Android. Your private keys never leave your device, and strong
@@ -454,12 +454,12 @@ Read the `FAQ <https://evercoin.com/#faq>`__ or visit the `Evercoin site
 Exodus
 ======
 
-http://www.exodus.io
+https://www.exodus.io
 
 .. image:: img/exodus.png
    :width: 100px
    :align: right
-   :target: http://www.exodus.io
+   :target: https://www.exodus.io
 
 The Exodus wallet features an engaging visual design and can
 simultaneously store multiple currencies. It is available for Windows,
@@ -478,7 +478,7 @@ Documentation
 -------------
 
 Exodus offers detailed documentation of all functions at
-http://support.exodus.io and a few quick links are also collected here:
+https://support.exodus.io and a few quick links are also collected here:
 
 - `How do I install Exodus? <https://support.exodus.io/article/36-how-do-i-install-exodus>`_
 - `How do I get started with Exodus? <https://support.exodus.io/article/37-how-do-i-get-started-with-exodus>`_
@@ -713,13 +713,13 @@ Installation
 
 .. image:: img/google-play-badge.png
    :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.btcc.wallet
+   :target: https://play.google.com/store/apps/details?id=com.btcc.mobiwallet
 
 .. image:: img/app-store.png
    :width: 180px
    :target: https://apps.apple.com/app/id1180017272
 
-Mobi is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.btcc.wallet>`__ 
+Mobi is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.btcc.mobiwallet>`__ 
 and the `Apple App Store for iOS <https://apps.apple.com/app/id1180017272>`__.
 
 Documentation
@@ -919,8 +919,9 @@ Installation
    :width: 180px
    :target: https://apps.apple.com/app/id1449594992
 
-VegaWallet desktop wallets are available from https://vegawallet.com for
-macOS and Windows. VegaWallet is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.vegawallet.in>`__ 
+VegaWallet desktop wallets are available from https://www.vegawallet.com
+for macOS and Windows. VegaWallet is also available from the 
+`Google Play Store for Android <https://play.google.com/store/apps/details?id=com.vegawallet.in>`__ 
 and the `Apple App Store for iOS <https://apps.apple.com/app/id1449594992>`__.
 
 Documentation

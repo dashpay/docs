@@ -141,9 +141,9 @@ List of known Ponzi schemes (there are many more - stay vigilant!):
 
 OneCoin
   - https://themerkle.com/dr-ruja-flees-sinking-ship-as-regulators-crack-down-on-onecoin/
-  - http://siliconangle.com/blog/2016/09/29/dodgy-cryptocurrency-onecoin-under-police-investigation-accused-of-being-a-ponzi-scheme/
+  - https://siliconangle.com/2016/09/29/dodgy-cryptocurrency-onecoin-under-police-investigation-accused-of-being-a-ponzi-scheme/
   - https://cointelegraph.com/news/one-coin-much-scam-onecoin-exposed-as-global-mlm-ponzi-scheme
-  - http://www.makemoneyexpert.com/online/network-marketing/reviews/onecoin/
+  - https://www.makemoneyexpert.com/online/network-marketing/reviews/onecoin/
   - https://pageone.ng/2016/11/05/beware-onecoin-ponzi-scheme/
 
 SwissCoin

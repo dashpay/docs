@@ -504,7 +504,7 @@ administration section. See the `CoinPayments Documentation
 Point-of-Sale with Anypay
 -------------------------
 
-`Anypay.global <https://anypay.global>`_ allows you to quickly start
+`Anypay.global <https://anypayinc.com>`_ allows you to quickly start
 accepting point-of-sale payments in Dash at a physical store. The
 service functions as a simple website that you load on any internet-
 connected and touch-enabled device, such as a smartphone or tablet.

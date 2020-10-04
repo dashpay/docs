@@ -89,7 +89,7 @@ https://www.node40.com
 - Operated by: Perry Woodin
 - Services: Hosting, Voting, Tax Compliance
 - 0.34 Dash/month (variable, discounts available)
-- `Site <https://node40.com>`__
+- `Site <https://www.node40.com>`__
 - `Email <info@node40.com>`__
 - `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`__
 - `Review <https://dashnews.org/interview-perry-woodin-node40-dash-compliance/>`__

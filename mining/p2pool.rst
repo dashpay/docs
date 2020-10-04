@@ -81,8 +81,7 @@ network router and is therefore beyond the scope of this documentation.
 An example from the popular DD-WRT open source router distribution is
 shown below. Guides to setting up port forwarding can be found `here
 <https://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router>`__ and `here
-<http://www.noip.com/support/knowledgebase/general-port-forwarding-
-guide/>`__.
+<https://www.noip.com/support/knowledgebase/general-port-forwarding-guide/>`__.
 
 Take note of your IP address either from your router management
 interface or by visiting https://www.whatismyip.com

@@ -266,8 +266,7 @@ can be damaged by pressure or water, for example. For this reason, Dash
 community member tungfa has shared photos of a custom-made Trezor case.
 The following materials are required:
 
-- `Pelican Case 1010 Micro Case <http://www.pelican.com/us/en/product
-  /watertight-protector-hard-cases/micro-case/standard/1010/>`_
+- `Pelican Case 1010 Micro Case <https://www.pelican.com/us/en/product/cases/micro/1010>`_
 - Foam
 - Trezor + Cable
 - USB Stick (for wallet.dat files + blockchains of all portfolios)

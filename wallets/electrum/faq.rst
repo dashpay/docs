@@ -22,7 +22,7 @@ Does Dash Electrum trust servers?
 Not really; the Dash Electrum client never sends private keys to the
 servers. In addition, it verifies the information reported by
 servers using a technique called `Simple Payment Verification
-<http://docs.electrum.org/en/latest/spv.html>`_.
+<https://docs.electrum.org/en/latest/spv.html>`_.
 
 What is the Seed?
 -----------------

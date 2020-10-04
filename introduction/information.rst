@@ -86,7 +86,7 @@ Social media
 - **LinkedIn:** https://www.linkedin.com/company/dash---digitalcash-cryptocurrency-/
 - **YouTube:** https://www.youtube.com/c/DashOrg
 - **Instagram:** https://www.instagram.com/dashpay/
-- **Dailymotion:** http://www.dailymotion.com/dashworld
+- **Dailymotion:** https://www.dailymotion.com/dashworld
 - **Soundcloud:** https://soundcloud.com/dashpay
 - **Minds:** https://www.minds.com/Dashpay
 - **Pinterest:** https://www.pinterest.com/dashdigitalcash/
@@ -218,7 +218,7 @@ Dash Community project
 ----------------------
 
 - https://dashcommunity.github.io
-- http://github.com/dashcommunity
+- https://github.com/dashcommunity
 
 
 DarkNet pages
