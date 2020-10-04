@@ -4,9 +4,9 @@
 
 .. _dashcore-interface:
 
-=======================
+=========
 Interface
-=======================
+=========
 
 The Dash Core Wallet is an application that runs on your computer and
 allows you to make transactions on the Dash network. Most transactions
@@ -15,7 +15,7 @@ signed messages or control a masternode, for example. The Dash Core Wallet
 interface is described in detail in the following sections.
 
 The Main Window
-=======================
+===============
 
 .. figure:: img/window-areas.png
 
@@ -29,7 +29,7 @@ The Dash Core window is broken up into several areas:
 -  The status bar
 
 The Menu Bar
------------------------
+------------
 
 The menu bar provides access to all functions of Dash Core. There are
 four menus available:
@@ -47,14 +47,14 @@ Help
   relating to Dash Core.
    
 The Tab Bar
------------------------
+-----------
 
 The tab bar is used to quickly switch between the main areas of the Dash
 Core. The content in the main area of Dash Core changes depending on
 which tab you have selected. The following tabs are available:
 
 The Overview tab
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 The overview tab offers quick access to your balance and most recent
 transactions, as well as the PrivateSend feature and options for coin
@@ -65,7 +65,8 @@ mixing.
    The Dash Core Overview tab
 
 The left part of the main area is divided into two areas. The upper area
-shows your balances:
+shows your balances, which may be divided into **Spendable** and
+**Watch-only** balances if you have loaded watch addresses:
 
 Available
   This shows your current liquid balance. This is the amount of Dash
@@ -84,35 +85,27 @@ Total
 The lower area shows the status of PrivateSend and allows you to mix
 your funds using the Dash Masternode Network.
 
-The right part of the screen shows your recent transactions. These are
-identified by icons as follows:
-
-..  image:: img/transaction-icons.png
-   :scale: 25 %
-   :align: left
-
--  Recent incoming transactions appear black, prefixed by a + sign
--  Recent outgoing transactions appear red, prefixed by a – sign
--  Incoming mining or masternode payments also appear black
-
-For more details on your transaction history, see the Transactions tab.
+The right part of the screen shows your recent transactions. Recent
+incoming transactions appear green, prefixed by a + sign. Recent
+outgoing transactions appear red, prefixed by a – sign. For more details
+on your transaction history, see the **Transactions** tab.
 
 The Send Tab
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 The Send tab allows you to send funds to another address on the Dash
 network. It contains fields to enter the recipient’s address, a label
 for the address, and the amount of Dash you wish to send. Options
-related to the transaction fee, InstantSend and PrivateSend are also
-available. A quick view of your total balance is also available in the
-lower right corner.
+related to the transaction fee and PrivateSend are also available. A
+quick view of your total balance is also available in the lower right
+corner.
 
 .. figure:: img/send.png
 
    The Send tab
 
 The Receive Tab
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 The Receive tab allows you to create addresses to receive Dash. You can
 create a request for a specific amount of Dash or include a specific
@@ -123,7 +116,7 @@ message, and send it to another user as a link or QR code.
    The Receive tab
 
 The Transactions Tab
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 The transactions tab shows the entire transaction history for all
 addresses associated with your wallet. This appears as a table showing
