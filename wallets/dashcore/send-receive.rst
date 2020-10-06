@@ -98,8 +98,8 @@ appear on the Transactions tab, where you can monitor its progress.
 
    The Windows 10 sent transaction confirmation notification
 
-Note that the amount of the transaction increased by .000045 Dash. This
-is the transaction fee. In the next section, we will see what this
+Note that the amount of the transaction increased by .00003926 Dash.
+This is the transaction fee. In the next section, we will see what this
 procedure looks like from the receiving side.
 
 Receiving Dash
