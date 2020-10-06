@@ -225,13 +225,13 @@ tick.
 
 
 The Options Dialog
-=======================
+==================
 
 This documentation describes the functionality of the Dash Core Options
 dialog, available under the **Settings > Options** menu in Dash Core.
 
 Main tab
------------------------
+--------
 
 The Main tab of the Options dialog contains settings related to startup
 and performance of the Dash Core app.
@@ -247,11 +247,30 @@ Start Dash Core on system login
   which is logged in automatically when the computer turns on, so this
   option is effectively the same as starting Dash Core together with the
   operating system.
+
+Hide tray icon
+  When this option is enabled, Dash Core will not display an icon in the
+  system tray. This option cannot be selected at the same time as
+  **Minimize to the tray instead of the taskbar**.
+
+Minimize to the tray instead of the taskbar
+  When this option is enabled and the Dash Core window is minimized, it
+  will no longer appear in your taskbar as a running task. Instead, Dash
+  Core will keep running in the background and can be re-opened from the
+  Dash icon in the system tray (the area next to your system clock). This
+  option cannot be selected at the same time as **Hide tray icon**.
+
+Minimize on close
+  When this option is enabled, clicking the X button in the top right
+  corner of the window will cause Dash Core to minimize rather than close.
+  To completely close the app, select **File > Exit**.
+
 Size of database cache
   This option specifies the size of the database cache in memory. A higher
   value will result in increased performance when adding new blocks at the
-  cost of higher memory usage. The default value is 100MB and it should
+  cost of higher memory usage. The default value is 300MB and it should
   not be set lower than this level.
+
 Number of script verification threads
   This option sets the number of script verification threads, ranging from
   -4 to 16. `Script verification <https://en.bitcoin.it/wiki/Script>`__ is
@@ -263,7 +282,7 @@ Number of script verification threads
   leave that number of processor cores free.
 
 Wallet tab
------------------------
+----------
 
 The Wallet tab of the Options dialog contains settings related to how
 addresses are managed in the Dash Core app. The first time you run Dash
@@ -282,47 +301,17 @@ Enable coin control features
   you spend Dash, Dash Core will withdraw from as many inputs as
   necessary to make up the desired amount of Dash to be transferred.
   This behavior may be undesirable if you want to keep a certain balance
-  on one address. The most common use case is the requirement to
-  maintain 1000 Dash on a single address as collateral for a masternode.
-  Enabling this option will add a button labelled **Inputs** on the
-  **Send** tab. This provides access to the **Coin selection** dialog,
-  which can be used to lock, unlock and prioritize different addresses
-  in your wallet. See :ref:`here <coin-control>` for a more detailed
-  explanation of Coin Control.
+  on one address. Enabling this option will add a button labelled
+  **Inputs** on the **Send** tab. This provides access to the **Coin
+  Selection** dialog, which can be used to lock, unlock and prioritize
+  different addresses in your wallet. See :ref:`here <coin-control>` for
+  a more detailed explanation of Coin Control.
 
 Show Masternodes tab
   Enabling this option causes Dash Core to display an additional
   Masternodes tab to the right of the Transactions tab. This option
-  requires you to restart the Dash Core app. The Masternodes tab can be 
-  used to manage interactions (start, stop, check status, etc.) with 
-  masternodes controlled by this wallet. This tab is an advanced feature 
-  not required by users that do not operate a masternode on the Dash 
-  network.
-
-Enable advanced PrivateSend interface
-  Enabling this option changes the PrivateSend mixing interface on the
-  Overview tab of the Dash Core wallet to include more options, such as
-  Try Mix and percentage completion. See 
-  :ref:`here <dashcore-privatesend-instantsend>` for a full explanation
-  of how to use PrivateSend.
-
-Warn if PrivateSend is running out of keys
-  Enabling this option will cause Dash Core to display a warning when your
-  original set of 1000 addresses is running out, which may affect
-  PrivateSend mixing. Every time a mixing event happens, up to 9 of your
-  addresses are used up. This means those 1000 addresses last for about
-  100 mixing events. When 900 of them are used, your wallet must create
-  more addresses. It can only do this, however, if you have automatic
-  backups enabled. Consequently, users who have backups disabled will also
-  have PrivateSend disabled.
-
-Enable PrivateSend multi-session
-  Normally PrivateSend mixing is completed in several consecutive rounds,
-  each using a single masternode. Enabling this option allows
-  multi-session, which means you can use multiple masternode servers at
-  the same time, greatly increasing the speed of the mixing process at the
-  cost of creating more addresses and thus requiring more frequent wallet
-  backups. This feature is experimental as of Dash Core 12.1.5.
+  requires you to restart the Dash Core app. The Masternodes tab can be
+  used to view details of masternodes registered on the Dash blockchain.
 
 Spend unconfirmed change
   When this option is enabled, the Dash Core wallet permits you to
@@ -334,27 +323,66 @@ Spend unconfirmed change
   allows you to create new transactions even if previous transactions have
   not yet been confirmed.
 
+Enable PrivateSend features
+  Enabling this option displays the PrivateSend tab in the main Dash
+  Core window and the Options dialog, and allows you to mix and spend
+  your balance using PrivateSend.
+
+PrivateSend tab
+---------------
+
+The PrivateSend tab contains options relating to how PrivateSend
+functions in Dash Core.
+
+.. figure:: img/options-privatesend.png
+   :scale: 50 %
+
+   The PrivateSend tab of the Dash Core Options dialog
+
+Enable advanced PrivateSend interface
+  Enabling this option changes the PrivateSend mixing interface on the
+  Overview tab of the Dash Core wallet to include more information, such
+  as the remaining keys, percentage completion and current operation.
+  See :ref:`here <dashcore-privatesend-instantsend>` for a full
+  explanation of how to use PrivateSend.
+
+Show popups for PrivateSend transactions
+  Enabling this option will display notifications as the mixing
+  transactions are created.
+
+Warn if PrivateSend is running out of keys
+  Enabling this option will cause Dash Core to display a warning when
+  your original set of 1000 addresses is running out, which may affect
+  PrivateSend mixing. When 900 addresses are used, your wallet must
+  create more addresses. It can only do this if you have automatic
+  backups enabled. Consequently, users who have backups disabled will
+  also have PrivateSend disabled.
+
+Enable PrivateSend multi-session
+  Normally PrivateSend mixing is completed in several consecutive rounds,
+  each using a single masternode. Enabling this option allows
+  multi-session, which means you can use multiple masternode servers at
+  the same time, greatly increasing the speed of the mixing process at the
+  cost of creating more addresses and thus requiring more frequent wallet
+  backups.
+
 PrivateSend rounds to use
   Use this option to control the number of rounds of PrivateSend mixing to
   be carried out for your chosen balance. Each round of mixing uses a new
   masternode. The higher the number of rounds, the more difficult it
   becomes to trace the Dash to its original address. This is at the
   expense of more time required for mixing and potentially higher fees.
-  See here for a full explanation of how to use PrivateSend.
 
-Amount of Dash to keep mixed
+Target PrivateSend balance
   This option allows you to specify how much Dash should be kept on
   balance in a ready-to-use mixed state, meaning it has already passed
-  through the PrivateSend mixing process. If you do not have sufficient
-  Dash available in your balance of unlocked inputs, the amount will be
-  automatically reduced to the available balance and shown in red in the
-  PrivateSend interface on the Overview tab.
+  through the PrivateSend mixing process. The available amount is shown
+  as the balance on the PrivateSend tab.
 
 Network tab
------------------------
+-----------
 
-This tab includes options related to how your connection to the Dash
-network is made.
+This tab includes options related to your Dash network connection.
 
 .. figure:: img/network.png
    :scale: 50 %
@@ -390,39 +418,11 @@ Use separate SOCKS5 proxy to reach peers via Tor hidden services
   For more information about Tor, see
   `here <https://www.torproject.org/>`__.
 
-Window tab
------------------------
-
-This option contains options governing behavior of the Dash Core app
-window under Microsoft Windows.
-
-.. figure:: img/window.png
-   :scale: 50 %
-
-   The Window tab of the Dash Core Options dialog
-
-Hide tray icon
-  When this option is enabled, Dash Core will not display an icon in the
-  system tray. This option cannot be selected at the same time as
-  **Minimize to the tray instead of the taskbar**.
-
-Minimize to the tray instead of the taskbar
-  When this option is enabled and the Dash Core window is minimized, it
-  will no longer appear in your taskbar as a running task. Instead, Dash
-  Core will keep running in the background and can be re-opened from the
-  Dash icon in the system tray (the area next to your system clock). This
-  option cannot be selected at the same time as **Hide tray icon**.
-
-Minimize on close
-  When this option is enabled, clicking the X button in the top right
-  corner of the window will cause Dash Core to minimize rather than close.
-  To completely close the app, select **File > Exit**.
-  
 Display tab
------------------------
+-----------
 
-This tab contains options relating to the appearance of the Dash Core
-app window.
+This tab contains options relating to the display of the Dash Core app
+window.
 
 .. figure:: img/display.png
    :scale: 50 %
@@ -432,12 +432,6 @@ app window.
 User interface language
   Select your preferred language from this drop-down menu. Changing the
   language requires you to restart the Dash Core app.
-
-User interface theme
-  You can use this option to select a different theme governing the
-  appearance of the Dash Core window. All functionality is identical under
-  the different themes, although the default Dash-light theme is most
-  recent and most likely to work without any display artifacts.
 
 Unit to show amounts in
   This allows you to change the default unit of currency in Dash Core from
@@ -458,15 +452,37 @@ Third party transaction URLs
   ID. You will then be able to access this blockchain explorer directly
   from Dash Core using the context menu of any given transaction.   
 
+Appearance tab
+--------------
+
+This tab contains options relating to the visual appearance of the Dash
+Core app window.
+
+.. figure:: img/appearance.png
+   :scale: 50 %
+
+   The Appearance tab of the Dash Core Options dialog
+
+Theme
+  You can use this option to select a different theme governing the
+  appearance of the Dash Core window. All functionality is identical under
+  the different themes.
+
+Font Family
+  This option allows you to select a different font to display text in
+  the window.
+
+Font Scale and Weight
+  These options control the size and weight of fonts in the window.
 
 The Tools Dialog
-=======================
+================
 
 This documentation describes the functionality of the Dash Core Tools
 dialog, available under the **Tools** menu in Dash Core.
 
 Information tab
------------------------
+---------------
 
 .. figure:: img/information.png
    :scale: 50 %
@@ -496,14 +512,14 @@ Open debug log file
   file contains output from Dash Core which may help to diagnose errors.
 
 Console tab
------------------------
+-----------
 
 The Console tab provides an interface with the Dash Core RPC (remote
 procedure call) console. This is equivalent to the ``dash-cli`` command
 on headless versions of Dash, such as ``dashd`` running on a masternode.
-Click the red ``–`` icon to clear the console, and see the detailed
-documentation on RPC commands to learn about the possible commands you can 
-issue.
+Click the red ``×`` icon to clear the console, and see the detailed
+`documentation <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls>`__
+on RPC commands to learn about the possible commands you can issue.
 
 .. figure:: img/console.png
    :scale: 50 %
@@ -511,11 +527,11 @@ issue.
    The Console tab of the Dash Core Tools dialog
 
 Network Traffic tab
------------------------
+-------------------
 
 The Network Traffic tab shows a graph of traffic sent and received to
 peers on the network over time. You can adjust the time period using the
-slider or **Clear** the graph.
+slider or **Reset** the graph.
 
 .. figure:: img/network-traffic.png
    :scale: 50 %
@@ -523,7 +539,7 @@ slider or **Clear** the graph.
    The Network Traffic tab of the Dash Core Tools dialog
 
 Peers tab
------------------------
+---------
 
 The Peers tab shows a list of other full nodes connected to your Dash
 Core client. The IP address, version and ping time are visible.
@@ -536,7 +552,7 @@ that peer.
    The Peers tab of the Dash Core Tools dialog
 
 Wallet Repair tab
------------------------
+-----------------
 
 The Wallet Repair tab offers a range of startup commands to restore a
 wallet to a functional state. Selecting any of these commands will
