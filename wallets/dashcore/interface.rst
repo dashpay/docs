@@ -161,7 +161,7 @@ keys stored in the loaded wallet.
 
 
 The Status Bar
------------------------
+--------------
 
 The status bar shows a synchronization progress bar and a row of status
 icons which indicate the status of your connection to the Dash network.
@@ -182,14 +182,14 @@ No block source available
   required by Dash Core are blocked by a firewall.
 Synchronizing with network
   Dash Core is downloading blocks from the network.
-Synchronizing masternodes/masternode payments/governance objects
-  Dash Core is synchronizing other data with the second layer network.
+Synchronizing governance objects
+  Dash Core is synchronizing P2P governance data.
 
 Once synchronization is complete, the progress bar will disappear and a
 tick will appear on the right of the status bar.
 
 The Status Icons
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 ..  image:: img/locks.png
    :scale: 50 %
@@ -203,10 +203,9 @@ perform certain other actions.
    :scale: 50 %
    :align: left
 
-These icons indicate the quality of your connection to the
-Dash network. If you cannot connect because of network problems, you
-will see the icon on the left. More bars indicate more connections to
-your peers on the network.
+These icons indicate the quality of your connection to the Dash network.
+If you cannot connect because of network problems, you will no bars.
+More bars indicate more connections to your peers on the network.
 
 ..  image:: img/sync.png
    :scale: 50 %
@@ -214,14 +213,14 @@ your peers on the network.
 
 These icons show the synchronization status of Dash Core with
 the network. Once synchronization is complete, the refresh icon will
-become a blue tick.
+become a green tick.
 
 ..  image:: img/hd.png
    :scale: 50 %
    :align: left
 
-These icons indicate whether your wallet is running in hierarchical 
-deterministic (HD) mode or standard mode.
+This icon appears when your wallet is running in hierarchical
+deterministic (HD) mode.
 
 
 The Options Dialog
