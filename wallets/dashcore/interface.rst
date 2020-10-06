@@ -196,7 +196,8 @@ The Status Icons
    :align: left
 
 This icon appears when your wallet is running in hierarchical
-deterministic (HD) mode.
+deterministic (HD) mode. See :ref:`here <dashcore-hd>` for documentation
+on HD mode.
 
 ..  image:: img/locks.png
    :scale: 50 %
