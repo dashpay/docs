@@ -32,7 +32,10 @@ in the upgrade.
 
 The threshold percentage for this activation is dynamic and will decrease
 every 4032 blocks from 80% to 60%, over approximately 10 weeks. The first
-window will begin at block 1350720 (on 2020-10-07).
+window will begin at block 1350720 (on 2020-10-07). Information
+regarding the activation threshold and progress can be obtained via Dash
+Core's debug console or the command line by using the `getblockchaininfo`
+command.
 
 - Activation status can be tracked in the image below or at `this site
   <http://178.254.23.111/~pub/Dash/Dash_Info.html>`__.
