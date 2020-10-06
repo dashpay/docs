@@ -191,6 +191,13 @@ tick will appear on the right of the status bar.
 The Status Icons
 ~~~~~~~~~~~~~~~~
 
+..  image:: img/hd.png
+   :scale: 50 %
+   :align: left
+
+This icon appears when your wallet is running in hierarchical
+deterministic (HD) mode.
+
 ..  image:: img/locks.png
    :scale: 50 %
    :align: left
@@ -204,23 +211,17 @@ perform certain other actions.
    :align: left
 
 These icons indicate the quality of your connection to the Dash network.
-If you cannot connect because of network problems, you will no bars.
-More bars indicate more connections to your peers on the network.
+If you cannot connect because of network problems, you will see only
+gray bars. More bars indicate more connections to your peers on the
+network.
 
 ..  image:: img/sync.png
    :scale: 50 %
    :align: left
 
-These icons show the synchronization status of Dash Core with
-the network. Once synchronization is complete, the refresh icon will
-become a green tick.
-
-..  image:: img/hd.png
-   :scale: 50 %
-   :align: left
-
-This icon appears when your wallet is running in hierarchical
-deterministic (HD) mode.
+These icons show the synchronization status of Dash Core with the
+network. Once synchronization is complete, the icon will become a green
+tick.
 
 
 The Options Dialog
