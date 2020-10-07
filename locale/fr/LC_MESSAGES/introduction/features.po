@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Leon White <leon.white@dash.org>, 2019
-# Daf Daf, 2019
+# Daf Daf, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-01 01:04+0000\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
-"Last-Translator: Daf Daf, 2019\n"
+"Last-Translator: Daf Daf, 2020\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -305,6 +305,11 @@ msgid ""
 "<https://github.com/dashpay/dash/pull/3661>`__ which will mix a given "
 "denomination by up to two extra rounds to further improve privacy."
 msgstr ""
+"Vos fonds seront mélangés un nombre de fois au moins égal au nombre de "
+"cycles que vous avez indiqué. Dash 0.16 propose une fonctionnalité nommée "
+"`Cycles de mélange aléatoires <https://github.com/dashpay/dash/pull/3661>`__"
+" qui mélangera une coupure donnée jusqu'à deux cycles supplémentaires, pour "
+"améliorer encore plus la confidentialité."
 
 #: ../../introduction/features.rst:119
 msgid ""
@@ -376,6 +381,14 @@ msgid ""
 "be included in subsequently mined blocks and not allowing any other spending"
 " of these inputs during the confirmation time period."
 msgstr ""
+"Dash ne souffre d'aucune de ces limitations, grâce au réseau de second "
+"niveau formé par ses masternodes. Les masternodes constituent des quorums de"
+" vote, afin de vérifier si une transaction soumise est valide ou non. Si "
+"elle est valide, les masternodes \"verrouillent\" les entrées de la "
+"transaction et diffusent cette information au réseau, ce qui constitue une "
+"promesse effective que la transaction sera incluse dans les blocs minés par "
+"la suite, sans qu'aucune des entrées ne puisse être dépensée pendant le "
+"délai de confirmation."
 
 #: ../../introduction/features.rst:159
 msgid ""
@@ -404,6 +417,13 @@ msgid ""
 " and further improved through the introduction of `LLMQ-based InstantSend "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__ in Dash 0.14."
 msgstr ""
+"On peut consulter un guide pratique d'InstantSend :ref:`ici <dashcore-"
+"privatesend-instantsend>`. InstantSend a été originellement présenté dans un"
+" livre blanc intitulé `Transaction Locking and Masternode Consensus: A "
+"Mechanism for Mitigating Double Spending Attacks "
+"<https://github.com/dashpay/docs/blob/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_,"
+" puis amélioré par l'introduction d' `InstantSend basé sur LLMQ "
+"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__ avec Dash 0.14."
 
 #: ../../introduction/features.rst:176
 msgid ""
@@ -456,6 +476,11 @@ msgid ""
 "Quorum are responsible for observing, and subsequently affirming, newly "
 "mined blocks:"
 msgstr ""
+"Toutes les douze heures, un nouveau \"quorum de masternodes de longue "
+"durée\" (long-lasting masternode quorum, LLMQ) est établi au moyen d'un "
+"processus de génération de clé distribuée (distributed key generation, DKG)."
+" Tous les membres de ce quorum doivent observer, puis confirmer, les blocs "
+"nouvellement minés :"
 
 #: ../../introduction/features.rst:211
 msgid ""
@@ -1089,6 +1114,15 @@ msgid ""
 "removes the additional fee for InstantSend. The current fee schedule for "
 "Dash is as follows:"
 msgstr ""
+"La sortie de Dash 0.12.2.0 et l'activation de la DIP0001 ont entraîné une "
+"division des frais de transaction par 10, cependant que la taille de bloc a "
+"augmenté de 1 Mo à 2 Mo pour soutenir la croissance des transactions à frais"
+" bas, même si le cours de Dash augmente. La version 0.13.0.0 de Dash a "
+"inauguré les verrouillages automatiques InstantSend, où les masternodes "
+"tâchent de verrouiller toute transaction comportant 4 entrées ou moins (ce "
+"qu'on appelle des transactions \"simples\"), et elle a supprimé les frais "
+"supplémentaires pour InstantSend. La grille de frais actuelle est la "
+"suivante :"
 
 #: ../../introduction/features.rst:537
 msgid "Transaction type"
@@ -1171,6 +1205,21 @@ msgid ""
 "require several inputs, while InstantSend charges a fee of 0.0001 DASH per "
 "input. Always check your fees before sending a transaction."
 msgstr ""
+"PrivateSend fonctionne en créant des coupures de 10, 1, 0,1, 0,01 et 0,001 "
+"dashs, puis en mélangeant ces coupures avec d'autres utilisateurs. La "
+"création des coupures coûte les frais par défaut pour une transaction "
+"standard. Le mélange est gratuit mais, pour empêcher les attaques \"spam\", "
+"environ une transaction de mélange sur dix doit régler des frais de 0,0001 "
+"dash. Dépenser des entrées mélangées avec PrivateSend entraîne les frais "
+"habituels (standard ou InstantSend) mais, pour éviter de créer des adresses "
+"de monnaie rendue potentiellement identifiables, les frais sont toujours "
+"arrondis à la plus petite coupure possible supérieure. Cela représente "
+"typiquement 0,001 dash. Il est donc important de déduire les frais du "
+"montant envoyé, si possible, pour optimiser les frais. Combiner InstantSend "
+"et PrivateSend peut coûter cher pour cette raison, mais aussi parce qu'une "
+"transaction PrivateSend peut impliquer plusieurs entrées alors "
+"qu'InstantSend entraîne des frais de 0,0001 dash pour chaque entrée. "
+"Veuillez toujours vérifier vos frais avant d'envoyer une transaction."
 
 #: ../../introduction/features.rst:577
 msgid "Evolution"
@@ -1306,16 +1355,19 @@ msgid ""
 "**Dash Dapps - Demoing Community Development on environment**, 17 August "
 "2020"
 msgstr ""
+"**Dash Dapps - Demoing Community Development on environment**, 17 août 2020"
 
 #: ../../introduction/features.rst:631
 msgid ""
 "**Let's Talk Dash Dapps feat. Sample Dapps & Wallet API (Ep 2)**, 6 August "
 "2020"
 msgstr ""
+"**Let's Talk Dash Dapps feat. Sample Dapps & Wallet API (Ep 2)**, 6 août "
+"2020"
 
 #: ../../introduction/features.rst:640
 msgid "**Let's Talk Dash Dapps feat. Chrome Wallet (Ep 1)**, 28 July 2020"
-msgstr ""
+msgstr "**Let's Talk Dash Dapps feat. Chrome Wallet (Ep 1)**, 28 juillet 2020"
 
 #: ../../introduction/features.rst:648
 msgid ""

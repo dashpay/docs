@@ -781,16 +781,22 @@ msgid ""
 "you just created for your new, non-root user. The following options are "
 "available for installing a Dash masternode:"
 msgstr ""
+"Lancez une nouvelle fois PuTTY ou une console de terminal, et connectez-vous"
+" à votre VPS avec le nom d'utilisateur et le mot de passe que vous venez de "
+"créer pour votre nouvel utilisateur non-root. Les méthodes suivantes sont "
+"disponibles pour installer un masternode Dash :"
 
 #: ../../masternodes/setup.rst:437
 msgid "Manual installation (this guide)"
-msgstr ""
+msgstr "Guide d'installation manuelle (ce guide)"
 
 #: ../../masternodes/setup.rst:438
 msgid ""
 "`xkcd's installation guide <https://www.dash.org/forum/threads/system-wide-"
 "masternode-setup-with-systemd-auto-re-start-rfc.39460/>`__"
 msgstr ""
+"`Guide d'installation de Xkcd <https://www.dash.org/forum/threads/system-"
+"wide-masternode-setup-with-systemd-auto-re-start-rfc.39460/>`__"
 
 #: ../../masternodes/setup.rst:439
 msgid ""
@@ -798,6 +804,9 @@ msgid ""
 "<https://docs.dash.org/en/0.15.0/masternodes/setup.html#option-1-automated-"
 "installation-using-dashman>`__ (deprecated)"
 msgstr ""
+"`Installation par Dashman "
+"<https://docs.dash.org/en/0.15.0/masternodes/setup.html#option-1-automated-"
+"installation-using-dashman>`__ (obsolète)"
 
 #: ../../masternodes/setup.rst:440
 msgid ""
@@ -805,10 +814,13 @@ msgid ""
 "bootstrap/masternodes/setup.html#install-mn-bootstrap>`__ (beta version, "
 "currently testnet only)"
 msgstr ""
+"`Installation mn-bootstrap <https://docs.dash.org/en/mn-"
+"bootstrap/masternodes/setup.html#install-mn-bootstrap>`__ (version beta, "
+"actuellement uniquement sur le réseau de test)"
 
 #: ../../masternodes/setup.rst:443
 msgid "Manual installation"
-msgstr ""
+msgstr "Installation manuelle"
 
 #: ../../masternodes/setup.rst:445
 msgid ""
@@ -833,18 +845,26 @@ msgid ""
 "against the public key published by the Dash Core development team. All "
 "releases of Dash are signed using GPG with one of the following keys:"
 msgstr ""
+"Vérifiez l'authenticité de votre téléchargement en comparant sa signature "
+"séparée à la clé publique diffusée par l'équipe de développement Dash Core. "
+"Toutes les versions de Dash sont signées avec GPG avec une des clés "
+"suivantes :"
 
 #: ../../masternodes/setup.rst:460
 msgid ""
 "Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, "
 "`verifiable here on Keybase <https://keybase.io/codablock>`__"
 msgstr ""
+"Alexander Block (codablock) avec la clé ``63A9 6B40 6102 E091``, `vérifiable"
+" ici sur Keybase <https://keybase.io/codablock>`__"
 
 #: ../../masternodes/setup.rst:462
 msgid ""
 "Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here on "
 "Keybase <https://keybase.io/pasta>`__"
 msgstr ""
+"Pasta (pasta) avec la clé ``5252 7BED ABE8 7984``, `vérifiable ici sur "
+"Keybase <https://keybase.io/pasta>`__"
 
 #: ../../masternodes/setup.rst:472
 msgid ""
@@ -1105,6 +1125,10 @@ msgid ""
 "/dash-cli masternode status`` or using the **Get status** function in DMT. "
 "The final result should appear as follows:"
 msgstr ""
+"Arrivé à cette étape, vous pouvez surveiller votre masternode avec la "
+"commande ``~/.dashcore/dash-cli masternode status``, ou bien en utilisant la"
+" fonction **Get status** (Voir l'état) dans DMT. Le résultat final devrait "
+"ressembler à ceci :"
 
 #: ../../masternodes/setup.rst:649
 msgid ""
@@ -1520,3 +1544,7 @@ msgid ""
 "masternode by entering ``~/.dashcore/dash-cli masternode status`` or using "
 "the **Get status** function in DMT."
 msgstr ""
+"Arrivé à cette étape, vous pouvez revenir à votre fenêtre de terminal et "
+"surveiller votre masternode avec la commande ``~/.dashcore/dash-cli "
+"masternode status``, ou bien en utilisant la fonction **Get status** (Voir "
+"l'état) dans DMT."

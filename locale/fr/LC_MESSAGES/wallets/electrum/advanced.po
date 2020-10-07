@@ -117,10 +117,17 @@ msgid ""
 "PrivateSend is available in Dash Electrum versions 3.3.8.3 and higher, with "
 "support for hardware wallets added in 3.3.8.7."
 msgstr ""
+":ref:`PrivateSend <privatesend>` propose aux utilisateurs une "
+"confidentialité améliorée pour les transactions, en répartissant le solde de"
+" l'utilisateur en un certain nombre de coupures prédéterminées, "
+"préalablement à toute dépense. Cette procédure est connue sous le nom de "
+"mélange. PrivateSend est disponible dans Dash Electrum version 3.3.8.3 ou "
+"ultérieure, et la compatibilité avec les portefeuilles matériels a été "
+"ajoutée dans la version 3.3.8.7."
 
 #: ../../wallets/electrum/advanced.rst:36
 msgid "Mixing and sending"
-msgstr ""
+msgstr "Mélanger et envoyer"
 
 #: ../../wallets/electrum/advanced.rst:38
 msgid ""
@@ -128,10 +135,13 @@ msgid ""
 "the **PS** icon in the lower right corner of the main window. The following "
 "window appears:"
 msgstr ""
+"Pour commencer le mélange dans Dash Electrum, choisissez **Portefeuille > "
+"PrivateSend** ou bien cliquez sur l'icône **PS** dans le coin inférieur "
+"droit de la fenêtre principale. La fenêtre suivante s'affiche :"
 
 #: ../../wallets/electrum/advanced.rst:45
 msgid "PrivateSend dialog in Dash Electrum"
-msgstr ""
+msgstr "Fenêtre PrivateSend dans Dash Electrum"
 
 #: ../../wallets/electrum/advanced.rst:47
 msgid ""
@@ -141,6 +151,12 @@ msgid ""
 "Progress** bar shows the completion progress. Additional information on the "
 "process is available on the **Info** and **Log** tabs."
 msgstr ""
+"Saisissez le **Montant de dashs à conserver anonymisés** et le nombre de "
+"**Cycles PrivateSend à utiliser**. Puis cliquez sur **Activer PrivateSend**,"
+" et ensuite sur **Commencer le mélange**. Le mélange commencera, et la barre"
+" de **Progression du mélange** indiquera le degré d'avancement. Des infos "
+"supplémentaires sur le mélange sont disponibles dans les onglets **Info** et"
+" **Journal**."
 
 #: ../../wallets/electrum/advanced.rst:54
 msgid ""
@@ -148,6 +164,9 @@ msgid ""
 "**Send** tab before sending your transaction. Dash Electrum will only use "
 "Dash mixed according to your specifications for the transaction."
 msgstr ""
+"Quand le mélange est terminé, cochez simplement la case **PrivateSend** dans"
+" l'onglet **Envoyer** avant d'envoyer votre transaction. Dash Electrum "
+"n'utilisera que des fonds mélangés pour cette transaction."
 
 #: ../../wallets/electrum/advanced.rst:60
 msgid "Hardware Wallets"
@@ -158,6 +177,9 @@ msgid ""
 "You can use hardware wallets with Dash Electrum. Under Linux, it may be "
 "necessary to first install dependencies and udev rules as follows::"
 msgstr ""
+"Vous pouvez utiliser des portefeuilles matériels avec Dash Electrum. Sous "
+"Linux, il peut être d'abord nécessaire d'installer des dépendances et des "
+"règles udev, comme suit ::"
 
 #: ../../wallets/electrum/advanced.rst:68
 msgid ""
@@ -167,6 +189,13 @@ msgid ""
 "address in this keystore will be created, and mixing will begin. You can "
 "then spend the mixed Dash, or send it back to your hardware wallet."
 msgstr ""
+"Le mélange PrivateSend est également possible. Démarrer le mélange "
+"PrivateSend dans Dash Electrum avec un portefeuille matériel générera un "
+"nouveau portefeuille HD et une nouvelle phrase mnémonique pour le porte-clés"
+" PrivateSend. Une transaction depuis le portefeuille matériel vers une "
+"adresse de ce porte-clés sera créée, puis le mélange commencera. Vous "
+"pourrez ensuite dépenser les dashs mélangés, ou bien les renvoyer dans votre"
+" portefeuille matériel."
 
 #: ../../wallets/electrum/advanced.rst:76
 msgid "Masternodes"

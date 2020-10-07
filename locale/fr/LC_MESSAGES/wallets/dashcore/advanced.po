@@ -341,7 +341,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:320
 msgid "Daemon"
-msgstr ""
+msgstr "Daemon"
 
 #: ../../wallets/dashcore/advanced.rst:322
 msgid ""
@@ -350,46 +350,61 @@ msgid ""
 "GUI node. This guide assumes you have installed Dash Core for Linux as "
 "described in the :ref:`dashcore-installation-linux`."
 msgstr ""
+"Dash peut tourner en tant que processus d'arrière-plan (daemon) sur les "
+"systèmes Linux. C'est particulièrement utile si vous faites tourner Dash en "
+"tant que serveur, plutôt qu'en tant que nœud avec interface utilisateur. Ce "
+"guide présuppose que vous avez installé Dash Core pour Linux tel que décrit "
+"par :ref:`dashcore-installation-linux`."
 
 #: ../../wallets/dashcore/advanced.rst:327
 msgid "Create a user and group to run the daemon::"
-msgstr ""
+msgstr "Créez un utilisateur et un groupe pour faire tourner le daemon ::"
 
 #: ../../wallets/dashcore/advanced.rst:331
 msgid "Create a data directory for Dash in the new user's home directory::"
 msgstr ""
+"Créez un répertoire de données pour Dash dans le répertoire personnel du "
+"nouvel utilisateur ::"
 
 #: ../../wallets/dashcore/advanced.rst:335
 msgid "Create a configuration file in the new Dash data directory::"
 msgstr ""
+"Créez un fichier de configuration dans le nouveau répertoire de données Dash"
+" ::"
 
 #: ../../wallets/dashcore/advanced.rst:339
 msgid ""
 "Paste the following basic configuration to your ``dash.conf`` file, "
 "replacing the password with a long and random password::"
 msgstr ""
+"Copiez-collez cette configuration basique dans votre fichier ``dash.conf``, "
+"en remplaçant le mot de passe par un mot de passe long et aléatoire ::"
 
 #: ../../wallets/dashcore/advanced.rst:346
 msgid ""
 "Register the ``dashd`` daemon as a system service by creating the following "
 "file::"
 msgstr ""
+"Enregistrez le daemon ``dashd`` en tant que service système, en créant le "
+"fichier suivant ::"
 
 #: ../../wallets/dashcore/advanced.rst:350
 msgid "Paste the following daemon configuration into the file::"
-msgstr ""
+msgstr "Collez la configuration du daemon suivante dans le fichier ::"
 
 #: ../../wallets/dashcore/advanced.rst:373
 msgid "Register and start the daemon with systemd::"
-msgstr ""
+msgstr "Enregistrez et démarrez le daemon avec systemd ::"
 
 #: ../../wallets/dashcore/advanced.rst:379
 msgid "Dash is now installed as a system daemon. View the status as follows::"
 msgstr ""
+"Dash est à présent installé en tant que daemon système. Vérifiez son état "
+"comme suit ::"
 
 #: ../../wallets/dashcore/advanced.rst:383
 msgid "View logs as follows::"
-msgstr ""
+msgstr "Vérifiez les journaux comme suit ::"
 
 #: ../../wallets/dashcore/advanced.rst:388
 msgid "Tor"
@@ -404,10 +419,17 @@ msgid ""
 " seven thousand relays to conceal a user's location and usage from anyone "
 "conducting network surveillance or traffic analysis."
 msgstr ""
+"`Tor <torproject.org/>`__ est un logiciel libre et open-source permettant "
+"des communications anonymes. Son nom est l'acronyme du projet logiciel "
+"originel, \"The Onion Router\". Tor redirige le trafic Internet à travers un"
+" réseau de second niveau, libre et mondial, constitué de plus de sept mille "
+"relais permettant de masquer, à tous ceux qui surveillent les réseaux ou "
+"font de l'analyse de trafic, la localisation d'un utilisateur et les données"
+" transmises."
 
 #: ../../wallets/dashcore/advanced.rst:398
 msgid "Dash Core GUI"
-msgstr ""
+msgstr "Interface graphique Dash Core"
 
 #: ../../wallets/dashcore/advanced.rst:400
 msgid ""
@@ -419,12 +441,22 @@ msgid ""
 "manual.torproject.org/installation/>`__ and `Running Tor Browser for the "
 "First Time <https://tb-manual.torproject.org/running-tor-browser/>`__."
 msgstr ""
+"Le trafic de Dash Core peut être redirigé à travers Tor en indiquant un "
+"service Tor fonctionnel à utiliser comme serveur mandataire (proxy). "
+"Installez d'abord Tor en allant à l'adresse "
+"https://www.torproject.org/download/ et en y téléchargeant le paquet Tor "
+"Browser approprié à votre système. Configurez le navigateur Tor en suivant "
+"la documentation sur les pages `Installation <https://tb-"
+"manual.torproject.org/installation/>`__ et `Utiliser Tor Browser la première"
+" fois <https://tb-manual.torproject.org/running-tor-browser/>`__."
 
 #: ../../wallets/dashcore/advanced.rst:409
 msgid ""
 "Once Tor Browser is running, you have two options to configure Dash Core to "
 "use Tor for network traffic."
 msgstr ""
+"Une fois que Tor Browser tourne, vous avez deux façons de configurer Dash "
+"Core pour qu'il utilise Tor pour le trafic réseau."
 
 #: ../../wallets/dashcore/advanced.rst:412
 msgid ""
@@ -433,6 +465,10 @@ msgid ""
 "``127.0.0.1`` for the **Proxy IP** and ``9150`` for the **Port**. Click "
 "**OK** and restart Dash Core."
 msgstr ""
+"**En utilisant l'interface graphique :** démarrez Dash Core, allez au menu "
+"**Réglages > Options > Réseau** et activez le réglage **Se connecter à "
+"travers un proxy SOCKS5**. Indiquez ``127.0.0.1`` comme **IP du proxy** et "
+"``9150`` comme **port**. Cliquez sur **OK** et redémarrez Dash Core."
 
 #: ../../wallets/dashcore/advanced.rst:417
 msgid ""
@@ -440,6 +476,9 @@ msgid ""
 "``dash.conf`` settings file. Add the line ``proxy=127.0.0.1:9150``, save the"
 " file and start Dash Core."
 msgstr ""
+"**En utilisant dash.conf :** assurez-vous que Dash Core ne tourne pas, puis "
+"modifiez le fichier de configuration ``dash.conf``. Ajoutez-y la ligne "
+"``proxy=127.0.0.1:9150``, enregistrez le fichier puis redémarrez Dash Core."
 
 #: ../../wallets/dashcore/advanced.rst:421
 msgid ""
@@ -447,10 +486,13 @@ msgid ""
 "start the Tor Browser each time before you start Dash Core or you will not "
 "be able to sync."
 msgstr ""
+"Vous êtes à présent connecté à travers le réseau Tor. Vous devrez vous "
+"souvenir de bien lancer le navigateur Tor chaque fois avant de lancer Dash "
+"Core, sinon la synchronisation ne sera pas possible."
 
 #: ../../wallets/dashcore/advanced.rst:426
 msgid "Tor onion service"
-msgstr ""
+msgstr "Service onion Tor"
 
 #: ../../wallets/dashcore/advanced.rst:428
 msgid ""
@@ -458,49 +500,58 @@ msgid ""
 "onion address, providing further anonymity by concealing your IP address. "
 "Follow these steps to set up an onion service under Ubuntu Linux:"
 msgstr ""
+"Les services onion Tor permettent aux autres utilisateurs de se connecter à "
+"votre nœud Dash en utilisant une adresse onion, ce qui améliore l'anonymat "
+"en masquant votre adresse IP. Veuillez suivre ces étapes pour installer un "
+"service onion sous Linux Ubuntu :"
 
 #: ../../wallets/dashcore/advanced.rst:433
 msgid "Install tor::"
-msgstr ""
+msgstr "Installez Tor ::"
 
 #: ../../wallets/dashcore/advanced.rst:437
 msgid "Add the following line to the ``torrc`` file::"
-msgstr ""
+msgstr "Ajoutez la ligne suivante au fichier ``torrc`` ::"
 
 #: ../../wallets/dashcore/advanced.rst:441
 msgid "Restart Tor::"
-msgstr ""
+msgstr "Redémarrez Tor ::"
 
 #: ../../wallets/dashcore/advanced.rst:445
 msgid ""
 "Determine the group Tor is running under (usually the last entry in your "
 "groups file)::"
 msgstr ""
+"Déterminez sous quel groupe fonctionne Tor (en général la dernière entrée de"
+" votre fichier de groupes) ::"
 
 #: ../../wallets/dashcore/advanced.rst:450
 msgid ""
 "The group is usually ``debian-tor`` under Debian-based Linux distributions."
 msgstr ""
+"Le groupe est en général ``debian-tor`` pour les distributions Linux basées "
+"sur Debian."
 
 #: ../../wallets/dashcore/advanced.rst:453
 msgid "Add the user running Dash to the Tor group::"
-msgstr ""
+msgstr "Ajoutez l'utilisateur faisant tourner Dash au groupe Tor ::"
 
 #: ../../wallets/dashcore/advanced.rst:457
 msgid "Add the following two lines to ``dash.conf``::"
-msgstr ""
+msgstr "Ajoutez les deux lignes suivantes au fichier ``dash.conf`` ::"
 
 #: ../../wallets/dashcore/advanced.rst:462
 msgid "Restart Dash and monitor ``debug.log`` for onion informatoin::"
 msgstr ""
+"Redémarrez Dash et surveillez le journal ``debug.log`` pour les infos Tor ::"
 
 #: ../../wallets/dashcore/advanced.rst:466
 msgid "You should see a line similar to the following::"
-msgstr ""
+msgstr "Vous devriez voir une ligne similaire à celle-ci ::"
 
 #: ../../wallets/dashcore/advanced.rst:470
 msgid "Your onion service is now available at the shown address."
-msgstr ""
+msgstr "Votre service onion est désormais disponible à l'adresse affichée."
 
 #: ../../wallets/dashcore/advanced.rst:474
 msgid "Multiple wallets"
