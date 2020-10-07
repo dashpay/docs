@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Daf Daf, 2019
 # Leon White <leon.white@dash.org>, 2019
+# Daf Daf, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-01 01:04+0000\n"
 "PO-Revision-Date: 2018-02-08 10:31+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
+"Last-Translator: Daf Daf, 2020\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -120,11 +120,20 @@ msgid ""
 " detached signature, click the **Installer Signature** button on the wallet "
 "download page and save it to the same folder as the downloaded binary."
 msgstr ""
+"Cette étape est facultative, mais recommandée. Elle consiste à vérifier "
+"l'authenticité du fichier que vous avez téléchargé. Cela se fait en "
+"comparant sa signature de hachage avec celle publiée par l'équipe de "
+"développement Dash Core. Pour télécharger la signature publiée, cliquez sur "
+"le bouton **Fichier de hachage** sur la page de téléchargement du "
+"portefeuille et enregistrez-la dans le même répertoire que le logiciel "
+"téléchargé."
 
 #: ../../wallets/dashcore/installation-windows.rst:59
 msgid ""
 "All releases of Dash are signed using GPG with one of the following keys:"
 msgstr ""
+"Toutes les versions de Dash sont signées avec GPG avec une des clés "
+"suivantes :"
 
 #: ../../wallets/dashcore/installation-windows.rst:61
 msgid ""
@@ -132,6 +141,9 @@ msgid ""
 "`verifiable here on Keybase <https://keybase.io/codablock>`__ (`download "
 "<https://keybase.io/codablock/pgp_keys.asc>`__)"
 msgstr ""
+"Alexander Block (codablock) avec la clé ``63A9 6B40 6102 E091``, `vérifiable"
+" ici sur Keybase <https://keybase.io/codablock>`__ (`télécharger "
+"<https://keybase.io/codablock/pgp_keys.asc>`__)"
 
 #: ../../wallets/dashcore/installation-windows.rst:63
 msgid ""
@@ -139,6 +151,9 @@ msgid ""
 "Keybase <https://keybase.io/pasta>`__ (`download "
 "<https://keybase.io/pasta/pgp_keys.asc>`__)"
 msgstr ""
+"Pasta (pasta) avec la clé ``5252 7BED ABE8 7984``, `vérifiable ici sur "
+"Keybase <https://keybase.io/pasta>`__ (`télécharger "
+"<https://keybase.io/pasta/pgp_keys.asc>`__)"
 
 #: ../../wallets/dashcore/installation-windows.rst:66
 msgid ""
@@ -147,10 +162,15 @@ msgid ""
 " **Kleopatra** certificate manager and click **File -> Import**. Import the "
 "key files and verify the Key-ID matches the ID above."
 msgstr ""
+"Téléchargez les fichiers clé ci-dessus. Installez `Gpg4win "
+"<https://gpg4win.org/>`__ s'il ne l'est pas déjà sur votre ordinateur. Une "
+"fois installé, ouvrez le gestionnaire de certificats **Kleopatra** et "
+"cliquez sur **Fichier -> Importer**. Importez les fichiers de clé et "
+"vérifiez si le Key-ID correspond à la clé ci-dessus."
 
 #: ../../wallets/dashcore/installation-windows.rst:74
 msgid "Importing codablock's GPG public key"
-msgstr ""
+msgstr "Importation de la clé GPG publique de Codablock"
 
 #: ../../wallets/dashcore/installation-windows.rst:76
 msgid ""
@@ -159,10 +179,14 @@ msgid ""
 "``dashcore-0.16.0.1-win64-setup.exe.asc`` in the same folder as the "
 "downloaded installer."
 msgstr ""
+"Ignorez les demandes de reconnaître le certificat avec votre propre clé. "
+"Ensuite, cliquez sur **Déchiffrer/Vérifier…** et sélectionnez le fichier de "
+"signature séparé intitulé ``dashcore-0.16.0.1-win64-setup.exe.asc`` dans le "
+"même répertoire que l'installeur téléchargé."
 
 #: ../../wallets/dashcore/installation-windows.rst:84
 msgid "Selecting the signature file for verification"
-msgstr ""
+msgstr "Sélection du fichier de signature pour vérification"
 
 #: ../../wallets/dashcore/installation-windows.rst:86
 msgid ""
@@ -171,10 +195,14 @@ msgid ""
 "dashcore-0.16.0.1-win64-setup.exe.asc`` then you have an authentic copy of "
 "Dash Core for Windows."
 msgstr ""
+"Si la première ligne du message est ``Verified "
+"dashcore-0.16.0.1-win64-setup.exe with "
+"dashcore-0.16.0.1-win64-setup.exe.asc``, cela signifie que vous avez une "
+"version authentique de Dash Core pour Windows."
 
 #: ../../wallets/dashcore/installation-windows.rst:94
 msgid "The binary installer has been verified"
-msgstr ""
+msgstr "L'installeur a été vérifié"
 
 #: ../../wallets/dashcore/installation-windows.rst:97
 msgid "Running the Dash Core installer"
