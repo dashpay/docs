@@ -280,7 +280,7 @@ Masternode requirements
 - 1000 Dash: Arguably the hardest part. Dash can be obtained from
   exchanges such as Poloniex, Bittrex, Kraken and LiveCoin. Shapeshift's
   service is also an excellent way.
-- A server or VPS running Linux: Most recent guides use Ubuntu 18.04
+- A server or VPS running Linux: Most recent guides use Ubuntu 20.04
   LTS. We recommend VPS services such as Vultr and DigitalOcean,
   although any decent provider will do. Generally an instance with low
   to average specifications will do, although performance requirements
