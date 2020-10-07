@@ -231,6 +231,30 @@ sending.
    PrivateSend tab and the amount to be sent is less than the available
    PrivateSend balance
 
+Inputs
+------
+
+Like all Dash transactions, PrivateSend transactions are composed of a
+number of inputs and one or more outputs. PrivateSend transactions do
+not use change addresses, so any remaining Dash will be spent on the
+transaction fee.
+
+Due to the probabilistic nature of the PrivateSend mixing
+process, increasing the number of inputs in a transactions may
+marginally reduce privacy. For this reason, using PrivateSend is not
+recommended for users requiring a high level of privacy. While it is not
+possible to link a PrivateSend transaction to a single source address
+with absolute certainty, using more inputs may make a transaction more
+vulnerable to different potential linking attacks.
+
+You can reduce the number of inputs in a PrivateSend transaction by
+defining the transaction amount in such a way that it consumes your
+available input denominations more effeciently, or by mixing more Dash
+to ensure enough appropriately denominated inputs are available. Use the
+:ref:`Coin Control <coin-control>` function in the PrivateSend tab to
+view and select or deselect mixed UTXOs currently available for use as
+transaction inputs.
+
 
 InstantSend
 ===========
