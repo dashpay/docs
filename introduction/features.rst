@@ -440,15 +440,57 @@ On 13 August 2020, the Dash network approved a `proposal
 <https://www.dashcentral.org/p/decision-proposal-block-reward-reallocat>`__
 to modify the block reward allocation from 50/50 between miners and
 masternodes to 40/60 respectively. Once activated, this reallocation
-will result in an incremental change of the percentage share every three
-superblock cycles, or approximately three months. The following image
-shows an example of the reallocation process. The actual reallocation
-will take place on different dates, and this documentation will be
-updated once the dates are known.
+will result in an incremental adjustment to the percentage share every
+three superblock cycles, or approximately three months. The following
+table shows the incremental reallocation process. Reward reallocation
+changes would begin at the first superblock following activation and
+then occur every three superblock cycles (approximately once per
+quarter) until the reallocation is complete. This documentation will be
+updated with the specific dates once activation has occurred.
 
-.. figure:: img/reallocation-example.jpg
-
-   Block reward reallocation example
++-------------+-----------+--------------+------------+
+| Adjustment  | Miner %	  | Masternode % | Change (%) |
++=============+===========+==============+============+
+| 0 (Current) | 50.0      | 50.0         | 0.00%      |
++-------------+-----------+--------------+------------+
+| 1	          | 48.7      | 51.3         | 1.30%      |
++-------------+-----------+--------------+------------+
+| 2	          | 47.4      | 52.6         | 1.30%      |
++-------------+-----------+--------------+------------+
+| 3	          | 46.7      | 53.3         | 0.70%      |
++-------------+-----------+--------------+------------+
+| 4	          | 46.0      | 54.0         | 0.70%      |
++-------------+-----------+--------------+------------+
+| 5	          | 45.4      | 54.6         | 0.60%      |
++-------------+-----------+--------------+------------+
+| 6	          | 44.8      | 55.2         | 0.60%      |
++-------------+-----------+--------------+------------+
+| 7	          | 44.3      | 55.7         | 0.50%      |
++-------------+-----------+--------------+------------+
+| 8	          | 43.8      | 56.2         | 0.50%      |
++-------------+-----------+--------------+------------+
+| 9	          | 43.3      | 56.7         | 0.50%      |
++-------------+-----------+--------------+------------+
+| 10          | 42.8      | 57.2         | 0.50%      |
++-------------+-----------+--------------+------------+
+| 11          | 42.3      | 57.7         | 0.50%      |
++-------------+-----------+--------------+------------+
+| 12          | 41.8      | 58.2         | 0.50%      |
++-------------+-----------+--------------+------------+
+| 13          | 41.5      | 58.5         | 0.30%      |
++-------------+-----------+--------------+------------+
+| 14          | 41.2      | 58.8         | 0.30%      |
++-------------+-----------+--------------+------------+
+| 15          | 40.9      | 59.1         | 0.30%      |
++-------------+-----------+--------------+------------+
+| 16          | 40.6      | 59.4         | 0.30%      |
++-------------+-----------+--------------+------------+
+| 17          | 40.3      | 59.7         | 0.30%      |
++-------------+-----------+--------------+------------+
+| 18          | 40.1      | 59.9         | 0.20%      |
++-------------+-----------+--------------+------------+
+| 19          | 40.0      | 60.0         | 0.10%      |
++-------------+-----------+--------------+------------+
 
 This documentation is based on calculations and posts by moocowmoo.
 Please see `this reddit post <https://www.reddit.com/r/dashpay/comments/
