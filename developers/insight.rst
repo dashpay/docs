@@ -47,8 +47,8 @@ create your configuration::
 Install the Insight API service and (optionally) Insight UI::
 
   cd mynode
-  dashcore-node install @dashevo/insight-api
-  dashcore-node install @dashevo/insight-ui
+  ../bin/dashcore-node install @dashevo/insight-api
+  ../bin/dashcore-node install @dashevo/insight-ui
 
 Change paths in the configuration file as follows::
 
