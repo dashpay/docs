@@ -436,6 +436,20 @@ a budget cycle as follows:
 | 10% | Decentralized Governance Budget        |
 +-----+----------------------------------------+
 
+On 13 August 2020, the Dash network approved a `proposal
+<https://www.dashcentral.org/p/decision-proposal-block-reward-reallocat>`__
+to modify the block reward allocation from 50/50 between miners and
+masternodes to 40/60 respectively. Once activated, this reallocation
+will result in an incremental change of the percentage share every three
+superblock cycles, or approximately three months. The following image
+shows an example of the reallocation process. The actual reallocation
+will take place on different dates, and this documentation will be
+updated once the dates are known.
+
+.. figure:: img/reallocation-example.jpg
+
+   Block reward reallocation example
+
 This documentation is based on calculations and posts by moocowmoo.
 Please see `this reddit post <https://www.reddit.com/r/dashpay/comments/
 7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`_ for more details, or
