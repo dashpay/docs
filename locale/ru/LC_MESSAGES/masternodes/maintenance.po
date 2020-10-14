@@ -7,7 +7,7 @@
 # Андрей Дегтяр <diusha1711@gmail.com>, 2019
 # Max Aronych <taofgoar@protonmail.com>, 2019
 # Leon White <leon.white@dash.org>, 2019
-# Дмитрий <dmitry.zhludin@gmail.com>, 2019
+# Dmitry <dmitry.zhludin@gmail.com>, 2019
 # Julia Ogonkova <livingflcl@gmail.com>, 2019
 # 
 #, fuzzy
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 03:43+0000\n"
+"POT-Creation-Date: 2020-10-01 01:04+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -67,43 +67,18 @@ msgstr "Обновление программного обеспечения м�
 #: ../../masternodes/maintenance.rst:23
 msgid ""
 "The Dash Core software requires regular updates in order to remain "
-"consistent with the current network consensus. Depending on whether you "
-"installed Dash manually or using dashman, you must follow the procedure "
-"appropriate for your masternode, as described below."
+"consistent with the current network consensus. Follow the procedure "
+"described below to manually update your masternode. If you are still using "
+"the legacy dashman installer, see the legacy update documentation `here "
+"<https://docs.dash.org/en/0.15.0/masternodes/maintenance.html#masternode-"
+"software-update>`__."
 msgstr ""
-"Программное обеспечение Dash Core нуждается в регулярных обновлениях для "
-"поддержания соответствия с консенсусом сети. В зависимости от того, "
-"установили ли вы Dash вручную или использовали dashman, вам необходимо "
-"провести процедуру, подходящую вашей мастерноде, описание этой процедуры "
-"приведено ниже."
 
 #: ../../masternodes/maintenance.rst:30
-msgid "Option 1: Updating from dashman"
-msgstr "Вариант 1: Обновление из dashman"
+msgid "Manual update"
+msgstr ""
 
 #: ../../masternodes/maintenance.rst:32
-msgid ""
-"To update Dash using dashman, log in to your server and enter the following "
-"commands::"
-msgstr ""
-"Чтобы обновить Dash, используя dashman, войдите на ваш сервер и введите "
-"следующие команды::"
-
-#: ../../masternodes/maintenance.rst:37
-msgid "Check the status of your masternode::"
-msgstr "Проверьте статус вашей мастерноды::"
-
-#: ../../masternodes/maintenance.rst:41 ../../masternodes/maintenance.rst:94
-msgid "The Dash software on the masternode is now updated."
-msgstr ""
-"Теперь программное обеспечение Dash на мастерноде обновлено до последней "
-"версии."
-
-#: ../../masternodes/maintenance.rst:45
-msgid "Option 2: Manual update"
-msgstr "Способ 2: обновление вручную"
-
-#: ../../masternodes/maintenance.rst:47
 msgid ""
 "To update Dash manually, log in to your server using ssh or PuTTY. If your "
 "crontab contains an entry to automatically restart dashd, invoke ``crontab "
@@ -116,11 +91,11 @@ msgstr ""
 "appropriate line by adding the ``#`` character. It should look something "
 "like this::"
 
-#: ../../masternodes/maintenance.rst:54
+#: ../../masternodes/maintenance.rst:39
 msgid "Then stop Dash running::"
 msgstr "После этого остановите работу Dash::"
 
-#: ../../masternodes/maintenance.rst:58
+#: ../../masternodes/maintenance.rst:43
 msgid ""
 "Visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_"
 " and copy the link to the latest x86_64-linux-gnu version. Go back to your "
@@ -133,7 +108,7 @@ msgstr ""
 "following command, pasting in the address to the latest version of Dash Core"
 " by right clicking or pressing **Ctrl + V**::"
 
-#: ../../masternodes/maintenance.rst:67
+#: ../../masternodes/maintenance.rst:52
 msgid ""
 "Verify the integrity of your download by running the following command and "
 "comparing the output against the value for the file as shown in the "
@@ -143,16 +118,16 @@ msgstr ""
 "выходные данные со значением для файла, как показано в файле "
 "``SHA256SUMS.asc``::"
 
-#: ../../masternodes/maintenance.rst:73
+#: ../../masternodes/maintenance.rst:58
 msgid ""
 "Extract the compressed archive and copy the new files to the directory::"
 msgstr "Распакуйте архив и скопируйте новые файлы в папку::"
 
-#: ../../masternodes/maintenance.rst:79
+#: ../../masternodes/maintenance.rst:64
 msgid "Restart Dash::"
 msgstr "Перезапустите Dash::"
 
-#: ../../masternodes/maintenance.rst:83
+#: ../../masternodes/maintenance.rst:68
 msgid ""
 "You will see a message reading \"Dash Core server starting\". We will now "
 "update Sentinel::"
@@ -160,7 +135,7 @@ msgstr ""
 "Вы увидите сообщение \"Dash Core server starting\". Сейчас мы обновим "
 "Sentinel::"
 
-#: ../../masternodes/maintenance.rst:90
+#: ../../masternodes/maintenance.rst:75
 msgid ""
 "Finally, uncomment the line to automatically restart Dash in your crontab by"
 " invoking ``crontab -e`` again and deleting the ``#`` character."
@@ -168,11 +143,17 @@ msgstr ""
 "Finally, uncomment the line to automatically restart Dash in your crontab by"
 " invoking ``crontab -e`` again и удалением символа ``#``."
 
-#: ../../masternodes/maintenance.rst:100
+#: ../../masternodes/maintenance.rst:79
+msgid "The Dash software on the masternode is now updated."
+msgstr ""
+"Теперь программное обеспечение Dash на мастерноде обновлено до последней "
+"версии."
+
+#: ../../masternodes/maintenance.rst:85
 msgid "Updating Masternode Information"
 msgstr "Информация по обновлению мастеноды"
 
-#: ../../masternodes/maintenance.rst:102
+#: ../../masternodes/maintenance.rst:87
 msgid ""
 "Periodically, it may be necessary to update masternode information if any "
 "information relating to the owner or operator changes. Examples may include "
@@ -189,7 +170,7 @@ msgstr ""
 " (например, в случае проблем с безопасностью) для того, чтобы принудить и "
 "владельца, и оператора обновить данные."
 
-#: ../../masternodes/maintenance.rst:110
+#: ../../masternodes/maintenance.rst:95
 msgid ""
 "Configuration changes which affect the provision of service to the network, "
 "such as the BLS operator key and IP address, will reset your position in the"
@@ -197,11 +178,11 @@ msgid ""
 "reset your position in the payment queue."
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:118
+#: ../../masternodes/maintenance.rst:103
 msgid "ProUpServTx"
 msgstr "ProUpServTx"
 
-#: ../../masternodes/maintenance.rst:120
+#: ../../masternodes/maintenance.rst:105
 msgid ""
 "A Provider Update Service Transaction (ProUpServTx) is used to update "
 "information relating to the operator. An operator can update the IP address "
@@ -214,20 +195,21 @@ msgid ""
 "following syntax::"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:132 ../../masternodes/maintenance.rst:168
-#: ../../masternodes/maintenance.rst:200
+#: ../../masternodes/maintenance.rst:117 ../../masternodes/maintenance.rst:153
+#: ../../masternodes/maintenance.rst:185
 msgid "Where:"
 msgstr "Где:"
 
-#: ../../masternodes/maintenance.rst:134
-msgid "``proTxHash``: The hash of the initial ProRegTx"
-msgstr "``proTxHash``: хеш изначального ProRegTx"
+#: ../../masternodes/maintenance.rst:119 ../../masternodes/maintenance.rst:155
+#: ../../masternodes/maintenance.rst:187
+msgid "``proTxHash``: The transaction id of the initial ProRegTx"
+msgstr "``proTxHash``: id транзакции изначального ProRegTx"
 
-#: ../../masternodes/maintenance.rst:135
+#: ../../masternodes/maintenance.rst:120
 msgid "``ipAndPort``: IP and port in the form \"ip:port\""
 msgstr "``ipAndPort``: IP и порт из \"ip:port\""
 
-#: ../../masternodes/maintenance.rst:136 ../../masternodes/maintenance.rst:203
+#: ../../masternodes/maintenance.rst:121 ../../masternodes/maintenance.rst:188
 msgid ""
 "``operatorKey``: The operator BLS private key associated with the registered"
 " operator public key"
@@ -235,14 +217,14 @@ msgstr ""
 "``operatorKey``: BLS приватный ключ оператора, привязанный к "
 "зарегистрированному публичному ключу оператора"
 
-#: ../../masternodes/maintenance.rst:138
+#: ../../masternodes/maintenance.rst:123
 msgid ""
 "``operatorPayoutAddress`` (optional): The address used for operator reward "
 "payments. Only allowed when the ProRegTx had a non-zero ``operatorReward`` "
 "value. Enter ``\"\"`` to use the last on-chain operator payout address."
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:142 ../../masternodes/maintenance.rst:206
+#: ../../masternodes/maintenance.rst:127 ../../masternodes/maintenance.rst:191
 msgid ""
 "``feeSourceAddress`` (optional): An address used to fund ProTx fee. "
 "``operatorPayoutAddress`` will be used if not specified."
@@ -251,11 +233,11 @@ msgstr ""
 " за ProTx. Будет использоваться ``operatorPayoutAddress``, если не указано "
 "другое."
 
-#: ../../masternodes/maintenance.rst:145 ../../masternodes/maintenance.rst:209
+#: ../../masternodes/maintenance.rst:130 ../../masternodes/maintenance.rst:194
 msgid "Example::"
 msgstr "Пример::"
 
-#: ../../masternodes/maintenance.rst:151
+#: ../../masternodes/maintenance.rst:136
 msgid ""
 "The masternode is now removed from the PoSe-banned list, and the IP:port and"
 " operator reward addresses are updated."
@@ -263,11 +245,11 @@ msgstr ""
 "Теперь мастернода удалена из бан-списка PoSe, а IP:port и адрес награды "
 "оператора обновлены."
 
-#: ../../masternodes/maintenance.rst:157
+#: ../../masternodes/maintenance.rst:142
 msgid "ProUpRegTx"
 msgstr "ProUpRegTx"
 
-#: ../../masternodes/maintenance.rst:159
+#: ../../masternodes/maintenance.rst:144
 msgid ""
 "A Provider Update Registrar Transaction (ProUpRegTx) is used to update "
 "information relating to the owner. An owner can update the operator's BLS "
@@ -277,11 +259,7 @@ msgid ""
 "buttons, or from Dash Core using the following syntax::"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:170 ../../masternodes/maintenance.rst:202
-msgid "``proTxHash``: The transaction id of the initial ProRegTx"
-msgstr "``proTxHash``: id транзакции изначального ProRegTx"
-
-#: ../../masternodes/maintenance.rst:171
+#: ../../masternodes/maintenance.rst:156
 msgid ""
 "``operatorKeyAddr``: An updated BLS public key, or ``\"\"`` to use the last "
 "on-chain operator key"
@@ -289,13 +267,13 @@ msgstr ""
 "``operatorKeyAddr``: Обновленный BLS публичный ключ или значение ``\"\"`` "
 "для использования ключа последнего оператора в цепи."
 
-#: ../../masternodes/maintenance.rst:173
+#: ../../masternodes/maintenance.rst:158
 msgid ""
 "``votingKeyAddr``: An updated voting key address, or ``\"\"`` to use the "
 "last on-chain voting key"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:175
+#: ../../masternodes/maintenance.rst:160
 msgid ""
 "``payoutAddress``: An updated Dash address for owner payments, or ``\"\"`` "
 "to use the last on-chain operator key"
@@ -303,7 +281,7 @@ msgstr ""
 "``payoutAddress``: обновлённый адрес для выплат владельцу или значение "
 "``\"\"`` для использования ключа последнего оператора в цепи."
 
-#: ../../masternodes/maintenance.rst:177
+#: ../../masternodes/maintenance.rst:162
 msgid ""
 "``feeSourceAddress`` (optional): An address used to fund ProTx fee. "
 "``PayoutAddress`` will be used if not specified."
@@ -311,15 +289,15 @@ msgstr ""
 "``feeSourceAddress`` (по желанию): адрес для оплаты комиссии за ProTx. Если "
 "не указано иное, то будет использоваться``PayoutAddress``."
 
-#: ../../masternodes/maintenance.rst:180
+#: ../../masternodes/maintenance.rst:165
 msgid "Example to update payout address::"
 msgstr "Пример обновления адреса выплат::"
 
-#: ../../masternodes/maintenance.rst:186
+#: ../../masternodes/maintenance.rst:171
 msgid "ProUpRevTx"
 msgstr "ProUpRevTx"
 
-#: ../../masternodes/maintenance.rst:188
+#: ../../masternodes/maintenance.rst:173
 msgid ""
 "A Provider Update Revocation Transaction (ProUpRevTx) is used by the "
 "operator to terminate service or signal the owner that a new BLS key is "
@@ -332,7 +310,7 @@ msgid ""
 "syntax::"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:205
+#: ../../masternodes/maintenance.rst:190
 msgid ""
 "``reason``: Integer value indicating the revocation `reason "
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-"
@@ -342,11 +320,11 @@ msgstr ""
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-"
 "for-self-revocation-of-operators>`__"
 
-#: ../../masternodes/maintenance.rst:215
+#: ../../masternodes/maintenance.rst:200
 msgid "Proof of Service Bans"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:217
+#: ../../masternodes/maintenance.rst:202
 msgid ""
 "If your masternode fails to provide service to the network in accordance "
 "with the current consensus rules, it will receive a :ref:`Proof of Service "
@@ -354,56 +332,56 @@ msgid ""
 "status, you should check the following settings are configured correctly:"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:222
+#: ../../masternodes/maintenance.rst:207
 msgid ""
 "Ensure you are running the :ref:`latest version of Dash <masternode-update>`"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:223
+#: ../../masternodes/maintenance.rst:208
 msgid ""
 "Ensure your masternode has sufficient memory, swap, processing power and "
 "hard drive space"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:225
+#: ../../masternodes/maintenance.rst:210
 msgid ""
 "Ensure you are fully synced to the `correct blockheight "
 "<https://insight.dash.org/insight/>`__, and that you are on the correct "
 "chain and not forked off"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:227
+#: ../../masternodes/maintenance.rst:212
 msgid ""
 "Ensure that a BLS private key is specified using the "
 "``masternodeblsprivkey`` option in the masternode's ``dash.conf`` file"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:229
+#: ../../masternodes/maintenance.rst:214
 msgid ""
 "Ensure that the BLS private key on the masternode is unique on the network "
 "and not shared with any other masternodes"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:231
+#: ../../masternodes/maintenance.rst:216
 msgid ""
 "Ensure that the BLS private key on the masternode corresponds to the BLS "
 "public key registered on the blockchain in the ``ProRegTx`` or "
 "``ProUpRegTx``"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:234
+#: ../../masternodes/maintenance.rst:219
 msgid ""
 "Ensure that the ``externalip`` (and ``port`` if using testnet) are specified"
 " correctly and not blocked by a firewall or port forwarding service"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:237
+#: ../../masternodes/maintenance.rst:222
 msgid ""
 "Ensure that Sentinel is installed, updated, not exiting with an error and is"
 " entered in your crontab to run every 1-2 minutes"
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:240
+#: ../../masternodes/maintenance.rst:225
 msgid ""
 "Once you are certain these settings are correct, you can update your service"
 " status on the network and return to the valid set of masternodes by "
@@ -414,11 +392,11 @@ msgid ""
 " will be banned again if it continues to fail to provide service."
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:251
+#: ../../masternodes/maintenance.rst:236
 msgid "DashCentral voting, verification and monitoring"
 msgstr "Голосование, проверки и слежение за мастернодами на DashCentral"
 
-#: ../../masternodes/maintenance.rst:253
+#: ../../masternodes/maintenance.rst:238
 msgid ""
 "DashCentral is a community-supported website managed by community member "
 "Rango. It has become a *de facto* site for discussion of budget proposals "
@@ -430,11 +408,11 @@ msgstr ""
 "предложения, для чего там предлагается графический интерфейс, но, кроме "
 "этого, там можно следить за мастернодами."
 
-#: ../../masternodes/maintenance.rst:259
+#: ../../masternodes/maintenance.rst:244
 msgid "Adding your masternode to DashCentral"
 msgstr "Добавление вашей мастерноды на Dash Central"
 
-#: ../../masternodes/maintenance.rst:261
+#: ../../masternodes/maintenance.rst:246
 msgid ""
 "`Dashcentral <https://www.dashcentral.org/>`_ allows you to vote on "
 "proposals from the comfort of your browser. After completing `registration "
@@ -450,21 +428,21 @@ msgstr ""
 "masternode now**. Введите адрес, на котором находится залоговое "
 "подтверждение на этом экране:"
 
-#: ../../masternodes/maintenance.rst:271
+#: ../../masternodes/maintenance.rst:256
 msgid "Adding a masternode to DashCentral"
 msgstr "Добавление мастерноды на Dash Central"
 
-#: ../../masternodes/maintenance.rst:273
+#: ../../masternodes/maintenance.rst:258
 msgid ""
 "Click **Add masternode**. Your masternode has now been added to DashCentral."
 msgstr ""
 "Нажмите **Add masternode**. Теперь ваша мастернода добавлена на DashCentral."
 
-#: ../../masternodes/maintenance.rst:277
+#: ../../masternodes/maintenance.rst:262
 msgid "Enabling voting from DashCentral"
 msgstr "Включение системы голосования из Dash Central"
 
-#: ../../masternodes/maintenance.rst:279
+#: ../../masternodes/maintenance.rst:264
 msgid ""
 "Click **Edit** under **Voting privkeys** to enter your masternode private "
 "key to enable voting through the DashCentral web interface. Enter a voting "
@@ -479,11 +457,11 @@ msgstr ""
 "самый ключ, что вы использовали в файле dash.conf вашей мастерноды) на этом "
 "экране:"
 
-#: ../../masternodes/maintenance.rst:289
+#: ../../masternodes/maintenance.rst:274
 msgid "Adding voting privkeys to DashCentral"
 msgstr "Добавление приватных ключей для  голосования на Dash Central"
 
-#: ../../masternodes/maintenance.rst:291
+#: ../../masternodes/maintenance.rst:276
 msgid ""
 "It is important to note that the private key to start your masternode is "
 "unrelated to the private keys to the collateral address storing your 1000 "
@@ -503,11 +481,11 @@ msgstr ""
 " **Store encrypted voting privkeys on server**. Теперь вы можете голосовать "
 "по бюджетным предложениям из веб-интерфейса DashCentral."
 
-#: ../../masternodes/maintenance.rst:301
+#: ../../masternodes/maintenance.rst:286
 msgid "Verifying ownership"
 msgstr "Подтверждение владения"
 
-#: ../../masternodes/maintenance.rst:303
+#: ../../masternodes/maintenance.rst:288
 msgid ""
 "You can also issue a message from your address to verify ownership of your "
 "masternode to DashCentral. Click **Unverified** under **Ownership** and the "
@@ -517,11 +495,11 @@ msgstr ""
 "мастернодой для DashCentral. Нажмите **Unverified** под **Ownership** и "
 "появится следующий экран:"
 
-#: ../../masternodes/maintenance.rst:310
+#: ../../masternodes/maintenance.rst:295
 msgid "Verifying ownership of your masternode to DashCentral"
 msgstr "Подтверждение владения мастернодой для DashCentral"
 
-#: ../../masternodes/maintenance.rst:312
+#: ../../masternodes/maintenance.rst:297
 msgid ""
 "Instructions on how to sign your collateral address using a software wallet "
 "appear. If you are using a hardware wallet other than Trezor, you will need "
@@ -540,11 +518,11 @@ msgstr ""
 "можете ввести сообщение, предоставленное Dash Central и адрес, который вы "
 "хотите подписать:"
 
-#: ../../masternodes/maintenance.rst:323
+#: ../../masternodes/maintenance.rst:308
 msgid "Signing a message from the Trezor Wallet"
 msgstr "Подпись сообщения из кошелька Trezor"
 
-#: ../../masternodes/maintenance.rst:325
+#: ../../masternodes/maintenance.rst:310
 msgid ""
 "Click **Sign**, confirm on your Trezor device and enter your PIN to sign the"
 " message. A message signature will appear in the **Signature** box. Copy "
@@ -556,15 +534,15 @@ msgstr ""
 "подпись, вставьте её в окно на DashCentral и нажмите **Verify ownership**. "
 "Процедура подтверждения завершена."
 
-#: ../../masternodes/maintenance.rst:333
+#: ../../masternodes/maintenance.rst:318
 msgid "Masternode ownership has been successfully verified"
 msgstr "Владение мастернодой было успешно подтверждено"
 
-#: ../../masternodes/maintenance.rst:336
+#: ../../masternodes/maintenance.rst:321
 msgid "Installing the DashCentral monitoring script"
 msgstr "Установка скрипта наблюдения за мастернодой DashCentral"
 
-#: ../../masternodes/maintenance.rst:338
+#: ../../masternodes/maintenance.rst:323
 msgid ""
 "DashCentral offers a service to monitor your masternode, automatically "
 "restart dashd in the event of a crash and send email in the event of an "
@@ -579,11 +557,11 @@ msgstr ""
 "<https://www.dashcentral.org/account/edit>`_ и создайте новый ключ API, "
 "добавив к своему профилю PIN, при необходимости. Проследуйте на этот экран:"
 
-#: ../../masternodes/maintenance.rst:348
+#: ../../masternodes/maintenance.rst:333
 msgid "Setting up the DashCentral monitoring script"
 msgstr "Настройка скрипта наблюдения DashCentral"
 
-#: ../../masternodes/maintenance.rst:350
+#: ../../masternodes/maintenance.rst:335
 msgid ""
 "Copy the link to the current version of the dashcentral script by right- "
 "click and selecting **Copy link address**. Open PuTTY and connect to your "
@@ -593,7 +571,7 @@ msgstr ""
 "кнопкой мыши и выбрав **Copy link address**. Откройте PuTTY, присоединитесь "
 "к своей мастерноде и напечатайте::"
 
-#: ../../masternodes/maintenance.rst:356
+#: ../../masternodes/maintenance.rst:341
 msgid ""
 "Replace the link with the current version of dashcentral-updater as "
 "necessary. Decompress the archive using the following command::"
@@ -601,13 +579,13 @@ msgstr ""
 "Заместите ссылку ссылкой с текущей версией dashcentral-updater, если "
 "необходимо. Разархивируйте архив, используя следующую команду:"
 
-#: ../../masternodes/maintenance.rst:361
+#: ../../masternodes/maintenance.rst:346
 msgid "View your masternode configuration details by typing::"
 msgstr ""
 "Подробную информацию о конфигурации вашей мастерноды можно увидеть "
 "напечатав::"
 
-#: ../../masternodes/maintenance.rst:365
+#: ../../masternodes/maintenance.rst:350
 msgid ""
 "Copy the values for ``rpcuser`` and ``rpcpassword``. Then edit the "
 "dashcentral configuration by typing::"
@@ -615,7 +593,7 @@ msgstr ""
 "Скопируйте значения для ``rpcuser` и ``rpcpassword``. Далее, отредактируйте "
 "конфигурацию dashcentral, написав:"
 
-#: ../../masternodes/maintenance.rst:370
+#: ../../masternodes/maintenance.rst:355
 msgid ""
 "Replace the values for ``api_key``, your masternode collateral address, "
 "``rpc_user``, ``rpc_password``, ``daemon_binary`` and ``daemon_datadir`` "
@@ -627,11 +605,11 @@ msgstr ""
 "``daemon_datadir`` в соответствии с вашей системой. Чаще всего, конфигурация"
 " выглядит следующим образом, где ``lwhite`` это имя пользователя Linux:"
 
-#: ../../masternodes/maintenance.rst:378
+#: ../../masternodes/maintenance.rst:363
 msgid "DashCentral updater configuration file"
 msgstr "Конфигурационный файл DashCentral updater"
 
-#: ../../masternodes/maintenance.rst:403
+#: ../../masternodes/maintenance.rst:388
 msgid ""
 "Press **Ctrl + X** to exit, confirm you want save with **Y** and press "
 "**Enter**. Test your configuration by running the dashcentral script, then "
@@ -643,15 +621,15 @@ msgstr ""
 "скрипт dashcentral, затем проверьте сайт. Если всё прошло успешно, вы "
 "увидете, что было отправлено обновление::"
 
-#: ../../masternodes/maintenance.rst:413
+#: ../../masternodes/maintenance.rst:398
 msgid "Manually testing the DashCentral updater"
 msgstr "Тестирование DashCentral updater вручную"
 
-#: ../../masternodes/maintenance.rst:418
+#: ../../masternodes/maintenance.rst:403
 msgid "DashCentral updater has successfully sent data to the DashCentral site"
 msgstr "DashCentral updater успешно отправил данные на сайт DashCentral"
 
-#: ../../masternodes/maintenance.rst:421
+#: ../../masternodes/maintenance.rst:406
 msgid ""
 "Once you have verified your configuration is working, we can edit the "
 "crontab on your system to schedule the dcupdater script to run every 2 "
@@ -668,7 +646,7 @@ msgstr ""
 " в том, что вы не выпадите из очереди на выплаты. Напечатайте следующую "
 "команду::"
 
-#: ../../masternodes/maintenance.rst:430
+#: ../../masternodes/maintenance.rst:415
 msgid ""
 "Select an editor if necessary and add the following line to your crontab "
 "after the line for sentinel, replacing lwhite with your username on your "
@@ -678,12 +656,12 @@ msgstr ""
 "crontab после строки для sentinel, заменив lwhite вашим именем пользователя "
 "системы::"
 
-#: ../../masternodes/maintenance.rst:439
+#: ../../masternodes/maintenance.rst:424
 msgid "Editing crontab to run the DashCentral updater automatically"
 msgstr ""
 "Редактирование crontad для автоматического запуска DashCentral updater"
 
-#: ../../masternodes/maintenance.rst:441
+#: ../../masternodes/maintenance.rst:426
 msgid ""
 "Press **Ctrl + X** to exit, confirm you want save with **Y** and press "
 "**Enter**. The dcupdater script will now run every two minutes, restart "
@@ -694,11 +672,11 @@ msgstr ""
 "каждые 2 минуты, перезапускать dashd, когда это будет необходимо и "
 "отправлять вам e-mail в случае ошибки."
 
-#: ../../masternodes/maintenance.rst:446
+#: ../../masternodes/maintenance.rst:431
 msgid "Masternode monitoring tools"
 msgstr "Интсрументы за наблюдением за мастернодой"
 
-#: ../../masternodes/maintenance.rst:448
+#: ../../masternodes/maintenance.rst:433
 msgid ""
 "Several sites operated by community members are available to monitor key "
 "information and statistics relating to the masternode network."
@@ -707,11 +685,11 @@ msgstr ""
 "для слежения за ключевой информацией и статистикой, относящейся к сети "
 "мастернод."
 
-#: ../../masternodes/maintenance.rst:452
+#: ../../masternodes/maintenance.rst:437
 msgid "Block Explorers"
 msgstr "Обозреватели блоков"
 
-#: ../../masternodes/maintenance.rst:454
+#: ../../masternodes/maintenance.rst:439
 msgid ""
 "Since Dash is a public blockchain, it is possible to use block explorers to "
 "view the balances of any Dash public address, as well as examine the "
@@ -725,7 +703,7 @@ msgstr ""
 "доступна к поиску через txid. Для сети Dash существует несколько "
 "обозревателей блоков."
 
-#: ../../masternodes/maintenance.rst:460
+#: ../../masternodes/maintenance.rst:445
 msgid ""
 "`Blockchair <https://blockchair.com/dash>`__ offers a block explorer with "
 "detailed visualizations to analyse the Dash blockchain."
@@ -733,7 +711,7 @@ msgstr ""
 "`Blockchair <https://blockchair.com/dash>`__ предлагает обозреватель блоков "
 "с подробными визуальными данными для анализа блокчейна Dash."
 
-#: ../../masternodes/maintenance.rst:464
+#: ../../masternodes/maintenance.rst:449
 msgid ""
 "`CryptoID <https://chainz.cryptoid.info/>`__ offers a `Dash blockchain "
 "explorer <https://chainz.cryptoid.info/dash/>`__ and a `function "
@@ -745,7 +723,7 @@ msgstr ""
 "<https://chainz.cryptoid.info/dash/masternodes.dws>`__ для просмотра "
 "местоположения мастернод Dash."
 
-#: ../../masternodes/maintenance.rst:468
+#: ../../masternodes/maintenance.rst:453
 msgid ""
 "`BitInfoCharts <https://bitinfocharts.com>`_ offers a `page "
 "<https://bitinfocharts.com/dash/>`_ of price statistics and information and "
@@ -755,7 +733,7 @@ msgstr ""
 "<https://bitinfocharts.com/dash/>`_ со статистикой по ценам и `обозреватель "
 "блоков <https://bitinfocharts.com/dash/explorer/>`__."
 
-#: ../../masternodes/maintenance.rst:472
+#: ../../masternodes/maintenance.rst:457
 msgid ""
 "`CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ offers a range "
 "of statistics and data on most blockchains, including Dash."
@@ -764,7 +742,7 @@ msgstr ""
 "ряд статистических данных и информации по большинству блокчейнов, включая "
 "Dash."
 
-#: ../../masternodes/maintenance.rst:474
+#: ../../masternodes/maintenance.rst:459
 msgid ""
 "`CoinPayments <https://www.coinpayments.net/>`__ offers a simple `Dash "
 "blockchain explorer <http://explorer.coinpayments.net/index.php?chain=7>`__."
@@ -773,17 +751,14 @@ msgstr ""
 "`обозреватель блоков Dash "
 "<http://explorer.coinpayments.net/index.php?chain=7>`__."
 
-#: ../../masternodes/maintenance.rst:477
+#: ../../masternodes/maintenance.rst:462
 msgid ""
-"`Dash.org <https://www.dash.org/>`__ includes two blockchain explorers at "
-"`explorer.dash.org <http://explorer.dash.org/>`__ and `insight.dash.org "
-"<http://insight.dash.org/>`__."
+"`Dash.org <https://www.dash.org/>`__ includes a blockchain explorer at "
+"`explorer.dash.org <http://explorer.dash.org/insight/>`__ and "
+"`insight.dash.org <http://insight.dash.org/insight/>`__."
 msgstr ""
-"`Dash.org <https://www.dash.org/>`__ включает в себя два обозревателя "
-"блоков: `explorer.dash.org <http://explorer.dash.org/>`__ и "
-"`insight.dash.org <http://insight.dash.org/>`__."
 
-#: ../../masternodes/maintenance.rst:480
+#: ../../masternodes/maintenance.rst:465
 msgid ""
 "`Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https "
 "://dash-bitcore1.trezor.io/>`__ powered by a `Dash fork "
@@ -795,15 +770,15 @@ msgstr ""
 "<https://github.com/dashpay/insight-ui-dash>`__ от `insight "
 "<https://insight.is/>`__, продвинутом инструменте API для блокчейна."
 
-#: ../../masternodes/maintenance.rst:486
+#: ../../masternodes/maintenance.rst:471
 msgid "Dash Masternode Tool"
 msgstr "Dash Masternode Tool"
 
-#: ../../masternodes/maintenance.rst:488
+#: ../../masternodes/maintenance.rst:473
 msgid "https://github.com/Bertrand256/dash-masternode-tool"
 msgstr "https://github.com/Bertrand256/dash-masternode-tool"
 
-#: ../../masternodes/maintenance.rst:490
+#: ../../masternodes/maintenance.rst:475
 msgid ""
 "Written and maintained by community member Bertrand256, Dash Masternode Tool"
 " (DMT) allows you to start a masternode from all major hardware wallets such"
@@ -818,15 +793,15 @@ msgstr ""
 "предложениям и вывода выплат для мастернод, не затрагивая залоговое "
 "подтверждение."
 
-#: ../../masternodes/maintenance.rst:497
+#: ../../masternodes/maintenance.rst:482
 msgid "DASH Ninja"
 msgstr "DASH Ninja"
 
-#: ../../masternodes/maintenance.rst:499
+#: ../../masternodes/maintenance.rst:484
 msgid "https://www.dashninja.pl"
 msgstr "https://www.dashninja.pl"
 
-#: ../../masternodes/maintenance.rst:501
+#: ../../masternodes/maintenance.rst:486
 msgid ""
 "DASH Ninja, operated by forum member and Dash Core developer elbereth, "
 "offers key statistics on the adoption of different versions of Dash across "
@@ -840,15 +815,15 @@ msgstr ""
 " управлением Dash, расписанием вылат и географическим распределением "
 "мастернод. Доступен простой обозреватель блоков."
 
-#: ../../masternodes/maintenance.rst:509
+#: ../../masternodes/maintenance.rst:494
 msgid "DashCentral"
 msgstr "DashCentral"
 
-#: ../../masternodes/maintenance.rst:511
+#: ../../masternodes/maintenance.rst:496
 msgid "https://www.dashcentral.org"
 msgstr "https://www.dashcentral.org"
 
-#: ../../masternodes/maintenance.rst:513
+#: ../../masternodes/maintenance.rst:498
 msgid ""
 "DashCentral, operated by forum member rango, offers an advanced service to "
 "monitor masternodes and vote on budget proposals through an advanced web "
@@ -862,30 +837,30 @@ msgstr ""
 "<https://play.google.com/store/apps/detai "
 "ls?id=net.paregov.android.dashcentral>`_."
 
-#: ../../masternodes/maintenance.rst:519
+#: ../../masternodes/maintenance.rst:504
 msgid "Masternode.me"
 msgstr "Masternode.me"
 
-#: ../../masternodes/maintenance.rst:521
+#: ../../masternodes/maintenance.rst:506
 msgid "https://stats.masternode.me"
 msgstr "https://stats.masternode.me"
 
-#: ../../masternodes/maintenance.rst:523
+#: ../../masternodes/maintenance.rst:508
 msgid ""
 "Masternode.me, operated by Dash community member moocowmoo, offers "
 "sequential reports on the price, generation rate, blockchain information and"
 " some information on masternodes."
 msgstr ""
 
-#: ../../masternodes/maintenance.rst:528
+#: ../../masternodes/maintenance.rst:513
 msgid "Dash Masternode Information"
 msgstr "Dash Masternode Information"
 
-#: ../../masternodes/maintenance.rst:530
+#: ../../masternodes/maintenance.rst:515
 msgid "http://178.254.23.111/~pub/Dash/Dash_Info.html"
 msgstr "http://178.254.23.111/~pub/Dash/Dash_Info.html"
 
-#: ../../masternodes/maintenance.rst:532
+#: ../../masternodes/maintenance.rst:517
 msgid ""
 "This site, operated by forum member and Dash Core developer crowning, offers"
 " a visual representation of many key statistics of the Dash masternode "

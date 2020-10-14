@@ -136,8 +136,8 @@ Atomic Wallet offers detailed documentation of all functions at
 https://atomicwallet.freshdesk.com and a few quick links are also
 collected here:
 
-- `Getting started with Atomic Wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066359-getting-started-with-atomic-wallet>`_
-- `How to install Atomic Wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066351-how-to-install-atomic-wallet->`_
+- `Getting started with Atomic Wallet Part 1 <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066359-getting-started-with-atomic-wallet-part-1->`_
+- `Getting started with Atomic Wallet Part 2 <https://atomicwallet.freshdesk.com/support/solutions/articles/36000087950-getting-started-with-atomic-wallet-part-2->`_
 - `How to create a wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066354-how-to-create-a-wallet->`_
 - `Getting started with Atomic Swaps <https://atomicwallet.freshdesk.com/support/solutions/articles/36000073262-getting-started-with-atomic-swaps>`_
 
@@ -150,12 +150,12 @@ collected here:
 Channels
 ========
 
-https://exscudo.com/chat.html
+https://exscudo.com/channels/
 
 .. image:: img/exscudo.png
    :width: 200px
    :align: right
-   :target: https://exscudo.com/chat.html
+   :target: https://exscudo.com/channels/
 
 Built by Exscudo, Channels is a secure messaging system with a built-in
 money transfer for many cryptocurrencies, including Dash. The underlying
@@ -178,7 +178,7 @@ and the `Apple App Store for iOS <https://apps.apple.com/app/id1367425342>`__.
 Documentation
 -------------
 
-Channels offers a FAQ at https://exscudo.com/faq.html
+Channels offers a FAQ at https://exscudo.com/blog/exscudo/frequently-asked-questions/
 
 .. figure:: img/exscudo-wallet.png
    :width: 200px
@@ -233,12 +233,12 @@ https://support.cobo.com
 Coinomi
 =======
 
-https://coinomi.com
+https://www.coinomi.com
 
 .. image:: img/coinomi.png
    :width: 100px
    :align: right
-   :target: https://coinomi.com
+   :target: https://www.coinomi.com
 
 Coinomi is an open-source multi-currency mobile wallet available for iOS
 and Android. Your private keys never leave your device, and strong
@@ -258,7 +258,7 @@ Download
    :target: https://apps.apple.com/app/id1333588809
 
 Coinomi desktop wallets are available from
-https://www.coinomi.com/downloads for Linux, macOS and Windows. Coinomi
+https://www.coinomi.com/downloads/ for Linux, macOS and Windows. Coinomi
 is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.coinomi.wallet>`__
 and the `Apple App Store for iOS <https://apps.apple.com/app/id1333588809>`__.
 
@@ -304,7 +304,7 @@ Documentation
 -------------
 
 Cryptonator offers detailed documentation of all functions at
-https://cryptonator.zendesk.com/hc
+https://cryptonator.zendesk.com
 
 .. figure:: img/cryptonator-wallet.png
    :width: 400px
@@ -351,10 +351,10 @@ Edge offers detailed documentation of all functions at
 https://support.edge.app and a few quick links are also collected
 here:
 
-- `Getting started <https://support.edge.app/support/solutions/8000051596>`__
-- `How do I create a new wallet? <https://support.edge.app/support/solutions/articles/8000058907>`_
-- `How do I send money? <https://support.edge.app/support/solutions/articles/8000058750>`_
-- `How do I receive money into my account? <https://support.edge.app/support/solutions/articles/8000058749>`_
+- `Getting started <https://support.edge.app/en/support/solutions/8000051596>`__
+- `How do I create a new wallet? <https://support.edge.app/en/support/solutions/articles/8000058907>`_
+- `How do I send money? <https://support.edge.app/en/support/solutions/articles/8000058750>`_
+- `How do I receive money into my account? <https://support.edge.app/en/support/solutions/articles/8000058749>`_
 
 .. figure:: img/edge-wallet.png
    :width: 400px
@@ -397,11 +397,10 @@ Ethos offers detailed documentation of all functions at
 https://support.ethos.io and a few quick links are also collected
 here:
 
-- `How to Create and Ethos Account <https://support.ethos.io/support/solutions/articles/35000081037-how-to-create-an-ethos-account>`__
-- `How to Create Your SmartKey and First SmartWallet <https://support.ethos.io/support/solutions/articles/35000077327-how-to-create-your-smartkey-and-first-smartwallet>`_
-- `How to Add Coins to a SmartWallet <https://support.ethos.io/support/solutions/articles/35000077328-how-to-add-coins-to-a-smartwallet>`_
-- `How to Receive Cryptocurrency to a SmartWallet <https://support.ethos.io/support/solutions/articles/35000077329-how-to-receive-cryptocurrency-to-a-smartwallet>`_
-- `How to Send Cryptocurrency from the SmartWallet <https://support.ethos.io/support/solutions/articles/35000082787-how-to-send-cryptocurrency-from-the-smartwallet>`_
+- `Getting Started - Create Your Ethos Account <https://support.ethos.io/support/solutions/articles/35000097575-getting-started-create-your-ethos-account>`__
+- `Ethos Universal Wallet - Smart Key <https://support.ethos.io/support/solutions/articles/35000097576-ethos-universal-wallet-smartkey>`_
+- `SmartWallet - User Guide <https://support.ethos.io/support/solutions/articles/35000097578-smartwallet-user-guide>`_
+- `Sending & Receiving Crypto – User Guide <https://support.ethos.io/support/solutions/articles/35000097579-sending-receiving-crypto-user-guide>`_
 
 .. figure:: img/ethos-wallet.png
    :width: 133px
@@ -455,12 +454,12 @@ Read the `FAQ <https://evercoin.com/#faq>`__ or visit the `Evercoin site
 Exodus
 ======
 
-http://www.exodus.io
+https://www.exodus.io
 
 .. image:: img/exodus.png
    :width: 100px
    :align: right
-   :target: http://www.exodus.io
+   :target: https://www.exodus.io
 
 The Exodus wallet features an engaging visual design and can
 simultaneously store multiple currencies. It is available for Windows,
@@ -479,7 +478,7 @@ Documentation
 -------------
 
 Exodus offers detailed documentation of all functions at
-http://support.exodus.io and a few quick links are also collected here:
+https://support.exodus.io and a few quick links are also collected here:
 
 - `How do I install Exodus? <https://support.exodus.io/article/36-how-do-i-install-exodus>`_
 - `How do I get started with Exodus? <https://support.exodus.io/article/37-how-do-i-get-started-with-exodus>`_
@@ -519,7 +518,7 @@ Installation
 
 Guarda desktop wallets are available from https://guarda.com/desktop for
 Linux, macOS and Windows, or you can use web wallet at
-https://guarda.co/app to create new or restore existing wallets. Guarda
+https://guarda.co/app/ to create new or restore existing wallets. Guarda
 is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.crypto.multiwallet>`__ 
 and the `Apple App Store for iOS <https://apps.apple.com/app/id1442083982>`__.
 
@@ -531,7 +530,6 @@ https://guarda.freshdesk.com and a few quick links are also collected
 here:
 
 - `How to create a wallet? <https://guarda.freshdesk.com/support/solutions/articles/36000032815-how-to-create-a-wallet->`_
-- `What is Guarda Exchange? <https://guarda.freshdesk.com/support/solutions/articles/36000011303-what-is-guarda-exchange->`_
 
 .. figure:: img/guarda-wallet.png
    :width: 400px
@@ -614,12 +612,9 @@ Documentation
 -------------
 
 Jaxx offers detailed documentation of all functions at
-https://decentral.zendesk.com and a few quick links are also collected
-here:
+https://support.decentral.ca and the getting started link is below:
 
-- `Getting started <https://decentral.zendesk.com/hc/en-us/sections/204038798-Getting-Started>`__
-- `How do I send currency? <https://decentral.zendesk.com/hc/en-us/articles/217873878-How-do-I-send-currency->`_
-- `How do I receive currency? <https://decentral.zendesk.com/hc/en-us/articles/218364217-How-do-I-receive-currency->`_
+- `Getting started <https://support.decentral.ca/hc/en-us/sections/204038798-Getting-Started>`__
 
 .. figure:: img/jaxx-wallet.png
    :width: 400px
@@ -649,7 +644,7 @@ Installation
    :width: 200px
    :target: https://play.google.com/store/apps/details?id=com.kurewallet
 
-KurePay is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.btcc.wallet>`__.
+KurePay is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.kurewallet>`__.
 
 Documentation
 -------------
@@ -718,13 +713,13 @@ Installation
 
 .. image:: img/google-play-badge.png
    :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.btcc.wallet
+   :target: https://play.google.com/store/apps/details?id=com.btcc.mobiwallet
 
 .. image:: img/app-store.png
    :width: 180px
    :target: https://apps.apple.com/app/id1180017272
 
-Mobi is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.btcc.wallet>`__ 
+Mobi is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.btcc.mobiwallet>`__ 
 and the `Apple App Store for iOS <https://apps.apple.com/app/id1180017272>`__.
 
 Documentation
@@ -901,12 +896,12 @@ Trust.
 VegaWallet
 ==========
 
-https://vegawallet.com
+https://www.vegawallet.com
 
 .. image:: img/vegawallet.png
    :width: 200px
    :align: right
-   :target: https://vegawallet.com
+   :target: https://www.vegawallet.com
 
 VegaWallet offers a secure multi-asset, multi-currency wallet with
 support for Dash InstantSend and multi-signature wallets. The wallet
@@ -924,17 +919,19 @@ Installation
    :width: 180px
    :target: https://apps.apple.com/app/id1449594992
 
-VegaWallet desktop wallets are available from https://vegawallet.com for
-macOS and Windows. VegaWallet is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.vegawallet.in>`__ 
+VegaWallet desktop wallets are available from https://www.vegawallet.com
+for macOS and Windows. VegaWallet is also available from the 
+`Google Play Store for Android <https://play.google.com/store/apps/details?id=com.vegawallet.in>`__ 
 and the `Apple App Store for iOS <https://apps.apple.com/app/id1449594992>`__.
 
 Documentation
 -------------
 
-VegaWallet maintains a `FAQ <https://vegawallet.com/faq.html>`__ and a
-`Telegram group <https://t.me/VegaWalletSupport>`_ for support. The team
-also responds to support queries by email at 
-`support@vegawallet.com <support@vegawallet.com>`__
+VegaWallet maintains a `FAQ
+<https://www.vegawallet.com/pages/faq.html>`__ and a `Telegram group
+<https://t.me/VegaWalletSupport>`_ for support. The team also responds
+to support queries by email at `support@vegawallet.com
+<support@vegawallet.com>`__
 
 .. figure:: img/vegawallet-wallet.png
    :width: 200px

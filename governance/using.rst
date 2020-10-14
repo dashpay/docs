@@ -157,14 +157,14 @@ first step, you must enter a short, clear and unique name for the
 proposal as it will appear on the blockchain. Proposal names are limited
 to 40 characters. You can then provide a link to the forum or
 DashCentral where your proposal is described in more detail (use a `URL
-shortening service <https://goo.gl>`_ if necessary), as well as select
-the amount of payment you are requesting, how often the payment should
-occur, and the superblock date on which you are requesting payment. This
-allows you to control in which budget period your proposal will appear,
-and gives you enough time to build support for your proposal by
-familiarising voters with your project. Note that the payment amount is
-fixed and cannot be modified after it has been submitted to the
-blockchain.
+shortening service <https://bitly.com>`_ if necessary), as well as
+select the amount of payment you are requesting, how often the payment
+should occur, and the superblock date on which you are requesting
+payment. This allows you to control in which budget period your proposal
+will appear, and gives you enough time to build support for your
+proposal by familiarising voters with your project. Note that the
+payment amount is fixed and cannot be modified after it has been
+submitted to the blockchain.
 
 .. image:: img/proposal-create.png
    :width: 300px

@@ -98,10 +98,10 @@ Integration notes:
    section of the dash developer reference for additional detail on
    these data types, e.g. <variable int>.
 
-5. `InstantSend <https://docs.dash.org/en/stable/integration/technical.html#instantsend>`__ 
-   status and Payload JSON (e.g. ``proRegTx``) is included in the 
-   JSON-RPC response, please note that this data is not part of the
-   calculated hash and is provided for convenience.
+5. :ref:`InstantSend <integration-instantsend>` status and Payload JSON
+   (e.g. ``proRegTx``) is included in the JSON-RPC response, please note
+   that this data is not part of the calculated hash and is provided for
+   convenience.
 
 See the `v0.13.0 transaction types integration documentation (PDF) <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__
 for worked examples of each transaction type.
@@ -293,7 +293,7 @@ domain.
   WebSocket and WebHook Callbacks as well as Payment Forwarding.
   BlockCypher does not handle Private Keys.
 - Pricing Model: Per API Call, 5000 Requests -> $85.00 per month
-  (https://accounts.blockcypher.com/plans)
+  (https://accounts.blockcypher.com)
 - Documentation: https://www.blockcypher.com/dev/dash/
 
 
@@ -314,7 +314,7 @@ Dash InstantSend is available.
 - Features: Multi-Signature HD Wallets, Wallet Operations, WebSocket and
   WebHook Notifications, Custody Solutions
 - Pricing Model: Per API Call
-- Documentation: https://www.bitgo.com/api/v2/
+- Documentation: https://app.bitgo.com/docs/
 
 ChainRider
 ----------
@@ -332,7 +332,7 @@ currency management and exploration.
 - Features: Blockchain queries, Event Notifications, Transaction
   Broadcast, Payment Processing, etc.
 - Pricing Model: Free trial, pay per API call
-- Documentation: https://www.chainrider.io/docs/dash
+- Documentation: https://www.chainrider.io/docs/dash/
 
 
 Blockmove
@@ -488,8 +488,8 @@ within a single library, including management and signing of your
 documents.
 
 - Platform: NodeJS / Javascript
-- Documentation: https://dashevo.github.io/DashJS
-- Repository: https://github.com/dashevo/DashJS
+- Documentation: https://dashevo.github.io/js-dash-sdk/
+- Repository: https://github.com/dashevo/js-dash-sdk
 
 PHP: Bitcoin-PHP
 ----------------
@@ -500,7 +500,7 @@ Bitcoin-PHP is an implementation of Bitcoin with support for Dash using
 mostly pure PHP.
 
 - Platform: PHP
-- Documentation: https://github.com/Bit-Wasp/bitcoin-php/blob/master/doc/Introduction.md
+- Documentation: https://github.com/Bit-Wasp/bitcoin-php/blob/1.0/doc/documentation/Introduction.md
 - Repository: https://github.com/snogcel/bitcoin-php
 
 Python: PyCoin
@@ -523,9 +523,9 @@ Java: DashJ
 .. image:: img/bitcoinj.png
    :width: 200px
    :align: right
-   :target: https://github.com/HashEngineering/dashj 
+   :target: https://github.com/dashevo/dashj
 
-https://github.com/HashEngineering/dashj 
+https://github.com/dashevo/dashj
 
 DashJ is a library for working with the Dash protocol. It can maintain a
 wallet, send/receive transactions (including InstantSend) without
@@ -534,8 +534,8 @@ It's implemented in Java but can be used from any JVM compatible
 language: examples in Python and JavaScript are included.
 
 - Platform: Java
-- Documentation: https://bitcoinj.github.io/getting-started
-- Repository: https://github.com/HashEngineering/dashj
+- Documentation: https://bitcoinj.org/getting-started
+- Repository: https://github.com/dashevo/dashj
 - Example application: https://github.com/tomasz-ludek/pocket-of-dash
 
 Objective-C: Dash-Sync
@@ -572,7 +572,7 @@ Proposals (DIPs). It also provides low level access to Dash primitives
 so you can easily build your application on top of it.
 
 - Platform: .NET
-- Documentation: https://programmingblockchain.gitbooks.io/programmingblockchain/content/ 
+- Documentation: https://programmingblockchain.gitbook.io/programmingblockchain/
 - Repository: https://github.com/MetacoSA/NBitcoin
 - See also: `JSON-RPC Utilities <https://github.com/cryptean/bitcoinlib>`__
 
@@ -624,7 +624,7 @@ Price Tickers
 
 You can add a simple price ticker widget to your website using the
 simple `code snippet generator from CoinGecko
-<https://www.coingecko.com/en/widgets/ticker/dash/usd>`_.
+<https://www.coingecko.com/en/widgets/coin_ticker_widget>`_.
 
 .. raw:: html
 

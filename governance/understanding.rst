@@ -222,7 +222,7 @@ are broadcast and the budget is allocated soon after in a superblock.
 
 Once passed, proposals are able to report back to the network on the
 `Dash Forum <https://www.dash.org/forum/topic/approved-proposals-
-updates-news.140>`__ or via published public channels and social media.
+updates-news.140/>`__ or via published public channels and social media.
 Since it is possible to create proposals that pay out over several
 months, it is also possible to revoke funding from a project by changing
 the vote if development or spending of already allocated funds is
@@ -243,7 +243,7 @@ for to view progress on proposal voting.
 
    Monitoring budget allocation on Dash Nexus
 
-Finally, `Dash Watch <http://dashwatch.org>`__ (which was itself funded
+Finally, `Dash Watch <https://dashwatch.org>`__ (which was itself funded
 through a budget proposal) exists to monitor the ability of blockchain
 contractors to deliver on their promises with respect to delivery dates
 and the total amounts of budget allocated over multiple voting periods.
@@ -254,7 +254,7 @@ performance of your proposal to Dash Watch is optional, many masternode
 owners take advantage of the data they make available to make their
 voting decisions. The Dash Watch team may be contacted at
 team@dashwatch.org email address or through their `website
-<http://dashwatch.org>`__.
+<https://dashwatch.org>`__.
 
 .. figure:: img/governance-dashwatch.png
    :width: 400px

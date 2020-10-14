@@ -190,7 +190,7 @@ PrivateSend Legal Position
 
 Dash’s transaction rules are identical to Bitcoin, and therefore for
 regulatory and compliance purposes Dash can and should be treated
-identically to Bitcoin. `BlockchainIntel <https://blockchainintel.com/>`__
+identically to Bitcoin. `BlockchainIntel <https://www.blockchainintel.com/>`__ 
 and `Coinfirm <https://www.coinfirm.com/>`__ are KYC/AML service
 providers that offer services covering the Dash blockchain.
 
@@ -286,6 +286,6 @@ Dash ATM Compliance Program
    - `Suspicious Activity Report <https://github.com/dashpay/docs/raw/master/binary/SAR_job%20aid_DASH.pdf>`_
 
 #. If you would now like to move forward with your project, we recommend
-   getting in contact with `Cogent Law <http://www.cogentlaw.co>`_, our
+   getting in contact with `Cogent Law <https://www.cogentlaw.co>`_, our
    recommended legal counsel. Preferential rates are available for Dash
    users. Please email: atoulon@cogentlaw.co

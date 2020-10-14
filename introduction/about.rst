@@ -111,4 +111,4 @@ The Dash Roadmap sets out delivery milestones for future releases of
 Dash and includes specific technical details describing how the
 development team plans to realise each challenge.
 
-- `Dash Roadmap <https://www.dash.org/roadmap>`_
+- `Dash Roadmap <https://www.dash.org/roadmap/>`_

@@ -37,7 +37,7 @@ key, Trezor claims to use a number of clever tricks to maintain security
 even on compromised and unsafe machines.
 
 - Site: https://trezor.io
-- Review: https://www.dashforcenews.com/trezor-hardware-wallet-review
+- Review: https://dashnews.org/trezor-hardware-wallet-review/
 - Shop: https://shop.trezor.io
 - Wallet: https://wallet.trezor.io
 
@@ -48,7 +48,7 @@ Getting Started
 ---------------
 
 Once you have bought your Trezor from https://shop.trezor.io or an
-`authorized reseller <https://trezor.io/resellers>`_, you will need a
+`authorized reseller <https://trezor.io/resellers/>`_, you will need a
 wallet to use it with. Trezor supports the following Dash wallets:
 
 - `Trezor Wallet <https://wallet.trezor.io>`_ (`documentation
@@ -179,8 +179,7 @@ only appear when you enter your passphrase. Since the passphrase acts as
 a cryptographic salt, there is no "correct" passphrase - a different
 wallet will be displayed for each passphrase you enter. Be absolutely
 sure you understand passphrases before using them. For more information,
-see `here <https://blog.trezor.io/hide-your-trezor-wallets-with-
-multiple-passphrases-f2e0834026eb>`_.
+see `here <https://blog.trezor.io/passphrase-the-ultimate-protection-for-your-accounts-3a311990925b>`_.
 
 Changing your PIN
 """""""""""""""""
@@ -267,8 +266,7 @@ can be damaged by pressure or water, for example. For this reason, Dash
 community member tungfa has shared photos of a custom-made Trezor case.
 The following materials are required:
 
-- `Pelican Case 1010 Micro Case <http://www.pelican.com/us/en/product
-  /watertight-protector-hard-cases/micro-case/standard/1010/>`_
+- `Pelican Case 1010 Micro Case <https://www.pelican.com/us/en/product/cases/micro/1010>`_
 - Foam
 - Trezor + Cable
 - USB Stick (for wallet.dat files + blockchains of all portfolios)
@@ -297,10 +295,10 @@ has supported Dash since firmware version 4.2.10, released on March 28,
 released on September 5, 2018. Follow these instructions to begin using
 Dash on your KeepKey device.
 
-- Site: https://www.keepkey.com
-- Review: https://coincentral.com/keepkey-wallet-review
+- Site: https://shapeshift.com/keepkey
+- Review: https://coincentral.com/keepkey-wallet-review/
 - Shop: https://keepkey.myshopify.com/
-- Product video: https://vimeo.com/133811189
+- Product video: https://vimeo.com/289712840
 
 It is also possible to operate a Dash masternode using your KeepKey. See
 here for details.
@@ -314,15 +312,16 @@ Ledger
 
 Founded in 2014, French startup `Ledger <https://www.ledger.com>`_
 markets enterprise and consumer blockchain security solutions, including
-the €58 `Ledger Nano S <https://www.ledger.com/products/ledger-nano-s>`_ and upcoming `Ledger Blue
-<https://www.ledger.com/products/ledger-blue>`_. Ledger Nano S has
-supported Dash since November 2016 and firmware version 1.2. Follow
-`these instructions
-<https://support.ledger.com/hc/en-us/articles/115005308185-Dash-DASH->`_ to add Dash support to the device.
+the €58 `Ledger Nano S <https://shop.ledger.com/products/ledger-nano-s>`_
+and upcoming `Ledger Blue <https://shop.ledger.com/products/ledger-blue>`_. 
+Ledger Nano S has supported Dash since November 2016 and firmware
+version 1.2. Follow `these instructions 
+<https://support.ledger.com/hc/en-us/articles/115005308185-Dash-DASH->`_
+to add Dash support to the device.
 
 - Site: https://www.ledger.com
-- Review: https://www.dashforcenews.com/ledger-nano-s-review
-- Shop: https://www.ledger.com/collections/all-products
+- Review: https://dashnews.org/ledger-nano-s-review/
+- Shop: https://shop.ledger.com/collections/all-products
 
 Product video:
 

@@ -53,7 +53,7 @@ technical assistance, it is best to ask in a public channel/forum or go
 to https://support.dash.org and open a ticket. If you engage in personal
 chat with a well-known community member, verify their identity by their
 chat history or through their publicly available cryptographic keys. All
-community members and `Dash Core Group staff <https://dash.org/team>`__
+community members and `Dash Core Group staff <https://www.dash.org/team/>`__
 will be able to verify their identity using signed PGP messages.
 Identities can also be verified on Keybase:
 
@@ -104,12 +104,12 @@ Please report these and any others scams you encounter as follows:
 #. Look up the registrar of the domain and send a complaint: 
    https://www.whois.com/whois
 #. Report phishing to Netcraft: https://www.netcraft.com
-#. Report scams to the BadBitcoin Project: http://www.badbitcoin.org
+#. Report scams to the BadBitcoin Project: https://www.badbitcoin.org
 #. If in doubt, use Crypto Scam Checker to see if already report and 
-   report there as well: https://fried.com/crypto-scam-checker
+   report there as well: https://fried.com/crypto-scam-checker/
 
 Feel free to report any new scams you find on the forum in our "swat
-team" thread: https://dashtalk.org/threads/www-dash-wallet-com-is-a-scam-website.8267
+team" thread: https://www.dash.org/forum/threads/www-dash-wallet-com-is-a-scam-website.8267/
 
 
 Ponzi Schemes
@@ -126,7 +126,7 @@ losing money to the originators of the scheme.
 
 - `What is a Pyramid Scheme? <https://www.forbes.com/sites/investopedia/2014/03/18/what-is-a-pyramid-scheme/#3d9cd9947311>`_
 - `How to spot a Ponzi Scheme <https://www.which.co.uk/consumer-rights/advice/how-to-spot-a-pyramid-scheme>`_
-- `BehindMLM - News and blog about Ponzi schemes <http://behindmlm.com>`_
+- `BehindMLM - News and blog about Ponzi schemes <https://behindmlm.com>`_
 
 .. raw:: html
 
@@ -140,15 +140,14 @@ above for scam websites!
 List of known Ponzi schemes (there are many more - stay vigilant!):
 
 OneCoin
-  - http://themerkle.com/dr-ruja-flees-sinking-ship-as-regulators-crack-down-on-onecoin/
-  - http://siliconangle.com/blog/2016/09/29/dodgy-cryptocurrency-onecoin-under-police-investigation-accused-of-being-a-ponzi-scheme/
+  - https://themerkle.com/dr-ruja-flees-sinking-ship-as-regulators-crack-down-on-onecoin/
+  - https://siliconangle.com/2016/09/29/dodgy-cryptocurrency-onecoin-under-police-investigation-accused-of-being-a-ponzi-scheme/
   - https://cointelegraph.com/news/one-coin-much-scam-onecoin-exposed-as-global-mlm-ponzi-scheme
-  - http://www.makemoneyexpert.com/online/network-marketing/reviews/onecoin/
+  - https://www.makemoneyexpert.com/online/network-marketing/reviews/onecoin/
   - https://pageone.ng/2016/11/05/beware-onecoin-ponzi-scheme/
 
 SwissCoin
-  - http://behindmlm.com/mlm-reviews/swisscoin-review-25-to-15000-eur-ponzi-points-investment/
-  - http://ethanvanderbuilt.com/2017/01/26/swisscoin-scam-warning/
+  - https://behindmlm.com/mlm-reviews/swisscoin-review-25-to-15000-eur-ponzi-points-investment/
   - https://news.bitcoin.com/dissecting-swisscoin-cryptocurrency-ponzi-horizon/
 
 The Billion Coin
@@ -156,26 +155,22 @@ The Billion Coin
   - https://coins.newbium.com/post/728-scam-alert-the-billion-coins-scam-ponzi-scheme
   - https://bitcointalk.org/index.php?topic=1592288.0
 
-Sustaincoin
-  - http://www.scamvoid.com/check/sustaincoin.com
-
 E-Dinar
-  - http://behindmlm.com/mlm-reviews/e-dinar-review-edr-unit-ponzi-points-cryptocurrency/
+  - https://behindmlm.com/mlm-reviews/e-dinar-review-edr-unit-ponzi-points-cryptocurrency/
   - https://www.scam.com/showthread.php?714218-E-dinar-coin
   - https://bitcointalk.org/index.php?topic=1569896.0
 
 DasCoin
-  - http://behindmlm.com/mlm-reviews/coin-leaders-review-dascoin-is-a-onecoin-ponzi-points-clone/
+  - https://behindmlm.com/mlm-reviews/coin-leaders-review-dascoin-is-a-onecoin-ponzi-points-clone/
   - https://bitcointalk.org/index.php?topic=1636850.0
 
 BitConnect
   - https://www.reddit.com/r/Bitconnect/comments/76fa9k/bitconnect_investigated_as_a_ponzi_scheme/
   - https://www.youtube.com/watch?v=6fujWfmgRJU
-  - http://www.binaryoptionsarmy.com/2017/11/bitconnect-scam-review/
   - https://satoshiwatch.com/hall-of-shame/bitconnect-coin/
 
 HashOcean
-  - http://themerkle.com/bitcoin-scam-risk-warning-hashocean/
+  - https://themerkle.com/bitcoin-scam-risk-warning-hashocean/
 
 CryptoDouble
-  - http://themerkle.com/bitcoin-hyip-ponzi-scheme-alert-coindouble/
+  - https://themerkle.com/bitcoin-hyip-ponzi-scheme-alert-coindouble/

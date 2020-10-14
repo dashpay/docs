@@ -38,7 +38,7 @@ and electricity. The following links provide up to date information:
 
 - `Hashrate <https://bitinfocharts.com/comparison/dash-hashrate.html>`_
 - `Mining difficulty <https://bitinfocharts.com/comparison/dash-difficulty.html>`_
-- `Profitability calculation tool <https://www.coinwarz.com/calculators/dash-mining-calculator>`_
+- `Profitability calculation tool <https://www.coinwarz.com/mining/dash/calculator>`_
 
 Masternodes vs. Mining
 ======================
@@ -82,8 +82,6 @@ funds are not locked in any way. However, if the funds are moved or
 spent, the associated masternode will go offline and stop receiving
 rewards.
 
-.. _mining-pools:
-
 Mining Pools
 ============
 
@@ -113,13 +111,13 @@ to using a typical mining pool can be found :ref:`here <mining-pools>`.
 - https://dash.miningpoolhub.com
 - https://www.multipool.us
 - https://www.f2pool.com
-- https://www2.coinmine.pl/dash
-- https://aikapool.com/dash
+- https://www2.coinmine.pl/dash/
+- https://aikapool.com/dash/
 - https://www.antpool.com
 - https://avalon-life.io
 - https://www.genesis-mining.com
 - https://www.viabtc.com
-- http://zpool.ca
+- https://zpool.ca
 
 DISCLAIMER: This list is provided for informational purposes only.
 Services listed here have not been evaluated or endorsed by the Dash
@@ -157,7 +155,7 @@ more optimized miners do exist, so we advise you to keep an eye out on
 mining sites such as these in order to keep up with the latest
 information and releases.
 
-- `Crypto Mining Blog <http://cryptomining-blog.com/>`_
+- `Crypto Mining Blog <https://cryptomining-blog.com/>`_
 - `Dash Forum Mining Discussions <https://www.dash.org/forum/topic/mining.3/>`_
 - `Bitcoin Talk Altcoin Mining Discussions <https://bitcointalk.org/index.php?board=160.0>`_
 
@@ -171,7 +169,7 @@ miner for modern CPUs can be found here:
 
 This software depends on your CPU supporting the AES-NI and AVX
 instruction sets. You can use `CPU-Z
-<http://www.cpuid.com/softwares/cpu-z.html>`_ to check if this is the
+<https://www.cpuid.com/softwares/cpu-z.html>`_ to check if this is the
 case for your CPU:
 
 .. figure:: img/cpu-z.png
@@ -291,7 +289,7 @@ technology can change rapidly, so we advise you to keep an eye out on
 mining sites such as these in order to keep up with the latest
 information and releases.
 
-- `Crypto Mining Blog <http://cryptomining-blog.com/>`_
+- `Crypto Mining Blog <https://cryptomining-blog.com/>`_
 - `Dash Forum Mining Discussions <https://www.dash.org/forum/topic/mining.3/>`_
 - `Bitcoin Talk Altcoin Mining Discussions <https://bitcointalk.org/index.php?board=160.0>`_
 
@@ -455,13 +453,13 @@ obsolete due to the increase in difficulty on the network.
 +=======================================================================================================+================+========+=========+=================+
 | `Baikal BK-X <https://www.baikalminer.com/product09.php>`_                                            | 10 GH/s ±5%    | 800 W  | 3.8 kg  | 312 x 125 x 130 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `Baikal Mini <http://www.baikalminer.com/>`_                                                          | 150 MH/s ±10%  | 40 W   | .475 kg | 140 x 100 x 95  |
+| `Baikal Mini <https://www.baikalminer.com/>`_                                                         | 150 MH/s ±10%  | 40 W   | .475 kg | 140 x 100 x 95  |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `Baikal Giant+ A2000 <http://www.baikalminer.com/product06.php>`_                                     | 2000 MH/s ±10% | 430 W  | 3 kg    | 300 x 140 x 125 |
+| `Baikal Giant+ A2000 <https://www.baikalminer.com/product06.php>`_                                    | 2000 MH/s ±10% | 430 W  | 3 kg    | 300 x 140 x 125 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `Baikal Giant A900 <http://baikalminer.com/>`_                                                        | 900 MH/s ±5%   | 217 W  | 2.5 kg  | 300 x 123 x 123 |
+| `Baikal Giant A900 <https://www.baikalminer.com/>`_                                                   | 900 MH/s ±5%   | 217 W  | 2.5 kg  | 300 x 123 x 123 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `Baikal Quad Cube <http://www.baikalminer.com/>`_                                                     | 1200 MH/s ±10% | 300 W  | 3 kg    | 135 x 135 x 425 |
+| `Baikal Quad Cube <https://www.baikalminer.com/>`_                                                    | 1200 MH/s ±10% | 300 W  | 3 kg    | 135 x 135 x 425 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
 | `Bitmain Antminer D3 <https://shop.bitmain.com/product/detail?pid=000201810311345082643S60TX7I0609>`_ | 17 GH/s ±5%    | 970 W  | 6.5 kg  | 320 x 130 x 190 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
@@ -471,19 +469,19 @@ obsolete due to the increase in difficulty on the network.
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
 | `iBelink DM22G <https://ibelink.co/product/ibelink-dm22g-x11dash-miner-with-22-ghs-hash-rate/>`_      | 22 GH/s ±5%    | 810 W  | 19 kg   | 490 x 350 x 180 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `Pinidea DR-1 <https://shop.pinidea.io/index.php/product/asic-x11-miner-dr-1/>`_                      | 500 MH/s ±10%  | 320 W  | 4.5 kg  | 290 x 130 x 150 |
+| Pinidea DR-1                                                                                          | 500 MH/s ±10%  | 320 W  | 4.5 kg  | 290 x 130 x 150 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `Pinidea DR-2 <https://shop.pinidea.io/index.php/product/asic-x11-miner-dr2/>`_                       | 450 MH/s ±5%   | 335 W  | 4.5 kg  | 200 x 165 x 135 |
+| Pinidea DR-2                                                                                          | 450 MH/s ±5%   | 335 W  | 4.5 kg  | 200 x 165 x 135 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `Pinidea DR-3 <https://shop.pinidea.io/index.php/product/asic-x11-miner-dr3/>`_                       | 600 MH/s ±5%   | 345 W  | 4.5 kg  | 200 x 165 x 135 |
+| Pinidea DR-3                                                                                          | 600 MH/s ±5%   | 345 W  | 4.5 kg  | 200 x 165 x 135 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `Pinidea DU-1 <https://shop.pinidea.io/index.php/product/asic-x11-miner-du-1/>`_                      | 9 MH/s ±5%     | 7 W    |         | 50 x 50 x 30    |
+| Pinidea DU-1                                                                                          | 9 MH/s ±5%     | 7 W    |         | 50 x 50 x 30    |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `Pinidea DRX-Kuznetsov <https://shop.pinidea.io/index.php/product/asic-x11-miner-drx-kuznetsov/>`_    | 900 MH/s ±5%   | 650 W  |         | 280 x 180 x 150 |
+| Pinidea DRX-Kuznetsov                                                                                 | 900 MH/s ±5%   | 650 W  |         | 280 x 180 x 150 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `Pinidea DRX-Varyag <https://shop.pinidea.io/index.php/product/asic-x11-miner-drx-varyag/>`_          | 1200 MH/s ±5%  | 850 W  |         | 280 x 180 x 150 |
+| Pinidea DRX-Varyag                                                                                    | 1200 MH/s ±5%  | 850 W  |         | 280 x 180 x 150 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
 | `iBelink DM56G <https://ibelink.co/product/ibelink-dm56g-x11-dash-miner-with-56-gh-s-hash-rate/>`_    | 56 GH/s ±5%    | 2100 W | 17 kg   | 490 x 390 x 180 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `Innosilicon A5 <http://www.innosilicon.com/html/a5-miner/index.html>`_                               | 32 GH/s ±8%    | 750 W  | 3.1 kg  | 400 x 135 x 158 |
+| `Innosilicon A5 <https://www.innosilicon.com/html/a5-miner/index.html>`_                              | 32 GH/s ±8%    | 750 W  | 3.1 kg  | 400 x 135 x 158 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+

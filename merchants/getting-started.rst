@@ -20,20 +20,17 @@ in Dash and enjoy the following benefits:
 - Advanced privacy for both customers and merchants
 - Lowest fees in the industry
 
-A three-part course on why Dash is a popular choice for payments and how
-integration takes place is available in English and Spanish on
-`DashAcademy.com <http://www.dashacademy.com>`_. To get started with an
-integration in your sales system, simply select an online or point of
-sale payment solution from the lists below. If you are unsure, GoCoin is
-a popular choice due its support for :ref:`InstantSend <instantsend>`,
-while CoinPayments supports the largest range of online shop software.
-Anypay is an incredibly simple solution for retail stores, and also
-supports InstantSend. Larger integrations may require some customisation
-or cooperation with a specialist payment processor such as `ePaymints
-<http://epaymints.com>`__. This documentation also describes the
+To get started with an integration in your sales system, simply select
+an online or point of sale payment solution from the lists below. If you
+are unsure, GoCoin is a popular choice due its support for
+:ref:`InstantSend <instantsend>`, while CoinPayments supports the
+largest range of online shop software. Anypay is an incredibly simple
+solution for retail stores, and also supports InstantSend. Larger
+integrations may require some customisation or cooperation with a
+specialist payment processor such as `ePaymints
+<https://epaymints.com/>`__. This documentation also describes the
 :ref:`administrative <merchants-administrative>` and  :ref:`technical
-<integration>` steps required to integrate various Dash
-services.
+<integration>` steps required to integrate various Dash services.
 
 Any Dash received in payment can be automatically converted to the fiat
 currency of your choice using services such as `Uphold
@@ -113,9 +110,9 @@ Coinify
   .. image:: img/coinify.png
      :width: 200px
      :align: right
-     :target: https://coinify.com
+     :target: https://www.coinify.com
 
-  https://coinify.com
+  https://www.coinify.com
 
   Coinify offers a variety of two-way virtual currency services tailored
   to businesses and customers of different sizes and needs. A simple,
@@ -192,39 +189,26 @@ ePaymints
   .. image:: img/epaymints.png
      :width: 200px
      :align: right
-     :target: http://epaymints.com
+     :target: https://epaymints.com/
 
-  http://epaymints.com
+  https://epaymints.com
 
   ePaymints specializes in highly customized payment processing for high
   risk merchant accounts in industries challenged with high levels of
   chargebacks.
 
 
-Festy
-  .. image:: img/festy.png
-     :width: 200px
-     :align: right
-     :target: https://www.festy.ie
-
-  https://www.festy.ie
-
-  Festy is a data monetisation platform used for payments, ticketing and
-  events. Festy allows you to accept cryptocurrencies at festivals using
-  innovative card or NFC wristbands.
-
-
-GB CortexPay
+GB CAS
   .. image:: img/gbcortexpay.png
      :width: 80px
      :align: right
-     :target: https://www.generalbytes.com/pos
+     :target: https://www.generalbytes.com/en/products/cas-server
 
-  https://www.generalbytes.com/pos
+  https://www.generalbytes.com/en/products/cas-server
 
   Take the professional approach and start accepting Dash with a
-  dedicated CortexPay terminal. his terminal can also be used to sell
-  Dash to clients visiting your location.
+  dedicated CortexPay terminal and GB CAS. This software can also be
+  used to sell Dash to clients visiting your location.
 
 
 GoCoin
@@ -277,18 +261,6 @@ NOWPayments
   NOWPayments is an easy way to accept cryptocurrency payments with
   native integration into your platform or a neat widget. Auto coin
   conversion keeps you safe from any dramatic rate fluctuations.
-
-
-Paybyte
-  .. image:: img/paybyte.png
-     :width: 200px
-     :align: right
-     :target: https://paybyte.io
-
-  https://paybyte.io
-
-  Paybyte allows you to accept cryptocurrency payments through an API or
-  payment buttons for a flat monthly fee.
 
 
 Paytomat
@@ -399,7 +371,7 @@ Dash. This guide assumes you have already `installed Wordpress
 <https://codex.wordpress.org/Installing_WordPress>`_, `installed
 WooCommerce <https://docs.woocommerce.com/document/installing-
 uninstalling-woocommerce/>`_ and `created at least one product
-<https://docs.woocommerce.com/document/managing-products>`_ in your
+<https://docs.woocommerce.com/document/managing-products/>`_ in your
 store.
 
 Go to the `gocoin-woocommerce GitHub Releases page
@@ -468,7 +440,7 @@ accepting Dash. This guide assumes you have already `installed Wordpress
 <https://codex.wordpress.org/Installing_WordPress>`_, `installed
 WooCommerce <https://docs.woocommerce.com/document/installing-
 uninstalling-woocommerce/>`_ and `created at least one product
-<https://docs.woocommerce.com/document/managing-products>`_ in your
+<https://docs.woocommerce.com/document/managing-products/>`_ in your
 store. A `video <https://www.youtube.com/watch?v=Xa2o_8s3RNY>`_ of the
 process to install the CoinPayments payment processor is also available.
 
@@ -476,10 +448,10 @@ In your WordPress administration backend, select **Plugins -> Add New**
 and type "coinpayments.net" into the search box. A plugin named
 **CoinPayments.net Payment Gateway for WooCommerce** should appear.
 Click **Install Now** to install the plugin. Alternatively, you can
-`download the plugin <https://wordpress.org/plugins/coinpayments-
-payment-gateway-for-woocommerce>`_ from the WordPress website as a zip
-file and upload it using the **Upload Plugin** button. Once the plugin
-is installed, click **Activate** to begin configuration.
+`download the plugin <https://wordpress.org/plugins/coinpayments-payment-gateway-for-woocommerce/>`_ 
+from the WordPress website as a zip file and upload it using the
+**Upload Plugin** button. Once the plugin is installed, click
+**Activate** to begin configuration.
 
 .. figure:: img/coinpayments-plugin.png
    :width: 400px
@@ -532,7 +504,7 @@ administration section. See the `CoinPayments Documentation
 Point-of-Sale with Anypay
 -------------------------
 
-`Anypay.global <http://anypay.global>`_ allows you to quickly start
+`Anypay.global <https://anypayinc.com>`_ allows you to quickly start
 accepting point-of-sale payments in Dash at a physical store. The
 service functions as a simple website that you load on any internet-
 connected and touch-enabled device, such as a smartphone or tablet.
@@ -554,7 +526,7 @@ add a Dash payment withdrawal address.
    Setting up Anypay
 
 Once this has been set up, you can begin processing payments
-immediately. Simply log in to https://pos.anypay.global or tap
+immediately. Simply log in to https://app.anypayinc.com or tap
 **Merchant Point of Sale App** in the admin area using your device. A
 keypad will appear. Enter the invoice amount in USD or DASH and press
 the **COLLECT** button at the bottom of the screen. The app will

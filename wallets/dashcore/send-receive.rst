@@ -98,8 +98,8 @@ appear on the Transactions tab, where you can monitor its progress.
 
    The Windows 10 sent transaction confirmation notification
 
-Note that the amount of the transaction increased by .000045 Dash. This
-is the transaction fee. In the next section, we will see what this
+Note that the amount of the transaction increased by .00003926 Dash.
+This is the transaction fee. In the next section, we will see what this
 procedure looks like from the receiving side.
 
 Receiving Dash
@@ -136,11 +136,3 @@ Once you have been paid, you can see the balance both on the
    :width: 400px
 
    The received transaction
-
-**How to Create New Receiving Addresses in DashQT**
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
-        <iframe src="//www.youtube.com/embed/BciyhumbMq8" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>

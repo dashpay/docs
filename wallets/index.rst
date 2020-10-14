@@ -89,7 +89,7 @@ Dash Electrum is a fork of the Electrum wallet for Bitcoin. While this
 documentation focuses on using Dash Electrum, full documentation of all
 Bitcoin Electrum features (mostly identical in Dash Electrum) is
 available at the `official documentation site
-<http://docs.electrum.org>`_.
+<https://docs.electrum.org>`_.
 
 .. toctree::
    :includehidden:

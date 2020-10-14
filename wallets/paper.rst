@@ -45,7 +45,7 @@ operating system to ensure that all generated data will be permanently
 wiped from memory once the process is complete.
 
 A simple method of doing this is to burn a live Linux CD. `Ubuntu
-Desktop <https://www.ubuntu.com/download/desktop>`_ is recommended
+Desktop <https://ubuntu.com/download/desktop>`_ is recommended
 because it will have the most drivers and is simple to use, while `Tails
 <https://tails.boum.org/>`_ and `Kali Linux
 <https://www.kali.org/downloads/>`_ are popular choices for extremely

@@ -88,7 +88,7 @@ WestWallet
    :width: 160px
    :align: right
 
-`WestWallet <https://westwallet.info/>`_ is a multicurrency web wallet
+`WestWallet <https://westwallet.io/>`_ is a multicurrency web wallet
 for storing, sharing and transferring the most popular cryptocurrencies.
 The wallet includes an automatable instant exchange, instant transfers
 between users and automatic withdrawal.

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 03:43+0000\n"
+"POT-Creation-Date: 2020-10-01 01:04+0000\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Daf Daf, 2020\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -410,7 +410,6 @@ msgstr ""
 "fraîchement sécurisé ::"
 
 #: ../../masternodes/setup.rst:203 ../../masternodes/setup.rst:213
-#: ../../masternodes/setup.rst:449
 msgid "(press **Y** and **Enter** to confirm)"
 msgstr "(appuyez sur **O** et **Entrée** pour confirmer)"
 
@@ -779,95 +778,51 @@ msgstr ""
 #: ../../masternodes/setup.rst:433
 msgid ""
 "Open PuTTY or a console again and connect using the username and password "
-"you just created for your new, non-root user. There are two options to "
-"install Dash Core, an automated option using a script utility called "
-"dashman, and a more complicated option which will allow you to understand "
-"all of the key steps involved in preparing your masternode."
+"you just created for your new, non-root user. The following options are "
+"available for installing a Dash masternode:"
 msgstr ""
 "Lancez une nouvelle fois PuTTY ou une console de terminal, et connectez-vous"
 " à votre VPS avec le nom d'utilisateur et le mot de passe que vous venez de "
-"créer pour votre nouvel utilisateur non-root. Il existe deux manières "
-"d'installer Dash Core sur votre VPS : une option automatisée qui utilise un "
-"utilitaire nommé Dashman, et une option plus compliquée qui vous permettra "
-"de comprendre toutes les étapes clés de la préparation d'un masternode."
+"créer pour votre nouvel utilisateur non-root. Les méthodes suivantes sont "
+"disponibles pour installer un masternode Dash :"
+
+#: ../../masternodes/setup.rst:437
+msgid "Manual installation (this guide)"
+msgstr "Guide d'installation manuelle (ce guide)"
+
+#: ../../masternodes/setup.rst:438
+msgid ""
+"`xkcd's installation guide <https://www.dash.org/forum/threads/system-wide-"
+"masternode-setup-with-systemd-auto-re-start-rfc.39460/>`__"
+msgstr ""
+"`Guide d'installation de Xkcd <https://www.dash.org/forum/threads/system-"
+"wide-masternode-setup-with-systemd-auto-re-start-rfc.39460/>`__"
+
+#: ../../masternodes/setup.rst:439
+msgid ""
+"`dashman installation "
+"<https://docs.dash.org/en/0.15.0/masternodes/setup.html#option-1-automated-"
+"installation-using-dashman>`__ (deprecated)"
+msgstr ""
+"`Installation par Dashman "
+"<https://docs.dash.org/en/0.15.0/masternodes/setup.html#option-1-automated-"
+"installation-using-dashman>`__ (obsolète)"
 
 #: ../../masternodes/setup.rst:440
-msgid "Option 1: Automated installation using dashman"
-msgstr "Option 1 : Installation automatisée avec Dashman"
-
-#: ../../masternodes/setup.rst:442
 msgid ""
-"To install Dash using dashman, enter the following commands after logging "
-"in::"
+"`mn-bootstrap installation <https://docs.dash.org/en/mn-"
+"bootstrap/masternodes/setup.html#install-mn-bootstrap>`__ (beta version, "
+"currently testnet only)"
 msgstr ""
-"Pour installer Dash Core avec Dashman, saisissez les commandes suivantes "
-"après vous être connecté ::"
+"`Installation mn-bootstrap <https://docs.dash.org/en/mn-"
+"bootstrap/masternodes/setup.html#install-mn-bootstrap>`__ (version beta, "
+"actuellement uniquement sur le réseau de test)"
 
-#: ../../masternodes/setup.rst:451
-msgid ""
-"dashman will download the latest version of Dash Core for your system, as "
-"well as an initial snapshot of the blockchain to speed up the bootstrapping "
-"process. Next download and install Sentinel, which is required for "
-"masternodes at version 0.12.1 or higher::"
-msgstr ""
-"Dashman téléchargera la version la plus récente de Dash Core pour votre "
-"système d'exploitation, ainsi qu'une amorce de la blockchain pour accélérer "
-"le processus de démarrage. Ensuite, téléchargez et installez Sentinel, qui "
-"est indispensable pour les masternodes de version 0.12.1 ou ultérieure :"
+#: ../../masternodes/setup.rst:443
+msgid "Manual installation"
+msgstr "Installation manuelle"
 
-#: ../../masternodes/setup.rst:458
-msgid ""
-"Your system is now running as a standard Dash node, and is busy completing "
-"synchronisation with the blockchain. Since dashman does not automatically "
-"restart your masternode in the event of a system error, add a check function"
-" to crontab to make sure it checks every minute to ensure your masternode is"
-" still running::"
-msgstr ""
-"Votre système tourne maintenant en tant que nœud Dash standard, et s'occupe "
-"d'achever la synchronisation avec la blockchain. Comme Dashman ne redémarre "
-"pas automatiquement votre masternode en cas d'erreur système, ajoutez au "
-"fichier crontab une fonction de surveillance pour vous assurer qu'il soit "
-"vérifié toutes les minutes que votre masternode tourne toujours :"
-
-#: ../../masternodes/setup.rst:466
-msgid ""
-"Choose nano as your editor and enter the following line at the end of the "
-"file, after the line for sentinel::"
-msgstr ""
-"Choisissez Nano comme éditeur de texte puis saisissez la ligne suivante à la"
-" fin du fichier, après la ligne concernant Sentinel ::"
-
-#: ../../masternodes/setup.rst:471
-msgid ""
-"Press enter to make sure there is a blank line at the end of the file, then "
-"press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
-"file. Check the sync status and wait until all blockchain synchronisation "
-"and the 15 confirmations for the collateral transaction are complete::"
-msgstr ""
-"Appuyez sur **Entrée** pour vous assurer qu'il y ait une ligne vide à la fin"
-" du fichier, puis faites la combinaison de touches **Ctrl-X** pour fermer "
-"l'éditeur de texte et appuyez sur **O** puis **Entrée** pour confirmer. "
-"Ensuite, vérifiez l'état de la synchronisation et patientez jusqu'à "
-"l'achèvement de la synchronisation de la blockchain et l'apparition de 15 "
-"confirmations pour la transaction de caution :"
-
-#: ../../masternodes/setup.rst:482
-msgid "dashman status output showing masternode ready to be registered"
-msgstr "Affichage de Dashman montrant un masternode prêt à être enregistré"
-
-#: ../../masternodes/setup.rst:484
-msgid ""
-"Continue with the :ref:`next step to register your masternode <register-"
-"masternode>`."
-msgstr ""
-"Passez à :ref:`l'étape suivante pour enregistrer votre masternode <register-"
-"masternode>`."
-
-#: ../../masternodes/setup.rst:488
-msgid "Option 2: Manual installation"
-msgstr "Option 2 : Installation manuelle"
-
-#: ../../masternodes/setup.rst:490
+#: ../../masternodes/setup.rst:445
 msgid ""
 "To manually download and install the components of your Dash masternode, "
 "visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_"
@@ -884,38 +839,34 @@ msgstr ""
 "plus récente version de Dash Core par un clic-droit, ou par la combinaison "
 "de touches **Ctrl-V** :"
 
-#: ../../masternodes/setup.rst:500
+#: ../../masternodes/setup.rst:455
 msgid ""
-"Verify the integrity of your download by running the following command and "
-"comparing the output against the value for the file as shown in the "
-"``SHA256SUMS.asc`` file::"
+"Verify the authenticity of your download by checking its detached signature "
+"against the public key published by the Dash Core development team. All "
+"releases of Dash are signed using GPG with one of the following keys:"
 msgstr ""
-"Vérifiez l'intégrité de votre téléchargement en lançant la commande suivante"
-" et en comparant sa valeur de sortie à la valeur donnée par le fichier "
-"``SHA256SUMS.asc`` ::"
+"Vérifiez l'authenticité de votre téléchargement en comparant sa signature "
+"séparée à la clé publique diffusée par l'équipe de développement Dash Core. "
+"Toutes les versions de Dash sont signées avec GPG avec une des clés "
+"suivantes :"
 
-#: ../../masternodes/setup.rst:508
+#: ../../masternodes/setup.rst:460
 msgid ""
-"You can also optionally verify the authenticity of your download as an "
-"official release by Dash Core Team. All releases of Dash are signed using "
-"GPG by Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, "
-"`verifiable here on Keybase <https://keybase.io/codablock>`_. Import the "
-"key, download the ASC file for the current release of Dash and verify the "
-"signature as follows::"
+"Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, "
+"`verifiable here on Keybase <https://keybase.io/codablock>`__"
 msgstr ""
-"Vous pouvez aussi, de manière facultative mais conseillée, vérifier "
-"l'authenticité de votre téléchargement et son caractère officiel de logiciel"
-" de l'équipe Dash Core. Tous les logiciels Dash ont une signature GPG émise "
-"par Alexander Block (codablock) avec la clé ``63A9 6B40 6102 E091``, `qu'on "
-"peut vérifier ici sur Keybase <https://keybase.io/codablock>`_. Importez la "
-"clé, téléchargez le fichier ASC pour la version la plus récente de Dash et "
-"vérifiez la signature comme ceci :"
+"Alexander Block (codablock) avec la clé ``63A9 6B40 6102 E091``, `vérifiable"
+" ici sur Keybase <https://keybase.io/codablock>`__"
 
-#: ../../masternodes/setup.rst:521
-msgid "Downloading the PGP key and verifying the signed binary"
-msgstr "Téléchargement de la clé PGP et vérification de l'exécutable signé"
+#: ../../masternodes/setup.rst:462
+msgid ""
+"Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here on "
+"Keybase <https://keybase.io/pasta>`__"
+msgstr ""
+"Pasta (pasta) avec la clé ``5252 7BED ABE8 7984``, `vérifiable ici sur "
+"Keybase <https://keybase.io/pasta>`__"
 
-#: ../../masternodes/setup.rst:523
+#: ../../masternodes/setup.rst:472
 msgid ""
 "Create a working directory for Dash, extract the compressed archive and copy"
 " the necessary files to the directory::"
@@ -923,11 +874,11 @@ msgstr ""
 "Créez un répertoire de travail pour Dash, décompressez l'archive et copiez "
 "les fichiers nécessaires dans le répertoire :"
 
-#: ../../masternodes/setup.rst:531
+#: ../../masternodes/setup.rst:480
 msgid "Create a configuration file using the following command::"
 msgstr "Créez un fichier de configuration avec la commande suivante ::"
 
-#: ../../masternodes/setup.rst:535
+#: ../../masternodes/setup.rst:484
 msgid ""
 "An editor window will appear. We now need to create a configuration file "
 "specifying several variables. Copy and paste the following text to get "
@@ -939,11 +890,11 @@ msgstr ""
 "le texte suivant pour démarrer, puis remplacez les variables propres à votre"
 " configuration, comme suit ::"
 
-#: ../../masternodes/setup.rst:553
+#: ../../masternodes/setup.rst:502
 msgid "Replace the fields marked with ``XXXXXXX`` as follows:"
 msgstr "Remplacez les champs marqués ``XXXXXXX`` comme suit :"
 
-#: ../../masternodes/setup.rst:555
+#: ../../masternodes/setup.rst:504
 msgid ""
 "``rpcuser``: enter any string of numbers or letters, no special characters "
 "allowed"
@@ -951,7 +902,7 @@ msgstr ""
 "``rpcuser`` : saisissez une chaîne alphanumérique aléatoire, sans caractères"
 " spéciaux"
 
-#: ../../masternodes/setup.rst:557
+#: ../../masternodes/setup.rst:506
 msgid ""
 "``rpcpassword``: enter any string of numbers or letters, no special "
 "characters allowed"
@@ -959,23 +910,25 @@ msgstr ""
 "``rpcpassword`` : saisissez une chaîne alphanumérique aléatoire, sans "
 "caractères spéciaux"
 
-#: ../../masternodes/setup.rst:559
+#: ../../masternodes/setup.rst:508
 msgid "``externalip``: this is the IP address of your VPS"
 msgstr "``externalip`` : il s'agit de l'adresse IP de votre VPS"
 
-#: ../../masternodes/setup.rst:561
+#: ../../masternodes/setup.rst:510
 msgid ""
 "Leave the ``masternodeblsprivkey`` field commented out for now. The result "
 "should look something like this:"
 msgstr ""
+"Laissez le champ ``masternodeblsprivkey`` commenté pour l'instant. Le "
+"résultat devrait ressembler à ça :"
 
-#: ../../masternodes/setup.rst:567
+#: ../../masternodes/setup.rst:516
 msgid "Entering key data in dash.conf on the masternode"
 msgstr ""
 "Saisie de données clés dans le fichier \"dash.conf\" sur le VPS du "
 "masternode"
 
-#: ../../masternodes/setup.rst:569
+#: ../../masternodes/setup.rst:518
 msgid ""
 "Press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
 "file. You can now start running Dash on the masternode to begin "
@@ -986,7 +939,7 @@ msgstr ""
 "lancer Dash sur le masternode pour commencer la synchronisation avec la "
 "blockchain ::"
 
-#: ../../masternodes/setup.rst:575
+#: ../../masternodes/setup.rst:524
 msgid ""
 "You will see a message reading **Dash Core server starting**. We will now "
 "install Sentinel, a piece of software which operates as a watchdog to "
@@ -996,7 +949,7 @@ msgstr ""
 " maintenant installer Sentinel, un logiciel de surveillance qui renseigne le"
 " réseau sur le bon fonctionnement de votre nœud ::"
 
-#: ../../masternodes/setup.rst:586
+#: ../../masternodes/setup.rst:535
 msgid ""
 "You will see a message reading **dashd not synced with network! Awaiting "
 "full sync before running Sentinel.** Add dashd and sentinel to crontab to "
@@ -1007,7 +960,7 @@ msgstr ""
 "Ajoutez dashd et Sentinel au fichier crontab pour vous assurer qu'il soit "
 "lancé chaque minute pour surveiller votre masternode ::"
 
-#: ../../masternodes/setup.rst:592
+#: ../../masternodes/setup.rst:541
 msgid ""
 "Choose nano as your editor and enter the following lines at the end of the "
 "file::"
@@ -1015,7 +968,7 @@ msgstr ""
 "Choisissez Nano comme éditeur de texte puis saisissez les lignes suivantes à"
 " la fin du fichier ::"
 
-#: ../../masternodes/setup.rst:598
+#: ../../masternodes/setup.rst:547
 msgid ""
 "Press enter to make sure there is a blank line at the end of the file, then "
 "press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
@@ -1031,14 +984,14 @@ msgstr ""
 "blockchain. Vous pouvez vous servir des commandes suivantes pour suivre la "
 "progression ::"
 
-#: ../../masternodes/setup.rst:607
+#: ../../masternodes/setup.rst:556
 msgid ""
 "When synchronisation is complete, you should see the following response::"
 msgstr ""
 "Quand la synchronisation est terminée, vous devriez voir le message suivant "
 "::"
 
-#: ../../masternodes/setup.rst:620
+#: ../../masternodes/setup.rst:569
 msgid ""
 "Continue with the next step to construct the ProTx transaction required to "
 "enable your masternode."
@@ -1046,11 +999,11 @@ msgstr ""
 "Passez à l'étape suivante pour composer la transaction ProTx requise pour "
 "activer votre masternode."
 
-#: ../../masternodes/setup.rst:627
+#: ../../masternodes/setup.rst:576
 msgid "Register your masternode"
 msgstr "Enregistrer votre masternode"
 
-#: ../../masternodes/setup.rst:629
+#: ../../masternodes/setup.rst:578
 msgid ""
 "DIP003 introduced several changes to how a masternode is set up and "
 "operated. These changes and the three keys required for the different "
@@ -1062,11 +1015,11 @@ msgstr ""
 "les différents rôles de masternode sont décrits brièvement dans la section "
 ":ref:`dip3-changes` de la présente documentation."
 
-#: ../../masternodes/setup.rst:636
+#: ../../masternodes/setup.rst:585
 msgid "Option 1: Registering from a hardware wallet"
 msgstr "Option 1 : Enregistrement depuis un portefeuille matériel"
 
-#: ../../masternodes/setup.rst:638
+#: ../../masternodes/setup.rst:587
 msgid ""
 "Go back to DMT and ensure that all fields from the previous step are still "
 "filled out correctly.  Click **Generate new** for the three private keys "
@@ -1077,23 +1030,23 @@ msgstr ""
 "(Générer nouveau) pour les trois clés privées requises pour un masternode "
 "déterministe DIP003 :"
 
-#: ../../masternodes/setup.rst:642
+#: ../../masternodes/setup.rst:591
 msgid "Owner private key"
 msgstr "Clé privée du propriétaire"
 
-#: ../../masternodes/setup.rst:643
+#: ../../masternodes/setup.rst:592
 msgid "Operator private key"
 msgstr "Clé privée de l'opérateur"
 
-#: ../../masternodes/setup.rst:644
+#: ../../masternodes/setup.rst:593
 msgid "Voting private key"
 msgstr "Clé privée de vote"
 
-#: ../../masternodes/setup.rst:649
+#: ../../masternodes/setup.rst:598
 msgid "Dash Masternode Tool ready to register a new masternode"
 msgstr "DashMasternodeTool prêt à enregistrer un nouveau masternode"
 
-#: ../../masternodes/setup.rst:651
+#: ../../masternodes/setup.rst:600
 msgid ""
 "Then click **Register masternode**. Optionally specify a different **Payout "
 "address** and/or **Operator reward**, then click **Continue**. Select "
@@ -1111,13 +1064,13 @@ msgstr ""
 "/config-connection-direct.md>`__ une documentation sur l'utilisation de "
 "votre propre nœud RPC local.) Confirmez les deux messages suivants :"
 
-#: ../../masternodes/setup.rst:663
+#: ../../masternodes/setup.rst:612
 msgid "Dash Masternode Tool confirmation dialogs to register a masternode"
 msgstr ""
 "Dialogues de confirmation de DashMasternodeTool pour enregistrer un "
 "masternode"
 
-#: ../../masternodes/setup.rst:665
+#: ../../masternodes/setup.rst:614
 msgid ""
 "The BLS private key must be entered in the ``dash.conf`` file on the "
 "masternode. This allows the masternode to watch the blockchain for relevant "
@@ -1134,14 +1087,17 @@ msgstr ""
 "votre masternode avec ``ssh`` ou PuTTY, puis modifiez le fichier de "
 "configuration sur votre masternode, comme suit :"
 
-#: ../../masternodes/setup.rst:674
+#: ../../masternodes/setup.rst:623
 msgid ""
 "The editor appears with the existing masternode configuration. Add or "
 "uncomment this lines in the file, replacing the key with your BLS private "
 "key generated above::"
 msgstr ""
+"L'éditeur s'affiche avec la configuration existante du masternode. Ajoutez "
+"ou décommentez cette ligne dans le fichier, en remplaçant la clé avec votre "
+"clé privée BLS générée plus tôt :"
 
-#: ../../masternodes/setup.rst:680 ../../masternodes/setup.rst:777
+#: ../../masternodes/setup.rst:629 ../../masternodes/setup.rst:725
 msgid ""
 "Press enter to make sure there is a blank line at the end of the file, then "
 "press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
@@ -1152,26 +1108,34 @@ msgid ""
 " take effect. Enter the following commands, waiting a few seconds in between"
 " to give Dash Core time to shut down::"
 msgstr ""
+"Appuyez sur **Entrée** pour vous assurer qu'il y ait une ligne vide à la fin"
+" du fichier, puis faites la combinaison de touches **Ctrl-X** pour fermer "
+"l'éditeur de texte et **O** et **Entrée** pour enregistrer le fichier. "
+"Veuillez noter qu'indiquer une ``masternodeblsprivkey`` active le mode "
+"masternode, ce qui forcera automatiquement les variables ``txindex=1``, "
+"``peerbloomfilters=1`` et ``prune=0`` nécessaires pour fournir le service de"
+" masternode. Nous devons maintenant redémarrer le masternode pour que ce "
+"changement prenne effet. Saisissez les commandes suivantes en laissant "
+"passer quelques secondes après chacune, pour laisser à Dash Core le temps de"
+" se fermer :"
 
-#: ../../masternodes/setup.rst:693
+#: ../../masternodes/setup.rst:642
 msgid ""
-"At this point you can monitor your masternode using ``~/dashman/dashman "
-"status``, by entering ``~/.dashcore/dash-cli masternode status`` or using "
-"the **Get status** function in DMT. The final result should appear as "
-"follows:"
+"At this point you can monitor your masternode by entering ``~/.dashcore"
+"/dash-cli masternode status`` or using the **Get status** function in DMT. "
+"The final result should appear as follows:"
 msgstr ""
 "Arrivé à cette étape, vous pouvez surveiller votre masternode avec la "
-"commande ``~/dashman/dashman status``, en tapant la commande ``~/.dashcore"
-"/dash-cli masternode status``, ou bien en utilisant la fonction **Get "
-"status** (Voir l'état) dans DMT. Le résultat final devrait ressembler à ceci"
-" :"
+"commande ``~/.dashcore/dash-cli masternode status``, ou bien en utilisant la"
+" fonction **Get status** (Voir l'état) dans DMT. Le résultat final devrait "
+"ressembler à ceci :"
 
-#: ../../masternodes/setup.rst:701
+#: ../../masternodes/setup.rst:649
 msgid ""
 "dash-cli masternode status output showing successfully registered masternode"
 msgstr "Message d'état de dash-cli pour un masternode enregistré avec succès"
 
-#: ../../masternodes/setup.rst:703 ../../masternodes/setup.rst:966
+#: ../../masternodes/setup.rst:651 ../../masternodes/setup.rst:908
 msgid ""
 "At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
@@ -1179,15 +1143,15 @@ msgstr ""
 "À cette étape, vous pouvez vous déconnecter de votre serveur en tapant "
 "``exit``. Félicitations ! Votre masternode est désormais fonctionnel."
 
-#: ../../masternodes/setup.rst:710
+#: ../../masternodes/setup.rst:658
 msgid "Option 2: Registering from Dash Core wallet"
 msgstr "Option 2 : Enregistrement depuis le portefeuille logiciel Dash Core"
 
-#: ../../masternodes/setup.rst:713
+#: ../../masternodes/setup.rst:661
 msgid "Identify the funding transaction"
 msgstr "Identifier la transaction de financement"
 
-#: ../../masternodes/setup.rst:715
+#: ../../masternodes/setup.rst:663
 msgid ""
 "If you used an address in Dash Core wallet for your collateral transaction, "
 "you now need to find the txid of the transaction. Click **Tools > Debug "
@@ -1198,12 +1162,12 @@ msgstr ""
 "l'identifiant de la transaction. Cliquez sur **Outils > Console de "
 "débogage** et tapez la commande suivante ::"
 
-#: ../../masternodes/setup.rst:721
+#: ../../masternodes/setup.rst:669
 msgid "This should return a string of characters similar to the following::"
 msgstr ""
 "Cela devrait vous renvoyer une chaîne de caractères analogue à celle-ci ::"
 
-#: ../../masternodes/setup.rst:727
+#: ../../masternodes/setup.rst:675
 msgid ""
 "The first long string is your ``collateralHash``, while the last number is "
 "the ``collateralIndex``."
@@ -1211,11 +1175,11 @@ msgstr ""
 "La première chaîne, longue, est votre ``collateralHash``, et le nombre à la "
 "fin est le ``collateralIndex``."
 
-#: ../../masternodes/setup.rst:734
+#: ../../masternodes/setup.rst:682
 msgid "Generate a BLS key pair"
 msgstr "Générer une paire de clés BLS"
 
-#: ../../masternodes/setup.rst:736
+#: ../../masternodes/setup.rst:684
 msgid ""
 "A public/private BLS key pair is required to operate a masternode. The "
 "private key is specified on the masternode itself, and allows it to be "
@@ -1228,7 +1192,7 @@ msgstr ""
 "qu'une transaction d'enregistrement avec la clé publique correspondante a "
 "été créée."
 
-#: ../../masternodes/setup.rst:742
+#: ../../masternodes/setup.rst:690
 msgid ""
 "If you are using a hosting service, they may provide you with their public "
 "key, and you can skip this step. If you are hosting your own masternode or "
@@ -1243,7 +1207,7 @@ msgstr ""
 "privée dans le portefeuille logiciel Dash Core en choisissant le menu "
 "**Outils > Console de débogage** et en saisissant la commande suivante :"
 
-#: ../../masternodes/setup.rst:755
+#: ../../masternodes/setup.rst:703
 msgid ""
 "**These keys are NOT stored by the wallet and must be kept secure, similar "
 "to the value provided in the past by the** ``masternode genkey`` "
@@ -1253,11 +1217,11 @@ msgstr ""
 "conservées dans un lieu sûr**, à l'image de la valeur que retournait, par le"
 " passé, la commande ``masternode genkey``."
 
-#: ../../masternodes/setup.rst:760
+#: ../../masternodes/setup.rst:708
 msgid "Add the private key to your masternode configuration"
 msgstr "Ajouter la clé privée à la configuration de votre masternode"
 
-#: ../../masternodes/setup.rst:762
+#: ../../masternodes/setup.rst:710
 msgid ""
 "The public key will be used in following steps. The private key must be "
 "entered in the ``dash.conf`` file on the masternode. This allows the "
@@ -1274,14 +1238,17 @@ msgstr ""
 "étape ci-dessous). Connectez-vous à votre masternode avec ``ssh`` ou PuTTY, "
 "puis modifiez le fichier de configuration sur votre masternode, comme suit :"
 
-#: ../../masternodes/setup.rst:771
+#: ../../masternodes/setup.rst:719
 msgid ""
 "The editor appears with the existing masternode configuration. Add or "
 "uncomment this line in the file, replacing the key with your BLS private key"
 " generated above::"
 msgstr ""
+"L'éditeur s'affiche avec la configuration existante du masternode. Ajoutez "
+"ou décommentez cette ligne dans le fichier, en remplaçant la clé avec votre "
+"clé privée BLS générée plus tôt :"
 
-#: ../../masternodes/setup.rst:790
+#: ../../masternodes/setup.rst:738
 msgid ""
 "We will now prepare the transaction used to register the masternode on the "
 "network."
@@ -1289,11 +1256,11 @@ msgstr ""
 "Nous allons maintenant préparer la transaction qui sera utilisée pour "
 "enregistrer le masternode sur le réseau."
 
-#: ../../masternodes/setup.rst:794
+#: ../../masternodes/setup.rst:742
 msgid "Prepare a ProRegTx transaction"
 msgstr "Préparer une transaction ProRegTx"
 
-#: ../../masternodes/setup.rst:796
+#: ../../masternodes/setup.rst:744
 msgid ""
 "A pair of BLS keys for the operator were already generated above, and the "
 "private key was entered on the masternode. The public key is used in this "
@@ -1303,7 +1270,7 @@ msgstr ""
 "clé privée a été entrée sur le masternode. La clé publique est utilisée dans"
 " cette transaction en tant que ``operatorPubKey``."
 
-#: ../../masternodes/setup.rst:800
+#: ../../masternodes/setup.rst:748
 msgid ""
 "First, we need to get a new, unused address from the wallet to serve as the "
 "**owner key address** (``ownerKeyAddr``). This is not the same as the "
@@ -1314,7 +1281,7 @@ msgstr ""
 "(``ownerKeyAddr``). Elle est différente de l'adresse de la caution de 1000 "
 "dashs. Générez une nouvelle adresse comme suit :"
 
-#: ../../masternodes/setup.rst:809
+#: ../../masternodes/setup.rst:757
 msgid ""
 "This address can also be used as the **voting key address** "
 "(``votingKeyAddr``). Alternatively, you can specify an address provided to "
@@ -1326,7 +1293,7 @@ msgstr ""
 "fournie par votre délégataire de vote, ou bien simplement générer une "
 "nouvelle adresse de clé de vote, comme suit :"
 
-#: ../../masternodes/setup.rst:818
+#: ../../masternodes/setup.rst:766
 msgid ""
 "Then either generate or choose an existing address to receive the **owner's "
 "masternode payouts** (``payoutAddress``). It is also possible to use an "
@@ -1337,20 +1304,27 @@ msgstr ""
 "propriétaire du masternode** (``payoutAddress``). Il est également possible "
 "d'utiliser une adresse externe au portefeuille :"
 
-#: ../../masternodes/setup.rst:826
+#: ../../masternodes/setup.rst:774
 msgid ""
 "You can also optionally generate and fund another address as the "
 "**transaction fee source** (``feeSourceAddress``). If you selected an "
 "external payout address, you must specify a fee source address."
 msgstr ""
+"Vous pouvez aussi, facultativement, générer et alimenter une troisième "
+"adresse comme **source des frais de transaction** (``feeSourceAddress``). Si"
+" vous avez choisi une adresse de paiement externe, vous devez indiquer une "
+"adresse source pour les frais."
 
-#: ../../masternodes/setup.rst:830
+#: ../../masternodes/setup.rst:778
 msgid ""
 "Either the payout address or fee source address must have enough balance to "
 "pay the transaction fee, or the ``register_prepare`` transaction will fail."
 msgstr ""
+"L'une de ces deux adresses, de paiement ou de frais, doit avoir un solde "
+"suffisant pour régler les frais de transaction, faute de quoi la transaction"
+" ``register_prepare`` échouera."
 
-#: ../../masternodes/setup.rst:834
+#: ../../masternodes/setup.rst:782
 msgid ""
 "The private keys to the owner and fee source addresses must exist in the "
 "wallet submitting the transaction to the network. If your wallet is "
@@ -1363,7 +1337,7 @@ msgstr ""
 "déverrouillé pour exécuter les commandes suivantes. Déverrouillez votre "
 "portefeuille pendant 5 minutes :"
 
-#: ../../masternodes/setup.rst:841
+#: ../../masternodes/setup.rst:789
 msgid ""
 "We will now prepare an unsigned ProRegTx special transaction using the "
 "``protx register_prepare`` command. This command has the following syntax::"
@@ -1372,7 +1346,7 @@ msgstr ""
 "signée, en utilisant la commande ``protx register_prepare``. Cette commande "
 "a la syntaxe suivante :"
 
-#: ../../masternodes/setup.rst:848
+#: ../../masternodes/setup.rst:796
 msgid ""
 "Open a text editor such as notepad to prepare this command. Replace each "
 "argument to the command as follows:"
@@ -1380,21 +1354,21 @@ msgstr ""
 "Ouvrez un éditeur de texte, tel que Notepad, pour préparer cette commande. "
 "Remplacez chaque argument de la commande comme suit :"
 
-#: ../../masternodes/setup.rst:851
+#: ../../masternodes/setup.rst:799
 msgid ""
 "``collateralHash``: The txid of the 1000 Dash collateral funding transaction"
 msgstr ""
 "``collateralHash`` : l'identifiant de la transaction (txid) de la caution de"
 " 1000 dashs"
 
-#: ../../masternodes/setup.rst:853
+#: ../../masternodes/setup.rst:801
 msgid ""
 "``collateralIndex``: The output index of the 1000 Dash funding transaction"
 msgstr ""
 "``collateralIndex`` : l'index de sortie de la transaction de la caution de "
 "1000 dashs"
 
-#: ../../masternodes/setup.rst:855
+#: ../../masternodes/setup.rst:803
 msgid ""
 "``ipAndPort``: Masternode IP address and port, in the format "
 "``x.x.x.x:yyyy``"
@@ -1402,7 +1376,7 @@ msgstr ""
 "``ipAndPort`` : l'adresse IP et le port du masternode, suivant le format "
 "``x.x.x.x:yyyy``"
 
-#: ../../masternodes/setup.rst:857
+#: ../../masternodes/setup.rst:805
 msgid ""
 "``ownerKeyAddr``: The new Dash address generated above for the owner/voting "
 "address"
@@ -1410,7 +1384,7 @@ msgstr ""
 "``ownerKeyAddr`` : l'adresse Dash nouvellement générée ci-dessus, pour "
 "l'adresse du propriétaire et de vote"
 
-#: ../../masternodes/setup.rst:859
+#: ../../masternodes/setup.rst:807
 msgid ""
 "``operatorPubKey``: The BLS public key generated above (or provided by your "
 "hosting service)"
@@ -1418,7 +1392,7 @@ msgstr ""
 "``operatorPubKey`` : la clé publique BLS générée ci-dessus (ou fournie par "
 "votre service d'hébergement de masternode)"
 
-#: ../../masternodes/setup.rst:861
+#: ../../masternodes/setup.rst:809
 msgid ""
 "``votingKeyAddr``: The new Dash address generated above, or the address of a"
 " delegate, used for proposal voting"
@@ -1426,7 +1400,7 @@ msgstr ""
 "``votingKeyAddr`` : l'adresse Dash nouvellement générée ci-dessus, ou bien "
 "l'adresse d'un délégué, utilisée pour le vote des propositions budgétaires"
 
-#: ../../masternodes/setup.rst:863
+#: ../../masternodes/setup.rst:811
 msgid ""
 "``operatorReward``: The percentage of the block reward allocated to the "
 "operator as payment"
@@ -1434,7 +1408,7 @@ msgstr ""
 "``operatorReward`` : le pourcentage de la récompense de bloc à allouer à "
 "l'opérateur en tant que paiement"
 
-#: ../../masternodes/setup.rst:865
+#: ../../masternodes/setup.rst:813
 msgid ""
 "``payoutAddress``: A new or existing Dash address to receive the owner's "
 "masternode rewards"
@@ -1442,7 +1416,7 @@ msgstr ""
 "``payoutAddress`` : une adresse Dash nouvelle ou déjà existante, où le "
 "propriétaire recevra les paiements de masternode"
 
-#: ../../masternodes/setup.rst:867
+#: ../../masternodes/setup.rst:815
 msgid ""
 "``feeSourceAddress``: An (optional) address used to fund ProTx fee. "
 "``payoutAddress`` will be used if not specified."
@@ -1451,7 +1425,7 @@ msgstr ""
 "frais de la transaction ProTx. Si elle n'est pas spécifiée, c'est l'adresse "
 "``payoutAddress`` qui sera utilisée."
 
-#: ../../masternodes/setup.rst:870
+#: ../../masternodes/setup.rst:818
 msgid ""
 "Note that the operator is responsible for :ref:`specifying their own reward "
 "<dip3-update-service>` address in a separate ``update_service`` transaction "
@@ -1464,16 +1438,16 @@ msgstr ""
 "``operatorReward`` différente de zéro. Le propriétaire de la caution du "
 "masternode ne spécifie pas lui-même l'adresse de paiement de l'opérateur."
 
-#: ../../masternodes/setup.rst:876
+#: ../../masternodes/setup.rst:824
 msgid "Example (remove line breaks if copying)::"
 msgstr "Exemple (effacez les sauts de ligne si vous le copiez) ::"
 
-#: ../../masternodes/setup.rst:889 ../../masternodes/setup.rst:918
-#: ../../masternodes/setup.rst:945
+#: ../../masternodes/setup.rst:837 ../../masternodes/setup.rst:866
+#: ../../masternodes/setup.rst:893
 msgid "Output::"
 msgstr "Sortie ::"
 
-#: ../../masternodes/setup.rst:897
+#: ../../masternodes/setup.rst:845
 msgid ""
 "Next we will use the ``collateralAddress`` and ``signMessage`` fields to "
 "sign the transaction, and the output of the ``tx`` field to submit the "
@@ -1483,11 +1457,11 @@ msgstr ""
 "``signMessage`` pour signer la transaction, et la sortie du champ ``tx`` "
 "pour soumettre la transaction au réseau."
 
-#: ../../masternodes/setup.rst:902
+#: ../../masternodes/setup.rst:850
 msgid "Sign the ProRegTx transaction"
 msgstr "Signer la transaction ProRegTx"
 
-#: ../../masternodes/setup.rst:904
+#: ../../masternodes/setup.rst:852
 msgid ""
 "We will now sign the content of the ``signMessage`` field using the private "
 "key for the collateral address as specified in ``collateralAddress``. Note "
@@ -1506,15 +1480,15 @@ msgstr ""
 "Dash Core, mais il est également possible d'utiliser la fonction de "
 "signature d'un portefeuille matériel. La commande a la syntaxe suivante :"
 
-#: ../../masternodes/setup.rst:914 ../../masternodes/setup.rst:941
+#: ../../masternodes/setup.rst:862 ../../masternodes/setup.rst:889
 msgid "Example::"
 msgstr "Exemple ::"
 
-#: ../../masternodes/setup.rst:924
+#: ../../masternodes/setup.rst:872
 msgid "Submit the signed message"
 msgstr "Soumettre le message signé"
 
-#: ../../masternodes/setup.rst:926
+#: ../../masternodes/setup.rst:874
 msgid ""
 "We will now submit the ProRegTx special transaction to the blockchain to "
 "register the masternode. This command must be sent from a Dash Core wallet "
@@ -1528,11 +1502,11 @@ msgstr ""
 "``feeSourceAddress`` ou à l'adresse ``payoutAddress``, car des frais de "
 "transaction standard seront prélevés. La commande a la syntaxe suivante :"
 
-#: ../../masternodes/setup.rst:934
+#: ../../masternodes/setup.rst:882
 msgid "Where:"
 msgstr "Où :"
 
-#: ../../masternodes/setup.rst:936
+#: ../../masternodes/setup.rst:884
 msgid ""
 "``tx``: The serialized transaction previously returned in the ``tx`` output "
 "field from the ``protx register_prepare`` command"
@@ -1540,7 +1514,7 @@ msgstr ""
 "``tx`` : la transaction sérialisée précédemment renvoyée dans le champ de "
 "sortie ``tx`` par la commande ``protx register_prepare``"
 
-#: ../../masternodes/setup.rst:938
+#: ../../masternodes/setup.rst:886
 msgid ""
 "``sig``: The message signed with the collateral key from the ``signmessage``"
 " command"
@@ -1548,7 +1522,7 @@ msgstr ""
 "``sig`` : le message signé avec la clé de la caution par la commande "
 "``signmessage``"
 
-#: ../../masternodes/setup.rst:949
+#: ../../masternodes/setup.rst:897
 msgid ""
 "Your masternode is now registered and will appear on the Deterministic "
 "Masternode List after the transaction is mined to a block. You can view this"
@@ -1564,19 +1538,13 @@ msgstr ""
 "la commande ``protx list valid``, où l'identifiant (txid) de la transaction "
 "finale ``protx register_submit`` identifie votre masternode."
 
-#: ../../masternodes/setup.rst:956
+#: ../../masternodes/setup.rst:904
 msgid ""
 "At this point you can go back to your terminal window and monitor your "
-"masternode using ``~/dashman/dashman status``, by entering ``~/.dashcore"
-"/dash-cli masternode status`` or using the **Get status** function in DMT. "
-"The final result should appear as follows:"
+"masternode by entering ``~/.dashcore/dash-cli masternode status`` or using "
+"the **Get status** function in DMT."
 msgstr ""
 "Arrivé à cette étape, vous pouvez revenir à votre fenêtre de terminal et "
-"surveiller votre masternode avec la commande ``~/dashman/dashman status``, "
-"en tapant la commande ``~/.dashcore/dash-cli masternode status``, ou bien en"
-" utilisant la fonction **Get status** (Voir l'état) dans DMT. Le résultat "
-"final devrait ressembler à ceci :"
-
-#: ../../masternodes/setup.rst:964
-msgid "dashman status output showing successfully registered masternode"
-msgstr "Message d'état de Dashman pour un masternode enregistré avec succès"
+"surveiller votre masternode avec la commande ``~/.dashcore/dash-cli "
+"masternode status``, ou bien en utilisant la fonction **Get status** (Voir "
+"l'état) dans DMT."

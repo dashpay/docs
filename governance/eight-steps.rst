@@ -28,7 +28,7 @@ Run a pre-proposal discussion
   out if someone has proposed something similar in the past, and whether
   it succeeded or failed. There are `pre-proposal channels on the forum
   <https://www.dash.org/forum/topic/pre-budget-proposal-
-  discussions.93>`__ and `Dash Nation Discord <http://dashchat.org>`__,
+  discussions.93/>`__ and `Dash Nation Discord <http://dashchat.org>`__,
   and `Reddit <https://www.reddit.com/r/dashpay>`__ also attracts a lot
   of views - consider the discussion on these channels to be the
   research phase of your proposal. Later, you can post a link to the
@@ -53,7 +53,7 @@ Run an enthusiastic campaign for your proposal
   chance to convey your enthusiasm in a way that isn't always possible
   in text. Post your video to the `forum
   <https://www.dash.org/forum/topic/pre-budget-proposal-
-  discussions.93>`_ and `DashCentral
+  discussions.93/>`_ and `DashCentral
   <https://www.dashcentral.org/budget>`_, become a regular on Discord
   or run a webinar to explain the proposal and answer questions. Put
   some work in before you ask for funding to demonstrate your

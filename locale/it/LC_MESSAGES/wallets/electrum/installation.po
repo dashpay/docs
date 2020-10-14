@@ -3,13 +3,18 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Gleb Golov <gleb.golov@gmail.com>, 2020
+# Alessandro Lotta <mediterraneo9000@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-01 03:43+0000\n"
+"POT-Creation-Date: 2020-10-01 01:04+0000\n"
 "PO-Revision-Date: 2018-03-19 12:19+0000\n"
+"Last-Translator: Alessandro Lotta <mediterraneo9000@gmail.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +36,7 @@ msgstr ""
 
 #: ../../wallets/electrum/installation.rst:9
 msgid "Installation"
-msgstr ""
+msgstr "Installazione"
 
 #: ../../wallets/electrum/installation.rst:12
 msgid "Download"
@@ -63,58 +68,58 @@ msgstr ""
 
 #: ../../wallets/electrum/installation.rst:25
 msgid ""
-"You can optionally verify the integrity of your download by running the "
+"You can optionally verify the authenticity of your download by checking its "
+"detached signature against the public key published by akhavr. Run the "
 "following commands (example for Linux)::"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:33
-msgid ""
-"You can also optionally verify the authenticity of your download as an "
-"official release by akhavr. All releases of Dash Electrum are signed by "
-"akhavr using GPG with the key ``64A3 BA82 2F44 9D50``, `verifiable here on "
-"Keybase <https://keybase.io/akhavr>`_. Import the key, download the ASC file"
-" for the current release of Dash Electrum and verify the signature as "
-"follows::"
+#: ../../wallets/electrum/installation.rst:34
+msgid "The output should contain the following line::"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:45
+#: ../../wallets/electrum/installation.rst:39
 msgid "Linux"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:47
+#: ../../wallets/electrum/installation.rst:41
 msgid ""
 "Dash Electrum for Linux is available from a PPA for Ubuntu and Linux Mint, "
 "and as a source tarball for other systems. As of version 3.0.6, it requires "
 "Python 3 to run. Enter the following commands to install from PPA::"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:56
+#: ../../wallets/electrum/installation.rst:50
 msgid ""
-"Enter the following commands (changing the version number to match the "
-"current version as necessary) in the terminal to install Dash Electrum from "
-"the source tarball::"
+"You can also download the official package, unpack it and run it from its "
+"root directory with installation as follows::"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:66
+#: ../../wallets/electrum/installation.rst:58
+msgid ""
+"Finally, you can install Dash Electrum to your system from the source "
+"tarball as follows::"
+msgstr ""
+
+#: ../../wallets/electrum/installation.rst:67
 msgid "You can then run ``electrum-dash`` from the terminal."
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:69
+#: ../../wallets/electrum/installation.rst:70
 msgid "macOS"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:71
+#: ../../wallets/electrum/installation.rst:72
 msgid ""
 "Simply download and run the DMG file. You may need to grant permission to "
 "install, depending on your security settings. Click through the installation"
 " wizard and run Dash Electrum from your Applications folder when complete."
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:78
+#: ../../wallets/electrum/installation.rst:79
 msgid "Windows"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:80
+#: ../../wallets/electrum/installation.rst:81
 msgid ""
 "Simply download and run the installer file to set up Dash Electrum. You may "
 "need to grant permission to install, depending on your security settings. "
@@ -122,11 +127,11 @@ msgid ""
 "menu when complete."
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:86
+#: ../../wallets/electrum/installation.rst:87
 msgid "Android"
-msgstr ""
+msgstr "Android"
 
-#: ../../wallets/electrum/installation.rst:88
+#: ../../wallets/electrum/installation.rst:89
 msgid ""
 "Download and run the APK file from https://electrum.dash.org to set up Dash "
 "Electrum. You may need to grant permission to install from unknown sources, "
@@ -134,11 +139,11 @@ msgid ""
 "and run Dash Electrum when complete."
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:95
+#: ../../wallets/electrum/installation.rst:96
 msgid "Creating a New Wallet"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:97
+#: ../../wallets/electrum/installation.rst:98
 msgid ""
 "Dash Electrum gathers configuration data when run for the first time. For "
 "more on the concepts behind this process, skip to the later sections of this"
@@ -151,11 +156,11 @@ msgid ""
 "create your wallet."
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:113
+#: ../../wallets/electrum/installation.rst:114
 msgid "Selecting the server and naming your first wallet"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:115
+#: ../../wallets/electrum/installation.rst:116
 msgid ""
 "You will be asked what kind of wallet you want to create. Choose between "
 "**Standard wallet**, **Multi-signature wallet** and **Watch Dash "
@@ -168,11 +173,11 @@ msgid ""
 "wallet, choose **Create a new seed** and click **Next** to continue."
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:132
+#: ../../wallets/electrum/installation.rst:133
 msgid "Selecting the wallet type and keystore"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:134
+#: ../../wallets/electrum/installation.rst:135
 msgid ""
 "Electrum Dash will generate your wallet and display the recovery seed. Write"
 " this seed down, ideally on paper and not in an electronic format, and store"
@@ -182,11 +187,11 @@ msgid ""
 "words in the correct order and click **Next** to continue."
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:148
+#: ../../wallets/electrum/installation.rst:149
 msgid "Generating and confirming the recovery seed"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:150
+#: ../../wallets/electrum/installation.rst:151
 msgid ""
 "A password optionally secures your wallet against unauthorized access. "
 "Adding a memorable, strong password now improves the security of your wallet"
@@ -196,14 +201,14 @@ msgid ""
 " **Encrypt wallet file** checkbox is ticked and click **Next** to continue."
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:161
+#: ../../wallets/electrum/installation.rst:162
 msgid "Entering and confirming a wallet encryption password"
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:163
+#: ../../wallets/electrum/installation.rst:164
 msgid "Your Dash Electrum wallet is now set up and ready for use."
 msgstr ""
 
-#: ../../wallets/electrum/installation.rst:168
+#: ../../wallets/electrum/installation.rst:169
 msgid "Dash Electrum after setup is complete"
 msgstr ""

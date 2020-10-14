@@ -15,13 +15,13 @@ sections describe some frequently used advanced functions. For further
 details on other advanced functions in Electrum for both Bitcoin and
 Dash, please click the links below.
 
-- `Electrum documentation <http://docs.electrum.org>`_
-- `Electrum seed version system <http://docs.electrum.org/en/latest/seedphrase.html>`_
-- `Electrum protocol specification <http://docs.electrum.org/en/latest/protocol.html>`_
-- `Serialization of unsigned or partially signed transactions <http://docs.electrum.org/en/latest/transactions.html>`_
-- `Simple Payment Verification <http://docs.electrum.org/en/latest/spv.html>`_
-- `The Python Console <http://docs.electrum.org/en/latest/console.html>`_
-- `Using Electrum Through Tor <http://docs.electrum.org/en/latest/tor.html>`_
+- `Electrum documentation <https://docs.electrum.org>`_
+- `Electrum seed version system <https://docs.electrum.org/en/latest/seedphrase.html>`_
+- `Electrum protocol specification <https://docs.electrum.org/en/latest/protocol.html>`_
+- `Serialization of unsigned or partially signed transactions <https://docs.electrum.org/en/latest/transactions.html>`_
+- `Simple Payment Verification <https://docs.electrum.org/en/latest/spv.html>`_
+- `The Python Console <https://docs.electrum.org/en/latest/console.html>`_
+- `Using Electrum Through Tor <https://docs.electrum.org/en/latest/tor.html>`_
 
 PrivateSend
 ===========
@@ -272,10 +272,10 @@ Sweep a paper wallet
 You may have received a paper wallet as a gift from another Dash user,
 or previously stored one in a safe deposit box. Funds are swept from a
 :ref:`paper wallet <paper-wallets>` into a live wallet by importing its
-`private key <http://bitzuma.com/posts /six-things-bitcoin-users-should-
-know-about-private-keys/>`_, which is a long sequence of characters
-starting with the number "7" or the capital letter "X". The example
-below displays a private key (WIF format).
+`private key <https://bitzuma.com/posts/six-things-bitcoin-users-should-know-about-private-keys/>`_, 
+which is a long sequence of characters starting with the number "7" or
+the capital letter "X". The example below displays a private key (WIF
+format).
 
 .. figure:: img/sweep-secret.png
    :width: 400px

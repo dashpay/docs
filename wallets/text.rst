@@ -37,9 +37,9 @@ Simply text START to the CoinText phone number for your region. For more
 the list of supported regions and more detailed instructions on how to
 send and receive payments, see the links below:
 
-- `Regions <https://dash.cointext.io/regions>`__
-- `Instructions <https://dash.cointext.io/howto>`__
-- `FAQs <https://dash.cointext.io/faqs>`__
+- `Regions <https://dash.cointext.io/regions/>`__
+- `Instructions <https://dash.cointext.io/howto/>`__
+- `FAQs <https://dash.cointext.io/faqs/>`__
 
 DashText
 ========
@@ -49,7 +49,7 @@ https://dashtext.io
 .. image:: img/dashtext.png
    :width: 150px
    :align: right
-   :target: http://dashtext.com
+   :target: https://www.dashtext.io
 
 DashText is a service available in Venezuela, Colombia and Spain to
 allow users to transact in Dash using text messages. The only fees are

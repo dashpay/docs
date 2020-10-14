@@ -21,28 +21,13 @@ Masternode Software Update
 ==========================
 
 The Dash Core software requires regular updates in order to remain
-consistent with the current network consensus. Depending on whether you
-installed Dash manually or using dashman, you must follow the procedure
-appropriate for your masternode, as described below.
+consistent with the current network consensus. Follow the procedure
+described below to manually update your masternode. If you are still
+using the legacy dashman installer, see the legacy update documentation
+`here <https://docs.dash.org/en/0.15.0/masternodes/maintenance.html#masternode-software-update>`__.
 
-
-Option 1: Updating from dashman
--------------------------------
-
-To update Dash using dashman, log in to your server and enter the
-following commands::
-
-  ~/dashman/dashman sync update -y
-
-Check the status of your masternode::
-
-  ~/dashman/dashman status
-
-The Dash software on the masternode is now updated.
-
-
-Option 2: Manual update
------------------------
+Manual update
+-------------
 
 To update Dash manually, log in to your server using ssh or PuTTY. If
 your crontab contains an entry to automatically restart dashd, invoke
@@ -62,19 +47,19 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.15.0.0/dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.16.0.1/dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-0.15.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-0.15.0/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.16.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.16.0/bin/dash-cli ~/.dashcore/
 
 Restart Dash::
 
@@ -459,8 +444,6 @@ the Dash network.
 
 - `Blockchair <https://blockchair.com/dash>`__ offers a block explorer
   with detailed visualizations to analyse the Dash blockchain.
-
-
 - `CryptoID <https://chainz.cryptoid.info/>`__ offers a `Dash blockchain
   explorer <https://chainz.cryptoid.info/dash/>`__ and a `function
   <https://chainz.cryptoid.info/dash/masternodes.dws>`__ to view and map
@@ -471,15 +454,12 @@ the Dash network.
   <https://bitinfocharts.com/dash/explorer/>`__.
 - `CoinCheckup <https://coincheckup.com/coins/dash/charts>`__ offers a
   range of statistics and data on most blockchains, including Dash.
-- `CoinPayments <https://www.coinpayments.net/>`__ offers a simple `Dash
-  blockchain explorer
-  <http://explorer.coinpayments.net/index.php?chain=7>`__.
-- `Dash.org <https://www.dash.org/>`__ includes two blockchain explorers
-  at `explorer.dash.org <http://explorer.dash.org/>`__ and
-  `insight.dash.org <http://insight.dash.org/>`__.
+- `Dash.org <https://www.dash.org/>`__ includes a blockchain explorer
+  at `explorer.dash.org <https://explorer.dash.org/insight/>`__ and
+  `insight.dash.org <https://insight.dash.org/insight/>`__.
 - `Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https
   ://dash-bitcore1.trezor.io/>`__ powered by a `Dash fork
-  <https://github.com/dashpay/insight-ui-dash>`__ of `insight
+  <https://github.com/dashevo/insight-ui>`__ of `insight
   <https://insight.is/>`__, an advanced blockchain API tool
 
 Dash Masternode Tool
@@ -512,8 +492,8 @@ https://www.dashcentral.org
 
 DashCentral, operated by forum member rango, offers an advanced service
 to monitor masternodes and vote on budget proposals through an advanced
-web interface. An `Android app <https://play.google.com/store/apps/detai
-ls?id=net.paregov.android.dashcentral>`_ is also available.
+web interface. A `mobile monitoring interface
+<https://www.dashcentral.org/account/mobile>`_ is also available.
 
 Masternode.me
 -------------

@@ -26,9 +26,9 @@ in the world, and have a percentage of your wage immediately converted
 to Dash. You can then withdraw your wage to any Dash wallet for spending
 or saving. For more information, see the following blog posts:
 
- - **Bitwage:** https://blog.bitwage.com/2018/03/12/get-dash
- - **Uphold:** https://uphold.com/en/blog/posts/uphold/bitwage-launches-support-of-dash-powered-by-uphold
- - **Dash Force News:** https://www.dashforcenews.com/can-get-salary-dash-right-now
+ - **Bitwage:** https://blog.bitwage.com/2018/03/12/get-dash/
+ - **Uphold:** https://uphold.com/en/blog/bitwage-launches-support-of-dash-powered-by-uphold
+ - **Dash Force News:** https://dashnews.org/can-get-salary-dash-right-now/
 
 
 Spending
@@ -48,11 +48,10 @@ physical locations.
 sorted by category. It's easy to add your business to the list, and also
 features a short introduction for new Dash users. The site is maintained
 by Dash Force, and has been `featured on Dash Force News
-<https://www.dashforcenews.com/300-businesses-accept-dash-worldwide-
-come-blockcypher-grants>`_.
+<https://dashnews.org/300-businesses-accept-dash-worldwide-come-blockcypher-grants/>`_.
 
 - `Discover Dash <https://discoverdash.com>`_
-- `Dash Merchants <https://www.dash.org/merchants>`_
+- `Where to Spend Dash <https://www.dash.org/where-to-spend/>`_
 
 Debit Cards
 -----------
@@ -62,7 +61,7 @@ withdrawing cash from an ATM or spending online or anywhere debit/credit
 cards are supported. The Dash is either exchanged at the time of
 purchase or in advance. For an overview and review of all available and
 upcoming cards, including cards funded by the Dash budget system, see
-`this article on Dash Force News <https://www.dashforcenews.com/debit-card-proposal-reviews/>`_.
+`this article on Dash Force News <https://dashnews.org/debit-card-proposal-reviews/>`_.
 
 The rapidly evolving approach to regulation of cryptocurrencies such as
 Dash and instant exchange solutions such as ShapeShift means that
@@ -92,9 +91,9 @@ Crypto.com
   .. image:: img/crypto.png
      :width: 200px
      :align: right
-     :target: https://www.crypto.com
+     :target: https://crypto.com
 
-  https://www.crypto.com
+  https://crypto.com
 
   In the Crypto.com Wallet & Card App, users can purchase DASH at true
   cost with no fees - with credit card and bank transfer both supported.
@@ -106,9 +105,9 @@ Change
   .. image:: img/change.png
      :width: 200px
      :align: right
-     :target: https://www.getchange.com
+     :target: https://www.changeinvest.com
 
-  https://www.getchange.com
+  https://www.changeinvest.com
 
   The Change Wallet & Card App allows you to convert instantly between
   all of your currencies and spend with your card worldwide. No

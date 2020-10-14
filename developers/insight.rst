@@ -20,7 +20,7 @@ describes how to set up the
 `Dash Insight UI <https://github.com/dashevo/insight-ui>`__ block 
 explorer.
 
-A standard installation of Ubuntu Linux 18.04 LTS will be used as an
+A standard installation of Ubuntu Linux 20.04 LTS will be used as an
 environment for the server. We assume you are running as a user with
 sudo permissions. First update all packages and install some tools and
 dependencies::
@@ -32,34 +32,36 @@ dependencies::
 Download and extract the latest version of Dash Core::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.15.0.0/dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
-  tar -xvzf dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
-  rm dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.16.0.1/dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
+  tar -xvzf dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
+  rm dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
 
 Install `Dashcore Node <https://github.com/dashevo/dashcore-node>`_ and
 create your configuration::
 
-  sudo npm install -g @dashevo/dashcore-node
-  dashcore-node create mynode
+  git clone https://github.com/dashevo/dashcore-node
+  cd dashcore-node
+  npm install
+  ./bin/dashcore-node create mynode
 
 Install the Insight API service and (optionally) Insight UI::
 
   cd mynode
-  dashcore-node install @dashevo/insight-api
-  dashcore-node install @dashevo/insight-ui
+  ../bin/dashcore-node install @dashevo/insight-api
+  ../bin/dashcore-node install @dashevo/insight-ui
 
 Change paths in the configuration file as follows::
 
   nano dashcore-node.json
 
-- Change the value of ``datadir`` to ``../.dashcore``
-- Change the value of ``exec`` to ``../dashcore-0.15.0/bin/dashd``
+- Change the value of ``datadir`` to ``../../.dashcore``
+- Change the value of ``exec`` to ``../../dashcore-0.16.0/bin/dashd``
 - **Optionally** change the value of ``network`` to ``testnet`` if you 
   want to run Insight on testnet
 
 Run it::
 
-  dashcore-node start
+  ../bin/dashcore-node start
 
 Your Insight API node will start up and begin to sync. Progress will be
 displayed on stdout. Once sync is complete, the `API endpoints listed in
