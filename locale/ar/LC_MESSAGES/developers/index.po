@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-01 01:04+0000\n"
+"POT-Creation-Date: 2020-10-07 00:32+0000\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
@@ -87,11 +87,11 @@ msgstr ""
 "توضح الأقسام المتبقية أدناه الخطوات العملية لتنفيذ مهام التطوير المشتركة في "
 "داش."
 
-#: ../../developers/index.rst:53
+#: ../../developers/index.rst:54
 msgid "Sporks"
 msgstr "الرميات"
 
-#: ../../developers/index.rst:55
+#: ../../developers/index.rst:56
 msgid ""
 "A multi-phased fork, colloquially known as a \"spork\", is a mechanism "
 "unique to Dash used to safely deploy new features to the network through "
@@ -109,11 +109,11 @@ msgstr ""
 "<sporks>` للحصول على مقدمة موجزة عن السيقان. تصف هذه الوثائق معنى كل سائح "
 "موجود حاليًا على الشبكة ، وكيفية التحقق من حالات كل منها."
 
-#: ../../developers/index.rst:65
+#: ../../developers/index.rst:66
 msgid "Spork functions"
 msgstr "وظائف Spork"
 
-#: ../../developers/index.rst:67
+#: ../../developers/index.rst:68
 msgid ""
 "Sporks are set using integer values. Many sporks may be set to a particular "
 "epoch datetime (number of seconds that have elapsed since January 1, 1970) "
@@ -130,19 +130,19 @@ msgstr ""
 "يتم تعطيله بشكل فعال حتى يتم تغييره. تتوفر حاليًا السكاتور التالية على "
 "الشبكة وتؤدي وظائف كما هو موضح أدناه"
 
-#: ../../developers/index.rst:76
+#: ../../developers/index.rst:77
 msgid "SPORK_2_INSTANTSEND_ENABLED"
 msgstr "SPORK_2_INSTANTSEND_ENABLED"
 
-#: ../../developers/index.rst:76
+#: ../../developers/index.rst:77
 msgid "Governs the ability of Dash clients to use InstantSend functionality."
 msgstr "يحكم قدرة عملاء داش على استخدام وظيفة الإرسال الفوري"
 
-#: ../../developers/index.rst:80
+#: ../../developers/index.rst:81
 msgid "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
 msgstr "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
 
-#: ../../developers/index.rst:79
+#: ../../developers/index.rst:80
 msgid ""
 "If enabled, masternodes will reject blocks containing transactions in "
 "conflict with locked but unconfirmed InstantSend transactions."
@@ -150,11 +150,11 @@ msgstr ""
 "في حالة التمكين ، سترفض ماسترنود كتل تحتوي على معاملات في تعارض مع معاملات "
 "الإرسال الفوري مؤمنة ولكن غير مؤمنة."
 
-#: ../../developers/index.rst:86
+#: ../../developers/index.rst:87
 msgid "SPORK_6_NEW_SIGS"
 msgstr "SPORK_6_NEW_SIGS"
 
-#: ../../developers/index.rst:83
+#: ../../developers/index.rst:84
 msgid ""
 "Enables a new signature format for Dash-specific network messages introduced"
 " in Dash 12.3. For more information, see `here "
@@ -165,21 +165,21 @@ msgstr ""
 "لمزيد من المعلومات، راجع `هنا <https://github.com/dashpay/dash/pull/1936>`__"
 "  و `هنا <https://github.com/dashpay/dash/pull/1937>`__."
 
-#: ../../developers/index.rst:90
+#: ../../developers/index.rst:91
 msgid "SPORK_9_SUPERBLOCKS_ENABLED"
 msgstr "SPORK_9_SUPERBLOCKS_ENABLED"
 
-#: ../../developers/index.rst:89
+#: ../../developers/index.rst:90
 msgid ""
 "If enabled, superblocks are verified and issued to pay proposal winners."
 msgstr ""
 "إذا تم تمكينها ، يتم التحقق من superblocks وإصدارها لدفع الفائزين بالاقتراح."
 
-#: ../../developers/index.rst:97
+#: ../../developers/index.rst:98
 msgid "SPORK_15_DETERMINISTIC_MNS_ENABLED"
 msgstr "SPORK_15_DETERMINISTIC_MNS_ENABLED"
 
-#: ../../developers/index.rst:93
+#: ../../developers/index.rst:94
 msgid ""
 "Controls whether `deterministic masternodes "
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ are required. "
@@ -191,11 +191,11 @@ msgstr ""
 "التنشيط ، لن يتم تشغيل منطق قائمة ماسترنود القديمة بعد الآن ولن تكون "
 "ماسترنود غير المحدثة مؤهلة للدفع."
 
-#: ../../developers/index.rst:103
+#: ../../developers/index.rst:104
 msgid "SPORK_16_INSTANTSEND_AUTOLOCKS"
 msgstr "SPORK_16_INSTANTSEND_AUTOLOCKS"
 
-#: ../../developers/index.rst:100
+#: ../../developers/index.rst:101
 msgid ""
 "Enables automatic transaction locking for transactions with less than a "
 "specified number of inputs, and removes the legacy InstantSend fee. Allows "
@@ -205,11 +205,11 @@ msgstr ""
 "، وإزالة رسوم الإرسال الفوري القديمة. يسمح لأي عقدة بطلب قفل المعاملة ، وليس"
 " فقط عقدة الإرسال."
 
-#: ../../developers/index.rst:109
+#: ../../developers/index.rst:110
 msgid "SPORK_17_QUORUM_DKG_ENABLED"
 msgstr "SPORK_17_QUORUM_DKG_ENABLED"
 
-#: ../../developers/index.rst:106
+#: ../../developers/index.rst:107
 msgid ""
 "Enables the `DKG process to create LLMQ quorums "
 "<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. This spork will"
@@ -217,11 +217,11 @@ msgid ""
 "DKG and DKG-based PoSe."
 msgstr ""
 
-#: ../../developers/index.rst:114
+#: ../../developers/index.rst:115
 msgid "SPORK_19_CHAINLOCKS_ENABLED"
 msgstr ""
 
-#: ../../developers/index.rst:112
+#: ../../developers/index.rst:113
 msgid ""
 "Enables :ref:`ChainLocks <chainlocks>`, a mechanism of preventing the risk "
 "to payments introduced by blockchain reorganization events. ChainLocks are "
@@ -229,22 +229,22 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__."
 msgstr ""
 
-#: ../../developers/index.rst:120
+#: ../../developers/index.rst:121
 msgid "SPORK_20_INSTANTSEND_LLMQ_BASED"
 msgstr ""
 
-#: ../../developers/index.rst:117
+#: ../../developers/index.rst:118
 msgid ""
 "When enabled, legacy InstantSend is superseded by LLMQ-based InstantSend, as"
 " described in `DIP0010 LLMQ-based InstantSend "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__."
 msgstr ""
 
-#: ../../developers/index.rst:123
+#: ../../developers/index.rst:124
 msgid "Viewing spork status"
 msgstr "رؤية حالة spork"
 
-#: ../../developers/index.rst:125
+#: ../../developers/index.rst:126
 msgid ""
 "The ``spork show`` and ``spork active`` commands issued in the debug window "
 "(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
@@ -254,18 +254,18 @@ msgstr ""
 "من``dash-cli`` على ماسترنود) بالتفاعل مع sporks. يمكنك فتح نافذة التصحيح من "
 "خلال تحديد **الأدوات> وحدة التحكم في التصحيح**."
 
-#: ../../developers/index.rst:133
+#: ../../developers/index.rst:134
 msgid "spork show and spork active output in the Dash Core debug console"
 msgstr "عرض spork الإخراج النشط في وحدة تصحيح الأخطاء داش كور"
 
-#: ../../developers/index.rst:137
+#: ../../developers/index.rst:138
 msgid "Version History"
 msgstr "تاريخ الإصدار"
 
-#: ../../developers/index.rst:139
+#: ../../developers/index.rst:140
 msgid "Full release notes and the version history of Dash are available here:"
 msgstr "تتوفر هنا ملاحظات الإصدار الكاملة وتاريخ إصدار داش:"
 
-#: ../../developers/index.rst:141
+#: ../../developers/index.rst:142
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
 msgstr "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
