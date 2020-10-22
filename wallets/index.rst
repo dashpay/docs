@@ -278,11 +278,6 @@ transactions to both send and receive Dash.
 
    text.rst
 
-.. figure:: img/cointext-wallet.png
-   :width: 400 px
-
-   Dash CoinText
-
 
 Wallet Guides
 =============
