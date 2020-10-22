@@ -92,10 +92,10 @@ revoke a masternode's registered status (in the event of a security
 breach, for example) to force both owner and operator to update their
 details.
 
-Configuration changes which affect the provision of service to the
-network, such as the BLS operator key and IP address, will reset your
-position in the payment queue. Changes to the voting or various payout
-addresses will not reset your position in the payment queue.
+Changing the BLS operator key or creating a new ProTx based on the same
+collateral transaction will reset your position in the payment queue.
+Changing your IP address or making changes to the voting or various
+payout addresses will not reset your position in the payment queue.
 
 .. _dip3-update-service:
 
