@@ -977,4 +977,4 @@ ZelCore.
 .. figure:: img/zelcore-wallet.png
    :width: 400px
 
-   Trust wallet running on Windows
+   ZelCore wallet running on Windows
