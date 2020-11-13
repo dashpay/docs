@@ -899,7 +899,7 @@ VegaWallet
 https://www.vegawallet.com
 
 .. image:: img/vegawallet.png
-   :width: 200px
+   :width: 100px
    :align: right
    :target: https://www.vegawallet.com
 
@@ -937,3 +937,44 @@ to support queries by email at `support@vegawallet.com
    :width: 200px
 
    VegaWallet wallet running on iOS
+
+
+ZelCore
+=======
+
+https://zel.network
+
+.. image:: img/zel.png
+   :width: 100px
+   :align: right
+   :target: https://zel.network
+
+ZelCore allows you to buy, store, trade & exchange crypto in a single app. The
+wallet includes rich integrations with third party exchanges and decentralized
+2FA features.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.zelcash.zelcore
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://apps.apple.com/app/id1436296839
+
+ZelCore is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.zelcash.zelcore>`__ 
+and the `Apple App Store for iOS <https://apps.apple.com/app/id1436296839>`__.
+
+Documentation
+-------------
+
+See the `Zel Wiki <https://zelcash.github.io/zelwiki/>`__ or join the
+`Zel Discord server <https://discord.io/zel>`_ for support with
+ZelCore.
+
+.. figure:: img/zelcore-wallet.png
+   :width: 400px
+
+   Trust wallet running on Windows
