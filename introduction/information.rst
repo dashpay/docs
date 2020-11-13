@@ -206,9 +206,12 @@ Masternode management
 - https://dash-news.de/dashtv/
 
 
-Price monitoring and statistics
--------------------------------
+Price monitoring and research
+-----------------------------
 
+- https://messari.io/asset/dash
+- https://namu.wiki/w/Dash
+- https://xangle.io/project/DASH/profile
 - https://coinmarketcap.com/currencies/dash/
 - https://bitinfocharts.com/dash/
 - https://www.cryptonator.com/widget
