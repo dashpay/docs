@@ -42,17 +42,17 @@ https://crowdnode.io
 Allnodes
 --------
 
-.. image:: img/allnodes.svg
+.. image:: img/allnodes.png
    :width: 200px
    :align: right
-   :target: https://www.allnodes.com
+   :target: https://www.allnodes.com/?utm_source=dashdocs&utm_medium=setup-guide
 
-https://www.allnodes.com
+`https://www.allnodes.com <https://www.allnodes.com/?utm_source=dashdocs&utm_medium=setup-guide>`__
 
 - Operated by: Sephiroth
 - Services: Monitoring, Hosting
-- Cost: from $4/month
-- `Site <https://www.allnodes.com>`__
+- Cost: from $4.50/month
+- `Site <https://www.allnodes.com/?utm_source=dashdocs&utm_medium=setup-guide>`__
 - `Email <info@allnodes.com>`__
 - `Twitter <https://twitter.com/allnodes>`__
 - `Telegram <https://t.me/allnodes>`__
