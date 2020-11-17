@@ -10,7 +10,7 @@
 Dash 0.16 Upgrade Information
 =============================
 
-**Official binaries are available at** https://github.com/dashpay/dash/releases/tag/v0.16.1.0
+**Official binaries are available at** https://github.com/dashpay/dash/releases/tag/v0.16.1.1
 
 Dash Core v0.16.0 introduces the multi-year shift in the allocation of 
 block rewards between masternodes and miners. Please see the `Dash
