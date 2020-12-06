@@ -172,11 +172,11 @@ Tools
 Block explorers, statistics and visualizations
 ----------------------------------------------
 
-- https://explorer.dash.org/insight/
 - https://insight.dash.org/insight/
 - https://blockchair.com/dash
 - https://chainz.cryptoid.info/dash/
 - https://www.coinexplorer.net/dash
+- https://www.oklink.com/dash
 - https://bitinfocharts.com/dash/explorer/
 - https://dashblockexplorer.com
 - https://live.blockcypher.com/dash/
