@@ -893,6 +893,46 @@ Trust.
    Trust wallet running on iOS
 
 
+Unstoppable
+===========
+
+https://unstoppable.money
+
+.. image:: img/unstoppable.png
+   :width: 100px
+   :align: right
+   :target: https://unstoppable.money
+
+Unstoppable is a multi-coin wallet that adheres to standards and implements the
+latest advancements for Bitcoin and Ethereum. Store and grow crypto assets, from
+anywhere. Have full control over assets. Remain private.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=io.horizontalsystems.bankwallet
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://apps.apple.com/app/id1447619907
+
+Unstoppable is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=io.horizontalsystems.bankwallet>`__ 
+and the `Apple App Store for iOS <https://apps.apple.com/app/id1447619907>`__.
+
+Documentation
+-------------
+
+See the `FAQ <https://unstoppable.money/faq>`__ or `Unstoppable on GitHub
+<https://github.com/horizontalsystems/>`_ for support with Unstoppable.
+
+.. figure:: img/unstoppable-wallet.png
+   :width: 133px
+
+   Unstoppable wallet running on Android
+
+
 VegaWallet
 ==========
 
