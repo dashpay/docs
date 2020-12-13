@@ -26,10 +26,10 @@ You can optionally verify the authenticity of your download by checking
 its detached signature against the public key published by akhavr. Run
 the following commands (example for Linux)::
 
-  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.7/Dash-Electrum-3.3.8.7.tar.gz
-  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.7/Dash-Electrum-3.3.8.7.tar.gz.asc
+  wget https://github.com/akhavr/electrum-dash/releases/download/4.0.4.1/Dash-Electrum-4.0.4.1.tar.gz
+  wget https://github.com/akhavr/electrum-dash/releases/download/4.0.4.1/Dash-Electrum-4.0.4.1.tar.gz.asc
   curl https://keybase.io/akhavr/pgp_keys.asc | gpg --import
-  gpg --verify Dash-Electrum-3.3.8.7.tar.gz.asc
+  gpg --verify Dash-Electrum-4.0.4.1.tar.gz.asc
 
 The output should contain the following line::
 
@@ -50,18 +50,18 @@ PPA::
 You can also download the official package, unpack it and run it from
 its root directory with installation as follows::
 
-  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.7/Dash-Electrum-3.3.8.7.tar.gz
-  tar -zxvf Dash-Electrum-3.3.8.7.tar.gz
-  cd Dash-Electrum-3.3.8.7
+  wget https://github.com/akhavr/electrum-dash/releases/download/4.0.4.1/Dash-Electrum-4.0.4.1.tar.gz
+  tar -zxvf Dash-Electrum-4.0.4.1.tar.gz
+  cd Dash-Electrum-4.0.4.1
   ./electrum-dash
 
 Finally, you can install Dash Electrum to your system from the source
 tarball as follows::
 
   sudo apt install python3-pyqt5 python3-pip python3-setuptools libgmp3-dev
-  wget https://github.com/akhavr/electrum-dash/releases/download/3.3.8.7/Dash-Electrum-3.3.8.7.tar.gz
-  tar -zxvf Dash-Electrum-3.3.8.7.tar.gz
-  cd Dash-Electrum-3.3.8.7
+  wget https://github.com/akhavr/electrum-dash/releases/download/4.0.4.1/Dash-Electrum-4.0.4.1.tar.gz
+  tar -zxvf Dash-Electrum-4.0.4.1.tar.gz
+  cd Dash-Electrum-4.0.4.1
   sudo python3 setup.py install
 
 You can then run ``electrum-dash`` from the terminal.
