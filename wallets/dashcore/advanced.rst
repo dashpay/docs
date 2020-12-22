@@ -622,3 +622,101 @@ keepassid=<name>
 keepassname=<name>
   Name to construct url for KeePass entry that stores the wallet
   passphrase
+
+Sybil Attack
+============
+
+A generic explanation of the term 'sybil attack' can be found here: https://en.wikipedia.org/wiki/Sybil_attack
+
+Short Definition::
+
+A Sybil attack is a type of security threat on an online system or network where a malicious actor tries to take over the network by creating multiple accounts, nodes or computers.
+
+Applicable Definition::
+
+A Sybil attack is a type of security threat on the masternode network where a malicious actor tries to take over a part of masternode network.
+
+In the context of Dash it means that a malicious actor is trying to own as many masternodes as possible in order to have a chance at deanonymizing PrivateSend related mixing transactions. Technically speaking an attacker could set up a masternode and start listening to the masternode's network traffic to analyze the mixing activity (CoinJoin) happening on his masternode. In this way the attacker could theoretically see how the transaction inputs and outputs are reshuffled.
+
+Let's have a look at what the probability is for an attacker to deanonymize such activity.
+
+The basic formula to calculate the probability is::
+
+Probabilities in % : ((Attacker Nodes / All Nodes) ^ PrivateSend Rounds) * 100
+
+The probability calculation are performed with the applicable data for ``2020-12-17``.
+
++---------------------------------------+-----------+
+| DASH/USD							    |      $114 |
++=======================================+-----------+
+| Masternode collateral requirement     |	   1000 |
++=======================================+-----------+
+| Total supply						    | 9,870,544 |
++=======================================+-----------+
+| Supply in masternode network		    | 4,829,000 |
++=======================================+-----------+
+| Theoretical available supply		    | 5,041,544 |
++=======================================+-----------+
+| Actual available supply on exchanges? | 1,000,000 |
++=======================================+-----------+
+
+
+Malicious Actor Already Present in The Masternode Network
+---------------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------+
+|	                       Chance of fully tracking a single PrivateSend transaction with n rounds    |		
++===================+===============+=====================+=====================+=====================+
+| Masternodes owned | Current total |          4		  |			8		    |          16         |
+| by attacker		| masternodes	| 					  |					    |					  |
++-------------------+---------------+---------------------+---------------------+---------------------+
+| 10				|	  4829		|  0.000000001838955% |  0.000000000000000% |  0.000000000000000% |
+| 100				|	  4829	    |  0.000018389553235% |	 0.000000000003382%	|  0.000000000000000% |
+| 250				|	  4829		|  0.000718341923242% |	 0.000000005160151%	|  0.000000000000000% |
+| 500				|	  4829		|  0.011493470771865% |	 0.000001320998704%	|  0.000000000000017% |
+| 1000				|	  4829		|  0.183895532349847% |	 0.000338175668182%	|  0.000000001143628% |
+| 1500				|	  4829		|  0.930971132521101% |	 0.008667072495876%	|  0.000000751181456% |
+| 2000				|	  4829		|  2.942328517597550% |	 0.086572971054678%	|  0.000074948793172% |
+| 3000				|	  4829		| 14.895538120337600% |	 2.218770558944310%	|  0.049229427932381% |
+| 4000				|	  4829		| 47.077256281560900% |	22.162680589997600%	|  4.911844109342580% |
+| 4829				|     4829		|		 100%		  |        100%	        |         100%		  |
++-------------------+---------------+---------------------+---------------------+---------------------+
+
+If a sybil attacker owns 1000 masternodes he would have a probability of 0.000000001143628% to deanonymize a 16 rounds PrivateSend transaction.
+
+Malicious Actor Not Present in The Masternode Network
+-----------------------------------------------------
+
++-----------------------------------------------------------------------------------------------------+
+|	                       Chance of fully tracking a single PrivateSend transaction with n rounds    |		
++===================+===============+=====================+=====================+=====================+
+| Masternodes owned | Current total |          4		  |			8		    |          16         |
+| by attacker		| masternodes	| 					  |					    |					  |
++-------------------+---------------+---------------------+---------------------+---------------------+
+| 10				|     4839		|  0.000000001823801% |	 0.000000000000000%	|  0.000000000000000% |
+| 100				|	  4929		|  0.000016942001950% |	 0.000000000002870%	|  0.000000000000000% |
+| 250				|	  5079		|  0.000587012275689% |	 0.000000003445834%	|  0.000000000000000% |
+| 500				|	  5329		|  0.007749918517755% |	 0.000000600612370%	|  0.000000000000004% |
+| 1000				|	  5829		|  0.086621116792804% |	 0.000075032178744%	|  0.000000000056298% |
+| 1500				|	  6329		|  0.315518372809482% |	 0.000995518435803%	|  0.000000009910570% |
+| 2000				|	  6829		|  0.735684374159840% |	 0.005412314983830%	|  0.000000292931535% |
+| 3000				|	  7829		|  2.156055056126360% |	 0.046485734050480%	|  0.000021609234702% |
+| 4000				|	  8829		|  4.213023659402310% |	 0.177495683546837%	|  0.000315047176778% |
++-------------------+---------------+---------------------+---------------------+---------------------+
+
+If a sybil attacker manages to buy 1000 masternodes he would have spent $114 million dollars to have a probability of 0.000000000056298% to deanonymize a 16 rounds PrivateSend transaction.
+
+Some additional notes
+---------------------
+
+In reality buying so many masternodes would drastically increase price making a sybil attack even more expensive. Slow incremental buying of so many masternodes may be more realistic, but would easily take multiple years to complete. In the mean time other people would also still be buying and setting up masternodes increasing the total number of masternodes.
+
+It is however also a reality that a sybil attacker could drive price up high enough that masternode owners start selling and that the available supply on exchanges increases. However, even if 3000 masternodes currently in operation were to be sold at current price to a sybil attacker he would still only have 0.049229427932% to deanonymize a 16 rounds PrivateSend transaction.
+
+It is also important to realize that the Dash Core protocol can be updated to have a higher number of mixing rounds, but as you can see there is simply no advantage in implementing this at this stage.
+
+In conclusion, if you only want very decent protection against a potential sybil attack scenario (transaction deanonymizations) you can opt for 4 rounds of mixing and still be very safe for common day to day usage. However if you want to have the absolute best protection you need to opt for 8 or 16 rounds of mixing, which makes deanonymization through this form of attack close to impossible. The recommended standard setting for mixing is at least 8 rounds.
+
+
+
+
