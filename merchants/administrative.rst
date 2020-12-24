@@ -56,7 +56,7 @@ cryptocurrency, and how much should be converted back to a fiat currency
 (such as USD) directly. Different payment processors offer different
 solutions to this problem.
 
-Services such as `GoCoin <https://gocoin.com>`_ are able to convert a
+Services such as `Uphold <https://uphold.com>`_ are able to convert a
 specified percentage of received payments into a range of fiat
 currencies for withdrawal. Others such as `CoinPayments
 <https://www.coinpayments.net>`_ offer the ability to diversify your
