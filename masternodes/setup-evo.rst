@@ -193,20 +193,14 @@ package repository::
   apt upgrade
 
 The system will show a list of upgradable packages. Press **Y** and
-**Enter** to install the packages. We will now install a firewall (and
-some other packages we will use later), add swap memory and reboot the
-server to apply any necessary kernel updates, and then login to our
-newly secured environment as the new user::
-
-  apt install ufw python virtualenv git unzip pv build-essential
-
-(press **Y** and **Enter** to confirm)
-
-::
+**Enter** to install the packages. We will now install a firewall, add
+swap memory and reboot the server to apply any necessary kernel updates,
+and then login to our newly secured environment as the new user::
 
   ufw allow ssh/tcp
   ufw limit ssh/tcp
-  ufw allow 9999/tcp
+  ufw allow 19999/tcp
+  ufw allow 26656/tcp
   ufw logging on
   ufw enable
 
@@ -291,10 +285,8 @@ wallet is highly recommended to enhance security and protect yourself
 against hacking. This guide will describe the steps for both hardware
 wallets and Dash Core.
 
-Option 1: Sending from a hardware wallet
-----------------------------------------
-
-**Will be updated once evo is supported on testnet**
+Option 1: Holding collateral in a hardware wallet
+-------------------------------------------------
 
 Set up your Trezor using the Trezor wallet at https://wallet.trezor.io/
 and send a test transaction to verify that it is working properly. For
@@ -362,7 +354,7 @@ steps as shown in this screenshot:
    for your VPS above is a good choice.
 #. Enter the IP address of your masternode. This was given to you
    by the VPS provider when you set up the server. Then enter the TCP 
-   port number. This should be 9999.
+   port number. This should be 19999.
 #. Click **Locate collateral** to view unused collateral funding 
    transactions available on the connected hardware wallet. Select the 
    address to which you sent 1000 Dash and click **Apply**. The 
@@ -377,8 +369,8 @@ steps as shown in this screenshot:
 Leave DMT open and continue with the next step: :ref:`installing Dash
 Core on your VPS <masternode-setup-install>`.
 
-Option 2: Sending from Dash Core wallet
----------------------------------------
+Option 2: Holding collateral in Dash Core wallet
+------------------------------------------------
 
 Open Dash Core wallet and wait for it to synchronize with the network.
 It should look like this when ready:
@@ -440,13 +432,13 @@ The following tools are available for installing a Dash masternode:
 dashman installation
 --------------------
 
-``dashman`` is a complete rewrite of the `original dashman
-<https://github.com/moocowmoo/dashman/>`__ masternode installer by
-moocowmoo. The new dashman is based on Docker technology and features an
-interactive setup command and the ability to manage multiple node
-configs and multiple networks. It handles the installation of Dash Core
-and Tenderdash, as well as all dependencies and supporting services.
-Full dashman documentation is available `here
+``dashman`` (previously known as ``mn-bootstrap``) is a complete rewrite
+of the `original dashman <https://github.com/moocowmoo/dashman/>`__
+masternode installer by moocowmoo. The new dashman is based on Docker
+technology and features an interactive setup command and the ability to
+manage multiple node configs and multiple networks. It handles the
+installation of Dash Core and Tenderdash, as well as all dependencies
+and supporting services. Full dashman documentation is available `here
 <https://github.com/dashevo/dashman#readme>`__.
 
 Open PuTTY or a console again and connect using the username and
@@ -477,6 +469,14 @@ private key. Enter this information or accept the detected/generated
 defaults. Start your node as follows::
 
   dashman start
+
+You can manage your masternode status, configuration, and running state
+entirely from within dashman. See the documentation `here
+<https://github.com/dashevo/dashman#readme>`__ or use the built-in help
+system to learn more:
+
+- ``dashman --help``
+- ``dashman <command> --help``
 
 Continue with the :ref:`Registration step <register-masternode>` to
 setup the collateral, keys and construct the ProTx transaction required
