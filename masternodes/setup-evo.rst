@@ -478,6 +478,11 @@ system to learn more:
 - ``dashman --help``
 - ``dashman <command> --help``
 
+.. figure:: img/dashman-status.png
+   :width: 280px
+
+   dashman displaying a range of status output
+
 Continue with the :ref:`Registration step <register-masternode>` to
 setup the collateral, keys and construct the ProTx transaction required
 to enable your masternode.
