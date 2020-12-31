@@ -201,6 +201,8 @@ and then login to our newly secured environment as the new user::
   ufw limit ssh/tcp
   ufw allow 19999/tcp
   ufw allow 26656/tcp
+  ufw allow 3000/tcp
+  ufw allow 3010/tcp
   ufw logging on
   ufw enable
 
