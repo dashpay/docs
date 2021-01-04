@@ -17,48 +17,6 @@ not be considered an endorsement or recommendation. Contact the software
 vendor for support.
 
 
-Abra
-====
-
-https://www.abra.com
-
-.. image:: img/abra.png
-   :width: 100px
-   :align: right
-   :target: https://www.abra.com
-
-Abra is a multi-cryptocurrency wallet supporting Dash amongst other
-currencies. It is designed for investment and can be funded from your
-bank account, credit/debit card, cash (in the Philippines), Bitcoin,
-Bitcoin Cash, or Litecoin. Dash deposits and withdrawals are currently
-not supported.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.plutus.wallet
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://apps.apple.com/app/id966301394
-
-Abra is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.plutus.wallet>`__ 
-and the `Apple App Store for iOS <https://apps.apple.com/app/id966301394>`__.
-
-Documentation
--------------
-
-Abra offers detailed documentation of all functions at
-https://abra.zendesk.com
-
-.. figure:: img/abra-wallet.png
-   :width: 133px
-
-   Abra wallet running on iOS
-
-
 ADAMANT
 =======
 
