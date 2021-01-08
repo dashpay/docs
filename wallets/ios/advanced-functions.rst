@@ -21,16 +21,12 @@ Payment
 
 Payment request URL format::
 
-  dashwallet://pay=<address>&amount=<amount>&(req-)IS=<0/1>&sender=<sender>
+  dashwallet://pay=<address>&amount=<amount>&sender=<sender>
 
 Notes:
 
 - ``sender`` is both your callback URL and the name of the app that you
   show to the user. This is to prevent 3rd party apps from phishing.
-- ``req-`` can be added before IS to force use of InstantSend for the
-  transaction. If the user doesn’t have InstantSend enabled and doesn’t
-  want to enable it, he will not be offered the option to send as a
-  normal transaction.
 
 The user will see something similar to this:
 
