@@ -55,8 +55,7 @@ Forums
 Chat
 ----
 
-- **Dash Nation Discord:** https://discord.com/invite/9z8zX5j
-- **Dash Talk Discord:** https://discord.com/invite/PXbUxJB
+- **Dash Discord:** https://discord.com/invite/PXbUxJB
 - **Dash Dapp Devs Discord:** https://chat.dashdevs.org
 - **Dash English Telegram:** https://t.me/dash_chat
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil

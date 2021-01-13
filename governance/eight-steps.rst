@@ -28,7 +28,7 @@ Run a pre-proposal discussion
   out if someone has proposed something similar in the past, and whether
   it succeeded or failed. There are `pre-proposal channels on the forum
   <https://www.dash.org/forum/topic/pre-budget-proposal-
-  discussions.93/>`__ and `Dash Nation Discord <http://dashchat.org>`__,
+  discussions.93/>`__ and `Dash Discord <http://staydashy.com>`__,
   and `Reddit <https://www.reddit.com/r/dashpay>`__ also attracts a lot
   of views - consider the discussion on these channels to be the
   research phase of your proposal. Later, you can post a link to the
