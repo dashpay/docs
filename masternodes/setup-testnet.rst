@@ -424,12 +424,12 @@ Masternode Installation
 
 The following tools are available for installing a Dash masternode:
 
-- :ref:`mn-bootstrap installation <masternode-setup-install-mn-bootstrap>`
-- :ref:`Manual installation <masternode-setup-install-manual>` (incomplete)
+- :ref:`mn-bootstrap installation <testnet-masternode-setup-install-mn-bootstrap>`
+- :ref:`Manual installation <testnet-masternode-setup-install-manual>` (incomplete)
 - `Dash Masternode Zeus <https://github.com/kxcd/Masternode-Zeus>`__ (does not yet support platform services)
 
 
-.. _masternode-setup-install-mn-bootstrap:
+.. _testnet-masternode-setup-install-mn-bootstrap:
 
 mn-bootstrap installation
 -------------------------
@@ -947,7 +947,7 @@ Install evo services
 Next, we will need to install the "evo" services that power Dash Platform.
 
 MongoDB
-~~~~~~~
+^^^^^^^
 
 MongoDB is a database solution. Install and configure as follows::
 
@@ -983,7 +983,7 @@ Start MongoDB, connect to the database and intialize it with the following comma
   quit();
 
 Drive
-~~~~~
+^^^^^
 
 Drive is a replicated state machine for Dash Platform. Install the
 Node.js and NPM dependencies first::
@@ -1021,7 +1021,7 @@ Start Drive::
   npm run abci
 
 Tenderdash
-~~~~~~~~~~
+^^^^^^^^^^
 
 Tenderdash is a fork of Tendermint and is the blockchain implementation
 used by Dash Platform. Install as follows::
