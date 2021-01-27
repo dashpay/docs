@@ -469,19 +469,19 @@ documents.
 PHP: Bitcoin-PHP
 ----------------
 
-https://github.com/snogcel/bitcoin-php
+https://github.com/Bit-Wasp/bitcoin-php
 
 Bitcoin-PHP is an implementation of Bitcoin with support for Dash using
 mostly pure PHP.
 
 - Platform: PHP
 - Documentation: https://github.com/Bit-Wasp/bitcoin-php/blob/1.0/doc/documentation/Introduction.md
-- Repository: https://github.com/snogcel/bitcoin-php
+- Repository: https://github.com/Bit-Wasp/bitcoin-php
 
 Python: PyCoin
 --------------
 
-https://github.com/DeltaEngine/pycoin
+https://github.com/richardkiss/pycoin
 
 PyCoin is an implementation of a bunch of utility routines that may be
 useful when dealing with Bitcoin and Dash. It has been tested
@@ -489,8 +489,8 @@ with Python 2.7, 3.6 and 3.7.
 
 - Platform: Python
 - Documentation: https://pycoin.readthedocs.io/en/latest/
-- Repository: https://github.com/DeltaEngine/pycoin
-- See also: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-dashrpc>`__
+- Repository: https://github.com/richardkiss/pycoin
+- See also: `JSON-RPC Utilities <https://github.com/richardkiss/pycoin>`__
 
 Java: DashJ
 -----------
