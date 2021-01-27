@@ -820,7 +820,7 @@ following keys:
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
   wget https://github.com/dashpay/dash/releases/download/v0.17.0.0-rc2/dashcore-0.17.0.0-rc2-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-0.17.0.0-rc2-x86_64-linux-gnu.tar.gz.asc
 
 Create a working directory for Dash, extract the compressed archive and
 copy the necessary files to the directory::
