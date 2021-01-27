@@ -2,7 +2,7 @@
    :description: This guide describes how to set up a Dash masternode with evo services.
    :keywords: dash, guide, masternodes, trezor, dip3, setup, bls
 
-.. _masternode-setup:
+.. _testnet-masternode-setup:
 
 =============
 Testnet Setup
@@ -56,7 +56,7 @@ entering the same commands and adding the prefix
 ``~/.dashcore/dash-cli`` to each command.
 
 
-.. _vps-setup:
+.. _testnet-vps-setup:
 
 Set up your VPS
 ===============
@@ -369,7 +369,7 @@ steps as shown in this screenshot:
    Dash Masternode Tool with masternode configuration
 
 Leave DMT open and continue with the next step: :ref:`installing Dash
-Core on your VPS <masternode-setup-install>`.
+Core on your VPS <testnet-masternode-setup-install>`.
 
 Option 2: Holding collateral in Dash Core wallet
 ------------------------------------------------
@@ -417,7 +417,7 @@ your masternode operator key.
    transfer
 
 
-.. _masternode-setup-install:
+.. _testnet-masternode-setup-install:
 
 Masternode Installation
 =======================
@@ -485,11 +485,11 @@ system to learn more:
 
    mn-bootstrap displaying a range of status output
 
-Continue with the :ref:`Registration step <register-masternode>` to
+Continue with the :ref:`Registration step <testnet-register-masternode>` to
 setup the collateral, keys and construct the ProTx transaction required
 to enable your masternode.
 
-.. _register-masternode:
+.. _testnet-register-masternode:
 
 Register your masternode
 ========================
@@ -548,7 +548,7 @@ function in DMT.
 You can now safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
 
-.. _dashcore-protx:
+.. _testnet-dashcore-protx:
 
 Option 2: Registering from Dash Core wallet
 -------------------------------------------
@@ -572,7 +572,7 @@ The first long string is your ``collateralHash``, while the last number
 is the ``collateralIndex``. 
 
 
-.. _bls-generation:
+.. _testnet-bls-generation:
 
 Generate a BLS key pair
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -788,7 +788,7 @@ masternode by entering ``mn status`` or using the **Get status**
 function in DMT. 
 
 
-.. _masternode-setup-install-manual:
+.. _testnet-masternode-setup-install-manual:
 
 Manual installation
 ===================
