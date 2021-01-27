@@ -860,16 +860,14 @@ follows::
   #masternodeblsprivkey=
   externalip=XXX.XXX.XXX.XXX
   #----
-  devnet=evonet-8
+  testnet=1
   
-  [devnet]
-  port=20001
-  rpcport=20002
-  sporkaddr=yQuAu9YAMt4yEiXBeDp3q5bKpo7jsC2eEj
-  addnode=seed-1.evonet.networks.dash.org:20001
-  minimumdifficultyblocks=1000
-  highsubsidyblocks=500
-  highsubsidyfactor=10
+  [test]
+  port=19999
+  rpcport=19998
+  bind=0.0.0.0
+  rpcbind=0.0.0.0
+
 
 Replace the fields marked with ``XXXXXXX`` as follows:
 
