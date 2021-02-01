@@ -898,7 +898,7 @@ now install Sentinel, a piece of software which operates as a watchdog
 to communicate to the network that your node is working properly::
 
   cd
-  sudo apt install python3-virtualenv
+  sudo apt install -y python3-virtualenv
   git clone https://github.com/dashpay/sentinel.git
   cd sentinel
   virtualenv venv
@@ -955,8 +955,8 @@ MongoDB is a database solution. Install and configure as follows::
   cd
   wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
   echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-  sudo apt-get update
-  sudo apt-get install -y mongodb-org
+  sudo apt update
+  sudo apt install -y mongodb-org
 
 Edit the configurtion file and create a replica set::
 
@@ -991,7 +991,7 @@ Drive is a replicated state machine for Dash Platform. Install the
 Node.js and NPM dependencies first::
 
   curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-  sudo apt-get install -y nodejs
+  sudo apt install -y nodejs
   sudo npm install forever -g
 
 Install and configure Drive as follows::
@@ -1022,20 +1022,33 @@ Tenderdash
 ^^^^^^^^^^
 
 Tenderdash is a fork of Tendermint and is the blockchain implementation
-used by Dash Platform. Install as follows::
+used by Dash Platform. As binaries are not yet published, you will need
+to build from source. Install Go as follows::
 
   cd /tmp
-  wget https://github.com/tendermint/tendermint/releases/download/v0.34.0/Tendermint_0.34.0_linux_amd64.tar.gz
-  tar xfv Tendermint_0.34.0_linux_amd64.tar.gz
-  sudo install -t /usr/local/bin Tendermint 
+  wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz
+  sudo tar -C /usr/local -xzf go1.15.7.linux-amd64.tar.gz
+  export PATH=$PATH:/usr/local/go/bin
+
+Build and install Tenderdash as follows::
+
+  cd
+  sudo apt install -y build-essential cmake libgmp-dev
+  git clone https://github.com/dashevo/tenderdash tenderdash-build
+  cd tenderdash-build
+  make install-bls
+  make build-linux
+  sudo install -t /usr/local/bin build/*
 
 Initialize Tenderdash::
 
   tenderdash init
 
-Three files will be generated. Edit these as follows::
+Several files will be generated in the ``~/.tendermint`` directory. Edit
+these as follows, searching, replacing, commenting, uncommenting or
+adding lines as appropriate::
 
-  config.toml
+  ~/.tendermint/config/config.toml
   #moniker = ""
   addr_book_strict = false
   timeout_commit = "500ms"
@@ -1043,10 +1056,10 @@ Three files will be generated. Edit these as follows::
   namespace = "drive_tendermint"
   persistent_peers = "08dd8e2b1968c1323b9460949971132653ece7d8@54.69.71.240:26656"
 
-  genesis.json
+  ~/.tendermint/config/genesis.json
   {
-    "genesis_time": "2020-10-29T14:54:55.243362093Z",
-    "chain_id": "dash-devnet-evonet-8",
+    "genesis_time": "2020-12-30T14:08:02.904199237Z",
+    "chain_id": "dash-testnet",
     "consensus_params": {
       "block": {
         "max_bytes": "22020096",
@@ -1054,7 +1067,9 @@ Three files will be generated. Edit these as follows::
         "time_iota_ms": "5000"
       },
       "evidence": {
-        "max_age": "100000"
+        "max_age": "100000",
+        "max_age_num_blocks": "100000",
+        "max_age_duration": "172800000000000"
       },
       "validator": {
         "pub_key_types": [
@@ -1062,23 +1077,40 @@ Three files will be generated. Edit these as follows::
         ]
       }
     },
+    "initial_core_chain_locked_height": 415765,
     "validators": [
       {
-        "address": "8AA28E29CBE6F8C44228AFF79212A05211531D31",
+        "address": "BA447D4EA32286A8DA316F6BCC206092D09BD4A8",
         "pub_key": {
-          "type": "tendermint/PubKeyEd25519",
-          "value": "YY8qJE2Jyl90SN0NeV4G+btces5S2MLxkdHu1dzK9gE="
+          "type": "tendermint/PubKeyBLS12381",
+          "value": "gfNfKbv1H47o0Bbb6Ot5NFOLTwsLDN0M54Q2cNiA1fvUBE+Wg7upIvJI4KyICXQJ"
         },
         "power": "1",
-        "name": "masternode-1"
+        "name": "masternode-15"
       },
+      {
+        "address": "1BC727ED0A48DE8B87D2FCF52BCBD7ABF06456C5",
+        "pub_key": {
+          "type": "tendermint/PubKeyBLS12381",
+          "value": "lxYemf6KwM5QkEpmp+ocxjQ6sH/YQ5pS7CMR5W7GXWPvH+In20gS0jRS1EGSd8PC"
+        },
+        "power": "1",
+        "name": "masternode-46"
+      }
     ],
-  },
+    "app_hash": ""
+  }
 
-Start the node::
 
-  tendermint node
+Ensure Dash Core is fully synced and start the tenderdash node::
 
+  tenderdash node
+
+
+DAPI
+^^^^
+
+Instructions coming soon!
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
