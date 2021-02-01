@@ -447,7 +447,8 @@ Open PuTTY or a console again and connect using the username and
 password you just created for your new, non-root user. Begin by
 installing mn-bootstrap dependencies::
 
-  sudo apt install git docker.io docker-compose nodejs npm
+  curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+  sudo apt install -y nodejs git docker.io docker-compose 
 
 Add your current user to the docker group and refresh the environment::
 
