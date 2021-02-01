@@ -1034,8 +1034,8 @@ Build and install Tenderdash as follows::
 
   cd
   sudo apt install -y build-essential cmake libgmp-dev
-  git clone https://github.com/dashevo/tenderdash tenderdash-build
-  cd tenderdash-build
+  git clone https://github.com/dashevo/tenderdash
+  cd tenderdash
   make install-bls
   make build-linux
   sudo install -t /usr/local/bin build/*
@@ -1044,9 +1044,12 @@ Initialize Tenderdash::
 
   tenderdash init
 
-Several files will be generated in the ``~/.tendermint`` directory. Edit
-``~/.tendermint/config/config.toml`` by commenting, uncommenting or
-editing lines as appropriate::
+Several files will be generated in the ``~/.tendermint`` directory. Open
+the first file for editing::
+
+  nano ~/.tendermint/config/config.toml
+  
+Comment, uncomment or edit the following lines in the file::
 
   #moniker = ""
   addr_book_strict = false
@@ -1055,10 +1058,12 @@ editing lines as appropriate::
   namespace = "drive_tendermint"
   persistent_peers = "08dd8e2b1968c1323b9460949971132653ece7d8@54.69.71.240:26656"
 
+Open the genesis file for editing::
 
-Paste the following block of JSON code into
-``~/.tendermint/config/genesis.json``::
+  nano ~/.tendermint/config/genesis.json``
   
+Past in the following JSON code::
+
   {
     "genesis_time": "2020-12-30T14:08:02.904199237Z",
     "chain_id": "dash-testnet",
