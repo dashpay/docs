@@ -897,7 +897,8 @@ You will see a message reading **Dash Core server starting**. We will
 now install Sentinel, a piece of software which operates as a watchdog
 to communicate to the network that your node is working properly::
 
-  cd ~
+  cd
+  sudo apt install python3-virtualenv
   git clone https://github.com/dashpay/sentinel.git
   cd sentinel
   virtualenv venv
@@ -951,6 +952,7 @@ MongoDB
 
 MongoDB is a database solution. Install and configure as follows::
 
+  cd
   wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
   echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
   sudo apt-get update
@@ -971,7 +973,7 @@ Start MongoDB, connect to the database and intialize it with the following comma
   mongo
   
   rs.initiate({
-    _id: 'driveDocumentIndices',
+    _id: 'driveDocuments',
     version: 1,
     members: [
       {
@@ -990,35 +992,31 @@ Node.js and NPM dependencies first::
 
   curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
   sudo apt-get install -y nodejs
+  sudo npm install forever -g
 
-Install and configure Drive as follows:
+Install and configure Drive as follows::
 
   cd
   git clone https://github.com/dashevo/js-drive
   cd js-drive
 
-Create a config file as follows::
+Copy and edit the provided config file as follows::
 
+  cp .env.example .env
   nano .env
 
-Add the following lines::
+Near the end of the file, uncomment the following lines and paste in the
+following values::
 
-  CORE_JSON_RPC_USERNAME=dashrpc
-  CORE_JSON_RPC_PASSWORD=password
-  CORE_JSON_RPC_HOST=localhost
-  CORE_JSON_RPC_PORT=20002
-  CORE_ZMQ_HOST=localhost
-  CORE_ZMQ_PORT=29998
-  DOCUMENT_MONGODB_URL=mongodb://localhost:27017?replicaSet=driveDocumentIndices
+  INITIAL_CORE_CHAINLOCKED_HEIGHT=415765
   DPNS_CONTRACT_ID=3VvS19qomuGSbEYWbTsRzeuRgawU3yK4fPMzLrbV62u8
   DPNS_CONTRACT_BLOCK_HEIGHT=35
-  DPNS_TOP_LEVEL_IDENTITY=Gxiu28Lzfj66aPBCxD7AgTbbauLf68jFLNibWGU39Fuh
-  INITIAL_CORE_CHAINLOCKED_HEIGHT=
+  CORE_JSON_RPC_PORT=19998
 
 Start Drive::
 
   npm install
-  npm run abci
+  forever start -c "npm run abci" ~/js-drive
 
 Tenderdash
 ^^^^^^^^^^
