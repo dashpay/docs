@@ -1045,10 +1045,9 @@ Initialize Tenderdash::
   tenderdash init
 
 Several files will be generated in the ``~/.tendermint`` directory. Edit
-these as follows, searching, replacing, commenting, uncommenting or
-adding lines as appropriate::
+``~/.tendermint/config/config.toml`` by commenting, uncommenting or
+editing lines as appropriate::
 
-  ~/.tendermint/config/config.toml
   #moniker = ""
   addr_book_strict = false
   timeout_commit = "500ms"
@@ -1056,7 +1055,10 @@ adding lines as appropriate::
   namespace = "drive_tendermint"
   persistent_peers = "08dd8e2b1968c1323b9460949971132653ece7d8@54.69.71.240:26656"
 
-  ~/.tendermint/config/genesis.json
+
+Paste the following block of JSON code into
+``~/.tendermint/config/genesis.json``::
+  
   {
     "genesis_time": "2020-12-30T14:08:02.904199237Z",
     "chain_id": "dash-testnet",
@@ -1100,7 +1102,6 @@ adding lines as appropriate::
     ],
     "app_hash": ""
   }
-
 
 Ensure Dash Core is fully synced and start the tenderdash node::
 
