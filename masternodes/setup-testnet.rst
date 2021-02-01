@@ -822,15 +822,16 @@ following keys:
   wget https://github.com/dashpay/dash/releases/download/v0.16.1.1/dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz.asc
   gpg --verify dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz.asc
 
-Create a working directory for Dash, extract the compressed archive and
-copy the necessary files to the directory::
-
-  mkdir ~/.dashcore
+Extract the compressed archive and copy the necessary files to the
+directory::
+  
   tar xfv dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz
   sudo install -t /usr/local/bin dashcore-0.16.1/bin/*
 
-Create a configuration file using the following command::
+Create a working directory and configuration file for Dash using the
+following commands::
 
+  mkdir ~/.dashcore
   nano ~/.dashcore/dash.conf
 
 An editor window will appear. We now need to create a configuration file
