@@ -796,12 +796,19 @@ Manual installation
 
 **The manual installation guide is incomplete and currently a work in progress.**
 
-To manually download and install the components of your Dash masternode,
-visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ 
-and copy the link to the latest ``x86_64-linux-gnu`` version. Go back to
-your terminal window and enter the following command, pasting in the
-address to the latest version of Dash Core by right clicking or pressing
-**Ctrl + V**::
+This guide describes how to manually download and install the components
+of your Dash masternode.
+
+Dash Core
+^^^^^^^^^
+
+Dash Core is a fork of Bitcoin Core and is a monolithic component
+responsible for all consensus and communication relating to the base
+blockchain. Visit the `GitHub releases page
+<https://github.com/dashpay/dash/releases>`_ and copy the link to the
+latest ``x86_64-linux-gnu`` version. Go back to your terminal window and
+enter the following command, pasting in the address to the latest
+version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
   wget https://github.com/dashpay/dash/releases/download/v0.17.0.0-rc2/dashcore-0.17.0.0-rc2-x86_64-linux-gnu.tar.gz
@@ -893,9 +900,14 @@ synchronization with the blockchain::
 
   dashd
 
-You will see a message reading **Dash Core server starting**. We will
-now install Sentinel, a piece of software which operates as a watchdog
-to communicate to the network that your node is working properly::
+You will see a message reading **Dash Core server starting**. 
+
+Sentinel
+^^^^^^^^
+
+We will now install Sentinel, a piece of software which operates as a
+watchdog to communicate to the network that your node is working
+properly::
 
   cd
   sudo apt install -y python3-virtualenv
@@ -945,32 +957,34 @@ to enable your masternode.
 Install evo services
 --------------------
 
-Next, we will need to install the "evo" services that power Dash Platform.
+Next, we will need to install the "evo" services that power Dash
+Platform. We will start with some common dependencies::
+
+  curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+  sudo apt install -y libzmq3-dev nodejs
+  sudo npm install forever -g
 
 MongoDB
 ^^^^^^^
 
-MongoDB is a database solution. Install and configure as follows::
+MongoDB is a document-oriented database. Install MongoDB as follows::
 
   cd
-  wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
-  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-  sudo apt update
+  curl -sL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+  sudo add-apt-repository "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse"
   sudo apt install -y mongodb-org
 
-Edit the configurtion file and create a replica set::
-
-  sudo nano /etc/mongod.conf
-
-Uncomment/add the following lines::
+Open the configuration file with ``sudo nano /etc/mongod.conf`` and edit
+it to include the following::
 
   replication:
-    replSetName: driveDocumentIndices
+    replSetName: driveDocuments
 
-Start MongoDB, connect to the database and intialize it with the following commands::
+Restart MongoDB::
 
-  sudo systemctl start mongod
-  mongo
+  sudo systemctl restart mongod
+
+Open the MongoDB client with ``mongo`` and run the following function::
   
   rs.initiate({
     _id: 'driveDocuments',
@@ -982,41 +996,35 @@ Start MongoDB, connect to the database and intialize it with the following comma
       },
     ],
   });
+  
   quit();
 
 Drive
 ^^^^^
 
-Drive is a replicated state machine for Dash Platform. Install the
-Node.js and NPM dependencies first::
-
-  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-  sudo apt install -y nodejs
-  sudo npm install forever -g
-
-Install and configure Drive as follows::
+Drive is a replicated state machine for Dash Platform. Download Drive as
+follows::
 
   cd
   git clone https://github.com/dashevo/js-drive
   cd js-drive
-
-Copy and edit the provided config file as follows::
-
   cp .env.example .env
-  nano .env
 
-Near the end of the file, uncomment the following lines and paste in the
-following values::
+Open the configuration file with ``nano .env`` and edit it to include
+the following::
 
-  INITIAL_CORE_CHAINLOCKED_HEIGHT=415765
-  DPNS_CONTRACT_ID=3VvS19qomuGSbEYWbTsRzeuRgawU3yK4fPMzLrbV62u8
-  DPNS_CONTRACT_BLOCK_HEIGHT=35
-  CORE_JSON_RPC_PORT=19998
+  INITIAL_CORE_CHAINLOCKED_HEIGHT = 415765
+  DPNS_CONTRACT_ID = 3VvS19qomuGSbEYWbTsRzeuRgawU3yK4fPMzLrbV62u8
+  DPNS_CONTRACT_BLOCK_HEIGHT = 35
+  CORE_JSON_RPC_PORT = 19998
+
+Install package dependencies::
+
+  npm install
 
 Start Drive::
 
-  npm install
-  forever start -c "npm run abci" ~/js-drive
+  forever start --uid "drive" scripts/abci.js
 
 Tenderdash
 ^^^^^^^^^^
@@ -1036,6 +1044,7 @@ Build and install Tenderdash as follows::
   sudo apt install -y build-essential cmake libgmp-dev
   git clone https://github.com/dashevo/tenderdash
   cd tenderdash
+  git checkout coreChainLocksV6
   make install-bls
   make build-linux
   sudo install -t /usr/local/bin build/*
@@ -1045,76 +1054,122 @@ Initialize Tenderdash::
   tenderdash init
 
 Several files will be generated in the ``~/.tendermint`` directory. Open
-the first file for editing::
-
-  nano ~/.tendermint/config/config.toml
-  
-Comment, uncomment or edit the following lines in the file::
+the configuration file with ``~/.tendermint/config/config.toml`` and
+edit it to include the following::
 
   #moniker = ""
-  addr_book_strict = false
   timeout_commit = "500ms"
   create_empty_blocks_interval = "3m"
   namespace = "drive_tendermint"
-  persistent_peers = "08dd8e2b1968c1323b9460949971132653ece7d8@54.69.71.240:26656"
+  seeds = "4bc75fcb13e37ad6473383ea92408a451ed1b6d1@54.189.200.56:26656,173fcd535bccde1ed20ca8fb1519858dd5cef618@52.43.162.96:26656"
 
-Open the genesis file for editing::
+Open the genesis file with ``~/.tendermint/config/genesis.json`` and
+paste the following JSON code into the file::
 
-  nano ~/.tendermint/config/genesis.json``
-  
-Past in the following JSON code::
+  https://gist.github.com/strophy/ca6acd23bbdec1e55f322dac04a1059d
 
-  {
-    "genesis_time": "2020-12-30T14:08:02.904199237Z",
-    "chain_id": "dash-testnet",
-    "consensus_params": {
-      "block": {
-        "max_bytes": "22020096",
-        "max_gas": "-1",
-        "time_iota_ms": "5000"
-      },
-      "evidence": {
-        "max_age": "100000",
-        "max_age_num_blocks": "100000",
-        "max_age_duration": "172800000000000"
-      },
-      "validator": {
-        "pub_key_types": [
-          "ed25519"
-        ]
-      }
-    },
-    "initial_core_chain_locked_height": 415765,
-    "validators": [
-      {
-        "address": "BA447D4EA32286A8DA316F6BCC206092D09BD4A8",
-        "pub_key": {
-          "type": "tendermint/PubKeyBLS12381",
-          "value": "gfNfKbv1H47o0Bbb6Ot5NFOLTwsLDN0M54Q2cNiA1fvUBE+Wg7upIvJI4KyICXQJ"
-        },
-        "power": "1",
-        "name": "masternode-15"
-      },
-      {
-        "address": "1BC727ED0A48DE8B87D2FCF52BCBD7ABF06456C5",
-        "pub_key": {
-          "type": "tendermint/PubKeyBLS12381",
-          "value": "lxYemf6KwM5QkEpmp+ocxjQ6sH/YQ5pS7CMR5W7GXWPvH+In20gS0jRS1EGSd8PC"
-        },
-        "power": "1",
-        "name": "masternode-46"
-      }
-    ],
-    "app_hash": ""
-  }
-
-Ensure Dash Core is fully synced and start the tenderdash node::
+Ensure Dash Core is fully synced and start Tenderdash::
 
   tenderdash node
 
+Insight
+^^^^^^^
+
+Insight is a Dash REST and WebSocket API service. It runs as a plugin to
+the Dashcore Node server. Download Dashcore Node as follows::
+
+  cd
+  git clone https://github.com/dashevo/dashcore-node
+  cd dashcore_node
+
+Set up a basic configuration file::
+
+  nano dashcore-node.json
+
+Create a configuration file with ``nano dashcore-node.json`` and edit it
+to include the following::
+  
+  {
+    "network": "testnet",
+    "port": 3001,
+    "services": [
+      "dashd",
+      "web",
+      "@dashevo/insight-api"
+    ],
+    "servicesConfig": {
+      "dashd": {
+        "connect": [{
+          "rpchost": "127.0.0.1",
+          "rpcport": 19998,
+          "rpcuser": "dashrpc",
+          "rpcpassword": "password",
+          "zmqpubrawtx": "tcp://127.0.0.1:29998",
+          "zmqpubhashblock": "tcp://127.0.0.1:29998"
+        }]
+      }
+    }
+  }
+
+Install package dependencies and Insight::
+
+  npm install
+  bin/dashcore-node install @dashevo/insight-api
+
+Start Dashcore Node and Insight::
+
+  forever start --uid "insight" -c "bin/dashcore-node start" .
 
 DAPI
 ^^^^
+
+DAPI provides masternode services over the JSON RPC and gRPC protocols.
+Download DAPI as follows::
+
+  cd 
+  git clone https://github.com/dashevo/dapi
+  cd dapi
+  cp .env.example .env
+
+Open the configuration file with ``nano .env`` and edit it to include
+the following::
+
+  DASHCORE_RPC_PORT = 19998
+  DASHCORE_ZMQ_PORT = 29998
+  DASHCORE_P2P_PORT = 19999
+
+Install package dependencies::
+
+  npm_config_zmq_external = true
+  npm install
+
+Start DAPI::
+
+  forever start --uid "dapi" scripts/api.js
+
+Start the transaction filter stream::
+
+  forever start --uid "tx-filter-stream" scripts/tx-filter-stream.js
+
+Envoy
+^^^^^
+
+Envoy is a gRPC service proxy for cloud-native applications. Install
+Envoy as follows::
+
+  cd
+  curl -sL https://getenvoy.io/gpg | sudo apt-key add -
+  sudo add-apt-repository "deb [arch=amd64] https://dl.bintray.com/tetrate/getenvoy-deb $(lsb_release -cs) stable"
+  sudo apt install -y getenvoy-envoy
+
+Create a configuration file with ``nano envoy.yaml`` and paste the
+following JSON code into the file::
+
+  https://gist.github.com/strophy/3724a3537d4cbc6fbdba169768392f28
+
+Start Envoy::
+
+  envoy --config-path envoy.yaml
 
 Instructions coming soon!
 
