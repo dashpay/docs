@@ -448,12 +448,15 @@ password you just created for your new, non-root user. Begin by
 installing mn-bootstrap dependencies::
 
   curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-  sudo apt install -y nodejs git docker.io docker-compose 
+  sudo apt install -y nodejs git docker.io docker-compose  
 
-Add your current user to the docker group and refresh the environment::
+Add your current user to the docker group, ensure docker starts on boot
+and refresh the environment::
 
   sudo usermod -aG docker <username>
   newgrp docker
+  sudo systemctl enable docker.service
+  sudo systemctl enable containerd.service
 
 Clone the mn-bootstrap repository, set up the dependencies and link the
 CLI::
@@ -1057,7 +1060,7 @@ Initialize Tenderdash::
   tenderdash init
 
 Several files will be generated in the ``~/.tendermint`` directory. Open
-the configuration file with ``~/.tendermint/config/config.toml`` and
+the configuration file with ``nano ~/.tendermint/config/config.toml`` and
 edit it to include the following::
 
   #moniker = ""
@@ -1066,14 +1069,28 @@ edit it to include the following::
   namespace = "drive_tendermint"
   seeds = "4bc75fcb13e37ad6473383ea92408a451ed1b6d1@54.189.200.56:26656,173fcd535bccde1ed20ca8fb1519858dd5cef618@52.43.162.96:26656"
 
-Open the genesis file with ``~/.tendermint/config/genesis.json`` and
-paste the following JSON code into the file::
+Open the genesis file with ``nano ~/.tendermint/config/genesis.json`` and
+replace the existing JSON with the following JSON code::
 
   https://gist.github.com/strophy/ca6acd23bbdec1e55f322dac04a1059d
 
+Configure Tenderdash to start as a service by creating a systemd service
+file with ``sudo nano /etc/systemd/system/tenderdash.service`` and edit
+it to include the following::
+
+  [Unit]
+  Description=Tenderdash
+
+  [Service]
+  Environment="TMHOME=/home/<username>/.tenderdash"
+  ExecStart=/usr/local/bin/tenderdash node
+
+  [Install]
+  WantedBy=multi-user.target
+
 Ensure Dash Core is fully synced and start Tenderdash::
 
-  tenderdash node
+  sudo systemctl start tenderdash.service 
 
 Insight
 ^^^^^^^
@@ -1137,13 +1154,13 @@ Download DAPI as follows::
 Open the configuration file with ``nano .env`` and edit it to include
 the following::
 
-  DASHCORE_RPC_PORT = 19998
-  DASHCORE_ZMQ_PORT = 29998
-  DASHCORE_P2P_PORT = 19999
+  DASHCORE_RPC_PORT=19998
+  DASHCORE_ZMQ_PORT=29998
+  DASHCORE_P2P_PORT=19999
 
 Install package dependencies::
 
-  npm_config_zmq_external = true
+  npm_config_zmq_external=true
   npm install
 
 Start DAPI::
@@ -1165,14 +1182,65 @@ Envoy as follows::
   sudo add-apt-repository "deb [arch=amd64] https://dl.bintray.com/tetrate/getenvoy-deb $(lsb_release -cs) stable"
   sudo apt install -y getenvoy-envoy
 
-Create a configuration file with ``nano envoy.yaml`` and paste the
-following JSON code into the file::
+Create a configuration file with ``sudo mkdir /etc/envoy && sudo nano
+/etc/envoy/config.yaml`` and paste the following JSON code into the
+file::
 
   https://gist.github.com/strophy/3724a3537d4cbc6fbdba169768392f28
 
-Start Envoy::
+Configure Envoy to start as a service by creating a systemd service
+file with ``sudo nano /etc/systemd/system/envoy.service`` and edit
+it to include the following::
 
-  envoy --config-path envoy.yaml
+  [Unit]
+  Description=Envoy
+  
+  [Service]
+  ExecStart=bash -c '/usr/bin/envoy --config-path /etc/envoy/config.yaml | tee'
+  Restart=always
+  RestartSec=5
+  KillMode=mixed
+  SyslogIdentifier=envoy
+  
+  [Install]
+  WantedBy=multi-user.target
+
+Start Envoy::
+  
+  sudo systemctl start envoy.service
+
+Nginx
+^^^^^
+
+Nginx is a high performance web server. Install Nginx as follows::
+
+  cd
+  curl -sL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -
+  sudo add-apt-repository "deb http://nginx.org/packages/ubuntu focal nginx"
+  sudo apt install nginx
+
+Create the default configuration with ``sudo nano
+/etc/nginx/conf.d/default.conf`` and paste the following config into the
+file::
+
+  https://gist.github.com/strophy/74ce468f8954341e3a6ee5d6587fe70e
+
+Create the gRPC configuration with ``sudo nano
+/etc/nginx/conf.d/grpc.conf`` and paste the following config into the
+file::
+
+  https://gist.github.com/strophy/db8aa126a04e10ff786ecc58afa8a067
+
+Create the gRPC error configuration with ``sudo nano
+/etc/nginx/conf.d/errors.grpc_conf`` and paste the following config into the
+file::
+
+  https://gist.github.com/strophy/93a897eb3ebf0238e634bd38a2e4374b
+
+Start Nginx as follows::
+
+  sudo systemctl start nginx
+  sudo systemctl enable nginx
 
 Instructions coming soon!
 
