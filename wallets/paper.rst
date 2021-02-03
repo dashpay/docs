@@ -224,9 +224,7 @@ We will use the Dash Core Wallet in this example, although Dash Electrum
 and mobile wallets are also supported. Open Dash Core Wallet, click
 **Settings** and **Unlock Wallet**. Enter your wallet passphrase. Then
 click **Tools** and select **Debug Console**. The console appears. Enter
-the following command:
-
-.. code-block:: text
+the following command::
 
   importprivkey <your private key in WIF>
 
