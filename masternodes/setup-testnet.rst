@@ -455,8 +455,8 @@ and refresh the environment::
 
   sudo usermod -aG docker <username>
   newgrp docker
-  sudo systemctl enable docker.service
-  sudo systemctl enable containerd.service
+  sudo systemctl enable docker
+  sudo systemctl enable containerd
 
 Clone the mn-bootstrap repository, set up the dependencies and link the
 CLI::
@@ -904,6 +904,7 @@ it to include the following::
   ExecStart=/usr/local/bin/dashd
   TimeoutStartSec=10m
   ExecStop=/usr/local/bin/dash-cli stop
+  SyslogIdentifier=dashd
   TimeoutStopSec=120
   RestartSec=120
   
@@ -1081,10 +1082,10 @@ edit it to include the following::
   namespace = "drive_tendermint"
   seeds = "4bc75fcb13e37ad6473383ea92408a451ed1b6d1@54.189.200.56:26656,173fcd535bccde1ed20ca8fb1519858dd5cef618@52.43.162.96:26656"
 
-Open the genesis file with ``nano ~/.tendermint/config/genesis.json`` and
-replace the existing JSON with the following JSON code::
+Open the genesis file with ``nano ~/.tendermint/config/genesis.json``
+and paste the config from the following address into the file:
 
-  https://gist.github.com/strophy/ca6acd23bbdec1e55f322dac04a1059d
+https://gist.github.com/strophy/ca6acd23bbdec1e55f322dac04a1059d
 
 Configure Tenderdash to start as a service by creating a systemd service
 file with ``sudo nano /etc/systemd/system/tenderdash.service`` and edit
@@ -1101,6 +1102,7 @@ it to include the following::
   TimeoutStopSec=120
   RestartSec=120
   ExecStart=/usr/local/bin/tenderdash node
+  SyslogIdentifier=tenderdash
   
   [Install]
   WantedBy=multi-user.target
@@ -1178,6 +1180,9 @@ Download DAPI as follows::
 Open the configuration file with ``nano .env`` and edit it to include
 the following::
 
+  API_JSON_RPC_PORT=3004
+  API_GRPC_PORT=3005
+  TX_FILTER_STREAM_GRPC_PORT=3006
   DASHCORE_RPC_PORT=19998
   DASHCORE_ZMQ_PORT=29998
   DASHCORE_P2P_PORT=19999
@@ -1207,10 +1212,10 @@ Envoy as follows::
   sudo apt install -y getenvoy-envoy
 
 Create a configuration file with ``sudo mkdir /etc/envoy && sudo nano
-/etc/envoy/config.yaml`` and paste the following JSON code into the
-file::
+/etc/envoy/config.yaml`` and paste the config from the following
+address into the file:
 
-  https://gist.github.com/strophy/3724a3537d4cbc6fbdba169768392f28
+https://gist.github.com/strophy/3724a3537d4cbc6fbdba169768392f28
 
 Configure Envoy to start as a service by creating a systemd service
 file with ``sudo nano /etc/systemd/system/envoy.service`` and edit
@@ -1218,6 +1223,7 @@ it to include the following::
 
   [Unit]
   Description=Envoy
+  After=syslog.target network-online.target
   
   [Service]
   ExecStart=bash -c '/usr/bin/envoy --config-path /etc/envoy/config.yaml | tee'
@@ -1231,7 +1237,7 @@ it to include the following::
 
 Start Envoy::
   
-  sudo systemctl start envoy.service
+  sudo systemctl start envoy
 
 Nginx
 ^^^^^
@@ -1244,29 +1250,27 @@ Nginx is a high performance web server. Install Nginx as follows::
   sudo apt install nginx
 
 Create the default configuration with ``sudo nano
-/etc/nginx/conf.d/default.conf`` and paste the following config into the
-file::
+/etc/nginx/conf.d/default.conf`` and paste the config from the following
+address into the file:
 
-  https://gist.github.com/strophy/74ce468f8954341e3a6ee5d6587fe70e
+https://gist.github.com/strophy/74ce468f8954341e3a6ee5d6587fe70e
 
 Create the gRPC configuration with ``sudo nano
-/etc/nginx/conf.d/grpc.conf`` and paste the following config into the
-file::
+/etc/nginx/conf.d/grpc.conf`` and paste the config from the following
+address into the file:
 
-  https://gist.github.com/strophy/db8aa126a04e10ff786ecc58afa8a067
+https://gist.github.com/strophy/db8aa126a04e10ff786ecc58afa8a067
 
 Create the gRPC error configuration with ``sudo nano
-/etc/nginx/conf.d/errors.grpc_conf`` and paste the following config into the
-file::
+/etc/nginx/conf.d/errors.grpc_conf`` and paste the config from the following
+address into the file:
 
-  https://gist.github.com/strophy/93a897eb3ebf0238e634bd38a2e4374b
+https://gist.github.com/strophy/93a897eb3ebf0238e634bd38a2e4374b
 
 Start Nginx as follows::
 
-  sudo systemctl start nginx
   sudo systemctl enable nginx
-
-Instructions coming soon!
+  sudo systemctl start nginx
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
