@@ -1123,11 +1123,7 @@ the Dashcore Node server. Download Dashcore Node as follows::
 
   cd
   git clone https://github.com/dashevo/dashcore-node
-  cd dashcore_node
-
-Set up a basic configuration file::
-
-  nano dashcore-node.json
+  cd dashcore-node
 
 Create a configuration file with ``nano dashcore-node.json`` and edit it
 to include the following::
@@ -1156,12 +1152,17 @@ to include the following::
 
 Install package dependencies and Insight::
 
+  npm_config_zmq_external=true
   npm install
   bin/dashcore-node install @dashevo/insight-api
 
 Start Dashcore Node and Insight::
 
-  forever start --uid "insight" -c "bin/dashcore-node start" .
+  forever start --uid "insight" bin/dashcore-node
+
+Verify Insight is running by checking for a time value under ``uptime``::
+
+  forever list
 
 DAPI
 ^^^^
