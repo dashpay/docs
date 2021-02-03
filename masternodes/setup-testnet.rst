@@ -942,7 +942,7 @@ to make sure it runs every minute to check on your masternode::
   crontab -e
 
 Choose nano as your editor and enter the following line at the end of
-the file::
+the file:: text
 
   * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
 
