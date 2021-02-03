@@ -916,6 +916,10 @@ Start Dash Core::
   sudo systemctl enable dashd
   sudo systemctl start dashd
 
+Verify Dash Core is running::
+
+  sudo systemctl status dashd
+
 Sentinel
 ^^^^^^^^
 
@@ -956,11 +960,11 @@ response::
     "IsFailed": false
   }
 
-Install evo services
---------------------
+Platform services
+-----------------
 
-Next, we will need to install the "evo" services that power Dash
-Platform. We will start with some common dependencies::
+Next, we will install the Dash Platform services. Start with some common
+dependencies::
 
   curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
   sudo apt install -y libzmq3-dev nodejs
@@ -1001,6 +1005,10 @@ Open the MongoDB client with ``mongo`` and run the following function::
   
   quit();
 
+Verify MongoDB is running::
+
+  sudo systemctl status mongod
+
 Drive
 ^^^^^
 
@@ -1025,11 +1033,16 @@ the following::
 
 Install package dependencies::
 
+  npm_config_zmq_external=true
   npm install
 
 Start Drive::
 
   forever start --uid "drive" scripts/abci.js
+
+Verify Drive is running by checking for a time value under ``uptime``::
+
+  forever list
 
 Tenderdash
 ^^^^^^^^^^
@@ -1080,18 +1093,27 @@ it to include the following::
   [Unit]
   Description=Tenderdash
   After=syslog.target network-online.target
-
+  
   [Service]
   User=dash
   Group=dash
+  TimeoutStartSec=10m
+  TimeoutStopSec=120
+  RestartSec=120
   ExecStart=/usr/local/bin/tenderdash node
-
+  
   [Install]
   WantedBy=multi-user.target
 
 Ensure Dash Core is fully synced and start Tenderdash::
 
-  sudo systemctl start tenderdash.service 
+  sudo systemctl daemon-reload
+  sudo systemctl enable tenderdash
+  sudo systemctl start tenderdash
+
+Verify Tenderdash is running::
+
+  sudo systemctl status tenderdash
 
 Insight
 ^^^^^^^
