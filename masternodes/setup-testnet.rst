@@ -802,6 +802,9 @@ Manual installation
 This guide describes how to manually download and install the components
 of your Dash masternode.
 
+Core services
+-------------
+
 Dash Core
 ^^^^^^^^^
 
@@ -916,9 +919,8 @@ Start Dash Core::
 Sentinel
 ^^^^^^^^
 
-We will now install Sentinel, a piece of software which operates as a
-watchdog to communicate to the network that your node is working
-properly::
+Sentinel is a watchdog and works to communicate to the network that your
+node is working properly. Install Sentinel as follows::
 
   cd
   sudo apt install -y python3-virtualenv
@@ -934,18 +936,10 @@ to make sure it runs every minute to check on your masternode::
 
   crontab -e
 
-Choose nano as your editor and enter the following lines at the end of
+Choose nano as your editor and enter the following line at the end of
 the file::
 
   * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
-  * * * * * pidof dashd || dashd
-
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. We now need to wait for 15 confirmations of the collateral
-transaction to complete, and wait for the blockchain to finish
-synchronizing on the masternode. You can use the following commands to
-monitor progress::
 
   dash-cli mnsync status
 
@@ -961,9 +955,6 @@ response::
     "IsSynced": true,
     "IsFailed": false
   }
-
-Continue with the next step to construct the ProTx transaction required
-to enable your masternode.
 
 Install evo services
 --------------------
