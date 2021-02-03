@@ -425,7 +425,7 @@ Masternode Installation
 The following tools are available for installing a Dash masternode:
 
 - :ref:`mn-bootstrap installation <testnet-masternode-setup-install-mn-bootstrap>`
-- :ref:`Manual installation <testnet-masternode-setup-install-manual>` (incomplete)
+- :ref:`Manual installation <testnet-masternode-setup-install-manual>`
 - `Dash Masternode Zeus <https://github.com/kxcd/Masternode-Zeus>`__ (does not yet support platform services)
 
 
@@ -797,7 +797,7 @@ function in DMT.
 Manual installation
 ===================
 
-**The manual installation guide is incomplete and currently a work in progress.**
+**The manual installation guide is currently a work in progress.**
 
 This guide describes how to manually download and install the components
 of your Dash masternode.
@@ -814,7 +814,7 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.17.0.0-rc2/dashcore-0.17.0.0-rc2-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.17.0.0-rc3/dashcore-0.17.0.0-rc3-x86_64-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -830,13 +830,13 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v0.17.0.0-rc2/dashcore-0.17.0.0-rc2-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-0.17.0.0-rc2-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v0.17.0.0-rc3/dashcore-0.17.0.0-rc3-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-0.17.0.0-rc3-x86_64-linux-gnu.tar.gz.asc
 
 Extract the compressed archive and copy the necessary files to the
 directory::
 
-  tar xfv dashcore-0.17.0.0-rc2-x86_64-linux-gnu.tar.gz
+  tar xfv dashcore-0.17.0.0-rc3-x86_64-linux-gnu.tar.gz
   sudo install -t /usr/local/bin dashcore-0.17.0/bin/*
 
 Create a working directory and configuration file for Dash using the
