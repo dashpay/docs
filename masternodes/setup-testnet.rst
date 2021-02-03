@@ -948,6 +948,8 @@ the file:
 
   * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
 
+Use the following command to monitor sync status::
+
   dash-cli mnsync status
 
 When synchronisation is complete, you should see the following
