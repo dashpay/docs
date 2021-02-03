@@ -805,13 +805,9 @@ of your Dash masternode.
 Dash Core
 ^^^^^^^^^
 
-Dash Core is a fork of Bitcoin Core and is a monolithic component
-responsible for all consensus and communication relating to the base
-blockchain. Visit the `GitHub releases page
-<https://github.com/dashpay/dash/releases>`_ and copy the link to the
-latest ``x86_64-linux-gnu`` version. Go back to your terminal window and
-enter the following command, pasting in the address to the latest
-version of Dash Core by right clicking or pressing **Ctrl + V**::
+Dash Core is a fork of Bitcoin Core and is responsible for all consensus
+and communication relating to the base blockchain. Download Dash Core as
+follows::
 
   cd /tmp
   wget https://github.com/dashpay/dash/releases/download/v0.17.0.0-rc3/dashcore-0.17.0.0-rc3-x86_64-linux-gnu.tar.gz
@@ -889,21 +885,33 @@ Replace the fields marked with ``XXXXXXX`` as follows:
   characters allowed
 - ``externalip``: this is the IP address of your VPS
 
-Leave the ``masternodeblsprivkey`` field commented out for now. The
-result should look something like this:
+Leave the ``masternodeblsprivkey`` field commented out for now.
+Configure Dash Core to start as a service by creating a systemd service
+file with ``sudo nano /etc/systemd/system/dashd.service`` and edit
+it to include the following::
 
-.. figure:: img/setup-manual-conf.png
-   :width: 400px
+  [Unit]
+  Description=Dash Core
+  After=syslog.target network-online.target
+  
+  [Service]
+  Type=forking
+  User=dash
+  Group=dash
+  ExecStart=/usr/local/bin/dashd
+  TimeoutStartSec=10m
+  ExecStop=/usr/local/bin/dash-cli stop
+  TimeoutStopSec=120
+  RestartSec=120
+  
+  [Install]
+  WantedBy=multi-user.target
 
-   Entering key data in dash.conf on the masternode
+Start Dash Core::
 
-Press **Ctrl + X** to close the editor and **Y** and **Enter** save the
-file. You can now start running Dash on the masternode to begin
-synchronization with the blockchain::
-
-  dashd
-
-You will see a message reading **Dash Core server starting**. 
+  sudo systemctl daemon-reload
+  sudo systemctl enable dashd
+  sudo systemctl start dashd
 
 Sentinel
 ^^^^^^^^
@@ -1080,9 +1088,11 @@ it to include the following::
 
   [Unit]
   Description=Tenderdash
+  After=syslog.target network-online.target
 
   [Service]
-  Environment="TMHOME=/home/<username>/.tenderdash"
+  User=dash
+  Group=dash
   ExecStart=/usr/local/bin/tenderdash node
 
   [Install]
