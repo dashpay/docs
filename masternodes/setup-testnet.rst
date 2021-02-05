@@ -489,6 +489,16 @@ system to learn more:
 
    mn-bootstrap displaying a range of status output
 
+You can check the status of your masternode using the various ``mn
+status`` commands as follows::
+
+- ``mn status``
+- ``mn status:core``
+- ``mn status:host``
+- ``mn status:masternode``
+- ``mn status:platform``
+- ``mn status:services``
+
 Continue with the :ref:`Registration step <testnet-register-masternode>` to
 setup the collateral, keys and construct the ProTx transaction required
 to enable your masternode.
