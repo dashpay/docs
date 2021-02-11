@@ -80,11 +80,12 @@ possibility for masternodes to earn money from fees in the future.
 PrivateSend
 ===========
 
-PrivateSend gives you true financial privacy by obscuring the origins of
-your funds. All the Dash in your wallet is comprised of different
-"inputs", which you can think of as separate, discrete coins.
-PrivateSend uses an innovative process to mix your inputs with the
-inputs of at least two other people in a single transaction, so the
+PrivateSend is an implementation of decentralized, noncustodial
+CoinJoin. PrivateSend gives you consumer grade financial privacy by
+shuffling your Dash with other users. All the Dash in your wallet
+consists of different inputs, which you can think of as separate,
+discrete coins. It uses an innovative process to join your inputs with
+the inputs of at least two other people in a single transaction, so the
 value in Dash never leaves your wallet. You retain control of your money
 at all times.
 
@@ -95,38 +96,36 @@ The PrivateSend process works like this:
 
 #. PrivateSend begins by breaking your transaction inputs down into
    standard denominations. These denominations are 0.001, 0.01, 0.1, 1
-   and 10 DASH -- much like the paper money you use every day.
+   and 10 Dash -- much like the paper money you use every day.
 #. Your wallet then sends requests to specially configured software
-   nodes on the network, called "masternodes". These masternodes are
-   informed then that you are interested in mixing a certain
-   denomination. No identifiable information is sent to the masternodes,
-   so they never know "who" you are.
+   nodes on the network called masternodes. These masternodes are
+   informed then that you are interested in creating a certain
+   denomination using CoinJoin. No identifiable information is sent to
+   the masternodes, so they never know who you are.
 #. When two other people send similar messages, indicating that they
-   wish to mix the same denomination, a mixing session begins. The
-   masternode mixes up the inputs and instructs all three users' wallets
-   to pay the now-transformed input back to themselves. Your wallet pays
-   that denomination directly to itself, but in a different address
-   (called a change address).
-#. Your wallet must repeat this process a number of times with each
-   denomination. Each time the process is completed, it's called a
-   "round". Each round of PrivateSend makes it exponentially more
-   difficult to determine where your funds originated. The user may
-   choose between 1-16 rounds of mixing.
-#. Your funds will be mixed by at least the number of rounds you
-   specify. Dash 0.16 includes an update known as `Random Round Mixing
-   <https://github.com/dashpay/dash/pull/3661>`__ which will mix a given
-   denomination by up to three extra rounds to further improve privacy.
-#. This mixing process happens in the background without any
-   intervention on your part. When you wish to make a private
-   transaction, your funds will be ready to spend. No additional waiting
-   is required.
+   wish to join coins of the same denomination, a session begins. The
+   masternode instructs all three users’ wallets to pay the
+   now-transformed inputs to themselves. Your wallet pays that
+   denomination directly to itself but in a different address (called a
+   change address).
+#. Your wallet can repeat this process a number of times with each
+   denomination. Each time the process is completed it’s called a
+   "round." The user may choose between 1-16 rounds of CoinJoin.
+#. Your funds will pass through at least the number of rounds you
+   specify. Dash 0.16 includes an update known as `Random Round CoinJoin
+   <https://github.com/dashpay/dash/pull/3661>`__ which will join a
+   given denomination by up to three extra rounds to further improve
+   privacy.
+#. This process happens in the background without any intervention on
+   your part. When you wish to make a private transaction, your funds
+   will be ready to spend. No additional waiting is required.
 
 Note that PrivateSend transactions will be rounded up so that all
 transaction inputs are spent. Any excess Dash will be spent on the
 transaction fee.
 
-**IMPORTANT:** Your wallet only contains 1000 of these "change
-addresses". Every time a mixing event happens, one of your addresses is
+**IMPORTANT:** Your wallet only contains 1000 of these change addresses.
+Every time a CoinJoin transaction is created, one of your addresses is
 used up. Once enough of them are used, your wallet must create more
 addresses. It can only do this, however, if you have automatic backups
 enabled. Consequently, users who have backups disabled will also have
@@ -589,17 +588,17 @@ to lock any transaction with 4 or fewer inputs — which are referred to
 as “simple” transactions — and removes the additional fee for
 InstantSend. The current fee schedule for Dash is as follows:
 
-+----------------------+-----------------+-----------------------------------+
-| Transaction type     | Recommended fee | Per unit                          |
-+======================+=================+===================================+
-| Standard transaction | .00001 DASH     | Per kB of transaction data        |
-+----------------------+-----------------+-----------------------------------+
-| InstantSend autolock | .00001 DASH     | Per kB of transaction data        |
-+----------------------+-----------------+-----------------------------------+
-| InstantSend          | .0001 DASH      | Per transaction input             |
-+----------------------+-----------------+-----------------------------------+
-| PrivateSend          | .001 DASH       | Per 10 rounds of mixing (average) |
-+----------------------+-----------------+-----------------------------------+
++----------------------+------------------+-------------------------------------+
+| Transaction type     | Recommended fee  | Per unit                            |
++======================+==================+=====================================+
+| Standard transaction | 0.00001 DASH     | Per kB of transaction data          |
++----------------------+------------------+-------------------------------------+
+| InstantSend autolock | 0.00001 DASH     | Per kB of transaction data          |
++----------------------+------------------+-------------------------------------+
+| InstantSend          | 0.0001 DASH      | Per transaction input               |
++----------------------+------------------+-------------------------------------+
+| PrivateSend          | 0.001 DASH       | Per 10 rounds of CoinJoin (average) |
++----------------------+------------------+-------------------------------------+
 
 As an example, a standard and relatively simple transaction on the Dash
 network with one input, one output and a possible change address
@@ -612,19 +611,19 @@ number of inputs. These fees apply regardless of the Dash or dollar
 value of the transaction itself.
 
 :ref:`PrivateSend` works by creating denominations of 10, 1, 0.1, 0.01
-and 0.001 DASH and then mixing these denominations with other users.
-Creation of the denominations is charged at the default fee for a
-standard transaction. Mixing is free, but to prevent spam attacks, an
-average of one in ten mixing transactions are charged a fee of 0.0001
-DASH. Spending inputs mixed using PrivateSend incurs the usual standard
-or InstantSend fees, but to avoid creating a potentially identifiable
-change address, the fee is always rounded up to the lowest possible
-denomination. This is typically .001 DASH, so it is important to deduct
-the fee from the amount being sent if possible to minimise fees.
-Combining InstantSend and PrivateSend may be expensive due to this
-requirement and the fact that a PrivateSend transaction may require
-several inputs, while InstantSend charges a fee of 0.0001 DASH per
-input. Always check your fees before sending a transaction.
+and 0.001 DASH and then creating CoinJoin transactions with other users
+using these denominations. Creation of the denominations is charged at
+the default fee for a standard transaction. Using CoinJoin is free, but
+to prevent spam attacks, an average of one in ten CoinJoin transactions
+are charged a fee of 0.0001 DASH. Spending denominated inputs using
+PrivateSend incurs the usual standard fees, but to avoid creating a
+potentially identifiable change address, the fee is always rounded up to
+the lowest possible denomination. This is typically .001 DASH, so it is
+important to deduct the fee from the amount being sent if possible to
+minimise fees. Combining InstantSend and PrivateSend may be expensive
+due to this requirement and the fact that a PrivateSend transaction may
+require several inputs, while InstantSend charges a fee of 0.0001 DASH
+per input. Always check your fees before sending a transaction.
 
 
 .. _evolution:

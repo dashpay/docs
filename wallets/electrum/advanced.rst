@@ -29,15 +29,15 @@ PrivateSend
 :ref:`PrivateSend <privatesend>` offers users enhanced privacy when
 creating transactions by splitting the user's balance into a number of
 predefined denominations in advance of spending. This process is known
-as mixing. PrivateSend is available in Dash Electrum versions 3.3.8.3
+as CoinJoin. PrivateSend is available in Dash Electrum versions 3.3.8.3
 and higher, with support for hardware wallets added in 3.3.8.7.
 
-Mixing and sending
-------------------
+Processing and sending
+----------------------
 
-To start mixing in Dash Electrum, select **Wallet > PrivateSend** or
-click the **PS** icon in the lower right corner of the main window. The
-following window appears:
+To start PrivateSend processing in Dash Electrum, select **Wallet >
+PrivateSend** or click the **PS** icon in the lower right corner of the
+main window. The following window appears:
 
 .. figure:: img/ps-view.png
    :width: 400px
@@ -46,14 +46,13 @@ following window appears:
 
 Enter the **Amount of Dash to keep anonymized** and the number of
 **PrivateSend rounds to use**. Then click **Enable PrivateSend**,
-followed by **Start Mixing**. The mixing process will begin, and the
-**Mixing Progress** bar shows the completion progress. Additional
-information on the process is available on the **Info** and **Log**
-tabs.
+followed by **Start Mixing**. The process will begin, and the **Mixing
+Progress** bar shows the completion progress. Additional information on
+the process is available on the **Info** and **Log** tabs.
 
-When mixing is complete, simply check the **PrivateSend** checkbox on
-the **Send** tab before sending your transaction. Dash Electrum will
-only use Dash mixed according to your specifications for the
+When processing is complete, simply check the **PrivateSend** checkbox
+on the **Send** tab before sending your transaction. Dash Electrum will
+only use Dash processed according to your specifications for the
 transaction.
 
 Hardware Wallets
@@ -65,12 +64,12 @@ necessary to first install dependencies and udev rules as follows::
   sudo apt-get install python3-dev python3-pip cython3 libusb-1.0-0-dev libudev-dev
   sudo pip3 install trezor
 
-PrivateSend mixing is also supported. Starting PrivateSend mixing in
-Dash Electrum with a hardware wallet will generate a new HD wallet and
-mnemonic for the PrivateSend keystore. A transaction from the hardware
-wallet to an address in this keystore will be created, and mixing will
-begin. You can then spend the mixed Dash, or send it back to your
-hardware wallet.
+PrivateSend processing is also supported. Starting PrivateSend
+processing in Dash Electrum with a hardware wallet will generate a new
+HD wallet and mnemonic for the PrivateSend keystore. A transaction from
+the hardware wallet to an address in this keystore will be created, and
+processing will begin. You can then spend the processed Dash, or send it
+back to your hardware wallet.
 
 Masternodes
 ===========
