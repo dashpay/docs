@@ -586,7 +586,9 @@ transactions even as the cost of Dash rises. Dash 0.13.0.0 introduced
 InstantSend autolocks, which causes masternodes to automatically attempt
 to lock any transaction with 4 or fewer inputs — which are referred to
 as “simple” transactions — and removes the additional fee for
-InstantSend. The current fee schedule for Dash is as follows:
+InstantSend. 0.14.0.0 then removed the limitation on 4 inputs, so the
+network will attempt to lock all transactions. The current fee schedule
+for Dash is as follows:
 
 +----------------------+------------------+-------------------------------------+
 | Transaction type     | Recommended fee  | Per unit                            |
@@ -595,8 +597,6 @@ InstantSend. The current fee schedule for Dash is as follows:
 +----------------------+------------------+-------------------------------------+
 | InstantSend autolock | 0.00001 DASH     | Per kB of transaction data          |
 +----------------------+------------------+-------------------------------------+
-| InstantSend          | 0.0001 DASH      | Per transaction input               |
-+----------------------+------------------+-------------------------------------+
 | PrivateSend          | 0.001 DASH       | Per 10 rounds of CoinJoin (average) |
 +----------------------+------------------+-------------------------------------+
 
@@ -604,11 +604,8 @@ As an example, a standard and relatively simple transaction on the Dash
 network with one input, one output and a possible change address
 typically fits in the range of 200 - 400 bytes. Assuming a price of
 US$100 per DASH, the fee falls in the range of $0.0002 - $0.0004, or
-1/50th of a cent. Processing a simple transaction using InstantSend at
-the same price is free of charge, while more complex InstantSend
-transactions may cost around 1-2 cents per transaction, depending on the
-number of inputs. These fees apply regardless of the Dash or dollar
-value of the transaction itself.
+1/50th of a cent. InstantSend locking will attempted on all transactions
+without any extra charge.
 
 :ref:`PrivateSend` works by creating denominations of 10, 1, 0.1, 0.01
 and 0.001 DASH and then creating CoinJoin transactions with other users
@@ -618,7 +615,7 @@ to prevent spam attacks, an average of one in ten CoinJoin transactions
 are charged a fee of 0.0001 DASH. Spending denominated inputs using
 PrivateSend incurs the usual standard fees, but to avoid creating a
 potentially identifiable change address, the fee is always rounded up to
-the lowest possible denomination. This is typically .001 DASH, so it is
+the lowest possible denomination. This is typically 0.001 DASH, so it is
 important to deduct the fee from the amount being sent if possible to
 minimise fees. Combining InstantSend and PrivateSend may be expensive
 due to this requirement and the fact that a PrivateSend transaction may
