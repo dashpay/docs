@@ -117,8 +117,8 @@ The PrivateSend process works like this:
    given denomination by up to three extra rounds to further improve
    privacy.
 #. This process happens in the background without any intervention on
-   your part. When you wish to make a private transaction, your funds
-   will be ready to spend. No additional waiting is required.
+   your part. When you wish to make a transaction using your denominated
+   funds no additional waiting will be required.
 
 Note that PrivateSend transactions will be rounded up so that all
 transaction inputs are spent. Any excess Dash will be spent on the
