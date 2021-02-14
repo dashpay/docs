@@ -57,7 +57,7 @@ The Overview tab
 ~~~~~~~~~~~~~~~~
 
 The overview tab offers quick access to your balance and most recent
-transactions, as well as the PrivateSend feature and options for .
+transactions, as well as the PrivateSend feature.
 
 .. figure:: img/overview.png
 
