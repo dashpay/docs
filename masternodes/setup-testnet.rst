@@ -1172,7 +1172,7 @@ Install package dependencies and Insight::
 
 Start Dashcore Node and Insight::
 
-  forever start --uid "insight" bin/dashcore-node
+  forever start --uid "insight" bin/dashcore-node start
 
 Verify Insight is running by checking for a time value under ``uptime``::
 
@@ -1249,6 +1249,8 @@ it to include the following::
 
 Start Envoy::
   
+  sudo systemctl daemon-reload
+  sudo systemctl enable envoy
   sudo systemctl start envoy
 
 Nginx
@@ -1281,6 +1283,7 @@ https://gist.github.com/strophy/93a897eb3ebf0238e634bd38a2e4374b
 
 Start Nginx as follows::
 
+  sudo systemctl daemon-reload
   sudo systemctl enable nginx
   sudo systemctl start nginx
 
