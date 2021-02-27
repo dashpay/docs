@@ -453,7 +453,7 @@ installing mn-bootstrap dependencies::
 Add your current user to the docker group, ensure docker starts on boot
 and refresh the environment::
 
-  sudo usermod -aG docker <username>
+  sudo usermod -aG docker $USER
   newgrp docker
   sudo systemctl enable docker
   sudo systemctl enable containerd
