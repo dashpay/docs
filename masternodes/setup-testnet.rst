@@ -1313,7 +1313,8 @@ Generate a new Dash address for temporary use using `this script
 ``getnewaddress`` and ``dumpprivkey`` RPC commands in `Dash Core
 <https://www.dash.org/downloads>`__ in testnet mode. Go to
 https://testnet-faucet.dash.org/ and request 1000+ tDash to your new
-address using the promo code 'masternode'.
+address using the promo code 'masternode'. Then download mn-bootstrap
+and register the masternode as follows::
 
   git clone https://github.com/dashevo/mn-bootstrap.git
   cd mn-bootstrap
@@ -1335,5 +1336,5 @@ Your masternode is now providing service on the following local ports::
   DAPI gRPC:    3010
 
 Note that platform sync will take some time after core sync is complete.
-You can monitor progress with ``mn status:platform`` or use ``mn status
---help`` to view other status commands.
+You can monitor progress with ``mn status:platform`` or use ``mn
+--help`` to view other commands.
