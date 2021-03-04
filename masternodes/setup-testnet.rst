@@ -1322,6 +1322,7 @@ initialize mn-bootstrap as follows::
 If you are using Windows, you will need to change the path for two log files.
 Modify the example below with a log path of your choosing::
 
+  git merge windows-support
   mn config:set platform.drive.abci.log.prettyFile.path C:\Users\strophy\Documents\GitHub\mn-bootstrap\testnet-drive-pretty.log
   mn config:set platform.drive.abci.log.jsonFile.path C:\Users\strophy\Documents\GitHub\mn-bootstrap\testnet-drive-json.log
 
