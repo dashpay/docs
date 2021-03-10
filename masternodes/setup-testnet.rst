@@ -1295,34 +1295,34 @@ Congratulations! Your masternode is now running.
 Developer installation
 ======================
 
-Developers requiring a local masternode can get started quickly by starting
-mn-bootstrap and providing a private key containing collateral directly. Install
-dependencies if necessary (Docker, NodeJS, NPM, Github CLI). Windows, macOS and
-Linux are supported, the following example is under Ubuntu 20.04 LTS.::
+Developers requiring a local masternode can get started quickly by
+starting mn-bootstrap and providing a private key containing collateral
+directly. Install dependencies if necessary (Docker, NodeJS, NPM, Github
+CLI). Windows, macOS and Linux are supported, the following example
+shows how to install dependencies under Ubuntu 20.04 LTS.::
 
   curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
   sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
   sudo apt-add-repository https://cli.github.com/packages
-  sudo apt install -y nodejs git docker.io docker-compose gh
+  sudo apt install -y nodejs git docker.io docker-compose
   sudo usermod -aG docker $USER
   newgrp docker
 
 Generate a new Dash address for temporary use using `this script
-<https://repl.it/@strophy/Generate-Dash-Address>`__ or the ``getnewaddress`` and
-``dumpprivkey`` RPC commands in `Dash Core <https://www.dash.org/downloads>`__
-in testnet mode. Go to https://testnet-faucet.dash.org/ and request 1000+ tDash
-to your new address using the promo code 'masternode'. Then download and
-initialize mn-bootstrap as follows::
+<https://repl.it/@strophy/Generate-Dash-Address>`__ or the
+``getnewaddress`` and ``dumpprivkey`` RPC commands in `Dash Core
+<https://www.dash.org/downloads>`__ in testnet mode. Go to
+https://testnet-faucet.dash.org/ and request 1000+ tDash to your new
+address using the promo code 'masternode'. Then download and initialize
+mn-bootstrap as follows::
 
-  git clone https://github.com/dashevo/mn-bootstrap.git
+  git clone -b v0.19-dev https://github.com/dashevo/mn-bootstrap.git
   cd mn-bootstrap
-  gh pr checkout 288
   npm install && sudo npm link
 
 If you are using Windows, you will need to change the path for two log files.
 Modify the example below with a log path of your choosing::
 
-  git merge windows-support
   mn config:set platform.drive.abci.log.prettyFile.path C:\Users\strophy\Documents\GitHub\mn-bootstrap\testnet-drive-pretty.log
   mn config:set platform.drive.abci.log.jsonFile.path C:\Users\strophy\Documents\GitHub\mn-bootstrap\testnet-drive-json.log
 
