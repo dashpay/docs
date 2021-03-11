@@ -123,7 +123,8 @@ Where:
 - ``operatorPayoutAddress`` (optional): The address used for operator 
   reward payments. Only allowed when the ProRegTx had a non-zero 
   ``operatorReward`` value. Enter ``""`` to use the
-  last on-chain operator payout address.
+  last on-chain operator payout address, or as a placeholder when 
+  specifying a ``feeSourceAddress``.
 - ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
   ``operatorPayoutAddress`` will be used if not specified.
 
