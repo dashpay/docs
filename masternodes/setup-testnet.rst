@@ -492,12 +492,12 @@ system to learn more:
 You can check the status of your masternode using the various ``mn
 status`` commands as follows::
 
-- ``mn status``
-- ``mn status:core``
-- ``mn status:host``
-- ``mn status:masternode``
-- ``mn status:platform``
-- ``mn status:services``
+- mn status
+- mn status:core
+- mn status:host
+- mn status:masternode
+- mn status:platform
+- mn status:services
 
 Continue with the :ref:`Registration step <testnet-register-masternode>` to
 setup the collateral, keys and construct the ProTx transaction required
