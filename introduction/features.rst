@@ -583,28 +583,26 @@ The release of Dash 0.12.2.0 and activation of DIP0001 saw a
 simultaneous reduction of fees by a factor of 10, while the block size
 was increased from 1MB to 2MB to promote continued growth of low-cost
 transactions even as the cost of Dash rises. Dash 0.13.0.0 introduced
-InstantSend autolocks, which causes masternodes to automatically attempt
+InstantSend autolocks, which caused masternodes to automatically attempt
 to lock any transaction with 4 or fewer inputs — which are referred to
-as “simple” transactions — and removes the additional fee for
+as “simple” transactions — and removed the additional fee for
 InstantSend. 0.14.0.0 then removed the limitation on 4 inputs, so the
 network will attempt to lock all transactions. The current fee schedule
 for Dash is as follows:
 
-+----------------------+------------------+-------------------------------------+
-| Transaction type     | Recommended fee  | Per unit                            |
-+======================+==================+=====================================+
-| Standard transaction | 0.00001 DASH     | Per kB of transaction data          |
-+----------------------+------------------+-------------------------------------+
-| InstantSend autolock | 0.00001 DASH     | Per kB of transaction data          |
-+----------------------+------------------+-------------------------------------+
-| PrivateSend          | 0.001 DASH       | Per 10 rounds of CoinJoin (average) |
-+----------------------+------------------+-------------------------------------+
++------------------------+------------------+-------------------------------------+
+| Transaction type       | Recommended fee  | Per unit                            |
++========================+==================+=====================================+
+| PrivateSend            | 0.001 DASH       | Per 10 rounds of CoinJoin (average) |
++------------------------+------------------+-------------------------------------+
+| All other transactions | 0.00001 DASH     | Per kB of transaction data          |
++------------------------+------------------+-------------------------------------+
 
 As an example, a standard and relatively simple transaction on the Dash
 network with one input, one output and a possible change address
 typically fits in the range of 200 - 400 bytes. Assuming a price of
 US$100 per DASH, the fee falls in the range of $0.0002 - $0.0004, or
-1/50th of a cent. InstantSend locking will attempted on all transactions
+1/50th of a cent. InstantSend locking will be attempted on all transactions
 without any extra charge.
 
 :ref:`PrivateSend` works by creating denominations of 10, 1, 0.1, 0.01
