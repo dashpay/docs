@@ -1,6 +1,6 @@
 .. meta::
-   :description: Explanation of how Dash masternodes work in theory and practice to support InstantSend, PrivateSend and governance
-   :keywords: dash, masternodes, hosting, linux, payment, instantsend, privatesend, governance, quorum, evolution, bls, 
+   :description: Explanation of how Dash masternodes work in theory and practice to support InstantSend, CoinJoin and governance
+   :keywords: dash, masternodes, hosting, linux, payment, instantsend, coinjoin, privatesend, governance, quorum, evolution, bls, 
 
 .. _understanding_masternodes:
 
@@ -22,8 +22,8 @@ the services they provide to the Dash network specifically.
 Simply put, a masternode is a server with a full copy of the Dash
 blockchain, which guarantees a certain minimum level of performance and
 functionality to perform certain tasks related to block validation, as
-well as PrivateSend and InstantSend, as the privacy and instant
-transaction features in Dash are called. The masternodes are paid for
+well as InstantSend and CoinJoin, as the and instant transaction and
+privacy features in Dash are called. The masternodes are paid for
 this service, using a concept known as Proof of Service. This is in
 addition to the Proof of Work done by miners to secure the blockchain.
 Masternodes are also allowed to vote on :ref:`governance and funding
@@ -40,7 +40,7 @@ in a certain way that is transparent to the entire network. If the owner
 moves or spends those coins, the masternode stops working and payment
 ceases.
 
-Masternodes are paid by the network for the PrivateSend, InstantSend and
+Masternodes are paid by the network for the InstantSend, CoinJoin and
 governance services they provide. 45% of the block reward is paid out to
 the masternodes, 45% to miners and 10% to the budget. In practice, half
 of the reward from a normal block goes to the miner and half to the
@@ -180,7 +180,7 @@ block is added to the blockchain and the miner is rewarded.
 
 Dash works a little differently from Bitcoin, however, because it has a
 two-tier network. The second tier is powered by masternodes (Full
-Nodes), which enable financial privacy (PrivateSend), instant
+Nodes), which enable financial privacy (CoinJoin), instant
 transactions (InstantSend), and the decentralized governance and budget
 system. Because this second tier is so important, masternodes are also
 rewarded when miners discover new blocks. The breakdown is as follows:

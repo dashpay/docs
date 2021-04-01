@@ -1,6 +1,6 @@
 .. meta::
-   :description: MyDashWallet is a secure web wallet for Dash, supporting InstantSend and PrivateSend
-   :keywords: dash, mydashwallet, web, wallet, privatesend, instantsend, my dash wallet
+   :description: MyDashWallet is a secure web wallet for Dash, supporting InstantSend and CoinJoin
+   :keywords: dash, mydashwallet, web, wallet, coinjoin, privatesend, instantsend, my dash wallet
 
 .. _dash-web-wallet:
 
@@ -17,7 +17,7 @@ Dash blockchain, inspired by `MyEtherWallet
 <https://deltaengine.net/>`_. It is explicitly not an online wallet,
 meaning you maintain control over your private keys at all times. Unlike
 many other light wallets, MyDashWallet also supports advanced Dash
-features such as InstantSend and PrivateSend. The project is non-profit,
+features such as InstantSend and CoinJoin. The project is non-profit,
 open source and free to use. You can load a wallet and transact in a
 variety of wallet formats:
 

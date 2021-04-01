@@ -26,7 +26,7 @@ Dash, please click the links below.
 PrivateSend
 ===========
 
-:ref:`PrivateSend <privatesend>` offers users enhanced privacy when
+:ref:`PrivateSend <coinjoin>` offers users enhanced privacy when
 creating transactions by splitting the user's balance into a number of
 predefined denominations in advance of spending. This process is known
 as CoinJoin. PrivateSend is available in Dash Electrum versions 3.3.8.3

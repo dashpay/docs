@@ -505,7 +505,7 @@ Dash
   currency was later renamed "Dash" to avoid association with the
   darknet markets. Dash is a portmanteau of "Digital Cash." Dash is an
   open source peer-to- peer cryptocurrency that solves many of Bitcoin's
-  problems. Dash's features include PrivateSend, InstantSend,
+  problems. Dash's features include InstantSend, CoinJoin,
   Decentralized Governance by Blockchain (DGBB), a 2nd tier network
   (referred to as the masternode network). See the :ref:`Features
   <features>` page for a full list of Dash's features.
@@ -526,7 +526,7 @@ Dash Client
 Dash Core Wallet 
   The :ref:`Dash Core Wallet <dash-core-wallet>` (known also as the QT
   wallet) is the "official" Dash wallet that is compiled by the Dash
-  Core Team and allows both PrivateSend and InstantSend. The DashCore
+  Core Team and allows both InstantSend and CoinJoin. The DashCore
   wallet will download the entire blockchain and serve it over the
   internet to any peers who request it.
 
@@ -668,7 +668,7 @@ Electrum Wallet
   :ref:`Dash Electrum Wallet <dash-electrum-wallet>` is a lightweight
   wallet that does not require you to download or sync the entire
   blockchain, making the wallet lighter and faster. However, it is 
-  missing certain features such as PrivateSend and InstantSend.
+  missing certain features such as InstantSend and CoinJoin.
 
 Encryption
   In cryptography, `encryption 
@@ -851,7 +851,7 @@ Masternode
   block reward. Masternodes require proof of ownership of 1000 DASH.
 
   Masternodes serve as the second tier of the Dash network, and power
-  InstantSend, PrivateSend, the Budget System.
+  InstantSend, CoinJoin, and the Budget System.
 
 Mining
   :ref:`Miners <mining>` process transactions on the Dash network and
@@ -903,7 +903,7 @@ Privacy
   person, it usually means that something is inherently special or
   sensitive to them. The domain of privacy partially overlaps security
   (confidentiality), which can include the concepts of appropriate use,
-  as well as protection of information. Dash includes PrivateSend, which
+  as well as protection of information. Dash includes CoinJoin, which
   allows users to maintain financial privacy.
 
 Private Key
@@ -916,7 +916,7 @@ Private Key
   important that these are kept secure and secret.
 
 PrivateSend
-  :ref:`PrivateSend <privatesend>` obscures the source of funds in order
+  :ref:`PrivateSend <coinjoin>` obscures the source of funds in order
   to maintain financial privacy between users. It can be turned on or 
   off at the users' discretion.
 

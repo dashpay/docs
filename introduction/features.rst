@@ -1,6 +1,6 @@
 .. meta::
-   :description: Dash features several unique value propositions including masternodes, PrivateSend, InstantSend and a decentralized governance system
-   :keywords: dash, cryptocurrency, features, masternodes, privatesend, instantsend, sporks, x11, dgw, governance, sentinel, evolution
+   :description: Dash features several unique value propositions including masternodes, CoinJoin, InstantSend and a decentralized governance system
+   :keywords: dash, cryptocurrency, features, masternodes, coinjoin, privatesend, instantsend, sporks, x11, dgw, governance, sentinel, evolution
 
 .. _features:
 
@@ -21,7 +21,7 @@ Specifications
 - Dark Gravity Wave difficulty adjustment algorithm
 - Between 17.74M and 18.92M total coin supply
 - Decentralized second-tier masternode network
-- Superior privacy using PrivateSend
+- Superior privacy using CoinJoin
 - Instant transactions using InstantSend
 - Protection against blockchain reorganization events (commonly called 
   51% attacks) using ChainLocks
@@ -38,7 +38,7 @@ In addition to traditional Proof of Work (PoW) rewards for mining Dash,
 users are also rewarded for running and maintaining special servers
 called masternodes. Thanks to this innovative two tier network, Dash can
 offer innovative features in a trustless and decentralized way.
-Masternodes are used to power PrivateSend, InstantSend, and the
+Masternodes are used to power CoinJoin, InstantSend, and the
 governance and treasury system. Users are rewarded for running
 masternodes; 45% of the block reward is allocated to pay the masternode
 network. You can view practical guides on all topics relating to
@@ -48,7 +48,7 @@ Masternodes enable the following services:
 
 -  **InstantSend** allows for near-instant transactions. Dash
    InstantSend transactions are fully confirmed within two seconds.
--  **PrivateSend** gives financial privacy through a decentralized 
+-  **CoinJoin** gives financial privacy through a decentralized 
    implementation of CoinJoin.
 -  **ChainLocks**, which protects the blockchain against 51% mining 
    attacks by signing blocks as they are mined.
@@ -75,13 +75,12 @@ by 7% each year, together with the block reward. There is also the
 possibility for masternodes to earn money from fees in the future.
 
 
-.. _privatesend:
+.. _coinjoin:
 
-PrivateSend
-===========
+CoinJoin
+========
 
-PrivateSend is an implementation of decentralized, noncustodial
-CoinJoin. PrivateSend gives you consumer grade financial privacy by
+CoinJoin gives you consumer grade financial privacy by
 shuffling your Dash with other users. All the Dash in your wallet
 consists of different inputs, which you can think of as separate,
 discrete coins. It uses an innovative process to join your inputs with
@@ -89,12 +88,12 @@ the inputs of at least two other people in a single transaction, so the
 value in Dash never leaves your wallet. You retain control of your money
 at all times.
 
-You can view a practical guide to use PrivateSend 
-:ref:`here <dashcore-privatesend-instantsend>`.
+You can view a practical guide to use CoinJoin 
+:ref:`here <dashcore-coinjoin-instantsend>`.
 
-The PrivateSend process works like this:
+The CoinJoin process works like this:
 
-#. PrivateSend begins by breaking your transaction inputs down into
+#. CoinJoin begins by breaking your transaction inputs down into
    standard denominations. These denominations are 0.001, 0.01, 0.1, 1
    and 10 Dash -- much like the paper money you use every day.
 #. Your wallet then sends requests to specially configured software
@@ -120,7 +119,7 @@ The PrivateSend process works like this:
    your part. When you wish to make a transaction using your denominated
    funds no additional waiting will be required.
 
-Note that PrivateSend transactions will be rounded up so that all
+Note that CoinJoin transactions will be rounded up so that all
 transaction inputs are spent. Any excess Dash will be spent on the
 transaction fee.
 
@@ -129,7 +128,7 @@ Every time a CoinJoin transaction is created, one of your addresses is
 used up. Once enough of them are used, your wallet must create more
 addresses. It can only do this, however, if you have automatic backups
 enabled. Consequently, users who have backups disabled will also have
-PrivateSend disabled.
+CoinJoin disabled.
 
 
 .. _instantsend:
@@ -164,7 +163,7 @@ transactions from as long as an hour (with Bitcoin) to as little as a
 few seconds.
 
 You can view a practical guide to use InstantSend 
-:ref:`here <dashcore-privatesend-instantsend>`. InstantSend was 
+:ref:`here <dashcore-coinjoin-instantsend>`. InstantSend was 
 introduced in a whitepaper called `Transaction Locking and Masternode 
 Consensus: A Mechanism for Mitigating Double Spending Attacks <https://github.com/dashpay/docs/blob/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_, 
 and further improved through the introduction of `LLMQ-based InstantSend
@@ -593,7 +592,7 @@ for Dash is as follows:
 +------------------------+------------------+-------------------------------------+
 | Transaction type       | Recommended fee  | Per unit                            |
 +========================+==================+=====================================+
-| PrivateSend            | 0.001 DASH       | Per 10 rounds of CoinJoin (average) |
+| CoinJoin               | 0.001 DASH       | Per 10 rounds of CoinJoin (average) |
 +------------------------+------------------+-------------------------------------+
 | All other transactions | 0.00001 DASH     | Per kB of transaction data          |
 +------------------------+------------------+-------------------------------------+
@@ -605,18 +604,18 @@ US$100 per DASH, the fee falls in the range of $0.0002 - $0.0004, or
 1/50th of a cent. InstantSend locking will be attempted on all transactions
 without any extra charge.
 
-:ref:`PrivateSend` works by creating denominations of 10, 1, 0.1, 0.01
+:ref:`CoinJoin` works by creating denominations of 10, 1, 0.1, 0.01
 and 0.001 DASH and then creating CoinJoin transactions with other users
 using these denominations. Creation of the denominations is charged at
 the default fee for a standard transaction. Using CoinJoin is free, but
 to prevent spam attacks, an average of one in ten CoinJoin transactions
 are charged a fee of 0.0001 DASH. Spending denominated inputs using
-PrivateSend incurs the usual standard fees, but to avoid creating a
+CoinJoin incurs the usual standard fees, but to avoid creating a
 potentially identifiable change address, the fee is always rounded up to
 the lowest possible denomination. This is typically 0.001 DASH, so it is
 important to deduct the fee from the amount being sent if possible to
-minimise fees. Combining InstantSend and PrivateSend may be expensive
-due to this requirement and the fact that a PrivateSend transaction may
+minimise fees. Combining InstantSend and CoinJoin may be expensive
+due to this requirement and the fact that a CoinJoin transaction may
 require several inputs, while InstantSend charges a fee of 0.0001 DASH
 per input. Always check your fees before sending a transaction.
 
