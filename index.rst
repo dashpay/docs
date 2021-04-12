@@ -86,6 +86,6 @@ Contents
    masternodes/index
    mining/index
    developers/index
-   network/index
+   network/electrumx-server
    marketing.rst
    legal.rst
