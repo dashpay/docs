@@ -86,5 +86,6 @@ Contents
    masternodes/index
    mining/index
    developers/index
+   network/index
    marketing.rst
    legal.rst
