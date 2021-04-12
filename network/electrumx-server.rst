@@ -1,6 +1,6 @@
 .. meta::
   :description: Guide to installing a Dash ElectrumX server
-  :keywords: dash, electrum
+  :keywords: dash, electrum, guide, setup
 
 .. _electrumx:
 
