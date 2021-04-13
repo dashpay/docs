@@ -127,6 +127,7 @@ address, username and password.
 
    Vultr server management screen
 
+.. _vps-os-setup:
 
 Set up your operating system
 ============================
