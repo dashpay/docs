@@ -203,7 +203,7 @@ the ``/path/to/log/`` line in that file with
   sed -i scripts/electrumx/log/run -e "s/\/path\/to\/log\/dir/\/home\/electrumx\/var\/log\/electrumx/"
 
 Manage ElectrumX as a service
-=====================
+=============================
 
 Add the service
 ---------------
