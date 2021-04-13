@@ -139,7 +139,7 @@ Set the server banner message and the coin type that the server will host:
   echo "/home/electrumx/electrumx/banner" > scripts/electrumx/env/BANNER_FILE
   echo "Dash" > scripts/electrumx/env/COIN
 
-Set network values
+Set network values:
 
 ElectrumX requires Dash Core RPC details so it can connect properly. Set
 ``RPC_USER``, ``RPC_PASS``, ``RPC_IP``, and ``RPC_PORT`` variables to the values
@@ -192,7 +192,7 @@ Set the ElectrumX username to match our current user:
 
   echo "electrumx" > scripts/electrumx/env/USERNAME
 
-Set the ElectrumX log directory
+Set the ElectrumX log directory:
 
 The log directory path is set in the ``scripts/electrumx/log/run`` file. Replace
 the ``/path/to/log/`` line in that file with
