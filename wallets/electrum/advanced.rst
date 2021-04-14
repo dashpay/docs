@@ -151,15 +151,15 @@ continue.
 
    Select masternode owner, voting, and payout addresses
 
-A masternode requires a BLS "operator" key as described in DIP3. If you manage
+A masternode requires a BLS "operator" key as described in `DIP3 <https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a-masternode-proregtx>`_. If you manage
 your own masternode, both Dash Electrum and your masternode must know the
 operator private key. Your masternode will use the private key to sign messages,
 and the Dash network will know that you authorized it to do so.
 
 Electrum will generate the required BLS private/public key pair and provide you
-with the line that must be copied into the masternode's ``dash.conf`` file for
-proper masternode configuration. Click **Next** after copying this line to your
-masternode.
+with the line that must be copied to the masternode for proper masternode
+configuration. Click **Next** after copying this line to your masternode's
+``dash.conf`` file.
 
 .. figure:: img/mn-create-bls-key-setup.png
    :width: 400px
@@ -167,9 +167,9 @@ masternode.
    BLS key setup
 
 All parameters are now configured. This screen shows the configuration details
-and allows you to save the information. Leave the **Make ProRegTx after saving
-Masternode data** box checked to automatically go to the **Send** tab and have
-it populated with the info necessary to register the masternode.
+and allows you to save the information. Make sure the **Make ProRegTx after
+saving Masternode data** box is checked, then click **Save**. The **Send** tab
+will open and be populated with the info necessary to register the masternode.
 
 .. figure:: img/mn-create-review-and-save.png
    :width: 400px
