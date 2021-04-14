@@ -176,28 +176,55 @@ will open and be populated with the info necessary to register the masternode.
 
    Examine parameters and save masternode
 
+Registering your masternode
+---------------------------
 
+Since the ProRegTx information required to register the masternode was filled
+out by the previous step, just Click **Pay...** to complete the registration.
 
-Activating your masternode
---------------------------
+.. note::
 
-After selecting a collateral payment and specifying a delegate key, you
-can activate your masternode. Do this by clicking **Activate
-Masternode** in the **Activate Masternode** tab of the Masternode
-Manager. If the **Activate Masternode** button cannot be clicked, look
-at the message in the **Status** bar. It will show you why your
-masternode cannot be activated.
+  To complete registration of any previously setup masternode, go to the
+  **DIP3** tab, select the unregistered masternode from the list of **Wallet
+  MNs**, and click **Register**.
 
-Activation will require your password if your wallet is encrypted,
-because a message must be signed. After waiting for Dash Electrum to
-sign and broadcast your masternode announcement, you will be presented
-with a message detailing the result. The status of your masternode will
-be updated in the table and the **View Masternode** tab.
-
-.. figure:: img/mn-enabling.png
+.. figure:: img/mn-proregtx.png
    :width: 400px
 
-   Entering IP and protocol information
+   Send tab with ProRegTx prepared
+
+Enter your password and click **Send** to broadcast the registration
+transaction.
+
+.. figure:: img/mn-proregtx-confirm-tx.png
+  :width: 400px
+
+  Confirm ProRegTx Transaction
+
+The transaction hash will be displayed once the transaction has been sent
+successfully. This ProRegTx hash is used by the network to uniquely identify the
+masternode. Click **OK** to close the screen.
+
+.. figure:: img/mn-proregtx-sent-confirmation.png
+  :width: 400px
+
+  Transaction sent screen showing transaction hash
+
+Prior to the ProRegTx being confirmed the new masternode will appear as
+unregistered on the DIP3 tab.
+
+.. figure:: img/mn-dip3-unregistered.png
+  :width: 400px
+
+  DIP3 tab showing unregistered masternode
+
+Once the ProRegTx has been confirmed, the new masternode will appear as
+registered on the DIP3 tab.
+
+.. figure:: img/mn-dip3-registered.png
+  :width: 400px
+
+  DIP3 tab showing registered masternode  
 
 Multisig wallets
 ================
