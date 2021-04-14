@@ -251,7 +251,7 @@ The masternode owner may also update the operator BLS key at any time. Click
 **Next** to continue.
   
 .. warning::
-  Anytime the the operator private key is changed it must be copied into the
+  Any time the the operator private key is changed it must be copied into the
   ``dash.conf`` file on the masternode. Electrum will provide a notification
   with instructions when this is required.
 
@@ -269,8 +269,8 @@ and be populated with the info necessary to update the masternode.
 
   Examine parameters and update masternode
 
-The ProUpRegTx information required to register the masternode was filled out by
-the previous step so just Click **Pay...** to complete the update.
+The ProUpRegTx information required to update the masternode registration was
+filled out by the previous step so just Click **Pay...** to complete the update.
 
 .. figure:: img/mn-proupregtx.png
   :width: 400px
@@ -288,6 +288,62 @@ The transaction hash will be displayed once the transaction has been sent
 successfully. Click **OK** to close the screen.
 
 .. figure:: img/mn-proupregtx-sent-confirmation.png
+ :width: 400px
+
+ Transaction sent screen showing transaction hash
+
+Updating masternode service parameters
+--------------------------------------
+
+The masternode service may need to be updated to:
+
+#. Change the IP address, port, or operator payout address of a masternode
+#. Revive a masternode that was Proof of Service (PoSe) banned
+
+To update masternode service information, navigate to the DIP3 tab and
+click the **Update Service** button.
+
+.. figure:: img/mn-dip3-update-service.png
+  :width: 400px
+
+  Update Service
+
+The masternode operator may update the IP address and port at any time. Update
+the IP address and click **Next** to continue.
+
+.. figure:: img/mn-update-service.png
+  :width: 400px
+
+  Update masternode IP address
+
+All parameters are now configured. This screen shows the updated configuration
+details. Click **Prepare ProUpServTx** to continue. The **Send** tab will open
+and be populated with the info necessary to update the masternode.
+
+.. figure:: img/mn-update-service-review.png
+  :width: 400px
+
+  Examine parameters and update masternode service
+
+The ProUpServTx information required to update the masternode was filled out by
+the previous step so just Click **Pay...** to complete the update.
+
+.. figure:: img/mn-proupservtx.png
+  :width: 400px
+
+  Send tab with ProUpServTx prepared
+
+Enter your password and click **Send** to broadcast the update transaction.
+
+.. figure:: img/mn-proupservtx-confirm-tx.png
+ :width: 400px
+
+ Confirm ProUpServTx Transaction
+
+The transaction hash will be displayed once the transaction has been sent
+successfully. Click **OK** to close the screen.
+
+.. figure:: img/mn-proupservtx-sent-confirmation.png
  :width: 400px
 
  Transaction sent screen showing transaction hash
