@@ -94,7 +94,7 @@ The tab displays the following data about each masternode you have set up:
 .. figure:: img/mn-dip3-registered-owner-operator.png
    :width: 400px
 
-   Add or import masternode
+   DIP3 tab with masternode information
 
 
 Masternode setup
