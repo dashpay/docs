@@ -74,72 +74,109 @@ back to your hardware wallet.
 Masternodes
 ===========
 
-Dash Electrum supports masternode creation through an interface called
-the **Masternode Manager**. The functionality is available starting from
-the protocol version 70201.
+Dash Electrum supports masternode creation through the **DIP3** tab.
 
-Masternode Manager
-------------------
+DIP3
+----
 
-The Masternode Manager can be accessed either from the **Wallet >
-Masternodes** menu or by pressing **Ctrl+M**. This manager displays the
-status of your masternode(s). A wallet with no masternodes will begin
-with a default masternode for which you can fill in the necessary
-information.
+The DIP3 tab can be enabled via the **View > Show DIP3** menu. This tab displays
+the status of your masternode(s) and also allows viewing a list of all
+registered masternodes on the network.
 
-The manager displays the following data about each masternode you have
-set up:
+The tab displays the following data about each masternode you have set up:
 
 -  The alias (name) of the masternode.
--  The status of the masternode (e.g. whether it has been activated).
--  The collateral payment of the masternode.
--  The private delegate key.
+-  The state of the masternode (e.g. whether it has been activated).
+-  The keys 
+-  The Provider Registration transaction hash of the masternode.
 -  The IP address and port that your masternode can be reached at.
--  The protocol version that your masternode supports.
+
+.. figure:: img/mn-dip3-registered-owner-operator.png
+   :width: 400px
+
+   Add or import masternode
+
 
 Masternode setup
 ----------------
 
-A masternode requires a "delegate" key, which is known to both Dash
-Electrum and your masternode. Your masternode will use this key to sign
-messages, and the Dash network will know that you authorized it to. A
-delegate key can either be one of your Dash Electrum keys, or an
-imported key. Either way, your masternode and Dash Electrum will both
-need to know the private key.
+To setup a masternode, navigate to the DIP3 tab and click the **Add/Import**
+button.
 
-To use one of your Dash Electrum keys as a delegate key, put its private
-key in the **Masternode Private Key** field of the **View Masternode**
-tab.
-
-IP address and protocol version
--------------------------------
-
-Certain information about your masternode is required. The IP address
-and port that your masternode uses must be supplied. Also, the protocol
-version that your masternode supports is required. This information is
-filled in automatically if you import a "masternode.conf" file.
-
-.. figure:: img/mn-view.png
+.. figure:: img/mn-dip3-add-or-import.png
    :width: 400px
 
-   Entering IP and protocol information
+   Add or import masternode
 
-Collateral
-----------
+Electrum supports creating/registering new masternodes as well as importing and
+registering legacy masternodes via a ``masternode.conf`` file. At this point
+very few legacy masternodes are present, so only the **Create and register DIP3
+Masternode** option will be covered in detail.
 
-To start a masternode, you must have a 1000 DASH payment available in
-your wallet. You can scan your wallet for 1000 DASH payments in the
-**Choose Collateral** tab of the Masternode Manager.
+There are two supported ownership types: owner-only and owner/operator. The
+primary difference during setup is whether or not the operator BLS private key
+is stored in Electrum. The following steps show the creation of a self-hosted
+masternode so both ownership type checkboxes are selected. Click **Next** to
+continue.
 
-After scanning, a list of available 1000 DASH collateral payments will
-be displayed. Selecting one of them will cause the selected masternode's
-data to be filled in, though these changes won't be saved until you
-click the **Save** button in the lower-right corner of the tab.
-
-.. figure:: img/mn-collateral.png
+.. figure:: img/mn-create-and-register-owner-operator.png
    :width: 400px
 
-   Entering IP and protocol information
+   Select operation type and ownership properties
+
+To start a masternode, you must have a 1000 DASH plus a small amount for fees
+available in your wallet. Leave **Create collateral as ProRegTx output** checked
+and click **Next**.
+
+.. figure:: img/mn-create-select-collateral.png
+   :width: 400px
+
+   Select collateral output for masternode
+
+Certain information about your masternode is required. The IP address and port
+that your masternode uses must be supplied. Click **Next** after entering them
+(the port will be set to the default mainnet port of 9999 automatically).
+
+.. figure:: img/mn-create-service-params.png
+   :width: 400px
+
+   Enter masternode IP address and port
+
+Each masternode requires three addresses: owner, voting, and payout. Electrum
+will automatically select addresses from your wallet. Click **Next** to
+continue.
+
+.. figure:: img/mn-create-select-addresses.png
+   :width: 400px
+
+   Select masternode owner, voting, and payout addresses
+
+A masternode requires a BLS "operator" key as described in DIP3. If you manage
+your own masternode, both Dash Electrum and your masternode must know the
+operator private key. Your masternode will use the private key to sign messages,
+and the Dash network will know that you authorized it to do so.
+
+Electrum will generate the required BLS private/public key pair and provide you
+with the line that must be copied into the masternode's ``dash.conf`` file for
+proper masternode configuration. Click **Next** after copying this line to your
+masternode.
+
+.. figure:: img/mn-create-bls-key-setup.png
+   :width: 400px
+
+   BLS key setup
+
+All parameters are now configured. This screen shows the configuration details
+and allows you to save the information. Leave the **Make ProRegTx after saving
+Masternode data** box checked to automatically go to the **Send** tab and have
+it populated with the info necessary to register the masternode.
+
+.. figure:: img/mn-create-review-and-save.png
+   :width: 400px
+
+   Examine parameters and save masternode
+
+
 
 Activating your masternode
 --------------------------
