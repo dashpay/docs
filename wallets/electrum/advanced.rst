@@ -224,7 +224,73 @@ registered on the DIP3 tab.
 .. figure:: img/mn-dip3-registered.png
   :width: 400px
 
-  DIP3 tab showing registered masternode  
+  DIP3 tab showing registered masternode
+
+Updating masternode registration
+--------------------------------
+
+To update masternode registration information, navigate to the DIP3 tab and
+click the **Update Registrar** button.
+
+.. figure:: img/mn-update-registrar.png
+  :width: 400px
+
+  Update Registrar
+
+The masternode owner may update the voting and payout addresses at any time.
+Addresses from the current wallet can be selected from the drop down menu or
+addresses from a different wallet (e.g. a hardware wallet) can be pasted into
+either field. Click **Next** to continue.
+
+.. figure:: img/mn-update-registrar-addresses.png
+  :width: 400px
+
+  Update masternode voting and/or payout address
+
+The masternode owner may also update the operator BLS key at any time. Click
+**Next** to continue.
+  
+.. warning::
+  Anytime the the operator private key is changed it must be copied into the
+  ``dash.conf`` file on the masternode. Electrum will provide a notification
+  with instructions when this is required.
+
+.. figure:: img/mn-update-registrar-operator-key-owner-operator.png
+  :width: 400px
+
+  Update operator BLS key
+
+All parameters are now configured. This screen shows the updated configuration
+details. Click **Prepare ProUpRegTx** to continue. The **Send** tab will open
+and be populated with the info necessary to update the masternode.
+
+.. figure:: img/mn-update-registrar-review.png
+  :width: 400px
+
+  Examine parameters and update masternode
+
+The ProUpRegTx information required to register the masternode was filled out by
+the previous step so just Click **Pay...** to complete the update.
+
+.. figure:: img/mn-proupregtx.png
+  :width: 400px
+
+  Send tab with ProUpRegTx prepared
+
+Enter your password and click **Send** to broadcast the update transaction.
+
+.. figure:: img/mn-proupregtx-confirm-tx.png
+ :width: 400px
+
+ Confirm ProUpRegTx Transaction
+
+The transaction hash will be displayed once the transaction has been sent
+successfully. Click **OK** to close the screen.
+
+.. figure:: img/mn-proupregtx-sent-confirmation.png
+ :width: 400px
+
+ Transaction sent screen showing transaction hash
 
 Multisig wallets
 ================
