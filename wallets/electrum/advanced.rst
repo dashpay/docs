@@ -165,12 +165,25 @@ be updated in the table and the **View Masternode** tab.
 Importing masternode.conf
 -------------------------
 
-You can import a *masternode.conf* file using the **Masternode.conf**
-tab of the Masternode Manager. This is the recommended way of setting up
-masternodes, as it allows you to configure masternodes for Dash Core and
-Dash Electrum in the same way. Importing a *masternode.conf* file will
-automatically set up one or more masternode configurations in the
-Masternode Manager.
+You can import a legacy *masternode.conf* file using the **Add/Import** button.
+Importing a *masternode.conf* file will automatically set up one or more
+masternode configurations.
+
+Select the **Import and register legacy masternode.conf as DIP3
+Masternode** operation type and click **Next**.
+
+.. figure:: img/mn-import-legacy.png
+   :width: 400px
+
+   Importing legacy masternode.conf
+
+Click **Load from masternode.conf** operation type, select your masternode.conf
+file, then click **Next** to import.
+   
+.. figure:: img/mn-import-legacy-load-conf.png
+   :width: 400px
+
+   Importing legacy masternode.conf   
 
 Multisig wallets
 ================
