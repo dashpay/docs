@@ -450,7 +450,7 @@ development, additional indexes have been added into Dash for querying
 address balances, transaction history, and unspent outputs.
 
 - Platform: NodeJS / Javascript
-- Documentation: https://bitcore.io/api/lib
+- Documentation: https://github.com/dashevo/dashcore-lib/blob/master/README.md#documentation
 - Repository lib: https://github.com/dashevo/dashcore-lib
 - Repository node: https://github.com/dashevo/dashcore-node
 - See also: `Insight API <https://github.com/dashevo/insight-api>`__
