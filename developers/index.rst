@@ -40,8 +40,6 @@ carry out common development tasks in Dash.
    :maxdepth: 1
 
    integration.rst
-   dip3-upgrade.rst
-   dip8-upgrade.rst
    v016-upgrade.rst
    translating.rst
    compiling.rst
