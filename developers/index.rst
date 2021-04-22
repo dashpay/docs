@@ -75,33 +75,16 @@ on the network and serve functions as described below:
 
 SPORK_2_INSTANTSEND_ENABLED
   Governs the ability of Dash clients to use InstantSend functionality.
+  InstantSend is described in `DIP0010 LLMQ-based InstantSend
+  <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__.
 
 SPORK_3_INSTANTSEND_BLOCK_FILTERING
   If enabled, masternodes will reject blocks containing transactions in
   conflict with locked but unconfirmed InstantSend transactions.
 
-SPORK_6_NEW_SIGS
-  Enables a new signature format for Dash-specific network messages
-  introduced in Dash 12.3. For more information, see `here
-  <https://github.com/dashpay/dash/pull/1936>`__ and `here
-  <https://github.com/dashpay/dash/pull/1937>`__.
-
 SPORK_9_SUPERBLOCKS_ENABLED
   If enabled, superblocks are verified and issued to pay proposal
   winners.
-
-SPORK_15_DETERMINISTIC_MNS_ENABLED
-  Controls whether `deterministic masternodes
-  <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ are
-  required. When activated, the legacy masternode list logic will no
-  longer run and non-updated masternodes will not be eligible for
-  payment.
-
-SPORK_16_INSTANTSEND_AUTOLOCKS
-  Enables automatic transaction locking for transactions with less than
-  a specified number of inputs, and removes the legacy InstantSend fee.
-  Allows any node to request the transaction lock, not just the sending
-  node.
 
 SPORK_17_QUORUM_DKG_ENABLED 
   Enables the `DKG process to create LLMQ quorums
@@ -114,11 +97,13 @@ SPORK_19_CHAINLOCKS_ENABLED
   risk to payments introduced by blockchain reorganization events. 
   ChainLocks are described in `DIP0008 ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__.
 
-SPORK_20_INSTANTSEND_LLMQ_BASED
-  When enabled, legacy InstantSend is superseded by LLMQ-based
-  InstantSend, as described in `DIP0010 LLMQ-based InstantSend
-  <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__.
+SPORK_21_QUORUM_ALL_CONNECTED
+  Enables connections between all masternodes in a quorum to optimize the
+  signature recovery process.
 
+SPORK_23_QUORUM_POSE
+  Enforces Proof of Service requirements for masternodes to support a minimum
+  protocol version and maintain open ports.
 
 Viewing spork status
 --------------------
