@@ -163,12 +163,12 @@ the Type column of the **Transactions** tab:
 |                                    | minimize traceability of collaterals.      |
 +------------------------------------+--------------------------------------------+
 | CoinJoin Create Denominations      | Wallet funds were broken into              |
-|                                    | CoinJoin denominations (Step 1          |
-|                                    | :ref:`here <coinjoin>`)                 |
+|                                    | CoinJoin denominations (Step 1             |
+|                                    | :ref:`here <coinjoin>`)                    |
 +------------------------------------+--------------------------------------------+
 | CoinJoin Mixing                    | A transaction was sent to a masternode     |
 |                                    | in order to participate in a CoinJoin      |
-|                                    | session (Step 3 :ref:`here <coinjoin>`) |
+|                                    | session (Step 3 :ref:`here <coinjoin>`)    |
 +------------------------------------+--------------------------------------------+
 | CoinJoin Collateral Payment        | The CoinJoin session collateral was        |
 |                                    | claimed. This fee is charged in ~10%       |
