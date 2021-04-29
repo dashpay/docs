@@ -71,6 +71,8 @@ the hardware wallet to an address in this keystore will be created, and
 processing will begin. You can then spend the processed Dash, or send it
 back to your hardware wallet.
 
+.. _electrum-masternodes:
+
 Masternodes
 ===========
 
@@ -96,12 +98,23 @@ The tab displays the following data about each masternode you have set up:
 
    DIP3 tab with masternode information
 
-
 Masternode setup
 ----------------
 
 To setup a masternode, navigate to the DIP3 tab and click the **Add/Import**
 button.
+
+.. note::
+
+  If combined with Electrum's :ref:`multisig features <electrum-multisig>` the
+  masternode collateral can be stored in a multisig wallet for increased
+  security flexibility. See `this page
+  <https://github.com/akhavr/electrum-dash/blob/master/docs/dip3/dip3_p2sh_howto.md>`_
+  for the Dash Electrum documentation demonstrating how to configure a
+  masternode using a multisig collateral. 
+  
+  **Always exercise caution when using multisig accounts and verify that each
+  mnemonic is backed up appropriately.**
 
 .. figure:: img/mn-dip3-add-or-import.png
    :width: 400px
@@ -347,6 +360,8 @@ successfully. Click **OK** to close the screen.
  :width: 400px
 
  Transaction sent screen showing transaction hash
+
+ .. _electrum-multisig:
 
 Multisig wallets
 ================
