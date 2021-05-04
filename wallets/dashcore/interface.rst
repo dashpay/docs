@@ -57,8 +57,7 @@ The Overview tab
 ~~~~~~~~~~~~~~~~
 
 The overview tab offers quick access to your balance and most recent
-transactions, as well as the PrivateSend feature and options for coin
-mixing.
+transactions, as well as the PrivateSend feature.
 
 .. figure:: img/overview.png
 
@@ -82,8 +81,8 @@ Immature
 Total
   This is simply your available and pending funds added together.
 
-The lower area shows the status of PrivateSend and allows you to mix
-your funds using the Dash Masternode Network.
+The lower area shows the PrivateSend status and allows you to process
+your funds using PrivateSend on the Dash masternode network.
 
 The right part of the screen shows your recent transactions. Recent
 incoming transactions appear green, prefixed by a + sign. Recent
@@ -326,8 +325,8 @@ Spend unconfirmed change
 
 Enable PrivateSend features
   Enabling this option displays the PrivateSend tab in the main Dash
-  Core window and the Options dialog, and allows you to mix and spend
-  your balance using PrivateSend.
+  Core window and the Options dialog, and allows you to process and
+  spend your balance using PrivateSend.
 
 PrivateSend tab
 ---------------
@@ -341,44 +340,45 @@ functions in Dash Core.
    The PrivateSend tab of the Dash Core Options dialog
 
 Enable advanced PrivateSend interface
-  Enabling this option changes the PrivateSend mixing interface on the
-  Overview tab of the Dash Core wallet to include more information, such
-  as the remaining keys, percentage completion and current operation.
-  See :ref:`here <dashcore-privatesend-instantsend>` for a full
-  explanation of how to use PrivateSend.
+  Enabling this option changes the PrivateSend interface on the Overview
+  tab of the Dash Core wallet to include more information, such as the
+  remaining keys, percentage completion and current operation. See
+  :ref:`here <dashcore-privatesend-instantsend>` for a full explanation
+  of how to use PrivateSend.
 
 Show popups for PrivateSend transactions
-  Enabling this option will display notifications as the mixing
+  Enabling this option will display notifications as the CoinJoin
   transactions are created.
 
 Warn if PrivateSend is running out of keys
   Enabling this option will cause Dash Core to display a warning when
   your original set of 1000 addresses is running out, which may affect
-  PrivateSend mixing. When 900 addresses are used, your wallet must
+  PrivateSend processing. When 900 addresses are used, your wallet must
   create more addresses. It can only do this if you have automatic
   backups enabled. Consequently, users who have backups disabled will
   also have PrivateSend disabled.
 
 Enable PrivateSend multi-session
-  Normally PrivateSend mixing is completed in several consecutive rounds,
-  each using a single masternode. Enabling this option allows
+  Normally PrivateSend processing is completed in several consecutive
+  rounds, each using a single masternode. Enabling this option allows
   multi-session, which means you can use multiple masternode servers at
-  the same time, greatly increasing the speed of the mixing process at the
-  cost of creating more addresses and thus requiring more frequent wallet
-  backups.
+  the same time, greatly increasing the speed of the CoinJoin process at
+  the cost of creating more addresses and thus requiring more frequent
+  wallet backups.
 
 PrivateSend rounds to use
-  Use this option to control the number of rounds of PrivateSend mixing to
-  be carried out for your chosen balance. Each round of mixing uses a new
+  Use this option to control the number of rounds of PrivateSend to be
+  processed for your chosen balance. Each round of processing uses a new
   masternode. The higher the number of rounds, the more difficult it
   becomes to trace the Dash to its original address. This is at the
-  expense of more time required for mixing and potentially higher fees.
+  expense of more time required for processing and potentially higher
+  fees.
 
 Target PrivateSend balance
   This option allows you to specify how much Dash should be kept on
-  balance in a ready-to-use mixed state, meaning it has already passed
-  through the PrivateSend mixing process. The available amount is shown
-  as the balance on the PrivateSend tab.
+  balance in a ready-to-use processed state, meaning it has already
+  passed through the CoinJoin process. The available amount is shown as
+  the balance on the PrivateSend tab.
 
 Network tab
 -----------
@@ -584,8 +584,8 @@ Recover transactions
   the blockchain, recovering existing transactions and removing
   unconfirmed transactions. Transactions may become stuck in an
   unconfirmed state if there is a conflict in protocol versions on the
-  network during PrivateSend mixing, for example, or if a transaction is
-  sent with insufficient fees when blocks are full.
+  network during PrivateSend processing, for example, or if a
+  transaction is sent with insufficient fees when blocks are full.
 
 Upgrade wallet format
   This command is available for very old wallets where an upgrade to the

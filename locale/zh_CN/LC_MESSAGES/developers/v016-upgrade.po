@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Dash Core Group, Inc
+# This file is distributed under the same license as the Dash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# jmp2esp <xsrf@icloud.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dash latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"PO-Revision-Date: 2020-10-07 00:34+0000\n"
+"Last-Translator: jmp2esp <xsrf@icloud.com>, 2020\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../developers/v016-upgrade.rst:1
+msgid ""
+"The upgrade to Dash 0.16.0 involves the introduction of the Block Reward "
+"Reallocation. This documentation highlights the upgrade steps and progress."
+msgstr ""
+
+#: ../../developers/v016-upgrade.rst:1
+msgid ""
+"dash, cryptocurrency, masternode, miners, pools, exchanges, wallets, "
+"maintenance, upgrade"
+msgstr ""
+
+#: ../../developers/v016-upgrade.rst:11
+msgid "Dash 0.16 Upgrade Information"
+msgstr ""
+
+#: ../../developers/v016-upgrade.rst:13
+msgid ""
+"**Official binaries are available at** "
+"https://github.com/dashpay/dash/releases/tag/v0.16.0.1"
+msgstr ""
+
+#: ../../developers/v016-upgrade.rst:15
+msgid ""
+"Dash Core v0.16.0 introduces the multi-year shift in the allocation of block"
+" rewards between masternodes and miners. Please see the `Dash Core v0.16.0 "
+"Product Brief <https://blog.dash.org/updated-product-brief-dash-core-"
+"release-v0-16-0-d3debdb6242e>`__ for an overview of new features. The "
+"upgrade will take place in phases, as shown in the following diagram:"
+msgstr ""
+
+#: ../../developers/v016-upgrade.rst:25
+msgid "Installation notes"
+msgstr "安装记录"
+
+#: ../../developers/v016-upgrade.rst:27
+msgid ""
+"Dash Core v0.16.0.1 will automatically activate the Block Reward "
+"Reallocation once a threshold percentage of the network has upgraded. Mining"
+" pools must mine an upgraded block to successfully signal the upgrade in a "
+"block, and the threshold percentage of blocks in a window must signal in "
+"order to lock in the upgrade."
+msgstr ""
+
+#: ../../developers/v016-upgrade.rst:33
+msgid ""
+"The threshold percentage for this activation is dynamic and will decrease "
+"every 4032 blocks from 80% to 60%, over approximately 10 weeks. The first "
+"window will begin at block 1350720 (on 2020-10-07). Information regarding "
+"the activation threshold and progress can be obtained via Dash Core's debug "
+"console or the command line by using the `getblockchaininfo` command."
+msgstr ""
+
+#: ../../developers/v016-upgrade.rst:40
+msgid ""
+"Activation status can be tracked in the image below or at `this site "
+"<http://178.254.23.111/~pub/Dash/Dash_Info.html>`__."
+msgstr "激活状态可在如下图片或者网站<http://178.254.23.111/~pub/Dash/Dash_Info.html>`__查看。"
+
+#: ../../developers/v016-upgrade.rst:45
+msgid "Dash v0.16.0.0 adoption by miners"
+msgstr ""
+
+#: ../../developers/v016-upgrade.rst:47
+msgid ""
+"Masternode upgrade status can be tracked at `Dash Ninja "
+"<https://www.dashninja.pl/deterministic-masternodes.html>`__"
+msgstr ""
+
+#: ../../developers/v016-upgrade.rst:49
+msgid ""
+"If you are updating to Dash Core v0.16.0.1 from version 0.13.x+ you should "
+"be able to simply shut down the daemon and replace it with the updated "
+"binary. Versions <= 0.14.0.3 will run a migration process on startup that "
+"may take a few minutes."
+msgstr ""
+
+#: ../../developers/v016-upgrade.rst:54
+msgid ""
+"If you are updating to Dash Core v0.16.0.1 from version < 0.13 please note "
+"that you will also need to re-index the chainstate using the “-reindex-"
+"chainstate” command."
+msgstr ""
+
+#: ../../developers/v016-upgrade.rst:59
+msgid "Dependencies"
+msgstr "依赖"
+
+#: ../../developers/v016-upgrade.rst:61
+msgid ""
+"Contact the `Support Desk <https://support.dash.org/en/support/home>`__ with"
+" any compatibility questions or for help upgrading."
+msgstr ""
+"联系`Support Desk <https://support.dash.org/en/support/home>`__ 关于兼容问题和升级帮助。"
+
+#: ../../developers/v016-upgrade.rst:64
+msgid ""
+"Please see the official `Release Notes "
+"<https://github.com/dashpay/dash/blob/v0.16.0.1/doc/release-notes.md#rpc-"
+"changes>`__ for a complete listing of RPC improvements."
+msgstr ""

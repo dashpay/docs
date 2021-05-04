@@ -10,7 +10,7 @@
 Dash 0.16 Upgrade Information
 =============================
 
-**Official binaries are available at** https://github.com/dashpay/dash/releases/tag/v0.16.0.1
+**Official binaries are available at** https://github.com/dashpay/dash/releases/tag/v0.16.1.1
 
 Dash Core v0.16.0 introduces the multi-year shift in the allocation of 
 block rewards between masternodes and miners. Please see the `Dash
@@ -24,7 +24,7 @@ shown in the following diagram:
 Installation notes
 ==================
 
-Dash Core v0.16.0.1 will automatically activate the Block Reward Reallocation
+Dash Core v0.16 will automatically activate the Block Reward Reallocation
 once a threshold percentage of the network has upgraded. Mining pools must
 mine an upgraded block to successfully signal the upgrade in a block, and
 the threshold percentage of blocks in a window must signal in order to lock
@@ -46,12 +46,12 @@ command.
 
 - Masternode upgrade status can be tracked at `Dash Ninja <https://www.dashninja.pl/deterministic-masternodes.html>`__
 
-- If you are updating to Dash Core v0.16.0.1 from version 0.13.x+ you
+- If you are updating to Dash Core v0.16 from version 0.13.x+ you
   should be able to simply shut down the daemon and replace it with
   the updated binary. Versions <= 0.14.0.3 will run a migration
   process on startup that may take a few minutes.
 
-- If you are updating to Dash Core v0.16.0.1 from version < 0.13 please
+- If you are updating to Dash Core v0.16 from version < 0.13 please
   note that you will also need to re-index the chainstate using the
   “-reindex-chainstate” command.
 

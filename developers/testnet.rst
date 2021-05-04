@@ -44,7 +44,7 @@ Tools and links
 
 The links below were collected from various community sources and may
 not necessarily be online or functioning at any given time. Please join
-`Dash Nation Discord <http://dashchat.org>`_ or the `Dash Forum
+`Dash Discord <http://staydashy.com/>`_ or the `Dash Forum
 <https://www.dash.org/forum/>`_ if you have a question relating to a
 specific service.
 
@@ -58,10 +58,9 @@ specific service.
 Faucets
 -------
 
-- https://testnet-faucet.dash.org - by Dash Core Group
+- http://faucet.testnet.networks.dash.org - by Dash Core Group
 - http://test.faucet.masternode.io - by coingun
 - http://faucet.test.dash.crowdnode.io - by ndrezza
-- https://test.faucet.dashninja.pl - by elbereth
 
 Explorers
 ---------

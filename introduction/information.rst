@@ -55,8 +55,7 @@ Forums
 Chat
 ----
 
-- **Dash Nation Discord:** https://discord.com/invite/9z8zX5j
-- **Dash Talk Discord:** https://discord.com/invite/PXbUxJB
+- **Dash Discord:** https://discord.com/invite/PXbUxJB
 - **Dash Dapp Devs Discord:** https://chat.dashdevs.org
 - **Dash English Telegram:** https://t.me/dash_chat
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil
@@ -172,11 +171,11 @@ Tools
 Block explorers, statistics and visualizations
 ----------------------------------------------
 
-- https://explorer.dash.org/insight/
 - https://insight.dash.org/insight/
 - https://blockchair.com/dash
 - https://chainz.cryptoid.info/dash/
 - https://www.coinexplorer.net/dash
+- https://www.oklink.com/dash
 - https://bitinfocharts.com/dash/explorer/
 - https://dashblockexplorer.com
 - https://live.blockcypher.com/dash/
@@ -206,9 +205,12 @@ Masternode management
 - https://dash-news.de/dashtv/
 
 
-Price monitoring and statistics
--------------------------------
+Price monitoring and research
+-----------------------------
 
+- https://messari.io/asset/dash
+- https://namu.wiki/w/Dash
+- https://xangle.io/project/DASH/profile
 - https://coinmarketcap.com/currencies/dash/
 - https://bitinfocharts.com/dash/
 - https://www.cryptonator.com/widget

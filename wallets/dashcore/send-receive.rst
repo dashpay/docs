@@ -56,10 +56,10 @@ sent, or subtract it from the amount sent. You can also increase your
 fee to encourage nodes on the network to prioritize your transaction.
 Choosing **InstantSend** has a similar effect, but actually relies on a
 different mechanism in the second layer network to speed up the
-transaction time. Choosing **PrivateSend** will send Dash from an
-address that has previously been mixed. You can find out more about
-PrivateSend and InstantSend 
-:ref:`here <dashcore-privatesend-instantsend>`.
+transaction time. Choosing **PrivateSend** will send Dash using
+denominations that have already been processed through CoinJoin. You can
+find out more about PrivateSend and InstantSend :ref:`here
+<dashcore-privatesend-instantsend>`.
 
 Let’s try an example. Say you have received an invoice which you now
 want to pay with Dash. The writer of the invoice has included a Dash

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-01 01:04+0000\n"
+"POT-Creation-Date: 2020-10-07 00:32+0000\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Gleb Golov <gleb.golov@gmail.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
@@ -136,7 +136,7 @@ msgid ""
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:104
-msgid "https://people.xiph.org/~greg/escrowexample.txt"
+msgid "https://gist.github.com/jashmenn/9811198"
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:105
@@ -306,19 +306,19 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:390
 msgid ""
-"`Tor <torproject.org/>`__ is free and open-source software for enabling "
-"anonymous communication. The name derived from the acronym for the original "
-"software project name \"The Onion Router\". Tor directs Internet traffic "
-"through a free, worldwide, volunteer overlay network consisting of more than"
-" seven thousand relays to conceal a user's location and usage from anyone "
-"conducting network surveillance or traffic analysis."
+"`Tor <https://www.torproject.org/>`__ is free and open-source software for "
+"enabling anonymous communication. The name derived from the acronym for the "
+"original software project name \"The Onion Router\". Tor directs Internet "
+"traffic through a free, worldwide, volunteer overlay network consisting of "
+"more than seven thousand relays to conceal a user's location and usage from "
+"anyone conducting network surveillance or traffic analysis."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:398
+#: ../../wallets/dashcore/advanced.rst:399
 msgid "Dash Core GUI"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:400
+#: ../../wallets/dashcore/advanced.rst:401
 msgid ""
 "Dash Core traffic can be directed to pass through Tor by specifying a "
 "running Tor service as a proxy. First install Tor by visiting "
@@ -329,13 +329,13 @@ msgid ""
 "First Time <https://tb-manual.torproject.org/running-tor-browser/>`__."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:409
+#: ../../wallets/dashcore/advanced.rst:410
 msgid ""
 "Once Tor Browser is running, you have two options to configure Dash Core to "
 "use Tor for network traffic."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:412
+#: ../../wallets/dashcore/advanced.rst:413
 msgid ""
 "**Using the GUI:** Start Dash Core and go to **Settings > Options > "
 "Network** and enable the **Connect through SOCKS5 proxy** setting. Specify "
@@ -343,79 +343,79 @@ msgid ""
 "**OK** and restart Dash Core."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:417
+#: ../../wallets/dashcore/advanced.rst:418
 msgid ""
 "**Using dash.conf:** Ensure Dash Core is not running and edit your "
 "``dash.conf`` settings file. Add the line ``proxy=127.0.0.1:9150``, save the"
 " file and start Dash Core."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:421
+#: ../../wallets/dashcore/advanced.rst:422
 msgid ""
 "You are now connected through the Tor network. You will need to remember to "
 "start the Tor Browser each time before you start Dash Core or you will not "
 "be able to sync."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:426
+#: ../../wallets/dashcore/advanced.rst:427
 msgid "Tor onion service"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:428
+#: ../../wallets/dashcore/advanced.rst:429
 msgid ""
 "Tor onion services allows other users to connect to your Dash node using an "
 "onion address, providing further anonymity by concealing your IP address. "
 "Follow these steps to set up an onion service under Ubuntu Linux:"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:433
+#: ../../wallets/dashcore/advanced.rst:434
 msgid "Install tor::"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:437
+#: ../../wallets/dashcore/advanced.rst:438
 msgid "Add the following line to the ``torrc`` file::"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:441
+#: ../../wallets/dashcore/advanced.rst:442
 msgid "Restart Tor::"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:445
+#: ../../wallets/dashcore/advanced.rst:446
 msgid ""
 "Determine the group Tor is running under (usually the last entry in your "
 "groups file)::"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:450
+#: ../../wallets/dashcore/advanced.rst:451
 msgid ""
 "The group is usually ``debian-tor`` under Debian-based Linux distributions."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:453
+#: ../../wallets/dashcore/advanced.rst:454
 msgid "Add the user running Dash to the Tor group::"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:457
+#: ../../wallets/dashcore/advanced.rst:458
 msgid "Add the following two lines to ``dash.conf``::"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:462
+#: ../../wallets/dashcore/advanced.rst:463
 msgid "Restart Dash and monitor ``debug.log`` for onion informatoin::"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:466
+#: ../../wallets/dashcore/advanced.rst:467
 msgid "You should see a line similar to the following::"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:470
+#: ../../wallets/dashcore/advanced.rst:471
 msgid "Your onion service is now available at the shown address."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:474
+#: ../../wallets/dashcore/advanced.rst:475
 msgid "Multiple wallets"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:476
+#: ../../wallets/dashcore/advanced.rst:477
 msgid ""
 "It is possible to select between different Dash wallets when starting Dash "
 "Core by specifying the ``wallet`` argument, or even run multiple instances "
@@ -423,7 +423,7 @@ msgid ""
 "the ``datadir`` argument."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:481
+#: ../../wallets/dashcore/advanced.rst:482
 msgid ""
 "To begin, install the Dash Core wallet for your system according to the "
 ":ref:`installation instructions <dashcore-installation>`. When you get to "
@@ -434,11 +434,11 @@ msgid ""
 "you do want to run the wallets simultaneously)."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:492
+#: ../../wallets/dashcore/advanced.rst:493
 msgid "Separate wallet.dat files"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:494
+#: ../../wallets/dashcore/advanced.rst:495
 msgid ""
 "For this scenario, we will create two shortcuts on the desktop, each using a"
 " different wallet file. Navigate to the binary file used to start Dash Core "
@@ -447,11 +447,11 @@ msgid ""
 "**Properties** window for each of these shortcuts."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:503
+#: ../../wallets/dashcore/advanced.rst:504
 msgid "Creating desktop shortcuts using Windows 10"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:505
+#: ../../wallets/dashcore/advanced.rst:506
 msgid ""
 "Modify the **Target** property of each shortcut to point to a different "
 "wallet file by specifying the ``wallet`` argument when starting the wallet. "
@@ -461,34 +461,34 @@ msgid ""
 "``homewallet.dat``:"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:512
+#: ../../wallets/dashcore/advanced.rst:513
 msgid ""
 "Wallet Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=workwallet.dat``"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:513
+#: ../../wallets/dashcore/advanced.rst:514
 msgid ""
 "Wallet Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=homewallet.dat``"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:518
+#: ../../wallets/dashcore/advanced.rst:519
 msgid "Specifying separate wallet files"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:520
+#: ../../wallets/dashcore/advanced.rst:521
 msgid ""
 "You can now use the two icons to quickly and easily open different wallets "
 "from your desktop. Note that you cannot open both wallets simultaneously. To"
 " do this, you will need two separate data directories, as described below."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:527
+#: ../../wallets/dashcore/advanced.rst:528
 msgid "Separate data directories"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:529
+#: ../../wallets/dashcore/advanced.rst:530
 msgid ""
 "Start Dash Core and allow it to synchronize with the network, then close "
 "Dash Core again. You can now create two directories at e.g. ``C:\\Dash1`` "
@@ -499,23 +499,23 @@ msgid ""
 "as described above, then specify arguments for ``datadir`` as shown below:"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:538
+#: ../../wallets/dashcore/advanced.rst:539
 msgid ""
 "Datadir Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash1 -listen=0``"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:539
+#: ../../wallets/dashcore/advanced.rst:540
 msgid ""
 "Datadir Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash2 -listen=0``"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:544
+#: ../../wallets/dashcore/advanced.rst:545
 msgid "Specifying separate datadirs"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:546
+#: ../../wallets/dashcore/advanced.rst:547
 msgid ""
 "You can now use the two icons to quickly and easily open different wallets "
 "simultaneously from your desktop. Both wallets maintain separate and full "
@@ -525,15 +525,15 @@ msgid ""
 "separate wallets without keeping a full copy of the blockchain."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:556
+#: ../../wallets/dashcore/advanced.rst:557
 msgid "Two instances of Dash Core running simultaneously"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:559
+#: ../../wallets/dashcore/advanced.rst:560
 msgid "KeePass"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:561
+#: ../../wallets/dashcore/advanced.rst:562
 msgid ""
 "Since version 0.11.0, Dash Core has supported integration with KeePass, the "
 "popular open source password manager. This guide describes how to configure "
@@ -542,72 +542,72 @@ msgid ""
 "KeePass can be used to unlock the wallet."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:568
+#: ../../wallets/dashcore/advanced.rst:569
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../wallets/dashcore/advanced.rst:570
+#: ../../wallets/dashcore/advanced.rst:571
 msgid "You will need the following:"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:572
-msgid "KeePass 2: http://keepass.info"
-msgstr ""
-
 #: ../../wallets/dashcore/advanced.rst:573
-msgid "KeePassHttp plugin: https://github.com/pfn/keepasshttp"
+msgid "KeePass 2: https://keepass.info"
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:574
+msgid "KeePassHttp plugin: https://github.com/pfn/keepasshttp"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:575
 msgid "Dash Core: https://www.dash.org"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:576
+#: ../../wallets/dashcore/advanced.rst:577
 msgid ""
 "If not already installed, install these packages according to the "
 "instructions linked below:"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:579
+#: ../../wallets/dashcore/advanced.rst:580
 msgid "KeePass: https://keepass.info/help/v2/setup.html"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:580
+#: ../../wallets/dashcore/advanced.rst:581
 msgid "KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:581
+#: ../../wallets/dashcore/advanced.rst:582
 msgid ""
 "Dash Core: "
 "https://docs.dash.org/en/stable/wallets/dashcore/installation.html"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:584
+#: ../../wallets/dashcore/advanced.rst:585
 msgid "Commands"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:586
+#: ../../wallets/dashcore/advanced.rst:587
 msgid ""
 "The following KeePass RPC commands are available in the Dash Core client "
 "console or server:"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:592
+#: ../../wallets/dashcore/advanced.rst:593
 msgid "keepass genkey"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:590
+#: ../../wallets/dashcore/advanced.rst:591
 msgid ""
 "Generates a base64 encoded 256 bit AES key that can be used for "
 "communication with KeePassHttp. This is only necessary for manual "
 "configuration. Use init for automatic configuration."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:598
+#: ../../wallets/dashcore/advanced.rst:599
 msgid "keepass init"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:595
+#: ../../wallets/dashcore/advanced.rst:596
 msgid ""
 "Sets up the association between Dash and KeePass by generating an AES key "
 "and sending an association message to KeePassHttp. This will trigger KeePass"
@@ -615,11 +615,11 @@ msgid ""
 "base64 encoded string for the AES key."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:605
+#: ../../wallets/dashcore/advanced.rst:606
 msgid "keepass setpassphrase"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:601
+#: ../../wallets/dashcore/advanced.rst:602
 msgid ""
 "Updates the passphrase in KeePassHttp to a new value. This should match the "
 "passphrase you intend to use for the wallet. Please note that the standard "
@@ -628,47 +628,47 @@ msgid ""
 "manual manipulation of the password."
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:607
+#: ../../wallets/dashcore/advanced.rst:608
 msgid "The following new arguments are available for dashd and dash-qt:"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:610
+#: ../../wallets/dashcore/advanced.rst:611
 msgid "keepass"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:610
+#: ../../wallets/dashcore/advanced.rst:611
 msgid "Use KeePass 2 integration using KeePassHttp plugin (default: 0)"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:613
+#: ../../wallets/dashcore/advanced.rst:614
 msgid "keepassport=<port>"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:613
+#: ../../wallets/dashcore/advanced.rst:614
 msgid "Connect to KeePassHttp on port <port> (default: 19455)"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:616
+#: ../../wallets/dashcore/advanced.rst:617
 msgid "keepasskey=<key>"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:616
+#: ../../wallets/dashcore/advanced.rst:617
 msgid "KeePassHttp key for AES encrypted communication with KeePass"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:619
+#: ../../wallets/dashcore/advanced.rst:620
 msgid "keepassid=<name>"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:619
+#: ../../wallets/dashcore/advanced.rst:620
 msgid "KeePassHttp id for the established association"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:622
+#: ../../wallets/dashcore/advanced.rst:623
 msgid "keepassname=<name>"
 msgstr ""
 
-#: ../../wallets/dashcore/advanced.rst:622
+#: ../../wallets/dashcore/advanced.rst:623
 msgid ""
 "Name to construct url for KeePass entry that stores the wallet passphrase"
 msgstr ""

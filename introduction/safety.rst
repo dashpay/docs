@@ -97,6 +97,9 @@ List of known Dash-related scams:
 Beware of fake Twitter accounts impersonating Dash! The official Twitter
 account is: https://twitter.com/Dashpay
 
+Beware of fake communication from hardware wallet vendors! Ledger maintains a
+`documentation page detailing a range of scams <https://support.ledger.com/hc/en-us/articles/360035343054-Beware-of-phishing-attempts>`__.
+
 Please report these and any others scams you encounter as follows:
 
 #. Report phishing and scams to Google: 

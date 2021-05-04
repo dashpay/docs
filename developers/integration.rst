@@ -1,6 +1,6 @@
 .. meta::
    :description: Technical guides for merchants using Dash. API and SDK resources.
-   :keywords: dash, merchants, payment processor, API, SDK, insight, blockcypher, gocoin, instantsend, python, .NET, java, javascript, nodejs, php, objective-c, vending machines
+   :keywords: dash, merchants, payment processor, API, SDK, insight, blockcypher, instantsend, python, .NET, java, javascript, nodejs, php, objective-c, vending machines
 
 .. _integration:
 
@@ -375,31 +375,6 @@ providers.
 - Documentation: https://nownodes.io/documentation
 
 
-GoCoin
-------
-
-.. image:: img/gocoin.png
-   :width: 200px
-   :align: right
-   :target: https://gocoin.com
-
-https://gocoin.com
-
-The GoCoin platform makes taking Dash as easy as installing a plugin.
-Payment processing is already implemented for every major shopping
-platform. GoCoin is focused on helping merchants in privacy-related
-niches and specific industries, and handles all transaction risk for
-all payments from your customers.
-
-- Features: Invoicing, Exchange Rates, WebHook Callbacks. GoCoin holds
-  Private Keys on their server allowing the merchant to withdraw funds
-  in Cryptocurrency or convert to Fiat.
-- Integrations: WooCommerce, Magento, Prestashop, VirtueMart, ZenCart,
-  OpenCart, OSCommerce, UberCart, nopCommerce, WHMCS, NATS4, Shopify.
-- Pricing Model: 1% Processing Fee (https://gocoin.com/fees)
-- Documentation: https://gocoin.com/docs
-
-
 CoinPayments
 ------------
 
@@ -475,7 +450,7 @@ development, additional indexes have been added into Dash for querying
 address balances, transaction history, and unspent outputs.
 
 - Platform: NodeJS / Javascript
-- Documentation: https://bitcore.io/api/lib
+- Documentation: https://github.com/dashevo/dashcore-lib/blob/master/README.md#documentation
 - Repository lib: https://github.com/dashevo/dashcore-lib
 - Repository node: https://github.com/dashevo/dashcore-node
 - See also: `Insight API <https://github.com/dashevo/insight-api>`__
@@ -494,19 +469,19 @@ documents.
 PHP: Bitcoin-PHP
 ----------------
 
-https://github.com/snogcel/bitcoin-php
+https://github.com/Bit-Wasp/bitcoin-php
 
 Bitcoin-PHP is an implementation of Bitcoin with support for Dash using
 mostly pure PHP.
 
 - Platform: PHP
 - Documentation: https://github.com/Bit-Wasp/bitcoin-php/blob/1.0/doc/documentation/Introduction.md
-- Repository: https://github.com/snogcel/bitcoin-php
+- Repository: https://github.com/Bit-Wasp/bitcoin-php
 
 Python: PyCoin
 --------------
 
-https://github.com/DeltaEngine/pycoin
+https://github.com/richardkiss/pycoin
 
 PyCoin is an implementation of a bunch of utility routines that may be
 useful when dealing with Bitcoin and Dash. It has been tested
@@ -514,8 +489,8 @@ with Python 2.7, 3.6 and 3.7.
 
 - Platform: Python
 - Documentation: https://pycoin.readthedocs.io/en/latest/
-- Repository: https://github.com/DeltaEngine/pycoin
-- See also: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-dashrpc>`__
+- Repository: https://github.com/richardkiss/pycoin
+- See also: `JSON-RPC Utilities <https://github.com/richardkiss/pycoin>`__
 
 Java: DashJ
 -----------
@@ -590,19 +565,6 @@ BlockCypher also offers client SDKs.
 
 - Platform: Ruby, Python, Java, PHP, Go, NodeJS
 - Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-supported-language-sdks 
-
-GoCoin
-------
-
-.. image:: img/gocoin.png
-   :width: 200px
-   :align: right
-   :target: https://gocoin.com
-
-https://gocoin.com
-
-- Platform: JavaScript, PHP, Java, Ruby, .NET, Python
-- Repositories: https://gocoin.com/docs 
 
 
 Vending Machines

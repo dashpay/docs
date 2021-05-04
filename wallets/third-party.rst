@@ -17,48 +17,6 @@ not be considered an endorsement or recommendation. Contact the software
 vendor for support.
 
 
-Abra
-====
-
-https://www.abra.com
-
-.. image:: img/abra.png
-   :width: 100px
-   :align: right
-   :target: https://www.abra.com
-
-Abra is a multi-cryptocurrency wallet supporting Dash amongst other
-currencies. It is designed for investment and can be funded from your
-bank account, credit/debit card, cash (in the Philippines), Bitcoin,
-Bitcoin Cash, or Litecoin. Dash deposits and withdrawals are currently
-not supported.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.plutus.wallet
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://apps.apple.com/app/id966301394
-
-Abra is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.plutus.wallet>`__ 
-and the `Apple App Store for iOS <https://apps.apple.com/app/id966301394>`__.
-
-Documentation
--------------
-
-Abra offers detailed documentation of all functions at
-https://abra.zendesk.com
-
-.. figure:: img/abra-wallet.png
-   :width: 133px
-
-   Abra wallet running on iOS
-
-
 ADAMANT
 =======
 
@@ -893,13 +851,53 @@ Trust.
    Trust wallet running on iOS
 
 
+Unstoppable
+===========
+
+https://unstoppable.money
+
+.. image:: img/unstoppable.png
+   :width: 100px
+   :align: right
+   :target: https://unstoppable.money
+
+Unstoppable is a multi-coin wallet that adheres to standards and implements the
+latest advancements for Bitcoin and Ethereum. Store and grow crypto assets, from
+anywhere. Have full control over assets. Remain private.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=io.horizontalsystems.bankwallet
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://apps.apple.com/app/id1447619907
+
+Unstoppable is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=io.horizontalsystems.bankwallet>`__ 
+and the `Apple App Store for iOS <https://apps.apple.com/app/id1447619907>`__.
+
+Documentation
+-------------
+
+See the `FAQ <https://unstoppable.money/faq>`__ or `Unstoppable on GitHub
+<https://github.com/horizontalsystems/>`_ for support with Unstoppable.
+
+.. figure:: img/unstoppable-wallet.png
+   :width: 133px
+
+   Unstoppable wallet running on Android
+
+
 VegaWallet
 ==========
 
 https://www.vegawallet.com
 
 .. image:: img/vegawallet.png
-   :width: 200px
+   :width: 100px
    :align: right
    :target: https://www.vegawallet.com
 
@@ -937,3 +935,44 @@ to support queries by email at `support@vegawallet.com
    :width: 200px
 
    VegaWallet wallet running on iOS
+
+
+ZelCore
+=======
+
+https://zel.network
+
+.. image:: img/zel.png
+   :width: 100px
+   :align: right
+   :target: https://zel.network
+
+ZelCore allows you to buy, store, trade & exchange crypto in a single app. The
+wallet includes rich integrations with third party exchanges and decentralized
+2FA features.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.zelcash.zelcore
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://apps.apple.com/app/id1436296839
+
+ZelCore is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.zelcash.zelcore>`__ 
+and the `Apple App Store for iOS <https://apps.apple.com/app/id1436296839>`__.
+
+Documentation
+-------------
+
+See the `Zel Wiki <https://zelcash.github.io/zelwiki/>`__ or join the
+`Zel Discord server <https://discord.io/zel>`_ for support with
+ZelCore.
+
+.. figure:: img/zelcore-wallet.png
+   :width: 400px
+
+   ZelCore wallet running on Windows

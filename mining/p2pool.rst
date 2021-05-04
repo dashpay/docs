@@ -37,7 +37,7 @@ relatively low latency.
 
 This following section describes the steps to setup an Ubuntu Server
 running P2Pool for Dash. It has been tested with Ubuntu 20.04 LTS and
-Dash 0.16.0.1. While a reasonable effort will be made to keep it up to
+Dash 0.16. While a reasonable effort will be made to keep it up to
 date, it should be possible to modify the instructions slightly to
 support different versions or operating systems as necessary.
 
@@ -112,7 +112,7 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v0.16.0.1/dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.16.1.1/dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -128,21 +128,21 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v0.16.0.1/dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v0.16.1.1/dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz.asc
 
 Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
   mkdir ~/.dashcore
-  tar xfvz dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
-  cp dashcore-0.16.0/bin/dashd .dashcore/
-  cp dashcore-0.16.0/bin/dash-cli .dashcore/
+  tar xfvz dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz
+  cp dashcore-0.16.1/bin/dashd .dashcore/
+  cp dashcore-0.16.1/bin/dash-cli .dashcore/
 
 Clean up unneeded files::
 
-  rm dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
-  rm -r dashcore-0.16.0/
+  rm dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz
+  rm -r dashcore-0.16.1/
 
 Create a configuration file using the following command::
 

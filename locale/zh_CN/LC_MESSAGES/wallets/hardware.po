@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-01 01:04+0000\n"
+"POT-Creation-Date: 2020-10-07 00:32+0000\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -76,8 +76,8 @@ msgid "Site: https://trezor.io"
 msgstr "官方网址: https://trezor.io"
 
 #: ../../wallets/hardware.rst:40
-msgid "Review: https://www.dashforcenews.com/trezor-hardware-wallet-review"
-msgstr "评论网址：https://www.dashforcenews.com/trezor-hardware-wallet-review"
+msgid "Review: https://dashnews.org/trezor-hardware-wallet-review/"
+msgstr ""
 
 #: ../../wallets/hardware.rst:41
 msgid "Shop: https://shop.trezor.io"
@@ -100,11 +100,9 @@ msgstr "商家入门指南"
 #: ../../wallets/hardware.rst:50
 msgid ""
 "Once you have bought your Trezor from https://shop.trezor.io or an "
-"`authorized reseller <https://trezor.io/resellers>`_, you will need a wallet"
-" to use it with. Trezor supports the following Dash wallets:"
+"`authorized reseller <https://trezor.io/resellers/>`_, you will need a "
+"wallet to use it with. Trezor supports the following Dash wallets:"
 msgstr ""
-"用户可以通过 https://shop.trezor.io 或\\ `授权经销商 <https://trezor.io/resellers>`_\\ "
-"来购买Trezor产品。购买产品之后，用户还要有一个钱包才能使用Trezor。Trezor支持以下的达世币钱包："
 
 #: ../../wallets/hardware.rst:54
 msgid ""
@@ -318,20 +316,15 @@ msgid ""
 "passphrase. Since the passphrase acts as a cryptographic salt, there is no "
 "\"correct\" passphrase - a different wallet will be displayed for each "
 "passphrase you enter. Be absolutely sure you understand passphrases before "
-"using them. For more information, see `here <https://blog.trezor.io/hide-"
-"your-trezor-wallets-with- multiple-passphrases-f2e0834026eb>`_."
+"using them. For more information, see `here <https://blog.trezor.io"
+"/passphrase-the-ultimate-protection-for-your-accounts-3a311990925b>`_."
 msgstr ""
-"在使用硬件钱包时，PIN码将是用户最大的安全保障。之所以这样说的原因在于，Pin码的键盘每次出现的顺序和布局都各不相同。如果怀疑Pin码的安全性，用户可以参考以下说明更改Pin码。为了强化安全性或消除未来可能出现的安全隐患，用户还可以设置一道密码短语。这样一来，只有用户输入密码短语，硬件钱包才会出现。由于密码短语类似于加强版的安全屏障，因此钱包不存在"
-" “正确” "
-"的密码短语——每当用户输入一个不同的密码短语时，出现的硬件钱包也是不同的。在使用密码短语前，用户需确保对其有深入的了解。如需了解更多信息，用户可访问以下\\"
-" `页面 <https://blog.trezor.io/hide-your-trezor-wallets-with- multiple-"
-"passphrases-f2e0834026eb>`_\\ 。"
 
-#: ../../wallets/hardware.rst:186
+#: ../../wallets/hardware.rst:185
 msgid "Changing your PIN"
 msgstr "更改PIN码"
 
-#: ../../wallets/hardware.rst:188
+#: ../../wallets/hardware.rst:187
 msgid ""
 "You can change your Trezor PIN from both the `Trezor wallet "
 "<https://wallet.trezor.io>`_ and `DMT <https://github.com/Bertrand256 /dash-"
@@ -341,7 +334,7 @@ msgstr ""
 "<https://github.com/Bertrand256 /dash-masternode-tool/releases>`_\\ "
 "来修改Trezor的PIN码。"
 
-#: ../../wallets/hardware.rst:192
+#: ../../wallets/hardware.rst:191
 msgid ""
 "**From Trezor:** Go to https://wallet.trezor.io and click the cog icon next "
 "to your username. Then click **Change PIN**. You will need to confirm you "
@@ -351,7 +344,7 @@ msgstr ""
 "**从Trezor钱包进行修改**，那么用户需要访问 https://wallet.trezor.io 网址，点击用户名旁边的齿轮图标，再点击 "
 "**更改PIN码**。 用户需要确认是否要在硬件设备上更改PIN码，然后输入原有PIN码一次并输入新PIN码两次。"
 
-#: ../../wallets/hardware.rst:200
+#: ../../wallets/hardware.rst:199
 msgid ""
 "**From DMT:** Open DMT and click **Tools > Hardware Wallet PIN/Passphrase "
 "configuration**. The following window will appear. Click **Change**. You "
@@ -361,11 +354,11 @@ msgstr ""
 "**从DMT进行修改**，那么用户需要打开DMT并点击**工具 > 设置硬件钱包PIN码/密码短语**。接下来，用户需要在弹出窗口上点击 **更改** "
 "。用户需要确认是否要在硬件设备上更改PIN码，然后输入原有PIN码一次并输入新PIN码两次。"
 
-#: ../../wallets/hardware.rst:210
+#: ../../wallets/hardware.rst:209
 msgid "Adding a passphrase"
 msgstr "新增密码短语"
 
-#: ../../wallets/hardware.rst:212
+#: ../../wallets/hardware.rst:211
 msgid ""
 "You can add a passphrase to your Trezor from both the Trezor wallet and DMT."
 " Before you add a passphrase, you should be fully aware of how it functions "
@@ -375,7 +368,7 @@ msgid ""
 msgstr ""
 "用户可以通过Trezor钱包或DMT来为Trezor钱包添加密码短语。在添加密码短语之前，用户应当了解25密码短语对恢复种子的重要性和忘记密码短语造成的风险。值得注意的是，密码短语并不是必须设置的，用户也可以留空，这样用户不必输入密码短语就能正常进入钱包了。"
 
-#: ../../wallets/hardware.rst:218
+#: ../../wallets/hardware.rst:217
 msgid ""
 "**From Trezor:** Click **Advanced**, confirm you understand the risks and "
 "click **Enable passphrase encryption**. This enables a prompt to enter a "
@@ -384,7 +377,7 @@ msgstr ""
 "**从Trezor钱包进行添加**，那么用户需要点击 **高级设置**，确认已知风险并点击 "
 "**使用密码短语进行加密**。完成这些步骤之后，用户在每次使用Trezor前都看到输入密码短语的提示。"
 
-#: ../../wallets/hardware.rst:225
+#: ../../wallets/hardware.rst:224
 msgid ""
 "**From DMT:** Open DMT and click **Tools > Hardware Wallet PIN/Passphrase "
 "configuration**. The following window will appear. Click **Enable**. This "
@@ -393,11 +386,11 @@ msgstr ""
 "**从DMT进行添加**，那么用户需要打开DMT并点击 **工具 > 设置硬件钱包PIN码/密码短语**。以下窗口会跳出，点击 "
 "**启用**。完成这些步骤之后，用户在每次使用Trezor前都看到输入密码短语的提示。"
 
-#: ../../wallets/hardware.rst:234
+#: ../../wallets/hardware.rst:233
 msgid "Changing the Homescreen"
 msgstr "更改屏幕主题"
 
-#: ../../wallets/hardware.rst:236
+#: ../../wallets/hardware.rst:235
 msgid ""
 "Your Trezor allows you to change the homescreen image from the default "
 "Trezor logo. A range of existing images can be selected, you can generate "
@@ -409,37 +402,37 @@ msgstr ""
 "<https://trezor.github.io/homescreen-editor/>`_\\ "
 "来生成个性化屏幕主题设置。除此之外，用户还可以创建并上传屏幕解析度为128x64px的黑白图像。如需更改屏幕显示图像，用户需进行以下操作："
 
-#: ../../wallets/hardware.rst:243
+#: ../../wallets/hardware.rst:242
 msgid "Go to https://wallet.trezor.io and open your wallet"
 msgstr "打开 https://wallet.trezor.io 页面并打开钱包；"
 
-#: ../../wallets/hardware.rst:244
+#: ../../wallets/hardware.rst:243
 msgid "Click the small cog icon next to your device name"
 msgstr "点击设备名称旁边的小齿轮图标"
 
-#: ../../wallets/hardware.rst:245
+#: ../../wallets/hardware.rst:244
 msgid "Click the **Homescreen** tab"
 msgstr "点击 **屏幕** 选项"
 
-#: ../../wallets/hardware.rst:246
+#: ../../wallets/hardware.rst:245
 msgid ""
 "Select the new homescreen, then click the **Set as homescreen** button at "
 "the top"
 msgstr "选择新的屏幕设置，然后单击顶部的 **设置为屏幕** 按钮"
 
-#: ../../wallets/hardware.rst:248
+#: ../../wallets/hardware.rst:247
 msgid "Confirm the change on the Trezor device"
 msgstr "确认Trezor设备上的更改"
 
-#: ../../wallets/hardware.rst:250
+#: ../../wallets/hardware.rst:249
 msgid "A few sample images are available for Dash:"
 msgstr "适用于达世币的图像示例："
 
-#: ../../wallets/hardware.rst:262
+#: ../../wallets/hardware.rst:261
 msgid "Storage Suggestions"
 msgstr "保存建议"
 
-#: ../../wallets/hardware.rst:264
+#: ../../wallets/hardware.rst:263
 msgid ""
 "While losing a Trezor is not a security threat (unless someone knows your "
 "PIN and/or passphrase), it is a moderately expensive device that can be "
@@ -449,35 +442,33 @@ msgid ""
 msgstr ""
 "（除非其他人知道用户的PIN码/密码短语）否则丢失一个Trezor设备算不上安全隐患。不过，这个设备也颇为昂贵，而且在受压或浸水时容易受损，因此达世币社区成员tungfa分享了个性化定制Trezor的经验："
 
-#: ../../wallets/hardware.rst:270
+#: ../../wallets/hardware.rst:269
 msgid ""
-"`Pelican Case 1010 Micro Case <http://www.pelican.com/us/en/product "
-"/watertight-protector-hard-cases/micro-case/standard/1010/>`_"
+"`Pelican Case 1010 Micro Case "
+"<https://www.pelican.com/us/en/product/cases/micro/1010>`_"
 msgstr ""
-"`Pelican Case 1010 Micro Case <http://www.pelican.com/us/en/product "
-"/watertight-protector-hard-cases/micro-case/standard/1010/>`_"
 
-#: ../../wallets/hardware.rst:272
+#: ../../wallets/hardware.rst:270
 msgid "Foam"
 msgstr "Foam"
 
-#: ../../wallets/hardware.rst:273
+#: ../../wallets/hardware.rst:271
 msgid "Trezor + Cable"
 msgstr "Trezor + Cable"
 
-#: ../../wallets/hardware.rst:274
+#: ../../wallets/hardware.rst:272
 msgid "USB Stick (for wallet.dat files + blockchains of all portfolios)"
 msgstr "U盘（可用于wallet.dat文件和所有组合的区块链）"
 
-#: ../../wallets/hardware.rst:275
+#: ../../wallets/hardware.rst:273
 msgid "Notepad"
 msgstr "Notepad"
 
-#: ../../wallets/hardware.rst:287
+#: ../../wallets/hardware.rst:285
 msgid "KeepKey"
 msgstr "KeepKey"
 
-#: ../../wallets/hardware.rst:293
+#: ../../wallets/hardware.rst:291
 msgid ""
 "The $129 KeepKey hardware wallet features a large screen and 100% open "
 "source firmware to guarantee the security of your private keys. KeepKey has "
@@ -489,66 +480,60 @@ msgstr ""
 "售价 "
 "$129美元的KeepKey硬件钱包具有大屏幕和100%开源的固件，可以确保您私钥的安全。2017年3月28日，KeepKey发行了固件版本4.2.10，从此开始支持达世币的基础功能。2018年9月5日，KeepKey又发行了5.7.2固件版本，您从此就可以使用达世币的即时发送功能了。需要使用KeepKey的达世币用户请参考以下说明。"
 
+#: ../../wallets/hardware.rst:298
+msgid "Site: https://shapeshift.com/keepkey"
+msgstr ""
+
+#: ../../wallets/hardware.rst:299
+msgid "Review: https://coincentral.com/keepkey-wallet-review/"
+msgstr ""
+
 #: ../../wallets/hardware.rst:300
-msgid "Site: https://www.keepkey.com"
-msgstr "网址链接：https://www.keepkey.com"
-
-#: ../../wallets/hardware.rst:301
-msgid "Review: https://coincentral.com/keepkey-wallet-review"
-msgstr "评论链接：https://coincentral.com/keepkey-wallet-review"
-
-#: ../../wallets/hardware.rst:302
 msgid "Shop: https://keepkey.myshopify.com/"
 msgstr "网购链接：https://keepkey.myshopify.com/"
 
-#: ../../wallets/hardware.rst:303
-msgid "Product video: https://vimeo.com/133811189"
-msgstr "产品的视频介绍：https://vimeo.com/133811189"
+#: ../../wallets/hardware.rst:301
+msgid "Product video: https://vimeo.com/289712840"
+msgstr ""
 
-#: ../../wallets/hardware.rst:305
+#: ../../wallets/hardware.rst:303
 msgid ""
 "It is also possible to operate a Dash masternode using your KeepKey. See "
 "here for details."
 msgstr "用户也可以通过KeepKey来运营达世币主节点。如需了解详细信息，请点击此处。"
 
-#: ../../wallets/hardware.rst:309
+#: ../../wallets/hardware.rst:307
 msgid "Ledger"
 msgstr "Ledger"
 
-#: ../../wallets/hardware.rst:315
+#: ../../wallets/hardware.rst:313
 msgid ""
 "Founded in 2014, French startup `Ledger <https://www.ledger.com>`_ markets "
 "enterprise and consumer blockchain security solutions, including the €58 "
-"`Ledger Nano S <https://www.ledger.com/products/ledger-nano-s>`_ and "
-"upcoming `Ledger Blue <https://www.ledger.com/products/ledger-blue>`_. "
+"`Ledger Nano S <https://shop.ledger.com/products/ledger-nano-s>`_ and "
+"upcoming `Ledger Blue <https://shop.ledger.com/products/ledger-blue>`_. "
 "Ledger Nano S has supported Dash since November 2016 and firmware version "
 "1.2. Follow `these instructions <https://support.ledger.com/hc/en-"
 "us/articles/115005308185-Dash-DASH->`_ to add Dash support to the device."
 msgstr ""
-"Ledger\\ `Ledger <https://www.ledger.com>`_\\ "
-"是2014年成立的一家法国企业。它为企业和消费者提供区块链安全服务方案，其产品包括售价58欧元的\\ `Ledger Nano S "
-"<https://www.ledger.com/products/ledger-nano-s>`_\\ 和发行在即的\\ `Ledger Blue "
-"<https://www.ledger.com/products/ledger-blue>`_\\ 。自2016年11月起，Ledger Nano "
-"S发布的固件版本1.2 就能为达世币提供支持了。用户可以按照\\ `说明 <https://support.ledger.com/hc/en-"
-"us/articles/115005308185-Dash-DASH->`_\\ 为设备添加达世币支持。"
 
-#: ../../wallets/hardware.rst:323
+#: ../../wallets/hardware.rst:322
 msgid "Site: https://www.ledger.com"
 msgstr "网址链接：https://www.ledger.com"
 
+#: ../../wallets/hardware.rst:323
+msgid "Review: https://dashnews.org/ledger-nano-s-review/"
+msgstr ""
+
 #: ../../wallets/hardware.rst:324
-msgid "Review: https://www.dashforcenews.com/ledger-nano-s-review"
-msgstr "评论网址：https://www.dashforcenews.com/ledger-nano-s-review"
+msgid "Shop: https://shop.ledger.com/collections/all-products"
+msgstr ""
 
-#: ../../wallets/hardware.rst:325
-msgid "Shop: https://www.ledger.com/collections/all-products"
-msgstr "网购链接：https://www.ledger.com/collections/all-products"
-
-#: ../../wallets/hardware.rst:327
+#: ../../wallets/hardware.rst:326
 msgid "Product video:"
 msgstr "产品的视频介绍："
 
-#: ../../wallets/hardware.rst:335
+#: ../../wallets/hardware.rst:334
 msgid ""
 "It is also possible to operate a Dash masternode using your Ledger. See here"
 " for details."

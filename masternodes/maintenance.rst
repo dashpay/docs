@@ -47,19 +47,19 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.16.0.1/dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.16.1.1/dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
 ``SHA256SUMS.asc`` file::
 
-  sha256sum dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
+  sha256sum dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-0.16.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-0.16.0/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-0.16.1.1-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-0.16.1/bin/dashd ~/.dashcore/
+  cp -f dashcore-0.16.1/bin/dash-cli ~/.dashcore/
 
 Restart Dash::
 
@@ -92,10 +92,10 @@ revoke a masternode's registered status (in the event of a security
 breach, for example) to force both owner and operator to update their
 details.
 
-Configuration changes which affect the provision of service to the
-network, such as the BLS operator key and IP address, will reset your
-position in the payment queue. Changes to the voting or various payout
-addresses will not reset your position in the payment queue.
+Changing the BLS operator key or creating a new ProTx based on the same
+collateral transaction will reset your position in the payment queue.
+Changing your IP address or making changes to the voting or various
+payout addresses will not reset your position in the payment queue.
 
 .. _dip3-update-service:
 
@@ -123,7 +123,8 @@ Where:
 - ``operatorPayoutAddress`` (optional): The address used for operator 
   reward payments. Only allowed when the ProRegTx had a non-zero 
   ``operatorReward`` value. Enter ``""`` to use the
-  last on-chain operator payout address.
+  last on-chain operator payout address, or as a placeholder when 
+  specifying a ``feeSourceAddress``.
 - ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
   ``operatorPayoutAddress`` will be used if not specified.
 

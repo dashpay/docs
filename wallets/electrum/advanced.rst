@@ -29,15 +29,15 @@ PrivateSend
 :ref:`PrivateSend <privatesend>` offers users enhanced privacy when
 creating transactions by splitting the user's balance into a number of
 predefined denominations in advance of spending. This process is known
-as mixing. PrivateSend is available in Dash Electrum versions 3.3.8.3
+as CoinJoin. PrivateSend is available in Dash Electrum versions 3.3.8.3
 and higher, with support for hardware wallets added in 3.3.8.7.
 
-Mixing and sending
-------------------
+Processing and sending
+----------------------
 
-To start mixing in Dash Electrum, select **Wallet > PrivateSend** or
-click the **PS** icon in the lower right corner of the main window. The
-following window appears:
+To start PrivateSend processing in Dash Electrum, select **Wallet >
+PrivateSend** or click the **PS** icon in the lower right corner of the
+main window. The following window appears:
 
 .. figure:: img/ps-view.png
    :width: 400px
@@ -46,14 +46,13 @@ following window appears:
 
 Enter the **Amount of Dash to keep anonymized** and the number of
 **PrivateSend rounds to use**. Then click **Enable PrivateSend**,
-followed by **Start Mixing**. The mixing process will begin, and the
-**Mixing Progress** bar shows the completion progress. Additional
-information on the process is available on the **Info** and **Log**
-tabs.
+followed by **Start Mixing**. The process will begin, and the **Mixing
+Progress** bar shows the completion progress. Additional information on
+the process is available on the **Info** and **Log** tabs.
 
-When mixing is complete, simply check the **PrivateSend** checkbox on
-the **Send** tab before sending your transaction. Dash Electrum will
-only use Dash mixed according to your specifications for the
+When processing is complete, simply check the **PrivateSend** checkbox
+on the **Send** tab before sending your transaction. Dash Electrum will
+only use Dash processed according to your specifications for the
 transaction.
 
 Hardware Wallets
@@ -65,113 +64,289 @@ necessary to first install dependencies and udev rules as follows::
   sudo apt-get install python3-dev python3-pip cython3 libusb-1.0-0-dev libudev-dev
   sudo pip3 install trezor
 
-PrivateSend mixing is also supported. Starting PrivateSend mixing in
-Dash Electrum with a hardware wallet will generate a new HD wallet and
-mnemonic for the PrivateSend keystore. A transaction from the hardware
-wallet to an address in this keystore will be created, and mixing will
-begin. You can then spend the mixed Dash, or send it back to your
-hardware wallet.
+PrivateSend processing is also supported. Starting PrivateSend
+processing in Dash Electrum with a hardware wallet will generate a new
+HD wallet and mnemonic for the PrivateSend keystore. A transaction from
+the hardware wallet to an address in this keystore will be created, and
+processing will begin. You can then spend the processed Dash, or send it
+back to your hardware wallet.
 
 Masternodes
 ===========
 
-Dash Electrum supports masternode creation through an interface called
-the **Masternode Manager**. The functionality is available starting from
-the protocol version 70201.
+Dash Electrum supports masternode creation through the **DIP3** tab.
 
-Masternode Manager
-------------------
+DIP3
+----
 
-The Masternode Manager can be accessed either from the **Wallet >
-Masternodes** menu or by pressing **Ctrl+M**. This manager displays the
-status of your masternode(s). A wallet with no masternodes will begin
-with a default masternode for which you can fill in the necessary
-information.
+The DIP3 tab can be enabled via the **View > Show DIP3** menu. This tab displays
+the status of your masternode(s) and also allows viewing a list of all
+registered masternodes on the network.
 
-The manager displays the following data about each masternode you have
-set up:
+The tab displays the following data about each masternode you have set up:
 
 -  The alias (name) of the masternode.
--  The status of the masternode (e.g. whether it has been activated).
--  The collateral payment of the masternode.
--  The private delegate key.
+-  The state of the masternode (e.g. whether it has been activated).
+-  The keys 
+-  The Provider Registration transaction hash of the masternode.
 -  The IP address and port that your masternode can be reached at.
--  The protocol version that your masternode supports.
+
+.. figure:: img/mn-dip3-registered-owner-operator.png
+   :width: 400px
+
+   DIP3 tab with masternode information
+
 
 Masternode setup
 ----------------
 
-A masternode requires a "delegate" key, which is known to both Dash
-Electrum and your masternode. Your masternode will use this key to sign
-messages, and the Dash network will know that you authorized it to. A
-delegate key can either be one of your Dash Electrum keys, or an
-imported key. Either way, your masternode and Dash Electrum will both
-need to know the private key.
+To setup a masternode, navigate to the DIP3 tab and click the **Add/Import**
+button.
 
-To use one of your Dash Electrum keys as a delegate key, put its private
-key in the **Masternode Private Key** field of the **View Masternode**
-tab.
-
-IP address and protocol version
--------------------------------
-
-Certain information about your masternode is required. The IP address
-and port that your masternode uses must be supplied. Also, the protocol
-version that your masternode supports is required. This information is
-filled in automatically if you import a "masternode.conf" file.
-
-.. figure:: img/mn-view.png
+.. figure:: img/mn-dip3-add-or-import.png
    :width: 400px
 
-   Entering IP and protocol information
+   Add or import masternode
 
-Collateral
-----------
+Electrum supports creating/registering new masternodes as well as importing and
+registering legacy masternodes via a ``masternode.conf`` file. At this point
+very few legacy masternodes are present, so only the **Create and register DIP3
+Masternode** option will be covered in detail.
 
-To start a masternode, you must have a 1000 DASH payment available in
-your wallet. You can scan your wallet for 1000 DASH payments in the
-**Choose Collateral** tab of the Masternode Manager.
+There are two supported ownership types: owner-only and owner/operator. The
+primary difference during setup is whether or not the operator BLS private key
+is stored in Electrum. The following steps show the creation of a self-hosted
+masternode so both ownership type checkboxes are selected. Click **Next** to
+continue.
 
-After scanning, a list of available 1000 DASH collateral payments will
-be displayed. Selecting one of them will cause the selected masternode's
-data to be filled in, though these changes won't be saved until you
-click the **Save** button in the lower-right corner of the tab.
-
-.. figure:: img/mn-collateral.png
+.. figure:: img/mn-create-and-register-owner-operator.png
    :width: 400px
 
-   Entering IP and protocol information
+   Select operation type and ownership properties
 
-Activating your masternode
---------------------------
+To start a masternode, you must have a 1000 DASH plus a small amount for fees
+available in your wallet. Leave **Create collateral as ProRegTx output** checked
+and click **Next**.
 
-After selecting a collateral payment and specifying a delegate key, you
-can activate your masternode. Do this by clicking **Activate
-Masternode** in the **Activate Masternode** tab of the Masternode
-Manager. If the **Activate Masternode** button cannot be clicked, look
-at the message in the **Status** bar. It will show you why your
-masternode cannot be activated.
-
-Activation will require your password if your wallet is encrypted,
-because a message must be signed. After waiting for Dash Electrum to
-sign and broadcast your masternode announcement, you will be presented
-with a message detailing the result. The status of your masternode will
-be updated in the table and the **View Masternode** tab.
-
-.. figure:: img/mn-enabling.png
+.. figure:: img/mn-create-select-collateral.png
    :width: 400px
 
-   Entering IP and protocol information
+   Select collateral output for masternode
 
-Importing masternode.conf
--------------------------
+Certain information about your masternode is required. The IP address and port
+that your masternode uses must be supplied. Click **Next** after entering them
+(the port will be set to the default mainnet port of 9999 automatically).
 
-You can import a *masternode.conf* file using the **Masternode.conf**
-tab of the Masternode Manager. This is the recommended way of setting up
-masternodes, as it allows you to configure masternodes for Dash Core and
-Dash Electrum in the same way. Importing a *masternode.conf* file will
-automatically set up one or more masternode configurations in the
-Masternode Manager.
+.. figure:: img/mn-create-service-params.png
+   :width: 400px
+
+   Enter masternode IP address and port
+
+Each masternode requires three addresses: owner, voting, and payout. Electrum
+will automatically select addresses from your wallet. Click **Next** to
+continue.
+
+.. figure:: img/mn-create-select-addresses.png
+   :width: 400px
+
+   Select masternode owner, voting, and payout addresses
+
+A masternode requires a BLS "operator" key as described in `DIP3 <https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a-masternode-proregtx>`_. If you manage
+your own masternode, both Dash Electrum and your masternode must know the
+operator private key. Your masternode will use the private key to sign messages,
+and the Dash network will know that you authorized it to do so.
+
+Electrum will generate the required BLS private/public key pair and provide you
+with the line that must be copied to the masternode for proper masternode
+configuration. Click **Next** after copying this line to your masternode's
+``dash.conf`` file.
+
+.. figure:: img/mn-create-bls-key-setup.png
+   :width: 400px
+
+   BLS key setup
+
+All parameters are now configured. This screen shows the configuration details
+and allows you to save the information. Make sure the **Make ProRegTx after
+saving Masternode data** box is checked, then click **Save**. The **Send** tab
+will open and be populated with the info necessary to register the masternode.
+
+.. figure:: img/mn-create-review-and-save.png
+   :width: 400px
+
+   Examine parameters and save masternode
+
+Registering your masternode
+---------------------------
+
+Since the ProRegTx information required to register the masternode was filled
+out by the previous step, just Click **Pay...** to complete the registration.
+
+.. note::
+
+  To complete registration of any previously setup masternode, go to the
+  **DIP3** tab, select the unregistered masternode from the list of **Wallet
+  MNs**, and click **Register**.
+
+.. figure:: img/mn-proregtx.png
+   :width: 400px
+
+   Send tab with ProRegTx prepared
+
+Enter your password and click **Send** to broadcast the registration
+transaction.
+
+.. figure:: img/mn-proregtx-confirm-tx.png
+  :width: 400px
+
+  Confirm ProRegTx Transaction
+
+The transaction hash will be displayed once the transaction has been sent
+successfully. This ProRegTx hash is used by the network to uniquely identify the
+masternode. Click **OK** to close the screen.
+
+.. figure:: img/mn-proregtx-sent-confirmation.png
+  :width: 400px
+
+  Transaction sent screen showing transaction hash
+
+Prior to the ProRegTx being confirmed the new masternode will appear as
+unregistered on the DIP3 tab.
+
+.. figure:: img/mn-dip3-unregistered.png
+  :width: 400px
+
+  DIP3 tab showing unregistered masternode
+
+Once the ProRegTx has been confirmed, the new masternode will appear as
+registered on the DIP3 tab.
+
+.. figure:: img/mn-dip3-registered.png
+  :width: 400px
+
+  DIP3 tab showing registered masternode
+
+Updating masternode registration
+--------------------------------
+
+To update masternode registration information, navigate to the DIP3 tab and
+click the **Update Registrar** button.
+
+.. figure:: img/mn-update-registrar.png
+  :width: 400px
+
+  Update Registrar
+
+The masternode owner may update the voting and payout addresses at any time.
+Addresses from the current wallet can be selected from the drop down menu or
+addresses from a different wallet (e.g. a hardware wallet) can be pasted into
+either field. Click **Next** to continue.
+
+.. figure:: img/mn-update-registrar-addresses.png
+  :width: 400px
+
+  Update masternode voting and/or payout address
+
+The masternode owner may also update the operator BLS key at any time. Click
+**Next** to continue.
+  
+.. warning::
+  Any time the the operator private key is changed it must be copied into the
+  ``dash.conf`` file on the masternode. Electrum will provide a notification
+  with instructions when this is required.
+
+.. figure:: img/mn-update-registrar-operator-key-owner-operator.png
+  :width: 400px
+
+  Update operator BLS key
+
+All parameters are now configured. This screen shows the updated configuration
+details. Click **Prepare ProUpRegTx** to continue. The **Send** tab will open
+and be populated with the info necessary to update the masternode.
+
+.. figure:: img/mn-update-registrar-review.png
+  :width: 400px
+
+  Examine parameters and update masternode
+
+The ProUpRegTx information required to update the masternode registration was
+filled out by the previous step so just Click **Pay...** to complete the update.
+
+.. figure:: img/mn-proupregtx.png
+  :width: 400px
+
+  Send tab with ProUpRegTx prepared
+
+Enter your password and click **Send** to broadcast the update transaction.
+
+.. figure:: img/mn-proupregtx-confirm-tx.png
+ :width: 400px
+
+ Confirm ProUpRegTx Transaction
+
+The transaction hash will be displayed once the transaction has been sent
+successfully. Click **OK** to close the screen.
+
+.. figure:: img/mn-proupregtx-sent-confirmation.png
+ :width: 400px
+
+ Transaction sent screen showing transaction hash
+
+Updating masternode service parameters
+--------------------------------------
+
+The masternode service may need to be updated to:
+
+#. Change the IP address, port, or operator payout address of a masternode
+#. Revive a masternode that was Proof of Service (PoSe) banned
+
+To update masternode service information, navigate to the DIP3 tab and
+click the **Update Service** button.
+
+.. figure:: img/mn-dip3-update-service.png
+  :width: 400px
+
+  Update Service
+
+The masternode operator may update the IP address and port at any time. Update
+the IP address and click **Next** to continue.
+
+.. figure:: img/mn-update-service.png
+  :width: 400px
+
+  Update masternode IP address
+
+All parameters are now configured. This screen shows the updated configuration
+details. Click **Prepare ProUpServTx** to continue. The **Send** tab will open
+and be populated with the info necessary to update the masternode.
+
+.. figure:: img/mn-update-service-review.png
+  :width: 400px
+
+  Examine parameters and update masternode service
+
+The ProUpServTx information required to update the masternode was filled out by
+the previous step so just Click **Pay...** to complete the update.
+
+.. figure:: img/mn-proupservtx.png
+  :width: 400px
+
+  Send tab with ProUpServTx prepared
+
+Enter your password and click **Send** to broadcast the update transaction.
+
+.. figure:: img/mn-proupservtx-confirm-tx.png
+ :width: 400px
+
+ Confirm ProUpServTx Transaction
+
+The transaction hash will be displayed once the transaction has been sent
+successfully. Click **OK** to close the screen.
+
+.. figure:: img/mn-proupservtx-sent-confirmation.png
+ :width: 400px
+
+ Transaction sent screen showing transaction hash
 
 Multisig wallets
 ================
