@@ -89,6 +89,17 @@ CoinMarketCap
   Clicking one of these currencies allows you to view price charts, and
   clicking Markets allows you to view the markets available and the
   trading pairs they offer.
+  
+cryptoFacile
+  .. image:: exchanges/cryptofacile.png
+     :width: 200px
+     :align: right
+     :target: https://cryptofacile.io/en-US/best-places-to-buy/dash
+
+  https://cryptofacile.io
+
+ cryptoFacile compares and analyzes cryptocurrency prices listed on the best crypto
+ exchanges. Discover on which exchange to buy Dash at the lowest price.
 
 
 .. _atms:
