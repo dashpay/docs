@@ -48,7 +48,7 @@ Masternodes enable the following services:
 
 -  **InstantSend** allows for near-instant transactions. Dash
    InstantSend transactions are fully confirmed within two seconds.
--  **CoinJoin** gives financial privacy through a decentralized 
+-  **CoinJoin** gives financial privacy through a decentralized
    implementation of CoinJoin.
 -  **ChainLocks**, which protects the blockchain against 51% mining 
    attacks by signing blocks as they are mined.
@@ -88,7 +88,7 @@ the inputs of at least two other people in a single transaction, so the
 value in Dash never leaves your wallet. You retain control of your money
 at all times.
 
-You can view a practical guide to use CoinJoin 
+You can view a practical guide to use CoinJoin
 :ref:`here <dashcore-coinjoin-instantsend>`.
 
 The CoinJoin process works like this:
@@ -163,7 +163,7 @@ transactions from as long as an hour (with Bitcoin) to as little as a
 few seconds.
 
 You can view a practical guide to use InstantSend 
-:ref:`here <dashcore-coinjoin-instantsend>`. InstantSend was 
+:ref:`here <dashcore-coinjoin-instantsend>`. InstantSend was
 introduced in a whitepaper called `Transaction Locking and Masternode 
 Consensus: A Mechanism for Mitigating Double Spending Attacks <https://github.com/dashpay/docs/blob/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_, 
 and further improved through the introduction of `LLMQ-based InstantSend

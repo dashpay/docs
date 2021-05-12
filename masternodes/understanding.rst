@@ -1,6 +1,6 @@
 .. meta::
    :description: Explanation of how Dash masternodes work in theory and practice to support InstantSend, CoinJoin and governance
-   :keywords: dash, masternodes, hosting, linux, payment, instantsend, coinjoin, privatesend, governance, quorum, evolution, bls, 
+   :keywords: dash, masternodes, hosting, linux, payment, instantsend, coinjoin, privatesend, governance, quorum, evolution, bls,
 
 .. _understanding_masternodes:
 
