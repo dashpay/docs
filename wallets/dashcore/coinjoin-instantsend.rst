@@ -44,13 +44,8 @@ Configuration
    .. image:: img/options-privatesend.png
       :width: 300px
 
-<<<<<<< master:wallets/dashcore/privatesend-instantsend.rst
-2. Next to **PrivateSend rounds to use**, enter a value between 2-16.
-   Each round of PrivateSend performs one CoinJoin transaction, known as
-=======
-2. Next to **Mixing rounds**, enter a value between 1-16.
+2. Next to **Mixing rounds**, enter a value between 2-16.
    Each round of CoinJoin performs one CoinJoin transaction, known as
->>>>>>> HEAD~6:wallets/dashcore/coinjoin-instantsend.rst
    a denomination. Higher numbers of rounds increase your overall level
    of privacy while decreasing the chance of detection via node
    collusion. 16 is the highest number of rounds currently available.
