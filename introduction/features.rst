@@ -110,7 +110,7 @@ The PrivateSend process works like this:
    change address).
 #. Your wallet can repeat this process a number of times with each
    denomination. Each time the process is completed it’s called a
-   "round." The user may choose between 1-16 rounds of CoinJoin.
+   "round." The user may choose between 2-16 rounds of CoinJoin.
 #. Your funds will pass through at least the number of rounds you
    specify. Dash 0.16 includes an update known as `Random Round CoinJoin
    <https://github.com/dashpay/dash/pull/3661>`__ which will join a
