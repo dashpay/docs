@@ -36,8 +36,30 @@ following a specific descriptor ("recipe"), cryptographically sign the
 result, and upload the resulting signature. These results are compared
 and only if they match, the build is accepted and uploaded to dash.org.
 
-Instructions on how to build Dash Core 0.13.0 will appear here once the
-Docker build system for Gitian is available. Instructions to create
-deterministic builds of Dash Core 0.12.3 or older are available `here
-<https://docs.dash.org/en/0.12.3/developers/compiling.html#gitian-build>`__ 
-on a previous version of this page.
+This setup has been tested using a clean install of Ubuntu 20.04.
+
+Build
+-----
+
+Clone required repositories::
+
+  git clone https://github.com/dashpay/dash
+  git clone https://github.com/devrandom/gitian-builder
+  git clone https://github.com/dashpay/dash-detached-sigs
+  git clone https://github.com/dashpay/gitian.sigs
+
+Download the Mac OSX SDK::
+
+  mkdir gitian-builder/inputs
+  wget -q -O gitian-builder/inputs/MacOSX10.11.sdk.tar.gz https://bitcoincore.org/depends-sources/sdks/MacOSX10.11.sdk.tar.gz
+
+
+Run gitian build setup::
+
+  ./dash/contrib/gitian-build.py --setup <username> 0.17.0.0
+
+
+Run gitian build::
+
+  ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m <amount of RAM to use> -o lwm -D <username> ./dash/contrib/gitian-build.py --setup <username> 0.17.0.0
+
