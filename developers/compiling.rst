@@ -38,8 +38,8 @@ and only if they match, the build is accepted and uploaded to dash.org.
 
 This setup has been tested using a clean install of Ubuntu 20.04.
 
-Build
------
+Install prerequisites
+---------------------
 
 Clone required repositories::
 
@@ -53,13 +53,50 @@ Download the Mac OSX SDK::
   mkdir gitian-builder/inputs
   wget -q -O gitian-builder/inputs/MacOSX10.11.sdk.tar.gz https://bitcoincore.org/depends-sources/sdks/MacOSX10.11.sdk.tar.gz
 
+Prepare gitian
+--------------
+  
+It is only necessary to run this step once during the initial setup of your machine::
 
-Run gitian build setup::
+  # <signer> = The name associated with your PGP key
+  # <version> = Dash Core tag to build
+  ./dash/contrib/gitian-build.py --setup <signer> <version>
 
-  ./dash/contrib/gitian-build.py --setup <username> 0.17.0.0
+.. note::
 
+  Reboot after completing this this step.
 
-Run gitian build::
+Build Dash Core
+---------------
 
-  ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m <amount of RAM to use> -o lwm -D <username> ./dash/contrib/gitian-build.py --setup <username> 0.17.0.0
+Run gitian build to create binaries for Linux, Mac, and Windows::
 
+  # <signer> = The name associated with your PGP key
+  # <version> = Dash Core tag to build
+  ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m <MB of RAM to use> <signer> <version>
+
+When the build completes, it will put the binaries in a ``dashcore-binaries``
+folder. The ``.assert`` files and their signatures will be placed in
+``gitian.sigs/<version>/<signer>/...``.
+
+Create signatures for signed binaries
+-------------------------------------
+
+Mac and Windows binaries are signed by Dash Core Group using the relevant
+Apple/Microsoft processes. In this step, that information will be validated and
+signed by your machine. The associated ``.assert`` files and their signatures
+will be placed in ``gitian.sigs/<version>/<signer>/...`` along with the
+previously created signatures.
+
+::
+
+  # <signer> = The name associated with your PGP key
+  # <version> = Dash Core tag to build
+  ./dash/contrib/gitian-build.py -s -n -j 7 -m 18000 -o mw <signer> <version> 
+  
+Verify signatures
+-----------------
+
+::
+
+  ./dash/contrib/gitian-build.py -v <signer> <version>
