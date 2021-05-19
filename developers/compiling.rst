@@ -41,6 +41,14 @@ This setup has been tested using a clean install of Ubuntu 20.04.
 Install prerequisites
 ---------------------
 
+Install apt-cacher-ng::
+
+  apt-get update
+  apt-get install -y apt-cacher-ng
+
+.. note::
+  Select ``No`` when prompted during installation
+
 Clone required repositories::
 
   git clone https://github.com/dashpay/dash
