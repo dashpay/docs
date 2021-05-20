@@ -92,12 +92,13 @@ Keep the community updated when your proposal passes
 Consider arrangements for large requests
   If you are requesting a significant amount of funding, there is an
   understandable concern that you will deliver on your promises to the
-  network. Reach out to the `Dash Investment foundation <https://www.dashinvests.org/>` in advance for advice on escrow or providing equity, and make
-  the conditions public and part of the proposal. If
-  your proposal is so large that uses a significant percentage of the
-  budget, there is a risk that approving your proposal will bump smaller
-  proposals out of the budget. Consider breaking your proposal into
-  smaller monthly payments instead.
+  network. Reach out to the `Dash Investment Foundation 
+  <https://www.dashinvests.org/>`_ in advance for advice on escrow or 
+  providing equity, and make the conditions public and part of the 
+  proposal. If your proposal is so large that uses a significant 
+  percentage of the budget, there is a risk that approving your 
+  proposal will bump smaller proposals out of the budget. Consider 
+  breaking your proposal into smaller monthly payments instead.
 
 See :ref:`this documentation <using-governance>` for specific
 instructions on how to create a proposal when you are ready. Good luck!
@@ -130,10 +131,9 @@ A few additional points:
     
 #. You are responsible for your own planning to hedge against price
    volatility. If your proposal involves significant payments to third
-   parties in fiat currency, reach out to `Dash Core Group, Inc.
-   <bradley.zastrow@dash.org>`_ or `Green Candle, Inc.
-   <https://greencandle.io>`_ for advice on escrow, price maintenance,
-   converting currencies and hedging against volatility.
+   parties in fiat currency, reach out to the `Dash Investment Foundation 
+   <https://www.dashinvests.org/>`_ in advance for advice on escrow, 
+   price maintenance, converting currencies and hedging against volatility.
     
 #. For the same reason, it is not recommended to request funding for
    period of longer than three months. Masternodes don't want to see and
