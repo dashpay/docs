@@ -92,10 +92,8 @@ Keep the community updated when your proposal passes
 Consider arrangements for large requests
   If you are requesting a significant amount of funding, there is an
   understandable concern that you will deliver on your promises to the
-  network. Reach out to trusted intermediaries such as `Dash Core Group,
-  Inc. <bradley.zastrow@dash.org>`_ or `Green Candle, Inc.
-  <https://greencandle.io>`_ in advance for advice on escrow, and make
-  the conditions for escrow release public and part of the proposal. If
+  network. Reach out to the `Dash Investment foundation <https://www.dashinvests.org/>` in advance for advice on escrow or providing equity, and make
+  the conditions public and part of the proposal. If
   your proposal is so large that uses a significant percentage of the
   budget, there is a risk that approving your proposal will bump smaller
   proposals out of the budget. Consider breaking your proposal into
