@@ -56,7 +56,7 @@ the miner is rewarded.
 Dash works a little differently from Bitcoin, however, because it has a
 two-tier network. The second tier is powered by :ref:`masternodes
 <masternodes>` (Full Nodes), which enable financial privacy
-(PrivateSend), instant transactions (InstantSend), and the decentralized
+(CoinJoin), instant transactions (InstantSend), and the decentralized
 governance and budget system. Because this second tier is so important,
 masternodes are also rewarded when miners discover new blocks. The
 breakdown is as follows: 45% of the block reward goes to the miner, 45%

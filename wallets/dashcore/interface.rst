@@ -57,7 +57,7 @@ The Overview tab
 ~~~~~~~~~~~~~~~~
 
 The overview tab offers quick access to your balance and most recent
-transactions, as well as the PrivateSend feature.
+transactions, as well as the CoinJoin feature.
 
 .. figure:: img/overview.png
 
@@ -81,8 +81,8 @@ Immature
 Total
   This is simply your available and pending funds added together.
 
-The lower area shows the PrivateSend status and allows you to process
-your funds using PrivateSend on the Dash masternode network.
+The lower area shows the CoinJoin status and allows you to process
+your funds using CoinJoin on the Dash masternode network.
 
 The right part of the screen shows your recent transactions. Recent
 incoming transactions appear green, prefixed by a + sign. Recent
@@ -102,19 +102,19 @@ total balance is also available in the lower right corner.
 
    The Send tab
 
-The PrivateSend Tab
-~~~~~~~~~~~~~~~~~~~
+The CoinJoin Tab
+~~~~~~~~~~~~~~~~
 
-The PrivateSend tab allows you to send funds to another address on the
+The CoinJoin tab allows you to send funds to another address on the
 Dash network with enhanced privacy. It contains fields to enter the
 recipient’s address, a label for the address, and the amount of Dash you
 wish to send. Options related to the transaction fee are also available.
-A quick view of your total PrivateSend balance is also available in the
+A quick view of your total CoinJoin balance is also available in the
 lower right corner.
 
 .. figure:: img/privatesend.png
 
-   The PrivateSend tab
+   The CoinJoin tab
 
 The Receive Tab
 ~~~~~~~~~~~~~~~
@@ -288,7 +288,7 @@ The Wallet tab of the Options dialog contains settings related to how
 addresses are managed in the Dash Core app. The first time you run Dash
 Core, it will generate a new wallet containing 1000 unique Dash
 addresses. This tab allows you to configure how these addresses are used
-as inputs with the Coin Control, PrivateSend and Masternode features.
+as inputs with the Coin Control, CoinJoin and Masternode features.
 
 .. figure:: img/wallet.png
    :scale: 50 %
@@ -323,62 +323,62 @@ Spend unconfirmed change
   allows you to create new transactions even if previous transactions have
   not yet been confirmed.
 
-Enable PrivateSend features
-  Enabling this option displays the PrivateSend tab in the main Dash
+Enable CoinJoin features
+  Enabling this option displays the CoinJoin tab in the main Dash
   Core window and the Options dialog, and allows you to process and
-  spend your balance using PrivateSend.
+  spend your balance using CoinJoin.
 
-PrivateSend tab
----------------
+CoinJoin tab
+------------
 
-The PrivateSend tab contains options relating to how PrivateSend
+The CoinJoin tab contains options relating to how CoinJoin
 functions in Dash Core.
 
 .. figure:: img/options-privatesend.png
    :scale: 50 %
 
-   The PrivateSend tab of the Dash Core Options dialog
+   The CoinJoin tab of the Dash Core Options dialog
 
-Enable advanced PrivateSend interface
-  Enabling this option changes the PrivateSend interface on the Overview
+Enable advanced interface
+  Enabling this option changes the interface on the Overview
   tab of the Dash Core wallet to include more information, such as the
   remaining keys, percentage completion and current operation. See
-  :ref:`here <dashcore-privatesend-instantsend>` for a full explanation
-  of how to use PrivateSend.
+  :ref:`here <dashcore-coinjoin-instantsend>` for a full explanation
+  of how to use CoinJoin.
 
-Show popups for PrivateSend transactions
+Show popups for mixing transactions
   Enabling this option will display notifications as the CoinJoin
   transactions are created.
 
-Warn if PrivateSend is running out of keys
+Warn if the wallet is running out of keys
   Enabling this option will cause Dash Core to display a warning when
   your original set of 1000 addresses is running out, which may affect
-  PrivateSend processing. When 900 addresses are used, your wallet must
+  CoinJoin processing. When 900 addresses are used, your wallet must
   create more addresses. It can only do this if you have automatic
   backups enabled. Consequently, users who have backups disabled will
-  also have PrivateSend disabled.
+  also have CoinJoin disabled.
 
-Enable PrivateSend multi-session
-  Normally PrivateSend processing is completed in several consecutive
+Enable multi-session
+  Normally CoinJoin processing is completed in several consecutive
   rounds, each using a single masternode. Enabling this option allows
   multi-session, which means you can use multiple masternode servers at
   the same time, greatly increasing the speed of the CoinJoin process at
   the cost of creating more addresses and thus requiring more frequent
   wallet backups.
 
-PrivateSend rounds to use
-  Use this option to control the number of rounds of PrivateSend to be
+Mixing rounds
+  Use this option to control the number of rounds of CoinJoin to be
   processed for your chosen balance. Each round of processing uses a new
   masternode. The higher the number of rounds, the more difficult it
   becomes to trace the Dash to its original address. This is at the
   expense of more time required for processing and potentially higher
   fees.
 
-Target PrivateSend balance
+Target balance
   This option allows you to specify how much Dash should be kept on
   balance in a ready-to-use processed state, meaning it has already
   passed through the CoinJoin process. The available amount is shown as
-  the balance on the PrivateSend tab.
+  the balance on the CoinJoin tab.
 
 Network tab
 -----------
@@ -584,7 +584,7 @@ Recover transactions
   the blockchain, recovering existing transactions and removing
   unconfirmed transactions. Transactions may become stuck in an
   unconfirmed state if there is a conflict in protocol versions on the
-  network during PrivateSend processing, for example, or if a
+  network during CoinJoin processing, for example, or if a
   transaction is sent with insufficient fees when blocks are full.
 
 Upgrade wallet format

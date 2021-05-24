@@ -22,8 +22,7 @@ a block, which will then be added to the blockchain for other clients to
 confirm. A transaction is generally considered confirmed once six blocks
 have been added after the block containing your transaction, although
 masternode and mining payments are only released after 101 blocks. Note
-that a different process is used for InstantSend and PrivateSend
-transactions.
+that a different process is used for InstantSend and CoinJoin transactions.
 
 Dash addresses are 34 characters long and begin with an uppercase X.
 
@@ -50,16 +49,10 @@ transfer in the **Amount** field.
 .. |sendicons| image:: img/sendicons.png
    :width: 80px
 
-The other options relate to fees and PrivateSend/InstantSend. You can
+The other options relate to fees. You can
 choose if you want to pay the network fee in addition to the amount
 sent, or subtract it from the amount sent. You can also increase your
 fee to encourage nodes on the network to prioritize your transaction.
-Choosing **InstantSend** has a similar effect, but actually relies on a
-different mechanism in the second layer network to speed up the
-transaction time. Choosing **PrivateSend** will send Dash using
-denominations that have already been processed through CoinJoin. You can
-find out more about PrivateSend and InstantSend :ref:`here
-<dashcore-privatesend-instantsend>`.
 
 Let’s try an example. Say you have received an invoice which you now
 want to pay with Dash. The writer of the invoice has included a Dash

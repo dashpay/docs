@@ -11,7 +11,7 @@ What is Dash?
 Dash aims to be the most user-friendly and scalable payments-focused
 cryptocurrency in the world. The Dash network features :ref:`instant
 transaction confirmation <instantsend>`, double spend protection,
-optional :ref:`privacy <privatesend>` equal to that of physical cash, a
+optional :ref:`privacy <coinjoin>` equal to that of physical cash, a
 :ref:`self-governing, self-funding model <decentralized-governance>` 
 driven by :ref:`incentivized full nodes <masternode-network>` and a 
 `clear roadmap <https://www.dash.org/roadmap/>`_ for on-chain scaling to
