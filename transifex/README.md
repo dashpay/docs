@@ -25,7 +25,7 @@ Run the following from the root of the project to upload to Transifex:
 ./transifex/pushtx.sh
 ```
 
-## To retrieve from Transifex and update site
+## To retrieve from Transifex
 
 Make sure the webhook variables are accessible. Run the following in the folder
 containing your `.env` file:
