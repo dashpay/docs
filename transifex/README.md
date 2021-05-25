@@ -13,7 +13,7 @@ pip install transifex-client==0.13.12
 
 ## Webhook variables
 
-The `pulltx.sh` script requires Transifex webhook token and URL values. These
+The `build.sh` script requires Transifex webhook token and URL values. These
 should be defined in a `.env` file. See [.env.example](.env.example) for an
 example of the format.
 
