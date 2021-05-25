@@ -70,10 +70,6 @@ It is only necessary to run this step once during the initial setup of your mach
   # <version> = Dash Core tag to build
   ./dash/contrib/gitian-build.py --setup <signer> <version>
 
-.. note::
-
-  Reboot after completing this this step.
-
 Build Dash Core
 ---------------
 
