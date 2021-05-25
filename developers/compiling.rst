@@ -47,7 +47,7 @@ Install apt-cacher-ng::
   apt-get install -y apt-cacher-ng
 
 .. note::
-  Select ``No`` when prompted during installation
+  Select ``No`` when asked ``Allow HTTP tunnels through Apt-Cacher NG?`` during installation.
 
 Clone required repositories::
 
@@ -100,7 +100,7 @@ previously created signatures.
 
   # <signer> = The name associated with your PGP key
   # <version> = Dash Core tag to build
-  ./dash/contrib/gitian-build.py -s -n -j 7 -m 18000 -o mw <signer> <version> 
+  ./dash/contrib/gitian-build.py -s -n -j $(nproc) -m <MB of RAM to use> -o mw <signer> <version> 
   
 Verify signatures
 -----------------
