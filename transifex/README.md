@@ -27,6 +27,14 @@ Run the following from the root of the project to upload to Transifex:
 
 ## To retrieve from Transifex
 
+Next run the following to retrieve the translation updates:
+
+``` bash
+./transifex/pulltx.sh
+```
+
+## To build localized sites
+
 Make sure the webhook variables are accessible. Run the following in the folder
 containing your `.env` file:
 
@@ -34,8 +42,8 @@ containing your `.env` file:
 source .env
 ```
 
-Next run the following to retrieve the translation updates:
+Next run the following to trigger builds for each language on ReadTheDocs:
 
 ``` bash
-./transifex/pulltx.sh
+./transifex/build.sh
 ```
