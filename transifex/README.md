@@ -11,13 +11,18 @@ pip install sphinx-intl
 pip install transifex-client==0.13.12
 ```
 
-## Webhook variables
+## Set webhook variables
 
 The `build.sh` script requires Transifex webhook token and URL values. These
 should be defined in a `.env` file. See [.env.example](.env.example) for an
 example of the format.
 
-## To upload to Transifex
+## Usage
+
+Using the scripts requires adding a Transifex API token to an account that has
+access to the project as mention in the [Transifex client documentation](https://docs.transifex.com/client/introduction#authenticating).
+
+### To upload to Transifex
 
 Run the following from the root of the project to upload to Transifex:
 
@@ -25,7 +30,7 @@ Run the following from the root of the project to upload to Transifex:
 ./transifex/pushtx.sh
 ```
 
-## To retrieve from Transifex
+### To retrieve from Transifex
 
 Next run the following to retrieve the translation updates:
 
@@ -33,7 +38,7 @@ Next run the following to retrieve the translation updates:
 ./transifex/pulltx.sh
 ```
 
-## To build localized sites
+### To build localized sites
 
 Make sure the webhook variables are accessible. Run the following in the folder
 containing your `.env` file:
