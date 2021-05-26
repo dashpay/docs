@@ -1,4 +1,5 @@
 # Triggers a build of readthedocs sub-projects for each supported language
+# Token and webhook variables should be exported via a .env file
 curl -X POST -d "branches=stable" -d "token=$ARABIC" $ARABIC_WEBHOOK
 curl -X POST -d "branches=stable" -d "token=$FRENCH" $FRENCH_WEBHOOK
 curl -X POST -d "branches=stable" -d "token=$GERMAN" $GERMAN_WEBHOOK
