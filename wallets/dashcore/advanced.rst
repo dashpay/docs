@@ -53,6 +53,10 @@ HD Wallets
 Upgrade to HD
 -------------
 
+.. warning::
+
+  A new backup must be created after upgrading to an HD wallet.
+
 Since version 0.17.0.2, Dash Core has included the ability upgrade a
 non-hierarchical deterministic (HD) wallet to an HD wallet via the
 ``upgradetohd`` command. The command can be run by either opening the console
