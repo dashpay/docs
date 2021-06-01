@@ -821,10 +821,16 @@ Manual installation
 **The manual installation guide is currently a work in progress.**
 
 This guide describes how to manually download and install the components
-of your Dash masternode.
+of your Dash masternode under Ubuntu Linux 20.04 LTS "Focal Fossa"
+assuming you have a non-root user named ``dash``. You will need to
+manually adjust apt commands if using a different distro.
 
 Core services
 -------------
+
+Prepare your environment for installing keys through GPG::
+
+  sudo mkdir -m 600 /root/.gnupg
 
 Dash Core
 ^^^^^^^^^
@@ -834,7 +840,7 @@ and communication relating to the base blockchain. Download Dash Core as
 follows::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.17.0.0-rc3/dashcore-0.17.0.0-rc3-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.17.0.2/dashcore-0.17.0.2-x86_64-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -850,26 +856,22 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v0.17.0.0-rc3/dashcore-0.17.0.0-rc3-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-0.17.0.0-rc3-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v0.17.0.2/dashcore-0.17.0.2-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-0.17.0.2-x86_64-linux-gnu.tar.gz.asc
 
 Extract the compressed archive and copy the necessary files to the
 directory::
 
-  tar xfv dashcore-0.17.0.0-rc3-x86_64-linux-gnu.tar.gz
+  tar xfv dashcore-0.17.0.2-x86_64-linux-gnu.tar.gz
   sudo install -t /usr/local/bin dashcore-0.17.0/bin/*
 
-Create a working directory and configuration file for Dash using the
-following commands::
+Create a working directory for Dash Core::
 
   mkdir ~/.dashcore
-  nano ~/.dashcore/dash.conf
 
-An editor window will appear. We now need to create a configuration file
-specifying several variables. Copy and paste the following text to get
-started, then replace the variables specific to your configuration as
-follows::
+Configure Dash Core::
 
+  cat<<EOF>~/.dashcore/dash.conf
   #----
   rpcuser=dashrpc
   rpcpassword=password
@@ -890,7 +892,9 @@ follows::
   zmqpubrawchainlock=tcp://0.0.0.0:29998
   #----
   #masternodeblsprivkey=
-  externalip=XXX.XXX.XXX.XXX
+  externalip=$(curl ifconfig.co)
+  proxy=127.0.0.1:9050
+  torcontrol=127.0.0.1:9051
   #----
   testnet=1
   
@@ -899,21 +903,13 @@ follows::
   rpcport=19998
   bind=0.0.0.0
   rpcbind=0.0.0.0
+  EOF
 
+Optionally replace the ``rpcuser`` and ``rpcpassword`` fields with your
+own values. Leave the ``masternodeblsprivkey`` field commented out for
+now. Configure Dash Core to start as a service::
 
-Replace the fields marked with ``XXXXXXX`` as follows:
-
-- ``rpcuser``: enter any string of numbers or letters, no special
-  characters allowed
-- ``rpcpassword``: enter any string of numbers or letters, no special
-  characters allowed
-- ``externalip``: this is the IP address of your VPS
-
-Leave the ``masternodeblsprivkey`` field commented out for now.
-Configure Dash Core to start as a service by creating a systemd service
-file with ``sudo nano /etc/systemd/system/dashd.service`` and edit
-it to include the following::
-
+  cat << EOF | sudo tee /etc/systemd/system/dashd.service
   [Unit]
   Description=Dash Core
   After=syslog.target network-online.target
@@ -931,6 +927,7 @@ it to include the following::
   
   [Install]
   WantedBy=multi-user.target
+  EOF
 
 Start Dash Core::
 
@@ -950,24 +947,15 @@ node is working properly. Install Sentinel as follows::
 
   cd
   sudo apt install -y python3-virtualenv
-  git clone https://github.com/dashpay/sentinel.git
+  git clone -b master https://github.com/dashpay/sentinel.git
   cd sentinel
   virtualenv venv
   venv/bin/pip install -r requirements.txt
   venv/bin/python bin/sentinel.py
 
 You will see a message reading **dashd not synced with network! Awaiting
-full sync before running Sentinel.** Add dashd and sentinel to crontab
-to make sure it runs every minute to check on your masternode::
-
-  crontab -e
-
-Choose nano as your editor and enter the following line at the end of
-the file::
-
-  * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
-
-Use the following command to monitor sync status::
+full sync before running Sentinel.** Use the following command to
+monitor sync status::
 
   dash-cli mnsync status
 
@@ -984,14 +972,26 @@ response::
     "IsFailed": false
   }
 
+Tor
+^^^
+
+Tor is an internet relay system designed to preserve anonymity on the
+internet. Install Tor as follows::
+
+  sudo gpg --no-default-keyring --keyring /usr/share/keyrings/tor-archive-keyring.gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+  echo "deb [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/tor.list
+  sudo apt update
+  sudo apt install tor deb.torproject.org-keyring
+  
 Platform services
 -----------------
 
 Next, we will install the Dash Platform services. Start with some common
 dependencies::
 
+  cd
   curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-  sudo apt install -y libzmq3-dev nodejs
+  sudo apt install -y libzmq3-dev nodejs build-essential
   sudo npm install forever -g
 
 MongoDB
@@ -999,35 +999,22 @@ MongoDB
 
 MongoDB is a document-oriented database. Install MongoDB as follows::
 
-  cd
-  curl -sL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
-  sudo add-apt-repository "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse"
+  sudo gpg --no-default-keyring --keyring /usr/share/keyrings/mongodb-archive-keyring.gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 20691EEC35216C63CAF66CE1656408E390CFB1F5
+  echo "deb [signed-by=/usr/share/keyrings/mongodb-archive-keyring.gpg] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb.list
+  sudo apt update
   sudo apt install -y mongodb-org
 
-Open the configuration file with ``sudo nano /etc/mongod.conf`` and edit
-it to include the following::
+Configure MongoDB::
 
-  replication:
-    replSetName: driveDocuments
+  sudo sed -i 's/#replication:/replication:\n  replSetName: driveDocuments/' /etc/mongod.conf
 
 Restart MongoDB::
 
   sudo systemctl restart mongod
 
-Open the MongoDB client with ``mongo`` and run the following function::
+Initiate the MongoDB client::
   
-  rs.initiate({
-    _id: 'driveDocuments',
-    version: 1,
-    members: [
-      {
-        _id: 0,
-        host: 'localhost:27017',
-      },
-    ],
-  });
-  
-  quit();
+  mongo<<<"rs.initiate({_id:'driveDocuments',version: 1,members:[{_id: 0,host: 'localhost:27017',},],});"
 
 Verify MongoDB is running::
 
@@ -1040,29 +1027,31 @@ Drive is a replicated state machine for Dash Platform. Download Drive as
 follows::
 
   cd
-  git clone https://github.com/dashevo/js-drive
+  git clone -b master https://github.com/dashevo/js-drive
   cd js-drive
   cp .env.example .env
 
-Open the configuration file with ``nano .env`` and edit it to include
-the following::
+Configure Drive::
 
-  CORE_JSON_RPC_PORT=19998
-  INITIAL_CORE_CHAINLOCKED_HEIGHT=415765
-  DPNS_CONTRACT_ID=36ez8VqoDbR8NkdXwFaf9Tp8ukBdQxN8eYs8JNMnUyKz
-  DPNS_CONTRACT_BLOCK_HEIGHT=30
-  DPNS_TOP_LEVEL_IDENTITY=G7sYtiobAP2eq79uYR9Pd6u2b6mapf4q6Pq2Q3BHiBK8
-  DASHPAY_CONTRACT_ID=matk8g1YRpzZskecRfpG5GCAgRmWCGJfjUemrsLkFDg
-  DASHPAY_CONTRACT_BLOCK_HEIGHT=42
+  sed -i 's/^CORE_JSON_RPC_PORT.*/CORE_JSON_RPC_PORT=19998/' .env
+  sed -i 's/^INITIAL_CORE_CHAINLOCKED_HEIGHT.*/INITIAL_CORE_CHAINLOCKED_HEIGHT=415765/' .env
+  cat<<EOF>> .env
+  DPNS_CONTRACT_ID=76wgB8KBxLGhtEzn4Hp5zgheyzzpHYvfcWGLs69B2ahq
+  DPNS_CONTRACT_BLOCK_HEIGHT=59
+  DPNS_TOP_LEVEL_IDENTITY=4yaJaaeUU9xG6sonkCHZkcZkhcXGqwf5TcNLw5Nh5LJ4
+  DASHPAY_CONTRACT_ID=6wfobip5Mfn6NNGK9JTQ5eHtZozpkNx4aZUsnCxkfgj5
+  DASHPAY_CONTRACT_BLOCK_HEIGHT=71
+  FEATURE_FLAGS_CONTRACT_ID=4CTBQw6eJK9Kg7k4F4v6U1RPMtkfCoPbQzUJDCi85pQb
+  FEATURE_FLAGS_CONTRACT_BLOCK_HEIGHT=77
+  EOF
 
 Install package dependencies::
 
-  npm_config_zmq_external=true
-  npm install
+  npm_config_zmq_external=true npm install
 
 Start Drive::
 
-  forever start --uid "drive" scripts/abci.js
+  forever start -a --uid "drive" scripts/abci.js
 
 Verify Drive is running by checking for a time value under ``uptime``::
 
@@ -1076,17 +1065,16 @@ used by Dash Platform. As binaries are not yet published, you will need
 to build from source. Install Go as follows::
 
   cd /tmp
-  wget https://golang.org/dl/go1.15.7.linux-amd64.tar.gz
-  sudo tar -C /usr/local -xzf go1.15.7.linux-amd64.tar.gz
+  wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz
+  sudo tar -C /usr/local -xzf go1.16.4.linux-amd64.tar.gz
   export PATH=$PATH:/usr/local/go/bin
 
 Build and install Tenderdash as follows::
 
   cd
-  sudo apt install -y build-essential cmake libgmp-dev
-  git clone https://github.com/dashevo/tenderdash
+  sudo apt install -y cmake libgmp-dev
+  git clone -b coreChainLocksV6 https://github.com/dashevo/tenderdash
   cd tenderdash
-  git checkout coreChainLocksV6
   make install-bls
   make build-linux
   sudo install -t /usr/local/bin build/*
@@ -1095,29 +1083,23 @@ Initialize Tenderdash::
 
   tenderdash init
 
-Several files will be generated in the ``~/.tendermint`` directory. Open
-the configuration file with ``nano ~/.tendermint/config/config.toml`` and
-edit it to include the following::
+Several files will be generated in the ``~/.tenderdash`` directory.
+Modify the configuration with the following commands::
 
-  #moniker = ""
-  timeout_commit = "500ms"
-  create_empty_blocks_interval = "3m"
-  namespace = "drive_tendermint"
-  seeds = "4bc75fcb13e37ad6473383ea92408a451ed1b6d1@54.189.200.56:26656,173fcd535bccde1ed20ca8fb1519858dd5cef618@52.43.162.96:26656"
+  sed -i 's/\(^moniker.*\)/#\1/' ~/.tenderdash/config/config.toml
+  sed -i 's/^timeout_commit.*/timeout_commit = "500ms"/' ~/.tenderdash/config/config.toml
+  sed -i 's/^create_empty_blocks_interval.*/create_empty_blocks_interval = "3m"/' ~/.tenderdash/config/config.toml
+  sed -i 's/^namespace.*/namespace = "drive_tendermint"/' ~/.tenderdash/config/config.toml
+  sed -i 's/^seeds.*/seeds = "aa4c3870e6cebd575c80371b4ae0e902a2885e14@54.189.200.56:26656,81c79324942867f694ee49108f05e744c343f5a1@52.43.162.96:26656"/' ~/.tenderdash/config/config.toml
+  curl https://gist.githubusercontent.com/strophy/ca6acd23bbdec1e55f322dac04a1059d/raw/741ffbba9e009157ad49ce4f7ee6644f45f8d677/genesis.json > ~/.tendermint/config/genesis.json
 
-Open the genesis file with ``nano ~/.tendermint/config/genesis.json``
-and paste the config from the following address into the file:
+Configure Tenderdash to start as a service::
 
-https://gist.github.com/strophy/ca6acd23bbdec1e55f322dac04a1059d
-
-Configure Tenderdash to start as a service by creating a systemd service
-file with ``sudo nano /etc/systemd/system/tenderdash.service`` and edit
-it to include the following::
-
+  cat << EOF | sudo tee /etc/systemd/system/tenderdash.service
   [Unit]
   Description=Tenderdash
   After=syslog.target network-online.target
-  
+   
   [Service]
   User=dash
   Group=dash
@@ -1126,9 +1108,10 @@ it to include the following::
   RestartSec=120
   ExecStart=/usr/local/bin/tenderdash node
   SyslogIdentifier=tenderdash
-  
+   
   [Install]
   WantedBy=multi-user.target
+  EOF
 
 Ensure Dash Core is fully synced and start Tenderdash::
 
@@ -1140,88 +1123,37 @@ Verify Tenderdash is running::
 
   sudo systemctl status tenderdash
 
-Insight
-^^^^^^^
-
-Insight is a Dash REST and WebSocket API service. It runs as a plugin to
-the Dashcore Node server. Download Dashcore Node as follows::
-
-  cd
-  git clone https://github.com/dashevo/dashcore-node
-  cd dashcore-node
-
-Create a configuration file with ``nano dashcore-node.json`` and edit it
-to include the following::
-  
-  {
-    "network": "testnet",
-    "port": 3001,
-    "services": [
-      "dashd",
-      "web",
-      "@dashevo/insight-api"
-    ],
-    "servicesConfig": {
-      "dashd": {
-        "connect": [{
-          "rpchost": "127.0.0.1",
-          "rpcport": 19998,
-          "rpcuser": "dashrpc",
-          "rpcpassword": "password",
-          "zmqpubrawtx": "tcp://127.0.0.1:29998",
-          "zmqpubhashblock": "tcp://127.0.0.1:29998"
-        }]
-      }
-    }
-  }
-
-Install package dependencies and Insight::
-
-  npm_config_zmq_external=true
-  npm install
-  bin/dashcore-node install @dashevo/insight-api
-
-Start Dashcore Node and Insight::
-
-  forever start --uid "insight" bin/dashcore-node start
-
-Verify Insight is running by checking for a time value under ``uptime``::
-
-  forever list
-
 DAPI
 ^^^^
 
 DAPI provides masternode services over the JSON RPC and gRPC protocols.
 Download DAPI as follows::
 
-  cd 
-  git clone https://github.com/dashevo/dapi
+  cd
+  git clone -b master https://github.com/dashevo/dapi
   cd dapi
   cp .env.example .env
 
-Open the configuration file with ``nano .env`` and edit it to include
-the following::
+Modify the configuration with the following commands::
 
-  API_JSON_RPC_PORT=3004
-  API_GRPC_PORT=3005
-  TX_FILTER_STREAM_GRPC_PORT=3006
-  DASHCORE_RPC_PORT=19998
-  DASHCORE_ZMQ_PORT=29998
-  DASHCORE_P2P_PORT=19999
+  sed -i 's/^API_JSON_RPC_PORT.*/API_JSON_RPC_PORT=3004/' .env
+  sed -i 's/^API_GRPC_PORT.*/API_GRPC_PORT=3005/' .env
+  sed -i 's/^TX_FILTER_STREAM_GRPC_PORT.*/TX_FILTER_STREAM_GRPC_PORT=3006/' .env
+  sed -i 's/^DASHCORE_RPC_PORT.*/DASHCORE_RPC_PORT=19998/' .env
+  sed -i 's/^DASHCORE_ZMQ_PORT.*/DASHCORE_ZMQ_PORT=29998/' .env
+  sed -i 's/^DASHCORE_P2P_PORT.*/DASHCORE_P2P_PORT=19999/' .env
 
 Install package dependencies::
 
-  npm_config_zmq_external=true
-  npm install
+  npm_config_zmq_external=true npm install
 
 Start DAPI::
 
-  forever start --uid "dapi" scripts/api.js
+  forever start -a --uid "dapi" scripts/api.js
 
 Start the transaction filter stream::
 
-  forever start --uid "tx-filter-stream" scripts/tx-filter-stream.js
+  forever start -a --uid "tx-filter-stream" scripts/tx-filter-stream.js
 
 Envoy
 ^^^^^
@@ -1230,20 +1162,19 @@ Envoy is a gRPC service proxy for cloud-native applications. Install
 Envoy as follows::
 
   cd
-  curl -sL https://getenvoy.io/gpg | sudo apt-key add -
-  sudo add-apt-repository "deb [arch=amd64] https://dl.bintray.com/tetrate/getenvoy-deb $(lsb_release -cs) stable"
+  sudo gpg --no-default-keyring --keyring /usr/share/keyrings/envoy-archive-keyring.gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 5270CEAC57F63EBD9EA9005D0253D0B26FF974DB
+  echo "deb [signed-by=/usr/share/keyrings/envoy-archive-keyring.gpg] https://dl.bintray.com/tetrate/getenvoy-deb focal stable" | sudo tee /etc/apt/sources.list.d/envoy.list
+  sudo apt update
   sudo apt install -y getenvoy-envoy
 
-Create a configuration file with ``sudo mkdir /etc/envoy && sudo nano
-/etc/envoy/config.yaml`` and paste the config from the following
-address into the file:
+Configure Envoy as follows::
 
-https://gist.github.com/strophy/3724a3537d4cbc6fbdba169768392f28
+  sudo mkdir /etc/envoy
+  curl https://gist.githubusercontent.com/strophy/3724a3537d4cbc6fbdba169768392f28/raw/ba521d719c198f9bb44cf3231ad6507ac4418900/grpc.yaml | sudo tee /etc/envoy/config.yaml
 
-Configure Envoy to start as a service by creating a systemd service
-file with ``sudo nano /etc/systemd/system/envoy.service`` and edit
-it to include the following::
+Configure Envoy to start as a service::
 
+  cat << EOF | sudo tee -a /etc/systemd/system/envoy.service
   [Unit]
   Description=Envoy
   After=syslog.target network-online.target
@@ -1257,6 +1188,7 @@ it to include the following::
   
   [Install]
   WantedBy=multi-user.target
+  EOF
 
 Start Envoy::
   
@@ -1264,39 +1196,21 @@ Start Envoy::
   sudo systemctl enable envoy
   sudo systemctl start envoy
 
-Nginx
-^^^^^
+Verify Envoy is running::
 
-Nginx is a high performance web server. Install Nginx as follows::
+  sudo systemctl status envoy
 
-  cd
-  curl -sL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -
-  sudo add-apt-repository "deb http://nginx.org/packages/ubuntu focal nginx"
-  sudo apt install nginx
+Finishing up
+------------
 
-Create the default configuration with ``sudo nano
-/etc/nginx/conf.d/default.conf`` and paste the config from the following
-address into the file:
+Ensure services managed by ``forever`` start on reboot::
 
-https://gist.github.com/strophy/74ce468f8954341e3a6ee5d6587fe70e
-
-Create the gRPC configuration with ``sudo nano
-/etc/nginx/conf.d/grpc.conf`` and paste the config from the following
-address into the file:
-
-https://gist.github.com/strophy/db8aa126a04e10ff786ecc58afa8a067
-
-Create the gRPC error configuration with ``sudo nano
-/etc/nginx/conf.d/errors.grpc_conf`` and paste the config from the following
-address into the file:
-
-https://gist.github.com/strophy/93a897eb3ebf0238e634bd38a2e4374b
-
-Start Nginx as follows::
-
-  sudo systemctl daemon-reload
-  sudo systemctl enable nginx
-  sudo systemctl start nginx
+  cat<<"EOF"|crontab
+  * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+  @reboot { sleep 5;cd ~/js-drive&&forever start -a --uid "drive" scripts/abci.js;}
+  @reboot { sleep 6;cd ~/dapi&&forever start -a --uid "dapi" scripts/api.js;}
+  @reboot { sleep 7;cd ~/dapi&&forever start -a --uid "tx-filter-stream" scripts/tx-filter-stream.js;}
+  EOF
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
