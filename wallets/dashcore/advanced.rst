@@ -50,6 +50,9 @@ affecting the locked UTXOs.
 HD Wallets
 ==========
 
+Create HD Wallet
+----------------
+
 Since version 0.12.2.0, Dash Core has included an implementation of
 BIP39/BIP44 compatible hierarchical deterministic (HD) key generation.
 This functionality is only available from the command line by specifying
@@ -87,6 +90,25 @@ command::
 The HD wallet will be restored and your balance will appear once sync is
 complete.
 
+Upgrade to HD
+-------------
+
+Since version 0.17.0.2, Dash Core has included the ability upgrade a
+non-hierarchical deterministic (HD) wallet to an HD wallet via the
+``upgradetohd`` command. The command can be run by either opening the console
+from **Tools -> Debug console** or issuing the following RPC command from
+``dash-cli``::
+
+  upgradetohd "" "" <walletpassphrase>
+
+If your wallet is already encrypted you must enter the passphrase as the third
+parameter to the command. If your wallet is not already encrypted, specifying a
+wallet passphrase will trigger wallet encryption.
+
+To see full details for the command, run the following from either the console
+or ``dash-cli``::
+
+  help upgradetohd
 
 .. _dashcore-multisig:
 
