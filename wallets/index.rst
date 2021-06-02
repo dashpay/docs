@@ -66,7 +66,7 @@ Available documentation:
    dashcore/cmd-rpc.rst
    dashcore/advanced.rst
 
-.. figure:: dashcore/img/windows/106329009.png
+.. figure:: dashcore/img/overview.png
    :width: 400 px
 
    Dash Core Wallet
