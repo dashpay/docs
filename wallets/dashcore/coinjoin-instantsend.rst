@@ -41,7 +41,7 @@ Configuration
 1. Open your Dash Core wallet, go to **Settings** and select
    **Options**. Go to the **CoinJoin** tab.
 
-   .. image:: img/options-privatesend.png
+   .. image:: img/options-coinjoin.png
       :width: 300px
 
 2. Next to **Mixing rounds**, enter a value between 2-16.
@@ -141,7 +141,7 @@ complete.
 You can also monitor CoinJoin progress by viewing the transactions
 created by the process on the **Transactions** tab.
 
-.. figure:: img/privatesend-transactions.png
+.. figure:: img/coinjoin-transactions.png
    :width: 400px
 
    Transactions created by CoinJoin on the Transactions tab
@@ -216,7 +216,7 @@ to the nearest 0.001 DASH). You will be prompted to enter your password
 and receive a detailed breakdown of the fee structure for CoinJoin
 before sending.
 
-.. figure:: img/privatesend-send.png
+.. figure:: img/coinjoin-send.png
    :width: 400px
 
    Dash Core ready to send a CoinJoin transaction. Note use of the
