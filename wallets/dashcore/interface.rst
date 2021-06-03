@@ -112,7 +112,7 @@ wish to send. Options related to the transaction fee are also available.
 A quick view of your total CoinJoin balance is also available in the
 lower right corner.
 
-.. figure:: img/privatesend.png
+.. figure:: img/coinjoin.png
 
    The CoinJoin tab
 
@@ -334,7 +334,7 @@ CoinJoin tab
 The CoinJoin tab contains options relating to how CoinJoin
 functions in Dash Core.
 
-.. figure:: img/options-privatesend.png
+.. figure:: img/options-coinjoin.png
    :scale: 50 %
 
    The CoinJoin tab of the Dash Core Options dialog
@@ -571,7 +571,7 @@ Salvage wallet
   salvage wallet and look for lines beginning with "Salvage" for more
   information on operations completed.
 
-Rescan blockchain files
+Rescan blockchain files 1
   Rescans the already downloaded blockchain for any transactions affecting
   accounts contained in the wallet. This may be necessary if you replace
   your wallet.dat file with a different wallet or a backup - the wallet
