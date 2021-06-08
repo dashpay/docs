@@ -115,6 +115,14 @@ Run gitian build to create binaries for Linux, Mac, and Windows::
   # <version> = Dash Core tag to build
   ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m <MB of RAM to use> <signer> <version>
 
+.. note::
+  These instructions assume that a PGP key for <signer> exists on the build
+  system. If the expected key is not found, the script will fail at the signing
+  step with a message including::
+
+    gpg: skipped "gitian": No secret key
+    gpg: signing failed: No secret key
+
 When the build completes, it will put the binaries in a ``dashcore-binaries``
 folder. The ``.assert`` files and their signatures will be placed in
 ``gitian.sigs/<version>/<signer>/...``.
