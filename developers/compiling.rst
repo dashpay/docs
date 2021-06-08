@@ -47,10 +47,9 @@ replacing ``<username>`` with a username of your choice::
 
 You will be prompted for a password. Enter and confirm using a new password
 (different to your root password) and store it in a safe place. You will also
-see prompts for user information, but this can be left blank. 
-
-Alternatively, an existing user can be used on systems that are already in use
-(e.g. your existing development system).
+see prompts for user information, but this can be left blank. Alternatively, an
+existing user can be used on systems that are already in use (e.g. your existing
+development system).
 
 Add the user to the sudo group so they can perform commands as root::
 
@@ -94,7 +93,7 @@ It is only necessary to run this step during the initial setup of your machine::
   # <version> = Dash Core tag to build
   ./dash/contrib/gitian-build.py --setup <signer> <version>
 
-This will install Docker, but then fail with an error like ``Got permission
+This will install Docker, but then fail with an error like: ``Got permission
 denied while trying to connect to the Docker daemon socket...```. This occurs if
 ``<username>`` is not in the ``docker`` group. Add the user to the docker group
 and refresh the environment::
@@ -115,12 +114,12 @@ Run gitian build to create binaries for Linux, Mac, and Windows::
   # <version> = Dash Core tag to build
   ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m <MB of RAM to use> <signer> <version>
 
-.. note::
+.. warning::
   These instructions assume that a PGP key for <signer> exists on the build
   system. If the expected key is not found, the script will fail at the signing
   step with a message including::
 
-    gpg: skipped "gitian": No secret key
+    gpg: skipped "<signer>": No secret key
     gpg: signing failed: No secret key
 
 When the build completes, it will put the binaries in a ``dashcore-binaries``
