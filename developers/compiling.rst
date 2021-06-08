@@ -36,21 +36,44 @@ following a specific descriptor ("recipe"), cryptographically sign the
 result, and upload the resulting signature. These results are compared
 and only if they match, the build is accepted and uploaded to dash.org.
 
-This setup has been tested using a clean install of Ubuntu 20.04. All commands
-were run using the "root" user.
+This setup has been tested using a clean install of Ubuntu 20.04. Start by
+logging in as the "root" user. Create a new user with the following command, replacing ``<username>`` with a
+username of your choice::
+
+  adduser <username>
+
+You will be prompted for a password. Enter and confirm using a new password
+(different to your root password) and store it in a safe place. You will also
+see prompts for user information, but this can be left blank. Once the user has
+been created, we will add them to the sudo group so they can perform commands as
+root::
+
+  usermod -aG sudo <username>
 
 Install prerequisites
 ---------------------
 
+While still logged in as root, update the system from the Ubuntu package
+repository::
+
+  apt update
+  apt upgrade
+
+The system will show a list of upgradable packages. Press **Y** and
+**Enter** to install the packages.
+
 Install apt-cacher-ng::
 
-  apt-get update
-  apt-get install -y apt-cacher-ng
+  apt install -y apt-cacher-ng
 
 .. note::
   Select ``No`` when asked ``Allow HTTP tunnels through Apt-Cacher NG?`` during installation.
 
-Clone required repositories::
+After installing these updates, reboot the system::
+
+  reboot
+
+Login as <username> and clone required repositories::
 
   git clone https://github.com/dashpay/dash
   git clone https://github.com/devrandom/gitian-builder
@@ -65,10 +88,21 @@ Download the Mac OSX SDK::
 Prepare gitian
 --------------
   
-It is only necessary to run this step once during the initial setup of your machine::
+It is only necessary to run this step during the initial setup of your machine::
 
   # <signer> = The name associated with your PGP key
   # <version> = Dash Core tag to build
+  ./dash/contrib/gitian-build.py --setup <signer> <version>
+
+This will install Docker, but then fail as ``<username>`` will not be part of
+the ``docker`` group. Add the user to the docker group and refresh the
+environment::
+
+  sudo usermod -aG docker $USER
+  newgrp docker
+
+Run the setup a second time to complete setup::
+
   ./dash/contrib/gitian-build.py --setup <signer> <version>
 
 Build Dash Core
