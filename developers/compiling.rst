@@ -57,10 +57,7 @@ While still logged in as root, update the system from the Ubuntu package
 repository::
 
   apt update
-  apt upgrade
-
-The system will show a list of upgradable packages. Press **Y** and
-**Enter** to install the packages.
+  apt upgrade -y
 
 Install apt-cacher-ng::
 
@@ -69,11 +66,8 @@ Install apt-cacher-ng::
 .. note::
   Select ``No`` when asked ``Allow HTTP tunnels through Apt-Cacher NG?`` during installation.
 
-After installing these updates, reboot the system::
-
-  reboot
-
-Login as <username> and clone required repositories::
+After installing these updates, reboot the system, login as <username>, and
+clone required repositories::
 
   git clone https://github.com/dashpay/dash
   git clone https://github.com/devrandom/gitian-builder
@@ -94,9 +88,10 @@ It is only necessary to run this step during the initial setup of your machine::
   # <version> = Dash Core tag to build
   ./dash/contrib/gitian-build.py --setup <signer> <version>
 
-This will install Docker, but then fail as ``<username>`` will not be part of
-the ``docker`` group. Add the user to the docker group and refresh the
-environment::
+This will install Docker, but then fail with an error like ``Got permission
+denied while trying to connect to the Docker daemon socket...```. This occurs if
+``<username>`` is not in the ``docker`` group. Add the user to the docker group
+and refresh the environment::
 
   sudo usermod -aG docker $USER
   newgrp docker
