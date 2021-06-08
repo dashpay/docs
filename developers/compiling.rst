@@ -36,17 +36,23 @@ following a specific descriptor ("recipe"), cryptographically sign the
 result, and upload the resulting signature. These results are compared
 and only if they match, the build is accepted and uploaded to dash.org.
 
+Build process
+=============
+
 This setup has been tested using a clean install of Ubuntu 20.04. Start by
-logging in as the "root" user. Create a new user with the following command, replacing ``<username>`` with a
-username of your choice::
+logging in as the "root" user. Create a new user with the following command,
+replacing ``<username>`` with a username of your choice::
 
   adduser <username>
 
 You will be prompted for a password. Enter and confirm using a new password
 (different to your root password) and store it in a safe place. You will also
-see prompts for user information, but this can be left blank. Once the user has
-been created, we will add them to the sudo group so they can perform commands as
-root::
+see prompts for user information, but this can be left blank. 
+
+Alternatively, an existing user can be used on systems that are already in use
+(e.g. your existing development system).
+
+Add the user to the sudo group so they can perform commands as root::
 
   usermod -aG sudo <username>
 
