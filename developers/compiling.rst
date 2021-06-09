@@ -105,6 +105,12 @@ It is only necessary to run this step during the initial setup of your machine::
   # Example: ./dash/contrib/gitian-build.py --setup alice 0.17.0.2
   ./dash/contrib/gitian-build.py --setup <signer> <version>
 
+.. note::
+  The ``signer`` parameter should be set to the value provided for "Real name"
+  when generating a key with GPG. See the `GnuPrivacyGuard Howto
+  <https://help.ubuntu.com/community/GnuPrivacyGuardHowto#Generating_an_OpenPGP_Key>`_
+  for details on how to generate a key if you don't already have one.
+
 Build Dash Core
 ---------------
 
