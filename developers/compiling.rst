@@ -69,9 +69,13 @@ Install apt-cacher-ng::
   apt install -y apt-cacher-ng
 
 .. note::
-  Select ``No`` when asked ``Allow HTTP tunnels through Apt-Cacher NG?`` during installation.
+  Select ``No`` when asked ``Allow HTTP tunnels through Apt-Cacher NG?`` during
+  installation.
 
-After installing these updates, reboot the system, login as <username>, and
+  Note: you may also need to open port 3142 if you have a firewall enabled on
+  your system (e.g. ``ufw allow 3142/tcp``).
+
+After installing these updates, reboot the system, login as ``<username>``, and
 clone required repositories::
 
   git clone https://github.com/dashpay/dash
@@ -133,7 +137,7 @@ Mac and Windows binaries are signed by Dash Core Group using the relevant
 Apple/Microsoft processes. In this step, that information will be validated and
 signed by your machine. The associated ``.assert`` files and their signatures
 will be placed in ``gitian.sigs/<version>/<signer>/...`` along with the
-previously created signatures.
+signatures for unsigned binaries created in the previous step.
 
 ::
 
