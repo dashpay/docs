@@ -94,7 +94,8 @@ Prepare gitian
 It is only necessary to run this step during the initial setup of your machine::
 
   # <signer> = The name associated with your PGP key
-  # <version> = Dash Core tag to build
+  # <version> = Dash Core tag to build (exclude the leading "v")
+  # Example: ./dash/contrib/gitian-build.py --setup alice 0.17.0.2
   ./dash/contrib/gitian-build.py --setup <signer> <version>
 
 This will install Docker, but then fail with an error like: ``Got permission
@@ -115,7 +116,8 @@ Build Dash Core
 Run gitian build to create binaries for Linux, Mac, and Windows::
 
   # <signer> = The name associated with your PGP key
-  # <version> = Dash Core tag to build
+  # <version> = Dash Core tag to build (exclude the leading "v")
+  # Example: ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m 16000 alice 0.17.0.2
   ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m <MB of RAM to use> <signer> <version>
 
 .. warning::
@@ -142,7 +144,8 @@ signatures for unsigned binaries created in the previous step.
 ::
 
   # <signer> = The name associated with your PGP key
-  # <version> = Dash Core tag to build
+  # <version> = Dash Core tag to build (exclude the leading "v")
+  # Example: ./dash/contrib/gitian-build.py -s -n -j $(nproc) -m 16000 -o mw alice 0.17.0.2
   ./dash/contrib/gitian-build.py -s -n -j $(nproc) -m <MB of RAM to use> -o mw <signer> <version> 
 
 Verify signatures
@@ -153,6 +156,7 @@ deterministic build results signed by multiple Core developers for each release.
 Run the following command to verify that your build matches the official
 release::
 
+  # Example: ./dash/contrib/gitian-build.py -v alice 0.17.0.2
   ./dash/contrib/gitian-build.py -v <signer> <version>
 
 You should get a result similar to the following for Linux, Windows, MacOS,
