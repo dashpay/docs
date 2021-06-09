@@ -118,7 +118,8 @@ Run gitian build to create binaries for Linux, Mac, and Windows::
 
   # <signer> = The name associated with your PGP key
   # <version> = Dash Core tag to build (exclude the leading "v")
-  # Example: ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m 16000 alice 0.17.0.2
+  # Example: Build binaries for all OSes, use all available cores and 16 GB RAM
+  #   ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m 16000 alice 0.17.0.2
   ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m <MB of RAM to use> <signer> <version>
 
 .. warning::
