@@ -51,9 +51,16 @@ see prompts for user information, but this can be left blank. Alternatively, an
 existing user can be used on systems that are already in use (e.g. your existing
 development system).
 
-Add the user to the sudo group so they can perform commands as root::
+Create a ``docker`` group on the system. This group will be used by Docker
+processes and also will enable non-root users to run the Docker commands used by
+the build process::
 
-  usermod -aG sudo <username>
+  groupadd docker
+
+Add the user to the sudo and docker groups so they can perform commands as
+root and run docker commands::
+
+  usermod -aG sudo,docker <username>
 
 Install prerequisites
 ---------------------
@@ -96,18 +103,6 @@ It is only necessary to run this step during the initial setup of your machine::
   # <signer> = The name associated with your PGP key
   # <version> = Dash Core tag to build (exclude the leading "v")
   # Example: ./dash/contrib/gitian-build.py --setup alice 0.17.0.2
-  ./dash/contrib/gitian-build.py --setup <signer> <version>
-
-This will install Docker, but then fail with an error like: ``Got permission
-denied while trying to connect to the Docker daemon socket...```. This occurs if
-``<username>`` is not in the ``docker`` group. Add the user to the docker group
-and refresh the environment::
-
-  sudo usermod -aG docker $USER
-  newgrp docker
-
-Run the setup a second time to complete setup::
-
   ./dash/contrib/gitian-build.py --setup <signer> <version>
 
 Build Dash Core
