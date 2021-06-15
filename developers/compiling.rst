@@ -151,7 +151,7 @@ signatures for unsigned binaries created in the previous step.
   ./dash/contrib/gitian-build.py -s -n -j $(nproc) -m <MB of RAM to use> -o mw <signer> <version> 
 
 Verify signatures
------------------
+=================
 
 The `gitian.sigs repository <https://github.com/dashpay/gitian.sigs/>`_ contains
 deterministic build results signed by multiple Core developers for each release.
@@ -195,3 +195,54 @@ successfully, you will also see your own signatures with an ``OK`` status also.
   gpg:          There is no indication that the signature belongs to the owner.
   Primary key fingerprint: 3F5D 48C9 F002 93CD 365A  3A98 8359 2BD1 400D 58D9
   UdjinM6: OK
+
+Upload signatures
+=================
+
+After successfully building the binaries, signing them, and verifying the
+signatures, you can optionally contribute them to the `gitian.sigs repository
+<https://github.com/dashpay/gitian.sigs/>`_ via a pull request on GitHub.
+
+Initial setup
+-------------
+
+Since the official gitian.sigs repository has restricted write access, create a
+fork of it via GitHub and add your fork as a remote repository::
+
+  git remote add me https://github.com/<your GitHub username>/gitian.sigs
+
+The first time you contribute signatures, also put a copy of your public key in
+the ``gitian-keys`` folder of the repository so others can easily verify your
+signature. Your public key can be exported to a file using the following
+command::
+
+  # <signer> = The name associated with your PGP key
+  # Example: gpg --output alice.pgp --armor --export alice
+  gpg --output <signer>.pgp --armor --export <signer>
+
+Adding your signatures
+----------------------
+
+Create a new branch for the version that was built::
+
+  # Example: git checkout -b 0.17.0.2-alice
+  git checkout -b <version>-<signer>
+
+Add and commit the ``*.assert`` and ``*.assert.sig`` files created by the build
+process. They will be located in the following folders::
+
+  <version>-linux/<signer>/*
+  <version>-osx-signed/<signer>/*
+  <version>-osx-unsigned/<signer>/*
+  <version>-win-signed/<signer>/*
+  <version>-win-unsigned/<signer>/*
+
+Push to your fork of the gitian.sigs repository on GitHub::
+
+  # "me" references the name of the remote repository added during initial setup
+  git push me
+
+Go to `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`_ and open a pull
+request to the ``master`` branch of the upstream repository. The pull request
+will be reviewed by Dash Core developers and merged if everything checks out.
+Thanks for contributing!
