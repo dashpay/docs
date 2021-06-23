@@ -456,7 +456,7 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.17.0.2/dashcore-0.17.0.2-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.17.0.3/dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -472,14 +472,14 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v0.17.0.2/dashcore-0.17.0.2-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-0.17.0.2-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v0.17.0.3/dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz.asc
 
 Create a working directory for Dash, extract the compressed archive and
 copy the necessary files to the directory::
 
   mkdir ~/.dashcore
-  tar xfv dashcore-0.17.0.2-x86_64-linux-gnu.tar.gz
+  tar xfv dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz
   cp -f dashcore-0.17.0/bin/dashd ~/.dashcore/
   cp -f dashcore-0.17.0/bin/dash-cli ~/.dashcore/
 
