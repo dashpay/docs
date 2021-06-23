@@ -48,6 +48,7 @@ version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
   wget https://github.com/dashpay/dash/releases/download/v0.17.0.3/dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v0.17.0.3/SHA256SUMS.asc
 
 Verify the integrity of your download by running the following command
 and comparing the output against the value for the file as shown in the
