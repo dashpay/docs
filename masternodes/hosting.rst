@@ -169,17 +169,6 @@ https://mn.gtmcoin.io
 - `Discord <https://discord.com/invite/vErwUSC>`__
 
 
-Penny Scavengers
-----------------
-
-https://pennyscavs.com
-
-- Operated by: p5yc071c
-- Services: Hosting
-- Cost: 50 CHF/month
-- `Site <https://pennyscavs.com>`__
-
-
 Masternodehosting
 -----------------
 
