@@ -157,6 +157,7 @@ follows::
   rpcuser=XXXXXXXXXXXXX
   rpcpassword=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
   rpcallowip=127.0.0.1
+  rpcbind=0.0.0.0
   #----
   listen=1
   server=1

@@ -43,6 +43,7 @@ not present, add them as shown below.
   rpcuser=XXXXXXXXXXXXX
   rpcpassword=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
   rpcallowip=127.0.0.1
+  rpcbind=0.0.0.0
 
 Replace the fields marked with ``XXXXXXX`` as follows:
 
