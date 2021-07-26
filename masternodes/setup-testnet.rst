@@ -511,12 +511,13 @@ Masternode Update
 -----------------
 
 You can use ``dashmate`` to update your masternode as follows. The
-``git`` commands optionally also ensure you are using the latest stable
+``git`` and ``npm`` commands optionally also ensure you are using the latest stable
 version of dashmate::
 
   dashmate stop
   git checkout master
   git pull
+  npm ci
   dashmate update
   dashmate start
 
