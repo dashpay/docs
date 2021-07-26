@@ -447,8 +447,10 @@ Open PuTTY or a console again and connect using the username and
 password you just created for your new, non-root user. Begin by
 installing dashmate dependencies::
 
-  curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-  sudo apt install -y nodejs git docker.io docker-compose  
+  sudo apt install -y git curl docker.io docker-compose
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+  source ~/.bashrc
+  nvm install --lts
 
 Add your current user to the docker group, ensure docker starts on boot
 and refresh the environment::
@@ -463,8 +465,8 @@ CLI::
 
   git clone -b master https://github.com/dashevo/dashmate.git
   cd dashmate
-  npm install
-  sudo npm link
+  npm ci
+  npm link
 
 Run the interactive setup wizard::
 
@@ -508,9 +510,13 @@ to enable your masternode.
 Masternode Update
 -----------------
 
-You can use ``dashmate`` to update your masternode as follows::
+You can use ``dashmate`` to update your masternode as follows. The
+``git`` commands optionally also ensure you are using the latest stable
+version of dashmate::
 
   dashmate stop
+  git checkout master
+  git pull
   dashmate update
   dashmate start
 
