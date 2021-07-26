@@ -510,14 +510,32 @@ to enable your masternode.
 Masternode Update
 -----------------
 
-You can use ``dashmate`` to update your masternode as follows. The
-``git`` and ``npm`` commands optionally also ensure you are using the latest stable
-version of dashmate::
+You can use ``dashmate`` to update minor versions of the software on
+your masternode as follows::
+
+  dashmate stop
+  dashmate update
+  dashmate start
+
+Adding the following ``git`` and ``npm`` commands optionally also
+ensures you are using the latest stable version of dashmate::
 
   dashmate stop
   git checkout master
   git pull
   npm ci
+  dashmate update
+  dashmate start
+
+Adding the following command will drop all data from Dash Platform
+(necessary if Platform has been wiped) and restart with the latest
+version::
+
+  dashmate stop
+  git checkout master
+  git pull
+  npm ci
+  dashmate reset --platform-only
   dashmate update
   dashmate start
 
