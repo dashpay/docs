@@ -102,7 +102,7 @@ It is only necessary to run this step during the initial setup of your machine::
 
   # <signer> = The name associated with your PGP key
   # <version> = Dash Core tag to build (exclude the leading "v")
-  # Example: ./dash/contrib/gitian-build.py --setup alice 0.17.0.2
+  # Example: ./dash/contrib/gitian-build.py --setup alice 0.17.0.3
   ./dash/contrib/gitian-build.py --setup <signer> <version>
 
 .. note::
@@ -119,7 +119,7 @@ Run gitian build to create binaries for Linux, Mac, and Windows::
   # <signer> = The name associated with your PGP key
   # <version> = Dash Core tag to build (exclude the leading "v")
   # Example: Build binaries for all OSes, use all available cores and 16 GB RAM
-  #   ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m 16000 alice 0.17.0.2
+  #   ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m 16000 alice 0.17.0.3
   ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m <MB of RAM to use> <signer> <version>
 
 .. warning::
@@ -147,7 +147,7 @@ signatures for unsigned binaries created in the previous step.
 
   # <signer> = The name associated with your PGP key
   # <version> = Dash Core tag to build (exclude the leading "v")
-  # Example: ./dash/contrib/gitian-build.py -s -n -j $(nproc) -m 16000 -o mw alice 0.17.0.2
+  # Example: ./dash/contrib/gitian-build.py -s -n -j $(nproc) -m 16000 -o mw alice 0.17.0.3
   ./dash/contrib/gitian-build.py -s -n -j $(nproc) -m <MB of RAM to use> -o mw <signer> <version> 
 
 Verify signatures
@@ -158,7 +158,7 @@ deterministic build results signed by multiple Core developers for each release.
 Run the following command to verify that your build matches the official
 release::
 
-  # Example: ./dash/contrib/gitian-build.py -v alice 0.17.0.2
+  # Example: ./dash/contrib/gitian-build.py -v alice 0.17.0.3
   ./dash/contrib/gitian-build.py -v <signer> <version>
 
 You should get a result similar to the following for Linux, Windows, MacOS,
@@ -167,9 +167,9 @@ successfully, you will also see your own signatures with an ``OK`` status also.
 
 ::
 
-  Verifying v0.17.0.2 Linux
+  Verifying v0.17.0.3 Linux
 
-  gpg: Signature made Tue 18 May 2021 10:59:02 PM EDT
+  gpg: Signature made Sun 06 Jun 2021 12:46:44 PM EDT
   gpg:                using RSA key 29590362EC878A81FD3C202B52527BEDABE87984
   gpg: Good signature from "Pasta <pasta@dashboost.org>" [unknown]
   gpg: WARNING: This key is not certified with a trusted signature!
@@ -177,7 +177,7 @@ successfully, you will also see your own signatures with an ``OK`` status also.
   Primary key fingerprint: 2959 0362 EC87 8A81 FD3C  202B 5252 7BED ABE8 7984
   pasta: OK
 
-  gpg: Signature made Tue 18 May 2021 10:23:19 PM EDT
+  gpg: Signature made Sun 06 Jun 2021 06:41:11 PM EDT
   gpg:                using RSA key CF9A554A36B7950BB648A15DA0078C72B1777616
   gpg:                issuer "xdustinfacex@gmail.com"
   gpg: Good signature from "Dustinface <xdustinfacex@gmail.com>" [unknown]
@@ -186,7 +186,7 @@ successfully, you will also see your own signatures with an ``OK`` status also.
   Primary key fingerprint: CF9A 554A 36B7 950B B648  A15D A007 8C72 B177 7616
   dustinface: OK
 
-  gpg: Signature made Wed 19 May 2021 06:48:36 AM EDT
+  gpg: Signature made Sun 06 Jun 2021 07:39:14 PM EDT
   gpg:                using RSA key 3F5D48C9F00293CD365A3A9883592BD1400D58D9
   gpg: Good signature from "UdjinM6 <UdjinM6@dash.org>" [unknown]
   gpg:                 aka "UdjinM6 <UdjinM6@dashpay.io>" [unknown]
@@ -225,7 +225,7 @@ Adding your signatures
 
 Create a new branch for the version that was built::
 
-  # Example: git checkout -b 0.17.0.2-alice
+  # Example: git checkout -b 0.17.0.3-alice
   git checkout -b <version>-<signer>
 
 Add and commit the ``*.assert`` and ``*.assert.sig`` files created by the build
