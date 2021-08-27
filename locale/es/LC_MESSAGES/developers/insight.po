@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2019-01-11 06:53+0000\n"
 "Last-Translator: JZA <jza@oooes.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
@@ -69,15 +69,11 @@ msgstr ""
 
 #: ../../developers/insight.rst:23
 msgid ""
-"A standard installation of Ubuntu Linux 18.04 LTS will be used as an "
+"A standard installation of Ubuntu Linux 20.04 LTS will be used as an "
 "environment for the server. We assume you are running as a user with sudo "
 "permissions. First update all packages and install some tools and "
 "dependencies::"
 msgstr ""
-"Una instalación de Linux Ubuntu 18.04 LTS sera utilizada como ambiente para "
-"los servidores. Asumimos que esta ejecutando como usuarios con permisos "
-"sudo. Primero actualice todos los paquetes e instale algunas herramientas y "
-"dependencias::"
 
 #: ../../developers/insight.rst:32
 msgid "Download and extract the latest version of Dash Core::"
@@ -91,25 +87,25 @@ msgstr ""
 "Instala `Nodo Dashcore <https://github.com/dashevo/dashcore-node>`_ y crea "
 "tu configuración::"
 
-#: ../../developers/insight.rst:45
+#: ../../developers/insight.rst:47
 msgid "Install the Insight API service and (optionally) Insight UI::"
 msgstr ""
 "Instala los servicios de la API Insight y (opcionalmente) UI Insight::"
 
-#: ../../developers/insight.rst:51
+#: ../../developers/insight.rst:53
 msgid "Change paths in the configuration file as follows::"
 msgstr ""
 "Cambia las rutas en el archivo de configuración de la siguiente manera:"
 
-#: ../../developers/insight.rst:55
-msgid "Change the value of ``datadir`` to ``../.dashcore``"
-msgstr "Cambia el valor de ``datadir`` a ``../.dashcore``"
-
-#: ../../developers/insight.rst:56
-msgid "Change the value of ``exec`` to ``../dashcore-0.16.0/bin/dashd``"
+#: ../../developers/insight.rst:57
+msgid "Change the value of ``datadir`` to ``../../.dashcore``"
 msgstr ""
 
-#: ../../developers/insight.rst:57
+#: ../../developers/insight.rst:58
+msgid "Change the value of ``exec`` to ``../../dashcore-0.16.1/bin/dashd``"
+msgstr ""
+
+#: ../../developers/insight.rst:59
 msgid ""
 "**Optionally** change the value of ``network`` to ``testnet`` if you want to"
 " run Insight on testnet"
@@ -117,11 +113,11 @@ msgstr ""
 "**Opcionalmente** cambia el valor de ``network`` a ``testnet`` si quieres "
 "ejecutar Insight en testnet"
 
-#: ../../developers/insight.rst:60
+#: ../../developers/insight.rst:62
 msgid "Run it::"
 msgstr "Ejecutalo::"
 
-#: ../../developers/insight.rst:64
+#: ../../developers/insight.rst:66
 msgid ""
 "Your Insight API node will start up and begin to sync. Progress will be "
 "displayed on stdout. Once sync is complete, the `API endpoints listed in the"
@@ -133,6 +129,6 @@ msgstr ""
 "finales de la API listados en la documentación estaran disponibles en "
 "<https://github.com/dashevo/insight-api#api-http-endpoints>`_::"
 
-#: ../../developers/insight.rst:71
+#: ../../developers/insight.rst:73
 msgid "The Insight UI block explorer will be available at::"
 msgstr "La UI Insight del explorador de bloque estará disponible en::"

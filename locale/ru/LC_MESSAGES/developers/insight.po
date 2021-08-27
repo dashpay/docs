@@ -5,7 +5,7 @@
 # 
 # Translators:
 # Julia Ogonkova <livingflcl@gmail.com>, 2019
-# Dmitry <dmitry.zhludin@gmail.com>, 2019
+# Dima, 2019
 # Андрей Дегтяр <diusha1711@gmail.com>, 2019
 # 
 #, fuzzy
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2019-01-11 06:53+0000\n"
 "Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -69,15 +69,11 @@ msgstr ""
 
 #: ../../developers/insight.rst:23
 msgid ""
-"A standard installation of Ubuntu Linux 18.04 LTS will be used as an "
+"A standard installation of Ubuntu Linux 20.04 LTS will be used as an "
 "environment for the server. We assume you are running as a user with sudo "
 "permissions. First update all packages and install some tools and "
 "dependencies::"
 msgstr ""
-"В качестве рабочей среды для этого сервера будет использоваться стандартная "
-"установка Ubuntu Linux 18.04 LTS. Мы исходим из того, что вы работаете "
-"пользователем с sudo допусками. Для начала, обновите все пакеты и установите"
-" некоторые инструменты и зависимые приложения::"
 
 #: ../../developers/insight.rst:32
 msgid "Download and extract the latest version of Dash Core::"
@@ -91,23 +87,23 @@ msgstr ""
 "Установите `Dashcore Node <https://github.com/dashevo/dashcore-node>`_  и "
 "создайте собственную конфигурацию::"
 
-#: ../../developers/insight.rst:45
+#: ../../developers/insight.rst:47
 msgid "Install the Insight API service and (optionally) Insight UI::"
 msgstr "Установите сервис Insight API и (по желанию) Insight UI::"
 
-#: ../../developers/insight.rst:51
+#: ../../developers/insight.rst:53
 msgid "Change paths in the configuration file as follows::"
 msgstr "Измените пути в файле конфигурации следующим образом::"
 
-#: ../../developers/insight.rst:55
-msgid "Change the value of ``datadir`` to ``../.dashcore``"
-msgstr "Измените значение ``datadir`` на ``../.dashcore``"
-
-#: ../../developers/insight.rst:56
-msgid "Change the value of ``exec`` to ``../dashcore-0.16.0/bin/dashd``"
+#: ../../developers/insight.rst:57
+msgid "Change the value of ``datadir`` to ``../../.dashcore``"
 msgstr ""
 
-#: ../../developers/insight.rst:57
+#: ../../developers/insight.rst:58
+msgid "Change the value of ``exec`` to ``../../dashcore-0.16.1/bin/dashd``"
+msgstr ""
+
+#: ../../developers/insight.rst:59
 msgid ""
 "**Optionally** change the value of ``network`` to ``testnet`` if you want to"
 " run Insight on testnet"
@@ -115,11 +111,11 @@ msgstr ""
 "**При необходимости** измените значение ``network`` на ``testnet``, если "
 "хотите выполнить запуск Insight в тестовой сети"
 
-#: ../../developers/insight.rst:60
+#: ../../developers/insight.rst:62
 msgid "Run it::"
 msgstr "Запустите приложение::"
 
-#: ../../developers/insight.rst:64
+#: ../../developers/insight.rst:66
 msgid ""
 "Your Insight API node will start up and begin to sync. Progress will be "
 "displayed on stdout. Once sync is complete, the `API endpoints listed in the"
@@ -131,6 +127,6 @@ msgstr ""
 "описанные в документации <https://github.com/dashevo/insight-api#api-http-"
 "endpoints>`_ будут доступны тут::"
 
-#: ../../developers/insight.rst:71
+#: ../../developers/insight.rst:73
 msgid "The Insight UI block explorer will be available at::"
 msgstr "Обозреватель блоков Insight UI будет доступен тут::"

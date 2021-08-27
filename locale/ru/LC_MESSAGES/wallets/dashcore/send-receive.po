@@ -4,7 +4,6 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Leon White <leon.white@dash.org>, 2018
 # Андрей Дегтяр <diusha1711@gmail.com>, 2018
 # 
 #, fuzzy
@@ -12,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -60,27 +59,20 @@ msgid ""
 "confirm. A transaction is generally considered confirmed once six blocks "
 "have been added after the block containing your transaction, although "
 "masternode and mining payments are only released after 101 blocks. Note that"
-" a different process is used for InstantSend and PrivateSend transactions."
+" a different process is used for InstantSend and CoinJoin transactions."
 msgstr ""
-"После подтверждения вами транзакции, Dash Core внесёт транзакцию в блок, "
-"который затем будет добавлен в блокчейн для подтверждения другими клиентами."
-" Как правило, транзакция считается подтверждённой после того, как после "
-"блока, содержащего вашу транзакцию, будет добавлено ещё шесть блоков, хотя "
-"платежи мастернодам и за майнинг могут быть выведены только после 101 блока."
-" Обратите внимание, что для транзакций InstantSend и PrivateSend "
-"используется другой процесс."
 
-#: ../../wallets/dashcore/send-receive.rst:28
+#: ../../wallets/dashcore/send-receive.rst:27
 msgid "Dash addresses are 34 characters long and begin with an uppercase X."
 msgstr ""
 "Адреса в кошельке Dash состоят из 34 символов и начинанаются с заглавной "
 "буквы Х."
 
-#: ../../wallets/dashcore/send-receive.rst:31
+#: ../../wallets/dashcore/send-receive.rst:30
 msgid "Sending Dash"
 msgstr "Отправка DASH"
 
-#: ../../wallets/dashcore/send-receive.rst:33
+#: ../../wallets/dashcore/send-receive.rst:32
 msgid ""
 "You can use Dash Core to send Dash from your balance to another user. The "
 "receiving user will provide you with a Dash address to which you should send"
@@ -92,11 +84,11 @@ msgstr ""
 " на который вы должны отправить деньги. Перейдите на вкладку **Отправить** "
 "на панели вкладок и введите адрес назначения в поле **Получатель**."
 
-#: ../../wallets/dashcore/send-receive.rst:41
+#: ../../wallets/dashcore/send-receive.rst:40
 msgid "The Dash Core Send tab"
 msgstr "Вкладка \"Отправить\" в Dash Core"
 
-#: ../../wallets/dashcore/send-receive.rst:43
+#: ../../wallets/dashcore/send-receive.rst:42
 msgid ""
 "You can also use the three icons |sendicons| to the right of the **Pay To** "
 "field to select a previously used address, paste an address from the "
@@ -112,29 +104,15 @@ msgstr ""
 "возможность идентифицировать его. И наконец, введите сумму DASH, которую вы "
 "хотите переслать, в поле **Количество**."
 
-#: ../../wallets/dashcore/send-receive.rst:53
+#: ../../wallets/dashcore/send-receive.rst:52
 msgid ""
-"The other options relate to fees and PrivateSend/InstantSend. You can choose"
-" if you want to pay the network fee in addition to the amount sent, or "
-"subtract it from the amount sent. You can also increase your fee to "
-"encourage nodes on the network to prioritize your transaction. Choosing "
-"**InstantSend** has a similar effect, but actually relies on a different "
-"mechanism in the second layer network to speed up the transaction time. "
-"Choosing **PrivateSend** will send Dash from an address that has previously "
-"been mixed. You can find out more about PrivateSend and InstantSend "
-":ref:`here <dashcore-privatesend-instantsend>`."
+"The other options relate to fees. You can choose if you want to pay the "
+"network fee in addition to the amount sent, or subtract it from the amount "
+"sent. You can also increase your fee to encourage nodes on the network to "
+"prioritize your transaction."
 msgstr ""
-"Другие опции касаются комиссий и функций PrivateSend/InstantSend. Вы можете "
-"выбрать, добавлять ли сетевую комиссию к отправляемой сумме или вычесть её "
-"из этой суммы. Вы также можете увеличить размер комиссии для поощрения "
-"сетевых узлов в установке приоритета вашей транзакции. Выбрав "
-"**InstantSend** вы получите аналогичный эффект, но в данном случае будет "
-"задействован другой механизм сети второго уровня для ускорения пересылки "
-"транзакции. Выбор **PrivateSend** отправит Dash из адреса, который ранее "
-"участвовал в смешивании. Узнать больше о PrivateSend и InstantSend можно по "
-":ref:`ссылке <dashcore-privatesend-instantsend>`."
 
-#: ../../wallets/dashcore/send-receive.rst:64
+#: ../../wallets/dashcore/send-receive.rst:57
 msgid ""
 "Let’s try an example. Say you have received an invoice which you now want to"
 " pay with Dash. The writer of the invoice has included a Dash address, which"
@@ -147,11 +125,11 @@ msgstr ""
 "счёт выставлен на сумму 2,45 DASH, которую вы вписываете в поле "
 "**Количество**."
 
-#: ../../wallets/dashcore/send-receive.rst:72
+#: ../../wallets/dashcore/send-receive.rst:65
 msgid "The Send tab filled out for a transaction"
 msgstr "Вкладка \"Отправить\" заполнена для совершения транзакции"
 
-#: ../../wallets/dashcore/send-receive.rst:74
+#: ../../wallets/dashcore/send-receive.rst:67
 msgid ""
 "Once you have entered the destination address and the amount, click the "
 "**Send** button. If you have encrypted your wallet, you will now be required"
@@ -161,11 +139,11 @@ msgstr ""
 "**Отправить**. Если вы зашифровали свой кошелёк, то вам потребуется сначала "
 "ввести пароль, чтобы разблокировать кошелёк."
 
-#: ../../wallets/dashcore/send-receive.rst:81
+#: ../../wallets/dashcore/send-receive.rst:74
 msgid "Entering the password to unlock the wallet"
 msgstr "Введение пароля для разблокировки кошелька"
 
-#: ../../wallets/dashcore/send-receive.rst:83
+#: ../../wallets/dashcore/send-receive.rst:76
 msgid ""
 "Finally, you are given one final confirmation and chance to cancel your send"
 " transaction before Dash Core processes the transaction on the blockchain."
@@ -174,11 +152,11 @@ msgstr ""
 "отменить транзакцию отправки до того, как Dash Core отправит её в обработку "
 "на блокчейн."
 
-#: ../../wallets/dashcore/send-receive.rst:90
+#: ../../wallets/dashcore/send-receive.rst:83
 msgid "Final confirmation window"
 msgstr "Окно окончательного подтверждения"
 
-#: ../../wallets/dashcore/send-receive.rst:92
+#: ../../wallets/dashcore/send-receive.rst:85
 msgid ""
 "If you respond with **Yes**, your transaction will be processed. Your "
 "operating system may display a notification, and the transaction will appear"
@@ -188,22 +166,22 @@ msgstr ""
 " система может отобразить уведомление, и транзакция появится на вкладке "
 "\"Транзакции\", где вы можете отслеживать её прогресс."
 
-#: ../../wallets/dashcore/send-receive.rst:99
+#: ../../wallets/dashcore/send-receive.rst:92
 msgid "The Windows 10 sent transaction confirmation notification"
 msgstr "Уведомление о подтверждении отправки транзакции в Windows 10"
 
-#: ../../wallets/dashcore/send-receive.rst:101
+#: ../../wallets/dashcore/send-receive.rst:94
 msgid ""
 "Note that the amount of the transaction increased by .00003926 Dash. This is"
 " the transaction fee. In the next section, we will see what this procedure "
 "looks like from the receiving side."
 msgstr ""
 
-#: ../../wallets/dashcore/send-receive.rst:106
+#: ../../wallets/dashcore/send-receive.rst:99
 msgid "Receiving Dash"
 msgstr "Получение DASH"
 
-#: ../../wallets/dashcore/send-receive.rst:108
+#: ../../wallets/dashcore/send-receive.rst:101
 msgid ""
 "To receive Dash, you must first create a receiving address to give to the "
 "sending party. To do this, click **File > Receiving addresses**. The "
@@ -213,11 +191,11 @@ msgstr ""
 "отправить его отправителю платежа. Для этого нажмите **Файл > Адреса для "
 "получения**. Появится окно **Адреса для получения**."
 
-#: ../../wallets/dashcore/send-receive.rst:115
+#: ../../wallets/dashcore/send-receive.rst:108
 msgid "The Receiving addresses window"
 msgstr "Окно с адресами для получения"
 
-#: ../../wallets/dashcore/send-receive.rst:117
+#: ../../wallets/dashcore/send-receive.rst:110
 msgid ""
 "Either copy an existing address by clicking on the address and then the "
 "**Copy** button, or create a new address by clicking the **New** button. You"
@@ -240,11 +218,11 @@ msgstr ""
 "и будет распознавать новые транзакции, связанные с вашим адресом получения, "
 "когда они появятся."
 
-#: ../../wallets/dashcore/send-receive.rst:130
+#: ../../wallets/dashcore/send-receive.rst:123
 msgid "The Windows 10 received transaction confirmation notification"
 msgstr "Уведомление о подтверждении получения транзакции в Windows 10"
 
-#: ../../wallets/dashcore/send-receive.rst:132
+#: ../../wallets/dashcore/send-receive.rst:125
 msgid ""
 "Once you have been paid, you can see the balance both on the **Overview** "
 "tab and on the **Transactions** tab."
@@ -252,6 +230,6 @@ msgstr ""
 "После того, как вы заплатили, вы можете увидеть баланс как на вкладке "
 "**Обзор**, так и на вкладке **Транзакции**."
 
-#: ../../wallets/dashcore/send-receive.rst:138
+#: ../../wallets/dashcore/send-receive.rst:131
 msgid "The received transaction"
 msgstr "Полученная транзакция"

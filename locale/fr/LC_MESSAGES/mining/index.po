@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Daf Daf, 2020
+# Daf Daf, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2018-02-25 08:11+0000\n"
-"Last-Translator: Daf Daf, 2020\n"
+"Last-Translator: Daf Daf, 2021\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -117,6 +117,8 @@ msgid ""
 "`Profitability calculation tool "
 "<https://www.coinwarz.com/mining/dash/calculator>`_"
 msgstr ""
+"`Outil de calcul de rentabilité "
+"<https://www.coinwarz.com/mining/dash/calculator>`_"
 
 #: ../../mining/index.rst:44
 msgid "Masternodes vs. Mining"
@@ -149,7 +151,7 @@ msgstr ""
 msgid ""
 "Dash works a little differently from Bitcoin, however, because it has a two-"
 "tier network. The second tier is powered by :ref:`masternodes <masternodes>`"
-" (Full Nodes), which enable financial privacy (PrivateSend), instant "
+" (Full Nodes), which enable financial privacy (CoinJoin), instant "
 "transactions (InstantSend), and the decentralized governance and budget "
 "system. Because this second tier is so important, masternodes are also "
 "rewarded when miners discover new blocks. The breakdown is as follows: 45% "
@@ -159,7 +161,7 @@ msgstr ""
 "Cependant Dash fonctionne de manière légèrement différente de Bitcoin, car "
 "il dispose d'un réseau à deux niveaux. Le second niveau est constitué des "
 ":ref:`masternodes <masternodes>` (nœuds complets), qui rendent possibles la "
-"confidentialité financière (PrivateSend), les transactions instantanées "
+"confidentialité financière (CoinJoin), les transactions instantanées "
 "(InstantSend), la gouvernance décentralisée et le système budgétaire. Parce "
 "que ce second niveau est d'une grande importance, les masternodes sont aussi"
 " récompensés quand les mineurs découvrent de nouveaux blocs. La répartition "
@@ -286,11 +288,11 @@ msgstr "https://www.f2pool.com"
 
 #: ../../mining/index.rst:114
 msgid "https://www2.coinmine.pl/dash/"
-msgstr ""
+msgstr "https://www2.coinmine.pl/dash/"
 
 #: ../../mining/index.rst:115
 msgid "https://aikapool.com/dash/"
-msgstr ""
+msgstr "https://aikapool.com/dash/"
 
 #: ../../mining/index.rst:116
 msgid "https://www.antpool.com"
@@ -310,7 +312,7 @@ msgstr "https://www.viabtc.com"
 
 #: ../../mining/index.rst:120
 msgid "https://zpool.ca"
-msgstr ""
+msgstr "https://zpool.ca"
 
 #: ../../mining/index.rst:122
 msgid ""
@@ -374,7 +376,7 @@ msgstr ""
 
 #: ../../mining/index.rst:158 ../../mining/index.rst:292
 msgid "`Crypto Mining Blog <https://cryptomining-blog.com/>`_"
-msgstr ""
+msgstr "`Blog Crypto Mining <https://cryptomining-blog.com/>`_"
 
 #: ../../mining/index.rst:159 ../../mining/index.rst:293
 msgid ""
@@ -414,6 +416,10 @@ msgid ""
 "sets. You can use `CPU-Z <https://www.cpuid.com/softwares/cpu-z.html>`_ to "
 "check if this is the case for your CPU:"
 msgstr ""
+"Ce logiciel fonctionnera si votre processeur est compatible avec les "
+"configurations AES-NI et AVX. Consultez `CPU-Z "
+"<https://www.cpuid.com/softwares/cpu-z.html>`_ pour vérifier si c'est le cas"
+" pour votre processeur :"
 
 #: ../../mining/index.rst:178
 msgid "CPU-Z showing details for an Intel i7 Haswell CPU"
@@ -867,23 +873,23 @@ msgstr ""
 "Les mineurs X11 ASIC suivants sont disponibles sur le marché. Cliquez sur le"
 " nom du produit pour vous rendre sur le site web du fabricant :"
 
-#: ../../mining/index.rst:430 ../../mining/index.rst:452
+#: ../../mining/index.rst:430 ../../mining/index.rst:448
 msgid "Name"
 msgstr "Nom"
 
-#: ../../mining/index.rst:430 ../../mining/index.rst:452
+#: ../../mining/index.rst:430 ../../mining/index.rst:448
 msgid "Hash rate"
 msgstr "Taux de hachage"
 
-#: ../../mining/index.rst:430 ../../mining/index.rst:452
+#: ../../mining/index.rst:430 ../../mining/index.rst:448
 msgid "Power"
 msgstr "Puissance"
 
-#: ../../mining/index.rst:430 ../../mining/index.rst:452
+#: ../../mining/index.rst:430 ../../mining/index.rst:448
 msgid "Weight"
 msgstr "Poids"
 
-#: ../../mining/index.rst:430 ../../mining/index.rst:452
+#: ../../mining/index.rst:430 ../../mining/index.rst:448
 msgid "Dimensions (mm)"
 msgstr "Dimensions (mm)"
 
@@ -920,115 +926,65 @@ msgid "$1,180"
 msgstr "$1180"
 
 #: ../../mining/index.rst:434
-msgid ""
-"`FusionSilicon X7 <https://fusionsilicon.tech/product/fusion-silicon-x7/>`_"
-msgstr ""
-"`FusionSilicon X7 <https://fusionsilicon.tech/product/fusion-silicon-x7/>`_"
-
-#: ../../mining/index.rst:434
-msgid "262 GH/s"
-msgstr "262 GH/s"
-
-#: ../../mining/index.rst:434
-msgid "1420 W"
-msgstr "1420 W"
-
-#: ../../mining/index.rst:434
-msgid "4.8 kg"
-msgstr "4,8 kg"
-
-#: ../../mining/index.rst:434 ../../mining/index.rst:436
-msgid "130 x 198 x 340"
-msgstr "130 x 198 x 340"
-
-#: ../../mining/index.rst:434
-msgid "$500"
-msgstr "$500"
-
-#: ../../mining/index.rst:436
-msgid ""
-"`FusionSilicon X7+ "
-"<https://fusionsilicon.tech/product/fusionsilicon-x7-2/>`_"
-msgstr ""
-"`FusionSilicon X7+ "
-"<https://fusionsilicon.tech/product/fusionsilicon-x7-2/>`_"
-
-#: ../../mining/index.rst:436
-msgid "320 GH/s"
-msgstr "320 GH/s"
-
-#: ../../mining/index.rst:436
-msgid "2000 W"
-msgstr "2000 W"
-
-#: ../../mining/index.rst:436
-msgid "4.9 kg"
-msgstr "4,9 kg"
-
-#: ../../mining/index.rst:436
-msgid "$750"
-msgstr "$750"
-
-#: ../../mining/index.rst:438
 msgid "`Spondoolies SPx36 <https://www.spondoolies-tech.com/products/spx36>`_"
 msgstr ""
 "`Spondoolies SPx36 <https://www.spondoolies-tech.com/products/spx36>`_"
 
-#: ../../mining/index.rst:438
+#: ../../mining/index.rst:434
 msgid "540 GH/s ±10%"
 msgstr "540 GH/s ±10%"
 
-#: ../../mining/index.rst:438
+#: ../../mining/index.rst:434
 msgid "4400 W"
 msgstr "4400 W"
 
-#: ../../mining/index.rst:438
+#: ../../mining/index.rst:434
 msgid "19.5 kg"
 msgstr "19,5 kg"
 
-#: ../../mining/index.rst:438
+#: ../../mining/index.rst:434
 msgid "640 x 525 x 185"
 msgstr "640 x 525 x 185"
 
-#: ../../mining/index.rst:438
+#: ../../mining/index.rst:434
 msgid "$7,000"
 msgstr "$7000"
 
-#: ../../mining/index.rst:440
+#: ../../mining/index.rst:436
 msgid ""
 "`StrongU STU-U6 <https://strongu.com.cn/Home/Goods/goodsInfo/id/263.html>`_"
 msgstr ""
 "`StrongU STU-U6 <https://strongu.com.cn/Home/Goods/goodsInfo/id/263.html>`_"
 
-#: ../../mining/index.rst:440
+#: ../../mining/index.rst:436
 msgid "420 GH/s ±8%"
 msgstr "420 GH/s ±8%"
 
-#: ../../mining/index.rst:440 ../../mining/index.rst:484
+#: ../../mining/index.rst:436 ../../mining/index.rst:480
 msgid "2100 W"
 msgstr "2100 W"
 
-#: ../../mining/index.rst:440
+#: ../../mining/index.rst:436
 msgid "8.5 kg"
 msgstr "8,5 kg"
 
-#: ../../mining/index.rst:440
+#: ../../mining/index.rst:436
 msgid "370 x 135 x 208"
 msgstr "370 x 135 x 208"
 
-#: ../../mining/index.rst:443
+#: ../../mining/index.rst:439
 msgid "ASIC resellers may also have miners avaiable:"
 msgstr "Les revendeurs d'ASIC peuvent également proposer ces mineurs :"
 
-#: ../../mining/index.rst:445
+#: ../../mining/index.rst:441
 msgid "https://cryptomining.tools/"
 msgstr "https://cryptomining.tools/"
 
-#: ../../mining/index.rst:446
+#: ../../mining/index.rst:442
 msgid "http://kaboomracks.com"
 msgstr "http://kaboomracks.com"
 
-#: ../../mining/index.rst:448
+#: ../../mining/index.rst:444
 msgid ""
 "The following ASIC miners are either no longer easily available or obsolete "
 "due to the increase in difficulty on the network."
@@ -1036,103 +992,103 @@ msgstr ""
 "Les mineurs ASIC suivants ne sont plus disponibles ou sont obsolètes, en "
 "raison de l'augmentation de la difficulté sur le réseau."
 
-#: ../../mining/index.rst:454
+#: ../../mining/index.rst:450
 msgid "`Baikal BK-X <https://www.baikalminer.com/product09.php>`_"
 msgstr "`Baikal BK-X <https://www.baikalminer.com/product09.php>`_"
 
-#: ../../mining/index.rst:454
+#: ../../mining/index.rst:450
 msgid "10 GH/s ±5%"
 msgstr "10 GH/s ±5%"
 
-#: ../../mining/index.rst:454
+#: ../../mining/index.rst:450
 msgid "800 W"
 msgstr "800 W"
 
-#: ../../mining/index.rst:454
+#: ../../mining/index.rst:450
 msgid "3.8 kg"
 msgstr "3,8 kg"
 
-#: ../../mining/index.rst:454
+#: ../../mining/index.rst:450
 msgid "312 x 125 x 130"
 msgstr "312 x 125 x 130"
 
-#: ../../mining/index.rst:456
+#: ../../mining/index.rst:452
 msgid "`Baikal Mini <https://www.baikalminer.com/>`_"
-msgstr ""
+msgstr "`Baikal Mini <https://www.baikalminer.com/>`_"
 
-#: ../../mining/index.rst:456
+#: ../../mining/index.rst:452
 msgid "150 MH/s ±10%"
 msgstr "150 MH/s ±10%"
 
-#: ../../mining/index.rst:456
+#: ../../mining/index.rst:452
 msgid "40 W"
 msgstr "40 W"
 
-#: ../../mining/index.rst:456
+#: ../../mining/index.rst:452
 msgid ".475 kg"
 msgstr "0,475 kg"
 
-#: ../../mining/index.rst:456
+#: ../../mining/index.rst:452
 msgid "140 x 100 x 95"
 msgstr "140 x 100 x 95"
 
-#: ../../mining/index.rst:458
+#: ../../mining/index.rst:454
 msgid "`Baikal Giant+ A2000 <https://www.baikalminer.com/product06.php>`_"
-msgstr ""
+msgstr "`Baikal Giant+ A2000 <https://www.baikalminer.com/product06.php>`_"
 
-#: ../../mining/index.rst:458
+#: ../../mining/index.rst:454
 msgid "2000 MH/s ±10%"
 msgstr "2000 MH/s ±10%"
 
-#: ../../mining/index.rst:458
+#: ../../mining/index.rst:454
 msgid "430 W"
 msgstr "430 W"
 
-#: ../../mining/index.rst:458 ../../mining/index.rst:462
+#: ../../mining/index.rst:454 ../../mining/index.rst:458
 msgid "3 kg"
 msgstr "3 kg"
 
-#: ../../mining/index.rst:458
+#: ../../mining/index.rst:454
 msgid "300 x 140 x 125"
 msgstr "300 x 140 x 125"
 
-#: ../../mining/index.rst:460
+#: ../../mining/index.rst:456
 msgid "`Baikal Giant A900 <https://www.baikalminer.com/>`_"
-msgstr ""
+msgstr "`Baikal Giant A900 <https://www.baikalminer.com/>`_"
 
-#: ../../mining/index.rst:460
+#: ../../mining/index.rst:456
 msgid "900 MH/s ±5%"
 msgstr "900 MH/s ±5%"
 
-#: ../../mining/index.rst:460
+#: ../../mining/index.rst:456
 msgid "217 W"
 msgstr "217 W"
 
-#: ../../mining/index.rst:460
+#: ../../mining/index.rst:456
 msgid "2.5 kg"
 msgstr "2,5 kg"
 
-#: ../../mining/index.rst:460
+#: ../../mining/index.rst:456
 msgid "300 x 123 x 123"
 msgstr "300 x 123 x 123"
 
-#: ../../mining/index.rst:462
+#: ../../mining/index.rst:458
 msgid "`Baikal Quad Cube <https://www.baikalminer.com/>`_"
-msgstr ""
+msgstr "`Baikal Quad Cube <https://www.baikalminer.com/>`_"
 
-#: ../../mining/index.rst:462
+#: ../../mining/index.rst:458
 msgid "1200 MH/s ±10%"
 msgstr "1200 MH/s ±10%"
 
-#: ../../mining/index.rst:462
+#: ../../mining/index.rst:458
 msgid "300 W"
 msgstr "300 W"
 
-#: ../../mining/index.rst:462
+#: ../../mining/index.rst:458
 msgid "135 x 135 x 425"
 msgstr "135 x 135 x 425"
 
-#: ../../mining/index.rst:464
+#: ../../mining/index.rst:460
 msgid ""
 "`Bitmain Antminer D3 "
 "<https://shop.bitmain.com/product/detail?pid=000201810311345082643S60TX7I0609>`_"
@@ -1140,60 +1096,60 @@ msgstr ""
 "`Bitmain Antminer D3 "
 "<https://shop.bitmain.com/product/detail?pid=000201810311345082643S60TX7I0609>`_"
 
-#: ../../mining/index.rst:464
+#: ../../mining/index.rst:460
 msgid "17 GH/s ±5%"
 msgstr "17 GH/s ±5%"
 
-#: ../../mining/index.rst:464
+#: ../../mining/index.rst:460
 msgid "970 W"
 msgstr "970 W"
 
-#: ../../mining/index.rst:464
+#: ../../mining/index.rst:460
 msgid "6.5 kg"
 msgstr "6,5 kg"
 
-#: ../../mining/index.rst:464
+#: ../../mining/index.rst:460
 msgid "320 x 130 x 190"
 msgstr "320 x 130 x 190"
 
-#: ../../mining/index.rst:466
+#: ../../mining/index.rst:462
 msgid "`iBelink DM384M <https://ibelink.co/>`_"
 msgstr "`iBelink DM384M <https://ibelink.co/>`_"
 
-#: ../../mining/index.rst:466
+#: ../../mining/index.rst:462
 msgid "384 MH/s ±10%"
 msgstr "384 MH/s ±10%"
 
-#: ../../mining/index.rst:466
+#: ../../mining/index.rst:462
 msgid "715 W"
 msgstr "715 W"
 
-#: ../../mining/index.rst:466
+#: ../../mining/index.rst:462
 msgid "21 kg"
 msgstr "21 kg"
 
-#: ../../mining/index.rst:466 ../../mining/index.rst:468
-#: ../../mining/index.rst:470
+#: ../../mining/index.rst:462 ../../mining/index.rst:464
+#: ../../mining/index.rst:466
 msgid "490 x 350 x 180"
 msgstr "490 x 350 x 180"
 
-#: ../../mining/index.rst:468
+#: ../../mining/index.rst:464
 msgid "`iBelink DM11G <https://ibelink.co/product/ibelink-dm11g/>`_"
 msgstr "`iBelink DM11G <https://ibelink.co/product/ibelink-dm11g/>`_"
 
-#: ../../mining/index.rst:468
+#: ../../mining/index.rst:464
 msgid "11 GH/s ±5%"
 msgstr "11 GH/s ±5%"
 
-#: ../../mining/index.rst:468 ../../mining/index.rst:470
+#: ../../mining/index.rst:464 ../../mining/index.rst:466
 msgid "810 W"
 msgstr "810 W"
 
-#: ../../mining/index.rst:468
+#: ../../mining/index.rst:464
 msgid "22 kg"
 msgstr "22 kg"
 
-#: ../../mining/index.rst:470
+#: ../../mining/index.rst:466
 msgid ""
 "`iBelink DM22G <https://ibelink.co/product/ibelink-dm22g-x11dash-miner-"
 "with-22-ghs-hash-rate/>`_"
@@ -1201,108 +1157,108 @@ msgstr ""
 "`iBelink DM22G <https://ibelink.co/product/ibelink-dm22g-x11dash-miner-"
 "with-22-ghs-hash-rate/>`_"
 
-#: ../../mining/index.rst:470
+#: ../../mining/index.rst:466
 msgid "22 GH/s ±5%"
 msgstr "22 GH/s ±5%"
 
-#: ../../mining/index.rst:470
+#: ../../mining/index.rst:466
 msgid "19 kg"
 msgstr "19 kg"
 
-#: ../../mining/index.rst:472
+#: ../../mining/index.rst:468
 msgid "Pinidea DR-1"
-msgstr ""
+msgstr "Pinidea DR-1"
 
-#: ../../mining/index.rst:472
+#: ../../mining/index.rst:468
 msgid "500 MH/s ±10%"
 msgstr "500 MH/s ±10%"
 
-#: ../../mining/index.rst:472
+#: ../../mining/index.rst:468
 msgid "320 W"
 msgstr "320 W"
 
-#: ../../mining/index.rst:472 ../../mining/index.rst:474
-#: ../../mining/index.rst:476
+#: ../../mining/index.rst:468 ../../mining/index.rst:470
+#: ../../mining/index.rst:472
 msgid "4.5 kg"
 msgstr "4,5 kg"
 
-#: ../../mining/index.rst:472
+#: ../../mining/index.rst:468
 msgid "290 x 130 x 150"
 msgstr "290 x 130 x 150"
 
-#: ../../mining/index.rst:474
+#: ../../mining/index.rst:470
 msgid "Pinidea DR-2"
-msgstr ""
+msgstr "Pinidea DR-2"
 
-#: ../../mining/index.rst:474
+#: ../../mining/index.rst:470
 msgid "450 MH/s ±5%"
 msgstr "450 MH/s ±5%"
 
-#: ../../mining/index.rst:474
+#: ../../mining/index.rst:470
 msgid "335 W"
 msgstr "335 W"
 
-#: ../../mining/index.rst:474 ../../mining/index.rst:476
+#: ../../mining/index.rst:470 ../../mining/index.rst:472
 msgid "200 x 165 x 135"
 msgstr "200 x 165 x 135"
 
-#: ../../mining/index.rst:476
+#: ../../mining/index.rst:472
 msgid "Pinidea DR-3"
-msgstr ""
+msgstr "Pinidea DR-3"
 
-#: ../../mining/index.rst:476
+#: ../../mining/index.rst:472
 msgid "600 MH/s ±5%"
 msgstr "600 MH/s ±5%"
 
-#: ../../mining/index.rst:476
+#: ../../mining/index.rst:472
 msgid "345 W"
 msgstr "345 W"
 
-#: ../../mining/index.rst:478
+#: ../../mining/index.rst:474
 msgid "Pinidea DU-1"
-msgstr ""
+msgstr "Pinidea DU-1"
 
-#: ../../mining/index.rst:478
+#: ../../mining/index.rst:474
 msgid "9 MH/s ±5%"
 msgstr "9 MH/s ±5%"
 
-#: ../../mining/index.rst:478
+#: ../../mining/index.rst:474
 msgid "7 W"
 msgstr "7 W"
 
-#: ../../mining/index.rst:478
+#: ../../mining/index.rst:474
 msgid "50 x 50 x 30"
 msgstr "50 x 50 x 30"
 
-#: ../../mining/index.rst:480
+#: ../../mining/index.rst:476
 msgid "Pinidea DRX-Kuznetsov"
-msgstr ""
+msgstr "Pinidea DRX-Kuznetsov"
 
-#: ../../mining/index.rst:480
+#: ../../mining/index.rst:476
 msgid "900 MH/s ±5%"
 msgstr "900 MH/s ±5%"
 
-#: ../../mining/index.rst:480
+#: ../../mining/index.rst:476
 msgid "650 W"
 msgstr "650 W"
 
-#: ../../mining/index.rst:480 ../../mining/index.rst:482
+#: ../../mining/index.rst:476 ../../mining/index.rst:478
 msgid "280 x 180 x 150"
 msgstr "280 x 180 x 150"
 
-#: ../../mining/index.rst:482
+#: ../../mining/index.rst:478
 msgid "Pinidea DRX-Varyag"
-msgstr ""
+msgstr "Pinidea DRX-Varyag"
 
-#: ../../mining/index.rst:482
+#: ../../mining/index.rst:478
 msgid "1200 MH/s ±5%"
 msgstr "1200 MH/s ±5%"
 
-#: ../../mining/index.rst:482
+#: ../../mining/index.rst:478
 msgid "850 W"
 msgstr "850 W"
 
-#: ../../mining/index.rst:484
+#: ../../mining/index.rst:480
 msgid ""
 "`iBelink DM56G <https://ibelink.co/product/ibelink-dm56g-x11-dash-miner-"
 "with-56-gh-s-hash-rate/>`_"
@@ -1310,35 +1266,36 @@ msgstr ""
 "`iBelink DM56G <https://ibelink.co/product/ibelink-dm56g-x11-dash-miner-"
 "with-56-gh-s-hash-rate/>`_"
 
-#: ../../mining/index.rst:484
+#: ../../mining/index.rst:480
 msgid "56 GH/s ±5%"
 msgstr "56 GH/s ±5%"
 
-#: ../../mining/index.rst:484
+#: ../../mining/index.rst:480
 msgid "17 kg"
 msgstr "17 kg"
 
-#: ../../mining/index.rst:484
+#: ../../mining/index.rst:480
 msgid "490 x 390 x 180"
 msgstr "490 x 390 x 180"
 
-#: ../../mining/index.rst:486
+#: ../../mining/index.rst:482
 msgid ""
 "`Innosilicon A5 <https://www.innosilicon.com/html/a5-miner/index.html>`_"
 msgstr ""
+"`Innosilicon A5 <https://www.innosilicon.com/html/a5-miner/index.html>`_"
 
-#: ../../mining/index.rst:486
+#: ../../mining/index.rst:482
 msgid "32 GH/s ±8%"
 msgstr "32 GH/s ±8%"
 
-#: ../../mining/index.rst:486
+#: ../../mining/index.rst:482
 msgid "750 W"
 msgstr "750 W"
 
-#: ../../mining/index.rst:486
+#: ../../mining/index.rst:482
 msgid "3.1 kg"
 msgstr "3,1 kg"
 
-#: ../../mining/index.rst:486
+#: ../../mining/index.rst:482
 msgid "400 x 135 x 158"
 msgstr "400 x 135 x 158"

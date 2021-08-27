@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2019-01-11 06:53+0000\n"
 "Last-Translator: jmp2esp <xsrf@icloud.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -60,13 +60,11 @@ msgstr ""
 
 #: ../../developers/insight.rst:23
 msgid ""
-"A standard installation of Ubuntu Linux 18.04 LTS will be used as an "
+"A standard installation of Ubuntu Linux 20.04 LTS will be used as an "
 "environment for the server. We assume you are running as a user with sudo "
 "permissions. First update all packages and install some tools and "
 "dependencies::"
 msgstr ""
-"一个在Ubuntu Linux 18.04 LTS标准安装将作为服务器环境。我们假使你使用一个具有 sudo "
-"权限的账号。首先升级所有包和安装一些工具及依赖："
 
 #: ../../developers/insight.rst:32
 msgid "Download and extract the latest version of Dash Core::"
@@ -79,33 +77,33 @@ msgid ""
 msgstr ""
 "安装 `Dashcore Node <https://github.com/dashevo/dashcore-node>`_  并创建你的配置："
 
-#: ../../developers/insight.rst:45
+#: ../../developers/insight.rst:47
 msgid "Install the Insight API service and (optionally) Insight UI::"
 msgstr "安装 Insight API 服务和（可选）Insight UI："
 
-#: ../../developers/insight.rst:51
+#: ../../developers/insight.rst:53
 msgid "Change paths in the configuration file as follows::"
 msgstr "改变配置文件中的路径如下："
 
-#: ../../developers/insight.rst:55
-msgid "Change the value of ``datadir`` to ``../.dashcore``"
-msgstr "将“datadir”的值改为”../.dashcore“"
-
-#: ../../developers/insight.rst:56
-msgid "Change the value of ``exec`` to ``../dashcore-0.16.0/bin/dashd``"
+#: ../../developers/insight.rst:57
+msgid "Change the value of ``datadir`` to ``../../.dashcore``"
 msgstr ""
 
-#: ../../developers/insight.rst:57
+#: ../../developers/insight.rst:58
+msgid "Change the value of ``exec`` to ``../../dashcore-0.16.1/bin/dashd``"
+msgstr ""
+
+#: ../../developers/insight.rst:59
 msgid ""
 "**Optionally** change the value of ``network`` to ``testnet`` if you want to"
 " run Insight on testnet"
 msgstr "**可选**将”network“的值改为”testnet“如果你想在测试网络上运行 Insight 的话"
 
-#: ../../developers/insight.rst:60
+#: ../../developers/insight.rst:62
 msgid "Run it::"
 msgstr "运行："
 
-#: ../../developers/insight.rst:64
+#: ../../developers/insight.rst:66
 msgid ""
 "Your Insight API node will start up and begin to sync. Progress will be "
 "displayed on stdout. Once sync is complete, the `API endpoints listed in the"
@@ -116,6 +114,6 @@ msgstr ""
 " documentation <https://github.com/dashevo/insight-api#api-http-endpoints>`_"
 " ："
 
-#: ../../developers/insight.rst:71
+#: ../../developers/insight.rst:73
 msgid "The Insight UI block explorer will be available at::"
 msgstr "Insight UI 区块浏览器可在："
