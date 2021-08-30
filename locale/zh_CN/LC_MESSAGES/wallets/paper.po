@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -373,17 +373,14 @@ msgid ""
 "Dash Core Wallet in this example, although Dash Electrum and mobile wallets "
 "are also supported. Open Dash Core Wallet, click **Settings** and **Unlock "
 "Wallet**. Enter your wallet passphrase. Then click **Tools** and select "
-"**Debug Console**. The console appears. Enter the following command:"
+"**Debug Console**. The console appears. Enter the following command::"
 msgstr ""
-"当您准备花费在纸钱包上的金额时，您需要将用于控制打印在钱包上的地址的私钥导入到另一个连接到互联网的达世币钱包中。我们将在本例中使用Dash "
-"Core钱包，尽管Dash Electrum和移动钱包也是支持的。打开Dash Core钱包，单击 **设置** 和 **解锁钱包** "
-"。输入您的钱包密码。然后单击 **工具** 并选择 **调试控制台** 。控制台出现。输入以下命令："
 
-#: ../../wallets/paper.rst:236
+#: ../../wallets/paper.rst:234
 msgid "Dash Core Wallet importing a private key"
 msgstr "Dash Core钱包导入私钥"
 
-#: ../../wallets/paper.rst:238
+#: ../../wallets/paper.rst:236
 msgid ""
 "This process requires rescanning the entire downloaded blockchain for "
 "transactions involving this address, and will therefore take some time. Be "
@@ -393,13 +390,13 @@ msgid ""
 msgstr ""
 "此过程需要对涉及此地址的交易重新扫描整个下载的区块链，因此需要花费一些时间。耐心点。一旦此过程完成，涉及导入地址的任何交易将出现在您的交易列表中。如果您使用货币控制控制，您还可以启用或禁用交易正在支出的地址。"
 
-#: ../../wallets/paper.rst:251
+#: ../../wallets/paper.rst:249
 msgid ""
 "Paper wallet address successfully imported into Dash Core Wallet from WIF "
 "private key"
 msgstr "从WIF私钥成功导入Dash Core钱包的纸钱包地址"
 
-#: ../../wallets/paper.rst:254
+#: ../../wallets/paper.rst:252
 msgid ""
 "Since the paper wallet public address still holds the funds, it can also be "
 "imported again into a second wallet if it is not destroyed. It is "
@@ -411,7 +408,7 @@ msgid ""
 msgstr ""
 "因为纸钱包的公共地址仍然持有资金，如果不销毁该公共地址，它也可以被再次导入到第二个钱包中。建议将余额从纸钱包转移到内部钱包地址或其他您对私钥有独占控制权的地址中。这将阻止第三方在您之前从纸钱包中获得对相同地址的未经授权的访问。然后您可以像往常一样支出您的余额。"
 
-#: ../../wallets/paper.rst:262
+#: ../../wallets/paper.rst:260
 msgid ""
 "Once the paper wallet is empty and you are sure it will not be receiving any"
 " further deposits, you can destroy the paper."

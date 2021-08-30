@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2018-04-09 11:01+0000\n"
 "Last-Translator: Alessandro Lotta <mediterraneo9000@gmail.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
@@ -38,25 +38,16 @@ msgstr "Sviluppatori"
 #: ../../developers/index.rst:11
 msgid ""
 "The `Dash Platform Developer Documentation "
-"<https://dashplatform.readme.io/>` contains technical documentation intended"
-" to help developers quickly and easily get started with Dash Platform. The "
-"`Dash Core Developer Documentation <https://dashcore.readme.io/>` provides "
-"detailed documentation on the Dash Core code base, and serves as a reference"
-" for experienced developers. These documentation portals can help developers"
-" to quickly and efficiently integrate external applications with the Dash "
-"ecosystem. Anyone can contribute to the documentation by suggesting edits in"
-" the documentation system."
+"<https://dashplatform.readme.io/>`_ contains technical documentation "
+"intended to help developers quickly and easily get started with Dash "
+"Platform. The `Dash Core Developer Documentation "
+"<https://dashcore.readme.io/>`_ provides detailed documentation on the Dash "
+"Core code base, and serves as a reference for experienced developers. These "
+"documentation portals can help developers to quickly and efficiently "
+"integrate external applications with the Dash ecosystem. Anyone can "
+"contribute to the documentation by suggesting edits in the documentation "
+"system."
 msgstr ""
-"La `Dash Platform Developer Documentation <https://dashplatform.readme.io/>`"
-" contiene la documentazione tecnica intesa ad aiutare gli sviluppatori, in "
-"modo facile e rapido, ad iniziare con Dash Platform. La `Dash Core Developer"
-" Documentation <https://dashcore.readme.io/>` fornisce una documentazione "
-"dettagliata riguardo il codice di base di Dash Core, e serve come "
-"riferimento per sviluppatori esperti. Queste bacheche di documentazione "
-"possono aiutare gli sviluppatori ad incastonare in modo rapido ed efficiente"
-" le applicazioni esterne con l'ecosistema Dash. Chiunque può contribuire "
-"all'aggiornamento della documentazione suggerendo modifiche nel sistema di "
-"documentazione."
 
 #: ../../developers/index.rst:21
 msgid ""
@@ -110,11 +101,11 @@ msgstr ""
 "Le restanti sezioni disponibili di seguito descrivono i passaggi pratici per"
 " eseguire attività di sviluppo comune in Dash."
 
-#: ../../developers/index.rst:54
+#: ../../developers/index.rst:52
 msgid "Sporks"
 msgstr "Sporks"
 
-#: ../../developers/index.rst:56
+#: ../../developers/index.rst:54
 msgid ""
 "A multi-phased fork, colloquially known as a \"spork\", is a mechanism "
 "unique to Dash used to safely deploy new features to the network through "
@@ -135,11 +126,11 @@ msgstr ""
 "ogni spork attualmente esistente sulla rete e come controllarne i rispettivi"
 " stati."
 
-#: ../../developers/index.rst:66
+#: ../../developers/index.rst:64
 msgid "Spork functions"
 msgstr "Funzioni degli spork"
 
-#: ../../developers/index.rst:68
+#: ../../developers/index.rst:66
 msgid ""
 "Sporks are set using integer values. Many sporks may be set to a particular "
 "epoch datetime (number of seconds that have elapsed since January 1, 1970) "
@@ -162,11 +153,12 @@ msgstr ""
 msgid "SPORK_2_INSTANTSEND_ENABLED"
 msgstr "SPORK_2_INSTANTSEND_ENABLED"
 
-#: ../../developers/index.rst:77
-msgid "Governs the ability of Dash clients to use InstantSend functionality."
+#: ../../developers/index.rst:75
+msgid ""
+"Governs the ability of Dash clients to use InstantSend functionality. "
+"InstantSend is described in `DIP0010 LLMQ-based InstantSend "
+"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__."
 msgstr ""
-"Controlla la capacità dei client Dash per utilizzare la funzionalità "
-"InstantSend."
 
 #: ../../developers/index.rst:81
 msgid "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
@@ -180,69 +172,22 @@ msgstr ""
 "Se abilitato, i masternode rifiuteranno i blocchi contenenti transazioni in "
 "conflitto con transazioni InstantSend bloccate ma non confermate."
 
-#: ../../developers/index.rst:87
-msgid "SPORK_6_NEW_SIGS"
-msgstr "SPORK_6_NEW_SIGS"
-
-#: ../../developers/index.rst:84
-msgid ""
-"Enables a new signature format for Dash-specific network messages introduced"
-" in Dash 12.3. For more information, see `here "
-"<https://github.com/dashpay/dash/pull/1936>`__ and `here "
-"<https://github.com/dashpay/dash/pull/1937>`__."
-msgstr ""
-"Abilita un nuovo formato di firma per i messaggi di rete specifici di Dash "
-"introdotto in Dash 12.3. Per ulteriori informazioni, vedere \"qui "
-"<https://github.com/dashpay/dash/pull/1936>\" __ e \"qui "
-"<https://github.com/dashpay/dash/pull/1937>\" __."
-
-#: ../../developers/index.rst:91
+#: ../../developers/index.rst:85
 msgid "SPORK_9_SUPERBLOCKS_ENABLED"
 msgstr "SPORK_9_SUPERBLOCKS_ENABLED"
 
-#: ../../developers/index.rst:90
+#: ../../developers/index.rst:84
 msgid ""
 "If enabled, superblocks are verified and issued to pay proposal winners."
 msgstr ""
 "Se abilitato, i superblocchi vengono verificati ed emessi per pagare i "
 "vincitori della proposta."
 
-#: ../../developers/index.rst:98
-msgid "SPORK_15_DETERMINISTIC_MNS_ENABLED"
-msgstr "SPORK_15_DETERMINISTIC_MNS_ENABLED"
-
-#: ../../developers/index.rst:94
-msgid ""
-"Controls whether `deterministic masternodes "
-"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ are required. "
-"When activated, the legacy masternode list logic will no longer run and non-"
-"updated masternodes will not be eligible for payment."
-msgstr ""
-"Controlla se sono necessari `masternode deterministici "
-"<https://github.com/dashpay/dips/blob/master/dip-0003.md>` _. Una volta "
-"attivato, la logica dell'elenco masternode legacy non verrà più eseguita ed "
-"i masternode non aggiornati non saranno idonei per il pagamento."
-
-#: ../../developers/index.rst:104
-msgid "SPORK_16_INSTANTSEND_AUTOLOCKS"
-msgstr "SPORK_16_INSTANTSEND_AUTOLOCKS"
-
-#: ../../developers/index.rst:101
-msgid ""
-"Enables automatic transaction locking for transactions with less than a "
-"specified number of inputs, and removes the legacy InstantSend fee. Allows "
-"any node to request the transaction lock, not just the sending node."
-msgstr ""
-"Abilita il blocco automatico delle transazioni per le transazioni con input "
-"inferiori ad un determinato numero e rimuove la tariffa InstantSend "
-"precedente. Consente a qualsiasi nodo di richiedere il blocco della "
-"transazione; non solo il nodo mittente."
-
-#: ../../developers/index.rst:110
+#: ../../developers/index.rst:91
 msgid "SPORK_17_QUORUM_DKG_ENABLED"
 msgstr "SPORK_17_QUORUM_DKG_ENABLED"
 
-#: ../../developers/index.rst:107
+#: ../../developers/index.rst:88
 msgid ""
 "Enables the `DKG process to create LLMQ quorums "
 "<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. This spork will"
@@ -254,11 +199,11 @@ msgstr ""
 "verrà attivato una volta che l'80% dei masternode sarà aggiornato alla "
 "v0.14, che abiliterà DKG e PoSe basato su DKG."
 
-#: ../../developers/index.rst:115
+#: ../../developers/index.rst:96
 msgid "SPORK_19_CHAINLOCKS_ENABLED"
 msgstr "SPORK_19_CHAINLOCKS_ENABLED"
 
-#: ../../developers/index.rst:113
+#: ../../developers/index.rst:94
 msgid ""
 "Enables :ref:`ChainLocks <chainlocks>`, a mechanism of preventing the risk "
 "to payments introduced by blockchain reorganization events. ChainLocks are "
@@ -270,25 +215,31 @@ msgstr ""
 "ChainLocks sono descritti in `DIP0008 ChainLocks "
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>` __."
 
-#: ../../developers/index.rst:121
-msgid "SPORK_20_INSTANTSEND_LLMQ_BASED"
-msgstr "SPORK_20_INSTANTSEND_LLMQ_BASED"
-
-#: ../../developers/index.rst:118
-msgid ""
-"When enabled, legacy InstantSend is superseded by LLMQ-based InstantSend, as"
-" described in `DIP0010 LLMQ-based InstantSend "
-"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__."
+#: ../../developers/index.rst:100
+msgid "SPORK_21_QUORUM_ALL_CONNECTED"
 msgstr ""
-"Quando è abilitato, InstantSend legacy viene sostituito da InstantSend "
-"basato su LLMQ, come descritto in `DIP0010 InstantSend basato su LLMQ "
-"<https://github.com/dashpay/dips/blob/master/dip-0010.md>` __."
 
-#: ../../developers/index.rst:124
+#: ../../developers/index.rst:99
+msgid ""
+"Enables connections between all masternodes in a quorum to optimize the "
+"signature recovery process."
+msgstr ""
+
+#: ../../developers/index.rst:104
+msgid "SPORK_23_QUORUM_POSE"
+msgstr ""
+
+#: ../../developers/index.rst:103
+msgid ""
+"Enforces Proof of Service requirements for masternodes to support a minimum "
+"protocol version and maintain open ports."
+msgstr ""
+
+#: ../../developers/index.rst:107
 msgid "Viewing spork status"
 msgstr "Visualizzazione status dello spork"
 
-#: ../../developers/index.rst:126
+#: ../../developers/index.rst:109
 msgid ""
 "The ``spork show`` and ``spork active`` commands issued in the debug window "
 "(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
@@ -299,20 +250,20 @@ msgstr ""
 "gli spork. Puoi aprire la finestra di debug selezionando ** Strumenti> "
 "Console di debug **."
 
-#: ../../developers/index.rst:134
+#: ../../developers/index.rst:117
 msgid "spork show and spork active output in the Dash Core debug console"
 msgstr "spork show e spork active output nella console di debug di Dash Core"
 
-#: ../../developers/index.rst:138
+#: ../../developers/index.rst:121
 msgid "Version History"
 msgstr "Cronologia delle versioni"
 
-#: ../../developers/index.rst:140
+#: ../../developers/index.rst:123
 msgid "Full release notes and the version history of Dash are available here:"
 msgstr ""
 "Le note di rilascio complete e la cronologia delle versioni di Dash sono "
 "disponibili qui:"
 
-#: ../../developers/index.rst:142
+#: ../../developers/index.rst:125
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
 msgstr "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"

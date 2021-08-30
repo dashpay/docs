@@ -7,17 +7,16 @@
 # Max Aronych <taofgoar@protonmail.com>, 2018
 # Андрей Дегтяр <diusha1711@gmail.com>, 2019
 # Julia Ogonkova <livingflcl@gmail.com>, 2019
-# Dmitry <dmitry.zhludin@gmail.com>, 2019
-# Leon White <leon.white@dash.org>, 2019
+# Dima, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
+"Last-Translator: Dima, 2021\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,18 +27,14 @@ msgstr ""
 #: ../../masternodes/understanding.rst:1
 msgid ""
 "Explanation of how Dash masternodes work in theory and practice to support "
-"InstantSend, PrivateSend and governance"
+"InstantSend, CoinJoin and governance"
 msgstr ""
-"Объяснение теоретических и практических принципов работы мастернод Dash при "
-"обеспечении функций InstantSend, PrivateSend и управления."
 
 #: ../../masternodes/understanding.rst:1
 msgid ""
-"dash, masternodes, hosting, linux, payment, instantsend, privatesend, "
-"governance, quorum, evolution, bls,"
+"dash, masternodes, hosting, linux, payment, instantsend, coinjoin, "
+"privatesend, governance, quorum, evolution, bls,"
 msgstr ""
-"dash, мастерноды, хостинг, linux, платежи, instantsend, privatesend, "
-"управление, кворум, evolution, bls"
 
 #: ../../masternodes/understanding.rst:9
 msgid "Understanding Masternodes"
@@ -63,7 +58,7 @@ msgid ""
 "Simply put, a masternode is a server with a full copy of the Dash "
 "blockchain, which guarantees a certain minimum level of performance and "
 "functionality to perform certain tasks related to block validation, as well "
-"as PrivateSend and InstantSend, as the privacy and instant transaction "
+"as InstantSend and CoinJoin, as the and instant transaction and privacy "
 "features in Dash are called. The masternodes are paid for this service, "
 "using a concept known as Proof of Service. This is in addition to the Proof "
 "of Work done by miners to secure the blockchain. Masternodes are also "
@@ -94,7 +89,7 @@ msgstr ""
 
 #: ../../masternodes/understanding.rst:43
 msgid ""
-"Masternodes are paid by the network for the PrivateSend, InstantSend and "
+"Masternodes are paid by the network for the InstantSend, CoinJoin and "
 "governance services they provide. 45% of the block reward is paid out to the"
 " masternodes, 45% to miners and 10% to the budget. In practice, half of the "
 "reward from a normal block goes to the miner and half to the masternode. "
@@ -109,21 +104,6 @@ msgid ""
 "masternodes are given incentive to provide efficient and reliable services "
 "to the network."
 msgstr ""
-"Мастерноды получают плату от сети за обеспечение работы сервисов "
-"PrivateSend, InstantSend и управления. 45% награды за блок получают "
-"мастерноды, 45% - майнеры и 10% идут в Бюджет. На практике, половина награды"
-" за блок идёт майнерам и половина мастернодам. Далее, каждые 16616 блоков "
-"(примерно 30,29 дней) создаётся суперблок, который содержит 10% награды за "
-"блок, он распределяется на выплаты бюджетным предложениям, получившим "
-"одобрение. Мастерноды, которые получат награду выбираются в каждом блоке из "
-"детерминированного списка мастернод (примерно каждые 2,6 минуты) и после "
-"получения выплаты перемещаются в конец списка. По мере увеличения числа "
-"мастернод, растёт и время ожидания выплаты. Если залоговое подтверждение "
-"мастерноды будет потрачено или мастернода перестанет обеспечивать работу "
-"сервисов в сети на время более часа, то она удаляется из списка до "
-"восстановления нормального функционирования. Таким образом, мастерноды "
-"получают стимулирование за обеспечение эффективной и надёжной работы "
-"сервисов в сети."
 
 #: ../../masternodes/understanding.rst:58
 msgid ""
@@ -437,22 +417,13 @@ msgstr ""
 msgid ""
 "Dash works a little differently from Bitcoin, however, because it has a two-"
 "tier network. The second tier is powered by masternodes (Full Nodes), which "
-"enable financial privacy (PrivateSend), instant transactions (InstantSend), "
-"and the decentralized governance and budget system. Because this second tier"
-" is so important, masternodes are also rewarded when miners discover new "
+"enable financial privacy (CoinJoin), instant transactions (InstantSend), and"
+" the decentralized governance and budget system. Because this second tier is"
+" so important, masternodes are also rewarded when miners discover new "
 "blocks. The breakdown is as follows: 45% of the block reward goes to the "
 "miner, 45% goes to masternodes, and 10% is reserved for the budget system "
 "(created by superblocks every month)."
 msgstr ""
-"Dash работает несколько иначе, чем Bitcoin, причина этого в двухуровневой "
-"сети. Второй уровень сети обеспечивается мастернодами (полными нодами), "
-"которые предоставляют финансовую анонимность (PrivateSend), мгновенные "
-"транзакции (InstantSend) и децентрализованное управление с бюджетной "
-"системой. По этим причинам, второй уровень очень важен. В дополнение к "
-"этому, мастерноды получают награды, когда майнеры находят новые блоки. "
-"Награды распределяются следующим образом: 45% награды за блок идёт майнерам,"
-" 45% идёт мастернодам и 10% резервируется для системы Бюджета (эта часть "
-"содержится в ежемесячных суперблоках)."
 
 #: ../../masternodes/understanding.rst:191
 msgid ""
@@ -611,7 +582,7 @@ msgstr ""
 
 #: ../../masternodes/understanding.rst:278
 msgid "Masternode requirements"
-msgstr "Тербования к мастернодам"
+msgstr "Требования к мастернодам"
 
 #: ../../masternodes/understanding.rst:280
 msgid ""
@@ -620,22 +591,17 @@ msgid ""
 " an excellent way."
 msgstr ""
 "1000 DASH: пожалуй, самая трудная часть, но это утверждение спорно. Dash "
-"можно приобрести на таких биржах как Poloniex, Bittrex, Kraken и Livecoin. "
-"Также будет очень удобно воспользоваться ShapeShift."
+"можно приобрести на таких биржах как Poloniex, Bittrex и Kraken. Также будет"
+" очень удобно воспользоваться ShapeShift."
 
 #: ../../masternodes/understanding.rst:283
 msgid ""
-"A server or VPS running Linux: Most recent guides use Ubuntu 18.04 LTS. We "
+"A server or VPS running Linux: Most recent guides use Ubuntu 20.04 LTS. We "
 "recommend VPS services such as Vultr and DigitalOcean, although any decent "
 "provider will do. Generally an instance with low to average specifications "
 "will do, although performance requirements will increase according to this "
 "roadmap."
 msgstr ""
-"Сервер, работающий на Linux: последние руководства используют Ubuntu 18.04 "
-"LTS, Мы рекомендуем VPS сервисы такие как Vultr и DigitalOcean, но подойдёт "
-"любой хороший провайдер. В целом, подойдёт система со средними "
-"характеристиками, но по мере продвижения по дорожной карте, системные "
-"требования будут расти."
 
 #: ../../masternodes/understanding.rst:288
 msgid "A dedicated IP address: These usually come with the VPS/server."

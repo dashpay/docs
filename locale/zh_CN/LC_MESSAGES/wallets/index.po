@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2018-02-08 10:31+0000\n"
 "Last-Translator: jmp2esp <xsrf@icloud.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -71,32 +71,29 @@ msgstr "Dash Core钱包"
 #: ../../wallets/index.rst:32
 msgid ""
 "Dash Core Wallet is the full official release of Dash, and supports all Dash"
-" features as they are released, including InstantSend and PrivateSend, as "
-"well as an RPC console and governance features. Dash Core Wallet (sometimes "
-"known as the QT wallet, due to the QT software framework used in "
-"development) is a professional or heavy wallet which downloads the full "
-"blockchain (several GB in size) and can operate as both a full node or "
-"masternode on the network. Because of the requirement to hold a full copy of"
-" the blockchain, some time is required for synchronisation when starting the"
-" wallet. Once this is done, the correct balances will be displayed and the "
-"functions in the wallet can be used. Dash Core Wallet is available for "
-"macOS, Linux, Raspberry Pi and Windows."
+" features as they are released, including InstantSend and CoinJoin, as well "
+"as an RPC console and governance features. Dash Core Wallet (sometimes known"
+" as the QT wallet, due to the QT software framework used in development) is "
+"a professional or heavy wallet which downloads the full blockchain (several "
+"GB in size) and can operate as both a full node or masternode on the "
+"network. Because of the requirement to hold a full copy of the blockchain, "
+"some time is required for synchronisation when starting the wallet. Once "
+"this is done, the correct balances will be displayed and the functions in "
+"the wallet can be used. Dash Core Wallet is available for macOS, Linux, "
+"Raspberry Pi and Windows."
 msgstr ""
-"Dash Core钱包由达世币官方全权发行，支持达世币的所有功能，包括即时支付和匿名支付，以及远程过程调用RPC控制台和管理功能。Dash "
-"Core钱包（因为开发中用到了QT的软件架构，有时也称QT钱包。）是一个专业的重量钱包，它下载了整个区块链（有几个GB大小），可以像全节点或主节点那样运行。因为需要保留区块链的全部拷贝，打开钱包时需要一段时间去同步。当同步完成后，就会显示正确的余额，钱包的功能也可以使用了。Dash"
-" Core钱包有适用于macOs、Linux、Raspberry Pi和Windows系统的版本。"
 
 #: ../../wallets/index.rst:45
 msgid "Features:"
 msgstr "特点："
 
 #: ../../wallets/index.rst:47
-msgid "PrivateSend"
-msgstr "匿名支付"
-
-#: ../../wallets/index.rst:48
 msgid "InstantSend"
 msgstr "即时支付"
+
+#: ../../wallets/index.rst:48
+msgid "CoinJoin"
+msgstr ""
 
 #: ../../wallets/index.rst:49
 msgid "Wallet encryption"
@@ -138,7 +135,7 @@ msgid ""
 " called Secure Payment Verification (SPV), which only requires the block "
 "headers and not the full block. This means that wallet startup is almost "
 "instant, while still keeping your funds secure and mobile. Dash Electrum "
-"also supports advanced InstantSend, PrivateSend and masternode features."
+"also supports advanced InstantSend, CoinJoin and masternode features."
 msgstr ""
 
 #: ../../wallets/index.rst:88
@@ -289,15 +286,11 @@ msgid ""
 msgstr ""
 "手机短信服务钱包可以帮助没有智能手机或网络连接的用户通过短信服务或基本的手机功能完成达世币交易。新颖的简码通常与国内的手机服务运营一起使用，使达世币的发送和接收变得更加简单。"
 
-#: ../../wallets/index.rst:284
-msgid "Dash CoinText"
-msgstr "达世币 CoinText"
-
-#: ../../wallets/index.rst:288
+#: ../../wallets/index.rst:283
 msgid "Wallet Guides"
 msgstr "钱包指南"
 
-#: ../../wallets/index.rst:290
+#: ../../wallets/index.rst:285
 msgid ""
 "Documentation in this section describes common tasks and questions relating "
 "to all wallets."

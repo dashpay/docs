@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2018-02-08 10:31+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
 "Language-Team: Korean (https://www.transifex.com/dash/teams/37570/ko/)\n"
@@ -73,35 +73,29 @@ msgstr "Dash Core 지갑"
 #: ../../wallets/index.rst:32
 msgid ""
 "Dash Core Wallet is the full official release of Dash, and supports all Dash"
-" features as they are released, including InstantSend and PrivateSend, as "
-"well as an RPC console and governance features. Dash Core Wallet (sometimes "
-"known as the QT wallet, due to the QT software framework used in "
-"development) is a professional or heavy wallet which downloads the full "
-"blockchain (several GB in size) and can operate as both a full node or "
-"masternode on the network. Because of the requirement to hold a full copy of"
-" the blockchain, some time is required for synchronisation when starting the"
-" wallet. Once this is done, the correct balances will be displayed and the "
-"functions in the wallet can be used. Dash Core Wallet is available for "
-"macOS, Linux, Raspberry Pi and Windows."
+" features as they are released, including InstantSend and CoinJoin, as well "
+"as an RPC console and governance features. Dash Core Wallet (sometimes known"
+" as the QT wallet, due to the QT software framework used in development) is "
+"a professional or heavy wallet which downloads the full blockchain (several "
+"GB in size) and can operate as both a full node or masternode on the "
+"network. Because of the requirement to hold a full copy of the blockchain, "
+"some time is required for synchronisation when starting the wallet. Once "
+"this is done, the correct balances will be displayed and the functions in "
+"the wallet can be used. Dash Core Wallet is available for macOS, Linux, "
+"Raspberry Pi and Windows."
 msgstr ""
-"Dash Core 지갑은 Dash의 공식 릴리스 지갑이며, 인스턴드샌드 및 프라이빗샌드는 물론 RPC 콘솔 및 거버넌스 기능을 포함하여 "
-"모든 Dash 기능을 지원합니다. Dash Core Wallet (개발에 사용되는 QT 소프트웨어 프레임 워크로 인해 QT 지갑으로도 "
-"알려짐)은 전체 블록 체인 (몇 GB 사이즈)을 다운로드하고 전체 노드 또는 마스터노드로 작동할 수있는 전문적이고도 무거운 지갑입니다. "
-". 블록 체인의 전체 복사본을 보관해야하기 때문에 지갑을 시작할 때 동기화에  약간의 시간이 필요합니다. 이 작업이 완료되면 올바른 "
-"잔액이 표시되고 지갑의 기능을 사용할 수 있습니다. Dash Core Wallet은 맥OS, 리눅스, 라즈베리파이 및 윈도우즈에서 사용 "
-"가능 합니다."
 
 #: ../../wallets/index.rst:45
 msgid "Features:"
 msgstr "특징:"
 
 #: ../../wallets/index.rst:47
-msgid "PrivateSend"
-msgstr "프라이빗샌드"
-
-#: ../../wallets/index.rst:48
 msgid "InstantSend"
 msgstr "인스턴트샌드(InstantSend)"
+
+#: ../../wallets/index.rst:48
+msgid "CoinJoin"
+msgstr ""
 
 #: ../../wallets/index.rst:49
 msgid "Wallet encryption"
@@ -143,7 +137,7 @@ msgid ""
 " called Secure Payment Verification (SPV), which only requires the block "
 "headers and not the full block. This means that wallet startup is almost "
 "instant, while still keeping your funds secure and mobile. Dash Electrum "
-"also supports advanced InstantSend, PrivateSend and masternode features."
+"also supports advanced InstantSend, CoinJoin and masternode features."
 msgstr ""
 
 #: ../../wallets/index.rst:88
@@ -307,15 +301,11 @@ msgstr ""
 "텍스트 지갑 (또는 SMS 지갑)을 사용하면 스마트폰이나 인터넷이 없어도 사용자의 휴대폰 문자 메시지를 사용하여 대시 거래가 가능합니다."
 " 혁신적인 단축 코드는 일반적으로 전국 이동 통신 서비스 제공 업체와 공동으로 대시 송수신을 위한 거래 생성이 보다 간소화되었습니다."
 
-#: ../../wallets/index.rst:284
-msgid "Dash CoinText"
-msgstr "대시 코인텍스트"
-
-#: ../../wallets/index.rst:288
+#: ../../wallets/index.rst:283
 msgid "Wallet Guides"
 msgstr "지갑 가이드"
 
-#: ../../wallets/index.rst:290
+#: ../../wallets/index.rst:285
 msgid ""
 "Documentation in this section describes common tasks and questions relating "
 "to all wallets."

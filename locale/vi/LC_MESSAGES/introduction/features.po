@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
 "Last-Translator: Kien Bui <kientemp2@gmail.com>, 2020\n"
 "Language-Team: Vietnamese (https://www.transifex.com/dash/teams/37570/vi/)\n"
@@ -25,18 +25,14 @@ msgstr ""
 #: ../../introduction/features.rst:1
 msgid ""
 "Dash features several unique value propositions including masternodes, "
-"PrivateSend, InstantSend and a decentralized governance system"
+"CoinJoin, InstantSend and a decentralized governance system"
 msgstr ""
-"Dash đặc trưng bởi cung cấp nhiều những giá trị độc đáo như các masternode, "
-"PrivateSend, InstantSend và hệ thống quản trị phi tập trung"
 
 #: ../../introduction/features.rst:1
 msgid ""
-"dash, cryptocurrency, features, masternodes, privatesend, instantsend, "
-"sporks, x11, dgw, governance, sentinel, evolution"
+"dash, cryptocurrency, features, masternodes, coinjoin, privatesend, "
+"instantsend, sporks, x11, dgw, governance, sentinel, evolution"
 msgstr ""
-"dash, tiền kỹ thuật số, tính năng, masternode, privatesend, instantsend, "
-"sporks, x11, dgw, hệ quản trị, sentinel, evolution"
 
 #: ../../introduction/features.rst:9
 msgid "Features"
@@ -82,8 +78,8 @@ msgid "Decentralized second-tier masternode network"
 msgstr "Mạng lưới bậc hai phi tập trung của các masternode"
 
 #: ../../introduction/features.rst:24
-msgid "Superior privacy using PrivateSend"
-msgstr "Cơ chế ẩn danh ưu việt nhờ PrivateSend"
+msgid "Superior privacy using CoinJoin"
+msgstr ""
 
 #: ../../introduction/features.rst:25
 msgid "Instant transactions using InstantSend"
@@ -115,20 +111,11 @@ msgid ""
 "users are also rewarded for running and maintaining special servers called "
 "masternodes. Thanks to this innovative two tier network, Dash can offer "
 "innovative features in a trustless and decentralized way. Masternodes are "
-"used to power PrivateSend, InstantSend, and the governance and treasury "
-"system. Users are rewarded for running masternodes; 45% of the block reward "
-"is allocated to pay the masternode network. You can view practical guides on"
-" all topics relating to masternodes :ref:`here <masternodes>`."
+"used to power CoinJoin, InstantSend, and the governance and treasury system."
+" Users are rewarded for running masternodes; 45% of the block reward is "
+"allocated to pay the masternode network. You can view practical guides on "
+"all topics relating to masternodes :ref:`here <masternodes>`."
 msgstr ""
-"Ngoài phần thưởng của Proof of Work (PoW) truyền thống cho việc đào Dash, "
-"người dùng cũng được thưởng cho việc vận hành và duy trì các máy chủ đặc "
-"biệt được gọi là masternode. Nhờ mạng hai tầng tiên tiến này, Dash có thể "
-"cung cấp các tính năng sáng tạo theo cách không cần tin tưởng và phi tập "
-"trung. Các Masternode được sử dụng cho PrivateSend, InstantSend và hệ thống "
-"quản trị và ngân quỹ. Người dùng được trả thưởng cho việc vận hành các "
-"masternode; 45% của phần thưởng khối được phân bổ để trả cho mạng lưới "
-"masternode. Bạn có thể xem hướng dẫn cụ thể về tất cả các chủ đề liên quan "
-"đến masternodes :ref:`tại đây <masternodes>`."
 
 #: ../../introduction/features.rst:47
 msgid "Masternodes enable the following services:"
@@ -144,11 +131,9 @@ msgstr ""
 
 #: ../../introduction/features.rst:51
 msgid ""
-"**PrivateSend** gives financial privacy through a decentralized "
-"implementation of CoinJoin."
+"**CoinJoin** gives financial privacy through a decentralized implementation "
+"of CoinJoin."
 msgstr ""
-"**PrivateSend** mang đến sự riêng tư về tài chính thông qua việc sử dụng cơ "
-"chế CoinJoin phi tập trung."
 
 #: ../../introduction/features.rst:53
 msgid ""
@@ -212,136 +197,98 @@ msgstr ""
 "thưởng khối. Các masternode cũng có thể nhận được tiền từ phí giao dịch "
 "trong tương lai."
 
-#: ../../introduction/features.rst:81 ../../introduction/features.rst:545
-msgid "PrivateSend"
-msgstr "PrivateSend"
+#: ../../introduction/features.rst:81 ../../introduction/features.rst:595
+msgid "CoinJoin"
+msgstr ""
 
 #: ../../introduction/features.rst:83
 msgid ""
-"PrivateSend gives you true financial privacy by obscuring the origins of "
-"your funds. All the Dash in your wallet is comprised of different "
-"\"inputs\", which you can think of as separate, discrete coins. PrivateSend "
-"uses an innovative process to mix your inputs with the inputs of at least "
-"two other people in a single transaction, so the value in Dash never leaves "
-"your wallet. You retain control of your money at all times."
+"CoinJoin gives you consumer grade financial privacy by shuffling your Dash "
+"with other users. All the Dash in your wallet consists of different inputs, "
+"which you can think of as separate, discrete coins. It uses an innovative "
+"process to join your inputs with the inputs of at least two other people in "
+"a single transaction, so the value in Dash never leaves your wallet. You "
+"retain control of your money at all times."
 msgstr ""
-"PrivateSend cho bạn thực sự riêng tư về tài chính bằng việc che khuất nguồn "
-"gốc nguồn tiền của bạn. Tất cả số Dash trong ví của bạn gồm có \"các đầu "
-"vào\" khác nhau, mà bạn có thể nghĩ chúng là các coin tách rời, phân biệt. "
-"PrivateSend sử dụng một quy trình trộn tiên tiến để trộn lẫn các đầu vào của"
-" bạn với những đầu vào của hai hay nhiều người khác trong một giao dịch suy "
-"nhất, và như vậy giá trị theo Dash không bao giờ rời khỏi ví của bạn. Bạn "
-"vẫn giữ quyền kiểm soát tiền của bạn ở bất cứ thời điểm nào."
 
 #: ../../introduction/features.rst:91
 msgid ""
-"You can view a practical guide to use PrivateSend :ref:`here <dashcore-"
-"privatesend-instantsend>`."
+"You can view a practical guide to use CoinJoin :ref:`here <dashcore-"
+"coinjoin-instantsend>`."
 msgstr ""
-"Bạn có thể xem hướng dẫn thực hành việc sử dụng PrivateSend :ref:`ở đây "
-"<dashcore-privatesend-instantsend>`."
 
 #: ../../introduction/features.rst:94
-msgid "The PrivateSend process works like this:"
-msgstr "Tiến trình làm việc của PrivateSend hoạt động như sau:"
+msgid "The CoinJoin process works like this:"
+msgstr ""
 
 #: ../../introduction/features.rst:96
 msgid ""
-"PrivateSend begins by breaking your transaction inputs down into standard "
-"denominations. These denominations are 0.001, 0.01, 0.1, 1 and 10 DASH -- "
+"CoinJoin begins by breaking your transaction inputs down into standard "
+"denominations. These denominations are 0.001, 0.01, 0.1, 1 and 10 Dash -- "
 "much like the paper money you use every day."
 msgstr ""
-"PrivateSend bắt đầu bằng việc chia những đầu vào trong giao dịch của bạn "
-"thành các mệnh giá chuẩn. Những mệnh giá đó là 0.001, 0.01, 0.1, 1 và 10 "
-"Dash -- Nó cũng giống như các loại tiền giấy mà bạn vẫn dùng hàng ngày."
 
 #: ../../introduction/features.rst:99
 msgid ""
 "Your wallet then sends requests to specially configured software nodes on "
-"the network, called \"masternodes\". These masternodes are informed then "
-"that you are interested in mixing a certain denomination. No identifiable "
-"information is sent to the masternodes, so they never know \"who\" you are."
+"the network called masternodes. These masternodes are informed then that you"
+" are interested in creating a certain denomination using CoinJoin. No "
+"identifiable information is sent to the masternodes, so they never know who "
+"you are."
 msgstr ""
-"Ví của bạn sau đó sẽ gửi yêu cầu cho một nút có phần mềm được cấu hình đặc "
-"biệt trên mạng, được gọi là \"masternode\". Các masternode được thông báo "
-"rằng bạn đang muốn trộn một mệnh giá nhất định. Không có thông tin nhận dạng"
-" nào được gửi cho các masternode, và họ không bao giờ biết bạn \"là ai\"."
 
 #: ../../introduction/features.rst:104
 msgid ""
 "When two other people send similar messages, indicating that they wish to "
-"mix the same denomination, a mixing session begins. The masternode mixes up "
-"the inputs and instructs all three users' wallets to pay the now-transformed"
-" input back to themselves. Your wallet pays that denomination directly to "
-"itself, but in a different address (called a change address)."
+"join coins of the same denomination, a session begins. The masternode "
+"instructs all three users’ wallets to pay the now-transformed inputs to "
+"themselves. Your wallet pays that denomination directly to itself but in a "
+"different address (called a change address)."
 msgstr ""
-"Khi có hai người khác gửi các thông điệp tương tự, cho biết họ muốn trộn "
-"cùng một  mệnh giá, thì một phiên trộn sẽ bắt đầu. Masternode trộn những đầu"
-" vào và ra lệnh cho tất cả các ví của ba người dùng bắt đầu biến đổi đầu vào"
-" để trả cho chính họ. Ví của bạn trả mệnh giá đó trực tiếp cho chính nó, "
-"nhưng trong một địa chỉ khác (gọi là địa chỉ đổi tiền hay địa chỉ trả tiền "
-"lẻ)."
 
 #: ../../introduction/features.rst:110
 msgid ""
-"Your wallet must repeat this process a number of times with each "
-"denomination. Each time the process is completed, it's called a \"round\". "
-"Each round of PrivateSend makes it exponentially more difficult to determine"
-" where your funds originated. The user may choose between 1-16 rounds of "
-"mixing."
+"Your wallet can repeat this process a number of times with each "
+"denomination. Each time the process is completed it’s called a \"round.\" "
+"The user may choose between 2-16 rounds of CoinJoin."
 msgstr ""
-"Ví của bạn phải lặp lại quy trình này một số lần với mỗi mệnh giá. Mỗi thời "
-"điểm khi quy trình được hoàn tất, nó được gọi là một \"vòng\". Mỗi vòng của "
-"PrivateSend làm cho độ khó của việc xác định nguồn gốc giao dịch tăng lên "
-"theo hàm số mũ. Người dùng có thể chọn từ 1-16 vòng trộn."
 
-#: ../../introduction/features.rst:115
+#: ../../introduction/features.rst:113
 msgid ""
-"Your funds will be mixed by at least the number of rounds you specify. Dash "
-"0.16 includes an update known as `Random Round Mixing "
-"<https://github.com/dashpay/dash/pull/3661>`__ which will mix a given "
+"Your funds will pass through at least the number of rounds you specify. Dash"
+" 0.16 includes an update known as `Random Round CoinJoin "
+"<https://github.com/dashpay/dash/pull/3661>`__ which will join a given "
 "denomination by up to three extra rounds to further improve privacy."
 msgstr ""
 
-#: ../../introduction/features.rst:119
+#: ../../introduction/features.rst:118
 msgid ""
-"This mixing process happens in the background without any intervention on "
-"your part. When you wish to make a private transaction, your funds will be "
-"ready to spend. No additional waiting is required."
+"This process happens in the background without any intervention on your "
+"part. When you wish to make a transaction using your denominated funds no "
+"additional waiting will be required."
 msgstr ""
-"Quy trình trộn này thực hiện ở chế độ nền mà không cần bất cứ sự can thiệp "
-"nào ở phía bạn. Khi bạn muốn thực hiện một giao dịch riêng tư, khoản tiền "
-"của bạn sẽ được sẵn sàng thanh toán. Không cần phải đợi thêm nữa."
 
-#: ../../introduction/features.rst:124
+#: ../../introduction/features.rst:122
 msgid ""
-"Note that PrivateSend transactions will be rounded up so that all "
-"transaction inputs are spent. Any excess Dash will be spent on the "
-"transaction fee."
+"Note that CoinJoin transactions will be rounded up so that all transaction "
+"inputs are spent. Any excess Dash will be spent on the transaction fee."
 msgstr ""
-"Chú ý rằng những giao dịch PrivateSend sẽ được làm tròn để tất cả các đầu "
-"vào giao dịch đều được chi tiêu. Bất kỳ số Dash dư thừa sẽ được chi tiêu vào"
-" phí giao dịch."
 
-#: ../../introduction/features.rst:128
+#: ../../introduction/features.rst:126
 msgid ""
-"**IMPORTANT:** Your wallet only contains 1000 of these \"change addresses\"."
-" Every time a mixing event happens, one of your addresses is used up. Once "
-"enough of them are used, your wallet must create more addresses. It can only"
-" do this, however, if you have automatic backups enabled. Consequently, "
-"users who have backups disabled will also have PrivateSend disabled."
+"**IMPORTANT:** Your wallet only contains 1000 of these change addresses. "
+"Every time a CoinJoin transaction is created, one of your addresses is used "
+"up. Once enough of them are used, your wallet must create more addresses. It"
+" can only do this, however, if you have automatic backups enabled. "
+"Consequently, users who have backups disabled will also have CoinJoin "
+"disabled."
 msgstr ""
-"**QUAN TRỌNG:** Ví của bạn chỉ chứa 1000 \"địa chỉ trả tiền lẻ\". Mỗi khi có"
-" lần trộn xảy ra, một trong những địa chỉ được dùng hết. Khi chúng đã được "
-"sử dụng hết, ví của bạn phải tạo thêm các địa chỉ nữa. Nó chỉ có thể làm "
-"điều này, nếu bạn bật chế độ tự động sao lưu. Do đó, những ai tắt chế độ sao"
-" lưu thì cũng tắt chế độ PrivateSend."
 
-#: ../../introduction/features.rst:139 ../../introduction/features.rst:543
+#: ../../introduction/features.rst:137
 msgid "InstantSend"
 msgstr "InstantSend"
 
-#: ../../introduction/features.rst:141
+#: ../../introduction/features.rst:139
 msgid ""
 "Traditional decentralized cryptocurrencies must wait for certain period of "
 "time for enough blocks to pass to ensure that a transaction is both "
@@ -360,7 +307,7 @@ msgstr ""
 "gian xác thực nhanh hơn bằng cách tập trung quyền hạn trên mạng ở những mức "
 "độ khác nhau."
 
-#: ../../introduction/features.rst:150
+#: ../../introduction/features.rst:148
 msgid ""
 "Dash suffers from neither of these limitations thanks to its second-layer "
 "network of masternodes. Masternodes regularly form voting quorums to check "
@@ -371,7 +318,7 @@ msgid ""
 " of these inputs during the confirmation time period."
 msgstr ""
 
-#: ../../introduction/features.rst:159
+#: ../../introduction/features.rst:157
 msgid ""
 "InstantSend technology will allow for cryptocurrencies such as Dash to "
 "compete with nearly instantaneous transaction systems such as credit cards "
@@ -388,18 +335,18 @@ msgstr ""
 "của các giao dịch từ lâu như hàng giờ (với Bitcoin) xuống một khoảng thời "
 "gian rất ngắn là vài giây."
 
-#: ../../introduction/features.rst:167
+#: ../../introduction/features.rst:165
 msgid ""
 "You can view a practical guide to use InstantSend :ref:`here <dashcore-"
-"privatesend-instantsend>`. InstantSend was introduced in a whitepaper called"
-" `Transaction Locking and Masternode Consensus: A Mechanism for Mitigating "
+"coinjoin-instantsend>`. InstantSend was introduced in a whitepaper called "
+"`Transaction Locking and Masternode Consensus: A Mechanism for Mitigating "
 "Double Spending Attacks "
 "<https://github.com/dashpay/docs/blob/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_,"
 " and further improved through the introduction of `LLMQ-based InstantSend "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__ in Dash 0.14."
 msgstr ""
 
-#: ../../introduction/features.rst:176
+#: ../../introduction/features.rst:174
 msgid ""
 "**How Dash 'InstantSend' Protects Merchants from Double Spends**, Dash "
 "Detailed by Amanda B. Johnson, 16 September 2016"
@@ -407,11 +354,11 @@ msgstr ""
 "**Làm thế nào mà cơ chế 'InstantSend' của Dash bảo vệ người bán khỏi sự tiêu"
 " lặp**, Dash Detail của Amanda B. Johnson, ngày 16 tháng 9 năm 2016"
 
-#: ../../introduction/features.rst:189
+#: ../../introduction/features.rst:187
 msgid "ChainLocks"
 msgstr "ChainLocks"
 
-#: ../../introduction/features.rst:191
+#: ../../introduction/features.rst:189
 msgid ""
 "ChainLocks are a feature provided by the Dash Network which provides "
 "certainty when accepting payments. This technology, particularly when used "
@@ -425,7 +372,7 @@ msgstr ""
 "trường trong đó các khoản thanh toán có thể được chấp nhận ngay tức thời  mà"
 " không phải chịu rủi ro của \"Các sự kiện tái tổ chức blockchain\"."
 
-#: ../../introduction/features.rst:197
+#: ../../introduction/features.rst:195
 msgid ""
 "The risk of blockchain reorganization is typically addressed by requiring "
 "multiple “confirmations” before a transaction can be safely accepted as "
@@ -438,11 +385,11 @@ msgstr ""
 "có hiệu quả, nhưng với chi phí thời gian và trải nghiệm người dùng. "
 "ChainLocks là một giải pháp cho vấn đề này."
 
-#: ../../introduction/features.rst:204
+#: ../../introduction/features.rst:202
 msgid "ChainLocks Process Overview"
 msgstr "Tổng quan về tiến trình ChainLocks"
 
-#: ../../introduction/features.rst:206
+#: ../../introduction/features.rst:204
 msgid ""
 "Every twelve hours a new “LLMQ” (Long-Living Masternode Quorum) is formed "
 "using a “DKG” (Distributed Key Generation) process. All members of this "
@@ -450,7 +397,7 @@ msgid ""
 "mined blocks:"
 msgstr ""
 
-#: ../../introduction/features.rst:211
+#: ../../introduction/features.rst:209
 msgid ""
 "Whenever a block is mined, Quorum Members will broadcast a signed message "
 "containing the observed block to the rest of the Quorum."
@@ -458,7 +405,7 @@ msgstr ""
 "Khi một khối được khai thác, các thành viên Quorum sẽ phát tán một thông "
 "điệp đã ký có chứa khối đã quan sát đến phần còn lại của Quorum."
 
-#: ../../introduction/features.rst:214
+#: ../../introduction/features.rst:212
 msgid ""
 "If 60% or more of the Quorum sees the same new block they will collectively "
 "form a “CLSIG” (ChainLock Signature) message which will be broadcast to the "
@@ -468,7 +415,7 @@ msgstr ""
 "chúng sẽ cùng tập hợp tạo nên một thông điệp \"CLSIG\" (Chữ ký ChainLock), "
 "nó sẽ được phát tán lên phần còn lại của mạng lưới."
 
-#: ../../introduction/features.rst:218
+#: ../../introduction/features.rst:216
 msgid ""
 "When a valid ChainLock Signature is received by a client on the network, it "
 "will reject all blocks at the same height that do not match the block "
@@ -478,7 +425,7 @@ msgstr ""
 "từ chối tất cả các khối có cùng độ cao mà không tương xứng với khối được chỉ"
 " ra trong thông điệp đó."
 
-#: ../../introduction/features.rst:222
+#: ../../introduction/features.rst:220
 msgid ""
 "The result is a quick and unambiguous decision on the “correct” blockchain "
 "for integrated clients and wallets. From a security perspective, this also "
@@ -493,11 +440,11 @@ msgstr ""
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__ để có mô tả đầy"
 " đủ về ChainLocks hoạt động ra sao."
 
-#: ../../introduction/features.rst:232
+#: ../../introduction/features.rst:230
 msgid "Sporks"
 msgstr "Sporks"
 
-#: ../../introduction/features.rst:234
+#: ../../introduction/features.rst:232
 msgid ""
 "In response to unforeseen issues with the rollout of the major \"RC3\" "
 "update in June 2014, the Dash development team created a mechanism by which "
@@ -517,7 +464,7 @@ msgstr ""
 "thường được gọi là \"soft fork\" nhưng cộng đồng trìu mến gọi nó là "
 "\"spork\" và thành tên như vậy."
 
-#: ../../introduction/features.rst:243
+#: ../../introduction/features.rst:241
 msgid ""
 "New features or versions of Dash undergo extensive testing on testnet before"
 " they are released to the main network. When a new feature or version of "
@@ -555,11 +502,11 @@ msgstr ""
 " cập nhật phần mềm. Để có thông tin kỹ thuật cụ thể về các spork riêng, hãy "
 "xem :ref:`ở đây <understanding-sporks>`."
 
-#: ../../introduction/features.rst:266
+#: ../../introduction/features.rst:264
 msgid "X11 Hash Algorithm"
 msgstr "Thuật toán băm X11"
 
-#: ../../introduction/features.rst:268
+#: ../../introduction/features.rst:266
 msgid ""
 "X11 is a widely used hashing algorithm created by Dash core developer Evan "
 "Duffield. X11’s chained hashing algorithm utilizes a sequence of eleven "
@@ -586,7 +533,7 @@ msgstr ""
 " một mức độ tập trung như Bitcoin hiện nay. Thông tin về việc đào coin với "
 "X11 có thể tìm thấy ở phần :ref:`Đào coin <mining>` trong tài liệu này."
 
-#: ../../introduction/features.rst:281
+#: ../../introduction/features.rst:279
 msgid ""
 "X11 is the name of the chained proof-of-work (**PoW**) algorithm that was "
 "introduced in Dash (launched January 2014 as \"Xcoin\"). It was partially "
@@ -602,7 +549,7 @@ msgstr ""
 "nhưng nó khác với Quark ở chỗ số vòng băm được xác định trước *một trật tự* "
 "thay vì sử dụng các phép băm được chọn một cách ngẫu nhiên."
 
-#: ../../introduction/features.rst:288
+#: ../../introduction/features.rst:286
 msgid ""
 "The X11 algorithm uses multiple rounds of 11 different hashes (blake, bmw, "
 "groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, echo), thus "
@@ -617,11 +564,11 @@ msgstr ""
 "không liên quan đến hệ thống cửa sổ mã nguồn mở X11, thông dụng trên các hệ "
 "điều hành kiểu Unix."
 
-#: ../../introduction/features.rst:296
+#: ../../introduction/features.rst:294
 msgid "Advantages of X11"
 msgstr "Ưu điểm của X11"
 
-#: ../../introduction/features.rst:298
+#: ../../introduction/features.rst:296
 msgid ""
 "The increased complexity and sophistication of the chained algorithm "
 "provides enhanced levels of security and less uncertainty for a digital "
@@ -639,7 +586,7 @@ msgstr ""
 "nó có thể gây nguy hại cho toàn bộ mạng lưới của Bitcoin cho đến khi Bitcoin"
 " phải chuyển đổi bằng hard fork sang thuật toán mới."
 
-#: ../../introduction/features.rst:306
+#: ../../introduction/features.rst:304
 msgid ""
 "In the event of a similar computing breakthrough, a digital currency using "
 "the X11 PoW would continue to function securely unless all 11 hashes were "
@@ -655,7 +602,7 @@ msgstr ""
 "cảnh báo cho đồng tiền dùng X11 đánh giá và thay thế những thuật toán băm có"
 " vấn đề bằng các thuật toán băm khác đáng tin cậy hơn."
 
-#: ../../introduction/features.rst:313
+#: ../../introduction/features.rst:311
 msgid ""
 "Given the speculative nature of digital currencies and their inherent "
 "uncertainties as a new field, the X11 algorithm can provide increased "
@@ -674,7 +621,7 @@ msgstr ""
 "đầu tư và bảo hiểm trước những rủi ro liên quan như vấn đề SPOF (Một điểm "
 "Chịu lỗi Đơn lẻ) của các loại tiền điện tử sử dụng một thuật toán băm đơn."
 
-#: ../../introduction/features.rst:321
+#: ../../introduction/features.rst:319
 msgid ""
 "Evan Duffield, the creator of Dash and X11 chained-hash, has written on "
 "several occasions that X11 was integrated into Dash not with the intention "
@@ -687,11 +634,11 @@ msgstr ""
 "các nhà sản xuất tạo ra chip ASIC cho thuật toán X11 trong tương lai, mà chỉ"
 " cung cấp cách chuyển đổi tương tự như Bitcoin là có (CPU, GPU, và ASIC)."
 
-#: ../../introduction/features.rst:331
+#: ../../introduction/features.rst:329
 msgid "Dark Gravity Wave"
 msgstr "Dark Gravity Wave"
 
-#: ../../introduction/features.rst:333
+#: ../../introduction/features.rst:331
 msgid ""
 "**DGW** or *Dark Gravity Wave* is an open source difficulty-adjusting "
 "algorithm for Bitcoin-based cryptocurrencies that was first used in Dash and"
@@ -715,7 +662,7 @@ msgstr ""
 " sinh khối với khoảng thời gian tương đối đồng nhất, thậm chí ngay cả khi "
 "tổng tốc độ băm dao động mạnh, mà không phải gánh chịu lỗi bù-thời-gian."
 
-#: ../../introduction/features.rst:345
+#: ../../introduction/features.rst:343
 msgid ""
 "Version 2.0 of DGW was implemented in Dash from block 45,000 onwards in "
 "order to completely alleviate the time-warp exploit."
@@ -723,7 +670,7 @@ msgstr ""
 "Phiên bản 2.0 của  DGW đã được thực hiện ở  Dash từ khối 45,000 trở về sau "
 "để hoàn toàn làm giảm nhẹ loại lợi dụng làm-lệch-thời-gian."
 
-#: ../../introduction/features.rst:348
+#: ../../introduction/features.rst:346
 msgid ""
 "Version 3.0 was implemented on May 14 of 2014 to further improve difficulty "
 "re-targeting with smoother transitions. It also fixes issues with various "
@@ -735,11 +682,11 @@ msgstr ""
 "nhiều kiến trúc mà có nhiều cấp độ khác nhau của độ chính xác của dấu chấm "
 "động thông qua việc sử dụng số nguyên."
 
-#: ../../introduction/features.rst:357
+#: ../../introduction/features.rst:355
 msgid "Emission Rate"
 msgstr "Tốc độ phát sinh"
 
-#: ../../introduction/features.rst:359
+#: ../../introduction/features.rst:357
 msgid ""
 "Cryptocurrencies such as Dash and Bitcoin are created through a "
 "cryptographically difficult process known as mining. Mining involves "
@@ -766,7 +713,7 @@ msgstr ""
 "một đường cong cho thấy tổng số lượng coin được lưu thông, nó được biết với "
 "cái tên là tỷ lệ phát sinh coin."
 
-#: ../../introduction/features.rst:372
+#: ../../introduction/features.rst:370
 msgid ""
 "While Dash is based on Bitcoin, it significantly modifies the coin emission "
 "rate to offer a smoother reduction in coin emission over time. While Bitcoin"
@@ -785,15 +732,15 @@ msgstr ""
 "được trơn tru hơn về phía phần thưởng dựa dần về phí giao dịch so với "
 "Bitcoin."
 
-#: ../../introduction/features.rst:383
+#: ../../introduction/features.rst:381
 msgid "Bitcoin vs. Dash coin emission rate"
 msgstr "So sánh tốc độ phát sinh coin giữa Bitcoin và Dash"
 
-#: ../../introduction/features.rst:387
+#: ../../introduction/features.rst:385
 msgid "Total coin emission"
 msgstr "Tổng số coin phát sinh ra"
 
-#: ../../introduction/features.rst:389
+#: ../../introduction/features.rst:387
 msgid ""
 "`Bitcoin's total coin emission <https://docs.google.com/spreadsheets/d/1 "
 "2tR_9WrY0Hj4AQLoJYj9EDBzfA38XIVLQSOOOVePNm0/pubhtml?gid=0&single=true>`_ can"
@@ -811,7 +758,7 @@ msgstr ""
 " của tất cả số bitcoin sẽ được lưu thông vào năm 2036, và 99.9% vào năm "
 "2048."
 
-#: ../../introduction/features.rst:396
+#: ../../introduction/features.rst:394
 msgid ""
 "`Dash's total coin emission <https://docs.google.com/spreadsheets/d "
 "/1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`_ is also "
@@ -837,27 +784,27 @@ msgstr ""
 "này sẽ dừng lại vào năm 2477. Dựa trên các con số đó, nguồn cung cấp số coin"
 " tối đa và tối thiểu vào năm 2254 có thể được tính trong khoảng như sau:"
 
-#: ../../introduction/features.rst:410
+#: ../../introduction/features.rst:408
 msgid "17,742,696 DASH"
 msgstr "17,742,696 DASH"
 
-#: ../../introduction/features.rst:410
+#: ../../introduction/features.rst:408
 msgid "Assuming zero treasury allocation"
 msgstr "Giả sử không phân bổ ngân quỹ"
 
-#: ../../introduction/features.rst:412
+#: ../../introduction/features.rst:410
 msgid "18,921,005 DASH"
 msgstr "18,921,005 DASH"
 
-#: ../../introduction/features.rst:412
+#: ../../introduction/features.rst:410
 msgid "Assuming full treasury allocation"
 msgstr "Giả sử phân bổ toàn bộ quỹ"
 
-#: ../../introduction/features.rst:416
+#: ../../introduction/features.rst:414
 msgid "Block reward allocation"
 msgstr "Phân phối phần thưởng khối"
 
-#: ../../introduction/features.rst:418
+#: ../../introduction/features.rst:416
 msgid ""
 "Unlike Bitcoin, which allocates 100% of the block reward to miners, Dash "
 "holds back 10% of the block reward for use in the decentralized :ref:`budget"
@@ -883,27 +830,330 @@ msgstr ""
 "Tùy thuộc vào việc sử dụng ngân sách, điều này dẫn đến cấp phát một lượng "
 "coin tương đương trong một chu kỳ ngân sách như sau:"
 
-#: ../../introduction/features.rst:432 ../../introduction/features.rst:434
+#: ../../introduction/features.rst:430 ../../introduction/features.rst:432
 msgid "45%"
 msgstr "45%"
 
-#: ../../introduction/features.rst:432
+#: ../../introduction/features.rst:430
 msgid "Mining Reward"
 msgstr "Phần thưởng cho việc đào"
 
-#: ../../introduction/features.rst:434
+#: ../../introduction/features.rst:432
 msgid "Masternode Reward for Proof-of-service"
 msgstr "Phần thưởng của Masternode cho Bằng-chứng-phục-vụ"
 
-#: ../../introduction/features.rst:436
+#: ../../introduction/features.rst:434
 msgid "10%"
 msgstr "10%"
 
-#: ../../introduction/features.rst:436
+#: ../../introduction/features.rst:434
 msgid "Decentralized Governance Budget"
 msgstr "Cơ chế quản trị ngân sách phi tập trung"
 
-#: ../../introduction/features.rst:439
+#: ../../introduction/features.rst:437
+msgid ""
+"On 13 August 2020, the Dash network approved a `proposal "
+"<https://www.dashcentral.org/p/decision-proposal-block-reward-reallocat>`__ "
+"to modify the block reward allocation from 50/50 between miners and "
+"masternodes to 40/60 respectively. Once activated, this reallocation will "
+"result in an incremental adjustment to the percentage share every three "
+"superblock cycles, or approximately three months. The following table shows "
+"the incremental reallocation process. Reward reallocation changes would "
+"begin at the first superblock following activation and then occur every "
+"three superblock cycles (approximately once per quarter) until the "
+"reallocation is complete. This documentation will be updated with the "
+"specific dates once activation has occurred."
+msgstr ""
+
+#: ../../introduction/features.rst:450
+msgid "Adjustment"
+msgstr ""
+
+#: ../../introduction/features.rst:450
+msgid "Miner %"
+msgstr ""
+
+#: ../../introduction/features.rst:450
+msgid "Masternode %"
+msgstr ""
+
+#: ../../introduction/features.rst:450
+msgid "Change (%)"
+msgstr ""
+
+#: ../../introduction/features.rst:452
+msgid "0 (Current)"
+msgstr ""
+
+#: ../../introduction/features.rst:452 ../../introduction/features.rst:452
+msgid "50.0"
+msgstr ""
+
+#: ../../introduction/features.rst:452
+msgid "0.00%"
+msgstr ""
+
+#: ../../introduction/features.rst:454
+msgid "1"
+msgstr "1"
+
+#: ../../introduction/features.rst:454
+msgid "48.7"
+msgstr ""
+
+#: ../../introduction/features.rst:454
+msgid "51.3"
+msgstr ""
+
+#: ../../introduction/features.rst:454 ../../introduction/features.rst:456
+msgid "1.30%"
+msgstr ""
+
+#: ../../introduction/features.rst:456
+msgid "2"
+msgstr "2"
+
+#: ../../introduction/features.rst:456
+msgid "47.4"
+msgstr ""
+
+#: ../../introduction/features.rst:456
+msgid "52.6"
+msgstr ""
+
+#: ../../introduction/features.rst:458
+msgid "3"
+msgstr "3"
+
+#: ../../introduction/features.rst:458
+msgid "46.7"
+msgstr ""
+
+#: ../../introduction/features.rst:458
+msgid "53.3"
+msgstr ""
+
+#: ../../introduction/features.rst:458 ../../introduction/features.rst:460
+msgid "0.70%"
+msgstr ""
+
+#: ../../introduction/features.rst:460
+msgid "4"
+msgstr "4"
+
+#: ../../introduction/features.rst:460
+msgid "46.0"
+msgstr ""
+
+#: ../../introduction/features.rst:460
+msgid "54.0"
+msgstr ""
+
+#: ../../introduction/features.rst:462
+msgid "5"
+msgstr ""
+
+#: ../../introduction/features.rst:462
+msgid "45.4"
+msgstr ""
+
+#: ../../introduction/features.rst:462
+msgid "54.6"
+msgstr ""
+
+#: ../../introduction/features.rst:462 ../../introduction/features.rst:464
+msgid "0.60%"
+msgstr ""
+
+#: ../../introduction/features.rst:464
+msgid "6"
+msgstr "6"
+
+#: ../../introduction/features.rst:464
+msgid "44.8"
+msgstr ""
+
+#: ../../introduction/features.rst:464
+msgid "55.2"
+msgstr ""
+
+#: ../../introduction/features.rst:466
+msgid "7"
+msgstr ""
+
+#: ../../introduction/features.rst:466
+msgid "44.3"
+msgstr ""
+
+#: ../../introduction/features.rst:466
+msgid "55.7"
+msgstr ""
+
+#: ../../introduction/features.rst:466 ../../introduction/features.rst:468
+#: ../../introduction/features.rst:470 ../../introduction/features.rst:472
+#: ../../introduction/features.rst:474 ../../introduction/features.rst:476
+msgid "0.50%"
+msgstr ""
+
+#: ../../introduction/features.rst:468
+msgid "8"
+msgstr "8"
+
+#: ../../introduction/features.rst:468
+msgid "43.8"
+msgstr ""
+
+#: ../../introduction/features.rst:468
+msgid "56.2"
+msgstr ""
+
+#: ../../introduction/features.rst:470
+msgid "9"
+msgstr ""
+
+#: ../../introduction/features.rst:470
+msgid "43.3"
+msgstr ""
+
+#: ../../introduction/features.rst:470
+msgid "56.7"
+msgstr ""
+
+#: ../../introduction/features.rst:472
+msgid "10"
+msgstr "10"
+
+#: ../../introduction/features.rst:472
+msgid "42.8"
+msgstr ""
+
+#: ../../introduction/features.rst:472
+msgid "57.2"
+msgstr ""
+
+#: ../../introduction/features.rst:474
+msgid "11"
+msgstr ""
+
+#: ../../introduction/features.rst:474
+msgid "42.3"
+msgstr ""
+
+#: ../../introduction/features.rst:474
+msgid "57.7"
+msgstr ""
+
+#: ../../introduction/features.rst:476
+msgid "12"
+msgstr "12"
+
+#: ../../introduction/features.rst:476
+msgid "41.8"
+msgstr ""
+
+#: ../../introduction/features.rst:476
+msgid "58.2"
+msgstr ""
+
+#: ../../introduction/features.rst:478
+msgid "13"
+msgstr ""
+
+#: ../../introduction/features.rst:478
+msgid "41.5"
+msgstr ""
+
+#: ../../introduction/features.rst:478
+msgid "58.5"
+msgstr ""
+
+#: ../../introduction/features.rst:478 ../../introduction/features.rst:480
+#: ../../introduction/features.rst:482 ../../introduction/features.rst:484
+#: ../../introduction/features.rst:486
+msgid "0.30%"
+msgstr ""
+
+#: ../../introduction/features.rst:480
+msgid "14"
+msgstr ""
+
+#: ../../introduction/features.rst:480
+msgid "41.2"
+msgstr ""
+
+#: ../../introduction/features.rst:480
+msgid "58.8"
+msgstr ""
+
+#: ../../introduction/features.rst:482
+msgid "15"
+msgstr ""
+
+#: ../../introduction/features.rst:482
+msgid "40.9"
+msgstr ""
+
+#: ../../introduction/features.rst:482
+msgid "59.1"
+msgstr ""
+
+#: ../../introduction/features.rst:484
+msgid "16"
+msgstr ""
+
+#: ../../introduction/features.rst:484
+msgid "40.6"
+msgstr ""
+
+#: ../../introduction/features.rst:484
+msgid "59.4"
+msgstr ""
+
+#: ../../introduction/features.rst:486
+msgid "17"
+msgstr ""
+
+#: ../../introduction/features.rst:486
+msgid "40.3"
+msgstr ""
+
+#: ../../introduction/features.rst:486
+msgid "59.7"
+msgstr ""
+
+#: ../../introduction/features.rst:488
+msgid "18"
+msgstr "18"
+
+#: ../../introduction/features.rst:488
+msgid "40.1"
+msgstr ""
+
+#: ../../introduction/features.rst:488
+msgid "59.9"
+msgstr ""
+
+#: ../../introduction/features.rst:488
+msgid "0.20%"
+msgstr ""
+
+#: ../../introduction/features.rst:490
+msgid "19"
+msgstr ""
+
+#: ../../introduction/features.rst:490
+msgid "40.0"
+msgstr ""
+
+#: ../../introduction/features.rst:490
+msgid "60.0"
+msgstr ""
+
+#: ../../introduction/features.rst:490
+msgid "0.10%"
+msgstr ""
+
+#: ../../introduction/features.rst:493
 msgid ""
 "This documentation is based on calculations and posts by moocowmoo. Please "
 "see `this reddit post <https://www.reddit.com/r/dashpay/comments/ "
@@ -920,11 +1170,11 @@ msgstr ""
 "Xem `website này <https://stats.masternode.me>`_ để có dữ liệu trực tiếp về "
 "những thông tin thống kê hiện tại của mạng."
 
-#: ../../introduction/features.rst:450
+#: ../../introduction/features.rst:504
 msgid "Decentralized Governance"
 msgstr "Quản trị Phi tập trung"
 
-#: ../../introduction/features.rst:452
+#: ../../introduction/features.rst:506
 msgid ""
 "Decentralized Governance by Blockchain, or DGBB, is Dash's attempt to solve "
 "two important problems in cryptocurrency: governance and funding. Governance"
@@ -953,7 +1203,7 @@ msgstr ""
 "này. So với mạng lưới Bitcoin, nơi mà tranh cãi về kích thước khối này kéo "
 "dài đến gần ba năm."
 
-#: ../../introduction/features.rst:466
+#: ../../introduction/features.rst:520
 msgid ""
 "DGBB also provides a means for Dash to fund its own development. While other"
 " projects have to depend on donations or premined endowments, Dash uses 10% "
@@ -980,7 +1230,7 @@ msgstr ""
 "qua. Như vậy mạng lưới tự cấp vốn cho chính nó bằng việc dành riêng 10% của "
 "phần thưởng khối cho ngân sách các dự án."
 
-#: ../../introduction/features.rst:479
+#: ../../introduction/features.rst:533
 msgid ""
 "You can read more about Dash governance in the :ref:`governance` section of "
 "this documentation."
@@ -988,11 +1238,11 @@ msgstr ""
 "Bạn có thể đọc thêm về cơ chế quản trị của Dash ở mục :ref:`governance` của "
 "tài liệu này."
 
-#: ../../introduction/features.rst:486
+#: ../../introduction/features.rst:540
 msgid "Sentinel"
 msgstr "Sentinel"
 
-#: ../../introduction/features.rst:488
+#: ../../introduction/features.rst:542
 msgid ""
 "Introduced in Dash 0.12.1, Sentinel is an autonomous agent for persisting, "
 "processing and automating Dash governance objects and tasks. Sentinel is "
@@ -1004,7 +1254,7 @@ msgstr ""
 "tác vụ. Sentinel được thực thi như là một ứng dụng Python liên kết với một "
 "phiên bản dashd cục bộ trên mỗi masternode của Dash. "
 
-#: ../../introduction/features.rst:493
+#: ../../introduction/features.rst:547
 msgid ""
 "A Governance Object (or \"govObject\") is a generic structure introduced in "
 "Dash 0.12.1 to allow for the creation of Budget Proposals and Triggers. "
@@ -1016,15 +1266,15 @@ msgstr ""
 "các Trigger. Thừa kế lớp được sử dụng để mở rộng đối tượng chung thành một "
 "đối tượng \"Đề xuất\" để thay thế cho hệ thống ngân sách hiện tại của Dash."
 
-#: ../../introduction/features.rst:502
+#: ../../introduction/features.rst:556
 msgid "Diagram highlighting the relationship between Dash Sentinel and Core"
 msgstr "Sơ đồ làm nổi bật mối quan hệ giữa Dash Sentinel và Core"
 
-#: ../../introduction/features.rst:508
+#: ../../introduction/features.rst:562
 msgid "Fees"
 msgstr "Phí giao dịch"
 
-#: ../../introduction/features.rst:510
+#: ../../introduction/features.rst:564
 msgid ""
 "Transactions on the Dash network are recorded in blocks on the blockchain. "
 "The size of each transaction is measured in bytes, but there is not "
@@ -1058,104 +1308,84 @@ msgstr ""
 "hết các phần mềm ví đều tính một khoản phí nhỏ làm ngầm định, mặc dù có một "
 "số thợ mỏ vẫn xử lý các giao dịch thậm chí nó không có phí đi kèm."
 
-#: ../../introduction/features.rst:527
+#: ../../introduction/features.rst:581
 msgid ""
 "The release of Dash 0.12.2.0 and activation of DIP0001 saw a simultaneous "
 "reduction of fees by a factor of 10, while the block size was increased from"
 " 1MB to 2MB to promote continued growth of low-cost transactions even as the"
 " cost of Dash rises. Dash 0.13.0.0 introduced InstantSend autolocks, which "
-"causes masternodes to automatically attempt to lock any transaction with 4 "
+"caused masternodes to automatically attempt to lock any transaction with 4 "
 "or fewer inputs — which are referred to as “simple” transactions — and "
-"removes the additional fee for InstantSend. The current fee schedule for "
-"Dash is as follows:"
+"removed the additional fee for InstantSend. 0.14.0.0 then removed the "
+"limitation on 4 inputs, so the network will attempt to lock all "
+"transactions. The current fee schedule for Dash is as follows:"
 msgstr ""
 
-#: ../../introduction/features.rst:537
+#: ../../introduction/features.rst:593
 msgid "Transaction type"
 msgstr "Kiểu giao dịch"
 
-#: ../../introduction/features.rst:537
+#: ../../introduction/features.rst:593
 msgid "Recommended fee"
 msgstr "Mức phí gợi ý"
 
-#: ../../introduction/features.rst:537
+#: ../../introduction/features.rst:593
 msgid "Per unit"
 msgstr "Mỗi đơn vị"
 
-#: ../../introduction/features.rst:539
-msgid "Standard transaction"
-msgstr "Giao dịch chuẩn"
+#: ../../introduction/features.rst:595
+msgid "0.001 DASH"
+msgstr ""
 
-#: ../../introduction/features.rst:539 ../../introduction/features.rst:541
-msgid ".00001 DASH"
-msgstr ".00001 DASH"
+#: ../../introduction/features.rst:595
+msgid "Per 10 rounds of CoinJoin (average)"
+msgstr ""
 
-#: ../../introduction/features.rst:539 ../../introduction/features.rst:541
+#: ../../introduction/features.rst:597
+msgid "All other transactions"
+msgstr ""
+
+#: ../../introduction/features.rst:597
+msgid "0.00001 DASH"
+msgstr ""
+
+#: ../../introduction/features.rst:597
 msgid "Per kB of transaction data"
 msgstr "Cho mỗi kB dữ liệu giao dịch"
 
-#: ../../introduction/features.rst:541
-msgid "InstantSend autolock"
-msgstr "Tự động khoá InstantSend"
-
-#: ../../introduction/features.rst:543
-msgid ".0001 DASH"
-msgstr ".0001 DASH"
-
-#: ../../introduction/features.rst:543
-msgid "Per transaction input"
-msgstr "Cho mỗi đầu vào giao dịch"
-
-#: ../../introduction/features.rst:545
-msgid ".001 DASH"
-msgstr ".001 DASH"
-
-#: ../../introduction/features.rst:545
-msgid "Per 10 rounds of mixing (average)"
-msgstr "Mỗi 10 vòng trộn (trung bình)"
-
-#: ../../introduction/features.rst:548
+#: ../../introduction/features.rst:600
 msgid ""
 "As an example, a standard and relatively simple transaction on the Dash "
 "network with one input, one output and a possible change address typically "
 "fits in the range of 200 - 400 bytes. Assuming a price of US$100 per DASH, "
 "the fee falls in the range of $0.0002 - $0.0004, or 1/50th of a cent. "
-"Processing a simple transaction using InstantSend at the same price is free "
-"of charge, while more complex InstantSend transactions may cost around 1-2 "
-"cents per transaction, depending on the number of inputs. These fees apply "
-"regardless of the Dash or dollar value of the transaction itself."
+"InstantSend locking will be attempted on all transactions without any extra "
+"charge."
 msgstr ""
-"Ví dụ, một giao dịch chuẩn và tương đối đơn giản trên mạng lưới Dash với một"
-" đầu vào và một đầu ra và có thể một địa chỉ trả tiền lẻ điển hình sẽ mất "
-"khoảng 200 - 400 bytes. Giả sử giá một Dash là US$100, mức phí sẽ rơi vào "
-"khoảng từ $0.0002 - $0.0004 hay 1/50 của một cent. Xử lý một giao dịch đơn "
-"giản sử dụng InstantSend cũng cùng mức giá như vậy, nhưng các giao dịch "
-"InstantSend phức tạp hơn có thể tiêu tốn mất chừng 1-2 cent cho mỗi giao "
-"dịch, tuỳ thuộc vào số lượng đầu vào. Mức phí đó áp dụng bất kể giá trị bản "
-"thân giao dịch là bao nhiêu."
 
-#: ../../introduction/features.rst:558
+#: ../../introduction/features.rst:607
 msgid ""
-":ref:`PrivateSend` works by creating denominations of 10, 1, 0.1, 0.01 and "
-"0.001 DASH and then mixing these denominations with other users. Creation of"
-" the denominations is charged at the default fee for a standard transaction."
-" Mixing is free, but to prevent spam attacks, an average of one in ten "
-"mixing transactions are charged a fee of 0.0001 DASH. Spending inputs mixed "
-"using PrivateSend incurs the usual standard or InstantSend fees, but to "
-"avoid creating a potentially identifiable change address, the fee is always "
-"rounded up to the lowest possible denomination. This is typically .001 DASH,"
-" so it is important to deduct the fee from the amount being sent if possible"
-" to minimise fees. Combining InstantSend and PrivateSend may be expensive "
-"due to this requirement and the fact that a PrivateSend transaction may "
-"require several inputs, while InstantSend charges a fee of 0.0001 DASH per "
-"input. Always check your fees before sending a transaction."
+":ref:`CoinJoin` works by creating denominations of 10, 1, 0.1, 0.01 and "
+"0.001 DASH and then creating CoinJoin transactions with other users using "
+"these denominations. Creation of the denominations is charged at the default"
+" fee for a standard transaction. Using CoinJoin is free, but to prevent spam"
+" attacks, an average of one in ten CoinJoin transactions are charged a fee "
+"of 0.0001 DASH. Spending denominated inputs using CoinJoin incurs the usual "
+"standard fees, but to avoid creating a potentially identifiable change "
+"address, the fee is always rounded up to the lowest possible denomination. "
+"This is typically 0.001 DASH, so it is important to deduct the fee from the "
+"amount being sent if possible to minimise fees. Combining InstantSend and "
+"CoinJoin may be expensive due to this requirement and the fact that a "
+"CoinJoin transaction may require several inputs, while InstantSend charges a"
+" fee of 0.0001 DASH per input. Always check your fees before sending a "
+"transaction."
 msgstr ""
 
-#: ../../introduction/features.rst:577
+#: ../../introduction/features.rst:626
 msgid "Evolution"
 msgstr "Evolution"
 
-#: ../../introduction/features.rst:579
+#: ../../introduction/features.rst:628
 msgid ""
 "`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a "
 "decentralized platform built on Dash blockchain technology. The goal is to "
@@ -1172,7 +1402,7 @@ msgstr ""
 "nhiều công việc trên mạng lưới, cùng với việc truy cập API phi tập trung và "
 "một hệ thống file phi tập trung."
 
-#: ../../introduction/features.rst:587
+#: ../../introduction/features.rst:636
 msgid ""
 "Dash Evolution will be released in stages. Dash Core releases 0.12.1 through"
 " to 0.12.3 lay the groundwork for the decentralized features behind the "
@@ -1201,7 +1431,7 @@ msgstr ""
 "đầu tiên trên thế giới và hệ thống lưu trữ dữ liệu phi tập trung (Drive) dựa"
 " trên IPFS."
 
-#: ../../introduction/features.rst:598
+#: ../../introduction/features.rst:647
 msgid ""
 "Included below is our current work on Evolution, that adds many components "
 "such as:"
@@ -1209,7 +1439,7 @@ msgstr ""
 "Dưới đây là công việc hiện tại của chúng tôi về Evolution, ngoài ra còn có "
 "thêm nhiều thành phần như:"
 
-#: ../../introduction/features.rst:601
+#: ../../introduction/features.rst:650
 msgid ""
 "**Drive:** A decentralized shared file system for user data that lives on "
 "the second tier network"
@@ -1217,7 +1447,7 @@ msgstr ""
 "**Drive:** Là một hệ thống chia sẻ file cho những dữ liệu của người dùng nằm"
 " trên mạng lưới bậc hai"
 
-#: ../../introduction/features.rst:603
+#: ../../introduction/features.rst:652
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the "
 "network securely"
@@ -1225,7 +1455,7 @@ msgstr ""
 "**DAPI:** Là giao diện lập trình phi tập trung cho phép người dùng trên các "
 "ứng dụng bậc 3 có thể truy cập mạng lưới một cách an toàn"
 
-#: ../../introduction/features.rst:605
+#: ../../introduction/features.rst:654
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients connected"
 " to the network via DAPI and run on various platforms"
@@ -1233,14 +1463,14 @@ msgstr ""
 "**DashPay Decentralized Wallets:** Là những ví nhẹ được kết nối với mạng "
 "thông qua DAPI và chạy trên nhiều nền tảng khác nhau"
 
-#: ../../introduction/features.rst:607
+#: ../../introduction/features.rst:656
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
 msgstr ""
 "**Bậc hai:** Là mạng lưới masternode, nó cung cấp hạ tầng bổ sung cho dự án"
 
-#: ../../introduction/features.rst:609
+#: ../../introduction/features.rst:658
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
@@ -1248,7 +1478,7 @@ msgstr ""
 "**Ngân sách:** Mạng bậc hai cho phép việc bỏ phiếu để cấp phát ngân sách cho"
 " những dự án cụ thể của mạng lưới qua hệ thống ngân sách"
 
-#: ../../introduction/features.rst:611
+#: ../../introduction/features.rst:660
 msgid ""
 "**Governance:** The second tier is given voting power to govern the currency"
 " and chart the course the currency takes"
@@ -1256,7 +1486,7 @@ msgstr ""
 "**Quản trị:** Mạng bậc hai cho phép việc bỏ phiếu để quản trị hệ thống tiền "
 "tệ và quản lý các hoạt động cần thiết của hệ thống tiền tệ"
 
-#: ../../introduction/features.rst:613
+#: ../../introduction/features.rst:662
 msgid ""
 "**Deterministic Masternode Lists:** This feature introduces an on-chain "
 "masternode list, which can be used to calculate past and present quorums"
@@ -1265,7 +1495,7 @@ msgstr ""
 "masternode trên blockchain, nó có thể được sử dụng để tính toán các quorum ở"
 " quá khứ và hiện tại."
 
-#: ../../introduction/features.rst:616
+#: ../../introduction/features.rst:665
 msgid ""
 "**Social Wallet:** We introduce a social wallet, which allows friends lists,"
 " grouping of users and shared multisig accounts"
@@ -1274,27 +1504,27 @@ msgstr ""
 "xã hội, nó cung cấp tính năng danh sách bạn bè, nhóm người dùng, và các tài "
 "khoản chia sẻ đa chữ ký."
 
-#: ../../introduction/features.rst:620
+#: ../../introduction/features.rst:669
 msgid "Evolution Previews"
 msgstr "Xem trước về Evolution"
 
-#: ../../introduction/features.rst:622
+#: ../../introduction/features.rst:671
 msgid ""
 "**Dash Dapps - Demoing Community Development on environment**, 17 August "
 "2020"
 msgstr ""
 
-#: ../../introduction/features.rst:631
+#: ../../introduction/features.rst:680
 msgid ""
 "**Let's Talk Dash Dapps feat. Sample Dapps & Wallet API (Ep 2)**, 6 August "
 "2020"
 msgstr ""
 
-#: ../../introduction/features.rst:640
+#: ../../introduction/features.rst:689
 msgid "**Let's Talk Dash Dapps feat. Chrome Wallet (Ep 1)**, 28 July 2020"
 msgstr ""
 
-#: ../../introduction/features.rst:648
+#: ../../introduction/features.rst:697
 msgid ""
 "The following videos featuring Dash Founder Evan Duffield and Head of UI/UX "
 "Development Chuck Williams describe the development process and upcoming "
@@ -1304,27 +1534,27 @@ msgstr ""
 " và trưởng nhóm phát triển UI/UX là Chuck Williams mô tả quy trình phát "
 "triển và những tính năng dự kiến của nền tảng Dash Evolution."
 
-#: ../../introduction/features.rst:652
+#: ../../introduction/features.rst:701
 msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
 msgstr "**Evolution Demo #1 - The First Dash DAP**, 16 tháng 3 năm 2018"
 
-#: ../../introduction/features.rst:660
+#: ../../introduction/features.rst:709
 msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr "**Evolution Demo #2 - Mobile Evolution**, 25 tháng 4 năm 2018"
 
-#: ../../introduction/features.rst:668
+#: ../../introduction/features.rst:717
 msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
 msgstr ""
 "**Evolution Demo #3 - Trải nghiệm người dùng Dashpay**, 15 tháng 5 năm 2018"
 
-#: ../../introduction/features.rst:676
+#: ../../introduction/features.rst:725
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr ""
 "**Chuck Williams với Evolution**, Hội thảo của Dash ở London, 14 tháng 9 năm"
 " 2017"
 
-#: ../../introduction/features.rst:684
+#: ../../introduction/features.rst:733
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""

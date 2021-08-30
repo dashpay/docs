@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -131,28 +131,25 @@ msgstr "通过源"
 msgid ""
 "The source code for the Dash Android wallet is available on `GitHub "
 "<https://github.com/dashevo/dash-wallet>`__. The following instructions "
-"describe how to compile an APK from source under an up-to- date installation"
-" of Ubuntu 18.04 LTS with a single non-root user. Note that NDK version 12b "
-"is required, instead of installing the latest version using ``sdkmanager``. "
-"Begin by installing dependencies and downloading the latest Android SDK "
-"Tools::"
+"describe how to compile an APK from source under an up-to-date installation "
+"of Ubuntu 20.04 LTS with a single non-root user. Begin by installing "
+"dependencies and downloading the latest Android SDK Tools::"
 msgstr ""
 
-#: ../../wallets/android/installation.rst:81
+#: ../../wallets/android/installation.rst:83
 msgid ""
-"Next, update the SDK Tools and download the necessary SDK platform bundles "
-"and dependencies, then add and load the appropriate environment variables::"
-msgstr "接下来，用户应更新SDK工具并下载必要的SDK安装包和关联文件，然后添加并加载适用的环境变量::"
+"Next, download the necessary SDK platform bundles and dependencies and agree"
+" to the licenses::"
+msgstr ""
 
-#: ../../wallets/android/installation.rst:92
+#: ../../wallets/android/installation.rst:89
 msgid ""
 "Now that the build environment is ready, download and build the Dash Android"
 " Wallet source::"
 msgstr "在环境搭建完毕之后，用户需要下载并构建达世币Android钱包的资源::"
 
-#: ../../wallets/android/installation.rst:99
+#: ../../wallets/android/installation.rst:97
 msgid ""
-"The built APK files are now available in the ``~/dash-"
-"wallet/wallet/build/outputs/apk`` folder."
+"The unsigned built APK files are now available in the ``~/dash-"
+"wallet/wallet/build/outputs/apk/prod/release/`` folder."
 msgstr ""
-"用户可以在 ``~/dash-wallet/wallet/build/outputs/apk`` 文件夹中找到已完成上述操作的Android安装包。"

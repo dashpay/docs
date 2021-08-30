@@ -5,20 +5,20 @@
 # 
 # Translators:
 # Max Aronych <taofgoar@protonmail.com>, 2019
-# Julia Ogonkova <livingflcl@gmail.com>, 2019
-# Dmitry <dmitry.zhludin@gmail.com>, 2019
+# Dima, 2019
 # Leon White <leon.white@dash.org>, 2019
 # Tikhon Skudarnov <semargsemarg@gmail.com>, 2019
 # Андрей Дегтяр <diusha1711@gmail.com>, 2019
+# Julia Ogonkova <livingflcl@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 00:32+0000\n"
+"POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2019-04-08 11:33+0000\n"
-"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2019\n"
+"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2021\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,13 +34,10 @@ msgstr ""
 
 #: ../../developers/integration.rst:1
 msgid ""
-"dash, merchants, payment processor, API, SDK, insight, blockcypher, gocoin, "
+"dash, merchants, payment processor, API, SDK, insight, blockcypher, "
 "instantsend, python, .NET, java, javascript, nodejs, php, objective-c, "
 "vending machines"
 msgstr ""
-"dash, продавцы, платёжный процессор, API, SDK, insight, blockcypher, gocoin,"
-" instantsend, python, .NET, java, javascript, nodejs, php, objective-c, "
-"торговые автоматы"
 
 #: ../../developers/integration.rst:9
 msgid "Integration Overview"
@@ -726,11 +723,11 @@ msgstr "Модель ценообразования: бесплатный / от
 msgid "Documentation: https://github.com/dashevo/insight-api"
 msgstr "Документация: https://github.com/dashevo/insight-api"
 
-#: ../../developers/integration.rst:279 ../../developers/integration.rst:580
+#: ../../developers/integration.rst:279 ../../developers/integration.rst:555
 msgid "BlockCypher"
 msgstr "BlockCypher"
 
-#: ../../developers/integration.rst:286 ../../developers/integration.rst:587
+#: ../../developers/integration.rst:286 ../../developers/integration.rst:562
 msgid "https://www.blockcypher.com"
 msgstr "https://www.blockcypher.com"
 
@@ -889,65 +886,15 @@ msgstr ""
 msgid "Documentation: https://nownodes.io/documentation"
 msgstr ""
 
-#: ../../developers/integration.rst:379 ../../developers/integration.rst:595
-msgid "GoCoin"
-msgstr "GoCoin"
-
-#: ../../developers/integration.rst:386 ../../developers/integration.rst:602
-msgid "https://gocoin.com"
-msgstr "https://gocoin.com"
-
-#: ../../developers/integration.rst:388
-msgid ""
-"The GoCoin platform makes taking Dash as easy as installing a plugin. "
-"Payment processing is already implemented for every major shopping platform."
-" GoCoin is focused on helping merchants in privacy-related niches and "
-"specific industries, and handles all transaction risk for all payments from "
-"your customers."
-msgstr ""
-"С помощью платформы GoCoin принимать Dash так же просто, как установить "
-"плагин. Обработка платежей уже реализована для всех основных торговых "
-"платформ. GoCoin ориентирован на помощь продавцам при работе в нишах, "
-"связанных с приватностью и в специфических индустриях. Особое внимание "
-"уделяется управлению рисками по всем платежам от ваших клиентов."
-
-#: ../../developers/integration.rst:394
-msgid ""
-"Features: Invoicing, Exchange Rates, WebHook Callbacks. GoCoin holds Private"
-" Keys on their server allowing the merchant to withdraw funds in "
-"Cryptocurrency or convert to Fiat."
-msgstr ""
-"Функции: выставление счетов, курсы валют, обратные вызовы WebHook. GoCoin "
-"хранит приватные ключи на своём сервере, что позволяет продавцу выводить "
-"средства в криптовалюте или конвертировать их в фиатную валюту."
-
-#: ../../developers/integration.rst:397
-msgid ""
-"Integrations: WooCommerce, Magento, Prestashop, VirtueMart, ZenCart, "
-"OpenCart, OSCommerce, UberCart, nopCommerce, WHMCS, NATS4, Shopify."
-msgstr ""
-"Интеграция с: WooCommerce, Magento, Prestashop, VirtueMart, ZenCart, "
-"OpenCart, OSCommerce, UberCart, nopCommerce, WHMCS, NATS4, Shopify."
-
-#: ../../developers/integration.rst:399
-msgid "Pricing Model: 1% Processing Fee (https://gocoin.com/fees)"
-msgstr ""
-"Модель ценообразования: комиссия за обработку в размере 1% "
-"(https://gocoin.com/fees)"
-
-#: ../../developers/integration.rst:400
-msgid "Documentation: https://gocoin.com/docs"
-msgstr "Документация: https://gocoin.com/docs"
-
-#: ../../developers/integration.rst:404
+#: ../../developers/integration.rst:379
 msgid "CoinPayments"
 msgstr "CoinPayments"
 
-#: ../../developers/integration.rst:411
+#: ../../developers/integration.rst:386
 msgid "https://www.coinpayments.net"
 msgstr "https://www.coinpayments.net"
 
-#: ../../developers/integration.rst:413
+#: ../../developers/integration.rst:388
 msgid ""
 "CoinPayments is an integrated payment gateway for cryptocurrencies such as "
 "Dash. Shopping cart plugins are available for all popular webcarts used "
@@ -960,7 +907,7 @@ msgstr ""
 "настроить \"оформление заказа\" или интегрироваться с уже существующим "
 "оформлением заказа."
 
-#: ../../developers/integration.rst:418
+#: ../../developers/integration.rst:393
 msgid ""
 "Features: Invoicing, Exchange Rates, WebHook Callbacks. CoinPayments holds "
 "Private Keys on their server allowing merchant to withdraw funds in "
@@ -970,7 +917,7 @@ msgstr ""
 "CoinPayments хранит приватные ключи на своём сервере, что позволяет продавцу"
 " извлекать средства в криптовалюте или конвертировать их в фиатную валюту."
 
-#: ../../developers/integration.rst:421
+#: ../../developers/integration.rst:396
 msgid ""
 "Integrations: aMember Pro, Arastta, Blesta, BoxBilling, Drupal, Ecwid, "
 "Hikashop, Magento, OpenCart, OSCommerce, PrestaShop, Tomato Cart, "
@@ -980,22 +927,22 @@ msgstr ""
 "Hikashop, Magento, OpenCart, OSCommerce, PrestaShop, Tomato Cart, "
 "WooCommerce, Ubercart, XCart, ZenCart"
 
-#: ../../developers/integration.rst:424
+#: ../../developers/integration.rst:399
 msgid ""
 "Pricing Model: 0.5% Processing Fee (https://www.coinpayments.net/help-fees)"
 msgstr ""
 "Модель ценообразования: комиссия за обработку в размере 0,5% "
 "(https://www.coinpayments.net/help-fees)"
 
-#: ../../developers/integration.rst:426
+#: ../../developers/integration.rst:401
 msgid "Documentation: https://www.coinpayments.net/apidoc"
 msgstr "Документация: https://www.coinpayments.net/apidoc"
 
-#: ../../developers/integration.rst:432
+#: ../../developers/integration.rst:407
 msgid "SDK Resources"
 msgstr "Ресурсы SDK"
 
-#: ../../developers/integration.rst:434
+#: ../../developers/integration.rst:409
 msgid ""
 "This documentation is also available as a `PDF "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
@@ -1005,7 +952,7 @@ msgstr ""
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
 "Resources-SDK.pdf>`__."
 
-#: ../../developers/integration.rst:436
+#: ../../developers/integration.rst:411
 msgid ""
 "SDKs (Software Development Kits) are used to accelerate the design and "
 "development of a product for the Dash Network. These resources can either be"
@@ -1019,15 +966,15 @@ msgstr ""
 "приложений путём формирования транзакций и/или выполнения различных функций "
 "кошелька."
 
-#: ../../developers/integration.rst:444
+#: ../../developers/integration.rst:419
 msgid "Dash Developer Guide"
 msgstr "Руководство для разработчиков Dash"
 
-#: ../../developers/integration.rst:451
+#: ../../developers/integration.rst:426
 msgid "https://dashcore.readme.io/"
 msgstr ""
 
-#: ../../developers/integration.rst:453
+#: ../../developers/integration.rst:428
 msgid ""
 "The Dash Developer Portal aims to provide the information you need to "
 "understand Dash and start building Dash-based applications. To make the best"
@@ -1036,23 +983,23 @@ msgid ""
 "executable or from Docker Hub."
 msgstr ""
 
-#: ../../developers/integration.rst:459
+#: ../../developers/integration.rst:434
 msgid "Dash Core: https://dashcore.readme.io/"
 msgstr ""
 
-#: ../../developers/integration.rst:460
+#: ../../developers/integration.rst:435
 msgid "Dash Platform: https://dashplatform.readme.io/"
 msgstr ""
 
-#: ../../developers/integration.rst:463
+#: ../../developers/integration.rst:438
 msgid "NodeJS/JavaScript: Dashcore"
 msgstr "NodeJS/JavaScript: Dashcore"
 
-#: ../../developers/integration.rst:470
+#: ../../developers/integration.rst:445
 msgid "https://bitcore.io"
 msgstr "https://bitcore.io"
 
-#: ../../developers/integration.rst:472
+#: ../../developers/integration.rst:447
 msgid ""
 "Dashcore is a fork of Bitcore and operates as a full Dash node — your apps "
 "run directly on the peer-to-peer network. For wallet application "
@@ -1065,54 +1012,56 @@ msgstr ""
 "для запроса балансов адресов, истории транзакций и неизрасходованных "
 "выходов."
 
-#: ../../developers/integration.rst:477 ../../developers/integration.rst:490
+#: ../../developers/integration.rst:452 ../../developers/integration.rst:465
 msgid "Platform: NodeJS / Javascript"
 msgstr "Платформа: NodeJS / Javascript"
 
-#: ../../developers/integration.rst:478
-msgid "Documentation: https://bitcore.io/api/lib"
-msgstr "Документация: https://bitcore.io/api/lib"
+#: ../../developers/integration.rst:453
+msgid ""
+"Documentation: https://github.com/dashevo/dashcore-"
+"lib/blob/master/README.md#documentation"
+msgstr ""
 
-#: ../../developers/integration.rst:479
+#: ../../developers/integration.rst:454
 msgid "Repository lib: https://github.com/dashevo/dashcore-lib"
 msgstr "Репозиторий с библиотекой: https://github.com/dashevo/dashcore-lib"
 
-#: ../../developers/integration.rst:480
+#: ../../developers/integration.rst:455
 msgid "Repository node: https://github.com/dashevo/dashcore-node"
 msgstr "Репозиторий ноды: https://github.com/dashevo/dashcore-node"
 
-#: ../../developers/integration.rst:481
+#: ../../developers/integration.rst:456
 msgid "See also: `Insight API <https://github.com/dashevo/insight-api>`__"
 msgstr ""
 "Смотрите также: `Insight API <https://github.com/dashevo/insight-api>`__"
 
-#: ../../developers/integration.rst:484
+#: ../../developers/integration.rst:459
 msgid "NodeJS/JavaScript: DashJS"
 msgstr ""
 
-#: ../../developers/integration.rst:486
+#: ../../developers/integration.rst:461
 msgid ""
 "DashJS allows you to transact on L1 or fetch/register documents on L2 within"
 " a single library, including management and signing of your documents."
 msgstr ""
 
-#: ../../developers/integration.rst:491
+#: ../../developers/integration.rst:466
 msgid "Documentation: https://dashevo.github.io/js-dash-sdk/"
 msgstr ""
 
-#: ../../developers/integration.rst:492
+#: ../../developers/integration.rst:467
 msgid "Repository: https://github.com/dashevo/js-dash-sdk"
 msgstr ""
 
-#: ../../developers/integration.rst:495
+#: ../../developers/integration.rst:470
 msgid "PHP: Bitcoin-PHP"
 msgstr "PHP: Bitcoin-PHP"
 
-#: ../../developers/integration.rst:497
-msgid "https://github.com/snogcel/bitcoin-php"
-msgstr "https://github.com/snogcel/bitcoin-php"
+#: ../../developers/integration.rst:472
+msgid "https://github.com/Bit-Wasp/bitcoin-php"
+msgstr "https://github.com/Bit-Wasp/bitcoin-php"
 
-#: ../../developers/integration.rst:499
+#: ../../developers/integration.rst:474
 msgid ""
 "Bitcoin-PHP is an implementation of Bitcoin with support for Dash using "
 "mostly pure PHP."
@@ -1120,29 +1069,29 @@ msgstr ""
 "Bitcoin-PHP - это реализация Bitcoin с поддержкой Dash, которая в основном "
 "использует только PHP."
 
-#: ../../developers/integration.rst:502
+#: ../../developers/integration.rst:477
 msgid "Platform: PHP"
 msgstr "Платформа: PHP"
 
-#: ../../developers/integration.rst:503
+#: ../../developers/integration.rst:478
 msgid ""
 "Documentation: https://github.com/Bit-Wasp/bitcoin-"
 "php/blob/1.0/doc/documentation/Introduction.md"
 msgstr ""
 
-#: ../../developers/integration.rst:504
-msgid "Repository: https://github.com/snogcel/bitcoin-php"
-msgstr "Репозиторий: https://github.com/snogcel/bitcoin-php"
+#: ../../developers/integration.rst:479
+msgid "Repository: https://github.com/Bit-Wasp/bitcoin-php"
+msgstr "Репозиторий: https://github.com/Bit-Wasp/bitcoin-php"
 
-#: ../../developers/integration.rst:507
+#: ../../developers/integration.rst:482
 msgid "Python: PyCoin"
 msgstr "Python: PyCoin"
 
-#: ../../developers/integration.rst:509
-msgid "https://github.com/DeltaEngine/pycoin"
-msgstr "https://github.com/DeltaEngine/pycoin"
+#: ../../developers/integration.rst:484
+msgid "https://github.com/richardkiss/pycoin"
+msgstr "https://github.com/richardkiss/pycoin"
 
-#: ../../developers/integration.rst:511
+#: ../../developers/integration.rst:486
 msgid ""
 "PyCoin is an implementation of a bunch of utility routines that may be "
 "useful when dealing with Bitcoin and Dash. It has been tested with Python "
@@ -1152,35 +1101,32 @@ msgstr ""
 "полезны при работе с Bitcoin и Dash. Он тестировался с Python 2.7, 3.6 и "
 "3.7."
 
-#: ../../developers/integration.rst:515
+#: ../../developers/integration.rst:490
 msgid "Platform: Python"
 msgstr "Платформа: Python"
 
-#: ../../developers/integration.rst:516
+#: ../../developers/integration.rst:491
 msgid "Documentation: https://pycoin.readthedocs.io/en/latest/"
 msgstr "Документация: https://pycoin.readthedocs.io/en/latest/"
 
-#: ../../developers/integration.rst:517
-msgid "Repository: https://github.com/DeltaEngine/pycoin"
-msgstr "Репозиторий: https://github.com/DeltaEngine/pycoin"
+#: ../../developers/integration.rst:492
+msgid "Repository: https://github.com/richardkiss/pycoin"
+msgstr "Репозиторий: https://github.com/richardkiss/pycoin"
 
-#: ../../developers/integration.rst:518
+#: ../../developers/integration.rst:493
 msgid ""
-"See also: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-"
-"dashrpc>`__"
+"See also: `JSON-RPC Utilities <https://github.com/richardkiss/pycoin>`__"
 msgstr ""
-"Смотрите также: `Утилиты JSON-RPC <https://github.com/DeltaEngine/python-"
-"dashrpc>`__"
 
-#: ../../developers/integration.rst:521
+#: ../../developers/integration.rst:496
 msgid "Java: DashJ"
 msgstr "Java: DashJ"
 
-#: ../../developers/integration.rst:528
+#: ../../developers/integration.rst:503
 msgid "https://github.com/dashevo/dashj"
 msgstr ""
 
-#: ../../developers/integration.rst:530
+#: ../../developers/integration.rst:505
 msgid ""
 "DashJ is a library for working with the Dash protocol. It can maintain a "
 "wallet, send/receive transactions (including InstantSend) without needing a "
@@ -1195,31 +1141,31 @@ msgstr ""
 "использоваться с любым совместимым с JVM языком: присутствуют примеры в "
 "Python и JavaScript."
 
-#: ../../developers/integration.rst:536
+#: ../../developers/integration.rst:511
 msgid "Platform: Java"
 msgstr "Платформа: Java"
 
-#: ../../developers/integration.rst:537
+#: ../../developers/integration.rst:512
 msgid "Documentation: https://bitcoinj.org/getting-started"
 msgstr ""
 
-#: ../../developers/integration.rst:538
+#: ../../developers/integration.rst:513
 msgid "Repository: https://github.com/dashevo/dashj"
 msgstr ""
 
-#: ../../developers/integration.rst:539
+#: ../../developers/integration.rst:514
 msgid "Example application: https://github.com/tomasz-ludek/pocket-of-dash"
 msgstr "Образец приложения: https://github.com/tomasz-ludek/pocket-of-dash"
 
-#: ../../developers/integration.rst:542
+#: ../../developers/integration.rst:517
 msgid "Objective-C: Dash-Sync"
 msgstr "Objective-C: Dash-Sync"
 
-#: ../../developers/integration.rst:549
+#: ../../developers/integration.rst:524
 msgid "https://github.com/dashevo/dashsync-iOS"
 msgstr "https://github.com/dashevo/dashsync-iOS"
 
-#: ../../developers/integration.rst:551
+#: ../../developers/integration.rst:526
 msgid ""
 "Dash-Sync is an Objective-C Dash blockchain framework for iOS. It implements"
 " all most relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement"
@@ -1229,23 +1175,23 @@ msgstr ""
 "большинство релевантных Предложений по улучшению Bitcoin (BIPs) и "
 "Предложений по улучшению Dash (DIPs)."
 
-#: ../../developers/integration.rst:555
+#: ../../developers/integration.rst:530
 msgid "Platform: iOS"
 msgstr "Платформа: iOS"
 
-#: ../../developers/integration.rst:556
+#: ../../developers/integration.rst:531
 msgid "Repository: https://github.com/dashevo/dashsync-iOS"
 msgstr "Репозиторий: https://github.com/dashevo/dashsync-iOS"
 
-#: ../../developers/integration.rst:559
+#: ../../developers/integration.rst:534
 msgid ".NET: NBitcoin"
 msgstr ".NET: NBitcoin"
 
-#: ../../developers/integration.rst:566
+#: ../../developers/integration.rst:541
 msgid "https://github.com/MetacoSA/NBitcoin"
 msgstr "https://github.com/MetacoSA/NBitcoin"
 
-#: ../../developers/integration.rst:568
+#: ../../developers/integration.rst:543
 msgid ""
 "NBitcoin is the most complete Bitcoin library for the .NET platform, and has"
 " been patched to include support for Dash. It implements all most relevant "
@@ -1260,36 +1206,36 @@ msgstr ""
 "нижний уровень к примитивам Dash, поэтому вы можете легко создавать "
 "приложения поверх них."
 
-#: ../../developers/integration.rst:574
+#: ../../developers/integration.rst:549
 msgid "Platform: .NET"
 msgstr "Платформа: .NET"
 
-#: ../../developers/integration.rst:575
+#: ../../developers/integration.rst:550
 msgid ""
 "Documentation: "
 "https://programmingblockchain.gitbook.io/programmingblockchain/"
 msgstr ""
 
-#: ../../developers/integration.rst:576
+#: ../../developers/integration.rst:551
 msgid "Repository: https://github.com/MetacoSA/NBitcoin"
 msgstr "Репозиторий: https://github.com/MetacoSA/NBitcoin"
 
-#: ../../developers/integration.rst:577
+#: ../../developers/integration.rst:552
 msgid ""
 "See also: `JSON-RPC Utilities <https://github.com/cryptean/bitcoinlib>`__"
 msgstr ""
 "Смотрите также: `Утилиты JSON-RPC "
 "<https://github.com/cryptean/bitcoinlib>`__"
 
-#: ../../developers/integration.rst:589
+#: ../../developers/integration.rst:564
 msgid "BlockCypher also offers client SDKs."
 msgstr "BlockCypher также предлагает SDK."
 
-#: ../../developers/integration.rst:591
+#: ../../developers/integration.rst:566
 msgid "Platform: Ruby, Python, Java, PHP, Go, NodeJS"
 msgstr "Платформы: Ruby, Python, Java, PHP, Go, NodeJS"
 
-#: ../../developers/integration.rst:592
+#: ../../developers/integration.rst:567
 msgid ""
 "Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-supported-"
 "language-sdks"
@@ -1297,19 +1243,11 @@ msgstr ""
 "Репозитории: https://www.blockcypher.com/dev/dash/#blockcypher-supported-"
 "language-sdks"
 
-#: ../../developers/integration.rst:604
-msgid "Platform: JavaScript, PHP, Java, Ruby, .NET, Python"
-msgstr "Платформы: JavaScript, PHP, Java, Ruby, .NET, Python"
-
-#: ../../developers/integration.rst:605
-msgid "Repositories: https://gocoin.com/docs"
-msgstr "Репозитории: https://gocoin.com/docs"
-
-#: ../../developers/integration.rst:609
+#: ../../developers/integration.rst:571
 msgid "Vending Machines"
 msgstr "Торговые автоматы"
 
-#: ../../developers/integration.rst:611
+#: ../../developers/integration.rst:573
 msgid ""
 "Community member moocowmoo has released code to help merchants build their "
 "own vending machine and set it up to receive Dash InstantSend payments. The "
@@ -1322,31 +1260,31 @@ msgstr ""
 "может использоваться для создания любой платёжной системы, включая POS "
 "системы, которые могут принимать платежи InstantSend."
 
-#: ../../developers/integration.rst:617
+#: ../../developers/integration.rst:579
 msgid "`Open Source Code <https://github.com/moocowmoo/dashvend>`_"
 msgstr "`Открытый исходный код <https://github.com/moocowmoo/dashvend>`_"
 
-#: ../../developers/integration.rst:618
+#: ../../developers/integration.rst:580
 msgid "`Demonstration website <http://code.dashndrink.com>`_"
 msgstr "`Демонстрационный сайт <http://code.dashndrink.com>`_"
 
-#: ../../developers/integration.rst:619
+#: ../../developers/integration.rst:581
 msgid "`Demonstration video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_"
 msgstr ""
 "`Демонстрационное видео <https://www.youtube.com/watch?v=SX-3kwbam0o>`_"
 
-#: ../../developers/integration.rst:623
+#: ../../developers/integration.rst:585
 msgid "Price Tickers"
 msgstr "Ценовые тикеры"
 
-#: ../../developers/integration.rst:625
+#: ../../developers/integration.rst:587
 msgid ""
 "You can add a simple price ticker widget to your website using the simple "
 "`code snippet generator from CoinGecko "
 "<https://www.coingecko.com/en/widgets/coin_ticker_widget>`_."
 msgstr ""
 
-#: ../../developers/integration.rst:635
+#: ../../developers/integration.rst:597
 msgid ""
 "Similar widgets with different designs are available from `CoinLib "
 "<https://coinlib.io/widgets>`_, `WorldCoinIndex "
@@ -1362,11 +1300,11 @@ msgstr ""
 "аналогичную информацию, размещён на `DashCentral "
 "<https://www.dashcentral.org/about/api>`_."
 
-#: ../../developers/integration.rst:643
+#: ../../developers/integration.rst:605
 msgid "QR Codes"
 msgstr "QR-коды "
 
-#: ../../developers/integration.rst:645
+#: ../../developers/integration.rst:607
 msgid ""
 "Many wallets are capable of generating QR codes which can be scanned to "
 "simplify entry of the Dash address. Printing these codes or posting the on "
@@ -1378,7 +1316,7 @@ msgstr ""
 "размещение на вашем сайте позволяет легко получать платежи и чаевые в DASH, "
 "находясь как онлайн, так и офлайн."
 
-#: ../../developers/integration.rst:650
+#: ../../developers/integration.rst:612
 msgid ""
 "In Dash Core, go to the **Receive** tab, generate an address if necessary, "
 "and double-click it to display a QR code. Right click on the QR code and "
@@ -1389,7 +1327,7 @@ msgstr ""
 "Кликните правой кнопкой на QR-коде и выберите **Сохранить изображение**, "
 "чтобы сохранить его в формате PNG."
 
-#: ../../developers/integration.rst:653
+#: ../../developers/integration.rst:615
 msgid ""
 "In Dash for Android, tap **Request Coins** and then tap the QR code to "
 "display a larger image. You can screenshot this to save an image."
@@ -1398,7 +1336,7 @@ msgstr ""
 "на QR-код, чтобы отобразить его увеличенное изображение. Для сохранения "
 "этого изображения вы можете сделать его скриншот."
 
-#: ../../developers/integration.rst:655
+#: ../../developers/integration.rst:617
 msgid ""
 "In Dash for iOS, swipe to the left to display the **Receive Dash** screen. A"
 " QR code and address will appear. You can screenshot this to save an image."
@@ -1407,7 +1345,7 @@ msgstr ""
 "**Запросить средства**. Появятся QR-код и адрес. Для сохранения этого "
 "изображения вы можете сделать его скриншот."
 
-#: ../../developers/integration.rst:658
+#: ../../developers/integration.rst:620
 msgid ""
 "To generate a QR code from any Dash address, visit `CWA QR Code Generator "
 "<https://cwaqrgen.com/dash>`_ and simply paste your Dash address to generate"
