@@ -437,14 +437,13 @@ a budget cycle as follows:
 On 13 August 2020, the Dash network approved a `proposal
 <https://www.dashcentral.org/p/decision-proposal-block-reward-reallocat>`__
 to modify the block reward allocation from 50/50 between miners and
-masternodes to 40/60 respectively. Once activated, this reallocation
-will result in an incremental adjustment to the percentage share every
-three superblock cycles, or approximately three months. The following
-table shows the incremental reallocation process. Reward reallocation
-changes would begin at the first superblock following activation and
-then occur every three superblock cycles (approximately once per
-quarter) until the reallocation is complete. This documentation will be
-updated with the specific dates once activation has occurred.
+masternodes to 40/60, respectively. The incremental reallocation adjusts 
+the percentage share every three superblock cycles. 
+
+The following table shows the incremental reallocation process and indicates the 
+current reallocation date. Reward reallocation changes began at the first superblock 
+following activation and then occur every three superblock cycles (approximately 
+once per quarter) until the reallocation is complete. 
 
 +-------------+-----------+--------------+------------+---------------------+
 | Adjustment  | Miner %   | Masternode % | Change (%) |  Reallocation Dates |
