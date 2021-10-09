@@ -442,7 +442,7 @@ the percentage share every three superblock cycles.
 
 The following table shows the incremental reallocation process and indicates the 
 current reallocation date. Reward reallocation changes began at the first superblock 
-following activation and then occur every three superblock cycles (approximately 
+following activation and now occur every three superblock cycles (approximately 
 once per quarter) until the reallocation is complete. 
 
 +-------------+-----------+--------------+------------+---------------------+
