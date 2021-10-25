@@ -61,10 +61,6 @@ for more information.
 
 .. _integration-special-transactions:
 
-
-
-
-
 Special Transactions
 ====================
 
@@ -105,7 +101,7 @@ Integration notes:
 
 3. From a `backwards compatibility <https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ 
    perspective, the 4 byte (32-bit) ``version`` field included in Legacy
-   Transactions have been split into two fields: ``version`` and ``type``
+   Transactions has been split into two fields: ``version`` and ``type``
    (each consisting of 2 bytes).
 
 4. Refer to the `Special Transactions <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions>`__ 
@@ -141,7 +137,7 @@ network `highly resistant to Sybil attacks <https://en.wikipedia.org/wiki/Sybil_
 Masternodes form `Long-Living Masternode Quorums (LLMQs) <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, 
 which are responsible for providing near-instant certainty to the transaction
 participants that the transaction inputs cannot be respent, and that the
-transaction will be included in the following block instead of a conflicting
+transaction will be included in a following block instead of a conflicting
 transaction. 
 
 This concept works as an extension to Nakamoto Consensus. InstantSend
@@ -221,7 +217,7 @@ circumstances is true:
   lock
 - the block containing the previous transaction is `ChainLocked <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__
 
-When checking the previous transaction for an InstantSend lock,  it is
+When checking the previous transaction for an InstantSend lock, it is
 important to do this on mempool (non-mined) transactions. This
 allows chained InstantSend locking.
 
@@ -557,8 +553,8 @@ https://github.com/MetacoSA/NBitcoin
 NBitcoin is the most complete Bitcoin library for the .NET platform and
 has been patched to include support for Dash. It implements all most
 relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement
-Proposals (DIPs). It also provides low-level access to Dash primitives
-to build your application on top of it easily.
+Proposals (DIPs). It also provides low level access to Dash primitives
+so you can easily build your application on top of it.
 
 - Platform: .NET
 - Documentation: https://programmingblockchain.gitbook.io/programmingblockchain/
