@@ -16,38 +16,36 @@ common functionalities. Key differences relate to existing JSON-RPC
 commands which have been customized to support unique functionalities
 such as InstantSend.
 
-1. **General Information:** Dash is a “Proof of Work” network and is
-   similar to Bitcoin.
+   1. **General Information:** Dash is a “Proof of Work” network and is
+      similar to Bitcoin.
 
-   a. Block Time: ~2.6 Minutes per Block
-   b. Github Source: https://github.com/dashpay/dash
-   c. Latest Release: https://github.com/dashpay/dash/releases
+      a. Block Time: ~2.6 Minutes per Block
+      b. Github Source: https://github.com/dashpay/dash
+      c. Latest Release: https://github.com/dashpay/dash/releases
 
-2. **JSON-RPC Interface:** The majority of commands are unchanged from
-   Bitcoin making integration into existing systems relatively
-   straightforward. Note that the following commands have been modified 
-   to support InstantSend:
+   2. **JSON-RPC Interface:** The majority of commands are unchanged from
+      Bitcoin making integration into existing systems relatively
+      straightforward. Note that the following commands have been modified 
+      to support InstantSend:
 
-   - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-raw-mem-pool>`__
-   - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-ancestors>`__
-   - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-descendants>`__
-   - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-entry>`__
-   - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-get-raw-transaction>`__
-   - `decoderawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-decode-raw-transaction>`__
-   - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-get-transaction>`__
-   - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-transactions>`__
-   - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
+      - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-raw-mem-pool>`__
+      - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-ancestors>`__
+      - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-descendants>`__
+      - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-entry>`__
+      - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-get-raw-transaction>`__
+      - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-get-transaction>`__
+      - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-transactions>`__
+      - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
 
-3. **Block Hashing Algorithm:** Dash uses the “X11” algorithm in place
-   of SHA256 used in Bitcoin. It’s important to note, however, that this
-   only affects the hashing of the Block itself. All other internals
-   utilize SHA256 hashes (transactions, merkle root, etc) which allows
-   for most existing libraries to work in the Dash ecosystem. 
+   3. **Block Hashing Algorithm:** Dash uses the “X11” algorithm in place
+      of SHA256 used in Bitcoin. It’s important to note, however, that this
+      only affects the hashing of the Block itself. All other internals
+      utilize SHA256 hashes (transactions, merkle root, etc) which allows
+      for most existing libraries to work in the Dash ecosystem. 
 
-4. **Special Transactions:** Dash Core v0.13.x introduces the concept of
-   “Special Transactions”. Please see the `Transaction Type Integration Guide <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 
-   for more information.
-
+   4. **Specialized Transactions:** Dash Core v0.13.x introduces the concept of
+      “Special Transactions”. Please see the `Transaction Type Integration Guide <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 
+      for more information.
 
 .. _integration-special-transactions:
 
@@ -160,7 +158,6 @@ transaction and is included in the following commands:
 - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-descendants>`__
 - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-entry>`__
 - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-get-raw-transaction>`__
-- `decoderawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-decode-raw-transaction>`__
 - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-get-transaction>`__
 - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-transactions>`__
 - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
