@@ -53,16 +53,17 @@ its root directory with installation as follows::
   wget https://github.com/akhavr/electrum-dash/releases/download/4.1.5.0/Dash-Electrum-4.1.5.0.tar.gz
   tar -zxvf Dash-Electrum-4.1.5.0.tar.gz
   cd Dash-Electrum-4.1.5.0
+  python3 -m pip install -t packages x11-hash
   ./electrum-dash
 
 Finally, you can install Dash Electrum to your system from the source
 tarball as follows::
 
-  sudo apt install python3-pyqt5 python3-pip python3-setuptools libgmp3-dev
+  sudo apt install python3-pyqt5 python3-pip python3-setuptools libsecp256k1-dev libgmp3-dev
   wget https://github.com/akhavr/electrum-dash/releases/download/4.1.5.0/Dash-Electrum-4.1.5.0.tar.gz
   tar -zxvf Dash-Electrum-4.1.5.0.tar.gz
   cd Dash-Electrum-4.1.5.0
-  sudo python3 setup.py install
+  python3 -m pip install .[fast]
 
 You can then run ``electrum-dash`` from the terminal.
 
