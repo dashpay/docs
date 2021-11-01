@@ -10,19 +10,19 @@ Integration Overview
 
 This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_IntegrationOverview.pdf>`__.
 
-`Dash Core <https://github.com/dashpay/dash/releases>`__ is a fork of 
-`Bitcoin Core <https://github.com/bitcoin/bitcoin>`__ and shares many
-common functionalities. Key differences are found in existing JSON-RPC
-commands which have been customized to support unique functionalities
-such as InstantSend.
+`Dash Core <https://github.com/dashpay/dash/releases>`__ is a fork of `Bitcoin
+Core <https://github.com/bitcoin/bitcoin>`__ and shares many common
+functionalities. Key differences are found in existing JSON-RPC commands which
+have been customized to support unique functionalities such as InstantSend.
 
 The Basics
 ==========
 
-Dash is a Proof of Work network, and similar to Bitcoin, Dash has a mining network 
-but uses a different block hashing algorithm. Dash serves as an improvement of Bitcoin's 
-shortcomings by offering a robust solution for instant transactions, enhancing user anonymity, 
-and offering a self-sustainable decentralized governance model.
+Dash is a Proof of Work network, and similar to Bitcoin, Dash has a mining
+network but uses a different block hashing algorithm. Dash serves as an
+improvement of Bitcoin's shortcomings by offering a robust solution for instant
+transactions, enhancing user anonymity, and offering a self-sustainable
+decentralized governance model.
 
 - Block time: ~2.6 minutes per block
 - Github source: https://github.com/dashpay/dash
@@ -31,9 +31,9 @@ and offering a self-sustainable decentralized governance model.
 JSON-RPC Interface
 ------------------
 
-The majority of commands are unchanged from Bitcoin making integration into existing 
-systems relatively straightforward. Note that the following commands have been modified 
-to support InstantSend:
+The majority of commands are unchanged from Bitcoin making integration into
+existing systems relatively straightforward. Note that the following commands
+have been modified to support InstantSend:
 
    - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-raw-mem-pool>`__
    - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-ancestors>`__
@@ -47,16 +47,17 @@ to support InstantSend:
 Block Hashing Algorithm
 -----------------------
 
-Dash uses the X11 algorithm in place of SHA256 used in Bitcoin. 
-It’s important to note, however, that this only affects the hashing of the Block itself. 
-All other internals utilize SHA256 hashes (transactions, merkle root, etc.), which allows
-for most existing libraries to work in the Dash ecosystem. 
+Dash uses the X11 algorithm in place of SHA256 used in Bitcoin. It’s important
+to note, however, that this only affects the hashing of the Block itself. All
+other internals utilize SHA256 hashes (transactions, merkle root, etc.), which
+allows for most existing libraries to work in the Dash ecosystem. 
 
 Special Transactions
 --------------------
 
-Dash Core v0.13.x introduced the concept of “Special Transactions”. 
-Please see the `Transaction Type Integration Guide <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 
+Dash Core v0.13.x introduced the concept of “Special Transactions”. Please see
+the `Transaction Type Integration Guide
+<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__
 for more information.
 
 .. _integration-special-transactions:
