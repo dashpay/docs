@@ -148,14 +148,14 @@ at `Dash Discord <http://dashchat.org/>`_.
 Dash Android
 ------------
 
-Similar to Dash Core wallet, Dash Wallet for Android can back up your
-wallet to a file. To restore this wallet on another device, simply copy
+Similar to Dash Core wallet, Dash Wallet for Android can restore your
+wallet from a file. To restore this wallet on another device, simply copy
 the backup file to the ``/Downloads`` folder of your device using either
 a computer connected by USB or a file manager app on the device. Ensure
 your Dash wallet is fully updated in the Play Store, then open Dash. If
-you have an existing balance, either make another backup or transfer it
-to an external address, because restoring a wallet will replace your
-existing wallet!
+you have an existing balance, either view and write down your recovery
+phrase or transfer your balance to an external address, because restoring
+a wallet will replace your existing wallet!
 
 Select **Restore from file** from the menu at the bottom of the main page, 
 locate your file, and enter your file's password when prompted. This may 
@@ -180,11 +180,12 @@ iOS or Android mobile device, follow these instructions.
 -------------------------
 
 Ensure your Dash wallet is fully updated in the Play Store, then open
-Dash. If you have an existing balance, either make another backup or
-transfer it to an external address, because restoring a wallet will
-replace your existing wallet. Select **Restore from recovery phrase** 
-from the menu at the bottom of the main page, and enter your
-12-word phrase when prompted.
+Dash. If you have an existing balance, either view and write down your
+recovery phrase or transfer your balance to an external address, because
+restoring a wallet will replace your existing wallet. 
+
+Select **Restore from recovery phrase** from the menu at the bottom of
+the main page, and enter your 12-word phrase when prompted.
 
 .. image:: img/recovery-android3.png
    :width: 200px
