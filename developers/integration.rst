@@ -239,8 +239,6 @@ underlying technologies.
 API Services
 ============
 
-This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-API.pdf>`__.
-
 Several API services exist to facilitate quick and easy integration with
 the Dash network for services including:
 
@@ -415,8 +413,6 @@ or integrate with your pre-existing checkout.
 
 SDK Resources
 =============
-
-This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-SDK.pdf>`__.
 
 SDKs (Software Development Kits) are used to accelerate the design and
 development of a product for the Dash Network. These resources can
