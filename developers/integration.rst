@@ -40,7 +40,6 @@ to support InstantSend:
    - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-descendants>`__
    - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-entry>`__
    - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-get-raw-transaction>`__
-   - `decoderawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-decode-raw-transaction>`__
    - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-get-transaction>`__
    - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-transactions>`__
    - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
@@ -170,7 +169,6 @@ transaction and is included in the following commands:
 - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-descendants>`__
 - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-entry>`__
 - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-get-raw-transaction>`__
-- `decoderawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-decode-raw-transaction>`__
 - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-get-transaction>`__
 - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-transactions>`__
 - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
@@ -498,7 +496,7 @@ useful when dealing with Bitcoin and Dash. It has been tested
 with Python 2.7, 3.6 and 3.7.
 
 - Platform: Python
-- Documentation: https://buildmedia.readthedocs.org/media/pdf/pycoin/latest/pycoin.pdf
+- Documentation: https://pycoin.readthedocs.io/en/latest/
 - Repository: https://github.com/richardkiss/pycoin
 - See also: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-dashrpc>`__
 
