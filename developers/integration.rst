@@ -35,14 +35,14 @@ The majority of commands are unchanged from Bitcoin making integration into
 existing systems relatively straightforward. Note that the following commands
 have been modified to support InstantSend:
 
-   - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-raw-mem-pool>`__
-   - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-ancestors>`__
-   - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-descendants>`__
-   - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-entry>`__
-   - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-get-raw-transaction>`__
-   - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-get-transaction>`__
-   - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-transactions>`__
-   - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
+   - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getrawmempool>`__
+   - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolancestors>`__
+   - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempooldescendants>`__
+   - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolentry>`__
+   - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#getrawtransaction>`__
+   - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#gettransaction>`__
+   - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listtransactions>`__
+   - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listsinceblock>`__
 
 Block Hashing Algorithm
 -----------------------
@@ -166,14 +166,14 @@ direct connection with the Dash daemon using JSON-RPC protocol. The
 “instantlock” attribute of the JSON response reflects the status of the
 transaction and is included in the following commands:
 
-- `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-raw-mem-pool>`__
-- `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-ancestors>`__
-- `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-descendants>`__
-- `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-entry>`__
-- `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-get-raw-transaction>`__
-- `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-get-transaction>`__
-- `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-transactions>`__
-- `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
+- `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getrawmempool>`__
+- `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolancestors>`__
+- `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempooldescendants>`__
+- `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolentry>`__
+- `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#getrawtransaction>`__
+- `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#gettransaction>`__
+- `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listtransactions>`__
+- `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listsinceblock>`__
 
 **ZMQ Notification:** Whenever a transaction enters the mempool and
 whenever a transaction is locked in the mempool, ZMQ notifications can
