@@ -161,6 +161,15 @@ Select **Restore from file** from the menu at the bottom of the main page,
 locate your file, and enter your file's password when prompted. This may 
 take some time, and your balance will be displayed when complete.
 
+.. note::
+   
+   For devices that already have an active wallet, first write down the
+   existing recovery phrase as a backup. Click the menu button on the bottom
+   right corner and select **Security > View Recovery Phrase** to find it.
+   After backing up the recovery phrase, reset the wallet by selecting the
+   **Security > Reset Wallet** option and then proceed with restoring the
+   backup file.
+
 .. image:: img/recovery-android1.png
    :width: 200px
 .. image:: img/recovery-android2.png
@@ -186,6 +195,15 @@ restoring a wallet will replace your existing wallet.
 
 Select **Restore from recovery phrase** from the menu at the bottom of
 the main page, and enter your 12-word phrase when prompted.
+
+.. note::
+   
+   For devices that already have an active wallet, first write down the
+   existing recovery phrase as a backup. Click the menu button on the bottom
+   right corner and select **Security > View Recovery Phrase** to find it.
+   After backing up the recovery phrase, reset the wallet by selecting the
+   **Security > Reset Wallet** option and then proceed with restoring the
+   recovery phrase.
 
 .. image:: img/recovery-android3.png
    :width: 200px
