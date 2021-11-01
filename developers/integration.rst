@@ -17,7 +17,7 @@ commands which have been customized to support unique functionalities
 such as InstantSend.
 
 The Basics
-----------------------------------
+==========
 
 Dash is a Proof of Work network, and similar to Bitcoin, Dash has a mining network 
 but uses a different block hashing algorithm. Dash serves as an improvement of Bitcoin's 
@@ -29,7 +29,7 @@ and offering a self-sustainable decentralized governance model.
 - Latest release: https://github.com/dashpay/dash/releases
 
 JSON-RPC Interface
-----------------------------------
+==================
 
 The majority of commands are unchanged from Bitcoin making integration into existing 
 systems relatively straightforward. Note that the following commands have been modified 
@@ -45,7 +45,7 @@ to support InstantSend:
    - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
 
 Block Hashing Algorithm
-----------------------------------
+=======================
 
 Dash uses the X11 algorithm in place of SHA256 used in Bitcoin. 
 It’s important to note, however, that this only affects the hashing of the Block itself. 
@@ -53,7 +53,8 @@ All other internals utilize SHA256 hashes (transactions, merkle root, etc.), whi
 for most existing libraries to work in the Dash ecosystem. 
 
 Special Transactions
-----------------------------------
+====================
+
 Dash Core v0.13.x introduced the concept of “Special Transactions”. 
 Please see the `Transaction Type Integration Guide <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 
 for more information.
