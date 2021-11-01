@@ -587,7 +587,6 @@ payment system, including point-of-sale systems that can accept
 InstantSend payments.
 
 - `Open Source Code <https://github.com/moocowmoo/dashvend>`_
-- `Demonstration website <http://code.dashndrink.com>`_
 - `Demonstration video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_
 
 
