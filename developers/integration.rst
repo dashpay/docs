@@ -496,7 +496,7 @@ useful when dealing with Bitcoin and Dash. It has been tested
 with Python 2.7, 3.6 and 3.7.
 
 - Platform: Python
-- Documentation: https://buildmedia.readthedocs.org/media/pdf/pycoin/latest/pycoin.pdf
+- Documentation: https://pycoin.readthedocs.io/en/latest/
 - Repository: https://github.com/richardkiss/pycoin
 - See also: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-dashrpc>`__
 
