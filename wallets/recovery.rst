@@ -170,9 +170,9 @@ take some time, and your balance will be displayed when complete.
    **Security > Reset Wallet** option and then proceed with restoring the
    backup file.
 
-.. image:: img/recovery-android1.png
+.. image:: img/recovery-android1.jpg
    :width: 200px
-.. image:: img/recovery-android2.png
+.. image:: img/recovery-android2.jpg
    :width: 200px
 
 *Restoring a file backup using Dash Wallet for Android*
@@ -205,9 +205,9 @@ the main page, and enter your 12-word phrase when prompted.
    **Security > Reset Wallet** option and then proceed with restoring the
    recovery phrase.
 
-.. image:: img/recovery-android3.png
+.. image:: img/recovery-android3.jpg
    :width: 200px
-.. image:: img/recovery-android4.png
+.. image:: img/recovery-android4.jpg
    :width: 200px
 
 *Restoring a 12-word recovery phrase using Dash wallet for Android*
