@@ -148,25 +148,31 @@ at `Dash Discord <http://dashchat.org/>`_.
 Dash Android
 ------------
 
-Similar to Dash Core wallet, Dash Wallet for Android can back up your
-wallet to a file. To restore this wallet on another device, simply copy
+Similar to Dash Core wallet, Dash Wallet for Android can restore your
+wallet from a file. To restore this wallet on another device, simply copy
 the backup file to the ``/Downloads`` folder of your device using either
 a computer connected by USB or a file manager app on the device. Ensure
 your Dash wallet is fully updated in the Play Store, then open Dash. If
-you have an existing balance, either make another backup or transfer it
-to an external address, because restoring a wallet will replace your
-existing wallet!
+you have an existing balance, either view and write down your recovery
+phrase or transfer your balance to an external address, because restoring
+a wallet will replace your existing wallet!
 
-Click the menu button in the top left corner, select **Safety >
-Restore** wallet and select the appropriate file from the list. Enter
-your password and click **Restore**. This may take some time, and your
-balance will be displayed when complete.
+Select **Restore from file** from the menu at the bottom of the main page, 
+locate your file, and enter your file's password when prompted. This may 
+take some time, and your balance will be displayed when complete.
 
-.. image:: img/recovery-android1.png
+.. note::
+   
+   For devices that already have an active wallet, first write down the
+   existing recovery phrase as a backup. Click the menu button on the bottom
+   right corner and select **Security > View Recovery Phrase** to find it.
+   After backing up the recovery phrase, reset the wallet by selecting the
+   **Security > Reset Wallet** option and then proceed with restoring the
+   backup file.
+
+.. image:: img/recovery-android1.jpg
    :width: 200px
-.. image:: img/recovery-android2.png
-   :width: 200px
-.. image:: img/recovery-android3.png
+.. image:: img/recovery-android2.jpg
    :width: 200px
 
 *Restoring a file backup using Dash Wallet for Android*
@@ -183,17 +189,25 @@ iOS or Android mobile device, follow these instructions.
 -------------------------
 
 Ensure your Dash wallet is fully updated in the Play Store, then open
-Dash. If you have an existing balance, either make another backup or
-transfer it to an external address, because restoring a wallet will
-replace your existing wallet! Click the menu button in the top left
-corner, select **Safety > Restore from recovery phrase** and enter your
-12-word phrase.
+Dash. If you have an existing balance, either view and write down your
+recovery phrase or transfer your balance to an external address, because
+restoring a wallet will replace your existing wallet. 
 
-.. image:: img/recovery-android1.png
+Select **Restore from recovery phrase** from the menu at the bottom of
+the main page, and enter your 12-word phrase when prompted.
+
+.. note::
+   
+   For devices that already have an active wallet, first write down the
+   existing recovery phrase as a backup. Click the menu button on the bottom
+   right corner and select **Security > View Recovery Phrase** to find it.
+   After backing up the recovery phrase, reset the wallet by selecting the
+   **Security > Reset Wallet** option and then proceed with restoring the
+   recovery phrase.
+
+.. image:: img/recovery-android3.jpg
    :width: 200px
-.. image:: img/recovery-android4.png
-   :width: 200px
-.. image:: img/recovery-android5.png
+.. image:: img/recovery-android4.jpg
    :width: 200px
 
 *Restoring a 12-word recovery phrase using Dash wallet for Android*
