@@ -277,7 +277,15 @@ Prepare the collateral transaction
 
 Finally, open your Dash Core wallet console and use the ``gobject prepare``
 command to complete the proposal preparation and submit the collateral
-transaction::
+transaction
+
+.. warning::
+  Running this command will create a transaction spending 5 DASH from the wallet
+  as collateral for the proposal being created. Only run this command once you
+  have verified all the proposal information. The transaction is not reversible
+  once sent.
+  
+::
   
   gobject prepare <parent-hash> <revision> <time> <data-hex>
 
