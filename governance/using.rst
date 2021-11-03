@@ -228,6 +228,71 @@ discussion with the community. The steps to be taken are almost
 identical to the procedure described above, and documentation is
 available `here <https://www.dashcentral.org/about/contact>`_.
 
+Dash Core Wallet Console
+------------------------
+
+Assemble the proposal data
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To prepare a proposal, put the proposal details such as name and payout address
+into a JSON object similar to the example shown below. 
+
+.. code-block:: json
+
+  {
+    "name": "Test proposal",
+    "payment_address": "yd5KMREs3GLMe6mTJYr3YrH1juwNwrFCfB",
+    "payment_amount": 10,
+    "url": "https://www.mydashtestproposal.com",
+    "start_epoch": 1635000000,
+    "end_epoch": 1636000000,
+    "type": 1
+  }  
+
+Set the ``type`` field to ``1`` for all proposals.
+
+The ``start_epoch`` and ``end_epoch`` are Unix epoch timestamps indicating how
+long the proposal should be active. Typically you will set the ``start_epoch``
+to `approximately the current Unix epoch time
+<https://duckduckgo.com/?q=unix+epoch&ia=answer>`_. Set the ``end_epoch`` to the
+time when you want the proposal to end. You can use a site like
+https://www.epochconverter.com/ to help calculate this value.
+
+Serialize the proposal data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The proposal information must be serialized to hex before it can be submitted to
+the network. Remove all spaces from the JSON object (excluding any spaces inside
+the ``name`` field)::
+
+  {"name":"Test proposal","payment_address":"yd5KMREs3GLMe6mTJYr3YrH1juwNwrFCfB","payment_amount":10,"type":1,"url":"http://test.com","start_epoch":1635000000,"end_epoch":1636000000}
+
+Convert the resulting JSON to its hex equivalent. Sites like
+https://codebeautify.org/string-hex-converter provide an easy way to do this::
+
+  7b226e616d65223a22546573742070726f706f73616c222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353030303030302c22656e645f65706f6368223a313633363030303030307d
+
+Prepare the proposal data
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Finally, open your Dash Core wallet console and use the ``gobject prepare``
+command to complete the proposal preparation::
+  
+  gobject prepare <parent-hash> <revision> <time> <data-hex>
+
+- ``parent-hash`` - set to ``0``
+- ``revision`` - set to ``1``
+- ``time`` - set to the current Unix epoch time
+- ``data-hex`` - set to the hex string from the previous step
+
+Example command::
+
+  gobject prepare 0 1 1635500000 7b22656e645f65706f6368223a313536303435373035352c226e616d65223a2274657374222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a352c2273746172745f65706f6368223a313536303435333439302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d227d
+
+The command will execute and respond with a transaction ID for the collateral payment::
+  
+  3fd758e7a5761bb07b2850b8ba432ef42c1ea80f0921d2eab0682697dda78262
+
 
 Voting on proposals
 ===================
