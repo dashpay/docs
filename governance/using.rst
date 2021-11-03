@@ -272,11 +272,12 @@ https://codebeautify.org/string-hex-converter provide an easy way to do this::
 
   7b226e616d65223a22546573742070726f706f73616c222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353030303030302c22656e645f65706f6368223a313633363030303030307d
 
-Prepare the proposal data
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Prepare the collateral transaction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Finally, open your Dash Core wallet console and use the ``gobject prepare``
-command to complete the proposal preparation::
+command to complete the proposal preparation and submit the collateral
+transaction::
   
   gobject prepare <parent-hash> <revision> <time> <data-hex>
 
