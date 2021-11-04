@@ -281,7 +281,9 @@ Prepare the collateral transaction
 
 Finally, open your Dash Core wallet console and use the ``gobject prepare``
 command to complete the proposal preparation and submit the collateral
-transaction.
+transaction. See the `Core developer documentation
+<https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-dash#gobject-prepare>`_
+for additional details.
 
 .. warning::
   Running this command will create a transaction spending 5 DASH from the wallet
@@ -310,7 +312,10 @@ Submit the proposal
 ^^^^^^^^^^^^^^^^^^^
 
 Once the transaction has six confirmations, use the ``gobject submit`` command
-to submit the prepared governance object to the network for voting.
+to submit the prepared governance object to the network for voting. See the
+`Core developer documentation
+<https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-dash#gobject-submit>`_
+for additional details.
 
 ::
 
