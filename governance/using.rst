@@ -231,6 +231,10 @@ available `here <https://www.dashcentral.org/about/contact>`_.
 Dash Core Wallet Console
 ------------------------
 
+Creating a proposal using the wallet console follows the same process as using
+the Dash budget proposal generator, but it requires several additional steps to
+manually construct the proposal governance object.
+
 Assemble the proposal data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -240,12 +244,12 @@ into a JSON object similar to the example shown below.
 .. code-block:: json
 
   {
-    "name": "Test proposal",
+    "name": "Test-proposal_1",
     "payment_address": "yd5KMREs3GLMe6mTJYr3YrH1juwNwrFCfB",
     "payment_amount": 10,
     "url": "https://www.mydashtestproposal.com",
-    "start_epoch": 1635000000,
-    "end_epoch": 1636000000,
+    "start_epoch": 1635750000,
+    "end_epoch": 1636750000,
     "type": 1
   }  
 
@@ -263,22 +267,21 @@ Serialize the proposal data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The proposal information must be serialized to hex before it can be submitted to
-the network. Remove all spaces from the JSON object (excluding any spaces inside
-the ``name`` field)::
+the network. Remove all spaces from the JSON object::
 
-  {"name":"Test proposal","payment_address":"yd5KMREs3GLMe6mTJYr3YrH1juwNwrFCfB","payment_amount":10,"type":1,"url":"http://test.com","start_epoch":1635000000,"end_epoch":1636000000}
+  {"name":"Test-proposal_1","payment_address":"yd5KMREs3GLMe6mTJYr3YrH1juwNwrFCfB","payment_amount":10,"type":1,"url":"http://test.com","start_epoch":1635750000,"end_epoch":1636750000}
 
 Convert the resulting JSON to its hex equivalent. Sites like
 https://codebeautify.org/string-hex-converter provide an easy way to do this::
 
-  7b226e616d65223a22546573742070726f706f73616c222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353030303030302c22656e645f65706f6368223a313633363030303030307d
+  7b226e616d65223a22546573742d70726f706f73616c5f31222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353735303030302c22656e645f65706f6368223a313633363735303030307d
 
 Prepare the collateral transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Finally, open your Dash Core wallet console and use the ``gobject prepare``
 command to complete the proposal preparation and submit the collateral
-transaction
+transaction.
 
 .. warning::
   Running this command will create a transaction spending 5 DASH from the wallet
@@ -287,7 +290,7 @@ transaction
   once sent.
   
 ::
-  
+
   gobject prepare <parent-hash> <revision> <time> <data-hex>
 
 - ``parent-hash`` - set to ``0``
@@ -297,11 +300,11 @@ transaction
 
 Example command::
 
-  gobject prepare 0 1 1635500000 7b22656e645f65706f6368223a313536303435373035352c226e616d65223a2274657374222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a352c2273746172745f65706f6368223a313536303435333439302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d227d
+  gobject prepare 0 1 1636000000 7b226e616d65223a22546573742d70726f706f73616c5f31222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353735303030302c22656e645f65706f6368223a313633363735303030307d
 
 The command will execute and respond with a transaction ID for the collateral payment::
   
-  3fd758e7a5761bb07b2850b8ba432ef42c1ea80f0921d2eab0682697dda78262
+  9192fb57953baba168f685e32378aa6471061301a097598c68ef1a4c136c9ea3
 
 
 Voting on proposals
