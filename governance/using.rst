@@ -306,6 +306,30 @@ The command will execute and respond with a transaction ID for the collateral pa
   
   9192fb57953baba168f685e32378aa6471061301a097598c68ef1a4c136c9ea3
 
+Submit the proposal
+^^^^^^^^^^^^^^^^^^^
+
+Once the transaction has six confirmations, use the ``gobject submit`` command
+to submit the prepared governance object to the network for voting.
+
+::
+
+  gobject submit <parent-hash> <revision> <time> <data-hex> <fee-txid>
+
+- ``parent-hash`` - use the same value as in the ``gobject prepare`` command
+- ``revision`` - use the same value as in the ``gobject prepare`` command
+- ``time`` - use the same value as in the ``gobject prepare`` command
+- ``data-hex`` - use the same value as in the ``gobject prepare`` command
+- ``fee-txid`` - the transaction ID returned by the ``gobject prepare`` command in the previous step
+
+Example command::
+
+  gobject submit 0 1 1636000000 7b226e616d65223a22546573742d70726f706f73616c5f31222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353735303030302c22656e645f65706f6368223a313633363735303030307d 9192fb57953baba168f685e32378aa6471061301a097598c68ef1a4c136c9ea3
+
+The command will execute and respond with a transaction ID for the proposal
+which can be used to track voting on the proposal::
+  
+  3108b76c8735132a0b6de856b434a40d75924ba0a535c4a61be4dba0bf83263f
 
 Voting on proposals
 ===================
