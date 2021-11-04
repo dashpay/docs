@@ -251,12 +251,13 @@ into a JSON object similar to the example shown below.
 
 Set the ``type`` field to ``1`` for all proposals.
 
-The ``start_epoch`` and ``end_epoch`` are Unix epoch timestamps indicating how
-long the proposal should be active. Typically you will set the ``start_epoch``
-to `approximately the current Unix epoch time
-<https://duckduckgo.com/?q=unix+epoch&ia=answer>`_. Set the ``end_epoch`` to the
-time when you want the proposal to end. You can use a site like
-https://www.epochconverter.com/ to help calculate this value.
+The ``start_epoch`` and ``end_epoch`` fields are Unix epoch timestamps
+indicating the time range in which the proposal can receive payments. Typically
+you will set the ``start_epoch`` to approximately halfway between the superblock
+where payment is first desired and the preceding one. Set ``end_epoch`` to
+approximately 2 weeks after the superblock where the final payment is desired.
+You can use a site like https://www.epochconverter.com/ to convert the start and
+end dates to the epoch values for these fields.
 
 Serialize the proposal data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
