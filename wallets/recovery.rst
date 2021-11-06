@@ -224,8 +224,8 @@ start screen. If you have an existing balance, either make another
 backup or transfer it to an external address, because restoring a wallet
 will replace your existing wallet!
 
-Click the menu button in the top left corner, select **Settings >
-Start/recover another wallet**. Enter your current wallet recovery
+Tap the menu button in the bottom right corner, select **Security >
+Reset wallet**. Tap **Continue** and enter your current wallet recovery
 phrase, then the app will reset and you will see the option to **Recover
 wallet** again.
 
@@ -237,7 +237,9 @@ wallet** again.
    :width: 200px
 .. image:: img/recovery-ios4.png
    :width: 200px
-.. image:: img/recovery-ios5.png
+.. image:: img/recovery-ios5.jpg
+   :width: 200px
+.. image:: img/recovery-ios6.png
    :width: 200px
 
 *Restoring a 12-word recovery phrase using Dash wallet for iOS*
