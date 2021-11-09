@@ -10,43 +10,55 @@ Integration Overview
 
 This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_IntegrationOverview.pdf>`__.
 
-`Dash Core <https://github.com/dashpay/dash>`__ is a “fork” of 
-`Bitcoin Core <https://github.com/bitcoin/bitcoin>`__ and shares many
-common functionalities. Key differences relate to existing JSON-RPC
-commands which have been customized to support unique functionalities
-such as InstantSend.
+`Dash Core <https://github.com/dashpay/dash/releases>`__ is a fork of `Bitcoin
+Core <https://github.com/bitcoin/bitcoin>`__ and shares many common
+functionalities. Key differences are found in existing JSON-RPC commands which
+have been customized to support unique functionalities such as InstantSend.
 
-1. **General Information:** Dash is a “Proof of Work” network and is
-   similar to Bitcoin.
+The Basics
+==========
 
-   a. Block Time: ~2.6 Minutes per Block
-   b. Github Source: https://github.com/dashpay/dash
-   c. Latest Release: https://github.com/dashpay/dash/releases
+Dash is a Proof of Work network, and similar to Bitcoin, Dash has a mining
+network but uses a different block hashing algorithm. Dash serves as an
+improvement of Bitcoin's shortcomings by offering a robust solution for instant
+transactions, enhancing user privacy, and offering a self-sustainable
+decentralized governance model.
 
-2. **JSON-RPC Interface:** The majority of commands are unchanged from
-   Bitcoin making integration into existing systems relatively
-   straightforward. Note that the following commands have been modified 
-   to support InstantSend:
+- Block time: ~2.6 minutes per block
+- Github source: https://github.com/dashpay/dash
+- Latest release: https://github.com/dashpay/dash/releases
 
-   - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-raw-mem-pool>`__
-   - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-ancestors>`__
-   - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-descendants>`__
-   - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-entry>`__
-   - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-get-raw-transaction>`__
-   - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-get-transaction>`__
-   - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-transactions>`__
-   - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
+JSON-RPC Interface
+------------------
 
-3. **Block Hashing Algorithm:** Dash uses the “X11” algorithm in place
-   of SHA256 used in Bitcoin. It’s important to note, however, that this
-   only affects the hashing of the Block itself. All other internals
-   utilize SHA256 hashes (transactions, merkle root, etc) which allows
-   for most existing libraries to work in the Dash ecosystem. 
+The majority of commands are unchanged from Bitcoin making integration into
+existing systems relatively straightforward. Note that the following commands
+have been modified to support InstantSend:
 
-4. **Special Transactions:** Dash Core v0.13.x introduces the concept of
-   “Special Transactions”. Please see the `Transaction Type Integration Guide <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 
-   for more information.
+   - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getrawmempool>`__
+   - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolancestors>`__
+   - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempooldescendants>`__
+   - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolentry>`__
+   - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#getrawtransaction>`__
+   - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#gettransaction>`__
+   - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listtransactions>`__
+   - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listsinceblock>`__
 
+Block Hashing Algorithm
+-----------------------
+
+Dash uses the X11 algorithm in place of SHA256 used in Bitcoin. It’s important
+to note, however, that this only affects the hashing of the block itself. All
+other internals utilize SHA256 hashes (transactions, merkle root, etc.), which
+allows for most existing libraries to work in the Dash ecosystem. 
+
+Special Transactions
+--------------------
+
+Dash Core v0.13.x introduced the concept of “Special Transactions”. Please see
+the `Transaction Type Integration Guide
+<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__
+for more information.
 
 .. _integration-special-transactions:
 
@@ -85,7 +97,7 @@ Integration notes:
    Transaction Version and related “Payload” to the network.
 
 2. Integrated Systems must be able to `serialize and deserialize <https://github.com/dashpay/dips/blob/master/dip-0002.md#serialization-hashing-and-signing>`__ 
-   these new Transaction Types in order to accurately encode and decode
+   these new Transaction Types to accurately encode and decode
    Raw Transaction data.
 
 3. From a `backwards compatibility <https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ 
@@ -124,7 +136,7 @@ approximately 5,000 masternode servers. These nodes are differentiated
 from standard nodes by having proven ownership of 1,000 Dash, making the
 network `highly resistant to Sybil attacks <https://en.wikipedia.org/wiki/Sybil_attack>`__. 
 Masternodes form `Long-Living Masternode Quorums (LLMQs) <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, 
-which are responsible for providing near instant certainty to the transaction
+which are responsible for providing near-instant certainty to the transaction
 participants that the transaction inputs cannot be respent, and that the
 transaction will be included in a following block instead of a conflicting
 transaction. 
@@ -154,14 +166,14 @@ direct connection with the Dash daemon using JSON-RPC protocol. The
 “instantlock” attribute of the JSON response reflects the status of the
 transaction and is included in the following commands:
 
-- `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-raw-mem-pool>`__
-- `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-ancestors>`__
-- `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-descendants>`__
-- `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#section-get-mem-pool-entry>`__
-- `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#section-get-raw-transaction>`__
-- `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-get-transaction>`__
-- `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-transactions>`__
-- `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#section-list-since-block>`__
+- `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getrawmempool>`__
+- `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolancestors>`__
+- `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempooldescendants>`__
+- `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolentry>`__
+- `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#getrawtransaction>`__
+- `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#gettransaction>`__
+- `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listtransactions>`__
+- `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listsinceblock>`__
 
 **ZMQ Notification:** Whenever a transaction enters the mempool and
 whenever a transaction is locked in the mempool, ZMQ notifications can
@@ -206,7 +218,7 @@ circumstances is true:
 - the block containing the previous transaction is `ChainLocked <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__
 
 When checking the previous transaction for an InstantSend lock, it is
-important to also do this on mempool (non-mined) transactions. This
+important to do this on mempool (non-mined) transactions. This
 allows chained InstantSend locking.
 
 Additional Resources
@@ -226,8 +238,6 @@ underlying technologies.
 
 API Services
 ============
-
-This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-API.pdf>`__.
 
 Several API services exist to facilitate quick and easy integration with
 the Dash network for services including:
@@ -363,7 +373,7 @@ NOWNodes
 
 https://nownodes.io/
 
-NOWNodes provides simple, fast, and secure RPC access to Dash full
+NOWNodes provides simple, fast, and secure RPC access to Dash-based full
 nodes. The low latency and high performance is of great use to
 researchers and businesses such as crypto miners or hardware wallet
 providers.
@@ -385,12 +395,12 @@ https://www.coinpayments.net
 
 CoinPayments is an integrated payment gateway for cryptocurrencies
 such as Dash. Shopping cart plugins are available for all popular
-webcarts used today. CoinPayments can help you set up a new checkout,
+webcarts used today. CoinPayments can help you set up a new checkout
 or integrate with your pre-existing checkout.
 
 - Features: Invoicing, Exchange Rates, WebHook Callbacks. CoinPayments
-  holds Private Keys on their server allowing merchant to withdraw
-  funds in Cryptocurrency or convert to Fiat.
+  holds Private Keys on their server allowing merchants to withdraw
+  funds in Cryptocurrency or convert to fiat.
 - Integrations: aMember Pro, Arastta, Blesta, BoxBilling, Drupal,
   Ecwid, Hikashop, Magento, OpenCart, OSCommerce, PrestaShop, Tomato
   Cart, WooCommerce, Ubercart, XCart, ZenCart
@@ -403,8 +413,6 @@ or integrate with your pre-existing checkout.
 
 SDK Resources
 =============
-
-This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-SDK.pdf>`__.
 
 SDKs (Software Development Kits) are used to accelerate the design and
 development of a product for the Dash Network. These resources can
@@ -474,7 +482,7 @@ mostly pure PHP.
 
 - Platform: PHP
 - Documentation: https://github.com/Bit-Wasp/bitcoin-php/blob/1.0/doc/documentation/Introduction.md
-- Repository: https://github.com/Bit-Wasp/bitcoin-php
+- Repository: https://github.com/snogcel/bitcoin-php
 
 Python: PyCoin
 --------------
@@ -488,7 +496,7 @@ with Python 2.7, 3.6 and 3.7.
 - Platform: Python
 - Documentation: https://pycoin.readthedocs.io/en/latest/
 - Repository: https://github.com/richardkiss/pycoin
-- See also: `JSON-RPC Utilities <https://github.com/richardkiss/pycoin>`__
+- See also: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-dashrpc>`__
 
 Java: DashJ
 -----------
@@ -538,7 +546,7 @@ Dash Improvement Proposals (DIPs).
 
 https://github.com/MetacoSA/NBitcoin
 
-NBitcoin is the most complete Bitcoin library for the .NET platform, and
+NBitcoin is the most complete Bitcoin library for the .NET platform and
 has been patched to include support for Dash. It implements all most
 relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement
 Proposals (DIPs). It also provides low level access to Dash primitives
@@ -571,11 +579,10 @@ Vending Machines
 Community member moocowmoo has released code to help merchants build
 their own vending machine and set it up to receive Dash InstantSend
 payments. The Dashvend software can also be used to create any sort of
-payment system, including point-of-sale systems, that can accept
+payment system, including point-of-sale systems that can accept
 InstantSend payments.
 
 - `Open Source Code <https://github.com/moocowmoo/dashvend>`_
-- `Demonstration website <http://code.dashndrink.com>`_
 - `Demonstration video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_
 
 
@@ -602,13 +609,13 @@ information is available from `DashCentral
 QR Codes
 ========
 
-Many wallets are capable of generating QR codes which can be scanned to
+Many wallets can generate QR codes that are scannable to
 simplify entry of the Dash address. Printing these codes or posting the
 on your website makes it easy to receive payment and tips in Dash, both
 online and offline.
 
 - In Dash Core, go to the **Receive** tab, generate an address if
-  necessary, and double-click it to display a QR code. Right click on
+  necessary, and double-click it to display a QR code. Right-click on
   the QR code and select **Save Image** to save a PNG file.
 - In Dash for Android, tap **Request Coins** and then tap the QR code to
   display a larger image. You can screenshot this to save an image.
