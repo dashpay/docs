@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Daf Daf, 2018
+# Daf Daf, 2021
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2018-02-08 10:31+0000\n"
-"Last-Translator: Daf Daf, 2018\n"
+"Last-Translator: Daf Daf, 2021\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -163,6 +163,8 @@ msgid ""
 "The overview tab offers quick access to your balance and most recent "
 "transactions, as well as the CoinJoin feature."
 msgstr ""
+"L'onglet Vue d'ensemble propose un accès rapide à votre solde et à vos "
+"transactions les plus récentes, ainsi qu'à la fonctionnalité CoinJoin."
 
 #: ../../wallets/dashcore/interface.rst:66
 msgid ""
@@ -170,6 +172,10 @@ msgid ""
 "shows your balances, which may be divided into **Spendable** and **Watch-"
 "only** balances if you have loaded watch addresses:"
 msgstr ""
+"La partie gauche de la zone principale est divisée en deux zones. La zone "
+"supérieure affiche vos soldes, qui peuvent être distingués en soldes "
+"**Dépensables** ou **En consultation seule** si vous avez chargé des "
+"adresses de consultation :"
 
 #: ../../wallets/dashcore/interface.rst:72
 msgid "Available"
@@ -218,6 +224,8 @@ msgid ""
 "The lower area shows the CoinJoin status and allows you to process your "
 "funds using CoinJoin on the Dash masternode network."
 msgstr ""
+"La section inférieure montre l'état de CoinJoin et vous permet de générer "
+"vos fonds CoinJoin en utilisant le réseau de masternodes Dash."
 
 #: ../../wallets/dashcore/interface.rst:87
 msgid ""
@@ -226,6 +234,11 @@ msgid ""
 "transactions appear red, prefixed by a – sign. For more details on your "
 "transaction history, see the **Transactions** tab."
 msgstr ""
+"La zone droite de l'écran affiche vos transactions récentes. Les "
+"transactions entrantes récentes apparaissent en vert, préfixées du signe +. "
+"Les transactions sortantes récentes apparaissent en rouge, préfixées par le "
+"signe –. Pour en savoir plus sur votre historique de transactions, voir "
+"l'onglet **Transactions**."
 
 #: ../../wallets/dashcore/interface.rst:93
 msgid "The Send Tab"
@@ -239,6 +252,12 @@ msgid ""
 " transaction fee are also available. A quick view of your total balance is "
 "also available in the lower right corner."
 msgstr ""
+"L'onglet Envoyer vous permet d'envoyer des fonds à une autre adresse sur le "
+"réseau Dash. Il comporte des champs permettant de saisir l'adresse du "
+"destinataire, une étiquette pour cette adresse, et la quantité de dashs que "
+"vous souhaitez envoyer. Des options relatives aux frais de transactions sont"
+" aussi disponibles. Un aperçu de votre solde total est également disponible "
+"dans le coin inférieur droit."
 
 #: ../../wallets/dashcore/interface.rst:103
 msgid "The Send tab"
@@ -246,7 +265,7 @@ msgstr "Onglet Envoyer"
 
 #: ../../wallets/dashcore/interface.rst:106
 msgid "The CoinJoin Tab"
-msgstr ""
+msgstr "L'onglet CoinJoin"
 
 #: ../../wallets/dashcore/interface.rst:108
 msgid ""
@@ -256,10 +275,17 @@ msgid ""
 "Options related to the transaction fee are also available. A quick view of "
 "your total CoinJoin balance is also available in the lower right corner."
 msgstr ""
+"L'onglet CoinJoin vous permet d'envoyer des fonds à une autre adresse sur le"
+" réseau Dash, avec une confidentialité améliorée. Il comporte des champs "
+"permettant de saisir l'adresse du destinataire, une étiquette pour cette "
+"adresse, et la quantité de dashs que vous souhaitez envoyer. Des options "
+"relatives aux frais de transactions sont aussi disponibles. Un aperçu de "
+"votre solde CoinJoin total est également disponible dans le coin inférieur "
+"droit."
 
 #: ../../wallets/dashcore/interface.rst:117
 msgid "The CoinJoin tab"
-msgstr ""
+msgstr "L'onglet CoinJoin"
 
 #: ../../wallets/dashcore/interface.rst:120
 msgid "The Receive Tab"
@@ -292,6 +318,12 @@ msgid ""
 "transaction history as a CSV file by clicking the Export button in the "
 "bottom right corner of the window."
 msgstr ""
+"L'onglet Transactions affiche l'historique complet des transactions pour "
+"toutes les adresses associées à votre portefeuille. Il a la forme d'un "
+"tableau précisant la date, le type, l'étiquette et le montant de dashs pour "
+"chaque transaction. Vous pouvez aussi exporter l'historique de transaction "
+"en tant que fichier CSV en cliquant sur le bouton Exporter, dans le coin "
+"inférieur droit de la fenêtre."
 
 #: ../../wallets/dashcore/interface.rst:139
 msgid ""
@@ -300,14 +332,19 @@ msgid ""
 " while a circular progress indicator indicates the nubmer of confirmations. "
 "A lightning bolt indicates a transaction with an existing InstantSend lock."
 msgstr ""
+"Les icônes de la colonne de gauche indiquent l'état d'une transaction. Une "
+"coche indique que le nombre recommandé de confirmations a été atteint, "
+"tandis qu'un indicateur circulaire indique le nombre de confirmations. Une "
+"icône en forme d'éclair indique une transaction bénéficiant d'un "
+"verrouillage InstantSend."
 
 #: ../../wallets/dashcore/interface.rst:147
 msgid "The Transactions tab"
-msgstr ""
+msgstr "L'onglet Transactions"
 
 #: ../../wallets/dashcore/interface.rst:150
 msgid "The Masternodes Tab"
-msgstr ""
+msgstr "L'onglet Masternodes"
 
 #: ../../wallets/dashcore/interface.rst:152
 msgid ""
@@ -316,10 +353,15 @@ msgid ""
 "in the Filter List field, or display only masternodes with owner keys stored"
 " in the loaded wallet."
 msgstr ""
+"L'onglet Masternodes propose un panorama des masternodes actuellement "
+"enregistrés sur le réseau Dash. Vous pouvez filtrer ces données en "
+"saisissant une valeur dans le champ Filtrer la liste, ou afficher seulement "
+"les masternodes correspondant aux clés de propriétaire stockées dans le "
+"portefeuille chargé."
 
 #: ../../wallets/dashcore/interface.rst:159
 msgid "The Masternodes tab"
-msgstr ""
+msgstr "L'onglet Masternodes"
 
 #: ../../wallets/dashcore/interface.rst:163
 msgid "The Status Bar"
@@ -377,11 +419,11 @@ msgstr "Dash Core télécharge des blocs depuis le réseau."
 
 #: ../../wallets/dashcore/interface.rst:185
 msgid "Synchronizing governance objects"
-msgstr ""
+msgstr "Synchronisation des objets de gouvernance"
 
 #: ../../wallets/dashcore/interface.rst:185
 msgid "Dash Core is synchronizing P2P governance data."
-msgstr ""
+msgstr "Dash Core synchronise des données de gouvernance pair-à-pair."
 
 #: ../../wallets/dashcore/interface.rst:187
 msgid ""
@@ -400,6 +442,9 @@ msgid ""
 "This icon appears when your wallet is running in hierarchical deterministic "
 "(HD) mode. See :ref:`here <dashcore-hd>` for documentation on HD mode."
 msgstr ""
+"Cette icône apparaît quand votre portefeuille fonctionne en mode "
+"hiérarchique déterministe (HD). Voir :ref:`ici <dashcore-hd>` pour en savoir"
+" plus sur le mode HD."
 
 #: ../../wallets/dashcore/interface.rst:205
 msgid ""
@@ -417,12 +462,18 @@ msgid ""
 "you cannot connect because of network problems, you will see only gray bars."
 " More bars indicate more connections to your peers on the network."
 msgstr ""
+"Ces icônes indiquant la qualité de votre connexion au réseau Dash. Si vous "
+"ne pouvez pas vous connecter en raison de problèmes de réseau, vous verrez "
+"seulement des barres grises. Plus de barres indiquent plus de connexions à "
+"vos pairs sur le réseau."
 
 #: ../../wallets/dashcore/interface.rst:222
 msgid ""
 "These icons show the synchronization status of Dash Core with the network. "
 "Once synchronization is complete, the icon will become a green tick."
 msgstr ""
+"Ces icônes montrent l'état de synchronisation de Dash Core avec le réseau. "
+"Une fois la synchronisation achevée, l'icône deviendra une coche verte."
 
 #: ../../wallets/dashcore/interface.rst:228
 msgid "The Options Dialog"
@@ -529,6 +580,11 @@ msgid ""
 "cost of higher memory usage. The default value is 300MB and it should not be"
 " set lower than this level."
 msgstr ""
+"Cette option spécifie la taille mémoire de la cache de la base de données. "
+"Une valeur plus haute est synonyme de meilleure performance à l'ajout de "
+"nouveaux blocs, au prix d'une plus grande utilisation de la mémoire. La "
+"valeur par défaut est de 300 Mo et ne devrait pas être inférieure à ce "
+"nombre."
 
 #: ../../wallets/dashcore/interface.rst:282
 msgid "Number of script verification threads"
@@ -566,6 +622,12 @@ msgid ""
 "This tab allows you to configure how these addresses are used as inputs with"
 " the Coin Control, CoinJoin and Masternode features."
 msgstr ""
+"L'onglet Portefeuille du dialogue Options propose des réglages sur la "
+"gestion des adresses dans l'application Dash Core. Au premier lancement de "
+"Dash Core, le logiciel génère un nouveau portefeuille contenant 1000 "
+"adresses Dash uniques. Cet onglet permet de configurer comment ces adresses "
+"sont utilisées en tant qu'entrées avec les fonctionnalités Contrôle des "
+"pièces, CoinJoin et Masternode."
 
 #: ../../wallets/dashcore/interface.rst:296
 msgid "The Wallet tab of the Dash Core Options dialog"
@@ -587,6 +649,17 @@ msgid ""
 "and prioritize different addresses in your wallet. See :ref:`here <coin-"
 "control>` for a more detailed explanation of Coin Control."
 msgstr ""
+"Le solde de votre portefeuille Dash Core est en fait la somme totale de "
+"toutes les adresses détenant un solde et associées à votre portefeuille. "
+"Quand vous dépensez des dashs, Dash Core retirera autant d'entrées que "
+"nécessaire pour former le montant souhaité de dashs à transmettre. Ce "
+"comportement peut n'être pas souhaité, si vous préférez garder un certain "
+"solde sur une adresse donnée. Activer cette option ajoutera un bouton "
+"libellé **Entrées** dans l'onglet **Envoyer**. Ce bouton donne accès au "
+"dialogue **Sélection des pièces** qui peut être utilisé pour verrouiller, "
+"déverrouiller et prioritiser différentes adresses de votre portefeuille. "
+"Voir :ref:`ici <coin-control>` pour une explication plus détaillée du "
+"Contrôle des pièces."
 
 #: ../../wallets/dashcore/interface.rst:314
 msgid "Show Masternodes tab"
@@ -599,6 +672,11 @@ msgid ""
 "restart the Dash Core app. The Masternodes tab can be used to view details "
 "of masternodes registered on the Dash blockchain."
 msgstr ""
+"Activer cette option provoque l'affichage par Dash Core d'un onglet "
+"supplémentaire Masternodes, à la droite de l'onglet Transactions. Cette "
+"option demande le redémarrage de l'application Dash Core. L'onglet "
+"Masternodes sert à voir des détails sur les masternodes enregistrés sur la "
+"blockchain Dash."
 
 #: ../../wallets/dashcore/interface.rst:324
 msgid "Spend unconfirmed change"
@@ -625,7 +703,7 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:329
 msgid "Enable CoinJoin features"
-msgstr ""
+msgstr "Activer les fonctions CoinJoin"
 
 #: ../../wallets/dashcore/interface.rst:327
 msgid ""
@@ -633,24 +711,29 @@ msgid ""
 "and the Options dialog, and allows you to process and spend your balance "
 "using CoinJoin."
 msgstr ""
+"Activer cette option affiche l'onglet CoinJoin dans la fenêtre principale de"
+" Dash Core et dans le dialogue Option, et cela vous permet de traiter et de "
+"dépenser votre solde avec CoinJoin."
 
 #: ../../wallets/dashcore/interface.rst:332
 msgid "CoinJoin tab"
-msgstr ""
+msgstr "L'onglet CoinJoin"
 
 #: ../../wallets/dashcore/interface.rst:334
 msgid ""
 "The CoinJoin tab contains options relating to how CoinJoin functions in Dash"
 " Core."
 msgstr ""
+"L'onglet CoinJoin contient des options relatives à la façon dont fonctionne "
+"CoinJoin dans Dash Core."
 
 #: ../../wallets/dashcore/interface.rst:340
 msgid "The CoinJoin tab of the Dash Core Options dialog"
-msgstr ""
+msgstr "L'onglet CoinJoin du dialogue Options de Dash Core"
 
 #: ../../wallets/dashcore/interface.rst:347
 msgid "Enable advanced interface"
-msgstr ""
+msgstr "Activer l'interface avancée"
 
 #: ../../wallets/dashcore/interface.rst:343
 msgid ""
@@ -659,20 +742,27 @@ msgid ""
 "percentage completion and current operation. See :ref:`here <dashcore-"
 "coinjoin-instantsend>` for a full explanation of how to use CoinJoin."
 msgstr ""
+"Activer cette option modifie l'interface de l'onglet Aperçu du portefeuille "
+"Dash Core pour qu'il affiche plus d'informations, telles que les clés qui "
+"restent, le pourcentage d'achèvement et l'opération actuelle. Voir :ref:`ici"
+" <dashcore-coinjoin-instantsend>` pour une explication complète sur "
+"l'utilisation de CoinJoin."
 
 #: ../../wallets/dashcore/interface.rst:351
 msgid "Show popups for mixing transactions"
-msgstr ""
+msgstr "Afficher des pop-ups pour les transactions de mélange"
 
 #: ../../wallets/dashcore/interface.rst:350
 msgid ""
 "Enabling this option will display notifications as the CoinJoin transactions"
 " are created."
 msgstr ""
+"Activer cette option affichera des notifications lorsque les transactions "
+"CoinJoin sont créées."
 
 #: ../../wallets/dashcore/interface.rst:359
 msgid "Warn if the wallet is running out of keys"
-msgstr ""
+msgstr "Avertir si le portefeuille manque bientôt de clés"
 
 #: ../../wallets/dashcore/interface.rst:354
 msgid ""
@@ -683,10 +773,17 @@ msgid ""
 "Consequently, users who have backups disabled will also have CoinJoin "
 "disabled."
 msgstr ""
+"Activer cette option permettra à Dash Core d'afficher un avertissement quand"
+" votre jeu initial de 1000 adresses sera proche de s'épuiser, ce qui peut "
+"impacter la procédure CoinJoin. Une fois que 900 adresses seront utilisées, "
+"votre portefeuille doit créer de nouvelles adresses. Il ne peut cependant le"
+" faire que si vous avez activé l'option de sauvegardes automatiques. En "
+"conséquence, les utilisateurs qui ont désactivé les sauvegardes automatiques"
+" auront également l'option CoinJoin désactivée."
 
 #: ../../wallets/dashcore/interface.rst:367
 msgid "Enable multi-session"
-msgstr ""
+msgstr "Activer le mode multi-session"
 
 #: ../../wallets/dashcore/interface.rst:362
 msgid ""
@@ -696,10 +793,16 @@ msgid ""
 "greatly increasing the speed of the CoinJoin process at the cost of creating"
 " more addresses and thus requiring more frequent wallet backups."
 msgstr ""
+"En général, la procédure CoinJoin est achevée en plusieurs cycles "
+"consécutifs, chacun utilisant un seul masternode. Activer cette option "
+"permet le multi-session, ce qui signifie que vous pouvez utiliser plusieurs "
+"serveurs masternode en même temps, ce qui augmente grandement la vitesse du "
+"processus CoinJoin, au prix de la création de davantage d'adresses, et donc "
+"de la nécessité plus fréquente de faire des sauvegardes de portefeuille."
 
 #: ../../wallets/dashcore/interface.rst:375
 msgid "Mixing rounds"
-msgstr ""
+msgstr "Cycles de mélange"
 
 #: ../../wallets/dashcore/interface.rst:370
 msgid ""
@@ -709,10 +812,15 @@ msgid ""
 "Dash to its original address. This is at the expense of more time required "
 "for processing and potentially higher fees."
 msgstr ""
+"Utilisez cette option pour contrôler le nombre de cycles CoinJoin à opérer "
+"pour le solde choisi. Chaque cycle de mélange utilise un nouveau masternode."
+" Plus le nombre de cycles est grand, plus il est difficile de retrouver "
+"l'adresse de départ des dashs. Cela se fait en contrepartie d'un temps plus "
+"long consacré au mixage, et potentiellement de frais plus élevés."
 
 #: ../../wallets/dashcore/interface.rst:381
 msgid "Target balance"
-msgstr ""
+msgstr "Solde cible"
 
 #: ../../wallets/dashcore/interface.rst:378
 msgid ""
@@ -721,6 +829,10 @@ msgid ""
 "CoinJoin process. The available amount is shown as the balance on the "
 "CoinJoin tab."
 msgstr ""
+"Cette option vous permet de choisir combien de dashs doivent être conservés "
+"dans un état prêt à être dépensé, signifiant qu'ils sont déjà passés par la "
+"procédure CoinJoin. Le montant disponible est affiché comme solde dans "
+"l'onglet CoinJoin."
 
 #: ../../wallets/dashcore/interface.rst:384
 msgid "Network tab"
@@ -729,6 +841,7 @@ msgstr "Onglet Réseau"
 #: ../../wallets/dashcore/interface.rst:386
 msgid "This tab includes options related to your Dash network connection."
 msgstr ""
+"Cet onglet comprend des options relatives à votre connexion au réseau Dash."
 
 #: ../../wallets/dashcore/interface.rst:391
 msgid "The Network tab of the Dash Core Options dialog"
@@ -819,6 +932,8 @@ msgid ""
 "This tab contains options relating to the display of the Dash Core app "
 "window."
 msgstr ""
+"Cet onglet rassemble des options relatives à l'apparence de la fenêtre "
+"d'application Dash Core."
 
 #: ../../wallets/dashcore/interface.rst:431
 msgid "The Display tab of the Dash Core Options dialog"
@@ -889,21 +1004,23 @@ msgstr ""
 
 #: ../../wallets/dashcore/interface.rst:457
 msgid "Appearance tab"
-msgstr ""
+msgstr "L'onglet Apparence"
 
 #: ../../wallets/dashcore/interface.rst:459
 msgid ""
 "This tab contains options relating to the visual appearance of the Dash Core"
 " app window."
 msgstr ""
+"Cet onglet rassemble des options relatives à l'apparence de la fenêtre "
+"d'application Dash Core."
 
 #: ../../wallets/dashcore/interface.rst:465
 msgid "The Appearance tab of the Dash Core Options dialog"
-msgstr ""
+msgstr "L'onglet Apparence du dialogue Options de Dash Core"
 
 #: ../../wallets/dashcore/interface.rst:470
 msgid "Theme"
-msgstr ""
+msgstr "Thème"
 
 #: ../../wallets/dashcore/interface.rst:468
 msgid ""
@@ -911,24 +1028,31 @@ msgid ""
 " of the Dash Core window. All functionality is identical under the different"
 " themes."
 msgstr ""
+"Vous pouvez utiliser cette option pour choisir un thème différent de "
+"l'apparence générale de la fenêtre Dash Core. Toutes les fonctionnalités "
+"sont identiques sous n'importe quel thème."
 
 #: ../../wallets/dashcore/interface.rst:474
 msgid "Font Family"
-msgstr ""
+msgstr "Famille de polices"
 
 #: ../../wallets/dashcore/interface.rst:473
 msgid ""
 "This option allows you to select a different font to display text in the "
 "window."
 msgstr ""
+"Cette option vous permet de choisir une police de caractères différente pour"
+" afficher le texte dans la fenêtre."
 
 #: ../../wallets/dashcore/interface.rst:477
 msgid "Font Scale and Weight"
-msgstr ""
+msgstr "Taille et épaisseur de police"
 
 #: ../../wallets/dashcore/interface.rst:477
 msgid "These options control the size and weight of fonts in the window."
 msgstr ""
+"Ces options contrôlent la taille et l'épaisseur des polices de caractères "
+"dans la fenêtre."
 
 #: ../../wallets/dashcore/interface.rst:480
 msgid "The Tools Dialog"
@@ -1026,6 +1150,13 @@ msgid ""
 " <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls>`__ on"
 " RPC commands to learn about the possible commands you can issue."
 msgstr ""
+"L'onglet Console fournit une interface avec la console RPC (Remote Procedure"
+" Call) de Dash Core. Elle est équivalente à la commande \"dash-cli\" sur les"
+" versions sans interface de Dash (telles que \"dashd\" sur un masternode). "
+"Cliquez sur l'icône rouge \"–\" pour effacer la console. Consultez la "
+"`documentation détaillée <https://dashcore.readme.io/docs/core-api-ref-"
+"remote-procedure-calls>` sur les commandes RPC pour en savoir plus sur les "
+"commandes utilisables."
 
 #: ../../wallets/dashcore/interface.rst:528
 msgid "The Console tab of the Dash Core Tools dialog"
@@ -1041,6 +1172,9 @@ msgid ""
 "on the network over time. You can adjust the time period using the slider or"
 " **Reset** the graph."
 msgstr ""
+"L'onglet Trafic réseau affiche un graphique du trafic envoyé et reçu aux "
+"pairs sur le réseau, en fonction du temps. On peut ajuster la période "
+"temporelle au moyen de la glissière, ou bien **Nettoyer** le graphique."
 
 #: ../../wallets/dashcore/interface.rst:540
 msgid "The Network Traffic tab of the Dash Core Tools dialog"
@@ -1136,6 +1270,14 @@ msgid ""
 "processing, for example, or if a transaction is sent with insufficient fees "
 "when blocks are full."
 msgstr ""
+"Les commandes Récupérer les transactions peuvent être utilisées pour enlever"
+" de la zone mémoire les transactions non confirmées. Votre portefeuille "
+"redémarrera et rebalayera la blockchain, récupérant les transactions "
+"existantes et enlevant les transactions non confirmées. Des transactions "
+"peuvent rester bloquées dans un état non confirmé s'il existe un conflit "
+"entre des versions de protocole sur le réseau, pendant un mélange CoinJoin, "
+"par exemple, ou si une transaction est envoyée avec des frais insuffisants "
+"lorsque les blocs sont pleins."
 
 #: ../../wallets/dashcore/interface.rst:594
 msgid "Upgrade wallet format"

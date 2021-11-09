@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Daf Daf, 2020
+# Daf Daf, 2021
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-26 16:41-0400\n"
 "PO-Revision-Date: 2018-03-19 12:19+0000\n"
-"Last-Translator: Daf Daf, 2020\n"
+"Last-Translator: Daf Daf, 2021\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,41 +60,51 @@ msgstr ""
 
 #: ../../wallets/electrum/advanced.rst:18
 msgid "`Electrum documentation <https://docs.electrum.org>`_"
-msgstr ""
+msgstr "`Documentation Electrum <https://docs.electrum.org>`_"
 
 #: ../../wallets/electrum/advanced.rst:19
 msgid ""
 "`Electrum seed version system "
 "<https://docs.electrum.org/en/latest/seedphrase.html>`_"
 msgstr ""
+"`Système de version de graine Electrum "
+"<https://docs.electrum.org/en/latest/seedphrase.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:20
 msgid ""
 "`Electrum protocol specification "
 "<https://docs.electrum.org/en/latest/protocol.html>`_"
 msgstr ""
+"`Spécifications de protocole Electrum "
+"<https://docs.electrum.org/en/latest/protocol.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:21
 msgid ""
 "`Serialization of unsigned or partially signed transactions "
 "<https://docs.electrum.org/en/latest/transactions.html>`_"
 msgstr ""
+"`Sérialisation de transactions non signées ou partiellement signées "
+"<https://docs.electrum.org/en/latest/transactions.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:22
 msgid ""
 "`Simple Payment Verification "
 "<https://docs.electrum.org/en/latest/spv.html>`_"
 msgstr ""
+"`Vérification simple de paiement (Simple Payment Verification, SPV) "
+"<https://docs.electrum.org/en/latest/spv.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:23
 msgid ""
 "`The Python Console <https://docs.electrum.org/en/latest/console.html>`_"
-msgstr ""
+msgstr "`Console Python <https://docs.electrum.org/en/latest/console.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:24
 msgid ""
 "`Using Electrum Through Tor <https://docs.electrum.org/en/latest/tor.html>`_"
 msgstr ""
+"`Utiliser Electrum à travers Tor "
+"<https://docs.electrum.org/en/latest/tor.html>`_"
 
 #: ../../wallets/electrum/advanced.rst:27
 msgid "PrivateSend"
@@ -108,10 +118,16 @@ msgid ""
 "PrivateSend is available in Dash Electrum versions 3.3.8.3 and higher, with "
 "support for hardware wallets added in 3.3.8.7."
 msgstr ""
+":ref:`CoinJoin <coinjoin>` propose aux utilisateurs une confidentialité "
+"améliorée pour les transactions, en répartissant le solde de l'utilisateur "
+"en un certain nombre de coupures prédéterminées, préalablement à toute "
+"dépense. CoinJoin est disponible dans Dash Electrum version 3.3.8.3 ou "
+"ultérieure, et la compatibilité avec les portefeuilles matériels a été "
+"ajoutée dans la version 3.3.8.7."
 
 #: ../../wallets/electrum/advanced.rst:36
 msgid "Processing and sending"
-msgstr ""
+msgstr "Processus et envoi"
 
 #: ../../wallets/electrum/advanced.rst:38
 msgid ""
@@ -170,10 +186,12 @@ msgstr "Masternodes"
 #: ../../wallets/electrum/advanced.rst:79
 msgid "Dash Electrum supports masternode creation through the **DIP3** tab."
 msgstr ""
+"Dash Electrum est compatible avec la création de masternode, dans l'onglet "
+"**DIP3**"
 
 #: ../../wallets/electrum/advanced.rst:82
 msgid "DIP3"
-msgstr ""
+msgstr "DIP3"
 
 #: ../../wallets/electrum/advanced.rst:84
 msgid ""
@@ -181,11 +199,16 @@ msgid ""
 "displays the status of your masternode(s) and also allows viewing a list of "
 "all registered masternodes on the network."
 msgstr ""
+"L'onglet DIP3 peut être activé via le menu **Afficher > Afficher DIP3**. Cet"
+" onglet affiche l'état de votre ou vos masternode(s) et permet aussi de voir"
+" une liste de tous les masternodes enregistrés sur le réseau."
 
 #: ../../wallets/electrum/advanced.rst:88
 msgid ""
 "The tab displays the following data about each masternode you have set up:"
 msgstr ""
+"L'onglet affiche les données suivantes sur chaque masternode que vous avez "
+"configuré :"
 
 #: ../../wallets/electrum/advanced.rst:90
 msgid "The alias (name) of the masternode."
@@ -193,15 +216,17 @@ msgstr "Le nom (alias) du masternode."
 
 #: ../../wallets/electrum/advanced.rst:91
 msgid "The state of the masternode (e.g. whether it has been activated)."
-msgstr ""
+msgstr "L'état du masternode (c'est-à-dire s'il a été activé)."
 
 #: ../../wallets/electrum/advanced.rst:92
 msgid "The keys"
-msgstr ""
+msgstr "Les clés"
 
 #: ../../wallets/electrum/advanced.rst:93
 msgid "The Provider Registration transaction hash of the masternode."
 msgstr ""
+"Le hachage de la transaction d'enregistrement du fournisseur relative au "
+"masternode."
 
 #: ../../wallets/electrum/advanced.rst:94
 msgid "The IP address and port that your masternode can be reached at."
@@ -209,7 +234,7 @@ msgstr "L'adresse IP et le port où votre masternode peut être contacté."
 
 #: ../../wallets/electrum/advanced.rst:99
 msgid "DIP3 tab with masternode information"
-msgstr ""
+msgstr "Onglet DIP3 avec informations sur les masternodes"
 
 #: ../../wallets/electrum/advanced.rst:102
 msgid "Masternode setup"
@@ -220,6 +245,8 @@ msgid ""
 "To setup a masternode, navigate to the DIP3 tab and click the **Add/Import**"
 " button."
 msgstr ""
+"Pour configurer un masternode, allez sur l'onglet DIP3 et cliquez sur le "
+"bouton **Ajouter/Importer**."
 
 #: ../../wallets/electrum/advanced.rst:109
 msgid ""
@@ -230,16 +257,25 @@ msgid ""
 "documentation demonstrating how to configure a masternode using a multisig "
 "collateral."
 msgstr ""
+"Si elle est combinée avec :ref:`les fonctionnalités multisignature "
+"<electrum-multisig>` d'Electrum, la caution du masternode peut être stockée "
+"dans un portefeuille multisignature pour une meilleure flexibilité et "
+"sécurité. Voir `cette page <https://github.com/akhavr/electrum-"
+"dash/blob/master/docs/dip3/dip3_p2sh_howto.md>`_ où la documentation de Dash"
+" Electrum explique comment configurer un masternode avec une caution "
+"multisignature."
 
 #: ../../wallets/electrum/advanced.rst:116
 msgid ""
 "**Always exercise caution when using multisig accounts and verify that each "
 "mnemonic is backed up appropriately.**"
 msgstr ""
+"**Soyez toujours prudent quand vous utilisez des comptes multisignature et "
+"vérifiez que chaque clé mnémonique est sauvegardée de manière appropriée.**"
 
 #: ../../wallets/electrum/advanced.rst:122
 msgid "Add or import masternode"
-msgstr ""
+msgstr "Ajouter ou importer un masternode"
 
 #: ../../wallets/electrum/advanced.rst:124
 msgid ""
@@ -248,6 +284,11 @@ msgid ""
 "point very few legacy masternodes are present, so only the **Create and "
 "register DIP3 Masternode** option will be covered in detail."
 msgstr ""
+"Electrum peut créer/enregistrer de nouveaux masternodes, mais aussi importer"
+" et enregistrer des masternodes déjà existants via un fichier "
+"``masternode.conf``. Actuellement, très peu de masternodes anciens sont "
+"présents, dont nous ne couvrirons en détail que l'option **Créer et "
+"enregistrer un masternode DIP3**."
 
 #: ../../wallets/electrum/advanced.rst:129
 msgid ""
@@ -257,10 +298,15 @@ msgid ""
 "hosted masternode so both ownership type checkboxes are selected. Click "
 "**Next** to continue."
 msgstr ""
+"Deux types de propriété sont supportés : propriétaire seul, et propriétaire-"
+"opérateur. La différence principale durant la configuration est que la clé "
+"privée BLS soit stockée ou non dans Electrum. Les étapes suivantes montrent "
+"la création d'un masternode auto-hébergé, donc les deux cases de type de "
+"propriété sont cochées. Cliquez **Suivant** pour continuer."
 
 #: ../../wallets/electrum/advanced.rst:138
 msgid "Select operation type and ownership properties"
-msgstr ""
+msgstr "Choisissez un typ d'opération et de propriété"
 
 #: ../../wallets/electrum/advanced.rst:140
 msgid ""
@@ -268,10 +314,14 @@ msgid ""
 "fees available in your wallet. Leave **Create collateral as ProRegTx "
 "output** checked and click **Next**."
 msgstr ""
+"Pour démarrer un masternode, vous devez avoir 1000 dashs mais aussi un petit"
+" montant disponible pour les frais dans votre portefeuille. Laissez cochée "
+"la case **Créer une caution comme entrée ProRegTx** et cliquez sur "
+"**Suivant**."
 
 #: ../../wallets/electrum/advanced.rst:147
 msgid "Select collateral output for masternode"
-msgstr ""
+msgstr "Choisissez une sortie de caution pour le masternode"
 
 #: ../../wallets/electrum/advanced.rst:149
 msgid ""
@@ -280,10 +330,14 @@ msgid ""
 "entering them (the port will be set to the default mainnet port of 9999 "
 "automatically)."
 msgstr ""
+"Certaines informations à propos de votre masternode sont obligatoires. "
+"L'adresse IP et le port utilisés par votre masternode doivent être indiqués."
+" Cliquez sur **Suivant** après les avoir saisis (le port sera défini "
+"automatiquement comme le port par défaut 9999 sur le réseau principal)."
 
 #: ../../wallets/electrum/advanced.rst:156
 msgid "Enter masternode IP address and port"
-msgstr ""
+msgstr "Saisissez l'adresse IP et le port du masternode"
 
 #: ../../wallets/electrum/advanced.rst:158
 msgid ""
@@ -291,10 +345,16 @@ msgid ""
 "Electrum will automatically select addresses from your wallet. Click "
 "**Next** to continue."
 msgstr ""
+"Chaque masternode a besoin de trois adresses : celle du propriétaire, celle "
+"pour le vote et celle pour les paiements. Electrum choisira automatiquement "
+"ces adresses depuis votre portefeuille. Cliquez sur **Suivant** pour "
+"continuer."
 
 #: ../../wallets/electrum/advanced.rst:165
 msgid "Select masternode owner, voting, and payout addresses"
 msgstr ""
+"Choisissez les adresses du masternode pour le propriétaire, pour le vote et "
+"pour les paiements"
 
 #: ../../wallets/electrum/advanced.rst:167
 msgid ""
@@ -305,6 +365,12 @@ msgid ""
 "masternode will use the private key to sign messages, and the Dash network "
 "will know that you authorized it to do so."
 msgstr ""
+"Un masternode a besoin d'une clé d'opérateur BLS telle que décrite dans la "
+"`DIP3 <https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a"
+"-masternode-proregtx>`_. Si vous gérez votre propre masternode, Dash "
+"Electrum et votre masternode doivent tous les deux connaître votre clé "
+"privée d'opérateur. Votre masternode utilisera la clé privée pour signer des"
+" messages, et le réseau Dash saura que vous l'avez autorisé pour cela."
 
 #: ../../wallets/electrum/advanced.rst:172
 msgid ""
@@ -313,10 +379,14 @@ msgid ""
 "masternode configuration. Click **Next** after copying this line to your "
 "masternode's ``dash.conf`` file."
 msgstr ""
+"Electrum générera la paire obligatoire de clé BLS privée/publique et vous "
+"fournira la ligne qui doit être copiée sur le masternode pour une "
+"configuration correcte. Cliquez sur **Suivant** après avoir copié cette "
+"ligne dans le fichier ``dash.conf`` de votre masternode."
 
 #: ../../wallets/electrum/advanced.rst:180
 msgid "BLS key setup"
-msgstr ""
+msgstr "Configuration de la clé BLS"
 
 #: ../../wallets/electrum/advanced.rst:182
 msgid ""
@@ -326,14 +396,20 @@ msgid ""
 " The **Send** tab will open and be populated with the info necessary to "
 "register the masternode."
 msgstr ""
+"Tous les paramètres sont à présent configurés. Cet écran montre les détails "
+"de la configuration et vous permet d'enregistrer les informations. Assurez-"
+"vous que la case **Faire la ProRegTX après l'enregistrement des données du "
+"masternode** soit cochée, puis cliquez sur **Sauvegarder**. L'onglet "
+"**Envoyer** s'ouvrira et sera rempli par les informations nécessaires pour "
+"enregistrer le masternode."
 
 #: ../../wallets/electrum/advanced.rst:190
 msgid "Examine parameters and save masternode"
-msgstr ""
+msgstr "Inspectez les paramètres et enregistrez le masternode"
 
 #: ../../wallets/electrum/advanced.rst:193
 msgid "Registering your masternode"
-msgstr ""
+msgstr "Enregistrer votre masternode"
 
 #: ../../wallets/electrum/advanced.rst:195
 msgid ""
@@ -341,6 +417,9 @@ msgid ""
 "filled out by the previous step, just Click **Pay...** to complete the "
 "registration."
 msgstr ""
+"Comme les informations ProRegTx indispensables pour enregistrer le "
+"masternode ont été remplies à l'étape précédente, cliquez simplement sur "
+"**Payer…** pour achever l'enregistrement."
 
 #: ../../wallets/electrum/advanced.rst:200
 msgid ""
@@ -348,20 +427,25 @@ msgid ""
 "**DIP3** tab, select the unregistered masternode from the list of **Wallet "
 "MNs**, and click **Register**."
 msgstr ""
+"Pour achever l'enregistrement de tout masternode antérieurement configuré, "
+"allez sur l'onglet **DIP3**, choisissez le masternode non enregistré dans la"
+" liste de **Masternodes portefeuille**, et cliquez sur **Enregistrer**."
 
 #: ../../wallets/electrum/advanced.rst:207
 msgid "Send tab with ProRegTx prepared"
-msgstr ""
+msgstr "Onglet Envoyer avec la ProRegTx préparée"
 
 #: ../../wallets/electrum/advanced.rst:209
 msgid ""
 "Enter your password and click **Send** to broadcast the registration "
 "transaction."
 msgstr ""
+"Saisissez votre mot de passe et cliquez sur **Envoyer** pour diffuser la "
+"transaction d'enregistrement."
 
 #: ../../wallets/electrum/advanced.rst:215
 msgid "Confirm ProRegTx Transaction"
-msgstr ""
+msgstr "Confirmer la transaction ProRegTx"
 
 #: ../../wallets/electrum/advanced.rst:217
 msgid ""
@@ -369,46 +453,56 @@ msgid ""
 "successfully. This ProRegTx hash is used by the network to uniquely identify"
 " the masternode. Click **OK** to close the screen."
 msgstr ""
+"Le hachage de la transaction sera affiché une fois que la transaction a été "
+"envoyée avec succès. Ce hachage ProRegTx est utilisé par le réseau pour "
+"identifier avec certitude le masternode. Cliquez sur **OK** pour fermer "
+"l'écran."
 
 #: ../../wallets/electrum/advanced.rst:224
 #: ../../wallets/electrum/advanced.rst:306
 #: ../../wallets/electrum/advanced.rst:362
 msgid "Transaction sent screen showing transaction hash"
-msgstr ""
+msgstr "Écran de transaction envoyée montrant le hachage de transaction"
 
 #: ../../wallets/electrum/advanced.rst:226
 msgid ""
 "Prior to the ProRegTx being confirmed the new masternode will appear as "
 "unregistered on the DIP3 tab."
 msgstr ""
+"Avant que la ProRegTx soit confirmée, le masternode apparaîtra comme non "
+"enregistré dans l'onglet DIP3."
 
 #: ../../wallets/electrum/advanced.rst:232
 msgid "DIP3 tab showing unregistered masternode"
-msgstr ""
+msgstr "Onglet DIP3 montrant un masternode non enregistré"
 
 #: ../../wallets/electrum/advanced.rst:234
 msgid ""
 "Once the ProRegTx has been confirmed, the new masternode will appear as "
 "registered on the DIP3 tab."
 msgstr ""
+"Une fois que la ProRegTx est confirmée, le nouveau masternode apparaît comme"
+" enregistré sur l'onglet DIP3."
 
 #: ../../wallets/electrum/advanced.rst:240
 msgid "DIP3 tab showing registered masternode"
-msgstr ""
+msgstr "Onglet DIP montrant un masternode enregistré"
 
 #: ../../wallets/electrum/advanced.rst:243
 msgid "Updating masternode registration"
-msgstr ""
+msgstr "Mise à jour de l'enregistrement du masternode"
 
 #: ../../wallets/electrum/advanced.rst:245
 msgid ""
 "To update masternode registration information, navigate to the DIP3 tab and "
 "click the **Update Registrar** button."
 msgstr ""
+"Pour mettre à jour l'information d'enregistrement d'un masternode, allez sur"
+" l'onglet DIP3 et cliquez sur le bouton **Mettre à jour l'enregistrement**."
 
 #: ../../wallets/electrum/advanced.rst:251
 msgid "Update Registrar"
-msgstr ""
+msgstr "Mettre à jour l'enregistrement"
 
 #: ../../wallets/electrum/advanced.rst:253
 msgid ""
@@ -417,16 +511,23 @@ msgid ""
 "or addresses from a different wallet (e.g. a hardware wallet) can be pasted "
 "into either field. Click **Next** to continue."
 msgstr ""
+"Le propriétaire de masternode peut modifier n'importe quand les adresses de "
+"vote et de paiements. Les adresses du portefeuille actuel peuvent être "
+"choisies dans le menu déroulant, ou bien des adresses d'un autre "
+"portefeuille (par ex. un portefeuille matériel) peuvent être collées dans "
+"chaque champ. Cliquez sur **Suivant** pour continuer."
 
 #: ../../wallets/electrum/advanced.rst:261
 msgid "Update masternode voting and/or payout address"
-msgstr ""
+msgstr "Mettre à jour les adresses de vote et/ou de paiements du masternode"
 
 #: ../../wallets/electrum/advanced.rst:263
 msgid ""
 "The masternode owner may also update the operator BLS key at any time. Click"
 " **Next** to continue."
 msgstr ""
+"Le propriétaire du masternode peut aussi modifier n'importe quand la clé "
+"d'opérateur BLS. Cliquez sur **Suivant** pour continuer."
 
 #: ../../wallets/electrum/advanced.rst:267
 msgid ""
@@ -434,10 +535,13 @@ msgid ""
 "``dash.conf`` file on the masternode. Electrum will provide a notification "
 "with instructions when this is required."
 msgstr ""
+"À chaque changement de la clé privée de l'opérateur, elle doit être copiée "
+"dans le fichier ``dash.conf`` du masternode. Electrum affichera une "
+"notification comportant des instructions, lorsque cela sera nécessaire."
 
 #: ../../wallets/electrum/advanced.rst:274
 msgid "Update operator BLS key"
-msgstr ""
+msgstr "Mise à jour de la clé d'opérateur BLS"
 
 #: ../../wallets/electrum/advanced.rst:276
 msgid ""
@@ -446,10 +550,14 @@ msgid ""
 "**Send** tab will open and be populated with the info necessary to update "
 "the masternode."
 msgstr ""
+"Tous les paramètres sont maintenant configurés. Cet écran montre les détails"
+" de la configuration mise à jour. Cliquez sur **Préparer ProUpRegTx** pour "
+"continuer. L'onglet **Envoyer** s'ouvrira et sera rempli des informations "
+"nécessaires pour mettre à jour le masternode."
 
 #: ../../wallets/electrum/advanced.rst:283
 msgid "Examine parameters and update masternode"
-msgstr ""
+msgstr "Inspectez les paramètres et mettez à jour le masternode"
 
 #: ../../wallets/electrum/advanced.rst:285
 msgid ""
@@ -457,20 +565,25 @@ msgid ""
 "was filled out by the previous step so just Click **Pay...** to complete the"
 " update."
 msgstr ""
+"Les informations ProUpRegTx indispensables pour mettre à jour le masternode "
+"ont été remplies à l'étape précédente. Cliquez simplement sur **Payer…** "
+"pour achever la mise à jour."
 
 #: ../../wallets/electrum/advanced.rst:291
 msgid "Send tab with ProUpRegTx prepared"
-msgstr ""
+msgstr "Onglet Envoyer avec la ProUpRegTx préparée"
 
 #: ../../wallets/electrum/advanced.rst:293
 #: ../../wallets/electrum/advanced.rst:349
 msgid ""
 "Enter your password and click **Send** to broadcast the update transaction."
 msgstr ""
+"Saisissez votre mot de passe et cliquez sur **Envoyer** pour diffuser la "
+"transaction de mise à jour."
 
 #: ../../wallets/electrum/advanced.rst:298
 msgid "Confirm ProUpRegTx Transaction"
-msgstr ""
+msgstr "Confirmer la transaction ProUpRegTx"
 
 #: ../../wallets/electrum/advanced.rst:300
 #: ../../wallets/electrum/advanced.rst:356
@@ -478,43 +591,54 @@ msgid ""
 "The transaction hash will be displayed once the transaction has been sent "
 "successfully. Click **OK** to close the screen."
 msgstr ""
+"Le hachage de la transaction sera affiché une fois que la transaction a été "
+"envoyée avec succès. Cliquez sur **OK** pour fermer l'écran."
 
 #: ../../wallets/electrum/advanced.rst:309
 msgid "Updating masternode service parameters"
-msgstr ""
+msgstr "Mise à jour des paramètres de service du masternode"
 
 #: ../../wallets/electrum/advanced.rst:311
 msgid "The masternode service may need to be updated to:"
 msgstr ""
+"Le service du masternode peut avoir besoin d'être mis à jour dans les cas "
+"suivants :"
 
 #: ../../wallets/electrum/advanced.rst:313
 msgid ""
 "Change the IP address, port, or operator payout address of a masternode"
 msgstr ""
+"Changer l'adresse IP, le port ou l'adresse de paiements de l'opérateur d'un "
+"masternode"
 
 #: ../../wallets/electrum/advanced.rst:314
 msgid "Revive a masternode that was Proof of Service (PoSe) banned"
 msgstr ""
+"Relancer un masternode qui a été banni par la Preuve de Service (PoSe)"
 
 #: ../../wallets/electrum/advanced.rst:316
 msgid ""
 "To update masternode service information, navigate to the DIP3 tab and click"
 " the **Update Service** button."
 msgstr ""
+"Pour mettre à jour l'information de service d'un masternode, allez sur "
+"l'onglet DIP3 et cliquez sur le bouton **Mettre à jour le service**."
 
 #: ../../wallets/electrum/advanced.rst:322
 msgid "Update Service"
-msgstr ""
+msgstr "Mettre à jour le service"
 
 #: ../../wallets/electrum/advanced.rst:324
 msgid ""
 "The masternode operator may update the IP address and port at any time. "
 "Update the IP address and click **Next** to continue."
 msgstr ""
+"L'opérateur du masternode peut modifier n'importe quand l'adresse IP et le "
+"port. Mettez à jour l'adresse IP et cliquez sur **Suivant** pour continuer."
 
 #: ../../wallets/electrum/advanced.rst:330
 msgid "Update masternode IP address"
-msgstr ""
+msgstr "Mettre à jour l'adresse IP du masternode"
 
 #: ../../wallets/electrum/advanced.rst:332
 msgid ""
@@ -523,24 +647,31 @@ msgid ""
 "**Send** tab will open and be populated with the info necessary to update "
 "the masternode."
 msgstr ""
+"Tous les paramètres sont maintenant configurés. Cet écran montre les détails"
+" de la configuration mise à jour. Cliquez sur **Préparer ProUpServTx** pour "
+"continuer. L'onglet **Envoyer** s'ouvrira et sera rempli des informations "
+"nécessaires pour mettre à jour le masternode."
 
 #: ../../wallets/electrum/advanced.rst:339
 msgid "Examine parameters and update masternode service"
-msgstr ""
+msgstr "Inspectez les paramètres et mettez à jour le service du masternode"
 
 #: ../../wallets/electrum/advanced.rst:341
 msgid ""
 "The ProUpServTx information required to update the masternode was filled out"
 " by the previous step so just Click **Pay...** to complete the update."
 msgstr ""
+"Les informations ProUpServTx indispensables pour mettre à jour le masternode"
+" ont été remplies à l'étape précédente. Cliquez simplement sur **Payer…** "
+"pour achever la mise à jour."
 
 #: ../../wallets/electrum/advanced.rst:347
 msgid "Send tab with ProUpServTx prepared"
-msgstr ""
+msgstr "Onglet Envoyer avec la ProUpServTx préparée"
 
 #: ../../wallets/electrum/advanced.rst:354
 msgid "Confirm ProUpServTx Transaction"
-msgstr ""
+msgstr "Confirmer la transaction ProUpServTx"
 
 #: ../../wallets/electrum/advanced.rst:367
 msgid "Multisig wallets"
@@ -742,6 +873,14 @@ msgid ""
 " with the number \"7\" or the capital letter \"X\". The example below "
 "displays a private key (WIF format)."
 msgstr ""
+"Peut-être avez-vous reçu un portefeuille papier en cadeau d'un autre "
+"utilisateur Dash, ou bien en avez-vous conservé un dans un coffre. Les fonds"
+" sont récupérés depuis un :ref:`portefeuille papier <paper-wallets>`  vers "
+"un portefeuille logiciel par l'importation de sa `clé privée "
+"<https://bitzuma.com/posts/six-things-bitcoin-users-should-know-about-"
+"private-keys/>`_, qui est une longue série de caractères commençant par le "
+"nombre \"7\" ou la lettre majuscule \"X\". L'exemple ci-dessous montre une "
+"clé privée (au format WIF)."
 
 #: ../../wallets/electrum/advanced.rst:473
 msgid ""
