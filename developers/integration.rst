@@ -21,7 +21,7 @@ The Basics
 Dash is a Proof of Work network, and similar to Bitcoin, Dash has a mining
 network but uses a different block hashing algorithm. Dash serves as an
 improvement of Bitcoin's shortcomings by offering a robust solution for instant
-transactions, enhancing user anonymity, and offering a self-sustainable
+transactions, enhancing user privacy, and offering a self-sustainable
 decentralized governance model.
 
 - Block time: ~2.6 minutes per block
@@ -48,7 +48,7 @@ Block Hashing Algorithm
 -----------------------
 
 Dash uses the X11 algorithm in place of SHA256 used in Bitcoin. It’s important
-to note, however, that this only affects the hashing of the Block itself. All
+to note, however, that this only affects the hashing of the block itself. All
 other internals utilize SHA256 hashes (transactions, merkle root, etc.), which
 allows for most existing libraries to work in the Dash ecosystem. 
 
