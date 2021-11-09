@@ -297,7 +297,7 @@ for additional details.
 
 - ``parent-hash`` - set to ``0``
 - ``revision`` - set to ``1``
-- ``time`` - set to the current Unix epoch time
+- ``time`` - set to the current Unix epoch time (does not have to be precise)
 - ``data-hex`` - set to the hex string from the previous step
 
 Example command::
