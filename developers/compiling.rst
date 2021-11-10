@@ -10,7 +10,7 @@ Compiling Dash Core
 
 While Dash offers stable binary builds on the `website
 <https://www.dash.org/downloads/>`_ and on `GitHub
-<https://github.com/dashpay/dash/releases>`_, and development builds using
+<https://github.com/dashpay/dash/releases>`__, and development builds using
 `GitLab CI <https://gitlab.com/dashpay/dash/pipelines>`_,  many users will also
 be interested in building Dash binaries for themselves. This process has been
 greatly simplified with the release of Dash Core 0.13.0, and users who do not
@@ -242,7 +242,7 @@ Push to your fork of the gitian.sigs repository on GitHub::
   # "me" references the name of the remote repository added during initial setup
   git push me
 
-Go to `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`_ and open a pull
+Go to `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ and open a pull
 request to the ``master`` branch of the upstream repository. The pull request
 will be reviewed by Dash Core developers and merged if everything checks out.
 Thanks for contributing!
