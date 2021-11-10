@@ -228,6 +228,113 @@ discussion with the community. The steps to be taken are almost
 identical to the procedure described above, and documentation is
 available `here <https://www.dashcentral.org/about/contact>`_.
 
+Dash Core Wallet Console
+------------------------
+
+Creating a proposal using the wallet console follows the same process as using
+the Dash budget proposal generator, but it requires several additional steps to
+manually construct the proposal governance object.
+
+Assemble the proposal data
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To prepare a proposal, put the proposal details such as name and payout address
+into a JSON object similar to the example shown below. 
+
+.. code-block:: json
+
+  {
+    "name": "Test-proposal_1",
+    "payment_address": "yd5KMREs3GLMe6mTJYr3YrH1juwNwrFCfB",
+    "payment_amount": 10,
+    "url": "https://www.mydashtestproposal.com",
+    "start_epoch": 1635750000,
+    "end_epoch": 1636750000,
+    "type": 1
+  }  
+
+Set the ``type`` field to ``1`` for all proposals.
+
+The ``start_epoch`` and ``end_epoch`` fields are Unix epoch timestamps
+indicating the time range in which the proposal can receive payments. Typically
+you will set the ``start_epoch`` to approximately halfway between the superblock
+where payment is first desired and the preceding one. Set ``end_epoch`` to
+approximately 2 weeks after the superblock where the final payment is desired.
+You can use a site like https://www.epochconverter.com/ to convert the start and
+end dates to the epoch values for these fields.
+
+Serialize the proposal data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The proposal information must be serialized to hex before it can be submitted to
+the network. Remove all spaces from the JSON object::
+
+  {"name":"Test-proposal_1","payment_address":"yd5KMREs3GLMe6mTJYr3YrH1juwNwrFCfB","payment_amount":10,"type":1,"url":"http://test.com","start_epoch":1635750000,"end_epoch":1636750000}
+
+Convert the resulting JSON to its hex equivalent. Sites like
+https://codebeautify.org/string-hex-converter provide an easy way to do this::
+
+  7b226e616d65223a22546573742d70726f706f73616c5f31222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353735303030302c22656e645f65706f6368223a313633363735303030307d
+
+Prepare the collateral transaction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Finally, open your Dash Core wallet console and use the ``gobject prepare``
+command to complete the proposal preparation and submit the collateral
+transaction. See the `Core developer documentation
+<https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-dash#gobject-prepare>`_
+for additional details.
+
+.. warning::
+  Running this command will create a transaction spending 5 DASH from the wallet
+  as collateral for the proposal being created. Only run this command once you
+  have verified all the proposal information. The transaction is not reversible
+  once sent.
+  
+::
+
+  gobject prepare <parent-hash> <revision> <time> <data-hex>
+
+- ``parent-hash`` - set to ``0``
+- ``revision`` - set to ``1``
+- ``time`` - set to the current Unix epoch time (does not have to be precise)
+- ``data-hex`` - set to the hex string from the previous step
+
+Example command::
+
+  gobject prepare 0 1 1636000000 7b226e616d65223a22546573742d70726f706f73616c5f31222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353735303030302c22656e645f65706f6368223a313633363735303030307d
+
+The command will execute and respond with a transaction ID for the collateral payment::
+  
+  9192fb57953baba168f685e32378aa6471061301a097598c68ef1a4c136c9ea3
+
+Submit the proposal
+^^^^^^^^^^^^^^^^^^^
+
+Once the transaction has six confirmations, use the ``gobject submit`` command
+to submit the prepared governance object to the network for voting. See the
+`Core developer documentation
+<https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-dash#gobject-submit>`_
+for additional details.
+
+::
+
+  gobject submit <parent-hash> <revision> <time> <data-hex> <fee-txid>
+
+- ``parent-hash`` - use the same value as in the ``gobject prepare`` command
+- ``revision`` - use the same value as in the ``gobject prepare`` command
+- ``time`` - use the same value as in the ``gobject prepare`` command
+- ``data-hex`` - use the same value as in the ``gobject prepare`` command
+- ``fee-txid`` - the transaction ID returned by the ``gobject prepare`` command in the previous step
+
+Example command::
+
+  gobject submit 0 1 1636000000 7b226e616d65223a22546573742d70726f706f73616c5f31222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353735303030302c22656e645f65706f6368223a313633363735303030307d 9192fb57953baba168f685e32378aa6471061301a097598c68ef1a4c136c9ea3
+
+The command will execute and respond with a transaction ID for the proposal
+which can be used to track voting on the proposal::
+  
+  3108b76c8735132a0b6de856b434a40d75924ba0a535c4a61be4dba0bf83263f
 
 Voting on proposals
 ===================
