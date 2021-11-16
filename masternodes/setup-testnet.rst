@@ -1116,7 +1116,7 @@ Modify the configuration with the following commands::
   sed -i 's/^create_empty_blocks_interval.*/create_empty_blocks_interval = "3m"/' ~/.tenderdash/config/config.toml
   sed -i 's/^namespace.*/namespace = "drive_tendermint"/' ~/.tenderdash/config/config.toml
   sed -i 's/^seeds.*/seeds = "aa4c3870e6cebd575c80371b4ae0e902a2885e14@54.189.200.56:26656,81c79324942867f694ee49108f05e744c343f5a1@52.43.162.96:26656"/' ~/.tenderdash/config/config.toml
-  curl https://gist.githubusercontent.com/strophy/ca6acd23bbdec1e55f322dac04a1059d/raw/741ffbba9e009157ad49ce4f7ee6644f45f8d677/genesis.json > ~/.tendermint/config/genesis.json
+  curl https://gist.githubusercontent.com/strophy/ca6acd23bbdec1e55f322dac04a1059d/raw/a2786b3f390e4a6310b66bab05de0f383b6c49ed/genesis.json > ~/.tendermint/config/genesis.json
 
 Configure Tenderdash to start as a service::
 
