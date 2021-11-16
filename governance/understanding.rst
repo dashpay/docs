@@ -160,7 +160,7 @@ Proposals generally begin life as simple `pre-proposal forum posts
 on the Dash Forum, where feedback and suggestions are solicited from the
 general community. Once the proposal owner decides they have a
 reasonable chance of passing their proposal, it is created as a
-governance object on the blockchain. A fee of 5 DASH is associated with
+governance object on the blockchain. A fee of 1 DASH is associated with
 this action to prevent spam and ensure only serious proposals make it to
 this stage. Several tools exist to allow masternode operators to
 comfortably review and vote on proposals. The net total of yes votes must
