@@ -39,9 +39,12 @@ to dash.org.
 Build process
 =============
 
-This setup has been tested using a clean install of Ubuntu 20.04. Start by
-logging in as the "root" user. Create a new user with the following command,
-replacing ``<username>`` with a username of your choice::
+.. note::
+  This setup has been tested using a clean install of Ubuntu 20.04. For maximum
+  compatibility, please use that version.
+
+Start by logging in as the "root" user. Create a new user with the following
+command, replacing ``<username>`` with a username of your choice::
 
   adduser <username>
 
