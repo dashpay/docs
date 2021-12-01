@@ -158,6 +158,17 @@ keys stored in the loaded wallet.
 
    The Masternodes tab
 
+The Governance Tab
+~~~~~~~~~~~~~~~~~~
+
+The Governance tab shows an overview of the governance proposals currently
+active on the Dash network. You can filter the data by entering a
+value in the Filter List field.
+
+.. figure:: img/governance.png
+
+   The Governance tab
+
 
 The Status Bar
 --------------
