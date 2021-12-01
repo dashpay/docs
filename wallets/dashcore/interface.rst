@@ -236,7 +236,7 @@ Main tab
 The Main tab of the Options dialog contains settings related to startup
 and performance of the Dash Core app.
 
-.. figure:: img/main.png
+.. figure:: img/options-main.png
    :scale: 50 %
 
    The Main tab of the Dash Core Options dialog
@@ -290,7 +290,7 @@ Core, it will generate a new wallet containing 1000 unique Dash
 addresses. This tab allows you to configure how these addresses are used
 as inputs with the Coin Control, CoinJoin and Masternode features.
 
-.. figure:: img/wallet.png
+.. figure:: img/options-wallet.png
    :scale: 50 %
 
    The Wallet tab of the Dash Core Options dialog
@@ -385,7 +385,7 @@ Network tab
 
 This tab includes options related to your Dash network connection.
 
-.. figure:: img/network.png
+.. figure:: img/options-network.png
    :scale: 50 %
 
    The Network tab of the Dash Core Options dialog
@@ -425,7 +425,7 @@ Display tab
 This tab contains options relating to the display of the Dash Core app
 window.
 
-.. figure:: img/display.png
+.. figure:: img/options-display.png
    :scale: 50 %
 
    The Display tab of the Dash Core Options dialog
@@ -459,7 +459,7 @@ Appearance tab
 This tab contains options relating to the visual appearance of the Dash
 Core app window.
 
-.. figure:: img/appearance.png
+.. figure:: img/options-appearance.png
    :scale: 50 %
 
    The Appearance tab of the Dash Core Options dialog
