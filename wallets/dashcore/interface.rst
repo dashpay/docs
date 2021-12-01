@@ -485,7 +485,7 @@ dialog, available under the **Tools** menu in Dash Core.
 Information tab
 ---------------
 
-.. figure:: img/information.png
+.. figure:: img/tools-information.png
    :scale: 50 %
 
    The Information tab of the Dash Core Tools dialog
@@ -522,7 +522,7 @@ Click the red ``×`` icon to clear the console, and see the detailed
 `documentation <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls>`__
 on RPC commands to learn about the possible commands you can issue.
 
-.. figure:: img/console.png
+.. figure:: img/tools-console.png
    :scale: 50 %
 
    The Console tab of the Dash Core Tools dialog
@@ -534,7 +534,7 @@ The Network Traffic tab shows a graph of traffic sent and received to
 peers on the network over time. You can adjust the time period using the
 slider or **Reset** the graph.
 
-.. figure:: img/network-traffic.png
+.. figure:: img/tools-network-traffic.png
    :scale: 50 %
 
    The Network Traffic tab of the Dash Core Tools dialog
@@ -547,7 +547,7 @@ Core client. The IP address, version and ping time are visible.
 Selecting a peer shows additional information on the data exchanged with
 that peer.
 
-.. figure:: img/peers.png
+.. figure:: img/tools-peers.png
    :scale: 50 %
 
    The Peers tab of the Dash Core Tools dialog
@@ -559,7 +559,7 @@ The Wallet Repair tab offers a range of startup commands to restore a
 wallet to a functional state. Selecting any of these commands will
 restart Dash Core with the specified command-line option.
 
-.. figure:: img/wallet-repair.png
+.. figure:: img/tools-wallet-repair.png
    :scale: 50 %
 
    The Wallet Repair tab of the Dash Core Tools dialog
