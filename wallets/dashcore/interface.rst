@@ -35,13 +35,13 @@ The menu bar provides access to all functions of Dash Core. There are
 four menus available:
 
 File
-  The File menu is used to manage your wallet, messages and addresses.
+  The File menu is used to manage your wallet and messages.
 Settings
   The Settings menu provides access to wallet encryption options and
   general software settings.
-Tools
-  The Tools menu provides information on the network, allows you modify
-  masternode configuration files and other advanced functions.
+Window
+  The Window menu provides access to your wallet addresses, information on the
+  network and other advanced functions.
 Help
   The Help menu links to documentation, guides and legal statements
   relating to Dash Core.
@@ -102,20 +102,6 @@ total balance is also available in the lower right corner.
 
    The Send tab
 
-The CoinJoin Tab
-~~~~~~~~~~~~~~~~
-
-The CoinJoin tab allows you to send funds to another address on the
-Dash network with enhanced privacy. It contains fields to enter the
-recipient’s address, a label for the address, and the amount of Dash you
-wish to send. Options related to the transaction fee are also available.
-A quick view of your total CoinJoin balance is also available in the
-lower right corner.
-
-.. figure:: img/coinjoin.png
-
-   The CoinJoin tab
-
 The Receive Tab
 ~~~~~~~~~~~~~~~
 
@@ -138,13 +124,27 @@ button in the bottom right corner of the window.
 
 The icons in the leftmost column indicate the status of the transaction.
 A tick indicates that the recommended number of confirmations has been
-passed, while a circular progress indicator indicates the nubmer of
+passed, while a circular progress indicator indicates the number of
 confirmations. A lightning bolt indicates a transaction with an existing
 InstantSend lock.
 
 .. figure:: img/transactions.png
 
    The Transactions tab
+
+The CoinJoin Tab
+~~~~~~~~~~~~~~~~
+
+The CoinJoin tab allows you to send funds to another address on the
+Dash network with enhanced privacy. It contains fields to enter the
+recipient’s address, a label for the address, and the amount of Dash you
+wish to send. Options related to the transaction fee are also available.
+A quick view of your total CoinJoin balance is also available in the
+lower right corner.
+
+.. figure:: img/coinjoin.png
+
+   The CoinJoin tab
 
 The Masternodes Tab
 ~~~~~~~~~~~~~~~~~~~
@@ -276,6 +276,12 @@ Minimize on close
   corner of the window will cause Dash Core to minimize rather than close.
   To completely close the app, select **File > Exit**.
 
+Prune block storage to
+  This option enables pruning of blocks and specifies the amount of storage to
+  use for block storage. Enabling pruning significantly reduces the disk space
+  required to store transactions. All blocks are still fully validated.
+  Reverting this setting requires re-downloading the entire blockchain.
+
 Size of database cache
   This option specifies the size of the database cache in memory. A higher
   value will result in increased performance when adding new blocks at the
@@ -323,6 +329,11 @@ Show Masternodes tab
   Masternodes tab to the right of the Transactions tab. This option
   requires you to restart the Dash Core app. The Masternodes tab can be
   used to view details of masternodes registered on the Dash blockchain.
+
+Show Governance tab
+  Enabling this option causes Dash Core to display an additional Governance tab.
+  This option requires you to restart the Dash Core app. The Governance tab can
+  be used to view details of governance proposals active on the Dash network.
 
 Spend unconfirmed change
   When this option is enabled, the Dash Core wallet permits you to
