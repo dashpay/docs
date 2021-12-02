@@ -125,7 +125,7 @@ displayed. You should ensure you have the correct password by trying to
 unlock your wallet from **Settings > Unlock Wallet** to make sure you
 can actually create transactions using your balances. If you have any
 problems with your balance not appearing, try to force a rescan of the
-blockchain by going to **Tools > Wallet Repair** and selecting **Rescan
+blockchain by going to **Window > Wallet Repair** and selecting **Rescan
 blockchain files**. **Rebuild index** may also help. Dash Core will
 restart and perform a full scan of the blockchain.
 
@@ -364,7 +364,7 @@ to read the code first.
 
 First, start Dash Core and unlock your wallet by selecting **Settings >
 Unlock Wallet**. Enter your password, then open the debug console by
-selecting **Tools > Debug Console**. In the console, type the following,
+selecting **Window > Console**. In the console, type the following,
 replacing the example private key with your key::
 
   importprivkey 7rPQWnMrh3oWLtZrzt1zLRSCVyuBbwnt7fRBXPp2EwcPhtzXSzp

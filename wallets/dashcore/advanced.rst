@@ -60,7 +60,7 @@ Upgrade to HD
 Since version 0.17.0.2, Dash Core has included the ability upgrade a
 non-hierarchical deterministic (HD) wallet to an HD wallet via the
 ``upgradetohd`` command. The command can be run by either opening the console
-from **Tools -> Debug console** or issuing the following RPC command from
+from **Tools > Console** or issuing the following RPC command from
 ``dash-cli``::
 
   upgradetohd "" "" <walletpassphrase>
@@ -98,7 +98,7 @@ wallet seed and no mnemonic passphrase::
 
 A new HD wallet will be generated and Dash Core will display a warning
 informing you that you must encrypt your wallet after verifying it works
-correctly. Open the console from **Tools -> Debug console** or issue the
+correctly. Open the console from **Tools > Console** or issue the
 following RPC command from ``dash-cli`` to view the mnemonic seed::
 
   dumphdinfo

@@ -117,7 +117,7 @@ completely disables backups.
 
 You can view the automatic backups folder by browsing to *DashCore*
 folder at the location specified above for *wallet.dat* and opening the
-backups folder, or by selecting **Tools > Show Automatic Backups** from
+backups folder, or by selecting **File > Show Automatic Backups** from
 the menu in Dash Core. Since these files are not active when Dash Core
 is running, you can safely copy them at any time. They are also a handy
 backup if the original files in the DashCore folder become corrupted due
