@@ -600,6 +600,10 @@ Rescan blockchain files 1
   logic will not know about these transactions, so a rescan is necessary
   to determine balances.
 
+Rescan blockchain files 2
+  Performs the same operation as *Rescan blockchain files 1* but scans from the
+  genesis block instead of the wallet creation time.
+
 Recover transactions
   The recover transactions commands can be used to remove unconfirmed
   transactions from the memory pool. Your wallet will restart and rescan
