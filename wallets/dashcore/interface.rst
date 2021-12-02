@@ -18,6 +18,7 @@ The Main Window
 ===============
 
 .. figure:: img/window-areas.png
+   :width: 100 %
 
    The Dash Core Wallet
 
