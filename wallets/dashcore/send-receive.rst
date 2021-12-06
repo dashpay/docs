@@ -98,24 +98,27 @@ procedure looks like from the receiving side.
 Receiving Dash
 ==============
 
-To receive Dash, you must first create a receiving address to give to
-the sending party. To do this, click **File > Receiving addresses**. The
-**Receiving addresses** window appears.
+To receive Dash, you must first create a receiving address to give to the
+sending party. To do this, click the **Receive** tab in the tab bar.
 
-.. figure:: img/receiving-addresses.png
-   :width: 350px
+.. figure:: img/receive.png
+   :width: 400px
 
-   The Receiving addresses window
+   The Receive tab
 
-Either copy an existing address by clicking on the address and then the
-**Copy** button, or create a new address by clicking the **New** button.
-You can also edit an existing address by right clicking and selecting
-**Edit** address from the context menu. Give this address to the person
-who will send you Dash. Your wallet does not need to be open to receive
-funds, but if it is, you can watch the transaction arrive in real time.
-This is because your wallet constantly watches for new blocks on the
-blockchain when it is open, and will recognize a new transaction
-involving your receiving address when it occurs.
+Create a new address by clicking the **Request new receiving address** button.
+
+.. figure:: img/request-payment.png
+   :width: 250px
+
+   The Request payment window
+
+Click **Copy Address** on the Request payment window that opens and give this
+address to the person who will send you Dash. Your wallet does not need to be
+open to receive funds, but if it is, you can watch the transaction arrive in
+real time. This is because your wallet constantly watches for new blocks on the
+blockchain when it is open, and will recognize a new transaction involving your
+receiving address when it occurs.
 
 .. figure:: img/received-notification.png
    :width: 200px
@@ -129,3 +132,18 @@ Once you have been paid, you can see the balance both on the
    :width: 400px
 
    The received transaction
+
+Viewing Addresses
+=================
+
+To view all previously created receiving addresses, click **Window > Receiving
+addresses**. In the same way, sending addresses can be seen by clicking **Window
+> Sending addresses**.
+
+.. figure:: img/receiving-addresses.png
+   :width: 350px
+
+   The Receiving addresses window
+
+You can edit an existing address by right clicking and selecting **Edit**
+address from the context menu. 

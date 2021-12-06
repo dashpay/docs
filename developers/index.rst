@@ -108,8 +108,7 @@ Viewing spork status
 
 The ``spork show`` and ``spork active`` commands issued in the debug
 window (or from ``dash-cli`` on a masternode) allow you to interact with
-sporks. You can open the debug window by selecting **Tools > Debug
-console**.
+sporks. You can open the debug window by selecting **Window > Console**.
 
 .. figure:: img/dashcore-sporks.png
    :width: 300px

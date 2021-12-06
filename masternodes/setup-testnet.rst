@@ -49,10 +49,10 @@ appears below:
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
 - :ref:`Information for operators of hosted masternodes <operator-transactions>`
 
-This documentation describes the commands as if they were entered in the
-Dash Core GUI by opening the console from **Window > Console**, but the
-same result can be achieved on a masternode by entering the same
-commands and adding the prefix ``~/.dashcore/dash-cli`` to each command.
+This documentation describes the commands as if they were entered in the Dash
+Core GUI by opening the console from **Window > Console**, but the same result
+can be achieved on a masternode by entering the same commands and adding the
+prefix ``~/.dashcore/dash-cli`` to each command.
 
 
 .. _testnet-vps-setup:
