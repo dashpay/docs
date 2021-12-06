@@ -55,5 +55,5 @@ Detailed documentation for all available RPC commands is accessible via
 the `Dash Core developer documentation RPC page <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-call-quick-reference>`_.
 For full documentation of arguments, results and examples, type 
 ``help ( "command" )`` to view full details at the console. You can enter
-commands either from **Tools > Debug** console in the QT wallet, or using
+commands either from **Tools > Console** in the QT wallet, or using
 *dash-cli* for headless wallets and *dashd*.

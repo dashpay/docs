@@ -49,11 +49,10 @@ appears below:
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
 - :ref:`Information for operators of hosted masternodes <operator-transactions>`
 
-This documentation describes the commands as if they were
-entered in the Dash Core GUI by opening the console from **Tools > Debug
-console**, but the same result can be achieved on a masternode by
-entering the same commands and adding the prefix 
-``~/.dashcore/dash-cli`` to each command.
+This documentation describes the commands as if they were entered in the Dash
+Core GUI by opening the console from **Window > Console**, but the same result
+can be achieved on a masternode by entering the same commands and adding the
+prefix ``~/.dashcore/dash-cli`` to each command.
 
 
 .. _vps-setup:
@@ -392,7 +391,7 @@ It should look like this when ready:
 
    Fully synchronized Dash Core wallet
 
-Click **Tools > Debug console** to open the console. Type the following
+Click **Window > Console** to open the console. Type the following
 command into the console to generate a new Dash address for the
 collateral::
 
@@ -668,7 +667,7 @@ Identify the funding transaction
 
 If you used an address in Dash Core wallet for your collateral
 transaction, you now need to find the txid of the transaction. Click
-**Tools > Debug console** and enter the following command::
+**Window > Console** and enter the following command::
 
   masternode outputs
 
@@ -697,7 +696,7 @@ If you are using a hosting service, they may provide you with their
 public key, and you can skip this step. If you are hosting your own
 masternode or have agreed to provide your host with the BLS private key,
 generate a BLS public/private keypair in Dash Core by clicking **Tools >
-Debug console** and entering the following command::
+Console** and entering the following command::
 
   bls generate
 

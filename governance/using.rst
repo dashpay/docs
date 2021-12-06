@@ -185,7 +185,7 @@ DASH is available in your wallet. Many budget proposals request
 reimbursement of the 1 DASH fee.
 
 First unlock your wallet by clicking **Settings > Unlock wallet**, then
-open the console by clicking **Tools > Debug console** and paste the
+open the console by clicking **Window > Console** and paste the
 generated command. The transaction ID will appear. Copy and paste this
 into the proposal generator response window. As soon as you do this, the
 system will show a progress bar as it waits for 6 confirmations as
@@ -406,7 +406,7 @@ Dash Core wallet or masternode
 ------------------------------
 
 If you started your masternode using the Dash Core Wallet (not
-recommended), you can vote manually from **Tools > Debug console**, or
+recommended), you can vote manually from **Window > Console**, or
 directly from your masternode via SSH using ``dash-cli``. First click on
 the proposal you want to vote on at either `DashCentral
 <https://www.dashcentral.org/budget>`__ or `Dash Ninja
