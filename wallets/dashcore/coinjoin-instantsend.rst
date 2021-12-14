@@ -186,7 +186,7 @@ change, since an amount in a CoinJoin transaction must be rounded up
 to completely spend all inputs. The current minimum balance for an input
 used in a CoinJoin transaction is 0.00100010 DASH.
 
-.. figure:: img/privatesend-addresses.png
+.. figure:: img/coinjoin-addresses.png
    :width: 400px
 
    Coin Selection dialog showing addresses holding CoinJoin balances
