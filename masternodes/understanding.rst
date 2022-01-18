@@ -41,8 +41,9 @@ moves or spends those coins, the masternode stops working and payment
 ceases.
 
 Masternodes are paid by the network for the InstantSend, CoinJoin and
-governance services they provide. 45% of the block reward is paid out to
-the masternodes, 45% to miners and 10% to the budget. In practice, half
+governance services they provide. 10% of the block reward goes to the budget
+ with the remaining 90% split between miners and masternodes per this
+:ref:`block reward reallocation table <block-reward-reallocation>`. In practice, half
 of the reward from a normal block goes to the miner and half to the
 masternode. Then, every 16,616 blocks (approximately 30.29 days), a
 superblock is created that contains the entire 10% payout to the budget

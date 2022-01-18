@@ -416,7 +416,7 @@ Block reward allocation
 Unlike Bitcoin, which allocates 100% of the block reward to miners, Dash
 holds back 10% of the block reward for use in the decentralized
 :ref:`budget system <decentralized-governance>`. The remainder of the
-block, as well as any transaction fees, are split 50/50 between the
+block reward, as well as any transaction fees, is split between the
 :ref:`miner <mining>` and a :ref:`masternode <masternodes>`, which is
 deterministically selected according to the :ref:`payment logic
 <payment-logic>`. Dash features superblocks, which appear every 16616
@@ -427,9 +427,7 @@ utilization, this results in an approximate coin reward allocation over
 a budget cycle as follows:
 
 +-----+----------------------------------------+
-| 45% | Mining Reward                          |
-+-----+----------------------------------------+
-| 45% | Masternode Reward for Proof-of-service |
+| 90% | Mining and Masternode Reward           |
 +-----+----------------------------------------+
 | 10% | Decentralized Governance Budget        |
 +-----+----------------------------------------+
@@ -439,6 +437,8 @@ On 13 August 2020, the Dash network approved a `proposal
 to modify the block reward allocation from 50/50 between miners and
 masternodes to 40/60, respectively. The incremental reallocation adjusts 
 the percentage share every three superblock cycles. 
+
+.. _block-reward-reallocation:
 
 The following table shows the incremental reallocation process and indicates the 
 current reallocation date. Reward reallocation changes began at the first superblock 
@@ -456,9 +456,9 @@ once per quarter) until the reallocation is complete.
 +-------------+-----------+--------------+------------+---------------------+
 | 3           | 46.7      | 53.3         | 0.70%      |     2021-05-29      |
 +-------------+-----------+--------------+------------+---------------------+
-| 4 (Current) | 46.0      | 54.0         | 0.70%      |     2021-08-28      |
+| 4           | 46.0      | 54.0         | 0.70%      |     2021-08-28      |
 +-------------+-----------+--------------+------------+---------------------+
-| 5           | 45.4      | 54.6         | 0.60%      |     2021-11-27      |
+| 5 (Current) | 45.4      | 54.6         | 0.60%      |     2021-11-27      |
 +-------------+-----------+--------------+------------+---------------------+
 | 6           | 44.8      | 55.2         | 0.60%      |     2022-02-25      |
 +-------------+-----------+--------------+------------+---------------------+
