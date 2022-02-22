@@ -1,6 +1,6 @@
 .. meta::
-   :description: Coin control, HD wallets, multisig, KeePass and multiple wallet files using the Dash Core wallet
-   :keywords: dash, core, wallet, backup, restore, wallet.dat, multisig, KeePass, hd, seed, passphrase, mnemonic, coin control, hierarchical deterministic
+   :description: Coin control, HD wallets, multisig, multiple wallet files using the Dash Core wallet
+   :keywords: dash, core, wallet, backup, restore, wallet.dat, multisig, hd, seed, passphrase, mnemonic, coin control, hierarchical deterministic
 
 .. _dashcore-advanced:
 
@@ -586,66 +586,7 @@ multiple separate wallets without keeping a full copy of the blockchain.
 KeePass
 =======
 
-Since version 0.11.0, Dash Core has supported integration with KeePass,
-the popular open source password manager. This guide describes how to
-configure the association between Dash Core and KeePass, and how to save
-a Dash Core wallet passphrase in KeePass using the integration. When
-this is done, KeePass can be used to unlock the wallet.
-
-Installation
-------------
-
-You will need the following:
-
-- KeePass 2: https://keepass.info
-- KeePassHttp plugin: https://github.com/pfn/keepasshttp
-- Dash Core: https://www.dash.org
-
-If not already installed, install these packages according to the
-instructions linked below:
-
-- KeePass: https://keepass.info/help/v2/setup.html
-- KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md
-- Dash Core: https://docs.dash.org/en/stable/wallets/dashcore/installation.html
-
-Commands
---------
-
-The following KeePass RPC commands are available in the Dash Core client
-console or server:
-
-keepass genkey
-  Generates a base64 encoded 256 bit AES key that can be used for
-  communication with KeePassHttp. This is only necessary for manual
-  configuration. Use init for automatic configuration.
-
-keepass init
-  Sets up the association between Dash and KeePass by generating an AES
-  key and sending an association message to KeePassHttp. This will
-  trigger KeePass to ask for an ID for the association. Returns the
-  association and the base64 encoded string for the AES key.
-
-keepass setpassphrase
-  Updates the passphrase in KeePassHttp to a new value. This should
-  match the passphrase you intend to use for the wallet. Please note
-  that the standard RPC commands walletpassphrasechange and the wallet
-  encryption from the QT GUI already send the updates to KeePassHttp, so
-  this is only necessary for manual manipulation of the password.
-
-The following new arguments are available for dashd and dash-qt:
-
-keepass
-  Use KeePass 2 integration using KeePassHttp plugin (default: 0)
-
-keepassport=<port>
-  Connect to KeePassHttp on port <port> (default: 19455)
-
-keepasskey=<key>
-  KeePassHttp key for AES encrypted communication with KeePass
-
-keepassid=<name>
-  KeePassHttp id for the established association
-
-keepassname=<name>
-  Name to construct url for KeePass entry that stores the wallet
-  passphrase
+.. warning::
+  KeePass support was removed in Dash Core 0.18.0. Details can still be
+  found in `previous versions of this documentation 
+  <https://docs.dash.org/en/0.17.0/wallets/dashcore/advanced.html#keepass>`_.
