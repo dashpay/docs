@@ -667,8 +667,8 @@ Digital Signature
 Electrum Wallet
   :ref:`Dash Electrum Wallet <dash-electrum-wallet>` is a lightweight
   wallet that does not require you to download or sync the entire
-  blockchain, making the wallet lighter and faster. However, it is 
-  missing certain features such as InstantSend and CoinJoin.
+  blockchain, making the wallet lighter and faster. It includes support
+  for advanced InstantSend, CoinJoin and masternode features.
 
 Encryption
   In cryptography, `encryption 
