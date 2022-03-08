@@ -115,7 +115,7 @@ benefits all actors, including miners, masternode operators, investors
 and users. More importantly, this gives the blockchain itself a self-
 preservation mechanism that is beyond the control of any individual.
 
-+----------------------------------------+-----+
++-----+----------------------------------------+
 | 90% | Mining and Masternode Reward           |
 +-----+----------------------------------------+
 | 10% | Decentralized Governance Budget        |
