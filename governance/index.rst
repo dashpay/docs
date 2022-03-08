@@ -26,8 +26,9 @@ even forks to the Bitcoin blockchain.
 The DGBB also provides a means for Dash to fund its own development.
 While other projects have to depend on donations or premined endowments,
 Dash uses 10% of the block reward to fund its own development. Every
-time a block is mined, 45% of the reward goes to the miner, 45% goes to
-a masternode, and the remaining 10% is not created until the end of the
+time a block is mined, 90% of the reward is split between the miner and
+a masternode per the distribution found :ref:`here <block-reward-reallocation>`,
+while the remaining 10% is not created until the end of the
 month. During the month, anybody can make a budget proposal to the
 network. If that proposal earns the net approval of at least 10% of the
 masternode network, then at the end of the month the requested amount
