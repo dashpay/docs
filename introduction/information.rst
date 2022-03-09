@@ -371,7 +371,7 @@ Budget System / DGBB
   The development of Dash and the Dash ecosystem is self-funded by the
   network. Each time a block is discovered, 90% of the block reward is
   split between the miner and a masternodes per the distribution found
-  :ref:`here <block-reward-reallocation>`. Ten percent is withheld by the
+  :ref:`here <block-reward-reallocation>`. 10% is withheld by the
   network and used to fund projects that are approved by the masternode
   network. This process is known as :ref:`Decentralized Governance by
   Blockchain <governance>` (DGBB). For a fee, anybody can submit a
