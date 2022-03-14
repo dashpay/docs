@@ -59,9 +59,10 @@ two-tier network. The second tier is powered by :ref:`masternodes
 (CoinJoin), instant transactions (InstantSend), and the decentralized
 governance and budget system. Because this second tier is so important,
 masternodes are also rewarded when miners discover new blocks. The
-breakdown is as follows: 45% of the block reward goes to the miner, 45%
-goes to masternodes, and 10% is reserved for the budget system (created
-by superblocks every month).
+breakdown is as follows: 90% of the block reward is split between the
+miner and a masternode per the distribution found :ref:`here <block-reward-reallocation>`,
+while 10% is reserved for the budget system (created by superblocks
+every month).
 
 The masternode system is referred to as Proof of Service (PoSe), since
 the masternodes provide crucial services to the network. In fact, the

@@ -40,8 +40,9 @@ called masternodes. Thanks to this innovative two tier network, Dash can
 offer innovative features in a trustless and decentralized way.
 Masternodes are used to power CoinJoin, InstantSend, and the
 governance and treasury system. Users are rewarded for running
-masternodes; 45% of the block reward is allocated to pay the masternode
-network. You can view practical guides on all topics relating to
+masternodes; a percentage of the block reward is allocated to pay the masternode
+network. The current percentage can be found in :ref:`this table <block-reward-reallocation>`.
+You can view practical guides on all topics relating to
 masternodes :ref:`here <masternodes>`.
 
 Masternodes enable the following services:
@@ -416,7 +417,7 @@ Block reward allocation
 Unlike Bitcoin, which allocates 100% of the block reward to miners, Dash
 holds back 10% of the block reward for use in the decentralized
 :ref:`budget system <decentralized-governance>`. The remainder of the
-block, as well as any transaction fees, are split 50/50 between the
+block reward, as well as any transaction fees, is split between the
 :ref:`miner <mining>` and a :ref:`masternode <masternodes>`, which is
 deterministically selected according to the :ref:`payment logic
 <payment-logic>`. Dash features superblocks, which appear every 16616
@@ -427,9 +428,7 @@ utilization, this results in an approximate coin reward allocation over
 a budget cycle as follows:
 
 +-----+----------------------------------------+
-| 45% | Mining Reward                          |
-+-----+----------------------------------------+
-| 45% | Masternode Reward for Proof-of-service |
+| 90% | Mining and Masternode Reward           |
 +-----+----------------------------------------+
 | 10% | Decentralized Governance Budget        |
 +-----+----------------------------------------+
@@ -439,6 +438,8 @@ On 13 August 2020, the Dash network approved a `proposal
 to modify the block reward allocation from 50/50 between miners and
 masternodes to 40/60, respectively. The incremental reallocation adjusts 
 the percentage share every three superblock cycles. 
+
+.. _block-reward-reallocation:
 
 The following table shows the incremental reallocation process and indicates the 
 current reallocation date. Reward reallocation changes began at the first superblock 
@@ -456,11 +457,11 @@ once per quarter) until the reallocation is complete.
 +-------------+-----------+--------------+------------+---------------------+
 | 3           | 46.7      | 53.3         | 0.70%      |     2021-05-29      |
 +-------------+-----------+--------------+------------+---------------------+
-| 4 (Current) | 46.0      | 54.0         | 0.70%      |     2021-08-28      |
+| 4           | 46.0      | 54.0         | 0.70%      |     2021-08-28      |
 +-------------+-----------+--------------+------------+---------------------+
 | 5           | 45.4      | 54.6         | 0.60%      |     2021-11-27      |
 +-------------+-----------+--------------+------------+---------------------+
-| 6           | 44.8      | 55.2         | 0.60%      |     2022-02-25      |
+| 6 (Current) | 44.8      | 55.2         | 0.60%      |     2022-02-25      |
 +-------------+-----------+--------------+------------+---------------------+
 | 7           | 44.3      | 55.7         | 0.50%      |     2022-05-27      |
 +-------------+-----------+--------------+------------+---------------------+
@@ -519,8 +520,9 @@ three years.
 DGBB also provides a means for Dash to fund its own development. While 
 other projects have to depend on donations or premined endowments, Dash 
 uses 10% of the block reward to fund its own development. Every time a 
-block is mined, 45% of the reward goes to the miner, 45% goes to a 
-masternode, and the remaining 10% is not created until the end of the
+block is mined, 90% of the reward is split between the miner and
+a masternode per the distribution found :ref:`here <block-reward-reallocation>`,
+while the remaining 10% is not created until the end of the
 month. During the month, anybody can make a budget proposal to the
 network. If that proposal receives net approval of at least 10% of the
 masternode network, then at the end of the month a series of

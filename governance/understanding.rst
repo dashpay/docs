@@ -115,15 +115,14 @@ benefits all actors, including miners, masternode operators, investors
 and users. More importantly, this gives the blockchain itself a self-
 preservation mechanism that is beyond the control of any individual.
 
-+----------------------------------------+-----+
-| Mining reward for Proof-of-Work        | 45% |
-+----------------------------------------+-----+
-| Masternode reward for Proof-of-Service | 45% |
-+----------------------------------------+-----+
-| Decentralized governance budget        | 10% |
-+----------------------------------------+-----+
++-----+----------------------------------------+
+| 90% | Mining and Masternode Reward           |
++-----+----------------------------------------+
+| 10% | Decentralized Governance Budget        |
++-----+----------------------------------------+
 
-Masternodes and miners take 45% of the mining reward each, at the time
+Masternodes and miners split 90% of the mining reward per the distribution
+found :ref:`here <block-reward-reallocation>`, at the time
 it is created. The remaining 10% is disbursed monthly by the masternode
 operators once the results of their votes are tallied, creating the
 first self-sustaining decentralized cryptocurrency platform organized as
