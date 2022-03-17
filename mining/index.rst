@@ -437,10 +437,10 @@ the product name to visit the manufacturer's website:
 | `StrongU STU-U6 <https://strongu.com.cn/Home/Goods/goodsInfo/id/263.html>`_                              | 420 GH/s ±8%  | 2100 W  | 8.5 kg  | 370 x 135 x 208 |         |
 +----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-----------------+---------+
 
-ASIC resellers may also have miners avaiable:
+ASIC resellers may also have miners available:
 
-- https://cryptomining.tools/
 - http://kaboomracks.com
+- https://brokerage.luxor.tech/dashboard
 
 The following ASIC miners are either no longer easily available or
 obsolete due to the increase in difficulty on the network.
