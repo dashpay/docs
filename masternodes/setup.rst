@@ -928,7 +928,7 @@ flexibility.
 .. warning::
   Always exercise caution when using multisig accounts and verify that each
   mnemonic is backed up appropriately. See `this page
-  <https://github.com/akhavr/electrum-dash/blob/master/docs/dip3/dip3_p2sh_howto.md>`_
+  <https://github.com/dashpay/docs/blob/master/wallets/electrum/dip3_p2sh_howto.md>`_
   for the Dash Electrum documentation demonstrating how to configure a
   masternode using a multisig collateral.
   
