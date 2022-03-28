@@ -1,6 +1,6 @@
 .. meta::
-   :description: How to install and create a new Dash Electrum wallet on Windows, Linux, macOS and Android
-   :keywords: dash, mobile, wallet, electrum, android, linux, windows, macos, installation, compile
+   :description: How to create a new Dash Electrum wallet on Windows, Linux, macOS and Android
+   :keywords: dash, mobile, wallet, electrum, android, linux, windows, macos, compile
 
 .. _electrum-installation:
 
@@ -11,86 +11,9 @@ Installation
 Download
 ========
 
-You can download Dash Electrum from the official Dash website or the
-Dash Electrum minisite.
+.. note::
 
-- https://www.dash.org/downloads/
-- https://electrum.dash.org
-
-Dash Electrum is developed by community member **akhavr** and is
-released through his GitHub account. 
-
-- https://github.com/akhavr/electrum-dash/releases
-
-You can optionally verify the authenticity of your download by checking
-its detached signature against the public key published by akhavr. Run
-the following commands (example for Linux)::
-
-  wget https://github.com/akhavr/electrum-dash/releases/download/4.1.5.0/Dash-Electrum-4.1.5.0.tar.gz
-  wget https://github.com/akhavr/electrum-dash/releases/download/4.1.5.0/Dash-Electrum-4.1.5.0.tar.gz.asc
-  curl https://keybase.io/akhavr/pgp_keys.asc | gpg --import
-  gpg --verify Dash-Electrum-4.1.5.0.tar.gz.asc
-
-The output should contain the following line::
-
-  Good signature from "Andriy Khavryuchenko <akhavr@khavr.com>"
-
-Linux
------
-
-Dash Electrum for Linux is available from a PPA for Ubuntu and Linux
-Mint, and as a source tarball for other systems. As of version 3.0.6, it
-requires Python 3 to run. Enter the following commands to install from
-PPA::
-
-  sudo add-apt-repository ppa:akhavr/dash-electrum
-  sudo apt update
-  sudo apt install electrum-dash
-
-You can also download the official package, unpack it and run it from
-its root directory with installation as follows::
-
-  wget https://github.com/akhavr/electrum-dash/releases/download/4.1.5.0/Dash-Electrum-4.1.5.0.tar.gz
-  tar -zxvf Dash-Electrum-4.1.5.0.tar.gz
-  cd Dash-Electrum-4.1.5.0
-  python3 -m pip install -t packages x11-hash
-  ./electrum-dash
-
-Finally, you can install Dash Electrum to your system from the source
-tarball as follows::
-
-  sudo apt install python3-pyqt5 python3-pip python3-setuptools libsecp256k1-dev libgmp3-dev
-  wget https://github.com/akhavr/electrum-dash/releases/download/4.1.5.0/Dash-Electrum-4.1.5.0.tar.gz
-  tar -zxvf Dash-Electrum-4.1.5.0.tar.gz
-  cd Dash-Electrum-4.1.5.0
-  python3 -m pip install .[fast]
-
-You can then run ``electrum-dash`` from the terminal.
-
-macOS
------
-
-Simply download and run the DMG file. You may need to grant permission
-to install, depending on your security settings. Click through the
-installation wizard and run Dash Electrum from your Applications folder
-when complete.
-
-
-Windows
--------
-
-Simply download and run the installer file to set up Dash Electrum. You
-may need to grant permission to install, depending on your security
-settings. Click through the installation wizard and run Dash Electrum
-from the Start menu when complete.
-
-Android
--------
-
-Download and run the APK file from https://electrum.dash.org to set up
-Dash Electrum. You may need to grant permission to install from unknown
-sources, depending on your security settings. Click through the
-installation wizard and run Dash Electrum when complete.
+   New downloads of Electrum are currently unavailable
 
 
 Creating a New Wallet
