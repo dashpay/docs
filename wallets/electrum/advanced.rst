@@ -109,7 +109,7 @@ button.
   If combined with Electrum's :ref:`multisig features <electrum-multisig>` the
   masternode collateral can be stored in a multisig wallet for increased
   security flexibility. See `this page
-  <https://github.com/akhavr/electrum-dash/blob/master/docs/dip3/dip3_p2sh_howto.md>`_
+  <https://github.com/dashpay/docs/blob/master/wallets/electrum/dip3_p2sh_howto.md>`_
   for the Dash Electrum documentation demonstrating how to configure a
   masternode using a multisig collateral. 
   
