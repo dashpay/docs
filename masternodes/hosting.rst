@@ -76,23 +76,21 @@ https://dashmasternode.io
 - `Email <sidhosting@protonmail.com>`__
 
 
-Node40
+Zaimirai
 ------
 
-.. image:: img/node40.png
+.. image:: img/zaimirai.png
    :width: 200px
    :align: right
-   :target: https://www.node40.com
+   :target: https://www.zaimirai.com
 
-https://www.node40.com
+https://www.zaimirai.com
 
-- Operated by: Perry Woodin
-- Services: Hosting, Voting, Tax Compliance
-- 0.34 Dash/month (variable, discounts available)
-- `Site <https://www.node40.com>`__
-- `Email <info@node40.com>`__
-- `Forum <https://www.dash.org/forum/threads/node40-masternode-management-services.4447/>`__
-- `Review <https://dashnews.org/interview-perry-woodin-node40-dash-compliance/>`__
+- Operated by: Patrick Quinn
+- Services: Hosting, Voting
+- 0.6 Dash/month (variable, discounts available)
+- `Site <https://www.zaimirai.com>`__
+- `Email <support@zaimirai.com>`__
 
 
 Pool of Stake
