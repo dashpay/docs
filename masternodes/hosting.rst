@@ -77,7 +77,7 @@ https://dashmasternode.io
 
 
 Zaimirai
-------
+--------
 
 .. image:: img/zaimirai.png
    :width: 200px
