@@ -587,6 +587,6 @@ KeePass
 =======
 
 .. warning::
-  KeePass support was removed in Dash Core 0.18.0. Details can still be
+  KeePass support was removed in Dash Core 18.0.0. Details can still be
   found in `previous versions of this documentation 
   <https://docs.dash.org/en/0.17.0/wallets/dashcore/advanced.html#keepass>`_.
