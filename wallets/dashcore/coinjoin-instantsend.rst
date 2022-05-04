@@ -130,13 +130,14 @@ in the background.
 
    Monitoring CoinJoin progress
 
-Since CoinJoin creates a lot of new address keys to send and receive
-the denominations, you may receive a warning when the number of
-remaining keys runs low. This is nothing to be worried about, since the
-wallet will simply create more keys as necessary. However, these keys
-will not exist in any previous backups of your wallet. For this reason,
-it is important to backup your wallet again after the process is
-complete.
+Since CoinJoin creates a lot of new address keys to send and receive the denominations, you may
+receive a warning when the number of remaining keys runs low. This is nothing to be worried about,
+since the wallet will simply create more keys as necessary. However, for non-HD wallets these keys
+will not exist in any previous backups of your wallet. For this reason, it is important to backup
+your wallet again after the process is complete if using a non-HD wallet. When using an HD wallet,
+all keys will be derived from the wallet mnemonic so extra backups during CoinJoin are not
+necessary. You can check the status bar for the "HD" icon to determine if you are using an HD wallet
+or not.
 
 You can also monitor CoinJoin progress by viewing the transactions
 created by the process on the **Transactions** tab.
