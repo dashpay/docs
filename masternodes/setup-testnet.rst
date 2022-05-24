@@ -448,15 +448,13 @@ password you just created for your new, non-root user. Begin by
 installing dashmate dependencies::
 
   curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
+  sudo usermod -aG docker $USER
+  newgrp docker
+  sudo apt install python3-pip
+  sudo pip3 install docker-compose
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
   nvm install --lts
-
-Add your current user to the docker group, ensure docker starts on boot
-and refresh the environment::
-
-  sudo usermod -aG docker $USER
-  newgrp docker
 
 Install dashmate::
 
@@ -965,7 +963,7 @@ Sentinel is a watchdog and works to communicate to the network that your
 node is working properly. Install Sentinel as follows::
 
   cd
-  sudo add-apt-repository universe
+  sudo add-apt-repository ppa:deadsnakes/ppa -y
   sudo apt install -y software-properties-common python3.9 python3.9-venv
   git clone -b master https://github.com/dashpay/sentinel.git
   cd sentinel
@@ -1001,7 +999,7 @@ internet. Install Tor as follows::
   sudo gpg --no-default-keyring --keyring /usr/share/keyrings/tor-archive-keyring.gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
   echo "deb [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/tor.list
   sudo apt update
-  sudo apt install tor deb.torproject.org-keyring
+  sudo apt install -y tor deb.torproject.org-keyring
   
 Platform services
 -----------------
