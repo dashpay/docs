@@ -1054,14 +1054,15 @@ used by Dash Platform. As binaries are not yet published, you will need
 to build from source. Install Go as follows::
 
   cd /tmp
-  wget https://go.dev/dl/go1.16.15.linux-amd64.tar.gz
-  sudo tar -C /usr/local -xzf go1.16.15.linux-amd64.tar.gz
+  wget https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
+  sudo tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
   export PATH=$PATH:/usr/local/go/bin
 
 Build and install Tenderdash as follows::
 
   cd
-  sudo apt install -y cmake libgmp-dev
+  sudo apt install -y cmake libgmp-dev gcc-10 g++-10
+  export CC=gcc-10 && export CXX=g++-10
   git clone -b v0.7.1 https://github.com/dashevo/tenderdash
   cd tenderdash
   make install-bls
@@ -1079,8 +1080,8 @@ Modify the configuration with the following commands::
   sed -i 's/^timeout_commit.*/timeout_commit = "500ms"/' ~/.tenderdash/config/config.toml
   sed -i 's/^create_empty_blocks_interval.*/create_empty_blocks_interval = "3m"/' ~/.tenderdash/config/config.toml
   sed -i 's/^namespace.*/namespace = "drive_tendermint"/' ~/.tenderdash/config/config.toml
-  sed -i 's/^seeds.*/seeds = "aa4c3870e6cebd575c80371b4ae0e902a2885e14@54.189.200.56:26656,81c79324942867f694ee49108f05e744c343f5a1@52.43.162.96:26656"/' ~/.tenderdash/config/config.toml
-  curl https://gist.githubusercontent.com/strophy/ca6acd23bbdec1e55f322dac04a1059d/raw/a2786b3f390e4a6310b66bab05de0f383b6c49ed/genesis.json > ~/.tendermint/config/genesis.json
+  sed -i 's/^seeds.*/seeds = "74907790a03b51ac062c8a1453dafd72a08668a3@54.189.200.56:26656,2006632eb20e670923d13d4f53abc24468eaad4d@52.43.162.96:26656"/' ~/.tenderdash/config/config.toml
+  curl https://gist.githubusercontent.com/strophy/9a564bbc423198a2fdf4e807b7b40bb4/raw/21ad1cdd6112b33a73c032727a096d1563ed0b07/genesis.json > ~/.tendermint/config/genesis.json
 
 Configure Tenderdash to start as a service::
 
