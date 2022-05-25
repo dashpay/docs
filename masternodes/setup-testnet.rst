@@ -857,7 +857,7 @@ and communication relating to the base blockchain. Download Dash Core as
 follows::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v18.0.0-rc4/dashcore-18.0.0-rc4-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v18.0.0-rc4/dashcore-18.0.0-rc4-$(uname -m)-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -873,13 +873,13 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v18.0.0-rc4/dashcore-18.0.0-rc4-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-18.0.0-rc4-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v18.0.0-rc4/dashcore-18.0.0-rc4-$(uname -m)-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-18.0.0-rc4-$(uname -m)-linux-gnu.tar.gz.asc
 
 Extract the compressed archive and copy the necessary files to the
 directory::
 
-  tar xfv dashcore-18.0.0-rc4-x86_64-linux-gnu.tar.gz
+  tar xfv dashcore-18.0.0-rc4-$(uname -m)-linux-gnu.tar.gz
   sudo install -t /usr/local/bin dashcore-e66d539fa5d1/bin/*
 
 Create a working directory for Dash Core::
@@ -1011,7 +1011,8 @@ dependencies::
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
   nvm install --lts
-  sudo apt install -y libzmq3-dev build-essential
+  sudo apt install -y libzmq3-dev build-essential cmake libgmp-dev gcc-10 g++-10 apt-transport-https gnupg2 curl lsb-release
+  export CC=gcc-10 && export CXX=g++-10
   npm install pm2 -g
 
 Drive
@@ -1020,7 +1021,6 @@ Drive
 Drive is a replicated state machine for Dash Platform. Download Drive as
 follows::
 
-  cd
   git clone -b master https://github.com/dashevo/platform/
   cd platform
   corepack enable
@@ -1054,15 +1054,13 @@ used by Dash Platform. As binaries are not yet published, you will need
 to build from source. Install Go as follows::
 
   cd /tmp
-  wget https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
-  sudo tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz
+  wget https://go.dev/dl/go1.18.2.linux-$(dpkg --print-architecture).tar.gz
+  sudo tar -C /usr/local -xzf go1.18.2.linux-$(dpkg --print-architecture).tar.gz
   export PATH=$PATH:/usr/local/go/bin
 
 Build and install Tenderdash as follows::
 
   cd
-  sudo apt install -y cmake libgmp-dev gcc-10 g++-10
-  export CC=gcc-10 && export CXX=g++-10
   git clone -b v0.7.1 https://github.com/dashevo/tenderdash
   cd tenderdash
   make install-bls
@@ -1081,7 +1079,7 @@ Modify the configuration with the following commands::
   sed -i 's/^create_empty_blocks_interval.*/create_empty_blocks_interval = "3m"/' ~/.tenderdash/config/config.toml
   sed -i 's/^namespace.*/namespace = "drive_tendermint"/' ~/.tenderdash/config/config.toml
   sed -i 's/^seeds.*/seeds = "74907790a03b51ac062c8a1453dafd72a08668a3@54.189.200.56:26656,2006632eb20e670923d13d4f53abc24468eaad4d@52.43.162.96:26656"/' ~/.tenderdash/config/config.toml
-  curl https://gist.githubusercontent.com/strophy/9a564bbc423198a2fdf4e807b7b40bb4/raw/21ad1cdd6112b33a73c032727a096d1563ed0b07/genesis.json > ~/.tendermint/config/genesis.json
+  curl https://gist.githubusercontent.com/strophy/9a564bbc423198a2fdf4e807b7b40bb4/raw/21ad1cdd6112b33a73c032727a096d1563ed0b07/genesis.json > ~/.tenderdash/config/genesis.json
 
 Configure Tenderdash to start as a service::
 
@@ -1147,7 +1145,6 @@ Envoy is a gRPC service proxy for cloud-native applications. Install
 Envoy as follows::
 
   cd
-  sudo apt install apt-transport-https gnupg2 curl lsb-release
   curl -sL 'https://deb.dl.getenvoy.io/public/gpg.8115BA8E629CC074.key' | sudo gpg --dearmor -o /usr/share/keyrings/getenvoy-keyring.gpg
   echo "deb [signed-by=/usr/share/keyrings/getenvoy-keyring.gpg] https://deb.dl.getenvoy.io/public/deb/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/getenvoy.list
   sudo apt update
