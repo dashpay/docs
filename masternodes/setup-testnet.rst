@@ -453,7 +453,7 @@ installing dashmate dependencies::
   sudo pip3 install docker-compose
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
-  nvm install --lts
+  nvm install 16
 
 Install dashmate::
 
@@ -1005,7 +1005,7 @@ dependencies::
   cd
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
-  nvm install --lts
+  nvm install 16
   sudo apt install -y libzmq3-dev build-essential cmake libgmp-dev gcc-10 g++-10 apt-transport-https gnupg2 curl lsb-release
   export CC=gcc-10 && export CXX=g++-10
   npm install pm2 -g
@@ -1206,7 +1206,7 @@ shows how to install dependencies under Ubuntu 20.04 LTS.::
 
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
-  nvm install --lts
+  nvm install 16
   curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
   sudo usermod -aG docker $USER
   newgrp docker
