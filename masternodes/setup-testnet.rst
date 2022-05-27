@@ -512,9 +512,7 @@ Adding the following ``git`` and ``npm`` commands optionally also
 ensures you are using the latest stable version of dashmate::
 
   dashmate stop
-  git checkout master
-  git pull
-  npm ci
+  npm update -g dashmate
   dashmate update
   dashmate start
 
@@ -523,9 +521,7 @@ Adding the following command will drop all data from Dash Platform
 version::
 
   dashmate stop
-  git checkout master
-  git pull
-  npm ci
+  npm update -g dashmate
   dashmate reset --platform-only
   dashmate update
   dashmate start
