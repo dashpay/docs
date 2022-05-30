@@ -49,11 +49,10 @@ appears below:
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
 - :ref:`Information for operators of hosted masternodes <operator-transactions>`
 
-This documentation describes the commands as if they were
-entered in the Dash Core GUI by opening the console from **Tools > Debug
-console**, but the same result can be achieved on a masternode by
-entering the same commands and adding the prefix 
-``~/.dashcore/dash-cli`` to each command.
+This documentation describes the commands as if they were entered in the
+Dash Core GUI by opening the console from **Window > Console**, but the
+same result can be achieved on a masternode by entering the same
+commands and adding the prefix ``~/.dashcore/dash-cli`` to each command.
 
 
 .. _testnet-vps-setup:
@@ -88,7 +87,7 @@ server. Select a location for your new server on the following screen:
 
    Vultr server location selection screen
 
-Select Ubuntu 20.04 x64 as the server type. We use this LTS release of
+Select Ubuntu 22.04 x64 as the server type. We use this LTS release of
 Ubuntu instead of the latest version because LTS releases are supported
 with security updates for 5 years, instead of the usual 9 months.
 
@@ -156,7 +155,7 @@ click **Yes** to trust this server in the future.
    PuTTY security alert when connecting to a new server
 
 You are now connected to your server and should see a terminal
-window. Begin by logging in to your server with the user ``root`` and
+window. Begin by logging in to your server with the user ``root`` and
 password supplied by your hosting provider.
 
 .. figure:: img/setup-putty-connect.png
@@ -182,7 +181,7 @@ You will be prompted for a password. Enter and confirm using a new
 password (different to your root password) and store it in a safe place.
 You will also see prompts for user information, but this can be left
 blank. Once the user has been created, we will add them to the sudo
-group so they can perform commands as root::
+group so they can perform commands as root::
 
   usermod -aG sudo <username>
 
@@ -382,7 +381,7 @@ It should look like this when ready:
 
    Fully synchronized Dash Core wallet
 
-Click **Tools > Debug console** to open the console. Type the following
+Click **Window > Console** to open the console. Type the following
 command into the console to generate a new Dash address for the
 collateral::
 
@@ -405,10 +404,10 @@ Now send exactly 1000 DASH in a single transaction to the new address
 you generated in the previous step. This may be sent from another
 wallet, or from funds already held in your current wallet. Once the
 transaction is complete, view the transaction in a `blockchain explorer
-<https://insight.dash.org/insight/>`_ by searching for the address. You
-will need 15 confirmations before you can register the masternode, but
-you can continue with the next step at this point already: generating
-your masternode operator key.
+<https://testnet-insight.dash.org/insight/>`_ by searching for the
+address. You will need 15 confirmations before you can register the
+masternode, but you can continue with the next step at this point
+already: generating your masternode operator key.
 
 .. figure:: img/setup-collateral-blocks.png
    :width: 400px
@@ -441,32 +440,24 @@ features an interactive setup command and the ability to manage multiple
 node configs and multiple networks. It handles the installation of Dash
 Core and Tenderdash, as well as all dependencies and supporting
 services. Full dashmate documentation is available `here
-<https://github.com/dashevo/dashmate#readme>`__.
+<https://github.com/dashevo/platform/tree/master/packages/dashmate#readme>`__.
 
 Open PuTTY or a console again and connect using the username and
 password you just created for your new, non-root user. Begin by
 installing dashmate dependencies::
 
-  sudo apt install -y git curl docker.io docker-compose
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-  source ~/.bashrc
-  nvm install --lts
-
-Add your current user to the docker group, ensure docker starts on boot
-and refresh the environment::
-
+  curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
   sudo usermod -aG docker $USER
   newgrp docker
-  sudo systemctl enable docker
-  sudo systemctl enable containerd
+  sudo apt install python3-pip
+  sudo pip3 install docker-compose
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  source ~/.bashrc
+  nvm install 16
 
-Clone the dashmate repository, set up the dependencies and link the
-CLI::
+Install dashmate::
 
-  git clone -b master https://github.com/dashevo/dashmate.git
-  cd dashmate
-  npm ci
-  npm link
+  npm install -g dashmate
 
 Run the interactive setup wizard::
 
@@ -495,11 +486,11 @@ You can check the status of your masternode using the various ``dashmate
 status`` commands as follows::
 
 - dashmate status
-- dashmate status:core
-- dashmate status:host
-- dashmate status:masternode
-- dashmate status:platform
-- dashmate status:services
+- dashmate status core
+- dashmate status host
+- dashmate status masternode
+- dashmate status platform
+- dashmate status services
 
 Continue with the :ref:`Registration step <testnet-register-masternode>` to
 setup the collateral, keys and construct the ProTx transaction required
@@ -521,9 +512,7 @@ Adding the following ``git`` and ``npm`` commands optionally also
 ensures you are using the latest stable version of dashmate::
 
   dashmate stop
-  git checkout master
-  git pull
-  npm ci
+  npm update -g dashmate
   dashmate update
   dashmate start
 
@@ -532,9 +521,7 @@ Adding the following command will drop all data from Dash Platform
 version::
 
   dashmate stop
-  git checkout master
-  git pull
-  npm ci
+  npm update -g dashmate
   dashmate reset --platform-only
   dashmate update
   dashmate start
@@ -588,7 +575,7 @@ key generated by ``dashmate setup``, this information is already configured
 for your masternode. If you generated your own BLS key pair, edit the
 dashmate configuration as follows::
 
-  dashmate config:set core.masternode.operator.privateKey <bls_private_key>
+  dashmate config set core.masternode.operator.privateKey <bls_private_key>
   dashmate restart
 
 At this point you can go back to your terminal window and monitor your
@@ -608,7 +595,7 @@ Identify the funding transaction
 
 If you used an address in Dash Core wallet for your collateral
 transaction, you now need to find the txid of the transaction. Click
-**Tools > Debug console** and enter the following command::
+**Window > Console** and enter the following command::
 
   masternode outputs
 
@@ -638,7 +625,7 @@ public key, and you can skip this step. If you are hosting your own
 masternode or have agreed to provide your host with the BLS private key,
 you can use the BLS key generated by the ``dashmate setup`` command.
 Alternatively, you can generate a BLS public/private keypair in Dash
-Core by clicking **Tools > Debug console** and entering the following
+Core by clicking **Window > Console** and entering the following
 command::
 
   bls generate
@@ -664,7 +651,7 @@ key generated by ``dashmate setup``, this information is already
 configured for your masternode. If you generated your own BLS key pair,
 edit the dashmate configuration as follows::
 
-  dashmate config:set core.masternode.operator.privateKey <bls_private_key>
+  dashmate config set core.masternode.operator.privateKey <bls_private_key>
   dashmate restart
 
 We will now prepare the transaction used to register the masternode on
@@ -846,7 +833,7 @@ Manual installation
 **The manual installation guide is currently a work in progress.**
 
 This guide describes how to manually download and install the components
-of your Dash masternode under Ubuntu Linux 20.04 LTS "Focal Fossa"
+of your Dash masternode under Ubuntu Linux 22.04 LTS "Jammy Jellyfish"
 assuming you have a non-root user named ``dash``. You will need to
 manually adjust apt commands if using a different distro.
 
@@ -865,7 +852,7 @@ and communication relating to the base blockchain. Download Dash Core as
 follows::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v0.17.0.3/dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v18.0.0-rc4/dashcore-18.0.0-rc4-$(uname -m)-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -881,14 +868,14 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v0.17.0.3/dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v18.0.0-rc4/dashcore-18.0.0-rc4-$(uname -m)-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-18.0.0-rc4-$(uname -m)-linux-gnu.tar.gz.asc
 
 Extract the compressed archive and copy the necessary files to the
 directory::
 
-  tar xfv dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz
-  sudo install -t /usr/local/bin dashcore-0.17.0/bin/*
+  tar xfv dashcore-18.0.0-rc4-$(uname -m)-linux-gnu.tar.gz
+  sudo install -t /usr/local/bin dashcore-e66d539fa5d1/bin/*
 
 Create a working directory for Dash Core::
 
@@ -971,12 +958,13 @@ Sentinel is a watchdog and works to communicate to the network that your
 node is working properly. Install Sentinel as follows::
 
   cd
-  sudo apt install -y python3-virtualenv
+  sudo add-apt-repository ppa:deadsnakes/ppa -y
+  sudo apt install -y software-properties-common python3.9 python3.9-venv
   git clone -b master https://github.com/dashpay/sentinel.git
   cd sentinel
-  virtualenv venv
-  venv/bin/pip install -r requirements.txt
-  venv/bin/python bin/sentinel.py
+  python3.9 -m venv . sentinel
+  bin/pip install -r requirements.txt
+  bin/python bin/sentinel.py
 
 You will see a message reading **dashd not synced with network! Awaiting
 full sync before running Sentinel.** Use the following command to
@@ -1006,7 +994,7 @@ internet. Install Tor as follows::
   sudo gpg --no-default-keyring --keyring /usr/share/keyrings/tor-archive-keyring.gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
   echo "deb [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/tor.list
   sudo apt update
-  sudo apt install tor deb.torproject.org-keyring
+  sudo apt install -y tor deb.torproject.org-keyring
   
 Platform services
 -----------------
@@ -1015,35 +1003,12 @@ Next, we will install the Dash Platform services. Start with some common
 dependencies::
 
   cd
-  curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-  sudo apt install -y libzmq3-dev nodejs build-essential
-  sudo npm install forever -g
-
-MongoDB
-^^^^^^^
-
-MongoDB is a document-oriented database. Install MongoDB as follows::
-
-  sudo gpg --no-default-keyring --keyring /usr/share/keyrings/mongodb-archive-keyring.gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 20691EEC35216C63CAF66CE1656408E390CFB1F5
-  echo "deb [signed-by=/usr/share/keyrings/mongodb-archive-keyring.gpg] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb.list
-  sudo apt update
-  sudo apt install -y mongodb-org
-
-Configure MongoDB::
-
-  sudo sed -i 's/#replication:/replication:\n  replSetName: driveDocuments/' /etc/mongod.conf
-
-Restart MongoDB::
-
-  sudo systemctl restart mongod
-
-Initiate the MongoDB client::
-  
-  mongo<<<"rs.initiate({_id:'driveDocuments',version: 1,members:[{_id: 0,host: 'localhost:27017',},],});"
-
-Verify MongoDB is running::
-
-  sudo systemctl status mongod
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  source ~/.bashrc
+  nvm install 16
+  sudo apt install -y libzmq3-dev build-essential cmake libgmp-dev gcc-10 g++-10 apt-transport-https gnupg2 curl lsb-release
+  export CC=gcc-10 && export CXX=g++-10
+  npm install pm2 -g
 
 Drive
 ^^^^^
@@ -1051,36 +1016,30 @@ Drive
 Drive is a replicated state machine for Dash Platform. Download Drive as
 follows::
 
-  cd
-  git clone -b master https://github.com/dashevo/js-drive
-  cd js-drive
-  cp .env.example .env
+  git clone -b master https://github.com/dashevo/platform/
+  cd platform
+  corepack enable
+  yarn workspaces focus --production @dashevo/drive
+  cp packages/js-drive/.env.example packages/js-drive/.env
 
 Configure Drive::
 
-  sed -i 's/^CORE_JSON_RPC_PORT.*/CORE_JSON_RPC_PORT=19998/' .env
-  sed -i 's/^INITIAL_CORE_CHAINLOCKED_HEIGHT.*/INITIAL_CORE_CHAINLOCKED_HEIGHT=415765/' .env
-  cat<<EOF>> .env
-  DPNS_CONTRACT_ID=76wgB8KBxLGhtEzn4Hp5zgheyzzpHYvfcWGLs69B2ahq
-  DPNS_CONTRACT_BLOCK_HEIGHT=59
-  DPNS_TOP_LEVEL_IDENTITY=4yaJaaeUU9xG6sonkCHZkcZkhcXGqwf5TcNLw5Nh5LJ4
-  DASHPAY_CONTRACT_ID=6wfobip5Mfn6NNGK9JTQ5eHtZozpkNx4aZUsnCxkfgj5
-  DASHPAY_CONTRACT_BLOCK_HEIGHT=71
-  FEATURE_FLAGS_CONTRACT_ID=4CTBQw6eJK9Kg7k4F4v6U1RPMtkfCoPbQzUJDCi85pQb
-  FEATURE_FLAGS_CONTRACT_BLOCK_HEIGHT=77
-  EOF
-
-Install package dependencies::
-
-  npm_config_zmq_external=true npm install
+  sed -i 's/^CORE_JSON_RPC_PORT.*/CORE_JSON_RPC_PORT=19998/' packages/js-drive/.env
+  sed -i 's/^INITIAL_CORE_CHAINLOCKED_HEIGHT.*/INITIAL_CORE_CHAINLOCKED_HEIGHT=415765/' packages/js-drive/.env
+  sed -i 's/^CORE_JSON_RPC_USERNAME.*/CORE_JSON_RPC_USERNAME=dashrpc/' packages/js-drive/.env
+  sed -i 's/^CORE_JSON_RPC_PASSWORD.*/CORE_JSON_RPC_PASSWORD=password/' packages/js-drive/.env
+  sed -i 's/^DPNS_MASTER_PUBLIC_KEY=.*/DPNS_MASTER_PUBLIC_KEY=022a5ffc9f92e005a02401c375f575b3aed5606fb24ddef5b3a05d55c66ba2a2f6/' packages/js-drive/.env
+  sed -i 's/^DASHPAY_MASTER_PUBLIC_KEY=.*/DASHPAY_MASTER_PUBLIC_KEY=02c6bf10f8cc078866ed5466a0b5ea3a4e8db2a764ea5aa9cb75f22658664eb149/' packages/js-drive/.env
+  sed -i 's/^FEATURE_FLAGS_MASTER_PUBLIC_KEY=.*/FEATURE_FLAGS_MASTER_PUBLIC_KEY=033d57d03ba602acecfb6fd4ad66c5fdb9a739e163faefa901926bdf28063f9251/' packages/js-drive/.env
+  sed -i 's/^MASTERNODE_REWARD_SHARES_MASTER_PUBLIC_KEY=.*/MASTERNODE_REWARD_SHARES_MASTER_PUBLIC_KEY=02182c19827a5e3151feb965b2c6e6bbe57bb1f2fe7579595d76b672966da4e8e6/' packages/js-drive/.env
 
 Start Drive::
 
-  forever start -a --uid "drive" scripts/abci.js
+  pm2 start yarn --name "drive" -- workspace @dashevo/drive abci
 
 Verify Drive is running by checking for a time value under ``uptime``::
 
-  forever list
+  pm2 list
 
 Tenderdash
 ^^^^^^^^^^
@@ -1090,15 +1049,14 @@ used by Dash Platform. As binaries are not yet published, you will need
 to build from source. Install Go as follows::
 
   cd /tmp
-  wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz
-  sudo tar -C /usr/local -xzf go1.16.4.linux-amd64.tar.gz
+  wget https://go.dev/dl/go1.18.2.linux-$(dpkg --print-architecture).tar.gz
+  sudo tar -C /usr/local -xzf go1.18.2.linux-$(dpkg --print-architecture).tar.gz
   export PATH=$PATH:/usr/local/go/bin
 
 Build and install Tenderdash as follows::
 
   cd
-  sudo apt install -y cmake libgmp-dev
-  git clone -b coreChainLocksV6 https://github.com/dashevo/tenderdash
+  git clone -b v0.7.1 https://github.com/dashevo/tenderdash
   cd tenderdash
   make install-bls
   make build-linux
@@ -1115,8 +1073,8 @@ Modify the configuration with the following commands::
   sed -i 's/^timeout_commit.*/timeout_commit = "500ms"/' ~/.tenderdash/config/config.toml
   sed -i 's/^create_empty_blocks_interval.*/create_empty_blocks_interval = "3m"/' ~/.tenderdash/config/config.toml
   sed -i 's/^namespace.*/namespace = "drive_tendermint"/' ~/.tenderdash/config/config.toml
-  sed -i 's/^seeds.*/seeds = "aa4c3870e6cebd575c80371b4ae0e902a2885e14@54.189.200.56:26656,81c79324942867f694ee49108f05e744c343f5a1@52.43.162.96:26656"/' ~/.tenderdash/config/config.toml
-  curl https://gist.githubusercontent.com/strophy/ca6acd23bbdec1e55f322dac04a1059d/raw/a2786b3f390e4a6310b66bab05de0f383b6c49ed/genesis.json > ~/.tendermint/config/genesis.json
+  sed -i 's/^seeds.*/seeds = "74907790a03b51ac062c8a1453dafd72a08668a3@54.189.200.56:26656,2006632eb20e670923d13d4f53abc24468eaad4d@52.43.162.96:26656"/' ~/.tenderdash/config/config.toml
+  curl https://gist.githubusercontent.com/strophy/9a564bbc423198a2fdf4e807b7b40bb4/raw/21ad1cdd6112b33a73c032727a096d1563ed0b07/genesis.json > ~/.tenderdash/config/genesis.json
 
 Configure Tenderdash to start as a service::
 
@@ -1152,33 +1110,28 @@ DAPI
 ^^^^
 
 DAPI provides masternode services over the JSON RPC and gRPC protocols.
-Download DAPI as follows::
+Start DAPI as follows::
 
-  cd
-  git clone -b master https://github.com/dashevo/dapi
-  cd dapi
-  cp .env.example .env
+  cd ~/platform
+  yarn workspaces focus --production @dashevo/dapi
+  cp packages/dapi/.env.example packages/dapi/.env
 
 Modify the configuration with the following commands::
 
-  sed -i 's/^API_JSON_RPC_PORT.*/API_JSON_RPC_PORT=3004/' .env
-  sed -i 's/^API_GRPC_PORT.*/API_GRPC_PORT=3005/' .env
-  sed -i 's/^TX_FILTER_STREAM_GRPC_PORT.*/TX_FILTER_STREAM_GRPC_PORT=3006/' .env
-  sed -i 's/^DASHCORE_RPC_PORT.*/DASHCORE_RPC_PORT=19998/' .env
-  sed -i 's/^DASHCORE_ZMQ_PORT.*/DASHCORE_ZMQ_PORT=29998/' .env
-  sed -i 's/^DASHCORE_P2P_PORT.*/DASHCORE_P2P_PORT=19999/' .env
-
-Install package dependencies::
-
-  npm_config_zmq_external=true npm install
+  sed -i 's/^API_JSON_RPC_PORT.*/API_JSON_RPC_PORT=3004/' packages/dapi/.env
+  sed -i 's/^API_GRPC_PORT.*/API_GRPC_PORT=3005/' packages/dapi/.env
+  sed -i 's/^TX_FILTER_STREAM_GRPC_PORT.*/TX_FILTER_STREAM_GRPC_PORT=3006/' packages/dapi/.env
+  sed -i 's/^DASHCORE_RPC_PORT.*/DASHCORE_RPC_PORT=19998/' packages/dapi/.env
+  sed -i 's/^DASHCORE_ZMQ_PORT.*/DASHCORE_ZMQ_PORT=29998/' packages/dapi/.env
+  sed -i 's/^DASHCORE_P2P_PORT.*/DASHCORE_P2P_PORT=19999/' packages/dapi/.env
 
 Start DAPI::
 
-  forever start -a --uid "dapi" scripts/api.js
+  pm2 start yarn --name "dapi" -- workspace @dashevo/dapi api
 
 Start the transaction filter stream::
 
-  forever start -a --uid "tx-filter-stream" scripts/tx-filter-stream.js
+  pm2 start yarn --name "dapi" -- workspace @dashevo/dapi core-streams
 
 Envoy
 ^^^^^
@@ -1187,15 +1140,15 @@ Envoy is a gRPC service proxy for cloud-native applications. Install
 Envoy as follows::
 
   cd
-  sudo gpg --no-default-keyring --keyring /usr/share/keyrings/envoy-archive-keyring.gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 5270CEAC57F63EBD9EA9005D0253D0B26FF974DB
-  echo "deb [signed-by=/usr/share/keyrings/envoy-archive-keyring.gpg] https://dl.bintray.com/tetrate/getenvoy-deb focal stable" | sudo tee /etc/apt/sources.list.d/envoy.list
+  curl -sL 'https://deb.dl.getenvoy.io/public/gpg.8115BA8E629CC074.key' | sudo gpg --dearmor -o /usr/share/keyrings/getenvoy-keyring.gpg
+  echo "deb [signed-by=/usr/share/keyrings/getenvoy-keyring.gpg] https://deb.dl.getenvoy.io/public/deb/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/getenvoy.list
   sudo apt update
   sudo apt install -y getenvoy-envoy
 
 Configure Envoy as follows::
 
   sudo mkdir /etc/envoy
-  curl https://gist.githubusercontent.com/strophy/3724a3537d4cbc6fbdba169768392f28/raw/ba521d719c198f9bb44cf3231ad6507ac4418900/grpc.yaml | sudo tee /etc/envoy/config.yaml
+  curl https://gist.githubusercontent.com/strophy/a6f4f6e30212e7cadcefb65b179c9bce/raw/c8c879de320fc93f5c56793c7bb89acb3165bab9/grpc.yaml | sudo tee /etc/envoy/config.yaml
 
 Configure Envoy to start as a service::
 
@@ -1228,13 +1181,13 @@ Verify Envoy is running::
 Finishing up
 ------------
 
-Ensure services managed by ``forever`` start on reboot::
+Ensure services managed by ``pm2`` start on reboot::
 
   cat<<"EOF"|crontab
-  * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
-  @reboot { sleep 5;cd ~/js-drive&&forever start -a --uid "drive" scripts/abci.js;}
-  @reboot { sleep 6;cd ~/dapi&&forever start -a --uid "dapi" scripts/api.js;}
-  @reboot { sleep 7;cd ~/dapi&&forever start -a --uid "tx-filter-stream" scripts/tx-filter-stream.js;}
+  * * * * * cd ~/sentinel && ./bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+  @reboot { sleep 5;cd ~/platform&&pm2 start yarn --name "drive" -- workspace @dashevo/drive abci;}
+  @reboot { sleep 6;cd ~/platform&&pm2 start yarn --name "dapi" -- workspace @dashevo/dapi api;}
+  @reboot { sleep 7;cd ~/platform&&pm2 start yarn --name "dapi" -- workspace @dashevo/dapi core-streams;}
   EOF
 
 At this point you can safely log out of your server by typing ``exit``.
@@ -1251,10 +1204,10 @@ directly. Install dependencies if necessary (Docker, NodeJS, NPM, Github
 CLI). Windows, macOS and Linux are supported, the following example
 shows how to install dependencies under Ubuntu 20.04 LTS.::
 
-  curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-  sudo apt-add-repository https://cli.github.com/packages
-  sudo apt install -y nodejs git docker.io docker-compose
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  source ~/.bashrc
+  nvm install 16
+  curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
   sudo usermod -aG docker $USER
   newgrp docker
 
@@ -1266,15 +1219,13 @@ https://testnet-faucet.dash.org/ and request 1000+ tDash to your new
 address using the promo code 'masternode'. Then download and initialize
 dashmate as follows::
 
-  git clone -b master https://github.com/dashevo/dashmate.git
-  cd dashmate
-  npm install && sudo npm link
+  npm install -g dashmate
 
 If you are using Windows, you will need to change the path for two log files.
 Modify the example below with a log path of your choosing::
 
-  dashmate config:set platform.drive.abci.log.prettyFile.path C:\Users\strophy\Documents\GitHub\dashmate\testnet-drive-pretty.log
-  dashmate config:set platform.drive.abci.log.jsonFile.path C:\Users\strophy\Documents\GitHub\dashmate\testnet-drive-json.log
+  dashmate config set platform.drive.abci.log.prettyFile.path C:\Users\strophy\Documents\GitHub\dashmate\testnet-drive-pretty.log
+  dashmate config set platform.drive.abci.log.jsonFile.path C:\Users\strophy\Documents\GitHub\dashmate\testnet-drive-json.log
 
 Register your masternode on the network as follows::
 
@@ -1294,5 +1245,5 @@ Your masternode is now providing service on the following local ports::
   DAPI gRPC:    3010
 
 Note that platform sync will take some time after core sync is complete.
-You can monitor progress with ``dashmate status:platform`` or use ``dashmate
+You can monitor progress with ``dashmate status platform`` or use ``dashmate
 --help`` to view other commands.
