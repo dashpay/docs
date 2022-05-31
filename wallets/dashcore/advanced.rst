@@ -515,9 +515,12 @@ wallet file.
 
    Open wallet
 
-Click the dropdown box to the left of the Dash logo on the tab bar
-to switch between open wallets. This dropdown box is only shown when multiple
-wallets are open.
+Select the active wallet
+------------------------
+
+When multiple wallets are open, a wallet selection dropbox is shown to the left
+of the Dash logo on the tab bar. Click the dropdown box and select a wallet to
+set it as the active wallet.
 
 .. figure:: img/wallet-select-dropdown.png
    :width: 350px
@@ -527,16 +530,19 @@ wallets are open.
 Close a wallet
 --------------
 
-To close a wallet, switch to the wallet you want to close using the dropdown box
-to the left of the Dash logo on the tab bar. Next click **File -> Close Wallet**
-and then click the name of wallet file. Click the dropdown box to the left of
-the Dash logo on the tab bar to switch between open wallets. This dropdown box
-is only shown when multiple wallets are open.
+To close a wallet, set it as the active wallet using the wallet selection
+dropdown box. Next, click **File -> Close Wallet** and then click **Yes** on the
+Close wallet confirmation screen.
 
 .. figure:: img/wallet-close-confirmation.png
    :width: 350px
 
    Close wallet confirmation
+
+
+.. note::
+
+  If the only open wallet is closed, wallet-related items on the tab bar will be disabled.
 
 Alternative methods
 -------------------
