@@ -501,7 +501,53 @@ Your onion service is now available at the shown address.
 Multiple wallets
 ================
 
-It is possible to select between different Dash wallets when starting
+Since version 18.0.0, Dash Core has included the ability work with multiple
+wallets from the **File** menu in addition to the previously available options.
+
+Open a wallet
+-------------
+
+To open a wallet, click **File -> Open Wallet** and then click the name of
+wallet file.
+
+.. figure:: img/wallet-open.png
+   :width: 350px
+
+   Open wallet
+
+Select the active wallet
+------------------------
+
+When multiple wallets are open, a wallet selection dropbox is shown to the left
+of the Dash logo on the tab bar. Click the dropdown box and select a wallet to
+set it as the active wallet.
+
+.. figure:: img/wallet-select-dropdown.png
+   :width: 350px
+
+   Wallet selection dropdown box
+
+Close a wallet
+--------------
+
+To close a wallet, set it as the active wallet using the wallet selection
+dropdown box. Next, click **File -> Close Wallet** and then click **Yes** on the
+Close wallet confirmation screen.
+
+.. figure:: img/wallet-close-confirmation.png
+   :width: 350px
+
+   Close wallet confirmation
+
+
+.. note::
+
+  If the only open wallet is closed, wallet-related items on the tab bar will be disabled.
+
+Alternative methods
+-------------------
+
+It is also possible to select between different Dash wallets when starting
 Dash Core by specifying the ``wallet`` argument, or even run multiple
 instances of Dash Core simultaneously by specifying separate data
 directories using the ``datadir`` argument.
@@ -517,7 +563,7 @@ simultaneously).
 
 
 Separate wallet.dat files
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For this scenario, we will create two shortcuts on the desktop, each
 using a different wallet file. Navigate to the binary file used to start
@@ -552,7 +598,7 @@ as described below.
 
 
 Separate data directories
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Start Dash Core and allow it to synchronize with the network, then close
 Dash Core again. You can now create two directories at e.g. ``C:\Dash1``
