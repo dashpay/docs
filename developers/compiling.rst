@@ -100,8 +100,15 @@ Download the Mac OSX SDK::
 
 Prepare gitian
 --------------
-  
-It is only necessary to run this step during the initial setup of your machine::
+
+It is only necessary to run this step during the initial setup of your machine.
+Checkout the tag associated with the Dash Core version you plan to build::
+
+  # <version> = Dash Core tag to build
+  # Example: git checkout v0.17.0.0
+  git checkout <version>
+
+Run the gitian-build setup routine to prepare your environment::
 
   # <signer> = The name associated with your PGP key
   # <version> = Dash Core tag to build (exclude the leading "v")
