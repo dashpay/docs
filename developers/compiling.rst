@@ -106,7 +106,9 @@ Checkout the tag associated with the Dash Core version you plan to build::
 
   # <version> = Dash Core tag to build
   # Example: git checkout v0.17.0.0
+  cd dash
   git checkout <version>
+  cd ..
 
 Run the gitian-build setup routine to prepare your environment::
 
