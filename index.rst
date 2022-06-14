@@ -67,15 +67,6 @@ Contents
    wallets/index
    earning-spending
 
-.. _merchant-docs:
-
-.. toctree::
-   :maxdepth: 3
-   :caption: Merchants
-
-   merchants/getting-started
-   merchants/administrative
-
 .. _network-docs:
 
 .. toctree::
