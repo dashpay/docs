@@ -35,8 +35,9 @@ funds itself by reserving 10% of the block reward for budget projects.
 
 In late 2016, IOHK prepared a detailed report on version 0.12.1 of the Dash governance 
 system, including formal analysis of weaknesses and areas for improvement. 
-You can view the report here. An updated overview of cryptocurrency treasury system in 
-general was published by IOHK in 2019, available here.
+You can view the report `here <https://iohk.io/research/papers/#NSJ554WR>`__. 
+An updated overview of cryptocurrency treasury system in general was published by IOHK in 2019,
+available `here <https://iohk.io/en/research/library/papers/a-treasury-system-for-cryptocurrenciesenabling-better-collaborative-intelligence/>`__.
 
 .. raw:: html
 
@@ -44,12 +45,7 @@ general was published by IOHK in 2019, available here.
         <iframe src="//www.youtube.com/embed/jHsVU1LBuAY" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
-In late 2016, IOHK prepared a detailed report on version 0.12.1 of the
-Dash governance system, including formal analysis of weaknesses and
-areas for improvement. You can view the report `here
-<https://iohk.io/research/papers/#NSJ554WR>`__. An updated overview of
-cryptocurrency treasury system in general was published by IOHK in 2019,
-available `here <https://iohk.io/en/research/library/papers/a-treasury-system-for-cryptocurrenciesenabling-better-collaborative-intelligence/>`__.
+ 
 
 You can learn more about Dash Governance in the following sections:
 
