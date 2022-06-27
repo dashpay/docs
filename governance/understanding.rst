@@ -1,6 +1,6 @@
 .. meta::
    :description: Discussion of theory and motivation behind the Dash governance system and treasury
-   :keywords: dash, dgbb, governance, funding, voting, blockchain, development, block reward, treasury, budget
+   :keywords: dash, dao, governance, funding, voting, blockchain, development, block reward, treasury, budget
 
 .. _understanding-governance:
 
