@@ -507,17 +507,16 @@ Decentralized Governance by Blockchain, or DGBB, is Dash's attempt to
 solve two important problems in cryptocurrency: governance and funding.
 Governance in a decentralized project is difficult, because by
 definition there are no central authorities to make decisions for the
-project. In Dash, such decisions are made by the network, that is, by
-the owners of masternodes. The DGBB system allows each masternode to
-vote once (yes/no/abstain) for each proposal. If a proposal passes, it
-can then be implemented (or not) by Dash's developers. A key example is
-early in 2016, when Dash's Core Team submitted a proposal to the network
-asking whether the blocksize should be increased to 2 MB. Within 24
-hours, consensus had been reached to approve this change. Compare this
-to Bitcoin, where debate on the blocksize has been raging for nearly
-three years.
+project. In Dash, such decisions are made by the Decentralized Autonomous
+Organization (DAO). The DAO allows each masternode to vote once (yes/no/abstain) 
+for each proposal. If a proposal passes, it can then be implemented (or not) 
+by Dash's developers. A key example is early in 2016, when Dash's Core Team 
+submitted a proposal to the network asking whether the blocksize should be 
+increased to 2 MB. Within 24 hours, consensus had been reached to approve this 
+change. Compare this to Bitcoin, where debate on the blocksize has been raging 
+for nearly three years.
 
-DGBB also provides a means for Dash to fund its own development. While 
+DAO also provides a means for Dash to fund its own development. While 
 other projects have to depend on donations or premined endowments, Dash 
 uses 10% of the block reward to fund its own development. Every time a 
 block is mined, 90% of the reward is split between the miner and
