@@ -505,7 +505,7 @@ Dash
   darknet markets. Dash is a portmanteau of "Digital Cash." Dash is an
   open source peer-to- peer cryptocurrency that solves many of Bitcoin's
   problems. Dash's features include InstantSend, CoinJoin,
-  Decentralized Governance by Blockchain (DGBB), a 2nd tier network
+  a Decentralized Autonomous Organization (DAO), a 2nd tier network
   (referred to as the masternode network). See the :ref:`Features
   <features>` page for a full list of Dash's features.
 
