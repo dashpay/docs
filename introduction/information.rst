@@ -1,6 +1,6 @@
 .. meta::
    :description: Glossary and collection of links to other parts of the Dash ecosystem and network
-   :keywords: dash, cryptocurrency, glossary, links, community, official, github, roadmap, chat, discord, facebook, twitter, telegram, social media
+   :keywords: dash, cryptocurrency, glossary, links, dao, community, official, github, roadmap, chat, discord, facebook, twitter, telegram, social media
 
 .. _information:
 
@@ -367,18 +367,6 @@ Blocks
   "miners" who use specialized software or equipment designed
   specifically to create blocks.
 
-Budget System / DGBB
-  The development of Dash and the Dash ecosystem is self-funded by the
-  network. Each time a block is discovered, 90% of the block reward is
-  split between the miner and a masternodes per the distribution found
-  :ref:`here <block-reward-reallocation>`. 10% is withheld by the
-  network and used to fund projects that are approved by the masternode
-  network. This process is known as :ref:`Decentralized Governance by
-  Blockchain <governance>` (DGBB). For a fee, anybody can submit a
-  proposal to the network, and will be paid directly by the blockchain
-  if approved by the masternodes. The Budget System is sometimes called
-  the Treasury System; the two terms are interchangeable.
-
 ChainLock
   Defined in `DIP8
   <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__,
@@ -463,6 +451,16 @@ Cryptography
   science, and electrical engineering. Applications of cryptography
   include ATM cards, computer passwords, and electronic commerce.
 
+DAO
+  The development of Dash and the Dash ecosystem is self-funded by the
+  DAO or Decentralized Autonomous Organization. Each time a block is discovered, 
+  90% of the block reward is split between the miner and a masternodes per the 
+  distribution found :ref:`here <block-reward-reallocation>`. 10% is withheld by the
+  network and used to fund projects that are approved by the masternode
+  network. For a fee, anybody can submit a proposal to the network, and will be paid 
+  directly by the blockchain if approved by the masternodes. The Budget System is 
+  sometimes called the Treasury System; the two terms are interchangeable.
+
 DAP
   Decentralized Application Protocol. This term describes an application
   running on top of the Dash DAPI platform.
@@ -507,7 +505,7 @@ Dash
   darknet markets. Dash is a portmanteau of "Digital Cash." Dash is an
   open source peer-to- peer cryptocurrency that solves many of Bitcoin's
   problems. Dash's features include InstantSend, CoinJoin,
-  Decentralized Governance by Blockchain (DGBB), a 2nd tier network
+  a Decentralized Autonomous Organization (DAO), a 2nd tier network
   (referred to as the masternode network). See the :ref:`Features
   <features>` page for a full list of Dash's features.
 

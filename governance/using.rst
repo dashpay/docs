@@ -1,6 +1,6 @@
 .. meta::
-   :description: Practical guide to using the Dash governance system and treasury
-   :keywords: dash, dgbb, governance, funding, voting, proposals, masternodes
+   :description: Practical guide to using the Dash DAO governance system and treasury
+   :keywords: dash, dao, governance, funding, voting, proposals, masternodes
 
 .. _using-governance:
 
@@ -8,7 +8,7 @@
 Using Dash Governance
 =====================
 
-Dash's Decentralized Governance by Blockchain (DGBB) is a novel voting
+Dash's Decentralized Autonomous Organization (DAO) is a novel voting
 and funding platform. This documentation introduces and details the
 theory and practice to use the system.
 
@@ -18,7 +18,7 @@ Understanding the process
 Introduction
 ------------
 
-- DGBB consists of three components: Proposals, Votes, and Budgets
+- DAO consists of three components: Proposals, Votes, and Budgets
 - Anyone can submit a proposal for a small fee
 - Each valid masternode can vote for, against or abstain on proposals
 - Approved proposals become budgets
@@ -343,7 +343,7 @@ Voting on proposals
 your vote will not be counted. The exact deadline is 1662 blocks before
 the superblock.**
 
-Voting on DGBB proposals is an important part of operating a masternode.
+Voting on DAO proposals is an important part of operating a masternode.
 Since masternodes are heavily invested in Dash, they are expected to
 critically appraise proposals each month and vote in a manner they
 perceive to be consistent with the best interests of the network. Each
