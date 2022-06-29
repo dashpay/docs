@@ -33,11 +33,6 @@ be paid out in a "superblock". At that time, the block rewards that were not pai
 out (10% of each block) will be used to fund approved proposals. The network thus 
 funds itself by reserving 10% of the block reward for budget projects.
 
-In late 2016, IOHK prepared a detailed report on version 0.12.1 of the Dash governance 
-system, including formal analysis of weaknesses and areas for improvement. 
-You can view the report `here <https://iohk.io/research/papers/#NSJ554WR>`__. 
-An updated overview of cryptocurrency treasury system in general was published by IOHK in 2019,
-available `here <https://iohk.io/en/research/library/papers/a-treasury-system-for-cryptocurrenciesenabling-better-collaborative-intelligence/>`__.
 
 .. raw:: html
 
