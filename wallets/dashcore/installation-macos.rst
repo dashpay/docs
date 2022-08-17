@@ -51,7 +51,7 @@ download as follows::
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  gpg --verify dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-18.0.1-x86_64-linux-gnu.tar.gz.asc
 
 .. figure:: img/linux/setup-linux-gpg.png
    :width: 400px
