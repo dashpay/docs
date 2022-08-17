@@ -115,9 +115,8 @@ B. Johnson's extremely popular **DASH: Detailed** proposal:
 
 A few additional points:
 
-#. It is currently not possible to pay a budget proposal to a multisig
-   address, or to change the payment address after the proposal is
-   posted to the blockchain.
+#. It is currently not possible to change the payment address after
+   the proposal is posted to the blockchain.
     
 #. To avoid accusations of favouritism and inside trading, Dash Core
    cannot promote your proposal for you. If your proposal is an

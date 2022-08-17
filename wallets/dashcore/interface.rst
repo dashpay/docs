@@ -18,6 +18,7 @@ The Main Window
 ===============
 
 .. figure:: img/window-areas.png
+   :width: 100 %
 
    The Dash Core Wallet
 
@@ -35,13 +36,13 @@ The menu bar provides access to all functions of Dash Core. There are
 four menus available:
 
 File
-  The File menu is used to manage your wallet, messages and addresses.
+  The File menu is used to manage your wallet and messages.
 Settings
   The Settings menu provides access to wallet encryption options and
   general software settings.
-Tools
-  The Tools menu provides information on the network, allows you modify
-  masternode configuration files and other advanced functions.
+Window
+  The Window menu provides access to your wallet addresses, information on the
+  network and other advanced functions.
 Help
   The Help menu links to documentation, guides and legal statements
   relating to Dash Core.
@@ -102,20 +103,6 @@ total balance is also available in the lower right corner.
 
    The Send tab
 
-The CoinJoin Tab
-~~~~~~~~~~~~~~~~
-
-The CoinJoin tab allows you to send funds to another address on the
-Dash network with enhanced privacy. It contains fields to enter the
-recipient’s address, a label for the address, and the amount of Dash you
-wish to send. Options related to the transaction fee are also available.
-A quick view of your total CoinJoin balance is also available in the
-lower right corner.
-
-.. figure:: img/coinjoin.png
-
-   The CoinJoin tab
-
 The Receive Tab
 ~~~~~~~~~~~~~~~
 
@@ -138,13 +125,27 @@ button in the bottom right corner of the window.
 
 The icons in the leftmost column indicate the status of the transaction.
 A tick indicates that the recommended number of confirmations has been
-passed, while a circular progress indicator indicates the nubmer of
+passed, while a circular progress indicator indicates the number of
 confirmations. A lightning bolt indicates a transaction with an existing
 InstantSend lock.
 
 .. figure:: img/transactions.png
 
    The Transactions tab
+
+The CoinJoin Tab
+~~~~~~~~~~~~~~~~
+
+The CoinJoin tab allows you to send funds to another address on the
+Dash network with enhanced privacy. It contains fields to enter the
+recipient’s address, a label for the address, and the amount of Dash you
+wish to send. Options related to the transaction fee are also available.
+A quick view of your total CoinJoin balance is also available in the
+lower right corner.
+
+.. figure:: img/coinjoin.png
+
+   The CoinJoin tab
 
 The Masternodes Tab
 ~~~~~~~~~~~~~~~~~~~
@@ -157,6 +158,17 @@ keys stored in the loaded wallet.
 .. figure:: img/masternodes.png
 
    The Masternodes tab
+
+The Governance Tab
+~~~~~~~~~~~~~~~~~~
+
+The Governance tab shows an overview of the governance proposals currently
+active on the Dash network. You can filter the data by entering a
+value in the Filter List field.
+
+.. figure:: img/governance.png
+
+   The Governance tab
 
 
 The Status Bar
@@ -236,7 +248,7 @@ Main tab
 The Main tab of the Options dialog contains settings related to startup
 and performance of the Dash Core app.
 
-.. figure:: img/main.png
+.. figure:: img/options-main.png
    :scale: 50 %
 
    The Main tab of the Dash Core Options dialog
@@ -265,6 +277,12 @@ Minimize on close
   corner of the window will cause Dash Core to minimize rather than close.
   To completely close the app, select **File > Exit**.
 
+Prune block storage to
+  This option enables pruning of blocks and specifies the amount of storage to
+  use for block storage. Enabling pruning significantly reduces the disk space
+  required to store transactions. All blocks are still fully validated.
+  Reverting this setting requires re-downloading the entire blockchain.
+
 Size of database cache
   This option specifies the size of the database cache in memory. A higher
   value will result in increased performance when adding new blocks at the
@@ -290,7 +308,7 @@ Core, it will generate a new wallet containing 1000 unique Dash
 addresses. This tab allows you to configure how these addresses are used
 as inputs with the Coin Control, CoinJoin and Masternode features.
 
-.. figure:: img/wallet.png
+.. figure:: img/options-wallet.png
    :scale: 50 %
 
    The Wallet tab of the Dash Core Options dialog
@@ -312,6 +330,11 @@ Show Masternodes tab
   Masternodes tab to the right of the Transactions tab. This option
   requires you to restart the Dash Core app. The Masternodes tab can be
   used to view details of masternodes registered on the Dash blockchain.
+
+Show Governance tab
+  Enabling this option causes Dash Core to display an additional Governance tab.
+  This option requires you to restart the Dash Core app. The Governance tab can
+  be used to view details of governance proposals active on the Dash network.
 
 Spend unconfirmed change
   When this option is enabled, the Dash Core wallet permits you to
@@ -385,7 +408,7 @@ Network tab
 
 This tab includes options related to your Dash network connection.
 
-.. figure:: img/network.png
+.. figure:: img/options-network.png
    :scale: 50 %
 
    The Network tab of the Dash Core Options dialog
@@ -425,7 +448,7 @@ Display tab
 This tab contains options relating to the display of the Dash Core app
 window.
 
-.. figure:: img/display.png
+.. figure:: img/options-display.png
    :scale: 50 %
 
    The Display tab of the Dash Core Options dialog
@@ -459,7 +482,7 @@ Appearance tab
 This tab contains options relating to the visual appearance of the Dash
 Core app window.
 
-.. figure:: img/appearance.png
+.. figure:: img/options-appearance.png
    :scale: 50 %
 
    The Appearance tab of the Dash Core Options dialog
@@ -485,7 +508,7 @@ dialog, available under the **Tools** menu in Dash Core.
 Information tab
 ---------------
 
-.. figure:: img/information.png
+.. figure:: img/tools-information.png
    :scale: 50 %
 
    The Information tab of the Dash Core Tools dialog
@@ -522,7 +545,7 @@ Click the red ``×`` icon to clear the console, and see the detailed
 `documentation <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls>`__
 on RPC commands to learn about the possible commands you can issue.
 
-.. figure:: img/console.png
+.. figure:: img/tools-console.png
    :scale: 50 %
 
    The Console tab of the Dash Core Tools dialog
@@ -534,7 +557,7 @@ The Network Traffic tab shows a graph of traffic sent and received to
 peers on the network over time. You can adjust the time period using the
 slider or **Reset** the graph.
 
-.. figure:: img/network-traffic.png
+.. figure:: img/tools-network-traffic.png
    :scale: 50 %
 
    The Network Traffic tab of the Dash Core Tools dialog
@@ -547,7 +570,7 @@ Core client. The IP address, version and ping time are visible.
 Selecting a peer shows additional information on the data exchanged with
 that peer.
 
-.. figure:: img/peers.png
+.. figure:: img/tools-peers.png
    :scale: 50 %
 
    The Peers tab of the Dash Core Tools dialog
@@ -559,7 +582,7 @@ The Wallet Repair tab offers a range of startup commands to restore a
 wallet to a functional state. Selecting any of these commands will
 restart Dash Core with the specified command-line option.
 
-.. figure:: img/wallet-repair.png
+.. figure:: img/tools-wallet-repair.png
    :scale: 50 %
 
    The Wallet Repair tab of the Dash Core Tools dialog
@@ -577,6 +600,10 @@ Rescan blockchain files 1
   your wallet.dat file with a different wallet or a backup - the wallet
   logic will not know about these transactions, so a rescan is necessary
   to determine balances.
+
+Rescan blockchain files 2
+  Performs the same operation as *Rescan blockchain files 1* but scans from the
+  genesis block instead of the wallet creation time.
 
 Recover transactions
   The recover transactions commands can be used to remove unconfirmed

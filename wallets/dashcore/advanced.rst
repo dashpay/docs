@@ -1,6 +1,6 @@
 .. meta::
-   :description: Coin control, HD wallets, multisig, KeePass and multiple wallet files using the Dash Core wallet
-   :keywords: dash, core, wallet, backup, restore, wallet.dat, multisig, KeePass, hd, seed, passphrase, mnemonic, coin control, hierarchical deterministic
+   :description: Coin control, HD wallets, multisig, multiple wallet files using the Dash Core wallet
+   :keywords: dash, core, wallet, backup, restore, wallet.dat, multisig, hd, seed, passphrase, mnemonic, coin control, hierarchical deterministic
 
 .. _dashcore-advanced:
 
@@ -60,7 +60,7 @@ Upgrade to HD
 Since version 0.17.0.2, Dash Core has included the ability upgrade a
 non-hierarchical deterministic (HD) wallet to an HD wallet via the
 ``upgradetohd`` command. The command can be run by either opening the console
-from **Tools -> Debug console** or issuing the following RPC command from
+from **Tools > Console** or issuing the following RPC command from
 ``dash-cli``::
 
   upgradetohd "" "" <walletpassphrase>
@@ -98,7 +98,7 @@ wallet seed and no mnemonic passphrase::
 
 A new HD wallet will be generated and Dash Core will display a warning
 informing you that you must encrypt your wallet after verifying it works
-correctly. Open the console from **Tools -> Debug console** or issue the
+correctly. Open the console from **Tools > Console** or issue the
 following RPC command from ``dash-cli`` to view the mnemonic seed::
 
   dumphdinfo
@@ -501,7 +501,53 @@ Your onion service is now available at the shown address.
 Multiple wallets
 ================
 
-It is possible to select between different Dash wallets when starting
+Since version 18.0.0, Dash Core has included the ability work with multiple
+wallets from the **File** menu in addition to the previously available options.
+
+Open a wallet
+-------------
+
+To open a wallet, click **File -> Open Wallet** and then click the name of
+wallet file.
+
+.. figure:: img/wallet-open.png
+   :width: 350px
+
+   Open wallet
+
+Select the active wallet
+------------------------
+
+When multiple wallets are open, a wallet selection dropbox is shown to the left
+of the Dash logo on the tab bar. Click the dropdown box and select a wallet to
+set it as the active wallet.
+
+.. figure:: img/wallet-select-dropdown.png
+   :width: 350px
+
+   Wallet selection dropdown box
+
+Close a wallet
+--------------
+
+To close a wallet, set it as the active wallet using the wallet selection
+dropdown box. Next, click **File -> Close Wallet** and then click **Yes** on the
+Close wallet confirmation screen.
+
+.. figure:: img/wallet-close-confirmation.png
+   :width: 350px
+
+   Close wallet confirmation
+
+
+.. note::
+
+  If the only open wallet is closed, wallet-related items on the tab bar will be disabled.
+
+Alternative methods
+-------------------
+
+It is also possible to select between different Dash wallets when starting
 Dash Core by specifying the ``wallet`` argument, or even run multiple
 instances of Dash Core simultaneously by specifying separate data
 directories using the ``datadir`` argument.
@@ -517,7 +563,7 @@ simultaneously).
 
 
 Separate wallet.dat files
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For this scenario, we will create two shortcuts on the desktop, each
 using a different wallet file. Navigate to the binary file used to start
@@ -552,7 +598,7 @@ as described below.
 
 
 Separate data directories
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Start Dash Core and allow it to synchronize with the network, then close
 Dash Core again. You can now create two directories at e.g. ``C:\Dash1``
@@ -586,66 +632,7 @@ multiple separate wallets without keeping a full copy of the blockchain.
 KeePass
 =======
 
-Since version 0.11.0, Dash Core has supported integration with KeePass,
-the popular open source password manager. This guide describes how to
-configure the association between Dash Core and KeePass, and how to save
-a Dash Core wallet passphrase in KeePass using the integration. When
-this is done, KeePass can be used to unlock the wallet.
-
-Installation
-------------
-
-You will need the following:
-
-- KeePass 2: https://keepass.info
-- KeePassHttp plugin: https://github.com/pfn/keepasshttp
-- Dash Core: https://www.dash.org
-
-If not already installed, install these packages according to the
-instructions linked below:
-
-- KeePass: https://keepass.info/help/v2/setup.html
-- KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md
-- Dash Core: https://docs.dash.org/en/stable/wallets/dashcore/installation.html
-
-Commands
---------
-
-The following KeePass RPC commands are available in the Dash Core client
-console or server:
-
-keepass genkey
-  Generates a base64 encoded 256 bit AES key that can be used for
-  communication with KeePassHttp. This is only necessary for manual
-  configuration. Use init for automatic configuration.
-
-keepass init
-  Sets up the association between Dash and KeePass by generating an AES
-  key and sending an association message to KeePassHttp. This will
-  trigger KeePass to ask for an ID for the association. Returns the
-  association and the base64 encoded string for the AES key.
-
-keepass setpassphrase
-  Updates the passphrase in KeePassHttp to a new value. This should
-  match the passphrase you intend to use for the wallet. Please note
-  that the standard RPC commands walletpassphrasechange and the wallet
-  encryption from the QT GUI already send the updates to KeePassHttp, so
-  this is only necessary for manual manipulation of the password.
-
-The following new arguments are available for dashd and dash-qt:
-
-keepass
-  Use KeePass 2 integration using KeePassHttp plugin (default: 0)
-
-keepassport=<port>
-  Connect to KeePassHttp on port <port> (default: 19455)
-
-keepasskey=<key>
-  KeePassHttp key for AES encrypted communication with KeePass
-
-keepassid=<name>
-  KeePassHttp id for the established association
-
-keepassname=<name>
-  Name to construct url for KeePass entry that stores the wallet
-  passphrase
+.. warning::
+  KeePass support was removed in Dash Core 18.0.0. Details can still be
+  found in `previous versions of this documentation 
+  <https://docs.dash.org/en/0.17.0/wallets/dashcore/advanced.html#keepass>`_.

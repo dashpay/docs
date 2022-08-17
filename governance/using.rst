@@ -28,7 +28,7 @@ Proposals
 ---------
 
 - Proposals are a request to receive funds
-- Proposals can be submitted by anyone for a fee of 5 Dash. The proposal
+- Proposals can be submitted by anyone for a fee of 1 Dash. The proposal
   fee is irreversibly destroyed on submission.
 - Proposals cannot be altered once submitted
 
@@ -176,16 +176,16 @@ submitted to the blockchain.
 
 Next, the proposal generator will provide you with a command to run from
 the console of your Dash Core wallet to prepare your budget proposal
-governance object. Running this command will cost you 5 DASH, which will
+governance object. Running this command will cost you 1 DASH, which will
 be "burnt" or permanently removed from circulation. This one-time fee
 protects the governance system from becoming overwhelmed by spam, poorly
 thought out proposals or users not acting in good faith. A small
 transaction fee is charged as well, so make sure slightly more than 5
 DASH is available in your wallet. Many budget proposals request
-reimbursement of the 5 DASH fee.
+reimbursement of the 1 DASH fee.
 
 First unlock your wallet by clicking **Settings > Unlock wallet**, then
-open the console by clicking **Tools > Debug console** and paste the
+open the console by clicking **Window > Console** and paste the
 generated command. The transaction ID will appear. Copy and paste this
 into the proposal generator response window. As soon as you do this, the
 system will show a progress bar as it waits for 6 confirmations as
@@ -286,7 +286,7 @@ transaction. See the `Core developer documentation
 for additional details.
 
 .. warning::
-  Running this command will create a transaction spending 5 DASH from the wallet
+  Running this command will create a transaction spending 1 DASH from the wallet
   as collateral for the proposal being created. Only run this command once you
   have verified all the proposal information. The transaction is not reversible
   once sent.
@@ -406,7 +406,7 @@ Dash Core wallet or masternode
 ------------------------------
 
 If you started your masternode using the Dash Core Wallet (not
-recommended), you can vote manually from **Tools > Debug console**, or
+recommended), you can vote manually from **Window > Console**, or
 directly from your masternode via SSH using ``dash-cli``. First click on
 the proposal you want to vote on at either `DashCentral
 <https://www.dashcentral.org/budget>`__ or `Dash Ninja
