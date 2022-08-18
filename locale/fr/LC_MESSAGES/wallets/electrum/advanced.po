@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Dash Core Group, Inc
+# Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-26 16:41-0400\n"
+"POT-Creation-Date: 2021-11-10 09:35-0500\n"
 "PO-Revision-Date: 2018-03-19 12:19+0000\n"
 "Last-Translator: Daf Daf, 2021\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../wallets/electrum/advanced.rst:1
 msgid ""
@@ -359,15 +359,15 @@ msgstr ""
 #: ../../wallets/electrum/advanced.rst:167
 msgid ""
 "A masternode requires a BLS \"operator\" key as described in `DIP3 "
-"<https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a"
-"-masternode-proregtx>`_. If you manage your own masternode, both Dash "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a-"
+"masternode-proregtx>`_. If you manage your own masternode, both Dash "
 "Electrum and your masternode must know the operator private key. Your "
 "masternode will use the private key to sign messages, and the Dash network "
 "will know that you authorized it to do so."
 msgstr ""
 "Un masternode a besoin d'une clé d'opérateur BLS telle que décrite dans la "
-"`DIP3 <https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a"
-"-masternode-proregtx>`_. Si vous gérez votre propre masternode, Dash "
+"`DIP3 <https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-"
+"a-masternode-proregtx>`_. Si vous gérez votre propre masternode, Dash "
 "Electrum et votre masternode doivent tous les deux connaître votre clé "
 "privée d'opérateur. Votre masternode utilisera la clé privée pour signer des"
 " messages, et le réseau Dash saura que vous l'avez autorisé pour cela."

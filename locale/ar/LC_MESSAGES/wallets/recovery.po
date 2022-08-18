@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Dash Core Group, Inc
+# Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-26 16:41-0400\n"
+"POT-Creation-Date: 2021-11-10 09:35-0500\n"
 "PO-Revision-Date: 2018-04-09 11:00+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2019\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
@@ -384,42 +384,42 @@ msgstr "داش أندرويد"
 
 #: ../../wallets/recovery.rst:151
 msgid ""
-"Similar to Dash Core wallet, Dash Wallet for Android can back up your wallet"
-" to a file. To restore this wallet on another device, simply copy the backup"
-" file to the ``/Downloads`` folder of your device using either a computer "
-"connected by USB or a file manager app on the device. Ensure your Dash "
-"wallet is fully updated in the Play Store, then open Dash. If you have an "
-"existing balance, either make another backup or transfer it to an external "
-"address, because restoring a wallet will replace your existing wallet!"
+"Similar to Dash Core wallet, Dash Wallet for Android can restore your wallet"
+" from a file. To restore this wallet on another device, simply copy the "
+"backup file to the ``/Downloads`` folder of your device using either a "
+"computer connected by USB or a file manager app on the device. Ensure your "
+"Dash wallet is fully updated in the Play Store, then open Dash. If you have "
+"an existing balance, either view and write down your recovery phrase or "
+"transfer your balance to an external address, because restoring a wallet "
+"will replace your existing wallet!"
 msgstr ""
-"على غرار محفظة داش كةر ، يمكن لمحفظة داش لأجهزة الأندرويد الاحتفاظ بنسخة "
-"احتياطية من محفظتك إلى ملف. لاستعادة هذه المحفظة على جهاز آخر ، قم ببساطة "
-"بنسخ ملف النسخ الاحتياطي إلى مجلد ``/ تحميل`` بجهازك باستخدام إما جهاز "
-"كمبيوتر متصل بواسطة USB أو تطبيق مدير الملفات على الجهاز. تأكد من تحديث "
-"محفظة داش بالكامل في متجر لاي ستوري ، ثم افتح داش. إذا كان لديك رصيد موجود ،"
-" فقم إما بنسخ احتياطي آخر أو نقله إلى عنوان خارجي ، لأن استعادة المحفظة ستحل"
-" محل محفظتك الحالية!"
 
 #: ../../wallets/recovery.rst:160
 msgid ""
-"Click the menu button in the top left corner, select **Safety > Restore** "
-"wallet and select the appropriate file from the list. Enter your password "
-"and click **Restore**. This may take some time, and your balance will be "
-"displayed when complete."
+"Select **Restore from file** from the menu at the bottom of the main page, "
+"locate your file, and enter your file's password when prompted. This may "
+"take some time, and your balance will be displayed when complete."
 msgstr ""
-"انقر فوق زر القائمة في أعلى الزاوية اليسرى ، واختر **السلامة> استعادة** "
-"المحفظة وحدد الملف المناسب من القائمة. أدخل كلمة المرور الخاصة بك وانقر فوق "
-"**استعادة**. قد يستغرق هذا بعض الوقت ، وسيتم عرض رصيدك عند اكتماله."
 
-#: ../../wallets/recovery.rst:172
+#: ../../wallets/recovery.rst:166
+msgid ""
+"For devices that already have an active wallet, first write down the "
+"existing recovery phrase as a backup. Click the menu button on the bottom "
+"right corner and select **Security > View Recovery Phrase** to find it. "
+"After backing up the recovery phrase, reset the wallet by selecting the "
+"**Security > Reset Wallet** option and then proceed with restoring the "
+"backup file."
+msgstr ""
+
+#: ../../wallets/recovery.rst:178
 msgid "*Restoring a file backup using Dash Wallet for Android*"
 msgstr "*استعادة نسخة احتياطية للملف باستخدام محفظة داش في الأندرويد*"
 
-#: ../../wallets/recovery.rst:175
+#: ../../wallets/recovery.rst:181
 msgid "Recovery Phrases"
 msgstr "كلمة الإستعادة"
 
-#: ../../wallets/recovery.rst:177
+#: ../../wallets/recovery.rst:183
 msgid ""
 "If you have a 12-word phrase and feel certain your backup was made on an iOS"
 " or Android mobile device, follow these instructions."
@@ -427,33 +427,43 @@ msgstr ""
 "إذا كان لديك عبارة مكونة من 12 كلمة وتشعر بأن بعض النسخ الاحتياطية قد تم "
 "إجراؤها على جهاز جوّال يعمل بنظام الأيفون أو الأندرويد ، فاتبع هذه الإرشادات"
 
-#: ../../wallets/recovery.rst:183
+#: ../../wallets/recovery.rst:189
 msgid "12-word phrase on Android"
 msgstr "عبارة 12 كلمة في الأندرويد"
 
-#: ../../wallets/recovery.rst:185
+#: ../../wallets/recovery.rst:191
 msgid ""
 "Ensure your Dash wallet is fully updated in the Play Store, then open Dash. "
-"If you have an existing balance, either make another backup or transfer it "
-"to an external address, because restoring a wallet will replace your "
-"existing wallet! Click the menu button in the top left corner, select "
-"**Safety > Restore from recovery phrase** and enter your 12-word phrase."
+"If you have an existing balance, either view and write down your recovery "
+"phrase or transfer your balance to an external address, because restoring a "
+"wallet will replace your existing wallet."
 msgstr ""
-"تأكد من تحديث محفظة داش بالكامل في متجر بلاي ستوري ، ثم افتح داش. إذا كان "
-"لديك رصيد موجود ، فقم إما بنسخ احتياطي آخر أو نقله إلى عنوان خارجي ، لأن "
-"استعادة المحفظة ستحل محل محفظتك الحالية! انقر فوق زر القائمة في أعلى الزاوية"
-" اليسرى ، حدد **السلامة> الاستعادة من كلمة الإستراد** وأدخل الكلمة المكونة "
-"من 12 كلمة."
 
-#: ../../wallets/recovery.rst:199
+#: ../../wallets/recovery.rst:196
+msgid ""
+"Select **Restore from recovery phrase** from the menu at the bottom of the "
+"main page, and enter your 12-word phrase when prompted."
+msgstr ""
+
+#: ../../wallets/recovery.rst:201
+msgid ""
+"For devices that already have an active wallet, first write down the "
+"existing recovery phrase as a backup. Click the menu button on the bottom "
+"right corner and select **Security > View Recovery Phrase** to find it. "
+"After backing up the recovery phrase, reset the wallet by selecting the "
+"**Security > Reset Wallet** option and then proceed with restoring the "
+"recovery phrase."
+msgstr ""
+
+#: ../../wallets/recovery.rst:213
 msgid "*Restoring a 12-word recovery phrase using Dash wallet for Android*"
 msgstr "*استعادة كلمة الإستراد مؤلفة من 12 كلمة باستخدام محفظة داش للأندرويد*"
 
-#: ../../wallets/recovery.rst:204
+#: ../../wallets/recovery.rst:218
 msgid "12-word phrase on iOS"
 msgstr "12 كلمة في الأيفون"
 
-#: ../../wallets/recovery.rst:206
+#: ../../wallets/recovery.rst:220
 msgid ""
 "Ensure your Dash wallet is fully updated in the App Store, then open Dash. "
 "If this is the first time you are opening the app, you can enter your "
@@ -468,28 +478,25 @@ msgstr ""
 "موجود ، فقم إما بنسخ احتياطي آخر أو نقله إلى عنوان خارجي ، لأن استعادة "
 "المحفظة ستحل محل محفظتك الحالية!"
 
-#: ../../wallets/recovery.rst:213
+#: ../../wallets/recovery.rst:227
 msgid ""
-"Click the menu button in the top left corner, select **Settings > "
-"Start/recover another wallet**. Enter your current wallet recovery phrase, "
+"Tap the menu button in the bottom right corner, select **Security > Reset "
+"wallet**. Tap **Continue** and enter your current wallet recovery phrase, "
 "then the app will reset and you will see the option to **Recover wallet** "
 "again."
 msgstr ""
-"انقر فوق زر القائمة في أعلى الزاوية اليسرى ، حدد **الإعدادات> بدء / استرداد "
-"محفظة أخرى**. أدخل كلمة استرداد المحفظة الحالية الخاصة بك ، ثم إعادة تعيين "
-"التطبيق وسوف ترى خيار **استرداد المحفظة** مرة أخرى."
 
-#: ../../wallets/recovery.rst:229
+#: ../../wallets/recovery.rst:245
 msgid "*Restoring a 12-word recovery phrase using Dash wallet for iOS*"
 msgstr ""
 "*استعادة كلمة الإستراد مكونة من 12 كلمة باستخدام محفظة داش لنظام التشغيل "
 "الأيفون*"
 
-#: ../../wallets/recovery.rst:234
+#: ../../wallets/recovery.rst:250
 msgid "12/13-word phrase on Dash Electrum"
 msgstr "12/13 كلمة عبارة عن داش إلكتروم"
 
-#: ../../wallets/recovery.rst:236
+#: ../../wallets/recovery.rst:252
 msgid ""
 "Ensure you are using the latest version of Dash Electrum according to the "
 "installation instructions :ref:`here <electrum-installation>`. Dash Electrum"
@@ -507,15 +514,15 @@ msgstr ""
 "وأدخل كلمة استرداد كلمة 12/13. أدخل كلمة مرور جديدة لمحفظةك وانقر فوق "
 "**التالي** لاسترداد العناوين من كلمة الإستراد."
 
-#: ../../wallets/recovery.rst:258
+#: ../../wallets/recovery.rst:274
 msgid "*Restoring a 12-word recovery phrase using Dash Electrum*"
 msgstr "*استعادة كلمة الإستراد مكونًا من 12 كلمة باستخدام داش إلكتروم*"
 
-#: ../../wallets/recovery.rst:263
+#: ../../wallets/recovery.rst:279
 msgid "Hardware wallet recovery phrases"
 msgstr "كلمة الإستراد محفظة الأجهزة"
 
-#: ../../wallets/recovery.rst:265
+#: ../../wallets/recovery.rst:281
 msgid ""
 "If your 12, 18 or 24-word recovery phrase was generated by a hardware "
 "wallet, follow these instructions:"
@@ -523,29 +530,29 @@ msgstr ""
 "إذا تم إنشاء كلمة الإستراد التي تتكون من 12 أو 18 أو 24 كلمة من خلال محفظة "
 "الأجهزة ، فاتبع هذه الإرشادات."
 
-#: ../../wallets/recovery.rst:268
+#: ../../wallets/recovery.rst:284
 msgid ""
 "`KeepKey <https://shapeshift.zendesk.com/hc/en-us/articles/360014555779-How-"
 "Do-I-Recover-On-My-KeepKey->`_"
 msgstr ""
 
-#: ../../wallets/recovery.rst:269
+#: ../../wallets/recovery.rst:285
 msgid ""
-"`Ledger Nano S <https://support.ledger.com/hc/en-us/articles/360005434914"
-"-Restore-from-recovery-phrase>`_"
+"`Ledger Nano S <https://support.ledger.com/hc/en-"
+"us/articles/360005434914-Restore-from-recovery-phrase>`_"
 msgstr ""
-"`Ledger Nano S <https://support.ledger.com/hc/en-us/articles/360005434914"
-"-Restore-from-recovery-phrase>`_"
+"`Ledger Nano S <https://support.ledger.com/hc/en-"
+"us/articles/360005434914-Restore-from-recovery-phrase>`_"
 
-#: ../../wallets/recovery.rst:270
+#: ../../wallets/recovery.rst:286
 msgid "`Trezor <https://doc.satoshilabs.com/trezor-user/recovery.html>`_"
 msgstr "`Trezor <https://doc.satoshilabs.com/trezor-user/recovery.html>`_"
 
-#: ../../wallets/recovery.rst:275
+#: ../../wallets/recovery.rst:291
 msgid "Restoring an iOS wallet in Dash Electrum"
 msgstr "استعادة محفظة الأيفون في داش إلكتروم"
 
-#: ../../wallets/recovery.rst:277
+#: ../../wallets/recovery.rst:293
 msgid ""
 "You can use your Dash iOS recovery phrase with Dash Electrum to recover "
 "funds if you lose access to your iOS device for any reason. However, since "
@@ -568,7 +575,7 @@ msgstr ""
 "أخرى) بمجرد نجاح عملية الاسترداد للتأكد من أن إجراءات النسخ الاحتياطي "
 "القياسية تعمل كما هو متوقع."
 
-#: ../../wallets/recovery.rst:288
+#: ../../wallets/recovery.rst:304
 msgid ""
 "Recovery takes place in two steps. First, we will convert the Dash iOS "
 "recovery phrase into an xprv key. In the second step, we will import the "
@@ -577,11 +584,11 @@ msgstr ""
 "الانتعاش يحدث في خطوتين. أولاً ، سنقوم بتحويل كلمة سترداد داش في الأيفون إلى"
 " مفتاح xprv. في الخطوة الثانية ، سنقوم باستيراد مفتاح xprv إلى داش إلكتروم."
 
-#: ../../wallets/recovery.rst:293
+#: ../../wallets/recovery.rst:309
 msgid "Retrieving the correct Dash iOS xprv key"
 msgstr "استرجاع مفتاح داش في الأيفون xprv الصحيح"
 
-#: ../../wallets/recovery.rst:295
+#: ../../wallets/recovery.rst:311
 msgid ""
 "Go to the `BIP39 Mnemonic Code Converter <https://iancoleman.io/bip39/>`_ "
 "page. This is a useful tool for manipulating/displaying BIP32/39 seed data. "
@@ -596,55 +603,55 @@ msgstr ""
 "الموضح في `هذه التعليمات <https://github.com/iancoleman/bip39#standalone-"
 "offline-version>`_. بمجرد تحميل الأداة في المتصفح ، أكمل الخطوات التالية:  "
 
-#: ../../wallets/recovery.rst:303
+#: ../../wallets/recovery.rst:319
 msgid "Enter your 12 word seed phrase in the **BIP39 Mnemonic** field."
 msgstr "أدخل عبارة بذور 12 كلمة في حقل **BIP39 Mnemonic**."
 
-#: ../../wallets/recovery.rst:304
+#: ../../wallets/recovery.rst:320
 msgid "Leave **BIP39 Passphrase** blank."
 msgstr "اترك **BIP39 عبارة المرور** فارغة."
 
-#: ../../wallets/recovery.rst:305
+#: ../../wallets/recovery.rst:321
 msgid "Set coin to **Dash**."
 msgstr "تعيين عملة على **Dash**."
 
-#: ../../wallets/recovery.rst:306
+#: ../../wallets/recovery.rst:322
 msgid "Under **Derivation Path**, click the **BIP44** tab."
 msgstr "تحت **مسار اشتقاق** ، انقر فوق علامة التبويب **BIP44**."
 
-#: ../../wallets/recovery.rst:307
+#: ../../wallets/recovery.rst:323
 msgid "Copy the value shown in **Account Extended Private Key**."
 msgstr "انسخ القيمة المعروضة في **مفتاح خاص للمفتاح الخاص بالحساب**."
 
-#: ../../wallets/recovery.rst:310
+#: ../../wallets/recovery.rst:326
 msgid "Importing the xprv key into Dash Electrum"
 msgstr "استيراد مفتاح xprv إلى داش إلكتروم"
 
-#: ../../wallets/recovery.rst:312
+#: ../../wallets/recovery.rst:328
 msgid "Open Dash Electrum and click **File** -> **New/Restore**."
 msgstr "افتح داش إلكتروم وانقر على **مجلد** -> **جديد / إستراد**."
 
-#: ../../wallets/recovery.rst:313
+#: ../../wallets/recovery.rst:329
 msgid "Type a name for your wallet."
 msgstr "اكتب اسمًا لمحفظتك."
 
-#: ../../wallets/recovery.rst:314
+#: ../../wallets/recovery.rst:330
 msgid "Select **Standard wallet**."
 msgstr "حدد **المحفظة العادية**."
 
-#: ../../wallets/recovery.rst:315
+#: ../../wallets/recovery.rst:331
 msgid "Select **Use public or private keys**."
 msgstr "حدد **إستخدم مفاتيح عامة أو خاصة**."
 
-#: ../../wallets/recovery.rst:316
+#: ../../wallets/recovery.rst:332
 msgid "Paste in your value from **Account Extended Private Key**."
 msgstr "الصق قيمتك من **مفتاح خاص للمفتاح الخاص بالحساب**."
 
-#: ../../wallets/recovery.rst:317
+#: ../../wallets/recovery.rst:333
 msgid "Optionally enter a password."
 msgstr "اختياريا أدخل كلمة مرور."
 
-#: ../../wallets/recovery.rst:319
+#: ../../wallets/recovery.rst:335
 msgid ""
 "Dash Electrum should now detect your Dash iOS balance and you should have "
 "complete access to your funds. The seed phrase won't be available in Dash "
@@ -660,7 +667,7 @@ msgstr ""
 "داش إلكتروم جديدة بدلاً من ذلك ومتابعتها :ref:`إجراءات النسخ الاحتياطي "
 "القياسية <electrum-backup>`."
 
-#: ../../wallets/recovery.rst:326
+#: ../../wallets/recovery.rst:342
 msgid ""
 "Older versions of the Dash iOS wallet used **BIP32** addresses under the "
 "``m/0'`` derivation path. The wallet should migrate these funds over to "
@@ -671,11 +678,11 @@ msgid ""
 "electrum-dash-wallet-tested.8335/>`_ for further discussion on this process."
 msgstr ""
 
-#: ../../wallets/recovery.rst:338
+#: ../../wallets/recovery.rst:354
 msgid "Private Keys"
 msgstr "مفاتيح خاصة"
 
-#: ../../wallets/recovery.rst:340
+#: ../../wallets/recovery.rst:356
 msgid ""
 "Most wallets offer a function to import an address from a private key, see "
 "the documentation for your wallet for specific instructions. While private "
@@ -688,7 +695,7 @@ msgid ""
 "reader/id483336864>`_) to read the code first."
 msgstr ""
 
-#: ../../wallets/recovery.rst:349
+#: ../../wallets/recovery.rst:365
 msgid ""
 "First, start Dash Core and unlock your wallet by selecting **Settings > "
 "Unlock Wallet**. Enter your password, then open the debug console by "
@@ -700,11 +707,11 @@ msgstr ""
 "تحديد **الأدوات> Debug Console**. في وحدة التحكم ، اكتب ما يلي ، استبدال "
 "المفتاح الخاص المثال مع المفتاح الخاص بك ::"
 
-#: ../../wallets/recovery.rst:359
+#: ../../wallets/recovery.rst:375
 msgid "Importing a private key using the debug console in Dash Core wallet"
 msgstr "استيراد مفتاح خاص باستخدام وحدة تصحيح الأخطاء في محفظة داش كور"
 
-#: ../../wallets/recovery.rst:361
+#: ../../wallets/recovery.rst:377
 msgid ""
 "Dash Core will rescan the blockchain for transactions involving the public "
 "address of this key and enter the transactions and balance in your wallet."
@@ -712,7 +719,7 @@ msgstr ""
 "ستقوم داش كور بإعادة فحص بلوكشين للمعاملات التي تتضمن العنوان العام لهذا "
 "المفتاح وإدخال المعاملات والتوازن في محفظتك."
 
-#: ../../wallets/recovery.rst:365
+#: ../../wallets/recovery.rst:381
 msgid ""
 "The private key must be in wallet import format (WIF). If your key is "
 "encrypted using BIP38 (key begins with 6P instead of 7), you must first "
@@ -730,16 +737,16 @@ msgstr ""
 "وسيتم فك تشفير المفاتيح. ابحث عن المفتاح المسمى **المفتاح الخاص WIF** وقم "
 "باستيراده إلى محفظتك."
 
-#: ../../wallets/recovery.rst:380
+#: ../../wallets/recovery.rst:396
 msgid ""
 "*Decrypting a BIP38 encrypted key to WIF for import in Dash Core wallet*"
 msgstr "*فك تشفير مفتاح BIP38 مشفر إلى WIF للاستيراد في محفظة داش كور*"
 
-#: ../../wallets/recovery.rst:383
+#: ../../wallets/recovery.rst:399
 msgid "Forgotten Passwords"
 msgstr "كلمات المرور المنسية"
 
-#: ../../wallets/recovery.rst:385
+#: ../../wallets/recovery.rst:401
 msgid ""
 "In most cases, if you selected a strong password and have forgotten or lost "
 "it, there is practically no hope of recovery. The encryption used by the "
@@ -760,10 +767,10 @@ msgstr ""
 "محاولة ذلك بنفسك. نظرًا لأن داش كور يعتمد على بيتكوين كور ، فإن معظم الطرق "
 "لتطبيق القوة الغاشمة على كسر محفظة بيتكوين ستعمل أيضًا في محافظ داش."
 
-#: ../../wallets/recovery.rst:396
+#: ../../wallets/recovery.rst:412
 msgid "`Wallet Recovery Services <https://www.walletrecoveryservices.com/>`_"
 msgstr ""
 
-#: ../../wallets/recovery.rst:397
+#: ../../wallets/recovery.rst:413
 msgid "`BTCRecover <https://github.com/gurnec/btcrecover>`_"
 msgstr "`BTCRecover <https://github.com/gurnec/btcrecover>`_"

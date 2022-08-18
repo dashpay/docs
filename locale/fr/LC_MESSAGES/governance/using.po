@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Dash Core Group, Inc
+# Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-26 16:41-0400\n"
+"POT-Creation-Date: 2021-11-10 09:35-0500\n"
 "PO-Revision-Date: 2018-05-07 04:43+0000\n"
 "Last-Translator: Daf Daf, 2021\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../governance/using.rst:1
 msgid "Practical guide to using the Dash governance system and treasury"
@@ -502,9 +502,9 @@ msgstr ""
 "Ensuite, le générateur de proposition budgétaire vous communiquera une "
 "commande à lancer dans la console de votre portefeuille logiciel Dash Core, "
 "pour préparer votre objet de gouvernance de proposition budgétaire. Lancer "
-"cette commande vous coûtera 5 dashs, lesquels seront \"brûlés\", "
-"c'est-à-dire retirés définitivement de la circulation. Ces frais perçus une "
-"seule fois protègent le système de gouvernance des attaques de spam, des "
+"cette commande vous coûtera 5 dashs, lesquels seront \"brûlés\", c'est-à-"
+"dire retirés définitivement de la circulation. Ces frais perçus une seule "
+"fois protègent le système de gouvernance des attaques de spam, des "
 "propositions budgétaires manquant de sérieux, ou des utilisateurs "
 "malveillants. De petits frais de transaction sont également perçus, donc "
 "assurez-vous qu'un peu plus de 5 dashs soient disponibles dans votre "
@@ -586,11 +586,156 @@ msgstr ""
 "décrite ci-dessus, et la documentation est disponible `ici "
 "<https://www.dashcentral.org/about/contact>`_."
 
-#: ../../governance/using.rst:233
+#: ../../governance/using.rst:232
+msgid "Dash Core Wallet Console"
+msgstr ""
+
+#: ../../governance/using.rst:234
+msgid ""
+"Creating a proposal using the wallet console follows the same process as "
+"using the Dash budget proposal generator, but it requires several additional"
+" steps to manually construct the proposal governance object."
+msgstr ""
+
+#: ../../governance/using.rst:239
+msgid "Assemble the proposal data"
+msgstr ""
+
+#: ../../governance/using.rst:241
+msgid ""
+"To prepare a proposal, put the proposal details such as name and payout "
+"address into a JSON object similar to the example shown below."
+msgstr ""
+
+#: ../../governance/using.rst:256
+msgid "Set the ``type`` field to ``1`` for all proposals."
+msgstr ""
+
+#: ../../governance/using.rst:258
+msgid ""
+"The ``start_epoch`` and ``end_epoch`` fields are Unix epoch timestamps "
+"indicating the time range in which the proposal can receive payments. "
+"Typically you will set the ``start_epoch`` to approximately halfway between "
+"the superblock where payment is first desired and the preceding one. Set "
+"``end_epoch`` to approximately 2 weeks after the superblock where the final "
+"payment is desired. You can use a site like https://www.epochconverter.com/ "
+"to convert the start and end dates to the epoch values for these fields."
+msgstr ""
+
+#: ../../governance/using.rst:267
+msgid "Serialize the proposal data"
+msgstr ""
+
+#: ../../governance/using.rst:269
+msgid ""
+"The proposal information must be serialized to hex before it can be "
+"submitted to the network. Remove all spaces from the JSON object::"
+msgstr ""
+
+#: ../../governance/using.rst:274
+msgid ""
+"Convert the resulting JSON to its hex equivalent. Sites like "
+"https://codebeautify.org/string-hex-converter provide an easy way to do "
+"this::"
+msgstr ""
+
+#: ../../governance/using.rst:280
+msgid "Prepare the collateral transaction"
+msgstr ""
+
+#: ../../governance/using.rst:282
+msgid ""
+"Finally, open your Dash Core wallet console and use the ``gobject prepare`` "
+"command to complete the proposal preparation and submit the collateral "
+"transaction. See the `Core developer documentation "
+"<https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-"
+"dash#gobject-prepare>`__ for additional details."
+msgstr ""
+
+#: ../../governance/using.rst:289
+msgid ""
+"Running this command will create a transaction spending 5 DASH from the "
+"wallet as collateral for the proposal being created. Only run this command "
+"once you have verified all the proposal information. The transaction is not "
+"reversible once sent."
+msgstr ""
+
+#: ../../governance/using.rst:298
+msgid "``parent-hash`` - set to ``0``"
+msgstr ""
+
+#: ../../governance/using.rst:299
+msgid "``revision`` - set to ``1``"
+msgstr ""
+
+#: ../../governance/using.rst:300
+msgid ""
+"``time`` - set to the current Unix epoch time (does not have to be precise)"
+msgstr ""
+
+#: ../../governance/using.rst:301
+msgid "``data-hex`` - set to the hex string from the previous step"
+msgstr ""
+
+#: ../../governance/using.rst:303 ../../governance/using.rst:330
+msgid "Example command::"
+msgstr ""
+
+#: ../../governance/using.rst:307
+msgid ""
+"The command will execute and respond with a transaction ID for the "
+"collateral payment::"
+msgstr ""
+
+#: ../../governance/using.rst:312
+msgid "Submit the proposal"
+msgstr ""
+
+#: ../../governance/using.rst:314
+msgid ""
+"Once the transaction has six confirmations, use the ``gobject submit`` "
+"command to submit the prepared governance object to the network for voting. "
+"See the `Core developer documentation <https://dashcore.readme.io/docs/core-"
+"api-ref-remote-procedure-calls-dash#gobject-submit>`__ for additional "
+"details."
+msgstr ""
+
+#: ../../governance/using.rst:324
+msgid ""
+"``parent-hash`` - use the same value as in the ``gobject prepare`` command"
+msgstr ""
+
+#: ../../governance/using.rst:325
+msgid ""
+"``revision`` - use the same value as in the ``gobject prepare`` command"
+msgstr ""
+
+#: ../../governance/using.rst:326
+msgid "``time`` - use the same value as in the ``gobject prepare`` command"
+msgstr ""
+
+#: ../../governance/using.rst:327
+msgid ""
+"``data-hex`` - use the same value as in the ``gobject prepare`` command"
+msgstr ""
+
+#: ../../governance/using.rst:328
+msgid ""
+"``fee-txid`` - the transaction ID returned by the ``gobject prepare`` "
+"command in the previous step"
+msgstr ""
+
+#: ../../governance/using.rst:334
+msgid ""
+"The command will execute and respond with a transaction ID for the proposal "
+"which can be used to track voting on the proposal::"
+msgstr ""
+
+#: ../../governance/using.rst:340
 msgid "Voting on proposals"
 msgstr "Voter sur les propositions budgétaires"
 
-#: ../../governance/using.rst:235
+#: ../../governance/using.rst:342
 msgid ""
 "**You must vote at least three days before the superblock is created or your"
 " vote will not be counted. The exact deadline is 1662 blocks before the "
@@ -600,7 +745,7 @@ msgstr ""
 "sinon votre vote ne sera pas décompté. La limite précise est 1662 blocs "
 "avant le \"superbloc\".**"
 
-#: ../../governance/using.rst:239
+#: ../../governance/using.rst:346
 msgid ""
 "Voting on DGBB proposals is an important part of operating a masternode. "
 "Since masternodes are heavily invested in Dash, they are expected to "
@@ -620,20 +765,20 @@ msgstr ""
 "outils suivants sont disponibles pour visualiser et gérer les propositions "
 "budgétaires et le vote :"
 
-#: ../../governance/using.rst:247
+#: ../../governance/using.rst:354
 msgid "`DashCentral <https://www.dashcentral.org/budget>`__"
 msgstr "`DashCentral <https://www.dashcentral.org/budget>`__"
 
-#: ../../governance/using.rst:248
+#: ../../governance/using.rst:355
 msgid "`Dash Nexus <https://app.dashnexus.org/>`__"
 msgstr "`Dash Nexus <https://app.dashnexus.org/>`__"
 
-#: ../../governance/using.rst:249
+#: ../../governance/using.rst:356
 msgid "`Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`__"
 msgstr ""
 "`Dash Ninja - Gouvernance <https://www.dashninja.pl/governance.html>`__"
 
-#: ../../governance/using.rst:250
+#: ../../governance/using.rst:357
 msgid ""
 "`Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-"
 "masternode-tool/releases>`__"
@@ -641,7 +786,7 @@ msgstr ""
 "`Dash Masternode Tool - Propositions budgétaires "
 "<https://github.com/Bertrand256/dash-masternode-tool/releases>`__"
 
-#: ../../governance/using.rst:252
+#: ../../governance/using.rst:359
 msgid ""
 "For information on how to create a proposal, see :ref:`here <creating-"
 "proposals>`."
@@ -649,11 +794,11 @@ msgstr ""
 "Pour savoir comment créer une proposition budgétaire, voir :ref:`ici "
 "<creating-proposals>`."
 
-#: ../../governance/using.rst:256
+#: ../../governance/using.rst:363
 msgid "DashCentral"
 msgstr "DashCentral"
 
-#: ../../governance/using.rst:258
+#: ../../governance/using.rst:365
 msgid ""
 "Many masternode operators store their password-protected masternode private "
 "key on `DashCentral <https://www.dashcentral.org>`__ to enable simple voting"
@@ -681,7 +826,7 @@ msgstr ""
 "en vue de voter, donc le risque que le webmestre du site vote à votre place "
 "est très faible."
 
-#: ../../governance/using.rst:270
+#: ../../governance/using.rst:377
 msgid ""
 "When you are ready to vote, go to the `budget proposals page "
 "<https://www.dashcentral.org/budget>`_. Simply click to view the proposals, "
@@ -692,15 +837,15 @@ msgstr ""
 "afficher les propositions, puis cliquez selon votre choix sur **Voter OUI**,"
 " **Voter ABSTENTION** ou **Voter NON**."
 
-#: ../../governance/using.rst:278
+#: ../../governance/using.rst:385
 msgid "Voting interface on DashCentral"
 msgstr "Interface de vote sur DashCentral"
 
-#: ../../governance/using.rst:281
+#: ../../governance/using.rst:388
 msgid "Dash Masternode Tool (DMT)"
 msgstr "DashMasternodeTool (DMT)"
 
-#: ../../governance/using.rst:283
+#: ../../governance/using.rst:390
 msgid ""
 "If you started your masternode from a hardware wallet using `DMT "
 "<https://github.com/Bertrand256/dash-masternode-tool/releases>`_, you can "
@@ -720,15 +865,15 @@ msgstr ""
 "fenêtre. Allez sur l'onglet **Vote** pour **Voter Oui**, **Voter Non** ou "
 "**Voter Abstention** directement depuis DMT."
 
-#: ../../governance/using.rst:294
+#: ../../governance/using.rst:401
 msgid "Voting interface in DMT"
 msgstr "Interface de vote dans DMT"
 
-#: ../../governance/using.rst:299
+#: ../../governance/using.rst:406
 msgid "Dash Core wallet or masternode"
 msgstr "Portefeuille logiciel Dash Core ou masternode"
 
-#: ../../governance/using.rst:301
+#: ../../governance/using.rst:408
 msgid ""
 "If you started your masternode using the Dash Core Wallet (not recommended),"
 " you can vote manually from **Tools > Debug console**, or directly from your"
@@ -760,7 +905,7 @@ msgstr ""
 "<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__). Le "
 "code de vote pour le portefeuille logiciel Dash Core est comme suit ::"
 
-#: ../../governance/using.rst:320
+#: ../../governance/using.rst:427
 msgid ""
 "Note that to vote from your masternode directly, you need to prefix the "
 "command with ``dash-cli``, which is usually found in the ``.dashcore`` "
@@ -771,7 +916,7 @@ msgstr ""
 "général dans le répertoire ``.dashcore``. La commande devrait ressembler à "
 "cela ::"
 
-#: ../../governance/using.rst:328
+#: ../../governance/using.rst:435
 msgid ""
 "Note this command will trigger a vote from all masternodes configured in "
 "``dash.conf``. If you have multiple masternodes each with its own .conf "
@@ -787,11 +932,11 @@ msgstr ""
 "many`` en ``vote``. Si votre vote s'est bien passé, vous devriez voir un "
 "message de confirmation disant **Vote réussi**."
 
-#: ../../governance/using.rst:338
+#: ../../governance/using.rst:445
 msgid "Voting from the debug console in Dash Core Wallet"
 msgstr "Vote depuis la console de débogage du portefeuille logiciel Dash Core"
 
-#: ../../governance/using.rst:340
+#: ../../governance/using.rst:447
 msgid ""
 "You can also view a list of proposals in JSON format from the console to "
 "copy and paste the proposal hash for voting as follows::"
@@ -800,11 +945,11 @@ msgstr ""
 "JSON depuis la console, afin de copier-coller l'empreinte de la proposition "
 "pour voter, comme suit ::"
 
-#: ../../governance/using.rst:348
+#: ../../governance/using.rst:455
 msgid "Delegating votes"
 msgstr "Délégation de votes"
 
-#: ../../governance/using.rst:350
+#: ../../governance/using.rst:457
 msgid ""
 ":ref:`DIP003 masternodes <dip3-changes>` feature a separate voting key, "
 "which makes it possible to delegate your vote to a representative. Simply "

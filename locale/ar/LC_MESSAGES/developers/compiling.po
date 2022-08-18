@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Dash Core Group, Inc
+# Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-26 16:41-0400\n"
+"POT-Creation-Date: 2021-11-10 09:35-0500\n"
 "PO-Revision-Date: 2018-04-16 05:42+0000\n"
 "Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2018\n"
 "Language-Team: Arabic (https://www.transifex.com/dash/teams/37570/ar/)\n"
@@ -39,7 +39,7 @@ msgstr "تجميع داش كور"
 msgid ""
 "While Dash offers stable binary builds on the `website "
 "<https://www.dash.org/downloads/>`_ and on `GitHub "
-"<https://github.com/dashpay/dash/releases>`_, and development builds using "
+"<https://github.com/dashpay/dash/releases>`__, and development builds using "
 "`GitLab CI <https://gitlab.com/dashpay/dash/pipelines>`_,  many users will "
 "also be interested in building Dash binaries for themselves. This process "
 "has been greatly simplified with the release of Dash Core 0.13.0, and users "
@@ -79,11 +79,200 @@ msgstr ""
 " مشفرًا ، وتحميل التوقيع الناتج. تتم مقارنة هذه النتائج وفقط في حالة تطابقها"
 " ، يتم قبول الإنشاء وتحميله إلى dash.org."
 
-#: ../../developers/compiling.rst:39
+#: ../../developers/compiling.rst:40
+msgid "Build process"
+msgstr ""
+
+#: ../../developers/compiling.rst:42
 msgid ""
-"Instructions on how to build Dash Core 0.13.0 will appear here once the "
-"Docker build system for Gitian is available. Instructions to create "
-"deterministic builds of Dash Core 0.12.3 or older are available `here "
-"<https://docs.dash.org/en/0.12.3/developers/compiling.html#gitian-build>`__ "
-"on a previous version of this page."
+"This setup has been tested using a clean install of Ubuntu 20.04. Start by "
+"logging in as the \"root\" user. Create a new user with the following "
+"command, replacing ``<username>`` with a username of your choice::"
+msgstr ""
+
+#: ../../developers/compiling.rst:48
+msgid ""
+"You will be prompted for a password. Enter and confirm using a new password "
+"(different to your root password) and store it in a safe place. You will "
+"also see prompts for user information, but this can be left blank. "
+"Alternatively, an existing user can be used on systems that are already in "
+"use (e.g. your existing development system)."
+msgstr ""
+
+#: ../../developers/compiling.rst:54
+msgid ""
+"Create a ``docker`` group on the system. This group will be used by Docker "
+"processes and also will enable non-root users to run the Docker commands "
+"used by the build process::"
+msgstr ""
+
+#: ../../developers/compiling.rst:60
+msgid ""
+"Add the user to the sudo and docker groups so they can perform commands as "
+"root and run docker commands::"
+msgstr ""
+
+#: ../../developers/compiling.rst:66
+msgid "Install prerequisites"
+msgstr ""
+
+#: ../../developers/compiling.rst:68
+msgid ""
+"While still logged in as root, update the system from the Ubuntu package "
+"repository::"
+msgstr ""
+
+#: ../../developers/compiling.rst:74
+msgid "Install apt-cacher-ng::"
+msgstr ""
+
+#: ../../developers/compiling.rst:79
+msgid ""
+"Select ``No`` when asked ``Allow HTTP tunnels through Apt-Cacher NG?`` "
+"during installation."
+msgstr ""
+
+#: ../../developers/compiling.rst:82
+msgid ""
+"Note: you may also need to open port 3142 if you have a firewall enabled on "
+"your system (e.g. ``ufw allow 3142/tcp``)."
+msgstr ""
+
+#: ../../developers/compiling.rst:85
+msgid ""
+"After installing these updates, reboot the system, login as ``<username>``, "
+"and clone required repositories::"
+msgstr ""
+
+#: ../../developers/compiling.rst:93
+msgid "Download the Mac OSX SDK::"
+msgstr ""
+
+#: ../../developers/compiling.rst:99
+msgid "Prepare gitian"
+msgstr ""
+
+#: ../../developers/compiling.rst:101
+msgid ""
+"It is only necessary to run this step during the initial setup of your "
+"machine::"
+msgstr ""
+
+#: ../../developers/compiling.rst:109
+msgid ""
+"The ``signer`` parameter should be set to the value provided for \"Real "
+"name\" when generating a key with GPG. See the `GnuPrivacyGuard Howto "
+"<https://help.ubuntu.com/community/GnuPrivacyGuardHowto#Generating_an_OpenPGP_Key>`_"
+" for details on how to generate a key if you don't already have one."
+msgstr ""
+
+#: ../../developers/compiling.rst:115
+msgid "Build Dash Core"
+msgstr ""
+
+#: ../../developers/compiling.rst:117
+msgid "Run gitian build to create binaries for Linux, Mac, and Windows::"
+msgstr ""
+
+#: ../../developers/compiling.rst:126
+msgid ""
+"These instructions assume that a PGP key for <signer> exists on the build "
+"system. If the expected key is not found, the script will fail at the "
+"signing step with a message including::"
+msgstr ""
+
+#: ../../developers/compiling.rst:133
+msgid ""
+"When the build completes, it will put the binaries in a ``dashcore-"
+"binaries`` folder. The ``.assert`` files and their signatures will be placed"
+" in ``gitian.sigs/<version>/<signer>/...``."
+msgstr ""
+
+#: ../../developers/compiling.rst:138
+msgid "Create signatures for signed binaries"
+msgstr ""
+
+#: ../../developers/compiling.rst:140
+msgid ""
+"Mac and Windows binaries are signed by Dash Core Group using the relevant "
+"Apple/Microsoft processes. In this step, that information will be validated "
+"and signed by your machine. The associated ``.assert`` files and their "
+"signatures will be placed in ``gitian.sigs/<version>/<signer>/...`` along "
+"with the signatures for unsigned binaries created in the previous step."
+msgstr ""
+
+#: ../../developers/compiling.rst:154
+msgid "Verify signatures"
+msgstr ""
+
+#: ../../developers/compiling.rst:156
+msgid ""
+"The `gitian.sigs repository <https://github.com/dashpay/gitian.sigs/>`_ "
+"contains deterministic build results signed by multiple Core developers for "
+"each release. Run the following command to verify that your build matches "
+"the official release::"
+msgstr ""
+
+#: ../../developers/compiling.rst:164
+msgid ""
+"You should get a result similar to the following for Linux, Windows, MacOS, "
+"Signed Windows, and Signed MacOS. Assuming the previous steps completed "
+"successfully, you will also see your own signatures with an ``OK`` status "
+"also."
+msgstr ""
+
+#: ../../developers/compiling.rst:200
+msgid "Upload signatures"
+msgstr ""
+
+#: ../../developers/compiling.rst:202
+msgid ""
+"After successfully building the binaries, signing them, and verifying the "
+"signatures, you can optionally contribute them to the `gitian.sigs "
+"repository <https://github.com/dashpay/gitian.sigs/>`_ via a pull request on"
+" GitHub."
+msgstr ""
+
+#: ../../developers/compiling.rst:207
+msgid "Initial setup"
+msgstr ""
+
+#: ../../developers/compiling.rst:209
+msgid ""
+"Since the official gitian.sigs repository has restricted write access, "
+"create a fork of it via GitHub and add your fork as a remote repository::"
+msgstr ""
+
+#: ../../developers/compiling.rst:214
+msgid ""
+"The first time you contribute signatures, also put a copy of your public key"
+" in the ``gitian-keys`` folder of the repository so others can easily verify"
+" your signature. Your public key can be exported to a file using the "
+"following command::"
+msgstr ""
+
+#: ../../developers/compiling.rst:224
+msgid "Adding your signatures"
+msgstr ""
+
+#: ../../developers/compiling.rst:226
+msgid "Create a new branch for the version that was built::"
+msgstr ""
+
+#: ../../developers/compiling.rst:231
+msgid ""
+"Add and commit the ``*.assert`` and ``*.assert.sig`` files created by the "
+"build process. They will be located in the following folders::"
+msgstr ""
+
+#: ../../developers/compiling.rst:240
+msgid "Push to your fork of the gitian.sigs repository on GitHub::"
+msgstr ""
+
+#: ../../developers/compiling.rst:245
+msgid ""
+"Go to `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ and open a "
+"pull request to the ``master`` branch of the upstream repository. The pull "
+"request will be reviewed by Dash Core developers and merged if everything "
+"checks out. Thanks for contributing!"
 msgstr ""
