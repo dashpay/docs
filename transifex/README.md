@@ -31,7 +31,6 @@ api_hostname = https://api.transifex.com
 hostname = https://www.transifex.com
 password = <enter password generated on https://www.transifex.com/user/settings/api/ here>
 username = api
-
 ```
 
 ### To upload to Transifex
