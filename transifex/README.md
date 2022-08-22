@@ -22,6 +22,18 @@ example of the format.
 Using the scripts requires adding a Transifex API token to an account that has
 access to the project as mention in the [Transifex client documentation](https://docs.transifex.com/client/introduction#authenticating).
 
+It is also necessary to add authorization information in a `.transifexrc` file
+as shown in this example:
+
+```text
+[https://www.transifex.com]
+api_hostname = https://api.transifex.com
+hostname = https://www.transifex.com
+password = <enter password generated on https://www.transifex.com/user/settings/api/ here>
+username = api
+
+```
+
 ### To upload to Transifex
 
 Run the following from the root of the project to upload to Transifex:
