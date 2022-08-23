@@ -1,5 +1,5 @@
 # Set to the dashpay/docs branch containing the version to update
-DOC_VERSION=0.17.0
+DOC_VERSION=18.0.0
 
 # Checkout correct branch and pull changes
 git fetch
