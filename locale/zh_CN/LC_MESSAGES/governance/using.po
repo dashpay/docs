@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 09:35-0500\n"
+"POT-Creation-Date: 2022-08-22 09:30-0400\n"
 "PO-Revision-Date: 2018-05-07 04:43+0000\n"
 "Last-Translator: jmp2esp <xsrf@icloud.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -24,12 +24,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../governance/using.rst:1
-msgid "Practical guide to using the Dash governance system and treasury"
-msgstr "使用达世币预算管理系统的实用手册"
+msgid "Practical guide to using the Dash DAO governance system and treasury"
+msgstr ""
 
 #: ../../governance/using.rst:1
-msgid "dash, dgbb, governance, funding, voting, proposals, masternodes"
-msgstr "达世币，dgbb，管理，资金，投票，提案，主节点"
+msgid "dash, dao, governance, funding, voting, proposals, masternodes"
+msgstr ""
 
 #: ../../governance/using.rst:9
 msgid "Using Dash Governance"
@@ -37,10 +37,10 @@ msgstr "使用达世币管理系统"
 
 #: ../../governance/using.rst:11
 msgid ""
-"Dash's Decentralized Governance by Blockchain (DGBB) is a novel voting and "
+"Dash's Decentralized Autonomous Organization (DAO) is a novel voting and "
 "funding platform. This documentation introduces and details the theory and "
 "practice to use the system."
-msgstr "达世币区块链去中心化管理（DGBB）是一个新颖的平台，它可以实现投票和赞助功能。本文档详细地介绍了它的相关理论和实践。"
+msgstr ""
 
 #: ../../governance/using.rst:16
 msgid "Understanding the process"
@@ -51,8 +51,8 @@ msgid "Introduction"
 msgstr "介绍"
 
 #: ../../governance/using.rst:21
-msgid "DGBB consists of three components: Proposals, Votes, and Budgets"
-msgstr "DGBB包括三大主要部分：提案、投票和预算资金"
+msgid "DAO consists of three components: Proposals, Votes, and Budgets"
+msgstr ""
 
 #: ../../governance/using.rst:22
 msgid "Anyone can submit a proposal for a small fee"
@@ -80,9 +80,9 @@ msgstr "提案指的是预算资金的申请"
 
 #: ../../governance/using.rst:31
 msgid ""
-"Proposals can be submitted by anyone for a fee of 5 Dash. The proposal fee "
+"Proposals can be submitted by anyone for a fee of 1 Dash. The proposal fee "
 "is irreversibly destroyed on submission."
-msgstr "只需5达世币，任何个人都可以递交提案。这5达世币的费用在提案递交的时候就已经被销毁了。"
+msgstr ""
 
 #: ../../governance/using.rst:33
 msgid "Proposals cannot be altered once submitted"
@@ -408,26 +408,22 @@ msgstr "步骤 1 & 2： 创建个人提案并准备命令"
 msgid ""
 "Next, the proposal generator will provide you with a command to run from the"
 " console of your Dash Core wallet to prepare your budget proposal governance"
-" object. Running this command will cost you 5 DASH, which will be \"burnt\" "
+" object. Running this command will cost you 1 DASH, which will be \"burnt\" "
 "or permanently removed from circulation. This one-time fee protects the "
 "governance system from becoming overwhelmed by spam, poorly thought out "
 "proposals or users not acting in good faith. A small transaction fee is "
 "charged as well, so make sure slightly more than 5 DASH is available in your"
-" wallet. Many budget proposals request reimbursement of the 5 DASH fee."
+" wallet. Many budget proposals request reimbursement of the 1 DASH fee."
 msgstr ""
-"接下来，提案生成器将为用户提供从Dash "
-"Core钱包控制台运行的命令，以便为用户准备预算提案管理对象。运行这个命令需要花费5个达世币，这5个达世币在支付后将被焚毁或永远移除在流通之外。这种一次性的收费确保了管理系统不会受到大批垃圾提案、低俗劣质的提案或不怀好意的用户的干扰。除了5个达世币的费用之外，提案的创建和递交还需要小额的手续费，因此用户需要确保钱包里有稍多于5个达世币的资金。很多预算提案都可以在提案中申请报销5个达世币的费用。"
 
 #: ../../governance/using.rst:187
 msgid ""
 "First unlock your wallet by clicking **Settings > Unlock wallet**, then open"
-" the console by clicking **Tools > Debug console** and paste the generated "
+" the console by clicking **Window > Console** and paste the generated "
 "command. The transaction ID will appear. Copy and paste this into the "
 "proposal generator response window. As soon as you do this, the system will "
 "show a progress bar as it waits for 6 confirmations as follows:"
 msgstr ""
-"首先用户需要点击 **设置 > 解锁钱包** ，然后点击 **工具 > 调试控制台** "
-"并粘贴生成的命令。交易ID此时就会出现。用户应当将交易ID复制并粘贴到提案生成器的相应窗口。在执行这项操作之后，系统将显示一个6次确认的进度条："
 
 #: ../../governance/using.rst:200
 msgid ""
@@ -543,7 +539,7 @@ msgstr ""
 
 #: ../../governance/using.rst:289
 msgid ""
-"Running this command will create a transaction spending 5 DASH from the "
+"Running this command will create a transaction spending 1 DASH from the "
 "wallet as collateral for the proposal being created. Only run this command "
 "once you have verified all the proposal information. The transaction is not "
 "reversible once sent."
@@ -633,7 +629,7 @@ msgstr "**用户必须在超级块产出的三天前为提案投票，否则投�
 
 #: ../../governance/using.rst:346
 msgid ""
-"Voting on DGBB proposals is an important part of operating a masternode. "
+"Voting on DAO proposals is an important part of operating a masternode. "
 "Since masternodes are heavily invested in Dash, they are expected to "
 "critically appraise proposals each month and vote in a manner they perceive "
 "to be consistent with the best interests of the network. Each masternode may"
@@ -641,7 +637,6 @@ msgid ""
 "the voting deadline. The following sites and tools are available to view and"
 " manage proposals and voting:"
 msgstr ""
-"在达世币DGBB上为预算提案投票是主节点持有人的主要任务之一。由于主节点持有人进行了大量的达世币投资，因此他们将会对每个月的预算提案进行审慎的思考，并以网络的最大利益为出发点进行投票。每个主节点可以为每个提案投上一票，在投票结束前投票都是可更改的。下列网站和工具可用于提案和投票的查看与管理："
 
 #: ../../governance/using.rst:354
 msgid "`DashCentral <https://www.dashcentral.org/budget>`__"
@@ -734,28 +729,19 @@ msgstr "Dash Core钱包和主节点"
 #: ../../governance/using.rst:408
 msgid ""
 "If you started your masternode using the Dash Core Wallet (not recommended),"
-" you can vote manually from **Tools > Debug console**, or directly from your"
-" masternode via SSH using ``dash-cli``. First click on the proposal you want"
-" to vote on at either `DashCentral <https://www.dashcentral.org/budget>`__ "
-"or `Dash Ninja <https://www.dashninja.pl/governance.html>`__. You will see a"
-" command for manual voting below the proposal description. Copy and paste "
-"the command and modify it as necessary. As an example, take this proposal "
-"from `Dash Ninja "
+" you can vote manually from **Window > Console**, or directly from your "
+"masternode via SSH using ``dash-cli``. First click on the proposal you want "
+"to vote on at either `DashCentral <https://www.dashcentral.org/budget>`__ or"
+" `Dash Ninja <https://www.dashninja.pl/governance.html>`__. You will see a "
+"command for manual voting below the proposal description. Copy and paste the"
+" command and modify it as necessary. As an example, take this proposal from "
+"`Dash Ninja "
 "<https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741 "
 "8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`__ (or "
 "`DashCentral "
 "<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__). The "
 "voting code for Dash Core Wallet is as follows::"
 msgstr ""
-"如果用户通过Dash Core钱包（不建议这样操作）来管理主节点，用户可以通过 **工具 > 调试控制台** 或直接使用SSH和 ``dash-"
-"cli`` 来完成操作。首先，用户在\\ `DashCentral <https://www.dashcentral.org/budget>`__\\ "
-"或\\ `Dash Ninja <https://www.dashninja.pl/governance.html>`__\\ 上点击要投票的提案。 "
-"接下来，用户将在提案描述的下方看到人工投票的命令。用户需要对这个命令进行复制、粘贴和更改。以\\ `Dash Ninja "
-"<https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741 "
-"8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`__\\ (或\\ "
-"`DashCentral "
-"<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__\\ "
-"）上的这个提案为例。Dash Core钱包的投票代码如下::"
 
 #: ../../governance/using.rst:427
 msgid ""

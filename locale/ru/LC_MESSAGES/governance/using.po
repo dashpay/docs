@@ -5,7 +5,6 @@
 # 
 # Translators:
 # Max Aronych <taofgoar@protonmail.com>, 2018
-# Dima, 2018
 # Julia Ogonkova <livingflcl@gmail.com>, 2019
 # 
 #, fuzzy
@@ -13,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 09:35-0500\n"
+"POT-Creation-Date: 2022-08-22 09:30-0400\n"
 "PO-Revision-Date: 2018-05-07 04:43+0000\n"
 "Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
@@ -24,15 +23,12 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: ../../governance/using.rst:1
-msgid "Practical guide to using the Dash governance system and treasury"
+msgid "Practical guide to using the Dash DAO governance system and treasury"
 msgstr ""
-"Практическое руководство по использованию системы управления Dash и "
-"Бюджетной системы"
 
 #: ../../governance/using.rst:1
-msgid "dash, dgbb, governance, funding, voting, proposals, masternodes"
+msgid "dash, dao, governance, funding, voting, proposals, masternodes"
 msgstr ""
-"dash, dgbb, управление, финансирование, голосование, предложения, мастерноды"
 
 #: ../../governance/using.rst:9
 msgid "Using Dash Governance"
@@ -40,14 +36,10 @@ msgstr "Использование Управления Dash"
 
 #: ../../governance/using.rst:11
 msgid ""
-"Dash's Decentralized Governance by Blockchain (DGBB) is a novel voting and "
+"Dash's Decentralized Autonomous Organization (DAO) is a novel voting and "
 "funding platform. This documentation introduces and details the theory and "
 "practice to use the system."
 msgstr ""
-"Децентрализированное Управление Блокчейном Dash (Dash's Decentralized "
-"Governance by Blockchain - DGBB) это новая платформа для голосований и "
-"финансирования. Данная документация даёт теоретическую и практическую "
-"информацию по использованию этой платформы. "
 
 #: ../../governance/using.rst:16
 msgid "Understanding the process"
@@ -58,8 +50,8 @@ msgid "Introduction"
 msgstr "Введение"
 
 #: ../../governance/using.rst:21
-msgid "DGBB consists of three components: Proposals, Votes, and Budgets"
-msgstr "DGBB состоит из трёх компонентов: Предложения, Голосования и Бюджеты"
+msgid "DAO consists of three components: Proposals, Votes, and Budgets"
+msgstr ""
 
 #: ../../governance/using.rst:22
 msgid "Anyone can submit a proposal for a small fee"
@@ -90,11 +82,9 @@ msgstr "Предложения это запросы на получение с�
 
 #: ../../governance/using.rst:31
 msgid ""
-"Proposals can be submitted by anyone for a fee of 5 Dash. The proposal fee "
+"Proposals can be submitted by anyone for a fee of 1 Dash. The proposal fee "
 "is irreversibly destroyed on submission."
 msgstr ""
-"Каждый может подать предложение, заплатив комиссию в 5 DASH. В момент подачи"
-" эта комиссия необратимо сжигается."
 
 #: ../../governance/using.rst:33
 msgid "Proposals cannot be altered once submitted"
@@ -452,36 +442,22 @@ msgstr "Шаги 1 и 2: Создание вашего предложения и
 msgid ""
 "Next, the proposal generator will provide you with a command to run from the"
 " console of your Dash Core wallet to prepare your budget proposal governance"
-" object. Running this command will cost you 5 DASH, which will be \"burnt\" "
+" object. Running this command will cost you 1 DASH, which will be \"burnt\" "
 "or permanently removed from circulation. This one-time fee protects the "
 "governance system from becoming overwhelmed by spam, poorly thought out "
 "proposals or users not acting in good faith. A small transaction fee is "
 "charged as well, so make sure slightly more than 5 DASH is available in your"
-" wallet. Many budget proposals request reimbursement of the 5 DASH fee."
+" wallet. Many budget proposals request reimbursement of the 1 DASH fee."
 msgstr ""
-"Далее, создатель предложений выдаст вам команду, которую необходимо "
-"запустить в консоли вашего кошелька Dash Core для подготовки объекта вашего "
-"бюджетного предложения. Запуск этой команды будет стоить вам 5 DASH, которые"
-" \"сожгутся\", это означает, что они будут навсегда удалены из денежной "
-"массы. Такая единоразовая плата защищет систему управления от \"спама\" из "
-"предложений, плохо продуманных предложений или пользователей, действующих из"
-" недобросовестных побуждений. Так же будет взята небольшая комиссия за "
-"транзакцию, поэтому проследите, чтобы в кошельке было чуть более 5 DASH. "
-"Многие бюджетные предложения запрашивают возмещение потраченных 5 DASH."
 
 #: ../../governance/using.rst:187
 msgid ""
 "First unlock your wallet by clicking **Settings > Unlock wallet**, then open"
-" the console by clicking **Tools > Debug console** and paste the generated "
+" the console by clicking **Window > Console** and paste the generated "
 "command. The transaction ID will appear. Copy and paste this into the "
 "proposal generator response window. As soon as you do this, the system will "
 "show a progress bar as it waits for 6 confirmations as follows:"
 msgstr ""
-"В первую очередь разблокируйте кошелёк, нажав **Settings > Unlock wallet**, "
-"далее откройте консоль, нажав на **Tools > Debug console** и скопируйте "
-"сгенерированную команду. Появится ID транзакции.  Скопируйте и вставьте его "
-"в окно ответа создателя предложений. Как только вы это сделаете, то система "
-"покажет полоску прогресса с ожиданием 6 необходимых подтверждений:"
 
 #: ../../governance/using.rst:200
 msgid ""
@@ -607,7 +583,7 @@ msgstr ""
 
 #: ../../governance/using.rst:289
 msgid ""
-"Running this command will create a transaction spending 5 DASH from the "
+"Running this command will create a transaction spending 1 DASH from the "
 "wallet as collateral for the proposal being created. Only run this command "
 "once you have verified all the proposal information. The transaction is not "
 "reversible once sent."
@@ -700,7 +676,7 @@ msgstr ""
 
 #: ../../governance/using.rst:346
 msgid ""
-"Voting on DGBB proposals is an important part of operating a masternode. "
+"Voting on DAO proposals is an important part of operating a masternode. "
 "Since masternodes are heavily invested in Dash, they are expected to "
 "critically appraise proposals each month and vote in a manner they perceive "
 "to be consistent with the best interests of the network. Each masternode may"
@@ -708,13 +684,6 @@ msgid ""
 "the voting deadline. The following sites and tools are available to view and"
 " manage proposals and voting:"
 msgstr ""
-"Голосование по предложениям DGBB является важной частью управления "
-"мастернодой. Поскольку владельцы мастернод вложили в сеть Dash большие "
-"средства, то ожидается, что они каждый месяц критически оценивают "
-"предложения и голосуют в соответствии со своим представлением о пользе для "
-"сети. Каждая мастернода может проголосовать за предложение лишь единожды, но"
-" может изменить свой голос до конца голосования. Доступны следующие сайты и "
-"инструменты для просмотра и организации предложений и голосования:"
 
 #: ../../governance/using.rst:354
 msgid "`DashCentral <https://www.dashcentral.org/budget>`__"
@@ -824,33 +793,19 @@ msgstr "Кошелёк Dash Core или мастернода"
 #: ../../governance/using.rst:408
 msgid ""
 "If you started your masternode using the Dash Core Wallet (not recommended),"
-" you can vote manually from **Tools > Debug console**, or directly from your"
-" masternode via SSH using ``dash-cli``. First click on the proposal you want"
-" to vote on at either `DashCentral <https://www.dashcentral.org/budget>`__ "
-"or `Dash Ninja <https://www.dashninja.pl/governance.html>`__. You will see a"
-" command for manual voting below the proposal description. Copy and paste "
-"the command and modify it as necessary. As an example, take this proposal "
-"from `Dash Ninja "
+" you can vote manually from **Window > Console**, or directly from your "
+"masternode via SSH using ``dash-cli``. First click on the proposal you want "
+"to vote on at either `DashCentral <https://www.dashcentral.org/budget>`__ or"
+" `Dash Ninja <https://www.dashninja.pl/governance.html>`__. You will see a "
+"command for manual voting below the proposal description. Copy and paste the"
+" command and modify it as necessary. As an example, take this proposal from "
+"`Dash Ninja "
 "<https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741 "
 "8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`__ (or "
 "`DashCentral "
 "<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__). The "
 "voting code for Dash Core Wallet is as follows::"
 msgstr ""
-"Если вы запустили свою мастерноду через кошелёк Dash Core (что не "
-"рекомендуется), то можете голосовать вручную **Tools > Debug console**, или "
-"напрямую через мастерноду через SSH используя ``dash-cli``. Сперва нажмите "
-"на предложение, по которому хотите проголосовать на `DashCentral "
-"<https://www.dashcentral.org/budget>`__ или `Dash Ninja "
-"<https://www.dashninja.pl/governance.html>`__. Под описанием предложения вы "
-"увидете команду для ручного голосования. Скопируйте и вставьте команду и "
-"модифицируйте её, если необходимо. В качестве примера, возьмите предложение "
-"от `Dash Ninja "
-"<https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741 "
-"8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`__ (или "
-"`DashCentral "
-"<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__). Код "
-"голосования для кошелька Dash Core следующий::"
 
 #: ../../governance/using.rst:427
 msgid ""

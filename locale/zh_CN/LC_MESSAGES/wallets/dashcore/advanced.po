@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 09:35-0500\n"
+"POT-Creation-Date: 2022-08-22 09:30-0400\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -23,15 +23,15 @@ msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:1
 msgid ""
-"Coin control, HD wallets, multisig, KeePass and multiple wallet files using "
-"the Dash Core wallet"
-msgstr "货币控制、HD 钱包、多重签名、KeePass和使用Dash Core钱包的各个钱包文件。"
+"Coin control, HD wallets, multisig, multiple wallet files using the Dash "
+"Core wallet"
+msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:1
 msgid ""
-"dash, core, wallet, backup, restore, wallet.dat, multisig, KeePass, hd, "
-"seed, passphrase, mnemonic, coin control, hierarchical deterministic"
-msgstr "dash，core，钱包，备份，恢复，wallet.dat，多重签名，KeePass，hd，种子，密码，助记符，货币控制，分层确定性"
+"dash, core, wallet, backup, restore, wallet.dat, multisig, hd, seed, "
+"passphrase, mnemonic, coin control, hierarchical deterministic"
+msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:9
 msgid "Advanced topics"
@@ -96,8 +96,8 @@ msgid ""
 "Since version 0.17.0.2, Dash Core has included the ability upgrade a non-"
 "hierarchical deterministic (HD) wallet to an HD wallet via the "
 "``upgradetohd`` command. The command can be run by either opening the "
-"console from **Tools -> Debug console** or issuing the following RPC command"
-" from ``dash-cli``::"
+"console from **Tools > Console** or issuing the following RPC command from "
+"``dash-cli``::"
 msgstr ""
 
 #: ../../wallets/dashcore/advanced.rst:68
@@ -149,11 +149,9 @@ msgstr ""
 msgid ""
 "A new HD wallet will be generated and Dash Core will display a warning "
 "informing you that you must encrypt your wallet after verifying it works "
-"correctly. Open the console from **Tools -> Debug console** or issue the "
-"following RPC command from ``dash-cli`` to view the mnemonic seed::"
+"correctly. Open the console from **Tools > Console** or issue the following "
+"RPC command from ``dash-cli`` to view the mnemonic seed::"
 msgstr ""
-"新的HD钱包已经生成，Dash Core钱包将显示一则通知，告知用户必须在验证程序可正确运行后对钱包进行加密。用户可以通过 **工具 -> "
-"调试控制台** 或在 ``dash-cli`` 上执行远程过程调用命令，以便浏览助记符种子::"
 
 #: ../../wallets/dashcore/advanced.rst:106
 msgid ""
@@ -475,15 +473,74 @@ msgstr "多款钱包"
 
 #: ../../wallets/dashcore/advanced.rst:504
 msgid ""
-"It is possible to select between different Dash wallets when starting Dash "
-"Core by specifying the ``wallet`` argument, or even run multiple instances "
-"of Dash Core simultaneously by specifying separate data directories using "
-"the ``datadir`` argument."
+"Since version 18.0.0, Dash Core has included the ability work with multiple "
+"wallets from the **File** menu in addition to the previously available "
+"options."
 msgstr ""
-"用户可以通过 ``wallet`` 参数来启动Dash Core钱包，并在此时选用不同类型的钱包。此外，用户还可以通过 ``datadir`` "
-"参数来指定不同的数据目录，从而同时运行Dash Core钱包的不同实例。"
 
-#: ../../wallets/dashcore/advanced.rst:509
+#: ../../wallets/dashcore/advanced.rst:508
+msgid "Open a wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:510
+msgid ""
+"To open a wallet, click **File -> Open Wallet** and then click the name of "
+"wallet file."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:516
+msgid "Open wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:519
+msgid "Select the active wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:521
+msgid ""
+"When multiple wallets are open, a wallet selection dropbox is shown to the "
+"left of the Dash logo on the tab bar. Click the dropdown box and select a "
+"wallet to set it as the active wallet."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:528
+msgid "Wallet selection dropdown box"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:531
+msgid "Close a wallet"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:533
+msgid ""
+"To close a wallet, set it as the active wallet using the wallet selection "
+"dropdown box. Next, click **File -> Close Wallet** and then click **Yes** on"
+" the Close wallet confirmation screen."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:540
+msgid "Close wallet confirmation"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:545
+msgid ""
+"If the only open wallet is closed, wallet-related items on the tab bar will "
+"be disabled."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:548
+msgid "Alternative methods"
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:550
+msgid ""
+"It is also possible to select between different Dash wallets when starting "
+"Dash Core by specifying the ``wallet`` argument, or even run multiple "
+"instances of Dash Core simultaneously by specifying separate data "
+"directories using the ``datadir`` argument."
+msgstr ""
+
+#: ../../wallets/dashcore/advanced.rst:555
 msgid ""
 "To begin, install the Dash Core wallet for your system according to the "
 ":ref:`installation instructions <dashcore-installation>`. When you get to "
@@ -498,11 +555,11 @@ msgstr ""
 "文件保存在默认地址上（如果用户不需要同时运行钱包，那就更简单了）。用户也可以指定完全独立的数据目录，例如 ``C:\\Dash1`` "
 "（如果用户希望同时运行钱包，那么设置将相对更简单）。"
 
-#: ../../wallets/dashcore/advanced.rst:520
+#: ../../wallets/dashcore/advanced.rst:566
 msgid "Separate wallet.dat files"
 msgstr "独立的wallet.dat文件"
 
-#: ../../wallets/dashcore/advanced.rst:522
+#: ../../wallets/dashcore/advanced.rst:568
 msgid ""
 "For this scenario, we will create two shortcuts on the desktop, each using a"
 " different wallet file. Navigate to the binary file used to start Dash Core "
@@ -514,11 +571,11 @@ msgstr ""
 "``C:\\Program Files\\DashCore\\dash-qt.exe`` "
 "或在类似文件中），然后在桌面上创建两个快捷方式。随后，达世币需要打开这些快捷方式的 **属性** 窗口。"
 
-#: ../../wallets/dashcore/advanced.rst:531
+#: ../../wallets/dashcore/advanced.rst:577
 msgid "Creating desktop shortcuts using Windows 10"
 msgstr "使用Windows 10创建桌面快捷方式"
 
-#: ../../wallets/dashcore/advanced.rst:533
+#: ../../wallets/dashcore/advanced.rst:579
 msgid ""
 "Modify the **Target** property of each shortcut to point to a different "
 "wallet file by specifying the ``wallet`` argument when starting the wallet. "
@@ -531,7 +588,7 @@ msgstr ""
 "参数，那么钱包将默认使用 ``wallet.dat`` 。如果指定的钱包文件并不存在，那么文件将会自行创建。下文以 ``workwallet.dat``"
 " 和 ``homewallet.dat`` 这两个文件为例："
 
-#: ../../wallets/dashcore/advanced.rst:540
+#: ../../wallets/dashcore/advanced.rst:586
 msgid ""
 "Wallet Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=workwallet.dat``"
@@ -539,7 +596,7 @@ msgstr ""
 "Wallet Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=workwallet.dat``"
 
-#: ../../wallets/dashcore/advanced.rst:541
+#: ../../wallets/dashcore/advanced.rst:587
 msgid ""
 "Wallet Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=homewallet.dat``"
@@ -547,11 +604,11 @@ msgstr ""
 "Wallet Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=homewallet.dat``"
 
-#: ../../wallets/dashcore/advanced.rst:546
+#: ../../wallets/dashcore/advanced.rst:592
 msgid "Specifying separate wallet files"
 msgstr "指定独立的钱包文件"
 
-#: ../../wallets/dashcore/advanced.rst:548
+#: ../../wallets/dashcore/advanced.rst:594
 msgid ""
 "You can now use the two icons to quickly and easily open different wallets "
 "from your desktop. Note that you cannot open both wallets simultaneously. To"
@@ -559,11 +616,11 @@ msgid ""
 msgstr ""
 "现在，用户可以使用这两个快捷图标轻松迅速地从桌面打开不同的钱包了。请注意，用户无法同时打开两个钱包。如果用户需要两个独立的数据目录，操作步骤如下所述。"
 
-#: ../../wallets/dashcore/advanced.rst:555
+#: ../../wallets/dashcore/advanced.rst:601
 msgid "Separate data directories"
 msgstr "独立的数据目录"
 
-#: ../../wallets/dashcore/advanced.rst:557
+#: ../../wallets/dashcore/advanced.rst:603
 msgid ""
 "Start Dash Core and allow it to synchronize with the network, then close "
 "Dash Core again. You can now create two directories at e.g. ``C:\\Dash1`` "
@@ -578,7 +635,7 @@ msgstr ""
 "复制到新的目录之下。它们将作为独立的数据目录，帮助Dash "
 "Core钱包同时运行不同的实例。用户可参照上述步骤创建两个（或更多的）快捷方式，并按以下方式为 ``datadir`` 指定参数。"
 
-#: ../../wallets/dashcore/advanced.rst:566
+#: ../../wallets/dashcore/advanced.rst:612
 msgid ""
 "Datadir Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash1 -listen=0``"
@@ -586,7 +643,7 @@ msgstr ""
 "Datadir Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash1 -listen=0``"
 
-#: ../../wallets/dashcore/advanced.rst:567
+#: ../../wallets/dashcore/advanced.rst:613
 msgid ""
 "Datadir Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash2 -listen=0``"
@@ -594,11 +651,11 @@ msgstr ""
 "Datadir Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash2 -listen=0``"
 
-#: ../../wallets/dashcore/advanced.rst:572
+#: ../../wallets/dashcore/advanced.rst:618
 msgid "Specifying separate datadirs"
 msgstr "指定独立的数据路径"
 
-#: ../../wallets/dashcore/advanced.rst:574
+#: ../../wallets/dashcore/advanced.rst:620
 msgid ""
 "You can now use the two icons to quickly and easily open different wallets "
 "simultaneously from your desktop. Both wallets maintain separate and full "
@@ -611,157 +668,17 @@ msgstr ""
 " \"轻\"钱包。在这种情况下，用户可以参照\\ :ref:`达世币轻钱包 <dash-electrum-wallet>`\\ "
 "的指示在无需保存区块链完整副本的前提下维护多个独立的钱包。"
 
-#: ../../wallets/dashcore/advanced.rst:584
+#: ../../wallets/dashcore/advanced.rst:630
 msgid "Two instances of Dash Core running simultaneously"
 msgstr "Dash Core钱包同时运行两个实例"
 
-#: ../../wallets/dashcore/advanced.rst:587
+#: ../../wallets/dashcore/advanced.rst:633
 msgid "KeePass"
 msgstr "KeePass"
 
-#: ../../wallets/dashcore/advanced.rst:589
+#: ../../wallets/dashcore/advanced.rst:636
 msgid ""
-"Since version 0.11.0, Dash Core has supported integration with KeePass, the "
-"popular open source password manager. This guide describes how to configure "
-"the association between Dash Core and KeePass, and how to save a Dash Core "
-"wallet passphrase in KeePass using the integration. When this is done, "
-"KeePass can be used to unlock the wallet."
+"KeePass support was removed in Dash Core 18.0.0. Details can still be found "
+"in `previous versions of this documentation "
+"<https://docs.dash.org/en/0.17.0/wallets/dashcore/advanced.html#keepass>`_."
 msgstr ""
-"从0.11.0版本开始，Dash Core钱包支持与流行的开源密码管理器KeePass的集成。本指南介绍了Dash "
-"Core钱包与KeePass之间建立关联的步骤，并指导用户通过集成在KeePass上保存Dash Core钱包的密码。在用户完成上述操作后， "
-"用户就可以通过KeePass来解锁钱包了。"
-
-#: ../../wallets/dashcore/advanced.rst:596
-msgid "Installation"
-msgstr "安装"
-
-#: ../../wallets/dashcore/advanced.rst:598
-msgid "You will need the following:"
-msgstr "用户可能需要参考以下网址上的信息："
-
-#: ../../wallets/dashcore/advanced.rst:600
-msgid "KeePass 2: https://keepass.info"
-msgstr ""
-
-#: ../../wallets/dashcore/advanced.rst:601
-msgid "KeePassHttp plugin: https://github.com/pfn/keepasshttp"
-msgstr "KeePassHttp plugin: https://github.com/pfn/keepasshttp"
-
-#: ../../wallets/dashcore/advanced.rst:602
-msgid "Dash Core: https://www.dash.org"
-msgstr "Dash Core: https://www.dash.org"
-
-#: ../../wallets/dashcore/advanced.rst:604
-msgid ""
-"If not already installed, install these packages according to the "
-"instructions linked below:"
-msgstr "如果未安装，则根据下方链接指南进行安装："
-
-#: ../../wallets/dashcore/advanced.rst:607
-msgid "KeePass: https://keepass.info/help/v2/setup.html"
-msgstr "KeePass: https://keepass.info/help/v2/setup.html"
-
-#: ../../wallets/dashcore/advanced.rst:608
-msgid "KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md"
-msgstr "KeePassHttp: https://github.com/pfn/keepasshttp/blob/master/README.md"
-
-#: ../../wallets/dashcore/advanced.rst:609
-msgid ""
-"Dash Core: "
-"https://docs.dash.org/en/stable/wallets/dashcore/installation.html"
-msgstr ""
-
-#: ../../wallets/dashcore/advanced.rst:612
-msgid "Commands"
-msgstr "命令"
-
-#: ../../wallets/dashcore/advanced.rst:614
-msgid ""
-"The following KeePass RPC commands are available in the Dash Core client "
-"console or server:"
-msgstr "用户可以在Dash Core钱包的客户端或服务器上使用以下的KeePass远程过程调用命令："
-
-#: ../../wallets/dashcore/advanced.rst:620
-msgid "keepass genkey"
-msgstr "keepass genkey"
-
-#: ../../wallets/dashcore/advanced.rst:618
-msgid ""
-"Generates a base64 encoded 256 bit AES key that can be used for "
-"communication with KeePassHttp. This is only necessary for manual "
-"configuration. Use init for automatic configuration."
-msgstr ""
-"用户可生成base64编码的256位AES密钥，以便用于与KeePassHttp之间的通信。只有人工设置才需要用到这一命令，自动设置用到的则是init命令。"
-
-#: ../../wallets/dashcore/advanced.rst:626
-msgid "keepass init"
-msgstr "keepass init"
-
-#: ../../wallets/dashcore/advanced.rst:623
-msgid ""
-"Sets up the association between Dash and KeePass by generating an AES key "
-"and sending an association message to KeePassHttp. This will trigger KeePass"
-" to ask for an ID for the association. Returns the association and the "
-"base64 encoded string for the AES key."
-msgstr ""
-"用户可以通过生成AES密钥并向KeePassHttp发送关联消息来设置达世币和KeePass之间的关联。在此期间，KeePass将申请建立关联所需的ID。随后，达世币核心钱包将返回AES密钥的关联和Base64编码字符串。"
-
-#: ../../wallets/dashcore/advanced.rst:633
-msgid "keepass setpassphrase"
-msgstr "keepass setpassphrase"
-
-#: ../../wallets/dashcore/advanced.rst:629
-msgid ""
-"Updates the passphrase in KeePassHttp to a new value. This should match the "
-"passphrase you intend to use for the wallet. Please note that the standard "
-"RPC commands walletpassphrasechange and the wallet encryption from the QT "
-"GUI already send the updates to KeePassHttp, so this is only necessary for "
-"manual manipulation of the password."
-msgstr ""
-"更新KeePassHttp中的密码，此密码应与用户想要用于钱包的密码相匹配。请注意，标准的远程过程调用命令walletpassphrasechange和来自QT"
-" GUI的钱包加密已经将更新发送到了KeePassHttp，因此只有人工设置才需要借助KeePassHttp的密码更新。"
-
-#: ../../wallets/dashcore/advanced.rst:635
-msgid "The following new arguments are available for dashd and dash-qt:"
-msgstr "以下新参数可用于dashd和dash-qt："
-
-#: ../../wallets/dashcore/advanced.rst:638
-msgid "keepass"
-msgstr "keepass"
-
-#: ../../wallets/dashcore/advanced.rst:638
-msgid "Use KeePass 2 integration using KeePassHttp plugin (default: 0)"
-msgstr "借助KeePassHttp插件来使用KeePass 2集成功能（默认值：0）"
-
-#: ../../wallets/dashcore/advanced.rst:641
-msgid "keepassport=<port>"
-msgstr "keepassport=<port>"
-
-#: ../../wallets/dashcore/advanced.rst:641
-msgid "Connect to KeePassHttp on port <port> (default: 19455)"
-msgstr "通过端口<port>上连接到KeePassHttp（默认值：19455）"
-
-#: ../../wallets/dashcore/advanced.rst:644
-msgid "keepasskey=<key>"
-msgstr "keepasskey=<key>"
-
-#: ../../wallets/dashcore/advanced.rst:644
-msgid "KeePassHttp key for AES encrypted communication with KeePass"
-msgstr "借助KeePassHttp密钥使用KeePass 加密通信功能"
-
-#: ../../wallets/dashcore/advanced.rst:647
-msgid "keepassid=<name>"
-msgstr "keepassid=<name>"
-
-#: ../../wallets/dashcore/advanced.rst:647
-msgid "KeePassHttp id for the established association"
-msgstr "已建立关联的KeePassHttp身份"
-
-#: ../../wallets/dashcore/advanced.rst:650
-msgid "keepassname=<name>"
-msgstr "keepassname=<name>"
-
-#: ../../wallets/dashcore/advanced.rst:650
-msgid ""
-"Name to construct url for KeePass entry that stores the wallet passphrase"
-msgstr "用于为KeePass条目构建网址的名称。该条目存储了钱包的密码"
