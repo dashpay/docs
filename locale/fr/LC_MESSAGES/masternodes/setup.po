@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Dash Core Group, Inc
+# Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-26 16:41-0400\n"
+"POT-Creation-Date: 2021-11-10 09:35-0500\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: Daf Daf, 2021\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../masternodes/setup.rst:1
 msgid ""
@@ -1075,9 +1075,10 @@ msgstr ""
 "paiement) différente et/ou une **Operator reward** (Récompense d'opérateur) "
 "différente, puis cliquez sur **Continue**. Choisissez **Remote Dash RPC Node"
 " (automatic method)** (Nœud Dash RPC distant (méthode automatique)). (Voir "
-"`ici <https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc"
-"/config-connection-direct.md>`__ une documentation sur l'utilisation de "
-"votre propre nœud RPC local.) Confirmez les deux messages suivants :"
+"`ici <https://github.com/Bertrand256/dash-masternode-"
+"tool/blob/master/doc/config-connection-direct.md>`__ une documentation sur "
+"l'utilisation de votre propre nœud RPC local.) Confirmez les deux messages "
+"suivants :"
 
 #: ../../masternodes/setup.rst:618
 msgid "Dash Masternode Tool confirmation dialogs to register a masternode"
@@ -1136,9 +1137,9 @@ msgstr ""
 
 #: ../../masternodes/setup.rst:648
 msgid ""
-"At this point you can monitor your masternode by entering ``~/.dashcore"
-"/dash-cli masternode status`` or using the **Get status** function in DMT. "
-"The final result should appear as follows:"
+"At this point you can monitor your masternode by entering "
+"``~/.dashcore/dash-cli masternode status`` or using the **Get status** "
+"function in DMT. The final result should appear as follows:"
 msgstr ""
 "Arrivé à cette étape, vous pouvez surveiller votre masternode avec la "
 "commande ``~/.dashcore/dash-cli masternode status``, ou bien en utilisant la"

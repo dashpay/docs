@@ -1,26 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Dash Core Group, Inc
+# Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Gleb Golov <gleb.golov@gmail.com>, 2020
-# Alessandro <mediterraneo9000@gmail.com>, 2020
+# Gleb Golov <gleb@golov.dev>, 2020
+# AL <mediterraneo9000@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-26 16:41-0400\n"
+"POT-Creation-Date: 2021-11-10 09:35-0500\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
-"Last-Translator: Alessandro <mediterraneo9000@gmail.com>, 2020\n"
+"Last-Translator: AL <mediterraneo9000@gmail.com>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../masternodes/understanding.rst:1
 msgid ""
@@ -113,12 +113,12 @@ msgid ""
 " Dash per payment or approximately 6 Dash per month. The block reward "
 "decreases by 7.14% approximately once per year, so the annual earnings for a"
 " masternode owner is approximately 7% of the collateral, and will decrease "
-"over time `as calculated here <https://docs.google.com/spreadsheets/d"
-"/1HqgEkyfZDAA6pIZ3df2PwFE8Z430SVIzQ-mCQ6wGCh4/edit#gid=523620673>`_. See "
-"`this tool <https://dash- news.de/dashtv/#value=1000>`_ to calculate real-"
-"time payment rates, and `this site "
-"<http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various real-time "
-"statistics on the masternode network."
+"over time `as calculated here "
+"<https://docs.google.com/spreadsheets/d/1HqgEkyfZDAA6pIZ3df2PwFE8Z430SVIzQ-"
+"mCQ6wGCh4/edit#gid=523620673>`_. See `this tool <https://dash- "
+"news.de/dashtv/#value=1000>`_ to calculate real-time payment rates, and "
+"`this site <http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various "
+"real-time statistics on the masternode network."
 msgstr ""
 
 #: ../../masternodes/understanding.rst:88
@@ -187,8 +187,8 @@ msgid ""
 " command based on a ``masternode.conf`` file. Under DIP003, this file is no "
 "longer used, and masternodes are \"registered\" instead of \"started\". "
 "Masternodes begin offering services when a `ProRegTx "
-"<https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a"
-"-masternode-proregtx>`_ `special transaction "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a-"
+"masternode-proregtx>`_ `special transaction "
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ containing a "
 "particular key is written to the blockchain."
 msgstr ""
@@ -408,8 +408,8 @@ msgid ""
 "maximum score, which is equal to the number of registered masternodes. If "
 "the score reaches the number of registered masternodes, a PoSe ban is "
 "enacted and the masternode must be repaired to ensure it provides reliable "
-"service and registered in the list again using a :ref:`ProUpServTx <dip3"
-"-update-service>`. The current scoring rules as of Dash 0.14 are:"
+"service and registered in the list again using a :ref:`ProUpServTx "
+"<dip3-update-service>`. The current scoring rules as of Dash 0.14 are:"
 msgstr ""
 
 #: ../../masternodes/understanding.rst:257
@@ -545,8 +545,8 @@ msgid ""
 "The exact hardware requirements for Dash Evolution masternodes have yet to "
 "be determined, although some pointers can be taken from the `roadmap "
 "<https://www.dash.org/roadmap/>`_ and this `blog post "
-"<https://medium.com/@eduffield222/how-to-enabling-on-chain-scaling-"
-"2ffab5997f8b>`_. It should be possible to run Dash masternodes on normal VPS"
-" servers until the block size reaches approximately 20 MB, after which "
-"custom hardware such as GPUs and eventually ASICs may be required."
+"<https://medium.com/@eduffield222/how-to-enabling-on-chain-"
+"scaling-2ffab5997f8b>`_. It should be possible to run Dash masternodes on "
+"normal VPS servers until the block size reaches approximately 20 MB, after "
+"which custom hardware such as GPUs and eventually ASICs may be required."
 msgstr ""

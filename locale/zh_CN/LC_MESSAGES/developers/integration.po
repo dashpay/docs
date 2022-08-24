@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Dash Core Group, Inc
+# Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# jmp2esp <xsrf@icloud.com>, 2019
 # Leon White <leon.white@dash.org>, 2019
 # Alex.ys <silvershark.ys@gmail.com>, 2021
+# jmp2esp <xsrf@icloud.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-26 16:41-0400\n"
+"POT-Creation-Date: 2021-11-10 09:35-0500\n"
 "PO-Revision-Date: 2019-04-08 11:33+0000\n"
-"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2021\n"
+"Last-Translator: jmp2esp <xsrf@icloud.com>, 2021\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,122 +48,123 @@ msgstr ""
 
 #: ../../developers/integration.rst:13
 msgid ""
-"`Dash Core <https://github.com/dashpay/dash>`__ is a “fork” of `Bitcoin Core"
-" <https://github.com/bitcoin/bitcoin>`__ and shares many common "
-"functionalities. Key differences relate to existing JSON-RPC commands which "
-"have been customized to support unique functionalities such as InstantSend."
+"`Dash Core <https://github.com/dashpay/dash/releases>`__ is a fork of "
+"`Bitcoin Core <https://github.com/bitcoin/bitcoin>`__ and shares many common"
+" functionalities. Key differences are found in existing JSON-RPC commands "
+"which have been customized to support unique functionalities such as "
+"InstantSend."
 msgstr ""
-"`Dash Core <https://github.com/dashpay/dash>`__ 是 `Bitcoin Core "
-"<https://github.com/bitcoin/bitcoin>`__ 的“f分叉” 并且与之共享很多功能。与现有 JSON-RPC "
-"命令有关的关键区别被用来支持特有功能如即时发送。"
 
 #: ../../developers/integration.rst:19
+msgid "The Basics"
+msgstr ""
+
+#: ../../developers/integration.rst:21
 msgid ""
-"**General Information:** Dash is a “Proof of Work” network and is similar to"
-" Bitcoin."
-msgstr "**简要信息：** Dash 是一个与 Bitcoin 类似的”工作量证明“网络。"
+"Dash is a Proof of Work network, and similar to Bitcoin, Dash has a mining "
+"network but uses a different block hashing algorithm. Dash serves as an "
+"improvement of Bitcoin's shortcomings by offering a robust solution for "
+"instant transactions, enhancing user privacy, and offering a self-"
+"sustainable decentralized governance model."
+msgstr ""
 
-#: ../../developers/integration.rst:22
-msgid "Block Time: ~2.6 Minutes per Block"
-msgstr "区块时间: 每 ~2.6 分钟产生一个区块"
+#: ../../developers/integration.rst:27
+msgid "Block time: ~2.6 minutes per block"
+msgstr ""
 
-#: ../../developers/integration.rst:23
-msgid "Github Source: https://github.com/dashpay/dash"
-msgstr "Github 源代码: https://github.com/dashpay/dash"
+#: ../../developers/integration.rst:28
+msgid "Github source: https://github.com/dashpay/dash"
+msgstr ""
 
-#: ../../developers/integration.rst:24
-msgid "Latest Release: https://github.com/dashpay/dash/releases"
-msgstr "最新发布：https://github.com/dashpay/dash/releases"
+#: ../../developers/integration.rst:29
+msgid "Latest release: https://github.com/dashpay/dash/releases"
+msgstr ""
 
-#: ../../developers/integration.rst:26
+#: ../../developers/integration.rst:32
+msgid "JSON-RPC Interface"
+msgstr ""
+
+#: ../../developers/integration.rst:34
 msgid ""
-"**JSON-RPC Interface:** The majority of commands are unchanged from Bitcoin "
-"making integration into existing systems relatively straightforward. Note "
-"that the following commands have been modified to support InstantSend:"
-msgstr "**JSON-RPC 接口：** 大部分命令直接简单地从已有 Bitcoin 系统引入而没有修改。注意以下命令为了支持即时发送已作修改："
+"The majority of commands are unchanged from Bitcoin making integration into "
+"existing systems relatively straightforward. Note that the following "
+"commands have been modified to support InstantSend:"
+msgstr ""
 
-#: ../../developers/integration.rst:31 ../../developers/integration.rst:158
+#: ../../developers/integration.rst:38 ../../developers/integration.rst:169
 msgid ""
 "`getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-blockchain#section-get-raw-mem-pool>`__"
+"procedure-calls-blockchain#getrawmempool>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:32 ../../developers/integration.rst:159
+#: ../../developers/integration.rst:39 ../../developers/integration.rst:170
 msgid ""
 "`getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-blockchain#section-get-mem-pool-ancestors>`__"
+"procedure-calls-blockchain#getmempoolancestors>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:33 ../../developers/integration.rst:160
+#: ../../developers/integration.rst:40 ../../developers/integration.rst:171
 msgid ""
 "`getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-blockchain#section-get-mem-pool-descendants>`__"
+"procedure-calls-blockchain#getmempooldescendants>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:34 ../../developers/integration.rst:161
+#: ../../developers/integration.rst:41 ../../developers/integration.rst:172
 msgid ""
 "`getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-blockchain#section-get-mem-pool-entry>`__"
+"procedure-calls-blockchain#getmempoolentry>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:35 ../../developers/integration.rst:162
+#: ../../developers/integration.rst:42 ../../developers/integration.rst:173
 msgid ""
 "`getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-raw-transactions#section-get-raw-transaction>`__"
+"procedure-calls-raw-transactions#getrawtransaction>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:36 ../../developers/integration.rst:163
-msgid ""
-"`decoderawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-raw-transactions#section-decode-raw-transaction>`__"
-msgstr ""
-
-#: ../../developers/integration.rst:37 ../../developers/integration.rst:164
+#: ../../developers/integration.rst:43 ../../developers/integration.rst:174
 msgid ""
 "`gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-wallet#section-get-transaction>`__"
+"procedure-calls-wallet#gettransaction>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:38 ../../developers/integration.rst:165
+#: ../../developers/integration.rst:44 ../../developers/integration.rst:175
 msgid ""
 "`listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-wallet#section-list-transactions>`__"
+"procedure-calls-wallet#listtransactions>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:39 ../../developers/integration.rst:166
+#: ../../developers/integration.rst:45 ../../developers/integration.rst:176
 msgid ""
 "`listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-wallet#section-list-since-block>`__"
+"procedure-calls-wallet#listsinceblock>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:41
+#: ../../developers/integration.rst:48
+msgid "Block Hashing Algorithm"
+msgstr ""
+
+#: ../../developers/integration.rst:50
 msgid ""
-"**Block Hashing Algorithm:** Dash uses the “X11” algorithm in place of "
-"SHA256 used in Bitcoin. It’s important to note, however, that this only "
-"affects the hashing of the Block itself. All other internals utilize SHA256 "
-"hashes (transactions, merkle root, etc) which allows for most existing "
-"libraries to work in the Dash ecosystem."
+"Dash uses the X11 algorithm in place of SHA256 used in Bitcoin. It’s "
+"important to note, however, that this only affects the hashing of the block "
+"itself. All other internals utilize SHA256 hashes (transactions, merkle "
+"root, etc.), which allows for most existing libraries to work in the Dash "
+"ecosystem."
 msgstr ""
-"**区块 Hashing 算法：** Dash 使用 ”X11“ 算法代替 Bitcoin 中使用的 SHA256。值得注意的是这仅仅影响区块头本身的 "
-"Hash。所有其它内部依然使用 SHA256 （交易，Merkle 根等等）因此允许大多现有的库能在 Dash 生态中正常工作。"
 
-#: ../../developers/integration.rst:47
-msgid ""
-"**Special Transactions:** Dash Core v0.13.x introduces the concept of "
-"“Special Transactions”. Please see the `Transaction Type Integration Guide "
-"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
-"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ for more information."
-msgstr ""
-"**特殊交易：** Dash Core v0.13.x 引入了”特殊交易“的概念。更多信息请查阅  `Transaction Type "
-"Integration Guide "
-"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
-"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 。 "
-
-#: ../../developers/integration.rst:55
+#: ../../developers/integration.rst:56 ../../developers/integration.rst:66
 msgid "Special Transactions"
 msgstr "特殊交易"
 
-#: ../../developers/integration.rst:57
+#: ../../developers/integration.rst:58
+msgid ""
+"Dash Core v0.13.x introduced the concept of “Special Transactions”. Please "
+"see the `Transaction Type Integration Guide "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ for more information."
+msgstr ""
+
+#: ../../developers/integration.rst:68
 msgid ""
 "This documentation is also available as a `PDF "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
@@ -173,7 +174,7 @@ msgstr ""
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
 "Resources-Dash-v0.13.0-Transaction-Types.pdf>`__。"
 
-#: ../../developers/integration.rst:59
+#: ../../developers/integration.rst:70
 msgid ""
 "Dash 0.13.0 and higher implement `DIP002 Special Transactions "
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, which form a "
@@ -183,158 +184,158 @@ msgstr ""
 "Dash 0.13.0及随后版本实现了 `DIP002 特殊交易 "
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__，它构建了一种新的交易类型来提供线上元数据从而帮助不同的共识机制。存在如下特殊交易类型："
 
-#: ../../developers/integration.rst:65
+#: ../../developers/integration.rst:76
 msgid "Release"
 msgstr "发布"
 
-#: ../../developers/integration.rst:65
+#: ../../developers/integration.rst:76
 msgid "Version"
 msgstr "版本"
 
-#: ../../developers/integration.rst:65
+#: ../../developers/integration.rst:76
 msgid "Type"
 msgstr "类型"
 
-#: ../../developers/integration.rst:65
+#: ../../developers/integration.rst:76
 msgid "Payload Size"
 msgstr "载荷大小"
 
-#: ../../developers/integration.rst:65
+#: ../../developers/integration.rst:76
 msgid "Payload"
 msgstr "载荷"
 
-#: ../../developers/integration.rst:65
+#: ../../developers/integration.rst:76
 msgid "Payload JSON"
 msgstr " JSON 载荷"
 
-#: ../../developers/integration.rst:65
+#: ../../developers/integration.rst:76
 msgid "Transaction Purpose"
 msgstr "交易目的"
 
-#: ../../developers/integration.rst:67 ../../developers/integration.rst:69
-#: ../../developers/integration.rst:71 ../../developers/integration.rst:73
-#: ../../developers/integration.rst:75 ../../developers/integration.rst:77
-#: ../../developers/integration.rst:79
+#: ../../developers/integration.rst:78 ../../developers/integration.rst:80
+#: ../../developers/integration.rst:82 ../../developers/integration.rst:84
+#: ../../developers/integration.rst:86 ../../developers/integration.rst:88
+#: ../../developers/integration.rst:90
 msgid "v0.13.0"
 msgstr "v0.13.0"
 
-#: ../../developers/integration.rst:67 ../../developers/integration.rst:69
-#: ../../developers/integration.rst:71 ../../developers/integration.rst:73
-#: ../../developers/integration.rst:73 ../../developers/integration.rst:75
-#: ../../developers/integration.rst:77 ../../developers/integration.rst:79
+#: ../../developers/integration.rst:78 ../../developers/integration.rst:80
+#: ../../developers/integration.rst:82 ../../developers/integration.rst:84
+#: ../../developers/integration.rst:84 ../../developers/integration.rst:86
+#: ../../developers/integration.rst:88 ../../developers/integration.rst:90
 msgid "3"
 msgstr "3"
 
-#: ../../developers/integration.rst:67
+#: ../../developers/integration.rst:78
 msgid "0"
 msgstr "0"
 
-#: ../../developers/integration.rst:67 ../../developers/integration.rst:67
-#: ../../developers/integration.rst:67
+#: ../../developers/integration.rst:78 ../../developers/integration.rst:78
+#: ../../developers/integration.rst:78
 msgid "n/a"
 msgstr "无"
 
-#: ../../developers/integration.rst:67
+#: ../../developers/integration.rst:78
 msgid "Standard Transaction"
 msgstr "标准交易"
 
-#: ../../developers/integration.rst:69
+#: ../../developers/integration.rst:80
 msgid "1"
 msgstr "1"
 
-#: ../../developers/integration.rst:69 ../../developers/integration.rst:71
-#: ../../developers/integration.rst:73 ../../developers/integration.rst:75
-#: ../../developers/integration.rst:77 ../../developers/integration.rst:79
+#: ../../developers/integration.rst:80 ../../developers/integration.rst:82
+#: ../../developers/integration.rst:84 ../../developers/integration.rst:86
+#: ../../developers/integration.rst:88 ../../developers/integration.rst:90
 msgid "<variable int>"
 msgstr "<variable int>"
 
-#: ../../developers/integration.rst:69 ../../developers/integration.rst:71
-#: ../../developers/integration.rst:73 ../../developers/integration.rst:75
-#: ../../developers/integration.rst:77 ../../developers/integration.rst:79
+#: ../../developers/integration.rst:80 ../../developers/integration.rst:82
+#: ../../developers/integration.rst:84 ../../developers/integration.rst:86
+#: ../../developers/integration.rst:88 ../../developers/integration.rst:90
 msgid "<hex>"
 msgstr "<hex>"
 
-#: ../../developers/integration.rst:69
+#: ../../developers/integration.rst:80
 msgid "proRegTx"
 msgstr "proRegTx"
 
-#: ../../developers/integration.rst:69
+#: ../../developers/integration.rst:80
 msgid ""
 "`Masternode Registration <https://dashcore.readme.io/docs/core-ref-"
 "transactions-special-transactions#section-pro-reg-tx>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:71
+#: ../../developers/integration.rst:82
 msgid "2"
 msgstr "2"
 
-#: ../../developers/integration.rst:71
+#: ../../developers/integration.rst:82
 msgid "proUpServTx"
 msgstr "proUpServTx"
 
-#: ../../developers/integration.rst:71
+#: ../../developers/integration.rst:82
 msgid ""
 "`Update Masternode Service <https://dashcore.readme.io/docs/core-ref-"
 "transactions-special-transactions#section-pro-up-serv-tx>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:73
+#: ../../developers/integration.rst:84
 msgid "proUpRegTx"
 msgstr "proUpRegTx"
 
-#: ../../developers/integration.rst:73
+#: ../../developers/integration.rst:84
 msgid ""
 "`Update Masternode Operator <https://dashcore.readme.io/docs/core-ref-"
 "transactions-special-transactions#section-pro-up-reg-tx>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:75
+#: ../../developers/integration.rst:86
 msgid "4"
 msgstr "4"
 
-#: ../../developers/integration.rst:75
+#: ../../developers/integration.rst:86
 msgid "proUpRevTx"
 msgstr "proUpRevTx"
 
-#: ../../developers/integration.rst:75
+#: ../../developers/integration.rst:86
 msgid ""
 "`Masternode Revocation <https://dashcore.readme.io/docs/core-ref-"
 "transactions-special-transactions#section-pro-up-rev-tx>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:77
+#: ../../developers/integration.rst:88
 msgid "5"
 msgstr "5"
 
-#: ../../developers/integration.rst:77
+#: ../../developers/integration.rst:88
 msgid "cbTx"
 msgstr "cbTx"
 
-#: ../../developers/integration.rst:77
+#: ../../developers/integration.rst:88
 msgid ""
 "`Masternode List Merkle Proof <https://dashcore.readme.io/docs/core-ref-"
 "transactions-special-transactions#section-cb-tx>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:79
+#: ../../developers/integration.rst:90
 msgid "6"
 msgstr "6"
 
-#: ../../developers/integration.rst:79
+#: ../../developers/integration.rst:90
 msgid "qcTx"
 msgstr "qcTx"
 
-#: ../../developers/integration.rst:79
+#: ../../developers/integration.rst:90
 msgid ""
 "`Quorum Commitment <https://dashcore.readme.io/docs/core-ref-transactions-"
 "special-transactions#section-qc-tx>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:82
+#: ../../developers/integration.rst:93
 msgid "Integration notes:"
 msgstr "整合须知："
 
-#: ../../developers/integration.rst:84
+#: ../../developers/integration.rst:95
 msgid ""
 "`DIP002 Special Transactions "
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ are a "
@@ -344,17 +345,15 @@ msgstr ""
 "`DIP002 特殊交易 <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ 是 "
 "Dash Core v0.13.0 的一个基础部分，它引入一个新的交易版本和相关”载荷“到网络。"
 
-#: ../../developers/integration.rst:88
+#: ../../developers/integration.rst:99
 msgid ""
 "Integrated Systems must be able to `serialize and deserialize "
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md#serialization-"
-"hashing-and-signing>`__ these new Transaction Types in order to accurately "
-"encode and decode Raw Transaction data."
+"hashing-and-signing>`__ these new Transaction Types to accurately encode and"
+" decode Raw Transaction data."
 msgstr ""
-"整合系统必须能够 `序列和反序列 <https://github.com/dashpay/dips/blob/master/dip-0002.md"
-"#serialization-hashing-and-signing>`__ 这些新的交易类型从而能精确地编码和解码交易元数据。"
 
-#: ../../developers/integration.rst:92
+#: ../../developers/integration.rst:103
 msgid ""
 "From a `backwards compatibility "
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ "
@@ -366,21 +365,21 @@ msgstr ""
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ "
 "的角度, 旧交易中包含的 4 字节 (32位) ``版本`` 字段被分为两个字段: ``版本`` 和 ``类型`` (均由两个字节构成)。"
 
-#: ../../developers/integration.rst:97
+#: ../../developers/integration.rst:108
 msgid ""
 "Refer to the `Special Transactions <https://dashcore.readme.io/docs/core-"
 "ref-transactions-special-transactions>`__ section of the dash developer "
 "reference for additional detail on these data types, e.g. <variable int>."
 msgstr ""
 
-#: ../../developers/integration.rst:101
+#: ../../developers/integration.rst:112
 msgid ""
 ":ref:`InstantSend <integration-instantsend>` status and Payload JSON (e.g. "
 "``proRegTx``) is included in the JSON-RPC response, please note that this "
 "data is not part of the calculated hash and is provided for convenience."
 msgstr ""
 
-#: ../../developers/integration.rst:106
+#: ../../developers/integration.rst:117
 msgid ""
 "See the `v0.13.0 transaction types integration documentation (PDF) "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
@@ -391,20 +390,20 @@ msgstr ""
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
 "Resources-Dash-v0.13.0-Transaction-Types.pdf>`__ 来获取每个交易类型的可用实例。"
 
-#: ../../developers/integration.rst:113
+#: ../../developers/integration.rst:124
 msgid "InstantSend"
 msgstr "即时支付"
 
-#: ../../developers/integration.rst:115
+#: ../../developers/integration.rst:126
 msgid ""
 "This documentation is also available as a `PDF "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend.pdf>`__."
 msgstr ""
 "本文档的 PDF 版本 `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0"
-".14_LLMQ_InstantSend_ZH-CN.pdf>`__."
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend_ZH-"
+"CN.pdf>`__."
 
-#: ../../developers/integration.rst:117
+#: ../../developers/integration.rst:128
 msgid ""
 "InstantSend is a feature provided by the Dash network that allows for zero-"
 "confirmation transactions to be safely accepted and re-spent. The network "
@@ -414,7 +413,7 @@ msgid ""
 msgstr ""
 "即时支付是Dash网络提供的交易功能，可以使用户安全接收并花费零确认的交易。在交易向网络广播时，网络会锁定每一笔有效交易。每个安全的交易都写入在随后的区块中，符合标准的区块链规则。"
 
-#: ../../developers/integration.rst:123
+#: ../../developers/integration.rst:134
 msgid ""
 "InstantSend is enabled by the Masternode Network which comprises "
 "approximately 5,000 masternode servers. These nodes are differentiated from "
@@ -423,43 +422,39 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Sybil_attack>`__. Masternodes form `Long-"
 "Living Masternode Quorums (LLMQs) "
 "<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, which are "
-"responsible for providing near instant certainty to the transaction "
+"responsible for providing near-instant certainty to the transaction "
 "participants that the transaction inputs cannot be respent, and that the "
 "transaction will be included in a following block instead of a conflicting "
 "transaction."
 msgstr ""
-"即时支付功能是由Dash全网约5,000个主节点支持实现的。主节点不同于标准的全节点，架设者需要持有1,000个Dash作为证明，这使得网络能够有效防御"
-" `女巫攻击 <https://en.wikipedia.org/wiki/Sybil_attack>`__. 主节点形成 `长效主节点仲裁链 "
-"(LLMQs) <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, "
-"它能够立刻确认交易有效性并锁定交易输入，使其无法被双花。这个交易会被写入随后的区块中，不会产生交易冲突。"
 
-#: ../../developers/integration.rst:133
+#: ../../developers/integration.rst:144
 msgid ""
 "This concept works as an extension to Nakamoto Consensus. InstantSend "
 "enables transacted funds to be immediately and securely respent by the "
 "recipient, even before the transaction is included in a block."
 msgstr "此概念是对中本聪共识的扩展延伸。即时发送功能使收款方能够安全地立刻使用刚收到的交易资金，甚至在该交易还未被写入区块前就可以使用。"
 
-#: ../../developers/integration.rst:139
+#: ../../developers/integration.rst:150
 msgid "Receiving InstantSend Transactions"
 msgstr "接收即时发送交易"
 
-#: ../../developers/integration.rst:141
+#: ../../developers/integration.rst:152
 msgid "Receiving an InstantSend Transaction introduces two requirements:"
 msgstr "接收一个即时发送交易需要两个条件："
 
-#: ../../developers/integration.rst:143
+#: ../../developers/integration.rst:154
 msgid ""
 "The ability to determine the “InstantSend Status” of a given transaction."
 msgstr "确认一个交易的”即时发送状态“"
 
-#: ../../developers/integration.rst:146
+#: ../../developers/integration.rst:157
 msgid ""
 "The ability to adjust “Confirmation Status” independently of block "
 "confirmation."
 msgstr "独立地调整区块确认数与”确认状态“。"
 
-#: ../../developers/integration.rst:149
+#: ../../developers/integration.rst:160
 msgid ""
 "InstantSend Status is typically determined through direct connection with "
 "the dash daemon, `ZMQ notification "
@@ -469,7 +464,7 @@ msgstr ""
 "”即时发送“状态通常可以通过与 dash 进程的直接连接来判断，`ZMQ notification "
 "<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__，或使用一个外部钱包通知脚本。"
 
-#: ../../developers/integration.rst:153
+#: ../../developers/integration.rst:164
 msgid ""
 "**Direct Connection:** InstantSend Status can be identified through direct "
 "connection with the Dash daemon using JSON-RPC protocol. The “instantlock” "
@@ -479,7 +474,7 @@ msgstr ""
 "**直接连接：** 即时发送状态能通过使用 JSON-RPC 协议与 Dash 进程直接连接来判断。JSON "
 "返回的交易”即时锁“属性反应了交易的状态，它被包含在如下命令："
 
-#: ../../developers/integration.rst:168
+#: ../../developers/integration.rst:178
 msgid ""
 "**ZMQ Notification:** Whenever a transaction enters the mempool and whenever"
 " a transaction is locked in the mempool, ZMQ notifications can be broadcast "
@@ -489,29 +484,29 @@ msgstr ""
 "**ZMQ通知:** 无论何时，当交易进入记忆池及交易被锁定在记忆池时，节点会进行ZMQ通知广播。可能的ZMQ通知列表可以在 `这里 "
 "<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__ 找到。"
 
-#: ../../developers/integration.rst:173
+#: ../../developers/integration.rst:183
 msgid ""
 "The following notifications are relevant for recognizing transactions and "
 "their corresponding instantlocks:"
 msgstr "以下通知与识别交易及相对的即时锁有关："
 
-#: ../../developers/integration.rst:176
+#: ../../developers/integration.rst:186
 msgid "zmqpubhashtx"
 msgstr "zmqpubhashtx"
 
-#: ../../developers/integration.rst:177
+#: ../../developers/integration.rst:187
 msgid "zmqpubhashtxlock"
 msgstr "zmqpubhashtxlock"
 
-#: ../../developers/integration.rst:178
+#: ../../developers/integration.rst:188
 msgid "zmqpubrawtx"
 msgstr "zmqpubrawtx"
 
-#: ../../developers/integration.rst:179
+#: ../../developers/integration.rst:189
 msgid "zmqpubrawtxlock"
 msgstr "zmqpubrawtxlock"
 
-#: ../../developers/integration.rst:181
+#: ../../developers/integration.rst:191
 msgid ""
 "**Wallet Notification:** The Dash Core Daemon can be configured to execute "
 "an external script whenever an InstantSend transaction relating to that "
@@ -520,18 +515,18 @@ msgid ""
 msgstr ""
 "**钱包通知：** Dash 进程被配置为只要观察到一个与钱包相关的即时发送交易时执行一个外部脚本。在配置文件 dash.conf 添加如下行："
 
-#: ../../developers/integration.rst:188
+#: ../../developers/integration.rst:198
 msgid ""
 "This is typically used with a wallet that has been populated with `watch-"
-"only <https://dashcore.readme.io/docs/core-additional-resources-glossary"
-"#section-watch-only-address>`__ addresses."
+"only <https://dashcore.readme.io/docs/core-additional-resources-"
+"glossary#section-watch-only-address>`__ addresses."
 msgstr ""
 
-#: ../../developers/integration.rst:195
+#: ../../developers/integration.rst:205
 msgid "Broadcasting InstantSend Transactions"
 msgstr "广播即时发送功能的交易信息"
 
-#: ../../developers/integration.rst:197
+#: ../../developers/integration.rst:207
 msgid ""
 "Since Dash v0.14.0 established LLMQs on the Dash network, quorums will now "
 "attempt to lock every valid transaction by default without any additional "
@@ -542,17 +537,17 @@ msgstr ""
 "自Dash "
 "v0.14.0在网络上创建长效节点仲裁链以来，仲裁链会默认锁定每一个有效交易，用户无需发送附加费用或额外操作。当每个交易输入被确认后，该交易即适用于即时支付。满足条件至少要符合以下一种情况："
 
-#: ../../developers/integration.rst:204
+#: ../../developers/integration.rst:214
 msgid ""
 "the previous transaction referred to by the input is confirmed with 6 blocks"
 msgstr "先前的交易是指由6个区块确认的交易输入"
 
-#: ../../developers/integration.rst:206
+#: ../../developers/integration.rst:216
 msgid ""
 "the previous transaction is confirmed through an older InstantSend lock"
 msgstr "先前的交易是由更早的即时支付锁确认"
 
-#: ../../developers/integration.rst:208
+#: ../../developers/integration.rst:218
 msgid ""
 "the block containing the previous transaction is `ChainLocked "
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"
@@ -560,25 +555,25 @@ msgstr ""
 "包含先前交易的区块由 `链锁锁定 "
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"
 
-#: ../../developers/integration.rst:210
+#: ../../developers/integration.rst:220
 msgid ""
 "When checking the previous transaction for an InstantSend lock, it is "
-"important to also do this on mempool (non-mined) transactions. This allows "
+"important to do this on mempool (non-mined) transactions. This allows "
 "chained InstantSend locking."
-msgstr "当检查先前交易的即时支付锁时，在记忆池中查看 (未挖取的) 交易也十分重要。它可以形成即时支付链锁。"
+msgstr ""
 
-#: ../../developers/integration.rst:215
+#: ../../developers/integration.rst:225
 msgid "Additional Resources"
 msgstr "其它资源"
 
-#: ../../developers/integration.rst:217
+#: ../../developers/integration.rst:227
 msgid ""
 "The following resources provide additional information about InstantSend and"
 " are intended to help provide a more complete understanding of the "
 "underlying technologies."
 msgstr "下列资源提供即时发送功能的更多信息，以便帮助用户全面地了解它的基础技术。"
 
-#: ../../developers/integration.rst:221
+#: ../../developers/integration.rst:231
 msgid ""
 "`InstantSend Technical Information "
 "<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__"
@@ -586,13 +581,13 @@ msgstr ""
 "`即时发送技术信息 "
 "<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__"
 
-#: ../../developers/integration.rst:222
+#: ../../developers/integration.rst:232
 msgid ""
 "`InstantSend Developer Documentation <https://dashcore.readme.io/docs/core-"
 "guide-dash-features-instantsend>`__"
 msgstr ""
 
-#: ../../developers/integration.rst:223
+#: ../../developers/integration.rst:233
 msgid ""
 "`DIP0010: LLMQ InstantSend "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__"
@@ -600,7 +595,7 @@ msgstr ""
 "`DIP0010: LLMQ 即时支付 "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__"
 
-#: ../../developers/integration.rst:224
+#: ../../developers/integration.rst:234
 msgid ""
 "`Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-"
 "brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__"
@@ -608,62 +603,52 @@ msgstr ""
 "`产品概述: Dash Core v0.14 发布 <https://blog.dash.org/product-brief-dash-core-"
 "release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__"
 
-#: ../../developers/integration.rst:230
+#: ../../developers/integration.rst:240
 msgid "API Services"
 msgstr "API 服务"
 
-#: ../../developers/integration.rst:232
-msgid ""
-"This documentation is also available as a `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
-"Resources-API.pdf>`__."
-msgstr ""
-"该文档的 PDF 版本 `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
-"Resources-API.pdf>`__。"
-
-#: ../../developers/integration.rst:234
+#: ../../developers/integration.rst:242
 msgid ""
 "Several API services exist to facilitate quick and easy integration with the"
 " Dash network for services including:"
 msgstr "现有的多种应用程序接口服务可以帮助用户轻松、快捷地享受达世币网络的各项服务，其中包括："
 
-#: ../../developers/integration.rst:237
+#: ../../developers/integration.rst:245
 msgid "Transaction broadcasting"
 msgstr "交易广播"
 
-#: ../../developers/integration.rst:238
+#: ../../developers/integration.rst:246
 msgid "Exchange rates"
 msgstr "汇率"
 
-#: ../../developers/integration.rst:239
+#: ../../developers/integration.rst:247
 msgid "Currency conversion"
 msgstr "货币兑换"
 
-#: ../../developers/integration.rst:240
+#: ../../developers/integration.rst:248
 msgid "Invoice generation"
 msgstr "发票生成"
 
-#: ../../developers/integration.rst:242
+#: ../../developers/integration.rst:250
 msgid ""
 "API Services are typically leveraged to eliminate that requirement of "
 "running your own infrastructure to support blockchain interactions. This "
 "includes mechanisms such as:"
 msgstr "应用程序接口的意义在于它可以免除用户为实现区块链交互而运行基础设施的麻烦。其中涉及的机制和流程包括："
 
-#: ../../developers/integration.rst:246
+#: ../../developers/integration.rst:254
 msgid "Forming and Broadcasting a Transaction to the network."
 msgstr "向达世币网络公告交易信息。"
 
-#: ../../developers/integration.rst:247
+#: ../../developers/integration.rst:255
 msgid "Address generation using HD Wallets."
 msgstr "通过HD钱包生成地址。"
 
-#: ../../developers/integration.rst:248
+#: ../../developers/integration.rst:256
 msgid "Payment Processing using WebHooks."
 msgstr "通过WebHooks处理支付。"
 
-#: ../../developers/integration.rst:250
+#: ../../developers/integration.rst:258
 msgid ""
 "There are a variety of options for supporting these methods, with the key "
 "differentiator being the pricing model included and supported features. The "
@@ -671,15 +656,15 @@ msgid ""
 "features/differentiators and also includes a link to related documentation."
 msgstr "以定价模式和支持的功能为区分标准，市面上可供使用的设备有很多。下表罗列了常见的应用程序接口供应商、主打产品的性能和相关说明文档的链接。"
 
-#: ../../developers/integration.rst:258
+#: ../../developers/integration.rst:266
 msgid "Insight"
 msgstr "Insight"
 
-#: ../../developers/integration.rst:265
+#: ../../developers/integration.rst:273
 msgid "https://github.com/dashevo/insight-api"
 msgstr "https://github.com/dashevo/insight-api"
 
-#: ../../developers/integration.rst:267
+#: ../../developers/integration.rst:275
 msgid ""
 "The open-source Insight REST API provides you with a convenient, powerful "
 "and simple way to read data from the Dash network and build your own "
@@ -689,27 +674,27 @@ msgstr ""
 "开源 REST API 给你提供一个方便强大而简单的读取 Dash 网络和利用它构建你自己服务的方式。开始使用 Insight API 和 "
 "Insight UI 区块浏览器的实用手册 :ref:`<insight-api>`。"
 
-#: ../../developers/integration.rst:273
+#: ../../developers/integration.rst:281
 msgid "Features: Transaction Broadcast, WebSocket Notifications."
 msgstr "功能：交易的广播和WebSocket通知。"
 
-#: ../../developers/integration.rst:274
+#: ../../developers/integration.rst:282
 msgid "Pricing Model: Free / Open Source"
 msgstr "定价：免费/开源"
 
-#: ../../developers/integration.rst:275
+#: ../../developers/integration.rst:283
 msgid "Documentation: https://github.com/dashevo/insight-api"
 msgstr "说明文档的链接: https://github.com/dashevo/insight-api"
 
-#: ../../developers/integration.rst:279 ../../developers/integration.rst:555
+#: ../../developers/integration.rst:287 ../../developers/integration.rst:561
 msgid "BlockCypher"
 msgstr "BlockCypher"
 
-#: ../../developers/integration.rst:286 ../../developers/integration.rst:562
+#: ../../developers/integration.rst:294 ../../developers/integration.rst:568
 msgid "https://www.blockcypher.com"
 msgstr "https://www.blockcypher.com"
 
-#: ../../developers/integration.rst:288
+#: ../../developers/integration.rst:296
 msgid ""
 "BlockCypher is a simple, mostly RESTful JSON API for interacting with "
 "blockchains, accessed over HTTP or HTTPS from the api.blockcypher.com "
@@ -717,7 +702,7 @@ msgid ""
 msgstr ""
 "BlockCypher是简单实用的JSON应用程序接口，可实现与区块链的交互，还可以借助HTTP或HTTPS在api.blockcypher.com域名上进行访问。"
 
-#: ../../developers/integration.rst:292
+#: ../../developers/integration.rst:300
 msgid ""
 "Features: Transaction Broadcast, HD Wallet / Address Generation, WebSocket "
 "and WebHook Callbacks as well as Payment Forwarding. BlockCypher does not "
@@ -725,156 +710,154 @@ msgid ""
 msgstr ""
 "功能：交易的广播、HD钱包及地址的生成、WebSocket和WebHook的回调，以及交易的推送。BlockCypher不处理私钥的相关事务。"
 
-#: ../../developers/integration.rst:295
+#: ../../developers/integration.rst:303
 msgid ""
 "Pricing Model: Per API Call, 5000 Requests -> $85.00 per month "
 "(https://accounts.blockcypher.com)"
 msgstr ""
 
-#: ../../developers/integration.rst:297
+#: ../../developers/integration.rst:305
 msgid "Documentation: https://www.blockcypher.com/dev/dash/"
 msgstr "说明文档的链接: https://www.blockcypher.com/dev/dash/"
 
-#: ../../developers/integration.rst:301
+#: ../../developers/integration.rst:309
 msgid "BitGo"
 msgstr "BitGo"
 
-#: ../../developers/integration.rst:308
+#: ../../developers/integration.rst:316
 msgid "https://www.bitgo.com"
 msgstr "https://www.bitgo.com"
 
-#: ../../developers/integration.rst:310
+#: ../../developers/integration.rst:318
 msgid ""
 "BitGo provides a simple and robust RESTful API and client SDK to integrate "
 "digital currency wallets with your application. Support for Dash InstantSend"
 " is available."
 msgstr "BitGo 提供一个简单有力的 RESTful API 和用户 SDK 来为你的应用整合数字货币钱包。同时支持 Dash 即时发送。"
 
-#: ../../developers/integration.rst:314
+#: ../../developers/integration.rst:322
 msgid ""
 "Features: Multi-Signature HD Wallets, Wallet Operations, WebSocket and "
 "WebHook Notifications, Custody Solutions"
 msgstr "功能：多用户签名 HD 钱包，钱包操作，WebSocket 和 WebHook 通知，保管解决方案"
 
-#: ../../developers/integration.rst:316
+#: ../../developers/integration.rst:324
 msgid "Pricing Model: Per API Call"
 msgstr "价值模型: 每个 API 调用"
 
-#: ../../developers/integration.rst:317
+#: ../../developers/integration.rst:325
 msgid "Documentation: https://app.bitgo.com/docs/"
 msgstr ""
 
-#: ../../developers/integration.rst:320
+#: ../../developers/integration.rst:328
 msgid "ChainRider"
 msgstr "ChainRider"
 
-#: ../../developers/integration.rst:327
+#: ../../developers/integration.rst:335
 msgid "https://www.chainrider.io"
 msgstr "https://www.chainrider.io"
 
-#: ../../developers/integration.rst:329
+#: ../../developers/integration.rst:337
 msgid ""
 "ChainRider is a cloud service providing a set of REST APIs for digital "
 "currency management and exploration."
 msgstr "ChainRider是云服务平台，为数字货币的管理和探究提供一套REST应用程序接口。"
 
-#: ../../developers/integration.rst:332
+#: ../../developers/integration.rst:340
 msgid ""
 "Features: Blockchain queries, Event Notifications, Transaction Broadcast, "
 "Payment Processing, etc."
 msgstr "功能：区块链询问，事件通知，交易广播，支付处理，等。"
 
-#: ../../developers/integration.rst:334
+#: ../../developers/integration.rst:342
 msgid "Pricing Model: Free trial, pay per API call"
 msgstr "定价：免费试用，每次API调用时付费"
 
-#: ../../developers/integration.rst:335
+#: ../../developers/integration.rst:343
 msgid "Documentation: https://www.chainrider.io/docs/dash/"
 msgstr ""
 
-#: ../../developers/integration.rst:339
+#: ../../developers/integration.rst:347
 msgid "Blockmove"
 msgstr ""
 
-#: ../../developers/integration.rst:346
+#: ../../developers/integration.rst:354
 msgid "https://blockmove.io"
 msgstr ""
 
-#: ../../developers/integration.rst:348
+#: ../../developers/integration.rst:356
 msgid ""
 "Сryptocurrency wallet, merchant & API provider. Blockmove is a simple and "
 "easy way to start accepting payments in cryptocurrency."
 msgstr ""
 
-#: ../../developers/integration.rst:351
+#: ../../developers/integration.rst:359
 msgid ""
 "Features: Non-custodial wallet, HD Wallet, High anonymity, Low fees. Private"
 " keys are not stored and are available only to the user."
 msgstr ""
 
-#: ../../developers/integration.rst:353
+#: ../../developers/integration.rst:361
 msgid ""
 "Pricing Model: API - 0.3% for withdrawal transactions. Merchant - 1 year "
 "free, then $49/month"
 msgstr ""
 
-#: ../../developers/integration.rst:355
+#: ../../developers/integration.rst:363
 msgid "Documentation: https://docs.blockmove.io"
 msgstr ""
 
-#: ../../developers/integration.rst:359
+#: ../../developers/integration.rst:367
 msgid "NOWNodes"
 msgstr ""
 
-#: ../../developers/integration.rst:366
+#: ../../developers/integration.rst:374
 msgid "https://nownodes.io/"
 msgstr ""
 
-#: ../../developers/integration.rst:368
+#: ../../developers/integration.rst:376
 msgid ""
-"NOWNodes provides simple, fast, and secure RPC access to Dash full nodes. "
-"The low latency and high performance is of great use to researchers and "
-"businesses such as crypto miners or hardware wallet providers."
+"NOWNodes provides simple, fast, and secure RPC access to Dash-based full "
+"nodes. The low latency and high performance is of great use to researchers "
+"and businesses such as crypto miners or hardware wallet providers."
 msgstr ""
 
-#: ../../developers/integration.rst:373
+#: ../../developers/integration.rst:381
 msgid "Features: All Dash RPC commands"
 msgstr ""
 
-#: ../../developers/integration.rst:374
+#: ../../developers/integration.rst:382
 msgid "Pricing Model: Free up to 20k requests, Pricing tiers"
 msgstr ""
 
-#: ../../developers/integration.rst:375
+#: ../../developers/integration.rst:383
 msgid "Documentation: https://nownodes.io/documentation"
 msgstr ""
 
-#: ../../developers/integration.rst:379
+#: ../../developers/integration.rst:387
 msgid "CoinPayments"
 msgstr "CoinPayments"
 
-#: ../../developers/integration.rst:386
+#: ../../developers/integration.rst:394
 msgid "https://www.coinpayments.net"
 msgstr "https://www.coinpayments.net"
 
-#: ../../developers/integration.rst:388
+#: ../../developers/integration.rst:396
 msgid ""
 "CoinPayments is an integrated payment gateway for cryptocurrencies such as "
 "Dash. Shopping cart plugins are available for all popular webcarts used "
-"today. CoinPayments can help you set up a new checkout, or integrate with "
+"today. CoinPayments can help you set up a new checkout or integrate with "
 "your pre-existing checkout."
 msgstr ""
-"CoinPayments是适用于达世币等加密数字货币的集成支付网关。它为当前流行的所有webcarts提供购物车插件，还可以帮助用户设置新的结帐页面或合并之前的结帐页面。"
 
-#: ../../developers/integration.rst:393
+#: ../../developers/integration.rst:401
 msgid ""
 "Features: Invoicing, Exchange Rates, WebHook Callbacks. CoinPayments holds "
-"Private Keys on their server allowing merchant to withdraw funds in "
-"Cryptocurrency or convert to Fiat."
+"Private Keys on their server allowing merchants to withdraw funds in "
+"Cryptocurrency or convert to fiat."
 msgstr ""
-"功能：发票生成、汇率及WebHook回调。CoinPayments在其服务器上保存私钥，帮助商家以加密数字货币的形式提款或实现加密数字货币与法定货币间的兑换。"
 
-#: ../../developers/integration.rst:396
+#: ../../developers/integration.rst:404
 msgid ""
 "Integrations: aMember Pro, Arastta, Blesta, BoxBilling, Drupal, Ecwid, "
 "Hikashop, Magento, OpenCart, OSCommerce, PrestaShop, Tomato Cart, "
@@ -884,30 +867,20 @@ msgstr ""
 "Pro、Arastta、Blesta、BoxBilling、Drupal、Ecwid、Hikashop、Magento、OpenCart、OSCommerce、PrestaShop、Tomato"
 " Cart、WooCommerce、Ubercart、XCart及ZenCart"
 
-#: ../../developers/integration.rst:399
+#: ../../developers/integration.rst:407
 msgid ""
 "Pricing Model: 0.5% Processing Fee (https://www.coinpayments.net/help-fees)"
 msgstr "定价：收取0.5%的交易费用(https://www.coinpayments.net/help-fees)"
 
-#: ../../developers/integration.rst:401
+#: ../../developers/integration.rst:409
 msgid "Documentation: https://www.coinpayments.net/apidoc"
 msgstr "说明文档的链接: https://www.coinpayments.net/apidoc"
 
-#: ../../developers/integration.rst:407
+#: ../../developers/integration.rst:415
 msgid "SDK Resources"
 msgstr "软件开发工具包资源"
 
-#: ../../developers/integration.rst:409
-msgid ""
-"This documentation is also available as a `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
-"Resources-SDK.pdf>`__."
-msgstr ""
-"本文档PDF 版本 `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
-"Resources-SDK.pdf>`__."
-
-#: ../../developers/integration.rst:411
+#: ../../developers/integration.rst:417
 msgid ""
 "SDKs (Software Development Kits) are used to accelerate the design and "
 "development of a product for the Dash Network. These resources can either be"
@@ -918,15 +891,15 @@ msgstr ""
 "SDKs ( 软件开发包) 用来加速设计和开发一个 Dash 网络产品。这些资源可被用来与一个 API "
 "提供者交互或通过构造交易与执行不同的钱包功能来创建独立应用。"
 
-#: ../../developers/integration.rst:419
+#: ../../developers/integration.rst:425
 msgid "Dash Developer Guide"
 msgstr "达世币研发者指南"
 
-#: ../../developers/integration.rst:426
+#: ../../developers/integration.rst:432
 msgid "https://dashcore.readme.io/"
 msgstr ""
 
-#: ../../developers/integration.rst:428
+#: ../../developers/integration.rst:434
 msgid ""
 "The Dash Developer Portal aims to provide the information you need to "
 "understand Dash and start building Dash-based applications. To make the best"
@@ -935,23 +908,23 @@ msgid ""
 "executable or from Docker Hub."
 msgstr ""
 
-#: ../../developers/integration.rst:434
+#: ../../developers/integration.rst:440
 msgid "Dash Core: https://dashcore.readme.io/"
 msgstr ""
 
-#: ../../developers/integration.rst:435
+#: ../../developers/integration.rst:441
 msgid "Dash Platform: https://dashplatform.readme.io/"
 msgstr ""
 
-#: ../../developers/integration.rst:438
+#: ../../developers/integration.rst:444
 msgid "NodeJS/JavaScript: Dashcore"
 msgstr "NodeJS/JavaScript: Dashcore"
 
-#: ../../developers/integration.rst:445
+#: ../../developers/integration.rst:451
 msgid "https://bitcore.io"
 msgstr "https://bitcore.io"
 
-#: ../../developers/integration.rst:447
+#: ../../developers/integration.rst:453
 msgid ""
 "Dashcore is a fork of Bitcore and operates as a full Dash node — your apps "
 "run directly on the peer-to-peer network. For wallet application "
@@ -961,83 +934,83 @@ msgstr ""
 "Dashcore是Bitcore的一个分叉。它以一个达世币全节点的方式运行 — "
 "也就是说，应用程序将在P2P网络上直接运行。对于钱包应用的开发来说，研发者需要增加额外的索引，以便查询地址余额、交易历史记录和未经支出的额度。"
 
-#: ../../developers/integration.rst:452 ../../developers/integration.rst:465
+#: ../../developers/integration.rst:458 ../../developers/integration.rst:471
 msgid "Platform: NodeJS / Javascript"
 msgstr "平台：NodeJS或Javascript"
 
-#: ../../developers/integration.rst:453
+#: ../../developers/integration.rst:459
 msgid ""
 "Documentation: https://github.com/dashevo/dashcore-"
 "lib/blob/master/README.md#documentation"
 msgstr ""
 
-#: ../../developers/integration.rst:454
+#: ../../developers/integration.rst:460
 msgid "Repository lib: https://github.com/dashevo/dashcore-lib"
 msgstr "存储库：https://github.com/dashevo/dashcore-lib"
 
-#: ../../developers/integration.rst:455
+#: ../../developers/integration.rst:461
 msgid "Repository node: https://github.com/dashevo/dashcore-node"
 msgstr "存储节点：https://github.com/dashevo/dashcore-node"
 
-#: ../../developers/integration.rst:456
+#: ../../developers/integration.rst:462
 msgid "See also: `Insight API <https://github.com/dashevo/insight-api>`__"
 msgstr "参考: `Insight API <https://github.com/dashevo/insight-api>`__"
 
-#: ../../developers/integration.rst:459
+#: ../../developers/integration.rst:465
 msgid "NodeJS/JavaScript: DashJS"
 msgstr ""
 
-#: ../../developers/integration.rst:461
+#: ../../developers/integration.rst:467
 msgid ""
 "DashJS allows you to transact on L1 or fetch/register documents on L2 within"
 " a single library, including management and signing of your documents."
 msgstr ""
 
-#: ../../developers/integration.rst:466
+#: ../../developers/integration.rst:472
 msgid "Documentation: https://dashevo.github.io/js-dash-sdk/"
 msgstr ""
 
-#: ../../developers/integration.rst:467
+#: ../../developers/integration.rst:473
 msgid "Repository: https://github.com/dashevo/js-dash-sdk"
 msgstr ""
 
-#: ../../developers/integration.rst:470
+#: ../../developers/integration.rst:476
 msgid "PHP: Bitcoin-PHP"
 msgstr "PHP: Bitcoin-PHP"
 
-#: ../../developers/integration.rst:472
+#: ../../developers/integration.rst:478
 msgid "https://github.com/Bit-Wasp/bitcoin-php"
 msgstr "https://github.com/Bit-Wasp/bitcoin-php"
 
-#: ../../developers/integration.rst:474
+#: ../../developers/integration.rst:480
 msgid ""
 "Bitcoin-PHP is an implementation of Bitcoin with support for Dash using "
 "mostly pure PHP."
 msgstr "Bitcoin-PHP 是纯PHP 实现的支持 Dash 的 Bitcoin。"
 
-#: ../../developers/integration.rst:477
+#: ../../developers/integration.rst:483
 msgid "Platform: PHP"
 msgstr "平台: PHP"
 
-#: ../../developers/integration.rst:478
+#: ../../developers/integration.rst:484
 msgid ""
 "Documentation: https://github.com/Bit-Wasp/bitcoin-"
 "php/blob/1.0/doc/documentation/Introduction.md"
 msgstr ""
 
-#: ../../developers/integration.rst:479
-msgid "Repository: https://github.com/Bit-Wasp/bitcoin-php"
-msgstr "资源库: https://github.com/Bit-Wasp/bitcoin-php"
+#: ../../developers/integration.rst:485
+msgid "Repository: https://github.com/snogcel/bitcoin-php"
+msgstr "仓库: https://github.com/snogcel/bitcoin-php"
 
-#: ../../developers/integration.rst:482
+#: ../../developers/integration.rst:488
 msgid "Python: PyCoin"
 msgstr "Python: PyCoin"
 
-#: ../../developers/integration.rst:484
+#: ../../developers/integration.rst:490
 msgid "https://github.com/richardkiss/pycoin"
 msgstr "https://github.com/richardkiss/pycoin"
 
-#: ../../developers/integration.rst:486
+#: ../../developers/integration.rst:492
 msgid ""
 "PyCoin is an implementation of a bunch of utility routines that may be "
 "useful when dealing with Bitcoin and Dash. It has been tested with Python "
@@ -1045,32 +1018,34 @@ msgid ""
 msgstr ""
 "PyCoin 是一个在处理 Bitcoin 与 Dash 时很有用的一系列工具。已在 Python 2.7, 3.6 和 3.7环境下测试。"
 
-#: ../../developers/integration.rst:490
+#: ../../developers/integration.rst:496
 msgid "Platform: Python"
 msgstr "平台: Python"
 
-#: ../../developers/integration.rst:491
+#: ../../developers/integration.rst:497
 msgid "Documentation: https://pycoin.readthedocs.io/en/latest/"
 msgstr "文档: https://pycoin.readthedocs.io/en/latest/"
 
-#: ../../developers/integration.rst:492
+#: ../../developers/integration.rst:498
 msgid "Repository: https://github.com/richardkiss/pycoin"
 msgstr "资源库: https://github.com/richardkiss/pycoin"
 
-#: ../../developers/integration.rst:493
+#: ../../developers/integration.rst:499
 msgid ""
-"See also: `JSON-RPC Utilities <https://github.com/richardkiss/pycoin>`__"
+"See also: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-"
+"dashrpc>`__"
 msgstr ""
+"参考: `JSON-RPC Utilities <https://github.com/DeltaEngine/python-dashrpc>`__"
 
-#: ../../developers/integration.rst:496
+#: ../../developers/integration.rst:502
 msgid "Java: DashJ"
 msgstr "Java: DashJ"
 
-#: ../../developers/integration.rst:503
+#: ../../developers/integration.rst:509
 msgid "https://github.com/dashevo/dashj"
 msgstr ""
 
-#: ../../developers/integration.rst:505
+#: ../../developers/integration.rst:511
 msgid ""
 "DashJ is a library for working with the Dash protocol. It can maintain a "
 "wallet, send/receive transactions (including InstantSend) without needing a "
@@ -1081,31 +1056,31 @@ msgstr ""
 "DashJ是一个适用于达世币协议的库。它可以维护钱包的运行，支持达世币的接收与发送（包括即时发送功能），同时还具备许多其它高级功能，而且还无需建立Dash"
 " Core钱包的副本。虽然它要借助Java才能实现各项功能，但它也可以借助Java虚拟机的兼容语言，其中包括Python和JavaScript中的示例。"
 
-#: ../../developers/integration.rst:511
+#: ../../developers/integration.rst:517
 msgid "Platform: Java"
 msgstr "平台：Java"
 
-#: ../../developers/integration.rst:512
+#: ../../developers/integration.rst:518
 msgid "Documentation: https://bitcoinj.org/getting-started"
 msgstr ""
 
-#: ../../developers/integration.rst:513
+#: ../../developers/integration.rst:519
 msgid "Repository: https://github.com/dashevo/dashj"
 msgstr ""
 
-#: ../../developers/integration.rst:514
+#: ../../developers/integration.rst:520
 msgid "Example application: https://github.com/tomasz-ludek/pocket-of-dash"
 msgstr "应用示例：https://github.com/tomasz-ludek/pocket-of-dash"
 
-#: ../../developers/integration.rst:517
+#: ../../developers/integration.rst:523
 msgid "Objective-C: Dash-Sync"
 msgstr "Objective-C: Dash-Sync"
 
-#: ../../developers/integration.rst:524
+#: ../../developers/integration.rst:530
 msgid "https://github.com/dashevo/dashsync-iOS"
 msgstr "https://github.com/dashevo/dashsync-iOS"
 
-#: ../../developers/integration.rst:526
+#: ../../developers/integration.rst:532
 msgid ""
 "Dash-Sync is an Objective-C Dash blockchain framework for iOS. It implements"
 " all most relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement"
@@ -1114,61 +1089,59 @@ msgstr ""
 "Dash-Sync 是一个用于 iOS 的 Objective-C Dash 区块链框架。它实现了所有与 Bitcoin 改进提案 (BIPs) 和 "
 "Dash 改进提案 (DIPs)相关的内容。"
 
-#: ../../developers/integration.rst:530
+#: ../../developers/integration.rst:536
 msgid "Platform: iOS"
 msgstr "平台: iOS"
 
-#: ../../developers/integration.rst:531
+#: ../../developers/integration.rst:537
 msgid "Repository: https://github.com/dashevo/dashsync-iOS"
 msgstr "仓库: https://github.com/dashevo/dashsync-iOS"
 
-#: ../../developers/integration.rst:534
+#: ../../developers/integration.rst:540
 msgid ".NET: NBitcoin"
 msgstr ".NET: NBitcoin"
 
-#: ../../developers/integration.rst:541
+#: ../../developers/integration.rst:547
 msgid "https://github.com/MetacoSA/NBitcoin"
 msgstr "https://github.com/MetacoSA/NBitcoin"
 
-#: ../../developers/integration.rst:543
+#: ../../developers/integration.rst:549
 msgid ""
-"NBitcoin is the most complete Bitcoin library for the .NET platform, and has"
-" been patched to include support for Dash. It implements all most relevant "
+"NBitcoin is the most complete Bitcoin library for the .NET platform and has "
+"been patched to include support for Dash. It implements all most relevant "
 "Bitcoin Improvement Proposals (BIPs) and Dash Improvement Proposals (DIPs). "
 "It also provides low level access to Dash primitives so you can easily build"
 " your application on top of it."
 msgstr ""
-"NBitcoin是.NET平台上最完整的比特币程序库，并且在修补后可支持达世币。它不仅支持最新的比特币优化提案 (BIPs) 和达世币优化提案 "
-"(DIPs) ，并且还提供对达世币原语的访问，从而帮助研发者以此为基础轻松地构建应用程序。"
 
-#: ../../developers/integration.rst:549
+#: ../../developers/integration.rst:555
 msgid "Platform: .NET"
 msgstr "平台：.NET"
 
-#: ../../developers/integration.rst:550
+#: ../../developers/integration.rst:556
 msgid ""
 "Documentation: "
 "https://programmingblockchain.gitbook.io/programmingblockchain/"
 msgstr ""
 
-#: ../../developers/integration.rst:551
+#: ../../developers/integration.rst:557
 msgid "Repository: https://github.com/MetacoSA/NBitcoin"
 msgstr "存储库：https://github.com/MetacoSA/NBitcoin"
 
-#: ../../developers/integration.rst:552
+#: ../../developers/integration.rst:558
 msgid ""
 "See also: `JSON-RPC Utilities <https://github.com/cryptean/bitcoinlib>`__"
 msgstr "参考: `JSON-RPC Utilities <https://github.com/cryptean/bitcoinlib>`__"
 
-#: ../../developers/integration.rst:564
+#: ../../developers/integration.rst:570
 msgid "BlockCypher also offers client SDKs."
 msgstr "BlockCypher也提供软件开发工具箱。"
 
-#: ../../developers/integration.rst:566
+#: ../../developers/integration.rst:572
 msgid "Platform: Ruby, Python, Java, PHP, Go, NodeJS"
 msgstr "平台：Ruby、Python、Java、PHP、Go及NodeJS"
 
-#: ../../developers/integration.rst:567
+#: ../../developers/integration.rst:573
 msgid ""
 "Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-supported-"
 "language-sdks"
@@ -1176,44 +1149,38 @@ msgstr ""
 "存储库：https://www.blockcypher.com/dev/dash/#blockcypher-supported-language-"
 "sdks"
 
-#: ../../developers/integration.rst:571
+#: ../../developers/integration.rst:577
 msgid "Vending Machines"
 msgstr "自动贩卖机"
 
-#: ../../developers/integration.rst:573
+#: ../../developers/integration.rst:579
 msgid ""
 "Community member moocowmoo has released code to help merchants build their "
 "own vending machine and set it up to receive Dash InstantSend payments. The "
 "Dashvend software can also be used to create any sort of payment system, "
-"including point-of-sale systems, that can accept InstantSend payments."
+"including point-of-sale systems that can accept InstantSend payments."
 msgstr ""
-"达世币社区成员moocowmoo已经发布了代码，致力于帮助商家建立属于自己的自动售货机并使用即时发送功能接收顾客支付的款项。 "
-"Dashvend软件可用于创建任何类型的支付系统，其中包括支持即时发送功能的POS系统。"
 
-#: ../../developers/integration.rst:579
+#: ../../developers/integration.rst:585
 msgid "`Open Source Code <https://github.com/moocowmoo/dashvend>`_"
 msgstr "`源代码 <https://github.com/moocowmoo/dashvend>`_"
 
-#: ../../developers/integration.rst:580
-msgid "`Demonstration website <http://code.dashndrink.com>`_"
-msgstr "`演示网站 <http://code.dashndrink.com>`_"
-
-#: ../../developers/integration.rst:581
+#: ../../developers/integration.rst:586
 msgid "`Demonstration video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_"
 msgstr "`演示视频 <https://www.youtube.com/watch?v=SX-3kwbam0o>`_"
 
-#: ../../developers/integration.rst:585
+#: ../../developers/integration.rst:590
 msgid "Price Tickers"
 msgstr "价格提示器"
 
-#: ../../developers/integration.rst:587
+#: ../../developers/integration.rst:592
 msgid ""
 "You can add a simple price ticker widget to your website using the simple "
 "`code snippet generator from CoinGecko "
 "<https://www.coingecko.com/en/widgets/coin_ticker_widget>`_."
 msgstr ""
 
-#: ../../developers/integration.rst:597
+#: ../../developers/integration.rst:602
 msgid ""
 "Similar widgets with different designs are available from `CoinLib "
 "<https://coinlib.io/widgets>`_, `WorldCoinIndex "
@@ -1227,40 +1194,37 @@ msgstr ""
 "<https://www.cryptonator.com/widget>`_\\ 上还提供了具备不同设计和类似功能的组件。此外，\\ "
 "`DashCentral <https://www.dashcentral.org/about/api>`_\\ 也提供类似信息的应用程序接口。"
 
-#: ../../developers/integration.rst:605
+#: ../../developers/integration.rst:610
 msgid "QR Codes"
 msgstr "二维码"
 
-#: ../../developers/integration.rst:607
-msgid ""
-"Many wallets are capable of generating QR codes which can be scanned to "
-"simplify entry of the Dash address. Printing these codes or posting the on "
-"your website makes it easy to receive payment and tips in Dash, both online "
-"and offline."
-msgstr "很多钱包都能生成二维码，以便用户扫描和简化达世币地址的使用。打印二维码或将二维码公布在网站上可以简化二维码的线上和线下交易流程。"
-
 #: ../../developers/integration.rst:612
 msgid ""
+"Many wallets can generate QR codes that are scannable to simplify entry of "
+"the Dash address. Printing these codes or posting the on your website makes "
+"it easy to receive payment and tips in Dash, both online and offline."
+msgstr ""
+
+#: ../../developers/integration.rst:617
+msgid ""
 "In Dash Core, go to the **Receive** tab, generate an address if necessary, "
-"and double-click it to display a QR code. Right click on the QR code and "
+"and double-click it to display a QR code. Right-click on the QR code and "
 "select **Save Image** to save a PNG file."
 msgstr ""
-"Dash Core钱包的用户可以打开 **接收** 选项卡，在必要的情况下生成地址，然后双击生成二维码。然后，右键单击二维码，并以PNG文件格式 "
-"**保存图片**。"
 
-#: ../../developers/integration.rst:615
+#: ../../developers/integration.rst:620
 msgid ""
 "In Dash for Android, tap **Request Coins** and then tap the QR code to "
 "display a larger image. You can screenshot this to save an image."
 msgstr "Android版达世币钱包的用户可以点击 **申请付款** ，然后点击放大二维码，并截图保存。"
 
-#: ../../developers/integration.rst:617
+#: ../../developers/integration.rst:622
 msgid ""
 "In Dash for iOS, swipe to the left to display the **Receive Dash** screen. A"
 " QR code and address will appear. You can screenshot this to save an image."
 msgstr "iOS版达世币钱包的用户可以向左滑动，找到 **接收达世币** 页面。此时，页面上将显示二维码和达世币地址，用户就可以截图保存图像了。"
 
-#: ../../developers/integration.rst:620
+#: ../../developers/integration.rst:625
 msgid ""
 "To generate a QR code from any Dash address, visit `CWA QR Code Generator "
 "<https://cwaqrgen.com/dash>`_ and simply paste your Dash address to generate"

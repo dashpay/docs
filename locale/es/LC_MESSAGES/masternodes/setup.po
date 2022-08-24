@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Dash Core Group, Inc
+# Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-26 16:41-0400\n"
+"POT-Creation-Date: 2021-11-10 09:35-0500\n"
 "PO-Revision-Date: 2018-03-29 10:35+0000\n"
 "Last-Translator: JZA <jza@oooes.org>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../masternodes/setup.rst:1
 msgid ""
@@ -286,9 +286,9 @@ msgid ""
 " by logging in to your server with the user ``root`` and password supplied "
 "by your hosting provider."
 msgstr ""
-"Ahora estás conectado a tu servidor y deberías ver una ventana de terminal. "
-"Comienza por iniciar sesión en tu servidor con el usuario ``root`` y la "
-"contraseña proporcionada por tu proveedor de alojamiento."
+"Ahora estás conectado a tu servidor y deberías ver una ventana de "
+"terminal. Comienza por iniciar sesión en tu servidor con el usuario ``root``"
+" y la contraseña proporcionada por tu proveedor de alojamiento."
 
 #: ../../masternodes/setup.rst:166
 msgid "Password challenge when connecting to your VPS for the first time"
@@ -912,9 +912,9 @@ msgstr ""
 
 #: ../../masternodes/setup.rst:648
 msgid ""
-"At this point you can monitor your masternode by entering ``~/.dashcore"
-"/dash-cli masternode status`` or using the **Get status** function in DMT. "
-"The final result should appear as follows:"
+"At this point you can monitor your masternode by entering "
+"``~/.dashcore/dash-cli masternode status`` or using the **Get status** "
+"function in DMT. The final result should appear as follows:"
 msgstr ""
 
 #: ../../masternodes/setup.rst:655

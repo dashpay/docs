@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2020, Dash Core Group, Inc
+# Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-26 16:41-0400\n"
+"POT-Creation-Date: 2021-11-10 09:35-0500\n"
 "PO-Revision-Date: 2019-01-11 06:53+0000\n"
 "Last-Translator: Daf Daf, 2021\n"
 "Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../developers/insight.rst:1
 msgid ""
@@ -104,9 +104,8 @@ msgid "Change the value of ``datadir`` to ``../../.dashcore``"
 msgstr "Définissez la valeur de ``datadir`` comme ``../../.dashcore``"
 
 #: ../../developers/insight.rst:58
-msgid "Change the value of ``exec`` to ``../../dashcore-0.16.1/bin/dashd``"
+msgid "Change the value of ``exec`` to ``../../dashcore-0.17.0/bin/dashd``"
 msgstr ""
-"Définissez la valeur de ``exec`` comme ``../../dashcore-0.16.1/bin/dashd``"
 
 #: ../../developers/insight.rst:59
 msgid ""
@@ -129,8 +128,9 @@ msgid ""
 msgstr ""
 "Votre nœud API Insight démarrera et commencera à se synchroniser. L'état "
 "sera affiché dans stdout. Une fois la synchronisation terminée, les `points "
-"de contact API répertoriés dans la documentation <https://github.com/dashevo"
-"/insight-api#api-http-endpoints>`_ seront disponibles :"
+"de contact API répertoriés dans la documentation "
+"<https://github.com/dashevo/insight-api#api-http-endpoints>`_ seront "
+"disponibles :"
 
 #: ../../developers/insight.rst:73
 msgid "The Insight UI block explorer will be available at::"
