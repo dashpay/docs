@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 09:35-0500\n"
+"POT-Creation-Date: 2022-08-22 09:30-0400\n"
 "PO-Revision-Date: 2018-03-02 06:45+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2018\n"
 "Language-Team: Japanese (https://www.transifex.com/dash/teams/37570/ja/)\n"
@@ -105,46 +105,48 @@ msgid ""
 "masternodes. Thanks to this innovative two tier network, Dash can offer "
 "innovative features in a trustless and decentralized way. Masternodes are "
 "used to power CoinJoin, InstantSend, and the governance and treasury system."
-" Users are rewarded for running masternodes; 45% of the block reward is "
-"allocated to pay the masternode network. You can view practical guides on "
-"all topics relating to masternodes :ref:`here <masternodes>`."
+" Users are rewarded for running masternodes; a percentage of the block "
+"reward is allocated to pay the masternode network. The current percentage "
+"can be found in :ref:`this table <block-reward-reallocation>`. You can view "
+"practical guides on all topics relating to masternodes :ref:`here "
+"<masternodes>`."
 msgstr ""
 
-#: ../../introduction/features.rst:47
+#: ../../introduction/features.rst:48
 msgid "Masternodes enable the following services:"
 msgstr ""
 
-#: ../../introduction/features.rst:49
+#: ../../introduction/features.rst:50
 msgid ""
 "**InstantSend** allows for near-instant transactions. Dash InstantSend "
 "transactions are fully confirmed within two seconds."
 msgstr ""
 
-#: ../../introduction/features.rst:51
+#: ../../introduction/features.rst:52
 msgid ""
 "**CoinJoin** gives financial privacy through a decentralized implementation "
 "of CoinJoin."
 msgstr ""
 
-#: ../../introduction/features.rst:53
+#: ../../introduction/features.rst:54
 msgid ""
 "**ChainLocks**, which protects the blockchain against 51% mining attacks by "
 "signing blocks as they are mined."
 msgstr ""
 
-#: ../../introduction/features.rst:55
+#: ../../introduction/features.rst:56
 msgid ""
 "**Governance and Treasury** allows stakeholders in Dash to determine the "
 "direction of the project and devotes 10% of the block reward to development "
 "of the project and ecosystem."
 msgstr ""
 
-#: ../../introduction/features.rst:58
+#: ../../introduction/features.rst:59
 msgid ""
 "**Dash Evolution** will make using cryptocurrency as easy as using PayPal."
 msgstr ""
 
-#: ../../introduction/features.rst:61
+#: ../../introduction/features.rst:62
 msgid ""
 "Masternode owners must have possession of 1000 DASH, which they prove by "
 "signing a message included in a special transaction written to the "
@@ -155,7 +157,7 @@ msgid ""
 "important decisions that affect Dash."
 msgstr ""
 
-#: ../../introduction/features.rst:69
+#: ../../introduction/features.rst:70
 msgid ""
 "Masternodes cost money and effort to host so they are paid a percentage of "
 "the block reward as an incentive. Because only one masternode is paid in "
@@ -166,11 +168,11 @@ msgid ""
 "masternodes to earn money from fees in the future."
 msgstr ""
 
-#: ../../introduction/features.rst:81 ../../introduction/features.rst:594
+#: ../../introduction/features.rst:82 ../../introduction/features.rst:595
 msgid "CoinJoin"
 msgstr ""
 
-#: ../../introduction/features.rst:83
+#: ../../introduction/features.rst:84
 msgid ""
 "CoinJoin gives you consumer grade financial privacy by shuffling your Dash "
 "with other users. All the Dash in your wallet consists of different inputs, "
@@ -180,24 +182,24 @@ msgid ""
 "retain control of your money at all times."
 msgstr ""
 
-#: ../../introduction/features.rst:91
+#: ../../introduction/features.rst:92
 msgid ""
 "You can view a practical guide to use CoinJoin :ref:`here <dashcore-"
 "coinjoin-instantsend>`."
 msgstr ""
 
-#: ../../introduction/features.rst:94
+#: ../../introduction/features.rst:95
 msgid "The CoinJoin process works like this:"
 msgstr ""
 
-#: ../../introduction/features.rst:96
+#: ../../introduction/features.rst:97
 msgid ""
 "CoinJoin begins by breaking your transaction inputs down into standard "
 "denominations. These denominations are 0.001, 0.01, 0.1, 1 and 10 Dash -- "
 "much like the paper money you use every day."
 msgstr ""
 
-#: ../../introduction/features.rst:99
+#: ../../introduction/features.rst:100
 msgid ""
 "Your wallet then sends requests to specially configured software nodes on "
 "the network called masternodes. These masternodes are informed then that you"
@@ -206,7 +208,7 @@ msgid ""
 "you are."
 msgstr ""
 
-#: ../../introduction/features.rst:104
+#: ../../introduction/features.rst:105
 msgid ""
 "When two other people send similar messages, indicating that they wish to "
 "join coins of the same denomination, a session begins. The masternode "
@@ -215,14 +217,14 @@ msgid ""
 "different address (called a change address)."
 msgstr ""
 
-#: ../../introduction/features.rst:110
+#: ../../introduction/features.rst:111
 msgid ""
 "Your wallet can repeat this process a number of times with each "
 "denomination. Each time the process is completed it’s called a \"round.\" "
 "The user may choose between 2-16 rounds of CoinJoin."
 msgstr ""
 
-#: ../../introduction/features.rst:113
+#: ../../introduction/features.rst:114
 msgid ""
 "Your funds will pass through at least the number of rounds you specify. Dash"
 " 0.16 includes an update known as `Random Round CoinJoin "
@@ -230,20 +232,20 @@ msgid ""
 "denomination by up to three extra rounds to further improve privacy."
 msgstr ""
 
-#: ../../introduction/features.rst:118
+#: ../../introduction/features.rst:119
 msgid ""
 "This process happens in the background without any intervention on your "
 "part. When you wish to make a transaction using your denominated funds no "
 "additional waiting will be required."
 msgstr ""
 
-#: ../../introduction/features.rst:122
+#: ../../introduction/features.rst:123
 msgid ""
 "Note that CoinJoin transactions will be rounded up so that all transaction "
 "inputs are spent. Any excess Dash will be spent on the transaction fee."
 msgstr ""
 
-#: ../../introduction/features.rst:126
+#: ../../introduction/features.rst:127
 msgid ""
 "**IMPORTANT:** Your wallet only contains 1000 of these change addresses. "
 "Every time a CoinJoin transaction is created, one of your addresses is used "
@@ -253,11 +255,11 @@ msgid ""
 "disabled."
 msgstr ""
 
-#: ../../introduction/features.rst:137
+#: ../../introduction/features.rst:138
 msgid "InstantSend"
 msgstr "インスタントセンド"
 
-#: ../../introduction/features.rst:139
+#: ../../introduction/features.rst:140
 msgid ""
 "Traditional decentralized cryptocurrencies must wait for certain period of "
 "time for enough blocks to pass to ensure that a transaction is both "
@@ -268,7 +270,7 @@ msgid ""
 "time by centralizing authority on the network to various degrees."
 msgstr ""
 
-#: ../../introduction/features.rst:148
+#: ../../introduction/features.rst:149
 msgid ""
 "Dash suffers from neither of these limitations thanks to its second-layer "
 "network of masternodes. Masternodes regularly form voting quorums to check "
@@ -279,7 +281,7 @@ msgid ""
 " of these inputs during the confirmation time period."
 msgstr ""
 
-#: ../../introduction/features.rst:157
+#: ../../introduction/features.rst:158
 msgid ""
 "InstantSend technology will allow for cryptocurrencies such as Dash to "
 "compete with nearly instantaneous transaction systems such as credit cards "
@@ -289,7 +291,7 @@ msgid ""
 "as long as an hour (with Bitcoin) to as little as a few seconds."
 msgstr ""
 
-#: ../../introduction/features.rst:165
+#: ../../introduction/features.rst:166
 msgid ""
 "You can view a practical guide to use InstantSend :ref:`here <dashcore-"
 "coinjoin-instantsend>`. InstantSend was introduced in a whitepaper called "
@@ -300,17 +302,17 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__ in Dash 0.14."
 msgstr ""
 
-#: ../../introduction/features.rst:174
+#: ../../introduction/features.rst:175
 msgid ""
 "**How Dash 'InstantSend' Protects Merchants from Double Spends**, Dash "
 "Detailed by Amanda B. Johnson, 16 September 2016"
 msgstr ""
 
-#: ../../introduction/features.rst:187
+#: ../../introduction/features.rst:188
 msgid "ChainLocks"
 msgstr ""
 
-#: ../../introduction/features.rst:189
+#: ../../introduction/features.rst:190
 msgid ""
 "ChainLocks are a feature provided by the Dash Network which provides "
 "certainty when accepting payments. This technology, particularly when used "
@@ -319,7 +321,7 @@ msgid ""
 "“Blockchain Reorganization Events”."
 msgstr ""
 
-#: ../../introduction/features.rst:195
+#: ../../introduction/features.rst:196
 msgid ""
 "The risk of blockchain reorganization is typically addressed by requiring "
 "multiple “confirmations” before a transaction can be safely accepted as "
@@ -327,11 +329,11 @@ msgid ""
 "and user experience. ChainLocks are a solution for this problem."
 msgstr ""
 
-#: ../../introduction/features.rst:202
+#: ../../introduction/features.rst:203
 msgid "ChainLocks Process Overview"
 msgstr ""
 
-#: ../../introduction/features.rst:204
+#: ../../introduction/features.rst:205
 msgid ""
 "Every twelve hours a new “LLMQ” (Long-Living Masternode Quorum) is formed "
 "using a “DKG” (Distributed Key Generation) process. All members of this "
@@ -339,27 +341,27 @@ msgid ""
 "mined blocks:"
 msgstr ""
 
-#: ../../introduction/features.rst:209
+#: ../../introduction/features.rst:210
 msgid ""
 "Whenever a block is mined, Quorum Members will broadcast a signed message "
 "containing the observed block to the rest of the Quorum."
 msgstr ""
 
-#: ../../introduction/features.rst:212
+#: ../../introduction/features.rst:213
 msgid ""
 "If 60% or more of the Quorum sees the same new block they will collectively "
 "form a “CLSIG” (ChainLock Signature) message which will be broadcast to the "
 "remainder of the network."
 msgstr ""
 
-#: ../../introduction/features.rst:216
+#: ../../introduction/features.rst:217
 msgid ""
 "When a valid ChainLock Signature is received by a client on the network, it "
 "will reject all blocks at the same height that do not match the block "
 "specified in that message."
 msgstr ""
 
-#: ../../introduction/features.rst:220
+#: ../../introduction/features.rst:221
 msgid ""
 "The result is a quick and unambiguous decision on the “correct” blockchain "
 "for integrated clients and wallets. From a security perspective, this also "
@@ -368,11 +370,11 @@ msgid ""
 "a full description of how ChainLocks work."
 msgstr ""
 
-#: ../../introduction/features.rst:230
+#: ../../introduction/features.rst:231
 msgid "Sporks"
 msgstr ""
 
-#: ../../introduction/features.rst:232
+#: ../../introduction/features.rst:233
 msgid ""
 "In response to unforeseen issues with the rollout of the major \"RC3\" "
 "update in June 2014, the Dash development team created a mechanism by which "
@@ -384,7 +386,7 @@ msgid ""
 "dubbed it \"the spork\" and the name stuck."
 msgstr ""
 
-#: ../../introduction/features.rst:241
+#: ../../introduction/features.rst:242
 msgid ""
 "New features or versions of Dash undergo extensive testing on testnet before"
 " they are released to the main network. When a new feature or version of "
@@ -405,11 +407,11 @@ msgid ""
 "sporks, see :ref:`here <understanding-sporks>`."
 msgstr ""
 
-#: ../../introduction/features.rst:264
+#: ../../introduction/features.rst:265
 msgid "X11 Hash Algorithm"
 msgstr ""
 
-#: ../../introduction/features.rst:266
+#: ../../introduction/features.rst:267
 msgid ""
 "X11 is a widely used hashing algorithm created by Dash core developer Evan "
 "Duffield. X11’s chained hashing algorithm utilizes a sequence of eleven "
@@ -424,7 +426,7 @@ msgid ""
 "can be found in the :ref:`Mining <mining>` section of this documentation."
 msgstr ""
 
-#: ../../introduction/features.rst:279
+#: ../../introduction/features.rst:280
 msgid ""
 "X11 is the name of the chained proof-of-work (**PoW**) algorithm that was "
 "introduced in Dash (launched January 2014 as \"Xcoin\"). It was partially "
@@ -434,7 +436,7 @@ msgid ""
 "some hashes being randomly picked."
 msgstr ""
 
-#: ../../introduction/features.rst:286
+#: ../../introduction/features.rst:287
 msgid ""
 "The X11 algorithm uses multiple rounds of 11 different hashes (blake, bmw, "
 "groestl, jh, keccak, skein, luffa, cubehash, shavite, simd, echo), thus "
@@ -443,11 +445,11 @@ msgid ""
 "source X11 windowing system common on UNIX-like operating systems."
 msgstr ""
 
-#: ../../introduction/features.rst:294
+#: ../../introduction/features.rst:295
 msgid "Advantages of X11"
 msgstr ""
 
-#: ../../introduction/features.rst:296
+#: ../../introduction/features.rst:297
 msgid ""
 "The increased complexity and sophistication of the chained algorithm "
 "provides enhanced levels of security and less uncertainty for a digital "
@@ -458,7 +460,7 @@ msgid ""
 "through a hard fork to another cryptographic hash."
 msgstr ""
 
-#: ../../introduction/features.rst:304
+#: ../../introduction/features.rst:305
 msgid ""
 "In the event of a similar computing breakthrough, a digital currency using "
 "the X11 PoW would continue to function securely unless all 11 hashes were "
@@ -468,7 +470,7 @@ msgid ""
 "hashing algorithms."
 msgstr ""
 
-#: ../../introduction/features.rst:311
+#: ../../introduction/features.rst:312
 msgid ""
 "Given the speculative nature of digital currencies and their inherent "
 "uncertainties as a new field, the X11 algorithm can provide increased "
@@ -479,7 +481,7 @@ msgid ""
 " (Single Point Of Failure)."
 msgstr ""
 
-#: ../../introduction/features.rst:319
+#: ../../introduction/features.rst:320
 msgid ""
 "Evan Duffield, the creator of Dash and X11 chained-hash, has written on "
 "several occasions that X11 was integrated into Dash not with the intention "
@@ -488,11 +490,11 @@ msgid ""
 "ASICs)."
 msgstr ""
 
-#: ../../introduction/features.rst:329
+#: ../../introduction/features.rst:330
 msgid "Dark Gravity Wave"
 msgstr ""
 
-#: ../../introduction/features.rst:331
+#: ../../introduction/features.rst:332
 msgid ""
 "**DGW** or *Dark Gravity Wave* is an open source difficulty-adjusting "
 "algorithm for Bitcoin-based cryptocurrencies that was first used in Dash and"
@@ -506,13 +508,13 @@ msgid ""
 "without suffering from the time-warp exploit."
 msgstr ""
 
-#: ../../introduction/features.rst:343
+#: ../../introduction/features.rst:344
 msgid ""
 "Version 2.0 of DGW was implemented in Dash from block 45,000 onwards in "
 "order to completely alleviate the time-warp exploit."
 msgstr ""
 
-#: ../../introduction/features.rst:346
+#: ../../introduction/features.rst:347
 msgid ""
 "Version 3.0 was implemented on May 14 of 2014 to further improve difficulty "
 "re-targeting with smoother transitions. It also fixes issues with various "
@@ -520,11 +522,11 @@ msgid ""
 "the use of integers."
 msgstr ""
 
-#: ../../introduction/features.rst:355
+#: ../../introduction/features.rst:356
 msgid "Emission Rate"
 msgstr ""
 
-#: ../../introduction/features.rst:357
+#: ../../introduction/features.rst:358
 msgid ""
 "Cryptocurrencies such as Dash and Bitcoin are created through a "
 "cryptographically difficult process known as mining. Mining involves "
@@ -539,7 +541,7 @@ msgid ""
 "showing total coins in circulation, known as the coin emission rate."
 msgstr ""
 
-#: ../../introduction/features.rst:370
+#: ../../introduction/features.rst:371
 msgid ""
 "While Dash is based on Bitcoin, it significantly modifies the coin emission "
 "rate to offer a smoother reduction in coin emission over time. While Bitcoin"
@@ -550,15 +552,15 @@ msgid ""
 "Bitcoin."
 msgstr ""
 
-#: ../../introduction/features.rst:381
+#: ../../introduction/features.rst:382
 msgid "Bitcoin vs. Dash coin emission rate"
 msgstr ""
 
-#: ../../introduction/features.rst:385
+#: ../../introduction/features.rst:386
 msgid "Total coin emission"
 msgstr ""
 
-#: ../../introduction/features.rst:387
+#: ../../introduction/features.rst:388
 msgid ""
 "`Bitcoin's total coin emission <https://docs.google.com/spreadsheets/d/1 "
 "2tR_9WrY0Hj4AQLoJYj9EDBzfA38XIVLQSOOOVePNm0/pubhtml?gid=0&single=true>`_ can"
@@ -568,7 +570,7 @@ msgid ""
 "be in circulation by 2036, and 99.9% by 2048."
 msgstr ""
 
-#: ../../introduction/features.rst:394
+#: ../../introduction/features.rst:395
 msgid ""
 "`Dash's total coin emission <https://docs.google.com/spreadsheets/d "
 "/1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`_ is also "
@@ -583,33 +585,33 @@ msgid ""
 "possible coin supply in the year 2254 can be calculated to be between:"
 msgstr ""
 
-#: ../../introduction/features.rst:408
+#: ../../introduction/features.rst:409
 msgid "17,742,696 DASH"
 msgstr ""
 
-#: ../../introduction/features.rst:408
+#: ../../introduction/features.rst:409
 msgid "Assuming zero treasury allocation"
 msgstr ""
 
-#: ../../introduction/features.rst:410
+#: ../../introduction/features.rst:411
 msgid "18,921,005 DASH"
 msgstr ""
 
-#: ../../introduction/features.rst:410
+#: ../../introduction/features.rst:411
 msgid "Assuming full treasury allocation"
 msgstr ""
 
-#: ../../introduction/features.rst:414
+#: ../../introduction/features.rst:415
 msgid "Block reward allocation"
 msgstr ""
 
-#: ../../introduction/features.rst:416
+#: ../../introduction/features.rst:417
 msgid ""
 "Unlike Bitcoin, which allocates 100% of the block reward to miners, Dash "
 "holds back 10% of the block reward for use in the decentralized :ref:`budget"
-" system <decentralized-governance>`. The remainder of the block, as well as "
-"any transaction fees, are split 50/50 between the :ref:`miner <mining>` and "
-"a :ref:`masternode <masternodes>`, which is deterministically selected "
+" system <decentralized-governance>`. The remainder of the block reward, as "
+"well as any transaction fees, is split between the :ref:`miner <mining>` and"
+" a :ref:`masternode <masternodes>`, which is deterministically selected "
 "according to the :ref:`payment logic <payment-logic>`. Dash features "
 "superblocks, which appear every 16616 blocks (approx. 30.29 days) and can "
 "release up to 10% of the cumulative budget held back over that :ref:`budget "
@@ -618,27 +620,23 @@ msgid ""
 " allocation over a budget cycle as follows:"
 msgstr ""
 
-#: ../../introduction/features.rst:430 ../../introduction/features.rst:432
-msgid "45%"
+#: ../../introduction/features.rst:431
+msgid "90%"
 msgstr ""
 
-#: ../../introduction/features.rst:430
-msgid "Mining Reward"
+#: ../../introduction/features.rst:431
+msgid "Mining and Masternode Reward"
 msgstr ""
 
-#: ../../introduction/features.rst:432
-msgid "Masternode Reward for Proof-of-service"
-msgstr ""
-
-#: ../../introduction/features.rst:434
+#: ../../introduction/features.rst:433
 msgid "10%"
 msgstr ""
 
-#: ../../introduction/features.rst:434
+#: ../../introduction/features.rst:433
 msgid "Decentralized Governance Budget"
 msgstr ""
 
-#: ../../introduction/features.rst:437
+#: ../../introduction/features.rst:436
 msgid ""
 "On 13 August 2020, the Dash network approved a `proposal "
 "<https://www.dashcentral.org/p/decision-proposal-block-reward-reallocat>`__ "
@@ -647,7 +645,7 @@ msgid ""
 " percentage share every three superblock cycles."
 msgstr ""
 
-#: ../../introduction/features.rst:443
+#: ../../introduction/features.rst:444
 msgid ""
 "The following table shows the incremental reallocation process and indicates"
 " the current reallocation date. Reward reallocation changes began at the "
@@ -655,379 +653,379 @@ msgid ""
 "cycles (approximately once per quarter) until the reallocation is complete."
 msgstr ""
 
-#: ../../introduction/features.rst:449
+#: ../../introduction/features.rst:450
 msgid "Adjustment"
 msgstr ""
 
-#: ../../introduction/features.rst:449
+#: ../../introduction/features.rst:450
 msgid "Miner %"
 msgstr ""
 
-#: ../../introduction/features.rst:449
+#: ../../introduction/features.rst:450
 msgid "Masternode %"
 msgstr ""
 
-#: ../../introduction/features.rst:449
+#: ../../introduction/features.rst:450
 msgid "Change (%)"
 msgstr ""
 
-#: ../../introduction/features.rst:449
+#: ../../introduction/features.rst:450
 msgid "Reallocation Dates"
 msgstr ""
 
-#: ../../introduction/features.rst:451
+#: ../../introduction/features.rst:452
 msgid "0"
 msgstr ""
 
-#: ../../introduction/features.rst:451 ../../introduction/features.rst:451
+#: ../../introduction/features.rst:452 ../../introduction/features.rst:452
 msgid "50.0"
 msgstr ""
 
-#: ../../introduction/features.rst:451
+#: ../../introduction/features.rst:452
 msgid "0.00%"
 msgstr ""
 
-#: ../../introduction/features.rst:451
+#: ../../introduction/features.rst:452
 msgid "---"
 msgstr ""
 
-#: ../../introduction/features.rst:453
+#: ../../introduction/features.rst:454
 msgid "1"
 msgstr ""
 
-#: ../../introduction/features.rst:453
+#: ../../introduction/features.rst:454
 msgid "48.7"
 msgstr ""
 
-#: ../../introduction/features.rst:453
+#: ../../introduction/features.rst:454
 msgid "51.3"
 msgstr ""
 
-#: ../../introduction/features.rst:453 ../../introduction/features.rst:455
+#: ../../introduction/features.rst:454 ../../introduction/features.rst:456
 msgid "1.30%"
 msgstr ""
 
-#: ../../introduction/features.rst:453
+#: ../../introduction/features.rst:454
 msgid "2020-11-28"
 msgstr ""
 
-#: ../../introduction/features.rst:455
+#: ../../introduction/features.rst:456
 msgid "2"
 msgstr ""
 
-#: ../../introduction/features.rst:455
+#: ../../introduction/features.rst:456
 msgid "47.4"
 msgstr ""
 
-#: ../../introduction/features.rst:455
+#: ../../introduction/features.rst:456
 msgid "52.6"
 msgstr ""
 
-#: ../../introduction/features.rst:455
+#: ../../introduction/features.rst:456
 msgid "2021-02-27"
 msgstr ""
 
-#: ../../introduction/features.rst:457
+#: ../../introduction/features.rst:458
 msgid "3"
 msgstr ""
 
-#: ../../introduction/features.rst:457
+#: ../../introduction/features.rst:458
 msgid "46.7"
 msgstr ""
 
-#: ../../introduction/features.rst:457
+#: ../../introduction/features.rst:458
 msgid "53.3"
 msgstr ""
 
-#: ../../introduction/features.rst:457 ../../introduction/features.rst:459
+#: ../../introduction/features.rst:458 ../../introduction/features.rst:460
 msgid "0.70%"
 msgstr ""
 
-#: ../../introduction/features.rst:457
+#: ../../introduction/features.rst:458
 msgid "2021-05-29"
 msgstr ""
 
-#: ../../introduction/features.rst:459
-msgid "4 (Current)"
+#: ../../introduction/features.rst:460
+msgid "4"
 msgstr ""
 
-#: ../../introduction/features.rst:459
+#: ../../introduction/features.rst:460
 msgid "46.0"
 msgstr ""
 
-#: ../../introduction/features.rst:459
+#: ../../introduction/features.rst:460
 msgid "54.0"
 msgstr ""
 
-#: ../../introduction/features.rst:459
+#: ../../introduction/features.rst:460
 msgid "2021-08-28"
 msgstr ""
 
-#: ../../introduction/features.rst:461
+#: ../../introduction/features.rst:462
 msgid "5"
 msgstr ""
 
-#: ../../introduction/features.rst:461
+#: ../../introduction/features.rst:462
 msgid "45.4"
 msgstr ""
 
-#: ../../introduction/features.rst:461
+#: ../../introduction/features.rst:462
 msgid "54.6"
 msgstr ""
 
-#: ../../introduction/features.rst:461 ../../introduction/features.rst:463
+#: ../../introduction/features.rst:462 ../../introduction/features.rst:464
 msgid "0.60%"
 msgstr ""
 
-#: ../../introduction/features.rst:461
+#: ../../introduction/features.rst:462
 msgid "2021-11-27"
 msgstr ""
 
-#: ../../introduction/features.rst:463
+#: ../../introduction/features.rst:464
 msgid "6"
 msgstr ""
 
-#: ../../introduction/features.rst:463
+#: ../../introduction/features.rst:464
 msgid "44.8"
 msgstr ""
 
-#: ../../introduction/features.rst:463
+#: ../../introduction/features.rst:464
 msgid "55.2"
 msgstr ""
 
-#: ../../introduction/features.rst:463
+#: ../../introduction/features.rst:464
 msgid "2022-02-25"
 msgstr ""
 
-#: ../../introduction/features.rst:465
-msgid "7"
+#: ../../introduction/features.rst:466
+msgid "7 (Current)"
 msgstr ""
 
-#: ../../introduction/features.rst:465
+#: ../../introduction/features.rst:466
 msgid "44.3"
 msgstr ""
 
-#: ../../introduction/features.rst:465
+#: ../../introduction/features.rst:466
 msgid "55.7"
 msgstr ""
 
-#: ../../introduction/features.rst:465 ../../introduction/features.rst:467
-#: ../../introduction/features.rst:469 ../../introduction/features.rst:471
-#: ../../introduction/features.rst:473 ../../introduction/features.rst:475
+#: ../../introduction/features.rst:466 ../../introduction/features.rst:468
+#: ../../introduction/features.rst:470 ../../introduction/features.rst:472
+#: ../../introduction/features.rst:474 ../../introduction/features.rst:476
 msgid "0.50%"
 msgstr ""
 
-#: ../../introduction/features.rst:465
+#: ../../introduction/features.rst:466
 msgid "2022-05-27"
 msgstr ""
 
-#: ../../introduction/features.rst:467
+#: ../../introduction/features.rst:468
 msgid "8"
 msgstr ""
 
-#: ../../introduction/features.rst:467
+#: ../../introduction/features.rst:468
 msgid "43.8"
 msgstr ""
 
-#: ../../introduction/features.rst:467
+#: ../../introduction/features.rst:468
 msgid "56.2"
 msgstr ""
 
-#: ../../introduction/features.rst:467
+#: ../../introduction/features.rst:468
 msgid "2022-08-26"
 msgstr ""
 
-#: ../../introduction/features.rst:469
+#: ../../introduction/features.rst:470
 msgid "9"
 msgstr ""
 
-#: ../../introduction/features.rst:469
+#: ../../introduction/features.rst:470
 msgid "43.3"
 msgstr ""
 
-#: ../../introduction/features.rst:469
+#: ../../introduction/features.rst:470
 msgid "56.7"
 msgstr ""
 
-#: ../../introduction/features.rst:469
+#: ../../introduction/features.rst:470
 msgid "2022-11-25"
 msgstr ""
 
-#: ../../introduction/features.rst:471
+#: ../../introduction/features.rst:472
 msgid "10"
 msgstr ""
 
-#: ../../introduction/features.rst:471
+#: ../../introduction/features.rst:472
 msgid "42.8"
 msgstr ""
 
-#: ../../introduction/features.rst:471
+#: ../../introduction/features.rst:472
 msgid "57.2"
 msgstr ""
 
-#: ../../introduction/features.rst:471
+#: ../../introduction/features.rst:472
 msgid "2023-02-24"
 msgstr ""
 
-#: ../../introduction/features.rst:473
+#: ../../introduction/features.rst:474
 msgid "11"
 msgstr ""
 
-#: ../../introduction/features.rst:473
+#: ../../introduction/features.rst:474
 msgid "42.3"
 msgstr ""
 
-#: ../../introduction/features.rst:473
+#: ../../introduction/features.rst:474
 msgid "57.7"
 msgstr ""
 
-#: ../../introduction/features.rst:473
+#: ../../introduction/features.rst:474
 msgid "2023-05-26"
 msgstr ""
 
-#: ../../introduction/features.rst:475
+#: ../../introduction/features.rst:476
 msgid "12"
 msgstr ""
 
-#: ../../introduction/features.rst:475
+#: ../../introduction/features.rst:476
 msgid "41.8"
 msgstr ""
 
-#: ../../introduction/features.rst:475
+#: ../../introduction/features.rst:476
 msgid "58.2"
 msgstr ""
 
-#: ../../introduction/features.rst:475
+#: ../../introduction/features.rst:476
 msgid "2023-08-25"
 msgstr ""
 
-#: ../../introduction/features.rst:477
+#: ../../introduction/features.rst:478
 msgid "13"
 msgstr ""
 
-#: ../../introduction/features.rst:477
+#: ../../introduction/features.rst:478
 msgid "41.5"
 msgstr ""
 
-#: ../../introduction/features.rst:477
+#: ../../introduction/features.rst:478
 msgid "58.5"
 msgstr ""
 
-#: ../../introduction/features.rst:477 ../../introduction/features.rst:479
-#: ../../introduction/features.rst:481 ../../introduction/features.rst:483
-#: ../../introduction/features.rst:485
+#: ../../introduction/features.rst:478 ../../introduction/features.rst:480
+#: ../../introduction/features.rst:482 ../../introduction/features.rst:484
+#: ../../introduction/features.rst:486
 msgid "0.30%"
 msgstr ""
 
-#: ../../introduction/features.rst:477
+#: ../../introduction/features.rst:478
 msgid "2023-11-24"
 msgstr ""
 
-#: ../../introduction/features.rst:479
+#: ../../introduction/features.rst:480
 msgid "14"
 msgstr ""
 
-#: ../../introduction/features.rst:479
+#: ../../introduction/features.rst:480
 msgid "41.2"
 msgstr ""
 
-#: ../../introduction/features.rst:479
+#: ../../introduction/features.rst:480
 msgid "58.8"
 msgstr ""
 
-#: ../../introduction/features.rst:479
+#: ../../introduction/features.rst:480
 msgid "2024-02-23"
 msgstr ""
 
-#: ../../introduction/features.rst:481
+#: ../../introduction/features.rst:482
 msgid "15"
 msgstr ""
 
-#: ../../introduction/features.rst:481
+#: ../../introduction/features.rst:482
 msgid "40.9"
 msgstr ""
 
-#: ../../introduction/features.rst:481
+#: ../../introduction/features.rst:482
 msgid "59.1"
 msgstr ""
 
-#: ../../introduction/features.rst:481
+#: ../../introduction/features.rst:482
 msgid "2024-05-24"
 msgstr ""
 
-#: ../../introduction/features.rst:483
+#: ../../introduction/features.rst:484
 msgid "16"
 msgstr ""
 
-#: ../../introduction/features.rst:483
+#: ../../introduction/features.rst:484
 msgid "40.6"
 msgstr ""
 
-#: ../../introduction/features.rst:483
+#: ../../introduction/features.rst:484
 msgid "59.4"
 msgstr ""
 
-#: ../../introduction/features.rst:483
+#: ../../introduction/features.rst:484
 msgid "2024-08-22"
 msgstr ""
 
-#: ../../introduction/features.rst:485
+#: ../../introduction/features.rst:486
 msgid "17"
 msgstr ""
 
-#: ../../introduction/features.rst:485
+#: ../../introduction/features.rst:486
 msgid "40.3"
 msgstr ""
 
-#: ../../introduction/features.rst:485
+#: ../../introduction/features.rst:486
 msgid "59.7"
 msgstr ""
 
-#: ../../introduction/features.rst:485
+#: ../../introduction/features.rst:486
 msgid "2024-11-21"
 msgstr ""
 
-#: ../../introduction/features.rst:487
+#: ../../introduction/features.rst:488
 msgid "18"
 msgstr ""
 
-#: ../../introduction/features.rst:487
+#: ../../introduction/features.rst:488
 msgid "40.1"
 msgstr ""
 
-#: ../../introduction/features.rst:487
+#: ../../introduction/features.rst:488
 msgid "59.9"
 msgstr ""
 
-#: ../../introduction/features.rst:487
+#: ../../introduction/features.rst:488
 msgid "0.20%"
 msgstr ""
 
-#: ../../introduction/features.rst:487
+#: ../../introduction/features.rst:488
 msgid "2025-02-20"
 msgstr ""
 
-#: ../../introduction/features.rst:489
+#: ../../introduction/features.rst:490
 msgid "19"
 msgstr ""
 
-#: ../../introduction/features.rst:489
+#: ../../introduction/features.rst:490
 msgid "40.0"
 msgstr ""
 
-#: ../../introduction/features.rst:489
+#: ../../introduction/features.rst:490
 msgid "60.0"
 msgstr ""
 
-#: ../../introduction/features.rst:489
+#: ../../introduction/features.rst:490
 msgid "0.10%"
 msgstr ""
 
-#: ../../introduction/features.rst:489
+#: ../../introduction/features.rst:490
 msgid "2025-05-22"
 msgstr ""
 
-#: ../../introduction/features.rst:492
+#: ../../introduction/features.rst:493
 msgid ""
 "This documentation is based on calculations and posts by moocowmoo. Please "
 "see `this reddit post <https://www.reddit.com/r/dashpay/comments/ "
@@ -1037,52 +1035,53 @@ msgid ""
 "<https://stats.masternode.me>`_ for live data on current network statistics."
 msgstr ""
 
-#: ../../introduction/features.rst:503
+#: ../../introduction/features.rst:504
 msgid "Decentralized Governance"
 msgstr ""
 
-#: ../../introduction/features.rst:505
+#: ../../introduction/features.rst:506
 msgid ""
 "Decentralized Governance by Blockchain, or DGBB, is Dash's attempt to solve "
 "two important problems in cryptocurrency: governance and funding. Governance"
 " in a decentralized project is difficult, because by definition there are no"
 " central authorities to make decisions for the project. In Dash, such "
-"decisions are made by the network, that is, by the owners of masternodes. "
-"The DGBB system allows each masternode to vote once (yes/no/abstain) for "
-"each proposal. If a proposal passes, it can then be implemented (or not) by "
-"Dash's developers. A key example is early in 2016, when Dash's Core Team "
-"submitted a proposal to the network asking whether the blocksize should be "
-"increased to 2 MB. Within 24 hours, consensus had been reached to approve "
-"this change. Compare this to Bitcoin, where debate on the blocksize has been"
-" raging for nearly three years."
+"decisions are made by the Decentralized Autonomous Organization (DAO). The "
+"DAO allows each masternode to vote once (yes/no/abstain) for each proposal. "
+"If a proposal passes, it can then be implemented (or not) by Dash's "
+"developers. A key example is early in 2016, when Dash's Core Team submitted "
+"a proposal to the network asking whether the blocksize should be increased "
+"to 2 MB. Within 24 hours, consensus had been reached to approve this change."
+" Compare this to Bitcoin, where debate on the blocksize has been raging for "
+"nearly three years."
 msgstr ""
 
 #: ../../introduction/features.rst:519
 msgid ""
-"DGBB also provides a means for Dash to fund its own development. While other"
-" projects have to depend on donations or premined endowments, Dash uses 10% "
+"DAO also provides a means for Dash to fund its own development. While other "
+"projects have to depend on donations or premined endowments, Dash uses 10% "
 "of the block reward to fund its own development. Every time a block is "
-"mined, 45% of the reward goes to the miner, 45% goes to a masternode, and "
-"the remaining 10% is not created until the end of the month. During the "
-"month, anybody can make a budget proposal to the network. If that proposal "
-"receives net approval of at least 10% of the masternode network, then at the"
-" end of the month a series of \"superblocks\" will be created. At that time,"
-" the block rewards that were not paid out (10% of each block) will be used "
-"to fund approved proposals. The network thus funds itself by reserving 10% "
-"of the block reward for budget projects."
+"mined, 90% of the reward is split between the miner and a masternode per the"
+" distribution found :ref:`here <block-reward-reallocation>`, while the "
+"remaining 10% is not created until the end of the month. During the month, "
+"anybody can make a budget proposal to the network. If that proposal receives"
+" net approval of at least 10% of the masternode network, then at the end of "
+"the month a series of \"superblocks\" will be created. At that time, the "
+"block rewards that were not paid out (10% of each block) will be used to "
+"fund approved proposals. The network thus funds itself by reserving 10% of "
+"the block reward for budget projects."
 msgstr ""
 
-#: ../../introduction/features.rst:532
+#: ../../introduction/features.rst:533
 msgid ""
 "You can read more about Dash governance in the :ref:`governance` section of "
 "this documentation."
 msgstr ""
 
-#: ../../introduction/features.rst:539
+#: ../../introduction/features.rst:540
 msgid "Sentinel"
 msgstr ""
 
-#: ../../introduction/features.rst:541
+#: ../../introduction/features.rst:542
 msgid ""
 "Introduced in Dash 0.12.1, Sentinel is an autonomous agent for persisting, "
 "processing and automating Dash governance objects and tasks. Sentinel is "
@@ -1090,7 +1089,7 @@ msgid ""
 "instance on each Dash masternode."
 msgstr ""
 
-#: ../../introduction/features.rst:546
+#: ../../introduction/features.rst:547
 msgid ""
 "A Governance Object (or \"govObject\") is a generic structure introduced in "
 "Dash 0.12.1 to allow for the creation of Budget Proposals and Triggers. "
@@ -1098,15 +1097,15 @@ msgid ""
 "\"Proposal\" object to supplant the current Dash budget system."
 msgstr ""
 
-#: ../../introduction/features.rst:555
+#: ../../introduction/features.rst:556
 msgid "Diagram highlighting the relationship between Dash Sentinel and Core"
 msgstr ""
 
-#: ../../introduction/features.rst:561
+#: ../../introduction/features.rst:562
 msgid "Fees"
 msgstr ""
 
-#: ../../introduction/features.rst:563
+#: ../../introduction/features.rst:564
 msgid ""
 "Transactions on the Dash network are recorded in blocks on the blockchain. "
 "The size of each transaction is measured in bytes, but there is not "
@@ -1125,7 +1124,7 @@ msgid ""
 "process transactions even if no fee is included."
 msgstr ""
 
-#: ../../introduction/features.rst:580
+#: ../../introduction/features.rst:581
 msgid ""
 "The release of Dash 0.12.2.0 and activation of DIP0001 saw a simultaneous "
 "reduction of fees by a factor of 10, while the block size was increased from"
@@ -1138,39 +1137,39 @@ msgid ""
 "transactions. The current fee schedule for Dash is as follows:"
 msgstr ""
 
-#: ../../introduction/features.rst:592
+#: ../../introduction/features.rst:593
 msgid "Transaction type"
 msgstr ""
 
-#: ../../introduction/features.rst:592
+#: ../../introduction/features.rst:593
 msgid "Recommended fee"
 msgstr ""
 
-#: ../../introduction/features.rst:592
+#: ../../introduction/features.rst:593
 msgid "Per unit"
 msgstr ""
 
-#: ../../introduction/features.rst:594
+#: ../../introduction/features.rst:595
 msgid "0.001 DASH"
 msgstr ""
 
-#: ../../introduction/features.rst:594
+#: ../../introduction/features.rst:595
 msgid "Per 10 rounds of CoinJoin (average)"
 msgstr ""
 
-#: ../../introduction/features.rst:596
+#: ../../introduction/features.rst:597
 msgid "All other transactions"
 msgstr ""
 
-#: ../../introduction/features.rst:596
+#: ../../introduction/features.rst:597
 msgid "0.00001 DASH"
 msgstr ""
 
-#: ../../introduction/features.rst:596
+#: ../../introduction/features.rst:597
 msgid "Per kB of transaction data"
 msgstr ""
 
-#: ../../introduction/features.rst:599
+#: ../../introduction/features.rst:600
 msgid ""
 "As an example, a standard and relatively simple transaction on the Dash "
 "network with one input, one output and a possible change address typically "
@@ -1180,7 +1179,7 @@ msgid ""
 "charge."
 msgstr ""
 
-#: ../../introduction/features.rst:606
+#: ../../introduction/features.rst:607
 msgid ""
 ":ref:`CoinJoin` works by creating denominations of 10, 1, 0.1, 0.01 and "
 "0.001 DASH and then creating CoinJoin transactions with other users using "
@@ -1198,11 +1197,11 @@ msgid ""
 "transaction."
 msgstr ""
 
-#: ../../introduction/features.rst:625
+#: ../../introduction/features.rst:626
 msgid "Evolution"
 msgstr ""
 
-#: ../../introduction/features.rst:627
+#: ../../introduction/features.rst:628
 msgid ""
 "`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a "
 "decentralized platform built on Dash blockchain technology. The goal is to "
@@ -1212,7 +1211,7 @@ msgid ""
 " with decentralized API access and a decentralized file system."
 msgstr ""
 
-#: ../../introduction/features.rst:635
+#: ../../introduction/features.rst:636
 msgid ""
 "Dash Evolution will be released in stages. Dash Core releases 0.12.1 through"
 " to 0.12.3 lay the groundwork for the decentralized features behind the "
@@ -1228,105 +1227,105 @@ msgid ""
 "decentralized data storage system (Drive) based on IPFS."
 msgstr ""
 
-#: ../../introduction/features.rst:646
+#: ../../introduction/features.rst:647
 msgid ""
 "Included below is our current work on Evolution, that adds many components "
 "such as:"
 msgstr ""
 
-#: ../../introduction/features.rst:649
+#: ../../introduction/features.rst:650
 msgid ""
 "**Drive:** A decentralized shared file system for user data that lives on "
 "the second tier network"
 msgstr ""
 
-#: ../../introduction/features.rst:651
+#: ../../introduction/features.rst:652
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the "
 "network securely"
 msgstr ""
 
-#: ../../introduction/features.rst:653
+#: ../../introduction/features.rst:654
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients connected"
 " to the network via DAPI and run on various platforms"
 msgstr ""
 
-#: ../../introduction/features.rst:655
+#: ../../introduction/features.rst:656
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
 msgstr ""
 
-#: ../../introduction/features.rst:657
+#: ../../introduction/features.rst:658
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
 msgstr ""
 
-#: ../../introduction/features.rst:659
+#: ../../introduction/features.rst:660
 msgid ""
 "**Governance:** The second tier is given voting power to govern the currency"
 " and chart the course the currency takes"
 msgstr ""
 
-#: ../../introduction/features.rst:661
+#: ../../introduction/features.rst:662
 msgid ""
 "**Deterministic Masternode Lists:** This feature introduces an on-chain "
 "masternode list, which can be used to calculate past and present quorums"
 msgstr ""
 
-#: ../../introduction/features.rst:664
+#: ../../introduction/features.rst:665
 msgid ""
 "**Social Wallet:** We introduce a social wallet, which allows friends lists,"
 " grouping of users and shared multisig accounts"
 msgstr ""
 
-#: ../../introduction/features.rst:668
+#: ../../introduction/features.rst:669
 msgid "Evolution Previews"
 msgstr ""
 
-#: ../../introduction/features.rst:670
+#: ../../introduction/features.rst:671
 msgid ""
 "**Dash Dapps - Demoing Community Development on environment**, 17 August "
 "2020"
 msgstr ""
 
-#: ../../introduction/features.rst:679
+#: ../../introduction/features.rst:680
 msgid ""
 "**Let's Talk Dash Dapps feat. Sample Dapps & Wallet API (Ep 2)**, 6 August "
 "2020"
 msgstr ""
 
-#: ../../introduction/features.rst:688
+#: ../../introduction/features.rst:689
 msgid "**Let's Talk Dash Dapps feat. Chrome Wallet (Ep 1)**, 28 July 2020"
 msgstr ""
 
-#: ../../introduction/features.rst:696
+#: ../../introduction/features.rst:697
 msgid ""
 "The following videos featuring Dash Founder Evan Duffield and Head of UI/UX "
 "Development Chuck Williams describe the development process and upcoming "
 "features of the Dash Evolution platform."
 msgstr ""
 
-#: ../../introduction/features.rst:700
+#: ../../introduction/features.rst:701
 msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
 msgstr ""
 
-#: ../../introduction/features.rst:708
+#: ../../introduction/features.rst:709
 msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
 msgstr ""
 
-#: ../../introduction/features.rst:716
+#: ../../introduction/features.rst:717
 msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
 msgstr ""
 
-#: ../../introduction/features.rst:724
+#: ../../introduction/features.rst:725
 msgid ""
 "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
 msgstr ""
 
-#: ../../introduction/features.rst:732
+#: ../../introduction/features.rst:733
 msgid ""
 "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""

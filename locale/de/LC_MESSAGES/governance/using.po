@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 09:35-0500\n"
+"POT-Creation-Date: 2022-08-22 09:30-0400\n"
 "PO-Revision-Date: 2018-05-07 04:43+0000\n"
 "Last-Translator: Manuel Herrmann <manuel.herrmann@dash-embassy.org>, 2018\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
@@ -22,11 +22,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../governance/using.rst:1
-msgid "Practical guide to using the Dash governance system and treasury"
+msgid "Practical guide to using the Dash DAO governance system and treasury"
 msgstr ""
 
 #: ../../governance/using.rst:1
-msgid "dash, dgbb, governance, funding, voting, proposals, masternodes"
+msgid "dash, dao, governance, funding, voting, proposals, masternodes"
 msgstr ""
 
 #: ../../governance/using.rst:9
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../governance/using.rst:11
 msgid ""
-"Dash's Decentralized Governance by Blockchain (DGBB) is a novel voting and "
+"Dash's Decentralized Autonomous Organization (DAO) is a novel voting and "
 "funding platform. This documentation introduces and details the theory and "
 "practice to use the system."
 msgstr ""
@@ -49,7 +49,7 @@ msgid "Introduction"
 msgstr "Einleitung"
 
 #: ../../governance/using.rst:21
-msgid "DGBB consists of three components: Proposals, Votes, and Budgets"
+msgid "DAO consists of three components: Proposals, Votes, and Budgets"
 msgstr ""
 
 #: ../../governance/using.rst:22
@@ -78,7 +78,7 @@ msgstr ""
 
 #: ../../governance/using.rst:31
 msgid ""
-"Proposals can be submitted by anyone for a fee of 5 Dash. The proposal fee "
+"Proposals can be submitted by anyone for a fee of 1 Dash. The proposal fee "
 "is irreversibly destroyed on submission."
 msgstr ""
 
@@ -395,18 +395,18 @@ msgstr ""
 msgid ""
 "Next, the proposal generator will provide you with a command to run from the"
 " console of your Dash Core wallet to prepare your budget proposal governance"
-" object. Running this command will cost you 5 DASH, which will be \"burnt\" "
+" object. Running this command will cost you 1 DASH, which will be \"burnt\" "
 "or permanently removed from circulation. This one-time fee protects the "
 "governance system from becoming overwhelmed by spam, poorly thought out "
 "proposals or users not acting in good faith. A small transaction fee is "
 "charged as well, so make sure slightly more than 5 DASH is available in your"
-" wallet. Many budget proposals request reimbursement of the 5 DASH fee."
+" wallet. Many budget proposals request reimbursement of the 1 DASH fee."
 msgstr ""
 
 #: ../../governance/using.rst:187
 msgid ""
 "First unlock your wallet by clicking **Settings > Unlock wallet**, then open"
-" the console by clicking **Tools > Debug console** and paste the generated "
+" the console by clicking **Window > Console** and paste the generated "
 "command. The transaction ID will appear. Copy and paste this into the "
 "proposal generator response window. As soon as you do this, the system will "
 "show a progress bar as it waits for 6 confirmations as follows:"
@@ -522,7 +522,7 @@ msgstr ""
 
 #: ../../governance/using.rst:289
 msgid ""
-"Running this command will create a transaction spending 5 DASH from the "
+"Running this command will create a transaction spending 1 DASH from the "
 "wallet as collateral for the proposal being created. Only run this command "
 "once you have verified all the proposal information. The transaction is not "
 "reversible once sent."
@@ -612,7 +612,7 @@ msgstr ""
 
 #: ../../governance/using.rst:346
 msgid ""
-"Voting on DGBB proposals is an important part of operating a masternode. "
+"Voting on DAO proposals is an important part of operating a masternode. "
 "Since masternodes are heavily invested in Dash, they are expected to "
 "critically appraise proposals each month and vote in a manner they perceive "
 "to be consistent with the best interests of the network. Each masternode may"
@@ -701,13 +701,13 @@ msgstr ""
 #: ../../governance/using.rst:408
 msgid ""
 "If you started your masternode using the Dash Core Wallet (not recommended),"
-" you can vote manually from **Tools > Debug console**, or directly from your"
-" masternode via SSH using ``dash-cli``. First click on the proposal you want"
-" to vote on at either `DashCentral <https://www.dashcentral.org/budget>`__ "
-"or `Dash Ninja <https://www.dashninja.pl/governance.html>`__. You will see a"
-" command for manual voting below the proposal description. Copy and paste "
-"the command and modify it as necessary. As an example, take this proposal "
-"from `Dash Ninja "
+" you can vote manually from **Window > Console**, or directly from your "
+"masternode via SSH using ``dash-cli``. First click on the proposal you want "
+"to vote on at either `DashCentral <https://www.dashcentral.org/budget>`__ or"
+" `Dash Ninja <https://www.dashninja.pl/governance.html>`__. You will see a "
+"command for manual voting below the proposal description. Copy and paste the"
+" command and modify it as necessary. As an example, take this proposal from "
+"`Dash Ninja "
 "<https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741 "
 "8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`__ (or "
 "`DashCentral "

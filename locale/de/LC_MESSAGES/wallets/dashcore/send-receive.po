@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Nils Hermann <vk.translation@protonmail.ch>, 2018
+# Nils Hermann <vk.translation@protonmail.ch>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 09:35-0500\n"
+"POT-Creation-Date: 2022-08-22 09:30-0400\n"
 "PO-Revision-Date: 2018-03-19 12:18+0000\n"
-"Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2018\n"
+"Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2022\n"
 "Language-Team: German (https://www.transifex.com/dash/teams/37570/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -116,14 +116,9 @@ msgstr ""
 msgid ""
 "Let’s try an example. Say you have received an invoice which you now want to"
 " pay with Dash. The writer of the invoice has included a Dash address, which"
-" can be seen in the following window beginning with *Xpa*. The invoice is "
-"for 2.45 Dash, which you fill in the **Amount** field."
+" can be seen in the following window beginning with *yWa*. The invoice is "
+"for 2.5 Dash, which you fill in the **Amount** field."
 msgstr ""
-"Hier ein Beispiel: Sagen wir, dass ein Nutzer eine Rechnung empfangen hat, "
-"die er nun mit Dash bezahlen möchte. Der Rechnungssteller hat eine Dash-"
-"Adresse angeführt, die mit *Xpa* beginnt und im nachfolgenden Fenster "
-"gesehen werden kann. Die Rechnung ist über 2,45 Dash gestellt, was im Feld "
-"**Betrag** eingetragen wird."
 
 #: ../../wallets/dashcore/send-receive.rst:65
 msgid "The Send tab filled out for a transaction"
@@ -185,45 +180,38 @@ msgstr "Dash empfangen"
 #: ../../wallets/dashcore/send-receive.rst:101
 msgid ""
 "To receive Dash, you must first create a receiving address to give to the "
-"sending party. To do this, click **File > Receiving addresses**. The "
-"**Receiving addresses** window appears."
+"sending party. To do this, click the **Receive** tab in the tab bar."
 msgstr ""
-"Um Dash zu empfangen, muss zuerst eine Empfangsadresse erstellt und an den "
-"Absender gesandt werden. Diese befindet sich unter **Datei > "
-"Empfangsadressen**. Durch das Auswählen dieser Option wird das Fenster mit "
-"den **Empfangsadressen** angezeigt."
 
-#: ../../wallets/dashcore/send-receive.rst:108
-msgid "The Receiving addresses window"
-msgstr "Das Empfangsadressenfenster"
+#: ../../wallets/dashcore/send-receive.rst:107
+msgid "The Receive tab"
+msgstr "Der Empfangen-Tab"
 
-#: ../../wallets/dashcore/send-receive.rst:110
+#: ../../wallets/dashcore/send-receive.rst:109
 msgid ""
-"Either copy an existing address by clicking on the address and then the "
-"**Copy** button, or create a new address by clicking the **New** button. You"
-" can also edit an existing address by right clicking and selecting **Edit** "
-"address from the context menu. Give this address to the person who will send"
-" you Dash. Your wallet does not need to be open to receive funds, but if it "
-"is, you can watch the transaction arrive in real time. This is because your "
-"wallet constantly watches for new blocks on the blockchain when it is open, "
-"and will recognize a new transaction involving your receiving address when "
-"it occurs."
+"Create a new address by clicking the **Request new receiving address** "
+"button."
 msgstr ""
-"Hier kann nun entweder eine bestehende Adresse durch Anwählen und "
-"anschließendes Anklicken des **Kopieren** Knopfes kopiert oder eine neue "
-"Adresse durch das Klicken auf **Neu** erstellt werden. Eine bestehende "
-"Adresse kann ebenfalls über **Editieren** verändert werden. Die Adresse muss"
-" nun an den Absender der Dash weitergegeben werden. Die Wallet muss nicht "
-"geöffnet sein, damit die Transaktion stattfindet, sie kann jedoch dazu "
-"verwendet werden, den Verlauf in Echtzeit zu verfolgen. Dies hängt damit "
-"zusammen, dass die Wallet konstant die neuen Blöcke beobachtet und nach dem "
-"Vorkommen der eigenen Adresse Ausschau hält."
 
-#: ../../wallets/dashcore/send-receive.rst:123
+#: ../../wallets/dashcore/send-receive.rst:114
+msgid "The Request payment window"
+msgstr ""
+
+#: ../../wallets/dashcore/send-receive.rst:116
+msgid ""
+"Click **Copy Address** on the Request payment window that opens and give "
+"this address to the person who will send you Dash. Your wallet does not need"
+" to be open to receive funds, but if it is, you can watch the transaction "
+"arrive in real time. This is because your wallet constantly watches for new "
+"blocks on the blockchain when it is open, and will recognize a new "
+"transaction involving your receiving address when it occurs."
+msgstr ""
+
+#: ../../wallets/dashcore/send-receive.rst:126
 msgid "The Windows 10 received transaction confirmation notification"
 msgstr "Die Empfangsbenachrichtigung unter Windows 10"
 
-#: ../../wallets/dashcore/send-receive.rst:125
+#: ../../wallets/dashcore/send-receive.rst:128
 msgid ""
 "Once you have been paid, you can see the balance both on the **Overview** "
 "tab and on the **Transactions** tab."
@@ -231,6 +219,27 @@ msgstr ""
 "Nachdem die Zahlung durchgeführt wurde, kann der Betrag unter **Übersicht** "
 "und **Transaktionen** gesehen werden."
 
-#: ../../wallets/dashcore/send-receive.rst:131
+#: ../../wallets/dashcore/send-receive.rst:134
 msgid "The received transaction"
 msgstr "Die empfangene Transaktion"
+
+#: ../../wallets/dashcore/send-receive.rst:137
+msgid "Viewing Addresses"
+msgstr ""
+
+#: ../../wallets/dashcore/send-receive.rst:139
+msgid ""
+"To view all previously created receiving addresses, click **Window > "
+"Receiving addresses**. In the same way, sending addresses can be seen by "
+"clicking **Window > Sending addresses**."
+msgstr ""
+
+#: ../../wallets/dashcore/send-receive.rst:146
+msgid "The Receiving addresses window"
+msgstr "Das Empfangsadressenfenster"
+
+#: ../../wallets/dashcore/send-receive.rst:148
+msgid ""
+"You can edit an existing address by right clicking and selecting **Edit** "
+"address from the context menu."
+msgstr ""
