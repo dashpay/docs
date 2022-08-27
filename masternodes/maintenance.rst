@@ -82,6 +82,7 @@ update Sentinel::
   cd ~/.dashcore/sentinel/
   git checkout master
   git pull
+  venv/bin/pip install -r requirements.txt
 
 Finally, uncomment the line to automatically restart Dash in your
 crontab by invoking ``crontab -e`` again and deleting the ``#``
