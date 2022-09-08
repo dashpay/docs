@@ -34,10 +34,11 @@ Verifying Dash Core
 
 This step is optional, but recommended to verify the authenticity of the
 file you downloaded. This is done by checking its detached signature
-against the public key published by the Dash Core development team. To
-download the detached signature, click the **Installer Signature**
+against the public key published by the Dash Core development team. To download 
+the detached signature, click the **Installer Signature**
 button on the wallet download page and save it to the same folder as the
-downloaded binary.
+downloaded binary (which should be by default). You may also need to 
+download GPG, which you can do via https://gpgtools.org/.
 
 All releases of Dash are signed using GPG with one of the following keys:
 
