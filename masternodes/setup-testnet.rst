@@ -875,7 +875,7 @@ Extract the compressed archive and copy the necessary files to the
 directory::
 
   tar xfv dashcore-18.0.1-$(uname -m)-linux-gnu.tar.gz
-  sudo install -t /usr/local/bin dashcore-e66d539fa5d1/bin/*
+  sudo install -t /usr/local/bin dashcore-18.0.1/bin/*
 
 Create a working directory for Dash Core::
 
@@ -958,11 +958,10 @@ Sentinel is a watchdog and works to communicate to the network that your
 node is working properly. Install Sentinel as follows::
 
   cd
-  sudo add-apt-repository ppa:deadsnakes/ppa -y
-  sudo apt install -y software-properties-common python3.9 python3.9-venv
+  sudo apt install -y software-properties-common python3-venv
   git clone -b master https://github.com/dashpay/sentinel.git
   cd sentinel
-  python3.9 -m venv . sentinel
+  python3 -m venv . sentinel
   bin/pip install -r requirements.txt
   bin/python bin/sentinel.py
 
@@ -1074,7 +1073,7 @@ Modify the configuration with the following commands::
   sed -i 's/^create_empty_blocks_interval.*/create_empty_blocks_interval = "3m"/' ~/.tenderdash/config/config.toml
   sed -i 's/^namespace.*/namespace = "drive_tendermint"/' ~/.tenderdash/config/config.toml
   sed -i 's/^seeds.*/seeds = "74907790a03b51ac062c8a1453dafd72a08668a3@54.189.200.56:26656,2006632eb20e670923d13d4f53abc24468eaad4d@52.43.162.96:26656"/' ~/.tenderdash/config/config.toml
-  curl https://gist.githubusercontent.com/strophy/9a564bbc423198a2fdf4e807b7b40bb4/raw/21ad1cdd6112b33a73c032727a096d1563ed0b07/genesis.json > ~/.tenderdash/config/genesis.json
+  curl https://gist.githubusercontent.com/strophy/9a564bbc423198a2fdf4e807b7b40bb4/raw/797ed1a074ca90e574ef016cae4f43e97ae07f56/genesis.json > ~/.tenderdash/config/genesis.json
 
 Configure Tenderdash to start as a service::
 
