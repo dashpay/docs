@@ -179,7 +179,6 @@ Block explorers, statistics and visualizations
 - https://bitinfocharts.com/dash/explorer/
 - https://dashblockexplorer.com
 - https://live.blockcypher.com/dash/
-- https://dashradar.com
 - https://udjinm6.github.io/bitlisten/
 
 
@@ -192,6 +191,7 @@ Treasury tools
 - https://dashvotetracker.com
 - https://proposal.dash.org
 - https://www.dashninja.pl/governance.html
+- https://mnowatch.org/leaderboard/
 
 
 Masternode management
@@ -203,6 +203,7 @@ Masternode management
 - https://github.com/Bertrand256/dash-masternode-tool
 - http://178.254.23.111/~pub/Dash/Dash_Info.html
 - https://dash-news.de/dashtv/
+- https://mnowatch.org/dash-stats/
 
 
 Price monitoring and research
@@ -228,6 +229,7 @@ DarkNet pages
 
 - **Dash (Mirror of Main Page):** http://dashorg64cjvj4s3.onion
 - **The Hidden Wiki:** `http://zqktlwi4fecvo6ri.onion/wiki/Dash_-_DigitalCash <http://zqktlwi4fecvo6ri.onion/wiki/Dash_-_DigitalCash>`_
+- **MNOwatch.org:** http://mnowatchr2h5d5nekj2ogfzigxpgyi75hx2o7xjon4twpwhbsylgefid.onion/
 
 
 Mobile Apps
