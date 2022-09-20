@@ -587,13 +587,6 @@ restart Dash Core with the specified command-line option.
 
    The Wallet Repair tab of the Dash Core Tools dialog
 
-Salvage wallet
-  Salvage wallet assumes wallet.dat is corrupted and cannot be read. It
-  makes a copy of wallet.dat to wallet.<date>.bak and scans it to attempt
-  to recover any private keys. Check your debug.log file after running
-  salvage wallet and look for lines beginning with "Salvage" for more
-  information on operations completed.
-
 Rescan blockchain files 1
   Rescans the already downloaded blockchain for any transactions affecting
   accounts contained in the wallet. This may be necessary if you replace
@@ -624,3 +617,13 @@ Rebuild index
   Discards the current blockchain and chainstate indexes (the database of
   unspent transaction outputs) and rebuilds it from existing block files.
   This can be useful to recover missing or stuck balances.
+
+.. note::
+  The wallet salvage option was moved to the standalone dash-wallet
+  command-line application in Dash Core v18.0. Running dash-wallet
+  with the ``salvage`` command assumes the wallet file provide by
+  the ``-wallet`` parameter  is corrupted and cannot be read. It
+  makes a copy of the wallet file as <wallet name>.<date>.bak and
+  scans it to attempt to recover any private keys.
+
+  Example: ``dash-wallet -wallet=mywallet/wallet.dat salvage``
