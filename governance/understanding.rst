@@ -188,9 +188,8 @@ Proposal websites
 The community has gathered around `DashCentral
 <https://www.dashcentral.org>`__ as a website to facilitate discussion
 and voting on proposals formally entered on the Dash blockchain. Other
-websites, such as `Dash Ninja <https://www.dashninja.pl>`__ and `Dash
-Nexus <https://app.dashnexus.org/>`__ are available to monitor progress over
-time and gather more detailed statistics. `Dash Masternode Tool
+websites like `Dash Ninja <https://www.dashninja.pl>`__ are available to monitor 
+progress over time and gather more detailed statistics. `Dash Masternode Tool
 <https://github.com/Bertrand256/dash-masternode-tool/releases>`__ also
 allows for voting without the need to share masternode private keys with
 a third party service.
@@ -234,13 +233,7 @@ roles.
 Voting on proposals is updated in real time via P2P messages and stored
 by Dash in cache files, so current winning proposals and the total
 allocation of the available budget are always open and visible to
-everyone. `Dash Nexus <https://app.dashnexus.org/>`__ is a popular site used
-for to view progress on proposal voting.
-
-.. figure:: img/governance-dashnexus.png
-   :width: 400px
-
-   Monitoring budget allocation on Dash Nexus
+everyone.
 
 Finally, `Dash Watch <https://dashwatch.org>`__ (which was itself funded
 through a budget proposal) exists to monitor the ability of blockchain
