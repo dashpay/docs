@@ -234,13 +234,13 @@ roles.
 Voting on proposals is updated in real time via P2P messages and stored
 by Dash in cache files, so current winning proposals and the total
 allocation of the available budget are always open and visible to
-everyone. `Dash Nexus <https://app.dashnexus.org/>`__ is a popular site used
-for to view progress on proposal voting.
+everyone. `Dash Central <https://www.dashcentral.org/>`__ is a popular 
+site used for to view progress on proposal voting.
 
-.. figure:: img/governance-dashnexus.png
+.. figure:: img/governance-dashcentral.png
    :width: 400px
 
-   Monitoring budget allocation on Dash Nexus
+   Monitoring budget allocation on Dash Central
 
 Finally, `Dash Watch <https://dashwatch.org>`__ (which was itself funded
 through a budget proposal) exists to monitor the ability of blockchain
