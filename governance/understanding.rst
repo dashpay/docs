@@ -233,8 +233,8 @@ roles.
 Voting on proposals is updated in real time via P2P messages and stored
 by Dash in cache files, so current winning proposals and the total
 allocation of the available budget are always open and visible to
-everyone. `Dash Central <https://www.dashcentral.org/>`__ is a popular site used
-for to view progress on proposal voting.
+everyone. `Dash Central <https://www.dashcentral.org/budget/>`__ is a popular 
+site used for to view progress on proposal voting.
 
 .. figure:: img/governance-dashcentral.png
    :width: 400px
