@@ -269,12 +269,13 @@ Then reboot the server::
 
 PuTTY will disconnect when the server reboots.
 
-While this setup includes basic steps to protect your server against
-attacks, much more can be done. In particular, `authenticating with a public key <https://help.ubuntu.com/community/SSH/OpenSSH/Keys>`_
-instead of a username/password combination and `enabling automatic security updates <https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ 
-is advisable. More tips are available `here <https://www.cyberciti.biz/tips/linux-security.html>`__. 
-However, since the masternode does not actually store the keys to any
-Dash, these steps are considered beyond the scope of this guide.
+.. note::
+
+  While this setup includes basic steps to protect your server against
+  attacks, much more can be done. In particular, authenticating with
+  a `public key <https://help.ubuntu.com/community/SSH/OpenSSH/Keys>`_ instead of a username/password combination.
+  Enabling `automatic security updates <https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ is advisable.
+  More tips are available `here <https://www.cyberciti.biz/tips/linux-security.html>`__.
 
 
 Send the collateral
