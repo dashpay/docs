@@ -97,6 +97,7 @@ html_theme_options = {
     ],
     "use_edit_page_button": True,
     "github_url": "https://github.com/dashpay/docs",
+    "announcement": "<p>Testing pydata theme for <a href='https://docs.dash.org'>docs.dash.org!</a></p>"
 }
 
 html_context = {
