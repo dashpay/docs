@@ -93,11 +93,15 @@ html_theme = "pydata_sphinx_theme"
 # Theme options
 html_theme_options = {
     "external_links": [
+        {"name": "Core docs", "url": "https://dashcore.readme.io/"},
+        {"name": "Platform docs", "url": "https://dashplatform.readme.io"},
         {"name": "Dash.org", "url": "https://www.dash.org"},
     ],
     "use_edit_page_button": True,
     "github_url": "https://github.com/dashpay/docs",
-    "announcement": "<p>Testing pydata theme for <a href='https://docs.dash.org'>docs.dash.org!</a></p>"
+    "announcement": "<p>Testing pydata theme for <a href='https://docs.dash.org'>docs.dash.org!</a></p>",
+    "show_toc_level": 2,
+    "show_nav_level": 2,
 }
 
 html_context = {
@@ -139,11 +143,15 @@ html_static_path = ['_static']
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
+# html_sidebars = {
+#     '**': [
+#         'relations.html',  # needs 'show_related': True theme option to display
+#         'searchbox.html',
+#     ]
+# }
+
 html_sidebars = {
-    '**': [
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-    ]
+    "**": ["sidebar-nav-bs"]
 }
 
 
