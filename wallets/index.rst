@@ -23,53 +23,10 @@ exchanges or software wallets. If you are holding cryptocurrency worth
 more than the device you use to store it, you should purchase a
 :ref:`hardware wallet <hardware-wallets>`.
 
-
-.. _dash-core-wallet:
-
-Dash Core Wallet
-================
-
-Dash Core Wallet is the full official release of Dash, and supports all
-Dash features as they are released, including InstantSend and
-CoinJoin, as well as an RPC console and governance features. Dash
-Core Wallet (sometimes known as the QT wallet, due to the QT software
-framework used in development) is a professional or heavy wallet which
-downloads the full blockchain (several GB in size) and can operate as
-both a full node or masternode on the network. Because of the
-requirement to hold a full copy of the blockchain, some time is required
-for synchronisation when starting the wallet. Once this is done, the
-correct balances will be displayed and the functions in the wallet can
-be used. Dash Core Wallet is available for macOS, Linux, Raspberry Pi
-and Windows.
-
-Features:
-
--  InstantSend
--  CoinJoin
--  Wallet encryption
--  Coin control and fee control
--  QR code generation and address book
--  Masternode commands and voting
--  Automated backup
--  Debug console
-
-Available documentation:
-
 .. toctree::
-   :maxdepth: 1
+   :hidden:
 
-   dashcore/installation.rst
-   dashcore/interface.rst
-   dashcore/send-receive.rst
-   dashcore/coinjoin-instantsend.rst
-   dashcore/backup.rst
-   dashcore/cmd-rpc.rst
-   dashcore/advanced.rst
-
-.. figure:: dashcore/img/overview.png
-   :width: 400 px
-
-   Dash Core Wallet
+   dashcore/index
 
 .. _dash-electrum-wallet:
 
