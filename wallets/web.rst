@@ -4,6 +4,10 @@
 
 .. _dash-web-wallet:
 
+============
+Introduction
+============
+
 MyDashWallet
 ============
 

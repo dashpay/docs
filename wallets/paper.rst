@@ -4,6 +4,7 @@
 
 .. _dash-paper-wallet:
 
+============
 Introduction
 ============
 
