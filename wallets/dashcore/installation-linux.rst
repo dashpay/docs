@@ -165,7 +165,7 @@ Ensure the file is executable::
   chmod +x ~/.local/share/applications/dash.desktop
 
 An appropriate icon can optionally be downloaded from the Dash `Brand
-Guidelines <https://www.dash.org/brand-guidelines/>`__ page.
+Guidelines <https://www.dash.org/brand-guidelines/>`__ page::
 
   wget https://media.dash.org/wp-content/uploads/dash-d-rounded-square-250.png
   xdg-icon-resource install --size 256 dash-d-rounded-square-250.png dash-icon
