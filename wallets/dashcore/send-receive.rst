@@ -95,6 +95,9 @@ Note that the amount of the transaction increased by .00003926 Dash.
 This is the transaction fee. In the next section, we will see what this
 procedure looks like from the receiving side.
 
+Stuck transactions can be resent one-by-one using the "Resend transactions,"
+option in the menu.
+
 Receiving Dash
 ==============
 
