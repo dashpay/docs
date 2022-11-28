@@ -4,7 +4,6 @@
 
 .. _dash-hardware-wallet:
 
-============
 Introduction
 ============
 

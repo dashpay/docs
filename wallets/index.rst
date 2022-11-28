@@ -23,9 +23,6 @@ exchanges or software wallets. If you are holding cryptocurrency worth
 more than the device you use to store it, you should purchase a
 :ref:`hardware wallet <hardware-wallets>`.
 
-Wallet Options
-==============
-
 .. toctree::
    :maxdepth: 1
    
@@ -38,7 +35,6 @@ Wallet Options
    index-third-party
    index-web
    index-text
-
 
 Wallet Guides
 =============

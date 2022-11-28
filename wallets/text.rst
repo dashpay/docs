@@ -4,7 +4,6 @@
 
 .. _dash-text-wallet:
 
-============
 Introduction
 ============
 
