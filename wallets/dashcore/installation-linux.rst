@@ -141,6 +141,35 @@ is complete, you will see a small blue tick in the lower right corner.
 
 You can now begin to use your wallet to send and receive funds.
 
+Setting up a desktop entry
+--------------------------
+
+You can set up an `XDG Desktop Entry
+<https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html>`__
+in order to be able to launch Dash Core from your KDE or Gnome desktop
+environment. To do so, create a file named
+``~/.local/share/applications/dash.desktop`` and add the following
+content::
+
+  [Desktop Entry]
+  Version=1.5
+  Name=Dash Core
+  Comment=Dash Core is used to interact with the Dash blockchain
+  Exec=/usr/local/bin/dash-qt
+  Icon=dash-icon
+  Terminal=false
+  Type=Application
+
+Ensure the file is executable::
+
+  chmod +x ~/.local/share/applications/dash.desktop
+
+An appropriate icon can optionally be downloaded from the Dash `Brand
+Guidelines <https://www.dash.org/brand-guidelines/>`__ page::
+
+  wget https://media.dash.org/wp-content/uploads/dash-d-rounded-square-250.png
+  xdg-icon-resource install --size 256 dash-d-rounded-square-250.png dash-icon
+
 Encrypting your Dash wallet
 ---------------------------
 
