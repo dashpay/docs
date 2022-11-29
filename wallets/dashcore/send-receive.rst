@@ -98,6 +98,14 @@ procedure looks like from the receiving side.
 Stuck transactions can be resent one-by-one using the "Resend transactions"
 option in the menu.
 
+You can edit an existing address by right clicking and selecting **Edit**
+address from the context menu. 
+
+.. figure:: img/resend-transaction.png
+   :width: 350px
+
+   Resending transactions
+
 Receiving Dash
 ==============
 
@@ -148,10 +156,4 @@ addresses**. In the same way, sending addresses can be seen by clicking **Window
 
    The Receiving addresses window
 
-You can edit an existing address by right clicking and selecting **Edit**
-address from the context menu. 
 
-.. figure:: img/resend-transaction.png
-   :width: 350px
-
-   Resending transactions
