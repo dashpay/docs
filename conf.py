@@ -111,7 +111,7 @@ html_context = {
     "doc_path": "",
 }
 
-html_logo = 'img/dash_logo.png'
+html_logo = 'docs/user/img/dash_logo.png'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
