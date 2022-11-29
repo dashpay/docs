@@ -151,7 +151,7 @@ addresses**. In the same way, sending addresses can be seen by clicking **Window
 You can edit an existing address by right clicking and selecting **Edit**
 address from the context menu. 
 
-.. figure:: img/dash resend transaction.png
+.. figure:: img/resend-transaction.png
    :width: 350px
 
    Resending transactions
