@@ -96,10 +96,7 @@ This is the transaction fee. In the next section, we will see what this
 procedure looks like from the receiving side.
 
 Stuck transactions can be resent one-by-one using the "Resend transactions"
-option in the menu.
-
-You can edit an existing address by right clicking and selecting **Edit**
-address from the context menu. 
+option in the menu. 
 
 .. figure:: img/resend-transaction.png
    :width: 350px
@@ -156,4 +153,5 @@ addresses**. In the same way, sending addresses can be seen by clicking **Window
 
    The Receiving addresses window
 
-
+You can edit an existing address by right clicking and selecting **Edit**
+address from the context menu.
