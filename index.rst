@@ -49,34 +49,43 @@ Contents
 ========
 
 .. toctree::
-   :maxdepth: 3
-   :caption: First Steps
-
-   introduction/about
-   introduction/features
-   introduction/how-to-buy
-   introduction/safety
-   introduction/information
-
-.. _user-docs:
+   introduction/index
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Users
-
-   wallets/index
-   earning-spending
-
-.. _network-docs:
+   index-users
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Network
+   index-network
 
-   governance/index.rst
-   masternodes/index
-   mining/index
-   developers/index
-   network/electrumx-server
-   marketing.rst
-   legal.rst
+.. .. toctree::
+..    :maxdepth: 3
+..    :caption: First Steps
+
+..    introduction/about
+..    introduction/features
+..    introduction/how-to-buy
+..    introduction/safety
+..    introduction/information
+
+.. .. _user-docs:
+
+.. .. toctree::
+..    :maxdepth: 3
+..    :caption: Users
+
+..    wallets/index
+..    earning-spending
+
+.. .. _network-docs:
+
+.. .. toctree::
+..    :maxdepth: 3
+..    :caption: Network
+
+..    governance/index.rst
+..    masternodes/index
+..    mining/index
+..    developers/index
+..    network/electrumx-server
+..    marketing.rst
+..    legal.rst
