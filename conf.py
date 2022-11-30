@@ -86,6 +86,7 @@ todo_include_todos = False
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx_copybutton',
+    'sphinx_design',
 ]
 
 html_theme = "pydata_sphinx_theme"
