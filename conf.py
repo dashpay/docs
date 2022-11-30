@@ -129,6 +129,10 @@ html_logo = 'docs/user/img/dash_logo.png'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_css_files = [
+    'css/footer.css',
+]
+
 # Override to allow text wrap in tables
 # Details: https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
 #html_context = {
