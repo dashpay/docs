@@ -101,6 +101,23 @@ html_theme_options = {
     "github_url": "https://github.com/dashpay/docs",
     "show_toc_level": 2,
     "show_nav_level": 1,
+    "favicons": [
+      {
+         "rel": "icon",
+         "sizes": "16x16",
+         "href": "img/favicon-16x16.png",
+      },
+      {
+         "rel": "icon",
+         "sizes": "32x32",
+         "href": "img/favicon-32x32.png",
+      },
+      {
+         "rel": "icon",
+         "sizes": "96x96",
+         "href": "img/favicon-96x96.png",
+      },
+   ]
 }
 
 html_context = {
