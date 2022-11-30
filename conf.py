@@ -100,7 +100,24 @@ html_theme_options = {
     "use_edit_page_button": True,
     "github_url": "https://github.com/dashpay/docs",
     "show_toc_level": 2,
-    "show_nav_level": 2,
+    "show_nav_level": 1,
+    "favicons": [
+      {
+         "rel": "icon",
+         "sizes": "16x16",
+         "href": "img/favicon-16x16.png",
+      },
+      {
+         "rel": "icon",
+         "sizes": "32x32",
+         "href": "img/favicon-32x32.png",
+      },
+      {
+         "rel": "icon",
+         "sizes": "96x96",
+         "href": "img/favicon-96x96.png",
+      },
+   ]
 }
 
 html_context = {
@@ -128,6 +145,10 @@ html_logo = 'docs/user/img/dash_logo.png'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_css_files = [
+    'css/footer.css',
+]
 
 # Override to allow text wrap in tables
 # Details: https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
