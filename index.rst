@@ -35,6 +35,7 @@ learning about :ref:`safety <safety>` or joining one of the many
 .. grid:: 1 3 3 3
 
     .. grid-item-card:: 👤 User Docs
+        :margin: 2 2 auto auto
         :link-type: ref
         :link: user-index
         
@@ -44,6 +45,8 @@ learning about :ref:`safety <safety>` or joining one of the many
         :ref:`Click to begin <user-index>`
 
     .. grid-item-card:: ⚙ Core Docs
+        :margin: 2 2 auto auto
+        :link-type: url
         :link: https://dashcore.readme.io
         
         Find technical details about the Dash Core blockchain, along with protocol and API reference material.
@@ -52,6 +55,8 @@ learning about :ref:`safety <safety>` or joining one of the many
         `Click to begin <https://dashcore.readme.io>`__
 
     .. grid-item-card:: 🚀 Platform Docs
+         :margin: 2 2 auto auto
+         :link-type: url
          :link: https://dashplatform.readme.io
 
          Start working with Dash Platform and discover how you can use its powerful capabilities to power your Web3 project.
