@@ -25,8 +25,7 @@ Dash apart in the blockchain economy.
 Check out the `official Dash website <https://www.dash.org/>`__ to learn
 how `individuals <https://www.dash.org/individuals/>`__ and `businesses
 <https://www.dash.org/businesses/>`__ can use Dash. The videos, links
-and documentation collected here can help you get started, or use the
-table of contents on the left to find a specific topic of interest. New
+and documentation collected here can help you get started. New
 users may be interested in getting started with an appropriate
 :ref:`wallet <wallets>`, learning about :ref:`how to buy Dash
 <how-to-buy>` and :ref:`where to spend Dash <earning-spending>`, 
