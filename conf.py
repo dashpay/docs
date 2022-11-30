@@ -117,6 +117,11 @@ html_theme_options = {
          "sizes": "96x96",
          "href": "img/favicon-96x96.png",
       },
+      {
+         "rel": "icon",
+         "sizes": "144x144",
+         "href": "img/favicon-144x144.png",
+      },
    ]
 }
 
