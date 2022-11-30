@@ -33,6 +33,7 @@ learning about :ref:`safety <safety>` or joining one of the many
 :ref:`Dash community sites <information>`.
 
 .. image:: img/businessplan.svg
+   :class: no-scaled-link
    :align: center
    :width: 90%
 
