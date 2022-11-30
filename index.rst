@@ -33,6 +33,10 @@ users may be interested in getting started with an appropriate
 learning about :ref:`safety <safety>` or joining one of the many 
 :ref:`Dash community sites <information>`.
 
+.. image:: img/businessplan.svg
+   :align: center
+   :width: 90%
+
 .. toctree::
    :hidden:
    :maxdepth: 3
