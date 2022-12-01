@@ -177,6 +177,7 @@ html_css_files = [
 # }
 
 html_sidebars = {
+    "index": ["sidebar.html"],
     "**": ["sidebar-nav-bs"]
 }
 
@@ -237,5 +238,5 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-def setup(app):
-    app.add_js_file('js/lang.js')
+# def setup(app):
+#     app.add_js_file('js/lang.js')
