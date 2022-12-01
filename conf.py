@@ -238,5 +238,5 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-# def setup(app):
-#     app.add_js_file('js/lang.js')
+def setup(app):
+    app.add_js_file('js/lang.js')
