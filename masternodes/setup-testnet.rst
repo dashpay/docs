@@ -449,8 +449,6 @@ installing dashmate dependencies::
   curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
   sudo usermod -aG docker $USER
   newgrp docker
-  sudo apt install python3-pip
-  sudo pip3 install docker-compose
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
   nvm install 16
