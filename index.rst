@@ -1,4 +1,4 @@
-:html_theme.sidebar_secondary.remove:
+.. :html_theme.sidebar_secondary.remove:
 
 .. meta::
    :description: The Dash Documentation offers information and guides on Dash, the open source peer-to-peer cryptocurrency with a strong focus on the payments industry. 
