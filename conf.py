@@ -156,6 +156,10 @@ html_css_files = [
     'css/footer.css',
 ]
 
+html_js_files = [
+    'js/lang.js',
+]
+
 # Override to allow text wrap in tables
 # Details: https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
 #html_context = {
