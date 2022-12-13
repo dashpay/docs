@@ -123,7 +123,13 @@ html_theme_options = {
          "sizes": "144x144",
          "href": "img/favicon-144x144.png",
       },
-   ]
+   ],
+   "navbar_start": ["navbar-logo", "languages"],
+   "navbar_center": ["languages", "navbar-nav", "languages"],
+#    "navbar_end": ["navbar-icon-links", "version"],
+   "secondary_sidebar_items": ["languages", "page-toc", "edit-this-page", "sourcelink"],
+   "footer_items": ["languages", "copyright", "sphinx-version", "theme-version"],
+   "primary_sidebar_end": ["languages"],
 }
 
 html_context = {
@@ -156,9 +162,6 @@ html_css_files = [
     'css/footer.css',
 ]
 
-html_js_files = [
-    'js/lang.js',
-]
 
 # Override to allow text wrap in tables
 # Details: https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
@@ -242,5 +245,5 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-# def setup(app):
-#     app.add_js_file('js/lang.js')
+def setup(app):
+    app.add_js_file('js/lang.js')
