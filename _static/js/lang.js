@@ -1,7 +1,8 @@
 $(document).ready(function() {
+	console.log('lang.js - 1')
 	/* Select current language */
 	$('#langselect').val(DOCUMENTATION_OPTIONS['LANGUAGE']);
-	
+	console.log('lang.js - 2')
 	/* Set alternate links 
 	var langs = [ "de", "en", "es", "fr", "pt", "vi", "el", "ru", "ko", "ja", "zh-Hans", "zh-Hant", "ar", "x-default" ];
 	var pageURL = $(location).attr("href");
@@ -25,6 +26,7 @@ $(document).ready(function() {
 
 $(function(){
 	$("#langselect").on('change', function() {
+		console.log('lang.js - 3')
 		var pageURL = $(location).attr("href");
 		pageURL = pageURL.replace("https://docs.dash.org/" + DOCUMENTATION_OPTIONS['LANGUAGE'], "");
 		window.location.href = "https://docs.dash.org/" + $('#langselect').val() + pageURL;
