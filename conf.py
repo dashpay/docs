@@ -124,11 +124,11 @@ html_theme_options = {
          "href": "img/favicon-144x144.png",
       },
    ],
-   "navbar_start": ["navbar-logo", "languages"],
-   "navbar_center": ["languages", "navbar-nav", "languages"],
+#    "navbar_start": ["navbar-logo", "languages"],
+#    "navbar_center": ["languages", "navbar-nav", "languages"],
 #    "navbar_end": ["navbar-icon-links", "version"],
-   "secondary_sidebar_items": ["languages", "page-toc", "edit-this-page", "sourcelink"],
-   "footer_items": ["languages", "copyright", "sphinx-version", "theme-version"],
+#    "secondary_sidebar_items": ["languages", "page-toc", "edit-this-page", "sourcelink"],
+#    "footer_items": ["languages", "copyright", "sphinx-version", "theme-version"],
    "primary_sidebar_end": ["languages"],
 }
 
