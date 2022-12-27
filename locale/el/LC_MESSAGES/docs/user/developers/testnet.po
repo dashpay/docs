@@ -1,26 +1,30 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Leon White <leon.white@dash.org>, 2022
+# John Theman <Grdash@mail.com>, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 14:07-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"PO-Revision-Date: 2022-12-27 18:55+0000\n"
+"Last-Translator: John Theman <Grdash@mail.com>, 2022\n"
+"Language-Team: Greek (https://www.transifex.com/dash/teams/37570/el/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../docs/user/developers/testnet.rst:1
 msgid ""
-"Dash testnet and devnets are used by Dash developers for testing using "
-"tDASH"
+"Dash testnet and devnets are used by Dash developers for testing using tDASH"
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:1
@@ -35,47 +39,62 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:11
 msgid ""
-"Testnet is a fully functioning Dash blockchain with the one key exception"
-" that because the Dash on the network can be created freely, it has no "
-"value. This currency, known as tDASH, can be requested from a faucet to "
-"help developers test new versions of Dash, as well as test network "
-"operations using identical versions of the software before they are "
-"carried out on the mainnet. There are a few other key differences:"
+"Testnet is a fully functioning Dash blockchain with the one key exception "
+"that because the Dash on the network can be created freely, it has no value."
+" This currency, known as tDASH, can be requested from a faucet to help "
+"developers test new versions of Dash, as well as test network operations "
+"using identical versions of the software before they are carried out on the "
+"mainnet. There are a few other key differences:"
 msgstr ""
+"Το Testnet είναι μία πλήρης λειτουργική Dash blockchain αλυσίδα με μία "
+"μοναδική εξαίρεση - επειδή το Dash δημιουργείται στο δίκτυο ελύθερα, δεν "
+"έχει καμία αξία. Το Testnet βοηθάει τους developers να δοκιμάζουν νέες "
+"εκδόσεις του Dash, καθώς επίσης και να δοκιμάζουν λειτουργίες του δικτύου "
+"χρησιμοποιώντας πανομοιότυπες εκδόσεις του λογισμικού πριν αυτές "
+"πραγματοποιηθούν στο mainnet. Υπάρχουν μερικές ακόμα βασικές διαφορές: "
 
 #: ../../docs/user/developers/testnet.rst:18
 msgid "Testnet operates on port 19999 (instead of 9999)"
-msgstr ""
+msgstr "Το Testnet λειτουργεί στο port 19999 (αντι για το 9999)"
 
 #: ../../docs/user/developers/testnet.rst:19
 msgid ""
-"Testnet addresses start with \"y\" instead of \"X\", ADDRESSVERSION is "
-"140 (instead of 76)"
+"Testnet addresses start with \"y\" instead of \"X\", ADDRESSVERSION is 140 "
+"(instead of 76)"
 msgstr ""
+"Οι διευθύνσεις Testnet ξεκινούν με \"y\" αντί για \"X\", ADDRESSVERSION "
+"είναι 140 (αντι για 76)"
 
 #: ../../docs/user/developers/testnet.rst:21
 msgid "Testnet balances are denominated in tDASH (instead of DASH)"
-msgstr ""
+msgstr "Οι ισοζυγίες του Testnet γίνονται σε tDASH (αντι για DASH)"
 
 #: ../../docs/user/developers/testnet.rst:22
 msgid "Protocol message header bytes are 0xcee2caff (instead of 0xbf0c6bbd)"
 msgstr ""
+"Τα Protocol message header bytes είναι 0xcee2caff (αντι για 0xbf0c6bbd)"
 
 #: ../../docs/user/developers/testnet.rst:23
 msgid ""
-"Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, "
-"testnet-seed.darkcoin.qa, testnet-seed.dashpay.io"
+"Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, testnet-"
+"seed.darkcoin.qa, testnet-seed.dashpay.io"
 msgstr ""
+"Το bootstrapping χρησιμοποιεί διαφορετικά DNS seeds: "
+"test.dnsseed.masternode.io, testnet-seed.darkcoin.qa, testnet-"
+"seed.dashpay.io"
 
 #: ../../docs/user/developers/testnet.rst:25
 msgid "Launching Dash Core in testnet mode shows an orange splash screen"
 msgstr ""
+"Το Launching Dash Core σε testnet mode δείχνει μία πορτοκαλί οθόνη splash"
 
 #: ../../docs/user/developers/testnet.rst:27
 msgid ""
-"To start Dash Core in testnet mode, find your dash.conf file and enter "
-"the following line::"
+"To start Dash Core in testnet mode, find your dash.conf file and enter the "
+"following line::"
 msgstr ""
+"Για να ξεκινήσετε το Dash Core σε testnet mode, βρείτε το αρχείο σας "
+"dash.conf και πληκτρολογήστε την ακόλουθη γραμμή::"
 
 #: ../../docs/user/developers/testnet.rst:32
 msgid ""
@@ -83,22 +102,22 @@ msgid ""
 "feature — **named devnets**. Devnets are developer networks that combine "
 "some aspects of testnet (the global and public testing network) and some "
 "aspects of regtest (the local-only regression testing mode that provides "
-"controlled block generation). Unlike testnet, multiple independent "
-"devnets can be created and coexist without interference. For practical "
-"documentation on how to use devnets, see the `developer documentation "
-"<https://dashcore.readme.io/docs/core-examples-testing-applications>`__ "
-"or this `blog post <https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
+"controlled block generation). Unlike testnet, multiple independent devnets "
+"can be created and coexist without interference. For practical documentation"
+" on how to use devnets, see the `developer documentation "
+"<https://dashcore.readme.io/docs/core-examples-testing-applications>`__ or "
+"this `blog post <https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:43
 msgid "Tools and links"
-msgstr ""
+msgstr "Tools and links"
 
 #: ../../docs/user/developers/testnet.rst:45
 msgid ""
-"The links below were collected from various community sources and may not"
-" necessarily be online or functioning at any given time. Please join "
-"`Dash Discord <http://staydashy.com/>`_ or the `Dash Forum "
+"The links below were collected from various community sources and may not "
+"necessarily be online or functioning at any given time. Please join `Dash "
+"Discord <http://staydashy.com/>`_ or the `Dash Forum "
 "<https://www.dash.org/forum/>`_ if you have a question relating to a "
 "specific service."
 msgstr ""
@@ -109,15 +128,15 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:52
 msgid "**Bugtracker:** https://github.com/dashpay/dash/issues/new"
-msgstr ""
+msgstr "**Bugtracker:** https://github.com/dashpay/dash/issues/new"
 
 #: ../../docs/user/developers/testnet.rst:53
 msgid "**Discussion and help:** https://www.dash.org/forum/topic/testing.53/"
-msgstr ""
+msgstr "**Discussion and help:** https://www.dash.org/forum/topic/testing.53/"
 
 #: ../../docs/user/developers/testnet.rst:54
 msgid "**Masternode tools:** https://test.dashninja.pl/masternodes.html"
-msgstr ""
+msgstr "**Masternode tools:** https://test.dashninja.pl/masternodes.html"
 
 #: ../../docs/user/developers/testnet.rst:55
 msgid ""
@@ -127,11 +146,11 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:56
 msgid "**Testnet for Bitcoin:** https://en.bitcoin.it/wiki/Testnet"
-msgstr ""
+msgstr "**Testnet for Bitcoin:** https://en.bitcoin.it/wiki/Testnet"
 
 #: ../../docs/user/developers/testnet.rst:59
 msgid "Faucets"
-msgstr ""
+msgstr "Faucets"
 
 #: ../../docs/user/developers/testnet.rst:61
 msgid "https://testnet-faucet.dash.org/ - by Dash Core Group"
@@ -143,7 +162,7 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:63
 msgid "http://test.faucet.masternode.io - by coingun"
-msgstr ""
+msgstr "http://test.faucet.masternode.io - by coingun"
 
 #: ../../docs/user/developers/testnet.rst:64
 msgid "http://faucet.test.dash.crowdnode.io - by ndrezza"
@@ -151,7 +170,7 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:67
 msgid "Explorers"
-msgstr ""
+msgstr "Explorers"
 
 #: ../../docs/user/developers/testnet.rst:69
 msgid "https://testnet-insight.dashevo.org/insight"
@@ -159,45 +178,50 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:72
 msgid "Pools"
-msgstr ""
+msgstr "Pools"
 
 #: ../../docs/user/developers/testnet.rst:74
 msgid ""
-"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by "
-"flare"
+"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare"
 msgstr ""
+"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare"
 
 #: ../../docs/user/developers/testnet.rst:75
 msgid ""
 "http://test.p2pool.dash.siampm.com "
 "[stratum+tcp://test.p2pool.dash.siampm.com:17903] by thelazier"
 msgstr ""
+"http://test.p2pool.dash.siampm.com "
+"[stratum+tcp://test.p2pool.dash.siampm.com:17903] by thelazier"
 
 #: ../../docs/user/developers/testnet.rst:76
 msgid "http://p2pool.dashninja.pl:17903/static - by elbereth"
-msgstr ""
+msgstr "http://p2pool.dashninja.pl:17903/static - by elbereth"
 
 #: ../../docs/user/developers/testnet.rst:77
 msgid "http://test.p2pool.masternode.io:18998/static - by coingun"
-msgstr ""
+msgstr "http://test.p2pool.masternode.io:18998/static - by coingun"
 
 #: ../../docs/user/developers/testnet.rst:80
 msgid "Masternodes"
-msgstr ""
+msgstr "Masternodes"
 
 #: ../../docs/user/developers/testnet.rst:82
 msgid ""
-"Installing a masternode under testnet generally follows the same steps as"
-" the :ref:`mainnet masternode installation guide <masternode-setup>`, but"
-" with a few key differences:"
+"Installing a masternode under testnet generally follows the same steps as "
+"the :ref:`mainnet masternode installation guide <masternode-setup>`, but "
+"with a few key differences:"
 msgstr ""
+"Η εγκατάσταση ενός masternode στο testnet ακολουθεί τα ίδια στάδια όπως και "
+"στο :ref:`mainnet masternode installation guide <masternode-setup>`, με "
+"μερικές βασικές διαφορές:"
 
 #: ../../docs/user/developers/testnet.rst:86
 msgid ""
-"You will probably be running a development version of Dash instead of the"
-" stable release. See `here <https://gitlab.com/dashpay/dash/pipelines>`__"
-" for a list of builds, then choose the latest successful ``develop`` "
-"build and click **Artifacts** to view a list of binaries."
+"You will probably be running a development version of Dash instead of the "
+"stable release. See `here <https://gitlab.com/dashpay/dash/pipelines>`__ for"
+" a list of builds, then choose the latest successful ``develop`` build and "
+"click **Artifacts** to view a list of binaries."
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:90
@@ -205,24 +229,31 @@ msgid ""
 "When opening the firewall, port 19999 must be opened instead of (or in "
 "addition to) 9999. Use this command: ``ufw allow 19999/tcp``"
 msgstr ""
+"Όταν ανοίγετε το firewall, το port 19999 πρέπει να είναι ανοικτό αντί για (ή"
+" συμπληρωματικά με) το 9999. Χρησιμοποιήστε αυ΄την την εντολή: ``ufw allow "
+"19999/tcp``"
 
 #: ../../docs/user/developers/testnet.rst:92
 msgid ""
-"Your desktop wallet must be running in testnet mode. Add the following "
-"line to *dash.conf*: ``testnet = 1``"
+"Your desktop wallet must be running in testnet mode. Add the following line "
+"to *dash.conf*: ``testnet = 1``"
 msgstr ""
+"Το πορτοφόλι του desktop σας πρέπει να τρέχει σε tesnet mode. Προσθέστε την "
+"ακόλουθη γραμμή στο *dash.conf*: ``testnet = 1``"
 
 #: ../../docs/user/developers/testnet.rst:94
 msgid ""
 "When sending the collateral, you can get the 1000 tDASH for free from a "
 "faucet (see above)"
 msgstr ""
+"Όταν στέλνετε την εγγύηση, παίρνετε τα 1000 tDash δεωρεάν από ένα faucet "
+"(δείτε πιό πάνω)"
 
 #: ../../docs/user/developers/testnet.rst:96
 msgid ""
-"Your masternode configuration file must also specify testnet mode. Add "
-"the following line when setting up *dash.conf* on the masternode: "
-"``testnet = 1``"
+"Your masternode configuration file must also specify testnet mode. Add the "
+"following line when setting up *dash.conf* on the masternode: ``testnet = "
+"1``"
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:99
@@ -230,26 +261,30 @@ msgid ""
 "As for mainnet masternodes, the RPC username and password must contain "
 "alphanumeric characters only"
 msgstr ""
+"Όσο για τα mainnet masternodes, τα RPC username και password πρέπει να "
+"περιέχουν μόνο αλφαριθμητικούς χαρακτήρες"
 
 #: ../../docs/user/developers/testnet.rst:101
 msgid ""
-"When cloning sentinel, you may need to clone the development branch using"
-" the ``-b`` option, for example: ``git clone -b develop "
+"When cloning sentinel, you may need to clone the development branch using "
+"the ``-b`` option, for example: ``git clone -b develop "
 "https://github.com/dashpay/sentinel.git``"
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:104
 msgid ""
-"Once sentinel is installed, modify "
-"``~/.dashcore/sentinel/sentinel.conf``, comment the mainnet line and "
-"uncomment: ``network=testnet``"
+"Once sentinel is installed, modify ``~/.dashcore/sentinel/sentinel.conf``, "
+"comment the mainnet line and uncomment: ``network=testnet``"
 msgstr ""
+"Μόλις το sentinet εγκατασταθεί, τροποποιήστε "
+"``~/.dashcore/sentinel/sentinel.conf``, κάντε comment στη mainnet line και "
+"uncomment: ``network=testnet``"
 
 #: ../../docs/user/developers/testnet.rst:107
 msgid ""
 "The wallet holding the masternode collateral will expect to find the "
-"``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf`` "
-"instead of ``~/.dashcore/masternode.conf``."
+"``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf`` instead"
+" of ``~/.dashcore/masternode.conf``."
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:113
@@ -258,12 +293,12 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:115
 msgid ""
-"In June 2020, the Dash team announced the start of testing of the "
-"upcoming Dash 0.16.0 release. Extensive internal testing has already been"
-" done on the 0.16.0 code, but there are numerous bugs that can only be "
-"revealed with actual use by real people. The Dash team invites anybody "
-"who is interested to download the software and become active on testnet. "
-"This release includes:"
+"In June 2020, the Dash team announced the start of testing of the upcoming "
+"Dash 0.16.0 release. Extensive internal testing has already been done on the"
+" 0.16.0 code, but there are numerous bugs that can only be revealed with "
+"actual use by real people. The Dash team invites anybody who is interested "
+"to download the software and become active on testnet. This release "
+"includes:"
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:122
@@ -297,7 +332,7 @@ msgstr ""
 #: ../../docs/user/developers/testnet.rst:237
 #: ../../docs/user/developers/testnet.rst:264
 msgid "Discussion:"
-msgstr ""
+msgstr "Συζήτηση:"
 
 #: ../../docs/user/developers/testnet.rst:131
 msgid ""
@@ -326,7 +361,7 @@ msgstr ""
 #: ../../docs/user/developers/testnet.rst:241
 #: ../../docs/user/developers/testnet.rst:268
 msgid "Issue tracking: https://github.com/dashpay/dash/issues/new"
-msgstr ""
+msgstr "Issue tracking: https://github.com/dashpay/dash/issues/new"
 
 #: ../../docs/user/developers/testnet.rst:136
 #: ../../docs/user/developers/testnet.rst:160
@@ -334,7 +369,7 @@ msgstr ""
 #: ../../docs/user/developers/testnet.rst:214
 #: ../../docs/user/developers/testnet.rst:243
 msgid "Latest test binaries:"
-msgstr ""
+msgstr "Τελευταία test binaries:"
 
 #: ../../docs/user/developers/testnet.rst:138
 msgid "https://github.com/dashpay/dash/releases/tag/v0.16.0.0-rc3"
@@ -347,11 +382,11 @@ msgstr ""
 #: ../../docs/user/developers/testnet.rst:143
 msgid ""
 "In December 2019, the Dash team announced the start of testing of the "
-"upcoming Dash 0.15.0 release. Extensive internal testing has already been"
-" done on the 0.15.0 code, but there are numerous bugs that can only be "
-"revealed with actual use by real people. The Dash team invites anybody "
-"who is interested to download the software and become active on testnet. "
-"This release includes:"
+"upcoming Dash 0.15.0 release. Extensive internal testing has already been "
+"done on the 0.15.0 code, but there are numerous bugs that can only be "
+"revealed with actual use by real people. The Dash team invites anybody who "
+"is interested to download the software and become active on testnet. This "
+"release includes:"
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:150
@@ -384,12 +419,12 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:168
 msgid ""
-"In March 2019, the Dash team announced the start of testing of the "
-"upcoming Dash 0.14.0 release. Extensive internal testing has already been"
-" done on the 0.14.0 code, but there are numerous bugs that can only be "
-"revealed with actual use by real people. The Dash team invites anybody "
-"who is interested to download the software and become active on testnet. "
-"This release includes:"
+"In March 2019, the Dash team announced the start of testing of the upcoming "
+"Dash 0.14.0 release. Extensive internal testing has already been done on the"
+" 0.14.0 code, but there are numerous bugs that can only be revealed with "
+"actual use by real people. The Dash team invites anybody who is interested "
+"to download the software and become active on testnet. This release "
+"includes:"
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:175
@@ -427,11 +462,11 @@ msgstr ""
 #: ../../docs/user/developers/testnet.rst:194
 msgid ""
 "In November 2018, the Dash team announced the start of testing of the "
-"upcoming Dash 0.13.0 release. Extensive internal testing has already been"
-" done on the 0.13.0 code, but there are numerous bugs that can only be "
-"revealed with actual use by real people. The Dash team invites anybody "
-"who is interested to download the software and become active on testnet. "
-"This release includes:"
+"upcoming Dash 0.13.0 release. Extensive internal testing has already been "
+"done on the 0.13.0 code, but there are numerous bugs that can only be "
+"revealed with actual use by real people. The Dash team invites anybody who "
+"is interested to download the software and become active on testnet. This "
+"release includes:"
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:201
@@ -476,12 +511,12 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:221
 msgid ""
-"In June 2018, the Dash team announced the start of testing of the "
-"upcoming Dash 0.12.3 release. Extensive internal testing has already been"
-" done on the 0.12.2 code, but there are numerous bugs that can only be "
-"revealed with actual use by real people. The Dash team invites anybody "
-"who is interested to download the software and become active on testnet. "
-"This release includes:"
+"In June 2018, the Dash team announced the start of testing of the upcoming "
+"Dash 0.12.3 release. Extensive internal testing has already been done on the"
+" 0.12.2 code, but there are numerous bugs that can only be revealed with "
+"actual use by real people. The Dash team invites anybody who is interested "
+"to download the software and become active on testnet. This release "
+"includes:"
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:228
@@ -489,30 +524,32 @@ msgid ""
 "Named Devnets, to help developers quickly create multiple independent "
 "devnets"
 msgstr ""
+"Ονομάζονται Devnets, για να βοηθήσουν τους developers να δημιουργήσουν "
+"γρήγορα πολλαπλά ανεξάρτητα devnets"
 
 #: ../../docs/user/developers/testnet.rst:230
 msgid "New format of network message signatures"
-msgstr ""
+msgstr "Νέος τύπος υπογραφών δικτυακών μηνυμάτων"
 
 #: ../../docs/user/developers/testnet.rst:231
 msgid "Governance system improvements"
-msgstr ""
+msgstr "Βελτιώσεις στο σύστημα διακυβέρνησης"
 
 #: ../../docs/user/developers/testnet.rst:232
 msgid "PrivateSend improvements"
-msgstr ""
+msgstr "Βελτιώσεις στο PrivateSend"
 
 #: ../../docs/user/developers/testnet.rst:233
 msgid "Additional indexes cover P2PK now"
-msgstr ""
+msgstr "Περισσότερα indexes υποστηρίζουν τώρα το P2PK"
 
 #: ../../docs/user/developers/testnet.rst:234
 msgid "Support for pruned nodes in Lite Mode"
-msgstr ""
+msgstr "Υποστήριξη για pruned nodes σε Lite Mode"
 
 #: ../../docs/user/developers/testnet.rst:235
 msgid "New Masternode Information Dialog"
-msgstr ""
+msgstr "Νέος Διάλογος Πληροφοριών Masternode "
 
 #: ../../docs/user/developers/testnet.rst:239
 msgid "https://www.dash.org/forum/threads/v12-3-testing.38475/"
@@ -520,7 +557,7 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:245
 msgid "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
-msgstr ""
+msgstr "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
 
 #: ../../docs/user/developers/testnet.rst:249
 msgid "Testnet 0.12.2"
@@ -528,12 +565,12 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:251
 msgid ""
-"In October 2017, the Dash team announced the launch of a testnet for "
-"public testing of the upcoming 0.12.2 release of the Dash software. "
-"Extensive internal testing has already been done on the 0.12.2 code, but "
-"there are numerous bugs that can only be revealed with actual use by real"
-" people. The Dash team invites anybody who is interested to download the "
-"software and become active on testnet. This release includes:"
+"In October 2017, the Dash team announced the launch of a testnet for public "
+"testing of the upcoming 0.12.2 release of the Dash software. Extensive "
+"internal testing has already been done on the 0.12.2 code, but there are "
+"numerous bugs that can only be revealed with actual use by real people. The "
+"Dash team invites anybody who is interested to download the software and "
+"become active on testnet. This release includes:"
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:258
@@ -541,36 +578,46 @@ msgid ""
 "DIP0001 implementation "
 "https://github.com/dashpay/dips/blob/master/dip-0001.md"
 msgstr ""
+"DIP0001 implementation "
+"https://github.com/dashpay/dips/blob/master/dip-0001.md"
 
 #: ../../docs/user/developers/testnet.rst:259
 msgid "10x transaction fee reduction (including InstantSend fee)"
 msgstr ""
+"10x μείωση του κόστου συναλλαγής (συμπεριλαμβανομένου του κόστους για το "
+"InstantSend)"
 
 #: ../../docs/user/developers/testnet.rst:260
 msgid "InstantSend vulnerability fix"
-msgstr ""
+msgstr "InstantSend vulnerability fix"
 
 #: ../../docs/user/developers/testnet.rst:261
 msgid "Lots of other bug fixes and performance improvements"
-msgstr ""
+msgstr "Πολλές διορθώσεις σε bugs και βελτιώσεις στην απόδοση"
 
 #: ../../docs/user/developers/testnet.rst:262
 msgid ""
-"Experimental BIP39/BIP44 complaint HD wallet (disabled by default, should"
-" be fully functional but there is no GUI yet)"
+"Experimental BIP39/BIP44 complaint HD wallet (disabled by default, should be"
+" fully functional but there is no GUI yet)"
 msgstr ""
+"Πειραματικό BIP39/BIP44 HD πορτοφόλι παραπόνων (αρχικά απενεργοποιημένο από "
+"το σύστημα, θα είναι πλήρως λειτουργικό αλλα δεν υπάρχει ακόμα GUI)"
 
 #: ../../docs/user/developers/testnet.rst:266
 msgid ""
 "Testnet 12.2 discussion: "
 "https://www.dash.org/forum/threads/v12-2-testing.17412/"
 msgstr ""
+"Testnet 12.2 discussion: "
+"https://www.dash.org/forum/threads/v12-2-testing.17412/"
 
 #: ../../docs/user/developers/testnet.rst:267
 msgid ""
 "Testnet tools: https://www.dash.org/forum/threads/testnet-tools-"
 "resources.1768/"
 msgstr ""
+"Testnet tools: https://www.dash.org/forum/threads/testnet-tools-"
+"resources.1768/"
 
 #: ../../docs/user/developers/testnet.rst:270
 msgid "Latest successfully built develop branch binaries:"
@@ -583,4 +630,3 @@ msgstr ""
 #: ../../docs/user/developers/testnet.rst:273
 msgid "Sentinel: https://github.com/dashpay/sentinel/tree/develop"
 msgstr ""
-
