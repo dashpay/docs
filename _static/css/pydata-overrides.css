@@ -1,0 +1,33 @@
+/* Update theme variables based on https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/styling.html#css-theme-variables */
+
+:root {
+  --dash-blue: #008de4;
+  --dash-deep-blue: #012060;
+  --dash-midnight-blue: #0b0f3b;
+}
+
+html[data-theme="light"] {
+  --pst-color-primary:var(--dash-blue);
+  --pst-color-link:var(--pst-color-primary);
+  --pst-color-link-hover:var(--dash-deep-blue);
+}
+
+html[data-theme="dark"] {
+  --pst-color-primary:var(--dash-blue);
+  --pst-color-link:var(--pst-color-primary);
+}
+
+html {
+  /* Headers */
+  --pst-font-size-h1: 28px;
+  --pst-font-size-h2: 24px;
+  --pst-font-size-h3: 20px;
+
+  /* Sidebar styles */
+  --pst-sidebar-font-size: 0.95em;
+  --pst-sidebar-header-font-size: 1.2em;
+}
+
+.bd-sidebar-primary {
+  max-width: 22.5%; /* Default is 25% */
+}

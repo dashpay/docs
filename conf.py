@@ -80,48 +80,83 @@ todo_include_todos = False
 
 
 
-import sphinx_rtd_theme
-
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx_rtd_theme',
     'sphinx_copybutton',
+    'sphinx_design',
 ]
-
-html_theme = 'sphinx_rtd_theme'
-#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-
-# Theme options
-html_theme_options = {
-    # 'typekit_id': 'hiw1hhg',
-    # 'analytics_id': '',
-    # 'sticky_navigation': True  # Set to False to disable the sticky nav while scrolling.
-    'logo_only': True,  # if we have a html_logo below, this shows /only/ the logo with no title text
-    'collapse_navigation': False,  # Collapse navigation (False makes it tree-like)
-    'display_version': False,  # Display the docs version
-    # 'navigation_depth': 4,  # Depth of the headers shown in the navigation bar
-}
-
-html_logo = 'img/dash_logo_white.png'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-#html_theme = 'alabaster'
+html_theme = "pydata_sphinx_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    "external_links": [
+        {"name": "Core docs", "url": "https://dashcore.readme.io/"},
+        {"name": "Platform docs", "url": "https://dashplatform.readme.io"},
+        {"name": "Dash.org", "url": "https://www.dash.org"},
+    ],
+    "use_edit_page_button": True,
+    "github_url": "https://github.com/dashpay/docs",
+    "show_toc_level": 2,
+    "show_nav_level": 1,
+    "favicons": [
+      {
+         "rel": "icon",
+         "sizes": "16x16",
+         "href": "img/favicon-16x16.png",
+      },
+      {
+         "rel": "icon",
+         "sizes": "32x32",
+         "href": "img/favicon-32x32.png",
+      },
+      {
+         "rel": "icon",
+         "sizes": "96x96",
+         "href": "img/favicon-96x96.png",
+      },
+      {
+         "rel": "icon",
+         "sizes": "144x144",
+         "href": "img/favicon-144x144.png",
+      },
+   ],
+#    "navbar_start": ["navbar-logo", "languages"],
+#    "navbar_center": ["languages", "navbar-nav", "languages"],
+#    "navbar_end": ["navbar-icon-links", "version"],
+#    "secondary_sidebar_items": ["languages", "page-toc", "edit-this-page", "sourcelink"],
+#    "footer_items": ["languages", "copyright", "sphinx-version", "theme-version"],
+   "primary_sidebar_end": ["languages"],
+}
+
+html_context = {
+    # "github_url": "https://github.com", # or your GitHub Enterprise site
+    "github_user": "dashpay",
+    "github_repo": "docs",
+    "github_version": "18.0.0",
+    "doc_path": "",
+}
+
+html_logo = 'docs/user/img/dash_logo.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_css_files = [
+    'css/footer.css',
+    'css/pydata-overrides.css',
+]
 
 # Override to allow text wrap in tables
 # Details: https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
@@ -134,13 +169,9 @@ html_static_path = ['_static']
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
-# This is required for the alabaster theme
-# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
-    '**': [
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-    ]
+    "index": ["sidebar-main.html"],
+    "**": ["sidebar-nav-bs"]
 }
 
 

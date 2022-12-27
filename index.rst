@@ -1,82 +1,76 @@
+.. :html_theme.sidebar_secondary.remove:
+
 .. meta::
    :description: The Dash Documentation offers information and guides on Dash, the open source peer-to-peer cryptocurrency with a strong focus on the payments industry. 
-   :keywords: dash, cryptocurrency, blockchain, documentation, guide, masternodes, mining, wallets, merchants, governance, instantsend, coinjoin, privatesend, x11, instant, private, secure, digital cash
+   :keywords: dash, cryptocurrency, blockchain, documentation, guide, masternodes, mining, wallets, merchants, governance, instantsend, coinjoin, x11, instant, private, secure, digital cash
 
 ==================
 Dash Documentation
 ==================
 
-.. image:: img/dash_logo.png
-   :width: 60 %
+Dash aims to be the most user-friendly and scalable payments-focused
+cryptocurrency in the world. The Dash network features :ref:`instant
+transaction confirmation <instantsend>`, double spend protection,
+optional :ref:`privacy <coinjoin>` equal to that of physical cash, a
+:ref:`self-governing, self-funding model <decentralized-governance>` 
+driven by :ref:`incentivized full nodes <masternode-network>` and a 
+`clear roadmap <https://www.dash.org/roadmap/>`_ for on-chain scaling to
+up to 400MB blocks using custom-developed open source hardware. While
+Dash is based on Bitcoin and compatible with many key components of the
+Bitcoin ecosystem, its two-tier network structure offers significant
+improvements in transaction speed, privacy and governance. This section
+of the documentation describes these and many more key features that set
+Dash apart in the blockchain economy.
+
+Check out the `official Dash website <https://www.dash.org/>`__ to learn
+how `individuals <https://www.dash.org/individuals/>`__ and `businesses
+<https://www.dash.org/businesses/>`__ can use Dash. The videos, links
+and documentation collected here can help you get started. New
+users may be interested in getting started with an appropriate
+:ref:`wallet <wallets>`, learning about :ref:`how to buy Dash
+<how-to-buy>` and :ref:`where to spend Dash <earning-spending>`, 
+learning about :ref:`safety <safety>` or joining one of the many 
+:ref:`Dash community sites <information>`.
+
+.. grid:: 1 3 3 3
+
+    .. grid-item-card:: 👤 User Docs
+        :margin: 2 2 auto auto
+        :link-type: ref
+        :link: user-index
+        
+        Learn what Dash is and how it works. Topics include how to obtain and store Dash, the governance system, and masternode setup.
+        
+        +++
+        :ref:`Click to begin <user-index>`
+
+    .. grid-item-card:: ⚙ Core Docs
+        :margin: 2 2 auto auto
+        :link-type: url
+        :link: https://dashcore.readme.io
+        
+        Find technical details about the Dash Core blockchain, along with protocol and API reference material.
+        
+        +++
+        `Click to begin <https://dashcore.readme.io>`__
+
+    .. grid-item-card:: 🚀 Platform Docs
+         :margin: 2 2 auto auto
+         :link-type: url
+         :link: https://dashplatform.readme.io
+
+         Start working with Dash Platform and discover how you can use its powerful capabilities to power your Web3 project.
+         
+         +++
+         `Click to begin <https://dashplatform.readme.io>`__
+
+.. image:: img/businessplan.svg
+   :class: no-scaled-link
    :align: center
-
-Dash is an open source peer-to-peer cryptocurrency with a strong focus
-on the payments industry. Dash offers a form of money that is portable,
-inexpensive, divisible and fast. It can be spent securely both online
-and in person with only minimal transaction fees. Based on the Bitcoin
-project, Dash aims to be the most user-friendly and scalable payments
-system in the world. In addition to Bitcoin's feature set, Dash
-currently also offers instant transactions (:ref:`instantsend`), private
-transactions (:ref:`coinjoin`) and operates a self-governing and
-self-funding model that enables the Dash network to pay individuals and
-businesses for work that adds value to the network. This
-:ref:`decentralized governance and budgeting system <governance>` makes
-it one of the first ever successful decentralized autonomous
-organizations (DAO).
-
-If you are new to cryptocurrencies, the most important change to
-understand is that transactions occur directly between two parties
-without any central authority to facilitate the transaction. This also
-means that you are responsible for your own security - there is no bank
-or credit card company to reverse a transaction if your funds are stolen
-or lost. In this sense, it is similar to cash or gold, but
-cryptocurrency can be spent locally and internationally with equal ease,
-if you are confident you are sending funds to the right destination. For
-these reasons, the Dash documentation has a strong focus on safety and
-understanding the concepts and features that drive the Dash ecosystem.
-The videos, links and documentation below can help you get started, or
-use the table of contents on the left to find a specific topic of
-interest.
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
-        <iframe src="//www.youtube.com/embed/EDC1ioQ46m4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-    
-
-Contents
-========
+   :width: 90%
 
 .. toctree::
+   :hidden:
    :maxdepth: 3
-   :caption: First Steps
-
-   introduction/about
-   introduction/features
-   introduction/how-to-buy
-   introduction/safety
-   introduction/information
-
-.. _user-docs:
-
-.. toctree::
-   :maxdepth: 3
-   :caption: Users
-
-   wallets/index
-   earning-spending
-
-.. _network-docs:
-
-.. toctree::
-   :maxdepth: 3
-   :caption: Network
-
-   governance/index.rst
-   masternodes/index
-   mining/index
-   developers/index
-   network/electrumx-server
-   marketing.rst
-   legal.rst
+   
+   docs/user/index
