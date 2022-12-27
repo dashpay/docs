@@ -1,143 +1,191 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Андрей Дегтяр <diusha1711@gmail.com>, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 15:21-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"PO-Revision-Date: 2022-12-27 18:57+0000\n"
+"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2022\n"
+"Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: ../../docs/user/wallets/electrum/security.rst:1
 msgid "Security, backup and safety when using the Dash Electrum wallet"
 msgstr ""
+"Надёжность, безопасность и создание резервных копий при использовании "
+"кошелька Dash Electrum"
 
 #: ../../docs/user/wallets/electrum/security.rst:1
 msgid "dash, wallet, electrum, safety, password, backup, security, restore"
 msgstr ""
+"dash, кошелёк, electrum, безопасность, пароль, резервная копия, защита, "
+"восстановление"
 
 #: ../../docs/user/wallets/electrum/security.rst:8
 msgid "Wallet security"
-msgstr ""
+msgstr "Безопасность кошелька"
 
 #: ../../docs/user/wallets/electrum/security.rst:11
 msgid "Change password"
-msgstr ""
+msgstr "Изменение пароля"
 
 #: ../../docs/user/wallets/electrum/security.rst:13
 msgid ""
 "To change the wallet's password, select the **Wallet > Password** option "
-"from the main menu, or click on the lock icon in the lower right of the "
-"main window. Enter and confirm a new secure password. Should you forget "
-"your wallets' password, all is not lost. Your wallet can be restored in "
-"its entirety using the backup procedure described here."
+"from the main menu, or click on the lock icon in the lower right of the main"
+" window. Enter and confirm a new secure password. Should you forget your "
+"wallets' password, all is not lost. Your wallet can be restored in its "
+"entirety using the backup procedure described here."
 msgstr ""
+"Для изменения пароля кошелька выберите опцию **Wallet > Password** из "
+"главного меню или в главном окне кликните на иконку с замочком справа внизу."
+" Введите новый безопасный пароль и подтвердите его. Если вы забыли пароль "
+"своего кошелька, то ещё не всё потеряно. Ваш кошелёк можно полностью "
+"восстановить из резервной копии, используя описанную ниже процедуру."
 
 #: ../../docs/user/wallets/electrum/security.rst:22
 msgid "Backup"
-msgstr ""
+msgstr "Создание резервной копии"
 
 #: ../../docs/user/wallets/electrum/security.rst:24
 msgid ""
 "In Dash Electrum, a seed is a complete backup of all addresses and "
-"transactions. Access your wallet's seed through the seed icon in the "
-"lower right of the main screen, or the **Wallet > Seed** main menu "
-"option. When prompted, enter the secure password you chose when setting "
-"up the Dash Electrum wallet."
+"transactions. Access your wallet's seed through the seed icon in the lower "
+"right of the main screen, or the **Wallet > Seed** main menu option. When "
+"prompted, enter the secure password you chose when setting up the Dash "
+"Electrum wallet."
 msgstr ""
+"Seed-фраза в кошельке Dash Electrum является полной резервной копией всех "
+"адресов и транзакций. Доступ к seed-фразе вашего кошелька можно получить "
+"нажав в главном окне справа внизу на seed-иконку или воспользовавшись опцией"
+" главного меню **Wallet > Seed**. По запросу введите выбранный вами при "
+"настройке кошелька Dash Electrum надёжный пароль."
 
 #: ../../docs/user/wallets/electrum/security.rst:33
 msgid "Displaying the wallet recovery seed in Dash Electrum"
-msgstr ""
+msgstr "Отображение seed-фразы восстановления кошелька в Dash Electrum"
 
 #: ../../docs/user/wallets/electrum/security.rst:35
 msgid ""
-"Hand-copy the twelve words found in the box to a piece of paper and store"
-" it in a safe location. Remember, anyone who finds your seed can spend "
-"all of the funds in your wallet."
+"Hand-copy the twelve words found in the box to a piece of paper and store it"
+" in a safe location. Remember, anyone who finds your seed can spend all of "
+"the funds in your wallet."
 msgstr ""
+"Вручную перепишите на лист бумаги двенадцать слов, которые вы найдёте в "
+"коробке и сохраните этот лист в надёжном месте. Помните, что любой человек, "
+"заполучивший вашу seed-фразу может потратить все средства из вашего "
+"кошелька."
 
 #: ../../docs/user/wallets/electrum/security.rst:42
 msgid "Viewing the recovery seed"
-msgstr ""
+msgstr "Просмотр seed-фразы восстановления"
 
 #: ../../docs/user/wallets/electrum/security.rst:44
 msgid ""
 "Alternatively, a backup file can be saved using the **File > Save Copy** "
-"main menu option. This file stores the wallet's encrypted seed along with"
-" any imported addresses. Restoring this backup will require the wallet "
+"main menu option. This file stores the wallet's encrypted seed along with "
+"any imported addresses. Restoring this backup will require the wallet "
 "password."
 msgstr ""
+"В качестве альтернативы файл резервной копии можно сохранить с помощью опции"
+" **File > Save Copy** из главного меню. В этом файле содержится "
+"зашифрованная кошельком seed-фраза, а также все импортируемые адреса. Для "
+"восстановления из файла резервной копии потребуется пароль кошелька."
 
 #: ../../docs/user/wallets/electrum/security.rst:51
 msgid "Restore"
-msgstr ""
+msgstr "Восстановление"
 
 #: ../../docs/user/wallets/electrum/security.rst:53
 msgid ""
-"The only thing needed to recover a Dash Electrum wallet on another "
-"computer is its seed. You can test wallet recovery with your current "
-"installation of Dash Electrum by selecting the **File > New/Restore** "
-"menu item. A dialog will appear asking you to name your new wallet. Enter"
-" a name, select **Standard wallet** as the wallet type and then choose "
-"**I already have a seed**."
+"The only thing needed to recover a Dash Electrum wallet on another computer "
+"is its seed. You can test wallet recovery with your current installation of "
+"Dash Electrum by selecting the **File > New/Restore** menu item. A dialog "
+"will appear asking you to name your new wallet. Enter a name, select "
+"**Standard wallet** as the wallet type and then choose **I already have a "
+"seed**."
 msgstr ""
+"Единственное, что вам понадобится для восстановления кошелька Dash Electrum "
+"на другом компьютере - это его seed-фраза. Можно протестировать "
+"восстановление кошелька на текущей установленной у вас версии Dash Electrum "
+"выбрав в нём пункт меню **File > New/Restore**. Появится диалоговое окно с "
+"запросом ввести имя вашего нового кошелька. Введите имя, выберите **Standard"
+" wallet** в качестве типа кошелька и затем выберите **I already have a "
+"seed**."
 
 #: ../../docs/user/wallets/electrum/security.rst:63
 msgid "Restoring a wallet from an existing seed"
-msgstr ""
+msgstr "Восстановление кошелька с помощью существующей seed-фразы"
 
 #: ../../docs/user/wallets/electrum/security.rst:65
 msgid "Next, copy the twelve word seed into the text field."
 msgstr ""
+"Следующим шагом скопируйте в текстовое поле seed-фразу из двенадцати слов."
 
 #: ../../docs/user/wallets/electrum/security.rst:70
 msgid "Entering the recovery seed"
-msgstr ""
+msgstr "Ввод seed-фразы восстановления"
 
 #: ../../docs/user/wallets/electrum/security.rst:72
 msgid ""
-"If your seed was entered correctly, Dash Electrum gives you the option to"
-" add a password for your wallet. After restoring your wallet, Dash "
-"Electrum will list any existing transactions from this wallet. This "
-"process may take a few minutes, and the transactions may appear as **Not "
-"Verified**. This problem disappears after restarting the program."
+"If your seed was entered correctly, Dash Electrum gives you the option to "
+"add a password for your wallet. After restoring your wallet, Dash Electrum "
+"will list any existing transactions from this wallet. This process may take "
+"a few minutes, and the transactions may appear as **Not Verified**. This "
+"problem disappears after restarting the program."
 msgstr ""
+"Если seed-фразу вы ввели правильно, Dash Electrum предоставит вам "
+"возможность добавить пароль для вашего кошелька. После восстановления "
+"кошелька Dash Electrum отобразит все существующие транакции из этого "
+"кошелька. Этот процесс может занять несколько минут, а транзакции могут быть"
+" обозначены как **Not Verified**. Эта проблема исчезает при перезапуске "
+"программы."
 
 #: ../../docs/user/wallets/electrum/security.rst:81
 msgid "Unverified transactions after recovery"
-msgstr ""
+msgstr "Неподтверждённые транзакции после восстановления"
 
 #: ../../docs/user/wallets/electrum/security.rst:83
 msgid ""
-"To restore a wallet file without using the recovery seed, copy the file "
-"to the application data folder according to your operating system:"
+"To restore a wallet file without using the recovery seed, copy the file to "
+"the application data folder according to your operating system:"
 msgstr ""
+"Для восстановления файла кошелька без использования seed-фразы "
+"восстановления, скопируйте его в папку \"Application data\" в зависимости от"
+" установленной операционной системы:"
 
 #: ../../docs/user/wallets/electrum/security.rst:86
 msgid ""
 "**Linux:** Open Files, select **Go > Go to folder**, copy the path "
 "``~/.electrum-dash`` and paste it into the dialog box."
 msgstr ""
+"**Linux:** Откройте Files, выберите **Go > Go to folder**, скопируйте "
+"следующий путь ``~/.electrum-dash`` и вставьте его в диалоговом окне."
 
 #: ../../docs/user/wallets/electrum/security.rst:89
 msgid ""
 "**macOS:** Open Finder, select **Go > Go to Folder**, copy the path "
 "``~/.electrum-dash`` and paste it into the dialog box."
 msgstr ""
+"**macOS:** Откройте Finder, выберите **Go > Go to Folder**, скопируйте "
+"следующий путь ``~/.electrum-dash`` и вставьте его в диалоговом окне."
 
 #: ../../docs/user/wallets/electrum/security.rst:92
 msgid ""
-"**Windows:** Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` "
-"and paste it in to the address bar."
+"**Windows:** Open Explorer, copy the path ``%APPDATA%\\Electrum-DASH`` and "
+"paste it in to the address bar."
 msgstr ""
-
+"**Windows:** Откройте Explorer, скопируйте следующий путь "
+"``%APPDATA%\\Electrum-DASH`` и вставьте его в адресную строку."

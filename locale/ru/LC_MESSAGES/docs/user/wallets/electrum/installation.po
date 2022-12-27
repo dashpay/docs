@@ -1,21 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Андрей Дегтяр <diusha1711@gmail.com>, 2022
+# Julia Ogonkova <livingflcl@gmail.com>, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 15:21-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"PO-Revision-Date: 2022-12-27 18:57+0000\n"
+"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2022\n"
+"Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: ../../docs/user/wallets/electrum/installation.rst:1
 msgid ""
@@ -24,16 +29,17 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/wallets/electrum/installation.rst:1
-msgid "dash, mobile, wallet, electrum, android, linux, windows, macos, compile"
+msgid ""
+"dash, mobile, wallet, electrum, android, linux, windows, macos, compile"
 msgstr ""
 
 #: ../../docs/user/wallets/electrum/installation.rst:9
 msgid "Installation"
-msgstr ""
+msgstr "Установка"
 
 #: ../../docs/user/wallets/electrum/installation.rst:12
 msgid "Download"
-msgstr ""
+msgstr "Скачать"
 
 #: ../../docs/user/wallets/electrum/installation.rst:16
 msgid "New downloads of Electrum are currently unavailable"
@@ -41,78 +47,108 @@ msgstr ""
 
 #: ../../docs/user/wallets/electrum/installation.rst:20
 msgid "Creating a New Wallet"
-msgstr ""
+msgstr "Как создать новый кошелёк"
 
 #: ../../docs/user/wallets/electrum/installation.rst:22
 msgid ""
-"Dash Electrum gathers configuration data when run for the first time. For"
-" more on the concepts behind this process, skip to the later sections of "
-"this guide discussing backups, security, and addresses. When setting up "
-"Dash Electrum for the first time, a wizard will guide you through the "
-"process of creating your first wallet. The first screen asks how you "
-"would like to connect to the remote server. Select **Auto connect** and "
-"click **Next** to continue. You will see a notice that no wallet "
-"currently exists. Enter a name for your wallet (or accept the default "
-"name) and click **Next** to create your wallet."
+"Dash Electrum gathers configuration data when run for the first time. For "
+"more on the concepts behind this process, skip to the later sections of this"
+" guide discussing backups, security, and addresses. When setting up Dash "
+"Electrum for the first time, a wizard will guide you through the process of "
+"creating your first wallet. The first screen asks how you would like to "
+"connect to the remote server. Select **Auto connect** and click **Next** to "
+"continue. You will see a notice that no wallet currently exists. Enter a "
+"name for your wallet (or accept the default name) and click **Next** to "
+"create your wallet."
 msgstr ""
+"При первом запуске Dash Electrum собирает данные о настройках. Чтобы узнать "
+"больше об этом процессе, перейдите в последний раздел этой инструкции, где "
+"идёт речь о бэкапах, безопасности и адресах. При первой установке Dash "
+"Electrum, мастер установки поможет вам создать ваш первый кошелёк. В первом "
+"окне вас просят, как вы хотите подключаться к удалённому серверу. Выберите "
+"**Auto connect** и нажмите **Next**, чтобы продолжить. Вы увидите сообщение,"
+" что кошелёк ещё не создан. Введите имя вашего кошелька (или оставьте имя по"
+" умолчанию) и нажмите **Next**, чтобы создать кошелёк."
 
 #: ../../docs/user/wallets/electrum/installation.rst:38
 msgid "Selecting the server and naming your first wallet"
-msgstr ""
+msgstr "Выбор сервера и имени для вашего первого кошелька"
 
 #: ../../docs/user/wallets/electrum/installation.rst:40
 msgid ""
 "You will be asked what kind of wallet you want to create. Choose between "
 "**Standard wallet**, **Multi-signature wallet** and **Watch Dash "
 "addresses**. If you are unsure, select **Standard wallet** and click "
-"**Next** to continue. You will then be asked how you want to "
-"store/recover the seed. If stored safely, a seed can be used to restore a"
-" lost wallet on another computer. Choose between **Create a new seed**, "
-"**I already have a seed**, **Use public or private keys** or **Use a "
-"hardware device**. If you are using Electrum Dash for the first time and "
-"not restoring an existing wallet, choose **Create a new seed** and click "
-"**Next** to continue."
+"**Next** to continue. You will then be asked how you want to store/recover "
+"the seed. If stored safely, a seed can be used to restore a lost wallet on "
+"another computer. Choose between **Create a new seed**, **I already have a "
+"seed**, **Use public or private keys** or **Use a hardware device**. If you "
+"are using Electrum Dash for the first time and not restoring an existing "
+"wallet, choose **Create a new seed** and click **Next** to continue."
 msgstr ""
+"Установщик спросит, какой кошелёк вы хотите создать и предложит выбор между "
+"*Standard wallet**, **Multi-signature wallet** и **Watch Dash addresses**. "
+"Если вы не знаете, какой именно вам нужен, выберите **Standard wallet** и "
+"нажмите **Next**, чтобы продолжить. Затем вас спросят, где вы хотите хранить"
+" или откуда восстановить мнемоническую фразу. При правильном хранении, "
+"мнемоническую фразу можно использовать для восстановления утерянного "
+"кошелька на другом компьютере. Вы можете выбрать между **Create a new "
+"seed**, **I already have a seed**, **Use public or private keys** или **Use "
+"a hardware device**. Если вы впервые пользуетесь Electrum Dash и не "
+"восстанавливаете уже существующий кошелёк, выберите  **Create a new seed** и"
+" нажмите **Next**, чтобы продолжить."
 
 #: ../../docs/user/wallets/electrum/installation.rst:57
 msgid "Selecting the wallet type and keystore"
-msgstr ""
+msgstr "Выбор типа кошелька и хранилища ключей"
 
 #: ../../docs/user/wallets/electrum/installation.rst:59
 msgid ""
-"Electrum Dash will generate your wallet and display the recovery seed. "
-"Write this seed down, ideally on paper and not in an electronic format, "
-"and store it somewhere safe. This seed is the only way you can recover "
-"your wallet if you lose access for any reason. To make sure you have "
-"properly saved your seed, Electrum Dash will ask you to type it in as a "
-"confirmation. Type the words in the correct order and click **Next** to "
-"continue."
+"Electrum Dash will generate your wallet and display the recovery seed. Write"
+" this seed down, ideally on paper and not in an electronic format, and store"
+" it somewhere safe. This seed is the only way you can recover your wallet if"
+" you lose access for any reason. To make sure you have properly saved your "
+"seed, Electrum Dash will ask you to type it in as a confirmation. Type the "
+"words in the correct order and click **Next** to continue."
 msgstr ""
+"Electrum Dash создаст ваш кошелёк и отобразит мнемоническую фразу. Запишите "
+"её, лучше всего на бумаге, а не в электронном виде, и храните где-нибудь в "
+"безопасном месте. Только с помощью мнемонической фразы вы сможете "
+"восстановить ваш кошелёк, если по какой-то причине потеряете к нему доступ. "
+"Чтобы убедиться, что вы надёжно сохранили мнемоническую фразу, Electrum Dash"
+" попросит вас ввести её в качестве подтверждения. Введите слова в правильном"
+" порядке и нажмите **Next** , чтобы продолжить."
 
 #: ../../docs/user/wallets/electrum/installation.rst:73
 msgid "Generating and confirming the recovery seed"
-msgstr ""
+msgstr "Создание и подтверждение мнемонической фразы для восстановления"
 
 #: ../../docs/user/wallets/electrum/installation.rst:75
 msgid ""
 "A password optionally secures your wallet against unauthorized access. "
-"Adding a memorable, strong password now improves the security of your "
-"wallet by encrypting your seed from the beginning. Skipping encryption at"
-" this point by not selecting a password risks potential theft of funds "
-"later, however unlikely the threat may be. Enter and confirm a password, "
-"ensure the **Encrypt wallet file** checkbox is ticked and click **Next** "
-"to continue."
+"Adding a memorable, strong password now improves the security of your wallet"
+" by encrypting your seed from the beginning. Skipping encryption at this "
+"point by not selecting a password risks potential theft of funds later, "
+"however unlikely the threat may be. Enter and confirm a password, ensure the"
+" **Encrypt wallet file** checkbox is ticked and click **Next** to continue."
 msgstr ""
+"По желанию, вы можете защитить свой кошелёк от несанкционированного доступа "
+"с помощью пароля. Добавление запоминающегося, сильного пароля улучшает "
+"безопасность вашего кошелька, зашифровывая мнемоническую фразу с самого "
+"начала работы. Если вы сейчас пропустите этап шифрования и не выберите "
+"пароль, вы рискуете позже потерять свои средства, каким бы маловероятным ни "
+"казался такой исход. Введите и подтвердите пароль, убедитесь. что пункт "
+"**Encrypt wallet file** отмечен галочкой, и нажмите **Next**, чтобы "
+"продолжить."
 
 #: ../../docs/user/wallets/electrum/installation.rst:86
 msgid "Entering and confirming a wallet encryption password"
-msgstr ""
+msgstr "Ввод и подтверждение пароля шифрования кошелька"
 
 #: ../../docs/user/wallets/electrum/installation.rst:88
 msgid "Your Dash Electrum wallet is now set up and ready for use."
-msgstr ""
+msgstr "Теперь ваш кошелёк Dash Electrum установлен и готов к работе."
 
 #: ../../docs/user/wallets/electrum/installation.rst:93
 msgid "Dash Electrum after setup is complete"
-msgstr ""
-
+msgstr "Dash Electrum после завершения установки"

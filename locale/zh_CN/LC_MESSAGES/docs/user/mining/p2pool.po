@@ -1,29 +1,34 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Leon White <leon.white@dash.org>, 2022
+# Alex.ys <silvershark.ys@gmail.com>, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 15:21-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"PO-Revision-Date: 2022-12-27 18:56+0000\n"
+"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2022\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../docs/user/mining/p2pool.rst:1
 msgid "Guide to setting up a Dash P2Pool node"
-msgstr ""
+msgstr "架设达世币 P2Pool节点指南"
 
 #: ../../docs/user/mining/p2pool.rst:1
 msgid "dash, mining, X11, p2pool, node, pool, software, ASIC, mining pool"
-msgstr ""
+msgstr "达世币，挖矿，X11，p2pool，节点，池，软件，ASIC，矿池"
 
 #: ../../docs/user/mining/p2pool.rst:9
 msgid "P2Pool Node Setup"
@@ -31,72 +36,76 @@ msgstr ""
 
 #: ../../docs/user/mining/p2pool.rst:11
 msgid ""
-"This guide describes how to set up a Dash P2Pool node to manage a pool of"
-" miners. Unlike centralized mining pools, P2Pool is based on the same "
-"peer-2-peer (P2P) model as Dash, making the pool as a whole highly "
-"resistant to malicious attacks, and preserving and protecting the "
-"decentralized nature of Dash. When you launch a P2Pool node, it seeks "
-"out, connects with, and shares data with a decentralized network of other"
-" P2Pool nodes (also known as peers). P2Pool nodes share a cryptographic "
-"chain of data representing value, similar to Dash's blockchain. The "
-"P2Pool version is called the sharechain. The decentralized and fair "
-"nature of this mining model means mining with P2Pool is strongly "
-"encouraged. P2Pool for Dash uses the `p2pool-dash "
-"<https://github.com/dashpay/p2pool-dash>`_ software on GitHub, which is a"
-" fork of p2pool for Bitcoin. For more information, see `here "
-"<https://en.bitcoin.it/wiki/P2Pool>`__."
+"This guide describes how to set up a Dash P2Pool node to manage a pool of "
+"miners. Unlike centralized mining pools, P2Pool is based on the same "
+"peer-2-peer (P2P) model as Dash, making the pool as a whole highly resistant"
+" to malicious attacks, and preserving and protecting the decentralized "
+"nature of Dash. When you launch a P2Pool node, it seeks out, connects with, "
+"and shares data with a decentralized network of other P2Pool nodes (also "
+"known as peers). P2Pool nodes share a cryptographic chain of data "
+"representing value, similar to Dash's blockchain. The P2Pool version is "
+"called the sharechain. The decentralized and fair nature of this mining "
+"model means mining with P2Pool is strongly encouraged. P2Pool for Dash uses "
+"the `p2pool-dash <https://github.com/dashpay/p2pool-dash>`_ software on "
+"GitHub, which is a fork of p2pool for Bitcoin. For more information, see "
+"`here <https://en.bitcoin.it/wiki/P2Pool>`__."
 msgstr ""
+"本指南描述如何架设达世币P2Pool节点来管理矿池。与集中式矿池不同，P2Pool以与达世币相同的peer-2-peer（点对点）模式为基础，使矿池作为一个整体高度抵抗恶意攻击，并维持和保护达世币的去中心化性质。当您启动P2Pool节点时，它会与其他P2Pool节点（也被称为对等节点）的去中心化网络查找、连接和共享数据。P2Pool节点共享一个表示价值的加密数据链，类似于达世币的区块链。P2Pool版本被称为共享链。这种挖矿模式的去中心化和公平性意味着人们强烈鼓励使用P2Pool进行挖矿。达世币的P2Pool使用在GitHub上的\\"
+" `p2pool-dash <https://github.com/dashpay/p2pool-dash>`_\\ "
+"软件，它是比特币p2pool的分叉。有关更多信息，请参阅\\ `此处 <https://en.bitcoin.it/wiki/P2Pool>`__\\ "
+"."
 
 #: ../../docs/user/mining/p2pool.rst:26
 msgid ""
-"Because of the way P2Pool manages difficulty adjustments on the "
-"sharechain, it is important to maintain low latency between the miners "
-"and the P2Pool node to avoid miners submitting shares too late to enter "
-"the sharechain. When setting up your node, you need to consider its "
-"physical and network location relative to the miners you intend to "
-"connect to the node. If you operate a mining farm, your P2Pool node "
-"should probably be a physical machine on the same local network as your "
-"miners. If you plan to operate a public node, it may be best to set up "
-"your P2Pool node as a virtual machine in a data center with a high speed "
-"connection so geographically close miners can mine to your pool with "
-"relatively low latency."
+"Because of the way P2Pool manages difficulty adjustments on the sharechain, "
+"it is important to maintain low latency between the miners and the P2Pool "
+"node to avoid miners submitting shares too late to enter the sharechain. "
+"When setting up your node, you need to consider its physical and network "
+"location relative to the miners you intend to connect to the node. If you "
+"operate a mining farm, your P2Pool node should probably be a physical "
+"machine on the same local network as your miners. If you plan to operate a "
+"public node, it may be best to set up your P2Pool node as a virtual machine "
+"in a data center with a high speed connection so geographically close miners"
+" can mine to your pool with relatively low latency."
 msgstr ""
+"由于P2Pool在共享链上管理难度调整的方式，重要的是保持矿工和P2Pool节点之间的低延迟，以避免矿工提交算力太晚而无法进入共享链。在设置您的节点时，相对于您打算连接到该节点的矿工，您需要考虑其物理和网络位置。如果您经营一个矿场，您的P2Pool节点可能是与您的矿工相同的本地网络上的物理机器。如果您计划运营一个公共节点，最好将您的P2Pool节点设置为具有高速连接的数据中心的虚拟机，以便地理位置相近的矿工能够以相对较低的延迟挖到您的矿池。"
 
 #: ../../docs/user/mining/p2pool.rst:38
 msgid ""
-"This following section describes the steps to setup an Ubuntu Server "
-"running P2Pool for Dash. It has been tested with Ubuntu 20.04 LTS and "
-"Dash 0.16. While a reasonable effort will be made to keep it up to date, "
-"it should be possible to modify the instructions slightly to support "
-"different versions or operating systems as necessary."
+"This following section describes the steps to setup an Ubuntu Server running"
+" P2Pool for Dash. It has been tested with Ubuntu 20.04 LTS and Dash 0.16. "
+"While a reasonable effort will be made to keep it up to date, it should be "
+"possible to modify the instructions slightly to support different versions "
+"or operating systems as necessary."
 msgstr ""
 
 #: ../../docs/user/mining/p2pool.rst:45
 msgid "Setting up the host server"
-msgstr ""
+msgstr "设置主机服务器"
 
 #: ../../docs/user/mining/p2pool.rst:47
 msgid ""
-"Download a copy of Ubuntu Server LTS from "
-"https://ubuntu.com/download/server and install it on your system "
-"according to the steps described `here <https://ubuntu.com/tutorials"
-"/install-ubuntu-server>`__. If you are using a VPS such as Vultr or AWS, "
-"your provider will most likely provide an option to install this system "
-"during provisioning. Ensure you enable OpenSSH server during setup so you"
-" can control your server from a remote console. Once you have access to "
-"your server, create a new non-root user if you have not already done so "
-"using the following command, replacing ``<username>`` with a username of "
-"your choice::"
+"Download a copy of Ubuntu Server LTS from https://ubuntu.com/download/server"
+" and install it on your system according to the steps described `here "
+"<https://ubuntu.com/tutorials/install-ubuntu-server>`__. If you are using a "
+"VPS such as Vultr or AWS, your provider will most likely provide an option "
+"to install this system during provisioning. Ensure you enable OpenSSH server"
+" during setup so you can control your server from a remote console. Once you"
+" have access to your server, create a new non-root user if you have not "
+"already done so using the following command, replacing ``<username>`` with a"
+" username of your choice::"
 msgstr ""
 
 #: ../../docs/user/mining/p2pool.rst:60
 msgid ""
-"You will be prompted for a password. Enter and confirm using a new "
-"password (different to your root password) and store it in a safe place. "
-"You will also see prompts for user information, but this can be left "
-"blank. Once the user has been created, we will add them to the sudo group"
-" so they can perform commands as root::"
+"You will be prompted for a password. Enter and confirm using a new password "
+"(different to your root password) and store it in a safe place. You will "
+"also see prompts for user information, but this can be left blank. Once the "
+"user has been created, we will add them to the sudo group so they can "
+"perform commands as root::"
 msgstr ""
+"您将被提示输入密码。输入并确认使用新的密码 "
+"(与root密码不同)，并将其存储在安全的地方。您还将看到有关用户信息的提示，但此提示可以保留为空白。一旦用户被创建，我们将把它们添加到sudo组中，这样它们就可以root用户的身份执行命令::"
 
 #: ../../docs/user/mining/p2pool.rst:68
 msgid ""
@@ -105,10 +114,13 @@ msgid ""
 "<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_ (for "
 "Windows) or ssh (for Linux and macOS) if you have not already done so."
 msgstr ""
+"重新启动您的服务器并以新用户的身份登录。此时如果您还没有进行远程连接，建议使用\\ `PuTTY "
+"<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_\\ "
+"（Windows版本）或ssh（Linux和MacOS版本）进行远程连接。"
 
 #: ../../docs/user/mining/p2pool.rst:74
 msgid "Setting up port forwarding"
-msgstr ""
+msgstr "设置端口转发"
 
 #: ../../docs/user/mining/p2pool.rst:76
 msgid ""
@@ -116,23 +128,23 @@ msgid ""
 "port forwarding for at least port 8999 (UDP/TCP) for access to the "
 "sharechain, as well as port 7903 (UDP/TCP) if you want your node to be "
 "accessible to the public. How this is done depends on your particular "
-"network router and is therefore beyond the scope of this documentation. "
-"An example from the popular DD-WRT open source router distribution is "
-"shown below. Guides to setting up port forwarding can be found `here "
-"<https://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router>`__ and `here"
-" <https://www.noip.com/support/knowledgebase/general-port-forwarding-"
+"network router and is therefore beyond the scope of this documentation. An "
+"example from the popular DD-WRT open source router distribution is shown "
+"below. Guides to setting up port forwarding can be found `here "
+"<https://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router>`__ and `here "
+"<https://www.noip.com/support/knowledgebase/general-port-forwarding-"
 "guide/>`__."
 msgstr ""
 
 #: ../../docs/user/mining/p2pool.rst:86
 msgid ""
-"Take note of your IP address either from your router management interface"
-" or by visiting https://www.whatismyip.com"
-msgstr ""
+"Take note of your IP address either from your router management interface or"
+" by visiting https://www.whatismyip.com"
+msgstr "从您的路由器管理接口或通过访问 https://www.whatismyip.com 来记录您的IP地址。"
 
 #: ../../docs/user/mining/p2pool.rst:92
 msgid "Setting up port forwarding under DD-WRT"
-msgstr ""
+msgstr "在DD-WRT下设置端口转发"
 
 #: ../../docs/user/mining/p2pool.rst:95
 msgid "Manual setup"
@@ -140,30 +152,28 @@ msgstr ""
 
 #: ../../docs/user/mining/p2pool.rst:97
 msgid "First update your operating system as follows::"
-msgstr ""
+msgstr "首先按以下方式更新您的操作系统::"
 
 #: ../../docs/user/mining/p2pool.rst:103
 msgid "Setting up dashd"
-msgstr ""
+msgstr "设置dashd"
 
 #: ../../docs/user/mining/p2pool.rst:105
 msgid ""
-"P2Pool requires a full Dash node to be running to get block and "
-"transaction data. To download and install Dash, visit "
-"https://www.dash.org/downloads/ on your computer to find the link to the "
-"latest Dash Core wallet. Click **Linux**, then right-click on **Download "
-"TGZ** for **Dash Core x64** and select **Copy link address**. Go back to "
-"your terminal window and enter the following command, pasting in the "
-"address to the latest version of Dash Core by right clicking or pressing "
-"**Ctrl + V**::"
+"P2Pool requires a full Dash node to be running to get block and transaction "
+"data. To download and install Dash, visit https://www.dash.org/downloads/ on"
+" your computer to find the link to the latest Dash Core wallet. Click "
+"**Linux**, then right-click on **Download TGZ** for **Dash Core x64** and "
+"select **Copy link address**. Go back to your terminal window and enter the "
+"following command, pasting in the address to the latest version of Dash Core"
+" by right clicking or pressing **Ctrl + V**::"
 msgstr ""
 
 #: ../../docs/user/mining/p2pool.rst:117
 msgid ""
-"Verify the authenticity of your download by checking its detached "
-"signature against the public key published by the Dash Core development "
-"team. All releases of Dash are signed using GPG with one of the following"
-" keys:"
+"Verify the authenticity of your download by checking its detached signature "
+"against the public key published by the Dash Core development team. All "
+"releases of Dash are signed using GPG with one of the following keys:"
 msgstr ""
 
 #: ../../docs/user/mining/p2pool.rst:122
@@ -180,17 +190,17 @@ msgstr ""
 
 #: ../../docs/user/mining/p2pool.rst:134
 msgid ""
-"Create a working directory for Dash, extract the compressed archive, copy"
-" the necessary files to the directory and set them as executable::"
-msgstr ""
+"Create a working directory for Dash, extract the compressed archive, copy "
+"the necessary files to the directory and set them as executable::"
+msgstr "为达世币创建一个工作目录，解压压缩的归档文件，将必要的文件复制到目录中，并将它们设置为可执行文件::"
 
 #: ../../docs/user/mining/p2pool.rst:142
 msgid "Clean up unneeded files::"
-msgstr ""
+msgstr "清理不需要的文件::"
 
 #: ../../docs/user/mining/p2pool.rst:147
 msgid "Create a configuration file using the following command::"
-msgstr ""
+msgstr "使用以下命令创建配置文件::"
 
 #: ../../docs/user/mining/p2pool.rst:151
 msgid ""
@@ -198,31 +208,31 @@ msgid ""
 "specifying several variables. Copy and paste the following text to get "
 "started, then replace the variables specific to your configuration as "
 "follows::"
-msgstr ""
+msgstr "一个编辑器窗口将会出现。现在我们需要指定几个变量来创建一个配置文件。复制并粘贴以下文本以开始创建，然后按如下所示替换您配置中的具体变量::"
 
 #: ../../docs/user/mining/p2pool.rst:168
 msgid "Replace the fields marked with ``XXXXXXX`` as follows:"
-msgstr ""
+msgstr "按如下所示替换标记为\\ ``XXXXXXX``\\ 的字段:"
 
 #: ../../docs/user/mining/p2pool.rst:170
 msgid ""
-"``rpcuser``: enter any string of numbers or letters, no special "
-"characters allowed"
-msgstr ""
+"``rpcuser``: enter any string of numbers or letters, no special characters "
+"allowed"
+msgstr "``rpcuser``\\ ：输入任何数字或字母字符串，不允许有特殊字符"
 
 #: ../../docs/user/mining/p2pool.rst:172
 msgid ""
 "``rpcpassword``: enter any string of numbers or letters, no special "
 "characters allowed"
-msgstr ""
+msgstr "``rpcpassword``\\ ：输入任何数字或字母字符串，不允许有特殊字符"
 
 #: ../../docs/user/mining/p2pool.rst:175
 msgid "The result should look something like this:"
-msgstr ""
+msgstr "结果应该是这样的:"
 
 #: ../../docs/user/mining/p2pool.rst:180
 msgid "Entering key data in dash.conf on the P2Pool node"
-msgstr ""
+msgstr "在P2Pool节点上的 dash.conf 中输入密钥数据"
 
 #: ../../docs/user/mining/p2pool.rst:182
 msgid ""
@@ -230,46 +240,51 @@ msgid ""
 "file. You can now start running Dash on the masternode to begin "
 "synchronization with the blockchain::"
 msgstr ""
+"按\\ **Ctrl + X**\\ 以关闭编辑器，并按\\ **Y**\\ 和\\ **Enter**\\ "
+"保存该文件。您现在可以开始在主节点上运行达世币，以便开始与区块链同步::"
 
 #: ../../docs/user/mining/p2pool.rst:188
 msgid ""
 "You will see a message reading **Dash Core server starting**. You can "
 "continue with the following steps and check synchronization periodically "
-"using the following command. Synchronization is complete when the number "
-"of ``blocks`` is equal to the current number of blocks in the Dash "
-"blockchain, as can be seen from any synchronized Dash wallet or `block "
-"explorer <https://insight.dash.org/insight/>`_::"
+"using the following command. Synchronization is complete when the number of "
+"``blocks`` is equal to the current number of blocks in the Dash blockchain, "
+"as can be seen from any synchronized Dash wallet or `block explorer "
+"<https://insight.dash.org/insight/>`_::"
 msgstr ""
+"您将看到一条消息显示 **Dash Core服务器启动** 。您可以继续执行以下步骤，并使用以下命令定期检查同步状况。当 ``区块`` "
+"的数量等于达世币区块链中的当前区块数量时，同步完成，从任何同步的达世币钱包或 `区块浏览器 "
+"<https://insight.dash.org/insight/>`_\\ 中可以看到这一过程::"
 
 #: ../../docs/user/mining/p2pool.rst:198
 msgid "Setting up P2Pool"
-msgstr ""
+msgstr "设置 P2Pool"
 
 #: ../../docs/user/mining/p2pool.rst:200
 msgid ""
-"We will now set up the P2Pool software and its dependencies. Begin with "
-"the dependencies::"
-msgstr ""
+"We will now set up the P2Pool software and its dependencies. Begin with the "
+"dependencies::"
+msgstr "我们现在将设置P2Pool软件及其依赖项。从依赖项开始::"
 
 #: ../../docs/user/mining/p2pool.rst:208
 msgid "Create working directories and set up p2pool-dash::"
-msgstr ""
+msgstr "创建工作目录并设置p2pool-dash::"
 
 #: ../../docs/user/mining/p2pool.rst:216
 msgid "We will add some optional extra interfaces to the control panel::"
-msgstr ""
+msgstr "我们将向控制面板添加一些可选的额外接口::"
 
 #: ../../docs/user/mining/p2pool.rst:226
 msgid ""
-"You can now start p2pool and optionally specify the payout address, "
-"external IP (if necessary), fee and donation as follows::"
-msgstr ""
+"You can now start p2pool and optionally specify the payout address, external"
+" IP (if necessary), fee and donation as follows::"
+msgstr "您现在可以启动p2pool，并按以下方式选择性地指定支付地址、外部IP(如有必要)、费用和捐款::"
 
 #: ../../docs/user/mining/p2pool.rst:231
 msgid ""
 "You can then monitor your node by browsing to the following addresses, "
 "replacing ``<ip_address>`` with the IP address of your P2Pool node:"
-msgstr ""
+msgstr "然后，您可以通过浏览到以下地址来检测您的节点，用您P2Pool节点的IP地址替换 ``<ip_address>`` :"
 
 #: ../../docs/user/mining/p2pool.rst:234
 msgid "Punchy interface: http://ip_address:7903/static"
@@ -289,7 +304,6 @@ msgstr ""
 
 #: ../../docs/user/mining/p2pool.rst:245
 msgid ""
-"Example configuration showing a single Bitmain Antminer D3 connected to a"
-" p2pool-dash node on the local network"
-msgstr ""
-
+"Example configuration showing a single Bitmain Antminer D3 connected to a "
+"p2pool-dash node on the local network"
+msgstr "显示在本地网络上连接到p2pool-达世币节点的单个Bitmain Antminer D3的示例配置"

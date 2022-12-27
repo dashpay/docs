@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 15:21-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"PO-Revision-Date: 2022-12-27 18:56+0000\n"
+"Language-Team: Japanese (https://www.transifex.com/dash/teams/37570/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../docs/user/network/electrumx-server.rst:1
 msgid "Guide to installing a Dash ElectrumX server"
@@ -31,10 +31,10 @@ msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:11
 msgid ""
-"ElectrumX is a lightweight Electrum server written in Python that "
-"supports a variety of cryptocurrencies including Dash. It provides the "
-"backend services necessary to support the :ref:`Dash Electrum wallet "
-"<dash-electrum-wallet>`."
+"ElectrumX is a lightweight Electrum server written in Python that supports a"
+" variety of cryptocurrencies including Dash. It provides the backend "
+"services necessary to support the :ref:`Dash Electrum wallet <dash-electrum-"
+"wallet>`."
 msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:15
@@ -47,9 +47,9 @@ msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:21
 msgid ""
-"Please see :ref:`this page (VPS setup)<vps-setup>` and :ref:`this page "
-"(OS setup)<vps-os-setup>` for details regarding server configuration. "
-"**When creating the new user, use** ``electrumx`` **for the user name.**"
+"Please see :ref:`this page (VPS setup)<vps-setup>` and :ref:`this page (OS "
+"setup)<vps-os-setup>` for details regarding server configuration. **When "
+"creating the new user, use** ``electrumx`` **for the user name.**"
 msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:26
@@ -58,10 +58,10 @@ msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:28
 msgid ""
-"Before beginning the ElectrumX setup, make sure that your Dash Core node "
-"is configured to allow RPC access and perform transaction indexing.  "
-"These settings can be checked by viewing the ``dash.conf`` configuration "
-"file (:ref:`default location<dashcore-rpc>`)."
+"Before beginning the ElectrumX setup, make sure that your Dash Core node is "
+"configured to allow RPC access and perform transaction indexing.  These "
+"settings can be checked by viewing the ``dash.conf`` configuration file "
+"(:ref:`default location<dashcore-rpc>`)."
 msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:34
@@ -70,11 +70,10 @@ msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:36
 msgid ""
-"The ``dash.conf`` file must include values for ``rpcuser``, "
-"``rpcpassword``, and ``rpcallowip`` (it may also include ``rpcport``). "
-"They will be used in the *Set network values* step of  `Install and "
-"Configure ElectrumX`_ . If the values are not present, add them as shown "
-"below."
+"The ``dash.conf`` file must include values for ``rpcuser``, ``rpcpassword``,"
+" and ``rpcallowip`` (it may also include ``rpcport``). They will be used in "
+"the *Set network values* step of  `Install and Configure ElectrumX`_ . If "
+"the values are not present, add them as shown below."
 msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:47
@@ -83,8 +82,8 @@ msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:49
 msgid ""
-"``rpcuser``: enter any string of numbers or letters, no special "
-"characters allowed"
+"``rpcuser``: enter any string of numbers or letters, no special characters "
+"allowed"
 msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:51
@@ -116,7 +115,8 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:73
-msgid "Install Python 3.7 and the required build tools via the package system:"
+msgid ""
+"Install Python 3.7 and the required build tools via the package system:"
 msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:81
@@ -155,12 +155,13 @@ msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:126
 msgid ""
-"Create the ElectrumX directories and copy files into them. These "
-"directories will be located in the ``electrumx`` user's home directory:"
+"Create the ElectrumX directories and copy files into them. These directories"
+" will be located in the ``electrumx`` user's home directory:"
 msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:134
-msgid "Set the server banner message and the coin type that the server will host:"
+msgid ""
+"Set the server banner message and the coin type that the server will host:"
 msgstr ""
 
 #: ../../docs/user/network/electrumx-server.rst:142
@@ -170,8 +171,8 @@ msgstr ""
 #: ../../docs/user/network/electrumx-server.rst:144
 msgid ""
 "ElectrumX requires Dash Core RPC details so it can connect properly. Set "
-"``RPC_USER``, ``RPC_PASS``, ``RPC_IP``, and ``RPC_PORT`` variables to the"
-" values found in your ``dash.conf`` file. These values were previously "
+"``RPC_USER``, ``RPC_PASS``, ``RPC_IP``, and ``RPC_PORT`` variables to the "
+"values found in your ``dash.conf`` file. These values were previously "
 "checked in the `RPC Access`_ section."
 msgstr ""
 
@@ -220,4 +221,3 @@ msgstr ""
 #: ../../docs/user/network/electrumx-server.rst:233
 msgid "View Logs"
 msgstr ""
-
