@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Dash Core Group, Inc
+# This file is distributed under the same license as the Dash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dash latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-27 14:07-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: ../../docs/user/developers/insight.rst:1
+msgid ""
+"The open-source Dash Insight REST API provides you with a convenient, "
+"powerful and simple way to read data from the Dash network and build your"
+" own services with it."
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:1
+msgid ""
+"dash, insight, API, REST, blockchain, explorer, JSON, HTTP, blocks, "
+"index, transactions"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:9
+msgid "Insight API Installation"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:11
+msgid ""
+"The open-source Dash Insight REST API provides you with a convenient, "
+"powerful and simple way to read data from the Dash network and build your"
+" own services with it. Simple HTTP endpoints exist for all common "
+"operations on the Dash blockchain familiar from the Bitcore Insight API, "
+"as well as Dash-specific features such as InstantSend transactions, "
+"budget proposals, sporks and the masternode list. This documentation "
+"describes how to set up the `Dash Insight API <https://github.com/dashevo"
+"/insight-api>`__ server and (optionally) the `Dash Insight UI "
+"<https://github.com/dashevo/insight-ui>`__ block explorer."
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:23
+msgid ""
+"A standard installation of Ubuntu Linux 20.04 LTS will be used as an "
+"environment for the server. We assume you are running as a user with sudo"
+" permissions. First update all packages and install some tools and "
+"dependencies::"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:32
+msgid "Download and extract the latest version of Dash Core::"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:39
+msgid ""
+"Install `Dashcore Node <https://github.com/dashevo/dashcore-node>`_ and "
+"create your configuration::"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:47
+msgid "Install the Insight API service and (optionally) Insight UI::"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:53
+msgid "Change paths in the configuration file as follows::"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:57
+msgid "Change the value of ``datadir`` to ``../../.dashcore``"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:58
+msgid "Change the value of ``exec`` to ``../../dashcore-18.1.0/bin/dashd``"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:59
+msgid ""
+"**Optionally** change the value of ``network`` to ``testnet`` if you want"
+" to run Insight on testnet"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:62
+msgid "Run it::"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:66
+msgid ""
+"Your Insight API node will start up and begin to sync. Progress will be "
+"displayed on stdout. Once sync is complete, the `API endpoints listed in "
+"the documentation <https://github.com/dashevo/insight-api#api-http-"
+"endpoints>`_ will be available at::"
+msgstr ""
+
+#: ../../docs/user/developers/insight.rst:73
+msgid "The Insight UI block explorer will be available at::"
+msgstr ""
+
