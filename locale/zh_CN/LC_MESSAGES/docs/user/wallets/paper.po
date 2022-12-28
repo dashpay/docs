@@ -1,0 +1,415 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Dash Core Group, Inc
+# This file is distributed under the same license as the Dash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Leon White <leon.white@dash.org>, 2022
+# Alex.ys <silvershark.ys@gmail.com>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dash latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"PO-Revision-Date: 2022-12-27 18:56+0000\n"
+"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2022\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user/wallets/paper.rst:1
+msgid "Guides to secure paper wallets for Dash cryptocurrency"
+msgstr "用于达世币纸钱包的安全指南"
+
+#: ../../docs/user/wallets/paper.rst:1
+msgid "dash, paper, wallet, encryption"
+msgstr "达世币，纸，钱包，加密"
+
+#: ../../docs/user/wallets/paper.rst:8
+msgid "Introduction"
+msgstr "介绍"
+
+#: ../../docs/user/wallets/paper.rst:10
+msgid ""
+"A paper wallet is a method of storing a private key to access funds stored "
+"on a single address. It can be generated on a computer that has never been "
+"connected to the internet, and printed out for air-gapped offline storage. "
+"As such, they are suitable for storing large amounts of Dash, but care must "
+"be taken not to lose the private key, since there is no way of recovering "
+"funds if it is ever lost. To use the key, it must be imported or \"swept\" "
+"into an online wallet and should not be used again. Paper wallets are "
+"extremely secure but somewhat inconvenient for everyday use compared to "
+"hardware wallets, which also offer a high degree of security."
+msgstr ""
+"纸钱包是一种存储私钥以访问存储在单个地址上资金的方法。它可以在一台从未连接到互联网的计算机上生成，并打印出来用于气隙离线存储。因此，它们适合储存大量的达世币，但必须注意不要丢失私钥，因为一旦私钥丢失，就无法收回资金。要使用该私钥，必须将其导入或"
+" \"扫描\" 到在线钱包中，并且不该重复使用。与同样提供了高度安全性的硬件钱包相比，纸钱包极其安全，但日常使用却有些不方便。"
+
+#: ../../docs/user/wallets/paper.rst:21
+msgid ""
+"Paper wallets use random user and machine input to create a set of "
+"keys/addresses which you then print. You can never regenerate a paper wallet"
+" once you turn off the machine. What you print is all you get. For this "
+"reason, paper wallets are somewhat vulnerable and require special care "
+"because they can get damaged, lost, destroyed or stolen. Even if you encrypt"
+" them with BIP38 (which you should), a sufficiently motivated adversary "
+"(e.g. robbery/home invasion) could bypass this encryption using the "
+"proverbial \"$5 wrench attack\"."
+msgstr ""
+"纸钱包使用随机的用户和计算机输入来创建一组密钥/地址，然后您将它打印出来。一旦您关闭计算机，您就永远不可能再生成一个纸钱包。您所打印出来的东西就是您的全部。因此，纸钱包有些脆弱，需要特别照顾，因为它们可能被损坏、丢失、毁坏或被盗。即使您用BIP"
+" 38（您应该使用的）对纸钱包进行加密，一个动机充足的对手 (例如抢劫/入室侵害) 可以利用俗话说的“5美元扳手攻击”绕过这种加密。"
+
+#: ../../docs/user/wallets/paper.rst:33
+msgid "The $5 wrench attack. Credit: xkcd.com"
+msgstr "5美元扳手攻击。认证：xkcd.com"
+
+#: ../../docs/user/wallets/paper.rst:35
+msgid ""
+"Nevertheless, together with appropriate planning, paper wallets are a highly"
+" convenient and user-friendly way to store Dash long term."
+msgstr "尽管如此，纸钱包与适当的计划相结合，就是一种非常方便的、用户极易掌握的长期存储达世币的方式。"
+
+#: ../../docs/user/wallets/paper.rst:39
+msgid "Security"
+msgstr "安全性"
+
+#: ../../docs/user/wallets/paper.rst:41
+msgid ""
+"While you can create a paper wallet using a machine that is connected to the"
+" internet, wallets that will be used to store significant funds should be "
+"generated using an offline computer running a single-use operating system to"
+" ensure that all generated data will be permanently wiped from memory once "
+"the process is complete."
+msgstr ""
+"当您可以使用连接到互联网的计算机创建纸钱包时，将用于存储大量资金的钱包应该使用运行单用操作系统的离线计算机生成，以确保一旦创建过程完成，所有生成的数据都将被从内存中永久删除。"
+
+#: ../../docs/user/wallets/paper.rst:47
+msgid ""
+"A simple method of doing this is to burn a live Linux CD. `Ubuntu Desktop "
+"<https://ubuntu.com/download/desktop>`_ is recommended because it will have "
+"the most drivers and is simple to use, while `Tails "
+"<https://tails.boum.org/>`_ and `Kali Linux "
+"<https://www.kali.org/downloads/>`_ are popular choices for extremely strong"
+" security. Booting from an actual CD is most secure since it is mounted "
+"read-only, but a USB stick is generally fine as well. Both laptops and "
+"desktops can be used if you can ensure that all networking hardware is "
+"disabled when you get to the stage of actually generating your keys."
+msgstr ""
+
+#: ../../docs/user/wallets/paper.rst:58
+msgid ""
+"Boot from the CD and download/install your tools (or download them ahead of "
+"time to a USB drive). Disconnect from the internet, generate your "
+"keys/addresses/printouts, and power off the machine. You are now the only "
+"person with access to these addresses."
+msgstr ""
+"从CD引导并下载/安装您的工具（或提前下载到USB驱动器）。断开与互联网的连接，生成您的密钥/地址/打印，并关闭计算机。您现在是唯一可以访问这些地址的人。"
+
+#: ../../docs/user/wallets/paper.rst:64
+msgid "Death plan"
+msgstr "遗书计划"
+
+#: ../../docs/user/wallets/paper.rst:66
+msgid ""
+"Whichever type of cold storage you choose, make a plan to pass on the "
+"necessary data to regenerate the keys to your loved ones in the event of an "
+"accident - it will happen to us all eventually. Write down your paper wallet"
+" BIP38 decryption password or brain wallet passphrase. Then write down "
+"instructions on how to use it, and keep them separate with a clear procedure"
+" on how they can be accessed when necessary."
+msgstr ""
+"无论您选择哪种类型的冷存储，都要制定一项计划，以在发生事故时将再生成密钥的必要数据传递给您所爱的人 - "
+"这种事情最终会发生在我们所有人身上。写下您的纸钱包BIP "
+"38解密密码或您大脑中的钱包密码。然后写下关于如何使用密码的说明，并将密码和说明分开，在必要的时候留下清晰的过程解释如何访问钱包。"
+
+#: ../../docs/user/wallets/paper.rst:74
+msgid "Tools"
+msgstr "工具"
+
+#: ../../docs/user/wallets/paper.rst:76
+msgid "A Dash paper wallet can be generated in several ways."
+msgstr "达世币纸钱包可以以多种方式生成。"
+
+#: ../../docs/user/wallets/paper.rst:78
+msgid "Using the generator at https://paper.dash.org"
+msgstr "在 https://paper.dash.org 上使用生成器"
+
+#: ../../docs/user/wallets/paper.rst:79
+msgid "Using the generator at https://walletgenerator.net/?currency=Dash"
+msgstr "在 https://walletgenerator.net/?currency=Dash 上使用生成器"
+
+#: ../../docs/user/wallets/paper.rst:80
+msgid ""
+"Offline using the Dash Paper Wallet source code from GitHub at "
+"https://github.com/dashpay/paper.dash.org/releases/latest"
+msgstr ""
+"在 https://github.com/dashpay/paper.dash.org/releases/latest "
+"离线使用GitHub的达世币纸钱包源代码"
+
+#: ../../docs/user/wallets/paper.rst:82
+msgid ""
+"Offline using the same code which powers both sites, by viewing the `GitHub "
+"project <https://github.com/MichaelMure/WalletGenerator.net>`_ or "
+"`downloading directly "
+"<https://github.com/MichaelMure/WalletGenerator.net/archive/master.zip>`_"
+msgstr ""
+"通过查看 `GitHub 项目 <https://github.com/MichaelMure/WalletGenerator.net>`_ 或者 "
+"`直接下载 "
+"<https://github.com/MichaelMure/WalletGenerator.net/archive/master.zip>`_，离线使用支持两个网站的相同代码"
+
+#: ../../docs/user/wallets/paper.rst:86
+msgid ""
+"Since the source code for all three options is largely similar, this guide "
+"will use https://paper.dash.org as an example. The websites listed here run "
+"entirely in your web browser without sending any of the data generated to an"
+" external server, but the most secure option is to download the wallet "
+"generator and run it on a computer with a freshly installed operating system"
+" that is not connected to the internet."
+msgstr ""
+"由于这三个选项的源代码在很大程度上是相似的，因此本指南将使用 https://paper.dash.org "
+"作为示例。此处列出的网站完全在您的web浏览器中运行，而不向外部服务器发送任何生成的数据，但最安全的选项是下载钱包生成器，并在没有连接到互联网的新安装操作系统的计算机上运行。"
+
+#: ../../docs/user/wallets/paper.rst:93
+msgid ""
+"This guide is based on the guide available from https://walletgenerator.net."
+" Please donate if you find this project useful!"
+msgstr "本指南以 https://walletgenerator.net 提供的指南为基础。如果您觉得这个项目有用，欢迎捐款！"
+
+#: ../../docs/user/wallets/paper.rst:98
+msgid "Address generation"
+msgstr "地址生成"
+
+#: ../../docs/user/wallets/paper.rst:100
+msgid ""
+"Go to https://paper.dash.org in your web browser (or open index.html if you "
+"downloaded the wallet generator). Select your language and choose Dash as "
+"the currency if necessary. The following screen will appear:"
+msgstr ""
+"转到您Web浏览器中的 https://paper.dash.org "
+"(如果您下载了钱包生成器，则打开index.html)。选择您的语言，并在必要时选择达世币作为货币。以下屏幕将出现："
+
+#: ../../docs/user/wallets/paper.rst:107
+msgid "The Dash Paper Wallet Generator at paper.dash.org"
+msgstr "在 paper.dash.org 上的达世币纸钱包生成器"
+
+#: ../../docs/user/wallets/paper.rst:109
+msgid ""
+"Some random data is required to ensure the generated address and key are "
+"unique. Move our mouse around and/or type random characters into the text "
+"box until the process reaches 100% and the following screen appears:"
+msgstr "需要一些随机数据以确保生成的地址和私钥是唯一的。移动鼠标，并/或在文本框中键入随机字符，直到进程达到100%，以下屏幕将显示："
+
+#: ../../docs/user/wallets/paper.rst:117
+msgid "Generating randomness for the Dash Paper Wallet Generator"
+msgstr "达世币纸钱包生成器的生成随机性"
+
+#: ../../docs/user/wallets/paper.rst:122
+msgid ""
+"A Dash address and private key generated using Dash Paper Wallet Generator"
+msgstr "使用达世币纸钱包生成器生成的达世币地址和私钥"
+
+#: ../../docs/user/wallets/paper.rst:125
+msgid ""
+"Once your public address and private key (shown in Wallet Import Format or "
+"WIF) are visible on the **Single Wallet** tab, you should immediately click "
+"**Print** to print the data and store it securely. If you leave the page "
+"without somehow recording the dash address and private key, all data will be"
+" irretrievably lost, together with any funds you have sent to the address."
+msgstr ""
+"一旦您的公共地址和私钥 (以钱包导入格式或WIF显示) 在 **单个钱包** 选项卡上可见，您应该立即单击 **打印** "
+"来打印数据并将其安全地存储起来。如果您离开页面时没有以某种方式记录达世币地址和私钥，所有数据和您已发送到该地址的任何资金将会丢失且无法挽回。"
+
+#: ../../docs/user/wallets/paper.rst:133
+msgid "Encryption"
+msgstr "加密"
+
+#: ../../docs/user/wallets/paper.rst:135
+msgid ""
+"The information shown on the **Single Wallet** tab does not have a "
+"passphrase and is not encrypted. You can print this paper wallet as it is "
+"and use it, but it is not protected from being stolen if someone finds it. "
+"You should keep it safe the same way you would jewels or cash."
+msgstr ""
+"显示在 **单个钱包** "
+"选项卡上的信息没有密码，也没有被加密。您可以打印这个纸钱包的原样并使用它，但是如果有人发现了纸钱包，它将不会被保护以防止被偷。您应该像保护珠宝和现金一样保护纸钱包的安全。"
+
+#: ../../docs/user/wallets/paper.rst:140
+msgid ""
+"If you decide that you need the additional security of a password for this "
+"address, click **Paper Wallet**. A different address/key pair will appear. "
+"To create an encrypted wallet, select **BIP38 Encrypt?** and enter a "
+"passphrase. Tick the box **Hide Art?** and change to **1** the field "
+"**Addresses to Generate** and then click on **Generate**. A new wallet will "
+"be generated where the private key (WIF) is encrypted using the password you"
+" specified, resulting in a BIP38 key. You now need both this BIP38 key and "
+"the password to control funds on the address, so be sure to click **Print** "
+"and store both safely. If you are unsure about how to use BIP38 encryption, "
+"it is highly recommended to test the workflow with a low amount of Dash "
+"before storing significant funds on an encrypted paper wallet. If you forget"
+" the password or lose the encrypted key, you will permanently lose access to"
+" your funds."
+msgstr ""
+"如果您决定需要此地址的密码的附加安全性，请单击 **纸钱包** 。一个不同的地址/密钥对将会出现。若要创建加密钱包，请选择 **BIP38 "
+"Encrypt?** 并输入密码。勾选方框 **Hide Art?** ，并更改为 **1** 字段 **要生成地址** ，然后单击 **生成** "
+"。一个新的钱包将被生成，使用您指定的密码加密该钱包中的私钥（WIF），从而生成一个BIP 38密钥。现在您需要这个BIP "
+"38密钥和密码来控制地址上的资金，所以请确保单击 **打印** 并将BIP38密钥和密码安全地存储起来。如果您不确定如何使用BIP "
+"38加密，强烈建议您在加密的纸钱包上存储大量资金之前，先用少量的达世币测试工作流。如果您忘记密码或丢失了加密的密钥，您将永远无法获得您的资金。"
+
+#: ../../docs/user/wallets/paper.rst:154
+msgid ""
+"A Dash WIF address can be easily identified because it always begins with "
+"\"7\". A BIP38 format encrypted key can be identified because it always "
+"begins with \"6P\". See `here <https://bitcoinpaperwallet.com/bip38 "
+"-password-encrypted-wallets/>`_ to learn more about BIP38."
+msgstr ""
+"达世币 WIF地址很容易被识别，因为它总是以\"7\"开头。BIP 38格式的加密密钥可以被识别，因为它总是以\"6P\"开头。查看 `此处 "
+"<https://bitcoinpaperwallet.com/bip38 -password-encrypted-wallets/>`_ "
+"来了解更多关于BIP 38的信息。"
+
+#: ../../docs/user/wallets/paper.rst:162
+msgid "Encrypted paper wallet generated using Dash Paper Wallet Generator"
+msgstr "使用达世币纸钱包生成器生成加密的纸钱包"
+
+#: ../../docs/user/wallets/paper.rst:165
+msgid "Sending to a paper wallet and viewing the balance"
+msgstr "发送到纸钱包并查看余额"
+
+#: ../../docs/user/wallets/paper.rst:167
+msgid ""
+"You can send Dash to a paper wallet address in the same way as to any other "
+"Dash address. See the documentation for your wallet if you do not know how "
+"to do this. For this example, 0.05 Dash (minus transaction fee) has been "
+"sent to the paper wallet address. Anyone with knowledge of the public "
+"address is able to see the balance of the wallet using a block explorer, but"
+" only someone with knowledge of the private key can access the funds. You "
+"can make as many deposits and send as many coins to the same address as "
+"you’d like. Just make sure you test your wallet with small amounts first to "
+"learn how it works."
+msgstr ""
+"您可以用与任何其他达世币地址相同的方式将达世币发送到纸钱包地址。如果您不知道如何将达世币发送到纸钱包地址，请参阅钱包的文档介绍。对于本例，0.05个达世币"
+" (减去交易费) "
+"已被发送到纸钱包地址。任何了解公共地址的人都可以使用区块浏览器查看钱包的余额，但是只有知道私钥的人才能获得资金。您可以如您所愿的存储更多，并将大量的币发送到相同的地址。只要确保您先用少量的币来测试您的纸钱包，以了解它是如何工作的。"
+
+#: ../../docs/user/wallets/paper.rst:180
+msgid ""
+"Viewing the balance of the paper wallet using the Dash Block Explorer at "
+"explorer.dash.org"
+msgstr "在 explorer.dash.org 上使用达世币区块浏览器来查看纸钱包的余额"
+
+#: ../../docs/user/wallets/paper.rst:183
+msgid "Spending from a paper wallet"
+msgstr "从纸钱包中发送"
+
+#: ../../docs/user/wallets/paper.rst:185
+msgid ""
+"In order to access the funds stored on the paper wallet address, you will "
+"need the following:"
+msgstr "为了控制存储在纸钱包地址上的资金，您需要下列内容："
+
+#: ../../docs/user/wallets/paper.rst:188
+msgid "The public address"
+msgstr "公共地址"
+
+#: ../../docs/user/wallets/paper.rst:189
+msgid "The private key in WIF"
+msgstr "WIF中的私钥"
+
+#: ../../docs/user/wallets/paper.rst:191
+msgid ""
+"If you encrypted the wallet, you will additionally need the following to "
+"convert the BIP38 key into the WIF key:"
+msgstr "如果您对钱包进行了加密，您将额外需要以下内容以将BIP38密钥转换为WIF密钥："
+
+#: ../../docs/user/wallets/paper.rst:194
+msgid "The encrypted private key in BIP38 format"
+msgstr "BIP 38格式的加密私钥"
+
+#: ../../docs/user/wallets/paper.rst:195
+msgid "The passphrase you used to encrypt the key"
+msgstr "您用来加密密钥的密码"
+
+#: ../../docs/user/wallets/paper.rst:198
+msgid "Optional: Decrypt BIP38 key to WIF"
+msgstr "可选项：将BIP 38密钥解密到WIF"
+
+#: ../../docs/user/wallets/paper.rst:200
+msgid ""
+"If you encrypted your paper wallet, you will first need to decrypt the BIP38"
+" key. You can skip this step if your private key was not encrypted."
+msgstr "如果您对您的纸钱包进行了加密，您将首先需要解密BIP 38密钥。如果您的私钥未被加密，则您可以跳过此步骤。"
+
+#: ../../docs/user/wallets/paper.rst:203
+msgid ""
+"Go to the **Wallet Details** tab, enter the encrypted key in the **Enter "
+"Private Key** field and click **View Details**. You will be asked to **Enter"
+" BIP38 Passphrase** in the field. Enter the passphrase and click **Decrypt "
+"BIP38**. A range of information derived from the key will appear, the "
+"information required to access the funds on the public address appears under"
+" **Private Key WIF**. Copy the Private Key WIF and use it in the next step."
+msgstr ""
+"转到 **钱包详细信息** 选项卡，在 **输入私钥** 字段中输入加密的密钥，并单击 **查看详细信息** 。您将被要求在字段中 "
+"**输入BIP38密码** 。输入密码并单击 **解密BIP38**。从密钥派生的一系列信息将出现，获得公共地址上的资金所需要的信息将出现在 "
+"**私钥WIF** 下面。复制私钥WIF，并在下一步骤中使用。"
+
+#: ../../docs/user/wallets/paper.rst:214
+msgid ""
+"Dash Paper Wallet Generator displaying information derived from an encrypted"
+" private key"
+msgstr "达世币纸钱包生成器显示从加密私钥派生的信息"
+
+#: ../../docs/user/wallets/paper.rst:218
+msgid "Importing the private key to your live wallet"
+msgstr "把私钥导入您的实时钱包中"
+
+#: ../../docs/user/wallets/paper.rst:220
+msgid ""
+"When you are ready to spend the balance on the paper wallet, you will need "
+"to import the private key used to control the address printed on the wallet "
+"into another Dash wallet that is connected to the internet. We will use the "
+"Dash Core Wallet in this example, although Dash Electrum and mobile wallets "
+"are also supported. Open Dash Core Wallet, click **Settings** and **Unlock "
+"Wallet**. Enter your wallet passphrase. Then click **Tools > Console**. The "
+"console appears. Enter the following command::"
+msgstr ""
+
+#: ../../docs/user/wallets/paper.rst:233
+msgid "Dash Core Wallet importing a private key"
+msgstr "Dash Core钱包导入私钥"
+
+#: ../../docs/user/wallets/paper.rst:235
+msgid ""
+"This process requires rescanning the entire downloaded blockchain for "
+"transactions involving this address, and will therefore take some time. Be "
+"patient. Once the process is complete, any transactions involving the "
+"imported address will appear in your list of transactions. If you use Coin "
+"Control, you can also enable or disable the address for spending there."
+msgstr ""
+"此过程需要对涉及此地址的交易重新扫描整个下载的区块链，因此需要花费一些时间。耐心点。一旦此过程完成，涉及导入地址的任何交易将出现在您的交易列表中。如果您使用货币控制控制，您还可以启用或禁用交易正在支出的地址。"
+
+#: ../../docs/user/wallets/paper.rst:248
+msgid ""
+"Paper wallet address successfully imported into Dash Core Wallet from WIF "
+"private key"
+msgstr "从WIF私钥成功导入Dash Core钱包的纸钱包地址"
+
+#: ../../docs/user/wallets/paper.rst:251
+msgid ""
+"Since the paper wallet public address still holds the funds, it can also be "
+"imported again into a second wallet if it is not destroyed. It is "
+"recommended to transfer the balance from the paper wallet to an internal "
+"wallet address or another address where you have exclusive control over the "
+"private key. This will prevent a third party from obtaining unauthorised "
+"access to the same address from the paper wallet before you do. You can then"
+" spend your balance as usual."
+msgstr ""
+"因为纸钱包的公共地址仍然持有资金，如果不销毁该公共地址，它也可以被再次导入到第二个钱包中。建议将余额从纸钱包转移到内部钱包地址或其他您对私钥有独占控制权的地址中。这将阻止第三方在您之前从纸钱包中获得对相同地址的未经授权的访问。然后您可以像往常一样支出您的余额。"
+
+#: ../../docs/user/wallets/paper.rst:259
+msgid ""
+"Once the paper wallet is empty and you are sure it will not be receiving any"
+" further deposits, you can destroy the paper."
+msgstr "一旦纸钱包中的余额被花光，并且您确信该纸钱包不会收到任何进一步的存款，您就可以毁掉这张纸。"

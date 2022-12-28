@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Dash Core Group, Inc
+# This file is distributed under the same license as the Dash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Max Aronych <taofgoar@protonmail.com>, 2022
+# Андрей Дегтяр <diusha1711@gmail.com>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dash latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"PO-Revision-Date: 2022-12-27 18:57+0000\n"
+"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2022\n"
+"Language-Team: Russian (https://www.transifex.com/dash/teams/37570/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:1
+msgid "Guide to sending and receiving Dash using the Dash Electrum wallet"
+msgstr ""
+"Руководство по отправке и получению DASH с использованием кошелька Dash "
+"Electrum"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:1
+msgid "dash, wallet, electrum, send, receive, transaction"
+msgstr "dash, кошелёк, electrum, отправка, получение, транзакция"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:9
+msgid "Sending and receiving"
+msgstr "Отправка и получение"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:11
+msgid ""
+"You may own Dash stored in another software wallet, or on an exchange such "
+"as Bittrex or Kraken, or simply want to send or receive funds as a wage or "
+"business transaction. Funds can be transferred between these source and the "
+"Electrum wallet using Dash addresses. Your wallet contains multiple "
+"addresses, and will generate new addresses as necessary. Since the Dash "
+"blockchain is transparent to the public, it is considered best practice to "
+"use a new address for each transaction in order to maintain your privacy."
+msgstr ""
+"Свои DASH вы можете хранить либо в каком-то программном кошельке, либо на "
+"биржах, таких как Bittrex или Kraken, либо можете отправить или получить их "
+"в виде заработной платы или какой-либо деловой операции. Средства могут "
+"передаваться между этими источниками и кошельком Electrum с использованием "
+"адресов Dash. Кошелёк содержит несколько адресов и при необходимости "
+"генерирует новые. Поскольку блокчейн Dash является прозрачным для "
+"пользователей, считается, что наилучшей практикой является использование "
+"нового адреса для каждой транзакции для поддержания конфиденциальности."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:22
+msgid "Sending"
+msgstr "Отправка"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:24
+msgid ""
+"Click the **Send** tab to make a payment. Enter the destination address in "
+"the **Pay to** field, either manually or by pasting from the clipboard. "
+"Optionally enter a **Description** for to appear in your transaction "
+"history, followed by the **Amount** to be sent. The total amount of the "
+"transaction is the sum of the sent amount and transaction fee, which is "
+"calculated automatically. Dash Electrum issues a warning if the total "
+"transaction amount exceeds the wallet balance."
+msgstr ""
+"Чтобы осуществить платёж, нажмите на вкладку **Отправка**. Либо вручную, "
+"либо вставив из буфера, введите адрес кошелька получателя средств в поле "
+"**Получатель**. При необходимости введите **Описание** для его отображения в"
+" вашей истории транзакций, а также сумму, которую необходимо отправить в "
+"поле **Сумма**. Общая сумма транзакции представляет собой сумму отправленной"
+" валюты и комиссии за транзакцию, которая рассчитывается автоматически. Dash"
+" Electrum выдаст предупреждение, если общая сумма транзакции превысит баланс"
+" кошелька."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:35
+#: ../../docs/user/wallets/electrum/send-receive.rst:64
+msgid "Transaction ready to send in Dash Electrum wallet"
+msgstr "Транзакция в кошельке Dash Electrum готова к отправке"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:37
+msgid ""
+"The wallet will request your password, then broadcast the transaction to the"
+" network and display a confirmation dialog with your transaction ID."
+msgstr ""
+"Кошелёк запросит ваш пароль, затем начнёт трансляцию транзакции в сеть и "
+"отобразит окно подтверждения, в котором будет указан ID вашей транзакции."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:47
+msgid "Password prompt and transaction confirmation in Dash Electrum wallet"
+msgstr "Запрос пароля и подтверждение транзакции в кошельке Dash Electrum"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:51
+msgid "Receiving"
+msgstr "Получение"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:53
+msgid ""
+"You can view your receiving addresses by clicking the **Receive** tab. "
+"Double-click the **Receiving address**, then copy it to the clipboard by "
+"clicking the Copy to clipboard icon. If you intend to use the address "
+"repeatedly, you can also enter a description click Save to store the address"
+" in the Requests list. Clicking an address in the list will display the "
+"stored information in the top area, together with a QR code containing the "
+"same information."
+msgstr ""
+"Увидеть свои адреса для получения можно нажав на вкладку **Получение**. "
+"Дважды щёлкните на поле **Принимаемый адрес**, затем скопируйте его в буфер,"
+" нажав на иконку \"Скопировать в буфер обмена\". Если вы собираетесь "
+"использовать адрес повторно, можете ввести описание для него, затем нажмите "
+"«Сохранить», чтобы сохранить адрес в список «Запросы». При нажатии на адрес "
+"в списке, в верхней области отобразятся сохранённые данные вместе с QR-"
+"кодом, содержащим ту же информацию."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:66
+msgid ""
+"Enter this address in the software sending the funds, send it to the person "
+"transferring funds to you or scan it directly from your mobile wallet. Once "
+"the transaction is complete, the balance will appear in the lower left "
+"corner of your wallet, and the indicator in the **Requests** table will "
+"change from **Pending** to **Paid**."
+msgstr ""
+"Введите этот адрес в программе отправки средств, отправьте его лицу, "
+"передающему вам средства, или отсканируйте его непосредственно из своего "
+"мобильного кошелька. После завершения транзакции баланс появится в левом "
+"нижнем углу вашего кошелька, а индикатор в таблице **Запросы** изменится с "
+"**Ожидает** на **Получено**."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:75
+msgid "Successfully received payment in Dash Electrum wallet"
+msgstr "Успешно полученный платёж в кошельке Dash Electrum"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:77
+msgid ""
+"Once you have used an address, you can either continue using it or click "
+"**New** to generate a new address."
+msgstr ""
+"После того, как вы однажды использовали какой-то адрес, можете либо и дальше"
+" продолжать его использовать, либо нажать **Новый**, чтобы сгенерировать "
+"новый адрес."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:81
+msgid "Monitoring transactions"
+msgstr "Мониторинг транзакций"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:83
+msgid ""
+"The **History** tab lists all current and pending transactions. A "
+"transaction to an address in your wallet will appear in the list soon after "
+"it is made. Initially, this transaction will be marked as **Unconfirmed**, "
+"followed by a clock indicator on the left. As the Dash network processes the"
+" transaction, the status will update in the transaction history list. The "
+"network confirms transactions with a new block roughly every 2.5 minutes, "
+"and a transaction is considered confirmed (and therefore spendable) after "
+"six confirmations. These processed transactions are denoted with a green "
+"checkmark and the timestamp at which the transaction was made."
+msgstr ""
+"На вкладке **История** отображаются все текущие и ожидающие транзакции. "
+"Транзакция, отправленная на адрес вашего кошелька появится в списке вскоре "
+"после её создания. Первоначально эта транзакция будет отмечена как "
+"**Неподтверждённая** и будет сопровождаться индикатором часов слева. По мере"
+" того, как сеть Dash будет обрабатывать транзакцию, будет обновляться статус"
+" в списке истории транзакций. Сеть подтверждает транзакции в новом блоке "
+"примерно каждые 2,5 минуты, и транзакция считается подтверждённой (и, "
+"следовательно, такой, которую можно тратить) после шести подтверждений. "
+"Такие обработанные транзакции обозначаются зелёной галочкой и меткой "
+"времени, в которое была сделана транзакция."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:100
+msgid ""
+"Dash Electrum wallet History tab immediately after receiving a transaction "
+"and after confirmation is complete"
+msgstr ""
+"Так выглядит вкладка \"История\" кошелька Dash Electrum сразу после "
+"получения транзакции и после того, как транзакция окончательно подтверждена"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:103
+msgid ""
+"To view additional transaction details, right click a transaction on the "
+"**History** tab and select **Details** from the context menu. You can also "
+"use this menu to copy the transaction ID to the clipboard (this can be used "
+"as proof that a given transaction occurred), edit the transaction "
+"description for your records or view the transaction on an external block "
+"explorer."
+msgstr ""
+"Чтобы просмотреть дополнительную информацию о транзакции, щёлкните правой "
+"кнопкой мыши на транзакции во вкладке **История** и выберите **Детали** из "
+"контекстного меню. Это меню также можно использовать для копирования "
+"идентификатора транзакции в буфер обмена (если понадобятся доказательства "
+"того, что данная транзакция имела место), редактирования описания транзакции"
+" в своих записях или просмотра транзакции во внешнем блокчейн-обозревателе."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:113
+msgid "Transaction details in Dash Electrum wallet"
+msgstr "Детали транзакции в кошельке Dash Electrum"

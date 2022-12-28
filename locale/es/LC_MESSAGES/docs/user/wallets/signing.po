@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Dash Core Group, Inc
+# This file is distributed under the same license as the Dash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Leon White <leon.white@dash.org>, 2022
+# Jahlexis Lugo <ras.alexislugo.i@gmail.com>, 2022
+# Ivan SIerraalta <ivansierraalta@gmail.com>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dash latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"PO-Revision-Date: 2022-12-27 18:56+0000\n"
+"Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2022\n"
+"Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user/wallets/signing.rst:1
+msgid ""
+"Guides and screenshots on how to sign and verify messages using the Dash "
+"cryptocurrency"
+msgstr ""
+"Guías y capturas de pantalla de como firmar y verificar mensajes usando la "
+"criptomoneda Dash"
+
+#: ../../docs/user/wallets/signing.rst:1
+msgid "dash, sign, verify, message, trezor, dash core"
+msgstr "dash, sign, verificar, mensaje, trezor, dash core"
+
+#: ../../docs/user/wallets/signing.rst:9
+msgid "Signing and Verifying Messages"
+msgstr "Firmando y verificando mensajes"
+
+#: ../../docs/user/wallets/signing.rst:11
+msgid ""
+"Dash wallets function by securely storing the private keys used to create "
+"transactions using publicly visible addresses on a distributed ledger called"
+" a blockchain. In some cases, it may be necessary to verify an address to "
+"demonstrate control of the funds that it holds, that you can receive using "
+"the address, or even to verify your identity to an exchange that has "
+"previously seen a transaction from that address. To avoid phishing attacks, "
+"take great care when sending signed messages to parties you do not trust, "
+"since ambiguously worded messages could be used to impersonate your "
+"identity."
+msgstr ""
+"Las billeteras de Dash funcionan almacenando de forma segura las llaves "
+"privadas utilizadas para crear transacciones usando direcciones públicamente"
+" visibles en un libro contable distribuido llamado cadena de bloques. En "
+"algunos casos, puede ser necesario verificar una dirección para demostrar el"
+" control de los fondos que posee, revisando que puedes recibir usando la "
+"dirección, o incluso para verificar tu identidad en una casa de cambio que "
+"haya visto previamente una transacción desde esa dirección. Para evitar los "
+"ataques de phishing, ten mucho cuidado al enviar mensajes firmados a partes "
+"en las que no confías, ya que los mensajes ambiguos pueden utilizarse para "
+"suplantar tu identidad."
+
+#: ../../docs/user/wallets/signing.rst:21
+msgid ""
+"Signing messages requires a private key. Verifying messages requires a "
+"public address. In this way, you can write an arbitrary message and generate"
+" a signature that could only have been created by a user with control of the"
+" private key for this address. Any user with the message, the public address"
+" and the signature can easily verify that only you could have created the "
+"signature. Messages are not stored on the blockchain. Instead, you must send"
+" these three text snippets (message, address and signature) to your intended"
+" recipient using another communication channel, such as email. As an "
+"example, you can test the following message and signature and verify that it"
+" was signed by the given address::"
+msgstr ""
+"La firma de mensajes requiere una llave privada. La verificación de mensajes"
+" requiere una dirección pública. De esta forma, puedes escribir un mensaje "
+"arbitrario y generar una firma que solo podría haber sido creada por un "
+"usuario con control de la llave privada para esta dirección. Cualquier "
+"usuario con el mensaje, la dirección pública y la firma puede verificar "
+"fácilmente que solo tu pudiste haber creado la firma. Los mensajes no se "
+"almacenan en la cadena de bloques. En su lugar, debes enviar estos tres "
+"fragmentos de texto (mensaje, dirección y firma) a tu destinatario "
+"utilizando otro canal de comunicación, como el correo electrónico. Como "
+"ejemplo, puedes probar el siguiente mensaje y firma, y verificar que haya "
+"sido firmado por la dirección indicada::"
+
+#: ../../docs/user/wallets/signing.rst:39
+msgid "Signing a Message"
+msgstr "Firmar un mensaje"
+
+#: ../../docs/user/wallets/signing.rst:41
+msgid ""
+"The following screenshots show how to sign a message using the Dash Core "
+"wallet (**File > Sign message**), Trezor web wallet (Sign & Verify > Sign "
+"message) and DMT (**Tools > Sign message with HW for current masternode's "
+"address**):"
+msgstr ""
+"Las siguientes capturas de pantalla muestran cómo firmar un mensaje usando "
+"la billetera Dash Core (**Archivo > Firmar mensaje**), Billetera web de "
+"Trezor (Firmar & Verificar > Firmar mensaje) y DMT (**Herramientas > Firmar "
+"mensaje con HW para la dirección del masternode actual**):"
+
+#: ../../docs/user/wallets/signing.rst:53
+msgid "*Signing messages in Dash Core, Trezor web wallet and DMT*"
+msgstr "*Firmar mensajes en las billeteras Dash Core, web Trezor y DMT*"
+
+#: ../../docs/user/wallets/signing.rst:56
+msgid "Verifying a Message"
+msgstr "Verificar mensaje"
+
+#: ../../docs/user/wallets/signing.rst:58
+msgid ""
+"The following screenshots show how to verify a message using the Dash Core "
+"wallet (**File > Sign message**) and Trezor web wallet (**Sign & Verify > "
+"Sign message**):"
+msgstr ""
+"Las siguientes capturas de pantalla muestran cómo verificar un mensaje "
+"utilizando la billetera Dash Core (**Archivo > Firmar mensaje**) y en la "
+"billetera web de Trezor (**Firmar & Verificar > Firmar mensaje**):"
+
+#: ../../docs/user/wallets/signing.rst:67
+msgid ""
+"*Verifying messages in Dash Core and Trezor web wallet. Notice that the "
+"message verified by Dash Core was generated in Trezor, and vice versa*"
+msgstr ""
+"*Verificación de mensajes en las billeteras Dash Core y web Trezor. Ten en "
+"cuenta que el mensaje verificado por Dash Core se generó en Trezor y "
+"viceversa*"

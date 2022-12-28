@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Dash Core Group, Inc
+# This file is distributed under the same license as the Dash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Daf Daf, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dash latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"PO-Revision-Date: 2022-12-27 18:57+0000\n"
+"Last-Translator: Daf Daf, 2022\n"
+"Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:1
+msgid "Guide to sending and receiving Dash using the Dash Electrum wallet"
+msgstr ""
+"Guide d'envoi et de réception de dashs au moyen du portefeuille logiciel "
+"Dash Electrum"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:1
+msgid "dash, wallet, electrum, send, receive, transaction"
+msgstr "dash, portefeuille logiciel, electrum, envoyer, recevoir, transaction"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:9
+msgid "Sending and receiving"
+msgstr "Envoyer et recevoir"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:11
+msgid ""
+"You may own Dash stored in another software wallet, or on an exchange such "
+"as Bittrex or Kraken, or simply want to send or receive funds as a wage or "
+"business transaction. Funds can be transferred between these source and the "
+"Electrum wallet using Dash addresses. Your wallet contains multiple "
+"addresses, and will generate new addresses as necessary. Since the Dash "
+"blockchain is transparent to the public, it is considered best practice to "
+"use a new address for each transaction in order to maintain your privacy."
+msgstr ""
+"Peut-être possédez-vous des dashs stockés dans un autre portefeuille "
+"logiciel, ou bien sur une plateforme de change telle que Bittrex ou Kraken, "
+"ou bien voulez-vous simplement envoyer ou recevoir des fonds tels qu'un "
+"salaire ou une transaction commerciale. Les fonds peuvent être transmis "
+"entre ces sources et le portefeuille Electrum, en utilisant des adresses "
+"Dash. Votre portefeuille contient de nombreuses adresses, et générera autant"
+" de nouvelles adresses que nécessaire. Comme la blockchain Dash est "
+"transparente et consultable par chacun, il est conseillé d'utiliser une "
+"nouvelle adresse pour chaque transaction afin de protéger votre vie privée."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:22
+msgid "Sending"
+msgstr "Envoyer des fonds"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:24
+msgid ""
+"Click the **Send** tab to make a payment. Enter the destination address in "
+"the **Pay to** field, either manually or by pasting from the clipboard. "
+"Optionally enter a **Description** for to appear in your transaction "
+"history, followed by the **Amount** to be sent. The total amount of the "
+"transaction is the sum of the sent amount and transaction fee, which is "
+"calculated automatically. Dash Electrum issues a warning if the total "
+"transaction amount exceeds the wallet balance."
+msgstr ""
+"Cliquez sur l'onglet **Envoyer** pour émettre un paiement. Saisissez "
+"l'adresse de destination dans le champ **Payer à**, soit manuellement, soit "
+"en la collant depuis le presse-papiers. Facultativement, vous pouvez aussi "
+"saisir une **Description** qui apparaîtra dans votre historique de "
+"transactions, suivie par le **Montant** qui doit être envoyé. Le montant "
+"total de la transaction est la somme du montant envoyé et des frais de "
+"transaction, qui sont calculés automatiquement. Dash Electrum affiche un "
+"avertissement si le montant total de la transaction dépasse le solde du "
+"portefeuille."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:35
+#: ../../docs/user/wallets/electrum/send-receive.rst:64
+msgid "Transaction ready to send in Dash Electrum wallet"
+msgstr "Transaction prête à l'envoi dans le portefeuille Dash Electrum"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:37
+msgid ""
+"The wallet will request your password, then broadcast the transaction to the"
+" network and display a confirmation dialog with your transaction ID."
+msgstr ""
+"Le portefeuille demandera votre mot de passe, puis diffusera la transaction "
+"au réseau et affichera un dialogue de confirmation comprenant votre "
+"identifiant de transaction."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:47
+msgid "Password prompt and transaction confirmation in Dash Electrum wallet"
+msgstr ""
+"Demande de mot de passe et confirmation de transaction dans le portefeuille "
+"Dash Electrum"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:51
+msgid "Receiving"
+msgstr "Recevoir des fonds"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:53
+msgid ""
+"You can view your receiving addresses by clicking the **Receive** tab. "
+"Double-click the **Receiving address**, then copy it to the clipboard by "
+"clicking the Copy to clipboard icon. If you intend to use the address "
+"repeatedly, you can also enter a description click Save to store the address"
+" in the Requests list. Clicking an address in the list will display the "
+"stored information in the top area, together with a QR code containing the "
+"same information."
+msgstr ""
+"Vous pouvez afficher vos adresses de réception en cliquant sur l'onglet "
+"**Recevoir**. Double-cliquez sur **Adresse de réception** puis copiez-la "
+"dans le presse-papiers en cliquant l'icône Copier dans le presse-papiers. Si"
+" vous avez l'intention de réutiliser plus tard cette adresse, vous pouvez "
+"aussi saisir une description puis cliquer sur **Enregistrer** dans la liste "
+"**Demandes**. Cliquer sur une adresse de la liste affichera l'information "
+"enregistrée dans la zone supérieure, en même temps qu'un QR-code contenant "
+"la même information."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:66
+msgid ""
+"Enter this address in the software sending the funds, send it to the person "
+"transferring funds to you or scan it directly from your mobile wallet. Once "
+"the transaction is complete, the balance will appear in the lower left "
+"corner of your wallet, and the indicator in the **Requests** table will "
+"change from **Pending** to **Paid**."
+msgstr ""
+"Saisissez cette adresse dans le logiciel qui envoie les fonds, envoyez-la à "
+"la personne qui doit vous envoyer des fonds, ou bien scannez-la directement "
+"depuis votre portefeuille mobile. Une fois la transaction achevée, le solde "
+"apparaîtra dans le coin inférieur gauche de votre portefeuille, et la "
+"mention **En cours** dans le tableau **Demandes** deviendra **Payé**."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:75
+msgid "Successfully received payment in Dash Electrum wallet"
+msgstr "Paiement bien reçu dans le portefeuille Dash Electrum"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:77
+msgid ""
+"Once you have used an address, you can either continue using it or click "
+"**New** to generate a new address."
+msgstr ""
+"Une fois que vous avez utilisé une adresse, vous pouvez soit continuer à "
+"l'utiliser, soit cliquer sur **Nouveau** pour en générer une nouvelle."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:81
+msgid "Monitoring transactions"
+msgstr "Suivi des transactions"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:83
+msgid ""
+"The **History** tab lists all current and pending transactions. A "
+"transaction to an address in your wallet will appear in the list soon after "
+"it is made. Initially, this transaction will be marked as **Unconfirmed**, "
+"followed by a clock indicator on the left. As the Dash network processes the"
+" transaction, the status will update in the transaction history list. The "
+"network confirms transactions with a new block roughly every 2.5 minutes, "
+"and a transaction is considered confirmed (and therefore spendable) after "
+"six confirmations. These processed transactions are denoted with a green "
+"checkmark and the timestamp at which the transaction was made."
+msgstr ""
+"L'onglet **Historique** répertorie toutes les transactions en cours ou "
+"achevées. Une transaction vers une adresse de votre portefeuille apparaîtra "
+"dans la liste peu après son exécution. Tout d'abord, cette transaction sera "
+"indiquée comme **Non confirmée**, accompagnée par une icône en forme "
+"d'horloge sur la gauche. Au fur et à mesure que le réseau Dash opère la "
+"transaction, cet état sera mis à jour dans la liste d'historique de "
+"transactions. Le réseau confirme les transactions avec chaque nouveau bloc, "
+"à peu près toutes les 2,5 minutes, et une transaction est considérée comme "
+"confirmée (et donc dépensable) après six confirmations. Ces transactions "
+"achevées sont indiquées par une coche verte et par l'horodatage de "
+"l'exécution de la transaction."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:100
+msgid ""
+"Dash Electrum wallet History tab immediately after receiving a transaction "
+"and after confirmation is complete"
+msgstr ""
+"Onglet Historique du portefeuille Dash Electrum, après réception d'une "
+"transaction et achèvement de sa confirmation"
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:103
+msgid ""
+"To view additional transaction details, right click a transaction on the "
+"**History** tab and select **Details** from the context menu. You can also "
+"use this menu to copy the transaction ID to the clipboard (this can be used "
+"as proof that a given transaction occurred), edit the transaction "
+"description for your records or view the transaction on an external block "
+"explorer."
+msgstr ""
+"Pour afficher des détails supplémentaires sur la transaction, faites un "
+"clic-droit sur elle dans l'onglet **Historique**, puis choisissez "
+"**Détails** dans le menu contextuel. Vous pouvez aussi utiliser ce menu pour"
+" copier l'identifiant de transaction dans le presse-papiers (il peut servir "
+"de preuve que la transaction a bien été exécutée), pour modifier la "
+"description de la transaction dans votre historique personnel, ou pour "
+"consulter la transaction dans un explorateur de blocs externe."
+
+#: ../../docs/user/wallets/electrum/send-receive.rst:113
+msgid "Transaction details in Dash Electrum wallet"
+msgstr "Détails de transaction dans le portefeuille Dash Electrum"
