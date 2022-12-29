@@ -1,4 +1,5 @@
 /* Update theme variables based on https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/styling.html#css-theme-variables */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,900;1,900&family=Open+Sans:ital,wght@0,400;0,500;1,400&display=swap');
 
 :root {
   --dash-blue: #008de4;
@@ -28,6 +29,45 @@ html {
   --pst-sidebar-header-font-size: 1.2em;
 }
 
-.bd-sidebar-primary {
-  max-width: 22.5%; /* Default is 25% */
+html[data-theme=dark] .bd-content img:not(.only-dark):not(.dark-light) {
+    background: none;
+    border-radius: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+p, a, li, ol {
+  font-family: 'Open Sans', sans-serif;
+} 
+
+.sidebar-end-items__item {
+    position: relative;
+}
+
+.sidebar-end-items__item:after {
+    content: "▼";
+    font-size: 1.1rem;
+    color: #008de4;
+    top: 17px;
+    right: 10px;
+    position: absolute;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    appearance: none;
+    background: transparent;
+    border-radius: 0.25rem;
+}
+
+html[data-theme=dark] select {
+  color: #fff;
+}
+
+html[data-theme="light"] select{
+  color: #000;
 }
