@@ -26,7 +26,21 @@ $(document).ready(function() {
 $(function(){
 	$("#langselect").on('change', function() {
 		var pageURL = $(location).attr("href");
-		pageURL = pageURL.replace("https://docs.dash.org/" + DOCUMENTATION_OPTIONS['LANGUAGE'], "");
-		window.location.href = "https://docs.dash.org/" + $('#langselect').val() + pageURL;
+		var newLang = $('#langselect').val();
+		if (newLang == "zh-CN") {
+			newLang = "zh_CN";
+		} else if (newLang == "zh-TW") {
+			newLang = "zh_TW";
+		}
+		
+		var currentLang = DOCUMENTATION_OPTIONS['LANGUAGE'];
+		if (currentLang == "zh-CN") {
+			currentLang = "zh_CN";
+		} else if (currentLang == "zh-TW") {
+			currentLang = "zh_TW";
+		}
+
+		pageURL = pageURL.replace("https://docs.dash.org/" + currentLang, "");
+		window.location.href = "https://docs.dash.org/" + newLang + pageURL;
 	});
 });
