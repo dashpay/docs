@@ -26,13 +26,13 @@ $(document).ready(function() {
 $(function(){
 	$("#langselect").on('change', function() {
 		var pageURL = $(location).attr("href");
-		var lang = $('#langselect').val();
-		if (lang == "zh-CN") {
-			lang = "zh_CN";
-		} else if (lang == "zh-TW") {
-			lang = "zh_TW";
+		var newlang = $('#langselect').val();
+		if (newlang == "zh-CN") {
+			newlang = "zh_CN";
+		} else if (newlang == "zh-TW") {
+			newlang = "zh_TW";
 		}
 		pageURL = pageURL.replace("https://docs.dash.org/" + DOCUMENTATION_OPTIONS['LANGUAGE'], "");
-		window.location.href = "https://docs.dash.org/" + lang + pageURL;
+		window.location.href = "https://docs.dash.org/" + newlang + pageURL;
 	});
 });
