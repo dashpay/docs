@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	/* Select current language */
 	$('#langselect').val(DOCUMENTATION_OPTIONS['LANGUAGE']);
-	console.log(`lang: ${DOCUMENTATION_OPTIONS['LANGUAGE']}`)
+	
 	/* Set alternate links 
 	var langs = [ "de", "en", "es", "fr", "pt", "vi", "el", "ru", "ko", "ja", "zh-Hans", "zh-Hant", "ar", "x-default" ];
 	var pageURL = $(location).attr("href");
@@ -26,9 +26,13 @@ $(document).ready(function() {
 $(function(){
 	$("#langselect").on('change', function() {
 		var pageURL = $(location).attr("href");
-		console.log(`pageURL: ${pageURL}`)
+		var lang = $('#langselect').val();
+		if (lang == "zh-CN") {
+			lang = "zh_CN";
+		} else if (lang == "zh-TW") {
+			lang = "zh_TW";
+		}
 		pageURL = pageURL.replace("https://docs.dash.org/" + DOCUMENTATION_OPTIONS['LANGUAGE'], "");
-		console.log(`pageURL: ${pageURL}`)
-		window.location.href = "https://docs.dash.org/" + $('#langselect').val() + pageURL;
+		window.location.href = "https://docs.dash.org/" + lang + pageURL;
 	});
 });
