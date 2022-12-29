@@ -32,7 +32,15 @@ $(function(){
 		} else if (newlang == "zh-TW") {
 			newlang = "zh_TW";
 		}
-		pageURL = pageURL.replace("https://docs.dash.org/" + DOCUMENTATION_OPTIONS['LANGUAGE'], "");
+		
+		var currentlang = DOCUMENTATION_OPTIONS['LANGUAGE'];
+		if (currentlang == "zh-CN") {
+			currentlang = "zh_CN";
+		} else if (currentlang == "zh-TW") {
+			currentlang = "zh_TW";
+		}
+
+		pageURL = pageURL.replace("https://docs.dash.org/" + currentlang, "");
 		window.location.href = "https://docs.dash.org/" + newlang + pageURL;
 	});
 });
