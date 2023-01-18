@@ -326,8 +326,6 @@ software maintained by newer developers only.
   application)
 - https://github.com/sp-hash/ccminer/releases (sp-mod, optimized CUDA
   kernels for Windows)
-- https://github.com/KlausT/ccminer/releases (similar to SP version,
-  more clean)
 
 Download your chosen release and extract the zip file to a known
 location. The folder should look something like this:
