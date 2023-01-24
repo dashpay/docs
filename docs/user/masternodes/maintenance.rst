@@ -47,7 +47,7 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v18.1.0/dashcore-18.1.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v18.2.1/dashcore-18.2.1-x86_64-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -63,14 +63,14 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v18.1.0/dashcore-18.1.0-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-18.1.0-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v18.2.1/dashcore-18.2.1-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-18.2.1-x86_64-linux-gnu.tar.gz.asc
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-18.1.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-18.1.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-18.1.0/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-18.2.1-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-18.2.1/bin/dashd ~/.dashcore/
+  cp -f dashcore-18.2.1/bin/dash-cli ~/.dashcore/
 
 Restart Dash::
 
