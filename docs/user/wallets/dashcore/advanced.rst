@@ -504,6 +504,12 @@ Multiple wallets
 Since version 18.0.0, Dash Core has included the ability work with multiple
 wallets from the **File** menu in addition to the previously available options.
 
+.. warning::
+  Wallet-related RPCs require using the ``-rpcwallet`` option when more than
+  one wallet file is loaded. This is to ensure the RPC command is executed
+  using the correct wallet. See the `Core developer documentation <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls#multi-wallet-support>`__
+  for additional information.
+
 Open a wallet
 -------------
 
