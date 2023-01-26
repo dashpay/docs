@@ -51,6 +51,12 @@ following links to the `Dash Core developer documentation site <https://dashcore
 RPC commands
 ============
 
+.. warning::
+  Wallet-related RPCs require using the ``-rpcwallet`` option when more than
+  one wallet file is loaded. This is to ensure the RPC command is executed
+  using the correct wallet. See the `Core developer documentation <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls#multi-wallet-support>`__
+  for additional information.
+
 Detailed documentation for all available RPC commands is accessible via
 the `Dash Core developer documentation RPC page <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-call-quick-reference>`_.
 For full documentation of arguments, results and examples, type 
