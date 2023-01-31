@@ -71,3 +71,15 @@ html[data-theme=dark] select {
 html[data-theme="light"] select{
   color: #000;
 }
+
+html[data-theme="light"] {
+  --table-bg-color-odd: #eeeeee;
+  --table-bg-color-even: #ffffff;
+}
+
+tbody tr:nth-child(odd) { background-color: var(--table-bg-color-odd); }
+tbody tr:nth-child(even) { background-color: var(--table-bg-color-even); }
+
+.table thead th.head {
+  vertical-align: middle;
+}
