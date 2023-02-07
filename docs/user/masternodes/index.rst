@@ -54,6 +54,7 @@ a self-operated masternode.
    hosting.rst
    server-config
    setup.rst
+   setup-hpmn
    setup-testnet.rst
    maintenance.rst
    advanced.rst
