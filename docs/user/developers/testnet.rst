@@ -58,15 +58,15 @@ specific service.
 Faucets
 -------
 
-- https://testnet-faucet.dash.org/ - by Dash Core Group
-- http://faucet.testnet.networks.dash.org - by Dash Core Group
-- http://test.faucet.masternode.io - by coingun
-- http://faucet.test.dash.crowdnode.io - by ndrezza
+- https://faucet.testnet.networks.dash.org - by Dash Core Group
+- http://faucet.test.dash.crowdnode.io - by CrowdNode
 
 Explorers
 ---------
 
 - https://testnet-insight.dashevo.org/insight
+- https://insight.testnet.networks.dash.org:3002/insight
+- http://insight.testnet.networks.dash.org:3001/insight
 
 Pools
 -----
