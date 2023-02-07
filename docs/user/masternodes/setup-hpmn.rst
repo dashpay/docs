@@ -18,7 +18,7 @@ steps to take for increased security.
 Commercial :ref:`masternode hosting services <masternode-hosting>` are
 available if you prefer to delegate day-to-day operation of your
 masternode to a professional operator. When using these hosting
-services, you retain full control of the 1000 DASH collateral and pay an
+services, you retain full control of the DASH collateral and pay an
 agreed percentage of your reward to the operator. It is also possible to
 delegate your voting keys to a representative, see the 
 :ref:`governance documentation <delegating-votes>` for more
@@ -28,11 +28,11 @@ information.
 Before you begin
 ================
 
-This guide assumes you are setting up a single mainnet masternode for
+This guide assumes you are setting up a single mainnet high performance masternode for
 the first time. If you are updating a masternode, see  :ref:`here
 <masternode-update>` instead. You will need:
 
-- 1000 Dash
+- 4000 Dash
 - A wallet to store your Dash, preferably a hardware wallet, although 
   Dash Core wallet is also supported
 - A Linux server, preferably a Virtual Private Server (VPS)
@@ -277,7 +277,7 @@ PuTTY will disconnect when the server reboots.
 Send the collateral
 ===================
 
-A Dash address with a single unspent transaction output (UTXO) of exactly 1000
+A Dash address with a single unspent transaction output (UTXO) of exactly 4000
 DASH is required to operate a masternode. Once it has been sent, various keys
 regarding the transaction must be extracted for later entry in a configuration
 file and registration transaction as proof to write the configuration to the
@@ -297,8 +297,8 @@ help on this, see :ref:`this guide <hardware-trezor>` - you may also
 choose to (carefully!) `add a passphrase <https://blog.trezor.io/passphrase-the-ultimate-protection-for-your-accounts-3a311990925b>`_
 to your Trezor to further protect your collateral. Create a new account
 in your Trezor wallet by clicking **Add account**. Then click the
-**Receive** tab and send exactly 1000 DASH to the address displayed. If
-you are setting up multiple masternodes, send 1000 DASH to consecutive
+**Receive** tab and send exactly 4000 DASH to the address displayed. If
+you are setting up multiple masternodes, send 4000 DASH to consecutive
 addresses within the same new account. You should see the transaction as
 soon as the first confirmation arrives, usually within a few minutes.
 
@@ -360,7 +360,7 @@ steps as shown in this screenshot:
    port number. This should be 19999.
 #. Click **Locate collateral** to view unused collateral funding 
    transactions available on the connected hardware wallet. Select the 
-   address to which you sent 1000 Dash and click **Apply**. The 
+   address to which you sent 4000 Dash and click **Apply**. The 
    **Collateral address**, **path**, **Collateral TX hash** and
    **index** fields should be filled automatically.
 
@@ -402,7 +402,7 @@ since this will be the only way you can access our funds if anything
 happens to your computer. For more details on these steps, see
 :ref:`here <dashcore-backup>`.
 
-Now send exactly 1000 DASH in a single transaction to the new address
+Now send exactly 4000 DASH in a single transaction to the new address
 you generated in the previous step. This may be sent from another
 wallet, or from funds already held in your current wallet. Once the
 transaction is complete, view the transaction in a `blockchain explorer
@@ -426,8 +426,6 @@ Masternode Installation
 The following tools are available for installing a Dash masternode:
 
 - :ref:`dashmate installation <testnet-masternode-setup-install-dashmate>`
-- :ref:`Manual installation <testnet-masternode-setup-install-manual>`
-- `Dash Masternode Zeus <https://github.com/kxcd/Masternode-Zeus>`__ (does not yet support platform services)
 
 .. _hpmn-setup-install-dashmate:
 
@@ -663,7 +661,7 @@ this transaction as the ``operatorPubKey``.
 
 First, we need to get a new, unused address from the wallet to serve as
 the **owner key address** (``ownerKeyAddr``). This is not the same as
-the collateral address holding 1000 Dash. Generate a new address as
+the collateral address holding 4000 Dash. Generate a new address as
 follows::
 
   getnewaddress
@@ -712,9 +710,9 @@ syntax::
 Open a text editor such as notepad to prepare this command. Replace each
 argument to the command as follows:
 
-- ``collateralHash``: The txid of the 1000 Dash collateral funding 
+- ``collateralHash``: The txid of the 4000 Dash collateral funding 
   transaction
-- ``collateralIndex``: The output index of the 1000 Dash funding 
+- ``collateralIndex``: The output index of the 4000 Dash funding 
   transaction
 - ``ipAndPort``: Masternode IP address and port, in the format 
   ``x.x.x.x:yyyy``
