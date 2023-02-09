@@ -75,6 +75,19 @@ shows a live calculation of masternode earnings. These rewards decrease
 by 7% each year, together with the block reward. There is also the
 possibility for masternodes to earn money from fees in the future.
 
+High-Performance Masternodes (HPMNs)
+
+High-Performance Masternodes (HPMNs) are a subset of Masternodes that have 
+been created to host the Dash Platform. An HPMN is a lot like Masternodes 
+with three main differences:
+
+- The collateral to own an HPMN is 4000 Dash as opposed to 1000 Dash for 
+regular masternodes.
+- The recommended specs for HPMNs are higher than those for regular 
+masternodes.
+- HPMNs will provide all the services for Dash Platform. Regular masternodes 
+will not perform any Dash Platform services.
+
 
 .. _coinjoin:
 
