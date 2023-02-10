@@ -81,6 +81,25 @@ real-time payment rates, and `this site
 <http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various real-time
 statistics on the masternode network.
 
+High-Performance Masternodes (HPMNs)
+------------------------------------
+
+High-Performance Masternodes (HPMNs) are a subset of Masternodes that have 
+been created to host the Dash Platform. An HPMN is a lot like Masternodes 
+with three main differences:
+
+- A dedicated IP address: These usually come with the VPS/server.
+- The collateral to own an HPMN is 4000 Dash as opposed to 1000 Dash 
+for regular masternodes.
+- The recommended specs for HPMNs are higher than those for 
+regular masternodes.
+- HPMNs serve Platform along with Core, while regular masternodes 
+only serve Core.
+
+HPMNs will provide all the services for Dash Platform. Regular 
+masternodes will not perform any Dash Platform services. In Dash Core 
+quorums, HPMNs will act just like regular masternodes. In the DAO, they 
+will have 4 times more voting power due to their collateral being 4 times greater.
 
 .. _dip3-changes:
 
@@ -236,6 +255,19 @@ list is sorted in ascending order by this block height and ProRegTx hash
 (as a tie breaker in case two masternodes were registered in the same
 block), and the first entry is selected for payment.
 
+HPMN Payment Logic
+------------------
+
+Because the reward distribution percentages are fixed, the number of HPMNs is 
+expected to stabilize around a fixed number based on the total number of 
+masternodes (considering the current number of ~3850 Masternodes, ~450 HPMNs 
+are expected). This is because if there are more than that fixed number of HPMNs, 
+running a regular MN will be more profitable than running an HPMN, and hosts 
+will convert their HPMNs into MNs. 
+
+HPMNs will receive 100% of the fees generated from Platform and 37.5% of 
+the masternode portion of Core block rewards. Regular MNs will receive the remaining 
+62.5% of the masternode portion of Core block rewards and 0% of Platform fees.
 
 .. _proof-of-service:
 
@@ -317,33 +349,3 @@ to be determined, although some pointers can be taken from the `roadmap
 It should be possible to run Dash masternodes on normal VPS servers
 until the block size reaches approximately 20 MB, after which custom
 hardware such as GPUs and eventually ASICs may be required.
-
-High-Performance Masternodes (HPMNs)
---------------
-
-High-Performance Masternodes (HPMNs) are a subset of Masternodes that have 
-been created to host the Dash Platform. An HPMN is a lot like Masternodes 
-with three main differences:
-
-- The collateral to own an HPMN is 4000 Dash as opposed to 1000 Dash 
-for regular masternodes.
-- The recommended specs for HPMNs are higher than those for 
-regular masternodes.
-- HPMNs serve Platform along with Core, while regular masternodes 
-only serve Core.
-
-HPMNs will provide all the services for Dash Platform. Regular 
-masternodes will not perform any Dash Platform services. In Dash Core 
-quorums, HPMNs will act just like regular masternodes. In the DAO, they 
-will have 4 times more voting power due to their collateral being 4 times greater.
-
-HPMNs will receive 100% of the fees generated from Platform and 37.5% of 
-the masternode portion of Core block rewards. Regular MNs will receive the remaining 
-62.5% of the masternode portion of Core block rewards and 0% of Platform fees.
-
-Because the reward distribution percentages are fixed, the number of HPMNs is 
-expected to stabilize around a fixed number based on the total number of 
-masternodes (considering the current number of ~3850 Masternodes, ~450 HPMNs 
-are expected). This is because if there are more than that fixed number of HPMNs, 
-running a regular MN will be more profitable than running an HPMN, and hosts will convert 
-their HPMNs into MNs. 
