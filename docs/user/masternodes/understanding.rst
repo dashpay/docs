@@ -196,12 +196,9 @@ rewards.
 Payment logic
 =============
 
-Masternode payments in Dash version 0.13.0 are entirely deterministic
-and based on a simple list sort algorithm. For documentation of version
-0.12.0 payment logic, see the `legacy masternode payment documentation
-<https://docs.dash.org/en/0.12.3/masternodes/understanding.html#payment-logic>`_. 
-Dash version 0.13.0 implements `DIP003
-<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ and defines
+Since Dash version 0.13.0, masternode payments are entirely deterministic
+and based on a simple list sort algorithm. Dash version 0.13.0 implemented `DIP003
+<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ which defines
 two sets of masternodes.
 
 1. The full set, which contains all registered masternodes that have not
