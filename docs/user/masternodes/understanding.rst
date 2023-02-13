@@ -91,17 +91,17 @@ High-Performance Masternodes (HPMNs) are a subset of Masternodes that have
 been created to host the Dash Platform. An HPMN is a lot like Masternodes 
 with these differences:
 
-+---------+------------------+------------------+
-|         | Masternode        | HPMN            |
-+=========+==================+==================+
++----------------+-----------------------------------+-----------------------------------------------------+
+|                | Masternode                        | HPMN                                                |
++================+===================================+=====================================================+
 | Collateral     | 4 times less collateral than HPMN | Has four times the collateral as normal masternodes |
-+---------+------------------+------------------+
-| Specs     | Lesser than HPMN | Higher than normal masternodes |
-+---------+------------------+------------------+
-| Service   | Only Dash Core            | Both Dash Core and Platform |
-+---------+------------------+------------------+
-| Voting Weight | 4 times less than HPMN | 4 times more than HPMN |
-+---------+------------------+------------------+
++----------------+-----------------------------------+-----------------------------------------------------+
+| Specs          | Lesser than HPMN                  | Higher than normal masternodes                      |
++----------------+-----------------------------------+-----------------------------------------------------+
+| Service        | Only Dash Core                    | Both Dash Core and Platform                         |
++----------------+-----------------------------------+-----------------------------------------------------+
+| Voting Weight  | 4 times less than HPMN            | 4 times more than HPMN                              |
++----------------+-----------------------------------+-----------------------------------------------------+
 
 .. _dip3-changes:
 
