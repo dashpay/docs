@@ -8,6 +8,9 @@
 Understanding Masternodes
 =========================
 
+Overview
+========
+
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
@@ -82,18 +85,18 @@ real-time payment rates, and `this site
 statistics on the masternode network.
 
 High-Performance Masternodes (HPMNs)
-------------------------------------
+====================================
 
 High-Performance Masternodes (HPMNs) are a subset of Masternodes that have 
 been created to host the Dash Platform. An HPMN is a lot like Masternodes 
 with three main differences:
 
-| Masternodes      | HPMN |
+| Masternodes | HPMN |
 | ----------- | ----------- |  
-| Requires 1000 DASH collateral      | Requires 4000 DASH collateral      |
-| Recommended specs lesser than HPMN  | Recommended specs higher than normal masternodes       |
-| Only serves Dash Core      | Serves both Core and Platform      |
-| 4 times less voting power than HPMN      | 4 times more voting power than normal masternodes      |
+| Requires 1000 DASH collateral| Requires 4000 DASH collateral |
+| Recommended specs lesser than HPMN | Recommended specs higher than normal masternodes |
+| Only serves Dash Core | Serves both Core and Platform |
+| 4 times less voting power than HPMN | 4 times more voting power than normal masternodes |
 
 .. _dip3-changes:
 
@@ -250,7 +253,7 @@ list is sorted in ascending order by this block height and ProRegTx hash
 block), and the first entry is selected for payment.
 
 HPMN Payment Logic
-------------------
+==================
 
 Because the reward distribution percentages are fixed, the number of HPMNs is 
 expected to stabilize around a fixed number based on the total number of 
