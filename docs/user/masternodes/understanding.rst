@@ -85,7 +85,7 @@ real-time payment rates, and `this site
 statistics on the masternode network.
 
 High-Performance Masternodes (HPMNs)
-====================================
+------------------------------------
 
 High-Performance Masternodes (HPMNs) are a subset of Masternodes that have 
 been created to host the Dash Platform. An HPMN is a lot like Masternodes 
@@ -253,7 +253,7 @@ list is sorted in ascending order by this block height and ProRegTx hash
 block), and the first entry is selected for payment.
 
 HPMN Payment Logic
-==================
+------------------
 
 Because the reward distribution percentages are fixed, the number of HPMNs is 
 expected to stabilize around a fixed number based on the total number of 
