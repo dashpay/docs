@@ -37,7 +37,7 @@ Anyone can run a masternode. The objective is to have enough
 decentralization to ensure that no single person controls a significant
 fraction of the masternodes. However, to avoid bloating the network with
 unnecessary masternodes or encouraging reckless operators, there is one
-condition that needs to be fulfilled: proof of ownership of 1000 Dash.
+condition that needs to be fulfilled: proof of ownership of DASH collateral.
 The coins don't need to be in the masternode, but they need to be kept
 in a certain way that is transparent to the entire network. If the owner
 moves or spends those coins, the masternode stops working and payment
@@ -122,7 +122,7 @@ documentation appears below:
 Important concepts and changes:
 
 - It is possible to upgrade an existing masternode in-place without 
-  starting a new server and without moving your 1000 DASH collateral.
+  starting a new server and without moving your DASH collateral.
 - A masternode was previously "started" using the ``masternode start-alias`` 
   command based on a ``masternode.conf`` file. Under DIP003, this file 
   is no longer used, and masternodes are "registered" instead of 
@@ -223,7 +223,7 @@ receiving of funds and prevention of doublespending. Masternodes power
 the second tier, which provide the added features that make Dash
 different from other cryptocurrencies. Masternodes do not mine, and
 mining computers cannot serve as masternodes. Additionally, each
-masternode is “secured” by 1000 DASH. Those DASH remain under the sole
+masternode is “secured” by DASH collateral. Those DASH remain under the sole
 control of their owner at all times, and can still be freely spent. The
 funds are not locked in any way. However, if the funds are moved or
 spent, the associated masternode will go offline and stop receiving
@@ -312,7 +312,8 @@ described above.
 Masternode requirements
 =======================
 
-- 1000 Dash: Arguably the hardest part. Dash can be obtained from
+- DASH collateral: Hosting a master node requires a large amount of DASH collateral.
+  Arguably the hardest part. Dash can be obtained from
   exchanges such as Poloniex, Bittrex, Kraken and LiveCoin. Shapeshift's
   service is also an excellent way.
 - A server or VPS running Linux: Most recent guides use Ubuntu 20.04
@@ -322,7 +323,7 @@ Masternode requirements
   will increase according to this roadmap.
 - A dedicated IP address: These usually come with the VPS/server.
 
-In addition to the 1000 Dash held in collateral, masternodes also have
+In addition to the DASH held in collateral, masternodes also have
 minimum hardware requirements. For Dash versions 0.14 and higher, these
 requirements are as follows:
 
