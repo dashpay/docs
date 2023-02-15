@@ -8,6 +8,9 @@
 Understanding Masternodes
 =========================
 
+Overview
+========
+
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
@@ -34,7 +37,7 @@ Anyone can run a masternode. The objective is to have enough
 decentralization to ensure that no single person controls a significant
 fraction of the masternodes. However, to avoid bloating the network with
 unnecessary masternodes or encouraging reckless operators, there is one
-condition that needs to be fulfilled: proof of ownership of 1000 Dash.
+condition that needs to be fulfilled: proof of ownership of DASH collateral.
 The coins don't need to be in the masternode, but they need to be kept
 in a certain way that is transparent to the entire network. If the owner
 moves or spends those coins, the masternode stops working and payment
@@ -81,6 +84,24 @@ real-time payment rates, and `this site
 <http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various real-time
 statistics on the masternode network.
 
+High-Performance Masternodes (HPMNs)
+------------------------------------
+
+High-Performance Masternodes (HPMNs) are a subset of masternodes that have 
+been created to host Dash Platform. An HPMN is a lot like a regular masternode
+with the following differences:
+
++----------------+-----------------------------------+-----------------------------------------------------+
+|                | Masternode                        | HPMN                                                |
++================+===================================+=====================================================+
+| Collateral     | 1000 DASH                         | 4000 DASH (4X the collateral for normal masternodes)|
++----------------+-----------------------------------+-----------------------------------------------------+
+| Specs          | Lesser than HPMN                  | Higher than normal masternodes                      |
++----------------+-----------------------------------+-----------------------------------------------------+
+| Service        | Only Dash Core                    | Both Dash Core and Platform                         |
++----------------+-----------------------------------+-----------------------------------------------------+
+| Voting Weight  | 1 node gets 1 vote                | Has 4 times the voting power of a normal masternode |
++----------------+-----------------------------------+-----------------------------------------------------+
 
 .. _dip3-changes:
 
@@ -101,7 +122,7 @@ documentation appears below:
 Important concepts and changes:
 
 - It is possible to upgrade an existing masternode in-place without 
-  starting a new server and without moving your 1000 DASH collateral.
+  starting a new server and without moving your DASH collateral.
 - A masternode was previously "started" using the ``masternode start-alias`` 
   command based on a ``masternode.conf`` file. Under DIP003, this file 
   is no longer used, and masternodes are "registered" instead of 
@@ -202,7 +223,7 @@ receiving of funds and prevention of doublespending. Masternodes power
 the second tier, which provide the added features that make Dash
 different from other cryptocurrencies. Masternodes do not mine, and
 mining computers cannot serve as masternodes. Additionally, each
-masternode is “secured” by 1000 DASH. Those DASH remain under the sole
+masternode is “secured” by DASH collateral. Those DASH remain under the sole
 control of their owner at all times, and can still be freely spent. The
 funds are not locked in any way. However, if the funds are moved or
 spent, the associated masternode will go offline and stop receiving
@@ -236,6 +257,19 @@ list is sorted in ascending order by this block height and ProRegTx hash
 (as a tie breaker in case two masternodes were registered in the same
 block), and the first entry is selected for payment.
 
+HPMN Payment Logic
+------------------
+
+Because the reward distribution percentages are fixed, the number of HPMNs is 
+expected to stabilize around a fixed number based on the total number of 
+masternodes (considering the current number of ~3850 Masternodes, ~450 HPMNs 
+are expected). This is because if there are more than that fixed number of HPMNs, 
+running a regular MN will be more profitable than running an HPMN, and hosts 
+will convert their HPMNs into MNs. 
+
+HPMNs will receive 100% of the fees generated from Platform and 37.5% of 
+the masternode portion of Core block rewards. Regular MNs will receive the remaining 
+62.5% of the masternode portion of Core block rewards and 0% of Platform fees.
 
 .. _proof-of-service:
 
@@ -278,7 +312,8 @@ described above.
 Masternode requirements
 =======================
 
-- 1000 Dash: Arguably the hardest part. Dash can be obtained from
+- DASH collateral: Hosting a master node requires a large amount of DASH collateral.
+  Arguably the hardest part. Dash can be obtained from
   exchanges such as Poloniex, Bittrex, Kraken and LiveCoin. Shapeshift's
   service is also an excellent way.
 - A server or VPS running Linux: Most recent guides use Ubuntu 20.04
@@ -288,7 +323,7 @@ Masternode requirements
   will increase according to this roadmap.
 - A dedicated IP address: These usually come with the VPS/server.
 
-In addition to the 1000 Dash held in collateral, masternodes also have
+In addition to the DASH held in collateral, masternodes also have
 minimum hardware requirements. For Dash versions 0.14 and higher, these
 requirements are as follows:
 
