@@ -94,7 +94,7 @@ with the following differences:
 +----------------+-----------------------------------+-----------------------------------------------------+
 |                | Masternode                        | HPMN                                                |
 +================+===================================+=====================================================+
-| Collateral     | 4 times less collateral than HPMN | Has four times the collateral as normal masternodes |
+| Collateral     | 1000 DASH                         | 4000 DASH (4X the collateral for normal masternodes)|
 +----------------+-----------------------------------+-----------------------------------------------------+
 | Specs          | Lesser than HPMN                  | Higher than normal masternodes                      |
 +----------------+-----------------------------------+-----------------------------------------------------+
