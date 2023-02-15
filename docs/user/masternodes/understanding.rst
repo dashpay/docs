@@ -100,7 +100,7 @@ with the following differences:
 +----------------+-----------------------------------+-----------------------------------------------------+
 | Service        | Only Dash Core                    | Both Dash Core and Platform                         |
 +----------------+-----------------------------------+-----------------------------------------------------+
-| Voting Weight  | 1 node gets 1 vote.               | Has 4 times the voting power of a normal masternode |
+| Voting Weight  | 1 node gets 1 vote                | Has 4 times the voting power of a normal masternode |
 +----------------+-----------------------------------+-----------------------------------------------------+
 
 .. _dip3-changes:
