@@ -288,6 +288,8 @@ Failure to participate in DKG will eventually result in a PoSe ban as
 described above.
 
 
+.. _mn-hardware-reqs:
+
 Masternode requirements
 =======================
 
@@ -301,8 +303,6 @@ Masternode requirements
   to average specifications will do, although performance requirements
   will increase according to this roadmap.
 - A dedicated IP address: These usually come with the VPS/server.
-
-.. _mn-hardware-reqs:
 
 In addition to the DASH held in collateral, masternodes also have
 minimum hardware requirements. For Dash versions 0.14 and higher, these
