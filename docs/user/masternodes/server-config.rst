@@ -173,10 +173,7 @@ The system will show a list of upgradable packages. Press **Y** and
 Configure the firewall
 ----------------------
 
-We will now install a firewall (and
-some other packages we will use later), add swap memory and reboot the
-server to apply any necessary kernel updates, and then login to our
-newly secured environment as the new user::
+We will now install a firewall (and some other packages we will use later)::
 
   apt install ufw python virtualenv git unzip pv
 
@@ -211,7 +208,8 @@ Choose the appropriate firewall configuration below based on which network your 
 Enable swap
 -----------
 
-::
+Next, we add will add swap memory, enable it, and set it to be enabled on
+subsequent reboots::
 
   fallocate -l 4G /swapfile
   chmod 600 /swapfile
@@ -271,11 +269,11 @@ you selected above. Then press **Ctrl + X** to close the editor, then
 Reboot
 ------
 
-Then reboot the server::
+Now, reboot the server to apply any necessary kernel updates::
 
   reboot now
 
-PuTTY will disconnect when the server reboots.
+Your SSH client (e.g. PuTTY) will disconnect when the server reboots.
 
 .. note::
 
