@@ -29,15 +29,20 @@ A VPS, more commonly known as a cloud server, is fully functional installation
 of an operating system (usually Linux) operating within a virtual machine. The
 virtual machine allows the VPS provider to run multiple systems on one physical
 server, making it more efficient and much cheaper than having a single operating
-system running on the "bare metal" of each server. A VPS is ideal for hosting a
-Dash masternode because they typically offer guaranteed uptime, redundancy in
-the case of hardware failure and a static IP address that is required to ensure
-you remain in the masternode payment queue. While running a masternode from home
-on a desktop computer is technically possible, it will most likely not work
-reliably because most ISPs allocate dynamic IP addresses to home users.
+system running on the "bare metal" of each server.
 
-We will use `Vultr <https://www.vultr.com/>`_ hosting as an example of a VPS,
-although `DigitalOcean <https://www.digitalocean.com/>`_, `Amazon EC2
+A VPS is ideal for hosting a Dash masternode because they typically offer
+guaranteed uptime, redundancy in the case of hardware failure and a static IP
+address that is required to ensure you remain in the masternode payment queue.
+While running a masternode from home on a desktop computer is technically
+possible, it will most likely not work reliably because most ISPs allocate
+dynamic IP addresses to home users.
+
+Before beginning, take a few minutes to review the masternode
+:hoverxref:`hardware requirements <mn-hardware-reqs>` which may help you decide
+which VPS provider best suits your needs. We will use `Vultr
+<https://www.vultr.com/>`_ hosting as an example of a VPS, although
+`DigitalOcean <https://www.digitalocean.com/>`_, `Amazon EC2
 <https://aws.amazon.com/ec2/>`_, `Google Cloud
 <https://cloud.google.com/compute/>`_, `Choopa <https://www.choopa.com/>`_ and
 `OVH <https://www.ovh.com.au/>`_ are also popular choices. First create an
