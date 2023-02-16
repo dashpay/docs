@@ -39,7 +39,7 @@ possible, it will most likely not work reliably because most ISPs allocate
 dynamic IP addresses to home users.
 
 Before beginning, take a few minutes to review the masternode
-:hoverxref:`hardware requirements <mn-hardware-reqs>` which may help you decide
+:hoverxref:`hardware requirements <mn-hardware-reqs-table>` which may help you decide
 which VPS provider best suits your needs. We will use `Vultr
 <https://www.vultr.com/>`_ hosting as an example of a VPS, although
 `DigitalOcean <https://www.digitalocean.com/>`_, `Amazon EC2
