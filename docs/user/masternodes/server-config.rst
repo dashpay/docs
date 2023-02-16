@@ -184,9 +184,8 @@ newly secured environment as the new user::
 
 Choose the appropriate firewall configuration below based on which network your masternode will support:
 
-**Mainnet firewall configuration**
-
-::
+.. code-block:: none
+  :caption: Mainnet configuration
 
   ufw allow ssh/tcp
   ufw limit ssh/tcp
@@ -194,9 +193,8 @@ Choose the appropriate firewall configuration below based on which network your 
   ufw logging on
   ufw enable
 
-**Testnet firewall configuration**
-
-::
+.. code-block:: none
+  :caption: Testnet configuration
   
   ufw allow ssh/tcp
   ufw limit ssh/tcp
@@ -243,7 +241,9 @@ Create a new configuration file::
 
   nano /etc/fail2ban/jail.local
 
-And paste in the following configuration::
+And paste in the following configuration:
+
+.. code-block:: ini
 
   [sshd]
   enabled = true
@@ -253,7 +253,7 @@ And paste in the following configuration::
   maxretry = 3
 
 Then press **Ctrl + X** to close the editor, then **Y** and **Enter**
-save the file. Retart and enable the fail2ban service::
+save the file. Restart and enable the fail2ban service::
 
   systemctl restart fail2ban
   systemctl enable fail2ban
