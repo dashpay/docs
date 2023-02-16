@@ -66,7 +66,15 @@ gettext_compact = False
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = [
+    '_build',
+    'Thumbs.db',
+    '.DS_Store',
+    'README.md',
+    '.devcontainer',
+    'transifex',
+    'docs/user/wallets/electrum/dip3_p2sh_howto.md'
+]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -84,10 +92,20 @@ todo_include_todos = False
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'hoverxref.extension',
+    'myst_parser',
     'sphinx.ext.autodoc',
     'sphinx_copybutton',
     'sphinx_design',
 ]
+
+# -- Myst parser configuration -----------------------------------------------
+# Auto-generate header anchors for md headings
+myst_heading_anchors = 5
+
+# Enable colon_fence for better markdown compatibility
+# https://myst.tools/docs/mystjs/syntax-overview#directives
+myst_enable_extensions = ["colon_fence"]
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
