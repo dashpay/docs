@@ -37,15 +37,8 @@ the first time. If you are updating a masternode, see  :ref:`here
   Dash Core wallet is also supported
 - A Linux server, preferably a Virtual Private Server (VPS)
 
-Dash 0.13.0 and later implement DIP003, which introduces several changes
-to how a Dash masternode is set up and operated. While this network
-upgrade was completed in early 2019, a list of available documentation
-appears below:
+For information about hosted masternodes, see the documentation listed below:
 
-- `DIP003 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
-- :ref:`dip3-changes`
-- `Dash 0.13 Upgrade Procedure for Masternodes (legacy documentation) <https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__
-- :ref:`Full masternode setup guide <masternode-setup>` (you are here)
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
 - :ref:`Information for operators of hosted masternodes <operator-transactions>`
 
@@ -526,10 +519,9 @@ version::
 Masternode registration
 =======================
 
-DIP003 introduced several changes to how a masternode is set up and
-operated. These changes and the three keys required for the different
-masternode roles are described briefly under :ref:`dip3-changes` in this
-documentation.
+The three keys required for the different masternode roles are described briefly
+under :ref:`mn-concepts` in this documentation.
+
 
 Option 1: Registering from a hardware wallet
 --------------------------------------------
