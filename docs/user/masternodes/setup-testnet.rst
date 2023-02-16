@@ -52,7 +52,7 @@ Server configuration
 --------------------
 
 Proper server configuration is essential to successful masternode operation for
-both security and performance reasons. Refer to the :ref:`Server configuration
+both security and performance reasons. Refer to the :hoverxref:`Server configuration
 <server-config>` page for details on preparing your server to host a masternode.
 
 Send the collateral
