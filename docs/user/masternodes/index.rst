@@ -52,6 +52,7 @@ a self-operated masternode.
 
    understanding.rst
    hosting.rst
+   server-config
    setup.rst
    setup-testnet.rst
    maintenance.rst
