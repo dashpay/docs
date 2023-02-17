@@ -99,6 +99,10 @@ extensions = [
     'sphinx_design',
 ]
 
+hoverxref_role_types = {
+    'hoverxref': 'tooltip',
+}
+
 # -- Myst parser configuration -----------------------------------------------
 # Auto-generate header anchors for md headings
 myst_heading_anchors = 5
