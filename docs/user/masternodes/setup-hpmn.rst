@@ -137,7 +137,7 @@ steps as shown in this screenshot:
    for your VPS above is a good choice.
 #. Enter the IP address of your masternode. This was given to you
    by the VPS provider when you set up the server. Then enter the TCP 
-   port number. This should be 19999.
+   port number. This should be 9999.
 #. Click **Locate collateral** to view unused collateral funding 
    transactions available on the connected hardware wallet. Select the 
    address to which you sent 4000 Dash and click **Apply**. The 
@@ -409,9 +409,10 @@ command::
     "public": "99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e"
   }
 
-**These keys are NOT stored by the wallet or dashmate and must be kept
-secure, similar to the value provided in the past by the** ``masternode
-genkey`` **command.**
+.. warning::
+  
+  **These keys are NOT stored by the wallet or dashmate and must be backed up
+  and kept secure.**
 
 Add the private key to your masternode configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -449,7 +450,10 @@ Alternatively, the following commands can be used generate P2P key, save it to `
 
   1e8e241c05ca350c8fe0b8ba4680e7652673dae2
 
-**These keys are NOT stored by dashmate and must be backed up and kept secure.**
+.. warning::
+  
+  **These keys are NOT stored by the wallet or dashmate and must be backed up
+  and kept secure.**
 
 Add the Platform Node ID to your masternode configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
