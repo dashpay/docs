@@ -95,7 +95,7 @@ menu, then click **Open** again in the dialog box. The app is saved as
 an exception to your security settings, and you can open it in the
 future by double-clicking it just as you can any registered app.
 
-.. image:: img/macos/112414895.png
+.. figure:: img/macos/112414895.png
    :width: 280px
 
 .. figure:: img/macos/112414905.png
