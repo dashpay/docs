@@ -313,17 +313,16 @@ requirements are as follows:
 +---------+------------------+------------------+
 |         | Minimum          | Recommended      |
 +=========+==================+==================+
-| CPU     | 1x 1 GHz         | 1x 2 GHz         |
+| CPU     | 1x 2 GHz         | 2x 2 GHz         |
 +---------+------------------+------------------+
-| RAM     | 2 GB + 2 GB swap | 4 GB + 2 GB swap |
+| RAM     | 4 GB + 2 GB swap | 8 GB + 4 GB swap |
 +---------+------------------+------------------+
-| Disk    | 40 GB            | 60 GB            |
+| Disk    | 80 GB            | 100 GB           |
 +---------+------------------+------------------+
-| Network | 400 GB/mth       | 1 TB/mth         |
+| Network | 2 TB/mth         | 2+ TB/mth        |
 +---------+------------------+------------------+
 
-Masternode bandwidth use ranges between 300-500 GB per month and will
-grow as the network does.
+Masternode bandwidth use ranges between 1-2 TB per month and will grow as the network does.
 
 Dash Evolution
 --------------
