@@ -319,10 +319,11 @@ requirements are as follows:
 +---------+------------------+------------------+
 | Disk    | 60 GB            | 80 GB            |
 +---------+------------------+------------------+
-| Network | 2 TB/mth         | 2+ TB/mth        |
+| Network | 400 GB/mth       | 1 TB/mth         |
 +---------+------------------+------------------+
 
-Masternode bandwidth use ranges between 1-2 TB per month and will grow as the network does.
+Masternode bandwidth use ranges between 300-500 GB per month and will
+grow as the network does.
 
 Dash Evolution
 --------------
