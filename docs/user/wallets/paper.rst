@@ -239,7 +239,7 @@ imported address will appear in your list of transactions. If you use
 Coin Control, you can also enable or disable the address for spending
 there.
 
-.. image:: img/paper-transaction.png
+.. figure:: img/paper-transaction.png
    :width: 400px
 
 .. figure:: img/paper-coin-control.png

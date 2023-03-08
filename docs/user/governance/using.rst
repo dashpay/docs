@@ -166,7 +166,7 @@ proposal by familiarising voters with your project. Note that the
 payment amount is fixed and cannot be modified after it has been
 submitted to the blockchain.
 
-.. image:: img/proposal-create.png
+.. figure:: img/proposal-create.png
    :width: 300px
 
 .. figure:: img/proposal-burn-prepare.png
