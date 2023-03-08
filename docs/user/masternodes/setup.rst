@@ -609,7 +609,7 @@ Select **Remote Dash RPC Node (automatic method)**. (See `here <https://github.c
 for documentation on using your own local RPC node.) and confirm the
 following two messages:
 
-.. image:: img/setup-dmt-send.png
+.. figure:: img/setup-dmt-send.png
    :width: 220px
 
 .. figure:: img/setup-dmt-sent.png
