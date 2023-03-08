@@ -191,7 +191,7 @@ into the proposal generator response window. As soon as you do this, the
 system will show a progress bar as it waits for 6 confirmations as
 follows:
 
-.. image:: img/proposal-burn-console.png
+.. figure:: img/proposal-burn-console.png
    :width: 300px
 
 .. figure:: img/proposal-burn-confirming.png
@@ -204,7 +204,7 @@ Once 6 block confirmations exist, another command will appear to submit
 the prepared governance object to the network for voting. Copy and paste
 this command, and your governance object ID will appear as follows:
 
-.. image:: img/proposal-submit.png
+.. figure:: img/proposal-submit.png
    :width: 300px
 
 .. figure:: img/proposal-submit-console.png
