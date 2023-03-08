@@ -170,7 +170,7 @@ take some time, and your balance will be displayed when complete.
    **Security > Reset Wallet** option and then proceed with restoring the
    backup file.
 
-.. figure:: img/recovery-android1.jpg
+.. image:: img/recovery-android1.jpg
    :width: 200px
 .. image:: img/recovery-android2.jpg
    :width: 200px
