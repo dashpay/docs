@@ -29,7 +29,7 @@ click **Next** to continue. You will see a notice that no wallet
 currently exists. Enter a name for your wallet (or accept the default
 name) and click **Next** to create your wallet.
 
-.. image:: img/connect.png
+.. figure:: img/connect.png
    :width: 400px
 
 .. figure:: img/create-wallet.png
@@ -48,7 +48,7 @@ hardware device**. If you are using Electrum Dash for the first time and
 not restoring an existing wallet, choose **Create a new seed** and click
 **Next** to continue.
 
-.. image:: img/wallet-type.png
+.. figure:: img/wallet-type.png
    :width: 400px
 
 .. figure:: img/seed-type.png
@@ -64,7 +64,7 @@ properly saved your seed, Electrum Dash will ask you to type it in as a
 confirmation. Type the words in the correct order and click **Next** to
 continue.
 
-.. image:: img/seed-generate.png
+.. figure:: img/seed-generate.png
    :width: 400px
 
 .. figure:: img/seed-confirm.png

@@ -37,7 +37,7 @@ if the total transaction amount exceeds the wallet balance.
 The wallet will request your password, then broadcast the transaction to
 the network and display a confirmation dialog with your transaction ID.
 
-.. image:: img/send-password.png
+.. figure:: img/send-password.png
    :width: 110px
    :align: left
 
@@ -91,7 +91,7 @@ confirmed (and therefore spendable) after six confirmations. These
 processed transactions are denoted with a green checkmark and the
 timestamp at which the transaction was made.
 
-.. image:: img/monitor-unconfirmed.png
+.. figure:: img/monitor-unconfirmed.png
    :width: 400px
 
 .. figure:: img/monitor-confirmed.png

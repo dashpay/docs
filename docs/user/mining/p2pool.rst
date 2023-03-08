@@ -236,7 +236,7 @@ replacing ``<ip_address>`` with the IP address of your P2Pool node:
 - Status interface: http://ip_address:7903/static/status
 - Extended interface: http://ip_address:7903/static/ext
 
-.. image:: img/p2pool-antminer.png
+.. figure:: img/p2pool-antminer.png
    :width: 400px
 
 .. figure:: img/p2pool-running.png

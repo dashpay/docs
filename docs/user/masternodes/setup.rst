@@ -344,7 +344,7 @@ is working. Then connect your Trezor device and click the next button
 **Test Hardware Wallet Connection** to verify the Trezor connection is
 working.
 
-.. image:: img/setup-collateral-connection.png
+.. figure:: img/setup-collateral-connection.png
    :width: 100px
 
 .. figure:: img/setup-collateral-hardware.png

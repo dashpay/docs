@@ -36,7 +36,7 @@ state of all UTXOs. When you are ready to continue, click **OK**. You
 can now safely create transactions with your remaining funds without
 affecting the locked UTXOs.
 
-.. image:: img/coin-selection-lock.png
+.. figure:: img/coin-selection-lock.png
    :width: 220px
 
 .. figure:: img/coin-selection-locked.png

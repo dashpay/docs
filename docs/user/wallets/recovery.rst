@@ -70,7 +70,7 @@ clicking **Help > About Dash Core**. Compare this with the latest
 available version of `Dash Core on the website
 <https://www.dash.org/downloads/>`_ as follows:
 
-.. image:: img/recovery-dashcore-version.png
+.. figure:: img/recovery-dashcore-version.png
    :width: 300px
 .. figure:: img/recovery-website-version.png
    :width: 400px
@@ -129,7 +129,7 @@ blockchain by going to **Window > Wallet Repair** and selecting **Rescan
 blockchain files**. **Rebuild index** may also help. Dash Core will
 restart and perform a full scan of the blockchain.
 
-.. image:: img/recovery-rescan.png
+.. figure:: img/recovery-rescan.png
    :width: 400px
 .. figure:: img/recovery-rescanning.png
    :width: 300px
@@ -170,7 +170,7 @@ take some time, and your balance will be displayed when complete.
    **Security > Reset Wallet** option and then proceed with restoring the
    backup file.
 
-.. image:: img/recovery-android1.jpg
+.. figure:: img/recovery-android1.jpg
    :width: 200px
 .. image:: img/recovery-android2.jpg
    :width: 200px
@@ -205,7 +205,7 @@ the main page, and enter your 12-word phrase when prompted.
    **Security > Reset Wallet** option and then proceed with restoring the
    recovery phrase.
 
-.. image:: img/recovery-android3.jpg
+.. figure:: img/recovery-android3.jpg
    :width: 200px
 .. image:: img/recovery-android4.jpg
    :width: 200px
