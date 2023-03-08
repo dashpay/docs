@@ -170,7 +170,7 @@ take some time, and your balance will be displayed when complete.
    **Security > Reset Wallet** option and then proceed with restoring the
    backup file.
 
-.. figure:: img/recovery-android1.jpg
+.. image:: img/recovery-android1.jpg
    :width: 200px
 .. image:: img/recovery-android2.jpg
    :width: 200px
@@ -205,7 +205,7 @@ the main page, and enter your 12-word phrase when prompted.
    **Security > Reset Wallet** option and then proceed with restoring the
    recovery phrase.
 
-.. figure:: img/recovery-android3.jpg
+.. image:: img/recovery-android3.jpg
    :width: 200px
 .. image:: img/recovery-android4.jpg
    :width: 200px
