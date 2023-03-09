@@ -70,7 +70,7 @@ clicking **Help > About Dash Core**. Compare this with the latest
 available version of `Dash Core on the website
 <https://www.dash.org/downloads/>`_ as follows:
 
-.. image:: img/recovery-dashcore-version.png
+.. figure:: img/recovery-dashcore-version.png
    :width: 300px
 .. figure:: img/recovery-website-version.png
    :width: 400px
@@ -129,7 +129,7 @@ blockchain by going to **Window > Wallet Repair** and selecting **Rescan
 blockchain files**. **Rebuild index** may also help. Dash Core will
 restart and perform a full scan of the blockchain.
 
-.. image:: img/recovery-rescan.png
+.. figure:: img/recovery-rescan.png
    :width: 400px
 .. figure:: img/recovery-rescanning.png
    :width: 300px
