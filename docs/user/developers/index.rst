@@ -40,7 +40,6 @@ carry out common development tasks in Dash.
    :maxdepth: 1
 
    integration.rst
-   v016-upgrade.rst
    translating.rst
    compiling.rst
    testnet.rst
