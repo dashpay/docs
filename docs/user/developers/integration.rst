@@ -353,7 +353,7 @@ Blockmove
 
 https://blockmove.io
 
-Сryptocurrency wallet, merchant & API provider. Blockmove is a simple
+Cryptocurrency wallet, merchant & API provider. Blockmove is a simple
 and easy way to start accepting payments in cryptocurrency.
 
 - Features: Non-custodial wallet, HD Wallet, High anonymity, Low fees. 
