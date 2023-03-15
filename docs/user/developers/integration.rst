@@ -268,9 +268,9 @@ Insight
 .. image:: img/insight.png
    :width: 200px
    :align: right
-   :target: https://github.com/dashevo/insight-api
+   :target: https://github.com/dashpay/insight-api
 
-https://github.com/dashevo/insight-api
+https://github.com/dashpay/insight-api
 
 The open-source Insight REST API provides you with a convenient,
 powerful and simple way to read data from the Dash network and build
@@ -280,7 +280,7 @@ Insight API and Insight UI block explorer is available :ref:`here
 
 - Features: Transaction Broadcast, WebSocket Notifications.
 - Pricing Model: Free / Open Source
-- Documentation: https://github.com/dashevo/insight-api
+- Documentation: https://github.com/dashpay/insight-api
 
 
 BlockCypher
@@ -456,10 +456,10 @@ development, additional indexes have been added into Dash for querying
 address balances, transaction history, and unspent outputs.
 
 - Platform: NodeJS / Javascript
-- Documentation: https://github.com/dashevo/dashcore-lib/blob/master/README.md#documentation
-- Repository lib: https://github.com/dashevo/dashcore-lib
-- Repository node: https://github.com/dashevo/dashcore-node
-- See also: `Insight API <https://github.com/dashevo/insight-api>`__
+- Documentation: https://github.com/dashpay/dashcore-lib/blob/master/README.md#documentation
+- Repository lib: https://github.com/dashpay/dashcore-lib
+- Repository node: https://github.com/dashpay/dashcore-node
+- See also: `Insight API <https://github.com/dashpay/insight-api>`__
 
 NodeJS/JavaScript: DashJS
 -------------------------
@@ -469,8 +469,8 @@ within a single library, including management and signing of your
 documents.
 
 - Platform: NodeJS / Javascript
-- Documentation: https://dashevo.github.io/js-dash-sdk/
-- Repository: https://github.com/dashevo/js-dash-sdk
+- Documentation: https://dashpay.github.io/platform/SDK/
+- Repository: https://github.com/dashpay/platform/tree/master/packages/js-dash-sdk
 
 PHP: Bitcoin-PHP
 ----------------
@@ -504,9 +504,9 @@ Java: DashJ
 .. image:: img/bitcoinj.png
    :width: 200px
    :align: right
-   :target: https://github.com/dashevo/dashj
+   :target: https://github.com/dashpay/dashj
 
-https://github.com/dashevo/dashj
+https://github.com/dashpay/dashj
 
 DashJ is a library for working with the Dash protocol. It can maintain a
 wallet, send/receive transactions (including InstantSend) without
@@ -516,7 +516,7 @@ language: examples in Python and JavaScript are included.
 
 - Platform: Java
 - Documentation: https://bitcoinj.org/getting-started
-- Repository: https://github.com/dashevo/dashj
+- Repository: https://github.com/dashpay/dashj
 - Example application: https://github.com/tomasz-ludek/pocket-of-dash
 
 Objective-C: Dash-Sync
@@ -525,16 +525,16 @@ Objective-C: Dash-Sync
 .. image:: img/dash-logo.png
    :width: 200px
    :align: right
-   :target: https://github.com/dashevo/dashsync-iOS
+   :target: https://github.com/dashpay/dashsync-iOS
 
-https://github.com/dashevo/dashsync-iOS
+https://github.com/dashpay/dashsync-iOS
 
 Dash-Sync is an Objective-C Dash blockchain framework for iOS. It
 implements all most relevant Bitcoin Improvement Proposals (BIPs) and
 Dash Improvement Proposals (DIPs).
 
 - Platform: iOS
-- Repository: https://github.com/dashevo/dashsync-iOS
+- Repository: https://github.com/dashpay/dashsync-iOS
 
 .NET: NBitcoin
 --------------
