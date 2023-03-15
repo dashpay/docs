@@ -188,6 +188,49 @@ https://support.cobo.com
    Cobo wallet
 
 
+Coin Wallet
+===========
+
+https://coin.space/
+
+.. image:: img/coin.png
+   :width: 100px
+   :align: right
+   :target: https://coin.space/
+
+Coin Wallet is a non-custodial multicurrency crypto wallet.
+It's an open-source wallet, and the code is available on GitHub.
+Private keys are created and stored on your device and are never 
+communicated with any server or anyone.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.coinspace.app
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://apps.apple.com/app/id980719434
+
+Coin Wallet is available as a `web wallet <https://coin.space/wallet/>`__, 
+a mobile wallet (`Google Play Store for Android <https://play.google.com/store/apps/details?id=com.coinspace.app>`__ 
+& `Apple App Store for iOS <https://apps.apple.com/app/id980719434>`__), 
+and desktop apps (`Windows <https://coin.space/api/v3/download/win/x64>`__, `Linux <https://snapcraft.io/coin>`__ 
+& `MacOS <https://coin.space/api/v3/download/mac/x64>`__).
+
+Documentation
+-------------
+
+Coin Wallet offers detailed documentation and support at https://support.coin.space/
+
+.. figure:: img/coin-wallet.png
+   :width: 200px
+
+   Coin Wallet
+
+
 Coinomi
 =======
 
