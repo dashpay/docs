@@ -10,6 +10,10 @@ build:
    tools:
       python: "3.10"
 
+# Building PDF
+formats:
+  - pdf
+
 python:
    install:
       - requirements: requirements.txt
