@@ -135,20 +135,22 @@ zero-confirmation transactions to be safely accepted and re-spent. The
 network attempts to lock the inputs of every valid transaction when it
 is broadcast to the network. Every secured transaction is included in a
 following block in accordance with standard blockchain principles.
+Transactions are typically locked by InstantSend within 3 seconds of
+being propagated to the network.
 
 InstantSend is enabled by the Masternode Network which comprises
-approximately 5,000 masternode servers. These nodes are differentiated
+several thousand masternode servers. These nodes are differentiated
 from standard nodes by having proven ownership of 1,000 Dash, making the
 network `highly resistant to Sybil attacks <https://en.wikipedia.org/wiki/Sybil_attack>`__. 
 Masternodes form `Long-Living Masternode Quorums (LLMQs) <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, 
 which are responsible for providing near-instant certainty to the transaction
-participants that the transaction inputs cannot be respent, and that the
+participants that the transaction inputs cannot be re-spent, and that the
 transaction will be included in a following block instead of a conflicting
 transaction. 
 
-This concept works as an extension to Nakamoto Consensus. InstantSend
-enables transacted funds to be immediately and securely respent by the
-recipient, even before the transaction is included in a block.
+This concept works as an extension to Nakamoto Consensus to provide additional
+security. InstantSend enables transacted funds to be immediately and securely
+re-spent by the recipient, even before the transaction is included in a block.
 
 
 Receiving InstantSend Transactions
@@ -166,10 +168,13 @@ InstantSend Status is typically determined through direct connection
 with the dash daemon, `ZMQ notification <https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__,
 or through the usage of an external wallet notification script.
 
-**Direct Connection:** InstantSend Status can be identified through
-direct connection with the Dash daemon using JSON-RPC protocol. The
-“instantlock” attribute of the JSON response reflects the status of the
-transaction and is included in the following commands:
+Direct Connection
+^^^^^^^^^^^^^^^^^
+
+InstantSend Status can be identified through direct connection with the Dash
+daemon using JSON-RPC protocol. The ``instantlock`` attribute of the JSON
+response reflects the status of the transaction and is included in the following
+commands:
 
 - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getrawmempool>`__
 - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolancestors>`__
@@ -180,10 +185,13 @@ transaction and is included in the following commands:
 - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listtransactions>`__
 - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listsinceblock>`__
 
-**ZMQ Notification:** Whenever a transaction enters the mempool and
-whenever a transaction is locked in the mempool, ZMQ notifications can
-be broadcast by the node. A list of possible ZMQ notifications can be
-found `here <https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__. 
+ZMQ Notification
+^^^^^^^^^^^^^^^^
+
+Whenever a transaction enters the mempool and whenever a transaction is locked
+in the mempool, ZMQ notifications can be broadcast by the node. A list of
+possible ZMQ notifications can be found `here
+<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__. 
 
 The following notifications are relevant for recognizing transactions
 and their corresponding instantlocks:
@@ -193,10 +201,12 @@ and their corresponding instantlocks:
 - zmqpubrawtx
 - zmqpubrawtxlock
 
-**Wallet Notification:** The Dash Core Daemon can be configured to 
-execute an external script whenever an InstantSend transaction relating
-to that wallet is observed. This is configured by adding the following
-line to the dash.conf file::
+Wallet Notification
+^^^^^^^^^^^^^^^^^^^
+
+The Dash Core Daemon can be configured to execute an external script whenever an
+InstantSend transaction relating to that wallet is observed. This is configured
+by adding the following line to the dash.conf file::
 
   instantsendnotify=/path/to/concurrent/safe/handler %s
 
