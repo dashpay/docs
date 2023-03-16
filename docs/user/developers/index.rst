@@ -40,10 +40,12 @@ carry out common development tasks in Dash.
    :maxdepth: 1
 
    integration.rst
-   translating.rst
+   integration-apis
+   integration-sdks
    compiling.rst
    testnet.rst
    insight.rst
+   translating.rst
 
 .. _understanding-sporks:
 
