@@ -234,19 +234,6 @@ underlying technologies.
 - `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__
 
 
-Vending Machines
-================
-
-Community member moocowmoo has released code to help merchants build
-their own vending machine and set it up to receive Dash InstantSend
-payments. The Dashvend software can also be used to create any sort of
-payment system, including point-of-sale systems that can accept
-InstantSend payments.
-
-- `Open Source Code <https://github.com/moocowmoo/dashvend>`_
-- `Demonstration video <https://www.youtube.com/watch?v=SX-3kwbam0o>`_
-
-
 Price Tickers
 =============
 
