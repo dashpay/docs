@@ -156,6 +156,13 @@ re-spent by the recipient, even before the transaction is included in a block.
 Receiving InstantSend Transactions
 ----------------------------------
 
+.. note::
+
+   An "InstantSend Transaction" is simply a standard transaction
+   that has been provided additional assurances by the masternode
+   network. As a result, and from an integration perspective, the
+   only technical difference is the InstantSend status.
+
 Receiving an InstantSend Transaction introduces two requirements:
 
 1. The ability to determine the “InstantSend Status” of a given 
@@ -218,6 +225,11 @@ addresses.
 
 Broadcasting InstantSend Transactions
 -------------------------------------
+
+.. tip::
+   
+   Because all transactions on the Dash network are automatically InstantSend,
+   no procedural changes are required to broadcast transactions as InstantSend.
 
 Since Dash v0.14.0 established LLMQs on the Dash network, quorums will
 now attempt to lock every valid transaction by default without any
