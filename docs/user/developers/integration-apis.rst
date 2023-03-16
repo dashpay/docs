@@ -176,3 +176,44 @@ or integrate with your pre-existing checkout.
 - Pricing Model: 0.5% Processing Fee
   (https://www.coinpayments.net/help-fees)
 - Documentation: https://www.coinpayments.net/apidoc
+
+
+Price Tickers
+=============
+
+You can add a simple price ticker widget to your website using the
+simple `code snippet generator from CoinGecko
+<https://www.coingecko.com/en/widgets/coin_ticker_widget>`_.
+
+.. raw:: html
+
+    <div style="position: relative; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
+        <iframe id='widget-ticker-preview' src='//www.coingecko.com/en/widget_component/ticker/dash/usd?id=dash' style='border:none; height:125px; width: 275px;' scrolling='no' frameborder='0' allowTransparency='true'></iframe>
+    </div>
+
+Similar widgets with different designs are available from `CoinLib
+<https://coinlib.io/widgets>`_ and `WorldCoinIndex
+<https://www.worldcoinindex.com/Widget>`_, while an API providing similar
+information is available from `DashCentral
+<https://www.dashcentral.org/about/api>`_.
+
+
+QR Codes
+========
+
+Many wallets can generate QR codes that are scannable to
+simplify entry of the Dash address. Printing these codes or posting the
+on your website makes it easy to receive payment and tips in Dash, both
+online and offline.
+
+- In Dash Core, go to the **Receive** tab, generate an address if
+  necessary, and double-click it to display a QR code. Right-click on
+  the QR code and select **Save Image** to save a PNG file.
+- In Dash for Android, tap **Request Coins** and then tap the QR code to
+  display a larger image. You can screenshot this to save an image.
+- In Dash for iOS, swipe to the left to display the **Receive Dash**
+  screen. A QR code and address will appear. You can screenshot this to
+  save an image.
+- To generate a QR code from any Dash address, visit `CWA QR Code
+  Generator <https://cwaqrgen.com/dash>`_ and simply paste your Dash
+  address to generate an image.
