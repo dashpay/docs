@@ -1,6 +1,6 @@
 .. meta::
-   :description: Technical guides for merchants using Dash. API and SDK resources.
-   :keywords: dash, merchants, payment processor, API, SDK, insight, blockcypher, instantsend, python, .NET, java, javascript, nodejs, php, objective-c, vending machines
+   :description: Technical guides for developers integrating Dash.
+   :keywords: dash, merchants, API, SDK, instantsend, python, .NET, java, javascript, nodejs, php, objective-c
 
 .. _integration:
 
