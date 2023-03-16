@@ -71,7 +71,7 @@ allows for most existing libraries to work in the Dash ecosystem.
 Special Transactions
 ====================
 
-This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__.
+This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Transaction-Types.pdf>`__.
 
 Dash 0.13.0 and higher implement `DIP002 Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, 
 which form a basis for new transaction types that provide on-chain
@@ -99,20 +99,19 @@ transaction types exist:
 Integration notes:
 
 1. `DIP002 Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ 
-   are a foundational component of Dash Core v0.13.0 and introduce a new
-   Transaction Version and related “Payload” to the network.
+   introduced a new Transaction Version and related “Payload” to the network.
 
 2. Integrated Systems must be able to `serialize and deserialize <https://github.com/dashpay/dips/blob/master/dip-0002.md#serialization-hashing-and-signing>`__ 
    these new Transaction Types to accurately encode and decode
    Raw Transaction data.
 
 3. From a `backwards compatibility <https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ 
-   perspective, the 4 byte (32-bit) ``version`` field included in Legacy
-   Transactions has been split into two fields: ``version`` and ``type``
+   perspective, the 4 byte (32-bit) ``version`` field included in Classical
+   Transactions was been split into two fields: ``version`` and ``type``
    (each consisting of 2 bytes).
 
 4. Refer to the `Special Transactions <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions>`__ 
-   section of the dash developer reference for additional detail on
+   section of the Dash developer reference for additional detail on
    these data types, e.g. <variable int>.
 
 5. :ref:`InstantSend <integration-instantsend>` status and Payload JSON
@@ -120,7 +119,7 @@ Integration notes:
    that this data is not part of the calculated hash and is provided for
    convenience.
 
-See the `v0.13.0 transaction types integration documentation (PDF) <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__
+See the `transaction types integration documentation (PDF) <https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Transaction-Types.pdf>`__
 for worked examples of each transaction type.
 
 
