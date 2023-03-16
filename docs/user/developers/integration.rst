@@ -8,7 +8,7 @@
 Integration Overview
 ====================
 
-This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.13_IntegrationOverview.pdf>`__.
+This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_IntegrationOverview.pdf>`__.
 
 `Dash Core <https://github.com/dashpay/dash/releases>`__ is a fork of `Bitcoin
 Core <https://github.com/bitcoin/bitcoin>`__ and shares many common
