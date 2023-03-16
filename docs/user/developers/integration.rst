@@ -26,14 +26,17 @@ decentralized governance model.
 
 - Block time: ~2.6 minutes per block
 - Github source: https://github.com/dashpay/dash
-- Latest release: https://github.com/dashpay/dash/releases
+- Latest release: https://github.com/dashpay/dash/releases/latest
 
 JSON-RPC Interface
 ------------------
 
 The majority of commands are unchanged from Bitcoin making integration into
-existing systems relatively straightforward. Note that the following commands
-have been modified to support InstantSend:
+existing systems relatively straightforward. For a complete listing of RPC
+commands please refer to the `​Dash Developer Guide
+<https://dashcore.readme.io/docs/core-guide-introduction>`_.
+
+Note that the following commands have been modified to support InstantSend:
 
    - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getrawmempool>`__
    - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolancestors>`__
@@ -44,6 +47,16 @@ have been modified to support InstantSend:
    - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listtransactions>`__
    - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listsinceblock>`__
 
+Special Transactions
+--------------------
+
+Dash Core v0.13.0 introduced the concept of “Special Transactions” as specified
+in `DIP002 <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__. Special
+Transactions provide a more native way to implement additional features which do
+not fit into the original concept of transactions. Please see the :ref:`Special
+Transactions <integration-special-transactions>` section below for more
+information.
+
 Block Hashing Algorithm
 -----------------------
 
@@ -52,13 +65,6 @@ to note, however, that this only affects the hashing of the block itself. All
 other internals utilize SHA256 hashes (transactions, merkle root, etc.), which
 allows for most existing libraries to work in the Dash ecosystem. 
 
-Special Transactions
---------------------
-
-Dash Core v0.13.x introduced the concept of “Special Transactions”. Please see
-the `Transaction Type Integration Guide
-<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-Resources-Dash-v0.13.0-Transaction-Types.pdf>`__
-for more information.
 
 .. _integration-special-transactions:
 
