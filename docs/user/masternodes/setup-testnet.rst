@@ -201,7 +201,6 @@ and then login to our newly secured environment as the new user::
   ufw allow 19999/tcp
   ufw allow 26656/tcp
   ufw allow 3000/tcp
-  ufw allow 3010/tcp
   ufw logging on
   ufw enable
 
@@ -1245,8 +1244,7 @@ Your masternode is now providing service on the following local ports::
   Core RPC:     19998
   Platform P2P: 26656
   Platform RPC: 26657
-  DAPI HTTP:    3000
-  DAPI gRPC:    3010
+  DAPI:    3000
 
 Note that platform sync will take some time after core sync is complete.
 You can monitor progress with ``dashmate status platform`` or use ``dashmate
