@@ -107,7 +107,7 @@ Integration notes:
 
 3. From a `backwards compatibility <https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ 
    perspective, the 4 byte (32-bit) ``version`` field included in Classical
-   Transactions was been split into two fields: ``version`` and ``type``
+   Transactions was split into two fields: ``version`` and ``type``
    (each consisting of 2 bytes).
 
 4. Refer to the `Special Transactions <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions>`__ 
