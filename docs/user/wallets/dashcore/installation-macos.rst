@@ -11,10 +11,6 @@ This guide describes how to download, install and encrypt the Dash Core
 wallet for macOS. The guide is written for macOS Sierra, but the steps
 should be similar for other versions.
 
-This guide describes how to download, install and encrypt the Dash Core
-wallet for macOS. The guide is written for macOS Sierra, but the steps
-should be similar for other versions.
-
 Downloading the Dash Core wallet
 --------------------------------
 
