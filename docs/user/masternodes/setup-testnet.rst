@@ -446,6 +446,9 @@ Core and Tenderdash, as well as all dependencies and supporting
 services. Full dashmate documentation is available `here
 <https://github.com/dashevo/platform/tree/master/packages/dashmate#readme>`__.
 
+.. warning::
+    Installation as root user is not supported or recommended.
+
 Open PuTTY or a console again and connect using the username and
 password you just created for your new, non-root user. Begin by
 installing dashmate dependencies::
