@@ -32,7 +32,7 @@ dependencies::
 Download and extract the latest version of Dash Core::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v18.2.1/dashcore-18.2.1-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v18.2.2/dashcore-18.2.1-x86_64-linux-gnu.tar.gz
   tar -xvzf dashcore-18.2.1-x86_64-linux-gnu.tar.gz
   rm dashcore-18.2.1-x86_64-linux-gnu.tar.gz
 
