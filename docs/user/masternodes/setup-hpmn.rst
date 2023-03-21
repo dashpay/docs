@@ -113,7 +113,7 @@ top left corner of the main window to verify that the connection is working.
 Then connect your Trezor device and click the next button **Test Hardware Wallet
 Connection** to verify the Trezor connection is working.
 
-.. image:: img/setup-collateral-connection.png
+.. figure:: img/setup-collateral-connection.png
    :width: 100px
 
 .. figure:: img/setup-collateral-hardware.png
@@ -326,7 +326,7 @@ Dash RPC Node (automatic method)**. (See `here
 for documentation on using your own local RPC node.) and confirm the following
 two messages:
 
-.. image:: img/setup-dmt-send.png
+.. figure:: img/setup-dmt-send.png
    :width: 220px
 
 .. figure:: img/setup-dmt-sent.png
