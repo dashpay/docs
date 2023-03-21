@@ -62,95 +62,103 @@ regarding the transaction must be extracted for later entry in a configuration
 file and registration transaction as proof to write the configuration to the
 blockchain so the masternode can be included in the deterministic list.
 
-A masternode can be registered from a hardware wallet, the official Dash Core
-wallet, or a Dash Electrum wallet, although a hardware wallet is highly
-recommended to enhance security and protect yourself against hacking. This guide
-will describe the steps for both hardware wallets and Dash Core.
+A high-performance masternode can be registered from the official Dash Core
+wallet. This guide will describe the steps.
 
-Option 1: Holding collateral in a hardware wallet
--------------------------------------------------
+..
+  A masternode can be registered from a hardware wallet, the official Dash Core
+  wallet, or a Dash Electrum wallet, although a hardware wallet is highly
+  recommended to enhance security and protect yourself against hacking. This guide
+  will describe the steps for both hardware wallets and Dash Core.
 
-Set up your Trezor using the Trezor wallet at https://wallet.trezor.io/ and send
-a test transaction to verify that it is working properly. For help on this, see
-:ref:`this guide <hardware-trezor>` - you may also choose to (carefully!) `add a
-passphrase
-<https://blog.trezor.io/passphrase-the-ultimate-protection-for-your-accounts-3a311990925b>`_
-to your Trezor to further protect your collateral. Create a new account in your
-Trezor wallet by clicking **Add account**. Then click the **Receive** tab and
-send exactly 4000 DASH to the address displayed. If you are setting up multiple
-masternodes, send 4000 DASH to consecutive addresses within the same new
-account. You should see the transaction as soon as the first confirmation
-arrives, usually within a few minutes.
+..
+  Option 1: Holding collateral in a hardware wallet
+  -------------------------------------------------
 
-.. figure:: img/setup-collateral-trezor.png
-   :width: 400px
+  Set up your Trezor using the Trezor wallet at https://wallet.trezor.io/ and send
+  a test transaction to verify that it is working properly. For help on this, see
+  :ref:`this guide <hardware-trezor>` - you may also choose to (carefully!) `add a
+  passphrase
+  <https://blog.trezor.io/passphrase-the-ultimate-protection-for-your-accounts-3a311990925b>`_
+  to your Trezor to further protect your collateral. Create a new account in your
+  Trezor wallet by clicking **Add account**. Then click the **Receive** tab and
+  send exactly 4000 DASH to the address displayed. If you are setting up multiple
+  masternodes, send 4000 DASH to consecutive addresses within the same new
+  account. You should see the transaction as soon as the first confirmation
+  arrives, usually within a few minutes.
 
-   Trezor Wallet Receive tab showing successfully received collateral of 1000
-   DASH
+  .. figure:: img/setup-collateral-trezor.png
+    :width: 400px
 
-Once the transaction appears, click the QR code on the right to view the
-transaction on the blockchain. Keep this window open as we complete the
-following steps, since we will soon need to confirm that 15 confirmations exist,
-as shown in the following screenshot.
+    Trezor Wallet Receive tab showing successfully received collateral of 1000
+    DASH
 
-.. figure:: img/setup-collateral-blocks.png
-   :width: 400px
+  Once the transaction appears, click the QR code on the right to view the
+  transaction on the blockchain. Keep this window open as we complete the
+  following steps, since we will soon need to confirm that 15 confirmations exist,
+  as shown in the following screenshot.
 
-   Trezor blockchain explorer showing 15 confirmations for collateral transfer
+  .. figure:: img/setup-collateral-blocks.png
+    :width: 400px
 
-While we are waiting for 15 confirmations, download the latest version of the
-Dash Masternode Tool (DMT) from the GitHub releases page `here
-<https://github.com/Bertrand256/dash-masternode-tool/releases>`__. Unzip and run
-the file. The following window appears.
+    Trezor blockchain explorer showing 15 confirmations for collateral transfer
 
-.. figure:: img/setup-collateral-dmt-start.png
-   :width: 400px
+  While we are waiting for 15 confirmations, download the latest version of the
+  Dash Masternode Tool (DMT) from the GitHub releases page `here
+  <https://github.com/Bertrand256/dash-masternode-tool/releases>`__. Unzip and run
+  the file. The following window appears.
 
-   Dash Masternode Tool startup screen
+  .. figure:: img/setup-collateral-dmt-start.png
+    :width: 400px
 
-Click the third button from the left **Check Dash Network Connection** in the
-top left corner of the main window to verify that the connection is working.
-Then connect your Trezor device and click the next button **Test Hardware Wallet
-Connection** to verify the Trezor connection is working.
+    Dash Masternode Tool startup screen
 
-.. figure:: img/setup-collateral-connection.png
-   :width: 100px
+  Click the third button from the left **Check Dash Network Connection** in the
+  top left corner of the main window to verify that the connection is working.
+  Then connect your Trezor device and click the next button **Test Hardware Wallet
+  Connection** to verify the Trezor connection is working.
 
-.. figure:: img/setup-collateral-hardware.png
-   :width: 180px
+  .. figure:: img/setup-collateral-connection.png
+    :width: 100px
 
-   Dash Masternode Tool successful connection confirmations
+  .. figure:: img/setup-collateral-hardware.png
+    :width: 180px
 
-We will now use DMT to enter some basic information about the masternode and
-extract the transaction ID. Carry out the following sequence of steps as shown
-in this screenshot:
+    Dash Masternode Tool successful connection confirmations
 
-.. figure:: img/setup-collateral-dmt-steps.png
-   :width: 400px
+  We will now use DMT to enter some basic information about the masternode and
+  extract the transaction ID. Carry out the following sequence of steps as shown
+  in this screenshot:
 
-   Dash Masternode Tool configuration steps
+  .. figure:: img/setup-collateral-dmt-steps.png
+    :width: 400px
 
-#. Click the **New** button.
-#. Enter a name for your masternode. The host name you specified for your VPS
-   above is a good choice.
-#. Enter the IP address of your masternode. This was given to you by the VPS
-   provider when you set up the server. Then enter the TCP port number. This
-   should be 9999.
-#. Click **Locate collateral** to view unused collateral funding transactions
-   available on the connected hardware wallet. Select the address to which you
-   sent 4000 Dash and click **Apply**. The **Collateral address**, **path**,
-   **Collateral TX hash** and **index** fields should be filled automatically.
+    Dash Masternode Tool configuration steps
 
-.. figure:: img/setup-collateral-dmt-ready.png
-   :width: 400px
+  #. Click the **New** button.
+  #. Enter a name for your masternode. The host name you specified for your VPS
+    above is a good choice.
+  #. Enter the IP address of your masternode. This was given to you by the VPS
+    provider when you set up the server. Then enter the TCP port number. This
+    should be 9999.
+  #. Click **Locate collateral** to view unused collateral funding transactions
+    available on the connected hardware wallet. Select the address to which you
+    sent 4000 Dash and click **Apply**. The **Collateral address**, **path**,
+    **Collateral TX hash** and **index** fields should be filled automatically.
 
-   Dash Masternode Tool with masternode configuration
+  .. figure:: img/setup-collateral-dmt-ready.png
+    :width: 400px
 
-Leave DMT open and continue with the next step: :ref:`installing Dash Core on
-your VPS <hpmn-setup-install>`.
+    Dash Masternode Tool with masternode configuration
 
-Option 2: Holding collateral in Dash Core wallet
-------------------------------------------------
+  Leave DMT open and continue with the next step: :ref:`installing Dash Core on
+  your VPS <hpmn-setup-install>`.
+
+  Option 2: Holding collateral in Dash Core wallet
+  ------------------------------------------------
+
+Holding collateral in Dash Core wallet
+--------------------------------------
 
 Open Dash Core wallet and wait for it to synchronize with the network. It should
 look like this when ready:
@@ -347,83 +355,87 @@ Register your masternode
 The three keys required for the different masternode roles are described briefly
 under :ref:`mn-concepts` in this documentation.
 
+..
+  Option 1: Registering from a hardware wallet
+  --------------------------------------------
 
-Option 1: Registering from a hardware wallet
---------------------------------------------
+  Go back to DMT and ensure that all fields from the previous step are still
+  filled out correctly.  Click **Generate new** for the three private keys
+  required for a DIP003 deterministic masternode:
 
-Go back to DMT and ensure that all fields from the previous step are still
-filled out correctly.  Click **Generate new** for the three private keys
-required for a DIP003 deterministic masternode:
+  - Owner private key
+  - Operator private key
+  - Voting private key
 
-- Owner private key
-- Operator private key
-- Voting private key
+  .. figure:: img/setup-dmt-full.png
+    :width: 220px
 
-.. figure:: img/setup-dmt-full.png
-   :width: 220px
+    Dash Masternode Tool ready to register a new masternode
 
-   Dash Masternode Tool ready to register a new masternode
+  Then click **Register masternode**. Optionally specify a different **Payout
+  address** and/or **Operator reward**, then click **Continue**. Select **Remote
+  Dash RPC Node (automatic method)**. (See `here
+  <https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-connection-direct.md>`__
+  for documentation on using your own local RPC node.) and confirm the following
+  two messages:
 
-Then click **Register masternode**. Optionally specify a different **Payout
-address** and/or **Operator reward**, then click **Continue**. Select **Remote
-Dash RPC Node (automatic method)**. (See `here
-<https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-connection-direct.md>`__
-for documentation on using your own local RPC node.) and confirm the following
-two messages:
+  .. figure:: img/setup-dmt-send.png
+    :width: 220px
 
-.. figure:: img/setup-dmt-send.png
-   :width: 220px
+  .. figure:: img/setup-dmt-sent.png
+    :width: 220px
 
-.. figure:: img/setup-dmt-sent.png
-   :width: 220px
+    Dash Masternode Tool confirmation dialogs to register a masternode
 
-   Dash Masternode Tool confirmation dialogs to register a masternode
+  The BLS private key must be entered in the ``dash.conf`` file on the
+  masternode. This allows the masternode to watch the blockchain for
+  relevant Pro*Tx transactions, and will cause it to start serving as a
+  masternode when the signed ProRegTx is broadcast by the owner, as we
+  just did above. Log in to your masternode using ``ssh`` or PuTTY and
+  edit the configuration file as follows::
 
-The BLS private key must be entered in the ``dash.conf`` file on the
-masternode. This allows the masternode to watch the blockchain for
-relevant Pro*Tx transactions, and will cause it to start serving as a
-masternode when the signed ProRegTx is broadcast by the owner, as we
-just did above. Log in to your masternode using ``ssh`` or PuTTY and
-edit the configuration file as follows::
+    nano ~/.dashcore/dash.conf
 
-  nano ~/.dashcore/dash.conf
+  The editor appears with the existing masternode configuration. Add or
+  uncomment this lines in the file, replacing the key with your BLS
+  private key generated above::
 
-The editor appears with the existing masternode configuration. Add or
-uncomment this lines in the file, replacing the key with your BLS
-private key generated above::
+    masternodeblsprivkey=24c1fa3c22c6ea6b1cc68a37be18acb51042b19465fe0a26301c8717bf939805
 
-  masternodeblsprivkey=24c1fa3c22c6ea6b1cc68a37be18acb51042b19465fe0a26301c8717bf939805
+  Press enter to make sure there is a blank line at the end of the file,
+  then press **Ctrl + X** to close the editor and **Y** and **Enter** save
+  the file. Note that providing a ``masternodeblsprivkey`` enables
+  masternode mode, which will automatically force the ``txindex=1``,
+  ``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
+  masternode service. We now need to restart the masternode for this
+  change to take effect. Enter the following commands, waiting a few
+  seconds in between to give Dash Core time to shut down::
 
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. Note that providing a ``masternodeblsprivkey`` enables
-masternode mode, which will automatically force the ``txindex=1``,
-``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
-masternode service. We now need to restart the masternode for this
-change to take effect. Enter the following commands, waiting a few
-seconds in between to give Dash Core time to shut down::
+    ~/.dashcore/dash-cli stop
+    sleep 15
+    ~/.dashcore/dashd
 
-  ~/.dashcore/dash-cli stop
-  sleep 15
-  ~/.dashcore/dashd
+  At this point you can monitor your masternode by entering
+  ``~/.dashcore/dash-cli masternode status`` or using the **Get status**
+  function in DMT. The final result should appear as follows:
 
-At this point you can monitor your masternode by entering
-``~/.dashcore/dash-cli masternode status`` or using the **Get status**
-function in DMT. The final result should appear as follows:
+  .. figure:: img/setup-dash-cli-start.png
+    :width: 400px
 
-.. figure:: img/setup-dash-cli-start.png
-   :width: 400px
+    dash-cli masternode status output showing successfully registered masternode
 
-   dash-cli masternode status output showing successfully registered masternode
-
-At this point you can safely log out of your server by typing ``exit``.
-Congratulations! Your masternode is now running.
+  At this point you can safely log out of your server by typing ``exit``.
+  Congratulations! Your masternode is now running.
 
 
 .. _hpmn-dashcore-protx:
 
-Option 2: Registering from Dash Core wallet
--------------------------------------------
+..
+  Option 2: Registering from Dash Core wallet
+  -------------------------------------------
+
+Registering from Dash Core wallet
+---------------------------------
 
 Identify the funding transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
