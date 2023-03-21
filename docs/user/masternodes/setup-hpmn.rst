@@ -194,110 +194,155 @@ operator key.
 
 .. _hpmn-setup-install:
 
-Masternode Installation
-=======================
+Install Dash Core
+=================
 
-The following tools are available for installing a Dash masternode:
+Dash Core is the software behind both the Dash Core GUI wallet and Dash
+masternodes. If not displaying a GUI, it runs as a daemon on your VPS
+(dashd), controlled by a simple command interface (dash-cli).
 
-- :ref:`dashmate installation <testnet-masternode-setup-install-dashmate>`
+Open PuTTY or a console again and connect using the username and
+password you just created for your new, non-root user. The following
+options are available for installing a Dash masternode:
 
-.. _hpmn-setup-install-dashmate:
+- Manual installation (this guide)
+- `xkcd's installation guide <https://www.dash.org/forum/threads/system-wide-masternode-setup-with-systemd-auto-re-start-rfc.39460/>`__
 
-dashmate installation
----------------------
+Manual installation
+-----------------------------
 
-dashmate is based on Docker technology and features an interactive setup command
-and the ability to manage multiple node configs and multiple networks. It
-handles the installation of Dash Core and Tenderdash, as well as all
-dependencies and supporting services. Full dashmate documentation is available
-`here
-<https://github.com/dashevo/platform/tree/master/packages/dashmate#readme>`__.
+To manually download and install the components of your Dash masternode,
+visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ 
+and copy the link to the latest ``x86_64-linux-gnu`` version. Go back to
+your terminal window and enter the following command, pasting in the
+address to the latest version of Dash Core by right clicking or pressing
+**Ctrl + V**::
 
-Open PuTTY or a console again and connect using the username and password you
-just created for your new, non-root user. Begin by installing dashmate
-dependencies::
+  cd /tmp
+  wget https://github.com/dashpay/dash/releases/download/v18.2.1/dashcore-18.2.1-x86_64-linux-gnu.tar.gz
 
-  curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
-  sudo usermod -aG docker $USER
-  newgrp docker
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-  source ~/.bashrc
-  nvm install 16
+Verify the authenticity of your download by checking its detached
+signature against the public key published by the Dash Core development
+team. All releases of Dash are signed using GPG with one of the
+following keys:
 
-Install dashmate::
+- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
+  `verifiable here on Keybase <https://keybase.io/codablock>`__
+- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
+  on Keybase <https://keybase.io/pasta>`__
 
-  npm install -g dashmate
+::
 
-Run the interactive setup wizard::
+  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
+  curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
+  wget https://github.com/dashpay/dash/releases/download/v18.2.1/dashcore-18.2.1-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-18.2.1-x86_64-linux-gnu.tar.gz.asc
 
-  dashmate setup
+Create a working directory for Dash, extract the compressed archive and
+copy the necessary files to the directory::
 
-You will be prompted to select a network, node type, IP address and BLS private
-key. Enter this information or accept the detected/generated defaults. Start
-your node as follows::
+  mkdir ~/.dashcore
+  tar xfv dashcore-18.2.1-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-18.2.1/bin/dashd ~/.dashcore/
+  cp -f dashcore-18.2.1/bin/dash-cli ~/.dashcore/
 
-  dashmate start
+Create a configuration file using the following command::
 
-You can manage your masternode status, configuration, and running state entirely
-from within dashmate. See the documentation `here
-<https://github.com/dashevo/dashmate#readme>`__ or use the built-in help system
-to learn more:
+  nano ~/.dashcore/dash.conf
 
-- ``dashmate --help``
-- ``dashmate <command> --help``
+An editor window will appear. We now need to create a configuration file
+specifying several variables. Copy and paste the following text to get
+started, then replace the variables specific to your configuration as
+follows::
 
-.. figure:: img/dashmate-status.png
-   :width: 280px
+  #----
+  rpcuser=XXXXXXXXXXXXX
+  rpcpassword=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  rpcallowip=127.0.0.1
+  #----
+  listen=1
+  server=1
+  daemon=1
+  #----
+  #masternodeblsprivkey=
+  externalip=XXX.XXX.XXX.XXX
+  #----
 
-   dashmate displaying a range of status output
+Replace the fields marked with ``XXXXXXX`` as follows:
 
-You can check the status of your masternode using the various ``dashmate
-status`` commands as follows::
+- ``rpcuser``: enter any string of numbers or letters, no special
+  characters allowed
+- ``rpcpassword``: enter any string of numbers or letters, no special
+  characters allowed
+- ``externalip``: this is the IP address of your VPS
 
-- dashmate status
-- dashmate status core
-- dashmate status host
-- dashmate status masternode
-- dashmate status platform
-- dashmate status services
+Leave the ``masternodeblsprivkey`` field commented out for now. The
+result should look something like this:
 
-Continue with the :ref:`Registration step <register-hpmn>` to
-setup the collateral, keys and construct the ProTx transaction required to
-enable your masternode.
+.. figure:: img/setup-manual-conf.png
+   :width: 400px
 
-.. _hpmn-update:
+   Entering key data in dash.conf on the masternode
 
-Masternode Update
------------------
+Press **Ctrl + X** to close the editor and **Y** and **Enter** save the
+file. You can now start running Dash on the masternode to begin
+synchronization with the blockchain::
 
-You can use ``dashmate`` to update minor versions of the software on your
-masternode as follows::
+  ~/.dashcore/dashd
 
-  dashmate stop
-  dashmate update
-  dashmate start
+You will see a message reading **Dash Core server starting**. We will
+now install Sentinel, a piece of software which operates as a watchdog
+to communicate to the network that your node is working properly::
 
-Adding the following ``git`` and ``npm`` commands optionally also ensures you
-are using the latest stable version of dashmate::
+  cd ~/.dashcore
+  git clone https://github.com/dashpay/sentinel.git
+  cd sentinel
+  virtualenv venv
+  venv/bin/pip install -r requirements.txt
+  venv/bin/python bin/sentinel.py
 
-  dashmate stop
-  npm update -g dashmate
-  dashmate update
-  dashmate start
+You will see a message reading **dashd not synced with network! Awaiting
+full sync before running Sentinel.** Add dashd and sentinel to crontab
+to make sure it runs every minute to check on your masternode::
 
-Adding the following command will drop all data from Dash Platform (necessary if
-Platform has been wiped) and restart with the latest version::
+  crontab -e
 
-  dashmate stop
-  npm update -g dashmate
-  dashmate reset --platform-only
-  dashmate update
-  dashmate start
+Choose nano as your editor and enter the following lines at the end of
+the file::
+
+  * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+  * * * * * pidof dashd || ~/.dashcore/dashd
+
+Press enter to make sure there is a blank line at the end of the file,
+then press **Ctrl + X** to close the editor and **Y** and **Enter** save
+the file. We now need to wait for 15 confirmations of the collateral
+transaction to complete, and wait for the blockchain to finish
+synchronizing on the masternode. You can use the following commands to
+monitor progress::
+
+  ~/.dashcore/dash-cli mnsync status
+
+When synchronisation is complete, you should see the following
+response::
+
+  {
+    "AssetID": 999,
+    "AssetName": "MASTERNODE_SYNC_FINISHED",
+    "AssetStartTime": 1558596597,
+    "Attempt": 0,
+    "IsBlockchainSynced": true,
+    "IsSynced": true,
+    "IsFailed": false
+  }
+
+Continue with the next step to construct the ProTx transaction required
+to enable your masternode.
+
 
 .. _register-hpmn:
 
-Masternode registration
-=======================
+Register your masternode
+========================
 
 The three keys required for the different masternode roles are described briefly
 under :ref:`mn-concepts` in this documentation.
@@ -311,7 +356,7 @@ filled out correctly.  Click **Generate new** for the three private keys
 required for a DIP003 deterministic masternode:
 
 - Owner private key
-- Operator private key (generate new or use private key generated by dashmate)
+- Operator private key
 - Voting private key
 
 .. figure:: img/setup-dmt-full.png
@@ -334,23 +379,46 @@ two messages:
 
    Dash Masternode Tool confirmation dialogs to register a masternode
 
-The public key will be used in following steps. The private key must be entered
-in the configuration on the masternode. This allows the masternode to watch the
-blockchain for relevant Pro*Tx transactions, and will cause it to start serving
-as a masternode when the signed ProRegTx is broadcast by the owner (final step
-below). If you are using the BLS key generated by ``dashmate setup``, this
-information is already configured for your masternode. If you generated your own
-BLS key pair, edit the dashmate configuration as follows::
+The BLS private key must be entered in the ``dash.conf`` file on the
+masternode. This allows the masternode to watch the blockchain for
+relevant Pro*Tx transactions, and will cause it to start serving as a
+masternode when the signed ProRegTx is broadcast by the owner, as we
+just did above. Log in to your masternode using ``ssh`` or PuTTY and
+edit the configuration file as follows::
 
-  dashmate config set core.masternode.operator.privateKey <bls_private_key>
-  dashmate restart
+  nano ~/.dashcore/dash.conf
 
-At this point you can go back to your terminal window and monitor your
-masternode by entering ``dashmate status`` or using the **Get status** function
-in DMT.
+The editor appears with the existing masternode configuration. Add or
+uncomment this lines in the file, replacing the key with your BLS
+private key generated above::
 
-You can now safely log out of your server by typing ``exit``. Congratulations!
-Your masternode is now running.
+  masternodeblsprivkey=24c1fa3c22c6ea6b1cc68a37be18acb51042b19465fe0a26301c8717bf939805
+
+Press enter to make sure there is a blank line at the end of the file,
+then press **Ctrl + X** to close the editor and **Y** and **Enter** save
+the file. Note that providing a ``masternodeblsprivkey`` enables
+masternode mode, which will automatically force the ``txindex=1``,
+``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
+masternode service. We now need to restart the masternode for this
+change to take effect. Enter the following commands, waiting a few
+seconds in between to give Dash Core time to shut down::
+
+  ~/.dashcore/dash-cli stop
+  sleep 15
+  ~/.dashcore/dashd
+
+At this point you can monitor your masternode by entering
+``~/.dashcore/dash-cli masternode status`` or using the **Get status**
+function in DMT. The final result should appear as follows:
+
+.. figure:: img/setup-dash-cli-start.png
+   :width: 400px
+
+   dash-cli masternode status output showing successfully registered masternode
+
+At this point you can safely log out of your server by typing ``exit``.
+Congratulations! Your masternode is now running.
+
 
 .. _hpmn-dashcore-protx:
 
@@ -388,10 +456,9 @@ corresponding public key has been created.
 
 If you are using a hosting service, they may provide you with their public key,
 and you can skip this step. If you are hosting your own masternode or have
-agreed to provide your host with the BLS private key, you can use the BLS key
-generated by the ``dashmate setup`` command. Alternatively, you can generate a
-BLS public/private keypair in Dash Core by clicking **Window > Console** and
-entering the following command::
+agreed to provide your host with the BLS private key, generate a BLS
+public/private keypair in Dash Core by clicking **Tools > Console** and entering
+the following command::
 
   bls generate
 
@@ -402,22 +469,39 @@ entering the following command::
 
 .. warning::
   
-  **These keys are NOT stored by the wallet or dashmate and must be backed up
-  and kept secure.**
+  **These keys are NOT stored by the wallet and must be backed up and kept
+  secure.**
 
 Add the private key to your masternode configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The public key will be used in following steps. The private key must be entered
-in the ``dash.conf`` file on the masternode. This allows the masternode to watch
-the blockchain for relevant Pro*Tx transactions, and will cause it to start
-serving as a masternode when the signed ProRegTx is broadcast by the owner
-(final step below). If you are using the BLS key generated by ``dashmate
-setup``, this information is already configured for your masternode. If you
-generated your own BLS key pair, edit the dashmate configuration as follows::
+The public key will be used in following steps. The private key must be
+entered in the ``dash.conf`` file on the masternode. This allows the
+masternode to watch the blockchain for relevant Pro*Tx transactions, and
+will cause it to start serving as a masternode when the signed ProRegTx
+is broadcast by the owner (final step below). Log in to your masternode
+using ``ssh`` or PuTTY and edit the configuration file as follows::
 
-  dashmate config set core.masternode.operator.privateKey <bls_private_key>
-  dashmate restart
+  nano ~/.dashcore/dash.conf
+
+The editor appears with the existing masternode configuration. Add or
+uncomment this line in the file, replacing the key with your BLS private
+key generated above::
+
+  masternodeblsprivkey=395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e
+
+Press enter to make sure there is a blank line at the end of the file,
+then press **Ctrl + X** to close the editor and **Y** and **Enter** save
+the file. Note that providing a ``masternodeblsprivkey`` enables
+masternode mode, which will automatically force the ``txindex=1``,
+``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
+masternode service. We now need to restart the masternode for this
+change to take effect. Enter the following commands, waiting a few
+seconds in between to give Dash Core time to shut down::
+
+  ~/.dashcore/dash-cli stop
+  sleep 15
+  ~/.dashcore/dashd
 
 .. _hpmn-generate-platform-node-id:
 
@@ -442,28 +526,14 @@ Alternatively, the following commands can be used generate P2P key, save it to
 
   1e8e241c05ca350c8fe0b8ba4680e7652673dae2
 
-.. warning::
-  
-  **These keys are NOT stored by the wallet or dashmate and must be backed up
-  and kept secure.**
-
-Add the Platform Node ID to your masternode configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The platform node ID must be entered into dashmate. If you are using a platform
-node ID generated by ``dashmate setup``, this information is already configured
-for your masternode. If you generated your own platform node ID, edit the
-dashmate configuration as follows::
-
-  dashmate config set platform.foo.bar.platformNodeID <platform_node_ID>
-  dashmate restart
+The platform node ID will be used in following steps. We will now prepare the
+transaction used to register the masternode on the network.
 
 .. warning::
   
-  Replace ``foo.bar`` in the ``dashmate config set`` command above when the actual path is known
+  **These keys are NOT stored by the wallet and must be backed up and kept
+  secure.**
 
-We will now prepare the transaction used to register the masternode on the
-network.
 
 Prepare a ProRegTx transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -621,10 +691,13 @@ Output::
 
 Your masternode is now registered and will appear on the Deterministic
 Masternode List after the transaction is mined to a block. You can view this
-list on the **Masternodes -> DIP3 Masternodes** tab of the Dash Core wallet, or
+list on the **Masternodes** tab of the Dash Core wallet, or
 in the console using the command ``protx list valid``, where the txid of the
 final ``protx register_submit`` transaction identifies your masternode.
 
 At this point you can go back to your terminal window and monitor your
-masternode by entering ``dashmate status`` or using the **Get status** function
-in DMT. 
+masternode by entering ``~/.dashcore/dash-cli masternode status`` or
+using the **Get status** function in DMT. 
+
+At this point you can safely log out of your server by typing ``exit``.
+Congratulations! Your masternode is now running.
