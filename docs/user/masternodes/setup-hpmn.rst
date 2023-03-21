@@ -475,8 +475,9 @@ the following command::
   bls generate
 
   {
-    "secret": "395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e",
-    "public": "99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e"
+    "secret": "6d93ececa9993d9f1de4f3ae837115442a48a8e4c757ebb6261090af2f57547b",
+    "public": "b4dfbe01becd50c9d754c3b87f9d6728f3bff30b8b820f894e1fd249fd11aa27b0b4145ad550cbc35e9796e60329ad0a",
+    "scheme": "basic"
   }
 
 .. warning::
@@ -523,7 +524,7 @@ Generate a Platform Node ID
 The following command will generate new P2P key using Tenderdash and display it
 on the screen::
 
-  docker run --entrypoint /usr/bin/tenderdash --rm -ti dashpay/tenderdash:0.8.0 gen-node-key
+  docker run --entrypoint /usr/bin/tenderdash --rm -ti dashpay/tenderdash gen-node-key
 
   {"id":"1e8e241c05ca350c8fe0b8ba4680e7652673dae2","priv_key": ...
 
@@ -583,7 +584,7 @@ fee source** (``feeSourceAddress``). If you selected an external payout address,
 you must specify a fee source address. 
 
 Either the payout address or fee source address must have enough balance to pay
-the transaction fee, or the ``register_prepare`` transaction will fail.
+the transaction fee, or the ``register_prepare_hpmn`` transaction will fail.
 
 The private keys to the owner and fee source addresses must exist in the wallet
 submitting the transaction to the network. If your wallet is protected by a
@@ -593,9 +594,9 @@ wallet for 5 minutes::
   walletpassphrase yourSecretPassword 300
 
 We will now prepare an unsigned ProRegTx special transaction using the ``protx
-register_prepare`` command. This command has the following syntax::
+register_prepare_hpmn`` command. This command has the following syntax::
 
-  protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr 
+  protx register_prepare_hpmn collateralHash collateralIndex ipAndPort ownerKeyAddr 
     operatorPubKey votingKeyAddr operatorReward payoutAddress (feeSourceAddress)
 
 Open a text editor such as notepad to prepare this command. Replace each
@@ -630,7 +631,7 @@ collateral does not specify the operator's payout address.
 
 Example (remove line breaks if copying)::
 
-  protx register_prepare 
+  protx register_prepare_hpmn 
     16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3 
     1 
     45.76.230.239:19999 
@@ -689,7 +690,7 @@ a standard transaction fee is involved. The command takes the following syntax::
 Where: 
 
 - ``tx``: The serialized transaction previously returned in the ``tx`` output
-  field from the ``protx register_prepare`` command
+  field from the ``protx register_prepare_hpmn`` command
 - ``sig``: The message signed with the collateral key from the ``signmessage``
   command
 
