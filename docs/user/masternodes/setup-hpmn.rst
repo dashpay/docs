@@ -221,7 +221,7 @@ Manual installation
 
 To manually download and install the components of your Dash masternode,
 visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ 
-and copy the link to the latest ``x86_64-linux-gnu`` version. Go back to
+and copy the link to the latest version appropriate for your CPU architecture, e.g. ``x86_64-linux-gnu``. Go back to
 your terminal window and enter the following command, pasting in the
 address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
