@@ -11,6 +11,38 @@ This guide describes how to download, install and encrypt the Dash Core
 wallet for macOS. The guide is written for macOS Sierra, but the steps
 should be similar for other versions.
 
+If you are interacting with the Dash ecosystem DashCore v19.0 onwards,
+do note that the network will not create a wallet for you
+by default. You will get this prompt in the Overview tab.
+
+.. figure:: img/macos/dash-create-wallet-prompt.png
+   :height: 250px
+
+When you click on the link, you will be prmpted to create a new wallet 
+with a custom wallet name.
+
+.. figure:: img/macos/wallet-name.png
+   :height: 250px
+
+By default, your wallet will be encrypted. You may choose to uncheck the 
+box and encrypt the wallet later. We have included instructions on how
+to encrypt your wallet in the following section.
+
+If you do choose to encrypt now, you will get the following window.
+
+.. figure:: img/macos/encrypt-wallet-prompt.png
+   :height: 250px
+
+Create your passphrase. Following that, you will get a standard warning.
+
+.. figure:: img/macos/encrypt-wallet-warning.png
+   :height: 250px
+
+Simply click on "Yes" and you are good to go!
+
+The following will detail the steps you need to follow to
+deploy your own Dash wallet.
+
 Downloading the Dash Core wallet
 --------------------------------
 
