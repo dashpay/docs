@@ -18,7 +18,7 @@ by default. You will get this prompt in the Overview tab.
 .. figure:: img/macos/dash-create-wallet-prompt.png
    :height: 250px
 
-When you click on the link, you will be prmpted to create a new wallet 
+When you click on the link, you will be prompted to create a new wallet 
 with a custom wallet name.
 
 .. figure:: img/macos/wallet-name.png
