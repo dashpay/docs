@@ -11,41 +11,6 @@ This guide describes how to download, install and encrypt the Dash Core
 wallet for macOS. The guide is written for macOS Sierra, but the steps
 should be similar for other versions.
 
-Creating your Dash Wallet
------------------------------------
-
-If you are interacting with the Dash ecosystem DashCore v19.0 onwards,
-do note that the network will not create a wallet for you
-by default. You will get this prompt in the Overview tab.
-
-.. figure:: img/macos/dash-create-wallet-prompt.png
-   :height: 250px
-
-When you click on the link, you will be prompted to create a new wallet 
-with a custom wallet name.
-
-.. figure:: img/macos/wallet-name.png
-   :height: 250px
-
-By default, your wallet will be encrypted. You may choose to uncheck the 
-box and encrypt the wallet later. We have included instructions on how
-to encrypt your wallet in the following section.
-
-If you do choose to encrypt now, you will get the following window.
-
-.. figure:: img/macos/112596740.png
-   :width: 354px
-
-Create your passphrase. Following that, you will get a standard warning.
-
-.. figure:: img/macos/112596745.png
-   :width: 354px
-
-Simply click on "Yes" and you are good to go!
-
-The following will detail the steps you need to follow to
-deploy your own Dash wallet.
-
 Downloading the Dash Core wallet
 --------------------------------
 
@@ -183,15 +148,43 @@ is complete, you will see a small blue tick in the lower right corner.
 
 You can now begin to use your wallet to send and receive funds.
 
+Creating your Dash Wallet
+-----------------------------------
+
+If you are interacting with the Dash ecosystem DashCore v19.0 onwards,
+do note that the network will not create a wallet for you
+by default. You will get this prompt in the Overview tab.
+
+.. figure:: img/macos/dash-create-wallet-prompt.png
+   :height: 250px
+
+When you click on the link, you will be prompted to create a new wallet 
+with a custom wallet name.
+
+.. figure:: img/macos/wallet-name.png
+   :height: 250px
+
+By default, your wallet will be encrypted. You may choose to uncheck the 
+box and encrypt the wallet later. We have included instructions on how
+to encrypt your wallet in the following section.
+
+If you do choose to encrypt now, you will get the following window.
+
+.. figure:: img/macos/112596740.png
+   :width: 354px
+
+Create your passphrase. Following that, you will get a standard warning.
+
+.. figure:: img/macos/112596745.png
+   :width: 354px
+
+Simply click on "Yes" and you are good to go!
+
+The following will detail the steps you need to follow if you choose 
+to encrypt your Dash wallet later.
+
 Encrypting your Dash wallet
 ---------------------------
-
-After your wallet has synchronized with the Dash network, it is strongly
-advised to encrypt the wallet with a password or passphrase to prevent
-unauthorized access. You should use a strong, new password that you have
-never used somewhere else. Take note of your password and store it
-somewhere safe or you will be locked out of your wallet and lose access
-to your funds.
 
 To encrypt your wallet, click **Settings** > **Encrypt Wallet**.
 
