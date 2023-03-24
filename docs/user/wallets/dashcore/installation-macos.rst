@@ -30,8 +30,8 @@ to encrypt your wallet in the following section.
 
 If you do choose to encrypt now, you will get the following window.
 
-.. figure:: img/macos/encrypt-wallet-prompt.png
-   :height: 250px
+.. figure:: img/macos/112596740.png
+   :width: 354px
 
 Create your passphrase. Following that, you will get a standard warning.
 
