@@ -35,8 +35,8 @@ If you do choose to encrypt now, you will get the following window.
 
 Create your passphrase. Following that, you will get a standard warning.
 
-.. figure:: img/macos/encrypt-wallet-warning.png
-   :height: 250px
+.. figure:: img/macos/112596745.png
+   :width: 354px
 
 Simply click on "Yes" and you are good to go!
 
