@@ -78,23 +78,23 @@ which form a basis for new transaction types that provide on-chain
 metadata to assist various consensus mechanisms. The following special
 transaction types exist:
 
-+---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| Release | Version | Type | Payload Size   | Payload | Payload JSON | Transaction Purpose                                                                                                               |
-+=========+=========+======+================+=========+==============+===================================================================================================================================+
-| v0.13.0 | 3       | 0    | n/a            | n/a     | n/a          | Standard Transaction                                                                                                              |
-+---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 1    | <variable int> | <hex>   | proRegTx     | `Masternode Registration <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-reg-tx>`__       |
-+---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 2    | <variable int> | <hex>   | proUpServTx  | `Update Masternode Service <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-serv-tx>`__ |
-+---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 3    | <variable int> | <hex>   | proUpRegTx   | `Update Masternode Operator <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-reg-tx>`__ |
-+---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 4    | <variable int> | <hex>   | proUpRevTx   | `Masternode Revocation <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-rev-tx>`__      |
-+---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 5    | <variable int> | <hex>   | cbTx         | `Masternode List Merkle Proof <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-cb-tx>`__       |
-+---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| v0.13.0 | 3       | 6    | <variable int> | <hex>   | qcTx         | `Quorum Commitment <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-qc-tx>`__                  |
-+---------+---------+------+----------------+---------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+
++---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| Version | Type | Payload Size   | Transaction Purpose / Example                                                                                                     |
++=========+======+================+===================================================================================================================================+
+| 3       | 0    | n/a            | Standard Transaction                                                                                                              |
++---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 3       | 1    | variable       | `Masternode Registration <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-reg-tx>`__       |
++---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 3       | 2    | variable       | `Update Masternode Service <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-serv-tx>`__ |
++---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 3       | 3    | variable       | `Update Masternode Operator <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-reg-tx>`__ |
++---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 3       | 4    | variable       | `Masternode Revocation <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-rev-tx>`__      |
++---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 3       | 5    | variable       | `Masternode List Merkle Proof <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-cb-tx>`__       |
++---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 3       | 6    | variable       | `Quorum Commitment <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-qc-tx>`__                  |
++---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
 
 Integration notes:
 
