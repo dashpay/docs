@@ -155,7 +155,7 @@ You will get this prompt in the Overview tab. To create a wallet, click the
 **Create a new wallet** button or click **File** -> **Create Wallet**.
 
 .. figure:: img/macos/dash-create-wallet-prompt.png
-   :height: 250px
+   :height: 350px
 
 You will be prompted to create a new wallet with a custom wallet name. By
 default, your wallet will be encrypted. You may choose to uncheck the box and
@@ -163,7 +163,7 @@ encrypt the wallet later. We have included instructions on how to encrypt your
 wallet in the following section.
 
 .. figure:: img/macos/wallet-name.png
-   :height: 250px
+   :width: 300px
 
 If you do choose to encrypt now, you will be asked to enter and verify a password.
 
