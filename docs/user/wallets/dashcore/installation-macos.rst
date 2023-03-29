@@ -151,37 +151,37 @@ You can now begin to use your wallet to send and receive funds.
 Creating your Dash Wallet
 -----------------------------------
 
-If you are interacting with the Dash ecosystem DashCore v19.0 onwards,
-do note that the network will not create a wallet for you
-by default. You will get this prompt in the Overview tab.
+Beginning with Dash Core 19.0, a wallet will not be created for you by default.
+You will get this prompt in the Overview tab. To create a wallet, click the
+**Create a new wallet** button or click **File** -> **Create wallet**.
 
 .. figure:: img/macos/dash-create-wallet-prompt.png
    :height: 250px
 
-When you click on the link, you will be prompted to create a new wallet 
-with a custom wallet name.
+You will be prompted to create a new wallet with a custom wallet name. By
+default, your wallet will be encrypted. You may choose to uncheck the box and
+encrypt the wallet later. We have included instructions on how to encrypt your
+wallet in the following section.
 
 .. figure:: img/macos/wallet-name.png
    :height: 250px
 
-By default, your wallet will be encrypted. You may choose to uncheck the 
-box and encrypt the wallet later. We have included instructions on how
-to encrypt your wallet in the following section.
-
-If you do choose to encrypt now, you will get the following window.
+If you do choose to encrypt now, you will be asked to enter and verify a password.
 
 .. figure:: img/macos/112596740.png
    :width: 354px
 
-Create your passphrase. Following that, you will get a standard warning.
+   Enter a password
+
+Following that, you will get a standard warning.
 
 .. figure:: img/macos/112596745.png
    :width: 354px
 
-Simply click on "Yes" and you are good to go!
+   Confirm you want to encrypt your wallet
 
-The following will detail the steps you need to follow if you choose 
-to encrypt your Dash wallet later.
+The following section will detail the steps you need to follow if you
+choose to encrypt your Dash wallet later.
 
 Encrypting your Dash wallet
 ---------------------------
