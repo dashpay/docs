@@ -125,9 +125,8 @@ cryptographic data to secure your wallet.
 Synchronizing Dash Core to the Dash network
 -------------------------------------------
 
-Once Dash Core is successfully installed and started, you will see the
-wallet overview screen. You will notice that the wallet is “out of
-sync”, and the status bar at the bottom of the window will show the
+Once Dash Core is successfully installed and started, you will see the wallet
+overview screen. The status bar at the bottom of the window will show the
 synchronization progress.
 
 .. figure:: img/macos/112415040.png
@@ -146,14 +145,14 @@ is complete, you will see a small blue tick in the lower right corner.
 
    Dash Core synchronization is complete
 
-You can now begin to use your wallet to send and receive funds.
+You can now create a wallet to send and receive funds.
 
 Creating your Dash Wallet
 -----------------------------------
 
 Beginning with Dash Core 19.0, a wallet will not be created for you by default.
 You will get this prompt in the Overview tab. To create a wallet, click the
-**Create a new wallet** button or click **File** -> **Create wallet**.
+**Create a new wallet** button or click **File** -> **Create Wallet**.
 
 .. figure:: img/macos/dash-create-wallet-prompt.png
    :height: 250px
