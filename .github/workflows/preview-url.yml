@@ -5,6 +5,7 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu-22.04
     steps:
       - name: edit-pull-request-description
         uses: Jerome1337/comment-pull-request@v1.0.4
