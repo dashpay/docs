@@ -1,4 +1,7 @@
 name: Add preview URL to PR description
+on:
+  pull_request:
+    types: [opened]
 
 jobs:
   build:
