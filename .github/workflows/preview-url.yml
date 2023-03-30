@@ -1,7 +1,7 @@
 name: Add preview URL to PR description
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [opened]
 
 jobs:
   build:
@@ -14,5 +14,5 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           description-message: |
-            ----
-            🛠 Preview build: https://dash-docs--${{github.event.pull_request.number}}.org.readthedocs.build/en/${{github.event.pull_request.number}}/
+            
+            Preview build: https://dash-docs--${{github.event.pull_request.number}}.org.readthedocs.build/en/${{github.event.pull_request.number}}/
