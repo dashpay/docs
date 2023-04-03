@@ -110,7 +110,7 @@ Dash Core will then start up. This will take a little longer than usual
 the first time you run it, since Dash Core needs to generate
 cryptographic data to secure your wallet.
 
-.. figure:: img/linux/106329854.png
+.. figure:: img/linux/dashcore-splash.png
    :height: 250px
 
    Starting Dash Core
@@ -123,7 +123,7 @@ wallet overview screen. You will notice that the wallet is “out of
 sync”, and the status bar at the bottom of the window will show the
 synchronization progress.
 
-.. figure:: img/linux/106329873.png
+.. figure:: img/linux/dashcore-syncing.png
    :height: 250px
 
    Dash Core begins synchronizing with the Dash network
@@ -134,7 +134,7 @@ connection, this may take a long time. If you see the message “No block
 source available”, check your internet connection. When synchronization
 is complete, you will see a small blue tick in the lower right corner.
 
-.. figure:: img/linux/106329889.png
+.. figure:: img/linux/dashcore-synced.png
    :height: 250px
 
    Dash Core synchronization is complete
@@ -212,7 +212,7 @@ Encrypting your Dash wallet
 
 To encrypt your wallet, click **Settings** > **Encrypt wallet**.
 
-.. figure:: img/linux/106329907.png
+.. figure:: img/linux/dashcore-settings-encrypt.png
    :height: 250px
 
    Encrypting the Dash wallet with a password
@@ -234,7 +234,7 @@ past backups of your wallet will no longer be usable, and be asked to
 shut down Dash Core. When you restart Dash Core, you will see a small
 blue lock in the lower right corner.
 
-.. figure:: img/linux/106329989.png
+.. figure:: img/linux/dashcore-synced-and-encrypted.png
    :height: 250px
 
    Fully encrypted and synchronized Dash Core wallet
