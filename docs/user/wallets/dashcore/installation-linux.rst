@@ -170,15 +170,45 @@ Guidelines <https://www.dash.org/brand-guidelines/>`__ page::
   wget https://media.dash.org/wp-content/uploads/dash-d-rounded-square-250.png
   xdg-icon-resource install --size 256 dash-d-rounded-square-250.png dash-icon
 
+
+Creating your Dash Wallet
+-------------------------
+
+Beginning with Dash Core 19.0, a wallet will not be created for 
+you by default. You will get this prompt in the Overview tab. 
+To create a wallet, click the Create a new wallet button or 
+click File -> Create Wallet.
+
+<img>
+
+You will be prompted to create a new wallet with a custom wallet 
+name. By default, your wallet will be encrypted. You may choose 
+to uncheck the box and encrypt the wallet later. We have included 
+instructions on how to encrypt your wallet in the following section.
+
+<img>
+
+If you do choose to encrypt now, you will be asked to enter 
+and verify a password.
+
+.. figure:: img/linux/106329946.png
+   :height: 150px
+
+   Entering a password
+
+Following that, you will get a standard warning.
+
+.. figure:: img/linux/106329973.png
+   :width: 359px
+
+   Confirm you want to encrypt your wallet
+
+The following section will detail the steps you need to follow 
+if you choose to encrypt your Dash wallet later.
+
+
 Encrypting your Dash wallet
 ---------------------------
-
-After your wallet has synchronized with the Dash network, it is strongly
-advised to encrypt the wallet with a password or passphrase to prevent
-unauthorized access. You should use a strong, new password that you have
-never used somewhere else. Take note of your password and store it
-somewhere safe or you will be locked out of your wallet and lose access
-to your funds.
 
 To encrypt your wallet, click **Settings** > **Encrypt wallet**.
 
