@@ -196,7 +196,7 @@ corner.
 
    Dash Core synchronization is complete
 
-You can now begin to use your wallet to send and receive funds.
+You can now create a wallet to send and receive funds.
 
 Creating your Dash Wallet
 -------------------------
@@ -233,13 +233,6 @@ choose to encrypt your Dash wallet later.
 
 Encrypting your Dash wallet
 ---------------------------
-
-After your wallet has synchronized with the Dash network, it is strongly
-advised to encrypt the wallet with a password or passphrase to prevent
-unauthorized access. You should use a strong, new password that you have
-never used somewhere else. Take note of your password and store it
-somewhere safe or you will be locked out of your wallet and lose access
-to your funds.
 
 To encrypt your wallet, click **Settings > Encrypt Wallet**.
 
