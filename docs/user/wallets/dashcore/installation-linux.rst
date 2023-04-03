@@ -178,26 +178,28 @@ Beginning with Dash Core 19.0, a wallet will not be created for you by default.
 You will get this prompt in the Overview tab. To create a wallet, click the
 **Create a new wallet** button or click **File** -> **Create Wallet**.
 
-<img>
+.. figure:: img/linux/dash-create-wallet-prompt.png
+   :height: 350px
 
 You will be prompted to create a new wallet with a custom wallet name. By
 default, your wallet will be encrypted. You may choose to uncheck the box and
 encrypt the wallet later. We have included instructions on how to encrypt your
 wallet in the following section.
 
-<img>
+.. figure:: img/linux/dash-name-wallet.png
+   :width: 300px
 
 If you do choose to encrypt now, you will be asked to enter and verify a password.
 
-.. figure:: img/linux/106329946.png
-   :height: 150px
+.. figure:: img/linux/dash-encrypt-wallet.png
+   :height: 175px
 
    Entering a password
 
 Following that, you will get a standard warning.
 
-.. figure:: img/linux/106329973.png
-   :width: 359px
+.. figure:: img/linux/dash-encrypt-wallet-confirmation.png
+   :width: 350px
 
    Confirm you want to encrypt your wallet
 
@@ -217,13 +219,13 @@ To encrypt your wallet, click **Settings** > **Encrypt wallet**.
 
 You will be asked to enter and verify a password.
 
-.. figure:: img/linux/106329946.png
-   :height: 150px
+.. figure:: img/linux/dash-encrypt-wallet.png
+   :height: 175px
 
    Entering a password
 
-.. figure:: img/linux/106329973.png
-   :width: 359px
+.. figure:: img/linux/dash-encrypt-wallet-confirmation.png
+   :width: 350px
 
    Confirm you want to encrypt your wallet
 
