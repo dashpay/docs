@@ -132,7 +132,7 @@ During this process, Dash Core will download a full copy of the Dash
 blockchain from other nodes to your device. Depending on your internet
 connection, this may take a long time. If you see the message “No block
 source available”, check your internet connection. When synchronization
-is complete, you will see a small blue tick in the lower right corner.
+is complete, you will see a small green tick in the lower right corner.
 
 .. figure:: img/linux/dashcore-synced.png
    :height: 250px
@@ -232,7 +232,7 @@ You will be asked to enter and verify a password.
 When the encryption process is complete, you will see a warning that
 past backups of your wallet will no longer be usable, and be asked to
 shut down Dash Core. When you restart Dash Core, you will see a small
-blue lock in the lower right corner.
+green lock in the lower right corner.
 
 .. figure:: img/linux/dashcore-synced-and-encrypted.png
    :height: 250px
