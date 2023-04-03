@@ -194,7 +194,7 @@ If you do choose to encrypt now, you will be asked to enter and verify a passwor
 .. figure:: img/linux/dash-encrypt-wallet.png
    :height: 175px
 
-   Entering a password
+   Enter a password
 
 Following that, you will get a standard warning.
 
