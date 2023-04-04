@@ -163,6 +163,11 @@ payout addr.** buttons, or from Dash Core using the following syntax::
 
   protx update_registrar proTxHash operatorKeyAddr votingKeyAddr payoutAddress (feeSourceAddress)
 
+.. warning::
+   After v19 hard fork activation, ``protx update_registrar_legacy`` must
+   be used if a legacy scheme BLS key is being used to registrar update a
+   masternode.
+
 Where:
 
 - ``proTxHash``: The transaction id of the initial ProRegTx
@@ -174,11 +179,6 @@ Where:
   ``""`` to use the last on-chain operator key
 - ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
   ``PayoutAddress`` will be used if not specified.
-
-.. warning::
-   After v19 hard fork activation, ``protx update_registrar_legacy`` must
-   be used if a legacy scheme BLS key is being used to registrar update a
-   masternode.
 
 Example to update payout address::
 
