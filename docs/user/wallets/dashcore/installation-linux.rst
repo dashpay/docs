@@ -24,22 +24,20 @@ directly.
 
    The website properly detects the wallet appropriate for your system
 
-If detection does not work, you will need to manually choose your
-operating system and whether you need a 32 or 64 bit version. If you are
-unsure whether your version of Linux is 32 or 64 bit, you can check in
-Ubuntu under the **Settings > About > OS Type**. For details on how to
-check this in other versions of Linux, see `here
-<https://www.howtogeek.com/198615/how-to-check-if-your-linux-system-is-32-bit-or-64-bit/>`__.
+If detection does not work, you will need to manually choose your operating
+system and whether you need an `x64 <https://en.wikipedia.org/wiki/X86-64>`__
+(64 bit x86) or ARM version. If you are unsure about your version of Linux, you
+can check in Ubuntu using the Terminal::
 
-.. figure:: img/linux/linux-checkbits.png
-   :height: 250px
+   uname -m
 
-   Ubuntu System Overview. This is a 64 bit system.
-
-If you have a 32-bit system, download **Dash Core x86**. If you have a
-64-bit system, download **Dash Core x64**. Once you know which version
-you need, download the Dash Core TGZ file to your computer from
+If the response is ``x86_64``, download **Dash Core x64**. If the response is
+``aarch64``, download **Dash Core ARM**. Once you know which version you need,
+download the Dash Core TGZ file to your computer from
 https://www.dash.org/downloads/ and save it to your Downloads folder.
+
+.. note::
+   Since Dash Core 18.0, downloads are not available for 32-bit Linux installations.
 
 Verifying Dash Core
 -------------------
