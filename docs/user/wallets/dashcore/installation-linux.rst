@@ -51,16 +51,16 @@ binary.
 
 All releases of Dash are signed using GPG with one of the following keys:
 
-- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
-  `verifiable here on Keybase <https://keybase.io/codablock>`__
 - Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
-  on Keybase <https://keybase.io/pasta>`__
+  on Keybase <https://keybase.io/pasta>`__  (releases 0.16.0+)
+- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, `verifiable
+  here on Keybase <https://keybase.io/codablock>`__ (releases prior to 0.16.0)
 
 Open a terminal, import the keys and verify the authenticity of your
 download as follows::
 
-  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
+  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import  
   gpg --verify dashcore-18.2.2-x86_64-linux-gnu.tar.gz.asc
 
 .. figure:: img/linux/setup-linux-gpg.png
