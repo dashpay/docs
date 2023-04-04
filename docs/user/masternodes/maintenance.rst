@@ -175,6 +175,11 @@ Where:
 - ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
   ``PayoutAddress`` will be used if not specified.
 
+.. warning::
+   After v19 hard fork activation, ``protx update_registrar_legacy`` must
+   be used if a legacy scheme BLS key is being used to registrar update a
+   masternode.
+
 Example to update payout address::
 
   protx update_registrar cedce432ebabc9366f5eb1e3abc219558de9fbd2530a13589b698e4bf917b8ae "" "" yi5kVoPQQ8xaVoriytJFzpvKomAQxg6zea
