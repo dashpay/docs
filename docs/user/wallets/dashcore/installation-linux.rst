@@ -24,22 +24,20 @@ directly.
 
    The website properly detects the wallet appropriate for your system
 
-If detection does not work, you will need to manually choose your
-operating system and whether you need a 32 or 64 bit version. If you are
-unsure whether your version of Linux is 32 or 64 bit, you can check in
-Ubuntu under the **Settings > About > OS Type**. For details on how to
-check this in other versions of Linux, see `here
-<https://www.howtogeek.com/198615/how-to-check-if-your-linux-system-is-32-bit-or-64-bit/>`__.
+If detection does not work, you will need to manually choose your operating
+system and whether you need an `x64 <https://en.wikipedia.org/wiki/X86-64>`__
+(64 bit x86) or ARM version. If you are unsure about your version of Linux, you
+can check in Ubuntu using the Terminal::
 
-.. figure:: img/linux/linux-checkbits.png
-   :height: 250px
+   uname -m
 
-   Ubuntu System Overview. This is a 64 bit system.
-
-If you have a 32-bit system, download **Dash Core x86**. If you have a
-64-bit system, download **Dash Core x64**. Once you know which version
-you need, download the Dash Core TGZ file to your computer from
+If the response is ``x86_64``, download **Dash Core x64**. If the response is
+``aarch64``, download **Dash Core ARM**. Once you know which version you need,
+download the Dash Core TGZ file to your computer from
 https://www.dash.org/downloads/ and save it to your Downloads folder.
+
+.. note::
+   Since Dash Core 18.0, downloads are not available for 32-bit Linux installations.
 
 Verifying Dash Core
 -------------------
@@ -53,16 +51,16 @@ binary.
 
 All releases of Dash are signed using GPG with one of the following keys:
 
-- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
-  `verifiable here on Keybase <https://keybase.io/codablock>`__
 - Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
-  on Keybase <https://keybase.io/pasta>`__
+  on Keybase <https://keybase.io/pasta>`__  (releases 0.16.0+)
+- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, `verifiable
+  here on Keybase <https://keybase.io/codablock>`__ (releases prior to 0.16.0)
 
 Open a terminal, import the keys and verify the authenticity of your
 download as follows::
 
-  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
+  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import  
   gpg --verify dashcore-18.2.2-x86_64-linux-gnu.tar.gz.asc
 
 .. figure:: img/linux/setup-linux-gpg.png
@@ -110,7 +108,7 @@ Dash Core will then start up. This will take a little longer than usual
 the first time you run it, since Dash Core needs to generate
 cryptographic data to secure your wallet.
 
-.. figure:: img/linux/106329854.png
+.. figure:: img/linux/dashcore-splash.png
    :height: 250px
 
    Starting Dash Core
@@ -123,7 +121,7 @@ wallet overview screen. You will notice that the wallet is “out of
 sync”, and the status bar at the bottom of the window will show the
 synchronization progress.
 
-.. figure:: img/linux/106329873.png
+.. figure:: img/linux/dashcore-syncing.png
    :height: 250px
 
    Dash Core begins synchronizing with the Dash network
@@ -132,9 +130,9 @@ During this process, Dash Core will download a full copy of the Dash
 blockchain from other nodes to your device. Depending on your internet
 connection, this may take a long time. If you see the message “No block
 source available”, check your internet connection. When synchronization
-is complete, you will see a small blue tick in the lower right corner.
+is complete, you will see a small green tick in the lower right corner.
 
-.. figure:: img/linux/106329889.png
+.. figure:: img/linux/dashcore-synced.png
    :height: 250px
 
    Dash Core synchronization is complete
@@ -212,7 +210,7 @@ Encrypting your Dash wallet
 
 To encrypt your wallet, click **Settings** > **Encrypt wallet**.
 
-.. figure:: img/linux/106329907.png
+.. figure:: img/linux/dashcore-settings-encrypt.png
    :height: 250px
 
    Encrypting the Dash wallet with a password
@@ -232,9 +230,9 @@ You will be asked to enter and verify a password.
 When the encryption process is complete, you will see a warning that
 past backups of your wallet will no longer be usable, and be asked to
 shut down Dash Core. When you restart Dash Core, you will see a small
-blue lock in the lower right corner.
+green lock in the lower right corner.
 
-.. figure:: img/linux/106329989.png
+.. figure:: img/linux/dashcore-synced-and-encrypted.png
    :height: 250px
 
    Fully encrypted and synchronized Dash Core wallet
