@@ -93,25 +93,6 @@ Dash InstantSend is available.
 - Pricing Model: Per API Call
 - Documentation: https://app.bitgo.com/docs/
 
-ChainRider
-----------
-
-.. image:: img/chainrider.png
-   :width: 200px
-   :align: right
-   :target: https://www.chainrider.io
-
-https://www.chainrider.io
-
-ChainRider is a cloud service providing a set of REST APIs for digital
-currency management and exploration.
-
-- Features: Blockchain queries, Event Notifications, Transaction
-  Broadcast, Payment Processing, etc.
-- Pricing Model: Free trial, pay per API call
-- Documentation: https://www.chainrider.io/docs/dash/
-
-
 Blockmove
 ---------
 
