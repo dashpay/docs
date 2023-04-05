@@ -478,7 +478,8 @@ Console** and entering the following command::
 
   {
     "secret": "395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e",
-    "public": "99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e"
+    "public": "99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e",
+    "scheme": "legacy"
   }
 
 **These keys are NOT stored by the wallet and must be kept secure,
@@ -573,6 +574,13 @@ syntax::
 
   protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr 
     operatorPubKey votingKeyAddr operatorReward payoutAddress (feeSourceAddress)
+
+.. warning::
+   After v19 hard fork activation, ``protx register_prepare_legacy`` must
+   be used if a legacy scheme BLS key is being used to register a masternode.
+   It's recommended to instead generate a new basic scheme BLS key where
+   possible. This can be done by following the
+   :ref:`Generate a BLS key pair <bls-generation>` instructions.
 
 Open a text editor such as notepad to prepare this command. Replace each
 argument to the command as follows:
