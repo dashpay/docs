@@ -223,7 +223,7 @@ features an interactive setup command and the ability to manage multiple
 node configs and multiple networks. It handles the installation of Dash
 Core and Tenderdash, as well as all dependencies and supporting
 services. Full dashmate documentation is available `here
-<https://github.com/dashevo/platform/tree/master/packages/dashmate#readme>`__.
+<https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__.
 
 Open PuTTY or a console again and connect using the username and
 password you just created for your new, non-root user. Begin by
@@ -802,7 +802,7 @@ Drive
 Drive is a replicated state machine for Dash Platform. Download Drive as
 follows::
 
-  git clone -b master https://github.com/dashevo/platform/
+  git clone -b master https://github.com/dashpay/platform/
   cd platform
   corepack enable
   yarn workspaces focus --production @dashevo/drive
@@ -842,7 +842,7 @@ to build from source. Install Go as follows::
 Build and install Tenderdash as follows::
 
   cd
-  git clone -b v0.7.1 https://github.com/dashevo/tenderdash
+  git clone -b v0.7.1 https://github.com/dashpay/tenderdash
   cd tenderdash
   make install-bls
   make build-linux
