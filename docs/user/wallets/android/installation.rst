@@ -31,7 +31,7 @@ installing an APK file. Follow these instructions:
 #. Enable Unknown sources by going to **Settings → Security → Unknown
    sources**. Read and accept the warning.
 #. Using your phone, download the latest version of the APK from `this
-   link <https://github.com/dashevo/dash-wallet/releases/latest>`_.
+   link <https://github.com/dashpay/dash-wallet/releases/latest>`_.
 #. If you cannot use your phone to go online, download the APK using
    your PC instead and copy it to your phone using a cable or Bluetooth.
    You may need a file browser to find the copied file.

@@ -36,7 +36,7 @@ Download and extract the latest version of Dash Core::
   tar -xvzf dashcore-18.2.2-x86_64-linux-gnu.tar.gz
   rm dashcore-18.2.2-x86_64-linux-gnu.tar.gz
 
-Install `Dashcore Node <https://github.com/dashevo/dashcore-node>`_ and
+Install `Dashcore Node <https://github.com/dashpay/dashcore-node>`_ and
 create your configuration::
 
   git clone https://github.com/dashevo/dashcore-node
