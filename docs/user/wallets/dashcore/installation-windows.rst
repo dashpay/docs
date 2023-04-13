@@ -24,27 +24,18 @@ directly.
 
    The website properly detects the wallet appropriate for your system
 
-If detection does not work, you will need to manually choose your
-operating system and whether you need a 32 or 64 bit version. If you are
-unsure whether your version of Windows is 32 or 64 bit, you can check in
-Windows 10 under **Start > Settings > System > About**. For details on
-how to check this in other versions of Windows, see
-`here <https://www.lifewire.com/am-i-running-a-32-bit-or-64-bit-version-of-windows-2624475>`__.
+If detection does not work, you will need to manually choose your operating
+system. Once you know which version you need, download the Dash Core Installer
+to your computer from https://www.dash.org/downloads/ and save the file you
+downloaded to your Downloads folder.
 
-.. figure:: img/windows/106328726.png
-   :height: 250px
+.. note::
+   Dash Core 0.17 was the last release to provide downloads for 32-bit Windows installations.
+   As of Windows 11, Microsoft only provides 64-bit Windows. 
 
-   In Windows Settings, click System
-
-.. figure:: img/windows/106328734.png
-   :width: 337px
-
-   Under the System section, click About to view the System type. This is
-   a 64 bit system.
-
-Once you know which version you need, download the Dash Core Installer
-to your computer from https://www.dash.org/downloads/ and save the file
-you downloaded to your Downloads folder.
+   If you are unsure whether your version of Windows is 32-bit or 64-bit, you can
+   check by following the instructions `here
+   <https://www.lifewire.com/am-i-running-a-32-bit-or-64-bit-version-of-windows-2624475>`__.
 
 Verifying Dash Core
 -------------------
