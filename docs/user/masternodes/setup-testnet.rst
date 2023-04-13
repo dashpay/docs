@@ -656,12 +656,12 @@ following keys:
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
   wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-$(uname -m)-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-18.2.2-$(uname -m)-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-19.0.0-$(uname -m)-linux-gnu.tar.gz.asc
 
 Extract the compressed archive and copy the necessary files to the
 directory::
 
-  tar xfv dashcore-18.2.2-$(uname -m)-linux-gnu.tar.gz
+  tar xfv dashcore-19.0.0-$(uname -m)-linux-gnu.tar.gz
   sudo install -t /usr/local/bin dashcore-18.2.2/bin/*
 
 Create a working directory for Dash Core::

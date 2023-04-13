@@ -64,11 +64,11 @@ following keys:
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
   wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-18.2.2-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-19.0.0-x86_64-linux-gnu.tar.gz.asc
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-18.2.2-x86_64-linux-gnu.tar.gz
+  tar xfv dashcore-19.0.0-x86_64-linux-gnu.tar.gz
   cp -f dashcore-18.2.2/bin/dashd ~/.dashcore/
   cp -f dashcore-18.2.2/bin/dash-cli ~/.dashcore/
 
