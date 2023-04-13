@@ -179,7 +179,7 @@ wallet overview screen. You will notice that the wallet is “out of
 sync”, and the status bar at the bottom of the window will show the
 synchronization progress.
 
-.. figure:: img/windows/106328993.png
+.. figure:: img/windows/dashcore-syncing.png
    :height: 250px
 
    Dash Core begins synchronizing with the Dash network
@@ -238,7 +238,7 @@ Encrypting your Dash wallet
 
 To encrypt your wallet, click **Settings > Encrypt Wallet**.
 
-.. figure:: img/windows/106329084.png
+.. figure:: img/windows/dashcore-settings-encrypt.png
    :height: 250px
 
    Encrypting the Dash wallet with a password
