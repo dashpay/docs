@@ -55,7 +55,7 @@ Change paths in the configuration file as follows::
   nano dashcore-node.json
 
 - Change the value of ``datadir`` to ``../../.dashcore``
-- Change the value of ``exec`` to ``../../dashcore-18.2.2/bin/dashd``
+- Change the value of ``exec`` to ``../../dashcore-19.0.0/bin/dashd``
 - **Optionally** change the value of ``network`` to ``testnet`` if you 
   want to run Insight on testnet
 

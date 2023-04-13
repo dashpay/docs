@@ -84,11 +84,11 @@ Extract Dash Core as follows::
 
   tar xzf dashcore-19.0.0-x86_64-linux-gnu.tar.gz
 
-This will create a folder named ``dashcore-18.2.2`` in the current working
+This will create a folder named ``dashcore-19.0.0`` in the current working
 directory. We will now install the executable binaries to
 ``/usr/local/bin`` using the ``install`` command::
 
-  sudo install -m 0755 -o root -g root -t /usr/local/bin dashcore-18.2.2/bin/*
+  sudo install -m 0755 -o root -g root -t /usr/local/bin dashcore-19.0.0/bin/*
 
 Start Dash Core from the terminal with the following command::
   

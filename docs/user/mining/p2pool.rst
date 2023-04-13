@@ -136,13 +136,13 @@ copy the necessary files to the directory and set them as executable::
 
   mkdir ~/.dashcore
   tar xfvz dashcore-19.0.0-x86_64-linux-gnu.tar.gz
-  cp dashcore-18.2.2/bin/dashd .dashcore/
-  cp dashcore-18.2.2/bin/dash-cli .dashcore/
+  cp dashcore-19.0.0/bin/dashd .dashcore/
+  cp dashcore-19.0.0/bin/dash-cli .dashcore/
 
 Clean up unneeded files::
 
   rm dashcore-19.0.0-x86_64-linux-gnu.tar.gz
-  rm -r dashcore-18.2.2/
+  rm -r dashcore-19.0.0/
 
 Create a configuration file using the following command::
 
