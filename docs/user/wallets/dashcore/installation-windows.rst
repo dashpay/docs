@@ -218,15 +218,15 @@ wallet in the following section.
 
 If you do choose to encrypt now, you will be asked to enter and verify a password.
 
-.. figure:: img/windows/106329102.png
-   :height: 150px
+.. figure:: img/windows/dash-encrypt-wallet.png
+   :height: 175px
 
    Enter a password
 
 Following that, you will get a standard warning.
 
-.. figure:: img/windows/106329143.png
-   :width: 354px
+.. figure:: img/windows/dash-encrypt-wallet-confirmation.png
+   :width: 350px
 
    Confirm you want to encrypt your wallet
 
@@ -245,13 +245,13 @@ To encrypt your wallet, click **Settings > Encrypt Wallet**.
 
 You will be asked to enter and verify a password.
 
-.. figure:: img/windows/106329102.png
-   :height: 150px
+.. figure:: img/windows/dash-encrypt-wallet.png
+   :height: 175px
 
    Enter a password
 
-.. figure:: img/windows/106329143.png
-   :width: 354px
+.. figure:: img/windows/dash-encrypt-wallet-confirmation.png
+   :width: 350px
 
    Confirm you want to encrypt your wallet
 
