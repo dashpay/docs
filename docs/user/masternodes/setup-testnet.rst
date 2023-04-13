@@ -223,7 +223,7 @@ features an interactive setup command and the ability to manage multiple
 node configs and multiple networks. It handles the installation of Dash
 Core and Tenderdash, as well as all dependencies and supporting
 services. Full dashmate documentation is available `here
-<https://github.com/dashevo/platform/tree/master/packages/dashmate#readme>`__.
+<https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__.
 
 Open PuTTY or a console again and connect using the username and
 password you just created for your new, non-root user. Begin by
@@ -252,7 +252,7 @@ defaults. Start your node as follows::
 
 You can manage your masternode status, configuration, and running state
 entirely from within dashmate. See the documentation `here
-<https://github.com/dashevo/dashmate#readme>`__ or use the built-in help
+<https://github.com/dashpay/dashmate#readme>`__ or use the built-in help
 system to learn more:
 
 - ``dashmate --help``
@@ -802,10 +802,10 @@ Drive
 Drive is a replicated state machine for Dash Platform. Download Drive as
 follows::
 
-  git clone -b master https://github.com/dashevo/platform/
+  git clone -b master https://github.com/dashpay/platform/
   cd platform
   corepack enable
-  yarn workspaces focus --production @dashevo/drive
+  yarn workspaces focus --production @dashpay/drive
   cp packages/js-drive/.env.example packages/js-drive/.env
 
 Configure Drive::
