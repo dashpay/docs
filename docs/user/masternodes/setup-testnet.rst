@@ -639,7 +639,7 @@ and communication relating to the base blockchain. Download Dash Core as
 follows::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v18.2.2/dashcore-18.2.2-$(uname -m)-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-$(uname -m)-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -655,7 +655,7 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v18.2.2/dashcore-18.2.2-$(uname -m)-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-$(uname -m)-linux-gnu.tar.gz.asc
   gpg --verify dashcore-18.2.2-$(uname -m)-linux-gnu.tar.gz.asc
 
 Extract the compressed archive and copy the necessary files to the
