@@ -252,7 +252,7 @@ defaults. Start your node as follows::
 
 You can manage your masternode status, configuration, and running state
 entirely from within dashmate. See the documentation `here
-<https://github.com/dashevo/dashmate#readme>`__ or use the built-in help
+<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__ or use the built-in help
 system to learn more:
 
 - ``dashmate --help``
