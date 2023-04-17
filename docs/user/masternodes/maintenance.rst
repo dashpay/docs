@@ -477,7 +477,7 @@ the Dash network.
   `insight.dash.org <https://insight.dash.org/insight/>`__.
 - `Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https
   ://dash-bitcore1.trezor.io/>`__ powered by a `Dash fork
-  <https://github.com/dashevo/insight-ui>`__ of `insight
+  <https://github.com/dashpay/insight-ui>`__ of `insight
   <https://insight.is/>`__, an advanced blockchain API tool
 
 Dash Masternode Tool
