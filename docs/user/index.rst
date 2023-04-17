@@ -75,6 +75,7 @@ interest.
    masternodes/index
    mining/index
    developers/index
+   dashmate/index
    network/electrumx-server
    marketing.rst
    legal.rst
