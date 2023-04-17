@@ -57,4 +57,3 @@ a self-operated masternode.
    setup-hpmn
    setup-testnet.rst
    maintenance.rst
-   advanced.rst
