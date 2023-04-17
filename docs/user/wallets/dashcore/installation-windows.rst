@@ -24,27 +24,18 @@ directly.
 
    The website properly detects the wallet appropriate for your system
 
-If detection does not work, you will need to manually choose your
-operating system and whether you need a 32 or 64 bit version. If you are
-unsure whether your version of Windows is 32 or 64 bit, you can check in
-Windows 10 under **Start > Settings > System > About**. For details on
-how to check this in other versions of Windows, see
-`here <https://www.lifewire.com/am-i-running-a-32-bit-or-64-bit-version-of-windows-2624475>`__.
+If detection does not work, you will need to manually choose your operating
+system. Once you know which version you need, download the Dash Core Installer
+to your computer from https://www.dash.org/downloads/ and save the file you
+downloaded to your Downloads folder.
 
-.. figure:: img/windows/106328726.png
-   :height: 250px
+.. note::
+   Dash Core 0.17 was the last release to provide downloads for 32-bit Windows installations.
+   As of Windows 11, Microsoft only provides 64-bit Windows. 
 
-   In Windows Settings, click System
-
-.. figure:: img/windows/106328734.png
-   :width: 337px
-
-   Under the System section, click About to view the System type. This is
-   a 64 bit system.
-
-Once you know which version you need, download the Dash Core Installer
-to your computer from https://www.dash.org/downloads/ and save the file
-you downloaded to your Downloads folder.
+   If you are unsure whether your version of Windows is 32-bit or 64-bit, you can
+   check by following the instructions `here
+   <https://www.lifewire.com/am-i-running-a-32-bit-or-64-bit-version-of-windows-2624475>`__.
 
 Verifying Dash Core
 -------------------
@@ -179,7 +170,7 @@ wallet overview screen. You will notice that the wallet is “out of
 sync”, and the status bar at the bottom of the window will show the
 synchronization progress.
 
-.. figure:: img/windows/106328993.png
+.. figure:: img/windows/dashcore-syncing.png
    :height: 250px
 
    Dash Core begins synchronizing with the Dash network
@@ -188,10 +179,10 @@ During this process, Dash Core will download a full copy of the Dash
 blockchain from other nodes to your device. Depending on your internet
 connection, this may take a long time. If you see the message “No block
 source available”, check your internet connection. When synchronization
-is complete, you will see a small blue tick in the lower right
+is complete, you will see a small green tick in the lower right
 corner.
 
-.. figure:: img/windows/106329009.png
+.. figure:: img/windows/dashcore-synced-and-encrypted.png
    :height: 250px
 
    Dash Core synchronization is complete
@@ -205,26 +196,28 @@ Beginning with Dash Core 19.0, a wallet will not be created for you by default.
 You will get this prompt in the Overview tab. To create a wallet, click the
 **Create a new wallet** button or click **File** -> **Create Wallet**.
 
-<img>
+.. figure:: img/windows/dash-create-wallet-prompt.png
+   :height: 350px
 
 You will be prompted to create a new wallet with a custom wallet name. By
 default, your wallet will be encrypted. You may choose to uncheck the box and
 encrypt the wallet later. We have included instructions on how to encrypt your
 wallet in the following section.
 
-<img>
+.. figure:: img/windows/dash-name-wallet.png
+   :width: 300px
 
 If you do choose to encrypt now, you will be asked to enter and verify a password.
 
-.. figure:: img/windows/106329102.png
-   :height: 150px
+.. figure:: img/windows/dash-encrypt-wallet.png
+   :height: 175px
 
    Enter a password
 
 Following that, you will get a standard warning.
 
-.. figure:: img/windows/106329143.png
-   :width: 354px
+.. figure:: img/windows/dash-encrypt-wallet-confirmation.png
+   :width: 350px
 
    Confirm you want to encrypt your wallet
 
@@ -236,29 +229,29 @@ Encrypting your Dash wallet
 
 To encrypt your wallet, click **Settings > Encrypt Wallet**.
 
-.. figure:: img/windows/106329084.png
+.. figure:: img/windows/dashcore-settings-encrypt.png
    :height: 250px
 
    Encrypting the Dash wallet with a password
 
 You will be asked to enter and verify a password.
 
-.. figure:: img/windows/106329102.png
-   :height: 150px
+.. figure:: img/windows/dash-encrypt-wallet.png
+   :height: 175px
 
    Enter a password
 
-.. figure:: img/windows/106329143.png
-   :width: 354px
+.. figure:: img/windows/dash-encrypt-wallet-confirmation.png
+   :width: 350px
 
    Confirm you want to encrypt your wallet
 
 When the encryption process is complete, you will see a warning that
 past backups of your wallet will no longer be usable, and be asked to
 shut down Dash Core. When you restart Dash Core, you will see a small
-blue lock in the lower right corner.
+green lock in the lower right corner.
 
-.. figure:: img/windows/106329165.png
+.. figure:: img/windows/dashcore-synced-and-encrypted.png
    :height: 250px
 
    Fully encrypted and synchronized Dash Core wallet
