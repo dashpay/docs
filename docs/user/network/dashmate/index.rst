@@ -21,10 +21,14 @@ Install and configure Docker::
    sudo usermod -aG docker $USER
    newgrp docker
 
+.. _dashmate-install:
+
 Install Dashmate
 ================
 
-There are several methods available for installing Dashmate
+There are several methods available for installing Dashmate.
+
+.. _dashmate-install-deb:
 
 Debian package
 --------------
