@@ -12,6 +12,9 @@ Dashmate is a universal tool designed to help you set up and run Dash
 masternodes in a containerized environment. It is also an ideal tool to quickly
 and easily set up and run a development network on your local system.
 
+.. image:: img/dashmate.gif
+   :align: center
+
 Install dependencies
 ====================
 
