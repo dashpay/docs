@@ -4,6 +4,6 @@
 
 .. _dashmate:
 
-Introduction
-============
+Dashmate
+========
 
