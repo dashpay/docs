@@ -95,8 +95,9 @@ To begin masternode setup, run ``dashmate setup`` and select the desired network
 
    Store masternode keys in Dash Core
 
-Enter the requested information from your collateral funding transaction. You
-can find these values using Dash Core's ``masternode outputs`` command.
+Enter the requested information from your :hoverxref:`collateral funding
+transaction <hpmn-send-collateral>`. You can find these values using Dash Core's
+:hoverxref:`masternode outputs <hpmn-mn-outputs>` command.
 
 .. figure:: img/5b-collateral-info-completed.png
    :align: center
@@ -104,7 +105,8 @@ can find these values using Dash Core's ``masternode outputs`` command.
 
    Enter collateral transaction info
 
-Enter the owner, voting, and payout addresses you generated.
+Enter the owner, voting, and payout addresses you :hoverxref:`generated using
+Dash Core <hpmn-get-addresses>` or your selected wallet.
 
 .. figure:: img/6b-mn-addresses-completed.png
    :align: center
