@@ -53,6 +53,8 @@ both security and performance reasons. Refer to the :hoverxref:`Server
 configuration <server-config>` page for details on preparing your server to host
 a masternode.
 
+.. _hpmn-send-collateral:
+
 Send the collateral
 ===================
 
@@ -437,6 +439,8 @@ under :ref:`mn-concepts` in this documentation.
 Registering from Dash Core wallet
 ---------------------------------
 
+.. _hpmn-mn-outputs:
+
 Identify the funding transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -555,6 +559,11 @@ A pair of BLS keys for the operator were already generated above, and the
 private key was entered on the masternode. The public key is used in this
 transaction as the ``operatorPubKey``.
 
+.. _hpmn-get-addresses:
+
+Get masternode addresses
+~~~~~~~~~~~~~~~~~~~~~~~~
+
 First, we need to get a new, unused address from the wallet to serve as the
 **owner key address** (``ownerKeyAddr``). This is not the same as the collateral
 address holding 4000 Dash. Generate a new address as follows::
@@ -592,6 +601,11 @@ password, it must now be unlocked to perform the following commands. Unlock your
 wallet for 5 minutes::
 
   walletpassphrase yourSecretPassword 300
+
+.. _hmpn-prepare-proregtx:
+
+Prepare the ProRegTx
+~~~~~~~~~~~~~~~~~~~~
 
 We will now prepare an unsigned ProRegTx special transaction using the ``protx
 register_prepare_hpmn`` command. This command has the following syntax::
