@@ -450,7 +450,7 @@ transaction, you now need to find the txid of the transaction. Click
 This should return a string of characters similar to the following::
 
   {
-  "16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3" : "1",
+  "16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3-1",
   }
 
 The first long string is your ``collateralHash``, while the last number
