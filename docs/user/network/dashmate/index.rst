@@ -291,3 +291,9 @@ masternode as follows::
   dashmate stop
   dashmate update
   dashmate start
+
+Additional Information
+======================
+
+For further documentation see the `dashmate repository
+<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__.
