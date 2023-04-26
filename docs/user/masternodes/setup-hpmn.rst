@@ -8,11 +8,11 @@
 HPMN Setup
 ==========
 
-Setting up a masternode requires a basic understanding of Linux and blockchain
-technology, as well as an ability to follow instructions closely. It also
-requires regular maintenance and careful security, particularly if you are not
-storing your Dash on a hardware wallet. There are some decisions to be made
-along the way, and optional extra steps to take for increased security.
+Setting up a high-performance masternode requires a basic understanding of Linux
+and blockchain technology, as well as an ability to follow instructions closely.
+It also requires regular maintenance and careful security, particularly if you
+are not storing your Dash on a hardware wallet. There are some decisions to be
+made along the way, and optional extra steps to take for increased security.
 
 Commercial :ref:`masternode hosting services <masternode-hosting>` are available
 if you prefer to delegate day-to-day operation of your HPMN to a
@@ -59,10 +59,11 @@ Send the collateral
 ===================
 
 A Dash address with a single unspent transaction output (UTXO) of exactly 4000
-DASH is required to operate a masternode. Once it has been sent, various keys
-regarding the transaction must be extracted for later entry in a configuration
-file and registration transaction as proof to write the configuration to the
-blockchain so the masternode can be included in the deterministic list.
+DASH is required to operate a high-performance masternode. Once it has been
+sent, various keys regarding the transaction must be extracted for later entry
+in a configuration file and registration transaction as proof to write the
+configuration to the blockchain so the high-performance masternode can be
+included in the deterministic list.
 
 A high-performance masternode can be registered from the official Dash Core
 wallet. This guide will describe the steps.
@@ -204,11 +205,11 @@ operator key.
 
 .. _hpmn-setup-install:
 
-HPMN Installation
-=================
+Software Installation
+=====================
 
-The following methods are available for installing a Dash high-performance
-masternode:
+The following methods are available for installing Dash high-performance
+masternode software:
 
 - :ref:`dashmate installation <hpmn-setup-install-dashmate>`
 - :ref:`Manual installation <hpmn-setup-install-manual>`
@@ -219,12 +220,10 @@ dashmate installation
 ---------------------
 
 Dashmate is a universal tool designed to help you set up and run Dash nodes in a
-containerized environment. Dashmate is based on Docker technology and features
-an interactive setup command and the ability to manage multiple node configs and
-multiple networks. It handles the installation of Dash Core, as well as all
-dependencies and supporting services. Full dashmate documentation is available
-`here
-<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__.
+containerized environment. It is based on Docker technology and features an
+interactive setup command. Dashmate handles the installation of Dash Core, as
+well as all dependencies and supporting services. Additional dashmate
+information is available :ref:`here <dashmate>`.
 
 Open PuTTY or a console again and connect using the username and password you
 just created for your new, non-root user. Begin by installing dashmate
@@ -254,12 +253,13 @@ masternode.
 Manual installation
 -------------------
 
-To manually download and install the components of your Dash masternode,
-visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ 
-and copy the link to the latest version appropriate for your CPU architecture, e.g. ``x86_64-linux-gnu``. Go back to
-your terminal window and enter the following command, pasting in the
-address to the latest version of Dash Core by right clicking or pressing
-**Ctrl + V**::
+To manually download and install the components of your Dash high-performance
+masternode, visit the `GitHub releases page
+<https://github.com/dashpay/dash/releases>`_ and copy the link to the latest
+version appropriate for your CPU architecture, e.g. ``x86_64-linux-gnu``. Go
+back to your terminal window and enter the following command, pasting in the
+address to the latest version of Dash Core by right clicking or pressing **Ctrl
++ V**::
 
   cd /tmp
   wget https://github.com/dashpay/dash/releases/download/v19.0.0-rc.7/dashcore-19.0.0-rc.7-x86_64-linux-gnu.tar.gz
