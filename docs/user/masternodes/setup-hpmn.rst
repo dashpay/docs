@@ -224,7 +224,7 @@ an interactive setup command and the ability to manage multiple node configs and
 multiple networks. It handles the installation of Dash Core, as well as all
 dependencies and supporting services. Full dashmate documentation is available
 `here
-<https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__.
+<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__.
 
 Open PuTTY or a console again and connect using the username and password you
 just created for your new, non-root user. Begin by installing dashmate
