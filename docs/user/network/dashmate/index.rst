@@ -22,6 +22,8 @@ and easily set up and run a development network on your local system.
 Installation
 ============
 
+.. _dashmate-dep-install:
+
 Install dependencies
 --------------------
 
@@ -65,6 +67,8 @@ installing it using `nvm <https://github.com/nvm-sh/nvm#readme>`__::
 Once NodeJS has been installed, use npm to install Dashmate::
 
    npm install -g dashmate
+
+.. _dashmate-wizard-walkthrough:
 
 Masternode setup
 ================

@@ -207,7 +207,7 @@ operator key.
 HPMN Installation
 =================
 
-The following tools are available for installing a Dash high-performance
+The following methods are available for installing a Dash high-performance
 masternode:
 
 - :ref:`dashmate installation <hpmn-setup-install-dashmate>`
@@ -226,8 +226,6 @@ dependencies and supporting services. Full dashmate documentation is available
 `here
 <https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__.
 
-:hoverxref:`Install dashmate <dashmate-full-install>`
-
 Open PuTTY or a console again and connect using the username and password you
 just created for your new, non-root user. Begin by installing dashmate
 dependencies::
@@ -243,28 +241,18 @@ Install dashmate::
 
   npm install -g dashmate
 
-Run the interactive setup wizard::
+.. note::
+  
+  Refer to the Dashmate page for :hoverxref:`alternative installation options <dashmate-install>`.
 
-  dashmate setup
-
-You will be prompted to select a network, node type, IP address and BLS private
-key. Enter this information or accept the detected/generated defaults. Start
-your node as follows::
-
-  dashmate start
-
-You can manage your masternode status, configuration, and running state
-entirely from within dashmate. See the documentation `here
-<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__.
-
-Continue with the :ref:`Registration step <register-hpmn>` to setup the
+Continue with the :ref:`Registration step <register-hpmn-dashmate>` to setup the
 collateral, keys and construct the ProTx transaction required to enable your
 masternode.
 
 .. _hpmn-setup-install-manual:
 
 Manual installation
------------------------------
+-------------------
 
 To manually download and install the components of your Dash masternode,
 visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ 
@@ -399,8 +387,8 @@ masternode.
 Register your masternode
 ========================
 
-The three keys required for the different masternode roles are described briefly
-under :ref:`mn-concepts` in this documentation.
+The keys required for the different masternode roles are described briefly under
+:ref:`mn-concepts` in this documentation.
 
 ..
   Option 1: Registering from a hardware wallet
@@ -480,17 +468,51 @@ under :ref:`mn-concepts` in this documentation.
 ..
   Option 2: Registering from Dash Core wallet
   -------------------------------------------
+.. _register-hpmn-dashmate:
 
-Registering from Dashmate output
---------------------------------
+Option 1: Registering from Dashmate
+-----------------------------------
 
-Copy the protx command created by Dashmate into your Dash Core instance to
-broadcast the registration transaction...
+.. note::
+  Prior to running the dashmate setup wizard you should obtain the
+  :hoverxref:`collateral transaction info <hpmn-mn-outputs>` and the owner, voting,
+  and payout addresses for the new HPMN. For example, use Dash Core to generate
+  the addresses as described in :hoverxref:`this section below
+  <hpmn-get-addresses>`.
 
+Run the interactive setup wizard::
 
+  dashmate setup
 
-Registering from Dash Core wallet
----------------------------------
+You will be prompted to select a network, node type, IP address and BLS private
+key. When setting up an unregistered masternode, you will also be prompted for
+the collateral transaction information and owner, voting, and payout addresses.
+Enter this information or accept the detected/generated defaults. For an example
+showing all steps of the setup wizard, refer to the :hoverxref:`dashmate section
+<dashmate-wizard-walkthrough>`.
+
+The dashmate wizard will output a command you can use to register the
+masternode. Copy the provided protx command and run it using dash-cli or the
+Dash Core console.
+
+.. figure:: ../network/dashmate/img/10b-protx-command-successful.png
+   :align: center
+   :width: 95%
+
+   Registration command
+
+Once the dashmate wizard has completed successfully, start your node as follows::
+
+  dashmate start
+
+You can manage your masternode status, configuration, and running state
+entirely from within dashmate. See the documentation :ref:`here
+<dashmate>`.
+
+.. _register-hpmn-core:
+
+Option 2: Registering from Dash Core wallet
+-------------------------------------------
 
 .. _hpmn-mn-outputs:
 
