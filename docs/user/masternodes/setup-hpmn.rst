@@ -204,10 +204,11 @@ operator key.
 
 .. _hpmn-setup-install:
 
-Masternode Installation
-=======================
+HPMN Installation
+=================
 
-The following tools are available for installing a Dash masternode:
+The following tools are available for installing a Dash high-performance
+masternode:
 
 - :ref:`dashmate installation <hpmn-setup-install-dashmate>`
 - :ref:`Manual installation <hpmn-setup-install-manual>`
@@ -217,13 +218,15 @@ The following tools are available for installing a Dash masternode:
 dashmate installation
 ---------------------
 
-Dashmate is a universal tool designed to help you set up and run Dash
-masternodes in a containerized environment. Dashmate is based on Docker
-technology and features an interactive setup command and the ability to manage
-multiple node configs and multiple networks. It handles the installation of Dash
-Core, as well as all dependencies and supporting services. Full dashmate
-documentation is available `here
+Dashmate is a universal tool designed to help you set up and run Dash nodes in a
+containerized environment. Dashmate is based on Docker technology and features
+an interactive setup command and the ability to manage multiple node configs and
+multiple networks. It handles the installation of Dash Core, as well as all
+dependencies and supporting services. Full dashmate documentation is available
+`here
 <https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__.
+
+:hoverxref:`Install dashmate <dashmate-full-install>`
 
 Open PuTTY or a console again and connect using the username and password you
 just created for your new, non-root user. Begin by installing dashmate

@@ -17,7 +17,7 @@ and easily set up and run a development network on your local system.
 
    Setting up a testnet HPMN using Dashmate
 
-.. _dashmate_full_install:
+.. _dashmate-full-install:
 
 Installation
 ============
