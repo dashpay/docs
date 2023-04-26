@@ -15,7 +15,7 @@ storing your Dash on a hardware wallet. There are some decisions to be made
 along the way, and optional extra steps to take for increased security.
 
 Commercial :ref:`masternode hosting services <masternode-hosting>` are available
-if you prefer to delegate day-to-day operation of your masternode to a
+if you prefer to delegate day-to-day operation of your HPMN to a
 professional operator. When using these hosting services, you retain full
 control of the DASH collateral and pay an agreed percentage of your reward to
 the operator. It is also possible to delegate your voting keys to a
@@ -26,7 +26,7 @@ more information.
 Before you begin
 ================
 
-This guide assumes you are setting up a single mainnet high performance
+This guide assumes you are setting up a single mainnet high-performance
 masternode for the first time. If you are updating a masternode, see  :ref:`here
 <masternode-update>` instead. You will need:
 
@@ -204,19 +204,61 @@ operator key.
 
 .. _hpmn-setup-install:
 
-Install Dash Core
-=================
+Masternode Installation
+=======================
 
-Dash Core is the software behind both the Dash Core GUI wallet and Dash
-masternodes. If not displaying a GUI, it runs as a daemon on your VPS
-(dashd), controlled by a simple command interface (dash-cli).
+The following tools are available for installing a Dash masternode:
 
-Open PuTTY or a console again and connect using the username and
-password you just created for your new, non-root user. The following
-options are available for installing a Dash masternode:
+- :ref:`dashmate installation <hpmn-setup-install-dashmate>`
+- :ref:`Manual installation <hpmn-setup-install-manual>`
 
-- Manual installation (this guide)
-- `xkcd's installation guide <https://www.dash.org/forum/threads/system-wide-masternode-setup-with-systemd-auto-re-start-rfc.39460/>`__
+.. _hpmn-setup-install-dashmate:
+
+dashmate installation
+---------------------
+
+Dashmate is a universal tool designed to help you set up and run Dash
+masternodes in a containerized environment. Dashmate is based on Docker
+technology and features an interactive setup command and the ability to manage
+multiple node configs and multiple networks. It handles the installation of Dash
+Core, as well as all dependencies and supporting services. Full dashmate
+documentation is available `here
+<https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__.
+
+Open PuTTY or a console again and connect using the username and password you
+just created for your new, non-root user. Begin by installing dashmate
+dependencies::
+
+  curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
+  sudo usermod -aG docker $USER
+  newgrp docker
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  source ~/.bashrc
+  nvm install 16
+
+Install dashmate::
+
+  npm install -g dashmate
+
+Run the interactive setup wizard::
+
+  dashmate setup
+
+You will be prompted to select a network, node type, IP address and BLS private
+key. Enter this information or accept the detected/generated defaults. Start
+your node as follows::
+
+  dashmate start
+
+You can manage your masternode status, configuration, and running state
+entirely from within dashmate. See the documentation `here
+<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__.
+
+Continue with the :ref:`Registration step <register-hpmn>` to setup the
+collateral, keys and construct the ProTx transaction required to enable your
+masternode.
+
+.. _hpmn-setup-install-manual:
 
 Manual installation
 -----------------------------
@@ -345,9 +387,9 @@ response::
     "IsFailed": false
   }
 
-Continue with the next step to construct the ProTx transaction required
-to enable your masternode.
-
+Continue with the :ref:`Registration step <register-hpmn>` to setup the
+collateral, keys and construct the ProTx transaction required to enable your
+masternode.
 
 .. _register-hpmn:
 
@@ -435,6 +477,14 @@ under :ref:`mn-concepts` in this documentation.
 ..
   Option 2: Registering from Dash Core wallet
   -------------------------------------------
+
+Registering from Dashmate output
+--------------------------------
+
+Copy the protx command created by Dashmate into your Dash Core instance to
+broadcast the registration transaction...
+
+
 
 Registering from Dash Core wallet
 ---------------------------------
