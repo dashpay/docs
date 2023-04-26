@@ -232,6 +232,8 @@ Start your node as follows::
    one-time download will depend on the available bandwidth but typically
    should complete within a few minutes.
 
+.. _dashmate-node-operation:
+
 Dashmate node operation
 =======================
 

@@ -480,20 +480,28 @@ Option 1: Registering from Dashmate
   the addresses as described in :hoverxref:`this section below
   <hpmn-get-addresses>`.
 
-Run the interactive setup wizard::
+Run the setup wizard
+^^^^^^^^^^^^^^^^^^^^
+
+To begin masternode setup, run ``dashmate setup`` to start the interactive wizard::
 
   dashmate setup
 
 You will be prompted to select a network, node type, IP address and BLS private
 key. When setting up an unregistered masternode, you will also be prompted for
 the collateral transaction information and owner, voting, and payout addresses.
-Enter this information or accept the detected/generated defaults. For an example
-showing all steps of the setup wizard, refer to the :hoverxref:`dashmate section
-<dashmate-wizard-walkthrough>`.
 
-The dashmate wizard will output a command you can use to register the
-masternode. Copy the provided protx command and run it using dash-cli or the
-Dash Core console.
+Enter the requested information or accept the detected/generated defaults. For
+an example showing all steps of the setup wizard, refer to the
+:hoverxref:`dashmate section <dashmate-wizard-walkthrough>`.
+
+Submit the ProRegTx
+^^^^^^^^^^^^^^^^^^^
+
+The dashmate wizard will output a command you can use to submit the provider
+registration special transaction that registers the masternode on the network.
+Copy the provided protx command and run it using dash-cli or the Dash Core
+console.
 
 .. figure:: ../network/dashmate/img/10b-protx-command-successful.png
    :align: center
@@ -501,13 +509,16 @@ Dash Core console.
 
    Registration command
 
+Start the node
+^^^^^^^^^^^^^^
+
 Once the dashmate wizard has completed successfully, start your node as follows::
 
   dashmate start
 
 You can manage your masternode status, configuration, and running state
-entirely from within dashmate. See the documentation :ref:`here
-<dashmate>`.
+entirely from within dashmate. See the documentation :hoverxref:`here
+<dashmate-node-operation>`.
 
 .. _register-hpmn-core:
 
