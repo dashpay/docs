@@ -253,6 +253,13 @@ masternode.
 Manual installation
 -------------------
 
+.. attention::
+  
+  Dash Platform will include multiple services that must be configured properly
+  for a high-performance masternode to operate correctly. A :ref:`dashmate-based
+  installation <hpmn-setup-install-dashmate>` is recommended to ensure
+  your configuration is functional.
+
 To manually download and install the components of your Dash high-performance
 masternode, visit the `GitHub releases page
 <https://github.com/dashpay/dash/releases>`_ and copy the link to the latest
