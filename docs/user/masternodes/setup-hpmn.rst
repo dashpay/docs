@@ -211,12 +211,12 @@ Software Installation
 The following methods are available for installing Dash high-performance
 masternode software:
 
-- :ref:`dashmate installation <hpmn-setup-install-dashmate>`
+- :ref:`Dashmate installation <hpmn-setup-install-dashmate>`
 - :ref:`Manual installation <hpmn-setup-install-manual>`
 
 .. _hpmn-setup-install-dashmate:
 
-dashmate installation
+Dashmate installation
 ---------------------
 
 Dashmate is a universal tool designed to help you set up and run Dash nodes in a
@@ -242,7 +242,7 @@ Install dashmate::
 
 .. note::
   
-  Refer to the Dashmate page for :hoverxref:`alternative installation options <dashmate-install>`.
+  Refer to the dashmate page for :hoverxref:`alternative installation options <dashmate-install>`.
 
 Continue with the :ref:`Registration step <register-hpmn-dashmate>` to setup the
 collateral, keys and construct the ProTx transaction required to enable your
@@ -477,7 +477,7 @@ The keys required for the different masternode roles are described briefly under
   -------------------------------------------
 .. _register-hpmn-dashmate:
 
-Option 1: Registering from Dashmate
+Option 1: Registering from dashmate
 -----------------------------------
 
 .. note::
