@@ -802,7 +802,7 @@ Drive
 Drive is a replicated state machine for Dash Platform. Download Drive as
 follows::
 
-  git clone -b master https://github.com/dashpay/platform/
+  git clone --single-branch -b master https://github.com/dashpay/platform/
   cd platform
   corepack enable
   yarn workspaces focus --production @dashevo/drive
