@@ -17,9 +17,12 @@ and easily set up and run a development network on your local system.
 
    Setting up a testnet HPMN using dashmate
 
+.. _dashmate-full-install:
 
 Installation
 ============
+
+.. _dashmate-dep-install:
 
 Install dependencies
 --------------------
@@ -64,6 +67,8 @@ installing it using `nvm <https://github.com/nvm-sh/nvm#readme>`__::
 Once NodeJS has been installed, use npm to install dashmate::
 
    npm install -g dashmate
+
+.. _dashmate-wizard-walkthrough:
 
 Masternode setup
 ================
@@ -227,6 +232,8 @@ Start your node as follows::
    one-time download will depend on the available bandwidth but typically
    should complete within a few minutes.
 
+.. _dashmate-node-operation:
+
 Dashmate node operation
 =======================
 
@@ -286,3 +293,9 @@ masternode as follows::
   dashmate stop
   dashmate update
   dashmate start
+
+Additional Information
+======================
+
+For further documentation see the `dashmate repository
+<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__.

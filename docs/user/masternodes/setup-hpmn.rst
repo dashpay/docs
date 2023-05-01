@@ -8,14 +8,14 @@
 HPMN Setup
 ==========
 
-Setting up a masternode requires a basic understanding of Linux and blockchain
-technology, as well as an ability to follow instructions closely. It also
-requires regular maintenance and careful security, particularly if you are not
-storing your Dash on a hardware wallet. There are some decisions to be made
-along the way, and optional extra steps to take for increased security.
+Setting up a high-performance masternode requires a basic understanding of Linux
+and blockchain technology, as well as an ability to follow instructions closely.
+It also requires regular maintenance and careful security, particularly if you
+are not storing your Dash on a hardware wallet. There are some decisions to be
+made along the way, and optional extra steps to take for increased security.
 
 Commercial :ref:`masternode hosting services <masternode-hosting>` are available
-if you prefer to delegate day-to-day operation of your masternode to a
+if you prefer to delegate day-to-day operation of your HPMN to a
 professional operator. When using these hosting services, you retain full
 control of the DASH collateral and pay an agreed percentage of your reward to
 the operator. It is also possible to delegate your voting keys to a
@@ -26,7 +26,7 @@ more information.
 Before you begin
 ================
 
-This guide assumes you are setting up a single mainnet high performance
+This guide assumes you are setting up a single mainnet high-performance
 masternode for the first time. If you are updating a masternode, see  :ref:`here
 <masternode-update>` instead. You will need:
 
@@ -59,10 +59,11 @@ Send the collateral
 ===================
 
 A Dash address with a single unspent transaction output (UTXO) of exactly 4000
-DASH is required to operate a masternode. Once it has been sent, various keys
-regarding the transaction must be extracted for later entry in a configuration
-file and registration transaction as proof to write the configuration to the
-blockchain so the masternode can be included in the deterministic list.
+DASH is required to operate a high-performance masternode. Once it has been
+sent, various keys regarding the transaction must be extracted for later entry
+in a configuration file and registration transaction as proof to write the
+configuration to the blockchain so the high-performance masternode can be
+included in the deterministic list.
 
 A high-performance masternode can be registered from the official Dash Core
 wallet. This guide will describe the steps.
@@ -204,32 +205,71 @@ operator key.
 
 .. _hpmn-setup-install:
 
-Install Dash Core
-=================
+Software Installation
+=====================
 
-Dash Core is the software behind both the Dash Core GUI wallet and Dash
-masternodes. If not displaying a GUI, it runs as a daemon on your VPS
-(dashd), controlled by a simple command interface (dash-cli).
+The following methods are available for installing Dash high-performance
+masternode software:
 
-Open PuTTY or a console again and connect using the username and
-password you just created for your new, non-root user. The following
-options are available for installing a Dash masternode:
+- :ref:`Dashmate installation <hpmn-setup-install-dashmate>`
+- :ref:`Manual installation <hpmn-setup-install-manual>`
 
-- Manual installation (this guide)
-- `xkcd's installation guide <https://www.dash.org/forum/threads/system-wide-masternode-setup-with-systemd-auto-re-start-rfc.39460/>`__
+.. _hpmn-setup-install-dashmate:
+
+Dashmate installation
+---------------------
+
+Dashmate is a universal tool designed to help you set up and run Dash nodes in a
+containerized environment. It is based on Docker technology and features an
+interactive setup command. Dashmate handles the installation of Dash Core, as
+well as all dependencies and supporting services. Additional dashmate
+information is available :ref:`here <dashmate>`.
+
+Open PuTTY or a console again and connect using the username and password you
+just created for your new, non-root user. Begin by installing dashmate
+dependencies::
+
+  curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
+  sudo usermod -aG docker $USER
+  newgrp docker
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  source ~/.bashrc
+  nvm install 16
+
+Install dashmate::
+
+  npm install -g dashmate
+
+.. note::
+  
+  Refer to the dashmate page for :hoverxref:`alternative installation options <dashmate-install>`.
+
+Continue with the :ref:`Registration step <register-hpmn-dashmate>` to setup the
+collateral, keys and construct the ProTx transaction required to enable your
+masternode.
+
+.. _hpmn-setup-install-manual:
 
 Manual installation
------------------------------
+-------------------
 
-To manually download and install the components of your Dash masternode,
-visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ 
-and copy the link to the latest version appropriate for your CPU architecture, e.g. ``x86_64-linux-gnu``. Go back to
-your terminal window and enter the following command, pasting in the
-address to the latest version of Dash Core by right clicking or pressing
-**Ctrl + V**::
+.. attention::
+  
+  Dash Platform will include multiple services that must be configured properly
+  for a high-performance masternode to operate correctly. A :ref:`dashmate-based
+  installation <hpmn-setup-install-dashmate>` is recommended to ensure
+  your configuration is functional.
+
+To manually download and install the components of your Dash high-performance
+masternode, visit the `GitHub releases page
+<https://github.com/dashpay/dash/releases>`_ and copy the link to the latest
+version appropriate for your CPU architecture, e.g. ``x86_64-linux-gnu``. Go
+back to your terminal window and enter the following command, pasting in the
+address to the latest version of Dash Core by right clicking or pressing **Ctrl
++ V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v19.0.0-rc.7/dashcore-19.0.0-rc.7-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-x86_64-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -245,16 +285,16 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v19.0.0-rc.7/dashcore-19.0.0-rc.7-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-19.0.0-rc.7-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-19.0.0-x86_64-linux-gnu.tar.gz.asc
 
 Create a working directory for Dash, extract the compressed archive and
 copy the necessary files to the directory::
 
   mkdir ~/.dashcore
-  tar xfv dashcore-19.0.0-rc.7-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-19.0.0-rc.7/bin/dashd ~/.dashcore/
-  cp -f dashcore-19.0.0-rc.7/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-19.0.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-19.0.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-19.0.0/bin/dash-cli ~/.dashcore/
 
 Create a configuration file using the following command::
 
@@ -345,17 +385,17 @@ response::
     "IsFailed": false
   }
 
-Continue with the next step to construct the ProTx transaction required
-to enable your masternode.
-
+Continue with the :ref:`Registration step <register-hpmn>` to setup the
+collateral, keys and construct the ProTx transaction required to enable your
+masternode.
 
 .. _register-hpmn:
 
 Register your masternode
 ========================
 
-The three keys required for the different masternode roles are described briefly
-under :ref:`mn-concepts` in this documentation.
+The keys required for the different masternode roles are described briefly under
+:ref:`mn-concepts` in this documentation.
 
 ..
   Option 1: Registering from a hardware wallet
@@ -435,9 +475,62 @@ under :ref:`mn-concepts` in this documentation.
 ..
   Option 2: Registering from Dash Core wallet
   -------------------------------------------
+.. _register-hpmn-dashmate:
 
-Registering from Dash Core wallet
----------------------------------
+Option 1: Registering from dashmate
+-----------------------------------
+
+.. note::
+  Prior to running the dashmate setup wizard you should obtain the
+  :hoverxref:`collateral transaction info <hpmn-mn-outputs>` and the owner, voting,
+  and payout addresses for the new HPMN. For example, use Dash Core to generate
+  the addresses as described in :hoverxref:`this section below
+  <hpmn-get-addresses>`.
+
+Run the setup wizard
+^^^^^^^^^^^^^^^^^^^^
+
+To begin masternode setup, run ``dashmate setup`` to start the interactive wizard::
+
+  dashmate setup
+
+You will be prompted to select a network, node type, IP address and BLS private
+key. When setting up an unregistered masternode, you will also be prompted for
+the collateral transaction information and owner, voting, and payout addresses.
+
+Enter the requested information or accept the detected/generated defaults. For
+an example showing all steps of the setup wizard, refer to the
+:hoverxref:`dashmate section <dashmate-wizard-walkthrough>`.
+
+Submit the ProRegTx
+^^^^^^^^^^^^^^^^^^^
+
+The dashmate wizard will output a command you can use to submit the provider
+registration special transaction that registers the masternode on the network.
+Copy the provided protx command and run it using dash-cli or the Dash Core
+console.
+
+.. figure:: ../network/dashmate/img/10b-protx-command-successful.png
+   :align: center
+   :width: 95%
+
+   Registration command
+
+Start the node
+^^^^^^^^^^^^^^
+
+Once the dashmate wizard has completed successfully, start your node as follows::
+
+  dashmate start
+
+You can manage your masternode status, configuration, and running state
+entirely from within dashmate. See the documentation :hoverxref:`here
+<dashmate-node-operation>`.
+
+.. _register-hpmn-core:
+
+Option 2: Registering from Dash Core wallet
+-------------------------------------------
 
 .. _hpmn-mn-outputs:
 
