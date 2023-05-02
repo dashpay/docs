@@ -47,12 +47,12 @@ learning about :ref:`safety <safety>` or joining one of the many
     .. grid-item-card:: ⚙ Core Docs
         :margin: 2 2 auto auto
         :link-type: url
-        :link: https://dashcore.readme.io
+        :link: https://docs.dash.org/projects/core/en/stable/docs/index.html
         
         Find technical details about the Dash Core blockchain, along with protocol and API reference material.
         
         +++
-        `Click to begin <https://dashcore.readme.io>`__
+        `Click to begin <https://docs.dash.org/projects/core/en/stable/docs/index.html>`__
 
     .. grid-item-card:: 🚀 Platform Docs
          :margin: 2 2 auto auto
