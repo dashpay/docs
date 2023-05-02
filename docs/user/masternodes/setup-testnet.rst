@@ -792,8 +792,13 @@ dependencies::
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
   nvm install 16
-  sudo apt install -y libzmq3-dev build-essential cmake libgmp-dev gcc-10 g++-10 apt-transport-https gnupg2 curl lsb-release
-  export CC=gcc-10 && export CXX=g++-10
+  sudo apt install -y apt-transport-https build-essential clang cmake curl g++ gcc gnupg2 libgmp-dev libssl-dev libzmq3-dev lsb-release pkg-config
+  # export CC=gcc-10 && export CXX=g++-10
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  source "$HOME/.cargo/env
+  rustup toolchain install stable
+  rustup target add wasm32-unknown-unknown --toolchain stable
+  cargo install -f wasm-bindgen-cli
   npm install pm2 -g
 
 Drive
@@ -802,22 +807,32 @@ Drive
 Drive is a replicated state machine for Dash Platform. Download Drive as
 follows::
 
-  git clone --single-branch -b master https://github.com/dashpay/platform/
+  git clone --single-branch -b v0.24-dev https://github.com/dashpay/platform/
   cd platform
+  (update zeromq js dep to 5.3.1)
   corepack enable
+  yarn install
+  yarn workspace @dashevo/rs-drive build
+  yarn workspace @dashevo/wasm-dpp build
   yarn workspaces focus --production @dashevo/drive
   cp packages/js-drive/.env.example packages/js-drive/.env
 
 Configure Drive::
 
-  sed -i 's/^CORE_JSON_RPC_PORT.*/CORE_JSON_RPC_PORT=19998/' packages/js-drive/.env
-  sed -i 's/^INITIAL_CORE_CHAINLOCKED_HEIGHT.*/INITIAL_CORE_CHAINLOCKED_HEIGHT=415765/' packages/js-drive/.env
-  sed -i 's/^CORE_JSON_RPC_USERNAME.*/CORE_JSON_RPC_USERNAME=dashrpc/' packages/js-drive/.env
   sed -i 's/^CORE_JSON_RPC_PASSWORD.*/CORE_JSON_RPC_PASSWORD=password/' packages/js-drive/.env
-  sed -i 's/^DPNS_MASTER_PUBLIC_KEY=.*/DPNS_MASTER_PUBLIC_KEY=022a5ffc9f92e005a02401c375f575b3aed5606fb24ddef5b3a05d55c66ba2a2f6/' packages/js-drive/.env
-  sed -i 's/^DASHPAY_MASTER_PUBLIC_KEY=.*/DASHPAY_MASTER_PUBLIC_KEY=02c6bf10f8cc078866ed5466a0b5ea3a4e8db2a764ea5aa9cb75f22658664eb149/' packages/js-drive/.env
-  sed -i 's/^FEATURE_FLAGS_MASTER_PUBLIC_KEY=.*/FEATURE_FLAGS_MASTER_PUBLIC_KEY=033d57d03ba602acecfb6fd4ad66c5fdb9a739e163faefa901926bdf28063f9251/' packages/js-drive/.env
-  sed -i 's/^MASTERNODE_REWARD_SHARES_MASTER_PUBLIC_KEY=.*/MASTERNODE_REWARD_SHARES_MASTER_PUBLIC_KEY=02182c19827a5e3151feb965b2c6e6bbe57bb1f2fe7579595d76b672966da4e8e6/' packages/js-drive/.env
+  sed -i 's/^CORE_JSON_RPC_PORT.*/CORE_JSON_RPC_PORT=19998/' packages/js-drive/.env
+  sed -i 's/^CORE_JSON_RPC_USERNAME.*/CORE_JSON_RPC_USERNAME=dashrpc/' packages/js-drive/.env
+  sed -i 's/^INITIAL_CORE_CHAINLOCKED_HEIGHT.*/INITIAL_CORE_CHAINLOCKED_HEIGHT=415765/' packages/js-drive/.env
+  sed -i 's/^DASHPAY_MASTER_PUBLIC_KEY=.*/DASHPAY_MASTER_PUBLIC_KEY=02d4dcce3f0a8d2936ce26df4d255fd2835b629b73eea39d4b2778096b91e77946/' packages/js-drive/.env
+  sed -i 's/^DASHPAY_SECOND_PUBLIC_KEY=.*/DASHPAY_SECOND_PUBLIC_KEY=03699c8b4ebf1696c92e9ec605a02a38f6f9cec47d13fb584fdad779e936e20ccb/' packages/js-drive/.env
+  sed -i 's/^DPNS_MASTER_PUBLIC_KEY=.*/DPNS_MASTER_PUBLIC_KEY=02c8b4747b528cac5fddf7a6cc63702ee04ed7d1332904e08510343ea00dce546a/' packages/js-drive/.env
+  sed -i 's/^DPNS_SECOND_PUBLIC_KEY=.*/DPNS_SECOND_PUBLIC_KEY=0201ee28f84f5485390567e939c2b586010b63a69ec92cab535dc96a8c71913602/' packages/js-drive/.env
+  sed -i 's/^FEATURE_FLAGS_MASTER_PUBLIC_KEY=.*/FEATURE_FLAGS_MASTER_PUBLIC_KEY=029cf2232549de08c114c19763309cb067688e21e310ac07458b59c2c026be7234/' packages/js-drive/.env
+  sed -i 's/^FEATURE_FLAGS_SECOND_PUBLIC_KEY=.*/FEATURE_FLAGS_SECOND_PUBLIC_KEY=02a2abb50c03ae9f778f08a93849ba334a82e625153720dd5ef14e564b78b414e5/' packages/js-drive/.env
+  sed -i 's/^MASTERNODE_REWARD_SHARES_MASTER_PUBLIC_KEY=.*/MASTERNODE_REWARD_SHARES_MASTER_PUBLIC_KEY=0319d795c0795bc8678bd0e58cfc7a4ad75c8e1797537728e7e8de8b9acc2bae2b/' packages/js-drive/.env
+  sed -i 's/^MASTERNODE_REWARD_SHARES_SECOND_PUBLIC_KEY=.*/MASTERNODE_REWARD_SHARES_SECOND_PUBLIC_KEY=033756572938aaad752158b858ad38511c6edff4c79cf8462f70baa25fc6e8a616/' packages/js-drive/.env
+  sed -i 's/^WITHDRAWALS_MASTER_PUBLIC_KEY=.*/WITHDRAWALS_MASTER_PUBLIC_KEY=032f79d1d9d6e652599d3315d30306b1277fbf588e32e383aef0a59749547d47b7/' packages/js-drive/.env
+  sed -i 's/^WITHDRAWALS_SECOND_PUBLIC_KEY=.*/WITHDRAWALS_SECOND_PUBLIC_KEY=03eebbe3dc3721603a0b5a13441f214550ffa7d035b7dea9f1911de0f63ddac58d/' packages/js-drive/.env
 
 Start Drive::
 
@@ -835,14 +850,14 @@ used by Dash Platform. As binaries are not yet published, you will need
 to build from source. Install Go as follows::
 
   cd /tmp
-  wget https://go.dev/dl/go1.18.2.linux-$(dpkg --print-architecture).tar.gz
-  sudo tar -C /usr/local -xzf go1.18.2.linux-$(dpkg --print-architecture).tar.gz
+  wget https://go.dev/dl/go1.19.8.linux-$(dpkg --print-architecture).tar.gz
+  sudo tar -C /usr/local -xzf go1.19.8.linux-$(dpkg --print-architecture).tar.gz
   export PATH=$PATH:/usr/local/go/bin
 
 Build and install Tenderdash as follows::
 
   cd
-  git clone -b v0.7.1 https://github.com/dashpay/tenderdash
+  git clone -b v0.12.0 https://github.com/dashpay/tenderdash
   cd tenderdash
   make install-bls
   make build-linux
