@@ -2,6 +2,11 @@ name: Add preview URL to PR description
 on:
   pull_request_target:
     types: [opened]
+    paths:
+      - '**.md'
+      - '**.png'
+      - '**.rst'
+      - '**.svg'
 
 jobs:
   build:
