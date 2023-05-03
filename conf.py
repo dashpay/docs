@@ -97,6 +97,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx_copybutton',
     'sphinx_design',
+    'sphinx.ext.intersphinx',
 ]
 
 hoverxref_role_types = {
@@ -110,6 +111,19 @@ myst_heading_anchors = 5
 # Enable colon_fence for better markdown compatibility
 # https://myst.tools/docs/mystjs/syntax-overview#directives
 myst_enable_extensions = ["colon_fence"]
+
+# -- intersphinx configuration -----------------------------------------------
+intersphinx_mapping = {
+    "core": ("https://docs.dash.org/projects/core/en/stable/", None),
+}
+
+# We recommend adding the following config value.
+# Sphinx defaults to automatically resolve *unresolved* labels using all your Intersphinx mappings.
+# This behavior has unintended side-effects, namely that documentations local references can
+# suddenly resolve to an external location.
+# See also:
+# https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#confval-intersphinx_disabled_reftypes
+intersphinx_disabled_reftypes = ["*"]
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
