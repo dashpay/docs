@@ -19,4 +19,4 @@ sphinx-intl update -l en
 sphinx-intl update-txconfig-resources --pot-dir locale/pot  --transifex-organization-name dash --transifex-project-name dash-docs
 
 # Push to Transifex
-# tx push --source --force --no-interactive
+tx push --source --force
