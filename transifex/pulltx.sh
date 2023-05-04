@@ -22,6 +22,6 @@ while sleep 1;do procs=$(ps aux);echo "$procs"|grep -q "tx pull -f -l"||break;do
 echo "tx pulls are all done now."
 
 # Add changes to repo and push to upstream so a pull request can be opened
-git add locale/*
-git commit -m "Refresh translations from Transifex"
-git push --set-upstream origin $BRANCH_NAME
+# git add locale/*
+# git commit -m "Refresh translations from Transifex"
+# git push --set-upstream origin $BRANCH_NAME
