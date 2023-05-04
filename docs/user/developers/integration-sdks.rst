@@ -20,9 +20,9 @@ Dash Developer Guide
 .. image:: img/dash-logo.png
    :width: 200px
    :align: right
-   :target: https://dashcore.readme.io/
+   :target: https://docs.dash.org/core
 
-https://dashcore.readme.io/
+https://docs.dash.org/core
 
 The Dash Developer Portal aims to provide the information you need to
 understand Dash and start building Dash-based applications. To make the
@@ -30,7 +30,7 @@ best use of this documentation, you may want to install the current
 version of Dash Core and Dash Platform, either from source, from a
 pre-compiled executable or from Docker Hub.
 
-- Dash Core: https://dashcore.readme.io/
+- Dash Core: https://docs.dash.org/core
 - Dash Platform: https://dashplatform.readme.io/
 
 NodeJS/JavaScript: Dashcore

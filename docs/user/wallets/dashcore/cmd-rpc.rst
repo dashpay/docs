@@ -40,7 +40,7 @@ Command line arguments
 ======================
 
 Detailed information for all command line arguments can be found at the
-following links to the `Dash Core developer documentation site <https://dashcore.readme.io/docs/dash-core-wallet-arguments-and-commands>`_:
+following links to the :ref:`Dash Core developer documentation site <core:dashcore-arguments-and-commands>`:
 
 - `dashd <https://dashcore.readme.io/docs/dash-core-wallet-arguments-and-commands-dashd>`_
 - `dash-qt <https://dashcore.readme.io/docs/dash-core-wallet-arguments-and-commands-dash-qt>`_
