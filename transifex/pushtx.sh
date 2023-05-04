@@ -16,7 +16,7 @@ if [ $? -eq 0 ]; then echo "make issued a WARNING, bailing out...";exit 2;fi
 # Update files for all languages
 sphinx-intl update -p _build/gettext -l de -l pt -l ko -l el -l ar -l ru -l zh_CN -l fr -l es -l ja -l vi -l zh_TW -l it -l tl
 sphinx-intl update -l en
-sphinx-intl update-txconfig-resources --pot-dir locale/pot --transifex-project-name dash-docs
+sphinx-intl update-txconfig-resources --pot-dir locale/pot  --transifex-organization-name dash --transifex-project-name dash-docs
 
 # Push to Transifex
 # tx push --source --force --no-interactive
