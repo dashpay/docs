@@ -71,7 +71,7 @@ domain.
   BlockCypher does not handle Private Keys.
 - Pricing Model: Per API Call, 5000 Requests -> $85.00 per month
   (https://accounts.blockcypher.com)
-- Documentation: https://www.blockcypher.com/dev/dash/
+- Documentation: https://www.blockcypher.com/dev/bitcoin/
 
 
 BitGo

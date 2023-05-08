@@ -26,7 +26,7 @@ in the world, and have a percentage of your wage immediately converted
 to Dash. You can then withdraw your wage to any Dash wallet for spending
 or saving. For more information, see the following blog posts:
 
- - **Bitwage:** https://blog.bitwage.com/2018/03/12/get-dash/
+ - **Bitwage:** https://blog.bitwage.com/get-dash/
  - **Uphold:** https://uphold.com/en/blog/bitwage-launches-support-of-dash-powered-by-uphold
  - **Dash Force News:** https://dashnews.org/can-get-salary-dash-right-now/
 
@@ -215,6 +215,5 @@ for tax purposes. The following services are available to help you
 calculate your tax obligations.
 
 - https://www.node40.com
-- https://dash-taxes.herokuapp.com
 - https://cointracking.info
 - https://bitcoin.tax
