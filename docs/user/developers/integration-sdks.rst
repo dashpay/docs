@@ -163,4 +163,4 @@ https://www.blockcypher.com
 BlockCypher also offers client SDKs.
 
 - Platform: Ruby, Python, Java, PHP, Go, NodeJS
-- Repositories: https://www.blockcypher.com/dev/dash/#blockcypher-supported-language-sdks 
+- Repositories: https://www.blockcypher.com/dev/bitcoin/

@@ -495,51 +495,6 @@ here:
 - `Wallet Security <https://support.huobiwallet.com/hc/en-us/categories/360000036622-Wallet-Security>`_
 
 
-Jaxx
-====
-
-https://jaxx.io
-
-.. image:: img/jaxx.png
-   :width: 100px
-   :align: right
-   :target: https://jaxx.io
-
-Jaxx supports multiple currencies in one wallet, including Dash. It is
-available for almost all platforms including Android, iOS, macOS,
-Windows, Linux and also as a Chrome extension. Jaxx is open source
-software.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.liberty.jaxx
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://apps.apple.com/app/id1435383184
-
-All Jaxx releases are available from https://jaxx.io/downloads.html -
-simply download and install the appropriate package for your system.
-Jaxx is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.liberty.jaxx>`__ 
-and the `Apple App Store for iOS <https://apps.apple.com/app/id1435383184>`__.
-
-Documentation
--------------
-
-Jaxx offers detailed documentation of all functions at
-https://support.decentral.ca and the getting started link is below:
-
-- `Getting started <https://support.decentral.ca/hc/en-us/sections/204038798-Getting-Started>`__
-
-.. figure:: img/jaxx-wallet.png
-   :width: 400px
-
-   Jaxx wallet running on various devices
-
-
 Mobi
 ====
 

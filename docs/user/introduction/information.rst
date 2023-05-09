@@ -240,12 +240,10 @@ iOS
 
 - **Dash Wallet:** https://apps.apple.com/app/id1206647026
 - **Edge:** https://apps.apple.com/app/id1344400091
-- **Jaxx:** https://apps.apple.com/app/id1435383184
 - **Coinomi:** https://apps.apple.com/app/id1333588809
 - **Exodus:** https://apps.apple.com/app/id1414384820
 - **Bitnovo:** https://apps.apple.com/app/id1220883632
 - **CoinCap:** https://apps.apple.com/app/id1074052280
-- **Blockfolio:** https://apps.apple.com/app/id1095564685
 - **Abra:** https://apps.apple.com/app/id966301394
 - **BitUniverse:** https://apps.apple.com/app/id1329338902
 
