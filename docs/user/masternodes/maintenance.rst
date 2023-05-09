@@ -510,8 +510,7 @@ https://www.dashcentral.org
 
 DashCentral, operated by forum member rango, offers an advanced service
 to monitor masternodes and vote on budget proposals through an advanced
-web interface. A `mobile monitoring interface
-<https://www.dashcentral.org/account/mobile>`_ is also available.
+web interface.
 
 Masternode.me
 -------------
