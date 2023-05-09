@@ -33,19 +33,19 @@ JSON-RPC Interface
 
 The majority of commands are unchanged from Bitcoin making integration into
 existing systems relatively straightforward. For a complete listing of RPC
-commands please refer to the `​Dash Developer Guide
-<https://dashcore.readme.io/docs/core-guide-introduction>`_.
+commands please refer to the :ref:`​Dash Developer Guide
+<core:guide-index>`.
 
 Note that the following commands have been modified to support InstantSend:
 
-   - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getrawmempool>`__
-   - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolancestors>`__
-   - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempooldescendants>`__
-   - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolentry>`__
-   - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#getrawtransaction>`__
-   - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#gettransaction>`__
-   - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listtransactions>`__
-   - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listsinceblock>`__
+   - :ref:`getrawmempool <core:api-rpc-blockchain-getrawmempool>`
+   - :ref:`getmempoolancestors <core:api-rpc-blockchain-getmempoolancestors>`
+   - :ref:`getmempooldescendants <core:api-rpc-blockchain-getmempooldescendants>`
+   - :ref:`getmempoolentry <core:api-rpc-blockchain-getmempoolentry>`
+   - :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
+   - :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
+   - :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
+   - :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
 
 Special Transactions
 --------------------
@@ -78,23 +78,23 @@ which form a basis for new transaction types that provide on-chain
 metadata to assist various consensus mechanisms. The following special
 transaction types exist:
 
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| Version | Type | Payload Size   | Transaction Purpose / Example                                                                                                     |
-+=========+======+================+===================================================================================================================================+
-| 3       | 0    | n/a            | Standard Transaction                                                                                                              |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 1    | variable       | `Masternode Registration <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-reg-tx>`__       |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 2    | variable       | `Update Masternode Service <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-serv-tx>`__ |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 3    | variable       | `Update Masternode Operator <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-reg-tx>`__ |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 4    | variable       | `Masternode Revocation <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-rev-tx>`__      |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 5    | variable       | `Masternode List Merkle Proof <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-cb-tx>`__       |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 6    | variable       | `Quorum Commitment <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-qc-tx>`__                  |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
++---------+------+----------------+---------------------------------------------------------------+
+| Version | Type | Payload Size   | Transaction Purpose / Example                                 |
++=========+======+================+===============================================================+
+| 3       | 0    | n/a            | Standard Transaction                                          |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 1    | variable       | :ref:`Masternode Registration <core:ref-txs-proregtx>`        |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 2    | variable       | :ref:`Update Masternode Service <core:ref-txs-proupservtx>`   |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 3    | variable       | :ref:`Update Masternode Operator <core:ref-txs-proupregtx>`   |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 4    | variable       | :ref:`Masternode Revocation <core:ref-txs-prouprevtx>`        |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 5    | variable       | :ref:`Masternode List Merkle Proof <core:ref-txs-cbtx>`       |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 6    | variable       | :ref:`Quorum Commitment <core:ref-txs-qctx>`                  |
++---------+------+----------------+---------------------------------------------------------------+
 
 Integration notes:
 
@@ -110,7 +110,7 @@ Integration notes:
    Transactions was split into two fields: ``version`` and ``type``
    (each consisting of 2 bytes).
 
-4. Refer to the `Special Transactions <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions>`__ 
+4. Refer to the :ref:`Special Transactions <core:ref-txs-special-txs>` 
    section of the Dash developer reference for additional detail on
    these data types, e.g. <variable int>.
 
@@ -183,14 +183,14 @@ daemon using JSON-RPC protocol. The ``instantlock`` attribute of the JSON
 response reflects the status of the transaction and is included in the following
 commands:
 
-- `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getrawmempool>`__
-- `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolancestors>`__
-- `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempooldescendants>`__
-- `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolentry>`__
-- `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#getrawtransaction>`__
-- `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#gettransaction>`__
-- `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listtransactions>`__
-- `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listsinceblock>`__
+   - :ref:`getrawmempool <core:api-rpc-blockchain-getrawmempool>`
+   - :ref:`getmempoolancestors <core:api-rpc-blockchain-getmempoolancestors>`
+   - :ref:`getmempooldescendants <core:api-rpc-blockchain-getmempooldescendants>`
+   - :ref:`getmempoolentry <core:api-rpc-blockchain-getmempoolentry>`
+   - :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
+   - :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
+   - :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
+   - :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
 
 ZMQ Notification
 ^^^^^^^^^^^^^^^^
@@ -218,7 +218,7 @@ by adding the following line to the dash.conf file::
   instantsendnotify=/path/to/concurrent/safe/handler %s
 
 This is typically used with a wallet that has been populated with 
-`watch-only <https://dashcore.readme.io/docs/core-additional-resources-glossary#section-watch-only-address>`__ 
+`watch-only <https://docs.dash.org/projects/core/en/stable/docs/resources/glossary.html#watch-only-address>`__ 
 addresses.
 
 .. _is-broadcast:
@@ -256,6 +256,6 @@ and are intended to help provide a more complete understanding of the
 underlying technologies.
 
 - `InstantSend Technical Information <https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__
-- `InstantSend Developer Documentation <https://dashcore.readme.io/docs/core-guide-dash-features-instantsend>`__
+- :ref:`InstantSend Developer Documentation <core:guide-features-instantsend>`
 - `DIP0010: LLMQ InstantSend <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__
 - `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__
