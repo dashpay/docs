@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,17 +11,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"POT-Creation-Date: 2023-05-04 12:28-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: Daf Daf, 2022\n"
-"Language-Team: French (https://www.transifex.com/dash/teams/37570/fr/)\n"
+"Language-Team: French (https://app.transifex.com/dash/teams/37570/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/developers/insight.rst:1
+#: ../../docs/user/developers/insight.rst-1
 msgid ""
 "The open-source Dash Insight REST API provides you with a convenient, "
 "powerful and simple way to read data from the Dash network and build your "
@@ -31,7 +31,7 @@ msgstr ""
 "puissant de lire des données sur le réseau Dash et de bâtir vos propres "
 "services à partir d'elles."
 
-#: ../../docs/user/developers/insight.rst:1
+#: ../../docs/user/developers/insight.rst-1
 msgid ""
 "dash, insight, API, REST, blockchain, explorer, JSON, HTTP, blocks, index, "
 "transactions"
@@ -51,21 +51,10 @@ msgid ""
 "on the Dash blockchain familiar from the Bitcore Insight API, as well as "
 "Dash-specific features such as InstantSend transactions, budget proposals, "
 "sporks and the masternode list. This documentation describes how to set up "
-"the `Dash Insight API <https://github.com/dashevo/insight-api>`__ server and"
-" (optionally) the `Dash Insight UI <https://github.com/dashevo/insight-"
+"the `Dash Insight API <https://github.com/dashpay/insight-api>`__ server and"
+" (optionally) the `Dash Insight UI <https://github.com/dashpay/insight-"
 "ui>`__ block explorer."
 msgstr ""
-"L'API open source REST Dash Insight est un moyen pratique, puissant et "
-"simple de lire des données du réseau Dash et de bâtir vos propres services "
-"avec elles. Des points de contact HTTP simples existent pour toutes les "
-"opérations les plus communes sur la blockchain Dash, à l'image de l'API "
-"Bitcore Insight, mais aussi pour les fonctionnalités propres à Dash telles "
-"que les transactions InstantSend, les propositions budgétaires, les sporks "
-"et la liste des masternodes. La présente documentation explique comment "
-"mettre en place le serveur de `l'API Dash Insight "
-"<https://github.com/dashevo/insight-api>`__ et (facultativement) "
-"`l'interface graphique Dash Insight <https://github.com/dashevo/insight-"
-"ui>`__ pour l'explorateur de blocs."
 
 #: ../../docs/user/developers/insight.rst:23
 msgid ""
@@ -85,11 +74,9 @@ msgstr "Téléchargez et décompressez la version la plus récente de Dash Core 
 
 #: ../../docs/user/developers/insight.rst:39
 msgid ""
-"Install `Dashcore Node <https://github.com/dashevo/dashcore-node>`_ and "
+"Install `Dashcore Node <https://github.com/dashpay/dashcore-node>`_ and "
 "create your configuration::"
 msgstr ""
-"Installez `Dashcore Node <https://github.com/dashevo/dashcore-node>`_ et "
-"créez votre configuration :"
 
 #: ../../docs/user/developers/insight.rst:47
 msgid "Install the Insight API service and (optionally) Insight UI::"
@@ -104,7 +91,7 @@ msgid "Change the value of ``datadir`` to ``../../.dashcore``"
 msgstr "Définissez la valeur de ``datadir`` comme ``../../.dashcore``"
 
 #: ../../docs/user/developers/insight.rst:58
-msgid "Change the value of ``exec`` to ``../../dashcore-18.1.0/bin/dashd``"
+msgid "Change the value of ``exec`` to ``../../dashcore-19.0.0/bin/dashd``"
 msgstr ""
 
 #: ../../docs/user/developers/insight.rst:59
@@ -123,14 +110,9 @@ msgstr "Lancez-le :"
 msgid ""
 "Your Insight API node will start up and begin to sync. Progress will be "
 "displayed on stdout. Once sync is complete, the `API endpoints listed in the"
-" documentation <https://github.com/dashevo/insight-api#api-http-endpoints>`_"
+" documentation <https://github.com/dashpay/insight-api#api-http-endpoints>`_"
 " will be available at::"
 msgstr ""
-"Votre nœud API Insight démarrera et commencera à se synchroniser. L'état "
-"sera affiché dans stdout. Une fois la synchronisation terminée, les `points "
-"de contact API répertoriés dans la documentation "
-"<https://github.com/dashevo/insight-api#api-http-endpoints>`_ seront "
-"disponibles :"
 
 #: ../../docs/user/developers/insight.rst:73
 msgid "The Insight UI block explorer will be available at::"

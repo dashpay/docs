@@ -1,35 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# jmp2esp <xsrf@icloud.com>, 2022
 # Alex.ys <silvershark.ys@gmail.com>, 2022
-# Leon White <leon.white@dash.org>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"POT-Creation-Date: 2023-05-04 12:28-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
-"Last-Translator: Leon White <leon.white@dash.org>, 2022\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/dash/teams/37570/zh_CN/)\n"
+"Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2022\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/dash/teams/37570/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../docs/user/developers/index.rst:1
-msgid "Developers guide and information about sporks and Dash version history"
-msgstr "关于sporks和达世币版本历史的开发者指导及信息"
+#: ../../docs/user/developers/index.rst-1
+msgid "Developers guide and information about Dash version history"
+msgstr ""
 
-#: ../../docs/user/developers/index.rst:1
-msgid "dash, developers, sporks, version history"
-msgstr "达世币，开发者，sporks，版本历史"
+#: ../../docs/user/developers/index.rst-1
+msgid "dash, developers, version history"
+msgstr ""
 
 #: ../../docs/user/developers/index.rst:9
 msgid "Developers"
@@ -87,144 +85,14 @@ msgid ""
 " common development tasks in Dash."
 msgstr "下文所述内容为在达世币中执行共同开发任务的实际步骤。"
 
-#: ../../docs/user/developers/index.rst:52
-msgid "Sporks"
-msgstr "叉勺技术"
-
-#: ../../docs/user/developers/index.rst:54
-msgid ""
-"A multi-phased fork, colloquially known as a \"spork\", is a mechanism "
-"unique to Dash used to safely deploy new features to the network through "
-"network-level variables to avoid the risk of unintended network forking "
-"during upgrades. It can also be used to disable certain features if a "
-"security vulnerability is discovered - see :ref:`here <sporks>` for a brief "
-"introduction to sporks. This documentation describes the meaning of each "
-"spork currently existing on the network, and how to check their respective "
-"statuses."
-msgstr ""
-"多阶段分叉，俗称 "
-"\"spork\"，是一种达世币独有的机制，通过网络层变量将新功能安全地部署到网络中，避免升级过程中出现意外的网络分叉风险。也可用于出现安全漏洞时，禁用某些功能——参考"
-" :ref:`此处 <sporks>` sporks简介。该文档描述了目前存在于网络上的每一个spork的含义，以及状态检查方法。"
-
-#: ../../docs/user/developers/index.rst:64
-msgid "Spork functions"
-msgstr "Spork 函数"
-
-#: ../../docs/user/developers/index.rst:66
-msgid ""
-"Sporks are set using integer values. Many sporks may be set to a particular "
-"epoch datetime (number of seconds that have elapsed since January 1, 1970) "
-"to specify the time at which they will active. Enabled sporks are set to 0 "
-"(seconds until activation). This function is often used to set a spork "
-"enable date so far in the future that it is effectively disabled until "
-"changed. The following sporks currently exist on the network and serve "
-"functions as described below:"
-msgstr ""
-"使用整数值设置Sporks。许多的sporks都可设置特定的新纪元时间（自1970年1月1日起走过的秒数），用作活动时间。启用的sporks设置为0（直至激活前的秒数）。该函数常用于设置未来的spork启用日期，在发生变更之前，一直保持有效。以下为目前网络上存在的sporks及其服务功能："
-
-#: ../../docs/user/developers/index.rst:77
-msgid "SPORK_2_INSTANTSEND_ENABLED"
-msgstr "SPORK_2_即时发送_已启用"
-
-#: ../../docs/user/developers/index.rst:75
-msgid ""
-"Governs the ability of Dash clients to use InstantSend functionality. "
-"InstantSend is described in `DIP0010 LLMQ-based InstantSend "
-"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__."
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:81
-msgid "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
-msgstr "SPORK_3_即时发送_区块_过滤"
-
-#: ../../docs/user/developers/index.rst:80
-msgid ""
-"If enabled, masternodes will reject blocks containing transactions in "
-"conflict with locked but unconfirmed InstantSend transactions."
-msgstr "如果已启用，主节点将拒绝那些含有与已锁定但尚未被证实的即时发送相冲突的区块。"
-
-#: ../../docs/user/developers/index.rst:85
-msgid "SPORK_9_SUPERBLOCKS_ENABLED"
-msgstr "SPORK_9_超级块_已启用"
-
-#: ../../docs/user/developers/index.rst:84
-msgid ""
-"If enabled, superblocks are verified and issued to pay proposal winners."
-msgstr "如果已启用，则验证并发布超级块，以支付提案获胜者。"
-
-#: ../../docs/user/developers/index.rst:91
-msgid "SPORK_17_QUORUM_DKG_ENABLED"
-msgstr "SPORK_17_QUORUM_DKG_ENABLED"
-
-#: ../../docs/user/developers/index.rst:88
-msgid ""
-"Enables the `DKG process to create LLMQ quorums "
-"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. This spork will"
-" be turned on once 80% masternodes are upgraded to v0.14, which will enable "
-"DKG and DKG-based PoSe."
-msgstr ""
-"激活 `DKG process to create LLMQ quorums "
-"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_。激活 DKG 和基于 DKG 的"
-" PoSe 的 Spork 将在 80%的主节点完成v0.14升级后被打开。"
-
-#: ../../docs/user/developers/index.rst:96
-msgid "SPORK_19_CHAINLOCKS_ENABLED"
-msgstr "SPORK_19_CHAINLOCKS_ENABLED"
-
-#: ../../docs/user/developers/index.rst:94
-msgid ""
-"Enables :ref:`ChainLocks <chainlocks>`, a mechanism of preventing the risk "
-"to payments introduced by blockchain reorganization events. ChainLocks are "
-"described in `DIP0008 ChainLocks "
-"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__."
-msgstr ""
-"激活 :ref:`ChainLocks <chainlocks>`, 一种杜绝区块链重构事件带来的支付风险的机制。 ChainLocks 被定义于 "
-"`DIP0008 ChainLocks "
-"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__。"
-
-#: ../../docs/user/developers/index.rst:100
-msgid "SPORK_21_QUORUM_ALL_CONNECTED"
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:99
-msgid ""
-"Enables connections between all masternodes in a quorum to optimize the "
-"signature recovery process."
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:104
-msgid "SPORK_23_QUORUM_POSE"
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:103
-msgid ""
-"Enforces Proof of Service requirements for masternodes to support a minimum "
-"protocol version and maintain open ports."
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:107
-msgid "Viewing spork status"
-msgstr "查看spork状态"
-
-#: ../../docs/user/developers/index.rst:109
-msgid ""
-"The ``spork show`` and ``spork active`` commands issued in the debug window "
-"(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
-"You can open the debug window by selecting **Window > Console**."
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:116
-msgid "spork show and spork active output in the Dash Core debug console"
-msgstr "Dash Core调试控制台输出spork show和spork active "
-
-#: ../../docs/user/developers/index.rst:120
+#: ../../docs/user/developers/index.rst:53
 msgid "Version History"
 msgstr "版本历史"
 
-#: ../../docs/user/developers/index.rst:122
+#: ../../docs/user/developers/index.rst:55
 msgid "Full release notes and the version history of Dash are available here:"
 msgstr "有关达世币的完整发行说明和版本历史请参阅："
 
-#: ../../docs/user/developers/index.rst:124
+#: ../../docs/user/developers/index.rst:57
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
 msgstr "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
