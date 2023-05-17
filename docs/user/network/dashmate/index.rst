@@ -1,6 +1,6 @@
 .. meta::
    :description: Description of dashmate features and usage
-   :keywords: dash, wallet, core, platform, HPMN, masternodes, dashmate
+   :keywords: dash, wallet, core, platform, EvoNode, masternodes, dashmate
 
 .. _dashmate:
 
@@ -15,7 +15,7 @@ and easily set up and run a development network on your local system.
 .. figure:: img/dashmate.gif
    :align: center
 
-   Setting up a testnet HPMN using dashmate
+   Setting up a testnet EvoNode using dashmate
 
 .. _dashmate-full-install:
 
@@ -73,8 +73,8 @@ Once NodeJS has been installed, use npm to install dashmate::
 Masternode setup
 ================
 
-You can setup both regular masternodes and high-performance masternodes (HPMNs)
-using dashmate. There are few minor extra steps for HPMNs, but the process is
+You can setup both regular masternodes and evolution masternodes (EvoNodes)
+using dashmate. There are few minor extra steps for EvoNodes, but the process is
 largely identical for both masternode types.
 
 To begin masternode setup, run ``dashmate setup`` to start the interactive wizard::
@@ -94,7 +94,7 @@ Set Network and Node type
    :align: center
    :width: 90%
 
-   Create a high-performance masternode
+   Create a evolution masternode
 
 Select **No** to register a new masternode or **Yes** to import information
 about an existing masternode.
