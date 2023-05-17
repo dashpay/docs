@@ -1,6 +1,6 @@
 .. meta::
    :description: Description of dashmate features and usage
-   :keywords: dash, wallet, core, platform, HPMN, masternodes, dashmate
+   :keywords: dash, wallet, core, platform, EvoNode, masternodes, dashmate
 
 .. _dashmate:
 
@@ -15,7 +15,7 @@ and easily set up and run a development network on your local system.
 .. figure:: img/dashmate.gif
    :align: center
 
-   Setting up a testnet HPMN using dashmate
+   Setting up a testnet EvoNode using dashmate
 
 .. _dashmate-full-install:
 
@@ -73,8 +73,8 @@ Once NodeJS has been installed, use npm to install dashmate::
 Masternode setup
 ================
 
-You can setup both regular masternodes and high-performance masternodes (HPMNs)
-using dashmate. There are few minor extra steps for HPMNs, but the process is
+You can setup both regular masternodes and Evolution masternodes (EvoNodes)
+using dashmate. There are few minor extra steps for EvoNodes, but the process is
 largely identical for both masternode types.
 
 To begin masternode setup, run ``dashmate setup`` to start the interactive wizard::
@@ -94,7 +94,7 @@ Set Network and Node type
    :align: center
    :width: 90%
 
-   Create a high-performance masternode
+   Create an Evolution masternode
 
 Select **No** to register a new masternode or **Yes** to import information
 about an existing masternode.
@@ -146,8 +146,8 @@ directly, set the reward share percentage also.
 
    Enter operator information
 
-.. note:: The following step only applies to HPMNs. Regular masternodes do not
-   require a Platform node key since they do not host Platform services.
+.. note:: The following step only applies to Evolution masternodes. Regular masternodes 
+          do not require a Platform node key since they do not host Platform services.
 
 Enter a Platform node key. You can enter one :hoverxref:`you have created
 <hpmn-generate-platform-node-id>` or received from a hosting provider.
@@ -189,14 +189,14 @@ details.
 Enable SSL
 ----------
 
-.. note:: The following step only applies to HPMNs. Regular masternodes do not
+.. note:: The following step only applies to EvoNodes. Regular masternodes do not
    require an SSL certificate since they do not host Platform services.
 
 Dash Platform requires SSL for communication. Dashmate provides several options
 for obtaining the required SSL certificate.
 
 .. warning:: Self-signed certificates cannot be used on mainnet. When setting
-   up a mainnet HPMN, **ZeroSSL** and **File on disk** are the only options available.
+   up a mainnet EvoNode, **ZeroSSL** and **File on disk** are the only options available.
 
 .. figure:: img/11a-ssl-config-zerossl.png
    :align: center
