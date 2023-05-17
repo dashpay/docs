@@ -1,11 +1,11 @@
 .. meta::
-   :description: This guide describes how to set up a Dash high-performance masternode. It also describes various options for hosting and different wallets
-   :keywords: dash, guide, masternodes, trezor, dip3, setup, bls, hpmn
+   :description: This guide describes how to set up a Dash evolution masternode. It also describes various options for hosting and different wallets
+   :keywords: dash, guide, masternodes, trezor, dip3, setup, bls, evonode
 
-.. _hpmn-setup:
+.. evonode-setup:
 
 ==========
-HPMN Setup
+EvoNode Setup
 ==========
 
 Setting up a high-performance masternode requires a basic understanding of Linux
@@ -26,7 +26,7 @@ more information.
 Before you begin
 ================
 
-This guide assumes you are setting up a single mainnet high-performance
+This guide assumes you are setting up a single mainnet evolution
 masternode for the first time. If you are updating a masternode, see  :ref:`here
 <masternode-update>` instead. You will need:
 
@@ -65,7 +65,7 @@ in a configuration file and registration transaction as proof to write the
 configuration to the blockchain so the high-performance masternode can be
 included in the deterministic list.
 
-A high-performance masternode can be registered from the official Dash Core
+An evolution masternode (or EvoNode) can be registered from the official Dash Core
 wallet. This guide will describe the steps.
 
 ..
@@ -155,7 +155,7 @@ wallet. This guide will describe the steps.
     Dash Masternode Tool with masternode configuration
 
   Leave DMT open and continue with the next step: :ref:`installing Dash Core on
-  your VPS <hpmn-setup-install>`.
+  your VPS <evonode-setup-install>`.
 
   Option 2: Holding collateral in Dash Core wallet
   ------------------------------------------------

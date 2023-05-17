@@ -84,19 +84,19 @@ real-time payment rates, and `this site
 <http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various real-time
 statistics on the masternode network.
 
-High-Performance Masternodes (HPMNs)
-------------------------------------
+Evolution Masternodes (EvoNodes)
+--------------------------------
 
-High-Performance Masternodes (HPMNs) are a subset of masternodes that have 
-been created to host Dash Platform. An HPMN is a lot like a regular masternode
+Evolution Masternodes (EvoNodes) are a subset of masternodes that have 
+been created to host Dash Platform. An EvoNode is a lot like a regular masternode
 with the following differences:
 
 +----------------+-----------------------------------+-----------------------------------------------------+
-|                | Masternode                        | HPMN                                                |
+|                | Masternode                        | EvoNode                                             |
 +================+===================================+=====================================================+
 | Collateral     | 1000 DASH                         | 4000 DASH (4X the collateral for normal masternodes)|
 +----------------+-----------------------------------+-----------------------------------------------------+
-| Specs          | Lesser than HPMN                  | Higher than normal masternodes                      |
+| Specs          | Lesser than EvoNode               | Higher than normal masternodes                      |
 +----------------+-----------------------------------+-----------------------------------------------------+
 | Service        | Only Dash Core                    | Both Dash Core and Platform                         |
 +----------------+-----------------------------------+-----------------------------------------------------+
@@ -236,17 +236,17 @@ list is sorted in ascending order by this block height and ProRegTx hash
 (as a tie breaker in case two masternodes were registered in the same
 block), and the first entry is selected for payment.
 
-HPMN Payment Logic
-------------------
+EvoNode Payment Logic
+---------------------
 
-Because the reward distribution percentages are fixed, the number of HPMNs is 
+Because the reward distribution percentages are fixed, the number of EvoNodes is 
 expected to stabilize around a fixed number based on the total number of 
-masternodes (considering the current number of ~3850 Masternodes, ~450 HPMNs 
-are expected). This is because if there are more than that fixed number of HPMNs, 
-running a regular MN will be more profitable than running an HPMN, and hosts 
-will convert their HPMNs into MNs. 
+masternodes (considering the current number of ~3850 Masternodes, ~450 EvoNodes 
+are expected). This is because if there are more than that fixed number of EvoNodes, 
+running a regular MN will be more profitable than running an EvoNode, and hosts 
+will convert their EvoNodes into MNs. 
 
-HPMNs will receive 100% of the fees generated from Platform and 37.5% of 
+EvoNodes will receive 100% of the fees generated from Platform and 37.5% of 
 the masternode portion of Core block rewards. Regular MNs will receive the remaining 
 62.5% of the masternode portion of Core block rewards and 0% of Platform fees.
 

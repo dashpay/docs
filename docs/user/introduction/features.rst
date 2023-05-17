@@ -75,19 +75,19 @@ shows a live calculation of masternode earnings. These rewards decrease
 by 7% each year, together with the block reward. There is also the
 possibility for masternodes to earn money from fees in the future.
 
-High-Performance Masternodes (HPMNs)
-------------------------------------
+Evolution Masternodes (EvoNodes)
+--------------------------------
 
-High-Performance Masternodes (HPMNs) are a subset of Masternodes that have 
-been created to host the Dash Platform. An HPMN is a lot like Masternodes 
+Evolution Masternodes (EvoNodes) are a subset of Masternodes that have 
+been created to host the Dash Platform. An EvoNode is a lot like Masternodes 
 with these differences:
 
 +----------------+-----------------------------------+-----------------------------------------------------+
-|                | Masternode                        | HPMN                                                |
+|                | Masternode                        | Evolution Masternode                                |
 +================+===================================+=====================================================+
 | Collateral     | 1000 DASH                         | 4000 DASH (4X the collateral for normal masternodes)|
 +----------------+-----------------------------------+-----------------------------------------------------+
-| Specs          | Lesser than HPMN                  | Higher than normal masternodes                      |
+| Specs          | Lesser than EvoNodes              | Higher than normal masternodes                      |
 +----------------+-----------------------------------+-----------------------------------------------------+
 | Service        | Only Dash Core                    | Both Dash Core and Platform                         |
 +----------------+-----------------------------------+-----------------------------------------------------+
