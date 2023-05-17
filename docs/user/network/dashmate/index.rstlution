@@ -146,8 +146,8 @@ directly, set the reward share percentage also.
 
    Enter operator information
 
-.. note:: The following step only applies to HPMNs. Regular masternodes do not
-   require a Platform node key since they do not host Platform services.
+.. note:: The following step only applies to evolution masternodes. Regular masternodes 
+          do not require a Platform node key since they do not host Platform services.
 
 Enter a Platform node key. You can enter one :hoverxref:`you have created
 <hpmn-generate-platform-node-id>` or received from a hosting provider.
@@ -189,14 +189,14 @@ details.
 Enable SSL
 ----------
 
-.. note:: The following step only applies to HPMNs. Regular masternodes do not
+.. note:: The following step only applies to EvoNodess. Regular masternodes do not
    require an SSL certificate since they do not host Platform services.
 
 Dash Platform requires SSL for communication. Dashmate provides several options
 for obtaining the required SSL certificate.
 
 .. warning:: Self-signed certificates cannot be used on mainnet. When setting
-   up a mainnet HPMN, **ZeroSSL** and **File on disk** are the only options available.
+   up a mainnet EvoNode, **ZeroSSL** and **File on disk** are the only options available.
 
 .. figure:: img/11a-ssl-config-zerossl.png
    :align: center
