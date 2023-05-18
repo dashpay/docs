@@ -1,12 +1,12 @@
 .. meta::
-   :description: This guide describes how to set up a Dash high-performance masternode. It also describes various options for hosting and different wallets
-   :keywords: dash, guide, masternodes, trezor, dip3, setup, bls, hpmn
+   :description: This guide describes how to set up a Dash evolution masternode. It also describes various options for hosting and different wallets
+   :keywords: dash, guide, masternodes, trezor, dip3, setup, bls, evonode
 
-.. _hpmn-setup:
+.. _evonode-setup:
 
-==========
-HPMN Setup
-==========
+=============
+EvoNode Setup
+=============
 
 Setting up a high-performance masternode requires a basic understanding of Linux
 and blockchain technology, as well as an ability to follow instructions closely.
@@ -26,7 +26,7 @@ more information.
 Before you begin
 ================
 
-This guide assumes you are setting up a single mainnet high-performance
+This guide assumes you are setting up a single mainnet Evolution
 masternode for the first time. If you are updating a masternode, see  :ref:`here
 <masternode-update>` instead. You will need:
 
@@ -53,7 +53,7 @@ both security and performance reasons. Refer to the :hoverxref:`Server
 configuration <server-config>` page for details on preparing your server to host
 a masternode.
 
-.. _hpmn-send-collateral:
+.. _evonode-send-collateral:
 
 Send the collateral
 ===================
@@ -65,7 +65,7 @@ in a configuration file and registration transaction as proof to write the
 configuration to the blockchain so the high-performance masternode can be
 included in the deterministic list.
 
-A high-performance masternode can be registered from the official Dash Core
+An Evolution masternode (or EvoNode) can be registered from the official Dash Core
 wallet. This guide will describe the steps.
 
 ..
@@ -155,7 +155,7 @@ wallet. This guide will describe the steps.
     Dash Masternode Tool with masternode configuration
 
   Leave DMT open and continue with the next step: :ref:`installing Dash Core on
-  your VPS <hpmn-setup-install>`.
+  your VPS <evonode-setup-install>`.
 
   Option 2: Holding collateral in Dash Core wallet
   ------------------------------------------------
@@ -203,7 +203,7 @@ operator key.
    Trezor blockchain explorer showing 15 confirmations for collateral transfer
 
 
-.. _hpmn-setup-install:
+.. _evonode-setup-install:
 
 Software Installation
 =====================
@@ -211,10 +211,10 @@ Software Installation
 The following methods are available for installing Dash high-performance
 masternode software:
 
-- :ref:`Dashmate installation <hpmn-setup-install-dashmate>`
-- :ref:`Manual installation <hpmn-setup-install-manual>`
+- :ref:`Dashmate installation <evonode-setup-install-dashmate>`
+- :ref:`Manual installation <evonode-setup-install-manual>`
 
-.. _hpmn-setup-install-dashmate:
+.. _evonode-setup-install-dashmate:
 
 Dashmate installation
 ---------------------
@@ -248,7 +248,7 @@ Continue with the :ref:`Registration step <register-hpmn-dashmate>` to setup the
 collateral, keys and construct the ProTx transaction required to enable your
 masternode.
 
-.. _hpmn-setup-install-manual:
+.. _evonode-setup-install-manual:
 
 Manual installation
 -------------------
@@ -257,7 +257,7 @@ Manual installation
   
   Dash Platform will include multiple services that must be configured properly
   for a high-performance masternode to operate correctly. A :ref:`dashmate-based
-  installation <hpmn-setup-install-dashmate>` is recommended to ensure
+  installation <evonode-setup-install-dashmate>` is recommended to ensure
   your configuration is functional.
 
 To manually download and install the components of your Dash high-performance
@@ -470,7 +470,7 @@ The keys required for the different masternode roles are described briefly under
   Congratulations! Your masternode is now running.
 
 
-.. _hpmn-dashcore-protx:
+.. _evonode-dashcore-protx:
 
 ..
   Option 2: Registering from Dash Core wallet
@@ -482,10 +482,10 @@ Option 1: Registering from dashmate
 
 .. note::
   Prior to running the dashmate setup wizard you should obtain the
-  :hoverxref:`collateral transaction info <hpmn-mn-outputs>` and the owner, voting,
+  :hoverxref:`collateral transaction info <evonode-mn-outputs>` and the owner, voting,
   and payout addresses for the new HPMN. For example, use Dash Core to generate
   the addresses as described in :hoverxref:`this section below
-  <hpmn-get-addresses>`.
+  <evonode-get-addresses>`.
 
 Run the setup wizard
 ^^^^^^^^^^^^^^^^^^^^
@@ -532,7 +532,7 @@ entirely from within dashmate. See the documentation :hoverxref:`here
 Option 2: Registering from Dash Core wallet
 -------------------------------------------
 
-.. _hpmn-mn-outputs:
+.. _evonode-mn-outputs:
 
 Identify the funding transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -553,7 +553,7 @@ The first long string is your ``collateralHash``, while the last number is the
 ``collateralIndex``. 
 
 
-.. _hpmn-bls-generation:
+.. _evonode-bls-generation:
 
 Generate a BLS key pair
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -613,7 +613,7 @@ seconds in between to give Dash Core time to shut down::
   sleep 15
   ~/.dashcore/dashd
 
-.. _hpmn-generate-platform-node-id:
+.. _evonode-generate-platform-node-id:
 
 Generate a Platform Node ID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -652,7 +652,7 @@ A pair of BLS keys for the operator were already generated above, and the
 private key was entered on the masternode. The public key is used in this
 transaction as the ``operatorPubKey``.
 
-.. _hpmn-get-addresses:
+.. _evonode-get-addresses:
 
 Get masternode addresses
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -715,7 +715,7 @@ argument to the command as follows:
 - ``ownerKeyAddr``: The new Dash address generated above for the owner/voting
   address
 - ``operatorPubKey``: The BLS public key :ref:`generated above
-  <hpmn-bls-generation>` (or provided by your hosting service)
+  <evonode-bls-generation>` (or provided by your hosting service)
 - ``votingKeyAddr``: The new Dash address generated above, or the address of a
   delegate, used for proposal voting
 - ``operatorReward``: The percentage of the block reward allocated to the
@@ -723,7 +723,7 @@ argument to the command as follows:
 - ``payoutAddress``: A new or existing Dash address to receive the owner's
   masternode rewards
 - ``platformNodeID``: Platform P2P node ID :ref:`generated above
-  <hpmn-generate-platform-node-id>`
+  <evonode-generate-platform-node-id>`
 - ``platformP2PPort``: TCP port of Dash Platform peer-to-peer communication
   between nodes. Must be 26656 for mainnet.
 - ``platformHTTPPort``: TCP port of Platform HTTP/API interface. Must be 443 for
