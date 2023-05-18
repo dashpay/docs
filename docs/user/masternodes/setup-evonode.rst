@@ -256,7 +256,7 @@ Manual installation
 .. attention::
   
   Dash Platform will include multiple services that must be configured properly
-  for a Evolution Masternode to operate correctly. A :ref:`dashmate-based
+  for an Evolution Masternode to operate correctly. A :ref:`dashmate-based
   installation <evonode-setup-install-dashmate>` is recommended to ensure
   your configuration is functional.
 
