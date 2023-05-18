@@ -8,7 +8,7 @@
 EvoNode Setup
 =============
 
-Setting up a Evolution Masternode requires a basic understanding of Linux
+Setting up an Evolution Masternode requires a basic understanding of Linux
 and blockchain technology, as well as an ability to follow instructions closely.
 It also requires regular maintenance and careful security, particularly if you
 are not storing your Dash on a hardware wallet. There are some decisions to be
@@ -59,7 +59,7 @@ Send the collateral
 ===================
 
 A Dash address with a single unspent transaction output (UTXO) of exactly 4000
-DASH is required to operate a Evolution Masternode. Once it has been
+DASH is required to operate an Evolution Masternode. Once it has been
 sent, various keys regarding the transaction must be extracted for later entry
 in a configuration file and registration transaction as proof to write the
 configuration to the blockchain so the Evolution Masternode can be
@@ -256,7 +256,7 @@ Manual installation
 .. attention::
   
   Dash Platform will include multiple services that must be configured properly
-  for a Evolution Masternode to operate correctly. A :ref:`dashmate-based
+  for an Evolution Masternode to operate correctly. A :ref:`dashmate-based
   installation <evonode-setup-install-dashmate>` is recommended to ensure
   your configuration is functional.
 
