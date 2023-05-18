@@ -8,7 +8,7 @@
 EvoNode Setup
 =============
 
-Setting up a Evolution Masternode requires a basic understanding of Linux
+Setting up an Evolution Masternode requires a basic understanding of Linux
 and blockchain technology, as well as an ability to follow instructions closely.
 It also requires regular maintenance and careful security, particularly if you
 are not storing your Dash on a hardware wallet. There are some decisions to be
