@@ -65,7 +65,7 @@ in a configuration file and registration transaction as proof to write the
 configuration to the blockchain so the high-performance masternode can be
 included in the deterministic list.
 
-An evolution masternode (or EvoNode) can be registered from the official Dash Core
+An Evolution masternode (or EvoNode) can be registered from the official Dash Core
 wallet. This guide will describe the steps.
 
 ..
