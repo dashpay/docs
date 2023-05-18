@@ -62,7 +62,7 @@ A Dash address with a single unspent transaction output (UTXO) of exactly 4000
 DASH is required to operate an Evolution masternode. Once it has been
 sent, various keys regarding the transaction must be extracted for later entry
 in a configuration file and registration transaction as proof to write the
-configuration to the blockchain so the Evolution Masternode can be
+configuration to the blockchain so the Evolution masternode can be
 included in the deterministic list.
 
 An Evolution masternode (or EvoNode) can be registered from the official Dash Core
