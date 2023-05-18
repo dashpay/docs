@@ -2,7 +2,7 @@
    :description: This guide describes how to set up a Dash evolution masternode. It also describes various options for hosting and different wallets
    :keywords: dash, guide, masternodes, trezor, dip3, setup, bls, evonode
 
-.. evonode-setup:
+.. _evonode-setup:
 
 ==========
 EvoNode Setup
