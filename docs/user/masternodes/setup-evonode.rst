@@ -208,7 +208,7 @@ operator key.
 Software Installation
 =====================
 
-The following methods are available for installing Dash Evolution Masternode 
+The following methods are available for installing Dash Evolution masternode 
 software:
 
 - :ref:`Dashmate installation <evonode-setup-install-dashmate>`
