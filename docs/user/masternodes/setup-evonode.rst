@@ -260,7 +260,7 @@ Manual installation
   installation <evonode-setup-install-dashmate>` is recommended to ensure
   your configuration is functional.
 
-To manually download and install the components of your Dash Evolution Masternode, 
+To manually download and install the components of your Dash Evolution masternode, 
 visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ and 
 copy the link to the latest version appropriate for your CPU architecture, 
 e.g. ``x86_64-linux-gnu``. Go back to your terminal window and enter the following 
