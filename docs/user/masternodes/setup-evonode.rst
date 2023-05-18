@@ -265,7 +265,7 @@ visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ and
 copy the link to the latest version appropriate for your CPU architecture, 
 e.g. ``x86_64-linux-gnu``. Go back to your terminal window and enter the following 
 command, pasting in the address to the latest version of Dash Core by right clicking
- or pressing **Ctrl+ V**::
+or pressing **Ctrl+ V**::
 
   cd /tmp
   wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-x86_64-linux-gnu.tar.gz
