@@ -4,9 +4,9 @@
 
 .. _evonode-setup:
 
-==========
+=============
 EvoNode Setup
-==========
+=============
 
 Setting up a high-performance masternode requires a basic understanding of Linux
 and blockchain technology, as well as an ability to follow instructions closely.
