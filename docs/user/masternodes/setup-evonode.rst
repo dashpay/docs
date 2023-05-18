@@ -26,7 +26,7 @@ more information.
 Before you begin
 ================
 
-This guide assumes you are setting up a single mainnet evolution
+This guide assumes you are setting up a single mainnet Evolution
 masternode for the first time. If you are updating a masternode, see  :ref:`here
 <masternode-update>` instead. You will need:
 
