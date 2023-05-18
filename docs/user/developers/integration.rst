@@ -24,6 +24,11 @@ improvement of Bitcoin's shortcomings by offering a robust solution for instant
 transactions, enhancing user privacy, and offering a self-sustainable
 decentralized governance model.
 
+Notably, Dash InstantSend provides a mechanism for zero-confirmation
+transactions to be safely accepted and re-spent. InstantSend also provides
+enhanced security compared to the conventional practice of waiting for multiple
+block confirmations.
+
 - Block time: ~2.6 minutes per block
 - Github source: https://github.com/dashpay/dash
 - Latest release: https://github.com/dashpay/dash/releases/latest
