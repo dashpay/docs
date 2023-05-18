@@ -613,7 +613,7 @@ seconds in between to give Dash Core time to shut down::
   sleep 15
   ~/.dashcore/dashd
 
-.. _hpmn-generate-platform-node-id:
+.. _evonode-generate-platform-node-id:
 
 Generate a Platform Node ID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -652,7 +652,7 @@ A pair of BLS keys for the operator were already generated above, and the
 private key was entered on the masternode. The public key is used in this
 transaction as the ``operatorPubKey``.
 
-.. _hpmn-get-addresses:
+.. _evonode-get-addresses:
 
 Get masternode addresses
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -686,7 +686,7 @@ fee source** (``feeSourceAddress``). If you selected an external payout address,
 you must specify a fee source address. 
 
 Either the payout address or fee source address must have enough balance to pay
-the transaction fee, or the ``register_prepare_hpmn`` transaction will fail.
+the transaction fee, or the ``register_prepare_evonode`` transaction will fail.
 
 The private keys to the owner and fee source addresses must exist in the wallet
 submitting the transaction to the network. If your wallet is protected by a
@@ -701,9 +701,9 @@ Prepare the ProRegTx
 ~~~~~~~~~~~~~~~~~~~~
 
 We will now prepare an unsigned ProRegTx special transaction using the ``protx
-register_prepare_hpmn`` command. This command has the following syntax::
+register_prepare_evonode`` command. This command has the following syntax::
 
-  protx register_prepare_hpmn collateralHash collateralIndex ipAndPort ownerKeyAddr 
+  protx register_prepare_evonode collateralHash collateralIndex ipAndPort ownerKeyAddr 
     operatorPubKey votingKeyAddr operatorReward payoutAddress (feeSourceAddress)
 
 Open a text editor such as notepad to prepare this command. Replace each
@@ -738,7 +738,7 @@ collateral does not specify the operator's payout address.
 
 Example (remove line breaks if copying)::
 
-  protx register_prepare_hpmn 
+  protx register_prepare_evonode 
     16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3 
     1 
     45.76.230.239:19999 
@@ -797,7 +797,7 @@ a standard transaction fee is involved. The command takes the following syntax::
 Where: 
 
 - ``tx``: The serialized transaction previously returned in the ``tx`` output
-  field from the ``protx register_prepare_hpmn`` command
+  field from the ``protx register_prepare_evonode`` command
 - ``sig``: The message signed with the collateral key from the ``signmessage``
   command
 
