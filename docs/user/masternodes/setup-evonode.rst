@@ -8,14 +8,14 @@
 EvoNode Setup
 =============
 
-Setting up a high-performance masternode requires a basic understanding of Linux
+Setting up a Evolution Masternode requires a basic understanding of Linux
 and blockchain technology, as well as an ability to follow instructions closely.
 It also requires regular maintenance and careful security, particularly if you
 are not storing your Dash on a hardware wallet. There are some decisions to be
 made along the way, and optional extra steps to take for increased security.
 
 Commercial :ref:`masternode hosting services <masternode-hosting>` are available
-if you prefer to delegate day-to-day operation of your HPMN to a
+if you prefer to delegate day-to-day operation of your EvoNode to a
 professional operator. When using these hosting services, you retain full
 control of the DASH collateral and pay an agreed percentage of your reward to
 the operator. It is also possible to delegate your voting keys to a
@@ -59,10 +59,10 @@ Send the collateral
 ===================
 
 A Dash address with a single unspent transaction output (UTXO) of exactly 4000
-DASH is required to operate a high-performance masternode. Once it has been
+DASH is required to operate a Evolution Masternode. Once it has been
 sent, various keys regarding the transaction must be extracted for later entry
 in a configuration file and registration transaction as proof to write the
-configuration to the blockchain so the high-performance masternode can be
+configuration to the blockchain so the Evolution Masternode can be
 included in the deterministic list.
 
 An Evolution masternode (or EvoNode) can be registered from the official Dash Core
@@ -244,7 +244,7 @@ Install dashmate::
   
   Refer to the dashmate page for :hoverxref:`alternative installation options <dashmate-install>`.
 
-Continue with the :ref:`Registration step <register-hpmn-dashmate>` to setup the
+Continue with the :ref:`Registration step <register-evonode-dashmate>` to setup the
 collateral, keys and construct the ProTx transaction required to enable your
 masternode.
 
@@ -256,7 +256,7 @@ Manual installation
 .. attention::
   
   Dash Platform will include multiple services that must be configured properly
-  for a high-performance masternode to operate correctly. A :ref:`dashmate-based
+  for a Evolution Masternode to operate correctly. A :ref:`dashmate-based
   installation <evonode-setup-install-dashmate>` is recommended to ensure
   your configuration is functional.
 
@@ -385,11 +385,11 @@ response::
     "IsFailed": false
   }
 
-Continue with the :ref:`Registration step <register-hpmn>` to setup the
+Continue with the :ref:`Registration step <register-evonode>` to setup the
 collateral, keys and construct the ProTx transaction required to enable your
 masternode.
 
-.. _register-hpmn:
+.. _register-evonode:
 
 Register your masternode
 ========================
@@ -475,7 +475,7 @@ The keys required for the different masternode roles are described briefly under
 ..
   Option 2: Registering from Dash Core wallet
   -------------------------------------------
-.. _register-hpmn-dashmate:
+.. _register-evonode-dashmate:
 
 Option 1: Registering from dashmate
 -----------------------------------
@@ -483,7 +483,7 @@ Option 1: Registering from dashmate
 .. note::
   Prior to running the dashmate setup wizard you should obtain the
   :hoverxref:`collateral transaction info <evonode-mn-outputs>` and the owner, voting,
-  and payout addresses for the new HPMN. For example, use Dash Core to generate
+  and payout addresses for the new EvoNode. For example, use Dash Core to generate
   the addresses as described in :hoverxref:`this section below
   <evonode-get-addresses>`.
 
@@ -527,7 +527,7 @@ You can manage your masternode status, configuration, and running state
 entirely from within dashmate. See the documentation :hoverxref:`here
 <dashmate-node-operation>`.
 
-.. _register-hpmn-core:
+.. _register-evonode-core:
 
 Option 2: Registering from Dash Core wallet
 -------------------------------------------
