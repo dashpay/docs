@@ -27,7 +27,9 @@ decentralized governance model.
 Notably, Dash InstantSend provides a mechanism for zero-confirmation
 transactions to be safely accepted and re-spent. InstantSend also provides
 enhanced security compared to the conventional practice of waiting for multiple
-block confirmations.
+block confirmations. Therefore, :ref:`implementing InstantSend
+<integration-instantsend>` is the recommended best practice for all Dash
+integrations.
 
 - Block time: ~2.6 minutes per block
 - Github source: https://github.com/dashpay/dash
