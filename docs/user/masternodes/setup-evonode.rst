@@ -208,8 +208,8 @@ operator key.
 Software Installation
 =====================
 
-The following methods are available for installing Dash high-performance
-masternode software:
+The following methods are available for installing Dash Evolution Masternode 
+software:
 
 - :ref:`Dashmate installation <evonode-setup-install-dashmate>`
 - :ref:`Manual installation <evonode-setup-install-manual>`
@@ -260,13 +260,12 @@ Manual installation
   installation <evonode-setup-install-dashmate>` is recommended to ensure
   your configuration is functional.
 
-To manually download and install the components of your Dash high-performance
-masternode, visit the `GitHub releases page
-<https://github.com/dashpay/dash/releases>`_ and copy the link to the latest
-version appropriate for your CPU architecture, e.g. ``x86_64-linux-gnu``. Go
-back to your terminal window and enter the following command, pasting in the
-address to the latest version of Dash Core by right clicking or pressing **Ctrl
-+ V**::
+To manually download and install the components of your Dash Evolution Masternode, 
+visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ and 
+copy the link to the latest version appropriate for your CPU architecture, 
+e.g. ``x86_64-linux-gnu``. Go back to your terminal window and enter the following 
+command, pasting in the address to the latest version of Dash Core by right clicking
+ or pressing **Ctrl+ V**::
 
   cd /tmp
   wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-x86_64-linux-gnu.tar.gz
