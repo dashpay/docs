@@ -268,7 +268,7 @@ command, pasting in the address to the latest version of Dash Core by right clic
 or pressing **Ctrl+ V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v19.1.0/dashcore-19.1.0-x86_64-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -284,16 +284,16 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-19.0.0-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v19.1.0/dashcore-19.1.0-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-19.1.0-x86_64-linux-gnu.tar.gz.asc
 
 Create a working directory for Dash, extract the compressed archive and
 copy the necessary files to the directory::
 
   mkdir ~/.dashcore
-  tar xfv dashcore-19.0.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-19.0.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-19.0.0/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-19.1.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-19.1.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-19.1.0/bin/dash-cli ~/.dashcore/
 
 Create a configuration file using the following command::
 
