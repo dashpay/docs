@@ -8,20 +8,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 15:21-0500\n"
+"POT-Creation-Date: 2023-05-23 15:49-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:1
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:-1
 msgid "How to download, install and encrypt the Dash Core wallet in macOS"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:1
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:-1
 msgid "dash, core, wallet, macos, installation"
 msgstr ""
 
@@ -178,16 +178,15 @@ msgstr ""
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:128
 msgid ""
 "Once Dash Core is successfully installed and started, you will see the "
-"wallet overview screen. You will notice that the wallet is “out of sync”,"
-" and the status bar at the bottom of the window will show the "
-"synchronization progress."
+"wallet overview screen. The status bar at the bottom of the window will "
+"show the synchronization progress."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:136
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:135
 msgid "Dash Core begins synchronizing with the Dash network"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:138
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:137
 msgid ""
 "During this process, Dash Core will download a full copy of the Dash "
 "blockchain from other nodes to your device. Depending on your internet "
@@ -196,49 +195,77 @@ msgid ""
 "is complete, you will see a small blue tick in the lower right corner."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:147
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:146
 msgid "Dash Core synchronization is complete"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:149
-msgid "You can now begin to use your wallet to send and receive funds."
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:148
+msgid "You can now create a wallet to send and receive funds."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:152
-msgid "Encrypting your Dash wallet"
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:151
+msgid "Creating your Dash Wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:154
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:153
 msgid ""
-"After your wallet has synchronized with the Dash network, it is strongly "
-"advised to encrypt the wallet with a password or passphrase to prevent "
-"unauthorized access. You should use a strong, new password that you have "
-"never used somewhere else. Take note of your password and store it "
-"somewhere safe or you will be locked out of your wallet and lose access "
-"to your funds."
+"Beginning with Dash Core 19.0, a wallet will not be created for you by "
+"default. You will get this prompt in the Overview tab. To create a "
+"wallet, click the **Create a new wallet** button or click **File** -> "
+"**Create Wallet**."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:161
-msgid "To encrypt your wallet, click **Settings** > **Encrypt Wallet**."
-msgstr ""
-
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:166
-msgid "Encrypting the Dash wallet with a password"
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:160
+msgid ""
+"You will be prompted to create a new wallet with a custom wallet name. By"
+" default, your wallet will be encrypted. You may choose to uncheck the "
+"box and encrypt the wallet later. We have included instructions on how to"
+" encrypt your wallet in the following section."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:168
-msgid "You will be asked to enter and verify a password."
+msgid ""
+"If you do choose to encrypt now, you will be asked to enter and verify a "
+"password."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:173
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:200
 msgid "Enter a password"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:178
-msgid "Confirm you want to encrypt your wallet"
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:175
+msgid "Following that, you will get a standard warning."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:180
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:205
+msgid "Confirm you want to encrypt your wallet"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:182
+msgid ""
+"The following section will detail the steps you need to follow if you "
+"choose to encrypt your Dash wallet later."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:186
+msgid "Encrypting your Dash wallet"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:188
+msgid "To encrypt your wallet, click **Settings** > **Encrypt Wallet**."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:193
+msgid "Encrypting the Dash wallet with a password"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:195
+msgid "You will be asked to enter and verify a password."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:207
 msgid ""
 "When the encryption process is complete, you will see a warning that past"
 " backups of your wallet will no longer be usable, and be asked to shut "
@@ -246,11 +273,38 @@ msgid ""
 "lock in the lower right corner."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:188
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:215
 msgid "Fully encrypted and synchronized Dash Core wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:190
+#: ../../docs/user/wallets/dashcore/installation-macos.rst:217
 msgid "You can now begin to use your wallet to safely send and receive funds."
 msgstr ""
+
+#~ msgid ""
+#~ "Once Dash Core is successfully installed"
+#~ " and started, you will see the "
+#~ "wallet overview screen. You will notice"
+#~ " that the wallet is “out of "
+#~ "sync”, and the status bar at the"
+#~ " bottom of the window will show "
+#~ "the synchronization progress."
+#~ msgstr ""
+
+#~ msgid "You can now begin to use your wallet to send and receive funds."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After your wallet has synchronized with"
+#~ " the Dash network, it is strongly "
+#~ "advised to encrypt the wallet with "
+#~ "a password or passphrase to prevent "
+#~ "unauthorized access. You should use a"
+#~ " strong, new password that you have"
+#~ " never used somewhere else. Take note"
+#~ " of your password and store it "
+#~ "somewhere safe or you will be "
+#~ "locked out of your wallet and lose"
+#~ " access to your funds."
+#~ msgstr ""
 
