@@ -32,9 +32,9 @@ dependencies::
 Download and extract the latest version of Dash Core::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-x86_64-linux-gnu.tar.gz
-  tar -xvzf dashcore-19.0.0-x86_64-linux-gnu.tar.gz
-  rm dashcore-19.0.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v19.1.0/dashcore-19.1.0-x86_64-linux-gnu.tar.gz
+  tar -xvzf dashcore-19.1.0-x86_64-linux-gnu.tar.gz
+  rm dashcore-19.1.0-x86_64-linux-gnu.tar.gz
 
 Install `Dashcore Node <https://github.com/dashpay/dashcore-node>`_ and
 create your configuration::
@@ -55,7 +55,7 @@ Change paths in the configuration file as follows::
   nano dashcore-node.json
 
 - Change the value of ``datadir`` to ``../../.dashcore``
-- Change the value of ``exec`` to ``../../dashcore-19.0.0/bin/dashd``
+- Change the value of ``exec`` to ``../../dashcore-19.1.0/bin/dashd``
 - **Optionally** change the value of ``network`` to ``testnet`` if you 
   want to run Insight on testnet
 
