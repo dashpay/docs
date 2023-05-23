@@ -102,7 +102,6 @@ Twitter
 - **Dash Official Account:** https://twitter.com/dashpay
 - **Dash Force News:** https://twitter.com/DashForceNews
 - **Joël Valenzuela, Chief Editor, Dash Force News:** https://twitter.com/TheDesertLynx
-- **Tao of Satoshi, Dash Nation Founder and DAO-funded contractor:** `https://twitter.com/Dash_Nation <https://twitter.com/Dash_Nation>`__
 - **とみ三（Samurai33）, Dash Japan:** https://twitter.com/samurai3311
 
 
