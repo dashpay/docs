@@ -101,6 +101,7 @@ Twitter
 
 - **Dash Official Account:** https://twitter.com/dashpay
 - **Dash Force News:** https://twitter.com/DashForceNews
+- **Samuel Westrich, CTO of Dash Core Group:** https://twitter.com/SamWestrich/
 - **Joël Valenzuela, Chief Editor, Dash Force News:** https://twitter.com/TheDesertLynx
 - **とみ三（Samurai33）, Dash Japan:** https://twitter.com/samurai3311
 
