@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 15:21-0500\n"
+"POT-Creation-Date: 2023-05-23 15:49-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/masternodes/hosting.rst:1
+#: ../../docs/user/masternodes/hosting.rst:-1
 msgid ""
 "Masternode hosting services can help you set up and maintain a Dash "
 "masternode"
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:1
+#: ../../docs/user/masternodes/hosting.rst:-1
 msgid ""
 "dash, cryptocurrency, hosting, server, linux, masternode, contact, "
 "trezor, setup, operator, owner, dip3, reward"
@@ -350,62 +350,36 @@ msgid "Registering a hosted masternode"
 msgstr ""
 
 #: ../../docs/user/masternodes/hosting.rst:188
-msgid ""
-"Dash 0.13.0 implements DIP003, which introduces several changes to how a "
-"Dash masternode is set up and operated. A list of available documentation"
-" appears below:"
+msgid "A list of available documentation appears below:"
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:192
-msgid ""
-"`DIP003 Deterministic Masternode Lists "
-"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__"
-msgstr ""
-
-#: ../../docs/user/masternodes/hosting.rst:193
-msgid ":ref:`dip3-changes`"
-msgstr ""
-
-#: ../../docs/user/masternodes/hosting.rst:194
-msgid ""
-"`Dash 0.13 Upgrade Procedure for Masternodes (legacy documentation) "
-"<https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__"
-msgstr ""
-
-#: ../../docs/user/masternodes/hosting.rst:195
+#: ../../docs/user/masternodes/hosting.rst:190
 msgid ":ref:`Full masternode setup guide <masternode-setup>`"
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:196
+#: ../../docs/user/masternodes/hosting.rst:191
 msgid ""
 ":ref:`Information for users of hosted masternodes <hosted-setup>` (you "
 "are here)"
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:197
+#: ../../docs/user/masternodes/hosting.rst:192
 msgid ""
 ":ref:`Information for operators of hosted masternodes <operator-"
 "transactions>`"
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:199
-msgid ""
-"It is highly recommended to first read at least the list of changes "
-"before continuing in order to familiarize yourself with the new concepts "
-"in DIP003."
-msgstr ""
-
-#: ../../docs/user/masternodes/hosting.rst:203
+#: ../../docs/user/masternodes/hosting.rst:194
 msgid "Registering a hosted masternode is done in several steps:"
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:205
+#: ../../docs/user/masternodes/hosting.rst:196
 msgid ""
 "Send 1000 DASH to an address you control in a single transaction and wait"
 " for 15 confirmations"
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:207
+#: ../../docs/user/masternodes/hosting.rst:198
 msgid ""
 "Correspond with your hosting provider to determine who will generate the "
 "operator BLS keys, whether their fee will be paid by an operator reward "
@@ -413,13 +387,13 @@ msgid ""
 "masternode will be set up before or after the registration transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:212
+#: ../../docs/user/masternodes/hosting.rst:203
 msgid ""
 "Prepare, sign and broadcast the registration transaction using Dash Core "
 "or DMT"
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:215
+#: ../../docs/user/masternodes/hosting.rst:206
 msgid ""
 "It is **highly recommended** to store the keys to your masternode "
 "collateral on a :ref:`hardware wallet <dash-hardware-wallet>` for added "
@@ -432,25 +406,25 @@ msgid ""
 "masternode>`."
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:229
+#: ../../docs/user/masternodes/hosting.rst:220
 msgid "Operator transactions"
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:231
+#: ../../docs/user/masternodes/hosting.rst:222
 msgid ""
 "This documentation is intended for operators managing nodes on behalf of "
 "owners. If you provide an IP address and port of a synchronized full node"
 " with your ``masternodeblsprivkey`` entered in the ``dash.conf`` file as "
 "descibed :ref:`here <bls-generation>` to the masternode owner, it will "
-"appear in the DIP003 valid set immediately after they submit the ``protx "
-"register_submit`` command as described above. If the full node is not "
-"running, or if the owner submits ``0`` for the ``ipAndPort``, then the "
-"node will be registered in a PoSe-banned state. In this case, the "
+"appear in the valid masternode set immediately after they submit the "
+"``protx register_submit`` command as described above. If the full node is"
+" not running, or if the owner submits ``0`` for the ``ipAndPort``, then "
+"the node will be registered in a PoSe-banned state. In this case, the "
 "operator will need to issue a :ref:`ProUpServTx transaction <update-"
 "dip3-config>` to update the service features and register the masternode."
 msgstr ""
 
-#: ../../docs/user/masternodes/hosting.rst:243
+#: ../../docs/user/masternodes/hosting.rst:234
 msgid ""
 "The ProRegTx submitted by the owner also specifies the percentage reward "
 "for the operator. It does not specify the operator's reward address, so a"
@@ -458,4 +432,57 @@ msgid ""
 "address. If the reward is not claimed, it will be paid to the owner in "
 "full."
 msgstr ""
+
+#~ msgid ""
+#~ "Dash 0.13.0 implements DIP003, which "
+#~ "introduces several changes to how a "
+#~ "Dash masternode is set up and "
+#~ "operated. A list of available "
+#~ "documentation appears below:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`DIP003 Deterministic Masternode Lists "
+#~ "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__"
+#~ msgstr ""
+
+#~ msgid ":ref:`dip3-changes`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Dash 0.13 Upgrade Procedure for "
+#~ "Masternodes (legacy documentation) "
+#~ "<https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It is highly recommended to first "
+#~ "read at least the list of changes"
+#~ " before continuing in order to "
+#~ "familiarize yourself with the new "
+#~ "concepts in DIP003."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This documentation is intended for "
+#~ "operators managing nodes on behalf of"
+#~ " owners. If you provide an IP "
+#~ "address and port of a synchronized "
+#~ "full node with your ``masternodeblsprivkey``"
+#~ " entered in the ``dash.conf`` file as"
+#~ " descibed :ref:`here <bls-generation>` to"
+#~ " the masternode owner, it will appear"
+#~ " in the DIP003 valid set immediately"
+#~ " after they submit the ``protx "
+#~ "register_submit`` command as described above."
+#~ " If the full node is not "
+#~ "running, or if the owner submits "
+#~ "``0`` for the ``ipAndPort``, then the"
+#~ " node will be registered in a "
+#~ "PoSe-banned state. In this case, the"
+#~ " operator will need to issue a "
+#~ ":ref:`ProUpServTx transaction <update-dip3-config>`"
+#~ " to update the service features and"
+#~ " register the masternode."
+#~ msgstr ""
 

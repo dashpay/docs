@@ -1,31 +1,32 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
 # Translators:
 # Daf Daf, 2022
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-04 12:28-0400\n"
+"POT-Creation-Date: 2023-05-23 15:49-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: Daf Daf, 2022\n"
-"Language-Team: French (https://app.transifex.com/dash/teams/37570/fr/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Language-Team: French (https://app.transifex.com/dash/teams/37570/fr/)\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
+"1000000 == 0 ? 1 : 2;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/developers/integration.rst-1
+#: ../../docs/user/developers/integration.rst:-1
 msgid "Technical guides for developers integrating Dash."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst-1
+#: ../../docs/user/developers/integration.rst:-1
 msgid ""
 "dash, merchants, API, SDK, instantsend, python, .NET, java, javascript, "
 "nodejs, php, objective-c"
@@ -44,10 +45,10 @@ msgstr ""
 #: ../../docs/user/developers/integration.rst:13
 msgid ""
 "`Dash Core <https://github.com/dashpay/dash/releases>`__ is a fork of "
-"`Bitcoin Core <https://github.com/bitcoin/bitcoin>`__ and shares many common"
-" functionalities. Key differences are found in existing JSON-RPC commands "
-"which have been customized to support unique functionalities such as "
-"InstantSend."
+"`Bitcoin Core <https://github.com/bitcoin/bitcoin>`__ and shares many "
+"common functionalities. Key differences are found in existing JSON-RPC "
+"commands which have been customized to support unique functionalities "
+"such as InstantSend."
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:19
@@ -56,324 +57,297 @@ msgstr ""
 
 #: ../../docs/user/developers/integration.rst:21
 msgid ""
-"Dash is a Proof of Work network, and similar to Bitcoin, Dash has a mining "
-"network but uses a different block hashing algorithm. Dash serves as an "
-"improvement of Bitcoin's shortcomings by offering a robust solution for "
-"instant transactions, enhancing user privacy, and offering a self-"
+"Dash is a Proof of Work network, and similar to Bitcoin, Dash has a "
+"mining network but uses a different block hashing algorithm. Dash serves "
+"as an improvement of Bitcoin's shortcomings by offering a robust solution"
+" for instant transactions, enhancing user privacy, and offering a self-"
 "sustainable decentralized governance model."
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:27
-msgid "Block time: ~2.6 minutes per block"
-msgstr ""
-
-#: ../../docs/user/developers/integration.rst:28
-msgid "Github source: https://github.com/dashpay/dash"
-msgstr ""
-
-#: ../../docs/user/developers/integration.rst:29
-msgid "Latest release: https://github.com/dashpay/dash/releases/latest"
-msgstr ""
-
-#: ../../docs/user/developers/integration.rst:32
-msgid "JSON-RPC Interface"
+msgid ""
+"Notably, Dash InstantSend provides a mechanism for zero-confirmation "
+"transactions to be safely accepted and re-spent. InstantSend also "
+"provides enhanced security compared to the conventional practice of "
+"waiting for multiple block confirmations. Therefore, :ref:`implementing "
+"InstantSend <integration-instantsend>` is the recommended best practice "
+"for all Dash integrations."
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:34
-msgid ""
-"The majority of commands are unchanged from Bitcoin making integration into "
-"existing systems relatively straightforward. For a complete listing of RPC "
-"commands please refer to the `​Dash Developer Guide "
-"<https://dashcore.readme.io/docs/core-guide-introduction>`_."
+msgid "Block time: ~2.6 minutes per block"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:35
+msgid "Github source: https://github.com/dashpay/dash"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:36
+msgid "Latest release: https://github.com/dashpay/dash/releases/latest"
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:39
-msgid ""
-"Note that the following commands have been modified to support InstantSend:"
+msgid "JSON-RPC Interface"
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:41
-#: ../../docs/user/developers/integration.rst:186
 msgid ""
-"`getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-blockchain#getrawmempool>`__"
-msgstr ""
-
-#: ../../docs/user/developers/integration.rst:42
-#: ../../docs/user/developers/integration.rst:187
-msgid ""
-"`getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-blockchain#getmempoolancestors>`__"
-msgstr ""
-
-#: ../../docs/user/developers/integration.rst:43
-#: ../../docs/user/developers/integration.rst:188
-msgid ""
-"`getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-blockchain#getmempooldescendants>`__"
-msgstr ""
-
-#: ../../docs/user/developers/integration.rst:44
-#: ../../docs/user/developers/integration.rst:189
-msgid ""
-"`getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-blockchain#getmempoolentry>`__"
-msgstr ""
-
-#: ../../docs/user/developers/integration.rst:45
-#: ../../docs/user/developers/integration.rst:190
-msgid ""
-"`getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-raw-transactions#getrawtransaction>`__"
+"The majority of commands are unchanged from Bitcoin making integration "
+"into existing systems relatively straightforward. For a complete listing "
+"of RPC commands please refer to the :ref:`​Dash Developer Guide <core"
+":guide-index>`."
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:46
-#: ../../docs/user/developers/integration.rst:191
 msgid ""
-"`gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-wallet#gettransaction>`__"
-msgstr ""
-
-#: ../../docs/user/developers/integration.rst:47
-#: ../../docs/user/developers/integration.rst:192
-msgid ""
-"`listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-wallet#listtransactions>`__"
+"Note that the following commands have been modified to support "
+"InstantSend:"
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:48
 #: ../../docs/user/developers/integration.rst:193
+msgid ":ref:`getrawmempool <core:api-rpc-blockchain-getrawmempool>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:49
+#: ../../docs/user/developers/integration.rst:194
+msgid ":ref:`getmempoolancestors <core:api-rpc-blockchain-getmempoolancestors>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:50
+#: ../../docs/user/developers/integration.rst:195
 msgid ""
-"`listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-"
-"procedure-calls-wallet#listsinceblock>`__"
+":ref:`getmempooldescendants <core:api-rpc-blockchain-"
+"getmempooldescendants>`"
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:51
-#: ../../docs/user/developers/integration.rst:72
+#: ../../docs/user/developers/integration.rst:196
+msgid ":ref:`getmempoolentry <core:api-rpc-blockchain-getmempoolentry>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:52
+#: ../../docs/user/developers/integration.rst:197
+msgid ":ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:53
+#: ../../docs/user/developers/integration.rst:198
+msgid ":ref:`gettransaction <core:api-rpc-wallet-gettransaction>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:54
+#: ../../docs/user/developers/integration.rst:199
+msgid ":ref:`listtransactions <core:api-rpc-wallet-listtransactions>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:55
+#: ../../docs/user/developers/integration.rst:200
+msgid ":ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:58
+#: ../../docs/user/developers/integration.rst:79
 msgid "Special Transactions"
 msgstr "Transactions spéciales"
 
-#: ../../docs/user/developers/integration.rst:53
+#: ../../docs/user/developers/integration.rst:60
 msgid ""
 "Dash Core v0.13.0 introduced the concept of “Special Transactions” as "
 "specified in `DIP002 "
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__. Special "
 "Transactions provide a more native way to implement additional features "
-"which do not fit into the original concept of transactions. Please see the "
-":ref:`Special Transactions <integration-special-transactions>` section below"
-" for more information."
+"which do not fit into the original concept of transactions. Please see "
+"the :ref:`Special Transactions <integration-special-transactions>` "
+"section below for more information."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:61
+#: ../../docs/user/developers/integration.rst:68
 msgid "Block Hashing Algorithm"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:63
+#: ../../docs/user/developers/integration.rst:70
 msgid ""
 "Dash uses the X11 algorithm in place of SHA256 used in Bitcoin. It’s "
-"important to note, however, that this only affects the hashing of the block "
-"itself. All other internals utilize SHA256 hashes (transactions, merkle "
-"root, etc.), which allows for most existing libraries to work in the Dash "
-"ecosystem."
+"important to note, however, that this only affects the hashing of the "
+"block itself. All other internals utilize SHA256 hashes (transactions, "
+"merkle root, etc.), which allows for most existing libraries to work in "
+"the Dash ecosystem."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:74
+#: ../../docs/user/developers/integration.rst:81
 msgid ""
 "This documentation is also available as a `PDF "
-"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
-"Resources-Transaction-Types.pdf>`__."
+"<https://github.com/dashpay/docs/raw/master/binary/integration"
+"/Integration-Resources-Transaction-Types.pdf>`__."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:76
+#: ../../docs/user/developers/integration.rst:83
 msgid ""
 "Dash 0.13.0 and higher implement `DIP002 Special Transactions "
-"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, which form a "
-"basis for new transaction types that provide on-chain metadata to assist "
-"various consensus mechanisms. The following special transaction types exist:"
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, which form "
+"a basis for new transaction types that provide on-chain metadata to "
+"assist various consensus mechanisms. The following special transaction "
+"types exist:"
 msgstr ""
 "Dash, dans sa version 0.13.0 et ultérieure, implémente les `transactions "
 "spéciales DIP002 "
-"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, qui forment la"
-" base de nouveaux types de transactions fournissant des métadonnées sur "
-"chaîne, pour rendre possibles différents mécanismes de consensus. Les types "
-"de transactions spéciales sont les suivants :"
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, qui forment"
+" la base de nouveaux types de transactions fournissant des métadonnées "
+"sur chaîne, pour rendre possibles différents mécanismes de consensus. Les"
+" types de transactions spéciales sont les suivants :"
 
-#: ../../docs/user/developers/integration.rst:82
+#: ../../docs/user/developers/integration.rst:89
 msgid "Version"
 msgstr "Version"
 
-#: ../../docs/user/developers/integration.rst:82
+#: ../../docs/user/developers/integration.rst:89
 msgid "Type"
 msgstr "Type"
 
-#: ../../docs/user/developers/integration.rst:82
+#: ../../docs/user/developers/integration.rst:89
 msgid "Payload Size"
 msgstr "Volume de charge"
 
-#: ../../docs/user/developers/integration.rst:82
+#: ../../docs/user/developers/integration.rst:89
 msgid "Transaction Purpose / Example"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:84
-#: ../../docs/user/developers/integration.rst:86
-#: ../../docs/user/developers/integration.rst:88
-#: ../../docs/user/developers/integration.rst:90
-#: ../../docs/user/developers/integration.rst:92
-#: ../../docs/user/developers/integration.rst:94
-#: ../../docs/user/developers/integration.rst:96
+#: ../../docs/user/developers/integration.rst:91
+#: ../../docs/user/developers/integration.rst:93
+#: ../../docs/user/developers/integration.rst:95
+#: ../../docs/user/developers/integration.rst:97
+#: ../../docs/user/developers/integration.rst:99
+#: ../../docs/user/developers/integration.rst:101
+#: ../../docs/user/developers/integration.rst:103
 msgid "3"
 msgstr "3"
 
-#: ../../docs/user/developers/integration.rst:84
+#: ../../docs/user/developers/integration.rst:91
 msgid "0"
 msgstr "0"
 
-#: ../../docs/user/developers/integration.rst:84
+#: ../../docs/user/developers/integration.rst:91
 msgid "n/a"
 msgstr "n/d"
 
-#: ../../docs/user/developers/integration.rst:84
+#: ../../docs/user/developers/integration.rst:91
 msgid "Standard Transaction"
 msgstr "Transaction standard"
 
-#: ../../docs/user/developers/integration.rst:86
+#: ../../docs/user/developers/integration.rst:93
 msgid "1"
 msgstr "1"
 
-#: ../../docs/user/developers/integration.rst:86
-#: ../../docs/user/developers/integration.rst:88
-#: ../../docs/user/developers/integration.rst:90
-#: ../../docs/user/developers/integration.rst:92
-#: ../../docs/user/developers/integration.rst:94
-#: ../../docs/user/developers/integration.rst:96
+#: ../../docs/user/developers/integration.rst:93
+#: ../../docs/user/developers/integration.rst:95
+#: ../../docs/user/developers/integration.rst:97
+#: ../../docs/user/developers/integration.rst:99
+#: ../../docs/user/developers/integration.rst:101
+#: ../../docs/user/developers/integration.rst:103
 msgid "variable"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:86
-msgid ""
-"`Masternode Registration <https://dashcore.readme.io/docs/core-ref-"
-"transactions-special-transactions#section-pro-reg-tx>`__"
+#: ../../docs/user/developers/integration.rst:93
+msgid ":ref:`Masternode Registration <core:ref-txs-proregtx>`"
 msgstr ""
-"`Enregistrement de masternode <https://dashcore.readme.io/docs/core-ref-"
-"transactions-special-transactions#section-pro-reg-tx>`__"
 
-#: ../../docs/user/developers/integration.rst:88
+#: ../../docs/user/developers/integration.rst:95
 msgid "2"
 msgstr "2"
 
-#: ../../docs/user/developers/integration.rst:88
-msgid ""
-"`Update Masternode Service <https://dashcore.readme.io/docs/core-ref-"
-"transactions-special-transactions#section-pro-up-serv-tx>`__"
+#: ../../docs/user/developers/integration.rst:95
+msgid ":ref:`Update Masternode Service <core:ref-txs-proupservtx>`"
 msgstr ""
-"`Mise à jour du service de masternode <https://dashcore.readme.io/docs/core-"
-"ref-transactions-special-transactions#section-pro-up-serv-tx>`__"
 
-#: ../../docs/user/developers/integration.rst:90
-msgid ""
-"`Update Masternode Operator <https://dashcore.readme.io/docs/core-ref-"
-"transactions-special-transactions#section-pro-up-reg-tx>`__"
+#: ../../docs/user/developers/integration.rst:97
+msgid ":ref:`Update Masternode Operator <core:ref-txs-proupregtx>`"
 msgstr ""
-"`Mise à jour de l'opérateur de masternode "
-"<https://dashcore.readme.io/docs/core-ref-transactions-special-"
-"transactions#section-pro-up-reg-tx>`__"
 
-#: ../../docs/user/developers/integration.rst:92
+#: ../../docs/user/developers/integration.rst:99
 msgid "4"
 msgstr "4"
 
-#: ../../docs/user/developers/integration.rst:92
-msgid ""
-"`Masternode Revocation <https://dashcore.readme.io/docs/core-ref-"
-"transactions-special-transactions#section-pro-up-rev-tx>`__"
+#: ../../docs/user/developers/integration.rst:99
+msgid ":ref:`Masternode Revocation <core:ref-txs-prouprevtx>`"
 msgstr ""
-"`Révocation de masternode <https://dashcore.readme.io/docs/core-ref-"
-"transactions-special-transactions#section-pro-up-rev-tx>`__"
 
-#: ../../docs/user/developers/integration.rst:94
+#: ../../docs/user/developers/integration.rst:101
 msgid "5"
 msgstr "5"
 
-#: ../../docs/user/developers/integration.rst:94
-msgid ""
-"`Masternode List Merkle Proof <https://dashcore.readme.io/docs/core-ref-"
-"transactions-special-transactions#section-cb-tx>`__"
+#: ../../docs/user/developers/integration.rst:101
+msgid ":ref:`Masternode List Merkle Proof <core:ref-txs-cbtx>`"
 msgstr ""
-"`Preuve Merkel de la liste de masternodes "
-"<https://dashcore.readme.io/docs/core-ref-transactions-special-"
-"transactions#section-cb-tx>`__"
 
-#: ../../docs/user/developers/integration.rst:96
+#: ../../docs/user/developers/integration.rst:103
 msgid "6"
 msgstr "6"
 
-#: ../../docs/user/developers/integration.rst:96
-msgid ""
-"`Quorum Commitment <https://dashcore.readme.io/docs/core-ref-transactions-"
-"special-transactions#section-qc-tx>`__"
+#: ../../docs/user/developers/integration.rst:103
+msgid ":ref:`Quorum Commitment <core:ref-txs-qctx>`"
 msgstr ""
-"`Engagement de quorum <https://dashcore.readme.io/docs/core-ref-"
-"transactions-special-transactions#section-qc-tx>`__"
 
-#: ../../docs/user/developers/integration.rst:99
+#: ../../docs/user/developers/integration.rst:106
 msgid "Integration notes:"
 msgstr "Notes sur l'intégration :"
 
-#: ../../docs/user/developers/integration.rst:101
+#: ../../docs/user/developers/integration.rst:108
 msgid ""
 "`DIP002 Special Transactions "
-"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ introduced a "
-"new Transaction Version and related “Payload” to the network."
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ introduced a"
+" new Transaction Version and related “Payload” to the network."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:104
+#: ../../docs/user/developers/integration.rst:111
 msgid ""
 "Integrated Systems must be able to `serialize and deserialize "
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md#serialization-"
-"hashing-and-signing>`__ these new Transaction Types to accurately encode and"
-" decode Raw Transaction data."
+"hashing-and-signing>`__ these new Transaction Types to accurately encode "
+"and decode Raw Transaction data."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:108
+#: ../../docs/user/developers/integration.rst:115
 msgid ""
 "From a `backwards compatibility "
-"<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__ "
-"perspective, the 4 byte (32-bit) ``version`` field included in Classical "
-"Transactions was split into two fields: ``version`` and ``type`` (each "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__"
+" perspective, the 4 byte (32-bit) ``version`` field included in Classical"
+" Transactions was split into two fields: ``version`` and ``type`` (each "
 "consisting of 2 bytes)."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:113
+#: ../../docs/user/developers/integration.rst:120
 msgid ""
-"Refer to the `Special Transactions <https://dashcore.readme.io/docs/core-"
-"ref-transactions-special-transactions>`__ section of the Dash developer "
-"reference for additional detail on these data types, e.g. <variable int>."
+"Refer to the :ref:`Special Transactions <core:ref-txs-special-txs>` "
+"section of the Dash developer reference for additional detail on these "
+"data types, e.g. <variable int>."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:117
+#: ../../docs/user/developers/integration.rst:124
 msgid ""
-":ref:`InstantSend <integration-instantsend>` status and Payload JSON (e.g. "
-"``proRegTx``) is included in the JSON-RPC response, please note that this "
-"data is not part of the calculated hash and is provided for convenience."
+":ref:`InstantSend <integration-instantsend>` status and Payload JSON "
+"(e.g. ``proRegTx``) is included in the JSON-RPC response, please note "
+"that this data is not part of the calculated hash and is provided for "
+"convenience."
 msgstr ""
-"L\"état :ref:`InstantSend <integration-instantsend>` et la charge JSON (par "
-"exemple ``proRegTx``) sont inclus dans la réponse JSON-RPC. Veuillez noter "
-"que ces données ne sont pas incluses dans la signature de hachage calculée, "
-"et sont fournies par commodité."
-
-#: ../../docs/user/developers/integration.rst:122
-msgid ""
-"See the `transaction types integration documentation (PDF) "
-"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
-"Resources-Transaction-Types.pdf>`__ for worked examples of each transaction "
-"type."
-msgstr ""
+"L\"état :ref:`InstantSend <integration-instantsend>` et la charge JSON "
+"(par exemple ``proRegTx``) sont inclus dans la réponse JSON-RPC. Veuillez"
+" noter que ces données ne sont pas incluses dans la signature de hachage "
+"calculée, et sont fournies par commodité."
 
 #: ../../docs/user/developers/integration.rst:129
+msgid ""
+"See the `transaction types integration documentation (PDF) "
+"<https://github.com/dashpay/docs/raw/master/binary/integration"
+"/Integration-Resources-Transaction-Types.pdf>`__ for worked examples of "
+"each transaction type."
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:136
 msgid "InstantSend"
 msgstr "InstantSend"
 
-#: ../../docs/user/developers/integration.rst:131
+#: ../../docs/user/developers/integration.rst:138
 msgid ""
 "This documentation is also available as a `PDF "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend.pdf>`__."
@@ -381,61 +355,61 @@ msgstr ""
 "Cette documentation est aussi disponible au `format PDF "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend.pdf>`__."
 
-#: ../../docs/user/developers/integration.rst:133
+#: ../../docs/user/developers/integration.rst:140
 msgid ""
-"InstantSend is a feature provided by the Dash network that allows for zero-"
-"confirmation transactions to be safely accepted and re-spent. The network "
-"attempts to lock the inputs of every valid transaction when it is broadcast "
-"to the network. Every secured transaction is included in a following block "
-"in accordance with standard blockchain principles. Transactions are "
-"typically locked by InstantSend within 3 seconds of being propagated to the "
-"network."
+"InstantSend is a feature provided by the Dash network that allows for "
+"zero-confirmation transactions to be safely accepted and re-spent. The "
+"network attempts to lock the inputs of every valid transaction when it is"
+" broadcast to the network. Every secured transaction is included in a "
+"following block in accordance with standard blockchain principles. "
+"Transactions are typically locked by InstantSend within 3 seconds of "
+"being propagated to the network."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:141
+#: ../../docs/user/developers/integration.rst:148
 msgid ""
 "InstantSend is enabled by the Masternode Network which comprises several "
-"thousand masternode servers. These nodes are differentiated from standard "
-"nodes by having proven ownership of 1,000 Dash, making the network `highly "
-"resistant to Sybil attacks <https://en.wikipedia.org/wiki/Sybil_attack>`__. "
-"Masternodes form `Long-Living Masternode Quorums (LLMQs) "
+"thousand masternode servers. These nodes are differentiated from standard"
+" nodes by having proven ownership of 1,000 Dash, making the network "
+"`highly resistant to Sybil attacks "
+"<https://en.wikipedia.org/wiki/Sybil_attack>`__. Masternodes form `Long-"
+"Living Masternode Quorums (LLMQs) "
 "<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, which are "
 "responsible for providing near-instant certainty to the transaction "
-"participants that the transaction inputs cannot be re-spent, and that the "
-"transaction will be included in a following block instead of a conflicting "
-"transaction."
+"participants that the transaction inputs cannot be re-spent, and that the"
+" transaction will be included in a following block instead of a "
+"conflicting transaction."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:151
+#: ../../docs/user/developers/integration.rst:158
 msgid ""
 "This concept works as an extension to Nakamoto Consensus to provide "
-"additional security. InstantSend enables transacted funds to be immediately "
-"and securely re-spent by the recipient, even before the transaction is "
-"included in a block."
+"additional security. InstantSend enables transacted funds to be "
+"immediately and securely re-spent by the recipient, even before the "
+"transaction is included in a block."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:157
+#: ../../docs/user/developers/integration.rst:164
 msgid "Receiving InstantSend Transactions"
 msgstr "Réception de transactions InstantSend"
 
-#: ../../docs/user/developers/integration.rst:161
+#: ../../docs/user/developers/integration.rst:168
 msgid ""
 "An \"InstantSend Transaction\" is simply a standard transaction that has "
-"been provided additional assurances by the masternode network. As a result, "
-"and from an integration perspective, the only technical difference is the "
-"InstantSend status."
+"been provided additional assurances by the masternode network. As a "
+"result, and from an integration perspective, the only technical "
+"difference is the InstantSend status."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:166
+#: ../../docs/user/developers/integration.rst:173
 msgid "Receiving an InstantSend Transaction introduces two requirements:"
 msgstr "Recevoir une transaction InstantSend suppose deux obligations :"
 
-#: ../../docs/user/developers/integration.rst:168
-msgid ""
-"The ability to determine the “InstantSend Status” of a given transaction."
+#: ../../docs/user/developers/integration.rst:175
+msgid "The ability to determine the “InstantSend Status” of a given transaction."
 msgstr "La capacité à déterminer l'état InstantSend d'une transaction donnée."
 
-#: ../../docs/user/developers/integration.rst:171
+#: ../../docs/user/developers/integration.rst:178
 msgid ""
 "The ability to adjust “Confirmation Status” independently of block "
 "confirmation."
@@ -443,35 +417,36 @@ msgstr ""
 "La capacité à ajuster l'état de confirmation indépendamment de la "
 "confirmation de bloc."
 
-#: ../../docs/user/developers/integration.rst:174
+#: ../../docs/user/developers/integration.rst:181
 msgid ""
-"InstantSend Status is typically determined through direct connection with "
-"the dash daemon, `ZMQ notification "
-"<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__, or "
-"through the usage of an external wallet notification script."
+"InstantSend Status is typically determined through direct connection with"
+" the dash daemon, `ZMQ notification "
+"<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__, "
+"or through the usage of an external wallet notification script."
 msgstr ""
-"L'état InstantSend est typiquement déterminé par une connexion directe au "
-"\"daemon\" Dash, `ZMQ notification "
-"<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__, ou "
-"bien par l'utilisation du script de notification d'un portefeuille externe."
+"L'état InstantSend est typiquement déterminé par une connexion directe au"
+" \"daemon\" Dash, `ZMQ notification "
+"<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__, "
+"ou bien par l'utilisation du script de notification d'un portefeuille "
+"externe."
 
-#: ../../docs/user/developers/integration.rst:179
+#: ../../docs/user/developers/integration.rst:186
 msgid "Direct Connection"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:181
+#: ../../docs/user/developers/integration.rst:188
 msgid ""
-"InstantSend Status can be identified through direct connection with the Dash"
-" daemon using JSON-RPC protocol. The ``instantlock`` attribute of the JSON "
-"response reflects the status of the transaction and is included in the "
-"following commands:"
+"InstantSend Status can be identified through direct connection with the "
+"Dash daemon using JSON-RPC protocol. The ``instantlock`` attribute of the"
+" JSON response reflects the status of the transaction and is included in "
+"the following commands:"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:196
+#: ../../docs/user/developers/integration.rst:203
 msgid "ZMQ Notification"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:198
+#: ../../docs/user/developers/integration.rst:205
 msgid ""
 "Whenever a transaction enters the mempool and whenever a transaction is "
 "locked in the mempool, ZMQ notifications can be broadcast by the node. A "
@@ -479,91 +454,95 @@ msgid ""
 "<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:203
+#: ../../docs/user/developers/integration.rst:210
 msgid ""
-"The following notifications are relevant for recognizing transactions and "
-"their corresponding instantlocks:"
+"The following notifications are relevant for recognizing transactions and"
+" their corresponding instantlocks:"
 msgstr ""
-"Les notifications suivantes sont utiles pour reconnaître les transactions et"
-" leurs verrouillages instantanés correspondants :"
+"Les notifications suivantes sont utiles pour reconnaître les transactions"
+" et leurs verrouillages instantanés correspondants :"
 
-#: ../../docs/user/developers/integration.rst:206
+#: ../../docs/user/developers/integration.rst:213
 msgid "zmqpubhashtx"
 msgstr "zmqpubhashtx"
 
-#: ../../docs/user/developers/integration.rst:207
+#: ../../docs/user/developers/integration.rst:214
 msgid "zmqpubhashtxlock"
 msgstr "zmqpubhashtxlock"
 
-#: ../../docs/user/developers/integration.rst:208
+#: ../../docs/user/developers/integration.rst:215
 msgid "zmqpubrawtx"
 msgstr "zmqpubrawtx"
 
-#: ../../docs/user/developers/integration.rst:209
+#: ../../docs/user/developers/integration.rst:216
 msgid "zmqpubrawtxlock"
 msgstr "zmqpubrawtxlock"
 
-#: ../../docs/user/developers/integration.rst:212
+#: ../../docs/user/developers/integration.rst:219
 msgid "Wallet Notification"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:214
+#: ../../docs/user/developers/integration.rst:221
 msgid ""
 "The Dash Core Daemon can be configured to execute an external script "
 "whenever an InstantSend transaction relating to that wallet is observed. "
 "This is configured by adding the following line to the dash.conf file::"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:220
+#: ../../docs/user/developers/integration.rst:227
+#, fuzzy
 msgid ""
 "This is typically used with a wallet that has been populated with `watch-"
-"only <https://dashcore.readme.io/docs/core-additional-resources-"
-"glossary#section-watch-only-address>`__ addresses."
+"only "
+"<https://docs.dash.org/projects/core/en/stable/docs/resources/glossary.html"
+"#watch-only-address>`__ addresses."
 msgstr ""
-"C'est typiquement utilisé avec un portefeuille qui a été doté d'adresses `en"
-" lecture seule <https://dashcore.readme.io/docs/core-additional-resources-"
-"glossary#section-watch-only-address>`__."
+"C'est typiquement utilisé avec un portefeuille qui a été doté d'adresses "
+"`en lecture seule <https://dashcore.readme.io/docs/core-additional-"
+"resources-glossary#section-watch-only-address>`__."
 
-#: ../../docs/user/developers/integration.rst:227
+#: ../../docs/user/developers/integration.rst:234
 msgid "Broadcasting InstantSend Transactions"
 msgstr "Diffusion des transactions InstantSend"
 
-#: ../../docs/user/developers/integration.rst:231
+#: ../../docs/user/developers/integration.rst:238
 msgid ""
-"Because all transactions on the Dash network are automatically InstantSend, "
-"no procedural changes are required to broadcast transactions as InstantSend."
+"Because all transactions on the Dash network are automatically "
+"InstantSend, no procedural changes are required to broadcast transactions"
+" as InstantSend."
 msgstr ""
-
-#: ../../docs/user/developers/integration.rst:234
-msgid ""
-"Since Dash v0.14.0 established LLMQs on the Dash network, quorums will now "
-"attempt to lock every valid transaction by default without any additional "
-"fee or action by the sending wallet or user. A transaction is eligible for "
-"InstantSend when each of its inputs is considered confirmed. This is the "
-"case when at least one of the following circumstances is true:"
-msgstr ""
-"Depuis que la version 0.14.0 de Dash a lancé les LLMQ sur le réseau Dash, "
-"les quorums tentent par défaut de verrouiller chaque transaction valide, "
-"sans frais supplémentaires ni action à effectuer par le portefeuille d'envoi"
-" ou l'utilisateur. Une transaction est éligible pour InstantSend quand "
-"chacune de ses entrées est considérée comme confirmée. Cela est le cas dès "
-"qu'une des conditions suivantes est vraie :"
 
 #: ../../docs/user/developers/integration.rst:241
 msgid ""
-"the previous transaction referred to by the input is confirmed with 6 blocks"
+"Since Dash v0.14.0 established LLMQs on the Dash network, quorums will "
+"now attempt to lock every valid transaction by default without any "
+"additional fee or action by the sending wallet or user. A transaction is "
+"eligible for InstantSend when each of its inputs is considered confirmed."
+" This is the case when at least one of the following circumstances is "
+"true:"
 msgstr ""
-"la transaction précédente à laquelle l'entrée fait référence est confirmée "
-"par 6 blocs"
+"Depuis que la version 0.14.0 de Dash a lancé les LLMQ sur le réseau Dash,"
+" les quorums tentent par défaut de verrouiller chaque transaction valide,"
+" sans frais supplémentaires ni action à effectuer par le portefeuille "
+"d'envoi ou l'utilisateur. Une transaction est éligible pour InstantSend "
+"quand chacune de ses entrées est considérée comme confirmée. Cela est le "
+"cas dès qu'une des conditions suivantes est vraie :"
 
-#: ../../docs/user/developers/integration.rst:243
+#: ../../docs/user/developers/integration.rst:248
 msgid ""
-"the previous transaction is confirmed through an older InstantSend lock"
+"the previous transaction referred to by the input is confirmed with 6 "
+"blocks"
+msgstr ""
+"la transaction précédente à laquelle l'entrée fait référence est "
+"confirmée par 6 blocs"
+
+#: ../../docs/user/developers/integration.rst:250
+msgid "the previous transaction is confirmed through an older InstantSend lock"
 msgstr ""
 "la transaction précédente est confirmée par un verrouillage InstantSend "
 "antérieur"
 
-#: ../../docs/user/developers/integration.rst:245
+#: ../../docs/user/developers/integration.rst:252
 msgid ""
 "the block containing the previous transaction is `ChainLocked "
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"
@@ -571,28 +550,28 @@ msgstr ""
 "le bloc contenant la transaction précédente est `verrouillé sur chaîne "
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"
 
-#: ../../docs/user/developers/integration.rst:247
+#: ../../docs/user/developers/integration.rst:254
 msgid ""
 "When checking the previous transaction for an InstantSend lock, it is "
 "important to do this on mempool (non-mined) transactions. This allows "
 "chained InstantSend locking."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:252
+#: ../../docs/user/developers/integration.rst:259
 msgid "Additional Resources"
 msgstr "Ressources supplémentaires"
 
-#: ../../docs/user/developers/integration.rst:254
+#: ../../docs/user/developers/integration.rst:261
 msgid ""
-"The following resources provide additional information about InstantSend and"
-" are intended to help provide a more complete understanding of the "
+"The following resources provide additional information about InstantSend "
+"and are intended to help provide a more complete understanding of the "
 "underlying technologies."
 msgstr ""
-"Les ressources suivantes fournissent des informations supplémentaires sur "
-"InstantSend et sont destinées à fournir une compréhension plus complète des "
-"technologies sous-jacentes."
+"Les ressources suivantes fournissent des informations supplémentaires sur"
+" InstantSend et sont destinées à fournir une compréhension plus complète "
+"des technologies sous-jacentes."
 
-#: ../../docs/user/developers/integration.rst:258
+#: ../../docs/user/developers/integration.rst:265
 msgid ""
 "`InstantSend Technical Information "
 "<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__"
@@ -600,15 +579,16 @@ msgstr ""
 "`Informations techniques sur InstantSend "
 "<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__"
 
-#: ../../docs/user/developers/integration.rst:259
+#: ../../docs/user/developers/integration.rst:266
+#, fuzzy
 msgid ""
-"`InstantSend Developer Documentation <https://dashcore.readme.io/docs/core-"
-"guide-dash-features-instantsend>`__"
+":ref:`InstantSend Developer Documentation <core:guide-features-"
+"instantsend>`"
 msgstr ""
 "`Documentation InstantSend pour les développeurs "
 "<https://dashcore.readme.io/docs/core-guide-dash-features-instantsend>`__"
 
-#: ../../docs/user/developers/integration.rst:260
+#: ../../docs/user/developers/integration.rst:267
 msgid ""
 "`DIP0010: LLMQ InstantSend "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__"
@@ -616,10 +596,138 @@ msgstr ""
 "`DIP0010 : InstantSend LLMQ "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__"
 
-#: ../../docs/user/developers/integration.rst:261
+#: ../../docs/user/developers/integration.rst:268
 msgid ""
 "`Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-"
 "brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__"
 msgstr ""
-"`Résumé de produit : Dash Core version 0.14 <https://blog.dash.org/product-"
-"brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__"
+"`Résumé de produit : Dash Core version 0.14 <https://blog.dash.org"
+"/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__"
+
+#~ msgid ""
+#~ "The majority of commands are unchanged"
+#~ " from Bitcoin making integration into "
+#~ "existing systems relatively straightforward. "
+#~ "For a complete listing of RPC "
+#~ "commands please refer to the `​Dash "
+#~ "Developer Guide <https://dashcore.readme.io/docs/core-"
+#~ "guide-introduction>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`getrawmempool <https://dashcore.readme.io/docs/core-"
+#~ "api-ref-remote-procedure-calls-"
+#~ "blockchain#getrawmempool>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`getmempoolancestors <https://dashcore.readme.io/docs/core-"
+#~ "api-ref-remote-procedure-calls-"
+#~ "blockchain#getmempoolancestors>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`getmempooldescendants <https://dashcore.readme.io/docs/core-"
+#~ "api-ref-remote-procedure-calls-"
+#~ "blockchain#getmempooldescendants>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`getmempoolentry <https://dashcore.readme.io/docs/core-"
+#~ "api-ref-remote-procedure-calls-"
+#~ "blockchain#getmempoolentry>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`getrawtransaction <https://dashcore.readme.io/docs/core-"
+#~ "api-ref-remote-procedure-calls-raw-"
+#~ "transactions#getrawtransaction>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`gettransaction <https://dashcore.readme.io/docs/core-"
+#~ "api-ref-remote-procedure-calls-"
+#~ "wallet#gettransaction>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`listtransactions <https://dashcore.readme.io/docs/core-"
+#~ "api-ref-remote-procedure-calls-"
+#~ "wallet#listtransactions>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`listsinceblock <https://dashcore.readme.io/docs/core-"
+#~ "api-ref-remote-procedure-calls-"
+#~ "wallet#listsinceblock>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Masternode Registration <https://dashcore.readme.io/docs"
+#~ "/core-ref-transactions-special-transactions"
+#~ "#section-pro-reg-tx>`__"
+#~ msgstr ""
+#~ "`Enregistrement de masternode "
+#~ "<https://dashcore.readme.io/docs/core-ref-transactions-"
+#~ "special-transactions#section-pro-reg-tx>`__"
+
+#~ msgid ""
+#~ "`Update Masternode Service "
+#~ "<https://dashcore.readme.io/docs/core-ref-transactions-"
+#~ "special-transactions#section-pro-up-serv-"
+#~ "tx>`__"
+#~ msgstr ""
+#~ "`Mise à jour du service de "
+#~ "masternode <https://dashcore.readme.io/docs/core-ref-"
+#~ "transactions-special-transactions#section-pro-"
+#~ "up-serv-tx>`__"
+
+#~ msgid ""
+#~ "`Update Masternode Operator "
+#~ "<https://dashcore.readme.io/docs/core-ref-transactions-"
+#~ "special-transactions#section-pro-up-reg-"
+#~ "tx>`__"
+#~ msgstr ""
+#~ "`Mise à jour de l'opérateur de "
+#~ "masternode <https://dashcore.readme.io/docs/core-ref-"
+#~ "transactions-special-transactions#section-pro-"
+#~ "up-reg-tx>`__"
+
+#~ msgid ""
+#~ "`Masternode Revocation <https://dashcore.readme.io/docs"
+#~ "/core-ref-transactions-special-transactions"
+#~ "#section-pro-up-rev-tx>`__"
+#~ msgstr ""
+#~ "`Révocation de masternode "
+#~ "<https://dashcore.readme.io/docs/core-ref-transactions-"
+#~ "special-transactions#section-pro-up-rev-"
+#~ "tx>`__"
+
+#~ msgid ""
+#~ "`Masternode List Merkle Proof "
+#~ "<https://dashcore.readme.io/docs/core-ref-transactions-"
+#~ "special-transactions#section-cb-tx>`__"
+#~ msgstr ""
+#~ "`Preuve Merkel de la liste de "
+#~ "masternodes <https://dashcore.readme.io/docs/core-ref-"
+#~ "transactions-special-transactions#section-cb-"
+#~ "tx>`__"
+
+#~ msgid ""
+#~ "`Quorum Commitment <https://dashcore.readme.io/docs"
+#~ "/core-ref-transactions-special-transactions"
+#~ "#section-qc-tx>`__"
+#~ msgstr ""
+#~ "`Engagement de quorum "
+#~ "<https://dashcore.readme.io/docs/core-ref-transactions-"
+#~ "special-transactions#section-qc-tx>`__"
+
+#~ msgid ""
+#~ "Refer to the `Special Transactions "
+#~ "<https://dashcore.readme.io/docs/core-ref-transactions-"
+#~ "special-transactions>`__ section of the "
+#~ "Dash developer reference for additional "
+#~ "detail on these data types, e.g. "
+#~ "<variable int>."
+#~ msgstr ""
+

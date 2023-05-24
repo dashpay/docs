@@ -8,20 +8,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 15:21-0500\n"
+"POT-Creation-Date: 2023-05-23 15:49-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/wallets/dashcore/cmd-rpc.rst:1
+#: ../../docs/user/wallets/dashcore/cmd-rpc.rst:-1
 msgid "Dash Core wallet startup arguments and RPC command reference"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/cmd-rpc.rst:1
+#: ../../docs/user/wallets/dashcore/cmd-rpc.rst:-1
 msgid "dash, core, wallet, arguments, commands, RPC"
 msgstr ""
 
@@ -117,47 +117,94 @@ msgstr ""
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:42
 msgid ""
 "Detailed information for all command line arguments can be found at the "
-"following links to the `Dash Core developer documentation site "
-"<https://dashcore.readme.io/docs/dash-core-wallet-arguments-and-"
-"commands>`_:"
+"following links to the :ref:`Dash Core developer documentation site <core"
+":dashcore-arguments-and-commands>`:"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:45
-msgid ""
-"`dashd <https://dashcore.readme.io/docs/dash-core-wallet-arguments-and-"
-"commands-dashd>`_"
+msgid ":ref:`dashd <core:dashcore-arguments-and-commands-dashd>`"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:46
-msgid ""
-"`dash-qt <https://dashcore.readme.io/docs/dash-core-wallet-arguments-and-"
-"commands-dash-qt>`_"
+msgid ":ref:`dash-qt <core:dashcore-arguments-and-commands-dash-qt>`"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:47
-msgid ""
-"`dash-cli <https://dashcore.readme.io/docs/dash-core-wallet-arguments-"
-"and-commands-dash-cli>`_"
+msgid ":ref:`dash-cli <core:dashcore-arguments-and-commands-dash-cli>`"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:48
-msgid ""
-"`dash-tx <https://dashcore.readme.io/docs/dash-core-wallet-arguments-and-"
-"commands-dash-tx>`_"
+msgid ":ref:`dash-tx <core:dashcore-arguments-and-commands-dash-tx>`"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:52
 msgid "RPC commands"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/cmd-rpc.rst:54
+#: ../../docs/user/wallets/dashcore/cmd-rpc.rst:55
+msgid ""
+"Wallet-related RPCs require using the ``-rpcwallet`` option when more "
+"than one wallet file is loaded. This is to ensure the RPC command is "
+"executed using the correct wallet. See the :ref:`Core developer "
+"documentation <core:api-rpc-multi-wallet-support>` for additional "
+"information."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/cmd-rpc.rst:60
 msgid ""
 "Detailed documentation for all available RPC commands is accessible via "
-"the `Dash Core developer documentation RPC page "
-"<https://dashcore.readme.io/docs/core-api-ref-remote-procedure-call-"
-"quick-reference>`_. For full documentation of arguments, results and "
-"examples, type ``help ( \"command\" )`` to view full details at the "
-"console. You can enter commands either from **Tools > Console** in the QT"
-" wallet, or using *dash-cli* for headless wallets and *dashd*."
+"the :ref:`Dash Core developer documentation RPC page <core:api-rpc-quick-"
+"reference>`. For full documentation of arguments, results and examples, "
+"type ``help ( \"command\" )`` to view full details at the console. You "
+"can enter commands either from **Tools > Console** in the QT wallet, or "
+"using *dash-cli* for headless wallets and *dashd*."
 msgstr ""
+
+#~ msgid ""
+#~ "Detailed information for all command "
+#~ "line arguments can be found at the"
+#~ " following links to the `Dash Core"
+#~ " developer documentation site "
+#~ "<https://dashcore.readme.io/docs/dash-core-wallet-"
+#~ "arguments-and-commands>`_:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`dashd <https://dashcore.readme.io/docs/dash-core-"
+#~ "wallet-arguments-and-commands-dashd>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`dash-qt <https://dashcore.readme.io/docs/dash-"
+#~ "core-wallet-arguments-and-commands-dash-"
+#~ "qt>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`dash-cli <https://dashcore.readme.io/docs/dash-"
+#~ "core-wallet-arguments-and-commands-dash-"
+#~ "cli>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`dash-tx <https://dashcore.readme.io/docs/dash-"
+#~ "core-wallet-arguments-and-commands-dash-"
+#~ "tx>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Detailed documentation for all available "
+#~ "RPC commands is accessible via the "
+#~ "`Dash Core developer documentation RPC "
+#~ "page <https://dashcore.readme.io/docs/core-api-"
+#~ "ref-remote-procedure-call-quick-"
+#~ "reference>`_. For full documentation of "
+#~ "arguments, results and examples, type "
+#~ "``help ( \"command\" )`` to view "
+#~ "full details at the console. You "
+#~ "can enter commands either from **Tools"
+#~ " > Console** in the QT wallet, "
+#~ "or using *dash-cli* for headless "
+#~ "wallets and *dashd*."
+#~ msgstr ""
 
