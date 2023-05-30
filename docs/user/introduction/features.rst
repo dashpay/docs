@@ -75,11 +75,11 @@ shows a live calculation of masternode earnings. These rewards decrease
 by 7% each year, together with the block reward. There is also the
 possibility for masternodes to earn money from fees in the future.
 
-Evolution Masternodes (EvoNodes)
+Evolution Masternodes (evonodes)
 --------------------------------
 
-Evolution Masternodes (EvoNodes) are a subset of Masternodes that have 
-been created to host the Dash Platform. An EvoNode is a lot like Masternodes 
+Evolution Masternodes (evonodes) are a subset of Masternodes that have 
+been created to host the Dash Platform. An evonode is a lot like Masternodes 
 with these differences:
 
 +----------------+-----------------------------------+-----------------------------------------------------+
@@ -87,7 +87,7 @@ with these differences:
 +================+===================================+=====================================================+
 | Collateral     | 1000 DASH                         | 4000 DASH (4X the collateral for normal masternodes)|
 +----------------+-----------------------------------+-----------------------------------------------------+
-| Specs          | Lesser than EvoNodes              | Higher than normal masternodes                      |
+| Specs          | Lesser than evonodes              | Higher than normal masternodes                      |
 +----------------+-----------------------------------+-----------------------------------------------------+
 | Service        | Only Dash Core                    | Both Dash Core and Platform                         |
 +----------------+-----------------------------------+-----------------------------------------------------+
