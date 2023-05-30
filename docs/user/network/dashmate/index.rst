@@ -1,6 +1,6 @@
 .. meta::
    :description: Description of dashmate features and usage
-   :keywords: dash, wallet, core, platform, EvoNode, masternodes, dashmate
+   :keywords: dash, wallet, core, platform, evonode, masternodes, dashmate
 
 .. _dashmate:
 
@@ -15,7 +15,7 @@ and easily set up and run a development network on your local system.
 .. figure:: img/dashmate.gif
    :align: center
 
-   Setting up a testnet EvoNode using dashmate
+   Setting up a testnet evonode using dashmate
 
 .. _dashmate-full-install:
 
@@ -73,8 +73,8 @@ Once NodeJS has been installed, use npm to install dashmate::
 Masternode setup
 ================
 
-You can setup both regular masternodes and Evolution masternodes (EvoNodes)
-using dashmate. There are few minor extra steps for EvoNodes, but the process is
+You can setup both regular masternodes and Evolution masternodes (evonodes)
+using dashmate. There are few minor extra steps for evonodes, but the process is
 largely identical for both masternode types.
 
 To begin masternode setup, run ``dashmate setup`` to start the interactive wizard::
@@ -189,14 +189,14 @@ details.
 Enable SSL
 ----------
 
-.. note:: The following step only applies to EvoNodes. Regular masternodes do not
+.. note:: The following step only applies to evonodes. Regular masternodes do not
    require an SSL certificate since they do not host Platform services.
 
 Dash Platform requires SSL for communication. Dashmate provides several options
 for obtaining the required SSL certificate.
 
 .. warning:: Self-signed certificates cannot be used on mainnet. When setting
-   up a mainnet EvoNode, **ZeroSSL** and **File on disk** are the only options available.
+   up a mainnet evonode, **ZeroSSL** and **File on disk** are the only options available.
 
 .. figure:: img/11a-ssl-config-zerossl.png
    :align: center

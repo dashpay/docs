@@ -5,7 +5,7 @@
 .. _evonode-setup:
 
 =============
-EvoNode Setup
+Evonode Setup
 =============
 
 Setting up an Evolution masternode requires a basic understanding of Linux
@@ -15,7 +15,7 @@ are not storing your Dash on a hardware wallet. There are some decisions to be
 made along the way, and optional extra steps to take for increased security.
 
 Commercial :ref:`masternode hosting services <masternode-hosting>` are available
-if you prefer to delegate day-to-day operation of your EvoNode to a
+if you prefer to delegate day-to-day operation of your evonode to a
 professional operator. When using these hosting services, you retain full
 control of the DASH collateral and pay an agreed percentage of your reward to
 the operator. It is also possible to delegate your voting keys to a
@@ -65,7 +65,7 @@ in a configuration file and registration transaction as proof to write the
 configuration to the blockchain so the Evolution masternode can be
 included in the deterministic list.
 
-An Evolution masternode (or EvoNode) can be registered from the official Dash Core
+An Evolution masternode (or evonode) can be registered from the official Dash Core
 wallet. This guide will describe the steps.
 
 ..
@@ -482,7 +482,7 @@ Option 1: Registering from dashmate
 .. note::
   Prior to running the dashmate setup wizard you should obtain the
   :hoverxref:`collateral transaction info <evonode-mn-outputs>` and the owner, voting,
-  and payout addresses for the new EvoNode. For example, use Dash Core to generate
+  and payout addresses for the new evonode. For example, use Dash Core to generate
   the addresses as described in :hoverxref:`this section below
   <evonode-get-addresses>`.
 
