@@ -179,7 +179,7 @@ html_context = {
     # "github_url": "https://github.com", # or your GitHub Enterprise site
     "github_user": "dashpay",
     "github_repo": "docs",
-    "github_version": "18.0.0",
+    "github_version": "19.0.0",
     "doc_path": "",
 }
 
