@@ -59,51 +59,6 @@ ADAMANT support.
 
    ADAMANT Wallet Dash screen
 
-Atomic Wallet
-=============
-
-https://atomicwallet.io
-
-.. image:: img/atomic.png
-   :width: 100px
-   :align: right
-   :target: https://atomicwallet.io
-
-Atomic Wallet is a multi-asset custody-free wallet with atomic swap
-exchange and decentralized orderbook functionality. It provides a
-powerful, secure service that transparently and reliablly allows users
-to reduce effort spent on managing and exchanging crypto assets​.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=io.atomicwallet
-
-All Atomic Wallet releases are available from https://atomicwallet.io -
-simply download and install the appropriate package for your system.
-Atomic Wallet is also available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=io.atomicwallet>`__ and
-coming soon to the Apple App Store for iOS.
-
-Documentation
--------------
-
-Atomic Wallet offers detailed documentation of all functions at
-https://atomicwallet.freshdesk.com and a few quick links are also
-collected here:
-
-- `Getting started with Atomic Wallet Part 1 <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066359-getting-started-with-atomic-wallet-part-1->`_
-- `Getting started with Atomic Wallet Part 2 <https://atomicwallet.freshdesk.com/support/solutions/articles/36000087950-getting-started-with-atomic-wallet-part-2->`_
-- `How to create a wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066354-how-to-create-a-wallet->`_
-- `Getting started with Atomic Swaps <https://atomicwallet.freshdesk.com/support/solutions/articles/36000073262-getting-started-with-atomic-swaps>`_
-
-.. figure:: img/atomic-wallet.png
-   :width: 400px
-
-   Atomic Wallet Portfolio screen
-
 
 Channels
 ========
