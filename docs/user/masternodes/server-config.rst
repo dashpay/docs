@@ -268,6 +268,11 @@ Locate the line that reads ``PermitRootLogin yes`` and set it to
 Then press **Ctrl + X** to close the editor, then **Y** and **Enter** save the
 file.
 
+Optionally install or update `AppArmor <https://apparmor.net/>`_ (try this step
+if you are having problems related to AppArmor)::
+
+  sudo apt install apparmor
+
 Reboot
 ------
 
