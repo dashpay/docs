@@ -35,8 +35,8 @@ some aspects of testnet (the global and public testing network) and some
 aspects of regtest (the local-only regression testing mode that provides
 controlled block generation). Unlike testnet, multiple independent
 devnets can be created and coexist without interference. For practical
-documentation on how to use devnets, see the `developer documentation
-<https://dashcore.readme.io/docs/core-examples-testing-applications>`__
+documentation on how to use devnets, see the :ref:`developer documentation
+<core:examples-testing-applications>`
 or this `blog post <https://blog.dash.org/dash-devnets-bc27ecbf0085>`__.
 
 Tools and links
@@ -52,7 +52,7 @@ specific service.
 - **Bugtracker:** https://github.com/dashpay/dash/issues/new
 - **Discussion and help:** https://www.dash.org/forum/topic/testing.53/
 - **Masternode tools:** https://test.dashninja.pl/masternodes.html
-- **Android wallet:** https://github.com/dashevo/dash-wallet/releases/tag/v7.0.2
+- **Android wallet:** https://github.com/dashpay/dash-wallet/releases/tag/v7.0.2
 - **Testnet for Bitcoin:** https://en.bitcoin.it/wiki/Testnet
 
 Faucets

@@ -47,7 +47,7 @@ enter the following command, pasting in the address to the latest
 version of Dash Core by right clicking or pressing **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v18.2.1/dashcore-18.2.1-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v19.1.0/dashcore-19.1.0-x86_64-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -63,14 +63,14 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v18.2.1/dashcore-18.2.1-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-18.2.1-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v19.1.0/dashcore-19.1.0-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-19.1.0-x86_64-linux-gnu.tar.gz.asc
 
 Extract the compressed archive and copy the new files to the directory::
 
-  tar xfv dashcore-18.2.1-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-18.2.1/bin/dashd ~/.dashcore/
-  cp -f dashcore-18.2.1/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-19.1.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-19.1.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-19.1.0/bin/dash-cli ~/.dashcore/
 
 Restart Dash::
 
@@ -162,6 +162,11 @@ clicking the **Update operator key**, **Update voting key** or **Update
 payout addr.** buttons, or from Dash Core using the following syntax::
 
   protx update_registrar proTxHash operatorKeyAddr votingKeyAddr payoutAddress (feeSourceAddress)
+
+.. warning::
+   After v19 hard fork activation, ``protx update_registrar_legacy`` must
+   be used if a legacy scheme BLS key is being used to registrar update a
+   masternode.
 
 Where:
 
@@ -472,7 +477,7 @@ the Dash network.
   `insight.dash.org <https://insight.dash.org/insight/>`__.
 - `Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https
   ://dash-bitcore1.trezor.io/>`__ powered by a `Dash fork
-  <https://github.com/dashevo/insight-ui>`__ of `insight
+  <https://github.com/dashpay/insight-ui>`__ of `insight
   <https://insight.is/>`__, an advanced blockchain API tool
 
 Dash Masternode Tool
@@ -505,8 +510,7 @@ https://www.dashcentral.org
 
 DashCentral, operated by forum member rango, offers an advanced service
 to monitor masternodes and vote on budget proposals through an advanced
-web interface. A `mobile monitoring interface
-<https://www.dashcentral.org/account/mobile>`_ is also available.
+web interface.
 
 Masternode.me
 -------------

@@ -538,12 +538,12 @@ Open debug log file
 Console tab
 -----------
 
-The Console tab provides an interface with the Dash Core RPC (remote
-procedure call) console. This is equivalent to the ``dash-cli`` command
-on headless versions of Dash, such as ``dashd`` running on a masternode.
-Click the red ``×`` icon to clear the console, and see the detailed
-`documentation <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls>`__
-on RPC commands to learn about the possible commands you can issue.
+The Console tab provides an interface with the Dash Core RPC (remote procedure
+call) console. This is equivalent to the ``dash-cli`` command on headless
+versions of Dash, such as ``dashd`` running on a masternode. Click the red ``×``
+icon to clear the console, and see the detailed :ref:`documentation
+<core:api-rpc>` on RPC commands to learn about the possible commands you can
+issue.
 
 .. figure:: img/tools-console.png
    :scale: 50 %

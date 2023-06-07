@@ -8,6 +8,9 @@
 Understanding Masternodes
 =========================
 
+Overview
+========
+
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
@@ -34,7 +37,7 @@ Anyone can run a masternode. The objective is to have enough
 decentralization to ensure that no single person controls a significant
 fraction of the masternodes. However, to avoid bloating the network with
 unnecessary masternodes or encouraging reckless operators, there is one
-condition that needs to be fulfilled: proof of ownership of 1000 Dash.
+condition that needs to be fulfilled: proof of ownership of DASH collateral.
 The coins don't need to be in the masternode, but they need to be kept
 in a certain way that is transparent to the entire network. If the owner
 moves or spends those coins, the masternode stops working and payment
@@ -81,39 +84,50 @@ real-time payment rates, and `this site
 <http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various real-time
 statistics on the masternode network.
 
+Evolution Masternodes (evonodes)
+--------------------------------
 
-.. _dip3-changes:
+Evolution Masternodes (evonodes) are a subset of masternodes that have 
+been created to host Dash Platform. An evonode is a lot like a regular masternode
+with the following differences:
 
-DIP003 Masternode Changes
-=========================
++----------------+-----------------------------------+-----------------------------------------------------+
+|                | Masternode                        | Evonode                                             |
++================+===================================+=====================================================+
+| Collateral     | 1000 DASH                         | 4000 DASH (4X the collateral for normal masternodes)|
++----------------+-----------------------------------+-----------------------------------------------------+
+| Specs          | Lesser than evonode               | Higher than normal masternodes                      |
++----------------+-----------------------------------+-----------------------------------------------------+
+| Service        | Only Dash Core                    | Both Dash Core and Platform                         |
++----------------+-----------------------------------+-----------------------------------------------------+
+| Voting Weight  | 1 node gets 1 vote                | Has 4 times the voting power of a normal masternode |
++----------------+-----------------------------------+-----------------------------------------------------+
 
-Dash 0.13.0 implements DIP003, which introduces several changes to how a
-Dash masternode is set up and operated. A list of available
-documentation appears below:
+.. _mn-concepts:
+
+Masternode Concepts
+===================
+
+A list of available documentation appears below:
 
 - `DIP003 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
-- :ref:`dip3-changes` (you are here)
-- `Dash 0.13 Upgrade Procedure for Masternodes (legacy documentation) <https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__
 - :ref:`Full masternode setup guide <masternode-setup>`
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
 - :ref:`Information for operators of hosted masternodes <operator-transactions>`
 
-Important concepts and changes:
+Important concepts:
 
-- It is possible to upgrade an existing masternode in-place without 
-  starting a new server and without moving your 1000 DASH collateral.
-- A masternode was previously "started" using the ``masternode start-alias`` 
-  command based on a ``masternode.conf`` file. Under DIP003, this file 
-  is no longer used, and masternodes are "registered" instead of 
-  "started". Masternodes begin offering services when a `ProRegTx <https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a-masternode-proregtx>`_ 
-  `special transaction <https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ 
-  containing a particular key is written to the blockchain.
-- As before in ``masternode.conf``, the ProRegTx references the
-  transaction id (txid) and index holding the collateral. The IP address
-  and port of the masternode are also defined in this transaction.
-- The ProRegTx contains 2 Dash addresses (also called public keys) and
-  one BLS public key, which represent 3 different roles in the
-  masternode and define update and voting rights. The keys are:
+- Masternodes are "registered" and begin offering services when a `ProRegTx
+  <https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a-masternode-proregtx>`_
+  `special transaction
+  <https://github.com/dashpay/dips/blob/master/dip-0002.md>`_ containing a
+  particular key is written to the blockchain.
+- The ProRegTx references the transaction id (txid) and index holding the
+  collateral. The IP address and port of the masternode are also defined in this
+  transaction.
+- The ProRegTx contains 2 Dash addresses (also called public keys) and one BLS
+  public key, which represent 3 different roles in the masternode and define
+  update and voting rights. The keys are:
   
   1. ``ownerKeyAddr``: This is a Dash address (public key) controlled by
      the masternode owner. It is different from the address used for the
@@ -130,25 +144,14 @@ Important concepts and changes:
      proposal voting. Votes signed with the corresponding private key 
      are valid while the masternode is in the registered set.
 
-- Masternode payments were previously sent to the address holding the
-  collateral. Under DIP003, the owner should specify a different address 
-  to receive payments in the ProRegTx. The owner may optionally specify 
-  a non-zero percentage as payment to a separate masternode operator, if
-  applicable.
+- Masternode owners should specify an address different from the collateral to
+  receive payments in the ProRegTx. The owner may optionally specify a non-zero
+  percentage as payment to a separate masternode operator, if applicable.
 - The masternode configuration can later be updated using ProUpServTx,
   ProUpRegTx and ProUpRevTx transactions. See `Updating Masternode
   Information <https://github.com/dashpay/dips/blob/master/dip-0003.md#updating-masternode-information>`_ 
   in DIP003 and :ref:`update-dip3-config` in this documentation for more
   details.
-- All functions related to DIP003 will only take effect once Spork 15 is
-  enabled on the network. Until then, it is necessary to set up the
-  masternode following the `old process <https://docs.dash.org/en/0.12.3/masternodes/setup.html>`_ 
-  and then work through the `upgrade procedure <https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__. 
-  In this state, the masternode will continue to function in
-  compatibility mode, and all DIP003 related functions, such as payments
-  to a separate address or percentage payments to operators, will not
-  yet have any effect. The ``ownerKeyAddr`` and ``votingKeyAddr`` must
-  also be  identical until Spork 15 is enabled.
 
 The process of setting up or upgrading a masternode is as follows:
 
@@ -202,7 +205,7 @@ receiving of funds and prevention of doublespending. Masternodes power
 the second tier, which provide the added features that make Dash
 different from other cryptocurrencies. Masternodes do not mine, and
 mining computers cannot serve as masternodes. Additionally, each
-masternode is “secured” by 1000 DASH. Those DASH remain under the sole
+masternode is “secured” by DASH collateral. Those DASH remain under the sole
 control of their owner at all times, and can still be freely spent. The
 funds are not locked in any way. However, if the funds are moved or
 spent, the associated masternode will go offline and stop receiving
@@ -214,12 +217,9 @@ rewards.
 Payment logic
 =============
 
-Masternode payments in Dash version 0.13.0 are entirely deterministic
-and based on a simple list sort algorithm. For documentation of version
-0.12.0 payment logic, see the `legacy masternode payment documentation
-<https://docs.dash.org/en/0.12.3/masternodes/understanding.html#payment-logic>`_. 
-Dash version 0.13.0 implements `DIP003
-<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ and defines
+Since Dash version 0.13.0, masternode payments are entirely deterministic
+and based on a simple list sort algorithm. Dash version 0.13.0 implemented `DIP003
+<https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ which defines
 two sets of masternodes.
 
 1. The full set, which contains all registered masternodes that have not
@@ -236,6 +236,19 @@ list is sorted in ascending order by this block height and ProRegTx hash
 (as a tie breaker in case two masternodes were registered in the same
 block), and the first entry is selected for payment.
 
+Evonode Payment Logic
+---------------------
+
+Because the reward distribution percentages are fixed, the number of evonodes is 
+expected to stabilize around a fixed number based on the total number of 
+masternodes (considering the current number of ~3850 Masternodes, ~450 evonodes 
+are expected). This is because if there are more than that fixed number of evonodes, 
+running a regular MN will be more profitable than running an evonode, and hosts 
+will convert their evonodes into MNs. 
+
+Evonodes will receive 100% of the fees generated from Platform and 37.5% of 
+the masternode portion of Core block rewards. Regular MNs will receive the remaining 
+62.5% of the masternode portion of Core block rewards and 0% of Platform fees.
 
 .. _proof-of-service:
 
@@ -275,10 +288,13 @@ Failure to participate in DKG will eventually result in a PoSe ban as
 described above.
 
 
+.. _mn-hardware-reqs:
+
 Masternode requirements
 =======================
 
-- 1000 Dash: Arguably the hardest part. Dash can be obtained from
+- DASH collateral: Hosting a master node requires a large amount of DASH collateral.
+  Arguably the hardest part. Dash can be obtained from
   exchanges such as Poloniex, Bittrex, Kraken and LiveCoin. Shapeshift's
   service is also an excellent way.
 - A server or VPS running Linux: Most recent guides use Ubuntu 20.04
@@ -288,18 +304,20 @@ Masternode requirements
   will increase according to this roadmap.
 - A dedicated IP address: These usually come with the VPS/server.
 
-In addition to the 1000 Dash held in collateral, masternodes also have
+In addition to the DASH held in collateral, masternodes also have
 minimum hardware requirements. For Dash versions 0.14 and higher, these
 requirements are as follows:
+
+.. _mn-hardware-reqs-table:
 
 +---------+------------------+------------------+
 |         | Minimum          | Recommended      |
 +=========+==================+==================+
-| CPU     | 1x 1 GHz         | 1x 2 GHz         |
+| CPU     | 1x 2 GHz         | 2x 2 GHz         |
 +---------+------------------+------------------+
-| RAM     | 2 GB + 2 GB swap | 4 GB + 2 GB swap |
+| RAM     | 4 GB + 2 GB swap | 8 GB + 4 GB swap |
 +---------+------------------+------------------+
-| Disk    | 40 GB            | 60 GB            |
+| Disk    | 60 GB            | 80 GB            |
 +---------+------------------+------------------+
 | Network | 400 GB/mth       | 1 TB/mth         |
 +---------+------------------+------------------+

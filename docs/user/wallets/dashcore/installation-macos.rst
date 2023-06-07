@@ -52,7 +52,7 @@ download as follows::
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  gpg --verify dashcore-18.2.1-osx.dmg.asc
+  gpg --verify dashcore-19.1.0-osx.dmg.asc
 
 
 .. figure:: img/linux/setup-linux-gpg.png
@@ -125,9 +125,8 @@ cryptographic data to secure your wallet.
 Synchronizing Dash Core to the Dash network
 -------------------------------------------
 
-Once Dash Core is successfully installed and started, you will see the
-wallet overview screen. You will notice that the wallet is “out of
-sync”, and the status bar at the bottom of the window will show the
+Once Dash Core is successfully installed and started, you will see the wallet
+overview screen. The status bar at the bottom of the window will show the
 synchronization progress.
 
 .. figure:: img/macos/112415040.png
@@ -146,17 +145,45 @@ is complete, you will see a small blue tick in the lower right corner.
 
    Dash Core synchronization is complete
 
-You can now begin to use your wallet to send and receive funds.
+You can now create a wallet to send and receive funds.
+
+Creating your Dash Wallet
+-----------------------------------
+
+Beginning with Dash Core 19.0, a wallet will not be created for you by default.
+You will get this prompt in the Overview tab. To create a wallet, click the
+**Create a new wallet** button or click **File** -> **Create Wallet**.
+
+.. figure:: img/macos/dash-create-wallet-prompt.png
+   :height: 350px
+
+You will be prompted to create a new wallet with a custom wallet name. By
+default, your wallet will be encrypted. You may choose to uncheck the box and
+encrypt the wallet later. We have included instructions on how to encrypt your
+wallet in the following section.
+
+.. figure:: img/macos/wallet-name.png
+   :width: 300px
+
+If you do choose to encrypt now, you will be asked to enter and verify a password.
+
+.. figure:: img/macos/112596740.png
+   :width: 354px
+
+   Enter a password
+
+Following that, you will get a standard warning.
+
+.. figure:: img/macos/112596745.png
+   :width: 354px
+
+   Confirm you want to encrypt your wallet
+
+The following section will detail the steps you need to follow if you
+choose to encrypt your Dash wallet later.
 
 Encrypting your Dash wallet
 ---------------------------
-
-After your wallet has synchronized with the Dash network, it is strongly
-advised to encrypt the wallet with a password or passphrase to prevent
-unauthorized access. You should use a strong, new password that you have
-never used somewhere else. Take note of your password and store it
-somewhere safe or you will be locked out of your wallet and lose access
-to your funds.
 
 To encrypt your wallet, click **Settings** > **Encrypt Wallet**.
 

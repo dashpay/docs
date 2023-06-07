@@ -6,9 +6,17 @@ information.
 
 ## Install required packages
 
+Install the [sphinx-intl](https://pypi.org/project/sphinx-intl/) utility.
+
+```shell
+pip install sphinx-intl==2.1.0
+```
+
+Also install the Transifex CLI client as described in the [repository's
+README](https://github.com/transifex/cli/tree/devel#transifex-client).
+
 ``` shell
-pip install sphinx-intl
-pip install transifex-client==0.13.12
+curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
 ```
 
 ## Set webhook variables

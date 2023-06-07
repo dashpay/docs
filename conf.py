@@ -66,7 +66,15 @@ gettext_compact = False
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = [
+    '_build',
+    'Thumbs.db',
+    '.DS_Store',
+    'README.md',
+    '.devcontainer',
+    'transifex',
+    'docs/user/wallets/electrum/dip3_p2sh_howto.md'
+]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -84,10 +92,38 @@ todo_include_todos = False
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'hoverxref.extension',
+    'myst_parser',
     'sphinx.ext.autodoc',
     'sphinx_copybutton',
     'sphinx_design',
+    'sphinx.ext.intersphinx',
 ]
+
+hoverxref_role_types = {
+    'hoverxref': 'tooltip',
+}
+
+# -- Myst parser configuration -----------------------------------------------
+# Auto-generate header anchors for md headings
+myst_heading_anchors = 5
+
+# Enable colon_fence for better markdown compatibility
+# https://myst.tools/docs/mystjs/syntax-overview#directives
+myst_enable_extensions = ["colon_fence"]
+
+# -- intersphinx configuration -----------------------------------------------
+intersphinx_mapping = {
+    "core": ("https://docs.dash.org/projects/core/en/stable/", None),
+}
+
+# We recommend adding the following config value.
+# Sphinx defaults to automatically resolve *unresolved* labels using all your Intersphinx mappings.
+# This behavior has unintended side-effects, namely that documentations local references can
+# suddenly resolve to an external location.
+# See also:
+# https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#confval-intersphinx_disabled_reftypes
+intersphinx_disabled_reftypes = ["*"]
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -100,9 +136,10 @@ html_theme = "pydata_sphinx_theme"
 #
 html_theme_options = {
     "external_links": [
-        {"name": "Core docs", "url": "https://dashcore.readme.io/"},
+        {"name": "Core docs", "url": "https://docs.dash.org/projects/core/en/stable/docs/index.html"},
         {"name": "Platform docs", "url": "https://dashplatform.readme.io"},
         {"name": "Dash.org", "url": "https://www.dash.org"},
+        {"name": "Forum", "url": "https://www.dash.org/forum"},
     ],
     "use_edit_page_button": True,
     "github_url": "https://github.com/dashpay/docs",
@@ -142,7 +179,7 @@ html_context = {
     # "github_url": "https://github.com", # or your GitHub Enterprise site
     "github_user": "dashpay",
     "github_repo": "docs",
-    "github_version": "18.0.0",
+    "github_version": "19.0.0",
     "doc_path": "",
 }
 

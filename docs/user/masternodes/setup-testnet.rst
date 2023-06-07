@@ -37,15 +37,8 @@ the first time. If you are updating a masternode, see  :ref:`here
   Dash Core wallet is also supported
 - A Linux server, preferably a Virtual Private Server (VPS)
 
-Dash 0.13.0 and later implement DIP003, which introduces several changes
-to how a Dash masternode is set up and operated. While this network
-upgrade was completed in early 2019, a list of available documentation
-appears below:
+For information about hosted masternodes, see the documentation listed below:
 
-- `DIP003 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__
-- :ref:`dip3-changes`
-- `Dash 0.13 Upgrade Procedure for Masternodes (legacy documentation) <https://docs.dash.org/en/0.13.0/masternodes/dip3-upgrade.html>`__
-- :ref:`Full masternode setup guide <masternode-setup>` (you are here)
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
 - :ref:`Information for operators of hosted masternodes <operator-transactions>`
 
@@ -55,226 +48,12 @@ same result can be achieved on a masternode by entering the same
 commands and adding the prefix ``~/.dashcore/dash-cli`` to each command.
 
 
-.. _testnet-vps-setup:
-
-Set up your VPS
-===============
-
-A VPS, more commonly known as a cloud server, is fully functional
-installation of an operating system (usually Linux) operating within a
-virtual machine. The virtual machine allows the VPS provider to run
-multiple systems on one physical server, making it more efficient and
-much cheaper than having a single operating system running on the "bare
-metal" of each server. A VPS is ideal for hosting a Dash masternode
-because they typically offer guaranteed uptime, redundancy in the case
-of hardware failure and a static IP address that is required to ensure
-you remain in the masternode payment queue. While running a masternode
-from home on a desktop computer is technically possible, it will most
-likely not work reliably because most ISPs allocate dynamic IP addresses
-to home users.
-
-We will use `Vultr <https://www.vultr.com/>`_ hosting as an example of a
-VPS, although `DigitalOcean <https://www.digitalocean.com/>`_, `Amazon
-EC2 <https://aws.amazon.com/ec2/>`_, `Google Cloud
-<https://cloud.google.com/compute/>`_, `Choopa
-<https://www.choopa.com/>`_ and `OVH <https://www.ovh.com.au/>`_ are
-also popular choices. First create an account and add credit. Then go to
-the **Servers** menu item on the left and click **+** to add a new
-server. Select a location for your new server on the following screen:
-
-.. figure:: img/setup-server-location.png
-   :width: 400px
-
-   Vultr server location selection screen
-
-Select Ubuntu 22.04 x64 as the server type. We use this LTS release of
-Ubuntu instead of the latest version because LTS releases are supported
-with security updates for 5 years, instead of the usual 9 months.
-
-.. figure:: img/setup-server-type.png
-   :width: 400px
-
-   Vultr server type selection screen
-
-Select a server size offering at least 2GB of memory.
-
-.. figure:: img/setup-server-size.png
-   :width: 400px
-
-   Vultr server size selection screen
-
-Enter a hostname and label for your server. In this example we will use
-``dashmn1`` as the hostname.
-
-.. figure:: img/setup-server-hostname.png
-   :width: 400px
-
-   Vultr server hostname & label selection screen
-
-Vultr will now install your server. This process may take a few minutes.
-
-.. figure:: img/setup-server-installing.png
-   :width: 400px
-
-   Vultr server installation screen
-
-Click **Manage** when installation is complete and take note of the IP
-address, username and password.
-
-.. figure:: img/setup-server-manage.png
-   :width: 276px
-
-   Vultr server management screen
-
-
-Set up your operating system
-============================
-
-We will begin by connecting to your newly provisioned server. On
-Windows, we will first download an app called PuTTY to connect to the
-server. Go to the `PuTTY download page <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_
-and select the appropriate MSI installer for your system.
-On Mac or Linux you can ssh directly from
-the terminal - simply type ``ssh root@<server_ip>`` and enter your
-password when prompted.
-
-.. figure:: img/setup-putty-download.png
-   :width: 400px
-
-   PuTTY download page
-
-Double-click the downloaded file to install PuTTY, then run the app from
-your Start menu. Enter the IP address of the server in the **Host Name**
-field and click **Open**. You may see a certificate warning, since this
-is the first time you are connecting to this server. You can safely
-click **Yes** to trust this server in the future.
-
-.. figure:: img/setup-putty-alert.png
-   :width: 320px
-
-   PuTTY security alert when connecting to a new server
-
-You are now connected to your server and should see a terminal
-window. Begin by logging in to your server with the user ``root`` and
-password supplied by your hosting provider.
-
-.. figure:: img/setup-putty-connect.png
-   :width: 400px
-
-   Password challenge when connecting to your VPS for the first time
-
-You should immediately change the root password and store it in a safe
-place for security. You can copy and paste any of the following commands
-by selecting them in your browser, pressing **Ctrl + C**, then switching
-to the PuTTY window and right-clicking in the window. The text will
-paste at the current cursor location::
-
-  passwd root
-
-Enter and confirm a new password (preferably long and randomly
-generated). Next we will create a new user with the following command,
-replacing ``<username>`` with a username of your choice::
-
-  adduser <username>
-
-You will be prompted for a password. Enter and confirm using a new
-password (different to your root password) and store it in a safe place.
-You will also see prompts for user information, but this can be left
-blank. Once the user has been created, we will add them to the sudo
-group so they can perform commands as root::
-
-  usermod -aG sudo <username>
-
-Now, while still as root, we will update the system from the Ubuntu
-package repository::
-
-  apt update
-  apt upgrade
-
-The system will show a list of upgradable packages. Press **Y** and
-**Enter** to install the packages. We will now install a firewall, add
-swap memory and reboot the server to apply any necessary kernel updates,
-and then login to our newly secured environment as the new user::
-
-  ufw allow ssh/tcp
-  ufw limit ssh/tcp
-  ufw allow 19999/tcp
-  ufw allow 26656/tcp
-  ufw allow 3000/tcp
-  ufw logging on
-  ufw enable
-
-(press **Y** and **Enter** to confirm)
-
-::
-
-  fallocate -l 4G /swapfile
-  chmod 600 /swapfile
-  mkswap /swapfile
-  swapon /swapfile
-  nano /etc/fstab
-
-Add the following line at the end of the file (press tab to separate
-each word/number), then press **Ctrl + X** to close the editor, then
-**Y** and **Enter** save the file.
-
-::
-
-  /swapfile none swap sw 0 0
-
-Finally, in order to prevent brute force password hacking attacks, we
-will install fail2ban and disable root login over ssh. These steps are
-optional, but highly recommended. Start with fail2ban::
-
-  apt install fail2ban
-
-Create a new configuration file::
-
-  nano /etc/fail2ban/jail.local
-
-And paste in the following configuration::
-
-  [sshd]
-  enabled = true
-  port = 22
-  filter = sshd
-  logpath = /var/log/auth.log
-  maxretry = 3
-
-Then press **Ctrl + X** to close the editor, then **Y** and **Enter**
-save the file. Retart and enable the fail2ban service::
-
-  systemctl restart fail2ban
-  systemctl enable fail2ban
-
-Next, open the SSH configuration file to disable root login over SSH::
-
-  nano /etc/ssh/sshd_config
-
-Locate the line that reads ``PermitRootLogin yes`` and set it to
-``PermitRootLogin no``. Directly below this, add a line which reads
-``AllowUsers <username>``, replacing ``<username>`` with the username
-you selected above. Then press **Ctrl + X** to close the editor, then
-**Y** and **Enter** save the file.
-
-Optionally install or update `AppArmor <https://apparmor.net/>`_ (try this step if 
-you are having problems related to AppArmor)::
-
-  sudo apt install apparmor
-
-Then reboot the server::
-
-  reboot now
-
-PuTTY will disconnect when the server reboots.
-
-While this setup includes basic steps to protect your server against
-attacks, much more can be done. In particular, `authenticating with a public key <https://help.ubuntu.com/community/SSH/OpenSSH/Keys>`_
-instead of a username/password combination and `enabling automatic security updates <https://help.ubuntu.com/community/AutomaticSecurityUpdates>`_ 
-is advisable. More tips are available `here <https://www.cyberciti.biz/tips/linux-security.html>`__. 
-However, since the masternode does not actually store the keys to any
-Dash, these steps are considered beyond the scope of this guide.
-
+Server configuration
+--------------------
+
+Proper server configuration is essential to successful masternode operation for
+both security and performance reasons. Refer to the :hoverxref:`Server configuration
+<server-config>` page for details on preparing your server to host a masternode.
 
 Send the collateral
 ===================
@@ -444,7 +223,7 @@ features an interactive setup command and the ability to manage multiple
 node configs and multiple networks. It handles the installation of Dash
 Core and Tenderdash, as well as all dependencies and supporting
 services. Full dashmate documentation is available `here
-<https://github.com/dashevo/platform/tree/master/packages/dashmate#readme>`__.
+<https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__.
 
 .. warning::
     Installation as root user is not supported or recommended.
@@ -476,7 +255,7 @@ defaults. Start your node as follows::
 
 You can manage your masternode status, configuration, and running state
 entirely from within dashmate. See the documentation `here
-<https://github.com/dashevo/dashmate#readme>`__ or use the built-in help
+<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__ or use the built-in help
 system to learn more:
 
 - ``dashmate --help``
@@ -536,17 +315,15 @@ version::
 Masternode registration
 =======================
 
-DIP003 introduced several changes to how a masternode is set up and
-operated. These changes and the three keys required for the different
-masternode roles are described briefly under :ref:`dip3-changes` in this
-documentation.
+The three keys required for the different masternode roles are described briefly
+under :ref:`mn-concepts` in this documentation.
 
 Option 1: Registering from a hardware wallet
 --------------------------------------------
 
 Go back to DMT and ensure that all fields from the previous step are
 still filled out correctly.  Click **Generate new** for the three
-private keys required for a DIP003 deterministic masternode:
+private keys required for a masternode:
 
 - Owner private key
 - Operator private key (generate new or use private key generated by dashmate)
@@ -607,7 +384,7 @@ transaction, you now need to find the txid of the transaction. Click
 This should return a string of characters similar to the following::
 
   {
-  "16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3" : "1",
+  "16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3-1",
   }
 
 The first long string is your ``collateralHash``, while the last number
@@ -637,7 +414,8 @@ command::
 
   {
     "secret": "395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e",
-    "public": "99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e"
+    "public": "99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e",
+    "scheme": "legacy"
   }
 
 **These keys are NOT stored by the wallet or dashmate and must be kept
@@ -716,6 +494,13 @@ syntax::
 
   protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr 
     operatorPubKey votingKeyAddr operatorReward payoutAddress (feeSourceAddress)
+
+.. warning::
+   After v19 hard fork activation, ``protx register_prepare_legacy`` must
+   be used if a legacy scheme BLS key is being used to register a masternode.
+   It's recommended to instead generate a new basic scheme BLS key where
+   possible. This can be done by following the
+   :ref:`Generate a BLS key pair <testnet-bls-generation>` instructions.    
 
 Open a text editor such as notepad to prepare this command. Replace each
 argument to the command as follows:
@@ -857,7 +642,7 @@ and communication relating to the base blockchain. Download Dash Core as
 follows::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v18.2.1/dashcore-18.2.1-$(uname -m)-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v19.1.0/dashcore-19.1.0-$(uname -m)-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -873,14 +658,14 @@ following keys:
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v18.2.1/dashcore-18.2.1-$(uname -m)-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-18.2.1-$(uname -m)-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v19.1.0/dashcore-19.1.0-$(uname -m)-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-19.1.0-$(uname -m)-linux-gnu.tar.gz.asc
 
 Extract the compressed archive and copy the necessary files to the
 directory::
 
-  tar xfv dashcore-18.2.1-$(uname -m)-linux-gnu.tar.gz
-  sudo install -t /usr/local/bin dashcore-18.2.1/bin/*
+  tar xfv dashcore-19.1.0-$(uname -m)-linux-gnu.tar.gz
+  sudo install -t /usr/local/bin dashcore-19.1.0/bin/*
 
 Create a working directory for Dash Core::
 
@@ -1020,7 +805,7 @@ Drive
 Drive is a replicated state machine for Dash Platform. Download Drive as
 follows::
 
-  git clone -b master https://github.com/dashevo/platform/
+  git clone -b master https://github.com/dashpay/platform/
   cd platform
   corepack enable
   yarn workspaces focus --production @dashevo/drive
@@ -1060,7 +845,7 @@ to build from source. Install Go as follows::
 Build and install Tenderdash as follows::
 
   cd
-  git clone -b v0.7.1 https://github.com/dashevo/tenderdash
+  git clone -b v0.7.1 https://github.com/dashpay/tenderdash
   cd tenderdash
   make install-bls
   make build-linux

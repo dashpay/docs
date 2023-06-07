@@ -113,7 +113,6 @@ to using a typical mining pool can be found :ref:`here <mining-pools>`.
 - https://www.multipool.us
 - https://www.f2pool.com
 - https://www2.coinmine.pl/dash/
-- https://aikapool.com/dash/
 - https://www.antpool.com
 - https://avalon-life.io
 - https://www.genesis-mining.com
@@ -460,9 +459,9 @@ obsolete due to the increase in difficulty on the network.
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
 | `iBelink DM384M <https://ibelink.co/>`_                                                               | 384 MH/s ±10%  | 715 W  | 21 kg   | 490 x 350 x 180 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `iBelink DM11G <https://ibelink.co/product/ibelink-dm11g/>`_                                          | 11 GH/s ±5%    | 810 W  | 22 kg   | 490 x 350 x 180 |
+| `iBelink DM11G <https://www.asicminervalue.com/miners/ibelink/dm11g>`_                                | 11 GH/s ±5%    | 810 W  | 22 kg   | 490 x 350 x 180 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
-| `iBelink DM22G <https://ibelink.co/product/ibelink-dm22g-x11dash-miner-with-22-ghs-hash-rate/>`_      | 22 GH/s ±5%    | 810 W  | 19 kg   | 490 x 350 x 180 |
+| `iBelink DM22G <https://www.asicminervalue.com/miners/ibelink/dm22g>`_                                | 22 GH/s ±5%    | 810 W  | 19 kg   | 490 x 350 x 180 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+
 | Pinidea DR-1                                                                                          | 500 MH/s ±10%  | 320 W  | 4.5 kg  | 290 x 130 x 150 |
 +-------------------------------------------------------------------------------------------------------+----------------+--------+---------+-----------------+

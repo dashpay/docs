@@ -52,7 +52,8 @@ a self-operated masternode.
 
    understanding.rst
    hosting.rst
+   server-config
    setup.rst
+   setup-evonode
    setup-testnet.rst
    maintenance.rst
-   advanced.rst

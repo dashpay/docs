@@ -1,6 +1,6 @@
 .. meta::
    :description: List and detailed information on third-party wallets supporting the Dash cryptocurrency
-   :keywords: dash, wallet, mobile, edge, ethos, paytomat, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, cryptonator, trust, kurepay, ownbit, abra, vegawallet
+   :keywords: dash, wallet, mobile, edge, ethos, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, trust, kurepay, ownbit, abra, vegawallet
 
 .. _dash-third-party:
 
@@ -58,51 +58,6 @@ ADAMANT support.
    :width: 200px
 
    ADAMANT Wallet Dash screen
-
-Atomic Wallet
-=============
-
-https://atomicwallet.io
-
-.. image:: img/atomic.png
-   :width: 100px
-   :align: right
-   :target: https://atomicwallet.io
-
-Atomic Wallet is a multi-asset custody-free wallet with atomic swap
-exchange and decentralized orderbook functionality. It provides a
-powerful, secure service that transparently and reliablly allows users
-to reduce effort spent on managing and exchanging crypto assets​.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=io.atomicwallet
-
-All Atomic Wallet releases are available from https://atomicwallet.io -
-simply download and install the appropriate package for your system.
-Atomic Wallet is also available from the `Google Play Store for Android
-<https://play.google.com/store/apps/details?id=io.atomicwallet>`__ and
-coming soon to the Apple App Store for iOS.
-
-Documentation
--------------
-
-Atomic Wallet offers detailed documentation of all functions at
-https://atomicwallet.freshdesk.com and a few quick links are also
-collected here:
-
-- `Getting started with Atomic Wallet Part 1 <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066359-getting-started-with-atomic-wallet-part-1->`_
-- `Getting started with Atomic Wallet Part 2 <https://atomicwallet.freshdesk.com/support/solutions/articles/36000087950-getting-started-with-atomic-wallet-part-2->`_
-- `How to create a wallet <https://atomicwallet.freshdesk.com/support/solutions/articles/36000066354-how-to-create-a-wallet->`_
-- `Getting started with Atomic Swaps <https://atomicwallet.freshdesk.com/support/solutions/articles/36000073262-getting-started-with-atomic-swaps>`_
-
-.. figure:: img/atomic-wallet.png
-   :width: 400px
-
-   Atomic Wallet Portfolio screen
 
 
 Channels
@@ -274,45 +229,6 @@ https://coinomi.freshdesk.com
 
    Coinomi wallet running on Android
 
-
-Cryptonator
-===========
-
-https://www.cryptonator.com
-
-.. image:: img/cryptonator.png
-   :width: 100px
-   :align: right
-   :target: https://www.cryptonator.com
-
-Cryptonator offers a web/mobile wallet which can be accessed using a
-simple username/password combination. It supports multiple currencies
-including Dash, and offers instant exchange between the various
-currencies. It also support Euro-denominated SEPA payments directly from
-within the account.
-
-Download
---------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.cryptonator.android
-
-Cryptonator is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.cryptonator.android>`__
-and online at https://www.cryptonator.com
-
-Documentation
--------------
-
-Cryptonator offers detailed documentation of all functions at
-https://cryptonator.zendesk.com
-
-.. figure:: img/cryptonator-wallet.png
-   :width: 400px
-
-   Cryptonator wallet running on Android
-
-
 Edge
 ====
 
@@ -407,50 +323,6 @@ here:
    :width: 133px
 
    Ethos Universal Wallet on Android
-
-
-Evercoin
-========
-
-https://evercoin.com
-
-.. image:: img/evercoin.png
-   :width: 100px
-   :align: right
-   :target: https://evercoin.com
-
-Evercoin is a multi-currency mobile wallet combined with the full power
-of an instant exchange, all in one app. Advanced features like limit
-orders allow you to execute advantageous trades without having to copy
-addresses around and use complicated online exchanges. Private keys are
-stored on the device and backed up using a typical 12-word phrase. An
-Evercoin hardware wallet is also due to launch soon.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.evercoin
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://apps.apple.com/app/id1277924158
-
-Evercoin is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.evercoin>`__ 
-and the `Apple App Store for iOS <https://apps.apple.com/app/id1277924158>`__.
-
-Documentation
--------------
-
-Read the `FAQ <https://evercoin.com/#faq>`__ or visit the `Evercoin site
-<https://evercoin.com>`_ to chat with the support team directly.
-
-.. figure:: img/evercoin-wallet.png
-   :width: 133px
-
-   Evercoin wallet running on Android
-
 
 Exodus
 ======
@@ -578,119 +450,6 @@ here:
 - `Wallet Security <https://support.huobiwallet.com/hc/en-us/categories/360000036622-Wallet-Security>`_
 
 
-Jaxx
-====
-
-https://jaxx.io
-
-.. image:: img/jaxx.png
-   :width: 100px
-   :align: right
-   :target: https://jaxx.io
-
-Jaxx supports multiple currencies in one wallet, including Dash. It is
-available for almost all platforms including Android, iOS, macOS,
-Windows, Linux and also as a Chrome extension. Jaxx is open source
-software.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.liberty.jaxx
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://apps.apple.com/app/id1435383184
-
-All Jaxx releases are available from https://jaxx.io/downloads.html -
-simply download and install the appropriate package for your system.
-Jaxx is also available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.liberty.jaxx>`__ 
-and the `Apple App Store for iOS <https://apps.apple.com/app/id1435383184>`__.
-
-Documentation
--------------
-
-Jaxx offers detailed documentation of all functions at
-https://support.decentral.ca and the getting started link is below:
-
-- `Getting started <https://support.decentral.ca/hc/en-us/sections/204038798-Getting-Started>`__
-
-.. figure:: img/jaxx-wallet.png
-   :width: 400px
-
-   Jaxx wallet running on various devices
-
-
-KurePay
-=======
-
-https://wallet.kurepay.com
-
-.. image:: img/kurepay.png
-   :width: 100px
-   :align: right
-   :target: https://wallet.kurepay.com
-
-KurePay offers a web and mobile wallet, with options to fund via
-credit/debit card and cryptocurrencies and withdrawals in Naira to
-Nigerian bank accounts. It is also possible to convert funds and pay
-utliities in Nigeria.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.kurewallet
-
-KurePay is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.kurewallet>`__.
-
-Documentation
--------------
-
-Read the `FAQ <https://kurepay.com/ewallet.html>`__ or send an email to
-info@kurepay.com for support with KurePay.
-
-
-Magnum
-======
-
-https://magnumwallet.co
-
-.. image:: img/magnum.png
-   :width: 100px
-   :align: right
-   :target: https://magnumwallet.co
-
-Magnum is a multi-currency web and mobile wallet with support for 100+
-cryptocurrencies, including Dash. The wallet integrates Changelly for
-in-app exchange and supports staking, delegation and airdrop functions.
-Magnum focuses on providing a simple and secure interface to store and
-interact with your digital assets.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.magnum.wallet
-
-Magnum is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.btcc.wallet>`__.
-
-Documentation
--------------
-
-Join the `Magnum Telegram group <https://t.me/magnumwalletco>`_ for
-Magnum support.
-
-.. figure:: img/magnum-wallet-mobile.png
-   :width: 133px
-
-   Magnum wallet running on Android
-
-
 Mobi
 ====
 
@@ -775,83 +534,6 @@ email to hi@bitbill.com for support with Ownbit.
 
    Ownbit wallet
 
-
-Paytomat
-========
-
-https://paytomat.com
-
-.. image:: img/paytomat.png
-   :width: 100px
-   :align: right
-   :target: https://paytomat.com
-
-Paytomat offers a multicurrency wallet for Android and iOS which
-integrates a loyalty program to incentivize retailers and consumers to
-transact in Dash.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.paytomat
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://apps.apple.com/app/id1415300709
-
-Paytomat is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.paytomat>`__ 
-and the `Apple App Store for iOS <https://apps.apple.com/app/id1415300709>`__.
-
-Documentation
--------------
-
-Join the `Paytomat Telegram group <https://t.me/paytomat>`_ or send an
-email to support@paytomat.com for support with Paytomat.
-
-.. figure:: img/paytomat-wallet.png
-   :width: 133px
-
-   Paytomat wallet running on Android
-
-
-Spend
-=====
-
-https://www.spend.com
-
-.. image:: img/spend.png
-   :width: 200px
-   :align: right
-   :target: https://www.spend.com
-
-Spend offers a multicurrency wallet for Android and iOS, which is also
-used to manage balance for the Spend Visa Card and loyalty program.
-
-Installation
-------------
-
-.. image:: img/google-play-badge.png
-   :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.spend.app
-
-.. image:: img/app-store.png
-   :width: 180px
-   :target: https://apps.apple.com/app/id1357740381
-
-Spend is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.spend.app>`__ 
-and the `Apple App Store for iOS <https://apps.apple.com/app/id1357740381>`__.
-
-Documentation
--------------
-
-Support for Spend is available at https://help.spend.com
-
-.. figure:: img/spend-wallet.png
-   :width: 133px
-
-   Spend wallet running on iOS
 
 Trust
 =====
