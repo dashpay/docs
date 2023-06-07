@@ -50,29 +50,6 @@ affecting the locked UTXOs.
 HD Wallets
 ==========
 
-Upgrade to HD
--------------
-
-.. warning::
-
-  A new backup must be created after upgrading to an HD wallet.
-
-Dash Core includes the ability upgrade a non-hierarchical deterministic (HD)
-wallet to an HD wallet via the ``upgradetohd`` command. The command can be run
-by either opening the console from **Window > Console** or issuing the following
-RPC command from ``dash-cli``::
-
-  upgradetohd "" "" <walletpassphrase>
-
-If your wallet is already encrypted you must enter the passphrase as the third
-parameter to the command. If your wallet is not already encrypted, specifying a
-wallet passphrase will trigger wallet encryption.
-
-To see full details for the command, run the following from either the console
-or ``dash-cli``::
-
-  help upgradetohd
-
 Enable HD Wallet Creation
 -------------------------
 
@@ -99,6 +76,31 @@ from ``dash-cli`` to view the mnemonic seed::
 Dash Core will display the HD seed in both hexadecimal and BIP39 mnemonic
 formats. It will also display the mnemonic passphrase if one was used when
 creating the wallet.
+
+
+Upgrade to HD
+-------------
+
+.. warning::
+
+  A new backup must be created after upgrading to an HD wallet.
+
+Dash Core includes the ability upgrade a non-hierarchical deterministic (HD)
+wallet to an HD wallet via the ``upgradetohd`` command. The command can be run
+by either opening the console from **Window > Console** or issuing the following
+RPC command from ``dash-cli``::
+
+  upgradetohd "" "" <walletpassphrase>
+
+If your wallet is already encrypted you must enter the passphrase as the third
+parameter to the command. If your wallet is not already encrypted, specifying a
+wallet passphrase will trigger wallet encryption.
+
+To see full details for the command, run the following from either the console
+or ``dash-cli``::
+
+  help upgradetohd
+
 
 Restore HD wallet
 -----------------
