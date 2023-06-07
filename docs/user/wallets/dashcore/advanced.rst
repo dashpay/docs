@@ -73,46 +73,52 @@ or ``dash-cli``::
 
   help upgradetohd
 
-Create HD Wallet
-----------------
+Enable HD Wallet Creation
+-------------------------
 
-Since version 0.12.2.0, Dash Core has included an implementation of
-BIP39/BIP44 compatible hierarchical deterministic (HD) key generation.
-This functionality is only available from the command line by specifying
-the ``usehd`` option when starting Dash Core for the first time. Use
-this function with care, since the mnemonic seed and keys will be stored
-in plain text until you specify a wallet passphrase. Note that the
-wallet passphrase is different to the mnemonic passphrase, which is
-often also referred to as the "25th word" or "extension word". The
-wallet passphrase encrypts the wallet file itself, while the mnemonic
-passphrase is used to specify different derivation branches from the
-same mnemonic seed.
+Since version 0.12.2.0, Dash Core has included an implementation of BIP39/BIP44
+compatible hierarchical deterministic (HD) key generation. We will use the
+Windows GUI wallet in this example, but the commands are similar if using
+``dash-qt`` or ``dashd`` on other operating systems. Enter the following command
+to configure Dash Core to generate HD wallets by default::
 
-We will use the Windows GUI wallet in this example, but the commands are
-similar if using ``dash-qt`` or ``dashd`` on other operating systems.
-Enter the following command to get started with a randomly generated HD
-wallet seed and no mnemonic passphrase::
+  dash-qt.exe -usehd
 
-  dash-qt.exe --usehd=1
+To make this configuration persist between restarts, add ``usehd=1`` to the
+``dash.conf`` file.
 
-A new HD wallet will be generated and Dash Core will display a warning
-informing you that you must encrypt your wallet after verifying it works
-correctly. Open the console from **Tools > Console** or issue the
-following RPC command from ``dash-cli`` to view the mnemonic seed::
+
+View HD wallet information
+--------------------------
+
+Open the console from **Window > Console** or issue the following RPC command
+from ``dash-cli`` to view the mnemonic seed::
 
   dumphdinfo
 
-Dash Core will display the HD seed in both hexadecimal and as a BIP39
-mnemonic. To restore an existing HD wallet, or define your own
-separately generated mnemonic and/or passphrase, ensure no
-``wallet.dat`` file exists in the ``datadir`` and enter the following
-command::
+Dash Core will display the HD seed in both hexadecimal and BIP39 mnemonic
+formats. It will also display the mnemonic passphrase if one was used when
+creating the wallet.
 
-  dash-qt.exe --usehd=1 --mnemonic="enter mnemonic" --mnemonicpassphrase="optional mnemonic passphrase"
+Restore HD wallet
+-----------------
+
+To restore an existing HD wallet, or define your own separately generated
+mnemonic and/or passphrase, create a new blank wallet with following command::
+
+  createwallet "enter wallet name" false true "optional wallet password"
+
+Add the HD wallet details to the newly created wallet by running::
+
+  upgradetohd "enter mnemonic" "optional mnemonic passphrase" "optional wallet passphrase"
 
 The HD wallet will be restored and your balance will appear once sync is
 complete.
 
+Note that the wallet passphrase is different to the mnemonic passphrase, which
+is often also referred to as the "25th word" or "extension word". The wallet
+passphrase encrypts the wallet file itself, while the mnemonic passphrase is
+used to specify different derivation branches from the same mnemonic seed.
 
 .. _dashcore-multisig:
 
