@@ -50,14 +50,16 @@ affecting the locked UTXOs.
 HD Wallets
 ==========
 
+.. _dashcore-hd-default:
+
 Enable HD Wallet Creation
 -------------------------
 
-Since version 0.12.2.0, Dash Core has included an implementation of BIP39/BIP44
-compatible hierarchical deterministic (HD) key generation. We will use the
-Windows GUI wallet in this example, but the commands are similar if using
-``dash-qt`` or ``dashd`` on other operating systems. Enter the following command
-to configure Dash Core to generate HD wallets by default::
+Dash Core includes an implementation of BIP39/BIP44 compatible hierarchical
+deterministic (HD) key generation. We will use the Windows GUI wallet in this
+example, but the commands are similar if using ``dash-qt`` or ``dashd`` on other
+operating systems. Enter the following command to configure Dash Core to
+generate HD wallets by default::
 
   dash-qt.exe -usehd
 
@@ -77,6 +79,8 @@ Dash Core will display the HD seed in both hexadecimal and BIP39 mnemonic
 formats. It will also display the mnemonic passphrase if one was used when
 creating the wallet.
 
+
+.. _dashcore-hd-upgrade:
 
 Upgrade to HD
 -------------
@@ -101,6 +105,8 @@ or ``dash-cli``::
 
   help upgradetohd
 
+
+.. _dashcore-hd-restore:
 
 Restore HD wallet
 -----------------
