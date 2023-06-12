@@ -270,3 +270,4 @@ texinfo_documents = [
 
 def setup(app):
     app.add_js_file('js/lang.js')
+    app.add_js_file('js/temp-header-fix.js')
