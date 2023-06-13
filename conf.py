@@ -97,6 +97,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx_copybutton',
     'sphinx_design',
+    'sphinx_favicon',
     'sphinx.ext.intersphinx',
 ]
 
@@ -145,28 +146,6 @@ html_theme_options = {
     "github_url": "https://github.com/dashpay/docs",
     "show_toc_level": 2,
     "show_nav_level": 1,
-    "favicons": [
-      {
-         "rel": "icon",
-         "sizes": "16x16",
-         "href": "img/favicon-16x16.png",
-      },
-      {
-         "rel": "icon",
-         "sizes": "32x32",
-         "href": "img/favicon-32x32.png",
-      },
-      {
-         "rel": "icon",
-         "sizes": "96x96",
-         "href": "img/favicon-96x96.png",
-      },
-      {
-         "rel": "icon",
-         "sizes": "144x144",
-         "href": "img/favicon-144x144.png",
-      },
-   ],
 #    "navbar_start": ["navbar-logo", "languages"],
 #    "navbar_center": ["languages", "navbar-nav", "languages"],
 #    "navbar_end": ["navbar-icon-links", "version"],
@@ -193,6 +172,14 @@ html_static_path = ['_static']
 html_css_files = [
     'css/footer.css',
     'css/pydata-overrides.css',
+]
+
+# -- Options for sphinx-favicon -------------------------------------------
+favicons = [
+    "img/favicon-16x16.png",
+    "img/favicon-32x32.png",
+    "img/favicon-96x96.png",
+    "img/favicon-144x144.png",
 ]
 
 # Override to allow text wrap in tables
