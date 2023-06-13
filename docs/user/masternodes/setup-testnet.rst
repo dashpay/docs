@@ -225,6 +225,9 @@ Core and Tenderdash, as well as all dependencies and supporting
 services. Full dashmate documentation is available `here
 <https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__.
 
+.. warning::
+    Installation as root user is not supported or recommended.
+
 Open PuTTY or a console again and connect using the username and
 password you just created for your new, non-root user. Begin by
 installing dashmate dependencies::
@@ -1027,8 +1030,7 @@ Your masternode is now providing service on the following local ports::
   Core RPC:     19998
   Platform P2P: 26656
   Platform RPC: 26657
-  DAPI HTTP:    3000
-  DAPI gRPC:    3010
+  DAPI:    3000
 
 Note that platform sync will take some time after core sync is complete.
 You can monitor progress with ``dashmate status platform`` or use ``dashmate
