@@ -129,19 +129,19 @@ following keys:
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
   wget https://github.com/dashpay/dash/releases/download/v19.2.0/dashcore-19.2.0-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-19.1.0-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-19.2.0-x86_64-linux-gnu.tar.gz.asc
 
 Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
   mkdir ~/.dashcore
-  tar xfvz dashcore-19.1.0-x86_64-linux-gnu.tar.gz
+  tar xfvz dashcore-19.2.0-x86_64-linux-gnu.tar.gz
   cp dashcore-19.1.0/bin/dashd .dashcore/
   cp dashcore-19.1.0/bin/dash-cli .dashcore/
 
 Clean up unneeded files::
 
-  rm dashcore-19.1.0-x86_64-linux-gnu.tar.gz
+  rm dashcore-19.2.0-x86_64-linux-gnu.tar.gz
   rm -r dashcore-19.1.0/
 
 Create a configuration file using the following command::

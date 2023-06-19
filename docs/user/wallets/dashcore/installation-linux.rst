@@ -61,7 +61,7 @@ download as follows::
 
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import  
-  gpg --verify dashcore-19.1.0-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-19.2.0-x86_64-linux-gnu.tar.gz.asc
 
 .. figure:: img/linux/setup-linux-gpg.png
    :width: 400px
@@ -82,7 +82,7 @@ we will extract the executable file with a graphical user interface
 
 Extract Dash Core as follows::
 
-  tar xzf dashcore-19.1.0-x86_64-linux-gnu.tar.gz
+  tar xzf dashcore-19.2.0-x86_64-linux-gnu.tar.gz
 
 This will create a folder named ``dashcore-19.1.0`` in the current working
 directory. We will now install the executable binaries to
