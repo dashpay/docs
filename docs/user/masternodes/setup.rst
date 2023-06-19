@@ -257,8 +257,8 @@ copy the necessary files to the directory::
 
   mkdir ~/.dashcore
   tar xfv dashcore-19.2.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-19.1.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-19.1.0/bin/dash-cli ~/.dashcore/
+  cp -f dashcore-19.2.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-19.2.0/bin/dash-cli ~/.dashcore/
 
 Create a configuration file using the following command::
 

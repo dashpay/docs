@@ -69,8 +69,8 @@ following keys:
 Extract the compressed archive and copy the new files to the directory::
 
   tar xfv dashcore-19.2.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-19.1.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-19.1.0/bin/dash-cli ~/.dashcore/
+  cp -f dashcore-19.2.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-19.2.0/bin/dash-cli ~/.dashcore/
 
 Restart Dash::
 

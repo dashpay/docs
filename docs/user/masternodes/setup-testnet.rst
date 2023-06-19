@@ -665,7 +665,7 @@ Extract the compressed archive and copy the necessary files to the
 directory::
 
   tar xfv dashcore-19.2.0-$(uname -m)-linux-gnu.tar.gz
-  sudo install -t /usr/local/bin dashcore-19.1.0/bin/*
+  sudo install -t /usr/local/bin dashcore-19.2.0/bin/*
 
 Create a working directory for Dash Core::
 
