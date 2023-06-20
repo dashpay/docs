@@ -68,100 +68,95 @@ included in the deterministic list.
 An Evolution masternode (or evonode) can be registered from the official Dash Core
 wallet. This guide will describe the steps.
 
-..
-  A masternode can be registered from a hardware wallet, the official Dash Core
-  wallet, or a Dash Electrum wallet, although a hardware wallet is highly
-  recommended to enhance security and protect yourself against hacking. This guide
-  will describe the steps for both hardware wallets and Dash Core.
+A masternode can be registered from a hardware wallet or the official Dash Core
+wallet, although a hardware wallet is highly recommended to enhance security and
+protect yourself against hacking. This guide will describe the steps for both
+hardware wallets and Dash Core.
 
-..
-  Option 1: Holding collateral in a hardware wallet
-  -------------------------------------------------
+Option 1: Holding collateral in a hardware wallet
+-------------------------------------------------
 
-  Set up your Trezor using the Trezor wallet at https://wallet.trezor.io/ and send
-  a test transaction to verify that it is working properly. For help on this, see
-  :ref:`this guide <hardware-trezor>` - you may also choose to (carefully!) `add a
-  passphrase
-  <https://blog.trezor.io/passphrase-the-ultimate-protection-for-your-accounts-3a311990925b>`_
-  to your Trezor to further protect your collateral. Create a new account in your
-  Trezor wallet by clicking **Add account**. Then click the **Receive** tab and
-  send exactly 4000 DASH to the address displayed. If you are setting up multiple
-  masternodes, send 4000 DASH to consecutive addresses within the same new
-  account. You should see the transaction as soon as the first confirmation
-  arrives, usually within a few minutes.
+Set up your Trezor using the Trezor wallet at https://wallet.trezor.io/ and send
+a test transaction to verify that it is working properly. For help on this, see
+:ref:`this guide <hardware-trezor>` - you may also choose to (carefully!) `add a
+passphrase
+<https://blog.trezor.io/passphrase-the-ultimate-protection-for-your-accounts-3a311990925b>`_
+to your Trezor to further protect your collateral. Create a new account in your
+Trezor wallet by clicking **Add account**. Then click the **Receive** tab and
+send exactly 4000 DASH to the address displayed. If you are setting up multiple
+masternodes, send 4000 DASH to consecutive addresses within the same new
+account. You should see the transaction as soon as the first confirmation
+arrives, usually within a few minutes.
 
-  .. figure:: img/setup-collateral-trezor.png
-    :width: 400px
+.. figure:: img/setup-collateral-trezor.png
+  :width: 400px
 
-    Trezor Wallet Receive tab showing successfully received collateral of 1000
-    DASH
+  Trezor Wallet Receive tab showing successfully received collateral of 1000
+  DASH
 
-  Once the transaction appears, click the QR code on the right to view the
-  transaction on the blockchain. Keep this window open as we complete the
-  following steps, since we will soon need to confirm that 15 confirmations exist,
-  as shown in the following screenshot.
+Once the transaction appears, click the QR code on the right to view the
+transaction on the blockchain. Keep this window open as we complete the
+following steps, since we will soon need to confirm that 15 confirmations exist,
+as shown in the following screenshot.
 
-  .. figure:: img/setup-collateral-blocks.png
-    :width: 400px
+.. figure:: img/setup-collateral-blocks.png
+  :width: 400px
 
-    Trezor blockchain explorer showing 15 confirmations for collateral transfer
+  Trezor blockchain explorer showing 15 confirmations for collateral transfer
 
-  While we are waiting for 15 confirmations, download the latest version of the
-  Dash Masternode Tool (DMT) from the GitHub releases page `here
-  <https://github.com/Bertrand256/dash-masternode-tool/releases>`__. Unzip and run
-  the file. The following window appears.
+While we are waiting for 15 confirmations, download the latest version of the
+Dash Masternode Tool (DMT) from the GitHub releases page `here
+<https://github.com/Bertrand256/dash-masternode-tool/releases>`__. Unzip and run
+the file. The following window appears.
 
-  .. figure:: img/setup-collateral-dmt-start.png
-    :width: 400px
+.. figure:: img/setup-collateral-dmt-start.png
+  :width: 400px
 
-    Dash Masternode Tool startup screen
+  Dash Masternode Tool startup screen
 
-  Click the third button from the left **Check Dash Network Connection** in the
-  top left corner of the main window to verify that the connection is working.
-  Then connect your Trezor device and click the next button **Test Hardware Wallet
-  Connection** to verify the Trezor connection is working.
+Click the third button from the left **Check Dash Network Connection** in the
+top left corner of the main window to verify that the connection is working.
+Then connect your Trezor device and click the next button **Test Hardware Wallet
+Connection** to verify the Trezor connection is working.
 
-  .. figure:: img/setup-collateral-connection.png
-    :width: 100px
+.. figure:: img/setup-collateral-connection.png
+  :width: 100px
 
-  .. figure:: img/setup-collateral-hardware.png
-    :width: 180px
+.. figure:: img/setup-collateral-hardware.png
+  :width: 180px
 
-    Dash Masternode Tool successful connection confirmations
+  Dash Masternode Tool successful connection confirmations
 
-  We will now use DMT to enter some basic information about the masternode and
-  extract the transaction ID. Carry out the following sequence of steps as shown
-  in this screenshot:
+We will now use DMT to enter some basic information about the masternode and
+extract the transaction ID. Carry out the following sequence of steps as shown
+in this screenshot:
 
-  .. figure:: img/setup-collateral-dmt-steps.png
-    :width: 400px
+.. figure:: img/setup-collateral-dmt-steps.png
+  :width: 400px
 
-    Dash Masternode Tool configuration steps
+  Dash Masternode Tool configuration steps
 
-  #. Click the **New** button.
-  #. Enter a name for your masternode. The host name you specified for your VPS
-    above is a good choice.
-  #. Enter the IP address of your masternode. This was given to you by the VPS
-    provider when you set up the server. Then enter the TCP port number. This
-    should be 9999.
-  #. Click **Locate collateral** to view unused collateral funding transactions
-    available on the connected hardware wallet. Select the address to which you
-    sent 4000 Dash and click **Apply**. The **Collateral address**, **path**,
-    **Collateral TX hash** and **index** fields should be filled automatically.
+#. Click the **New** button.
+#. Enter a name for your masternode. The host name you specified for your VPS
+   above is a good choice.
+#. Enter the IP address of your masternode. This was given to you by the VPS
+   provider when you set up the server. Then enter the TCP port number. This
+   should be 9999.
+#. Click **Locate collateral** to view unused collateral funding transactions
+   available on the connected hardware wallet. Select the address to which you
+   sent 4000 Dash and click **Apply**. The **Collateral address**, **path**,
+   **Collateral TX hash** and **index** fields should be filled automatically.
 
-  .. figure:: img/setup-collateral-dmt-ready.png
-    :width: 400px
+.. figure:: img/setup-collateral-dmt-ready.png
+  :width: 400px
 
-    Dash Masternode Tool with masternode configuration
+  Dash Masternode Tool with masternode configuration
 
-  Leave DMT open and continue with the next step: :ref:`installing Dash Core on
-  your VPS <evonode-setup-install>`.
+Leave DMT open and continue with the next step: :ref:`installing Dash Core on
+your VPS <evonode-setup-install>`.
 
-  Option 2: Holding collateral in Dash Core wallet
-  ------------------------------------------------
-
-Holding collateral in Dash Core wallet
---------------------------------------
+Option 2: Holding collateral in Dash Core wallet
+------------------------------------------------
 
 Open Dash Core wallet and wait for it to synchronize with the network. It should
 look like this when ready:
