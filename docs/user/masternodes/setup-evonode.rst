@@ -391,87 +391,82 @@ Register your masternode
 The keys required for the different masternode roles are described briefly under
 :ref:`mn-concepts` in this documentation.
 
-..
-  Option 1: Registering from a hardware wallet
-  --------------------------------------------
+Option 1: Registering from a hardware wallet
+--------------------------------------------
 
-  Go back to DMT and ensure that all fields from the previous step are still
-  filled out correctly.  Click **Generate new** for the three private keys
-  required for a DIP003 deterministic masternode:
+Go back to DMT and ensure that all fields from the previous step are still
+filled out correctly.  Click **Generate new** for the three private keys
+required for a DIP003 deterministic masternode:
 
-  - Owner private key
-  - Operator private key
-  - Voting private key
+- Owner private key
+- Operator private key
+- Voting private key
 
-  .. figure:: img/setup-dmt-full.png
-    :width: 220px
+.. figure:: img/setup-dmt-full.png
+  :width: 220px
 
-    Dash Masternode Tool ready to register a new masternode
+  Dash Masternode Tool ready to register a new masternode
 
-  Then click **Register masternode**. Optionally specify a different **Payout
-  address** and/or **Operator reward**, then click **Continue**. Select **Remote
-  Dash RPC Node (automatic method)**. (See `here
-  <https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-connection-direct.md>`__
-  for documentation on using your own local RPC node.) and confirm the following
-  two messages:
+Then click **Register masternode**. Optionally specify a different **Payout
+address** and/or **Operator reward**, then click **Continue**. Select **Remote
+Dash RPC Node (automatic method)**. (See `here
+<https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-connection-direct.md>`__
+for documentation on using your own local RPC node.) and confirm the following
+two messages:
 
-  .. figure:: img/setup-dmt-send.png
-    :width: 220px
+.. figure:: img/setup-dmt-send.png
+  :width: 220px
 
-  .. figure:: img/setup-dmt-sent.png
-    :width: 220px
+.. figure:: img/setup-dmt-sent.png
+  :width: 220px
 
-    Dash Masternode Tool confirmation dialogs to register a masternode
+  Dash Masternode Tool confirmation dialogs to register a masternode
 
-  The BLS private key must be entered in the ``dash.conf`` file on the
-  masternode. This allows the masternode to watch the blockchain for
-  relevant Pro*Tx transactions, and will cause it to start serving as a
-  masternode when the signed ProRegTx is broadcast by the owner, as we
-  just did above. Log in to your masternode using ``ssh`` or PuTTY and
-  edit the configuration file as follows::
+The BLS private key must be entered in the ``dash.conf`` file on the
+masternode. This allows the masternode to watch the blockchain for
+relevant Pro*Tx transactions, and will cause it to start serving as a
+masternode when the signed ProRegTx is broadcast by the owner, as we
+just did above. Log in to your masternode using ``ssh`` or PuTTY and
+edit the configuration file as follows::
 
-    nano ~/.dashcore/dash.conf
+  nano ~/.dashcore/dash.conf
 
-  The editor appears with the existing masternode configuration. Add or
-  uncomment this lines in the file, replacing the key with your BLS
-  private key generated above::
+The editor appears with the existing masternode configuration. Add or
+uncomment this lines in the file, replacing the key with your BLS
+private key generated above::
 
-    masternodeblsprivkey=24c1fa3c22c6ea6b1cc68a37be18acb51042b19465fe0a26301c8717bf939805
+  masternodeblsprivkey=24c1fa3c22c6ea6b1cc68a37be18acb51042b19465fe0a26301c8717bf939805
 
-  Press enter to make sure there is a blank line at the end of the file,
-  then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-  the file. Note that providing a ``masternodeblsprivkey`` enables
-  masternode mode, which will automatically force the ``txindex=1``,
-  ``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
-  masternode service. We now need to restart the masternode for this
-  change to take effect. Enter the following commands, waiting a few
-  seconds in between to give Dash Core time to shut down::
+Press enter to make sure there is a blank line at the end of the file,
+then press **Ctrl + X** to close the editor and **Y** and **Enter** save
+the file. Note that providing a ``masternodeblsprivkey`` enables
+masternode mode, which will automatically force the ``txindex=1``,
+``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
+masternode service. We now need to restart the masternode for this
+change to take effect. Enter the following commands, waiting a few
+seconds in between to give Dash Core time to shut down::
 
-    ~/.dashcore/dash-cli stop
-    sleep 15
-    ~/.dashcore/dashd
+  ~/.dashcore/dash-cli stop
+  sleep 15
+  ~/.dashcore/dashd
 
-  At this point you can monitor your masternode by entering
-  ``~/.dashcore/dash-cli masternode status`` or using the **Get status**
-  function in DMT. The final result should appear as follows:
+At this point you can monitor your masternode by entering
+``~/.dashcore/dash-cli masternode status`` or using the **Get status**
+function in DMT. The final result should appear as follows:
 
-  .. figure:: img/setup-dash-cli-start.png
-    :width: 400px
+.. figure:: img/setup-dash-cli-start.png
+  :width: 400px
 
-    dash-cli masternode status output showing successfully registered masternode
+  dash-cli masternode status output showing successfully registered masternode
 
-  At this point you can safely log out of your server by typing ``exit``.
-  Congratulations! Your masternode is now running.
+At this point you can safely log out of your server by typing ``exit``.
+Congratulations! Your masternode is now running.
 
 
 .. _evonode-dashcore-protx:
-
-..
-  Option 2: Registering from Dash Core wallet
-  -------------------------------------------
 .. _register-evonode-dashmate:
 
-Option 1: Registering from dashmate
+Option 2: Registering from dashmate
 -----------------------------------
 
 .. note::
@@ -523,7 +518,7 @@ entirely from within dashmate. See the documentation :hoverxref:`here
 
 .. _register-evonode-core:
 
-Option 2: Registering from Dash Core wallet
+Option 3: Registering from Dash Core wallet
 -------------------------------------------
 
 .. _evonode-mn-outputs:
