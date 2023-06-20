@@ -400,9 +400,9 @@ the masternode:
 - Owner private key
 - Operator private key
 - Voting private key
-- Platform Node private key (Evonodes only)
+- Platform Node private key (evonodes only)
 
-For Evonodes, click the button beside the **Platform P2P port** and **Platform HTTP
+For evonodes, click the button beside the **Platform P2P port** and **Platform HTTP
 port** fields to set the default values.
 
 Click **Apply changes** when these fields have been set.
@@ -427,11 +427,31 @@ two messages:
 
   Dash Masternode Tool confirmation dialogs to register a masternode
 
-The BLS private key must be entered in the ``dash.conf`` file on the
-masternode. This allows the masternode to watch the blockchain for
-relevant Pro*Tx transactions, and will cause it to start serving as a
-masternode when the signed ProRegTx is broadcast by the owner, as we
-just did above. Log in to your masternode using ``ssh`` or PuTTY and
+
+Complete server configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+At this point the masternode registration is complete, but the BLS private key
+must be added to the server so it can become operational. The BLS key
+allows the masternode to watch the blockchain for relevant Pro*Tx transactions,
+and will cause it to start serving as a masternode when the signed ProRegTx is
+broadcast by the owner, as we just did above.
+
+Take note of your BLS private key and then proceed with the relevant
+instructions below based on which :ref:`Software Installation option
+<evonode-setup-install>` you are using.
+
+Dashmate
+~~~~~~~~
+
+For dashmate-based masternodes, enter the BLS private key during the initial
+dashmate setup process. 
+
+
+Manual
+~~~~~~
+
+For manual installations, log in to your masternode using ``ssh`` or PuTTY and
 edit the configuration file as follows::
 
   nano ~/.dashcore/dash.conf
