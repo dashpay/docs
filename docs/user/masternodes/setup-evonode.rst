@@ -65,9 +65,6 @@ in a configuration file and registration transaction as proof to write the
 configuration to the blockchain so the Evolution masternode can be
 included in the deterministic list.
 
-An Evolution masternode (or evonode) can be registered from the official Dash Core
-wallet. This guide will describe the steps.
-
 A masternode can be registered from a hardware wallet or the official Dash Core
 wallet, although a hardware wallet is highly recommended to enhance security and
 protect yourself against hacking. This guide will describe the steps for both
@@ -84,9 +81,9 @@ passphrase
 to your Trezor to further protect your collateral. Create a new account in your
 Trezor wallet by clicking **Add account**. Then click the **Receive** tab and
 send exactly 4000 DASH to the address displayed. If you are setting up multiple
-masternodes, send 4000 DASH to consecutive addresses within the same new
-account. You should see the transaction as soon as the first confirmation
-arrives, usually within a few minutes.
+masternodes, send to consecutive addresses within the same new account. You
+should see the transaction as soon as the first confirmation arrives, usually
+within a few minutes.
 
 .. figure:: img/setup-collateral-trezor.png
   :width: 400px
@@ -138,13 +135,15 @@ in this screenshot:
 #. Click the **New** button.
 #. Enter a name for your masternode. The host name you specified for your VPS
    above is a good choice.
+#. Select which masternode type you are setting up.
 #. Enter the IP address of your masternode. This was given to you by the VPS
    provider when you set up the server. Then enter the TCP port number. This
    should be 9999.
 #. Click **Locate collateral** to view unused collateral funding transactions
    available on the connected hardware wallet. Select the address to which you
-   sent 4000 Dash and click **Apply**. The **Collateral address**, **path**,
-   **Collateral TX hash** and **index** fields should be filled automatically.
+   sent the collateral and click **Apply**. The **Collateral address**,
+   **path**, **Collateral TX hash** and **index** fields should be filled
+   automatically.
 
 .. figure:: img/setup-collateral-dmt-ready.png
   :width: 400px
@@ -205,7 +204,7 @@ Software Installation
 The following methods are available for installing Dash Evolution masternode 
 software:
 
-- :ref:`Dashmate installation <evonode-setup-install-dashmate>`
+- :ref:`Dashmate installation (recommended) <evonode-setup-install-dashmate>`
 - :ref:`Manual installation <evonode-setup-install-manual>`
 
 .. _evonode-setup-install-dashmate:
@@ -408,7 +407,7 @@ port** fields to set the default values.
 Click **Apply changes** when these fields have been set.
 
 .. figure:: img/setup-dmt-full.png
-  :width: 220px
+  :width: 400px
 
   Dash Masternode Tool ready to register a new masternode
 
@@ -423,7 +422,7 @@ two messages:
   :width: 220px
 
 .. figure:: img/setup-dmt-sent.png
-  :width: 220px
+  :width: 400px
 
   Dash Masternode Tool confirmation dialogs to register a masternode
 
