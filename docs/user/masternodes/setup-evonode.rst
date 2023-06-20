@@ -91,8 +91,7 @@ arrives, usually within a few minutes.
 .. figure:: img/setup-collateral-trezor.png
   :width: 400px
 
-  Trezor Wallet Receive tab showing successfully received collateral of 1000
-  DASH
+  Trezor Wallet Receive tab showing successfully received collateral
 
 Once the transaction appears, click the QR code on the right to view the
 transaction on the blockchain. Keep this window open as we complete the
@@ -152,8 +151,8 @@ in this screenshot:
 
   Dash Masternode Tool with masternode configuration
 
-Leave DMT open and continue with the next step: :ref:`installing Dash Core on
-your VPS <evonode-setup-install>`.
+Leave DMT open and continue with the next step: :ref:`Software Installation
+<evonode-setup-install>`.
 
 Option 2: Holding collateral in Dash Core wallet
 ------------------------------------------------
@@ -395,21 +394,27 @@ Option 1: Registering from a hardware wallet
 --------------------------------------------
 
 Go back to DMT and ensure that all fields from the previous step are still
-filled out correctly.  Click **Generate new** for the three private keys
-required for a DIP003 deterministic masternode:
+filled out correctly.  Click **Generate new** for the private keys required for
+the masternode:
 
 - Owner private key
 - Operator private key
 - Voting private key
+- Platform Node private key (Evonodes only)
+
+For Evonodes, click the button beside the **Platform P2P port** and **Platform HTTP
+port** fields to set the default values.
+
+Click **Apply changes** when these fields have been set.
 
 .. figure:: img/setup-dmt-full.png
   :width: 220px
 
   Dash Masternode Tool ready to register a new masternode
 
-Then click **Register masternode**. Optionally specify a different **Payout
-address** and/or **Operator reward**, then click **Continue**. Select **Remote
-Dash RPC Node (automatic method)**. (See `here
+Then click **MN actions** and select **Register masternode**. Optionally specify
+a different **Payout address** and/or **Operator reward**, then click
+**Continue**. Select **Remote Dash RPC Node (automatic method)**. (See `here
 <https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-connection-direct.md>`__
 for documentation on using your own local RPC node.) and confirm the following
 two messages:
