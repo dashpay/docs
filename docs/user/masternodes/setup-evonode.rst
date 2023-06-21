@@ -218,9 +218,9 @@ interactive setup command. Dashmate handles the installation of Dash Core, as
 well as all dependencies and supporting services. See this :ref:`dashmate
 documentation <dashmate>` for more information.
 
-Open PuTTY or a console again and connect using the username and password you
-just created for your new, non-root user. Begin by installing dashmate
-dependencies::
+Open PuTTY or a console again and connect to the server using the username and
+password you just created for your new, non-root user. Begin by installing
+dashmate dependencies::
 
   curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
   sudo usermod -aG docker $USER
@@ -233,11 +233,10 @@ Install dashmate::
 
   npm install -g dashmate
 
-.. note::
-  
-  Refer to the dashmate page for :hoverxref:`alternative installation options <dashmate-install>`.
+Alternative installation options are available on the :hoverxref:`dashmate page
+<dashmate-install>`.
 
-Continue with the :ref:`Registration step <register-evonode-dashmate>` to setup the
+Continue with the :ref:`Registration step <register-evonode>` to setup the
 collateral, keys and construct the ProTx transaction required to enable your
 masternode.
 
