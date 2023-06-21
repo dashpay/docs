@@ -444,7 +444,28 @@ Dashmate
 ~~~~~~~~
 
 For dashmate-based masternodes, enter the BLS private key during the initial
-dashmate setup process. 
+dashmate setup process. Run the dashmate setup wizard on your server::
+
+  dashmate setup
+
+Select the network and masternode type. Select **Yes** when asked if your
+masternode is already registered since this was done earlier in the section.
+
+Enter the **BLS private key** and the **Platform node key** from DMT when
+requested by dashmate.
+
+Dashmate will automatically detect the external IP address and select the
+default ports for the network you are setting up. You can modify these values if
+necessary for a specific reason, but typically the defaults should be used.
+
+Once the dashmate wizard has completed successfully, start your node as
+follows::
+
+  dashmate start
+
+You can manage your masternode status, configuration, and running state
+entirely from within dashmate. See the documentation :hoverxref:`here
+<dashmate-node-operation>`.
 
 
 Manual
