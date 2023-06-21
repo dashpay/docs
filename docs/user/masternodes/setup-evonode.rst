@@ -195,11 +195,12 @@ operator key.
 
 .. _evonode-setup-install:
 
-Software Installation
-=====================
+Masternode Installation
+=======================
 
-The following methods are available for installing Dash Evolution masternode 
-software:
+Open PuTTY or a console again and connect using the username and password you
+previously created for your new, non-root user. The following options are
+available for installing Dash masternode software:
 
 - :ref:`Dashmate installation (recommended) <evonode-setup-install-dashmate>`
 - :ref:`Manual installation <evonode-setup-install-manual>`
