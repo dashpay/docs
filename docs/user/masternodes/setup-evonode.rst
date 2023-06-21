@@ -499,7 +499,7 @@ seconds in between to give Dash Core time to shut down::
   ~/.dashcore/dashd
 
 At this point you can monitor your masternode by entering
-``~/.dashcore/dash-cli masternode status`` or using the **Get status**
+``~/.dashcore/dash-cli masternode status`` or using the **Refresh status**
 function in DMT. The final result should appear as follows:
 
 .. figure:: img/setup-dash-cli-start.png
@@ -867,7 +867,7 @@ final ``protx register_submit`` transaction identifies your masternode.
 
 At this point you can go back to your terminal window and monitor your
 masternode by entering ``~/.dashcore/dash-cli masternode status`` or
-using the **Get status** function in DMT. 
+using the **Refresh status** function in DMT. 
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
