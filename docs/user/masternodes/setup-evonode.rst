@@ -237,145 +237,6 @@ Continue with the :ref:`Registration step <register-evonode>` to setup the
 collateral, keys and construct the ProTx transaction required to enable your
 masternode.
 
-.. _evonode-setup-install-manual:
-
-Manual installation
--------------------
-
-.. attention::
-  
-  Dash Platform will include multiple services that must be configured properly
-  for an Evolution masternode to operate correctly. A :ref:`dashmate-based
-  installation <evonode-setup-install-dashmate>` is recommended to ensure
-  your configuration is functional.
-
-To manually download and install the components of your Dash Evolution masternode, 
-visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ and 
-copy the link to the latest version appropriate for your CPU architecture, 
-e.g. ``x86_64-linux-gnu``. Go back to your terminal window and enter the following 
-command, pasting in the address to the latest version of Dash Core by right clicking
-or pressing **Ctrl+ V**::
-
-  cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v19.2.0/dashcore-19.2.0-x86_64-linux-gnu.tar.gz
-
-Verify the authenticity of your download by checking its detached
-signature against the public key published by the Dash Core development
-team. All releases of Dash are signed using GPG with one of the
-following keys:
-
-- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
-  `verifiable here on Keybase <https://keybase.io/codablock>`__
-- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
-  on Keybase <https://keybase.io/pasta>`__
-
-::
-
-  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
-  curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v19.2.0/dashcore-19.2.0-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-19.2.0-x86_64-linux-gnu.tar.gz.asc
-
-Create a working directory for Dash, extract the compressed archive and
-copy the necessary files to the directory::
-
-  mkdir ~/.dashcore
-  tar xfv dashcore-19.2.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-19.2.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-19.2.0/bin/dash-cli ~/.dashcore/
-
-Create a configuration file using the following command::
-
-  nano ~/.dashcore/dash.conf
-
-An editor window will appear. We now need to create a configuration file
-specifying several variables. Copy and paste the following text to get
-started, then replace the variables specific to your configuration as
-follows::
-
-  #----
-  rpcuser=XXXXXXXXXXXXX
-  rpcpassword=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  rpcallowip=127.0.0.1
-  #----
-  listen=1
-  server=1
-  daemon=1
-  #----
-  #masternodeblsprivkey=
-  externalip=XXX.XXX.XXX.XXX
-  #----
-
-Replace the fields marked with ``XXXXXXX`` as follows:
-
-- ``rpcuser``: enter any string of numbers or letters, no special
-  characters allowed
-- ``rpcpassword``: enter any string of numbers or letters, no special
-  characters allowed
-- ``externalip``: this is the IP address of your VPS
-
-Leave the ``masternodeblsprivkey`` field commented out for now. The
-result should look something like this:
-
-.. figure:: img/setup-manual-conf.png
-   :width: 400px
-
-   Entering key data in dash.conf on the masternode
-
-Press **Ctrl + X** to close the editor and **Y** and **Enter** save the
-file. You can now start running Dash on the masternode to begin
-synchronization with the blockchain::
-
-  ~/.dashcore/dashd
-
-You will see a message reading **Dash Core server starting**. We will
-now install Sentinel, a piece of software which operates as a watchdog
-to communicate to the network that your node is working properly::
-
-  cd ~/.dashcore
-  git clone https://github.com/dashpay/sentinel.git
-  cd sentinel
-  virtualenv venv
-  venv/bin/pip install -r requirements.txt
-  venv/bin/python bin/sentinel.py
-
-You will see a message reading **dashd not synced with network! Awaiting
-full sync before running Sentinel.** Add dashd and sentinel to crontab
-to make sure it runs every minute to check on your masternode::
-
-  crontab -e
-
-Choose nano as your editor and enter the following lines at the end of
-the file::
-
-  * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
-  * * * * * pidof dashd || ~/.dashcore/dashd
-
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. We now need to wait for 15 confirmations of the collateral
-transaction to complete, and wait for the blockchain to finish
-synchronizing on the masternode. You can use the following commands to
-monitor progress::
-
-  ~/.dashcore/dash-cli mnsync status
-
-When synchronisation is complete, you should see the following
-response::
-
-  {
-    "AssetID": 999,
-    "AssetName": "MASTERNODE_SYNC_FINISHED",
-    "AssetStartTime": 1558596597,
-    "Attempt": 0,
-    "IsBlockchainSynced": true,
-    "IsSynced": true,
-    "IsFailed": false
-  }
-
-Continue with the :ref:`Registration step <register-evonode>` to setup the
-collateral, keys and construct the ProTx transaction required to enable your
-masternode.
 
 .. _register-evonode:
 
@@ -888,3 +749,144 @@ using the **Refresh status** function in DMT.
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
+
+
+.. _evonode-setup-install-manual:
+
+Manual installation
+===================
+
+.. attention::
+  
+  Dash Platform will include multiple services that must be configured properly
+  for an Evolution masternode to operate correctly. A :ref:`dashmate-based
+  installation <evonode-setup-install-dashmate>` is recommended to ensure
+  your configuration is functional.
+
+To manually download and install the components of your Dash Evolution masternode, 
+visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ and 
+copy the link to the latest version appropriate for your CPU architecture, 
+e.g. ``x86_64-linux-gnu``. Go back to your terminal window and enter the following 
+command, pasting in the address to the latest version of Dash Core by right clicking
+or pressing **Ctrl+ V**::
+
+  cd /tmp
+  wget https://github.com/dashpay/dash/releases/download/v19.2.0/dashcore-19.2.0-x86_64-linux-gnu.tar.gz
+
+Verify the authenticity of your download by checking its detached
+signature against the public key published by the Dash Core development
+team. All releases of Dash are signed using GPG with one of the
+following keys:
+
+- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
+  `verifiable here on Keybase <https://keybase.io/codablock>`__
+- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
+  on Keybase <https://keybase.io/pasta>`__
+
+::
+
+  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
+  curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
+  wget https://github.com/dashpay/dash/releases/download/v19.2.0/dashcore-19.2.0-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-19.2.0-x86_64-linux-gnu.tar.gz.asc
+
+Create a working directory for Dash, extract the compressed archive and
+copy the necessary files to the directory::
+
+  mkdir ~/.dashcore
+  tar xfv dashcore-19.2.0-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-19.2.0/bin/dashd ~/.dashcore/
+  cp -f dashcore-19.2.0/bin/dash-cli ~/.dashcore/
+
+Create a configuration file using the following command::
+
+  nano ~/.dashcore/dash.conf
+
+An editor window will appear. We now need to create a configuration file
+specifying several variables. Copy and paste the following text to get
+started, then replace the variables specific to your configuration as
+follows::
+
+  #----
+  rpcuser=XXXXXXXXXXXXX
+  rpcpassword=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  rpcallowip=127.0.0.1
+  #----
+  listen=1
+  server=1
+  daemon=1
+  #----
+  #masternodeblsprivkey=
+  externalip=XXX.XXX.XXX.XXX
+  #----
+
+Replace the fields marked with ``XXXXXXX`` as follows:
+
+- ``rpcuser``: enter any string of numbers or letters, no special
+  characters allowed
+- ``rpcpassword``: enter any string of numbers or letters, no special
+  characters allowed
+- ``externalip``: this is the IP address of your VPS
+
+Leave the ``masternodeblsprivkey`` field commented out for now. The
+result should look something like this:
+
+.. figure:: img/setup-manual-conf.png
+   :width: 400px
+
+   Entering key data in dash.conf on the masternode
+
+Press **Ctrl + X** to close the editor and **Y** and **Enter** save the
+file. You can now start running Dash on the masternode to begin
+synchronization with the blockchain::
+
+  ~/.dashcore/dashd
+
+You will see a message reading **Dash Core server starting**. We will
+now install Sentinel, a piece of software which operates as a watchdog
+to communicate to the network that your node is working properly::
+
+  cd ~/.dashcore
+  git clone https://github.com/dashpay/sentinel.git
+  cd sentinel
+  virtualenv venv
+  venv/bin/pip install -r requirements.txt
+  venv/bin/python bin/sentinel.py
+
+You will see a message reading **dashd not synced with network! Awaiting
+full sync before running Sentinel.** Add dashd and sentinel to crontab
+to make sure it runs every minute to check on your masternode::
+
+  crontab -e
+
+Choose nano as your editor and enter the following lines at the end of
+the file::
+
+  * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+  * * * * * pidof dashd || ~/.dashcore/dashd
+
+Press enter to make sure there is a blank line at the end of the file,
+then press **Ctrl + X** to close the editor and **Y** and **Enter** save
+the file. We now need to wait for 15 confirmations of the collateral
+transaction to complete, and wait for the blockchain to finish
+synchronizing on the masternode. You can use the following commands to
+monitor progress::
+
+  ~/.dashcore/dash-cli mnsync status
+
+When synchronisation is complete, you should see the following
+response::
+
+  {
+    "AssetID": 999,
+    "AssetName": "MASTERNODE_SYNC_FINISHED",
+    "AssetStartTime": 1558596597,
+    "Attempt": 0,
+    "IsBlockchainSynced": true,
+    "IsSynced": true,
+    "IsFailed": false
+  }
+
+Continue with the :ref:`Registration step <register-evonode>` to setup the
+collateral, keys and construct the ProTx transaction required to enable your
+masternode.
