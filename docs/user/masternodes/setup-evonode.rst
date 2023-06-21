@@ -70,6 +70,8 @@ wallet, although a hardware wallet is highly recommended to enhance security and
 protect yourself against hacking. This guide will describe the steps for both
 hardware wallets and Dash Core.
 
+.. _evonode-send-collateral-hardware:
+
 Option 1: Holding collateral in a hardware wallet
 -------------------------------------------------
 
@@ -388,6 +390,8 @@ Register your masternode
 The keys required for the different masternode roles are described briefly under
 :ref:`mn-concepts` in this documentation.
 
+.. _register-evonode-hardware:
+
 Option 1: Registering from a hardware wallet
 --------------------------------------------
 
@@ -513,12 +517,25 @@ Congratulations! Your masternode is now running.
 Option 2: Registering from dashmate
 -----------------------------------
 
-.. note::
-  Prior to running the dashmate setup wizard you should obtain the
-  :hoverxref:`collateral transaction info <evonode-mn-outputs>` and the owner, voting,
-  and payout addresses for the new evonode. For example, use Dash Core to generate
-  the addresses as described in :hoverxref:`this section below
-  <evonode-get-addresses>`.
+.. attention::
+  For mainnet masternodes, it highly is recommended to :ref:`store the collateral on a
+  hardware wallet <evonode-send-collateral-hardware>` and use the Dash Masternode
+  Tool to register as described in :ref:`Option 1: Registering from a hardware
+  wallet <register-evonode-hardware>`.
+
+Dashmate can assist with masternode registration by requesting the parameters
+necessary to construct a valid protx command that can be sent from Dash Core.
+This option is most useful for setting up testnet masternodes where the
+collateral is stored in Dash Core rather than a hardware wallet.
+
+Collect required information
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Prior to running the dashmate setup wizard you should obtain the
+:hoverxref:`collateral transaction info <evonode-mn-outputs>` and the owner,
+voting, and payout addresses for the new evonode. For example, use Dash Core to
+generate the addresses as described in the :hoverxref:`Get masternode addresses
+section <evonode-get-addresses>`.
 
 Run the setup wizard
 ^^^^^^^^^^^^^^^^^^^^
