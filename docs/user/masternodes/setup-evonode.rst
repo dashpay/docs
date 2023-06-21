@@ -101,7 +101,7 @@ as shown in the following screenshot.
   Trezor blockchain explorer showing 15 confirmations for collateral transfer
 
 While we are waiting for 15 confirmations, download the latest version of the
-Dash Masternode Tool (DMT) from the GitHub releases page `here
+Dash Masternode Tool (DMT) from the `GitHub releases page
 <https://github.com/Bertrand256/dash-masternode-tool/releases>`__. Unzip and run
 the file. The following window appears.
 
@@ -215,8 +215,8 @@ Dashmate installation
 Dashmate is a universal tool designed to help you set up and run Dash nodes in a
 containerized environment. It is based on Docker technology and features an
 interactive setup command. Dashmate handles the installation of Dash Core, as
-well as all dependencies and supporting services. Additional dashmate
-information is available :ref:`here <dashmate>`.
+well as all dependencies and supporting services. See this :ref:`dashmate
+documentation <dashmate>` for more information.
 
 Open PuTTY or a console again and connect using the username and password you
 just created for your new, non-root user. Begin by installing dashmate
@@ -463,9 +463,9 @@ follows::
 
   dashmate start
 
-You can manage your masternode status, configuration, and running state
-entirely from within dashmate. See the documentation :hoverxref:`here
-<dashmate-node-operation>`.
+You can manage your masternode status, configuration, and running state entirely
+from within dashmate. See the dashmate :hoverxref:`node operation documentation
+<dashmate-node-operation>` for details.
 
 
 Manual
@@ -557,9 +557,9 @@ Once the dashmate wizard has completed successfully, start your node as follows:
 
   dashmate start
 
-You can manage your masternode status, configuration, and running state
-entirely from within dashmate. See the documentation :hoverxref:`here
-<dashmate-node-operation>`.
+You can manage your masternode status, configuration, and running state entirely
+from within dashmate. See the dashmate :hoverxref:`node operation documentation
+<dashmate-node-operation>` for details.
 
 .. _register-evonode-core:
 
