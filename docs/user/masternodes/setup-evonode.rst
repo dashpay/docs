@@ -126,21 +126,16 @@ Connection** to verify the Trezor connection is working.
   Dash Masternode Tool successful connection confirmations
 
 We will now use DMT to enter some basic information about the masternode and
-extract the transaction ID. Carry out the following sequence of steps as shown
-in this screenshot:
+extract the transaction ID. First, click **add a new one** or click **MN
+actions** and select **Add New Masternode Entry...**. Carry out the following
+sequence of steps as shown in the screenshot:
 
-.. figure:: img/setup-collateral-dmt-steps.png
-  :width: 400px
-
-  Dash Masternode Tool configuration steps
-
-#. Click the **New** button.
 #. Enter a name for your masternode. The host name you specified for your VPS
    above is a good choice.
 #. Select which masternode type you are setting up.
 #. Enter the IP address of your masternode. This was given to you by the VPS
    provider when you set up the server. Then enter the TCP port number. This
-   should be 9999.
+   should be 9999 for mainnet.
 #. Click **Locate collateral** to view unused collateral funding transactions
    available on the connected hardware wallet. Select the address to which you
    sent the collateral and click **Apply**. The **Collateral address**,
@@ -416,10 +411,10 @@ Click **Apply changes** when these fields have been set.
 
 Then click **MN actions** and select **Register masternode**. Optionally specify
 a different **Payout address** and/or **Operator reward**, then click
-**Continue**. Select **Remote Dash RPC Node (automatic method)**. (See `here
-<https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-connection-direct.md>`__
-for documentation on using your own local RPC node.) and confirm the following
-two messages:
+**Continue**. Select **Remote Dash RPC Node (automatic method)**. (For details
+about using your own local RPC node, see the `Dash Masternode Tool documentation
+<https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-connection-direct.md>`__.)
+Confirm the following two messages:
 
 .. figure:: img/setup-dmt-send.png
   :width: 220px
