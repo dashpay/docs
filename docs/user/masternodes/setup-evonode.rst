@@ -763,6 +763,10 @@ Manual installation
   installation <evonode-setup-install-dashmate>` is recommended to ensure
   your configuration is functional.
 
+
+Dash Core
+---------
+
 To manually download and install the components of your Dash Evolution masternode, 
 visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ and 
 copy the link to the latest version appropriate for your CPU architecture, 
@@ -842,8 +846,13 @@ synchronization with the blockchain::
 
   ~/.dashcore/dashd
 
-You will see a message reading **Dash Core server starting**. We will
-now install Sentinel, a piece of software which operates as a watchdog
+You will see a message reading **Dash Core server starting**. 
+
+
+Sentinel
+--------
+
+We will now install Sentinel, a piece of software which operates as a watchdog
 to communicate to the network that your node is working properly::
 
   cd ~/.dashcore
