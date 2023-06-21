@@ -582,6 +582,15 @@ from within dashmate. See the dashmate :hoverxref:`node operation documentation
 Option 3: Registering from Dash Core wallet
 -------------------------------------------
 
+.. attention::
+  For mainnet masternodes, it highly is recommended to :ref:`store the collateral on a
+  hardware wallet <evonode-send-collateral-hardware>` and use the Dash Masternode
+  Tool to register as described in :ref:`Option 1: Registering from a hardware
+  wallet <register-evonode-hardware>`.
+
+This option can be used without installing any applications other than Dash
+Core; however, it requires the most technical skill.
+
 .. _evonode-mn-outputs:
 
 Identify the funding transaction
@@ -700,6 +709,10 @@ transaction used to register the masternode on the network.
 Get masternode addresses
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+Owner address
+~~~~~~~~~~~~~
+
 First, we need to get a new, unused address from the wallet to serve as the
 **owner key address** (``ownerKeyAddr``). This is not the same as the collateral
 address holding 4000 Dash. Generate a new address as follows::
@@ -707,6 +720,10 @@ address holding 4000 Dash. Generate a new address as follows::
   getnewaddress
 
   yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip
+
+
+Voting address
+~~~~~~~~~~~~~~
 
 This address can also be used as the **voting key address** (``votingKeyAddr``).
 Alternatively, you can specify an address provided to you by your chosen voting
@@ -716,6 +733,9 @@ delegate, or simply generate a new voting key address as follows::
 
   yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg
 
+
+Payout address
+~~~~~~~~~~~~~~
 Then either generate or choose an existing address to receive the **owner's
 masternode payouts** (``payoutAddress``). It is also possible to use an address
 external to the wallet::
@@ -724,12 +744,20 @@ external to the wallet::
 
   yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN
 
+
+Fee source address
+~~~~~~~~~~~~~~~~~~
+
 You can also optionally generate and fund another address as the **transaction
 fee source** (``feeSourceAddress``). If you selected an external payout address,
 you must specify a fee source address. 
 
 Either the payout address or fee source address must have enough balance to pay
 the transaction fee, or the ``register_prepare_hpmn`` transaction will fail.
+
+
+Key access
+~~~~~~~~~~
 
 The private keys to the owner and fee source addresses must exist in the wallet
 submitting the transaction to the network. If your wallet is protected by a
@@ -743,13 +771,6 @@ wallet for 5 minutes::
 
 Prepare a ProRegTx transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-A pair of BLS keys for the operator were already generated above, and the
-private key was entered on the masternode. The public key is used in this
-transaction as the ``operatorPubKey``.
-
-Prepare the ProRegTx
-~~~~~~~~~~~~~~~~~~~~
 
 We will now prepare an unsigned ProRegTx special transaction using the ``protx
 register_prepare_hpmn`` command. This command has the following syntax::
@@ -765,7 +786,7 @@ argument to the command as follows:
 - ``ipAndPort``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
 - ``ownerKeyAddr``: The new Dash address generated above for the owner/voting
   address
-- ``operatorPubKey``: The BLS public key :ref:`generated above
+- ``operatorPubKey``: The BLS public key :hoverxref:`generated above
   <evonode-bls-generation>` (or provided by your hosting service)
 - ``votingKeyAddr``: The new Dash address generated above, or the address of a
   delegate, used for proposal voting
@@ -773,7 +794,7 @@ argument to the command as follows:
   operator as payment
 - ``payoutAddress``: A new or existing Dash address to receive the owner's
   masternode rewards
-- ``platformNodeID``: Platform P2P node ID :ref:`generated above
+- ``platformNodeID``: Platform P2P node ID :hoverxref:`generated above
   <evonode-generate-platform-node-id>`
 - ``platformP2PPort``: TCP port of Dash Platform peer-to-peer communication
   between nodes. Must be 26656 for mainnet.
