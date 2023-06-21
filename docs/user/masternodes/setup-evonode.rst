@@ -633,7 +633,7 @@ the following command::
   secure.**
 
 Add the private key to your masternode configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The public key will be used in following steps. The private key must be
 entered in the ``dash.conf`` file on the masternode. This allows the
@@ -695,17 +695,10 @@ transaction used to register the masternode on the network.
   secure.**
 
 
-Prepare a ProRegTx transaction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-A pair of BLS keys for the operator were already generated above, and the
-private key was entered on the masternode. The public key is used in this
-transaction as the ``operatorPubKey``.
-
 .. _evonode-get-addresses:
 
 Get masternode addresses
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 First, we need to get a new, unused address from the wallet to serve as the
 **owner key address** (``ownerKeyAddr``). This is not the same as the collateral
@@ -745,7 +738,15 @@ wallet for 5 minutes::
 
   walletpassphrase yourSecretPassword 300
 
+
 .. _hmpn-prepare-proregtx:
+
+Prepare a ProRegTx transaction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A pair of BLS keys for the operator were already generated above, and the
+private key was entered on the masternode. The public key is used in this
+transaction as the ``operatorPubKey``.
 
 Prepare the ProRegTx
 ~~~~~~~~~~~~~~~~~~~~
