@@ -8,6 +8,27 @@
 Advanced functions
 ==================
 
+Masternode keys
+---------------
+
+Certain masternode keys may be generated and stored in Dash Wallet. To access
+these keys, tap the **Menu button** and select **Tools**. Tap **Masternode
+Keys** and enter your PIN to open the Masternode Keys screen. From here, tap on
+any of the listed key types to view existing keys or generate new ones. The
+screen will show all used keys and the first unused one. To generate additional
+keys, tap the **+** button.
+
+.. image:: img/menu.jpg
+   :width: 160 px
+.. image:: img/menu-tools.jpg
+   :width: 160 px
+.. image:: img/tools-mn-keys.jpg
+   :width: 160 px
+.. image:: img/tools-mn-keys-owner-key.jpg
+   :width: 160 px
+
+*Viewing and generating masternode keys*
+
 URL Scheme
 ==========
 
