@@ -9,7 +9,7 @@ Advanced functions
 ==================
 
 Masternode keys
----------------
+===============
 
 Certain masternode keys may be generated and stored in Dash Wallet. To access
 these keys, tap the **Menu button** and select **Tools**. Tap **Masternode
