@@ -198,9 +198,7 @@ operator key.
 Masternode Installation
 =======================
 
-Open PuTTY or a console again and connect using the username and password you
-previously created for your new, non-root user. The following options are
-available for installing Dash masternode software:
+The following options are available for installing Dash masternode software:
 
 - :ref:`Dashmate installation (recommended) <evonode-setup-install-dashmate>`
 - :ref:`Manual installation <evonode-setup-install-manual>`
