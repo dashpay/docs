@@ -176,7 +176,11 @@ Register the masternode
 -----------------------
 
 Copy the provided protx command and run it using dash-cli or the Dash Core
-console. Select **Yes** after the command has been run successfully. If you
+console. Do note that your payout address must have a balance for the
+registration process to be successful, so remember to send some DASH
+to this address before you begin registration.
+
+Select **Yes** after the command has been run successfully. If you
 receive an error, select **No** to go back through the previous steps and review
 details.
 
