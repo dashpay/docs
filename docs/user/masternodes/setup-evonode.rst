@@ -53,6 +53,16 @@ both security and performance reasons. Refer to the :hoverxref:`Server
 configuration <server-config>` page for details on preparing your server to host
 a masternode.
 
+Once you have completed server configuration, complete the remaining steps in
+the sections below to finish setting up your evonode or follow along with this
+step-by-step tutorial.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="//www.youtube.com/embed/973E4knShBA" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
 .. _evonode-send-collateral:
 
 Send the collateral

@@ -75,7 +75,14 @@ Masternode setup
 
 You can setup both regular masternodes and Evolution masternodes (evonodes)
 using dashmate. There are few minor extra steps for evonodes, but the process is
-largely identical for both masternode types.
+largely identical for both masternode types. Complete the steps in the sections
+below to set up your node or follow along with this step-by-step tutorial.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="//www.youtube.com/embed/973E4knShBA" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
 To begin masternode setup, run ``dashmate setup`` to start the interactive wizard::
 
