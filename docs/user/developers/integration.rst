@@ -266,3 +266,48 @@ underlying technologies.
 - :ref:`InstantSend Developer Documentation <core:guide-features-instantsend>`
 - `DIP0010: LLMQ InstantSend <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__
 - `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__
+
+.. _integration-chainlocks:
+
+ChainLocks
+==========
+
+ChainLocks are a feature provided by the Dash Network which provides certainty
+when accepting payments. This technology, particularly when used in parallel
+with :ref:`InstantSend <instantsend>`, creates an environment in which payments
+can be accepted immediately and without the risk of “Blockchain Reorganization
+Events”.
+
+The risk of blockchain reorganization is typically addressed by requiring
+multiple :term:`confirmations` before a transaction can be safely accepted as
+payment. This type of indirect security is effective, but at a cost of time and
+user experience. ChainLocks are a solution for this problem.
+
+Receiving ChainLocks
+--------------------
+
+ChainLock status is typically determined through direct connection with the Dash
+daemon or by a `ZMQ notification
+<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__.
+
+Direct Connection
+^^^^^^^^^^^^^^^^^
+
+ChainLock status can be identified through direct connection with the Dash
+daemon using JSON-RPC protocol. The ``chainlock`` attribute of the JSON response
+reflects the status of the block or transaction and is included in the following
+commands:
+
+   - :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
+   - :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
+   - :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
+   - :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
+
+ZMQ Notification
+^^^^^^^^^^^^^^^^
+
+ChainLock signatures are created shortly after the related block has been mined.
+As a result it is recommended that integrated clients use ZMQ (ZeroMQ)
+notifications in order to ensure that this information is received as promptly
+as possible. 
+
