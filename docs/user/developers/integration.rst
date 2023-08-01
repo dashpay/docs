@@ -311,3 +311,27 @@ As a result it is recommended that integrated clients use ZMQ (ZeroMQ)
 notifications in order to ensure that this information is received as promptly
 as possible. 
 
+This sample code uses the `js-dashd-zmq library
+<https://github.com/dashpay/js-dashd-zmq>`__ to listen for ChainLock ZMQ
+notifications and return the hash of blocks that receive a ChainLock. 
+
+.. code-block:: javascript
+   :caption: chainlock-zmq.js
+
+   const { ChainLock } = require('@dashevo/dashcore-lib');
+   const ZMQClient = require('@dashevo/dashd-zmq');
+   const client = new ZMQClient({
+   protocol: 'tcp',
+   host: '0.0.0.0',
+   port: '20009',
+   });
+
+   (async () => {
+      await client.connect();
+      client.subscribe(ZMQClient.TOPICS.rawchainlock);
+      client.subscribe(ZMQClient.TOPICS.hashchainlock);
+      client.on(ZMQClient.TOPICS.hashchainlock, async (hashChainLockMessage) => {
+         console.log(`ChainLock received for block ${hashChainLockMessage}`)
+         });    
+   })();
+
