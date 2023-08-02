@@ -203,9 +203,10 @@ ZMQ Notification
 ^^^^^^^^^^^^^^^^
 
 Whenever a transaction enters the mempool and whenever a transaction is locked
-in the mempool, ZMQ notifications can be broadcast by the node. A list of
-possible ZMQ notifications can be found `here
-<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__. 
+in the mempool, ZMQ notifications can be broadcast by the node. Refer to `the
+list of possible ZMQ notifications
+<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__ for more
+details.
 
 The following notifications are relevant for recognizing transactions
 and their corresponding instantlocks:
@@ -326,9 +327,10 @@ ZMQ Notification
 ChainLock signatures are created shortly after the related block has been mined.
 As a result it is recommended that integrated clients use :ref:`ZMQ (ZeroMQ)
 notifications <core:examples-receiving-zmq-notifications>` in order to ensure
-that this information is received as promptly as possible. A list of possible
-ZMQ notifications can be found `here
-<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__. 
+that this information is received as promptly as possible. Refer to `the
+list of possible ZMQ notifications
+<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__ for more
+details.
 
 The following notifications are relevant for recognizing blocks and their
 corresponding ChainLocks:
