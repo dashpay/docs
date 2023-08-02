@@ -264,6 +264,7 @@ underlying technologies.
 
 - `InstantSend Technical Information <https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__
 - :ref:`InstantSend Developer Documentation <core:guide-features-instantsend>`
+- :ref:`Receiving ZMQ notifications <core:examples-receiving-zmq-notifications>`
 - `DIP0010: LLMQ InstantSend <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__
 - `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__
 
@@ -310,9 +311,9 @@ ZMQ Notification
 ^^^^^^^^^^^^^^^^
 
 ChainLock signatures are created shortly after the related block has been mined.
-As a result it is recommended that integrated clients use ZMQ (ZeroMQ)
-notifications in order to ensure that this information is received as promptly
-as possible. 
+As a result it is recommended that integrated clients use :ref:`ZMQ (ZeroMQ)
+notifications <core:examples-receiving-zmq-notifications>` in order to ensure
+that this information is received as promptly as possible. 
 
 This sample code uses the `js-dashd-zmq library
 <https://github.com/dashpay/js-dashd-zmq>`__ to listen for ChainLock ZMQ
@@ -324,9 +325,9 @@ notifications and return the hash of blocks that receive a ChainLock.
    const { ChainLock } = require('@dashevo/dashcore-lib');
    const ZMQClient = require('@dashevo/dashd-zmq');
    const client = new ZMQClient({
-   protocol: 'tcp',
-   host: '0.0.0.0',
-   port: '20009',
+      protocol: 'tcp',
+      host: '0.0.0.0',
+      port: '20009',
    });
 
    (async () => {
@@ -335,7 +336,7 @@ notifications and return the hash of blocks that receive a ChainLock.
       client.subscribe(ZMQClient.TOPICS.hashchainlock);
       client.on(ZMQClient.TOPICS.hashchainlock, async (hashChainLockMessage) => {
          console.log(`ChainLock received for block ${hashChainLockMessage}`)
-         });    
+      });
    })();
 
 Additional Resources
@@ -346,6 +347,7 @@ intended to help provide a more complete understanding of the underlying
 technologies.
 
 - :ref:`ChainLock Developer Documentation <core:guide-features-chainlocks>`
+- :ref:`Receiving ZMQ notifications <core:examples-receiving-zmq-notifications>`
 - `DIP0008: ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__
 - `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__
 
