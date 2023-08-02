@@ -190,14 +190,14 @@ daemon using JSON-RPC protocol. The ``instantlock`` attribute of the JSON
 response reflects the status of the transaction and is included in the following
 commands:
 
-   - :ref:`getrawmempool <core:api-rpc-blockchain-getrawmempool>`
-   - :ref:`getmempoolancestors <core:api-rpc-blockchain-getmempoolancestors>`
-   - :ref:`getmempooldescendants <core:api-rpc-blockchain-getmempooldescendants>`
-   - :ref:`getmempoolentry <core:api-rpc-blockchain-getmempoolentry>`
-   - :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
-   - :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
-   - :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
-   - :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
+- :ref:`getrawmempool <core:api-rpc-blockchain-getrawmempool>`
+- :ref:`getmempoolancestors <core:api-rpc-blockchain-getmempoolancestors>`
+- :ref:`getmempooldescendants <core:api-rpc-blockchain-getmempooldescendants>`
+- :ref:`getmempoolentry <core:api-rpc-blockchain-getmempoolentry>`
+- :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
+- :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
+- :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
+- :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
 
 ZMQ Notification
 ^^^^^^^^^^^^^^^^
@@ -312,13 +312,13 @@ daemon using JSON-RPC protocol. The boolean ``chainlock`` attribute of the JSON
 response reflects the ChainLock status of the block or transaction and is
 included in the following commands:
 
-   - :ref:`getblock <core:api-rpc-blockchain-getblock>`
-   - :ref:`getblockheaders <core:api-rpc-blockchain-getblockheader>`
-   - :ref:`getblockheaders <core:api-rpc-blockchain-getblockheaders>`
-   - :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
-   - :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
-   - :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
-   - :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
+- :ref:`getblock <core:api-rpc-blockchain-getblock>`
+- :ref:`getblockheader <core:api-rpc-blockchain-getblockheader>`
+- :ref:`getblockheaders <core:api-rpc-blockchain-getblockheaders>`
+- :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
+- :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
+- :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
+- :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
 
 ZMQ Notification
 ^^^^^^^^^^^^^^^^
