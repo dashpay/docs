@@ -287,6 +287,19 @@ user experience. ChainLocks are a solution for this problem.
 Receiving ChainLocks
 --------------------
 
+.. note::
+
+   Once a ChainLock is observed for a block, each transaction in that block and
+   all previous blocks can be considered irreversibly and fully confirmed.
+
+Receiving a ChainLock introduces two requirements:
+
+1. The ability to determine the “ChainLock Status” of a given block or
+   transaction.
+
+2. The ability to adjust “Confirmation Status” independently of block
+   confirmation.
+
 ChainLock status is typically determined through direct connection with the Dash
 daemon or by a `ZMQ notification
 <https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__.
@@ -313,14 +326,25 @@ ZMQ Notification
 ChainLock signatures are created shortly after the related block has been mined.
 As a result it is recommended that integrated clients use :ref:`ZMQ (ZeroMQ)
 notifications <core:examples-receiving-zmq-notifications>` in order to ensure
-that this information is received as promptly as possible. 
+that this information is received as promptly as possible. A list of possible
+ZMQ notifications can be found `here
+<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__. 
+
+The following notifications are relevant for recognizing blocks and their
+corresponding ChainLocks:
+
+- zmqpubhashblock
+- zmqpubhashchainlock
+- zmqpubrawblock
+- zmqpubrawchainlock
+- zmqpubrawchainlocksig
 
 This sample code uses the `js-dashd-zmq library
 <https://github.com/dashpay/js-dashd-zmq>`__ to listen for ChainLock ZMQ
 notifications and return the hash of blocks that receive a ChainLock. 
 
 .. code-block:: javascript
-   :caption: chainlock-zmq.js
+   :caption: Subscribe to ChainLock hash ZMQ notifications
 
    const { ChainLock } = require('@dashevo/dashcore-lib');
    const ZMQClient = require('@dashevo/dashd-zmq');
@@ -332,7 +356,6 @@ notifications and return the hash of blocks that receive a ChainLock.
 
    (async () => {
       await client.connect();
-      client.subscribe(ZMQClient.TOPICS.rawchainlock);
       client.subscribe(ZMQClient.TOPICS.hashchainlock);
       client.on(ZMQClient.TOPICS.hashchainlock, async (hashChainLockMessage) => {
          console.log(`ChainLock received for block ${hashChainLockMessage}`)
@@ -350,4 +373,3 @@ technologies.
 - :ref:`Receiving ZMQ notifications <core:examples-receiving-zmq-notifications>`
 - `DIP0008: ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__
 - `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__
-
