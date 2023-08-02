@@ -308,9 +308,9 @@ Direct Connection
 ^^^^^^^^^^^^^^^^^
 
 ChainLock status can be identified through direct connection with the Dash
-daemon using JSON-RPC protocol. The ``chainlock`` attribute of the JSON response
-reflects the status of the block or transaction and is included in the following
-commands:
+daemon using JSON-RPC protocol. The boolean ``chainlock`` attribute of the JSON
+response reflects the ChainLock status of the block or transaction and is
+included in the following commands:
 
    - :ref:`getblock <core:api-rpc-blockchain-getblock>`
    - :ref:`getblockheaders <core:api-rpc-blockchain-getblockheader>`
