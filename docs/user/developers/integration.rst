@@ -298,6 +298,9 @@ daemon using JSON-RPC protocol. The ``chainlock`` attribute of the JSON response
 reflects the status of the block or transaction and is included in the following
 commands:
 
+   - :ref:`getblock <core:api-rpc-blockchain-getblock>`
+   - :ref:`getblockheaders <core:api-rpc-blockchain-getblockheader>`
+   - :ref:`getblockheaders <core:api-rpc-blockchain-getblockheaders>`
    - :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
    - :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
    - :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
