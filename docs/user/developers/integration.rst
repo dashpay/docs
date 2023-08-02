@@ -338,3 +338,14 @@ notifications and return the hash of blocks that receive a ChainLock.
          });    
    })();
 
+Additional Resources
+--------------------
+
+The following resources provide additional information about InstantSend and are
+intended to help provide a more complete understanding of the underlying
+technologies.
+
+- :ref:`ChainLock Developer Documentation <core:guide-features-chainlocks>`
+- `DIP0008: ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__
+- `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__
+
