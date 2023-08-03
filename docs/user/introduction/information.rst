@@ -375,6 +375,8 @@ Glossary
     number increases as more blocks are added to the blockchain.
 
   Confirmation Number
+  confirmations
+
     The number of confirmations for a specific Dash transaction. Zero
     confirmations means that the **transaction is unconfirmed**. One
     confirmation means that the transaction is included in the latest
