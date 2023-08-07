@@ -927,10 +927,11 @@ responsible for TLS termination, you will need to obtain an TLS
 certificate for your public IP address before configuring Envoy. You can
 do this independently using a provider of your choice, or use ZeroSSL to
 obtain a free certificate. Visit https://app.zerossl.com/certificate/new
-and enter your public IP address, then download the auth file. Place the
-contents of this file in the
-``/var/www/html/.well-known/pki-validation/`` directory with the
-original filename on your server and serve it using nginx as follows::
+and enter your public IP address, select HTTP File Upload as the
+verification method and then download the auth file. Place the contents
+of this file in the ``/var/www/html/.well-known/pki-validation/``
+directory with the original filename on your server and serve it using
+nginx as follows::
 
   sudo mkdir -p /var/www/html/.well-known/pki-validation/
   sudo nano /var/www/html/.well-known/pki-validation/<your_auth_file_name>.txt
@@ -943,7 +944,7 @@ The auth file should be available at the following URL, for example::
 Complete validation in ZeroSSL and download the bundle file in .zip
 format. Extract it on your local computer, and copy the contents of the
 ``ca_bundle.crt`` and ``private.key`` files to your server into the
-following location:
+following locations::
 
   sudo nano /etc/ssl/bundle.crt
   sudo nano /etc/ssl/private.key
