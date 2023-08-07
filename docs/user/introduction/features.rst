@@ -75,19 +75,19 @@ shows a live calculation of masternode earnings. These rewards decrease
 by 7% each year, together with the block reward. There is also the
 possibility for masternodes to earn money from fees in the future.
 
-High-Performance Masternodes (HPMNs)
-------------------------------------
+Evolution Masternodes (evonodes)
+--------------------------------
 
-High-Performance Masternodes (HPMNs) are a subset of Masternodes that have 
-been created to host the Dash Platform. An HPMN is a lot like Masternodes 
+Evolution Masternodes (evonodes) are a subset of Masternodes that have 
+been created to host the Dash Platform. An evonode is a lot like Masternodes 
 with these differences:
 
 +----------------+-----------------------------------+-----------------------------------------------------+
-|                | Masternode                        | HPMN                                                |
+|                | Masternode                        | Evolution Masternode                                |
 +================+===================================+=====================================================+
 | Collateral     | 1000 DASH                         | 4000 DASH (4X the collateral for normal masternodes)|
 +----------------+-----------------------------------+-----------------------------------------------------+
-| Specs          | Lesser than HPMN                  | Higher than normal masternodes                      |
+| Specs          | Lesser than evonodes              | Higher than normal masternodes                      |
 +----------------+-----------------------------------+-----------------------------------------------------+
 | Service        | Only Dash Core                    | Both Dash Core and Platform                         |
 +----------------+-----------------------------------+-----------------------------------------------------+
@@ -488,9 +488,9 @@ once per quarter) until the reallocation is complete.
 +-------------+-----------+--------------+------------+---------------------+
 | 9           | 43.3      | 56.7         | 0.50%      |     2022-11-25      |
 +-------------+-----------+--------------+------------+---------------------+
-| 10(Current) | 42.8      | 57.2         | 0.50%      |     2023-02-24      |
+| 10          | 42.8      | 57.2         | 0.50%      |     2023-02-24      |
 +-------------+-----------+--------------+------------+---------------------+
-| 11          | 42.3      | 57.7         | 0.50%      |     2023-05-26      |
+| 11 (Current)| 42.3      | 57.7         | 0.50%      |     2023-05-26      |
 +-------------+-----------+--------------+------------+---------------------+
 | 12          | 41.8      | 58.2         | 0.50%      |     2023-08-25      |
 +-------------+-----------+--------------+------------+---------------------+

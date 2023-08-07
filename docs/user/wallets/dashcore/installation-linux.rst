@@ -61,7 +61,7 @@ download as follows::
 
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import  
-  gpg --verify dashcore-19.0.0-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-19.2.0-x86_64-linux-gnu.tar.gz.asc
 
 .. figure:: img/linux/setup-linux-gpg.png
    :width: 400px
@@ -82,13 +82,13 @@ we will extract the executable file with a graphical user interface
 
 Extract Dash Core as follows::
 
-  tar xzf dashcore-19.0.0-x86_64-linux-gnu.tar.gz
+  tar xzf dashcore-19.2.0-x86_64-linux-gnu.tar.gz
 
-This will create a folder named ``dashcore-19.0.0`` in the current working
+This will create a folder named ``dashcore-19.2.0`` in the current working
 directory. We will now install the executable binaries to
 ``/usr/local/bin`` using the ``install`` command::
 
-  sudo install -m 0755 -o root -g root -t /usr/local/bin dashcore-19.0.0/bin/*
+  sudo install -m 0755 -o root -g root -t /usr/local/bin dashcore-19.2.0/bin/*
 
 Start Dash Core from the terminal with the following command::
   
@@ -174,7 +174,9 @@ Creating your Dash Wallet
 
 Beginning with Dash Core 19.0, a wallet will not be created for you by default.
 You will get this prompt in the Overview tab. To create a wallet, click the
-**Create a new wallet** button or click **File** -> **Create Wallet**.
+**Create a new wallet** button or click **File** -> **Create Wallet**. Non-HD
+wallets are created by default. See the :hoverxref:`advanced topics section
+<dashcore-hd>` for information about HD wallets.
 
 .. figure:: img/linux/dash-create-wallet-prompt.png
    :height: 350px

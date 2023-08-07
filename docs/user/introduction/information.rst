@@ -18,9 +18,8 @@ Official sites
 
 - **Website:** https://www.dash.org
 - **User documentation:** https://docs.dash.org
-- **Dash Core Documentation:** https://dashcore.readme.io
+- **Dash Core Documentation:** https://docs.dash.org/core
 - **Dash Platform Documentation:** https://dashplatform.readme.io
-- **Foundation:** https://www.dashfoundation.io
 - **GitHub:** https://github.com/dashpay
 - **GitHub (Evolution):** https://github.com/dashevo
 - **Roadmap:** https://www.dash.org/roadmap/
@@ -30,17 +29,10 @@ Community sites
 ---------------
 
 - https://dashdevs.org
-- https://app.dashnexus.org
-- https://www.dashwatch.org
 - https://www.dashcentral.org
 - https://www.dashninja.pl
 - https://dashnews.org
-- https://dashthailand.org
-- https://dashnigeria.com/
-- https://www.dashnation.com
 - https://dashvotetracker.com
-- http://www.dashspain.org
-- https://www.dashhaiti.com
 - http://thedashbrain.com
 
 Forums
@@ -48,9 +40,6 @@ Forums
 
 - **Dash Forum**: https://www.dash.org/forum/
 - **BitcoinTalk thread:** https://bitcointalk.org/index.php?topic=421615.0
-- **Cryptocurrencytalk.com:** https://cryptocurrencytalk.com/forum/693-dash
-- **链节点 (ChainNode) Forum:** https://www.chainnode.com/forum/115
-- **百度贴吧 达世币吧 (Baidu Tieba):** `https://tieba.baidu.com/f?kw=达世币 <https://tieba.baidu.com/f?kw=达世币>`_
 
 Chat
 ----
@@ -104,7 +93,6 @@ Facebook
 - **Poland:** https://www.facebook.com/Dash.Polska
 - **Russia:** https://www.facebook.com/Dash.Russia
 - **Thailand:** https://www.facebook.com/groups/dashembassythailand
-- **Venezuela:** https://www.facebook.com/groups/DarkcoinVenezuela
 - **Vietnam:** https://www.facebook.com/dashvietnam
 
 
@@ -112,14 +100,9 @@ Twitter
 -------
 
 - **Dash Official Account:** https://twitter.com/dashpay
-- **Ryan Taylor, CEO of Dash Core Group:** https://twitter.com/RTaylor05
-- **Dash Force News:** https://twitter.com/DashForceNews
+- **Samuel Westrich, CTO of Dash Core Group:** https://twitter.com/SamWestrich/
 - **Joël Valenzuela, Chief Editor, Dash Force News:** https://twitter.com/TheDesertLynx
-- **Mark Mason, Director of Media & PR, Dash Force News:** https://twitter.com/StayDashy
-- **Amanda B. Johnson, Dash Superfan and DAO-funded contractor:** https://twitter.com/AmandaB_Johnson
-- **Tao of Satoshi, Dash Nation Founder and DAO-funded contractor:** `https://twitter.com/Dash_Nation <https://twitter.com/Dash_Nation>`__
 - **とみ三（Samurai33）, Dash Japan:** https://twitter.com/samurai3311
-- **Dash Vietnam:** https://twitter.com/dashvietnam
 
 
 News
@@ -128,15 +111,10 @@ News
 - **Digital Cash Network:** https://www.youtube.com/channel/UCduLugW5-tkzxIde8Iz72mw
 - **Cash Alternative TV:** https://www.youtube.com/channel/UCeFCPtS8sViGO_NpKnS2rpg
 - **Dash News:** https://dashnews.org
-- **Dash News En Español:** https://dashnewsespanol.com
 - **Dash News En Español (YouTube):** https://www.youtube.com/channel/UCG6Cuh8Q2eUt4NlZu4K-u8g
 - **Dash News Korea:** https://dashnewskorea.com
 - **Cointelegraph:** https://cointelegraph.com/tags/dash
 - **巴比特 (8BTC):** https://www.8btc.com/p/dash
-- **Dash Embassy D-A-CH:** https://www.dash-embassy.org/
-- **Dash News Germany:** https://dash-news.de
-- **Dash Vietnam:** https://dashvn.blogspot.com
-- **Dash France:** https://dashfrance.com/
 - **Dash News China (Wechat):** dashnews (or scan QR below)
 
 .. image:: img/dash-wx.png
@@ -185,9 +163,7 @@ Block explorers, statistics and visualizations
 Treasury tools
 --------------
 
-- https://www.dashwatch.org
 - https://www.dashcentral.org
-- https://app.dashnexus.org
 - https://dashvotetracker.com
 - https://proposal.dash.org
 - https://www.dashninja.pl/governance.html
@@ -197,7 +173,6 @@ Treasury tools
 Masternode management
 ---------------------
 
-- http://dashmasternode.org
 - https://www.dashninja.pl
 - https://stats.masternode.me
 - https://github.com/Bertrand256/dash-masternode-tool
@@ -214,7 +189,7 @@ Price monitoring and research
 - https://xangle.io/project/DASH/profile
 - https://coinmarketcap.com/currencies/dash/
 - https://bitinfocharts.com/dash/
-- https://www.cryptonator.com/widget
+- https://www.coingecko.com/en/coins/dash
 
 
 Dash Community project
@@ -240,14 +215,10 @@ iOS
 
 - **Dash Wallet:** https://apps.apple.com/app/id1206647026
 - **Edge:** https://apps.apple.com/app/id1344400091
-- **Jaxx:** https://apps.apple.com/app/id1435383184
 - **Coinomi:** https://apps.apple.com/app/id1333588809
 - **Exodus:** https://apps.apple.com/app/id1414384820
-- **Bitnovo:** https://apps.apple.com/app/id1220883632
 - **CoinCap:** https://apps.apple.com/app/id1074052280
-- **Blockfolio:** https://apps.apple.com/app/id1095564685
 - **Abra:** https://apps.apple.com/app/id966301394
-- **BitUniverse:** https://apps.apple.com/app/id1329338902
 
 
 Android
@@ -255,13 +226,9 @@ Android
 
 - **Dash Wallet:** https://play.google.com/store/apps/details?id=hashengineering.darkcoin.wallet
 - **Edge:** https://play.google.com/store/apps/details?id=co.edgesecure.app
-- **Jaxx:** https://play.google.com/store/apps/details?id=com.liberty.jaxx
 - **Coinomi:** https://play.google.com/store/apps/details?id=com.coinomi.wallet
-- **Cryptonator:** https://play.google.com/store/apps/details?id=com.cryptonator.android
 - **Exodus:** https://play.google.com/store/apps/details?id=exodusmovement.exodus
-- **Bitnovo:** https://play.google.com/store/apps/details?id=com.bitnovo.app
 - **CoinCap:** https://play.google.com/store/apps/details?id=io.coinCap.coinCap
-- **Blockfolio:** https://play.google.com/store/apps/details?id=com.blockfolio.blockfolio
 - **Abra:** https://play.google.com/store/apps/details?id=com.plutus.wallet
 - **Bitcoin Ticker Widget:** https://play.google.com/store/apps/details?id=st.brothas.mtgoxwidget
 - **BitUniverse:** https://play.google.com/store/apps/details?id=com.bituniverse.portfolio
@@ -408,6 +375,8 @@ Glossary
     number increases as more blocks are added to the blockchain.
 
   Confirmation Number
+  confirmations
+
     The number of confirmations for a specific Dash transaction. Zero
     confirmations means that the **transaction is unconfirmed**. One
     confirmation means that the transaction is included in the latest

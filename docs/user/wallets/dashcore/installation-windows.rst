@@ -66,7 +66,7 @@ Import the key files and verify the Key-ID matches the ID above.
 
 Skip any requests to certify the certificate with your own key. Next,
 click **Decrypt/Verify...** and select the detached signature file named
-``dashcore-19.0.0-win64-setup.exe.asc`` in the same folder as the
+``dashcore-19.2.0-win64-setup.exe.asc`` in the same folder as the
 downloaded installer.
 
 .. figure:: img/windows/setup-windows-kleopatra-verify.png
@@ -75,8 +75,8 @@ downloaded installer.
    Selecting the signature file for verification
 
 If you see the first line of the message reads ``Verified
-dashcore-19.0.0-win64-setup.exe with
-dashcore-19.0.0-win64-setup.exe.asc`` then you have an authentic copy
+dashcore-19.2.0-win64-setup.exe with
+dashcore-19.2.0-win64-setup.exe.asc`` then you have an authentic copy
 of Dash Core for Windows.
 
 .. figure:: img/windows/setup-windows-kleopatra-verified.png
@@ -194,7 +194,9 @@ Creating your Dash Wallet
 
 Beginning with Dash Core 19.0, a wallet will not be created for you by default.
 You will get this prompt in the Overview tab. To create a wallet, click the
-**Create a new wallet** button or click **File** -> **Create Wallet**.
+**Create a new wallet** button or click **File** -> **Create Wallet**. Non-HD
+wallets are created by default. See the :hoverxref:`advanced topics section
+<dashcore-hd>` for information about HD wallets.
 
 .. figure:: img/windows/dash-create-wallet-prompt.png
    :height: 350px

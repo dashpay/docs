@@ -24,6 +24,13 @@ improvement of Bitcoin's shortcomings by offering a robust solution for instant
 transactions, enhancing user privacy, and offering a self-sustainable
 decentralized governance model.
 
+Notably, Dash InstantSend provides a mechanism for zero-confirmation
+transactions to be safely accepted and re-spent. InstantSend also provides
+enhanced security compared to the conventional practice of waiting for multiple
+block confirmations. Therefore, :ref:`implementing InstantSend
+<integration-instantsend>` is the recommended best practice for all Dash
+integrations.
+
 - Block time: ~2.6 minutes per block
 - Github source: https://github.com/dashpay/dash
 - Latest release: https://github.com/dashpay/dash/releases/latest
@@ -33,19 +40,19 @@ JSON-RPC Interface
 
 The majority of commands are unchanged from Bitcoin making integration into
 existing systems relatively straightforward. For a complete listing of RPC
-commands please refer to the `​Dash Developer Guide
-<https://dashcore.readme.io/docs/core-guide-introduction>`_.
+commands please refer to the :ref:`​Dash Developer Guide
+<core:guide-index>`.
 
 Note that the following commands have been modified to support InstantSend:
 
-   - `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getrawmempool>`__
-   - `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolancestors>`__
-   - `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempooldescendants>`__
-   - `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolentry>`__
-   - `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#getrawtransaction>`__
-   - `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#gettransaction>`__
-   - `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listtransactions>`__
-   - `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listsinceblock>`__
+   - :ref:`getrawmempool <core:api-rpc-blockchain-getrawmempool>`
+   - :ref:`getmempoolancestors <core:api-rpc-blockchain-getmempoolancestors>`
+   - :ref:`getmempooldescendants <core:api-rpc-blockchain-getmempooldescendants>`
+   - :ref:`getmempoolentry <core:api-rpc-blockchain-getmempoolentry>`
+   - :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
+   - :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
+   - :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
+   - :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
 
 Special Transactions
 --------------------
@@ -78,23 +85,23 @@ which form a basis for new transaction types that provide on-chain
 metadata to assist various consensus mechanisms. The following special
 transaction types exist:
 
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| Version | Type | Payload Size   | Transaction Purpose / Example                                                                                                     |
-+=========+======+================+===================================================================================================================================+
-| 3       | 0    | n/a            | Standard Transaction                                                                                                              |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 1    | variable       | `Masternode Registration <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-reg-tx>`__       |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 2    | variable       | `Update Masternode Service <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-serv-tx>`__ |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 3    | variable       | `Update Masternode Operator <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-reg-tx>`__ |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 4    | variable       | `Masternode Revocation <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-pro-up-rev-tx>`__      |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 5    | variable       | `Masternode List Merkle Proof <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-cb-tx>`__       |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3       | 6    | variable       | `Quorum Commitment <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions#section-qc-tx>`__                  |
-+---------+------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
++---------+------+----------------+---------------------------------------------------------------+
+| Version | Type | Payload Size   | Transaction Purpose / Example                                 |
++=========+======+================+===============================================================+
+| 3       | 0    | n/a            | Standard Transaction                                          |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 1    | variable       | :ref:`Masternode Registration <core:ref-txs-proregtx>`        |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 2    | variable       | :ref:`Update Masternode Service <core:ref-txs-proupservtx>`   |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 3    | variable       | :ref:`Update Masternode Operator <core:ref-txs-proupregtx>`   |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 4    | variable       | :ref:`Masternode Revocation <core:ref-txs-prouprevtx>`        |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 5    | variable       | :ref:`Masternode List Merkle Proof <core:ref-txs-cbtx>`       |
++---------+------+----------------+---------------------------------------------------------------+
+| 3       | 6    | variable       | :ref:`Quorum Commitment <core:ref-txs-qctx>`                  |
++---------+------+----------------+---------------------------------------------------------------+
 
 Integration notes:
 
@@ -110,7 +117,7 @@ Integration notes:
    Transactions was split into two fields: ``version`` and ``type``
    (each consisting of 2 bytes).
 
-4. Refer to the `Special Transactions <https://dashcore.readme.io/docs/core-ref-transactions-special-transactions>`__ 
+4. Refer to the :ref:`Special Transactions <core:ref-txs-special-txs>` 
    section of the Dash developer reference for additional detail on
    these data types, e.g. <variable int>.
 
@@ -183,22 +190,23 @@ daemon using JSON-RPC protocol. The ``instantlock`` attribute of the JSON
 response reflects the status of the transaction and is included in the following
 commands:
 
-- `getrawmempool <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getrawmempool>`__
-- `getmempoolancestors <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolancestors>`__
-- `getmempooldescendants <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempooldescendants>`__
-- `getmempoolentry <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-blockchain#getmempoolentry>`__
-- `getrawtransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-raw-transactions#getrawtransaction>`__
-- `gettransaction <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#gettransaction>`__
-- `listtransactions <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listtransactions>`__
-- `listsinceblock <https://dashcore.readme.io/docs/core-api-ref-remote-procedure-calls-wallet#listsinceblock>`__
+- :ref:`getrawmempool <core:api-rpc-blockchain-getrawmempool>`
+- :ref:`getmempoolancestors <core:api-rpc-blockchain-getmempoolancestors>`
+- :ref:`getmempooldescendants <core:api-rpc-blockchain-getmempooldescendants>`
+- :ref:`getmempoolentry <core:api-rpc-blockchain-getmempoolentry>`
+- :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
+- :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
+- :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
+- :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
 
 ZMQ Notification
 ^^^^^^^^^^^^^^^^
 
 Whenever a transaction enters the mempool and whenever a transaction is locked
-in the mempool, ZMQ notifications can be broadcast by the node. A list of
-possible ZMQ notifications can be found `here
-<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__. 
+in the mempool, ZMQ notifications can be broadcast by the node. Refer to `the
+list of possible ZMQ notifications
+<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__ for more
+details.
 
 The following notifications are relevant for recognizing transactions
 and their corresponding instantlocks:
@@ -218,7 +226,7 @@ by adding the following line to the dash.conf file::
   instantsendnotify=/path/to/concurrent/safe/handler %s
 
 This is typically used with a wallet that has been populated with 
-`watch-only <https://dashcore.readme.io/docs/core-additional-resources-glossary#section-watch-only-address>`__ 
+`watch-only <https://docs.dash.org/projects/core/en/stable/docs/resources/glossary.html#watch-only-address>`__ 
 addresses.
 
 .. _is-broadcast:
@@ -256,6 +264,114 @@ and are intended to help provide a more complete understanding of the
 underlying technologies.
 
 - `InstantSend Technical Information <https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__
-- `InstantSend Developer Documentation <https://dashcore.readme.io/docs/core-guide-dash-features-instantsend>`__
+- :ref:`InstantSend Developer Documentation <core:guide-features-instantsend>`
+- :ref:`Receiving ZMQ notifications <core:examples-receiving-zmq-notifications>`
 - `DIP0010: LLMQ InstantSend <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__
+- `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__
+
+.. _integration-chainlocks:
+
+ChainLocks
+==========
+
+ChainLocks are a feature provided by the Dash Network which provides certainty
+when accepting payments. This technology, particularly when used in parallel
+with :ref:`InstantSend <instantsend>`, creates an environment in which payments
+can be accepted immediately and without the risk of “Blockchain Reorganization
+Events”.
+
+The risk of blockchain reorganization is typically addressed by requiring
+multiple :term:`confirmations` before a transaction can be safely accepted as
+payment. This type of indirect security is effective, but at a cost of time and
+user experience. ChainLocks are a solution for this problem.
+
+Receiving ChainLocks
+--------------------
+
+.. note::
+
+   Once a ChainLock is observed for a block, each transaction in that block and
+   all previous blocks can be considered irreversibly and fully confirmed.
+
+Receiving a ChainLock introduces two requirements:
+
+1. The ability to determine the “ChainLock Status” of a given block or
+   transaction.
+
+2. The ability to adjust “Confirmation Status” independently of block
+   confirmation.
+
+ChainLock status is typically determined through direct connection with the Dash
+daemon or by a `ZMQ notification
+<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__.
+
+Direct Connection
+^^^^^^^^^^^^^^^^^
+
+ChainLock status can be identified through direct connection with the Dash
+daemon using JSON-RPC protocol. The boolean ``chainlock`` attribute of the JSON
+response reflects the ChainLock status of the block or transaction and is
+included in the following commands:
+
+- :ref:`getblock <core:api-rpc-blockchain-getblock>`
+- :ref:`getblockheader <core:api-rpc-blockchain-getblockheader>`
+- :ref:`getblockheaders <core:api-rpc-blockchain-getblockheaders>`
+- :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
+- :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
+- :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
+- :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
+
+ZMQ Notification
+^^^^^^^^^^^^^^^^
+
+ChainLock signatures are created shortly after the related block has been mined.
+As a result it is recommended that integrated clients use :ref:`ZMQ (ZeroMQ)
+notifications <core:examples-receiving-zmq-notifications>` in order to ensure
+that this information is received as promptly as possible. Refer to `the
+list of possible ZMQ notifications
+<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__ for more
+details.
+
+The following notifications are relevant for recognizing blocks and their
+corresponding ChainLocks:
+
+- zmqpubhashblock
+- zmqpubhashchainlock
+- zmqpubrawblock
+- zmqpubrawchainlock
+- zmqpubrawchainlocksig
+
+This sample code uses the `js-dashd-zmq library
+<https://github.com/dashpay/js-dashd-zmq>`__ to listen for ChainLock ZMQ
+notifications and return the hash of blocks that receive a ChainLock. 
+
+.. code-block:: javascript
+   :caption: Subscribe to ChainLock hash ZMQ notifications
+
+   const { ChainLock } = require('@dashevo/dashcore-lib');
+   const ZMQClient = require('@dashevo/dashd-zmq');
+   const client = new ZMQClient({
+      protocol: 'tcp',
+      host: '0.0.0.0',
+      port: '20009',
+   });
+
+   (async () => {
+      await client.connect();
+      client.subscribe(ZMQClient.TOPICS.hashchainlock);
+      client.on(ZMQClient.TOPICS.hashchainlock, async (hashChainLockMessage) => {
+         console.log(`ChainLock received for block ${hashChainLockMessage}`)
+      });
+   })();
+
+Additional Resources
+--------------------
+
+The following resources provide additional information about InstantSend and are
+intended to help provide a more complete understanding of the underlying
+technologies.
+
+- :ref:`ChainLock Developer Documentation <core:guide-features-chainlocks>`
+- :ref:`Receiving ZMQ notifications <core:examples-receiving-zmq-notifications>`
+- `DIP0008: ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__
 - `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__

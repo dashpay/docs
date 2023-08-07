@@ -201,7 +201,6 @@ masternode will support:
   ufw allow 19999/tcp
   ufw allow 26656/tcp
   ufw allow 3000/tcp
-  ufw allow 3010/tcp
   ufw logging on
   ufw enable
 
@@ -268,6 +267,11 @@ Locate the line that reads ``PermitRootLogin yes`` and set it to
 <username>``, replacing ``<username>`` with the username you selected above.
 Then press **Ctrl + X** to close the editor, then **Y** and **Enter** save the
 file.
+
+Optionally install or update `AppArmor <https://apparmor.net/>`_ (try this step
+if you are having problems related to AppArmor)::
+
+  sudo apt install apparmor
 
 Reboot
 ------

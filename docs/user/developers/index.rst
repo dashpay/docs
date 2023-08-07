@@ -10,8 +10,8 @@ Developers
 
 The `Dash Platform Developer Documentation <https://dashplatform.readme.io/>`_ 
 contains technical documentation intended to help developers quickly and
-easily get started with Dash Platform. The `Dash Core Developer
-Documentation <https://dashcore.readme.io/>`_ provides detailed
+easily get started with Dash Platform. The :ref:`Dash Core Developer
+Documentation <core:core-index>` provides detailed
 documentation on the Dash Core code base, and serves as a reference for
 experienced developers. These documentation portals can help developers
 to quickly and efficiently integrate external applications with the Dash

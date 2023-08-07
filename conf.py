@@ -97,6 +97,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx_copybutton',
     'sphinx_design',
+    'sphinx_search.extension',
+    'sphinx.ext.intersphinx',
 ]
 
 hoverxref_role_types = {
@@ -111,6 +113,19 @@ myst_heading_anchors = 5
 # https://myst.tools/docs/mystjs/syntax-overview#directives
 myst_enable_extensions = ["colon_fence"]
 
+# -- intersphinx configuration -----------------------------------------------
+intersphinx_mapping = {
+    "core": ("https://docs.dash.org/projects/core/en/stable/", None),
+}
+
+# We recommend adding the following config value.
+# Sphinx defaults to automatically resolve *unresolved* labels using all your Intersphinx mappings.
+# This behavior has unintended side-effects, namely that documentations local references can
+# suddenly resolve to an external location.
+# See also:
+# https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#confval-intersphinx_disabled_reftypes
+intersphinx_disabled_reftypes = ["*"]
+
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
@@ -122,7 +137,7 @@ html_theme = "pydata_sphinx_theme"
 #
 html_theme_options = {
     "external_links": [
-        {"name": "Core docs", "url": "https://dashcore.readme.io/"},
+        {"name": "Core docs", "url": "https://docs.dash.org/projects/core/en/stable/docs/index.html"},
         {"name": "Platform docs", "url": "https://dashplatform.readme.io"},
         {"name": "Dash.org", "url": "https://www.dash.org"},
         {"name": "Forum", "url": "https://www.dash.org/forum"},
@@ -165,7 +180,7 @@ html_context = {
     # "github_url": "https://github.com", # or your GitHub Enterprise site
     "github_user": "dashpay",
     "github_repo": "docs",
-    "github_version": "18.0.0",
+    "github_version": "19.0.0",
     "doc_path": "",
 }
 
@@ -256,3 +271,4 @@ texinfo_documents = [
 
 def setup(app):
     app.add_js_file('js/lang.js')
+    app.add_js_file('js/pydata-search-close.js')

@@ -1,32 +1,32 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
 # Translators:
 # John Theman <Grdash@mail.com>, 2022
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"POT-Creation-Date: 2023-05-23 15:49-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: John Theman <Grdash@mail.com>, 2022\n"
-"Language-Team: Greek (https://www.transifex.com/dash/teams/37570/el/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: el\n"
+"Language-Team: Greek (https://app.transifex.com/dash/teams/37570/el/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/developers/index.rst:1
-msgid "Developers guide and information about sporks and Dash version history"
+#: ../../docs/user/developers/index.rst:-1
+msgid "Developers guide and information about Dash version history"
 msgstr ""
 
-#: ../../docs/user/developers/index.rst:1
-msgid "dash, developers, sporks, version history"
+#: ../../docs/user/developers/index.rst:-1
+msgid "dash, developers, version history"
 msgstr ""
 
 #: ../../docs/user/developers/index.rst:9
@@ -38,30 +38,29 @@ msgid ""
 "The `Dash Platform Developer Documentation "
 "<https://dashplatform.readme.io/>`_ contains technical documentation "
 "intended to help developers quickly and easily get started with Dash "
-"Platform. The `Dash Core Developer Documentation "
-"<https://dashcore.readme.io/>`_ provides detailed documentation on the Dash "
-"Core code base, and serves as a reference for experienced developers. These "
-"documentation portals can help developers to quickly and efficiently "
-"integrate external applications with the Dash ecosystem. Anyone can "
-"contribute to the documentation by suggesting edits in the documentation "
-"system."
+"Platform. The :ref:`Dash Core Developer Documentation <core:core-index>` "
+"provides detailed documentation on the Dash Core code base, and serves as"
+" a reference for experienced developers. These documentation portals can "
+"help developers to quickly and efficiently integrate external "
+"applications with the Dash ecosystem. Anyone can contribute to the "
+"documentation by suggesting edits in the documentation system."
 msgstr ""
 
 #: ../../docs/user/developers/index.rst:21
 msgid ""
 "The Dash Core Team also maintains the `Dash Roadmap "
-"<https://www.dash.org/roadmap/>`_, which sets out delivery milestones for "
-"future releases of Dash and includes specific technical details describing "
-"how the development team plans to realise each challenge. The Dash Roadmap "
-"is complemented by the `Dash Improvement Proposals "
+"<https://www.dash.org/roadmap/>`_, which sets out delivery milestones for"
+" future releases of Dash and includes specific technical details "
+"describing how the development team plans to realise each challenge. The "
+"Dash Roadmap is complemented by the `Dash Improvement Proposals "
 "<https://github.com/dashpay/dips>`_, which contain detailed technical "
 "explanations of proposed changes to the Dash protocol itself."
 msgstr ""
 
 #: ../../docs/user/developers/index.rst:29
 msgid ""
-"The Dash community organise discussion and development of Dash apps using "
-"the following resources:"
+"The Dash community organise discussion and development of Dash apps using"
+" the following resources:"
 msgstr ""
 
 #: ../../docs/user/developers/index.rst:32
@@ -75,167 +74,45 @@ msgstr ""
 #: ../../docs/user/developers/index.rst:34
 msgid ""
 "`Dash Bounty Board "
-"<https://trello.com/invite/b/FPJzDcok/ea9fc798043d35d61aa8a5df0917cba7/dash-"
-"bounty-board>`__"
+"<https://trello.com/invite/b/FPJzDcok/ea9fc798043d35d61aa8a5df0917cba7"
+"/dash-bounty-board>`__"
 msgstr ""
 
 #: ../../docs/user/developers/index.rst:36
 msgid ""
-"The remaining sections available below describe practical steps to carry out"
-" common development tasks in Dash."
+"The remaining sections available below describe practical steps to carry "
+"out common development tasks in Dash."
 msgstr ""
 "Οι υπόλοιπες παράγραφοι που διατίθοντια παρακάτω περιγράφουν τα πρακτικά "
 "στάδια για να πραγματοποιήσετε συνήθες έργα δημιουργίας στο Dash."
 
-#: ../../docs/user/developers/index.rst:52
-msgid "Sporks"
-msgstr "Sporks"
-
-#: ../../docs/user/developers/index.rst:54
-msgid ""
-"A multi-phased fork, colloquially known as a \"spork\", is a mechanism "
-"unique to Dash used to safely deploy new features to the network through "
-"network-level variables to avoid the risk of unintended network forking "
-"during upgrades. It can also be used to disable certain features if a "
-"security vulnerability is discovered - see :ref:`here <sporks>` for a brief "
-"introduction to sporks. This documentation describes the meaning of each "
-"spork currently existing on the network, and how to check their respective "
-"statuses."
-msgstr ""
-" Ένα πολυ-σταδιακό \"πηρούνι - fork\", γνωστό ως \"spork\", είναι ένας "
-"μηχανισμός μοναδικός στο Dash που χρησιμοποιείται για να ξεδιπλώσει με "
-"ασφάλεια νέες λειτουργίες στο δίκτυο μέσω επιπεδου-δικτύου μεταβλητών για να"
-" αποφύγουμε τον κίνδυνο μη σκόπιμου forking δικτύου κατά την διάρκεια "
-"αναβαθμίσεων. Μπορεί επίσης να χρησιμοποιηθεί για να κλείσει κάποιες "
-"συγκεκριμένες λειτουργίες σε περίπτωση που ανακαλυφτεί κάποια αδυναμία στην "
-"ασφάλεια - κοιτάξτε :ref:`εδώ ` <sporks>` για μία γρήγορη ειασαγωγή στα "
-"sporks. Σε αυτά τα έγγραφα περιγράφονται η σημασία του κάθε spork το οποίο "
-"βρίσκεται αυττή την στιγμή στο δίκτυο και πως να ελέγξετε την κατάστασή "
-"τους."
-
-#: ../../docs/user/developers/index.rst:64
-msgid "Spork functions"
-msgstr "Spork λειτουργίες"
-
-#: ../../docs/user/developers/index.rst:66
-msgid ""
-"Sporks are set using integer values. Many sporks may be set to a particular "
-"epoch datetime (number of seconds that have elapsed since January 1, 1970) "
-"to specify the time at which they will active. Enabled sporks are set to 0 "
-"(seconds until activation). This function is often used to set a spork "
-"enable date so far in the future that it is effectively disabled until "
-"changed. The following sporks currently exist on the network and serve "
-"functions as described below:"
-msgstr ""
-"Τα spork καθορίζονται χρησιμοποιώντας αξίες ακεραίων αριθμών. Πολλά spork "
-"μπορεί να ορίζονται σε μία συγκεκριμένη εποχή και χρόνο (αριθμό "
-"δευτερολέπτων που έχουν περάσει από την 1η Ιανουαρίου 1970) για να ορίσουν "
-"τον χρόνο στον οποίο θα είναι ενεργά. Τα ενεργοποιημένα spork ορίζονται στο "
-"0 (δευτερόλεπτα μέχρι την ενεργοποίησή τους). Αυτή η λειτουργία "
-"χρησιμοποιείται σηνύθως για να ορίσουμε μία ημερομηνία ένεργοποίησης spork "
-"στο μέλλον για να είναι ανενεργό μέχρι να λλάξει. Τα ακόλουθα spork υπάρχουν"
-" αυτή την στιγμή στο δίκτυο και εξυπηρετούν λειτουργίες όπως περιγράφεται "
-"παρακάτω:"
-
-#: ../../docs/user/developers/index.rst:77
-msgid "SPORK_2_INSTANTSEND_ENABLED"
-msgstr "SPORK_2_INSTANTSEND_ENABLED"
-
-#: ../../docs/user/developers/index.rst:75
-msgid ""
-"Governs the ability of Dash clients to use InstantSend functionality. "
-"InstantSend is described in `DIP0010 LLMQ-based InstantSend "
-"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__."
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:81
-msgid "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
-msgstr "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
-
-#: ../../docs/user/developers/index.rst:80
-msgid ""
-"If enabled, masternodes will reject blocks containing transactions in "
-"conflict with locked but unconfirmed InstantSend transactions."
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:85
-msgid "SPORK_9_SUPERBLOCKS_ENABLED"
-msgstr "SPORK_9_SUPERBLOCKS_ENABLED"
-
-#: ../../docs/user/developers/index.rst:84
-msgid ""
-"If enabled, superblocks are verified and issued to pay proposal winners."
-msgstr ""
-"Αν ενεργοποιηθεί, τα superblocks είναι επαληθευμένα και ορίζονται να "
-"πληρώσουν τους νικητές των προτάσεων."
-
-#: ../../docs/user/developers/index.rst:91
-msgid "SPORK_17_QUORUM_DKG_ENABLED"
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:88
-msgid ""
-"Enables the `DKG process to create LLMQ quorums "
-"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. This spork will"
-" be turned on once 80% masternodes are upgraded to v0.14, which will enable "
-"DKG and DKG-based PoSe."
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:96
-msgid "SPORK_19_CHAINLOCKS_ENABLED"
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:94
-msgid ""
-"Enables :ref:`ChainLocks <chainlocks>`, a mechanism of preventing the risk "
-"to payments introduced by blockchain reorganization events. ChainLocks are "
-"described in `DIP0008 ChainLocks "
-"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__."
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:100
-msgid "SPORK_21_QUORUM_ALL_CONNECTED"
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:99
-msgid ""
-"Enables connections between all masternodes in a quorum to optimize the "
-"signature recovery process."
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:104
-msgid "SPORK_23_QUORUM_POSE"
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:103
-msgid ""
-"Enforces Proof of Service requirements for masternodes to support a minimum "
-"protocol version and maintain open ports."
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:107
-msgid "Viewing spork status"
-msgstr "Παρατηρεί το status των spork."
-
-#: ../../docs/user/developers/index.rst:109
-msgid ""
-"The ``spork show`` and ``spork active`` commands issued in the debug window "
-"(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
-"You can open the debug window by selecting **Window > Console**."
-msgstr ""
-
-#: ../../docs/user/developers/index.rst:116
-msgid "spork show and spork active output in the Dash Core debug console"
-msgstr "Η παραγωγή spork show και spork active στο Dash Core debug console"
-
-#: ../../docs/user/developers/index.rst:120
+#: ../../docs/user/developers/index.rst:53
 msgid "Version History"
 msgstr "Ιστορία Έκδοσης"
 
-#: ../../docs/user/developers/index.rst:122
+#: ../../docs/user/developers/index.rst:55
 msgid "Full release notes and the version history of Dash are available here:"
 msgstr "Πλήρης σημειώσεις και η ιστορία έκδοσης του Dash είναι διαθέσιμη εδώ:"
 
-#: ../../docs/user/developers/index.rst:124
+#: ../../docs/user/developers/index.rst:57
 msgid "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
 msgstr "https://github.com/dashpay/dash/blob/master/doc/release-notes.md"
+
+#~ msgid ""
+#~ "The `Dash Platform Developer Documentation "
+#~ "<https://dashplatform.readme.io/>`_ contains technical "
+#~ "documentation intended to help developers "
+#~ "quickly and easily get started with "
+#~ "Dash Platform. The `Dash Core Developer"
+#~ " Documentation <https://dashcore.readme.io/>`_ provides"
+#~ " detailed documentation on the Dash "
+#~ "Core code base, and serves as a"
+#~ " reference for experienced developers. "
+#~ "These documentation portals can help "
+#~ "developers to quickly and efficiently "
+#~ "integrate external applications with the "
+#~ "Dash ecosystem. Anyone can contribute to"
+#~ " the documentation by suggesting edits "
+#~ "in the documentation system."
+#~ msgstr ""
+

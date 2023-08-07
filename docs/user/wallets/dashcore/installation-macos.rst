@@ -52,7 +52,7 @@ download as follows::
 
   curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  gpg --verify dashcore-19.0.0-osx.dmg.asc
+  gpg --verify dashcore-19.2.0-osx.dmg.asc
 
 
 .. figure:: img/linux/setup-linux-gpg.png
@@ -152,7 +152,9 @@ Creating your Dash Wallet
 
 Beginning with Dash Core 19.0, a wallet will not be created for you by default.
 You will get this prompt in the Overview tab. To create a wallet, click the
-**Create a new wallet** button or click **File** -> **Create Wallet**.
+**Create a new wallet** button or click **File** -> **Create Wallet**. Non-HD
+wallets are created by default. See the :hoverxref:`advanced topics section
+<dashcore-hd>` for information about HD wallets.
 
 .. figure:: img/macos/dash-create-wallet-prompt.png
    :height: 350px

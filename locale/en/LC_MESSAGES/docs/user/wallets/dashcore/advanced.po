@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 15:21-0500\n"
+"POT-Creation-Date: 2023-05-23 15:49-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:1
+#: ../../docs/user/wallets/dashcore/advanced.rst:-1
 msgid ""
 "Coin control, HD wallets, multisig, multiple wallet files using the Dash "
 "Core wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:1
+#: ../../docs/user/wallets/dashcore/advanced.rst:-1
 msgid ""
 "dash, core, wallet, backup, restore, wallet.dat, multisig, hd, seed, "
 "passphrase, mnemonic, coin control, hierarchical deterministic"
@@ -460,60 +460,69 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:508
+msgid ""
+"Wallet-related RPCs require using the ``-rpcwallet`` option when more "
+"than one wallet file is loaded. This is to ensure the RPC command is "
+"executed using the correct wallet. See the :ref:`Core developer "
+"documentation <core:api-rpc-multi-wallet-support>` for additional "
+"information."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:514
 msgid "Open a wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:510
+#: ../../docs/user/wallets/dashcore/advanced.rst:516
 msgid ""
 "To open a wallet, click **File -> Open Wallet** and then click the name "
 "of wallet file."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:516
+#: ../../docs/user/wallets/dashcore/advanced.rst:522
 msgid "Open wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:519
+#: ../../docs/user/wallets/dashcore/advanced.rst:525
 msgid "Select the active wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:521
+#: ../../docs/user/wallets/dashcore/advanced.rst:527
 msgid ""
 "When multiple wallets are open, a wallet selection dropbox is shown to "
 "the left of the Dash logo on the tab bar. Click the dropdown box and "
 "select a wallet to set it as the active wallet."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:528
+#: ../../docs/user/wallets/dashcore/advanced.rst:534
 msgid "Wallet selection dropdown box"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:531
+#: ../../docs/user/wallets/dashcore/advanced.rst:537
 msgid "Close a wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:533
+#: ../../docs/user/wallets/dashcore/advanced.rst:539
 msgid ""
 "To close a wallet, set it as the active wallet using the wallet selection"
 " dropdown box. Next, click **File -> Close Wallet** and then click "
 "**Yes** on the Close wallet confirmation screen."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:540
+#: ../../docs/user/wallets/dashcore/advanced.rst:546
 msgid "Close wallet confirmation"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:545
+#: ../../docs/user/wallets/dashcore/advanced.rst:551
 msgid ""
 "If the only open wallet is closed, wallet-related items on the tab bar "
 "will be disabled."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:548
+#: ../../docs/user/wallets/dashcore/advanced.rst:554
 msgid "Alternative methods"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:550
+#: ../../docs/user/wallets/dashcore/advanced.rst:556
 msgid ""
 "It is also possible to select between different Dash wallets when "
 "starting Dash Core by specifying the ``wallet`` argument, or even run "
@@ -521,7 +530,7 @@ msgid ""
 "data directories using the ``datadir`` argument."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:555
+#: ../../docs/user/wallets/dashcore/advanced.rst:561
 msgid ""
 "To begin, install the Dash Core wallet for your system according to the "
 ":ref:`installation instructions <dashcore-installation>`. When you get to"
@@ -532,11 +541,11 @@ msgid ""
 " (simpler if you do want to run the wallets simultaneously)."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:566
+#: ../../docs/user/wallets/dashcore/advanced.rst:572
 msgid "Separate wallet.dat files"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:568
+#: ../../docs/user/wallets/dashcore/advanced.rst:574
 msgid ""
 "For this scenario, we will create two shortcuts on the desktop, each "
 "using a different wallet file. Navigate to the binary file used to start "
@@ -545,11 +554,11 @@ msgid ""
 "the **Properties** window for each of these shortcuts."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:577
+#: ../../docs/user/wallets/dashcore/advanced.rst:583
 msgid "Creating desktop shortcuts using Windows 10"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:579
+#: ../../docs/user/wallets/dashcore/advanced.rst:585
 msgid ""
 "Modify the **Target** property of each shortcut to point to a different "
 "wallet file by specifying the ``wallet`` argument when starting the "
@@ -559,23 +568,23 @@ msgid ""
 "``workwallet.dat`` and ``homewallet.dat``:"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:586
+#: ../../docs/user/wallets/dashcore/advanced.rst:592
 msgid ""
 "Wallet Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=workwallet.dat``"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:587
+#: ../../docs/user/wallets/dashcore/advanced.rst:593
 msgid ""
 "Wallet Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=homewallet.dat``"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:592
+#: ../../docs/user/wallets/dashcore/advanced.rst:598
 msgid "Specifying separate wallet files"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:594
+#: ../../docs/user/wallets/dashcore/advanced.rst:600
 msgid ""
 "You can now use the two icons to quickly and easily open different "
 "wallets from your desktop. Note that you cannot open both wallets "
@@ -583,11 +592,11 @@ msgid ""
 "as described below."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:601
+#: ../../docs/user/wallets/dashcore/advanced.rst:607
 msgid "Separate data directories"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:603
+#: ../../docs/user/wallets/dashcore/advanced.rst:609
 msgid ""
 "Start Dash Core and allow it to synchronize with the network, then close "
 "Dash Core again. You can now create two directories at e.g. ``C:\\Dash1``"
@@ -599,23 +608,23 @@ msgid ""
 "as shown below:"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:612
+#: ../../docs/user/wallets/dashcore/advanced.rst:618
 msgid ""
 "Datadir Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash1 -listen=0``"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:613
+#: ../../docs/user/wallets/dashcore/advanced.rst:619
 msgid ""
 "Datadir Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash2 -listen=0``"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:618
+#: ../../docs/user/wallets/dashcore/advanced.rst:624
 msgid "Specifying separate datadirs"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:620
+#: ../../docs/user/wallets/dashcore/advanced.rst:626
 msgid ""
 "You can now use the two icons to quickly and easily open different "
 "wallets simultaneously from your desktop. Both wallets maintain separate "
@@ -625,15 +634,15 @@ msgid ""
 "multiple separate wallets without keeping a full copy of the blockchain."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:630
+#: ../../docs/user/wallets/dashcore/advanced.rst:636
 msgid "Two instances of Dash Core running simultaneously"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:633
+#: ../../docs/user/wallets/dashcore/advanced.rst:639
 msgid "KeePass"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:636
+#: ../../docs/user/wallets/dashcore/advanced.rst:642
 msgid ""
 "KeePass support was removed in Dash Core 18.0.0. Details can still be "
 "found in `previous versions of this documentation "
