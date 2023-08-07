@@ -639,30 +639,26 @@ and communication relating to the base blockchain. Download Dash Core as
 follows::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-$(uname -m)-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v19.3.0/dashcore-19.3.0-$(uname -m)-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
-team. All releases of Dash are signed using GPG with one of the
-following keys:
+team. All releases of Dash are signed using GPG with the following key:
 
-- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
-  `verifiable here on Keybase <https://keybase.io/codablock>`__
 - Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
   on Keybase <https://keybase.io/pasta>`__
 
 ::
 
-  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v19.0.0/dashcore-19.0.0-$(uname -m)-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-19.0.0-$(uname -m)-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v19.3.0/dashcore-19.3.0-$(uname -m)-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-19.3.0-$(uname -m)-linux-gnu.tar.gz.asc
 
 Extract the compressed archive and copy the necessary files to the
 directory::
 
-  tar xfv dashcore-19.0.0-$(uname -m)-linux-gnu.tar.gz
-  sudo install -t /usr/local/bin dashcore-19.0.0/bin/*
+  tar xfv dashcore-19.3.0-$(uname -m)-linux-gnu.tar.gz
+  sudo install -t /usr/local/bin dashcore-19.3.0/bin/*
 
 Create a working directory for Dash Core::
 
@@ -670,7 +666,7 @@ Create a working directory for Dash Core::
 
 Configure Dash Core::
 
-  cat<<EOF>~/.dashcore/dash.conf
+  cat << EOF | tee ~/.dashcore/dash.conf
   #----
   rpcuser=dashrpc
   rpcpassword=password
@@ -692,8 +688,6 @@ Configure Dash Core::
   #----
   #masternodeblsprivkey=
   externalip=$(curl ifconfig.me)
-  proxy=127.0.0.1:9050
-  torcontrol=127.0.0.1:9051
   #----
   testnet=1
   
@@ -771,17 +765,6 @@ response::
     "IsFailed": false
   }
 
-Tor
-^^^
-
-Tor is an internet relay system designed to preserve anonymity on the
-internet. Install Tor as follows::
-
-  sudo gpg --no-default-keyring --keyring /usr/share/keyrings/tor-archive-keyring.gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
-  echo "deb [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/tor.list
-  sudo apt update
-  sudo apt install -y tor deb.torproject.org-keyring
-  
 Platform services
 -----------------
 
@@ -792,13 +775,12 @@ dependencies::
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
   nvm install 16
-  sudo apt install -y apt-transport-https build-essential clang cmake curl g++ gcc gnupg2 libgmp-dev libssl-dev libzmq3-dev lsb-release pkg-config
-  # export CC=gcc-10 && export CXX=g++-10
+  sudo apt install -y apt-transport-https build-essential clang cmake curl g++ gcc gnupg2 libgmp-dev libpython3.10-dev libssl-dev libzmq3-dev lsb-release pkg-config
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-  source "$HOME/.cargo/env
+  source "$HOME/.cargo/env"
   rustup toolchain install stable
   rustup target add wasm32-unknown-unknown --toolchain stable
-  cargo install -f wasm-bindgen-cli
+  cargo install -f wasm-bindgen-cli@0.2.86
   npm install pm2 -g
 
 Drive
@@ -807,9 +789,8 @@ Drive
 Drive is a replicated state machine for Dash Platform. Download Drive as
 follows::
 
-  git clone --single-branch -b v0.24-dev https://github.com/dashpay/platform/
+  git clone --single-branch -b master https://github.com/dashpay/platform/
   cd platform
-  (update zeromq js dep to 5.3.1)
   corepack enable
   yarn install
   yarn workspace @dashevo/rs-drive build
@@ -822,7 +803,7 @@ Configure Drive::
   sed -i 's/^CORE_JSON_RPC_PASSWORD.*/CORE_JSON_RPC_PASSWORD=password/' packages/js-drive/.env
   sed -i 's/^CORE_JSON_RPC_PORT.*/CORE_JSON_RPC_PORT=19998/' packages/js-drive/.env
   sed -i 's/^CORE_JSON_RPC_USERNAME.*/CORE_JSON_RPC_USERNAME=dashrpc/' packages/js-drive/.env
-  sed -i 's/^INITIAL_CORE_CHAINLOCKED_HEIGHT.*/INITIAL_CORE_CHAINLOCKED_HEIGHT=415765/' packages/js-drive/.env
+  sed -i 's/^INITIAL_CORE_CHAINLOCKED_HEIGHT.*/INITIAL_CORE_CHAINLOCKED_HEIGHT=854281/' packages/js-drive/.env
   sed -i 's/^DASHPAY_MASTER_PUBLIC_KEY=.*/DASHPAY_MASTER_PUBLIC_KEY=02d4dcce3f0a8d2936ce26df4d255fd2835b629b73eea39d4b2778096b91e77946/' packages/js-drive/.env
   sed -i 's/^DASHPAY_SECOND_PUBLIC_KEY=.*/DASHPAY_SECOND_PUBLIC_KEY=03699c8b4ebf1696c92e9ec605a02a38f6f9cec47d13fb584fdad779e936e20ccb/' packages/js-drive/.env
   sed -i 's/^DPNS_MASTER_PUBLIC_KEY=.*/DPNS_MASTER_PUBLIC_KEY=02c8b4747b528cac5fddf7a6cc63702ee04ed7d1332904e08510343ea00dce546a/' packages/js-drive/.env
@@ -850,14 +831,14 @@ used by Dash Platform. As binaries are not yet published, you will need
 to build from source. Install Go as follows::
 
   cd /tmp
-  wget https://go.dev/dl/go1.19.8.linux-$(dpkg --print-architecture).tar.gz
-  sudo tar -C /usr/local -xzf go1.19.8.linux-$(dpkg --print-architecture).tar.gz
+  wget https://go.dev/dl/go1.19.11.linux-$(dpkg --print-architecture).tar.gz
+  sudo tar -C /usr/local -xzf go1.19.11.linux-$(dpkg --print-architecture).tar.gz
   export PATH=$PATH:/usr/local/go/bin
 
 Build and install Tenderdash as follows::
 
   cd
-  git clone -b v0.12.0 https://github.com/dashpay/tenderdash
+  git clone -b v0.11.3 https://github.com/dashpay/tenderdash
   cd tenderdash
   make install-bls
   make build-linux
@@ -865,7 +846,7 @@ Build and install Tenderdash as follows::
 
 Initialize Tenderdash::
 
-  tenderdash init
+  tenderdash init full
 
 Several files will be generated in the ``~/.tenderdash`` directory.
 Modify the configuration with the following commands::
@@ -875,7 +856,8 @@ Modify the configuration with the following commands::
   sed -i 's/^create_empty_blocks_interval.*/create_empty_blocks_interval = "3m"/' ~/.tenderdash/config/config.toml
   sed -i 's/^namespace.*/namespace = "drive_tendermint"/' ~/.tenderdash/config/config.toml
   sed -i 's/^seeds.*/seeds = "74907790a03b51ac062c8a1453dafd72a08668a3@54.189.200.56:26656,2006632eb20e670923d13d4f53abc24468eaad4d@52.43.162.96:26656"/' ~/.tenderdash/config/config.toml
-  curl https://gist.githubusercontent.com/strophy/9a564bbc423198a2fdf4e807b7b40bb4/raw/797ed1a074ca90e574ef016cae4f43e97ae07f56/genesis.json > ~/.tenderdash/config/genesis.json
+  sed -i 's/^core-rpc-host.*/core-rpc-host = "localhost:19998"' ~/.tenderdash/config/config.toml
+  curl https://gist.githubusercontent.com/strophy/d8665f30aa7544785439e5973a98a1c5/raw/ab254ae5ff4e176daaf6a53c7448e527fe5800d2/genesis.json > ~/.tenderdash/config/genesis.json
 
 Configure Tenderdash to start as a service::
 
@@ -937,19 +919,47 @@ Start the transaction filter stream::
 Envoy
 ^^^^^
 
-Envoy is a gRPC service proxy for cloud-native applications. Install
-Envoy as follows::
+Envoy is a gRPC service proxy for cloud-native applications. As it is
+responsible for TLS termination, you will need to obtain an TLS
+certificate for your public IP address before configuring Envoy. You can
+do this independently using a provider of your choice, or use ZeroSSL to
+obtain a free certificate. Visit https://app.zerossl.com/certificate/new
+and enter your public IP address, then download the auth file. Place the
+contents of this file in the
+``/var/www/html/.well-known/pki-validation/`` directory with the
+original filename on your server and serve it using nginx as follows::
 
-  cd
-  curl -sL 'https://deb.dl.getenvoy.io/public/gpg.8115BA8E629CC074.key' | sudo gpg --dearmor -o /usr/share/keyrings/getenvoy-keyring.gpg
-  echo "deb [signed-by=/usr/share/keyrings/getenvoy-keyring.gpg] https://deb.dl.getenvoy.io/public/deb/ubuntu $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/getenvoy.list
-  sudo apt update
-  sudo apt install -y getenvoy-envoy
+  sudo mkdir -p /var/www/html/.well-known/pki-validation/
+  sudo nano /var/www/html/.well-known/pki-validation/<your_auth_file_name>.txt
+  sudo apt install -y nginx
+
+The auth file should be available at the following URL, for example::
+
+  http://3.27.105.157/.well-known/pki-validation/5F11ABBAE1FD926CB5BF8786A4E01492.txt
+
+Complete validation in ZeroSSL and download the bundle file in .zip
+format. Extract it on your local computer, and copy the contents of the
+``ca_bundle.crt`` and ``private.key`` files to your server into the
+following location:
+
+  sudo nano /etc/ssl/bundle.crt
+  sudo nano /etc/ssl/private.key
+
+Remove nginx and the temporary auth file as follows:
+
+  sudo apt -y --purge autoremove nginx
+  sudo rm -rf /var/www/html/.well-known
+        
+Install Envoy as follows::
+
+  cd /tmp
+  wget https://github.com/envoyproxy/envoy/releases/download/v1.27.0/envoy-1.27.0-linux-x86_64
+  sudo install -T envoy-1.27.0-linux-x86_64 /usr/local/bin/envoy  
 
 Configure Envoy as follows::
 
   sudo mkdir /etc/envoy
-  curl https://gist.githubusercontent.com/strophy/a6f4f6e30212e7cadcefb65b179c9bce/raw/c8c879de320fc93f5c56793c7bb89acb3165bab9/grpc.yaml | sudo tee /etc/envoy/config.yaml
+  curl https://gist.githubusercontent.com/strophy/2716c203d88e77419152f6392623b844/raw/ce7aa360b544621c22587a09e0cf7190fd4a202e/envoy.yaml | sudo tee /etc/envoy/config.yaml
 
 Configure Envoy to start as a service::
 
@@ -959,7 +969,7 @@ Configure Envoy to start as a service::
   After=syslog.target network-online.target
   
   [Service]
-  ExecStart=bash -c '/usr/bin/envoy --config-path /etc/envoy/config.yaml | tee'
+  ExecStart=bash -c '/usr/local/bin/envoy --config-path /etc/envoy/config.yaml | tee'
   Restart=always
   RestartSec=5
   KillMode=mixed
@@ -984,7 +994,7 @@ Finishing up
 
 Ensure services managed by ``pm2`` start on reboot::
 
-  cat<<"EOF"|crontab
+  cat << EOF | crontab
   * * * * * cd ~/sentinel && ./bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
   @reboot { sleep 5;cd ~/platform&&pm2 start yarn --name "drive" -- workspace @dashevo/drive abci;}
   @reboot { sleep 6;cd ~/platform&&pm2 start yarn --name "dapi" -- workspace @dashevo/dapi api;}
