@@ -690,7 +690,7 @@ Configure Dash Core::
   zmqpubrawchainlock=tcp://0.0.0.0:29998
   #----
   #masternodeblsprivkey=
-  externalip=$(curl ifconfig.me)
+  externalip=$(curl icanhazip.com)
   #----
   testnet=1
   
