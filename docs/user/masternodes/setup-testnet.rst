@@ -750,8 +750,14 @@ node is working properly. Install Sentinel as follows::
   bin/python bin/sentinel.py
 
 You will see a message reading **dashd not synced with network! Awaiting
-full sync before running Sentinel.** Use the following command to
-monitor sync status::
+full sync before running Sentinel.** Run the following to ensure
+Sentinel runs every minute::
+
+  cat << EOF | crontab
+  * * * * * cd ~/sentinel && ./bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+  EOF
+
+Use the following command to monitor sync status::
 
   dash-cli mnsync status
 
@@ -998,12 +1004,13 @@ Finishing up
 
 Ensure services managed by ``pm2`` start on reboot::
 
-  cat << EOF | crontab
-  * * * * * cd ~/sentinel && ./bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
-  @reboot { sleep 5;cd ~/platform&&pm2 start yarn --name "drive" -- workspace @dashevo/drive abci;}
-  @reboot { sleep 6;cd ~/platform&&pm2 start yarn --name "dapi" -- workspace @dashevo/dapi api;}
-  @reboot { sleep 7;cd ~/platform&&pm2 start yarn --name "dapi" -- workspace @dashevo/dapi core-streams;}
-  EOF
+  pm2 save
+  pm2 startup
+
+Copy and paste the resulting command to ensure PM2 restarts processes on
+boot::
+
+  sudo env PATH=$PATH:/home/dash/.nvm/versions/node/v16.20.1/bin /home/dash/.nvm/versions/node/v16.20.1/lib/node_modules/pm2/bin/pm2 startup systemd -u dash --hp /home/dash
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
