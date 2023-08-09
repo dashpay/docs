@@ -634,6 +634,17 @@ Prepare your environment for installing keys through GPG::
 
   sudo mkdir -m 600 /root/.gnupg
 
+Tor
+^^^
+
+Tor is an internet relay system designed to preserve anonymity on the
+internet. Install Tor as follows::
+
+  sudo gpg --no-default-keyring --keyring /usr/share/keyrings/tor-archive-keyring.gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+  echo "deb [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/tor.list
+  sudo apt update
+  sudo apt install -y tor deb.torproject.org-keyring
+
 Dash Core
 ^^^^^^^^^
 
@@ -691,6 +702,8 @@ Configure Dash Core::
   #----
   #masternodeblsprivkey=
   externalip=$(curl icanhazip.com)
+  proxy=127.0.0.1:9050
+  torcontrol=127.0.0.1:9051
   #----
   testnet=1
   
