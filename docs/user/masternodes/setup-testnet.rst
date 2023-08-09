@@ -929,7 +929,7 @@ Envoy
 ^^^^^
 
 Envoy is a gRPC service proxy for cloud-native applications. As it is
-responsible for TLS termination, you will need to obtain an TLS
+responsible for TLS termination, you will need to obtain a TLS
 certificate for your public IP address before configuring Envoy. You can
 do this independently using a provider of your choice, or use ZeroSSL to
 obtain a free certificate. Visit https://app.zerossl.com/certificate/new
