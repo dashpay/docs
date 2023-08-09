@@ -754,7 +754,7 @@ full sync before running Sentinel.** Run the following to ensure
 Sentinel runs every minute::
 
   cat << EOF | crontab
-  * * * * * cd ~/sentinel && ./bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+  */10 * * * * { test -f ~/.dashcore/dashd.pid && cd ~/sentinel && bin/python bin/sentinel.py; } >> ~/sentinel/sentinel-cron.log 2>&1
   EOF
 
 Use the following command to monitor sync status::
