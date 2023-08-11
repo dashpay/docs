@@ -792,20 +792,30 @@ response::
 Platform services
 -----------------
 
-Next, we will install the Dash Platform services. Start with some common
-dependencies::
+Next, we will install the Dash Platform services. Start with installing
+JavaScript dependencies::
 
   cd
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
   nvm install 16
-  sudo apt install -y apt-transport-https build-essential clang cmake curl g++ gcc gnupg2 libgmp-dev libpython3.10-dev libssl-dev libzmq3-dev lsb-release pkg-config
+  npm install pm2 -g
+
+Followed by Rust dependencies:: 
+
+  sudo apt install -y build-essential clang cmake curl g++ gcc gnupg2 libgmp-dev libpython3.10-dev libssl-dev libzmq3-dev lsb-release pkg-config
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
   source "$HOME/.cargo/env"
   rustup toolchain install stable
   rustup target add wasm32-unknown-unknown --toolchain stable
   cargo install -f wasm-bindgen-cli@0.2.86
-  npm install pm2 -g
+
+And Go dependencies::
+
+  cd /tmp
+  wget https://go.dev/dl/go1.19.11.linux-$(dpkg --print-architecture).tar.gz
+  sudo tar -C /usr/local -xzf go1.19.11.linux-$(dpkg --print-architecture).tar.gz
+  export PATH=$PATH:/usr/local/go/bin
 
 Drive
 ^^^^^
@@ -852,14 +862,7 @@ Tenderdash
 
 Tenderdash is a fork of Tendermint and is the blockchain implementation
 used by Dash Platform. As binaries are not yet published, you will need
-to build from source. Install Go as follows::
-
-  cd /tmp
-  wget https://go.dev/dl/go1.19.11.linux-$(dpkg --print-architecture).tar.gz
-  sudo tar -C /usr/local -xzf go1.19.11.linux-$(dpkg --print-architecture).tar.gz
-  export PATH=$PATH:/usr/local/go/bin
-
-Build and install Tenderdash as follows::
+to build from source. Build and install Tenderdash as follows::
 
   cd
   git clone -b v0.11.3 https://github.com/dashpay/tenderdash
