@@ -704,6 +704,7 @@ Configure Dash Core::
   #----
   #masternodeblsprivkey=
   externalip=$(curl icanhazip.com)
+  #---- comment the following lines if you are not using Tor
   proxy=127.0.0.1:9050
   torcontrol=127.0.0.1:9051
   #----
