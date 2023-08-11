@@ -985,8 +985,9 @@ Remove nginx and the temporary auth file as follows:
 Install Envoy as follows::
 
   cd /tmp
-  wget https://github.com/envoyproxy/envoy/releases/download/v1.23.10/envoy-1.23.10-linux-x86_64
-  sudo install -T envoy-1.23.10-linux-x86_64 /usr/local/bin/envoy  
+  echo $(uname -m) | grep -q "aarch64" && envoy_arch="aarch_64" || envoy_arch="x86_64"
+  wget https://github.com/envoyproxy/envoy/releases/download/v1.23.10/envoy-1.23.10-linux-$envoy_arch
+  sudo install -T envoy-1.23.10-linux-$envoy_arch /usr/local/bin/envoy  
 
 Configure Envoy as follows::
 
