@@ -884,7 +884,7 @@ Modify the configuration with the following commands::
   sed -i 's/^timeout_commit.*/timeout_commit = "500ms"/' ~/.tenderdash/config/config.toml
   sed -i 's/^create_empty_blocks_interval.*/create_empty_blocks_interval = "3m"/' ~/.tenderdash/config/config.toml
   sed -i 's/^namespace.*/namespace = "drive_tendermint"/' ~/.tenderdash/config/config.toml
-  sed -i 's/^seeds.*/seeds = "74907790a03b51ac062c8a1453dafd72a08668a3@54.189.200.56:26656,2006632eb20e670923d13d4f53abc24468eaad4d@52.43.162.96:26656"/' ~/.tenderdash/config/config.toml
+  sed -i 's/^bootstrap-peers.*/bootstrap-peers = "74907790a03b51ac062c8a1453dafd72a08668a3@35.92.167.154:36656,2006632eb20e670923d13d4f53abc24468eaad4d@52.12.116.10:36656"/' ~/.tenderdash/config/config.toml
   sed -i 's/^core-rpc-host.*/core-rpc-host = "localhost:19998"/' ~/.tenderdash/config/config.toml
   curl https://gist.githubusercontent.com/strophy/d8665f30aa7544785439e5973a98a1c5/raw/ab254ae5ff4e176daaf6a53c7448e527fe5800d2/genesis.json > ~/.tenderdash/config/genesis.json
 
