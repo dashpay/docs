@@ -1033,7 +1033,7 @@ Ensure services managed by ``pm2`` start on reboot::
 Copy and paste the resulting command to ensure PM2 restarts processes on
 boot::
 
-  sudo env PATH=$PATH:/home/dash/.nvm/versions/node/v16.20.1/bin /home/dash/.nvm/versions/node/v16.20.1/lib/node_modules/pm2/bin/pm2 startup systemd -u dash --hp /home/dash
+  sudo env PATH=$PATH:/home/dash/.nvm/versions/node/v16.20.2/bin /home/dash/.nvm/versions/node/v16.20.2/lib/node_modules/pm2/bin/pm2 startup systemd -u dash --hp /home/dash
 
 At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
