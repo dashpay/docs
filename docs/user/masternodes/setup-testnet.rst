@@ -764,7 +764,7 @@ node is working properly. Install Sentinel as follows::
 
 You will see a message reading **dashd not synced with network! Awaiting
 full sync before running Sentinel.** Run the following to ensure
-Sentinel runs every minute::
+Sentinel runs every 10 minutes::
 
   cat << EOF | crontab
   */10 * * * * { test -f ~/.dashcore/dashd.pid && cd ~/sentinel && bin/python bin/sentinel.py; } >> ~/sentinel/sentinel-cron.log 2>&1
