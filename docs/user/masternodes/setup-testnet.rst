@@ -632,6 +632,8 @@ Core services
 
 Prepare your environment for installing keys through GPG::
 
+  sudo apt update
+  sudo apt install apt-transport-https
   sudo mkdir -m 600 /root/.gnupg
 
 Tor
@@ -640,8 +642,6 @@ Tor
 Tor is an internet relay system designed to preserve anonymity on the
 internet. Install Tor as follows::
 
-  sudo apt update
-  sudo apt install apt-transport-https
   wget -qO- https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --dearmor | sudo tee /usr/share/keyrings/tor-archive-keyring.gpg >/dev/null
   echo "deb [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/tor.list
   sudo apt update
