@@ -963,16 +963,18 @@ nginx as follows::
   sudo nano /var/www/html/.well-known/pki-validation/<your_auth_file_name>.txt
   sudo apt install -y nginx
 
-The auth file should be available at the following URL, for example::
-
-  http://3.27.105.157/.well-known/pki-validation/5F11ABBAE1FD926CB5BF8786A4E01492.txt
-
-Complete validation in ZeroSSL and download the bundle file in .zip
-format. Extract it on your local computer, and copy the contents of the
-``ca_bundle.crt`` and ``private.key`` files to your server into the
-following locations::
+Click the link shown in Step 3 of the ZeroSSL interface and verify that
+the contents of the auth file are displayed in your browser. Complete
+validation in ZeroSSL and download the bundle file in ``.zip`` format.
+Extract it on your local computer, and copy the contents of the
+``certificate.crt`` followed by ``ca_bundle.crt`` one after the other
+into the bundle file at the following location on the remote node::
 
   sudo nano /etc/ssl/bundle.crt
+
+Then copy the contents of ``private.key`` into the following location on
+the remote node::
+
   sudo nano /etc/ssl/private.key
 
 Remove nginx and the temporary auth file as follows:
