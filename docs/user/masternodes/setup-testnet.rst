@@ -839,6 +839,7 @@ Configure Drive::
   sed -i 's/^CORE_JSON_RPC_PORT.*/CORE_JSON_RPC_PORT=19998/' packages/js-drive/.env
   sed -i 's/^CORE_JSON_RPC_USERNAME.*/CORE_JSON_RPC_USERNAME=dashrpc/' packages/js-drive/.env
   sed -i 's/^INITIAL_CORE_CHAINLOCKED_HEIGHT.*/INITIAL_CORE_CHAINLOCKED_HEIGHT=854281/' packages/js-drive/.env
+  sed -i 's/^VALIDATOR_SET_LLMQ_TYPE.*/VALIDATOR_SET_LLMQ_TYPE=6/' packages/js-drive/.env
   sed -i 's/^DASHPAY_MASTER_PUBLIC_KEY=.*/DASHPAY_MASTER_PUBLIC_KEY=02d4dcce3f0a8d2936ce26df4d255fd2835b629b73eea39d4b2778096b91e77946/' packages/js-drive/.env
   sed -i 's/^DASHPAY_SECOND_PUBLIC_KEY=.*/DASHPAY_SECOND_PUBLIC_KEY=03699c8b4ebf1696c92e9ec605a02a38f6f9cec47d13fb584fdad779e936e20ccb/' packages/js-drive/.env
   sed -i 's/^DPNS_MASTER_PUBLIC_KEY=.*/DPNS_MASTER_PUBLIC_KEY=02c8b4747b528cac5fddf7a6cc63702ee04ed7d1332904e08510343ea00dce546a/' packages/js-drive/.env
