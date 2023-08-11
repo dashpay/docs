@@ -758,7 +758,7 @@ node is working properly. Install Sentinel as follows::
 
   cd
   sudo apt install -y software-properties-common python3-venv
-  git clone -b master https://github.com/dashpay/sentinel.git
+  git clone --depth 1 --branch master https://github.com/dashpay/sentinel.git
   cd sentinel
   python3 -m venv . sentinel
   bin/pip install -r requirements.txt
@@ -823,7 +823,7 @@ Drive
 Drive is a replicated state machine for Dash Platform. Download Drive as
 follows::
 
-  git clone --single-branch -b master https://github.com/dashpay/platform/
+  git clone --depth 1 --branch master https://github.com/dashpay/platform/
   cd platform
   corepack enable
   yarn install
@@ -865,7 +865,7 @@ used by Dash Platform. As binaries are not yet published, you will need
 to build from source. Build and install Tenderdash as follows::
 
   cd
-  git clone -b v0.11.3 https://github.com/dashpay/tenderdash
+  git clone --depth 1 --branch v0.11.3 https://github.com/dashpay/tenderdash
   cd tenderdash
   make install-bls
   make build-linux
