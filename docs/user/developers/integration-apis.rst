@@ -142,9 +142,10 @@ Tokenview
 
 https://services.tokenview.io
 
-Tokenview provides a wealth of DASH APIs, easy to perform cryptocurrency 
-payment applications and develop Dash dApps. Monitor & Alert is served 
-to receive balance changes in real time. 
+Tokenview provides a Dash API, making it easy for developers to create
+cryptocurrency payment applications and develop Dash dApps. Monitoring
+and alerts features are available to notify applications of balance changes
+in real time.
 
 - Features: Fully access Dash historical and real-time on-chain data for 
   non-custodial wallet, HD wallet. High performance and high availability.
