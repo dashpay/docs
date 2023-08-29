@@ -132,6 +132,26 @@ providers.
 - Pricing Model: Free up to 20k requests, Pricing tiers
 - Documentation: https://nownodes.io/documentation
 
+Tokenview
+--------
+
+.. image:: img/tokenview.png
+   :width: 200px
+   :align: right
+   :target: https://services.tokenview.io
+
+https://services.tokenview.io
+
+Tokenview provides a Dash API, making it easy for developers to create
+cryptocurrency payment applications and develop Dash dApps. Monitoring
+and alerts features are available to notify applications of balance changes
+in real time.
+
+- Features: Fully access Dash historical and real-time on-chain data for 
+  non-custodial wallet, HD wallet. High performance and high availability.
+- Pricing Model: Free up to 1 million requests, pricing tiers.
+- Documentation: https://services.tokenview.io/docs?type=api
+
 
 CoinPayments
 ------------
