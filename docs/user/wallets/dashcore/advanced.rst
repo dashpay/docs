@@ -47,6 +47,31 @@ affecting the locked UTXOs.
 
 .. _dashcore-hd:
 
+Running Dash Testnet
+====================
+
+It is recommended to run Dash Core on testnet for your experimentations. 
+To start on testnet via the command line, do the following:
+
+For Linux:
+
+  ./dash-qt -testnet
+
+For Mac:
+
+  Dash-Qt -testnet (run from Applications/Dash-Qt.app/Contents/MacOS)
+
+Note: You may need to allow an app from an unknown developer before running this. 
+Cmd+Click on the application and click on "Open."
+
+Now, open Mac Terminal and run: 
+
+  cd /Applications/Dash-Qt.app/Contents/MacOS
+
+Then run: 
+
+  ./Dash-Qt -testnet
+
 HD Wallets
 ==========
 
