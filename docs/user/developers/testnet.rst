@@ -98,12 +98,6 @@ but with a few key differences:
   ``testnet = 1``
 - As for mainnet masternodes, the RPC username and password must contain
   alphanumeric characters only
-- When cloning sentinel, you may need to clone the development branch
-  using the ``-b`` option, for example: ``git clone -b develop
-  https://github.com/dashpay/sentinel.git``
-- Once sentinel is installed, modify
-  ``~/.dashcore/sentinel/sentinel.conf``, comment the mainnet line and
-  uncomment: ``network=testnet``
 - The wallet holding the masternode collateral will expect to find the
   ``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf``
   instead of ``~/.dashcore/masternode.conf``.
@@ -270,4 +264,3 @@ Discussion:
 Latest successfully built develop branch binaries:
 
 - Dash Core: https://gitlab.com/dashpay/dash/pipelines
-- Sentinel: https://github.com/dashpay/sentinel/tree/develop
