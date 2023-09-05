@@ -558,6 +558,11 @@ of this documentation.
 Sentinel
 =========
 
+.. attention::
+
+   Sentinel was deprecated in Dash Core v20.0 when its functionality was
+   integrated into Dash Core.
+
 Introduced in Dash 0.12.1, Sentinel is an autonomous agent for
 persisting, processing and automating Dash governance objects and tasks.
 Sentinel is implemented as a Python application that binds to a local
