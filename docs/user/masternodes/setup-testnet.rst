@@ -751,28 +751,6 @@ Verify Dash Core is running::
 
   sudo systemctl status dashd
 
-Sentinel
-^^^^^^^^
-
-Sentinel is a watchdog and works to communicate to the network that your
-node is working properly. Install Sentinel as follows::
-
-  cd
-  sudo apt install -y software-properties-common python3-venv
-  git clone --depth 1 --branch master https://github.com/dashpay/sentinel.git
-  cd sentinel
-  python3 -m venv . sentinel
-  bin/pip install -r requirements.txt
-  bin/python bin/sentinel.py
-
-You will see a message reading **dashd not synced with network! Awaiting
-full sync before running Sentinel.** Run the following to ensure
-Sentinel runs every 10 minutes::
-
-  cat << EOF | crontab
-  */10 * * * * { test -f ~/.dashcore/testnet3/dashd.pid && cd ~/sentinel && bin/python bin/sentinel.py; } >> ~/sentinel/sentinel-cron.log 2>&1
-  EOF
-
 Use the following command to monitor sync status::
 
   dash-cli mnsync status
