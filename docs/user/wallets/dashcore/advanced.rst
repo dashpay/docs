@@ -50,7 +50,7 @@ affecting the locked UTXOs.
 HD Wallets
 ==========
 
-.. _dashcore-hd-default:
+.. _dashcore-hd-upgrade:
 
 Upgrade to HD
 -------------
@@ -75,9 +75,6 @@ or ``dash-cli``::
 
   help upgradetohd
 
-
-.. _dashcore-hd-restore:
-
 View HD wallet information
 --------------------------
 
@@ -90,8 +87,7 @@ Dash Core will display the HD seed in both hexadecimal and BIP39 mnemonic
 formats. It will also display the mnemonic passphrase if one was used when
 creating the wallet.
 
-
-.. _dashcore-hd-upgrade:
+.. _dashcore-hd-restore:
 
 Restore HD wallet
 -----------------
@@ -113,7 +109,7 @@ is often also referred to as the "25th word" or "extension word". The wallet
 passphrase encrypts the wallet file itself, while the mnemonic passphrase is
 used to specify different derivation branches from the same mnemonic seed.
 
-.. _dashcore-multisig:
+.. _dashcore-hd-default:
 
 Enable HD Wallet Creation By Default
 ------------------------------------
@@ -128,6 +124,8 @@ generate HD wallets by default::
 
 To make this configuration persist between restarts, add ``usehd=1`` to the
 ``dash.conf`` file.
+
+.. _dashcore-multisig:
 
 Multisignature
 ==============
