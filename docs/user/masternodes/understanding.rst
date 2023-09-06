@@ -68,7 +68,7 @@ means that Dash can scale more efficiently and deploy services more
 quickly than a blockchain run entirely by unpaid volunteers. The more
 masternodes, the better and safer the Dash network.
 
-As of November 2018, the Dash network has `almost 3500 masternodes located
+As of September 2023, the Dash network has `almost 3500 masternodes located
 <http://178.254.23.111/~pub/masternode_count.png>`_ in `19
 countries <https://chainz.cryptoid.info/dash/#!network>`_ and
 hosted on `over 140 ISPs
