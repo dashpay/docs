@@ -53,7 +53,7 @@ Running Dash Testnet
 It is recommended to run Dash Core on testnet for your experimentations. 
 To start on testnet via the command line, do the following:
 
-For Linux:
+For Linux::
 
   ./dash-qt -testnet
 
