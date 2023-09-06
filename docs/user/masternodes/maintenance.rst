@@ -76,18 +76,7 @@ Restart Dash::
 
   ~/.dashcore/dashd
 
-You will see a message reading "Dash Core server starting". We will now
-update Sentinel::
-
-  cd ~/.dashcore/sentinel/
-  git checkout master
-  git pull
-  venv/bin/pip install -r requirements.txt
-
-Finally, uncomment the line to automatically restart Dash in your
-crontab by invoking ``crontab -e`` again and deleting the ``#``
-character.
-
+You will see a message reading "Dash Core server starting".
 The Dash software on the masternode is now updated.
 
 
@@ -237,8 +226,6 @@ the following settings are configured correctly:
 - Ensure that the ``externalip`` (and ``port`` if using testnet) are 
   specified correctly and not blocked by a firewall or port forwarding 
   service
-- Ensure that Sentinel is installed, updated, not exiting with an error 
-  and is entered in your crontab to run every 1-2 minutes
 
 Once you are certain these settings are correct, you can update your
 service status on the network and return to the valid set of masternodes
@@ -430,8 +417,8 @@ payment queue. Type the following command::
 
   crontab -e
 
-Select an editor if necessary and add the following line to your crontab
-after the line for sentinel, replacing lwhite with your username on your
+Select an editor if necessary and add the following line at the end of
+your crontab, replacing lwhite with your username on your
 system::
 
   */2 * * * * /home/lwhite/dashcentral-updater/dcupdater
