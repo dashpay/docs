@@ -304,27 +304,16 @@ synchronization with the blockchain::
 
   ~/.dashcore/dashd
 
-You will see a message reading **Dash Core server starting**. We will
-now install Sentinel, a piece of software which operates as a watchdog
-to communicate to the network that your node is working properly::
+You will see a message reading **Dash Core server starting**. 
 
-  cd ~/.dashcore
-  git clone https://github.com/dashpay/sentinel.git
-  cd sentinel
-  virtualenv venv
-  venv/bin/pip install -r requirements.txt
-  venv/bin/python bin/sentinel.py
-
-You will see a message reading **dashd not synced with network! Awaiting
-full sync before running Sentinel.** Add dashd and sentinel to crontab
-to make sure it runs every minute to check on your masternode::
+Add dashd to crontab to make sure it runs every minute to check on your
+masternode::
 
   crontab -e
 
-Choose nano as your editor and enter the following lines at the end of
+Choose nano as your editor and enter the following line at the end of
 the file::
 
-  * * * * * cd ~/.dashcore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
   * * * * * pidof dashd || ~/.dashcore/dashd
 
 Press enter to make sure there is a blank line at the end of the file,
