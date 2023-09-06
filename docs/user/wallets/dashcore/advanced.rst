@@ -64,12 +64,9 @@ For Mac (run from Applications/Dash-Qt.app/Contents/MacOS)::
 Note: You may need to allow an app from an unknown developer before running this. 
 Cmd+Click on the application and click on "Open."
 
-Now, open Mac Terminal and run: 
+Now, open Mac Terminal and run::
 
   cd /Applications/Dash-Qt.app/Contents/MacOS
-
-Then run: 
-
   ./Dash-Qt -testnet
 
 You may top up your testnet wallet by `accessing the faucet <http://faucet.testnet.networks.dash.org/>`.
