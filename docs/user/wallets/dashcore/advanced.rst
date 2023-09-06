@@ -72,6 +72,8 @@ Then run:
 
   ./Dash-Qt -testnet
 
+You may top up your testnet wallet by `accessing the faucet <http://faucet.testnet.networks.dash.org/>`.
+
 HD Wallets
 ==========
 
