@@ -45,7 +45,7 @@ affecting the locked UTXOs.
    Locking UTXOs in Dash Core wallet
 
 
-.. _dashcore-hd:
+.. _dashcore-testnet:
 
 Running Dash Testnet
 ====================
@@ -70,6 +70,8 @@ Now, open Mac Terminal and run::
   ./Dash-Qt -testnet
 
 You may top up your testnet wallet by `accessing the faucet <http://faucet.testnet.networks.dash.org/>`.
+
+.. _dashcore-hd:
 
 HD Wallets
 ==========
