@@ -50,36 +50,6 @@ affecting the locked UTXOs.
 HD Wallets
 ==========
 
-.. _dashcore-hd-default:
-
-Enable HD Wallet Creation
--------------------------
-
-Dash Core includes an implementation of BIP39/BIP44 compatible hierarchical
-deterministic (HD) key generation. We will use the Windows GUI wallet in this
-example, but the commands are similar if using ``dash-qt`` or ``dashd`` on other
-operating systems. Enter the following command to configure Dash Core to
-generate HD wallets by default::
-
-  dash-qt.exe -usehd
-
-To make this configuration persist between restarts, add ``usehd=1`` to the
-``dash.conf`` file.
-
-
-View HD wallet information
---------------------------
-
-Open the console from **Window > Console** or issue the following RPC command
-from ``dash-cli`` to view the mnemonic seed::
-
-  dumphdinfo
-
-Dash Core will display the HD seed in both hexadecimal and BIP39 mnemonic
-formats. It will also display the mnemonic passphrase if one was used when
-creating the wallet.
-
-
 .. _dashcore-hd-upgrade:
 
 Upgrade to HD
@@ -105,6 +75,17 @@ or ``dash-cli``::
 
   help upgradetohd
 
+View HD wallet information
+--------------------------
+
+Open the console from **Window > Console** or issue the following RPC command
+from ``dash-cli`` to view the mnemonic seed::
+
+  dumphdinfo
+
+Dash Core will display the HD seed in both hexadecimal and BIP39 mnemonic
+formats. It will also display the mnemonic passphrase if one was used when
+creating the wallet.
 
 .. _dashcore-hd-restore:
 
@@ -127,6 +108,22 @@ Note that the wallet passphrase is different to the mnemonic passphrase, which
 is often also referred to as the "25th word" or "extension word". The wallet
 passphrase encrypts the wallet file itself, while the mnemonic passphrase is
 used to specify different derivation branches from the same mnemonic seed.
+
+.. _dashcore-hd-default:
+
+Enable HD Wallet Creation By Default
+------------------------------------
+
+Dash Core includes an implementation of BIP39/BIP44 compatible hierarchical
+deterministic (HD) key generation. We will use the Windows GUI wallet in this
+example, but the commands are similar if using ``dash-qt`` or ``dashd`` on other
+operating systems. Enter the following command to configure Dash Core to
+generate HD wallets by default::
+
+  dash-qt.exe -usehd
+
+To make this configuration persist between restarts, add ``usehd=1`` to the
+``dash.conf`` file.
 
 .. _dashcore-multisig:
 
