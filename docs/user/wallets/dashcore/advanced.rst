@@ -69,7 +69,7 @@ Now, open Mac Terminal and run::
   cd /Applications/Dash-Qt.app/Contents/MacOS
   ./Dash-Qt -testnet
 
-You may top up your testnet wallet by `accessing the faucet <http://faucet.testnet.networks.dash.org/>`.
+You may top up your testnet wallet by `accessing the faucet <http://faucet.testnet.networks.dash.org/>_`.
 
 .. _dashcore-hd:
 
