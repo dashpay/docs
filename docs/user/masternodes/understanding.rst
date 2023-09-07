@@ -68,13 +68,13 @@ means that Dash can scale more efficiently and deploy services more
 quickly than a blockchain run entirely by unpaid volunteers. The more
 masternodes, the better and safer the Dash network.
 
-As of November 2018, the Dash network has `over 5000 masternodes located
-<http://178.254.23.111/~pub/masternode_count.png>`_ in over `45
-countries <https://chainz.cryptoid.info/dash/masternodes.dws>`_ and
+As of September 2023, the Dash network has `almost 3500 masternodes located
+<http://178.254.23.111/~pub/masternode_count.png>`_ in `19
+countries <https://chainz.cryptoid.info/dash/#!network>`_ and
 hosted on `over 140 ISPs
 <http://178.254.23.111/~pub/Dash/masternode_ISPs.html>`_. The block
-reward is approximately 3.34 Dash, so the selected masternode receives
-1.67 Dash per payment or approximately 6 Dash per month. The block
+reward is approximately 2.310 Dash, so the selected masternode receives
+1.344 Dash per payment or approximately 6 Dash per month. The block
 reward decreases by 7.14% approximately once per year, so the annual
 earnings for a masternode owner is approximately 7% of the collateral, 
 and will decrease over time `as calculated here
