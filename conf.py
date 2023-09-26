@@ -116,6 +116,7 @@ myst_enable_extensions = ["colon_fence"]
 # -- intersphinx configuration -----------------------------------------------
 intersphinx_mapping = {
     "core": ("https://docs.dash.org/projects/core/en/stable/", None),
+    "platform": ("https://docs.dash.org/projects/platform/en/stable/", None),
 }
 
 # We recommend adding the following config value.
@@ -138,7 +139,7 @@ html_theme = "pydata_sphinx_theme"
 html_theme_options = {
     "external_links": [
         {"name": "Core docs", "url": "https://docs.dash.org/projects/core/en/stable/docs/index.html"},
-        {"name": "Platform docs", "url": "https://dashplatform.readme.io"},
+        {"name": "Platform docs", "url": "https://docs.dash.org/projects/platform/en/stable/docs/index.html"},
         {"name": "Dash.org", "url": "https://www.dash.org"},
         {"name": "Forum", "url": "https://www.dash.org/forum"},
     ],
