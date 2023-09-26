@@ -56,13 +56,13 @@ learning about :ref:`safety <safety>` or joining one of the many
 
     .. grid-item-card:: 🚀 Platform Docs
          :margin: 2 2 auto auto
-         :link-type: url
-         :link: https://dashplatform.readme.io
+         :link-type: ref
+         :link: platform:platform-index
 
          Start working with Dash Platform and discover how you can use its powerful capabilities to power your Web3 project.
          
          +++
-         `Click to begin <https://dashplatform.readme.io>`__
+         :ref:`Click to begin <platform:platform-index>`
 
 .. image:: img/businessplan.svg
    :class: no-scaled-link
