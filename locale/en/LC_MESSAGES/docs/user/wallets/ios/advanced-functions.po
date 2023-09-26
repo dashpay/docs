@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 15:21-0500\n"
+"POT-Creation-Date: 2023-09-26 09:54-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:1
+#: ../../docs/user/wallets/ios/advanced-functions.rst:-1
 msgid ""
 "URL scheme, master public key and requesting payment in Dash on your iOS "
 "device"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:1
+#: ../../docs/user/wallets/ios/advanced-functions.rst:-1
 msgid "dash, mobile, wallet, ios, send, receive, payment, url, public key"
 msgstr ""
 
@@ -32,10 +32,28 @@ msgid "Advanced functions"
 msgstr ""
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:12
-msgid "URL Scheme"
+msgid "Masternode keys"
 msgstr ""
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:14
+msgid ""
+"Certain masternode keys may be generated and stored in Dash Wallet. To "
+"access these keys, tap the **Menu button** and select **Tools**. Tap "
+"**Masternode Keys** and enter your PIN to open the Masternode Keys "
+"screen. From here, tap on any of the listed key types to view existing "
+"keys or generate new ones. The screen will show all used keys and the "
+"first unused one. To generate additional keys, tap the **+** button."
+msgstr ""
+
+#: ../../docs/user/wallets/ios/advanced-functions.rst:30
+msgid "*Viewing and generating masternode keys*"
+msgstr ""
+
+#: ../../docs/user/wallets/ios/advanced-functions.rst:33
+msgid "URL Scheme"
+msgstr ""
+
+#: ../../docs/user/wallets/ios/advanced-functions.rst:35
 msgid ""
 "iOS allows apps to communicate with one another through URL schemes. The "
 "Dash Wallet for iOS implements the dashwallet:// scheme, allowing you to "
@@ -43,51 +61,51 @@ msgid ""
 "documents the methods available using the URL scheme."
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:20
+#: ../../docs/user/wallets/ios/advanced-functions.rst:41
 msgid "Payment"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:22
+#: ../../docs/user/wallets/ios/advanced-functions.rst:43
 msgid "Payment request URL format::"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:26
+#: ../../docs/user/wallets/ios/advanced-functions.rst:47
 msgid "Notes:"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:28
+#: ../../docs/user/wallets/ios/advanced-functions.rst:49
 msgid ""
 "``sender`` is both your callback URL and the name of the app that you "
 "show to the user. This is to prevent 3rd party apps from phishing."
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:31
+#: ../../docs/user/wallets/ios/advanced-functions.rst:52
 msgid "The user will see something similar to this:"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:36
+#: ../../docs/user/wallets/ios/advanced-functions.rst:57
 msgid "Payment request in iOS"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:38
+#: ../../docs/user/wallets/ios/advanced-functions.rst:59
 msgid ""
 "If the user enters the correct passcode, then the transaction is sent and"
 " the user is returned to the sender app following the callback URL."
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:41
+#: ../../docs/user/wallets/ios/advanced-functions.rst:62
 msgid "Callback URL format::"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:46
+#: ../../docs/user/wallets/ios/advanced-functions.rst:67
 msgid "Master public key"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:48
+#: ../../docs/user/wallets/ios/advanced-functions.rst:69
 msgid "Master public key request format::"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:52
+#: ../../docs/user/wallets/ios/advanced-functions.rst:73
 msgid ""
 "Note: account is optional and corresponds to BIP32/BIP44 account, most of"
 " the time this should be 0. If account is not specified, we use account "
@@ -95,16 +113,16 @@ msgid ""
 "``44’/5’/<account>’`` and ``<account>’``"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:57
-#: ../../docs/user/wallets/ios/advanced-functions.rst:66
+#: ../../docs/user/wallets/ios/advanced-functions.rst:78
+#: ../../docs/user/wallets/ios/advanced-functions.rst:87
 msgid "Callback::"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:62
+#: ../../docs/user/wallets/ios/advanced-functions.rst:83
 msgid "Get address for payment"
 msgstr ""
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:64
+#: ../../docs/user/wallets/ios/advanced-functions.rst:85
 msgid "``dashwallet://request=address&sender=<sender>``"
 msgstr ""
 
