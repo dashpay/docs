@@ -1,33 +1,38 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dash Italia, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:56+0000\n"
-"Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
+"Last-Translator: Dash Italia, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/mining/pools.rst:1
+#: ../../docs/user/mining/pools.rst-1
 msgid "Guide to mining using a mining pool"
-msgstr ""
+msgstr "Guida al mining utilizzando una mining pool"
 
-#: ../../docs/user/mining/pools.rst:1
+#: ../../docs/user/mining/pools.rst-1
 msgid "dash, mining, X11, CPU, GPU, ASIC, hardware, pool, mining pools, Luxor"
 msgstr ""
+"dash, mining, X11, CPU, GPU, ASIC, hardware, pool, mining pools, Luxor"
 
 #: ../../docs/user/mining/pools.rst:9
 msgid "Mining Pools"
-msgstr ""
+msgstr "Mining Pools"
 
 #: ../../docs/user/mining/pools.rst:11
 msgid ""
@@ -38,10 +43,17 @@ msgid ""
 "rare large rewards. Commercial mining pools offer a number of services, "
 "described below using the example of Luxor Mining."
 msgstr ""
+"È più probabile che le Mining pool di Dash generino ricompense rispetto al "
+"mining solista direttamente sulla blockchain. Questo perché è estremamente "
+"improbabile che tu possa estrarre un blocco come individuo data l'attuale "
+"difficoltà di mining, quindi la condivisione degli sforzi si traduce in "
+"ricompense incrementali più frequenti rispetto a ricompense di grandi "
+"dimensioni estremamente rare. Le mining pool commerciali offrono una serie "
+"di servizi, descritti di seguito utilizzando l'esempio di Luxor Mining."
 
 #: ../../docs/user/mining/pools.rst:19
 msgid "Miner Hosting"
-msgstr ""
+msgstr "Miner Hosting"
 
 #: ../../docs/user/mining/pools.rst:21
 msgid ""
@@ -55,6 +67,17 @@ msgid ""
 "starting a fire. Ensure you are properly informed about these challenges "
 "before mining at home."
 msgstr ""
+"Alcuni miner potrebbero decidere di ospitare le macchine direttamente nelle "
+"loro case. Questo può funzionare se hai un buon capannone o un seminterrato."
+" Ma tieni presente che le macchine ASIC possono essere invadenti nella tua "
+"casa. Sono piuttosto rumorosi durante il funzionamento (pensa ad un "
+"aspirapolvere). Inoltre, l'hardware di mining consuma una quantità molto "
+"significativa di elettricità, quindi l'utilizzo di più ASIC di mining in "
+"casa potrebbe danneggiare il cablaggio o la scheda dei fusibili, potrebbe "
+"richiedere ulteriore ventilazione o sistemi di distribuzione di "
+"alimentazione e di rete e comporta il rischio di provocare un incendio. "
+"Assicurati di essere adeguatamente informato su queste sfide prima di fare "
+"mining a casa."
 
 #: ../../docs/user/mining/pools.rst:31
 msgid ""
@@ -64,6 +87,12 @@ msgid ""
 "return for setup, ensuring proper operations, electricity and ongoing "
 "maintenance."
 msgstr ""
+"A seconda delle considerazioni di cui sopra e della tariffa elettrica, "
+"potrebbe avere senso inviare la tua macchina per mining a un sito di "
+"colocation mineraria per l'hosting per tuo conto. L'attività di colocation "
+"mineraria richiede una \"tariffa di hosting\" in cambio della "
+"configurazione, garantendo operazioni adeguate, elettricità e manutenzione "
+"continua."
 
 #: ../../docs/user/mining/pools.rst:37
 msgid ""
@@ -82,14 +111,29 @@ msgid ""
 "projects in South America. Please make sure to do your own research before "
 "making any decision on engaging a colocation business."
 msgstr ""
+"Negli Stati Uniti/Canada sono disponibili molte opzioni di hosting come "
+"`Compute North <https://www.computenorth.com/>`__, `Frontier "
+"<https://www.bitcoinmined.net/>`__, `Core Scientific "
+"<https://www.corescientific.com/>`__, `Lightspeed "
+"<https://www.lightspeedhosting.com/>`__ e molti altri. `Crypto Mining Tools "
+"<https://cryptomining.tools/>`__ offre una `mappa di mining "
+"<https://cryptomining.tools/directory/map/1541>`__ con più opzioni in Nord "
+"America. `Hashrate Index <https://hashrateindex.com>`__ fornisce un "
+"`database di colocation ospitate <https://hashrateindex.com/farms>`__ negli "
+"Stati Uniti, Canada, Russia, Paraguay e altro ancora. `F2Pool "
+"<https://www.f2pool.com/>`__ ha un `elenco di località di hosting "
+"<https://www.f2pool.com/>`__ in Cina e nella regione della CSI. `BC Mining "
+"<https://bcmining.uy/>`__ offre molteplici progetti in Sud America. "
+"Assicurati di fare le tue ricerche prima di prendere qualsiasi decisione "
+"sull'assunzione di un'attività di colocation."
 
 #: ../../docs/user/mining/pools.rst:54
 msgid "Setting up your miner"
-msgstr ""
+msgstr "Configurazione del tuo miner"
 
 #: ../../docs/user/mining/pools.rst:57
 msgid "Powering up the Miner"
-msgstr ""
+msgstr "Accensione del miner"
 
 #: ../../docs/user/mining/pools.rst:59
 msgid ""
@@ -97,10 +141,14 @@ msgid ""
 "your miner to your internet-connected router or switch using a standard "
 "network cable. You are now ready to power up your miner."
 msgstr ""
+"Collega la tua macchina alla presa di corrente tramite l'alimentatore "
+"integrato. Quindi collega il tuo miner al router connesso a Internet o "
+"cambia utilizzando un cavo di rete standard. Ora sei pronto per potenziare "
+"il tuo miner."
 
 #: ../../docs/user/mining/pools.rst:64
 msgid "Scanning for Devices"
-msgstr ""
+msgstr "Scansione dei dispositivi"
 
 #: ../../docs/user/mining/pools.rst:66
 msgid ""
@@ -109,10 +157,16 @@ msgid ""
 " on your local network and see its IP address. After you have identified "
 "your miner’s IP address, you are ready to proceed with Configuration."
 msgstr ""
+"Per iniziare, utilizza uno strumento di scansione come `AngryIP "
+"<https://angryip.org/>`__ o `Locator "
+"<https://minerstat.com/software/locator>`__ per scansionare ogni dispositivo"
+" sulla tua rete locale e vedere il suo indirizzo IP. Dopo aver identificato "
+"l'indirizzo IP del tuo miner, sei pronto per procedere con la "
+"configurazione."
 
 #: ../../docs/user/mining/pools.rst:73
 msgid "Configuration"
-msgstr ""
+msgstr "Configurazione"
 
 #: ../../docs/user/mining/pools.rst:75
 msgid ""
@@ -120,14 +174,18 @@ msgid ""
 "browser. A dashboard similar to the one shown below will pop up. We are "
 "setting up a StrongU STU-U6, but the process is similar for other ASICs."
 msgstr ""
+"Inserisci l'indirizzo IP della rete locale del tuo miner nella barra degli "
+"URL di qualsiasi browser web. Verrà visualizzata una dashboard simile a "
+"quella mostrata di seguito. Stiamo configurando uno StrongU STU-U6, ma il "
+"processo è simile per altri ASIC."
 
 #: ../../docs/user/mining/pools.rst:83
 msgid "Setting up a mining ASIC to use a pool"
-msgstr ""
+msgstr "Configurazione di un ASIC di mining per utilizzare una pool"
 
 #: ../../docs/user/mining/pools.rst:86
 msgid "Choosing a Mining Pool"
-msgstr ""
+msgstr "Scegli una Mining Pool"
 
 #: ../../docs/user/mining/pools.rst:88
 msgid ""
@@ -135,6 +193,9 @@ msgid ""
 "dive into the mining pool landscape is available `here "
 "<https://blog.dash.org/luxor-launches-dash-pps-mining-pool-daf493bce9d2>`__."
 msgstr ""
+"Per completare la configurazione, dovrai scegliere una mining pool. Un "
+"approfondimento sul panorama delle mining pool è disponibile `qui "
+"<https://blog.dash.org/luxor-launches-dash-pps-mining-pool-daf493bce9d2>`__."
 
 #: ../../docs/user/mining/pools.rst:92
 msgid ""
@@ -143,6 +204,11 @@ msgid ""
 "documentation available :ref:`here <p2pool>`. The code for p2pool-dash is "
 "`available on GitHub <https://github.com/dashpay/p2pool-dash>`__."
 msgstr ""
+"Per aiutare con la sicurezza della rete e la decentralizzazione consigliamo "
+"di utilizzare P2Pool. Per configurare il tuo server P2Pool, segui la "
+"documentazione di configurazione disponibile :ref:`qui <p2pool>`. Il codice "
+"per p2pool-dash è `disponibile su GitHub <https://github.com/dashpay/p2pool-"
+"dash>`__."
 
 #: ../../docs/user/mining/pools.rst:98
 msgid ""
@@ -153,10 +219,16 @@ msgid ""
 "method. Other pools can be found `here "
 "<https://miningpoolstats.stream/dash>`__."
 msgstr ""
+"Se non vuoi impostare il tuo pool, puoi controllare un elenco di pool `qui "
+"<https://chainz.cryptoid.info/dash/#!extraction>`__. In questa guida "
+"configureremo un miner con `Luxor <https://mining.luxor.tech/>`__, una "
+"mining pool con sede negli Stati Uniti che opera in base al metodo di "
+"pagamento pay-per-share (PPS). Altri pool possono essere trovati `qui "
+"<https://miningpoolstats.stream/dash>`__."
 
 #: ../../docs/user/mining/pools.rst:106
 msgid "Completing Configuration"
-msgstr ""
+msgstr "Completamento della configurazione"
 
 #: ../../docs/user/mining/pools.rst:108
 msgid ""
@@ -164,36 +236,47 @@ msgid ""
 "accounts-a0d56235c0e6>`__ with the mining pool, you will have all the "
 "information you need to complete the setup process."
 msgstr ""
+"Dopo aver creato un `account utente <https://medium.com/luxor/meet-user-"
+"accounts-a0d56235c0e6>`__ con la mining pool, avrai tutte le informazioni "
+"necessarie per completare il processo di configurazione."
 
 #: ../../docs/user/mining/pools.rst:113
 msgid "URL: ``stratum+tcp://dash.luxor.tech:700``"
-msgstr ""
+msgstr "URL: ``stratum+tcp://dash.luxor.tech:700``"
 
 #: ../../docs/user/mining/pools.rst:114
 msgid ""
 "Worker: ``[LuxorUsername].WorkerName`` Workername can be anything, but avoid"
 " using symbols or special characters as it may be invalid."
 msgstr ""
+"Lavoratore: ``[LuxorUsername].WorkerName`` Il nome del lavoratore può essere"
+" qualsiasi cosa, ma evita di utilizzare simboli o caratteri speciali poiché "
+"potrebbe non essere valido."
 
 #: ../../docs/user/mining/pools.rst:117
 msgid "Password: ``123``"
-msgstr ""
+msgstr "Password: ``123``"
 
 #: ../../docs/user/mining/pools.rst:119
 msgid ""
 "For the other nodes (Pool 2 and Pool 3), feel free to use any of the other "
 "region nodes or other pools, such as ``dash-eu.luxor.tech:5050``."
 msgstr ""
+"Per gli altri nodi (Pool 2 e Pool 3), sentiti libero di utilizzare uno "
+"qualsiasi dei nodi di altre regioni o altre pool, come ``dash-"
+"eu.luxor.tech:5050``."
 
 #: ../../docs/user/mining/pools.rst:122
 msgid ""
 "Once you have filled out the details, click **Save & Apply**. Setup is now "
 "complete."
 msgstr ""
+"Una volta inseriti i dettagli, fai clic su **Salva e applica**. La "
+"configurazione è ora completa."
 
 #: ../../docs/user/mining/pools.rst:126
 msgid "Monitoring Results"
-msgstr ""
+msgstr "Risultati del monitoraggio"
 
 #: ../../docs/user/mining/pools.rst:128
 msgid ""
@@ -201,20 +284,27 @@ msgid ""
 "To find your user, simply go to Luxor, login to your account and navigate to"
 " the Workers tab. You should see something like this:"
 msgstr ""
+"Ci vorranno circa 5 minuti affinché i tuoi lavoratori appaiano nella pagina "
+"delle statistiche. Per trovare il tuo utente, vai semplicemente su Luxor, "
+"accedi al tuo account e vai alla scheda Lavoratori. Dovresti vedere qualcosa"
+" del genere:"
 
 #: ../../docs/user/mining/pools.rst:135
 msgid "Monitoring mining results with Luxor pool"
-msgstr ""
+msgstr "Monitoraggio dei risultati del mining con la pool Luxor"
 
 #: ../../docs/user/mining/pools.rst:137
 msgid ""
 "Note: For P2Pool, there is no central point to check balance. To learn more "
 "about P2Pool, see the :ref:`P2Pool documentation <p2pool>`."
 msgstr ""
+"Nota: per P2Pool non esiste un punto centrale per verificare il saldo. Per "
+"saperne di più su P2Pool, consultare la :ref:`Documentazione P2Pool "
+"<p2pool>`."
 
 #: ../../docs/user/mining/pools.rst:141
 msgid "Setting up the Dash Wallet"
-msgstr ""
+msgstr "Configurazione del portafoglio Dash"
 
 #: ../../docs/user/mining/pools.rst:143
 msgid ""
@@ -222,6 +312,9 @@ msgid ""
 "miner payouts. To do this in the Dash Core wallet, see :ref:`here <dashcore-"
 "send-receive>`."
 msgstr ""
+"L'ultimo passaggio è impostare il tuo indirizzo Dash dove riceverai i "
+"pagamenti del miner. Per farlo nel portafoglio Dash Core, vedi :ref:`qui "
+"<dashcore-send-receive>`."
 
 #: ../../docs/user/mining/pools.rst:147
 msgid ""
@@ -230,7 +323,11 @@ msgid ""
 "have logged in. You can enter your address and set a custom payout threshold"
 " here."
 msgstr ""
+"Una volta ottenuto il tuo indirizzo, vai alla pagina Impostazioni "
+"nell'angolo in alto a destra del sito `Luxor <https://mining.luxor.tech/>`__"
+" dopo aver effettuato l'accesso. Puoi inserire il tuo indirizzo e impostare "
+"una soglia di pagamento personalizzata qui."
 
 #: ../../docs/user/mining/pools.rst:155
 msgid "Setting the payout threshold with Luxor pool"
-msgstr ""
+msgstr "Impostazione della soglia di pagamento con la pool Luxor"

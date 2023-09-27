@@ -1,33 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # oscar junior <geleira@gmail.com>, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-23 15:49-0400\n"
+"POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
 "Last-Translator: oscar junior <geleira@gmail.com>, 2022\n"
-"Language: pt\n"
-"Language-Team: Portuguese "
-"(https://www.transifex.com/dash/teams/37570/pt/)\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
-"1000000 == 0 ? 1 : 2;\n"
+"Language-Team: Portuguese (https://app.transifex.com/dash/teams/37570/pt/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/wallets/dashcore/cmd-rpc.rst:-1
+#: ../../docs/user/wallets/dashcore/cmd-rpc.rst-1
 msgid "Dash Core wallet startup arguments and RPC command reference"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/cmd-rpc.rst:-1
+#: ../../docs/user/wallets/dashcore/cmd-rpc.rst-1
 msgid "dash, core, wallet, arguments, commands, RPC"
 msgstr ""
 
@@ -38,20 +36,20 @@ msgstr ""
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:11
 msgid ""
 "All command-line options (except for ``-datadir`` and ``-conf``) may be "
-"specified in a configuration file, and all configuration file options may"
-" also be specified on the command line. Command-line options override "
-"values set in the configuration file. The configuration file is a list of"
-" ``setting=value`` pairs, one per line, with optional comments starting "
-"with the ``#`` character."
+"specified in a configuration file, and all configuration file options may "
+"also be specified on the command line. Command-line options override values "
+"set in the configuration file. The configuration file is a list of "
+"``setting=value`` pairs, one per line, with optional comments starting with "
+"the ``#`` character."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:18
 msgid ""
-"The configuration file is not automatically created; you can create it "
-"using your favorite plain-text editor. By default, dash-qt (or dashd) "
-"will look for a file named ``dash.conf`` in the dash data directory, but "
-"both the data directory and the configuration file path may be changed "
-"using the -datadir and -conf command-line arguments."
+"The configuration file is not automatically created; you can create it using"
+" your favorite plain-text editor. By default, dash-qt (or dashd) will look "
+"for a file named ``dash.conf`` in the dash data directory, but both the data"
+" directory and the configuration file path may be changed using the -datadir"
+" and -conf command-line arguments."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:25
@@ -99,9 +97,7 @@ msgid "%APPDATA%"
 msgstr "%APPDATA%"
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:31
-msgid ""
-"(Vista-10) "
-"C:\\\\Users\\\\username\\\\AppData\\\\Roaming\\\\DashCore\\\\dash.conf"
+msgid "(Vista-10) C:\\\\Users\\\\username\\\\AppData\\\\Roaming\\\\DashCore\\\\dash.conf"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:33
@@ -112,8 +108,8 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:36
 msgid ""
-"Note: if running Dash in testnet mode, the sub-folder ``testnet3`` will "
-"be appended to the data directory automatically."
+"Note: if running Dash in testnet mode, the sub-folder ``testnet3`` will be "
+"appended to the data directory automatically."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:40
@@ -123,8 +119,8 @@ msgstr ""
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:42
 msgid ""
 "Detailed information for all command line arguments can be found at the "
-"following links to the :ref:`Dash Core developer documentation site <core"
-":dashcore-arguments-and-commands>`:"
+"following links to the :ref:`Dash Core developer documentation site "
+"<core:dashcore-arguments-and-commands>`:"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:45
@@ -149,68 +145,18 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:55
 msgid ""
-"Wallet-related RPCs require using the ``-rpcwallet`` option when more "
-"than one wallet file is loaded. This is to ensure the RPC command is "
-"executed using the correct wallet. See the :ref:`Core developer "
-"documentation <core:api-rpc-multi-wallet-support>` for additional "
-"information."
+"Wallet-related RPCs require using the ``-rpcwallet`` option when more than "
+"one wallet file is loaded. This is to ensure the RPC command is executed "
+"using the correct wallet. See the :ref:`Core developer documentation "
+"<core:api-rpc-multi-wallet-support>` for additional information."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:60
 msgid ""
-"Detailed documentation for all available RPC commands is accessible via "
-"the :ref:`Dash Core developer documentation RPC page <core:api-rpc-quick-"
-"reference>`. For full documentation of arguments, results and examples, "
-"type ``help ( \"command\" )`` to view full details at the console. You "
-"can enter commands either from **Tools > Console** in the QT wallet, or "
-"using *dash-cli* for headless wallets and *dashd*."
+"Detailed documentation for all available RPC commands is accessible via the "
+":ref:`Dash Core developer documentation RPC page <core:api-rpc-quick-"
+"reference>`. For full documentation of arguments, results and examples, type"
+" ``help ( \"command\" )`` to view full details at the console. You can enter"
+" commands either from **Tools > Console** in the QT wallet, or using *dash-"
+"cli* for headless wallets and *dashd*."
 msgstr ""
-
-#~ msgid ""
-#~ "Detailed information for all command "
-#~ "line arguments can be found at the"
-#~ " following links to the `Dash Core"
-#~ " developer documentation site "
-#~ "<https://dashcore.readme.io/docs/dash-core-wallet-"
-#~ "arguments-and-commands>`_:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "`dashd <https://dashcore.readme.io/docs/dash-core-"
-#~ "wallet-arguments-and-commands-dashd>`_"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "`dash-qt <https://dashcore.readme.io/docs/dash-"
-#~ "core-wallet-arguments-and-commands-dash-"
-#~ "qt>`_"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "`dash-cli <https://dashcore.readme.io/docs/dash-"
-#~ "core-wallet-arguments-and-commands-dash-"
-#~ "cli>`_"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "`dash-tx <https://dashcore.readme.io/docs/dash-"
-#~ "core-wallet-arguments-and-commands-dash-"
-#~ "tx>`_"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Detailed documentation for all available "
-#~ "RPC commands is accessible via the "
-#~ "`Dash Core developer documentation RPC "
-#~ "page <https://dashcore.readme.io/docs/core-api-"
-#~ "ref-remote-procedure-call-quick-"
-#~ "reference>`_. For full documentation of "
-#~ "arguments, results and examples, type "
-#~ "``help ( \"command\" )`` to view "
-#~ "full details at the console. You "
-#~ "can enter commands either from **Tools"
-#~ " > Console** in the QT wallet, "
-#~ "or using *dash-cli* for headless "
-#~ "wallets and *dashd*."
-#~ msgstr ""
-

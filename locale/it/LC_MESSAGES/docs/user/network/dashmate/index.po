@@ -1,35 +1,38 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Gleb Golov <gleb@golov.dev>, 2023
+# Dash Italia, 2023
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-26 09:54-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: it\n"
-"Language-Team: it <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: 2023-09-26 10:05-0400\n"
+"PO-Revision-Date: 2023-05-04 16:28+0000\n"
+"Last-Translator: Dash Italia, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/network/dashmate/index.rst:-1
+#: ../../docs/user/network/dashmate/index.rst-1
 msgid "Description of dashmate features and usage"
-msgstr ""
+msgstr "Descrizione delle funzionalità e dell'utilizzo di Dashmate"
 
-#: ../../docs/user/network/dashmate/index.rst:-1
+#: ../../docs/user/network/dashmate/index.rst-1
 msgid "dash, wallet, core, platform, evonode, masternodes, dashmate"
-msgstr ""
+msgstr "dash, wallet, core, platform, evonode, masternode, dashmate"
 
 #: ../../docs/user/network/dashmate/index.rst:9
 msgid "Dashmate"
-msgstr ""
+msgstr "Dashmate"
 
 #: ../../docs/user/network/dashmate/index.rst:11
 msgid ""
@@ -38,145 +41,174 @@ msgid ""
 "quickly and easily set up and run a development network on your local "
 "system."
 msgstr ""
+"Dashmate è uno strumento universale progettato per aiutarti a configurare ed"
+" eseguire i masternode Dash in un ambiente containerizzato. È anche uno "
+"strumento ideale per configurare ed eseguire rapidamente e facilmente una "
+"rete di sviluppo sul tuo sistema locale."
 
 #: ../../docs/user/network/dashmate/index.rst:18
 msgid "Setting up a testnet evonode using dashmate"
-msgstr ""
+msgstr "Configurazione di questo evonode in Testnet utilizzando dashmate"
 
 #: ../../docs/user/network/dashmate/index.rst:23
 msgid "Installation"
-msgstr ""
+msgstr "Installazione"
 
 #: ../../docs/user/network/dashmate/index.rst:28
 msgid "Install dependencies"
-msgstr ""
+msgstr "Installa le dipendenze"
 
 #: ../../docs/user/network/dashmate/index.rst:30
 msgid "Install and configure Docker::"
-msgstr ""
+msgstr "Installa e configura Docker::"
 
 #: ../../docs/user/network/dashmate/index.rst:39
 msgid "Install dashmate"
-msgstr ""
+msgstr "Installa dashmate"
 
 #: ../../docs/user/network/dashmate/index.rst:41
 msgid "There are several methods available for installing dashmate."
-msgstr ""
+msgstr "Sono disponibili diversi metodi per installare Dashmate."
 
 #: ../../docs/user/network/dashmate/index.rst:46
 msgid "Debian package"
-msgstr ""
+msgstr "Pacchetto Debian"
 
 #: ../../docs/user/network/dashmate/index.rst:48
 msgid "Download the dashmate installation package::"
-msgstr ""
+msgstr "Scarica il pacchetto di installazione di Dashmate::"
 
 #: ../../docs/user/network/dashmate/index.rst:52
 msgid "Install dashmate using apt::"
-msgstr ""
+msgstr "Installa Dashmate utilizzando apt:"
 
 #: ../../docs/user/network/dashmate/index.rst:58
 msgid "Node package"
-msgstr ""
+msgstr "Pacchetto nodo"
 
 #: ../../docs/user/network/dashmate/index.rst:60
 msgid ""
-"To install the NodeJS package, it is necessary to install NodeJS first. "
-"We recommend installing it using `nvm <https://github.com/nvm-"
+"To install the NodeJS package, it is necessary to install NodeJS first. We "
+"recommend installing it using `nvm <https://github.com/nvm-"
 "sh/nvm#readme>`__::"
 msgstr ""
+"Per installare il pacchetto NodeJS, è necessario prima installare NodeJS. Ti"
+" consigliamo di installarlo utilizzando `nvm <https://github.com/nvm-"
+"sh/nvm#readme>`__::"
 
 #: ../../docs/user/network/dashmate/index.rst:67
 msgid "Once NodeJS has been installed, use npm to install dashmate::"
-msgstr ""
+msgstr "Una volta installato NodeJS, utilizza npm per installare dashmate::"
 
 #: ../../docs/user/network/dashmate/index.rst:74
 msgid "Masternode setup"
-msgstr ""
+msgstr "Configurazione del masternode"
 
 #: ../../docs/user/network/dashmate/index.rst:76
 msgid ""
-"You can setup both regular masternodes and Evolution masternodes "
-"(evonodes) using dashmate. There are few minor extra steps for evonodes, "
-"but the process is largely identical for both masternode types. Complete "
-"the steps in the sections below to set up your node or follow along with "
-"this step-by-step tutorial."
+"You can setup both regular masternodes and Evolution masternodes (evonodes) "
+"using dashmate. There are few minor extra steps for evonodes, but the "
+"process is largely identical for both masternode types. Complete the steps "
+"in the sections below to set up your node or follow along with this step-by-"
+"step tutorial."
 msgstr ""
+"Puoi configurare sia i masternode normali che i masternode Evolution "
+"(evonode) utilizzando Dashmate. Ci sono alcuni piccoli passaggi aggiuntivi "
+"per gli evonodi, ma il processo è sostanzialmente identico per entrambi i "
+"tipi di masternode. Completa i passaggi nelle sezioni seguenti per "
+"configurare il tuo nodo o segui questo tutorial passo passo."
 
 #: ../../docs/user/network/dashmate/index.rst:87
 msgid ""
-"To begin masternode setup, run ``dashmate setup`` to start the "
-"interactive wizard::"
+"To begin masternode setup, run ``dashmate setup`` to start the interactive "
+"wizard::"
 msgstr ""
+"Per iniziare la configurazione del masternode, esegui ``dashmate setup`` per"
+" avviare la procedura guidata interattiva:"
 
 #: ../../docs/user/network/dashmate/index.rst:92
 msgid "Set Network and Node type"
-msgstr ""
+msgstr "Imposta la rete e il tipo di nodo"
 
 #: ../../docs/user/network/dashmate/index.rst:98
 msgid "Select the testnet network preset"
-msgstr ""
+msgstr "Seleziona la preimpostazione della rete testnet"
 
 #: ../../docs/user/network/dashmate/index.rst:104
 msgid "Create an Evolution masternode"
-msgstr ""
+msgstr "Crea un masternode Evolution"
 
 #: ../../docs/user/network/dashmate/index.rst:106
 msgid ""
-"Select **No** to register a new masternode or **Yes** to import "
-"information about an existing masternode."
+"Select **No** to register a new masternode or **Yes** to import information "
+"about an existing masternode."
 msgstr ""
+"Seleziona **No** per registrare un nuovo masternode o **Sì** per importare "
+"informazioni su un masternode esistente."
 
 #: ../../docs/user/network/dashmate/index.rst:113
 msgid "Set up a new masternode"
-msgstr ""
+msgstr "Configura un nuovo masternode"
 
 #: ../../docs/user/network/dashmate/index.rst:116
 msgid "Define Keys and Addresses"
-msgstr ""
+msgstr "Definire chiavi e indirizzi"
 
 #: ../../docs/user/network/dashmate/index.rst:122
 msgid "Store masternode keys in Dash Core"
-msgstr ""
+msgstr "Memorizza le chiavi masternode in Dash Core"
 
 #: ../../docs/user/network/dashmate/index.rst:124
 msgid ""
 "Enter the requested information from your :hoverxref:`collateral funding "
-"transaction <evonode-send-collateral>`. You can find these values using "
-"Dash Core's :hoverxref:`masternode outputs <evonode-mn-outputs>` command."
+"transaction <evonode-send-collateral>`. You can find these values using Dash"
+" Core's :hoverxref:`masternode outputs <evonode-mn-outputs>` command."
 msgstr ""
+"Inserisci le informazioni richieste dal tuo :hoverxref:`transazione di "
+"finanziamento collaterale <evonode-send-collateral>`. Puoi trovare questi "
+"valori utilizzando il comando :hoverxref:`masternode outputs <evonode-mn-"
+"outputs>` di Dash Core."
 
 #: ../../docs/user/network/dashmate/index.rst:132
 msgid "Enter collateral transaction information"
-msgstr ""
+msgstr "Inserisci le informazioni sulla transazione collaterale"
 
 #: ../../docs/user/network/dashmate/index.rst:134
 msgid ""
 "Enter the owner, voting, and payout addresses you :hoverxref:`generated "
 "using Dash Core <evonode-get-addresses>` or your selected wallet."
 msgstr ""
+"Inserisci gli indirizzi del proprietario, della votazione e del pagamento "
+":hoverxref:`generati utilizzando Dash Core <evonode-get-addresses>` o il tuo"
+" wallet selezionato."
 
 #: ../../docs/user/network/dashmate/index.rst:141
 msgid "Enter masternode addresses"
-msgstr ""
+msgstr "Inserisci gli indirizzi masternode"
 
 #: ../../docs/user/network/dashmate/index.rst:143
 msgid ""
-"Enter an operator BLS private key. You can enter one you have created "
-"(e.g. :hoverxref:`using Dash Core <evonode-bls-generation>`) or received "
-"from a hosting provider. Optionally, use the one automatically generated "
-"by dashmate."
+"Enter an operator BLS private key. You can enter one you have created (e.g. "
+":hoverxref:`using Dash Core <evonode-bls-generation>`) or received from a "
+"hosting provider. Optionally, use the one automatically generated by "
+"dashmate."
 msgstr ""
+"Immettere una chiave privata BLS dell'operatore. Puoi inserirne uno che hai "
+"creato (ad esempio :hoverxref:`using Dash Core <evonode-bls-generation>`) o "
+"ricevuto da un provider di hosting. Facoltativamente, utilizza quello "
+"generato automaticamente da Dashmate."
 
 #: ../../docs/user/network/dashmate/index.rst:147
 msgid ""
-"If a portion of the masternode rewards are intended to go to the operator"
-" directly, set the reward share percentage also."
+"If a portion of the masternode rewards are intended to go to the operator "
+"directly, set the reward share percentage also."
 msgstr ""
+"Se una parte dei premi masternode è destinata ad andare direttamente "
+"all'operatore, imposta anche la percentuale di condivisione del premio."
 
 #: ../../docs/user/network/dashmate/index.rst:154
 msgid "Enter operator information"
-msgstr ""
+msgstr "Inserisci le informazioni dell'operatore"
 
 #: ../../docs/user/network/dashmate/index.rst:156
 msgid ""
@@ -184,72 +216,96 @@ msgid ""
 "masternodes do not require a Platform node key since they do not host "
 "Platform services."
 msgstr ""
+"Il passaggio seguente si applica solo ai masternode Evolution. I masternode "
+"regolari non richiedono una chiave di nodo della Platform poiché non "
+"ospitano i servizi della Platform."
 
 #: ../../docs/user/network/dashmate/index.rst:159
 msgid ""
-"Enter a Platform node key. You can enter one :hoverxref:`you have created"
-" <evonode-generate-platform-node-id>` or received from a hosting "
-"provider. Optionally, use the one automatically generated by dashmate."
+"Enter a Platform node key. You can enter one :hoverxref:`you have created "
+"<evonode-generate-platform-node-id>` or received from a hosting provider. "
+"Optionally, use the one automatically generated by dashmate."
 msgstr ""
+"Immettere una chiave di nodo della platform. Puoi inserirne uno "
+":hoverxref:`che hai creato <evonode-generate-platform-node-id>` o ricevuto "
+"da un provider di hosting. Facoltativamente, utilizza quello generato "
+"automaticamente da Dashmate."
 
 #: ../../docs/user/network/dashmate/index.rst:167
 msgid "Enter the Platform node key"
-msgstr ""
+msgstr "Immettere la chiave del nodo Platform"
 
 #: ../../docs/user/network/dashmate/index.rst:170
 msgid "Configure communication"
-msgstr ""
+msgstr "Configurare la comunicazione"
 
 #: ../../docs/user/network/dashmate/index.rst:172
 msgid ""
-"Dashmate will automatically detect the external IP address and select the"
-" default ports for the network you are setting up. You can modify these "
-"values if necessary for a specific reason, but typically the defaults "
-"should be used."
+"Dashmate will automatically detect the external IP address and select the "
+"default ports for the network you are setting up. You can modify these "
+"values if necessary for a specific reason, but typically the defaults should"
+" be used."
 msgstr ""
+"Dashmate rileverà automaticamente l'indirizzo IP esterno e selezionerà le "
+"porte predefinite per la rete che stai configurando. È possibile modificare "
+"questi valori se necessario per un motivo specifico, ma in genere è "
+"necessario utilizzare i valori predefiniti."
 
 #: ../../docs/user/network/dashmate/index.rst:180
 msgid "Enter connection information"
-msgstr ""
+msgstr "Inserisci le informazioni di connessione"
 
 #: ../../docs/user/network/dashmate/index.rst:183
 msgid "Register the masternode"
-msgstr ""
+msgstr "Registra il masternode"
 
 #: ../../docs/user/network/dashmate/index.rst:185
 msgid ""
-"Copy the provided protx command and run it using dash-cli or the Dash "
-"Core console. Do note that your payout address must have a balance for "
-"the registration process to be successful, so remember to send some DASH "
-"to this address before you begin registration."
+"Copy the provided protx command and run it using dash-cli or the Dash Core "
+"console. Do note that your payout address must have a balance for the "
+"registration process to be successful, so remember to send some DASH to this"
+" address before you begin registration."
 msgstr ""
+"Copia il comando protx fornito ed eseguilo utilizzando dash-cli o la console"
+" Dash Core. Tieni presente che il tuo indirizzo di pagamento deve avere un "
+"saldo affinché il processo di registrazione abbia esito positivo, quindi "
+"ricorda di inviare alcuni DASH a questo indirizzo prima di iniziare la "
+"registrazione."
 
 #: ../../docs/user/network/dashmate/index.rst:190
 msgid ""
-"Select **Yes** after the command has been run successfully. If you "
-"receive an error, select **No** to go back through the previous steps and"
-" review details."
+"Select **Yes** after the command has been run successfully. If you receive "
+"an error, select **No** to go back through the previous steps and review "
+"details."
 msgstr ""
+"Selezionare **Sì** dopo che il comando è stato eseguito correttamente. Se "
+"ricevi un errore, seleziona **No** per tornare ai passaggi precedenti ed "
+"esaminare i dettagli."
 
 #: ../../docs/user/network/dashmate/index.rst:198
 msgid "Run the registration command"
-msgstr ""
+msgstr "Esegui il comando di registrazione"
 
 #: ../../docs/user/network/dashmate/index.rst:201
 msgid "Enable SSL"
-msgstr ""
+msgstr "Abilita SSL"
 
 #: ../../docs/user/network/dashmate/index.rst:203
 msgid ""
 "The following step only applies to evonodes. Regular masternodes do not "
 "require an SSL certificate since they do not host Platform services."
 msgstr ""
+"Il passaggio seguente si applica solo agli evonodi. I masternode regolari "
+"non richiedono un certificato SSL poiché non ospitano i servizi della "
+"platform."
 
 #: ../../docs/user/network/dashmate/index.rst:206
 msgid ""
 "Dash Platform requires SSL for communication. Dashmate provides several "
 "options for obtaining the required SSL certificate."
 msgstr ""
+"La Platform Dash richiede SSL per la comunicazione. Dashmate offre diverse "
+"opzioni per ottenere il certificato SSL richiesto."
 
 #: ../../docs/user/network/dashmate/index.rst:209
 msgid ""
@@ -257,158 +313,137 @@ msgid ""
 "mainnet evonode, **ZeroSSL** and **File on disk** are the only options "
 "available."
 msgstr ""
+"I certificati autofirmati non possono essere utilizzati sulla mainnet. "
+"Quando si configura un evonode della rete principale, **ZeroSSL** e **File "
+"su disco** sono le uniche opzioni disponibili."
 
 #: ../../docs/user/network/dashmate/index.rst:216
 msgid "Configure SSL"
-msgstr ""
+msgstr "Configura SSL"
 
 #: ../../docs/user/network/dashmate/index.rst:218
 msgid ""
-"Once the configuration is complete, a summary showing the network and "
-"type of node configured is displayed. This summary includes important "
-"parameters and information on how to proceed."
+"Once the configuration is complete, a summary showing the network and type "
+"of node configured is displayed. This summary includes important parameters "
+"and information on how to proceed."
 msgstr ""
+"Una volta completata la configurazione viene visualizzato un riepilogo che "
+"mostra la rete e la tipologia di nodo configurato. Questo riepilogo include "
+"parametri importanti e informazioni su come procedere."
 
 #: ../../docs/user/network/dashmate/index.rst:224
 msgid ""
 "The BLS operator private key and Platform Node key must be backed up and "
 "kept secure."
 msgstr ""
+"È necessario eseguire il backup della chiave privata dell'operatore BLS e "
+"della chiave del nodo della Platform e mantenerle al sicuro."
 
 #: ../../docs/user/network/dashmate/index.rst:230
 msgid "Configuration complete! 🎉"
-msgstr ""
+msgstr "Configurazione completata! 🎉"
 
 #: ../../docs/user/network/dashmate/index.rst:233
 msgid "Start the node"
-msgstr ""
+msgstr "Avvia il nodo"
 
 #: ../../docs/user/network/dashmate/index.rst:235
 msgid "Start your node as follows::"
-msgstr ""
+msgstr "Avvia il tuo nodo come segue::"
 
 #: ../../docs/user/network/dashmate/index.rst:241
 msgid ""
-"When starting a node for the first time, dashmate will download the "
-"Docker images required for each service. The time required for this one-"
-"time download will depend on the available bandwidth but typically should"
-" complete within a few minutes."
+"When starting a node for the first time, dashmate will download the Docker "
+"images required for each service. The time required for this one-time "
+"download will depend on the available bandwidth but typically should "
+"complete within a few minutes."
 msgstr ""
+"Quando si avvia un nodo per la prima volta, Dashmate scaricherà le immagini "
+"Docker richieste per ciascun servizio. Il tempo necessario per questo "
+"download una tantum dipenderà dalla larghezza di banda disponibile, ma in "
+"genere dovrebbe essere completato in pochi minuti."
 
 #: ../../docs/user/network/dashmate/index.rst:249
 msgid "Dashmate node operation"
-msgstr ""
+msgstr "Decima operazione sul nodo"
 
 #: ../../docs/user/network/dashmate/index.rst:251
 msgid ""
 "You can manage your masternode status, configuration, and running state "
-"entirely from within dashmate. Use the built-in help system to learn "
-"more:"
+"entirely from within dashmate. Use the built-in help system to learn more:"
 msgstr ""
+"Puoi gestire lo stato, la configurazione e lo stato di esecuzione del tuo "
+"masternode interamente da Dashmate. Utilizza il sistema di aiuto integrato "
+"per saperne di più:"
 
 #: ../../docs/user/network/dashmate/index.rst:254
 msgid "``dashmate --help``"
-msgstr ""
+msgstr "``dashmate --help``"
 
 #: ../../docs/user/network/dashmate/index.rst:255
 msgid "``dashmate <command> --help``"
-msgstr ""
+msgstr "``dashmate <command> --help``"
 
 #: ../../docs/user/network/dashmate/index.rst:260
 msgid "Dashmate displaying top-level help output"
-msgstr ""
+msgstr "Dashmate mostra l'output della guida di livello superiore"
 
 #: ../../docs/user/network/dashmate/index.rst:263
 msgid "Start or restart node"
-msgstr ""
+msgstr "Avvia o riavvia il nodo"
 
 #: ../../docs/user/network/dashmate/index.rst:265
 msgid "To start your dashmate node, run::"
-msgstr ""
+msgstr "Per avviare il tuo nodo Dashmate, esegui::"
 
 #: ../../docs/user/network/dashmate/index.rst:269
 msgid "To restart your dashmate node, run::"
-msgstr ""
+msgstr "Per riavviare il tuo nodo Dashmate, esegui::"
 
 #: ../../docs/user/network/dashmate/index.rst:274
 msgid "Stop node"
-msgstr ""
+msgstr "Ferma il nodo"
 
 #: ../../docs/user/network/dashmate/index.rst:276
 msgid "To stop your dashmate node, run::"
-msgstr ""
+msgstr "Per interrompere il tuo nodo Dashmate, esegui::"
 
 #: ../../docs/user/network/dashmate/index.rst:281
 msgid "Node status"
-msgstr ""
+msgstr "Stato del nodo"
 
 #: ../../docs/user/network/dashmate/index.rst:283
 msgid ""
 "You can check the status of your masternode using the various ``dashmate "
 "status`` commands as follows::"
 msgstr ""
+"Puoi controllare lo stato del tuo masternode utilizzando i vari comandi "
+"``dashmate status`` come segue:"
 
 #: ../../docs/user/network/dashmate/index.rst:296
 msgid "Dashmate displaying a range of status output"
-msgstr ""
+msgstr "Dashmate mostra una serie di output di stato"
 
 #: ../../docs/user/network/dashmate/index.rst:299
 msgid "Node update"
-msgstr ""
+msgstr "Aggiornamento del nodo"
 
 #: ../../docs/user/network/dashmate/index.rst:301
 msgid ""
-"You can use ``dashmate`` to update minor versions of the software on your"
-" masternode as follows::"
+"You can use ``dashmate`` to update minor versions of the software on your "
+"masternode as follows::"
 msgstr ""
+"Puoi utilizzare ``dashmate`` per aggiornare le versioni minori del software "
+"sul tuo masternode come segue::"
 
 #: ../../docs/user/network/dashmate/index.rst:309
 msgid "Additional Information"
-msgstr ""
+msgstr "Informazioni aggiuntive"
 
 #: ../../docs/user/network/dashmate/index.rst:311
 msgid ""
 "For further documentation see the `dashmate repository "
 "<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__."
 msgstr ""
-
-#~ msgid "dash, wallet, core, platform, EvoNode, masternodes, dashmate"
-#~ msgstr ""
-
-#~ msgid "Setting up a testnet EvoNode using dashmate"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You can setup both regular masternodes"
-#~ " and Evolution masternodes (EvoNodes) using"
-#~ " dashmate. There are few minor extra"
-#~ " steps for EvoNodes, but the process"
-#~ " is largely identical for both "
-#~ "masternode types."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Copy the provided protx command and "
-#~ "run it using dash-cli or the "
-#~ "Dash Core console. Select **Yes** after"
-#~ " the command has been run "
-#~ "successfully. If you receive an error,"
-#~ " select **No** to go back through "
-#~ "the previous steps and review details."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The following step only applies to "
-#~ "EvoNodes. Regular masternodes do not "
-#~ "require an SSL certificate since they"
-#~ " do not host Platform services."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Self-signed certificates cannot be used"
-#~ " on mainnet. When setting up a "
-#~ "mainnet EvoNode, **ZeroSSL** and **File "
-#~ "on disk** are the only options "
-#~ "available."
-#~ msgstr ""
-
+"Per ulteriore documentazione consultare il `repository dashmate "
+"<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__."

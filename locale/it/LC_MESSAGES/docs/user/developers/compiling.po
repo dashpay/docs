@@ -5,15 +5,17 @@
 # 
 # Translators:
 # Gleb Golov <gleb@golov.dev>, 2022
+# AL <mediterraneo9000@gmail.com>, 2023
+# Dash Italia, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-04 12:28-0400\n"
+"POT-Creation-Date: 2023-05-23 15:49-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
-"Last-Translator: Gleb Golov <gleb@golov.dev>, 2022\n"
+"Last-Translator: Dash Italia, 2023\n"
 "Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,6 +53,17 @@ msgid ""
 "generic.md>`__ available on GitHub to compile or cross-compile Dash for any "
 "platform."
 msgstr ""
+"Mentre Dash offre build binarie stabili sul `website "
+"<https://www.dash.org/downloads/>`_ e su `GitHub "
+"<https://github.com/dashpay/dash/releases>`__, e lo sviluppo compila "
+"utilizzando `GitLab CI <https://gitlab.com/dashpay/dash/pipelines>`_, molti "
+"utenti saranno anche interessati a creare binari Dash per se stessi. Questo "
+"processo è stato notevolmente semplificato con il rilascio di Dash Core "
+"0.13.0 e gli utenti che non richiedono build deterministiche possono in "
+"genere seguire le \"note di build generiche "
+"<https://github.com/dashpay/dash/blob/develop/doc /build-generic.md>`__ "
+"disponibile su GitHub per compilare o eseguire la compilazione incrociata di"
+" Dash per qualsiasi piattaforma."
 
 #: ../../docs/user/developers/compiling.rst:21
 msgid ""
@@ -89,19 +102,23 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:40
 msgid "Build process"
-msgstr ""
+msgstr "Processo di Build"
 
 #: ../../docs/user/developers/compiling.rst:43
 msgid ""
 "This setup has been tested using a clean install of Ubuntu 20.04. For "
 "maximum compatibility, please use that version."
 msgstr ""
+"Questa configurazione è stata testata utilizzando un'installazione pulita di"
+" Ubuntu 20.04. Per la massima compatibilità, utilizzare quella versione."
 
 #: ../../docs/user/developers/compiling.rst:46
 msgid ""
 "Start by logging in as the \"root\" user. Create a new user with the "
 "following command, replacing ``<username>`` with a username of your choice::"
 msgstr ""
+"Inizia accedendo come utente \"root\". Crea un nuovo utente con il seguente "
+"comando, sostituendo ``<username>`` con un nome utente a tua scelta::"
 
 #: ../../docs/user/developers/compiling.rst:51
 msgid ""
@@ -111,6 +128,12 @@ msgid ""
 "Alternatively, an existing user can be used on systems that are already in "
 "use (e.g. your existing development system)."
 msgstr ""
+"Ti verrà richiesta una password. Immettere e confermare utilizzando una "
+"nuova password (diversa dalla password di root) e conservarla in un luogo "
+"sicuro. Verranno visualizzate anche richieste di informazioni sull'utente, "
+"ma questo può essere lasciato vuoto. In alternativa, un utente esistente può"
+" essere utilizzato su sistemi già in uso (ad esempio il sistema di sviluppo "
+"esistente)."
 
 #: ../../docs/user/developers/compiling.rst:57
 msgid ""
@@ -118,52 +141,65 @@ msgid ""
 "processes and also will enable non-root users to run the Docker commands "
 "used by the build process::"
 msgstr ""
+"Crea un gruppo ``docker`` sul sistema. Questo gruppo verrà utilizzato dai "
+"processi Docker e consentirà anche agli utenti non root di eseguire i "
+"comandi Docker utilizzati dal processo di compilazione::"
 
 #: ../../docs/user/developers/compiling.rst:63
 msgid ""
 "Add the user to the sudo and docker groups so they can perform commands as "
 "root and run docker commands::"
 msgstr ""
+"Aggiungere l'utente ai gruppi sudo e docker in modo che possano eseguire "
+"comandi come root ed eseguire comandi docker::"
 
 #: ../../docs/user/developers/compiling.rst:69
 msgid "Install prerequisites"
-msgstr ""
+msgstr "Installa i prerequisiti"
 
 #: ../../docs/user/developers/compiling.rst:71
 msgid ""
 "While still logged in as root, update the system from the Ubuntu package "
 "repository::"
 msgstr ""
+"Mentre sei ancora connesso come root, aggiorna il sistema dal repository dei"
+" pacchetti Ubuntu::"
 
 #: ../../docs/user/developers/compiling.rst:77
 msgid "Install apt-cacher-ng::"
-msgstr ""
+msgstr "Installa apt-cacher-ng::"
 
 #: ../../docs/user/developers/compiling.rst:82
 msgid ""
 "Select ``No`` when asked ``Allow HTTP tunnels through Apt-Cacher NG?`` "
 "during installation."
 msgstr ""
+"Selezionare ``No`` quando viene chiesto \"Consentire tunnel HTTP tramite "
+"Apt-Cacher NG?\" durante l'installazione."
 
 #: ../../docs/user/developers/compiling.rst:85
 msgid ""
 "Note: you may also need to open port 3142 if you have a firewall enabled on "
 "your system (e.g. ``ufw allow 3142/tcp``)."
 msgstr ""
+"Nota: potrebbe essere necessario aprire anche la porta 3142 se sul sistema è"
+" abilitato un firewall (ad esempio ``ufw consenti 3142/tcp``)."
 
 #: ../../docs/user/developers/compiling.rst:88
 msgid ""
 "After installing these updates, reboot the system, login as ``<username>``, "
 "and clone required repositories::"
 msgstr ""
+"Dopo aver installato questi aggiornamenti, riavviare il sistema, accedere "
+"come  ``<username>``, e clonare i repository richiesti::"
 
 #: ../../docs/user/developers/compiling.rst:96
 msgid "Download the Mac OSX SDK::"
-msgstr ""
+msgstr "Scarica l'SDK di Mac OSX::"
 
 #: ../../docs/user/developers/compiling.rst:102
 msgid "Prepare gitian"
-msgstr ""
+msgstr "Prepara Gitian"
 
 #: ../../docs/user/developers/compiling.rst:104
 msgid ""
@@ -171,10 +207,15 @@ msgid ""
 "machine. Checkout the tag associated with the Dash Core version you plan to "
 "build::"
 msgstr ""
+"È necessario eseguire questo passaggio solo durante la configurazione "
+"iniziale della macchina. Controlla il tag associato alla versione Dash Core "
+"che intendi creare::"
 
 #: ../../docs/user/developers/compiling.rst:113
 msgid "Run the gitian-build setup routine to prepare your environment::"
 msgstr ""
+"Esegui la routine di configurazione di gitian-build per preparare il tuo "
+"ambiente::"
 
 #: ../../docs/user/developers/compiling.rst:121
 msgid ""
@@ -183,14 +224,19 @@ msgid ""
 "<https://help.ubuntu.com/community/GnuPrivacyGuardHowto#Generating_an_OpenPGP_Key>`_"
 " for details on how to generate a key if you don't already have one."
 msgstr ""
+"Il parametro ``firmatario`` deve essere impostato sul valore fornito per "
+"\"Nome reale\" quando si genera una chiave con GPG. Consulta il "
+"`GnuPrivacyGuard Howto "
+"<https://help.ubuntu.com/community/GnuPrivacyGuardHowto#Generating_an_OpenPGP_Key>`_"
+" per i dettagli su come generare una chiave se non ne hai già una."
 
 #: ../../docs/user/developers/compiling.rst:127
 msgid "Build Dash Core"
-msgstr ""
+msgstr "Costruisci Dash Core"
 
 #: ../../docs/user/developers/compiling.rst:129
 msgid "Run gitian build to create binaries for Linux, Mac, and Windows::"
-msgstr ""
+msgstr "Esegui gitian build per creare file binari per Linux, Mac e Windows::"
 
 #: ../../docs/user/developers/compiling.rst:138
 msgid ""
@@ -198,6 +244,9 @@ msgid ""
 "system. If the expected key is not found, the script will fail at the "
 "signing step with a message including::"
 msgstr ""
+"Queste istruzioni presuppongono che sul sistema di compilazione esista una "
+"chiave PGP per<signer>. Se la chiave prevista non viene trovata, lo script "
+"fallirà nella fase di firma con un messaggio che include::"
 
 #: ../../docs/user/developers/compiling.rst:145
 msgid ""
@@ -205,10 +254,13 @@ msgid ""
 "binaries`` folder. The ``.assert`` files and their signatures will be placed"
 " in ``gitian.sigs/<version>/<signer>/...``."
 msgstr ""
+"Una volta completata la compilazione, i file binari verranno inseriti in una"
+" cartella \"dashcore-binaries\". I file ``.assert`` e le relative firme "
+"verranno inseriti in ``gitian.sigs/<version>/<signer>/...``."
 
 #: ../../docs/user/developers/compiling.rst:150
 msgid "Create signatures for signed binaries"
-msgstr ""
+msgstr "Crea firme per i file binari firmati"
 
 #: ../../docs/user/developers/compiling.rst:152
 msgid ""
@@ -218,10 +270,16 @@ msgid ""
 "signatures will be placed in ``gitian.sigs/<version>/<signer>/...`` along "
 "with the signatures for unsigned binaries created in the previous step."
 msgstr ""
+"I file binari per Mac e Windows sono firmati da Dash Core Group utilizzando "
+"i relativi processi Apple/Microsoft. In questo passaggio, tali informazioni "
+"verranno convalidate e firmate dalla tua macchina. I file ``.assert`` "
+"associati e le relative firme verranno inseriti in "
+"``gitian.sigs/<version>/<signer>/...`` insieme alle firme per i file binari "
+"non firmati creati nel passaggio precedente."
 
 #: ../../docs/user/developers/compiling.rst:166
 msgid "Verify signatures"
-msgstr ""
+msgstr "Verifica le firme"
 
 #: ../../docs/user/developers/compiling.rst:168
 msgid ""
@@ -230,6 +288,10 @@ msgid ""
 "each release. Run the following command to verify that your build matches "
 "the official release::"
 msgstr ""
+"Il repository `gitian.sigs <https://github.com/dashpay/gitian.sigs/>`_ "
+"contiene risultati di build deterministici firmati da più sviluppatori Core "
+"per ogni versione. Esegui il comando seguente per verificare che la tua "
+"build corrisponda alla versione ufficiale::"
 
 #: ../../docs/user/developers/compiling.rst:176
 msgid ""
@@ -238,10 +300,14 @@ msgid ""
 "successfully, you will also see your own signatures with an ``OK`` status "
 "also."
 msgstr ""
+"Dovresti ottenere un risultato simile al seguente per Linux, Windows, MacOS,"
+" Signed Windows e Signed MacOS. Supponendo che i passaggi precedenti siano "
+"stati completati con successo, vedrai anche le tue firme con lo stato "
+"\"OK\"."
 
 #: ../../docs/user/developers/compiling.rst:212
 msgid "Upload signatures"
-msgstr ""
+msgstr "Carica firme"
 
 #: ../../docs/user/developers/compiling.rst:214
 msgid ""
@@ -250,16 +316,23 @@ msgid ""
 "repository <https://github.com/dashpay/gitian.sigs/>`_ via a pull request on"
 " GitHub."
 msgstr ""
+"Dopo aver creato con successo i file binari, averli firmati e verificato le "
+"firme, puoi facoltativamente contribuire al repository `gitian.sigs "
+"<https://github.com/dashpay/gitian.sigs/>`_ tramite una richiesta pull su "
+"GitHub ."
 
 #: ../../docs/user/developers/compiling.rst:219
 msgid "Initial setup"
-msgstr ""
+msgstr "Configurazione iniziale"
 
 #: ../../docs/user/developers/compiling.rst:221
 msgid ""
 "Since the official gitian.sigs repository has restricted write access, "
 "create a fork of it via GitHub and add your fork as a remote repository::"
 msgstr ""
+"Poiché il repository ufficiale gitian.sigs ha un accesso in scrittura "
+"limitato, creane un fork tramite GitHub e aggiungi il tuo fork come "
+"repository remoto::"
 
 #: ../../docs/user/developers/compiling.rst:226
 msgid ""
@@ -268,24 +341,30 @@ msgid ""
 " your signature. Your public key can be exported to a file using the "
 "following command::"
 msgstr ""
+"La prima volta che contribuisci con le tue firme, inserisci anche una copia "
+"della tua chiave pubblica nella cartella ``gitian-keys`` del repository in "
+"modo che altri possano verificare facilmente la tua firma. La tua chiave "
+"pubblica può essere esportata in un file utilizzando il seguente comando::"
 
 #: ../../docs/user/developers/compiling.rst:236
 msgid "Adding your signatures"
-msgstr ""
+msgstr "Aggiunta delle tue firme"
 
 #: ../../docs/user/developers/compiling.rst:238
 msgid "Create a new branch for the version that was built::"
-msgstr ""
+msgstr "Crea un nuovo ramo per la versione che è stata creata::"
 
 #: ../../docs/user/developers/compiling.rst:243
 msgid ""
 "Add and commit the ``*.assert`` and ``*.assert.sig`` files created by the "
 "build process. They will be located in the following folders::"
 msgstr ""
+"Aggiungi e conferma i file ``*.assert`` e ``*.assert.sig`` creati dal "
+"processo di compilazione. Si troveranno nelle seguenti cartelle::"
 
 #: ../../docs/user/developers/compiling.rst:252
 msgid "Push to your fork of the gitian.sigs repository on GitHub::"
-msgstr ""
+msgstr "Invia al tuo fork del repository gitian.sigs su GitHub::"
 
 #: ../../docs/user/developers/compiling.rst:257
 msgid ""
@@ -294,3 +373,7 @@ msgid ""
 "request will be reviewed by Dash Core developers and merged if everything "
 "checks out. Thanks for contributing!"
 msgstr ""
+"Vai su `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ e apri una "
+"richiesta pull al ramo ``master`` del repository upstream. La richiesta pull"
+" verrà esaminata dagli sviluppatori Dash Core e unita se tutto va a buon "
+"fine. Grazie per aver contribuito!"

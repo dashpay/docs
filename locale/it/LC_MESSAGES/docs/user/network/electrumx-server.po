@@ -1,33 +1,37 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dash Italia, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:56+0000\n"
-"Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
+"Last-Translator: Dash Italia, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/network/electrumx-server.rst:1
+#: ../../docs/user/network/electrumx-server.rst-1
 msgid "Guide to installing a Dash ElectrumX server"
-msgstr ""
+msgstr "Guida all'installazione di un server Dash ElectrumX"
 
-#: ../../docs/user/network/electrumx-server.rst:1
+#: ../../docs/user/network/electrumx-server.rst-1
 msgid "dash, electrum, guide, setup"
-msgstr ""
+msgstr "dash, electrum, guida, configurazione"
 
 #: ../../docs/user/network/electrumx-server.rst:9
 msgid "ElectrumX Server"
-msgstr ""
+msgstr "ElectrumX Server"
 
 #: ../../docs/user/network/electrumx-server.rst:11
 msgid ""
@@ -36,6 +40,10 @@ msgid ""
 "services necessary to support the :ref:`Dash Electrum wallet <dash-electrum-"
 "wallet>`."
 msgstr ""
+"ElectrumX è un server Electrum leggero scritto in Python che supporta una "
+"varietà di criptovalute tra cui Dash. Fornisce i servizi di backend "
+"necessari per supportare il :ref:`Dash Electrum wallet <dash-electrum-"
+"wallet>`."
 
 #: ../../docs/user/network/electrumx-server.rst:15
 msgid ""
@@ -44,6 +52,11 @@ msgid ""
 "already been installed on the server and is configured with transaction "
 "indexing enabled (``txindex=1`` in ``dash.conf``)."
 msgstr ""
+"Un server ElectrumX richiede l'esecuzione di un nodo completo oltre al "
+"software ElectrumX. I passaggi seguenti presuppongono che un nodo completo "
+"Dash Core sia già stato installato sul server e sia configurato con "
+"l'indicizzazione delle transazioni abilitata (``txindex=1`` in "
+"``dash.conf``)."
 
 #: ../../docs/user/network/electrumx-server.rst:21
 msgid ""
@@ -51,10 +64,14 @@ msgid ""
 "setup)<vps-os-setup>` for details regarding server configuration. **When "
 "creating the new user, use** ``electrumx`` **for the user name.**"
 msgstr ""
+"Consulta :ref:`questa pagina (configurazione VPS)` e :ref:`questa pagina "
+"(configurazione sistema operativo)<vps-setup>` per i dettagli relativi alla "
+"configurazione del server. **Quando crei il nuovo utente, utilizza** "
+"``electrumx`` **come nome utente.**"
 
 #: ../../docs/user/network/electrumx-server.rst:26
 msgid "Check Dash Core Configuration"
-msgstr ""
+msgstr "Controlla la configurazione di Dash Core"
 
 #: ../../docs/user/network/electrumx-server.rst:28
 msgid ""
@@ -63,10 +80,15 @@ msgid ""
 "settings can be checked by viewing the ``dash.conf`` configuration file "
 "(:ref:`default location<dashcore-rpc>`)."
 msgstr ""
+"Prima di iniziare la configurazione di ElectrumX, assicurati che il tuo nodo"
+" Dash Core sia configurato per consentire l'accesso RPC ed eseguire "
+"l'indicizzazione delle transazioni. Queste impostazioni possono essere "
+"verificate visualizzando il file di configurazione ``dash.conf`` "
+"(:ref:`default location<dashcore-rpc>`)."
 
 #: ../../docs/user/network/electrumx-server.rst:34
 msgid "RPC Access"
-msgstr ""
+msgstr "Accesso RPC"
 
 #: ../../docs/user/network/electrumx-server.rst:36
 msgid ""
@@ -75,26 +97,34 @@ msgid ""
 "the *Set network values* step of  `Install and Configure ElectrumX`_ . If "
 "the values are not present, add them as shown below."
 msgstr ""
+"Il file ``dash.conf`` deve includere valori per ``rpcuser``, ``rpcpassword``"
+" e ``rpcallowip`` (può anche includere ``rpcport``). Verranno utilizzati nel"
+" passaggio *Imposta valori di rete* di `Installa e configura ElectrumX`_. Se"
+" i valori non sono presenti, aggiungerli come mostrato di seguito."
 
 #: ../../docs/user/network/electrumx-server.rst:47
 msgid "Replace the fields marked with ``XXXXXXX`` as follows:"
-msgstr ""
+msgstr "Sostituisci i campi contrassegnati con ``XXXXXXX`` come segue:"
 
 #: ../../docs/user/network/electrumx-server.rst:49
 msgid ""
 "``rpcuser``: enter any string of numbers or letters, no special characters "
 "allowed"
 msgstr ""
+"``rpcuser``: inserisci qualsiasi stringa di numeri o lettere, non sono "
+"ammessi caratteri speciali"
 
 #: ../../docs/user/network/electrumx-server.rst:51
 msgid ""
 "``rpcpassword``: enter any string of numbers or letters, no special "
 "characters allowed"
 msgstr ""
+"``rpcpassword``: inserisci qualsiasi stringa di numeri o lettere, non sono "
+"ammessi caratteri speciali"
 
 #: ../../docs/user/network/electrumx-server.rst:56
 msgid "Transaction Indexing"
-msgstr ""
+msgstr "Indicizzazione delle transazioni"
 
 #: ../../docs/user/network/electrumx-server.rst:58
 msgid ""
@@ -102,10 +132,13 @@ msgid ""
 "present, add it and restart the node using the ``-reindex`` option. Note "
 "that reindexing can take a long time."
 msgstr ""
+"Assicurati che la seguente riga sia presente in ``dash.conf``. Se non è "
+"presente, aggiungilo e riavvia il nodo utilizzando l'opzione ``-reindex``. "
+"Tieni presente che la reindicizzazione può richiedere molto tempo."
 
 #: ../../docs/user/network/electrumx-server.rst:67
 msgid "Install Dependencies"
-msgstr ""
+msgstr "Installa le Dipendenze"
 
 #: ../../docs/user/network/electrumx-server.rst:69
 msgid ""
@@ -113,60 +146,72 @@ msgid ""
 "version of Python are required for ``x11_hash``, and ``daemontools`` is "
 "required to manage the ElectrumX service."
 msgstr ""
+"Python 3.7 è richiesto per ElectrumX, le versioni ``build-essential`` e "
+"``-dev`` di Python sono richieste per ``x11_hash`` e ``daemontools`` è "
+"richiesto per gestire il servizio ElectrumX."
 
 #: ../../docs/user/network/electrumx-server.rst:73
 msgid ""
 "Install Python 3.7 and the required build tools via the package system:"
 msgstr ""
+"Installa Python 3.7 e gli strumenti di compilazione richiesti tramite il "
+"sistema di pacchetti:"
 
 #: ../../docs/user/network/electrumx-server.rst:81
 msgid "Now that Python 3.7 is installed, make it the default version:"
-msgstr ""
+msgstr "Ora che Python 3.7 è installato, rendilo la versione predefinita:"
 
 #: ../../docs/user/network/electrumx-server.rst:87
 msgid ""
 "Since the default version of Python has potentially changed, reinstall "
 "setuptools and then install X11 library:"
 msgstr ""
+"Poiché la versione predefinita di Python è potenzialmente cambiata, "
+"reinstallare setuptools e quindi installare la libreria X11:"
 
 #: ../../docs/user/network/electrumx-server.rst:95
 msgid "Generate an SSL key and an associated certificate file for the server:"
 msgstr ""
+"Genera una chiave SSL e un file di certificato associato per il server:"
 
 #: ../../docs/user/network/electrumx-server.rst:104
 msgid "Install and Configure ElectrumX"
-msgstr ""
+msgstr "Installa e configura ElectrumX"
 
 #: ../../docs/user/network/electrumx-server.rst:107
 msgid "Install ElectrumX"
-msgstr ""
+msgstr "Installa ElectrumX"
 
 #: ../../docs/user/network/electrumx-server.rst:109
 msgid "Clone ElectrumX from GitHub via git:"
-msgstr ""
+msgstr "Clonare ElectrumX da GitHub tramite git:"
 
 #: ../../docs/user/network/electrumx-server.rst:116
 msgid "Build and install the project:"
-msgstr ""
+msgstr "Compila e installa il progetto:"
 
 #: ../../docs/user/network/electrumx-server.rst:124
 msgid "Configure ElectrumX"
-msgstr ""
+msgstr "Configura ElectrumX"
 
 #: ../../docs/user/network/electrumx-server.rst:126
 msgid ""
 "Create the ElectrumX directories and copy files into them. These directories"
 " will be located in the ``electrumx`` user's home directory:"
 msgstr ""
+"Crea le directory ElectrumX e copia i file al loro interno. Queste directory"
+" si troveranno nella directory home dell'utente ``electrumx``:"
 
 #: ../../docs/user/network/electrumx-server.rst:134
 msgid ""
 "Set the server banner message and the coin type that the server will host:"
 msgstr ""
+"Imposta il messaggio banner del server e il tipo di moneta che il server "
+"ospiterà:"
 
 #: ../../docs/user/network/electrumx-server.rst:142
 msgid "Set network values:"
-msgstr ""
+msgstr "Imposta i valori di rete:"
 
 #: ../../docs/user/network/electrumx-server.rst:144
 msgid ""
@@ -175,6 +220,10 @@ msgid ""
 "values found in your ``dash.conf`` file. These values were previously "
 "checked in the `RPC Access`_ section."
 msgstr ""
+"ElectrumX richiede i dettagli Dash Core RPC per potersi connettere "
+"correttamente. Imposta le variabili ``RPC_USER``, ``RPC_PASS``, ``RPC_IP`` e"
+" ``RPC_PORT`` sui valori trovati nel tuo file ``dash.conf``. Questi valori "
+"sono stati precedentemente controllati nella sezione \"Accesso RPC\"_."
 
 #: ../../docs/user/network/electrumx-server.rst:149
 msgid ""
@@ -182,18 +231,23 @@ msgid ""
 "configuring a Testnet server. If configuring a Mainnet server, use the "
 "alternate values shown in the comments."
 msgstr ""
+"Utilizzare i valori forniti di seguito per l'impostazione di rete ElectrumX "
+"se si configura un server Testnet. Se si configura un server Mainnet, "
+"utilizzare i valori alternativi mostrati nei commenti."
 
 #: ../../docs/user/network/electrumx-server.rst:182
 msgid "Set the SSL values:"
-msgstr ""
+msgstr "Imposta i valori SSL:"
 
 #: ../../docs/user/network/electrumx-server.rst:189
 msgid "Set the ElectrumX username to match our current user:"
 msgstr ""
+"Imposta il nome utente ElectrumX in modo che corrisponda al nostro utente "
+"corrente:"
 
 #: ../../docs/user/network/electrumx-server.rst:195
 msgid "Set the ElectrumX log directory:"
-msgstr ""
+msgstr "Imposta la directory del registro ElectrumX:"
 
 #: ../../docs/user/network/electrumx-server.rst:197
 msgid ""
@@ -201,23 +255,26 @@ msgid ""
 "Replace the ``/path/to/log/`` line in that file with "
 "``/home/electrumx/var/log/electrumx``:"
 msgstr ""
+"Il percorso della directory di registro è impostato nel file "
+"\"scripts/electrumx/log/run\". Sostituisci la riga ``/path/to/log/`` in quel"
+" file con ``/home/electrumx/var/log/electrumx``:"
 
 #: ../../docs/user/network/electrumx-server.rst:206
 msgid "Manage ElectrumX as a service"
-msgstr ""
+msgstr "Gestisci ElectrumX come servizio"
 
 #: ../../docs/user/network/electrumx-server.rst:209
 msgid "Add the service"
-msgstr ""
+msgstr "Aggiungi il servizio"
 
 #: ../../docs/user/network/electrumx-server.rst:218
 msgid "Start the service"
-msgstr ""
+msgstr "Avvia il servizio"
 
 #: ../../docs/user/network/electrumx-server.rst:226
 msgid "Stop the service"
-msgstr ""
+msgstr "Interrompi il servizio"
 
 #: ../../docs/user/network/electrumx-server.rst:233
 msgid "View Logs"
-msgstr ""
+msgstr "Visualizza registri"

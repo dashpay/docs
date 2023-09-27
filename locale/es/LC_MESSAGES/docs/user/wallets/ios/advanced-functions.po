@@ -1,30 +1,29 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # pedrosp <pedrosp.granada@gmail.com>, 2022
 # Jahlexis Lugo <ras.alexislugo.i@gmail.com>, 2022
 # Ivan SIerraalta <ivansierraalta@gmail.com>, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-26 09:54-0400\n"
+"POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
 "Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2022\n"
-"Language: es\n"
-"Language-Team: Spanish (https://www.transifex.com/dash/teams/37570/es/)\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 "
-"? 1 : 2;\n"
+"Language-Team: Spanish (https://app.transifex.com/dash/teams/37570/es/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:-1
+#: ../../docs/user/wallets/ios/advanced-functions.rst-1
 msgid ""
 "URL scheme, master public key and requesting payment in Dash on your iOS "
 "device"
@@ -32,27 +31,27 @@ msgstr ""
 "Esquema URL, llave publica maestra y solicitar pago en Dash en su "
 "dispositivo iOS"
 
-#: ../../docs/user/wallets/ios/advanced-functions.rst:-1
+#: ../../docs/user/wallets/ios/advanced-functions.rst-1
 msgid "dash, mobile, wallet, ios, send, receive, payment, url, public key"
-msgstr "dash, móvil, billetera, ios, enviar, recibir, pago, url, llave publica"
+msgstr ""
+"dash, móvil, billetera, ios, enviar, recibir, pago, url, llave publica"
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:9
 msgid "Advanced functions"
 msgstr "Funciones Avanzadas"
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:12
-#, fuzzy
 msgid "Masternode keys"
-msgstr "Llave pública maestra"
+msgstr ""
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:14
 msgid ""
 "Certain masternode keys may be generated and stored in Dash Wallet. To "
 "access these keys, tap the **Menu button** and select **Tools**. Tap "
-"**Masternode Keys** and enter your PIN to open the Masternode Keys "
-"screen. From here, tap on any of the listed key types to view existing "
-"keys or generate new ones. The screen will show all used keys and the "
-"first unused one. To generate additional keys, tap the **+** button."
+"**Masternode Keys** and enter your PIN to open the Masternode Keys screen. "
+"From here, tap on any of the listed key types to view existing keys or "
+"generate new ones. The screen will show all used keys and the first unused "
+"one. To generate additional keys, tap the **+** button."
 msgstr ""
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:30
@@ -70,11 +69,11 @@ msgid ""
 "call the wallet to complete a transaction denominated in Dash. This page "
 "documents the methods available using the URL scheme."
 msgstr ""
-"iOS permite que las aplicaciones se comuniquen entre sí a través de "
-"esquemas URL. La billetera de Dash para iOS implementa el esquema "
-"dashwallet://, lo que te permite llamar a la billetera para completar una"
-" transacción denominada en Dash. Esta página documenta los métodos "
-"disponibles utilizando el esquema URL."
+"iOS permite que las aplicaciones se comuniquen entre sí a través de esquemas"
+" URL. La billetera de Dash para iOS implementa el esquema dashwallet://, lo "
+"que te permite llamar a la billetera para completar una transacción "
+"denominada en Dash. Esta página documenta los métodos disponibles utilizando"
+" el esquema URL."
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:41
 msgid "Payment"
@@ -90,12 +89,12 @@ msgstr "Notas:"
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:49
 msgid ""
-"``sender`` is both your callback URL and the name of the app that you "
-"show to the user. This is to prevent 3rd party apps from phishing."
+"``sender`` is both your callback URL and the name of the app that you show "
+"to the user. This is to prevent 3rd party apps from phishing."
 msgstr ""
 "``Remitente`` es tu URL de devolución de llamada y el nombre de la "
-"aplicación que muestras al usuario. Esto es para evitar que las "
-"aplicaciones de 3ros sean objeto de suplantación de identidad."
+"aplicación que muestras al usuario. Esto es para evitar que las aplicaciones"
+" de 3ros sean objeto de suplantación de identidad."
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:52
 msgid "The user will see something similar to this:"
@@ -107,12 +106,12 @@ msgstr "Solicitud de pago en iOS"
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:59
 msgid ""
-"If the user enters the correct passcode, then the transaction is sent and"
-" the user is returned to the sender app following the callback URL."
+"If the user enters the correct passcode, then the transaction is sent and "
+"the user is returned to the sender app following the callback URL."
 msgstr ""
-"Si el usuario ingresa la contraseña correcta, se envía la transacción y "
-"el usuario regresa a la aplicación del remitente siguiendo la URL de "
-"devolución de llamada."
+"Si el usuario ingresa la contraseña correcta, se envía la transacción y el "
+"usuario regresa a la aplicación del remitente siguiendo la URL de devolución"
+" de llamada."
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:62
 msgid "Callback URL format::"
@@ -128,15 +127,15 @@ msgstr "Formato de solicitud de llave pública maestra::"
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:73
 msgid ""
-"Note: account is optional and corresponds to BIP32/BIP44 account, most of"
-" the time this should be 0. If account is not specified, we use account "
-"0. This will send back both the extended public key at "
-"``44’/5’/<account>’`` and ``<account>’``"
+"Note: account is optional and corresponds to BIP32/BIP44 account, most of "
+"the time this should be 0. If account is not specified, we use account 0. "
+"This will send back both the extended public key at ``44’/5’/<account>’`` "
+"and ``<account>’``"
 msgstr ""
 "Nota: la cuenta es opcional y corresponde a la cuenta BIP32/BIP44, la "
-"mayoría de las veces debe ser 0. Si no se especifica la cuenta, usamos la"
-" cuenta 0. Esto enviará la llave pública extendida al "
-"``44’/5’/<account>’`` y ``<account>’``"
+"mayoría de las veces debe ser 0. Si no se especifica la cuenta, usamos la "
+"cuenta 0. Esto enviará la llave pública extendida al ``44’/5’/<account>’`` y"
+" ``<account>’``"
 
 #: ../../docs/user/wallets/ios/advanced-functions.rst:78
 #: ../../docs/user/wallets/ios/advanced-functions.rst:87
@@ -150,4 +149,3 @@ msgstr "Obtener dirección para pagos"
 #: ../../docs/user/wallets/ios/advanced-functions.rst:85
 msgid "``dashwallet://request=address&sender=<sender>``"
 msgstr "``dashwallet://request=address&sender=<sender>``"
-

@@ -1,35 +1,41 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dash Italia, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:56+0000\n"
-"Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
+"Last-Translator: Dash Italia, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/wallets/signing.rst:1
+#: ../../docs/user/wallets/signing.rst-1
 msgid ""
 "Guides and screenshots on how to sign and verify messages using the Dash "
 "cryptocurrency"
 msgstr ""
+"Guide e screenshot su come firmare e verificare i messaggi utilizzando la "
+"criptovaluta Dash"
 
-#: ../../docs/user/wallets/signing.rst:1
+#: ../../docs/user/wallets/signing.rst-1
 msgid "dash, sign, verify, message, trezor, dash core"
-msgstr ""
+msgstr "dash, firma, verifica, messaggio, trezor, dash core"
 
 #: ../../docs/user/wallets/signing.rst:9
 msgid "Signing and Verifying Messages"
-msgstr ""
+msgstr "Firma e verifica dei messaggi"
 
 #: ../../docs/user/wallets/signing.rst:11
 msgid ""
@@ -43,6 +49,16 @@ msgid ""
 "since ambiguously worded messages could be used to impersonate your "
 "identity."
 msgstr ""
+"I wallet Dash funzionano archiviando in modo sicuro le chiavi private "
+"utilizzate per creare transazioni utilizzando indirizzi visibili "
+"pubblicamente su un registro distribuito chiamato blockchain. In alcuni "
+"casi, potrebbe essere necessario verificare un indirizzo per dimostrare il "
+"controllo dei fondi in esso detenuti, che puoi ricevere utilizzando "
+"quell'indirizzo, o anche per verificare la tua identità presso un exchange "
+"che ha precedentemente visto una transazione da quell'indirizzo. Per evitare"
+" attacchi di phishing, presta molta attenzione quando invii messaggi firmati"
+" a soggetti di cui non ti fidi, poiché i messaggi formulati in modo ambiguo "
+"potrebbero essere utilizzati per impersonare la tua identità."
 
 #: ../../docs/user/wallets/signing.rst:21
 msgid ""
@@ -57,10 +73,21 @@ msgid ""
 "example, you can test the following message and signature and verify that it"
 " was signed by the given address::"
 msgstr ""
+"La firma dei messaggi richiede una chiave privata. La verifica dei messaggi "
+"richiede un indirizzo pubblico. In questo modo è possibile scrivere un "
+"messaggio arbitrario e generare una firma che potrebbe essere stata creata "
+"solo da un utente con il controllo della chiave privata per questo "
+"indirizzo. Qualsiasi utente con il messaggio, l'indirizzo pubblico e la "
+"firma può facilmente verificare che solo tu potresti aver creato la firma. I"
+" messaggi non vengono archiviati sulla blockchain. Devi invece inviare "
+"questi tre frammenti di testo (messaggio, indirizzo e firma) al destinatario"
+" previsto utilizzando un altro canale di comunicazione, come l'e-mail. Ad "
+"esempio, puoi testare il messaggio e la firma seguenti e verificare che sia "
+"stato firmato dall'indirizzo specificato:"
 
 #: ../../docs/user/wallets/signing.rst:39
 msgid "Signing a Message"
-msgstr ""
+msgstr "Firmare un messaggio"
 
 #: ../../docs/user/wallets/signing.rst:41
 msgid ""
@@ -69,14 +96,18 @@ msgid ""
 "message) and DMT (**Tools > Sign message with HW for current masternode's "
 "address**):"
 msgstr ""
+"Gli screenshot seguenti mostrano come firmare un messaggio utilizzando il "
+"wallet Dash Core (**File > Firma messaggio**), il portafoglio web Trezor "
+"(Firma e verifica > Firma messaggio) e DMT (**Strumenti > Firma messaggio "
+"con HW per il masternode corrente indirizzo**):"
 
 #: ../../docs/user/wallets/signing.rst:53
 msgid "*Signing messages in Dash Core, Trezor web wallet and DMT*"
-msgstr ""
+msgstr "*Firma di messaggi in Dash Core, wallet web Trezor e DMT*"
 
 #: ../../docs/user/wallets/signing.rst:56
 msgid "Verifying a Message"
-msgstr ""
+msgstr "Verifica di un messaggio"
 
 #: ../../docs/user/wallets/signing.rst:58
 msgid ""
@@ -84,9 +115,14 @@ msgid ""
 "wallet (**File > Sign message**) and Trezor web wallet (**Sign & Verify > "
 "Sign message**):"
 msgstr ""
+"I seguenti screenshot mostrano come verificare un messaggio utilizzando il "
+"wallet Dash Core (**File > Firma messaggio**) e il wallet web Trezor "
+"(**Firma e verifica > Firma messaggio**):"
 
 #: ../../docs/user/wallets/signing.rst:67
 msgid ""
 "*Verifying messages in Dash Core and Trezor web wallet. Notice that the "
 "message verified by Dash Core was generated in Trezor, and vice versa*"
 msgstr ""
+"*Verifica dei messaggi nel wallet web Dash Core e Trezor. Nota che il "
+"messaggio verificato da Dash Core è stato generato in Trezor e viceversa*"
