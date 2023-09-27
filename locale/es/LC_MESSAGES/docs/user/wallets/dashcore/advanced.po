@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-23 15:49-0400\n"
+"POT-Creation-Date: 2023-09-26 09:54-0400\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
 "Last-Translator: Jahlexis Lugo <ras.alexislugo.i@gmail.com>, 2022\n"
 "Language: es\n"
@@ -99,56 +99,126 @@ msgid "Locking UTXOs in Dash Core wallet"
 msgstr "Bloquear UTXOs en la billetera Dash Core"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:51
-msgid "HD Wallets"
-msgstr "BIlleteras HD"
-
-#: ../../docs/user/wallets/dashcore/advanced.rst:54
-msgid "Upgrade to HD"
+msgid "Running Dash Testnet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:58
-msgid "A new backup must be created after upgrading to an HD wallet."
+#: ../../docs/user/wallets/dashcore/advanced.rst:53
+msgid ""
+"It is recommended to run Dash Core on testnet for your experimentations. "
+"To start on testnet via the command line, do the following:"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:56
+msgid "For Linux::"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:60
-msgid ""
-"Since version 0.17.0.2, Dash Core has included the ability upgrade a non-"
-"hierarchical deterministic (HD) wallet to an HD wallet via the "
-"``upgradetohd`` command. The command can be run by either opening the "
-"console from **Tools > Console** or issuing the following RPC command "
-"from ``dash-cli``::"
+msgid "For Mac (run from Applications/Dash-Qt.app/Contents/MacOS)::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:68
+#: ../../docs/user/wallets/dashcore/advanced.rst:64
+msgid ""
+"Note: You may need to allow an app from an unknown developer before "
+"running this. Cmd+Click on the application and click **Open**."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:67
+msgid "Now, open Mac Terminal and run::"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:72
+msgid ""
+"You may top up your testnet wallet by `accessing the faucet "
+"<http://faucet.testnet.networks.dash.org/>`_."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:77
+msgid "HD Wallets"
+msgstr "BIlleteras HD"
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:82
+msgid "Upgrade to HD"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:86
+msgid "A new backup must be created after upgrading to an HD wallet."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:88
+msgid ""
+"Dash Core includes the ability upgrade a non-hierarchical deterministic "
+"(HD) wallet to an HD wallet via the ``upgradetohd`` command. The command "
+"can be run by either opening the console from **Window > Console** or "
+"issuing the following RPC command from ``dash-cli``::"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:95
 msgid ""
 "If your wallet is already encrypted you must enter the passphrase as the "
 "third parameter to the command. If your wallet is not already encrypted, "
 "specifying a wallet passphrase will trigger wallet encryption."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:72
+#: ../../docs/user/wallets/dashcore/advanced.rst:99
 msgid ""
 "To see full details for the command, run the following from either the "
 "console or ``dash-cli``::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:78
-msgid "Create HD Wallet"
+#: ../../docs/user/wallets/dashcore/advanced.rst:105
+msgid "View HD wallet information"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:80
+#: ../../docs/user/wallets/dashcore/advanced.rst:107
 msgid ""
-"Since version 0.12.2.0, Dash Core has included an implementation of "
-"BIP39/BIP44 compatible hierarchical deterministic (HD) key generation. "
-"This functionality is only available from the command line by specifying "
-"the ``usehd`` option when starting Dash Core for the first time. Use this"
-" function with care, since the mnemonic seed and keys will be stored in "
-"plain text until you specify a wallet passphrase. Note that the wallet "
-"passphrase is different to the mnemonic passphrase, which is often also "
-"referred to as the \"25th word\" or \"extension word\". The wallet "
-"passphrase encrypts the wallet file itself, while the mnemonic passphrase"
-" is used to specify different derivation branches from the same mnemonic "
-"seed."
+"Open the console from **Window > Console** or issue the following RPC "
+"command from ``dash-cli`` to view the mnemonic seed::"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:112
+msgid ""
+"Dash Core will display the HD seed in both hexadecimal and BIP39 mnemonic"
+" formats. It will also display the mnemonic passphrase if one was used "
+"when creating the wallet."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:119
+#, fuzzy
+msgid "Restore HD wallet"
+msgstr "BIlleteras HD"
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:121
+#, fuzzy
+msgid ""
+"To restore an existing HD wallet, or define your own separately generated"
+" mnemonic and/or passphrase, create a new blank wallet with following "
+"command::"
+msgstr ""
+"Dash Core mostrara la semilla HD en hexadecimal y mnemonica BIP39. Para "
+"restaurar una billetera HD existente, o define tu propia mnemonica y/o "
+"contraseña generada por separado, asegúrate que no existe archivo "
+"``wallet.dat`` en ``datadir`` e ingrese los siguientes comandos::"
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:126
+msgid "Add the HD wallet details to the newly created wallet by running::"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:130
+msgid ""
+"The HD wallet will be restored and your balance will appear once sync is "
+"complete."
+msgstr ""
+"La billetera HD sera restaurada y tu balance aparecerá una vez que la "
+"sincronización esta completa."
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:133
+#, fuzzy
+msgid ""
+"Note that the wallet passphrase is different to the mnemonic passphrase, "
+"which is often also referred to as the \"25th word\" or \"extension "
+"word\". The wallet passphrase encrypts the wallet file itself, while the "
+"mnemonic passphrase is used to specify different derivation branches from"
+" the same mnemonic seed."
 msgstr ""
 "Desde la versión 0.12.2.0, la billetera Dash Core incluye una "
 "implementación de BIP39/BIP44 compatible con la generación de llaves "
@@ -162,51 +232,35 @@ msgstr ""
 "extensión\". La contraseña de la billetra encripta la billetera misma, "
 "mientras la contraseña movida"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:92
+#: ../../docs/user/wallets/dashcore/advanced.rst:141
+msgid "Enable HD Wallet Creation By Default"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/advanced.rst:143
+#, fuzzy
 msgid ""
-"We will use the Windows GUI wallet in this example, but the commands are "
-"similar if using ``dash-qt`` or ``dashd`` on other operating systems. "
-"Enter the following command to get started with a randomly generated HD "
-"wallet seed and no mnemonic passphrase::"
+"Dash Core includes an implementation of BIP39/BIP44 compatible "
+"hierarchical deterministic (HD) key generation. We will use the Windows "
+"GUI wallet in this example, but the commands are similar if using ``dash-"
+"qt`` or ``dashd`` on other operating systems. Enter the following command"
+" to configure Dash Core to generate HD wallets by default::"
 msgstr ""
 "Usaremos la billetera GUI de Windows en este ejemplo, pero los comandos "
 "son similares si usa ``dash-qt`` o ``dashd`` en otros sistemas "
 "operativos. Ingrese el siguiente comando para iniciar con una semilla de "
 "billetera HD generada aleatoriamente y sin contraseña mnemonica::"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:99
+#: ../../docs/user/wallets/dashcore/advanced.rst:151
 msgid ""
-"A new HD wallet will be generated and Dash Core will display a warning "
-"informing you that you must encrypt your wallet after verifying it works "
-"correctly. Open the console from **Tools > Console** or issue the "
-"following RPC command from ``dash-cli`` to view the mnemonic seed::"
+"To make this configuration persist between restarts, add ``usehd=1`` to "
+"the ``dash.conf`` file."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:106
-msgid ""
-"Dash Core will display the HD seed in both hexadecimal and as a BIP39 "
-"mnemonic. To restore an existing HD wallet, or define your own separately"
-" generated mnemonic and/or passphrase, ensure no ``wallet.dat`` file "
-"exists in the ``datadir`` and enter the following command::"
-msgstr ""
-"Dash Core mostrara la semilla HD en hexadecimal y mnemonica BIP39. Para "
-"restaurar una billetera HD existente, o define tu propia mnemonica y/o "
-"contraseña generada por separado, asegúrate que no existe archivo "
-"``wallet.dat`` en ``datadir`` e ingrese los siguientes comandos::"
-
-#: ../../docs/user/wallets/dashcore/advanced.rst:114
-msgid ""
-"The HD wallet will be restored and your balance will appear once sync is "
-"complete."
-msgstr ""
-"La billetera HD sera restaurada y tu balance aparecerá una vez que la "
-"sincronización esta completa."
-
-#: ../../docs/user/wallets/dashcore/advanced.rst:121
+#: ../../docs/user/wallets/dashcore/advanced.rst:157
 msgid "Multisignature"
 msgstr "Multifirma"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:123
+#: ../../docs/user/wallets/dashcore/advanced.rst:159
 msgid ""
 "This section presents a worked example to demonstrate multisig "
 "functionality in Dash Core. While the transactions are no longer visible "
@@ -225,53 +279,53 @@ msgstr ""
 "2-de-3 y crear una transacción. Las partes de ejemplo involucradas son un"
 " comprador, un vendedor y un árbitro. Este ejemplo se basa en:"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:131
+#: ../../docs/user/wallets/dashcore/advanced.rst:167
 msgid "https://gist.github.com/jashmenn/9811198"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:132
+#: ../../docs/user/wallets/dashcore/advanced.rst:168
 msgid "https://gist.github.com/gavinandresen/3966071"
 msgstr "https://gist.github.com/gavinandresen/3966071"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:133
+#: ../../docs/user/wallets/dashcore/advanced.rst:169
 msgid "https://bitcoin.org/en/developer-examples#p2sh-multisig"
 msgstr "https://bitcoin.org/en/developer-examples#p2sh-multisig"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:136
+#: ../../docs/user/wallets/dashcore/advanced.rst:172
 msgid "Step 1: Create three addresses"
 msgstr "Paso 1: Crear tres direcciones"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:138
-#: ../../docs/user/wallets/dashcore/advanced.rst:206
-#: ../../docs/user/wallets/dashcore/advanced.rst:283
-#: ../../docs/user/wallets/dashcore/advanced.rst:291
-#: ../../docs/user/wallets/dashcore/advanced.rst:324
+#: ../../docs/user/wallets/dashcore/advanced.rst:174
+#: ../../docs/user/wallets/dashcore/advanced.rst:242
+#: ../../docs/user/wallets/dashcore/advanced.rst:319
+#: ../../docs/user/wallets/dashcore/advanced.rst:327
+#: ../../docs/user/wallets/dashcore/advanced.rst:360
 msgid "Seller::"
 msgstr "Vendedor::"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:155
-#: ../../docs/user/wallets/dashcore/advanced.rst:214
-#: ../../docs/user/wallets/dashcore/advanced.rst:235
-#: ../../docs/user/wallets/dashcore/advanced.rst:243
-#: ../../docs/user/wallets/dashcore/advanced.rst:305
-#: ../../docs/user/wallets/dashcore/advanced.rst:316
+#: ../../docs/user/wallets/dashcore/advanced.rst:191
+#: ../../docs/user/wallets/dashcore/advanced.rst:250
+#: ../../docs/user/wallets/dashcore/advanced.rst:271
+#: ../../docs/user/wallets/dashcore/advanced.rst:279
+#: ../../docs/user/wallets/dashcore/advanced.rst:341
+#: ../../docs/user/wallets/dashcore/advanced.rst:352
 msgid "Buyer::"
 msgstr "Comprador::"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:172
-#: ../../docs/user/wallets/dashcore/advanced.rst:222
+#: ../../docs/user/wallets/dashcore/advanced.rst:208
+#: ../../docs/user/wallets/dashcore/advanced.rst:258
 msgid "Arbiter::"
 msgstr "Árbitro::"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:189
+#: ../../docs/user/wallets/dashcore/advanced.rst:225
 msgid "This results in three keypairs (public/private)::"
 msgstr "Esto resulta en tres pares de llaves (pública/privada)::"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:196
+#: ../../docs/user/wallets/dashcore/advanced.rst:232
 msgid "Step 2: Create multisig address"
 msgstr "Paso 2: Crear una dirección multifirma"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:198
+#: ../../docs/user/wallets/dashcore/advanced.rst:234
 msgid ""
 "The ``createmultisig`` command takes as variables the number n signatures"
 " of m keys (supplied as json array) required. In this example, 2 of 3 "
@@ -281,7 +335,7 @@ msgstr ""
 "de m claves (suministradas como arreglo json) requeridas. En este "
 "ejemplo, se requieren 2 de 3 llaves para firmar la transacción."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:202
+#: ../../docs/user/wallets/dashcore/advanced.rst:238
 msgid ""
 "Note: The address can be created by anyone, as long as the public keys "
 "and their sequence are known (resulting address and redeemScript are "
@@ -291,15 +345,15 @@ msgstr ""
 " las llaves públicas y su secuencia (la dirección resultante y "
 "redeemScript son idénticos, ver abajo)."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:231
+#: ../../docs/user/wallets/dashcore/advanced.rst:267
 msgid "Step 3: Buyer funds the multisig address"
 msgstr "Paso 3: el comprador financia la dirección multifirma"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:233
+#: ../../docs/user/wallets/dashcore/advanced.rst:269
 msgid "This works the same as a usual transaction."
 msgstr "Esto funciona igual que una transacción normal."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:240
+#: ../../docs/user/wallets/dashcore/advanced.rst:276
 msgid ""
 "The seller/arbiter can trace the transaction by its txid in the block "
 "explorer. Or from the console as follows."
@@ -307,11 +361,11 @@ msgstr ""
 "El vendedor/árbitro puede rastrear la transacción por su txid en el "
 "explorador de bloques. O desde la consola de la siguiente manera."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:275
+#: ../../docs/user/wallets/dashcore/advanced.rst:311
 msgid "Step 4: Spending the multisig"
 msgstr "Paso 4: Gastar la multifirma"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:277
+#: ../../docs/user/wallets/dashcore/advanced.rst:313
 msgid ""
 "Now we assume the deal is complete, the buyer got the goods and everyone "
 "is happy. Now the seller wants to get his Dash. As a 2-of-3 multisig was "
@@ -325,7 +379,7 @@ msgstr ""
 " firmada por 2 partes (vendedor + comprador o árbitro). El vendedor crea "
 "una transacción (reutilizaremos su dirección pública de arriba)."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:288
+#: ../../docs/user/wallets/dashcore/advanced.rst:324
 msgid ""
 "And partially signs it, using the redeemScript, scriptPubKey and his "
 "private key"
@@ -333,7 +387,7 @@ msgstr ""
 "Y lo firma parcialmente, usando redeemScript, scriptPubKey y su llave "
 "privada"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:299
+#: ../../docs/user/wallets/dashcore/advanced.rst:335
 msgid ""
 "Note that the output hex is getting longer, but complete flag is "
 "\"false\" as the transaction needs another signature. So now either the "
@@ -347,7 +401,7 @@ msgstr ""
 "firma de la transacción, utilizando el resultado de arriba y sus llaves "
 "privada. Supongamos que el comprador está completando la firma."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:313
+#: ../../docs/user/wallets/dashcore/advanced.rst:349
 msgid ""
 "The signature is complete now, and either of the parties can transmit the"
 " transaction to the network."
@@ -355,7 +409,7 @@ msgstr ""
 "La firma está completa ahora, y cualquiera de las partes puede transmitir"
 " la transacción a la red."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:321
+#: ../../docs/user/wallets/dashcore/advanced.rst:357
 msgid ""
 "Again, this transaction can be traced in a block explorer. And the seller"
 " is happy to receive his coins at his public address as follows."
@@ -364,11 +418,11 @@ msgstr ""
 " Y el vendedor está feliz de recibir sus monedas en su dirección pública "
 "de la siguiente manera."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:347
+#: ../../docs/user/wallets/dashcore/advanced.rst:383
 msgid "Daemon"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:349
+#: ../../docs/user/wallets/dashcore/advanced.rst:385
 msgid ""
 "Dash can be run as a background process (or daemon) on Linux systems. "
 "This is particularly useful if you are running Dash as a server instead "
@@ -376,51 +430,51 @@ msgid ""
 "Linux as described in the :ref:`dashcore-installation-linux`."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:354
+#: ../../docs/user/wallets/dashcore/advanced.rst:390
 msgid "Create a user and group to run the daemon::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:358
+#: ../../docs/user/wallets/dashcore/advanced.rst:394
 msgid "Create a data directory for Dash in the new user's home directory::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:362
+#: ../../docs/user/wallets/dashcore/advanced.rst:398
 msgid "Create a configuration file in the new Dash data directory::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:366
+#: ../../docs/user/wallets/dashcore/advanced.rst:402
 msgid ""
 "Paste the following basic configuration to your ``dash.conf`` file, "
 "replacing the password with a long and random password::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:373
+#: ../../docs/user/wallets/dashcore/advanced.rst:409
 msgid ""
 "Register the ``dashd`` daemon as a system service by creating the "
 "following file::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:377
+#: ../../docs/user/wallets/dashcore/advanced.rst:413
 msgid "Paste the following daemon configuration into the file::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:400
+#: ../../docs/user/wallets/dashcore/advanced.rst:436
 msgid "Register and start the daemon with systemd::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:406
+#: ../../docs/user/wallets/dashcore/advanced.rst:442
 msgid "Dash is now installed as a system daemon. View the status as follows::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:410
+#: ../../docs/user/wallets/dashcore/advanced.rst:446
 msgid "View logs as follows::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:415
+#: ../../docs/user/wallets/dashcore/advanced.rst:451
 msgid "Tor"
 msgstr "Tor"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:417
+#: ../../docs/user/wallets/dashcore/advanced.rst:453
 msgid ""
 "`Tor <https://www.torproject.org/>`__ is free and open-source software "
 "for enabling anonymous communication. The name derived from the acronym "
@@ -431,11 +485,11 @@ msgid ""
 " analysis."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:426
+#: ../../docs/user/wallets/dashcore/advanced.rst:462
 msgid "Dash Core GUI"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:428
+#: ../../docs/user/wallets/dashcore/advanced.rst:464
 msgid ""
 "Dash Core traffic can be directed to pass through Tor by specifying a "
 "running Tor service as a proxy. First install Tor by visiting "
@@ -446,13 +500,13 @@ msgid ""
 "First Time <https://tb-manual.torproject.org/running-tor-browser/>`__."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:437
+#: ../../docs/user/wallets/dashcore/advanced.rst:473
 msgid ""
 "Once Tor Browser is running, you have two options to configure Dash Core "
 "to use Tor for network traffic."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:440
+#: ../../docs/user/wallets/dashcore/advanced.rst:476
 msgid ""
 "**Using the GUI:** Start Dash Core and go to **Settings > Options > "
 "Network** and enable the **Connect through SOCKS5 proxy** setting. "
@@ -460,25 +514,25 @@ msgid ""
 " Click **OK** and restart Dash Core."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:445
+#: ../../docs/user/wallets/dashcore/advanced.rst:481
 msgid ""
 "**Using dash.conf:** Ensure Dash Core is not running and edit your "
 "``dash.conf`` settings file. Add the line ``proxy=127.0.0.1:9150``, save "
 "the file and start Dash Core."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:449
+#: ../../docs/user/wallets/dashcore/advanced.rst:485
 msgid ""
 "You are now connected through the Tor network. You will need to remember "
 "to start the Tor Browser each time before you start Dash Core or you will"
 " not be able to sync."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:454
+#: ../../docs/user/wallets/dashcore/advanced.rst:490
 msgid "Tor onion service"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:456
+#: ../../docs/user/wallets/dashcore/advanced.rst:492
 msgid ""
 "Tor onion services allows other users to connect to your Dash node using "
 "an onion address, providing further anonymity by concealing your IP "
@@ -486,62 +540,62 @@ msgid ""
 "Linux:"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:461
+#: ../../docs/user/wallets/dashcore/advanced.rst:497
 msgid "Install tor::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:465
+#: ../../docs/user/wallets/dashcore/advanced.rst:501
 msgid "Add the following line to the ``torrc`` file::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:469
+#: ../../docs/user/wallets/dashcore/advanced.rst:505
 msgid "Restart Tor::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:473
+#: ../../docs/user/wallets/dashcore/advanced.rst:509
 msgid ""
 "Determine the group Tor is running under (usually the last entry in your "
 "groups file)::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:478
+#: ../../docs/user/wallets/dashcore/advanced.rst:514
 msgid ""
 "The group is usually ``debian-tor`` under Debian-based Linux "
 "distributions."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:481
+#: ../../docs/user/wallets/dashcore/advanced.rst:517
 msgid "Add the user running Dash to the Tor group::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:485
+#: ../../docs/user/wallets/dashcore/advanced.rst:521
 msgid "Add the following two lines to ``dash.conf``::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:490
+#: ../../docs/user/wallets/dashcore/advanced.rst:526
 msgid "Restart Dash and monitor ``debug.log`` for onion informatoin::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:494
+#: ../../docs/user/wallets/dashcore/advanced.rst:530
 msgid "You should see a line similar to the following::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:498
+#: ../../docs/user/wallets/dashcore/advanced.rst:534
 msgid "Your onion service is now available at the shown address."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:502
+#: ../../docs/user/wallets/dashcore/advanced.rst:538
 msgid "Multiple wallets"
 msgstr "Múltiples billeteras"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:504
+#: ../../docs/user/wallets/dashcore/advanced.rst:540
 msgid ""
 "Since version 18.0.0, Dash Core has included the ability work with "
 "multiple wallets from the **File** menu in addition to the previously "
 "available options."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:508
+#: ../../docs/user/wallets/dashcore/advanced.rst:544
 msgid ""
 "Wallet-related RPCs require using the ``-rpcwallet`` option when more "
 "than one wallet file is loaded. This is to ensure the RPC command is "
@@ -550,61 +604,61 @@ msgid ""
 "information."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:514
+#: ../../docs/user/wallets/dashcore/advanced.rst:550
 msgid "Open a wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:516
+#: ../../docs/user/wallets/dashcore/advanced.rst:552
 msgid ""
 "To open a wallet, click **File -> Open Wallet** and then click the name "
 "of wallet file."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:522
+#: ../../docs/user/wallets/dashcore/advanced.rst:558
 msgid "Open wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:525
+#: ../../docs/user/wallets/dashcore/advanced.rst:561
 msgid "Select the active wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:527
+#: ../../docs/user/wallets/dashcore/advanced.rst:563
 msgid ""
 "When multiple wallets are open, a wallet selection dropbox is shown to "
 "the left of the Dash logo on the tab bar. Click the dropdown box and "
 "select a wallet to set it as the active wallet."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:534
+#: ../../docs/user/wallets/dashcore/advanced.rst:570
 msgid "Wallet selection dropdown box"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:537
+#: ../../docs/user/wallets/dashcore/advanced.rst:573
 msgid "Close a wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:539
+#: ../../docs/user/wallets/dashcore/advanced.rst:575
 msgid ""
 "To close a wallet, set it as the active wallet using the wallet selection"
 " dropdown box. Next, click **File -> Close Wallet** and then click "
 "**Yes** on the Close wallet confirmation screen."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:546
+#: ../../docs/user/wallets/dashcore/advanced.rst:582
 msgid "Close wallet confirmation"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:551
+#: ../../docs/user/wallets/dashcore/advanced.rst:587
 msgid ""
 "If the only open wallet is closed, wallet-related items on the tab bar "
 "will be disabled."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:554
+#: ../../docs/user/wallets/dashcore/advanced.rst:590
 msgid "Alternative methods"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:556
+#: ../../docs/user/wallets/dashcore/advanced.rst:592
 msgid ""
 "It is also possible to select between different Dash wallets when "
 "starting Dash Core by specifying the ``wallet`` argument, or even run "
@@ -612,7 +666,7 @@ msgid ""
 "data directories using the ``datadir`` argument."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:561
+#: ../../docs/user/wallets/dashcore/advanced.rst:597
 msgid ""
 "To begin, install the Dash Core wallet for your system according to the "
 ":ref:`installation instructions <dashcore-installation>`. When you get to"
@@ -631,11 +685,11 @@ msgstr ""
 "separados como, por ejemplo, `` C: \\ Dash1`` (más simple si desea "
 "ejecutar las carteras simultáneamente)."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:572
+#: ../../docs/user/wallets/dashcore/advanced.rst:608
 msgid "Separate wallet.dat files"
 msgstr "Archivos wallet.dat separados"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:574
+#: ../../docs/user/wallets/dashcore/advanced.rst:610
 msgid ""
 "For this scenario, we will create two shortcuts on the desktop, each "
 "using a different wallet file. Navigate to the binary file used to start "
@@ -650,11 +704,11 @@ msgstr ""
 "escritorio. Entonces abre la ventana **Propiedades** para cada uno de "
 "estos atajos."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:583
+#: ../../docs/user/wallets/dashcore/advanced.rst:619
 msgid "Creating desktop shortcuts using Windows 10"
 msgstr "Creando atajos de escritorio usando Windows 10"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:585
+#: ../../docs/user/wallets/dashcore/advanced.rst:621
 msgid ""
 "Modify the **Target** property of each shortcut to point to a different "
 "wallet file by specifying the ``wallet`` argument when starting the "
@@ -670,7 +724,7 @@ msgstr ""
 "especificado sera creado sino existe. Los siguientes ejemplos muestran "
 "dos billeteras nombradas ``workwallet.dat`` y ``homewallet.dat``:"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:592
+#: ../../docs/user/wallets/dashcore/advanced.rst:628
 msgid ""
 "Wallet Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=workwallet.dat``"
@@ -678,7 +732,7 @@ msgstr ""
 "Billetera Objetivo 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=workwallet.dat``"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:593
+#: ../../docs/user/wallets/dashcore/advanced.rst:629
 msgid ""
 "Wallet Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=homewallet.dat``"
@@ -686,11 +740,11 @@ msgstr ""
 "Billetera Objetivo 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-wallet=homewallet.dat``"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:598
+#: ../../docs/user/wallets/dashcore/advanced.rst:634
 msgid "Specifying separate wallet files"
 msgstr "Especificando archivos de billeteras separadas"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:600
+#: ../../docs/user/wallets/dashcore/advanced.rst:636
 msgid ""
 "You can now use the two icons to quickly and easily open different "
 "wallets from your desktop. Note that you cannot open both wallets "
@@ -702,11 +756,11 @@ msgstr ""
 "abrir ambas billeteras simultáneamente. Para hacer esto, necesitas dos "
 "directorios de datos separados, como se describe abajo."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:607
+#: ../../docs/user/wallets/dashcore/advanced.rst:643
 msgid "Separate data directories"
 msgstr "Directorios de datos separados"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:609
+#: ../../docs/user/wallets/dashcore/advanced.rst:645
 msgid ""
 "Start Dash Core and allow it to synchronize with the network, then close "
 "Dash Core again. You can now create two directories at e.g. ``C:\\Dash1``"
@@ -726,7 +780,7 @@ msgstr ""
 " Crea dos (o mas) atajos en tu escritorio como se describe abajo, "
 "entonces especifica el argumento ``datadir`` como se muestra abajo:"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:618
+#: ../../docs/user/wallets/dashcore/advanced.rst:654
 msgid ""
 "Datadir Target 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash1 -listen=0``"
@@ -734,7 +788,7 @@ msgstr ""
 "Datadir Objetivo 1: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash1 -listen=0``"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:619
+#: ../../docs/user/wallets/dashcore/advanced.rst:655
 msgid ""
 "Datadir Target 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash2 -listen=0``"
@@ -742,11 +796,11 @@ msgstr ""
 "Datadir Objetivos 2: ``\"C:\\Program Files\\DashCore\\dash-qt.exe\" "
 "-datadir=C:\\Dash2 -listen=0``"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:624
+#: ../../docs/user/wallets/dashcore/advanced.rst:660
 msgid "Specifying separate datadirs"
 msgstr "Especificar directorios de datos separados"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:626
+#: ../../docs/user/wallets/dashcore/advanced.rst:662
 msgid ""
 "You can now use the two icons to quickly and easily open different "
 "wallets simultaneously from your desktop. Both wallets maintain separate "
@@ -763,18 +817,45 @@ msgstr ""
 "Electrum <dash-electrum-wallet>` para mantener separadas múltiples "
 "billeteras sin mantener una copia completa de la cadena de bloques."
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:636
+#: ../../docs/user/wallets/dashcore/advanced.rst:672
 msgid "Two instances of Dash Core running simultaneously"
 msgstr "Dos instancias de Dash Core ejecutándose simultáneamente"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:639
+#: ../../docs/user/wallets/dashcore/advanced.rst:675
 msgid "KeePass"
 msgstr "KeePass"
 
-#: ../../docs/user/wallets/dashcore/advanced.rst:642
+#: ../../docs/user/wallets/dashcore/advanced.rst:678
 msgid ""
 "KeePass support was removed in Dash Core 18.0.0. Details can still be "
 "found in `previous versions of this documentation "
 "<https://docs.dash.org/en/0.17.0/wallets/dashcore/advanced.html#keepass>`_."
 msgstr ""
+
+#~ msgid ""
+#~ "Since version 0.17.0.2, Dash Core has"
+#~ " included the ability upgrade a "
+#~ "non-hierarchical deterministic (HD) wallet "
+#~ "to an HD wallet via the "
+#~ "``upgradetohd`` command. The command can "
+#~ "be run by either opening the "
+#~ "console from **Tools > Console** or "
+#~ "issuing the following RPC command from"
+#~ " ``dash-cli``::"
+#~ msgstr ""
+
+#~ msgid "Create HD Wallet"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A new HD wallet will be generated"
+#~ " and Dash Core will display a "
+#~ "warning informing you that you must "
+#~ "encrypt your wallet after verifying it"
+#~ " works correctly. Open the console "
+#~ "from **Tools > Console** or issue "
+#~ "the following RPC command from "
+#~ "``dash-cli`` to view the mnemonic "
+#~ "seed::"
+#~ msgstr ""
 

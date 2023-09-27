@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-23 15:49-0400\n"
+"POT-Creation-Date: 2023-09-26 09:54-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -123,21 +123,25 @@ msgstr ""
 
 #: ../../docs/user/developers/integration.rst:52
 #: ../../docs/user/developers/integration.rst:197
+#: ../../docs/user/developers/integration.rst:319
 msgid ":ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`"
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:53
 #: ../../docs/user/developers/integration.rst:198
+#: ../../docs/user/developers/integration.rst:320
 msgid ":ref:`gettransaction <core:api-rpc-wallet-gettransaction>`"
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:54
 #: ../../docs/user/developers/integration.rst:199
+#: ../../docs/user/developers/integration.rst:321
 msgid ":ref:`listtransactions <core:api-rpc-wallet-listtransactions>`"
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:55
 #: ../../docs/user/developers/integration.rst:200
+#: ../../docs/user/developers/integration.rst:322
 msgid ":ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`"
 msgstr ""
 
@@ -393,6 +397,7 @@ msgid "The ability to determine the “InstantSend Status” of a given transact
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:178
+#: ../../docs/user/developers/integration.rst:301
 msgid ""
 "The ability to adjust “Confirmation Status” independently of block "
 "confirmation."
@@ -407,6 +412,7 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:186
+#: ../../docs/user/developers/integration.rst:309
 msgid "Direct Connection"
 msgstr ""
 
@@ -419,51 +425,53 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:203
+#: ../../docs/user/developers/integration.rst:325
 msgid "ZMQ Notification"
 msgstr ""
 
 #: ../../docs/user/developers/integration.rst:205
 msgid ""
 "Whenever a transaction enters the mempool and whenever a transaction is "
-"locked in the mempool, ZMQ notifications can be broadcast by the node. A "
-"list of possible ZMQ notifications can be found `here "
-"<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__."
+"locked in the mempool, ZMQ notifications can be broadcast by the node. "
+"Refer to `the list of possible ZMQ notifications "
+"<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__ for "
+"more details."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:210
+#: ../../docs/user/developers/integration.rst:211
 msgid ""
 "The following notifications are relevant for recognizing transactions and"
 " their corresponding instantlocks:"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:213
+#: ../../docs/user/developers/integration.rst:214
 msgid "zmqpubhashtx"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:214
+#: ../../docs/user/developers/integration.rst:215
 msgid "zmqpubhashtxlock"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:215
+#: ../../docs/user/developers/integration.rst:216
 msgid "zmqpubrawtx"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:216
+#: ../../docs/user/developers/integration.rst:217
 msgid "zmqpubrawtxlock"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:219
+#: ../../docs/user/developers/integration.rst:220
 msgid "Wallet Notification"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:221
+#: ../../docs/user/developers/integration.rst:222
 msgid ""
 "The Dash Core Daemon can be configured to execute an external script "
 "whenever an InstantSend transaction relating to that wallet is observed. "
 "This is configured by adding the following line to the dash.conf file::"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:227
+#: ../../docs/user/developers/integration.rst:228
 msgid ""
 "This is typically used with a wallet that has been populated with `watch-"
 "only "
@@ -471,18 +479,18 @@ msgid ""
 "#watch-only-address>`__ addresses."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:234
+#: ../../docs/user/developers/integration.rst:235
 msgid "Broadcasting InstantSend Transactions"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:238
+#: ../../docs/user/developers/integration.rst:239
 msgid ""
 "Because all transactions on the Dash network are automatically "
 "InstantSend, no procedural changes are required to broadcast transactions"
 " as InstantSend."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:241
+#: ../../docs/user/developers/integration.rst:242
 msgid ""
 "Since Dash v0.14.0 established LLMQs on the Dash network, quorums will "
 "now attempt to lock every valid transaction by default without any "
@@ -492,62 +500,200 @@ msgid ""
 "true:"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:248
+#: ../../docs/user/developers/integration.rst:249
 msgid ""
 "the previous transaction referred to by the input is confirmed with 6 "
 "blocks"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:250
+#: ../../docs/user/developers/integration.rst:251
 msgid "the previous transaction is confirmed through an older InstantSend lock"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:252
+#: ../../docs/user/developers/integration.rst:253
 msgid ""
 "the block containing the previous transaction is `ChainLocked "
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:254
+#: ../../docs/user/developers/integration.rst:255
 msgid ""
 "When checking the previous transaction for an InstantSend lock, it is "
 "important to do this on mempool (non-mined) transactions. This allows "
 "chained InstantSend locking."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:259
+#: ../../docs/user/developers/integration.rst:260
+#: ../../docs/user/developers/integration.rst:368
 msgid "Additional Resources"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:261
+#: ../../docs/user/developers/integration.rst:262
+#: ../../docs/user/developers/integration.rst:370
 msgid ""
 "The following resources provide additional information about InstantSend "
 "and are intended to help provide a more complete understanding of the "
 "underlying technologies."
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:265
+#: ../../docs/user/developers/integration.rst:266
 msgid ""
 "`InstantSend Technical Information "
 "<https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:266
+#: ../../docs/user/developers/integration.rst:267
 msgid ""
 ":ref:`InstantSend Developer Documentation <core:guide-features-"
 "instantsend>`"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:267
+#: ../../docs/user/developers/integration.rst:268
+#: ../../docs/user/developers/integration.rst:375
+msgid ""
+":ref:`Receiving ZMQ notifications <core:examples-receiving-zmq-"
+"notifications>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:269
 msgid ""
 "`DIP0010: LLMQ InstantSend "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__"
 msgstr ""
 
-#: ../../docs/user/developers/integration.rst:268
+#: ../../docs/user/developers/integration.rst:270
+#: ../../docs/user/developers/integration.rst:377
 msgid ""
 "`Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-"
 "brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:275
+msgid "ChainLocks"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:277
+msgid ""
+"ChainLocks are a feature provided by the Dash Network which provides "
+"certainty when accepting payments. This technology, particularly when "
+"used in parallel with :ref:`InstantSend <instantsend>`, creates an "
+"environment in which payments can be accepted immediately and without the"
+" risk of “Blockchain Reorganization Events”."
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:283
+msgid ""
+"The risk of blockchain reorganization is typically addressed by requiring"
+" multiple :term:`confirmations` before a transaction can be safely "
+"accepted as payment. This type of indirect security is effective, but at "
+"a cost of time and user experience. ChainLocks are a solution for this "
+"problem."
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:289
+msgid "Receiving ChainLocks"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:293
+msgid ""
+"Once a ChainLock is observed for a block, each transaction in that block "
+"and all previous blocks can be considered irreversibly and fully "
+"confirmed."
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:296
+msgid "Receiving a ChainLock introduces two requirements:"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:298
+msgid ""
+"The ability to determine the “ChainLock Status” of a given block or "
+"transaction."
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:304
+msgid ""
+"ChainLock status is typically determined through direct connection with "
+"the Dash daemon or by a `ZMQ notification "
+"<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__."
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:311
+msgid ""
+"ChainLock status can be identified through direct connection with the "
+"Dash daemon using JSON-RPC protocol. The boolean ``chainlock`` attribute "
+"of the JSON response reflects the ChainLock status of the block or "
+"transaction and is included in the following commands:"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:316
+msgid ":ref:`getblock <core:api-rpc-blockchain-getblock>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:317
+msgid ":ref:`getblockheader <core:api-rpc-blockchain-getblockheader>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:318
+msgid ":ref:`getblockheaders <core:api-rpc-blockchain-getblockheaders>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:327
+msgid ""
+"ChainLock signatures are created shortly after the related block has been"
+" mined. As a result it is recommended that integrated clients use "
+":ref:`ZMQ (ZeroMQ) notifications <core:examples-receiving-zmq-"
+"notifications>` in order to ensure that this information is received as "
+"promptly as possible. Refer to `the list of possible ZMQ notifications "
+"<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__ for "
+"more details."
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:335
+msgid ""
+"The following notifications are relevant for recognizing blocks and their"
+" corresponding ChainLocks:"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:338
+msgid "zmqpubhashblock"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:339
+msgid "zmqpubhashchainlock"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:340
+msgid "zmqpubrawblock"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:341
+msgid "zmqpubrawchainlock"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:342
+msgid "zmqpubrawchainlocksig"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:344
+msgid ""
+"This sample code uses the `js-dashd-zmq library "
+"<https://github.com/dashpay/js-dashd-zmq>`__ to listen for ChainLock ZMQ "
+"notifications and return the hash of blocks that receive a ChainLock."
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:348
+msgid "Subscribe to ChainLock hash ZMQ notifications"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:374
+msgid ":ref:`ChainLock Developer Documentation <core:guide-features-chainlocks>`"
+msgstr ""
+
+#: ../../docs/user/developers/integration.rst:376
+msgid ""
+"`DIP0008: ChainLocks "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"
 msgstr ""
 
 #~ msgid "Technical guides for merchants using Dash. API and SDK resources."
@@ -1420,5 +1566,15 @@ msgstr ""
 #~ "Generator <https://cwaqrgen.com/dash>`_ and simply"
 #~ " paste your Dash address to generate"
 #~ " an image."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Whenever a transaction enters the "
+#~ "mempool and whenever a transaction is"
+#~ " locked in the mempool, ZMQ "
+#~ "notifications can be broadcast by the"
+#~ " node. A list of possible ZMQ "
+#~ "notifications can be found `here "
+#~ "<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__."
 #~ msgstr ""
 

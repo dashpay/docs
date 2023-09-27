@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-23 15:49-0400\n"
+"POT-Creation-Date: 2023-09-26 09:54-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -239,7 +239,7 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/masternodes/server-config.rst:182
-#: ../../docs/user/masternodes/server-config.rst:208
+#: ../../docs/user/masternodes/server-config.rst:207
 msgid "(press **Y** and **Enter** to confirm)"
 msgstr ""
 
@@ -257,53 +257,53 @@ msgstr ""
 msgid "Testnet configuration"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:212
+#: ../../docs/user/masternodes/server-config.rst:211
 msgid "Enable swap"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:214
+#: ../../docs/user/masternodes/server-config.rst:213
 msgid ""
 "Next, we add will add swap memory, enable it, and set it to be enabled on"
 " subsequent reboots::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:223
+#: ../../docs/user/masternodes/server-config.rst:222
 msgid ""
 "Add the following line at the end of the file (press tab to separate each"
 " word/number), then press **Ctrl + X** to close the editor, then **Y** "
 "and **Enter** save the file."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:233
+#: ../../docs/user/masternodes/server-config.rst:232
 msgid "Restrict remote access"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:235
+#: ../../docs/user/masternodes/server-config.rst:234
 msgid ""
 "Finally, in order to prevent brute force password hacking attacks, we "
 "will install fail2ban and disable root login over ssh. These steps are "
 "optional, but highly recommended. Start with fail2ban::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:241
+#: ../../docs/user/masternodes/server-config.rst:240
 msgid "Create a new configuration file::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:245
+#: ../../docs/user/masternodes/server-config.rst:244
 msgid "And paste in the following configuration:"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:256
+#: ../../docs/user/masternodes/server-config.rst:255
 msgid ""
 "Then press **Ctrl + X** to close the editor, then **Y** and **Enter** "
 "save the file. Restart and enable the fail2ban service::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:262
+#: ../../docs/user/masternodes/server-config.rst:261
 msgid "Next, open the SSH configuration file to disable root login over SSH::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:266
+#: ../../docs/user/masternodes/server-config.rst:265
 msgid ""
 "Locate the line that reads ``PermitRootLogin yes`` and set it to "
 "``PermitRootLogin no``. Directly below this, add a line which reads "
@@ -312,19 +312,25 @@ msgid ""
 "and **Enter** save the file."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:273
+#: ../../docs/user/masternodes/server-config.rst:271
+msgid ""
+"Optionally install or update `AppArmor <https://apparmor.net/>`_ (try "
+"this step if you are having problems related to AppArmor)::"
+msgstr ""
+
+#: ../../docs/user/masternodes/server-config.rst:277
 msgid "Reboot"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:275
+#: ../../docs/user/masternodes/server-config.rst:279
 msgid "Now, reboot the server to apply any necessary kernel updates::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:279
+#: ../../docs/user/masternodes/server-config.rst:283
 msgid "Your SSH client (e.g. PuTTY) will disconnect when the server reboots."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:283
+#: ../../docs/user/masternodes/server-config.rst:287
 msgid ""
 "While this setup includes basic steps to protect your server against "
 "attacks, much more can be done. In particular, authenticating with a "
