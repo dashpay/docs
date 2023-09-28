@@ -1,11 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # William Lotta <williamlotta@gmail.com>, 2022
 # AL <mediterraneo9000@gmail.com>, 2022
+# Dash Italia, 2023
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -13,25 +15,22 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-23 15:49-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
-"Last-Translator: AL <mediterraneo9000@gmail.com>, 2022\n"
-"Language: it\n"
+"Last-Translator: Dash Italia, 2023\n"
 "Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 "
-"? 1 : 2;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/developers/testnet.rst:-1
+#: ../../docs/user/developers/testnet.rst-1
 msgid ""
-"Dash testnet and devnets are used by Dash developers for testing using "
-"tDASH"
+"Dash testnet and devnets are used by Dash developers for testing using tDASH"
 msgstr ""
-"Dash testnet e devnet vengono utilizzati dagli sviluppatori Dash per "
-"testare utilizzando tDASH"
+"Dash testnet e devnet vengono utilizzati dagli sviluppatori Dash per testare"
+" utilizzando tDASH"
 
-#: ../../docs/user/developers/testnet.rst:-1
+#: ../../docs/user/developers/testnet.rst-1
 msgid ""
 "dash, masternodes, testnet, devnet, faucet, masternodes, testing, pool, "
 "explorer, mining pools, block explorer"
@@ -45,20 +44,20 @@ msgstr "Testnet e devnet"
 
 #: ../../docs/user/developers/testnet.rst:11
 msgid ""
-"Testnet is a fully functioning Dash blockchain with the one key exception"
-" that because the Dash on the network can be created freely, it has no "
-"value. This currency, known as tDASH, can be requested from a faucet to "
-"help developers test new versions of Dash, as well as test network "
-"operations using identical versions of the software before they are "
-"carried out on the mainnet. There are a few other key differences:"
+"Testnet is a fully functioning Dash blockchain with the one key exception "
+"that because the Dash on the network can be created freely, it has no value."
+" This currency, known as tDASH, can be requested from a faucet to help "
+"developers test new versions of Dash, as well as test network operations "
+"using identical versions of the software before they are carried out on the "
+"mainnet. There are a few other key differences:"
 msgstr ""
 "Testnet è una blockchain Dash completamente funzionante con l'unica "
 "eccezione fondamentale che, poiché il Dash sulla rete può essere creato "
-"liberamente, esso non ha valore. Questa valuta, nota come tDASH, può "
-"essere richiesta da un faucet per aiutare gli sviluppatori a testare le "
-"nuove versioni di Dash, nonché a testare le operazioni di rete "
-"utilizzando versioni identiche del software prima che vengano eseguite "
-"sulla mainnet. Ci sono diverse altre differenze fondamentali:"
+"liberamente, esso non ha valore. Questa valuta, nota come tDASH, può essere "
+"richiesta da un faucet per aiutare gli sviluppatori a testare le nuove "
+"versioni di Dash, nonché a testare le operazioni di rete utilizzando "
+"versioni identiche del software prima che vengano eseguite sulla mainnet. Ci"
+" sono diverse altre differenze fondamentali:"
 
 #: ../../docs/user/developers/testnet.rst:18
 msgid "Testnet operates on port 19999 (instead of 9999)"
@@ -66,11 +65,11 @@ msgstr "Testnet opera sulla porta 19999 (invece di 9999)"
 
 #: ../../docs/user/developers/testnet.rst:19
 msgid ""
-"Testnet addresses start with \"y\" instead of \"X\", ADDRESSVERSION is "
-"140 (instead of 76)"
+"Testnet addresses start with \"y\" instead of \"X\", ADDRESSVERSION is 140 "
+"(instead of 76)"
 msgstr ""
-"Gli indirizzi di testnet iniziano con \"y\" invece di \"X\", "
-"ADDRESSVERSION è 140 (invece di 76)"
+"Gli indirizzi di testnet iniziano con \"y\" invece di \"X\", ADDRESSVERSION "
+"è 140 (invece di 76)"
 
 #: ../../docs/user/developers/testnet.rst:21
 msgid "Testnet balances are denominated in tDASH (instead of DASH)"
@@ -79,14 +78,16 @@ msgstr "I saldi Testnet sono denominati in tDASH (invece di DASH)"
 #: ../../docs/user/developers/testnet.rst:22
 msgid "Protocol message header bytes are 0xcee2caff (instead of 0xbf0c6bbd)"
 msgstr ""
+"I byte dell'intestazione del messaggio del protocollo sono 0xcee2caff "
+"(invece di 0xbf0c6bbd)"
 
 #: ../../docs/user/developers/testnet.rst:23
 msgid ""
-"Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, "
-"testnet-seed.darkcoin.qa, testnet-seed.dashpay.io"
+"Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, testnet-"
+"seed.darkcoin.qa, testnet-seed.dashpay.io"
 msgstr ""
-"Il bootstrap utilizza diversi seed DNS: test.dnsseed.masternode.io, "
-"testnet-seed.darkcoin.qa, testnet-seed.dashpay.io"
+"Il bootstrap utilizza diversi seed DNS: test.dnsseed.masternode.io, testnet-"
+"seed.darkcoin.qa, testnet-seed.dashpay.io"
 
 #: ../../docs/user/developers/testnet.rst:25
 msgid "Launching Dash Core in testnet mode shows an orange splash screen"
@@ -96,35 +97,34 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:27
 msgid ""
-"To start Dash Core in testnet mode, find your dash.conf file and enter "
-"the following line::"
+"To start Dash Core in testnet mode, find your dash.conf file and enter the "
+"following line::"
 msgstr ""
 "Per avviare Dash Core in modalità testnet, trova il tuo file dash.conf e "
 "inserisci la seguente riga::"
 
 #: ../../docs/user/developers/testnet.rst:32
-#, fuzzy
 msgid ""
 "With the release of Dash Core 12.3, Dash added support for a great new "
 "feature — **named devnets**. Devnets are developer networks that combine "
 "some aspects of testnet (the global and public testing network) and some "
 "aspects of regtest (the local-only regression testing mode that provides "
-"controlled block generation). Unlike testnet, multiple independent "
-"devnets can be created and coexist without interference. For practical "
-"documentation on how to use devnets, see the :ref:`developer "
-"documentation <core:examples-testing-applications>` or this `blog post "
+"controlled block generation). Unlike testnet, multiple independent devnets "
+"can be created and coexist without interference. For practical documentation"
+" on how to use devnets, see the :ref:`developer documentation "
+"<core:examples-testing-applications>` or this `blog post "
 "<https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
 msgstr ""
 "Con il rilascio di Dash Core 12.3, Dash ha aggiunto il supporto per una "
-"nuova fantastica funzionalità, ** denominata devnets **. Le devnet sono "
-"reti di sviluppatori che combinano alcuni aspetti di testnet (la rete di "
-"test globale e pubblica) e alcuni aspetti di regtest (la modalità di test"
-" di regressione solo locale che fornisce la generazione di blocchi "
-"controllata). A differenza di testnet, è possibile creare più devnet "
-"indipendenti e coesistere senza interferenze. Per la documentazione "
-"pratica su come usare devnet, vedere la `documentazione per sviluppatori "
-"<https://dashcore.readme.io/docs/core-examples-testing-applications>`__ "
-"or this `blog post <https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
+"nuova fantastica funzionalità — **denominata devnet**. Le Devnet sono reti "
+"di sviluppatori che combinano alcuni aspetti di testnet (la rete di test "
+"globale e pubblica) e alcuni aspetti di regtest (la modalità di test di "
+"regressione solo locale che fornisce la generazione di blocchi controllata)."
+" A differenza di testnet, è possibile creare più devnet indipendenti e "
+"coesistere senza interferenze. Per la documentazione pratica su come "
+"utilizzare le devnet, consulta la :ref:`documentazione per gli sviluppatori "
+"<core:examples-testing-applications>` o questo `post sul blog "
+"<https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
 
 #: ../../docs/user/developers/testnet.rst:43
 msgid "Tools and links"
@@ -132,12 +132,17 @@ msgstr "Strumenti e collegamenti"
 
 #: ../../docs/user/developers/testnet.rst:45
 msgid ""
-"The links below were collected from various community sources and may not"
-" necessarily be online or functioning at any given time. Please join "
-"`Dash Discord <http://staydashy.com/>`_ or the `Dash Forum "
+"The links below were collected from various community sources and may not "
+"necessarily be online or functioning at any given time. Please join `Dash "
+"Discord <http://staydashy.com/>`_ or the `Dash Forum "
 "<https://www.dash.org/forum/>`_ if you have a question relating to a "
 "specific service."
 msgstr ""
+"I collegamenti seguenti sono stati raccolti da varie fonti della comunità e "
+"potrebbero non essere necessariamente online o funzionanti in un dato "
+"momento. Iscriviti a `Dash Discord <http://staydashy.com/>`_ o al `Dash "
+"Forum <https://www.dash.org/forum/>`_ se hai una domanda relativa a un "
+"servizio specifico."
 
 #: ../../docs/user/developers/testnet.rst:51
 msgid "**Test builds:** https://gitlab.com/dashpay/dash/pipelines"
@@ -160,6 +165,8 @@ msgid ""
 "**Android wallet:** https://github.com/dashpay/dash-"
 "wallet/releases/tag/v7.0.2"
 msgstr ""
+"**Android wallet:** https://github.com/dashpay/dash-"
+"wallet/releases/tag/v7.0.2"
 
 #: ../../docs/user/developers/testnet.rst:56
 msgid "**Testnet for Bitcoin:** https://en.bitcoin.it/wiki/Testnet"
@@ -171,11 +178,11 @@ msgstr "Faucet"
 
 #: ../../docs/user/developers/testnet.rst:61
 msgid "https://faucet.testnet.networks.dash.org - by Dash Core Group"
-msgstr ""
+msgstr "https://faucet.testnet.networks.dash.org - by Dash Core Group"
 
 #: ../../docs/user/developers/testnet.rst:62
 msgid "http://faucet.test.dash.crowdnode.io - by CrowdNode"
-msgstr ""
+msgstr "http://faucet.test.dash.crowdnode.io - by CrowdNode"
 
 #: ../../docs/user/developers/testnet.rst:65
 msgid "Explorers"
@@ -187,11 +194,11 @@ msgstr "https://testnet-insight.dashevo.org/insight"
 
 #: ../../docs/user/developers/testnet.rst:68
 msgid "https://insight.testnet.networks.dash.org:3002/insight"
-msgstr ""
+msgstr "https://insight.testnet.networks.dash.org:3002/insight"
 
 #: ../../docs/user/developers/testnet.rst:69
 msgid "http://insight.testnet.networks.dash.org:3001/insight"
-msgstr ""
+msgstr "http://insight.testnet.networks.dash.org:3001/insight"
 
 #: ../../docs/user/developers/testnet.rst:72
 msgid "Pools"
@@ -199,11 +206,9 @@ msgstr "Pool"
 
 #: ../../docs/user/developers/testnet.rst:74
 msgid ""
-"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by "
-"flare"
+"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare"
 msgstr ""
-"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by "
-"flare"
+"https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare"
 
 #: ../../docs/user/developers/testnet.rst:75
 msgid ""
@@ -227,40 +232,38 @@ msgstr "Masternodes"
 
 #: ../../docs/user/developers/testnet.rst:82
 msgid ""
-"Installing a masternode under testnet generally follows the same steps as"
-" the :ref:`mainnet masternode installation guide <masternode-setup>`, but"
-" with a few key differences:"
+"Installing a masternode under testnet generally follows the same steps as "
+"the :ref:`mainnet masternode installation guide <masternode-setup>`, but "
+"with a few key differences:"
 msgstr ""
-"L'installazione di un masternode sotto testnet generalmente segue gli "
-"stessi passaggi della: ref: `guida all'installazione del mainnet "
-"masternode <masternode-setup>`, ma con alcune differenze chiave:"
+"L'installazione di un masternode sotto testnet generalmente segue gli stessi"
+" passaggi della: ref: `guida all'installazione del mainnet masternode "
+"<masternode-setup>`, ma con alcune differenze chiave:"
 
 #: ../../docs/user/developers/testnet.rst:86
 msgid ""
-"You will probably be running a development version of Dash instead of the"
-" stable release. See `here <https://gitlab.com/dashpay/dash/pipelines>`__"
-" for a list of builds, then choose the latest successful ``develop`` "
-"build and click **Artifacts** to view a list of binaries."
+"You will probably be running a development version of Dash instead of the "
+"stable release. See `here <https://gitlab.com/dashpay/dash/pipelines>`__ for"
+" a list of builds, then choose the latest successful ``develop`` build and "
+"click **Artifacts** to view a list of binaries."
 msgstr ""
 "Probabilmente eseguirai una versione di sviluppo di Dash invece della "
-"versione stabile. Vedi `qui "
-"<https://gitlab.com/dashpay/dash/pipelines>`__ per un elenco di build , "
-"quindi scegli l'ultima build ``develop`` build e fai clic su ** Artifacts"
-" ** per visualizzare un elenco di programmi binari."
+"versione stabile. Vedi `qui <https://gitlab.com/dashpay/dash/pipelines>`__ "
+"per un elenco di build , quindi scegli l'ultima build ``develop`` build e "
+"fai clic su ** Artifacts ** per visualizzare un elenco di programmi binari."
 
 #: ../../docs/user/developers/testnet.rst:90
 msgid ""
 "When opening the firewall, port 19999 must be opened instead of (or in "
 "addition to) 9999. Use this command: ``ufw allow 19999/tcp``"
 msgstr ""
-"Quando si apre il firewall, è necessario aprire la porta 19999 invece di "
-"(o in aggiunta a) 9999. Utilizza questo comando: ``ufw allow 19999 / "
-"tcp``"
+"Quando si apre il firewall, è necessario aprire la porta 19999 invece di (o "
+"in aggiunta a) 9999. Utilizza questo comando: ``ufw allow 19999 / tcp``"
 
 #: ../../docs/user/developers/testnet.rst:92
 msgid ""
-"Your desktop wallet must be running in testnet mode. Add the following "
-"line to *dash.conf*: ``testnet = 1``"
+"Your desktop wallet must be running in testnet mode. Add the following line "
+"to *dash.conf*: ``testnet = 1``"
 msgstr ""
 "Il tuo desktop wallet deve essere in esecuzione in modalità testnet. "
 "Aggiungi la seguente riga a *dash.conf*: ``testnet = 1``"
@@ -275,13 +278,13 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:96
 msgid ""
-"Your masternode configuration file must also specify testnet mode. Add "
-"the following line when setting up *dash.conf* on the masternode: "
-"``testnet = 1``"
+"Your masternode configuration file must also specify testnet mode. Add the "
+"following line when setting up *dash.conf* on the masternode: ``testnet = "
+"1``"
 msgstr ""
-"Il tuo file di configurazione masternode deve anche specificare la "
-"modalità testnet. Aggiungi la seguente riga quando imposti *dash.conf* "
-"sul masternode: ``testnet = 1``"
+"Il tuo file di configurazione masternode deve anche specificare la modalità "
+"testnet. Aggiungi la seguente riga quando imposti *dash.conf* sul "
+"masternode: ``testnet = 1``"
 
 #: ../../docs/user/developers/testnet.rst:99
 msgid ""
@@ -293,65 +296,77 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:101
 msgid ""
-"When cloning sentinel, you may need to clone the development branch using"
-" the ``-b`` option, for example: ``git clone -b develop "
+"When cloning sentinel, you may need to clone the development branch using "
+"the ``-b`` option, for example: ``git clone -b develop "
 "https://github.com/dashpay/sentinel.git``"
 msgstr ""
 "Durante la clonazione di sentinel, potrebbe essere necessario clonare il "
-"ramo di sviluppo utilizzando l'opzione ``-b``, ad esempio: ``git clone -b"
-" develop https://github.com/dashpay/sentinel.git``"
+"ramo di sviluppo utilizzando l'opzione ``-b``, ad esempio: ``git clone -b "
+"develop https://github.com/dashpay/sentinel.git``"
 
 #: ../../docs/user/developers/testnet.rst:104
 msgid ""
-"Once sentinel is installed, modify "
-"``~/.dashcore/sentinel/sentinel.conf``, comment the mainnet line and "
-"uncomment: ``network=testnet``"
+"Once sentinel is installed, modify ``~/.dashcore/sentinel/sentinel.conf``, "
+"comment the mainnet line and uncomment: ``network=testnet``"
 msgstr ""
+"Una volta installato sentinel, modificare "
+"``~/.dashcore/sentinel/sentinel.conf``, commentare la riga mainnet e "
+"rimuovere il commento: ``network=testnet``"
 
 #: ../../docs/user/developers/testnet.rst:107
 msgid ""
 "The wallet holding the masternode collateral will expect to find the "
-"``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf`` "
-"instead of ``~/.dashcore/masternode.conf``."
+"``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf`` instead"
+" of ``~/.dashcore/masternode.conf``."
 msgstr ""
+"Il portafoglio che contiene il collaterale masternode si aspetterà di "
+"trovare il file ``masternode.conf`` in "
+"``~/.dashcore/testnet3/masternode.conf`` invece di "
+"``~/.dashcore/masternode.conf``."
 
 #: ../../docs/user/developers/testnet.rst:113
 msgid "Testnet 0.16.0"
-msgstr ""
+msgstr "Testnet 0.16.0"
 
 #: ../../docs/user/developers/testnet.rst:115
 msgid ""
-"In June 2020, the Dash team announced the start of testing of the "
-"upcoming Dash 0.16.0 release. Extensive internal testing has already been"
-" done on the 0.16.0 code, but there are numerous bugs that can only be "
-"revealed with actual use by real people. The Dash team invites anybody "
-"who is interested to download the software and become active on testnet. "
-"This release includes:"
+"In June 2020, the Dash team announced the start of testing of the upcoming "
+"Dash 0.16.0 release. Extensive internal testing has already been done on the"
+" 0.16.0 code, but there are numerous bugs that can only be revealed with "
+"actual use by real people. The Dash team invites anybody who is interested "
+"to download the software and become active on testnet. This release "
+"includes:"
 msgstr ""
+"Nel giugno 2020, il team Dash ha annunciato l'inizio dei test della prossima"
+" versione Dash 0.16.0. Sono già stati effettuati test interni approfonditi "
+"sul codice 0.16.0, ma ci sono numerosi bug che possono essere rivelati solo "
+"con l'uso effettivo da parte di persone reali. Il team Dash invita chiunque "
+"sia interessato a scaricare il software e diventare attivo su testnet. "
+"Questa versione include:"
 
 #: ../../docs/user/developers/testnet.rst:122
 msgid "Block reward reallocation"
-msgstr ""
+msgstr "Riallocazione Block reward"
 
 #: ../../docs/user/developers/testnet.rst:123
 msgid "Core Wallet UI/UX Improvements"
-msgstr ""
+msgstr "Miglioramenti all'interfaccia utente/UX del Core Wallet"
 
 #: ../../docs/user/developers/testnet.rst:124
 msgid "Quorum Signing Optimizations"
-msgstr ""
+msgstr "Ottimizzazioni della firma del quorum"
 
 #: ../../docs/user/developers/testnet.rst:125
 msgid "Network Threading Improvement"
-msgstr ""
+msgstr "Miglioramento del Network Threading"
 
 #: ../../docs/user/developers/testnet.rst:126
 msgid "Minimum Protocol Check"
-msgstr ""
+msgstr "Controllo minimo del protocollo"
 
 #: ../../docs/user/developers/testnet.rst:127
 msgid "Bitcoin 0.16 and 0.17 Backports"
-msgstr ""
+msgstr "Bitcoin 0.16 e 0.17 Backports"
 
 #: ../../docs/user/developers/testnet.rst:129
 #: ../../docs/user/developers/testnet.rst:153
@@ -360,19 +375,22 @@ msgstr ""
 #: ../../docs/user/developers/testnet.rst:237
 #: ../../docs/user/developers/testnet.rst:264
 msgid "Discussion:"
-msgstr ""
+msgstr "Discussione:"
 
 #: ../../docs/user/developers/testnet.rst:131
 msgid ""
 "Testnet announcement: "
 "https://www.dash.org/forum/threads/v0-16-testing.50294/"
 msgstr ""
+"Annuncio Testnet: https://www.dash.org/forum/threads/v0-16-testing.50294/"
 
 #: ../../docs/user/developers/testnet.rst:132
 msgid ""
 "Product brief: https://blog.dash.org/updated-product-brief-dash-core-"
 "release-v0-16-0-d3debdb6242e"
 msgstr ""
+"Descrizione del prodotto: https://blog.dash.org/updated-product-brief-dash-"
+"core-release-v0-16-0-d3debdb6242e"
 
 #: ../../docs/user/developers/testnet.rst:133
 #: ../../docs/user/developers/testnet.rst:157
@@ -381,6 +399,8 @@ msgstr ""
 #: ../../docs/user/developers/testnet.rst:240
 msgid "Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html"
 msgstr ""
+"Strumenti per Testnet: "
+"https://docs.dash.org/en/stable/developers/testnet.html"
 
 #: ../../docs/user/developers/testnet.rst:134
 #: ../../docs/user/developers/testnet.rst:158
@@ -389,7 +409,7 @@ msgstr ""
 #: ../../docs/user/developers/testnet.rst:241
 #: ../../docs/user/developers/testnet.rst:268
 msgid "Issue tracking: https://github.com/dashpay/dash/issues/new"
-msgstr ""
+msgstr "Monitoraggio dei problemi: https://github.com/dashpay/dash/issues/new"
 
 #: ../../docs/user/developers/testnet.rst:136
 #: ../../docs/user/developers/testnet.rst:160
@@ -397,11 +417,11 @@ msgstr ""
 #: ../../docs/user/developers/testnet.rst:214
 #: ../../docs/user/developers/testnet.rst:243
 msgid "Latest test binaries:"
-msgstr ""
+msgstr "Ultimi file binari di test:"
 
 #: ../../docs/user/developers/testnet.rst:138
 msgid "https://github.com/dashpay/dash/releases/tag/v0.16.0.0-rc3"
-msgstr ""
+msgstr "https://github.com/dashpay/dash/releases/tag/v0.16.0.0-rc3"
 
 #: ../../docs/user/developers/testnet.rst:141
 msgid "Testnet 0.15.0"
@@ -410,104 +430,130 @@ msgstr "Testnet 0.15.0"
 #: ../../docs/user/developers/testnet.rst:143
 msgid ""
 "In December 2019, the Dash team announced the start of testing of the "
-"upcoming Dash 0.15.0 release. Extensive internal testing has already been"
-" done on the 0.15.0 code, but there are numerous bugs that can only be "
-"revealed with actual use by real people. The Dash team invites anybody "
-"who is interested to download the software and become active on testnet. "
-"This release includes:"
+"upcoming Dash 0.15.0 release. Extensive internal testing has already been "
+"done on the 0.15.0 code, but there are numerous bugs that can only be "
+"revealed with actual use by real people. The Dash team invites anybody who "
+"is interested to download the software and become active on testnet. This "
+"release includes:"
 msgstr ""
+"A dicembre 2019, il team Dash ha annunciato l'inizio dei test della prossima"
+" versione Dash 0.15.0. Sono già stati effettuati test interni approfonditi "
+"sul codice 0.15.0, ma ci sono numerosi bug che possono essere rivelati solo "
+"con l'uso effettivo da parte di persone reali. Il team Dash invita chiunque "
+"sia interessato a scaricare il software e diventare attivo su testnet. "
+"Questa versione include:"
 
 #: ../../docs/user/developers/testnet.rst:150
 msgid "Bitcoin 0.15 backports"
-msgstr ""
+msgstr "Bitcoin 0.15 backports"
 
 #: ../../docs/user/developers/testnet.rst:151
 msgid "Removal of legacy code"
-msgstr ""
+msgstr "Rimozione del codice legacy"
 
 #: ../../docs/user/developers/testnet.rst:155
 msgid ""
 "Testnet announcement: "
 "https://www.dash.org/forum/threads/v15-0-testing.49140/"
 msgstr ""
+"Annuncio della Testnet: "
+"https://www.dash.org/forum/threads/v15-0-testing.49140/"
 
 #: ../../docs/user/developers/testnet.rst:156
 msgid ""
 "Product brief: https://blog.dash.org/product-brief-dash-core-"
 "release-v0-15-0-acd7633a91ab"
 msgstr ""
+"Descrizione del prodotto: https://blog.dash.org/product-brief-dash-core-"
+"release-v0-15-0-acd7633a91ab"
 
 #: ../../docs/user/developers/testnet.rst:162
 msgid "https://github.com/dashpay/dash/releases/tag/v0.15.0.0-rc4"
-msgstr ""
+msgstr "https://github.com/dashpay/dash/releases/tag/v0.15.0.0-rc4"
 
 #: ../../docs/user/developers/testnet.rst:166
 msgid "Testnet 0.14.0"
-msgstr ""
+msgstr "Testnet 0.14.0"
 
 #: ../../docs/user/developers/testnet.rst:168
 msgid ""
-"In March 2019, the Dash team announced the start of testing of the "
-"upcoming Dash 0.14.0 release. Extensive internal testing has already been"
-" done on the 0.14.0 code, but there are numerous bugs that can only be "
-"revealed with actual use by real people. The Dash team invites anybody "
-"who is interested to download the software and become active on testnet. "
-"This release includes:"
+"In March 2019, the Dash team announced the start of testing of the upcoming "
+"Dash 0.14.0 release. Extensive internal testing has already been done on the"
+" 0.14.0 code, but there are numerous bugs that can only be revealed with "
+"actual use by real people. The Dash team invites anybody who is interested "
+"to download the software and become active on testnet. This release "
+"includes:"
 msgstr ""
+"Nel marzo 2019, il team Dash ha annunciato l'inizio dei test della prossima "
+"versione Dash 0.14.0. Sono già stati effettuati test interni approfonditi "
+"sul codice 0.14.0, ma ci sono numerosi bug che possono essere rivelati solo "
+"con l'effettivo utilizzo da parte di persone reali. Il team Dash invita "
+"chiunque sia interessato a scaricare il software e diventare attivo su "
+"testnet. Questa versione include:"
 
 #: ../../docs/user/developers/testnet.rst:175
 msgid "LLMQ DKGs"
-msgstr ""
+msgstr "LLMQ DKGs"
 
 #: ../../docs/user/developers/testnet.rst:176
 msgid "LLMQ based ChainLocks"
-msgstr ""
+msgstr "LLMQ based ChainLocks"
 
 #: ../../docs/user/developers/testnet.rst:177
 msgid "LLMQ based InstantSend"
-msgstr ""
+msgstr "LLMQ based InstantSend"
 
 #: ../../docs/user/developers/testnet.rst:181
 msgid ""
 "Testnet announcement: "
 "https://www.dash.org/forum/threads/v14-0-testing.44047/"
 msgstr ""
+"Annuncio della Testnet: "
+"https://www.dash.org/forum/threads/v14-0-testing.44047/"
 
 #: ../../docs/user/developers/testnet.rst:182
 msgid ""
 "Product brief: https://blog.dash.org/product-brief-dash-core-"
 "release-v0-14-0-now-on-testnet-8f5f4ad45c96"
 msgstr ""
+"Descrizione del prodotto: https://blog.dash.org/product-brief-dash-core-"
+"release-v0-14-0-now-on-testnet-8f5f4ad45c96"
 
 #: ../../docs/user/developers/testnet.rst:188
 msgid "https://github.com/dashpay/dash/releases/tag/v0.14.0.0-rc6"
-msgstr ""
+msgstr "https://github.com/dashpay/dash/releases/tag/v0.14.0.0-rc6"
 
 #: ../../docs/user/developers/testnet.rst:192
 msgid "Testnet 0.13.0"
-msgstr ""
+msgstr "Testnet 0.13.0"
 
 #: ../../docs/user/developers/testnet.rst:194
 msgid ""
 "In November 2018, the Dash team announced the start of testing of the "
-"upcoming Dash 0.13.0 release. Extensive internal testing has already been"
-" done on the 0.13.0 code, but there are numerous bugs that can only be "
-"revealed with actual use by real people. The Dash team invites anybody "
-"who is interested to download the software and become active on testnet. "
-"This release includes:"
+"upcoming Dash 0.13.0 release. Extensive internal testing has already been "
+"done on the 0.13.0 code, but there are numerous bugs that can only be "
+"revealed with actual use by real people. The Dash team invites anybody who "
+"is interested to download the software and become active on testnet. This "
+"release includes:"
 msgstr ""
+"Nel novembre 2018, il team Dash ha annunciato l'inizio dei test della "
+"prossima versione Dash 0.13.0. Sono già stati effettuati test interni "
+"approfonditi sul codice 0.13.0, ma ci sono numerosi bug che possono essere "
+"rivelati solo con l'uso effettivo da parte di persone reali. Il team Dash "
+"invita chiunque sia interessato a scaricare il software e diventare attivo "
+"su testnet. Questa versione include:"
 
 #: ../../docs/user/developers/testnet.rst:201
 msgid "Automatic InstantSend for Simple Transactions"
-msgstr ""
+msgstr "Invio istantaneo automatico per transazioni semplici"
 
 #: ../../docs/user/developers/testnet.rst:202
 msgid "Deterministic Masternode List"
-msgstr ""
+msgstr "Lista dei Masternode Deterministici"
 
 #: ../../docs/user/developers/testnet.rst:203
 msgid "3 Masternode Keys: Owner, Operator and Voting"
-msgstr ""
+msgstr "3 Chiavi Masternode: Proprietario, Operatore e Votazione"
 
 #: ../../docs/user/developers/testnet.rst:204
 msgid "Special Transactions"
@@ -515,135 +561,164 @@ msgstr "Transazioni Speciali"
 
 #: ../../docs/user/developers/testnet.rst:205
 msgid "PrivateSend Improvements"
-msgstr ""
+msgstr "Miglioramenti di PrivateSend"
 
 #: ../../docs/user/developers/testnet.rst:209
 msgid ""
 "Testnet announcement: "
 "https://www.dash.org/forum/threads/v13-0-testing.41945/"
 msgstr ""
+"Annuncio della Testnet: "
+"https://www.dash.org/forum/threads/v13-0-testing.41945/"
 
 #: ../../docs/user/developers/testnet.rst:210
 msgid ""
 "Product brief: https://blog.dash.org/product-brief-dash-core-"
 "release-v0-13-0-5d7fddffb7ef"
 msgstr ""
+"Descrizione del prodotto: https://blog.dash.org/product-brief-dash-core-"
+"release-v0-13-0-5d7fddffb7ef"
 
 #: ../../docs/user/developers/testnet.rst:216
 msgid "https://github.com/dashpay/dash/releases/tag/v0.13.0.0-rc11"
-msgstr ""
+msgstr "https://github.com/dashpay/dash/releases/tag/v0.13.0.0-rc11"
 
 #: ../../docs/user/developers/testnet.rst:219
 msgid "Testnet 0.12.3"
-msgstr ""
+msgstr "Testnet 0.12.3"
 
 #: ../../docs/user/developers/testnet.rst:221
 msgid ""
-"In June 2018, the Dash team announced the start of testing of the "
-"upcoming Dash 0.12.3 release. Extensive internal testing has already been"
-" done on the 0.12.2 code, but there are numerous bugs that can only be "
-"revealed with actual use by real people. The Dash team invites anybody "
-"who is interested to download the software and become active on testnet. "
-"This release includes:"
+"In June 2018, the Dash team announced the start of testing of the upcoming "
+"Dash 0.12.3 release. Extensive internal testing has already been done on the"
+" 0.12.2 code, but there are numerous bugs that can only be revealed with "
+"actual use by real people. The Dash team invites anybody who is interested "
+"to download the software and become active on testnet. This release "
+"includes:"
 msgstr ""
+"Nel giugno 2018, il team Dash ha annunciato l'inizio dei test della prossima"
+" versione Dash 0.12.3. Sono già stati effettuati test interni approfonditi "
+"sul codice 0.12.2, ma ci sono numerosi bug che possono essere rivelati solo "
+"con l'effettivo utilizzo da parte di persone reali. Il team Dash invita "
+"chiunque sia interessato a scaricare il software e diventare attivo su "
+"testnet. Questa versione include:"
 
 #: ../../docs/user/developers/testnet.rst:228
 msgid ""
 "Named Devnets, to help developers quickly create multiple independent "
 "devnets"
 msgstr ""
+"Devnet denominati, per aiutare gli sviluppatori a creare rapidamente più "
+"devnet indipendenti"
 
 #: ../../docs/user/developers/testnet.rst:230
 msgid "New format of network message signatures"
-msgstr ""
+msgstr "Nuovo formato delle firme dei messaggi di rete"
 
 #: ../../docs/user/developers/testnet.rst:231
 msgid "Governance system improvements"
-msgstr ""
+msgstr "Miglioramenti del sistema di governance"
 
 #: ../../docs/user/developers/testnet.rst:232
 msgid "PrivateSend improvements"
-msgstr ""
+msgstr "Miglioramenti di PrivateSend"
 
 #: ../../docs/user/developers/testnet.rst:233
 msgid "Additional indexes cover P2PK now"
-msgstr ""
+msgstr "Gli indici aggiuntivi ora coprono P2PK"
 
 #: ../../docs/user/developers/testnet.rst:234
 msgid "Support for pruned nodes in Lite Mode"
-msgstr ""
+msgstr "Supporto per nodi potati in modalità Lite"
 
 #: ../../docs/user/developers/testnet.rst:235
 msgid "New Masternode Information Dialog"
-msgstr ""
+msgstr "Nuova finestra di dialogo delle informazioni sul Masternode"
 
 #: ../../docs/user/developers/testnet.rst:239
 msgid "https://www.dash.org/forum/threads/v12-3-testing.38475/"
-msgstr ""
+msgstr "https://www.dash.org/forum/threads/v12-3-testing.38475/"
 
 #: ../../docs/user/developers/testnet.rst:245
 msgid "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
-msgstr ""
+msgstr "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
 
 #: ../../docs/user/developers/testnet.rst:249
 msgid "Testnet 0.12.2"
-msgstr ""
+msgstr "Testnet 0.12.2"
 
 #: ../../docs/user/developers/testnet.rst:251
 msgid ""
-"In October 2017, the Dash team announced the launch of a testnet for "
-"public testing of the upcoming 0.12.2 release of the Dash software. "
-"Extensive internal testing has already been done on the 0.12.2 code, but "
-"there are numerous bugs that can only be revealed with actual use by real"
-" people. The Dash team invites anybody who is interested to download the "
-"software and become active on testnet. This release includes:"
+"In October 2017, the Dash team announced the launch of a testnet for public "
+"testing of the upcoming 0.12.2 release of the Dash software. Extensive "
+"internal testing has already been done on the 0.12.2 code, but there are "
+"numerous bugs that can only be revealed with actual use by real people. The "
+"Dash team invites anybody who is interested to download the software and "
+"become active on testnet. This release includes:"
 msgstr ""
+"Nell'ottobre 2017, il team Dash ha annunciato il lancio di un testnet per "
+"testare pubblicamente la prossima versione 0.12.2 del software Dash. Sono "
+"già stati effettuati test interni approfonditi sul codice 0.12.2, ma ci sono"
+" numerosi bug che possono essere rivelati solo con l'effettivo utilizzo da "
+"parte di persone reali. Il team Dash invita chiunque sia interessato a "
+"scaricare il software e diventare attivo su testnet. Questa versione "
+"include:"
 
 #: ../../docs/user/developers/testnet.rst:258
 msgid ""
 "DIP0001 implementation "
 "https://github.com/dashpay/dips/blob/master/dip-0001.md"
 msgstr ""
+"Implementazione DIP0001 "
+"https://github.com/dashpay/dips/blob/master/dip-0001.md"
 
 #: ../../docs/user/developers/testnet.rst:259
 msgid "10x transaction fee reduction (including InstantSend fee)"
 msgstr ""
+"Riduzione di 10x delle commissioni di transazione (inclusa la commissione "
+"InstantSend)"
 
 #: ../../docs/user/developers/testnet.rst:260
 msgid "InstantSend vulnerability fix"
-msgstr ""
+msgstr "Correzione della vulnerabilità InstantSend"
 
 #: ../../docs/user/developers/testnet.rst:261
 msgid "Lots of other bug fixes and performance improvements"
-msgstr ""
+msgstr "Molte altre correzioni di bug e miglioramenti delle prestazioni"
 
 #: ../../docs/user/developers/testnet.rst:262
 msgid ""
-"Experimental BIP39/BIP44 complaint HD wallet (disabled by default, should"
-" be fully functional but there is no GUI yet)"
+"Experimental BIP39/BIP44 complaint HD wallet (disabled by default, should be"
+" fully functional but there is no GUI yet)"
 msgstr ""
+"Wallet HD sperimentale con reclamo BIP39/BIP44 (disabilitato per "
+"impostazione predefinita, dovrebbe essere completamente funzionante ma non è"
+" ancora disponibile la GUI)"
 
 #: ../../docs/user/developers/testnet.rst:266
 msgid ""
 "Testnet 12.2 discussion: "
 "https://www.dash.org/forum/threads/v12-2-testing.17412/"
 msgstr ""
+"Discussione Testnet 12.2: "
+"https://www.dash.org/forum/threads/v12-2-testing.17412/"
 
 #: ../../docs/user/developers/testnet.rst:267
 msgid ""
 "Testnet tools: https://www.dash.org/forum/threads/testnet-tools-"
 "resources.1768/"
 msgstr ""
+"Strumenti di testnet: https://www.dash.org/forum/threads/testnet-tools-"
+"resources.1768/"
 
 #: ../../docs/user/developers/testnet.rst:270
 msgid "Latest successfully built develop branch binaries:"
-msgstr ""
+msgstr "Gli ultimi binari di branch sviluppati con successo:"
 
 #: ../../docs/user/developers/testnet.rst:272
 msgid "Dash Core: https://gitlab.com/dashpay/dash/pipelines"
-msgstr ""
+msgstr "Dash Core: https://gitlab.com/dashpay/dash/pipelines"
 
 #: ../../docs/user/developers/testnet.rst:273
 msgid "Sentinel: https://github.com/dashpay/sentinel/tree/develop"
-msgstr ""
-
+msgstr "Sentinel: https://github.com/dashpay/sentinel/tree/develop"

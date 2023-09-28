@@ -1,33 +1,37 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dash Italia, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:56+0000\n"
-"Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
+"Last-Translator: Dash Italia, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/mining/p2pool.rst:1
+#: ../../docs/user/mining/p2pool.rst-1
 msgid "Guide to setting up a Dash P2Pool node"
-msgstr ""
+msgstr "Guida alla configurazione di un nodo Dash P2Pool"
 
-#: ../../docs/user/mining/p2pool.rst:1
+#: ../../docs/user/mining/p2pool.rst-1
 msgid "dash, mining, X11, p2pool, node, pool, software, ASIC, mining pool"
-msgstr ""
+msgstr "dash, mining, X11, p2pool, node, pool, software, ASIC, mining pool"
 
 #: ../../docs/user/mining/p2pool.rst:9
 msgid "P2Pool Node Setup"
-msgstr ""
+msgstr "Configurazione del nodo P2Pool"
 
 #: ../../docs/user/mining/p2pool.rst:11
 msgid ""
@@ -45,6 +49,20 @@ msgid ""
 "GitHub, which is a fork of p2pool for Bitcoin. For more information, see "
 "`here <https://en.bitcoin.it/wiki/P2Pool>`__."
 msgstr ""
+"Questa guida descrive come configurare un nodo Dash P2Pool per gestire un "
+"pool di miner. A differenza delle mining pool centralizzate, P2Pool si basa "
+"sullo stesso modello peer-2-peer (P2P) di Dash, rendendo il pool nel suo "
+"insieme altamente resistente agli attacchi dannosi e preservando e "
+"proteggendo la natura decentralizzata di Dash. Quando avvii un nodo P2Pool, "
+"cerca, si connette e condivide i dati con una rete decentralizzata di altri "
+"nodi P2Pool (noti anche come peer). I nodi P2Pool condividono una catena "
+"crittografica di dati che rappresentano valore, simile alla blockchain di "
+"Dash. La versione P2Pool si chiama sharechain. La natura decentralizzata ed "
+"equa di questo modello di mining fa sì che il mining con P2Pool sia "
+"fortemente incoraggiato. P2Pool per Dash utilizza il software `p2pool-dash "
+"<https://github.com/dashpay/p2pool-dash>`_ su GitHub, che è un fork di "
+"p2pool per Bitcoin. Per maggiori informazioni vedi `qui "
+"<https://it.bitcoin.it/wiki/P2Pool>`__."
 
 #: ../../docs/user/mining/p2pool.rst:26
 msgid ""
@@ -59,6 +77,18 @@ msgid ""
 "in a data center with a high speed connection so geographically close miners"
 " can mine to your pool with relatively low latency."
 msgstr ""
+"A causa del modo in cui P2Pool gestisce gli aggiustamenti della difficoltà "
+"sulla catena azionaria, è importante mantenere una bassa latenza tra i miner"
+" e il nodo P2Pool per evitare che i miner inviino le azioni troppo tardi per"
+" entrare nella catena azionaria. Quando configuri il tuo nodo, devi "
+"considerare la sua posizione fisica e di rete rispetto ai minatori che "
+"intendi connettere al nodo. Se gestisci una mining farm, il tuo nodo P2Pool "
+"dovrebbe probabilmente essere una macchina fisica sulla stessa rete locale "
+"dei tuoi miner. Se prevedi di gestire un nodo pubblico, potrebbe essere "
+"meglio configurare il tuo nodo P2Pool come una macchina virtuale in un data "
+"center con una connessione ad alta velocità in modo che i miner "
+"geograficamente vicini possano estrarre nel tuo pool con una latenza "
+"relativamente bassa."
 
 #: ../../docs/user/mining/p2pool.rst:38
 msgid ""
@@ -68,10 +98,15 @@ msgid ""
 "possible to modify the instructions slightly to support different versions "
 "or operating systems as necessary."
 msgstr ""
+"La sezione seguente descrive i passaggi per configurare un server Ubuntu che"
+" esegue P2Pool per Dash. È stato testato con Ubuntu 20.04 LTS e Dash 0.16. "
+"Anche se verrà fatto uno sforzo ragionevole per mantenerlo aggiornato, "
+"dovrebbe essere possibile modificare leggermente le istruzioni per "
+"supportare versioni o sistemi operativi diversi, se necessario."
 
 #: ../../docs/user/mining/p2pool.rst:45
 msgid "Setting up the host server"
-msgstr ""
+msgstr "Configurazione del server host"
 
 #: ../../docs/user/mining/p2pool.rst:47
 msgid ""
@@ -85,6 +120,16 @@ msgid ""
 "already done so using the following command, replacing ``<username>`` with a"
 " username of your choice::"
 msgstr ""
+"Scarica una copia di Ubuntu Server LTS da https://ubuntu.com/download/server"
+" e installala sul tuo sistema seguendo i passaggi descritti `qui "
+"<https://ubuntu.com/tutorials/install-ubuntu-server>` __. Se utilizzi un VPS"
+" come Vultr o AWS, molto probabilmente il tuo provider fornirà un'opzione "
+"per installare questo sistema durante il provisioning. Assicurati di "
+"abilitare il server OpenSSH durante la configurazione in modo da poter "
+"controllare il server da una console remota. Una volta ottenuto l'accesso al"
+" tuo server, crea un nuovo utente non root se non lo hai già fatto "
+"utilizzando il comando seguente, sostituendo ``<username>`` con un nome "
+"utente a tua scelta::"
 
 #: ../../docs/user/mining/p2pool.rst:60
 msgid ""
@@ -94,6 +139,11 @@ msgid ""
 "user has been created, we will add them to the sudo group so they can "
 "perform commands as root::"
 msgstr ""
+"Ti verrà richiesta una password. Inserisci e conferma utilizzando una nuova "
+"password (diversa dalla password di root) e conservala in un luogo sicuro. "
+"Verranno inoltre visualizzate le richieste per le informazioni sull'utente, "
+"ma è possibile lasciarlo vuoto. Una volta creato l'utente, lo aggiungeremo "
+"al gruppo sudo in modo che possa eseguire comandi come root::"
 
 #: ../../docs/user/mining/p2pool.rst:68
 msgid ""
@@ -102,10 +152,14 @@ msgid ""
 "<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_ (for "
 "Windows) or ssh (for Linux and macOS) if you have not already done so."
 msgstr ""
+"Riavvia il server e accedi come nuovo utente. A questo punto è consigliato "
+"connettersi da remoto utilizzando `PuTTY "
+"<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_ (per "
+"Windows) o ssh (per Linux e macOS) se non lo hai già fatto."
 
 #: ../../docs/user/mining/p2pool.rst:74
 msgid "Setting up port forwarding"
-msgstr ""
+msgstr "Configurazione delle port forwarding"
 
 #: ../../docs/user/mining/p2pool.rst:76
 msgid ""
@@ -120,28 +174,41 @@ msgid ""
 "<https://www.noip.com/support/knowledgebase/general-port-forwarding-"
 "guide/>`__."
 msgstr ""
+"Se ti trovi su una rete privata dietro un router, dovrai impostare il port "
+"forwarding almeno per la porta 8999 (UDP/TCP) per l'accesso alla sharechain,"
+" così come per la porta 7903 (UDP/TCP) se vuoi che il tuo nodo essere "
+"accessibili al pubblico. Il modo in cui ciò viene eseguito dipende dal "
+"router di rete specifico e pertanto va oltre lo scopo di questa "
+"documentazione. Di seguito è mostrato un esempio tratto dalla popolare "
+"distribuzione di router open source DD-WRT. Le guide per la configurazione "
+"del port forwarding possono essere trovate `qui "
+"<https://www.wikihow.com/Set-Up-Port-Forwarding-on-a-Router>`__ e `qui "
+"<https://www.noip. com/support/knowledgebase/general-port-forwarding-"
+"guide/>`__."
 
 #: ../../docs/user/mining/p2pool.rst:86
 msgid ""
 "Take note of your IP address either from your router management interface or"
 " by visiting https://www.whatismyip.com"
 msgstr ""
+"Prendi nota del tuo indirizzo IP dall'interfaccia di gestione del router o "
+"visitando https://www.whatismyip.com"
 
 #: ../../docs/user/mining/p2pool.rst:92
 msgid "Setting up port forwarding under DD-WRT"
-msgstr ""
+msgstr "Configurazione delle port forwarding in DD-WRT"
 
 #: ../../docs/user/mining/p2pool.rst:95
 msgid "Manual setup"
-msgstr ""
+msgstr "Configurazione manuale"
 
 #: ../../docs/user/mining/p2pool.rst:97
 msgid "First update your operating system as follows::"
-msgstr ""
+msgstr "Per prima cosa aggiorna il tuo sistema operativo come segue:"
 
 #: ../../docs/user/mining/p2pool.rst:103
 msgid "Setting up dashd"
-msgstr ""
+msgstr "Configurazione di dashd"
 
 #: ../../docs/user/mining/p2pool.rst:105
 msgid ""
@@ -153,6 +220,15 @@ msgid ""
 "following command, pasting in the address to the latest version of Dash Core"
 " by right clicking or pressing **Ctrl + V**::"
 msgstr ""
+"P2Pool richiede l'esecuzione di un nodo Dash completo per ottenere i dati "
+"sui blocchi e sulle transazioni. Per scaricare e installare Dash, visita "
+"https://www.dash.org/downloads/ sul tuo computer per trovare il collegamento"
+" all'ultimo wallet Dash Core. Fai clic su **Linux**, quindi fai clic con il "
+"pulsante destro del mouse su **Scarica TGZ** per **Dash Core x64** e "
+"seleziona **Copia indirizzo collegamento**. Torna alla finestra del "
+"terminale e inserisci il comando seguente, incollando l'indirizzo "
+"dell'ultima versione di Dash Core facendo clic con il pulsante destro del "
+"mouse o premendo **Ctrl + V**::"
 
 #: ../../docs/user/mining/p2pool.rst:117
 msgid ""
@@ -160,32 +236,42 @@ msgid ""
 "against the public key published by the Dash Core development team. All "
 "releases of Dash are signed using GPG with one of the following keys:"
 msgstr ""
+"Verifica l'autenticità del tuo download controllando la sua firma staccata "
+"rispetto alla chiave pubblica pubblicata dal team di sviluppo di Dash Core. "
+"Tutte le versioni di Dash sono firmate utilizzando GPG con una delle "
+"seguenti chiavi:"
 
 #: ../../docs/user/mining/p2pool.rst:122
 msgid ""
 "Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, "
 "`verifiable here on Keybase <https://keybase.io/codablock>`__"
 msgstr ""
+"Alexander Block (codablock) con la chiave ``63A9 6B40 6102 E091``, "
+"`verificabile qui su Keybase <https://keybase.io/codablock>`__"
 
 #: ../../docs/user/mining/p2pool.rst:124
 msgid ""
 "Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here on "
 "Keybase <https://keybase.io/pasta>`__"
 msgstr ""
+"Pasta (pasta) con la chiave ``5252 7BED ABE8 7984``, `verificabile qui su "
+"Keybase <https://keybase.io/pasta>`__"
 
 #: ../../docs/user/mining/p2pool.rst:134
 msgid ""
 "Create a working directory for Dash, extract the compressed archive, copy "
 "the necessary files to the directory and set them as executable::"
 msgstr ""
+"Crea una directory di lavoro per Dash, estrai l'archivio compresso, copia i "
+"file necessari nella directory e impostali come eseguibili::"
 
 #: ../../docs/user/mining/p2pool.rst:142
 msgid "Clean up unneeded files::"
-msgstr ""
+msgstr "Pulisci i file non necessari::"
 
 #: ../../docs/user/mining/p2pool.rst:147
 msgid "Create a configuration file using the following command::"
-msgstr ""
+msgstr "Crea un file di configurazione utilizzando il seguente comando::"
 
 #: ../../docs/user/mining/p2pool.rst:151
 msgid ""
@@ -194,30 +280,38 @@ msgid ""
 "started, then replace the variables specific to your configuration as "
 "follows::"
 msgstr ""
+"Apparirà una finestra dell'editor. Ora dobbiamo creare un file di "
+"configurazione specificando diverse variabili. Copia e incolla il seguente "
+"testo per iniziare, quindi sostituisci le variabili specifiche della tua "
+"configurazione come segue:"
 
 #: ../../docs/user/mining/p2pool.rst:168
 msgid "Replace the fields marked with ``XXXXXXX`` as follows:"
-msgstr ""
+msgstr "Sostituisci i campi contrassegnati con ``XXXXXXX`` come segue:"
 
 #: ../../docs/user/mining/p2pool.rst:170
 msgid ""
 "``rpcuser``: enter any string of numbers or letters, no special characters "
 "allowed"
 msgstr ""
+"``rpcuser``: inserisci qualsiasi stringa di numeri o lettere, non sono "
+"ammessi caratteri speciali"
 
 #: ../../docs/user/mining/p2pool.rst:172
 msgid ""
 "``rpcpassword``: enter any string of numbers or letters, no special "
 "characters allowed"
 msgstr ""
+"``rpcpassword``: inserisci qualsiasi stringa di numeri o lettere, non sono "
+"ammessi caratteri speciali"
 
 #: ../../docs/user/mining/p2pool.rst:175
 msgid "The result should look something like this:"
-msgstr ""
+msgstr "Il risultato dovrebbe assomigliare a questo:"
 
 #: ../../docs/user/mining/p2pool.rst:180
 msgid "Entering key data in dash.conf on the P2Pool node"
-msgstr ""
+msgstr "Immissione dei dati chiave in dash.conf sul nodo P2Pool"
 
 #: ../../docs/user/mining/p2pool.rst:182
 msgid ""
@@ -225,6 +319,9 @@ msgid ""
 "file. You can now start running Dash on the masternode to begin "
 "synchronization with the blockchain::"
 msgstr ""
+"Premi **Ctrl + X** per chiudere l'editor e **Y** e **Invio** salvano il "
+"file. Ora puoi iniziare a eseguire Dash sul masternode per iniziare la "
+"sincronizzazione con la blockchain::"
 
 #: ../../docs/user/mining/p2pool.rst:188
 msgid ""
@@ -235,55 +332,72 @@ msgid ""
 "as can be seen from any synchronized Dash wallet or `block explorer "
 "<https://insight.dash.org/insight/>`_::"
 msgstr ""
+"Verrà visualizzato il messaggio **Server Dash Core in avvio**. È possibile "
+"continuare con i passaggi seguenti e verificare periodicamente la "
+"sincronizzazione utilizzando il comando seguente. La sincronizzazione è "
+"completa quando il numero di ``blocchi`` è uguale al numero attuale di "
+"blocchi nella blockchain di Dash, come si può vedere da qualsiasi wallet "
+"Dash sincronizzato o `block explorer <https://insight.dash.org/insight "
+"/>`_::"
 
 #: ../../docs/user/mining/p2pool.rst:198
 msgid "Setting up P2Pool"
-msgstr ""
+msgstr "Configurazione di P2Pool"
 
 #: ../../docs/user/mining/p2pool.rst:200
 msgid ""
 "We will now set up the P2Pool software and its dependencies. Begin with the "
 "dependencies::"
 msgstr ""
+"Ora configureremo il software P2Pool e le sue dipendenze. Inizia con le "
+"dipendenze::"
 
 #: ../../docs/user/mining/p2pool.rst:208
 msgid "Create working directories and set up p2pool-dash::"
-msgstr ""
+msgstr "Crea directory di lavoro e configura p2pool-dash::"
 
 #: ../../docs/user/mining/p2pool.rst:216
 msgid "We will add some optional extra interfaces to the control panel::"
 msgstr ""
+"Aggiungeremo alcune interfacce extra opzionali al pannello di controllo:"
 
 #: ../../docs/user/mining/p2pool.rst:226
 msgid ""
 "You can now start p2pool and optionally specify the payout address, external"
 " IP (if necessary), fee and donation as follows::"
 msgstr ""
+"Ora puoi avviare p2pool e facoltativamente specificare l'indirizzo di "
+"pagamento, l'IP esterno (se necessario), la tariffa e la donazione come "
+"segue:"
 
 #: ../../docs/user/mining/p2pool.rst:231
 msgid ""
 "You can then monitor your node by browsing to the following addresses, "
 "replacing ``<ip_address>`` with the IP address of your P2Pool node:"
 msgstr ""
+"Potrai quindi monitorare il tuo nodo navigando ai seguenti indirizzi, "
+"sostituendo ``<ip_address>`` con l'indirizzo IP del tuo nodo P2Pool:"
 
 #: ../../docs/user/mining/p2pool.rst:234
 msgid "Punchy interface: http://ip_address:7903/static"
-msgstr ""
+msgstr "Interfaccia incisiva: http://ip_address:7903/static"
 
 #: ../../docs/user/mining/p2pool.rst:235
 msgid "Legacy interface: http://ip_address:7903/static/legacy"
-msgstr ""
+msgstr "Interfaccia legacy: http://indirizzo_ip:7903/static/legacy"
 
 #: ../../docs/user/mining/p2pool.rst:236
 msgid "Status interface: http://ip_address:7903/static/status"
-msgstr ""
+msgstr "Status interfaccia: http://ip_address:7903/static/status"
 
 #: ../../docs/user/mining/p2pool.rst:237
 msgid "Extended interface: http://ip_address:7903/static/ext"
-msgstr ""
+msgstr "Interfaccia estesa: http://ip_address:7903/static/ext"
 
 #: ../../docs/user/mining/p2pool.rst:245
 msgid ""
 "Example configuration showing a single Bitmain Antminer D3 connected to a "
 "p2pool-dash node on the local network"
 msgstr ""
+"Configurazione di esempio che mostra un singolo Bitmain Antminer D3 connesso"
+" a un nodo p2pool-dash sulla rete locale"

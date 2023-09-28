@@ -1,42 +1,47 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # William Lotta <williamlotta@gmail.com>, 2022
 # AL <mediterraneo9000@gmail.com>, 2022
+# Dash Italia, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
-"Last-Translator: AL <mediterraneo9000@gmail.com>, 2022\n"
-"Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
+"Last-Translator: Dash Italia, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/wallets/electrum/advanced.rst:1
+#: ../../docs/user/wallets/electrum/advanced.rst-1
 msgid ""
 "Masternodes, multisig, sweeping paper wallets, cold storage and command line"
 " in the Dash Electrum wallet."
 msgstr ""
+"Masternode, multisig, paper wallet, cold storage e riga di comando nel "
+"wallet Dash Electrum."
 
-#: ../../docs/user/wallets/electrum/advanced.rst:1
+#: ../../docs/user/wallets/electrum/advanced.rst-1
 msgid ""
 "dash, wallet, electrum, masternode, multisig, paper, cold storage, command "
 "line"
 msgstr ""
+"dash, wallet, electrum, masternode, multisig, paper, cold storage, linea di "
+"comando"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:9
 msgid "Advanced functions"
-msgstr ""
+msgstr "Funzioni avanzate"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:11
 msgid ""
@@ -47,44 +52,61 @@ msgid ""
 "details on other advanced functions in Electrum for both Bitcoin and Dash, "
 "please click the links below."
 msgstr ""
+"Dash Electrum è basato su `Electrum <https://electrum.org>`_, un portafoglio"
+" Bitcoin. La maggior parte delle funzioni sono identiche, il che significa "
+"che non è necessario riprodurre qui l'intera documentazione di Electrum. Le "
+"sezioni seguenti descrivono alcune funzioni avanzate utilizzate di "
+"frequente. Per ulteriori dettagli su altre funzioni avanzate di Electrum sia"
+" per Bitcoin che per Dash, fai clic sui collegamenti seguenti."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:18
 msgid "`Electrum documentation <https://docs.electrum.org>`_"
-msgstr ""
+msgstr "`Electrum documentazione <https://docs.electrum.org>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:19
 msgid ""
 "`Electrum seed version system "
 "<https://docs.electrum.org/en/latest/seedphrase.html>`_"
 msgstr ""
+"`Seed di Electrum versioni di sistema "
+"<https://docs.electrum.org/en/latest/seedphrase.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:20
 msgid ""
 "`Electrum protocol specification "
 "<https://docs.electrum.org/en/latest/protocol.html>`_"
 msgstr ""
+"`Specifica del protocollo Electrum "
+"<https://docs.electrum.org/en/latest/protocol.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:21
 msgid ""
 "`Serialization of unsigned or partially signed transactions "
 "<https://docs.electrum.org/en/latest/transactions.html>`_"
 msgstr ""
+"`Serializzazione di transazioni non firmate o parzialmente firmate "
+"<https://docs.electrum.org/en/latest/transactions.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:22
 msgid ""
 "`Simple Payment Verification "
 "<https://docs.electrum.org/en/latest/spv.html>`_"
 msgstr ""
+"`Verifica semplice dei pagamenti "
+"<https://docs.electrum.org/en/latest/spv.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:23
 msgid ""
 "`The Python Console <https://docs.electrum.org/en/latest/console.html>`_"
 msgstr ""
+"`Console di Python <https://docs.electrum.org/en/latest/console.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:24
 msgid ""
 "`Using Electrum Through Tor <https://docs.electrum.org/en/latest/tor.html>`_"
 msgstr ""
+"`Utilizzo di Electrum tramite Tor "
+"<https://docs.electrum.org/en/latest/tor.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:27
 msgid "PrivateSend"
@@ -98,10 +120,16 @@ msgid ""
 "PrivateSend is available in Dash Electrum versions 3.3.8.3 and higher, with "
 "support for hardware wallets added in 3.3.8.7."
 msgstr ""
+":ref:`PrivateSend ` offre agli utenti una maggiore privacy durante la "
+"creazione di transazioni suddividendo il saldo dell'utente in un numero di "
+"denominazioni predefinite prima della spesa. Questo processo è noto come "
+"CoinJoin. PrivateSend è disponibile nelle versioni Dash Electrum 3.3.8.3 e "
+"successive, con il supporto per i portafogli hardware aggiunto nella "
+"3.3.8.7."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:36
 msgid "Processing and sending"
-msgstr ""
+msgstr "Elaborazione e invio"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:38
 msgid ""
@@ -109,10 +137,13 @@ msgid ""
 "PrivateSend** or click the **PS** icon in the lower right corner of the main"
 " window. The following window appears:"
 msgstr ""
+"Per avviare l'elaborazione di PrivateSend in Dash Electrum, seleziona "
+"**Wallet > PrivateSend** o fai clic sull'icona **PS** nell'angolo in basso a"
+" destra della finestra principale. Viene visualizzata la seguente finestra:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:45
 msgid "PrivateSend dialog in Dash Electrum"
-msgstr ""
+msgstr "Finestra di dialogo PrivateSend in Dash Electrum"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:47
 msgid ""
@@ -122,6 +153,12 @@ msgid ""
 " shows the completion progress. Additional information on the process is "
 "available on the **Info** and **Log** tabs."
 msgstr ""
+"Inserisci la **Quantità di Dash da mantenere anonimo** e il numero di "
+"**Round di PrivateSend da utilizzare**. Quindi fai clic su **Abilita "
+"PrivateSend**, seguito da **Avvia mixaggio**. Il processo avrà inizio e la "
+"barra **Avanzamento del mixaggio** mostrerà l'avanzamento del completamento."
+" Ulteriori informazioni sul processo sono disponibili nelle schede "
+"**Informazioni** e **Registro**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:53
 msgid ""
@@ -129,16 +166,23 @@ msgid ""
 "the **Send** tab before sending your transaction. Dash Electrum will only "
 "use Dash processed according to your specifications for the transaction."
 msgstr ""
+"Una volta completata l'elaborazione, seleziona semplicemente la casella di "
+"controllo **PrivateSend** nella scheda **Invia** prima di inviare la "
+"transazione. Dash Electrum utilizzerà solo Dash elaborato in base alle tue "
+"specifiche per la transazione."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:59
 msgid "Hardware Wallets"
-msgstr ""
+msgstr "Hardware Wallet"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:61
 msgid ""
 "You can use hardware wallets with Dash Electrum. Under Linux, it may be "
 "necessary to first install dependencies and udev rules as follows::"
 msgstr ""
+"Puoi utilizzare i wallet hardware con Dash Electrum. Sotto Linux, potrebbe "
+"essere necessario installare prima le dipendenze e le regole udev come "
+"segue:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:67
 msgid ""
@@ -149,6 +193,12 @@ msgid ""
 "begin. You can then spend the processed Dash, or send it back to your "
 "hardware wallet."
 msgstr ""
+"È supportata anche l'elaborazione PrivateSend. L'avvio dell'elaborazione di "
+"PrivateSend in Dash Electrum con un wallet hardware genererà un nuovo wallet"
+" HD e un mnemonico per il keystore PrivateSend. Verrà creata una transazione"
+" dal wallet hardware a un indirizzo in questo archivio di chiavi e inizierà "
+"l'elaborazione. Puoi quindi spendere il Dash elaborato o rispedirlo al tuo "
+"wallet hardware."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:77
 msgid "Masternodes"
@@ -157,10 +207,12 @@ msgstr "Masternodes"
 #: ../../docs/user/wallets/electrum/advanced.rst:79
 msgid "Dash Electrum supports masternode creation through the **DIP3** tab."
 msgstr ""
+"Dash Electrum supporta la creazione di masternode tramite la scheda "
+"**DIP3**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:82
 msgid "DIP3"
-msgstr ""
+msgstr "DIP3"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:84
 msgid ""
@@ -168,45 +220,52 @@ msgid ""
 "displays the status of your masternode(s) and also allows viewing a list of "
 "all registered masternodes on the network."
 msgstr ""
+"La scheda DIP3 può essere abilitata tramite il menu **Visualizza > Mostra "
+"DIP3**. Questa scheda mostra lo stato dei tuoi masternodi e consente anche "
+"di visualizzare un elenco di tutti i masternodi registrati sulla rete."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:88
 msgid ""
 "The tab displays the following data about each masternode you have set up:"
 msgstr ""
+"La scheda mostra i seguenti dati su ciascun masternode che hai impostato:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:90
 msgid "The alias (name) of the masternode."
-msgstr ""
+msgstr "L'alias (nome) del masternode."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:91
 msgid "The state of the masternode (e.g. whether it has been activated)."
-msgstr ""
+msgstr "Lo stato del masternode (ad esempio se è stato attivato)."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:92
 msgid "The keys"
-msgstr ""
+msgstr "Le chiavi"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:93
 msgid "The Provider Registration transaction hash of the masternode."
 msgstr ""
+"L'hash della transazione di registrazione del provider del masternode."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:94
 msgid "The IP address and port that your masternode can be reached at."
-msgstr ""
+msgstr "L'indirizzo IP e la porta a cui è raggiungibile il tuo masternode."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:99
 msgid "DIP3 tab with masternode information"
-msgstr ""
+msgstr "Scheda DIP3 con informazioni sul masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:102
 msgid "Masternode setup"
-msgstr ""
+msgstr "Configurazione del masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:104
 msgid ""
 "To setup a masternode, navigate to the DIP3 tab and click the **Add/Import**"
 " button."
 msgstr ""
+"Per impostare un masternode, vai alla scheda DIP3 e fai clic sul pulsante "
+"**Aggiungi/Importa**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:109
 msgid ""
@@ -217,16 +276,24 @@ msgid ""
 " for the Dash Electrum documentation demonstrating how to configure a "
 "masternode using a multisig collateral."
 msgstr ""
+"Se combinato con le :ref:`funzionalità multisig <electrum-multisig>` di "
+"Electrum, il collaterale masternode può essere archiviato in un wallet "
+"multisig per una maggiore flessibilità di sicurezza. Vedi `questa pagina "
+"<https://github.com/dashpay/docs/blob/master/wallets/electrum/dip3_p2sh_howto.md>`_"
+" per la documentazione di Dash Electrum che dimostra come configurare un "
+"masternode utilizzando un collaterale multisig."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:116
 msgid ""
 "**Always exercise caution when using multisig accounts and verify that each "
 "mnemonic is backed up appropriately.**"
 msgstr ""
+"**Prestare sempre attenzione quando si utilizzano account multisig e "
+"verificare che venga eseguito il backup appropriato di ogni mnemonico.**"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:122
 msgid "Add or import masternode"
-msgstr ""
+msgstr "Aggiungi o importa masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:124
 msgid ""
@@ -235,6 +302,11 @@ msgid ""
 "point very few legacy masternodes are present, so only the **Create and "
 "register DIP3 Masternode** option will be covered in detail."
 msgstr ""
+"Electrum supporta la creazione/registrazione di nuovi masternode nonché "
+"l'importazione e la registrazione di masternode legacy tramite un file "
+"``masternode.conf``. A questo punto sono presenti pochissimi masternode "
+"legacy, quindi solo l'opzione **Crea e registra DIP3 Masternode** verrà "
+"trattata in dettaglio."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:129
 msgid ""
@@ -244,10 +316,16 @@ msgid ""
 "hosted masternode so both ownership type checkboxes are selected. Click "
 "**Next** to continue."
 msgstr ""
+"Sono disponibili due tipi di proprietà supportati: solo proprietario e "
+"proprietario/operatore. La differenza principale durante la configurazione è"
+" se la chiave privata BLS dell'operatore è archiviata o meno in Electrum. I "
+"passaggi seguenti mostrano la creazione di un masternode self-hosted in modo"
+" che entrambe le caselle di controllo del tipo di proprietà siano "
+"selezionate. Fare clic su **Avanti** per continuare."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:138
 msgid "Select operation type and ownership properties"
-msgstr ""
+msgstr "Seleziona il tipo di operazione e le proprietà dei proprietari"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:140
 msgid ""
@@ -255,10 +333,13 @@ msgid ""
 "fees available in your wallet. Leave **Create collateral as ProRegTx "
 "output** checked and click **Next**."
 msgstr ""
+"Per avviare un masternode, devi avere 1000 DASH più una piccola somma per le"
+" commissioni disponibili nel tuo wallet. Lascia selezionato **Crea materiale"
+" collaterale come output ProRegTx** e fai clic su **Avanti**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:147
 msgid "Select collateral output for masternode"
-msgstr ""
+msgstr "Seleziona l'output collaterale per masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:149
 msgid ""
@@ -267,10 +348,14 @@ msgid ""
 "entering them (the port will be set to the default mainnet port of 9999 "
 "automatically)."
 msgstr ""
+"Sono necessarie alcune informazioni sul tuo masternode. È necessario fornire"
+" l'indirizzo IP e la porta utilizzati dal masternode. Fare clic su "
+"**Avanti** dopo averli inseriti (la porta verrà impostata automaticamente "
+"sulla porta mainnet predefinita 9999)."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:156
 msgid "Enter masternode IP address and port"
-msgstr ""
+msgstr "Inserisci l'indirizzo IP e la porta del masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:158
 msgid ""
@@ -278,10 +363,15 @@ msgid ""
 "Electrum will automatically select addresses from your wallet. Click "
 "**Next** to continue."
 msgstr ""
+"Ogni masternode richiede tre indirizzi: proprietario, voto e pagamento. "
+"Electrum selezionerà automaticamente gli indirizzi dal tuo portafoglio. Fare"
+" clic su **Avanti** per continuare."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:165
 msgid "Select masternode owner, voting, and payout addresses"
 msgstr ""
+"Seleziona il proprietario del masternode, gli indirizzi di voto e di "
+"pagamento"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:167
 msgid ""
@@ -292,6 +382,12 @@ msgid ""
 "masternode will use the private key to sign messages, and the Dash network "
 "will know that you authorized it to do so."
 msgstr ""
+"Un masternode richiede una chiave \"operatore\" BLS come descritto in `DIP3 "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a-"
+"masternode-proregtx>`_. Se gestisci il tuo masternode, sia Dash Electrum che"
+" il tuo masternode devono conoscere la chiave privata dell'operatore. Il tuo"
+" masternode utilizzerà la chiave privata per firmare i messaggi e la rete "
+"Dash saprà che l'hai autorizzata a farlo."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:172
 msgid ""
@@ -300,10 +396,14 @@ msgid ""
 "masternode configuration. Click **Next** after copying this line to your "
 "masternode's ``dash.conf`` file."
 msgstr ""
+"Electrum genererà la coppia di chiavi pubblica/privata BLS richiesta e ti "
+"fornirà la linea che deve essere copiata nel masternode per una corretta "
+"configurazione del masternode. Fai clic su **Avanti** dopo aver copiato "
+"questa riga nel file ``dash.conf`` del tuo masternode."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:180
 msgid "BLS key setup"
-msgstr ""
+msgstr "Configurazione della chiave BLS"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:182
 msgid ""
@@ -313,14 +413,19 @@ msgid ""
 " The **Send** tab will open and be populated with the info necessary to "
 "register the masternode."
 msgstr ""
+"Tutti i parametri sono ora configurati. Questa schermata mostra i dettagli "
+"della configurazione e consente di salvare le informazioni. Assicurati che "
+"la casella **Crea ProRegTx dopo aver salvato i dati Masternode** sia "
+"selezionata, quindi fai clic su **Salva**. La scheda **Invia** si aprirà e "
+"verrà popolata con le informazioni necessarie per registrare il masternode."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:190
 msgid "Examine parameters and save masternode"
-msgstr ""
+msgstr "Esamina i parametri e salva il masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:193
 msgid "Registering your masternode"
-msgstr ""
+msgstr "Registrazione del tuo masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:195
 msgid ""
@@ -328,6 +433,9 @@ msgid ""
 "filled out by the previous step, just Click **Pay...** to complete the "
 "registration."
 msgstr ""
+"Poiché le informazioni ProRegTx richieste per registrare il masternode sono "
+"state compilate nel passaggio precedente, è sufficiente fare clic su "
+"**Paga...** per completare la registrazione."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:200
 msgid ""
@@ -335,20 +443,25 @@ msgid ""
 "**DIP3** tab, select the unregistered masternode from the list of **Wallet "
 "MNs**, and click **Register**."
 msgstr ""
+"Per completare la registrazione di qualsiasi masternode precedentemente "
+"configurato, vai alla scheda **DIP3**, seleziona il masternode non "
+"registrato dall'elenco dei **Wallet MN** e fai clic su **Registra**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:207
 msgid "Send tab with ProRegTx prepared"
-msgstr ""
+msgstr "Scheda Invia con ProRegTx preparato"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:209
 msgid ""
 "Enter your password and click **Send** to broadcast the registration "
 "transaction."
 msgstr ""
+"Inserisci la tua password e fai clic su **Invia** per trasmettere la "
+"transazione di registrazione."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:215
 msgid "Confirm ProRegTx Transaction"
-msgstr ""
+msgstr "Conferma la transazione ProRegTx"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:217
 msgid ""
@@ -356,46 +469,56 @@ msgid ""
 "successfully. This ProRegTx hash is used by the network to uniquely identify"
 " the masternode. Click **OK** to close the screen."
 msgstr ""
+"L'hash della transazione verrà visualizzato una volta che la transazione è "
+"stata inviata con successo. Questo hash ProRegTx viene utilizzato dalla rete"
+" per identificare in modo univoco il masternode. Fare clic su **OK** per "
+"chiudere la schermata."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:224
 #: ../../docs/user/wallets/electrum/advanced.rst:306
 #: ../../docs/user/wallets/electrum/advanced.rst:362
 msgid "Transaction sent screen showing transaction hash"
-msgstr ""
+msgstr "Schermata Transazione inviata che mostra l'hash della transazione"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:226
 msgid ""
 "Prior to the ProRegTx being confirmed the new masternode will appear as "
 "unregistered on the DIP3 tab."
 msgstr ""
+"Prima che il ProRegTx venga confermato, il nuovo masternode apparirà come "
+"non registrato nella scheda DIP3."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:232
 msgid "DIP3 tab showing unregistered masternode"
-msgstr ""
+msgstr "Scheda DIP3 che mostra il masternode non registrato"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:234
 msgid ""
 "Once the ProRegTx has been confirmed, the new masternode will appear as "
 "registered on the DIP3 tab."
 msgstr ""
+"Una volta confermato il ProRegTx, il nuovo masternode apparirà come "
+"registrato nella scheda DIP3."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:240
 msgid "DIP3 tab showing registered masternode"
-msgstr ""
+msgstr "Scheda DIP3 che mostra il masternode registrato"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:243
 msgid "Updating masternode registration"
-msgstr ""
+msgstr "Aggiornamento della registrazione del masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:245
 msgid ""
 "To update masternode registration information, navigate to the DIP3 tab and "
 "click the **Update Registrar** button."
 msgstr ""
+"Per aggiornare le informazioni di registrazione del masternode, vai alla "
+"scheda DIP3 e fai clic sul pulsante **Aggiorna registrar**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:251
 msgid "Update Registrar"
-msgstr ""
+msgstr "Aggiorna Registrazione"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:253
 msgid ""
@@ -404,16 +527,23 @@ msgid ""
 "or addresses from a different wallet (e.g. a hardware wallet) can be pasted "
 "into either field. Click **Next** to continue."
 msgstr ""
+"Il proprietario del masternode può aggiornare gli indirizzi di voto e di "
+"pagamento in qualsiasi momento. Gli indirizzi del wallet corrente possono "
+"essere selezionati dal menu a discesa oppure gli indirizzi di un wallet "
+"diverso (ad esempio un wallet hardware) possono essere incollati in uno dei "
+"due campi. Fare clic su **Avanti** per continuare."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:261
 msgid "Update masternode voting and/or payout address"
-msgstr ""
+msgstr "Aggiorna l'indirizzo di voto e/o pagamento del masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:263
 msgid ""
 "The masternode owner may also update the operator BLS key at any time. Click"
 " **Next** to continue."
 msgstr ""
+"Il proprietario del masternode può inoltre aggiornare la chiave BLS "
+"dell'operatore in qualsiasi momento. Fare clic su **Avanti** per continuare."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:267
 msgid ""
@@ -421,10 +551,13 @@ msgid ""
 "``dash.conf`` file on the masternode. Electrum will provide a notification "
 "with instructions when this is required."
 msgstr ""
+"Ogni volta che la chiave privata dell'operatore viene modificata, deve "
+"essere copiata nel file ``dash.conf`` sul masternode. Electrum fornirà una "
+"notifica con le istruzioni quando ciò sarà richiesto."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:274
 msgid "Update operator BLS key"
-msgstr ""
+msgstr "Aggiorna la chiave BLS dell'operatore"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:276
 msgid ""
@@ -433,10 +566,14 @@ msgid ""
 "**Send** tab will open and be populated with the info necessary to update "
 "the masternode."
 msgstr ""
+"Tutti i parametri sono ora configurati. Questa schermata mostra i dettagli "
+"di configurazione aggiornati. Fare clic su **Prepara ProUpRegTx** per "
+"continuare. La scheda **Invia** si aprirà e verrà popolata con le "
+"informazioni necessarie per aggiornare il masternode."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:283
 msgid "Examine parameters and update masternode"
-msgstr ""
+msgstr "Esaminare i parametri e aggiornare il masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:285
 msgid ""
@@ -444,20 +581,25 @@ msgid ""
 "was filled out by the previous step so just Click **Pay...** to complete the"
 " update."
 msgstr ""
+"Le informazioni ProUpRegTx richieste per aggiornare la registrazione del "
+"masternode sono state inserite nel passaggio precedente, quindi è "
+"sufficiente fare clic su **Paga...** per completare l'aggiornamento."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:291
 msgid "Send tab with ProUpRegTx prepared"
-msgstr ""
+msgstr "Scheda Invia con ProUpRegTx preparato"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:293
 #: ../../docs/user/wallets/electrum/advanced.rst:349
 msgid ""
 "Enter your password and click **Send** to broadcast the update transaction."
 msgstr ""
+"Inserisci la tua password e fai clic su **Invia** per trasmettere la "
+"transazione di aggiornamento."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:298
 msgid "Confirm ProUpRegTx Transaction"
-msgstr ""
+msgstr "Conferma la transazione ProUpRegTx"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:300
 #: ../../docs/user/wallets/electrum/advanced.rst:356
@@ -465,43 +607,53 @@ msgid ""
 "The transaction hash will be displayed once the transaction has been sent "
 "successfully. Click **OK** to close the screen."
 msgstr ""
+"L'hash della transazione verrà visualizzato una volta che la transazione è "
+"stata inviata con successo. Fare clic su **OK** per chiudere la schermata."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:309
 msgid "Updating masternode service parameters"
-msgstr ""
+msgstr "Aggiornamento dei parametri del servizio masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:311
 msgid "The masternode service may need to be updated to:"
-msgstr ""
+msgstr "Potrebbe essere necessario aggiornare il servizio masternode per:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:313
 msgid ""
 "Change the IP address, port, or operator payout address of a masternode"
 msgstr ""
+"Modifica l'indirizzo IP, la porta o l'indirizzo di pagamento dell'operatore "
+"di un masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:314
 msgid "Revive a masternode that was Proof of Service (PoSe) banned"
 msgstr ""
+"Ripristinare un masternode che era stato vietato Proof of Service (PoSe)."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:316
 msgid ""
 "To update masternode service information, navigate to the DIP3 tab and click"
 " the **Update Service** button."
 msgstr ""
+"Per aggiornare le informazioni sul servizio masternode, vai alla scheda DIP3"
+" e fai clic sul pulsante **Aggiorna servizio**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:322
 msgid "Update Service"
-msgstr ""
+msgstr "Servizio di aggiornamento"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:324
 msgid ""
 "The masternode operator may update the IP address and port at any time. "
 "Update the IP address and click **Next** to continue."
 msgstr ""
+"L'operatore del masternode può aggiornare l'indirizzo IP e la porta in "
+"qualsiasi momento. Aggiorna l'indirizzo IP e fai clic su **Avanti** per "
+"continuare."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:330
 msgid "Update masternode IP address"
-msgstr ""
+msgstr "Aggiorna l'indirizzo IP del masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:332
 msgid ""
@@ -510,28 +662,35 @@ msgid ""
 "**Send** tab will open and be populated with the info necessary to update "
 "the masternode."
 msgstr ""
+"Tutti i parametri sono ora configurati. Questa schermata mostra i dettagli "
+"di configurazione aggiornati. Fare clic su **Prepara ProUpServTx** per "
+"continuare. La scheda **Invia** si aprirà e verrà popolata con le "
+"informazioni necessarie per aggiornare il masternode."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:339
 msgid "Examine parameters and update masternode service"
-msgstr ""
+msgstr "Esaminare i parametri e aggiornare il servizio masternode"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:341
 msgid ""
 "The ProUpServTx information required to update the masternode was filled out"
 " by the previous step so just Click **Pay...** to complete the update."
 msgstr ""
+"Le informazioni ProUpServTx richieste per aggiornare il masternode sono "
+"state compilate nel passaggio precedente, quindi è sufficiente fare clic su "
+"**Paga...** per completare l'aggiornamento."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:347
 msgid "Send tab with ProUpServTx prepared"
-msgstr ""
+msgstr "Scheda Invia con ProUpServTx preparato"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:354
 msgid "Confirm ProUpServTx Transaction"
-msgstr ""
+msgstr "Conferma la transazione ProUpServTx"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:367
 msgid "Multisig wallets"
-msgstr ""
+msgstr "Multisig wallets"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:369
 msgid ""
@@ -541,6 +700,11 @@ msgid ""
 "conjunction in order to access the funds. Both wallets have the same set of "
 "addresses."
 msgstr ""
+"Questo tutorial mostra come creare un wallet multisig 2 su 2. Un multisig 2 "
+"su 2 è costituito da 2 wallet separati (solitamente su macchine separate e "
+"potenzialmente controllati da persone separate) che devono essere utilizzati"
+" insieme per accedere ai fondi. Entrambi i wallet hanno lo stesso set di "
+"indirizzi."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:375
 msgid ""
@@ -548,6 +712,10 @@ msgid ""
 "maybe you and your friend run a company together and certain funds should "
 "only be spendable if you both agree."
 msgstr ""
+"Un caso d'uso comune per questo è se desideri controllare i fondi in modo "
+"collaborativo: forse tu e il tuo amico gestite un'azienda insieme e "
+"determinati fondi dovrebbero essere spendibili solo se entrambi siete "
+"d'accordo."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:379
 msgid ""
@@ -555,30 +723,39 @@ msgid ""
 "while the other one is on a offline machine. That way you make it very hard "
 "for an attacker or malware to steal your coins."
 msgstr ""
+"Un altro è la sicurezza: uno dei wallet può trovarsi sul tuo computer "
+"principale, mentre l’altro su un computer offline. In questo modo rendi "
+"molto difficile per un utente malintenzionato o un malware rubare le tue "
+"monete."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:384
 msgid "Create a pair of 2-of-2 wallets"
-msgstr ""
+msgstr "Crea una coppia di wallet 2 di 2"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:386
 msgid ""
 "Each cosigner needs to do this: In the menu select **File > New**, then "
 "select **Multi-signature wallet**. On the next screen, select 2 of 2."
 msgstr ""
+"Ciascun cofirmatario deve eseguire questa operazione: nel menu selezionare "
+"**File > Nuovo**, quindi selezionare **Wallet multifirma**. Nella schermata "
+"successiva, seleziona 2 di 2."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:392
 msgid "Selecting x of y signatures for a multi-signature wallet"
-msgstr ""
+msgstr "Selezione di x firme su y per un portafoglio multisig"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:394
 msgid ""
 "After generating and confirming your recovery seed, you will be shown the "
 "xpub address for this wallet."
 msgstr ""
+"Dopo aver generato e confermato il tuo seed di ripristino, ti verrà mostrato"
+" l'indirizzo xpub per questo wallet."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:399
 msgid "xpub key of the first wallet"
-msgstr ""
+msgstr "chiave xpub del primo wallet"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:401
 msgid ""
@@ -586,20 +763,25 @@ msgid ""
 "master public key of the other wallet. Of course when you create the other "
 "wallet, you put the master public key of the first wallet."
 msgstr ""
+"Dopo aver generato un seed (conservalo al sicuro!) dovrai fornire la chiave "
+"pubblica principale dell'altro wallet. Ovviamente quando crei l'altro "
+"wallet, inserisci la chiave pubblica principale del primo wallet."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:408
 msgid "Entering xpub from the second wallet in the first wallet"
-msgstr ""
+msgstr "Entrando in xpub dal secondo wallet nel primo wallet"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:410
 msgid ""
 "You will need to do this in parallel for the two wallets. Note that you can "
 "press cancel during this step, and reopen the file later."
 msgstr ""
+"Dovrai farlo in parallelo per i due wallet. Tieni presente che puoi premere "
+"Annulla durante questo passaggio e riaprire il file in un secondo momento."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:414
 msgid "Receiving"
-msgstr ""
+msgstr "Ricezione"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:416
 msgid ""
@@ -607,10 +789,13 @@ msgid ""
 " to these **Addresses** (note they start with a “7”) with any wallet that "
 "can send to P2SH Addresses."
 msgstr ""
+"Verifica che entrambi i wallet generino lo stesso set di indirizzi. Ora puoi"
+" inviare a questi **Indirizzi** (nota che iniziano con un \"7\") con "
+"qualsiasi wallet in grado di inviare a indirizzi P2SH."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:421
 msgid "Sending"
-msgstr ""
+msgstr "Invio"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:423
 msgid ""
@@ -619,20 +804,27 @@ msgid ""
 "one of the wallets (by filling out the form on the **Send** tab). After "
 "signing, a window is shown with the transaction details."
 msgstr ""
+"Per spendere monete da un wallet 2 su 2, due cofirmatari devono firmare una "
+"transazione in modo collaborativo. Per fare ciò, crea una transazione "
+"utilizzando uno dei wallet (compilando il modulo nella scheda **Invia**). "
+"Dopo aver firmato, viene visualizzata una finestra con i dettagli della "
+"transazione."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:431
 msgid "Partially signed 2-of-2 multisig transaction in Dash Electrum"
-msgstr ""
+msgstr "Transazione multisig 2-su-2 parzialmente firmata in Dash Electrum"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:433
 msgid ""
 "The transaction now has to be sent to the second wallet. Several options are"
 " available for this:"
 msgstr ""
+"La transazione ora deve essere inviata al secondo wallet. A questo scopo "
+"sono disponibili diverse opzioni:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:436
 msgid "You can transfer the file on a USB stick"
-msgstr ""
+msgstr "Puoi trasferire il file su una chiavetta USB"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:438
 msgid ""
@@ -641,10 +833,14 @@ msgid ""
 "(via USB stick, for example) and load it there (using **Tools > Load "
 "transaction > From file**)"
 msgstr ""
+"È possibile salvare la transazione parzialmente firmata in un file "
+"(utilizzando il pulsante **Salva**), trasferirlo sulla macchina su cui è in "
+"esecuzione il secondo portafoglio (tramite chiavetta USB, ad esempio) e "
+"caricarlo lì (utilizzando **Strumenti > Carica transazione > Da file**)"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:443
 msgid "You can use QR codes"
-msgstr ""
+msgstr "Puoi utilizzare i codici QR"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:445
 msgid ""
@@ -652,6 +848,10 @@ msgid ""
 " display a QR code containing the transaction, which can be scanned into the"
 " second wallet (**Tools > Load Transaction > From QR Code**)"
 msgstr ""
+"È inoltre disponibile un pulsante che mostra l'icona di un codice QR. "
+"Facendo clic su questo pulsante verrà visualizzato un codice QR contenente "
+"la transazione, che può essere scansionato nel secondo wallet (**Strumenti >"
+" Carica transazione > Da codice QR**)"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:450
 msgid ""
@@ -659,14 +859,17 @@ msgid ""
 "transaction (using the **Sign** button). It will then be broadcast to the "
 "network."
 msgstr ""
+"Con entrambi i metodi sopra descritti, ora puoi aggiungere la seconda firma "
+"alla transazione (utilizzando il pulsante **Firma**). Verrà poi trasmesso in"
+" rete."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:457
 msgid "Fully signed 2-of-2 multisig transaction in Dash Electrum"
-msgstr ""
+msgstr "Transazione multisig 2-su-2 completamente firmata in Dash Electrum"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:460
 msgid "Sweep a paper wallet"
-msgstr ""
+msgstr "Spazza un paper wallet"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:462
 msgid ""
@@ -678,12 +881,22 @@ msgid ""
 " with the number \"7\" or the capital letter \"X\". The example below "
 "displays a private key (WIF format)."
 msgstr ""
+"Potresti aver ricevuto un wallet di carta come regalo da un altro utente "
+"Dash o averne precedentemente conservato uno in una cassetta di sicurezza. I"
+" fondi vengono spostati da un :ref:`paper wallet <paper-wallets>` in un "
+"wallet live importando la sua `chiave privata "
+"<https://bitzuma.com/posts/six-things-bitcoin-users-should-know-about-"
+"private-keys />`_, che è una lunga sequenza di caratteri che inizia con il "
+"numero \"7\" o la lettera maiuscola \"X\". L'esempio seguente mostra una "
+"chiave privata (formato WIF)."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:473
 msgid ""
 "Public address and associated private key produced by Dash Paper Wallet "
 "Generator"
 msgstr ""
+"Indirizzo pubblico e chiave privata associata prodotti da Dash Paper Wallet "
+"Generator"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:476
 msgid ""
@@ -693,6 +906,11 @@ msgid ""
 "or private keys to an existing deterministic series of addresses derived "
 "from a seed phrase."
 msgstr ""
+"I fondi dai paper wallet vengono trasferiti in un wallet Dash Electrum "
+"creando una transazione utilizzando la chiave privata e inviandola a un "
+"nuovo indirizzo dal tuo wallet. Ciò è necessario perché non è possibile "
+"aggiungere nuove chiavi pubbliche o private a una serie deterministica "
+"esistente di indirizzi derivati da una frase seme."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:482
 msgid ""
@@ -702,10 +920,16 @@ msgid ""
 "appears in the lower field, and can be changed by clicking the **Address** "
 "button. Once you have pasted your private key, click the **Sweep** button."
 msgstr ""
+"Inizia selezionando la voce di menu **Wallet** > **Chiavi private** > "
+"**Sweep**. Verrà visualizzata la finestra di dialogo **Sweep private keys**,"
+" in cui potrai incollare le tue chiavi private. Un indirizzo non utilizzato "
+"controllato dal tuo wallet Dash Electrum viene visualizzato nel campo "
+"inferiore e può essere modificato facendo clic sul pulsante **Indirizzo**. "
+"Dopo aver incollato la chiave privata, fai clic sul pulsante **Sweep**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:492
 msgid "Entering the private key"
-msgstr ""
+msgstr "Immissione della chiave privata"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:494
 msgid ""
@@ -716,14 +940,20 @@ msgid ""
 "then appear in your wallet under the specified address. The address you "
 "swept is left with zero balance."
 msgstr ""
+"Dash Electrum prepara quindi una transazione utilizzando la chiave privata "
+"appena importata per ricavare l'indirizzo pubblico per l'input della "
+"transazione e l'indirizzo dal tuo wallet come output e firma il messaggio. "
+"Fai clic su **Trasmetti** per inserire la transazione sulla blockchain. Il "
+"saldo apparirà quindi nel tuo wallet sotto l'indirizzo specificato. "
+"L'indirizzo che hai spazzato rimane con saldo zero."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:504
 msgid "Broadcasting the sweep transaction"
-msgstr ""
+msgstr "Trasmissione della transazione spazzolata"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:510
 msgid "Cold storage"
-msgstr ""
+msgstr "Cold storage"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:512
 msgid ""
@@ -732,31 +962,41 @@ msgid ""
 " transactions that have to be signed with the offline wallet before being "
 "broadcast on the online one."
 msgstr ""
+"Questa sezione mostra come creare un wallet offline che contenga il tuo Dash"
+" e un wallet online di sola visione utilizzato per visualizzarne la "
+"cronologia e per creare transazioni che devono essere firmate con il wallet "
+"offline prima di essere trasmesse su quello online."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:518
 msgid "Create an offline wallet"
-msgstr ""
+msgstr "Crea un wallet offline"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:520
 msgid ""
 "Create a wallet on an offline machine, as per the usual process (**File > "
 "New**). After creating the wallet, go to **Wallet -> Master Public Keys**."
 msgstr ""
+"Crea un wallet su una macchina offline, come da procedura abituale (**File >"
+" Nuovo**). Dopo aver creato il wallet, vai su **Wallet -> Chiavi pubbliche "
+"principali**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:526
 #: ../../docs/user/wallets/electrum/advanced.rst:543
 msgid "Master Public Key of a new offline wallet"
-msgstr ""
+msgstr "Chiave pubblica principale di un nuovo wallet offline"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:528
 msgid ""
 "The Master Public Key of your wallet is the string shown in this popup "
 "window. Transfer that key to your online machine somehow."
 msgstr ""
+"La chiave pubblica principale del tuo wallet è la stringa mostrata in questa"
+" finestra popup. Trasferisci quella chiave sul tuo computer online in "
+"qualche modo."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:532
 msgid "Create a watching-only version of your wallet"
-msgstr ""
+msgstr "Crea una versione del tuo wallet solo per la visione"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:534
 msgid ""
@@ -766,15 +1006,23 @@ msgid ""
 "complete the creation of your wallet. When you’re done, you should see a "
 "popup informing you that you are opening a watching-only wallet."
 msgstr ""
+"Sul tuo computer online, apri Dash Electrum e seleziona **File > "
+"Nuovo/Ripristina**. Inserisci un nome per il wallet e seleziona **Utilizza "
+"chiavi pubbliche o private**. Incolla la tua chiave pubblica principale "
+"nella casella. Fai clic su **Avanti** per completare la creazione del tuo "
+"wallet. Quando hai finito, dovresti vedere un popup che ti informa che stai "
+"aprendo un wallet di sola visione."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:545
 msgid "The transaction history of your cold wallet should then appear."
 msgstr ""
+"Dovrebbe quindi apparire la cronologia delle transazioni del tuo wallet "
+"freddo."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:548
 #: ../../docs/user/wallets/electrum/advanced.rst:720
 msgid "Create an unsigned transaction"
-msgstr ""
+msgstr "Crea una transazione non firmata"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:550
 msgid ""
@@ -785,10 +1033,17 @@ msgid ""
 "Close the window and transfer the transaction file to your offline machine "
 "(e.g. with a USB stick)."
 msgstr ""
+"Vai alla scheda **Invia** sul tuo wallet per la sola visione online, "
+"inserisci i dati della transazione e fai clic su **Invia**. Apparirà una "
+"finestra per informarti che verrà aggiunta una commissione di transazione. "
+"Continua. Nella finestra visualizzata, fai clic su **Salva** e salva il file"
+" della transazione da qualche parte sul tuo computer. Chiudi la finestra e "
+"trasferisci il file della transazione sul tuo computer offline (ad esempio "
+"con una chiavetta USB)."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:558
 msgid "Sign your transaction"
-msgstr ""
+msgstr "Firma la tua transazione"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:560
 msgid ""
@@ -798,10 +1053,16 @@ msgid ""
 " designated field. Click **Save**, store the file somewhere on your "
 "computer, and transfer it back to your online machine."
 msgstr ""
+"Sul tuo wallet offline, seleziona **Strumenti > Carica transazione -> Da "
+"file** nel menu e seleziona il file di transazione creato nel passaggio "
+"precedente. Fai clic su **Firma**. Una volta firmata la transazione, l'ID "
+"della transazione appare nel campo designato. Fai clic su **Salva**, "
+"archivia il file da qualche parte sul tuo computer e trasferiscilo "
+"nuovamente sul tuo computer online."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:567
 msgid "Broadcast your transaction"
-msgstr ""
+msgstr "Trasmetti la tua transazione"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:569
 msgid ""
@@ -810,38 +1071,46 @@ msgid ""
 "up, click **Broadcast**. The transaction will be broadcast over the Dash "
 "network."
 msgstr ""
+"Sul tuo computer online, seleziona **Strumenti -> Carica transazione -> Da "
+"file** dal menu. Seleziona il file della transazione firmato. Nella finestra"
+" che si apre, fai clic su **Trasmetti**. La transazione verrà trasmessa "
+"sulla rete Dash."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:575
 msgid "Command line"
-msgstr ""
+msgstr "Linea di comando"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:577
 msgid ""
 "Dash Electrum has a powerful command line available when running under Linux"
 " or macOS. This section will show you a few basic principles."
 msgstr ""
+"Dash Electrum dispone di una potente riga di comando disponibile quando si "
+"esegue su Linux o macOS. Questa sezione ti mostrerà alcuni principi di base."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:581
 msgid "Using the inline help"
-msgstr ""
+msgstr "Utilizzando la guida in linea"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:583
 msgid "To see the list of Dash Electrum commands, type::"
-msgstr ""
+msgstr "Per visualizzare l'elenco dei comandi Dash Electrum, digitare::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:587
 msgid "To see the documentation for a command, type::"
-msgstr ""
+msgstr "Per visualizzare la documentazione di un comando, digitare::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:592
 msgid "Magic words"
-msgstr ""
+msgstr "Parole magiche"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:594
 msgid ""
 "The arguments passed to commands may be one of the following magic words: `!"
 " ? : -`."
 msgstr ""
+"Gli argomenti passati ai comandi possono essere una delle seguenti parole "
+"magiche: `! ? : -`."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:596
 msgid ""
@@ -849,12 +1118,17 @@ msgid ""
 "available’. Note that the transaction fee will be computed and deducted from"
 " the amount. Example::"
 msgstr ""
+"Il punto esclamativo `!` è una scorciatoia che significa \"l'importo massimo"
+" disponibile\". Tieni presente che la commissione di transazione verrà "
+"calcolata e detratta dall'importo. Esempio::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:602
 msgid ""
 "A question mark `?` means that you want the parameter to be prompted. "
 "Example::"
 msgstr ""
+"Un punto interrogativo `?` significa che si desidera che il parametro venga "
+"richiesto. Esempio::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:607
 msgid ""
@@ -862,51 +1136,62 @@ msgid ""
 "in your terminal). Note that you will be prompted twice in this example, "
 "first for the private key, then for your wallet password::"
 msgstr ""
+"Utilizza i due punti `:` se desideri che il parametro richiesto venga "
+"nascosto (non visualizzato nel terminale). Tieni presente che in questo "
+"esempio ti verrà richiesta due volte, prima la chiave privata, poi la "
+"password del tuo wallet::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:613
 msgid ""
 "A parameter replaced by a dash `-` will be read from standard input (in a "
 "pipe)::"
 msgstr ""
+"Un parametro sostituito da un trattino `-` verrà letto dallo standard input "
+"(in una pipe)::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:619
 msgid "Aliases"
-msgstr ""
+msgstr "Alias"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:621
 msgid ""
 "You can use DNS aliases in place of bitcoin addresses, in most commands::"
 msgstr ""
+"Puoi utilizzare gli alias DNS al posto degli indirizzi bitcoin, nella "
+"maggior parte dei comandi::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:626
 msgid "Formatting outputs using jq"
-msgstr ""
+msgstr "Formattazione degli output utilizzando jq"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:628
 msgid ""
 "Command outputs are either simple strings or json structured data. A very "
 "useful utility is the ‘jq’ program. Install it with::"
 msgstr ""
+"Gli output dei comandi sono stringhe semplici o dati strutturati JSON. "
+"Un'utilità molto utile è il programma \"jq\". Installalo con::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:633
 msgid "The following examples use it."
-msgstr ""
+msgstr "Gli esempi seguenti lo utilizzano."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:636
 msgid "Sign and verify message"
-msgstr ""
+msgstr "Firma e verifica il messaggio"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:638
 msgid "We may use a variable to store the signature, and verify it::"
 msgstr ""
+"Potremmo utilizzare una variabile per memorizzare la firma e verificarla::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:642
 msgid "And::"
-msgstr ""
+msgstr "E::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:647
 msgid "Show the values of your unspents"
-msgstr ""
+msgstr "Mostra i valori delle tue spese non spese"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:649
 msgid ""
@@ -914,101 +1199,125 @@ msgid ""
 "fields. Suppose we want to extract the `value` field of each record. This "
 "can be achieved with the jq command::"
 msgstr ""
+"Il comando `listunspent` restituisce un elenco di oggetti dict, con vari "
+"campi. Supponiamo di voler estrarre il campo \"valore\" di ciascun record. "
+"Ciò può essere ottenuto con il comando jq::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:656
 msgid "Select only incoming transactions from history"
-msgstr ""
+msgstr "Seleziona solo le transazioni in entrata dalla cronologia"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:658
 msgid "Incoming transactions have a positive ‘value’ field::"
-msgstr ""
+msgstr "Le transazioni in entrata hanno un campo \"valore\" positivo::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:663
 msgid "Filter transactions by date"
-msgstr ""
+msgstr "Filtra le transazioni per data"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:665
 msgid ""
 "The following command selects transactions that were timestamped after a "
 "given date::"
 msgstr ""
+"Il comando seguente seleziona le transazioni con timestamp successivo a una "
+"data specifica::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:671
 msgid "Similarly, we may export transactions for a given time period::"
 msgstr ""
+"Allo stesso modo, possiamo esportare transazioni per un determinato periodo "
+"di tempo:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:678
 msgid "Encrypt and decrypt messages"
-msgstr ""
+msgstr "Crittografare e decrittografare i messaggi"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:680
 msgid "First we need the public key of a wallet address::"
 msgstr ""
+"Per prima cosa abbiamo bisogno della chiave pubblica dell'indirizzo di un "
+"portafoglio::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:684
 msgid "Encrypt::"
-msgstr ""
+msgstr "Crittografa::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:688
 msgid "Decrypt::"
-msgstr ""
+msgstr "Decifra::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:692
 msgid ""
 "Note: this command will prompt for the encrypted message, then for the "
 "wallet password."
 msgstr ""
+"Nota: questo comando richiederà il messaggio crittografato, quindi la "
+"password del portafoglio."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:696
 msgid "Export private keys and sweep coins"
-msgstr ""
+msgstr "Esporta chiavi private e spazza monete"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:698
 msgid ""
 "The following command will export the private keys of all wallet addresses "
 "that hold some Dash::"
 msgstr ""
+"Il comando seguente esporterà le chiavi private di tutti gli indirizzi dei "
+"wallet che contengono alcuni Dash::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:703
 msgid ""
 "This will return a list of lists of private keys. In most cases, you want to"
 " get a simple list. This can be done by adding a jq filer, as follows::"
 msgstr ""
+"Ciò restituirà un elenco di elenchi di chiavi private. Nella maggior parte "
+"dei casi, si desidera ottenere un elenco semplice. Questo può essere fatto "
+"aggiungendo un filer jq, come segue::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:709
 msgid ""
 "Finally, let us use this list of private keys as input to the sweep "
 "command::"
 msgstr ""
+"Infine, utilizziamo questo elenco di chiavi private come input per il "
+"comando sweep::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:714
 msgid "Using cold storage with the command line"
-msgstr ""
+msgstr "Utilizzo della cold storage con la riga di comando"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:716
 msgid ""
 "This section will show you how to sign a transaction with an offline Dash "
 "Electrum wallet using the command line."
 msgstr ""
+"Questa sezione ti mostrerà come firmare una transazione con un wallet Dash "
+"Electrum offline utilizzando la riga di comando."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:722
 msgid ""
 "With your online (watching-only) wallet, create an unsigned transaction::"
 msgstr ""
+"Con il tuo wallet online (solo visione), crea una transazione non firmata::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:726
 msgid ""
 "The unsigned transaction is stored in a file named ‘unsigned.txn’. Note that"
 " the –unsigned option is not needed if you use a watching-only wallet."
 msgstr ""
+"La transazione non firmata viene archiviata in un file denominato "
+"\"unsigned.txn\". Tieni presente che l'opzione –unsigned non è necessaria se"
+" utilizzi un wallet di sola visione."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:730
 msgid "You may view it using::"
-msgstr ""
+msgstr "Puoi visualizzarlo utilizzando::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:735
 msgid "Sign the transaction"
-msgstr ""
+msgstr "Firma la transazione"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:737
 msgid ""
@@ -1017,58 +1326,66 @@ msgid ""
 "transaction. Thus we only need to pass the serialized transaction to the "
 "offline wallet::"
 msgstr ""
+"Il formato di serializzazione di Dash Electrum contiene la chiave pubblica "
+"principale necessaria e la chiave di derivazione utilizzata dal portafoglio "
+"offline per firmare la transazione. Pertanto dobbiamo solo passare la "
+"transazione serializzata al wallet offline:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:744
 msgid ""
 "The command will ask for your password, and save the signed transaction in "
 "‘signed.txn’."
 msgstr ""
+"Il comando richiederà la tua password e salverà la transazione firmata in "
+"\"signed.txn\"."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:747
 msgid "Broadcast the transaction"
-msgstr ""
+msgstr "Trasmetti la transazione"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:749
 msgid "Send your transaction to the Dash network, using broadcast::"
-msgstr ""
+msgstr "Invia la tua transazione alla rete Dash, utilizzando broadcast::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:753
 msgid "If successful, the command will return the ID of the transaction."
-msgstr ""
+msgstr "In caso di successo, il comando restituirà l'ID della transazione."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:756
 msgid "How to accept Dash on a website using Dash Electrum"
-msgstr ""
+msgstr "Come accettare Dash su un sito Web utilizzando Dash Electrum"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:758
 msgid ""
 "This tutorial will show you how to accept dash on a website with SSL signed "
 "payment requests. It is updated for Dash Electrum 2.6."
 msgstr ""
+"Questo tutorial ti mostrerà come accettare Dash su un sito Web con richieste"
+" di pagamento firmate SSL. È aggiornato per Dash Electrum 2.6."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:762
 msgid "Requirements"
-msgstr ""
+msgstr "Requisiti"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:764
 msgid "A webserver serving static HTML"
-msgstr ""
+msgstr "Un server web che serve HTML statico"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:765
 msgid "A SSL certificate (signed by a CA)"
-msgstr ""
+msgstr "Un certificato SSL (firmato da una CA)"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:766
 msgid "Electrum version >= 2.6"
-msgstr ""
+msgstr "Electrum versione >= 2.6"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:769
 msgid "Create a wallet"
-msgstr ""
+msgstr "Crea un wallet"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:771
 msgid "Create a wallet on your web server::"
-msgstr ""
+msgstr "Crea un wallet sul tuo server web::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:775
 msgid ""
@@ -1076,20 +1393,25 @@ msgid ""
 " keep private keys off the server. Once your wallet is created, start Dash "
 "Electrum as a daemon::"
 msgstr ""
+"Puoi anche utilizzare un wallet solo per la visione (ripristinato da xpub), "
+"se vuoi mantenere le chiavi private lontane dal server. Una volta creato il "
+"tuo wallet, avvia Dash Electrum come daemon::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:782
 msgid "Add your SSL certificate to your configuration"
-msgstr ""
+msgstr "Aggiungi il tuo certificato SSL alla tua configurazione"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:784
 msgid ""
 "You should have a private key and a public certificate for your domain. "
 "Create a file that contains only the private key::"
 msgstr ""
+"Dovresti avere una chiave privata e un certificato pubblico per il tuo "
+"dominio. Crea un file che contenga solo la chiave privata::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:791
 msgid "Set the path to your the private key file with setconfig::"
-msgstr ""
+msgstr "Imposta il percorso del file della chiave privata con setconfig::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:795
 msgid ""
@@ -1097,18 +1419,23 @@ msgid ""
 "certificates it depends on, up to the root CA. Your certificate must be at "
 "the top of the list, and the root CA at the end::"
 msgstr ""
+"Crea un altro file che contenga il tuo certificato e l'elenco dei "
+"certificati da cui dipende, fino alla CA radice. Il tuo certificato deve "
+"essere in cima all'elenco e la CA radice alla fine:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:809
 msgid "Set the `ssl_chain` path with setconfig::"
-msgstr ""
+msgstr "Imposta il percorso `ssl_chain` con setconfig::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:814
 msgid "Configure a requests directory"
-msgstr ""
+msgstr "Configura una directory delle richieste"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:816
 msgid "This directory must be served by your webserver (eg Apache)::"
 msgstr ""
+"Questa directory deve essere servita dal tuo server web (ad esempio "
+"Apache)::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:820
 msgid ""
@@ -1116,22 +1443,26 @@ msgid ""
 "In order to display public URLs, we need to set another configuration "
 "variable, `url_rewrite`. For example::"
 msgstr ""
+"Per impostazione predefinita, Dash Electrum visualizzerà gli URL locali, "
+"iniziando con \"file://\". Per visualizzare gli URL pubblici, dobbiamo "
+"impostare un'altra variabile di configurazione, \"url_rewrite\". Per "
+"esempio::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:827
 msgid "Create a signed payment request"
-msgstr ""
+msgstr "Crea una richiesta di pagamento firmata"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:846
 msgid "This command returns a json object with two URLs:"
-msgstr ""
+msgstr "Questo comando restituisce un oggetto json con due URL:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:848
 msgid "`request_url` is the URL of the signed BIP70 request."
-msgstr ""
+msgstr "\"request_url\" è l'URL della richiesta BIP70 firmata."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:849
 msgid "`index_url` is the URL of a webpage displaying the request."
-msgstr ""
+msgstr "\"index_url\" è l'URL di una pagina Web che visualizza la richiesta."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:851
 msgid ""
@@ -1139,18 +1470,21 @@ msgid ""
 "`url_rewrite`. You can view the current list of requests using the "
 "`listrequests` command."
 msgstr ""
+"Tieni presente che request_url e index_url utilizzano il nome di dominio che"
+" abbiamo definito in \"url_rewrite\". Puoi visualizzare l'elenco corrente "
+"delle richieste utilizzando il comando \"listrequests\"."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:856
 msgid "Open the payment request page in your browser"
-msgstr ""
+msgstr "Apri la pagina di richiesta di pagamento nel tuo browser"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:858
 msgid "Let us open `index_url` in a web browser."
-msgstr ""
+msgstr "Apriamo \"index_url\" in un browser web."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:863
 msgid "Payment request page in a web browser"
-msgstr ""
+msgstr "Pagina di richiesta di pagamento in un browser web"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:865
 msgid ""
@@ -1158,10 +1492,13 @@ msgid ""
 "wallet, or scan the QR code. The bottom line displays the time remaining "
 "until the request expires."
 msgstr ""
+"La pagina mostra la richiesta di pagamento. Puoi aprire il dash: URI con un "
+"wallet o scansionare il codice QR. La riga inferiore visualizza il tempo "
+"rimanente fino alla scadenza della richiesta."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:872
 msgid "Wallet awaiting payment"
-msgstr ""
+msgstr "Portafoglio in attesa di pagamento"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:874
 msgid ""
@@ -1169,22 +1506,26 @@ msgid ""
 "detect that a request has been paid; for that we need to configure "
 "websockets."
 msgstr ""
+"Questa pagina può già essere utilizzata per ricevere pagamenti. Tuttavia, "
+"non rileverà che una richiesta è stata pagata; per questo dobbiamo "
+"configurare i websocket."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:879
 msgid "Add web sockets support"
-msgstr ""
+msgstr "Aggiungi il supporto per i socket Web"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:881
 msgid "Get SimpleWebSocketServer from here::"
-msgstr ""
+msgstr "Ottieni SimpleWebSocketServer da qui::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:885
 msgid "Set `websocket_server` and `websocket_port` in your config::"
 msgstr ""
+"Imposta `websocket_server` e `websocket_port` nella tua configurazione::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:890
 msgid "And restart the daemon::"
-msgstr ""
+msgstr "E riavvia il daemon::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:895
 msgid ""
@@ -1193,16 +1534,23 @@ msgid ""
 "client’s firewalls, so it is more safe for example to reverse proxy "
 "websockets transmission using standard 443 port on an additional subdomain."
 msgstr ""
+"Ora la pagina è completamente interattiva: si aggiornerà automaticamente una"
+" volta ricevuto il pagamento. Tieni presente che le porte più alte "
+"potrebbero essere bloccate sui firewall di alcuni client, quindi è più "
+"sicuro, ad esempio, invertire la trasmissione dei websocket proxy "
+"utilizzando la porta 443 standard su un sottodominio aggiuntivo."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:902
 msgid "JSONRPC interface"
-msgstr ""
+msgstr "Interfaccia JSONRPC"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:904
 msgid ""
 "Commands to the Dash Electrum daemon can be sent using JSONRPC. This is "
 "useful if you want to use Dash Electrum in a PHP script."
 msgstr ""
+"I comandi al daemon Dash Electrum possono essere inviati utilizzando "
+"JSONRPC. Ciò è utile se desideri utilizzare Dash Electrum in uno script PHP."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:907
 msgid ""
@@ -1210,15 +1558,21 @@ msgid ""
 " stable port number, you need to set the `rpcport` configuration variable "
 "(and to restart the daemon)::"
 msgstr ""
+"Tieni presente che il daemon utilizza un numero di porta casuale per "
+"impostazione predefinita. Per utilizzare un numero di porta stabile, è "
+"necessario impostare la variabile di configurazione `rpcport` (e riavviare "
+"il demone)::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:913
 msgid "With this setting, we can perform queries using curl or PHP. Example::"
 msgstr ""
+"Con questa impostazione possiamo eseguire query utilizzando curl o PHP. "
+"Esempio::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:917
 msgid "Query with named parameters::"
-msgstr ""
+msgstr "Query con parametri denominati::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:921
 msgid "Create a payment request::"
-msgstr ""
+msgstr "Crea una richiesta di pagamento::"

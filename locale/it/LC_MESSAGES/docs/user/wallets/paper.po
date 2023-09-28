@@ -1,33 +1,34 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # William Lotta <williamlotta@gmail.com>, 2022
+# Dash Italia, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:56+0000\n"
-"Last-Translator: William Lotta <williamlotta@gmail.com>, 2022\n"
-"Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
+"Last-Translator: Dash Italia, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/wallets/paper.rst:1
+#: ../../docs/user/wallets/paper.rst-1
 msgid "Guides to secure paper wallets for Dash cryptocurrency"
-msgstr ""
+msgstr "Guide per proteggere i paper wallet per la criptovaluta Dash"
 
-#: ../../docs/user/wallets/paper.rst:1
+#: ../../docs/user/wallets/paper.rst-1
 msgid "dash, paper, wallet, encryption"
-msgstr ""
+msgstr "dash, paper, wallet, crittografia"
 
 #: ../../docs/user/wallets/paper.rst:8
 msgid "Introduction"
@@ -45,6 +46,17 @@ msgid ""
 "extremely secure but somewhat inconvenient for everyday use compared to "
 "hardware wallets, which also offer a high degree of security."
 msgstr ""
+"Un paper wallet è un metodo per archiviare una chiave privata per accedere "
+"ai fondi archiviati su un singolo indirizzo. Può essere generato su un "
+"computer che non è mai stato connesso a Internet e stampato per "
+"l'archiviazione offline con air gap. In quanto tali, sono adatti per "
+"archiviare grandi quantità di Dash, ma bisogna fare attenzione a non perdere"
+" la chiave privata, poiché non c'è modo di recuperare i fondi in caso di "
+"smarrimento. Per utilizzare la chiave, è necessario importarla o "
+"\"trascinarla\" in un wallet online e non deve essere utilizzata nuovamente."
+" I paper wallet sono estremamente sicuri ma un po’ scomodi per l’uso "
+"quotidiano rispetto ai wallet hardware, che offrono anch’essi un elevato "
+"grado di sicurezza."
 
 #: ../../docs/user/wallets/paper.rst:21
 msgid ""
@@ -57,20 +69,32 @@ msgid ""
 "(e.g. robbery/home invasion) could bypass this encryption using the "
 "proverbial \"$5 wrench attack\"."
 msgstr ""
+"I paper wallet utilizzano l'input casuale dell'utente e della macchina per "
+"creare un set di chiavi/indirizzi che poi stampi. Non è mai possibile "
+"rigenerare un paper wallet una volta spenta la macchina. Ciò che stampi è "
+"tutto ciò che ottieni. Per questo motivo i paper wallet sono piuttosto "
+"vulnerabili e richiedono cure particolari perché possono danneggiarsi, "
+"perdersi, essere distrutti o rubati. Anche se li crittografi con BIP38 (cosa"
+" che dovresti), un avversario sufficientemente motivato (ad esempio "
+"rapina/invasione domestica) potrebbe aggirare questa crittografia usando il "
+"proverbiale \"attacco con chiave inglese da $ 5\"."
 
 #: ../../docs/user/wallets/paper.rst:33
 msgid "The $5 wrench attack. Credit: xkcd.com"
-msgstr ""
+msgstr "L'attacco con la chiave inglese da 5 dollari. Credito: xkcd.com"
 
 #: ../../docs/user/wallets/paper.rst:35
 msgid ""
 "Nevertheless, together with appropriate planning, paper wallets are a highly"
 " convenient and user-friendly way to store Dash long term."
 msgstr ""
+"Tuttavia, insieme ad un'adeguata pianificazione, i paper wallet sono un modo"
+" estremamente conveniente e facile da usare per conservare Dash a lungo "
+"termine."
 
 #: ../../docs/user/wallets/paper.rst:39
 msgid "Security"
-msgstr ""
+msgstr "Sicurezza"
 
 #: ../../docs/user/wallets/paper.rst:41
 msgid ""
@@ -80,6 +104,12 @@ msgid ""
 " ensure that all generated data will be permanently wiped from memory once "
 "the process is complete."
 msgstr ""
+"Sebbene sia possibile creare un paper wallet utilizzando una macchina "
+"connessa a Internet, i wallet che verranno utilizzati per archiviare fondi "
+"significativi dovrebbero essere generati utilizzando un computer offline che"
+" esegue un sistema operativo monouso per garantire che tutti i dati generati"
+" vengano cancellati in modo permanente dalla memoria una volta completato il"
+" processo."
 
 #: ../../docs/user/wallets/paper.rst:47
 msgid ""
@@ -93,6 +123,16 @@ msgid ""
 "desktops can be used if you can ensure that all networking hardware is "
 "disabled when you get to the stage of actually generating your keys."
 msgstr ""
+"Un metodo semplice per farlo è masterizzare un CD Linux live. `_ Ubuntu "
+"Desktop <https://ubuntu.com/download/desktop>`_ è consigliato perché avrà il"
+" maggior numero di driver ed è semplice da usare, mentre `Tails "
+"<https://tails.boum.org/>`_ e `Kali Linux "
+"<https://www.kali.org/downloads/>`_ sono scelte popolari per una sicurezza "
+"estremamente elevata. L'avvio da un vero CD è più sicuro poiché è montato in"
+" sola lettura, ma generalmente va bene anche una chiavetta USB. È possibile "
+"utilizzare sia laptop che desktop se è possibile garantire che tutto "
+"l'hardware di rete sia disabilitato quando si arriva alla fase di "
+"generazione effettiva delle chiavi."
 
 #: ../../docs/user/wallets/paper.rst:58
 msgid ""
@@ -101,10 +141,13 @@ msgid ""
 "keys/addresses/printouts, and power off the machine. You are now the only "
 "person with access to these addresses."
 msgstr ""
+"Avvia dal CD e scarica/installa i tuoi strumenti (o scaricali prima su "
+"un'unità USB). Disconnettiti da Internet, genera chiavi/indirizzi/stampe e "
+"spegni la macchina. Ora sei l'unica persona con accesso a questi indirizzi."
 
 #: ../../docs/user/wallets/paper.rst:64
 msgid "Death plan"
-msgstr ""
+msgstr "Piano di morte"
 
 #: ../../docs/user/wallets/paper.rst:66
 msgid ""
@@ -115,28 +158,37 @@ msgid ""
 "instructions on how to use it, and keep them separate with a clear procedure"
 " on how they can be accessed when necessary."
 msgstr ""
+"Qualunque sia il tipo di cold storage che scegli, pianifica di trasmettere i"
+" dati necessari per rigenerare le chiavi ai tuoi cari in caso di incidente: "
+"prima o poi succederà a tutti. Annota la password di decrittazione BIP38 del"
+" tuo paper wallet o la passphrase del wallet cerebrale. Quindi annota le "
+"istruzioni su come utilizzarlo e tienile separate con una procedura chiara "
+"su come accedervi quando necessario."
 
 #: ../../docs/user/wallets/paper.rst:74
 msgid "Tools"
-msgstr ""
+msgstr "Strumenti"
 
 #: ../../docs/user/wallets/paper.rst:76
 msgid "A Dash paper wallet can be generated in several ways."
-msgstr ""
+msgstr "Un paper wallet Dash può essere generato in diversi modi."
 
 #: ../../docs/user/wallets/paper.rst:78
 msgid "Using the generator at https://paper.dash.org"
-msgstr ""
+msgstr "Utilizzando il generatore su https://paper.dash.org"
 
 #: ../../docs/user/wallets/paper.rst:79
 msgid "Using the generator at https://walletgenerator.net/?currency=Dash"
 msgstr ""
+"Utilizzando il generatore su https://walletgenerator.net/?currency=Dash"
 
 #: ../../docs/user/wallets/paper.rst:80
 msgid ""
 "Offline using the Dash Paper Wallet source code from GitHub at "
 "https://github.com/dashpay/paper.dash.org/releases/latest"
 msgstr ""
+"Offline utilizzando il codice sorgente Dash Paper Wallet da GitHub "
+"all'indirizzo https://github.com/dashpay/paper.dash.org/releases/latest"
 
 #: ../../docs/user/wallets/paper.rst:82
 msgid ""
@@ -145,6 +197,11 @@ msgid ""
 "`downloading directly "
 "<https://github.com/MichaelMure/WalletGenerator.net/archive/master.zip>`_"
 msgstr ""
+"Offline utilizzando lo stesso codice che alimenta entrambi i siti, "
+"visualizzando il `progetto GitHub "
+"<https://github.com/MichaelMure/WalletGenerator.net>`_ o `scaricando "
+"direttamente <https://github.com/MichaelMure/WalletGenerator. "
+"net/archivio/master.zip>`_"
 
 #: ../../docs/user/wallets/paper.rst:86
 msgid ""
@@ -155,16 +212,24 @@ msgid ""
 "generator and run it on a computer with a freshly installed operating system"
 " that is not connected to the internet."
 msgstr ""
+"Poiché il codice sorgente per tutte e tre le opzioni è in gran parte simile,"
+" questa guida utilizzerà https://paper.dash.org come esempio. I siti web "
+"elencati qui funzionano interamente nel tuo browser web senza inviare "
+"nessuno dei dati generati a un server esterno, ma l'opzione più sicura è "
+"scaricare il generatore di wallet ed eseguirlo su un computer con un sistema"
+" operativo appena installato che non è connesso a Internet."
 
 #: ../../docs/user/wallets/paper.rst:93
 msgid ""
 "This guide is based on the guide available from https://walletgenerator.net."
 " Please donate if you find this project useful!"
 msgstr ""
+"Questa guida si basa sulla guida disponibile su https://walletgenerator.net."
+" Per favore fai una donazione se trovi utile questo progetto!"
 
 #: ../../docs/user/wallets/paper.rst:98
 msgid "Address generation"
-msgstr ""
+msgstr "Generazione di indirizzi"
 
 #: ../../docs/user/wallets/paper.rst:100
 msgid ""
@@ -172,10 +237,13 @@ msgid ""
 "downloaded the wallet generator). Select your language and choose Dash as "
 "the currency if necessary. The following screen will appear:"
 msgstr ""
+"Vai su https://paper.dash.org nel tuo browser web (o apri index.html se hai "
+"scaricato il generatore di wallet). Seleziona la tua lingua e scegli Dash "
+"come valuta, se necessario. Apparirà la seguente schermata:"
 
 #: ../../docs/user/wallets/paper.rst:107
 msgid "The Dash Paper Wallet Generator at paper.dash.org"
-msgstr ""
+msgstr "Il generatore di paper wallet Dash su paper.dash.org"
 
 #: ../../docs/user/wallets/paper.rst:109
 msgid ""
@@ -183,15 +251,21 @@ msgid ""
 "unique. Move our mouse around and/or type random characters into the text "
 "box until the process reaches 100% and the following screen appears:"
 msgstr ""
+"Sono necessari alcuni dati casuali per garantire che l'indirizzo e la chiave"
+" generati siano univoci. Muovi il mouse e/o digita caratteri casuali nella "
+"casella di testo finché il processo non raggiunge il 100% e viene "
+"visualizzata la seguente schermata:"
 
 #: ../../docs/user/wallets/paper.rst:117
 msgid "Generating randomness for the Dash Paper Wallet Generator"
-msgstr ""
+msgstr "Generazione di casualità per il generatore di paper wallet Dash"
 
 #: ../../docs/user/wallets/paper.rst:122
 msgid ""
 "A Dash address and private key generated using Dash Paper Wallet Generator"
 msgstr ""
+"Un indirizzo Dash e una chiave privata generati utilizzando Dash Paper "
+"Wallet Generator"
 
 #: ../../docs/user/wallets/paper.rst:125
 msgid ""
@@ -201,10 +275,17 @@ msgid ""
 "without somehow recording the dash address and private key, all data will be"
 " irretrievably lost, together with any funds you have sent to the address."
 msgstr ""
+"Una volta che il tuo indirizzo pubblico e la chiave privata (mostrati nel "
+"formato di importazione del portafoglio o WIF) sono visibili nella scheda "
+"**Wallet singolo**, devi immediatamente fare clic su **Stampa** per stampare"
+" i dati e archiviarli in modo sicuro. Se lasci la pagina senza registrare in"
+" qualche modo l'indirizzo del dash e la chiave privata, tutti i dati "
+"andranno irrimediabilmente persi, insieme a tutti i fondi che hai inviato a "
+"quell'indirizzo."
 
 #: ../../docs/user/wallets/paper.rst:133
 msgid "Encryption"
-msgstr ""
+msgstr "Crittografia"
 
 #: ../../docs/user/wallets/paper.rst:135
 msgid ""
@@ -213,6 +294,11 @@ msgid ""
 "and use it, but it is not protected from being stolen if someone finds it. "
 "You should keep it safe the same way you would jewels or cash."
 msgstr ""
+"Le informazioni mostrate nella scheda **Wallet singolo** non hanno una "
+"passphrase e non sono crittografate. Puoi stampare questo paper wallet così "
+"com'è e usarlo, ma non è protetto dal furto se qualcuno lo trova. Dovresti "
+"tenerlo al sicuro nello stesso modo in cui faresti con i gioielli o i "
+"contanti."
 
 #: ../../docs/user/wallets/paper.rst:140
 msgid ""
@@ -230,6 +316,21 @@ msgid ""
 " the password or lose the encrypted key, you will permanently lose access to"
 " your funds."
 msgstr ""
+"Se decidi di aver bisogno della sicurezza aggiuntiva di una password per "
+"questo indirizzo, fai clic su **Paper Wallet**. Apparirà un indirizzo/coppia"
+" chiave diversa. Per creare un wallet crittografato, seleziona **BIP38 "
+"Encrypt?** e inserisci una passphrase. Spunta la casella **Nascondi arte?** "
+"e cambia in **1** il campo **Indirizzi da generare** e poi clicca su "
+"**Genera**. Verrà generato un nuovo portafoglio in cui la chiave privata "
+"(WIF) viene crittografata utilizzando la password specificata, ottenendo una"
+" chiave BIP38. Ora avrai bisogno sia della chiave BIP38 che della password "
+"per controllare i fondi sull'indirizzo, quindi assicurati di fare clic su "
+"**Stampa** e di conservarli entrambi in modo sicuro. Se non sei sicuro su "
+"come utilizzare la crittografia BIP38, ti consigliamo vivamente di testare "
+"il flusso di lavoro con una quantità ridotta di Dash prima di archiviare "
+"fondi significativi su un paper wallet crittografato. Se dimentichi la "
+"password o perdi la chiave crittografata, perderai definitivamente l'accesso"
+" ai tuoi fondi."
 
 #: ../../docs/user/wallets/paper.rst:154
 msgid ""
@@ -238,14 +339,20 @@ msgid ""
 "begins with \"6P\". See `here <https://bitcoinpaperwallet.com/bip38 "
 "-password-encrypted-wallets/>`_ to learn more about BIP38."
 msgstr ""
+"Un indirizzo Dash WIF può essere facilmente identificato perché inizia "
+"sempre con \"7\". Una chiave crittografata in formato BIP38 può essere "
+"identificata perché inizia sempre con \"6P\". Vedi `qui "
+"<https://bitcoinpaperwallet.com/bip38 -password-encrypted-wallets/>`_ per "
+"saperne di più su BIP38."
 
 #: ../../docs/user/wallets/paper.rst:162
 msgid "Encrypted paper wallet generated using Dash Paper Wallet Generator"
 msgstr ""
+"Paper wallet crittografato generato utilizzando Dash Paper Wallet Generator"
 
 #: ../../docs/user/wallets/paper.rst:165
 msgid "Sending to a paper wallet and viewing the balance"
-msgstr ""
+msgstr "Invio a un paper wallet e visualizzazione del saldo"
 
 #: ../../docs/user/wallets/paper.rst:167
 msgid ""
@@ -259,54 +366,72 @@ msgid ""
 "you’d like. Just make sure you test your wallet with small amounts first to "
 "learn how it works."
 msgstr ""
+"Puoi inviare Dash all'indirizzo di un paper wallet allo stesso modo di "
+"qualsiasi altro indirizzo Dash. Consulta la documentazione del tuo wallet se"
+" non sai come farlo. Per questo esempio, 0,05 Dash (meno la commissione di "
+"transazione) sono stati inviati all'indirizzo del paper wallet. Chiunque sia"
+" a conoscenza dell’indirizzo pubblico è in grado di vedere il saldo del "
+"wallet utilizzando un block explorer, ma solo chi conosce la chiave privata "
+"può accedere ai fondi. Puoi effettuare tutti i depositi e inviare tutte le "
+"monete che desideri allo stesso indirizzo. Assicurati solo di testare prima "
+"il tuo wallet con piccoli importi per scoprire come funziona."
 
 #: ../../docs/user/wallets/paper.rst:180
 msgid ""
 "Viewing the balance of the paper wallet using the Dash Block Explorer at "
 "explorer.dash.org"
 msgstr ""
+"Visualizzazione del saldo del paper wallet utilizzando Dash Block Explorer "
+"su explorer.dash.org"
 
 #: ../../docs/user/wallets/paper.rst:183
 msgid "Spending from a paper wallet"
-msgstr ""
+msgstr "Spesa da un paper wallet"
 
 #: ../../docs/user/wallets/paper.rst:185
 msgid ""
 "In order to access the funds stored on the paper wallet address, you will "
 "need the following:"
 msgstr ""
+"Per accedere ai fondi memorizzati sull'indirizzo del paper wallet, avrai "
+"bisogno di quanto segue:"
 
 #: ../../docs/user/wallets/paper.rst:188
 msgid "The public address"
-msgstr ""
+msgstr "L'indirizzo pubblico"
 
 #: ../../docs/user/wallets/paper.rst:189
 msgid "The private key in WIF"
-msgstr ""
+msgstr "La chiave privata in WIF"
 
 #: ../../docs/user/wallets/paper.rst:191
 msgid ""
 "If you encrypted the wallet, you will additionally need the following to "
 "convert the BIP38 key into the WIF key:"
 msgstr ""
+"Se hai crittografato il wallet, avrai inoltre bisogno di quanto segue per "
+"convertire la chiave BIP38 nella chiave WIF:"
 
 #: ../../docs/user/wallets/paper.rst:194
 msgid "The encrypted private key in BIP38 format"
-msgstr ""
+msgstr "La chiave privata crittografata in formato BIP38"
 
 #: ../../docs/user/wallets/paper.rst:195
 msgid "The passphrase you used to encrypt the key"
-msgstr ""
+msgstr "La passphrase utilizzata per crittografare la chiave"
 
 #: ../../docs/user/wallets/paper.rst:198
 msgid "Optional: Decrypt BIP38 key to WIF"
-msgstr ""
+msgstr "Facoltativo: decrittografare la chiave BIP38 in WIF"
 
 #: ../../docs/user/wallets/paper.rst:200
 msgid ""
 "If you encrypted your paper wallet, you will first need to decrypt the BIP38"
 " key. You can skip this step if your private key was not encrypted."
 msgstr ""
+"Se hai crittografato il tuo paper wallet, dovrai prima decrittografare la "
+"chiave BIP38. Puoi saltare questo passaggio se la tua chiave privata non è "
+"stata crittografata."
 
 #: ../../docs/user/wallets/paper.rst:203
 msgid ""
@@ -317,16 +442,25 @@ msgid ""
 "information required to access the funds on the public address appears under"
 " **Private Key WIF**. Copy the Private Key WIF and use it in the next step."
 msgstr ""
+"Vai alla scheda **Dettagli wallet**, inserisci la chiave crittografata nel "
+"campo **Inserisci chiave privata** e fai clic su **Visualizza dettagli**. Ti"
+" verrà chiesto di **Inserire la passphrase BIP38** nel campo. Inserisci la "
+"passphrase e fai clic su **Decrittografa BIP38**. Appariranno una serie di "
+"informazioni derivate dalla chiave, le informazioni necessarie per accedere "
+"ai fondi sull'indirizzo pubblico appaiono sotto **Chiave privata WIF**. "
+"Copia la chiave privata WIF e utilizzala nel passaggio successivo."
 
 #: ../../docs/user/wallets/paper.rst:214
 msgid ""
 "Dash Paper Wallet Generator displaying information derived from an encrypted"
 " private key"
 msgstr ""
+"Dash Paper Wallet Generator che visualizza informazioni derivate da una "
+"chiave privata crittografata"
 
 #: ../../docs/user/wallets/paper.rst:218
 msgid "Importing the private key to your live wallet"
-msgstr ""
+msgstr "Importazione della chiave privata nel tuo wallet attivo"
 
 #: ../../docs/user/wallets/paper.rst:220
 msgid ""
@@ -338,10 +472,18 @@ msgid ""
 "Wallet**. Enter your wallet passphrase. Then click **Tools > Console**. The "
 "console appears. Enter the following command::"
 msgstr ""
+"Quando sarai pronto a spendere il saldo sul wallet di carta, dovrai "
+"importare la chiave privata utilizzata per controllare l'indirizzo stampato "
+"sul wallet in un altro portafoglio Dash connesso a Internet. In questo "
+"esempio utilizzeremo il wallet Dash Core, sebbene siano supportati anche "
+"Dash Electrum e i wallet mobili. Apri Dash Core Wallet, fai clic su "
+"**Impostazioni** e **Sblocca Wallet**. Inserisci la passphrase del tuo "
+"wallet. Quindi fare clic su **Strumenti > Console**. Viene visualizzata la "
+"console. Immettere il seguente comando::"
 
 #: ../../docs/user/wallets/paper.rst:233
 msgid "Dash Core Wallet importing a private key"
-msgstr ""
+msgstr "Dash Core Wallet importa una chiave privata"
 
 #: ../../docs/user/wallets/paper.rst:235
 msgid ""
@@ -351,12 +493,20 @@ msgid ""
 "imported address will appear in your list of transactions. If you use Coin "
 "Control, you can also enable or disable the address for spending there."
 msgstr ""
+"Questo processo richiede la scansione dell'intera blockchain scaricata per "
+"le transazioni che coinvolgono questo indirizzo e richiederà quindi del "
+"tempo. Essere pazientare. Una volta completato il processo, tutte le "
+"transazioni che coinvolgono l'indirizzo importato verranno visualizzate "
+"nell'elenco delle transazioni. Se usi Coin Control, puoi anche abilitare o "
+"disabilitare l'indirizzo per effettuare acquisti lì."
 
 #: ../../docs/user/wallets/paper.rst:248
 msgid ""
 "Paper wallet address successfully imported into Dash Core Wallet from WIF "
 "private key"
 msgstr ""
+"Indirizzo del paper wallet importato correttamente nel wallet Dash Core "
+"dalla chiave privata WIF"
 
 #: ../../docs/user/wallets/paper.rst:251
 msgid ""
@@ -368,9 +518,18 @@ msgid ""
 "access to the same address from the paper wallet before you do. You can then"
 " spend your balance as usual."
 msgstr ""
+"Poiché l'indirizzo pubblico del paper wallet conserva ancora i fondi, può "
+"anche essere importato nuovamente in un secondo wallet se non viene "
+"distrutto. Si consiglia di trasferire il saldo dal paper wallet "
+"all'indirizzo di un wallet interno o a un altro indirizzo in cui si ha il "
+"controllo esclusivo sulla chiave privata. Ciò impedirà a terzi di ottenere "
+"l'accesso non autorizzato allo stesso indirizzo dal paper wallet prima di "
+"te. Potrai quindi spendere il tuo saldo come al solito."
 
 #: ../../docs/user/wallets/paper.rst:259
 msgid ""
 "Once the paper wallet is empty and you are sure it will not be receiving any"
 " further deposits, you can destroy the paper."
 msgstr ""
+"Una volta che il paper wallet è vuoto e sei sicuro che non riceverà "
+"ulteriori depositi, puoi distruggere la carta."

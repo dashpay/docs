@@ -1,52 +1,56 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021, Dash Core Group, Inc
+# Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # William Lotta <williamlotta@gmail.com>, 2022
 # AL <mediterraneo9000@gmail.com>, 2022
+# Dash Italia, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 13:54-0500\n"
+"POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
-"Last-Translator: AL <mediterraneo9000@gmail.com>, 2022\n"
-"Language-Team: Italian (https://www.transifex.com/dash/teams/37570/it/)\n"
+"Last-Translator: Dash Italia, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:1
+#: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst-1
 msgid "Using InstantSend and CoinJoin with Dash"
-msgstr ""
+msgstr "Utilizzo di InstantSend e CoinJoin con Dash"
 
-#: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:1
+#: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst-1
 msgid "dash, core, mobile, wallet, coinjoin, privatesend, instantsend"
-msgstr ""
+msgstr "dash, core, mobile, wallet, coinjoin, privatesend, instantsend"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:9
 msgid "CoinJoin and InstantSend"
-msgstr ""
+msgstr "CoinJoin e InstantSend"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:12
 msgid "CoinJoin"
-msgstr ""
+msgstr "CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:14
 msgid ""
 "This documentation describes how to use the CoinJoin feature to create "
 "CoinJoin transactions with your Dash for consumer grade privacy."
 msgstr ""
+"Questa documentazione descrive come utilizzare la funzione CoinJoin per "
+"creare transazioni CoinJoin con il tuo Dash per la privacy di livello "
+"consumer."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:18
 msgid "Background"
-msgstr ""
+msgstr "Background"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:20
 msgid ""
@@ -56,6 +60,12 @@ msgid ""
 "allows any amount of Dash to be processed. CoinJoin is also available in the"
 " :ref:`Dash Electrum <dash-electrum-wallet>` wallet."
 msgstr ""
+"CoinJoin è un metodo trustless (cioè non custodito) per eseguire una "
+"sequenza di transazioni in modo tale che un osservatore abbia difficoltà a "
+"tracciare la cronologia delle transazioni. L'attuale implementazione di "
+"CoinJoin nel wallet Dash Core consente di elaborare qualsiasi quantità di "
+"Dash. CoinJoin è disponibile anche nel wallet :ref:`Dash Electrum <dash-"
+"electrum-wallet>`."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:28
 msgid ""
@@ -65,22 +75,32 @@ msgid ""
 "of rounds of CoinJoin is set to four, and some inputs may pass through "
 "additional rounds to further improve privacy."
 msgstr ""
+"La conoscenza del numero esatto di round di CoinJoin ha un effetto "
+"quantificabile sulla fiducia che un avversario può avere quando tenta di "
+"indovinare la cronologia delle transazioni. Per questo motivo, il numero di "
+"round consigliato (e predefinito) di CoinJoin è impostato su quattro e "
+"alcuni input potrebbero passare attraverso round aggiuntivi per migliorare "
+"ulteriormente la privacy."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:35
 msgid ""
 "You can read more about CoinJoin theory and processes :ref:`here "
 "<coinjoin>`."
 msgstr ""
+"Puoi leggere ulteriori informazioni sulla teoria e sui processi di CoinJoin "
+":ref:`qui <coinjoin>`."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:39
 msgid "Configuration"
-msgstr ""
+msgstr "Configurazione"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:41
 msgid ""
 "Open your Dash Core wallet, go to **Settings** and select **Options**. Go to"
 " the **CoinJoin** tab."
 msgstr ""
+"Apri il tuo wallet Dash Core, vai su **Impostazioni** e seleziona "
+"**Opzioni**. Vai alla scheda **CoinJoin**."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:47
 msgid ""
@@ -90,12 +110,20 @@ msgid ""
 "the chance of detection via node collusion. 16 is the highest number of "
 "rounds currently available."
 msgstr ""
+"Accanto a **Cicli di miscelazione**, inserisci un valore compreso tra 2-16. "
+"Ogni round di CoinJoin esegue una transazione CoinJoin, nota come "
+"denominazione. Un numero maggiore di round aumenta il livello generale di "
+"privacy riducendo al contempo la possibilità di rilevamento tramite "
+"collusione dei nodi. 16 è il numero più alto di round attualmente "
+"disponibili."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:53
 msgid ""
 "NOTE: To prevent system abuse, an average of one in ten rounds incurs a fee "
 "of .0001 DASH."
 msgstr ""
+"NOTA: per prevenire abusi del sistema, in media un round su dieci comporta "
+"una commissione di 0,0001 DASH."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:56
 msgid ""
@@ -104,10 +132,14 @@ msgid ""
 "your wallet balance, you may end up with denominated inputs whose sum total "
 "is slightly greater than the target amount."
 msgstr ""
+"Inserisci un **Saldo target**. Questo valore fornisce un limite inferiore "
+"all'importo finale dei fondi da elaborare. A seconda di come il cliente "
+"divide il saldo del tuo wallet, potresti ritrovarti con input denominati la "
+"cui somma totale è leggermente superiore all'importo target."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:62
 msgid "Click **OK** to save settings."
-msgstr ""
+msgstr "Fare clic su **OK** per salvare le impostazioni."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:64
 msgid ""
@@ -116,10 +148,14 @@ msgid ""
 "settings and click **Start CoinJoin** on the **Overview** tab of your "
 "wallet."
 msgstr ""
+"CoinJoin è disabilitato per impostazione predefinita quando apri il wallet. "
+"Si avvierà solo dopo aver impostato il numero di round e il numero di Dash "
+"da elaborare nelle impostazioni e aver fatto clic su **Avvia CoinJoin** "
+"nella scheda **Panoramica** del tuo wallet."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:71
 msgid "Starting CoinJoin"
-msgstr ""
+msgstr "Avvia CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:73
 msgid ""
@@ -127,22 +163,30 @@ msgid ""
 "on the **Overview** tab of the Dash Core wallet. CoinJoin is possible once "
 "the following conditions have been met:"
 msgstr ""
+"Il processo CoinJoin viene avviato facendo clic sul pulsante **Avvia "
+"CoinJoin** nella scheda **Panoramica** del wallet Dash Core. CoinJoin è "
+"possibile una volta soddisfatte le seguenti condizioni:"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:77
 msgid ""
 "The wallet contains sufficient non-denominated funds to create the minimum "
 "required denominated values."
 msgstr ""
+"Il wallet contiene fondi non denominati sufficienti per creare i valori "
+"denominati minimi richiesti."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:79
 msgid "The user has not disabled CoinJoin in the Options dialog."
 msgstr ""
+"L'utente non ha disabilitato CoinJoin nella finestra di dialogo Opzioni."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:80
 msgid ""
 "The target value for processed funds in the Options dialog is greater than "
 "zero."
 msgstr ""
+"Il valore target per i fondi elaborati nella finestra di dialogo Opzioni è "
+"maggiore di zero."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:83
 msgid ""
@@ -150,10 +194,14 @@ msgid ""
 " your wallet passphrase. Enable the **Only for mixing via CoinJoin** "
 "checkbox to unlock the wallet for CoinJoin only."
 msgstr ""
+"Se il tuo wallet è crittografato (altamente raccomandato), ti verrà chiesto "
+"di inserire la passphrase del tuo wallet. Abilita la casella di controllo "
+"**Solo per il mixaggio tramite CoinJoin** per sbloccare il wallet solo per "
+"CoinJoin."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:90
 msgid "Entering a password for CoinJoin processing only"
-msgstr ""
+msgstr "Immissione di una password solo per l'elaborazione CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:92
 msgid ""
@@ -161,12 +209,17 @@ msgid ""
 "wallet will remain unlocked until CoinJoin processing is complete, at which "
 "point it will be locked automatically."
 msgstr ""
+"Questo sbloccherà il tuo wallet e inizierà il processo CoinJoin. Il wallet "
+"rimarrà sbloccato fino al completamento dell'elaborazione CoinJoin, a quel "
+"punto verrà bloccato automaticamente."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:99
 msgid ""
 "CoinJoin interface after clicking the **Start CoinJoin** button. Note the "
 "**Status** is **Enabled**."
 msgstr ""
+"Interfaccia CoinJoin dopo aver fatto clic sul pulsante **Avvia CoinJoin**. "
+"Tieni presente che lo **Stato** è **Abilitato**."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:102
 msgid ""
@@ -174,6 +227,10 @@ msgid ""
 "gradually increase. This process can take some time, so be patient. You can "
 "monitor the process in more detail as described in the following section."
 msgstr ""
+"CoinJoin inizierà a creare transazioni e il tuo saldo CoinJoin aumenterà "
+"gradualmente. Questo processo può richiedere del tempo, quindi sii paziente."
+" È possibile monitorare il processo in modo più dettagliato come descritto "
+"nella sezione seguente."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:107
 msgid ""
@@ -181,27 +238,33 @@ msgid ""
 "transactions are atomic (they either take place completely, or do not take "
 "place at all), it is possible to safely interrupt CoinJoin at any time."
 msgstr ""
+"Una qualsiasi delle seguenti azioni interromperà il processo. Poiché le "
+"transazioni sono atomiche (avvengono completamente o non avvengono affatto),"
+" è possibile interrompere in sicurezza CoinJoin in qualsiasi momento."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:112
 msgid "Clicking the **Stop CoinJoin** button on the Overview tab"
 msgstr ""
+"Facendo clic sul pulsante **Interrompi CoinJoin** nella scheda Panoramica"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:113
 msgid "Closing the client before CoinJoin is completed"
-msgstr ""
+msgstr "Chiusura del client prima del completamento di CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:114
 msgid ""
 "Sending CoinJoin funds from the wallet before CoinJoin rounds are completed"
 msgstr ""
+"Invio di fondi CoinJoin dal wallet prima del completamento dei round "
+"CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:116
 msgid "Disabling CoinJoin before the process is complete"
-msgstr ""
+msgstr "Disabilitare CoinJoin prima che il processo sia completato"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:119
 msgid "Monitoring CoinJoin"
-msgstr ""
+msgstr "Monitoraggio CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:121
 msgid ""
@@ -211,10 +274,16 @@ msgid ""
 "This will allow you to monitor progress and see which individual operations "
 "CoinJoin is carrying out in the background."
 msgstr ""
+"Se desideri monitorare CoinJoin in modo più dettagliato, devi abilitare "
+"alcune funzionalità avanzate del wallet. Vai su **Impostazioni**, seleziona "
+"**Opzioni** e vai alla scheda **Wallet**. Seleziona la casella di controllo "
+"**Abilita interfaccia avanzata**. Ciò ti consentirà di monitorare i "
+"progressi e vedere quali singole operazioni CoinJoin sta eseguendo in "
+"background."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:131
 msgid "Monitoring CoinJoin progress"
-msgstr ""
+msgstr "Monitoraggio dei progressi del CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:133
 msgid ""
@@ -229,80 +298,108 @@ msgid ""
 " check the status bar for the \"HD\" icon to determine if you are using an "
 "HD wallet or not."
 msgstr ""
+"Poiché CoinJoin crea molte nuove chiavi di indirizzo per inviare e ricevere "
+"i tagli, potresti ricevere un avviso quando il numero di chiavi rimanenti "
+"sta per esaurirsi. Non c'è nulla di cui preoccuparsi, poiché il wallet "
+"creerà semplicemente più chiavi se necessario. Tuttavia, per i wallet non HD"
+" queste chiavi non esisteranno in nessun backup precedente del tuo wallet. "
+"Per questo motivo, è importante eseguire nuovamente il backup del wallet una"
+" volta completato il processo se si utilizza un wallet non HD. Quando si "
+"utilizza un wallet HD, tutte le chiavi verranno derivate dal mnemonico del "
+"wallet, quindi non sono necessari backup aggiuntivi durante CoinJoin. Puoi "
+"controllare la barra di stato per l'icona \"HD\" per determinare se stai "
+"utilizzando un wallet HD o meno."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:142
 msgid ""
 "You can also monitor CoinJoin progress by viewing the transactions created "
 "by the process on the **Transactions** tab."
 msgstr ""
+"Puoi anche monitorare l'avanzamento di CoinJoin visualizzando le transazioni"
+" create dal processo nella scheda **Transazioni**."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:148
 msgid "Transactions created by CoinJoin on the Transactions tab"
-msgstr ""
+msgstr "Transazioni create da CoinJoin nella scheda Transazioni"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:150
 msgid ""
 "The following table describes the CoinJoin-related transactions displayed in"
 " the Type column of the **Transactions** tab:"
 msgstr ""
+"La tabella seguente descrive le transazioni relative a CoinJoin visualizzate"
+" nella colonna Tipo della scheda **Transazioni**:"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:154
 msgid "Transaction Type"
-msgstr ""
+msgstr "Tipo di transazione"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:154
 msgid "Transaction Description"
-msgstr ""
+msgstr "Descrizione delle Transazioni"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:156
 msgid "CoinJoin Make Collateral Inputs"
-msgstr ""
+msgstr "CoinJoin Effettua input collaterali"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:156
 msgid ""
 "Wallet funds were moved to collateral inputs that will be used to make "
 "collateral payments. This is done to minimize traceability of collaterals."
 msgstr ""
+"I fondi del wallet sono stati spostati in input collaterali che verranno "
+"utilizzati per effettuare pagamenti collaterali. Questo viene fatto per "
+"ridurre al minimo la tracciabilità delle garanzie."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:161
 msgid "CoinJoin Create Denominations"
-msgstr ""
+msgstr "CoinJoin Crea Denominazioni"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:161
 msgid ""
 "Wallet funds were broken into CoinJoin denominations (Step 1 :ref:`here "
 "<coinjoin>`)"
 msgstr ""
+"I fondi del portafoglio sono stati suddivisi in denominazioni CoinJoin "
+"(Passaggio 1:ref:`qui <coinjoin>`)"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:165
 msgid "CoinJoin Mixing"
-msgstr ""
+msgstr "CoinJoin Mixing"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:165
 msgid ""
 "A transaction was sent to a masternode in order to participate in a CoinJoin"
 " session (Step 3 :ref:`here <coinjoin>`)"
 msgstr ""
+"Una transazione è stata inviata a un masternode per partecipare a una "
+"sessione CoinJoin (Step 3 :ref:`here <coinjoin>`)"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:169
 msgid "CoinJoin Collateral Payment"
-msgstr ""
+msgstr "Pagamento collaterale CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:169
 msgid ""
 "The CoinJoin session collateral was claimed. This fee is charged in ~10% of "
 "sessions to prevent spam attacks."
 msgstr ""
+"È stata rivendicata la garanzia della sessione CoinJoin. Questa tariffa "
+"viene addebitata in circa il 10% delle sessioni per prevenire attacchi di "
+"spam."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:173
 msgid "CoinJoin Send"
-msgstr ""
+msgstr "CoinJoin Invia"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:173
 msgid ""
 "Denominated funds were used to send a payment to someone. Note: Unlike the "
 "previous 4 transaction types, this is not a CoinJoin transaction."
 msgstr ""
+"I fondi denominati venivano utilizzati per inviare un pagamento a qualcuno. "
+"Nota: a differenza dei 4 tipi di transazione precedenti, questa non è una "
+"transazione CoinJoin."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:179
 msgid ""
@@ -317,16 +414,29 @@ msgid ""
 "minimum balance for an input used in a CoinJoin transaction is 0.00100010 "
 "DASH."
 msgstr ""
+"Puoi anche utilizzare la funzione di controllo delle monete per visualizzare"
+" quali indirizzi contengono denominazioni pronte per essere utilizzate per "
+"le transazioni CoinJoin. Vai alla scheda **Invia** del tuo wallet e fai clic"
+" su **Ingressi** per visualizzare i possibili indirizzi di input per le tue "
+"transazioni. Puoi vedere come ciascun indirizzo contiene determinate "
+"denominazioni di Dash e quanti round sono stati completati. Questo per "
+"garantire che una combinazione efficiente di indirizzi possa essere "
+"utilizzata come input nelle transazioni CoinJoin senza troppe modifiche, "
+"poiché un importo in una transazione CoinJoin deve essere arrotondato per "
+"spendere completamente tutti gli input. Il saldo minimo attuale per un input"
+" utilizzato in una transazione CoinJoin è 0,00100010 DASH."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:193
 msgid ""
 "Coin Selection dialog showing addresses holding CoinJoin balances in "
 "different denominations"
 msgstr ""
+"Finestra di dialogo Selezione monete che mostra gli indirizzi che detengono "
+"saldi CoinJoin in diversi tagli"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:197
 msgid "Paying with CoinJoin"
-msgstr ""
+msgstr "Pagare con CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:199
 msgid ""
@@ -340,6 +450,16 @@ msgid ""
 " send, a CoinJoin transaction will usually take up more space (in kilobytes)"
 " on the blockchain, and therefore will be charged a slightly higher fee."
 msgstr ""
+"Puoi utilizzare CoinJoin per i pagamenti solo dopo aver elaborato abbastanza"
+" Dash per recuperare l'importo che stai tentando di inviare. Poiché il "
+"processo richiede tempo, è necessario eseguirlo in anticipo prima di creare "
+"la transazione di invio. Una transazione CoinJoin è effettivamente uguale a "
+"qualsiasi altra transazione sulla blockchain, ma attinge solo da indirizzi "
+"di input in cui la denominazione è stata precedentemente elaborata per "
+"garantire la privacy dei fondi. Poiché di solito sono necessari diversi "
+"indirizzi di input per comporre l'importo che stai tentando di inviare, una "
+"transazione CoinJoin di solito occuperà più spazio (in kilobyte) sulla "
+"blockchain e pertanto verrà addebitata una commissione leggermente più alta."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:210
 msgid ""
@@ -352,16 +472,28 @@ msgid ""
 "0.001 DASH). You will be prompted to enter your password and receive a "
 "detailed breakdown of the fee structure for CoinJoin before sending."
 msgstr ""
+"Per inviare un pagamento utilizzando CoinJoin, vai alla scheda **CoinJoin** "
+"del wallet Dash Core. Il saldo visualizzato è il tuo saldo CoinJoin anziché "
+"il saldo totale come mostrato nella scheda **Invia**. Puoi quindi inserire "
+"l'indirizzo **Paga a**, **Etichetta**, **Importo** e fare clic su **Invia "
+"fondi misti**. Il tuo pagamento verrà arrotondato per eccesso fino a "
+"spendere completamente la denominazione più bassa possibile del saldo "
+"denominato disponibile (attualmente allo 0,001 DASH più vicino). Ti verrà "
+"richiesto di inserire la tua password e ricevere una ripartizione "
+"dettagliata della struttura delle commissioni per CoinJoin prima dell'invio."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:223
 msgid ""
 "Dash Core ready to send a CoinJoin transaction. Note use of the CoinJoin tab"
 " and the amount to be sent is less than the available CoinJoin balance"
 msgstr ""
+"Dash Core pronto per inviare una transazione CoinJoin. Tieni presente che "
+"l'utilizzo della scheda CoinJoin e l'importo da inviare sono inferiori al "
+"saldo CoinJoin disponibile"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:228
 msgid "Inputs"
-msgstr ""
+msgstr "Input"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:230
 msgid ""
@@ -369,6 +501,10 @@ msgid ""
 "of inputs and one or more outputs. CoinJoin transactions do not use change "
 "addresses, so any remaining Dash will be spent on the transaction fee."
 msgstr ""
+"Come tutte le transazioni Dash, le transazioni CoinJoin sono composte da un "
+"numero di input e uno o più output. Le transazioni CoinJoin non utilizzano "
+"indirizzi di modifica, quindi l'eventuale Dash rimanente verrà speso per la "
+"commissione di transazione."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:235
 msgid ""
@@ -383,6 +519,17 @@ msgid ""
 " transaction risk scoring services for transactions on the Dash blockchain, "
 "including CoinJoin transactions."
 msgstr ""
+"A causa della natura probabilistica del processo CoinJoin, aumentare il "
+"numero di input in una transazione può ridurre marginalmente la privacy. Per"
+" questo motivo, l’utilizzo di CoinJoin non è consigliato agli utenti che "
+"richiedono un elevato livello di privacy. Sebbene non sia possibile "
+"collegare una transazione CoinJoin a un unico indirizzo di origine con "
+"assoluta certezza, l'utilizzo di più input può rendere una transazione più "
+"vulnerabile a diversi potenziali attacchi di collegamento. Esistono numerose"
+" `società di analisi della catena <https://www.dash.org/regulatory#kyc>`__ "
+"che possiedono strumenti in grado di fornire servizi di valutazione del "
+"rischio di transazione per le transazioni sulla blockchain di Dash, comprese"
+" le transazioni CoinJoin."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:246
 msgid ""
@@ -393,6 +540,13 @@ msgid ""
 "<coin-control>` function in the CoinJoin tab to view and select or deselect "
 "CoinJoin UTXOs currently available for use as transaction inputs."
 msgstr ""
+"Puoi ridurre il numero di input in una transazione CoinJoin definendo "
+"l'importo della transazione in modo tale da consumare i tagli di input "
+"disponibili in modo più efficiente o elaborando più Dash per garantire che "
+"siano disponibili input sufficienti denominati in modo appropriato. Utilizza"
+" la funzione :ref:`Coin Control ` nella scheda CoinJoin per visualizzare e "
+"selezionare o deselezionare gli UTXO CoinJoin attualmente disponibili per "
+"l'uso come input di transazione."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:256
 msgid "InstantSend"
@@ -416,16 +570,29 @@ msgid ""
 "network for the transaction lock in order to be able to receive funds and "
 "process transactions with immediate settlement."
 msgstr ""
+"Questa documentazione descrive come utilizzare InstantSend per inviare "
+"istantaneamente fondi a qualsiasi altro utente Dash in tutto il mondo. Dal "
+"rilascio di InstantSend basato sui quorum Masternode di lunga durata (`LLMQ-"
+"IS <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__) in Dash "
+"0.14, la rete Dash stessa tenterà di generare un blocco InstantSend per "
+"quasi ogni transazione elaborata dalla rete, secondo :ref:`queste regole "
+"<is-broadcast>`. A differenza della precedente implementazione di "
+"InstantSend, che richiedeva una tariffa più elevata, LLMQ-IS blocca le "
+"transazioni senza alcuna azione da parte dell'utente. Per questo motivo solo"
+" il destinatario deve monitorare la rete per il blocco delle transazioni per"
+" poter ricevere fondi ed elaborare transazioni con regolamento immediato."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:273
 msgid ""
 "Dash InstantSend is supported by many wallets and vendors, including (but "
 "not limited to) the following:"
 msgstr ""
+"Dash InstantSend è supportato da molti wallet e fornitori, inclusi (ma non "
+"limitati a) quanto segue:"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:276
 msgid "Dash Core Wallet"
-msgstr ""
+msgstr "Dash Core Wallet"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:277
 msgid "Dash Android Wallet"
@@ -437,29 +604,31 @@ msgstr "Portafoglio Dash iOS"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:279
 msgid "My Dash Wallet"
-msgstr ""
+msgstr "My Dash Wallet"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:280
 msgid "Kraken"
-msgstr ""
+msgstr "Kraken"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:281
 msgid "Bitrefill"
-msgstr ""
+msgstr "Bitrefill"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:282
 msgid "and many more..."
-msgstr ""
+msgstr "e molti altri..."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:284
 msgid ""
 "You can read more about InstantSend theory and processes :ref:`here "
 "<instantsend>`."
 msgstr ""
+"Puoi leggere ulteriori informazioni sulla teoria e sui processi di "
+"InstantSend :ref:`qui <instantsend>`."
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:288
 msgid "InstantSend Transactions"
-msgstr ""
+msgstr "Transazioni InstantSend"
 
 #: ../../docs/user/wallets/dashcore/coinjoin-instantsend.rst:290
 msgid ""
@@ -472,3 +641,12 @@ msgid ""
 "instantsend>` documentation for more information on how to monitor for "
 "InstandSend locks."
 msgstr ""
+"A partire dalla versione 0.14 di Dash, tutte le opzioni dell'interfaccia "
+"utente per creare una transazione InstantSend sono state rimosse, poiché "
+"tutte le transazioni sono effettivamente transazioni InstantSend. Come in "
+"precedenza, il destinatario è responsabile del monitoraggio della rete per "
+"il blocco InstantSend e dell'implementazione della logica e delle interfacce"
+" rivolte all'utente per continuare con l'elaborazione della transazione dopo"
+" aver ricevuto il pagamento. Consulta la documentazione :ref:`InstantSend "
+"Integration <integration-instantsend>` per ulteriori informazioni su come "
+"monitorare i blocchi InstandSend."
