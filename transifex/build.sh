@@ -4,6 +4,7 @@ curl -X POST -d "branches=stable" -d "token=$ARABIC" $ARABIC_WEBHOOK
 curl -X POST -d "branches=stable" -d "token=$FRENCH" $FRENCH_WEBHOOK
 curl -X POST -d "branches=stable" -d "token=$GERMAN" $GERMAN_WEBHOOK
 curl -X POST -d "branches=stable" -d "token=$GREEK" $GREEK_WEBHOOK
+curl -X POST -d "branches=stable" -d "token=$ITALIAN" $ITALIAN_WEBHOOK
 curl -X POST -d "branches=stable" -d "token=$JAPANESE" $JAPANESE_WEBHOOK
 curl -X POST -d "branches=stable" -d "token=$KOREAN" $KOREAN_WEBHOOK
 curl -X POST -d "branches=stable" -d "token=$PORTUGUESE" $PORTUGUESE_WEBHOOK
