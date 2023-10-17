@@ -66,6 +66,12 @@ Configuration
    process under settings and click **Start CoinJoin** on the **Overview**
    tab of your wallet.
 
+Several advanced options are also available on this screen for users that
+require more control: 
+
+* **Inputs per denomination** values allow limiting how many inputs are created. This can be helpful if you end up with too many small denominations.
+* **Parallel sessions** sets how many separate masternodes should be used in parallel if multi-session mixing is enabled.
+
 
 Starting CoinJoin
 -----------------
