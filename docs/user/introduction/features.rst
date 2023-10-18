@@ -56,14 +56,14 @@ Masternodes enable the following services:
 -  **Governance and Treasury** allows stakeholders in Dash to determine
    the direction of the project and devotes 10% of the block reward to
    development of the project and ecosystem.
--  **Dash Evolution** will make using cryptocurrency as easy as using
+-  **Dash Evolution** will make using cryptocurrency as easy as using
    PayPal.
 
 Masternode owners must have possession of 1000 DASH, which they prove by
 signing a message included in a special transaction written to the
 blockchain. The Dash can be moved or spent at any time, but doing so
 will cause the masternode to fall out of queue and stop earning rewards.
-Masternode users are also given **voting rights** on proposals. Each
+Masternode users are also given **voting rights** on proposals. Each
 masternode has one vote and this vote can be used on budget proposals or
 important decisions that affect Dash.
 
@@ -72,7 +72,7 @@ of the block reward as an incentive. Because only one masternode is paid
 in each block, the frequency of the payment can vary, as well as the
 value of the Dash paid out. This `tool <https://stats.masternode.me/>`_
 shows a live calculation of masternode earnings. These rewards decrease
-by 7% each year, together with the block reward. There is also the
+by 7% each year, together with the block reward. There is also the
 possibility for masternodes to earn money from fees in the future.
 
 Evolution Masternodes (evonodes)
@@ -252,7 +252,7 @@ Sporks
 In response to unforeseen issues with the rollout of the major "RC3"
 update in June 2014, the Dash development team created a mechanism by
 which updated code is released to the network, but not immediately made
-active ("enforced"). This innovation allows for far smoother transitions
+active ("enforced"). This innovation allows for far smoother transitions
 than in the traditional hard fork paradigm, as well as the collection of
 test data in the live network environment. This process of multi-phased
 forking was originally to be called "soft forking" but the community
@@ -274,7 +274,7 @@ enforcement of the updated code can be activated remotely by multiple
 members of the core development team signing a network message together
 with their respective private keys. Should problems arise, the code can
 be deactivated in the same manner, without the need for a network-wide
-rollback or client update. For technical details on individual sporks,
+rollback or client update. For technical details on individual sporks,
 see :ref:`here <understanding-sporks>`.
 
 
@@ -297,7 +297,7 @@ Information on mining with X11 can be found in the :ref:`Mining
 <mining>` section of this documentation.
 
 X11 is the name of the chained proof-of-work (**PoW**) algorithm that
-was introduced in Dash (launched January 2014 as "Xcoin"). It was 
+was introduced in Dash (launched January 2014 as "Xcoin"). It was 
 partially inspired by the chained-hashing approach of Quark, adding
 further "depth" and complexity by increasing the number of hashes, yet
 it differs from Quark in that the rounds of hashes are determined *a
@@ -348,19 +348,19 @@ had (CPUs, GPUs, ASICs).
 Dark Gravity Wave
 =================
 
-**DGW** or *Dark Gravity Wave* is an open source difficulty-adjusting
-algorithm for Bitcoin-based cryptocurrencies that was first used in Dash
-and has since appeared in other digital currencies. DGW was authored by 
+**DGW** or *Dark Gravity Wave* is an open source difficulty-adjusting
+algorithm for Bitcoin-based cryptocurrencies that was first used in Dash
+and has since appeared in other digital currencies. DGW was authored by 
 Evan Duffield, the developer and creator of Dash, as a response to a 
-time-warp exploit found in *Kimoto's Gravity Well*. In concept, DGW is 
-similar to the Kimoto Gravity Well, adjusting the difficulty levels 
-every block (instead of every 2016 blocks like Bitcoin) based on 
+time-warp exploit found in *Kimoto's Gravity Well*. In concept, DGW is 
+similar to the Kimoto Gravity Well, adjusting the difficulty levels 
+every block (instead of every 2016 blocks like Bitcoin) based on 
 statistical data from recently found blocks. This makes it possible to 
 issue blocks with relatively consistent times, even if the hashing power
 experiences high fluctuations, without suffering from the time-warp 
 exploit.
 
-- Version 2.0 of DGW was implemented in Dash from block 45,000 onwards 
+- Version 2.0 of DGW was implemented in Dash from block 45,000 onwards 
   in order to completely alleviate the time-warp exploit.
 
 - Version 3.0 was implemented on May 14 of 2014 to further improve 
@@ -391,7 +391,7 @@ While Dash is based on Bitcoin, it significantly modifies the coin
 emission rate to offer a smoother reduction in coin emission over time.
 While Bitcoin reduces the coin emission rate by 50% every 4 years, Dash
 reduces the emission by one-fourteenth (approx. 7.14%) every 210240
-blocks (approx. 383.25 days). It can be seen that reducing the block
+blocks (approx. 383.25 days). It can be seen that reducing the block
 reward by a smaller amount each year offers a smoother transition to a
 fee-based economy than Bitcoin.
 
@@ -427,7 +427,7 @@ between:
 +-----------------+-----------------------------------+
 | 17,742,696 DASH | Assuming zero treasury allocation |
 +-----------------+-----------------------------------+
-| 18,921,005 DASH | Assuming full treasury allocation |
+| 18,921,005 DASH | Assuming full treasury allocation |
 +-----------------+-----------------------------------+
 
 Block reward allocation
@@ -514,7 +514,7 @@ Please see `this reddit post <https://www.reddit.com/r/dashpay/comments/
 7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`_ for more details, or
 run your own `emission calculations using this tool
 <https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_. See `this
-site <https://stats.masternode.me>`_ for live data on current network
+site <https://stats.masternode.me>`_ for live data on current network
 statistics.
 
 .. _decentralized-governance:
@@ -624,7 +624,7 @@ for Dash is as follows:
 As an example, a standard and relatively simple transaction on the Dash
 network with one input, one output and a possible change address
 typically fits in the range of 200 - 400 bytes. Assuming a price of
-US$100 per DASH, the fee falls in the range of $0.0002 - $0.0004, or
+US$100 per DASH, the fee falls in the range of $0.0002 - $0.0004, or
 1/50th of a cent. InstantSend locking will be attempted on all transactions
 without any extra charge.
 
