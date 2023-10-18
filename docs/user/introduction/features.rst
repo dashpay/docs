@@ -457,7 +457,7 @@ governance proposal approved in September 2023. Additional details can be found
 in the :ref:`Treasury expansion section <block-subsidy-reallocation-treasury-expansion>`.
 
 Miner and masternode reallocation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note::
 
@@ -533,7 +533,7 @@ statistics.
 .. _block-subsidy-reallocation-treasury-expansion:
 
 Treasury expansion
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 In September of 2023, the Dash network approved a `proposal
 <https://www.dashcentral.org/p/TREASURY-REALLOCATION-60-20-20>`__ to double the
