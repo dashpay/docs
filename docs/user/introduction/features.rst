@@ -17,7 +17,7 @@ Specifications
 - No premine
 - X11 hashing algorithm, CPU/GPU/ASIC mining available
 - 2.6 minute block time, 2MB blocks, ~56 transactions per second
-- Block reward decreases by 7.14% per year
+- Block subsidy decreases by 7.14% per year
 - Dark Gravity Wave difficulty adjustment algorithm
 - Between 17.74M and 18.92M total coin supply
 - Decentralized second-tier masternode network
@@ -54,7 +54,7 @@ Masternodes enable the following services:
 -  **ChainLocks**, which protects the blockchain against 51% mining 
    attacks by signing blocks as they are mined.
 -  **Governance and Treasury** allows stakeholders in Dash to determine
-   the direction of the project and devotes 10% of the block reward to
+   the direction of the project and devotes 10% of the block subsidy to
    development of the project and ecosystem.
 -  **Dash Evolution** will make using cryptocurrency as easy as using
    PayPal.
@@ -72,7 +72,7 @@ of the block reward as an incentive. Because only one masternode is paid
 in each block, the frequency of the payment can vary, as well as the
 value of the Dash paid out. This `tool <https://stats.masternode.me/>`_
 shows a live calculation of masternode earnings. These rewards decrease
-by 7% each year, together with the block reward. There is also the
+by 7% each year, together with the block subsidy. There is also the
 possibility for masternodes to earn money from fees in the future.
 
 Evolution Masternodes (evonodes)
@@ -380,8 +380,8 @@ repeatedly solving :ref:`hash algorithms <x11-hash-algorithm>` until a
 valid solution for the current :ref:`mining difficulty 
 <dark-gravity-wave>` is discovered. Once discovered, the miner is 
 permitted to create new units of the currency. This is known as the 
-block reward. To ensure that the currency is not subject to endless 
-inflation, the block reward is reduced at regular intervals, as `shown 
+block subsidy. To ensure that the currency is not subject to endless 
+inflation, the block subsidy is reduced at regular intervals, as `shown 
 in this calculation
 <https://docs.google.com/spreadsheets/d/1HqgEkyfZDAA6pIZ3df2PwFE8Z430SVIzQ-mCQ6wGCh4/edit#gid=523620673>`_.
 Graphing this data results in a curve showing total coins in 
@@ -392,7 +392,7 @@ emission rate to offer a smoother reduction in coin emission over time.
 While Bitcoin reduces the coin emission rate by 50% every 4 years, Dash
 reduces the emission by one-fourteenth (approx. 7.14%) every 210240
 blocks (approx. 383.25 days). It can be seen that reducing the block
-reward by a smaller amount each year offers a smoother transition to a
+subsidy by a smaller amount each year offers a smoother transition to a
 fee-based economy than Bitcoin.
 
 
@@ -408,13 +408,13 @@ Total coin emission
 2tR_9WrY0Hj4AQLoJYj9EDBzfA38XIVLQSOOOVePNm0/pubhtml?gid=0&single=true>`_
 can be calculated as the sum of a geometric series, with the total
 emission approaching (but never reaching) 21,000,000 BTC. This will
-continue until 2140, but the mining reward reduces so quickly that 99%
+continue until 2140, but the mining subsidy reduces so quickly that 99%
 of all bitcoin will be in circulation by 2036, and 99.9% by 2048.
 
 `Dash's total coin emission <https://docs.google.com/spreadsheets/d
 /1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`_ is
 also the sum of a geometric series, but the ultimate total coin emission
-is uncertain because it cannot be known how much of the 10% block reward
+is uncertain because it cannot be known how much of the 10% block subsidy
 reserved for budget proposals will actually be allocated, since this
 depends on future voting behavior. Dash will continue to emit coins for
 approximately 192 years before a full year of mining creates less than 1
@@ -433,17 +433,17 @@ between:
 Block reward allocation
 -----------------------
 
-Unlike Bitcoin, which allocates 100% of the block reward to miners, Dash
-holds back 10% of the block reward for use in the decentralized
+Unlike Bitcoin, which allocates 100% of the block subsidy to miners, Dash
+holds back part of the block subsidy for use in the decentralized
 :ref:`budget system <decentralized-governance>`. The remainder of the
-block reward, as well as any transaction fees, is split between the
+block subsidy, as well as any transaction fees, is split between the
 :ref:`miner <mining>` and a :ref:`masternode <masternodes>`, which is
 deterministically selected according to the :ref:`payment logic
 <payment-logic>`. Dash features superblocks, which appear every 16616
-blocks (approx. 30.29 days) and can release up to 10% of the cumulative
+blocks (approx. 30.29 days) and can release the cumulative governance
 budget held back over that :ref:`budget cycle period <budget-cycles>` to
 the winning proposals in the budget system. Depending on budget
-utilization, this results in an approximate coin reward allocation over
+utilization, this results in an approximate coin allocation over
 a budget cycle as follows:
 
 +-----+----------------------------------------+
@@ -537,17 +537,17 @@ for nearly three years.
 
 DAO also provides a means for Dash to fund its own development. While 
 other projects have to depend on donations or premined endowments, Dash 
-uses 10% of the block reward to fund its own development. Every time a 
-block is mined, 90% of the reward is split between the miner and
+uses 10% of the block subsidy to fund its own development. Every time a 
+block is mined, 90% of the subsidy is split between the miner and
 a masternode per the distribution found :ref:`here <block-reward-reallocation>`,
 while the remaining 10% is not created until the end of the
 month. During the month, anybody can make a budget proposal to the
 network. If that proposal receives net approval of at least 10% of the
-masternode network, then at the end of the month a series of
-"superblocks" will be created. At that time, the block rewards that were
+masternode network, then at the end of the month a
+"superblock" will be created. At that time, the block subsidy that was
 not paid out (10% of each block) will be used to fund approved
 proposals. The network thus funds itself by reserving 10% of the block
-reward for budget projects.
+subsidy for budget projects.
 
 You can read more about Dash governance in the :ref:`governance` section
 of this documentation.
