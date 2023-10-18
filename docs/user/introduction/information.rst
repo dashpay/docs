@@ -16,7 +16,7 @@ Links
 Official sites
 --------------
 
-- **Website:** https://www.dash.org
+- **Website:** https://www.dash.org
 - **User documentation:** https://docs.dash.org
 - **Dash Core Documentation:** https://docs.dash.org/core
 - **Dash Platform Documentation:** https://docs.dash.org/platform
@@ -50,7 +50,7 @@ Chat
 - **Dash Brasil Telegram:** https://telegram.me/dashbrasil
 - **Dash Dinheiro Digital:** https://t.me/DashDinheiroDigital
 - **Dash Russia Telegram:** https://telegram.me/Dash_Ru
-- **Dash en Español Telegram:** https://t.me/dashpayES
+- **Dash en Español Telegram:** https://t.me/dashpayES
 - **Dash Embassy D-A-CH auf Deutsch Telegram:** https://t.me/dashembassydach
 - **Dash France Telegram:** https://t.me/DashFrance
 - **Dash Indonesia Telegram:** https://t.me/dashindonesia
