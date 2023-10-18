@@ -452,11 +452,24 @@ a budget cycle as follows:
 | 10% | Decentralized Governance Budget        |
 +-----+----------------------------------------+
 
+When Dash Platform is released, the governance budget will grow to 20% per the
+governance proposal approved in September 2023. Additional details can be found
+in the :ref:`Treasury expansion section <block-subsidy-reallocation-treasury-expansion>`.
+
+Miner and masternode reallocation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+
+   This block reward reallocation process was superseded by the :ref:`treasury
+   expansion <block-subsidy-reallocation-treasury-expansion>` approved by the
+   network in 2023.
+
 On 13 August 2020, the Dash network approved a `proposal
 <https://www.dashcentral.org/p/decision-proposal-block-reward-reallocat>`__
 to modify the block reward allocation from 50/50 between miners and
 masternodes to 40/60, respectively. The incremental reallocation adjusts 
-the percentage share every three superblock cycles. 
+the percentage share every three superblock cycles.
 
 .. _block-reward-reallocation:
 
@@ -516,6 +529,25 @@ run your own `emission calculations using this tool
 <https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_. See `this
 site <https://stats.masternode.me>`_ for live data on current network
 statistics.
+
+.. _block-subsidy-reallocation-treasury-expansion:
+
+Treasury expansion
+~~~~~~~~~~~~~~~~~~
+
+In September of 2023, the Dash network approved a `proposal
+<https://www.dashcentral.org/p/TREASURY-REALLOCATION-60-20-20>`__ to double the
+governance budget by modifying the block subsidy allocation. The new allocation
+designates 20% for miners, 20% for the governance system budget, and 60% for
+masternodes.
+
++-----+----------------------------------------+
+| 20% | Mining Reward                          |
++-----+----------------------------------------+
+| 20% | Decentralized Governance Budget        |
++-----+----------------------------------------+
+| 60% | Masternode Reward                      |
++-----+----------------------------------------+
 
 .. _decentralized-governance:
 
