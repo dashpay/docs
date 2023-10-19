@@ -116,14 +116,14 @@ and users. More importantly, this gives the blockchain itself a self-
 preservation mechanism that is beyond the control of any individual.
 
 +-----+----------------------------------------+
-| 90% | Mining and Masternode Reward           |
+| 80% | Mining and Masternode Reward           |
 +-----+----------------------------------------+
-| 10% | Decentralized Governance Budget        |
+| 20% | Decentralized Governance Budget        |
 +-----+----------------------------------------+
 
-Masternodes and miners split 90% of the mining subsidy per the distribution
+Masternodes and miners split 80% of the mining subsidy per the distribution
 found :ref:`here <block-reward-reallocation>`, at the time
-it is created. The remaining 10% is disbursed monthly by the masternode
+it is created. The remaining 20% is disbursed monthly by the masternode
 operators once the results of their votes are tallied, creating the
 first self-sustaining decentralized cryptocurrency platform organized as
 a Decentralized Autonomous Organization (DAO). The masternode operators
@@ -262,7 +262,7 @@ team@dashwatch.org email address or through their `website
 Budget allocation
 =================
 
-The total budget of the network can be calculated by taking 10% of the
+The total budget of the network can be calculated by taking 20% of the
 block subsidy over the period of time between two superblocks, which occur
 every 16616 blocks or approximately 30.29 days. A voting cutoff occurs
 1662 blocks before the superblock, and the final votes are tallied at
