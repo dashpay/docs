@@ -40,7 +40,7 @@ mechanism. Masternode operators are not the only ones interested in the
 success of Dash, but they are the most stable ones because, unlike
 miners, they can’t reuse their asset for any other purpose or coin.
 
-In the budget system, a portion of the block reward is held in escrow by
+In the budget system, a portion of the block subsidy is held in escrow by
 the network itself, in the name of the operators, to be executed in the
 development and expansion of the ecosystem according to the vote of the
 masternodes in different budget proposals. These funds are directed to
@@ -107,7 +107,7 @@ Reward schedule
 ===============
 
 To guarantee long term sustainability of the blockchain, the network
-keeps a portion of the block rewards back as new blocks are created,
+keeps a portion of the block subsidy back as new blocks are created,
 with the masternode operators tasked to act as stewards and invest in
 the maintenance and expansion of the network by voting. This results in
 faster development and promotion, creating a virtuous cycle that
@@ -121,7 +121,7 @@ preservation mechanism that is beyond the control of any individual.
 | 10% | Decentralized Governance Budget        |
 +-----+----------------------------------------+
 
-Masternodes and miners split 90% of the mining reward per the distribution
+Masternodes and miners split 90% of the mining subsidy per the distribution
 found :ref:`here <block-reward-reallocation>`, at the time
 it is created. The remaining 10% is disbursed monthly by the masternode
 operators once the results of their votes are tallied, creating the
@@ -142,7 +142,7 @@ introduction of the decentralized governance budget itself was decided
 by a masternode vote, making the first distributed decision the actual
 creation of the system, similar to establishing a constitution.
 
-This approach of distributing the normal block reward in a way that
+This approach of distributing the normal block subsidy in a way that
 considers all critical elements a cryptocurrency needs for its long term
 viability, e.g. mining, full nodes, development and promotion, is
 revolutionary as it is done without changing the emission or creating
@@ -166,11 +166,11 @@ this stage. Several tools exist to allow masternode operators to
 comfortably review and vote on proposals. The net total of yes votes must
 exceed 10% of the total masternode count at the time votes are tallied
 in order to pass. If there are more passing proposals than the available
-block reward can provide for, the proposals with the most yes votes will
+block subsidy can provide for, the proposals with the most yes votes will
 pass first, creating a cut-off point for less popular proposals. The
 same process is then repeated every month, and the total amount of Dash
 available for proposals decreases by approximately 7.14% per year,
-together with the overall block reward.
+together with the overall block subsidy.
 
 The following video by Tao of Satoshi includes advice for proposal
 owners entering proposals during periods of high competition for the
@@ -263,7 +263,7 @@ Budget allocation
 =================
 
 The total budget of the network can be calculated by taking 10% of the
-reward over the period of time between two superblocks, which occur
+block subsidy over the period of time between two superblocks, which occur
 every 16616 blocks or approximately 30.29 days. A voting cutoff occurs
 1662 blocks before the superblock, and the final votes are tallied at
 this point. A proposal must satisfy the condition ``(YES votes - NO
