@@ -135,16 +135,17 @@ NodeHub.io
 .. image:: img/nodehub.png
    :width: 200px
    :align: right
-   :target: https://nodehub.io
+   :target: https://nodehub.io?utm_source=dashpay-docs&utm_medium=hosting-services
 
 https://nodehub.io
 
-- Operated by: NodeHub.io Platform
-- Services: Hosting, Governance, Stats
-- Cost: $9.90/month (charged daily at $0.33)
-- `Site <https://nodehub.io>`__
+- Operated by: NodeHub LLC
+- Services: Hosting, Governance, Stats, Monitoring
+- Cost: $3.90/month (charged daily at $0.13)
+- `Site <https://nodehub.io?utm_source=dashpay-docs&utm_medium=hosting-services>`__
 - `Email <hello@nodehub.io>`__
 - `Twitter <https://twitter.com/nodehubio>`__
+- `Telegram <https://t.me/nodehub>`__
 - `Discord <https://discord.nodehub.io>`__
 
 
