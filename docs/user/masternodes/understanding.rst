@@ -44,11 +44,11 @@ moves or spends those coins, the masternode stops working and payment
 ceases.
 
 Masternodes are paid by the network for the InstantSend, CoinJoin and
-governance services they provide. 10% of the block subsidy goes to the budget
-with the remaining 90% split between miners and masternodes per this
+governance services they provide. 20% of the block subsidy goes to the budget
+with the remaining 80% split between miners and masternodes per this
 :ref:`block reward reallocation table <block-reward-reallocation>`. 
 Then, every 16,616 blocks (approximately 30.29 days), a
-superblock is created that contains the entire 10% payout to the budget
+superblock is created that contains the entire 20% payout to the budget
 proposal winners. Masternodes are selected for payment in each block
 (approximately every 2.6 minutes) from a deterministic masternode list,
 and moved to the back of the list after payment. As more masternodes are
@@ -187,9 +187,9 @@ Nodes), which enable financial privacy (CoinJoin), instant
 transactions (InstantSend), and the decentralized governance and budget
 system. Because this second tier is so important, masternodes are also
 rewarded when miners discover new blocks. The breakdown is as follows:
-90% of the block subsidy is split between the miner and a masternode
+80% of the block subsidy is split between the miner and a masternode
 per the distribution found :ref:`here <block-reward-reallocation>`, while
-10% is reserved for the budget system (created by superblocks every
+20% is reserved for the budget system (created by superblocks every
 month).
 
 The masternode system is referred to as Proof of Service (PoSe), since
