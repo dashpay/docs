@@ -426,9 +426,9 @@ Glossary
 
   DAO
     The development of Dash and the Dash ecosystem is self-funded by the DAO or
-    Decentralized Autonomous Organization. Each time a block is discovered, 90%
+    Decentralized Autonomous Organization. Each time a block is discovered, 80%
     of the block reward is split between the miner and a masternodes per the
-    distribution found :ref:`here <block-reward-reallocation>`. 10% of the block
+    distribution found :ref:`here <block-reward-reallocation>`. 20% of the block
     subsidy is withheld by the network and used to fund projects that are
     approved by the masternode network. For a fee, anybody can submit a proposal
     to the network, and will be paid directly by the blockchain if approved by

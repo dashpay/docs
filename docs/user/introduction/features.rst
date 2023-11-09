@@ -54,7 +54,7 @@ Masternodes enable the following services:
 -  **ChainLocks**, which protects the blockchain against 51% mining 
    attacks by signing blocks as they are mined.
 -  **Governance and Treasury** allows stakeholders in Dash to determine
-   the direction of the project and devotes 10% of the block subsidy to
+   the direction of the project and devotes 20% of the block subsidy to
    development of the project and ecosystem.
 -  **Dash Evolution** will make using cryptocurrency as easy as using
    PayPal.
@@ -414,7 +414,7 @@ of all bitcoin will be in circulation by 2036, and 99.9% by 2048.
 `Dash's total coin emission <https://docs.google.com/spreadsheets/d
 /1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`_ is
 also the sum of a geometric series, but the ultimate total coin emission
-is uncertain because it cannot be known how much of the 10% block subsidy
+is uncertain because it cannot be known how much of the 20% block subsidy
 reserved for budget proposals will actually be allocated, since this
 depends on future voting behavior. Dash will continue to emit coins for
 approximately 192 years before a full year of mining creates less than 1
@@ -447,15 +447,35 @@ utilization, this results in an approximate coin allocation over
 a budget cycle as follows:
 
 +-----+----------------------------------------+
-| 90% | Mining and Masternode Reward           |
+| 80% | Mining and Masternode Reward           |
 +-----+----------------------------------------+
-| 10% | Decentralized Governance Budget        |
+| 20% | Decentralized Governance Budget        |
 +-----+----------------------------------------+
 
 When the Dash Core v20 hard fork activates, Dash's governance budget will grow
 to 20% of the block subsidy per the governance proposal approved in September
 2023. Additional details can be found in the :ref:`Treasury expansion section
 <block-subsidy-reallocation-treasury-expansion>`.
+
+.. _block-subsidy-reallocation-treasury-expansion:
+
+Treasury expansion
+^^^^^^^^^^^^^^^^^^
+
+In September of 2023, the Dash network approved a `proposal
+<https://www.dashcentral.org/p/TREASURY-REALLOCATION-60-20-20>`__ to double the
+governance budget by modifying the block subsidy allocation. The new allocation
+designates 20% for miners, 20% for the governance system budget, and 60% for
+masternodes. The expansion will go into effect upon activation of the Dash Core
+v20 hard fork.
+
++-----+----------------------------------------+
+| 20% | Mining Reward                          |
++-----+----------------------------------------+
+| 20% | Decentralized Governance Budget        |
++-----+----------------------------------------+
+| 60% | Masternode Reward                      |
++-----+----------------------------------------+
 
 Miner and masternode reallocation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -532,26 +552,6 @@ run your own `emission calculations using this tool
 site <https://stats.masternode.me>`_ for live data on current network
 statistics.
 
-.. _block-subsidy-reallocation-treasury-expansion:
-
-Treasury expansion
-^^^^^^^^^^^^^^^^^^
-
-In September of 2023, the Dash network approved a `proposal
-<https://www.dashcentral.org/p/TREASURY-REALLOCATION-60-20-20>`__ to double the
-governance budget by modifying the block subsidy allocation. The new allocation
-designates 20% for miners, 20% for the governance system budget, and 60% for
-masternodes. The expansion will go into effect upon activation of the Dash Core
-v20 hard fork.
-
-+-----+----------------------------------------+
-| 20% | Mining Reward                          |
-+-----+----------------------------------------+
-| 20% | Decentralized Governance Budget        |
-+-----+----------------------------------------+
-| 60% | Masternode Reward                      |
-+-----+----------------------------------------+
-
 .. _decentralized-governance:
 
 Decentralized Governance
@@ -572,16 +572,16 @@ for nearly three years.
 
 DAO also provides a means for Dash to fund its own development. While 
 other projects have to depend on donations or premined endowments, Dash 
-uses 10% of the block subsidy to fund its own development. Every time a 
-block is mined, 90% of the subsidy is split between the miner and
+uses 20% of the block subsidy to fund its own development. Every time a 
+block is mined, 80% of the subsidy is split between the miner and
 a masternode per the distribution found :ref:`here <block-reward-reallocation>`,
-while the remaining 10% is not created until the end of the
+while the remaining 20% is not created until the end of the
 month. During the month, anybody can make a budget proposal to the
 network. If that proposal receives net approval of at least 10% of the
 masternode network, then at the end of the month a
 "superblock" will be created. At that time, the block subsidy that was
-not paid out (10% of each block) will be used to fund approved
-proposals. The network thus funds itself by reserving 10% of the block
+not paid out (20% of each block) will be used to fund approved
+proposals. The network thus funds itself by reserving 20% of the block
 subsidy for budget projects.
 
 You can read more about Dash governance in the :ref:`governance` section
