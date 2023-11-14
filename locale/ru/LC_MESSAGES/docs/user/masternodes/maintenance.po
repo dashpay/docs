@@ -9,6 +9,7 @@
 # Max Aronych <taofgoar@protonmail.com>, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
 # Dima, 2022
+# VONCAN, 2023
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
-"Last-Translator: Dima, 2022\n"
+"Last-Translator: VONCAN, 2023\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,10 +74,17 @@ msgid ""
 "<https://docs.dash.org/en/0.15.0/masternodes/maintenance.html#masternode-"
 "software-update>`__."
 msgstr ""
+"Программное обеспечение Dash Core требует регулярного обновления, чтобы "
+"оставаться в соответствии с текущим сетевым консенсусом. Чтобы вручную "
+"обновить свою мастерноду, выполните описанную ниже процедуру. Если вы все "
+"еще используете устаревшую программу установки dashman, обратитесь к "
+"документации по обновлению устаревшей версии "
+"<https://docs.dash.org/en/0.15.0/masternodes/maintenance.html#masternode-"
+"software-update>`__."
 
 #: ../../docs/user/masternodes/maintenance.rst:30
 msgid "Manual update"
-msgstr ""
+msgstr "Ручное обновление"
 
 #: ../../docs/user/masternodes/maintenance.rst:32
 msgid ""
@@ -109,18 +117,25 @@ msgid ""
 "against the public key published by the Dash Core development team. All "
 "releases of Dash are signed using GPG with one of the following keys:"
 msgstr ""
+"Убедитесь в подлинности загруженного файла, сверив его подпись с открытым "
+"ключом, опубликованным командой разработчиков Dash Core. Все выпуски Dash "
+"подписываются с помощью GPG одним из следующих ключей:"
 
 #: ../../docs/user/masternodes/maintenance.rst:57
 msgid ""
 "Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, "
 "`verifiable here on Keybase <https://keybase.io/codablock>`__"
 msgstr ""
+"Александр Блок (codablock) с ключом ``63A9 6B40 6102 E091``, "
+"``верифицируемый здесь на Keybase <https://keybase.io/codablock>`__"
 
 #: ../../docs/user/masternodes/maintenance.rst:59
 msgid ""
 "Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here on "
 "Keybase <https://keybase.io/pasta>`__"
 msgstr ""
+"Pasta с ключом ``5252 7BED ABE8 7984``, ``верифицируемым здесь на Keybase "
+"<https://keybase.io/pasta>`__"
 
 #: ../../docs/user/masternodes/maintenance.rst:69
 msgid ""
@@ -181,6 +196,10 @@ msgid ""
 "Changing your IP address or making changes to the voting or various payout "
 "addresses will not reset your position in the payment queue."
 msgstr ""
+"Смена ключа оператора BLS или создание нового ProTx на основе той же "
+"операции обеспечения приведет к сбросу позиции в очереди на выплату. Смена "
+"IP-адреса или внесение изменений в адреса голосования или различных выплат "
+"не приведет к сбросу позиции в очереди на выплату."
 
 #: ../../docs/user/masternodes/maintenance.rst:115
 msgid "ProUpServTx"
@@ -198,6 +217,15 @@ msgid ""
 "DMT by clicking the **Update service** button, or from Dash Core using the "
 "following syntax::"
 msgstr ""
+"Служебная Транзакция Обновления Информации о Поставщике Услуг или Provider "
+"Update Service Transaction (ProUpServTx) используется для обновления "
+"информации, касающейся оператора. Оператор может обновить IP адрес и "
+"входящие порты мастерноды. Если в изначальном ProRegTX была выставлена "
+"``operatorReward`` отличная от нуля, то оператор может настроить поле "
+"``operatorPayoutAddress`` в ProUpServTx. Если ``operatorPayoutAddress`` не "
+"установлен или ``operatorReward`` равен нулю, то владелец получает полную "
+"награду. ProUpServTx можно создать из DMT, нажав кнопку **Update service**, "
+"или из Dash Core, используя следующий синтаксис::"
 
 #: ../../docs/user/masternodes/maintenance.rst:129
 #: ../../docs/user/masternodes/maintenance.rst:171
@@ -231,6 +259,11 @@ msgid ""
 "value. Enter ``\"\"`` to use the last on-chain operator payout address, or "
 "as a placeholder when specifying a ``feeSourceAddress``."
 msgstr ""
+"``operatorPayoutAddress`` (необязательно): Адрес, используемый для выплат "
+"вознаграждений операторам. Допускается только в том случае, если ProRegTx "
+"имел ненулевое значение ``operatorReward``. Введите ``\"\"``, чтобы "
+"использовать последний адрес выплаты вознаграждения оператора, или в "
+"качестве заполнителя при указании ``feeSourceAddress``."
 
 #: ../../docs/user/masternodes/maintenance.rst:140
 #: ../../docs/user/masternodes/maintenance.rst:209
@@ -268,6 +301,13 @@ msgid ""
 "**Update operator key**, **Update voting key** or **Update payout addr.** "
 "buttons, or from Dash Core using the following syntax::"
 msgstr ""
+"Регистрационная транзакция обновления информации о провайдере или Provider "
+"Update Registrar Transaction (ProUpRegTx) используется для обновления "
+"информации, касающейся владельца. Владелец может обновить публичный BLS ключ"
+" оператора (например, чтобы назначить нового оператора), адрес голосования и"
+" адреса выплат операторов. ProUpRegTx можно создать из DMT, нажав кнопки "
+"**Update operator key**, **Update voting key** или **Update payout addr.**, "
+"или из Dash Core, используя следующий синтаксис::"
 
 #: ../../docs/user/masternodes/maintenance.rst:167
 msgid ""
@@ -289,6 +329,8 @@ msgid ""
 "``votingKeyAddr``: An updated voting key address, or ``\"\"`` to use the "
 "last on-chain voting key"
 msgstr ""
+"``votingKeyAddr``: обновлённый адрес для ключа голосования или значение "
+"``\"\"`` для использования ключа последнего голосующего в блокчейне."
 
 #: ../../docs/user/masternodes/maintenance.rst:178
 msgid ""
@@ -326,6 +368,15 @@ msgid ""
 "the **Revoke operator** button, or from Dash Core using the following "
 "syntax::"
 msgstr ""
+"Транзакция отзыва обновления информации о провайдере или Provider Update "
+"Revocation Transaction (ProUpRevTx) используется оператором для прекращения "
+"услуг или сигнализации владельцу о том, что необходим новый BLS ключ. Данная"
+" транзакция немедленно поместит мастерноду в бан PoSe. Владелец должен будет"
+" отправить ProUpRegTx для назначения нового ключа оператора. После того как "
+"ProUpRegTX будет включена в блок, новый оператор должен будет отправить "
+"ProUpServTx для обновления метаданных и исключения из бана PoSe "
+"(восстановить мастерноду). ProUpRevTx можно создать из DMT, нажав кнопку "
+"**Revoke operator**, или из Dash Core, используя следующий синтаксис::"
 
 #: ../../docs/user/masternodes/maintenance.rst:208
 msgid ""
@@ -339,7 +390,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/maintenance.rst:218
 msgid "Proof of Service Bans"
-msgstr ""
+msgstr "Proof of Service Bans"
 
 #: ../../docs/user/masternodes/maintenance.rst:220
 msgid ""
@@ -348,17 +399,25 @@ msgid ""
 "Ban <proof-of-service>`. If your masternode is in the ``POSE_BANNED`` "
 "status, you should check the following settings are configured correctly:"
 msgstr ""
+"Если ваш мастернода не может обеспечить обслуживание сети в соответствии с "
+"действующими правилами консенсуса, он получит :ref:`Proof of Service Ban "
+"<proof-of-service>`. Если ваша мастернода находится в статусе "
+"``POSE_BANNED``, необходимо проверить правильность следующих настроек:"
 
 #: ../../docs/user/masternodes/maintenance.rst:225
 msgid ""
 "Ensure you are running the :ref:`latest version of Dash <masternode-update>`"
 msgstr ""
+"Убедитесь, что вы используете :ref:`последнюю версию Dash <masternode-"
+"update>`."
 
 #: ../../docs/user/masternodes/maintenance.rst:226
 msgid ""
 "Ensure your masternode has sufficient memory, swap, processing power and "
 "hard drive space"
 msgstr ""
+"Убедитесь, что мастерноде достаточно памяти, свопа, вычислительной мощности "
+"и места на жестком диске"
 
 #: ../../docs/user/masternodes/maintenance.rst:228
 msgid ""
@@ -366,18 +425,25 @@ msgid ""
 "<https://insight.dash.org/insight/>`__, and that you are on the correct "
 "chain and not forked off"
 msgstr ""
+"Убедитесь, что вы полностью синхронизированы с `корректной высотой блока "
+"<https://insight.dash.org/insight/>`__, и что вы находитесь в правильной "
+"цепочке, а не в вилочном соединении"
 
 #: ../../docs/user/masternodes/maintenance.rst:230
 msgid ""
 "Ensure that a BLS private key is specified using the "
 "``masternodeblsprivkey`` option in the masternode's ``dash.conf`` file"
 msgstr ""
+"Убедитесь, что закрытый ключ BLS указан с помощью опции "
+"``masternodeblsprivkey`` в файле ``dash.conf`` мастерноды"
 
 #: ../../docs/user/masternodes/maintenance.rst:232
 msgid ""
 "Ensure that the BLS private key on the masternode is unique on the network "
 "and not shared with any other masternodes"
 msgstr ""
+"Убедитесь, что закрытый ключ BLS мастерноды уникален в сети и не "
+"используется совместно с другими узлами."
 
 #: ../../docs/user/masternodes/maintenance.rst:234
 msgid ""
@@ -385,18 +451,25 @@ msgid ""
 "public key registered on the blockchain in the ``ProRegTx`` or "
 "``ProUpRegTx``"
 msgstr ""
+"Убедитесь, что закрытый ключ BLS мастерноды соответствует открытому ключу "
+"BLS, зарегистрированному на блокчейне в ``ProRegTx`` или ``ProUpRegTx``."
 
 #: ../../docs/user/masternodes/maintenance.rst:237
 msgid ""
 "Ensure that the ``externalip`` (and ``port`` if using testnet) are specified"
 " correctly and not blocked by a firewall or port forwarding service"
 msgstr ""
+"Убедитесь, что ``externalip`` (и ``port``, если используется testnet) "
+"указаны правильно и не заблокированы брандмауэром или службой переадресации "
+"портов"
 
 #: ../../docs/user/masternodes/maintenance.rst:240
 msgid ""
 "Ensure that Sentinel is installed, updated, not exiting with an error and is"
 " entered in your crontab to run every 1-2 minutes"
 msgstr ""
+"Убедитесь, что Sentinel установлен, обновлен, не завершается с ошибкой и "
+"внесен в crontab для запуска каждые 1-2 минуты"
 
 #: ../../docs/user/masternodes/maintenance.rst:243
 msgid ""
@@ -408,6 +481,14 @@ msgid ""
 "misconfiguration that is causing the masternode to be banned. The masternode"
 " will be banned again if it continues to fail to provide service."
 msgstr ""
+"Убедившись в правильности этих настроек, можно обновить статус обслуживания "
+"в сети и вернуться к действительному набору мастернод, создав "
+":ref:`ProUpServTx <dip3-update-service>`. После восстановления обслуживания "
+"внимательно следите за состоянием своего мастерноды с помощью ``masternode "
+"status`` и/или файла ``debug.log``. Эта информация поможет определить "
+"конкретную неправильную конфигурацию, из-за которой мастер-узел был "
+"запрещен. Если мастернода продолжает отказываться от обслуживания, он будет "
+"снова запрещен."
 
 #: ../../docs/user/masternodes/maintenance.rst:254
 msgid "DashCentral voting, verification and monitoring"
@@ -765,6 +846,9 @@ msgid ""
 "`explorer.dash.org <https://explorer.dash.org/insight/>`__ and "
 "`insight.dash.org <https://insight.dash.org/insight/>`__."
 msgstr ""
+"`Dash.org <https://www.dash.org/>`__ включает в себя обозреватели блокчейна "
+"по адресу `explorer.dash.org <https://explorer.dash.org/insight/>`__ и "
+"`insight.dash.org <https://insight.dash.org/insight/>`__."
 
 #: ../../docs/user/masternodes/maintenance.rst:478
 msgid ""
@@ -848,10 +932,13 @@ msgid ""
 "sequential reports on the price, generation rate, blockchain information and"
 " some information on masternodes."
 msgstr ""
+"Masternode.me управляется членом коммьюнити Dash под именем moocowmoo. "
+"Предлагается информация по цене, скорости генерации блоков, информация по "
+"блокчейну и некоторая информация по мастернодам."
 
 #: ../../docs/user/masternodes/maintenance.rst:525
 msgid "Dash Masternode Information"
-msgstr "Dash Masternode Information"
+msgstr "Информация о мастерноде"
 
 #: ../../docs/user/masternodes/maintenance.rst:527
 msgid "http://178.254.23.111/~pub/Dash/Dash_Info.html"
