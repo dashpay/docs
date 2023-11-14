@@ -8,15 +8,16 @@
 # Dima, 2022
 # Julia Ogonkova <livingflcl@gmail.com>, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
+# VONCAN, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-23 15:49-0400\n"
+"POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
-"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2022\n"
+"Last-Translator: VONCAN, 2023\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,6 +36,8 @@ msgstr ""
 msgid ""
 "dash, build, compile, linux, macOS, windows, binary, Gitian, developers"
 msgstr ""
+"dash, сборка, компиляция, linux, macOS, windows, бинарный, Gitian, "
+"разработчики"
 
 #: ../../docs/user/developers/compiling.rst:9
 msgid "Compiling Dash Core"
@@ -53,6 +56,18 @@ msgid ""
 "generic.md>`__ available on GitHub to compile or cross-compile Dash for any "
 "platform."
 msgstr ""
+"Хотя Dash предлагает стабильные бинарные сборки на `website "
+"<https://www.dash.org/downloads/>`_ и на `GitHub "
+"<https://github.com/dashpay/dash/releases>`__, а также сборки для "
+"разработчиков с использованием `GitLab CI "
+"<https://gitlab.com/dashpay/dash/pipelines>`_, многие пользователи также "
+"будут заинтересованы в самостоятельной сборке бинарных файлов Dash. С "
+"выходом Dash Core 0.13.0 этот процесс значительно упростился, и "
+"пользователи, не нуждающиеся в детерминированных сборках, обычно могут "
+"следовать `общим указаниям по сборке "
+"<https://github.com/dashpay/dash/blob/develop/doc/build-generic.md>`__, "
+"доступным на GitHub, для компиляции или кросс-компиляции Dash для любой "
+"платформы."
 
 #: ../../docs/user/developers/compiling.rst:21
 msgid ""
@@ -91,19 +106,24 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:40
 msgid "Build process"
-msgstr ""
+msgstr "Процесс сборки"
 
 #: ../../docs/user/developers/compiling.rst:43
 msgid ""
 "This setup has been tested using a clean install of Ubuntu 20.04. For "
 "maximum compatibility, please use that version."
 msgstr ""
+"Данная установка была протестирована на чистой версии Ubuntu 20.04. Для "
+"обеспечения максимальной совместимости используйте эту версию."
 
 #: ../../docs/user/developers/compiling.rst:46
 msgid ""
 "Start by logging in as the \"root\" user. Create a new user with the "
 "following command, replacing ``<username>`` with a username of your choice::"
 msgstr ""
+"Начните с входа в систему под именем пользователя \"root\". Создайте нового "
+"пользователя с помощью следующей команды, заменив ``<username>`` на "
+"выбранное вами имя пользователя::"
 
 #: ../../docs/user/developers/compiling.rst:51
 msgid ""
@@ -113,6 +133,11 @@ msgid ""
 "Alternatively, an existing user can be used on systems that are already in "
 "use (e.g. your existing development system)."
 msgstr ""
+"Вам будет предложено задать пароль. Введите и подтвердите новый пароль "
+"(отличный от пароля root) и сохраните его в надежном месте. Также появится "
+"запрос на ввод информации о пользователе, но его можно оставить пустым. В "
+"качестве альтернативы можно использовать существующего пользователя в уже "
+"используемых системах (например, в существующей системе разработки)."
 
 #: ../../docs/user/developers/compiling.rst:57
 msgid ""
@@ -120,52 +145,64 @@ msgid ""
 "processes and also will enable non-root users to run the Docker commands "
 "used by the build process::"
 msgstr ""
+"Создайте в системе группу ``docker``. Эта группа будет использоваться "
+"процессами Docker, а также позволит пользователям, не являющимся root, "
+"выполнять команды Docker, используемые в процессе сборки::"
 
 #: ../../docs/user/developers/compiling.rst:63
 msgid ""
 "Add the user to the sudo and docker groups so they can perform commands as "
 "root and run docker commands::"
 msgstr ""
+"Добавьте пользователя в группы sudo и docker, чтобы он мог выполнять команды"
+" от имени root и запускать команды docker::"
 
 #: ../../docs/user/developers/compiling.rst:69
 msgid "Install prerequisites"
-msgstr ""
+msgstr "Установить предварительные требования"
 
 #: ../../docs/user/developers/compiling.rst:71
 msgid ""
 "While still logged in as root, update the system from the Ubuntu package "
 "repository::"
 msgstr ""
+"Не выходя из системы с правами root, обновите систему из репозитория пакетов"
+" Ubuntu::"
 
 #: ../../docs/user/developers/compiling.rst:77
 msgid "Install apt-cacher-ng::"
-msgstr ""
+msgstr "Install apt-cacher-ng::"
 
 #: ../../docs/user/developers/compiling.rst:82
 msgid ""
 "Select ``No`` when asked ``Allow HTTP tunnels through Apt-Cacher NG?`` "
 "during installation."
 msgstr ""
+"Выберите ``Нет`` на вопрос ``Разрешить HTTP-туннели через Apt-Cacher NG?"
 
 #: ../../docs/user/developers/compiling.rst:85
 msgid ""
 "Note: you may also need to open port 3142 if you have a firewall enabled on "
 "your system (e.g. ``ufw allow 3142/tcp``)."
 msgstr ""
+"Примечание: возможно, потребуется открыть порт 3142, если в системе включен "
+"межсетевой экран (например, ``ufw allow 3142/tcp``)."
 
 #: ../../docs/user/developers/compiling.rst:88
 msgid ""
 "After installing these updates, reboot the system, login as ``<username>``, "
 "and clone required repositories::"
 msgstr ""
+"После установки этих обновлений перезагрузите систему, войдите в систему под"
+" именем ``<username>`` и клонируйте необходимые репозитории::"
 
 #: ../../docs/user/developers/compiling.rst:96
 msgid "Download the Mac OSX SDK::"
-msgstr ""
+msgstr "Загрузите SDK для Mac OSX::"
 
 #: ../../docs/user/developers/compiling.rst:102
 msgid "Prepare gitian"
-msgstr ""
+msgstr "Подготовить gitian"
 
 #: ../../docs/user/developers/compiling.rst:104
 msgid ""
@@ -173,10 +210,13 @@ msgid ""
 "machine. Checkout the tag associated with the Dash Core version you plan to "
 "build::"
 msgstr ""
+"Выполнять этот шаг необходимо только при начальной настройке машины. "
+"Проверьте метку, связанную с версией Dash Core, которую вы планируете "
+"собрать::"
 
 #: ../../docs/user/developers/compiling.rst:113
 msgid "Run the gitian-build setup routine to prepare your environment::"
-msgstr ""
+msgstr "Запустите процедуру настройки gitian-build для подготовки среды::"
 
 #: ../../docs/user/developers/compiling.rst:121
 msgid ""
@@ -185,14 +225,20 @@ msgid ""
 "<https://help.ubuntu.com/community/GnuPrivacyGuardHowto#Generating_an_OpenPGP_Key>`_"
 " for details on how to generate a key if you don't already have one."
 msgstr ""
+"При генерации ключа с помощью GPG параметр ``signer` должен иметь значение, "
+"указанное для параметра \"Real name\". Подробнее о том, как сгенерировать "
+"ключ, если у вас его еще нет, см. в статье `GnuPrivacyGuard Howto "
+"<https://help.ubuntu.com/community/GnuPrivacyGuardHowto#Generating_an_OpenPGP_Key>`_."
 
 #: ../../docs/user/developers/compiling.rst:127
 msgid "Build Dash Core"
-msgstr ""
+msgstr "Собрать Dash Core"
 
 #: ../../docs/user/developers/compiling.rst:129
 msgid "Run gitian build to create binaries for Linux, Mac, and Windows::"
 msgstr ""
+"Запустите gitian build для создания бинарных файлов для Linux, Mac и "
+"Windows::"
 
 #: ../../docs/user/developers/compiling.rst:138
 msgid ""
@@ -200,6 +246,9 @@ msgid ""
 "system. If the expected key is not found, the script will fail at the "
 "signing step with a message including::"
 msgstr ""
+"В этих инструкциях предполагается, что в системе сборки существует PGP-ключ "
+"для <signer>. Если ожидаемый ключ не будет найден, сценарий завершится "
+"неудачей на этапе подписания с сообщением::"
 
 #: ../../docs/user/developers/compiling.rst:145
 msgid ""
@@ -207,10 +256,13 @@ msgid ""
 "binaries`` folder. The ``.assert`` files and their signatures will be placed"
 " in ``gitian.sigs/<version>/<signer>/...``."
 msgstr ""
+"По завершении сборки бинарные файлы будут помещены в папку ``dashcore-"
+"binaries``. Файлы ``.assert`` и их подписи будут помещены в папку "
+"``gitian.sigs/<version>/<signer>/...``."
 
 #: ../../docs/user/developers/compiling.rst:150
 msgid "Create signatures for signed binaries"
-msgstr ""
+msgstr "Создание подписей для подписанных бинарных файлов"
 
 #: ../../docs/user/developers/compiling.rst:152
 msgid ""
@@ -220,10 +272,16 @@ msgid ""
 "signatures will be placed in ``gitian.sigs/<version>/<signer>/...`` along "
 "with the signatures for unsigned binaries created in the previous step."
 msgstr ""
+"Бинарные файлы для Mac и Windows подписываются Dash Core Group с "
+"использованием соответствующих процессов Apple/Microsoft. На данном этапе "
+"эта информация будет проверена и подписана на вашей машине. Соответствующие "
+"файлы ``.assert`` и их подписи будут помещены в папку "
+"``gitian.sigs/1/2/...`` вместе с подписями для неподписанных двоичных "
+"файлов, созданными на предыдущем шаге."
 
 #: ../../docs/user/developers/compiling.rst:166
 msgid "Verify signatures"
-msgstr ""
+msgstr "Проверка подписей"
 
 #: ../../docs/user/developers/compiling.rst:168
 msgid ""
@@ -232,6 +290,10 @@ msgid ""
 "each release. Run the following command to verify that your build matches "
 "the official release::"
 msgstr ""
+"Репозиторий `gitian.sigs <https://github.com/dashpay/gitian.sigs/>`_ "
+"содержит детерминированные результаты сборки, подписанные несколькими "
+"разработчиками Core для каждого релиза. Выполните следующую команду для "
+"проверки соответствия вашей сборки официальному релизу::"
 
 #: ../../docs/user/developers/compiling.rst:176
 msgid ""
@@ -240,10 +302,14 @@ msgid ""
 "successfully, you will also see your own signatures with an ``OK`` status "
 "also."
 msgstr ""
+"Вы должны получить результат, аналогичный приведенному ниже для Linux, "
+"Windows, MacOS, Signed Windows и Signed MacOS. При условии успешного "
+"выполнения предыдущих шагов вы также увидите свои собственные подписи со "
+"статусом ``OK``."
 
 #: ../../docs/user/developers/compiling.rst:212
 msgid "Upload signatures"
-msgstr ""
+msgstr "Загрузка подписей"
 
 #: ../../docs/user/developers/compiling.rst:214
 msgid ""
@@ -252,16 +318,23 @@ msgid ""
 "repository <https://github.com/dashpay/gitian.sigs/>`_ via a pull request on"
 " GitHub."
 msgstr ""
+"После успешной сборки двоичных файлов, их подписания и проверки подписей вы "
+"можете внести их в репозиторий `gitian.sigs "
+"<https://github.com/dashpay/gitian.sigs/>`_ с помощью pull request на "
+"GitHub."
 
 #: ../../docs/user/developers/compiling.rst:219
 msgid "Initial setup"
-msgstr ""
+msgstr "Первоначальная настройка"
 
 #: ../../docs/user/developers/compiling.rst:221
 msgid ""
 "Since the official gitian.sigs repository has restricted write access, "
 "create a fork of it via GitHub and add your fork as a remote repository::"
 msgstr ""
+"Поскольку официальный репозиторий gitian.sigs имеет ограниченный доступ на "
+"запись, создайте форк этого репозитория через GitHub и добавьте свой форк в "
+"качестве удаленного репозитория::"
 
 #: ../../docs/user/developers/compiling.rst:226
 msgid ""
@@ -270,24 +343,30 @@ msgid ""
 " your signature. Your public key can be exported to a file using the "
 "following command::"
 msgstr ""
+"При первом внесении подписей также поместите копию своего открытого ключа в "
+"папку ``gitian-keys`` репозитория, чтобы другие пользователи могли легко "
+"проверить вашу подпись. Открытый ключ можно экспортировать в файл с помощью "
+"следующей команды::"
 
 #: ../../docs/user/developers/compiling.rst:236
 msgid "Adding your signatures"
-msgstr ""
+msgstr "Добавление ваших подписей"
 
 #: ../../docs/user/developers/compiling.rst:238
 msgid "Create a new branch for the version that was built::"
-msgstr ""
+msgstr "Создайте новую ветку для версии, которая была собрана::"
 
 #: ../../docs/user/developers/compiling.rst:243
 msgid ""
 "Add and commit the ``*.assert`` and ``*.assert.sig`` files created by the "
 "build process. They will be located in the following folders::"
 msgstr ""
+"Добавьте и зафиксируйте файлы ``*.assert`` и ``*.assert.sig``, созданные в "
+"процессе сборки. Они будут расположены в следующих папках::"
 
 #: ../../docs/user/developers/compiling.rst:252
 msgid "Push to your fork of the gitian.sigs repository on GitHub::"
-msgstr ""
+msgstr "Запуште в свой форк репозитория gitian.sigs на GitHub::"
 
 #: ../../docs/user/developers/compiling.rst:257
 msgid ""
@@ -296,3 +375,7 @@ msgid ""
 "request will be reviewed by Dash Core developers and merged if everything "
 "checks out. Thanks for contributing!"
 msgstr ""
+"Перейдите на `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ и "
+"откройте pull request к ветке ``master`` репозитория upstream. Запрос будет "
+"рассмотрен разработчиками Dash Core и интегрирован, если все будет "
+"проверено. Спасибо за участие!"

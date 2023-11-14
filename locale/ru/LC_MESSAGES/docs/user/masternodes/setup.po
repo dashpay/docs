@@ -7,6 +7,7 @@
 # Julia Ogonkova <livingflcl@gmail.com>, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
 # Dima, 2022
+# VONCAN, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:56+0000\n"
-"Last-Translator: Dima, 2022\n"
+"Last-Translator: VONCAN, 2023\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -106,6 +107,7 @@ msgid ""
 "For information about hosted masternodes, see the documentation listed "
 "below:"
 msgstr ""
+"Информацию о размещенных мастернодах см. в документации, приведенной ниже:"
 
 #: ../../docs/user/masternodes/setup.rst:42
 msgid ":ref:`Information for users of hosted masternodes <hosted-setup>`"
@@ -125,10 +127,14 @@ msgid ""
 " result can be achieved on a masternode by entering the same commands and "
 "adding the prefix ``~/.dashcore/dash-cli`` to each command."
 msgstr ""
+"В данной документации описаны команды, которые вводятся в графическом "
+"интерфейсе Dash Core путем открытия консоли из команды **Window > Console**,"
+" но тот же результат может быть достигнут на мастерноде путем ввода тех же "
+"команд и добавления префикса ``~/.dashcore/dash-cli`` к каждой команде."
 
 #: ../../docs/user/masternodes/setup.rst:52
 msgid "Server configuration"
-msgstr ""
+msgstr "Конфигурация сервера"
 
 #: ../../docs/user/masternodes/setup.rst:54
 msgid ""
@@ -137,6 +143,10 @@ msgid ""
 "configuration <server-config>` page for details on preparing your server to "
 "host a masternode."
 msgstr ""
+"Правильная конфигурация сервера необходима для успешной работы мастерноды "
+"как с точки зрения безопасности, так и с точки зрения производительности. "
+"Подробную информацию о подготовке сервера к размещению masternode см. на "
+"странице :hoverxref:`Конфигурация сервера <server-config>`."
 
 #: ../../docs/user/masternodes/setup.rst:59
 msgid "Send the collateral"
@@ -184,6 +194,17 @@ msgid ""
 "account. You should see the transaction as soon as the first confirmation "
 "arrives, usually within a few minutes."
 msgstr ""
+"Настройте свой Trezor с помощью кошелька Trezor по адресу "
+"https://wallet.trezor.io/ и отправьте тестовую транзакцию, чтобы убедиться в"
+" его работоспособности. Помощь в этом вопросе см. в :ref:`в этом гайде "
+"<hardware-trezor>` - вы также можете (осторожно!) `добавить парольную фразу "
+"<https://blog.trezor.io/passphrase-the-ultimate-protection-for-your-"
+"accounts-3a311990925b>`_ к вашему Trezor для дополнительной защиты вашего "
+"залога. Создайте новый счет в кошельке Trezor, нажав **Add account**. Затем "
+"перейдите на вкладку **Receive** и отправьте на указанный адрес ровно 1000 "
+"DASH. Если вы создаете несколько мастернод, отправьте 1000 DASH на "
+"последовательные адреса в рамках одного нового счета. Вы увидите транзакцию,"
+" как только придет первое подтверждение, обычно в течение нескольких минут."
 
 #: ../../docs/user/masternodes/setup.rst:94
 msgid ""
@@ -252,6 +273,10 @@ msgid ""
 " extract the transaction ID. Carry out the following sequence of steps as "
 "shown in this screenshot:"
 msgstr ""
+"Теперь мы воспользуемся DMT для ввода основной информации о мастерноде2йце и"
+" извлечения идентификатора транзакции. Сначала нажмите кнопку **add a new "
+"one** или нажмите **MN actions** и выберите **Add New Masternode Entry...**."
+" Выполните следующую последовательность действий, как показано на скриншоте:"
 
 #: ../../docs/user/masternodes/setup.rst:139
 msgid "Dash Masternode Tool configuration steps"
@@ -283,10 +308,15 @@ msgid ""
 "sent 1000 Dash and click **Apply**. The **Collateral address**, **path**, "
 "**Collateral TX hash** and **index** fields should be filled automatically."
 msgstr ""
+"Нажмите **Locate collateral**, чтобы просмотреть неиспользованные операции "
+"по финансированию залога, доступные на подключенном аппаратном кошельке. "
+"Выберите адрес, на который был отправлено обеспечение в 1000 Dash, и нажмите"
+" **Apply**. Поля **Collateral address**, **path**, **Collateral TX hash** и "
+"**index** заполнятся автоматически."
 
 #: ../../docs/user/masternodes/setup.rst:156
 msgid "Dash Masternode Tool with masternode configuration"
-msgstr ""
+msgstr "Dash Masternode Tool с конфигурацией ноды"
 
 #: ../../docs/user/masternodes/setup.rst:158
 msgid ""
@@ -317,6 +347,8 @@ msgid ""
 "Click **Window > Console** to open the console. Type the following command "
 "into the console to generate a new Dash address for the collateral::"
 msgstr ""
+"Кликните **Окно > Консоль**, чтобы открыть консоль. Чтобы сгенерировать "
+"новый адрес для обеспечения, введите в консоль эту команду::"
 
 #: ../../docs/user/masternodes/setup.rst:179
 msgid ""
@@ -331,6 +363,18 @@ msgid ""
 " only way you can access our funds if anything happens to your computer. For"
 " more details on these steps, see :ref:`here <dashcore-backup>`."
 msgstr ""
+"Обратите внимание на адрес обеспечения, так как позже он нам понадобится. "
+"Следующим шагом является защита вашего кошелька (если вы до сих пор этого не"
+" сделали). Сначала зашифруйте кошелёк щёлкнув **Настройки > Зашифровать "
+"кошелёк**. Необходимо использовать новый и сильный пароль, который вы нигде "
+"не использовали ранее. Запишите свой пароль и сохраните его в безопасном "
+"месте, в противном случае доступ к кошельку окажется заблокированным "
+"навсегда и вы потеряете доступ к своим средствам. Следующим шагом сделайте "
+"резервную копию файла вашего кошелька выбрав **Файл > Сделать резервную "
+"копию кошелька**. Сохраните файл в безопасном месте, физически отдельном от "
+"вашего компьютера, так это будет единственный вариант доступа к ваши "
+"средствам, если с вашим компьютером что-то случится. Для получения более "
+"детальной информации по этим шагам смотрите :ref:`здесь <dashcore-backup>`."
 
 #: ../../docs/user/masternodes/setup.rst:191
 msgid ""
@@ -392,7 +436,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup.rst:226
 msgid "Manual installation"
-msgstr ""
+msgstr "Ручная установка"
 
 #: ../../docs/user/masternodes/setup.rst:228
 msgid ""
@@ -416,18 +460,25 @@ msgid ""
 "against the public key published by the Dash Core development team. All "
 "releases of Dash are signed using GPG with one of the following keys:"
 msgstr ""
+"Убедитесь в подлинности загруженного файла, сверив его подпись с открытым "
+"ключом, опубликованным командой разработчиков Dash Core. Все выпуски Dash "
+"подписываются с помощью GPG одним из следующих ключей:"
 
 #: ../../docs/user/masternodes/setup.rst:243
 msgid ""
 "Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, "
 "`verifiable here on Keybase <https://keybase.io/codablock>`__"
 msgstr ""
+"Александр Блок (codablock) с ключом ``63A9 6B40 6102 E091``, "
+"``верифицируемый здесь на Keybase <https://keybase.io/codablock>`__"
 
 #: ../../docs/user/masternodes/setup.rst:245
 msgid ""
 "Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here on "
 "Keybase <https://keybase.io/pasta>`__"
 msgstr ""
+"Pasta с ключом ``5252 7BED ABE8 7984``, ``верифицируемым здесь на Keybase "
+"<https://keybase.io/pasta>`__"
 
 #: ../../docs/user/masternodes/setup.rst:255
 msgid ""
@@ -599,6 +650,12 @@ msgid ""
 "connection-direct.md>`__ for documentation on using your own local RPC "
 "node.) and confirm the following two messages:"
 msgstr ""
+"Затем нажмите кнопку **Register masternode**. По желанию укажите другой "
+"**Payout address** и/или **Operator reward**, затем нажмите **Продолжить**. "
+"Выберите **Remote Dash RPC Node (автоматический метод)**. (Документацию по "
+"использованию собственного локального RPC-узла см. здесь "
+"<https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-"
+"connection-direct.md>`__) и подтвердите следующие два сообщения:"
 
 #: ../../docs/user/masternodes/setup.rst:393
 msgid "Dash Masternode Tool confirmation dialogs to register a masternode"
@@ -671,16 +728,21 @@ msgid ""
 "you now need to find the txid of the transaction. Click **Window > Console**"
 " and enter the following command::"
 msgstr ""
+"Если для совершения залоговой транзакции вы использовали адрес кошелька Dash"
+" Core, то теперь необходимо найти txid этой транзакции. Кликните **Окно > "
+"Консоль** и введите следующую команду::"
 
 #: ../../docs/user/masternodes/setup.rst:450
 msgid "This should return a string of characters similar to the following::"
-msgstr ""
+msgstr "Консоль должна вернуть строку символов, аналогичную этой::"
 
 #: ../../docs/user/masternodes/setup.rst:456
 msgid ""
 "The first long string is your ``collateralHash``, while the last number is "
 "the ``collateralIndex``."
 msgstr ""
+"Первая длинная строка - это ``хеш вашей транзакции``, последние цифры в ней "
+"- это ``индекс обеспечения``."
 
 #: ../../docs/user/masternodes/setup.rst:463
 msgid "Generate a BLS key pair"
@@ -693,6 +755,10 @@ msgid ""
 "included in the deterministic masternode list once a provider registration "
 "transaction with the corresponding public key has been created."
 msgstr ""
+"Для работы мастерноды требуется пара открытый/закрытый ключ BLS. Закрытый "
+"ключ указывается на самой ноде и позволяет включить его в детерминированный "
+"список узлов после создания транзакции регистрации провайдера с "
+"соответствующим открытым ключом."
 
 #: ../../docs/user/masternodes/setup.rst:471
 msgid ""
@@ -739,6 +805,8 @@ msgid ""
 "We will now prepare the transaction used to register the masternode on the "
 "network."
 msgstr ""
+"Теперь мы подготовим транзакцию, используемую для регистрации мастерноды в "
+"сети."
 
 #: ../../docs/user/masternodes/setup.rst:524
 msgid "Prepare a ProRegTx transaction"
@@ -750,6 +818,9 @@ msgid ""
 "private key was entered on the masternode. The public key is used in this "
 "transaction as the ``operatorPubKey``."
 msgstr ""
+"Пара BLS-ключей для оператора уже была сгенерирована выше, а закрытый ключ "
+"был введен на мастер-узле. Открытый ключ используется в данной транзакции в "
+"качестве ``operatorPubKey``."
 
 #: ../../docs/user/masternodes/setup.rst:530
 msgid ""
@@ -757,6 +828,10 @@ msgid ""
 "**owner key address** (``ownerKeyAddr``). This is not the same as the "
 "collateral address holding 1000 Dash. Generate a new address as follows::"
 msgstr ""
+"Во-первых, нам необходимо получить из кошелька новый, неиспользуемый адрес, "
+"который будет служить **адресом ключа владельца** (``ownerKeyAddr``). Это не"
+" то же самое, что адрес обеспечения, на котором хранится 1000 Dash. "
+"Сгенерируйте новый адрес следующим образом::"
 
 #: ../../docs/user/masternodes/setup.rst:539
 msgid ""
@@ -765,6 +840,10 @@ msgid ""
 "you by your chosen voting delegate, or simply generate a new voting key "
 "address as follows::"
 msgstr ""
+"Этот адрес также может быть использован в качестве **адреса ключа "
+"голосования** (``votingKeyAddr``). В качестве альтернативы можно указать "
+"адрес, предоставленный Вам выбранным Вами делегатом голосования, или просто "
+"сгенерировать новый адрес ключа голосования следующим образом::"
 
 #: ../../docs/user/masternodes/setup.rst:548
 msgid ""
@@ -772,6 +851,9 @@ msgid ""
 "masternode payouts** (``payoutAddress``). It is also possible to use an "
 "address external to the wallet::"
 msgstr ""
+"Затем либо сгенерируйте, либо выберите из существующих второй адрес для "
+"получения **платежей владельца мастерноды** (``payoutAddress``). Также "
+"возможно использовать адрес внешнего кошелька::"
 
 #: ../../docs/user/masternodes/setup.rst:556
 msgid ""
@@ -779,12 +861,18 @@ msgid ""
 "**transaction fee source** (``feeSourceAddress``). If you selected an "
 "external payout address, you must specify a fee source address."
 msgstr ""
+"При желании можно сгенерировать и пополнить другой адрес в качестве "
+"**источника комиссии за транзакцию** (``feeSourceAddress``). Если выбран "
+"внешний адрес выплаты, то необходимо указать адрес источника комиссии."
 
 #: ../../docs/user/masternodes/setup.rst:560
 msgid ""
 "Either the payout address or fee source address must have enough balance to "
 "pay the transaction fee, or the ``register_prepare`` transaction will fail."
 msgstr ""
+"Либо адрес выплаты, либо адрес источника комиссии должны иметь достаточный "
+"баланс для оплаты комиссии за транзакцию, иначе транзакция "
+"``register_prepare`` завершится неудачей."
 
 #: ../../docs/user/masternodes/setup.rst:564
 msgid ""
@@ -962,6 +1050,11 @@ msgid ""
 "since a standard transaction fee is involved. The command takes the "
 "following syntax::"
 msgstr ""
+"Теперь мы отправим в блокчейн специальную транзакцию ProRegTx для "
+"регистрации мастерноды. Эта команда должна быть отправлена с кошелька Dash "
+"Core, имеющего баланс на ``feeSourceAddress`` или ``payoutAddress``, "
+"поскольку в этом случае взимается стандартная комиссия за транзакцию. "
+"Команда имеет следующий синтаксис::"
 
 #: ../../docs/user/masternodes/setup.rst:671
 msgid "Where:"
@@ -992,6 +1085,12 @@ msgid ""
 "txid of the final ``protx register_submit`` transaction identifies your "
 "masternode."
 msgstr ""
+"Теперь ваша мастернода зарегистрирована и появится в списке "
+"детерминированных мастернод после того, как транзакция будет добыта в блок. "
+"Просмотреть этот список можно на вкладке **Masternodes -> DIP3 Masternodes**"
+" кошелька Dash Core или в консоли с помощью команды ``protx list valid``, "
+"где txid финальной транзакции ``protx register_submit`` идентифицирует ваш "
+"masternode."
 
 #: ../../docs/user/masternodes/setup.rst:693
 msgid ""
