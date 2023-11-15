@@ -27,6 +27,7 @@ $(function(){
 	var siteURL = "https://dash-user-docs.readthedocs.io/"
 	$("#langselect").on('change', function() {
 		var pageURL = $(location).attr("href");
+		console.log(pageURL)
 		var newLang = $('#langselect').val();
 		console.log(newLang)
 		if (newLang == "zh-CN") {
@@ -34,6 +35,7 @@ $(function(){
 		} else if (newLang == "zh-TW") {
 			newLang = "zh_TW";
 		}
+		console.log(newLang)
 		
 		var currentLang = DOCUMENTATION_OPTIONS['LANGUAGE'];
 		console.log(currentLang)
@@ -42,11 +44,11 @@ $(function(){
 		} else if (currentLang == "zh-TW") {
 			currentLang = "zh_TW";
 		}
+		console.log(currentLang)
 
-console.log(pageURL)
 		pageURL = pageURL.replace(siteURL + currentLang, "");
-console.log(pageURL)
-console.log(siteURL + newLang + pageURL)
-		// window.location.href = "https://docs.dash.org/" + newLang + pageURL;
+		console.log(pageURL)
+		console.log(siteURL + newLang + pageURL)
+		window.location.href = siteURL + newLang + pageURL;
 	});
 });
