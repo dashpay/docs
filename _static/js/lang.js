@@ -24,7 +24,7 @@ $(document).ready(function() {
 });
 
 $(function(){
-	var siteURL = "https://dash-user-docs.readthedocs.io/"
+	var siteURL = "https://docs.dash.org/";
 	$("#langselect").on('change', function() {
 		var pageURL = $(location).attr("href");
 		console.log(pageURL)
