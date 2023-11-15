@@ -24,6 +24,7 @@ $(document).ready(function() {
 });
 
 $(function(){
+	var siteURL = "https://dash-user-docs.readthedocs.io/"
 	$("#langselect").on('change', function() {
 		var pageURL = $(location).attr("href");
 		var newLang = $('#langselect').val();
@@ -43,8 +44,9 @@ $(function(){
 		}
 
 console.log(pageURL)
-		pageURL = pageURL.replace("https://dash-user-docs.readthedocs.io/" + currentLang, "");
+		pageURL = pageURL.replace(siteURL + currentLang, "");
 console.log(pageURL)
+console.log(siteURL + newLang + pageURL)
 		// window.location.href = "https://docs.dash.org/" + newLang + pageURL;
 	});
 });
