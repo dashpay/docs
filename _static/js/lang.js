@@ -41,11 +41,10 @@ $(function(){
 		} else if (currentLang == "zh-TW") {
 			currentLang = "zh_TW";
 		}
-console.log(currentLang)
+
 console.log(pageURL)
-		pageURL = pageURL.replace("https://docs.dash.org/" + currentLang, "");
-		console.log(pageURL)
-		console.log(newLang)
+		pageURL = pageURL.replace("https://dash-user-docs.readthedocs.io/" + currentLang, "");
+console.log(pageURL)
 		// window.location.href = "https://docs.dash.org/" + newLang + pageURL;
 	});
 });
