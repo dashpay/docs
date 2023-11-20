@@ -47,12 +47,12 @@ Debian package
 
 Download the dashmate installation package::
 
-   wget https://github.com/dashpay/platform/releases/download/v0.24.15/dashmate_0.24.15-1_amd64.deb
+   wget https://github.com/dashpay/platform/releases/download/v0.25.15/dashmate_0.25.15-1_arm64.deb
 
 Install dashmate using apt::
 
    sudo apt update
-   sudo apt install ./dashmate_0.24.15-1_amd64.deb
+   sudo apt install ./dashmate_0.25.15-1_arm64.deb
 
 Node package
 ^^^^^^^^^^^^
@@ -62,7 +62,7 @@ installing it using `nvm <https://github.com/nvm-sh/nvm#readme>`__::
 
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
-  nvm install 16
+  nvm install 18
 
 Once NodeJS has been installed, use npm to install dashmate::
 
