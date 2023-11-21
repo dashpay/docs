@@ -60,9 +60,9 @@ Node package
 To install the NodeJS package, it is necessary to install NodeJS first. We recommend
 installing it using `nvm <https://github.com/nvm-sh/nvm#readme>`__::
 
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
   source ~/.bashrc
-  nvm install 18
+  nvm install 20
 
 Once NodeJS has been installed, use npm to install dashmate::
 
