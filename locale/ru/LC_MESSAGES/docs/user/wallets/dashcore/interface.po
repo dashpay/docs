@@ -6,6 +6,7 @@
 # Translators:
 # Dima, 2022
 # Julia Ogonkova <livingflcl@gmail.com>, 2022
+# VONCAN, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
-"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2022\n"
+"Last-Translator: VONCAN, 2023\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,7 +96,7 @@ msgstr "Файл"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:39
 msgid "The File menu is used to manage your wallet and messages."
-msgstr ""
+msgstr "Меню Файл используется для управления вашим кошельком и сообщениями."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:41
 msgid "Settings"
@@ -111,13 +112,15 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/interface.rst:44
 msgid "Window"
-msgstr ""
+msgstr "Окно"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:44
 msgid ""
 "The Window menu provides access to your wallet addresses, information on the"
 " network and other advanced functions."
 msgstr ""
+"Меню Window обеспечивает доступ к адресам ваших кошельков, информации о сети"
+" и другим дополнительным функциям."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:48
 msgid "Help"
@@ -155,6 +158,8 @@ msgid ""
 "The overview tab offers quick access to your balance and most recent "
 "transactions, as well as the CoinJoin feature."
 msgstr ""
+"Во вкладке Обзор вы видите ваш баланс и список недавних транзакций, также "
+"тут есть функция CoinJoin."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:67
 msgid ""
@@ -162,6 +167,9 @@ msgid ""
 "shows your balances, which may be divided into **Spendable** and **Watch-"
 "only** balances if you have loaded watch addresses:"
 msgstr ""
+"Левая часть основной области разделена на две области. В верхней области "
+"отображаются остатки средств, которые могут быть разделены на **Доступно для"
+" траты** и **Только для просмотра**, если у Вас загружены адреса часов:"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:73
 msgid "Available"
@@ -209,6 +217,8 @@ msgid ""
 "The lower area shows the CoinJoin status and allows you to process your "
 "funds using CoinJoin on the Dash masternode network."
 msgstr ""
+"Нижняя область показывает статус CoinJoin, и тут вы можете перемешать ваши "
+"средства, используя сеть мастернод Dash. "
 
 #: ../../docs/user/wallets/dashcore/interface.rst:88
 msgid ""
@@ -217,6 +227,10 @@ msgid ""
 "transactions appear red, prefixed by a – sign. For more details on your "
 "transaction history, see the **Transactions** tab."
 msgstr ""
+"В правой части экрана отображаются последние операции. Последние входящие "
+"транзакции отображаются зеленым цветом со знаком +. Последние исходящие "
+"транзакции отображаются красным цветом со знаком \"-\". Более подробную "
+"информацию об истории операций см. на вкладке **Транзакции**."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:94
 msgid "The Send Tab"
@@ -230,6 +244,11 @@ msgid ""
 " transaction fee are also available. A quick view of your total balance is "
 "also available in the lower right corner."
 msgstr ""
+"Во вкладке Отправить вы можете отправить средства на любой другой адрес в "
+"сети Dash. Она содержит поля для ввода адреса получателя, метки адреса, а "
+"также количества Dash, которое вы хотите отправить. Также доступны настройки"
+" комиссии за перевод. Общую сумма доступных на вашем счёте средств также "
+"отображается в правом нижнем углу."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:104
 msgid "The Send tab"
@@ -265,6 +284,11 @@ msgid ""
 "transaction history as a CSV file by clicking the Export button in the "
 "bottom right corner of the window."
 msgstr ""
+"Во вкладке транзакции можно увидеть всю историю транзакций для всех адресов,"
+" которые связаны с вашим кошельком. Она сделана в виде таблички, "
+"показывающей время, тип, метку и количество Dash для каждого перевода. Также"
+" вы можете выгрузить список переводов в CSV файл, нажав на кнопку Экспорт в "
+"правом нижнем углу окна."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:126
 msgid ""
@@ -273,14 +297,18 @@ msgid ""
 " while a circular progress indicator indicates the number of confirmations. "
 "A lightning bolt indicates a transaction with an existing InstantSend lock."
 msgstr ""
+"Значки в левой колонке отображают статус транзакции. Галочка указывает на "
+"прохождение рекомендуемого количества подтверждений, а круговой индикатор "
+"хода выполнения указывает на количество подтверждений. Молния указывает на "
+"транзакцию с существующей блокировкой InstantSend."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:134
 msgid "The Transactions tab"
-msgstr ""
+msgstr "Вкладка Транзакции"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:137
 msgid "The CoinJoin Tab"
-msgstr ""
+msgstr "Вкладка CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:139
 msgid ""
@@ -290,14 +318,19 @@ msgid ""
 "Options related to the transaction fee are also available. A quick view of "
 "your total CoinJoin balance is also available in the lower right corner."
 msgstr ""
+"Вкладка CoinJoin позволяет отправлять средства на другой адрес в сети Dash с"
+" повышенной степенью конфиденциальности. Она содержит поля для ввода адреса "
+"получателя, метки для адреса и суммы Dash, которую вы хотите отправить. "
+"Также доступны опции, связанные с комиссией за транзакцию. В правом нижнем "
+"углу также доступен быстрый просмотр общего баланса CoinJoin."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:148
 msgid "The CoinJoin tab"
-msgstr ""
+msgstr "Вкладка CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:151
 msgid "The Masternodes Tab"
-msgstr ""
+msgstr "Вкладка мастерноды"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:153
 msgid ""
@@ -306,14 +339,18 @@ msgid ""
 "in the Filter List field, or display only masternodes with owner keys stored"
 " in the loaded wallet."
 msgstr ""
+"На вкладке Мастерноды отображается обзор мастернод, зарегистрированных в "
+"настоящее время в сети Dash. Вы можете отфильтровать данные, введя значение "
+"в поле Filter List, или отобразить только те мастерноды, ключи владельцев "
+"которых хранятся в загруженном кошельке."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:160
 msgid "The Masternodes tab"
-msgstr ""
+msgstr "Вкладка мастерноды"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:163
 msgid "The Governance Tab"
-msgstr ""
+msgstr "Вкладка управление"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:165
 msgid ""
@@ -321,10 +358,13 @@ msgid ""
 "active on the Dash network. You can filter the data by entering a value in "
 "the Filter List field."
 msgstr ""
+"На вкладке Governance (Управление) отображается обзор предложений по "
+"управлению, активных в данный момент в сети Dash. Вы можете отфильтровать "
+"данные, введя значение в поле Filter List."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:171
 msgid "The Governance tab"
-msgstr ""
+msgstr "Вкладка управление"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:175
 msgid "The Status Bar"
@@ -382,11 +422,11 @@ msgstr "Dash Core скачивает блоки из сети. "
 
 #: ../../docs/user/wallets/dashcore/interface.rst:197
 msgid "Synchronizing governance objects"
-msgstr ""
+msgstr "Синхронизация объектов управления"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:197
 msgid "Dash Core is synchronizing P2P governance data."
-msgstr ""
+msgstr "Dash Core синхронизирует P2P данные управления."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:199
 msgid ""
@@ -405,6 +445,9 @@ msgid ""
 "This icon appears when your wallet is running in hierarchical deterministic "
 "(HD) mode. See :ref:`here <dashcore-hd>` for documentation on HD mode."
 msgstr ""
+"Этот значок появляется, когда кошелек работает в иерархическом "
+"детерминированном (HD) режиме. Документацию по режиму HD см. в :ref:`тут "
+"<dashcore-hd>`."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:217
 msgid ""
@@ -422,12 +465,18 @@ msgid ""
 "you cannot connect because of network problems, you will see only gray bars."
 " More bars indicate more connections to your peers on the network."
 msgstr ""
+"Эти иконки говорят о качестве вашего соединения с сетью Dash. Если вы не "
+"можете подключиться из-за проблем с сетью, вы увидите только серые полосы. "
+"Большее количество сегментов означает большее количество соединений с вашими"
+" пирами в сети."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:234
 msgid ""
 "These icons show the synchronization status of Dash Core with the network. "
 "Once synchronization is complete, the icon will become a green tick."
 msgstr ""
+"Эти иконки показывают статус синхронизации Dash Core с сетью. Когда "
+"синхронизация завершена, иконка превращается в зеленую галочку."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:240
 msgid "The Options Dialog"
@@ -523,7 +572,7 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/interface.rst:284
 msgid "Prune block storage to"
-msgstr ""
+msgstr "Обрезка хранилища блоков до"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:281
 msgid ""
@@ -532,6 +581,11 @@ msgid ""
 "space required to store transactions. All blocks are still fully validated. "
 "Reverting this setting requires re-downloading the entire blockchain."
 msgstr ""
+"Эта опция включает обрезку блоков и задает объем памяти, используемый для "
+"хранения блоков. Включение обрезки значительно сокращает дисковое "
+"пространство, необходимое для хранения транзакций. При этом все блоки по-"
+"прежнему полностью проверяются. Для отмены этой настройки требуется "
+"повторная загрузка всего блокчейна."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:290
 msgid "Size of database cache"
@@ -544,6 +598,10 @@ msgid ""
 "cost of higher memory usage. The default value is 300MB and it should not be"
 " set lower than this level."
 msgstr ""
+"Эта настройка определяет размер кэша базы данных в памяти. Чем выше "
+"значение, тем больше производительность при добавлении новых блоков и тем "
+"больше использование памяти. По умолчанию размер кэша установлен на 300Мб, и"
+" его не стоит опускать ниже этого уровня."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:300
 msgid "Number of script verification threads"
@@ -581,6 +639,11 @@ msgid ""
 "This tab allows you to configure how these addresses are used as inputs with"
 " the Coin Control, CoinJoin and Masternode features."
 msgstr ""
+"Вкладка Кошелёк в диалоговом окне Настройки содержит параметры, которые "
+"определяют, каким образом управляются адреса в приложении Dash Core. Когда "
+"вы впервые запускаете Dash Core, он создаёт новый кошелёк, содержащий 1000 "
+"уникальных адресов Dash. В этой вкладке вы можете настроить, как будут "
+"использоваться эти адреса с Coin Control, CoinJoin и функциями мастерноды."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:314
 msgid "The Wallet tab of the Dash Core Options dialog"
@@ -602,6 +665,17 @@ msgid ""
 "and prioritize different addresses in your wallet. See :ref:`here <coin-"
 "control>` for a more detailed explanation of Coin Control."
 msgstr ""
+"Баланс в кошельке Dash Core - это сумма всех адресов с монетами, которые "
+"ассоциируются с вашим кошельком. Когда вы тратите Dash, Dash Core извлекает "
+"средства с такого количества адресов, которое необходимо, чтобы была "
+"достигнуто то количество Dash, которое вы хотите перевести. Если же вы "
+"хотите, чтобы на каком-то из адресов хранилось определённое количество "
+"средств, такое поведение нежелательно. Включение этой опции добавит кнопку "
+"**Вклады** во вкладке **Отправить**. С её помощью можно получить доступ к "
+"диалоговому окну **Выбор монет**, где можно заблокировать, разблокировать и "
+"определить приоритетность различных адресов вашего кошелька. Для более "
+"детального объяснения, как работает Coin Control, пройдите по :ref:`ссылке "
+"<coin-control>`."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:332
 msgid "Show Masternodes tab"
@@ -614,10 +688,14 @@ msgid ""
 "restart the Dash Core app. The Masternodes tab can be used to view details "
 "of masternodes registered on the Dash blockchain."
 msgstr ""
+"Включение этой опции приводит к отображению в Dash Core дополнительной "
+"вкладки \"Мастерноды\" справа от вкладки \"Транзакции\". Данная опция "
+"требует перезапуска приложения Dash Core. На вкладке \"Мастерноды\" можно "
+"просмотреть информацию о мастернодах, зарегистрированных в блокчейне Dash."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:337
 msgid "Show Governance tab"
-msgstr ""
+msgstr "Показывать вкладка управление"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:335
 msgid ""
@@ -626,6 +704,10 @@ msgid ""
 "tab can be used to view details of governance proposals active on the Dash "
 "network."
 msgstr ""
+"Включение этой опции приводит к отображению в Dash Core дополнительной "
+"вкладки Управление. Эта опция требует перезапуска приложения Dash Core. На "
+"вкладке Управлние можно просмотреть подробную информацию о предложениях, "
+"действующих в сети Dash."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:347
 msgid "Spend unconfirmed change"
@@ -651,7 +733,7 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/interface.rst:352
 msgid "Enable CoinJoin features"
-msgstr ""
+msgstr "Включить функции CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:350
 msgid ""
@@ -659,24 +741,29 @@ msgid ""
 "and the Options dialog, and allows you to process and spend your balance "
 "using CoinJoin."
 msgstr ""
+"Включение этой опции отображает вкладку CoinJoin в главном окне Dash Core и "
+"диалоговом окне Options и позволяет обрабатывать и расходовать баланс с "
+"помощью CoinJoin."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:355
 msgid "CoinJoin tab"
-msgstr ""
+msgstr "Вкладка CoinJoin"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:357
 msgid ""
 "The CoinJoin tab contains options relating to how CoinJoin functions in Dash"
 " Core."
 msgstr ""
+"Вкладка CoinJoin содержит опции, относящиеся к функционированию CoinJoin в "
+"Dash Core."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:363
 msgid "The CoinJoin tab of the Dash Core Options dialog"
-msgstr ""
+msgstr "Вкладка CoinJoin в диалоговом окне Настройки Dash Core "
 
 #: ../../docs/user/wallets/dashcore/interface.rst:370
 msgid "Enable advanced interface"
-msgstr ""
+msgstr "Включить расширенный интерфейс"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:366
 msgid ""
@@ -685,20 +772,26 @@ msgid ""
 "percentage completion and current operation. See :ref:`here <dashcore-"
 "coinjoin-instantsend>` for a full explanation of how to use CoinJoin."
 msgstr ""
+"Включение этой опции изменяет интерфейс на вкладке Overview кошелька Dash "
+"Core, добавляя в него дополнительную информацию, такую как оставшиеся ключи,"
+" процент завершения и текущая операция. Полное описание использования "
+"CoinJoin см. в :ref:`тут <dashcore-coinjoin-instantsend>`."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:374
 msgid "Show popups for mixing transactions"
-msgstr ""
+msgstr "Показывать поп-апы при смешивании транзакций"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:373
 msgid ""
 "Enabling this option will display notifications as the CoinJoin transactions"
 " are created."
 msgstr ""
+"Включение этой опции приведет к появлению уведомлений по мере создания "
+"транзакций CoinJoin."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:382
 msgid "Warn if the wallet is running out of keys"
-msgstr ""
+msgstr "Предупредить, если заканчиваются ключи"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:377
 msgid ""
@@ -709,10 +802,17 @@ msgid ""
 "Consequently, users who have backups disabled will also have CoinJoin "
 "disabled."
 msgstr ""
+"Если эта опция включена, Dash Core будет выдавать предупреждение, когда "
+"исходный набор из 1000 адресов будет исчерпан, что может повлиять на "
+"обработку CoinJoin. Когда будет использовано 900 адресов, кошелек должен "
+"будет создать дополнительные адреса. Это возможно только в том случае, если "
+"у вас включено автоматическое резервное копирование. Соответственно, у "
+"пользователей, у которых резервное копирование отключено, CoinJoin также "
+"будет отключен."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:390
 msgid "Enable multi-session"
-msgstr ""
+msgstr "Включить мульти-сессии"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:385
 msgid ""
@@ -722,10 +822,16 @@ msgid ""
 "greatly increasing the speed of the CoinJoin process at the cost of creating"
 " more addresses and thus requiring more frequent wallet backups."
 msgstr ""
+"Обычно обработка CoinJoin происходит в несколько последовательных раундов, "
+"каждый из которых использует один мастернод. Включение этой опции позволяет "
+"использовать мультисессию, то есть несколько серверов-мастернод "
+"одновременно, что значительно увеличивает скорость процесса CoinJoin за счет"
+" создания большего количества адресов и, соответственно, необходимости более"
+" частого резервного копирования кошелька."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:398
 msgid "Mixing rounds"
-msgstr ""
+msgstr "Раунды смешивания"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:393
 msgid ""
@@ -735,10 +841,15 @@ msgid ""
 "Dash to its original address. This is at the expense of more time required "
 "for processing and potentially higher fees."
 msgstr ""
+"Используйте эту опцию для управления количеством раундов обработки CoinJoin "
+"для выбранного баланса. Для каждого раунда обработки используется новый "
+"мастернод. Чем больше количество раундов, тем сложнее отследить Dash до его "
+"первоначального адреса. Это связано с увеличением времени обработки и "
+"потенциально более высокими комиссиями."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:404
 msgid "Target balance"
-msgstr ""
+msgstr "Целевой баланс"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:401
 msgid ""
@@ -747,6 +858,10 @@ msgid ""
 "CoinJoin process. The available amount is shown as the balance on the "
 "CoinJoin tab."
 msgstr ""
+"Данная опция позволяет указать, какое количество Dash должно храниться на "
+"балансе в готовом к использованию смешенном состоянии, то есть уже прошедшем"
+" через процесс CoinJoin. Доступная сумма отображается в виде баланса на "
+"вкладке CoinJoin."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:407
 msgid "Network tab"
@@ -754,7 +869,7 @@ msgstr "Вкладка Сеть"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:409
 msgid "This tab includes options related to your Dash network connection."
-msgstr ""
+msgstr "Эта вкладка содержит опции, относящиеся к сетевому подключению Dash."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:414
 msgid "The Network tab of the Dash Core Options dialog"
@@ -843,6 +958,8 @@ msgid ""
 "This tab contains options relating to the display of the Dash Core app "
 "window."
 msgstr ""
+"Эта вкладка содержит опции, относящиеся к отображению окна приложения Dash "
+"Core."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:454
 msgid "The Display tab of the Dash Core Options dialog"
@@ -911,21 +1028,22 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/interface.rst:480
 msgid "Appearance tab"
-msgstr ""
+msgstr "Вкладка внешний вид"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:482
 msgid ""
 "This tab contains options relating to the visual appearance of the Dash Core"
 " app window."
 msgstr ""
+"Эта вкладка содержит настройки визуального отображения окна Dash Core."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:488
 msgid "The Appearance tab of the Dash Core Options dialog"
-msgstr ""
+msgstr "Вкладка Внешний вид диалогового окна опций Dash Core"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:493
 msgid "Theme"
-msgstr ""
+msgstr "Тема"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:491
 msgid ""
@@ -933,24 +1051,27 @@ msgid ""
 " of the Dash Core window. All functionality is identical under the different"
 " themes."
 msgstr ""
+"С помощью этой опции можно выбрать другую тему, определяющую внешний вид "
+"окна Dash Core. Все функциональные возможности различных тем идентичны."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:497
 msgid "Font Family"
-msgstr ""
+msgstr "Шрифт"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:496
 msgid ""
 "This option allows you to select a different font to display text in the "
 "window."
 msgstr ""
+"Эта опция позволяет выбрать другой шрифт для отображения текста в окне."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:500
 msgid "Font Scale and Weight"
-msgstr ""
+msgstr "Размер и ширина шрифта"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:500
 msgid "These options control the size and weight of fonts in the window."
-msgstr ""
+msgstr "Эти опция управляет размером и толщиной шрифтов в окне."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:503
 msgid "The Tools Dialog"
@@ -1045,6 +1166,12 @@ msgid ""
 ":ref:`documentation <core:api-rpc>` on RPC commands to learn about the "
 "possible commands you can issue."
 msgstr ""
+"Во вкладке Консоль находится интерфейс с консолью Dash Core RPC (удалённая "
+"процедура вызова). Она эквивалентна команде ``dash-cli`` в безинтерфейсных "
+"версиях Dash, например  ``dashd``, которая работает на мастерноде. Кликните "
+"на красную иконку ``×``, чтобы очистить консоль, а также просмотрите "
+"детальное :ref:`руководство <core:api-rpc>` по командам RPC, чтобы узнать "
+"больше о командах, которые вы можете использовать. "
 
 #: ../../docs/user/wallets/dashcore/interface.rst:551
 msgid "The Console tab of the Dash Core Tools dialog"
@@ -1060,6 +1187,10 @@ msgid ""
 "on the network over time. You can adjust the time period using the slider or"
 " **Reset** the graph."
 msgstr ""
+"Во вкладке Сетевой траффик отображается график со входящим и исходящим "
+"трафиком от пиров сети за всё время работы. Отображаемый период времени "
+"можно настроить, используя ползунок. Кроме того, можно очистить график с "
+"помощью кнопки **Cброс**. "
 
 #: ../../docs/user/wallets/dashcore/interface.rst:563
 msgid "The Network Traffic tab of the Dash Core Tools dialog"
@@ -1104,7 +1235,7 @@ msgstr "Вкладка Ремонт кошелька в диалоговом о�
 
 #: ../../docs/user/wallets/dashcore/interface.rst:595
 msgid "Rescan blockchain files 1"
-msgstr ""
+msgstr "Повторное сканирование файлов блокчейна 1"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:591
 msgid ""
@@ -1122,13 +1253,15 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/interface.rst:599
 msgid "Rescan blockchain files 2"
-msgstr ""
+msgstr "Повторное сканирование файлов блокчейна 2"
 
 #: ../../docs/user/wallets/dashcore/interface.rst:598
 msgid ""
 "Performs the same operation as *Rescan blockchain files 1* but scans from "
 "the genesis block instead of the wallet creation time."
 msgstr ""
+"Выполняет ту же операцию, что и *Повторное сканирование файлов блокчейна 1*,"
+" но сканирует не с момента создания кошелька, а с блока генезиса."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:608
 msgid "Recover transactions"
@@ -1144,6 +1277,13 @@ msgid ""
 "processing, for example, or if a transaction is sent with insufficient fees "
 "when blocks are full."
 msgstr ""
+"Команды восстановления транзакций можно использовать для того, чтобы убрать "
+"из пула памяти неподтверждённые транзакции. Ваш кошелёк при этом "
+"перезапустится и пересканирует блокчейн, восстанавливая существующие "
+"транзакции и удаляя неподтверждённые транзакции. Транзакции могут застрять "
+"по разным причинам - например, если есть конфликт версий протокола, или если"
+" транзакция отправлена с недостаточной комиссией, когда блоки уже "
+"переполнены."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:614
 msgid "Upgrade wallet format"
@@ -1184,7 +1324,13 @@ msgid ""
 "file as <wallet name>.<date>.bak and scans it to attempt to recover any "
 "private keys."
 msgstr ""
+"Опция спасения кошелька была перенесена в автономное приложение командной "
+"строки dash-wallet в Dash Core v18.0. Запуск dash-wallet с командой "
+"``salvage`` предполагает, что файл кошелька, указанный в параметре "
+"``-wallet``, поврежден и не может быть прочитан. Команда создает копию файла"
+" кошелька в формате <wallet name>.<date>.bak и сканирует его, пытаясь "
+"восстановить все закрытые ключи."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:629
 msgid "Example: ``dash-wallet -wallet=mywallet/wallet.dat salvage``"
-msgstr ""
+msgstr "Пример: ``dash-wallet -wallet=mywallet/wallet.dat salvage``."

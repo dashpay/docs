@@ -7,6 +7,7 @@
 # Julia Ogonkova <livingflcl@gmail.com>, 2022
 # Leon White <leon.white@dash.org>, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
+# VONCAN, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:56+0000\n"
-"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2022\n"
+"Last-Translator: VONCAN, 2023\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -118,6 +119,8 @@ msgid ""
 "`Profitability calculation tool "
 "<https://www.coinwarz.com/mining/dash/calculator>`_"
 msgstr ""
+"`Инструмент расчёта доходности "
+"<https://www.coinwarz.com/mining/dash/calculator>`_"
 
 #: ../../docs/user/mining/index.rst:44
 msgid "Masternodes vs. Mining"
@@ -157,6 +160,16 @@ msgid ""
 "distribution found :ref:`here <block-reward-reallocation>`, while 10% is "
 "reserved for the budget system (created by superblocks every month)."
 msgstr ""
+"Однако Dash работает несколько иначе, чем Bitcoin, поскольку имеет "
+"двухуровневую сеть. На втором уровне работают :ref:`masternodes "
+"<masternodes>` (Полные ноды), которые обеспечивают конфиденциальность "
+"финансовых операций (CoinJoin), мгновенные транзакции (InstantSend), а также"
+" децентрализованную систему управления и бюджета. Поскольку этот второй "
+"уровень так важен, мастерноды также получают вознаграждение, когда майнеры "
+"открывают новые блоки. Вознаграждение распределяется следующим образом: 90% "
+"вознаграждения за блок делится между майнером и мастернодой в соответствии с"
+" распределением, приведенным :ref:`here <block-reward-reallocation>`, а 10% "
+"предназначается для бюджетной системы (создается суперблоками каждый месяц)."
 
 #: ../../docs/user/mining/index.rst:67
 msgid ""
@@ -234,6 +247,13 @@ msgid ""
 "latency, uptime, fee, users, etc. A guide to using a typical mining pool can"
 " be found :ref:`here <mining-pools>`."
 msgstr ""
+"Если вы хотите создать свой собственный P2Pool, то документация по этому "
+"процессу доступна :ref:`here <p2pool>`, а код для p2pool-dash - на `GitHub "
+"<https://github.com/dashpay/p2pool-dash>`_. Ниже перечислены другие "
+"майнинговые пулы, которые могут быть выгодны по разным причинам, таким как "
+"задержка пинга, время работы, плата, количество пользователей и т.д. "
+"Руководство по использованию типичного майнингового пула можно найти "
+":ref:`here <mining-pools>`."
 
 #: ../../docs/user/mining/index.rst:107
 msgid "https://coinfoundry.org"
@@ -241,7 +261,7 @@ msgstr "https://coinfoundry.org"
 
 #: ../../docs/user/mining/index.rst:108
 msgid "https://mining.luxor.tech"
-msgstr ""
+msgstr "https://mining.luxor.tech"
 
 #: ../../docs/user/mining/index.rst:109
 msgid "https://dash.suprnova.cc"
@@ -269,7 +289,7 @@ msgstr "https://www.f2pool.com"
 
 #: ../../docs/user/mining/index.rst:115
 msgid "https://www2.coinmine.pl/dash/"
-msgstr ""
+msgstr "https://www2.coinmine.pl/dash/"
 
 #: ../../docs/user/mining/index.rst:116
 msgid "https://www.antpool.com"
@@ -285,11 +305,11 @@ msgstr "https://www.genesis-mining.com"
 
 #: ../../docs/user/mining/index.rst:119
 msgid "https://www.viabtc.com"
-msgstr ""
+msgstr "https://www.viabtc.com"
 
 #: ../../docs/user/mining/index.rst:120
 msgid "https://zpool.ca"
-msgstr ""
+msgstr "https://zpool.ca"
 
 #: ../../docs/user/mining/index.rst:122
 msgid ""
@@ -352,7 +372,7 @@ msgstr ""
 
 #: ../../docs/user/mining/index.rst:158 ../../docs/user/mining/index.rst:292
 msgid "`Crypto Mining Blog <https://cryptomining-blog.com/>`_"
-msgstr ""
+msgstr "`Блог по криптомайнингу <https://cryptomining-blog.com/>`_"
 
 #: ../../docs/user/mining/index.rst:159 ../../docs/user/mining/index.rst:293
 msgid ""
@@ -392,6 +412,10 @@ msgid ""
 "sets. You can use `CPU-Z <https://www.cpuid.com/softwares/cpu-z.html>`_ to "
 "check if this is the case for your CPU:"
 msgstr ""
+"Необходимое программное обеспечение зависит от того, поддерживает ли ваше "
+"ЦПУ набор инструкций AES-NI и AVX. Чтобы проверить, подходит ли конкретное "
+"ПО под ваше ЦПУ, можно использовать `CPU-Z "
+"<https://www.cpuid.com/softwares/cpu-z.html>`_:"
 
 #: ../../docs/user/mining/index.rst:178
 msgid "CPU-Z showing details for an Intel i7 Haswell CPU"
@@ -906,7 +930,7 @@ msgstr "19.5 кг"
 
 #: ../../docs/user/mining/index.rst:432
 msgid "640 x 525 x 185"
-msgstr ""
+msgstr "640 x 525 x 185"
 
 #: ../../docs/user/mining/index.rst:432
 msgid "$7,000"
@@ -916,10 +940,11 @@ msgstr "$7,000"
 msgid ""
 "`StrongU STU-U6 <https://strongu.com.cn/Home/Goods/goodsInfo/id/263.html>`_"
 msgstr ""
+"`StrongU STU-U6 <https://strongu.com.cn/Home/Goods/goodsInfo/id/263.html>`_"
 
 #: ../../docs/user/mining/index.rst:434
 msgid "420 GH/s ±8%"
-msgstr ""
+msgstr "420 GH/s ±8%"
 
 #: ../../docs/user/mining/index.rst:434 ../../docs/user/mining/index.rst:478
 msgid "2100 W"
@@ -927,23 +952,23 @@ msgstr "2100 Вт"
 
 #: ../../docs/user/mining/index.rst:434
 msgid "8.5 kg"
-msgstr ""
+msgstr "8.5 кг"
 
 #: ../../docs/user/mining/index.rst:434
 msgid "370 x 135 x 208"
-msgstr ""
+msgstr "370 x 135 x 208"
 
 #: ../../docs/user/mining/index.rst:437
 msgid "ASIC resellers may also have miners available:"
-msgstr ""
+msgstr "У реселлеров ASIC также могут быть в наличии майнеры:"
 
 #: ../../docs/user/mining/index.rst:439
 msgid "http://kaboomracks.com"
-msgstr ""
+msgstr "http://kaboomracks.com"
 
 #: ../../docs/user/mining/index.rst:440
 msgid "https://brokerage.luxor.tech/dashboard"
-msgstr ""
+msgstr "https://brokerage.luxor.tech/dashboard"
 
 #: ../../docs/user/mining/index.rst:442
 msgid ""
@@ -975,7 +1000,7 @@ msgstr "312 x 125 x 130"
 
 #: ../../docs/user/mining/index.rst:450
 msgid "`Baikal Mini <https://www.baikalminer.com/>`_"
-msgstr ""
+msgstr "`Baikal Mini <https://www.baikalminer.com/>`_"
 
 #: ../../docs/user/mining/index.rst:450
 msgid "150 MH/s ±10%"
@@ -995,7 +1020,7 @@ msgstr "140 x 100 x 95"
 
 #: ../../docs/user/mining/index.rst:452
 msgid "`Baikal Giant+ A2000 <https://www.baikalminer.com/product06.php>`_"
-msgstr ""
+msgstr "`Baikal Giant+ A2000 <https://www.baikalminer.com/product06.php>`_"
 
 #: ../../docs/user/mining/index.rst:452
 msgid "2000 MH/s ±10%"
@@ -1015,7 +1040,7 @@ msgstr "300 x 140 x 125"
 
 #: ../../docs/user/mining/index.rst:454
 msgid "`Baikal Giant A900 <https://www.baikalminer.com/>`_"
-msgstr ""
+msgstr "`Baikal Giant A900 <https://www.baikalminer.com/>`_"
 
 #: ../../docs/user/mining/index.rst:454
 msgid "900 MH/s ±5%"
@@ -1035,7 +1060,7 @@ msgstr "300 x 123 x 123"
 
 #: ../../docs/user/mining/index.rst:456
 msgid "`Baikal Quad Cube <https://www.baikalminer.com/>`_"
-msgstr ""
+msgstr "`Baikal Quad Cube <https://www.baikalminer.com/>`_"
 
 #: ../../docs/user/mining/index.rst:456
 msgid "1200 MH/s ±10%"
@@ -1097,6 +1122,7 @@ msgstr "490 x 350 x 180"
 #: ../../docs/user/mining/index.rst:462
 msgid "`iBelink DM11G <https://www.asicminervalue.com/miners/ibelink/dm11g>`_"
 msgstr ""
+"`iBelink DM11G <https://www.asicminervalue.com/miners/ibelink/dm11g>`_"
 
 #: ../../docs/user/mining/index.rst:462
 msgid "11 GH/s ±5%"
@@ -1113,6 +1139,7 @@ msgstr "22 кг"
 #: ../../docs/user/mining/index.rst:464
 msgid "`iBelink DM22G <https://www.asicminervalue.com/miners/ibelink/dm22g>`_"
 msgstr ""
+"`iBelink DM22G <https://www.asicminervalue.com/miners/ibelink/dm22g>`_"
 
 #: ../../docs/user/mining/index.rst:464
 msgid "22 GH/s ±5%"
@@ -1124,7 +1151,7 @@ msgstr "19 кг"
 
 #: ../../docs/user/mining/index.rst:466
 msgid "Pinidea DR-1"
-msgstr ""
+msgstr "Pinidea DR-1"
 
 #: ../../docs/user/mining/index.rst:466
 msgid "500 MH/s ±10%"
@@ -1145,7 +1172,7 @@ msgstr "290 x 130 x 150"
 
 #: ../../docs/user/mining/index.rst:468
 msgid "Pinidea DR-2"
-msgstr ""
+msgstr "Pinidea DR-2"
 
 #: ../../docs/user/mining/index.rst:468
 msgid "450 MH/s ±5%"
@@ -1161,7 +1188,7 @@ msgstr "200 x 165 x 135"
 
 #: ../../docs/user/mining/index.rst:470
 msgid "Pinidea DR-3"
-msgstr ""
+msgstr "Pinidea DR-3"
 
 #: ../../docs/user/mining/index.rst:470
 msgid "600 MH/s ±5%"
@@ -1173,7 +1200,7 @@ msgstr "345 Вт"
 
 #: ../../docs/user/mining/index.rst:472
 msgid "Pinidea DU-1"
-msgstr ""
+msgstr "Pinidea DU-1"
 
 #: ../../docs/user/mining/index.rst:472
 msgid "9 MH/s ±5%"
@@ -1189,7 +1216,7 @@ msgstr "50 x 50 x 30"
 
 #: ../../docs/user/mining/index.rst:474
 msgid "Pinidea DRX-Kuznetsov"
-msgstr ""
+msgstr "Pinidea DRX-Kuznetsov"
 
 #: ../../docs/user/mining/index.rst:474
 msgid "900 MH/s ±5%"
@@ -1205,7 +1232,7 @@ msgstr "280 x 180 x 150"
 
 #: ../../docs/user/mining/index.rst:476
 msgid "Pinidea DRX-Varyag"
-msgstr ""
+msgstr "Pinidea DRX-Varyag"
 
 #: ../../docs/user/mining/index.rst:476
 msgid "1200 MH/s ±5%"
@@ -1239,6 +1266,7 @@ msgstr "490 x 390 x 180"
 msgid ""
 "`Innosilicon A5 <https://www.innosilicon.com/html/a5-miner/index.html>`_"
 msgstr ""
+"`Innosilicon A5 <https://www.innosilicon.com/html/a5-miner/index.html>`_"
 
 #: ../../docs/user/mining/index.rst:480
 msgid "32 GH/s ±8%"

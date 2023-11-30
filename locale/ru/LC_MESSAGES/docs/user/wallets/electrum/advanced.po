@@ -9,6 +9,7 @@
 # Max Aronych <taofgoar@protonmail.com>, 2022
 # Dima, 2022
 # Julia Ogonkova <livingflcl@gmail.com>, 2022
+# VONCAN, 2023
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
-"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2022\n"
+"Last-Translator: VONCAN, 2023\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,41 +63,52 @@ msgstr ""
 
 #: ../../docs/user/wallets/electrum/advanced.rst:18
 msgid "`Electrum documentation <https://docs.electrum.org>`_"
-msgstr ""
+msgstr "`Документация Electrum <https://docs.electrum.org>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:19
 msgid ""
 "`Electrum seed version system "
 "<https://docs.electrum.org/en/latest/seedphrase.html>`_"
 msgstr ""
+"`Версия Electrum с мнемонической фразой "
+"<http://docs.electrum.org/en/latest/seedphrase.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:20
 msgid ""
 "`Electrum protocol specification "
 "<https://docs.electrum.org/en/latest/protocol.html>`_"
 msgstr ""
+"`Спецификация протокола Electrum "
+"<https://docs.electrum.org/en/latest/protocol.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:21
 msgid ""
 "`Serialization of unsigned or partially signed transactions "
 "<https://docs.electrum.org/en/latest/transactions.html>`_"
 msgstr ""
+"`Сериализация неподписанных или частично подписанных транзакций "
+"<https://docs.electrum.org/en/latest/transactions.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:22
 msgid ""
 "`Simple Payment Verification "
 "<https://docs.electrum.org/en/latest/spv.html>`_"
 msgstr ""
+"`Верификация простых платежей "
+"<https://docs.electrum.org/en/latest/spv.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:23
 msgid ""
 "`The Python Console <https://docs.electrum.org/en/latest/console.html>`_"
 msgstr ""
+"`Консоль на Python <https://docs.electrum.org/en/latest/console.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:24
 msgid ""
 "`Using Electrum Through Tor <https://docs.electrum.org/en/latest/tor.html>`_"
 msgstr ""
+"`Как работать с Electrum через Tor "
+"<https://docs.electrum.org/en/latest/tor.html>`_"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:27
 msgid "PrivateSend"
@@ -110,10 +122,16 @@ msgid ""
 "PrivateSend is available in Dash Electrum versions 3.3.8.3 and higher, with "
 "support for hardware wallets added in 3.3.8.7."
 msgstr ""
+":ref:`PrivateSend <coinjoin>` предлагает пользователям повышенную "
+"конфиденциальность при совершении транзакций за счет разделения баланса "
+"пользователя на несколько заранее определенных номиналов перед расходованием"
+" средств. Этот процесс известен как CoinJoin. PrivateSend доступен в Dash "
+"Electrum версий 3.3.8.3 и выше, а поддержка аппаратных кошельков добавлена в"
+" 3.3.8.7."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:36
 msgid "Processing and sending"
-msgstr ""
+msgstr "Обработка и отправка"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:38
 msgid ""
@@ -121,10 +139,13 @@ msgid ""
 "PrivateSend** or click the **PS** icon in the lower right corner of the main"
 " window. The following window appears:"
 msgstr ""
+"Чтобы запустить обработку PrivateSend в Dash Electrum, выберите **Кошелек > "
+"PrivateSend** или щелкните на значке **PS** в правом нижнем углу главного "
+"окна. Откроется следующее окно:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:45
 msgid "PrivateSend dialog in Dash Electrum"
-msgstr ""
+msgstr "Диалоговое окно PrivateSend в Dash Electrum"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:47
 msgid ""
@@ -134,6 +155,11 @@ msgid ""
 " shows the completion progress. Additional information on the process is "
 "available on the **Info** and **Log** tabs."
 msgstr ""
+"Введите **Сумму Dash для сохранения приватности** и количество **Раундов "
+"PrivateSend для использования**. Затем нажмите кнопку **Enable "
+"PrivateSend**, а затем **Start Mixing**. Процесс начнется, и на панели "
+"**Прогресс смешивания** будет показан ход его завершения. Дополнительная "
+"информация о процессе доступна на вкладках **Info** и **Log**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:53
 msgid ""
@@ -141,6 +167,10 @@ msgid ""
 "the **Send** tab before sending your transaction. Dash Electrum will only "
 "use Dash processed according to your specifications for the transaction."
 msgstr ""
+"После завершения обработки просто установите флажок **PrivateSend** на "
+"вкладке **Send** перед отправкой транзакции. Dash Electrum будет "
+"использовать для транзакции только Dash, обработанный в соответствии с "
+"вашими условиями."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:59
 msgid "Hardware Wallets"
@@ -151,6 +181,9 @@ msgid ""
 "You can use hardware wallets with Dash Electrum. Under Linux, it may be "
 "necessary to first install dependencies and udev rules as follows::"
 msgstr ""
+"С Dash Electrum можно использовать аппаратные кошельки. В Linux может "
+"потребоваться предварительная установка зависимостей и правил udev следующим"
+" образом::"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:67
 msgid ""
@@ -161,6 +194,12 @@ msgid ""
 "begin. You can then spend the processed Dash, or send it back to your "
 "hardware wallet."
 msgstr ""
+"Также поддерживается обработка PrivateSend. При запуске обработки "
+"PrivateSend в Dash Electrum с аппаратным кошельком будет создан новый HD-"
+"кошелек и мнемоника для хранилища ключей PrivateSend. Будет создана "
+"транзакция из аппаратного кошелька на адрес в этом хранилище, и начнется "
+"обработка. Затем обработанные Dash можно потратить или отправить обратно на "
+"аппаратный кошелек."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:77
 msgid "Masternodes"
@@ -169,10 +208,11 @@ msgstr "Мастерноды"
 #: ../../docs/user/wallets/electrum/advanced.rst:79
 msgid "Dash Electrum supports masternode creation through the **DIP3** tab."
 msgstr ""
+"Dash Electrum поддерживает создание masternode через вкладку **DIP3**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:82
 msgid "DIP3"
-msgstr ""
+msgstr "DIP3"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:84
 msgid ""
@@ -180,11 +220,15 @@ msgid ""
 "displays the status of your masternode(s) and also allows viewing a list of "
 "all registered masternodes on the network."
 msgstr ""
+"Вкладка DIP3 может быть включена через меню **View > Show DIP3**. На этой "
+"вкладке отображается статус вашей мастерноды (нод), а также можно "
+"просмотреть список всех зарегистрированных мастернод в сети."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:88
 msgid ""
 "The tab displays the following data about each masternode you have set up:"
 msgstr ""
+"На вкладке отображаются следующие данные о каждом настроенной мастерноде:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:90
 msgid "The alias (name) of the masternode."
@@ -192,15 +236,15 @@ msgstr "Название (имя) мастерноды. "
 
 #: ../../docs/user/wallets/electrum/advanced.rst:91
 msgid "The state of the masternode (e.g. whether it has been activated)."
-msgstr ""
+msgstr "Статус мастерноды (например, была ли она активирована)."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:92
 msgid "The keys"
-msgstr ""
+msgstr "Ключи"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:93
 msgid "The Provider Registration transaction hash of the masternode."
-msgstr ""
+msgstr "Хэш транзакции регистрации провайдера для мастерноды."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:94
 msgid "The IP address and port that your masternode can be reached at."
@@ -208,7 +252,7 @@ msgstr "IP адрес и порт, через который можно полу
 
 #: ../../docs/user/wallets/electrum/advanced.rst:99
 msgid "DIP3 tab with masternode information"
-msgstr ""
+msgstr "Вкладка DIP3 с информацией о мастерноде"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:102
 msgid "Masternode setup"
@@ -219,6 +263,8 @@ msgid ""
 "To setup a masternode, navigate to the DIP3 tab and click the **Add/Import**"
 " button."
 msgstr ""
+"Для настройки мастерноды перейдите на вкладку DIP3 и нажмите кнопку "
+"**Add/Import**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:109
 msgid ""
@@ -229,16 +275,25 @@ msgid ""
 " for the Dash Electrum documentation demonstrating how to configure a "
 "masternode using a multisig collateral."
 msgstr ""
+"В сочетании с функциями Electrum :ref:`multisig features <electrum-"
+"multisig>` залог мастернод может храниться в кошельке multisig, что повышает"
+" гибкость системы безопасности. См. `эту страницу "
+"<https://github.com/dashpay/docs/blob/master/wallets/electrum/dip3_p2sh_howto.md>`_"
+" для документации Dash Electrum, демонстрирующей, как настроить мастернод с "
+"использованием мультисигового обеспечения."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:116
 msgid ""
 "**Always exercise caution when using multisig accounts and verify that each "
 "mnemonic is backed up appropriately.**"
 msgstr ""
+"**Всегда проявляйте осторожность при использовании аккаунтов с "
+"мультиподписью и проверяйте, чтобы каждый мнемоник был соответствующим "
+"образом сохранен.**"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:122
 msgid "Add or import masternode"
-msgstr ""
+msgstr "Добавить или импортировать мастерноду"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:124
 msgid ""
@@ -247,6 +302,10 @@ msgid ""
 "point very few legacy masternodes are present, so only the **Create and "
 "register DIP3 Masternode** option will be covered in detail."
 msgstr ""
+"Electrum поддерживает создание/регистрацию новых мастернод, а также импорт и"
+" регистрацию старых мастернод с помощью файла ``masternode.conf``. На данный"
+" момент существует очень мало старых мастернод, поэтому подробно будет "
+"рассмотрена только опция **Создание и регистрация мастернод DIP3**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:129
 msgid ""
@@ -256,10 +315,15 @@ msgid ""
 "hosted masternode so both ownership type checkboxes are selected. Click "
 "**Next** to continue."
 msgstr ""
+"Поддерживаются два типа владения: только владелец и владелец/оператор. "
+"Основное различие при настройке заключается в том, хранится ли закрытый ключ"
+" BLS оператора в Electrum. В следующих шагах показано создание мастерноды, "
+"размещаемого на собственном хостинге, для которого установлены оба флажка "
+"типа владения. Для продолжения нажмите **Next**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:138
 msgid "Select operation type and ownership properties"
-msgstr ""
+msgstr "Выберите тип операции и свойства владения"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:140
 msgid ""
@@ -267,10 +331,13 @@ msgid ""
 "fees available in your wallet. Leave **Create collateral as ProRegTx "
 "output** checked and click **Next**."
 msgstr ""
+"Для запуска мастерноды необходимо иметь на кошельке 1000 DASH плюс небольшую"
+" сумму для оплаты. Оставьте галочку **Создать обеспечение как вывод "
+"ProRegTx** и нажмите **Следующее**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:147
 msgid "Select collateral output for masternode"
-msgstr ""
+msgstr "Выберите выход обеспечения для мастерноды"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:149
 msgid ""
@@ -279,10 +346,14 @@ msgid ""
 "entering them (the port will be set to the default mainnet port of 9999 "
 "automatically)."
 msgstr ""
+"Необходимо предоставить определенную информацию о вашем мастерноде. "
+"Необходимо указать IP-адрес и порт, используемые вашим мастернодом. После их"
+" ввода нажмите кнопку **Next** (порт будет автоматически установлен на "
+"стандартный порт основной сети 9999)."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:156
 msgid "Enter masternode IP address and port"
-msgstr ""
+msgstr "Введите IP-адрес и порт мастерноды"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:158
 msgid ""
@@ -290,10 +361,14 @@ msgid ""
 "Electrum will automatically select addresses from your wallet. Click "
 "**Next** to continue."
 msgstr ""
+"Для каждой мастерноды требуется три адреса: владельца, голосования и выплат."
+" Electrum автоматически выберет адреса из вашего кошелька. Нажмите **Next**,"
+" чтобы продолжить."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:165
 msgid "Select masternode owner, voting, and payout addresses"
 msgstr ""
+"Выбор владельца мастерноды, также как и адрес для голосования и выплат"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:167
 msgid ""
@@ -304,6 +379,12 @@ msgid ""
 "masternode will use the private key to sign messages, and the Dash network "
 "will know that you authorized it to do so."
 msgstr ""
+"Для работы мастерноды требуется BLS ключ \"оператора\", как описано в `DIP3 "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md#registering-a-"
+"masternode-proregtx>`_. Если вы управляете своей собственной мастернодой, то"
+" и Dash Electrum, и ваша мастернода должны знать закрытый ключ оператора. "
+"Ваша мастернода будет использовать закрытый ключ для подписи сообщений, а "
+"сеть Dash будет знать, что вы дали ей на это право."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:172
 msgid ""
@@ -312,10 +393,14 @@ msgid ""
 "masternode configuration. Click **Next** after copying this line to your "
 "masternode's ``dash.conf`` file."
 msgstr ""
+"Electrum сгенерирует необходимую пару ключей BLS и предоставит строку, "
+"которую необходимо скопировать в мастерноду для правильной настройки. "
+"Нажмите **Next** после копирования этой строки в файл ``dash.conf`` вашего "
+"мастернода."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:180
 msgid "BLS key setup"
-msgstr ""
+msgstr "Настройка BLS ключей"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:182
 msgid ""
@@ -325,14 +410,19 @@ msgid ""
 " The **Send** tab will open and be populated with the info necessary to "
 "register the masternode."
 msgstr ""
+"Теперь все параметры сконфигурированы. На этом экране отображаются "
+"подробности конфигурации и появляется возможность сохранить информацию. "
+"Убедитесь, что флажок **Make ProRegTx after saving masterнод data** "
+"установлен, и нажмите кнопку **Save**. Откроется вкладка **Отправить**, на "
+"которой будет размещена информация, необходимая для регистрации мастернода."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:190
 msgid "Examine parameters and save masternode"
-msgstr ""
+msgstr "Проверить параметры и сохранить мастерноду"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:193
 msgid "Registering your masternode"
-msgstr ""
+msgstr "Регистрация вашей мастерноды"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:195
 msgid ""
@@ -340,6 +430,9 @@ msgid ""
 "filled out by the previous step, just Click **Pay...** to complete the "
 "registration."
 msgstr ""
+"Поскольку информация ProRegTx, необходима для регистрации мастерноды, была "
+"заполнена на предыдущем шаге, просто нажмите **Pay...** для завершения "
+"регистрации."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:200
 msgid ""
@@ -347,20 +440,25 @@ msgid ""
 "**DIP3** tab, select the unregistered masternode from the list of **Wallet "
 "MNs**, and click **Register**."
 msgstr ""
+"Чтобы завершить регистрацию ранее настроенной мастерноды, перейдите на "
+"вкладку **DIP3**, выберите незарегистрированную мастерноду из списка **MN "
+"кошелька** и нажмите кнопку **Регистрация**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:207
 msgid "Send tab with ProRegTx prepared"
-msgstr ""
+msgstr "Отправить вкладку с подготовленным ProRegTx"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:209
 msgid ""
 "Enter your password and click **Send** to broadcast the registration "
 "transaction."
 msgstr ""
+"Введите пароль и нажмите кнопку **Отправить** для трансляции операции "
+"регистрации."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:215
 msgid "Confirm ProRegTx Transaction"
-msgstr ""
+msgstr "Подтверждение транзакции ProRegTx"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:217
 msgid ""
@@ -368,46 +466,55 @@ msgid ""
 "successfully. This ProRegTx hash is used by the network to uniquely identify"
 " the masternode. Click **OK** to close the screen."
 msgstr ""
+"После успешной отправки транзакции будет отображен ее хэш. Этот хэш ProRegTx"
+" используется сетью для уникальной идентификации мастерноды. Нажмите **OK**,"
+" чтобы закрыть экран."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:224
 #: ../../docs/user/wallets/electrum/advanced.rst:306
 #: ../../docs/user/wallets/electrum/advanced.rst:362
 msgid "Transaction sent screen showing transaction hash"
-msgstr ""
+msgstr "Экран отправки транзакции с отображением хэша транзакции"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:226
 msgid ""
 "Prior to the ProRegTx being confirmed the new masternode will appear as "
 "unregistered on the DIP3 tab."
 msgstr ""
+"До подтверждения ProRegTx новая мастернода будет отображаться как "
+"незарегистрированная на вкладке DIP3."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:232
 msgid "DIP3 tab showing unregistered masternode"
-msgstr ""
+msgstr "На вкладке DIP3 отображается незарегистрированная мастернода"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:234
 msgid ""
 "Once the ProRegTx has been confirmed, the new masternode will appear as "
 "registered on the DIP3 tab."
 msgstr ""
+"После подтверждения ProRegTx новая мастернода будет отображаться как "
+"зарегистрированная на вкладке DIP3."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:240
 msgid "DIP3 tab showing registered masternode"
-msgstr ""
+msgstr "На вкладке DIP3 отображается зарегистрированная мастернода"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:243
 msgid "Updating masternode registration"
-msgstr ""
+msgstr "Информация по регистрации мастерноды"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:245
 msgid ""
 "To update masternode registration information, navigate to the DIP3 tab and "
 "click the **Update Registrar** button."
 msgstr ""
+"Для обновления регистрационной информации о мастерноде перейдите на вкладку "
+"DIP3 и нажмите кнопку **Update Registrar**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:251
 msgid "Update Registrar"
-msgstr ""
+msgstr "Обновить Registrar"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:253
 msgid ""
@@ -416,16 +523,22 @@ msgid ""
 "or addresses from a different wallet (e.g. a hardware wallet) can be pasted "
 "into either field. Click **Next** to continue."
 msgstr ""
+"Владелец мастерноды может в любое время обновить адреса голосования и "
+"выплат. Адреса из текущего кошелька можно выбрать из выпадающего меню или "
+"вставить в любое поле адреса из другого кошелька (например, аппаратного). "
+"Для продолжения работы нажмите кнопку **Next**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:261
 msgid "Update masternode voting and/or payout address"
-msgstr ""
+msgstr "Обновление адреса голосования и/или выплат мастерноды"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:263
 msgid ""
 "The masternode owner may also update the operator BLS key at any time. Click"
 " **Next** to continue."
 msgstr ""
+"Владелец мастерноды также может в любое время обновить BLS-ключ оператора. "
+"Для продолжения нажмите кнопку **Next**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:267
 msgid ""
@@ -433,10 +546,13 @@ msgid ""
 "``dash.conf`` file on the masternode. Electrum will provide a notification "
 "with instructions when this is required."
 msgstr ""
+"При каждом изменении приватного ключа оператора он должен быть скопирован в "
+"файл ``dash.conf`` на мастерноде. Electrum предоставит уведомление с "
+"инструкциями, когда это потребуется."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:274
 msgid "Update operator BLS key"
-msgstr ""
+msgstr "Обновление BLS ключа оператора"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:276
 msgid ""
@@ -445,10 +561,14 @@ msgid ""
 "**Send** tab will open and be populated with the info necessary to update "
 "the masternode."
 msgstr ""
+"Теперь все параметры сконфигурированы. На этом экране показаны обновленные "
+"данные конфигурации. Для продолжения нажмите **Подготовить ProUpRegTx**. "
+"Откроется вкладка **Отправить**, на которой будет размещена информация, "
+"необходимая для обновления мастерноды."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:283
 msgid "Examine parameters and update masternode"
-msgstr ""
+msgstr "Проверить параметры и обновить мастерноду"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:285
 msgid ""
@@ -456,20 +576,25 @@ msgid ""
 "was filled out by the previous step so just Click **Pay...** to complete the"
 " update."
 msgstr ""
+"Информация ProUpRegTx, необходимая для обновления данных регистрации "
+"мастерноды, была заполнена на предыдущем шаге, поэтому просто нажмите "
+"**Pay...** для завершения обновления."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:291
 msgid "Send tab with ProUpRegTx prepared"
-msgstr ""
+msgstr "Вкладка отправки с с подготовленным ProUpRegTx"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:293
 #: ../../docs/user/wallets/electrum/advanced.rst:349
 msgid ""
 "Enter your password and click **Send** to broadcast the update transaction."
 msgstr ""
+"Введите пароль и нажмите кнопку **Отправить** для трансляции транзакции "
+"обновления."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:298
 msgid "Confirm ProUpRegTx Transaction"
-msgstr ""
+msgstr "Подтверждение транзакции ProUpRegTx"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:300
 #: ../../docs/user/wallets/electrum/advanced.rst:356
@@ -477,43 +602,51 @@ msgid ""
 "The transaction hash will be displayed once the transaction has been sent "
 "successfully. Click **OK** to close the screen."
 msgstr ""
+"После успешной отправки транзакции на экране появится хэш транзакции. "
+"Нажмите **OK**, чтобы закрыть экран."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:309
 msgid "Updating masternode service parameters"
-msgstr ""
+msgstr "Обновление сервисных параметров мастерноды"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:311
 msgid "The masternode service may need to be updated to:"
-msgstr ""
+msgstr "Возможно, потребуется обновить сервис мастерноды:"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:313
 msgid ""
 "Change the IP address, port, or operator payout address of a masternode"
-msgstr ""
+msgstr "Изменение IP-адреса, порта или адреса выплат оператора мастерноды"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:314
 msgid "Revive a masternode that was Proof of Service (PoSe) banned"
 msgstr ""
+"Восстановить мастерноду, которая была заблокирована по Proof of Service "
+"(PoSe)"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:316
 msgid ""
 "To update masternode service information, navigate to the DIP3 tab and click"
 " the **Update Service** button."
 msgstr ""
+"Для обновления служебной информации мастерноды перейдите на вкладку DIP3 и "
+"нажмите кнопку **Update Service**."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:322
 msgid "Update Service"
-msgstr ""
+msgstr "Обновление сервиса"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:324
 msgid ""
 "The masternode operator may update the IP address and port at any time. "
 "Update the IP address and click **Next** to continue."
 msgstr ""
+"Оператор мастерноды может в любое время обновить IP-адрес и порт. Обновите "
+"IP-адрес и нажмите **Next** для продолжения."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:330
 msgid "Update masternode IP address"
-msgstr ""
+msgstr "Обновление IP-адреса мастерноды"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:332
 msgid ""
@@ -522,24 +655,31 @@ msgid ""
 "**Send** tab will open and be populated with the info necessary to update "
 "the masternode."
 msgstr ""
+"Теперь все параметры сконфигурированы. На этом экране отображаются "
+"обновленные сведения о конфигурации. Для продолжения нажмите **Подготовить "
+"ProUpServTx**. Откроется вкладка **Send**, на которой будет размещена "
+"информация, необходимая для обновления мастерноды."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:339
 msgid "Examine parameters and update masternode service"
-msgstr ""
+msgstr "Изучение параметров и обновление службы мастерноды"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:341
 msgid ""
 "The ProUpServTx information required to update the masternode was filled out"
 " by the previous step so just Click **Pay...** to complete the update."
 msgstr ""
+"Информация о ProUpServTx, необходимая для обновления мастерноды, была "
+"заполнена на предыдущем шаге, поэтому просто нажмите **Pay...** для "
+"завершения обновления."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:347
 msgid "Send tab with ProUpServTx prepared"
-msgstr ""
+msgstr "Вкладка отправки с с подготовленным ProUpServTx"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:354
 msgid "Confirm ProUpServTx Transaction"
-msgstr ""
+msgstr "Подтверждение транзакции ProUpServTx"
 
 #: ../../docs/user/wallets/electrum/advanced.rst:367
 msgid "Multisig wallets"
@@ -734,6 +874,13 @@ msgid ""
 " with the number \"7\" or the capital letter \"X\". The example below "
 "displays a private key (WIF format)."
 msgstr ""
+"Возможно, вы получили бумажный кошелёк в подарок от другого пользователя "
+"Dash, или ранее хранили его в безопасном месте. Средства можно переместить "
+"из :ref:`бумажного кошелька<paper-wallets>`  в электронный кошелёк через "
+"импорт его приватного ключа <https://bitzuma.com/posts/six-things-bitcoin-"
+"users-should-know-about-private-keys/>`_, который является длинной "
+"последовательностью символов и начинается с \"7\" или заглавной буквы \"X\"."
+" Ниже показан пример приватного ключа (в формате WIF)."
 
 #: ../../docs/user/wallets/electrum/advanced.rst:473
 msgid ""

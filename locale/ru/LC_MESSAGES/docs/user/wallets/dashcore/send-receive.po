@@ -6,6 +6,7 @@
 # Translators:
 # Julia Ogonkova <livingflcl@gmail.com>, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
+# VONCAN, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
-"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2022\n"
+"Last-Translator: VONCAN, 2023\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,6 +63,13 @@ msgid ""
 "masternode and mining payments are only released after 101 blocks. Note that"
 " a different process is used for InstantSend and CoinJoin transactions."
 msgstr ""
+"После подтверждения вами транзакции, Dash Core внесёт транзакцию в блок, "
+"который затем будет добавлен в блокчейн для подтверждения другими клиентами."
+" Как правило, транзакция считается подтверждённой после того, как после "
+"блока, содержащего вашу транзакцию, будет добавлено ещё шесть блоков, хотя "
+"платежи мастернодам и за майнинг могут быть выведены только после 101 блока."
+" Обратите внимание, что для транзакций InstantSend и CoinJoin используется "
+"другой процесс."
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:27
 msgid "Dash addresses are 34 characters long and begin with an uppercase X."
@@ -107,7 +115,7 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:49
 msgid "sendicons"
-msgstr ""
+msgstr "sendicons"
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:52
 msgid ""
@@ -116,6 +124,10 @@ msgid ""
 "sent. You can also increase your fee to encourage nodes on the network to "
 "prioritize your transaction."
 msgstr ""
+"Другие опции касаются платы за услуги. Вы можете выбрать, платить ли "
+"комиссию дополнительно к отправленной сумме или вычитать ее из отправленной "
+"суммы. Вы также можете увеличить размер комиссии, чтобы побудить ноды сети "
+"отдавать приоритет вашей транзакции."
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:57
 msgid ""
@@ -124,6 +136,11 @@ msgid ""
 " can be seen in the following window beginning with *yWa*. The invoice is "
 "for 2.5 Dash, which you fill in the **Amount** field."
 msgstr ""
+"Попробуем пример. Скажем, вы получили товарный счёт, который вы сейчас "
+"хотите оплатить с помощью DASH. Автор этого счёта добавил адрес DASH, "
+"который можно увидеть в приведённом окне, начинающийся с *yWa*. Товарный "
+"счёт выставлен на сумму 2,5 DASH, которую вы вписываете в поле "
+"**Количество**."
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:65
 msgid "The Send tab filled out for a transaction"
@@ -176,16 +193,21 @@ msgid ""
 " the transaction fee. In the next section, we will see what this procedure "
 "looks like from the receiving side."
 msgstr ""
+"Обратите внимание, что сумма транзакции увеличилась на 0,00003926 DASH. Это "
+"плата за транзакцию. В следующем разделе мы увидим, как выглядит эта "
+"процедура с принимающей стороны."
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:98
 msgid ""
 "Stuck transactions can be resent one-by-one using the \"Resend "
 "transactions\" option in the menu."
 msgstr ""
+"Застрявшие транзакции могут быть отправлены по одной с помощью опции меню "
+"\"Повторная отправка транзакций\"."
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:104
 msgid "Resending transactions"
-msgstr ""
+msgstr "Переотправка транзакций"
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:107
 msgid "Receiving Dash"
@@ -196,6 +218,9 @@ msgid ""
 "To receive Dash, you must first create a receiving address to give to the "
 "sending party. To do this, click the **Receive** tab in the tab bar."
 msgstr ""
+"Для получения Dash необходимо сначала создать адрес получателя, который "
+"будет передан отправителю. Для этого перейдите на вкладку **Получить** на "
+"панели вкладок."
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:115
 msgid "The Receive tab"
@@ -206,10 +231,11 @@ msgid ""
 "Create a new address by clicking the **Request new receiving address** "
 "button."
 msgstr ""
+"Создайте новый адрес, нажав кнопку **Запросить новый адрес получения**."
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:122
 msgid "The Request payment window"
-msgstr ""
+msgstr "Окно \"Запрос платежа\""
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:124
 msgid ""
@@ -220,6 +246,13 @@ msgid ""
 "blocks on the blockchain when it is open, and will recognize a new "
 "transaction involving your receiving address when it occurs."
 msgstr ""
+"В открывшемся окне Запрос платежа нажмите **Копировать адрес** и укажите "
+"этот адрес тому, кто будет переводить вам Dash. Для получения средств ваш "
+"кошелек не обязательно должен быть открыт, но если он открыт, вы можете "
+"наблюдать за поступлением транзакции в режиме реального времени. Это связано"
+" с тем, что ваш кошелек постоянно следит за появлением новых блоков в "
+"блокчейне, когда он открыт, и распознает новую транзакцию с вашим адресом "
+"получения, когда она произойдет."
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:134
 msgid "The Windows 10 received transaction confirmation notification"
@@ -239,7 +272,7 @@ msgstr "Полученная транзакция"
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:145
 msgid "Viewing Addresses"
-msgstr ""
+msgstr "Просмотр адресов"
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:147
 msgid ""
@@ -247,6 +280,9 @@ msgid ""
 "Receiving addresses**. In the same way, sending addresses can be seen by "
 "clicking **Window > Sending addresses**."
 msgstr ""
+"Чтобы просмотреть все ранее созданные адреса приема, нажмите **Окно > Адреса"
+" получения**. Аналогичным образом можно просмотреть адреса отправки, нажав "
+"**Окно > Адреса отправки**."
 
 #: ../../docs/user/wallets/dashcore/send-receive.rst:154
 msgid "The Receiving addresses window"
@@ -257,3 +293,5 @@ msgid ""
 "You can edit an existing address by right clicking and selecting **Edit** "
 "address from the context menu."
 msgstr ""
+"Изменить существующий адрес можно, щелкнув правой кнопкой мыши и выбрав из "
+"контекстного меню пункт **Редактировать** адрес."

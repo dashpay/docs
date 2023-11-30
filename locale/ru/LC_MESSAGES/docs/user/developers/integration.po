@@ -28,13 +28,15 @@ msgstr ""
 
 #: ../../docs/user/developers/integration.rst-1
 msgid "Technical guides for developers integrating Dash."
-msgstr ""
+msgstr "Технические руководства для разработчиков, интегрирующих Dash."
 
 #: ../../docs/user/developers/integration.rst-1
 msgid ""
 "dash, merchants, API, SDK, instantsend, python, .NET, java, javascript, "
 "nodejs, php, objective-c"
 msgstr ""
+"dash, мерчанты, API, SDK, instantsend, python, .NET, java, javascript, "
+"nodejs, php, objective-c"
 
 #: ../../docs/user/developers/integration.rst:9
 msgid "Integration Overview"
@@ -45,6 +47,8 @@ msgid ""
 "This documentation is also available as a `PDF "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_IntegrationOverview.pdf>`__."
 msgstr ""
+"Данная документация также доступна в формате `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_IntegrationOverview.pdf>`__."
 
 #: ../../docs/user/developers/integration.rst:13
 msgid ""
@@ -54,10 +58,14 @@ msgid ""
 "which have been customized to support unique functionalities such as "
 "InstantSend."
 msgstr ""
+" `Dash Core <https://github.com/dashpay/dash/releases>`__ является “форком” "
+"Биткойна и имеет с ним много общих функций. Ключевые отличия находятся в "
+"существующих JSON-RPC командах, которые были изменены таким образом, чтобы "
+"можно было поддерживать такие уникальные функции, как InstantSend."
 
 #: ../../docs/user/developers/integration.rst:19
 msgid "The Basics"
-msgstr ""
+msgstr "Основы"
 
 #: ../../docs/user/developers/integration.rst:21
 msgid ""
@@ -67,6 +75,11 @@ msgid ""
 "instant transactions, enhancing user privacy, and offering a self-"
 "sustainable decentralized governance model."
 msgstr ""
+"Dash - это сеть Proof of Work, в которой, как и в Bitcoin, есть сеть "
+"майнинга, но используется другой алгоритм хеширования блоков. Dash служит "
+"улучшением недостатков Bitcoin, предлагая надежное решение для мгновенных "
+"транзакций, повышая конфиденциальность пользователей и предлагая "
+"самодостаточную децентрализованную модель управления."
 
 #: ../../docs/user/developers/integration.rst:27
 msgid ""
@@ -77,22 +90,28 @@ msgid ""
 "<integration-instantsend>` is the recommended best practice for all Dash "
 "integrations."
 msgstr ""
+"В частности, Dash InstantSend обеспечивает механизм безопасного принятия и "
+"повторного проведения транзакций с нулевым подтверждением. Кроме того, "
+"InstantSend обеспечивает повышенную безопасность по сравнению с традиционной"
+" практикой ожидания подтверждения от нескольких блоков. Поэтому "
+":ref:`внедрение InstantSend <integration-instantsend>` является "
+"рекомендуемой лучшей практикой для всех интеграций Dash."
 
 #: ../../docs/user/developers/integration.rst:34
 msgid "Block time: ~2.6 minutes per block"
-msgstr ""
+msgstr "Время нахождения блока: ~2,6 минуты"
 
 #: ../../docs/user/developers/integration.rst:35
 msgid "Github source: https://github.com/dashpay/dash"
-msgstr ""
+msgstr "Github source: https://github.com/dashpay/dash"
 
 #: ../../docs/user/developers/integration.rst:36
 msgid "Latest release: https://github.com/dashpay/dash/releases/latest"
-msgstr ""
+msgstr "Последний релиз: https://github.com/dashpay/dash/releases/latest"
 
 #: ../../docs/user/developers/integration.rst:39
 msgid "JSON-RPC Interface"
-msgstr ""
+msgstr "Интерфейс JSON-RPC"
 
 #: ../../docs/user/developers/integration.rst:41
 msgid ""
@@ -101,33 +120,40 @@ msgid ""
 "commands please refer to the :ref:`​Dash Developer Guide <core:guide-"
 "index>`."
 msgstr ""
+"Большинство команд остались неизменными по сравнению с Bitcoin, что делает "
+"интеграцию в существующие системы относительно простой. Полный список RPC-"
+"команд приведен в :ref:`Руководство разработчика Dash <core:guide-index>`."
 
 #: ../../docs/user/developers/integration.rst:46
 msgid ""
 "Note that the following commands have been modified to support InstantSend:"
 msgstr ""
+"Обратите внимание, что следующие команды были изменены для поддержки "
+"InstantSend:"
 
 #: ../../docs/user/developers/integration.rst:48
 #: ../../docs/user/developers/integration.rst:193
 msgid ":ref:`getrawmempool <core:api-rpc-blockchain-getrawmempool>`"
-msgstr ""
+msgstr ":ref:`getrawmempool <core:api-rpc-blockchain-getrawmempool>`"
 
 #: ../../docs/user/developers/integration.rst:49
 #: ../../docs/user/developers/integration.rst:194
 msgid ""
 ":ref:`getmempoolancestors <core:api-rpc-blockchain-getmempoolancestors>`"
 msgstr ""
+":ref:`getmempoolancestors <core:api-rpc-blockchain-getmempoolancestors>`"
 
 #: ../../docs/user/developers/integration.rst:50
 #: ../../docs/user/developers/integration.rst:195
 msgid ""
 ":ref:`getmempooldescendants <core:api-rpc-blockchain-getmempooldescendants>`"
 msgstr ""
+":ref:`getmempooldescendants <core:api-rpc-blockchain-getmempooldescendants>`"
 
 #: ../../docs/user/developers/integration.rst:51
 #: ../../docs/user/developers/integration.rst:196
 msgid ":ref:`getmempoolentry <core:api-rpc-blockchain-getmempoolentry>`"
-msgstr ""
+msgstr ":ref:`getmempoolentry <core:api-rpc-blockchain-getmempoolentry>`"
 
 #: ../../docs/user/developers/integration.rst:52
 #: ../../docs/user/developers/integration.rst:197
@@ -135,24 +161,25 @@ msgstr ""
 msgid ""
 ":ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`"
 msgstr ""
+":ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`"
 
 #: ../../docs/user/developers/integration.rst:53
 #: ../../docs/user/developers/integration.rst:198
 #: ../../docs/user/developers/integration.rst:320
 msgid ":ref:`gettransaction <core:api-rpc-wallet-gettransaction>`"
-msgstr ""
+msgstr ":ref:`gettransaction <core:api-rpc-wallet-gettransaction>`"
 
 #: ../../docs/user/developers/integration.rst:54
 #: ../../docs/user/developers/integration.rst:199
 #: ../../docs/user/developers/integration.rst:321
 msgid ":ref:`listtransactions <core:api-rpc-wallet-listtransactions>`"
-msgstr ""
+msgstr ":ref:`listtransactions <core:api-rpc-wallet-listtransactions>`"
 
 #: ../../docs/user/developers/integration.rst:55
 #: ../../docs/user/developers/integration.rst:200
 #: ../../docs/user/developers/integration.rst:322
 msgid ":ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`"
-msgstr ""
+msgstr ":ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`"
 
 #: ../../docs/user/developers/integration.rst:58
 #: ../../docs/user/developers/integration.rst:79
@@ -169,10 +196,17 @@ msgid ""
 ":ref:`Special Transactions <integration-special-transactions>` section below"
 " for more information."
 msgstr ""
+"В Dash Core v0.13.0 введена концепция \"специальных транзакций\", как "
+"указано в `DIP002 "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__. Специальные "
+"транзакции позволяют реализовать дополнительные возможности, которые не "
+"вписываются в первоначальную концепцию транзакций. Более подробная "
+"информация приведена ниже в разделе :ref:`Специальные транзакции "
+"<integration-special-transactions>`."
 
 #: ../../docs/user/developers/integration.rst:68
 msgid "Block Hashing Algorithm"
-msgstr ""
+msgstr "Алгоритм хэширующий блоки"
 
 #: ../../docs/user/developers/integration.rst:70
 msgid ""
@@ -182,6 +216,11 @@ msgid ""
 "root, etc.), which allows for most existing libraries to work in the Dash "
 "ecosystem."
 msgstr ""
+"Dash использует алгоритм X11, вместо SHA256, который используется в "
+"Биткойне. Однако стоит отметить, что это относится только к хешированию "
+"Блока. Все прочие внутренние функции работают с хешами SHA256 (транзакции, "
+"корни merkle, и т.д.), благодаря чему большинство существующих библиотек "
+"совместимы с экосистемой Dash."
 
 #: ../../docs/user/developers/integration.rst:81
 msgid ""
@@ -189,6 +228,9 @@ msgid ""
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
 "Resources-Transaction-Types.pdf>`__."
 msgstr ""
+"Эта документация также доступна в формате `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-Transaction-Types.pdf>`__."
 
 #: ../../docs/user/developers/integration.rst:83
 msgid ""
@@ -197,6 +239,11 @@ msgid ""
 "basis for new transaction types that provide on-chain metadata to assist "
 "various consensus mechanisms. The following special transaction types exist:"
 msgstr ""
+"В Dash 0.13.0 и в последующих релизах, реализованы `Специальные Транзакции "
+"DIP002 <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__, которые"
+" формируют основу для новых типов транзакций, снабжающих блокчейн "
+"метаданными, которые оказывают помощь в работе различных механизмов "
+"консенсуса. Существуют следующие типы специальных транзакций:"
 
 #: ../../docs/user/developers/integration.rst:89
 msgid "Version"
@@ -212,7 +259,7 @@ msgstr "Размер нагрузки"
 
 #: ../../docs/user/developers/integration.rst:89
 msgid "Transaction Purpose / Example"
-msgstr ""
+msgstr "Назначение транзакции / Пример"
 
 #: ../../docs/user/developers/integration.rst:91
 #: ../../docs/user/developers/integration.rst:93
@@ -247,11 +294,11 @@ msgstr "1"
 #: ../../docs/user/developers/integration.rst:101
 #: ../../docs/user/developers/integration.rst:103
 msgid "variable"
-msgstr ""
+msgstr "переменная"
 
 #: ../../docs/user/developers/integration.rst:93
 msgid ":ref:`Masternode Registration <core:ref-txs-proregtx>`"
-msgstr ""
+msgstr ":ref:`Регистрация мастерноды <core:ref-txs-proregtx>`"
 
 #: ../../docs/user/developers/integration.rst:95
 msgid "2"
@@ -259,11 +306,11 @@ msgstr "2"
 
 #: ../../docs/user/developers/integration.rst:95
 msgid ":ref:`Update Masternode Service <core:ref-txs-proupservtx>`"
-msgstr ""
+msgstr ":ref:`Обновления сервиса мастерноды <core:ref-txs-proupservtx>`"
 
 #: ../../docs/user/developers/integration.rst:97
 msgid ":ref:`Update Masternode Operator <core:ref-txs-proupregtx>`"
-msgstr ""
+msgstr ":ref:`Обновление оператора мастерноды <core:ref-txs-proupregtx>`"
 
 #: ../../docs/user/developers/integration.rst:99
 msgid "4"
@@ -271,7 +318,7 @@ msgstr "4"
 
 #: ../../docs/user/developers/integration.rst:99
 msgid ":ref:`Masternode Revocation <core:ref-txs-prouprevtx>`"
-msgstr ""
+msgstr ":ref:`Отзыв мастерноды <core:ref-txs-prouprevtx>`"
 
 #: ../../docs/user/developers/integration.rst:101
 msgid "5"
@@ -279,7 +326,7 @@ msgstr "5"
 
 #: ../../docs/user/developers/integration.rst:101
 msgid ":ref:`Masternode List Merkle Proof <core:ref-txs-cbtx>`"
-msgstr ""
+msgstr ":ref:`Доказательство Меркла списка мастернод <core:ref-txs-cbtx>`"
 
 #: ../../docs/user/developers/integration.rst:103
 msgid "6"
@@ -287,7 +334,7 @@ msgstr "6"
 
 #: ../../docs/user/developers/integration.rst:103
 msgid ":ref:`Quorum Commitment <core:ref-txs-qctx>`"
-msgstr ""
+msgstr ":ref:`Обязательство по кворуму <core:ref-txs-qctx>`"
 
 #: ../../docs/user/developers/integration.rst:106
 msgid "Integration notes:"
@@ -299,6 +346,9 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ introduced a "
 "new Transaction Version and related “Payload” to the network."
 msgstr ""
+"`DIP002 Специальный транзакции "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ представил в "
+"сети новую версию транзакции и связанную с ней \"полезную нагрузку\"."
 
 #: ../../docs/user/developers/integration.rst:111
 msgid ""
@@ -307,6 +357,11 @@ msgid ""
 "hashing-and-signing>`__ these new Transaction Types to accurately encode and"
 " decode Raw Transaction data."
 msgstr ""
+"Интегрированные системы должны быть способны к `сериализации и "
+"десериализации "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#serialization-"
+"hashing-and-signing>`__ этих новых Типов Транзакций, чтобы шифрование и "
+"дешифровка данных Исходных Транзакций происходила успешно."
 
 #: ../../docs/user/developers/integration.rst:115
 msgid ""
@@ -316,6 +371,11 @@ msgid ""
 "Transactions was split into two fields: ``version`` and ``type`` (each "
 "consisting of 2 bytes)."
 msgstr ""
+"С точки зрения обратной совместимости "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md#compatibility>`__, "
+"4-байтовое (32-битное) поле ``версия``, включенное в классические "
+"транзакции, было разделено на два поля: ``версия`` и ``тип`` (каждое из "
+"которых состоит из 2 байт)."
 
 #: ../../docs/user/developers/integration.rst:120
 msgid ""
@@ -323,6 +383,9 @@ msgid ""
 "of the Dash developer reference for additional detail on these data types, "
 "e.g. <variable int>."
 msgstr ""
+"Дополнительную информацию об этих типах данных см. в разделе "
+":ref:`Специальные транзакции <core:ref-txs-special-txs>` справочника "
+"разработчика Dash, например, <variable int>."
 
 #: ../../docs/user/developers/integration.rst:124
 msgid ""
@@ -330,6 +393,10 @@ msgid ""
 "``proRegTx``) is included in the JSON-RPC response, please note that this "
 "data is not part of the calculated hash and is provided for convenience."
 msgstr ""
+"Статус `InstantSend <integration-instantsend>`__ и JSON нагрузка (например "
+"``proRegTx``) включёна в ответ JSON-RPC, пожалуйста, обратите внимание, что "
+"эти данные не являются частью рассчитываемого хеша и предоставлены для "
+"удобства."
 
 #: ../../docs/user/developers/integration.rst:129
 msgid ""
@@ -338,6 +405,10 @@ msgid ""
 "Resources-Transaction-Types.pdf>`__ for worked examples of each transaction "
 "type."
 msgstr ""
+"Отработанные примеры каждого типа транзакций см. в документации по "
+"интеграции типов транзакций (PDF) "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Integration-"
+"Resources-Transaction-Types.pdf>`__."
 
 #: ../../docs/user/developers/integration.rst:136
 msgid "InstantSend"
@@ -348,6 +419,8 @@ msgid ""
 "This documentation is also available as a `PDF "
 "<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend.pdf>`__."
 msgstr ""
+"Эта документация также доступна в формате `PDF "
+"<https://github.com/dashpay/docs/raw/master/binary/integration/Dash_v0.14_LLMQ_InstantSend.pdf>`__."
 
 #: ../../docs/user/developers/integration.rst:140
 msgid ""
@@ -359,6 +432,13 @@ msgid ""
 "typically locked by InstantSend within 3 seconds of being propagated to the "
 "network."
 msgstr ""
+"InstantSend - это функция, предоставляемая сетью Dash, которая позволяет "
+"безопасно принимать и повторно проводить транзакции с нулевым "
+"подтверждением. Сеть пытается заблокировать входы каждой действительной "
+"транзакции, когда она транслируется в сеть. Каждая защищенная транзакция "
+"включается в следующий блок в соответствии со стандартными принципами "
+"блокчейна. Транзакции обычно блокируются InstantSend в течение 3 секунд "
+"после их распространения в сети."
 
 #: ../../docs/user/developers/integration.rst:148
 msgid ""
@@ -373,6 +453,17 @@ msgid ""
 "transaction will be included in a following block instead of a conflicting "
 "transaction."
 msgstr ""
+"InstantSend обеспечивается сетью мастернод, состоящей из нескольких тысяч "
+"серверов мастернод. Эти узлы отличаются от обычных узлов тем, что имеют "
+"подтвержденное право собственности на 1000 Dash, что делает сеть "
+"`высокоустойчивой к атакам Sybil` "
+"<https://en.wikipedia.org/wiki/Sybil_attack>`__. Мастерноды формируют "
+"\"долгоживущие кворумы мастернод\" (LLMQ) "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__, которые "
+"отвечают за практически мгновенную уверенность участников транзакций в том, "
+"что средства, вложенные в транзакцию, не могут быть потрачены повторно, и "
+"что транзакция будет включена в следующий блок вместо конфликтующей "
+"транзакции."
 
 #: ../../docs/user/developers/integration.rst:158
 msgid ""
@@ -381,6 +472,10 @@ msgid ""
 "and securely re-spent by the recipient, even before the transaction is "
 "included in a block."
 msgstr ""
+"Эта концепция работает как расширение консенсуса Накамото, обеспечивая "
+"дополнительную безопасность. InstantSend позволяет получателю немедленно и "
+"безопасно повторно расходовать транзакции, даже до того, как транзакция "
+"будет включена в блокчейн."
 
 #: ../../docs/user/developers/integration.rst:164
 msgid "Receiving InstantSend Transactions"
@@ -393,6 +488,9 @@ msgid ""
 "and from an integration perspective, the only technical difference is the "
 "InstantSend status."
 msgstr ""
+"Транзакция InstantSend - это просто стандартная транзакция, получившая "
+"дополнительные гарантии от сети мастернодов. В результате, с точки зрения "
+"интеграции, единственным техническим отличием является статус InstantSend."
 
 #: ../../docs/user/developers/integration.rst:173
 msgid "Receiving an InstantSend Transaction introduces two requirements:"
@@ -427,7 +525,7 @@ msgstr ""
 #: ../../docs/user/developers/integration.rst:186
 #: ../../docs/user/developers/integration.rst:309
 msgid "Direct Connection"
-msgstr ""
+msgstr "Прямое соединение"
 
 #: ../../docs/user/developers/integration.rst:188
 msgid ""
@@ -436,11 +534,14 @@ msgid ""
 "response reflects the status of the transaction and is included in the "
 "following commands:"
 msgstr ""
+"Статус InstantSend может быть определен путем прямого соединения с демоном "
+"Dash по протоколу JSON-RPC. Атрибут ``instantlock`` JSON-ответа отражает "
+"статус транзакции и включается в следующие команды:"
 
 #: ../../docs/user/developers/integration.rst:203
 #: ../../docs/user/developers/integration.rst:325
 msgid "ZMQ Notification"
-msgstr ""
+msgstr "Уведомление ZMQ"
 
 #: ../../docs/user/developers/integration.rst:205
 msgid ""
@@ -450,6 +551,10 @@ msgid ""
 "<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__ for more "
 "details."
 msgstr ""
+"Всякий раз, когда транзакция попадает в mempool и когда транзакция "
+"блокируется в mempool, узел может транслировать уведомления ZMQ. Более "
+"подробная информация приведена в `списке возможных ZMQ-уведомлений "
+"<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__."
 
 #: ../../docs/user/developers/integration.rst:211
 msgid ""
@@ -461,23 +566,23 @@ msgstr ""
 
 #: ../../docs/user/developers/integration.rst:214
 msgid "zmqpubhashtx"
-msgstr ""
+msgstr "zmqpubhashtx"
 
 #: ../../docs/user/developers/integration.rst:215
 msgid "zmqpubhashtxlock"
-msgstr ""
+msgstr "zmqpubhashtxlock"
 
 #: ../../docs/user/developers/integration.rst:216
 msgid "zmqpubrawtx"
-msgstr ""
+msgstr "zmqpubrawtx"
 
 #: ../../docs/user/developers/integration.rst:217
 msgid "zmqpubrawtxlock"
-msgstr ""
+msgstr "zmqpubrawtxlock"
 
 #: ../../docs/user/developers/integration.rst:220
 msgid "Wallet Notification"
-msgstr ""
+msgstr "Уведомление кошелька"
 
 #: ../../docs/user/developers/integration.rst:222
 msgid ""
@@ -485,6 +590,10 @@ msgid ""
 "whenever an InstantSend transaction relating to that wallet is observed. "
 "This is configured by adding the following line to the dash.conf file::"
 msgstr ""
+"Dash Core Daemon может быть настроен на выполнение внешнего скрипта каждый "
+"раз, когда наблюдается транзакция InstantSend, относящаяся к данному "
+"кошельку. Это настраивается путем добавления следующей строки в файл "
+"dash.conf::"
 
 #: ../../docs/user/developers/integration.rst:228
 msgid ""
@@ -493,6 +602,10 @@ msgid ""
 "<https://docs.dash.org/projects/core/en/stable/docs/resources/glossary.html#watch-"
 "only-address>`__ addresses."
 msgstr ""
+"Обычно это используется с кошельком, в который добавлены адреса `только для "
+"просмотра "
+"<https://docs.dash.org/projects/core/en/stable/docs/resources/glossary.html#watch-"
+"only-address>`__."
 
 #: ../../docs/user/developers/integration.rst:235
 msgid "Broadcasting InstantSend Transactions"
@@ -503,6 +616,9 @@ msgid ""
 "Because all transactions on the Dash network are automatically InstantSend, "
 "no procedural changes are required to broadcast transactions as InstantSend."
 msgstr ""
+"Поскольку все транзакции в сети Dash автоматически являются InstantSend, "
+"никаких процедурных изменений для трансляции транзакций как InstantSend не "
+"требуется."
 
 #: ../../docs/user/developers/integration.rst:242
 msgid ""
@@ -537,6 +653,8 @@ msgid ""
 "the block containing the previous transaction is `ChainLocked "
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"
 msgstr ""
+"блок, содержащий предыдущую транзакцию, является `ChainLocked "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__."
 
 #: ../../docs/user/developers/integration.rst:255
 msgid ""
@@ -544,6 +662,9 @@ msgid ""
 "important to do this on mempool (non-mined) transactions. This allows "
 "chained InstantSend locking."
 msgstr ""
+"При проверке предыдущей транзакции на наличие блокировки InstantSend важно "
+"выполнять эту проверку для транзакций mempool (не майнинговых). Это "
+"позволяет использовать блочную блокировку InstantSend."
 
 #: ../../docs/user/developers/integration.rst:260
 #: ../../docs/user/developers/integration.rst:368
@@ -573,6 +694,8 @@ msgstr ""
 msgid ""
 ":ref:`InstantSend Developer Documentation <core:guide-features-instantsend>`"
 msgstr ""
+":ref:`Документация InstantSend для разработчиков <core:guide-features-"
+"instantsend>`"
 
 #: ../../docs/user/developers/integration.rst:268
 #: ../../docs/user/developers/integration.rst:375
@@ -580,12 +703,15 @@ msgid ""
 ":ref:`Receiving ZMQ notifications <core:examples-receiving-zmq-"
 "notifications>`"
 msgstr ""
+":ref:`Получение ZMQ-уведомлений <core:examples-receiving-zmq-notifications>`"
 
 #: ../../docs/user/developers/integration.rst:269
 msgid ""
 "`DIP0010: LLMQ InstantSend "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__"
 msgstr ""
+"`DIP0010: LLMQ InstantSend "
+"<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__"
 
 #: ../../docs/user/developers/integration.rst:270
 #: ../../docs/user/developers/integration.rst:377
@@ -593,10 +719,12 @@ msgid ""
 "`Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-"
 "brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__"
 msgstr ""
+"`Кратко о продукте: Релиз Dash Core v0.14 <https://blog.dash.org/product-"
+"brief-dash-core-release-v0-13-0-5d7fddffb7ef>`__"
 
 #: ../../docs/user/developers/integration.rst:275
 msgid "ChainLocks"
-msgstr ""
+msgstr "ChainLocks"
 
 #: ../../docs/user/developers/integration.rst:277
 msgid ""
@@ -606,6 +734,11 @@ msgid ""
 " which payments can be accepted immediately and without the risk of "
 "“Blockchain Reorganization Events”."
 msgstr ""
+"ChainLocks - это функция, предоставляемая сетью Dash, которая обеспечивает "
+"определенность при приеме платежей. Эта технология, особенно при "
+"использовании параллельно с :ref:`InstantSend <instantsend>`, создает "
+"условия, в которых платежи могут быть приняты немедленно и без риска "
+"\"событий реорганизации блокчейна\"."
 
 #: ../../docs/user/developers/integration.rst:283
 msgid ""
@@ -614,26 +747,35 @@ msgid ""
 "as payment. This type of indirect security is effective, but at a cost of "
 "time and user experience. ChainLocks are a solution for this problem."
 msgstr ""
+"Риск реорганизации блокчейна обычно устраняется путем требования "
+"многократного :term:`подтверждения`, прежде чем транзакция может быть "
+"безопасно принята к оплате. Такой тип косвенной защиты эффективен, но "
+"требует больших затрат времени и пользовательского опыта. ChainLocks - это "
+"решение данной проблемы."
 
 #: ../../docs/user/developers/integration.rst:289
 msgid "Receiving ChainLocks"
-msgstr ""
+msgstr "Получение ChainLocks"
 
 #: ../../docs/user/developers/integration.rst:293
 msgid ""
 "Once a ChainLock is observed for a block, each transaction in that block and"
 " all previous blocks can be considered irreversibly and fully confirmed."
 msgstr ""
+"Как только для блока наблюдается ChainLock, каждая транзакция в этом блоке и"
+" во всех предыдущих блоках может считаться необратимой и полностью "
+"подтвержденной."
 
 #: ../../docs/user/developers/integration.rst:296
 msgid "Receiving a ChainLock introduces two requirements:"
-msgstr ""
+msgstr "Получение ChainLock влечет за собой два требования:"
 
 #: ../../docs/user/developers/integration.rst:298
 msgid ""
 "The ability to determine the “ChainLock Status” of a given block or "
 "transaction."
 msgstr ""
+"Возможность определения \"ChainLock Status\" данного блока или транзакции."
 
 #: ../../docs/user/developers/integration.rst:304
 msgid ""
@@ -641,6 +783,9 @@ msgid ""
 "Dash daemon or by a `ZMQ notification "
 "<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__."
 msgstr ""
+"Статус ChainLock обычно определяется через прямое соединение с Dash deamon "
+"или через `ZMQ-уведомление "
+"<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__."
 
 #: ../../docs/user/developers/integration.rst:311
 msgid ""
@@ -649,18 +794,21 @@ msgid ""
 "JSON response reflects the ChainLock status of the block or transaction and "
 "is included in the following commands:"
 msgstr ""
+"Статус ChainLock может быть определен через прямое соединение с демоном Dash"
+" по протоколу JSON-RPC. Атрибут boolean ``chainlock`` в JSON-ответе отражает"
+" статус ChainLock блока или транзакции и включается в следующие команды:"
 
 #: ../../docs/user/developers/integration.rst:316
 msgid ":ref:`getblock <core:api-rpc-blockchain-getblock>`"
-msgstr ""
+msgstr ":ref:`getblock <core:api-rpc-blockchain-getblock>`"
 
 #: ../../docs/user/developers/integration.rst:317
 msgid ":ref:`getblockheader <core:api-rpc-blockchain-getblockheader>`"
-msgstr ""
+msgstr ":ref:`getblockheader <core:api-rpc-blockchain-getblockheader>`"
 
 #: ../../docs/user/developers/integration.rst:318
 msgid ":ref:`getblockheaders <core:api-rpc-blockchain-getblockheaders>`"
-msgstr ""
+msgstr ":ref:`getblockheaders <core:api-rpc-blockchain-getblockheaders>`"
 
 #: ../../docs/user/developers/integration.rst:327
 msgid ""
@@ -672,32 +820,40 @@ msgid ""
 "<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__ for more "
 "details."
 msgstr ""
+"Подписи ChainLock создаются вскоре после майнинга соответствующего блока. В "
+"связи с этим рекомендуется, чтобы интегрированные клиенты использовали "
+":ref:`ZMQ (ZeroMQ) notifications 1` для обеспечения максимально оперативного"
+" получения этой информации. Более подробная информация приведена в `списке "
+"возможных ZMQ-уведомлений "
+"<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__."
 
 #: ../../docs/user/developers/integration.rst:335
 msgid ""
 "The following notifications are relevant for recognizing blocks and their "
 "corresponding ChainLocks:"
 msgstr ""
+"Следующие уведомления относятся к распознаванию блоков и соответствующих им "
+"ChainLocks:"
 
 #: ../../docs/user/developers/integration.rst:338
 msgid "zmqpubhashblock"
-msgstr ""
+msgstr "zmqpubhashblock"
 
 #: ../../docs/user/developers/integration.rst:339
 msgid "zmqpubhashchainlock"
-msgstr ""
+msgstr "zmqpubhashchainlock"
 
 #: ../../docs/user/developers/integration.rst:340
 msgid "zmqpubrawblock"
-msgstr ""
+msgstr "zmqpubrawblock"
 
 #: ../../docs/user/developers/integration.rst:341
 msgid "zmqpubrawchainlock"
-msgstr ""
+msgstr "zmqpubrawchainlock"
 
 #: ../../docs/user/developers/integration.rst:342
 msgid "zmqpubrawchainlocksig"
-msgstr ""
+msgstr "zmqpubrawchainlocksig"
 
 #: ../../docs/user/developers/integration.rst:344
 msgid ""
@@ -705,18 +861,25 @@ msgid ""
 "<https://github.com/dashpay/js-dashd-zmq>`__ to listen for ChainLock ZMQ "
 "notifications and return the hash of blocks that receive a ChainLock."
 msgstr ""
+"Данный пример использует библиотеку `js-dashd-zmq "
+"<https://github.com/dashpay/js-dashd-zmq>`__ для прослушивания ZMQ-"
+"уведомлений ChainLock и возврата хэша блоков, получивших ChainLock."
 
 #: ../../docs/user/developers/integration.rst:348
 msgid "Subscribe to ChainLock hash ZMQ notifications"
-msgstr ""
+msgstr "Следить за ZMQ-уведомлениям ChainLock hash"
 
 #: ../../docs/user/developers/integration.rst:374
 msgid ""
 ":ref:`ChainLock Developer Documentation <core:guide-features-chainlocks>`"
 msgstr ""
+":ref:`Документация ChainLocks для разработчиков <core:guide-features-"
+"chainlocks>`"
 
 #: ../../docs/user/developers/integration.rst:376
 msgid ""
 "`DIP0008: ChainLocks "
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"
 msgstr ""
+"`DIP0008: ChainLocks "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__"

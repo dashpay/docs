@@ -177,7 +177,7 @@ msgid ""
 "included in the deterministic list."
 msgstr ""
 "Для работы эвоноды требуется адрес Dash с одним неизрасходованным выходом "
-"(UTXO) ровным 4000 DASH. После его отправки необходимо извлечь различные "
+"(UTXO) равным 4000 DASH. После его отправки необходимо извлечь различные "
 "ключи, касающиеся транзакции, для последующего внесения в конфигурационный "
 "файл и регистрационной транзакции в качестве доказательства для записи "
 "конфигурации в блокчейн, чтобы эвонода могла быть включена в "
@@ -405,6 +405,15 @@ msgid ""
 "continue with the next step at this point already: generating your "
 "masternode operator key."
 msgstr ""
+"Теперь одиночной транзакцией отправьте сумму, точно равную 4000 DASH на "
+"адрес учётной записи, который вы сгенерировали во время выполнения "
+"предыдущего шага. Эти деньги можно отправить как с другого кошелька, так и "
+"со средств, которые находятся на вашем текущем кошельке. Когда транзакция "
+"будет совершена, найдите её по адресу в `обозревателе блокчейна "
+"<https://insight.dash.org/insight/>`_ и наблюдайте за ней. Прежде чем вы "
+"сможете зарегестрировать мастерноду, понадобится 15 подтверждений этой "
+"транзакции, но настройку на этом этапе можно продолжать, перейдя на "
+"следующий шаг: генерацию ключа оператора мастерноды."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:209
 msgid "Masternode Installation"
@@ -414,19 +423,22 @@ msgstr "Установка мастерноды"
 msgid ""
 "The following options are available for installing Dash masternode software:"
 msgstr ""
+"Для установки программного обеспечения мастернодs Dash доступны следующие "
+"варианты:"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:213
 msgid ""
 ":ref:`Dashmate installation (recommended) <evonode-setup-install-dashmate>`"
 msgstr ""
+":ref:`Установка Dashmate (рекомендуется) <evonode-setup-install-dashmate>`"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:214
 msgid ":ref:`Manual installation <evonode-setup-install-manual>`"
-msgstr ""
+msgstr ":ref:`Ручная установка <evonode-setup-install-manual>`"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:219
 msgid "Dashmate installation"
-msgstr ""
+msgstr "Установка dashmate"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:221
 msgid ""
@@ -436,6 +448,11 @@ msgid ""
 "Dash Core, as well as all dependencies and supporting services. See this "
 ":ref:`dashmate documentation <dashmate>` for more information."
 msgstr ""
+"Dashmate - это универсальный инструмент, предназначенный для настройки и "
+"запуска нод Dash в контейнерной среде. Он основан на технологии Docker и "
+"содержит интерактивную команду настройки. Dashmate выполняет установку Dash "
+"Core, а также всех зависимостей и вспомогательных сервисов. Более подробную "
+"информацию см. здесь :ref:`документация dashmate<dashmate>`."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:227
 msgid ""
@@ -443,6 +460,10 @@ msgid ""
 "and password you just created for your new, non-root user. Begin by "
 "installing dashmate dependencies::"
 msgstr ""
+"Снова откройте PuTTY или консоль и подключитесь к серверу, используя имя "
+"пользователя и пароль, которые вы только что создали для нового "
+"пользователя, не являющегося пользователем root. Начните с установки "
+"зависимостей dashmate::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:238
 msgid "Install dashmate::"
@@ -453,6 +474,8 @@ msgid ""
 "Alternative installation options are available on the :hoverxref:`dashmate "
 "page <dashmate-install>`."
 msgstr ""
+"Альтернативные варианты установки доступны на :hoverxref:`странице dashmate "
+"<dashmate-install>`."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:245
 #: ../../docs/user/masternodes/setup-evonode.rst:395
@@ -461,6 +484,9 @@ msgid ""
 "collateral, keys and construct the ProTx transaction required to enable your"
 " masternode."
 msgstr ""
+"Продолжите выполнение :ref:`шага регистрация <register-evonode>` для "
+"настройки обеспечения, ключей и создания транзакции ProTx, необходимой для "
+"активации вашей мастерноды."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:253
 msgid "Manual installation"
@@ -473,6 +499,10 @@ msgid ""
 "based installation <evonode-setup-install-dashmate>` is recommended to "
 "ensure your configuration is functional."
 msgstr ""
+"Платформа Dash включает в себя множество сервисов, которые должны быть "
+"правильно сконфигурированы для корректной работы эвоноды. Для обеспечения "
+"работоспособности конфигурации рекомендуется использовать :ref:`установку "
+"основанную на dashmate <evonode-setup-install-dashmate>`."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:264
 msgid "Dash Core"
@@ -488,6 +518,12 @@ msgid ""
 "the address to the latest version of Dash Core by right clicking or pressing"
 " **Ctrl+ V**::"
 msgstr ""
+"Чтобы вручную загрузить и установить компоненты эвоноды, посетите страницу "
+"релизов на `GitHub <https://github.com/dashpay/dash/releases>`_ и скопируйте"
+" ссылку на последнюю версию, соответствующую архитектуре вашего процессора, "
+"например, ``x86_64-linux-gnu``. Вернитесь в окно терминала и введите "
+"следующую команду, вставив в нее адрес последней версии Dash Core, щелкнув "
+"правой кнопкой мыши или нажав **Ctrl+ V**::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:276
 msgid ""
@@ -567,6 +603,8 @@ msgid ""
 "Leave the ``masternodeblsprivkey`` field commented out for now. The result "
 "should look something like this:"
 msgstr ""
+"Поле ``masternodeblsprivkey`` пока оставим закомментированным. Результат "
+"должен выглядеть примерно так:"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:337
 msgid "Entering key data in dash.conf on the masternode"
@@ -584,7 +622,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-evonode.rst:345
 msgid "You will see a message reading **Dash Core server starting**."
-msgstr ""
+msgstr "На экране появится сообщение **Запуск сервера Dash Core**."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:349
 msgid "Sentinel"
@@ -595,6 +633,8 @@ msgid ""
 "We will now install Sentinel, a piece of software which operates as a "
 "watchdog to communicate to the network that your node is working properly::"
 msgstr ""
+"Теперь мы установим Sentinel - программу, которая работает как смотритель, "
+"сообщая сети о том, что ваша нода работает правильно::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:361
 msgid ""
@@ -644,10 +684,12 @@ msgid ""
 "The keys required for the different masternode roles are described briefly "
 "under :ref:`mn-concepts` in this documentation."
 msgstr ""
+"Ключи, необходимые для различных ролей мастерноды, кратко описаны в разделе "
+":ref:`mn-concepts` данной документации."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:411
 msgid "Option 1: Registering from a hardware wallet"
-msgstr "Способ 1: Регистрация из аппаратного кошелька"
+msgstr "Способ 1: Регистрация в аппаратном кошельке"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:413
 msgid ""
@@ -655,6 +697,9 @@ msgid ""
 "filled out correctly.  Click **Generate new** for the private keys required "
 "for the masternode:"
 msgstr ""
+"Вернитесь в DMT и убедитесь, что все поля предыдущего шага заполнены "
+"правильно. Нажмите кнопку **Генерировать новые** для приватных ключей, "
+"необходимых для мастерноды"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:417
 msgid "Owner private key"
@@ -670,17 +715,19 @@ msgstr "Приватный ключ голосования"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:420
 msgid "Platform Node private key (evonodes only)"
-msgstr ""
+msgstr "Приватный ключ ноды платформы (только для эвонод)"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:422
 msgid ""
 "For evonodes, click the button beside the **Platform P2P port** and "
 "**Platform HTTP port** fields to set the default values."
 msgstr ""
+"Для эвонод нажмите кнопку рядом с полями **P2P-порт для платформы** и "
+"**HTTP-порт для платформы**, чтобы установить значения по умолчанию."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:425
 msgid "Click **Apply changes** when these fields have been set."
-msgstr ""
+msgstr "После заполнения этих полей нажмите кнопку **Применить изменения**."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:430
 msgid "Dash Masternode Tool ready to register a new masternode"
@@ -696,6 +743,14 @@ msgid ""
 "tool/blob/master/doc/config-connection-direct.md>`__.) Confirm the following"
 " two messages:"
 msgstr ""
+"Затем нажмите **Действия с МН** и выберите **Регистрация мастерноды**. По "
+"желанию укажите другой **Адрес выплаты** и/или **Вознаграждение оператора**,"
+" затем нажмите **Продолжить**. Выберите **Отдаленный RPC-узел Dash "
+"(автоматический метод)**. (Подробнее об использовании собственного "
+"локального RPC-узла см. в документации по инструменту `Dash Masternode Tool`"
+" <https://github.com/Bertrand256/dash-masternode-"
+"tool/blob/master/doc/config-connection-direct.md>`__). Подтвердите следующие"
+" два сообщения:"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:445
 msgid "Dash Masternode Tool confirmation dialogs to register a masternode"
@@ -705,7 +760,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-evonode.rst:449
 msgid "Complete server configuration"
-msgstr ""
+msgstr "Завершение конфигурации сервера"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:451
 msgid ""
@@ -715,6 +770,11 @@ msgid ""
 "transactions, and will cause it to start serving as a masternode when the "
 "signed ProRegTx is broadcast by the owner, as we just did above."
 msgstr ""
+"На этом регистрация мастерноды завершена, но необходимо добавить приватный "
+"ключ BLS на сервер, чтобы он мог начать работу. Ключ BLS позволяет "
+"мастерноде следить за блокчейном на предмет соответствующих транзакций "
+"Pro*Tx, и она начнет работать в качестве мастерноды, когда подписанная "
+"ProRegTx будет транслироваться владельцем, как мы только что сделали выше."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:457
 msgid ""
@@ -722,6 +782,9 @@ msgid ""
 "instructions below based on which :ref:`Software Installation option "
 "<evonode-setup-install>` you are using."
 msgstr ""
+"Запишите свой приватный ключ BLS и выполните следующие инструкции в "
+"зависимости от того, какой вариант установки программного обеспечения 1 вы "
+"используете."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:462
 msgid "Dashmate"
@@ -732,18 +795,26 @@ msgid ""
 "For dashmate-based masternodes, enter the BLS private key during the initial"
 " dashmate setup process. Run the dashmate setup wizard on your server::"
 msgstr ""
+"Для мастернод на базе dashmate введите приватный ключ BLS в процессе "
+"начальной настройки dashmate. Запустите мастер настройки dashmate на вашем "
+"сервере::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:469
 msgid ""
 "Select the network and masternode type. Select **Yes** when asked if your "
 "masternode is already registered since this was done earlier in the section."
 msgstr ""
+"Выберите сеть и тип мастерноды. Выберите **Yes** в ответ на вопрос, "
+"зарегистрирована ли уже ваша мастернода, поскольку это было сделано ранее в "
+"данном разделе."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:472
 msgid ""
 "Enter the **BLS private key** and the **Platform node key** from DMT when "
 "requested by dashmate."
 msgstr ""
+"Введите **приватный BLS ключ** и **ключ ноды платформы** из DMT по запросу "
+"dashmate."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:475
 msgid ""
@@ -762,6 +833,8 @@ msgid ""
 "Once the dashmate wizard has completed successfully, start your node as "
 "follows::"
 msgstr ""
+"После успешного завершения работы мастера dashmate запустите ноду следующим "
+"образом::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:484
 #: ../../docs/user/masternodes/setup-evonode.rst:591
@@ -770,16 +843,21 @@ msgid ""
 "entirely from within dashmate. See the dashmate :hoverxref:`node operation "
 "documentation <dashmate-node-operation>` for details."
 msgstr ""
+"Вы можете управлять статусом, конфигурацией и рабочим состоянием мастерноды "
+"полностью из dashmate. Подробности см. в документе dashmate "
+":hoverxref:`документация по работе с нодами <dashmate-node-operation>`."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:490
 msgid "Manual"
-msgstr ""
+msgstr "Ручной"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:492
 msgid ""
 "For manual installations, log in to your masternode using ``ssh`` or PuTTY "
 "and edit the configuration file as follows::"
 msgstr ""
+"Для ручной установки войдите в свою мастерноду с помощью ``sh`` или PuTTY и "
+"отредактируйте конфигурационный файл следующим образом::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:497
 msgid ""
@@ -787,6 +865,9 @@ msgid ""
 "uncomment this lines in the file, replacing the key with your BLS private "
 "key generated above::"
 msgstr ""
+"При открытии существующей конфигурации мастерноды откроется редактор. В "
+"конце файла добавьте следующую строку(раскомментируйте), заменив ключ на "
+"приватный BLS-ключ, который был сгенерирован выше::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:503
 #: ../../docs/user/masternodes/setup-evonode.rst:677
@@ -800,6 +881,15 @@ msgid ""
 " take effect. Enter the following commands, waiting a few seconds in between"
 " to give Dash Core time to shut down::"
 msgstr ""
+"Нажмите клавишу Enter, чтобы убедиться, что в конце файла осталась пустая "
+"строка, затем нажмите **Ctrl + X** для закрытия редактора и **Y** и "
+"**Enter** для сохранения файла. Обратите внимание, что предоставление "
+"``masternodeblsprivkey`` включает режим masternode, что автоматически "
+"приводит к установке параметров ``txindex=1``, ``peerbloomfilters=1`` и "
+"``prune=0``, необходимых для обеспечения работы мастерноды. Теперь нам "
+"необходимо перезапустить мастерноду, чтобы это изменение вступило в силу. "
+"Введите следующие команды, подождав несколько секунд между ними, чтобы дать "
+"Dash Core время на завершение работы::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:516
 msgid ""
@@ -807,11 +897,16 @@ msgid ""
 "``~/.dashcore/dash-cli masternode status`` or using the **Refresh status** "
 "function in DMT. The final result should appear as follows:"
 msgstr ""
+"На этом этапе вы можете наблюдать за своей мастернодой введя "
+"``~/.dashcore/dash-cli masternode status`` или используя функцию **Refresh "
+"status** в DMT. Конечный результат должен быть таким, как показано ниже:"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:523
 msgid ""
 "dash-cli masternode status output showing successfully registered masternode"
 msgstr ""
+"Статус мастерноды dash-cli, который сообщает об успешно зарегистрированной "
+"мастерноде"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:525
 #: ../../docs/user/masternodes/setup-evonode.rst:909
@@ -824,7 +919,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-evonode.rst:533
 msgid "Option 2: Registering from dashmate"
-msgstr ""
+msgstr "Способ 2: Регистрация в dashmate"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:536
 #: ../../docs/user/masternodes/setup-evonode.rst:601
@@ -834,6 +929,11 @@ msgid ""
 "the Dash Masternode Tool to register as described in :ref:`Option 1: "
 "Registering from a hardware wallet <register-evonode-hardware>`."
 msgstr ""
+"Для мастернод основной сети настоятельно рекомендуется :ref:`хранить "
+"обеспечение на аппаратном кошельке <evonode-send-collateral-hardware>` и "
+"использовать Dash Masternode Tool для регистрации, как описано в "
+":ref:`Вариант 1: Регистрация с аппаратного кошелька <register-evonode-"
+"hardware>`."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:541
 msgid ""
@@ -843,10 +943,15 @@ msgid ""
 "masternodes where the collateral is stored in Dash Core rather than a "
 "hardware wallet."
 msgstr ""
+"Dashmate может помочь в регистрации мастернод, запросив параметры, "
+"необходимые для создания корректной команды protx, которая может быть "
+"отправлена из Dash Core. Эта опция наиболее полезна для настройки мастернод "
+"тестовой сети, где обеспечение хранится в Dash Core, а не в аппаратном "
+"кошельке."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:547
 msgid "Collect required information"
-msgstr ""
+msgstr "Сбор необходимой информации"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:549
 msgid ""
@@ -856,10 +961,15 @@ msgid ""
 "Core to generate the addresses as described in the :hoverxref:`Get "
 "masternode addresses section <evonode-get-addresses>`."
 msgstr ""
+"Перед запуском мастера настройки dashmate необходимо получить "
+":hoverxref:`информация o транзакции обеспечения <evonode-mn-outputs>` и "
+"адреса владельца, голосования и выплат для новой эвоноды. Например, "
+"используйте Dash Core для генерации адресов, как описано в разделе "
+":hoverxref:`Получение адресов мастернод <evonode-get-addresses>`."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:556
 msgid "Run the setup wizard"
-msgstr ""
+msgstr "Запустите мастер настройки"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:558
 msgid ""
@@ -876,6 +986,10 @@ msgid ""
 "prompted for the collateral transaction information and owner, voting, and "
 "payout addresses."
 msgstr ""
+"Вам будет предложено выбрать сеть, тип ноды, IP-адрес и приватныйключ BLS. "
+"При настройке незарегистрированной мастерноды вам также будет предложено "
+"ввести информацию о транзакции залога и адреса владельца, голосования и "
+"выплат."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:566
 msgid ""
@@ -883,10 +997,14 @@ msgid ""
 "For an example showing all steps of the setup wizard, refer to the "
 ":hoverxref:`dashmate section <dashmate-wizard-walkthrough>`."
 msgstr ""
+"Введите запрашиваемую информацию или примите найденные/ сгенерированные "
+"значения по умолчанию. Пример, показывающий все шаги мастера настройки, "
+"приведен в разделе :hoverxref:`секция dashmate <dashmate-wizard-"
+"walkthrough>`."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:571
 msgid "Submit the ProRegTx"
-msgstr ""
+msgstr "Отправить ProRegTx"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:573
 msgid ""
@@ -895,10 +1013,14 @@ msgid ""
 "network. Copy the provided protx command and run it using dash-cli or the "
 "Dash Core console."
 msgstr ""
+"Мастер dashmate выдаст команду, которую можно использовать для отправки "
+"специальной транзакции регистрации провайдера, регистрирующей мастерноду в "
+"сети. Скопируйте предоставленную команду protx и запустите ее с помощью "
+"dash-cli или консоли Dash Core."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:582
 msgid "Registration command"
-msgstr ""
+msgstr "Команда регистрации"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:585
 msgid "Start the node"
@@ -906,13 +1028,15 @@ msgstr "Запустите ноду"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:598
 msgid "Option 3: Registering from Dash Core wallet"
-msgstr ""
+msgstr "Способ 3: Регистрация в кошельке Dash Core"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:606
 msgid ""
 "This option can be used without installing any applications other than Dash "
 "Core; however, it requires the most technical skill."
 msgstr ""
+"Этот вариант может быть использован без установки каких-либо приложений, "
+"кроме Dash Core, однако он требует некоторых технических навыков."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:612
 msgid "Identify the funding transaction"
@@ -964,6 +1088,11 @@ msgid ""
 "public/private keypair in Dash Core by clicking **Tools > Console** and "
 "entering the following command::"
 msgstr ""
+"Если вы пользуетесь услугами хостинга, они могут предоставить вам свой "
+"открытый ключ, и вы можете пропустить этот шаг. Если вы размещаете свой "
+"собственную мастернод или согласились предоставить хостеру закрытый ключ "
+"BLS, можно сгенерировать пару открытый/закрытый ключ BLS в Dash Core, нажав "
+"**Window > Tools** и введя следующую команду::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:656
 #: ../../docs/user/masternodes/setup-evonode.rst:718
@@ -971,6 +1100,8 @@ msgid ""
 "**These keys are NOT stored by the wallet and must be backed up and kept "
 "secure.**"
 msgstr ""
+"**Эти ключи НЕ хранятся в кошельке, их необходимо сохранить и хранить в "
+"безопасности.**"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:660
 msgid "Add the private key to your masternode configuration"
@@ -985,6 +1116,14 @@ msgid ""
 "broadcast by the owner (final step below). Log in to your masternode using "
 "``ssh`` or PuTTY and edit the configuration file as follows::"
 msgstr ""
+"Публичный ключ будет использоваться в следующих шагах. Приватный BLS-ключ "
+"необходимо внести в файл ``dash.conf`` мастерноды. Это позволит мастерноде "
+"следить за блокчейном и выявлять в нём релевантные транзакции Pro*Tx, а "
+"также заставит ноду начать выполнять функции мастерноды, после того, как "
+"подписанная владельцем транзакция ProRegTx начнёт транслироваться в сеть "
+"(последний шаг ниже). Войдите в учётную запись своей мастерноды, используя "
+"``ssh`` или PuTTY и отредактируйте конфигурационный файл, как показано "
+"ниже::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:671
 msgid ""
@@ -992,42 +1131,55 @@ msgid ""
 "uncomment this line in the file, replacing the key with your BLS private key"
 " generated above::"
 msgstr ""
+"При открытии существующей конфигурации мастерноды откроется редактор. В "
+"конце файла добавьте следующую строку (раскомментируйте), заменив ключ на "
+"приватный BLS-ключ, который был сгенерирован выше::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:693
 msgid "Generate a Platform Node ID"
-msgstr ""
+msgstr "Генерация ID ноды платформы"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:695
 msgid ""
 "The following command will generate new P2P key using Tenderdash and display"
 " it on the screen::"
 msgstr ""
+"Следующая команда сгенерирует новый P2P-ключ с помощью Tenderdash и выведет "
+"его на экран::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:702
 msgid ""
 "Save the value contained in the ``id`` field for use as your "
 "``platformNodeID``."
 msgstr ""
+"Сохраните значение, содержащееся в поле ``id``, для использования в качестве"
+" ``platformNodeID``."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:705
 msgid ""
 "Alternatively, the following commands can be used generate P2P key, save it "
 "to `privkey.pem`, and generate ``platformNodeID`` in hex format::"
 msgstr ""
+"В качестве альтернативы можно использовать следующие команды: сгенерировать "
+"P2P-ключ, сохранить его в файле `privkey.pem` и сгенерировать "
+"``platformNodeID`` в HEX формате::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:713
 msgid ""
 "The platform node ID will be used in following steps. We will now prepare "
 "the transaction used to register the masternode on the network."
 msgstr ""
+"Идентификатор ноды платформы будет использоваться в последующих шагах. "
+"Теперь мы подготовим транзакцию, используемую для регистрации мастерноды в "
+"сети."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:725
 msgid "Get masternode addresses"
-msgstr ""
+msgstr "Получение адресов мастернод"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:729
 msgid "Owner address"
-msgstr ""
+msgstr "Адрес владельца"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:731
 msgid ""
@@ -1035,10 +1187,14 @@ msgid ""
 "**owner key address** (``ownerKeyAddr``). This is not the same as the "
 "collateral address holding 4000 Dash. Generate a new address as follows::"
 msgstr ""
+"Во-первых, нам необходимо получить из кошелька новый, неиспользуемый адрес, "
+"который будет служить **адресом ключа владельца** (``ownerKeyAddr``). Это не"
+" то же самое, что адрес обеспечения, на котором хранится 4000 Dash. "
+"Сгенерируйте новый адрес следующим образом::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:741
 msgid "Voting address"
-msgstr ""
+msgstr "Адрес голосующего"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:743
 msgid ""
@@ -1054,7 +1210,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-evonode.rst:753
 msgid "Payout address"
-msgstr ""
+msgstr "Адрес для выплат"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:754
 msgid ""
@@ -1068,7 +1224,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-evonode.rst:764
 msgid "Fee source address"
-msgstr ""
+msgstr "Адрес источника комиссии"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:766
 msgid ""
@@ -1086,10 +1242,13 @@ msgid ""
 "pay the transaction fee, or the ``register_prepare_hpmn`` transaction will "
 "fail."
 msgstr ""
+"Либо адрес выплаты, либо адрес источника комиссии должны иметь достаточный "
+"баланс для оплаты комиссии за транзакцию, иначе транзакция "
+"``register_prepare_hpmn`` завершится неудачей."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:775
 msgid "Key access"
-msgstr ""
+msgstr "Доступ к ключам"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:777
 msgid ""
@@ -1113,6 +1272,9 @@ msgid ""
 "``protx register_prepare_hpmn`` command. This command has the following "
 "syntax::"
 msgstr ""
+"Теперь подготовим беззнаковую специальную транзакцию ProRegTx с помощью "
+"команды ``protx register_prepare_hpmn``. Эта команда имеет следующий "
+"синтаксис::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:796
 msgid ""
@@ -1126,11 +1288,13 @@ msgstr ""
 msgid ""
 "``collateralHash``: The txid of the 4000 Dash collateral funding transaction"
 msgstr ""
+"``collateralHash``: txid транзакции залогового финансирования на 4000 DASH"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:800
 msgid ""
 "``collateralIndex``: The output index of the 4000 Dash funding transaction"
 msgstr ""
+"``collateralIndex``: Индекс выхода транзакции финансирования на 4000 DASH"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:801
 msgid ""
@@ -1151,6 +1315,8 @@ msgid ""
 "``operatorPubKey``: The BLS public key :hoverxref:`generated above <evonode-"
 "bls-generation>` (or provided by your hosting service)"
 msgstr ""
+"``operatorPubKey``: Публичный BLS-ключ, :hoverxref:`сгенерированный выше "
+"<evonode-bls-generation>` (или предоставленный хостинг-сервисом)"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:806
 msgid ""
@@ -1181,18 +1347,24 @@ msgid ""
 "``platformNodeID``: Platform P2P node ID :hoverxref:`generated above "
 "<evonode-generate-platform-node-id>`"
 msgstr ""
+"``platformNodeID``: Идентификатор P2P-узла платформы "
+":hoverxref:`генерируется выше 1`"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:814
 msgid ""
 "``platformP2PPort``: TCP port of Dash Platform peer-to-peer communication "
 "between nodes. Must be 26656 for mainnet."
 msgstr ""
+"``platformP2PPort``: TCP-порт одноранговой связи Dash Platform между узлами."
+" Для основной сети должен быть равен 26656."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:816
 msgid ""
 "``platformHTTPPort``: TCP port of Platform HTTP/API interface. Must be 443 "
 "for mainnet."
 msgstr ""
+"``platformHTTPPort``: TCP-порт HTTP/API-интерфейса платформы. Для основной "
+"сети должен быть равен 443."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:818
 msgid ""
@@ -1289,6 +1461,8 @@ msgid ""
 "``tx``: The serialized transaction previously returned in the ``tx`` output "
 "field from the ``protx register_prepare_hpmn`` command"
 msgstr ""
+"``tx``: Последовательная транзакция, ранее возвращенная в поле вывода ``tx``"
+" командой ``protx register_prepare_hpmn``."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:888
 msgid ""
@@ -1306,6 +1480,11 @@ msgid ""
 "using the command ``protx list valid``, where the txid of the final ``protx "
 "register_submit`` transaction identifies your masternode."
 msgstr ""
+"Теперь ваша мастернода зарегистрирована и появится в списке "
+"детерминированных мастернод после того, как транзакция будет добыта в блок. "
+"Просмотреть этот список можно на вкладке **Masternodes** кошелька Dash Core "
+"или в консоли с помощью команды ``protx list valid``, где txid финальной "
+"транзакции ``protx register_submit`` идентифицирует вашу мастерноду."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:905
 msgid ""
@@ -1313,3 +1492,6 @@ msgid ""
 "masternode by entering ``~/.dashcore/dash-cli masternode status`` or using "
 "the **Refresh status** function in DMT."
 msgstr ""
+"В этот момент вы можете вернуться в окно терминала и проконтролировать "
+"состояние своей ноды, введя ``~/.dashcore/dash-cli masternode status`` или "
+"воспользовавшись функцией **Refresh status** в DMT."

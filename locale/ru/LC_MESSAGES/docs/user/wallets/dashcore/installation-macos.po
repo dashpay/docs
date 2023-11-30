@@ -57,6 +57,10 @@ msgid ""
 "wallet. In most cases, the website will properly detect which version you "
 "need. Click **Download Installer** to download the installer directly."
 msgstr ""
+"Чтобы скачать последнюю версию кошелька Dash Core, зайдите на "
+"https://www.dash.org/downloads/. В большинстве случаев, сайт самостоятельно "
+"определит, какая версия вам необходима. Нажмите на кнопку **Скачать "
+"установщик**, чтобы скачать установочный файл напрямую."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:25
 msgid "The website properly detects the wallet appropriate for your system"
@@ -69,6 +73,10 @@ msgid ""
 "then click **Download Installer**. Save the file you downloaded to your "
 "Downloads folder."
 msgstr ""
+"Если определение операционной системы не сработало, необходимо сделать это "
+"вручную. Отправляйтесь на https://www.dash.org/downloads/, там выберите "
+"вкладку **macOS**, после чего кликните **Скачать установщик**. Сохраните "
+"скачиваемый файл в папку Загрузки."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:33
 msgid "Verifying Dash Core"
@@ -84,11 +92,18 @@ msgid ""
 " should be by default). You may also need to download GPG, which you can do "
 "via https://gpgtools.org/."
 msgstr ""
+"Этот шаг необязателен, но рекомендуется для проверки подлинности "
+"загруженного файла. Для этого необходимо сверить его отсоединенную подпись с"
+" открытым ключом, опубликованным командой разработчиков Dash Core. Чтобы "
+"загрузить отсоединенную подпись, нажмите кнопку **Installer Signature** на "
+"странице загрузки кошелька и сохраните ее в той же папке, что и загруженный "
+"двоичный файл (по умолчанию так и должно быть). Также может потребоваться "
+"загрузка GPG, что можно сделать по адресу https://gpgtools.org/."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:43
 msgid ""
 "All releases of Dash are signed using GPG with one of the following keys:"
-msgstr ""
+msgstr "Все релизы Dash подписаны с помощью GPG одним из следующих ключей:"
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:45
 msgid ""
@@ -111,6 +126,8 @@ msgid ""
 "Open a terminal, import the keys and verify the authenticity of your "
 "download as follows::"
 msgstr ""
+"Откройте терминал, импортируйте ключи и проверьте подлинность загрузки "
+"следующим образом::"
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:61
 msgid "Downloading the PGP key and verifying the signed binary"
@@ -121,6 +138,8 @@ msgid ""
 "If you see the message ``Good signature from ...`` then you have an "
 "authentic copy of Dash Core for macOS."
 msgstr ""
+"Если вы видите сообщение ``Good signature from ...``, значит, у вас "
+"подлинная копия Dash Core для macOS."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:67
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:84
@@ -219,6 +238,9 @@ msgid ""
 "wallet overview screen. The status bar at the bottom of the window will show"
 " the synchronization progress."
 msgstr ""
+"Как только кошелёк Dash Core будет успешно установлен и запущен, вы увидете "
+"экран обзора кошелька. Строка состояния в нижней части окна будет показывать"
+" ход синхронизации."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:135
 msgid "Dash Core begins synchronizing with the Dash network"
@@ -243,11 +265,11 @@ msgstr "Синхронизация кошелька Dash Core завершена
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:148
 msgid "You can now create a wallet to send and receive funds."
-msgstr ""
+msgstr "Теперь вы можете создать кошелёк для отправки или получения средств."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:151
 msgid "Creating your Dash Wallet"
-msgstr ""
+msgstr "Создание вашего Dash кошелька"
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:153
 msgid ""
@@ -258,6 +280,11 @@ msgid ""
 ":hoverxref:`advanced topics section <dashcore-hd>` for information about HD "
 "wallets."
 msgstr ""
+"Начиная с версии Dash Core 19.0, кошелек по умолчанию не будет создан. Такая"
+" подсказка появится на вкладке Обзор. Чтобы создать кошелек, нажмите кнопку "
+"**Создать новый кошелек** или **Файл** -> **Создать кошелек**. По умолчанию "
+"создаются кошельки не HD. Информацию о HD-кошельках см. в "
+":hoverxref:`Дополнительные темы, раздел <dashcore-hd>`."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:162
 msgid ""
@@ -266,12 +293,18 @@ msgid ""
 "and encrypt the wallet later. We have included instructions on how to "
 "encrypt your wallet in the following section."
 msgstr ""
+"Вам будет предложено создать новый кошелек с пользовательским именем. По "
+"умолчанию кошелек будет зашифрован. Вы можете снять этот флажок и "
+"зашифровать кошелек позже. В следующем разделе мы приводим инструкции по "
+"шифрованию кошелька."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:170
 msgid ""
 "If you do choose to encrypt now, you will be asked to enter and verify a "
 "password."
 msgstr ""
+"Если вы выберете шифрование сейчас, то вам будет предложено ввести и "
+"подтвердить пароль."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:175
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:202
@@ -280,7 +313,7 @@ msgstr "Введите пароль"
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:177
 msgid "Following that, you will get a standard warning."
-msgstr ""
+msgstr "После этого вы получите стандартное предупреждение."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:182
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:207
@@ -292,6 +325,8 @@ msgid ""
 "The following section will detail the steps you need to follow if you choose"
 " to encrypt your Dash wallet later."
 msgstr ""
+"В следующем разделе подробно описаны действия, которые необходимо выполнить,"
+" если вы решите зашифровать свой кошелек Dash позже."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:188
 msgid "Encrypting your Dash wallet"
