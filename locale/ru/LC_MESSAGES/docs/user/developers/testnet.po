@@ -7,6 +7,7 @@
 # Leon White <leon.white@dash.org>, 2022
 # Dima, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
+# VONCAN, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
-"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2022\n"
+"Last-Translator: VONCAN, 2023\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -116,6 +117,17 @@ msgid ""
 "<core:examples-testing-applications>` or this `blog post "
 "<https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
 msgstr ""
+"С выпуском кошелька Dash Core 12.3 команда Dash добавила поддержку новой "
+"прекрасной функции, называемой **именованные devnets**. Devnets - это сети "
+"разработчиков, которые объединяют некоторые аспекты тестовой сети "
+"(глобальной и публичной сети тестирования) и некоторые аспекты режима "
+"regtest (режим исключительно локального регрессионного тестирования, который"
+" обеспечивает управляемую генерацию блоков). В отличие от тестовой сети, "
+"можно создать несколько независимых devnets, которые смогут сосуществовать "
+"без вмешательства. Для ознакомления с практической документацией по "
+"использованию devnets, см. `документацию разработчиков <core:examples-"
+"testing-applications>`__ или этот `пост в блоге <https://blog.dash.org/dash-"
+"devnets-bc27ecbf0085>`__."
 
 #: ../../docs/user/developers/testnet.rst:43
 msgid "Tools and links"
@@ -129,10 +141,15 @@ msgid ""
 "<https://www.dash.org/forum/>`_ if you have a question relating to a "
 "specific service."
 msgstr ""
+"Ссылки, приведенные ниже, были собраны из различных источников сообщества и "
+"не обязательно могут быть онлайн или функционировать в любой момент времени."
+" Присоединяйтесь к `Dash Nation Discord <http://staydashy.com/>`_ или `Dash "
+"Forum <https://www.dash.org/forum/>`_, если у вас есть вопросы, связанные с "
+"конкретными услугами."
 
 #: ../../docs/user/developers/testnet.rst:51
 msgid "**Test builds:** https://gitlab.com/dashpay/dash/pipelines"
-msgstr ""
+msgstr "**Тестовые сборки:** https://gitlab.com/dashpay/dash/pipelines"
 
 #: ../../docs/user/developers/testnet.rst:52
 msgid "**Bugtracker:** https://github.com/dashpay/dash/issues/new"
@@ -152,6 +169,8 @@ msgid ""
 "**Android wallet:** https://github.com/dashpay/dash-"
 "wallet/releases/tag/v7.0.2"
 msgstr ""
+"**Андроид кошелёк** https://github.com/dashpay/dash-"
+"wallet/releases/tag/v7.0.2"
 
 #: ../../docs/user/developers/testnet.rst:56
 msgid "**Testnet for Bitcoin:** https://en.bitcoin.it/wiki/Testnet"
@@ -163,11 +182,11 @@ msgstr "Краны"
 
 #: ../../docs/user/developers/testnet.rst:61
 msgid "https://faucet.testnet.networks.dash.org - by Dash Core Group"
-msgstr ""
+msgstr "https://faucet.testnet.networks.dash.org - by Dash Core Group"
 
 #: ../../docs/user/developers/testnet.rst:62
 msgid "http://faucet.test.dash.crowdnode.io - by CrowdNode"
-msgstr ""
+msgstr "http://faucet.test.dash.crowdnode.io - by CrowdNode"
 
 #: ../../docs/user/developers/testnet.rst:65
 msgid "Explorers"
@@ -179,11 +198,11 @@ msgstr "https://testnet-insight.dashevo.org/insight"
 
 #: ../../docs/user/developers/testnet.rst:68
 msgid "https://insight.testnet.networks.dash.org:3002/insight"
-msgstr ""
+msgstr "https://insight.testnet.networks.dash.org:3002/insight"
 
 #: ../../docs/user/developers/testnet.rst:69
 msgid "http://insight.testnet.networks.dash.org:3001/insight"
-msgstr ""
+msgstr "http://insight.testnet.networks.dash.org:3001/insight"
 
 #: ../../docs/user/developers/testnet.rst:72
 msgid "Pools"
@@ -233,6 +252,11 @@ msgid ""
 " a list of builds, then choose the latest successful ``develop`` build and "
 "click **Artifacts** to view a list of binaries."
 msgstr ""
+"Вероятно, вы будете запускать версию Dash, находящуюся в разработке вместо "
+"стабильного релиза. Перейдите `сюда "
+"<https://gitlab.com/dashpay/dash/pipelines>`__ для выбора сборки из списка, "
+"из него выберите последнюю нормально работающую ``develop`` сборку и "
+"кликните **Artifacts** для просмотра списка бинарных файлов."
 
 #: ../../docs/user/developers/testnet.rst:90
 msgid ""
@@ -282,6 +306,9 @@ msgid ""
 "the ``-b`` option, for example: ``git clone -b develop "
 "https://github.com/dashpay/sentinel.git``"
 msgstr ""
+"При клонировании sentinel может потребоваться клонировать ветку разработки с"
+" помощью опции ``-b``, например: ``git clone -b develop "
+"https://github.com/dashpay/sentinel.git``."
 
 #: ../../docs/user/developers/testnet.rst:104
 msgid ""
@@ -305,7 +332,7 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:113
 msgid "Testnet 0.16.0"
-msgstr ""
+msgstr "Тестовая сеть  v0.16.0"
 
 #: ../../docs/user/developers/testnet.rst:115
 msgid ""
@@ -316,30 +343,37 @@ msgid ""
 "to download the software and become active on testnet. This release "
 "includes:"
 msgstr ""
+"В июне 2020 года команда Dash объявила о начале тестирования предстоящего "
+"выпуска кошелька Dash версии 0.16.0. Обширное внутреннее тестирование уже "
+"было выполнено по коду версии 0.16.0, но есть множество ошибок, которые "
+"могут быть обнаружены только в случае реального использования реальными "
+"людьми. Команда Dash приглашает любого, кто заинтересован скачать "
+"программное обеспечение и проявить активность в тестовой сети, принять в "
+"этом участие. Этот выпуск включает:"
 
 #: ../../docs/user/developers/testnet.rst:122
 msgid "Block reward reallocation"
-msgstr ""
+msgstr "Распределение вознаграждений за блок"
 
 #: ../../docs/user/developers/testnet.rst:123
 msgid "Core Wallet UI/UX Improvements"
-msgstr ""
+msgstr "Улучшения UI/UX Core кошелька"
 
 #: ../../docs/user/developers/testnet.rst:124
 msgid "Quorum Signing Optimizations"
-msgstr ""
+msgstr "Оптимизация подписания кворума"
 
 #: ../../docs/user/developers/testnet.rst:125
 msgid "Network Threading Improvement"
-msgstr ""
+msgstr "Улучшение сетевых потоков"
 
 #: ../../docs/user/developers/testnet.rst:126
 msgid "Minimum Protocol Check"
-msgstr ""
+msgstr "Минимальная проверка протоколов"
 
 #: ../../docs/user/developers/testnet.rst:127
 msgid "Bitcoin 0.16 and 0.17 Backports"
-msgstr ""
+msgstr "Bitcoin бэкпорты 0.16 и 0.17 "
 
 #: ../../docs/user/developers/testnet.rst:129
 #: ../../docs/user/developers/testnet.rst:153
@@ -355,12 +389,16 @@ msgid ""
 "Testnet announcement: "
 "https://www.dash.org/forum/threads/v0-16-testing.50294/"
 msgstr ""
+"Объявление тестовой сети: "
+"https://www.dash.org/forum/threads/v0-16-testing.50294/"
 
 #: ../../docs/user/developers/testnet.rst:132
 msgid ""
 "Product brief: https://blog.dash.org/updated-product-brief-dash-core-"
 "release-v0-16-0-d3debdb6242e"
 msgstr ""
+"Кратко о продукте: https://blog.dash.org/updated-product-brief-dash-core-"
+"release-v0-16-0-d3debdb6242e"
 
 #: ../../docs/user/developers/testnet.rst:133
 #: ../../docs/user/developers/testnet.rst:157
@@ -369,6 +407,8 @@ msgstr ""
 #: ../../docs/user/developers/testnet.rst:240
 msgid "Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html"
 msgstr ""
+"Инструменты для тестовой сети: "
+"https://docs.dash.org/en/stable/developers/testnet.html"
 
 #: ../../docs/user/developers/testnet.rst:134
 #: ../../docs/user/developers/testnet.rst:158
@@ -389,11 +429,11 @@ msgstr "Последние тестовые двоичные файлы:"
 
 #: ../../docs/user/developers/testnet.rst:138
 msgid "https://github.com/dashpay/dash/releases/tag/v0.16.0.0-rc3"
-msgstr ""
+msgstr "https://github.com/dashpay/dash/releases/tag/v0.16.0.0-rc3"
 
 #: ../../docs/user/developers/testnet.rst:141
 msgid "Testnet 0.15.0"
-msgstr ""
+msgstr "Тестовая сеть v0.15.0"
 
 #: ../../docs/user/developers/testnet.rst:143
 msgid ""
@@ -404,34 +444,45 @@ msgid ""
 "is interested to download the software and become active on testnet. This "
 "release includes:"
 msgstr ""
+"В Декабре 2019 года команда Dash объявила о начале тестирования предстоящего"
+" выпуска клиента Dash версии 0.15.0. Обширное внутреннее тестирование уже "
+"было выполнено по коду версии 0.15.0, но есть множество ошибок, которые "
+"могут быть обнаружены только в случае реального использования реальными "
+"людьми. Команда Dash приглашает любого, кто заинтересован, скачать "
+"программное обеспечение и проявить активность в тестовой сети. Этот выпуск "
+"включает:"
 
 #: ../../docs/user/developers/testnet.rst:150
 msgid "Bitcoin 0.15 backports"
-msgstr ""
+msgstr "Bitcoin бэкпорты 0.15"
 
 #: ../../docs/user/developers/testnet.rst:151
 msgid "Removal of legacy code"
-msgstr ""
+msgstr "Удаление устаревшего кода"
 
 #: ../../docs/user/developers/testnet.rst:155
 msgid ""
 "Testnet announcement: "
 "https://www.dash.org/forum/threads/v15-0-testing.49140/"
 msgstr ""
+"Объявление тестовой сети: "
+"https://www.dash.org/forum/threads/v15-0-testing.49140/"
 
 #: ../../docs/user/developers/testnet.rst:156
 msgid ""
 "Product brief: https://blog.dash.org/product-brief-dash-core-"
 "release-v0-15-0-acd7633a91ab"
 msgstr ""
+"Кратко о продукте: https://blog.dash.org/product-brief-dash-core-"
+"release-v0-15-0-acd7633a91ab"
 
 #: ../../docs/user/developers/testnet.rst:162
 msgid "https://github.com/dashpay/dash/releases/tag/v0.15.0.0-rc4"
-msgstr ""
+msgstr "https://github.com/dashpay/dash/releases/tag/v0.15.0.0-rc4"
 
 #: ../../docs/user/developers/testnet.rst:166
 msgid "Testnet 0.14.0"
-msgstr ""
+msgstr "Тестовая сеть v0.14.0"
 
 #: ../../docs/user/developers/testnet.rst:168
 msgid ""
@@ -442,34 +493,45 @@ msgid ""
 "to download the software and become active on testnet. This release "
 "includes:"
 msgstr ""
+"В Марте 2019 года команда Dash объявила о начале тестирования предстоящего "
+"выпуска клиента Dash версии 0.14.0. Обширное внутреннее тестирование уже "
+"было выполнено по коду версии 0.14.0, но есть множество ошибок, которые "
+"могут быть обнаружены только в случае реального использования реальными "
+"людьми. Команда Dash приглашает любого, кто заинтересован, скачать "
+"программное обеспечение и проявить активность в тестовой сети. Этот выпуск "
+"включает:"
 
 #: ../../docs/user/developers/testnet.rst:175
 msgid "LLMQ DKGs"
-msgstr ""
+msgstr "LLMQ DKGs"
 
 #: ../../docs/user/developers/testnet.rst:176
 msgid "LLMQ based ChainLocks"
-msgstr ""
+msgstr "ChainLocks основанные на LLMQ"
 
 #: ../../docs/user/developers/testnet.rst:177
 msgid "LLMQ based InstantSend"
-msgstr ""
+msgstr "InstantSend основанный на LLMQ"
 
 #: ../../docs/user/developers/testnet.rst:181
 msgid ""
 "Testnet announcement: "
 "https://www.dash.org/forum/threads/v14-0-testing.44047/"
 msgstr ""
+"Объявление тестовой сети: "
+"https://www.dash.org/forum/threads/v14-0-testing.44047/"
 
 #: ../../docs/user/developers/testnet.rst:182
 msgid ""
 "Product brief: https://blog.dash.org/product-brief-dash-core-"
 "release-v0-14-0-now-on-testnet-8f5f4ad45c96"
 msgstr ""
+"Кратко о продукте: https://blog.dash.org/product-brief-dash-core-"
+"release-v0-14-0-now-on-testnet-8f5f4ad45c96"
 
 #: ../../docs/user/developers/testnet.rst:188
 msgid "https://github.com/dashpay/dash/releases/tag/v0.14.0.0-rc6"
-msgstr ""
+msgstr "https://github.com/dashpay/dash/releases/tag/v0.14.0.0-rc6"
 
 #: ../../docs/user/developers/testnet.rst:192
 msgid "Testnet 0.13.0"
@@ -518,6 +580,8 @@ msgid ""
 "Testnet announcement: "
 "https://www.dash.org/forum/threads/v13-0-testing.41945/"
 msgstr ""
+"Объявление тестовой сети: "
+"https://www.dash.org/forum/threads/v13-0-testing.41945/"
 
 #: ../../docs/user/developers/testnet.rst:210
 msgid ""
@@ -586,7 +650,7 @@ msgstr "Новое окно информационного диалога Мас
 
 #: ../../docs/user/developers/testnet.rst:239
 msgid "https://www.dash.org/forum/threads/v12-3-testing.38475/"
-msgstr ""
+msgstr "https://www.dash.org/forum/threads/v12-3-testing.38475/"
 
 #: ../../docs/user/developers/testnet.rst:245
 msgid "https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3"
@@ -665,7 +729,7 @@ msgstr "Последние успешные сборки версий разра
 
 #: ../../docs/user/developers/testnet.rst:272
 msgid "Dash Core: https://gitlab.com/dashpay/dash/pipelines"
-msgstr ""
+msgstr "Dash Core: https://gitlab.com/dashpay/dash/pipelines"
 
 #: ../../docs/user/developers/testnet.rst:273
 msgid "Sentinel: https://github.com/dashpay/sentinel/tree/develop"

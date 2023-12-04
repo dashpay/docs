@@ -443,10 +443,18 @@ msgid ""
 "dashmate documentation is available `here "
 "<https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__."
 msgstr ""
+"``dashmate`` заменяет инсталлятор masternode `dashman "
+"<https://github.com/moocowmoo/dashman/>`__ от moocowmoo. Dashmate основан на"
+" технологии Docker, имеет интерактивную команду установки и возможность "
+"управления несколькими конфигурациями узлов и несколькими сетями. Он "
+"выполняет установку Dash Core и Tenderdash, а также всех зависимостей и "
+"вспомогательных сервисов. Полная документация по dashmate доступна `здесь "
+"<https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:229
 msgid "Installation as root user is not supported or recommended."
 msgstr ""
+"Установка от имени пользователя root не поддерживается и не рекомендуется."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:231
 msgid ""
@@ -483,6 +491,11 @@ msgid ""
 "<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__"
 " or use the built-in help system to learn more:"
 msgstr ""
+"Вы можете управлять статусом, конфигурацией и рабочим состоянием своей "
+"мастерноды полностью из dashmate. Для получения дополнительной информации "
+"обратитесь к документации "
+"<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__"
+" или воспользуйтесь встроенной справочной системой:"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:261
 msgid "``dashmate --help``"
@@ -552,6 +565,8 @@ msgid ""
 "The three keys required for the different masternode roles are described "
 "briefly under :ref:`mn-concepts` in this documentation."
 msgstr ""
+"Три ключа, необходимые для различных ролей мастерноды, кратко описаны в "
+"разделе :ref:`mn-concepts` данной документации."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:322
 msgid "Option 1: Registering from a hardware wallet"
@@ -563,6 +578,9 @@ msgid ""
 "filled out correctly.  Click **Generate new** for the three private keys "
 "required for a masternode:"
 msgstr ""
+"Возвращайтесь назад в DMT и убедитесь, что все поля из предыдущего шага "
+"остались заполнены правильно. Кликните **Generate new**, чтобы сгенерировать"
+" три приватных ключа, которые необходимы для мастерноды:"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:328
 msgid "Owner private key"
@@ -843,6 +861,11 @@ msgid ""
 "This can be done by following the :ref:`Generate a BLS key pair <testnet-"
 "bls-generation>` instructions."
 msgstr ""
+"После активации хард форка v19 необходимо использовать ``protx "
+"register_prepare_legacy'', если для регистрации мастерноды используется BLS-"
+"ключ старой схемы. Вместо этого рекомендуется по возможности сгенерировать "
+"новый ключ BLS базовой схемы. Это можно сделать, следуя инструкции "
+":ref:`Generate a BLS key pair <testnet-bls-generation>`."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:505
 msgid ""
@@ -1070,6 +1093,8 @@ msgid ""
 "Tor is an internet relay system designed to preserve anonymity on the "
 "internet. Install Tor as follows::"
 msgstr ""
+"Tor - это система интернет-ретрансляции, предназначенная для сохранения "
+"анонимности в Интернете. Установите Tor следующим образом::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:651
 msgid "Dash Core"
@@ -1091,6 +1116,9 @@ msgid ""
 "against the public key published by the Dash Core development team. All "
 "releases of Dash are signed using GPG with the following key:"
 msgstr ""
+"Убедитесь в подлинности загруженного файла, сверив его подпись с открытым "
+"ключом, опубликованным командой разработчиков Dash Core. Все выпуски Dash "
+"подписываются с помощью GPG следующим ключом:"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:664
 msgid ""
@@ -1112,7 +1140,7 @@ msgstr "Создайте рабочий каталог для Dash Core::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:683
 msgid "Configure Dash Core::"
-msgstr "Настройка Dash Core::"
+msgstr "Конфигурация Dash Core::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:720
 msgid ""
@@ -1150,10 +1178,13 @@ msgid ""
 "full sync before running Sentinel.** Run the following to ensure Sentinel "
 "runs every 10 minutes::"
 msgstr ""
+"Появится сообщение **dashd не синхронизирован с сетью! Ожидание полной "
+"синхронизации перед запуском Sentinel.** Для обеспечения запуска Sentinel "
+"каждые 10 минут выполните следующие действия::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:776
 msgid "Use the following command to monitor sync status::"
-msgstr ""
+msgstr "Для контроля статуса синхронизации используйте следующую команду::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:780
 msgid ""
@@ -1162,48 +1193,53 @@ msgstr "По завершении синхронизации вы увидите
 
 #: ../../docs/user/masternodes/setup-testnet.rst:794
 msgid "Platform services"
-msgstr ""
+msgstr "Сервисы платформы"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:796
 msgid ""
 "Next, we will install the Dash Platform services. Start with installing "
 "JavaScript dependencies::"
 msgstr ""
+"Далее мы установим сервисы платформы Dash. Начнем с установки JavaScript "
+"зависимостей::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:805
 msgid "Followed by Rust dependencies::"
-msgstr ""
+msgstr "Далее следуют Rust-зависимости::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:814
 msgid "And Go dependencies::"
-msgstr ""
+msgstr "И зависимости Go::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:822
 msgid "Drive"
-msgstr ""
+msgstr "Drive"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:824
 msgid ""
 "Drive is a replicated state machine for Dash Platform. Download Drive as "
 "follows::"
 msgstr ""
+"Drive представляет собой реплицируемую машину состояний для Dash Platform. "
+"Загрузить Drive можно следующим образом::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:836
 msgid "Configure Drive::"
-msgstr ""
+msgstr "Конфигурация Drive::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:854
 msgid "Start Drive::"
-msgstr ""
+msgstr "Запустить Drive::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:858
 msgid ""
 "Verify Drive is running by checking for a time value under ``uptime``::"
 msgstr ""
+"Убедитесь, что Drive работает, проверив значение времени в поле ``uptime``::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:863
 msgid "Tenderdash"
-msgstr ""
+msgstr "Tenderdash"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:865
 msgid ""
@@ -1211,28 +1247,35 @@ msgid ""
 " by Dash Platform. As binaries are not yet published, you will need to build"
 " from source. Build and install Tenderdash as follows::"
 msgstr ""
+"Tenderdash является форком Tendermint и представляет собой реализацию "
+"блокчейна, используемого платформой Dash. Поскольку бинарные файлы еще не "
+"опубликованы, вам придется собирать из исходных текстов. Соберите и "
+"установите Tenderdash следующим образом::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:876
 msgid "Initialize Tenderdash::"
-msgstr ""
+msgstr "Инициализация Tenderdash::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:880
 msgid ""
 "Several files will be generated in the ``~/.tenderdash`` directory. Modify "
 "the configuration with the following commands::"
 msgstr ""
+"В каталоге ``~/.tenderdash`` будет сгенерировано несколько файлов. Измените "
+"конфигурацию с помощью следующих команд::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:891
 msgid "Configure Tenderdash to start as a service::"
-msgstr ""
+msgstr "Конфигурируйте Tenderdash на запуск в качестве сервиса::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:911
 msgid "Ensure Dash Core is fully synced and start Tenderdash::"
 msgstr ""
+"Убедитесь, что Dash Core полностью синхронизирован, и запустите Tenderdash::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:917
 msgid "Verify Tenderdash is running::"
-msgstr ""
+msgstr "Убедитесь, что Tenderdash работает::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:922
 msgid "DAPI"
@@ -1243,22 +1286,24 @@ msgid ""
 "DAPI provides masternode services over the JSON RPC and gRPC protocols. "
 "Start DAPI as follows::"
 msgstr ""
+"DAPI предоставляет услуги мастерноды по протоколам JSON RPC и gRPC. "
+"Запустите DAPI следующим образом::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:931
 msgid "Modify the configuration with the following commands::"
-msgstr ""
+msgstr "Измените конфигурацию с помощью следующих команд::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:940
 msgid "Start DAPI::"
-msgstr ""
+msgstr "Запустить DAPI::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:944
 msgid "Start the transaction filter stream::"
-msgstr ""
+msgstr "Запуск потока фильтрации транзакций::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:949
 msgid "Envoy"
-msgstr ""
+msgstr "Envoy"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:951
 msgid ""
@@ -1272,6 +1317,16 @@ msgid ""
 "``/var/www/html/.well-known/pki-validation/`` directory with the original "
 "filename on your server and serve it using nginx as follows::"
 msgstr ""
+"Envoy - это прокси-сервис gRPC для облачных приложений. Поскольку он "
+"отвечает за завершение TLS, перед настройкой Envoy необходимо получить TLS-"
+"сертификат для вашего публичного IP-адреса. Вы можете сделать это "
+"самостоятельно, воспользовавшись услугами выбранного вами провайдера, или "
+"использовать ZeroSSL для получения бесплатного сертификата. Посетите сайт "
+"https://app.zerossl.com/certificate/new и введите свой публичный IP-адрес, "
+"выберите в качестве метода проверки HTTP File Upload, а затем загрузите файл"
+" auth. Поместите содержимое этого файла в каталог ``/var/www/html/.well-"
+"known/pki-validation/`` с оригинальным именем файла на вашем сервере и "
+"обслуживайте его с помощью nginx следующим образом::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:966
 msgid ""
@@ -1282,55 +1337,67 @@ msgid ""
 "followed by ``ca_bundle.crt`` one after the other into the bundle file at "
 "the following location on the remote node::"
 msgstr ""
+"Перейдите по ссылке, указанной в шаге 3 интерфейса ZeroSSL, и убедитесь, что"
+" содержимое файла auth отображается в браузере. Завершите проверку в ZeroSSL"
+" и скачайте файл пакета в формате ``.zip``. Распакуйте его на локальном "
+"компьютере и скопируйте последовательно содержимое файла "
+"``certificate.crt``, а затем ``ca_bundle.crt`` в файл bundle в следующее "
+"место на удаленном узле::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:975
 msgid ""
 "Then copy the contents of ``private.key`` into the following location on the"
 " remote node::"
 msgstr ""
+"Затем скопируйте содержимое файла ``private.key`` в следующее место на "
+"удаленном узле::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:980
 msgid "Remove nginx and the temporary auth file as follows:"
-msgstr ""
+msgstr "Удалите nginx и временный файл auth следующим образом:"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:982
 msgid ""
 "sudo apt -y --purge autoremove nginx sudo rm -rf /var/www/html/.well-known"
 msgstr ""
+"sudo apt -y --purge autoremove nginx sudo rm -rf /var/www/html/.well-known"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:985
 msgid "Install Envoy as follows::"
-msgstr ""
+msgstr "Установите Envoy следующим образом::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:992
 msgid "Configure Envoy as follows::"
-msgstr ""
+msgstr "Настройте Envoy следующим образом::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:997
 msgid "Configure Envoy to start as a service::"
-msgstr ""
+msgstr "Конфигурируйте Envoy на запуск в качестве сервиса::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1015
 msgid "Start Envoy::"
-msgstr ""
+msgstr "Запустить Envoy::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1021
 msgid "Verify Envoy is running::"
-msgstr ""
+msgstr "Убедитесь, что Envoy работает::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1026
 msgid "Finishing up"
-msgstr ""
+msgstr "Завершение"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1028
 msgid "Ensure services managed by ``pm2`` start on reboot::"
 msgstr ""
+"Убедитесь, что сервисы, управляемые ``pm2``, запускаются при перезагрузке::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1033
 msgid ""
 "Copy and paste the resulting command to ensure PM2 restarts processes on "
 "boot::"
 msgstr ""
+"Скопируйте и вставьте полученную команду, чтобы обеспечить перезапуск "
+"процессов PM2 при загрузке::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1038
 msgid ""
@@ -1342,7 +1409,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1044
 msgid "Developer installation"
-msgstr ""
+msgstr "Developer installation"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1046
 msgid ""
@@ -1352,6 +1419,11 @@ msgid ""
 " and Linux are supported, the following example shows how to install "
 "dependencies under Ubuntu 20.04 LTS.::"
 msgstr ""
+"Разработчики, которым требуется локальный мастернод, могут быстро приступить"
+" к работе, запустив dashmate и напрямую предоставив закрытый ключ, "
+"содержащий обеспечение. При необходимости установите зависимости (Docker, "
+"NodeJS, NPM, Github CLI). Поддерживаются Windows, macOS и Linux, в следующем"
+" примере показана установка зависимостей под Ubuntu 20.04 LTS.::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1059
 msgid ""
@@ -1362,26 +1434,39 @@ msgid ""
 "faucet.dash.org/ and request 1000+ tDash to your new address using the promo"
 " code 'masternode'. Then download and initialize dashmate as follows::"
 msgstr ""
+"Сгенерируйте новый адрес Dash для временного использования с помощью `этого "
+"скрипта <https://repl.it/@strophy/Generate-Dash-Address>`__ или RPC-команд "
+"``getnewaddress`` и ``dumpprivkey`` в `Dash Core "
+"<https://www.dash.org/downloads>`__ в режиме testnet. Перейдите на сайт "
+"https://testnet-faucet.dash.org/ и запросите 1000+ tDash на свой новый "
+"адрес, используя промокод 'masternode'. Затем загрузите и инициализируйте "
+"dashmate следующим образом::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1069
 msgid ""
 "If you are using Windows, you will need to change the path for two log "
 "files. Modify the example below with a log path of your choosing::"
 msgstr ""
+"Если вы используете Windows, то вам необходимо изменить путь к двум файлам "
+"журнала. Измените приведенный ниже пример, указав путь к журналу по своему "
+"усмотрению::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1075
 msgid "Register your masternode on the network as follows::"
-msgstr ""
+msgstr "Зарегистрируйте свою мастерноду в сети следующим образом::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1079
 msgid ""
 "Wait until sync and registration are complete. Then start the masternode::"
 msgstr ""
+"Дождитесь завершения синхронизации и регистрации. Затем запустите "
+"мастерноду::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1083
 msgid ""
 "Your masternode is now providing service on the following local ports::"
 msgstr ""
+"Теперь ваша мастернода предоставляет услуги на следующих локальных портах::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:1091
 msgid ""
@@ -1389,3 +1474,7 @@ msgid ""
 " can monitor progress with ``dashmate status platform`` or use ``dashmate "
 "--help`` to view other commands."
 msgstr ""
+"Обратите внимание, что синхронизация платформы займет некоторое время после "
+"завершения синхронизации core. Вы можете следить за ходом выполнения команды"
+" ``dashmate status platform`` или использовать ``dashmate --help`` для "
+"просмотра других команд."

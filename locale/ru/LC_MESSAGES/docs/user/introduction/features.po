@@ -419,6 +419,12 @@ msgid ""
 "Consequently, users who have backups disabled will also have CoinJoin "
 "disabled."
 msgstr ""
+"** ВАЖНО:** Ваш кошелек содержит только 1000 адресов для сдачи. Каждый раз, "
+"когда создается транзакция CoinJoin, расходуется один из ваших адресов. Как "
+"только их количество будет исчерпано, кошелек должен будет создать новые "
+"адреса. Однако это возможно только в том случае, если у вас включено "
+"автоматическое резервное копирование. Соответственно, у пользователей, у "
+"которых резервное копирование отключено, CoinJoin также будет отключен."
 
 #: ../../docs/user/introduction/features.rst:157
 msgid "InstantSend"
@@ -454,6 +460,13 @@ msgid ""
 "be included in subsequently mined blocks and not allowing any other spending"
 " of these inputs during the confirmation time period."
 msgstr ""
+"Dash не страдает ни от одного из этих ограничений благодаря наличию сети "
+"мастернод второго уровня. Мастерноды регулярно формируют кворумы для "
+"голосования, чтобы проверить, действительна ли отправленная транзакция. Если"
+" она действительна, мастерноды \"блокируют\" входы для транзакции и передают"
+" эту информацию в сеть, фактически обещая, что транзакция будет включена в "
+"последующие добытые блоки, и не позволяя расходовать эти входы в течение "
+"периода подтверждения."
 
 #: ../../docs/user/introduction/features.rst:177
 msgid ""
@@ -482,6 +495,13 @@ msgid ""
 " and further improved through the introduction of `LLMQ-based InstantSend "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__ in Dash 0.14."
 msgstr ""
+"Практическое руководство по использованию InstantSend можно посмотреть "
+":ref:`здесь <dashcore-coinjoin-instantsend>`. InstantSend был представлен в "
+"whitepaper под названием `Transaction Locking and Masternotode Consensus: A "
+"Mechanism for Mitigating Double Spending Attacks "
+"<https://github.com/dashpay/docs/blob/master/binary/Dash%20Whitepaper%20-%20Transaction%20Locking%20and%20Masternode%20Consensus.pdf>`_,"
+" а в Dash 0.14 была усовершенствована за счет внедрения `InstantSend на базе"
+" LLMQ <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__."
 
 #: ../../docs/user/introduction/features.rst:194
 msgid ""
@@ -493,7 +513,7 @@ msgstr ""
 
 #: ../../docs/user/introduction/features.rst:207
 msgid "ChainLocks"
-msgstr ""
+msgstr "ChainLocks"
 
 #: ../../docs/user/introduction/features.rst:209
 msgid ""
@@ -503,6 +523,11 @@ msgid ""
 " which payments can be accepted immediately and without the risk of "
 "“Blockchain Reorganization Events”."
 msgstr ""
+"ChainLocks - это функция, предоставляемая сетью Dash, которая обеспечивает "
+"определенность при приеме платежей. Эта технология, особенно при "
+"использовании параллельно с :ref:`InstantSend <instantsend>`, создает "
+"условия, в которых платежи могут быть приняты немедленно и без риска "
+"\"реорганизации блокчейна\"."
 
 #: ../../docs/user/introduction/features.rst:215
 msgid ""
@@ -511,10 +536,14 @@ msgid ""
 "payment. This type of indirect security is effective, but at a cost of time "
 "and user experience. ChainLocks are a solution for this problem."
 msgstr ""
+"Риск реорганизации блокчейна обычно решается путем требования многократных "
+"\"подтверждений\", прежде чем транзакция может быть безопасно принята к "
+"оплате. Такой способ косвенной защиты эффективен, но требует больших затрат "
+"времени и пользовательского опыта. ChainLocks - это решение данной проблемы."
 
 #: ../../docs/user/introduction/features.rst:222
 msgid "ChainLocks Process Overview"
-msgstr ""
+msgstr "Обзор процесса ChainLocks"
 
 #: ../../docs/user/introduction/features.rst:224
 msgid ""
@@ -523,12 +552,18 @@ msgid ""
 "Quorum are responsible for observing, and subsequently affirming, newly "
 "mined blocks:"
 msgstr ""
+"Каждые двенадцать часов с помощью процесса \"DKG\" (Distributed Key "
+"Generation) формируется новый кворум \"LLMQ\" (Long-Living Masternotode "
+"Quorum). Все члены этого кворума отвечают за наблюдение и последующее "
+"подтверждение новых добытых блоков:"
 
 #: ../../docs/user/introduction/features.rst:229
 msgid ""
 "Whenever a block is mined, Quorum Members will broadcast a signed message "
 "containing the observed block to the rest of the Quorum."
 msgstr ""
+"Каждый раз, когда блок добывается, члены кворума передают остальным членам "
+"кворума подписанное сообщение, содержащее наблюдаемый блок."
 
 #: ../../docs/user/introduction/features.rst:232
 msgid ""
@@ -536,6 +571,9 @@ msgid ""
 "form a “CLSIG” (ChainLock Signature) message which will be broadcast to the "
 "remainder of the network."
 msgstr ""
+"Если 60% или более членов кворума видят один и тот же новый блок, то они "
+"совместно формируют сообщение \"CLSIG\" (ChainLock Signature), которое "
+"передается остальной части сети."
 
 #: ../../docs/user/introduction/features.rst:236
 msgid ""
@@ -543,6 +581,9 @@ msgid ""
 "will reject all blocks at the same height that do not match the block "
 "specified in that message."
 msgstr ""
+"Когда клиент в сети получает действительную подпись ChainLock Signature, он "
+"отвергает все блоки той же высоты, которые не соответствуют блоку, "
+"указанному в этом сообщении."
 
 #: ../../docs/user/introduction/features.rst:240
 msgid ""
@@ -552,6 +593,11 @@ msgid ""
 "ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__ for "
 "a full description of how ChainLocks work."
 msgstr ""
+"В результате для интегрированных клиентов и кошельков принимается быстрое и "
+"однозначное решение о \"правильном\" блокчейне. С точки зрения безопасности "
+"это также делает невозможной реорганизацию до этого блока. Полное описание "
+"работы ChainLocks см. в разделе `DIP0008 ChainLocks "
+"<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__."
 
 #: ../../docs/user/introduction/features.rst:250
 msgid "Sporks"
@@ -937,14 +983,26 @@ msgid ""
 " Depending on budget utilization, this results in an approximate coin reward"
 " allocation over a budget cycle as follows:"
 msgstr ""
+"В отличие от Bitcoin, где 100% вознаграждения за блок распределяется между "
+"майнерами, Dash оставляет себе 10% вознаграждения за блок для использования "
+"в децентрализованной :ref:`бюджетной системе <decentralized-governance>`. "
+"Оставшаяся часть вознаграждения за блок, а также все комиссии за транзакции "
+"распределяются между :ref:`майнером <mining>` и :ref:`мастернодой "
+"<masternodes>`, который детерминированно выбирается в соответствии с "
+":ref:`платежной логикой <payment-logic>`. В Dash есть суперблоки, которые "
+"появляются каждые 16616 блоков (примерно 30,29 дня) и могут высвободить до "
+"10% совокупного бюджета, удержанного за этот период :ref:`бюджетного цикла "
+"<budget-cycles>`, для выигравших предложений в бюджетной системе. В "
+"зависимости от использования бюджета это приводит к следующему примерному "
+"распределению монетного вознаграждения в течение бюджетного цикла:"
 
 #: ../../docs/user/introduction/features.rst:450
 msgid "90%"
-msgstr ""
+msgstr "90%"
 
 #: ../../docs/user/introduction/features.rst:450
 msgid "Mining and Masternode Reward"
-msgstr ""
+msgstr "Награда майнеров и мастернод"
 
 #: ../../docs/user/introduction/features.rst:452
 msgid "10%"
@@ -962,6 +1020,11 @@ msgid ""
 "masternodes to 40/60, respectively. The incremental reallocation adjusts the"
 " percentage share every three superblock cycles."
 msgstr ""
+"13 августа 2020 года сеть Dash одобрила предложение "
+"<https://www.dashcentral.org/p/decision-proposal-block-reward-reallocat>`__ "
+"об изменении распределения вознаграждения за блок с 50/50 между майнерами и "
+"мастернодами до 40/60 соответственно. Постепенное перераспределение "
+"корректирует процентное соотношение каждые три цикла суперблока."
 
 #: ../../docs/user/introduction/features.rst:463
 msgid ""
@@ -970,26 +1033,31 @@ msgid ""
 "first superblock following activation and now occur every three superblock "
 "cycles (approximately once per quarter) until the reallocation is complete."
 msgstr ""
+"В следующей таблице представлен процесс поэтапного перераспределения "
+"вознаграждения и указана текущая дата перераспределения. Изменения в "
+"перераспределении вознаграждений начались в первом суперблоке после "
+"активации и теперь происходят каждые три цикла суперблоков (примерно раз в "
+"квартал) до полного завершения перераспределения."
 
 #: ../../docs/user/introduction/features.rst:469
 msgid "Adjustment"
-msgstr ""
+msgstr "Настройка"
 
 #: ../../docs/user/introduction/features.rst:469
 msgid "Miner %"
-msgstr ""
+msgstr "Майнеры (%)"
 
 #: ../../docs/user/introduction/features.rst:469
 msgid "Masternode %"
-msgstr ""
+msgstr "Мастерноды (%)"
 
 #: ../../docs/user/introduction/features.rst:469
 msgid "Change (%)"
-msgstr ""
+msgstr "Изменение (%)"
 
 #: ../../docs/user/introduction/features.rst:469
 msgid "Reallocation Dates"
-msgstr ""
+msgstr "Даты изменения"
 
 #: ../../docs/user/introduction/features.rst:471
 msgid "0"
@@ -997,15 +1065,15 @@ msgstr "0"
 
 #: ../../docs/user/introduction/features.rst:471
 msgid "50.0"
-msgstr ""
+msgstr "50.0"
 
 #: ../../docs/user/introduction/features.rst:471
 msgid "0.00%"
-msgstr ""
+msgstr "0.00%"
 
 #: ../../docs/user/introduction/features.rst:471
 msgid "---"
-msgstr ""
+msgstr "---"
 
 #: ../../docs/user/introduction/features.rst:473
 msgid "1"
@@ -1013,20 +1081,20 @@ msgstr "1"
 
 #: ../../docs/user/introduction/features.rst:473
 msgid "48.7"
-msgstr ""
+msgstr "48.7"
 
 #: ../../docs/user/introduction/features.rst:473
 msgid "51.3"
-msgstr ""
+msgstr "51.3"
 
 #: ../../docs/user/introduction/features.rst:473
 #: ../../docs/user/introduction/features.rst:475
 msgid "1.30%"
-msgstr ""
+msgstr "1.30%"
 
 #: ../../docs/user/introduction/features.rst:473
 msgid "2020-11-28"
-msgstr ""
+msgstr "2020-11-28"
 
 #: ../../docs/user/introduction/features.rst:475
 msgid "2"
@@ -1034,15 +1102,15 @@ msgstr "2"
 
 #: ../../docs/user/introduction/features.rst:475
 msgid "47.4"
-msgstr ""
+msgstr "47.4"
 
 #: ../../docs/user/introduction/features.rst:475
 msgid "52.6"
-msgstr ""
+msgstr "52.6"
 
 #: ../../docs/user/introduction/features.rst:475
 msgid "2021-02-27"
-msgstr ""
+msgstr "2021-02-27"
 
 #: ../../docs/user/introduction/features.rst:477
 msgid "3"
@@ -1050,20 +1118,20 @@ msgstr "3"
 
 #: ../../docs/user/introduction/features.rst:477
 msgid "46.7"
-msgstr ""
+msgstr "46.7"
 
 #: ../../docs/user/introduction/features.rst:477
 msgid "53.3"
-msgstr ""
+msgstr "53.3"
 
 #: ../../docs/user/introduction/features.rst:477
 #: ../../docs/user/introduction/features.rst:479
 msgid "0.70%"
-msgstr ""
+msgstr "0.70%"
 
 #: ../../docs/user/introduction/features.rst:477
 msgid "2021-05-29"
-msgstr ""
+msgstr "2021-05-29"
 
 #: ../../docs/user/introduction/features.rst:479
 msgid "4"
@@ -1071,15 +1139,15 @@ msgstr "4"
 
 #: ../../docs/user/introduction/features.rst:479
 msgid "46.0"
-msgstr ""
+msgstr "46.0"
 
 #: ../../docs/user/introduction/features.rst:479
 msgid "54.0"
-msgstr ""
+msgstr "54.0"
 
 #: ../../docs/user/introduction/features.rst:479
 msgid "2021-08-28"
-msgstr ""
+msgstr "2021-08-28"
 
 #: ../../docs/user/introduction/features.rst:481
 msgid "5"
@@ -1087,20 +1155,20 @@ msgstr "5"
 
 #: ../../docs/user/introduction/features.rst:481
 msgid "45.4"
-msgstr ""
+msgstr "45.4"
 
 #: ../../docs/user/introduction/features.rst:481
 msgid "54.6"
-msgstr ""
+msgstr "54.6"
 
 #: ../../docs/user/introduction/features.rst:481
 #: ../../docs/user/introduction/features.rst:483
 msgid "0.60%"
-msgstr ""
+msgstr "0.60%"
 
 #: ../../docs/user/introduction/features.rst:481
 msgid "2021-11-27"
-msgstr ""
+msgstr "2021-11-27"
 
 #: ../../docs/user/introduction/features.rst:483
 msgid "6"
@@ -1108,27 +1176,27 @@ msgstr "6"
 
 #: ../../docs/user/introduction/features.rst:483
 msgid "44.8"
-msgstr ""
+msgstr "44.8"
 
 #: ../../docs/user/introduction/features.rst:483
 msgid "55.2"
-msgstr ""
+msgstr "55.2"
 
 #: ../../docs/user/introduction/features.rst:483
 msgid "2022-02-25"
-msgstr ""
+msgstr "2022-02-25"
 
 #: ../../docs/user/introduction/features.rst:485
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../../docs/user/introduction/features.rst:485
 msgid "44.3"
-msgstr ""
+msgstr "44.3"
 
 #: ../../docs/user/introduction/features.rst:485
 msgid "55.7"
-msgstr ""
+msgstr "55.7"
 
 #: ../../docs/user/introduction/features.rst:485
 #: ../../docs/user/introduction/features.rst:487
@@ -1137,11 +1205,11 @@ msgstr ""
 #: ../../docs/user/introduction/features.rst:493
 #: ../../docs/user/introduction/features.rst:495
 msgid "0.50%"
-msgstr ""
+msgstr "0.50%"
 
 #: ../../docs/user/introduction/features.rst:485
 msgid "2022-05-27"
-msgstr ""
+msgstr "2022-05-27"
 
 #: ../../docs/user/introduction/features.rst:487
 msgid "8"
@@ -1149,31 +1217,31 @@ msgstr "8"
 
 #: ../../docs/user/introduction/features.rst:487
 msgid "43.8"
-msgstr ""
+msgstr "43.8"
 
 #: ../../docs/user/introduction/features.rst:487
 msgid "56.2"
-msgstr ""
+msgstr "56.2"
 
 #: ../../docs/user/introduction/features.rst:487
 msgid "2022-08-26"
-msgstr ""
+msgstr "2022-08-26"
 
 #: ../../docs/user/introduction/features.rst:489
 msgid "9"
-msgstr ""
+msgstr "9"
 
 #: ../../docs/user/introduction/features.rst:489
 msgid "43.3"
-msgstr ""
+msgstr "43.3"
 
 #: ../../docs/user/introduction/features.rst:489
 msgid "56.7"
-msgstr ""
+msgstr "56.7"
 
 #: ../../docs/user/introduction/features.rst:489
 msgid "2022-11-25"
-msgstr ""
+msgstr "2022-11-25"
 
 #: ../../docs/user/introduction/features.rst:491
 msgid "10"
@@ -1181,59 +1249,59 @@ msgstr "10"
 
 #: ../../docs/user/introduction/features.rst:491
 msgid "42.8"
-msgstr ""
+msgstr "42.8"
 
 #: ../../docs/user/introduction/features.rst:491
 msgid "57.2"
-msgstr ""
+msgstr "57.2"
 
 #: ../../docs/user/introduction/features.rst:491
 msgid "2023-02-24"
-msgstr ""
+msgstr "2023-02-24"
 
 #: ../../docs/user/introduction/features.rst:493
 msgid "11"
-msgstr ""
+msgstr "11"
 
 #: ../../docs/user/introduction/features.rst:493
 msgid "42.3"
-msgstr ""
+msgstr "42.3"
 
 #: ../../docs/user/introduction/features.rst:493
 msgid "57.7"
-msgstr ""
+msgstr "57.7"
 
 #: ../../docs/user/introduction/features.rst:493
 msgid "2023-05-26"
-msgstr ""
+msgstr "2023-05-26"
 
 #: ../../docs/user/introduction/features.rst:495
 msgid "12 (Current)"
-msgstr ""
+msgstr "12 (Сейчас)"
 
 #: ../../docs/user/introduction/features.rst:495
 msgid "41.8"
-msgstr ""
+msgstr "41.8"
 
 #: ../../docs/user/introduction/features.rst:495
 msgid "58.2"
-msgstr ""
+msgstr "58.2"
 
 #: ../../docs/user/introduction/features.rst:495
 msgid "2023-08-25"
-msgstr ""
+msgstr "2023-08-25"
 
 #: ../../docs/user/introduction/features.rst:497
 msgid "13"
-msgstr ""
+msgstr "13"
 
 #: ../../docs/user/introduction/features.rst:497
 msgid "41.5"
-msgstr ""
+msgstr "41.5"
 
 #: ../../docs/user/introduction/features.rst:497
 msgid "58.5"
-msgstr ""
+msgstr "58.5"
 
 #: ../../docs/user/introduction/features.rst:497
 #: ../../docs/user/introduction/features.rst:499
@@ -1241,75 +1309,75 @@ msgstr ""
 #: ../../docs/user/introduction/features.rst:503
 #: ../../docs/user/introduction/features.rst:505
 msgid "0.30%"
-msgstr ""
+msgstr "0.30%"
 
 #: ../../docs/user/introduction/features.rst:497
 msgid "2023-11-24"
-msgstr ""
+msgstr "2023-11-24"
 
 #: ../../docs/user/introduction/features.rst:499
 msgid "14"
-msgstr ""
+msgstr "14"
 
 #: ../../docs/user/introduction/features.rst:499
 msgid "41.2"
-msgstr ""
+msgstr "41.2"
 
 #: ../../docs/user/introduction/features.rst:499
 msgid "58.8"
-msgstr ""
+msgstr "58.8"
 
 #: ../../docs/user/introduction/features.rst:499
 msgid "2024-02-23"
-msgstr ""
+msgstr "2024-02-23"
 
 #: ../../docs/user/introduction/features.rst:501
 msgid "15"
-msgstr ""
+msgstr "15"
 
 #: ../../docs/user/introduction/features.rst:501
 msgid "40.9"
-msgstr ""
+msgstr "40.9"
 
 #: ../../docs/user/introduction/features.rst:501
 msgid "59.1"
-msgstr ""
+msgstr "59.1"
 
 #: ../../docs/user/introduction/features.rst:501
 msgid "2024-05-24"
-msgstr ""
+msgstr "2024-05-24"
 
 #: ../../docs/user/introduction/features.rst:503
 msgid "16"
-msgstr ""
+msgstr "16"
 
 #: ../../docs/user/introduction/features.rst:503
 msgid "40.6"
-msgstr ""
+msgstr "40.6"
 
 #: ../../docs/user/introduction/features.rst:503
 msgid "59.4"
-msgstr ""
+msgstr "59.4"
 
 #: ../../docs/user/introduction/features.rst:503
 msgid "2024-08-22"
-msgstr ""
+msgstr "2024-08-22"
 
 #: ../../docs/user/introduction/features.rst:505
 msgid "17"
-msgstr ""
+msgstr "17"
 
 #: ../../docs/user/introduction/features.rst:505
 msgid "40.3"
-msgstr ""
+msgstr "40.3"
 
 #: ../../docs/user/introduction/features.rst:505
 msgid "59.7"
-msgstr ""
+msgstr "59.7"
 
 #: ../../docs/user/introduction/features.rst:505
 msgid "2024-11-21"
-msgstr ""
+msgstr "2024-11-21"
 
 #: ../../docs/user/introduction/features.rst:507
 msgid "18"
@@ -1317,39 +1385,39 @@ msgstr "18"
 
 #: ../../docs/user/introduction/features.rst:507
 msgid "40.1"
-msgstr ""
+msgstr "40.1"
 
 #: ../../docs/user/introduction/features.rst:507
 msgid "59.9"
-msgstr ""
+msgstr "59.9"
 
 #: ../../docs/user/introduction/features.rst:507
 msgid "0.20%"
-msgstr ""
+msgstr "0.20%"
 
 #: ../../docs/user/introduction/features.rst:507
 msgid "2025-02-20"
-msgstr ""
+msgstr "2025-02-20"
 
 #: ../../docs/user/introduction/features.rst:509
 msgid "19"
-msgstr ""
+msgstr "19"
 
 #: ../../docs/user/introduction/features.rst:509
 msgid "40.0"
-msgstr ""
+msgstr "40.0"
 
 #: ../../docs/user/introduction/features.rst:509
 msgid "60.0"
-msgstr ""
+msgstr "60.0"
 
 #: ../../docs/user/introduction/features.rst:509
 msgid "0.10%"
-msgstr ""
+msgstr "0.10%"
 
 #: ../../docs/user/introduction/features.rst:509
 msgid "2025-05-22"
-msgstr ""
+msgstr "2025-05-22"
 
 #: ../../docs/user/introduction/features.rst:512
 msgid ""
@@ -1388,6 +1456,18 @@ msgid ""
 " Compare this to Bitcoin, where debate on the blocksize has been raging for "
 "nearly three years."
 msgstr ""
+"Децентрализованное управление с помощью блокчейна, или DGBB, - это попытка "
+"Dash решить две важные проблемы криптовалюты: управление и финансирование. "
+"Управление в децентрализованных проектах затруднено, поскольку в них по "
+"определению нет центральных органов власти, принимающих решения в интересах "
+"проекта. В Dash такие решения принимаются децентрализованной автономной "
+"организацией (DAO). DAO позволяет каждому мастерноду голосовать один раз "
+"(да/нет/против) за каждое предложение. Если предложение проходит, то оно "
+"может быть реализовано (или не реализовано) разработчиками Dash. Ключевой "
+"пример - начало 2016 года, когда основная команда Dash представила в сеть "
+"предложение об увеличении размера блока до 2 МБ. В течение 24 часов был "
+"достигнут консенсус по одобрению этого изменения. Сравните это с биткойном, "
+"где споры о размере блока продолжаются уже почти три года."
 
 #: ../../docs/user/introduction/features.rst:538
 msgid ""
@@ -1404,6 +1484,19 @@ msgid ""
 "fund approved proposals. The network thus funds itself by reserving 10% of "
 "the block reward for budget projects."
 msgstr ""
+"DAO также позволяет Dash финансировать собственное развитие. В то время как "
+"другие проекты вынуждены зависеть от пожертвований или заранее "
+"сформированных фондов, Dash использует 10% вознаграждения за блок для "
+"финансирования собственного развития. Каждый раз, когда добывается блок, 90%"
+" вознаграждения делится между майнером и мастернодом в соответствии с "
+"распределением, приведенным :ref:`тут <block-reward-reallocation>`, а "
+"оставшиеся 10% не создаются до конца месяца. В течение месяца любой желающий"
+" может внести в сеть предложение по бюджету. Если это предложение получит "
+"чистое одобрение не менее 10% мастернод сети, то в конце месяца будет "
+"создана серия \"суперблоков\". В это время вознаграждение за блок, которое "
+"не было выплачено (10% от каждого блока), будет использовано для "
+"финансирования одобренных предложений. Таким образом, сеть сама себя "
+"финансирует, резервируя 10% вознаграждения за блок на бюджетные проекты."
 
 #: ../../docs/user/introduction/features.rst:552
 msgid ""
@@ -1424,6 +1517,10 @@ msgid ""
 "implemented as a Python application that binds to a local version dashd "
 "instance on each Dash masternode."
 msgstr ""
+"Sentinel, представленный в версии Dash 0.12.1, представляет собой автономный"
+" агент для сохранения, обработки и автоматизации объектов и задач управления"
+" Dash. Sentinel реализован в виде приложения на языке Python, которое "
+"связывается с экземпляром dashd локальной версии на каждом мастерноде Dash."
 
 #: ../../docs/user/introduction/features.rst:566
 msgid ""
@@ -1432,6 +1529,10 @@ msgid ""
 "Class inheritance has been utilized to extend this generic object into a "
 "\"Proposal\" object to supplant the current Dash budget system."
 msgstr ""
+"Объект управления (или \"govObject\") - это общая структура, введенная в "
+"Dash 0.12.1 для создания бюджетных предложений и триггеров. Наследование "
+"классов было использовано для расширения этого общего объекта до объекта "
+"\"Предложение\", чтобы заменить существующую бюджетную систему Dash."
 
 #: ../../docs/user/introduction/features.rst:575
 msgid "Diagram highlighting the relationship between Dash Sentinel and Core"
@@ -1487,6 +1588,16 @@ msgid ""
 "limitation on 4 inputs, so the network will attempt to lock all "
 "transactions. The current fee schedule for Dash is as follows:"
 msgstr ""
+"Выпуск версии Dash 0.12.2.0 и активация DIP0001 привели к одновременному "
+"снижению комиссии в 10 раз, а размер блока был увеличен с 1 МБ до 2 МБ, что "
+"способствовало дальнейшему росту числа недорогих транзакций даже при росте "
+"стоимости Dash. В версии Dash 0.13.0.0 была введена автоблокировка "
+"InstantSend, в результате которой мастерноды автоматически пытались "
+"заблокировать любую транзакцию с 4 и менее входами, называемую \"простой\" "
+"транзакцией, и была снята дополнительная плата за InstantSend. В версии "
+"0.14.0.0 ограничение на 4 входа было снято, и теперь сеть будет пытаться "
+"блокировать все транзакции. В настоящее время расписание комиссии для Dash "
+"выглядит следующим образом:"
 
 #: ../../docs/user/introduction/features.rst:612
 msgid "Transaction type"
@@ -1502,19 +1613,19 @@ msgstr "За единицу"
 
 #: ../../docs/user/introduction/features.rst:614
 msgid "0.001 DASH"
-msgstr ""
+msgstr "0.001 DASH"
 
 #: ../../docs/user/introduction/features.rst:614
 msgid "Per 10 rounds of CoinJoin (average)"
-msgstr ""
+msgstr "За 10 раундов CoinJoin (в среднем)"
 
 #: ../../docs/user/introduction/features.rst:616
 msgid "All other transactions"
-msgstr ""
+msgstr "Все остальные транзакции"
 
 #: ../../docs/user/introduction/features.rst:616
 msgid "0.00001 DASH"
-msgstr ""
+msgstr "0.00001 DASH"
 
 #: ../../docs/user/introduction/features.rst:616
 msgid "Per kB of transaction data"
@@ -1529,6 +1640,12 @@ msgid ""
 "InstantSend locking will be attempted on all transactions without any extra "
 "charge."
 msgstr ""
+"Например, стандартная и относительно простая транзакция в сети Dash с одним "
+"входом, одним выходом и возможным изменением адреса обычно укладывается в "
+"диапазон 200 - 400 байт. При цене в 100 долларов США за DASH комиссия "
+"составляет 0,0002 - 0,0004 доллара США, или 1/50 цента. Блокировка "
+"InstantSend будет осуществляться для всех транзакций без дополнительной "
+"оплаты."
 
 #: ../../docs/user/introduction/features.rst:626
 msgid ""
@@ -1547,6 +1664,22 @@ msgid ""
 " fee of 0.0001 DASH per input. Always check your fees before sending a "
 "transaction."
 msgstr ""
+":ref:`CoinJoin` работает путем создания деноминаций 10, 1, 0,1, 0,01 и 0,001"
+" DASH и последующего создания транзакций CoinJoin с другими пользователями с"
+" использованием этих деноминаций. За создание деноминаций взимается "
+"стандартная комиссия за стандартную транзакцию. Использование CoinJoin "
+"бесплатно, но для предотвращения спам-атак в среднем за каждую десятую "
+"транзакцию CoinJoin взимается комиссия в размере 0,0001 DASH. При "
+"расходовании деноминированных средств с помощью CoinJoin взимается обычная "
+"стандартная комиссия, но во избежание создания потенциально "
+"идентифицируемого адреса смены комиссия всегда округляется в большую сторону"
+" до наименьшего возможного номинала. Обычно это 0,001 DASH, поэтому для "
+"минимизации комиссии важно по возможности вычитать ее из отправляемой суммы."
+" Комбинирование InstantSend и CoinJoin может быть дорогостоящим из-за этого "
+"требования и того факта, что транзакция CoinJoin может потребовать "
+"нескольких вводов, в то время как InstantSend взимает комиссию в размере "
+"0,0001 DASH за каждый ввод. Всегда проверяйте размер комиссии перед "
+"отправкой транзакции."
 
 #: ../../docs/user/introduction/features.rst:645
 msgid "Evolution"
@@ -1561,6 +1694,13 @@ msgid ""
 "network design, which allows users to do various jobs for the network, along"
 " with decentralized API access and a decentralized file system."
 msgstr ""
+"`Dash Evolution <https://www.dash.org/roadmap/>`_ - это кодовое название "
+"децентрализованной платформы, построенной на технологии блокчейн Dash. Цель "
+"- предоставить простой доступ к уникальным возможностям и преимуществам "
+"Dash, чтобы помочь в создании децентрализованной технологии. Dash "
+"представляет собой многоуровневый дизайн сети, позволяющий пользователям "
+"выполнять различные задания для сети, а также децентрализованный доступ к "
+"API и децентрализованную файловую систему."
 
 #: ../../docs/user/introduction/features.rst:655
 msgid ""
@@ -1577,6 +1717,18 @@ msgid ""
 "username-based payments, the world's first decentralized API (DAPI) and a "
 "decentralized data storage system (Drive) based on IPFS."
 msgstr ""
+"Dash Evolution будет выпускаться поэтапно. Релизы Dash Core с 0.12.1 по "
+"0.12.3 закладывают основу для децентрализованных функций за кулисами. Версия"
+" 0.13 представляет основу Evolution, а именно `DIP2 Special Transactions "
+"<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ и `DIP3 "
+"Deterministic Masternotode Lists "
+"<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__. В версии 0.14 "
+"будут созданы `DIP6 Долгоживущие кворумы мастернод "
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__. Ожидается, что"
+" в конце 2019 года в версии 1.0 Dash Core будут представлены такие ключевые "
+"функции Evolution, как платежи на основе имени пользователя, первый в мире "
+"децентрализованный API (DAPI) и децентрализованная система хранения данных "
+"(Drive) на базе IPFS."
 
 #: ../../docs/user/introduction/features.rst:666
 msgid ""
@@ -1591,6 +1743,8 @@ msgid ""
 "**Drive:** A decentralized shared file system for user data that lives on "
 "the second tier network"
 msgstr ""
+"**Drive:** Децентрализованная общая файловая система для пользовательских "
+"данных, которая расположена в сети второго уровня"
 
 #: ../../docs/user/introduction/features.rst:671
 msgid ""
@@ -1661,6 +1815,8 @@ msgid ""
 "**Dash Dapps - Demoing Community Development on environment**, 17 August "
 "2020"
 msgstr ""
+"**Dash Dapps - демонстрация развития сообщества в среде**, 17 августа 2020 "
+"г."
 
 #: ../../docs/user/introduction/features.rst:700
 msgid ""

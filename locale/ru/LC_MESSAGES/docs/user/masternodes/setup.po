@@ -85,6 +85,9 @@ msgid ""
 "first time. If you are updating a masternode, see  :ref:`here <masternode-"
 "update>` instead. You will need:"
 msgstr ""
+"В этом руководстве предполагается, что вы настраиваете одну мастерноду в "
+"основносети и делаете это впервые. Если вы обновляете мастерноду, то вместо "
+"этой смотрите информацию :ref:`здесь <masternode-update>`. Вам понадобится:"
 
 #: ../../docs/user/masternodes/setup.rst:35
 msgid "1000 Dash"
@@ -161,6 +164,12 @@ msgid ""
 "configuration to the blockchain so the masternode can be included in the "
 "deterministic list."
 msgstr ""
+"Для работы мастерноды требуется адрес Dash с одним неизрасходованным выходом"
+" (UTXO) равным 1000 DASH. После его отправки необходимо извлечь различные "
+"ключи, касающиеся транзакции, для последующего внесения в конфигурационный "
+"файл и регистрационной транзакции в качестве доказательства для записи "
+"конфигурации в блокчейн, чтобы эвонода могла быть включена в "
+"детерминированный список."
 
 #: ../../docs/user/masternodes/setup.rst:67
 msgid ""
@@ -169,12 +178,19 @@ msgid ""
 " recommended to enhance security and protect yourself against hacking. This "
 "guide will describe the steps for both hardware wallets and Dash Core."
 msgstr ""
+"Мастернода может быть зарегистрирована как и с аппаратного кошелька или с "
+"официального кошелька Dash Core, либо кошелька Dash Electrum, но для "
+"повышения безопасности и защиты от взлома настоятельно рекомендуется "
+"использовать аппаратный кошелек. В данном руководстве описаны шаги для "
+"аппаратных кошельков и Dash Core."
 
 #: ../../docs/user/masternodes/setup.rst:74
 msgid ""
 "Details of registering a masternode with Dash Electrum can be found on the "
 ":ref:`Electrum - Advanced Functions page <electrum-masternodes>`."
 msgstr ""
+"Подробности регистрации мастерноды в Dash Electrum можно найти на "
+":ref:`Electrum - Advanced Functions page <electrum-masternodes>`."
 
 #: ../../docs/user/masternodes/setup.rst:78
 msgid "Option 1: Sending from a hardware wallet"
@@ -300,6 +316,9 @@ msgid ""
 "provider when you set up the server. Then enter the TCP port number. This "
 "should be 9999."
 msgstr ""
+"Введите IP-адрес вашей ноды. Его вы получили от вашего VPS-провайдера во "
+"время настройки сервера. Затем введите номер TCP-порта, должен быть "
+"использован порт 9999."
 
 #: ../../docs/user/masternodes/setup.rst:147
 msgid ""
@@ -387,6 +406,15 @@ msgid ""
 "continue with the next step at this point already: generating your "
 "masternode operator key."
 msgstr ""
+"Теперь одиночной транзакцией отправьте сумму, точно равную 1000 DASH на "
+"адрес учётной записи, который вы сгенерировали во время выполнения "
+"предыдущего шага. Эти деньги можно отправить как с другого кошелька, так и "
+"со средств, которые находятся на вашем текущем кошельке. Когда транзакция "
+"будет совершена, найдите её по адресу в `обозревателе блокчейна "
+"<https://insight.dash.org/insight/>`_ и наблюдайте за ней. Прежде чем вы "
+"сможете зарегестрировать мастерноду, понадобится 15 подтверждений этой "
+"транзакции, но настройку на этом этапе можно продолжать, перейдя на "
+"следующий шаг: генерацию ключа оператора мастерноды."
 
 #: ../../docs/user/masternodes/setup.rst:210
 msgid "Install Dash Core"
@@ -409,16 +437,22 @@ msgid ""
 "you just created for your new, non-root user. The following options are "
 "available for installing a Dash masternode:"
 msgstr ""
+"Снова откройте PuTTY или консоль и подключитесь, используя имя пользователя "
+"и пароль, которые вы только что создали для нового пользователя, не "
+"являющегося пользователем root. Для установки мастерноды Dash доступны "
+"следующие опции:"
 
 #: ../../docs/user/masternodes/setup.rst:220
 msgid "Manual installation (this guide)"
-msgstr ""
+msgstr "Ручная установка (этот гайд)"
 
 #: ../../docs/user/masternodes/setup.rst:221
 msgid ""
 "`xkcd's installation guide <https://www.dash.org/forum/threads/system-wide-"
 "masternode-setup-with-systemd-auto-re-start-rfc.39460/>`__"
 msgstr ""
+"`xkcd's гайд по установке <https://www.dash.org/forum/threads/system-wide-"
+"masternode-setup-with-systemd-auto-re-start-rfc.39460/>`__"
 
 #: ../../docs/user/masternodes/setup.rst:222
 msgid ""
@@ -426,6 +460,9 @@ msgid ""
 "<https://docs.dash.org/en/0.15.0/masternodes/setup.html#option-1-automated-"
 "installation-using-dashman>`__ (deprecated)"
 msgstr ""
+"`Установка через dashman "
+"<https://docs.dash.org/en/0.15.0/masternodes/setup.html#option-1-automated-"
+"installation-using-dashman>`__ (deprecated)"
 
 #: ../../docs/user/masternodes/setup.rst:223
 msgid ""
@@ -433,6 +470,9 @@ msgid ""
 "bootstrap/masternodes/setup.html#install-mn-bootstrap>`__ (beta version, "
 "currently testnet only)"
 msgstr ""
+"`mn-bootstrap установка <https://docs.dash.org/en/mn-"
+"bootstrap/masternodes/setup.html#install-mn-bootstrap>`__ (beta version, "
+"currently testnet only)"
 
 #: ../../docs/user/masternodes/setup.rst:226
 msgid "Manual installation"
@@ -532,6 +572,8 @@ msgid ""
 "Leave the ``masternodeblsprivkey`` field commented out for now. The result "
 "should look something like this:"
 msgstr ""
+"Поле ``masternodeblsprivkey`` пока оставим закомментированным. Результат "
+"должен выглядеть примерно так:"
 
 #: ../../docs/user/masternodes/setup.rst:299
 msgid "Entering key data in dash.conf on the masternode"
@@ -613,6 +655,8 @@ msgid ""
 "The three keys required for the different masternode roles are described "
 "briefly under :ref:`mn-concepts` in this documentation."
 msgstr ""
+"Три ключа, необходимые для различных ролей мастерноды, кратко описаны в "
+"разделе :ref:`mn-concepts` данной документации."
 
 #: ../../docs/user/masternodes/setup.rst:366
 msgid "Option 1: Registering from a hardware wallet"
@@ -624,6 +668,9 @@ msgid ""
 "filled out correctly.  Click **Generate new** for the three private keys "
 "required for a masternode:"
 msgstr ""
+"Возвращайтесь назад в DMT и убедитесь, что все поля из предыдущего шага "
+"остались заполнены правильно. Кликните **Generate new**, чтобы сгенерировать"
+" три приватных ключа, которые необходимы для мастерноды:"
 
 #: ../../docs/user/masternodes/setup.rst:372
 msgid "Owner private key"
@@ -672,6 +719,13 @@ msgid ""
 " to your masternode using ``ssh`` or PuTTY and edit the configuration file "
 "as follows::"
 msgstr ""
+"Приватный BLS-ключ необходимо внести в файл ``dash.conf`` мастерноды. Это "
+"позволит мастерноде следить за блокчейном и выявлять в нём релевантные "
+"транзакции Pro*Tx, а также заставит ноду начать выполнять функции "
+"мастерноды, после того, как подписанная владельцем транзакция ProRegTx "
+"начнёт транслироваться в сеть, что мы только что сделали выше. Войдите в "
+"свою мастерноду и отредактируйте конфигурационный файл мастерноды, как "
+"показано ниже::"
 
 #: ../../docs/user/masternodes/setup.rst:404
 msgid ""
@@ -679,6 +733,9 @@ msgid ""
 "uncomment this lines in the file, replacing the key with your BLS private "
 "key generated above::"
 msgstr ""
+"При открытии существующей конфигурации мастерноды откроется редактор. В "
+"конце файла добавьте следующую строку(раскомментируйте), заменив ключ на "
+"приватный BLS-ключ, который был сгенерирован выше::"
 
 #: ../../docs/user/masternodes/setup.rst:410
 #: ../../docs/user/masternodes/setup.rst:507
@@ -692,6 +749,15 @@ msgid ""
 " take effect. Enter the following commands, waiting a few seconds in between"
 " to give Dash Core time to shut down::"
 msgstr ""
+"Нажмите клавишу Enter, чтобы убедиться, что в конце файла осталась пустая "
+"строка, затем нажмите **Ctrl + X** для закрытия редактора и **Y** и "
+"**Enter** для сохранения файла. Обратите внимание, что предоставление "
+"``masternodeblsprivkey`` включает режим masternode, что автоматически "
+"приводит к установке параметров ``txindex=1``, ``peerbloomfilters=1`` и "
+"``prune=0``, необходимых для обеспечения работы мастерноды. Теперь нам "
+"необходимо перезапустить мастерноду, чтобы это изменение вступило в силу. "
+"Введите следующие команды, подождав несколько секунд между ними, чтобы дать "
+"Dash Core время на завершение работы::"
 
 #: ../../docs/user/masternodes/setup.rst:423
 msgid ""
@@ -699,11 +765,16 @@ msgid ""
 "``~/.dashcore/dash-cli masternode status`` or using the **Get status** "
 "function in DMT. The final result should appear as follows:"
 msgstr ""
+"На этом этапе вы можете наблюдать за своей мастернодой введя "
+"``~/.dashcore/dash-cli masternode status`` или используя функцию **Get "
+"status** в DMT. Конечный результат должен быть таким, как показано ниже:"
 
 #: ../../docs/user/masternodes/setup.rst:430
 msgid ""
 "dash-cli masternode status output showing successfully registered masternode"
 msgstr ""
+"Статус мастерноды dash-cli, который сообщает об успешно зарегистрированной "
+"мастерноде"
 
 #: ../../docs/user/masternodes/setup.rst:432
 #: ../../docs/user/masternodes/setup.rst:697
@@ -716,7 +787,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup.rst:439
 msgid "Option 2: Registering from Dash Core wallet"
-msgstr "Способ 2: Регистрация из кошелька Dash Core"
+msgstr "Способ 2: Регистрация в кошельке Dash Core"
 
 #: ../../docs/user/masternodes/setup.rst:442
 msgid "Identify the funding transaction"
@@ -768,6 +839,11 @@ msgid ""
 "public/private keypair in Dash Core by clicking **Tools > Console** and "
 "entering the following command::"
 msgstr ""
+"Если вы пользуетесь услугами хостинга, они могут предоставить вам свой "
+"открытый ключ, и вы можете пропустить этот шаг. Если вы размещаете свой "
+"собственную мастернод или согласились предоставить хостеру закрытый ключ "
+"BLS, можно сгенерировать пару открытый/закрытый ключ BLS в Dash Core, нажав "
+"**Window > Tools** и введя следующую команду::"
 
 #: ../../docs/user/masternodes/setup.rst:485
 msgid ""
@@ -792,6 +868,14 @@ msgid ""
 "broadcast by the owner (final step below). Log in to your masternode using "
 "``ssh`` or PuTTY and edit the configuration file as follows::"
 msgstr ""
+"Публичный ключ будет использоваться в следующих шагах. Приватный BLS-ключ "
+"необходимо внести в файл ``dash.conf`` мастерноды. Это позволит мастерноде "
+"следить за блокчейном и выявлять в нём релевантные транзакции Pro*Tx, а "
+"также заставит ноду начать выполнять функции мастерноды, после того, как "
+"подписанная владельцем транзакция ProRegTx начнёт транслироваться в сеть "
+"(последний шаг ниже). Войдите в учётную запись своей мастерноды, используя "
+"``ssh`` или PuTTY и отредактируйте конфигурационный файл, как показано "
+"ниже::"
 
 #: ../../docs/user/masternodes/setup.rst:501
 msgid ""
@@ -799,6 +883,9 @@ msgid ""
 "uncomment this line in the file, replacing the key with your BLS private key"
 " generated above::"
 msgstr ""
+"При открытии существующей конфигурации мастерноды откроется редактор. В "
+"конце файла добавьте следующую строку (раскомментируйте), заменив ключ на "
+"приватный BLS-ключ, который был сгенерирован выше::"
 
 #: ../../docs/user/masternodes/setup.rst:520
 msgid ""
@@ -903,6 +990,11 @@ msgid ""
 "This can be done by following the :ref:`Generate a BLS key pair <bls-"
 "generation>` instructions."
 msgstr ""
+"После активации хард форка v19 необходимо использовать ``protx "
+"register_prepare_legacy'', если для регистрации мастерноды используется BLS-"
+"ключ старой схемы. Вместо этого рекомендуется по возможности сгенерировать "
+"новый ключ BLS базовой схемы. Это можно сделать, следуя инструкции "
+":ref:`Generate a BLS key pair <bls-generation>`."
 
 #: ../../docs/user/masternodes/setup.rst:585
 msgid ""
@@ -1098,10 +1190,13 @@ msgid ""
 "masternode by entering ``~/.dashcore/dash-cli masternode status`` or using "
 "the **Get status** function in DMT."
 msgstr ""
+"В этот момент вы можете вернуться в окно терминала и проконтролировать "
+"состояние своей ноды, введя ``~/.dashcore/dash-cli masternode status`` или "
+"воспользовавшись функцией **Get status** в DMT."
 
 #: ../../docs/user/masternodes/setup.rst:703
 msgid "Option 3: Registering from Dash Electrum wallet"
-msgstr ""
+msgstr "Способ 3: Регистрация в кошельке Dash Electrum"
 
 #: ../../docs/user/masternodes/setup.rst:705
 msgid ""
@@ -1111,6 +1206,11 @@ msgid ""
 "<electrum-multisig>` the masternode collateral can be stored in a multisig "
 "wallet for increased security flexibility."
 msgstr ""
+"Dash Electrum поддерживает регистрацию и управление мастернодами. "
+"Подробности можно найти на странице :ref:`Electrum - Advanced Functions page"
+" <electrum-masternodes>`. В сочетании с функциями Electrum :ref:`multisig "
+"<electrum-multisig>` обеспечение мастернод может храниться в кошельке с "
+"мультподписью, что повышает гибкость системы безопасности."
 
 #: ../../docs/user/masternodes/setup.rst:712
 msgid ""
@@ -1120,3 +1220,9 @@ msgid ""
 " for the Dash Electrum documentation demonstrating how to configure a "
 "masternode using a multisig collateral."
 msgstr ""
+"Всегда соблюдайте осторожность при использовании многосиговых учетных "
+"записей и проверяйте, что каждая мнемоника резервируется соответствующим "
+"образом. См. `эту страницу "
+"<https://github.com/dashpay/docs/blob/master/wallets/electrum/dip3_p2sh_howto.md>`_"
+" для документации Dash Electrum, демонстрирующей настройку masternode с "
+"использованием multisig-залога."

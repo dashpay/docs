@@ -8,6 +8,7 @@
 # Max Aronych <taofgoar@protonmail.com>, 2022
 # Julia Ogonkova <livingflcl@gmail.com>, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
+# VONCAN, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-26 10:05-0400\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
-"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2022\n"
+"Last-Translator: VONCAN, 2023\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,12 +30,17 @@ msgid ""
 "Coin control, HD wallets, multisig, multiple wallet files using the Dash "
 "Core wallet"
 msgstr ""
+"Контроль монет, HD-кошельки, мультиподпись, множественные файлы кошельков "
+"при использовании кошелька Dash Core"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst-1
 msgid ""
 "dash, core, wallet, backup, restore, wallet.dat, multisig, hd, seed, "
 "passphrase, mnemonic, coin control, hierarchical deterministic"
 msgstr ""
+"dash, core, кошелёк, резервная копия, восстановление,  wallet.dat, "
+"мультиподпись, hd, seed, мнемоническая фраза, фраза-пароль, контроль монет, "
+"иерархически детерминированный"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:9
 msgid "Advanced topics"
@@ -96,37 +102,44 @@ msgstr "Блокирование UTXO в кошельке Dash Core"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:51
 msgid "Running Dash Testnet"
-msgstr ""
+msgstr "Запуск тестовой сети Dash"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:53
 msgid ""
 "It is recommended to run Dash Core on testnet for your experimentations. To "
 "start on testnet via the command line, do the following:"
 msgstr ""
+"Для проведения экспериментов рекомендуется запускать Dash Core в тестовой "
+"сети. Для её запуска через командную строку выполните следующие действия:"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:56
 msgid "For Linux::"
-msgstr ""
+msgstr "Для Linux::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:60
 msgid "For Mac (run from Applications/Dash-Qt.app/Contents/MacOS)::"
-msgstr ""
+msgstr "Для Mac (запускается из Applications/Dash-Qt.app/Contents/MacOS)::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:64
 msgid ""
 "Note: You may need to allow an app from an unknown developer before running "
 "this. Cmd+Click on the application and click **Open**."
 msgstr ""
+"Примечание: Перед выполнением этого действия может потребоваться разрешить "
+"приложение от неизвестного разработчика. Cmd+Click на приложении и нажмите "
+"**Открыть**."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:67
 msgid "Now, open Mac Terminal and run::"
-msgstr ""
+msgstr "Теперь откройте терминал Mac и выполните команду::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:72
 msgid ""
 "You may top up your testnet wallet by `accessing the faucet "
 "<http://faucet.testnet.networks.dash.org/>`_."
 msgstr ""
+"Вы можете пополнить свой кошелек в тестовой части, обратившись к крану "
+"<http://faucet.testnet.networks.dash.org/>`_."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:77
 msgid "HD Wallets"
@@ -134,11 +147,12 @@ msgstr "HD кошельки"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:82
 msgid "Upgrade to HD"
-msgstr ""
+msgstr "Переход на HD"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:86
 msgid "A new backup must be created after upgrading to an HD wallet."
 msgstr ""
+"После перехода на кошелек HD необходимо создать новую резервную копию."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:88
 msgid ""
@@ -147,6 +161,10 @@ msgid ""
 "run by either opening the console from **Window > Console** or issuing the "
 "following RPC command from ``dash-cli``::"
 msgstr ""
+"В Dash Core реализована возможность обновления неиерархического "
+"детерминированного (HD) кошелька до HD-кошелька с помощью команды "
+"``upgradetohd``. Команду можно выполнить, открыв консоль из **Window > "
+"Console** или выполнив следующую RPC-команду из ``dash-cli``::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:95
 msgid ""
@@ -154,22 +172,29 @@ msgid ""
 "third parameter to the command. If your wallet is not already encrypted, "
 "specifying a wallet passphrase will trigger wallet encryption."
 msgstr ""
+"Если кошелек уже зашифрован, то в качестве третьего параметра команды "
+"необходимо ввести кодовую фразу. Если кошелек еще не зашифрован, то указание"
+" парольной фразы запускает шифрование кошелька."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:99
 msgid ""
 "To see full details for the command, run the following from either the "
 "console or ``dash-cli``::"
 msgstr ""
+"Чтобы увидеть полную информацию о команде, выполните следующие действия из "
+"консоли или ``dash-cli``::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:105
 msgid "View HD wallet information"
-msgstr ""
+msgstr "Просмотр информации о HD-кошельке"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:107
 msgid ""
 "Open the console from **Window > Console** or issue the following RPC "
 "command from ``dash-cli`` to view the mnemonic seed::"
 msgstr ""
+"Откройте консоль из **Window > Console** или выполните следующую RPC-команду"
+" из ``dash-cli`` для просмотра мнемонического семени::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:112
 msgid ""
@@ -177,10 +202,13 @@ msgid ""
 "formats. It will also display the mnemonic passphrase if one was used when "
 "creating the wallet."
 msgstr ""
+"Dash Core отобразит HD seed в HEX формате и в формате мнемоники BIP39. Также"
+" отображается мнемоническая парольная фраза, если она использовалась при "
+"создании кошелька."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:119
 msgid "Restore HD wallet"
-msgstr ""
+msgstr "Восстановление HD-кошелька"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:121
 msgid ""
@@ -188,10 +216,15 @@ msgid ""
 "mnemonic and/or passphrase, create a new blank wallet with following "
 "command::"
 msgstr ""
+"Чтобы восстановить существующий HD-кошелек или задать свою собственную "
+"мнемонику и/или парольную фразу, создайте новый пустой кошелек с помощью "
+"следующей команды::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:126
 msgid "Add the HD wallet details to the newly created wallet by running::"
 msgstr ""
+"Добавьте реквизиты кошелька HD к вновь созданному кошельку, выполнив "
+"команду::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:130
 msgid ""
@@ -209,10 +242,15 @@ msgid ""
 "passphrase is used to specify different derivation branches from the same "
 "mnemonic seed."
 msgstr ""
+"Обратите внимание, что парольная фраза кошелька отличается от мнемонической "
+"парольной фразы, которую часто называют также \"25-м словом\" или \"словом "
+"расширения\". Парольная фраза кошелька шифрует сам файл кошелька, а "
+"мнемоническая парольная фраза используется для задания различных ветвей "
+"деривации от одного и того же мнемонического семени."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:141
 msgid "Enable HD Wallet Creation By Default"
-msgstr ""
+msgstr "Включить создание HD-кошелька по умолчанию"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:143
 msgid ""
@@ -222,12 +260,20 @@ msgid ""
 " on other operating systems. Enter the following command to configure Dash "
 "Core to generate HD wallets by default::"
 msgstr ""
+"В Dash Core реализована совместимая с BIP39/BIP44 иерархическая "
+"детерминированная (HD) генерация ключей. В данном примере мы будем "
+"использовать кошелек с графическим интерфейсом Windows, но команды будут "
+"аналогичными при использовании ``dash-qt`` или ``dashd`` в других "
+"операционных системах. Введите следующую команду, чтобы настроить Dash Core "
+"на генерацию HD-кошельков по умолчанию::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:151
 msgid ""
 "To make this configuration persist between restarts, add ``usehd=1`` to the "
 "``dash.conf`` file."
 msgstr ""
+"Чтобы эта конфигурация сохранялась между перезапусками, добавьте ``usehd=1``"
+" в файл ``dash.conf``."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:157
 msgid "Multisignature"
@@ -253,7 +299,7 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:167
 msgid "https://gist.github.com/jashmenn/9811198"
-msgstr ""
+msgstr "https://gist.github.com/jashmenn/9811198"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:168
 msgid "https://gist.github.com/gavinandresen/3966071"
@@ -391,7 +437,7 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:383
 msgid "Daemon"
-msgstr ""
+msgstr "Daemon"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:385
 msgid ""
@@ -400,46 +446,57 @@ msgid ""
 "GUI node. This guide assumes you have installed Dash Core for Linux as "
 "described in the :ref:`dashcore-installation-linux`."
 msgstr ""
+"В системах Linux Dash может выполняться как фоновый процесс (или демон). Это"
+" особенно удобно, если вы используете Dash в качестве сервера, а не узла с "
+"графическим интерфейсом. Данное руководство предполагает, что вы установили "
+"Dash Core для Linux, как описано в :ref:`dashcore-installation-linux`."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:390
 msgid "Create a user and group to run the daemon::"
-msgstr ""
+msgstr "Создайте пользователя и группу для запуска daemon::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:394
 msgid "Create a data directory for Dash in the new user's home directory::"
 msgstr ""
+"Создайте каталог данных для Dash в домашнем каталоге нового пользователя::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:398
 msgid "Create a configuration file in the new Dash data directory::"
-msgstr ""
+msgstr "Создайте файл конфигурации в новом каталоге данных Dash::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:402
 msgid ""
 "Paste the following basic configuration to your ``dash.conf`` file, "
 "replacing the password with a long and random password::"
 msgstr ""
+"Вставьте в файл ``dash.conf`` следующую базовую конфигурацию, заменив на "
+"длинный и случайный пароль::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:409
 msgid ""
 "Register the ``dashd`` daemon as a system service by creating the following "
 "file::"
 msgstr ""
+"Зарегистрируйте daemon ``dashd`` в качестве системной службы, создав "
+"следующий файл::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:413
 msgid "Paste the following daemon configuration into the file::"
-msgstr ""
+msgstr "Вставьте в файл следующую конфигурацию deamon::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:436
 msgid "Register and start the daemon with systemd::"
-msgstr ""
+msgstr "Зарегистрируйте и запустите deamon с помощью systemd::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:442
 msgid "Dash is now installed as a system daemon. View the status as follows::"
 msgstr ""
+"Теперь Dash установлен в качестве системного deamon. Просмотреть статус "
+"можно следующим образом::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:446
 msgid "View logs as follows::"
-msgstr ""
+msgstr "Просмотреть логи можно следующим образом::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:451
 msgid "Tor"
@@ -454,10 +511,17 @@ msgid ""
 "more than seven thousand relays to conceal a user's location and usage from "
 "anyone conducting network surveillance or traffic analysis."
 msgstr ""
+"`Tor <https://www.torproject.org/>`__ - свободное программное обеспечение с "
+"открытым исходным кодом для обеспечения анонимного общения. Название "
+"произошло от аббревиатуры оригинального названия программного проекта \"The "
+"Onion Router\". Tor направляет интернет-трафик через бесплатную, всемирную, "
+"добровольную оверлейную сеть, состоящую из более чем семи тысяч "
+"ретрансляторов, что позволяет скрыть местоположение и использование "
+"пользователя от тех, кто ведет наблюдение за сетью или анализирует трафик."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:462
 msgid "Dash Core GUI"
-msgstr ""
+msgstr "Dash Core GUI"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:464
 msgid ""
@@ -469,12 +533,21 @@ msgid ""
 "manual.torproject.org/installation/>`__ and `Running Tor Browser for the "
 "First Time <https://tb-manual.torproject.org/running-tor-browser/>`__."
 msgstr ""
+"Трафик Dash Core можно направить на прохождение через Tor, указав в качестве"
+" прокси-сервера запущенную службу Tor. Сначала установите Tor, посетив сайт "
+"https://www.torproject.org/download/ и загрузив соответствующий пакет Tor "
+"Browser для вашей системы. Настройте браузер Tor, следуя документации в "
+"разделах `Installation <https://tb-manual.torproject.org/installation/>`__ и"
+" `Running Tor Browser for the First Time <https://tb-"
+"manual.torproject.org/running-tor-browser/>`__."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:473
 msgid ""
 "Once Tor Browser is running, you have two options to configure Dash Core to "
 "use Tor for network traffic."
 msgstr ""
+"После запуска Tor Browser у вас есть две возможности настроить Dash Core на "
+"использование Tor для сетевого трафика."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:476
 msgid ""
@@ -483,6 +556,10 @@ msgid ""
 "``127.0.0.1`` for the **Proxy IP** and ``9150`` for the **Port**. Click "
 "**OK** and restart Dash Core."
 msgstr ""
+"**Используя GUI:** Запустите Dash Core, перейдите в раздел **Настройки > "
+"Параметры > Сеть** и включите настройку **Подключение через прокси-сервер "
+"SOCKS5**. Укажите ``127.0.0.1`` для **Proxy IP** и ``9150`` для **Port**. "
+"Нажмите **OK** и перезапустите Dash Core."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:481
 msgid ""
@@ -490,6 +567,9 @@ msgid ""
 "``dash.conf`` settings file. Add the line ``proxy=127.0.0.1:9150``, save the"
 " file and start Dash Core."
 msgstr ""
+"**Использование dash.conf:** Убедитесь, что Dash Core не запущен, и "
+"отредактируйте файл настроек ``dash.conf``. Добавьте строку "
+"``proxy=127.0.0.1:9150``, сохраните файл и запустите Dash Core."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:485
 msgid ""
@@ -497,10 +577,13 @@ msgid ""
 "start the Tor Browser each time before you start Dash Core or you will not "
 "be able to sync."
 msgstr ""
+"Теперь вы подключены через сеть Tor. Вам нужно будет не забывать запускать "
+"Tor Browser каждый раз перед запуском Dash Core, иначе синхронизация будет "
+"невозможна."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:490
 msgid "Tor onion service"
-msgstr ""
+msgstr "Tor onion сервис"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:492
 msgid ""
@@ -508,49 +591,59 @@ msgid ""
 "onion address, providing further anonymity by concealing your IP address. "
 "Follow these steps to set up an onion service under Ubuntu Linux:"
 msgstr ""
+"Tor onion services позволяет другим пользователям подключаться к вашей Dash "
+"ноде, используя onion-адрес, обеспечивая дополнительную анонимность за счет "
+"сокрытия вашего IP-адреса. Выполните следующие шаги для настройки onion-"
+"сервиса в Ubuntu Linux:"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:497
 msgid "Install tor::"
-msgstr ""
+msgstr "Установка Tor::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:501
 msgid "Add the following line to the ``torrc`` file::"
-msgstr ""
+msgstr "Добавьте в файл ``torrc`` следующую строку::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:505
 msgid "Restart Tor::"
-msgstr ""
+msgstr "Перезапустите Tor::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:509
 msgid ""
 "Determine the group Tor is running under (usually the last entry in your "
 "groups file)::"
 msgstr ""
+"Определите группу, под которой работает Tor (обычно это последняя запись в "
+"файле groups)::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:514
 msgid ""
 "The group is usually ``debian-tor`` under Debian-based Linux distributions."
 msgstr ""
+"В дистрибутивах Linux на базе Debian в качестве группы обычно выступает "
+"``debian-tor``."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:517
 msgid "Add the user running Dash to the Tor group::"
-msgstr ""
+msgstr "Добавьте пользователя, выполняющего команду Dash, в группу Tor::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:521
 msgid "Add the following two lines to ``dash.conf``::"
-msgstr ""
+msgstr "Добавьте в ``dash.conf`` следующие две строки::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:526
 msgid "Restart Dash and monitor ``debug.log`` for onion informatoin::"
 msgstr ""
+"Перезапустите Dash и проследите за ``debug.log`` для получения информации об"
+" onion::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:530
 msgid "You should see a line similar to the following::"
-msgstr ""
+msgstr "На экране должна появиться строка, аналогичная следующей::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:534
 msgid "Your onion service is now available at the shown address."
-msgstr ""
+msgstr "Теперь по указанному адресу доступен ваш onion сервис."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:538
 msgid "Multiple wallets"
@@ -562,6 +655,9 @@ msgid ""
 "wallets from the **File** menu in addition to the previously available "
 "options."
 msgstr ""
+"Начиная с версии 18.0.0, в Dash Core появилась возможность работы с "
+"несколькими кошельками из меню **File** в дополнение к ранее доступным "
+"опциям."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:544
 msgid ""
@@ -570,24 +666,30 @@ msgid ""
 "using the correct wallet. See the :ref:`Core developer documentation "
 "<core:api-rpc-multi-wallet-support>` for additional information."
 msgstr ""
+"RPC, связанные с кошельками, требуют использования опции ``-rpcwallet``, "
+"если загружено более одного файла кошелька. Это необходимо для того, чтобы "
+"команда RPC выполнялась с использованием правильного кошелька. "
+"Дополнительную информацию см. в :ref:`Документация разработчиков для Core `."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:550
 msgid "Open a wallet"
-msgstr ""
+msgstr "Открыть кошелёк"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:552
 msgid ""
 "To open a wallet, click **File -> Open Wallet** and then click the name of "
 "wallet file."
 msgstr ""
+"Чтобы открыть кошелек, нажмите **Файл -> Открыть кошелек**, а затем щелкните"
+" на имени файла кошелька."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:558
 msgid "Open wallet"
-msgstr ""
+msgstr "Открыть кошелёк"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:561
 msgid "Select the active wallet"
-msgstr ""
+msgstr "Выберите активный кошелек"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:563
 msgid ""
@@ -595,14 +697,17 @@ msgid ""
 "left of the Dash logo on the tab bar. Click the dropdown box and select a "
 "wallet to set it as the active wallet."
 msgstr ""
+"Когда открыто несколько кошельков, слева от логотипа Dash на панели вкладок "
+"отображается выпадающее окно выбора кошелька. Щелкните по выпадающему окну и"
+" выберите кошелек, чтобы установить его в качестве активного."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:570
 msgid "Wallet selection dropdown box"
-msgstr ""
+msgstr "Выпадающее окно выбора кошелька"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:573
 msgid "Close a wallet"
-msgstr ""
+msgstr "Закройте кошелёк"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:575
 msgid ""
@@ -610,20 +715,25 @@ msgid ""
 "dropdown box. Next, click **File -> Close Wallet** and then click **Yes** on"
 " the Close wallet confirmation screen."
 msgstr ""
+"Чтобы закрыть кошелек, установите его в качестве активного с помощью "
+"выпадающего окна выбора кошелька. Затем нажмите **Файл -> Закрыть кошелек** "
+"и нажмите **Да** на экране подтверждения закрытия кошелька."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:582
 msgid "Close wallet confirmation"
-msgstr ""
+msgstr "Подтверждение закрытия кошелька"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:587
 msgid ""
 "If the only open wallet is closed, wallet-related items on the tab bar will "
 "be disabled."
 msgstr ""
+"Если единственный открытый кошелек закрыт, то связанные с кошельком элементы"
+" на панели вкладок будут отключены."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:590
 msgid "Alternative methods"
-msgstr ""
+msgstr "Альтернативные методы"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:592
 msgid ""
@@ -632,6 +742,10 @@ msgid ""
 "instances of Dash Core simultaneously by specifying separate data "
 "directories using the ``datadir`` argument."
 msgstr ""
+"Также можно выбирать между различными кошельками Dash при запуске Dash Core,"
+" указывая аргумент ``wallet``, или даже запускать несколько экземпляров Dash"
+" Core одновременно, указывая отдельные каталоги данных с помощью аргумента "
+"``datadir``."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:597
 msgid ""
@@ -796,3 +910,6 @@ msgid ""
 "in `previous versions of this documentation "
 "<https://docs.dash.org/en/0.17.0/wallets/dashcore/advanced.html#keepass>`_."
 msgstr ""
+"Поддержка KeePass была удалена в Dash Core 18.0.0. Подробности по-прежнему "
+"можно найти в `предыдущих версиях этой документации "
+"<https://docs.dash.org/en/0.17.0/wallets/dashcore/advanced.html#keepass>`_."
