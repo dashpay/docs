@@ -71,3 +71,18 @@ Next run the following to trigger builds for each language on ReadTheDocs:
 ``` bash
 ./transifex/build.sh
 ```
+
+### To check build status for localized sites
+
+Make sure the [token](https://docs.readthedocs.io/en/stable/api/v3.html#token) variable is accessible. Run the following in the folder containing your `.env`
+file:
+
+``` bash
+source .env
+```
+
+Next run the following to check build status for each language on ReadTheDocs:
+
+``` bash
+./transifex/build-status-check.sh
+```
