@@ -36,10 +36,15 @@ languages, including Czech. A kind of 'vault' for your private bitcoin
 key, Trezor claims to use a number of clever tricks to maintain security
 even on compromised and unsafe machines.
 
+.. attention::
+  Only the `Model One <https://trezor.io/trezor-model-one>`_ and
+  `Model T <https://trezor.io/trezor-model-t>`_ support Dash.
+  The Trezor Safe 3 does not support Dash.
+
 - Site: https://trezor.io
 - Review: https://dashnews.org/trezor-hardware-wallet-review/
 - Shop: https://shop.trezor.io
-- Wallet: https://wallet.trezor.io
+- Wallet: https://trezor.io/trezor-suite
 
 It is also possible to operate a Dash masternode using your Trezor. See
 here for details.
