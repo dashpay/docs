@@ -24,23 +24,16 @@ $(document).ready(function() {
 });
 
 $(function(){
+	var siteURL = "https://docs.dash.org/";
 	$("#langselect").on('change', function() {
 		var pageURL = $(location).attr("href");
 		var newLang = $('#langselect').val();
-		if (newLang == "zh-CN") {
-			newLang = "zh_CN";
-		} else if (newLang == "zh-TW") {
-			newLang = "zh_TW";
-		}
-		
 		var currentLang = DOCUMENTATION_OPTIONS['LANGUAGE'];
-		if (currentLang == "zh-CN") {
-			currentLang = "zh_CN";
-		} else if (currentLang == "zh-TW") {
-			currentLang = "zh_TW";
-		}
 
-		pageURL = pageURL.replace("https://docs.dash.org/" + currentLang, "");
-		window.location.href = "https://docs.dash.org/" + newLang + pageURL;
+		pageURL = pageURL.replace(siteURL + currentLang, "");
+		var newFullURL = siteURL + newLang + pageURL;
+		// console.log(`pageURL: ${pageURL}`);
+		console.log(`Switch to: ${newFullURL}`);
+		window.location.href = newFullURL;
 	});
 });
