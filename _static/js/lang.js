@@ -30,21 +30,9 @@ $(function(){
 		console.log(`pageURL: ${pageURL}`);
 		var newLang = $('#langselect').val();
 		console.log(`newLang: ${newLang}`);
-		if (newLang == "zh-CN") {
-			newLang = "zh_CN";
-		} else if (newLang == "zh-TW") {
-			newLang = "zh_TW";
-		}
-		console.log(`Adjusted newLang: ${newLang}`)
 		
 		var currentLang = DOCUMENTATION_OPTIONS['LANGUAGE'];
 		console.log(`currentLang: ${currentLang}`);
-		if (currentLang == "zh-CN") {
-			currentLang = "zh_CN";
-		} else if (currentLang == "zh-TW") {
-			currentLang = "zh_TW";
-		}
-		console.log(`Adjusted currentLang: ${currentLang}`);
 
 		pageURL = pageURL.replace(siteURL + currentLang, "");
 		console.log(`pageURL: ${pageURL}`);
