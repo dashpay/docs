@@ -775,12 +775,12 @@ Next, we will install the Dash Platform services. Start with installing
 JavaScript dependencies::
 
   cd
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
   source ~/.bashrc
-  nvm install 16.20.2
+  nvm install 20
   npm install pm2 -g
 
-Followed by Rust dependencies:: 
+Followed by Rust dependencies::
 
   sudo apt install -y build-essential clang cmake curl g++ gcc gnupg2 libgmp-dev libpython3.10-dev libssl-dev libzmq3-dev lsb-release pkg-config
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -1027,9 +1027,9 @@ directly. Install dependencies if necessary (Docker, NodeJS, NPM, Github
 CLI). Windows, macOS and Linux are supported, the following example
 shows how to install dependencies under Ubuntu 20.04 LTS.::
 
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
   source ~/.bashrc
-  nvm install 16
+  nvm install 20
   curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
   sudo usermod -aG docker $USER
   newgrp docker
