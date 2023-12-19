@@ -27,28 +27,28 @@ $(function(){
 	var siteURL = "https://docs.dash.org/";
 	$("#langselect").on('change', function() {
 		var pageURL = $(location).attr("href");
-		console.log(pageURL);
+		console.log(`pageURL: ${pageURL}`);
 		var newLang = $('#langselect').val();
-		console.log(newLang);
+		console.log(`newLang: ${newLang}`);
 		if (newLang == "zh-CN") {
 			newLang = "zh_CN";
 		} else if (newLang == "zh-TW") {
 			newLang = "zh_TW";
 		}
-		console.log(newLang)
+		console.log(`Adjusted newLang: ${newLang}`)
 		
 		var currentLang = DOCUMENTATION_OPTIONS['LANGUAGE'];
-		console.log(currentLang);
+		console.log(`currentLang: ${currentLang}`);
 		if (currentLang == "zh-CN") {
 			currentLang = "zh_CN";
 		} else if (currentLang == "zh-TW") {
 			currentLang = "zh_TW";
 		}
-		console.log(currentLang);
+		console.log(`Adjusted currentLang: ${currentLang}`);
 
 		pageURL = pageURL.replace(siteURL + currentLang, "");
-		console.log(pageURL);
-		console.log(siteURL + newLang + pageURL);
+		console.log(`pageURL: ${pageURL}`);
+		console.log(`Switch to: ${siteURL + newLang + pageURL}`);
 		window.location.href = siteURL + newLang + pageURL;
 	});
 });
