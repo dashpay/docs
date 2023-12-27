@@ -305,7 +305,7 @@ Masternode requirements
 - A dedicated IP address: These usually come with the VPS/server.
 
 In addition to the DASH held in collateral, masternodes also have
-minimum hardware requirements. For Dash versions 0.14 and higher, these
+minimum hardware requirements. For Dash versions 20.0 and higher, these
 requirements are as follows:
 
 .. _mn-hardware-reqs-table:
