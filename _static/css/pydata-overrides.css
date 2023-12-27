@@ -8,14 +8,15 @@
 }
 
 html[data-theme="light"] {
-  --pst-color-primary:var(--dash-blue);
-  --pst-color-link:var(--pst-color-primary);
-  --pst-color-link-hover:var(--dash-deep-blue);
+  --pst-color-primary: var(--dash-blue);
+  --pst-color-link: var(--pst-color-primary);
+  --pst-color-link-hover: var(--dash-deep-blue);
 }
 
 html[data-theme="dark"] {
-  --pst-color-primary:var(--dash-blue);
-  --pst-color-link:var(--pst-color-primary);
+  --pst-color-primary: var(--dash-blue);
+  --pst-color-link: var(--pst-color-primary);
+  --pst-color-link-hover: var(--pst-color-warning)
 }
 
 html {
@@ -30,21 +31,33 @@ html {
 }
 
 html[data-theme=dark] .bd-content img:not(.only-dark):not(.dark-light) {
-    background: none;
-    border-radius: none;
+  background: none;
+  border-radius: none;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
-p, a, li, ol {
+p,
+a,
+li,
+ol {
   font-family: 'Open Sans', sans-serif;
-} 
+}
+
+a.headerlink {
+  color: var(--pst-color-primary)
+}
 
 .sidebar-end-items__item {
-    position: relative;
+  position: relative;
 }
 
 .sidebar-end-items__item:after {
@@ -57,18 +70,18 @@ p, a, li, ol {
 }
 
 select {
-    width: 100%;
-    padding: 10px;
-    appearance: none;
-    background: transparent;
-    border-radius: 0.25rem;
+  width: 100%;
+  padding: 10px;
+  appearance: none;
+  background: transparent;
+  border-radius: 0.25rem;
 }
 
 html[data-theme=dark] select {
   color: #fff;
 }
 
-html[data-theme="light"] select{
+html[data-theme="light"] select {
   color: #000;
 }
 
@@ -82,6 +95,18 @@ tbody tr:nth-child(even) { background-color: var(--table-bg-color-even); }
 
 .table thead th.head {
   vertical-align: middle;
+}
+
+/* Adjust scroll-to-top button */
+#pst-back-to-top {
+  background-color: var(--pst-color-primary);
+  /* Make sure it doesn't display on to of the RTD search dialog */
+  z-index: 499;
+}
+
+/* Adjust sphinx-design card */
+.sd-card-hover:hover {
+  border-color: var(--pst-color-primary)
 }
 
 /* These are hacks to hide the pydata-theme search popup behind the readthedocs
@@ -98,7 +123,7 @@ sphinx search extension interface.
 
 /* Make sure it doesn't stick out on the sides of the RtD search screen */
 .search-button__wrapper.show .search-button__search-container {
-    width: 15%;
+  width: 15%;
 }
 
 /* Handle actual styling of the RtD search extension's screen */
@@ -114,16 +139,14 @@ sphinx search extension interface.
   font-size: var(--pst-font-size-icon);
 }
 
-.rtd__search__credits {
-  background-color: var(--pst-color-background);
-  color: var(--pst-color-text-muted);
+.search__result__title {
+  color: var(--pst-color-primary);
+  border-bottom-color: var(--pst-color-primary)
 }
 
-.rtd__search__credits a {
-  color: var(--pst-color-link);
-}
-
-.search__result__content, .search__result__subheading, .search__error__box {
+.search__result__content,
+.search__result__subheading,
+.search__error__box {
   color: var(--pst-color-text-base);
 }
 
@@ -131,9 +154,38 @@ sphinx search extension interface.
   border-bottom-color: var(--pst-color-text-base);
 }
 
-[data-theme="dark"] .search__outer .search__result__content span,
-[data-theme="dark"] .search__outer .search__result__title span {
-  background-color: var(--pst-color-muted-highlight); /* Dark mode background color */
+/* Dark theme config */
+html[data-theme="dark"] {
+
+  .search__outer .search__result__content span,
+  .search__outer .search__result__title span {
+    /* Dark mode background color */
+    /* background-color: var(--pst-color-muted-highlight); */
+    color: var(--pst-color-primary);
+    border-bottom-color: var(--pst-color-primary);
+  }
+
+  /* Set color for the line between search text and results */
+  .search__outer .bar:after,
+  .search__outer .bar:before {
+    background: var(--pst-color-primary);
+  }
+
+  .rtd__search__credits {
+    border: 1px solid var(--pst-color-border);
+    border-width: 1px 0 0 0;
+  }
+}
+
+.rtd__search__credits {
+  background-color: var(--pst-color-background);
+  color: var(--pst-color-text-muted);
+  /* So text is centered vertically */
+  height: 37px;
+}
+
+.rtd__search__credits a {
+  color: var(--pst-color-link);
 }
 
 .search__outer .search__result__content span,
@@ -148,7 +200,8 @@ sphinx search extension interface.
 
 /* Prevent hover from actually changing the color by setting it to what it
   already is */
-.outer_div_page_results:hover, .search__result__box .active {
+.outer_div_page_results:hover,
+.search__result__box .active {
   background-color: var(--pst-color-on-background);
 }
 
