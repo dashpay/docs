@@ -305,7 +305,7 @@ Masternode requirements
 - A dedicated IP address: These usually come with the VPS/server.
 
 In addition to the DASH held in collateral, masternodes also have
-minimum hardware requirements. For Dash versions 0.14 and higher, these
+minimum hardware requirements. For Dash versions 20.0 and higher, these
 requirements are as follows:
 
 .. _mn-hardware-reqs-table:
@@ -313,16 +313,16 @@ requirements are as follows:
 +---------+------------------+------------------+
 |         | Minimum          | Recommended      |
 +=========+==================+==================+
-| CPU     | 1x 2 GHz         | 2x 2 GHz         |
+| CPU     | 2x 2 GHz         | 3x 2 GHz         |
 +---------+------------------+------------------+
 | RAM     | 4 GB + 2 GB swap | 8 GB + 4 GB swap |
 +---------+------------------+------------------+
 | Disk    | 60 GB            | 80 GB            |
 +---------+------------------+------------------+
-| Network | 400 GB/mth       | 1 TB/mth         |
+| Network | 750 GB/mth       | 1 TB/mth         |
 +---------+------------------+------------------+
 
-Masternode bandwidth use ranges between 300-500 GB per month and will
+Masternode bandwidth use ranges between 600-900 GB per month and will
 grow as the network does.
 
 Dash Evolution
