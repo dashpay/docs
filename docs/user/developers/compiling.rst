@@ -64,6 +64,33 @@ Download the Mac OSX SDK::
   wget -N -P ~/guix-dash https://bitcoincore.org/depends-sources/sdks/Xcode-12.2-12B45b-extracted-SDK-with-libcxx-headers.tar.gz
   tar -xvzf ~/guix-dash/Xcode-12.2-12B45b-extracted-SDK-with-libcxx-headers.tar.gz --directory ~/guix-dash/macOS-SDKs/
 
+Prepare guix
+------------
+
+It is only necessary to run this step during the initial setup of your machine.
+Run the guix install routine to prepare your environment::
+
+  cd /tmp
+  wget https://git.savannah.gnu.org/cgit/guix.git/plain/etc/guix-install.sh
+  chmod +x guix-install.sh
+  ./guix-install.sh
+
+Build Dash Core
+---------------
+
+Check out branch / tag to build. For example, to build Dash Core 20.0.3::
+
+  cd ~/dash
+  git checkout v20.0.3
+
+Run guix-build to create binaries for Linux, Mac, and Windows::
+
+  # Example: Build binaries for all OSes
+  SDK_PATH="$HOME/guix-dash/macOS-SDKs" ./contrib/guix/guix-build
+
+When the build completes, it will put the binaries in the
+``guix-build-<version>/output/`` directory.
+
 
 .. _gitian-build:
 
