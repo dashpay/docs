@@ -174,7 +174,6 @@ command::
   # Example: gpg --output alice.pgp --armor --export alice
   gpg --output <signer>.pgp --armor --export <signer>
 
-
 Adding your signatures
 ----------------------
 
@@ -212,151 +211,6 @@ Go to `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ and open a pull
 request to the ``master`` branch of the upstream repository. The pull request
 will be reviewed by Dash Core developers and merged if everything checks out.
 Thanks for contributing!
-
-.. _gitian-build:
-
-Gitian
-======
-
-.. warning::
-  Gitian builds were deprecated in favor of Guix builds with the release of
-  Dash Core v20.0. The documentation below has been retained for historical
-  reference only.
-
-Gitian is the deterministic build process that is used to build the Dash Core
-executables. It provides a way to be reasonably sure that the executables are
-really built from the source on GitHub. It also makes sure that the same, tested
-dependencies are used and statically built into the executable. Multiple
-developers build the source code by following a specific descriptor ("recipe"),
-cryptographically sign the result, and upload the resulting signature. These
-results are compared and only if they match, the build is accepted and uploaded
-to dash.org.
-
-Build process
-=============
-
-.. note::
-  This setup has been tested using a clean install of Ubuntu 20.04. For maximum
-  compatibility, please use that version.
-
-Start by logging in as the "root" user. Create a new user with the following
-command, replacing ``<username>`` with a username of your choice::
-
-  adduser <username>
-
-You will be prompted for a password. Enter and confirm using a new password
-(different to your root password) and store it in a safe place. You will also
-see prompts for user information, but this can be left blank. Alternatively, an
-existing user can be used on systems that are already in use (e.g. your existing
-development system).
-
-Create a ``docker`` group on the system. This group will be used by Docker
-processes and also will enable non-root users to run the Docker commands used by
-the build process::
-
-  groupadd docker
-
-Add the user to the sudo and docker groups so they can perform commands as
-root and run docker commands::
-
-  usermod -aG sudo,docker <username>
-
-Install prerequisites
----------------------
-
-While still logged in as root, update the system from the Ubuntu package
-repository::
-
-  apt update
-  apt upgrade -y
-
-Install apt-cacher-ng::
-
-  apt install -y apt-cacher-ng
-
-.. note::
-  Select ``No`` when asked ``Allow HTTP tunnels through Apt-Cacher NG?`` during
-  installation.
-
-  Note: you may also need to open port 3142 if you have a firewall enabled on
-  your system (e.g. ``ufw allow 3142/tcp``).
-
-After installing these updates, reboot the system, login as ``<username>``, and
-clone required repositories::
-
-  git clone https://github.com/dashpay/dash
-  git clone https://github.com/devrandom/gitian-builder
-  git clone https://github.com/dashpay/dash-detached-sigs
-  git clone https://github.com/dashpay/gitian.sigs
-
-Download the Mac OSX SDK::
-
-  mkdir gitian-builder/inputs
-  wget -q -O gitian-builder/inputs/MacOSX10.11.sdk.tar.gz https://bitcoincore.org/depends-sources/sdks/MacOSX10.11.sdk.tar.gz
-
-Prepare gitian
---------------
-
-It is only necessary to run this step during the initial setup of your machine.
-Checkout the tag associated with the Dash Core version you plan to build::
-
-  # <version> = Dash Core tag to build
-  # Example: git checkout v0.17.0.0
-  cd dash
-  git checkout <version>
-  cd ..
-
-Run the gitian-build setup routine to prepare your environment::
-
-  # <signer> = The name associated with your PGP key
-  # <version> = Dash Core tag to build (exclude the leading "v")
-  # Example: ./dash/contrib/gitian-build.py --setup alice 0.17.0.3
-  ./dash/contrib/gitian-build.py --setup <signer> <version>
-
-.. note::
-  The ``signer`` parameter should be set to the value provided for "Real name"
-  when generating a key with GPG. See the `GnuPrivacyGuard Howto
-  <https://help.ubuntu.com/community/GnuPrivacyGuardHowto#Generating_an_OpenPGP_Key>`_
-  for details on how to generate a key if you don't already have one.
-
-Build Dash Core
----------------
-
-Run gitian build to create binaries for Linux, Mac, and Windows::
-
-  # <signer> = The name associated with your PGP key
-  # <version> = Dash Core tag to build (exclude the leading "v")
-  # Example: Build binaries for all OSes, use all available cores and 16 GB RAM
-  #   ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m 16000 alice 0.17.0.3
-  ./dash/contrib/gitian-build.py -b -n -j $(nproc) -m <MB of RAM to use> <signer> <version>
-
-.. warning::
-  These instructions assume that a PGP key for <signer> exists on the build
-  system. If the expected key is not found, the script will fail at the signing
-  step with a message including::
-
-    gpg: skipped "<signer>": No secret key
-    gpg: signing failed: No secret key
-
-When the build completes, it will put the binaries in a ``dashcore-binaries``
-folder. The ``.assert`` files and their signatures will be placed in
-``gitian.sigs/<version>/<signer>/...``.
-
-Create signatures for signed binaries
--------------------------------------
-
-Mac and Windows binaries are signed by Dash Core Group using the relevant
-Apple/Microsoft processes. In this step, that information will be validated and
-signed by your machine. The associated ``.assert`` files and their signatures
-will be placed in ``gitian.sigs/<version>/<signer>/...`` along with the
-signatures for unsigned binaries created in the previous step.
-
-::
-
-  # <signer> = The name associated with your PGP key
-  # <version> = Dash Core tag to build (exclude the leading "v")
-  # Example: ./dash/contrib/gitian-build.py -s -n -j $(nproc) -m 16000 -o mw alice 0.17.0.3
-  ./dash/contrib/gitian-build.py -s -n -j $(nproc) -m <MB of RAM to use> -o mw <signer> <version> 
 
 Verify signatures
 =================
@@ -403,3 +257,13 @@ successfully, you will also see your own signatures with an ``OK`` status also.
   gpg:          There is no indication that the signature belongs to the owner.
   Primary key fingerprint: 3F5D 48C9 F002 93CD 365A  3A98 8359 2BD1 400D 58D9
   UdjinM6: OK
+
+.. _gitian-build:
+
+Gitian
+======
+
+.. warning::
+  Gitian builds were deprecated in favor of Guix builds with the release of
+  Dash Core v20.0. Instructions on building Dash Core 19.0 or older versions
+  using gitian are available in a `previous version of this page <https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>`__.
