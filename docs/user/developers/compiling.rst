@@ -1,6 +1,6 @@
 .. meta::
-   :description: Compile Dash Core for Linux, macOS, Windows and Gitian deterministic builds
-   :keywords: dash, build, compile, linux, macOS, windows, binary, Gitian, developers
+   :description: Compile Dash Core for Linux, macOS, Windows and Guix deterministic builds
+   :keywords: dash, build, compile, linux, macOS, windows, binary, guix, developers
 
 .. _compiling-dash:
 
@@ -82,8 +82,10 @@ Run the guix install routine to prepare your environment::
 Build Dash Core
 ---------------
 
-Check out the tag to build. For example, to build Dash Core 20.0.3::
+Checkout the tag associated with the Dash Core version you plan to build::
 
+  # <version> = Dash Core tag to build
+  # Example: git checkout v20.0.3
   cd ~/dash
   git checkout v20.0.3
 
@@ -95,6 +97,121 @@ Run guix-build to create binaries for Linux, Mac, and Windows::
 When the build completes, it will put the binaries in the
 ``guix-build-<version>/output/`` directory.
 
+Create signatures for binaries
+==============================
+
+Mac and Windows binaries are signed by Dash Core Group using the relevant Apple
+and Microsoft processes. In this step, that information will be validated and
+signed by your machine. 
+
+Clone the signature-related repositories if you haven't done so previously::
+
+  cd ~
+  git clone https://github.com/dashpay/guix.sigs
+  git clone https://github.com/dashpay/dash-detached-sigs
+
+
+Prepare the `detached sigs repository <https://github.com/dashpay/dash-detached-sigs>`__::
+
+  cd ~/dash-detached-sigs/
+  git checkout master
+  git pull
+  # Checkout the branch for the version being built
+  # Example: git checkout v20.0.3
+  git checkout v<version>
+
+Unsigned binaries
+-----------------
+
+To create signatures for the unsigned binaries, run guix-attest::
+
+  # <signer> = The name associated with your PGP key
+  # Example: env GUIX_SIGS_REPO=../guix.sigs SIGNER=alice ./contrib/guix/guix-attest
+  cd ~/dash
+  env GUIX_SIGS_REPO=../guix.sigs SIGNER=<signer> ./contrib/guix/guix-attest
+
+.. note::
+  The ``signer`` parameter should be set to the value provided for "Real name"
+  when generating a key with GPG. See the `GnuPrivacyGuard Howto
+  <https://help.ubuntu.com/community/GnuPrivacyGuardHowto#Generating_an_OpenPGP_Key>`_
+  for details on how to generate a key if you don't already have one.
+
+Signed binaries
+---------------
+
+To create signatures for the signed binaries, run guix-codesign followed by
+guix-attest::
+
+  env DETACHED_SIGS_REPO=../dash-detached-sigs ./contrib/guix/guix-codesign
+
+::
+
+  # <signer> = The name associated with your PGP key
+  # Example: env GUIX_SIGS_REPO=../guix.sigs SIGNER=alice ./contrib/guix/guix-attest
+  env GUIX_SIGS_REPO=../guix.sigs SIGNER=<signer> ./contrib/guix/guix-attest
+  
+Upload signatures
+=================
+
+After successfully building the binaries, signing them, and verifying the
+signatures, you can optionally contribute them to the `guix.sigs repository
+<https://github.com/dashpay/guix.sigs/>`_ via a pull request on GitHub.
+
+Initial setup
+-------------
+
+Since the official guix.sigs repository has restricted write access, create a
+fork of it via GitHub and add your fork as a remote repository::
+
+  git remote add me https://github.com/<your GitHub username>/guix.sigs
+
+The first time you contribute signatures, also put a copy of your public key in
+the ``builder-keys`` folder of the repository so others can easily verify your
+signature. Your public key can be exported to a file using the following
+command::
+
+  # <signer> = The name associated with your PGP key
+  # Example: gpg --output alice.pgp --armor --export alice
+  gpg --output <signer>.pgp --armor --export <signer>
+
+
+Adding your signatures
+----------------------
+
+Prepare the `guix.sigs repository <https://github.com/dashpay/guix.sigs>`__ by
+pulling the latest changes::
+
+  cd ~/guix.sigs/
+  git checkout master
+  git pull
+
+Create a new branch for the version that was built::
+
+  # <signer> = The name associated with your PGP key
+  # <version> = Dash Core tag to build (exclude the leading "v")
+  # Example: git checkout -b 20.0.3-alice
+  git checkout -b <version>-<signer>
+
+Add and commit the ``*.SHA256SUMS`` and ``*.SHA256SUMS.asc`` files created by the build
+process::
+  
+  # Example: git add 20.0.3
+  git add <version>
+
+::
+
+  # Example: git commit -m "chore: add guix signatures for alice for 20.0.3"
+  git commit -m "chore: add guix signatures for <signer> for <version>"
+
+Push to your fork of the guix.sigs repository on GitHub::
+
+  # "me" references the name of the remote repository added during initial setup
+  git push me
+
+Go to `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ and open a pull
+request to the ``master`` branch of the upstream repository. The pull request
+will be reviewed by Dash Core developers and merged if everything checks out.
+Thanks for contributing!
 
 .. _gitian-build:
 
