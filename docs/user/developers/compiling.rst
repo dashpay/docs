@@ -32,6 +32,10 @@ descriptor ("recipe"), cryptographically sign the result, and upload the
 resulting signature. These results are compared and only if they match, the
 build is accepted and uploaded to dash.org.
 
+The instructions to build Dash Core 19.0 or older versions using gitian are
+available in a `previous version of this page
+<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>`__.
+
 Build process
 =============
 
@@ -58,7 +62,7 @@ Clone the Dash repository::
 
   git clone https://github.com/dashpay/dash
 
-Download the Mac OSX SDK::
+Download the macOS SDK which is required to create macOS builds::
 
   mkdir -p ~/guix-dash/macOS-SDKs
   wget -N -P ~/guix-dash https://bitcoincore.org/depends-sources/sdks/Xcode-12.2-12B45b-extracted-SDK-with-libcxx-headers.tar.gz
@@ -78,7 +82,7 @@ Run the guix install routine to prepare your environment::
 Build Dash Core
 ---------------
 
-Check out branch / tag to build. For example, to build Dash Core 20.0.3::
+Check out the tag to build. For example, to build Dash Core 20.0.3::
 
   cd ~/dash
   git checkout v20.0.3
@@ -96,6 +100,11 @@ When the build completes, it will put the binaries in the
 
 Gitian
 ======
+
+.. warning::
+  Gitian builds were deprecated in favor of Guix builds with the release of
+  Dash Core v20.0. The documentation below has been retained for historical
+  reference only.
 
 Gitian is the deterministic build process that is used to build the Dash Core
 executables. It provides a way to be reasonably sure that the executables are
