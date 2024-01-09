@@ -177,6 +177,7 @@ Initial setup
 Since the official guix.sigs repository has restricted write access, create a
 fork of it via GitHub and add your fork as a remote repository::
 
+  cd ~/guix.sigs
   git remote add me https://github.com/<your GitHub username>/guix.sigs
 
 The first time you contribute signatures, also put a copy of your public key in
@@ -231,9 +232,16 @@ Verify signatures
 
 The `guix.sigs repository <https://github.com/dashpay/guix.sigs/>`_ contains
 deterministic build results signed by multiple Core developers for each release.
-Run the following command to verify that your build matches the official
+The repository also contains public keys used for signature verification. Import
+the public keys::
+
+  cd ~/guix.sigs
+  gpg --import builder-keys/*.pgp
+
+Run the following commands to verify that your build matches the official
 release::
 
+  cd ~/dash
   git -C ~/guix.sigs pull
   # Example:
   # git checkout 20.0.3
