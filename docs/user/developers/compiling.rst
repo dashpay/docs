@@ -134,6 +134,20 @@ Prepare the `detached sigs repository <https://github.com/dashpay/dash-detached-
   # Example: git checkout v20.0.3
   git checkout v<version>
 
+Prepare the `guix.sigs repository <https://github.com/dashpay/guix.sigs>`__ by
+pulling the latest changes::
+
+  cd ~/guix.sigs/
+  git checkout master
+  git pull
+
+Create a new branch for the version that was built::
+
+  # <signer> = The name associated with your PGP key
+  # <version> = Dash Core tag to build (exclude the leading "v")
+  # Example: git checkout -b 20.0.3-alice
+  git checkout -b <version>-<signer>
+
 Unsigned binaries
 -----------------
 
@@ -191,20 +205,6 @@ command::
 
 Adding your signatures
 ----------------------
-
-Prepare the `guix.sigs repository <https://github.com/dashpay/guix.sigs>`__ by
-pulling the latest changes::
-
-  cd ~/guix.sigs/
-  git checkout master
-  git pull
-
-Create a new branch for the version that was built::
-
-  # <signer> = The name associated with your PGP key
-  # <version> = Dash Core tag to build (exclude the leading "v")
-  # Example: git checkout -b 20.0.3-alice
-  git checkout -b <version>-<signer>
 
 Add and commit the ``*.SHA256SUMS`` and ``*.SHA256SUMS.asc`` files created by the build
 process::
