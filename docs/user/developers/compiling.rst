@@ -140,9 +140,9 @@ Unsigned binaries
 To create signatures for the unsigned binaries, run ``guix-attest``::
 
   # <signer> = The name associated with your PGP key
-  # Example: env GUIX_SIGS_REPO=../guix.sigs SIGNER=alice ./contrib/guix/guix-attest
+  # Example: env GUIX_SIGS_REPO=~/guix.sigs SIGNER=alice ./contrib/guix/guix-attest
   cd ~/dash
-  env GUIX_SIGS_REPO=../guix.sigs SIGNER=<signer> ./contrib/guix/guix-attest
+  env GUIX_SIGS_REPO=~/guix.sigs SIGNER=<signer> ./contrib/guix/guix-attest
 
 .. note::
   The ``signer`` parameter should be set to the value provided for "Real name"
@@ -156,13 +156,13 @@ Signed binaries
 To create signatures for the signed binaries, run ``guix-codesign`` followed by
 guix-attest::
 
-  env DETACHED_SIGS_REPO=../dash-detached-sigs ./contrib/guix/guix-codesign
+  env DETACHED_SIGS_REPO=~/dash-detached-sigs ./contrib/guix/guix-codesign
 
 ::
 
   # <signer> = The name associated with your PGP key
-  # Example: env GUIX_SIGS_REPO=../guix.sigs SIGNER=alice ./contrib/guix/guix-attest
-  env GUIX_SIGS_REPO=../guix.sigs SIGNER=<signer> ./contrib/guix/guix-attest
+  # Example: env GUIX_SIGS_REPO=~/guix.sigs SIGNER=alice ./contrib/guix/guix-attest
+  env GUIX_SIGS_REPO=~/guix.sigs SIGNER=<signer> ./contrib/guix/guix-attest
   
 Upload signatures
 =================
