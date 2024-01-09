@@ -36,14 +36,28 @@ The instructions to build Dash Core 19.0 or older versions using gitian are
 available in a `previous version of this page
 <https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>`__.
 
-Build process
-=============
+Setup environment
+=================
 
 .. note::
   This setup has been tested using a clean install of Ubuntu 22.04. For maximum
   compatibility, please use that version.
 
-Start by logging in as the "root" user.
+Start by logging in as the "root" user. Create a new user with the following
+command, replacing ``<username>`` with a username of your choice::
+
+  adduser <username>
+
+You will be prompted for a password. Enter and confirm using a new password
+(different to your root password) and store it in a safe place. You will also
+see prompts for user information, but this can be left blank. Alternatively, an
+existing user can be used on systems that are already in use (e.g. your existing
+development system).
+
+Add the user to the sudo and docker groups so they can perform commands as
+root and run docker commands::
+
+  usermod -aG sudo <username>
 
 Install prerequisites
 ---------------------
@@ -58,16 +72,6 @@ Install the required build tools::
 
   apt-get install build-essential
 
-Clone the Dash repository::
-
-  git clone https://github.com/dashpay/dash
-
-Download the macOS SDK which is required to create macOS builds::
-
-  mkdir -p ~/guix-dash/macOS-SDKs
-  wget -N -P ~/guix-dash https://bitcoincore.org/depends-sources/sdks/Xcode-12.2-12B45b-extracted-SDK-with-libcxx-headers.tar.gz
-  tar -xvzf ~/guix-dash/Xcode-12.2-12B45b-extracted-SDK-with-libcxx-headers.tar.gz --directory ~/guix-dash/macOS-SDKs/
-
 Prepare guix
 ------------
 
@@ -79,8 +83,24 @@ Run the guix install routine to prepare your environment::
   chmod +x guix-install.sh
   ./guix-install.sh
 
+Clone repositories
+------------------
+
+After installing the prerequisites and preparing guix, reboot the system, login
+as ``<username>``, and clone required repositories::
+
+  git clone https://github.com/dashpay/dash
+  git clone https://github.com/dashpay/guix.sigs
+  git clone https://github.com/dashpay/dash-detached-sigs
+
+Download the macOS SDK which is required to create macOS builds::
+
+  mkdir -p ~/guix-dash/macOS-SDKs
+  wget -N -P ~/guix-dash https://bitcoincore.org/depends-sources/sdks/Xcode-12.2-12B45b-extracted-SDK-with-libcxx-headers.tar.gz
+  tar -xvzf ~/guix-dash/Xcode-12.2-12B45b-extracted-SDK-with-libcxx-headers.tar.gz --directory ~/guix-dash/macOS-SDKs/
+
 Build Dash Core
----------------
+===============
 
 Checkout the tag associated with the Dash Core version you plan to build::
 
@@ -89,7 +109,7 @@ Checkout the tag associated with the Dash Core version you plan to build::
   cd ~/dash
   git checkout v20.0.3
 
-Run guix-build to create binaries for Linux, Mac, and Windows::
+Run ``guix-build`` to create binaries for Linux, Mac, and Windows::
 
   # Example: Build binaries for all OSes
   SDK_PATH="$HOME/guix-dash/macOS-SDKs" ./contrib/guix/guix-build
@@ -104,13 +124,6 @@ Mac and Windows binaries are signed by Dash Core Group using the relevant Apple
 and Microsoft processes. In this step, that information will be validated and
 signed by your machine. 
 
-Clone the signature-related repositories if you haven't done so previously::
-
-  cd ~
-  git clone https://github.com/dashpay/guix.sigs
-  git clone https://github.com/dashpay/dash-detached-sigs
-
-
 Prepare the `detached sigs repository <https://github.com/dashpay/dash-detached-sigs>`__::
 
   cd ~/dash-detached-sigs/
@@ -123,7 +136,7 @@ Prepare the `detached sigs repository <https://github.com/dashpay/dash-detached-
 Unsigned binaries
 -----------------
 
-To create signatures for the unsigned binaries, run guix-attest::
+To create signatures for the unsigned binaries, run ``guix-attest``::
 
   # <signer> = The name associated with your PGP key
   # Example: env GUIX_SIGS_REPO=../guix.sigs SIGNER=alice ./contrib/guix/guix-attest
@@ -139,7 +152,7 @@ To create signatures for the unsigned binaries, run guix-attest::
 Signed binaries
 ---------------
 
-To create signatures for the signed binaries, run guix-codesign followed by
+To create signatures for the signed binaries, run ``guix-codesign`` followed by
 guix-attest::
 
   env DETACHED_SIGS_REPO=../dash-detached-sigs ./contrib/guix/guix-codesign
