@@ -236,6 +236,7 @@ The repository also contains public keys used for signature verification. Import
 the public keys::
 
   cd ~/guix.sigs
+  git pull
   gpg --import builder-keys/*.pgp
 
 Run the following commands to verify that your build matches the official
