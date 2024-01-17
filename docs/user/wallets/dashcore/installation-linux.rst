@@ -49,7 +49,7 @@ To download the detached signature, click the **Signature** button on the
 wallet download page and save it to the same folder as the downloaded
 binary.
 
-All releases of Dash since 0.16.0 are signed using GPG the following key:
+All releases of Dash since 0.16.0 are signed using GPG with the following key:
 
 - Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable on Keybase
   <https://keybase.io/pasta>`__ (`download <https://keybase.io/pasta/pgp_keys.asc>`__)
