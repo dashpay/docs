@@ -47,12 +47,10 @@ download the detached signature, click the **Installer Signature**
 button on the wallet download page and save it to the same folder as the
 downloaded binary.
 
-All releases of Dash are signed using GPG with one of the following keys:
+All releases of Dash since 0.16.0 are signed using GPG the following key:
 
-- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
-  `verifiable here on Keybase <https://keybase.io/codablock>`__ (`download <https://keybase.io/codablock/pgp_keys.asc>`__)
-- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
-  on Keybase <https://keybase.io/pasta>`__ (`download <https://keybase.io/pasta/pgp_keys.asc>`__)
+- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable on Keybase
+  <https://keybase.io/pasta>`__ (`download <https://keybase.io/pasta/pgp_keys.asc>`__)
 
 Download the key files above. Install `Gpg4win <https://gpg4win.org/>`__
 if it is not already available on your computer. Once it is installed,
