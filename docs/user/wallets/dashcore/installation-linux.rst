@@ -93,7 +93,7 @@ Start Dash Core from the terminal with the following command::
 
 The first time the program is launched, you will be offered a choice of
 where you want to store your blockchain and wallet data. Choose a
-location with enough free space, as the blockchain can reach 30GB+ in
+location with enough free space, as the blockchain can reach 45GB+ in
 size. It is recommended to use the default data folder if possible.
 
 .. figure:: img/linux/106329842.png
