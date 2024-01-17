@@ -60,6 +60,14 @@ download as follows::
 If you see the message ``Good signature from ...`` then you have an
 authentic copy of Dash Core for macOS.
 
+.. note::
+   
+   If you have your own key configured, you can eliminate warnings from the
+   verification output by signing the imported key before verifying::
+   
+      gpg --quick-lsign-key "29590362EC878A81FD3C202B52527BEDABE87984"
+      gpg --verify dashcore-20.0.4-x86_64-linux-gnu.tar.gz.asc
+
 Installing Dash Core
 --------------------
 
