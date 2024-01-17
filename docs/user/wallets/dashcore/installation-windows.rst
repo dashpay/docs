@@ -9,7 +9,7 @@ Windows Installation Guide
 
 This guide describes how to download, install and encrypt the Dash Core
 wallet for Windows. The guide is written for Windows 10, but the steps
-should be similar for Windows XP, Vista, 7 and 8.
+should be similar for other versions of Windows.
 
 Downloading the Dash Core wallet
 --------------------------------
@@ -60,7 +60,7 @@ Import the key files and verify the Key-ID matches the ID above.
 .. figure:: img/windows/setup-windows-kleopatra-import.png
    :height: 250px
 
-   Importing codablock's GPG public key
+   Importing Pasta's GPG public key
 
 Skip any requests to certify the certificate with your own key. Next,
 click **Decrypt/Verify...** and select the detached signature file named
@@ -80,7 +80,7 @@ of Dash Core for Windows.
 .. figure:: img/windows/setup-windows-kleopatra-verified.png
    :height: 250px
 
-   The binary installer has been verified
+   Example of successful binary installer verification
 
 Running the Dash Core installer
 -------------------------------
