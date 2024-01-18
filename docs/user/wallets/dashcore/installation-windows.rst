@@ -9,7 +9,7 @@ Windows Installation Guide
 
 This guide describes how to download, install and encrypt the Dash Core
 wallet for Windows. The guide is written for Windows 10, but the steps
-should be similar for Windows XP, Vista, 7 and 8.
+should be similar for other versions of Windows.
 
 Downloading the Dash Core wallet
 --------------------------------
@@ -47,22 +47,20 @@ download the detached signature, click the **Installer Signature**
 button on the wallet download page and save it to the same folder as the
 downloaded binary.
 
-All releases of Dash are signed using GPG with one of the following keys:
+All releases of Dash since 0.16.0 are signed using GPG with the following key:
 
-- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
-  `verifiable here on Keybase <https://keybase.io/codablock>`__ (`download <https://keybase.io/codablock/pgp_keys.asc>`__)
-- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
-  on Keybase <https://keybase.io/pasta>`__ (`download <https://keybase.io/pasta/pgp_keys.asc>`__)
+- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable on Keybase
+  <https://keybase.io/pasta>`__ (`download <https://keybase.io/pasta/pgp_keys.asc>`__)
 
-Download the key files above. Install `Gpg4win <https://gpg4win.org/>`__
+Download the key file above. Install `Gpg4win <https://gpg4win.org/>`__
 if it is not already available on your computer. Once it is installed,
 open the **Kleopatra** certificate manager and click **File -> Import**.
-Import the key files and verify the Key-ID matches the ID above. 
+Import the key file and verify the Key-ID matches the ID above. 
 
 .. figure:: img/windows/setup-windows-kleopatra-import.png
    :height: 250px
 
-   Importing codablock's GPG public key
+   Importing Pasta's GPG public key
 
 Skip any requests to certify the certificate with your own key. Next,
 click **Decrypt/Verify...** and select the detached signature file named
@@ -82,7 +80,7 @@ of Dash Core for Windows.
 .. figure:: img/windows/setup-windows-kleopatra-verified.png
    :height: 250px
 
-   The binary installer has been verified
+   Example of successful binary installer verification
 
 Running the Dash Core installer
 -------------------------------
@@ -145,7 +143,7 @@ it does not, click **Start > Dash Core > Dash Core** to start the
 application. The first time the program is launched, you will be offered
 a choice of where you want to store your blockchain and wallet data.
 Choose a location with enough free space, as the blockchain can reach
-30GB+ in size. It is recommended to use the default data folder
+45GB+ in size. It is recommended to use the default data folder
 if possible.
 
 .. figure:: img/windows/106328945.png

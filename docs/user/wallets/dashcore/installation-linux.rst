@@ -49,18 +49,15 @@ To download the detached signature, click the **Signature** button on the
 wallet download page and save it to the same folder as the downloaded
 binary.
 
-All releases of Dash are signed using GPG with one of the following keys:
+All releases of Dash since 0.16.0 are signed using GPG with the following key:
 
-- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
-  on Keybase <https://keybase.io/pasta>`__  (releases 0.16.0+)
-- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, `verifiable
-  here on Keybase <https://keybase.io/codablock>`__ (releases prior to 0.16.0)
+- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable on Keybase
+  <https://keybase.io/pasta>`__ (`download <https://keybase.io/pasta/pgp_keys.asc>`__)
 
-Open a terminal, import the keys and verify the authenticity of your
+Open a terminal, import the key and verify the authenticity of your
 download as follows::
 
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import  
   gpg --verify dashcore-20.0.4-x86_64-linux-gnu.tar.gz.asc
 
 .. figure:: img/linux/setup-linux-gpg.png
@@ -70,6 +67,14 @@ download as follows::
 
 If you see the message ``Good signature from ...`` then you have an
 authentic copy of Dash Core for Linux.
+
+.. note::
+   
+   If you have your own key configured, you can eliminate warnings from the
+   verification output by signing the imported key before verifying::
+   
+      gpg --quick-lsign-key "29590362EC878A81FD3C202B52527BEDABE87984"
+      gpg --verify dashcore-20.0.4-x86_64-linux-gnu.tar.gz.asc
 
 Extracting Dash Core
 ----------------------
@@ -96,7 +101,7 @@ Start Dash Core from the terminal with the following command::
 
 The first time the program is launched, you will be offered a choice of
 where you want to store your blockchain and wallet data. Choose a
-location with enough free space, as the blockchain can reach 30GB+ in
+location with enough free space, as the blockchain can reach 45GB+ in
 size. It is recommended to use the default data folder if possible.
 
 .. figure:: img/linux/106329842.png
