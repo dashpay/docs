@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Checks build status for most recent builds of readthedocs sub-projects for each supported language
 # Token should be exported via a .env file
 
