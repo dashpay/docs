@@ -178,9 +178,10 @@ Receiving an InstantSend Transaction introduces two requirements:
 2. The ability to adjust “Confirmation Status” independently of block 
    confirmation.
 
-InstantSend Status is typically determined through direct connection
-with the dash daemon, :ref:`ZMQ notification <core:examples-receiving-zmq-notifications>`,
-or through the usage of an external wallet notification script.
+InstantSend Status is provided by the dash daemon, typically through a direct
+connection (e.g. RPC), :ref:`ZMQ notification
+<core:examples-receiving-zmq-notifications>`, or through the usage of an
+external wallet notification script.
 
 Direct Connection
 ^^^^^^^^^^^^^^^^^
@@ -301,8 +302,8 @@ Receiving a ChainLock introduces two requirements:
 2. The ability to adjust “Confirmation Status” independently of block
    confirmation.
 
-ChainLock status is typically determined through direct connection with the Dash
-daemon or by a :ref:`ZMQ notification
+ChainLock status is provided by the dash daemon, typically through a direct
+connection (e.g. RPC) or by a :ref:`ZMQ notification
 <core:examples-receiving-zmq-notifications>`.
 
 Direct Connection
