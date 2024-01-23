@@ -179,7 +179,7 @@ Receiving an InstantSend Transaction introduces two requirements:
    confirmation.
 
 InstantSend Status is typically determined through direct connection
-with the dash daemon, `ZMQ notification <https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__,
+with the dash daemon, :ref:`ZMQ notification <core:examples-receiving-zmq-notifications>`,
 or through the usage of an external wallet notification script.
 
 Direct Connection
@@ -302,8 +302,8 @@ Receiving a ChainLock introduces two requirements:
    confirmation.
 
 ChainLock status is typically determined through direct connection with the Dash
-daemon or by a `ZMQ notification
-<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__.
+daemon or by a :ref:`ZMQ notification
+<core:examples-receiving-zmq-notifications>`.
 
 Direct Connection
 ^^^^^^^^^^^^^^^^^
