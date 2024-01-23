@@ -365,6 +365,15 @@ notifications and return the hash of blocks that receive a ChainLock.
       });
    })();
 
+Wallet Notification
+^^^^^^^^^^^^^^^^^^^
+
+The Dash Core daemon can be configured to execute an external script whenever a
+ChainLock is received. This is configured by adding the following line to the
+dash.conf file::
+
+  chainlocknotify=/path/to/concurrent/safe/handler %s
+
 Additional Resources
 --------------------
 
