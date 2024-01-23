@@ -178,9 +178,10 @@ Receiving an InstantSend Transaction introduces two requirements:
 2. The ability to adjust “Confirmation Status” independently of block 
    confirmation.
 
-InstantSend Status is typically determined through direct connection
-with the dash daemon, `ZMQ notification <https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__,
-or through the usage of an external wallet notification script.
+InstantSend Status is provided by the dash daemon, typically through a direct
+connection (e.g. RPC), :ref:`ZMQ notification
+<core:examples-receiving-zmq-notifications>`, or through the usage of an
+external wallet notification script.
 
 Direct Connection
 ^^^^^^^^^^^^^^^^^
@@ -301,9 +302,9 @@ Receiving a ChainLock introduces two requirements:
 2. The ability to adjust “Confirmation Status” independently of block
    confirmation.
 
-ChainLock status is typically determined through direct connection with the Dash
-daemon or by a `ZMQ notification
-<https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__.
+ChainLock status is provided by the dash daemon, typically through a direct
+connection (e.g. RPC) or by a :ref:`ZMQ notification
+<core:examples-receiving-zmq-notifications>`.
 
 Direct Connection
 ^^^^^^^^^^^^^^^^^
@@ -363,6 +364,15 @@ notifications and return the hash of blocks that receive a ChainLock.
          console.log(`ChainLock received for block ${hashChainLockMessage}`)
       });
    })();
+
+Wallet Notification
+^^^^^^^^^^^^^^^^^^^
+
+The Dash Core daemon can be configured to execute an external script whenever a
+ChainLock is received. This is configured by adding the following line to the
+dash.conf file::
+
+  chainlocknotify=/path/to/concurrent/safe/handler %s
 
 Additional Resources
 --------------------
