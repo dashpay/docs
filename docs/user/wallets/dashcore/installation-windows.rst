@@ -82,6 +82,15 @@ of Dash Core for Windows.
 
    Example of successful binary installer verification
 
+The following video demonstrates the steps to install Gpg4win and then verify
+the Dash Core installation file signature.
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube-nocookie.com/embed/kBVF2PNpU3A?modestbranding=1&rel=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
 Running the Dash Core installer
 -------------------------------
 
