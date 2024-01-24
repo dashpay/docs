@@ -45,7 +45,7 @@ and its many distinguishing features.
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
-        <iframe src="//www.youtube.com/embed/vItzmZo_eWw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/vItzmZo_eWw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
 
@@ -59,7 +59,7 @@ advanced features.
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
-        <iframe src="https://www.youtube.com/embed/?listType=playlist&list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        <iframe src="https://www.youtube-nocookie.com/embed/?listType=playlist&list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
     </iframe>
 
 
@@ -78,7 +78,7 @@ and is available in
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
-        <iframe src="https://www.youtube.com/embed/?listType=playlist&list=PLiFMZOlhgsYIDP2V2XsuTFZu1C1sV5ohr" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        <iframe src="https://www.youtube-nocookie.com/embed/?listType=playlist&list=PLiFMZOlhgsYIDP2V2XsuTFZu1C1sV5ohr" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
     </iframe>
 
 
