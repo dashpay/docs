@@ -300,4 +300,4 @@ responsible for monitoring the network for the InstantSend lock and
 implementing user-facing logic and interfaces to continue with
 transaction processing after payment has been recieved. See the
 :ref:`InstantSend Integration <integration-instantsend>` documentation
-for more information on how to monitor for InstandSend locks.
+for more information on how to monitor for InstantSend locks.
