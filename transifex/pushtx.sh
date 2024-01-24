@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Set to the dashpay/docs branch containing the version to update
 DOC_VERSION=master
 
