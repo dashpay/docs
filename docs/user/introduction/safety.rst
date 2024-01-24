@@ -169,7 +169,6 @@ DasCoin
 
 BitConnect
   - https://www.reddit.com/r/Bitconnect/comments/76fa9k/bitconnect_investigated_as_a_ponzi_scheme/
-  - https://www.youtube.com/watch?v=6fujWfmgRJU
   - https://satoshiwatch.com/hall-of-shame/bitconnect-coin/
 
 HashOcean
