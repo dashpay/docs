@@ -131,14 +131,8 @@ losing money to the originators of the scheme.
 - `How to spot a Ponzi Scheme <https://www.which.co.uk/consumer-rights/advice/how-to-spot-a-pyramid-scheme>`_
 - `BehindMLM - News and blog about Ponzi schemes <https://behindmlm.com>`_
 
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 70%; height: auto;">
-        <iframe src="//www.youtube.com/embed/y9rJZX72oIw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
 If you encounter a Ponzi scheme, follow the same reporting steps as
-above for scam websites!
+for scam websites!
 
 List of known Ponzi schemes (there are many more - stay vigilant!):
 
@@ -169,7 +163,6 @@ DasCoin
 
 BitConnect
   - https://www.reddit.com/r/Bitconnect/comments/76fa9k/bitconnect_investigated_as_a_ponzi_scheme/
-  - https://www.youtube.com/watch?v=6fujWfmgRJU
   - https://satoshiwatch.com/hall-of-shame/bitconnect-coin/
 
 HashOcean
