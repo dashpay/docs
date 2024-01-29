@@ -1,34 +1,34 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
 # Translators:
 # Daf Daf, 2023
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-26 10:05-0400\n"
+"POT-Creation-Date: 2024-01-29 09:56-0500\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: Daf Daf, 2023\n"
-"Language-Team: French (https://app.transifex.com/dash/teams/37570/fr/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Language-Team: French (https://app.transifex.com/dash/teams/37570/fr/)\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
+"1000000 == 0 ? 1 : 2;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/masternodes/setup-testnet.rst-1
-msgid ""
-"This guide describes how to set up a Dash masternode with evo services."
+#: ../../docs/user/masternodes/setup-testnet.rst:-1
+msgid "This guide describes how to set up a Dash masternode with evo services."
 msgstr ""
 "Ce guide explique comment mettre en place un masternode Dash avec des "
 "services Evo."
 
-#: ../../docs/user/masternodes/setup-testnet.rst-1
+#: ../../docs/user/masternodes/setup-testnet.rst:-1
 msgid "dash, guide, masternodes, trezor, dip3, setup, bls"
 msgstr "dash, guide, masternodes, trezor, dip3, installation, bls"
 
@@ -39,38 +39,39 @@ msgstr "Mise en place d'un réseau de test"
 #: ../../docs/user/masternodes/setup-testnet.rst:11
 msgid ""
 "Setting up a masternode with support for evo services requires a basic "
-"understanding of Linux and blockchain technology, as well as an ability to "
-"follow instructions closely. It also requires regular maintenance and "
+"understanding of Linux and blockchain technology, as well as an ability "
+"to follow instructions closely. It also requires regular maintenance and "
 "careful security, particularly if you are not storing your Dash on a "
 "hardware wallet. There are some decisions to be made along the way, and "
 "optional extra steps to take for increased security."
 msgstr ""
 "Mettre en place un masternode avec support des services Evo demande une "
-"compréhension de base de Linux et de la technologie blockchain, ainsi qu'une"
-" capacité à suivre des instructions de près. Cela demande également une "
-"régularité de gestion et une sécurité pointilleuse, en particulier si vous "
-"ne stockez pas vos dashs sur un portefeuille matériel. Il y aura quelques "
-"choix à faire lors de la procédure, et quelques étapes supplémentaires "
-"facultatives à suivre pour une meilleure sécurité."
+"compréhension de base de Linux et de la technologie blockchain, ainsi "
+"qu'une capacité à suivre des instructions de près. Cela demande également"
+" une régularité de gestion et une sécurité pointilleuse, en particulier "
+"si vous ne stockez pas vos dashs sur un portefeuille matériel. Il y aura "
+"quelques choix à faire lors de la procédure, et quelques étapes "
+"supplémentaires facultatives à suivre pour une meilleure sécurité."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:18
 msgid ""
 "Commercial :ref:`masternode hosting services <masternode-hosting>` are "
-"available if you prefer to delegate day-to-day operation of your masternode "
-"to a professional operator. When using these hosting services, you retain "
-"full control of the 1000 DASH collateral and pay an agreed percentage of "
-"your reward to the operator. It is also possible to delegate your voting "
-"keys to a representative, see the :ref:`governance documentation "
-"<delegating-votes>` for more information."
+"available if you prefer to delegate day-to-day operation of your "
+"masternode to a professional operator. When using these hosting services,"
+" you retain full control of the 1000 DASH collateral and pay an agreed "
+"percentage of your reward to the operator. It is also possible to "
+"delegate your voting keys to a representative, see the :ref:`governance "
+"documentation <delegating-votes>` for more information."
 msgstr ""
 "Des :ref:`services commerciaux d'hébergement de masternode <masternode-"
-"hosting>` sont disponibles si vous préférez déléguer la gestion au jour le "
-"jour de votre masternode à un opérateur professionnel. En utilisant ces "
-"services d'hébergement, vous conservez un contrôle total sur la caution de "
-"1000 dashs et vous payez un pourcentage convenu d'avance à l'opérateur, à "
-"titre de rétribution. Il est également possible de déléguer vos clés de vote"
-" à un représentant, veuillez consulter la :ref:`documentation sur la "
-"gouvernance <delegating-votes>` pour en savoir plus."
+"hosting>` sont disponibles si vous préférez déléguer la gestion au jour "
+"le jour de votre masternode à un opérateur professionnel. En utilisant "
+"ces services d'hébergement, vous conservez un contrôle total sur la "
+"caution de 1000 dashs et vous payez un pourcentage convenu d'avance à "
+"l'opérateur, à titre de rétribution. Il est également possible de "
+"déléguer vos clés de vote à un représentant, veuillez consulter la "
+":ref:`documentation sur la gouvernance <delegating-votes>` pour en savoir"
+" plus."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:29
 msgid "Before you begin"
@@ -78,14 +79,14 @@ msgstr "Avant de commencer"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:31
 msgid ""
-"This guide assumes you are setting up a single testnet masternode for the "
-"first time. If you are updating a masternode, see  :ref:`here <masternode-"
-"update>` instead. You will need:"
+"This guide assumes you are setting up a single testnet masternode for the"
+" first time. If you are updating a masternode, see  :ref:`here "
+"<masternode-update>` instead. You will need:"
 msgstr ""
-"Ce guide présuppose que vous mettez en place un seul masternode sur réseau "
-"de test, pour la première fois. Pour mettre à jour un masternode existant, "
-"voyez plutôt :ref:`ici <masternode-update>`. Voici ce dont vous aurez besoin"
-" :"
+"Ce guide présuppose que vous mettez en place un seul masternode sur "
+"réseau de test, pour la première fois. Pour mettre à jour un masternode "
+"existant, voyez plutôt :ref:`ici <masternode-update>`. Voici ce dont vous"
+" aurez besoin :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:35
 msgid "1000 Dash"
@@ -127,9 +128,9 @@ msgstr ""
 #: ../../docs/user/masternodes/setup-testnet.rst:45
 msgid ""
 "This documentation describes the commands as if they were entered in the "
-"Dash Core GUI by opening the console from **Window > Console**, but the same"
-" result can be achieved on a masternode by entering the same commands and "
-"adding the prefix ``~/.dashcore/dash-cli`` to each command."
+"Dash Core GUI by opening the console from **Window > Console**, but the "
+"same result can be achieved on a masternode by entering the same commands"
+" and adding the prefix ``~/.dashcore/dash-cli`` to each command."
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:52
@@ -138,10 +139,10 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:54
 msgid ""
-"Proper server configuration is essential to successful masternode operation "
-"for both security and performance reasons. Refer to the :hoverxref:`Server "
-"configuration <server-config>` page for details on preparing your server to "
-"host a masternode."
+"Proper server configuration is essential to successful masternode "
+"operation for both security and performance reasons. Refer to the "
+":hoverxref:`Server configuration <server-config>` page for details on "
+"preparing your server to host a masternode."
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:59
@@ -150,28 +151,30 @@ msgstr "Envoi de la caution"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:61
 msgid ""
-"A Dash address with a single unspent transaction output (UTXO) of exactly "
-"1000 DASH is required to operate a masternode. Once it has been sent, "
-"various keys regarding the transaction must be extracted for later entry in "
-"a configuration file and registration transaction as proof to write the "
-"configuration to the blockchain so the masternode can be included in the "
-"deterministic list. A masternode can be registered from a hardware wallet or"
-" the official Dash Core wallet, although a hardware wallet is highly "
-"recommended to enhance security and protect yourself against hacking. This "
-"guide will describe the steps for both hardware wallets and Dash Core."
+"A Dash address with a single unspent transaction output (UTXO) of exactly"
+" 1000 DASH is required to operate a masternode. Once it has been sent, "
+"various keys regarding the transaction must be extracted for later entry "
+"in a configuration file and registration transaction as proof to write "
+"the configuration to the blockchain so the masternode can be included in "
+"the deterministic list. A masternode can be registered from a hardware "
+"wallet or the official Dash Core wallet, although a hardware wallet is "
+"highly recommended to enhance security and protect yourself against "
+"hacking. This guide will describe the steps for both hardware wallets and"
+" Dash Core."
 msgstr ""
-"Une adresse Dash avec une unique transaction de sortie non dépensée (UTXO) "
-"d'un montant exact de 1000 dashs est obligatoire pour mettre en place un "
-"masternode. Une fois cette transaction exécutée, différentes clés qui lui "
-"sont relatives doivent être collectées pour être, plus tard, saisies dans un"
-" fichier de configuration et dans une transaction d'enregistrement, en tant "
-"que preuve permettant d'enregistrer la configuration sur la blockchain et "
-"d'inclure le masternode dans la liste déterministe. Un masternode peut être "
-"démarré depuis un portefeuille matériel ou depuis le portefeuille logiciel "
-"officiel Dash Core, bien qu'un portefeuille matériel soit hautement "
-"recommandé pour améliorer la sécurité et vous protéger du piratage. Ce guide"
-" décrit toutes les étapes aussi bien pour les portefeuilles matériels que "
-"pour le portefeuille logiciel Dash Core."
+"Une adresse Dash avec une unique transaction de sortie non dépensée "
+"(UTXO) d'un montant exact de 1000 dashs est obligatoire pour mettre en "
+"place un masternode. Une fois cette transaction exécutée, différentes "
+"clés qui lui sont relatives doivent être collectées pour être, plus tard,"
+" saisies dans un fichier de configuration et dans une transaction "
+"d'enregistrement, en tant que preuve permettant d'enregistrer la "
+"configuration sur la blockchain et d'inclure le masternode dans la liste "
+"déterministe. Un masternode peut être démarré depuis un portefeuille "
+"matériel ou depuis le portefeuille logiciel officiel Dash Core, bien "
+"qu'un portefeuille matériel soit hautement recommandé pour améliorer la "
+"sécurité et vous protéger du piratage. Ce guide décrit toutes les étapes "
+"aussi bien pour les portefeuilles matériels que pour le portefeuille "
+"logiciel Dash Core."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:73
 msgid "Option 1: Holding collateral in a hardware wallet"
@@ -179,68 +182,71 @@ msgstr "Option 1 : Détenir la caution dans un portefeuille matériel"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:75
 msgid ""
-"Set up your Trezor using the Trezor wallet at https://wallet.trezor.io/ and "
-"send a test transaction to verify that it is working properly. For help on "
-"this, see :ref:`this guide <hardware-trezor>` - you may also choose to "
-"(carefully!) `add a passphrase <https://blog.trezor.io/passphrase-the-"
-"ultimate-protection-for-your-accounts-3a311990925b>`_ to your Trezor to "
-"further protect your collateral. Create a new account in your Trezor wallet "
-"by clicking **Add account**. Then click the **Receive** tab and send exactly"
-" 1000 DASH to the address displayed. If you are setting up multiple "
-"masternodes, send 1000 DASH to consecutive addresses within the same new "
-"account. You should see the transaction as soon as the first confirmation "
-"arrives, usually within a few minutes."
+"Set up your Trezor using the Trezor wallet at https://wallet.trezor.io/ "
+"and send a test transaction to verify that it is working properly. For "
+"help on this, see :ref:`this guide <hardware-trezor>` - you may also "
+"choose to (carefully!) `add a passphrase <https://blog.trezor.io"
+"/passphrase-the-ultimate-protection-for-your-accounts-3a311990925b>`_ to "
+"your Trezor to further protect your collateral. Create a new account in "
+"your Trezor wallet by clicking **Add account**. Then click the "
+"**Receive** tab and send exactly 1000 DASH to the address displayed. If "
+"you are setting up multiple masternodes, send 1000 DASH to consecutive "
+"addresses within the same new account. You should see the transaction as "
+"soon as the first confirmation arrives, usually within a few minutes."
 msgstr ""
 "Configurez votre Trezor en utilisant le portefeuille Trezor à l'adresse "
 "https://wallet.trezor.io/ et envoyez-lui une transaction d'essai pour "
-"vérifier que tout fonctionne bien. Pour obtenir de l'aide sur cette étape, "
-"voir :ref:`ce guide <hardware-trezor>`. Vous pouvez aussi (avec prudence !) "
-"`ajouter une phrase de passe <https://blog.trezor.io/passphrase-the-"
-"ultimate-protection-for-your-accounts-3a311990925b>`_ à votre Trezor pour "
-"protéger encore mieux votre caution. Créez un nouveau compte dans votre "
-"portefeuille Trezor en cliquant sur **Ajouter un compte**. Puis cliquez sur "
-"l'onglet **Recevoir** et envoyez exactement 1000 dashs à l'adresse affichée."
-" Si vous mettez en place plusieurs masternodes, envoyez 1000 dashs aux "
-"adresses consécutives du même compte. Vous devriez voir la transaction "
-"arriver dès les premières confirmations, en général sous quelques minutes."
+"vérifier que tout fonctionne bien. Pour obtenir de l'aide sur cette "
+"étape, voir :ref:`ce guide <hardware-trezor>`. Vous pouvez aussi (avec "
+"prudence !) `ajouter une phrase de passe <https://blog.trezor.io"
+"/passphrase-the-ultimate-protection-for-your-accounts-3a311990925b>`_ à "
+"votre Trezor pour protéger encore mieux votre caution. Créez un nouveau "
+"compte dans votre portefeuille Trezor en cliquant sur **Ajouter un "
+"compte**. Puis cliquez sur l'onglet **Recevoir** et envoyez exactement "
+"1000 dashs à l'adresse affichée. Si vous mettez en place plusieurs "
+"masternodes, envoyez 1000 dashs aux adresses consécutives du même compte."
+" Vous devriez voir la transaction arriver dès les premières "
+"confirmations, en général sous quelques minutes."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:89
 msgid ""
-"Trezor Wallet Receive tab showing successfully received collateral of 1000 "
-"DASH"
+"Trezor Wallet Receive tab showing successfully received collateral of "
+"1000 DASH"
 msgstr ""
-"Onglet Recevoir du portefeuille Trezor, montrant une caution de 1000 dashs "
-"bien reçue"
+"Onglet Recevoir du portefeuille Trezor, montrant une caution de 1000 "
+"dashs bien reçue"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:92
 msgid ""
 "Once the transaction appears, click the QR code on the right to view the "
 "transaction on the blockchain. Keep this window open as we complete the "
-"following steps, since we will soon need to confirm that 15 confirmations "
-"exist, as shown in the following screenshot."
+"following steps, since we will soon need to confirm that 15 confirmations"
+" exist, as shown in the following screenshot."
 msgstr ""
 "Une fois la transaction apparue, cliquez sur le QR-code à droite pour "
-"afficher la transaction dans la blockchain. Gardez cette fenêtre ouverte le "
-"temps des étapes suivantes, car nous aurons bientôt à vérifier que les 15 "
-"confirmations ont bien eu lieu, comme dans la capture d'écran suivante."
+"afficher la transaction dans la blockchain. Gardez cette fenêtre ouverte "
+"le temps des étapes suivantes, car nous aurons bientôt à vérifier que les"
+" 15 confirmations ont bien eu lieu, comme dans la capture d'écran "
+"suivante."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:100
 #: ../../docs/user/masternodes/setup-testnet.rst:198
 msgid ""
-"Trezor blockchain explorer showing 15 confirmations for collateral transfer"
+"Trezor blockchain explorer showing 15 confirmations for collateral "
+"transfer"
 msgstr ""
-"Explorateur de blocs de Trezor montrant 15 confirmations pour le transfert "
-"de la caution"
+"Explorateur de blocs de Trezor montrant 15 confirmations pour le "
+"transfert de la caution"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:103
 msgid ""
-"While we are waiting for 15 confirmations, download the latest version of "
-"the Dash Masternode Tool (DMT) from the GitHub releases page `here "
-"<https://github.com/Bertrand256/dash-masternode-tool/releases>`__. Unzip and"
-" run the file. The following window appears."
+"While we are waiting for 15 confirmations, download the latest version of"
+" the Dash Masternode Tool (DMT) from the GitHub releases page `here "
+"<https://github.com/Bertrand256/dash-masternode-tool/releases>`__. Unzip "
+"and run the file. The following window appears."
 msgstr ""
-"Pendant que nous attendons les 15 confirmations, téléchargez la plus récente"
-" version de DashMasternodeTool (DMT) depuis la page GitHub `ici "
+"Pendant que nous attendons les 15 confirmations, téléchargez la plus "
+"récente version de DashMasternodeTool (DMT) depuis la page GitHub `ici "
 "<https://github.com/Bertrand256/dash-masternode- tool/releases>`_. "
 "Décompressez le fichier et lancez l'exécutable. La fenêtre suivante "
 "s'affiche."
@@ -251,16 +257,17 @@ msgstr "Écran de démarrage de DashMasternodeTool"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:113
 msgid ""
-"Click the third button from the left **Check Dash Network Connection** in "
-"the top left corner of the main window to verify that the connection is "
-"working. Then connect your Trezor device and click the next button **Test "
-"Hardware Wallet Connection** to verify the Trezor connection is working."
+"Click the third button from the left **Check Dash Network Connection** in"
+" the top left corner of the main window to verify that the connection is "
+"working. Then connect your Trezor device and click the next button **Test"
+" Hardware Wallet Connection** to verify the Trezor connection is working."
 msgstr ""
-"Cliquez sur le troisième bouton depuis la gauche, **Vérifier la connexion au"
-" réseau Dash**, dans le coin supérieur gauche de la fenêtre principale, pour"
-" vérifier que la connexion fonctionne. Puis connectez votre appareil Trezor "
-"et cliquez sur **Tester la connexion au portefeuille matériel** pour "
-"vérifier que la connexion au Trezor fonctionne."
+"Cliquez sur le troisième bouton depuis la gauche, **Vérifier la connexion"
+" au réseau Dash**, dans le coin supérieur gauche de la fenêtre "
+"principale, pour vérifier que la connexion fonctionne. Puis connectez "
+"votre appareil Trezor et cliquez sur **Tester la connexion au "
+"portefeuille matériel** pour vérifier que la connexion au Trezor "
+"fonctionne."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:125
 msgid "Dash Masternode Tool successful connection confirmations"
@@ -268,13 +275,14 @@ msgstr "Confirmations de connexion réussie dans DashMasternodeTool"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:127
 msgid ""
-"We will now use DMT to enter some basic information about the masternode and"
-" extract the transaction ID. Carry out the following sequence of steps as "
-"shown in this screenshot:"
+"We will now use DMT to enter some basic information about the masternode "
+"and extract the transaction ID. Carry out the following sequence of steps"
+" as shown in this screenshot:"
 msgstr ""
-"Nous allons maintenant nous servir de DMT pour saisir quelques informations "
-"de base sur le masternode, et extraire l'identifiant de transaction. Suivez "
-"les étapes ci-dessous, telles que montrées dans cette capture d'écran :"
+"Nous allons maintenant nous servir de DMT pour saisir quelques "
+"informations de base sur le masternode, et extraire l'identifiant de "
+"transaction. Suivez les étapes ci-dessous, telles que montrées dans cette"
+" capture d'écran :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:134
 msgid "Dash Masternode Tool configuration steps"
@@ -286,17 +294,17 @@ msgstr "Cliquez sur le bouton **Nouveau**."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:137
 msgid ""
-"Enter a name for your masternode. The host name you specified for your VPS "
-"above is a good choice."
+"Enter a name for your masternode. The host name you specified for your "
+"VPS above is a good choice."
 msgstr ""
 "Tapez un nom pour votre masternode. Le nom d'hôte que vous avez indiqué "
 "précédemment pour votre VPS est un bon choix."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:139
 msgid ""
-"Enter the IP address of your masternode. This was given to you by the VPS "
-"provider when you set up the server. Then enter the TCP port number. This "
-"should be 19999."
+"Enter the IP address of your masternode. This was given to you by the VPS"
+" provider when you set up the server. Then enter the TCP port number. "
+"This should be 19999."
 msgstr ""
 "Tapez l'adresse IP de votre masternode. Elle vous a été donnée par "
 "l'hébergeur de VPS, à la mise en place de votre serveur. Puis entrez le "
@@ -304,17 +312,19 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:142
 msgid ""
-"Click **Locate collateral** to view unused collateral funding transactions "
-"available on the connected hardware wallet. Select the address to which you "
-"sent 1000 Dash and click **Apply**. The **Collateral address**, **path**, "
-"**Collateral TX hash** and **index** fields should be filled automatically."
+"Click **Locate collateral** to view unused collateral funding "
+"transactions available on the connected hardware wallet. Select the "
+"address to which you sent 1000 Dash and click **Apply**. The **Collateral"
+" address**, **path**, **Collateral TX hash** and **index** fields should "
+"be filled automatically."
 msgstr ""
 "Cliquez sur **Locate collateral** (Trouver la caution) pour afficher les "
-"transactions de caution inutilisées qui sont disponibles sur le portefeuille"
-" matériel. Choisissez l'adresse à laquelle vous avez envoyé les 1000 dashs "
-"puis cliquer sur **Apply** (Appliquer). Les champs **Collateral address** "
-"(Adresse de caution), **index** et **Collateral TX hash** (Empreinte de la "
-"transaction de caution) devraient être remplis automatiquement."
+"transactions de caution inutilisées qui sont disponibles sur le "
+"portefeuille matériel. Choisissez l'adresse à laquelle vous avez envoyé "
+"les 1000 dashs puis cliquer sur **Apply** (Appliquer). Les champs "
+"**Collateral address** (Adresse de caution), **index** et **Collateral TX"
+" hash** (Empreinte de la transaction de caution) devraient être remplis "
+"automatiquement."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:151
 msgid "Dash Masternode Tool with masternode configuration"
@@ -322,8 +332,8 @@ msgstr "DashMasternodeTool avec une configuration de masternode"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:153
 msgid ""
-"Leave DMT open and continue with the next step: :ref:`installing Dash Core "
-"on your VPS <testnet-masternode-setup-install>`."
+"Leave DMT open and continue with the next step: :ref:`installing Dash "
+"Core on your VPS <testnet-masternode-setup-install>`."
 msgstr ""
 "Laissez DMT ouvert puis passez à l'étape suivante : :ref:`installer Dash "
 "Core sur votre VPS <testnet-masternode-setup-install>`."
@@ -334,11 +344,11 @@ msgstr "Option 2 : Détenir la caution dans un portefeuille logiciel Dash Core"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:159
 msgid ""
-"Open Dash Core wallet and wait for it to synchronize with the network. It "
-"should look like this when ready:"
+"Open Dash Core wallet and wait for it to synchronize with the network. It"
+" should look like this when ready:"
 msgstr ""
-"Lancez le portefeuille logiciel Dash Core et attendez qu'il se synchronise "
-"avec le réseau. Il devrait ressembler à ça, une fois prêt :"
+"Lancez le portefeuille logiciel Dash Core et attendez qu'il se "
+"synchronise avec le réseau. Il devrait ressembler à ça, une fois prêt :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:165
 msgid "Fully synchronized Dash Core wallet"
@@ -346,47 +356,50 @@ msgstr "Portefeuille logiciel Dash Core entièrement synchronisé"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:167
 msgid ""
-"Click **Window > Console** to open the console. Type the following command "
-"into the console to generate a new Dash address for the collateral::"
+"Click **Window > Console** to open the console. Type the following "
+"command into the console to generate a new Dash address for the "
+"collateral::"
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:174
 msgid ""
-"Take note of the collateral address, since we will need it later.  The next "
-"step is to secure your wallet (if you have not already done so). First, "
-"encrypt the wallet by selecting **Settings > Encrypt wallet**. You should "
-"use a strong, new password that you have never used somewhere else. Take "
-"note of your password and store it somewhere safe or you will be permanently"
-" locked out of your wallet and lose access to your funds. Next, back up your"
-" wallet file by selecting **File > Backup Wallet**. Save the file to a "
-"secure location physically separate to your computer, since this will be the"
-" only way you can access our funds if anything happens to your computer. For"
-" more details on these steps, see :ref:`here <dashcore-backup>`."
+"Take note of the collateral address, since we will need it later.  The "
+"next step is to secure your wallet (if you have not already done so). "
+"First, encrypt the wallet by selecting **Settings > Encrypt wallet**. You"
+" should use a strong, new password that you have never used somewhere "
+"else. Take note of your password and store it somewhere safe or you will "
+"be permanently locked out of your wallet and lose access to your funds. "
+"Next, back up your wallet file by selecting **File > Backup Wallet**. "
+"Save the file to a secure location physically separate to your computer, "
+"since this will be the only way you can access our funds if anything "
+"happens to your computer. For more details on these steps, see :ref:`here"
+" <dashcore-backup>`."
 msgstr ""
-"Prenez bonne note de l'adresse de la caution, car vous en aurez besoin plus "
-"tard. La prochaine étape est de sécuriser votre portefeuille (si vous ne "
-"l'avez pas déjà fait). Tout d'abord, chiffrez votre portefeuille en allant "
-"sur le menu **Réglages > Chiffrer le portefeuille**. Il vous est conseillé "
-"d'utiliser un mot de passe fort, nouveau, que vous n'avez jamais utilisé "
-"ailleurs. Prenez note de votre mot de passe et conservez-le dans un endroit "
-"sûr, sinon votre portefeuille vous sera inaccessible de manière définitive "
-"et vous perdrez tout accès à vos fonds. Ensuite, sauvegardez le fichier de "
-"votre portefeuille en allant dans le menu **Fichier > Sauvegarder le "
-"portefeuille**. Enregistrez le fichier dans un endroit sûr et physiquement "
-"séparé de votre ordinateur, car il sera le seul moyen d'accéder à vos fonds "
-"si quoi que ce soit arrive à votre ordinateur. Pour en savoir plus sur ces "
-"étapes, voir  :ref:`ici <dashcore-backup>`."
+"Prenez bonne note de l'adresse de la caution, car vous en aurez besoin "
+"plus tard. La prochaine étape est de sécuriser votre portefeuille (si "
+"vous ne l'avez pas déjà fait). Tout d'abord, chiffrez votre portefeuille "
+"en allant sur le menu **Réglages > Chiffrer le portefeuille**. Il vous "
+"est conseillé d'utiliser un mot de passe fort, nouveau, que vous n'avez "
+"jamais utilisé ailleurs. Prenez note de votre mot de passe et conservez-"
+"le dans un endroit sûr, sinon votre portefeuille vous sera inaccessible "
+"de manière définitive et vous perdrez tout accès à vos fonds. Ensuite, "
+"sauvegardez le fichier de votre portefeuille en allant dans le menu "
+"**Fichier > Sauvegarder le portefeuille**. Enregistrez le fichier dans un"
+" endroit sûr et physiquement séparé de votre ordinateur, car il sera le "
+"seul moyen d'accéder à vos fonds si quoi que ce soit arrive à votre "
+"ordinateur. Pour en savoir plus sur ces étapes, voir  :ref:`ici "
+"<dashcore-backup>`."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:186
 msgid ""
-"Now send exactly 1000 DASH in a single transaction to the new address you "
-"generated in the previous step. This may be sent from another wallet, or "
-"from funds already held in your current wallet. Once the transaction is "
-"complete, view the transaction in a `blockchain explorer <https://testnet-"
-"insight.dash.org/insight/>`_ by searching for the address. You will need 15 "
-"confirmations before you can register the masternode, but you can continue "
-"with the next step at this point already: generating your masternode "
-"operator key."
+"Now send exactly 1000 DASH in a single transaction to the new address you"
+" generated in the previous step. This may be sent from another wallet, or"
+" from funds already held in your current wallet. Once the transaction is "
+"complete, view the transaction in a `blockchain explorer <https"
+"://testnet-insight.dash.org/insight/>`_ by searching for the address. You"
+" will need 15 confirmations before you can register the masternode, but "
+"you can continue with the next step at this point already: generating "
+"your masternode operator key."
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:205
@@ -395,24 +408,20 @@ msgstr "Installation de masternode"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:207
 msgid "The following tools are available for installing a Dash masternode:"
-msgstr ""
-"Les outils suivants sont disponibles pour installer un masternode Dash :"
+msgstr "Les outils suivants sont disponibles pour installer un masternode Dash :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:209
-msgid ""
-":ref:`dashmate installation <testnet-masternode-setup-install-dashmate>`"
-msgstr ""
-":ref:`installation Dashmate <testnet-masternode-setup-install-dashmate>`"
+msgid ":ref:`dashmate installation <testnet-masternode-setup-install-dashmate>`"
+msgstr ":ref:`installation Dashmate <testnet-masternode-setup-install-dashmate>`"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:210
 msgid ":ref:`Manual installation <testnet-masternode-setup-install-manual>`"
-msgstr ""
-":ref:`installation manuelle <testnet-masternode-setup-install-manual>`"
+msgstr ":ref:`installation manuelle <testnet-masternode-setup-install-manual>`"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:211
 msgid ""
-"`Dash Masternode Zeus <https://github.com/kxcd/Masternode-Zeus>`__ (does not"
-" yet support platform services)"
+"`Dash Masternode Zeus <https://github.com/kxcd/Masternode-Zeus>`__ (does "
+"not yet support platform services)"
 msgstr ""
 "`Dash Masternode Zeus <https://github.com/kxcd/Masternode-Zeus>`__ (ne "
 "supporte pas encore les services de plateforme)"
@@ -426,8 +435,8 @@ msgid ""
 "``dashmate`` replaces the `dashman "
 "<https://github.com/moocowmoo/dashman/>`__ masternode installer by "
 "moocowmoo. dashmate is based on Docker technology and features an "
-"interactive setup command and the ability to manage multiple node configs "
-"and multiple networks. It handles the installation of Dash Core and "
+"interactive setup command and the ability to manage multiple node configs"
+" and multiple networks. It handles the installation of Dash Core and "
 "Tenderdash, as well as all dependencies and supporting services. Full "
 "dashmate documentation is available `here "
 "<https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__."
@@ -439,14 +448,14 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:231
 msgid ""
-"Open PuTTY or a console again and connect using the username and password "
-"you just created for your new, non-root user. Begin by installing dashmate "
-"dependencies::"
+"Open PuTTY or a console again and connect using the username and password"
+" you just created for your new, non-root user. Begin by installing "
+"dashmate dependencies::"
 msgstr ""
-"Lancez une nouvelle fois PuTTY ou une console de terminal, et connectez-vous"
-" avec le nom d'utilisateur et le mot de passe que vous venez de créer pour "
-"votre nouvel utilisateur non-root. Commencez par installer les dépendances "
-"Dashmate :"
+"Lancez une nouvelle fois PuTTY ou une console de terminal, et connectez-"
+"vous avec le nom d'utilisateur et le mot de passe que vous venez de créer"
+" pour votre nouvel utilisateur non-root. Commencez par installer les "
+"dépendances Dashmate :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:242
 msgid "Install dashmate::"
@@ -462,9 +471,10 @@ msgid ""
 "private key. Enter this information or accept the detected/generated "
 "defaults. Start your node as follows::"
 msgstr ""
-"Il vous sera demandé de choisir un réseau, un type de nœud, une adresse IP "
-"et une clé privée BLS. Saisissez ces informations ou acceptez les valeurs "
-"par défaut détectées ou générées. Démarrez votre nœud comme suit :"
+"Il vous sera demandé de choisir un réseau, un type de nœud, une adresse "
+"IP et une clé privée BLS. Saisissez ces informations ou acceptez les "
+"valeurs par défaut détectées ou générées. Démarrez votre nœud comme suit "
+":"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:256
 msgid ""
@@ -496,13 +506,13 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:279
 msgid ""
-"Continue with the :ref:`Registration step <testnet-register-masternode>` to "
-"setup the collateral, keys and construct the ProTx transaction required to "
-"enable your masternode."
+"Continue with the :ref:`Registration step <testnet-register-masternode>` "
+"to setup the collateral, keys and construct the ProTx transaction "
+"required to enable your masternode."
 msgstr ""
-"Continuez avec :ref:`l'étape d'enregistrement <testnet-register-masternode>`"
-" pour mettre en place la caution et les clés, et construire la transaction "
-"ProTx indispensable pour activer votre masternode."
+"Continuez avec :ref:`l'étape d'enregistrement <testnet-register-"
+"masternode>` pour mettre en place la caution et les clés, et construire "
+"la transaction ProTx indispensable pour activer votre masternode."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:286
 msgid "Masternode Update"
@@ -510,20 +520,21 @@ msgstr "Mise à jour de masternode"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:288
 msgid ""
-"You can use ``dashmate`` to update minor versions of the software on your "
-"masternode as follows::"
+"You can use ``dashmate`` to update minor versions of the software on your"
+" masternode as follows::"
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:295
 msgid ""
-"Adding the following ``git`` and ``npm`` commands optionally also ensures "
-"you are using the latest stable version of dashmate::"
+"Adding the following ``git`` and ``npm`` commands optionally also ensures"
+" you are using the latest stable version of dashmate::"
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:303
 msgid ""
 "Adding the following command will drop all data from Dash Platform "
-"(necessary if Platform has been wiped) and restart with the latest version::"
+"(necessary if Platform has been wiped) and restart with the latest "
+"version::"
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:316
@@ -542,9 +553,9 @@ msgstr "Option 1 : Enregistrement depuis un portefeuille matériel"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:324
 msgid ""
-"Go back to DMT and ensure that all fields from the previous step are still "
-"filled out correctly.  Click **Generate new** for the three private keys "
-"required for a masternode:"
+"Go back to DMT and ensure that all fields from the previous step are "
+"still filled out correctly.  Click **Generate new** for the three private"
+" keys required for a masternode:"
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:328
@@ -553,10 +564,11 @@ msgstr "Clé privée du propriétaire"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:329
 msgid ""
-"Operator private key (generate new or use private key generated by dashmate)"
+"Operator private key (generate new or use private key generated by "
+"dashmate)"
 msgstr ""
-"Clé privée d'opérateur (générez-en une neuve, ou bien utilisez la clé privée"
-" générée par Dashmate)"
+"Clé privée d'opérateur (générez-en une neuve, ou bien utilisez la clé "
+"privée générée par Dashmate)"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:330
 msgid "Voting private key"
@@ -568,22 +580,22 @@ msgstr "DashMasternodeTool prêt à enregistrer un nouveau masternode"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:337
 msgid ""
-"Then click **Register masternode**. Optionally specify a different **Payout "
-"address** and/or **Operator reward**, then click **Continue**. Select "
-"**Remote Dash RPC Node (automatic method)**. (See `here "
-"<https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-"
-"connection-direct.md>`__ for documentation on using your own local RPC "
-"node.) and confirm the following two messages:"
+"Then click **Register masternode**. Optionally specify a different "
+"**Payout address** and/or **Operator reward**, then click **Continue**. "
+"Select **Remote Dash RPC Node (automatic method)**. (See `here "
+"<https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc"
+"/config-connection-direct.md>`__ for documentation on using your own "
+"local RPC node.) and confirm the following two messages:"
 msgstr ""
-"Puis cliquez sur **Register masternode** (Enregistrer le masternode). Vous "
-"pouvez, facultativement, indiquer une **Payout address** (Adresse de "
-"paiement) différente et/ou une **Operator reward** (Récompense d'opérateur) "
-"différente, puis cliquez sur **Continue**. Choisissez **Remote Dash RPC Node"
-" (automatic method)** (Nœud Dash RPC distant (méthode automatique)). (Voir "
-"`ici <https://github.com/Bertrand256/dash-masternode-"
-"tool/blob/master/doc/config-connection-direct.md>`__ une documentation sur "
-"l'utilisation de votre propre nœud RPC local.) Confirmez les deux messages "
-"suivants :"
+"Puis cliquez sur **Register masternode** (Enregistrer le masternode). "
+"Vous pouvez, facultativement, indiquer une **Payout address** (Adresse de"
+" paiement) différente et/ou une **Operator reward** (Récompense "
+"d'opérateur) différente, puis cliquez sur **Continue**. Choisissez "
+"**Remote Dash RPC Node (automatic method)** (Nœud Dash RPC distant "
+"(méthode automatique)). (Voir `ici <https://github.com/Bertrand256/dash-"
+"masternode-tool/blob/master/doc/config-connection-direct.md>`__ une "
+"documentation sur l'utilisation de votre propre nœud RPC local.) "
+"Confirmez les deux messages suivants :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:349
 msgid "Dash Masternode Tool confirmation dialogs to register a masternode"
@@ -594,23 +606,23 @@ msgstr ""
 #: ../../docs/user/masternodes/setup-testnet.rst:351
 msgid ""
 "The public key will be used in following steps. The private key must be "
-"entered in the configuration on the masternode. This allows the masternode "
-"to watch the blockchain for relevant Pro*Tx transactions, and will cause it "
-"to start serving as a masternode when the signed ProRegTx is broadcast by "
-"the owner (final step below). If you are using the BLS key generated by "
-"``dashmate setup``, this information is already configured for your "
-"masternode. If you generated your own BLS key pair, edit the dashmate "
-"configuration as follows::"
+"entered in the configuration on the masternode. This allows the "
+"masternode to watch the blockchain for relevant Pro*Tx transactions, and "
+"will cause it to start serving as a masternode when the signed ProRegTx "
+"is broadcast by the owner (final step below). If you are using the BLS "
+"key generated by ``dashmate setup``, this information is already "
+"configured for your masternode. If you generated your own BLS key pair, "
+"edit the dashmate configuration as follows::"
 msgstr ""
-"La clé publique sera utilisée lors des étapes suivantes. La clé privée doit "
-"être saisie dans la configuration sur le masternode. Cela permet au "
+"La clé publique sera utilisée lors des étapes suivantes. La clé privée "
+"doit être saisie dans la configuration sur le masternode. Cela permet au "
 "masternode de surveiller sur la blockchain les transactions Pro*Tx "
 "correspondantes, et cela le démarrera en tant que masternode quand la "
 "transaction signée ProRegTx sera diffusée par le propriétaire (dernière "
 "étape ci-dessous). Si vous utilisez la clé BLS générée par ``dashmate "
 "setup``, cette information est déjà configurée pour votre masternode. Si "
-"vous avez généré votre propre paire de clé BLS, modifiez la configuration "
-"Dashmate comme suit :"
+"vous avez généré votre propre paire de clé BLS, modifiez la configuration"
+" Dashmate comme suit :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:363
 #: ../../docs/user/masternodes/setup-testnet.rst:613
@@ -620,8 +632,8 @@ msgid ""
 "function in DMT."
 msgstr ""
 "Arrivé à cette étape, vous pouvez revenir à votre fenêtre de terminal et "
-"surveiller votre masternode avec la commande ``dashmate status``, ou bien en"
-" utilisant la fonction **Get status** (Voir l'état) dans DMT."
+"surveiller votre masternode avec la commande ``dashmate status``, ou bien"
+" en utilisant la fonction **Get status** (Voir l'état) dans DMT."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:367
 msgid ""
@@ -641,23 +653,22 @@ msgstr "Identifier la transaction de financement"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:378
 msgid ""
-"If you used an address in Dash Core wallet for your collateral transaction, "
-"you now need to find the txid of the transaction. Click **Window > Console**"
-" and enter the following command::"
+"If you used an address in Dash Core wallet for your collateral "
+"transaction, you now need to find the txid of the transaction. Click "
+"**Window > Console** and enter the following command::"
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:384
 msgid "This should return a string of characters similar to the following::"
-msgstr ""
-"Cela devrait vous renvoyer une chaîne de caractères analogue à celle-ci ::"
+msgstr "Cela devrait vous renvoyer une chaîne de caractères analogue à celle-ci ::"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:390
 msgid ""
-"The first long string is your ``collateralHash``, while the last number is "
-"the ``collateralIndex``."
+"The first long string is your ``collateralHash``, while the last number "
+"is the ``collateralIndex``."
 msgstr ""
-"La première chaîne, longue, est votre ``collateralHash``, et le nombre à la "
-"fin est le ``collateralIndex``."
+"La première chaîne, longue, est votre ``collateralHash``, et le nombre à "
+"la fin est le ``collateralIndex``."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:397
 msgid "Generate a BLS key pair"
@@ -667,23 +678,24 @@ msgstr "Générer une paire de clés BLS"
 msgid ""
 "A public/private BLS key pair is required to operate a masternode. The "
 "private key is specified on the masternode itself, and allows it to be "
-"included in the deterministic masternode list once a provider registration "
-"transaction with the corresponding public key has been created."
+"included in the deterministic masternode list once a provider "
+"registration transaction with the corresponding public key has been "
+"created."
 msgstr ""
 "Une paire de clés BLS publique/privée est obligatoire pour opérer un "
-"masternode. La clé privée est spécifiée sur le masternode lui-même, et lui "
-"permet d'être inclus dans la liste déterministe des masternodes une fois "
-"qu'une transaction d'enregistrement avec la clé publique correspondante a "
-"été créée."
+"masternode. La clé privée est spécifiée sur le masternode lui-même, et "
+"lui permet d'être inclus dans la liste déterministe des masternodes une "
+"fois qu'une transaction d'enregistrement avec la clé publique "
+"correspondante a été créée."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:405
 msgid ""
-"If you are using a hosting service, they may provide you with their public "
-"key, and you can skip this step. If you are hosting your own masternode or "
-"have agreed to provide your host with the BLS private key, you can use the "
-"BLS key generated by the ``dashmate setup`` command. Alternatively, you can "
-"generate a BLS public/private keypair in Dash Core by clicking **Window > "
-"Console** and entering the following command::"
+"If you are using a hosting service, they may provide you with their "
+"public key, and you can skip this step. If you are hosting your own "
+"masternode or have agreed to provide your host with the BLS private key, "
+"you can use the BLS key generated by the ``dashmate setup`` command. "
+"Alternatively, you can generate a BLS public/private keypair in Dash Core"
+" by clicking **Window > Console** and entering the following command::"
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:421
@@ -693,8 +705,8 @@ msgid ""
 "genkey`` **command.**"
 msgstr ""
 "**Ces clés ne sont PAS stockées par le portefeuille ni par Dashmate, et "
-"elles doivent être conservées dans un lieu sûr**, à l'image de la valeur que"
-" retournait, par le passé, la commande ``masternode genkey``."
+"elles doivent être conservées dans un lieu sûr**, à l'image de la valeur "
+"que retournait, par le passé, la commande ``masternode genkey``."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:426
 msgid "Add the private key to your masternode configuration"
@@ -705,26 +717,26 @@ msgid ""
 "The public key will be used in following steps. The private key must be "
 "entered in the ``dash.conf`` file on the masternode. This allows the "
 "masternode to watch the blockchain for relevant Pro*Tx transactions, and "
-"will cause it to start serving as a masternode when the signed ProRegTx is "
-"broadcast by the owner (final step below). If you are using the BLS key "
-"generated by ``dashmate setup``, this information is already configured for "
-"your masternode. If you generated your own BLS key pair, edit the dashmate "
-"configuration as follows::"
+"will cause it to start serving as a masternode when the signed ProRegTx "
+"is broadcast by the owner (final step below). If you are using the BLS "
+"key generated by ``dashmate setup``, this information is already "
+"configured for your masternode. If you generated your own BLS key pair, "
+"edit the dashmate configuration as follows::"
 msgstr ""
-"La clé publique sera utilisée lors des étapes suivantes. La clé privée doit "
-"être saisie dans le fichier ``dash.conf`` sur le masternode. Cela permet au "
-"masternode de surveiller sur la blockchain les transactions Pro*Tx "
-"correspondantes, et cela le démarrera en tant que masternode quand la "
-"transaction signée ProRegTx sera diffusée par le propriétaire (dernière "
-"étape ci-dessous). Si vous utilisez la clé BLS générée par ``dashmate "
-"setup``, cette information est déjà configurée pour votre masternode. Si "
-"vous avez généré votre propre paire de clé BLS, modifiez la configuration "
-"Dashmate comme suit :"
+"La clé publique sera utilisée lors des étapes suivantes. La clé privée "
+"doit être saisie dans le fichier ``dash.conf`` sur le masternode. Cela "
+"permet au masternode de surveiller sur la blockchain les transactions "
+"Pro*Tx correspondantes, et cela le démarrera en tant que masternode quand"
+" la transaction signée ProRegTx sera diffusée par le propriétaire "
+"(dernière étape ci-dessous). Si vous utilisez la clé BLS générée par "
+"``dashmate setup``, cette information est déjà configurée pour votre "
+"masternode. Si vous avez généré votre propre paire de clé BLS, modifiez "
+"la configuration Dashmate comme suit :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:440
 msgid ""
-"We will now prepare the transaction used to register the masternode on the "
-"network."
+"We will now prepare the transaction used to register the masternode on "
+"the network."
 msgstr ""
 "Nous allons maintenant préparer la transaction qui sera utilisée pour "
 "enregistrer le masternode sur le réseau."
@@ -735,31 +747,32 @@ msgstr "Préparer une transaction ProRegTx"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:446
 msgid ""
-"A pair of BLS keys for the operator were already generated above, and the "
-"private key was entered on the masternode. The public key is used in this "
-"transaction as the ``operatorPubKey``."
+"A pair of BLS keys for the operator were already generated above, and the"
+" private key was entered on the masternode. The public key is used in "
+"this transaction as the ``operatorPubKey``."
 msgstr ""
-"Une paire de clés BLS pour l'opérateur a déjà été générée ci-dessus, et la "
-"clé privée a été entrée sur le masternode. La clé publique est utilisée dans"
-" cette transaction en tant que ``operatorPubKey``."
+"Une paire de clés BLS pour l'opérateur a déjà été générée ci-dessus, et "
+"la clé privée a été entrée sur le masternode. La clé publique est "
+"utilisée dans cette transaction en tant que ``operatorPubKey``."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:450
 msgid ""
-"First, we need to get a new, unused address from the wallet to serve as the "
-"**owner key address** (``ownerKeyAddr``). This is not the same as the "
-"collateral address holding 1000 Dash. Generate a new address as follows::"
+"First, we need to get a new, unused address from the wallet to serve as "
+"the **owner key address** (``ownerKeyAddr``). This is not the same as the"
+" collateral address holding 1000 Dash. Generate a new address as "
+"follows::"
 msgstr ""
 "D'abord, nous devons obtenir du portefeuille une adresse neuve et "
 "inutilisée, qui servira comme **adresse de clé du propriétaire** "
-"(``ownerKeyAddr``). Elle est différente de l'adresse de la caution de 1000 "
-"dashs. Générez une nouvelle adresse comme suit :"
+"(``ownerKeyAddr``). Elle est différente de l'adresse de la caution de "
+"1000 dashs. Générez une nouvelle adresse comme suit :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:459
 msgid ""
 "This address can also be used as the **voting key address** "
-"(``votingKeyAddr``). Alternatively, you can specify an address provided to "
-"you by your chosen voting delegate, or simply generate a new voting key "
-"address as follows::"
+"(``votingKeyAddr``). Alternatively, you can specify an address provided "
+"to you by your chosen voting delegate, or simply generate a new voting "
+"key address as follows::"
 msgstr ""
 "Cette adresse peut aussi être utilisée comme **adresse de clé de vote** "
 "(``votingKeyAddr``). Alternativement, vous pouvez indiquer une adresse "
@@ -768,14 +781,14 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:468
 msgid ""
-"Then either generate or choose an existing address to receive the **owner's "
-"masternode payouts** (``payoutAddress``). It is also possible to use an "
-"address external to the wallet::"
+"Then either generate or choose an existing address to receive the "
+"**owner's masternode payouts** (``payoutAddress``). It is also possible "
+"to use an address external to the wallet::"
 msgstr ""
 "Ensuite, générez une seconde adresse ou choisissez une adresse déjà "
 "existante, qui servira au propriétaire pour recevoir les **paiements du "
-"propriétaire du masternode** (``payoutAddress``). Il est également possible "
-"d'utiliser une adresse externe au portefeuille :"
+"propriétaire du masternode** (``payoutAddress``). Il est également "
+"possible d'utiliser une adresse externe au portefeuille :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:476
 msgid ""
@@ -784,48 +797,50 @@ msgid ""
 "external payout address, you must specify a fee source address."
 msgstr ""
 "Vous pouvez aussi, facultativement, générer et alimenter une troisième "
-"adresse comme **source des frais de transaction** (``feeSourceAddress``). Si"
-" vous avez choisi une adresse de paiement externe, vous devez indiquer une "
-"adresse source pour les frais."
+"adresse comme **source des frais de transaction** (``feeSourceAddress``)."
+" Si vous avez choisi une adresse de paiement externe, vous devez indiquer"
+" une adresse source pour les frais."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:480
 msgid ""
-"Either the payout address or fee source address must have enough balance to "
-"pay the transaction fee, or the ``register_prepare`` transaction will fail."
+"Either the payout address or fee source address must have enough balance "
+"to pay the transaction fee, or the ``register_prepare`` transaction will "
+"fail."
 msgstr ""
 "L'une de ces deux adresses, de paiement ou de frais, doit avoir un solde "
-"suffisant pour régler les frais de transaction, faute de quoi la transaction"
-" ``register_prepare`` échouera."
+"suffisant pour régler les frais de transaction, faute de quoi la "
+"transaction ``register_prepare`` échouera."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:484
 msgid ""
 "The private keys to the owner and fee source addresses must exist in the "
 "wallet submitting the transaction to the network. If your wallet is "
-"protected by a password, it must now be unlocked to perform the following "
-"commands. Unlock your wallet for 5 minutes::"
+"protected by a password, it must now be unlocked to perform the following"
+" commands. Unlock your wallet for 5 minutes::"
 msgstr ""
 "Les clés privées des adresses du propriétaire et des frais doivent être "
-"accessibles par le portefeuille qui soumettra la transaction au réseau. Si "
-"votre portefeuille est protégé par mot de passe, il doit à présent être "
-"déverrouillé pour exécuter les commandes suivantes. Déverrouillez votre "
-"portefeuille pendant 5 minutes :"
+"accessibles par le portefeuille qui soumettra la transaction au réseau. "
+"Si votre portefeuille est protégé par mot de passe, il doit à présent "
+"être déverrouillé pour exécuter les commandes suivantes. Déverrouillez "
+"votre portefeuille pendant 5 minutes :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:491
 msgid ""
 "We will now prepare an unsigned ProRegTx special transaction using the "
-"``protx register_prepare`` command. This command has the following syntax::"
+"``protx register_prepare`` command. This command has the following "
+"syntax::"
 msgstr ""
 "Nous allons maintenant préparer une transaction spéciale ProRegTx non "
-"signée, en utilisant la commande ``protx register_prepare``. Cette commande "
-"a la syntaxe suivante :"
+"signée, en utilisant la commande ``protx register_prepare``. Cette "
+"commande a la syntaxe suivante :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:499
 msgid ""
-"After v19 hard fork activation, ``protx register_prepare_legacy`` must be "
-"used if a legacy scheme BLS key is being used to register a masternode. It's"
-" recommended to instead generate a new basic scheme BLS key where possible. "
-"This can be done by following the :ref:`Generate a BLS key pair <testnet-"
-"bls-generation>` instructions."
+"After v19 hard fork activation, ``protx register_prepare_legacy`` must be"
+" used if a legacy scheme BLS key is being used to register a masternode. "
+"It's recommended to instead generate a new basic scheme BLS key where "
+"possible. This can be done by following the :ref:`Generate a BLS key pair"
+" <testnet-bls-generation>` instructions."
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:505
@@ -833,22 +848,22 @@ msgid ""
 "Open a text editor such as notepad to prepare this command. Replace each "
 "argument to the command as follows:"
 msgstr ""
-"Ouvrez un éditeur de texte, tel que Notepad, pour préparer cette commande. "
-"Remplacez chaque argument de la commande comme suit :"
+"Ouvrez un éditeur de texte, tel que Notepad, pour préparer cette "
+"commande. Remplacez chaque argument de la commande comme suit :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:508
 msgid ""
-"``collateralHash``: The txid of the 1000 Dash collateral funding transaction"
+"``collateralHash``: The txid of the 1000 Dash collateral funding "
+"transaction"
 msgstr ""
-"``collateralHash`` : l'identifiant de la transaction (txid) de la caution de"
-" 1000 dashs"
+"``collateralHash`` : l'identifiant de la transaction (txid) de la caution"
+" de 1000 dashs"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:510
-msgid ""
-"``collateralIndex``: The output index of the 1000 Dash funding transaction"
+msgid "``collateralIndex``: The output index of the 1000 Dash funding transaction"
 msgstr ""
-"``collateralIndex`` : l'index de sortie de la transaction de la caution de "
-"1000 dashs"
+"``collateralIndex`` : l'index de sortie de la transaction de la caution "
+"de 1000 dashs"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:512
 msgid ""
@@ -860,27 +875,28 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:514
 msgid ""
-"``ownerKeyAddr``: The new Dash address generated above for the owner/voting "
-"address"
+"``ownerKeyAddr``: The new Dash address generated above for the "
+"owner/voting address"
 msgstr ""
 "``ownerKeyAddr`` : l'adresse Dash nouvellement générée ci-dessus, pour "
 "l'adresse du propriétaire et de vote"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:516
 msgid ""
-"``operatorPubKey``: The BLS public key generated above (or provided by your "
-"hosting service)"
+"``operatorPubKey``: The BLS public key generated above (or provided by "
+"your hosting service)"
 msgstr ""
-"``operatorPubKey`` : la clé publique BLS générée ci-dessus (ou fournie par "
-"votre service d'hébergement de masternode)"
+"``operatorPubKey`` : la clé publique BLS générée ci-dessus (ou fournie "
+"par votre service d'hébergement de masternode)"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:518
 msgid ""
-"``votingKeyAddr``: The new Dash address generated above, or the address of a"
-" delegate, used for proposal voting"
+"``votingKeyAddr``: The new Dash address generated above, or the address "
+"of a delegate, used for proposal voting"
 msgstr ""
-"``votingKeyAddr`` : l'adresse Dash nouvellement générée ci-dessus, ou bien "
-"l'adresse d'un délégué, utilisée pour le vote des propositions budgétaires"
+"``votingKeyAddr`` : l'adresse Dash nouvellement générée ci-dessus, ou "
+"bien l'adresse d'un délégué, utilisée pour le vote des propositions "
+"budgétaires"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:520
 msgid ""
@@ -903,16 +919,16 @@ msgid ""
 "``feeSourceAddress``: An (optional) address used to fund ProTx fee. "
 "``payoutAddress`` will be used if not specified."
 msgstr ""
-"``feeSourceAddress`` : une adresse (facultative) d'où seront prélevés les "
-"frais de la transaction ProTx. Si elle n'est pas spécifiée, c'est l'adresse "
-"``payoutAddress`` qui sera utilisée."
+"``feeSourceAddress`` : une adresse (facultative) d'où seront prélevés les"
+" frais de la transaction ProTx. Si elle n'est pas spécifiée, c'est "
+"l'adresse ``payoutAddress`` qui sera utilisée."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:527
 msgid ""
-"Note that the operator is responsible for :ref:`specifying their own reward "
-"<dip3-update-service>` address in a separate ``update_service`` transaction "
-"if you specify a non-zero ``operatorReward``. The owner of the masternode "
-"collateral does not specify the operator's payout address."
+"Note that the operator is responsible for :ref:`specifying their own "
+"reward <dip3-update-service>` address in a separate ``update_service`` "
+"transaction if you specify a non-zero ``operatorReward``. The owner of "
+"the masternode collateral does not specify the operator's payout address."
 msgstr ""
 "Veuillez noter qu'il revient à l'opérateur de :ref:`spécifier sa propre "
 "adresse de paiement <dip3-update-service>` avec une transaction "
@@ -946,22 +962,23 @@ msgstr "Signer la transaction ProRegTx"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:561
 msgid ""
-"We will now sign the content of the ``signMessage`` field using the private "
-"key for the collateral address as specified in ``collateralAddress``. Note "
-"that no internet connection is required for this step, meaning that the "
-"wallet can remain disconnected from the internet in cold storage to sign the"
-" message. In this example we will again use Dash Core, but it is equally "
-"possible to use the signing function of a hardware wallet. The command takes"
-" the following syntax::"
+"We will now sign the content of the ``signMessage`` field using the "
+"private key for the collateral address as specified in "
+"``collateralAddress``. Note that no internet connection is required for "
+"this step, meaning that the wallet can remain disconnected from the "
+"internet in cold storage to sign the message. In this example we will "
+"again use Dash Core, but it is equally possible to use the signing "
+"function of a hardware wallet. The command takes the following syntax::"
 msgstr ""
-"Nous allons maintenant signer le contenu du champ ``signMessage`` au moyen "
-"de la clé privée de l'adresse de la caution telle que spécifiée dans "
-"``collateralAddress``. Veuillez noter qu'aucune connexion à Internet n'est "
-"obligatoire pour cette étape, ce qui signifie que le portefeuille peut être "
-"déconnecté de l'Internet (en \"chambre froide\") pour signer le message. "
-"Dans cet exemple nous allons à nouveau utiliser le portefeuille logiciel "
-"Dash Core, mais il est également possible d'utiliser la fonction de "
-"signature d'un portefeuille matériel. La commande a la syntaxe suivante :"
+"Nous allons maintenant signer le contenu du champ ``signMessage`` au "
+"moyen de la clé privée de l'adresse de la caution telle que spécifiée "
+"dans ``collateralAddress``. Veuillez noter qu'aucune connexion à Internet"
+" n'est obligatoire pour cette étape, ce qui signifie que le portefeuille "
+"peut être déconnecté de l'Internet (en \"chambre froide\") pour signer le"
+" message. Dans cet exemple nous allons à nouveau utiliser le portefeuille"
+" logiciel Dash Core, mais il est également possible d'utiliser la "
+"fonction de signature d'un portefeuille matériel. La commande a la "
+"syntaxe suivante :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:571
 #: ../../docs/user/masternodes/setup-testnet.rst:598
@@ -975,10 +992,10 @@ msgstr "Soumettre le message signé"
 #: ../../docs/user/masternodes/setup-testnet.rst:583
 msgid ""
 "We will now submit the ProRegTx special transaction to the blockchain to "
-"register the masternode. This command must be sent from a Dash Core wallet "
-"holding a balance on either the ``feeSourceAddress`` or ``payoutAddress``, "
-"since a standard transaction fee is involved. The command takes the "
-"following syntax::"
+"register the masternode. This command must be sent from a Dash Core "
+"wallet holding a balance on either the ``feeSourceAddress`` or "
+"``payoutAddress``, since a standard transaction fee is involved. The "
+"command takes the following syntax::"
 msgstr ""
 "Nous allons maintenant créer la transaction spéciale ProRegTx pour "
 "enregistrer le masternode sur la blockchain. Cette commande doit être "
@@ -992,16 +1009,16 @@ msgstr "Où :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:593
 msgid ""
-"``tx``: The serialized transaction previously returned in the ``tx`` output "
-"field from the ``protx register_prepare`` command"
+"``tx``: The serialized transaction previously returned in the ``tx`` "
+"output field from the ``protx register_prepare`` command"
 msgstr ""
-"``tx`` : la transaction sérialisée précédemment renvoyée dans le champ de "
-"sortie ``tx`` par la commande ``protx register_prepare``"
+"``tx`` : la transaction sérialisée précédemment renvoyée dans le champ de"
+" sortie ``tx`` par la commande ``protx register_prepare``"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:595
 msgid ""
-"``sig``: The message signed with the collateral key from the ``signmessage``"
-" command"
+"``sig``: The message signed with the collateral key from the "
+"``signmessage`` command"
 msgstr ""
 "``sig`` : le message signé avec la clé de la caution par la commande "
 "``signmessage``"
@@ -1009,18 +1026,19 @@ msgstr ""
 #: ../../docs/user/masternodes/setup-testnet.rst:606
 msgid ""
 "Your masternode is now registered and will appear on the Deterministic "
-"Masternode List after the transaction is mined to a block. You can view this"
-" list on the **Masternodes -> DIP3 Masternodes** tab of the Dash Core "
-"wallet, or in the console using the command ``protx list valid``, where the "
-"txid of the final ``protx register_submit`` transaction identifies your "
-"masternode."
+"Masternode List after the transaction is mined to a block. You can view "
+"this list on the **Masternodes -> DIP3 Masternodes** tab of the Dash Core"
+" wallet, or in the console using the command ``protx list valid``, where "
+"the txid of the final ``protx register_submit`` transaction identifies "
+"your masternode."
 msgstr ""
-"Votre masternode est à présent enregistré et il apparaîtra dans la liste des"
-" masternodes déterministes dès que la transaction sera minée dans un bloc. "
-"Vous pouvez afficher cette liste dans l'onglet **Masternodes > Masternodes "
-"DIP3** du portefeuille logiciel Dash Core, ou dans la console en utilisant "
-"la commande ``protx list valid``, où l'identifiant (txid) de la transaction "
-"finale ``protx register_submit`` identifie votre masternode."
+"Votre masternode est à présent enregistré et il apparaîtra dans la liste "
+"des masternodes déterministes dès que la transaction sera minée dans un "
+"bloc. Vous pouvez afficher cette liste dans l'onglet **Masternodes > "
+"Masternodes DIP3** du portefeuille logiciel Dash Core, ou dans la console"
+" en utilisant la commande ``protx list valid``, où l'identifiant (txid) "
+"de la transaction finale ``protx register_submit`` identifie votre "
+"masternode."
 
 #: ../../docs/user/masternodes/setup-testnet.rst:621
 msgid "Manual installation"
@@ -1029,14 +1047,15 @@ msgstr "Installation manuelle"
 #: ../../docs/user/masternodes/setup-testnet.rst:623
 msgid "**The manual installation guide is currently a work in progress.**"
 msgstr ""
-"**Ce guide d'installation manuelle est actuellement un travail non achevé.**"
+"**Ce guide d'installation manuelle est actuellement un travail non "
+"achevé.**"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:625
 msgid ""
-"This guide describes how to manually download and install the components of "
-"your Dash masternode under Ubuntu Linux 22.04 LTS \"Jammy Jellyfish\" "
-"assuming you have a non-root user named ``dash``. You will need to manually "
-"adjust apt commands if using a different distro."
+"This guide describes how to manually download and install the components "
+"of your Dash masternode under Ubuntu Linux 22.04 LTS \"Jammy Jellyfish\" "
+"assuming you have a non-root user named ``dash``. You will need to "
+"manually adjust apt commands if using a different distro."
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:631
@@ -1063,8 +1082,8 @@ msgstr "Dash Core"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:653
 msgid ""
-"Dash Core is a fork of Bitcoin Core and is responsible for all consensus and"
-" communication relating to the base blockchain. Download Dash Core as "
+"Dash Core is a fork of Bitcoin Core and is responsible for all consensus "
+"and communication relating to the base blockchain. Download Dash Core as "
 "follows::"
 msgstr ""
 "Dash Core est un fork de Bitcoin Core et il est responsable de tout le "
@@ -1073,9 +1092,9 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:660
 msgid ""
-"Verify the authenticity of your download by checking its detached signature "
-"against the public key published by the Dash Core development team. All "
-"releases of Dash are signed using GPG with the following key:"
+"Verify the authenticity of your download by checking its detached "
+"signature against the public key published by the Dash Core development "
+"team. All releases of Dash are signed using GPG with the following key:"
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:664
@@ -1091,7 +1110,8 @@ msgid ""
 "Extract the compressed archive and copy the necessary files to the "
 "directory::"
 msgstr ""
-"Décompressez l'archive et copiez les nouveaux fichiers dans le répertoire :"
+"Décompressez l'archive et copiez les nouveaux fichiers dans le répertoire"
+" :"
 
 #: ../../docs/user/masternodes/setup-testnet.rst:679
 msgid "Create a working directory for Dash Core::"
@@ -1103,9 +1123,9 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:720
 msgid ""
-"Optionally replace the ``rpcuser`` and ``rpcpassword`` fields with your own "
-"values. Leave the ``masternodeblsprivkey`` field commented out for now. "
-"Configure Dash Core to start as a service::"
+"Optionally replace the ``rpcuser`` and ``rpcpassword`` fields with your "
+"own values. Leave the ``masternodeblsprivkey`` field commented out for "
+"now. Configure Dash Core to start as a service::"
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:744
@@ -1116,216 +1136,194 @@ msgstr "Démarrez Dash Core :"
 msgid "Verify Dash Core is running::"
 msgstr "Vérifiez si Dash Core fonctionne :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:755
-msgid "Sentinel"
-msgstr "Sentinel"
-
-#: ../../docs/user/masternodes/setup-testnet.rst:757
-msgid ""
-"Sentinel is a watchdog and works to communicate to the network that your "
-"node is working properly. Install Sentinel as follows::"
-msgstr ""
-"Sentinel est un outil de surveillance qui communique au réseau que votre "
-"nœud fonctionne sans problème. Installez Sentinel comme suit :"
-
-#: ../../docs/user/masternodes/setup-testnet.rst:768
-msgid ""
-"You will see a message reading **dashd not synced with network! Awaiting "
-"full sync before running Sentinel.** Run the following to ensure Sentinel "
-"runs every 10 minutes::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:776
+#: ../../docs/user/masternodes/setup-testnet.rst:754
 msgid "Use the following command to monitor sync status::"
-msgstr ""
-"Utilisez la commande suivante pour surveiller l'état de synchronisation :"
+msgstr "Utilisez la commande suivante pour surveiller l'état de synchronisation :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:780
-msgid ""
-"When synchronisation is complete, you should see the following response::"
+#: ../../docs/user/masternodes/setup-testnet.rst:758
+msgid "When synchronisation is complete, you should see the following response::"
 msgstr ""
-"Quand la synchronisation est terminée, vous devriez voir le message suivant "
-"::"
+"Quand la synchronisation est terminée, vous devriez voir le message "
+"suivant ::"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:794
+#: ../../docs/user/masternodes/setup-testnet.rst:772
 msgid "Platform services"
 msgstr "Services Platform"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:796
+#: ../../docs/user/masternodes/setup-testnet.rst:774
 msgid ""
 "Next, we will install the Dash Platform services. Start with installing "
 "JavaScript dependencies::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:805
+#: ../../docs/user/masternodes/setup-testnet.rst:783
 msgid "Followed by Rust dependencies::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:814
+#: ../../docs/user/masternodes/setup-testnet.rst:792
 msgid "And Go dependencies::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:822
+#: ../../docs/user/masternodes/setup-testnet.rst:800
 msgid "Drive"
 msgstr "Drive"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:824
+#: ../../docs/user/masternodes/setup-testnet.rst:802
 msgid ""
 "Drive is a replicated state machine for Dash Platform. Download Drive as "
 "follows::"
 msgstr ""
-"Drive est une machine d'état répliqué pour Dash Platform. Téléchargez Drive "
-"comme suit :"
+"Drive est une machine d'état répliqué pour Dash Platform. Téléchargez "
+"Drive comme suit :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:836
+#: ../../docs/user/masternodes/setup-testnet.rst:814
 msgid "Configure Drive::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:854
+#: ../../docs/user/masternodes/setup-testnet.rst:832
 msgid "Start Drive::"
 msgstr "Démarrez Drive :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:858
-msgid ""
-"Verify Drive is running by checking for a time value under ``uptime``::"
+#: ../../docs/user/masternodes/setup-testnet.rst:836
+msgid "Verify Drive is running by checking for a time value under ``uptime``::"
 msgstr ""
 "Vérifiez que Drive fonctionne en inspectant une valeur temporelle sous "
 "``uptime`` :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:863
+#: ../../docs/user/masternodes/setup-testnet.rst:841
 msgid "Tenderdash"
 msgstr "Tenderdash"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:865
+#: ../../docs/user/masternodes/setup-testnet.rst:843
 msgid ""
-"Tenderdash is a fork of Tendermint and is the blockchain implementation used"
-" by Dash Platform. As binaries are not yet published, you will need to build"
-" from source. Build and install Tenderdash as follows::"
+"Tenderdash is a fork of Tendermint and is the blockchain implementation "
+"used by Dash Platform. As binaries are not yet published, you will need "
+"to build from source. Build and install Tenderdash as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:876
+#: ../../docs/user/masternodes/setup-testnet.rst:854
 msgid "Initialize Tenderdash::"
 msgstr "Initialisez Tenderdash :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:880
+#: ../../docs/user/masternodes/setup-testnet.rst:858
 msgid ""
-"Several files will be generated in the ``~/.tenderdash`` directory. Modify "
-"the configuration with the following commands::"
+"Several files will be generated in the ``~/.tenderdash`` directory. "
+"Modify the configuration with the following commands::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:891
+#: ../../docs/user/masternodes/setup-testnet.rst:869
 msgid "Configure Tenderdash to start as a service::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:911
+#: ../../docs/user/masternodes/setup-testnet.rst:889
 msgid "Ensure Dash Core is fully synced and start Tenderdash::"
 msgstr ""
 "Assurez-vous que Dash Core est entièrement synchronisé, puis démarrez "
 "Tenderdash :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:917
+#: ../../docs/user/masternodes/setup-testnet.rst:895
 msgid "Verify Tenderdash is running::"
 msgstr "Vérifiez que Tenderdash est fonctionnel :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:922
+#: ../../docs/user/masternodes/setup-testnet.rst:900
 msgid "DAPI"
 msgstr "DAPI"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:924
+#: ../../docs/user/masternodes/setup-testnet.rst:902
 msgid ""
 "DAPI provides masternode services over the JSON RPC and gRPC protocols. "
 "Start DAPI as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:931
+#: ../../docs/user/masternodes/setup-testnet.rst:909
 msgid "Modify the configuration with the following commands::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:940
+#: ../../docs/user/masternodes/setup-testnet.rst:918
 msgid "Start DAPI::"
 msgstr "Démarrez DAPI :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:944
+#: ../../docs/user/masternodes/setup-testnet.rst:922
 msgid "Start the transaction filter stream::"
 msgstr "Démarrez les filtres de transaction :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:949
+#: ../../docs/user/masternodes/setup-testnet.rst:927
 msgid "Envoy"
 msgstr "Envoy"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:951
+#: ../../docs/user/masternodes/setup-testnet.rst:929
 msgid ""
 "Envoy is a gRPC service proxy for cloud-native applications. As it is "
-"responsible for TLS termination, you will need to obtain a TLS certificate "
-"for your public IP address before configuring Envoy. You can do this "
-"independently using a provider of your choice, or use ZeroSSL to obtain a "
-"free certificate. Visit https://app.zerossl.com/certificate/new and enter "
-"your public IP address, select HTTP File Upload as the verification method "
-"and then download the auth file. Place the contents of this file in the "
-"``/var/www/html/.well-known/pki-validation/`` directory with the original "
-"filename on your server and serve it using nginx as follows::"
+"responsible for TLS termination, you will need to obtain a TLS "
+"certificate for your public IP address before configuring Envoy. You can "
+"do this independently using a provider of your choice, or use ZeroSSL to "
+"obtain a free certificate. Visit https://app.zerossl.com/certificate/new "
+"and enter your public IP address, select HTTP File Upload as the "
+"verification method and then download the auth file. Place the contents "
+"of this file in the ``/var/www/html/.well-known/pki-validation/`` "
+"directory with the original filename on your server and serve it using "
+"nginx as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:966
+#: ../../docs/user/masternodes/setup-testnet.rst:944
 msgid ""
-"Click the link shown in Step 3 of the ZeroSSL interface and verify that the "
-"contents of the auth file are displayed in your browser. Complete validation"
-" in ZeroSSL and download the bundle file in ``.zip`` format. Extract it on "
-"your local computer, and copy the contents of the ``certificate.crt`` "
-"followed by ``ca_bundle.crt`` one after the other into the bundle file at "
-"the following location on the remote node::"
+"Click the link shown in Step 3 of the ZeroSSL interface and verify that "
+"the contents of the auth file are displayed in your browser. Complete "
+"validation in ZeroSSL and download the bundle file in ``.zip`` format. "
+"Extract it on your local computer, and copy the contents of the "
+"``certificate.crt`` followed by ``ca_bundle.crt`` one after the other "
+"into the bundle file at the following location on the remote node::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:975
+#: ../../docs/user/masternodes/setup-testnet.rst:953
 msgid ""
-"Then copy the contents of ``private.key`` into the following location on the"
-" remote node::"
+"Then copy the contents of ``private.key`` into the following location on "
+"the remote node::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:980
+#: ../../docs/user/masternodes/setup-testnet.rst:958
 msgid "Remove nginx and the temporary auth file as follows:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:982
-msgid ""
-"sudo apt -y --purge autoremove nginx sudo rm -rf /var/www/html/.well-known"
+#: ../../docs/user/masternodes/setup-testnet.rst:960
+msgid "sudo apt -y --purge autoremove nginx sudo rm -rf /var/www/html/.well-known"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:985
+#: ../../docs/user/masternodes/setup-testnet.rst:963
 msgid "Install Envoy as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:992
+#: ../../docs/user/masternodes/setup-testnet.rst:970
 msgid "Configure Envoy as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:997
+#: ../../docs/user/masternodes/setup-testnet.rst:975
 msgid "Configure Envoy to start as a service::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1015
+#: ../../docs/user/masternodes/setup-testnet.rst:993
 msgid "Start Envoy::"
 msgstr "Démarrez Envoy :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1021
+#: ../../docs/user/masternodes/setup-testnet.rst:999
 msgid "Verify Envoy is running::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1026
+#: ../../docs/user/masternodes/setup-testnet.rst:1004
 msgid "Finishing up"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1028
+#: ../../docs/user/masternodes/setup-testnet.rst:1006
 msgid "Ensure services managed by ``pm2`` start on reboot::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1033
+#: ../../docs/user/masternodes/setup-testnet.rst:1011
 msgid ""
 "Copy and paste the resulting command to ensure PM2 restarts processes on "
 "boot::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1038
+#: ../../docs/user/masternodes/setup-testnet.rst:1016
 msgid ""
 "At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
@@ -1333,72 +1331,94 @@ msgstr ""
 "À cette étape, vous pouvez vous déconnecter de votre serveur en tapant "
 "``exit``. Félicitations ! Votre masternode est désormais fonctionnel."
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1044
+#: ../../docs/user/masternodes/setup-testnet.rst:1022
 msgid "Developer installation"
 msgstr "Installation pour développeurs"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1046
+#: ../../docs/user/masternodes/setup-testnet.rst:1024
 msgid ""
-"Developers requiring a local masternode can get started quickly by starting "
-"dashmate and providing a private key containing collateral directly. Install"
-" dependencies if necessary (Docker, NodeJS, NPM, Github CLI). Windows, macOS"
-" and Linux are supported, the following example shows how to install "
-"dependencies under Ubuntu 20.04 LTS.::"
+"Developers requiring a local masternode can get started quickly by "
+"starting dashmate and providing a private key containing collateral "
+"directly. Install dependencies if necessary (Docker, NodeJS, NPM, Github "
+"CLI). Windows, macOS and Linux are supported, the following example shows"
+" how to install dependencies under Ubuntu 20.04 LTS.::"
 msgstr ""
 "Les développeurs qui ont besoin d'un masternode local peuvent démarrer "
-"rapidement en lançant Dashmate et en fournissant une clé privée contenant "
-"directement la caution. Installez des dépendances si nécessaire (Docker, "
-"NodeJS, NPM, Github CLI). Windows, macOS et Linux sont compatibles. "
-"L'exemple suivant montre comment installer des dépendances sous Ubuntu 20.04"
-" LTS :"
+"rapidement en lançant Dashmate et en fournissant une clé privée contenant"
+" directement la caution. Installez des dépendances si nécessaire (Docker,"
+" NodeJS, NPM, Github CLI). Windows, macOS et Linux sont compatibles. "
+"L'exemple suivant montre comment installer des dépendances sous Ubuntu "
+"20.04 LTS :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1059
+#: ../../docs/user/masternodes/setup-testnet.rst:1037
 msgid ""
 "Generate a new Dash address for temporary use using `this script "
-"<https://repl.it/@strophy/Generate-Dash-Address>`__ or the ``getnewaddress``"
-" and ``dumpprivkey`` RPC commands in `Dash Core "
-"<https://www.dash.org/downloads>`__ in testnet mode. Go to https://testnet-"
-"faucet.dash.org/ and request 1000+ tDash to your new address using the promo"
-" code 'masternode'. Then download and initialize dashmate as follows::"
+"<https://repl.it/@strophy/Generate-Dash-Address>`__ or the "
+"``getnewaddress`` and ``dumpprivkey`` RPC commands in `Dash Core "
+"<https://www.dash.org/downloads>`__ in testnet mode. Go to https"
+"://testnet-faucet.dash.org/ and request 1000+ tDash to your new address "
+"using the promo code 'masternode'. Then download and initialize dashmate "
+"as follows::"
 msgstr ""
-"Générez une nouvelle adresse Dash à usage temporaire en utilisant `ce script"
-" <https://repl.it/@strophy/Generate-Dash-Address>`__ ou bien les commandes "
-"RPC ``getnewaddress`` et ``dumpprivkey`` dans `Dash Core "
-"<https://www.dash.org/downloads>`__ en mode testnet. Allez sur "
-"https://testnet-faucet.dash.org/ et demandez plus de 1000 tDash à votre "
-"nouvelle adresse, en utilisant le code promo 'masternode'. Puis téléchargez "
-"et initialisez Dashmate comme suit :"
+"Générez une nouvelle adresse Dash à usage temporaire en utilisant `ce "
+"script <https://repl.it/@strophy/Generate-Dash-Address>`__ ou bien les "
+"commandes RPC ``getnewaddress`` et ``dumpprivkey`` dans `Dash Core "
+"<https://www.dash.org/downloads>`__ en mode testnet. Allez sur https"
+"://testnet-faucet.dash.org/ et demandez plus de 1000 tDash à votre "
+"nouvelle adresse, en utilisant le code promo 'masternode'. Puis "
+"téléchargez et initialisez Dashmate comme suit :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1069
+#: ../../docs/user/masternodes/setup-testnet.rst:1047
 msgid ""
 "If you are using Windows, you will need to change the path for two log "
 "files. Modify the example below with a log path of your choosing::"
 msgstr ""
-"Si vous utilisez Windows, vous devrez modifier le chemin de deux fichiers "
-"journal. Modifiez l'exemple ci-dessous avec un chemin journal de votre choix"
-" :"
+"Si vous utilisez Windows, vous devrez modifier le chemin de deux fichiers"
+" journal. Modifiez l'exemple ci-dessous avec un chemin journal de votre "
+"choix :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1075
+#: ../../docs/user/masternodes/setup-testnet.rst:1053
 msgid "Register your masternode on the network as follows::"
 msgstr "Enregistrez votre masternode sur le réseau, comme suit :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1079
-msgid ""
-"Wait until sync and registration are complete. Then start the masternode::"
+#: ../../docs/user/masternodes/setup-testnet.rst:1057
+msgid "Wait until sync and registration are complete. Then start the masternode::"
 msgstr ""
-"Attendez que la synchronisation et l'enregistrement soient terminés. Puis "
-"démarrez le masternode :"
+"Attendez que la synchronisation et l'enregistrement soient terminés. Puis"
+" démarrez le masternode :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1083
-msgid ""
-"Your masternode is now providing service on the following local ports::"
+#: ../../docs/user/masternodes/setup-testnet.rst:1061
+msgid "Your masternode is now providing service on the following local ports::"
 msgstr ""
 "Votre masternode fournit désormais ses services sur les ports locaux "
 "suivants :"
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1091
+#: ../../docs/user/masternodes/setup-testnet.rst:1069
 msgid ""
-"Note that platform sync will take some time after core sync is complete. You"
-" can monitor progress with ``dashmate status platform`` or use ``dashmate "
-"--help`` to view other commands."
+"Note that platform sync will take some time after core sync is complete. "
+"You can monitor progress with ``dashmate status platform`` or use "
+"``dashmate --help`` to view other commands."
 msgstr ""
+
+#~ msgid "Sentinel"
+#~ msgstr "Sentinel"
+
+#~ msgid ""
+#~ "Sentinel is a watchdog and works "
+#~ "to communicate to the network that "
+#~ "your node is working properly. Install"
+#~ " Sentinel as follows::"
+#~ msgstr ""
+#~ "Sentinel est un outil de surveillance"
+#~ " qui communique au réseau que votre"
+#~ " nœud fonctionne sans problème. Installez"
+#~ " Sentinel comme suit :"
+
+#~ msgid ""
+#~ "You will see a message reading "
+#~ "**dashd not synced with network! "
+#~ "Awaiting full sync before running "
+#~ "Sentinel.** Run the following to ensure"
+#~ " Sentinel runs every 10 minutes::"
+#~ msgstr ""
+

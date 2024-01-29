@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-26 09:54-0400\n"
+"POT-Creation-Date: 2024-01-29 09:56-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -865,131 +865,114 @@ msgstr ""
 msgid "Verify Dash Core is running::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:755
-msgid "Sentinel"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:757
-msgid ""
-"Sentinel is a watchdog and works to communicate to the network that your "
-"node is working properly. Install Sentinel as follows::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:768
-msgid ""
-"You will see a message reading **dashd not synced with network! Awaiting "
-"full sync before running Sentinel.** Run the following to ensure Sentinel"
-" runs every 10 minutes::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:776
+#: ../../docs/user/masternodes/setup-testnet.rst:754
 msgid "Use the following command to monitor sync status::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:780
+#: ../../docs/user/masternodes/setup-testnet.rst:758
 msgid "When synchronisation is complete, you should see the following response::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:794
+#: ../../docs/user/masternodes/setup-testnet.rst:772
 msgid "Platform services"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:796
+#: ../../docs/user/masternodes/setup-testnet.rst:774
 msgid ""
 "Next, we will install the Dash Platform services. Start with installing "
 "JavaScript dependencies::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:805
+#: ../../docs/user/masternodes/setup-testnet.rst:783
 msgid "Followed by Rust dependencies::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:814
+#: ../../docs/user/masternodes/setup-testnet.rst:792
 msgid "And Go dependencies::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:822
+#: ../../docs/user/masternodes/setup-testnet.rst:800
 msgid "Drive"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:824
+#: ../../docs/user/masternodes/setup-testnet.rst:802
 msgid ""
 "Drive is a replicated state machine for Dash Platform. Download Drive as "
 "follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:836
+#: ../../docs/user/masternodes/setup-testnet.rst:814
 msgid "Configure Drive::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:854
+#: ../../docs/user/masternodes/setup-testnet.rst:832
 msgid "Start Drive::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:858
+#: ../../docs/user/masternodes/setup-testnet.rst:836
 msgid "Verify Drive is running by checking for a time value under ``uptime``::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:863
+#: ../../docs/user/masternodes/setup-testnet.rst:841
 msgid "Tenderdash"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:865
+#: ../../docs/user/masternodes/setup-testnet.rst:843
 msgid ""
 "Tenderdash is a fork of Tendermint and is the blockchain implementation "
 "used by Dash Platform. As binaries are not yet published, you will need "
 "to build from source. Build and install Tenderdash as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:876
+#: ../../docs/user/masternodes/setup-testnet.rst:854
 msgid "Initialize Tenderdash::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:880
+#: ../../docs/user/masternodes/setup-testnet.rst:858
 msgid ""
 "Several files will be generated in the ``~/.tenderdash`` directory. "
 "Modify the configuration with the following commands::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:891
+#: ../../docs/user/masternodes/setup-testnet.rst:869
 msgid "Configure Tenderdash to start as a service::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:911
+#: ../../docs/user/masternodes/setup-testnet.rst:889
 msgid "Ensure Dash Core is fully synced and start Tenderdash::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:917
+#: ../../docs/user/masternodes/setup-testnet.rst:895
 msgid "Verify Tenderdash is running::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:922
+#: ../../docs/user/masternodes/setup-testnet.rst:900
 msgid "DAPI"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:924
+#: ../../docs/user/masternodes/setup-testnet.rst:902
 msgid ""
 "DAPI provides masternode services over the JSON RPC and gRPC protocols. "
 "Start DAPI as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:931
+#: ../../docs/user/masternodes/setup-testnet.rst:909
 msgid "Modify the configuration with the following commands::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:940
+#: ../../docs/user/masternodes/setup-testnet.rst:918
 msgid "Start DAPI::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:944
+#: ../../docs/user/masternodes/setup-testnet.rst:922
 msgid "Start the transaction filter stream::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:949
+#: ../../docs/user/masternodes/setup-testnet.rst:927
 msgid "Envoy"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:951
+#: ../../docs/user/masternodes/setup-testnet.rst:929
 msgid ""
 "Envoy is a gRPC service proxy for cloud-native applications. As it is "
 "responsible for TLS termination, you will need to obtain a TLS "
@@ -1003,7 +986,7 @@ msgid ""
 "nginx as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:966
+#: ../../docs/user/masternodes/setup-testnet.rst:944
 msgid ""
 "Click the link shown in Step 3 of the ZeroSSL interface and verify that "
 "the contents of the auth file are displayed in your browser. Complete "
@@ -1013,65 +996,65 @@ msgid ""
 "into the bundle file at the following location on the remote node::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:975
+#: ../../docs/user/masternodes/setup-testnet.rst:953
 msgid ""
 "Then copy the contents of ``private.key`` into the following location on "
 "the remote node::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:980
+#: ../../docs/user/masternodes/setup-testnet.rst:958
 msgid "Remove nginx and the temporary auth file as follows:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:982
+#: ../../docs/user/masternodes/setup-testnet.rst:960
 msgid "sudo apt -y --purge autoremove nginx sudo rm -rf /var/www/html/.well-known"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:985
+#: ../../docs/user/masternodes/setup-testnet.rst:963
 msgid "Install Envoy as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:992
+#: ../../docs/user/masternodes/setup-testnet.rst:970
 msgid "Configure Envoy as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:997
+#: ../../docs/user/masternodes/setup-testnet.rst:975
 msgid "Configure Envoy to start as a service::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1015
+#: ../../docs/user/masternodes/setup-testnet.rst:993
 msgid "Start Envoy::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1021
+#: ../../docs/user/masternodes/setup-testnet.rst:999
 msgid "Verify Envoy is running::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1026
+#: ../../docs/user/masternodes/setup-testnet.rst:1004
 msgid "Finishing up"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1028
+#: ../../docs/user/masternodes/setup-testnet.rst:1006
 msgid "Ensure services managed by ``pm2`` start on reboot::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1033
+#: ../../docs/user/masternodes/setup-testnet.rst:1011
 msgid ""
 "Copy and paste the resulting command to ensure PM2 restarts processes on "
 "boot::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1038
+#: ../../docs/user/masternodes/setup-testnet.rst:1016
 msgid ""
 "At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1044
+#: ../../docs/user/masternodes/setup-testnet.rst:1022
 msgid "Developer installation"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1046
+#: ../../docs/user/masternodes/setup-testnet.rst:1024
 msgid ""
 "Developers requiring a local masternode can get started quickly by "
 "starting dashmate and providing a private key containing collateral "
@@ -1080,7 +1063,7 @@ msgid ""
 " how to install dependencies under Ubuntu 20.04 LTS.::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1059
+#: ../../docs/user/masternodes/setup-testnet.rst:1037
 msgid ""
 "Generate a new Dash address for temporary use using `this script "
 "<https://repl.it/@strophy/Generate-Dash-Address>`__ or the "
@@ -1091,25 +1074,25 @@ msgid ""
 "as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1069
+#: ../../docs/user/masternodes/setup-testnet.rst:1047
 msgid ""
 "If you are using Windows, you will need to change the path for two log "
 "files. Modify the example below with a log path of your choosing::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1075
+#: ../../docs/user/masternodes/setup-testnet.rst:1053
 msgid "Register your masternode on the network as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1079
+#: ../../docs/user/masternodes/setup-testnet.rst:1057
 msgid "Wait until sync and registration are complete. Then start the masternode::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1083
+#: ../../docs/user/masternodes/setup-testnet.rst:1061
 msgid "Your masternode is now providing service on the following local ports::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:1091
+#: ../../docs/user/masternodes/setup-testnet.rst:1069
 msgid ""
 "Note that platform sync will take some time after core sync is complete. "
 "You can monitor progress with ``dashmate status platform`` or use "
@@ -1503,5 +1486,23 @@ msgstr ""
 #~ "Envoy is a gRPC service proxy for"
 #~ " cloud-native applications. Install Envoy"
 #~ " as follows::"
+#~ msgstr ""
+
+#~ msgid "Sentinel"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sentinel is a watchdog and works "
+#~ "to communicate to the network that "
+#~ "your node is working properly. Install"
+#~ " Sentinel as follows::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You will see a message reading "
+#~ "**dashd not synced with network! "
+#~ "Awaiting full sync before running "
+#~ "Sentinel.** Run the following to ensure"
+#~ " Sentinel runs every 10 minutes::"
 #~ msgstr ""
 

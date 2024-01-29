@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-26 09:54-0400\n"
+"POT-Creation-Date: 2024-01-29 09:56-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -350,7 +350,7 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-evonode.rst:245
-#: ../../docs/user/masternodes/setup-evonode.rst:395
+#: ../../docs/user/masternodes/setup-evonode.rst:379
 msgid ""
 "Continue with the :ref:`Registration step <register-evonode>` to setup "
 "the collateral, keys and construct the ProTx transaction required to "
@@ -463,31 +463,19 @@ msgstr ""
 msgid "You will see a message reading **Dash Core server starting**."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:349
-msgid "Sentinel"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-evonode.rst:351
+#: ../../docs/user/masternodes/setup-evonode.rst:347
 msgid ""
-"We will now install Sentinel, a piece of software which operates as a "
-"watchdog to communicate to the network that your node is working "
-"properly::"
+"Add dashd to crontab to make sure it runs every minute to check on your "
+"masternode::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:361
-msgid ""
-"You will see a message reading **dashd not synced with network! Awaiting "
-"full sync before running Sentinel.** Add dashd and sentinel to crontab to"
-" make sure it runs every minute to check on your masternode::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-evonode.rst:367
+#: ../../docs/user/masternodes/setup-evonode.rst:352
 msgid ""
 "Choose nano as your editor and enter the following lines at the end of "
 "the file::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:373
+#: ../../docs/user/masternodes/setup-evonode.rst:357
 msgid ""
 "Press enter to make sure there is a blank line at the end of the file, "
 "then press **Ctrl + X** to close the editor and **Y** and **Enter** save "
@@ -497,62 +485,62 @@ msgid ""
 "monitor progress::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:382
+#: ../../docs/user/masternodes/setup-evonode.rst:366
 msgid "When synchronisation is complete, you should see the following response::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:403
+#: ../../docs/user/masternodes/setup-evonode.rst:387
 msgid "Register your masternode"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:405
+#: ../../docs/user/masternodes/setup-evonode.rst:389
 msgid ""
 "The keys required for the different masternode roles are described "
 "briefly under :ref:`mn-concepts` in this documentation."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:411
+#: ../../docs/user/masternodes/setup-evonode.rst:395
 msgid "Option 1: Registering from a hardware wallet"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:413
+#: ../../docs/user/masternodes/setup-evonode.rst:397
 msgid ""
 "Go back to DMT and ensure that all fields from the previous step are "
 "still filled out correctly.  Click **Generate new** for the private keys "
 "required for the masternode:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:417
+#: ../../docs/user/masternodes/setup-evonode.rst:401
 msgid "Owner private key"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:418
+#: ../../docs/user/masternodes/setup-evonode.rst:402
 msgid "Operator private key"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:419
+#: ../../docs/user/masternodes/setup-evonode.rst:403
 msgid "Voting private key"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:420
+#: ../../docs/user/masternodes/setup-evonode.rst:404
 msgid "Platform Node private key (evonodes only)"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:422
+#: ../../docs/user/masternodes/setup-evonode.rst:406
 msgid ""
 "For evonodes, click the button beside the **Platform P2P port** and "
 "**Platform HTTP port** fields to set the default values."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:425
+#: ../../docs/user/masternodes/setup-evonode.rst:409
 msgid "Click **Apply changes** when these fields have been set."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:430
+#: ../../docs/user/masternodes/setup-evonode.rst:414
 msgid "Dash Masternode Tool ready to register a new masternode"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:432
+#: ../../docs/user/masternodes/setup-evonode.rst:416
 msgid ""
 "Then click **MN actions** and select **Register masternode**. Optionally "
 "specify a different **Payout address** and/or **Operator reward**, then "
@@ -563,15 +551,15 @@ msgid ""
 " the following two messages:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:445
+#: ../../docs/user/masternodes/setup-evonode.rst:429
 msgid "Dash Masternode Tool confirmation dialogs to register a masternode"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:449
+#: ../../docs/user/masternodes/setup-evonode.rst:433
 msgid "Complete server configuration"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:451
+#: ../../docs/user/masternodes/setup-evonode.rst:435
 msgid ""
 "At this point the masternode registration is complete, but the BLS "
 "private key must be added to the server so it can become operational. The"
@@ -580,38 +568,38 @@ msgid ""
 "when the signed ProRegTx is broadcast by the owner, as we just did above."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:457
+#: ../../docs/user/masternodes/setup-evonode.rst:441
 msgid ""
 "Take note of your BLS private key and then proceed with the relevant "
 "instructions below based on which :ref:`Software Installation option "
 "<evonode-setup-install>` you are using."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:462
+#: ../../docs/user/masternodes/setup-evonode.rst:446
 msgid "Dashmate"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:464
+#: ../../docs/user/masternodes/setup-evonode.rst:448
 msgid ""
 "For dashmate-based masternodes, enter the BLS private key during the "
 "initial dashmate setup process. Run the dashmate setup wizard on your "
 "server::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:469
+#: ../../docs/user/masternodes/setup-evonode.rst:453
 msgid ""
 "Select the network and masternode type. Select **Yes** when asked if your"
 " masternode is already registered since this was done earlier in the "
 "section."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:472
+#: ../../docs/user/masternodes/setup-evonode.rst:456
 msgid ""
 "Enter the **BLS private key** and the **Platform node key** from DMT when"
 " requested by dashmate."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:475
+#: ../../docs/user/masternodes/setup-evonode.rst:459
 msgid ""
 "Dashmate will automatically detect the external IP address and select the"
 " default ports for the network you are setting up. You can modify these "
@@ -619,40 +607,40 @@ msgid ""
 "should be used."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:479
-#: ../../docs/user/masternodes/setup-evonode.rst:587
+#: ../../docs/user/masternodes/setup-evonode.rst:463
+#: ../../docs/user/masternodes/setup-evonode.rst:571
 msgid ""
 "Once the dashmate wizard has completed successfully, start your node as "
 "follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:484
-#: ../../docs/user/masternodes/setup-evonode.rst:591
+#: ../../docs/user/masternodes/setup-evonode.rst:468
+#: ../../docs/user/masternodes/setup-evonode.rst:575
 msgid ""
 "You can manage your masternode status, configuration, and running state "
 "entirely from within dashmate. See the dashmate :hoverxref:`node "
 "operation documentation <dashmate-node-operation>` for details."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:490
+#: ../../docs/user/masternodes/setup-evonode.rst:474
 msgid "Manual"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:492
+#: ../../docs/user/masternodes/setup-evonode.rst:476
 msgid ""
 "For manual installations, log in to your masternode using ``ssh`` or "
 "PuTTY and edit the configuration file as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:497
+#: ../../docs/user/masternodes/setup-evonode.rst:481
 msgid ""
 "The editor appears with the existing masternode configuration. Add or "
 "uncomment this lines in the file, replacing the key with your BLS private"
 " key generated above::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:503
-#: ../../docs/user/masternodes/setup-evonode.rst:677
+#: ../../docs/user/masternodes/setup-evonode.rst:487
+#: ../../docs/user/masternodes/setup-evonode.rst:661
 msgid ""
 "Press enter to make sure there is a blank line at the end of the file, "
 "then press **Ctrl + X** to close the editor and **Y** and **Enter** save "
@@ -664,32 +652,32 @@ msgid ""
 "between to give Dash Core time to shut down::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:516
+#: ../../docs/user/masternodes/setup-evonode.rst:500
 msgid ""
 "At this point you can monitor your masternode by entering ``~/.dashcore"
 "/dash-cli masternode status`` or using the **Refresh status** function in"
 " DMT. The final result should appear as follows:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:523
+#: ../../docs/user/masternodes/setup-evonode.rst:507
 msgid ""
 "dash-cli masternode status output showing successfully registered "
 "masternode"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:525
-#: ../../docs/user/masternodes/setup-evonode.rst:909
+#: ../../docs/user/masternodes/setup-evonode.rst:509
+#: ../../docs/user/masternodes/setup-evonode.rst:893
 msgid ""
 "At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:533
+#: ../../docs/user/masternodes/setup-evonode.rst:517
 msgid "Option 2: Registering from dashmate"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:536
-#: ../../docs/user/masternodes/setup-evonode.rst:601
+#: ../../docs/user/masternodes/setup-evonode.rst:520
+#: ../../docs/user/masternodes/setup-evonode.rst:585
 msgid ""
 "For mainnet masternodes, it highly is recommended to :ref:`store the "
 "collateral on a hardware wallet <evonode-send-collateral-hardware>` and "
@@ -697,7 +685,7 @@ msgid ""
 "Registering from a hardware wallet <register-evonode-hardware>`."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:541
+#: ../../docs/user/masternodes/setup-evonode.rst:525
 msgid ""
 "Dashmate can assist with masternode registration by requesting the "
 "parameters necessary to construct a valid protx command that can be sent "
@@ -706,11 +694,11 @@ msgid ""
 "hardware wallet."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:547
+#: ../../docs/user/masternodes/setup-evonode.rst:531
 msgid "Collect required information"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:549
+#: ../../docs/user/masternodes/setup-evonode.rst:533
 msgid ""
 "Prior to running the dashmate setup wizard you should obtain the "
 ":hoverxref:`collateral transaction info <evonode-mn-outputs>` and the "
@@ -719,17 +707,17 @@ msgid ""
 "masternode addresses section <evonode-get-addresses>`."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:556
+#: ../../docs/user/masternodes/setup-evonode.rst:540
 msgid "Run the setup wizard"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:558
+#: ../../docs/user/masternodes/setup-evonode.rst:542
 msgid ""
 "To begin masternode setup, run ``dashmate setup`` to start the "
 "interactive wizard::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:562
+#: ../../docs/user/masternodes/setup-evonode.rst:546
 msgid ""
 "You will be prompted to select a network, node type, IP address and BLS "
 "private key. When setting up an unregistered masternode, you will also be"
@@ -737,18 +725,18 @@ msgid ""
 "and payout addresses."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:566
+#: ../../docs/user/masternodes/setup-evonode.rst:550
 msgid ""
 "Enter the requested information or accept the detected/generated "
 "defaults. For an example showing all steps of the setup wizard, refer to "
 "the :hoverxref:`dashmate section <dashmate-wizard-walkthrough>`."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:571
+#: ../../docs/user/masternodes/setup-evonode.rst:555
 msgid "Submit the ProRegTx"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:573
+#: ../../docs/user/masternodes/setup-evonode.rst:557
 msgid ""
 "The dashmate wizard will output a command you can use to submit the "
 "provider registration special transaction that registers the masternode "
@@ -756,50 +744,50 @@ msgid ""
 " or the Dash Core console."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:582
+#: ../../docs/user/masternodes/setup-evonode.rst:566
 msgid "Registration command"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:585
+#: ../../docs/user/masternodes/setup-evonode.rst:569
 msgid "Start the node"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:598
+#: ../../docs/user/masternodes/setup-evonode.rst:582
 msgid "Option 3: Registering from Dash Core wallet"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:606
+#: ../../docs/user/masternodes/setup-evonode.rst:590
 msgid ""
 "This option can be used without installing any applications other than "
 "Dash Core; however, it requires the most technical skill."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:612
+#: ../../docs/user/masternodes/setup-evonode.rst:596
 msgid "Identify the funding transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:614
+#: ../../docs/user/masternodes/setup-evonode.rst:598
 msgid ""
 "If you used an address in Dash Core wallet for your collateral "
 "transaction, you now need to find the txid of the transaction. Click "
 "**Window > Console** and enter the following command::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:620
+#: ../../docs/user/masternodes/setup-evonode.rst:604
 msgid "This should return a string of characters similar to the following::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:626
+#: ../../docs/user/masternodes/setup-evonode.rst:610
 msgid ""
 "The first long string is your ``collateralHash``, while the last number "
 "is the ``collateralIndex``."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:633
+#: ../../docs/user/masternodes/setup-evonode.rst:617
 msgid "Generate a BLS key pair"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:635
+#: ../../docs/user/masternodes/setup-evonode.rst:619
 msgid ""
 "A public/private BLS key pair is required to operate a masternode. The "
 "private key is specified on the masternode itself, and allows it to be "
@@ -808,7 +796,7 @@ msgid ""
 "created."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:640
+#: ../../docs/user/masternodes/setup-evonode.rst:624
 msgid ""
 "If you are using a hosting service, they may provide you with their "
 "public key, and you can skip this step. If you are hosting your own "
@@ -817,18 +805,18 @@ msgid ""
 "Console** and entering the following command::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:656
-#: ../../docs/user/masternodes/setup-evonode.rst:718
+#: ../../docs/user/masternodes/setup-evonode.rst:640
+#: ../../docs/user/masternodes/setup-evonode.rst:702
 msgid ""
 "**These keys are NOT stored by the wallet and must be backed up and kept "
 "secure.**"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:660
+#: ../../docs/user/masternodes/setup-evonode.rst:644
 msgid "Add the private key to your masternode configuration"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:662
+#: ../../docs/user/masternodes/setup-evonode.rst:646
 msgid ""
 "The public key will be used in following steps. The private key must be "
 "entered in the ``dash.conf`` file on the masternode. This allows the "
@@ -838,50 +826,50 @@ msgid ""
 "using ``ssh`` or PuTTY and edit the configuration file as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:671
+#: ../../docs/user/masternodes/setup-evonode.rst:655
 msgid ""
 "The editor appears with the existing masternode configuration. Add or "
 "uncomment this line in the file, replacing the key with your BLS private "
 "key generated above::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:693
+#: ../../docs/user/masternodes/setup-evonode.rst:677
 msgid "Generate a Platform Node ID"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:695
+#: ../../docs/user/masternodes/setup-evonode.rst:679
 msgid ""
 "The following command will generate new P2P key using Tenderdash and "
 "display it on the screen::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:702
+#: ../../docs/user/masternodes/setup-evonode.rst:686
 msgid ""
 "Save the value contained in the ``id`` field for use as your "
 "``platformNodeID``."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:705
+#: ../../docs/user/masternodes/setup-evonode.rst:689
 msgid ""
 "Alternatively, the following commands can be used generate P2P key, save "
 "it to `privkey.pem`, and generate ``platformNodeID`` in hex format::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:713
+#: ../../docs/user/masternodes/setup-evonode.rst:697
 msgid ""
 "The platform node ID will be used in following steps. We will now prepare"
 " the transaction used to register the masternode on the network."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:725
+#: ../../docs/user/masternodes/setup-evonode.rst:709
 msgid "Get masternode addresses"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:729
+#: ../../docs/user/masternodes/setup-evonode.rst:713
 msgid "Owner address"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:731
+#: ../../docs/user/masternodes/setup-evonode.rst:715
 msgid ""
 "First, we need to get a new, unused address from the wallet to serve as "
 "the **owner key address** (``ownerKeyAddr``). This is not the same as the"
@@ -889,11 +877,11 @@ msgid ""
 "follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:741
+#: ../../docs/user/masternodes/setup-evonode.rst:725
 msgid "Voting address"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:743
+#: ../../docs/user/masternodes/setup-evonode.rst:727
 msgid ""
 "This address can also be used as the **voting key address** "
 "(``votingKeyAddr``). Alternatively, you can specify an address provided "
@@ -901,40 +889,40 @@ msgid ""
 "key address as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:753
+#: ../../docs/user/masternodes/setup-evonode.rst:737
 msgid "Payout address"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:754
+#: ../../docs/user/masternodes/setup-evonode.rst:738
 msgid ""
 "Then either generate or choose an existing address to receive the "
 "**owner's masternode payouts** (``payoutAddress``). It is also possible "
 "to use an address external to the wallet::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:764
+#: ../../docs/user/masternodes/setup-evonode.rst:748
 msgid "Fee source address"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:766
+#: ../../docs/user/masternodes/setup-evonode.rst:750
 msgid ""
 "You can also optionally generate and fund another address as the "
 "**transaction fee source** (``feeSourceAddress``). If you selected an "
 "external payout address, you must specify a fee source address."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:770
+#: ../../docs/user/masternodes/setup-evonode.rst:754
 msgid ""
 "Either the payout address or fee source address must have enough balance "
 "to pay the transaction fee, or the ``register_prepare_hpmn`` transaction "
 "will fail."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:775
+#: ../../docs/user/masternodes/setup-evonode.rst:759
 msgid "Key access"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:777
+#: ../../docs/user/masternodes/setup-evonode.rst:761
 msgid ""
 "The private keys to the owner and fee source addresses must exist in the "
 "wallet submitting the transaction to the network. If your wallet is "
@@ -942,94 +930,94 @@ msgid ""
 " commands. Unlock your wallet for 5 minutes::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:788
+#: ../../docs/user/masternodes/setup-evonode.rst:772
 msgid "Prepare a ProRegTx transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:790
+#: ../../docs/user/masternodes/setup-evonode.rst:774
 msgid ""
 "We will now prepare an unsigned ProRegTx special transaction using the "
 "``protx register_prepare_hpmn`` command. This command has the following "
 "syntax::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:796
+#: ../../docs/user/masternodes/setup-evonode.rst:780
 msgid ""
 "Open a text editor such as notepad to prepare this command. Replace each "
 "argument to the command as follows:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:799
+#: ../../docs/user/masternodes/setup-evonode.rst:783
 msgid ""
 "``collateralHash``: The txid of the 4000 Dash collateral funding "
 "transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:800
+#: ../../docs/user/masternodes/setup-evonode.rst:784
 msgid "``collateralIndex``: The output index of the 4000 Dash funding transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:801
+#: ../../docs/user/masternodes/setup-evonode.rst:785
 msgid ""
 "``ipAndPort``: Masternode IP address and port, in the format "
 "``x.x.x.x:yyyy``"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:802
+#: ../../docs/user/masternodes/setup-evonode.rst:786
 msgid ""
 "``ownerKeyAddr``: The new Dash address generated above for the "
 "owner/voting address"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:804
+#: ../../docs/user/masternodes/setup-evonode.rst:788
 msgid ""
 "``operatorPubKey``: The BLS public key :hoverxref:`generated above "
 "<evonode-bls-generation>` (or provided by your hosting service)"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:806
+#: ../../docs/user/masternodes/setup-evonode.rst:790
 msgid ""
 "``votingKeyAddr``: The new Dash address generated above, or the address "
 "of a delegate, used for proposal voting"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:808
+#: ../../docs/user/masternodes/setup-evonode.rst:792
 msgid ""
 "``operatorReward``: The percentage of the block reward allocated to the "
 "operator as payment"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:810
+#: ../../docs/user/masternodes/setup-evonode.rst:794
 msgid ""
 "``payoutAddress``: A new or existing Dash address to receive the owner's "
 "masternode rewards"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:812
+#: ../../docs/user/masternodes/setup-evonode.rst:796
 msgid ""
 "``platformNodeID``: Platform P2P node ID :hoverxref:`generated above "
 "<evonode-generate-platform-node-id>`"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:814
+#: ../../docs/user/masternodes/setup-evonode.rst:798
 msgid ""
 "``platformP2PPort``: TCP port of Dash Platform peer-to-peer communication"
 " between nodes. Must be 26656 for mainnet."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:816
+#: ../../docs/user/masternodes/setup-evonode.rst:800
 msgid ""
 "``platformHTTPPort``: TCP port of Platform HTTP/API interface. Must be "
 "443 for mainnet."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:818
+#: ../../docs/user/masternodes/setup-evonode.rst:802
 msgid ""
 "``feeSourceAddress``: An (optional) address used to fund ProTx fee. "
 "``payoutAddress`` will be used if not specified."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:821
+#: ../../docs/user/masternodes/setup-evonode.rst:805
 msgid ""
 "Note that the operator is responsible for :ref:`specifying their own "
 "reward <dip3-update-service>` address in a separate ``update_service`` "
@@ -1037,28 +1025,28 @@ msgid ""
 "the masternode collateral does not specify the operator's payout address."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:826
+#: ../../docs/user/masternodes/setup-evonode.rst:810
 msgid "Example (remove line breaks if copying)::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:842
-#: ../../docs/user/masternodes/setup-evonode.rst:869
-#: ../../docs/user/masternodes/setup-evonode.rst:895
+#: ../../docs/user/masternodes/setup-evonode.rst:826
+#: ../../docs/user/masternodes/setup-evonode.rst:853
+#: ../../docs/user/masternodes/setup-evonode.rst:879
 msgid "Output::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:850
+#: ../../docs/user/masternodes/setup-evonode.rst:834
 msgid ""
 "Next we will use the ``collateralAddress`` and ``signMessage`` fields to "
 "sign the transaction, and the output of the ``tx`` field to submit the "
 "transaction."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:854
+#: ../../docs/user/masternodes/setup-evonode.rst:838
 msgid "Sign the ProRegTx transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:856
+#: ../../docs/user/masternodes/setup-evonode.rst:840
 msgid ""
 "We will now sign the content of the ``signMessage`` field using the "
 "private key for the collateral address as specified in "
@@ -1069,16 +1057,16 @@ msgid ""
 "function of a hardware wallet. The command takes the following syntax::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:865
-#: ../../docs/user/masternodes/setup-evonode.rst:891
+#: ../../docs/user/masternodes/setup-evonode.rst:849
+#: ../../docs/user/masternodes/setup-evonode.rst:875
 msgid "Example::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:875
+#: ../../docs/user/masternodes/setup-evonode.rst:859
 msgid "Submit the signed message"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:877
+#: ../../docs/user/masternodes/setup-evonode.rst:861
 msgid ""
 "We will now submit the ProRegTx special transaction to the blockchain to "
 "register the masternode. This command must be sent from a Dash Core "
@@ -1087,23 +1075,23 @@ msgid ""
 "command takes the following syntax::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:884
+#: ../../docs/user/masternodes/setup-evonode.rst:868
 msgid "Where:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:886
+#: ../../docs/user/masternodes/setup-evonode.rst:870
 msgid ""
 "``tx``: The serialized transaction previously returned in the ``tx`` "
 "output field from the ``protx register_prepare_hpmn`` command"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:888
+#: ../../docs/user/masternodes/setup-evonode.rst:872
 msgid ""
 "``sig``: The message signed with the collateral key from the "
 "``signmessage`` command"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:899
+#: ../../docs/user/masternodes/setup-evonode.rst:883
 msgid ""
 "Your masternode is now registered and will appear on the Deterministic "
 "Masternode List after the transaction is mined to a block. You can view "
@@ -1112,7 +1100,7 @@ msgid ""
 "final ``protx register_submit`` transaction identifies your masternode."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-evonode.rst:905
+#: ../../docs/user/masternodes/setup-evonode.rst:889
 msgid ""
 "At this point you can go back to your terminal window and monitor your "
 "masternode by entering ``~/.dashcore/dash-cli masternode status`` or "
@@ -1261,5 +1249,26 @@ msgstr ""
 #~ "your masternode by entering ``~/.dashcore"
 #~ "/dash-cli masternode status`` or using "
 #~ "the **Get status** function in DMT."
+#~ msgstr ""
+
+#~ msgid "Sentinel"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We will now install Sentinel, a "
+#~ "piece of software which operates as "
+#~ "a watchdog to communicate to the "
+#~ "network that your node is working "
+#~ "properly::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You will see a message reading "
+#~ "**dashd not synced with network! "
+#~ "Awaiting full sync before running "
+#~ "Sentinel.** Add dashd and sentinel to"
+#~ " crontab to make sure it runs "
+#~ "every minute to check on your "
+#~ "masternode::"
 #~ msgstr ""
 
