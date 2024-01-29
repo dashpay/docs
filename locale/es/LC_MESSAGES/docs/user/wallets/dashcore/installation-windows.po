@@ -1,35 +1,35 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2023, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
 # Translators:
 # Alejandro Echeverria <alejem93@gmail.com>, 2022
 # Leon White <leon.white@dash.org>, 2022
 # Ivan SIerraalta <ivansierraalta@gmail.com>, 2022
 # Jahlexis Lugo <ras.alexislugo.i@gmail.com>, 2022
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-26 10:05-0400\n"
+"POT-Creation-Date: 2024-01-29 09:56-0500\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
 "Last-Translator: Jahlexis Lugo <ras.alexislugo.i@gmail.com>, 2022\n"
-"Language-Team: Spanish (https://app.transifex.com/dash/teams/37570/es/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Language-Team: Spanish (https://app.transifex.com/dash/teams/37570/es/)\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 "
+"? 1 : 2;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst-1
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:-1
 msgid "How to download, install and encrypt the Dash Core wallet in Windows"
-msgstr ""
-"Como descargar, instalar y encriptar la billetera Dash Core en Windows"
+msgstr "Como descargar, instalar y encriptar la billetera Dash Core en Windows"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst-1
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:-1
 msgid "dash, core, wallet, windows, installation"
 msgstr "dash, core, billetera, windows, inatalación"
 
@@ -38,13 +38,14 @@ msgid "Windows Installation Guide"
 msgstr "Guía de instalación de Windows"
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:10
+#, fuzzy
 msgid ""
 "This guide describes how to download, install and encrypt the Dash Core "
 "wallet for Windows. The guide is written for Windows 10, but the steps "
-"should be similar for Windows XP, Vista, 7 and 8."
+"should be similar for other versions of Windows."
 msgstr ""
-"Esta guía describe cómo descargar, instalar y encriptar la billetera Dash "
-"Core para Windows. La guía está escrita para Windows 10, pero los pasos "
+"Esta guía describe cómo descargar, instalar y encriptar la billetera Dash"
+" Core para Windows. La guía está escrita para Windows 10, pero los pasos "
 "deben ser similares para Windows XP, Vista, 7 y 8."
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:15
@@ -54,8 +55,8 @@ msgstr "Descarga de la billetera Dash Core"
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:17
 msgid ""
 "Visit https://www.dash.org/downloads/ to download the latest Dash Core "
-"wallet. In most cases, the website will properly detect which version you "
-"need. Click **Download Installer** to download the installer directly."
+"wallet. In most cases, the website will properly detect which version you"
+" need. Click **Download Installer** to download the installer directly."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:25
@@ -66,23 +67,25 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:27
 msgid ""
-"If detection does not work, you will need to manually choose your operating "
-"system. Once you know which version you need, download the Dash Core "
-"Installer to your computer from https://www.dash.org/downloads/ and save the"
-" file you downloaded to your Downloads folder."
+"If detection does not work, you will need to manually choose your "
+"operating system. Once you know which version you need, download the Dash"
+" Core Installer to your computer from https://www.dash.org/downloads/ and"
+" save the file you downloaded to your Downloads folder."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:33
 msgid ""
-"Dash Core 0.17 was the last release to provide downloads for 32-bit Windows "
-"installations. As of Windows 11, Microsoft only provides 64-bit Windows."
+"Dash Core 0.17 was the last release to provide downloads for 32-bit "
+"Windows installations. As of Windows 11, Microsoft only provides 64-bit "
+"Windows."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:36
 msgid ""
-"If you are unsure whether your version of Windows is 32-bit or 64-bit, you "
-"can check by following the instructions `here <https://www.lifewire.com/am-"
-"i-running-a-32-bit-or-64-bit-version-of-windows-2624475>`__."
+"If you are unsure whether your version of Windows is 32-bit or 64-bit, "
+"you can check by following the instructions `here "
+"<https://www.lifewire.com/am-i-running-a-32-bit-or-64-bit-version-of-"
+"windows-2624475>`__."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:41
@@ -92,89 +95,91 @@ msgstr "Verificación del Dash Core"
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:43
 msgid ""
 "This step is optional, but recommended to verify the authenticity of the "
-"file you downloaded. This is done by checking its detached signature against"
-" the public key published by the Dash Core development team. To download the"
-" detached signature, click the **Installer Signature** button on the wallet "
-"download page and save it to the same folder as the downloaded binary."
+"file you downloaded. This is done by checking its detached signature "
+"against the public key published by the Dash Core development team. To "
+"download the detached signature, click the **Installer Signature** button"
+" on the wallet download page and save it to the same folder as the "
+"downloaded binary."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:50
 msgid ""
-"All releases of Dash are signed using GPG with one of the following keys:"
+"All releases of Dash since 0.16.0 are signed using GPG with the following"
+" key:"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:52
 msgid ""
-"Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, "
-"`verifiable here on Keybase <https://keybase.io/codablock>`__ (`download "
-"<https://keybase.io/codablock/pgp_keys.asc>`__)"
-msgstr ""
-
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:54
-msgid ""
-"Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here on "
+"Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable on "
 "Keybase <https://keybase.io/pasta>`__ (`download "
 "<https://keybase.io/pasta/pgp_keys.asc>`__)"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:57
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:55
 msgid ""
-"Download the key files above. Install `Gpg4win <https://gpg4win.org/>`__ if "
-"it is not already available on your computer. Once it is installed, open the"
-" **Kleopatra** certificate manager and click **File -> Import**. Import the "
-"key files and verify the Key-ID matches the ID above."
+"Download the key file above. Install `Gpg4win <https://gpg4win.org/>`__ "
+"if it is not already available on your computer. Once it is installed, "
+"open the **Kleopatra** certificate manager and click **File -> Import**. "
+"Import the key file and verify the Key-ID matches the ID above."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:63
+msgid "Importing Pasta's GPG public key"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:65
-msgid "Importing codablock's GPG public key"
-msgstr ""
-
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:67
 msgid ""
-"Skip any requests to certify the certificate with your own key. Next, click "
-"**Decrypt/Verify...** and select the detached signature file named "
-"``dashcore-19.3.0-win64-setup.exe.asc`` in the same folder as the downloaded"
-" installer."
+"Skip any requests to certify the certificate with your own key. Next, "
+"click **Decrypt/Verify...** and select the detached signature file named "
+"``dashcore-20.0.4-win64-setup.exe.asc`` in the same folder as the "
+"downloaded installer."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:75
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:73
 msgid "Selecting the signature file for verification"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:77
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:75
 msgid ""
 "If you see the first line of the message reads ``Verified "
-"dashcore-19.3.0-win64-setup.exe with dashcore-19.3.0-win64-setup.exe.asc`` "
-"then you have an authentic copy of Dash Core for Windows."
+"dashcore-20.0.4-win64-setup.exe with "
+"dashcore-20.0.4-win64-setup.exe.asc`` then you have an authentic copy of "
+"Dash Core for Windows."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:83
+msgid "Example of successful binary installer verification"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:85
-msgid "The binary installer has been verified"
+msgid ""
+"The following video demonstrates the steps to install Gpg4win and then "
+"verify the Dash Core installation file signature."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:88
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:95
 msgid "Running the Dash Core installer"
 msgstr "Correr el instalador de Dash Core"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:90
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:97
 msgid "Double-click the file to start installing Dash Core."
 msgstr "Haz doble clic en el archivo para comenzar a instalar Dash Core."
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:95
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:102
 msgid "The Dash Core installer in the Downloads folder"
 msgstr "El instalador de Dash Core en la carpeta Descargas"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:97
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:104
 msgid ""
-"At this point, you may see a warning from Windows SmartScreen that the app "
-"is unrecognized. You can safely skip past this warning by clicking **More "
-"info**, then **Run anyway**."
+"At this point, you may see a warning from Windows SmartScreen that the "
+"app is unrecognized. You can safely skip past this warning by clicking "
+"**More info**, then **Run anyway**."
 msgstr ""
-"En este punto, es posible que veas una advertencia de Windows SmartScreen de"
-" que la aplicación no se reconoce. Puede omitir esta advertencia haciendo "
-"clic en **Más información**, luego **Ejecutar de todas formas**."
+"En este punto, es posible que veas una advertencia de Windows SmartScreen"
+" de que la aplicación no se reconoce. Puede omitir esta advertencia "
+"haciendo clic en **Más información**, luego **Ejecutar de todas formas**."
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:107
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:114
 msgid ""
 "Bypassing Windows SmartScreen to run the app. This warning is known as a "
 "“false positive”."
@@ -182,194 +187,252 @@ msgstr ""
 "Pasando por alto Windows SmartScreen para ejecutar la aplicación. Esta "
 "advertencia se conoce como un \"falso positivo\"."
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:110
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:117
 msgid "The installer will then guide you through the installation process."
 msgstr "El instalador te guiará a través del proceso de instalación."
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:115
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:122
 msgid "The Dash Core installer welcome screen"
 msgstr "La pantalla de bienvenida del instalador de Dash Core"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:117
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:124
 msgid ""
 "Click through the following screens. All settings can be left at their "
 "default values unless you have a specific reason to change something."
 msgstr ""
-"Haz clic en las siguientes pantallas. Todas las configuraciones se pueden "
-"dejar en sus valores predeterminados a menos que tengas un motivo específico"
-" para cambiar algo."
+"Haz clic en las siguientes pantallas. Todas las configuraciones se pueden"
+" dejar en sus valores predeterminados a menos que tengas un motivo "
+"específico para cambiar algo."
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:123
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:130
 msgid "Select the installation location"
 msgstr "Selecciona la ubicación de instalación"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:128
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:135
 msgid "Select the Start menu folder"
 msgstr "Selecciona la carpeta de Star menu"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:133
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:140
 msgid "Dash Core is being installed"
 msgstr "Dash Core está siendo instalado"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:138
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:145
 msgid "Installation is complete"
 msgstr "Instalación completa"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:141
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:148
 msgid "Running Dash Core for the first time"
 msgstr "Correr el Dash Core por primera vez"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:143
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:150
+#, fuzzy
 msgid ""
-"Once installation is complete, Dash Core will start up immediately. If it "
-"does not, click **Start > Dash Core > Dash Core** to start the application. "
-"The first time the program is launched, you will be offered a choice of "
-"where you want to store your blockchain and wallet data. Choose a location "
-"with enough free space, as the blockchain can reach 30GB+ in size. It is "
-"recommended to use the default data folder if possible."
+"Once installation is complete, Dash Core will start up immediately. If it"
+" does not, click **Start > Dash Core > Dash Core** to start the "
+"application. The first time the program is launched, you will be offered "
+"a choice of where you want to store your blockchain and wallet data. "
+"Choose a location with enough free space, as the blockchain can reach "
+"45GB+ in size. It is recommended to use the default data folder if "
+"possible."
 msgstr ""
 "Una vez que la instalación este completa, Dash Core se iniciará "
-"inmediatamente. Si no es así, haz clic en **Inicio > Dash Core > Dash Core**"
-" para iniciar la aplicación. La primera vez que se lanza el programa, se te "
-"ofrecerá la opción de dónde quieres almacenar tus datos de la cadena de "
-"bloques y billetera. Elije una ubicación con suficiente espacio libre, ya "
-"que la cadena de bloques puede alcanzar alrededor de 30GB+ de tamaño. Si es "
-"posible, se recomienda utilizar la carpeta de datos predeterminada."
+"inmediatamente. Si no es así, haz clic en **Inicio > Dash Core > Dash "
+"Core** para iniciar la aplicación. La primera vez que se lanza el "
+"programa, se te ofrecerá la opción de dónde quieres almacenar tus datos "
+"de la cadena de bloques y billetera. Elije una ubicación con suficiente "
+"espacio libre, ya que la cadena de bloques puede alcanzar alrededor de "
+"30GB+ de tamaño. Si es posible, se recomienda utilizar la carpeta de "
+"datos predeterminada."
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:154
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:161
 msgid "Choosing the Dash Core data folder"
 msgstr "Escoger el archivo de data para Dash Core"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:156
-msgid ""
-"Dash Core will then start up. This will take a little longer than usual the "
-"first time you run it, since Dash Core needs to generate cryptographic data "
-"to secure your wallet."
-msgstr ""
-"Después de esto, Dash Core se iniciará. Esto tomará un poco más de tiempo "
-"que lo usual, ya que Dash Core necesita generar datos criptográficos para "
-"asegurar la billetera."
-
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:163
+msgid ""
+"Dash Core will then start up. This will take a little longer than usual "
+"the first time you run it, since Dash Core needs to generate "
+"cryptographic data to secure your wallet."
+msgstr ""
+"Después de esto, Dash Core se iniciará. Esto tomará un poco más de tiempo"
+" que lo usual, ya que Dash Core necesita generar datos criptográficos "
+"para asegurar la billetera."
+
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:170
 msgid "Starting Dash Core"
 msgstr "Inicio de Dash Core"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:166
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:173
 msgid "Synchronizing Dash Core to the Dash network"
 msgstr "Sincronzación de Dash Core a la red de Dash"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:168
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:175
 msgid ""
 "Once Dash Core is successfully installed and started, you will see the "
-"wallet overview screen. You will notice that the wallet is “out of sync”, "
-"and the status bar at the bottom of the window will show the synchronization"
-" progress."
+"wallet overview screen. You will notice that the wallet is “out of sync”,"
+" and the status bar at the bottom of the window will show the "
+"synchronization progress."
 msgstr ""
 "Una vez que Dash Core se haya instalado he iniciado correctamente, usted "
-"podrá ver la pantalla resumen de la billetera. Podrá notar que la billetera "
-"esta “fuera de sincronía”, y la barra de estado al fondo de la ventada "
-"mostrará el progreso de la sincronización."
+"podrá ver la pantalla resumen de la billetera. Podrá notar que la "
+"billetera esta “fuera de sincronía”, y la barra de estado al fondo de la "
+"ventada mostrará el progreso de la sincronización."
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:176
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:183
 msgid "Dash Core begins synchronizing with the Dash network"
 msgstr "Dash Core comienza a sincronizarse con la red de Dash"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:178
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:185
 msgid ""
 "During this process, Dash Core will download a full copy of the Dash "
 "blockchain from other nodes to your device. Depending on your internet "
 "connection, this may take a long time. If you see the message “No block "
-"source available”, check your internet connection. When synchronization is "
-"complete, you will see a small green tick in the lower right corner."
-msgstr ""
-
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:188
-msgid "Dash Core synchronization is complete"
-msgstr "La sincronización del Dash Core esta completa"
-
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:190
-msgid "You can now create a wallet to send and receive funds."
-msgstr ""
-
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:193
-msgid "Creating your Dash Wallet"
+"source available”, check your internet connection. When synchronization "
+"is complete, you will see a small green tick in the lower right corner."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:195
+msgid "Dash Core synchronization is complete"
+msgstr "La sincronización del Dash Core esta completa"
+
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:197
+msgid "You can now create a wallet to send and receive funds."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:200
+msgid "Creating your Dash Wallet"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:202
 msgid ""
 "Beginning with Dash Core 19.0, a wallet will not be created for you by "
-"default. You will get this prompt in the Overview tab. To create a wallet, "
-"click the **Create a new wallet** button or click **File** -> **Create "
-"Wallet**. Non-HD wallets are created by default. See the "
-":hoverxref:`advanced topics section <dashcore-hd>` for information about HD "
-"wallets."
+"default. You will get this prompt in the Overview tab. To create a "
+"wallet, click the **Create a new wallet** button or click **File** -> "
+"**Create Wallet**. Non-HD wallets are created by default. See the "
+":hoverxref:`advanced topics section <dashcore-hd>` for information about "
+"HD wallets."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:204
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:211
 msgid ""
-"You will be prompted to create a new wallet with a custom wallet name. By "
-"default, your wallet will be encrypted. You may choose to uncheck the box "
-"and encrypt the wallet later. We have included instructions on how to "
-"encrypt your wallet in the following section."
+"You will be prompted to create a new wallet with a custom wallet name. By"
+" default, your wallet will be encrypted. You may choose to uncheck the "
+"box and encrypt the wallet later. We have included instructions on how to"
+" encrypt your wallet in the following section."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:212
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:219
 msgid ""
 "If you do choose to encrypt now, you will be asked to enter and verify a "
 "password."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:217
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:244
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:224
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:251
 msgid "Enter a password"
 msgstr "Establecer una contraseña"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:219
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:226
 msgid "Following that, you will get a standard warning."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:224
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:249
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:231
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:256
 msgid "Confirm you want to encrypt your wallet"
 msgstr "Confirme que quiere encriptar su billetera"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:226
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:233
 msgid ""
-"The following section will detail the steps you need to follow if you choose"
-" to encrypt your Dash wallet later."
+"The following section will detail the steps you need to follow if you "
+"choose to encrypt your Dash wallet later."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:230
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:237
 msgid "Encrypting your Dash wallet"
 msgstr "Encriptando su billetera Dash"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:232
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:239
 msgid "To encrypt your wallet, click **Settings > Encrypt Wallet**."
 msgstr ""
 "Para encriptar su billetera, clic en **Configuraciones > Encriptar "
 "Billetera**."
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:237
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:244
 msgid "Encrypting the Dash wallet with a password"
 msgstr "Encriptando la billetera de Dash con una contraseña"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:239
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:246
 msgid "You will be asked to enter and verify a password."
 msgstr "Se requiere establecer y verificar una contraseña."
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:251
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:258
 msgid ""
-"When the encryption process is complete, you will see a warning that past "
-"backups of your wallet will no longer be usable, and be asked to shut down "
-"Dash Core. When you restart Dash Core, you will see a small green lock in "
-"the lower right corner."
+"When the encryption process is complete, you will see a warning that past"
+" backups of your wallet will no longer be usable, and be asked to shut "
+"down Dash Core. When you restart Dash Core, you will see a small green "
+"lock in the lower right corner."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:259
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:266
 msgid "Fully encrypted and synchronized Dash Core wallet"
 msgstr "Billetera de Dash Core completamente encriptada y sincronizada"
 
-#: ../../docs/user/wallets/dashcore/installation-windows.rst:261
+#: ../../docs/user/wallets/dashcore/installation-windows.rst:268
 msgid "You can now begin to use your wallet to safely send and receive funds."
-msgstr ""
-"Usted ya puede empezar a usar su billetera para recibir y enviar fondos."
+msgstr "Usted ya puede empezar a usar su billetera para recibir y enviar fondos."
+
+#~ msgid ""
+#~ "All releases of Dash are signed "
+#~ "using GPG with one of the "
+#~ "following keys:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Alexander Block (codablock) with the key"
+#~ " ``63A9 6B40 6102 E091``, `verifiable "
+#~ "here on Keybase <https://keybase.io/codablock>`__"
+#~ " (`download <https://keybase.io/codablock/pgp_keys.asc>`__)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Pasta (pasta) with the key ``5252 "
+#~ "7BED ABE8 7984``, `verifiable here on"
+#~ " Keybase <https://keybase.io/pasta>`__ (`download "
+#~ "<https://keybase.io/pasta/pgp_keys.asc>`__)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Download the key files above. Install"
+#~ " `Gpg4win <https://gpg4win.org/>`__ if it "
+#~ "is not already available on your "
+#~ "computer. Once it is installed, open "
+#~ "the **Kleopatra** certificate manager and "
+#~ "click **File -> Import**. Import the "
+#~ "key files and verify the Key-ID"
+#~ " matches the ID above."
+#~ msgstr ""
+
+#~ msgid "Importing codablock's GPG public key"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Skip any requests to certify the "
+#~ "certificate with your own key. Next, "
+#~ "click **Decrypt/Verify...** and select the "
+#~ "detached signature file named "
+#~ "``dashcore-19.3.0-win64-setup.exe.asc`` in the same"
+#~ " folder as the downloaded installer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you see the first line of "
+#~ "the message reads ``Verified "
+#~ "dashcore-19.3.0-win64-setup.exe with "
+#~ "dashcore-19.3.0-win64-setup.exe.asc`` then you have"
+#~ " an authentic copy of Dash Core "
+#~ "for Windows."
+#~ msgstr ""
+
+#~ msgid "The binary installer has been verified"
+#~ msgstr ""
+
