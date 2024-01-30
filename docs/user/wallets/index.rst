@@ -34,7 +34,6 @@ more than the device you use to store it, you should purchase a
    index-hardware
    index-third-party
    index-web
-   index-text
 
 Wallet Guides
 =============
