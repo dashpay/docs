@@ -49,36 +49,6 @@ MyDashWallet offers complete and detailed documentation for all functions.
 .. image:: img/mydashwallet-opened.png
    :width: 400px
 
-.. _magnum-wallet:
-
-Magnum Wallet
-=============
-
-.. image:: img/magnum.png
-   :width: 120px
-   :align: right
-
-`Magnum Wallet <https://magnumwallet.co/>`_ is a web wallet with support
-for 20+ cryptocurrencies, including Dash. The wallet stores encrypted
-private keys in a simple downloadable text file, which can only be
-decrypted with the users password. Hardware wallets are also supported,
-and in-wallet staking and exchange functionality is available. Magnum
-Wallet presents a clean and simple interface, allowing users to transact
-quickly and easily in Dash.
-
-Please note that web wallets may not be as secure as alternatives such
-as hardware wallets. Be aware of the risk of storing large amounts of
-Dash in keyfile wallets, since they are an easier target to attack than
-mobile or hardware wallets. 
-
-Support for Magnum Wallet is available at 
-`support@magnumwallet.co <support@magnumwallet.co>`_.
-
-- `Magnum Dash Wallet <https://app.magnumwallet.co/?coin=dash>`__
-
-.. image:: img/magnum-wallet.png
-   :width: 400px
-
 .. _west-wallet:
 
 WestWallet
