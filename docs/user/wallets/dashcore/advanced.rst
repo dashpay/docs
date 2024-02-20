@@ -584,7 +584,7 @@ Close a wallet
 --------------
 
 To close a wallet, set it as the active wallet using the wallet selection
-dropdown box. Next, click **File -> Close Wallet** and then click **Yes** on the
+dropdown box. Next, click **File -> Close Wallet...** and then click **Yes** on the
 Close wallet confirmation screen.
 
 .. figure:: img/wallet-close-confirmation.png
@@ -596,6 +596,19 @@ Close wallet confirmation screen.
 .. note::
 
   If the only open wallet is closed, wallet-related items on the tab bar will be disabled.
+
+Close all wallets
+-----------------
+
+To close all wallets, click **File -> Close All Wallets...** and then click **Yes** on the
+Close all wallets confirmation screen.
+
+.. figure:: img/wallet-close-all-confirmation.png
+   :width: 350px
+
+   Close wallet confirmation
+
+Once all wallets are closed, wallet-related items on the tab bar will be disabled.
 
 Alternative methods
 -------------------
