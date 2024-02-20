@@ -90,6 +90,20 @@ incoming transactions appear green, prefixed by a + sign. Recent
 outgoing transactions appear red, prefixed by a – sign. For more details
 on your transaction history, see the **Transactions** tab.
 
+**Discreet mode**
+
+.. versionadded:: v20.1.0
+
+  Discreet mode enables hiding value and transaction information on the Overview
+  tab.
+
+To toggle discreet mode off and on, click **Settings > Discreet mode**. With
+discreet mode enabled, your Overview tab will appear as shown below.
+
+.. figure:: img/overview-discreet.png
+
+   The Overview tab with discreet mode enabled
+
 The Send Tab
 ~~~~~~~~~~~~
 
