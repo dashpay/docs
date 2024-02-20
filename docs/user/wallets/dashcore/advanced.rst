@@ -76,6 +76,13 @@ You may top up your testnet wallet by `accessing the faucet <http://faucet.testn
 HD Wallets
 ==========
 
+.. versionadded:: v20.1.0
+   
+   HD wallets are now created by default.
+
+Dash Core includes an implementation of BIP39/BIP44 compatible hierarchical
+deterministic (HD) key generation.
+
 .. _dashcore-hd-upgrade:
 
 Upgrade to HD
@@ -140,11 +147,15 @@ used to specify different derivation branches from the same mnemonic seed.
 Enable HD Wallet Creation By Default
 ------------------------------------
 
-Dash Core includes an implementation of BIP39/BIP44 compatible hierarchical
-deterministic (HD) key generation. We will use the Windows GUI wallet in this
-example, but the commands are similar if using ``dash-qt`` or ``dashd`` on other
-operating systems. Enter the following command to configure Dash Core to
-generate HD wallets by default::
+.. versionadded:: v20.1.0
+   
+  HD wallets are now created by default without requiring the steps listed below.
+
+Prior to Dash Core v20.1.0, it was necessary to complete theses steps to make HD
+wallet the default. We will use the Windows GUI wallet in this example, but the
+commands are similar if using ``dash-qt`` or ``dashd`` on other operating
+systems. Enter the following command to configure Dash Core to generate HD
+wallets by default::
 
   dash-qt.exe -usehd
 

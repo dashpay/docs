@@ -178,7 +178,7 @@ Guidelines <https://www.dash.org/brand-guidelines/>`__ page::
 Creating your Dash Wallet
 -------------------------
 
-.. versionchanged:: v20.1.0
+.. versionadded:: v20.1.0
    
    HD wallets are now created by default.
 
