@@ -142,7 +142,8 @@ is complete, you will see a small green tick in the lower right corner.
 
    Dash Core synchronization is complete
 
-You can now begin to use your wallet to send and receive funds.
+You can now :ref:`create a wallet <dashcore-wallet-create>` to send and receive
+funds.
 
 Setting up a desktop entry
 --------------------------
