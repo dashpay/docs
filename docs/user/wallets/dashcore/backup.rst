@@ -11,16 +11,16 @@ Wallet backup and restore
 Backup
 ======
 
-This documentation describes how to safely back up your wallet file for
-safe storage in case your computer or laptop is damaged or lost. Dash
-Core stores all data necessary to control your Dash addresses in a
-single file called *wallet.dat*. This wallet is in the Berkeley DB
-format and stores the pairs of private/public cryptographic keys used to
-manage your balances on the Dash blockchain. Dash Core makes most of
-these operations transparent and even generates automatic backups of
-your wallet file in case it is corrupted, but the user is responsible
-for ensuring that these backups are stored in a safe place. **If you
-lose access to your wallet file, you will permanently lose access to
+This documentation describes how to safely back up your wallet file for safe
+storage in case your computer or laptop is damaged or lost. Dash Core stores all
+data necessary to control your Dash addresses in a single file called
+*wallet.dat*. This wallet is in the Berkeley DB format and stores the pairs of
+private/public cryptographic keys used to manage your balances on the Dash
+blockchain. For HD wallets, the mnemonic, passphrase, and seed are also stored
+in *wallet.dat*. Dash Core makes most of these operations transparent and even
+generates automatic backups of your wallet file in case it is corrupted, but the
+user is responsible for ensuring that these backups are stored in a safe place.
+**If you lose access to your wallet file, you will permanently lose access to
 your Dash.**
 
 It is important to consider that if you have not encrypted your wallet
@@ -122,6 +122,19 @@ the menu in Dash Core. Since these files are not active when Dash Core
 is running, you can safely copy them at any time. They are also a handy
 backup if the original files in the DashCore folder become corrupted due
 to improper shutdown of the Dash Core app.
+
+HD wallet information
+---------------------
+
+Dash Core includes an implementation of BIP39/BIP44 compatible hierarchical
+deterministic (HD) key generation. HD wallets are created by default since Dash
+Core v20.1; however, it is still possible to import private keys into the
+wallet. Since imported keys are not associated with the HD-derived keys, **it is
+still critical to back up wallet.dat for HD wallets.**
+
+If the HD wallet mnemonic from Dash Core is imported into another HD-compatible
+wallet, the new wallet will have access to any funds associated with the
+HD-derived keys.
 
 Restore
 =======
