@@ -142,7 +142,8 @@ is complete, you will see a small green tick in the lower right corner.
 
    Dash Core synchronization is complete
 
-You can now begin to use your wallet to send and receive funds.
+You can now :ref:`create a wallet <dashcore-wallet-create>` to send and receive
+funds.
 
 Setting up a desktop entry
 --------------------------
@@ -173,15 +174,20 @@ Guidelines <https://www.dash.org/brand-guidelines/>`__ page::
   wget https://media.dash.org/wp-content/uploads/dash-d-rounded-square-250.png
   xdg-icon-resource install --size 256 dash-d-rounded-square-250.png dash-icon
 
+.. _dashcore-wallet-create:
 
 Creating your Dash Wallet
 -------------------------
 
-Beginning with Dash Core 19.0, a wallet will not be created for you by default.
-You will get this prompt in the Overview tab. To create a wallet, click the
-**Create a new wallet** button or click **File** -> **Create Wallet**. Non-HD
-wallets are created by default. See the :hoverxref:`advanced topics section
-<dashcore-hd>` for information about HD wallets.
+.. versionadded:: v20.1.0
+   
+   HD wallets are now created by default.
+
+If no wallet files are loaded, you will get this prompt in the Overview tab. To
+create a wallet, click the **Create a new wallet** button or click **File** ->
+**Create Wallet**. HD wallets are created by default. See the
+:hoverxref:`advanced topics section <dashcore-hd>` for information about HD
+wallets.
 
 .. figure:: img/linux/dash-create-wallet-prompt.png
    :height: 350px
@@ -211,6 +217,8 @@ Following that, you will get a standard warning.
 The following section will detail the steps you need to follow if you 
 choose to encrypt your Dash wallet later.
 
+
+.. _dashcore-wallet-encrypt:
 
 Encrypting your Dash wallet
 ---------------------------

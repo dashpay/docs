@@ -76,6 +76,13 @@ You may top up your testnet wallet by `accessing the faucet <http://faucet.testn
 HD Wallets
 ==========
 
+.. versionadded:: v20.1.0
+   
+   HD wallets are now created by default.
+
+Dash Core includes an implementation of BIP39/BIP44 compatible hierarchical
+deterministic (HD) key generation.
+
 .. _dashcore-hd-upgrade:
 
 Upgrade to HD
@@ -83,7 +90,8 @@ Upgrade to HD
 
 .. warning::
 
-  A new backup must be created after upgrading to an HD wallet.
+  A new :ref:`backup <dashcore-backup>` must be created after upgrading to an HD
+  wallet.
 
 Dash Core includes the ability upgrade a non-hierarchical deterministic (HD)
 wallet to an HD wallet via the ``upgradetohd`` command. The command can be run
@@ -140,11 +148,15 @@ used to specify different derivation branches from the same mnemonic seed.
 Enable HD Wallet Creation By Default
 ------------------------------------
 
-Dash Core includes an implementation of BIP39/BIP44 compatible hierarchical
-deterministic (HD) key generation. We will use the Windows GUI wallet in this
-example, but the commands are similar if using ``dash-qt`` or ``dashd`` on other
-operating systems. Enter the following command to configure Dash Core to
-generate HD wallets by default::
+.. versionadded:: v20.1.0
+   
+  HD wallets are now created by default without requiring the steps listed below.
+
+Prior to Dash Core v20.1.0, it was necessary to complete theses steps to make HD
+wallet the default. We will use the Windows GUI wallet in this example, but the
+commands are similar if using ``dash-qt`` or ``dashd`` on other operating
+systems. Enter the following command to configure Dash Core to generate HD
+wallets by default::
 
   dash-qt.exe -usehd
 
@@ -573,7 +585,7 @@ Close a wallet
 --------------
 
 To close a wallet, set it as the active wallet using the wallet selection
-dropdown box. Next, click **File -> Close Wallet** and then click **Yes** on the
+dropdown box. Next, click **File -> Close Wallet...** and then click **Yes** on the
 Close wallet confirmation screen.
 
 .. figure:: img/wallet-close-confirmation.png
@@ -585,6 +597,19 @@ Close wallet confirmation screen.
 .. note::
 
   If the only open wallet is closed, wallet-related items on the tab bar will be disabled.
+
+Close all wallets
+-----------------
+
+To close all wallets, click **File -> Close All Wallets...** and then click **Yes** on the
+Close all wallets confirmation screen.
+
+.. figure:: img/wallet-close-all-confirmation.png
+   :width: 350px
+
+   Close wallet confirmation
+
+Once all wallets are closed, wallet-related items on the tab bar will be disabled.
 
 Alternative methods
 -------------------

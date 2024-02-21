@@ -77,7 +77,7 @@ Pending
 
 Immature
   This shows funds from masternode or mining payments which have not
-  yet reached the required number of confirmations. 
+  yet reached the required number of confirmations.
    
 Total
   This is simply your available and pending funds added together.
@@ -87,8 +87,22 @@ your funds using CoinJoin on the Dash masternode network.
 
 The right part of the screen shows your recent transactions. Recent
 incoming transactions appear green, prefixed by a + sign. Recent
-outgoing transactions appear red, prefixed by a – sign. For more details
+outgoing transactions appear red, prefixed by a - sign. For more details
 on your transaction history, see the **Transactions** tab.
+
+**Discreet mode**
+
+.. versionadded:: v20.1.0
+
+  Discreet mode enables hiding value and transaction information on the Overview
+  tab.
+
+To toggle discreet mode off and on, click **Settings > Discreet mode**. With
+discreet mode enabled, your Overview tab will appear as shown below.
+
+.. figure:: img/overview-discreet.png
+
+   The Overview tab with discreet mode enabled
 
 The Send Tab
 ~~~~~~~~~~~~
