@@ -48,11 +48,10 @@ not necessarily be online or functioning at any given time. Please join
 <https://www.dash.org/forum/>`_ if you have a question relating to a
 specific service.
 
-- **Test builds:** https://gitlab.com/dashpay/dash/pipelines
+- **Nightly builds:** https://github.com/dashpay/dash-dev-branches/releases
 - **Bugtracker:** https://github.com/dashpay/dash/issues/new
-- **Discussion and help:** https://www.dash.org/forum/topic/testing.53/
-- **Masternode tools:** https://test.dashninja.pl/masternodes.html
-- **Android wallet:** https://github.com/dashpay/dash-wallet/releases/tag/v7.0.2
+- **Discussion and help:** https://www.dash.org/forum/index.php?forums/testing.53/
+- **Android wallet:** https://github.com/dashpay/dash-wallet/releases/latest
 - **Testnet for Bitcoin:** https://en.bitcoin.it/wiki/Testnet
 
 Faucets
@@ -68,14 +67,6 @@ Explorers
 - https://insight.testnet.networks.dash.org:3002/insight
 - http://insight.testnet.networks.dash.org:3001/insight
 
-Pools
------
-
-- https://test.pool.dash.org [stratum+tcp://test.stratum.dash.org] - by flare
-- http://test.p2pool.dash.siampm.com [stratum+tcp://test.p2pool.dash.siampm.com:17903] by thelazier
-- http://p2pool.dashninja.pl:17903/static - by elbereth
-- http://test.p2pool.masternode.io:18998/static - by coingun
-
 Masternodes
 ===========
 
@@ -83,10 +74,9 @@ Installing a masternode under testnet generally follows the same steps
 as the :ref:`mainnet masternode installation guide <masternode-setup>`,
 but with a few key differences:
 
-- You will probably be running a development version of Dash instead of
-  the stable release. See `here <https://gitlab.com/dashpay/dash/pipelines>`__
-  for a list of builds, then choose the latest successful ``develop`` 
-  build and click **Artifacts** to view a list of binaries.
+- You will probably be running a development version of Dash instead of the
+  stable release. Choose the latest `nightly build
+  <https://github.com/dashpay/dash-dev-branches/releases>`__ on GitHub.
 - When opening the firewall, port 19999 must be opened instead of (or in
   addition to) 9999. Use this command: ``ufw allow 19999/tcp``
 - Your desktop wallet must be running in testnet mode. Add the following
