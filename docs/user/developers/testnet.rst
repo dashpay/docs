@@ -110,12 +110,6 @@ Discussion:
 
 - Testnet announcement: https://www.dash.org/forum/threads/v0-16-testing.50294/
 - Product brief: https://blog.dash.org/updated-product-brief-dash-core-release-v0-16-0-d3debdb6242e
-- Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
-- Issue tracking: https://github.com/dashpay/dash/issues/new
-
-Latest test binaries:
-
-- https://github.com/dashpay/dash/releases/tag/v0.16.0.0-rc3
 
 Testnet 0.15.0
 ==============
@@ -134,13 +128,6 @@ Discussion:
 
 - Testnet announcement: https://www.dash.org/forum/threads/v15-0-testing.49140/
 - Product brief: https://blog.dash.org/product-brief-dash-core-release-v0-15-0-acd7633a91ab
-- Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
-- Issue tracking: https://github.com/dashpay/dash/issues/new
-
-Latest test binaries:
-
-- https://github.com/dashpay/dash/releases/tag/v0.15.0.0-rc4
-
 
 Testnet 0.14.0
 ==============
@@ -160,13 +147,6 @@ Discussion:
 
 - Testnet announcement: https://www.dash.org/forum/threads/v14-0-testing.44047/
 - Product brief: https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96
-- Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
-- Issue tracking: https://github.com/dashpay/dash/issues/new
-
-Latest test binaries:
-
-- https://github.com/dashpay/dash/releases/tag/v0.14.0.0-rc6
-
 
 Testnet 0.13.0
 ==============
@@ -188,12 +168,6 @@ Discussion:
 
 - Testnet announcement: https://www.dash.org/forum/threads/v13-0-testing.41945/
 - Product brief: https://blog.dash.org/product-brief-dash-core-release-v0-13-0-5d7fddffb7ef
-- Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
-- Issue tracking: https://github.com/dashpay/dash/issues/new
-
-Latest test binaries:
-
-- https://github.com/dashpay/dash/releases/tag/v0.13.0.0-rc11
 
 Testnet 0.12.3
 ==============
@@ -217,13 +191,6 @@ This release includes:
 Discussion:
 
 - https://www.dash.org/forum/threads/v12-3-testing.38475/
-- Testnet tools: https://docs.dash.org/en/stable/developers/testnet.html
-- Issue tracking: https://github.com/dashpay/dash/issues/new
-
-Latest test binaries:
-
-- https://github.com/dashpay/dash/releases/tag/v0.12.3.0-rc3
-
 
 Testnet 0.12.2
 ==============
@@ -239,14 +206,9 @@ the software and become active on testnet. This release includes:
 - 10x transaction fee reduction (including InstantSend fee)
 - InstantSend vulnerability fix
 - Lots of other bug fixes and performance improvements
-- Experimental BIP39/BIP44 complaint HD wallet (disabled by default, should be fully functional but there is no GUI yet)
+- Experimental BIP39/BIP44 compliant HD wallet (disabled by default, should be fully functional but there is no GUI yet)
 
 Discussion:
 
 - Testnet 12.2 discussion: https://www.dash.org/forum/threads/v12-2-testing.17412/
 - Testnet tools: https://www.dash.org/forum/threads/testnet-tools-resources.1768/
-- Issue tracking: https://github.com/dashpay/dash/issues/new
-
-Latest successfully built develop branch binaries:
-
-- Dash Core: https://gitlab.com/dashpay/dash/pipelines
