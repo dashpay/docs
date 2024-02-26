@@ -22,7 +22,7 @@ are carried out on the mainnet. There are a few other key differences:
 - Protocol message header bytes are 0xcee2caff (instead of 0xbf0c6bbd)
 - Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, 
   testnet-seed.darkcoin.qa, testnet-seed.dashpay.io
-- Launching Dash Core in testnet mode shows an orange splash screen
+- Launching Dash Core in testnet mode shows an orange tray icon
 
 To start Dash Core in testnet mode, find your dash.conf file and enter
 the following line::
@@ -30,7 +30,7 @@ the following line::
   testnet = 1
 
 With the release of Dash Core 12.3, Dash added support for a great new
-feature — **named devnets**. Devnets are developer networks that combine
+feature - **named devnets**. Devnets are developer networks that combine
 some aspects of testnet (the global and public testing network) and some
 aspects of regtest (the local-only regression testing mode that provides
 controlled block generation). Unlike testnet, multiple independent
@@ -88,10 +88,6 @@ but with a few key differences:
   ``testnet = 1``
 - As for mainnet masternodes, the RPC username and password must contain
   alphanumeric characters only
-- The wallet holding the masternode collateral will expect to find the
-  ``masternode.conf`` file in ``~/.dashcore/testnet3/masternode.conf``
-  instead of ``~/.dashcore/masternode.conf``.
-
 
 Testnet 0.16.0
 ==============
