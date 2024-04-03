@@ -4,8 +4,8 @@
 # Dash Core version is released
 
 # Define old and new version variables
-OLD_VERSION="20.0.4"
-NEW_VERSION="20.1.0"
+OLD_VERSION="20.1.0"
+NEW_VERSION="20.1.1"
 
 # Use the variables in the find/sed commands
 find . -iname "*.rst" -exec sed -i "s~/v${OLD_VERSION}/dashcore-${OLD_VERSION}-~/v${NEW_VERSION}/dashcore-${NEW_VERSION}-~g" {} +
