@@ -8,9 +8,9 @@
 # Dima, 2022
 # Tikhon Skudarnov <semargsemarg@gmail.com>, 2022
 # Julia Ogonkova <livingflcl@gmail.com>, 2023
-# VONCAN, 2023
 # Max Aronych <taofgoar@protonmail.com>, 2024
 # Андрей Дегтяр <diusha1711@gmail.com>, 2024
+# VONCAN, 2024
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-29 09:56-0500\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
-"Last-Translator: Андрей Дегтяр <diusha1711@gmail.com>, 2024\n"
+"Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,7 +73,7 @@ msgstr ""
 
 #: ../../docs/user/introduction/features.rst:20
 msgid "Block subsidy decreases by 7.14% per year"
-msgstr ""
+msgstr "Награда за блок уменьшается на 7,14% в год"
 
 #: ../../docs/user/introduction/features.rst:21
 msgid "Dark Gravity Wave difficulty adjustment algorithm"
@@ -176,11 +176,16 @@ msgid ""
 "direction of the project and devotes 20% of the block subsidy to development"
 " of the project and ecosystem."
 msgstr ""
+"**Управление и Бюджетная система** позволяет держателям Dash определять "
+"направление развития проекта и распределять 20% от награды за блок на "
+"развитие проекта и экосистемы."
 
 #: ../../docs/user/introduction/features.rst:59
 msgid ""
 "**Dash Evolution** will make using cryptocurrency as easy as using PayPal."
 msgstr ""
+"**Dash Evolution** сделает использование криптовалюты таким же простым, как "
+"использование PayPal."
 
 #: ../../docs/user/introduction/features.rst:62
 msgid ""
@@ -192,6 +197,14 @@ msgid ""
 "masternode has one vote and this vote can be used on budget proposals or "
 "important decisions that affect Dash."
 msgstr ""
+"Владелец мастерноды должен иметь в своём распоряжении 1000 DASH, "
+"доказательство владения которыми он осуществляет подписав специальное "
+"сообщение и разослав его по сети. Эта сумма может быть потрачена в любой "
+"момент, но в таком случае мастернода потеряет свой статус, покинет очередь и"
+" перестанет получать вознаграждения от сети. Кроме того, владелец мастерноды"
+" имеет **право голосования** за предложения. Каждая мастернода имеет один "
+"голос, который можно использовать при распределении бюджета или решении "
+"важных вопросов, влияющих на проект."
 
 #: ../../docs/user/introduction/features.rst:70
 msgid ""
@@ -203,6 +216,14 @@ msgid ""
 "together with the block subsidy. There is also the possibility for "
 "masternodes to earn money from fees in the future."
 msgstr ""
+"Размещение мастернод требует денег и усилий, поэтому в качестве поощрения им"
+" выплачивается процент от вознаграждения за блок. Поскольку в каждом блоке "
+"выплачивается вознаграждение только одной мастерноде, частота выплат может "
+"меняться, равно как и величина выплачиваемого Dash. Этот инструмент "
+"<https://stats.masternode.me/>`_ показывает расчет заработка мастернод в "
+"реальном времени. Ежегодно эти вознаграждения уменьшаются на 7% вместе с "
+"вознаграждением за блок. Существует также возможность того, что в будущем "
+"мастерноды будут зарабатывать на комиссиях."
 
 #: ../../docs/user/introduction/features.rst:79
 msgid "Evolution Masternodes (evonodes)"
@@ -593,6 +614,15 @@ msgid ""
 "originally to be called \"soft forking\" but the community affectionately "
 "dubbed it \"the spork\" and the name stuck."
 msgstr ""
+"В качестве ответа на непредвиденные сложности, возникшие при выходе главного"
+" обновления RC3 в июне 2014 года, команда разработчиков Dash создала "
+"механизм, по которому обновлённый код выдаётся в сеть, но активизируется не "
+"сразу (\"принудительно\"). Эта инновация позволяет проводить обновления "
+"намного плавнее, чем это происходит в парадигме традиционного хардфорка и "
+"одновременно выполнять сбор данных о тестовой работе обновления в основной "
+"сети. Этот процесс многофазного перехода был сначала назван \"софтфорком\", "
+"но в сообществе он был более известен как \"спорк\" и именно такое название "
+"и прижилось."
 
 #: ../../docs/user/introduction/features.rst:261
 msgid ""
@@ -614,6 +644,23 @@ msgid ""
 "network-wide rollback or client update. For technical details on individual "
 "sporks, see :ref:`here <understanding-sporks>`."
 msgstr ""
+"Новые функции или версии Dash проходят интенсивные проверки в тестовой сети "
+"перед запуском их в основной сети. Когда в основной сети запускается новая "
+"функция или версия, то по сети для всех пользователей рассылается сообщение,"
+" информирующее об изменениях и необходимости обновить программное "
+"обеспечение. Пользователи, обновившие свои клиенты, запускают на них новый "
+"код, но этот код не активируется, пока достаточный процент участников сети "
+"(обычно это 80%) не достигнет консенсуса по его запуску. Если с новым кодом "
+"случаются какие-то ошибки, то блоки не отвергаются сетью и незапланированных"
+" форков не происходит. Информация об ошибках собирается и направляется "
+"команде разработчиков. Когда разработчики удовлетворены стабильностью работы"
+" нового кода в основной сети и когда необходимый уровень консенсуса в сети "
+"достигнут - новый код дистанционно вводится в действие несколькими членами "
+"команды разработчиков, которые вместе подписывают особое сообщение сети "
+"своими приватными ключами. Если возникают какие-то проблемы, то новый код  "
+"деактивируется таким же способом без необходимости для всей сети "
+"откатываться к предыдущей версии. С техническими деталями каждого отдельного"
+" спорка можно ознакомиться :ref:`здесь <understanding-sporks>`."
 
 #: ../../docs/user/introduction/features.rst:284
 msgid "X11 Hash Algorithm"
@@ -657,6 +704,13 @@ msgid ""
 " in that the rounds of hashes are determined *a priori* instead of having "
 "some hashes being randomly picked."
 msgstr ""
+"X11 - название алгоритма цепного доказательства выполнения работы (**PoW**),"
+" который был принят в Dash (был запущен в январе 2014 года как \"Xcoin\"). "
+"Частично на его создание вдохновил подход, используемый в криптовалюте "
+"Quark, где используется цепное хеширование с добавлением дополнительной "
+"\"глубины\" и сложности за счёт увеличения числа хешей, но X11 отличается от"
+" Quark тем, что раунды хешей определяются *априори*, вместо выбора случайным"
+" образом некоторых хешей."
 
 #: ../../docs/user/introduction/features.rst:306
 msgid ""
@@ -761,12 +815,26 @@ msgid ""
 "consistent times, even if the hashing power experiences high fluctuations, "
 "without suffering from the time-warp exploit."
 msgstr ""
+"**DGW** или *Dark Gravity Wave* - это алгоритм регулировки сложности с "
+"открытым исходным кодом для криптовалют, основанных на Биткойне, который был"
+" впервые использован в Dash и с тех пор начал появляться в других цифровых "
+"валютах. DGW разработал Эван Даффилд, который является разработчиком и "
+"создателем Dash, в ответ на возможное использование бага ложной временной "
+"отметки, обнаруженного в алгоритме *Kimoto Gravity Well*. Концепция "
+"алгоритма DGW похожа на Kimoto Gravity Well, уровень сложности в нём также "
+"корректируется после каждого блока (а не каждые 2016 блоков, как в Биткойне)"
+" на основе статистических данных из недавно найденных блоков. Это позволяет "
+"выпускать блоки с относительно последовательными метками временем создания, "
+"даже если хеширующая мощность испытывает значительные колебания, не рискуя "
+"пострадать из-за бага временного скачка."
 
 #: ../../docs/user/introduction/features.rst:363
 msgid ""
 "Version 2.0 of DGW was implemented in Dash from block 45,000 onwards in "
 "order to completely alleviate the time-warp exploit."
 msgstr ""
+"Версия DGW 2.0 была реализована в Dash, начиная с 45 000 блока и далее для "
+"того, чтобы полностью смягчить возможность ложной временной отметки."
 
 #: ../../docs/user/introduction/features.rst:366
 msgid ""
@@ -798,6 +866,17 @@ msgid ""
 "mCQ6wGCh4/edit#gid=523620673>`_. Graphing this data results in a curve "
 "showing total coins in circulation, known as the coin emission rate."
 msgstr ""
+"Криптовалюты, такие как Dash и Биткойн создаются через криптографически "
+"сложный процесс, называемый майнингом. Майнинг включает повторяющееся "
+"исполнение :ref:`алгоритмов хеширования <x11-hash-algorithm>` до тех пор, "
+"пока не будет найдено решение, удовлетворяющее текущей :ref:`сложности "
+"майнинга <dark-gravity-wave>`. Находя такое решение, майнеру разрешается "
+"создать новую единицу криптовалюты. Эти новые единицы называются наградой за"
+" блок. Для того, чтобы валюта не подвергалась бесконечной инфляции, награда "
+"за блок регулярно уменьшается, как `показано в этом расчёте "
+"<https://docs.google.com/spreadsheets/d/1HqgEkyfZDAA6pIZ3df2PwFE8Z430SVIzQ-"
+"mCQ6wGCh4/edit#gid=523620673>`_. Представив эти данные в виде кривой, "
+"показывающей общее количество монет в обращении, мы получим темп эмиссии."
 
 #: ../../docs/user/introduction/features.rst:390
 msgid ""
@@ -809,6 +888,14 @@ msgid ""
 "amount each year offers a smoother transition to a fee-based economy than "
 "Bitcoin."
 msgstr ""
+"Хотя Dash основан на коде Биткойна, темп его эмиссии значительно изменён в "
+"сторону более плавного и постепенного уменьшения награды за блок. Если в "
+"Биткойне темп эмиссии уменьшается каждые четыре года на 50%, то Dash "
+"уменьшает эмиссию примерно на одну четырнадцатую (около 7,14%) каждые 210240"
+" блоков (это приблизительно 383,25 дней). Нетрудно заметить, что если "
+"уменьшать ежегодный размер блочной награды на небольшую величину, то такой "
+"подход обеспечивает более плавный переход к экономике за счёт взимаемых "
+"комиссий, чем это произойдёт в Биткойне."
 
 #: ../../docs/user/introduction/features.rst:401
 msgid "Bitcoin vs. Dash coin emission rate"
@@ -827,6 +914,12 @@ msgid ""
 "2140, but the mining subsidy reduces so quickly that 99% of all bitcoin will"
 " be in circulation by 2036, and 99.9% by 2048."
 msgstr ""
+"`Общая эмиссия монет Биткойна <https://docs.google.com/spreadsheets/d/1 "
+"2tR_9WrY0Hj4AQLoJYj9EDBzfA38XIVLQSOOOVePNm0/pubhtml?gid=0&single=true>`_ "
+"может быть рассчитана как сумма геометрического ряда, при этом общая эмиссия"
+" приближается (но не достигает) 21 000 000 BTC. Она будет продолжаться до "
+"2140 года, но вознаграждение за майнинг сократится настолько быстро, что 99%"
+" всех Биткойнов будут в обращении уже к 2036 году, а 99,9% к 2048 году."
 
 #: ../../docs/user/introduction/features.rst:414
 msgid ""
@@ -842,6 +935,18 @@ msgid ""
 "completely stops in 2477. Based on these numbers, a maximum and minimum "
 "possible coin supply in the year 2254 can be calculated to be between:"
 msgstr ""
+"`Общая эмиссия монет DASH <https://docs.google.com/spreadsheets/d "
+"/1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`_ также "
+"является суммой геометрического ряда, но конечная общая сумма монет неясна, "
+"потому что неизвестно, сколько из 20%-ного вознаграждения за блок, "
+"зарезервированного для бюджетных предложений, потребуется выделить "
+"фактически, так как это зависит от будущих результатов голосования. Dash "
+"будет продолжать выпускать монеты в течение примерно 192 лет, до тех пор, "
+"пока добыча за весь год майнинга не составит менее 1 DASH. После 2209 года "
+"будет создано ещё 14 DASH. Генерация последней монеты DASH займет 231 год, "
+"начиная с 2246 года и заканчивая 2477 годом, в котором эмиссия полностью "
+"прекратится. Исходя из этих чисел, максимальный и минимальный возможный "
+"объем выпуска монет в 2254 году может быть в пределах между:"
 
 #: ../../docs/user/introduction/features.rst:428
 msgid "17,742,696 DASH"
@@ -858,6 +963,7 @@ msgstr "18 921 005 DASH"
 #: ../../docs/user/introduction/features.rst:430
 msgid "Assuming full treasury allocation"
 msgstr ""
+"Если предположить, что распределяемый бюджет будет составлять полную сумму"
 
 #: ../../docs/user/introduction/features.rst:434
 msgid "Block reward allocation"
@@ -877,10 +983,23 @@ msgid ""
 "budget system. Depending on budget utilization, this results in an "
 "approximate coin allocation over a budget cycle as follows:"
 msgstr ""
+"В отличие от Bitcoin, где 100% вознаграждения за блок распределяется между "
+"майнерами, Dash оставляет себе часть вознаграждения за блок для "
+"использования в децентрализованной :ref:`бюджетной системе <decentralized-"
+"governance>`. Оставшаяся часть вознаграждения за блок, а также все комиссии "
+"за транзакции распределяются между :ref:`майнером <mining>` и "
+":ref:`мастернодой <masternodes>`, который детерминированно выбирается в "
+"соответствии с :ref:`платежной логикой <payment-logic>`. В Dash есть "
+"суперблоки, которые появляются каждые 16616 блоков (примерно 30,29 дня) и "
+"могут высвободить совокупный бюджет Dash DAO, удержанный за этот период "
+":ref:`бюджетного цикла <budget-cycles>`, для выигравших предложений в "
+"бюджетной системе. В зависимости от использования бюджета это приводит к "
+"следующему примерному распределению монетного вознаграждения в течение "
+"бюджетного цикла:"
 
 #: ../../docs/user/introduction/features.rst:450
 msgid "80%"
-msgstr ""
+msgstr "80%"
 
 #: ../../docs/user/introduction/features.rst:450
 msgid "Mining and Masternode Reward"
@@ -890,7 +1009,7 @@ msgstr "Награда майнеров и мастернод"
 #: ../../docs/user/introduction/features.rst:473
 #: ../../docs/user/introduction/features.rst:475
 msgid "20%"
-msgstr ""
+msgstr "20%"
 
 #: ../../docs/user/introduction/features.rst:452
 #: ../../docs/user/introduction/features.rst:475
@@ -904,10 +1023,15 @@ msgid ""
 "September 2023. Additional details can be found in the :ref:`Treasury "
 "expansion section <block-subsidy-reallocation-treasury-expansion>`."
 msgstr ""
+"После активации хард форка Dash Core v20 бюджет управления Dash вырастет до "
+"20% от субсидии блока в соответствии с предложением по управлению, "
+"утвержденным в сентябре 2023 года. Дополнительные подробности можно найти в "
+"разделе <block-subsidy-reallocation-treasury-expansion> :ref:`Расширение "
+"казны Dash DAO`."
 
 #: ../../docs/user/introduction/features.rst:463
 msgid "Treasury expansion"
-msgstr ""
+msgstr "Расширение казны Dash DAO"
 
 #: ../../docs/user/introduction/features.rst:465
 msgid ""
@@ -918,6 +1042,12 @@ msgid ""
 "and 60% for masternodes. The expansion will go into effect upon activation "
 "of the Dash Core v20 hard fork."
 msgstr ""
+"В сентябре 2023 года сеть Dash одобрила предложение "
+"<https://www.dashcentral.org/p/TREASURY-REALLOCATION-60-20-20>`__ об "
+"удвоении бюджета системы управления за счет изменения распределения субсидий"
+" на блокчейн. Согласно новому распределению, 20 % будет предназначаться для "
+"майнеров, 20 % - для бюджета системы управления и 60 % - для мастернод. "
+"Расширение вступит в силу после активации хард форка Dash Core v20."
 
 #: ../../docs/user/introduction/features.rst:473
 msgid "Mining Reward"
@@ -925,15 +1055,15 @@ msgstr "Вознаграждение за майнинг"
 
 #: ../../docs/user/introduction/features.rst:477
 msgid "60%"
-msgstr ""
+msgstr "60%"
 
 #: ../../docs/user/introduction/features.rst:477
 msgid "Masternode Reward"
-msgstr ""
+msgstr "Награда мастернод"
 
 #: ../../docs/user/introduction/features.rst:481
 msgid "Miner and masternode reallocation"
-msgstr ""
+msgstr "Перераспределение майнеров и мастернод"
 
 #: ../../docs/user/introduction/features.rst:485
 msgid ""
@@ -942,6 +1072,10 @@ msgid ""
 "network in 2023. Upon activation of the Dash Core v20 hard fork this table "
 "will be obsolete."
 msgstr ""
+"Этот процесс перераспределения вознаграждения за блок был заменен "
+":ref:`расширением казначейства <block-subsidy-reallocation-treasury-"
+"expansion>`, одобренным сетью в 2023 году. После активации хард форка Dash "
+"Core v20 эта таблица будет устаревшей."
 
 #: ../../docs/user/introduction/features.rst:490
 msgid ""
@@ -1224,7 +1358,7 @@ msgstr "2023-08-25"
 
 #: ../../docs/user/introduction/features.rst:532
 msgid "13 (Current)"
-msgstr ""
+msgstr "13 (Сейчас)"
 
 #: ../../docs/user/introduction/features.rst:532
 msgid "41.5"
@@ -1359,6 +1493,14 @@ msgid ""
 "<https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_. See `this site "
 "<https://stats.masternode.me>`_ for live data on current network statistics."
 msgstr ""
+"Данная документация основана на подсчётах и постах moocowmoo. Для более "
+"детальной информации посмотрите пожалуйста `это пост на Reddit "
+"<https://www.reddit.com/r/dashpay/comments/ "
+"7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`_ или выполните собственные "
+"`вычисления по эмиссии, используя этот инструмент "
+"<https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_. Посетите `этот "
+"сайт <https://stats.masternode.me>`_ для получения живых данных по текущей "
+"статистике сети."
 
 #: ../../docs/user/introduction/features.rst:558
 msgid "Decentralized Governance"
@@ -1407,6 +1549,19 @@ msgid ""
 "proposals. The network thus funds itself by reserving 20% of the block "
 "subsidy for budget projects."
 msgstr ""
+"DAO также позволяет Dash финансировать собственное развитие. В то время как "
+"другие проекты вынуждены зависеть от пожертвований или заранее "
+"сформированных фондов, Dash использует 20% вознаграждения за блок для "
+"финансирования собственного развития. Каждый раз, когда добывается блок, 80%"
+" вознаграждения делится между майнером и мастернодом в соответствии с "
+"распределением, приведенным :ref:`тут <block-reward-reallocation>`, а "
+"оставшиеся 20% не создаются до конца месяца. В течение месяца любой желающий"
+" может внести в сеть предложение по бюджету. Если это предложение получит "
+"чистое одобрение не менее 10% мастернод сети, то в конце месяца будет "
+"создана серия \"суперблоков\". В это время вознаграждение за блок, которое "
+"не было выплачено (20% от каждого блока), будет использовано для "
+"финансирования одобренных предложений. Таким образом, сеть сама себя "
+"финансирует, резервируя 20% вознаграждения за блок на бюджетные проекты."
 
 #: ../../docs/user/introduction/features.rst:587
 msgid ""
@@ -1425,6 +1580,8 @@ msgid ""
 "Sentinel was deprecated in Dash Core v20.0 when its functionality was "
 "integrated into Dash Core."
 msgstr ""
+"Sentinel был упразднен в Dash Core v20.0, когда его функциональность была "
+"интегрирована в Dash Core."
 
 #: ../../docs/user/introduction/features.rst:601
 msgid ""
@@ -1556,6 +1713,12 @@ msgid ""
 "InstantSend locking will be attempted on all transactions without any extra "
 "charge."
 msgstr ""
+"Например, стандартная и относительно простая транзакция в сети Dash с одним "
+"входом, одним выходом и возможным изменением адреса обычно укладывается в "
+"диапазон 200 - 400 байт. При цене в 100 долларов США за DASH комиссия "
+"составляет 0,0002 - 0,0004 доллара США, или 1/50 цента. Блокировка "
+"InstantSend будет осуществляться для всех транзакций без дополнительной "
+"оплаты."
 
 #: ../../docs/user/introduction/features.rst:666
 msgid ""

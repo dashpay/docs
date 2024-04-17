@@ -6,7 +6,7 @@
 # Translators:
 # Tikhon Skudarnov <semargsemarg@gmail.com>, 2022
 # Dima, 2022
-# VONCAN, 2023
+# VONCAN, 2024
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-29 09:56-0500\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
-"Last-Translator: VONCAN, 2023\n"
+"Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,10 +27,13 @@ msgstr ""
 msgid ""
 "Compile Dash Core for Linux, macOS, Windows and Guix deterministic builds"
 msgstr ""
+"Компиляция Dash Core на Linux, macOS, Windows и на детерминированных сборках"
+" Guix"
 
 #: ../../docs/user/developers/compiling.rst-1
 msgid "dash, build, compile, linux, macOS, windows, binary, guix, developers"
 msgstr ""
+"dash, сборка, компиляция, linux, macOS, windows, binary, guix, разработчики"
 
 #: ../../docs/user/developers/compiling.rst:9
 msgid "Compiling Dash Core"
@@ -47,10 +50,20 @@ msgid ""
 "notes <https://github.com/dashpay/dash/tree/develop/doc#building>`__ "
 "available on GitHub to compile or cross-compile Dash for any platform."
 msgstr ""
+"Хотя Dash предлагает стабильные бинарные сборки на `сайте "
+"<https://www.dash.org/downloads/>`_ и на `GitHub "
+"<https://github.com/dashpay/dash/releases>`__, а также сборки для разработки"
+" с помощью `GitLab CI <https://gitlab.com/dashpay/dash/pipelines>`_, многие "
+"пользователи также будут заинтересованы в самостоятельной сборке бинарных "
+"файлов Dash. Пользователи, которым не нужны детерминированные сборки, обычно"
+" могут следовать `основным указаниям по сборке "
+"<https://github.com/dashpay/dash/tree/develop/doc#building>`__, доступным на"
+" GitHub, чтобы скомпилировать или кросс-компилировать Dash для любой "
+"платформы."
 
 #: ../../docs/user/developers/compiling.rst:24
 msgid "Guix"
-msgstr ""
+msgstr "Guix"
 
 #: ../../docs/user/developers/compiling.rst:26
 msgid ""
@@ -63,6 +76,15 @@ msgid ""
 "result, and upload the resulting signature. These results are compared and "
 "only if they match, the build is accepted and uploaded to dash.org."
 msgstr ""
+"`Guix <https://guix.gnu.org/>`__ - это процесс детерминированной компиляции,"
+" который используется для получения исполнительных файлов Dash Core. Он "
+"обеспечивает уверенность, что исполнительные файлы были получены из "
+"источника на GitHub, а также что при компиляции в конечный исполнительный "
+"файл были статично встроены стабильные проверенные зависимости. Многие "
+"разработчики пишут исходный код с использованием особых дескрипторов "
+"(\"рецептов\"), криптографически подписывают результат и выгружают "
+"соответствующую подпись. Эти результаты сравниваются и только при полном "
+"совпадении версия принимается и выкладывается на dash.org."
 
 #: ../../docs/user/developers/compiling.rst:35
 msgid ""
@@ -70,16 +92,21 @@ msgid ""
 "available in a `previous version of this page "
 "<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>`__."
 msgstr ""
+"Инструкции по сборке Dash Core 19.0 или более старых версий с помощью gitian"
+" доступны в `предыдущей версии этой страницы "
+"<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>`__."
 
 #: ../../docs/user/developers/compiling.rst:40
 msgid "Setup environment"
-msgstr ""
+msgstr "Настройка окружения"
 
 #: ../../docs/user/developers/compiling.rst:43
 msgid ""
 "This setup has been tested using a clean install of Ubuntu 22.04. For "
 "maximum compatibility, please use that version."
 msgstr ""
+"Данная установка была протестирована на чистой версии Ubuntu 22.04. Для "
+"обеспечения максимальной совместимости используйте эту версию."
 
 #: ../../docs/user/developers/compiling.rst:46
 msgid ""
@@ -109,6 +136,8 @@ msgid ""
 "Add the user to the sudo and docker groups so they can perform commands as "
 "root and run docker commands::"
 msgstr ""
+"Добавьте пользователя в группы sudo и docker, чтобы он мог выполнять команды"
+" от имени root и запускать команды docker::"
 
 #: ../../docs/user/developers/compiling.rst:63
 msgid "Install prerequisites"
@@ -124,11 +153,11 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:71
 msgid "Install the required build tools::"
-msgstr ""
+msgstr "Установите необходимые инструменты для сборки::"
 
 #: ../../docs/user/developers/compiling.rst:76
 msgid "Prepare guix"
-msgstr ""
+msgstr "Подготовить guix"
 
 #: ../../docs/user/developers/compiling.rst:78
 msgid ""
@@ -136,20 +165,25 @@ msgid ""
 "machine. Run the guix install routine to prepare your environment and answer"
 " \"Y\" for all prompts::"
 msgstr ""
+"Этот шаг необходимо выполнить только при начальной настройке машины. "
+"Запустите программу установки guix для подготовки среды и ответьте \"Y\" на "
+"все запросы::"
 
 #: ../../docs/user/developers/compiling.rst:88
 msgid "Clone repositories"
-msgstr ""
+msgstr "Клонируйте репозитории"
 
 #: ../../docs/user/developers/compiling.rst:90
 msgid ""
 "After installing the prerequisites and preparing guix, reboot the system, "
 "login as ``<username>``, and clone required repositories::"
 msgstr ""
+"После установки необходимых условий и подготовки guix перезагрузите систему,"
+" войдите под именем ``<username>`` и клонируйте необходимые репозитории::"
 
 #: ../../docs/user/developers/compiling.rst:97
 msgid "Download the macOS SDK which is required to create macOS builds::"
-msgstr ""
+msgstr "Загрузите macOS SDK, который необходим для создания сборок macOS::"
 
 #: ../../docs/user/developers/compiling.rst:104
 msgid "Build Dash Core"
@@ -159,20 +193,26 @@ msgstr "Собрать Dash Core"
 msgid ""
 "Checkout the tag associated with the Dash Core version you plan to build::"
 msgstr ""
+"Проверьте тег, связанный с версией Dash Core, которую вы планируете "
+"собрать::"
 
 #: ../../docs/user/developers/compiling.rst:113
 msgid "Run ``guix-build`` to create binaries for Linux, Mac, and Windows::"
 msgstr ""
+"Запустите ``guix-build``, чтобы создать двоичные файлы для Linux, Mac и "
+"Windows::"
 
 #: ../../docs/user/developers/compiling.rst:118
 msgid ""
 "When the build completes, it will put the binaries in the ``guix-"
 "build-<version>/output/`` directory."
 msgstr ""
+"Когда сборка завершится, она поместит бинарные файлы в каталог ``guix-"
+"build-<version>/output/``."
 
 #: ../../docs/user/developers/compiling.rst:122
 msgid "Create signatures for binaries"
-msgstr ""
+msgstr "Создание подписей для бинарных файлов"
 
 #: ../../docs/user/developers/compiling.rst:124
 msgid ""
@@ -180,18 +220,25 @@ msgid ""
 "Apple and Microsoft processes. In this step, that information will be "
 "validated and signed by your machine."
 msgstr ""
+"Бинарные файлы для Mac и Windows подписываются Dash Core Group с "
+"использованием соответствующих процессов Apple и Microsoft. На этом этапе "
+"эта информация будет проверена и подписана вашей машиной."
 
 #: ../../docs/user/developers/compiling.rst:128
 msgid ""
 "Prepare the `detached sigs repository <https://github.com/dashpay/dash-"
 "detached-sigs>`__::"
 msgstr ""
+"Подготовьте `хранилище отсоединенных сигов <https://github.com/dashpay/dash-"
+"detached-sigs>`__::"
 
 #: ../../docs/user/developers/compiling.rst:137
 msgid ""
 "Prepare the `guix.sigs repository <https://github.com/dashpay/guix.sigs>`__ "
 "by pulling the latest changes::"
 msgstr ""
+"Подготовьте репозиторий `guix.sigs "
+"<https://github.com/dashpay/guix.sigs>`__, извлекая последние изменения::"
 
 #: ../../docs/user/developers/compiling.rst:144
 msgid "Create a new branch for the version that was built::"
@@ -199,11 +246,13 @@ msgstr "Создайте новую ветку для версии, котора
 
 #: ../../docs/user/developers/compiling.rst:152
 msgid "Unsigned binaries"
-msgstr ""
+msgstr "Неподписанные бинарники"
 
 #: ../../docs/user/developers/compiling.rst:154
 msgid "To create signatures for the unsigned binaries, run ``guix-attest``::"
 msgstr ""
+"Чтобы создать подписи для неподписанных бинарных файлов, запустите ``guix-"
+"attest``::"
 
 #: ../../docs/user/developers/compiling.rst:162
 msgid ""
@@ -219,13 +268,15 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:168
 msgid "Signed binaries"
-msgstr ""
+msgstr "Подписанные бинарники"
 
 #: ../../docs/user/developers/compiling.rst:170
 msgid ""
 "To create signatures for the signed binaries, run ``guix-codesign`` followed"
 " by guix-attest::"
 msgstr ""
+"Чтобы создать подписи для подписанных двоичных файлов, запустите ``guix-"
+"codesign``, а затем guix-attest::"
 
 #: ../../docs/user/developers/compiling.rst:182
 msgid "Upload signatures"
@@ -237,6 +288,9 @@ msgid ""
 "signatures, you can optionally contribute them to the `guix.sigs repository "
 "<https://github.com/dashpay/guix.sigs/>`_ via a pull request on GitHub."
 msgstr ""
+"После успешной сборки бинарных файлов, их подписания и проверки подписей вы "
+"можете внести их в репозиторий `guix.sigs "
+"<https://github.com/dashpay/guix.sigs/>`_ с помощью pull request на GitHub."
 
 #: ../../docs/user/developers/compiling.rst:189
 msgid "Initial setup"
@@ -247,6 +301,9 @@ msgid ""
 "Since the official guix.sigs repository has restricted write access, create "
 "a fork of it via GitHub and add your fork as a remote repository::"
 msgstr ""
+"Поскольку официальный репозиторий guix.sigs имеет ограниченный доступ на "
+"запись, создайте форк этого репозитория через GitHub и добавьте свой форк в "
+"качестве удаленного репозитория::"
 
 #: ../../docs/user/developers/compiling.rst:197
 msgid ""
@@ -255,6 +312,10 @@ msgid ""
 "verify your signature. Your public key can be exported to a file using the "
 "following command::"
 msgstr ""
+"При первом внесении подписей также поместите копию своего открытого ключа в "
+"папку ``builder-keys`` репозитория, чтобы другие пользователи могли легко "
+"проверить вашу подпись. Открытый ключ можно экспортировать в файл с помощью "
+"следующей команды::"
 
 #: ../../docs/user/developers/compiling.rst:207
 msgid "Adding your signatures"
@@ -265,10 +326,12 @@ msgid ""
 "Add and commit the ``*.SHA256SUMS`` and ``*.SHA256SUMS.asc`` files created "
 "by the build process::"
 msgstr ""
+"Добавьте и зафиксируйте файлы ``*.SHA256SUMS`` и ``*.SHA256SUMS.asc``, "
+"созданные в процессе сборки::"
 
 #: ../../docs/user/developers/compiling.rst:220
 msgid "Push to your fork of the guix.sigs repository on GitHub::"
-msgstr ""
+msgstr "Поместите в свой форк репозитория guix.sigs на GitHub::"
 
 #: ../../docs/user/developers/compiling.rst:225
 msgid ""
@@ -293,12 +356,18 @@ msgid ""
 "release. The repository also contains public keys used for signature "
 "verification. Import the public keys::"
 msgstr ""
+"Репозиторий `guix.sigs <https://github.com/dashpay/guix.sigs/>`_ содержит "
+"детерминированные результаты сборки, подписанные несколькими разработчиками "
+"Core для каждого выпуска. Репозиторий также содержит открытые ключи, "
+"используемые для проверки подписи. Импортируйте публичные ключи::"
 
 #: ../../docs/user/developers/compiling.rst:242
 msgid ""
 "Run the following commands to verify that your build matches the official "
 "release::"
 msgstr ""
+"Выполните следующие команды, чтобы убедиться, что ваша сборка соответствует "
+"официальному релизу::"
 
 #: ../../docs/user/developers/compiling.rst:252
 msgid ""
@@ -323,3 +392,7 @@ msgid ""
 "using gitian are available in a `previous version of this page "
 "<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>`__."
 msgstr ""
+"Сборки на Gitian были отменены в пользу сборок на Guix с выходом Dash Core "
+"v20.0. Инструкции по сборке Dash Core 19.0 или более ранних версий с помощью"
+" gitian доступны в `предыдущей версии этой страницы "
+"<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>`__."
