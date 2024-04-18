@@ -8,20 +8,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 15:21-0500\n"
+"POT-Creation-Date: 2024-04-18 12:05-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/wallets/dashcore/backup.rst:1
+#: ../../docs/user/wallets/dashcore/backup.rst:-1
 msgid "How to safely back up and restore the Dash Core wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/backup.rst:1
+#: ../../docs/user/wallets/dashcore/backup.rst:-1
 msgid "dash, core, wallet, backup, restore, wallet.dat"
 msgstr ""
 
@@ -40,12 +40,13 @@ msgid ""
 "Core stores all data necessary to control your Dash addresses in a single"
 " file called *wallet.dat*. This wallet is in the Berkeley DB format and "
 "stores the pairs of private/public cryptographic keys used to manage your"
-" balances on the Dash blockchain. Dash Core makes most of these "
-"operations transparent and even generates automatic backups of your "
-"wallet file in case it is corrupted, but the user is responsible for "
-"ensuring that these backups are stored in a safe place. **If you lose "
-"access to your wallet file, you will permanently lose access to your "
-"Dash.**"
+" balances on the Dash blockchain. For HD wallets, the mnemonic, "
+"passphrase, and seed are also stored in *wallet.dat*. Dash Core makes "
+"most of these operations transparent and even generates automatic backups"
+" of your wallet file in case it is corrupted, but the user is responsible"
+" for ensuring that these backups are stored in a safe place. **If you "
+"lose access to your wallet file, you will permanently lose access to your"
+" Dash.**"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/backup.rst:26
@@ -165,21 +166,42 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/backup.rst:127
-msgid "Restore"
+msgid "HD wallet information"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/backup.rst:129
+msgid ""
+"Dash Core includes an implementation of BIP39/BIP44 compatible "
+"hierarchical deterministic (HD) key generation. HD wallets are created by"
+" default since Dash Core v20.1; however, it is still possible to import "
+"private keys into the wallet. Since imported keys are not associated with"
+" the HD-derived keys, **it is still critical to back up wallet.dat for HD"
+" wallets.**"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/backup.rst:135
+msgid ""
+"If the HD wallet mnemonic from Dash Core is imported into another HD-"
+"compatible wallet, the new wallet will have access to any funds "
+"associated with the HD-derived keys."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/backup.rst:140
+msgid "Restore"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/backup.rst:142
 msgid ""
 "To restore a backup, install Dash Core on the target system (or stop it, "
 "if already installed) and rename the existing *wallet.dat* file in the "
 "*DashCore* folder."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/backup.rst:136
+#: ../../docs/user/wallets/dashcore/backup.rst:149
 msgid "Renaming the old wallet.dat file to wallet.old in the DashCore folder"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/backup.rst:138
+#: ../../docs/user/wallets/dashcore/backup.rst:151
 msgid ""
 "Then copy the backup wallet file to the *DashCore* folder and ensure it "
 "is named *wallet.dat*. Now, when you start Dash Core again, it will load "
@@ -187,17 +209,17 @@ msgid ""
 "since this will result in data corruption!"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/backup.rst:149
+#: ../../docs/user/wallets/dashcore/backup.rst:162
 msgid ""
 "Copying the backup file into the DashCore folder and renaming it to "
 "wallet.dat"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/backup.rst:154
+#: ../../docs/user/wallets/dashcore/backup.rst:167
 msgid "Backup storage considerations"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/backup.rst:156
+#: ../../docs/user/wallets/dashcore/backup.rst:169
 msgid ""
 "Any backup depends to some extent on the existence of software capable of"
 " reading the data at some future point in time. As such, it is good "
@@ -206,7 +228,7 @@ msgid ""
 "of the version of Dash Core you used to create the backup."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/backup.rst:162
+#: ../../docs/user/wallets/dashcore/backup.rst:175
 msgid ""
 "The *wallet.dat* file itself should be encrypted using a password set "
 "from the **Settings > Encrypt Wallet** menu item. However, this only "
@@ -226,7 +248,7 @@ msgid ""
 "/encrypting-laptop-like-mean/>`_."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/backup.rst:174
+#: ../../docs/user/wallets/dashcore/backup.rst:187
 msgid ""
 "Where you store this file is then up to you. It could be in your home, in"
 " a safe deposit box at a bank, a waterproof or fireproof container, or on"
@@ -236,7 +258,7 @@ msgid ""
 " to the password in the future."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/backup.rst:181
+#: ../../docs/user/wallets/dashcore/backup.rst:194
 msgid ""
 "Finally it is important to understand that *wallet.dat* itself is a "
 "relatively dangerous way to store large amounts of funds - it is simply a"
@@ -250,11 +272,11 @@ msgid ""
 "storage."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/backup.rst:193
+#: ../../docs/user/wallets/dashcore/backup.rst:206
 msgid "Verifying backups"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/backup.rst:195
+#: ../../docs/user/wallets/dashcore/backup.rst:208
 msgid ""
 "There is no fixed procedure to verify your backup, but you should test "
 "restoring it at least once to make sure it works. If you have a simple "
@@ -267,4 +289,28 @@ msgid ""
 "Dash, instead of relying on the fact that this process should "
 "theoretically be reversible."
 msgstr ""
+
+#~ msgid ""
+#~ "This documentation describes how to "
+#~ "safely back up your wallet file "
+#~ "for safe storage in case your "
+#~ "computer or laptop is damaged or "
+#~ "lost. Dash Core stores all data "
+#~ "necessary to control your Dash addresses"
+#~ " in a single file called "
+#~ "*wallet.dat*. This wallet is in the "
+#~ "Berkeley DB format and stores the "
+#~ "pairs of private/public cryptographic keys "
+#~ "used to manage your balances on "
+#~ "the Dash blockchain. Dash Core makes "
+#~ "most of these operations transparent and"
+#~ " even generates automatic backups of "
+#~ "your wallet file in case it is "
+#~ "corrupted, but the user is responsible"
+#~ " for ensuring that these backups are"
+#~ " stored in a safe place. **If "
+#~ "you lose access to your wallet "
+#~ "file, you will permanently lose access"
+#~ " to your Dash.**"
+#~ msgstr ""
 
