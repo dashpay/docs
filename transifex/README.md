@@ -86,3 +86,12 @@ Next run the following to check build status for each language on ReadTheDocs:
 ``` bash
 ./transifex/build-status-check.sh
 ```
+
+## Building localized sites locally
+
+To test localized sites offline, use sphinx-build with the `language` parameter set to one of the
+language codes (see the `locale` folder for available languages):
+
+``` bash
+sphinx-build -b html -D language='zh_CN' . _build/html/zh_CN
+```

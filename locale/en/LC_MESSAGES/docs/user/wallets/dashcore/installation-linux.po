@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 09:56-0500\n"
+"POT-Creation-Date: 2024-04-18 12:05-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -142,7 +142,7 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-linux.rst:92
 msgid ""
-"This will create a folder named ``dashcore-20.0.4`` in the current "
+"This will create a folder named ``dashcore-20.1.1`` in the current "
 "working directory. We will now install the executable binaries to "
 "``/usr/local/bin`` using the ``install`` command::"
 msgstr ""
@@ -204,14 +204,16 @@ msgid "Dash Core synchronization is complete"
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-linux.rst:145
-msgid "You can now begin to use your wallet to send and receive funds."
+msgid ""
+"You can now :ref:`create a wallet <dashcore-wallet-create>` to send and "
+"receive funds."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:148
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:149
 msgid "Setting up a desktop entry"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:150
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:151
 msgid ""
 "You can set up an `XDG Desktop Entry "
 "<https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-"
@@ -221,31 +223,34 @@ msgid ""
 "content::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:166
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:167
 msgid "Ensure the file is executable::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:170
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:171
 msgid ""
 "An appropriate icon can optionally be downloaded from the Dash `Brand "
 "Guidelines <https://www.dash.org/brand-guidelines/>`__ page::"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:178
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:180
 msgid "Creating your Dash Wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:180
-msgid ""
-"Beginning with Dash Core 19.0, a wallet will not be created for you by "
-"default. You will get this prompt in the Overview tab. To create a "
-"wallet, click the **Create a new wallet** button or click **File** -> "
-"**Create Wallet**. Non-HD wallets are created by default. See the "
-":hoverxref:`advanced topics section <dashcore-hd>` for information about "
-"HD wallets."
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:184
+msgid "HD wallets are now created by default."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:189
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:186
+msgid ""
+"If no wallet files are loaded, you will get this prompt in the Overview "
+"tab. To create a wallet, click the **Create a new wallet** button or "
+"click **File** -> **Create Wallet**. HD wallets are created by default. "
+"See the :hoverxref:`advanced topics section <dashcore-hd>` for "
+"information about HD wallets."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:195
 msgid ""
 "You will be prompted to create a new wallet with a custom wallet name. By"
 " default, your wallet will be encrypted. You may choose to uncheck the "
@@ -253,52 +258,52 @@ msgid ""
 " encrypt your wallet in the following section."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:197
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:203
 msgid ""
 "If you do choose to encrypt now, you will be asked to enter and verify a "
 "password."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:202
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:208
 msgid "Enter a password"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:204
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:210
 msgid "Following that, you will get a standard warning."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:209
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:235
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:215
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:243
 msgid "Confirm you want to encrypt your wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:211
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:217
 msgid ""
 "The following section will detail the steps you need to follow if you "
 "choose to encrypt your Dash wallet later."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:216
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:224
 msgid "Encrypting your Dash wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:218
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:226
 msgid "To encrypt your wallet, click **Settings** > **Encrypt wallet**."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:223
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:231
 msgid "Encrypting the Dash wallet with a password"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:225
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:233
 msgid "You will be asked to enter and verify a password."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:230
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:238
 msgid "Entering a password"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:237
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:245
 msgid ""
 "When the encryption process is complete, you will see a warning that past"
 " backups of your wallet will no longer be usable, and be asked to shut "
@@ -306,7 +311,7 @@ msgid ""
 "lock in the lower right corner."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:245
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:253
 msgid "Fully encrypted and synchronized Dash Core wallet"
 msgstr ""
 
@@ -461,5 +466,30 @@ msgstr ""
 #~ "30GB+ in size. It is recommended "
 #~ "to use the default data folder if"
 #~ " possible."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This will create a folder named "
+#~ "``dashcore-20.0.4`` in the current working "
+#~ "directory. We will now install the "
+#~ "executable binaries to ``/usr/local/bin`` "
+#~ "using the ``install`` command::"
+#~ msgstr ""
+
+#~ msgid "You can now begin to use your wallet to send and receive funds."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Beginning with Dash Core 19.0, a "
+#~ "wallet will not be created for you"
+#~ " by default. You will get this "
+#~ "prompt in the Overview tab. To "
+#~ "create a wallet, click the **Create "
+#~ "a new wallet** button or click "
+#~ "**File** -> **Create Wallet**. Non-HD"
+#~ " wallets are created by default. See"
+#~ " the :hoverxref:`advanced topics section "
+#~ "<dashcore-hd>` for information about HD "
+#~ "wallets."
 #~ msgstr ""
 
