@@ -8,7 +8,7 @@
 # Max Aronych <taofgoar@protonmail.com>, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
 # Dima, 2022
-# VONCAN, 2023
+# VONCAN, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-29 09:56-0500\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
-"Last-Translator: VONCAN, 2023\n"
+"Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,6 +43,9 @@ msgid ""
 "wallet for Windows. The guide is written for Windows 10, but the steps "
 "should be similar for other versions of Windows."
 msgstr ""
+"Это руководство объясняет как скачать, установить и зашифровать кошелёк Dash"
+" Core для Windows. Руководство написано для Windows 10, но описанные в нём "
+"шаги подходят для других версий Windows."
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:15
 msgid "Downloading the Dash Core wallet"
@@ -119,7 +122,7 @@ msgstr ""
 msgid ""
 "All releases of Dash since 0.16.0 are signed using GPG with the following "
 "key:"
-msgstr ""
+msgstr "Все релизы Dash после 0.16.0 подписаны с помощью GPG этим ключом:"
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:52
 msgid ""
@@ -127,6 +130,9 @@ msgid ""
 "<https://keybase.io/pasta>`__ (`download "
 "<https://keybase.io/pasta/pgp_keys.asc>`__)"
 msgstr ""
+"Pasta, с ключом ``5252 7BED ABE8 7984``, ``верифицируемым на Keybase "
+"<https://keybase.io/pasta>`__ "
+"(`скачать<https://keybase.io/pasta/pgp_keys.asc>`__)"
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:55
 msgid ""
@@ -135,10 +141,15 @@ msgid ""
 " **Kleopatra** certificate manager and click **File -> Import**. Import the "
 "key file and verify the Key-ID matches the ID above."
 msgstr ""
+"Загрузите приведенные выше файлы ключей. Установите программу `Gpg4win "
+"<https://gpg4win.org/>`__, если она еще не установлена на вашем компьютере. "
+"После его установки откройте менеджер сертификатов **Kleopatra** и нажмите "
+"**Файл -> Импорт**. Импортируйте ключевой файл и убедитесь, что "
+"идентификатор ключа совпадает с идентификатором, указанным выше."
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:63
 msgid "Importing Pasta's GPG public key"
-msgstr ""
+msgstr "Импорт публичного GPG ключа Pasta(ы)"
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:65
 msgid ""
@@ -147,6 +158,10 @@ msgid ""
 "``dashcore-20.0.4-win64-setup.exe.asc`` in the same folder as the downloaded"
 " installer."
 msgstr ""
+"Пропустите все запросы на заверение сертификата собственным ключом. Далее "
+"нажмите кнопку **Decrypt/Verify...** и выберите файл отсоединенной подписи с"
+" именем ``dashcore-20.0.4-win64-setup.exe.asc`` в той же папке, что и "
+"загруженная программа установки."
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:73
 msgid "Selecting the signature file for verification"
@@ -158,16 +173,21 @@ msgid ""
 "dashcore-20.0.4-win64-setup.exe with dashcore-20.0.4-win64-setup.exe.asc`` "
 "then you have an authentic copy of Dash Core for Windows."
 msgstr ""
+"Если первая строка сообщения гласит ``Verified "
+"dashcore-20.0.4-win64-setup.exe с dashcore-20.0.4-win64-setup.exe.asc``, "
+"значит, у вас подлинная копия Dash Core для Windows."
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:83
 msgid "Example of successful binary installer verification"
-msgstr ""
+msgstr "Пример успешной проверки бинарной программы установки"
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:85
 msgid ""
 "The following video demonstrates the steps to install Gpg4win and then "
 "verify the Dash Core installation file signature."
 msgstr ""
+"В следующем видеоролике демонстрируются шаги по установке Gpg4win и "
+"последующей проверке подписи установочного файла Dash Core."
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:95
 msgid "Running the Dash Core installer"
@@ -248,6 +268,13 @@ msgid ""
 "with enough free space, as the blockchain can reach 45GB+ in size. It is "
 "recommended to use the default data folder if possible."
 msgstr ""
+"По завершению установки, кошелёк Dash Core сразу запустится. Если этого не "
+"произойдёт, то нажмите  **Start > Dash Core > Dash Core** для запуска "
+"приложения. При первом запуске программы, вам будет предложено выбрать "
+"расположение места хранения блокчейна и данных кошелька. Выберите "
+"расположение с достаточным свободным местом на диске, поскольку размер "
+"блокчейна может достигать 45+ гигабайт. При возможности, рекомендуется "
+"использовать место, предлагаемое по умолчанию."
 
 #: ../../docs/user/wallets/dashcore/installation-windows.rst:161
 msgid "Choosing the Dash Core data folder"
