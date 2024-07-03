@@ -76,23 +76,6 @@ https://dashmasternode.io
 - `Email <sidhosting@protonmail.com>`__
 
 
-Zaimirai
---------
-
-.. image:: img/zaimirai.png
-   :width: 200px
-   :align: right
-   :target: https://www.zaimirai.com
-
-https://www.zaimirai.com
-
-- Operated by: Patrick Quinn
-- Services: Hosting, Voting
-- 0.6 Dash/month (variable, discounts available)
-- `Site <https://www.zaimirai.com>`__
-- `Email <support@zaimirai.com>`__
-
-
 Pool of Stake
 -------------
 
