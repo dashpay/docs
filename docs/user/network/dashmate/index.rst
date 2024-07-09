@@ -112,6 +112,32 @@ about an existing masternode.
 
    Set up a new masternode
 
+If registering a new masternode, jump to the :ref:`defining keys and addresses
+<dashmate-define-keys-addresses>` section next.
+
+Import existing Core data
+-------------------------
+
+If you chose to import an existing masternode in the previous step, you will be prompted for the
+location of your existing installation. 
+
+.. figure:: img/4a-import-existing-data.png
+   :align: center
+   :width: 90%
+
+   Import existing data
+
+.. figure:: img/4b-import-existing-data-path.png
+   :align: center
+   :width: 90%
+
+   Enter existing Core data directory
+
+Once the Core data has been imported, jump to the :ref:`enable SSL <dashmate-enable-ssl>` section if
+setting up an evonode.
+
+.. _dashmate-define-keys-addresses:
+
 Define Keys and Addresses
 -------------------------
 
@@ -196,6 +222,8 @@ details.
    :width: 90%
 
    Run the registration command
+
+.. _dashmate-enable-ssl:
 
 Enable SSL
 ----------
