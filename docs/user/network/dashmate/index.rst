@@ -22,6 +22,9 @@ and easily set up and run a development network on your local system.
 Installation
 ============
 
+This guide describes how to download, install and use dashmate on for Linux. The guide is written
+for Ubuntu 22.04 x64 LTS, but the steps should be similar for other Linux distributions.
+
 .. _dashmate-dep-install:
 
 Install dependencies
@@ -45,14 +48,15 @@ There are several methods available for installing dashmate.
 Debian package
 ^^^^^^^^^^^^^^
 
-Download the dashmate installation package::
+Download the dashmate installation package for your architecture from the `GitHub releases
+page <https://github.com/dashpay/platform/releases/latest>`__::
 
-   wget https://github.com/dashpay/platform/releases/download/v0.25.15/dashmate_0.25.15-1_arm64.deb
+   wget https://github.com/dashpay/platform/releases/download/v0.25.22/dashmate_0.25.22.b143aee50-1_amd64.deb
 
 Install dashmate using apt::
 
    sudo apt update
-   sudo apt install ./dashmate_0.25.15-1_arm64.deb
+   sudo apt install ./dashmate_0.25.22.b143aee50-1_amd64.deb
 
 Node package
 ^^^^^^^^^^^^
