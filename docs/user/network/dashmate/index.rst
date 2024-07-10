@@ -41,7 +41,9 @@ Install and configure Docker::
 Install dashmate
 ----------------
 
-There are several methods available for installing dashmate.
+There are several methods available for installing dashmate. Installing the Linux, MacOS, or Windows
+packages from the `GitHub releases page <https://github.com/dashpay/platform/releases/latest>`__ is
+recommended for mainnet masternodes.
 
 .. _dashmate-install-deb:
 
@@ -61,6 +63,10 @@ Install dashmate using apt::
 Node package
 ^^^^^^^^^^^^
 
+.. warning:: This installation option is not recommended for mainnet masternodes. Please install
+            packages from the `GitHub releases page <https://github.com/dashpay/platform/releases/latest>`__.
+
+
 To install the NodeJS package, it is necessary to install NodeJS first. We recommend
 installing it using `nvm <https://github.com/nvm-sh/nvm#readme>`__::
 
@@ -77,10 +83,10 @@ Once NodeJS has been installed, use npm to install dashmate::
 Masternode setup
 ================
 
-You can setup both regular masternodes and Evolution masternodes (evonodes)
-using dashmate. There are few minor extra steps for evonodes, but the process is
-largely identical for both masternode types. Complete the steps in the sections
-below to set up your node or follow along with this step-by-step tutorial.
+Dashmate is primarily recommended for setting up Evolution masternodes (evonodes). With the
+exception of a few minor extra steps for evonodes, the process is identical for evonodes and regular
+masternodes. Complete the steps in the sections below to set up your node or follow along with this
+step-by-step tutorial.
 
 .. raw:: html
 
