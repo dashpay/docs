@@ -215,6 +215,6 @@ online and offline.
 - In Dash for iOS, swipe to the left to display the **Receive Dash**
   screen. A QR code and address will appear. You can screenshot this to
   save an image.
-- To generate a QR code from any Dash address, visit `CWA QR Code
-  Generator <https://cwaqrgen.com/dash>`_ and simply paste your Dash
-  address to generate an image.
+- To generate a QR code from any Dash address, visit `QRCode Monkey
+  <https://www.qrcode-monkey.com/#bitcoin>`_, paste your Dash address,
+  and select the Dash cryptocurrency type to generate an image.
