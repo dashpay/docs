@@ -66,17 +66,18 @@ Node package
 .. warning:: This installation option is not recommended for mainnet masternodes. Please install
             packages from the `GitHub releases page <https://github.com/dashpay/platform/releases/latest>`__.
 
+.. dropdown:: Node.js dashmate install
 
-To install the NodeJS package, it is necessary to install NodeJS first. We recommend
-installing it using `nvm <https://github.com/nvm-sh/nvm#readme>`__::
+   To install the NodeJS package, it is necessary to install NodeJS first. We recommend
+   installing it using `nvm <https://github.com/nvm-sh/nvm#readme>`__::
 
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-  source ~/.bashrc
-  nvm install 20
+     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+     source ~/.bashrc
+     nvm install 20
 
-Once NodeJS has been installed, use npm to install dashmate::
+   Once NodeJS has been installed, use npm to install dashmate::
 
-   npm install -g dashmate
+      npm install -g dashmate
 
 .. _dashmate-wizard-walkthrough:
 
