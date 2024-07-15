@@ -50,7 +50,7 @@ Budgets
   fall below the approval threshold
 - Budgets are processed (paid) in order of yes minus no votes. More
   popular budgets get payment priority. 
-- Approximately 6176 dash (in 2018) are available for each budget cycle,
+- Approximately 7919 dash (in 2024) are available for each budget cycle,
   decreasing by 7.14% every 210240 blocks (approx. 383.25 days).
 
 Object structure
