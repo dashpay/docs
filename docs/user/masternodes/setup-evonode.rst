@@ -208,10 +208,13 @@ operator key.
 Masternode Installation
 =======================
 
-The following options are available for installing Dash masternode software:
+.. attention::
+  
+  Dash Platform will include multiple services that must be configured properly
+  for an Evolution masternode to operate correctly. A :ref:`dashmate-based
+  installation <evonode-setup-install-dashmate>` is recommended to ensure
+  your configuration is functional.
 
-- :ref:`Dashmate installation (recommended) <evonode-setup-install-dashmate>`
-- :ref:`Manual installation <evonode-setup-install-manual>`
 
 .. _evonode-setup-install-dashmate:
 
@@ -231,150 +234,16 @@ dashmate dependencies::
   curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
   sudo usermod -aG docker $USER
   newgrp docker
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-  source ~/.bashrc
-  nvm install 20
 
-Install dashmate::
+Download the dashmate installation package for your CPU architecture from the `GitHub releases page
+<https://github.com/dashpay/platform/releases/latest>`__ and install it using apt::
 
-  npm install -g dashmate
+   wget https://github.com/dashpay/platform/releases/download/v0.25.22/dashmate_0.25.22.b143aee50-1_amd64.deb
+   sudo apt update
+   sudo apt install ./dashmate_0.25.22.b143aee50-1_amd64.deb
 
 Alternative installation options are available on the :hoverxref:`dashmate page
 <dashmate-install>`.
-
-Continue with the :ref:`Registration step <register-evonode>` to setup the
-collateral, keys and construct the ProTx transaction required to enable your
-masternode.
-
-
-.. _evonode-setup-install-manual:
-
-Manual installation
--------------------
-
-.. attention::
-  
-  Dash Platform will include multiple services that must be configured properly
-  for an Evolution masternode to operate correctly. A :ref:`dashmate-based
-  installation <evonode-setup-install-dashmate>` is recommended to ensure
-  your configuration is functional.
-
-
-Dash Core
-^^^^^^^^^
-
-To manually download and install the components of your Dash Evolution masternode, 
-visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ and 
-copy the link to the latest version appropriate for your CPU architecture, 
-e.g. ``x86_64-linux-gnu``. Go back to your terminal window and enter the following 
-command, pasting in the address to the latest version of Dash Core by right clicking
-or pressing **Ctrl+ V**::
-
-  cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v20.1.1/dashcore-20.1.1-x86_64-linux-gnu.tar.gz
-
-Verify the authenticity of your download by checking its detached
-signature against the public key published by the Dash Core development
-team. All releases of Dash are signed using GPG with one of the
-following keys:
-
-- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
-  `verifiable here on Keybase <https://keybase.io/codablock>`__
-- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
-  on Keybase <https://keybase.io/pasta>`__
-
-::
-
-  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
-  curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v20.1.1/dashcore-20.1.1-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-20.1.1-x86_64-linux-gnu.tar.gz.asc
-
-Create a working directory for Dash, extract the compressed archive and
-copy the necessary files to the directory::
-
-  mkdir ~/.dashcore
-  tar xfv dashcore-20.1.1-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-20.1.1/bin/dashd ~/.dashcore/
-  cp -f dashcore-20.1.1/bin/dash-cli ~/.dashcore/
-
-Create a configuration file using the following command::
-
-  nano ~/.dashcore/dash.conf
-
-An editor window will appear. We now need to create a configuration file
-specifying several variables. Copy and paste the following text to get
-started, then replace the variables specific to your configuration as
-follows::
-
-  #----
-  rpcuser=XXXXXXXXXXXXX
-  rpcpassword=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  rpcallowip=127.0.0.1
-  #----
-  listen=1
-  server=1
-  daemon=1
-  #----
-  #masternodeblsprivkey=
-  externalip=XXX.XXX.XXX.XXX
-  #----
-
-Replace the fields marked with ``XXXXXXX`` as follows:
-
-- ``rpcuser``: enter any string of numbers or letters, no special
-  characters allowed
-- ``rpcpassword``: enter any string of numbers or letters, no special
-  characters allowed
-- ``externalip``: this is the IP address of your VPS
-
-Leave the ``masternodeblsprivkey`` field commented out for now. The
-result should look something like this:
-
-.. figure:: img/setup-manual-conf.png
-   :width: 400px
-
-   Entering key data in dash.conf on the masternode
-
-Press **Ctrl + X** to close the editor and **Y** and **Enter** save the
-file. You can now start running Dash on the masternode to begin
-synchronization with the blockchain::
-
-  ~/.dashcore/dashd
-
-You will see a message reading **Dash Core server starting**. 
-
-Add dashd to crontab to make sure it runs every minute to check on your
-masternode::
-
-  crontab -e
-
-Choose nano as your editor and enter the following lines at the end of
-the file::
-
-  * * * * * pidof dashd || ~/.dashcore/dashd
-
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. We now need to wait for 15 confirmations of the collateral
-transaction to complete, and wait for the blockchain to finish
-synchronizing on the masternode. You can use the following commands to
-monitor progress::
-
-  ~/.dashcore/dash-cli mnsync status
-
-When synchronisation is complete, you should see the following
-response::
-
-  {
-    "AssetID": 999,
-    "AssetName": "MASTERNODE_SYNC_FINISHED",
-    "AssetStartTime": 1558596597,
-    "Attempt": 0,
-    "IsBlockchainSynced": true,
-    "IsSynced": true,
-    "IsFailed": false
-  }
 
 Continue with the :ref:`Registration step <register-evonode>` to setup the
 collateral, keys and construct the ProTx transaction required to enable your
@@ -439,8 +308,7 @@ and will cause it to start serving as a masternode when the signed ProRegTx is
 broadcast by the owner, as we just did above.
 
 Take note of your BLS private key and then proceed with the relevant
-instructions below based on which :ref:`Software Installation option
-<evonode-setup-install>` you are using.
+instructions below.
 
 Dashmate
 ~~~~~~~~
@@ -468,46 +336,6 @@ follows::
 You can manage your masternode status, configuration, and running state entirely
 from within dashmate. See the dashmate :hoverxref:`node operation documentation
 <dashmate-node-operation>` for details.
-
-
-Manual
-~~~~~~
-
-For manual installations, log in to your masternode using ``ssh`` or PuTTY and
-edit the configuration file as follows::
-
-  nano ~/.dashcore/dash.conf
-
-The editor appears with the existing masternode configuration. Add or
-uncomment this lines in the file, replacing the key with your BLS
-private key generated above::
-
-  masternodeblsprivkey=24c1fa3c22c6ea6b1cc68a37be18acb51042b19465fe0a26301c8717bf939805
-
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. Note that providing a ``masternodeblsprivkey`` enables
-masternode mode, which will automatically force the ``txindex=1``,
-``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
-masternode service. We now need to restart the masternode for this
-change to take effect. Enter the following commands, waiting a few
-seconds in between to give Dash Core time to shut down::
-
-  ~/.dashcore/dash-cli stop
-  sleep 15
-  ~/.dashcore/dashd
-
-At this point you can monitor your masternode by entering
-``~/.dashcore/dash-cli masternode status`` or using the **Refresh status**
-function in DMT. The final result should appear as follows:
-
-.. figure:: img/setup-dash-cli-start.png
-  :width: 400px
-
-  dash-cli masternode status output showing successfully registered masternode
-
-At this point you can safely log out of your server by typing ``exit``.
-Congratulations! Your masternode is now running.
 
 
 .. _evonode-dashcore-protx:
