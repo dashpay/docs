@@ -415,8 +415,8 @@ Option 3: Registering from Dash Core wallet
   Tool to register as described in :ref:`Option 1: Registering from a hardware
   wallet <register-evonode-hardware>`.
 
-This option can be used without installing any applications other than Dash
-Core; however, it requires the most technical skill.
+If you prefer managing the collateral and keys using Dash Core, the following sections show how to
+generate and retrieve information that may be required by dashmate or the Dash Masternode Tool.
 
 .. _evonode-mn-outputs:
 
@@ -468,36 +468,6 @@ the following command::
   **These keys are NOT stored by the wallet and must be backed up and kept
   secure.**
 
-Add the private key to your masternode configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The public key will be used in following steps. The private key must be
-entered in the ``dash.conf`` file on the masternode. This allows the
-masternode to watch the blockchain for relevant Pro*Tx transactions, and
-will cause it to start serving as a masternode when the signed ProRegTx
-is broadcast by the owner (final step below). Log in to your masternode
-using ``ssh`` or PuTTY and edit the configuration file as follows::
-
-  nano ~/.dashcore/dash.conf
-
-The editor appears with the existing masternode configuration. Add or
-uncomment this line in the file, replacing the key with your BLS private
-key generated above::
-
-  masternodeblsprivkey=395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e
-
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. Note that providing a ``masternodeblsprivkey`` enables
-masternode mode, which will automatically force the ``txindex=1``,
-``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
-masternode service. We now need to restart the masternode for this
-change to take effect. Enter the following commands, waiting a few
-seconds in between to give Dash Core time to shut down::
-
-  ~/.dashcore/dash-cli stop
-  sleep 15
-  ~/.dashcore/dashd
 
 .. _evonode-generate-platform-node-id:
 
@@ -521,9 +491,6 @@ Alternatively, the following commands can be used generate P2P key, save it to
   openssl pkey -in privkey.pem -noout  -text_pub |tail -n +3 | tr -d '[:space:]' | xxd -r -p| sha256sum | head -c 40
 
   1e8e241c05ca350c8fe0b8ba4680e7652673dae2
-
-The platform node ID will be used in following steps. We will now prepare the
-transaction used to register the masternode on the network.
 
 .. warning::
   
@@ -571,152 +538,3 @@ external to the wallet::
 
   yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN
 
-
-Fee source address
-~~~~~~~~~~~~~~~~~~
-
-You can also optionally generate and fund another address as the **transaction
-fee source** (``feeSourceAddress``). If you selected an external payout address,
-you must specify a fee source address. 
-
-Either the payout address or fee source address must have enough balance to pay
-the transaction fee, or the ``register_prepare_hpmn`` transaction will fail.
-
-
-Key access
-~~~~~~~~~~
-
-The private keys to the owner and fee source addresses must exist in the wallet
-submitting the transaction to the network. If your wallet is protected by a
-password, it must now be unlocked to perform the following commands. Unlock your
-wallet for 5 minutes::
-
-  walletpassphrase yourSecretPassword 300
-
-
-.. _hmpn-prepare-proregtx:
-
-Prepare a ProRegTx transaction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-We will now prepare an unsigned ProRegTx special transaction using the ``protx
-register_prepare_hpmn`` command. This command has the following syntax::
-
-  protx register_prepare_hpmn collateralHash collateralIndex ipAndPort ownerKeyAddr 
-    operatorPubKey votingKeyAddr operatorReward payoutAddress (feeSourceAddress)
-
-Open a text editor such as notepad to prepare this command. Replace each
-argument to the command as follows:
-
-- ``collateralHash``: The txid of the 4000 Dash collateral funding transaction
-- ``collateralIndex``: The output index of the 4000 Dash funding transaction
-- ``ipAndPort``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
-- ``ownerKeyAddr``: The new Dash address generated above for the owner/voting
-  address
-- ``operatorPubKey``: The BLS public key :hoverxref:`generated above
-  <evonode-bls-generation>` (or provided by your hosting service)
-- ``votingKeyAddr``: The new Dash address generated above, or the address of a
-  delegate, used for proposal voting
-- ``operatorReward``: The percentage of the block reward allocated to the
-  operator as payment
-- ``payoutAddress``: A new or existing Dash address to receive the owner's
-  masternode rewards
-- ``platformNodeID``: Platform P2P node ID :hoverxref:`generated above
-  <evonode-generate-platform-node-id>`
-- ``platformP2PPort``: TCP port of Dash Platform peer-to-peer communication
-  between nodes. Must be 26656 for mainnet.
-- ``platformHTTPPort``: TCP port of Platform HTTP/API interface. Must be 443 for
-  mainnet.
-- ``feeSourceAddress``: An (optional) address used to fund ProTx fee.
-  ``payoutAddress`` will be used if not specified.
-
-Note that the operator is responsible for :ref:`specifying their own reward
-<dip3-update-service>` address in a separate ``update_service`` transaction if
-you specify a non-zero ``operatorReward``. The owner of the masternode
-collateral does not specify the operator's payout address.
-
-Example (remove line breaks if copying)::
-
-  protx register_prepare_hpmn 
-    16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3 
-    1 
-    45.76.230.239:19999 
-    yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip 
-    99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e 
-    yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg 
-    0 
-    yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN
-    1e8e241c05ca350c8fe0b8ba4680e7652673dae2
-    26656
-    443
-    yR83WsikBaBaNusTnHZf28kAcL8oVmp1TE
-
-Output::
-
-  {
-    "tx": "030001000175c9d23c2710798ef0788e6a4d609460586a20e91a15f2097f56fc6e007c4f8e0000000000feffffff01a1949800000000001976a91434b09363474b14d02739a327fe76e6ea12deecad88ac00000000d1010000000000e379580dcfea3eb6944bfbe1de5fa2317932e260acce4d9ff3ede5f4287a34160100000000000000000000000000ffff2d4ce6ef4e1fd47babdb9092489c82426623299dde76b9c72d9799f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670ed1935246865dce1accce6c8691c8466bd67ebf1200001976a914fef33f56f709ba6b08d073932f925afedaa3700488acfdb281e134504145b5f8c7bd7b47fd241f3b7ea1f97ebf382249f601a0187f5300",
-    "collateralAddress": "yjSPYvgUiAQ9AFj5tKFA8thFLoLBUxQERb",
-    "signMessage": "yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN|0|yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip|yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg|ad5f82257bd00a5a1cb5da1a44a6eb8899cf096d3748d68b8ea6d6b10046a28e"
-  }
-
-Next we will use the ``collateralAddress`` and ``signMessage`` fields to sign
-the transaction, and the output of the ``tx`` field to submit the transaction.
-
-Sign the ProRegTx transaction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-We will now sign the content of the ``signMessage`` field using the private key
-for the collateral address as specified in ``collateralAddress``. Note that no
-internet connection is required for this step, meaning that the wallet can
-remain disconnected from the internet in cold storage to sign the message. In
-this example we will again use Dash Core, but it is equally possible to use the
-signing function of a hardware wallet. The command takes the following syntax::
-
-  signmessage collateralAddress signMessage
-
-Example::
-
-  signmessage yjSPYvgUiAQ9AFj5tKFA8thFLoLBUxQERb yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN|0|yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip|yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg|ad5f82257bd00a5a1cb5da1a44a6eb8899cf096d3748d68b8ea6d6b10046a28e
-
-Output::
-
-  II8JvEBMj6I3Ws8wqxh0bXVds6Ny+7h5HAQhqmd5r/0lWBCpsxMJHJT3KBcZ23oUZtsa6gjgISf+a8GzJg1BfEg=
-
-
-Submit the signed message
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-We will now submit the ProRegTx special transaction to the blockchain to
-register the masternode. This command must be sent from a Dash Core wallet
-holding a balance on either the ``feeSourceAddress`` or ``payoutAddress``, since
-a standard transaction fee is involved. The command takes the following syntax::
-
-  protx register_submit tx sig
-
-Where: 
-
-- ``tx``: The serialized transaction previously returned in the ``tx`` output
-  field from the ``protx register_prepare_hpmn`` command
-- ``sig``: The message signed with the collateral key from the ``signmessage``
-  command
-
-Example::
-
-  protx register_submit 030001000175c9d23c2710798ef0788e6a4d609460586a20e91a15f2097f56fc6e007c4f8e0000000000feffffff01a1949800000000001976a91434b09363474b14d02739a327fe76e6ea12deecad88ac00000000d1010000000000e379580dcfea3eb6944bfbe1de5fa2317932e260acce4d9ff3ede5f4287a34160100000000000000000000000000ffff2d4ce6ef4e1fd47babdb9092489c82426623299dde76b9c72d9799f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670ed1935246865dce1accce6c8691c8466bd67ebf1200001976a914fef33f56f709ba6b08d073932f925afedaa3700488acfdb281e134504145b5f8c7bd7b47fd241f3b7ea1f97ebf382249f601a0187f5300 II8JvEBMj6I3Ws8wqxh0bXVds6Ny+7h5HAQhqmd5r/0lWBCpsxMJHJT3KBcZ23oUZtsa6gjgISf+a8GzJg1BfEg=
-
-Output::
-
-  aba8c22f8992d78fd4ff0c94cb19a5c30e62e7587ee43d5285296a4e6e5af062
-
-Your masternode is now registered and will appear on the Deterministic
-Masternode List after the transaction is mined to a block. You can view this
-list on the **Masternodes** tab of the Dash Core wallet, or
-in the console using the command ``protx list valid``, where the txid of the
-final ``protx register_submit`` transaction identifies your masternode.
-
-At this point you can go back to your terminal window and monitor your
-masternode by entering ``~/.dashcore/dash-cli masternode status`` or
-using the **Refresh status** function in DMT. 
-
-At this point you can safely log out of your server by typing ``exit``.
-Congratulations! Your masternode is now running.
