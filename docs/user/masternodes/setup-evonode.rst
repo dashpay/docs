@@ -282,10 +282,18 @@ Click **Apply changes** when these fields have been set.
 
   Dash Masternode Tool ready to register a new masternode
 
-Then click **MN actions** and select **Register masternode**. Optionally specify
-a different **Payout address** and/or **Operator reward**, then click
-**Continue**. Select **Remote Dash RPC Node (automatic method)**. (For details
-about using your own local RPC node, see the `Dash Masternode Tool documentation
+Then click **MN actions** and select **Register masternode**. Optionally specify a different
+**Payout address** and/or **Operator reward**, then click **Continue**.
+
+.. important::
+
+  Assigning a payout address from a non-hardware wallet like :ref:`Dash Core
+  <evonode-get-addresses>` is recommended for the initial release of Dash Platform. Currently Dash
+  Masternode Tool does not support the credit withdraw process that will be used to transfer Dash
+  Platform rewards.
+
+Select **Remote Dash RPC Node (automatic method)**. (For details about using your own local RPC
+node, see the `Dash Masternode Tool documentation
 <https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-connection-direct.md>`__.)
 Confirm the following two messages:
 
