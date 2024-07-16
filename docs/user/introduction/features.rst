@@ -59,12 +59,10 @@ Masternodes enable the following services:
 -  **Dash Evolution** will make using cryptocurrency as easy as using
    PayPal.
 
-Masternode owners must have possession of 1000 DASH, which they prove by
-signing a message included in a special transaction written to the
-blockchain. The Dash can be moved or spent at any time, but doing so
-will cause the masternode to fall out of queue and stop earning rewards.
-Masternode users are also given **voting rights** on proposals. Each
-masternode has one vote and this vote can be used on budget proposals or
+Masternode owners must have possession of 1000 DASH, which they prove by signing a message included
+in a special transaction written to the blockchain. The Dash can be moved or spent at any time, but
+doing so will cause the masternode to fall out of queue and stop earning rewards. Masternode users
+are also given **voting rights** on proposals. Each masternode can vote on budget proposals or
 important decisions that affect Dash.
 
 Masternodes cost money and effort to host so they are paid a percentage
@@ -78,22 +76,21 @@ possibility for masternodes to earn money from fees in the future.
 Evolution Masternodes (evonodes)
 --------------------------------
 
-Evolution Masternodes (evonodes) are a subset of Masternodes that have 
-been created to host the Dash Platform. An evonode is a lot like Masternodes 
-with these differences:
+Evolution Masternodes (evonodes) are a subset of masternodes that have been created to host Dash
+Platform. Evonodes are similar to regular masternodes, but have these differences:
 
-+----------------+-----------------------------------+-----------------------------------------------------+
-|                | Masternode                        | Evolution Masternode                                |
-+================+===================================+=====================================================+
-| Collateral     | 1000 DASH                         | 4000 DASH (4X the collateral for normal masternodes)|
-+----------------+-----------------------------------+-----------------------------------------------------+
-| Specs          | Lesser than evonodes              | Higher than normal masternodes                      |
-+----------------+-----------------------------------+-----------------------------------------------------+
-| Service        | Only Dash Core                    | Both Dash Core and Platform                         |
-+----------------+-----------------------------------+-----------------------------------------------------+
-| Voting Weight  | 1 node gets 1 vote                | Has 4 times the voting power of a normal masternode |
-+----------------+-----------------------------------+-----------------------------------------------------+
++----------------+-----------------------------------+--------------------------------+
+|                | Masternode                        | Evolution Masternode           |
++================+===================================+================================+
+| Collateral     | 1000 DASH                         | 4000 DASH                      |
++----------------+-----------------------------------+--------------------------------+
+| Service(s)     | Only Dash Core                    | Both Dash Core and Platform    |
++----------------+-----------------------------------+--------------------------------+
+| Voting Weight  | 1 (collateral amount / 1000)      | 4 (collateral amount / 1000)   |
++----------------+-----------------------------------+--------------------------------+
 
+Evonodes also have :ref:`higher hardware requirements <mn-hardware-reqs-table>`
+than regular masternodes due to the additional Dash Platform services they host. 
 
 .. _coinjoin:
 

@@ -87,21 +87,21 @@ statistics on the masternode network.
 Evolution Masternodes (evonodes)
 --------------------------------
 
-Evolution Masternodes (evonodes) are a subset of masternodes that have 
-been created to host Dash Platform. An evonode is a lot like a regular masternode
-with the following differences:
+Evolution Masternodes (evonodes) are a subset of masternodes that have been created to host Dash
+Platform. Evonodes are similar to regular masternodes, but have these differences:
 
-+----------------+-----------------------------------+-----------------------------------------------------+
-|                | Masternode                        | Evonode                                             |
-+================+===================================+=====================================================+
-| Collateral     | 1000 DASH                         | 4000 DASH (4X the collateral for normal masternodes)|
-+----------------+-----------------------------------+-----------------------------------------------------+
-| Specs          | Lesser than evonode               | Higher than normal masternodes                      |
-+----------------+-----------------------------------+-----------------------------------------------------+
-| Service        | Only Dash Core                    | Both Dash Core and Platform                         |
-+----------------+-----------------------------------+-----------------------------------------------------+
-| Voting Weight  | 1 node gets 1 vote                | Has 4 times the voting power of a normal masternode |
-+----------------+-----------------------------------+-----------------------------------------------------+
++----------------+-----------------------------------+--------------------------------+
+|                | Masternode                        | Evolution Masternode           |
++================+===================================+================================+
+| Collateral     | 1000 DASH                         | 4000 DASH                      |
++----------------+-----------------------------------+--------------------------------+
+| Service(s)     | Only Dash Core                    | Both Dash Core and Platform    |
++----------------+-----------------------------------+--------------------------------+
+| Voting Weight  | 1 (collateral amount / 1000)      | 4 (collateral amount / 1000)   |
++----------------+-----------------------------------+--------------------------------+
+
+Evonodes also have :hoverxref:`higher hardware requirements <mn-hardware-reqs-table>`
+than regular masternodes due to the additional Dash Platform services they host. 
 
 .. _mn-concepts:
 
@@ -293,7 +293,7 @@ described above.
 Masternode requirements
 =======================
 
-- DASH collateral: Hosting a master node requires a large amount of DASH collateral.
+- DASH collateral: Hosting a masternode requires a large amount of DASH collateral.
   Arguably the hardest part. Dash can be obtained from
   exchanges such as Poloniex, Bittrex, Kraken and LiveCoin. Shapeshift's
   service is also an excellent way.
