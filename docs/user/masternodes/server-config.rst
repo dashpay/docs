@@ -181,28 +181,43 @@ We will now install a firewall (and some other packages we will use later)::
 
 (press **Y** and **Enter** to confirm)
 
-Choose the appropriate firewall configuration below based on which network your
+Choose the appropriate firewall configuration below based on which network and masternode type your
 masternode will support:
 
-.. code-block:: none
-  :caption: Mainnet configuration
+.. tab-set::
+  .. tab-item::  Mainnet masternode
+    
+    .. code-block:: shell
 
-  ufw allow ssh/tcp
-  ufw limit ssh/tcp
-  ufw allow 9999/tcp
-  ufw logging on
-  ufw enable
+      ufw allow ssh/tcp
+      ufw limit ssh/tcp
+      ufw allow 9999/tcp
+      ufw logging on
+      ufw enable
 
-.. code-block:: none
-  :caption: Testnet configuration
-  
-  ufw allow ssh/tcp
-  ufw limit ssh/tcp
-  ufw allow 19999/tcp
-  ufw allow 26656/tcp
-  ufw allow 3000/tcp
-  ufw logging on
-  ufw enable
+  .. tab-item::  Mainnet evonode
+    
+    .. code-block:: shell
+
+      ufw allow ssh/tcp
+      ufw limit ssh/tcp
+      ufw allow 443/tcp
+      ufw allow 9999/tcp
+      ufw allow 26656/tcp
+      ufw logging on
+      ufw enable
+
+  .. tab-item:: Testnet
+
+    .. code-block:: shell
+
+        ufw allow ssh/tcp
+        ufw limit ssh/tcp
+        ufw allow 1443/tcp
+        ufw allow 19999/tcp
+        ufw allow 36656/tcp
+        ufw logging on
+        ufw enable
 
 (press **Y** and **Enter** to confirm)
 
