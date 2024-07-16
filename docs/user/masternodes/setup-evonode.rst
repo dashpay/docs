@@ -163,44 +163,52 @@ Leave DMT open and continue with the next step: :ref:`Software Installation
 Option 2: Holding collateral in Dash Core wallet
 ------------------------------------------------
 
-Open Dash Core wallet and wait for it to synchronize with the network. It should
-look like this when ready:
+.. attention::
 
-.. figure:: img/setup-collateral-dashcore.png
-   :width: 400px
+  Storing your collateral in a Dash Core wallet is **not** recommended. :ref:`Using a hardware
+  wallet <evonode-send-collateral-hardware>` is **highly recommended** to enhance security and
+  protect yourself against hacking. Only proceed with using Dash Core if you understand the risks.
 
-   Fully synchronized Dash Core wallet
+.. dropdown:: Dash Core collateral instructions
 
-Click **Window > Console** to open the console. Type the following command into
-the console to generate a new Dash address for the collateral::
+  Open Dash Core wallet and wait for it to synchronize with the network. It should
+  look like this when ready:
 
-  getnewaddress
-  yiFfzbwiN9oneftd7cEfr3kQLRwQ4kp7ue
+  .. figure:: img/setup-collateral-dashcore.png
+    :width: 400px
 
-Take note of the collateral address, since we will need it later.  The next step
-is to secure your wallet (if you have not already done so). First, encrypt the
-wallet by selecting **Settings > Encrypt wallet**. You should use a strong, new
-password that you have never used somewhere else. Take note of your password and
-store it somewhere safe or you will be permanently locked out of your wallet and
-lose access to your funds. Next, back up your wallet file by selecting **File >
-Backup Wallet**. Save the file to a secure location physically separate to your
-computer, since this will be the only way you can access our funds if anything
-happens to your computer. For more details on these steps, see :ref:`here
-<dashcore-backup>`.
+    Fully synchronized Dash Core wallet
 
-Now send exactly 4000 DASH in a single transaction to the new address you
-generated in the previous step. This may be sent from another wallet, or from
-funds already held in your current wallet. Once the transaction is complete,
-view the transaction in a `blockchain explorer
-<https://insight.dash.org/insight/>`_ by searching for the address. You
-will need 15 confirmations before you can register the masternode, but you can
-continue with the next step at this point already: generating your masternode
-operator key.
+  Click **Window > Console** to open the console. Type the following command into
+  the console to generate a new Dash address for the collateral::
 
-.. figure:: img/setup-collateral-blocks.png
-   :width: 400px
+    getnewaddress
+    yiFfzbwiN9oneftd7cEfr3kQLRwQ4kp7ue
 
-   Trezor blockchain explorer showing 15 confirmations for collateral transfer
+  Take note of the collateral address, since we will need it later.  The next step
+  is to secure your wallet (if you have not already done so). First, encrypt the
+  wallet by selecting **Settings > Encrypt wallet**. You should use a strong, new
+  password that you have never used somewhere else. Take note of your password and
+  store it somewhere safe or you will be permanently locked out of your wallet and
+  lose access to your funds. Next, back up your wallet file by selecting **File >
+  Backup Wallet**. Save the file to a secure location physically separate to your
+  computer, since this will be the only way you can access our funds if anything
+  happens to your computer. For more details on these steps, see :ref:`here
+  <dashcore-backup>`.
+
+  Now send exactly 4000 DASH in a single transaction to the new address you
+  generated in the previous step. This may be sent from another wallet, or from
+  funds already held in your current wallet. Once the transaction is complete,
+  view the transaction in a `blockchain explorer
+  <https://insight.dash.org/insight/>`_ by searching for the address. You
+  will need 15 confirmations before you can register the masternode, but you can
+  continue with the next step at this point already: generating your masternode
+  operator key.
+
+  .. figure:: img/setup-collateral-blocks.png
+    :width: 400px
+
+    Trezor blockchain explorer showing 15 confirmations for collateral transfer
 
 
 .. _evonode-setup-install:
