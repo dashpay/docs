@@ -297,11 +297,9 @@ Masternode requirements
   Arguably the hardest part. Dash can be obtained from
   exchanges such as Poloniex, Bittrex, Kraken and LiveCoin. Shapeshift's
   service is also an excellent way.
-- A server or VPS running Linux: Most recent guides use Ubuntu 20.04
+- A server or VPS running Linux: Most recent guides use Ubuntu 22.04
   LTS. We recommend VPS services such as Vultr and DigitalOcean,
-  although any decent provider will do. Generally an instance with low
-  to average specifications will do, although performance requirements
-  will increase according to this roadmap.
+  although any decent provider will do.
 - A dedicated IP address: These usually come with the VPS/server.
 
 In addition to the DASH held in collateral, masternodes also have
@@ -309,6 +307,9 @@ minimum hardware requirements. For Dash versions 20.0 and higher, these
 requirements are as follows:
 
 .. _mn-hardware-reqs-table:
+
+Regular masternodes
+-------------------
 
 +---------+------------------+------------------+
 |         | Minimum          | Recommended      |
@@ -322,16 +323,25 @@ requirements are as follows:
 | Network | 750 GB/mth       | 1 TB/mth         |
 +---------+------------------+------------------+
 
-Masternode bandwidth use ranges between 600-900 GB per month and will
-grow as the network does.
 
-Dash Evolution
---------------
+.. _evonode-hardware-reqs-table:
 
-The exact hardware requirements for Dash Evolution masternodes have yet
-to be determined, although some pointers can be taken from the `roadmap
-<https://www.dash.org/roadmap/>`_ and this `blog post
-<https://medium.com/@eduffield222/how-to-enabling-on-chain-scaling-2ffab5997f8b>`_.
-It should be possible to run Dash masternodes on normal VPS servers
-until the block size reaches approximately 20 MB, after which custom
-hardware such as GPUs and eventually ASICs may be required.
+Evonodes
+--------
+
+Evonodes have higher hardware requirements since they host Dash Platform services along with Dash
+Core. To support the network effectively, the following requirements are recommended:
+
++---------+------------------+
+|         | Recommended      |
++=========+==================+
+| CPU     | 4x 2.4 GHz       |
++---------+------------------+
+| RAM     | 8 GB + 2 GB swap |
++---------+------------------+
+| Disk    | 200 GB           |
++---------+------------------+
+| Network | 1 TB/mth         |
++---------+------------------+
+
+Masternode bandwidth use varies and will grow as the network does.
