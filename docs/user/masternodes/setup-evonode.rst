@@ -40,8 +40,8 @@ For information about hosted masternodes, see the documentation listed below:
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
 - :ref:`Information for operators of hosted masternodes <operator-transactions>`
 
-This documentation describes the commands as if they were entered in the Dash
-Core GUI by opening the console from **Window > Console**, but the same result
+This documentation describes the Dash Core commands as if they were entered in
+the GUI by opening the console from **Window > Console**, but the same result
 can be achieved on a masternode by entering the same commands and adding the
 prefix ``~/.dashcore/dash-cli`` to each command.
 
