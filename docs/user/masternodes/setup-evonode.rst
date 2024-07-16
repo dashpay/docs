@@ -216,12 +216,9 @@ Option 2: Holding collateral in Dash Core wallet
 Masternode Installation
 =======================
 
-.. attention::
-  
-  Dash Platform will include multiple services that must be configured properly
-  for an Evolution masternode to operate correctly. A :ref:`dashmate-based
-  installation <evonode-setup-install-dashmate>` is recommended to ensure
-  your configuration is functional.
+Dash Platform will include multiple services that must be configured properly for an Evolution
+masternode to operate correctly. A :ref:`dashmate-based installation
+<evonode-setup-install-dashmate>` is recommended to ensure your configuration is functional.
 
 
 .. _evonode-setup-install-dashmate:
@@ -296,9 +293,9 @@ Then click **MN actions** and select **Register masternode**. Optionally specify
 .. important::
 
   Assigning a payout address from a non-hardware wallet like :ref:`Dash Core
-  <evonode-get-addresses>` is recommended for the initial release of Dash Platform. Currently Dash
-  Masternode Tool does not support the credit withdraw process that will be used to transfer Dash
-  Platform rewards.
+  <evonode-get-addresses>` is recommended for the initial release of Dash Platform. Currently, the
+  Dash Masternode Tool does not support the credit withdraw process that will be used to transfer
+  Dash Platform rewards.
 
 Select **Remote Dash RPC Node (automatic method)**. (For details about using your own local RPC
 node, see the `Dash Masternode Tool documentation
