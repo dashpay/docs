@@ -40,8 +40,8 @@ For information about hosted masternodes, see the documentation listed below:
 - :ref:`Information for users of hosted masternodes <hosted-setup>`
 - :ref:`Information for operators of hosted masternodes <operator-transactions>`
 
-This documentation describes the commands as if they were entered in the Dash
-Core GUI by opening the console from **Window > Console**, but the same result
+This documentation describes the Dash Core commands as if they were entered in
+the GUI by opening the console from **Window > Console**, but the same result
 can be achieved on a masternode by entering the same commands and adding the
 prefix ``~/.dashcore/dash-cli`` to each command.
 
@@ -163,44 +163,52 @@ Leave DMT open and continue with the next step: :ref:`Software Installation
 Option 2: Holding collateral in Dash Core wallet
 ------------------------------------------------
 
-Open Dash Core wallet and wait for it to synchronize with the network. It should
-look like this when ready:
+.. attention::
 
-.. figure:: img/setup-collateral-dashcore.png
-   :width: 400px
+  Storing your collateral in a Dash Core wallet is **not** recommended. :ref:`Using a hardware
+  wallet <evonode-send-collateral-hardware>` is **highly recommended** to enhance security and
+  protect yourself against hacking. Only proceed with using Dash Core if you understand the risks.
 
-   Fully synchronized Dash Core wallet
+.. dropdown:: Dash Core collateral instructions
 
-Click **Window > Console** to open the console. Type the following command into
-the console to generate a new Dash address for the collateral::
+  Open Dash Core wallet and wait for it to synchronize with the network. It should
+  look like this when ready:
 
-  getnewaddress
-  yiFfzbwiN9oneftd7cEfr3kQLRwQ4kp7ue
+  .. figure:: img/setup-collateral-dashcore.png
+    :width: 400px
 
-Take note of the collateral address, since we will need it later.  The next step
-is to secure your wallet (if you have not already done so). First, encrypt the
-wallet by selecting **Settings > Encrypt wallet**. You should use a strong, new
-password that you have never used somewhere else. Take note of your password and
-store it somewhere safe or you will be permanently locked out of your wallet and
-lose access to your funds. Next, back up your wallet file by selecting **File >
-Backup Wallet**. Save the file to a secure location physically separate to your
-computer, since this will be the only way you can access our funds if anything
-happens to your computer. For more details on these steps, see :ref:`here
-<dashcore-backup>`.
+    Fully synchronized Dash Core wallet
 
-Now send exactly 4000 DASH in a single transaction to the new address you
-generated in the previous step. This may be sent from another wallet, or from
-funds already held in your current wallet. Once the transaction is complete,
-view the transaction in a `blockchain explorer
-<https://insight.dash.org/insight/>`_ by searching for the address. You
-will need 15 confirmations before you can register the masternode, but you can
-continue with the next step at this point already: generating your masternode
-operator key.
+  Click **Window > Console** to open the console. Type the following command into
+  the console to generate a new Dash address for the collateral::
 
-.. figure:: img/setup-collateral-blocks.png
-   :width: 400px
+    getnewaddress
+    yiFfzbwiN9oneftd7cEfr3kQLRwQ4kp7ue
 
-   Trezor blockchain explorer showing 15 confirmations for collateral transfer
+  Take note of the collateral address, since we will need it later.  The next step
+  is to secure your wallet (if you have not already done so). First, encrypt the
+  wallet by selecting **Settings > Encrypt wallet**. You should use a strong, new
+  password that you have never used somewhere else. Take note of your password and
+  store it somewhere safe or you will be permanently locked out of your wallet and
+  lose access to your funds. Next, back up your wallet file by selecting **File >
+  Backup Wallet**. Save the file to a secure location physically separate to your
+  computer, since this will be the only way you can access our funds if anything
+  happens to your computer. For more details on these steps, see :ref:`here
+  <dashcore-backup>`.
+
+  Now send exactly 4000 DASH in a single transaction to the new address you
+  generated in the previous step. This may be sent from another wallet, or from
+  funds already held in your current wallet. Once the transaction is complete,
+  view the transaction in a `blockchain explorer
+  <https://insight.dash.org/insight/>`_ by searching for the address. You
+  will need 15 confirmations before you can register the masternode, but you can
+  continue with the next step at this point already: generating your masternode
+  operator key.
+
+  .. figure:: img/setup-collateral-blocks.png
+    :width: 400px
+
+    Trezor blockchain explorer showing 15 confirmations for collateral transfer
 
 
 .. _evonode-setup-install:
@@ -208,10 +216,10 @@ operator key.
 Masternode Installation
 =======================
 
-The following options are available for installing Dash masternode software:
+Dash Platform will include multiple services that must be configured properly for an Evolution
+masternode to operate correctly. A :ref:`dashmate-based installation
+<evonode-setup-install-dashmate>` is recommended to ensure your configuration is functional.
 
-- :ref:`Dashmate installation (recommended) <evonode-setup-install-dashmate>`
-- :ref:`Manual installation <evonode-setup-install-manual>`
 
 .. _evonode-setup-install-dashmate:
 
@@ -231,150 +239,16 @@ dashmate dependencies::
   curl -fsSL https://get.docker.com -o get-docker.sh && sh ./get-docker.sh
   sudo usermod -aG docker $USER
   newgrp docker
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-  source ~/.bashrc
-  nvm install 20
 
-Install dashmate::
+Download the dashmate installation package for your CPU architecture from the `GitHub releases page
+<https://github.com/dashpay/platform/releases/latest>`__ and install it using apt::
 
-  npm install -g dashmate
+   wget https://github.com/dashpay/platform/releases/download/v0.25.22/dashmate_0.25.22.b143aee50-1_amd64.deb
+   sudo apt update
+   sudo apt install ./dashmate_0.25.22.b143aee50-1_amd64.deb
 
 Alternative installation options are available on the :hoverxref:`dashmate page
 <dashmate-install>`.
-
-Continue with the :ref:`Registration step <register-evonode>` to setup the
-collateral, keys and construct the ProTx transaction required to enable your
-masternode.
-
-
-.. _evonode-setup-install-manual:
-
-Manual installation
--------------------
-
-.. attention::
-  
-  Dash Platform will include multiple services that must be configured properly
-  for an Evolution masternode to operate correctly. A :ref:`dashmate-based
-  installation <evonode-setup-install-dashmate>` is recommended to ensure
-  your configuration is functional.
-
-
-Dash Core
-^^^^^^^^^
-
-To manually download and install the components of your Dash Evolution masternode, 
-visit the `GitHub releases page <https://github.com/dashpay/dash/releases>`_ and 
-copy the link to the latest version appropriate for your CPU architecture, 
-e.g. ``x86_64-linux-gnu``. Go back to your terminal window and enter the following 
-command, pasting in the address to the latest version of Dash Core by right clicking
-or pressing **Ctrl+ V**::
-
-  cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v20.1.1/dashcore-20.1.1-x86_64-linux-gnu.tar.gz
-
-Verify the authenticity of your download by checking its detached
-signature against the public key published by the Dash Core development
-team. All releases of Dash are signed using GPG with one of the
-following keys:
-
-- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
-  `verifiable here on Keybase <https://keybase.io/codablock>`__
-- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
-  on Keybase <https://keybase.io/pasta>`__
-
-::
-
-  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
-  curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v20.1.1/dashcore-20.1.1-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-20.1.1-x86_64-linux-gnu.tar.gz.asc
-
-Create a working directory for Dash, extract the compressed archive and
-copy the necessary files to the directory::
-
-  mkdir ~/.dashcore
-  tar xfv dashcore-20.1.1-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-20.1.1/bin/dashd ~/.dashcore/
-  cp -f dashcore-20.1.1/bin/dash-cli ~/.dashcore/
-
-Create a configuration file using the following command::
-
-  nano ~/.dashcore/dash.conf
-
-An editor window will appear. We now need to create a configuration file
-specifying several variables. Copy and paste the following text to get
-started, then replace the variables specific to your configuration as
-follows::
-
-  #----
-  rpcuser=XXXXXXXXXXXXX
-  rpcpassword=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  rpcallowip=127.0.0.1
-  #----
-  listen=1
-  server=1
-  daemon=1
-  #----
-  #masternodeblsprivkey=
-  externalip=XXX.XXX.XXX.XXX
-  #----
-
-Replace the fields marked with ``XXXXXXX`` as follows:
-
-- ``rpcuser``: enter any string of numbers or letters, no special
-  characters allowed
-- ``rpcpassword``: enter any string of numbers or letters, no special
-  characters allowed
-- ``externalip``: this is the IP address of your VPS
-
-Leave the ``masternodeblsprivkey`` field commented out for now. The
-result should look something like this:
-
-.. figure:: img/setup-manual-conf.png
-   :width: 400px
-
-   Entering key data in dash.conf on the masternode
-
-Press **Ctrl + X** to close the editor and **Y** and **Enter** save the
-file. You can now start running Dash on the masternode to begin
-synchronization with the blockchain::
-
-  ~/.dashcore/dashd
-
-You will see a message reading **Dash Core server starting**. 
-
-Add dashd to crontab to make sure it runs every minute to check on your
-masternode::
-
-  crontab -e
-
-Choose nano as your editor and enter the following lines at the end of
-the file::
-
-  * * * * * pidof dashd || ~/.dashcore/dashd
-
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. We now need to wait for 15 confirmations of the collateral
-transaction to complete, and wait for the blockchain to finish
-synchronizing on the masternode. You can use the following commands to
-monitor progress::
-
-  ~/.dashcore/dash-cli mnsync status
-
-When synchronisation is complete, you should see the following
-response::
-
-  {
-    "AssetID": 999,
-    "AssetName": "MASTERNODE_SYNC_FINISHED",
-    "AssetStartTime": 1558596597,
-    "Attempt": 0,
-    "IsBlockchainSynced": true,
-    "IsSynced": true,
-    "IsFailed": false
-  }
 
 Continue with the :ref:`Registration step <register-evonode>` to setup the
 collateral, keys and construct the ProTx transaction required to enable your
@@ -413,10 +287,18 @@ Click **Apply changes** when these fields have been set.
 
   Dash Masternode Tool ready to register a new masternode
 
-Then click **MN actions** and select **Register masternode**. Optionally specify
-a different **Payout address** and/or **Operator reward**, then click
-**Continue**. Select **Remote Dash RPC Node (automatic method)**. (For details
-about using your own local RPC node, see the `Dash Masternode Tool documentation
+Then click **MN actions** and select **Register masternode**. Optionally specify a different
+**Payout address** and/or **Operator reward**, then click **Continue**.
+
+.. important::
+
+  Assigning a payout address from a non-hardware wallet like :ref:`Dash Core
+  <evonode-get-addresses>` is recommended for the initial release of Dash Platform. Currently, the
+  Dash Masternode Tool does not support the credit withdraw process that will be used to transfer
+  Dash Platform rewards.
+
+Select **Remote Dash RPC Node (automatic method)**. (For details about using your own local RPC
+node, see the `Dash Masternode Tool documentation
 <https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-connection-direct.md>`__.)
 Confirm the following two messages:
 
@@ -439,8 +321,7 @@ and will cause it to start serving as a masternode when the signed ProRegTx is
 broadcast by the owner, as we just did above.
 
 Take note of your BLS private key and then proceed with the relevant
-instructions below based on which :ref:`Software Installation option
-<evonode-setup-install>` you are using.
+instructions below.
 
 Dashmate
 ~~~~~~~~
@@ -468,46 +349,6 @@ follows::
 You can manage your masternode status, configuration, and running state entirely
 from within dashmate. See the dashmate :hoverxref:`node operation documentation
 <dashmate-node-operation>` for details.
-
-
-Manual
-~~~~~~
-
-For manual installations, log in to your masternode using ``ssh`` or PuTTY and
-edit the configuration file as follows::
-
-  nano ~/.dashcore/dash.conf
-
-The editor appears with the existing masternode configuration. Add or
-uncomment this lines in the file, replacing the key with your BLS
-private key generated above::
-
-  masternodeblsprivkey=24c1fa3c22c6ea6b1cc68a37be18acb51042b19465fe0a26301c8717bf939805
-
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. Note that providing a ``masternodeblsprivkey`` enables
-masternode mode, which will automatically force the ``txindex=1``,
-``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
-masternode service. We now need to restart the masternode for this
-change to take effect. Enter the following commands, waiting a few
-seconds in between to give Dash Core time to shut down::
-
-  ~/.dashcore/dash-cli stop
-  sleep 15
-  ~/.dashcore/dashd
-
-At this point you can monitor your masternode by entering
-``~/.dashcore/dash-cli masternode status`` or using the **Refresh status**
-function in DMT. The final result should appear as follows:
-
-.. figure:: img/setup-dash-cli-start.png
-  :width: 400px
-
-  dash-cli masternode status output showing successfully registered masternode
-
-At this point you can safely log out of your server by typing ``exit``.
-Congratulations! Your masternode is now running.
 
 
 .. _evonode-dashcore-protx:
@@ -587,8 +428,8 @@ Option 3: Registering from Dash Core wallet
   Tool to register as described in :ref:`Option 1: Registering from a hardware
   wallet <register-evonode-hardware>`.
 
-This option can be used without installing any applications other than Dash
-Core; however, it requires the most technical skill.
+If you prefer managing the collateral and keys using Dash Core, the following sections show how to
+generate and retrieve information that may be required by dashmate or the Dash Masternode Tool.
 
 .. _evonode-mn-outputs:
 
@@ -640,36 +481,6 @@ the following command::
   **These keys are NOT stored by the wallet and must be backed up and kept
   secure.**
 
-Add the private key to your masternode configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The public key will be used in following steps. The private key must be
-entered in the ``dash.conf`` file on the masternode. This allows the
-masternode to watch the blockchain for relevant Pro*Tx transactions, and
-will cause it to start serving as a masternode when the signed ProRegTx
-is broadcast by the owner (final step below). Log in to your masternode
-using ``ssh`` or PuTTY and edit the configuration file as follows::
-
-  nano ~/.dashcore/dash.conf
-
-The editor appears with the existing masternode configuration. Add or
-uncomment this line in the file, replacing the key with your BLS private
-key generated above::
-
-  masternodeblsprivkey=395555d67d884364f9e37e7e1b29536519b74af2e5ff7b62122e62c2fffab35e
-
-Press enter to make sure there is a blank line at the end of the file,
-then press **Ctrl + X** to close the editor and **Y** and **Enter** save
-the file. Note that providing a ``masternodeblsprivkey`` enables
-masternode mode, which will automatically force the ``txindex=1``,
-``peerbloomfilters=1``, and ``prune=0`` settings necessary to provide
-masternode service. We now need to restart the masternode for this
-change to take effect. Enter the following commands, waiting a few
-seconds in between to give Dash Core time to shut down::
-
-  ~/.dashcore/dash-cli stop
-  sleep 15
-  ~/.dashcore/dashd
 
 .. _evonode-generate-platform-node-id:
 
@@ -693,9 +504,6 @@ Alternatively, the following commands can be used generate P2P key, save it to
   openssl pkey -in privkey.pem -noout  -text_pub |tail -n +3 | tr -d '[:space:]' | xxd -r -p| sha256sum | head -c 40
 
   1e8e241c05ca350c8fe0b8ba4680e7652673dae2
-
-The platform node ID will be used in following steps. We will now prepare the
-transaction used to register the masternode on the network.
 
 .. warning::
   
@@ -743,152 +551,3 @@ external to the wallet::
 
   yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN
 
-
-Fee source address
-~~~~~~~~~~~~~~~~~~
-
-You can also optionally generate and fund another address as the **transaction
-fee source** (``feeSourceAddress``). If you selected an external payout address,
-you must specify a fee source address. 
-
-Either the payout address or fee source address must have enough balance to pay
-the transaction fee, or the ``register_prepare_hpmn`` transaction will fail.
-
-
-Key access
-~~~~~~~~~~
-
-The private keys to the owner and fee source addresses must exist in the wallet
-submitting the transaction to the network. If your wallet is protected by a
-password, it must now be unlocked to perform the following commands. Unlock your
-wallet for 5 minutes::
-
-  walletpassphrase yourSecretPassword 300
-
-
-.. _hmpn-prepare-proregtx:
-
-Prepare a ProRegTx transaction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-We will now prepare an unsigned ProRegTx special transaction using the ``protx
-register_prepare_hpmn`` command. This command has the following syntax::
-
-  protx register_prepare_hpmn collateralHash collateralIndex ipAndPort ownerKeyAddr 
-    operatorPubKey votingKeyAddr operatorReward payoutAddress (feeSourceAddress)
-
-Open a text editor such as notepad to prepare this command. Replace each
-argument to the command as follows:
-
-- ``collateralHash``: The txid of the 4000 Dash collateral funding transaction
-- ``collateralIndex``: The output index of the 4000 Dash funding transaction
-- ``ipAndPort``: Masternode IP address and port, in the format ``x.x.x.x:yyyy``
-- ``ownerKeyAddr``: The new Dash address generated above for the owner/voting
-  address
-- ``operatorPubKey``: The BLS public key :hoverxref:`generated above
-  <evonode-bls-generation>` (or provided by your hosting service)
-- ``votingKeyAddr``: The new Dash address generated above, or the address of a
-  delegate, used for proposal voting
-- ``operatorReward``: The percentage of the block reward allocated to the
-  operator as payment
-- ``payoutAddress``: A new or existing Dash address to receive the owner's
-  masternode rewards
-- ``platformNodeID``: Platform P2P node ID :hoverxref:`generated above
-  <evonode-generate-platform-node-id>`
-- ``platformP2PPort``: TCP port of Dash Platform peer-to-peer communication
-  between nodes. Must be 26656 for mainnet.
-- ``platformHTTPPort``: TCP port of Platform HTTP/API interface. Must be 443 for
-  mainnet.
-- ``feeSourceAddress``: An (optional) address used to fund ProTx fee.
-  ``payoutAddress`` will be used if not specified.
-
-Note that the operator is responsible for :ref:`specifying their own reward
-<dip3-update-service>` address in a separate ``update_service`` transaction if
-you specify a non-zero ``operatorReward``. The owner of the masternode
-collateral does not specify the operator's payout address.
-
-Example (remove line breaks if copying)::
-
-  protx register_prepare_hpmn 
-    16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3 
-    1 
-    45.76.230.239:19999 
-    yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip 
-    99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e 
-    yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg 
-    0 
-    yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN
-    1e8e241c05ca350c8fe0b8ba4680e7652673dae2
-    26656
-    443
-    yR83WsikBaBaNusTnHZf28kAcL8oVmp1TE
-
-Output::
-
-  {
-    "tx": "030001000175c9d23c2710798ef0788e6a4d609460586a20e91a15f2097f56fc6e007c4f8e0000000000feffffff01a1949800000000001976a91434b09363474b14d02739a327fe76e6ea12deecad88ac00000000d1010000000000e379580dcfea3eb6944bfbe1de5fa2317932e260acce4d9ff3ede5f4287a34160100000000000000000000000000ffff2d4ce6ef4e1fd47babdb9092489c82426623299dde76b9c72d9799f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670ed1935246865dce1accce6c8691c8466bd67ebf1200001976a914fef33f56f709ba6b08d073932f925afedaa3700488acfdb281e134504145b5f8c7bd7b47fd241f3b7ea1f97ebf382249f601a0187f5300",
-    "collateralAddress": "yjSPYvgUiAQ9AFj5tKFA8thFLoLBUxQERb",
-    "signMessage": "yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN|0|yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip|yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg|ad5f82257bd00a5a1cb5da1a44a6eb8899cf096d3748d68b8ea6d6b10046a28e"
-  }
-
-Next we will use the ``collateralAddress`` and ``signMessage`` fields to sign
-the transaction, and the output of the ``tx`` field to submit the transaction.
-
-Sign the ProRegTx transaction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-We will now sign the content of the ``signMessage`` field using the private key
-for the collateral address as specified in ``collateralAddress``. Note that no
-internet connection is required for this step, meaning that the wallet can
-remain disconnected from the internet in cold storage to sign the message. In
-this example we will again use Dash Core, but it is equally possible to use the
-signing function of a hardware wallet. The command takes the following syntax::
-
-  signmessage collateralAddress signMessage
-
-Example::
-
-  signmessage yjSPYvgUiAQ9AFj5tKFA8thFLoLBUxQERb yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN|0|yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip|yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg|ad5f82257bd00a5a1cb5da1a44a6eb8899cf096d3748d68b8ea6d6b10046a28e
-
-Output::
-
-  II8JvEBMj6I3Ws8wqxh0bXVds6Ny+7h5HAQhqmd5r/0lWBCpsxMJHJT3KBcZ23oUZtsa6gjgISf+a8GzJg1BfEg=
-
-
-Submit the signed message
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-We will now submit the ProRegTx special transaction to the blockchain to
-register the masternode. This command must be sent from a Dash Core wallet
-holding a balance on either the ``feeSourceAddress`` or ``payoutAddress``, since
-a standard transaction fee is involved. The command takes the following syntax::
-
-  protx register_submit tx sig
-
-Where: 
-
-- ``tx``: The serialized transaction previously returned in the ``tx`` output
-  field from the ``protx register_prepare_hpmn`` command
-- ``sig``: The message signed with the collateral key from the ``signmessage``
-  command
-
-Example::
-
-  protx register_submit 030001000175c9d23c2710798ef0788e6a4d609460586a20e91a15f2097f56fc6e007c4f8e0000000000feffffff01a1949800000000001976a91434b09363474b14d02739a327fe76e6ea12deecad88ac00000000d1010000000000e379580dcfea3eb6944bfbe1de5fa2317932e260acce4d9ff3ede5f4287a34160100000000000000000000000000ffff2d4ce6ef4e1fd47babdb9092489c82426623299dde76b9c72d9799f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670ed1935246865dce1accce6c8691c8466bd67ebf1200001976a914fef33f56f709ba6b08d073932f925afedaa3700488acfdb281e134504145b5f8c7bd7b47fd241f3b7ea1f97ebf382249f601a0187f5300 II8JvEBMj6I3Ws8wqxh0bXVds6Ny+7h5HAQhqmd5r/0lWBCpsxMJHJT3KBcZ23oUZtsa6gjgISf+a8GzJg1BfEg=
-
-Output::
-
-  aba8c22f8992d78fd4ff0c94cb19a5c30e62e7587ee43d5285296a4e6e5af062
-
-Your masternode is now registered and will appear on the Deterministic
-Masternode List after the transaction is mined to a block. You can view this
-list on the **Masternodes** tab of the Dash Core wallet, or
-in the console using the command ``protx list valid``, where the txid of the
-final ``protx register_submit`` transaction identifies your masternode.
-
-At this point you can go back to your terminal window and monitor your
-masternode by entering ``~/.dashcore/dash-cli masternode status`` or
-using the **Refresh status** function in DMT. 
-
-At this point you can safely log out of your server by typing ``exit``.
-Congratulations! Your masternode is now running.
