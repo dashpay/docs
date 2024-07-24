@@ -392,6 +392,11 @@ Glossary
     be considered irreversible after a few seconds, but must still be
     written to the blockchain (and thus "confirmed").
 
+  Credit pool
+    A store of value on the Core chain that is funded by asset lock transactions. The credit pool
+    mirrors the credit balance on Dash Platform. New special transactions enable locking Dash in the
+    credit pool for use on Platform and unlocking it to withdraw back to Dash on the Core chain. 
+
   CPU
     A `central processing unit (CPU) 
     <https://en.wikipedia.org/wiki/Central_processing_unit>`_ is the 
