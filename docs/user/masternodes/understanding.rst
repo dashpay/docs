@@ -100,8 +100,9 @@ Platform. Evonodes are similar to regular masternodes, but have these difference
 | Voting Weight  | 1 (collateral amount / 1000)      | 4 (collateral amount / 1000)   |
 +----------------+-----------------------------------+--------------------------------+
 
-Evonodes also have :hoverxref:`higher hardware requirements <mn-hardware-reqs-table>`
-than regular masternodes due to the additional Dash Platform services they host. 
+Evonodes also have :hoverxref:`higher hardware requirements <mn-hardware-reqs-table>` than regular
+masternodes due to the additional Dash Platform services they host. See `DIP28
+<https://github.com/dashpay/dips/blob/master/dip-0028.md>`_ for more information about evonodes.
 
 .. _mn-concepts:
 
