@@ -100,8 +100,9 @@ Platform. Evonodes are similar to regular masternodes, but have these difference
 | Voting Weight  | 1 (collateral amount / 1000)      | 4 (collateral amount / 1000)   |
 +----------------+-----------------------------------+--------------------------------+
 
-Evonodes also have :hoverxref:`higher hardware requirements <mn-hardware-reqs-table>`
-than regular masternodes due to the additional Dash Platform services they host. 
+Evonodes also have :hoverxref:`higher hardware requirements <mn-hardware-reqs-table>` than regular
+masternodes due to the additional Dash Platform services they host. See `DIP28
+<https://github.com/dashpay/dips/blob/master/dip-0028.md>`_ for more information about evonodes.
 
 .. _mn-concepts:
 
@@ -217,6 +218,21 @@ rewards.
 Payment logic
 =============
 
+Masternodes payments all originate on the Core chain. The Core chain pays out 62.5% of the
+masternode portion of Core block rewards. The remaining 37.5% is put into the :term:`credit pool`
+and used for evonode rewards on Platform. Masternodes and evonodes also receive a portion of
+transaction fees on the Core chain, while evonodes receive all fees from Platform.
+
+Because the reward distribution percentages are fixed, the number of evonodes is 
+expected to stabilize around a fixed number based on the total number of 
+masternodes (considering the current number of ~3850 Masternodes, ~450 evonodes 
+are expected). This is because if there are more than that fixed number of evonodes, 
+running a regular MN will be more profitable than running an evonode, and hosts 
+will convert their evonodes into MNs. 
+
+Core block rewards 
+------------------
+
 Since Dash version 0.13.0, masternode payments are entirely deterministic
 and based on a simple list sort algorithm. Dash version 0.13.0 implemented `DIP003
 <https://github.com/dashpay/dips/blob/master/dip-0003.md>`_ which defines
@@ -236,19 +252,16 @@ list is sorted in ascending order by this block height and ProRegTx hash
 (as a tie breaker in case two masternodes were registered in the same
 block), and the first entry is selected for payment.
 
-Evonode Payment Logic
----------------------
+The Core block reward rules apply uniformly to regular masternodes and evonodes. Each are paid once
+per payment cycle and receive the same block subsidy amount.
 
-Because the reward distribution percentages are fixed, the number of evonodes is 
-expected to stabilize around a fixed number based on the total number of 
-masternodes (considering the current number of ~3850 Masternodes, ~450 evonodes 
-are expected). This is because if there are more than that fixed number of evonodes, 
-running a regular MN will be more profitable than running an evonode, and hosts 
-will convert their evonodes into MNs. 
+Platform rewards
+----------------
 
-Evonodes will receive 100% of the fees generated from Platform and 37.5% of 
-the masternode portion of Core block rewards. Regular MNs will receive the remaining 
-62.5% of the masternode portion of Core block rewards and 0% of Platform fees.
+Evonode rewards are based on participation in Platform consensus. Specifically, evonodes are paid
+for the blocks they propose while in the active validator set. At the end of each Platform epoch
+(~10 days), block rewards are paid to the masternode identities associated with the participating
+evonodes.
 
 .. _proof-of-service:
 
