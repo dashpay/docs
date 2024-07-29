@@ -50,15 +50,15 @@ recommended for mainnet masternodes.
 Debian package
 ^^^^^^^^^^^^^^
 
-Download the dashmate installation package for your architecture from the `GitHub releases
+Download the newest dashmate installation package for your architecture from the `GitHub releases
 page <https://github.com/dashpay/platform/releases/latest>`__::
 
-   wget https://github.com/dashpay/platform/releases/download/v0.25.22/dashmate_0.25.22.b143aee50-1_amd64.deb
+   wget https://github.com/dashpay/platform/releases/download/v1.0.1/dashmate_1.0.1.9ff08df99-1_amd64.deb
 
 Install dashmate using apt::
 
    sudo apt update
-   sudo apt install ./dashmate_0.25.22.b143aee50-1_amd64.deb
+   sudo apt install ./dashmate_1.0.1.9ff08df99-1_amd64.deb
 
 Node package
 ^^^^^^^^^^^^
