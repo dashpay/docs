@@ -354,6 +354,11 @@ masternode as follows::
   dashmate update
   dashmate start
 
+.. note:: To update to a new version of dashmate or to a new major version of
+   Core or Platform, it is necessary to download and install the newer version
+   of dashmate. Refer to the :ref:`dashmate install section <dashmate-install>` for
+   details.
+
 Additional Information
 ======================
 
