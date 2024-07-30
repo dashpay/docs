@@ -55,7 +55,7 @@ following screen:
 
    Vultr server location selection screen
 
-Select Ubuntu 20.04 x64 as the server type. We use this LTS release of Ubuntu
+Select Ubuntu 24.04 x64 as the server type. We use this LTS release of Ubuntu
 instead of the latest version because LTS releases are supported with security
 updates for 5 years, instead of the usual 9 months.
 
@@ -64,7 +64,7 @@ updates for 5 years, instead of the usual 9 months.
 
    Vultr server type selection screen
 
-Select a server size offering at least 2GB of memory.
+Select a server size according to the :hoverxref:`hardware requirements <mn-hardware-reqs-table>`:
 
 .. figure:: img/setup-server-size.png
    :width: 400px
@@ -177,7 +177,7 @@ Configure the firewall
 
 We will now install a firewall (and some other packages we will use later)::
 
-  apt install ufw python virtualenv git unzip pv
+  apt install ufw python3 virtualenv git unzip pv
 
 (press **Y** and **Enter** to confirm)
 
