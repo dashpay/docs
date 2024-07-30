@@ -64,7 +64,7 @@ updates for 5 years, instead of the usual 9 months.
 
    Vultr server type selection screen
 
-Select a server size offering at least 2GB (8GB for Evonode) of memory.
+Select a server size according to the :hoverxref:`hardware requirements <mn-hardware-reqs-table>`:
 
 .. figure:: img/setup-server-size.png
    :width: 400px
