@@ -347,17 +347,16 @@ status`` commands as follows::
 Node update
 -----------
 
-You can use ``dashmate`` to update minor versions of the software on your
-masternode as follows::
+It is necessary to download and install the newer version of dashmate.
+Refer to the :ref:`dashmate install section <dashmate-install>` for details.
+The following commands need to be executed::
 
   dashmate stop
+  
+  # download and install new version of dashmate
+  
   dashmate update
   dashmate start
-
-.. note:: To update to a new version of dashmate or to a new major version of
-   Core or Platform, it is necessary to download and install the newer version
-   of dashmate. Refer to the :ref:`dashmate install section <dashmate-install>` for
-   details.
 
 Additional Information
 ======================
