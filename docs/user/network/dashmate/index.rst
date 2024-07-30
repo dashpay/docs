@@ -349,11 +349,12 @@ Node update
 
 It is necessary to download and install the newer version of dashmate.
 Refer to the :ref:`dashmate install section <dashmate-install>` for details.
+The following commands need to be executed::
 
   dashmate stop
-
-  # install new version of dashmate
-
+  
+  # download and install new version of dashmate
+  
   dashmate update
   dashmate start
 
