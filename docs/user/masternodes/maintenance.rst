@@ -100,8 +100,8 @@ payout addresses will not reset your position in the payment queue.
 
 .. _dip3-update-service:
 
-ProUpServTx
------------
+ProUpServTx for regular masternode
+----------------------------------
 
 A Provider Update Service Transaction (ProUpServTx) is used to update
 information relating to the operator. An operator can update the IP
@@ -132,6 +132,45 @@ Where:
 Example::
 
   protx update_service d6ec9a03e1251ac8c34178f47b6d763dc4ea6d96fd6eddb3c7aae2359e0f474a 140.82.59.51:10002 4308daa8de099d3d5f81694f6b618381e04311b9e0345b4f8b025392c33b0696 yf6Cj6VcCfDxU5yweAT3NKKvm278rVbkhu
+
+  fad61c5f21cf3c0832f782c1444d3d2e2a8dbff39c5925c38033730e64ecc598
+
+The masternode is now removed from the PoSe-banned list, and the IP:port
+and operator reward addresses are updated.
+
+ProUpServTx for Evonode
+-----------------------
+
+A Provider Update Service Transaction (ProUpServTx) is used to update
+information relating to the operator. An operator can update the IP
+address and port fields of a Evomasternode entry. If a non-zero
+``operatorReward`` was set in the initial ProRegTx, the operator may
+also set the ``operatorPayoutAddress`` field in the ProUpServTx. If
+``operatorPayoutAddress`` is not set and ``operatorReward`` is non-zero,
+the owner gets the full masternode reward. It also contains `platformNodeId`.
+A ProUpServTx can be created from DMT by clicking the **Update service** button, or from Dash Core
+using the following syntax::
+
+  protx update_service_evo proTxHash ipAndPort operatorKey platformNodeId (operatorPayoutAddress feeSourceAddress)
+
+Where:
+
+- ``proTxHash``: The transaction id of the initial ProRegTx
+- ``ipAndPort``: IP and port in the form "ip:port"
+- ``operatorKey``: The operator BLS private key associated with the
+  registered operator public key
+- ``platformNodeId``: The Platform node ID derived from Platform P2P public key.
+- ``operatorPayoutAddress`` (optional): The address used for operator 
+  reward payments. Only allowed when the ProRegTx had a non-zero 
+  ``operatorReward`` value. Enter ``""`` to use the
+  last on-chain operator payout address, or as a placeholder when 
+  specifying a ``feeSourceAddress``.
+- ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
+  ``operatorPayoutAddress`` will be used if not specified.
+
+Example::
+
+  protx update_service_evo d6ec9a03e1251ac8c34178f47b6d763dc4ea6d96fd6eddb3c7aae2359e0f474a 140.82.59.51:10002 4308daa8de099d3d5f81694f6b618381e04311b9e0345b4f8b025392c33b0696 972a33056d57359de8acfa4fb8b29dc1c14f76b8 yf6Cj6VcCfDxU5yweAT3NKKvm278rVbkhu
 
   fad61c5f21cf3c0832f782c1444d3d2e2a8dbff39c5925c38033730e64ecc598
 
