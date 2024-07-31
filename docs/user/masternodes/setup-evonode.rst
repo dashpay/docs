@@ -243,9 +243,9 @@ dashmate dependencies::
 Download the dashmate installation package for your CPU architecture from the `GitHub releases page
 <https://github.com/dashpay/platform/releases/latest>`__ and install it using apt::
 
-   wget https://github.com/dashpay/platform/releases/download/v1.0.1/dashmate_1.0.1.9ff08df99-1_amd64.deb
+   wget https://github.com/dashpay/platform/releases/download/v1.0.2/dashmate_1.0.2.030eb0595-1_amd64.deb
    sudo apt update
-   sudo apt install ./dashmate_1.0.1.9ff08df99-1_amd64.deb
+   sudo apt install ./dashmate_1.0.2.030eb0595-1_amd64.deb
 
 Alternative installation options are available on the :hoverxref:`dashmate page
 <dashmate-install>`.
