@@ -354,7 +354,8 @@ The following commands need to be executed::
   dashmate stop
   
   # download and install new version of dashmate
-  
+
+  dashmate reset --keep-data
   dashmate update
   dashmate start
 
