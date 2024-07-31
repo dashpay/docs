@@ -147,11 +147,11 @@ address and port fields of a Evomasternode entry. If a non-zero
 ``operatorReward`` was set in the initial ProRegTx, the operator may
 also set the ``operatorPayoutAddress`` field in the ProUpServTx. If
 ``operatorPayoutAddress`` is not set and ``operatorReward`` is non-zero,
-the owner gets the full masternode reward. It also contains `platformNodeId`.
+the owner gets the full masternode reward. It also contains platform related settings.
 A ProUpServTx can be created from DMT by clicking the **Update service** button, or from Dash Core
 using the following syntax::
 
-  protx update_service_evo proTxHash ipAndPort operatorKey platformNodeId (operatorPayoutAddress feeSourceAddress)
+  protx update_service_evo proTxHash ipAndPort operatorKey platformNodeId platformP2PPort platformHTTPPort (operatorPayoutAddress feeSourceAddress)
 
 Where:
 
@@ -160,6 +160,8 @@ Where:
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
 - ``platformNodeId``: The Platform node ID derived from Platform P2P public key.
+- ``platformP2PPort``: TCP port for Platform peer-to-peer communication between nodes.
+- ``platformHTTPPort``: TCP port of Platform HTTP API interface.
 - ``operatorPayoutAddress`` (optional): The address used for operator 
   reward payments. Only allowed when the ProRegTx had a non-zero 
   ``operatorReward`` value. Enter ``""`` to use the
