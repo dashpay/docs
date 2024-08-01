@@ -204,6 +204,7 @@ masternode will support:
       ufw allow 443/tcp
       ufw allow 9999/tcp
       ufw allow 26656/tcp
+      # ufw allow 80/tcp in case if you are going to use ZeroSSL
       ufw logging on
       ufw enable
 
