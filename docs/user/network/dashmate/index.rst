@@ -347,16 +347,22 @@ status`` commands as follows::
 Node update
 -----------
 
-It is necessary to download and install the newer version of dashmate.
-Refer to the :ref:`dashmate install section <dashmate-install>` for details.
-The following commands need to be executed::
+To update dashmate, it is necessary to download and install the new version of dashmate. First, stop
+dashmate if it is running::
 
   dashmate stop
-  
-  # download and install new version of dashmate
+
+Next, install the new version of dashmate following the instructions in the :ref:`dashmate install
+section <dashmate-install>`.
+
+Once the new version is installed, reset the configuration and services using ``--keep-data`` so the
+existing data is retained. Then, update the dashmate services::
 
   dashmate reset --keep-data
   dashmate update
+
+Finally, restart dashmate::
+   
   dashmate start
 
 Additional Information

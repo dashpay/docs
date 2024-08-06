@@ -38,8 +38,8 @@ While running a masternode from home on a desktop computer is technically
 possible, it will most likely not work reliably because most ISPs allocate
 dynamic IP addresses to home users.
 
-Before beginning, take a few minutes to review the masternode
-:hoverxref:`hardware requirements <mn-hardware-reqs-table>` which may help you decide
+Before beginning, take a few minutes to review the masternode and evonode
+:hoverxref:`hardware requirements <mn-hardware-reqs>` which may help you decide
 which VPS provider best suits your needs. We will use `Vultr
 <https://www.vultr.com/>`_ hosting as an example of a VPS, although
 `DigitalOcean <https://www.digitalocean.com/>`_, `Amazon EC2
@@ -64,7 +64,8 @@ updates for 5 years, instead of the usual 9 months.
 
    Vultr server type selection screen
 
-Select a server size according to the :hoverxref:`hardware requirements <mn-hardware-reqs-table>`:
+Select a server size according to the hardware requirements for you :hoverxref:`masternode
+<mn-hardware-reqs-table>` or :hoverxref:`evonode <evonode-hardware-reqs-table>`:
 
 .. figure:: img/setup-server-size.png
    :width: 400px
@@ -204,7 +205,8 @@ masternode will support:
       ufw allow 443/tcp
       ufw allow 9999/tcp
       ufw allow 26656/tcp
-      # ufw allow 80/tcp in case if you are going to use ZeroSSL
+      # Uncomment the following line if using ZeroSSL
+      # ufw allow 80/tcp
       ufw logging on
       ufw enable
 
