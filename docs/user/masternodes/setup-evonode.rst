@@ -625,10 +625,10 @@ Install the new dashmate version
 
 .. _evonode-setup-ssl:
 
-Setup SSL certificate
-^^^^^^^^^^^^^^^^^^^^^
+Set up SSL certificate
+^^^^^^^^^^^^^^^^^^^^^^
 
-There are two ways to setup SSL certificates:
+There are two ways to set up SSL certificates:
 
 1. Register for the ZeroSSL service and set your API key. Since ZeroSSL provides an API, dashmate
    can update your certificates automatically. The free plan only provides 3 free certificates (or 3
@@ -636,6 +636,9 @@ There are two ways to setup SSL certificates:
 2. Obtain SSL certificates for your IP address using any available provider and upload certificate
    files. `SSL Dragon <https://www.ssldragon.com/>`_ and `SuperbitHost
    <https://www.superbithost.com/ssl-certificates/>`_ are two options that accept cryptocurrency.
+
+Choose which option works best for you and follow the relevant steps below to configure dashmate
+with your certificate.
 
 .. _evonode-setup-ssl-zerossl:
 
@@ -783,7 +786,7 @@ Set up an evonode
    4. Select ``No`` when asked about importing existing data (the data is already present from the "Sync
       a full node" steps above)
    5. Import your existing masternode's keys
-   6. Obtain an SSL certificate. See the :ref:`Setup SSL certificate <evonode-setup-ssl>` section for
+   6. Obtain an SSL certificate. See the :ref:`Set up SSL certificate <evonode-setup-ssl>` section for
       details.
 
 Shutdown existing masternode
@@ -827,7 +830,7 @@ Set up a dashmate node
    4. Select ``Yes`` when asked about importing existing data (the data is already present from the "Sync
       a full node" steps above)
    5. Import your existing masternode's keys
-   6. Obtain an SSL certificate. See the :ref:`Setup SSL certificate <evonode-setup-ssl>` section for
+   6. Obtain an SSL certificate. See the :ref:`Set up SSL certificate <evonode-setup-ssl>` section for
       details.
 
 Stop existing dashd
