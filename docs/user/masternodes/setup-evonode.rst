@@ -629,5 +629,5 @@ There are two ways to get SSL certificates:
 
    dashmate-upgrade-v0_25
    dashmate-upgrade-v1
-   dashmate-new
-   dashmate-existing
+   dashmate-new-host
+   dashmate-existing-host
