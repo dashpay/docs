@@ -237,17 +237,14 @@ address to the latest version of Dash Core by right clicking or pressing
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
-team. All releases of Dash are signed using GPG with one of the
-following keys:
+team. All releases of Dash since 0.16.0 are signed using GPG with the
+following key:
 
-- Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``,
-  `verifiable here on Keybase <https://keybase.io/codablock>`__
-- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here
-  on Keybase <https://keybase.io/pasta>`__
+- Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable on Keybase
+  <https://keybase.io/pasta>`__ (`download <https://keybase.io/pasta/pgp_keys.asc>`__)
 
 ::
 
-  curl https://keybase.io/codablock/pgp_keys.asc | gpg --import
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
   wget https://github.com/dashpay/dash/releases/download/v21.0.2/dashcore-21.0.2-x86_64-linux-gnu.tar.gz.asc
   gpg --verify dashcore-21.0.2-x86_64-linux-gnu.tar.gz.asc
