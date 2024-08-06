@@ -598,6 +598,32 @@ Prerequisites
 - `ZeroSSL API access key <https://app.zerossl.com/developer>`_ or SSL certificate for the public
   IPv4 address (not DNS name)
 
+.. _evonode-ssl-cert:
+
+SSL certificates
+----------------
+
+There are two ways to get SSL certificates:
+
+1. Register for the ZeroSSL service and set your API key. Since ZeroSSL provides an API, dashmate
+   can update your certificates automatically. The free plan only provides 3 free certificates (or 3
+   renewals of 1 certificate). Other plans require paying with a credit card. You can get an API key
+   for dashmate by completing the following steps:
+
+   - Register on `https://zerossl.com/ <https://zerossl.com/>`_. *We recommend not using your
+     personal email address.*
+   - Log in and click ``Developer`` on the left sidebar.
+   - Copy your ZeroSSL API key to provide to dashmate later. *Do not create a "New certificate".*
+
+   .. figure:: img/zerossl-developer-tab.png
+     :width: 75%
+
+     ZeroSSL Developer tab showing the API key
+
+2. Obtain SSL certificates for your IP address using any available provider and upload the
+   certificate files to your server. `SSL Dragon <https://www.ssldragon.com/>`_ and `SuperbitHost
+   <https://www.superbithost.com/ssl-certificates/>`_ are two options that accept cryptocurrency.
+
 .. toctree::
    :maxdepth: 1
 

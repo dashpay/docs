@@ -57,7 +57,7 @@ Set up an evonode
    4. Select ``No`` when asked about importing existing data (the data is already present from the "Sync
       a full node" steps above)
    5. Import your existing masternode's keys
-   6. Obtain an SSL certificate. See the :ref:`Set up SSL certificate <evonode-setup-ssl>` section for
+   6. Obtain an SSL certificate. See the :ref:`SSL certificates <evonode-ssl-cert>` section for
       details.
 
 Shutdown existing masternode
