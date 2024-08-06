@@ -10,7 +10,7 @@ Integration Overview
 
 This documentation is also available as a `PDF <https://github.com/dashpay/docs/raw/master/binary/integration/Dash_IntegrationOverview.pdf>`__.
 
-`Dash Core <https://github.com/dashpay/dash/releases>`__ is a fork of `Bitcoin
+`Dash Core <https://github.com/dashpay/dash/releases/latest>`__ is a fork of `Bitcoin
 Core <https://github.com/bitcoin/bitcoin>`__ and shares many common
 functionalities. Key differences are found in existing JSON-RPC commands which
 have been customized to support unique functionalities such as InstantSend.
