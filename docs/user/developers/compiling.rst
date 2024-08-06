@@ -10,7 +10,7 @@ Compiling Dash Core
 
 While Dash offers stable binary builds on the `website
 <https://www.dash.org/downloads/>`_ and on `GitHub
-<https://github.com/dashpay/dash/releases>`__, and development builds using
+<https://github.com/dashpay/dash/releases/latest>`__, and development builds using
 `GitLab CI <https://gitlab.com/dashpay/dash/pipelines>`_,  many users will also
 be interested in building Dash binaries for themselves. Users who do not
 required deterministic builds can typically follow the `generic build notes
