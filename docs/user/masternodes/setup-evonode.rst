@@ -560,13 +560,14 @@ Upgrade Core-only evonode
 There are three options to proceed with upgrading an existing Core-only evonode to support Platform.
 Please choose one which is suitable for you:
 
-1. :ref:`Upgrade an existing dashmate node <evonode-upgrade-from-dashmate>`. If you already have a
-   dashmate-based evonode that meets the :ref:`minimum system requirements
-   <evonode-hardware-reqs-table>`, you just need to update dashmate and obtain SSL certificates.
-2. **Set up a dashmate node on a new host**. If you are running an evonode with dashd on a host that
-   does not meet the :ref:`minimum system requirements <evonode-hardware-reqs-table>`, we recommend
-   setting up a new server and migrating your evonode to it. Consider the following details when
-   evaluating this option:
+1. Upgrade an existing dashmate node. If you already have a dashmate-based evonode that meets the
+   :ref:`minimum system requirements <evonode-hardware-reqs-table>`, you just need to update
+   dashmate and obtain SSL certificates. You can upgrade from :ref:`dashmate v0.25
+   <evonode-upgrade-from-dashmate>` or :ref:`dashmate v1.0 <evonode-upgrade-from-dashmate-v1>`.
+2. :ref:`Set up a dashmate node on a new host <evonode-upgrade-new-host>`. If you are running an
+   evonode with dashd on a host that does not meet the :ref:`minimum system requirements
+   <evonode-hardware-reqs-table>`, we recommend setting up a new server and migrating your evonode
+   to it. Consider the following details when evaluating this option:
 
    - You will need to set up a new server and keep the existing and new servers running while Core
      is syncing on the new server.
@@ -621,6 +622,8 @@ Install the new dashmate version
    
      dashmate reset --keep-data
 
+.. _evonode-setup-ssl:
+
 Setup SSL certificate
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -632,6 +635,8 @@ There are two ways to setup SSL certificates:
 2. Obtain SSL certificates for your IP address using any available provider and upload certificate
    files. `SSL Dragon <https://www.ssldragon.com/>`_ and `SuperbitHost
    <https://www.superbithost.com/ssl-certificates/>`_ are two options that accept cryptocurrency.
+
+.. _evonode-setup-ssl-zerossl:
 
 ZeroSSL
 ~~~~~~~
@@ -652,6 +657,8 @@ ZeroSSL
     dashmate config set platform.gateway.ssl.provider zerossl
     dashmate config set platform.gateway.ssl.providerConfigs.zerossl.apiKey [YOUR-KEY]
     dashmate ssl obtain
+
+.. _evonode-setup-ssl-files:
 
 Files
 ~~~~~
@@ -676,6 +683,8 @@ Start dashmate node
     dashmate status
     dashmate status core
     dashmate status platform
+
+.. _evonode-upgrade-from-dashmate-v1:
 
 Upgrade existing dashmate v1 node
 ---------------------------------
@@ -704,6 +713,84 @@ Install the new dashmate version
 4. Update services::
    
      dashmate update
+
+Start dashmate node
+^^^^^^^^^^^^^^^^^^^
+
+1. Start the node::
+
+    dashmate start
+
+2. Make sure the node works properly by running the following status commands::
+
+    dashmate status
+    dashmate status core
+    dashmate status platform
+
+.. _evonode-upgrade-new-host:
+
+Set up dashmate node on a new host
+----------------------------------
+
+Setup a new node
+^^^^^^^^^^^^^^^^
+
+1. :ref:`Set up a new server <server-config>`
+2. Download and install the `latest dashmate version
+   <https://github.com/dashpay/platform/releases/latest>`__. For more details, refer to the
+   :ref:`install instructions <evonode-setup-install-dashmate>`.
+
+Sync a full node
+^^^^^^^^^^^^^^^^
+
+To minimize downtime, sync the Core blockchain without interrupting the existing node. The easiest
+way to do this is by syncing a full node and then converting it to an evonode.
+
+1. Set up a dashmate full node to sync Core first::
+     
+     dashmate setup
+
+2. Select the network type and then ``fullnode`` for the node type
+3. Enable the indexes required by Platform and then start dashmate to sync::
+     
+     dashmate config set core.indexes '["tx"]'
+     dashmate start
+
+4. Make sure Core is syncing::
+     
+     dashmate status core
+
+Set up an evonode
+^^^^^^^^^^^^^^^^^
+
+1. Once Core has finished syncing, reset the configuration and services. Use ``--keep-data`` so the
+   synced data is retained::
+     
+     dashmate stop
+     dashmate reset --keep-data --hard
+
+2. Transfer the IP address to the new node. Alternatively, you can use the :ref:`protx
+   update_service_evo command <dip3-update-service-evonode>` to set a new IP address for your
+   dashmate-based evonode.
+3. Set up an evonode::
+     
+     dashmate setup
+
+   1. Select the network type
+   2. Select ``evolution masternode`` when asked for node type
+   3. Select ``Yes`` when asked if your masternode is already registered
+   4. Select ``No`` when asked about importing existing data (the data is already present from the "Sync
+      a full node" steps above)
+   5. Import your existing masternode's keys
+   6. Obtain an SSL certificate. See the :ref:`Setup SSL certificate <evonode-setup-ssl>` section for
+      details.
+
+Shutdown existing masternode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Shut down your existing server or dashd process
+2. If you keep the existing server running, ensure you do not have any startup schedulers configured
+   (systemd, cron, etc.)
 
 Start dashmate node
 ^^^^^^^^^^^^^^^^^^^
