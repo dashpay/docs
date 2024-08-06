@@ -103,18 +103,20 @@ payout addresses will not reset your position in the payment queue.
 ProUpServTx
 -----------
 
-Regular masternodes
-^^^^^^^^^^^^^^^^^^^
-
-A Provider Update Service Transaction (ProUpServTx) is used to update
+The Provider Update Service Transaction (ProUpServTx) is used to update
 information relating to the operator. An operator can update the IP
-address and port fields of a masternode entry. If a non-zero
+address and port fields of a masternode entry. For evonodes, they can
+also update the Platform-related P2P and HTTP ports. If a non-zero
 ``operatorReward`` was set in the initial ProRegTx, the operator may
 also set the ``operatorPayoutAddress`` field in the ProUpServTx. If
 ``operatorPayoutAddress`` is not set and ``operatorReward`` is non-zero,
-the owner gets the full masternode reward. A ProUpServTx can be created
-from DMT by clicking the **Update service** button, or from Dash Core
-using the following syntax::
+the owner gets the full masternode reward.
+
+Regular masternodes
+^^^^^^^^^^^^^^^^^^^
+
+A masternode ProUpServTx can be created from DMT by clicking the **Update service**
+button, or from Dash Core using the following syntax::
 
   protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress feeSourceAddress)
 
@@ -146,16 +148,8 @@ and operator reward addresses are updated.
 Evonodes
 ^^^^^^^^
 
-A Provider Update Service Transaction (ProUpServTx) is used to update
-information relating to the operator. An operator can update the IP
-address and port fields of an evonode entry. They can also update the
-Platform-related P2P and HTTP ports. If a non-zero
-``operatorReward`` was set in the initial ProRegTx, the operator may
-also set the ``operatorPayoutAddress`` field in the ProUpServTx. If
-``operatorPayoutAddress`` is not set and ``operatorReward`` is non-zero,
-the owner gets the full masternode reward. A ProUpServTx can be created
-from DMT by clicking the **Update service** button, or from Dash Core
-using the following syntax::
+An evonode ProUpServTx can be created from DMT by clicking the **Update service**
+button, or from Dash Core using the following syntax::
 
   protx update_service_evo proTxHash ipAndPort operatorKey platformNodeId platformP2PPort platformHTTPPort (operatorPayoutAddress feeSourceAddress)
 
@@ -182,8 +176,8 @@ Example::
 
   fad61c5f21cf3c0832f782c1444d3d2e2a8dbff39c5925c38033730e64ecc598
 
-The masternode is now removed from the PoSe-banned list, and the IP:port
-and operator reward addresses are updated.
+The evonode is now removed from the PoSe-banned list. The IP:port,
+Platform HTTP and P2P port and operator reward addresses are updated.
 
 .. _dip3-update-registrar:
 
