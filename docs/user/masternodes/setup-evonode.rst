@@ -551,3 +551,83 @@ external to the wallet::
 
   yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN
 
+
+.. _upgrade-evonode:
+
+Upgrade Core-only evonode
+=========================
+
+There are three options to proceed with upgrading an existing Core-only evonode to support Platform.
+Please choose one which is suitable for you:
+
+1. Upgrade an existing dashmate node. If you already have a dashmate-based evonode that meets the
+   :ref:`minimum system requirements <evonode-hardware-reqs-table>`, you just need to update
+   dashmate and obtain SSL certificates. You can upgrade from :ref:`dashmate v0.25
+   <evonode-upgrade-from-dashmate-v0_25>` or :ref:`dashmate v1.0 <evonode-upgrade-from-dashmate-v1>`.
+2. :ref:`Set up a dashmate node on a new host <evonode-upgrade-new-host>`. If you are running an
+   evonode with dashd on a host that does not meet the :ref:`minimum system requirements
+   <evonode-hardware-reqs-table>`, we recommend setting up a new server and migrating your evonode
+   to it. Consider the following details when evaluating this option:
+
+   - You will need to set up a new server and keep the existing and new servers running while Core
+     is syncing on the new server.
+   - You must either be able to move your current public IP to the new server or update the IP
+     address using a :ref:`ProUpServTx <dip3-update-service>` update.
+   - Your existing node will continue to operate while you set up the new server, so any problems
+     with the new node will not affect the existing one.
+   - This is a good opportunity to upgrade the OS and software to current versions.
+3. :ref:`Set up a dashmate node on your existing host <evonode-upgrade-existing-host>`. If you
+   prefer to install dashmate on the same server as your existing node, make sure you have enough
+   disk space to store two copies of the Core blockchain at the same time during the migration (for
+   about 10 mins).
+
+Prerequisites
+-------------
+
+- ARM64 or x86-64 Linux host (Ubuntu is recommended) that meets the :ref:`minimum requirements
+  <evonode-hardware-reqs-table>`
+- Public IPv4 address
+- Network configuration (firewall, security groups) allowing public access to the following TCP
+  ports:
+  
+  - 9999/tcp
+  - 443/tcp
+  - 26656/tcp
+  - 80/tcp (if you are going to use ZeroSSL)
+- Backup of any existing Dash Core and dashmate configuration data, including private keys
+- `ZeroSSL API access key <https://app.zerossl.com/developer>`_ or SSL certificate for the public
+  IPv4 address (not DNS name)
+
+.. _evonode-ssl-cert:
+
+SSL certificates
+----------------
+
+There are two ways to get SSL certificates:
+
+1. Register for the ZeroSSL service and set your API key. Since ZeroSSL provides an API, dashmate
+   can update your certificates automatically. The free plan only provides 3 free certificates (or 3
+   renewals of 1 certificate). Other plans require paying with a credit card. You can get an API key
+   for dashmate by completing the following steps:
+
+   - Register on `https://zerossl.com/ <https://zerossl.com/>`_. *We recommend not using your
+     personal email address.*
+   - Log in and click ``Developer`` on the left sidebar.
+   - Copy your ZeroSSL API key to provide to dashmate later. *Do not create a "New certificate".*
+
+   .. figure:: img/zerossl-developer-tab.png
+     :width: 75%
+
+     ZeroSSL Developer tab showing the API key
+
+2. Obtain SSL certificates for your IP address using any available provider and upload the
+   certificate files to your server. `SSL Dragon <https://www.ssldragon.com/>`_ and `SuperbitHost
+   <https://www.superbithost.com/ssl-certificates/>`_ are two options that accept cryptocurrency.
+
+.. toctree::
+   :maxdepth: 1
+
+   dashmate-upgrade-v0_25
+   dashmate-upgrade-v1
+   dashmate-new-host
+   dashmate-existing-host
