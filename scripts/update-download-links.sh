@@ -4,8 +4,10 @@
 # Dash Core version is released
 
 # Define old and new version variables
-OLD_VERSION="21.0.0"
-NEW_VERSION="21.0.2"
+OLD_VERSION="21.0.2"
+NEW_VERSION="21.1.0"
+
+git checkout -b v$NEW_VERSION-links
 
 # Use the variables in the find/sed commands
 find . -iname "*.rst" -exec sed -i "s~/v${OLD_VERSION}/dashcore-${OLD_VERSION}-~/v${NEW_VERSION}/dashcore-${NEW_VERSION}-~g" {} +
