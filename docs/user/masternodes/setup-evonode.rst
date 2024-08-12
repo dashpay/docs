@@ -247,6 +247,10 @@ Download the dashmate installation package for your CPU architecture from the `G
    sudo apt update
    sudo apt install ./dashmate_1.0.2.030eb0595-1_amd64.deb
 
+.. note:: At the end of the installation process, ``apt`` may display an error due to installing a downloaded package. You can ignore this error message:
+   
+   ``N: Download is performed unsandboxed as root as file '/home/ubuntu/dashmate_1.0.2.030eb0595-1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)``
+
 Alternative installation options are available on the :hoverxref:`dashmate page
 <dashmate-install>`.
 
