@@ -11,8 +11,8 @@ A multi-phased fork, colloquially known as a "spork", is a mechanism
 unique to Dash used to safely deploy new features to the network through
 network-level variables to avoid the risk of unintended network forking
 during upgrades. It can also be used to disable certain features if a
-security vulnerability is discovered - see :ref:`here <sporks>` for a
-brief introduction to sporks. 
+security vulnerability is discovered - see the :ref:`features page <sporks>`
+for a brief introduction to sporks. 
 
 Enforcement of spork-controlled code can be activated remotely by
 members of the core development team signing a network message using
