@@ -12,7 +12,13 @@ unique to Dash used to safely deploy new features to the network through
 network-level variables to avoid the risk of unintended network forking
 during upgrades. It can also be used to disable certain features if a
 security vulnerability is discovered - see :ref:`here <sporks>` for a
-brief introduction to sporks. This documentation describes the meaning
+brief introduction to sporks. 
+
+Enforcement of spork-controlled code can be activated remotely by
+members of the core development team signing a network message using
+a relevant private key. Should problems arise, the code can
+be deactivated in the same manner, without the need for a network-wide
+rollback or client update. This documentation describes the meaning
 of each spork currently existing on the network, and how to check their
 respective statuses.
 
@@ -26,6 +32,12 @@ sporks are set to 0 (seconds until activation). This function is often
 used to set a spork enable date so far in the future that it is
 effectively disabled until changed. The following sporks currently exist
 on the network and serve functions as described below:
+
+.. versionchanged:: v21.0.0
+
+  Mainnet spork values were `hardened <https://github.com/dashpay/dash/pull/6140>`__ by immutably
+  setting them. Sporks continue to be valuable for testing on other networks; however, on mainnet,
+  the risks of maintaining them now outweigh the benefits of retaining them.
 
 SPORK_2_INSTANTSEND_ENABLED
   Governs the ability of Dash clients to use InstantSend functionality.
@@ -58,6 +70,9 @@ SPORK_21_QUORUM_ALL_CONNECTED
 SPORK_23_QUORUM_POSE
   Enforces Proof of Service requirements for masternodes to support a minimum
   protocol version and maintain open ports.
+
+SPORK_24_TEST_EHF
+  Supports enhanced hard fork (EHF) testing.
 
 Viewing spork status
 --------------------
