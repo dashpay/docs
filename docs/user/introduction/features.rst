@@ -255,24 +255,10 @@ test data in the live network environment. This process of multi-phased
 forking was originally to be called "soft forking" but the community
 affectionately dubbed it "the spork" and the name stuck.
 
-New features or versions of Dash undergo extensive testing on testnet
-before they are released to the main network. When a new feature or
-version of Dash is released on mainnet, communication is sent out to
-users informing them of the change and the need for them to update their
-clients. Those who update their clients run the new code, but it is not
-activated until a sufficient percentage of network participants (usually
-80%) reach consensus on running it. In the event of errors occurring
-with the new code, the client’s blocks are not rejected by the network
-and unintended forks are avoided. Data about the error can then be
-collected and forwarded to the development team. Once the development
-team is satisfied with the new code’s stability in the mainnet
-environment – and once acceptable network consensus is attained –
-enforcement of the updated code can be activated remotely by multiple
-members of the core development team signing a network message together
-with their respective private keys. Should problems arise, the code can
-be deactivated in the same manner, without the need for a network-wide
-rollback or client update. For technical details on individual sporks,
-see :ref:`here <understanding-sporks>`.
+As of Dash Core v21.0, sporks are only used test networks. Mainnet spork
+values were hardened to protect mainnet by minimizing risks associated with
+potential centralization or its perception. For technical details on individual
+sporks, see the :ref:`understanding sporks page<understanding-sporks>`.
 
 
 .. _x11-hash-algorithm:
