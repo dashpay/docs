@@ -174,7 +174,6 @@ Masternode management
 ---------------------
 
 - https://www.dashninja.pl
-- https://stats.masternode.me
 - https://github.com/Bertrand256/dash-masternode-tool
 - http://178.254.23.111/~pub/Dash/Dash_Info.html
 - https://dash-news.de/dashtv/

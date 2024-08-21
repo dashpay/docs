@@ -537,15 +537,6 @@ DashCentral, operated by forum member rango, offers an advanced service
 to monitor masternodes and vote on budget proposals through an advanced
 web interface.
 
-Masternode.me
--------------
-
-https://stats.masternode.me
-
-Masternode.me, operated by Dash community member moocowmoo, offers
-sequential reports on the price, generation rate, blockchain information
-and some information on masternodes.
-
 Dash Masternode Information
 ---------------------------
 
