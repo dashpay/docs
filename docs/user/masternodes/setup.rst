@@ -219,8 +219,6 @@ options are available for installing a Dash masternode:
 
 - Manual installation (this guide)
 - `xkcd's installation guide <https://www.dash.org/forum/threads/system-wide-masternode-setup-with-systemd-auto-re-start-rfc.39460/>`__
-- `dashman installation <https://docs.dash.org/en/0.15.0/masternodes/setup.html#option-1-automated-installation-using-dashman>`__ (deprecated)
-- `mn-bootstrap installation <https://docs.dash.org/en/mn-bootstrap/masternodes/setup.html#install-mn-bootstrap>`__ (beta version, currently testnet only)
 
 Manual installation
 -----------------------------

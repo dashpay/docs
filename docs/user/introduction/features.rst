@@ -68,7 +68,7 @@ important decisions that affect Dash.
 Masternodes cost money and effort to host so they are paid a percentage
 of the block reward as an incentive. Because only one masternode is paid
 in each block, the frequency of the payment can vary, as well as the
-value of the Dash paid out. This `tool <https://stats.masternode.me/>`_
+value of the Dash paid out. This `tool <https://mnowatch.org/dash-stats/>`_
 shows a live calculation of masternode earnings. These rewards decrease
 by 7% each year, together with the block subsidy. There is also the
 possibility for masternodes to earn money from fees in the future.
@@ -533,9 +533,7 @@ the percentage share every three superblock cycles.
    Please see `this reddit post <https://www.reddit.com/r/dashpay/comments/
    7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`_ for more details, or
    run your own `emission calculations using this tool
-   <https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_. See `this
-   site <https://stats.masternode.me>`_ for live data on current network
-   statistics.
+   <https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_.
 
 .. _decentralized-governance:
 
