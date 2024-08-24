@@ -53,7 +53,7 @@ Debian package
 Download the newest dashmate installation package for your architecture from the `GitHub releases
 page <https://github.com/dashpay/platform/releases/latest>`__::
 
-   wget https://github.com/dashpay/platform/releases/download/v1.0.2/dashmate_1.0.2.030eb0595-1_amd64.deb
+   wget https://github.com/dashpay/platform/releases/download/v1.1.0/dashmate_1.1.0.483a9c5ba-1_amd64.deb
 
 Install dashmate using apt::
 
