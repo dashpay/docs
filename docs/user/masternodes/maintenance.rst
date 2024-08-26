@@ -240,6 +240,11 @@ Example::
 
   protx revoke 9f5ec7540baeefc4b7581d88d236792851f26b4b754684a31ee35d09bdfb7fb6 565950700d7bdc6a9dbc9963920bc756551b02de6e4711eff9ba6d4af59c0101 0
 
+Dashmate troubleshooting
+========================
+
+If you have trouble with a dashmate-based masternode, use the ``dashmate doctor`` command to collect
+debug information for troubleshooting. See the :ref:`dashmate page <dashmate-doctor>` for details.
 
 Proof of Service Bans
 =====================
