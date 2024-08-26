@@ -368,6 +368,39 @@ existing data is retained. Then, update the dashmate services::
 Finally, restart dashmate::
    
   dashmate start
+  
+.. _dashmate-doctor:
+
+Collecting logs
+===============
+
+Dashmate includes the doctor command to make troubleshooting and log reporting easier. The dashmate
+doctor command collects important debugging data about the masternode and creates a compressed report file
+that can be sent to the support team if necessary. This report includes:
+
+- **Operating System**: Details about the architecture, CPU, memory, and swap
+- **Docker**: Status and logs (exit codes, stdout, stderr) for each service
+- **Core RPC**: Essential details like the best ChainLock, quorums, blockchain information, peers, and masternode status
+- **Tenderdash RPC**: Status, genesis, network information, ABCI details, and a consensus state dump
+- **Metrics**: Tenderdash and Drive metrics (if enabled in the configuration)
+
+To create a report, run ``dashmate doctor`` and select **Yes**::
+
+   dashmate doctor
+
+.. figure:: img/dashmate-doctor-details.png
+   :align: center
+   :width: 90%
+
+   Run the doctor command
+
+Upon successful completion, the full path to the report archive is displayed.
+
+.. figure:: img/dashmate-doctor-done.png
+   :align: center
+   :width: 90%
+
+   Doctor output
 
 Additional Information
 ======================
