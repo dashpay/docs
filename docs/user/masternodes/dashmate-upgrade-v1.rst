@@ -25,7 +25,7 @@ Install the new dashmate version
 
 3. Reset previous services to ensure compatibility with the new version::
    
-     dashmate reset
+     dashmate reset --platform
 
 4. Update services::
    
