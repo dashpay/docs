@@ -22,10 +22,9 @@ Install the new dashmate version
    <https://github.com/dashpay/platform/releases/latest>`__. For more details, refer to the
    :ref:`install instructions <evonode-setup-install-dashmate>`.
 
-3. Reset previous services to ensure compatibility with the new version. Use ``--keep-data`` so the
-   existing blockchain is retained::
+3. Reset previous services to ensure compatibility with the new version::
    
-     dashmate reset --keep-data
+     dashmate reset
 
 .. _evonode-setup-ssl:
 
