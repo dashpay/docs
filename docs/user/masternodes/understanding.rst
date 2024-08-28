@@ -269,7 +269,7 @@ following table for the outcomes of this change.
 +-------------------+-----------+-----------+------------+-----------------------+
 | Payment (days)    | 5.73      | 4.82      | -0.91      | More frequent payment |
 +-------------------+-----------+-----------+------------+-----------------------+
-| Payments/yr       | 64        | 76        | 12         | More payments         |
+| Payments / year   | 64        | 76        | 12         | More payments         |
 +-------------------+-----------+-----------+------------+-----------------------+
 
 Payment amount
@@ -294,6 +294,11 @@ the hard fork with the `block immediately after it
 +--------------+------------+------------+-------------+
 | **Total**    | 1.91       | 1.91       | No change   |
 +--------------+------------+------------+-------------+
+
+.. tip::
+  As more masternodes are converted to evonodes, payment frequency will increase
+  and the difference between overall pre-fork and post-fork rewards per year on 
+  the Core chain will decrease.
 
 .. _payment-logic-core:
 
