@@ -239,10 +239,10 @@ Since the masternode reward reallocation hard fork activated in August 2024 at `
 <https://insight.dash.org/insight/block/0000000000000009a9696da93d3807eb14eb00a4ff449206d689156a21b27f26>`_,
 part of the coinbase masternode subsidy is moved into the :term:`credit pool` each time a block is
 mined. Now, evonodes receive a single reward per payment cycle on the Core chain instead of rewards
-from four sequential blocks as in Dash Core v19/v20. 
+from four sequential blocks, as in Dash Core v19/v20. 
 
-Masternode payment frequency and payment amount have both been affected by this fork as described in
-the following sections. Although initially masternodes saw a significant drop in rewards, a
+Masternode payment frequency and payment amount have both been affected by this fork, as described in
+the following sections. Although masternodes initially saw a significant drop in rewards, a
 market-driven point of equilibrium between regular masternodes and evonodes is expected where
 rewards are similar to what they were before the fork.
 
@@ -256,9 +256,9 @@ rewards are similar to what they were before the fork.
 Payment frequency
 ~~~~~~~~~~~~~~~~~
 
-The frequency of Core chain masternode payments has increased as there are fewer payments to be made
-per cycle. Around the time of the hard fork, the network had approximately 2600 enabled masternodes
-and approximately 175 enabled evonodes. This resulted in a reduction from 3330 payments per cycle
+The frequency of Core chain masternode payments has increased as fewer payments are made per cycle.
+Around the time of the hard fork, the network had approximately 2600 enabled masternodes and
+approximately 175 enabled evonodes. This resulted in a reduction from 3330 payments per cycle
 (``2600 + (175 * 4)``) before the fork to only 2775 (``2600 + 175``) after the fork. See the
 following table for the outcomes of this change.
 
@@ -296,7 +296,7 @@ the hard fork with the `block immediately after it
 +--------------+------------+------------+-------------+
 
 .. tip::
-  As more masternodes are converted to evonodes, payment frequency will increase
+  As more masternodes are converted to evonodes, payment frequency will increase,
   and the difference between overall pre-fork and post-fork rewards per year on 
   the Core chain will decrease.
 
