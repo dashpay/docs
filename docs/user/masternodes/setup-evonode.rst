@@ -628,6 +628,18 @@ There are two ways to get SSL certificates:
    certificate files to your server. `SSL Dragon <https://www.ssldragon.com/>`_ and `SuperbitHost
    <https://www.superbithost.com/ssl-certificates/>`_ are two options that accept cryptocurrency.
 
+   Please make sure that a certificate chain file contains your server certificate at the top and
+   intermediate/root certificates if present. Usually, you need to concatenate the certificate file and
+   bundle if present.
+
+   To verify the validity of the private key and certificate chain file you can use these commands::
+
+     openssl rsa -noout -modulus -in private.key | openssl md5
+     openssl x509 -noout -modulus -in bundle.crt | openssl md5
+
+   The output of these two commands should be the same.
+   
+
 .. toctree::
    :maxdepth: 1
 
