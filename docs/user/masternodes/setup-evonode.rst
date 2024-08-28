@@ -632,7 +632,7 @@ There are two ways to get SSL certificates:
    intermediate/root certificates if present. Usually, you need to concatenate the certificate file and
    bundle if present.
 
-   To verify the validity of the private key and certificate chain file you can use these commands::
+   Verify the validity of the private key and certificate chain by running these commands::
 
      openssl rsa -noout -modulus -in private.key | openssl md5
      openssl x509 -noout -modulus -in bundle.crt | openssl md5
