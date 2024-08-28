@@ -230,6 +230,78 @@ are expected). This is because if there are more than that fixed number of evono
 running a regular MN will be more profitable than running an evonode, and hosts 
 will convert their evonodes into MNs. 
 
+.. _payment-logic-mn_rr:
+
+Reward reallocation
+-------------------
+
+Since the masternode reward reallocation hard fork activated in August 2024 at `block 2128896
+<https://insight.dash.org/insight/block/0000000000000009a9696da93d3807eb14eb00a4ff449206d689156a21b27f26>`_,
+part of the coinbase masternode subsidy is moved into the :term:`credit pool` each time a block is
+mined. Now, evonodes receive a single reward per payment cycle on the Core chain instead of rewards
+from four sequential blocks, as in Dash Core v19/v20. 
+
+Masternode payment frequency and payment amount have both been affected by this fork, as described in
+the following sections. Although masternodes initially saw a significant drop in rewards, a
+market-driven point of equilibrium between regular masternodes and evonodes is expected where
+rewards are similar to what they were before the fork.
+
+.. tip::
+  Until the network reaches a point of equilibrium, the number of masternodes and evonodes is expected
+  to fluctuate. As more masternodes are converted to evonodes, payment frequency (and therefore rewards) 
+  on the Core chain will continue to increase. See the `Evonode FAQ <https://www.dash.org/hpmn-faq/>`_, 
+  `DIP28 <https://github.com/dashpay/dips/blob/master/dip-0028.md>`_, and 
+  the `proposal approving evonodes <https://www.dashcentral.org/p/EVO-DECISION-4K-HPMN>`_ for more information.
+
+Payment frequency
+~~~~~~~~~~~~~~~~~
+
+The frequency of Core chain masternode payments has increased as fewer payments are made per cycle.
+Around the time of the hard fork, the network had approximately 2600 enabled masternodes and
+approximately 175 enabled evonodes. This resulted in a reduction from 3330 payments per cycle
+(``2600 + (175 * 4)``) before the fork to only 2775 (``2600 + 175``) after the fork. See the
+following table for the outcomes of this change.
+
++-------------------+-----------+-----------+------------+-----------------------+
+|                   | Pre-fork  | Post-fork | Difference | Outcome               |
++===================+===========+===========+============+=======================+
+| Payment (blocks)  | 3300      | 2775      | -525       | More frequent payment |
++-------------------+-----------+-----------+------------+-----------------------+
+| Payment (days)    | 5.73      | 4.82      | -0.91      | More frequent payment |
++-------------------+-----------+-----------+------------+-----------------------+
+| Payments / year   | 64        | 76        | 12         | More payments         |
++-------------------+-----------+-----------+------------+-----------------------+
+
+Payment amount
+~~~~~~~~~~~~~~
+
+The increased payment frequency is balanced against the reduction per-block payment amount on the
+Core chain. This reduction resulted from the moving of some funds to the credit pool for Dash
+Platform. The table below compares the miner, credit pool, and Core chain masternode payments from a
+`block immediately before
+<https://insight.dash.org/insight/block/000000000000001bd1f5eeb2277b1adc87a616a9f55a9af2dd5ea46b05c05870>`_
+the hard fork with the `block immediately after it
+<https://insight.dash.org/insight/block/0000000000000009a9696da93d3807eb14eb00a4ff449206d689156a21b27f26>`_.
+
++--------------+------------+------------+-------------+
+| Category     | Pre-Fork   | Post-Fork  | Difference  |
++==============+============+============+=============+
+| Miner        | 0.48       | 0.48       | No change   |
++--------------+------------+------------+-------------+
+| Credit pool  | 0          | 0.54       | **+0.54**   |
++--------------+------------+------------+-------------+
+| Masternode   | 1.43       | 0.89       | **-0.54**   |
++--------------+------------+------------+-------------+
+| **Total**    | 1.91       | 1.91       | No change   |
++--------------+------------+------------+-------------+
+
+.. tip::
+  As more masternodes are converted to evonodes, payment frequency will increase,
+  and the difference between overall pre-fork and post-fork rewards per year on 
+  the Core chain will decrease.
+
+.. _payment-logic-core:
+
 Core block rewards 
 ------------------
 
@@ -255,12 +327,14 @@ block), and the first entry is selected for payment.
 The Core block reward rules apply uniformly to regular masternodes and evonodes. Each are paid once
 per payment cycle and receive the same block subsidy amount.
 
+.. _payment-logic-platform:
+
 Platform rewards
 ----------------
 
 Evonode rewards are based on participation in Platform consensus. Specifically, evonodes are paid
 for the blocks they propose while in the active validator set. At the end of each Platform epoch
-(~10 days), block rewards are paid to the masternode identities associated with the participating
+(9.125 days), block rewards are paid to the masternode identities associated with the participating
 evonodes.
 
 .. _proof-of-service:
