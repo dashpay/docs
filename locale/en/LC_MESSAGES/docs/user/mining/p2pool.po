@@ -8,20 +8,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-27 15:21-0500\n"
+"POT-Creation-Date: 2024-08-29 10:39-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/mining/p2pool.rst:1
+#: ../../docs/user/mining/p2pool.rst:-1
 msgid "Guide to setting up a Dash P2Pool node"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:1
+#: ../../docs/user/mining/p2pool.rst:-1
 msgid "dash, mining, X11, p2pool, node, pool, software, ASIC, mining pool"
 msgstr ""
 
@@ -162,37 +162,32 @@ msgstr ""
 msgid ""
 "Verify the authenticity of your download by checking its detached "
 "signature against the public key published by the Dash Core development "
-"team. All releases of Dash are signed using GPG with one of the following"
-" keys:"
+"team. All releases of Dash since 0.16.0 are signed using GPG with the "
+"following key:"
 msgstr ""
 
 #: ../../docs/user/mining/p2pool.rst:122
 msgid ""
-"Alexander Block (codablock) with the key ``63A9 6B40 6102 E091``, "
-"`verifiable here on Keybase <https://keybase.io/codablock>`__"
+"Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable on "
+"Keybase <https://keybase.io/pasta>`__ (`download "
+"<https://keybase.io/pasta/pgp_keys.asc>`__)"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:124
-msgid ""
-"Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here on "
-"Keybase <https://keybase.io/pasta>`__"
-msgstr ""
-
-#: ../../docs/user/mining/p2pool.rst:134
+#: ../../docs/user/mining/p2pool.rst:131
 msgid ""
 "Create a working directory for Dash, extract the compressed archive, copy"
 " the necessary files to the directory and set them as executable::"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:142
+#: ../../docs/user/mining/p2pool.rst:139
 msgid "Clean up unneeded files::"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:147
+#: ../../docs/user/mining/p2pool.rst:144
 msgid "Create a configuration file using the following command::"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:151
+#: ../../docs/user/mining/p2pool.rst:148
 msgid ""
 "An editor window will appear. We now need to create a configuration file "
 "specifying several variables. Copy and paste the following text to get "
@@ -200,38 +195,38 @@ msgid ""
 "follows::"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:168
+#: ../../docs/user/mining/p2pool.rst:165
 msgid "Replace the fields marked with ``XXXXXXX`` as follows:"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:170
+#: ../../docs/user/mining/p2pool.rst:167
 msgid ""
 "``rpcuser``: enter any string of numbers or letters, no special "
 "characters allowed"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:172
+#: ../../docs/user/mining/p2pool.rst:169
 msgid ""
 "``rpcpassword``: enter any string of numbers or letters, no special "
 "characters allowed"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:175
+#: ../../docs/user/mining/p2pool.rst:172
 msgid "The result should look something like this:"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:180
+#: ../../docs/user/mining/p2pool.rst:177
 msgid "Entering key data in dash.conf on the P2Pool node"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:182
+#: ../../docs/user/mining/p2pool.rst:179
 msgid ""
 "Press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
 "file. You can now start running Dash on the masternode to begin "
 "synchronization with the blockchain::"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:188
+#: ../../docs/user/mining/p2pool.rst:185
 msgid ""
 "You will see a message reading **Dash Core server starting**. You can "
 "continue with the following steps and check synchronization periodically "
@@ -241,55 +236,77 @@ msgid ""
 "explorer <https://insight.dash.org/insight/>`_::"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:198
+#: ../../docs/user/mining/p2pool.rst:195
 msgid "Setting up P2Pool"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:200
+#: ../../docs/user/mining/p2pool.rst:197
 msgid ""
 "We will now set up the P2Pool software and its dependencies. Begin with "
 "the dependencies::"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:208
+#: ../../docs/user/mining/p2pool.rst:205
 msgid "Create working directories and set up p2pool-dash::"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:216
+#: ../../docs/user/mining/p2pool.rst:213
 msgid "We will add some optional extra interfaces to the control panel::"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:226
+#: ../../docs/user/mining/p2pool.rst:223
 msgid ""
 "You can now start p2pool and optionally specify the payout address, "
 "external IP (if necessary), fee and donation as follows::"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:231
+#: ../../docs/user/mining/p2pool.rst:228
 msgid ""
 "You can then monitor your node by browsing to the following addresses, "
 "replacing ``<ip_address>`` with the IP address of your P2Pool node:"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:234
+#: ../../docs/user/mining/p2pool.rst:231
 msgid "Punchy interface: http://ip_address:7903/static"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:235
+#: ../../docs/user/mining/p2pool.rst:232
 msgid "Legacy interface: http://ip_address:7903/static/legacy"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:236
+#: ../../docs/user/mining/p2pool.rst:233
 msgid "Status interface: http://ip_address:7903/static/status"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:237
+#: ../../docs/user/mining/p2pool.rst:234
 msgid "Extended interface: http://ip_address:7903/static/ext"
 msgstr ""
 
-#: ../../docs/user/mining/p2pool.rst:245
+#: ../../docs/user/mining/p2pool.rst:242
 msgid ""
 "Example configuration showing a single Bitmain Antminer D3 connected to a"
 " p2pool-dash node on the local network"
 msgstr ""
+
+#~ msgid ""
+#~ "Verify the authenticity of your download"
+#~ " by checking its detached signature "
+#~ "against the public key published by "
+#~ "the Dash Core development team. All "
+#~ "releases of Dash are signed using "
+#~ "GPG with one of the following "
+#~ "keys:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Alexander Block (codablock) with the key"
+#~ " ``63A9 6B40 6102 E091``, `verifiable "
+#~ "here on Keybase <https://keybase.io/codablock>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Pasta (pasta) with the key ``5252 "
+#~ "7BED ABE8 7984``, `verifiable here on"
+#~ " Keybase <https://keybase.io/pasta>`__"
+#~ msgstr ""
 

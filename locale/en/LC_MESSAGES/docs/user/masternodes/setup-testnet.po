@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 09:56-0500\n"
+"POT-Creation-Date: 2024-08-29 10:39-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -301,58 +301,52 @@ msgid ":ref:`dashmate installation <testnet-masternode-setup-install-dashmate>`"
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:210
-msgid ":ref:`Manual installation <testnet-masternode-setup-install-manual>`"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:211
 msgid ""
 "`Dash Masternode Zeus <https://github.com/kxcd/Masternode-Zeus>`__ (does "
-"not yet support platform services)"
+"not yet support evonodes)"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:217
+#: ../../docs/user/masternodes/setup-testnet.rst:216
 msgid "dashmate installation"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:219
+#: ../../docs/user/masternodes/setup-testnet.rst:218
 msgid ""
-"``dashmate`` replaces the `dashman "
-"<https://github.com/moocowmoo/dashman/>`__ masternode installer by "
-"moocowmoo. dashmate is based on Docker technology and features an "
-"interactive setup command and the ability to manage multiple node configs"
-" and multiple networks. It handles the installation of Dash Core and "
-"Tenderdash, as well as all dependencies and supporting services. Full "
-"dashmate documentation is available `here "
-"<https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__."
+"Dashmate is a universal tool designed to help you set up and run Dash "
+"nodes in a containerized environment. It is based on Docker technology "
+"and features an interactive setup command. Dashmate handles the "
+"installation of Dash Core, as well as all dependencies and supporting "
+"services. See this :ref:`dashmate documentation <dashmate>` for more "
+"information."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:229
+#: ../../docs/user/masternodes/setup-testnet.rst:225
 msgid "Installation as root user is not supported or recommended."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:231
+#: ../../docs/user/masternodes/setup-testnet.rst:227
 msgid ""
 "Open PuTTY or a console again and connect using the username and password"
 " you just created for your new, non-root user. Begin by installing "
 "dashmate dependencies::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:242
+#: ../../docs/user/masternodes/setup-testnet.rst:238
 msgid "Install dashmate::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:246
+#: ../../docs/user/masternodes/setup-testnet.rst:242
 msgid "Run the interactive setup wizard::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:250
+#: ../../docs/user/masternodes/setup-testnet.rst:246
 msgid ""
 "You will be prompted to select a network, node type, IP address and BLS "
 "private key. Enter this information or accept the detected/generated "
 "defaults. Start your node as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:256
+#: ../../docs/user/masternodes/setup-testnet.rst:252
 msgid ""
 "You can manage your masternode status, configuration, and running state "
 "entirely from within dashmate. See the documentation `here "
@@ -360,94 +354,94 @@ msgid ""
 " or use the built-in help system to learn more:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:261
+#: ../../docs/user/masternodes/setup-testnet.rst:257
 msgid "``dashmate --help``"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:262
+#: ../../docs/user/masternodes/setup-testnet.rst:258
 msgid "``dashmate <command> --help``"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:267
+#: ../../docs/user/masternodes/setup-testnet.rst:263
 msgid "dashmate displaying a range of status output"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:269
+#: ../../docs/user/masternodes/setup-testnet.rst:265
 msgid ""
 "You can check the status of your masternode using the various ``dashmate "
 "status`` commands as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:279
+#: ../../docs/user/masternodes/setup-testnet.rst:275
 msgid ""
 "Continue with the :ref:`Registration step <testnet-register-masternode>` "
 "to setup the collateral, keys and construct the ProTx transaction "
 "required to enable your masternode."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:286
+#: ../../docs/user/masternodes/setup-testnet.rst:282
 msgid "Masternode Update"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:288
+#: ../../docs/user/masternodes/setup-testnet.rst:284
 msgid ""
 "You can use ``dashmate`` to update minor versions of the software on your"
 " masternode as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:295
+#: ../../docs/user/masternodes/setup-testnet.rst:291
 msgid ""
 "Adding the following ``git`` and ``npm`` commands optionally also ensures"
 " you are using the latest stable version of dashmate::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:303
+#: ../../docs/user/masternodes/setup-testnet.rst:299
 msgid ""
 "Adding the following command will drop all data from Dash Platform "
 "(necessary if Platform has been wiped) and restart with the latest "
 "version::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:316
+#: ../../docs/user/masternodes/setup-testnet.rst:312
 msgid "Masternode registration"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:318
+#: ../../docs/user/masternodes/setup-testnet.rst:314
 msgid ""
 "The three keys required for the different masternode roles are described "
 "briefly under :ref:`mn-concepts` in this documentation."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:322
+#: ../../docs/user/masternodes/setup-testnet.rst:318
 msgid "Option 1: Registering from a hardware wallet"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:324
+#: ../../docs/user/masternodes/setup-testnet.rst:320
 msgid ""
 "Go back to DMT and ensure that all fields from the previous step are "
 "still filled out correctly.  Click **Generate new** for the three private"
 " keys required for a masternode:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:328
+#: ../../docs/user/masternodes/setup-testnet.rst:324
 msgid "Owner private key"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:329
+#: ../../docs/user/masternodes/setup-testnet.rst:325
 msgid ""
 "Operator private key (generate new or use private key generated by "
 "dashmate)"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:330
+#: ../../docs/user/masternodes/setup-testnet.rst:326
 msgid "Voting private key"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:335
+#: ../../docs/user/masternodes/setup-testnet.rst:331
 msgid "Dash Masternode Tool ready to register a new masternode"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:337
+#: ../../docs/user/masternodes/setup-testnet.rst:333
 msgid ""
 "Then click **Register masternode**. Optionally specify a different "
 "**Payout address** and/or **Operator reward**, then click **Continue**. "
@@ -457,11 +451,11 @@ msgid ""
 "local RPC node.) and confirm the following two messages:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:349
+#: ../../docs/user/masternodes/setup-testnet.rst:345
 msgid "Dash Masternode Tool confirmation dialogs to register a masternode"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:351
+#: ../../docs/user/masternodes/setup-testnet.rst:347
 msgid ""
 "The public key will be used in following steps. The private key must be "
 "entered in the configuration on the masternode. This allows the "
@@ -473,50 +467,50 @@ msgid ""
 "edit the dashmate configuration as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:363
-#: ../../docs/user/masternodes/setup-testnet.rst:613
+#: ../../docs/user/masternodes/setup-testnet.rst:359
+#: ../../docs/user/masternodes/setup-testnet.rst:609
 msgid ""
 "At this point you can go back to your terminal window and monitor your "
 "masternode by entering ``dashmate status`` or using the **Get status** "
 "function in DMT."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:367
+#: ../../docs/user/masternodes/setup-testnet.rst:363
 msgid ""
 "You can now safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:373
+#: ../../docs/user/masternodes/setup-testnet.rst:369
 msgid "Option 2: Registering from Dash Core wallet"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:376
+#: ../../docs/user/masternodes/setup-testnet.rst:372
 msgid "Identify the funding transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:378
+#: ../../docs/user/masternodes/setup-testnet.rst:374
 msgid ""
 "If you used an address in Dash Core wallet for your collateral "
 "transaction, you now need to find the txid of the transaction. Click "
 "**Window > Console** and enter the following command::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:384
+#: ../../docs/user/masternodes/setup-testnet.rst:380
 msgid "This should return a string of characters similar to the following::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:390
+#: ../../docs/user/masternodes/setup-testnet.rst:386
 msgid ""
 "The first long string is your ``collateralHash``, while the last number "
 "is the ``collateralIndex``."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:397
+#: ../../docs/user/masternodes/setup-testnet.rst:393
 msgid "Generate a BLS key pair"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:399
+#: ../../docs/user/masternodes/setup-testnet.rst:395
 msgid ""
 "A public/private BLS key pair is required to operate a masternode. The "
 "private key is specified on the masternode itself, and allows it to be "
@@ -525,7 +519,7 @@ msgid ""
 "created."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:405
+#: ../../docs/user/masternodes/setup-testnet.rst:401
 msgid ""
 "If you are using a hosting service, they may provide you with their "
 "public key, and you can skip this step. If you are hosting your own "
@@ -535,18 +529,18 @@ msgid ""
 " by clicking **Window > Console** and entering the following command::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:421
+#: ../../docs/user/masternodes/setup-testnet.rst:417
 msgid ""
 "**These keys are NOT stored by the wallet or dashmate and must be kept "
 "secure, similar to the value provided in the past by the** ``masternode "
 "genkey`` **command.**"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:426
+#: ../../docs/user/masternodes/setup-testnet.rst:422
 msgid "Add the private key to your masternode configuration"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:428
+#: ../../docs/user/masternodes/setup-testnet.rst:424
 msgid ""
 "The public key will be used in following steps. The private key must be "
 "entered in the ``dash.conf`` file on the masternode. This allows the "
@@ -558,24 +552,24 @@ msgid ""
 "edit the dashmate configuration as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:440
+#: ../../docs/user/masternodes/setup-testnet.rst:436
 msgid ""
 "We will now prepare the transaction used to register the masternode on "
 "the network."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:444
+#: ../../docs/user/masternodes/setup-testnet.rst:440
 msgid "Prepare a ProRegTx transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:446
+#: ../../docs/user/masternodes/setup-testnet.rst:442
 msgid ""
 "A pair of BLS keys for the operator were already generated above, and the"
 " private key was entered on the masternode. The public key is used in "
 "this transaction as the ``operatorPubKey``."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:450
+#: ../../docs/user/masternodes/setup-testnet.rst:446
 msgid ""
 "First, we need to get a new, unused address from the wallet to serve as "
 "the **owner key address** (``ownerKeyAddr``). This is not the same as the"
@@ -583,7 +577,7 @@ msgid ""
 "follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:459
+#: ../../docs/user/masternodes/setup-testnet.rst:455
 msgid ""
 "This address can also be used as the **voting key address** "
 "(``votingKeyAddr``). Alternatively, you can specify an address provided "
@@ -591,28 +585,28 @@ msgid ""
 "key address as follows::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:468
+#: ../../docs/user/masternodes/setup-testnet.rst:464
 msgid ""
 "Then either generate or choose an existing address to receive the "
 "**owner's masternode payouts** (``payoutAddress``). It is also possible "
 "to use an address external to the wallet::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:476
+#: ../../docs/user/masternodes/setup-testnet.rst:472
 msgid ""
 "You can also optionally generate and fund another address as the "
 "**transaction fee source** (``feeSourceAddress``). If you selected an "
 "external payout address, you must specify a fee source address."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:480
+#: ../../docs/user/masternodes/setup-testnet.rst:476
 msgid ""
 "Either the payout address or fee source address must have enough balance "
 "to pay the transaction fee, or the ``register_prepare`` transaction will "
 "fail."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:484
+#: ../../docs/user/masternodes/setup-testnet.rst:480
 msgid ""
 "The private keys to the owner and fee source addresses must exist in the "
 "wallet submitting the transaction to the network. If your wallet is "
@@ -620,14 +614,14 @@ msgid ""
 " commands. Unlock your wallet for 5 minutes::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:491
+#: ../../docs/user/masternodes/setup-testnet.rst:487
 msgid ""
 "We will now prepare an unsigned ProRegTx special transaction using the "
 "``protx register_prepare`` command. This command has the following "
 "syntax::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:499
+#: ../../docs/user/masternodes/setup-testnet.rst:495
 msgid ""
 "After v19 hard fork activation, ``protx register_prepare_legacy`` must be"
 " used if a legacy scheme BLS key is being used to register a masternode. "
@@ -636,65 +630,65 @@ msgid ""
 " <testnet-bls-generation>` instructions."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:505
+#: ../../docs/user/masternodes/setup-testnet.rst:501
 msgid ""
 "Open a text editor such as notepad to prepare this command. Replace each "
 "argument to the command as follows:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:508
+#: ../../docs/user/masternodes/setup-testnet.rst:504
 msgid ""
 "``collateralHash``: The txid of the 1000 Dash collateral funding "
 "transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:510
+#: ../../docs/user/masternodes/setup-testnet.rst:506
 msgid "``collateralIndex``: The output index of the 1000 Dash funding transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:512
+#: ../../docs/user/masternodes/setup-testnet.rst:508
 msgid ""
 "``ipAndPort``: Masternode IP address and port, in the format "
 "``x.x.x.x:yyyy``"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:514
+#: ../../docs/user/masternodes/setup-testnet.rst:510
 msgid ""
 "``ownerKeyAddr``: The new Dash address generated above for the "
 "owner/voting address"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:516
+#: ../../docs/user/masternodes/setup-testnet.rst:512
 msgid ""
 "``operatorPubKey``: The BLS public key generated above (or provided by "
 "your hosting service)"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:518
+#: ../../docs/user/masternodes/setup-testnet.rst:514
 msgid ""
 "``votingKeyAddr``: The new Dash address generated above, or the address "
 "of a delegate, used for proposal voting"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:520
+#: ../../docs/user/masternodes/setup-testnet.rst:516
 msgid ""
 "``operatorReward``: The percentage of the block reward allocated to the "
 "operator as payment"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:522
+#: ../../docs/user/masternodes/setup-testnet.rst:518
 msgid ""
 "``payoutAddress``: A new or existing Dash address to receive the owner's "
 "masternode rewards"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:524
+#: ../../docs/user/masternodes/setup-testnet.rst:520
 msgid ""
 "``feeSourceAddress``: An (optional) address used to fund ProTx fee. "
 "``payoutAddress`` will be used if not specified."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:527
+#: ../../docs/user/masternodes/setup-testnet.rst:523
 msgid ""
 "Note that the operator is responsible for :ref:`specifying their own "
 "reward <dip3-update-service>` address in a separate ``update_service`` "
@@ -702,28 +696,28 @@ msgid ""
 "the masternode collateral does not specify the operator's payout address."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:533
+#: ../../docs/user/masternodes/setup-testnet.rst:529
 msgid "Example (remove line breaks if copying)::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:546
-#: ../../docs/user/masternodes/setup-testnet.rst:575
-#: ../../docs/user/masternodes/setup-testnet.rst:602
+#: ../../docs/user/masternodes/setup-testnet.rst:542
+#: ../../docs/user/masternodes/setup-testnet.rst:571
+#: ../../docs/user/masternodes/setup-testnet.rst:598
 msgid "Output::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:554
+#: ../../docs/user/masternodes/setup-testnet.rst:550
 msgid ""
 "Next we will use the ``collateralAddress`` and ``signMessage`` fields to "
 "sign the transaction, and the output of the ``tx`` field to submit the "
 "transaction."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:559
+#: ../../docs/user/masternodes/setup-testnet.rst:555
 msgid "Sign the ProRegTx transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:561
+#: ../../docs/user/masternodes/setup-testnet.rst:557
 msgid ""
 "We will now sign the content of the ``signMessage`` field using the "
 "private key for the collateral address as specified in "
@@ -734,16 +728,16 @@ msgid ""
 "function of a hardware wallet. The command takes the following syntax::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:571
-#: ../../docs/user/masternodes/setup-testnet.rst:598
+#: ../../docs/user/masternodes/setup-testnet.rst:567
+#: ../../docs/user/masternodes/setup-testnet.rst:594
 msgid "Example::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:581
+#: ../../docs/user/masternodes/setup-testnet.rst:577
 msgid "Submit the signed message"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:583
+#: ../../docs/user/masternodes/setup-testnet.rst:579
 msgid ""
 "We will now submit the ProRegTx special transaction to the blockchain to "
 "register the masternode. This command must be sent from a Dash Core "
@@ -752,23 +746,23 @@ msgid ""
 "command takes the following syntax::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:591
+#: ../../docs/user/masternodes/setup-testnet.rst:587
 msgid "Where:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:593
+#: ../../docs/user/masternodes/setup-testnet.rst:589
 msgid ""
 "``tx``: The serialized transaction previously returned in the ``tx`` "
 "output field from the ``protx register_prepare`` command"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:595
+#: ../../docs/user/masternodes/setup-testnet.rst:591
 msgid ""
 "``sig``: The message signed with the collateral key from the "
 "``signmessage`` command"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:606
+#: ../../docs/user/masternodes/setup-testnet.rst:602
 msgid ""
 "Your masternode is now registered and will appear on the Deterministic "
 "Masternode List after the transaction is mined to a block. You can view "
@@ -776,327 +770,6 @@ msgid ""
 " wallet, or in the console using the command ``protx list valid``, where "
 "the txid of the final ``protx register_submit`` transaction identifies "
 "your masternode."
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:621
-msgid "Manual installation"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:623
-msgid "**The manual installation guide is currently a work in progress.**"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:625
-msgid ""
-"This guide describes how to manually download and install the components "
-"of your Dash masternode under Ubuntu Linux 22.04 LTS \"Jammy Jellyfish\" "
-"assuming you have a non-root user named ``dash``. You will need to "
-"manually adjust apt commands if using a different distro."
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:631
-msgid "Core services"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:633
-msgid "Prepare your environment for installing keys through GPG::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:640
-msgid "Tor"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:642
-msgid ""
-"Tor is an internet relay system designed to preserve anonymity on the "
-"internet. Install Tor as follows::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:651
-msgid "Dash Core"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:653
-msgid ""
-"Dash Core is a fork of Bitcoin Core and is responsible for all consensus "
-"and communication relating to the base blockchain. Download Dash Core as "
-"follows::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:660
-msgid ""
-"Verify the authenticity of your download by checking its detached "
-"signature against the public key published by the Dash Core development "
-"team. All releases of Dash are signed using GPG with the following key:"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:664
-msgid ""
-"Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable here on "
-"Keybase <https://keybase.io/pasta>`__"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:673
-msgid ""
-"Extract the compressed archive and copy the necessary files to the "
-"directory::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:679
-msgid "Create a working directory for Dash Core::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:683
-msgid "Configure Dash Core::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:720
-msgid ""
-"Optionally replace the ``rpcuser`` and ``rpcpassword`` fields with your "
-"own values. Leave the ``masternodeblsprivkey`` field commented out for "
-"now. Configure Dash Core to start as a service::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:744
-msgid "Start Dash Core::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:750
-msgid "Verify Dash Core is running::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:754
-msgid "Use the following command to monitor sync status::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:758
-msgid "When synchronisation is complete, you should see the following response::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:772
-msgid "Platform services"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:774
-msgid ""
-"Next, we will install the Dash Platform services. Start with installing "
-"JavaScript dependencies::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:783
-msgid "Followed by Rust dependencies::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:792
-msgid "And Go dependencies::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:800
-msgid "Drive"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:802
-msgid ""
-"Drive is a replicated state machine for Dash Platform. Download Drive as "
-"follows::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:814
-msgid "Configure Drive::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:832
-msgid "Start Drive::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:836
-msgid "Verify Drive is running by checking for a time value under ``uptime``::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:841
-msgid "Tenderdash"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:843
-msgid ""
-"Tenderdash is a fork of Tendermint and is the blockchain implementation "
-"used by Dash Platform. As binaries are not yet published, you will need "
-"to build from source. Build and install Tenderdash as follows::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:854
-msgid "Initialize Tenderdash::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:858
-msgid ""
-"Several files will be generated in the ``~/.tenderdash`` directory. "
-"Modify the configuration with the following commands::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:869
-msgid "Configure Tenderdash to start as a service::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:889
-msgid "Ensure Dash Core is fully synced and start Tenderdash::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:895
-msgid "Verify Tenderdash is running::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:900
-msgid "DAPI"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:902
-msgid ""
-"DAPI provides masternode services over the JSON RPC and gRPC protocols. "
-"Start DAPI as follows::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:909
-msgid "Modify the configuration with the following commands::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:918
-msgid "Start DAPI::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:922
-msgid "Start the transaction filter stream::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:927
-msgid "Envoy"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:929
-msgid ""
-"Envoy is a gRPC service proxy for cloud-native applications. As it is "
-"responsible for TLS termination, you will need to obtain a TLS "
-"certificate for your public IP address before configuring Envoy. You can "
-"do this independently using a provider of your choice, or use ZeroSSL to "
-"obtain a free certificate. Visit https://app.zerossl.com/certificate/new "
-"and enter your public IP address, select HTTP File Upload as the "
-"verification method and then download the auth file. Place the contents "
-"of this file in the ``/var/www/html/.well-known/pki-validation/`` "
-"directory with the original filename on your server and serve it using "
-"nginx as follows::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:944
-msgid ""
-"Click the link shown in Step 3 of the ZeroSSL interface and verify that "
-"the contents of the auth file are displayed in your browser. Complete "
-"validation in ZeroSSL and download the bundle file in ``.zip`` format. "
-"Extract it on your local computer, and copy the contents of the "
-"``certificate.crt`` followed by ``ca_bundle.crt`` one after the other "
-"into the bundle file at the following location on the remote node::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:953
-msgid ""
-"Then copy the contents of ``private.key`` into the following location on "
-"the remote node::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:958
-msgid "Remove nginx and the temporary auth file as follows:"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:960
-msgid "sudo apt -y --purge autoremove nginx sudo rm -rf /var/www/html/.well-known"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:963
-msgid "Install Envoy as follows::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:970
-msgid "Configure Envoy as follows::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:975
-msgid "Configure Envoy to start as a service::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:993
-msgid "Start Envoy::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:999
-msgid "Verify Envoy is running::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1004
-msgid "Finishing up"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1006
-msgid "Ensure services managed by ``pm2`` start on reboot::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1011
-msgid ""
-"Copy and paste the resulting command to ensure PM2 restarts processes on "
-"boot::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1016
-msgid ""
-"At this point you can safely log out of your server by typing ``exit``. "
-"Congratulations! Your masternode is now running."
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1022
-msgid "Developer installation"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1024
-msgid ""
-"Developers requiring a local masternode can get started quickly by "
-"starting dashmate and providing a private key containing collateral "
-"directly. Install dependencies if necessary (Docker, NodeJS, NPM, Github "
-"CLI). Windows, macOS and Linux are supported, the following example shows"
-" how to install dependencies under Ubuntu 20.04 LTS.::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1037
-msgid ""
-"Generate a new Dash address for temporary use using `this script "
-"<https://repl.it/@strophy/Generate-Dash-Address>`__ or the "
-"``getnewaddress`` and ``dumpprivkey`` RPC commands in `Dash Core "
-"<https://www.dash.org/downloads>`__ in testnet mode. Go to https"
-"://testnet-faucet.dash.org/ and request 1000+ tDash to your new address "
-"using the promo code 'masternode'. Then download and initialize dashmate "
-"as follows::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1047
-msgid ""
-"If you are using Windows, you will need to change the path for two log "
-"files. Modify the example below with a log path of your choosing::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1053
-msgid "Register your masternode on the network as follows::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1057
-msgid "Wait until sync and registration are complete. Then start the masternode::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1061
-msgid "Your masternode is now providing service on the following local ports::"
-msgstr ""
-
-#: ../../docs/user/masternodes/setup-testnet.rst:1069
-msgid ""
-"Note that platform sync will take some time after core sync is complete. "
-"You can monitor progress with ``dashmate status platform`` or use "
-"``dashmate --help`` to view other commands."
 msgstr ""
 
 #~ msgid ""
@@ -1504,5 +1177,348 @@ msgstr ""
 #~ "Awaiting full sync before running "
 #~ "Sentinel.** Run the following to ensure"
 #~ " Sentinel runs every 10 minutes::"
+#~ msgstr ""
+
+#~ msgid ":ref:`Manual installation <testnet-masternode-setup-install-manual>`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Dash Masternode Zeus <https://github.com/kxcd"
+#~ "/Masternode-Zeus>`__ (does not yet support"
+#~ " platform services)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``dashmate`` replaces the `dashman "
+#~ "<https://github.com/moocowmoo/dashman/>`__ masternode "
+#~ "installer by moocowmoo. dashmate is "
+#~ "based on Docker technology and features"
+#~ " an interactive setup command and the"
+#~ " ability to manage multiple node "
+#~ "configs and multiple networks. It "
+#~ "handles the installation of Dash Core"
+#~ " and Tenderdash, as well as all "
+#~ "dependencies and supporting services. Full "
+#~ "dashmate documentation is available `here "
+#~ "<https://github.com/dashpay/platform/tree/master/packages/dashmate#readme>`__."
+#~ msgstr ""
+
+#~ msgid "Manual installation"
+#~ msgstr ""
+
+#~ msgid "**The manual installation guide is currently a work in progress.**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This guide describes how to manually "
+#~ "download and install the components of"
+#~ " your Dash masternode under Ubuntu "
+#~ "Linux 22.04 LTS \"Jammy Jellyfish\" "
+#~ "assuming you have a non-root user"
+#~ " named ``dash``. You will need to "
+#~ "manually adjust apt commands if using"
+#~ " a different distro."
+#~ msgstr ""
+
+#~ msgid "Core services"
+#~ msgstr ""
+
+#~ msgid "Prepare your environment for installing keys through GPG::"
+#~ msgstr ""
+
+#~ msgid "Tor"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Tor is an internet relay system "
+#~ "designed to preserve anonymity on the"
+#~ " internet. Install Tor as follows::"
+#~ msgstr ""
+
+#~ msgid "Dash Core"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Dash Core is a fork of Bitcoin "
+#~ "Core and is responsible for all "
+#~ "consensus and communication relating to "
+#~ "the base blockchain. Download Dash Core"
+#~ " as follows::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Verify the authenticity of your download"
+#~ " by checking its detached signature "
+#~ "against the public key published by "
+#~ "the Dash Core development team. All "
+#~ "releases of Dash are signed using "
+#~ "GPG with the following key:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Pasta (pasta) with the key ``5252 "
+#~ "7BED ABE8 7984``, `verifiable here on"
+#~ " Keybase <https://keybase.io/pasta>`__"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Extract the compressed archive and copy"
+#~ " the necessary files to the "
+#~ "directory::"
+#~ msgstr ""
+
+#~ msgid "Create a working directory for Dash Core::"
+#~ msgstr ""
+
+#~ msgid "Configure Dash Core::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Optionally replace the ``rpcuser`` and "
+#~ "``rpcpassword`` fields with your own "
+#~ "values. Leave the ``masternodeblsprivkey`` "
+#~ "field commented out for now. Configure"
+#~ " Dash Core to start as a "
+#~ "service::"
+#~ msgstr ""
+
+#~ msgid "Start Dash Core::"
+#~ msgstr ""
+
+#~ msgid "Verify Dash Core is running::"
+#~ msgstr ""
+
+#~ msgid "Use the following command to monitor sync status::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When synchronisation is complete, you "
+#~ "should see the following response::"
+#~ msgstr ""
+
+#~ msgid "Platform services"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Next, we will install the Dash "
+#~ "Platform services. Start with installing "
+#~ "JavaScript dependencies::"
+#~ msgstr ""
+
+#~ msgid "Followed by Rust dependencies::"
+#~ msgstr ""
+
+#~ msgid "And Go dependencies::"
+#~ msgstr ""
+
+#~ msgid "Drive"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Drive is a replicated state machine "
+#~ "for Dash Platform. Download Drive as "
+#~ "follows::"
+#~ msgstr ""
+
+#~ msgid "Configure Drive::"
+#~ msgstr ""
+
+#~ msgid "Start Drive::"
+#~ msgstr ""
+
+#~ msgid "Verify Drive is running by checking for a time value under ``uptime``::"
+#~ msgstr ""
+
+#~ msgid "Tenderdash"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Tenderdash is a fork of Tendermint "
+#~ "and is the blockchain implementation "
+#~ "used by Dash Platform. As binaries "
+#~ "are not yet published, you will "
+#~ "need to build from source. Build "
+#~ "and install Tenderdash as follows::"
+#~ msgstr ""
+
+#~ msgid "Initialize Tenderdash::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Several files will be generated in "
+#~ "the ``~/.tenderdash`` directory. Modify the"
+#~ " configuration with the following "
+#~ "commands::"
+#~ msgstr ""
+
+#~ msgid "Configure Tenderdash to start as a service::"
+#~ msgstr ""
+
+#~ msgid "Ensure Dash Core is fully synced and start Tenderdash::"
+#~ msgstr ""
+
+#~ msgid "Verify Tenderdash is running::"
+#~ msgstr ""
+
+#~ msgid "DAPI"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "DAPI provides masternode services over "
+#~ "the JSON RPC and gRPC protocols. "
+#~ "Start DAPI as follows::"
+#~ msgstr ""
+
+#~ msgid "Modify the configuration with the following commands::"
+#~ msgstr ""
+
+#~ msgid "Start DAPI::"
+#~ msgstr ""
+
+#~ msgid "Start the transaction filter stream::"
+#~ msgstr ""
+
+#~ msgid "Envoy"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Envoy is a gRPC service proxy for"
+#~ " cloud-native applications. As it is"
+#~ " responsible for TLS termination, you "
+#~ "will need to obtain a TLS "
+#~ "certificate for your public IP address"
+#~ " before configuring Envoy. You can do"
+#~ " this independently using a provider "
+#~ "of your choice, or use ZeroSSL to"
+#~ " obtain a free certificate. Visit "
+#~ "https://app.zerossl.com/certificate/new and enter "
+#~ "your public IP address, select HTTP "
+#~ "File Upload as the verification method"
+#~ " and then download the auth file. "
+#~ "Place the contents of this file in"
+#~ " the ``/var/www/html/.well-known/pki-"
+#~ "validation/`` directory with the original "
+#~ "filename on your server and serve "
+#~ "it using nginx as follows::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click the link shown in Step 3 "
+#~ "of the ZeroSSL interface and verify "
+#~ "that the contents of the auth file"
+#~ " are displayed in your browser. "
+#~ "Complete validation in ZeroSSL and "
+#~ "download the bundle file in ``.zip`` "
+#~ "format. Extract it on your local "
+#~ "computer, and copy the contents of "
+#~ "the ``certificate.crt`` followed by "
+#~ "``ca_bundle.crt`` one after the other "
+#~ "into the bundle file at the "
+#~ "following location on the remote node::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Then copy the contents of "
+#~ "``private.key`` into the following location"
+#~ " on the remote node::"
+#~ msgstr ""
+
+#~ msgid "Remove nginx and the temporary auth file as follows:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "sudo apt -y --purge autoremove nginx "
+#~ "sudo rm -rf /var/www/html/.well-known"
+#~ msgstr ""
+
+#~ msgid "Install Envoy as follows::"
+#~ msgstr ""
+
+#~ msgid "Configure Envoy as follows::"
+#~ msgstr ""
+
+#~ msgid "Configure Envoy to start as a service::"
+#~ msgstr ""
+
+#~ msgid "Start Envoy::"
+#~ msgstr ""
+
+#~ msgid "Verify Envoy is running::"
+#~ msgstr ""
+
+#~ msgid "Finishing up"
+#~ msgstr ""
+
+#~ msgid "Ensure services managed by ``pm2`` start on reboot::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Copy and paste the resulting command "
+#~ "to ensure PM2 restarts processes on "
+#~ "boot::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "At this point you can safely log"
+#~ " out of your server by typing "
+#~ "``exit``. Congratulations! Your masternode is"
+#~ " now running."
+#~ msgstr ""
+
+#~ msgid "Developer installation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Developers requiring a local masternode "
+#~ "can get started quickly by starting "
+#~ "dashmate and providing a private key "
+#~ "containing collateral directly. Install "
+#~ "dependencies if necessary (Docker, NodeJS, "
+#~ "NPM, Github CLI). Windows, macOS and "
+#~ "Linux are supported, the following "
+#~ "example shows how to install "
+#~ "dependencies under Ubuntu 20.04 LTS.::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Generate a new Dash address for "
+#~ "temporary use using `this script "
+#~ "<https://repl.it/@strophy/Generate-Dash-Address>`__ "
+#~ "or the ``getnewaddress`` and ``dumpprivkey``"
+#~ " RPC commands in `Dash Core "
+#~ "<https://www.dash.org/downloads>`__ in testnet mode."
+#~ " Go to https://testnet-faucet.dash.org/ and"
+#~ " request 1000+ tDash to your new "
+#~ "address using the promo code "
+#~ "'masternode'. Then download and initialize "
+#~ "dashmate as follows::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are using Windows, you will"
+#~ " need to change the path for "
+#~ "two log files. Modify the example "
+#~ "below with a log path of your "
+#~ "choosing::"
+#~ msgstr ""
+
+#~ msgid "Register your masternode on the network as follows::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Wait until sync and registration are "
+#~ "complete. Then start the masternode::"
+#~ msgstr ""
+
+#~ msgid "Your masternode is now providing service on the following local ports::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that platform sync will take "
+#~ "some time after core sync is "
+#~ "complete. You can monitor progress with"
+#~ " ``dashmate status platform`` or use "
+#~ "``dashmate --help`` to view other "
+#~ "commands."
 #~ msgstr ""
 
