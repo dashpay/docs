@@ -1,34 +1,35 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2024, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
 # Translators:
 # Damian Walker <damianwalkerstrauss@gmail.com>, 2023
 # Leon White <leon.white@dash.org>, 2023
 # Jahlexis Lugo <ras.alexislugo.i@gmail.com>, 2023
 # Ivan SIerraalta <ivansierraalta@gmail.com>, 2023
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-18 12:05-0400\n"
+"POT-Creation-Date: 2024-08-29 10:39-0400\n"
 "PO-Revision-Date: 2023-05-04 16:28+0000\n"
 "Last-Translator: Ivan SIerraalta <ivansierraalta@gmail.com>, 2023\n"
-"Language-Team: Spanish (https://app.transifex.com/dash/teams/37570/es/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Language-Team: Spanish (https://app.transifex.com/dash/teams/37570/es/)\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 "
+"? 1 : 2;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/developers/sporks.rst-1
+#: ../../docs/user/developers/sporks.rst:-1
 msgid "Information about sporks"
 msgstr ""
 
-#: ../../docs/user/developers/sporks.rst-1
+#: ../../docs/user/developers/sporks.rst:-1
 msgid "dash, developers, sporks"
 msgstr ""
 
@@ -37,141 +38,166 @@ msgid "Sporks"
 msgstr "Sporks"
 
 #: ../../docs/user/developers/sporks.rst:10
+#, fuzzy
 msgid ""
 "A multi-phased fork, colloquially known as a \"spork\", is a mechanism "
 "unique to Dash used to safely deploy new features to the network through "
 "network-level variables to avoid the risk of unintended network forking "
 "during upgrades. It can also be used to disable certain features if a "
-"security vulnerability is discovered - see :ref:`here <sporks>` for a brief "
-"introduction to sporks. This documentation describes the meaning of each "
-"spork currently existing on the network, and how to check their respective "
-"statuses."
+"security vulnerability is discovered - see the :ref:`features page "
+"<sporks>` for a brief introduction to sporks."
 msgstr ""
-"Una bifurcación de varias fases, coloquialmente conocida como \"spork\", es "
-"un mecanismo exclusivo de Dash utilizado para implementar de forma segura "
-"nuevas características en la red a través de variables de nivel de red para "
-"evitar el riesgo de bifurcación involuntaria de la red durante las "
-"actualizaciones. También se puede usar para desactivar ciertas funciones si "
-"se descubre una vulnerabilidad de seguridad - ver :ref:`aquí <sporks>` para "
-"una breve introducción a sporks. Esta documentación describe el significado "
-"de cada spork que existe actualmente en la red y cómo verificar sus "
-"respectivos estados."
+"Una bifurcación de varias fases, coloquialmente conocida como \"spork\", "
+"es un mecanismo exclusivo de Dash utilizado para implementar de forma "
+"segura nuevas características en la red a través de variables de nivel de"
+" red para evitar el riesgo de bifurcación involuntaria de la red durante "
+"las actualizaciones. También se puede usar para desactivar ciertas "
+"funciones si se descubre una vulnerabilidad de seguridad - ver :ref:`aquí"
+" <sporks>` para una breve introducción a sporks. Esta documentación "
+"describe el significado de cada spork que existe actualmente en la red y "
+"cómo verificar sus respectivos estados."
 
-#: ../../docs/user/developers/sporks.rst:20
+#: ../../docs/user/developers/sporks.rst:17
+msgid ""
+"Enforcement of spork-controlled code can be activated remotely by members"
+" of the core development team signing a network message using a relevant "
+"private key. Should problems arise, the code can be deactivated in the "
+"same manner, without the need for a network-wide rollback or client "
+"update. This documentation describes the meaning of each spork currently "
+"existing on the network, and how to check their respective statuses."
+msgstr ""
+
+#: ../../docs/user/developers/sporks.rst:26
 msgid "Spork functions"
 msgstr "Funciones de spork"
 
-#: ../../docs/user/developers/sporks.rst:22
+#: ../../docs/user/developers/sporks.rst:28
 msgid ""
-"Sporks are set using integer values. Many sporks may be set to a particular "
-"epoch datetime (number of seconds that have elapsed since January 1, 1970) "
-"to specify the time at which they will active. Enabled sporks are set to 0 "
-"(seconds until activation). This function is often used to set a spork "
-"enable date so far in the future that it is effectively disabled until "
-"changed. The following sporks currently exist on the network and serve "
-"functions as described below:"
+"Sporks are set using integer values. Many sporks may be set to a "
+"particular epoch datetime (number of seconds that have elapsed since "
+"January 1, 1970) to specify the time at which they will active. Enabled "
+"sporks are set to 0 (seconds until activation). This function is often "
+"used to set a spork enable date so far in the future that it is "
+"effectively disabled until changed. The following sporks currently exist "
+"on the network and serve functions as described below:"
 msgstr ""
 "Las Sporks se configuran usando valores enteros. Muchas sporks se pueden "
 "configurar para un tiempo en una fecha de época particular (número de "
-"segundos que han transcurrido desde el 1 de enero de 1970) para especificar "
-"la hora a la que se activarán. Las sporks habilitadas se configuran en 0 "
-"(segundos hasta la activación). Esta función se usa a menudo para establecer"
-" una fecha de habilitación de spork en el futuro, la cual esta deshabilitada"
-" de manera efectiva hasta que se modifica. Las siguientes sporks existen "
-"actualmente en la red y cumplen las funciones que se describen a "
-"continuación:"
+"segundos que han transcurrido desde el 1 de enero de 1970) para "
+"especificar la hora a la que se activarán. Las sporks habilitadas se "
+"configuran en 0 (segundos hasta la activación). Esta función se usa a "
+"menudo para establecer una fecha de habilitación de spork en el futuro, "
+"la cual esta deshabilitada de manera efectiva hasta que se modifica. Las "
+"siguientes sporks existen actualmente en la red y cumplen las funciones "
+"que se describen a continuación:"
 
-#: ../../docs/user/developers/sporks.rst:33
+#: ../../docs/user/developers/sporks.rst:38
+msgid ""
+"Mainnet spork values were `hardened "
+"<https://github.com/dashpay/dash/pull/6140>`__ by immutably setting them."
+" Sporks continue to be valuable for testing on other networks; however, "
+"on mainnet, the risks of maintaining them now outweigh the benefits of "
+"retaining them."
+msgstr ""
+
+#: ../../docs/user/developers/sporks.rst:45
 msgid "SPORK_2_INSTANTSEND_ENABLED"
 msgstr "SPORK_2_INSTANTSEND_ENABLED"
 
-#: ../../docs/user/developers/sporks.rst:31
+#: ../../docs/user/developers/sporks.rst:43
 msgid ""
 "Governs the ability of Dash clients to use InstantSend functionality. "
 "InstantSend is described in `DIP0010 LLMQ-based InstantSend "
 "<https://github.com/dashpay/dips/blob/master/dip-0010.md>`__."
 msgstr ""
 
-#: ../../docs/user/developers/sporks.rst:37
+#: ../../docs/user/developers/sporks.rst:49
 msgid "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
 msgstr "SPORK_3_INSTANTSEND_BLOCK_FILTERING"
 
-#: ../../docs/user/developers/sporks.rst:36
+#: ../../docs/user/developers/sporks.rst:48
 msgid ""
 "If enabled, masternodes will reject blocks containing transactions in "
 "conflict with locked but unconfirmed InstantSend transactions."
 msgstr ""
 "Si está habilitado, los masternodes rechazarán los bloques que contengan "
-"transacciones en conflicto con las transacciones de InstantSend bloqueadas "
-"pero no confirmadas."
+"transacciones en conflicto con las transacciones de InstantSend "
+"bloqueadas pero no confirmadas."
 
-#: ../../docs/user/developers/sporks.rst:41
+#: ../../docs/user/developers/sporks.rst:53
 msgid "SPORK_9_SUPERBLOCKS_ENABLED"
 msgstr "SPORK_9_SUPERBLOCKS_ENABLED"
 
-#: ../../docs/user/developers/sporks.rst:40
-msgid ""
-"If enabled, superblocks are verified and issued to pay proposal winners."
+#: ../../docs/user/developers/sporks.rst:52
+msgid "If enabled, superblocks are verified and issued to pay proposal winners."
 msgstr ""
-"Si está habilitado, los superbloques se verifican y emiten para pagar a los "
-"ganadores de propuestas."
+"Si está habilitado, los superbloques se verifican y emiten para pagar a "
+"los ganadores de propuestas."
 
-#: ../../docs/user/developers/sporks.rst:47
+#: ../../docs/user/developers/sporks.rst:59
 msgid "SPORK_17_QUORUM_DKG_ENABLED"
 msgstr "SPORK_17_QUORUM_DKG_ENABLED"
 
-#: ../../docs/user/developers/sporks.rst:44
+#: ../../docs/user/developers/sporks.rst:56
 msgid ""
 "Enables the `DKG process to create LLMQ quorums "
-"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. This spork will"
-" be turned on once 80% masternodes are upgraded to v0.14, which will enable "
-"DKG and DKG-based PoSe."
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. This spork "
+"will be turned on once 80% masternodes are upgraded to v0.14, which will "
+"enable DKG and DKG-based PoSe."
 msgstr ""
 
-#: ../../docs/user/developers/sporks.rst:52
+#: ../../docs/user/developers/sporks.rst:64
 msgid "SPORK_19_CHAINLOCKS_ENABLED"
 msgstr ""
 
-#: ../../docs/user/developers/sporks.rst:50
+#: ../../docs/user/developers/sporks.rst:62
 msgid ""
-"Enables :ref:`ChainLocks <chainlocks>`, a mechanism of preventing the risk "
-"to payments introduced by blockchain reorganization events. ChainLocks are "
-"described in `DIP0008 ChainLocks "
+"Enables :ref:`ChainLocks <chainlocks>`, a mechanism of preventing the "
+"risk to payments introduced by blockchain reorganization events. "
+"ChainLocks are described in `DIP0008 ChainLocks "
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__."
 msgstr ""
 
-#: ../../docs/user/developers/sporks.rst:56
+#: ../../docs/user/developers/sporks.rst:68
 msgid "SPORK_21_QUORUM_ALL_CONNECTED"
 msgstr ""
 
-#: ../../docs/user/developers/sporks.rst:55
+#: ../../docs/user/developers/sporks.rst:67
 msgid ""
 "Enables connections between all masternodes in a quorum to optimize the "
 "signature recovery process."
 msgstr ""
 
-#: ../../docs/user/developers/sporks.rst:60
+#: ../../docs/user/developers/sporks.rst:72
 msgid "SPORK_23_QUORUM_POSE"
 msgstr ""
 
-#: ../../docs/user/developers/sporks.rst:59
+#: ../../docs/user/developers/sporks.rst:71
 msgid ""
-"Enforces Proof of Service requirements for masternodes to support a minimum "
-"protocol version and maintain open ports."
+"Enforces Proof of Service requirements for masternodes to support a "
+"minimum protocol version and maintain open ports."
 msgstr ""
 
-#: ../../docs/user/developers/sporks.rst:63
+#: ../../docs/user/developers/sporks.rst:75
+msgid "SPORK_24_TEST_EHF"
+msgstr ""
+
+#: ../../docs/user/developers/sporks.rst:75
+msgid "Supports enhanced hard fork (EHF) testing."
+msgstr ""
+
+#: ../../docs/user/developers/sporks.rst:78
 msgid "Viewing spork status"
 msgstr "Revisar estado de spork"
 
-#: ../../docs/user/developers/sporks.rst:65
+#: ../../docs/user/developers/sporks.rst:80
 msgid ""
-"The ``spork show`` and ``spork active`` commands issued in the debug window "
-"(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
-"You can open the debug window by selecting **Window > Console**."
+"The ``spork show`` and ``spork active`` commands issued in the debug "
+"window (or from ``dash-cli`` on a masternode) allow you to interact with "
+"sporks. You can open the debug window by selecting **Window > Console**."
 msgstr ""
 
-#: ../../docs/user/developers/sporks.rst:72
+#: ../../docs/user/developers/sporks.rst:87
 msgid "spork show and spork active output in the Dash Core debug console"
-msgstr ""
-"Salidas de spork show y spork active en la consola de depuración Dash Core"
+msgstr "Salidas de spork show y spork active en la consola de depuración Dash Core"
+

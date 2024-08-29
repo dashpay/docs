@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-26 09:54-0400\n"
+"POT-Creation-Date: 2024-08-29 10:39-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -76,11 +76,11 @@ msgstr ""
 
 #: ../../docs/user/masternodes/server-config.rst:41
 msgid ""
-"Before beginning, take a few minutes to review the masternode "
-":hoverxref:`hardware requirements <mn-hardware-reqs-table>` which may "
-"help you decide which VPS provider best suits your needs. We will use "
-"`Vultr <https://www.vultr.com/>`_ hosting as an example of a VPS, "
-"although `DigitalOcean <https://www.digitalocean.com/>`_, `Amazon EC2 "
+"Before beginning, take a few minutes to review the masternode and evonode"
+" :hoverxref:`hardware requirements <mn-hardware-reqs>` which may help you"
+" decide which VPS provider best suits your needs. We will use `Vultr "
+"<https://www.vultr.com/>`_ hosting as an example of a VPS, although "
+"`DigitalOcean <https://www.digitalocean.com/>`_, `Amazon EC2 "
 "<https://aws.amazon.com/ec2/>`_, `Google Cloud "
 "<https://cloud.google.com/compute/>`_, `Choopa "
 "<https://www.choopa.com/>`_ and `OVH <https://www.ovh.com.au/>`_ are also"
@@ -95,7 +95,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/server-config.rst:58
 msgid ""
-"Select Ubuntu 20.04 x64 as the server type. We use this LTS release of "
+"Select Ubuntu 24.04 x64 as the server type. We use this LTS release of "
 "Ubuntu instead of the latest version because LTS releases are supported "
 "with security updates for 5 years, instead of the usual 9 months."
 msgstr ""
@@ -105,46 +105,49 @@ msgid "Vultr server type selection screen"
 msgstr ""
 
 #: ../../docs/user/masternodes/server-config.rst:67
-msgid "Select a server size offering at least 2GB of memory."
+msgid ""
+"Select a server size according to the hardware requirements for you "
+":hoverxref:`masternode <mn-hardware-reqs-table>` or :hoverxref:`evonode "
+"<evonode-hardware-reqs-table>`:"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:72
+#: ../../docs/user/masternodes/server-config.rst:73
 msgid "Vultr server size selection screen"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:74
+#: ../../docs/user/masternodes/server-config.rst:75
 msgid ""
 "Enter a hostname and label for your server. In this example we will use "
 "``dashmn1`` as the hostname."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:80
+#: ../../docs/user/masternodes/server-config.rst:81
 msgid "Vultr server hostname & label selection screen"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:82
+#: ../../docs/user/masternodes/server-config.rst:83
 msgid "Vultr will now install your server. This process may take a few minutes."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:87
+#: ../../docs/user/masternodes/server-config.rst:88
 msgid "Vultr server installation screen"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:89
+#: ../../docs/user/masternodes/server-config.rst:90
 msgid ""
 "Click **Manage** when installation is complete and take note of the IP "
 "address, username and password."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:95
+#: ../../docs/user/masternodes/server-config.rst:96
 msgid "Vultr server management screen"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:100
+#: ../../docs/user/masternodes/server-config.rst:101
 msgid "Set up your operating system"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:102
+#: ../../docs/user/masternodes/server-config.rst:103
 msgid ""
 "We will begin by connecting to your newly provisioned server. On Windows,"
 " we will first download an app called PuTTY to connect to the server. Go "
@@ -155,11 +158,11 @@ msgid ""
 "root@<server_ip>`` and enter your password when prompted."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:113
+#: ../../docs/user/masternodes/server-config.rst:114
 msgid "PuTTY download page"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:115
+#: ../../docs/user/masternodes/server-config.rst:116
 msgid ""
 "Double-click the downloaded file to install PuTTY, then run the app from "
 "your Start menu. Enter the IP address of the server in the **Host Name** "
@@ -168,26 +171,26 @@ msgid ""
 " **Yes** to trust this server in the future."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:124
+#: ../../docs/user/masternodes/server-config.rst:125
 msgid "PuTTY security alert when connecting to a new server"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:126
+#: ../../docs/user/masternodes/server-config.rst:127
 msgid ""
 "You are now connected to your server and should see a terminal window. "
 "Begin by logging in to your server with the user ``root`` and password "
 "supplied by your hosting provider."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:133
+#: ../../docs/user/masternodes/server-config.rst:134
 msgid "Password challenge when connecting to your VPS for the first time"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:137
+#: ../../docs/user/masternodes/server-config.rst:138
 msgid "Set up users"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:139
+#: ../../docs/user/masternodes/server-config.rst:140
 msgid ""
 "You should immediately change the root password and store it in a safe "
 "place for security. You can copy and paste any of the following commands "
@@ -196,14 +199,14 @@ msgid ""
 " at the current cursor location::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:147
+#: ../../docs/user/masternodes/server-config.rst:148
 msgid ""
 "Enter and confirm a new password (preferably long and randomly "
 "generated). Next we will create a new user with the following command, "
 "replacing ``<username>`` with a username of your choice::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:153
+#: ../../docs/user/masternodes/server-config.rst:154
 msgid ""
 "You will be prompted for a password. Enter and confirm using a new "
 "password (different to your root password) and store it in a safe place. "
@@ -212,98 +215,102 @@ msgid ""
 " so they can perform commands as root::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:163
+#: ../../docs/user/masternodes/server-config.rst:164
 msgid "Update the system"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:165
+#: ../../docs/user/masternodes/server-config.rst:166
 msgid ""
 "Now, while still as root, we will update the system from the Ubuntu "
 "package repository::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:171
+#: ../../docs/user/masternodes/server-config.rst:172
 msgid ""
 "The system will show a list of upgradable packages. Press **Y** and "
 "**Enter** to install the packages."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:176
+#: ../../docs/user/masternodes/server-config.rst:177
 msgid "Configure the firewall"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:178
+#: ../../docs/user/masternodes/server-config.rst:179
 msgid ""
 "We will now install a firewall (and some other packages we will use "
 "later)::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:182
-#: ../../docs/user/masternodes/server-config.rst:207
+#: ../../docs/user/masternodes/server-config.rst:183
+#: ../../docs/user/masternodes/server-config.rst:225
 msgid "(press **Y** and **Enter** to confirm)"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:184
+#: ../../docs/user/masternodes/server-config.rst:185
 msgid ""
 "Choose the appropriate firewall configuration below based on which "
-"network your masternode will support:"
+"network and masternode type your masternode will support:"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:187
-msgid "Mainnet configuration"
+#: ../../docs/user/masternodes/server-config.rst
+msgid "Mainnet masternode"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:196
-msgid "Testnet configuration"
+#: ../../docs/user/masternodes/server-config.rst
+msgid "Mainnet evonode"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:211
+#: ../../docs/user/masternodes/server-config.rst
+msgid "Testnet"
+msgstr ""
+
+#: ../../docs/user/masternodes/server-config.rst:229
 msgid "Enable swap"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:213
+#: ../../docs/user/masternodes/server-config.rst:231
 msgid ""
 "Next, we add will add swap memory, enable it, and set it to be enabled on"
 " subsequent reboots::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:222
+#: ../../docs/user/masternodes/server-config.rst:240
 msgid ""
 "Add the following line at the end of the file (press tab to separate each"
 " word/number), then press **Ctrl + X** to close the editor, then **Y** "
 "and **Enter** save the file."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:232
+#: ../../docs/user/masternodes/server-config.rst:250
 msgid "Restrict remote access"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:234
+#: ../../docs/user/masternodes/server-config.rst:252
 msgid ""
 "Finally, in order to prevent brute force password hacking attacks, we "
 "will install fail2ban and disable root login over ssh. These steps are "
 "optional, but highly recommended. Start with fail2ban::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:240
+#: ../../docs/user/masternodes/server-config.rst:258
 msgid "Create a new configuration file::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:244
+#: ../../docs/user/masternodes/server-config.rst:262
 msgid "And paste in the following configuration:"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:255
+#: ../../docs/user/masternodes/server-config.rst:273
 msgid ""
 "Then press **Ctrl + X** to close the editor, then **Y** and **Enter** "
 "save the file. Restart and enable the fail2ban service::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:261
+#: ../../docs/user/masternodes/server-config.rst:279
 msgid "Next, open the SSH configuration file to disable root login over SSH::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:265
+#: ../../docs/user/masternodes/server-config.rst:283
 msgid ""
 "Locate the line that reads ``PermitRootLogin yes`` and set it to "
 "``PermitRootLogin no``. Directly below this, add a line which reads "
@@ -312,25 +319,25 @@ msgid ""
 "and **Enter** save the file."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:271
+#: ../../docs/user/masternodes/server-config.rst:289
 msgid ""
 "Optionally install or update `AppArmor <https://apparmor.net/>`_ (try "
 "this step if you are having problems related to AppArmor)::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:277
+#: ../../docs/user/masternodes/server-config.rst:295
 msgid "Reboot"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:279
+#: ../../docs/user/masternodes/server-config.rst:297
 msgid "Now, reboot the server to apply any necessary kernel updates::"
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:283
+#: ../../docs/user/masternodes/server-config.rst:301
 msgid "Your SSH client (e.g. PuTTY) will disconnect when the server reboots."
 msgstr ""
 
-#: ../../docs/user/masternodes/server-config.rst:287
+#: ../../docs/user/masternodes/server-config.rst:305
 msgid ""
 "While this setup includes basic steps to protect your server against "
 "attacks, much more can be done. In particular, authenticating with a "
@@ -340,4 +347,51 @@ msgid ""
 " advisable. More tips are available `here <https://www.cyberciti.biz/tips"
 "/linux-security.html>`__."
 msgstr ""
+
+#~ msgid ""
+#~ "Before beginning, take a few minutes "
+#~ "to review the masternode :hoverxref:`hardware"
+#~ " requirements <mn-hardware-reqs-table>` "
+#~ "which may help you decide which "
+#~ "VPS provider best suits your needs. "
+#~ "We will use `Vultr <https://www.vultr.com/>`_"
+#~ " hosting as an example of a "
+#~ "VPS, although `DigitalOcean "
+#~ "<https://www.digitalocean.com/>`_, `Amazon EC2 "
+#~ "<https://aws.amazon.com/ec2/>`_, `Google Cloud "
+#~ "<https://cloud.google.com/compute/>`_, `Choopa "
+#~ "<https://www.choopa.com/>`_ and `OVH "
+#~ "<https://www.ovh.com.au/>`_ are also popular "
+#~ "choices. First create an account and "
+#~ "add credit. Then go to the "
+#~ "**Servers** menu item on the left "
+#~ "and click **+** to add a new "
+#~ "server. Select a location for your "
+#~ "new server on the following screen:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select Ubuntu 20.04 x64 as the "
+#~ "server type. We use this LTS "
+#~ "release of Ubuntu instead of the "
+#~ "latest version because LTS releases are"
+#~ " supported with security updates for "
+#~ "5 years, instead of the usual 9"
+#~ " months."
+#~ msgstr ""
+
+#~ msgid "Select a server size offering at least 2GB of memory."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Choose the appropriate firewall configuration"
+#~ " below based on which network your"
+#~ " masternode will support:"
+#~ msgstr ""
+
+#~ msgid "Mainnet configuration"
+#~ msgstr ""
+
+#~ msgid "Testnet configuration"
+#~ msgstr ""
 

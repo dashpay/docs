@@ -1,32 +1,32 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2024, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
 # Translators:
 # Daf Daf, 2022
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-18 12:05-0400\n"
+"POT-Creation-Date: 2024-08-29 10:39-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: Daf Daf, 2022\n"
-"Language-Team: French (https://app.transifex.com/dash/teams/37570/fr/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Language-Team: French (https://app.transifex.com/dash/teams/37570/fr/)\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
+"1000000 == 0 ? 1 : 2;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
 
-#: ../../docs/user/developers/compiling.rst-1
-msgid ""
-"Compile Dash Core for Linux, macOS, Windows and Guix deterministic builds"
+#: ../../docs/user/developers/compiling.rst:-1
+msgid "Compile Dash Core for Linux, macOS, Windows and Guix deterministic builds"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst-1
+#: ../../docs/user/developers/compiling.rst:-1
 msgid "dash, build, compile, linux, macOS, windows, binary, guix, developers"
 msgstr ""
 
@@ -38,12 +38,13 @@ msgstr "Compiler Dash Core"
 msgid ""
 "While Dash offers stable binary builds on the `website "
 "<https://www.dash.org/downloads/>`_ and on `GitHub "
-"<https://github.com/dashpay/dash/releases>`__, and development builds using "
-"`GitLab CI <https://gitlab.com/dashpay/dash/pipelines>`_,  many users will "
-"also be interested in building Dash binaries for themselves. Users who do "
-"not required deterministic builds can typically follow the `generic build "
-"notes <https://github.com/dashpay/dash/tree/develop/doc#building>`__ "
-"available on GitHub to compile or cross-compile Dash for any platform."
+"<https://github.com/dashpay/dash/releases/latest>`__, and development "
+"builds using `GitLab CI <https://gitlab.com/dashpay/dash/pipelines>`_,  "
+"many users will also be interested in building Dash binaries for "
+"themselves. Users who do not required deterministic builds can typically "
+"follow the `generic build notes "
+"<https://github.com/dashpay/dash/tree/develop/doc#building>`__ available "
+"on GitHub to compile or cross-compile Dash for any platform."
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:24
@@ -52,20 +53,21 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:26
 msgid ""
-"`Guix <https://guix.gnu.org/>`__ is the deterministic build process that is "
-"used to build the Dash Core executables. It provides a way to be reasonably "
-"sure that the executables are really built from the source on GitHub. It "
-"also makes sure that the same, tested dependencies are used and statically "
-"built into the executable. Multiple developers build the source code by "
-"following a specific descriptor (\"recipe\"), cryptographically sign the "
-"result, and upload the resulting signature. These results are compared and "
-"only if they match, the build is accepted and uploaded to dash.org."
+"`Guix <https://guix.gnu.org/>`__ is the deterministic build process that "
+"is used to build the Dash Core executables. It provides a way to be "
+"reasonably sure that the executables are really built from the source on "
+"GitHub. It also makes sure that the same, tested dependencies are used "
+"and statically built into the executable. Multiple developers build the "
+"source code by following a specific descriptor (\"recipe\"), "
+"cryptographically sign the result, and upload the resulting signature. "
+"These results are compared and only if they match, the build is accepted "
+"and uploaded to dash.org."
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:35
 msgid ""
-"The instructions to build Dash Core 19.0 or older versions using gitian are "
-"available in a `previous version of this page "
+"The instructions to build Dash Core 19.0 or older versions using gitian "
+"are available in a `previous version of this page "
 "<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>`__."
 msgstr ""
 
@@ -82,22 +84,23 @@ msgstr ""
 #: ../../docs/user/developers/compiling.rst:46
 msgid ""
 "Start by logging in as the \"root\" user. Create a new user with the "
-"following command, replacing ``<username>`` with a username of your choice::"
+"following command, replacing ``<username>`` with a username of your "
+"choice::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:51
 msgid ""
-"You will be prompted for a password. Enter and confirm using a new password "
-"(different to your root password) and store it in a safe place. You will "
-"also see prompts for user information, but this can be left blank. "
-"Alternatively, an existing user can be used on systems that are already in "
-"use (e.g. your existing development system)."
+"You will be prompted for a password. Enter and confirm using a new "
+"password (different to your root password) and store it in a safe place. "
+"You will also see prompts for user information, but this can be left "
+"blank. Alternatively, an existing user can be used on systems that are "
+"already in use (e.g. your existing development system)."
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:57
 msgid ""
-"Add the user to the sudo and docker groups so they can perform commands as "
-"root and run docker commands::"
+"Add the user to the sudo and docker groups so they can perform commands "
+"as root and run docker commands::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:63
@@ -121,8 +124,8 @@ msgstr ""
 #: ../../docs/user/developers/compiling.rst:78
 msgid ""
 "It is only necessary to run this step during the initial setup of your "
-"machine. Run the guix install routine to prepare your environment and answer"
-" \"Y\" for all prompts::"
+"machine. Run the guix install routine to prepare your environment and "
+"answer \"Y\" for all prompts::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:88
@@ -131,8 +134,8 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:90
 msgid ""
-"After installing the prerequisites and preparing guix, reboot the system, "
-"login as ``<username>``, and clone required repositories::"
+"After installing the prerequisites and preparing guix, reboot the system,"
+" login as ``<username>``, and clone required repositories::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:97
@@ -144,8 +147,7 @@ msgid "Build Dash Core"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:106
-msgid ""
-"Checkout the tag associated with the Dash Core version you plan to build::"
+msgid "Checkout the tag associated with the Dash Core version you plan to build::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:113
@@ -164,8 +166,8 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:124
 msgid ""
-"Mac and Windows binaries are signed by Dash Core Group using the relevant "
-"Apple and Microsoft processes. In this step, that information will be "
+"Mac and Windows binaries are signed by Dash Core Group using the relevant"
+" Apple and Microsoft processes. In this step, that information will be "
 "validated and signed by your machine."
 msgstr ""
 
@@ -177,8 +179,8 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:137
 msgid ""
-"Prepare the `guix.sigs repository <https://github.com/dashpay/guix.sigs>`__ "
-"by pulling the latest changes::"
+"Prepare the `guix.sigs repository "
+"<https://github.com/dashpay/guix.sigs>`__ by pulling the latest changes::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:144
@@ -207,8 +209,8 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:170
 msgid ""
-"To create signatures for the signed binaries, run ``guix-codesign`` followed"
-" by guix-attest::"
+"To create signatures for the signed binaries, run ``guix-codesign`` "
+"followed by guix-attest::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:182
@@ -217,9 +219,10 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:184
 msgid ""
-"After successfully building the binaries, signing them, and verifying the "
-"signatures, you can optionally contribute them to the `guix.sigs repository "
-"<https://github.com/dashpay/guix.sigs/>`_ via a pull request on GitHub."
+"After successfully building the binaries, signing them, and verifying the"
+" signatures, you can optionally contribute them to the `guix.sigs "
+"repository <https://github.com/dashpay/guix.sigs/>`_ via a pull request "
+"on GitHub."
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:189
@@ -228,16 +231,16 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:191
 msgid ""
-"Since the official guix.sigs repository has restricted write access, create "
-"a fork of it via GitHub and add your fork as a remote repository::"
+"Since the official guix.sigs repository has restricted write access, "
+"create a fork of it via GitHub and add your fork as a remote repository::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:197
 msgid ""
-"The first time you contribute signatures, also put a copy of your public key"
-" in the ``builder-keys`` folder of the repository so others can easily "
-"verify your signature. Your public key can be exported to a file using the "
-"following command::"
+"The first time you contribute signatures, also put a copy of your public "
+"key in the ``builder-keys`` folder of the repository so others can easily"
+" verify your signature. Your public key can be exported to a file using "
+"the following command::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:207
@@ -246,8 +249,8 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:209
 msgid ""
-"Add and commit the ``*.SHA256SUMS`` and ``*.SHA256SUMS.asc`` files created "
-"by the build process::"
+"Add and commit the ``*.SHA256SUMS`` and ``*.SHA256SUMS.asc`` files "
+"created by the build process::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:220
@@ -256,10 +259,10 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:225
 msgid ""
-"Go to `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ and open a "
-"pull request to the ``master`` branch of the upstream repository. The pull "
-"request will be reviewed by Dash Core developers and merged if everything "
-"checks out. Thanks for contributing!"
+"Go to `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ and open "
+"a pull request to the ``master`` branch of the upstream repository. The "
+"pull request will be reviewed by Dash Core developers and merged if "
+"everything checks out. Thanks for contributing!"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:231
@@ -268,24 +271,24 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:233
 msgid ""
-"The `guix.sigs repository <https://github.com/dashpay/guix.sigs/>`_ contains"
-" deterministic build results signed by multiple Core developers for each "
-"release. The repository also contains public keys used for signature "
-"verification. Import the public keys::"
+"The `guix.sigs repository <https://github.com/dashpay/guix.sigs/>`_ "
+"contains deterministic build results signed by multiple Core developers "
+"for each release. The repository also contains public keys used for "
+"signature verification. Import the public keys::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:242
 msgid ""
-"Run the following commands to verify that your build matches the official "
-"release::"
+"Run the following commands to verify that your build matches the official"
+" release::"
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:252
 msgid ""
-"You should get a result similar to the following for Linux, Windows, MacOS, "
-"Signed Windows, and Signed MacOS. Assuming the previous steps completed "
-"successfully, you will also see your own signatures with an ``OK`` status "
-"also."
+"You should get a result similar to the following for Linux, Windows, "
+"MacOS, Signed Windows, and Signed MacOS. Assuming the previous steps "
+"completed successfully, you will also see your own signatures with an "
+"``OK`` status also."
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:341
@@ -294,8 +297,26 @@ msgstr "Gitian"
 
 #: ../../docs/user/developers/compiling.rst:344
 msgid ""
-"Gitian builds were deprecated in favor of Guix builds with the release of "
-"Dash Core v20.0. Instructions on building Dash Core 19.0 or older versions "
-"using gitian are available in a `previous version of this page "
+"Gitian builds were deprecated in favor of Guix builds with the release of"
+" Dash Core v20.0. Instructions on building Dash Core 19.0 or older "
+"versions using gitian are available in a `previous version of this page "
 "<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>`__."
 msgstr ""
+
+#~ msgid ""
+#~ "While Dash offers stable binary builds"
+#~ " on the `website "
+#~ "<https://www.dash.org/downloads/>`_ and on `GitHub"
+#~ " <https://github.com/dashpay/dash/releases>`__, and "
+#~ "development builds using `GitLab CI "
+#~ "<https://gitlab.com/dashpay/dash/pipelines>`_,  many users"
+#~ " will also be interested in building"
+#~ " Dash binaries for themselves. Users "
+#~ "who do not required deterministic builds"
+#~ " can typically follow the `generic "
+#~ "build notes "
+#~ "<https://github.com/dashpay/dash/tree/develop/doc#building>`__ "
+#~ "available on GitHub to compile or "
+#~ "cross-compile Dash for any platform."
+#~ msgstr ""
+
