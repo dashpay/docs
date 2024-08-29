@@ -1,11 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2024, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Leon White <leon.white@dash.org>, 2023
 # oscar junior <geleira@gmail.com>, 2023
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -14,21 +15,18 @@ msgstr ""
 "POT-Creation-Date: 2024-08-29 10:39-0400\n"
 "PO-Revision-Date: 2023-05-04 16:28+0000\n"
 "Last-Translator: oscar junior <geleira@gmail.com>, 2023\n"
-"Language: pt\n"
-"Language-Team: Portuguese "
-"(https://app.transifex.com/dash/teams/37570/pt/)\n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
-"1000000 == 0 ? 1 : 2;\n"
+"Language-Team: Portuguese (https://app.transifex.com/dash/teams/37570/pt/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/developers/sporks.rst:-1
+#: ../../docs/user/developers/sporks.rst-1
 msgid "Information about sporks"
 msgstr ""
 
-#: ../../docs/user/developers/sporks.rst:-1
+#: ../../docs/user/developers/sporks.rst-1
 msgid "dash, developers, sporks"
 msgstr ""
 
@@ -37,33 +35,23 @@ msgid "Sporks"
 msgstr "Sporks"
 
 #: ../../docs/user/developers/sporks.rst:10
-#, fuzzy
 msgid ""
 "A multi-phased fork, colloquially known as a \"spork\", is a mechanism "
 "unique to Dash used to safely deploy new features to the network through "
 "network-level variables to avoid the risk of unintended network forking "
 "during upgrades. It can also be used to disable certain features if a "
-"security vulnerability is discovered - see the :ref:`features page "
-"<sporks>` for a brief introduction to sporks."
+"security vulnerability is discovered - see the :ref:`features page <sporks>`"
+" for a brief introduction to sporks."
 msgstr ""
-"Um fork multifásico, popularmente conhecido como \"spork\", é um "
-"mecanismo exclusivo do Dash usado para implantar com segurança novos "
-"recursos na rede por meio de variáveis de nível de rede para evitar o "
-"risco de bifurcação indesejada de rede durante as atualizações. Também "
-"pode ser usado para desabilitar determinados recursos se uma "
-"vulnerabilidade de segurança for descoberta - veja :ref:`aqui <sporks>` "
-"para uma breve introdução aos sporks. Esta documentação descreve o "
-"significado de cada spork existente atualmente na rede e como verificar "
-"seus respectivos status."
 
 #: ../../docs/user/developers/sporks.rst:17
 msgid ""
-"Enforcement of spork-controlled code can be activated remotely by members"
-" of the core development team signing a network message using a relevant "
-"private key. Should problems arise, the code can be deactivated in the "
-"same manner, without the need for a network-wide rollback or client "
-"update. This documentation describes the meaning of each spork currently "
-"existing on the network, and how to check their respective statuses."
+"Enforcement of spork-controlled code can be activated remotely by members of"
+" the core development team signing a network message using a relevant "
+"private key. Should problems arise, the code can be deactivated in the same "
+"manner, without the need for a network-wide rollback or client update. This "
+"documentation describes the meaning of each spork currently existing on the "
+"network, and how to check their respective statuses."
 msgstr ""
 
 #: ../../docs/user/developers/sporks.rst:26
@@ -72,29 +60,29 @@ msgstr "Spork funções"
 
 #: ../../docs/user/developers/sporks.rst:28
 msgid ""
-"Sporks are set using integer values. Many sporks may be set to a "
-"particular epoch datetime (number of seconds that have elapsed since "
-"January 1, 1970) to specify the time at which they will active. Enabled "
-"sporks are set to 0 (seconds until activation). This function is often "
-"used to set a spork enable date so far in the future that it is "
-"effectively disabled until changed. The following sporks currently exist "
-"on the network and serve functions as described below:"
+"Sporks are set using integer values. Many sporks may be set to a particular "
+"epoch datetime (number of seconds that have elapsed since January 1, 1970) "
+"to specify the time at which they will active. Enabled sporks are set to 0 "
+"(seconds until activation). This function is often used to set a spork "
+"enable date so far in the future that it is effectively disabled until "
+"changed. The following sporks currently exist on the network and serve "
+"functions as described below:"
 msgstr ""
 "Sporks são definidos usando valores inteiros. Muitos sporks podem ser "
-"definidos para uma data específica (número de segundos decorridos desde "
-"1º de janeiro de 1970) para especificar a hora em que eles serão "
-"ativados. Os sporks ativados estão definidos como 0 (segundos até a "
-"ativação). Esta função é freqüentemente usada para definir uma data de "
-"ativação do spork até o futuro no futuro, que é efetivamente desativada "
-"até ser alterada. Os seguintes sporks existem atualmente na rede e servem"
-" funções conforme descrito abaixo:"
+"definidos para uma data específica (número de segundos decorridos desde 1º "
+"de janeiro de 1970) para especificar a hora em que eles serão ativados. Os "
+"sporks ativados estão definidos como 0 (segundos até a ativação). Esta "
+"função é freqüentemente usada para definir uma data de ativação do spork até"
+" o futuro no futuro, que é efetivamente desativada até ser alterada. Os "
+"seguintes sporks existem atualmente na rede e servem funções conforme "
+"descrito abaixo:"
 
 #: ../../docs/user/developers/sporks.rst:38
 msgid ""
 "Mainnet spork values were `hardened "
-"<https://github.com/dashpay/dash/pull/6140>`__ by immutably setting them."
-" Sporks continue to be valuable for testing on other networks; however, "
-"on mainnet, the risks of maintaining them now outweigh the benefits of "
+"<https://github.com/dashpay/dash/pull/6140>`__ by immutably setting them. "
+"Sporks continue to be valuable for testing on other networks; however, on "
+"mainnet, the risks of maintaining them now outweigh the benefits of "
 "retaining them."
 msgstr ""
 
@@ -126,7 +114,8 @@ msgid "SPORK_9_SUPERBLOCKS_ENABLED"
 msgstr "SPORK_9_SUPERBLOCKS_ENABLED"
 
 #: ../../docs/user/developers/sporks.rst:52
-msgid "If enabled, superblocks are verified and issued to pay proposal winners."
+msgid ""
+"If enabled, superblocks are verified and issued to pay proposal winners."
 msgstr ""
 "Se ativado, os superblocos são verificados e emitidos para pagar os "
 "vencedores das propostas."
@@ -138,9 +127,9 @@ msgstr "SPORK_17_QUORUM_DKG_ENABLED"
 #: ../../docs/user/developers/sporks.rst:56
 msgid ""
 "Enables the `DKG process to create LLMQ quorums "
-"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. This spork "
-"will be turned on once 80% masternodes are upgraded to v0.14, which will "
-"enable DKG and DKG-based PoSe."
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`_. This spork will"
+" be turned on once 80% masternodes are upgraded to v0.14, which will enable "
+"DKG and DKG-based PoSe."
 msgstr ""
 
 #: ../../docs/user/developers/sporks.rst:64
@@ -149,9 +138,9 @@ msgstr ""
 
 #: ../../docs/user/developers/sporks.rst:62
 msgid ""
-"Enables :ref:`ChainLocks <chainlocks>`, a mechanism of preventing the "
-"risk to payments introduced by blockchain reorganization events. "
-"ChainLocks are described in `DIP0008 ChainLocks "
+"Enables :ref:`ChainLocks <chainlocks>`, a mechanism of preventing the risk "
+"to payments introduced by blockchain reorganization events. ChainLocks are "
+"described in `DIP0008 ChainLocks "
 "<https://github.com/dashpay/dips/blob/master/dip-0008.md>`__."
 msgstr ""
 
@@ -171,8 +160,8 @@ msgstr ""
 
 #: ../../docs/user/developers/sporks.rst:71
 msgid ""
-"Enforces Proof of Service requirements for masternodes to support a "
-"minimum protocol version and maintain open ports."
+"Enforces Proof of Service requirements for masternodes to support a minimum "
+"protocol version and maintain open ports."
 msgstr ""
 
 #: ../../docs/user/developers/sporks.rst:75
@@ -189,12 +178,11 @@ msgstr "Visualizar o status do spork"
 
 #: ../../docs/user/developers/sporks.rst:80
 msgid ""
-"The ``spork show`` and ``spork active`` commands issued in the debug "
-"window (or from ``dash-cli`` on a masternode) allow you to interact with "
-"sporks. You can open the debug window by selecting **Window > Console**."
+"The ``spork show`` and ``spork active`` commands issued in the debug window "
+"(or from ``dash-cli`` on a masternode) allow you to interact with sporks. "
+"You can open the debug window by selecting **Window > Console**."
 msgstr ""
 
 #: ../../docs/user/developers/sporks.rst:87
 msgid "spork show and spork active output in the Dash Core debug console"
 msgstr "spork show e spork active output no console de depuração do Dash Core"
-
