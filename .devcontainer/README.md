@@ -7,10 +7,10 @@ build and preview the docs in this repository.
 ## Building a preview
 
 The current version of the docs will be automatically built the when a new codespace is created. To
-re-build the docs after making changes, simply run this command from the terminal:
+re-build the docs after making changes, run this command from the terminal:
 
 ```shell
-make html
+rm -r _build/html || true && make html
 ```
 
 Note: you may need go to the main menu, click `View`, then `Terminal` if the terminal isn't visible.
