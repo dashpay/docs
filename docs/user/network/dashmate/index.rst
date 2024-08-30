@@ -359,10 +359,9 @@ dashmate if it is running::
 Next, install the new version of dashmate following the instructions in the :ref:`dashmate install
 section <dashmate-install>`.
 
-Once the new version is installed, reset the configuration and services using ``--keep-data`` so the
-existing data is retained. Then, update the dashmate services::
+Once the new version is installed, reset the configuration and services::
 
-  dashmate reset --keep-data
+  dashmate reset --platform
   dashmate update
 
 Finally, restart dashmate::
