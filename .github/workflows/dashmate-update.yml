@@ -1,4 +1,4 @@
-name: Update Documentation on Platform release
+name: Update dashmate version on Platform release
 
 on:
   repository_dispatch:
@@ -6,14 +6,14 @@ on:
   workflow_dispatch:  # This allows the workflow to be triggered manually
 
 jobs:
-  update-docs:
+  update-dashmate-version:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout this repository
       uses: actions/checkout@v4
 
-    - name: Poll for Platform release assets named dashmate*.deb
+    - name: Poll for Platform release assets
       id: check_artifact
       run: |
         MAX_ATTEMPTS=10
