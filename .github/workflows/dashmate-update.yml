@@ -1,0 +1,63 @@
+name: Update Documentation on Platform release
+
+on:
+  repository_dispatch:
+    types: [release_published]
+  workflow_dispatch:  # This allows the workflow to be triggered manually
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout this repository
+      uses: actions/checkout@v4
+
+    - name: Poll for Platform release assets named dashmate*.deb
+      id: check_artifact
+      run: |
+        MAX_ATTEMPTS=10
+        ATTEMPT=0
+        ARTIFACT_NAME=""
+        
+        while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
+          attempt=$((ATTEMPT + 1))
+          echo "Attempt $ATTEMPT/$MAX_ATTEMPTS: Checking for artifact..."
+          
+          release_json=$(curl -s \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/dashpay/platform/releases/latest)
+          
+          ARTIFACT_NAME=$(echo "$release_json" | jq -r '.assets[] | select(.name | startswith("dashmate") and endswith(".deb")) | .name')
+          
+          if [ -n "$ARTIFACT_NAME" ]; then
+            echo "Found artifact: $ARTIFACT_NAME"
+            echo "::set-output name=ARTIFACT_NAME::$ARTIFACT_NAME"
+            break
+          fi
+          
+          echo "Artifact not found, retrying in 30 seconds..."
+          sleep 30
+        done
+        
+        if [ -z "$ARTIFACT_NAME" ]; then
+          echo "Error: Artifact dashmate*.deb not found after $MAX_ATTEMPTS attempts."
+          exit 1
+        fi
+
+    - name: Run dashmate version update script
+      run: |
+        run: "${GITHUB_WORKSPACE}/scripts/dashmate-update.sh"
+
+    # - name: Commit changes
+    #   uses: stefanzweifel/git-auto-commit-action@v5
+    #   with:
+    #     commit_message: "chore: update dashmate links to latest version"
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        branch: update-docs/${{ github.sha }}
+        title: "chore: update dashmate links to latest version"
+        body: |
+          This PR updates the documentation to use the latest version of dashmate. It updates the download links and the apt install instructions: `${{ steps.check_artifact.outputs.artifact_name }}`
