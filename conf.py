@@ -73,7 +73,8 @@ exclude_patterns = [
     'README.md',
     '.devcontainer',
     'transifex',
-    'docs/user/wallets/electrum/dip3_p2sh_howto.md'
+    'docs/user/wallets/electrum/dip3_p2sh_howto.md',
+    'venv'
 ]
 
 # The name of the Pygments (syntax highlighting) style to use.
