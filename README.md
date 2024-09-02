@@ -9,9 +9,10 @@ Dash User Documentation
 
 The official Dash documentation is oriented towards the average user and serves to describe all
 aspects of the Dash ecosystem, ranging from information for new users through to guides on more
-difficult tasks such as maintaining a masternode. This user documentation is available at
-https://docs.dash.org, while developer documentation is maintained separately at
-https://docs.dash.org/core and https://dashplatform.readme.io/.
+difficult tasks such as maintaining a masternode. User documentation (this repository) is hosted at
+https://docs.dash.org. Core developer documentation is found at https://docs.dash.org/core ([source
+repository](https://github.com/dashpay/docs-core)) and Platform developer documentation is at
+https://docs.dash.org/platform ([source repository](https://github.com/dashpay/docs-platform)).
 
 ## Usage
 
