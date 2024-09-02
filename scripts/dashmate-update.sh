@@ -27,5 +27,6 @@ else
     # Find and replace the URL and filename references in .rst files
     find . -iname "*.rst" -exec sed -i "s~https://github.com/dashpay/platform/releases/download/v[0-9]\+\.[0-9]\+\.[0-9]\+/dashmate_[0-9]\+\.[0-9]\+\.[0-9]\+\.[a-f0-9]\+-[0-9]\+_amd64\.deb~https://github.com/dashpay/platform/releases/download/${NEW_VERSION}/${NEW_FILE_NAME}~g" {} +
     find . -iname "*.rst" -exec sed -i "s~dashmate_[0-9]\+\.[0-9]\+\.[0-9]\+\.[a-f0-9]\+-[0-9]\+_amd64\.deb~${NEW_FILE_NAME}~g" {} +
+    echo "Dashmate version updated to ${NEW_VERSION} in documentation"
   fi
 fi
