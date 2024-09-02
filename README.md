@@ -46,8 +46,8 @@ instructions are based on Ubuntu 22.04.
     ```
 
 The documentation will be located in the `_build/html` directory and can be viewed by opening
-[_build/html/index.html](./_build/html/index.html) in a browser. Note: the standard search
-functionality is not available for locally built documentation.
+`_build/html/index.html` in a browser. Note: the standard search functionality is not available for
+locally built documentation.
 
 ## Contributing
 
