@@ -32,7 +32,6 @@ jobs:
           
           if [ -n "$ARTIFACT_NAME" ]; then
             echo "Found artifact: $ARTIFACT_NAME"
-            echo "::set-output name=ARTIFACT_NAME::$ARTIFACT_NAME"
             break
           fi
           
@@ -47,11 +46,6 @@ jobs:
 
     - name: Run dashmate version update script
       run: "${GITHUB_WORKSPACE}/scripts/dashmate-update.sh"
-
-    # - name: Commit changes
-    #   uses: stefanzweifel/git-auto-commit-action@v5
-    #   with:
-    #     commit_message: "chore: update dashmate links to latest version"
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v5
