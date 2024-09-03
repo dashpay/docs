@@ -149,6 +149,8 @@ Tools
 Block explorers, statistics and visualizations
 ----------------------------------------------
 
+**Dash Core**
+
 - https://insight.dash.org/insight/
 - https://blockchair.com/dash
 - https://chainz.cryptoid.info/dash/
@@ -158,6 +160,11 @@ Block explorers, statistics and visualizations
 - https://live.blockcypher.com/dash/
 - https://dash.tokenview.io
 - https://udjinm6.github.io/bitlisten/
+
+**Dash Platform**
+
+- https://platform-explorer.com/
+- https://mnowatch.org/evonodes/
 
 
 Treasury tools
