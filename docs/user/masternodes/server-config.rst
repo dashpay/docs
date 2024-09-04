@@ -40,8 +40,9 @@ dynamic IP addresses to home users.
 
 .. attention::
 
-  Disabling IPv6 is highly recommended to prevent communication issues that have
-  been observed when running nodes on some VPS providers.
+  Disabling IPv6 is highly recommended to prevent communication issues that have been observed when
+  running nodes on some VPS providers. We recommend turning it off through the VPS provider's setup
+  wizard during initial server creation.
 
 Before beginning, take a few minutes to review the masternode and evonode
 :hoverxref:`hardware requirements <mn-hardware-reqs>` which may help you decide
@@ -180,8 +181,11 @@ install the packages.
 Disable IPv6
 ------------
 
-Disabling IPv6 is recommended to avoid potential communication issues. We first check if IPv6 is
-enabled::
+We recommend turning off IPv6 to avoid potential communication issues. If you cannot do this through
+your VPS provider's server configuration settings, use the following steps to disable it through the
+operating system.
+
+Check if IPv6 is enabled::
 
   ip a | grep inet6
 
