@@ -38,6 +38,12 @@ While running a masternode from home on a desktop computer is technically
 possible, it will most likely not work reliably because most ISPs allocate
 dynamic IP addresses to home users.
 
+.. attention::
+
+  Disabling IPv6 is highly recommended to prevent communication issues that have been observed when
+  running nodes on some VPS providers. We recommend turning it off through the VPS provider's setup
+  wizard during initial server creation.
+
 Before beginning, take a few minutes to review the masternode and evonode
 :hoverxref:`hardware requirements <mn-hardware-reqs>` which may help you decide
 which VPS provider best suits your needs. We will use `Vultr
@@ -172,6 +178,37 @@ repository::
 The system will show a list of upgradable packages. Press **Y** and **Enter** to
 install the packages. 
 
+Disable IPv6
+------------
+
+We recommend turning off IPv6 to avoid potential communication issues. If you cannot do this through
+your VPS provider's server configuration settings, use the following steps to disable it through the
+operating system.
+
+Check if IPv6 is enabled::
+
+  ip a | grep inet6
+
+If multiple inet6 entries are returned, open sysctrl.conf::
+
+  sudo nano /etc/sysctl.conf
+
+
+Add the following lines at the end of the file, then press **Ctrl + X** to close the editor, then
+**Y** and **Enter** save the file.::
+
+  net.ipv6.conf.all.disable_ipv6 = 1
+  net.ipv6.conf.default.disable_ipv6 = 1
+  net.ipv6.conf.lo.disable_ipv6 = 1
+
+Load the changes::
+
+  sudo sysctl -p
+
+Finally, check if IPv6 was successfully disabled. No entries should be returned when you run the
+command this time::
+  
+  ip a | grep inet6
 
 Configure the firewall
 ----------------------
@@ -190,7 +227,6 @@ masternode will support:
     
     .. code-block:: shell
 
-      ufw allow ssh/tcp
       ufw limit ssh/tcp
       ufw allow 9999/tcp
       ufw logging on
@@ -200,7 +236,6 @@ masternode will support:
     
     .. code-block:: shell
 
-      ufw allow ssh/tcp
       ufw limit ssh/tcp
       ufw allow 443/tcp
       ufw allow 9999/tcp
@@ -214,7 +249,6 @@ masternode will support:
 
     .. code-block:: shell
 
-        ufw allow ssh/tcp
         ufw limit ssh/tcp
         ufw allow 1443/tcp
         ufw allow 19999/tcp
