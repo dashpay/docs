@@ -223,7 +223,6 @@ masternode will support:
     
     .. code-block:: shell
 
-      ufw allow ssh/tcp
       ufw limit ssh/tcp
       ufw allow 9999/tcp
       ufw logging on
@@ -233,7 +232,6 @@ masternode will support:
     
     .. code-block:: shell
 
-      ufw allow ssh/tcp
       ufw limit ssh/tcp
       ufw allow 443/tcp
       ufw allow 9999/tcp
@@ -247,7 +245,6 @@ masternode will support:
 
     .. code-block:: shell
 
-        ufw allow ssh/tcp
         ufw limit ssh/tcp
         ufw allow 1443/tcp
         ufw allow 19999/tcp
