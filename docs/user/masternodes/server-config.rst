@@ -38,6 +38,11 @@ While running a masternode from home on a desktop computer is technically
 possible, it will most likely not work reliably because most ISPs allocate
 dynamic IP addresses to home users.
 
+.. attention::
+
+  Disabling IPv6 is highly recommended to prevent communication issues that have
+  been observed when running nodes on some VPS providers.
+
 Before beginning, take a few minutes to review the masternode and evonode
 :hoverxref:`hardware requirements <mn-hardware-reqs>` which may help you decide
 which VPS provider best suits your needs. We will use `Vultr
