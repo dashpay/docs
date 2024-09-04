@@ -177,6 +177,34 @@ repository::
 The system will show a list of upgradable packages. Press **Y** and **Enter** to
 install the packages. 
 
+Disable IPv6
+------------
+
+Disabling IPv6 is recommended to avoid potential communication issues. We first check if IPv6 is
+enabled::
+
+  ip a | grep inet6
+
+If multiple inet6 entries are returned, open sysctrl.conf::
+
+  sudo nano /etc/sysctl.conf
+
+
+Add the following lines at the end of the file, then press **Ctrl + X** to close the editor, then
+**Y** and **Enter** save the file.::
+
+  net.ipv6.conf.all.disable_ipv6 = 1
+  net.ipv6.conf.default.disable_ipv6 = 1
+  net.ipv6.conf.lo.disable_ipv6 = 1
+
+Load the changes::
+
+  sudo sysctl -p
+
+Finally, check if IPv6 was successfully disabled. No entries should be returned when you run the
+command this time::
+  
+  ip a | grep inet6
 
 Configure the firewall
 ----------------------
