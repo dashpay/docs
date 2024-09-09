@@ -367,11 +367,35 @@ Once the new version is installed, reset the configuration and services::
 Finally, restart dashmate::
    
   dashmate start
-  
+
+Troubleshooting
+===============
+
+Sometimes Platform developers may request logs to assist in troubleshooting service or network
+issues. The following sections describe how to enable and collect the logs.
+
+.. _dashmate-logs-enable:
+
+Enabling logs
+-------------
+
+.. attention::
+
+   Only enable these logs if you have already configured log rotation to avoid running out of
+   disk space.
+
+Run these commands to enable logging on your dashmate node:
+
+.. code-block:: shell
+
+  dashmate config set platform.drive.tenderdash.log.level debug
+  dashmate config set platform.drive.abci.logs.stdout.level debug
+  dashmate restart --platform
+
 .. _dashmate-doctor:
 
 Collecting logs
-===============
+---------------
 
 Dashmate includes the doctor command to make troubleshooting and log reporting easier. The dashmate
 doctor command collects important debugging data about the masternode and creates a compressed report file
@@ -400,6 +424,41 @@ Upon successful completion, the full path to the report archive is displayed.
    :width: 90%
 
    Doctor output
+
+.. _dashmate-metrics:
+
+Metrics
+-------
+
+To provide better network visibility to DCG developers for troubleshooting, volunteers can
+contribute metrics to the DCG metrics server.
+
+1. Enable metrics on your dashmate node
+
+   .. code-block:: shell
+
+      dashmate config set platform.gateway.metrics.enabled true
+      dashmate config set platform.gateway.metrics.host 0.0.0.0
+      dashmate config set platform.gateway.metrics.port 9090
+
+      dashmate config set platform.gateway.rateLimiter.metrics.enabled true
+      dashmate config set platform.gateway.rateLimiter.metrics.host 0.0.0.0
+      dashmate config set platform.gateway.rateLimiter.metrics.port 9102
+
+      dashmate config set platform.drive.abci.metrics.enabled true
+      dashmate config set platform.drive.abci.metrics.host 0.0.0.0
+      dashmate config set platform.drive.abci.metrics.port 29090
+
+      dashmate config set platform.drive.tenderdash.metrics.enabled true
+      dashmate config set platform.drive.tenderdash.metrics.host 0.0.0.0
+      dashmate config set platform.drive.tenderdash.metrics.port 26660
+
+      dashmate restart --platform 
+
+2. Grant access to metrics from the DCG metrics server (34.219.3.238) by updating your network
+   configuration (i.e., your firewall, AWS security groups, etc.)
+
+3. Provide DCG with your IP address and port so it can be added to the DCG Prometheus server
 
 Additional Information
 ======================
