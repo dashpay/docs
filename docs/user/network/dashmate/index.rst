@@ -440,6 +440,7 @@ contribute metrics to the DCG metrics server.
       dashmate config set platform.gateway.metrics.enabled true
       dashmate config set platform.gateway.metrics.host 0.0.0.0
       dashmate config set platform.gateway.metrics.port 9090
+      dashmate config set platform.gateway.admin.enabled true
 
       dashmate config set platform.gateway.rateLimiter.metrics.enabled true
       dashmate config set platform.gateway.rateLimiter.metrics.host 0.0.0.0
