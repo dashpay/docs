@@ -381,8 +381,10 @@ Enabling logs
 
 .. attention::
 
-   Only enable these logs if you have already configured log rotation to avoid running out of
-   disk space.
+   Only enable these logs if you have already configured log rotation to avoid running out of disk
+   space. See `this tutorial
+   <https://www.digitalocean.com/community/tutorials/how-to-manage-logfiles-with-logrotate-on-ubuntu-22-04>`_
+   for details on configuring log rotation.
 
 Run these commands to enable logging on your dashmate node:
 
