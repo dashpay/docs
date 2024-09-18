@@ -379,14 +379,14 @@ issues. The following sections describe how to enable and collect the logs.
 Enabling logs
 -------------
 
-.. attention::
+.. warning::
 
    Only enable these logs if you have already configured log rotation to avoid running out of disk
    space. See `this tutorial
    <https://www.digitalocean.com/community/tutorials/how-to-manage-logfiles-with-logrotate-on-ubuntu-22-04>`_
    for details on configuring log rotation.
 
-Run these commands to enable logging on your dashmate node:
+Run these commands to change the log level to debug on your dashmate node:
 
 .. code-block:: shell
 
