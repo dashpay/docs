@@ -243,13 +243,13 @@ dashmate dependencies::
 Download the dashmate installation package for your CPU architecture from the `GitHub releases page
 <https://github.com/dashpay/platform/releases/latest>`__ and install it using apt::
 
-   wget https://github.com/dashpay/platform/releases/download/v1.2.0/dashmate_1.2.0.b4255f50f-1_amd64.deb
+   wget https://github.com/dashpay/platform/releases/download/v1.3.0/dashmate_1.3.0.69a350b9b-1_amd64.deb
    sudo apt update
-   sudo apt install ./dashmate_1.2.0.b4255f50f-1_amd64.deb
+   sudo apt install ./dashmate_1.3.0.69a350b9b-1_amd64.deb
 
 .. note:: At the end of the installation process, ``apt`` may display an error due to installing a downloaded package. You can ignore this error message:
    
-   ``N: Download is performed unsandboxed as root as file '/home/ubuntu/dashmate_1.2.0.b4255f50f-1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)``
+   ``N: Download is performed unsandboxed as root as file '/home/ubuntu/dashmate_1.3.0.69a350b9b-1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)``
 
 Alternative installation options are available on the :hoverxref:`dashmate page
 <dashmate-install>`.
