@@ -374,6 +374,78 @@ Troubleshooting
 Sometimes Platform developers may request logs to assist in troubleshooting service or network
 issues. The following sections describe how to enable and collect the logs.
 
+Configuring logs
+----------------
+
+.. warning::
+
+   Only enable these logs if you have already configured log rotation to avoid running out of disk
+   space. See `this tutorial
+   <https://www.digitalocean.com/community/tutorials/how-to-manage-logfiles-with-logrotate-on-ubuntu-22-04>`_
+   for details on configuring log rotation.
+
+By default, dashmate logs are not written to the docker host file system. At times you may want to
+write them to the host file system.
+
+Core
+^^^^
+
+Use ``dashmate config set`` to configure an location for storing Core logs on the file system.
+Replace the example path with one that makes sense for your system:
+
+.. code-block:: shell
+
+   dashmate config set core.log.filePath "/home/ubuntu/"
+
+To enable debug logging for additional details, set core.log.debug to ``true``:
+
+.. code-block:: shell
+
+   dashmate config set core.log.debug.enabled true
+
+.. dropdown:: Advanced debug logging
+
+   Dashmate supports some of the advanced debug log options provided by Dash Core. The following
+   boolean ``core.log.debug`` settings correspond directly to the parameters described in the `Core
+   documentation
+   <https://docs.dash.org/projects/core/en/stable/docs/dashcore/wallet-arguments-and-commands-dashd.html#debugging-testing-options>`_:
+   ``ips``, ``sourceLocations``, ``threadNames``, and ``timeMicros``.
+
+   .. code-block:: shell
+      
+      dashmate config set core.log.debug.includeOnly '["instantsend", "llmq"]'
+
+   Dashmate Debug Log Options
+   ===========================
+
+   +-------------------------+---------------------------------------------------------------+
+   | **Setting**             | **Description**                                               |
+   +-------------------------+---------------------------------------------------------------+
+   | ``ips``                 | Logs the IP addresses of incoming and outgoing connections    |
+   +-------------------------+---------------------------------------------------------------+
+   | ``sourceLocations``     | Logs the source locations (file and line number) for          |
+   |                         | debugging information                                         |
+   +-------------------------+---------------------------------------------------------------+
+   | ``threadNames``         | Logs the names of the threads used for various operations     |
+   +-------------------------+---------------------------------------------------------------+
+   | ``timeMicros``          | Logs timestamps with microsecond precision for detailed       |
+   |                         | performance analysis                                          |
+   +-------------------------+---------------------------------------------------------------+
+   | **Filter Option**       | **Description**                                               |
+   +-------------------------+---------------------------------------------------------------+
+   | ``includeOnly``         | Logs only for specified categories (e.g., ``net``, ``wallet``)|
+   +-------------------------+---------------------------------------------------------------+
+   | ``exclude``             | Excludes specified categories from logging (e.g., ``rpc``,    |
+   |                         | ``db``)                                                       |
+   +-------------------------+---------------------------------------------------------------+
+
+To disable logging to a file outside the container, reset the log path to ``null``:
+
+.. code-block:: shell
+
+   # To disable logging to file
+   dashmate config set core.log.filePath null   
+
 .. _dashmate-logs-enable:
 
 Enabling logs
