@@ -24,7 +24,7 @@ Install the new dashmate version
 
 3. Reset previous services to ensure compatibility with the new version::
    
-     dashmate reset --platform
+     dashmate reset --keep-data
 
 .. _evonode-setup-ssl:
 
