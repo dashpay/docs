@@ -359,9 +359,8 @@ dashmate if it is running::
 Next, install the new version of dashmate following the instructions in the :ref:`dashmate install
 section <dashmate-install>`.
 
-Once the new version is installed, reset the configuration and services::
+Once the new version of dashmate is installed, update dash service docker images::
 
-  dashmate reset --platform
   dashmate update
 
 Finally, restart dashmate::
