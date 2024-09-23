@@ -494,6 +494,44 @@ To disable logging to a file outside the container, reset the log path to ``null
 
    dashmate config set core.log.filePath null
 
+Configure Platform logs
+-----------------------
+
+Gateway
+^^^^^^^
+
+::
+
+   dashmate config set platform.gateway.log.accessLogs '[
+      {
+         "type": "file",
+         "format": "text",
+         "path": "/home/ubuntu/logs/gateway.log",
+         "template": null
+      }
+   ]'
+
+
+Drive
+^^^^^
+
+::
+
+   dashmate config set platform.drive.abci.logs '{
+      "stdout": {
+         "destination":"stdout",
+         "level": "info",
+         "format":"compact",
+         "color":true
+      }, 
+      "file": {
+         "destination": "/home/ubuntu/logs/drive-abci.log",
+         "level": "info",
+         "format": "compact",
+         "color": true
+      }
+   }'
+
 .. _dashmate-doctor:
 
 Collect logs
