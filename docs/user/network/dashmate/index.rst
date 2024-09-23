@@ -498,17 +498,6 @@ To disable logging to a file outside the container, reset the log path to ``null
 
    dashmate config set core.log.filePath null
 
-Change log level
-----------------
-
-Run these commands to change the log level to debug on your dashmate node:
-
-.. code-block:: shell
-
-  dashmate config set platform.drive.tenderdash.log.level debug
-  dashmate config set platform.drive.abci.logs.stdout.level debug
-  dashmate restart --platform
-
 .. _dashmate-doctor:
 
 Collect logs
