@@ -415,14 +415,11 @@ Press **Ctrl + X** to close the editor and **Y** and **Enter** save the file.
 
 .. _dashmate-logs-enable:
 
-Configure logs
---------------
-
-Core logs
-^^^^^^^^^
+Configure Core logs
+-------------------
 
 Enable logging to file
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 Use ``dashmate config set`` to configure an location for storing Core logs on the host file system.
 Replace the example path with one that matches your system:
@@ -432,7 +429,7 @@ Replace the example path with one that matches your system:
    dashmate config set core.log.filePath "/home/ubuntu/core-debug.log"
 
 Toggle debug logs
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 To enable debug logging for additional details, run the following command. Debug logs can be
 turned off by setting the value back to ``false``:
@@ -481,7 +478,7 @@ turned off by setting the value back to ``false``:
 
 
 View current log settings
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To view the current Core log settings, run:
 
@@ -490,7 +487,7 @@ To view the current Core log settings, run:
    dashmate config get core.log
 
 Disable logging to file
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 To disable logging to a file outside the container, reset the log path to ``null``:
 
