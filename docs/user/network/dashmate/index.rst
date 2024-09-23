@@ -501,13 +501,6 @@ To disable logging to a file outside the container, reset the log path to ``null
 Change log level
 ----------------
 
-.. warning::
-
-   Only enable these logs if you have already configured log rotation to avoid running out of disk
-   space. See `this tutorial
-   <https://www.digitalocean.com/community/tutorials/how-to-manage-logfiles-with-logrotate-on-ubuntu-22-04>`_
-   for details on configuring log rotation.
-
 Run these commands to change the log level to debug on your dashmate node:
 
 .. code-block:: shell
