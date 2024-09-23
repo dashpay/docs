@@ -403,7 +403,7 @@ Replace the example path with one that makes sense for your system:
 Toggle debug logs
 ~~~~~~~~~~~~~~~~~
 
-To enable debug logging for additional details, set core.log.debug to ``true``. Debug logs can be
+To enable debug logging for additional details, run the following command. Debug logs can be
 turned off by setting the value back to ``false``:
 
 .. code-block:: shell
@@ -412,15 +412,11 @@ turned off by setting the value back to ``false``:
 
 .. dropdown:: Advanced debug logging
 
-   Dashmate supports some of the advanced debug log options provided by Dash Core. The following
+   Dashmate supports some advanced debug log options provided by Dash Core. The following
    boolean ``core.log.debug`` settings correspond directly to the parameters described in the `Core
    documentation
    <https://docs.dash.org/projects/core/en/stable/docs/dashcore/wallet-arguments-and-commands-dashd.html#debugging-testing-options>`_:
    ``ips``, ``sourceLocations``, ``threadNames``, and ``timeMicros``.
-
-   .. code-block:: shell
-      
-      dashmate config set core.log.debug.includeOnly '["instantsend", "llmq"]'
 
    Dashmate Debug Log Options
    ===========================
@@ -440,12 +436,18 @@ turned off by setting the value back to ``false``:
    +-------------------------+---------------------------------------------------------------+
    | **Filter Option**       | **Description**                                               |
    +-------------------------+---------------------------------------------------------------+
-   | ``includeOnly``         | Logs only the specified categories (e.g., ``net``, ``wallet``)|
+   | ``includeOnly``         | Log only the specified categories (e.g., ``["net", "rpc"]``). |
    |                         | If empty, all categories will be logged                       |
    +-------------------------+---------------------------------------------------------------+
-   | ``exclude``             | Excludes specified categories from logging (e.g., ``rpc``,    |
-   |                         | ``instantsend``)                                              |
+   | ``exclude``             | Excludes specified categories from logging (e.g., ``["rpc",   |
+   |                         | "instantsend"]``)                                             |
    +-------------------------+---------------------------------------------------------------+
+
+   .. code-block:: shell
+      
+      dashmate config set core.log.debug.ips true
+      dashmate config set core.log.debug.includeOnly '["instantsend", "llmq"]'
+
 
 View current log settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~
