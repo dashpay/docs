@@ -374,18 +374,49 @@ Troubleshooting
 Sometimes Platform developers may request logs to assist in troubleshooting service or network
 issues. The following sections describe how to enable and collect the logs.
 
-Configuring logs
-----------------
-
 .. warning::
 
-   Only enable these logs if you have already configured log rotation to avoid running out of disk
-   space. See `this tutorial
-   <https://www.digitalocean.com/community/tutorials/how-to-manage-logfiles-with-logrotate-on-ubuntu-22-04>`_
-   for details on configuring log rotation.
+   Only enable logs if you have :ref:`configured log rotation <dashmate-log-rotation>` to avoid
+   running out of disk space.
+
+.. _dashmate-log-rotation:
+
+Set up log rotation
+-------------------
 
 By default, dashmate logs are not written to the docker host file system. At times you may want to
-write them to the host file system.
+write them to the host file system. Before enabling logging, it is important to configure log
+rotation to avoid running out of disk space. 
+
+Create a new logrotate configuration file for dashmate logs:
+
+.. code-block:: shell
+
+   sudo nano /etc/logrotate.d/platform-logs
+
+Paste in the following configuration and replace the example path one that matches your system. This
+example configuration rotates logs daily and retains seven historical files for each log file type.
+Historical files are each limited to 1GB.
+
+::
+
+   /home/ubuntu/logs/*.log {
+     rotate 7
+     daily
+     maxsize 1G
+     missingok
+     notifempty
+     copytruncate
+     compress
+     delaycompress
+   }
+
+Press **Ctrl + X** to close the editor and **Y** and **Enter** save the file.
+
+.. _dashmate-logs-enable:
+
+Configure logs
+--------------
 
 Core
 ^^^^
@@ -394,7 +425,7 @@ Enable logging to file
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``dashmate config set`` to configure an location for storing Core logs on the host file system.
-Replace the example path with one that makes sense for your system:
+Replace the example path with one that matches your system:
 
 .. code-block:: shell
 
@@ -467,10 +498,8 @@ To disable logging to a file outside the container, reset the log path to ``null
 
    dashmate config set core.log.filePath null
 
-.. _dashmate-logs-enable:
-
-Changing log level
-------------------
+Change log level
+----------------
 
 .. warning::
 
@@ -489,8 +518,8 @@ Run these commands to change the log level to debug on your dashmate node:
 
 .. _dashmate-doctor:
 
-Collecting logs
----------------
+Collect logs
+------------
 
 Dashmate includes the doctor command to make troubleshooting and log reporting easier. The dashmate
 doctor command collects important debugging data about the masternode and creates a compressed report file
