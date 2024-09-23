@@ -390,14 +390,21 @@ write them to the host file system.
 Core
 ^^^^
 
-Use ``dashmate config set`` to configure an location for storing Core logs on the file system.
+Enable logging to file
+~~~~~~~~~~~~~~~~~~~~~~
+
+Use ``dashmate config set`` to configure an location for storing Core logs on the host file system.
 Replace the example path with one that makes sense for your system:
 
 .. code-block:: shell
 
-   dashmate config set core.log.filePath "/home/ubuntu/"
+   dashmate config set core.log.filePath "/home/ubuntu/core-debug.log"
 
-To enable debug logging for additional details, set core.log.debug to ``true``:
+Toggle debug logs
+~~~~~~~~~~~~~~~~~
+
+To enable debug logging for additional details, set core.log.debug to ``true``. Debug logs can be
+turned off by setting the value back to ``false``:
 
 .. code-block:: shell
 
@@ -433,23 +440,35 @@ To enable debug logging for additional details, set core.log.debug to ``true``:
    +-------------------------+---------------------------------------------------------------+
    | **Filter Option**       | **Description**                                               |
    +-------------------------+---------------------------------------------------------------+
-   | ``includeOnly``         | Logs only for specified categories (e.g., ``net``, ``wallet``)|
+   | ``includeOnly``         | Logs only the specified categories (e.g., ``net``, ``wallet``)|
+   |                         | If empty, all categories will be logged                       |
    +-------------------------+---------------------------------------------------------------+
    | ``exclude``             | Excludes specified categories from logging (e.g., ``rpc``,    |
-   |                         | ``db``)                                                       |
+   |                         | ``instantsend``)                                              |
    +-------------------------+---------------------------------------------------------------+
+
+View current log settings
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To view the current Core log settings, run:
+
+.. code-block:: shell
+
+   dashmate config get core.log
+
+Disable logging to file
+~~~~~~~~~~~~~~~~~~~~~~~
 
 To disable logging to a file outside the container, reset the log path to ``null``:
 
 .. code-block:: shell
 
-   # To disable logging to file
-   dashmate config set core.log.filePath null   
+   dashmate config set core.log.filePath null
 
 .. _dashmate-logs-enable:
 
-Enabling logs
--------------
+Changing log level
+------------------
 
 .. warning::
 
