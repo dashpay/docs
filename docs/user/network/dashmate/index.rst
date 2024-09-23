@@ -366,11 +366,138 @@ Once the new version of dashmate is installed, update dash service docker images
 Finally, restart dashmate::
    
   dashmate start
-  
+
+Troubleshooting
+===============
+
+Sometimes Platform developers may request logs to assist in troubleshooting service or network
+issues. The following sections describe how to enable and collect the logs.
+
+.. warning::
+
+   Only enable logs if you have :ref:`configured log rotation <dashmate-log-rotation>` to avoid
+   running out of disk space.
+
+.. _dashmate-log-rotation:
+
+Set up log rotation
+-------------------
+
+By default, dashmate logs are not written to the docker host file system. At times you may want to
+write them to the host file system. Before enabling logging, it is important to configure log
+rotation to avoid running out of disk space. 
+
+Create a new logrotate configuration file for dashmate logs:
+
+.. code-block:: shell
+
+   sudo nano /etc/logrotate.d/platform-logs
+
+Paste in the following configuration and replace the example path one that matches your system. This
+example configuration rotates logs daily and retains seven historical files for each log file type.
+Historical files are each limited to 1GB.
+
+::
+
+   /home/ubuntu/logs/*.log {
+     rotate 7
+     daily
+     maxsize 1G
+     missingok
+     notifempty
+     copytruncate
+     compress
+     delaycompress
+   }
+
+Press **Ctrl + X** to close the editor and **Y** and **Enter** save the file.
+
+.. _dashmate-logs-enable:
+
+Configure Core logs
+-------------------
+
+Enable logging to file
+^^^^^^^^^^^^^^^^^^^^^^
+
+Use ``dashmate config set`` to configure an location for storing Core logs on the host file system.
+Replace the example path with one that matches your system:
+
+.. code-block:: shell
+
+   dashmate config set core.log.filePath "/home/ubuntu/core-debug.log"
+
+Toggle debug logs
+^^^^^^^^^^^^^^^^^
+
+To enable debug logging for additional details, run the following command. Debug logs can be
+turned off by setting the value back to ``false``:
+
+.. code-block:: shell
+
+   dashmate config set core.log.debug.enabled true
+
+.. dropdown:: Advanced debug logging
+
+   Dashmate supports some advanced debug log options provided by Dash Core. The following
+   boolean ``core.log.debug`` settings correspond directly to the parameters described in the `Core
+   documentation
+   <https://docs.dash.org/projects/core/en/stable/docs/dashcore/wallet-arguments-and-commands-dashd.html#debugging-testing-options>`_:
+   ``ips``, ``sourceLocations``, ``threadNames``, and ``timeMicros``.
+
+   Dashmate Debug Log Options
+   ===========================
+
+   +-------------------------+---------------------------------------------------------------+
+   | **Setting**             | **Description**                                               |
+   +-------------------------+---------------------------------------------------------------+
+   | ``ips``                 | Logs the IP addresses of incoming and outgoing connections    |
+   +-------------------------+---------------------------------------------------------------+
+   | ``sourceLocations``     | Logs the source locations (file and line number) for          |
+   |                         | debugging information                                         |
+   +-------------------------+---------------------------------------------------------------+
+   | ``threadNames``         | Logs the names of the threads used for various operations     |
+   +-------------------------+---------------------------------------------------------------+
+   | ``timeMicros``          | Logs timestamps with microsecond precision for detailed       |
+   |                         | performance analysis                                          |
+   +-------------------------+---------------------------------------------------------------+
+   | **Filter Option**       | **Description**                                               |
+   +-------------------------+---------------------------------------------------------------+
+   | ``includeOnly``         | Log only the specified categories (e.g., ``["net", "rpc"]``). |
+   |                         | If empty, all categories will be logged                       |
+   +-------------------------+---------------------------------------------------------------+
+   | ``exclude``             | Excludes specified categories from logging (e.g., ``["rpc",   |
+   |                         | "instantsend"]``)                                             |
+   +-------------------------+---------------------------------------------------------------+
+
+   .. code-block:: shell
+      
+      dashmate config set core.log.debug.ips true
+      dashmate config set core.log.debug.includeOnly '["instantsend", "llmq"]'
+
+
+View current log settings
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To view the current Core log settings, run:
+
+.. code-block:: shell
+
+   dashmate config get core.log
+
+Disable logging to file
+^^^^^^^^^^^^^^^^^^^^^^^
+
+To disable logging to a file outside the container, reset the log path to ``null``:
+
+.. code-block:: shell
+
+   dashmate config set core.log.filePath null
+
 .. _dashmate-doctor:
 
-Collecting logs
-===============
+Collect logs
+------------
 
 Dashmate includes the doctor command to make troubleshooting and log reporting easier. The dashmate
 doctor command collects important debugging data about the masternode and creates a compressed report file
@@ -399,6 +526,42 @@ Upon successful completion, the full path to the report archive is displayed.
    :width: 90%
 
    Doctor output
+
+.. _dashmate-metrics:
+
+Metrics
+-------
+
+To provide better network visibility to DCG developers for troubleshooting, volunteers can
+contribute metrics to the DCG metrics server.
+
+1. Enable metrics on your dashmate node
+
+   .. code-block:: shell
+
+      dashmate config set platform.gateway.metrics.enabled true
+      dashmate config set platform.gateway.metrics.host 0.0.0.0
+      dashmate config set platform.gateway.metrics.port 9090
+      dashmate config set platform.gateway.admin.enabled true
+
+      dashmate config set platform.gateway.rateLimiter.metrics.enabled true
+      dashmate config set platform.gateway.rateLimiter.metrics.host 0.0.0.0
+      dashmate config set platform.gateway.rateLimiter.metrics.port 9102
+
+      dashmate config set platform.drive.abci.metrics.enabled true
+      dashmate config set platform.drive.abci.metrics.host 0.0.0.0
+      dashmate config set platform.drive.abci.metrics.port 29090
+
+      dashmate config set platform.drive.tenderdash.metrics.enabled true
+      dashmate config set platform.drive.tenderdash.metrics.host 0.0.0.0
+      dashmate config set platform.drive.tenderdash.metrics.port 26660
+
+      dashmate restart --platform 
+
+2. Grant access to metrics from the DCG metrics server (34.219.3.238) by updating your network
+   configuration (i.e., your firewall, AWS security groups, etc.)
+
+3. Provide DCG with your IP address and port so it can be added to the DCG Prometheus server
 
 Additional Information
 ======================
