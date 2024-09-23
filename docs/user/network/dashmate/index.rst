@@ -418,8 +418,8 @@ Press **Ctrl + X** to close the editor and **Y** and **Enter** save the file.
 Configure logs
 --------------
 
-Core
-^^^^
+Core logs
+^^^^^^^^^
 
 Enable logging to file
 ~~~~~~~~~~~~~~~~~~~~~~
