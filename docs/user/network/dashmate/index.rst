@@ -497,10 +497,16 @@ To disable logging to a file outside the container, reset the log path to ``null
 Configure Platform logs
 -----------------------
 
-Gateway
-^^^^^^^
+Gateway logs
+^^^^^^^^^^^^
 
-::
+**Enable file logging**
+
+Use ``dashmate config set`` to configure a location for storing Platform gateway logs on the host
+file system. The example below adds file logging while also keeping the default stdout logging.
+Replace the example path with one that matches your system:
+
+.. code-block:: shell
 
    dashmate config set platform.gateway.log.accessLogs '[
       {
@@ -508,14 +514,45 @@ Gateway
          "format": "text",
          "path": "/home/ubuntu/logs/gateway.log",
          "template": null
+      },      
+      {
+         "type": "stdout",
+         "format": "text",
+         "template": null
       }
    ]'
 
+**Disable file logging**
 
-Drive
-^^^^^
+To disable logging to a file, remove the file config from the accessLogs setting:
 
-::
+.. code-block:: shell
+
+   dashmate config set platform.gateway.log.accessLogs '[
+      {
+         "type": "stdout",
+         "format": "text",
+         "template": null
+      }
+   ]'
+
+**View log settings**
+
+To view the current Platform gateway log settings, run:
+
+.. code-block:: shell
+
+   dashmate config get platform.gateway.log
+
+Drive ABCI logs
+^^^^^^^^^^^^^^^
+
+**Enable file logging**
+
+Use ``dashmate config set`` to configure a location for storing Platform ABCI logs on the host
+file system. Replace the example path with one that matches your system:
+
+.. code-block:: shell
 
    dashmate config set platform.drive.abci.logs '{
       "stdout": {
@@ -531,6 +568,57 @@ Drive
          "color": true
       }
    }'
+
+**Disable file logging**
+
+To disable logging to a file, remove the file config from the logs setting:
+
+.. code-block:: shell
+
+   dashmate config set platform.drive.abci.logs '{
+      "stdout": {
+         "destination":"stdout",
+         "level": "info",
+         "format":"compact",
+         "color":true
+      }
+   }'
+
+**View log settings**
+
+To view the current Platform gateway log settings, run:
+
+.. code-block:: shell
+
+   dashmate config get platform.drive.abci.logs
+
+Tenderdash logs
+^^^^^^^^^^^^^^^
+
+**Enable file logging**
+
+Use ``dashmate config set`` to configure a location for storing Tenderdash logs on the host file
+system. Replace the example path with one that matches your system:
+
+.. code-block:: shell
+
+   dashmate config set platform.drive.tenderdash.log.path "/home/ubuntu/logs/drive-tenderdash.log"
+
+**Disable file logging**
+
+To disable logging to a file, set the path back to ``null``:
+
+.. code-block:: shell
+
+   dashmate config set platform.drive.tenderdash.log.path null
+
+**View log settings**
+
+To view the current Tenderdash log settings, run:
+
+.. code-block:: shell
+
+   dashmate config get platform.drive.tenderdash.log
 
 .. _dashmate-doctor:
 
