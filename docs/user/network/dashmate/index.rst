@@ -497,6 +497,10 @@ To disable logging to a file outside the container, reset the log path to ``null
 Configure Platform logs
 -----------------------
 
+For troubleshooting flexibility, dashmate provides independent log configuration for the Platform
+Gateway, Drive ABCI, and Tenderdash. Each service can be configured with the most helpful log level
+and output format.
+
 Gateway logs
 ^^^^^^^^^^^^
 
