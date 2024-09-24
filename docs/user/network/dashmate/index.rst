@@ -420,7 +420,7 @@ Configure Core logs
 Enable logging to file
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Use ``dashmate config set`` to configure an location for storing Core logs on the host file system.
+Use ``dashmate config set`` to configure a location for storing Core logs on the host file system.
 Replace the example path with one that matches your system:
 
 .. code-block:: shell
@@ -619,6 +619,26 @@ To view the current Tenderdash log settings, run:
 .. code-block:: shell
 
    dashmate config get platform.drive.tenderdash.log
+
+Change log level
+^^^^^^^^^^^^^^^^
+
+Platform services support standard log levels. In increasing order of detail they are: ``error``,
+``warn``, ``info``, ``debug``, and `trace`. By default, logging is set to the ``info`` level. The
+log level for Platform services can be changed by using ``dashmate config set`` to update the
+following values:
+
+* platform.gateway.log.level
+* platform.drive.abci.logs.<log type>.level
+* platform.drive.tenderdash.log.level
+
+For example, run these commands to change the Drive log levels to debug on your dashmate node:
+
+.. code-block:: shell
+
+  dashmate config set platform.drive.abci.logs.stdout.level debug
+  dashmate config set platform.drive.tenderdash.log.level debug
+  dashmate restart --platform
 
 .. _dashmate-doctor:
 
