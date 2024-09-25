@@ -370,13 +370,30 @@ Finally, restart dashmate::
 Troubleshooting
 ===============
 
-Sometimes Platform developers may request logs to assist in troubleshooting service or network
-issues. The following sections describe how to enable and collect the logs.
-
 .. warning::
 
    Only enable logs if you have :ref:`configured log rotation <dashmate-log-rotation>` to avoid
    running out of disk space.
+
+The following sections describe how to enable log rotation, set up file logging for Core and
+Platform, adjust log levels, and collect the logs for analysis.
+
+Dashmate log overview
+---------------------
+
+Dashmate logs for each service are stored within its Docker container. Although this is typically
+sufficient, more advanced options are sometimes needed to adjust the log level, output format,
+or destination. Several cases include when you need to: 
+
+* Modify the level of detail provided in the logs (e.g., debug vs info)
+* Provide data to a log server (e.g., `Elasticsearch <https://www.elastic.co/elasticsearch>`_)
+* Store persistent file logs external to the Docker containers
+* Use log monitoring tools to track service health
+
+For example, since the default dashmate logs are only stored in the Docker containers, they are lost
+if the container is removed for some reason (new Docker image, dashmate reset, failure, etc.).
+Therefore, you may want to store persistent log files external to Docker while troubleshooting an
+issue to ensure valuable log data cannot be lost.
 
 .. _dashmate-log-rotation:
 
@@ -412,7 +429,7 @@ Historical files are each limited to 1GB.
 
 Press **Ctrl + X** to close the editor and **Y** and **Enter** save the file.
 
-.. _dashmate-logs-enable:
+.. _dashmate-logs-core:
 
 Configure Core logs
 -------------------
@@ -426,6 +443,8 @@ Replace the example path with one that matches your system:
 .. code-block:: shell
 
    dashmate config set core.log.filePath "/home/ubuntu/core-debug.log"
+
+.. _dashmate-logs-core-debug:
 
 Toggle debug logs
 ^^^^^^^^^^^^^^^^^
@@ -494,12 +513,16 @@ To disable logging to a file outside the container, reset the log path to ``null
 
    dashmate config set core.log.filePath null
 
+.. _dashmate-logs-platform:
+
 Configure Platform logs
 -----------------------
 
 For troubleshooting flexibility, dashmate provides independent log configuration for the Platform
 Gateway, Drive ABCI, and Tenderdash. Each service can be configured with the most helpful log level
 and output format.
+
+.. _dashmate-logs-platform-gateway:
 
 Gateway logs
 ^^^^^^^^^^^^
@@ -547,6 +570,8 @@ To view the current Platform gateway log settings, run:
 .. code-block:: shell
 
    dashmate config get platform.gateway.log
+
+.. _dashmate-logs-platform-abci:
 
 Drive ABCI logs
 ^^^^^^^^^^^^^^^
@@ -596,6 +621,8 @@ To view the current Platform gateway log settings, run:
 
    dashmate config get platform.drive.abci.logs
 
+.. _dashmate-logs-platform-tenderdash:
+
 Tenderdash logs
 ^^^^^^^^^^^^^^^
 
@@ -623,6 +650,8 @@ To view the current Tenderdash log settings, run:
 .. code-block:: shell
 
    dashmate config get platform.drive.tenderdash.log
+
+.. _dashmate-logs-change-level:
 
 Change log level
 ^^^^^^^^^^^^^^^^
