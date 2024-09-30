@@ -570,6 +570,21 @@ To disable logging to a file, remove the file config from the accessLogs setting
       }
    ]'
 
+**Change log level**
+
+Platform gateway service logs support several levels of detail. In increasing order of detail they
+are: ``critical``, ``error``, ``warn``, ``info`` (default), ``debug``, and ``trace``. To disable
+service logs, set the log level to ``off``. 
+
+The log level can be changed by using ``dashmate config set`` to update the
+``platform.gateway.log.level`` value. For example, run these commands to change the gateway service
+log level to debug on your dashmate node:
+
+.. code-block:: shell
+
+  dashmate config set platform.gateway.log.level debug
+  dashmate restart --platform
+
 **View log settings**
 
 To view the current Platform gateway log settings, run:
@@ -620,6 +635,23 @@ To disable logging to a file, remove the file config from the logs setting:
       }
    }'
 
+**Change log level**
+
+Drive ABCI logs support several levels of detail. In increasing order of detail they are: ``error``,
+``warn``, ``info`` (default), ``debug``, and ``trace``. A logging specification string can also be
+provided in the RUST_LOG format for more flexibility. To disable service logs, set the log level to
+``silent``. 
+
+The log level can be changed by using ``dashmate config set`` to update the
+``platform.drive.abci.logs.*.level`` value. For example, run these commands to change the log levels
+for file logging and stdout logging to debug on your dashmate node:
+
+.. code-block:: shell
+
+  dashmate config set platform.drive.abci.logs.file.level debug
+  dashmate config set platform.drive.abci.logs.stdout.level debug
+  dashmate restart --platform
+
 **View log settings**
 
 To view the current Platform gateway log settings, run:
@@ -650,6 +682,22 @@ To disable logging to a file, set the path back to ``null``:
 
    dashmate config set platform.drive.tenderdash.log.path null
 
+**Change log level**
+
+Tenderdash logs support several levels of detail. In increasing order of detail they are:
+``error``, ``warn``, ``info`` (default), ``debug``, and ``trace``. A logging
+specification string can also be provided in the RUST_LOG format for more flexibility. To disable
+service logs, set the log level to ``silent``. 
+
+The log level can be changed by using ``dashmate config set`` to update the
+``platform.drive.abci.logs.*.level`` value. For example, run these commands to change the log level
+to debug on your dashmate node:
+
+.. code-block:: shell
+
+  dashmate config set platform.drive.tenderdash.log.level debug
+  dashmate restart --platform
+
 **View log settings**
 
 To view the current Tenderdash log settings, run:
@@ -657,28 +705,6 @@ To view the current Tenderdash log settings, run:
 .. code-block:: shell
 
    dashmate config get platform.drive.tenderdash.log
-
-.. _dashmate-logs-change-level:
-
-Change log level
-^^^^^^^^^^^^^^^^
-
-Platform services support standard log levels. In increasing order of detail they are: ``error``,
-``warn``, ``info``, ``debug``, and `trace`. By default, logging is set to the ``info`` level. The
-log level for Platform services can be changed by using ``dashmate config set`` to update the
-following values:
-
-* platform.gateway.log.level
-* platform.drive.abci.logs.<log type>.level
-* platform.drive.tenderdash.log.level
-
-For example, run these commands to change the Drive log levels to debug on your dashmate node:
-
-.. code-block:: shell
-
-  dashmate config set platform.drive.abci.logs.stdout.level debug
-  dashmate config set platform.drive.tenderdash.log.level debug
-  dashmate restart --platform
 
 .. _dashmate-doctor:
 
