@@ -429,6 +429,13 @@ Historical files are each limited to 1GB.
 
 Press **Ctrl + X** to close the editor and **Y** and **Enter** save the file.
 
+.. tip::
+
+   For additional log rotation details, see `this configuration tutorial
+   <https://www.digitalocean.com/community/tutorials/how-to-manage-logfiles-with-logrotate-on-ubuntu-22-04>`_
+   or check out the `logrotate man pages
+   <https://manpages.ubuntu.com/manpages/jammy/man8/logrotate.8.html>`_.
+
 .. _dashmate-logs-core:
 
 Configure Core logs
