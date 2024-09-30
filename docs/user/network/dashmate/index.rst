@@ -534,10 +534,14 @@ and output format.
 Gateway logs
 ^^^^^^^^^^^^
 
+The Platform gateway has two types of logs: service logs and access logs. Service logs are directed
+to stdout, while access logs can be configured to go to stdout, stderr, or to a file. If all logs
+are directed to stdout, the output will be a mixture of service and access data.
+
 **Enable file logging**
 
-Use ``dashmate config set`` to configure a location for storing Platform gateway logs on the host
-file system. The example below adds file logging while also keeping the default stdout logging.
+Use ``dashmate config set`` to configure a location for storing Platform gateway access logs on the
+host file system. The example below adds file logging while also keeping the default stdout logging.
 Replace the example path with one that matches your system:
 
 .. code-block:: shell
