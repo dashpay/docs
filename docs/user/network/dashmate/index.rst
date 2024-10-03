@@ -370,13 +370,30 @@ Finally, restart dashmate::
 Troubleshooting
 ===============
 
-Sometimes Platform developers may request logs to assist in troubleshooting service or network
-issues. The following sections describe how to enable and collect the logs.
-
 .. warning::
 
    Only enable logs if you have :ref:`configured log rotation <dashmate-log-rotation>` to avoid
    running out of disk space.
+
+The following sections describe how to enable log rotation, set up file logging for Core and
+Platform, adjust log levels, and collect the logs for analysis.
+
+Dashmate log overview
+---------------------
+
+Dashmate logs for each service are stored within its Docker container. Although this is typically
+sufficient, more advanced options are sometimes needed to adjust the log level, output format,
+or destination. Several cases include when you need to: 
+
+* Modify the level of detail provided in the logs (e.g., debug vs info)
+* Provide data to a log server (e.g., `Elasticsearch <https://www.elastic.co/elasticsearch>`_)
+* Store persistent file logs external to the Docker containers
+* Use log monitoring tools to track service health
+
+For example, since the default dashmate logs are only stored in the Docker containers, they are lost
+if the container is removed for some reason (new Docker image, dashmate reset, failure, etc.).
+Therefore, you may want to store persistent log files external to Docker while troubleshooting an
+issue to ensure valuable log data cannot be lost.
 
 .. _dashmate-log-rotation:
 
@@ -412,7 +429,14 @@ Historical files are each limited to 1GB.
 
 Press **Ctrl + X** to close the editor and **Y** and **Enter** save the file.
 
-.. _dashmate-logs-enable:
+.. tip::
+
+   For additional log rotation details, see `this configuration tutorial
+   <https://www.digitalocean.com/community/tutorials/how-to-manage-logfiles-with-logrotate-on-ubuntu-22-04>`_
+   or check out the `logrotate man pages
+   <https://manpages.ubuntu.com/manpages/jammy/man8/logrotate.8.html>`_.
+
+.. _dashmate-logs-core:
 
 Configure Core logs
 -------------------
@@ -420,12 +444,14 @@ Configure Core logs
 Enable logging to file
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Use ``dashmate config set`` to configure an location for storing Core logs on the host file system.
+Use ``dashmate config set`` to configure a location for storing Core logs on the host file system.
 Replace the example path with one that matches your system:
 
 .. code-block:: shell
 
    dashmate config set core.log.filePath "/home/ubuntu/core-debug.log"
+
+.. _dashmate-logs-core-debug:
 
 Toggle debug logs
 ^^^^^^^^^^^^^^^^^
@@ -493,6 +519,196 @@ To disable logging to a file outside the container, reset the log path to ``null
 .. code-block:: shell
 
    dashmate config set core.log.filePath null
+
+.. _dashmate-logs-platform:
+
+Configure Platform logs
+-----------------------
+
+For troubleshooting flexibility, dashmate provides independent log configuration for the Platform
+Gateway, Drive ABCI, and Tenderdash. Each service can be configured with the most helpful log level
+and output format.
+
+.. _dashmate-logs-platform-gateway:
+
+Gateway logs
+^^^^^^^^^^^^
+
+The Platform gateway has two types of logs: service logs and access logs. Service logs are directed
+to stdout, while access logs can be configured to go to stdout, stderr, or to a file. If all logs
+are directed to stdout, the output will be a mixture of service and access data.
+
+**Enable file logging**
+
+Use ``dashmate config set`` to configure a location for storing Platform gateway access logs on the
+host file system. The example below adds file logging while also keeping the default stdout logging.
+Replace the example path with one that matches your system:
+
+.. code-block:: shell
+
+   dashmate config set platform.gateway.log.accessLogs '[
+      {
+         "type": "file",
+         "format": "text",
+         "path": "/home/ubuntu/logs/gateway.log",
+         "template": null
+      },      
+      {
+         "type": "stdout",
+         "format": "text",
+         "template": null
+      }
+   ]'
+
+**Disable file logging**
+
+To disable logging to a file, remove the file config from the accessLogs setting:
+
+.. code-block:: shell
+
+   dashmate config set platform.gateway.log.accessLogs '[
+      {
+         "type": "stdout",
+         "format": "text",
+         "template": null
+      }
+   ]'
+
+**Change log level**
+
+Platform gateway service logs support several levels of detail. In increasing order of detail they
+are: ``critical``, ``error``, ``warn``, ``info`` (default), ``debug``, and ``trace``. To disable
+service logs, set the log level to ``off``. 
+
+The log level can be changed by using ``dashmate config set`` to update the
+``platform.gateway.log.level`` value. For example, run these commands to change the gateway service
+log level to debug on your dashmate node:
+
+.. code-block:: shell
+
+  dashmate config set platform.gateway.log.level debug
+  dashmate restart --platform
+
+**View log settings**
+
+To view the current Platform gateway log settings, run:
+
+.. code-block:: shell
+
+   dashmate config get platform.gateway.log
+
+.. _dashmate-logs-platform-abci:
+
+Drive ABCI logs
+^^^^^^^^^^^^^^^
+
+**Enable file logging**
+
+Use ``dashmate config set`` to configure a location for storing Platform ABCI logs on the host
+file system. Replace the example path with one that matches your system:
+
+.. code-block:: shell
+
+   dashmate config set platform.drive.abci.logs '{
+      "stdout": {
+         "destination":"stdout",
+         "level": "info",
+         "format":"compact",
+         "color":true
+      }, 
+      "file": {
+         "destination": "/home/ubuntu/logs/drive-abci.log",
+         "level": "info",
+         "format": "compact",
+         "color": true
+      }
+   }'
+
+**Disable file logging**
+
+To disable logging to a file, remove the file config from the logs setting:
+
+.. code-block:: shell
+
+   dashmate config set platform.drive.abci.logs '{
+      "stdout": {
+         "destination":"stdout",
+         "level": "info",
+         "format":"compact",
+         "color":true
+      }
+   }'
+
+**Change log level**
+
+Drive ABCI logs support several levels of detail. In increasing order of detail they are: ``error``,
+``warn``, ``info`` (default), ``debug``, and ``trace``. A logging specification string can also be
+provided in the RUST_LOG format for more flexibility. To disable service logs, set the log level to
+``silent``. 
+
+The log level can be changed by using ``dashmate config set`` to update the
+``platform.drive.abci.logs.*.level`` value. For example, run these commands to change the log levels
+for file logging and stdout logging to debug on your dashmate node:
+
+.. code-block:: shell
+
+  dashmate config set platform.drive.abci.logs.file.level debug
+  dashmate config set platform.drive.abci.logs.stdout.level debug
+  dashmate restart --platform
+
+**View log settings**
+
+To view the current Platform gateway log settings, run:
+
+.. code-block:: shell
+
+   dashmate config get platform.drive.abci.logs
+
+.. _dashmate-logs-platform-tenderdash:
+
+Tenderdash logs
+^^^^^^^^^^^^^^^
+
+**Enable file logging**
+
+Use ``dashmate config set`` to configure a location for storing Tenderdash logs on the host file
+system. Replace the example path with one that matches your system:
+
+.. code-block:: shell
+
+   dashmate config set platform.drive.tenderdash.log.path "/home/ubuntu/logs/drive-tenderdash.log"
+
+**Disable file logging**
+
+To disable logging to a file, set the path back to ``null``:
+
+.. code-block:: shell
+
+   dashmate config set platform.drive.tenderdash.log.path null
+
+**Change log level**
+
+Tenderdash logs support several levels of detail. In increasing order of detail they are:
+``error``, ``warn``, ``info`` (default), ``debug``, and ``trace``. A logging
+specification string can also be provided in the RUST_LOG format for more flexibility. To disable
+service logs, set the log level to ``silent``. 
+
+The log level can be changed by using ``dashmate config set`` to update the
+``platform.drive.abci.logs.*.level`` value. For example, run these commands to change the log level
+to debug on your dashmate node:
+
+.. code-block:: shell
+
+  dashmate config set platform.drive.tenderdash.log.level debug
+  dashmate restart --platform
+
+**View log settings**
+
+To view the current Tenderdash log settings, run:
+
+.. code-block:: shell
+
+   dashmate config get platform.drive.tenderdash.log
 
 .. _dashmate-doctor:
 
