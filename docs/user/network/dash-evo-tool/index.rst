@@ -119,6 +119,12 @@ the type you want to add. In this example, an evonode identity is being added.
 
    Identity load screen for evonode
 
+.. _evo-tool-identity-load-id-key:
+
+.. attention::
+
+  Your collateral key is **not** required. Do not enter it into the Dash Evo Tool.
+
 Add the Identity ID and Owner Private Key. You may also want to add the Voting Private Key, but
 adding the Payout Address Private Key is **not** recommended. For a masternode or evonode, use the
 protx hash as the Identity ID.
@@ -145,7 +151,7 @@ can also initiate :ref:`withdrawals <evo-tool-identity-evo-withdraw>`.
 Evonode withdrawals
 -------------------
 
-.. attention::
+.. note::
 
   Withdrawal requests enter a queue that is currently processed more slowly than intended. Depending
   on the timing of the withdrawal request, it may take up to 18 hours to complete. 
