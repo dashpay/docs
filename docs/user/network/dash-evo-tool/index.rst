@@ -129,6 +129,15 @@ Add the Identity ID and Owner Private Key. You may also want to add the Voting P
 adding the Payout Address Private Key is **not** recommended. For a masternode or evonode, use the
 protx hash as the Identity ID.
 
+If you use the `Dash Masternode Tool <https://github.com/Bertrand256/dash-masternode-tool>`_, you
+can get the protx hash and private keys from the masternode details screen.
+
+.. figure:: img/dmt-keys.png
+   :align: center
+   :width: 90%
+
+   Dash Masternode Tool
+
 Click **Load Identity** once you have entered the required information.
 
 .. figure:: img/identity/add-identity-id-and-key.png
