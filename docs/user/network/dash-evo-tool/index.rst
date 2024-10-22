@@ -189,3 +189,34 @@ correct. Click **Confirm** to request the withdrawal.
 
    Withdrawal confirmation screen
 
+Name voting
+===========
+
+.. note::
+  
+  Voting can only be done by masternodes and evonodes, and each node can only modify its vote four times.
+  See the :ref:`load identity section <evo-tool-identity-load>` for instructions on importing your keys.
+
+The Voting screen displays a list of names that are currently require a vote. Click the **Refresh**
+button to update the screen at any time.
+
+To vote for a contestant, click on an entry in the Contestants column. You can also vote to Lock the
+name or Abstain by clicking the value in those columns. See the `DPNS page
+<https://docs.dash.org/projects/platform/en/stable/docs/explanations/dpns.html#voting-details>`_ for
+more voting details.
+
+.. figure:: img/voting/main-contested-name.png
+   :align: center
+   :width: 90%
+
+   Voting screen
+
+After clicking one of the contestants, vote for that identity to receive the name by clicking one of
+your specific identities on the Vote Confirmation screen. Click **All** to vote with all your loaded
+identities simultaneously.
+
+.. figure:: img/voting/confirm-vote.png
+   :align: center
+   :width: 90%
+
+   Vote confirmation screen
