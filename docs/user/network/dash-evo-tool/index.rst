@@ -37,10 +37,15 @@ Configuration
 =============
 
 1. Open the directory where the download was unzipped.
-2. Open the ``.env`` file (you may need to show hidden files to see it) and update the
-   ``*_CORE_RPC_USER``, and ``*_CORE_RPC_PASSWORD`` values to match the values configured in your
-   ``dash.conf`` file. *Unless you have a non-standard installation, only the user and password
-   fields should need to be updated.*
+2. Open the ``.env`` file (you may need to show hidden files to see it). For the network you plan to
+   connect to, make the following changes. Replace the ``*`` with the network name (MAINNET or
+   TESTNET):
+
+   * Update ``*_CORE_RPC_USER`` to match the ``rpcuser`` value from your Dash Core dash.conf file.
+   * Update ``*_CORE_RPC_PASSWORD`` to match the ``rpcpassword`` value from your Dash Core dash.conf
+     file configured in your Dash Core ``dash.conf`` file.
+   * If your dash.conf includes ``rpcallowip``, update ``*_CORE_HOST`` with that IP address.
+   * If your dash.conf includes ``rpcport``, update ``*_CORE_RPC_PORT`` with that port.
 
 .. tip::
 
