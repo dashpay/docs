@@ -76,6 +76,7 @@ interest.
    mining/index
    developers/index
    network/dashmate/index
+   network/dash-evo-tool/index
    network/electrumx-server
    marketing.rst
    legal.rst
