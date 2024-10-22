@@ -50,7 +50,13 @@ Configuration
 .. tip::
 
   The default location of the ``dash.conf`` file can be found in the :ref:`Dash Core documentation
-  <dashcore-rpc>`.
+  <dashcore-rpc>`. At a minimum, the following values must be defined for RPC access to be enabled:
+
+  .. code-block:: ini
+
+    server=1
+    rpcuser=<some_user_name>
+    rpcpassword=<some_password>
 
 .. _evo-tool-run:
 
