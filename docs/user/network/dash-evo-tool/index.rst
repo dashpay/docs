@@ -17,6 +17,10 @@ and use the Dash Evo Tool.
 Installation
 ============
 
+.. note::
+
+  The Dash Evo Tool requires a Dash Core full node that is configured to allow RPC access.
+
 Linux, MacOS, or Windows packages are available on the `GitHub releases page
 <https://github.com/dashpay/dash-evo-tool/releases/latest>`__. Download the zip file for your
 Operating System, then unzip the downloaded file:
