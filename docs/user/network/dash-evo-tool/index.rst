@@ -9,7 +9,7 @@ Dash Evo Tool
 =============
 
 Dash Evo Tool is an application designed to help you vote on usernames, withdraw evonode credits,
-and complete an expanding list of Platform actions. This guide describes how to download, install
+and complete an expanding list of Platform actions. This guide describes how to download, install,
 and use the Dash Evo Tool.
 
 .. _evo-tool-install:
@@ -19,7 +19,7 @@ Installation
 
 .. note::
 
-  The Dash Evo Tool requires a Dash Core full node that is configured to allow RPC access.
+  The Dash Evo Tool requires a Dash Core full node configured to allow RPC access.
 
 Linux, MacOS, or Windows packages are available on the `GitHub releases page
 <https://github.com/dashpay/dash-evo-tool/releases/latest>`__. Download the zip file for your
@@ -83,7 +83,7 @@ Selection screen and click the checkbox in the Select column for the desired net
 .. note::
 
   You can also launch Dash Core manually without using the Dash Evo Tool. This may be necessary if
-  you have Dash Core installed in a non-standard location.
+  Dash Core is installed in a non-standard location.
 
 .. figure:: img/network-selection.png
    :align: center
@@ -150,7 +150,7 @@ Evonode withdrawals
   Withdrawal requests enter a queue that is currently processed more slowly than intended. Depending
   on the timing of the withdrawal request, it may take up to 18 hours to complete. 
   
-  For security there is also a limit on how much can be withdrawn from Platform per day. If
+  For security, there is also a limit on how much can be withdrawn from Platform daily. If
   withdrawal requests hit the daily limit, they will remain in the queue longer. For details, see
   this `DCG development update
   <https://www.youtube.com/live/rc_avHHqG6E?si=ETv0yX-1b3odCU8F&t=599>`_.
@@ -163,9 +163,14 @@ From the identity main screen, click the **Withdraw** button for an identity.
 
    Identity screen with an evonode identity loaded
 
-On the withdraw screen, select the key to be used for signing the withdrawal. Selecting the owner
-key is recommended since this will direct the withdrawal to the payout address. Next, set the amount
-to withdraw.
+On the withdrawal screen, select the key to sign the withdrawal. Selecting the owner key is
+recommended since this will direct the withdrawal to the payout address. Next, set the amount to
+withdraw.
+
+.. note::
+
+  The **Max** button currently has a bug and sets the withdrawal amount in credits instead of DASH,
+  so you will need to manually adjust the amount if you use that button.
 
 Click **Withdraw** after entering the information.
 
