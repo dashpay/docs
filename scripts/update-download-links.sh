@@ -4,8 +4,8 @@
 # Dash Core version is released
 
 # Define old and new version variables
-OLD_VERSION="21.0.2"
-NEW_VERSION="21.1.0"
+OLD_VERSION="21.1.0"
+NEW_VERSION="21.1.1"
 
 git checkout -b v$NEW_VERSION-links
 
