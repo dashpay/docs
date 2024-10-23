@@ -12,7 +12,7 @@ NEW_VERSION=$(curl -s \
 if [[ $? -ne 0 || -z "$NEW_VERSION" ]]; then
   echo "Error: Unexpected response when retrieving the current Dash Core version. Received: $NEW_VERSION"
 else
-
+  NEW_VERSION=0.0.1 # test
   # Print the extracted values (for verification)
   echo "Extracted Version: $NEW_VERSION"
   git checkout -b v$NEW_VERSION-links
