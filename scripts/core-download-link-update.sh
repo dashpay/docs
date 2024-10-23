@@ -15,7 +15,6 @@ else
 
   # Print the extracted values (for verification)
   echo "Extracted Version: $NEW_VERSION"
-
   git checkout -b v$NEW_VERSION-links
 
   # Use the variables in the find/sed commands
