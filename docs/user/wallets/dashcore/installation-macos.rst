@@ -92,18 +92,12 @@ Running Dash Core for the first time
 ------------------------------------
 
 To run Dash Core for the first time, either open Launchpad or browse to
-your **Applications** folder in Finder. Double-click **Dash Core** or
+your **Applications** folder in Finder. Double-click **Dash Core** or
 **Dash-Qt** to start the application. You may see a warning about
-opening an app from an unidentified developer. To resolve this problem,
-simply Control-click the app icon and choose **Open** from the shortcut
-menu, then click **Open** again in the dialog box. The app is saved as
-an exception to your security settings, and you can open it in the
-future by double-clicking it just as you can any registered app.
+opening an app downloaded from the internet. Simply click **Open** to
+continue launching the application.
 
-.. figure:: img/macos/112414895.png
-   :width: 280px
-
-.. figure:: img/macos/112414905.png
+.. figure:: img/macos/download-warning.png
    :width: 280px
 
    Unblocking macOS from running Dash Core
