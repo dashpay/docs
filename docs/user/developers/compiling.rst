@@ -77,12 +77,23 @@ Prepare guix
 
 It is only necessary to run this step during the initial setup of your machine.
 Run the guix install routine to prepare your environment and answer "Y" for all
-prompts::
+prompts:
 
-  cd /tmp
-  wget https://git.savannah.gnu.org/cgit/guix.git/plain/etc/guix-install.sh
-  chmod +x guix-install.sh
-  ./guix-install.sh
+.. tab-set::
+  .. tab-item:: Ubuntu/Debian install
+
+    .. code-block:: shell
+
+      sudo apt install guix
+
+  .. tab-item:: General install
+    
+    .. code-block:: shell
+
+      cd /tmp
+      wget https://git.savannah.gnu.org/cgit/guix.git/plain/etc/guix-install.sh
+      chmod +x guix-install.sh
+      ./guix-install.sh
 
 Clone repositories
 ------------------
