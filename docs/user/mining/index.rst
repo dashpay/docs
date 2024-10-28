@@ -103,8 +103,8 @@ DISCLAIMER: This list is provided for informational purposes only.
 Services listed here have not been evaluated or endorsed by the Dash
 developers and no guarantees are made as to the accuracy of this
 information. Please exercise discretion when using third-party services.
-If you’d like to be added to this list please reach out to
-leon.white@dash.org
+If you'd like to be added to this list, please open an issue on the
+`GitHub repository <https://github.com/dashpay/docs>`_.
 
 In addition to joining a pool, you will also need to create a Dash
 address to receive your payout. To do this in Dash Core wallet, see
@@ -134,7 +134,7 @@ quickly due to the rapidly changing market and difficulty of mining
 Dash. You are responsible for carrying out your own research and any
 listing on this page should not be considered an endorsement of any
 particular product. A good place to begin your research is the `mining
-section of the Dash Forums <https://www.dash.org/forum/topic/hardware-discussions-asic-gpu-cpu.101/>`_.
+section of the Dash Forums <https://www.dash.org/forum/index.php?forums/hardware-discussions-only-asic-profitable.101//>`_.
 
 The following X11 ASIC miners are available on the market today, click
 the product name to visit the manufacturer's website:
