@@ -74,12 +74,7 @@ Mining Pools
 Mining Dash in pools is more likely to generate rewards than solo mining
 directly on the blockchain. Mining dash using P2Pool is strongly
 encouraged, since it is a good way to distribute, rather than
-centralize, the hashing power. The following site lists Dash P2Pool
-mining pools near you, simply choose a pool with favourable fees and
-ping time and enter your Dash payment address as username and anything
-as password.
-
-- http://www.p2poolmining.us/p2poolnodes/
+centralize, the hashing power.
 
 If you would like to set up your own P2Pool, documentation of the
 process is available :ref:`here <p2pool>` and the code for p2pool-dash
