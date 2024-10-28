@@ -14,23 +14,8 @@ problems as a method of securing blocks on the blockchain. The process
 of mining creates new currency tokens as a reward to the miner. Mining
 is possible on a range of hardware. Dash implements an algorithm known
 as :ref:`X11 <x11-hash-algorithm>`, which the miner must solve in order
-to earn rewards.
-
-The simplest and most general hardware available for mining is the
-general purpose CPU present in every computer. A CPU is designed to be
-versatile but offers less efficiency than a GPU, which is designed to
-rapidly calculate millions of vectors in parallel. While specific CPU
-instruction enhancements related to cryptography such as AES or AVX can
-provide a decent boost, GPUs offer a significant performance increase
-due to their multiple pipelines capable of processing the predictably
-repetitive calculations associated with cryptocurrency mining. Finally,
-ASICs are relatively inflexible and can only process the specific
-function(s) for which they were designed, but at an even faster rate
-than the more general purpose GPUs and CPUs. A number of X11 ASICs are
-now available on the market, which have quickly made CPU and GPU mining
-uneconomic due to the increased difficulty of hashing arising from the
-rapidly increasing hash rate. The result is a currency which is more
-secure against brute force attacks on the Dash blockchain.
+to earn rewards. A number of X11 ASICs are available on the market,
+which help make Dash secure against brute force attacks on the blockchain.
 
 The profitability of mining is determined by the hashrate of your mining
 device, the current network difficulty and the costs of your hardware
