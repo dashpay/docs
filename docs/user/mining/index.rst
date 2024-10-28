@@ -106,16 +106,11 @@ to using a typical mining pool can be found :ref:`here <mining-pools>`.
 
 - https://coinfoundry.org
 - https://mining.luxor.tech
-- https://dash.suprnova.cc
 - https://www.nicehash.com
-- https://www.coinotron.com
 - https://dash.miningpoolhub.com
 - https://www.multipool.us
 - https://www.f2pool.com
-- https://www2.coinmine.pl/dash/
 - https://www.antpool.com
-- https://avalon-life.io
-- https://www.genesis-mining.com
 - https://www.viabtc.com
 - https://zpool.ca
 
