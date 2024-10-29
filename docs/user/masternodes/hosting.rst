@@ -34,7 +34,9 @@ https://crowdnode.io
 
 - Operated by: CrowdNode ApS
 - Services: Hosting, Shares
-- Cost: 15% of masternode payments
+- Cost:
+    * 35% of trusted masternode/evonode payments
+    * 20% of trustless masternode payments
 - `Site <https://crowdnode.io>`__
 - `Email <hello@crowdnode.io>`__
 
