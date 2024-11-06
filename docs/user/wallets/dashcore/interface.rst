@@ -630,21 +630,6 @@ Rescan blockchain files 2
   Performs the same operation as *Rescan blockchain files 1* but scans from the
   genesis block instead of the wallet creation time.
 
-Recover transactions
-  The recover transactions commands can be used to remove unconfirmed
-  transactions from the memory pool. Your wallet will restart and rescan
-  the blockchain, recovering existing transactions and removing
-  unconfirmed transactions. Transactions may become stuck in an
-  unconfirmed state if there is a conflict in protocol versions on the
-  network during CoinJoin processing, for example, or if a
-  transaction is sent with insufficient fees when blocks are full.
-
-Upgrade wallet format
-  This command is available for very old wallets where an upgrade to the
-  wallet version is required in addition to an update to the wallet
-  software. You can view your current wallet version by running the
-  ``getwalletinfo`` command in the console.
-
 Rebuild index
   Discards the current blockchain and chainstate indexes (the database of
   unspent transaction outputs) and rebuilds it from existing block files.
