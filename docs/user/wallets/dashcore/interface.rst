@@ -274,9 +274,9 @@ Start Dash Core on system login
   option is effectively the same as starting Dash Core together with the
   operating system.
 
-Hide tray icon
-  When this option is enabled, Dash Core will not display an icon in the
-  system tray. This option cannot be selected at the same time as
+Show tray icon
+  When this option is enabled, Dash Core will display an icon in the
+  system tray. This option must be selected to enable
   **Minimize to the tray instead of the taskbar**.
 
 Minimize to the tray instead of the taskbar
@@ -284,7 +284,7 @@ Minimize to the tray instead of the taskbar
   will no longer appear in your taskbar as a running task. Instead, Dash
   Core will keep running in the background and can be re-opened from the
   Dash icon in the system tray (the area next to your system clock). This
-  option cannot be selected at the same time as **Hide tray icon**.
+  option can only be selected when **Show tray icon** is selected.
 
 Minimize on close
   When this option is enabled, clicking the X button in the top right
@@ -313,6 +313,10 @@ Number of script verification threads
   that number of processor cores, while setting a negative number will
   leave that number of processor cores free.
 
+Enable RPC Server
+  This option allows you or a third-party tool to communicate with the node
+  through command-line and JSON-RPC commands.
+
 Wallet tab
 ----------
 
@@ -327,6 +331,9 @@ as inputs with the Coin Control, CoinJoin and Masternode features.
 
    The Wallet tab of the Dash Core Options dialog
 
+Subtract fee from amount by default
+  Whether to set subtract fee from amount as default or not.
+
 Enable coin control features
   Your Dash Core wallet balance is actually the sum total of all
   addresses holding balance that are associated with your wallet. When
@@ -339,6 +346,9 @@ Enable coin control features
   different addresses in your wallet. See :ref:`here <coin-control>` for
   a more detailed explanation of Coin Control.
 
+Keep custom change address
+  Whether to keep the specified custom change address or not.
+  
 Show Masternodes tab
   Enabling this option causes Dash Core to display an additional
   Masternodes tab to the right of the Transactions tab. This option
@@ -432,6 +442,14 @@ Map port using UPnP
   the client port on your router using
   `UPnP <https://en.wikipedia.org/wiki/Universal_Plug_and_Play>`__
   (Universal Plug and Play). This feature is supported by most modern home
+  routers and will allow you to connect to the Dash network without making
+  any special settings on your router.
+
+Map port using NAT-PMP
+  This option causes Dash Core to automatically attempt to open and map
+  the client port on your router using
+  `NAT-PMP <https://en.wikipedia.org/wiki/NAT_Port_Mapping_Protocol>`__
+  (NAT Port Mapping Protocol). This feature is supported by most modern home
   routers and will allow you to connect to the Dash network without making
   any special settings on your router.
 
@@ -611,21 +629,6 @@ Rescan blockchain files 1
 Rescan blockchain files 2
   Performs the same operation as *Rescan blockchain files 1* but scans from the
   genesis block instead of the wallet creation time.
-
-Recover transactions
-  The recover transactions commands can be used to remove unconfirmed
-  transactions from the memory pool. Your wallet will restart and rescan
-  the blockchain, recovering existing transactions and removing
-  unconfirmed transactions. Transactions may become stuck in an
-  unconfirmed state if there is a conflict in protocol versions on the
-  network during CoinJoin processing, for example, or if a
-  transaction is sent with insufficient fees when blocks are full.
-
-Upgrade wallet format
-  This command is available for very old wallets where an upgrade to the
-  wallet version is required in addition to an update to the wallet
-  software. You can view your current wallet version by running the
-  ``getwalletinfo`` command in the console.
 
 Rebuild index
   Discards the current blockchain and chainstate indexes (the database of
