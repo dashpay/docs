@@ -274,9 +274,9 @@ Start Dash Core on system login
   option is effectively the same as starting Dash Core together with the
   operating system.
 
-Hide tray icon
-  When this option is enabled, Dash Core will not display an icon in the
-  system tray. This option cannot be selected at the same time as
+Show tray icon
+  When this option is enabled, Dash Core will display an icon in the
+  system tray. This option must be selected to enable
   **Minimize to the tray instead of the taskbar**.
 
 Minimize to the tray instead of the taskbar
@@ -284,7 +284,7 @@ Minimize to the tray instead of the taskbar
   will no longer appear in your taskbar as a running task. Instead, Dash
   Core will keep running in the background and can be re-opened from the
   Dash icon in the system tray (the area next to your system clock). This
-  option cannot be selected at the same time as **Hide tray icon**.
+  option can only be selected when **Show tray icon** is selected.
 
 Minimize on close
   When this option is enabled, clicking the X button in the top right
@@ -312,6 +312,10 @@ Number of script verification threads
   processor. Setting a positive number specifies that Dash Core should use
   that number of processor cores, while setting a negative number will
   leave that number of processor cores free.
+
+Enable RPC Server
+  This option allows you or a third-party tool to communicate with the node
+  through command-line and JSON-RPC commands.
 
 Wallet tab
 ----------
