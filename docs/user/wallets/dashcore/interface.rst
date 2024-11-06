@@ -331,6 +331,9 @@ as inputs with the Coin Control, CoinJoin and Masternode features.
 
    The Wallet tab of the Dash Core Options dialog
 
+Subtract fee from amount by default
+  Whether to set subtract fee from amount as default or not.
+
 Enable coin control features
   Your Dash Core wallet balance is actually the sum total of all
   addresses holding balance that are associated with your wallet. When
@@ -343,6 +346,9 @@ Enable coin control features
   different addresses in your wallet. See :ref:`here <coin-control>` for
   a more detailed explanation of Coin Control.
 
+Keep custom change address
+  Whether to keep the specified custom change address or not.
+  
 Show Masternodes tab
   Enabling this option causes Dash Core to display an additional
   Masternodes tab to the right of the Transactions tab. This option
@@ -436,6 +442,14 @@ Map port using UPnP
   the client port on your router using
   `UPnP <https://en.wikipedia.org/wiki/Universal_Plug_and_Play>`__
   (Universal Plug and Play). This feature is supported by most modern home
+  routers and will allow you to connect to the Dash network without making
+  any special settings on your router.
+
+Map port using NAT-PMP
+  This option causes Dash Core to automatically attempt to open and map
+  the client port on your router using
+  `NAT-PMP <https://en.wikipedia.org/wiki/NAT_Port_Mapping_Protocol>`__
+  (NAT Port Mapping Protocol). This feature is supported by most modern home
   routers and will allow you to connect to the Dash network without making
   any special settings on your router.
 
