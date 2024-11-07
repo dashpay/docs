@@ -471,8 +471,7 @@ turned off by setting the value back to ``false``:
    <https://docs.dash.org/projects/core/en/stable/docs/dashcore/wallet-arguments-and-commands-dashd.html#debugging-testing-options>`_:
    ``ips``, ``sourceLocations``, ``threadNames``, and ``timeMicros``.
 
-   Dashmate Debug Log Options
-   ===========================
+   **Dashmate Debug Log Options**
 
    +-------------------------+---------------------------------------------------------------+
    | **Setting**             | **Description**                                               |
