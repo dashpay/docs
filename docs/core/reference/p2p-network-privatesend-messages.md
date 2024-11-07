@@ -305,6 +305,13 @@ User outputs
 
 ## dsq
 
+:::{attention}
+Since protocol version 70234 (Dash Core 22.0.0), the [`dsq`
+message](../reference/p2p-network-privatesend-messages.md#dsq) is broadcast using the inventory
+system instead of being relayed to all connected peers. This reduces the bandwidth needs for all
+nodes, especially highly connected masternodes.
+:::
+
 The [`dsq` message](../reference/p2p-network-privatesend-messages.md#dsq) provides [nodes](../resources/glossary.md#node) with queue details and notifies them when to sign final transaction messages.
 
 If the message indicates the queue is not ready, the node verifies the message is valid. It also verifies that the [masternode](../resources/glossary.md#masternode) is not flooding the [network](../resources/glossary.md#network) with [`dsq` messages](../reference/p2p-network-privatesend-messages.md#dsq) in an attempt to dominate the queuing process. It then relays the message to its connected [peers](../resources/glossary.md#peer).
@@ -319,7 +326,7 @@ If the message indicates the queue is ready, the node responds with a [`dsi` mes
 | 1 | fReady | bool | Required | Indicates if the pool is ready to be executed
 | 97 | vchSig | char[] | Required | BLS Signature of this message by masternode verifiable via pubKeyMasternode (Length (1 byte) + Signature (96 bytes))<br>**Note**: serialized using the basic BLS scheme after Dash 19.0 activation
 
-Denominations (per [`src/coinjoin.cpp`](https://github.com/dashpay/dash/blob/v0.16.x/src/privatesend/privatesend.cpp#L316-L336))
+Denominations (per [`src/coinjoin/common.h`](https://github.com/dashpay/dash/blob/v21.0.x/src/coinjoin/common.h#L38-L44))
 
 | Value | Denomination
 |------|--------------

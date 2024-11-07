@@ -37,6 +37,7 @@ The currently-available type identifiers are:
 | 28              | MSG_QUORUM_RECOVERED_SIG        | The hash is a long-living masternode quorum recovered signature. <br><br>**Note**: Only relayed to other masternodes in the same quorum and nodes that have sent a [`qwatch` message](../reference/p2p-network-quorum-messages.md#qwatch) as of Dash Core 0.17.0<br>_Added in 0.14.0_
 | 29              | MSG_CLSIG                       | The hash is a ChainLock signature.<br>_Added in 0.14.0_
 | 31              | MSG_ISDLOCK                     | The hash is an LLMQ-based deterministic InstantSend lock ([DIP22](https://github.com/dashpay/dips/blob/master/dip-0022.md)).<br>_Added in 18.0_
+| 32              | MSG_DSQ                         | The hash of a CoinJoin [dsq message](./p2p-network-privatesend-messages.md#dsq).<br>**Added in 22.0.0**
 
 **Deprecated Type Identifiers**
 
