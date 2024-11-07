@@ -1,0 +1,60 @@
+digraph {
+// This file is licensed under the MIT License (MIT) available on
+// http://opensource.org/licenses/MIT.
+
+size=6.25;
+rankdir=LR
+splines = "false";
+ranksep = 0.4;
+nodesep = 0.1;
+
+edge [ penwidth = 1.75, fontname="Sans" ]
+node [ penwidth = 1.75, shape = "box", fontname="Sans"]
+graph [ penwidth = 1.75, fontname="Sans" ]
+
+ibd -> getblocks:f1 -> sync;
+
+ibd [ label = "IBD\nNode", shape="none" ];
+sync [ label = "Sync\nNode", shape="none" ];
+
+// Block 500 hash - 000007248b1005ffdcf3f41f3a5630b5cb0078ca5733d931223839821f7f5faa
+// Block 501 hash - 000003ad8ae16fd93d5ba05c902168b21a54855c98d1fcd5351308e0f05d59ab
+
+getblocks [ shape="plaintext", label=<
+    <table border="2" cellborder="1">
+      <tr>
+        <td colspan="4" port="f1" border="0" cellpadding="4"><b>GetBlocks Message</b></td>
+      </tr>
+
+      <tr>
+        <td colspan="4" border="0"><i>Message Header</i></td>
+      </tr>
+
+      <tr>
+        <td border="1"><i>Start String</i><br/><font face="courier">bf0c6bbd</font></td>
+        <td border="1"><i>Command</i><br/><font face="courier">getblocks</font></td>
+        <td border="1"><i>Size</i><br/><font face="courier">677</font></td>
+        <td border="1"><i>Checksum</i><br/><font face="courier">52be83ef</font></td>
+      </tr>
+
+      <tr>
+        <td colspan="4" border="0"><i>Payload</i></td>
+      </tr>
+
+      <tr>
+        <td colspan="2"><i>Protocol Version</i><br /><font face="courier">70208</font></td>
+        <td colspan="2"><i>Header Hash Count</i><br /><font face="courier">20</font></td>
+      </tr>
+
+      <tr>
+        <td colspan="4"><i>Header Hashes (Highest-Height First)</i><br /><font face="courier">aa5f7f1f823938...05108b24070000<br/>ab595df0e00813...6fe18aad030000</font><br/><i>......18 more header hashes......</i></td>
+      </tr>
+
+      <tr>
+        <td colspan="4"><i>Stopping Hash (Zero Is "No Stop")</i><br /><font face="courier">00000000000000...00000000000000</font></td>
+      </tr>
+
+    </table>>];
+
+label = "Second getblocks message sent from Initial Blocks Download (IBD) node"
+}

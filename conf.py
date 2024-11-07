@@ -73,6 +73,8 @@ exclude_patterns = [
     'README.md',
     '.devcontainer',
     'transifex',
+    'docs/core/api/ai-prompt.md',
+    'docs/img/dev/gifs/README.md',    
     'docs/user/wallets/electrum/dip3_p2sh_howto.md',
     'venv'
 ]
@@ -115,7 +117,6 @@ myst_enable_extensions = ["colon_fence"]
 
 # -- intersphinx configuration -----------------------------------------------
 intersphinx_mapping = {
-    "core": ("https://docs.dash.org/projects/core/en/stable/", None),
     "platform": ("https://docs.dash.org/projects/platform/en/stable/", None),
 }
 
@@ -138,7 +139,6 @@ html_theme = "pydata_sphinx_theme"
 #
 html_theme_options = {
     "external_links": [
-        {"name": "Core docs", "url": "https://docs.dash.org/projects/core/en/stable/docs/index.html"},
         {"name": "Platform docs", "url": "https://docs.dash.org/projects/platform/en/stable/docs/index.html"},
         {"name": "Dash.org", "url": "https://www.dash.org"},
         {"name": "Forum", "url": "https://www.dash.org/forum"},

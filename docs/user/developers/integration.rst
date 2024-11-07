@@ -40,19 +40,19 @@ JSON-RPC Interface
 
 The majority of commands are unchanged from Bitcoin making integration into
 existing systems relatively straightforward. For a complete listing of RPC
-commands please refer to the :ref:`​Dash Developer Guide
-<core:guide-index>`.
+commands please refer to the :ref:`Dash Developer Guide
+<guide-index>`.
 
 Note that the following commands have been modified to support InstantSend:
 
-   - :ref:`getrawmempool <core:api-rpc-blockchain-getrawmempool>`
-   - :ref:`getmempoolancestors <core:api-rpc-blockchain-getmempoolancestors>`
-   - :ref:`getmempooldescendants <core:api-rpc-blockchain-getmempooldescendants>`
-   - :ref:`getmempoolentry <core:api-rpc-blockchain-getmempoolentry>`
-   - :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
-   - :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
-   - :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
-   - :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
+   - :ref:`getrawmempool <api-rpc-blockchain-getrawmempool>`
+   - :ref:`getmempoolancestors <api-rpc-blockchain-getmempoolancestors>`
+   - :ref:`getmempooldescendants <api-rpc-blockchain-getmempooldescendants>`
+   - :ref:`getmempoolentry <api-rpc-blockchain-getmempoolentry>`
+   - :ref:`getrawtransaction <api-rpc-raw-transactions-getrawtransaction>`
+   - :ref:`gettransaction <api-rpc-wallet-gettransaction>`
+   - :ref:`listtransactions <api-rpc-wallet-listtransactions>`
+   - :ref:`listsinceblock <api-rpc-wallet-listsinceblock>`
 
 Special Transactions
 --------------------
@@ -90,17 +90,17 @@ transaction types exist:
 +=========+======+================+===============================================================+
 | 3       | 0    | n/a            | Standard Transaction                                          |
 +---------+------+----------------+---------------------------------------------------------------+
-| 3       | 1    | variable       | :ref:`Masternode Registration <core:ref-txs-proregtx>`        |
+| 3       | 1    | variable       | :ref:`Masternode Registration <ref-txs-proregtx>`             |
 +---------+------+----------------+---------------------------------------------------------------+
-| 3       | 2    | variable       | :ref:`Update Masternode Service <core:ref-txs-proupservtx>`   |
+| 3       | 2    | variable       | :ref:`Update Masternode Service <ref-txs-proupservtx>`        |
 +---------+------+----------------+---------------------------------------------------------------+
-| 3       | 3    | variable       | :ref:`Update Masternode Operator <core:ref-txs-proupregtx>`   |
+| 3       | 3    | variable       | :ref:`Update Masternode Operator <ref-txs-proupregtx>`        |
 +---------+------+----------------+---------------------------------------------------------------+
-| 3       | 4    | variable       | :ref:`Masternode Revocation <core:ref-txs-prouprevtx>`        |
+| 3       | 4    | variable       | :ref:`Masternode Revocation <ref-txs-prouprevtx>`             |
 +---------+------+----------------+---------------------------------------------------------------+
-| 3       | 5    | variable       | :ref:`Masternode List Merkle Proof <core:ref-txs-cbtx>`       |
+| 3       | 5    | variable       | :ref:`Masternode List Merkle Proof <ref-txs-cbtx>`            |
 +---------+------+----------------+---------------------------------------------------------------+
-| 3       | 6    | variable       | :ref:`Quorum Commitment <core:ref-txs-qctx>`                  |
+| 3       | 6    | variable       | :ref:`Quorum Commitment <ref-txs-qctx>`                       |
 +---------+------+----------------+---------------------------------------------------------------+
 
 Integration notes:
@@ -117,7 +117,7 @@ Integration notes:
    Transactions was split into two fields: ``version`` and ``type``
    (each consisting of 2 bytes).
 
-4. Refer to the :ref:`Special Transactions <core:ref-txs-special-txs>` 
+4. Refer to the :ref:`Special Transactions <ref-txs-special-txs>` 
    section of the Dash developer reference for additional detail on
    these data types, e.g. <variable int>.
 
@@ -180,7 +180,7 @@ Receiving an InstantSend Transaction introduces two requirements:
 
 InstantSend Status is provided by the dash daemon, typically through a direct
 connection (e.g. RPC), :ref:`ZMQ notification
-<core:examples-receiving-zmq-notifications>`, or through the usage of an
+<examples-receiving-zmq-notifications>`, or through the usage of an
 external wallet notification script.
 
 Direct Connection
@@ -191,14 +191,14 @@ daemon using JSON-RPC protocol. The ``instantlock`` attribute of the JSON
 response reflects the status of the transaction and is included in the following
 commands:
 
-- :ref:`getrawmempool <core:api-rpc-blockchain-getrawmempool>`
-- :ref:`getmempoolancestors <core:api-rpc-blockchain-getmempoolancestors>`
-- :ref:`getmempooldescendants <core:api-rpc-blockchain-getmempooldescendants>`
-- :ref:`getmempoolentry <core:api-rpc-blockchain-getmempoolentry>`
-- :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
-- :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
-- :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
-- :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
+- :ref:`getrawmempool <api-rpc-blockchain-getrawmempool>`
+- :ref:`getmempoolancestors <api-rpc-blockchain-getmempoolancestors>`
+- :ref:`getmempooldescendants <api-rpc-blockchain-getmempooldescendants>`
+- :ref:`getmempoolentry <api-rpc-blockchain-getmempoolentry>`
+- :ref:`getrawtransaction <api-rpc-raw-transactions-getrawtransaction>`
+- :ref:`gettransaction <api-rpc-wallet-gettransaction>`
+- :ref:`listtransactions <api-rpc-wallet-listtransactions>`
+- :ref:`listsinceblock <api-rpc-wallet-listsinceblock>`
 
 ZMQ Notification
 ^^^^^^^^^^^^^^^^
@@ -265,8 +265,8 @@ and are intended to help provide a more complete understanding of the
 underlying technologies.
 
 - `InstantSend Technical Information <https://github.com/dashpay/dash/blob/master/doc/instantsend.md#zmq>`__
-- :ref:`InstantSend Developer Documentation <core:guide-features-instantsend>`
-- :ref:`Receiving ZMQ notifications <core:examples-receiving-zmq-notifications>`
+- :ref:`InstantSend Developer Documentation <guide-features-instantsend>`
+- :ref:`Receiving ZMQ notifications <examples-receiving-zmq-notifications>`
 - `DIP0010: LLMQ InstantSend <https://github.com/dashpay/dips/blob/master/dip-0010.md>`__
 - `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__
 
@@ -304,7 +304,7 @@ Receiving a ChainLock introduces two requirements:
 
 ChainLock status is provided by the dash daemon, typically through a direct
 connection (e.g. RPC) or by a :ref:`ZMQ notification
-<core:examples-receiving-zmq-notifications>`.
+<examples-receiving-zmq-notifications>`.
 
 Direct Connection
 ^^^^^^^^^^^^^^^^^
@@ -314,20 +314,20 @@ daemon using JSON-RPC protocol. The boolean ``chainlock`` attribute of the JSON
 response reflects the ChainLock status of the block or transaction and is
 included in the following commands:
 
-- :ref:`getblock <core:api-rpc-blockchain-getblock>`
-- :ref:`getblockheader <core:api-rpc-blockchain-getblockheader>`
-- :ref:`getblockheaders <core:api-rpc-blockchain-getblockheaders>`
-- :ref:`getrawtransaction <core:api-rpc-raw-transactions-getrawtransaction>`
-- :ref:`gettransaction <core:api-rpc-wallet-gettransaction>`
-- :ref:`listtransactions <core:api-rpc-wallet-listtransactions>`
-- :ref:`listsinceblock <core:api-rpc-wallet-listsinceblock>`
+- :ref:`getblock <api-rpc-blockchain-getblock>`
+- :ref:`getblockheader <api-rpc-blockchain-getblockheader>`
+- :ref:`getblockheaders <api-rpc-blockchain-getblockheaders>`
+- :ref:`getrawtransaction <api-rpc-raw-transactions-getrawtransaction>`
+- :ref:`gettransaction <api-rpc-wallet-gettransaction>`
+- :ref:`listtransactions <api-rpc-wallet-listtransactions>`
+- :ref:`listsinceblock <api-rpc-wallet-listsinceblock>`
 
 ZMQ Notification
 ^^^^^^^^^^^^^^^^
 
 ChainLock signatures are created shortly after the related block has been mined.
 As a result it is recommended that integrated clients use :ref:`ZMQ (ZeroMQ)
-notifications <core:examples-receiving-zmq-notifications>` in order to ensure
+notifications <examples-receiving-zmq-notifications>` in order to ensure
 that this information is received as promptly as possible. Refer to `the
 list of possible ZMQ notifications
 <https://github.com/dashpay/dash/blob/master/doc/zmq.md#usage>`__ for more
@@ -381,7 +381,7 @@ The following resources provide additional information about InstantSend and are
 intended to help provide a more complete understanding of the underlying
 technologies.
 
-- :ref:`ChainLock Developer Documentation <core:guide-features-chainlocks>`
-- :ref:`Receiving ZMQ notifications <core:examples-receiving-zmq-notifications>`
+- :ref:`ChainLock Developer Documentation <guide-features-chainlocks>`
+- :ref:`Receiving ZMQ notifications <examples-receiving-zmq-notifications>`
 - `DIP0008: ChainLocks <https://github.com/dashpay/dips/blob/master/dip-0008.md>`__
 - `Product Brief: Dash Core v0.14 Release <https://blog.dash.org/product-brief-dash-core-release-v0-14-0-now-on-testnet-8f5f4ad45c96>`__

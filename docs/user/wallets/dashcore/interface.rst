@@ -574,7 +574,7 @@ The Console tab provides an interface with the Dash Core RPC (remote procedure
 call) console. This is equivalent to the ``dash-cli`` command on headless
 versions of Dash, such as ``dashd`` running on a masternode. Click the red ``×``
 icon to clear the console, and see the detailed :ref:`documentation
-<core:api-rpc>` on RPC commands to learn about the possible commands you can
+<api-rpc>` on RPC commands to learn about the possible commands you can
 issue.
 
 .. figure:: img/tools-console.png
