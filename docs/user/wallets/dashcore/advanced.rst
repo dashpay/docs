@@ -606,7 +606,7 @@ wallets from the **File** menu in addition to the previously available options.
 .. warning::
   Wallet-related RPCs require using the ``-rpcwallet`` option when more than
   one wallet file is loaded. This is to ensure the RPC command is executed
-  using the correct wallet. See the :ref:`Core developer documentation <core:api-rpc-multi-wallet-support>`
+  using the correct wallet. See the :ref:`Core developer documentation <api-rpc-multi-wallet-support>`
   for additional information.
 
 Open a wallet
