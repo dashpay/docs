@@ -6,6 +6,170 @@
 
 # Dash RPCs
 
+<span id="privatesend"></span>
+
+## CoinJoin
+
+As of Dash Core 0.12.3, this is not supported on masternodes since wallet functionality is disabled on them for security reasons.
+
+The [`coinjoin` RPC](#coinjoin) controls the CoinJoin process (previously named `privatesend` prior to Dash Core 0.17.0).
+
+| Name   | Type   | Presence                | Description                                                                                                |
+| ------ | ------ | ----------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `mode` | string | Required<br>(exactly 1) | The command mode to use:<br>`start` - Start CoinJoin<br>`stop` - Stop CoinJoin<br>`reset` - Reset CoinJoin |
+
+**Command Mode - `start`**
+
+*Result---start command return status*
+
+| Name     | Type   | Presence                | Description           |
+| -------- | ------ | ----------------------- | --------------------- |
+| `result` | string | Required<br>(exactly 1) | Command return status |
+
+*Example from Dash Core 0.17.0*
+
+``` bash
+dash-cli -testnet coinjoin start
+```
+
+Result:
+
+```text
+Mixing started successfully
+```
+
+**Command Mode - `stop`**
+
+*Result---stop command return status*
+
+| Name     | Type   | Presence                | Description           |
+| -------- | ------ | ----------------------- | --------------------- |
+| `result` | string | Required<br>(exactly 1) | Command return status |
+
+*Example from Dash Core 0.17.0*
+
+``` bash
+dash-cli -testnet coinjoin stop
+```
+
+Result:
+
+```text
+Mixing was stopped
+```
+
+**Command Mode - `reset`**
+
+*Result---reset command return status*
+
+| Name     | Type   | Presence                | Description           |
+| -------- | ------ | ----------------------- | --------------------- |
+| `result` | string | Required<br>(exactly 1) | Command return status |
+
+*Example from Dash Core 0.17.0*
+
+``` bash
+dash-cli -testnet coinjoin reset
+```
+
+Result:
+
+```text
+Mixing was reset
+```
+
+*See also: none*
+
+## CoinJoinSalt
+
+The [`coinjoinsalt` RPC](#coinjoinsalt) controls the CoinJoin salt used in the process. It allows
+you to generate, retrieve, or set the salt.
+
+| Name      | Type   | Presence                | Description                                                                                      |
+| --------- | ------ | ----------------------- | ------------------------------------------------------------------------------------------------ |
+| `command` | string | Required<br>(exactly 1) | The command mode to use:<br>`generate` - Generate new CoinJoin salt<br>`get` - Fetch existing CoinJoin salt<br>`set` - Set new CoinJoin salt |
+
+**Command Mode - `generate`**
+
+Generates a new CoinJoin salt and stores it in the wallet database. Note that a new salt cannot be
+generated if CoinJoin mixing is in process or if the wallet has private keys disabled.
+
+| Name        | Type    | Presence                        | Description |
+| ----------- | ------- | ------------------------------- | ----------- |
+| `overwrite` | boolean | Optional<br>(default: `false`)  | Allows generating new salt even if an existing salt is present and/or there is a CoinJoin balance |
+
+*Result---generate command return status*
+
+| Name     | Type    | Presence                | Description                        |
+| -------- | ------- | ----------------------- | ---------------------------------- |
+| `result` | boolean | Required<br>(exactly 1) | Status of CoinJoin salt generation |
+
+*Examples*
+
+```bash
+dash-cli -testnet coinjoinsalt generate
+```
+
+Result:
+
+```text
+true
+```
+
+**Command Mode - `get`**
+
+Fetches the existing CoinJoin salt. Note that the salt cannot be fetched if the wallet has private
+keys disabled.
+
+*Result---get command return value*
+
+| Name  | Type   | Presence                | Description               |
+| ----- | ------ | ----------------------- | ------------------------- |
+| `salt` | string | Required<br>(exactly 1) | The current CoinJoin salt (in hexadecimal format) |
+
+*Examples*
+
+```bash
+dash-cli -testnet coinjoinsalt get
+```
+
+Result:
+
+```text
+"c2ca...4546"
+```
+
+**Command Mode - `set`**
+
+Sets a new CoinJoin salt. The salt cannot be set if CoinJoin mixing is in process or if the wallet
+has private keys disabled. This command will overwrite the existing salt, and if a CoinJoin balance
+is present, the wallet will rescan.
+
+| Name        | Type    | Presence                        | Description |
+| ----------- | ------- | ------------------------------- | ----------- |
+| `salt`      | string  | Required<br>(exactly 1)         | The desired CoinJoin salt value for the wallet (in hexadecimal format) |
+| `overwrite` | boolean | Optional<br>(default: `false`)  | Allows overwriting the salt even if a CoinJoin balance is present |
+
+*Result---set command return status*
+
+| Name     | Type    | Presence                | Description                            |
+| -------- | ------- | ----------------------- | -------------------------------------- |
+| `result` | boolean | Required<br>(exactly 1) | Status of CoinJoin salt change request |
+
+*Examples*
+
+```bash
+dash-cli -testnet coinjoinsalt set f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16
+```
+
+Result:
+
+```text
+true
+```
+
+*See also: none*
+
 ## GetGovernanceInfo
 
 The [`getgovernanceinfo` RPC](#getgovernanceinfo) returns an object containing governance parameters.
@@ -61,39 +225,38 @@ The [`getcoinjoininfo` RPC](#getcoinjoininfo) returns an object containing an in
 
 *Result---(for regular nodes) information about the pool*
 
-| Name                     | Type                  | Presence                | Description                                                                                          |
-| ------------------------ | --------------------- | ----------------------- | ---------------------------------------------------------------------------------------------------- |
-| `result`                 | object                | Required<br>(exactly 1) | Information about the pool                                                                           |
-| →<br>`enabled`           | bool                  | Required<br>(exactly 1) | Whether CoinJoin functionality is enabled                                                            |
-| →<br>`multisession`      | bool                  | Required<br>(exactly 1) | Whether CoinJoin multisession option is enabled                                                      |
-| →<br>`max_sessions`      | number (int)          | Required<br>(exactly 1) | How many parallel sessions can there be at once                                                      |
-| →<br>`max_rounds`        | number (int)          | Required<br>(exactly 1) | How many rounds to process                                                                           |
-| →<br>`max_amount`        | number (int)          | Required<br>(exactly 1) | How many DASH to keep processed                                                                      |
-| →<br>`max_denoms`        | number (int)          | Required<br>(exactly 1) | **Removed in Dash Core 0.16.0**<br>How many inputs of each denominated amount to create              |
-| →<br>`denoms_goal`       | number (int)          | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br>How many inputs of each denominated amount to target                  |
+| Name                     | Type                  | Presence                | Description |
+| ------------------------ | --------------------- | ----------------------- | ----------- |
+| `result`                 | object                | Required<br>(exactly 1) | Information about the pool |
+| →<br>`enabled`           | bool                  | Required<br>(exactly 1) | Whether CoinJoin functionality is enabled |
+| →<br>`multisession`      | bool                  | Required<br>(exactly 1) | Whether CoinJoin multisession option is enabled |
+| →<br>`max_sessions`      | number (int)          | Required<br>(exactly 1) | How many parallel sessions can there be at once |
+| →<br>`max_rounds`        | number (int)          | Required<br>(exactly 1) | How many rounds to process |
+| →<br>`max_amount`        | number (int)          | Required<br>(exactly 1) | How many DASH to keep processed |
+| →<br>`denoms_goal`       | number (int)          | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br>How many inputs of each denominated amount to target |
 | →<br>`denoms_hardcap`    | number (int)          | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br>Maximum limit of how many inputs of each denominated amount to create |
-| →<br>`queue_size`        | number (int)          | Required<br>(exactly 1) | How many queues there are currently on the network                                                   |
-| →<br>`running`           | bool                  | Required<br>(exactly 1) | Whether CoinJoin is currently running                                                                |
-| →<br>`sessions`          | array of json objects | Required<br>(exactly 1) | Information about session(s)                                                                         |
-| → →<br>Session           | object                | Optional<br>(1 or more) | Information for a session                                                                            |
-| → → →<br>`protxhash`     | string                | Required<br>(exactly 1) | The ProTxHash of the masternode                                                                      |
-| → → →<br>`outpoint`      | string (txid-index)   | Required<br>(exactly 1) | The outpoint of the masternode                                                                       |
-| → → →<br>`service`       | string (host:port)    | Required<br>(exactly 1) | The IP address and port of the masternode                                                            |
-| → → →<br>`denomination`  | number (int)          | Required<br>(exactly 1) | The denomination of the session (in DASH)                                                            |
-| → → →<br>`state`         | string                | Required<br>(exactly 1) | Current state of the session                                                                         |
-| → → →<br>`entries_count` | number (int)          | Required<br>(exactly 1) | The number of entries in the session                                                                 |
-| →<br>`keys_left`         | number (int)          | Required<br>(exactly 1) | How many new keys are left since last automatic backup                                               |
-| →<br>`warnings`          | string                | Optional<br>(exactly 1) | Any warnings                                                                                         |
+| →<br>`queue_size`        | number (int)          | Required<br>(exactly 1) | How many queues there are currently on the network |
+| →<br>`running`           | bool                  | Required<br>(exactly 1) | Whether CoinJoin is currently running |
+| →<br>`sessions`          | array of json objects | Required<br>(exactly 1) | Information about session(s) |
+| → →<br>Session           | object                | Optional<br>(1 or more) | Information for a session |
+| → → →<br>`protxhash`     | string                | Required<br>(exactly 1) | The ProTxHash of the masternode |
+| → → →<br>`outpoint`      | string (txid-index)   | Required<br>(exactly 1) | The outpoint of the masternode |
+| → → →<br>`service`       | string (host:port)    | Required<br>(exactly 1) | The IP address and port of the masternode |
+| → → →<br>`denomination`  | number (int)          | Required<br>(exactly 1) | The denomination of the session (in DASH) |
+| → → →<br>`state`         | string                | Required<br>(exactly 1) | Current state of the session |
+| → → →<br>`entries_count` | number (int)          | Required<br>(exactly 1) | The number of entries in the session |
+| →<br>`keys_left`         | number (int)          | Optional<br>(0 or 1) | *Changed to optional in Dash Core 22.0.0*<br>How many new keys are left since last automatic backup |
+| →<br>`warnings`          | string                | Optional<br>(exactly 1) | Any warnings |
 
 *Result---(for masternodes) information about the pool*
 
-| Name                 | Type         | Presence                | Description                                        |
-| -------------------- | ------------ | ----------------------- | -------------------------------------------------- |
-| `result`             | object       | Required<br>(exactly 1) | Information about the pool                         |
+| Name                 | Type         | Presence                | Description |
+| -------------------- | ------------ | ----------------------- | ----------- |
+| `result`             | object       | Required<br>(exactly 1) | Information about the pool |
 | →<br>`queue_size`    | number (int) | Required<br>(exactly 1) | How many queues there are currently on the network |
-| →<br>`denomination`  | number (int) | Required<br>(exactly 1) | The denomination of the session (in DASH)          |
-| →<br>`state`         | string       | Required<br>(exactly 1) | Current state of the session                       |
-| →<br>`entries_count` | number (int) | Required<br>(exactly 1) | The number of entries in the session               |
+| →<br>`denomination`  | number (int) | Required<br>(exactly 1) | The denomination of the session (in DASH) |
+| →<br>`state`         | string       | Required<br>(exactly 1) | Current state of the session |
+| →<br>`entries_count` | number (int) | Required<br>(exactly 1) | The number of entries in the session |
 
 *Example from Dash Core 0.17.0 (regular node)*
 
@@ -1663,80 +1826,6 @@ success
 
 * [Masternode](#masternode): provides a set of commands for managing masternodes and displaying information about them.
 * [MasternodeList](#masternodelist): returns a list of masternodes in different modes.
-
-<span id="privatesend"></span>
-
-## CoinJoin
-
-As of Dash Core 0.12.3, this is not supported on masternodes since wallet functionality is disabled on them for security reasons.
-
-The [`coinjoin` RPC](#coinjoin) controls the CoinJoin process (previously named `privatesend` prior to Dash Core 0.17.0).
-
-| Name   | Type   | Presence                | Description                                                                                                |
-| ------ | ------ | ----------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `mode` | string | Required<br>(exactly 1) | The command mode to use:<br>`start` - Start CoinJoin<br>`stop` - Stop CoinJoin<br>`reset` - Reset CoinJoin |
-
-**Command Mode - `start`**
-
-*Result---start command return status*
-
-| Name     | Type   | Presence                | Description           |
-| -------- | ------ | ----------------------- | --------------------- |
-| `result` | string | Required<br>(exactly 1) | Command return status |
-
-*Example from Dash Core 0.17.0*
-
-``` bash
-dash-cli -testnet coinjoin start
-```
-
-Result:
-
-```text
-Mixing started successfully
-```
-
-**Command Mode - `stop`**
-
-*Result---stop command return status*
-
-| Name     | Type   | Presence                | Description           |
-| -------- | ------ | ----------------------- | --------------------- |
-| `result` | string | Required<br>(exactly 1) | Command return status |
-
-*Example from Dash Core 0.17.0*
-
-``` bash
-dash-cli -testnet coinjoin stop
-```
-
-Result:
-
-```text
-Mixing was stopped
-```
-
-**Command Mode - `reset`**
-
-*Result---reset command return status*
-
-| Name     | Type   | Presence                | Description           |
-| -------- | ------ | ----------------------- | --------------------- |
-| `result` | string | Required<br>(exactly 1) | Command return status |
-
-*Example from Dash Core 0.17.0*
-
-``` bash
-dash-cli -testnet coinjoin reset
-```
-
-Result:
-
-```text
-Mixing was reset
-```
-
-*See also: none*
 
 ## Spork
 

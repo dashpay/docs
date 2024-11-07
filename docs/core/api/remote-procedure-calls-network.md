@@ -44,8 +44,12 @@ Result (no output from `dash-cli` because result is set to `null`).
 
 ## AddPeerAddress
 
+:::{attention}
+This RPC is for testing only.
+:::
+
 The [`addpeeraddress` RPC](../api/remote-procedure-calls-network.md#addpeeraddress) adds the address
-of a potential peer to the address manager. **This RPC is for testing only.**
+of a potential peer to the address manager.
 
 *Parameter #1---IP address of node to add*
 
@@ -58,6 +62,12 @@ of a potential peer to the address manager. **This RPC is for testing only.**
 | Name | Type | Presence | Description |
 | ---- | ---- | -------- | ----------- |
 | `port` | number | Required<br>(exactly 1) | The port of the peer |
+
+*Parameter #3---add to tried address table*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `tried` | bool | Optional<br>(0 or 1) | If true, attempt to add the peer to the tried addresses table |
 
 *Result---a list of added nodes*
 
@@ -397,7 +407,7 @@ The [`getnetworkinfo` RPC](../api/remote-procedure-calls-network.md#getnetworkin
 | →<br>`connections_mn`                   | number (int)  | Required<br>(exactly 1) | _Added in Dash Core 18.0.0_<br><br>The number of verified masternode connections                                                                                                                                                                |
 | →<br>`connections_mn_in`            | number (int)  | Required<br>(exactly 1) | _Added in Dash Core 18.0.0_<br><br>The number of inbound verified masternode connections                                                                                                                                                        |
 | →<br>`connections_mn_out`           | number (int)  | Required<br>(exactly 1) | _Added in Dash Core 18.0.0_<br><br>The number of outbound verified masternode connections                                                                                                                                                       |
-| →<br>`socketevents`                    | string        | Required<br>(exactly 1) | _Added in Dash Core 0.16.0_<br><br>The socket events mode, either `epoll`, `poll`, or `select`                                                                                                                                                  |
+| →<br>`socketevents`                    | string        | Required<br>(exactly 1) | The socket events mode, either `epoll`, `poll`, or `select`                                                                                                                                                  |
 | →<br>`networks`                        | array         | Required<br>(exactly 1) | An array with three objects: one describing the IPv4 connection, one describing the IPv6 connection, and one describing the Tor hidden service (onion) connection                                                                                 |
 | → →<br>Network                         | object        | Optional<br>(0 to 3)    | An object describing a network.  If the network is unroutable, it will not be returned                                                                                                                                                            |
 | → → →<br>`name`                        | string        | Required<br>(exactly 1) | The name of the network.  Either `ipv4`, `ipv6`, or `onion`                                                                                                                                                                                       |

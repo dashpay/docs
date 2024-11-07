@@ -1214,8 +1214,26 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
   "assetLockTx": {
     "version": 1,
     "creditOutputs": [
-      "CTxOut(nValue=1.00000000, scriptPubKey=76a9147c75beb097957cc09537b615)",
-      "CTxOut(nValue=9.00141421, scriptPubKey=76a9147c75beb097957cc09537b615)"
+      {
+        "value": 1.00000000,
+        "valueSat": 100000000,
+        "scriptPubKey": {
+          "asm": "OP_DUP OP_HASH160 7c75beb097957cc09537b615dde9ea6807719cdf OP_EQUALVERIFY OP_CHECKSIG",
+          "hex": "76a9147c75beb097957cc09537b615dde9ea6807719cdf88ac",
+          "address": "yXfXh3jFYHHxnJZVsXnPcktCENqPaAhcX1",
+          "type": "pubkeyhash"
+        }
+      },
+      {
+        "value": 9.00141421,
+        "valueSat": 900141421,
+        "scriptPubKey": {
+          "asm": "OP_DUP OP_HASH160 7c75beb097957cc09537b615dde9ea6807719cdf OP_EQUALVERIFY OP_CHECKSIG",
+          "hex": "76a9147c75beb097957cc09537b615dde9ea6807719cdf88ac",
+          "address": "yXfXh3jFYHHxnJZVsXnPcktCENqPaAhcX1",
+          "type": "pubkeyhash"
+        }
+      }
     ]
   }
 }

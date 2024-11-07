@@ -26,6 +26,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [GetBlockChainInfo](../api/remote-procedure-calls-blockchain.md#getblockchaininfo): provides information about the current state of the block chain. **Updated in Dash Core 21.0.0**
 * [GetBlockCount](../api/remote-procedure-calls-blockchain.md#getblockcount): returns the number of blocks in the local best block chain.
 * [GetBlockFilter](../api/remote-procedure-calls-blockchain.md#getblockfilter): retrieves a [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) content filter for a particular block. _New in Dash Core 18.0.0_
+* [GetBlockFromPeer](../api/remote-procedure-calls-blockchain.md#getblockfrompeer): attempts to fetch a specific block from a given peer. **Updated in Dash Core 22.0.0**
 * [GetBlockHash](../api/remote-procedure-calls-blockchain.md#getblockhash): returns the header hash of a block at the given height in the local best block chain.
 * [GetBlockHashes](../api/remote-procedure-calls-blockchain.md#getblockhashes): returns array of hashes of blocks within the timestamp range provided (requires `timestampindex` to be enabled). New in Dash Core 0.12.1
 * [GetBlockHeader](../api/remote-procedure-calls-blockchain.md#getblockheader): gets a block header with a particular header hash from the local block database either as a JSON object or as a serialized block header. _Updated in Dash Core 0.16.0_
@@ -38,7 +39,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [GetMemPoolDescendants](../api/remote-procedure-calls-blockchain.md#getmempooldescendants): returns all in-mempool descendants for a transaction in the mempool. **Updated in Dash Core 20.0.0**
 * [GetMemPoolEntry](../api/remote-procedure-calls-blockchain.md#getmempoolentry): returns mempool data for given transaction (must be in mempool). **Updated in Dash Core 20.0.0**
 * [GetMemPoolInfo](../api/remote-procedure-calls-blockchain.md#getmempoolinfo): returns information about the node's current transaction memory pool. **Updated in Dash Core 20.1.0**
-* [GetRawMemPool](../api/remote-procedure-calls-blockchain.md#getrawmempool): returns all transaction identifiers (TXIDs) in the memory pool as a JSON array, or detailed information about each transaction in the memory pool as a JSON object. **Updated in Dash Core 20.0.0**
+* [GetRawMemPool](../api/remote-procedure-calls-blockchain.md#getrawmempool): returns all transaction identifiers (TXIDs) in the memory pool as a JSON array, or detailed information about each transaction in the memory pool as a JSON object. **Updated in Dash Core 22.0.0**
 * [GetMerkleBlocks](../api/remote-procedure-calls-blockchain.md#getmerkleblocks): returns an array of hex-encoded merkleblocks for <count> blocks starting from <hash> which match <filter>. _New in Dash Core 0.15.0_
 * [GetSpecialTxes](../api/remote-procedure-calls-blockchain.md#getspecialtxes): returns an array of special transactions found in the specified block _New in Dash Core 0.13.1_
 * [GetSpentInfo](../api/remote-procedure-calls-blockchain.md#getspentinfo): returns the txid and index where an output is spent (requires `spentindex` to be enabled). New in Dash Core 0.12.1
@@ -47,7 +48,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [GetTxOutSetInfo](../api/remote-procedure-calls-blockchain.md#gettxoutsetinfo): returns statistics about the confirmed unspent transaction output (UTXO) set. Note that this call may take some time and that it only counts outputs from confirmed transactions---it does not count outputs from the memory pool. _Updated in Dash Core 18.1.0_
 * [PreciousBlock](../api/remote-procedure-calls-blockchain.md#preciousblock): treats a block as if it were received before others with the same work. _New in Dash Core 0.12.3_
 * [PruneBlockChain](../api/remote-procedure-calls-blockchain.md#pruneblockchain): prunes the blockchain up to a specified height or timestamp. _New in Dash Core 0.12.3_
-* [SaveMemPool](../api/remote-procedure-calls-blockchain.md#savemempool): dumps the mempool to disk. _New in Dash Core 0.16.0_
+* [SaveMemPool](../api/remote-procedure-calls-blockchain.md#savemempool): dumps the mempool to disk. **Updated in Dash Core 22.0.0**
 * [VerifyChain](../api/remote-procedure-calls-blockchain.md#verifychain): verifies each entry in the local block chain database.
 * [VerifyTxOutProof](../api/remote-procedure-calls-blockchain.md#verifytxoutproof): verifies that a proof points to one or more transactions in a block, returning the transactions the proof commits to and throwing an RPC error if the block is not in our best block chain.
 
@@ -63,14 +64,15 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 
 ## [Dash RPCs](../api/remote-procedure-calls-dash.md)
 
+* [CoinJoin](../api/remote-procedure-calls-dash.md#coinjoin): controls the CoinJoin process. _Updated in Dash Core 0.12.3_
+* [CoinJoinSalt](../api/remote-procedure-calls-dash.md#coinjoinsalt): controls the CoinJoin salt used in the process. It allows you to generate, retrieve, or set the salt. **Added in Dash Core 22.0.0**
+* [GetCoinJoinInfo](../api/remote-procedure-calls-dash.md#getcoinjoininfo): returns an object containing an information about CoinJoin settings and state. **Updated in Dash Core 22.0.0**
 * [GetGovernanceInfo](../api/remote-procedure-calls-dash.md#getgovernanceinfo): returns an object containing governance parameters. **Updated in Dash Core 20.0.0**
-* [GetCoinJoinInfo](../api/remote-procedure-calls-dash.md#getcoinjoininfo): returns an object containing an information about CoinJoin settings and state. _New in Dash Core 0.15.0_
 * [GetSuperblockBudget](../api/remote-procedure-calls-dash.md#getsuperblockbudget): returns the absolute maximum sum of superblock payments allowed.
 * [GObject](../api/remote-procedure-calls-dash.md#gobject): provides a set of commands for managing governance objects and displaying information about them. **Updated in Dash Core 20.0.0**
 * [Masternode](../api/remote-procedure-calls-dash.md#masternode): provides a set of commands for managing masternodes and displaying information about them. **_Updated in Dash Core 19.2.0_**
 * [MasternodeList](../api/remote-procedure-calls-dash.md#masternodelist): returns a list of masternodes in different modes. **Updated in Dash Core 20.0.0**
 * [MnSync](../api/remote-procedure-calls-dash.md#mnsync): returns the sync status, updates to the next step or resets it entirely. _Updated in Dash Core 0.14.0_
-* [CoinJoin](../api/remote-procedure-calls-dash.md#coinjoin): controls the CoinJoin process. _Updated in Dash Core 0.12.3_
 * [Spork](../api/remote-procedure-calls-dash.md#spork): shows information about the current state of sporks. _Updated in Dash Core 18.1.0_
 * [SporkUpdate](../api/remote-procedure-calls-dash.md#sporkupdate): updates the value of the provided spork. _New in Dash Core 18.1.0_
 * [VoteRaw](../api/remote-procedure-calls-dash.md#voteraw): compiles and relays a governance vote with provided external signature instead of signing vote internally
@@ -102,7 +104,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 ## [Network RPCs](../api/remote-procedure-calls-network.md)
 
 * [AddNode](../api/remote-procedure-calls-network.md#addnode): attempts to add or remove a node from the addnode list, or to try a connection to a node once.
-* [AddPeerAddress](../api/remote-procedure-calls-network.md#addpeeraddress): adds the address of a potential peer to the address manager. **New in Dash Core 20.0.0**
+* [AddPeerAddress](../api/remote-procedure-calls-network.md#addpeeraddress): adds the address of a potential peer to the address manager. **Updated in Dash Core 22.0.0**
 * [ClearBanned](../api/remote-procedure-calls-network.md#clearbanned): clears list of banned nodes.
 * [ClearDiscouraged](../api/remote-procedure-calls-network.md#cleardiscouraged): clears all discouraged nodes. **_New in Dash Core 19.0.0_**
 * [DisconnectNode](../api/remote-procedure-calls-network.md#disconnectnode): immediately disconnects from a specified node. _Updated in Dash Core 0.15.0_
