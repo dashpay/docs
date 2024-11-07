@@ -2781,7 +2781,13 @@ _Parameter #3---estimate_mode_
 | -------------- | ------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | estimate_mode  | string | Optional<br>(0 or 1) | The fee estimate mode. Must be one of: `unset`, `economical`, `conservative`, `DASH/kB`, `duff/B`. Default is `unset`.   |
 
-_Parameter #4---Options_
+_Parameter #4---Fee rate_
+
+| Name     | Type    | Presence                | Description |
+| -------- | ------- | ----------------------- | ----------- |
+| fee_rate | number or string | Optional<br>(0 or 1)    | **Added in Dash Core 22.0.0**<br>Specify a fee rate in duffs/B (default=not set, fall back to wallet fee estimation). |
+
+_Parameter #5---Options_
 
 | Name                        | Type               | Presence                | Description                                         |
 | --------------------------- | ------------------ | ----------------------- | --------------------------------------------------- |
@@ -2901,10 +2907,16 @@ _Parameter #10---fee estimate mode_
 | ---- | ---- | -------- | ----------- |
 | `estimate_mode` | string | Optional<br>(0 or 1) | The fee estimate mode, must be one of:<br>`unset`<br>`economical`<br>`conservative`<br>`DASH/kB`<br>`duff/B` |
 
-_Parameter #11---verbose_
+_Parameter #11---fee rate_
 
-| Name    | Type    | Presence                | Description                                                |
-| ------- | ------- | ----------------------- | ---------------------------------------------------------- |
+| Name     | Type    | Presence                | Description |
+| -------- | ------- | ----------------------- | ----------- |
+| `fee_rate` | number or string | Optional<br>(0 or 1)    | **Added in Dash Core 22.0.0**<br>Specify a fee rate in duffs/B (default=not set, fall back to wallet fee estimation). |
+
+_Parameter #12---verbose_
+
+| Name    | Type    | Presence                | Description |
+| ------- | ------- | ----------------------- | ----------- |
 | verbose | boolean | Optional<br>(0 or 1)    | If `true`, return extra information about the transaction. Default is `false` |
 
 _Result---execution result_
@@ -3047,10 +3059,16 @@ _Parameter #10---avoids partial respends_
 | ------------- | ------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `avoid_reuse` | boolean | Optional<br>(0 or 1) | Avoid spending from dirty addresses; addresses are considered dirty if they have previously been used in a transaction. |
 
-_Parameter #11---verbose_
+_Parameter #11---fee rate_
 
-| Name    | Type    | Presence                | Description                                                |
-| ------- | ------- | ----------------------- | ---------------------------------------------------------- |
+| Name     | Type    | Presence                | Description |
+| -------- | ------- | ----------------------- | ----------- |
+| `fee_rate` | number or string | Optional<br>(0 or 1)    | **Added in Dash Core 22.0.0**<br>Specify a fee rate in duffs/B (default=not set, fall back to wallet fee estimation). |
+
+_Parameter #12---verbose_
+
+| Name    | Type    | Presence                | Description |
+| ------- | ------- | ----------------------- | ----------- |
 | verbose | boolean | Optional<br>(0 or 1)    | If `true`, return extra information about the transaction. Default is `false` |
 
 _Result---execution result_

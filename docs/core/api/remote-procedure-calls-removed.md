@@ -61,3 +61,45 @@ dash-cli -testnet gobject vote-conf \
   }
 }
 ```
+
+## Protx
+
+### ProTx Register HPMN
+
+:::{attention}
+Removed in Dash Core 22.0.0
+:::
+
+The `protx *_hpmn` RPC commands were renamed and deprecated in Dash Core 20.0.0. They can now be accessed as `protx *_evo` (e.g., `protx register_hpmn` is now [`protx register_evo`](../api/remote-procedure-calls-evo.md#protx-register-evo)).
+
+**All `protx *_hpmn` RPC commands were removed in Dash Core 22.0.0.**
+
+### ProTx Register Fund HPMN
+
+:::{attention}
+Removed in Dash Core 22.0.0
+:::
+
+The `protx *_hpmn` RPC commands were renamed and deprecated in Dash Core 20.0.0. They can now be accessed as `protx *_evo` (e.g., `protx register_hpmn` is now [`protx register_evo`](../api/remote-procedure-calls-evo.md#protx-register-evo)).
+
+**All `protx *_hpmn` RPC commands were removed in Dash Core 22.0.0.**
+
+### ProTx Register Prepare HPMN
+
+:::{attention}
+Removed in Dash Core 22.0.0
+:::
+
+The `protx *_hpmn` RPC commands were renamed and deprecated in Dash Core 20.0.0. They can now be accessed as `protx *_evo` (e.g., `protx register_hpmn` is now [`protx register_evo`](../api/remote-procedure-calls-evo.md#protx-register-evo)).
+
+**All `protx *_hpmn` RPC commands were removed in Dash Core 22.0.0.**
+
+### ProTx Update Service HPMN
+
+:::{attention}
+Removed in Dash Core 22.0.0
+:::
+
+The `protx *_hpmn` RPC commands were renamed and deprecated in Dash Core 20.0.0. They can now be accessed as `protx *_evo` (e.g., `protx register_hpmn` is now [`protx register_evo`](../api/remote-procedure-calls-evo.md#protx-register-evo)).
+
+**All `protx *_hpmn` RPC commands were removed in Dash Core 22.0.0.**

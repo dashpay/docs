@@ -1193,6 +1193,44 @@ dash-cli -testnet gobject vote-many \
 
 The [`masternode` RPC](#masternode) provides a set of commands for managing masternodes and displaying information about them.
 
+### Masternode Connect
+
+The [`masternode connect` RPC](#masternode-connect) initiates a connection to a specified masternode address, with optional support for the BIP324 v2 transport protocol.
+
+_Parameter #1---the address of the masternode_
+
+| Name      | Type   | Presence                | Description |
+| --------- | ------ | ----------------------- | ----------- |
+| address   | string | Required<br>(exactly 1) | The IP address and port of the masternode to connect to (e.g., `192.168.1.100:19999`) |
+
+_Parameter #2---transport protocol options_
+
+| Name         | Type    | Presence             | Description |
+| ------------ | ------- | -------------------- | ----------- |
+| v2transport  | bool    | Optional<br>(0 or 1) | Set to `true` to attempt connection using the BIP324 v2 transport protocol. Defaults to `false`. |
+
+_Result---connection status_
+
+| Name         | Type    | Presence                | Description |
+| ------------ | ------- | ----------------------- | ----------- |
+| `result`     | string  | Required<br>(exactly 1) | Command return status |
+
+*Example from Dash Core 22.0.0*
+
+Connect to a masternode at address `192.168.1.100` using the default transport protocol:
+
+```bash
+dash-cli masternode connect "192.168.1.100:19999"
+```
+
+Result:
+
+```text
+successfully connected
+```
+
+*See also: none*
+
 ### Masternode Count
 
 The `masternode count` RPC prints the number of all known masternodes.

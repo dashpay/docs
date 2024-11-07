@@ -12,20 +12,26 @@ The [`addnode` RPC](../api/remote-procedure-calls-network.md#addnode) attempts t
 
 *Parameter #1---hostname/IP address and port of node to add or remove*
 
-| Name   | Type   | Presence                | Description                                                       |
-| ------ | ------ | ----------------------- | ----------------------------------------------------------------- |
+| Name   | Type   | Presence                | Description |
+| ------ | ------ | ----------------------- | ----------- |
 | `node` | string | Required<br>(exactly 1) | The node to add as a string in the form of `<IP address>:<port>`. |
 
 *Parameter #2---whether to add or remove the node, or to try only once to connect*
 
-| Name      | Type   | Presence                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| --------- | ------ | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name      | Type   | Presence                | Description |
+| --------- | ------ | ----------------------- | ----------- |
 | `command` | string | Required<br>(exactly 1) | What to do with the IP address above.  Options are:<br>• `add` to add a node to the addnode list.  Up to 8 nodes can be added additional to the default 8 nodes. Not limited by `-maxconnections`<br>• `remove` to remove a node from the list.  If currently connected, this will disconnect immediately<br>• `onetry` to immediately attempt connection to the node even if the outgoing connection slots are full; this will only attempt the connection once |
+
+*Parameter #3---v2 transport*
+
+| Name   | Type   | Presence                | Description |
+| ------ | ------ | ----------------------- | ----------- |
+| `v2transport` | bool | Optional<br>(0 or1) | Attempt to connect using BIP324 v2 transport protocol (ignored for `remove` command). Default=set by `-v2transport` option. |
 
 _Result---`null` plus error on failed remove_
 
-| Name     | Type | Presence                | Description                                                                                                                                                                                                                                             |
-| -------- | ---- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name     | Type | Presence                | Description |
+| -------- | ---- | ----------------------- | ----------- |
 | `result` | null | Required<br>(exactly 1) | Always JSON `null` whether the node was added, removed, tried-and-connected, or tried-and-not-connected.  The JSON-RPC error field will be set only if you try adding a node that was already added or removing a node that is not on the addnodes list |
 
 *Example from Dash Core 0.12.2*
@@ -564,8 +570,10 @@ The [`getpeerinfo` RPC](../api/remote-procedure-calls-network.md#getpeerinfo) re
 | → →<br>`bytesrecv_per_msg` | string : <br>object | Required<br>(exactly 1) | *Added in Bitcoin Core 0.13.0*<br><br>Information about total received bytes aggregated by message type |
 | → → →<br>Message Type | number (int) | Required<br>(1 or more) | Total received bytes aggregated by message type. One field for every used message type |
 | `connection_type` | string | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br>Type of connection:<br>outbound-full-relay, block-relay-only, inbound, manual, addr-fetch, feeler.<br>Describes how the connection was established. Set to `true` if this node was added via the [`addnode` RPC](../api/remote-procedure-calls-network.md#addnode).<br>**Note: This output is subject to change in future releases as connection behaviors are refined.** |
+| `transport_protocol_type`| string | Optional<br>(0 or 1) | **Added in Dash Core 22.0.0**<br>The transport protocol type:<br>`detecting` - peer could be v1 or v2<br>`v1` - plaintext transport protocol<br>`v2` - BIP324 encrypted transport protocol |
+| `session_id` | string | Optional<br>(0 or 1) | **Added in Dash Core 22.0.0**<br>The session ID for this connection, or "" if there is none ("v2" transport protocol only). |
 
-*Example from Dash Core 21.0.0*
+*Example from Dash Core 22.0.0*
 
 ```bash
 dash-cli -testnet getpeerinfo
@@ -599,20 +607,20 @@ Result (edited to show only a single entry, with IP addresses changed to
     "timeoffset": 0,
     "pingtime": 0.105995,
     "minping": 0.095181,
-    "version": 70232,
-    "subver": "/Dash Core:21.0.0(dcg-masternode-7)/",
+    "version": 70233,
+    "subver": "/Dash Core:21.1.0(dcg-masternode-7)/",
     "inbound": false,
     "bip152_hb_to": false,
     "bip152_hb_from": false,
     "masternode": false,
-    "startingheight": 1022323,
-    "synced_headers": 1022323,
-    "synced_blocks": 1022323,
+    "startingheight": 1131692,
+    "synced_headers": 1131804,
+    "synced_blocks": 1131804,
     "inflight": [
     ],
-    "relaytxes": false,
-    "addr_relay_enabled": false,
-    "addr_processed": 0,
+    "relaytxes": true,
+    "addr_relay_enabled": true,
+    "addr_processed": 519,
     "addr_rate_limited": 0,
     "permissions": [
     ],
@@ -651,7 +659,9 @@ Result (edited to show only a single entry, with IP addresses changed to
       "verack": 24,
       "version": 180
     },
-    "connection_type": "block-relay-only"
+    "connection_type": "outbound-full-relay",
+    "transport_protocol_type": "v1",
+    "session_id": ""
   }
 ]
 ```
