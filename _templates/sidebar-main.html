@@ -63,20 +63,113 @@
           </li>
         </ul>
 
-        <!-- Core docs (external site) -->
+        <!-- Core docs -->
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Docs</span></p>
         <ul class="nav bd-sidenav">
-          <li class="toctree-l1"><a class="reference internal"
-              href="https://docs.dash.org/projects/core/en/stable/docs/reference/introduction.html">Blockchain Reference</a></li>
-          <li class="toctree-l1"><a class="reference internal"
-              href="https://docs.dash.org/projects/core/en/stable/docs/api/remote-procedure-calls.html">API Reference</a>
+          <!-- Core Reference Section -->
+          <li class="toctree-l1 has-children"><a class="reference internal"
+              href="docs/core/reference/introduction.html">Core
+              Reference</a>
+            <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox" />
+            <label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label>
+            <ul>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/reference/introduction.html">Introduction</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/reference/block-chain.html">Blockchain</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/reference/transactions.html">Transactions</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/reference/wallets.html">Wallets</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/reference/p2p-network.html">P2P Networks</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/reference/improvement-proposals.html">Improvement
+                  Proposals</a></li>
+            </ul>
           </li>
-          <li class="toctree-l1"><a class="reference internal"
-              href="https://docs.dash.org/projects/core/en/stable/docs/guide/introduction.html">Core Guides</a></li>
-          <li class="toctree-l1"><a class="reference internal"
-              href="https://docs.dash.org/projects/core/en/stable/docs/examples/introduction.html">Core Examples</a></li>
-          <li class="toctree-l1"><a class="reference internal"
-              href="https://docs.dash.org/projects/core/en/stable/docs/dashcore/wallet-arguments-and-commands.html">Dash Core Wallet</a></li>
+
+          <!-- Core API Reference Section -->
+          <li class="toctree-l1 has-children"><a class="reference internal"
+              href="docs/core/api/dash-core-apis-hash-byte-order.html">Core
+              API Reference</a>
+            <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox" />
+            <label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label>
+            <ul>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/api/dash-core-apis-hash-byte-order.html">Hash Byte Order</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/api/remote-procedure-calls.html">Remote Procedure Calls
+                  (RPCs)</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/api/http-rest.html">HTTP REST</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/api/zmq.html">ZeroMQ (ZMQ) Notifications</a></li>
+            </ul>
+          </li>
+
+          <!-- Core Guides Section -->
+          <li class="toctree-l1 has-children"><a class="reference internal"
+              href="docs/core/guide/introduction.html">Core Guides</a>
+            <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox" />
+            <label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label>
+            <ul>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/guide/introduction.html">Introduction</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/guide/dash-features.html">Dash Features</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/guide/block-chain.html">Blockchain</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/guide/transactions.html">Transactions</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/guide/contracts.html">Contracts</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/guide/wallets.html">Wallets</a></li>
+            </ul>
+          </li>
+
+          <!-- Core Examples Section -->
+          <li class="toctree-l1 has-children"><a class="reference internal"
+              href="docs/core/examples/introduction.html">Core Examples</a>
+            <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox" />
+            <label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label>
+            <ul>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/examples/introduction.html">Introduction</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/examples/configuration-file.html">Configuration
+                  File</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/examples/testing-applications.html">Testing
+                  Applications</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/examples/transaction-tutorial.html">Transaction
+                  Tutorial</a></li>
+            </ul>
+          </li>
+
+          <!-- Dash Core Wallet Section -->
+          <li class="toctree-l1 has-children"><a class="reference internal"
+              href="docs/core/dashcore/wallet-arguments-and-commands.html">Dash Core Wallet</a>
+            <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox" />
+            <label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label>
+            <ul>
+              <li class="toctree-l2"><a class="reference internal"
+                  href="docs/core/dashcore/wallet-arguments-and-commands.html">Arguments and Commands</a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/dashcore/wallet-configuration-file.html">Configuration
+                  Files</a></li>
+            </ul>
+          </li>
+
+          <!-- Additional Resources Section -->
+          <li class="toctree-l1 has-children"><a class="reference internal"
+              href="docs/core/resources/glossary.html">Additional
+              Resources</a>
+            <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox" />
+            <label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label>
+            <ul>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/resources/glossary.html">Glossary</a></li>
+              <li class="toctree-l2"><a class="reference external" href="https://insight.dash.org/insight/">Mainnet Block
+                  Explorer</a></li>
+              <li class="toctree-l2"><a class="reference external"
+                  href="http://insight.testnet.networks.dash.org:3001/insight/">Testnet Block
+                  Explorer</a></li>
+              <li class="toctree-l2"><a class="reference external" href="http://faucet.testnet.networks.dash.org/">Testnet Faucet
+                </a></li>
+              <li class="toctree-l2"><a class="reference external"
+                  href="https://www.dash.org/providers-and-tools/#custody-and-api">API Services
+                </a></li>
+              <li class="toctree-l2"><a class="reference internal"
+                  href="docs/user/developers/integration-sdks.html">SDK Resources
+                </a></li>
+              <li class="toctree-l2"><a class="reference internal" href="docs/core/dips/README.html">Dash Improvement
+                  Proposals</a></li>
+              <li class="toctree-l2"><a class="reference external" href="https://bitcoin.org/bitcoin.pdf">Bitcoin Whitepaper</a>
+              <li class="toctree-l2"><a class="reference external"
+                  href="https://docs.dash.org/projects/core/en/20.1.0/docs/index.html">Previous Version of Docs</a>
+              </li>
+            </ul>
           </li>
         </ul>
 

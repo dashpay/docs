@@ -916,7 +916,7 @@ _Parameter #3---hash of a block to look in for the transaction_
 
 | Name       | Type | Presence             | Description                                                                                   |
 | ---------- | ---- | -------------------- | --------------------------------------------------------------------------------------------- |
-| Block Hash | string | Optional<br>(0 or 1) | _Added in Dash Core 0.16.0_<br><br>The hash of the block in which to look for the transaction |
+| Block Hash | string | Optional<br>(0 or 1) | The hash of the block in which to look for the transaction |
 
 _Result (if transaction not found)---`null`_
 
@@ -985,7 +985,7 @@ _Result (if verbose=`true`)---the decoded transaction_
 | →<br>`blocktime`            | number (int)   | Optional<br>(0 or 1)    | This field is currently identical to the time field described above                                                                                                                                                                                                                                                              |
 | →<br>`instantlock`          | bool           | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock) |
 | →<br>`instantlock_internal` | bool           | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock |
-| →<br>`chainlock`            | bool           | Required<br>(exactly 1) | _Added in Dash Core 0.14.0_<br><br>If set to `true`, this transaction is in a block that is locked (not susceptible to a chain re-org)                                                                                                                                                                                           |
+| →<br>`chainlock`            | bool           | Required<br>(exactly 1) | If set to `true`, this transaction is in a block that is locked (not susceptible to a chain re-org)                                                                                                                                                                                           |
 
 _Examples from Dash Core 21.1.0_
 

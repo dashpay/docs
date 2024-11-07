@@ -37,6 +37,7 @@ The currently-available type identifiers are:
 | 28              | MSG_QUORUM_RECOVERED_SIG        | The hash is a long-living masternode quorum recovered signature. <br><br>**Note**: Only relayed to other masternodes in the same quorum and nodes that have sent a [`qwatch` message](../reference/p2p-network-quorum-messages.md#qwatch) as of Dash Core 0.17.0<br>_Added in 0.14.0_
 | 29              | MSG_CLSIG                       | The hash is a ChainLock signature.<br>_Added in 0.14.0_
 | 31              | MSG_ISDLOCK                     | The hash is an LLMQ-based deterministic InstantSend lock ([DIP22](https://github.com/dashpay/dips/blob/master/dip-0022.md)).<br>_Added in 18.0_
+| 32              | MSG_DSQ                         | The hash of a CoinJoin [dsq message](./p2p-network-privatesend-messages.md#dsq).<br>**Added in 22.0.0**
 
 **Deprecated Type Identifiers**
 
@@ -381,11 +382,16 @@ The [`getheaders` message](../reference/p2p-network-data-messages.md#getheaders)
 
 ## getheaders2
 
+:::{versionchanged} 70235
+Protocol version 70235 (Dash Core 22.0.0) expanded the maximum number of headers that this message
+can request to 8000.
+:::
+
 _Added in protocol version 70223 of Dash Core._
 
 The [`getheaders2` message](../reference/p2p-network-data-messages.md#getheaders2) requests a [`headers2` message](../reference/p2p-network-data-messages.md#headers2) that provides block headers starting from a particular point in the [block chain](../resources/glossary.md#block-chain). It allows a [peer](../resources/glossary.md#peer) which has been disconnected or started for the first time to get the [headers](../resources/glossary.md#header) it hasn’t seen yet.
 
-The [`getheaders2` message](../reference/p2p-network-data-messages.md#getheaders2) contains the same fields as the [`getheaders` message](../reference/p2p-network-data-messages.md#getheaders).
+The [`getheaders2` message](../reference/p2p-network-data-messages.md#getheaders2) contains the same fields as the [`getheaders` message](../reference/p2p-network-data-messages.md#getheaders). Since protocol version 70235, up to 8,000 headers can be requested at a time.
 
 ## getmnlistd
 
@@ -477,13 +483,19 @@ fe9f0864 ........................... Nonce
 
 ## headers2
 
+:::{versionchanged} 70235
+Protocol version 70235 (Dash Core 22.0.0) expanded the maximum number of headers that this message
+can send to 8000.
+:::
+
 _Added in protocol version 70223 of Dash Core._
+
 
 The [`headers2` message](../reference/p2p-network-data-messages.md#headers2) sends compressed block headers to a [node](../resources/glossary.md#node) which previously requested certain [headers](../resources/glossary.md#header) with a [`getheaders2` message](../reference/p2p-network-data-messages.md#getheaders) or indicated it wants to receive them by signaling with a [`sendheaders2` message](../reference/p2p-network-control-messages.md#sendheaders2).
 
 | Bytes    | Name    | Data Type        | Description
 |----------|---------|------------------|-----------------
-| _Varies_ | count   | compactSize uint | Number of block headers up to a maximum of 2,000.  Note: headers-first sync assumes the sending node will send the maximum number of headers whenever possible.
+| _Varies_ | count   | compactSize uint | Number of block headers up to a maximum of 8,000.  Prior to protocol version 70235 (Dash Core 22.0.0), only 2,000 headers could be requested at a time. Note: headers-first sync assumes the sending node will send the maximum number of headers whenever possible.
 | _Varies_ | headers | block_header2     | Block headers in the [`block_header2`](https://github.com/thephez/dips/blob/compressed-headers/compressed-headers.md#block_header2-data-type) format<br>**Note**: the first header will always be uncompressed.
 
 The following annotated hexdump shows a [`headers2` message](../reference/p2p-network-data-messages.md#headers2).  (The message header has been omitted.)

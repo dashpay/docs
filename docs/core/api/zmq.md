@@ -41,7 +41,8 @@ Currently, the following notifications are supported:
 | zmqpubrawgovernancevote | Raw governance vote ([`govobjvote`](../reference/p2p-network-governance-messages.md#govobjvote)) |
 | zmqpubrawgovernanceobject | Raw governance object ([`govobject`](../reference/p2p-network-governance-messages.md#govobj)) |
 | zmqpubrawinstantsend<br>doublespend | Raw transaction ([`tx`](../reference/transactions-raw-transaction-format.md)) attempting to double-spend an InstantSend-locked input |
-| zmqpubrawrecoveredsig | Raw recovered signatures (recovered by LLMQs)
+| zmqpubrawrecoveredsig | Raw recovered signatures (recovered by LLMQs) |
+| zmqpubsequence | Mempool sequence number |
 
 ## High Water Mark
 
@@ -67,6 +68,7 @@ The option to set the PUB socket's outbound message [high water mark](https://ze
 | zmqpubrawgovernanceobjecthwm | Raw governance object ([`govobject`](../reference/p2p-network-governance-messages.md#govobj)) high water mark |
 | zmqpubrawinstantsenddoublespendhwm | Raw transaction ([`tx`](../reference/transactions-raw-transaction-format.md)) attempting to double-spend an InstantSend-locked input high water mark |
 | zmqpubrawrecoveredsighwm |  Raw recovered signatures (recovered by LLMQs) high water mark |
+| zmqpubsequencehwm | Mempool sequence number high water mark |
 
 ## Dash Core Configuration
 
@@ -74,14 +76,14 @@ ZMQ notifications can be enabled via either command line arguments or the config
 
 ### Command Line
 
-```
+```shell
 $ dashd -zmqpubhashtx=tcp://127.0.0.1:28332 \
         -zmqpubrawtx=ipc:///tmp/dashd.tx.raw
 ```
 
 ### Config File
 
-```
+```conf
 # ZMQ
 zmqpubhashtx=tcp://0.0.0.0:28332
 zmqpubrawtx=tcp://0.0.0.0:28332
