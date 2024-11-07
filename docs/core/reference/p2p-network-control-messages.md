@@ -411,7 +411,6 @@ sporks section](#removed-sporks) for a list of previously removed sporks.
 | 10018 | 19 | `SPORK_19_CHAINLOCKS_`<br>`ENABLED` | ***Updated in Dash Core 19.2.0***<br>Enable LLMQ-based ChainLocks.
 | 10020 | 21 | `SPORK_21_QUORUM_ALL_`<br>`CONNECTED` | *Added in Dash Core 0.16.0*<br>Enable connections between all masternodes in a quorum to optimize the signature recovery process.<br>Note: Prior to Dash Core 0.17.0 this spork also enforced [PoSe requirements](../guide/dash-features-proof-of-service.md#distributed-key-generation-participation-requirements) for masternodes to support a minimum protocol version and maintain open ports.
 | 10022 | 23 | `SPORK_23_QUORUM_POSE`<br>`CONNECTED` | *Added in Dash Core 0.17.0*<br>Enforce [PoSe requirements](../guide/dash-features-proof-of-service.md#distributed-key-generation-participation-requirements) for masternodes to support a minimum protocol version and maintain open ports.
-| 10023 | 24 | `SPORK_24_TEST_EHF` | **Added in Dash Core 20.0.0** (*Testnet/Devnet/Regtest only*)<br>Enables quorums to sign and broadcast the `mnhfsignal` message that allows the fork to proceed
 
 **Spork 2 values**
 
@@ -448,6 +447,7 @@ The following sporks were used in the past but are no longer necessary and have 
 | :----------: | :----------: | ----------- | ----------- |
 | *10005* | *6* | `NEW_SIGS` | _Removed in Dash Core 0.16.0.<br>Turns on and off new signature format for Dash-specific messages.<br>Never enabled on mainnet. The associated logic was hardened in [PR  3662](https://github.com/dashpay/dash/pull/3662) to support testnet (where it is enabled). If testnet is reset at some point in the future, the remaining logic will be removed._
 | *10021* | *22* | `SPORK_22_PS_MORE_`<br>`PARTICIPANTS` | *Removed in Dash Core 0.17.0*<br>*Increase the maximum number of participants in CoinJoin sessions.*
+| *10023* | *24* | `SPORK_24_TEST_EHF` | **Removed in Dash Core 22.0.0** (*Testnet/Devnet/Regtest only*)<br>Enables quorums to sign and broadcast the `mnhfsignal` message that allows the fork to proceed
 
 ### Spork verification
 
@@ -505,6 +505,8 @@ The following service identifiers have been assigned.
 | 0x08 | `NODE_XTHIN` | **Dash Core does not support this service**<br>This node supports Xtreme Thinblocks.
 | 0x40 | `NODE_COMPACT_FILTERS` | This node supports basic block filter requests. See [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) and [BIP158](https://github.com/bitcoin/bips/blob/master/bip-0158.mediawiki) for details on how this is implemented.
 | 0x400 | `NODE_NETWORK_LIMITED` | This is the same as `NODE_NETWORK` with the limitation of only serving the last 288 blocks. See [BIP159](https://github.com/bitcoin/bips/blob/master/bip-0159.mediawiki) for details on how this is implemented. *Not supported prior to Dash Core 0.16.0*
+| 0x800 | `NODE_HEADERS_COMPRESSED` | This node supports compressed headers as described in [DIP-25](https://github.com/dashpay/dips/blob/master/dip-0025.md)
+| 0x1000 | `NODE_P2P_V2` | This node supports the version 2 of the peer-to-peer protocol, which provides an encrypted transport protocol. See [BIP-324](https://github.com/bitcoin/bips/blob/master/bip-0324.mediawiki) for details. *Not supported prior to Dash Core 22.0.0*
 
 The following annotated hexdump shows a [`version` message](../reference/p2p-network-control-messages.md#version). (The message header has been omitted and the actual IP addresses have been replaced with [RFC5737](http://tools.ietf.org/html/rfc5737) reserved IP addresses.)
 

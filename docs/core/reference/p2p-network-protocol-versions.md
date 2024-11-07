@@ -10,10 +10,11 @@
 
 The table below lists some notable versions of the P2P network protocol, with the most recent versions listed first.
 
-As of Dash Core 21.1, the most recent protocol version is 70233.
+As of Dash Core 22.0, the most recent protocol version is 70235.
 
 | Version | Initial Release                    | Major Changes
 |---------|------------------------------------|--------------
+| 70235 | [Dash Core 22.0](https://github.com/dashpay/dash/blob/v22.0.0/doc/release-notes.md) <br> (Nov 2024) | • [DSQ via inventory](https://github.com/dashpay/dash/pull/6148)<br>• [Support 8000 compressed headers per request](https://github.com/dashpay/dash/pull/6239/)
 | 70233 | [Dash Core 21.1](https://github.com/dashpay/dash/blob/v21.1.0/doc/release-notes.md) <br> (Aug 2024) | • [Enhanced hard fork update](https://github.com/dashpay/dash/pull/6175)
 | 70232 | [Dash Core 21.0](https://github.com/dashpay/dash/blob/v21.0.0/doc/release-notes.md) <br> (Jul 2024) | • Masternode reward location reallocation<br>• Mainnet spork hardening<br>• Experimental descriptor wallet support
 | 70231 | [Dash Core 20.1](https://github.com/dashpay/dash/blob/v20.1.0/doc/release-notes.md) <br> (Mar 2024) | • HD wallets by default<br>• Legacy InstantSend deprecated (`islock` p2p and inv messages)
