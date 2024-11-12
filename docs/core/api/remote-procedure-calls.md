@@ -92,6 +92,24 @@ Only the following RPCs are accessible to the restricted user:
 
 :::
 
+### RPC Queue Priority
+
+Nodes receiving too many RPC requests may become unresponsive or be banned if the load continues for too long. To mitigate this, Dash Core 21.0.0 introduced an additional RPC queue that can be used for lower-priority requests. If the node becomes overloaded, low priority requests are dropped so more important requests continue to receive responses.
+
+The system is configured by specifying the following parameters in the dash.conf file or by setting them as program arguments on the command line:
+
+* `rpcexternaluser`: list of comma-separated usernames for JSON-RPC external connections. If not specified, all requests use a single queue.
+* `rpcexternalworkqueue`=<n>: - Set the depth of the work queue to service external RPC calls (default: 16)
+
+Example configuration
+
+```ini
+rpcexternaluser=external_user_1,external_user_2
+rpcexternalworkqueue=32
+```
+
+In this example, requests from external_user_1 and external_user_2 will go to the lower-priority queue, while all other user request will go to the standard queue.
+
 ### Default Connection Info
 
 The Dash Core RPC service listens for HTTP `POST` requests on port 9998 in [mainnet](../resources/glossary.md#mainnet) mode, 19998 in [testnet](../resources/glossary.md#testnet), or 19898 in [regression test mode](../resources/glossary.md#regression-test-mode). The port number can be changed by setting `rpcport` in `dash.conf`. By default the RPC service binds to your server's [localhost](https://en.wikipedia.org/wiki/Localhost) loopback network interface so it's not accessible from other servers. Authentication is implemented using [HTTP basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). RPC HTTP requests must include a `Content-Type` header set to `text/plain` and a `Content-Length` header set to the size of the request body.
