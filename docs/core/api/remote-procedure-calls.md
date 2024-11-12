@@ -59,7 +59,7 @@ The RPC whitelist system can limit certain RPC users to only have access to some
 
 Example configuration
 
-```text
+```ini
 rpcauth=user1:4cc74397d6e9972e5ee7671fd241$11849357f26a5be7809c68a032bc2b16ab5dcf6348ef3ed1cf30dae47b8bcc71
 rpcauth=user2:181b4a25317bff60f3749adee7d6bca0$d9c331474f1322975fa170a2ffbcb176ba11644211746b27c1d317f265dd4ada
 rpcauth=user3:a6c8a511b53b1edcf69c36984985e$13cfba0e626db19061c9d61fa58e712d0319c11db97ad845fa84517f454f6675
