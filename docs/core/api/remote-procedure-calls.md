@@ -74,7 +74,9 @@ In this example, user1 can only call `getnetworkinfo`, user2 can only call `getn
 
 ### Restricted Access Users
 
-:::{deprecated} 22.0.0
+All RPC request restrictions are now configured using the [RPC whitelist settings](#rpc-whitelist).
+
+:::{deprecated} 22.0.0 <br>
 
 Since Dash Core 0.17.0, an option is provided to add an RPC user that is restricted to a small subset of RPCs used by Dash Platform. The `platform-user` configuration value sets the name of the RPC user to be restricted.
 
