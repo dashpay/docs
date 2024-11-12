@@ -53,7 +53,9 @@ Your password:
 The RPC whitelist system can limit certain RPC users to only have access to some RPC calls. The system is configured by specifying the following two parameters in the `dash.conf` file or by setting them as program arguments on the command line:
 
 * `rpcwhitelist`: set a whitelist to filter incoming RPC calls for a specific user. The field <whitelist> comes in the format: `<USERNAME>:<rpc 1>,<rpc 2>,...,<rpc n>`. If multiple whitelists are set for a given user, they are set-intersected. Default whitelist behavior is defined by `rpcwhitelistdefault`.
-* `rpcwhitelistdefault`: sets default behavior for RPC whitelisting. Unless `rpcwhitelistdefault` is set to `0`, if any `rpcwhitelist` is set, the RPC server acts as if all RPC users are subject to empty-unless-otherwise-specified whitelists. If `rpcwhitelistdefault` is set to `1` and no `rpcwhitelist` is set, the RPC server acts as if all RPC users are subject to empty whitelists.
+* `rpcwhitelistdefault`: sets default behavior for RPC whitelisting.
+  * If `rpcwhitelistdefault` is set to `0`, users with an `rpcwhitelist` entry are limited to their assigned RPCs. Other users can access any RPC.
+  * If `rpcwhitelistdefault` is set to `1`, RPC access is denied to all users that do not have an `rpcwhitelist` entry.
 
 Example configuration
 
