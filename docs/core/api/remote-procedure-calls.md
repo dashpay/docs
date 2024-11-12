@@ -27,7 +27,7 @@ The interface requires the user to provide a password for authenticating RPC req
 
 ### RPC-Auth Security
 
-Alternatively, the authentication details can be provided using the `rpcauth` property. This removes the need to include a plaintext password in the dash.conf file by instead including a salt and hash of the password along with a username in the format:
+Alternatively, the authentication details can be provided using the `rpcauth` property. This removes the need to include a plaintext password in the `dash.conf` file by instead including a salt and hash of the password along with a username in the format:
 `<USERNAME>:<SALT>$<HASH>`
 
 ``` shell
@@ -96,7 +96,7 @@ Only the following RPCs are accessible to the restricted user:
 
 Nodes receiving too many RPC requests may become unresponsive or be banned if the load continues for too long. To mitigate this, Dash Core 21.0.0 introduced an additional RPC queue that can be used for lower-priority requests. If the node becomes overloaded, low priority requests are dropped so more important requests continue to receive responses.
 
-The system is configured by specifying the following parameters in the dash.conf file or by setting them as program arguments on the command line:
+The system is configured by specifying the following parameters in the `dash.conf` file or by setting them as program arguments on the command line:
 
 * `rpcexternaluser`: list of comma-separated usernames for JSON-RPC external connections. If not specified, all requests use a single queue.
 * `rpcexternalworkqueue`=<n>: - Set the depth of the work queue to service external RPC calls (default: 16)
