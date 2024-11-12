@@ -83,7 +83,7 @@ $ dashd -zmqpubhashtx=tcp://127.0.0.1:28332 \
 
 ### Config File
 
-```conf
+```ini
 # ZMQ
 zmqpubhashtx=tcp://0.0.0.0:28332
 zmqpubrawtx=tcp://0.0.0.0:28332
