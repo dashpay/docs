@@ -27,7 +27,7 @@ The interface requires the user to provide a password for authenticating RPC req
 
 ### RPC-Auth Security
 
-Alternatively, the authentication details can be provided using the `rpcauth` property. This removes the need to include a plaintext password in the dash.conf file by instead including a salt and hash of the password along with a username in the format:
+Alternatively, the authentication details can be provided using the `rpcauth` property. This removes the need to include a plaintext password in the `dash.conf` file by instead including a salt and hash of the password along with a username in the format:
 `<USERNAME>:<SALT>$<HASH>`
 
 ``` shell
@@ -53,11 +53,13 @@ Your password:
 The RPC whitelist system can limit certain RPC users to only have access to some RPC calls. The system is configured by specifying the following two parameters in the `dash.conf` file or by setting them as program arguments on the command line:
 
 * `rpcwhitelist`: set a whitelist to filter incoming RPC calls for a specific user. The field <whitelist> comes in the format: `<USERNAME>:<rpc 1>,<rpc 2>,...,<rpc n>`. If multiple whitelists are set for a given user, they are set-intersected. Default whitelist behavior is defined by `rpcwhitelistdefault`.
-* `rpcwhitelistdefault`: sets default behavior for RPC whitelisting. Unless `rpcwhitelistdefault` is set to `0`, if any `rpcwhitelist` is set, the RPC server acts as if all RPC users are subject to empty-unless-otherwise-specified whitelists. If `rpcwhitelistdefault` is set to `1` and no `rpcwhitelist` is set, the RPC server acts as if all RPC users are subject to empty whitelists.
+* `rpcwhitelistdefault`: sets default behavior for RPC whitelisting.
+  * If `rpcwhitelistdefault` is set to `0`, users with an `rpcwhitelist` entry are limited to their assigned RPCs. Other users can access any RPC.
+  * If `rpcwhitelistdefault` is set to `1`, RPC access is denied to all users that do not have an `rpcwhitelist` entry.
 
 Example configuration
 
-```text
+```ini
 rpcauth=user1:4cc74397d6e9972e5ee7671fd241$11849357f26a5be7809c68a032bc2b16ab5dcf6348ef3ed1cf30dae47b8bcc71
 rpcauth=user2:181b4a25317bff60f3749adee7d6bca0$d9c331474f1322975fa170a2ffbcb176ba11644211746b27c1d317f265dd4ada
 rpcauth=user3:a6c8a511b53b1edcf69c36984985e$13cfba0e626db19061c9d61fa58e712d0319c11db97ad845fa84517f454f6675
@@ -72,11 +74,11 @@ In this example, user1 can only call `getnetworkinfo`, user2 can only call `getn
 
 ### Restricted Access Users
 
-:::{note}
-This feature is only available on masternodes
-:::
+All RPC request restrictions are now configured using the [RPC whitelist settings](#rpc-whitelist).
 
-As of Dash Core 0.17.0, an option is provided to add an RPC user that is restricted to a small subset of RPCs that will be used by Dash Platform. The `platform-user` configuration value sets the name of the RPC user to be restricted.
+:::{deprecated} 22.0.0 <br>
+
+Since Dash Core 0.17.0, an option is provided to add an RPC user that is restricted to a small subset of RPCs used by Dash Platform. The `platform-user` configuration value sets the name of the RPC user to be restricted.
 
 The `platform-user` configuration value must be set to a previously configured [rpcauth user](#rpc-auth-security).
 
@@ -89,6 +91,26 @@ Only the following RPCs are accessible to the restricted user:
 * [`quorum sign 4`](../api/remote-procedure-calls-evo.md#quorum-sign) - The restricted user can only request quorum signatures from the Platform quorum (LLMQ type 4)
 * [`quorum verify`](../api/remote-procedure-calls-evo.md#quorum-verify)
 * [`verifyislock`](../api/remote-procedure-calls-evo.md#verifyislock)
+
+:::
+
+### RPC Queue Priority
+
+Nodes receiving too many RPC requests may become unresponsive or be banned if the load continues for too long. To mitigate this, Dash Core 21.0.0 introduced an additional RPC queue that can be used for lower-priority requests. If the node becomes overloaded, low priority requests are dropped so more important requests continue to receive responses.
+
+The system is configured by specifying the following parameters in the `dash.conf` file or by setting them as program arguments on the command line:
+
+* `rpcexternaluser`: list of comma-separated usernames for JSON-RPC external connections. If not specified, all requests use a single queue.
+* `rpcexternalworkqueue`=<n>: - Set the depth of the work queue to service external RPC calls (default: 16)
+
+Example configuration
+
+```ini
+rpcexternaluser=external_user_1,external_user_2
+rpcexternalworkqueue=32
+```
+
+In this example, requests from external_user_1 and external_user_2 will go to the lower-priority queue, while all other user request will go to the standard queue.
 
 ### Default Connection Info
 
