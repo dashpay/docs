@@ -74,11 +74,9 @@ In this example, user1 can only call `getnetworkinfo`, user2 can only call `getn
 
 ### Restricted Access Users
 
-:::{note}
-This feature is only available on masternodes
-:::
+:::{deprecated} 22.0.0
 
-As of Dash Core 0.17.0, an option is provided to add an RPC user that is restricted to a small subset of RPCs that will be used by Dash Platform. The `platform-user` configuration value sets the name of the RPC user to be restricted.
+Since Dash Core 0.17.0, an option is provided to add an RPC user that is restricted to a small subset of RPCs used by Dash Platform. The `platform-user` configuration value sets the name of the RPC user to be restricted.
 
 The `platform-user` configuration value must be set to a previously configured [rpcauth user](#rpc-auth-security).
 
@@ -91,6 +89,8 @@ Only the following RPCs are accessible to the restricted user:
 * [`quorum sign 4`](../api/remote-procedure-calls-evo.md#quorum-sign) - The restricted user can only request quorum signatures from the Platform quorum (LLMQ type 4)
 * [`quorum verify`](../api/remote-procedure-calls-evo.md#quorum-verify)
 * [`verifyislock`](../api/remote-procedure-calls-evo.md#verifyislock)
+
+:::
 
 ### Default Connection Info
 
