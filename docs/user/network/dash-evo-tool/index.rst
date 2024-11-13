@@ -83,12 +83,12 @@ Running the application
 =======================
 
 Once the ``.env`` file is configured, launch the Dash Evo Tool by double-clicking the file named
-``dash-evo-tool-<your platform>`` (e.g., ``dash-evo-tool-aarch64-mac``).
+``dash-evo-tool``.
 
-Alternatively, you can launch the application directly from your terminal. For example, on an x86
-Linux, run::
+Alternatively, you can launch the application directly from your terminal. For example, on Linux,
+run::
 
-  ./dash-evo-tool-x86_64-linux
+  ./dash-evo-tool
 
 .. _evo-tool-select-network:
 
