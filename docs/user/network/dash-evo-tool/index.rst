@@ -189,6 +189,54 @@ can also initiate :ref:`withdrawals <evo-tool-identity-evo-withdraw>`.
 
    Identity screen with an evonode identity loaded
 
+.. _evo-tool-identity-create:
+
+Create and identity
+-------------------
+
+On the main identity screen, click the **Create Identity** button on the upper right side of the
+screen.
+
+.. figure:: img/identity/main-empty.png
+   :align: center
+   :width: 90%
+
+   Identity screen with no loaded identities
+
+On the create identity screen, leave the first two options set to the default and select the funding
+method. Then, send the requested amount of DASH to the provided address.
+
+.. figure:: img/identity/create-await-funds.png
+   :align: center
+   :width: 90%
+
+   Waiting for funds
+
+The status will change from "Waiting for funds" to "Waiting for Platform acknowledgement" once the
+funds have been received and the identity registration process has started.
+
+.. figure:: img/identity/create-await-platform.png
+   :align: center
+   :width: 90%
+
+   Waiting for Platform acknowledgement
+
+Once the identity has been registered, you can choose to return to the identity screen or proceed to
+registering a name.
+
+.. figure:: img/identity/create-success.png
+   :align: center
+   :width: 90%
+
+   Identity creation success
+
+
+.. figure:: img/identity/main-new-identity.png
+   :align: center
+   :width: 90%
+
+   Identity screen with an identity loaded
+
 .. _evo-tool-identity-evo-withdraw:
 
 Evonode withdrawals
