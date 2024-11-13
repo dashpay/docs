@@ -77,6 +77,21 @@ Configuration
     rpcuser=<some_user_name>
     rpcpassword=<some_password>
 
+Updating the env file
+---------------------
+
+When the application runs for the first time, it creates a application directory and copies the
+``.env`` file into it. It also stores application data in the directory. Any further updates to the
+``.env`` file must be made to the copy in the application directory.
+
+==================  =======================================================
+Operating System    Configuration File Path
+==================  =======================================================
+macOS               ~/Library/Application Support/dash-evo-tool/
+Windows             C:\\Users\\<User>\\AppData\\Roaming\\dash-evo-tool\\config
+Linux               /home/<user>/.config/dash-evo-tool/
+==================  =======================================================
+
 .. _evo-tool-run:
 
 Running the application
