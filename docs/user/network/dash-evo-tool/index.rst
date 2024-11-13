@@ -25,11 +25,11 @@ Linux, MacOS, or Windows packages are available on the `GitHub releases page
 <https://github.com/dashpay/dash-evo-tool/releases/latest>`__. Download the zip file for your
 Operating System, then unzip the downloaded file:
 
-* `Windows <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.2/DashEvoTool-windows-x86_64.zip>`_
-* `Mac (ARM m1-m4) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.1/DashEvoTool-aarch64-mac.zip>`_
-* `Mac (x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.1/DashEvoTool-x86_64-mac.zip>`_
-* `Linux (x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.3/DashEvoTool-linux-x86_64.zip>`_
-* `Linux (ARM) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.3/DashEvoTool-linux-aarch64.zip>`_ 
+* `Windows <https://github.com/dashpay/dash-evo-tool/releases/download/v0.2.1/dash-evo-tool-windows.zip>`_
+* `Mac (ARM m1-m4) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.4-dev.8/dash-evo-tool-arm64-mac.zip>`_
+* `Mac (x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.4-dev.8/dash-evo-tool-amd64-mac.zip>`_
+* `Linux (x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.2.1/dash-evo-tool-amd64-linux.zip>`_
+* `Linux (ARM) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.4-dev.8/dash-evo-tool-arm64-linux.zip>`_ 
 
 .. _evo-tool-configure:
 
