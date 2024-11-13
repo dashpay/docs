@@ -19,7 +19,7 @@ Installation
 
 .. note::
 
-  The Dash Evo Tool requires a Dash Core full node configured to allow RPC access.
+  The Dash Evo Tool requires a Dash Core full node configured to allow RPC and ZMQ access.
 
 Linux, MacOS, or Windows packages are available on the `GitHub releases page
 <https://github.com/dashpay/dash-evo-tool/releases/latest>`__. Download the zip file for your
@@ -272,3 +272,23 @@ identities simultaneously.
 See the `DPNS page
 <https://docs.dash.org/projects/platform/en/stable/docs/explanations/dpns.html#voting-details>`_ for
 more voting details.
+
+Wallet
+======
+
+Version 0.2.1 added an initial wallet feature to support identity registration. Wallets can be added
+from the wallet screen.
+
+.. attention::
+
+   The Dash Evo Tool adds watching-only addresses to the Dash Core wallet when creating identities.
+   For this reason it is recommended to close all existing Dash Core wallets and create a new, empty
+   wallet for the Dash Evo Tool.
+   
+   The Dash Evo Tool wallet features only work if the Dash Core node has a single wallet open.
+
+.. figure:: img/wallet/wallet-main.png
+   :align: center
+   :width: 90%
+
+   Wallet screen
