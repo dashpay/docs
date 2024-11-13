@@ -276,6 +276,9 @@ more voting details.
 Wallet
 ======
 
+Create wallet
+-------------
+
 Version 0.2.1 added an initial wallet feature to support identity registration. Wallets can be added
 from the wallet screen.
 
@@ -287,8 +290,54 @@ from the wallet screen.
    
    The Dash Evo Tool wallet features only work if the Dash Core node has a single wallet open.
 
+Click **Add Wallet** to create a new wallet.
+
 .. figure:: img/wallet/wallet-main.png
    :align: center
    :width: 90%
 
    Wallet screen
+
+After creating extra randomness with the mouse, select your preferred language and click
+**Generate** to display you passphrase. Write it down and store it securely, then click the checkbox
+in step 3 to confirm.
+
+Next, enter a wallet name and optionally add a password before clicking **Save Wallet** to store the
+wallet.
+
+.. figure:: img/wallet/wallet-create-all-fields.png
+   :align: center
+   :width: 90%
+
+   Wallet create screen
+
+Use wallet
+----------
+
+Select your wallet using the dropdown box.
+
+.. figure:: img/wallet/wallet-select.png
+   :align: center
+   :width: 90%
+
+   Select wallet
+
+Funds
+^^^^^
+
+Several tabs display wallet details. The Funds tab shows your receiving addresses. Click **Add
+Receiving Address** if you want to add additional addresses to fund the wallet.
+
+.. figure:: img/wallet/wallet-funds.png
+   :align: center
+   :width: 90%
+
+   Wallet Funds tab
+
+After adding addresses, they will appear in a table with balance and other details.
+
+.. figure:: img/wallet/wallet-funds-with-address.png
+   :align: center
+   :width: 90%
+
+   Wallet with address added
