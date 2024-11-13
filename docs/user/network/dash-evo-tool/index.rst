@@ -46,6 +46,25 @@ Configuration
      file.
    * If your dash.conf includes ``rpcallowip``, update ``*_CORE_HOST`` with that IP address.
    * If your dash.conf includes ``rpcport``, update ``*_CORE_RPC_PORT`` with that port.
+3. Set up ZMQ to accept connections from the Dash Evo Tool. Add the following lines to your dash.conf:
+
+   .. tab-set::
+      .. tab-item:: Mainnet ZMQ setup
+
+         .. code-block:: ini
+
+            # Dash Evo Tool ZMQ config - mainnet
+            zmqpubhashchainlock=tcp://0.0.0.0:23708
+            zmqpubrawtxlocksig=tcp://0.0.0.0:23708
+
+      .. tab-item:: Testnet ZMQ setup
+   
+         .. code-block:: ini
+      
+            # Place under the [test] section
+            # Dash Evo Tool ZMQ config - testnet
+            zmqpubhashchainlock=tcp://0.0.0.0:23709
+            zmqpubrawtxlocksig=tcp://0.0.0.0:23709
 
 .. tip::
 
