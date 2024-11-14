@@ -136,8 +136,8 @@ Identity operations
 
 .. _evo-tool-identity-load:
 
-Load an identity
-----------------
+Load existing identity
+----------------------
 
 On the main identity screen, click the **Load Identity** button on the upper right side of the
 screen.
@@ -195,7 +195,7 @@ can also initiate :ref:`withdrawals <evo-tool-identity-evo-withdraw>`.
 
 .. _evo-tool-identity-create:
 
-Create and identity
+Create new identity
 -------------------
 
 On the main identity screen, click the **Create Identity** button on the upper right side of the
