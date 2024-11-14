@@ -46,7 +46,8 @@ Configuration
      file.
    * If your dash.conf includes ``rpcallowip``, update ``*_CORE_HOST`` with that IP address.
    * If your dash.conf includes ``rpcport``, update ``*_CORE_RPC_PORT`` with that port.
-3. Set up ZMQ to accept connections from the Dash Evo Tool. Add the following lines to your dash.conf:
+3. (*Optional*) If you are going to run Dash Core manually instead of launching it via the Dash Evo
+   Tool, you must enable ZMQ by adding the following lines to your dash.conf file:
 
    .. tab-set::
       .. tab-item:: Mainnet ZMQ setup
@@ -114,10 +115,13 @@ The Dash Evo Tool supports both testnet and mainnet. To choose a network, naviga
 Selection screen and click the checkbox in the Select column for the desired network. Then click the
 **Start** button on that row to launch Dash Core.
 
+.. _evo-tool-manual-core-launch:
+
 .. note::
 
   You can also launch Dash Core manually without using the Dash Evo Tool. This may be necessary if
-  Dash Core is installed in a non-standard location.
+  Dash Core is installed in a non-standard location. When launching Dash Core manually, you must
+  enable ZMQ as described in :hoverxref:`Configuration Step 3 <evo-tool-configure>`.
 
 .. figure:: img/network-selection.png
    :align: center
