@@ -226,7 +226,7 @@ funds have been received and the identity registration process has started.
    Waiting for Platform acknowledgement
 
 Once the identity has been registered, you can choose to return to the identity screen or proceed to
-registering a name.
+:ref:`registering a name <evo-tool-name-register>`.
 
 .. figure:: img/identity/create-success.png
    :align: center
@@ -290,10 +290,50 @@ correct. Click **Confirm** to request the withdrawal.
 
    Withdrawal confirmation screen
 
+.. _evo-tool-name:
+
+Name operations
+===============
+
+After :ref:`creating an identity <evo-tool-identity-create>`, you can register a name for it. From
+the main name screen, click the **Register Name** button on the upper right side of the screen.
+
+.. _evo-tool-name-register:
+
+Register name
+-------------
+
+.. figure:: img/name/main.png
+   :align: center
+   :width: 90%
+
+   Name screen
+
+First, select the identity to register a name for. This step will be automatically done if you are
+registering a name as part of the identity creation process. 
+
+Next, enter the desired name. Notification will be provided if you selected a contested name and the
+estimated cost will be displayed. Click **Register Name** to complete the registration.
+
+.. figure:: img/name/registering.png
+   :align: center
+   :width: 90%
+
+   Name registration
+
+Upon successful registration, you can see the name on the **My usernames** screen along with any
+other names you have registered.
+
+.. figure:: img/name/success.png
+   :align: center
+   :width: 90%
+
+   Name registered successfully
+
 .. _evo-tool-name-voting:
 
-Name voting
-===========
+Vote for names
+--------------
 
 The Voting screen displays a list of names that are currently require a vote. Click the **Refresh**
 button to update the screen at any time.
