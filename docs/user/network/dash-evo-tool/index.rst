@@ -295,13 +295,13 @@ correct. Click **Confirm** to request the withdrawal.
 Name operations
 ===============
 
-After :ref:`creating an identity <evo-tool-identity-create>`, you can register a name for it. From
-the main name screen, click the **Register Name** button on the upper right side of the screen.
-
 .. _evo-tool-name-register:
 
 Register name
 -------------
+
+After :ref:`creating an identity <evo-tool-identity-create>`, you can register a name for it. From
+the main name screen, click the **Register Name** button on the upper right side of the screen.
 
 .. figure:: img/name/main.png
    :align: center
