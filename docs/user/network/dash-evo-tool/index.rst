@@ -88,8 +88,8 @@ When the application runs for the first time, it creates a application directory
 ==================  =======================================================
 Operating System    Configuration File Path
 ==================  =======================================================
-macOS               ~/Library/Application Support/dash-evo-tool/
-Windows             C:\\Users\\<User>\\AppData\\Roaming\\dash-evo-tool\\config
+macOS               ~/Library/Application Support/Dash-Evo-Tool/
+Windows             C:\\Users\\<User>\\AppData\\Roaming\\Dash-Evo-Tool\\config
 Linux               /home/<user>/.config/dash-evo-tool/
 ==================  =======================================================
 
