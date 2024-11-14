@@ -290,6 +290,8 @@ correct. Click **Confirm** to request the withdrawal.
 
    Withdrawal confirmation screen
 
+.. _evo-tool-name-voting:
+
 Name voting
 ===========
 
@@ -325,8 +327,12 @@ See the `DPNS page
 <https://docs.dash.org/projects/platform/en/stable/docs/explanations/dpns.html#voting-details>`_ for
 more voting details.
 
+.. _evo-tool-wallet:
+
 Wallet
 ======
+
+.. _evo-tool-wallet-create:
 
 Create wallet
 -------------
@@ -363,6 +369,8 @@ wallet.
 
    Wallet create screen
 
+.. _evo-tool-wallet-use:
+
 Use wallet
 ----------
 
@@ -373,6 +381,8 @@ Select your wallet using the dropdown box.
    :width: 90%
 
    Select wallet
+
+.. _evo-tool-wallet-use-funds:
 
 Funds
 ^^^^^
