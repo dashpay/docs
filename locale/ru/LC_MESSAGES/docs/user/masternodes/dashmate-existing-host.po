@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# VONCAN, 2024
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-29 10:39-0400\n"
 "PO-Revision-Date: 2024-08-29 14:40+0000\n"
+"Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,15 +23,15 @@ msgstr ""
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst-1
 msgid "This guide describes how to set up a Dash evolution masternode."
-msgstr ""
+msgstr "Данное руководство рассказывает как запустить Dash эвоноду"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:8
 msgid "Dashmate on existing host"
-msgstr ""
+msgstr "Dashmate на существующем хостинге"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:11
 msgid "Set up a dashmate node"
-msgstr ""
+msgstr "Запуск dashmate ноды"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:13
 msgid ""
@@ -35,72 +39,86 @@ msgid ""
 "<https://github.com/dashpay/platform/releases/latest>`__. For more details, "
 "refer to the :ref:`install instructions <evonode-setup-install-dashmate>`."
 msgstr ""
+"Скачайте и установите `последнюю версию dashmate "
+"<https://github.com/dashpay/platform/releases/latest>`__. Для получения "
+"более подробной информации обратитесь к :ref:`инструкции по установке "
+"<evonode-setup-install-dashmate>`."
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:16
 msgid "Set up an evonode::"
-msgstr ""
+msgstr "Создайте эвоноду"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:20
 msgid "Select the network type"
-msgstr ""
+msgstr "Выберите тип сети"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:21
 msgid "Select ``evolution masternode`` when asked for node type"
-msgstr ""
+msgstr "Выберите ``evolution masternode`` при выборе типа ноды"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:22
 msgid "Select ``Yes`` when asked if your masternode is already registered"
-msgstr ""
+msgstr "Выберите ``Yes`` на вопрос, зарегистрирована ли уже ваша мастернода"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:23
 msgid ""
 "Select ``Yes`` when asked about importing existing data (the data is already"
 " present from the \"Sync a full node\" steps above)"
 msgstr ""
+"Выберите ``Yes`` на вопрос об импорте существующих данных (данные уже "
+"присутствуют в результате выполнения шагов «Sync a full node» выше)."
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:25
 msgid "Import your existing masternode's keys"
-msgstr ""
+msgstr "Импортируйте ключи существующей мастерноды"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:26
 msgid ""
 "Obtain an SSL certificate. See the :ref:`SSL certificates <evonode-ssl-"
 "cert>` section for details."
 msgstr ""
+"Получение сертификата SSL. Подробности см. в разделе :ref:`SSL certificates "
+"<evonode-ssl-cert>`."
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:30
 msgid "Stop existing dashd"
-msgstr ""
+msgstr "Остановите существующий dashd"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:32
 msgid "Stop your existing dashd process"
-msgstr ""
+msgstr "Остановите ваш существующий процесс dashd"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:33
 msgid ""
 "Make sure you do not have any startup schedulers configured to restart dashd"
 " (systemd, cron, etc.)"
 msgstr ""
+"Убедитесь, что у вас нет планировщиков запуска, настроенных на перезапуск "
+"dashd (systemd, cron и т. д.)."
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:36
 msgid "Start dashmate node"
-msgstr ""
+msgstr "Запустите ноду dashmate"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:38
 msgid "Start the node::"
-msgstr ""
+msgstr "Запустите ноду::"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:42
 msgid ""
 "Make sure the node works properly by running the following status commands::"
 msgstr ""
+"Убедитесь, что нода работает правильно, выполнив следующие команды проверки "
+"статуса::"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:49
 msgid "Cleanup old dashd data"
-msgstr ""
+msgstr "Очистите старые данные dashd"
 
 #: ../../docs/user/masternodes/dashmate-existing-host.rst:51
 msgid ""
 "Once you have confirmed everything is operating correctly, remove the old "
 "dashd data from your server to free up storage space."
 msgstr ""
+"Убедившись, что все работает правильно, удалите старые данные dashd с "
+"сервера, чтобы освободить место для хранения."
