@@ -1,34 +1,35 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2024, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # 7b90ac08f561a490019c833f8053e346_9ff464a, 2022
 # ALXX <mediterraneo9000@gmail.com>, 2023
 # Dash Italia, 2024
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-18 14:28-0500\n"
+"POT-Creation-Date: 2024-11-18 12:41-0500\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: Dash Italia, 2024\n"
-"Language: it\n"
 "Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 "
-"? 1 : 2;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/developers/compiling.rst:-1
-msgid "Compile Dash Core for Linux, macOS, Windows and Guix deterministic builds"
-msgstr "Compila Dash Core per build deterministiche Linux, macOS, Windows e Guix"
+#: ../../docs/user/developers/compiling.rst-1
+msgid ""
+"Compile Dash Core for Linux, macOS, Windows and Guix deterministic builds"
+msgstr ""
+"Compila Dash Core per build deterministiche Linux, macOS, Windows e Guix"
 
-#: ../../docs/user/developers/compiling.rst:-1
+#: ../../docs/user/developers/compiling.rst-1
 msgid "dash, build, compile, linux, macOS, windows, binary, guix, developers"
 msgstr "dash, build, compile, linux, macOS, windows, binary, guix, developers"
 
@@ -40,13 +41,12 @@ msgstr "Compilazione Dash Core"
 msgid ""
 "While Dash offers stable binary builds on the `website "
 "<https://www.dash.org/downloads/>`_ and on `GitHub "
-"<https://github.com/dashpay/dash/releases/latest>`__, and development "
-"builds using `GitLab CI <https://gitlab.com/dashpay/dash/pipelines>`_,  "
-"many users will also be interested in building Dash binaries for "
-"themselves. Users who do not required deterministic builds can typically "
-"follow the `generic build notes "
-"<https://github.com/dashpay/dash/tree/develop/doc#building>`__ available "
-"on GitHub to compile or cross-compile Dash for any platform."
+"<https://github.com/dashpay/dash/releases/latest>`__, and development builds"
+" using `GitLab CI <https://gitlab.com/dashpay/dash/pipelines>`_,  many users"
+" will also be interested in building Dash binaries for themselves. Users who"
+" do not required deterministic builds can typically follow the `generic "
+"build notes <https://github.com/dashpay/dash/tree/develop/doc#building>`__ "
+"available on GitHub to compile or cross-compile Dash for any platform."
 msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:24
@@ -55,37 +55,35 @@ msgstr "Guix"
 
 #: ../../docs/user/developers/compiling.rst:26
 msgid ""
-"`Guix <https://guix.gnu.org/>`__ is the deterministic build process that "
-"is used to build the Dash Core executables. It provides a way to be "
-"reasonably sure that the executables are really built from the source on "
-"GitHub. It also makes sure that the same, tested dependencies are used "
-"and statically built into the executable. Multiple developers build the "
-"source code by following a specific descriptor (\"recipe\"), "
-"cryptographically sign the result, and upload the resulting signature. "
-"These results are compared and only if they match, the build is accepted "
-"and uploaded to dash.org."
+"`Guix <https://guix.gnu.org/>`__ is the deterministic build process that is "
+"used to build the Dash Core executables. It provides a way to be reasonably "
+"sure that the executables are really built from the source on GitHub. It "
+"also makes sure that the same, tested dependencies are used and statically "
+"built into the executable. Multiple developers build the source code by "
+"following a specific descriptor (\"recipe\"), cryptographically sign the "
+"result, and upload the resulting signature. These results are compared and "
+"only if they match, the build is accepted and uploaded to dash.org."
 msgstr ""
 "`Guix <https://guix.gnu.org/>`__ è il processo di compilazione "
-"deterministico utilizzato per creare gli eseguibili Dash Core. Fornisce "
-"un modo per essere ragionevolmente sicuri che gli eseguibili siano "
-"realmente creati dall'origine su GitHub. Garantisce inoltre che le stesse"
-" dipendenze testate vengano utilizzate e integrate staticamente "
-"nell'eseguibile. Più sviluppatori costruiscono il codice sorgente "
-"seguendo un descrittore specifico (\"ricetta\"), firmano "
-"crittograficamente il risultato e caricano la firma risultante. Questi "
-"risultati vengono confrontati e solo se corrispondono, la build viene "
-"accettata e caricata su dash.org."
+"deterministico utilizzato per creare gli eseguibili Dash Core. Fornisce un "
+"modo per essere ragionevolmente sicuri che gli eseguibili siano realmente "
+"creati dall'origine su GitHub. Garantisce inoltre che le stesse dipendenze "
+"testate vengano utilizzate e integrate staticamente nell'eseguibile. Più "
+"sviluppatori costruiscono il codice sorgente seguendo un descrittore "
+"specifico (\"ricetta\"), firmano crittograficamente il risultato e caricano "
+"la firma risultante. Questi risultati vengono confrontati e solo se "
+"corrispondono, la build viene accettata e caricata su dash.org."
 
 #: ../../docs/user/developers/compiling.rst:35
 msgid ""
-"The instructions to build Dash Core 19.0 or older versions using gitian "
-"are available in a `previous version of this page "
+"The instructions to build Dash Core 19.0 or older versions using gitian are "
+"available in a `previous version of this page "
 "<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>`__."
 msgstr ""
-"Le istruzioni per creare Dash Core 19.0 o versioni precedenti utilizzando"
-" gitian sono disponibili in una versione precedente di questa pagina "
-"<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian"
-" >`__."
+"Le istruzioni per creare Dash Core 19.0 o versioni precedenti utilizzando "
+"gitian sono disponibili in una versione precedente di questa pagina "
+"<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian "
+">`__."
 
 #: ../../docs/user/developers/compiling.rst:40
 msgid "Setup environment"
@@ -96,42 +94,39 @@ msgid ""
 "This setup has been tested using a clean install of Ubuntu 22.04. For "
 "maximum compatibility, please use that version."
 msgstr ""
-"Questa configurazione è stata testata utilizzando un'installazione pulita"
-" di Ubuntu 22.04. Per la massima compatibilità, utilizzare quella "
-"versione."
+"Questa configurazione è stata testata utilizzando un'installazione pulita di"
+" Ubuntu 22.04. Per la massima compatibilità, utilizzare quella versione."
 
 #: ../../docs/user/developers/compiling.rst:46
 msgid ""
 "Start by logging in as the \"root\" user. Create a new user with the "
-"following command, replacing ``<username>`` with a username of your "
-"choice::"
+"following command, replacing ``<username>`` with a username of your choice::"
 msgstr ""
-"Inizia accedendo come utente \"root\". Crea un nuovo utente con il "
-"seguente comando, sostituendo ``<username>`` con un nome utente a tua "
-"scelta::"
+"Inizia accedendo come utente \"root\". Crea un nuovo utente con il seguente "
+"comando, sostituendo ``<username>`` con un nome utente a tua scelta::"
 
 #: ../../docs/user/developers/compiling.rst:51
 msgid ""
-"You will be prompted for a password. Enter and confirm using a new "
-"password (different to your root password) and store it in a safe place. "
-"You will also see prompts for user information, but this can be left "
-"blank. Alternatively, an existing user can be used on systems that are "
-"already in use (e.g. your existing development system)."
+"You will be prompted for a password. Enter and confirm using a new password "
+"(different to your root password) and store it in a safe place. You will "
+"also see prompts for user information, but this can be left blank. "
+"Alternatively, an existing user can be used on systems that are already in "
+"use (e.g. your existing development system)."
 msgstr ""
 "Ti verrà richiesta una password. Immettere e confermare utilizzando una "
-"nuova password (diversa dalla password di root) e conservarla in un luogo"
-" sicuro. Verranno visualizzate anche richieste di informazioni "
-"sull'utente, ma questo può essere lasciato vuoto. In alternativa, un "
-"utente esistente può essere utilizzato su sistemi già in uso (ad esempio "
-"il sistema di sviluppo esistente)."
+"nuova password (diversa dalla password di root) e conservarla in un luogo "
+"sicuro. Verranno visualizzate anche richieste di informazioni sull'utente, "
+"ma questo può essere lasciato vuoto. In alternativa, un utente esistente può"
+" essere utilizzato su sistemi già in uso (ad esempio il sistema di sviluppo "
+"esistente)."
 
 #: ../../docs/user/developers/compiling.rst:57
 msgid ""
-"Add the user to the sudo and docker groups so they can perform commands "
-"as root and run docker commands::"
+"Add the user to the sudo and docker groups so they can perform commands as "
+"root and run docker commands::"
 msgstr ""
-"Aggiungi l'utente ai gruppi sudo e docker in modo che possa eseguire "
-"comandi come root ed eseguire comandi docker::"
+"Aggiungi l'utente ai gruppi sudo e docker in modo che possa eseguire comandi"
+" come root ed eseguire comandi docker::"
 
 #: ../../docs/user/developers/compiling.rst:63
 msgid "Install prerequisites"
@@ -142,8 +137,8 @@ msgid ""
 "While still logged in as root, update the system from the Ubuntu package "
 "repository::"
 msgstr ""
-"Mentre sei ancora connesso come root, aggiorna il sistema dal repository "
-"dei pacchetti Ubuntu::"
+"Mentre sei ancora connesso come root, aggiorna il sistema dal repository dei"
+" pacchetti Ubuntu::"
 
 #: ../../docs/user/developers/compiling.rst:71
 msgid "Install the required build tools::"
@@ -154,21 +149,17 @@ msgid "Prepare guix"
 msgstr "Prepara guix"
 
 #: ../../docs/user/developers/compiling.rst:78
-#, fuzzy
 msgid ""
 "It is only necessary to run this step during the initial setup of your "
-"machine. Run the guix install routine to prepare your environment and "
-"answer \"Y\" for all prompts:"
+"machine. Run the guix install routine to prepare your environment and answer"
+" \"Y\" for all prompts:"
 msgstr ""
-"È necessario eseguire questo passaggio solo durante la configurazione "
-"iniziale della macchina. Esegui la routine di installazione di Guix per "
-"preparare il tuo ambiente e rispondi \"Y\" a tutte le richieste::"
 
-#: ../../docs/user/developers/compiling.rst
+#: ../../docs/user/developers/compiling.rst:0
 msgid "Ubuntu/Debian install"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst
+#: ../../docs/user/developers/compiling.rst:0
 msgid "General install"
 msgstr ""
 
@@ -178,11 +169,11 @@ msgstr "Clonazione di repository"
 
 #: ../../docs/user/developers/compiling.rst:101
 msgid ""
-"After installing the prerequisites and preparing guix, reboot the system,"
-" login as ``<username>``, and clone required repositories::"
+"After installing the prerequisites and preparing guix, reboot the system, "
+"login as ``<username>``, and clone required repositories::"
 msgstr ""
-"Dopo aver installato i prerequisiti e preparato GUIX, riavviare il "
-"sistema, accedere come ``<username>`` e clonare i repository richiesti::"
+"Dopo aver installato i prerequisiti e preparato GUIX, riavviare il sistema, "
+"accedere come ``<username>`` e clonare i repository richiesti::"
 
 #: ../../docs/user/developers/compiling.rst:108
 msgid "Download the macOS SDK which is required to create macOS builds::"
@@ -193,8 +184,10 @@ msgid "Build Dash Core"
 msgstr "Costruisci Dash Core"
 
 #: ../../docs/user/developers/compiling.rst:117
-msgid "Checkout the tag associated with the Dash Core version you plan to build::"
-msgstr "Acquista il tag associato alla versione Dash Core che intendi creare::"
+msgid ""
+"Checkout the tag associated with the Dash Core version you plan to build::"
+msgstr ""
+"Acquista il tag associato alla versione Dash Core che intendi creare::"
 
 #: ../../docs/user/developers/compiling.rst:124
 msgid "Run ``guix-build`` to create binaries for Linux, Mac, and Windows::"
@@ -205,8 +198,8 @@ msgid ""
 "When the build completes, it will put the binaries in the ``guix-"
 "build-<version>/output/`` directory."
 msgstr ""
-"Una volta completata la compilazione, i file binari verranno inseriti "
-"nella directory ``guix-build-/output/``."
+"Una volta completata la compilazione, i file binari verranno inseriti nella "
+"directory ``guix-build-/output/``."
 
 #: ../../docs/user/developers/compiling.rst:133
 msgid "Create signatures for binaries"
@@ -214,29 +207,29 @@ msgstr "Crea firme per i file binari"
 
 #: ../../docs/user/developers/compiling.rst:135
 msgid ""
-"Mac and Windows binaries are signed by Dash Core Group using the relevant"
-" Apple and Microsoft processes. In this step, that information will be "
+"Mac and Windows binaries are signed by Dash Core Group using the relevant "
+"Apple and Microsoft processes. In this step, that information will be "
 "validated and signed by your machine."
 msgstr ""
-"I file binari per Mac e Windows sono firmati da Dash Core Group "
-"utilizzando i relativi processi Apple e Microsoft. In questo passaggio, "
-"tali informazioni verranno convalidate e firmate dalla tua macchina."
+"I file binari per Mac e Windows sono firmati da Dash Core Group utilizzando "
+"i relativi processi Apple e Microsoft. In questo passaggio, tali "
+"informazioni verranno convalidate e firmate dalla tua macchina."
 
 #: ../../docs/user/developers/compiling.rst:139
 msgid ""
 "Prepare the `detached sigs repository <https://github.com/dashpay/dash-"
 "detached-sigs>`__::"
 msgstr ""
-"Preparare il `repository distaccato sigs <https://github.com/dashpay"
-"/dash-detached-sigs>`__::"
+"Preparare il `repository distaccato sigs <https://github.com/dashpay/dash-"
+"detached-sigs>`__::"
 
 #: ../../docs/user/developers/compiling.rst:148
 msgid ""
-"Prepare the `guix.sigs repository "
-"<https://github.com/dashpay/guix.sigs>`__ by pulling the latest changes::"
+"Prepare the `guix.sigs repository <https://github.com/dashpay/guix.sigs>`__ "
+"by pulling the latest changes::"
 msgstr ""
-"Prepara il repository `guix.sigs "
-"<https://github.com/dashpay/guix.sigs>`__ estraendo le ultime modifiche::"
+"Prepara il repository `guix.sigs <https://github.com/dashpay/guix.sigs>`__ "
+"estraendo le ultime modifiche::"
 
 #: ../../docs/user/developers/compiling.rst:155
 msgid "Create a new branch for the version that was built::"
@@ -248,7 +241,8 @@ msgstr "Binari non firmati"
 
 #: ../../docs/user/developers/compiling.rst:165
 msgid "To create signatures for the unsigned binaries, run ``guix-attest``::"
-msgstr "Per creare firme per i file binari non firmati, eseguire ``guix-attest``::"
+msgstr ""
+"Per creare firme per i file binari non firmati, eseguire ``guix-attest``::"
 
 #: ../../docs/user/developers/compiling.rst:173
 msgid ""
@@ -269,11 +263,11 @@ msgstr "Binari firmati"
 
 #: ../../docs/user/developers/compiling.rst:181
 msgid ""
-"To create signatures for the signed binaries, run ``guix-codesign`` "
-"followed by guix-attest::"
+"To create signatures for the signed binaries, run ``guix-codesign`` followed"
+" by guix-attest::"
 msgstr ""
-"Per creare firme per i binari firmati, eseguire ``guix-codesign`` seguito"
-" da guix-attest::"
+"Per creare firme per i binari firmati, eseguire ``guix-codesign`` seguito da"
+" guix-attest::"
 
 #: ../../docs/user/developers/compiling.rst:193
 msgid "Upload signatures"
@@ -281,13 +275,12 @@ msgstr "Carica firme"
 
 #: ../../docs/user/developers/compiling.rst:195
 msgid ""
-"After successfully building the binaries, signing them, and verifying the"
-" signatures, you can optionally contribute them to the `guix.sigs "
-"repository <https://github.com/dashpay/guix.sigs/>`_ via a pull request "
-"on GitHub."
+"After successfully building the binaries, signing them, and verifying the "
+"signatures, you can optionally contribute them to the `guix.sigs repository "
+"<https://github.com/dashpay/guix.sigs/>`_ via a pull request on GitHub."
 msgstr ""
-"Dopo aver creato con successo i file binari, averli firmati e verificato "
-"le firme, puoi facoltativamente contribuire al repository `guix.sigs "
+"Dopo aver creato con successo i file binari, averli firmati e verificato le "
+"firme, puoi facoltativamente contribuire al repository `guix.sigs "
 "<https://github.com/dashpay/guix.sigs/>`_ tramite una richiesta pull su "
 "GitHub ."
 
@@ -297,8 +290,8 @@ msgstr "Configurazione iniziale"
 
 #: ../../docs/user/developers/compiling.rst:202
 msgid ""
-"Since the official guix.sigs repository has restricted write access, "
-"create a fork of it via GitHub and add your fork as a remote repository::"
+"Since the official guix.sigs repository has restricted write access, create "
+"a fork of it via GitHub and add your fork as a remote repository::"
 msgstr ""
 "Poiché il repository ufficiale guix.sigs ha un accesso in scrittura "
 "limitato, creane un fork tramite GitHub e aggiungi il tuo fork come "
@@ -306,16 +299,15 @@ msgstr ""
 
 #: ../../docs/user/developers/compiling.rst:208
 msgid ""
-"The first time you contribute signatures, also put a copy of your public "
-"key in the ``builder-keys`` folder of the repository so others can easily"
-" verify your signature. Your public key can be exported to a file using "
-"the following command::"
+"The first time you contribute signatures, also put a copy of your public key"
+" in the ``builder-keys`` folder of the repository so others can easily "
+"verify your signature. Your public key can be exported to a file using the "
+"following command::"
 msgstr ""
 "La prima volta che contribuisci con le firme, inserisci anche una copia "
-"della tua chiave pubblica nella cartella \"builder-keys\" del repository "
-"in modo che altri possano verificare facilmente la tua firma. La tua "
-"chiave pubblica può essere esportata in un file utilizzando il seguente "
-"comando::"
+"della tua chiave pubblica nella cartella \"builder-keys\" del repository in "
+"modo che altri possano verificare facilmente la tua firma. La tua chiave "
+"pubblica può essere esportata in un file utilizzando il seguente comando::"
 
 #: ../../docs/user/developers/compiling.rst:218
 msgid "Adding your signatures"
@@ -323,11 +315,11 @@ msgstr "Aggiunta delle tue firme"
 
 #: ../../docs/user/developers/compiling.rst:220
 msgid ""
-"Add and commit the ``*.SHA256SUMS`` and ``*.SHA256SUMS.asc`` files "
-"created by the build process::"
+"Add and commit the ``*.SHA256SUMS`` and ``*.SHA256SUMS.asc`` files created "
+"by the build process::"
 msgstr ""
-"Aggiungi e conferma i file ``*.SHA256SUMS`` e ``*.SHA256SUMS.asc`` creati"
-" dal processo di compilazione::"
+"Aggiungi e conferma i file ``*.SHA256SUMS`` e ``*.SHA256SUMS.asc`` creati "
+"dal processo di compilazione::"
 
 #: ../../docs/user/developers/compiling.rst:231
 msgid "Push to your fork of the guix.sigs repository on GitHub::"
@@ -335,15 +327,15 @@ msgstr "Invia al tuo fork del repository guix.sigs su GitHub::"
 
 #: ../../docs/user/developers/compiling.rst:236
 msgid ""
-"Go to `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ and open "
-"a pull request to the ``master`` branch of the upstream repository. The "
-"pull request will be reviewed by Dash Core developers and merged if "
-"everything checks out. Thanks for contributing!"
+"Go to `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ and open a "
+"pull request to the ``master`` branch of the upstream repository. The pull "
+"request will be reviewed by Dash Core developers and merged if everything "
+"checks out. Thanks for contributing!"
 msgstr ""
-"Vai su `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ e apri "
-"una richiesta pull al ramo ``master`` del repository upstream. La "
-"richiesta pull verrà esaminata dagli sviluppatori Dash Core e unita se "
-"tutto va a buon fine. Grazie per aver contribuito!"
+"Vai su `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ e apri una "
+"richiesta pull al ramo ``master`` del repository upstream. La richiesta pull"
+" verrà esaminata dagli sviluppatori Dash Core e unita se tutto va a buon "
+"fine. Grazie per aver contribuito!"
 
 #: ../../docs/user/developers/compiling.rst:242
 msgid "Verify signatures"
@@ -351,35 +343,35 @@ msgstr "Verifica le firme"
 
 #: ../../docs/user/developers/compiling.rst:244
 msgid ""
-"The `guix.sigs repository <https://github.com/dashpay/guix.sigs/>`_ "
-"contains deterministic build results signed by multiple Core developers "
-"for each release. The repository also contains public keys used for "
-"signature verification. Import the public keys::"
+"The `guix.sigs repository <https://github.com/dashpay/guix.sigs/>`_ contains"
+" deterministic build results signed by multiple Core developers for each "
+"release. The repository also contains public keys used for signature "
+"verification. Import the public keys::"
 msgstr ""
-"Il `repository guix.sigs <https://github.com/dashpay/guix.sigs/>`_ "
-"contiene risultati di build deterministici firmati da più sviluppatori "
-"Core per ogni versione. Il repository contiene anche chiavi pubbliche "
-"utilizzate per la verifica della firma. Importa le chiavi pubbliche::"
+"Il `repository guix.sigs <https://github.com/dashpay/guix.sigs/>`_ contiene "
+"risultati di build deterministici firmati da più sviluppatori Core per ogni "
+"versione. Il repository contiene anche chiavi pubbliche utilizzate per la "
+"verifica della firma. Importa le chiavi pubbliche::"
 
 #: ../../docs/user/developers/compiling.rst:253
 msgid ""
-"Run the following commands to verify that your build matches the official"
-" release::"
+"Run the following commands to verify that your build matches the official "
+"release::"
 msgstr ""
-"Esegui i seguenti comandi per verificare che la tua build corrisponda "
-"alla versione ufficiale:"
+"Esegui i seguenti comandi per verificare che la tua build corrisponda alla "
+"versione ufficiale:"
 
 #: ../../docs/user/developers/compiling.rst:263
 msgid ""
-"You should get a result similar to the following for Linux, Windows, "
-"MacOS, Signed Windows, and Signed MacOS. Assuming the previous steps "
-"completed successfully, you will also see your own signatures with an "
-"``OK`` status also."
+"You should get a result similar to the following for Linux, Windows, MacOS, "
+"Signed Windows, and Signed MacOS. Assuming the previous steps completed "
+"successfully, you will also see your own signatures with an ``OK`` status "
+"also."
 msgstr ""
-"Dovresti ottenere un risultato simile al seguente per Linux, Windows, "
-"MacOS, Signed Windows e Signed MacOS. Supponendo che i passaggi "
-"precedenti siano stati completati con successo, vedrai anche le tue firme"
-" con lo stato \"OK\"."
+"Dovresti ottenere un risultato simile al seguente per Linux, Windows, MacOS,"
+" Signed Windows e Signed MacOS. Supponendo che i passaggi precedenti siano "
+"stati completati con successo, vedrai anche le tue firme con lo stato "
+"\"OK\"."
 
 #: ../../docs/user/developers/compiling.rst:352
 msgid "Gitian"
@@ -387,15 +379,14 @@ msgstr "Gitian"
 
 #: ../../docs/user/developers/compiling.rst:355
 msgid ""
-"Gitian builds were deprecated in favor of Guix builds with the release of"
-" Dash Core v20.0. Instructions on building Dash Core 19.0 or older "
-"versions using gitian are available in a `previous version of this page "
+"Gitian builds were deprecated in favor of Guix builds with the release of "
+"Dash Core v20.0. Instructions on building Dash Core 19.0 or older versions "
+"using gitian are available in a `previous version of this page "
 "<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>`__."
 msgstr ""
 "Le build Gitian sono state deprecate a favore delle build Guix con il "
-"rilascio di Dash Core v20.0. Le istruzioni sulla creazione di Dash Core "
-"19.0 o versioni precedenti utilizzando gitian sono disponibili in una "
-"versione precedente di questa pagina "
+"rilascio di Dash Core v20.0. Le istruzioni sulla creazione di Dash Core 19.0"
+" o versioni precedenti utilizzando gitian sono disponibili in una versione "
+"precedente di questa pagina "
 "<https://docs.dash.org/en/19.0.0/docs/user/developers/compiling.html#gitian>"
 " `__."
-
