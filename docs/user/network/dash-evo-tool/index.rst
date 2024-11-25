@@ -198,6 +198,11 @@ can also initiate :ref:`withdrawals <evo-tool-identity-evo-withdraw>`.
 Create new identity
 -------------------
 
+.. tip::
+   
+   Before creating an identity, make sure you have :ref:`added a Dash Evo Tool wallet
+   <evo-tool-wallet-create>`.
+
 On the main identity screen, click the **Create Identity** button on the upper right side of the
 screen.
 
@@ -383,10 +388,10 @@ from the wallet screen.
 .. attention::
 
    The Dash Evo Tool adds watching-only addresses to the Dash Core wallet when creating identities.
-   For this reason it is recommended to close all existing Dash Core wallets and create a new, empty
-   wallet for the Dash Evo Tool.
+   For this reason it is recommended to close all existing Dash Core wallets and :ref:`create a new, empty
+   wallet <dashcore-installation-macos-create-wallet>` for the Dash Evo Tool.
    
-   The Dash Evo Tool wallet features only work if the Dash Core node has a single wallet open.
+   The Dash Evo Tool wallet features only work if the Dash Core node has a *single* wallet open.
 
 Click **Add Wallet** to create a new wallet.
 
