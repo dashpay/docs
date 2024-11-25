@@ -429,16 +429,24 @@ the winning proposals in the budget system. Depending on budget
 utilization, this results in an approximate coin allocation over
 a budget cycle as follows:
 
-+-----+----------------------------------------+
-| 80% | Mining and Masternode Reward           |
-+-----+----------------------------------------+
-| 20% | Decentralized Governance Budget        |
-+-----+----------------------------------------+
+.. _block-reward-table:
 
-When the Dash Core v20 hard fork activates, Dash's governance budget will grow
-to 20% of the block subsidy per the governance proposal approved in September
-2023. Additional details can be found in the :ref:`Treasury expansion section
-<block-subsidy-reallocation-treasury-expansion>`.
++------------+--------------------------------------------------------------------+
+| Percentage | Usage                                                              |
++============+====================================================================+
+| 20%        | Mining Reward                                                      |
++------------+--------------------------------------------------------------------+
+| 20%        | Decentralized Governance Budget                                    |
++------------+--------------------------------------------------------------------+
+| 60%        | Masternode Reward                                                  |
+|            |                                                                    |
+|            | - 62.5%: Paid to all masternode types on the Core chain            |
+|            | - 37.5%: Allocated to the Platform credit pool to pay evonodes     |
++------------+--------------------------------------------------------------------+
+
+The masternode reward division supports both regular masternodes and Evolution masternodes
+(evonodes). This allocation ensures that evonodes, which require higher collateral and provide
+additional services, receive appropriate compensation.
 
 .. _block-subsidy-reallocation-treasury-expansion:
 
@@ -448,17 +456,10 @@ Treasury expansion
 In September of 2023, the Dash network approved a `proposal
 <https://www.dashcentral.org/p/TREASURY-REALLOCATION-60-20-20>`__ to double the
 governance budget by modifying the block subsidy allocation. The new allocation
-designates 20% for miners, 20% for the governance system budget, and 60% for
-masternodes. The expansion will go into effect upon activation of the Dash Core
-v20 hard fork.
-
-+-----+----------------------------------------+
-| 20% | Mining Reward                          |
-+-----+----------------------------------------+
-| 20% | Decentralized Governance Budget        |
-+-----+----------------------------------------+
-| 60% | Masternode Reward                      |
-+-----+----------------------------------------+
+designated 20% for miners, 20% for the governance system budget, and 60% for
+masternodes. The expansion went into effect upon activation of the Dash Core
+v20 hard fork. See the :ref:`block reward table <block-reward-table>` for the
+current details.
 
 Miner and masternode reallocation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
