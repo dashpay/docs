@@ -377,13 +377,13 @@ more voting details.
 Wallet
 ======
 
-.. _evo-tool-wallet-create:
-
 .. note::
 
    The Dash Evo Tool wallet features only work if your Dash Core node has a single wallet open. **If
    you have multiple wallets open in Dash Core, close all of them except the one used by the Dash
    Evo Tool.**
+
+.. _evo-tool-wallet-create:
 
 Create wallet
 -------------
