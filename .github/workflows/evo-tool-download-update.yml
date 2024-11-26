@@ -1,0 +1,27 @@
+name: Update Dash Evo Tool download links
+
+on:
+  repository_dispatch:
+    types: [release_published]
+  workflow_dispatch:  # This allows the workflow to be triggered manually
+  schedule: # Run daily at midnight UTC
+    - cron: 0 0 * * *
+
+jobs:
+  update-evo-tool-download-links:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout this repository
+      uses: actions/checkout@v4
+
+    - name: Run evo tool download link update script
+      run: "${GITHUB_WORKSPACE}/scripts/evo-tool-download-link-update.sh"
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v6
+      with:
+        branch: update-docs/${{ github.sha }}
+        title: "chore: update evo tool download links to latest version"
+        body: |
+          This PR updates download links in the documentation to use the latest Dash Evo Tool version.
