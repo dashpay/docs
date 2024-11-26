@@ -198,6 +198,11 @@ can also initiate :ref:`withdrawals <evo-tool-identity-evo-withdraw>`.
 Create new identity
 -------------------
 
+.. tip::
+   
+   Before creating an identity, make sure you have :ref:`added a Dash Evo Tool wallet
+   <evo-tool-wallet-create>`.
+
 On the main identity screen, click the **Create Identity** button on the upper right side of the
 screen.
 
@@ -369,24 +374,29 @@ more voting details.
 
 .. _evo-tool-wallet:
 
-Wallet
-======
+Wallet operations
+=================
+
+.. note::
+
+   The Dash Evo Tool wallet features only work if your Dash Core node has a single wallet open. **If
+   you have multiple wallets open in Dash Core, close all of them except the one used by the Dash
+   Evo Tool.**
 
 .. _evo-tool-wallet-create:
 
 Create wallet
 -------------
 
-Version 0.2.1 added an initial wallet feature to support identity registration. Wallets can be added
+This tool includes a basic wallet feature to support identity registration. Wallets can be added
 from the wallet screen.
 
 .. attention::
 
-   The Dash Evo Tool adds watching-only addresses to the Dash Core wallet when creating identities.
-   For this reason it is recommended to close all existing Dash Core wallets and create a new, empty
-   wallet for the Dash Evo Tool.
-   
-   The Dash Evo Tool wallet features only work if the Dash Core node has a single wallet open.
+   Since this tool adds watching-only addresses to Dash Core when creating identities, it is
+   recommended to close all existing Dash Core wallets and :ref:`create a new, empty wallet
+   <dashcore-installation-macos-create-wallet>` for the Dash Evo Tool. Also, make sure to
+   :ref:`backup your Dash Core wallet <dashcore-backup>`.
 
 Click **Add Wallet** to create a new wallet.
 

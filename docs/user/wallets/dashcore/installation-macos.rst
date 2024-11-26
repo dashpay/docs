@@ -146,6 +146,8 @@ is complete, you will see a small blue tick in the lower right corner.
 
 You can now create a wallet to send and receive funds.
 
+.. _dashcore-installation-macos-create-wallet:
+
 Creating your Dash Wallet
 -------------------------
 
