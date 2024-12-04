@@ -5,17 +5,17 @@
 # 
 # Translators:
 # Андрей Дегтяр <diusha1711@gmail.com>, 2023
-# VONCAN, 2023
 # Julia Ogonkova <livingflcl@gmail.com>, 2024
+# VONCAN, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-18 12:41-0500\n"
+"POT-Creation-Date: 2024-11-26 15:54-0500\n"
 "PO-Revision-Date: 2023-05-04 16:28+0000\n"
-"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2024\n"
+"Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,6 +111,10 @@ msgid ""
 "turning it off through the VPS provider's setup wizard during initial server"
 " creation."
 msgstr ""
+"Отключение IPv6 настоятельно рекомендуется для предотвращения проблем со "
+"связью, которые наблюдались при работе нод на некоторых VPS-провайдерах. Мы "
+"рекомендуем отключить его через мастер настройки VPS-провайдера при "
+"первоначальном создании сервера."
 
 #: ../../docs/user/masternodes/server-config.rst:47
 msgid ""
@@ -126,6 +130,18 @@ msgid ""
 "and click **+** to add a new server. Select a location for your new server "
 "on the following screen:"
 msgstr ""
+"Прежде чем приступить к работе, потратьте несколько минут на ознакомление с "
+":hoverxref:`требованиями к оборудованию <mn-hardware-reqs>` для мастернод и "
+"эвонод, которые могут помочь вам решить, какой VPS-провайдер лучше всего "
+"подходит для ваших нужд.  Мы будем использовать хостинг `Vultr "
+"<https://www.vultr.com/>`_ в качестве примера VPS, хотя `DigitalOcean "
+"<https://www.digitalocean.com/>`_, `Amazon EC2 "
+"<https://aws.amazon.com/ec2/>`_, `Google Cloud "
+"<https://cloud.google.com/compute/>`_, `Choopa <https://www.choopa.com/>`_ и"
+" `OVH <https://www.ovh.com.au/>`_ также являются популярными вариантами. "
+"Сначала создайте учетную запись и добавьте средства. Затем перейдите в пункт"
+" меню **Servers** слева и нажмите **+**, чтобы добавить новый сервер. "
+"Выберите местоположение для нового сервера на следующем экране:"
 
 #: ../../docs/user/masternodes/server-config.rst:62
 msgid "Vultr server location selection screen"
@@ -137,6 +153,9 @@ msgid ""
 "Ubuntu instead of the latest version because LTS releases are supported with"
 " security updates for 5 years, instead of the usual 9 months."
 msgstr ""
+"В качестве типа сервера выберите Ubuntu 24.04 x64. Мы используем этот LTS-"
+"выпуск Ubuntu вместо последней версии, поскольку LTS-выпуски поддерживаются "
+"обновлениями безопасности в течение 5 лет, а не 9 месяцев, как обычно."
 
 #: ../../docs/user/masternodes/server-config.rst:71
 msgid "Vultr server type selection screen"
@@ -148,6 +167,9 @@ msgid ""
 ":hoverxref:`masternode <mn-hardware-reqs-table>` or :hoverxref:`evonode "
 "<evonode-hardware-reqs-table>`:"
 msgstr ""
+"Выберите размер сервера в соответствии с аппаратными требованиями для "
+":hoverxref:`мастернод <mn-hardware-reqs-table>` или :hoverxref:`эвонод "
+"<evonode-hardware-reqs-table>`:"
 
 #: ../../docs/user/masternodes/server-config.rst:79
 msgid "Vultr server size selection screen"
@@ -312,7 +334,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/server-config.rst:182
 msgid "Disable IPv6"
-msgstr ""
+msgstr "Отключение IPv6"
 
 #: ../../docs/user/masternodes/server-config.rst:184
 msgid ""
@@ -321,30 +343,38 @@ msgid ""
 "settings, use the following steps to disable it through the operating "
 "system."
 msgstr ""
+"Мы рекомендуем отключить IPv6, чтобы избежать возможных проблем со связью. "
+"Если вы не можете сделать это через настройки конфигурации сервера вашего "
+"VPS-провайдера, воспользуйтесь следующими шагами, чтобы отключить его через "
+"операционную систему."
 
 #: ../../docs/user/masternodes/server-config.rst:188
 msgid "Check if IPv6 is enabled::"
-msgstr ""
+msgstr "Проверьте, включен ли IPv6::"
 
 #: ../../docs/user/masternodes/server-config.rst:192
 msgid "If multiple inet6 entries are returned, open sysctrl.conf::"
-msgstr ""
+msgstr "Если получено несколько записей inet6, откройте sysctrl.conf::"
 
 #: ../../docs/user/masternodes/server-config.rst:197
 msgid ""
 "Add the following lines at the end of the file, then press **Ctrl + X** to "
 "close the editor, then **Y** and **Enter** save the file.::"
 msgstr ""
+"Добавьте следующие строки в конец файла, затем нажмите **Ctrl + X**, чтобы "
+"закрыть редактор, затем **Y** и **Enter**, чтобы сохранить файл.::"
 
 #: ../../docs/user/masternodes/server-config.rst:204
 msgid "Load the changes::"
-msgstr ""
+msgstr "Загрузите изменения::"
 
 #: ../../docs/user/masternodes/server-config.rst:208
 msgid ""
 "Finally, check if IPv6 was successfully disabled. No entries should be "
 "returned when you run the command this time::"
 msgstr ""
+"Наконец, проверьте, был ли успешно отключен IPv6. При выполнении команды на "
+"этот раз не должно появиться никаких записей::"
 
 #: ../../docs/user/masternodes/server-config.rst:214
 msgid "Configure the firewall"
@@ -367,14 +397,16 @@ msgid ""
 "Choose the appropriate firewall configuration below based on which network "
 "and masternode type your masternode will support:"
 msgstr ""
+"Выберите соответствующую конфигурацию брандмауэра, указанную ниже, в "
+"зависимости от того, какая сеть, тип ноды вам необходим:"
 
 #: ../../docs/user/masternodes/server-config.rst:0
 msgid "Mainnet masternode"
-msgstr ""
+msgstr "Mainnet masternode"
 
 #: ../../docs/user/masternodes/server-config.rst:0
 msgid "Mainnet evonode"
-msgstr ""
+msgstr "Mainnet evonode"
 
 #: ../../docs/user/masternodes/server-config.rst:0
 msgid "Testnet"

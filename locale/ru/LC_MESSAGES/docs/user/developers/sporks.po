@@ -7,16 +7,16 @@
 # Tikhon Skudarnov <semargsemarg@gmail.com>, 2023
 # Leon White <leon.white@dash.org>, 2023
 # Андрей Дегтяр <diusha1711@gmail.com>, 2023
-# VONCAN, 2023
+# VONCAN, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 10:39-0400\n"
+"POT-Creation-Date: 2024-11-26 15:54-0500\n"
 "PO-Revision-Date: 2023-05-04 16:28+0000\n"
-"Last-Translator: VONCAN, 2023\n"
+"Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,6 +45,13 @@ msgid ""
 "security vulnerability is discovered - see the :ref:`features page <sporks>`"
 " for a brief introduction to sporks."
 msgstr ""
+"Многоэтапный форк, в просторечии называемый «spork », - это уникальный для "
+"Dash механизм, используемый для безопасного развертывания новых функций в "
+"сети с помощью переменных сетевого уровня, чтобы избежать риска "
+"непреднамеренного форка сети во время обновлений. Он также может быть "
+"использован для отключения определенных функций в случае обнаружения "
+"уязвимости в системе безопасности - краткое введение в sporks смотрите на "
+":ref:`странице функций <sporks>`."
 
 #: ../../docs/user/developers/sporks.rst:17
 msgid ""
@@ -55,6 +62,8 @@ msgid ""
 "documentation describes the meaning of each spork currently existing on the "
 "network, and how to check their respective statuses."
 msgstr ""
+"Активация кода, контролируемого spork, может быть произведена удаленно, если члены основной команды разработчиков подпишут сообщение в сети, используя соответствующий приватный ключ. \n"
+"В этой документации описано значение каждого spork'а, существующего в настоящее время в сети, и как проверить их состояние."
 
 #: ../../docs/user/developers/sporks.rst:26
 msgid "Spork functions"
@@ -87,6 +96,11 @@ msgid ""
 "mainnet, the risks of maintaining them now outweigh the benefits of "
 "retaining them."
 msgstr ""
+"Значения spork в mainnet были «зафиксированы» "
+"<https://github.com/dashpay/dash/pull/6140>`__ путем их неизменной "
+"установки. Sporks по-прежнему ценны для тестирования в других сетях; однако "
+"в mainnet риски, связанные с их поддержанием, теперь перевешивают выгоды от "
+"их сохранения."
 
 #: ../../docs/user/developers/sporks.rst:45
 msgid "SPORK_2_INSTANTSEND_ENABLED"
@@ -184,11 +198,11 @@ msgstr ""
 
 #: ../../docs/user/developers/sporks.rst:75
 msgid "SPORK_24_TEST_EHF"
-msgstr ""
+msgstr "SPORK_24_TEST_EHF"
 
 #: ../../docs/user/developers/sporks.rst:75
 msgid "Supports enhanced hard fork (EHF) testing."
-msgstr ""
+msgstr "Поддерживает тестирование enhanced hard fork (EHF)."
 
 #: ../../docs/user/developers/sporks.rst:78
 msgid "Viewing spork status"

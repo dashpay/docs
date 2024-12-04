@@ -7,16 +7,16 @@
 # Julia Ogonkova <livingflcl@gmail.com>, 2022
 # Leon White <leon.white@dash.org>, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
-# VONCAN, 2023
+# VONCAN, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-18 12:41-0500\n"
+"POT-Creation-Date: 2024-11-26 15:54-0500\n"
 "PO-Revision-Date: 2022-12-27 18:56+0000\n"
-"Last-Translator: VONCAN, 2023\n"
+"Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,6 +51,14 @@ msgid ""
 "of X11 ASICs are available on the market, which help make Dash secure "
 "against brute force attacks on the blockchain."
 msgstr ""
+"Майнинг в контексте криптовалюты, такой как Dash, означает процесс поиска "
+"решений криптографически сложных задач в качестве метода обеспечения "
+"безопасности блоков в блокчейне. В процессе майнинга создаются новые токены "
+"валюты в качестве вознаграждения майнеру. Майнинг возможен на различных "
+"аппаратных средствах. В Dash реализован алгоритм, известный как :ref:`X11 "
+"<x11-hash-algorithm>`, который майнер должен решить, чтобы получить "
+"вознаграждение. На рынке доступно несколько X11 ASIC, которые помогают "
+"обезопасить Dash от атак методом перебора на сеть блокчейна. "
 
 #: ../../docs/user/mining/index.rst:20
 msgid ""
@@ -121,6 +129,17 @@ msgid ""
 "distribution found :ref:`here <block-reward-reallocation>`, while 20% is "
 "reserved for the budget system (created by superblocks every month)."
 msgstr ""
+"Однако Dash работает немного иначе, чем Биткойн, поскольку имеет "
+"двухуровневую сеть. На втором уровне работают :ref:`мастерноды "
+"<masternodes>` (Полные узлы), которые обеспечивают конфиденциальность "
+"финансовых данных (CoinJoin), мгновенные транзакции (InstantSend), а также "
+"децентрализованную систему управления и бюджета. Поскольку этот второй "
+"уровень важен, мастерноды также получают вознаграждение, когда майнеры "
+"добывают новые блоки. Вознаграждение распределяется следующим образом: 80% "
+"награды за блок делится между майнером и мастернодой в соответствии с "
+"распределением, найденным :ref:`тут <block-reward-reallocation>`, а 20% "
+"предназначено для казны Dash DAO (создаваемой и распределяемой в рамках "
+"суперблоков каждый месяц). "
 
 #: ../../docs/user/mining/index.rst:52
 msgid ""
@@ -174,6 +193,10 @@ msgid ""
 " since it is a good way to distribute, rather than centralize, the hashing "
 "power."
 msgstr ""
+"Майнинг Dash в пулах с большей вероятностью принесет вознаграждение, чем "
+"одиночный майнинг непосредственно на блокчейне. Настоятельно рекомендуется "
+"добывать Dash с помощью P2Pool, поскольку это хороший способ распределения, "
+"а не централизации мощностей хеширования."
 
 #: ../../docs/user/mining/index.rst:79
 msgid ""
@@ -237,6 +260,12 @@ msgid ""
 "added to this list, please open an issue on the `GitHub repository "
 "<https://github.com/dashpay/docs>`_."
 msgstr ""
+"ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ: этот список предоставлен исключительно в "
+"информационных целях. Сервисы, указанные в нём не поддерживались и не "
+"проходили оценку Dash Core, никаких гарантий точности информации не даётся. "
+"Пожалуйста, соблюдайте конфиденциальность, используя сторонние сервисы. Если"
+" вы хотите быть добавлены в этот список, пожалуйста, откройте проблему в "
+"репозитории <https://github.com/dashpay/docs>_ на GitHub."
 
 #: ../../docs/user/mining/index.rst:104
 msgid ""
@@ -275,6 +304,14 @@ msgid ""
 "Forums <https://www.dash.org/forum/index.php?forums/hardware-discussions-"
 "only-asic-profitable.101//>`_."
 msgstr ""
+"Обратите внимание, что информация на этой странице может очень быстро "
+"устареть из-за быстро меняющегося рынка и сложности добычи Dash. Только вы "
+"несёте ответственность за проведение собственных испытаний и любые новые "
+"добавления на этой странице не должны восприниматься как одобрение какого-"
+"либо конкретного продукта. Хорошее место для начала исследований - раздел "
+"`майнинг` на форумах Dash "
+"<https://www.dash.org/forum/index.php?forums/hardware-discussions-only-asic-"
+"profitable.101//>`_."
 
 #: ../../docs/user/mining/index.rst:134
 msgid ""
