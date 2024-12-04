@@ -49,6 +49,9 @@ Run the following from the root of the project to upload to Transifex:
 ./transifex/pushtx.sh
 ```
 
+**Note**: do not commit the *.po file changes created by the pushtx script. Those files should only be
+committed after [pulling the latest changes](#to-retrieve-from-transifex).
+
 ### To retrieve from Transifex
 
 Next run the following to retrieve the translation updates:
