@@ -47,12 +47,12 @@ learning about :ref:`safety <safety>` or joining one of the many
     .. grid-item-card:: ⚙ Core Docs
         :margin: 2 2 auto auto
         :link-type: ref
-        :link: core:core-index
+        :link: core-index
         
         Find technical details about the Dash Core blockchain, along with protocol and API reference material.
         
         +++
-        :ref:`Click to begin <core:core-index>`
+        :ref:`Click to begin <core-index>`
 
     .. grid-item-card:: 🚀 Platform Docs
          :margin: 2 2 auto auto
@@ -74,3 +74,4 @@ learning about :ref:`safety <safety>` or joining one of the many
    :maxdepth: 3
    
    docs/user/index
+   docs/core/index

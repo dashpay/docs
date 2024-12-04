@@ -40,12 +40,12 @@ Command line arguments
 ======================
 
 Detailed information for all command line arguments can be found at the
-following links to the :ref:`Dash Core developer documentation site <core:dashcore-arguments-and-commands>`:
+following links to the :ref:`Dash Core developer documentation site <dashcore-arguments-and-commands>`:
 
-- :ref:`dashd <core:dashcore-arguments-and-commands-dashd>`
-- :ref:`dash-qt <core:dashcore-arguments-and-commands-dash-qt>`
-- :ref:`dash-cli <core:dashcore-arguments-and-commands-dash-cli>`
-- :ref:`dash-tx <core:dashcore-arguments-and-commands-dash-tx>`
+- :ref:`dashd <dashcore-arguments-and-commands-dashd>`
+- :ref:`dash-qt <dashcore-arguments-and-commands-dash-qt>`
+- :ref:`dash-cli <dashcore-arguments-and-commands-dash-cli>`
+- :ref:`dash-tx <dashcore-arguments-and-commands-dash-tx>`
 
 
 RPC commands
@@ -54,11 +54,11 @@ RPC commands
 .. warning::
   Wallet-related RPCs require using the ``-rpcwallet`` option when more than
   one wallet file is loaded. This is to ensure the RPC command is executed
-  using the correct wallet. See the :ref:`Core developer documentation <core:api-rpc-multi-wallet-support>`
+  using the correct wallet. See the :ref:`Core developer documentation <api-rpc-multi-wallet-support>`
   for additional information.
 
 Detailed documentation for all available RPC commands is accessible via
-the :ref:`Dash Core developer documentation RPC page <core:api-rpc-quick-reference>`.
+the :ref:`Dash Core developer documentation RPC page <api-rpc-quick-reference>`.
 For full documentation of arguments, results and examples, type 
 ``help ( "command" )`` to view full details at the console. You can enter
 commands either from **Tools > Console** in the QT wallet, or using
