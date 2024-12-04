@@ -1,6 +1,27 @@
 $(document).ready(function() {
 	/* Select current language */
 	$('#langselect').val(DOCUMENTATION_OPTIONS['LANGUAGE']);
+
+	// Define paths where the language selector should be hidden
+	var excludedPaths = [
+		"/docs/core/"
+	];
+
+	// Get the current path of the page
+	var pagePath = $(location).attr("pathname");
+	console.log(pagePath)
+
+	// Check if the current page path starts with any excluded path
+	var shouldHideLangSelector = excludedPaths.some(function(basePath) {
+		return pagePath.startsWith(basePath);
+	});
+
+	// Hide the language selector if the page falls under the excluded paths
+	if (shouldHideLangSelector) {
+		$('#langselect').hide();
+	} else {
+		$('#langselect').show(); // Ensure it's shown if not excluded
+	}
 });
 
 $(function(){
@@ -21,7 +42,7 @@ $(function(){
 		// Convert language codes
 		var siteLang = DOCUMENTATION_OPTIONS['LANGUAGE'];
 		var currentLang = convertLangCode(siteLang);
-		var newLang = convertLangCode($('#langselect').val());;
+		var newLang = convertLangCode($('#langselect').val());
 
 		pageURL = pageURL.replace(siteURL + currentLang, "");
 		var newFullURL = siteURL + newLang + pageURL;
