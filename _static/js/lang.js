@@ -3,20 +3,16 @@ $(document).ready(function() {
 	$('#langselect').val(DOCUMENTATION_OPTIONS['LANGUAGE']);
 
 	// Define paths where the language selector should be hidden
-	var excludedPaths = [
+	var excludePattern = [
 		"/docs/core/"
 	];
 
 	// Get the current path of the page
 	var pagePath = $(location).attr("pathname");
 	console.log(pagePath)
+	// Check if the current page path contains the exclude pattern
+	var shouldHideLangSelector = pagePath.includes(excludePattern);
 
-	// Check if the current page path starts with any excluded path
-	var shouldHideLangSelector = excludedPaths.some(function(basePath) {
-		return pagePath.startsWith(basePath);
-	});
-
-	// Hide the language selector if the page falls under the excluded paths
 	if (shouldHideLangSelector) {
 		$('#langselect').hide();
 	} else {
