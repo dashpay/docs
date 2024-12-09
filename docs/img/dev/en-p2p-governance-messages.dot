@@ -1,0 +1,34 @@
+digraph {
+
+size="6.25";
+rankdir=LR
+nodesep=0.05;
+ranksep=0.1;
+splines="false"
+
+edge [ penwidth = 1.75, fontname="Sans", dir="none" ]
+node [ penwidth = 1.75, shape = "box", fontname="Sans", ]
+graph [ penwidth = 1.75, fontname="Sans" ]
+
+"govsync" -> "ssc (govobj)\ninv (govobj)";
+govsync -> "ssc (govobjvote)\ninv (govobjvote)";
+
+"ssc (govobj)\ninv (govobj)" -> getdata;
+"ssc (govobjvote)\ninv (govobjvote)" -> getdata;
+
+getdata -> govobj;
+getdata -> govobjvote;
+
+
+{
+    node [ shape = "none" ];
+    label1 [ label = "Request For Help\nGetting Up To Date" ];
+    label2 [ label = "Reply With\nCount/Inventory" ];
+    label3 [ label = "Request For\nSpecific Data" ];
+    label4 [ label = "Reply With\nRequested Data" ];
+
+    label1 -> label2 -> label3 -> label4 [style = "invis" ];
+}
+
+label = "Overview Of P2P Protocol Governance Request and Reply Messages"
+}

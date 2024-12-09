@@ -20,6 +20,17 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import os
+import subprocess
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+# Clone the DIPs repository and process DIPs so they are rendered properly
+if not os.path.exists('_external_repo'):
+    subprocess.check_call(['git', 'clone', 'https://github.com/dashpay/dips.git', '_dips'])
+    subprocess.check_call(['./scripts/dip-format.sh'])
+    subprocess.check_call('cd _dips/ && find . -name ".git" -prune -o -print -exec cp --parents \{} ../docs/core/dips/ \;', shell=True)
+    subprocess.check_call('cd', shell=True)
+    subprocess.check_call('rm -rf _dips/', shell=True)
 
 # -- General configuration ------------------------------------------------
 
@@ -73,6 +84,8 @@ exclude_patterns = [
     'README.md',
     '.devcontainer',
     'transifex',
+    'docs/core/api/ai-prompt.md',
+    'docs/img/dev/gifs/README.md',    
     'docs/user/wallets/electrum/dip3_p2sh_howto.md',
     'venv'
 ]
@@ -116,7 +129,6 @@ myst_enable_extensions = ["colon_fence"]
 
 # -- intersphinx configuration -----------------------------------------------
 intersphinx_mapping = {
-    "core": ("https://docs.dash.org/projects/core/en/stable/", None),
     "platform": ("https://docs.dash.org/projects/platform/en/stable/", None),
 }
 
@@ -139,7 +151,6 @@ html_theme = "pydata_sphinx_theme"
 #
 html_theme_options = {
     "external_links": [
-        {"name": "Core docs", "url": "https://docs.dash.org/projects/core/en/stable/docs/index.html"},
         {"name": "Platform docs", "url": "https://docs.dash.org/projects/platform/en/stable/docs/index.html"},
         {"name": "Dash.org", "url": "https://www.dash.org"},
         {"name": "Forum", "url": "https://www.dash.org/forum"},
