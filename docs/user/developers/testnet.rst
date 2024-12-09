@@ -64,7 +64,6 @@ Faucets
 Explorers
 ---------
 
-- https://testnet-insight.dashevo.org/insight
 - https://insight.testnet.networks.dash.org:3002/insight
 - http://insight.testnet.networks.dash.org:3001/insight
 

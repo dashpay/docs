@@ -36,7 +36,7 @@ The CoinJoin denominations include a bit mapping to easily differentiate them. T
 
 Protocol version 70213 added a 5th denomination (0.001 DASH).
 
-[Example Testnet denomination creation transaction](https://testnet-insight.dashevo.org/insight/tx/f0174fc87d68a18617c2990df4d9455c0459c601d2d6473934357a66f9b8b70a)
+[Example Testnet denomination creation transaction](https://insight.testnet.networks.dash.org:3002/insight/tx/f0174fc87d68a18617c2990df4d9455c0459c601d2d6473934357a66f9b8b70a)
 
 **Creating Collaterals**
 
@@ -44,9 +44,9 @@ Collaterals are used to pay CoinJoin fees, but are kept separate from the denomi
 
 In protocol versions > 70208, Dash Core can use any [input](../resources/glossary.md#input) from 1x the minimum collateral amount to the maximum collateral amount.
 
-[Example Testnet collateral creation transaction](https://testnet-insight.dashevo.org/insight/tx/8f9b15973983876f7ce4eb2c32b09690dfb0432d2caf6c6df516196a8d17689f)
+[Example Testnet collateral creation transaction](https://insight.testnet.networks.dash.org:3002/insight/tx/8f9b15973983876f7ce4eb2c32b09690dfb0432d2caf6c6df516196a8d17689f)
 
-[Example Testnet collateral payment transaction](https://testnet-insight.dashevo.org/insight/tx/de51e6f7c5ef75aad0dbb0a808ef4873d7ef6d67b25f3a658d5a241db4f3eeeb)
+[Example Testnet collateral payment transaction](https://insight.testnet.networks.dash.org:3002/insight/tx/de51e6f7c5ef75aad0dbb0a808ef4873d7ef6d67b25f3a658d5a241db4f3eeeb)
 
 ## CoinJoin Processing
 
