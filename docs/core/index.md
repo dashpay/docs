@@ -147,8 +147,8 @@ dashcore/wallet-configuration-file
 :hidden:
 
 resources/glossary
-Mainnet Block Explorer <https://insight.dashevo.org/insight/>
-Testnet Block Explorer <https://testnet-insight.dashevo.org/insight/>
+Mainnet Block Explorer <https://insight.dash.org/insight/>
+Testnet Block Explorer <https://insight.testnet.networks.dash.org:3002/insight/>
 Testnet Faucet <http://faucet.testnet.networks.dash.org/>
 API Services <https://www.dash.org/providers-and-tools/#custody-and-api>
 SDK Resources <https://docs.dash.org/en/stable/docs/user/developers/integration-sdks.html>
