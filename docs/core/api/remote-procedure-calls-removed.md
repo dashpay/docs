@@ -6,7 +6,7 @@
 
 # Removed RPCs
 
-The following RPCs were recently removed. See the [previous version of documentation](https://docs.dash.org/projects/core/en/20.0.0/docs/api/remote-procedure-calls-removed.html) for RPCs removed longer ago.
+The following RPCs were recently removed. See the [previous version of documentation](https://docs.dash.org/projects/core/en/20.1.0/docs/api/remote-procedure-calls-removed.html) for RPCs removed longer ago.
 
 ## GObject Vote-conf
 

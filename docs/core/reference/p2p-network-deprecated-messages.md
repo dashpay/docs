@@ -2,7 +2,7 @@
 
 The following network messages have been recently deprecated and should no longer be used. To see
 network messages removed longer ago, please see the [previous version of
-documentation](https://docs.dash.org/projects/core/en/20.0.0/docs/reference/p2p-network-deprecated-messages.html).
+documentation](https://docs.dash.org/projects/core/en/21.0.0/docs/reference/p2p-network-deprecated-messages.html).
 
 ## islock
 
