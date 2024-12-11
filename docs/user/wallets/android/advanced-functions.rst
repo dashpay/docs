@@ -94,6 +94,42 @@ keys, tap the **+** button.
 
 *Viewing and generating masternode keys*
 
+Username voting
+---------------
+
+Premium Dash usernames go through a voting period before being distributed. These names require a
+two-week waiting period during which masternodes and evonodes vote to determine who (if anyone)
+receives the name.  
+
+.. tip::
+
+   See the :ref:`Username FAQ <platform:resources-faq>` for more detailed information about
+   usernames.
+
+To access username voting, tap the **Menu button** and select **Username Voting** to open the
+Username Voting screen. From here, tap on any of the listed usernames to view more details or vote
+on the name.
+
+By default, only usernames that have been requested by more than one identity are displayed. Tap
+**Filter** to adjust which usernames are shown.
+
+.. image:: img/menu.jpg
+   :width: 160 px
+.. image:: img/voting-main.jpg
+   :width: 160 px
+.. image:: img/voting-name-details.jpg
+   :width: 160 px
+
+Enter voting key
+^^^^^^^^^^^^^^^^
+
+If you own a masternode or evonode and want to vote for usernames using the Android wallet, enter
+your voting private key when requested by the wallet.
+
+.. image:: img/voting-key-request.jpg
+   :width: 160 px
+
+
 Sweep paper wallet
 ------------------
 
