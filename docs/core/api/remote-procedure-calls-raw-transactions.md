@@ -1205,14 +1205,14 @@ _Result (if verbose=`false`)---the serialized transactions_
 | Name     | Type         | Presence                | Description |
 | -------- | ------------ | ----------------------- | ----------- |
 | `result` | object | Required<br>(exactly 1) | If the transaction was found, this will be an object containing the serialized transaction encoded as hex. |
-|→<br>TXID / Raw tx | string:string | Required<br>(1 or more) | A key/value pair with the transaction ID (key) and raw transaction data (value). See the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#rpc-raw-txs-getrawtx-hex) for an example of the hex transaction data. |
+|→<br>TXID / Raw tx | string:string | Required<br>(1 or more) | A key/value pair with the transaction ID (key) and raw transaction data (value). See the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction) for an example of the hex transaction data. |
 
 _Result (if verbose=`true`)---the decoded transactions_
 
 | Name                        | Type           | Presence                | Description |
 | --------------------------- | -------------- | ----------------------- | ----------- |
 | `result`                    | object         | Required<br>(exactly 1) | If the transaction was found, this will be an object describing it |
-|→<br>TXID / Decoded tx | string:string | Required<br>(1 or more) | A key/value pair with the transaction ID (key) and decoded transaction data represented in JSON (value). See the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#rpc-raw-txs-getrawtx-decoded) for an example of the decoded transaction data. |
+|→<br>TXID / Decoded tx | string:string | Required<br>(1 or more) | A key/value pair with the transaction ID (key) and decoded transaction data represented in JSON (value). See the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction) for an example of the decoded transaction data. |
 
 _Examples from Dash Core 20.1.0_
 
