@@ -566,8 +566,8 @@ Please choose one which is suitable for you:
 
 1. Upgrade an existing dashmate node. If you already have a dashmate-based evonode that meets the
    :ref:`minimum system requirements <evonode-hardware-reqs-table>`, you just need to update
-   dashmate and obtain SSL certificates. You can upgrade from :ref:`dashmate v0.25
-   <evonode-upgrade-from-dashmate-v0_25>` or :ref:`dashmate v1.0 <evonode-upgrade-from-dashmate-v1>`.
+   dashmate and obtain SSL certificates. You can upgrade from :ref:`dashmate v1.0
+   <evonode-upgrade-from-dashmate-v1>`.
 2. :ref:`Set up a dashmate node on a new host <evonode-upgrade-new-host>`. If you are running an
    evonode with dashd on a host that does not meet the :ref:`minimum system requirements
    <evonode-hardware-reqs-table>`, we recommend setting up a new server and migrating your evonode
@@ -645,7 +645,6 @@ There are two ways to get SSL certificates:
 .. toctree::
    :maxdepth: 1
 
-   dashmate-upgrade-v0_25
    dashmate-upgrade-v1
    dashmate-new-host
    dashmate-existing-host
