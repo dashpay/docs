@@ -18,9 +18,9 @@ paper wallets and more.
    getting-started.rst
    advanced-functions.rst
 
-.. image:: img/android1.png
+.. image:: img/android-login.jpg
     :width: 160 px
-.. image:: img/android2.png
+.. image:: img/android-main.jpg
     :width: 160 px
 
 *Dash Android Wallet*
