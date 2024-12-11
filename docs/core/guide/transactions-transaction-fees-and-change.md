@@ -6,7 +6,7 @@
 
 # Transaction Fees and Change
 
-Transactions pay fees based on the total byte size of the signed transaction. Fees per byte are calculated based on current demand for space in mined blocks with fees rising as demand increases.  The [transaction fee](../resources/glossary.md#transaction-fee) is split between the miner (25%) and masternode (75%), as explained in the [block reward allocation section](../../user/introduction/features.rst#block-reward-allocation). It is ultimately up to each [miner](../resources/glossary.md#miner) to choose the minimum transaction fee they will accept.
+Transactions pay fees based on the total byte size of the signed transaction. Fees per byte are calculated based on current demand for space in mined blocks with fees rising as demand increases.  The [transaction fee](../resources/glossary.md#transaction-fee) is split between the miner (25%) and masternode (75%), as explained in the [block reward allocation section](../../user/introduction/features.rst). It is ultimately up to each [miner](../resources/glossary.md#miner) to choose the minimum transaction fee they will accept.
 
 All transactions are prioritized based on their fee per byte, with higher-paying transactions being added in sequence until all of the available space is filled.
 
