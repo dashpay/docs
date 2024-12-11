@@ -12,6 +12,10 @@ make gettext 2>&1 | tee /tmp/makelog_$$.log
 if [ $PIPESTATUS -ne 0 ]; then echo "make failed, bailing out...";exit 1 ;fi
 grep ": WARNING: " /tmp/makelog_$$.log
 if [ $? -eq 0 ]; then echo "make issued a WARNING, bailing out...";exit 2;fi
+
+# Remove gettext files and directories for docs/core
+rm -r _build/gettext/docs/core
+
 # Restore the original docs/core/dips/README.md from git
 git checkout -- docs/core/dips/README.md
 
