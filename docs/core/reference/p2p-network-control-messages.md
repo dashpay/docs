@@ -441,7 +441,7 @@ See [PR 5398](https://github.com/dashpay/dash/pull/5398) for implementation deta
 
 ### Removed sporks
 
-The following sporks were used in the past but are no longer necessary and have been removed recently. To see sporks removed longer ago, please see the [previous version of documentation](https://docs.dash.org/projects/core/en/20.0.0/docs/reference/p2p-network-control-messages.html#removed-sporks).
+The following sporks were used in the past but are no longer necessary and have been removed recently. To see sporks removed longer ago, please see the [previous version of documentation](https://docs.dash.org/projects/core/en/21.0.0/docs/reference/p2p-network-control-messages.html#removed-sporks).
 
 | Spork ID | Num. | Name | Description |
 | :----------: | :----------: | ----------- | ----------- |
