@@ -3,6 +3,11 @@
 # Set to the dashpay/docs branch containing the version to update
 DOC_VERSION=master
 
+# Checkout correct branch and pull changes
+git fetch
+git checkout $DOC_VERSION
+git pull upstream $DOC_VERSION
+
 # Temporarily replace docs/core/dips/README.md to avoid warnings
 echo "# Dash Improvement Proposals (DIPs)" > docs/core/dips/README.md
 
