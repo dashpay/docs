@@ -1,8 +1,7 @@
 # Transifex
 
-Transifex is used to support multiple languages. The scripts in this folder
-assist with pushing data for translators to Transifex and retrieving translated
-information.
+Transifex is used to support multiple languages. The scripts in this folder assist with pushing data
+for translators to Transifex and retrieving translated information.
 
 ## Install required packages
 
@@ -21,17 +20,17 @@ curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bas
 
 ## Set webhook variables
 
-The `build.sh` script requires Transifex webhook token and URL values. These
-should be defined in a `.env` file. See [.env.example](.env.example) for an
-example of the format.
+The `build.sh` script requires Transifex webhook token and URL values. These should be defined in a
+`.env` file. See [.env.example](.env.example) for an example of the format.
 
 ## Usage
 
-Using the scripts requires adding a Transifex API token to an account that has
-access to the project as mention in the [Transifex client documentation](https://docs.transifex.com/client/introduction#authenticating).
+Using the scripts requires adding a Transifex API token to an account that has access to the project
+as mention in the [Transifex client
+documentation](https://docs.transifex.com/client/introduction#authenticating).
 
-It is also necessary to add authorization information in a `.transifexrc` file
-as shown in this example:
+It is also necessary to add authorization information in a `.transifexrc` file as shown in this
+example:
 
 ```text
 [https://www.transifex.com]
@@ -49,8 +48,8 @@ Run the following from the root of the project to upload to Transifex:
 ./transifex/pushtx.sh
 ```
 
-**Note**: do not commit the *.po file changes created by the pushtx script. Those files should only be
-committed after [pulling the latest changes](#to-retrieve-from-transifex).
+**Note**: do not commit the *.po file changes created by the pushtx script. Those files should only
+be committed after [pulling the latest changes](#to-retrieve-from-transifex).
 
 ### To retrieve from Transifex
 
@@ -62,8 +61,8 @@ Next run the following to retrieve the translation updates:
 
 ### To build localized sites
 
-Make sure the webhook variables are accessible. Run the following in the folder
-containing your `.env` file:
+Make sure the webhook variables are accessible. Run the following in the folder containing your
+`.env` file:
 
 ``` bash
 source .env
@@ -77,8 +76,8 @@ Next run the following to trigger builds for each language on ReadTheDocs:
 
 ### To check build status for localized sites
 
-Make sure the [token](https://docs.readthedocs.io/en/stable/api/v3.html#token) variable is accessible. Run the following in the folder containing your `.env`
-file:
+Make sure the [token](https://docs.readthedocs.io/en/stable/api/v3.html#token) variable is
+accessible. Run the following in the folder containing your `.env` file:
 
 ``` bash
 source .env
