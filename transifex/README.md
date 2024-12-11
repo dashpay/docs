@@ -3,6 +3,10 @@
 Transifex is used to support multiple languages. The scripts in this folder assist with pushing data
 for translators to Transifex and retrieving translated information.
 
+**Note**: Currently only user docs (docs/user directory) are translated. Core developer docs were
+integrated with this repository when Dash Core v22.0 was released, but they are excluded from
+translation.
+
 ## Install required packages
 
 Install the [sphinx-intl](https://pypi.org/project/sphinx-intl/) utility.
