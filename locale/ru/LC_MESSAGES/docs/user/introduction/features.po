@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 10:39-0400\n"
+"POT-Creation-Date: 2024-11-26 15:54-0500\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
@@ -197,6 +197,14 @@ msgid ""
 "masternode can vote on budget proposals or important decisions that affect "
 "Dash."
 msgstr ""
+"Владелец мастерноды должен иметь в своём распоряжении 1000 DASH, "
+"доказательство владения которыми он осуществляет подписав специальное "
+"сообщение и разослав его по сети. Эта сумма может быть потрачена в любой "
+"момент, но в таком случае мастернода потеряет свой статус, покинет очередь и"
+" перестанет получать вознаграждения от сети. Кроме того, владелец мастерноды"
+" имеет **право голосования** за предложения. Каждый мастернода может "
+"голосовать по бюджетным предложениям или важным решениям, которые влияют на "
+"Dash."
 
 #: ../../docs/user/introduction/features.rst:68
 msgid ""
@@ -208,6 +216,14 @@ msgid ""
 "year, together with the block subsidy. There is also the possibility for "
 "masternodes to earn money from fees in the future."
 msgstr ""
+"Размещение мастернод стоит денег и усилий, поэтому в качестве поощрения им "
+"выплачивается процент от вознаграждения за блок. Поскольку в каждом блоке "
+"выплачивается вознаграждение только одной мастерноде, частота выплат может "
+"меняться, как и величина выплачиваемого Dash. Этот инструмент "
+"<https://mnowatch.org/dash-stats/>`_ показывает расчет заработка мастернод в"
+" реальном времени. Эти вознаграждения уменьшаются на 7 % каждый год, вместе "
+"с субсидией на блокчейн. Также существует возможность того, что в будущем "
+"мастерноды будут зарабатывать на комиссиях."
 
 #: ../../docs/user/introduction/features.rst:77
 msgid "Evolution Masternodes (evonodes)"
@@ -219,6 +235,9 @@ msgid ""
 "created to host Dash Platform. Evonodes are similar to regular masternodes, "
 "but have these differences:"
 msgstr ""
+"Эволюционные мастерноды (Evonodes) - это подмножество мастернод, созданных "
+"для хостинга Dash Platform. Эвоноды похожи на обычные мастерноды, но имеют "
+"следующие отличия:"
 
 #: ../../docs/user/introduction/features.rst:83
 msgid "Masternode"
@@ -238,11 +257,11 @@ msgstr "1000 DASH"
 
 #: ../../docs/user/introduction/features.rst:85
 msgid "4000 DASH"
-msgstr ""
+msgstr "4000 DASH"
 
 #: ../../docs/user/introduction/features.rst:87
 msgid "Service(s)"
-msgstr ""
+msgstr "Сервис(ы)"
 
 #: ../../docs/user/introduction/features.rst:87
 msgid "Only Dash Core"
@@ -258,11 +277,11 @@ msgstr "Вес голоса"
 
 #: ../../docs/user/introduction/features.rst:89
 msgid "1 (collateral amount / 1000)"
-msgstr ""
+msgstr "1 (размер обеспечения / 1000)"
 
 #: ../../docs/user/introduction/features.rst:89
 msgid "4 (collateral amount / 1000)"
-msgstr ""
+msgstr "4 (размер обеспечения / 1000)"
 
 #: ../../docs/user/introduction/features.rst:92
 msgid ""
@@ -270,6 +289,9 @@ msgid ""
 "table>` than regular masternodes due to the additional Dash Platform "
 "services they host."
 msgstr ""
+"Эвоноды также имеют более :ref:`высокие требования к аппаратному обеспечению"
+" <mn-hardware-reqs-table>`, чем обычные мастерноды, из-за дополнительных "
+"сервисов Dash Platform, которые они поддерживают."
 
 #: ../../docs/user/introduction/features.rst:98
 #: ../../docs/user/introduction/features.rst:637
@@ -608,6 +630,11 @@ msgid ""
 "individual sporks, see the :ref:`understanding sporks page<understanding-"
 "sporks>`."
 msgstr ""
+"Начиная с Dash Core v21.0, spork'и используются только в тестовых сетях. "
+"Spork в мэйннете были зафиксированы для защиты мэйннета путем минимизации "
+"рисков, связанных с потенциальной централизацией или ее восприятием. "
+"Технические подробности об отдельных спорках см. на странице :ref:`понимание"
+" спорков <understanding-sporks>`."
 
 #: ../../docs/user/introduction/features.rst:267
 msgid "X11 Hash Algorithm"
@@ -1019,6 +1046,10 @@ msgid ""
 "network in 2023. The information below is retained for reference but has "
 "been obsolete since the Dash Core v20 activation."
 msgstr ""
+"Этот процесс перераспределения вознаграждения за блок был заменен "
+":ref:`расширением казны <block-subsidy-reallocation-treasury-expansion>`, "
+"одобренным сетью в 2023 году. Приведенная ниже информация сохраняется для "
+"справки, но устарела с момента активации Dash Core v20."
 
 #: ../../docs/user/introduction/features.rst:473
 msgid ""
@@ -1036,7 +1067,7 @@ msgstr ""
 
 #: ../../docs/user/introduction/features.rst:0
 msgid "Deprecated block reward reallocation process"
-msgstr ""
+msgstr "Утративший силу процесс перераспределения вознаграждения за блок"
 
 #: ../../docs/user/introduction/features.rst:483
 msgid ""
@@ -1305,7 +1336,7 @@ msgstr "2023-08-25"
 
 #: ../../docs/user/introduction/features.rst:517
 msgid "13 (Final)"
-msgstr ""
+msgstr "13 (Final)"
 
 #: ../../docs/user/introduction/features.rst:517
 msgid "41.5"
@@ -1439,6 +1470,12 @@ msgid ""
 "your own `emission calculations using this tool "
 "<https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_."
 msgstr ""
+"Эта документация основана на расчетах и сообщениях moocowmoo. Пожалуйста, "
+"смотрите `это сообщение на reddit "
+"<https://www.reddit.com/r/dashpay/comments/ "
+"7fc2on/dash_over_1000_in_a_few_weeks/dqb4pjn/>`_ для более подробной "
+"информации, или проведите свои собственные `расчеты эмиссии с помощью этого "
+"инструмента <https://repl.it/@moocowmoo/dash-minmax-coin-generation>`_."
 
 #: ../../docs/user/introduction/features.rst:541
 msgid "Decentralized Governance"

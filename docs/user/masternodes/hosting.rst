@@ -126,7 +126,8 @@ https://nodehub.io
 
 - Operated by: NodeHub LLC
 - Services: Hosting, Governance, Stats, Monitoring
-- Cost: $3.90/month (charged daily at $0.13)
+- Cost: $4.80/month (charged daily at $0.16)
+- Accepts DASH as payment
 - `Site <https://nodehub.io?utm_source=dashpay-docs&utm_medium=hosting-services>`__
 - `Email <hello@nodehub.io>`__
 - `Twitter <https://twitter.com/nodehubio>`__

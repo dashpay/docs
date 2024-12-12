@@ -6,16 +6,16 @@
 # Translators:
 # Dima, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
-# VONCAN, 2023
+# VONCAN, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-18 12:05-0400\n"
+"POT-Creation-Date: 2024-11-26 15:54-0500\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
-"Last-Translator: VONCAN, 2023\n"
+"Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,6 +54,18 @@ msgid ""
 "backups are stored in a safe place. **If you lose access to your wallet "
 "file, you will permanently lose access to your Dash.**"
 msgstr ""
+"В этой документации описано, как безопасно создать резервную копию файла "
+"кошелька для надежного хранения в случае повреждения или потери компьютера "
+"или ноутбука. Dash Core хранит все данные, необходимые для управления вашими"
+" адресами Dash, в одном файле под названием *wallet.dat*. Этот кошелек имеет"
+" формат Berkeley DB и хранит пары приватных/публичных криптографических "
+"ключей, используемых для управления вашими балансами на блокчейне Dash. Для "
+"HD-кошельков мнемоника, pass фраза и seed также хранятся в *wallet.dat*. "
+"Dash Core делает большинство этих операций прозрачными и даже создает "
+"автоматические резервные копии файла кошелька на случай его повреждения, но "
+"пользователь несет ответственность за то, чтобы эти резервные копии "
+"хранились в безопасном месте. **Если вы потеряете доступ к файлу кошелька, "
+"вы навсегда потеряете доступ к своим Dash.**"
 
 #: ../../docs/user/wallets/dashcore/backup.rst:26
 msgid ""
@@ -226,7 +238,7 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/backup.rst:127
 msgid "HD wallet information"
-msgstr ""
+msgstr "Информация о HD-кошельке"
 
 #: ../../docs/user/wallets/dashcore/backup.rst:129
 msgid ""
@@ -236,6 +248,12 @@ msgid ""
 "the wallet. Since imported keys are not associated with the HD-derived keys,"
 " **it is still critical to back up wallet.dat for HD wallets.**"
 msgstr ""
+"В Dash Core реализована совместимая с BIP39/BIP44 иерархическая "
+"детерминированная (HD) генерация ключей. HD-кошельки создаются по умолчанию "
+"начиная с Dash Core v20.1; однако по-прежнему существует возможность "
+"импортировать приватные ключи в кошелек. Поскольку импортированные ключи не "
+"связаны с ключами, полученными в HD-кошельке, **очень важно сохранять "
+"резервную копию файла wallet.dat для HD-кошельков.**"
 
 #: ../../docs/user/wallets/dashcore/backup.rst:135
 msgid ""
@@ -243,6 +261,9 @@ msgid ""
 "compatible wallet, the new wallet will have access to any funds associated "
 "with the HD-derived keys."
 msgstr ""
+"Если мнемоник HD-кошелька из Dash Core будет импортирован в другой HD-"
+"совместимый кошелек, новый кошелек получит доступ ко всем средствам, "
+"связанным с ключами, полученными с помощью HD."
 
 #: ../../docs/user/wallets/dashcore/backup.rst:140
 msgid "Restore"

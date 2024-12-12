@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 10:39-0400\n"
+"POT-Creation-Date: 2024-11-18 12:41-0500\n"
 "PO-Revision-Date: 2023-05-04 16:28+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2023\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/dash/teams/37570/zh_CN/)\n"
@@ -100,7 +100,7 @@ msgstr ""
 #: ../../docs/user/network/dashmate/index.rst:65
 msgid ""
 "``N: Download is performed unsandboxed as root as file "
-"'/home/ubuntu/dashmate_1.1.1.0fec811fb-1_amd64.deb' couldn't be accessed by "
+"'/home/ubuntu/dashmate_1.5.1.8f924cc0a-1_amd64.deb' couldn't be accessed by "
 "user '_apt'. - pkgAcquire::Run (13: Permission denied)``"
 msgstr ""
 
@@ -449,20 +449,390 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:362
 msgid ""
-"Once the new version is installed, reset the configuration and services "
-"using ``--keep-data`` so the existing data is retained. Then, update the "
-"dashmate services::"
+"Once the new version of dashmate is installed, update dash service docker "
+"images::"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:368
+#: ../../docs/user/network/dashmate/index.rst:366
 msgid "Finally, restart dashmate::"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:375
-msgid "Collecting logs"
+#: ../../docs/user/network/dashmate/index.rst:371
+msgid "Troubleshooting"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:377
+#: ../../docs/user/network/dashmate/index.rst:375
+msgid ""
+"Only enable logs if you have :ref:`configured log rotation <dashmate-log-"
+"rotation>` to avoid running out of disk space."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:378
+msgid ""
+"The following sections describe how to enable log rotation, set up file "
+"logging for Core and Platform, adjust log levels, and collect the logs for "
+"analysis."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:382
+msgid "Dashmate log overview"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:384
+msgid ""
+"Dashmate logs for each service are stored within its Docker container. "
+"Although this is typically sufficient, more advanced options are sometimes "
+"needed to adjust the log level, output format, or destination. Several cases"
+" include when you need to:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:388
+msgid "Modify the level of detail provided in the logs (e.g., debug vs info)"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:389
+msgid ""
+"Provide data to a log server (e.g., `Elasticsearch "
+"<https://www.elastic.co/elasticsearch>`_)"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:390
+msgid "Store persistent file logs external to the Docker containers"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:391
+msgid "Use log monitoring tools to track service health"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:393
+msgid ""
+"For example, since the default dashmate logs are only stored in the Docker "
+"containers, they are lost if the container is removed for some reason (new "
+"Docker image, dashmate reset, failure, etc.). Therefore, you may want to "
+"store persistent log files external to Docker while troubleshooting an issue"
+" to ensure valuable log data cannot be lost."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:401
+msgid "Set up log rotation"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:403
+msgid ""
+"By default, dashmate logs are not written to the docker host file system. At"
+" times you may want to write them to the host file system. Before enabling "
+"logging, it is important to configure log rotation to avoid running out of "
+"disk space."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:407
+msgid "Create a new logrotate configuration file for dashmate logs:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:413
+msgid ""
+"Paste in the following configuration and replace the example path one that "
+"matches your system. This example configuration rotates logs daily and "
+"retains seven historical files for each log file type. Historical files are "
+"each limited to 1GB."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:430
+msgid ""
+"Press **Ctrl + X** to close the editor and **Y** and **Enter** save the "
+"file."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:434
+msgid ""
+"For additional log rotation details, see `this configuration tutorial "
+"<https://www.digitalocean.com/community/tutorials/how-to-manage-logfiles-"
+"with-logrotate-on-ubuntu-22-04>`_ or check out the `logrotate man pages "
+"<https://manpages.ubuntu.com/manpages/jammy/man8/logrotate.8.html>`_."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:442
+msgid "Configure Core logs"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:445
+msgid "Enable logging to file"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:447
+msgid ""
+"Use ``dashmate config set`` to configure a location for storing Core logs on"
+" the host file system. Replace the example path with one that matches your "
+"system:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:457
+msgid "Toggle debug logs"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:459
+msgid ""
+"To enable debug logging for additional details, run the following command. "
+"Debug logs can be turned off by setting the value back to ``false``:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:0
+msgid "Advanced debug logging"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:468
+msgid ""
+"Dashmate supports some advanced debug log options provided by Dash Core. The"
+" following boolean ``core.log.debug`` settings correspond directly to the "
+"parameters described in the `Core documentation "
+"<https://docs.dash.org/projects/core/en/stable/docs/dashcore/wallet-"
+"arguments-and-commands-dashd.html#debugging-testing-options>`_: ``ips``, "
+"``sourceLocations``, ``threadNames``, and ``timeMicros``."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:474
+msgid "**Dashmate Debug Log Options**"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:477
+msgid "**Setting**"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:477
+#: ../../docs/user/network/dashmate/index.rst:489
+msgid "**Description**"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:479
+msgid "``ips``"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:479
+msgid "Logs the IP addresses of incoming and outgoing connections"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:481
+msgid "``sourceLocations``"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:481
+msgid ""
+"Logs the source locations (file and line number) for debugging information"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:484
+msgid "``threadNames``"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:484
+msgid "Logs the names of the threads used for various operations"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:486
+msgid "``timeMicros``"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:486
+msgid ""
+"Logs timestamps with microsecond precision for detailed performance analysis"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:489
+msgid "**Filter Option**"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:491
+msgid "``includeOnly``"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:491
+msgid ""
+"Log only the specified categories (e.g., ``[\"net\", \"rpc\"]``). If empty, "
+"all categories will be logged"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:494
+msgid "``exclude``"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:494
+msgid ""
+"Excludes specified categories from logging (e.g., ``[\"rpc\", "
+"\"instantsend\"]``)"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:505
+msgid "View current log settings"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:507
+msgid "To view the current Core log settings, run:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:514
+msgid "Disable logging to file"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:516
+msgid ""
+"To disable logging to a file outside the container, reset the log path to "
+"``null``:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:525
+msgid "Configure Platform logs"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:527
+msgid ""
+"For troubleshooting flexibility, dashmate provides independent log "
+"configuration for the Platform Gateway, Drive ABCI, and Tenderdash. Each "
+"service can be configured with the most helpful log level and output format."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:534
+msgid "Gateway logs"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:536
+msgid ""
+"The Platform gateway has two types of logs: service logs and access logs. "
+"Service logs are directed to stdout, while access logs can be configured to "
+"go to stdout, stderr, or to a file. If all logs are directed to stdout, the "
+"output will be a mixture of service and access data."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:540
+#: ../../docs/user/network/dashmate/index.rst:604
+#: ../../docs/user/network/dashmate/index.rst:671
+msgid "**Enable file logging**"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:542
+msgid ""
+"Use ``dashmate config set`` to configure a location for storing Platform "
+"gateway access logs on the host file system. The example below adds file "
+"logging while also keeping the default stdout logging. Replace the example "
+"path with one that matches your system:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:562
+#: ../../docs/user/network/dashmate/index.rst:626
+#: ../../docs/user/network/dashmate/index.rst:680
+msgid "**Disable file logging**"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:564
+msgid ""
+"To disable logging to a file, remove the file config from the accessLogs "
+"setting:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:576
+#: ../../docs/user/network/dashmate/index.rst:641
+#: ../../docs/user/network/dashmate/index.rst:688
+msgid "**Change log level**"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:578
+msgid ""
+"Platform gateway service logs support several levels of detail. In "
+"increasing order of detail they are: ``critical``, ``error``, ``warn``, "
+"``info`` (default), ``debug``, and ``trace``. To disable service logs, set "
+"the log level to ``off``."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:582
+msgid ""
+"The log level can be changed by using ``dashmate config set`` to update the "
+"``platform.gateway.log.level`` value. For example, run these commands to "
+"change the gateway service log level to debug on your dashmate node:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:591
+#: ../../docs/user/network/dashmate/index.rst:658
+#: ../../docs/user/network/dashmate/index.rst:704
+msgid "**View log settings**"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:593
+#: ../../docs/user/network/dashmate/index.rst:660
+msgid "To view the current Platform gateway log settings, run:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:602
+msgid "Drive ABCI logs"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:606
+msgid ""
+"Use ``dashmate config set`` to configure a location for storing Platform "
+"ABCI logs on the host file system. Replace the example path with one that "
+"matches your system:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:628
+msgid ""
+"To disable logging to a file, remove the file config from the logs setting:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:643
+msgid ""
+"Drive ABCI logs support several levels of detail. In increasing order of "
+"detail they are: ``error``, ``warn``, ``info`` (default), ``debug``, and "
+"``trace``. A logging specification string can also be provided in the "
+"RUST_LOG format for more flexibility. To disable service logs, set the log "
+"level to ``silent``."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:648
+msgid ""
+"The log level can be changed by using ``dashmate config set`` to update the "
+"``platform.drive.abci.logs.*.level`` value. For example, run these commands "
+"to change the log levels for file logging and stdout logging to debug on "
+"your dashmate node:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:669
+msgid "Tenderdash logs"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:673
+msgid ""
+"Use ``dashmate config set`` to configure a location for storing Tenderdash "
+"logs on the host file system. Replace the example path with one that matches"
+" your system:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:682
+msgid "To disable logging to a file, set the path back to ``null``:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:690
+msgid ""
+"Tenderdash logs support several levels of detail. In increasing order of "
+"detail they are: ``error``, ``warn``, ``info`` (default), ``debug``, and "
+"``trace``. A logging specification string can also be provided in the "
+"RUST_LOG format for more flexibility. To disable service logs, set the log "
+"level to ``silent``."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:695
+msgid ""
+"The log level can be changed by using ``dashmate config set`` to update the "
+"``platform.drive.abci.logs.*.level`` value. For example, run these commands "
+"to change the log level to debug on your dashmate node:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:706
+msgid "To view the current Tenderdash log settings, run:"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:715
+msgid "Collect logs"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:717
 msgid ""
 "Dashmate includes the doctor command to make troubleshooting and log "
 "reporting easier. The dashmate doctor command collects important debugging "
@@ -470,56 +840,83 @@ msgid ""
 "sent to the support team if necessary. This report includes:"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:381
+#: ../../docs/user/network/dashmate/index.rst:721
 msgid ""
 "**Operating System**: Details about the architecture, CPU, memory, and swap"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:382
+#: ../../docs/user/network/dashmate/index.rst:722
 msgid ""
 "**Docker**: Status and logs (exit codes, stdout, stderr) for each service"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:383
+#: ../../docs/user/network/dashmate/index.rst:723
 msgid ""
 "**Core RPC**: Essential details like the best ChainLock, quorums, blockchain"
 " information, peers, and masternode status"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:384
+#: ../../docs/user/network/dashmate/index.rst:724
 msgid ""
 "**Tenderdash RPC**: Status, genesis, network information, ABCI details, and "
 "a consensus state dump"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:385
+#: ../../docs/user/network/dashmate/index.rst:725
 msgid ""
 "**Metrics**: Tenderdash and Drive metrics (if enabled in the configuration)"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:387
+#: ../../docs/user/network/dashmate/index.rst:727
 msgid "To create a report, run ``dashmate doctor`` and select **Yes**::"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:395
+#: ../../docs/user/network/dashmate/index.rst:735
 msgid "Run the doctor command"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:397
+#: ../../docs/user/network/dashmate/index.rst:737
 msgid ""
 "Upon successful completion, the full path to the report archive is "
 "displayed."
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:403
+#: ../../docs/user/network/dashmate/index.rst:743
 msgid "Doctor output"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:406
+#: ../../docs/user/network/dashmate/index.rst:748
+msgid "Metrics"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:750
+msgid ""
+"To provide better network visibility to DCG developers for troubleshooting, "
+"volunteers can contribute metrics to the DCG metrics server."
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:753
+msgid "Enable metrics on your dashmate node"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:776
+msgid ""
+"Grant access to metrics from the DCG metrics server (34.219.3.238) by "
+"updating your network configuration (i.e., your firewall, AWS security "
+"groups, etc.)"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:779
+msgid ""
+"Provide DCG with your IP address and port so it can be added to the DCG "
+"Prometheus server"
+msgstr ""
+
+#: ../../docs/user/network/dashmate/index.rst:782
 msgid "Additional Information"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst:408
+#: ../../docs/user/network/dashmate/index.rst:784
 msgid ""
 "For further documentation see the `dashmate repository "
 "<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__."

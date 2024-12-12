@@ -8,16 +8,16 @@
 # Max Aronych <taofgoar@protonmail.com>, 2022
 # Julia Ogonkova <livingflcl@gmail.com>, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
-# VONCAN, 2023
+# VONCAN, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-18 12:05-0400\n"
+"POT-Creation-Date: 2024-11-26 15:54-0500\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
-"Last-Translator: VONCAN, 2023\n"
+"Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -147,13 +147,15 @@ msgstr "HD кошельки"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:81
 msgid "HD wallets are now created by default."
-msgstr ""
+msgstr "Теперь HD-кошельки создаются по умолчанию."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:83
 msgid ""
 "Dash Core includes an implementation of BIP39/BIP44 compatible hierarchical "
 "deterministic (HD) key generation."
 msgstr ""
+"В Dash Core реализована совместимая с BIP39/BIP44 иерархическая "
+"детерминированная (HD) генерация ключей."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:89
 msgid "Upgrade to HD"
@@ -164,6 +166,8 @@ msgid ""
 "A new :ref:`backup <dashcore-backup>` must be created after upgrading to an "
 "HD wallet."
 msgstr ""
+"После перехода на HD-кошелек необходимо создать новый :ref:`бэкап <dashcore-"
+"backup>`."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:96
 msgid ""
@@ -268,6 +272,8 @@ msgid ""
 "HD wallets are now created by default without requiring the steps listed "
 "below."
 msgstr ""
+"HD Кошельки теперь создаются по умолчанию, не требуя выполнения "
+"перечисленных ниже действий."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:155
 msgid ""
@@ -277,6 +283,12 @@ msgid ""
 "other operating systems. Enter the following command to configure Dash Core "
 "to generate HD wallets by default::"
 msgstr ""
+"До версии Dash Core v20.1.0, чтобы сделать HD-кошелек кошельком по "
+"умолчанию, необходимо было выполнить эти шаги. В данном примере мы будем "
+"использовать кошелек с графическим интерфейсом Windows, но команды будут "
+"аналогичными при использовании ``dash-qt`` или ``dashd`` в других "
+"операционных системах. Введите следующую команду, чтобы настроить Dash Core "
+"на генерацию HD-кошельков по умолчанию::"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:163
 msgid ""
@@ -300,6 +312,13 @@ msgid ""
 "and create a transaction. The example parties involved are a buyer, a seller"
 " and an arbiter. This example is based on:"
 msgstr ""
+"В данном разделе представлен рабочий пример, демонстрирующий функцию "
+"мультиподписи в кошельке Dash Core. Хотя транзакции могут быть не видны в "
+"текущем блокчейне тестовой сети и некоторые форматы адресов или ответы RPC "
+"могут немного отличаться от версии, показанной здесь, принцип и команды "
+"одинаковы. В примере показано как настроить адрес с 2-из-3 multisig-адресов "
+"и создать транзакцию. В примере задействованными сторонами являются: "
+"покупатель, продавец и арбитр. Данный пример основывается на:"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:179
 msgid "https://gist.github.com/jashmenn/9811198"
@@ -715,6 +734,9 @@ msgid ""
 "dropdown box. Next, click **File -> Close Wallet...** and then click **Yes**"
 " on the Close wallet confirmation screen."
 msgstr ""
+"Чтобы закрыть кошелек, установите его в качестве активного с помощью "
+"выпадающего окна выбора кошелька. Затем нажмите **Файл -> Закрыть "
+"кошелек...** и нажмите **Да** на экране подтверждения закрытия кошелька."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:645
 #: ../../docs/user/wallets/dashcore/advanced.rst:661
@@ -731,19 +753,23 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:653
 msgid "Close all wallets"
-msgstr ""
+msgstr "Закройте все кошельки"
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:655
 msgid ""
 "To close all wallets, click **File -> Close All Wallets...** and then click "
 "**Yes** on the Close all wallets confirmation screen."
 msgstr ""
+"Чтобы закрыть все кошельки, нажмите **Файл -> Закрыть все кошельки...**, а "
+"затем нажмите **Да** на экране подтверждения закрытия всех кошельков."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:663
 msgid ""
 "Once all wallets are closed, wallet-related items on the tab bar will be "
 "disabled."
 msgstr ""
+"Когда все кошельки будут закрыты, элементы, связанные с кошельками, на "
+"панели вкладок будут отключены."
 
 #: ../../docs/user/wallets/dashcore/advanced.rst:666
 msgid "Alternative methods"

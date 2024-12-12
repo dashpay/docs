@@ -6,16 +6,16 @@
 # Translators:
 # Dima, 2023
 # Андрей Дегтяр <diusha1711@gmail.com>, 2023
-# VONCAN, 2023
+# VONCAN, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 10:39-0400\n"
+"POT-Creation-Date: 2024-11-26 15:54-0500\n"
 "PO-Revision-Date: 2023-05-23 19:50+0000\n"
-"Last-Translator: VONCAN, 2023\n"
+"Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -130,6 +130,10 @@ msgid ""
 "result can be achieved on a masternode by entering the same commands and "
 "adding the prefix ``~/.dashcore/dash-cli`` to each command."
 msgstr ""
+"В этой документации описаны команды Dash Core, как если бы они были введены "
+"в графическом интерфейсе, открыв консоль из **Window > Console**, но того же"
+" результата можно достичь на мастерноде, введя те же команды и добавив "
+"префикс ``~/.dashcore/dash-cli`` к каждой команде."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:49
 msgid "Server configuration"
@@ -349,10 +353,15 @@ msgid ""
 "**highly recommended** to enhance security and protect yourself against "
 "hacking. Only proceed with using Dash Core if you understand the risks."
 msgstr ""
+"Хранить обеспечение в кошельке Dash Core **не** рекомендуется. "
+":ref:`Использование аппаратного кошелька <evonode-send-collateral-hardware>`"
+" - **настоятельно рекомендуется** для повышения безопасности и защиты от "
+"взлома. Приступайте к использованию Dash Core, только если вы понимаете все "
+"риски."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:0
 msgid "Dash Core collateral instructions"
-msgstr ""
+msgstr "Инструкции по обеспечению Dash Core"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:174
 msgid ""
@@ -473,19 +482,29 @@ msgid ""
 "<https://github.com/dashpay/platform/releases/latest>`__ and install it "
 "using apt::"
 msgstr ""
+"Загрузите установочный пакет dashmate для вашей архитектуры процессора со "
+"страницы релизов на `GitHub "
+"<https://github.com/dashpay/platform/releases/latest>`__ и установите его с "
+"помощью apt::"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:250
 msgid ""
 "At the end of the installation process, ``apt`` may display an error due to "
 "installing a downloaded package. You can ignore this error message:"
 msgstr ""
+"В конце процесса установки ``apt`` может выдать ошибку, связанную с "
+"установкой загруженного пакета. Вы можете проигнорировать это сообщение об "
+"ошибке:"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:252
 msgid ""
 "``N: Download is performed unsandboxed as root as file "
-"'/home/ubuntu/dashmate_1.1.1.0fec811fb-1_amd64.deb' couldn't be accessed by "
+"'/home/ubuntu/dashmate_1.5.1.8f924cc0a-1_amd64.deb' couldn't be accessed by "
 "user '_apt'. - pkgAcquire::Run (13: Permission denied)``"
 msgstr ""
+"``N: Download is performed unsandboxed as root as file "
+"'/home/ubuntu/dashmate_1.5.1.8f924cc0a-1_amd64.deb' couldn't be accessed by "
+"user '_apt'. - pkgAcquire::Run (13: Permission denied)``"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:254
 msgid ""
@@ -569,6 +588,9 @@ msgid ""
 "specify a different **Payout address** and/or **Operator reward**, then "
 "click **Continue**."
 msgstr ""
+"Затем нажмите **Действия с МН** и выберите **Регистрация мастерноды**. По "
+"желанию укажите другой **Адрес выплаты** и/или **Вознаграждение оператора**,"
+" затем нажмите **Продолжить**."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:299
 msgid ""
@@ -577,6 +599,11 @@ msgid ""
 "Platform. Currently, the Dash Masternode Tool does not support the credit "
 "withdraw process that will be used to transfer Dash Platform rewards."
 msgstr ""
+"Для начального релиза Dash Platform рекомендуется назначить адрес выплаты из"
+" неаппаратного кошелька, например :ref:`Dash Core <evonode-get-addresses>`. "
+"В настоящее время Dash Masternode Tool не поддерживает процесс вывода "
+"кредитов, который будет использоваться для перевода вознаграждений Dash "
+"Platform."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:304
 msgid ""
@@ -585,6 +612,11 @@ msgid ""
 "<https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-"
 "connection-direct.md>`__.) Confirm the following two messages:"
 msgstr ""
+"Выберите **Удаленный RPC-узел Dash (автоматический метод)**. (Подробные "
+"сведения об использовании собственного локального узла RPC см. в "
+"документации по инструменту `Dash Masternode Tool` "
+"<https://github.com/Bertrand256/dash-masternode-tool/blob/master/doc/config-"
+"connection-direct.md>`__). Подтвердите следующие два сообщения:"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:315
 msgid "Dash Masternode Tool confirmation dialogs to register a masternode"
@@ -615,6 +647,8 @@ msgid ""
 "Take note of your BLS private key and then proceed with the relevant "
 "instructions below."
 msgstr ""
+"Запишите свой приватный ключ BLS, а затем выполните соответствующие "
+"инструкции ниже."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:331
 msgid "Dashmate"
@@ -796,6 +830,9 @@ msgid ""
 "following sections show how to generate and retrieve information that may be"
 " required by dashmate or the Dash Masternode Tool."
 msgstr ""
+"Если вы предпочитаете управлять обеспечением и ключами с помощью Dash Core, "
+"в следующих разделах показано, как генерировать и получать информацию, "
+"которая может потребоваться dashmate или Dash Masternode Tool."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:441
 msgid "Identify the funding transaction"
@@ -942,13 +979,15 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-evonode.rst:562
 msgid "Upgrade Core-only evonode"
-msgstr ""
+msgstr "Обновление Core-only Эвоноды"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:564
 msgid ""
 "There are three options to proceed with upgrading an existing Core-only "
 "evonode to support Platform. Please choose one which is suitable for you:"
 msgstr ""
+"Существует три варианта обновления существующей эвоноды с поддержкой только "
+"Core до поддержки Platform. Пожалуйста, выберите подходящий для вас вариант:"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:567
 msgid ""
@@ -958,6 +997,12 @@ msgid ""
 "You can upgrade from :ref:`dashmate v0.25 <evonode-upgrade-from-"
 "dashmate-v0_25>` or :ref:`dashmate v1.0 <evonode-upgrade-from-dashmate-v1>`."
 msgstr ""
+"Обновление существующей ноды dashmate. Если у вас уже есть evonode на базе "
+"dashmate, который соответствует :ref:`минимальным системным требованиям "
+"<evonode-hardware-reqs-table>`, вам просто нужно обновить dashmate и "
+"получить SSL-сертификаты. Вы можете обновиться с :ref:`dashmate v0.25 "
+"<evonode-upgrade-from-dashmate-v0_25>` или :ref:`dashmate v1.0 <evonode-"
+"upgrade-from-dashmate-v1>`."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:571
 msgid ""
@@ -967,12 +1012,19 @@ msgid ""
 "recommend setting up a new server and migrating your evonode to it. Consider"
 " the following details when evaluating this option:"
 msgstr ""
+":ref:`Установка ноды dashmate на новом хосте <evonode-upgrade-new-host>`. "
+"Если вы используете evonode с dashd на хосте, который не соответствует "
+":ref:`минимальным системным требованиям <evonode-hardware-reqs-table>`, мы "
+"рекомендуем создать новый сервер и перенести на него вашу эвоноду. При "
+"оценке этого варианта учитывайте следующие детали:"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:576
 msgid ""
 "You will need to set up a new server and keep the existing and new servers "
 "running while Core is syncing on the new server."
 msgstr ""
+"Вам нужно будет настроить новый сервер и поддерживать существующий и новый "
+"серверы в рабочем состоянии, пока Core синхронизируется на новом сервере."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:578
 msgid ""
@@ -980,18 +1032,25 @@ msgid ""
 "update the IP address using a :ref:`ProUpServTx <dip3-update-service>` "
 "update."
 msgstr ""
+"Вы должны иметь возможность перенести свой текущий публичный IP на новый "
+"сервер или обновить IP-адрес с помощью обновления :ref:`ProUpServTx "
+"<dip3-update-service>`."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:580
 msgid ""
 "Your existing node will continue to operate while you set up the new server,"
 " so any problems with the new node will not affect the existing one."
 msgstr ""
+"Ваша действующая нода будет продолжать работать, пока вы настраиваете новый "
+"сервер, поэтому любые проблемы с новой нодой не повлияют на существующую."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:582
 msgid ""
 "This is a good opportunity to upgrade the OS and software to current "
 "versions."
 msgstr ""
+"Это хорошая возможность обновить ОС и программное обеспечение до актуальных "
+"версий."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:583
 msgid ""
@@ -1001,62 +1060,75 @@ msgid ""
 " of the Core blockchain at the same time during the migration (for about 10 "
 "mins)."
 msgstr ""
+":ref:`Установите ноду dashmate на существующем хостинге <evonode-upgrade-"
+"existing-host>`. Если вы предпочитаете установить dashmate на том же "
+"сервере, что и существующая нода, убедитесь, что у вас достаточно места на "
+"диске для одновременного хранения двух копий блокчейна Core во время "
+"миграции (примерно 10 минут)."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:589
 msgid "Prerequisites"
-msgstr ""
+msgstr "Предварительные условия"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:591
 msgid ""
 "ARM64 or x86-64 Linux host (Ubuntu is recommended) that meets the "
 ":ref:`minimum requirements <evonode-hardware-reqs-table>`"
 msgstr ""
+"ARM64 или x86-64 Linux-хост (рекомендуется Ubuntu), отвечающий "
+":ref:`минимальным требованиям <evonode-hardware-reqs-table>`."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:593
 msgid "Public IPv4 address"
-msgstr ""
+msgstr "Публичные IPv4 адреса"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:594
 msgid ""
 "Network configuration (firewall, security groups) allowing public access to "
 "the following TCP ports:"
 msgstr ""
+"Конфигурация сети (брандмауэр, группы безопасности), дающая публичный доступ"
+" к следующим TCP-портам:"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:597
 msgid "9999/tcp"
-msgstr ""
+msgstr "9999/tcp"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:598
 msgid "443/tcp"
-msgstr ""
+msgstr "443/tcp"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:599
 msgid "26656/tcp"
-msgstr ""
+msgstr "26656/tcp"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:600
 msgid "80/tcp (if you are going to use ZeroSSL)"
-msgstr ""
+msgstr "80/tcp (если вы собираетесь использовать ZeroSSL)"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:601
 msgid ""
 "Backup of any existing Dash Core and dashmate configuration data, including "
 "private keys"
 msgstr ""
+"Резервное копирование всех существующих данных конфигурации Dash Core и "
+"dashmate, включая приватные ключи"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:602
 msgid ""
 "`ZeroSSL API access key <https://app.zerossl.com/developer>`_ or SSL "
 "certificate for the public IPv4 address (not DNS name)"
 msgstr ""
+"Ключ доступа к API ZeroSSL <https://app.zerossl.com/developer>`_ или SSL-"
+"сертификат для публичного IPv4-адреса (не DNS-имени)"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:608
 msgid "SSL certificates"
-msgstr ""
+msgstr "SSL certificates"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:610
 msgid "There are two ways to get SSL certificates:"
-msgstr ""
+msgstr "Существует два способа получения SSL-сертификатов:"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:612
 msgid ""
@@ -1066,26 +1138,36 @@ msgid ""
 "certificate). Other plans require paying with a credit card. You can get an "
 "API key for dashmate by completing the following steps:"
 msgstr ""
+"Зарегистрируйтесь на сервисе ZeroSSL и получите свой API ключ. Поскольку "
+"ZeroSSL предоставляет API, dashmate может обновлять ваши сертификаты "
+"автоматически. Бесплатный тарифный план предоставляет только 3 бесплатных "
+"сертификата (или 3 продления 1 сертификата). Другие тарифные планы требуют "
+"оплаты кредитной картой. Вы можете получить API-ключ для dashmate, выполнив "
+"следующие действия:"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:617
 msgid ""
 "Register on `https://zerossl.com/ <https://zerossl.com/>`_. *We recommend "
 "not using your personal email address.*"
 msgstr ""
+"Зарегистрируйтесь на сайте `https://zerossl.com/ <https://zerossl.com/>`_. "
+"Мы рекомендуем **не** использовать ваш личный адрес электронной почты."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:619
 msgid "Log in and click ``Developer`` on the left sidebar."
-msgstr ""
+msgstr "Войдите в систему и нажмите ``Разработчик`` на левой боковой панели."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:620
 msgid ""
 "Copy your ZeroSSL API key to provide to dashmate later. *Do not create a "
 "\"New certificate\".*"
 msgstr ""
+"Скопируйте свой API-ключ ZeroSSL чтобы позже вставить его в dashmate. **Не "
+"создавайте «Новый сертификат»**."
 
 #: ../../docs/user/masternodes/setup-evonode.rst:625
 msgid "ZeroSSL Developer tab showing the API key"
-msgstr ""
+msgstr "Вкладка ZeroSSL Developer, показывающая ключ API"
 
 #: ../../docs/user/masternodes/setup-evonode.rst:627
 msgid ""
@@ -1095,3 +1177,32 @@ msgid ""
 "<https://www.superbithost.com/ssl-certificates/>`_ are two options that "
 "accept cryptocurrency."
 msgstr ""
+"Получите SSL-сертификаты для своего IP-адреса у любого доступного провайдера"
+" и загрузите файлы сертификатов на свой сервер. `SSL Dragon "
+"<https://www.ssldragon.com/>`_ и `SuperbitHost "
+"<https://www.superbithost.com/ssl-certificates/>`_ - два варианта, которые "
+"принимают криптовалюту."
+
+#: ../../docs/user/masternodes/setup-evonode.rst:631
+msgid ""
+"Please make sure that the certificate chain file contains your server "
+"certificate at the top and intermediate/root certificates if present. If a "
+"bundle file is present, you need to concatenate it with the certificate "
+"file::"
+msgstr ""
+"Убедитесь, что файл цепочки сертификатов содержит сертификат вашего сервера "
+"в верхней части и промежуточные/корневые сертификаты, если они присутствуют."
+" Если файл пакета присутствует, необходимо объединить его с файлом "
+"сертификата::"
+
+#: ../../docs/user/masternodes/setup-evonode.rst:637
+msgid ""
+"Verify the validity of the private key and certificate chain by running "
+"these commands::"
+msgstr ""
+"Проверьте действительность приватного ключа и цепочки сертификатов, выполнив"
+" следующие команды::"
+
+#: ../../docs/user/masternodes/setup-evonode.rst:642
+msgid "The output of these two commands should be the same."
+msgstr "Результат выполнения этих двух команд должен быть одинаковым."

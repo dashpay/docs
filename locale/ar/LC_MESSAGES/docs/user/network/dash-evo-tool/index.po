@@ -1,0 +1,608 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Dash Core Group, Inc
+# This file is distributed under the same license as the Dash package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Hasna Brania <hasna.brania19@gmail.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Dash latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-26 15:54-0500\n"
+"PO-Revision-Date: 2024-11-18 17:41+0000\n"
+"Last-Translator: Hasna Brania <hasna.brania19@gmail.com>, 2024\n"
+"Language-Team: Arabic (https://app.transifex.com/dash/teams/37570/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: ../../docs/user/network/dash-evo-tool/index.rst-1
+msgid "Description of dash evo tool features and usage"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst-1
+msgid "dash, platform, evonode, masternodes, dash evo tool"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:9
+msgid "Dash Evo Tool"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:11
+msgid ""
+"Dash Evo Tool is an application designed to help you vote on usernames, "
+"withdraw evonode credits, and complete an expanding list of Platform "
+"actions. This guide describes how to download, install, and use the Dash Evo"
+" Tool."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:18
+msgid "Installation"
+msgstr "التتبيث"
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:22
+msgid ""
+"The Dash Evo Tool requires a Dash Core full node configured to allow RPC and"
+" ZMQ access."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:24
+msgid ""
+"Linux, MacOS, or Windows packages are available on the `GitHub releases page"
+" <https://github.com/dashpay/dash-evo-tool/releases/latest>`__. Download the"
+" zip file for your Operating System, then unzip the downloaded file:"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:28
+msgid ""
+"`Windows <https://github.com/dashpay/dash-evo-"
+"tool/releases/download/v0.4.0/dash-evo-tool-windows.zip>`_"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:29
+msgid ""
+"`Mac (ARM m1-m4) <https://github.com/dashpay/dash-evo-"
+"tool/releases/download/v0.4.0/dash-evo-tool-arm64-mac.zip>`_"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:30
+msgid ""
+"`Mac (x86) <https://github.com/dashpay/dash-evo-"
+"tool/releases/download/v0.4.0/dash-evo-tool-x86_64-mac.zip>`_"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:31
+msgid ""
+"`Linux (x86) <https://github.com/dashpay/dash-evo-"
+"tool/releases/download/v0.4.0/dash-evo-tool-x86_64-linux.zip>`_"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:32
+msgid ""
+"`Linux (ARM) <https://github.com/dashpay/dash-evo-"
+"tool/releases/download/v0.4.0/dash-evo-tool-arm64-linux.zip>`_"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:37
+msgid "Configuration"
+msgstr "إدارة الإعدادات"
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:39
+msgid "Open the directory where the download was unzipped."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:40
+msgid ""
+"Open the ``.env`` file (you may need to show hidden files to see it). For "
+"the network you plan to connect to, make the following changes. Replace the "
+"``*`` with the network name (MAINNET or TESTNET):"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:44
+msgid ""
+"Update ``*_CORE_RPC_USER`` to match the ``rpcuser`` value from your Dash "
+"Core dash.conf file."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:45
+msgid ""
+"Update ``*_CORE_RPC_PASSWORD`` to match the ``rpcpassword`` value from your "
+"Dash Core dash.conf file."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:47
+msgid ""
+"If your dash.conf includes ``rpcallowip``, update ``*_CORE_HOST`` with that "
+"IP address."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:48
+msgid ""
+"If your dash.conf includes ``rpcport``, update ``*_CORE_RPC_PORT`` with that"
+" port."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:49
+msgid ""
+"(*Optional*) If you are going to run Dash Core manually instead of launching"
+" it via the Dash Evo Tool, you must enable ZMQ by adding the following lines"
+" to your dash.conf file:"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:0
+msgid "Mainnet ZMQ setup"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:0
+msgid "Testnet ZMQ setup"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:72
+msgid ""
+"The default location of the ``dash.conf`` file can be found in the "
+":ref:`Dash Core documentation <dashcore-rpc>`. At a minimum, the following "
+"values must be defined for RPC access to be enabled:"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:82
+msgid "Updating the env file"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:84
+msgid ""
+"When the application runs for the first time, it creates a application "
+"directory and copies the ``.env`` file into it. It also stores application "
+"data in the directory. Any further updates to the ``.env`` file must be made"
+" to the copy in the application directory."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:89
+msgid "Operating System"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:89
+msgid "Configuration File Path"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:91
+msgid "macOS"
+msgstr "ماك"
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:91
+msgid "~/Library/Application Support/Dash-Evo-Tool/"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:92
+msgid "Windows"
+msgstr "ويندوز"
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:92
+msgid "C:\\\\Users\\\\<User>\\\\AppData\\\\Roaming\\\\Dash-Evo-Tool\\\\config"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:93
+msgid "Linux"
+msgstr "لينكس"
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:93
+msgid "/home/<user>/.config/dash-evo-tool/"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:99
+msgid "Running the application"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:101
+msgid ""
+"Once the ``.env`` file is configured, launch the Dash Evo Tool by double-"
+"clicking the file named ``dash-evo-tool``."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:104
+msgid ""
+"Alternatively, you can launch the application directly from your terminal. "
+"For example, on Linux, run::"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:112
+msgid "Network selection"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:114
+msgid ""
+"The Dash Evo Tool supports both testnet and mainnet. To choose a network, "
+"navigate to the Network Selection screen and click the checkbox in the "
+"Select column for the desired network. Then click the **Start** button on "
+"that row to launch Dash Core."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:122
+msgid ""
+"You can also launch Dash Core manually without using the Dash Evo Tool. This"
+" may be necessary if Dash Core is installed in a non-standard location. When"
+" launching Dash Core manually, you must enable ZMQ as described in "
+":hoverxref:`Configuration Step 3 <evo-tool-configure>`."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:130
+msgid "Network selection screen with testnet selected"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:135
+msgid "Identity operations"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:140
+msgid "Load existing identity"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:142
+msgid ""
+"On the main identity screen, click the **Load Identity** button on the upper"
+" right side of the screen."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:149
+#: ../../docs/user/network/dash-evo-tool/index.rst:213
+msgid "Identity screen with no loaded identities"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:151
+msgid ""
+"Some identity types require different information. Use the **Identity Type**"
+" dropdown menu to select the type you want to add. In this example, an "
+"evonode identity is being added."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:158
+msgid "Identity load screen for evonode"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:164
+msgid ""
+"Your collateral key is **not** required. Do not enter it into the Dash Evo "
+"Tool."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:166
+msgid ""
+"Add the Identity ID and Owner Private Key. You may also want to add the "
+"Voting Private Key, but adding the Payout Address Private Key is **not** "
+"recommended. For a masternode or evonode, use the protx hash as the Identity"
+" ID."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:170
+msgid ""
+"If you use the `Dash Masternode Tool <https://github.com/Bertrand256/dash-"
+"masternode-tool>`_, you can get the protx hash and private keys from the "
+"masternode details screen."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:177
+msgid "Dash Masternode Tool"
+msgstr "ادوات ماسترنود داش"
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:179
+msgid ""
+"Click **Load Identity** once you have entered the required information."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:185
+msgid "Identity load screen with evonode info filled out"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:187
+msgid ""
+"Once the identity is loaded, you can view its balance and details about its "
+"keys. For evonodes, you can also initiate :ref:`withdrawals <evo-tool-"
+"identity-evo-withdraw>`."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:194
+#: ../../docs/user/network/dash-evo-tool/index.rst:270
+msgid "Identity screen with an evonode identity loaded"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:199
+msgid "Create new identity"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:203
+msgid ""
+"Before creating an identity, make sure you have :ref:`added a Dash Evo Tool "
+"wallet <evo-tool-wallet-create>`."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:206
+msgid ""
+"On the main identity screen, click the **Create Identity** button on the "
+"upper right side of the screen."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:215
+msgid ""
+"On the create identity screen, leave the first two options set to the "
+"default and select the funding method. Then, send the requested amount of "
+"DASH to the provided address."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:222
+msgid "Waiting for funds"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:224
+msgid ""
+"The status will change from \"Waiting for funds\" to \"Waiting for Platform "
+"acknowledgement\" once the funds have been received and the identity "
+"registration process has started."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:231
+msgid "Waiting for Platform acknowledgement"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:233
+msgid ""
+"Once the identity has been registered, you can choose to return to the "
+"identity screen or proceed to :ref:`registering a name <evo-tool-name-"
+"register>`."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:240
+msgid "Identity creation success"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:247
+msgid "Identity screen with an identity loaded"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:252
+msgid "Evonode withdrawals"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:256
+msgid ""
+"Withdrawal requests enter a queue that is currently processed more slowly "
+"than intended. Depending on the timing of the withdrawal request, it may "
+"take up to 18 hours to complete."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:259
+msgid ""
+"For security, there is also a limit on how much can be withdrawn from "
+"Platform daily. If withdrawal requests hit the daily limit, they will remain"
+" in the queue longer. For details, see this `DCG development update "
+"<https://www.youtube.com/live/rc_avHHqG6E?si=ETv0yX-1b3odCU8F&t=599>`_."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:264
+msgid ""
+"From the identity main screen, click the **Withdraw** button for an "
+"identity."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:272
+msgid ""
+"On the withdrawal screen, select the key to sign the withdrawal. Selecting "
+"the owner key is recommended since this will direct the withdrawal to the "
+"payout address. Next, set the amount to withdraw."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:278
+msgid ""
+"The **Max** button currently has a bug and sets the withdrawal amount in "
+"credits instead of DASH, so you will need to manually adjust the amount if "
+"you use that button."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:281
+msgid "Click **Withdraw** after entering the information."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:287
+msgid "Withdraw screen with key and amount selected"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:289
+msgid ""
+"When the withdrawal confirmation screen opens, confirm that the amount and "
+"destination address are correct. Click **Confirm** to request the "
+"withdrawal."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:296
+msgid "Withdrawal confirmation screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:301
+msgid "Name operations"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:306
+msgid "Register name"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:308
+msgid ""
+"After :ref:`creating an identity <evo-tool-identity-create>`, you can "
+"register a name for it. From the main name screen, click the **Register "
+"Name** button on the upper right side of the screen."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:315
+msgid "Name screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:317
+msgid ""
+"First, select the identity to register a name for. This step will be "
+"automatically done if you are registering a name as part of the identity "
+"creation process."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:320
+msgid ""
+"Next, enter the desired name. Notification will be provided if you selected "
+"a contested name and the estimated cost will be displayed. Click **Register "
+"Name** to complete the registration."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:327
+msgid "Name registration"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:329
+msgid ""
+"Upon successful registration, you can see the name on the **My usernames** "
+"screen along with any other names you have registered."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:336
+msgid "Name registered successfully"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:341
+msgid "Vote for names"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:343
+msgid ""
+"The Voting screen displays a list of names that are currently require a "
+"vote. Click the **Refresh** button to update the screen at any time."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:348
+msgid ""
+"Voting can only be done by masternodes and evonodes, and each node can only "
+"modify its vote four times. See the :ref:`load identity section <evo-tool-"
+"identity-load>` for instructions on importing your keys."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:355
+msgid "Voting screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:357
+msgid ""
+"To vote for a contestant, click on an entry in the Contestants column. You "
+"can also vote to Lock the name or Abstain by clicking the value in those "
+"columns. You will be prompted to load an evonode or masternode identity if "
+"you have not already done so."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:361
+msgid ""
+"After clicking one of the contestants, vote for that identity to receive the"
+" name by clicking one of your specific identities on the Vote Confirmation "
+"screen. Click **All** to vote with all your loaded identities "
+"simultaneously."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:369
+msgid "Vote confirmation screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:371
+msgid ""
+"See the `DPNS page "
+"<https://docs.dash.org/projects/platform/en/stable/docs/explanations/dpns.html#voting-"
+"details>`_ for more voting details."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:378
+msgid "Wallet operations"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:382
+msgid ""
+"The Dash Evo Tool wallet features only work if your Dash Core node has a "
+"single wallet open. **If you have multiple wallets open in Dash Core, close "
+"all of them except the one used by the Dash Evo Tool.**"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:389
+msgid "Create wallet"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:391
+msgid ""
+"This tool includes a basic wallet feature to support identity registration. "
+"Wallets can be added from the wallet screen."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:396
+msgid ""
+"Since this tool adds watching-only addresses to Dash Core when creating "
+"identities, it is recommended to close all existing Dash Core wallets and "
+":ref:`create a new, empty wallet <dashcore-installation-macos-create-"
+"wallet>` for the Dash Evo Tool. Also, make sure to :ref:`backup your Dash "
+"Core wallet <dashcore-backup>`."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:401
+msgid "Click **Add Wallet** to create a new wallet."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:407
+msgid "Wallet screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:409
+msgid ""
+"After creating extra randomness with the mouse, select your preferred "
+"language and click **Generate** to display you passphrase. Write it down and"
+" store it securely, then click the checkbox in step 3 to confirm."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:413
+msgid ""
+"Next, enter a wallet name and optionally add a password before clicking "
+"**Save Wallet** to store the wallet."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:420
+msgid "Wallet create screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:425
+msgid "Use wallet"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:427
+msgid "Select your wallet using the dropdown box."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:433
+msgid "Select wallet"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:438
+msgid "Funds"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:440
+msgid ""
+"Several tabs display wallet details. The Funds tab shows your receiving "
+"addresses. Click **Add Receiving Address** if you want to add additional "
+"addresses to fund the wallet."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:447
+msgid "Wallet Funds tab"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:449
+msgid ""
+"After adding addresses, they will appear in a table with balance and other "
+"details."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:455
+msgid "Wallet with address added"
+msgstr ""

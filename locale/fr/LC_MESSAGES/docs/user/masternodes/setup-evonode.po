@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 10:39-0400\n"
+"POT-Creation-Date: 2024-11-18 12:41-0500\n"
 "PO-Revision-Date: 2023-05-23 19:50+0000\n"
 "Last-Translator: Daf Daf, 2023\n"
 "Language-Team: French (https://app.transifex.com/dash/teams/37570/fr/)\n"
@@ -393,7 +393,7 @@ msgstr ""
 #: ../../docs/user/masternodes/setup-evonode.rst:252
 msgid ""
 "``N: Download is performed unsandboxed as root as file "
-"'/home/ubuntu/dashmate_1.1.1.0fec811fb-1_amd64.deb' couldn't be accessed by "
+"'/home/ubuntu/dashmate_1.5.1.8f924cc0a-1_amd64.deb' couldn't be accessed by "
 "user '_apt'. - pkgAcquire::Run (13: Permission denied)``"
 msgstr ""
 
@@ -924,4 +924,22 @@ msgid ""
 "<https://www.ssldragon.com/>`_ and `SuperbitHost "
 "<https://www.superbithost.com/ssl-certificates/>`_ are two options that "
 "accept cryptocurrency."
+msgstr ""
+
+#: ../../docs/user/masternodes/setup-evonode.rst:631
+msgid ""
+"Please make sure that the certificate chain file contains your server "
+"certificate at the top and intermediate/root certificates if present. If a "
+"bundle file is present, you need to concatenate it with the certificate "
+"file::"
+msgstr ""
+
+#: ../../docs/user/masternodes/setup-evonode.rst:637
+msgid ""
+"Verify the validity of the private key and certificate chain by running "
+"these commands::"
+msgstr ""
+
+#: ../../docs/user/masternodes/setup-evonode.rst:642
+msgid "The output of these two commands should be the same."
 msgstr ""

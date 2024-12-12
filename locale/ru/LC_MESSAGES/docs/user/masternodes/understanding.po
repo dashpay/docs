@@ -6,9 +6,9 @@
 # Translators:
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
 # Dima, 2022
-# VONCAN, 2024
 # Max Aronych <taofgoar@protonmail.com>, 2024
 # Julia Ogonkova <livingflcl@gmail.com>, 2024
+# VONCAN, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-29 10:39-0400\n"
 "PO-Revision-Date: 2022-12-27 18:56+0000\n"
-"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2024\n"
+"Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -179,6 +179,21 @@ msgid ""
 "`this site <http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ for various "
 "real-time statistics on the masternode network."
 msgstr ""
+"По состоянию на июль 2024 года сеть Dash насчитывает более 3000 мастернод, "
+"расположенных <http://178.254.23.111/~pub/masternode_count.png>`_ в более "
+"чем 20 странах <https://chainz.cryptoid.info/dash/#!network>`_ и размещенных"
+" на более чем 140 интернет-провайдерах "
+"<http://178.254.23.111/~pub/Dash/masternode_ISPs.html>`_. Вознаграждение за "
+"блок составляет примерно 1,9 Dash, поэтому выбранная мастернода получает 1,4"
+" Dash за платеж или примерно 6,5 Dash в месяц. Вознаграждение за блок "
+"уменьшается на 7,14 % примерно раз в год, поэтому годовой заработок "
+"владельца мастерноды составляет примерно 7 % от суммы залога и будет "
+"уменьшаться со временем `как подсчитано здесь "
+"<https://docs.google.com/spreadsheets/d/1HqgEkyfZDAA6pIZ3df2PwFE8Z430SVIzQ-"
+"mCQ6wGCh4/edit#gid=523620673>`_. Смотрите `этот инструмент <https://dash- "
+"news.de/dashtv/#value=1000>`_ для расчета % выплат в реальном времени, а "
+"также `этот сайт <http://178.254.23.111/~pub/Dash/Dash_Info.html>`_ для "
+"получения различной статистики по сети мастернод в реальном времени."
 
 #: ../../docs/user/masternodes/understanding.rst:88
 msgid "Evolution Masternodes (evonodes)"
@@ -190,6 +205,9 @@ msgid ""
 "created to host Dash Platform. Evonodes are similar to regular masternodes, "
 "but have these differences:"
 msgstr ""
+"Эволюционные мастерноды (Evonodes) - это подмножество мастернод, созданных "
+"для хостинга Dash Platform. Эвоноды похожи на обычные мастерноды, но имеют "
+"следующие отличия:"
 
 #: ../../docs/user/masternodes/understanding.rst:94
 #: ../../docs/user/masternodes/understanding.rst:293
@@ -210,11 +228,11 @@ msgstr "1000 DASH"
 
 #: ../../docs/user/masternodes/understanding.rst:96
 msgid "4000 DASH"
-msgstr ""
+msgstr "4000 DASH"
 
 #: ../../docs/user/masternodes/understanding.rst:98
 msgid "Service(s)"
-msgstr ""
+msgstr "Сервис(ы)"
 
 #: ../../docs/user/masternodes/understanding.rst:98
 msgid "Only Dash Core"
@@ -230,11 +248,11 @@ msgstr "Вес голоса"
 
 #: ../../docs/user/masternodes/understanding.rst:100
 msgid "1 (collateral amount / 1000)"
-msgstr ""
+msgstr "1 (размер обеспечения / 1000)"
 
 #: ../../docs/user/masternodes/understanding.rst:100
 msgid "4 (collateral amount / 1000)"
-msgstr ""
+msgstr "4 (размер обеспечения / 1000)"
 
 #: ../../docs/user/masternodes/understanding.rst:103
 msgid ""
@@ -244,6 +262,11 @@ msgid ""
 "<https://github.com/dashpay/dips/blob/master/dip-0028.md>`_ for more "
 "information about evonodes."
 msgstr ""
+"Эвоноды также имеют :hoverxref:`более высокие требования к аппаратному "
+"обеспечению <mn-hardware-reqs-table>`, чем обычные мастерноды, из-за "
+"дополнительных сервисов Dash Platform, которые они хостят. Дополнительную "
+"информацию об эвонодах смотрите в `DIP28 "
+"<https://github.com/dashpay/dips/blob/master/dip-0028.md>`_."
 
 #: ../../docs/user/masternodes/understanding.rst:110
 msgid "Masternode Concepts"
@@ -526,6 +549,12 @@ msgid ""
 "Platform. Masternodes and evonodes also receive a portion of transaction "
 "fees on the Core chain, while evonodes receive all fees from Platform."
 msgstr ""
+"Все выплаты мастернод исходят из основного блокчейна. Core-чейн выплачивает "
+"62,5% от доли вознаграждения мастернод, которая полагается за добычу блока. "
+"Оставшиеся 37,5% помещаются в :term:`credit пул` и используются для "
+"вознаграждения эвонод в рамках Платформы. Мастерноды и эвоноды также "
+"получают часть комиссии за транзакции в основном блокчейне, в то время как "
+"эвоноды получают все комиссии собираемые платформой."
 
 #: ../../docs/user/masternodes/understanding.rst:226
 msgid ""
@@ -545,7 +574,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/understanding.rst:236
 msgid "Reward reallocation"
-msgstr ""
+msgstr "Распределение вознаграждения"
 
 #: ../../docs/user/masternodes/understanding.rst:238
 msgid ""
@@ -557,6 +586,13 @@ msgid ""
 "payment cycle on the Core chain instead of rewards from four sequential "
 "blocks, as in Dash Core v19/v20."
 msgstr ""
+"С момента активации хардфорка, связанного с перераспределением "
+"вознаграждения мастернод в августе 2024 года на `блоке 2128896 "
+"<https://insight.dash.org/insight/block/0000000000000009a9696da93d3807eb14eb00a4ff449206d689156a21b27f26>`_,"
+" часть вознаграждения мастернод от coinbase перемещается в :term:`credit "
+"пул` каждый раз, когда добывается блок. Поэтому сейчас эвоноды получают одно"
+" вознаграждение в течение цикла выплат в основном блокчейне, вместо 4 наград"
+" из 4 последовательных блоков, как это было в Dash Core v19/v20."
 
 #: ../../docs/user/masternodes/understanding.rst:244
 msgid ""
@@ -566,6 +602,11 @@ msgid ""
 "equilibrium between regular masternodes and evonodes is expected where "
 "rewards are similar to what they were before the fork."
 msgstr ""
+"Как описано в следующих разделах, этот форк повлиял на частоту и размер "
+"выплат мастернод. Хотя вначале вознаграждения мастернод значительно "
+"снизились, ожидается наступление рыночного равновесия между обычными "
+"мастернодами и эвонодами, тогда их вознаграждения станут такими же, как до "
+"хардфорка."
 
 #: ../../docs/user/masternodes/understanding.rst:250
 msgid ""
@@ -577,10 +618,17 @@ msgid ""
 " and the `proposal approving evonodes <https://www.dashcentral.org/p/EVO-"
 "DECISION-4K-HPMN>`_ for more information."
 msgstr ""
+"Пока сеть не достигнет точки равновесия, количество мастернод и эвонод будет"
+" колебаться. По мере преобразования большего количества мастернод в эвоноды "
+"частота платежей (и, соответственно, вознаграждений) в цепочке Core будет "
+"увеличиваться. Дополнительную информацию см. в `Evonode FAQ "
+"<https://www.dash.org/hpmn-faq/>`_, `DIP28 "
+"<https://github.com/dashpay/dips/blob/master/dip-0028.md>`_, и `proposal "
+"approving evonodes <https://www.dashcentral.org/p/EVO-DECISION-4K-HPMN>`_."
 
 #: ../../docs/user/masternodes/understanding.rst:257
 msgid "Payment frequency"
-msgstr ""
+msgstr "Частота выплат"
 
 #: ../../docs/user/masternodes/understanding.rst:259
 msgid ""
@@ -591,72 +639,78 @@ msgid ""
 "+ (175 * 4)``) before the fork to only 2775 (``2600 + 175``) after the fork."
 " See the following table for the outcomes of this change."
 msgstr ""
+"Частота выплат мастернод Core блокчейна увеличилась, так как за цикл "
+"производится меньше выплат. Во время хард форка в сети было около 2600 "
+"включенных мастернод и около 175 включенных эвонод. Это привело к сокращению"
+" выплат с 3330 за цикл (``2600 + (175 * 4)``) до форка до всего 2775 (``2600"
+" + 175``) после форка. Результаты этого изменения приведены в следующей "
+"таблице."
 
 #: ../../docs/user/masternodes/understanding.rst:266
 msgid "Pre-fork"
-msgstr ""
+msgstr "До форка"
 
 #: ../../docs/user/masternodes/understanding.rst:266
 msgid "Post-fork"
-msgstr ""
+msgstr "После форка"
 
 #: ../../docs/user/masternodes/understanding.rst:266
 #: ../../docs/user/masternodes/understanding.rst:287
 msgid "Difference"
-msgstr ""
+msgstr "Разница"
 
 #: ../../docs/user/masternodes/understanding.rst:266
 msgid "Outcome"
-msgstr ""
+msgstr "Результат"
 
 #: ../../docs/user/masternodes/understanding.rst:268
 msgid "Payment (blocks)"
-msgstr ""
+msgstr "Выплата (Блоки)"
 
 #: ../../docs/user/masternodes/understanding.rst:268
 msgid "3300"
-msgstr ""
+msgstr "3300"
 
 #: ../../docs/user/masternodes/understanding.rst:268
 msgid "2775"
-msgstr ""
+msgstr "2775"
 
 #: ../../docs/user/masternodes/understanding.rst:268
 msgid "-525"
-msgstr ""
+msgstr "-525"
 
 #: ../../docs/user/masternodes/understanding.rst:268
 #: ../../docs/user/masternodes/understanding.rst:270
 msgid "More frequent payment"
-msgstr ""
+msgstr "Более частые выплаты"
 
 #: ../../docs/user/masternodes/understanding.rst:270
 msgid "Payment (days)"
-msgstr ""
+msgstr "Выплаты (Дни)"
 
 #: ../../docs/user/masternodes/understanding.rst:270
 msgid "5.73"
-msgstr ""
+msgstr "5.73"
 
 #: ../../docs/user/masternodes/understanding.rst:270
 msgid "4.82"
-msgstr ""
+msgstr "4.82"
 
 #: ../../docs/user/masternodes/understanding.rst:270
 msgid "-0.91"
-msgstr ""
+msgstr "-0.91"
 
 #: ../../docs/user/masternodes/understanding.rst:272
 msgid "Payments / year"
-msgstr ""
+msgstr "Выплаты / год"
 
 #: ../../docs/user/masternodes/understanding.rst:272
 msgid "64"
-msgstr ""
+msgstr "64"
 
 #: ../../docs/user/masternodes/understanding.rst:272
 msgid "76"
-msgstr ""
+msgstr "76"
 
 #: ../../docs/user/masternodes/understanding.rst:272
 msgid "12"
@@ -664,11 +718,11 @@ msgstr "12"
 
 #: ../../docs/user/masternodes/understanding.rst:272
 msgid "More payments"
-msgstr ""
+msgstr "Больше выплат"
 
 #: ../../docs/user/masternodes/understanding.rst:276
 msgid "Payment amount"
-msgstr ""
+msgstr "Размер выплаты"
 
 #: ../../docs/user/masternodes/understanding.rst:278
 msgid ""
@@ -681,35 +735,43 @@ msgid ""
 " the hard fork with the `block immediately after it "
 "<https://insight.dash.org/insight/block/0000000000000009a9696da93d3807eb14eb00a4ff449206d689156a21b27f26>`_."
 msgstr ""
+"Увеличение частоты выплат уравновешивается снижением размера выплаты за один"
+" блок в основном блокчейне. Это уменьшение произошло в результате "
+"перемещения части средств в credit пул для Платформы Dash. В приведенной "
+"ниже таблице сравниваются выплаты майнерам, Credit пулу и Мастернодам из "
+"`блока непосредственно перед "
+"<https://insight.dash.org/insight/block/000000000000001bd1f5eeb2277b1adc87a616a9f55a9af2dd5ea46b05c05870>`_"
+" хард форком и `блока сразу после него "
+"<https://insight.dash.org/insight/block/0000000000000009a9696da93d3807eb14eb00a4ff449206d689156a21b27f26>`_."
 
 #: ../../docs/user/masternodes/understanding.rst:287
 msgid "Category"
-msgstr ""
+msgstr "Категория"
 
 #: ../../docs/user/masternodes/understanding.rst:287
 msgid "Pre-Fork"
-msgstr ""
+msgstr "До форка"
 
 #: ../../docs/user/masternodes/understanding.rst:287
 msgid "Post-Fork"
-msgstr ""
+msgstr "После форка"
 
 #: ../../docs/user/masternodes/understanding.rst:289
 msgid "Miner"
-msgstr ""
+msgstr "Майнер"
 
 #: ../../docs/user/masternodes/understanding.rst:289
 msgid "0.48"
-msgstr ""
+msgstr "0.48"
 
 #: ../../docs/user/masternodes/understanding.rst:289
 #: ../../docs/user/masternodes/understanding.rst:295
 msgid "No change"
-msgstr ""
+msgstr "Без изменений"
 
 #: ../../docs/user/masternodes/understanding.rst:291
 msgid "Credit pool"
-msgstr ""
+msgstr "Credit пул"
 
 #: ../../docs/user/masternodes/understanding.rst:291
 msgid "0"
@@ -717,31 +779,31 @@ msgstr "0"
 
 #: ../../docs/user/masternodes/understanding.rst:291
 msgid "0.54"
-msgstr ""
+msgstr "0.54"
 
 #: ../../docs/user/masternodes/understanding.rst:291
 msgid "**+0.54**"
-msgstr ""
+msgstr "**+0.54**"
 
 #: ../../docs/user/masternodes/understanding.rst:293
 msgid "1.43"
-msgstr ""
+msgstr "1.43"
 
 #: ../../docs/user/masternodes/understanding.rst:293
 msgid "0.89"
-msgstr ""
+msgstr "0.89"
 
 #: ../../docs/user/masternodes/understanding.rst:293
 msgid "**-0.54**"
-msgstr ""
+msgstr "**-0.54**"
 
 #: ../../docs/user/masternodes/understanding.rst:295
 msgid "**Total**"
-msgstr ""
+msgstr "**Итого**"
 
 #: ../../docs/user/masternodes/understanding.rst:295
 msgid "1.91"
-msgstr ""
+msgstr "1.91"
 
 #: ../../docs/user/masternodes/understanding.rst:299
 msgid ""
@@ -749,10 +811,13 @@ msgid ""
 "increase, and the difference between overall pre-fork and post-fork rewards "
 "per year on the Core chain will decrease."
 msgstr ""
+"По мере того как все больше мастернод будут преобразовываться в эвоноды, "
+"частота выплат будет расти, а разница между общим вознаграждением до и после"
+" форка в год в Coreчейне будет уменьшаться."
 
 #: ../../docs/user/masternodes/understanding.rst:306
 msgid "Core block rewards"
-msgstr ""
+msgstr "Core Вознаграждения "
 
 #: ../../docs/user/masternodes/understanding.rst:308
 msgid ""
@@ -810,10 +875,13 @@ msgid ""
 "evonodes. Each are paid once per payment cycle and receive the same block "
 "subsidy amount."
 msgstr ""
+"Правила вознаграждения за блок в основном блокчейне одинаково применяются к "
+"обычным мастернодам и эвонодам. Они выплачиваются один раз за платежный цикл"
+" и получают одинаковую награду за каждый блокблок."
 
 #: ../../docs/user/masternodes/understanding.rst:333
 msgid "Platform rewards"
-msgstr ""
+msgstr "Вознаграждения платформы"
 
 #: ../../docs/user/masternodes/understanding.rst:335
 msgid ""
@@ -823,6 +891,11 @@ msgid ""
 "rewards are paid to the masternode identities associated with the "
 "participating evonodes."
 msgstr ""
+"Вознаграждение эвонод основано на участии в консенсусе платформы. В "
+"частности, эвоноды получают вознаграждение за блоки, которые они предлагают,"
+" находясь в числе активных валидаторов. В конце каждой эпохи платформы "
+"(~9,125 дня) вознаграждения за блоки выплачиваются личностям мастернод, "
+"связанным с участвовавшими эвонодами."
 
 #: ../../docs/user/masternodes/understanding.rst:343
 msgid "Proof of Service"
@@ -914,6 +987,10 @@ msgid ""
 "such as Poloniex, Bittrex, Kraken and LiveCoin. Shapeshift's service is also"
 " an excellent way."
 msgstr ""
+"Обеспечение DASH: Размещение мастерноды требует большого количества DASH-"
+"залога. Пожалуй, это самое сложное. Dash можно получить на таких биржах, как"
+" Poloniex, Bittrex, Kraken и LiveCoin. Отличным способом является также "
+"сервис Shapeshift."
 
 #: ../../docs/user/masternodes/understanding.rst:387
 msgid ""
@@ -921,6 +998,9 @@ msgid ""
 "recommend VPS services such as Vultr and DigitalOcean, although any decent "
 "provider will do."
 msgstr ""
+"Сервер или VPS под управлением Linux: В большинстве последних руководств "
+"используется Ubuntu 22.04 LTS. Мы рекомендуем такие VPS-сервисы, как Vultr и"
+" DigitalOcean, хотя подойдет любой достойный провайдер."
 
 #: ../../docs/user/masternodes/understanding.rst:390
 msgid "A dedicated IP address: These usually come with the VPS/server."
@@ -938,7 +1018,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/understanding.rst:399
 msgid "Regular masternodes"
-msgstr ""
+msgstr "Обычные мастерноды"
 
 #: ../../docs/user/masternodes/understanding.rst:402
 msgid "Minimum"
@@ -1004,7 +1084,7 @@ msgstr "1 Тб/мес"
 
 #: ../../docs/user/masternodes/understanding.rst:417
 msgid "Evonodes"
-msgstr ""
+msgstr "Эвоноды"
 
 #: ../../docs/user/masternodes/understanding.rst:419
 msgid ""
@@ -1012,19 +1092,24 @@ msgid ""
 "services along with Dash Core. To support the network effectively, the "
 "following requirements are recommended:"
 msgstr ""
+"К Evonodes предъявляются более высокие требования к железу, поскольку на них"
+" размещаются сервисы Dash Platform и Dash Core. Для эффективной поддержки "
+"сети рекомендуются следующие требования:"
 
 #: ../../docs/user/masternodes/understanding.rst:425
 msgid "4x 2.4 GHz"
-msgstr ""
+msgstr "4x 2.4 ГГц"
 
 #: ../../docs/user/masternodes/understanding.rst:427
 msgid "8 GB + 2 GB swap"
-msgstr ""
+msgstr "8 Гб + 2 Гб swap"
 
 #: ../../docs/user/masternodes/understanding.rst:429
 msgid "200 GB"
-msgstr ""
+msgstr "200 Гб"
 
 #: ../../docs/user/masternodes/understanding.rst:434
 msgid "Masternode bandwidth use varies and will grow as the network does."
 msgstr ""
+"Использование пропускной способности мастернод варьируется и будет расти по "
+"мере развития сети."

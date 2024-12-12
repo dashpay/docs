@@ -27,3 +27,6 @@ echo "tx pulls are all done now."
 git add locale/*
 git commit -m "Refresh translations from Transifex"
 git push --set-upstream origin $BRANCH_NAME
+
+# Create PR automatically if GitHub CLI is installed (https://cli.github.com/)
+gh pr create --title "chore: refresh translations from transifex" --body "Latest updates from Transifex based on running the [transifex/pulltx.sh](https://github.com/dashpay/docs/blob/master/transifex/pulltx.sh) script."

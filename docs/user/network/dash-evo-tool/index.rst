@@ -19,17 +19,17 @@ Installation
 
 .. note::
 
-  The Dash Evo Tool requires a Dash Core full node configured to allow RPC access.
+  The Dash Evo Tool requires a Dash Core full node configured to allow RPC and ZMQ access.
 
 Linux, MacOS, or Windows packages are available on the `GitHub releases page
 <https://github.com/dashpay/dash-evo-tool/releases/latest>`__. Download the zip file for your
 Operating System, then unzip the downloaded file:
 
-* `Windows <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.2/DashEvoTool-windows-x86_64.zip>`_
-* `Mac (ARM m1-m4) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.1/DashEvoTool-aarch64-mac.zip>`_
-* `Mac (x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.1/DashEvoTool-x86_64-mac.zip>`_
-* `Linux (x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.3/DashEvoTool-linux-x86_64.zip>`_
-* `Linux (ARM) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.1.3/DashEvoTool-linux-aarch64.zip>`_ 
+* `Windows <https://github.com/dashpay/dash-evo-tool/releases/download/v0.5.0/dash-evo-tool-windows.zip>`_
+* `Mac (ARM m1-m4) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.5.0/dash-evo-tool-arm64-mac.zip>`_
+* `Mac (x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.5.0/dash-evo-tool-x86_64-mac.zip>`_
+* `Linux (x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.5.0/dash-evo-tool-x86_64-linux.zip>`_
+* `Linux (ARM) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.5.0/dash-evo-tool-arm64-linux.zip>`_ 
 
 .. _evo-tool-configure:
 
@@ -43,9 +43,29 @@ Configuration
 
    * Update ``*_CORE_RPC_USER`` to match the ``rpcuser`` value from your Dash Core dash.conf file.
    * Update ``*_CORE_RPC_PASSWORD`` to match the ``rpcpassword`` value from your Dash Core dash.conf
-     file configured in your Dash Core ``dash.conf`` file.
+     file.
    * If your dash.conf includes ``rpcallowip``, update ``*_CORE_HOST`` with that IP address.
    * If your dash.conf includes ``rpcport``, update ``*_CORE_RPC_PORT`` with that port.
+3. (*Optional*) If you are going to run Dash Core manually instead of launching it via the Dash Evo
+   Tool, you must enable ZMQ by adding the following lines to your dash.conf file:
+
+   .. tab-set::
+      .. tab-item:: Mainnet ZMQ setup
+
+         .. code-block:: ini
+
+            # Dash Evo Tool ZMQ config - mainnet
+            zmqpubhashchainlock=tcp://0.0.0.0:23708
+            zmqpubrawtxlocksig=tcp://0.0.0.0:23708
+
+      .. tab-item:: Testnet ZMQ setup
+   
+         .. code-block:: ini
+      
+            # Place under the [test] section
+            # Dash Evo Tool ZMQ config - testnet
+            zmqpubhashchainlock=tcp://0.0.0.0:23709
+            zmqpubrawtxlocksig=tcp://0.0.0.0:23709
 
 .. tip::
 
@@ -58,18 +78,33 @@ Configuration
     rpcuser=<some_user_name>
     rpcpassword=<some_password>
 
+Updating the env file
+---------------------
+
+When the application runs for the first time, it creates a application directory and copies the
+``.env`` file into it. It also stores application data in the directory. Any further updates to the
+``.env`` file must be made to the copy in the application directory.
+
+==================  =======================================================
+Operating System    Configuration File Path
+==================  =======================================================
+macOS               ~/Library/Application Support/Dash-Evo-Tool/
+Windows             C:\\Users\\<User>\\AppData\\Roaming\\Dash-Evo-Tool\\config
+Linux               /home/<user>/.config/dash-evo-tool/
+==================  =======================================================
+
 .. _evo-tool-run:
 
 Running the application
 =======================
 
 Once the ``.env`` file is configured, launch the Dash Evo Tool by double-clicking the file named
-``dash-evo-tool-<your platform>`` (e.g., ``dash-evo-tool-aarch64-mac``).
+``dash-evo-tool``.
 
-Alternatively, you can launch the application directly from your terminal. For example, on an x86
-Linux, run::
+Alternatively, you can launch the application directly from your terminal. For example, on Linux,
+run::
 
-  ./dash-evo-tool-x86_64-linux
+  ./dash-evo-tool
 
 .. _evo-tool-select-network:
 
@@ -80,10 +115,13 @@ The Dash Evo Tool supports both testnet and mainnet. To choose a network, naviga
 Selection screen and click the checkbox in the Select column for the desired network. Then click the
 **Start** button on that row to launch Dash Core.
 
+.. _evo-tool-manual-core-launch:
+
 .. note::
 
   You can also launch Dash Core manually without using the Dash Evo Tool. This may be necessary if
-  Dash Core is installed in a non-standard location.
+  Dash Core is installed in a non-standard location. When launching Dash Core manually, you must
+  enable ZMQ as described in :hoverxref:`Configuration Step 3 <evo-tool-configure>`.
 
 .. figure:: img/network-selection.png
    :align: center
@@ -98,8 +136,8 @@ Identity operations
 
 .. _evo-tool-identity-load:
 
-Load an identity
-----------------
+Load existing identity
+----------------------
 
 On the main identity screen, click the **Load Identity** button on the upper right side of the
 screen.
@@ -155,6 +193,59 @@ can also initiate :ref:`withdrawals <evo-tool-identity-evo-withdraw>`.
 
    Identity screen with an evonode identity loaded
 
+.. _evo-tool-identity-create:
+
+Create new identity
+-------------------
+
+.. tip::
+   
+   Before creating an identity, make sure you have :ref:`added a Dash Evo Tool wallet
+   <evo-tool-wallet-create>`.
+
+On the main identity screen, click the **Create Identity** button on the upper right side of the
+screen.
+
+.. figure:: img/identity/main-empty.png
+   :align: center
+   :width: 90%
+
+   Identity screen with no loaded identities
+
+On the create identity screen, leave the first two options set to the default and select the funding
+method. Then, send the requested amount of DASH to the provided address.
+
+.. figure:: img/identity/create-await-funds.png
+   :align: center
+   :width: 90%
+
+   Waiting for funds
+
+The status will change from "Waiting for funds" to "Waiting for Platform acknowledgement" once the
+funds have been received and the identity registration process has started.
+
+.. figure:: img/identity/create-await-platform.png
+   :align: center
+   :width: 90%
+
+   Waiting for Platform acknowledgement
+
+Once the identity has been registered, you can choose to return to the identity screen or proceed to
+:ref:`registering a name <evo-tool-name-register>`.
+
+.. figure:: img/identity/create-success.png
+   :align: center
+   :width: 90%
+
+   Identity creation success
+
+
+.. figure:: img/identity/main-new-identity.png
+   :align: center
+   :width: 90%
+
+   Identity screen with an identity loaded
+
 .. _evo-tool-identity-evo-withdraw:
 
 Evonode withdrawals
@@ -204,8 +295,50 @@ correct. Click **Confirm** to request the withdrawal.
 
    Withdrawal confirmation screen
 
-Name voting
-===========
+.. _evo-tool-name:
+
+Name operations
+===============
+
+.. _evo-tool-name-register:
+
+Register name
+-------------
+
+After :ref:`creating an identity <evo-tool-identity-create>`, you can register a name for it. From
+the main name screen, click the **Register Name** button on the upper right side of the screen.
+
+.. figure:: img/name/main.png
+   :align: center
+   :width: 90%
+
+   Name screen
+
+First, select the identity to register a name for. This step will be automatically done if you are
+registering a name as part of the identity creation process. 
+
+Next, enter the desired name. Notification will be provided if you selected a contested name and the
+estimated cost will be displayed. Click **Register Name** to complete the registration.
+
+.. figure:: img/name/registering.png
+   :align: center
+   :width: 90%
+
+   Name registration
+
+Upon successful registration, you can see the name on the **My usernames** screen along with any
+other names you have registered.
+
+.. figure:: img/name/success.png
+   :align: center
+   :width: 90%
+
+   Name registered successfully
+
+.. _evo-tool-name-voting:
+
+Vote for names
+--------------
 
 The Voting screen displays a list of names that are currently require a vote. Click the **Refresh**
 button to update the screen at any time.
@@ -238,3 +371,85 @@ identities simultaneously.
 See the `DPNS page
 <https://docs.dash.org/projects/platform/en/stable/docs/explanations/dpns.html#voting-details>`_ for
 more voting details.
+
+.. _evo-tool-wallet:
+
+Wallet operations
+=================
+
+.. note::
+
+   The Dash Evo Tool wallet features only work if your Dash Core node has a single wallet open. **If
+   you have multiple wallets open in Dash Core, close all of them except the one used by the Dash
+   Evo Tool.**
+
+.. _evo-tool-wallet-create:
+
+Create wallet
+-------------
+
+This tool includes a basic wallet feature to support identity registration. Wallets can be added
+from the wallet screen.
+
+.. attention::
+
+   Since this tool adds watching-only addresses to Dash Core when creating identities, it is
+   recommended to close all existing Dash Core wallets and :ref:`create a new, empty wallet
+   <dashcore-installation-macos-create-wallet>` for the Dash Evo Tool. Also, make sure to
+   :ref:`backup your Dash Core wallet <dashcore-backup>`.
+
+Click **Add Wallet** to create a new wallet.
+
+.. figure:: img/wallet/wallet-main.png
+   :align: center
+   :width: 90%
+
+   Wallet screen
+
+After creating extra randomness with the mouse, select your preferred language and click
+**Generate** to display you passphrase. Write it down and store it securely, then click the checkbox
+in step 3 to confirm.
+
+Next, enter a wallet name and optionally add a password before clicking **Save Wallet** to store the
+wallet.
+
+.. figure:: img/wallet/wallet-create-all-fields.png
+   :align: center
+   :width: 90%
+
+   Wallet create screen
+
+.. _evo-tool-wallet-use:
+
+Use wallet
+----------
+
+Select your wallet using the dropdown box.
+
+.. figure:: img/wallet/wallet-select.png
+   :align: center
+   :width: 90%
+
+   Select wallet
+
+.. _evo-tool-wallet-use-funds:
+
+Funds
+^^^^^
+
+Several tabs display wallet details. The Funds tab shows your receiving addresses. Click **Add
+Receiving Address** if you want to add additional addresses to fund the wallet.
+
+.. figure:: img/wallet/wallet-funds.png
+   :align: center
+   :width: 90%
+
+   Wallet Funds tab
+
+After adding addresses, they will appear in a table with balance and other details.
+
+.. figure:: img/wallet/wallet-funds-with-address.png
+   :align: center
+   :width: 90%
+
+   Wallet with address added

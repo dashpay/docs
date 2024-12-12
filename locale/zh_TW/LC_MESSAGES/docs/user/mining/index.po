@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-18 12:05-0400\n"
+"POT-Creation-Date: 2024-11-18 12:41-0500\n"
 "PO-Revision-Date: 2022-12-27 18:56+0000\n"
 "Last-Translator: William <narutokun.me@gmail.com>, 2022\n"
 "Language-Team: Chinese (Taiwan) (https://app.transifex.com/dash/teams/37570/zh_TW/)\n"
@@ -42,55 +42,39 @@ msgid ""
 "method of securing blocks on the blockchain. The process of mining creates "
 "new currency tokens as a reward to the miner. Mining is possible on a range "
 "of hardware. Dash implements an algorithm known as :ref:`X11 <x11-hash-"
-"algorithm>`, which the miner must solve in order to earn rewards."
+"algorithm>`, which the miner must solve in order to earn rewards. A number "
+"of X11 ASICs are available on the market, which help make Dash secure "
+"against brute force attacks on the blockchain."
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:19
-msgid ""
-"The simplest and most general hardware available for mining is the general "
-"purpose CPU present in every computer. A CPU is designed to be versatile but"
-" offers less efficiency than a GPU, which is designed to rapidly calculate "
-"millions of vectors in parallel. While specific CPU instruction enhancements"
-" related to cryptography such as AES or AVX can provide a decent boost, GPUs"
-" offer a significant performance increase due to their multiple pipelines "
-"capable of processing the predictably repetitive calculations associated "
-"with cryptocurrency mining. Finally, ASICs are relatively inflexible and can"
-" only process the specific function(s) for which they were designed, but at "
-"an even faster rate than the more general purpose GPUs and CPUs. A number of"
-" X11 ASICs are now available on the market, which have quickly made CPU and "
-"GPU mining uneconomic due to the increased difficulty of hashing arising "
-"from the rapidly increasing hash rate. The result is a currency which is "
-"more secure against brute force attacks on the Dash blockchain."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:35
+#: ../../docs/user/mining/index.rst:20
 msgid ""
 "The profitability of mining is determined by the hashrate of your mining "
 "device, the current network difficulty and the costs of your hardware and "
 "electricity. The following links provide up to date information:"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:39
+#: ../../docs/user/mining/index.rst:24
 msgid "`Hashrate <https://bitinfocharts.com/comparison/dash-hashrate.html>`_"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:40
+#: ../../docs/user/mining/index.rst:25
 msgid ""
 "`Mining difficulty <https://bitinfocharts.com/comparison/dash-"
 "difficulty.html>`_"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:41
+#: ../../docs/user/mining/index.rst:26
 msgid ""
 "`Profitability calculation tool "
 "<https://www.coinwarz.com/mining/dash/calculator>`_"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:44
+#: ../../docs/user/mining/index.rst:29
 msgid "Masternodes vs. Mining"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:46
+#: ../../docs/user/mining/index.rst:31
 msgid ""
 "Dash, like Bitcoin and most other cryptocurrencies, is based on a "
 "decentralized ledger of all transactions, known as a blockchain. This "
@@ -103,20 +87,20 @@ msgid ""
 "miner is rewarded."
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:56
+#: ../../docs/user/mining/index.rst:41
 msgid ""
 "Dash works a little differently from Bitcoin, however, because it has a two-"
 "tier network. The second tier is powered by :ref:`masternodes <masternodes>`"
 " (Full Nodes), which enable financial privacy (CoinJoin), instant "
 "transactions (InstantSend), and the decentralized governance and budget "
 "system. Because this second tier is so important, masternodes are also "
-"rewarded when miners discover new blocks. The breakdown is as follows: 90% "
+"rewarded when miners discover new blocks. The breakdown is as follows: 80% "
 "of the block subsidy is split between the miner and a masternode per the "
-"distribution found :ref:`here <block-reward-reallocation>`, while 10% is "
+"distribution found :ref:`here <block-reward-reallocation>`, while 20% is "
 "reserved for the budget system (created by superblocks every month)."
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:67
+#: ../../docs/user/mining/index.rst:52
 msgid ""
 "The masternode system is referred to as Proof of Service (PoSe), since the "
 "masternodes provide crucial services to the network. In fact, the entire "
@@ -127,7 +111,7 @@ msgid ""
 "be added to the blockchain."
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:75
+#: ../../docs/user/mining/index.rst:60
 msgid ""
 "In short, miners power the first tier, which is the basic sending and "
 "receiving of funds and prevention of doublespending. Masternodes power the "
@@ -140,25 +124,19 @@ msgid ""
 "and stop receiving rewards."
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:87
+#: ../../docs/user/mining/index.rst:72
 msgid "Mining Pools"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:89
+#: ../../docs/user/mining/index.rst:74
 msgid ""
 "Mining Dash in pools is more likely to generate rewards than solo mining "
 "directly on the blockchain. Mining dash using P2Pool is strongly encouraged,"
 " since it is a good way to distribute, rather than centralize, the hashing "
-"power. The following site lists Dash P2Pool mining pools near you, simply "
-"choose a pool with favourable fees and ping time and enter your Dash payment"
-" address as username and anything as password."
+"power."
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:97
-msgid "http://www.p2poolmining.us/p2poolnodes/"
-msgstr "http://www.p2poolmining.us/p2poolnodes/"
-
-#: ../../docs/user/mining/index.rst:99
+#: ../../docs/user/mining/index.rst:79
 msgid ""
 "If you would like to set up your own P2Pool, documentation of the process is"
 " available :ref:`here <p2pool>` and the code for p2pool-dash is available on"
@@ -168,435 +146,64 @@ msgid ""
 " be found :ref:`here <mining-pools>`."
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:107
+#: ../../docs/user/mining/index.rst:87
 msgid "https://coinfoundry.org"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:108
+#: ../../docs/user/mining/index.rst:88
 msgid "https://mining.luxor.tech"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:109
-msgid "https://dash.suprnova.cc"
-msgstr "https://dash.suprnova.cc"
-
-#: ../../docs/user/mining/index.rst:110
+#: ../../docs/user/mining/index.rst:89
 msgid "https://www.nicehash.com"
 msgstr "https://www.nicehash.com"
 
-#: ../../docs/user/mining/index.rst:111
-msgid "https://www.coinotron.com"
-msgstr "https://www.coinotron.com"
-
-#: ../../docs/user/mining/index.rst:112
+#: ../../docs/user/mining/index.rst:90
 msgid "https://dash.miningpoolhub.com"
 msgstr "https://dash.miningpoolhub.com"
 
-#: ../../docs/user/mining/index.rst:113
+#: ../../docs/user/mining/index.rst:91
 msgid "https://www.multipool.us"
 msgstr "https://www.multipool.us"
 
-#: ../../docs/user/mining/index.rst:114
+#: ../../docs/user/mining/index.rst:92
 msgid "https://www.f2pool.com"
 msgstr "https://www.f2pool.com"
 
-#: ../../docs/user/mining/index.rst:115
-msgid "https://www2.coinmine.pl/dash/"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:116
+#: ../../docs/user/mining/index.rst:93
 msgid "https://www.antpool.com"
 msgstr "https://www.antpool.com"
 
-#: ../../docs/user/mining/index.rst:117
-msgid "https://avalon-life.io"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:118
-msgid "https://www.genesis-mining.com"
-msgstr "https://www.genesis-mining.com"
-
-#: ../../docs/user/mining/index.rst:119
+#: ../../docs/user/mining/index.rst:94
 msgid "https://www.viabtc.com"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:120
+#: ../../docs/user/mining/index.rst:95
 msgid "https://zpool.ca"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:122
+#: ../../docs/user/mining/index.rst:97
 msgid ""
 "DISCLAIMER: This list is provided for informational purposes only. Services "
 "listed here have not been evaluated or endorsed by the Dash developers and "
 "no guarantees are made as to the accuracy of this information. Please "
-"exercise discretion when using third-party services. If you’d like to be "
-"added to this list please reach out to leon.white@dash.org"
+"exercise discretion when using third-party services. If you'd like to be "
+"added to this list, please open an issue on the `GitHub repository "
+"<https://github.com/dashpay/docs>`_."
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:129
+#: ../../docs/user/mining/index.rst:104
 msgid ""
 "In addition to joining a pool, you will also need to create a Dash address "
 "to receive your payout. To do this in Dash Core wallet, see :ref:`here "
 "<dashcore-send-receive>`."
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:143
-msgid "CPU Mining"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:145
-msgid ""
-"This documentation describes how to mine Dash under the Windows operating "
-"system using just the CPU in your computer. Please note that the prevalence "
-"of GPU and ASIC miners mean that unless you have free electricity, this is "
-"highly unlikely to be profitable! Since this is the case, the software in "
-"this guide has not been updated in several years, and is intended for "
-"experimental purposes and testnet only."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:152
-msgid ""
-"This is a fairly simple procedure and examples will be given in order to "
-"achieve the fastest possible hash rate for your CPU, but remember that more "
-"optimized miners do exist, so we advise you to keep an eye out on mining "
-"sites such as these in order to keep up with the latest information and "
-"releases."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:158 ../../docs/user/mining/index.rst:292
-msgid "`Crypto Mining Blog <https://cryptomining-blog.com/>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:159 ../../docs/user/mining/index.rst:293
-msgid ""
-"`Dash Forum Mining Discussions "
-"<https://www.dash.org/forum/topic/mining.3/>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:160 ../../docs/user/mining/index.rst:294
-msgid ""
-"`Bitcoin Talk Altcoin Mining Discussions "
-"<https://bitcointalk.org/index.php?board=160.0>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:163 ../../docs/user/mining/index.rst:297
-msgid "Mining software"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:165
-msgid ""
-"The first step is to download appropriate mining software. A good basic "
-"miner for modern CPUs can be found here:"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:168
-msgid "https://github.com/elmad/darkcoin-cpuminer-1.3-avx-aes"
-msgstr "https://github.com/elmad/darkcoin-cpuminer-1.3-avx-aes"
-
-#: ../../docs/user/mining/index.rst:170
-msgid ""
-"This software depends on your CPU supporting the AES-NI and AVX instruction "
-"sets. You can use `CPU-Z <https://www.cpuid.com/softwares/cpu-z.html>`_ to "
-"check if this is the case for your CPU:"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:178
-msgid "CPU-Z showing details for an Intel i7 Haswell CPU"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:181
-msgid ""
-"If your CPU does not support AES-NI and AVX, then you can try more "
-"generalized software which does not require specific instruction sets, such "
-"as these:"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:185
-msgid "https://github.com/ig0tik3d/darkcoin-cpuminer-1.2c"
-msgstr "https://github.com/ig0tik3d/darkcoin-cpuminer-1.2c"
-
-#: ../../docs/user/mining/index.rst:186
-msgid "https://github.com/tpruvot/cpuminer-multi"
-msgstr "https://github.com/tpruvot/cpuminer-multi"
-
-#: ../../docs/user/mining/index.rst:188
-msgid ""
-"Our goal here is to choose mining software that supports the maximum "
-"possible instruction sets available on your CPU, and then try to increase "
-"the hash speed. Once you have made your choice, click **Releases** and "
-"download and extract the zip file. The different \\*.exe files indicate "
-"which specific processor optimizations they support. The folder should look "
-"something like this:"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:198
-msgid "Executable CPU miners for Dash"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:201 ../../docs/user/mining/index.rst:345
-msgid "Configuration"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:203 ../../docs/user/mining/index.rst:347
-msgid ""
-"Begin by selecting a mining pool and generating a Dash address as described "
-"in the :ref:`Mining Pools <mining-pools>` section above. Keep all your "
-"mining files in a single folder. In this example we will work from the "
-"Desktop. The node selected for this example is from the p2poolming.us list "
-"and is located in China::"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:211
-msgid ""
-"Next, open **Notepad** and type in on one line the command we will use to "
-"start the miner, followed by pause on the second line. The general format is"
-" as follows::"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:218 ../../docs/user/mining/index.rst:369
-msgid "Where:"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:220
-msgid "minerd = the executable miner daemon file you choose to use"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:221
-msgid "a = algorithm, which is X11 for Dash"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:222
-msgid "o = URL of your mining pool, including the protocol and port"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:223
-msgid ""
-"u = username, usually the Dash receiving address of your wallet or worker"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:224
-msgid "p = password, can often be set to x"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:225
-msgid "t = number of threads used"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:226
-msgid "pause = keeps the window open in the case of errors"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:228
-msgid "For the CPU in the example above, the command may be::"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:236
-msgid "Notepad file showing an example command to start a CPU miner"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:238
-msgid ""
-"Click **File**, then **Save As**. Change **Save as type** to **All Files**, "
-"then type the file name as *startminer.bat* and save it in the same folder "
-"as the unzipped *minerd* files."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:243 ../../docs/user/mining/index.rst:392
-msgid "Testing"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:245
-msgid ""
-"You are now ready to start! Keep an eye on your CPU usage in **Task "
-"Manager** (right click the taskbar to open this) and be careful that the CPU"
-" temperature does not exceed your maximum rating (around 64°C). If you have "
-"temperature or desktop stability problems, reduce ``t`` to ~2 threads and "
-"try that first. If ``t`` is left out, the machine will default to the "
-"maximum number of threads. After running the miner for a while, take a look "
-"at the hash speed and payouts in your mining pool. You can identify your "
-"miner by the wallet address on the page."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:257
-msgid "Example of CPU mining using DarkCoin CPUMiner 1.3 on Intel Core i7"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:260
-msgid "Tips"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:262
-msgid ""
-"Reduce the number of threads for added desktop usability and heat reduction."
-" If the CPU temperature is too high, consider fitting a new fan and check "
-"that the heat sink thermal paste on the CPU is adequate. Tweak the processor"
-" clock speed for added performance using a motherboard controller like `AI "
-"Suite <https://www.asus.com/support/FAQ/1012780/>`_ for Asus motherboards. "
-"Reduction of CPU core voltage will result in lower temperature but increased"
-" instability."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:271
-msgid ""
-"Try to select a pool that is nearby to reduce network latency. If the node "
-"appears slow, switch to another location. Please distribute the hashing "
-"power globally to different pools to avoid forking."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:277
-msgid "GPU Mining"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:279
-msgid ""
-"This guide consolidates several other guides on how to use your GPU (the "
-"processor on your graphics card) to mine Dash using the X11 algorithm on "
-"Windows. Please note that the growing market for ASIC miners means that this"
-" if probably not going to be profitable! A lot of the software and binaries "
-"described here also have not been updated for several years, so this guide "
-"should be used for experimental purposes only."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:286
-msgid ""
-"This guide will cover the process of downloading and configuring the mining "
-"software, followed by some suggestions for optimizations. This technology "
-"can change rapidly, so we advise you to keep an eye out on mining sites such"
-" as these in order to keep up with the latest information and releases."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:299
-msgid ""
-"As for CPU mining, a range of mining software is available for GPU mining. "
-"Most of it based on sgminer compiled with different optimizations specific "
-"to different hardware. A good approach is to identify your graphics "
-"hardware, then choose an appropriate build of sgminer. You can use `GPU-Z "
-"<https://www.techpowerup.com/gpuz/>`_ to identify your GPU hardware:"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:309
-msgid ""
-"GPU-Z showing details for AMD Radeon Turks and NVIDIA Quadro GK104 class "
-"GPUs"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:312
-msgid ""
-"Next, download the mining software. Most of these are based on the original "
-"`sgminer <https://github.com/sgminer-dev/sgminer>`_, but this is not "
-"suitable for the X11 algorithm, offers no compiled binaries and hasn't been "
-"updated in years. We will describe using pre-compiled binary software "
-"maintained by newer developers only."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:318
-msgid "**AMD**"
-msgstr "**AMD**"
-
-#: ../../docs/user/mining/index.rst:320
-msgid "https://github.com/nicehash/sgminer/releases"
-msgstr "https://github.com/nicehash/sgminer/releases"
-
-#: ../../docs/user/mining/index.rst:322
-msgid "**NVIDIA**"
-msgstr "**NVIDIA**"
-
-#: ../../docs/user/mining/index.rst:324
-msgid ""
-"https://github.com/tpruvot/ccminer/releases (focus on core application)"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:326
-msgid ""
-"https://github.com/sp-hash/ccminer/releases (sp-mod, optimized CUDA kernels "
-"for Windows)"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:329
-msgid ""
-"Download your chosen release and extract the zip file to a known location. "
-"The folder should look something like this:"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:335
-msgid "Executable GPU miners for Dash"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:337
-msgid ""
-"The sgminer file is the executable file, while the various files with .cl "
-"extensions define the various algorithms supported by sgminer. In this case,"
-" we are interested in the darkcoin.cl and darkcoin-mod.cl implementations of"
-" X11. Note that the name of the executable file may be different for miners "
-"with different optimizations, for example ccminer for NVIDIA cards."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:355
-msgid ""
-"Next, open **Notepad** and create the basic configuration. The general "
-"format is as follows::"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:371
-msgid ""
-"pools = defines a list of pools (in this case, only one) towards which the "
-"hashing power is directed"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:373
-msgid "url = URL of your mining pool, including the protocol and port"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:374
-msgid ""
-"user = username, usually the Dash receiving address of your wallet or worker"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:376
-msgid "pass = password, can often be set to x"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:377
-msgid ""
-"algorithm = hashing algorithm to use, in this case darkcoin (for historic "
-"reasons) or darkcoin-mod"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:380
-msgid "For the pool above, the configuration may be:"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:385
-msgid "Configuration file for a Dash GPU miner"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:387
-msgid ""
-"Click **File**, then **Save As**. Change **Save as type** to **All Files**, "
-"then type the file name as *sgminer.conf* and save it in the same folder as "
-"the unzipped *sgminer* files."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:394
-msgid ""
-"Double click your *sgminer.exe* and a **Command Prompt** window should "
-"appear immediately. If it disappears too quickly, check your configuration "
-"for missing commas, unclosed brackets or incorrect file name. The program "
-"will compile a special binary specific to your GPU and store it in the "
-"folder, then begin hashing."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:403
-msgid ""
-"Example of GPU mining using sgminer 5.6.1-nicehash-51 on Intel HD Graphics "
-"4600"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:410
+#: ../../docs/user/mining/index.rst:120
 msgid "ASIC Mining"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:412
+#: ../../docs/user/mining/index.rst:122
 msgid ""
 "ASIC stands for *Application-Specific Integrated Circuit* and describes a "
 "type of processor that is designed for one purpose only. ASICs are a popular"
@@ -604,431 +211,126 @@ msgid ""
 " than CPU or GPU miners, resulting in higher profit."
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:417
+#: ../../docs/user/mining/index.rst:127
 msgid ""
 "Please note that the information on this page may become obsolete very "
 "quickly due to the rapidly changing market and difficulty of mining Dash. "
 "You are responsible for carrying out your own research and any listing on "
 "this page should not be considered an endorsement of any particular product."
 " A good place to begin your research is the `mining section of the Dash "
-"Forums <https://www.dash.org/forum/topic/hardware-discussions-asic-gpu-"
-"cpu.101/>`_."
+"Forums <https://www.dash.org/forum/index.php?forums/hardware-discussions-"
+"only-asic-profitable.101//>`_."
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:424
+#: ../../docs/user/mining/index.rst:134
 msgid ""
 "The following X11 ASIC miners are available on the market today, click the "
 "product name to visit the manufacturer's website:"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:428 ../../docs/user/mining/index.rst:446
+#: ../../docs/user/mining/index.rst:138
 msgid "Name"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:428 ../../docs/user/mining/index.rst:446
+#: ../../docs/user/mining/index.rst:138
 msgid "Hash rate"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:428 ../../docs/user/mining/index.rst:446
+#: ../../docs/user/mining/index.rst:138
 msgid "Power"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:428 ../../docs/user/mining/index.rst:446
+#: ../../docs/user/mining/index.rst:138
 msgid "Weight"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:428 ../../docs/user/mining/index.rst:446
+#: ../../docs/user/mining/index.rst:138
 msgid "Dimensions (mm)"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:428
+#: ../../docs/user/mining/index.rst:138
 msgid "Price"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:430
+#: ../../docs/user/mining/index.rst:140
 msgid ""
 "`Bitmain Antminer D5 "
 "<https://shop.bitmain.com.cn/product/detail?pid=000201811150956053407f2Bhw2x068D>`_"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:430
+#: ../../docs/user/mining/index.rst:140
 msgid "119 GH/s ±5%"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:430
+#: ../../docs/user/mining/index.rst:140
 msgid "1566 W"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:430
+#: ../../docs/user/mining/index.rst:140
 msgid "7.5 kg"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:430
+#: ../../docs/user/mining/index.rst:140
 msgid "486 x 265 x 388"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:430
+#: ../../docs/user/mining/index.rst:140
 msgid "$1,180"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:432
+#: ../../docs/user/mining/index.rst:142
 msgid "`Spondoolies SPx36 <https://www.spondoolies-tech.com/products/spx36>`_"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:432
+#: ../../docs/user/mining/index.rst:142
 msgid "540 GH/s ±10%"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:432
+#: ../../docs/user/mining/index.rst:142
 msgid "4400 W"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:432
+#: ../../docs/user/mining/index.rst:142
 msgid "19.5 kg"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:432
+#: ../../docs/user/mining/index.rst:142
 msgid "640 x 525 x 185"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:432
+#: ../../docs/user/mining/index.rst:142
 msgid "$7,000"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:434
+#: ../../docs/user/mining/index.rst:144
 msgid ""
 "`StrongU STU-U6 <https://strongu.com.cn/Home/Goods/goodsInfo/id/263.html>`_"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:434
+#: ../../docs/user/mining/index.rst:144
 msgid "420 GH/s ±8%"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:434 ../../docs/user/mining/index.rst:478
+#: ../../docs/user/mining/index.rst:144
 msgid "2100 W"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:434
+#: ../../docs/user/mining/index.rst:144
 msgid "8.5 kg"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:434
+#: ../../docs/user/mining/index.rst:144
 msgid "370 x 135 x 208"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:437
+#: ../../docs/user/mining/index.rst:147
 msgid "ASIC resellers may also have miners available:"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:439
+#: ../../docs/user/mining/index.rst:149
 msgid "http://kaboomracks.com"
 msgstr ""
 
-#: ../../docs/user/mining/index.rst:440
+#: ../../docs/user/mining/index.rst:150
 msgid "https://brokerage.luxor.tech/dashboard"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:442
-msgid ""
-"The following ASIC miners are either no longer easily available or obsolete "
-"due to the increase in difficulty on the network."
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:448
-msgid "`Baikal BK-X <https://www.baikalminer.com/product09.php>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:448
-msgid "10 GH/s ±5%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:448
-msgid "800 W"
-msgstr "800 W"
-
-#: ../../docs/user/mining/index.rst:448
-msgid "3.8 kg"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:448
-msgid "312 x 125 x 130"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:450
-msgid "`Baikal Mini <https://www.baikalminer.com/>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:450
-msgid "150 MH/s ±10%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:450
-msgid "40 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:450
-msgid ".475 kg"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:450
-msgid "140 x 100 x 95"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:452
-msgid "`Baikal Giant+ A2000 <https://www.baikalminer.com/product06.php>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:452
-msgid "2000 MH/s ±10%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:452
-msgid "430 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:452 ../../docs/user/mining/index.rst:456
-msgid "3 kg"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:452
-msgid "300 x 140 x 125"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:454
-msgid "`Baikal Giant A900 <https://www.baikalminer.com/>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:454
-msgid "900 MH/s ±5%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:454
-msgid "217 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:454
-msgid "2.5 kg"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:454
-msgid "300 x 123 x 123"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:456
-msgid "`Baikal Quad Cube <https://www.baikalminer.com/>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:456
-msgid "1200 MH/s ±10%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:456
-msgid "300 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:456
-msgid "135 x 135 x 425"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:458
-msgid ""
-"`Bitmain Antminer D3 "
-"<https://shop.bitmain.com/product/detail?pid=000201810311345082643S60TX7I0609>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:458
-msgid "17 GH/s ±5%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:458
-msgid "970 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:458
-msgid "6.5 kg"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:458
-msgid "320 x 130 x 190"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:460
-msgid "`iBelink DM384M <https://ibelink.co/>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:460
-msgid "384 MH/s ±10%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:460
-msgid "715 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:460
-msgid "21 kg"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:460 ../../docs/user/mining/index.rst:462
-#: ../../docs/user/mining/index.rst:464
-msgid "490 x 350 x 180"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:462
-msgid "`iBelink DM11G <https://www.asicminervalue.com/miners/ibelink/dm11g>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:462
-msgid "11 GH/s ±5%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:462 ../../docs/user/mining/index.rst:464
-msgid "810 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:462
-msgid "22 kg"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:464
-msgid "`iBelink DM22G <https://www.asicminervalue.com/miners/ibelink/dm22g>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:464
-msgid "22 GH/s ±5%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:464
-msgid "19 kg"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:466
-msgid "Pinidea DR-1"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:466
-msgid "500 MH/s ±10%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:466
-msgid "320 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:466 ../../docs/user/mining/index.rst:468
-#: ../../docs/user/mining/index.rst:470
-msgid "4.5 kg"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:466
-msgid "290 x 130 x 150"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:468
-msgid "Pinidea DR-2"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:468
-msgid "450 MH/s ±5%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:468
-msgid "335 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:468 ../../docs/user/mining/index.rst:470
-msgid "200 x 165 x 135"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:470
-msgid "Pinidea DR-3"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:470
-msgid "600 MH/s ±5%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:470
-msgid "345 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:472
-msgid "Pinidea DU-1"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:472
-msgid "9 MH/s ±5%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:472
-msgid "7 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:472
-msgid "50 x 50 x 30"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:474
-msgid "Pinidea DRX-Kuznetsov"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:474
-msgid "900 MH/s ±5%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:474
-msgid "650 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:474 ../../docs/user/mining/index.rst:476
-msgid "280 x 180 x 150"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:476
-msgid "Pinidea DRX-Varyag"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:476
-msgid "1200 MH/s ±5%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:476
-msgid "850 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:478
-msgid ""
-"`iBelink DM56G <https://ibelink.co/product/ibelink-dm56g-x11-dash-miner-"
-"with-56-gh-s-hash-rate/>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:478
-msgid "56 GH/s ±5%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:478
-msgid "17 kg"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:478
-msgid "490 x 390 x 180"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:480
-msgid ""
-"`Innosilicon A5 <https://www.innosilicon.com/html/a5-miner/index.html>`_"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:480
-msgid "32 GH/s ±8%"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:480
-msgid "750 W"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:480
-msgid "3.1 kg"
-msgstr ""
-
-#: ../../docs/user/mining/index.rst:480
-msgid "400 x 135 x 158"
 msgstr ""

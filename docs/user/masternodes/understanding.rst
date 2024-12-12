@@ -419,6 +419,10 @@ Evonodes
 Evonodes have higher hardware requirements since they host Dash Platform services along with Dash
 Core. To support the network effectively, the following requirements are recommended:
 
+.. note::
+
+  Intel CPUs should be `Haswell architecture <https://en.wikipedia.org/wiki/Haswell_(microarchitecture)>`_ or newer
+
 +---------+------------------+
 |         | Recommended      |
 +=========+==================+

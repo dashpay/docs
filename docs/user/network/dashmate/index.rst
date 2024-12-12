@@ -53,16 +53,16 @@ Debian package
 Download the newest dashmate installation package for your architecture from the `GitHub releases
 page <https://github.com/dashpay/platform/releases/latest>`__::
 
-   wget https://github.com/dashpay/platform/releases/download/v1.5.1/dashmate_1.5.1.8f924cc0a-1_amd64.deb
+   wget https://github.com/dashpay/platform/releases/download/v1.6.2/dashmate_1.6.2.afe982a10-1_amd64.deb
 
 Install dashmate using apt::
 
    sudo apt update
-   sudo apt install ./dashmate_1.5.1.8f924cc0a-1_amd64.deb
+   sudo apt install ./dashmate_1.6.2.afe982a10-1_amd64.deb
 
 .. note:: At the end of the installation process, ``apt`` may display an error due to installing a downloaded package. You can ignore this error message:
    
-   ``N: Download is performed unsandboxed as root as file '/home/ubuntu/dashmate_1.5.1.8f924cc0a-1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)``
+   ``N: Download is performed unsandboxed as root as file '/home/ubuntu/dashmate_1.6.2.afe982a10-1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)``
 
 Node package
 ^^^^^^^^^^^^

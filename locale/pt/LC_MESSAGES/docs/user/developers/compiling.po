@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 10:39-0400\n"
+"POT-Creation-Date: 2024-11-18 12:41-0500\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: oscar junior <geleira@gmail.com>, 2022\n"
 "Language-Team: Portuguese (https://app.transifex.com/dash/teams/37570/pt/)\n"
@@ -122,78 +122,86 @@ msgstr ""
 msgid ""
 "It is only necessary to run this step during the initial setup of your "
 "machine. Run the guix install routine to prepare your environment and answer"
-" \"Y\" for all prompts::"
+" \"Y\" for all prompts:"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:88
+#: ../../docs/user/developers/compiling.rst:0
+msgid "Ubuntu/Debian install"
+msgstr ""
+
+#: ../../docs/user/developers/compiling.rst:0
+msgid "General install"
+msgstr ""
+
+#: ../../docs/user/developers/compiling.rst:99
 msgid "Clone repositories"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:90
+#: ../../docs/user/developers/compiling.rst:101
 msgid ""
 "After installing the prerequisites and preparing guix, reboot the system, "
 "login as ``<username>``, and clone required repositories::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:97
+#: ../../docs/user/developers/compiling.rst:108
 msgid "Download the macOS SDK which is required to create macOS builds::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:104
+#: ../../docs/user/developers/compiling.rst:115
 msgid "Build Dash Core"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:106
+#: ../../docs/user/developers/compiling.rst:117
 msgid ""
 "Checkout the tag associated with the Dash Core version you plan to build::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:113
+#: ../../docs/user/developers/compiling.rst:124
 msgid "Run ``guix-build`` to create binaries for Linux, Mac, and Windows::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:118
+#: ../../docs/user/developers/compiling.rst:129
 msgid ""
 "When the build completes, it will put the binaries in the ``guix-"
 "build-<version>/output/`` directory."
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:122
+#: ../../docs/user/developers/compiling.rst:133
 msgid "Create signatures for binaries"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:124
+#: ../../docs/user/developers/compiling.rst:135
 msgid ""
 "Mac and Windows binaries are signed by Dash Core Group using the relevant "
 "Apple and Microsoft processes. In this step, that information will be "
 "validated and signed by your machine."
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:128
+#: ../../docs/user/developers/compiling.rst:139
 msgid ""
 "Prepare the `detached sigs repository <https://github.com/dashpay/dash-"
 "detached-sigs>`__::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:137
+#: ../../docs/user/developers/compiling.rst:148
 msgid ""
 "Prepare the `guix.sigs repository <https://github.com/dashpay/guix.sigs>`__ "
 "by pulling the latest changes::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:144
+#: ../../docs/user/developers/compiling.rst:155
 msgid "Create a new branch for the version that was built::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:152
+#: ../../docs/user/developers/compiling.rst:163
 msgid "Unsigned binaries"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:154
+#: ../../docs/user/developers/compiling.rst:165
 msgid "To create signatures for the unsigned binaries, run ``guix-attest``::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:162
+#: ../../docs/user/developers/compiling.rst:173
 msgid ""
 "The ``signer`` parameter should be set to the value provided for \"Real "
 "name\" when generating a key with GPG. See the `GnuPrivacyGuard Howto "
@@ -201,38 +209,38 @@ msgid ""
 " for details on how to generate a key if you don't already have one."
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:168
+#: ../../docs/user/developers/compiling.rst:179
 msgid "Signed binaries"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:170
+#: ../../docs/user/developers/compiling.rst:181
 msgid ""
 "To create signatures for the signed binaries, run ``guix-codesign`` followed"
 " by guix-attest::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:182
+#: ../../docs/user/developers/compiling.rst:193
 msgid "Upload signatures"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:184
+#: ../../docs/user/developers/compiling.rst:195
 msgid ""
 "After successfully building the binaries, signing them, and verifying the "
 "signatures, you can optionally contribute them to the `guix.sigs repository "
 "<https://github.com/dashpay/guix.sigs/>`_ via a pull request on GitHub."
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:189
+#: ../../docs/user/developers/compiling.rst:200
 msgid "Initial setup"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:191
+#: ../../docs/user/developers/compiling.rst:202
 msgid ""
 "Since the official guix.sigs repository has restricted write access, create "
 "a fork of it via GitHub and add your fork as a remote repository::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:197
+#: ../../docs/user/developers/compiling.rst:208
 msgid ""
 "The first time you contribute signatures, also put a copy of your public key"
 " in the ``builder-keys`` folder of the repository so others can easily "
@@ -240,21 +248,21 @@ msgid ""
 "following command::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:207
+#: ../../docs/user/developers/compiling.rst:218
 msgid "Adding your signatures"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:209
+#: ../../docs/user/developers/compiling.rst:220
 msgid ""
 "Add and commit the ``*.SHA256SUMS`` and ``*.SHA256SUMS.asc`` files created "
 "by the build process::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:220
+#: ../../docs/user/developers/compiling.rst:231
 msgid "Push to your fork of the guix.sigs repository on GitHub::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:225
+#: ../../docs/user/developers/compiling.rst:236
 msgid ""
 "Go to `GitHub <https://github.com/dashpay/gitian.sigs/pulls>`__ and open a "
 "pull request to the ``master`` branch of the upstream repository. The pull "
@@ -262,11 +270,11 @@ msgid ""
 "checks out. Thanks for contributing!"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:231
+#: ../../docs/user/developers/compiling.rst:242
 msgid "Verify signatures"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:233
+#: ../../docs/user/developers/compiling.rst:244
 msgid ""
 "The `guix.sigs repository <https://github.com/dashpay/guix.sigs/>`_ contains"
 " deterministic build results signed by multiple Core developers for each "
@@ -274,13 +282,13 @@ msgid ""
 "verification. Import the public keys::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:242
+#: ../../docs/user/developers/compiling.rst:253
 msgid ""
 "Run the following commands to verify that your build matches the official "
 "release::"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:252
+#: ../../docs/user/developers/compiling.rst:263
 msgid ""
 "You should get a result similar to the following for Linux, Windows, MacOS, "
 "Signed Windows, and Signed MacOS. Assuming the previous steps completed "
@@ -288,11 +296,11 @@ msgid ""
 "also."
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:341
+#: ../../docs/user/developers/compiling.rst:352
 msgid "Gitian"
 msgstr ""
 
-#: ../../docs/user/developers/compiling.rst:344
+#: ../../docs/user/developers/compiling.rst:355
 msgid ""
 "Gitian builds were deprecated in favor of Guix builds with the release of "
 "Dash Core v20.0. Instructions on building Dash Core 19.0 or older versions "

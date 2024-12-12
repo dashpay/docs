@@ -111,6 +111,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx_copybutton',
     'sphinx_design',
+    'sphinxcontrib.googleanalytics',
     'sphinx.ext.intersphinx',
 ]
 
@@ -283,6 +284,11 @@ texinfo_documents = [
      author, 'Dash', 'A revolutionary digital money system, Dash is Digital Cash',
      'Miscellaneous'),
 ]
+
+# -- Google analytics config ----------------------------------------------
+
+googleanalytics_id = 'G-7E5054FV6E'
+googleanalytics_enabled = True
 
 def setup(app):
     app.add_js_file('js/lang.js')

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 10:39-0400\n"
+"POT-Creation-Date: 2024-11-26 15:54-0500\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: VONCAN, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
@@ -111,6 +111,11 @@ msgid ""
 "enter the following command, pasting in the address to the latest version of"
 " Dash Core by right clicking or pressing **Ctrl + V**::"
 msgstr ""
+"Посетите `страницу релизов GitHub "
+"<https://github.com/dashpay/dash/releases/latest>`_ и скопируйте ссылку в "
+"последнюю версию `x86_64-linux-gnu`. Вернитесь в окно терминала и введите "
+"следующую команду, вставив адрес в последней версии Dash Core, кликнув "
+"правой кнопкой мыши или нажав **Ctrl + V**::"
 
 #: ../../docs/user/masternodes/maintenance.rst:52
 msgid ""
@@ -118,6 +123,9 @@ msgid ""
 "against the public key published by the Dash Core development team. All "
 "releases of Dash since 0.16.0 are signed using GPG with the following key:"
 msgstr ""
+"Убедитесь в подлинности загруженного файла, сверив его подпись с открытым "
+"ключом, опубликованным командой разработчиков Dash Core. Все выпуски Dash "
+"начиная с v0.16.0 подписываются с помощью GPG следующим ключом:"
 
 #: ../../docs/user/masternodes/maintenance.rst:57
 msgid ""
@@ -194,16 +202,26 @@ msgid ""
 "``operatorPayoutAddress`` is not set and ``operatorReward`` is non-zero, the"
 " owner gets the full masternode reward."
 msgstr ""
+"Транзакция Provider Update Service Transaction (ProUpServTx) используется "
+"для обновления информации, относящейся к оператору. Оператор может обновить "
+"поля IP-адреса и порта в записи мастерноды. Для эвонод он также может "
+"обновить связанные с платформой порты P2P и HTTP. Если ненулевое значение "
+"``operatorReward`` было установлено в начальном ProRegTx, оператор может "
+"также установить поле ``operatorPayoutAddress`` в ProUpServTx. Если "
+"``operatorPayoutAddress`` не задано и ``operatorReward`` ненулевое, владелец"
+" получает полное вознаграждение мастерноды."
 
 #: ../../docs/user/masternodes/maintenance.rst:113
 msgid "Regular masternodes"
-msgstr ""
+msgstr "Обычные мастерноды"
 
 #: ../../docs/user/masternodes/maintenance.rst:115
 msgid ""
 "A masternode ProUpServTx can be created from DMT by clicking the **Update "
 "service** button, or from Dash Core using the following syntax::"
 msgstr ""
+"ProUpServTx мастерноды можно создать из DMT, нажав кнопку **Обновить "
+"сервис**, или из Dash Core, используя следующий синтаксис::"
 
 #: ../../docs/user/masternodes/maintenance.rst:120
 #: ../../docs/user/masternodes/maintenance.rst:153
@@ -275,37 +293,47 @@ msgstr ""
 
 #: ../../docs/user/masternodes/maintenance.rst:146
 msgid "Evonodes"
-msgstr ""
+msgstr "Эвоноды"
 
 #: ../../docs/user/masternodes/maintenance.rst:148
 msgid ""
 "An evonode ProUpServTx can be created from DMT by clicking the **Update "
 "service** button, or from Dash Core using the following syntax::"
 msgstr ""
+"ProUpServTx эвоноды можно создать из DMT, нажав кнопку **Обновить сервис**, "
+"или из Dash Core, используя следующий синтаксис::"
 
 #: ../../docs/user/masternodes/maintenance.rst:159
 msgid ""
 "``platformNodeId``: The Platform node ID derived from Platform P2P public "
 "key."
 msgstr ""
+"``platformNodeId``: ID ноды платформы, полученный из публичного ключа P2P "
+"платформы."
 
 #: ../../docs/user/masternodes/maintenance.rst:160
 msgid ""
 "``platformP2PPort``: TCP port for Platform peer-to-peer communication "
 "between nodes (26656 for mainnet)."
 msgstr ""
+"``platformP2PPort``: TCP-порт для пиринговой связи Platform между узлами "
+"(26656 для mainnet)."
 
 #: ../../docs/user/masternodes/maintenance.rst:161
 msgid ""
 "``platformHTTPPort``: TCP port of Platform HTTP API interface (443 for "
 "mainnet)."
 msgstr ""
+"``platformHTTPPort``: TCP-порт интерфейса Platform HTTP API (443 для "
+"основной сети)."
 
 #: ../../docs/user/masternodes/maintenance.rst:176
 msgid ""
 "The evonode is now removed from the PoSe-banned list. The IP:port, Platform "
 "HTTP and P2P port and operator reward addresses are updated."
 msgstr ""
+"Теперь эвонода удалена из списка нод забаненных PoSe. Обновлены IP:порт, "
+"HTTP-порт платформы и P2P-порт, а также адреса вознаграждения оператора."
 
 #: ../../docs/user/masternodes/maintenance.rst:182
 msgid "ProUpRegTx"
@@ -412,7 +440,7 @@ msgstr ""
 
 #: ../../docs/user/masternodes/maintenance.rst:244
 msgid "Dashmate troubleshooting"
-msgstr ""
+msgstr "Устранение неисправностей Dashmate"
 
 #: ../../docs/user/masternodes/maintenance.rst:246
 msgid ""
@@ -420,6 +448,9 @@ msgid ""
 "doctor`` command to collect debug information for troubleshooting. See the "
 ":ref:`dashmate page <dashmate-doctor>` for details."
 msgstr ""
+"Если у вас возникли проблемы с мастернодой на базе dashmate, используйте "
+"команду ``dashmate doctor`` для сбора отладочной информации для устранения "
+"неполадок. Подробности см. на :ref:`странице о Dashmate <dashmate-doctor>`."
 
 #: ../../docs/user/masternodes/maintenance.rst:250
 msgid "Proof of Service Bans"
