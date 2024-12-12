@@ -64,7 +64,7 @@ Import the key file and verify the Key-ID matches the ID above.
 
 Skip any requests to certify the certificate with your own key. Next,
 click **Decrypt/Verify...** and select the detached signature file named
-``dashcore-21.1.1-win64-setup.exe.asc`` in the same folder as the
+``dashcore-22.0.0-win64-setup.exe.asc`` in the same folder as the
 downloaded installer.
 
 .. figure:: img/windows/setup-windows-kleopatra-verify.png
@@ -73,8 +73,8 @@ downloaded installer.
    Selecting the signature file for verification
 
 If you see the first line of the message reads ``Verified
-dashcore-21.1.1-win64-setup.exe with
-dashcore-21.1.1-win64-setup.exe.asc`` then you have an authentic copy
+dashcore-22.0.0-win64-setup.exe with
+dashcore-22.0.0-win64-setup.exe.asc`` then you have an authentic copy
 of Dash Core for Windows.
 
 .. figure:: img/windows/setup-windows-kleopatra-verified.png
