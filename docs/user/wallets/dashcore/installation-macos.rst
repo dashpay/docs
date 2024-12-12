@@ -49,7 +49,7 @@ Open a terminal, import the keys and verify the authenticity of your
 download as follows::
 
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  gpg --verify dashcore-21.1.1-osx.dmg.asc
+  gpg --verify dashcore-22.0.0-osx.dmg.asc
 
 
 .. figure:: img/linux/setup-linux-gpg.png
@@ -66,7 +66,7 @@ authentic copy of Dash Core for macOS.
    verification output by signing the imported key before verifying::
    
       gpg --quick-lsign-key "29590362EC878A81FD3C202B52527BEDABE87984"
-      gpg --verify dashcore-21.1.1-x86_64-linux-gnu.tar.gz.asc
+      gpg --verify dashcore-22.0.0-x86_64-linux-gnu.tar.gz.asc
 
 Installing Dash Core
 --------------------
