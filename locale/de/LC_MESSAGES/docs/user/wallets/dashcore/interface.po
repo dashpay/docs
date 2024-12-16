@@ -4,7 +4,6 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Leon White <leon.white@dash.org>, 2022
 # Manuel Herrmann <manuel.herrmann@dash-embassy.org>, 2022
 # Nils Hermann <vk.translation@protonmail.ch>, 2022
 # 
@@ -13,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 10:39-0400\n"
+"POT-Creation-Date: 2024-12-16 12:42-0500\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
 "Last-Translator: Nils Hermann <vk.translation@protonmail.ch>, 2022\n"
 "Language-Team: German (https://app.transifex.com/dash/teams/37570/de/)\n"
@@ -503,18 +502,15 @@ msgstr ""
 "mit einem Start der Dash Core Wallet bei Systemstart."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:280
-msgid "Hide tray icon"
-msgstr "Infosymbol verbergen"
+msgid "Show tray icon"
+msgstr ""
 
 #: ../../docs/user/wallets/dashcore/interface.rst:278
 msgid ""
-"When this option is enabled, Dash Core will not display an icon in the "
-"system tray. This option cannot be selected at the same time as **Minimize "
-"to the tray instead of the taskbar**."
+"When this option is enabled, Dash Core will display an icon in the system "
+"tray. This option must be selected to enable **Minimize to the tray instead "
+"of the taskbar**."
 msgstr ""
-"Wenn diese Option gewählt wurde, wird kein Dash Core Symbol in der "
-"Taskleiste erscheinen. Diese Option kann nicht gleichzeitig mit der Option "
-"**In den Infobereich anstatt in die Taskleiste minimieren** gewählt werden."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:287
 msgid "Minimize to the tray instead of the taskbar"
@@ -525,15 +521,9 @@ msgid ""
 "When this option is enabled and the Dash Core window is minimized, it will "
 "no longer appear in your taskbar as a running task. Instead, Dash Core will "
 "keep running in the background and can be re-opened from the Dash icon in "
-"the system tray (the area next to your system clock). This option cannot be "
-"selected at the same time as **Hide tray icon**."
+"the system tray (the area next to your system clock). This option can only "
+"be selected when **Show tray icon** is selected."
 msgstr ""
-"Diese Option führt dazu, dass Dash Core nicht länger in der Taskleiste "
-"erscheint, nachdem das Fenster minimiert wurde. Stattdessen wird Dash Core "
-"im Hintergrund weiterlaufen und das Fenster kann über das Dash-Symbol im "
-"Infobereich geöffnet werden (der Bereich neben der Uhrzeitanzeige). Diese "
-"Option kann nicht gleichzeitig mit **Infosymbol verbergen** ausgewählt "
-"werden."
 
 #: ../../docs/user/wallets/dashcore/interface.rst:292
 msgid "Minimize on close"
@@ -599,11 +589,21 @@ msgstr ""
 "eine negative Zahl bedeutet, dass die entsprechende Anzahl nicht verwendet "
 "werden soll."
 
+#: ../../docs/user/wallets/dashcore/interface.rst:318
+msgid "Enable RPC Server"
+msgstr ""
+
 #: ../../docs/user/wallets/dashcore/interface.rst:317
+msgid ""
+"This option allows you or a third-party tool to communicate with the node "
+"through command-line and JSON-RPC commands."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/interface.rst:321
 msgid "Wallet tab"
 msgstr "Wallet-Tab"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:319
+#: ../../docs/user/wallets/dashcore/interface.rst:323
 msgid ""
 "The Wallet tab of the Options dialog contains settings related to how "
 "addresses are managed in the Dash Core app. The first time you run Dash "
@@ -612,15 +612,23 @@ msgid ""
 " the Coin Control, CoinJoin and Masternode features."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:328
+#: ../../docs/user/wallets/dashcore/interface.rst:332
 msgid "The Wallet tab of the Dash Core Options dialog"
 msgstr "Der Wallet-Tab der Dash Core Konfigurationseinstellungen"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:340
+#: ../../docs/user/wallets/dashcore/interface.rst:335
+msgid "Subtract fee from amount by default"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/interface.rst:335
+msgid "Whether to set subtract fee from amount as default or not."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/interface.rst:347
 msgid "Enable coin control features"
 msgstr "\"Coin Control\"-Funktionen aktivieren"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:331
+#: ../../docs/user/wallets/dashcore/interface.rst:338
 msgid ""
 "Your Dash Core wallet balance is actually the sum total of all addresses "
 "holding balance that are associated with your wallet. When you spend Dash, "
@@ -633,11 +641,19 @@ msgid ""
 "control>` for a more detailed explanation of Coin Control."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:346
+#: ../../docs/user/wallets/dashcore/interface.rst:350
+msgid "Keep custom change address"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/interface.rst:350
+msgid "Whether to keep the specified custom change address or not."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/interface.rst:356
 msgid "Show Masternodes tab"
 msgstr "Masternode Tabulator anzeigen"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:343
+#: ../../docs/user/wallets/dashcore/interface.rst:353
 msgid ""
 "Enabling this option causes Dash Core to display an additional Masternodes "
 "tab to the right of the Transactions tab. This option requires you to "
@@ -645,11 +661,11 @@ msgid ""
 "of masternodes registered on the Dash blockchain."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:351
+#: ../../docs/user/wallets/dashcore/interface.rst:361
 msgid "Show Governance tab"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:349
+#: ../../docs/user/wallets/dashcore/interface.rst:359
 msgid ""
 "Enabling this option causes Dash Core to display an additional Governance "
 "tab. This option requires you to restart the Dash Core app. The Governance "
@@ -657,11 +673,11 @@ msgid ""
 "network."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:361
+#: ../../docs/user/wallets/dashcore/interface.rst:371
 msgid "Spend unconfirmed change"
 msgstr "Unbestätigtes Wechselgeld darf ausgegeben werden"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:354
+#: ../../docs/user/wallets/dashcore/interface.rst:364
 msgid ""
 "When this option is enabled, the Dash Core wallet permits you to immediately"
 " spend change from previous transactions that has been transferred "
@@ -679,36 +695,36 @@ msgstr ""
 "Option ermöglicht es neue Transaktionen zu erstellen, selbst wenn die "
 "vorherigen noch nicht bestätigt wurden."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:366
+#: ../../docs/user/wallets/dashcore/interface.rst:376
 msgid "Enable CoinJoin features"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:364
+#: ../../docs/user/wallets/dashcore/interface.rst:374
 msgid ""
 "Enabling this option displays the CoinJoin tab in the main Dash Core window "
 "and the Options dialog, and allows you to process and spend your balance "
 "using CoinJoin."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:369
+#: ../../docs/user/wallets/dashcore/interface.rst:379
 msgid "CoinJoin tab"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:371
+#: ../../docs/user/wallets/dashcore/interface.rst:381
 msgid ""
 "The CoinJoin tab contains options relating to how CoinJoin functions in Dash"
 " Core."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:377
+#: ../../docs/user/wallets/dashcore/interface.rst:387
 msgid "The CoinJoin tab of the Dash Core Options dialog"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:384
+#: ../../docs/user/wallets/dashcore/interface.rst:394
 msgid "Enable advanced interface"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:380
+#: ../../docs/user/wallets/dashcore/interface.rst:390
 msgid ""
 "Enabling this option changes the interface on the Overview tab of the Dash "
 "Core wallet to include more information, such as the remaining keys, "
@@ -716,21 +732,21 @@ msgid ""
 "coinjoin-instantsend>` for a full explanation of how to use CoinJoin."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:388
+#: ../../docs/user/wallets/dashcore/interface.rst:398
 msgid "Show popups for mixing transactions"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:387
+#: ../../docs/user/wallets/dashcore/interface.rst:397
 msgid ""
 "Enabling this option will display notifications as the CoinJoin transactions"
 " are created."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:396
+#: ../../docs/user/wallets/dashcore/interface.rst:406
 msgid "Warn if the wallet is running out of keys"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:391
+#: ../../docs/user/wallets/dashcore/interface.rst:401
 msgid ""
 "Enabling this option will cause Dash Core to display a warning when your "
 "original set of 1000 addresses is running out, which may affect CoinJoin "
@@ -740,11 +756,11 @@ msgid ""
 "disabled."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:404
+#: ../../docs/user/wallets/dashcore/interface.rst:414
 msgid "Enable multi-session"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:399
+#: ../../docs/user/wallets/dashcore/interface.rst:409
 msgid ""
 "Normally CoinJoin processing is completed in several consecutive rounds, "
 "each using a single masternode. Enabling this option allows multi-session, "
@@ -753,11 +769,11 @@ msgid ""
 " more addresses and thus requiring more frequent wallet backups."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:412
+#: ../../docs/user/wallets/dashcore/interface.rst:422
 msgid "Mixing rounds"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:407
+#: ../../docs/user/wallets/dashcore/interface.rst:417
 msgid ""
 "Use this option to control the number of rounds of CoinJoin to be processed "
 "for your chosen balance. Each round of processing uses a new masternode. The"
@@ -766,11 +782,11 @@ msgid ""
 "for processing and potentially higher fees."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:418
+#: ../../docs/user/wallets/dashcore/interface.rst:428
 msgid "Target balance"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:415
+#: ../../docs/user/wallets/dashcore/interface.rst:425
 msgid ""
 "This option allows you to specify how much Dash should be kept on balance in"
 " a ready-to-use processed state, meaning it has already passed through the "
@@ -778,23 +794,23 @@ msgid ""
 "CoinJoin tab."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:421
+#: ../../docs/user/wallets/dashcore/interface.rst:431
 msgid "Network tab"
 msgstr "Netzwerk-Tab"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:423
+#: ../../docs/user/wallets/dashcore/interface.rst:433
 msgid "This tab includes options related to your Dash network connection."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:428
+#: ../../docs/user/wallets/dashcore/interface.rst:438
 msgid "The Network tab of the Dash Core Options dialog"
 msgstr "Der Netzwerk-Tab der Dash Core Konfigurationseinstellungen"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:436
+#: ../../docs/user/wallets/dashcore/interface.rst:446
 msgid "Map port using UPnP"
 msgstr "Portweiterleitung via UPnP"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:431
+#: ../../docs/user/wallets/dashcore/interface.rst:441
 msgid ""
 "This option causes Dash Core to automatically attempt to open and map the "
 "client port on your router using `UPnP "
@@ -810,11 +826,25 @@ msgstr ""
 "verfügbar und erlaubt eine Verbindung zum Dash-Netzwerk, ohne, dass "
 "spezielle Einstellungen am Router geändert werden müssen."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:443
+#: ../../docs/user/wallets/dashcore/interface.rst:454
+msgid "Map port using NAT-PMP"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/interface.rst:449
+msgid ""
+"This option causes Dash Core to automatically attempt to open and map the "
+"client port on your router using `NAT-PMP "
+"<https://en.wikipedia.org/wiki/NAT_Port_Mapping_Protocol>`__ (NAT Port "
+"Mapping Protocol). This feature is supported by most modern home routers and"
+" will allow you to connect to the Dash network without making any special "
+"settings on your router."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/interface.rst:461
 msgid "Allow incoming connections"
 msgstr "Eingehende Verbindungen erlauben"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:439
+#: ../../docs/user/wallets/dashcore/interface.rst:457
 msgid ""
 "This option causes your client to accept external connections. Since Dash is"
 " a peer-to-peer network and Dash Core is considered a full client because it"
@@ -827,11 +857,11 @@ msgstr ""
 "Blockchain- und Netzwerk-Synchronisierung mit anderen Clients über den "
 "eigenen Knoten verwendet."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:450
+#: ../../docs/user/wallets/dashcore/interface.rst:468
 msgid "Connect through SOCKS5 proxy (default proxy)"
 msgstr "Über einen SOCKS5-Proxy verbinden (Standardproxy)"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:446
+#: ../../docs/user/wallets/dashcore/interface.rst:464
 msgid ""
 "These options allow users on an intranet requiring a proxy to reach the "
 "broader internet to specify the address of their proxy server to relay "
@@ -847,13 +877,13 @@ msgstr ""
 "Systemadministrator kontaktiert werden oder eine entsprechende Einstellung "
 "im Internetbrowser gesucht werden."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:457
+#: ../../docs/user/wallets/dashcore/interface.rst:475
 msgid "Use separate SOCKS5 proxy to reach peers via Tor hidden services"
 msgstr ""
 "Separaten SOCKS5-Proxy verwenden, um Gegenstellen über versteckte Tor-"
 "Dienste zu erreichen"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:453
+#: ../../docs/user/wallets/dashcore/interface.rst:471
 msgid ""
 "These options allow you to specify an additional proxy server designed to "
 "help you connect to peers on the Tor network. This is an advanced option for"
@@ -867,25 +897,25 @@ msgstr ""
 "Netzwerk. Weitere Informationen über Tor sind `hier "
 "<https://www.torproject.org/>`__ zu finden."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:460
+#: ../../docs/user/wallets/dashcore/interface.rst:478
 msgid "Display tab"
 msgstr "Anzeige-Tab"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:462
+#: ../../docs/user/wallets/dashcore/interface.rst:480
 msgid ""
 "This tab contains options relating to the display of the Dash Core app "
 "window."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:468
+#: ../../docs/user/wallets/dashcore/interface.rst:486
 msgid "The Display tab of the Dash Core Options dialog"
 msgstr "Der Anzeige-Tab der Dash Core Konfigurationseinstellungen"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:472
+#: ../../docs/user/wallets/dashcore/interface.rst:490
 msgid "User interface language"
 msgstr "Sprache der Benutzeroberfläche"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:471
+#: ../../docs/user/wallets/dashcore/interface.rst:489
 msgid ""
 "Select your preferred language from this drop-down menu. Changing the "
 "language requires you to restart the Dash Core app."
@@ -894,11 +924,11 @@ msgstr ""
 "Nachdem die Sprache geändert wurde, muss die Dash Core Wallet neu gestartet "
 "werden."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:478
+#: ../../docs/user/wallets/dashcore/interface.rst:496
 msgid "Unit to show amounts in"
 msgstr "Einheit der Beträge"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:475
+#: ../../docs/user/wallets/dashcore/interface.rst:493
 msgid ""
 "This allows you to change the default unit of currency in Dash Core from "
 "DASH to mDASH, µDASH or duffs. Each unit shifts the decimal separator three "
@@ -910,11 +940,11 @@ msgstr ""
 "Dezimalstelle weitere 3 Stellen nach rechts. Duffs sind die kleinste "
 "Einheit, in die Dash aufgeteilt werden kann."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:483
+#: ../../docs/user/wallets/dashcore/interface.rst:501
 msgid "Decimal digits"
 msgstr "Dezimalziffern"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:481
+#: ../../docs/user/wallets/dashcore/interface.rst:499
 msgid ""
 "This option allows you to select how many decimal digits will be displayed "
 "in the user interface. This does not affect internal accounting of your "
@@ -924,11 +954,11 @@ msgstr ""
 "angezeigt werden. Hierdurch wird nicht der reale Gesamtbetrag der "
 "vorhandenen Beträge beeinflusst."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:491
+#: ../../docs/user/wallets/dashcore/interface.rst:509
 msgid "Third party transaction URLs"
 msgstr "Externe Transaktions-URLs"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:486
+#: ../../docs/user/wallets/dashcore/interface.rst:504
 msgid ""
 "This option allows you to specify and external website to inspect a "
 "particular address or transaction on the blockchain. Several blockchain "
@@ -945,54 +975,54 @@ msgstr ""
 "beliebigen Transaktion kann Dash Core hierdurch direkt auf den Blockchain-"
 "Explorer zugreifen."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:494
+#: ../../docs/user/wallets/dashcore/interface.rst:512
 msgid "Appearance tab"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:496
+#: ../../docs/user/wallets/dashcore/interface.rst:514
 msgid ""
 "This tab contains options relating to the visual appearance of the Dash Core"
 " app window."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:502
+#: ../../docs/user/wallets/dashcore/interface.rst:520
 msgid "The Appearance tab of the Dash Core Options dialog"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:507
+#: ../../docs/user/wallets/dashcore/interface.rst:525
 msgid "Theme"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:505
+#: ../../docs/user/wallets/dashcore/interface.rst:523
 msgid ""
 "You can use this option to select a different theme governing the appearance"
 " of the Dash Core window. All functionality is identical under the different"
 " themes."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:511
+#: ../../docs/user/wallets/dashcore/interface.rst:529
 msgid "Font Family"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:510
+#: ../../docs/user/wallets/dashcore/interface.rst:528
 msgid ""
 "This option allows you to select a different font to display text in the "
 "window."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:514
+#: ../../docs/user/wallets/dashcore/interface.rst:532
 msgid "Font Scale and Weight"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:514
+#: ../../docs/user/wallets/dashcore/interface.rst:532
 msgid "These options control the size and weight of fonts in the window."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:517
+#: ../../docs/user/wallets/dashcore/interface.rst:535
 msgid "The Tools Dialog"
 msgstr "Die Werkzeugsleiste"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:519
+#: ../../docs/user/wallets/dashcore/interface.rst:537
 msgid ""
 "This documentation describes the functionality of the Dash Core Tools "
 "dialog, available under the **Tools** menu in Dash Core."
@@ -1000,19 +1030,19 @@ msgstr ""
 "Diese Dokumentation beschreibt die Dash Core Werkzeugsleiste, die sich "
 "unter **Werkzeuge** im Dash Core Menü befindet."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:523
+#: ../../docs/user/wallets/dashcore/interface.rst:541
 msgid "Information tab"
 msgstr "Information-Tab"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:528
+#: ../../docs/user/wallets/dashcore/interface.rst:546
 msgid "The Information tab of the Dash Core Tools dialog"
 msgstr "Der Information-Tab der Dash Core Werkzeugsleiste"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:533
+#: ../../docs/user/wallets/dashcore/interface.rst:551
 msgid "General"
 msgstr "Allgemein"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:531
+#: ../../docs/user/wallets/dashcore/interface.rst:549
 msgid ""
 "This section displays information on the name and version of the client and "
 "database, and the location of the current application data directory."
@@ -1020,11 +1050,11 @@ msgstr ""
 "Dieser Abschnitt führt Informationen über den Namen und die Version des "
 "Clients und der Datenbank sowie den momentanen Speicherort der Anwendung."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:537
+#: ../../docs/user/wallets/dashcore/interface.rst:555
 msgid "Network"
 msgstr "Netzwerk"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:536
+#: ../../docs/user/wallets/dashcore/interface.rst:554
 msgid ""
 "This section displays information and statistics on the network to which you"
 " are connected."
@@ -1032,19 +1062,19 @@ msgstr ""
 "Dieser Abschnitt führt Informationen und Statistiken zu dem Netzwerk, mit "
 "welchem der Client verbunden ist."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:540
+#: ../../docs/user/wallets/dashcore/interface.rst:558
 msgid "Block chain"
 msgstr "Blockchain"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:540
+#: ../../docs/user/wallets/dashcore/interface.rst:558
 msgid "This section shows the current status of the blockchain."
 msgstr "Dieser Abschnitt zeigt den momentanen Status der Blockchain an."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:546
+#: ../../docs/user/wallets/dashcore/interface.rst:564
 msgid "Memory pool"
 msgstr "Memory Pool"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:543
+#: ../../docs/user/wallets/dashcore/interface.rst:561
 msgid ""
 "This section shows the status of the memory pool, which contains "
 "transactions that could not yet be written to a block. This includes both "
@@ -1057,11 +1087,11 @@ msgstr ""
 "sowie Informationen, die die Speicherkapazität des letzten Blocks "
 "überschritten hatten."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:550
+#: ../../docs/user/wallets/dashcore/interface.rst:568
 msgid "Open debug log file"
 msgstr "Debugprotokolldatei öffnen"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:549
+#: ../../docs/user/wallets/dashcore/interface.rst:567
 msgid ""
 "This button opens debug.log from the application data directory. This file "
 "contains output from Dash Core which may help to diagnose errors."
@@ -1070,44 +1100,44 @@ msgstr ""
 "Diese Datei beinhaltet Angaben der Dash Core Wallet, die beim Finden eines "
 "Fehlers helfen können."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:553
+#: ../../docs/user/wallets/dashcore/interface.rst:571
 msgid "Console tab"
 msgstr "Konsole-Tab"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:555
+#: ../../docs/user/wallets/dashcore/interface.rst:573
 msgid ""
 "The Console tab provides an interface with the Dash Core RPC (remote "
 "procedure call) console. This is equivalent to the ``dash-cli`` command on "
 "headless versions of Dash, such as ``dashd`` running on a masternode. Click "
 "the red ``×`` icon to clear the console, and see the detailed "
-":ref:`documentation <core:api-rpc>` on RPC commands to learn about the "
-"possible commands you can issue."
+":ref:`documentation <api-rpc>` on RPC commands to learn about the possible "
+"commands you can issue."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:565
+#: ../../docs/user/wallets/dashcore/interface.rst:583
 msgid "The Console tab of the Dash Core Tools dialog"
 msgstr "Der Konsole-Tab der Dash Core Werkzeugleiste"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:568
+#: ../../docs/user/wallets/dashcore/interface.rst:586
 msgid "Network Traffic tab"
 msgstr "Netzwerkauslastungs-Tab"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:570
+#: ../../docs/user/wallets/dashcore/interface.rst:588
 msgid ""
 "The Network Traffic tab shows a graph of traffic sent and received to peers "
 "on the network over time. You can adjust the time period using the slider or"
 " **Reset** the graph."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:577
+#: ../../docs/user/wallets/dashcore/interface.rst:595
 msgid "The Network Traffic tab of the Dash Core Tools dialog"
 msgstr "Der Netzwerkauslastungs-Tab der Dash Core Werkzeugsleiste"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:580
+#: ../../docs/user/wallets/dashcore/interface.rst:598
 msgid "Peers tab"
 msgstr "Gegenstellen-Tab"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:582
+#: ../../docs/user/wallets/dashcore/interface.rst:600
 msgid ""
 "The Peers tab shows a list of other full nodes connected to your Dash Core "
 "client. The IP address, version and ping time are visible. Selecting a peer "
@@ -1118,15 +1148,15 @@ msgstr ""
 "sichtbar. Die Auswahl eines Peers zeigt detaillierte Informationen zu den "
 "Daten, die mit einem Peer ausgetauscht wurden."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:590
+#: ../../docs/user/wallets/dashcore/interface.rst:608
 msgid "The Peers tab of the Dash Core Tools dialog"
 msgstr "Der Gegenstellen-Tab der Dash Core Werkzeugleiste"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:593
+#: ../../docs/user/wallets/dashcore/interface.rst:611
 msgid "Wallet Repair tab"
 msgstr "Wallet-Reparatur-Tab"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:595
+#: ../../docs/user/wallets/dashcore/interface.rst:613
 msgid ""
 "The Wallet Repair tab offers a range of startup commands to restore a wallet"
 " to a functional state. Selecting any of these commands will restart Dash "
@@ -1136,15 +1166,15 @@ msgstr ""
 "Wallet repariert werden kann. Jeder dieser Befehle startet die Wallet neu "
 "und greift dabei auf ein spezifisches Startkommando zurück."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:602
+#: ../../docs/user/wallets/dashcore/interface.rst:620
 msgid "The Wallet Repair tab of the Dash Core Tools dialog"
 msgstr "Der Wallet-Reparatur-Tab der Dash Core Werkzeugleiste"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:609
+#: ../../docs/user/wallets/dashcore/interface.rst:627
 msgid "Rescan blockchain files 1"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:605
+#: ../../docs/user/wallets/dashcore/interface.rst:623
 msgid ""
 "Rescans the already downloaded blockchain for any transactions affecting "
 "accounts contained in the wallet. This may be necessary if you replace your "
@@ -1158,52 +1188,21 @@ msgstr ""
 "die Wallet-Logik wird nichts von derartigen Transaktionen wissen, wodurch "
 "ein erneuter Scan notwendig ist, um das tatsächliche Guthaben zu bestimmen."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:613
+#: ../../docs/user/wallets/dashcore/interface.rst:631
 msgid "Rescan blockchain files 2"
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:612
+#: ../../docs/user/wallets/dashcore/interface.rst:630
 msgid ""
 "Performs the same operation as *Rescan blockchain files 1* but scans from "
 "the genesis block instead of the wallet creation time."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:622
-msgid "Recover transactions"
-msgstr "Transaktion wiederherstellen"
-
-#: ../../docs/user/wallets/dashcore/interface.rst:616
-msgid ""
-"The recover transactions commands can be used to remove unconfirmed "
-"transactions from the memory pool. Your wallet will restart and rescan the "
-"blockchain, recovering existing transactions and removing unconfirmed "
-"transactions. Transactions may become stuck in an unconfirmed state if there"
-" is a conflict in protocol versions on the network during CoinJoin "
-"processing, for example, or if a transaction is sent with insufficient fees "
-"when blocks are full."
-msgstr ""
-
-#: ../../docs/user/wallets/dashcore/interface.rst:628
-msgid "Upgrade wallet format"
-msgstr "Wallet-Format aktualisieren"
-
-#: ../../docs/user/wallets/dashcore/interface.rst:625
-msgid ""
-"This command is available for very old wallets where an upgrade to the "
-"wallet version is required in addition to an update to the wallet software. "
-"You can view your current wallet version by running the ``getwalletinfo`` "
-"command in the console."
-msgstr ""
-"Dieser Befehl ist notwendig, wenn die Wallet sehr alt ist und zusätzlich zur"
-" Aktualisierung der Wallet Software auch einer Aktualisierung der Wallet "
-"Version bedarf. Die aktuelle Version kann herausgefunden werden, wenn der "
-"Befehlt ``getwalletinfo`` in der Konsole eingegeben wird."
-
-#: ../../docs/user/wallets/dashcore/interface.rst:633
+#: ../../docs/user/wallets/dashcore/interface.rst:636
 msgid "Rebuild index"
 msgstr "Index neu aufbauen"
 
-#: ../../docs/user/wallets/dashcore/interface.rst:631
+#: ../../docs/user/wallets/dashcore/interface.rst:634
 msgid ""
 "Discards the current blockchain and chainstate indexes (the database of "
 "unspent transaction outputs) and rebuilds it from existing block files. This"
@@ -1214,7 +1213,7 @@ msgstr ""
 "Block-Dateien wiederaufgebaut. Dies kann nützlich sein, wenn es darum geht "
 "verschollene oder festhängende Guthaben zurückzugewinnen."
 
-#: ../../docs/user/wallets/dashcore/interface.rst:636
+#: ../../docs/user/wallets/dashcore/interface.rst:639
 msgid ""
 "The wallet salvage option was moved to the standalone dash-wallet command-"
 "line application in Dash Core v18.0. Running dash-wallet with the "
@@ -1224,6 +1223,6 @@ msgid ""
 "private keys."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/interface.rst:643
+#: ../../docs/user/wallets/dashcore/interface.rst:646
 msgid "Example: ``dash-wallet -wallet=mywallet/wallet.dat salvage``"
 msgstr ""
