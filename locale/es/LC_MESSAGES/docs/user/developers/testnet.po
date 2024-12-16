@@ -4,7 +4,6 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Leon White <leon.white@dash.org>, 2022
 # Damian Walker <damianwalkerstrauss@gmail.com>, 2022
 # Ivan SIerraalta <ivansierraalta@gmail.com>, 2022
 # Jahlexis Lugo <ras.alexislugo.i@gmail.com>, 2022
@@ -14,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 10:39-0400\n"
+"POT-Creation-Date: 2024-12-16 12:42-0500\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: Jahlexis Lugo <ras.alexislugo.i@gmail.com>, 2022\n"
 "Language-Team: Spanish (https://app.transifex.com/dash/teams/37570/es/)\n"
@@ -111,9 +110,9 @@ msgid ""
 "aspects of regtest (the local-only regression testing mode that provides "
 "controlled block generation). Unlike testnet, multiple independent devnets "
 "can be created and coexist without interference. For practical documentation"
-" on how to use devnets, see the :ref:`developer documentation "
-"<core:examples-testing-applications>` or this `blog post "
-"<https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
+" on how to use devnets, see the :ref:`developer documentation <examples-"
+"testing-applications>` or this `blog post <https://blog.dash.org/dash-"
+"devnets-bc27ecbf0085>`__."
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:43
@@ -176,22 +175,18 @@ msgid "Explorers"
 msgstr "Exploradores"
 
 #: ../../docs/user/developers/testnet.rst:67
-msgid "https://testnet-insight.dashevo.org/insight"
-msgstr "https://testnet-insight.dashevo.org/insight"
-
-#: ../../docs/user/developers/testnet.rst:68
 msgid "https://insight.testnet.networks.dash.org:3002/insight"
 msgstr ""
 
-#: ../../docs/user/developers/testnet.rst:69
+#: ../../docs/user/developers/testnet.rst:68
 msgid "http://insight.testnet.networks.dash.org:3001/insight"
 msgstr ""
 
-#: ../../docs/user/developers/testnet.rst:72
+#: ../../docs/user/developers/testnet.rst:71
 msgid "Masternodes"
 msgstr "Masternodes"
 
-#: ../../docs/user/developers/testnet.rst:74
+#: ../../docs/user/developers/testnet.rst:73
 msgid ""
 "Installing a masternode under testnet generally follows the same steps as "
 "the :ref:`mainnet masternode installation guide <masternode-setup>`, but "
@@ -201,14 +196,14 @@ msgstr ""
 "mismos pasos que la :ref:`guía de instalación de la red principal de "
 "masternode <masternode-setup>`, con algunas diferencias claves:"
 
-#: ../../docs/user/developers/testnet.rst:78
+#: ../../docs/user/developers/testnet.rst:77
 msgid ""
 "You will probably be running a development version of Dash instead of the "
 "stable release. Choose the latest `nightly build "
 "<https://github.com/dashpay/dash-dev-branches/releases>`__ on GitHub."
 msgstr ""
 
-#: ../../docs/user/developers/testnet.rst:81
+#: ../../docs/user/developers/testnet.rst:80
 msgid ""
 "When opening the firewall, port 19999 must be opened instead of (or in "
 "addition to) 9999. Use this command: ``ufw allow 19999/tcp``"
@@ -216,7 +211,7 @@ msgstr ""
 "Al abrir el firewall, el puerto 19999 debe ser abierto en lugar del (o "
 "además de) 9999. Usa este comando: ``ufw allow 19999/tcp``"
 
-#: ../../docs/user/developers/testnet.rst:83
+#: ../../docs/user/developers/testnet.rst:82
 msgid ""
 "Your desktop wallet must be running in testnet mode. Add the following line "
 "to *dash.conf*: ``testnet = 1``"
@@ -224,7 +219,7 @@ msgstr ""
 "Tu billetera de escritorio debe estar ejecutándose en modo red de prueba. "
 "Agrega la siguiente línea a *dash.conf*: ``testnet = 1``"
 
-#: ../../docs/user/developers/testnet.rst:85
+#: ../../docs/user/developers/testnet.rst:84
 msgid ""
 "When sending the collateral, you can get the 1000 tDASH for free from a "
 "faucet (see above)"
@@ -232,7 +227,7 @@ msgstr ""
 "Al enviar la garantía, puedes obtener 1000 tDASH gratis de un grifo (ver "
 "arriba)"
 
-#: ../../docs/user/developers/testnet.rst:87
+#: ../../docs/user/developers/testnet.rst:86
 msgid ""
 "Your masternode configuration file must also specify testnet mode. Add the "
 "following line when setting up *dash.conf* on the masternode: ``testnet = "
@@ -242,7 +237,7 @@ msgstr ""
 "red de prueba. Agregue la siguiente linea cuando configures *dash.conf* en "
 "el masternode: ``testnet = 1``"
 
-#: ../../docs/user/developers/testnet.rst:90
+#: ../../docs/user/developers/testnet.rst:89
 msgid ""
 "As for mainnet masternodes, the RPC username and password must contain "
 "alphanumeric characters only"
