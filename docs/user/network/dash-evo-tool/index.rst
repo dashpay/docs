@@ -123,15 +123,33 @@ Selection screen and click the checkbox in the Select column for the desired net
 
 .. note::
 
-  You can also launch Dash Core manually without using the Dash Evo Tool. This may be necessary if
-  Dash Core is installed in a non-standard location. When launching Dash Core manually, you must
-  enable ZMQ as described in :hoverxref:`Configuration Step 3 <evo-tool-configure>`.
+  If you have Dash Core installed in a non-standard location, use the advanced settings to specify
+  where to find it.
 
-.. figure:: img/network-selection.png
-   :align: center
-   :width: 90%
+.. tab-set::
+  .. tab-item:: Network selection
 
-   Network selection screen with testnet selected
+   .. figure:: img/network-selection.png
+      :align: center
+      :width: 90%
+
+      Network selection screen with testnet selected
+
+  .. tab-item:: Advanced network settings
+
+   If you have Dash Core installed in a non-standard location, click **Show more advanced
+   settings**, then click **Select file** to select the location of your Dash Core installation.
+   
+   Also, if you use a custom dash.conf file, uncheck **Overwrite dash.conf** and make sure your file
+   aligns with the RPC and ZMQ settings mentioned in the :hoverxref:`Configuration section
+   <evo-tool-configure>`.
+
+   
+   .. figure:: img/network-selection-advanced.png
+      :align: center
+      :width: 90%
+
+      Network selection screen with advanced settings displayed
 
 .. _evo-tool-identity:
 
