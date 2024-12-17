@@ -268,6 +268,46 @@ Once the identity has been registered, you can choose to return to the identity 
 
    Identity screen with an identity loaded
 
+.. _evo-tool-identity-top-up:
+
+Top up identity
+---------------
+
+.. tip::
+   
+   Before topping up an identity, make sure you have :ref:`added a Dash Evo Tool wallet
+   <evo-tool-wallet-create>`.
+
+Your identity's credit balance will decrease as you use applications on Platform. You can increase
+your balance by doing and identity top up. On the main identity screen, click the **Top up** button
+for the identity you want to add credits to.
+
+.. figure:: img/identity/main-new-identity.png
+   :align: center
+   :width: 90%
+
+   Identity screen
+
+On the top up identity screen, select the funding method and funding amount. Then, click **Top Up
+Identity** to continue.
+
+.. figure:: img/identity/topup-await-funds.png
+   :align: center
+   :width: 90%
+
+   Waiting for funds
+
+The status will change from "Waiting for funds" to "Waiting for Platform acknowledgement" once the
+funds have been received and the identity top up process has started.
+
+.. figure:: img/identity/topup-await-platform.png
+   :align: center
+   :width: 90%
+
+   Waiting for Platform acknowledgement
+
+Once the top up is complete, a message will indicate it was successful.
+
 .. _evo-tool-identity-evo-withdraw:
 
 Evonode withdrawals
