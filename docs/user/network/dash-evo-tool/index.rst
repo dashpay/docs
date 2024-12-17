@@ -289,7 +289,7 @@ From the identity main screen, click the **Withdraw** button for an identity.
    :align: center
    :width: 90%
 
-   Identity screen with an evonode identity loaded
+   Withdraw screen
 
 On the withdrawal screen, select the key to sign the withdrawal. Selecting the owner key is
 recommended since this will direct the withdrawal to the payout address. Next, set the amount to
@@ -297,8 +297,8 @@ withdraw.
 
 .. note::
 
-  The **Max** button currently has a bug and sets the withdrawal amount in credits instead of DASH,
-  so you will need to manually adjust the amount if you use that button.
+  The **Max** button currently has a bug so you may need to manually adjust the amount if you use
+  that button.
 
 Click **Withdraw** after entering the information.
 
