@@ -308,6 +308,8 @@ funds have been received and the identity top up process has started.
 
 Once the top up is complete, a message will indicate it was successful.
 
+.. _evo-tool-identity-transfer-credits:
+
 Transfer credits
 ----------------
 
