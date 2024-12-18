@@ -36,6 +36,14 @@ Operating System, then unzip the downloaded file:
 Configuration
 =============
 
+.. tip::
+   
+   The Dash Evo Tool includes a configuration file that will work without modification. *Skip the
+   steps below unless you have a custom Dash Core configuration that you want to continue using.*
+   
+   The default location of the ``dash.conf`` file can be found in the :ref:`Dash Core documentation
+   <dashcore-rpc>`.
+
 1. Open the directory where the download was unzipped.
 2. Open the ``.env`` file (you may need to show hidden files to see it). For the network you plan to
    connect to, make the following changes. Replace the ``*`` with the network name (MAINNET or
@@ -46,8 +54,7 @@ Configuration
      file.
    * If your dash.conf includes ``rpcallowip``, update ``*_CORE_HOST`` with that IP address.
    * If your dash.conf includes ``rpcport``, update ``*_CORE_RPC_PORT`` with that port.
-3. (*Optional*) If you are going to run Dash Core manually instead of launching it via the Dash Evo
-   Tool, you must enable ZMQ by adding the following lines to your dash.conf file:
+3. Enable ZMQ by adding the following lines to your dash.conf file:
 
    .. tab-set::
       .. tab-item:: Mainnet ZMQ setup
@@ -67,16 +74,13 @@ Configuration
             zmqpubhashchainlock=tcp://0.0.0.0:23709
             zmqpubrawtxlocksig=tcp://0.0.0.0:23709
 
-.. tip::
+4. At a minimum, the following values must be defined for RPC access to be enabled:
 
-  The default location of the ``dash.conf`` file can be found in the :ref:`Dash Core documentation
-  <dashcore-rpc>`. At a minimum, the following values must be defined for RPC access to be enabled:
+   .. code-block:: ini
 
-  .. code-block:: ini
-
-    server=1
-    rpcuser=<some_user_name>
-    rpcpassword=<some_password>
+      server=1
+      rpcuser=<some_user_name>
+      rpcpassword=<some_password>
 
 Updating the env file
 ---------------------
@@ -119,15 +123,33 @@ Selection screen and click the checkbox in the Select column for the desired net
 
 .. note::
 
-  You can also launch Dash Core manually without using the Dash Evo Tool. This may be necessary if
-  Dash Core is installed in a non-standard location. When launching Dash Core manually, you must
-  enable ZMQ as described in :hoverxref:`Configuration Step 3 <evo-tool-configure>`.
+  If you have Dash Core installed in a non-standard location, use the advanced settings to specify
+  where to find it.
 
-.. figure:: img/network-selection.png
-   :align: center
-   :width: 90%
+.. tab-set::
+  .. tab-item:: Network selection
 
-   Network selection screen with testnet selected
+   .. figure:: img/network-selection.png
+      :align: center
+      :width: 90%
+
+      Network selection screen with testnet selected
+
+  .. tab-item:: Advanced network settings
+
+   If you have Dash Core installed in a non-standard location, click **Show more advanced
+   settings**, then click **Select file** to select the location of your Dash Core installation.
+   
+   Also, if you use a custom dash.conf file, uncheck **Overwrite dash.conf** and make sure your file
+   aligns with the RPC and ZMQ settings mentioned in the :hoverxref:`Configuration section
+   <evo-tool-configure>`.
+
+   
+   .. figure:: img/network-selection-advanced.png
+      :align: center
+      :width: 90%
+
+      Network selection screen with advanced settings displayed
 
 .. _evo-tool-identity:
 
@@ -246,6 +268,80 @@ Once the identity has been registered, you can choose to return to the identity 
 
    Identity screen with an identity loaded
 
+.. _evo-tool-identity-top-up:
+
+Top up identity
+---------------
+
+.. tip::
+   
+   Before topping up an identity, make sure you have :ref:`added a Dash Evo Tool wallet
+   <evo-tool-wallet-create>`.
+
+Your identity's credit balance will decrease as you use applications on Platform. You can increase
+your balance by doing and identity top up. On the main identity screen, click the **Top up** button
+for the identity you want to add credits to.
+
+.. figure:: img/identity/main-new-identity.png
+   :align: center
+   :width: 90%
+
+   Identity screen
+
+On the top up identity screen, select the funding method and funding amount. Then, click **Top Up
+Identity** to continue.
+
+.. figure:: img/identity/topup-await-funds.png
+   :align: center
+   :width: 90%
+
+   Waiting for funds
+
+The status will change from "Waiting for funds" to "Waiting for Platform acknowledgement" once the
+funds have been received and the identity top up process has started.
+
+.. figure:: img/identity/topup-await-platform.png
+   :align: center
+   :width: 90%
+
+   Waiting for Platform acknowledgement
+
+Once the top up is complete, a message will indicate it was successful.
+
+.. _evo-tool-identity-transfer-credits:
+
+Transfer credits
+----------------
+
+You can transfer credits to another identity by providing the identity's ID. On the main identity
+screen, click the **Transfer** button for the identity sending the credits.
+
+.. figure:: img/identity/main-transfer.png
+   :align: center
+   :width: 90%
+
+   Identity screen
+
+On the transfer screen, set the amount and the identity ID to receive the transferred credits. Then,
+click **Transfer** to continue.
+
+.. figure:: img/identity/transfer-amount-identity.png
+   :align: center
+   :width: 90%
+
+   Transfer screen with transfer details entered
+
+When the withdrawal confirmation screen opens, confirm that the amount and destination identity ID
+are correct. Click **Confirm** to transfer the credits.
+
+.. figure:: img/identity/transfer-confirm.png
+   :align: center
+   :width: 90%
+
+   Transfer confirmation screen
+
+Once the transfer is complete, a message will indicate it was successful.
+
 .. _evo-tool-identity-evo-withdraw:
 
 Evonode withdrawals
@@ -267,7 +363,7 @@ From the identity main screen, click the **Withdraw** button for an identity.
    :align: center
    :width: 90%
 
-   Identity screen with an evonode identity loaded
+   Withdraw screen
 
 On the withdrawal screen, select the key to sign the withdrawal. Selecting the owner key is
 recommended since this will direct the withdrawal to the payout address. Next, set the amount to
@@ -275,8 +371,8 @@ withdraw.
 
 .. note::
 
-  The **Max** button currently has a bug and sets the withdrawal amount in credits instead of DASH,
-  so you will need to manually adjust the amount if you use that button.
+  The **Max** button currently has a bug so you may need to manually adjust the amount if you use
+  that button.
 
 Click **Withdraw** after entering the information.
 
