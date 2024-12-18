@@ -308,6 +308,38 @@ funds have been received and the identity top up process has started.
 
 Once the top up is complete, a message will indicate it was successful.
 
+Transfer credits
+----------------
+
+You can transfer credits to another identity by providing the identity's ID. On the main identity
+screen, click the **Transfer** button for the identity sending the credits.
+
+.. figure:: img/identity/main-transfer.png
+   :align: center
+   :width: 90%
+
+   Identity screen
+
+On the transfer screen, set the amount and the identity ID to receive the transferred credits. Then,
+click **Transfer** to continue.
+
+.. figure:: img/identity/transfer-amount-identity.png
+   :align: center
+   :width: 90%
+
+   Transfer screen with transfer details entered
+
+When the withdrawal confirmation screen opens, confirm that the amount and destination identity ID
+are correct. Click **Confirm** to transfer the credits.
+
+.. figure:: img/identity/transfer-confirm.png
+   :align: center
+   :width: 90%
+
+   Transfer confirmation screen
+
+Once the transfer is complete, a message will indicate it was successful.
+
 .. _evo-tool-identity-evo-withdraw:
 
 Evonode withdrawals
