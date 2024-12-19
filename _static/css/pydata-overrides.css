@@ -9,14 +9,38 @@
 
 html[data-theme="light"] {
   --pst-color-primary: var(--dash-blue);
+  --pst-color-secondary: var(--dash-blue);
   --pst-color-link: var(--pst-color-primary);
   --pst-color-link-hover: var(--dash-deep-blue);
+
+  .search-button-field:hover {
+    box-shadow: 0 0 0 .1875rem var(--pst-color-primary);
+  }
+ 
+  #pst-back-to-top:hover {
+    background-color: var(--pst-color-link-hover);
+  }
 }
 
 html[data-theme="dark"] {
   --pst-color-primary: var(--dash-blue);
+  --pst-color-secondary: var(--pst-color-warning);
   --pst-color-link: var(--pst-color-primary);
-  --pst-color-link-hover: var(--pst-color-warning)
+  --pst-color-link-hover: var(--pst-color-secondary);
+  --pst-color-table-row-hover-bg: var(--dash-deep-blue);
+
+  .pst-navbar-icon:hover {
+    color: var(--pst-color-link-hover);
+  }
+
+  .pst-navbar-icon:hover:before {
+    border-bottom: max(3px,.1875rem,.12em) solid var(--pst-color-link-hover);
+  }
+
+  #pst-back-to-top:hover {
+    background-color: var(--pst-color-link-hover);
+    color: #000;
+  }  
 }
 
 html {
