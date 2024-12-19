@@ -29,6 +29,26 @@ html[data-theme="dark"] {
   --pst-color-link-hover: var(--pst-color-secondary);
   --pst-color-table-row-hover-bg: var(--dash-deep-blue);
 
+  /* ReadTheDocs search addon CSS variables*/
+  /* See details on: https://github.com/readthedocs/addons/blob/0.23.2/src/search.css */
+  --readthedocs-search-color: darkgray;
+  --readthedocs-search-content-background-color: var(--bs-dark);
+  --readthedocs-search-content-border-color: gray;
+  --readthedocs-search-input-background-color: darkgray;
+  --readthedocs-search-result-section-border-color: darkgray;
+  --readthedocs-search-result-section-subheading-color: darkgray;
+  --readthedocs-search-result-section-highlight-color: var(--dash-blue);
+  --readthedocs-search-filters-border-color: lightgray;  
+
+  /* Unused options */
+  /* --readthedocs-search-font-family, */
+  /* --readthedocs-search-font-size: 16px; */
+  /* --readthedocs-search-result-section-color: darkgray; doesn't seem to do anything*/  
+  /* --readthedocs-search-footer-code-background-color, #fff */
+  /* --readthedocs-search-footer-background-color: rgb(234, 234, 234); */
+  /* --readthedocs-search-backdrop-color: rgba(0, 0, 0, 0.3); */
+}
+
   .pst-navbar-icon:hover {
     color: var(--pst-color-link-hover);
   }
@@ -40,7 +60,28 @@ html[data-theme="dark"] {
   #pst-back-to-top:hover {
     background-color: var(--pst-color-link-hover);
     color: #000;
-  }  
+  }
+  
+  :host > div form > input {
+    color: black;
+  }
+  /* div.hit-block {
+    border-color: black;
+    background-color: darkgray;
+  }
+
+  :host > div .results .hit .subheading {
+    color: black;
+  }
+
+  :host > div .filters-title {
+    background: gray;
+    color: black;
+  } */
+
+  /* :host > div .results a.hit:hover, :host > div .results .hit .active {
+    background-color: #c0c0c0;
+  } */
 }
 
 html {
