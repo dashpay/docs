@@ -48,6 +48,10 @@ html[data-theme="dark"] {
   /* --readthedocs-search-footer-background-color: rgb(234, 234, 234); */
   /* --readthedocs-search-backdrop-color: rgba(0, 0, 0, 0.3); */
 
+  :host > div .results h2 {
+    color: lightgray;
+  }
+
   .pst-navbar-icon:hover {
     color: var(--pst-color-link-hover);
   }
