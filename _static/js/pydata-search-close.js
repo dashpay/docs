@@ -1,7 +1,7 @@
 // Script to allow use of readthedocs-sphinx-search extension with the pydata theme
 //
 // Based in part on:
-// https://github.com/pydata/pydata-sphinx-theme/blob/v0.13.3/src/pydata_sphinx_theme/assets/scripts/pydata-sphinx-theme.js#L167-L272
+// https://github.com/pydata/pydata-sphinx-theme/blob/v0.16.1/src/pydata_sphinx_theme/assets/scripts/pydata-sphinx-theme.js#L177-L333
 
 /*******************************************************************************
  * Search
@@ -20,7 +20,7 @@ var findSearchInput = () => {
     } else {
       // must be at least one persistent form, use the first persistent one
       form = document.querySelector(
-        "div:not(.search-button__search-container) > form.bd-search"
+        ":not(#pst-search-dialog) > form.bd-search",
       );
     }
     return form.querySelector("input");
@@ -30,11 +30,14 @@ var findSearchInput = () => {
 // Hide Pydata theme's search
 var hidePydataSearch = () => {
   let input = findSearchInput();
-  let searchPopupWrapper = document.querySelector(".search-button__wrapper");
-  let hiddenInput = searchPopupWrapper.querySelector("input");
+
+  // if the input field is the hidden one (the one associated with the
+  // search button) then toggle the button state (to show/hide the field)
+  const searchDialog = document.getElementById("pst-search-dialog");
+  const hiddenInput = searchDialog.querySelector("input");
   
   if (input === hiddenInput) {
-    searchPopupWrapper.classList.remove("show");
+    searchDialog.close();
   }
   
   if (document.activeElement === input) {
