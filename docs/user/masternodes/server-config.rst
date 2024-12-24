@@ -262,7 +262,7 @@ masternode will support:
 Enable swap
 -----------
 
-Next, we add will add swap memory, enable it, and set it to be enabled on
+Next, we will add swap memory, enable it, and set it to be enabled on
 subsequent reboots::
 
   fallocate -l 4G /swapfile
