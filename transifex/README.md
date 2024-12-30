@@ -12,7 +12,7 @@ translation.
 Install the [sphinx-intl](https://pypi.org/project/sphinx-intl/) utility.
 
 ```shell
-pip install sphinx-intl==2.1.0
+pip install sphinx-intl==2.3.1
 ```
 
 Also install the Transifex CLI client as described in the [repository's
