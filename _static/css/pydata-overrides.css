@@ -7,6 +7,15 @@
   --dash-midnight-blue: #0b0f3b;
 }
 
+.bd-header-announcement {
+  background-color: var(--dash-blue);
+  color: #fff;
+}
+
+#bd-header-version-warning a, .bd-header-announcement a {
+  color: var(--pst-color-dark-highlight-text);
+}
+
 html[data-theme="light"] {
   --pst-color-primary: var(--dash-blue);
   --pst-color-secondary: var(--dash-blue);
