@@ -150,7 +150,7 @@ html_theme = "pydata_sphinx_theme"
 # documentation.
 #
 html_theme_options = {
-    "announcement": "Upgrade to <a href=https://github.com/dashpay/dash/releases/latest target=_blank>Dash Core v22.0</a> before the January 7 hard fork activation to remain on the correct chain.",
+    "announcement": "",
     "external_links": [
         {"name": "Platform docs", "url": "https://docs.dash.org/projects/platform/en/stable/docs/index.html"},
         {"name": "Dash.org", "url": "https://www.dash.org"},
