@@ -17,14 +17,14 @@ https://docs.dash.org/platform ([source repository](https://github.com/dashpay/d
 ## Usage
 
 If you have Python installed, you can download this repository and build the documentation locally.
-Python 3.10 is recommended since the hosted documentation is built with that version. The following
+Python 3.13 is recommended since the hosted documentation is built with that version. The following
 instructions are based on Ubuntu 22.04.
 
 1. Set up and activate a Python virtual environment to isolate the documentation by running this
    command from the root of the project:
 
     ```shell
-    python3.10 -m venv venv/
+    python3.13 -m venv venv/
     source ./venv/bin/activate
     ```
 
