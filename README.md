@@ -59,6 +59,30 @@ issue](https://github.com/dashpay/docs/issues/new/choose) or submit PRs modifyin
 text in this repository. Contributions to translations of the source text are welcomed on
 [Transifex](https://www.transifex.com/dash/dash-docs/).
 
+### Package management
+
+Packages are managed using [pip-tools](https://pip-tools.readthedocs.io/en/latest/). Install it
+using:
+
+```shell
+pip install pip-tools
+```
+
+#### Add packages
+
+To include a new package:
+
+1. Add the package to `requirements.in`
+1. Run `pip-compile` to update `requirements.txt`
+1. Run `pip install -r requirements.txt` to install all packages
+
+#### Update packages
+
+Specific packages can be updated using `pip-compile --upgrade-package <package name>`. To [update
+all packages](https://pip-tools.readthedocs.io/en/latest/#updating-requirements):
+
+1. Run `pip-compile --upgrade`
+
 ## License
 
 [MIT](/LICENSE) © Dash Core Group, Inc.
