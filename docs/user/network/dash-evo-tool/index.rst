@@ -19,7 +19,7 @@ Installation
 
 .. note::
 
-  The Dash Evo Tool requires a Dash Core full node configured to allow RPC and ZMQ access.
+  The Dash Evo Tool requires a running Dash Core full node.
 
 Linux, MacOS, or Windows packages are available on the `GitHub releases page
 <https://github.com/dashpay/dash-evo-tool/releases/latest>`__. Download the zip file for your
@@ -38,8 +38,8 @@ Configuration
 
 .. tip::
    
-   The Dash Evo Tool includes a configuration file that will work without modification. *Skip the
-   steps below unless you have a custom Dash Core configuration that you want to continue using.*
+   The Dash Evo Tool includes a configuration file that will work without modification. Skip the
+   steps below *unless you have a custom Dash Core configuration that you want to continue using.*
    
    The default location of the ``dash.conf`` file can be found in the :ref:`Dash Core documentation
    <dashcore-rpc>`.
