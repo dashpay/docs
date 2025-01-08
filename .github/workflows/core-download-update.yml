@@ -4,8 +4,8 @@ on:
   repository_dispatch:
     types: [release_published]
   workflow_dispatch:  # This allows the workflow to be triggered manually
-  schedule: # Run daily at midnight UTC
-    - cron: 0 0 * * *
+  schedule: # Run daily at midnight and noon UTC
+    - cron: 0 0,12 * * *
 
 jobs:
   update-core-download-links:
