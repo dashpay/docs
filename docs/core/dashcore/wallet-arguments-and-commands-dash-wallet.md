@@ -19,6 +19,7 @@ Usage:
 ### Options
 
 ```text
+
   -?
        Print this help message and exit
 
@@ -44,22 +45,26 @@ Usage:
 
   -wallet=<wallet-name>
        Specify wallet name
+
 ```
 
 ### Debugging/Testing options
 
 ```text
+
   -debug=<category>
        Output debugging information (default: 0).
 
   -printtoconsole
        Send trace/debug info to console (default: 1 when no -debug is true, 0
        otherwise).
+
 ```
 
 ### Chain selection options
 
 ```text
+
   -chain=<chain>
        Use the chain <chain> (default: main). Allowed values: main, test,
        regtest
@@ -106,11 +111,13 @@ Usage:
 
   -testnet
        Use the test chain. Equivalent to -chain=test
+
 ```
 
 ### Commands
 
 ```text
+
   create
        Create new wallet file
 
@@ -129,4 +136,5 @@ Usage:
 
   wipetxes
        Wipe all transactions from a wallet
+
 ```

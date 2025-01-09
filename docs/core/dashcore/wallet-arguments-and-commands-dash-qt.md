@@ -22,6 +22,7 @@ Dash Core QT GUI includes all the same command line options as [dashd](../dashco
 ### UI Options
 
 ```text
+
   -choosedatadir
        Choose data directory on startup (default: 0)
 
@@ -67,4 +68,5 @@ Dash Core QT GUI includes all the same command line options as [dashd](../dashco
 
   -windowtitle=<name>
        Sets a window title which is appended to "Dash Core - "
+
 ```
