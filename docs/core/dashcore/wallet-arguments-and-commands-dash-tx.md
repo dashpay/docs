@@ -20,6 +20,7 @@ Usage:
 ### Options
 
 ```text
+
   -?
        Print this help message and exit
 
@@ -34,11 +35,13 @@ Usage:
 
   -version
        Print version and exit
+
 ```
 
 ### Chain selection options
 
 ```text
+
   -chain=<chain>
        Use the chain <chain> (default: main). Allowed values: main, test,
        regtest
@@ -85,11 +88,13 @@ Usage:
 
   -testnet
        Use the test chain. Equivalent to -chain=test
+
 ```
 
 ### Commands
 
 ```text
+
   delin=N
        Delete input N from TX
 
@@ -129,14 +134,17 @@ Usage:
        registers:prevtxs=JSON object, privatekeys=JSON object. See
        signrawtransactionwithkey docs for format of sighash flags, JSON
        objects.
+
 ```
 
 ### Register Commands
 
 ```text
+
   load=NAME:FILENAME
        Load JSON file FILENAME into register NAME
 
   set=NAME:JSON-STRING
        Set register NAME to given JSON-STRING
+
 ```

@@ -43,6 +43,7 @@ View [the list of RPCs](../api/remote-procedure-call-quick-reference.md) for mor
 ### Options
 
 ```text
+
   -?
        Print this help message and exit
 
@@ -138,11 +139,13 @@ View [the list of RPCs](../api/remote-procedure-call-quick-reference.md) for mor
 
   -version
        Print version and exit
+
 ```
 
 ### Chain selection options
 
 ```text
+
   -chain=<chain>
        Use the chain <chain> (default: main). Allowed values: main, test,
        regtest
@@ -189,4 +192,5 @@ View [the list of RPCs](../api/remote-procedure-call-quick-reference.md) for mor
 
   -testnet
        Use the test chain. Equivalent to -chain=test
+
 ```

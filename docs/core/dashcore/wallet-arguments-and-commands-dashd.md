@@ -22,6 +22,7 @@ The following sections show all available options including debug options that a
 ### Options
 
 ```text
+
   -?
        Print this help message and exit
 
@@ -33,9 +34,9 @@ The following sections show all available options including debug options that a
        If this block is in the chain assume that it and its ancestors are valid
        and potentially skip their script verification (0 to verify all,
        default:
-       000000000000001889bd33ef019065e250d32bd46911f4003d3fdd8128b5358d,
+       000000000000001cf26547602d982dcaa909231bbcd1e70c0eb3c65de25473ba,
        testnet:
-       00000034bfeb926662ba547c0b8dd4ba8cbb6e0c581f4e7d1bddce8f9ca3a608)
+       000000eef20eb0062abd4e799967e98bdebb165dd1c567ab4118c1c86c6e948f)
 
   -blockfilterindex=<type>
        Maintain an index of compact filters by block (default: 0, values:
@@ -116,9 +117,9 @@ The following sections show all available options including debug options that a
 
   -minimumchainwork=<hex>
        Minimum work assumed to exist on a valid chain in hex (default:
-       00000000000000000000000000000000000000000000988117deadb0db9cd5b8,
+       000000000000000000000000000000000000000000009eb0f1d7fefc8750aebb,
        testnet:
-       000000000000000000000000000000000000000000000000031779704a0f54b4)
+       000000000000000000000000000000000000000000000000031ee38bc0876cef)
 
   -par=<n>
        Set the number of script verification threads (-16 to 15, 0 = auto, <0 =
@@ -136,12 +137,11 @@ The following sections show all available options including debug options that a
        blocks. This allows the pruneblockchain RPC to be called to
        delete specific blocks, and enables automatic pruning of old
        blocks if a target size in MiB is provided. This mode is
-       incompatible with -txindex, -coinstatsindex, -rescan and
-       -disablegovernance=false. Warning: Reverting this setting
-       requires re-downloading the entire blockchain. (default: 0 =
-       disable pruning blocks, 1 = allow manual pruning via RPC, >945 =
-       automatically prune block files to stay under the specified
-       target size in MiB)
+       incompatible with -txindex, -rescan and -disablegovernance=false.
+       Warning: Reverting this setting requires re-downloading the
+       entire blockchain. (default: 0 = disable pruning blocks, 1 =
+       allow manual pruning via RPC, >945 = automatically prune block
+       files to stay under the specified target size in MiB)
 
   -settings=<file>
        Specify path to dynamic settings data file. Can be disabled with
@@ -162,11 +162,13 @@ The following sections show all available options including debug options that a
 
   -version
        Print version and exit
+
 ```
 
 ### Connection options
 
 ```text
+
   -addnode=<ip>
        Add a node to connect to and attempt to keep the connection open (see
        the addnode RPC help for more info). This option can be specified
@@ -250,7 +252,8 @@ The following sections show all available options including debug options that a
        Maximum per-connection receive buffer, <n>*1000 bytes (default: 5000)
 
   -maxsendbuffer=<n>
-       Maximum per-connection send buffer, <n>*1000 bytes (default: 1000)
+       Maximum per-connection memory usage for the send buffer, <n>*1000 bytes
+       (default: 1000)
 
   -maxtimeadjustment
        Maximum allowed median peer time offset adjustment. Local perspective of
@@ -258,9 +261,11 @@ The following sections show all available options including debug options that a
        amount. (default: 4200 seconds)
 
   -maxuploadtarget=<n>
-       Tries to keep outbound traffic under the given target (in MiB per 24h).
-       Limit does not apply to peers with 'download' permission. 0 = no
-       limit (default: 0)
+       Tries to keep outbound traffic under the given target per 24h. Limit
+       does not apply to peers with 'download' permission or blocks
+       created within past week. 0 = no limit (default: 0M). Optional
+       suffix units [k|K|m|M|g|G|t|T] (default: M). Lowercase is 1000
+       base while uppercase is 1024 base
 
   -natpmp
        Use NAT-PMP to map the listening port (default: 0)
@@ -329,9 +334,15 @@ The following sections show all available options including debug options that a
   -torpassword=<pass>
        Tor control port password (default: empty)
 
+  -txreconciliation
+       Enable transaction reconciliations per BIP 330 (default: 0)
+
   -upnp
        Use UPnP to map the listening port (default: 1 when listening and no
        -proxy)
+
+  -v2transport
+       Support v2 transport (default: 0)
 
   -whitebind=<[permissions@]addr>
        Bind to the given address and add permission flags to the peers
@@ -352,22 +363,25 @@ The following sections show all available options including debug options that a
        (e.g. 1.2.3.4) or CIDR-notated network (e.g. 1.2.3.0/24). Uses
        the same permissions as -whitebind. Can be specified multiple
        times.
+
 ```
 
 ### Indexing options
 
 ```text
+
   -addressindex
        Maintain a full address index, used to query for the balance, txids and
        unspent outputs for addresses (default: 0)
 
   -reindex
-       Rebuild chain state and block index from the blk*.dat files on disk
+       Rebuild chain state and block index from the blk*.dat files on disk.
+       This will also rebuild active optional indexes.
 
   -reindex-chainstate
        Rebuild chain state from the currently indexed blocks. When in pruning
        mode or if blocks on disk might be corrupted, use full -reindex
-       instead.
+       instead. Deactivate all optional indexes before running this.
 
   -spentindex
        Maintain a full spent index, used to query the spending txid and input
@@ -380,15 +394,66 @@ The following sections show all available options including debug options that a
   -txindex
        Maintain a full transaction index, used by the getrawtransaction rpc
        call (default: 1)
+
+```
+
+### Masternode options
+
+```text
+
+  -deprecated-platform-user=<user>
+       Set the username for the "platform user", a restricted user intended to
+       be used by Dash Platform, to the specified username.
+
+  -llmq-data-recovery=<n>
+       Enable automated quorum data recovery (default: 1)
+
+  -llmq-qvvec-sync=<quorum_name>:<mode>
+       Defines from which LLMQ type the masternode should sync quorum
+       verification vectors. Can be used multiple times with different
+       LLMQ types. <mode>: 0 (sync always from all quorums of the type
+       defined by <quorum_name>), 1 (sync from all quorums of the type
+       defined by <quorum_name> if a member of any of the quorums)
+
+  -masternodeblsprivkey=<hex>
+       Set the masternode BLS private key and enable the client to act as a
+       masternode
+
+```
+
+### Statsd options
+
+```text
+
+  -statsbatchsize=<bytes>
+       Specify the size of each batch of stats messages (default: 1024)
+
+  -statsduration=<ms>
+       Specify the number of milliseconds between stats messages (default:
+       1000)
+
+  -statshost=<ip>
+       Specify statsd host (default: )
+
+  -statsperiod=<seconds>
+       Specify the number of seconds between periodic measurements (default:
+       60)
+
+  -statsport=<port>
+       Specify statsd port (default: 8125)
+
+  -statsprefix=<string>
+       Specify an optional string prepended to every stats key (default: )
+
+  -statssuffix=<string>
+       Specify an optional string appended to every stats key (default: )
+
 ```
 
 ### Wallet options
 
-:::{attention}
-Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionality. This option was originally intended to allow for the fee bumping of transactions that did not signal RBF. This functionality has been superseded with the [abandon transaction capability](../api/remote-procedure-calls-wallet.md#abandontransaction) available via RPC/console or when right-clicking on unconfirmed transactions in Dash-Qt.
-:::
-
 ```text
+
   -avoidpartialspends
        Group outputs by address, selecting many (possibly all) or none, instead
        of selecting on a per-output basis. Privacy is improved as
@@ -450,15 +515,20 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
 
   -walletnotify=<cmd>
        Execute command when a wallet transaction changes. %s in cmd is replaced
-       by TxID and %w is replaced by wallet name. %w is not currently
+       by TxID, %w is replaced by wallet name, %b is replaced by the
+       hash of the block including the transaction (set to 'unconfirmed'
+       if the transaction is not included) and %h is replaced by the
+       block height (-1 if not included). %w is not currently
        implemented on windows. On systems where %w is supported, it
        should NOT be quoted because this would break shell escaping used
        to invoke the command.
+
 ```
 
 ### Wallet fee options
 
 ```text
+
   -discardfee=<amt>
        The fee rate (in DASH/kB) that indicates your tolerance for discarding
        change by adding it to the fee (default: 0.0001). Note: An output
@@ -481,11 +551,13 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
   -txconfirmtarget=<n>
        If paytxfee is not set, include enough fee so transactions begin
        confirmation on average within n blocks (default: 6)
+
 ```
 
 ### HD wallet options
 
 ```text
+
   -hdseed=<hex>
        User defined seed for HD wallet (should be in hex). Only has effect
        during wallet creation/first start (default: randomly generated)
@@ -506,11 +578,13 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
   -usehd
        Use hierarchical deterministic key generation (HD) after BIP39/BIP44.
        Only has effect during wallet creation/first start (default: 1)
+
 ```
 
 ### CoinJoin options
 
 ```text
+
   -coinjoinamount=<n>
        Target CoinJoin balance (2-21000000, default: 1000)
 
@@ -538,11 +612,39 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
 
   -enablecoinjoin
        Enable use of CoinJoin for funds stored in this wallet (0-1, default: 0)
+
+```
+
+### Wallet debugging/testing options
+
+```text
+
+  -dblogsize=<n>
+       Flush wallet database activity from memory to disk log every <n>
+       megabytes (default: 100)
+
+  -flushwallet
+       Run a thread to flush wallet periodically (default: 1)
+
+  -privdb
+       Sets the DB_PRIVATE flag in the wallet db environment (default: 1)
+
+  -unsafesqlitesync
+       Set SQLite synchronous=OFF to disable waiting for the database to sync
+       to disk. This is unsafe and can cause data loss and corruption.
+       This option is only used by tests to improve their performance
+       (default: false)
+
+  -walletrejectlongchains
+       Wallet will not create transactions that violate mempool chain limits
+       (default: 0)
+
 ```
 
 ### ZeroMQ notification options
 
 ```text
+
   -zmqpubhashblock=<address>
        Enable publish hash block in <address>
 
@@ -672,13 +774,18 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
   -zmqpubrawtxlocksighwm=<n>
        Set publish raw transaction lock signature outbound message high water
        mark (default: 1000)
+
+  -zmqpubsequence=<address>
+       Enable publish hash block and tx sequence in <address>
+
+  -zmqpubsequencehwm=<n>
+       Set publish hash sequence message high water mark (default: 1000)
+
 ```
 
 ### Debugging/Testing options
 
 ```text
-  -addrmantest
-       Allows to test address relay on localhost
 
   -capturemessages
        Capture all P2P messages to disk
@@ -707,18 +814,19 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
 
   -checkpoints
        Enable rejection of any forks from the known historical chain until
-       block 2109672 (default: 1)
+       block 2175051 (default: 1)
 
   -debug=<category>
        Output debugging information (default: -nodebug, supplying <category> is
        optional). If <category> is not supplied or if <category> = 1,
        output all debugging information. <category> can be: addrman,
        bench, chainlocks, cmpctblock, coindb, coinjoin, creditpool, ehf,
-       estimatefee, gobject, http, i2p, instantsend, leveldb, libevent,
-       llmq, llmq-dkg, llmq-sigs, lock, mempool, mempoolrej, mnpayments,
-       mnsync, net, netconn, proxy, prune, qt, rand, reindex, rpc,
-       selectcoins, spork, tor, validation, walletdb, zmq. This option
-       can be specified multiple times to output multiple categories.
+       estimatefee, gobject, http, i2p, instantsend, ipc, leveldb,
+       libevent, llmq, llmq-dkg, llmq-sigs, lock, mempool, mempoolrej,
+       mnpayments, mnsync, net, netconn, proxy, prune, qt, rand,
+       reindex, rpc, selectcoins, spork, tor, txreconciliation,
+       validation, walletdb, zmq. This option can be specified multiple
+       times to output multiple categories.
 
   -debugexclude=<category>
        Exclude debugging information for a category. Can be used in conjunction
@@ -769,6 +877,9 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
   -logtimemicros
        Add microsecond precision to debug timestamps (default: 0)
 
+  -logtimestamps
+       Prepend debug output with timestamp (default: 1)
+
   -maxsigcachesize=<n>
        Limit sum of signature cache and script execution cache sizes to <n> MiB
        (default: 32)
@@ -787,7 +898,7 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
        you.
 
   -mocktime=<n>
-       Replace actual time with UNIX epoch time(default: 0)
+       Replace actual time with UNIX epoch time (default: 0)
 
   -printpriority
        Log transaction fee per kB when mining blocks (default: 0)
@@ -816,16 +927,22 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
        Stop running after reaching the given height in the main chain (default:
        0)
 
+  -testactivationheight=name@height.
+       Set the activation height of 'name' (bip147, bip34, dersig, cltv, csv,
+       brr, dip0001, dip0008, v20, mn_rr). (regtest-only)
+
   -uacomment=<cmt>
        Append comment to the user agent string
 
   -watchquorums=<n>
        Watch and validate quorum communication (default: 0)
+
 ```
 
 ### Chain selection options
 
 ```text
+
   -bip147height=<activation>
        Override BIP147 activation height (regtest-only)
 
@@ -907,33 +1024,13 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
        version bits deployment (regtest-only). Specifying window,
        threshold/thresholdstart, thresholdmin, falloffcoeff and
        mnactivation is optional.
-```
 
-### Masternode options
-
-```text
-  -llmq-data-recovery=<n>
-       Enable automated quorum data recovery (default: 1)
-
-  -llmq-qvvec-sync=<quorum_name>:<mode>
-       Defines from which LLMQ type the masternode should sync quorum
-       verification vectors. Can be used multiple times with different
-       LLMQ types. <mode>: 0 (sync always from all quorums of the type
-       defined by <quorum_name>), 1 (sync from all quorums of the type
-       defined by <quorum_name> if a member of any of the quorums)
-
-  -masternodeblsprivkey=<hex>
-       Set the masternode BLS private key and enable the client to act as a
-       masternode
-
-  -platform-user=<user>
-       Set the username for the "platform user", a restricted user intended to
-       be used by Dash Platform, to the specified username.
 ```
 
 ### Node relay options
 
 ```text
+
   -acceptnonstdtxn
        Relay and mine "non-standard" transactions (testnet/regtest only;
        default: 1)
@@ -971,11 +1068,13 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
        Add 'relay' permission to whitelisted inbound peers with default
        permissions. This will accept relayed transactions even when not
        relaying transactions (default: 1)
+
 ```
 
 ### Block creation options
 
 ```text
+
   -blockmaxsize=<n>
        Set maximum block size in bytes (default: 2000000)
 
@@ -985,11 +1084,13 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
 
   -blockversion=<n>
        Override block version to test forking scenarios
+
 ```
 
 ### RPC server options
 
 ```text
+
   -rest
        Accept public REST requests (default: 0)
 
@@ -1063,57 +1164,7 @@ Dash Core 18.1.0 removed the `-zapwallettxes` startup option and its functionali
 
   -server
        Accept command line and JSON-RPC commands
-```
 
-### Statsd options
-
-```text
-  -statsenabled
-       Publish internal stats to statsd (default: 0)
-
-  -statshost=<ip>
-       Specify statsd host (default: 127.0.0.1)
-
-  -statshostname=<ip>
-       Specify statsd host name (default: )
-
-  -statsns=<ns>
-       Specify additional namespace prefix (default: )
-
-  -statsperiod=<seconds>
-       Specify the number of seconds between periodic measurements (default:
-       60)
-
-  -statsport=<port>
-       Specify statsd port (default: 8125)
-```
-
-### Wallet debugging/testing options
-
-:::{attention}
-These options are normally hidden and will only be shown if using the help debug option: `dashd --held -help-debug`
-:::
-
-```text
-  -dblogsize=<n>
-       Flush wallet database activity from memory to disk log every <n>
-       megabytes (default: 100)
-
-  -flushwallet
-       Run a thread to flush wallet periodically (default: 1)
-
-  -privdb
-       Sets the DB_PRIVATE flag in the wallet db environment (default: 1)
-
-  -unsafesqlitesync
-       Set SQLite synchronous=OFF to disable waiting for the database to sync
-       to disk. This is unsafe and can cause data loss and corruption.
-       This option is only used by tests to improve their performance
-       (default: false)
-
-  -walletrejectlongchains
-       Wallet will not create transactions that violate mempool chain limits
-       (default: 0)
 ```
 
 ## Network Dependent Options
