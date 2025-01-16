@@ -21,7 +21,7 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v6
       with:
-        branch: update-docs/${{ github.sha }}
+        branch: update-docs/evo-tool-update-${{ github.sha }}
         title: "chore: update evo tool download links to latest version"
         body: |
           This PR updates download links in the documentation to use the latest Dash Evo Tool version.

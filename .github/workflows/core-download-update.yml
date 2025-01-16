@@ -21,7 +21,7 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v6
       with:
-        branch: update-docs/${{ github.sha }}
+        branch: update-docs/core-update-${{ github.sha }}
         title: "chore: update core download links to latest version"
         body: |
           This PR updates download links in the documentation to use the latest Dash Core version.
