@@ -21,7 +21,7 @@ Debug category | string | Required<br>(1 or more) | The debug category to activa
 | Type | Category |
 | - | - |
 | Special | • `0` or `none` - Disables all categories <br>• `1` or `all` - Enables all categories <br>• `dash` - Enables/disables all Dash categories |
-| Standard | `addrman`, `bench`, `cmpctblock`, `coindb`, `estimatefee`, `http`, `i2p`, `ipc`, `leveldb`, `libevent`, `lock`, `mempool`, `mempoolrej`, `net`, `netconn`, `proxy`, `prune`, `qt`, `rand`, `reindex`, `rpc`, `selectcoins`, `tor`, `validation`, `walletdb`, `zmq`|
+| Standard | `addrman`, `bench`, `blockstorage`, `cmpctblock`, `coindb`, `estimatefee`, `http`, `i2p`, `ipc`, `leveldb`, `libevent`, `lock`, `mempool`, `mempoolrej`, `net`, `netconn`, `proxy`, `prune`, `qt`, `rand`, `reindex`, `rpc`, `selectcoins`, `tor`, `validation`, `walletdb`, `zmq`|
 | Dash | `chainlocks`, `coinjoin`, `creditpool`, `ehf`, `gobject`, `instantsend`, `llmq`, `llmq-dkg`, `llmq-sigs`, `mnpayments`, `mnsync`, `spork` |
 
 Note: `libevent` logging is configured on startup and cannot be modified by this RPC during runtime.
@@ -206,7 +206,7 @@ The categories are:
 | Type | Category |
 | - | - |
 | Special | • `0` or `none` - Disables all categories <br>• `1` or `all` - Enables all categories <br>• `dash` - Enables/disables all Dash categories |
-| Standard | `addrman`, `bench`, `cmpctblock`, `coindb`, `estimatefee`, `http`, `i2p`, `ipc`, `leveldb`, `libevent`, `lock`, `mempool`, `mempoolrej`, `net`, `netconn`, `proxy`, `prune`, `qt`, `rand`, `reindex`, `rpc`, `selectcoins`, `tor`, `validation`, `walletdb`, `zmq`|
+| Standard | `addrman`, `bench`, `blockstorage`, `cmpctblock`, `coindb`, `estimatefee`, `http`, `i2p`, `ipc`, `leveldb`, `libevent`, `lock`, `mempool`, `mempoolrej`, `net`, `netconn`, `proxy`, `prune`, `qt`, `rand`, `reindex`, `rpc`, `selectcoins`, `tor`, `validation`, `walletdb`, `zmq`|
 | Dash | `chainlocks`, `coinjoin`, `creditpool`, `ehf`, `gobject`, `instantsend`, `llmq`, `llmq-dkg`, `llmq-sigs`, `mnpayments`, `mnsync`, `spork` |
 
 *Result---a list of the logging categories that are active*
