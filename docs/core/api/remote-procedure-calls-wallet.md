@@ -2481,23 +2481,29 @@ The [`lockunspent` RPC](../api/remote-procedure-calls-wallet.md#lockunspent) tem
 
 _Parameter #1---whether to lock or unlock the outputs_
 
-| Name   | Type | Presence                | Description                                                                                                                                                                                                                                                                                       |
-| ------ | ---- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name   | Type | Presence                | Description |
+| ------ | ---- | ----------------------- | ----------- |
 | Unlock | bool | Required<br>(exactly 1) | Set to `false` to lock the outputs specified in the following parameter.  Set to `true` to unlock the outputs specified.  If this is the only argument specified and it is set to `true`, all outputs will be unlocked; if it is the only argument and is set to `false`, there will be no change |
 
 _Parameter #2---the outputs to lock or unlock_
 
-| Name          | Type         | Presence                | Description                                                                                                            |
-| ------------- | ------------ | ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Name   | Type | Presence                | Description |
+| ------ | ---- | ----------------------- | ----------- |
 | Outputs       | array        | Optional<br>(0 or 1)    | An array of outputs to lock or unlock                                                                                  |
 | →<br>Output   | object       | Required<br>(1 or more) | An object describing a particular output                                                                               |
 | → →<br>`txid` | string       | Required<br>(exactly 1) | The TXID of the transaction containing the output to lock or unlock, encoded as hex in internal byte order             |
 | → →<br>`vout` | number (int) | Required<br>(exactly 1) | The output index number (vout) of the output to lock or unlock.  The first output in a transaction has an index of `0` |
 
+_Parameter #3---whether to keep the lock in memory only or in the wallet database_
+
+| Name   | Type | Presence                | Description |
+| ------ | ---- | ----------------------- | ----------- |
+| `persistent` | bool | Optional<br>(0 or 1) | Whether to write/erase this lock in the wallet database, or keep the change in memory only. Ignored for unlocking. Defaults to `false`. |
+
 _Result---`true` if successful_
 
-| Name     | Type | Presence                | Description                                                                                                                                    |
-| -------- | ---- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name     | Type | Presence                | Description |
+| -------- | ---- | ----------------------- | ----------- |
 | `result` | bool | Required<br>(exactly 1) | Set to `true` if the outputs were successfully locked or unlocked.  If the outputs were already locked or unlocked, it will also return `true` |
 
 _Example from Dash Core 0.12.2_
