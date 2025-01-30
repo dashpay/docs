@@ -221,7 +221,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [WalletLock](../api/remote-procedure-calls-wallet.md#walletlock): removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call `walletpassphrase` again before being able to call any methods which require the wallet to be unlocked.
 * [WalletPassphrase](../api/remote-procedure-calls-wallet.md#walletpassphrase): stores the wallet decryption key in memory for the indicated number of seconds. Issuing the `walletpassphrase` command while the wallet is already unlocked will set a new unlock time that overrides the old one.
 * [WalletPassphraseChange](../api/remote-procedure-calls-wallet.md#walletpassphrasechange): changes the wallet passphrase from 'old passphrase' to 'new passphrase'.
-* [WalletProcessPSBT](../api/remote-procedure-calls-wallet.md#walletprocesspsbt): updates a PSBT with input information from a wallet and then allows the signing of inputs. _Updated in Dash Core 18.2.0_
+* [WalletProcessPSBT](../api/remote-procedure-calls-wallet.md#walletprocesspsbt): updates a PSBT with input information from a wallet and then allows the signing of inputs. **Updated in Dash Core 22.1.0**
 * [WipeWalletTxes](../api/remote-procedure-calls-wallet.md#wipewallettxes): wipes wallet transactions. _New in Dash Core 19.3.0_
 
 ## [Wallet RPCs (Deprecated)](../api/remote-procedure-calls-wallet-deprecated.md)

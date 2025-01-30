@@ -3831,27 +3831,31 @@ _Parameter #2---Sign Transaction_
 
 _Parameter #3---Signature Hash Type_
 
-| Name          | Type   | Presence                     | Description                                                                                                                                                                                                                    |
-| ------------- | ------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Name          | Type   | Presence                     | Description |
+| ------------- | ------ | ---------------------------- | ----------- |
 | `sighashtype` | string | Optional<br>(exactly 0 or 1) | The signature hash type to sign with if not specified by the PSBT. Must be one of the following (default = ALL):<br> - ALL<br> - NONE<br> - SINGLE<br> - ALL\|ANYONECANPAY<br> - NONE\|ANYONECANPAY<br> - SINGLE\|ANYONECANPAY |
 
 _Parameter #4---bip32derivs_
 
-| Name          | Type | Presence                     | Description                                                                       |
-| ------------- | ---- | ---------------------------- | --------------------------------------------------------------------------------- |
+| Name          | Type   | Presence                     | Description |
+| ------------- | ------ | ---------------------------- | ----------- |
 | `bip32derivs` | bool | Optional<br>(exactly 0 or 1) | Includes the BIP 32 derivation paths for public keys if known (default = `true`). |
+
+_Parameter #5---finalize_
+
+| Name          | Type   | Presence                     | Description |
+| ------------- | ------ | ---------------------------- | ----------- |
+| `finalize` | bool | Optional<br>(exactly 0 or 1) | Also finalize inputs if possible (default = `true`). |
 
 _Result---the processed wallet_
 
-| Name            | Type   | Presence                | Description                                         |
-| --------------- | ------ | ----------------------- | --------------------------------------------------- |
+| Name          | Type   | Presence                     | Description |
+| ------------- | ------ | ---------------------------- | ----------- |
 | `result`        | object | Required<br>(exactly 1) | The results of the signature                        |
 | →<br>`psbt`     | string | Required<br>(exactly 1) | The base64-encoded partially signed transaction     |
 | →<br>`complete` | bool   | Required<br>(exactly 1) | If the transaction has a complete set of signatures |
 
 _Example from Dash Core 18.0.0_
-
-Change the wallet passphrase from "test" to "example":
 
 ```bash
 dash-cli walletprocesspsbt "cHNidP8BAEICAAAAAXgRxzbShUlivVFKgoLyhk0RCCYLZKCYTl/tYRd+yGImAAAAAAD/////AQAAAAAAAAAABmoEAAECAwAAAAAAAAA="
