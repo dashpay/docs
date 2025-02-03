@@ -87,8 +87,9 @@ Name | Type | Presence | Description
 →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
 →<br>`signature` | string (hex) | Required<br>(exactly 1) | The BLS signature of the ChainLock
 →<br>`known_block` | boolean | Required<br>(exactly 1) | True if the block is known by this node
+→<br>`hex` | string (hex) | Required<br>(exactly 1) | The serialized, hex-encoded data for the best ChainLock
 
-*Example from Dash Core 0.17.0*
+*Example from Dash Core 22.1.0*
 
 ``` bash
 dash-cli -testnet getbestchainlock
@@ -98,10 +99,11 @@ Result:
 
 ``` json
 {
-  "blockhash": "00000c0e7a866e67444813858b976886d839aff28f56dc178c92ed1390c97f4e",
-  "height": 405044,
-  "signature": "960ead08adcc3fcf5e576f9e6ad290251325db900d19d961f5ece398b5389390b8a44e8986199c201ac348a89bc8534a0f7153c61c54157a241c521131025e5054b7c4298065069e478abdaea4d6c861848061e32c0d903ddeb5ee6036e8ddcf",
-  "known_block": true
+  "blockhash": "0000013e0738becaef5da03b0352ffa3d50e6dc6591246bca06357b50ee50927",
+  "height": 1186861,
+  "signature": "854e63822a53b0e53eb0aaceed554c104172cacb252450d60bfb353eb78ff107e22275236b895ac3a049718c68da840319a0efda8524c0ca39ebead5abe65d1e4b58e55856b25895a1d0bff1eaa483f0cca4b5d015661cf0003bf50a39b6da01",
+  "known_block": true,
+  "hex": "2d1c12002709e50eb55763a0bc461259c66d0ed5a3ff52033ba05defcabe38073e010000854e63822a53b0e53eb0aaceed554c104172cacb252450d60bfb353eb78ff107e22275236b895ac3a049718c68da840319a0efda8524c0ca39ebead5abe65d1e4b58e55856b25895a1d0bff1eaa483f0cca4b5d015661cf0003bf50a39b6da01"
 }
 ```
 

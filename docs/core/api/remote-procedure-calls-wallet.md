@@ -2481,23 +2481,29 @@ The [`lockunspent` RPC](../api/remote-procedure-calls-wallet.md#lockunspent) tem
 
 _Parameter #1---whether to lock or unlock the outputs_
 
-| Name   | Type | Presence                | Description                                                                                                                                                                                                                                                                                       |
-| ------ | ---- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name   | Type | Presence                | Description |
+| ------ | ---- | ----------------------- | ----------- |
 | Unlock | bool | Required<br>(exactly 1) | Set to `false` to lock the outputs specified in the following parameter.  Set to `true` to unlock the outputs specified.  If this is the only argument specified and it is set to `true`, all outputs will be unlocked; if it is the only argument and is set to `false`, there will be no change |
 
 _Parameter #2---the outputs to lock or unlock_
 
-| Name          | Type         | Presence                | Description                                                                                                            |
-| ------------- | ------------ | ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Name   | Type | Presence                | Description |
+| ------ | ---- | ----------------------- | ----------- |
 | Outputs       | array        | Optional<br>(0 or 1)    | An array of outputs to lock or unlock                                                                                  |
 | →<br>Output   | object       | Required<br>(1 or more) | An object describing a particular output                                                                               |
 | → →<br>`txid` | string       | Required<br>(exactly 1) | The TXID of the transaction containing the output to lock or unlock, encoded as hex in internal byte order             |
 | → →<br>`vout` | number (int) | Required<br>(exactly 1) | The output index number (vout) of the output to lock or unlock.  The first output in a transaction has an index of `0` |
 
+_Parameter #3---whether to keep the lock in memory only or in the wallet database_
+
+| Name   | Type | Presence                | Description |
+| ------ | ---- | ----------------------- | ----------- |
+| `persistent` | bool | Optional<br>(0 or 1) | Whether to write/erase this lock in the wallet database, or keep the change in memory only. Ignored for unlocking. Defaults to `false`. |
+
 _Result---`true` if successful_
 
-| Name     | Type | Presence                | Description                                                                                                                                    |
-| -------- | ---- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name     | Type | Presence                | Description |
+| -------- | ---- | ----------------------- | ----------- |
 | `result` | bool | Required<br>(exactly 1) | Set to `true` if the outputs were successfully locked or unlocked.  If the outputs were already locked or unlocked, it will also return `true` |
 
 _Example from Dash Core 0.12.2_
@@ -3831,27 +3837,31 @@ _Parameter #2---Sign Transaction_
 
 _Parameter #3---Signature Hash Type_
 
-| Name          | Type   | Presence                     | Description                                                                                                                                                                                                                    |
-| ------------- | ------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Name          | Type   | Presence                     | Description |
+| ------------- | ------ | ---------------------------- | ----------- |
 | `sighashtype` | string | Optional<br>(exactly 0 or 1) | The signature hash type to sign with if not specified by the PSBT. Must be one of the following (default = ALL):<br> - ALL<br> - NONE<br> - SINGLE<br> - ALL\|ANYONECANPAY<br> - NONE\|ANYONECANPAY<br> - SINGLE\|ANYONECANPAY |
 
 _Parameter #4---bip32derivs_
 
-| Name          | Type | Presence                     | Description                                                                       |
-| ------------- | ---- | ---------------------------- | --------------------------------------------------------------------------------- |
+| Name          | Type   | Presence                     | Description |
+| ------------- | ------ | ---------------------------- | ----------- |
 | `bip32derivs` | bool | Optional<br>(exactly 0 or 1) | Includes the BIP 32 derivation paths for public keys if known (default = `true`). |
+
+_Parameter #5---finalize_
+
+| Name          | Type   | Presence                     | Description |
+| ------------- | ------ | ---------------------------- | ----------- |
+| `finalize` | bool | Optional<br>(exactly 0 or 1) | Also finalize inputs if possible (default = `true`). |
 
 _Result---the processed wallet_
 
-| Name            | Type   | Presence                | Description                                         |
-| --------------- | ------ | ----------------------- | --------------------------------------------------- |
+| Name          | Type   | Presence                     | Description |
+| ------------- | ------ | ---------------------------- | ----------- |
 | `result`        | object | Required<br>(exactly 1) | The results of the signature                        |
 | →<br>`psbt`     | string | Required<br>(exactly 1) | The base64-encoded partially signed transaction     |
 | →<br>`complete` | bool   | Required<br>(exactly 1) | If the transaction has a complete set of signatures |
 
 _Example from Dash Core 18.0.0_
-
-Change the wallet passphrase from "test" to "example":
 
 ```bash
 dash-cli walletprocesspsbt "cHNidP8BAEICAAAAAXgRxzbShUlivVFKgoLyhk0RCCYLZKCYTl/tYRd+yGImAAAAAAD/////AQAAAAAAAAAABmoEAAECAwAAAAAAAAA="
