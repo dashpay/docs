@@ -9,7 +9,7 @@ NEW_VERSION=$(curl -s \
   https://api.github.com/repos/dashpay/dash-evo-tool/releases/latest | \
   jq -r '.tag_name' | sed 's/^v//')
 
-if [[ $? -ne 0 || -z "$NEW_VERSION" ]]; then
+if [[ $? -ne 0 || -z "$NEW_VERSION" || "$NEW_VERSION" == "null" ]]; then
   echo "Error: Unexpected response when retrieving the current version. Received: $NEW_VERSION"
 else
   # Print the extracted values (for verification)
