@@ -9,10 +9,10 @@ NEW_VERSION=$(curl -s \
   https://api.github.com/repos/dashpay/dash/releases/latest | \
   jq -r '.tag_name' | sed 's/^v//')
 
-if [[ $? -ne 0 || -z "$NEW_VERSION" ]]; then
-  echo "Error: Unexpected response when retrieving the current Dash Core version. Received: $NEW_VERSION"
-else
-  # Print the extracted values (for verification)
+# Check if curl or jq failed, or if NEW_VERSION is null or empty
+if [[ $? -ne 0 || -z "$NEW_VERSION" || "$NEW_VERSION" == "null" ]]; then
+  echo "Error: Unexpected response when retrieving the current Dash Core version. Ignoring update."
+else  # Print the extracted values (for verification)
   echo "Extracted Version: $NEW_VERSION"
   # git checkout -b v$NEW_VERSION-links # Uncomment to use locally
 
