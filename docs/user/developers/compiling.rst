@@ -108,8 +108,8 @@ as ``<username>``, and clone required repositories::
 Download the macOS SDK which is required to create macOS builds::
 
   mkdir -p ~/guix-dash/macOS-SDKs
-  wget -N -P ~/guix-dash https://bitcoincore.org/depends-sources/sdks/Xcode-12.2-12B45b-extracted-SDK-with-libcxx-headers.tar.gz
-  tar -xvzf ~/guix-dash/Xcode-12.2-12B45b-extracted-SDK-with-libcxx-headers.tar.gz --directory ~/guix-dash/macOS-SDKs/
+  wget -N -P ~/guix-dash https://bitcoincore.org/depends-sources/sdks/Xcode-15.0-15A240d-extracted-SDK-with-libcxx-headers.tar.gz
+  tar -xvzf ~/guix-dash/Xcode-15.0-15A240d-extracted-SDK-with-libcxx-headers.tar.gz --directory ~/guix-dash/macOS-SDKs/
 
 Build Dash Core
 ===============
