@@ -21,7 +21,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 
 * [GetBestBlockHash](../api/remote-procedure-calls-blockchain.md#getbestblockhash): returns the header hash of the most recent block on the best block chain.
 * [DumpTxOutset](../api/remote-procedure-calls-blockchain.md#dumptxoutset): Write the serialized UTXO set to disk. _New in Dash Core 18.1.0_
-* [GetBestChainLock](../api/remote-procedure-calls-blockchain.md#getbestchainlock): returns the block hash of the best chainlock. _New in Dash Core 0.15.0_
+* [GetBestChainLock](../api/remote-procedure-calls-blockchain.md#getbestchainlock): returns the block hash of the best chainlock. **Updated in Dash Core 22.1.0**
 * [GetBlock](../api/remote-procedure-calls-blockchain.md#getblock): gets a block with a particular header hash from the local block database either as a JSON object or as a serialized block. **_Updated in Dash Core 21.0.0_**
 * [GetBlockChainInfo](../api/remote-procedure-calls-blockchain.md#getblockchaininfo): provides information about the current state of the block chain. **_Updated in Dash Core 21.0.0_**
 * [GetBlockCount](../api/remote-procedure-calls-blockchain.md#getblockcount): returns the number of blocks in the local best block chain.
@@ -133,6 +133,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [DecodeScript](../api/remote-procedure-calls-raw-transactions.md#decodescript): decodes a hex-encoded P2SH redeem script. **_Updated in Dash Core 21.0.0_**
 * [FinalizePSBT](../api/remote-procedure-calls-raw-transactions.md#finalizepsbt): finalizes the inputs of a PSBT. The PSBT produces a network serialized transaction if the transaction is fully signed. _New in Dash Core 18.0.0_
 * [FundRawTransaction](../api/remote-procedure-calls-raw-transactions.md#fundrawtransaction): adds inputs to a transaction until it has enough in value to meet its out value. **_Updated in Dash Core 21.0.0_**
+* [GetISLocks](../api/remote-procedure-calls-raw-transactions.md#getislocks): returns the raw InstantSend lock data for each provided transaction ID. **New in Dash Core 22.1.0**
 * [GetRawTransaction](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction): gets a hex-encoded serialized transaction or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for UTXOs and your own transactions, so the RPC may fail on historic transactions unless you use the non-default `txindex=1` in your Dash Core startup settings. **_Updated in Dash Core 21.0.0_**
 * [GetRawTransactionMulti](../api/remote-procedure-calls-raw-transactions.md#getrawtransactionmulti): gets hex-encoded serialized transactions or a JSON object describing the multiple transactions. _New in Dash Core 20.1.0_
 * [GetTxChainlocks](../api/remote-procedure-calls-raw-transactions.md#gettxchainlocks): returns the block height each transaction was mined at and whether it is ChainLocked or not. _Updated in Dash Core 20.1.0_
@@ -199,7 +200,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [ListWalletDir](../api/remote-procedure-calls-wallet.md#listwalletdir): returns a list of wallets in the wallet directory. _New in Dash Core 18.0.0_
 * [ListWallets](../api/remote-procedure-calls-wallet.md#listwallets): returns a list of currently loaded wallets. _New in Dash Core 0.15.0_
 * [LoadWallet](../api/remote-procedure-calls-wallet.md#loadwallet): loads a wallet from a wallet file or directory. _Updated in Dash Core 18.1.0_
-* [LockUnspent](../api/remote-procedure-calls-wallet.md#lockunspent): temporarily locks or unlocks specified transaction outputs. A locked transaction output will not be chosen by automatic coin selection when spending dash. Locks are stored in memory only, so nodes start with zero locked outputs and the locked output list is always cleared when a node stops or fails.
+* [LockUnspent](../api/remote-procedure-calls-wallet.md#lockunspent): temporarily locks or unlocks specified transaction outputs. A locked transaction output will not be chosen by automatic coin selection when spending dash. Locks are stored in memory only, so nodes start with zero locked outputs and the locked output list is always cleared when a node stops or fails. **Updated in Dash Core 22.1.0**
 * [RemovePrunedFunds](../api/remote-procedure-calls-wallet.md#removeprunedfunds): deletes the specified transaction from the wallet. Meant for use with pruned wallets and as a companion to importprunedfunds. _New in Dash Core 0.12.3_
 * [RescanBlockChain](../api/remote-procedure-calls-wallet.md#rescanblockchain): rescans the local blockchain for wallet related transactions. _New in Dash Core 0.16.0_
 * [ScanTxOutset](../api/remote-procedure-calls-wallet.md#scantxoutset): scans the unspent transaction output set for entries that match certain output descriptors. _New in Dash Core 18.0.0_
@@ -221,7 +222,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [WalletLock](../api/remote-procedure-calls-wallet.md#walletlock): removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call `walletpassphrase` again before being able to call any methods which require the wallet to be unlocked.
 * [WalletPassphrase](../api/remote-procedure-calls-wallet.md#walletpassphrase): stores the wallet decryption key in memory for the indicated number of seconds. Issuing the `walletpassphrase` command while the wallet is already unlocked will set a new unlock time that overrides the old one.
 * [WalletPassphraseChange](../api/remote-procedure-calls-wallet.md#walletpassphrasechange): changes the wallet passphrase from 'old passphrase' to 'new passphrase'.
-* [WalletProcessPSBT](../api/remote-procedure-calls-wallet.md#walletprocesspsbt): updates a PSBT with input information from a wallet and then allows the signing of inputs. _Updated in Dash Core 18.2.0_
+* [WalletProcessPSBT](../api/remote-procedure-calls-wallet.md#walletprocesspsbt): updates a PSBT with input information from a wallet and then allows the signing of inputs. **Updated in Dash Core 22.1.0**
 * [WipeWalletTxes](../api/remote-procedure-calls-wallet.md#wipewallettxes): wipes wallet transactions. _New in Dash Core 19.3.0_
 
 ## [Wallet RPCs (Deprecated)](../api/remote-procedure-calls-wallet-deprecated.md)

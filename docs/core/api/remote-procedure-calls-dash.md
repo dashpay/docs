@@ -1207,7 +1207,7 @@ _Parameter #2---transport protocol options_
 
 | Name         | Type    | Presence             | Description |
 | ------------ | ------- | -------------------- | ----------- |
-| v2transport  | bool    | Optional<br>(0 or 1) | Set to `true` to attempt connection using the BIP324 v2 transport protocol. Defaults to `false`. |
+| v2transport  | bool    | Optional<br>(0 or 1) | Set to `true` to attempt connection using the BIP324 v2 transport protocol. Defaults to `true` since Dash Core 22.1. Set by `-v2transport`. |
 
 _Result---connection status_
 

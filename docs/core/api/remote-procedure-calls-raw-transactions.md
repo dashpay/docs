@@ -884,6 +884,66 @@ Result:
 
 _See also: none_
 
+## GetISLocks
+
+Returns the raw InstantSend lock data for each provided transaction ID. Returns `"None"` if there is no known InstantSend lock for a transaction.
+
+_Parameter #1—list of transaction IDs_
+
+| Name | Type        | Presence               | Description |
+| ---- | ----------  | ---------------------- | ----------- |
+| txids | array       | Required<br>(exactly 1) | An array of up to 100 transaction IDs (strings). Each element must be a valid transaction hash in hexadecimal form. |
+
+_Result—execution result_
+
+The RPC returns an array of the same size as the input array. Each element in the result array is either a JSON object with the following fields or the string `"None"` if no InstantSend lock is known for the corresponding transaction ID.
+
+| Name                | Type            | Presence                | Description |
+| ------------------- | --------------- | ----------------------- | ----------- |
+| Result                | array           | Required<br>(exactly 1) | An array of JSON objects with results for each requested TXID |
+| → <br>TXID data       | object          | Required | Data for a requested TXID. One object for each requested TXID |
+| → → <br>`txid`        | string (hex)    | Required<br>(exactly 1) | The transaction ID |
+| → → <br>`inputs`      | array           | Required<br>(exactly 1) | An array of JSON objects describing the transaction inputs in the InstantSend lock |
+| → → → <br> `txid`     | string (hex)    | Required<br>(exactly 1) | The transaction ID of the input |
+| → → → <br> `vout`     | number (int)    | Required<br>(exactly 1) | The output index of the referenced transaction |
+| → → <br>`cycleHash`   | string (hex)    | Required<br>(exactly 1) | The cycle hash associated with this InstantSend lock |
+| → → <br>`signature`   | string (hex)    | Required<br>(exactly 1) | The BLS signature associated with this InstantSend lock |
+| → → <br>`hex`         | string (hex)    | Required<br>(exactly 1) | The serialized, hex-encoded InstantSend lock data for the transaction |
+
+_Example from Dash Core 22.1.0_
+
+Query InstantSend lock information for two transaction IDs:
+
+```bash
+dash-cli getislocks '["58cf87162f74e2ae72721184643bc320155ca8ad5068ea005d47cb0c516a0730", "b251095eef8efd3b6840f13b4d8ff714ddff3db5775dc799610989586dc47cca"]'
+```
+
+Result:
+
+```json
+[
+  {
+    "txid": "58cf87162f74e2ae72721184643bc320155ca8ad5068ea005d47cb0c516a0730",
+    "inputs": [
+      {
+        "txid": "29a4f10cf3a9d169eb84579800db8625032cd27f5479ac2b5057de9242411de2",
+        "vout": 10
+      },
+      {
+        "txid": "c1a525857a91649e8f97ae4a4ad103c6992349b7616d2ab1f9e46278de17d29c",
+        "vout": 0
+      }
+    ],
+    "cycleHash": "000000963cc2a39af8b4ab3f5f8651c5f704d3e5f258758a33f8e86edd6c01f0",
+    "signature": "a20e74296fcd3fb73f938680bdbfa8fa313b8d8bdf3f76657d7efac568e847f5f73093fe41f4a086a99cebb54b4a077a101b680e4f73055fe3bde78ce620545444a4e5ef22a51bfd29cc456b52d08d04c9e0d60ded435713dcd2df0edfe62f6b",
+    "hex": "0102e21d414292de57502bac79547fd22c032586db00985784eb69d1a9f30cf1a4290a0000009cd217de7862e4f9b12a6d61b7492399c603d14a4aae978f9e64917a8525a5c10000000030076a510ccb475d00ea6850ada85c1520c33b6484117272aee2742f1687cf58f0016cdd6ee8f8338a7558f2e5d304f7c551865f3fabb4f89aa3c23c96000000a20e74296fcd3fb73f938680bdbfa8fa313b8d8bdf3f76657d7efac568e847f5f73093fe41f4a086a99cebb54b4a077a101b680e4f73055fe3bde78ce620545444a4e5ef22a51bfd29cc456b52d08d04c9e0d60ded435713dcd2df0edfe62f6b"
+  },
+  "None"
+]
+```
+
+_See also: none_
+
 ```{eval-rst}
 .. _api-rpc-raw-transactions-getrawtransaction:
 ```
