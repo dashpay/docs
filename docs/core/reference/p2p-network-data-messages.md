@@ -423,12 +423,12 @@ _Added in protocol version 70222 of Dash Core._
 
 The `getqrinfo` message requests a [`qrinfo` message](../reference/p2p-network-data-messages.md#qrinfo) that provides the information required to verify quorum details for quorums formed using the quorum rotation process.
 
-| Bytes | Name | Data type | Required | Description |
-| ---------- | ----------- | --------- | -------- | -------- |
-| 4 | baseBlockHashesNb | uint32 | Required | Number of masternode lists the light client already knows (up to 4)
+| Bytes | Name | Data type | Required | Description
+| ---------- | ----------- | --------- | -------- | --------
+| Varies | baseBlockHashesNb | compactSize uint | Required | Number of masternode lists the light client already knows
 | Varies | baseBlockHashes | uint256[] | Required | Array of base block hashes for the masternode lists the light client already knows
 | 32 | blockRequestHash | uint256 | Required | Hash of the block for which the masternode list diff is requested
-| 1 | extraShare | bool | Optional | Flag to indicate if an extra share is requested |
+| 1 | extraShare | bool | Optional | Flag to indicate if an extra share is requested
 
 The following annotated hexdump shows a [`getqrinfo` message](../reference/p2p-network-data-messages.md#getqrinfo). (The message header has been omitted.)
 
