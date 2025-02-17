@@ -19,7 +19,6 @@ jobs:
       id: update_script
       run: |
         output=$("${GITHUB_WORKSPACE}/scripts/core-download-link-update.sh")
-        echo "$output"
         # Extract the version number from the line that starts with "Extracted Version:"
         version=$(echo "$output" | grep "Extracted Version:" | awk -F": " '{print $2}')
         echo "version=${version}" >> $GITHUB_OUTPUT
