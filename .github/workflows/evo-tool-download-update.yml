@@ -16,14 +16,19 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Run evo tool download link update script
-      run: "${GITHUB_WORKSPACE}/scripts/evo-tool-download-link-update.sh"
+      id: update_script
+      run: |
+        output=$("${GITHUB_WORKSPACE}/scripts/evo-tool-download-link-update.sh")
+        # Extract the version number from the line that starts with "Extracted Version:"
+        version=$(echo "$output" | grep "Extracted Version:" | awk -F": " '{print $2}')
+        echo "version=${version}" >> $GITHUB_OUTPUT
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v6
       with:
         branch: update-docs/evo-tool-update-${{ github.sha }}
-        title: "chore: update evo tool download links to latest version"
+        title: "chore: update evo tool download links to version ${{ steps.update_script.outputs.version }}"
         body: |
-          This PR updates download links in the documentation to use the latest Dash Evo Tool version.
-        commit-message: "chore: update evo tool download links to latest version"
+          This PR updates download links in the documentation to use Dash Evo Tool version ${{ steps.update_script.outputs.version }}.
+        commit-message: "chore: update evo tool download links to version ${{ steps.update_script.outputs.version }}"
         reviewers: "thephez,pauldelucia"
