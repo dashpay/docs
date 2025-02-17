@@ -231,7 +231,7 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd /tmp
-  wget https://github.com/dashpay/dash/releases/download/v22.1.0/dashcore-22.1.0-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v22.1.1/dashcore-22.1.1-x86_64-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -244,16 +244,16 @@ following key:
 ::
 
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v22.1.0/dashcore-22.1.0-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-22.1.0-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v22.1.1/dashcore-22.1.1-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-22.1.1-x86_64-linux-gnu.tar.gz.asc
 
 Create a working directory for Dash, extract the compressed archive and
 copy the necessary files to the directory::
 
   mkdir ~/.dashcore
-  tar xfv dashcore-22.1.0-x86_64-linux-gnu.tar.gz
-  cp -f dashcore-22.1.0/bin/dashd ~/.dashcore/
-  cp -f dashcore-22.1.0/bin/dash-cli ~/.dashcore/
+  tar xfv dashcore-22.1.1-x86_64-linux-gnu.tar.gz
+  cp -f dashcore-22.1.1/bin/dashd ~/.dashcore/
+  cp -f dashcore-22.1.1/bin/dash-cli ~/.dashcore/
 
 Create a configuration file using the following command::
 

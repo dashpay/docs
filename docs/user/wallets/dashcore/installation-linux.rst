@@ -58,7 +58,7 @@ Open a terminal, import the key and verify the authenticity of your
 download as follows::
 
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  gpg --verify dashcore-22.1.0-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-22.1.1-x86_64-linux-gnu.tar.gz.asc
 
 .. figure:: img/linux/setup-linux-gpg.png
    :width: 400px
@@ -74,7 +74,7 @@ authentic copy of Dash Core for Linux.
    verification output by signing the imported key before verifying::
    
       gpg --quick-lsign-key "29590362EC878A81FD3C202B52527BEDABE87984"
-      gpg --verify dashcore-22.1.0-x86_64-linux-gnu.tar.gz.asc
+      gpg --verify dashcore-22.1.1-x86_64-linux-gnu.tar.gz.asc
 
 Extracting Dash Core
 ----------------------
@@ -87,13 +87,13 @@ we will extract the executable file with a graphical user interface
 
 Extract Dash Core as follows::
 
-  tar xzf dashcore-22.1.0-x86_64-linux-gnu.tar.gz
+  tar xzf dashcore-22.1.1-x86_64-linux-gnu.tar.gz
 
-This will create a folder named ``dashcore-22.1.0`` in the current working
+This will create a folder named ``dashcore-22.1.1`` in the current working
 directory. We will now install the executable binaries to
 ``/usr/local/bin`` using the ``install`` command::
 
-  sudo install -m 0755 -o root -g root -t /usr/local/bin dashcore-22.1.0/bin/*
+  sudo install -m 0755 -o root -g root -t /usr/local/bin dashcore-22.1.1/bin/*
 
 Start Dash Core from the terminal with the following command::
   
