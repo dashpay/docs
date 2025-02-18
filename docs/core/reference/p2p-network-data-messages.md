@@ -886,7 +886,7 @@ Note: In the following fields, `c` refers to the quorum cycle length. This is sy
 | 1 | extraShare | bool | Required | Flag to indicate if an extra share is requested |
 | Varies | quorumSnapshot<br>AtHMinus4C | CQuorumSnapshot | Optional | Returned only if `extraShare` is on. See below for sub-message contents. |
 | Varies | mnListDiff<br>AtHMinus4C | CSimplifiedMNListDiff | Optional | Returned only if `extraShare` is on. As in DIP-4.
-| 1-9 | lastQuorumHashPer<br>IndexSize | compactSize uint | Required | Number of elements in `lastCommitmentPerIndex`
+| 1-9 | lastCommitment<br>PerIndexSize | compactSize uint | Required | Number of elements in `lastCommitmentPerIndex`
 | Varies  | lastCommitment<br>PerIndex | CFinalCommitment[]<br>(see [qfcommit](./p2p-network-quorum-messages.md#qfcommit)) |  Required | Contains the most recent quorum commitment for each quorumIndex. Ordered by quorumIndex.
 | 1-9 | quorumSnapshot<br>ListSize | compactSize uint | Required | Number of elements in `quorumSnapshotList`
 | Varies | quorumSnapshot<br>List | CQuorumSnapshot[] | Required | The snapshots required to reconstruct the quorums built at `h` in heightsLists. Ordered from oldest to newest
