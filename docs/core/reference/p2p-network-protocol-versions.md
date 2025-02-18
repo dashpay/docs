@@ -10,7 +10,7 @@
 
 The table below lists some notable versions of the P2P network protocol, with the most recent versions listed first.
 
-As of Dash Core 22.0, the most recent protocol version is 70235.
+As of Dash Core 22.1.x, the most recent protocol version is 70235.
 
 | Version | Initial Release                    | Major Changes
 |---------|------------------------------------|--------------
@@ -18,7 +18,7 @@ As of Dash Core 22.0, the most recent protocol version is 70235.
 | 70233 | [Dash Core 21.1](https://github.com/dashpay/dash/blob/v21.1.0/doc/release-notes.md) <br> (Aug 2024) | • [Enhanced hard fork update](https://github.com/dashpay/dash/pull/6175)
 | 70232 | [Dash Core 21.0](https://github.com/dashpay/dash/blob/v21.0.0/doc/release-notes.md) <br> (Jul 2024) | • Masternode reward location reallocation<br>• Mainnet spork hardening<br>• Experimental descriptor wallet support
 | 70231 | [Dash Core 20.1](https://github.com/dashpay/dash/blob/v20.1.0/doc/release-notes.md) <br> (Mar 2024) | • HD wallets by default<br>• Legacy InstantSend deprecated (`islock` p2p and inv messages)
-| 70230 | [Dash Core 20.0](https://github.com/dashpay/dash/blob/v20.0.0/doc/release-notes.md) <br> (Nov 2023) | • [DIP 29](https://github.com/dashpay/dips/blob/master/dip-0028.md): ChainLock-based random beacon<br>• [Treasury expansion](https://www.dashcentral.org/p/TREASURY-REALLOCATION-60-20-20)<br>• Sentinel functionality integrated into Core<br>• Asset lock transactions<br>• [Coinbase transaction updates](https://github.com/dashpay/dips/blob/master/dip-0004.md) and changes to [DIP 4](https://github.com/dashpay/dips/blob/master/dip-0004.md)
+| 70230 | [Dash Core 20.0](https://github.com/dashpay/dash/blob/v20.0.0/doc/release-notes.md) <br> (Nov 2023) | • [DIP 29](https://github.com/dashpay/dips/blob/master/dip-0029.md): ChainLock-based random beacon<br>• [Treasury expansion](https://www.dashcentral.org/p/TREASURY-REALLOCATION-60-20-20)<br>• Sentinel functionality integrated into Core<br>• Asset lock transactions<br>• [Coinbase transaction updates](https://github.com/dashpay/dips/blob/master/dip-0004.md) and changes to [DIP 4](https://github.com/dashpay/dips/blob/master/dip-0004.md)
 | 70228 | [Dash Core 19.2.0](https://github.com/dashpay/dash/blob/v19.2.0/doc/release-notes.md) <br> (Jun 2023) | • Store protx version in simplified masternode list entries and use to serialize/deserialize masternode BLS operator keys
 | 70227 | [Dash Core 19.0.0](https://github.com/dashpay/dash/blob/v19.0.0/doc/release-notes.md) <br> (Apr 2023) | • [DIP 28](https://github.com/dashpay/dips/blob/master/dip-0028.md): Evolution masternodes (4000 DASH collateral)<br>• Removed [`reject` message](../reference/p2p-network-deprecated-messages.md#reject)
 | 70224 | Dash Core 18.2.0 <br> (Jan 2023) | • None (CoinJoin bugfix only)
