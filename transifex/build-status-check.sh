@@ -27,7 +27,7 @@ echo $response | jq -c '.results[]' | while read -r translation; do
             echo -e "  \e[1;34m$line\e[0m"  # Highlight in blue
         elif [[ "$line" == *"Status: Finished, Success: false"* ]]; then
             echo -e "  \e[1;93m$line\e[0m"  # Highlight in yellow
-        elif [[ "$line" == *"Status: Installing"* ]]; then
+        elif [[ "$line" == *"Status: Building"* || "$line" == *"Status: Installing"* ]]; then
             echo -e "  \e[1;32m$line\e[0m"  # Highlight in green            
         else
           echo " $line"
