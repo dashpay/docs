@@ -1,35 +1,34 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2024, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
 # Translators:
 # John Theman <Grdash@mail.com>, 2022
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 12:42-0500\n"
+"POT-Creation-Date: 2025-02-19 12:15-0500\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
 "Last-Translator: John Theman <Grdash@mail.com>, 2022\n"
-"Language-Team: Greek (https://app.transifex.com/dash/teams/37570/el/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: el\n"
+"Language-Team: Greek (https://app.transifex.com/dash/teams/37570/el/)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
 
-#: ../../docs/user/wallets/electrum/installation.rst-1
+#: ../../docs/user/wallets/electrum/installation.rst:-1
 msgid ""
 "How to create a new Dash Electrum wallet on Windows, Linux, macOS and "
 "Android"
 msgstr ""
 
-#: ../../docs/user/wallets/electrum/installation.rst-1
-msgid ""
-"dash, mobile, wallet, electrum, android, linux, windows, macos, compile"
+#: ../../docs/user/wallets/electrum/installation.rst:-1
+msgid "dash, mobile, wallet, electrum, android, linux, windows, macos, compile"
 msgstr ""
 
 #: ../../docs/user/wallets/electrum/installation.rst:9
@@ -40,80 +39,143 @@ msgstr "Εγκατάσταση"
 msgid "Download"
 msgstr ""
 
-#: ../../docs/user/wallets/electrum/installation.rst:16
-msgid "New downloads of Electrum are currently unavailable"
+#: ../../docs/user/wallets/electrum/installation.rst:14
+msgid ""
+"Dash Electrum is maintained by Dash Incubator member **pshenmic** and is "
+"released through his GitHub account. Downloads are available from the "
+"official Dash website or directly from GitHub:"
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:17
+msgid "https://www.dash.org/downloads/"
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:18
+msgid "https://github.com/pshenmic/electrum-dash/releases/latest"
 msgstr ""
 
 #: ../../docs/user/wallets/electrum/installation.rst:20
-msgid "Creating a New Wallet"
-msgstr ""
-
-#: ../../docs/user/wallets/electrum/installation.rst:22
 msgid ""
-"Dash Electrum gathers configuration data when run for the first time. For "
-"more on the concepts behind this process, skip to the later sections of this"
-" guide discussing backups, security, and addresses. When setting up Dash "
-"Electrum for the first time, a wizard will guide you through the process of "
-"creating your first wallet. The first screen asks how you would like to "
-"connect to the remote server. Select **Auto connect** and click **Next** to "
-"continue. You will see a notice that no wallet currently exists. Enter a "
-"name for your wallet (or accept the default name) and click **Next** to "
-"create your wallet."
+"You can optionally verify the authenticity of your download by checking "
+"its detached signature against the public key published by pshenmic. Run "
+"the following commands (example for Linux)::"
 msgstr ""
 
-#: ../../docs/user/wallets/electrum/installation.rst:38
-msgid "Selecting the server and naming your first wallet"
+#: ../../docs/user/wallets/electrum/installation.rst:28
+msgid "The output should contain the following line::"
 msgstr ""
 
-#: ../../docs/user/wallets/electrum/installation.rst:40
+#: ../../docs/user/wallets/electrum/installation.rst:33
+msgid "Linux"
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:35
 msgid ""
-"You will be asked what kind of wallet you want to create. Choose between "
-"**Standard wallet**, **Multi-signature wallet** and **Watch Dash "
-"addresses**. If you are unsure, select **Standard wallet** and click "
-"**Next** to continue. You will then be asked how you want to store/recover "
-"the seed. If stored safely, a seed can be used to restore a lost wallet on "
-"another computer. Choose between **Create a new seed**, **I already have a "
-"seed**, **Use public or private keys** or **Use a hardware device**. If you "
-"are using Electrum Dash for the first time and not restoring an existing "
-"wallet, choose **Create a new seed** and click **Next** to continue."
+"Dash Electrum for Linux is available as an AppImage file and as a source "
+"tarball. You can download the package, and run it as follows::"
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:43
+msgid "macOS"
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:45
+msgid ""
+"Simply download and run the DMG file. You may need to grant permission to"
+" install, depending on your security settings. Click through the "
+"installation wizard and run Dash Electrum from your Applications folder "
+"when complete."
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:50
+msgid "Windows"
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:52
+msgid ""
+"Simply download and run the installer file to set up Dash Electrum. You "
+"may need to grant permission to install, depending on your security "
+"settings. Click through the installation wizard and run Dash Electrum "
+"from the Start menu when complete."
 msgstr ""
 
 #: ../../docs/user/wallets/electrum/installation.rst:57
-msgid "Selecting the wallet type and keystore"
+msgid "Creating a New Wallet"
 msgstr ""
 
 #: ../../docs/user/wallets/electrum/installation.rst:59
 msgid ""
-"Electrum Dash will generate your wallet and display the recovery seed. Write"
-" this seed down, ideally on paper and not in an electronic format, and store"
-" it somewhere safe. This seed is the only way you can recover your wallet if"
-" you lose access for any reason. To make sure you have properly saved your "
-"seed, Electrum Dash will ask you to type it in as a confirmation. Type the "
-"words in the correct order and click **Next** to continue."
-msgstr ""
-
-#: ../../docs/user/wallets/electrum/installation.rst:73
-msgid "Generating and confirming the recovery seed"
+"Dash Electrum gathers configuration data when run for the first time. For"
+" more on the concepts behind this process, skip to the later sections of "
+"this guide discussing backups, security, and addresses. When setting up "
+"Dash Electrum for the first time, a wizard will guide you through the "
+"process of creating your first wallet. The first screen asks how you "
+"would like to connect to the remote server. Select **Auto connect** and "
+"click **Next** to continue. You will see a notice that no wallet "
+"currently exists. Enter a name for your wallet (or accept the default "
+"name) and click **Next** to create your wallet."
 msgstr ""
 
 #: ../../docs/user/wallets/electrum/installation.rst:75
-msgid ""
-"A password optionally secures your wallet against unauthorized access. "
-"Adding a memorable, strong password now improves the security of your wallet"
-" by encrypting your seed from the beginning. Skipping encryption at this "
-"point by not selecting a password risks potential theft of funds later, "
-"however unlikely the threat may be. Enter and confirm a password, ensure the"
-" **Encrypt wallet file** checkbox is ticked and click **Next** to continue."
+msgid "Selecting the server and naming your first wallet"
 msgstr ""
 
-#: ../../docs/user/wallets/electrum/installation.rst:86
+#: ../../docs/user/wallets/electrum/installation.rst:77
+msgid ""
+"You will be asked what kind of wallet you want to create. Choose between "
+"**Standard wallet**, **Multi-signature wallet** and **Watch Dash "
+"addresses**. If you are unsure, select **Standard wallet** and click "
+"**Next** to continue. You will then be asked how you want to "
+"store/recover the seed. If stored safely, a seed can be used to restore a"
+" lost wallet on another computer. Choose between **Create a new seed**, "
+"**I already have a seed**, **Use public or private keys** or **Use a "
+"hardware device**. If you are using Electrum Dash for the first time and "
+"not restoring an existing wallet, choose **Create a new seed** and click "
+"**Next** to continue."
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:94
+msgid "Selecting the wallet type and keystore"
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:96
+msgid ""
+"Electrum Dash will generate your wallet and display the recovery seed. "
+"Write this seed down, ideally on paper and not in an electronic format, "
+"and store it somewhere safe. This seed is the only way you can recover "
+"your wallet if you lose access for any reason. To make sure you have "
+"properly saved your seed, Electrum Dash will ask you to type it in as a "
+"confirmation. Type the words in the correct order and click **Next** to "
+"continue."
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:110
+msgid "Generating and confirming the recovery seed"
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:112
+msgid ""
+"A password optionally secures your wallet against unauthorized access. "
+"Adding a memorable, strong password now improves the security of your "
+"wallet by encrypting your seed from the beginning. Skipping encryption at"
+" this point by not selecting a password risks potential theft of funds "
+"later, however unlikely the threat may be. Enter and confirm a password, "
+"ensure the **Encrypt wallet file** checkbox is ticked and click **Next** "
+"to continue."
+msgstr ""
+
+#: ../../docs/user/wallets/electrum/installation.rst:123
 msgid "Entering and confirming a wallet encryption password"
 msgstr ""
 
-#: ../../docs/user/wallets/electrum/installation.rst:88
+#: ../../docs/user/wallets/electrum/installation.rst:125
 msgid "Your Dash Electrum wallet is now set up and ready for use."
 msgstr ""
 
-#: ../../docs/user/wallets/electrum/installation.rst:93
+#: ../../docs/user/wallets/electrum/installation.rst:130
 msgid "Dash Electrum after setup is complete"
 msgstr ""
+
+#~ msgid "New downloads of Electrum are currently unavailable"
+#~ msgstr ""
+
