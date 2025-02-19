@@ -11,10 +11,47 @@ Installation
 Download
 ========
 
-.. note::
+Dash Electrum is maintained by Dash Incubator member **pshenmic** and is released through his GitHub
+account. Downloads are available from the official Dash website or directly from GitHub:
 
-   New downloads of Electrum are currently unavailable
+- https://www.dash.org/downloads/
+- https://github.com/pshenmic/electrum-dash/releases/latest
 
+You can optionally verify the authenticity of your download by checking its detached signature
+against the public key published by pshenmic. Run the following commands (example for Linux)::
+
+  wget https://github.com/pshenmic/electrum-dash/releases/download/4.1.7.7/Dash-Electrum-4.1.7.7-x86_64.AppImage
+  wget https://github.com/pshenmic/electrum-dash/releases/download/4.1.7.7/Dash-Electrum-4.1.7.7-x86_64.AppImage.asc
+  curl https://keybase.io/pshenmic/pgp_keys.asc | gpg --import
+  gpg --verify Dash-Electrum-4.1.7.7-x86_64.AppImage.asc
+
+The output should contain the following line::
+
+  gpg: Good signature from "Mikhail Pshenichnikov <pshenmic@gmail.com>"
+
+Linux
+-----
+
+Dash Electrum for Linux is available as an AppImage file and as a source tarball. You can download
+the package, and run it as follows::
+
+  wget https://github.com/pshenmic/electrum-dash/releases/download/4.1.7.7/Dash-Electrum-4.1.7.7-x86_64.AppImage
+  chmod +x Dash-Electrum-4.1.7.7-x86_64.AppImage
+  ./Dash-Electrum-4.1.7.7-x86_64.AppImage
+
+macOS
+-----
+
+Simply download and run the DMG file. You may need to grant permission to install, depending on your
+security settings. Click through the installation wizard and run Dash Electrum from your
+Applications folder when complete.
+
+Windows
+-------
+
+Simply download and run the installer file to set up Dash Electrum. You may need to grant permission
+to install, depending on your security settings. Click through the installation wizard and run Dash
+Electrum from the Start menu when complete.
 
 Creating a New Wallet
 =====================
