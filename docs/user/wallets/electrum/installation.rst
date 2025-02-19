@@ -32,8 +32,8 @@ The output should contain the following line::
 Linux
 -----
 
-Dash Electrum for Linux is available as an AppImage file and as a source tarball. You can also
-download the official package, and run it from as follows::
+Dash Electrum for Linux is available as an AppImage file and as a source tarball. You can download
+the package, and run it as follows::
 
   wget https://github.com/pshenmic/electrum-dash/releases/download/4.1.7.7/Dash-Electrum-4.1.7.7-x86_64.AppImage
   chmod +x Dash-Electrum-4.1.7.7-x86_64.AppImage
