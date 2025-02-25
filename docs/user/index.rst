@@ -40,15 +40,10 @@ The videos, links and documentation below can help you get started, or
 use the table of contents on the left to find a specific topic of
 interest.
 
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube-nocookie.com/embed/EDC1ioQ46m4?modestbranding=1&rel=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
 .. toctree::
    :maxdepth: 2
    :caption: First Steps
+   :hidden:
 
    introduction/about
    introduction/features
@@ -61,6 +56,7 @@ interest.
 .. toctree::
    :maxdepth: 2
    :caption: Users
+   :hidden:
 
    wallets/index
    earning-spending
@@ -70,6 +66,7 @@ interest.
 .. toctree::
    :maxdepth: 2
    :caption: Network
+   :hidden:
 
    governance/index.rst
    masternodes/index
