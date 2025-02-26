@@ -73,20 +73,6 @@ Disclaimer: This list is provided for informational purposes only. Dash
 Core is not liable for any funds transmitted in error to these
 providers, or for the accuracy of information on this page.
 
-Spend
-  .. image:: img/spend.png
-     :width: 200px
-     :align: right
-     :target: https://www.spend.com
-
-  https://www.spend.com
-
-  Spend offers Simple, Preferred and Black Visa cards accepted at over
-  40 million locations worldwide. Linked with the Spend Wallet, the
-  system allows you to buy or deposit Dash, which is then converted to
-  the appropriate local fiat currency and loaded on the Spend Visa Card
-  for use in purchase and ATM withdrawals.
-
 Crypto.com
   .. image:: img/crypto.png
      :width: 200px
@@ -114,33 +100,6 @@ Change
   commission fees for buying and selling cryptocurrency. Lock your card
   conveniently from the app in case it gets lost or stolen.
 
-2gether
-  .. image:: img/2gether.svg
-     :width: 200px
-     :align: right
-     :target: https://www.2gether.global
-
-  https://www.2gether.global
-
-  2gether is a next generation financial platform that works solely for
-  the benefit of its customers, who are also its owners. A collaborative
-  banking app and cryptocurrency debit card solution are currently
-  available for Eurozone customers.
-
-PolisPay
-  .. image:: img/polispay.png
-     :width: 200px
-     :align: right
-     :target: https://polispay.com
-
-  https://polispay.com
-
-  The PolisPay Card is one of the fastest, easiest ways to turn your
-  Dash into fiat currency. You can use your PolisPay Card for online
-  shopping and at any brick and mortar retailer that accepts MasterCard®
-  debit cards. You can also withdraw cash at any MasterCard®-compatible
-  ATM.
-
 Bitsa
   .. image:: img/bitsa.png
      :width: 200px
@@ -154,34 +113,6 @@ Bitsa
   top it up with redeemable vouchers, bank card, transfer, cash or
   blockchain tokens. Bitsa is a prepaid card topped up using the app,
   and is not linked to any bank account.
-
-FuzeX
-  .. image:: img/fuzex.png
-     :width: 200px
-     :align: right
-     :target: https://fuzex.co
-
-  https://fuzex.co
-
-  The FuzeX Card & FuzeX Wallet strive to offer an all in one payment
-  solution that provides a smarter way to pay. The card offers real-time
-  exchange of cryptocurrency at the time of purchase. The goal is to
-  make paying with cryptocurrency secure, fast and a seamless process
-  for everyday use.
-
-Paycent
-  .. image:: img/paycent.png
-     :width: 200px
-     :align: right
-     :target: https://paycent.com
-
-  https://paycent.com
-
-  Paycent provides Android and iOS wallets that can be funded using both
-  fiat and cryptocurrency. Users can transact with one another within
-  the app, identified by their mobile numbers, or order physical debit
-  cards to spend their balance. Dash is the preferred network partner of
-  Paycent.
 
 SpectroCoin
   .. image:: img/spectrocoin.png
