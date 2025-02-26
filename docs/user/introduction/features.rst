@@ -267,10 +267,10 @@ X11 Hash Algorithm
 ==================
 
 X11 is a widely used hashing algorithm created by Dash core developer
-Evan Duffield. X11’s chained hashing algorithm utilizes a sequence of
+Evan Duffield. X11's chained hashing algorithm utilizes a sequence of
 eleven scientific hashing algorithms for the proof-of-work. This is so
 that the processing distribution is fair and coins will be distributed
-in much the same way Bitcoin’s were originally. X11 was intended to make
+in much the same way Bitcoin's were originally. X11 was intended to make
 ASICs much more difficult to create, thus giving the currency plenty of
 time to develop before mining centralization became a threat. This
 approach was largely successful; as of early 2016, ASICs for X11 now
