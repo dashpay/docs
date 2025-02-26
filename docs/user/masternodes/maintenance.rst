@@ -505,10 +505,6 @@ the Dash network.
 - `Dash.org <https://www.dash.org/>`__ includes a blockchain explorer
   at `explorer.dash.org <https://explorer.dash.org/insight/>`__ and
   `insight.dash.org <https://insight.dash.org/insight/>`__.
-- `Trezor <https://trezor.io/>`__ operates a `blockchain explorer <https
-  ://dash1.trezor.io/>`__ powered by a `Dash fork
-  <https://github.com/dashpay/insight-ui>`__ of insight,
-  an advanced blockchain API tool
 
 Dash Masternode Tool
 --------------------
