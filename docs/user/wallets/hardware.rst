@@ -12,20 +12,92 @@ device while still allowing you to make simple transactions through a
 web interface. Three major manufacturers of hardware wallets currently
 exist, with Dash supported on all of them.
 
+.. _hardware-ledger:
+
+Ledger
+======
+
+.. image:: img/ledger-logo.png
+   :width: 200px
+   :align: right
+
+Founded in 2014, French startup `Ledger <https://www.ledger.com>`_
+markets enterprise and consumer blockchain security solutions, including
+the `Ledger Nano S <https://shop.ledger.com/products/ledger-nano-s>`_
+and upcoming `Ledger Blue <https://shop.ledger.com/products/ledger-blue>`_. 
+Ledger Nano S has supported Dash since November 2016 and firmware
+version 1.2. Follow `these instructions 
+<https://support.ledger.com/hc/en-us/articles/115005308185-Dash-DASH->`_
+to add Dash support to the device.
+
+- Site: https://www.ledger.com
+- Review: https://dashnews.org/ledger-nano-s-review/
+- Shop: https://shop.ledger.com/pages/hardware-wallet
+
+Product video:
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube-nocookie.com/embed/MFLuRLcu61s?modestbranding=1&rel=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+It is also possible to operate a Dash masternode using your Ledger. See
+here for details.
+
+.. _hardware-keepkey:
+
+KeepKey
+=======
+
+.. image:: img/keepkey-logo.png
+   :width: 100px
+   :align: right
+
+The $129 KeepKey hardware wallet features a large screen and 100% open
+source firmware to guarantee the security of your private keys. KeepKey
+has supported Dash since firmware version 4.2.10, released on March 28,
+2017, and added support for InstantSend in firmware version 5.7.2,
+released on September 5, 2018. Follow these instructions to begin using
+Dash on your KeepKey device.
+
+- Site: https://shapeshift.com/keepkey
+- Review: https://coincentral.com/keepkey-wallet-review/
+- Shop: https://keepkey.myshopify.com/
+- Product video: https://vimeo.com/289712840
+
+It is also possible to operate a Dash masternode using your KeepKey. See
+here for details.
+
 .. _hardware-trezor:
 
 Trezor
 ======
+
+.. caution::
+
+   As of February 2025, Trezor Suite `discontinued support for Dash
+   <https://forum.trezor.io/t/bring-back-dash/19329>`_. `Dash Masternode Tool
+   <https://github.com/Bertrand256/dash-masternode-tool/releases/latest>`_ and :ref:`Dash Electrum
+   <dash-electrum-wallet>` can be still be used for Dash transactions, but Trezor advises migrating
+   funds to alternative wallets to ensure continued access and security.
+
+   Unfortunately, Trezor no longer supports Dash on their newest devices (Trezor Safe 3 and 5). Also,
+   their wallet software, Trezor Suite, no longer supports Dash as of February 2025. It is unclear if
+   future firmware updates will impact older devices ability to support Dash.
+
+Overview
+--------
 
 .. image:: img/trezor-logo.png
    :width: 100px
    :align: right
 
 Developed by Czech startup `SatoshiLabs <https://satoshilabs.com>`_, the
-$99 device is essentially a USB dongle designed to add an extra
-authentication layer to all outbound bitcoin transactions. Trezor has
-supported Dash since January 2017 with the release of firmware version
-1.4.2.
+device is essentially a USB dongle designed to add an extra
+authentication layer to all outbound transactions. Trezor began
+supporting Dash in January 2017 with the release of firmware version
+1.4.2, but *their newest devices do* **not** *support Dash*.
 
 By virtue of its design, Trezor can be used to sign transactions on
 'unsafe' computers and is impervious to keyloggers and many other
@@ -56,9 +128,7 @@ Once you have bought your Trezor from https://shop.trezor.io or an
 `authorized reseller <https://trezor.io/resellers/>`_, you will need a
 wallet to use it with. Trezor supports the following Dash wallets:
 
-- `Trezor Wallet <https://wallet.trezor.io>`_ (`documentation
-  <https://doc.satoshilabs.com/trezor-apps/trezorwallet.html>`__)
-- `Dash Electrum Wallet <https://electrum.dash.org>`__
+- :ref:`Dash Electrum Wallet <electrum-installation>`
   (:ref:`documentation <dash-electrum-wallet>`)
 - `Dash Masternode Tool <https://github.com/Bertrand256/dash-masternode-
   tool>`_ (`documentation <https://github.com/Bertrand256/dash-
@@ -189,17 +259,8 @@ see `here <https://blog.trezor.io/passphrase-the-ultimate-protection-for-your-ac
 Changing your PIN
 """""""""""""""""
 
-You can change your Trezor PIN from both the `Trezor wallet
-<https://wallet.trezor.io>`_ and `DMT <https://github.com/Bertrand256
+You can change your Trezor PIN from `DMT <https://github.com/Bertrand256
 /dash-masternode-tool/releases>`_.
-
-**From Trezor:** Go to https://wallet.trezor.io and click the cog icon
-next to your username. Then click **Change PIN**. You will need to
-confirm you want to change your PIN on the hardware device, then enter
-your existing PIN and the new PIN twice.
-
-.. image:: img/trezor-pin.png
-   :width: 300px
 
 **From DMT:** Open DMT and click **Tools > Hardware Wallet
 PIN/Passphrase configuration**. The following window will appear. Click
@@ -213,18 +274,11 @@ hardware device, then enter your existing PIN and the new PIN twice.
 Adding a passphrase
 """""""""""""""""""
 
-You can add a passphrase to your Trezor from both the Trezor wallet and
+You can add a passphrase to your Trezor from
 DMT. Before you add a passphrase, you should be fully aware of how it
 functions as a "25th word" to your seed, and the risks of forgetting
 your passphrase. Note that you do not need to enter a passphrase - blank
 is perfectly acceptable and will reveal your normal wallet.
-
-**From Trezor:** Click **Advanced**, confirm you understand the risks
-and click **Enable passphrase encryption**. This enables a prompt to
-enter a passphrase each time you use your Trezor.
-
-.. image:: img/trezor-passphrase.png
-   :width: 300px
 
 **From DMT:** Open DMT and click **Tools > Hardware Wallet
 PIN/Passphrase configuration**. The following window will appear. Click
@@ -233,34 +287,6 @@ use your Trezor.
 
 .. image:: img/trezor-dmt.png
    :width: 250px
-
-Changing the Homescreen
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Your Trezor allows you to change the homescreen image from the default
-Trezor logo. A range of existing images can be selected, you can
-generate one yourself using the `Trezor Homescreen Editor
-<https://trezor.github.io/homescreen-editor/>`_, or you can create and
-upload your own 128x64px black and white image. To change your
-homescreen image:
-
-#. Go to https://wallet.trezor.io and open your wallet
-#. Click the small cog icon next to your device name
-#. Click the **Homescreen** tab
-#. Select the new homescreen, then click the **Set as homescreen** 
-   button at the top
-#. Confirm the change on the Trezor device
-
-A few sample images are available for Dash:
-
-.. image:: img/trezor-home-1.png
-   :width: 128px
-
-.. image:: img/trezor-home-2.png
-   :width: 128px
-
-.. image:: img/trezor-home-3.png
-   :width: 128px
 
 Storage Suggestions
 ^^^^^^^^^^^^^^^^^^^
@@ -285,56 +311,3 @@ The following materials are required:
 
 .. image:: img/trezor-inside.jpg
    :width: 400px
-
-KeepKey
-=======
-
-.. image:: img/keepkey-logo.png
-   :width: 100px
-   :align: right
-
-The $129 KeepKey hardware wallet features a large screen and 100% open
-source firmware to guarantee the security of your private keys. KeepKey
-has supported Dash since firmware version 4.2.10, released on March 28,
-2017, and added support for InstantSend in firmware version 5.7.2,
-released on September 5, 2018. Follow these instructions to begin using
-Dash on your KeepKey device.
-
-- Site: https://shapeshift.com/keepkey
-- Review: https://coincentral.com/keepkey-wallet-review/
-- Shop: https://keepkey.myshopify.com/
-- Product video: https://vimeo.com/289712840
-
-It is also possible to operate a Dash masternode using your KeepKey. See
-here for details.
-
-Ledger
-======
-
-.. image:: img/ledger-logo.png
-   :width: 200px
-   :align: right
-
-Founded in 2014, French startup `Ledger <https://www.ledger.com>`_
-markets enterprise and consumer blockchain security solutions, including
-the €58 `Ledger Nano S <https://shop.ledger.com/products/ledger-nano-s>`_
-and upcoming `Ledger Blue <https://shop.ledger.com/products/ledger-blue>`_. 
-Ledger Nano S has supported Dash since November 2016 and firmware
-version 1.2. Follow `these instructions 
-<https://support.ledger.com/hc/en-us/articles/115005308185-Dash-DASH->`_
-to add Dash support to the device.
-
-- Site: https://www.ledger.com
-- Review: https://dashnews.org/ledger-nano-s-review/
-- Shop: https://shop.ledger.com/collections/all-products
-
-Product video:
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 1em; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube-nocookie.com/embed/MFLuRLcu61s?modestbranding=1&rel=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
-It is also possible to operate a Dash masternode using your Ledger. See
-here for details.

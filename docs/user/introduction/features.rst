@@ -15,7 +15,7 @@ Specifications
 
 - First block mined at 11PM EST, 18th January 2014
 - No premine
-- X11 hashing algorithm, CPU/GPU/ASIC mining available
+- X11 hashing algorithm, ASIC mining available
 - 2.6 minute block time, 2MB blocks, ~56 transactions per second
 - Block subsidy decreases by 7.14% per year
 - Dark Gravity Wave difficulty adjustment algorithm
@@ -267,10 +267,10 @@ X11 Hash Algorithm
 ==================
 
 X11 is a widely used hashing algorithm created by Dash core developer
-Evan Duffield. X11’s chained hashing algorithm utilizes a sequence of
+Evan Duffield. X11's chained hashing algorithm utilizes a sequence of
 eleven scientific hashing algorithms for the proof-of-work. This is so
 that the processing distribution is fair and coins will be distributed
-in much the same way Bitcoin’s were originally. X11 was intended to make
+in much the same way Bitcoin's were originally. X11 was intended to make
 ASICs much more difficult to create, thus giving the currency plenty of
 time to develop before mining centralization became a threat. This
 approach was largely successful; as of early 2016, ASICs for X11 now
@@ -572,33 +572,6 @@ You can read more about Dash governance in the :ref:`governance` section
 of this documentation.
 
 
-.. _sentinel:
-
-Sentinel
-=========
-
-.. attention::
-
-   Sentinel was deprecated in Dash Core v20.0 when its functionality was
-   integrated into Dash Core.
-
-Introduced in Dash 0.12.1, Sentinel is an autonomous agent for
-persisting, processing and automating Dash governance objects and tasks.
-Sentinel is implemented as a Python application that binds to a local
-version dashd instance on each Dash masternode.
-
-A Governance Object (or "govObject") is a generic structure introduced
-in Dash 0.12.1 to allow for the creation of Budget Proposals and
-Triggers. Class inheritance has been utilized to extend this generic
-object into a "Proposal" object to supplant the current Dash budget
-system.
-
-.. figure:: img/sentinel.png
-   :width: 500px
-
-   Diagram highlighting the relationship between Dash Sentinel and Core
-
-
 .. _fees:
 
 Fees
@@ -682,15 +655,11 @@ behind the scenes. Version 0.13 introduces the foundation of Evolution,
 specifically `DIP2 Special Transactions <https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ 
 and `DIP3 Deterministic Masternode Lists <https://github.com/dashpay/dips/blob/master/dip-0003.md>`__.
 Version 0.14 establishes `DIP6 Long Living Masternode Quorums <https://github.com/dashpay/dips/blob/master/dip-0006.md>`__.
-Expected in late 2019, Dash Core 1.0 will introduce key Evolution
-features such as username-based payments, the world's first
-decentralized API (DAPI) and a decentralized data storage system (Drive)
-based on IPFS.
 
 Included below is our current work on Evolution, that adds many
 components such as:
 
-- **Drive:** A decentralized shared file system for user data that
+- **Drive:** A decentralized database for user data that
   lives on the second tier network
 - **DAPI:** A decentralized API which allows third tier users to access
   the network securely
@@ -707,61 +676,3 @@ components such as:
   present quorums
 - **Social Wallet:** We introduce a social wallet, which allows friends
   lists, grouping of users and shared multisig accounts
-
-Evolution Previews
-------------------
-
-**Dash Dapps - Demoing Community Development on environment**, 17 August
-2020
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube-nocookie.com/embed/yy8gO1C8fTs?modestbranding=1&rel=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
-
-The following videos featuring Dash Founder Evan Duffield and Head of
-UI/UX Development Chuck Williams describe the development process and
-upcoming features of the Dash Evolution platform.
-
-**Evolution Demo #1 - The First Dash DAP**, 16 March 2018
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube-nocookie.com/embed/gbjYhZT2Ulc?modestbranding=1&rel=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
-**Evolution Demo #2 - Mobile Evolution**, 25 April 2018
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube-nocookie.com/embed/EtYax7iz4hU?modestbranding=1&rel=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
-**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube-nocookie.com/embed/ZJVW9iUHqLg?modestbranding=1&rel=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
-**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube-nocookie.com/embed/b-XL_ddWCwQ?modestbranding=1&rel=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
-**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 
-2017
-
-.. raw:: html
-
-    <div style="position: relative; padding-bottom: 56.25%; margin-bottom: 1em; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube-nocookie.com/embed/E65QixSRosw?modestbranding=1&rel=0" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>

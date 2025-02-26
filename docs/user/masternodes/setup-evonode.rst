@@ -100,7 +100,7 @@ within a few minutes.
 .. figure:: img/setup-collateral-trezor.png
   :width: 400px
 
-  Trezor Wallet Receive tab showing successfully received collateral
+  Wallet Receive tab showing successfully received collateral
 
 Once the transaction appears, click the QR code on the right to view the
 transaction on the blockchain. Keep this window open as we complete the
@@ -110,7 +110,7 @@ as shown in the following screenshot.
 .. figure:: img/setup-collateral-blocks.png
   :width: 400px
 
-  Trezor blockchain explorer showing 15 confirmations for collateral transfer
+  Blockchain explorer showing 15 confirmations for collateral transfer
 
 While we are waiting for 15 confirmations, download the latest version of the
 Dash Masternode Tool (DMT) from the `GitHub releases page
@@ -125,7 +125,7 @@ the file. The following window appears.
 Click the third button from the left **Check Dash Network Connection** in the
 top left corner of the main window to verify that the connection is working.
 Then connect your Trezor device and click the next button **Test Hardware Wallet
-Connection** to verify the Trezor connection is working.
+Connection** to verify the hardware wallet connection is working.
 
 .. figure:: img/setup-collateral-connection.png
   :width: 100px
@@ -208,7 +208,7 @@ Option 2: Holding collateral in Dash Core wallet
   .. figure:: img/setup-collateral-blocks.png
     :width: 400px
 
-    Trezor blockchain explorer showing 15 confirmations for collateral transfer
+    Blockchain explorer showing 15 confirmations for collateral transfer
 
 
 .. _evonode-setup-install:

@@ -31,9 +31,6 @@ Community sites
 - https://dashdevs.org
 - https://www.dashcentral.org
 - https://www.dashninja.pl
-- https://dashnews.org
-- https://dashvotetracker.com
-- http://thedashbrain.com
 
 Forums
 ------

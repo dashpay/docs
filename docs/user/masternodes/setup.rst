@@ -91,7 +91,7 @@ soon as the first confirmation arrives, usually within a few minutes.
 .. figure:: img/setup-collateral-trezor.png
    :width: 400px
 
-   Trezor Wallet Receive tab showing successfully received collateral of
+   Wallet Receive tab showing successfully received collateral of
    1000 DASH
 
 Once the transaction appears, click the QR code on the right to view the
@@ -102,7 +102,7 @@ confirmations exist, as shown in the following screenshot.
 .. figure:: img/setup-collateral-blocks.png
    :width: 400px
 
-   Trezor blockchain explorer showing 15 confirmations for collateral
+   Blockchain explorer showing 15 confirmations for collateral
    transfer
 
 While we are waiting for 15 confirmations, download the latest version
@@ -118,8 +118,8 @@ and run the file. The following window appears.
 Click the third button from the left **Check Dash Network Connection**
 in the top left corner of the main window to verify that the connection
 is working. Then connect your Trezor device and click the next button
-**Test Hardware Wallet Connection** to verify the Trezor connection is
-working.
+**Test Hardware Wallet Connection** to verify the hardware wallet connection
+is working.
 
 .. figure:: img/setup-collateral-connection.png
    :width: 100px
@@ -200,7 +200,7 @@ your masternode operator key.
 .. figure:: img/setup-collateral-blocks.png
    :width: 400px
 
-   Trezor blockchain explorer showing 15 confirmations for collateral
+   Blockchain explorer showing 15 confirmations for collateral
    transfer
 
 
