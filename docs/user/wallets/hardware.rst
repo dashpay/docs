@@ -23,7 +23,7 @@ Ledger
 
 Founded in 2014, French startup `Ledger <https://www.ledger.com>`_
 markets enterprise and consumer blockchain security solutions, including
-the €58 `Ledger Nano S <https://shop.ledger.com/products/ledger-nano-s>`_
+the `Ledger Nano S <https://shop.ledger.com/products/ledger-nano-s>`_
 and upcoming `Ledger Blue <https://shop.ledger.com/products/ledger-blue>`_. 
 Ledger Nano S has supported Dash since November 2016 and firmware
 version 1.2. Follow `these instructions 
@@ -32,7 +32,7 @@ to add Dash support to the device.
 
 - Site: https://www.ledger.com
 - Review: https://dashnews.org/ledger-nano-s-review/
-- Shop: https://shop.ledger.com/collections/all-products
+- Shop: https://shop.ledger.com/pages/hardware-wallet
 
 Product video:
 
@@ -128,9 +128,7 @@ Once you have bought your Trezor from https://shop.trezor.io or an
 `authorized reseller <https://trezor.io/resellers/>`_, you will need a
 wallet to use it with. Trezor supports the following Dash wallets:
 
-- `Trezor Wallet <https://wallet.trezor.io>`_ (`documentation
-  <https://doc.satoshilabs.com/trezor-apps/trezorwallet.html>`__)
-- `Dash Electrum Wallet <https://electrum.dash.org>`__
+- :ref:`Dash Electrum Wallet <electrum-installation>`
   (:ref:`documentation <dash-electrum-wallet>`)
 - `Dash Masternode Tool <https://github.com/Bertrand256/dash-masternode-
   tool>`_ (`documentation <https://github.com/Bertrand256/dash-
@@ -261,17 +259,8 @@ see `here <https://blog.trezor.io/passphrase-the-ultimate-protection-for-your-ac
 Changing your PIN
 """""""""""""""""
 
-You can change your Trezor PIN from both the `Trezor wallet
-<https://wallet.trezor.io>`_ and `DMT <https://github.com/Bertrand256
+You can change your Trezor PIN from `DMT <https://github.com/Bertrand256
 /dash-masternode-tool/releases>`_.
-
-**From Trezor:** Go to https://wallet.trezor.io and click the cog icon
-next to your username. Then click **Change PIN**. You will need to
-confirm you want to change your PIN on the hardware device, then enter
-your existing PIN and the new PIN twice.
-
-.. image:: img/trezor-pin.png
-   :width: 300px
 
 **From DMT:** Open DMT and click **Tools > Hardware Wallet
 PIN/Passphrase configuration**. The following window will appear. Click
@@ -285,18 +274,11 @@ hardware device, then enter your existing PIN and the new PIN twice.
 Adding a passphrase
 """""""""""""""""""
 
-You can add a passphrase to your Trezor from both the Trezor wallet and
+You can add a passphrase to your Trezor from
 DMT. Before you add a passphrase, you should be fully aware of how it
 functions as a "25th word" to your seed, and the risks of forgetting
 your passphrase. Note that you do not need to enter a passphrase - blank
 is perfectly acceptable and will reveal your normal wallet.
-
-**From Trezor:** Click **Advanced**, confirm you understand the risks
-and click **Enable passphrase encryption**. This enables a prompt to
-enter a passphrase each time you use your Trezor.
-
-.. image:: img/trezor-passphrase.png
-   :width: 300px
 
 **From DMT:** Open DMT and click **Tools > Hardware Wallet
 PIN/Passphrase configuration**. The following window will appear. Click
@@ -305,34 +287,6 @@ use your Trezor.
 
 .. image:: img/trezor-dmt.png
    :width: 250px
-
-Changing the Homescreen
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Your Trezor allows you to change the homescreen image from the default
-Trezor logo. A range of existing images can be selected, you can
-generate one yourself using the `Trezor Homescreen Editor
-<https://trezor.github.io/homescreen-editor/>`_, or you can create and
-upload your own 128x64px black and white image. To change your
-homescreen image:
-
-#. Go to https://wallet.trezor.io and open your wallet
-#. Click the small cog icon next to your device name
-#. Click the **Homescreen** tab
-#. Select the new homescreen, then click the **Set as homescreen** 
-   button at the top
-#. Confirm the change on the Trezor device
-
-A few sample images are available for Dash:
-
-.. image:: img/trezor-home-1.png
-   :width: 128px
-
-.. image:: img/trezor-home-2.png
-   :width: 128px
-
-.. image:: img/trezor-home-3.png
-   :width: 128px
 
 Storage Suggestions
 ^^^^^^^^^^^^^^^^^^^
