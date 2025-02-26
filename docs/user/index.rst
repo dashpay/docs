@@ -8,10 +8,6 @@
 User Docs
 =========
 
-.. image:: img/dash_logo.png
-   :width: 60 %
-   :align: center
-
 Dash is an open source peer-to-peer cryptocurrency with a strong focus on the payments industry.
 Dash offers a form of money that is portable, inexpensive, divisible and fast. It can be spent
 securely both online and in person with only minimal transaction fees.
