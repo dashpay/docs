@@ -2146,7 +2146,7 @@ Result (truncated):
 
 ### Quorum DKGStatus
 
-The `quorum list` RPC displays the status of the current DKG process.
+The `quorum dkgstatus` RPC displays the status of the current DKG process.
 
 *Parameter #1---detail level*
 
@@ -3132,7 +3132,7 @@ false
 
 ### Quorum MemberOf
 
-The [`quorum` RPC](../api/remote-procedure-calls-evo.md#quorum) checks which quorums the given masternode is a member of.
+The [`quorum memberOf` RPC](../api/remote-procedure-calls-evo.md#quorum-memberof) checks which quorums the given masternode is a member of.
 
 *Parameter #1---proTxHash*
 
