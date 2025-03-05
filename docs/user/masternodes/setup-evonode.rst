@@ -632,7 +632,7 @@ There are two ways to get SSL certificates:
    intermediate/root certificates if present. If a bundle file is present, you need to concatenate it
    with the certificate file::
    
-    cat certificate.crt bundle.crt > full_chain.crt
+    cat certificate.crt bundle.crt > bundle.crt
 
    Verify the validity of the private key and certificate chain by running these commands::
 
