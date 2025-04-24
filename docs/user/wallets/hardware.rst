@@ -78,7 +78,7 @@ Trezor
 
    As of February 2025, Trezor Suite `discontinued support for Dash
    <https://forum.trezor.io/t/bring-back-dash/19329>`_. `Dash Masternode Tool
-   <https://github.com/Bertrand256/dash-masternode-tool/releases/latest>`_ and :ref:`Dash Electrum
+   <https://github.com/Bertrand256/dash-masternode-tool/releases/latest>`__ and :ref:`Dash Electrum
    <dash-electrum-wallet>` can be still be used for Dash transactions, but Trezor advises migrating
    funds to alternative wallets to ensure continued access and security.
 
