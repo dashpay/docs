@@ -192,6 +192,11 @@ html_css_files = [
     'css/pydata-overrides.css',
 ]
 
+# A list of paths that contain extra files not directly related to the documentation, such as
+# robots.txt or .htaccess. Relative paths are taken as relative to the configuration directory. They
+# are copied to the output directory. They will overwrite any existing file of the same name.
+html_extra_path = ['_extra']
+
 # Override to allow text wrap in tables
 # Details: https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
 #html_context = {
