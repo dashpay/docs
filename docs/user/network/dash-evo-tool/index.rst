@@ -468,6 +468,35 @@ See the `DPNS page
 <https://docs.dash.org/projects/platform/en/stable/docs/explanations/dpns.html#voting-details>`_ for
 more voting details.
 
+.. _evo-tool-token:
+
+Token operations
+=================
+
+My Tokens
+---------
+
+The My Tokens screen shows all tokens currently being tracked. Click the **Refresh** button to
+update the screen at any time or **Add Token** to follow additional tokens.
+
+You can view token information and access token-related commands by clicking on a token name to open
+the Token Details screen.
+
+.. figure:: img/token/my-tokens.png
+   :align: center
+   :width: 90%
+
+   My Tokens screen
+
+The Token detail screen shows the balance for each of your identities and provides access to
+token-related actions (e.g., transfer).
+
+.. figure:: img/token/my-tokens-token-detail.png
+   :align: center
+   :width: 90%
+
+   Token detail screen
+
 .. _evo-tool-wallet:
 
 Wallet operations
