@@ -497,6 +497,31 @@ token-related actions (e.g., transfer).
 
    Token detail screen
 
+Search Tokens
+-------------
+
+The Search Tokens screen can be used to search for tokens by the keywords assigned to them by the
+token creator during token registration.
+
+.. figure:: img/token/token-search.png
+   :align: center
+   :width: 90%
+
+   Token search screen
+
+Token Creator
+-------------
+
+The Token Creator screen provides a comprehensive interface for creating and registering tokens on
+Dash Platform. It covers all configurable attributes for a token, ranging from basic supply details
+to advanced control mechanisms and distribution rules.
+
+.. figure:: img/token/token-creator.png
+   :align: center
+   :width: 90%
+
+   Token creator screen
+
 .. _evo-tool-wallet:
 
 Wallet operations
