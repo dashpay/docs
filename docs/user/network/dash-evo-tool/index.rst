@@ -468,6 +468,60 @@ See the `DPNS page
 <https://docs.dash.org/projects/platform/en/stable/docs/explanations/dpns.html#voting-details>`_ for
 more voting details.
 
+.. _evo-tool-token:
+
+Token operations
+=================
+
+My Tokens
+---------
+
+The My Tokens screen shows all tokens currently being tracked. Click the **Refresh** button to
+update the screen at any time or **Add Token** to follow additional tokens.
+
+You can view token information and access token-related commands by clicking on a token name to open
+the Token Details screen.
+
+.. figure:: img/token/my-tokens.png
+   :align: center
+   :width: 90%
+
+   My Tokens screen
+
+The Token detail screen shows the balance for each of your identities and provides access to
+token-related actions (e.g., transfer).
+
+.. figure:: img/token/my-tokens-token-detail.png
+   :align: center
+   :width: 90%
+
+   Token detail screen
+
+Search Tokens
+-------------
+
+The Search Tokens screen can be used to search for tokens by the keywords assigned to them by the
+token creator during token registration.
+
+.. figure:: img/token/token-search.png
+   :align: center
+   :width: 90%
+
+   Token search screen
+
+Token Creator
+-------------
+
+The Token Creator screen provides a comprehensive interface for creating and registering tokens on
+Dash Platform. It covers all configurable attributes for a token, ranging from basic supply details
+to advanced control mechanisms and distribution rules.
+
+.. figure:: img/token/token-creator.png
+   :align: center
+   :width: 90%
+
+   Token creator screen
+
 .. _evo-tool-wallet:
 
 Wallet operations
