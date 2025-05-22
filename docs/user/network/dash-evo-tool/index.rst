@@ -488,14 +488,14 @@ the Token Details screen.
 
    My Tokens screen
 
-The Token detail screen shows the balance for each of your identities and provides access to
+The Token Details screen shows the balance for each of your identities and provides access to
 token-related actions (e.g., transfer).
 
 .. figure:: img/token/my-tokens-token-detail.png
    :align: center
    :width: 90%
 
-   Token detail screen
+   Token details screen
 
 .. note::
 
@@ -566,7 +566,7 @@ The following sections describe the token creator parameters used to configure y
 Identity and Key Selection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Select an identity and associated key to register the token contract:
+Select an identity and an associated key to register the token contract:
 
 - **Identity**: The Dash Platform identity that will own the token contract
 - **Key**: The key from the identity used to sign the registration, including purpose and security
@@ -589,8 +589,8 @@ Token Information
 
 **Supply Parameters**
 
-- **Base Supply**: Number of tokens created at registration.
-- **Max Supply**: Maximum possible token supply.
+- **Base Supply**: Number of tokens created at registration
+- **Max Supply**: Maximum possible token supply
 
 **Keywords**
 
@@ -602,7 +602,7 @@ Advanced Settings (Optional)
 **General Options**
 
 - **Start as paused**: Contract starts paused after creation
-- **Keep history**: Enables historical recording. The advanced settings allow specifying which actions are logged.
+- **Keep history**: Enables historical recording. Advanced settings allow specifying which actions are logged.
 - **Name should be capitalized**: Forces capitalization of token name on display
 - **Decimals**: Number of decimal places for token divisibility
 
@@ -622,7 +622,7 @@ Define which administrative actions are permitted after contract creation:
   +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
   | Rule Preset            | Description                                                                                                                                   |
   +========================+===============================================================================================================================================+
-  | Custom                 | Allows setting all action rules independently for maximum flexibility                                                                         |
+  | Custom                 | Allows setting all action rules independently for maximum flexibility.                                                                         |
   +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
   | Most Restrictive       | No actions are permitted after initialization. All governance and control settings are immutable.                                             |
   |                        | Suitable for tokens that should remain fixed and tamper-proof.                                                                                |
@@ -637,7 +637,7 @@ Define which administrative actions are permitted after contract creation:
   | Advanced Actions       | Grants the ability to perform advanced actions, including freezing and unfreezing balances.                                                   |
   |                        | Minting and burning are also permitted. Suitable for tokens that require moderate administrative control without total override capabilities. |
   +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-  | All Allowed            | Enables all actions                                                                                                                           |
+  | All Allowed            | Enables all actions.                                                                                                                           |
   +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
 - **Manual Mint**: Allow creating additional tokens
@@ -674,16 +674,16 @@ Automated recurring token distributions:
 
 One-time or scheduled future distributions:
 
-- **Enable Pre-Programmed Distribution**: Enables pre-scheduled events.
-- **Add New Distribution Entry**: Create new pre-programmed distribution event.
+- **Enable Pre-Programmed Distribution**: Enables scheduled events
+- **Add New Distribution Entry**: Create new pre-programmed distribution event
 
 Groups (Optional)
 ^^^^^^^^^^^^^^^^^
 
 Define multi-party shared control of the contract:
 
-- **Add New Group**: Create a control group.
-- **Main Control Group Position**: Set primary group responsible for contract ownership and administration.
+- **Add New Group**: Create a control group
+- **Main Control Group Position**: Set primary group responsible for contract ownership and administration
 
 Register and Review
 ^^^^^^^^^^^^^^^^^^^
