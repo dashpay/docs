@@ -1,6 +1,6 @@
 .. meta::
    :description: Description of dash evo tool features and usage
-   :keywords: dash, platform, evonode, masternodes, dash evo tool
+   :keywords: dash, platform, evonode, masternodes, dash evo tool, token
 
 .. _evo-tool:
 
@@ -8,9 +8,10 @@
 Dash Evo Tool
 =============
 
-Dash Evo Tool is an application designed to help you vote on usernames, withdraw evonode credits,
-and complete an expanding list of Platform actions. This guide describes how to download, install,
-and use the Dash Evo Tool.
+Dash Evo Tool is an application designed to help you :ref:`vote on usernames
+<evo-tool-name-voting>`, :ref:`withdraw evonode credits <evo-tool-identity-evo-withdraw>`,
+:ref:`manage tokens <evo-tool-token>`, and complete an expanding list of Platform actions. This
+guide describes how to download, install, and use the Dash Evo Tool.
 
 .. _evo-tool-install:
 
@@ -489,7 +490,7 @@ the Token Details screen.
    My Tokens screen
 
 The Token Details screen shows the balance for each of your identities and provides access to
-token-related actions (e.g., transfer).
+token-related :hoverxref:`actions <evo-tool-token-actions>` (e.g., transfer).
 
 .. figure:: img/token/my-tokens-token-detail.png
    :align: center
@@ -497,10 +498,13 @@ token-related actions (e.g., transfer).
 
    Token details screen
 
+.. _evo-tool-token-actions:
+
 .. note::
 
-   Token actions can only be used when they are enabled by the token's configuration. Enabled
-   actions can only be performed by authorized identities as defined in the token's data contract. 
+   Token actions can only be used when they are enabled by the token's data contract configuration.
+   Enabled actions can only be performed by authorized identities as defined in the token's data
+   contract.
 
 You can complete the following actions using the Dash Evo Tool:
 
@@ -584,7 +588,7 @@ Token Information
 - **Token Name (singular)**: Name for a single unit of the token
 - **Token Name (plural)**: Name for multiple units
 - **Language**: Localized language for token naming
-- **Searchable**: Whether this token will appear in token search queries
+- **Add singular name to keywords**: Whether the token name will appear in token search queries
 - **Description**: Short (max 100 characters) description of the token
 
 **Supply Parameters**
@@ -594,7 +598,7 @@ Token Information
 
 **Keywords**
 
-- **Contract Keywords**: Comma-separated tags for categorization.
+- **Contract Keywords**: Comma-separated tags for categorization and querying
 
 Advanced Settings (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -617,29 +621,6 @@ Define which administrative actions are permitted after contract creation:
 
    Token creator action rules
 
-- **Preset**: Select a pre-defined action template or create a custom configuration
-  
-  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-  | Rule Preset            | Description                                                                                                                                   |
-  +========================+===============================================================================================================================================+
-  | Custom                 | Allows setting all action rules independently for maximum flexibility.                                                                         |
-  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-  | Most Restrictive       | No actions are permitted after initialization. All governance and control settings are immutable.                                             |
-  |                        | Suitable for tokens that should remain fixed and tamper-proof.                                                                                |
-  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-  | Only Emergency Action  | Only emergency actions (e.g., pausing the token) are permitted.                                                                               |
-  |                        | Minting, burning, and advanced operations (such as freezing) are disallowed.                                                                  |
-  |                        | This preset allows minimal control for critical situations without risking token supply or ownership manipulation.                            |
-  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-  | Minting and Burning    | Allows minting and burning operations, but not advanced features such as freezing.                                                            |
-  |                        | Enables supply management without enabling full administrative capabilities.                                                                  |
-  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-  | Advanced Actions       | Grants the ability to perform advanced actions, including freezing and unfreezing balances.                                                   |
-  |                        | Minting and burning are also permitted. Suitable for tokens that require moderate administrative control without total override capabilities. |
-  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-  | All Allowed            | Enables all actions.                                                                                                                           |
-  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-
 - **Manual Mint**: Allow creating additional tokens
 - **Manual Burn**: Allow destroying tokens
 - **Freeze**: Freeze balances of individual addresses
@@ -648,6 +629,36 @@ Define which administrative actions are permitted after contract creation:
 - **Max Supply Change**: Allow changes to the maximum supply
 - **Conversions Change**: Allow changes to conversion rates
 - **Main Control Group Change**: Allow changes to the contract's control group
+
+**Presets**
+
+The Dash Evo Tool provides several pre-defined action templates to simplify token configuration:
+  
+  +----------------------+------------------------------------------------------------------------------+
+  | Rule Preset          | Description                                                                  |
+  +======================+==============================================================================+
+  | Custom               | Allows setting all action rules independently for maximum flexibility.       |
+  +----------------------+------------------------------------------------------------------------------+
+  | Most Restrictive     | No actions are permitted after initialization.                               |
+  |                      | All governance and control settings are immutable.                           |
+  |                      | Suitable for tokens that should remain fixed and tamper-proof.               |
+  +----------------------+------------------------------------------------------------------------------+
+  | Only Emergency       | Only emergency actions (e.g., pausing the token) are permitted.              |
+  | Action               | Minting, burning, and advanced operations (such as freezing) are disallowed. |
+  |                      | This preset allows minimal control for critical situations without risking   |
+  |                      | token supply or ownership manipulation.                                      |
+  +----------------------+------------------------------------------------------------------------------+
+  | Minting and Burning  | Allows minting and burning operations, but not advanced features such as     |
+  |                      | freezing. Enables supply management without enabling full administrative     |
+  |                      | capabilities.                                                                |
+  +----------------------+------------------------------------------------------------------------------+
+  | Advanced Actions     | Grants the ability to perform advanced actions, including freezing and       |
+  |                      | unfreezing balances. Minting and burning are also permitted. Suitable for    |
+  |                      | tokens that require moderate administrative control without total override   |
+  |                      | capabilities.                                                                |
+  +----------------------+------------------------------------------------------------------------------+
+  | All Allowed          | Enables all actions.                                                         |
+  +----------------------+------------------------------------------------------------------------------+
 
 Distribution Options
 ^^^^^^^^^^^^^^^^^^^^
@@ -688,8 +699,8 @@ Define multi-party shared control of the contract:
 Register and Review
 ^^^^^^^^^^^^^^^^^^^
 
-- **Register Token Contract**: Submit and register the token contract on Dash Platform.
-- **View JSON**: View full contract schema prior to registration.
+- **Register Token Contract**: Submit and register the token contract on Dash Platfor
+- **View JSON**: View full contract schema prior to registration
 
 .. _evo-tool-wallet:
 
