@@ -497,6 +497,43 @@ token-related actions (e.g., transfer).
 
    Token detail screen
 
+.. note::
+
+   Token actions can only be used when they are enabled by the token's configuration. Enabled
+   actions can only be performed by authorized identities as defined in the token's data contract. 
+
+You can complete the following actions using the Dash Evo Tool:
+
++---------------+--------------------------------------------------------------+
+| Action        | Description                                                  |
++===============+==============================================================+
+| Transfer      | Transfer tokens to another identity                          |
++---------------+--------------------------------------------------------------+
+| Claim         | Redeem or withdraw available tokens (e.g., from distribution)|
++---------------+--------------------------------------------------------------+
+| Mint          | Create new tokens and add them to the total supply           |
++---------------+--------------------------------------------------------------+
+| Burn          | Permanently remove tokens from circulation                   |
++---------------+--------------------------------------------------------------+
+| Freeze        | Temporarily disable token transfers for a specific identity  |
++---------------+--------------------------------------------------------------+
+| Destroy       | Permanently eliminate frozen tokens for a specific identity  |
++---------------+--------------------------------------------------------------+
+| Unfreeze      | Re-enable transfers for a previously frozen identity         |
++---------------+--------------------------------------------------------------+
+| Pause         | Halt all token operations temporarily                        |
++---------------+--------------------------------------------------------------+
+| Resume        | Reactivate operations after a pause                          |
++---------------+--------------------------------------------------------------+
+| View Claims   | Display information about completed token claims             |
++---------------+--------------------------------------------------------------+
+| Update Config | Modify token configuration settings                          |
++---------------+--------------------------------------------------------------+
+| Purchase      | Buy tokens that have set a price                             |
++---------------+--------------------------------------------------------------+
+| Set Price     | Define or update the price accepted for the token            |
++---------------+--------------------------------------------------------------+
+
 Search Tokens
 -------------
 
