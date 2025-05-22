@@ -546,11 +546,13 @@ token creator during token registration.
 
    Token search screen
 
+.. _evo-tool-token-creator:
+
 Token Creator
 -------------
 
 The Token Creator screen provides a comprehensive interface for creating and registering tokens on
-Dash Platform. It covers all configurable attributes for a token, ranging from basic supply details
+Dash Platform. It covers all configurable token attributes, ranging from basic supply details
 to advanced control mechanisms and distribution rules.
 
 .. figure:: img/token/token-creator.png
@@ -558,6 +560,136 @@ to advanced control mechanisms and distribution rules.
    :width: 90%
 
    Token creator screen
+
+The following sections describe the token creator parameters used to configure your token.
+
+Identity and Key Selection
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Select an identity and associated key to register the token contract:
+
+- **Identity**: The Dash Platform identity that will own the token contract
+- **Key**: The key from the identity used to sign the registration, including purpose and security
+  level
+
+.. note::
+
+   Only valid identity/key pairs are permitted to register token contracts.
+
+Token Information
+^^^^^^^^^^^^^^^^^
+
+**Name and Metadata**
+
+- **Token Name (singular)**: Name for a single unit of the token
+- **Token Name (plural)**: Name for multiple units
+- **Language**: Localized language for token naming
+- **Searchable**: Whether this token will appear in token search queries
+- **Description**: Short (max 100 characters) description of the token
+
+**Supply Parameters**
+
+- **Base Supply**: Number of tokens created at registration.
+- **Max Supply**: Maximum possible token supply.
+
+**Keywords**
+
+- **Contract Keywords**: Comma-separated tags for categorization.
+
+Advanced Settings (Optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**General Options**
+
+- **Start as paused**: Contract starts paused after creation
+- **Keep history**: Enables historical recording. The advanced settings allow specifying which actions are logged.
+- **Name should be capitalized**: Forces capitalization of token name on display
+- **Decimals**: Number of decimal places for token divisibility
+
+Action Rules
+^^^^^^^^^^^^
+
+Define which administrative actions are permitted after contract creation:
+
+.. figure:: img/token/token-creator-action-rules.png
+   :align: center
+   :width: 90%
+
+   Token creator action rules
+
+- **Preset**: Select a pre-defined action template or create a custom configuration
+  
+  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+  | Rule Preset            | Description                                                                                                                                   |
+  +========================+===============================================================================================================================================+
+  | Custom                 | Allows setting all action rules independently for maximum flexibility                                                                         |
+  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+  | Most Restrictive       | No actions are permitted after initialization. All governance and control settings are immutable.                                             |
+  |                        | Suitable for tokens that should remain fixed and tamper-proof.                                                                                |
+  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+  | Only Emergency Action  | Only emergency actions (e.g., pausing the token) are permitted.                                                                               |
+  |                        | Minting, burning, and advanced operations (such as freezing) are disallowed.                                                                  |
+  |                        | This preset allows minimal control for critical situations without risking token supply or ownership manipulation.                            |
+  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+  | Minting and Burning    | Allows minting and burning operations, but not advanced features such as freezing.                                                            |
+  |                        | Enables supply management without enabling full administrative capabilities.                                                                  |
+  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+  | Advanced Actions       | Grants the ability to perform advanced actions, including freezing and unfreezing balances.                                                   |
+  |                        | Minting and burning are also permitted. Suitable for tokens that require moderate administrative control without total override capabilities. |
+  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+  | All Allowed            | Enables all actions                                                                                                                           |
+  +------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+
+- **Manual Mint**: Allow creating additional tokens
+- **Manual Burn**: Allow destroying tokens
+- **Freeze**: Freeze balances of individual addresses
+- **Destroy Frozen Funds**: Destroy frozen balances
+- **Emergency Action**: Permit emergency actions
+- **Max Supply Change**: Allow changes to the maximum supply
+- **Conversions Change**: Allow changes to conversion rates
+- **Main Control Group Change**: Allow changes to the contract's control group
+
+Distribution Options
+^^^^^^^^^^^^^^^^^^^^
+
+Define token distribution using perpetual and/or pre-programmed options:
+
+.. figure:: img/token/token-creator-distribution.png
+   :align: center
+   :width: 90%
+
+   Token creator distribution
+
+**Perpetual Distribution**
+
+Automated recurring token distributions:
+
+- **Enable**: Activates automated distribution
+- **Type**: Distribution trigger type (e.g., ``BlockBased``)
+- **Distributes every (interval)**: Block, epoch, or time-based interval between distribution events
+- **Function**: Distribution model (e.g., ``FixedAmount`` per interval)
+- **Recipient**: Identity receiving distributed tokens
+
+**Pre-Programmed Distribution**
+
+One-time or scheduled future distributions:
+
+- **Enable Pre-Programmed Distribution**: Enables pre-scheduled events.
+- **Add New Distribution Entry**: Create new pre-programmed distribution event.
+
+Groups (Optional)
+^^^^^^^^^^^^^^^^^
+
+Define multi-party shared control of the contract:
+
+- **Add New Group**: Create a control group.
+- **Main Control Group Position**: Set primary group responsible for contract ownership and administration.
+
+Register and Review
+^^^^^^^^^^^^^^^^^^^
+
+- **Register Token Contract**: Submit and register the token contract on Dash Platform.
+- **View JSON**: View full contract schema prior to registration.
 
 .. _evo-tool-wallet:
 
