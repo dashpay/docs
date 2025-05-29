@@ -702,6 +702,30 @@ Register and Review
 - **Register Token Contract**: Submit and register the token contract on Dash Platfor
 - **View JSON**: View full contract schema prior to registration
 
+Group Actions
+-------------
+
+The Group Actions screen allows querying group action requests. Select a contract and an identity,
+then click **Fetch Group Actions** to see all related group actions request.
+
+Click the **Take Action** button to open the approval screen for a specific request.
+
+.. figure:: img/token/token-group-actions-main.png
+   :align: center
+   :width: 90%
+
+   Group Actions screen
+
+On approval screen, select the key to sign the request. Then, click the **Sign <Action>** button.
+When the confirmation screen opens, confirm that the action details are correct. Finally, click
+**Confirm** to complete your approval of the request.
+
+.. figure:: img/token/token-group-actions-mint-confirm-2.png
+   :align: center
+   :width: 90%
+
+   Group Actions Approval screen
+
 .. _evo-tool-wallet:
 
 Wallet operations
