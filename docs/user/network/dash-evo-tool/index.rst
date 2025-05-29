@@ -500,6 +500,9 @@ token-related :hoverxref:`actions <evo-tool-token-actions>` (e.g., transfer).
 
 .. _evo-tool-token-actions:
 
+Token actions
+^^^^^^^^^^^^^
+
 .. note::
 
    Token actions can only be used when they are enabled by the token's data contract configuration.
@@ -537,6 +540,27 @@ You can complete the following actions using the Dash Evo Tool:
 +---------------+--------------------------------------------------------------+
 | Set Price     | Define or update the price accepted for the token            |
 +---------------+--------------------------------------------------------------+
+
+.. tab-set::
+  .. tab-item:: Example transfer action
+
+    .. figure:: img/token/token-actions-transfer.png
+      :align: center
+      :width: 90%
+
+      Initiate a transfer action
+
+  .. tab-item:: Example group mint action
+
+    For tokens configured to use :ref:`groups <evo-tool-token-group-actions>` for multi-party
+    control, a message is displayed indicating the requirement for other group members to sign off
+    on the request.
+
+    .. figure:: img/token/token-actions-mint-group.png
+      :align: center
+      :width: 90%
+
+      Initiate a minting group action
 
 Search Tokens
 -------------
@@ -699,8 +723,10 @@ Define multi-party shared control of the contract:
 Register and Review
 ^^^^^^^^^^^^^^^^^^^
 
-- **Register Token Contract**: Submit and register the token contract on Dash Platfor
+- **Register Token Contract**: Submit and register the token contract on Dash Platform
 - **View JSON**: View full contract schema prior to registration
+
+.. _evo-tool-token-group-actions:
 
 Group Actions
 -------------
