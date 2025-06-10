@@ -103,6 +103,12 @@ Linux               /home/<user>/.config/dash-evo-tool/
 Running the application
 =======================
 
+.. note::
+
+   On some macOS devices, you will need to approve the app in your security settings using the
+   process described in `Safely open apps on your Mac
+   <https://support.apple.com/en-us/102445#openanyway>`__.
+
 Once the ``.env`` file is configured, launch the Dash Evo Tool by double-clicking the file named
 ``dash-evo-tool``.
 
