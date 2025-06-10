@@ -37,51 +37,55 @@ Operating System, then unzip the downloaded file:
 Configuration
 =============
 
-.. tip::
-   
-   The Dash Evo Tool includes a configuration file that will work without modification. Skip the
-   steps below *unless you have a custom Dash Core configuration that you want to continue using.*
-   
+The Dash Evo Tool includes a configuration file that will work without modification. *If you have a
+custom Dash Core config file that you want to continue using*, expand the dropdown below for
+advanced configuration details.
+
+.. dropdown:: Advanced configuration - using a custom Dash Core config
+
+  .. note::
+    
    The default location of the ``dash.conf`` file can be found in the :ref:`Dash Core documentation
    <dashcore-rpc>`.
 
-1. Open the directory where the download was unzipped.
-2. Open the ``.env`` file (you may need to show hidden files to see it). For the network you plan to
-   connect to, make the following changes. Replace the ``*`` with the network name (MAINNET or
-   TESTNET):
 
-   * Update ``*_CORE_RPC_USER`` to match the ``rpcuser`` value from your Dash Core dash.conf file.
-   * Update ``*_CORE_RPC_PASSWORD`` to match the ``rpcpassword`` value from your Dash Core dash.conf
-     file.
-   * If your dash.conf includes ``rpcallowip``, update ``*_CORE_HOST`` with that IP address.
-   * If your dash.conf includes ``rpcport``, update ``*_CORE_RPC_PORT`` with that port.
-3. Enable ZMQ by adding the following lines to your dash.conf file:
+  1. Open the directory where the download was unzipped.
+  2. Open the ``.env`` file (you may need to show hidden files to see it). For the network you plan to
+     connect to, make the following changes. Replace the ``*`` with the network name (MAINNET or
+     TESTNET):
 
-   .. tab-set::
-      .. tab-item:: Mainnet ZMQ setup
+     * Update ``*_CORE_RPC_USER`` to match the ``rpcuser`` value from your Dash Core dash.conf file.
+     * Update ``*_CORE_RPC_PASSWORD`` to match the ``rpcpassword`` value from your Dash Core dash.conf
+       file.
+     * If your dash.conf includes ``rpcallowip``, update ``*_CORE_HOST`` with that IP address.
+     * If your dash.conf includes ``rpcport``, update ``*_CORE_RPC_PORT`` with that port.
+  3. Enable ZMQ by adding the following lines to your dash.conf file:
 
-         .. code-block:: ini
+     .. tab-set::
+        .. tab-item:: Mainnet ZMQ setup
 
-            # Dash Evo Tool ZMQ config - mainnet
-            zmqpubhashchainlock=tcp://0.0.0.0:23708
-            zmqpubrawtxlocksig=tcp://0.0.0.0:23708
+           .. code-block:: ini
 
-      .. tab-item:: Testnet ZMQ setup
-   
-         .. code-block:: ini
-      
-            # Place under the [test] section
-            # Dash Evo Tool ZMQ config - testnet
-            zmqpubhashchainlock=tcp://0.0.0.0:23709
-            zmqpubrawtxlocksig=tcp://0.0.0.0:23709
+              # Dash Evo Tool ZMQ config - mainnet
+              zmqpubhashchainlock=tcp://0.0.0.0:23708
+              zmqpubrawtxlocksig=tcp://0.0.0.0:23708
 
-4. At a minimum, the following values must be defined for RPC access to be enabled:
+        .. tab-item:: Testnet ZMQ setup
+     
+           .. code-block:: ini
+        
+              # Place under the [test] section
+              # Dash Evo Tool ZMQ config - testnet
+              zmqpubhashchainlock=tcp://0.0.0.0:23709
+              zmqpubrawtxlocksig=tcp://0.0.0.0:23709
 
-   .. code-block:: ini
+  4. At a minimum, the following values must be defined for RPC access to be enabled:
 
-      server=1
-      rpcuser=<some_user_name>
-      rpcpassword=<some_password>
+     .. code-block:: ini
+
+        server=1
+        rpcuser=<some_user_name>
+        rpcpassword=<some_password>
 
 Updating the env file
 ---------------------
