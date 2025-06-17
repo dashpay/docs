@@ -784,7 +784,7 @@ from the wallet screen.
 .. attention::
 
    Since this tool adds watching-only addresses to Dash Core when creating identities, it is
-   recommended to close all existing Dash Core wallets and :ref:`create a new, empty wallet
+   recommended to close all existing Dash Core wallets and :ref:`create a new wallet
    <dashcore-installation-macos-create-wallet>` for the Dash Evo Tool. Also, make sure to
    :ref:`backup your Dash Core wallet <dashcore-backup>`.
 
