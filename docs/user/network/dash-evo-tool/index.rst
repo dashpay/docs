@@ -134,8 +134,8 @@ Selection screen and click the checkbox in the Select column for the desired net
 
 .. note::
 
-  If you have Dash Core installed in a non-standard location, use the advanced settings to specify
-  where to find it.
+  If you have Dash Core installed in a non-standard location or want to use a custom dash.conf file,
+  configure those options in the advanced settings.
 
 .. tab-set::
   .. tab-item:: Network selection
