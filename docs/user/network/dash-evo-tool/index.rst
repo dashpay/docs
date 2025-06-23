@@ -246,7 +246,15 @@ screen.
    Main identity screen
 
 On the create identity screen, leave the first two options set to the default and select the funding
-method. Then, send the requested amount of DASH to the provided address.
+method.
+
+.. figure:: img/identity/create-options.png
+   :align: center
+   :width: 90%
+
+   Identity create options
+
+Then, choose your funding method and send the requested amount of DASH to the provided address.
 
 .. figure:: img/identity/create-await-funds.png
    :align: center
@@ -254,7 +262,8 @@ method. Then, send the requested amount of DASH to the provided address.
 
    Waiting for funds
 
-The status will change from "Waiting for funds" to "Waiting for Platform acknowledgement" once the
+The status will change from "Waiting for funds" to "Waiting for Core Chain to produce proof of
+transfer of funds". Then, the status will change to "Waiting for Platform acknowledgement" once the
 funds have been received and the identity registration process has started.
 
 .. figure:: img/identity/create-await-platform.png
@@ -277,7 +286,7 @@ Once the identity has been registered, you can choose to return to the identity 
    :align: center
    :width: 90%
 
-   Identity screen with an identity loaded
+   Identity screen with the new identity loaded
 
 .. _evo-tool-identity-top-up:
 
@@ -290,14 +299,14 @@ Top up identity
    <evo-tool-wallet-create>`.
 
 Your identity's credit balance will decrease as you use applications on Platform. You can increase
-your balance by doing and identity top up. On the main identity screen, click the **Top up** button
-for the identity you want to add credits to.
+your balance by doing an identity top up. On the main identity screen, click the **Actions** button
+for the identity you want to add credits to, then click **Top up**.
 
-.. figure:: img/identity/main-new-identity.png
+.. figure:: img/identity/actions-menu.png
    :align: center
    :width: 90%
 
-   Identity screen
+   Identity actions menu
 
 On the top up identity screen, select the funding method and funding amount. Then, click **Top Up
 Identity** to continue.
