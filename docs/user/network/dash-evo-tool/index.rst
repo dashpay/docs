@@ -179,7 +179,7 @@ screen.
    :align: center
    :width: 90%
 
-   Identity screen with no loaded identities
+   Main identity screen
 
 Some identity types require different information. Use the **Identity Type** dropdown menu to select
 the type you want to add. In this example, an evonode identity is being added.
@@ -243,7 +243,7 @@ screen.
    :align: center
    :width: 90%
 
-   Identity screen with no loaded identities
+   Main identity screen
 
 On the create identity screen, leave the first two options set to the default and select the funding
 method. Then, send the requested amount of DASH to the provided address.
