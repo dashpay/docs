@@ -59,7 +59,6 @@ Faucets
 -------
 
 - https://faucet.testnet.networks.dash.org - by Dash Core Group
-- http://faucet.test.dash.crowdnode.io - by CrowdNode
 
 Explorers
 ---------
