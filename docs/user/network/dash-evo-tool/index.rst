@@ -334,13 +334,13 @@ Transfer credits
 ----------------
 
 You can transfer credits to another identity by providing the identity's ID. On the main identity
-screen, click the **Transfer** button for the identity sending the credits.
+screen, click the **Actions** button for the identity sending the credits, then click **Transfer**.
 
-.. figure:: img/identity/main-transfer.png
+.. figure:: img/identity/actions-menu.png
    :align: center
    :width: 90%
 
-   Identity screen
+   Identity actions menu
 
 On the transfer screen, set the amount and the identity ID to receive the transferred credits. Then,
 click **Transfer** to continue.
@@ -369,17 +369,15 @@ Evonode withdrawals
 
 .. note::
 
-  Withdrawal requests enter a queue that is currently processed more slowly than intended. Depending
-  on the timing of the withdrawal request, it may take up to 18 hours to complete. 
-  
-  For security, there is also a limit on how much can be withdrawn from Platform daily. If
-  withdrawal requests hit the daily limit, they will remain in the queue longer. For details, see
-  this `DCG development update
+  Withdrawal requests enter a queue for processing. For security, there is a limit on how much can
+  be withdrawn from Platform daily. If withdrawal requests hit the daily limit, they will remain in
+  the queue longer. For details, see this `DCG development update
   <https://www.youtube.com/live/rc_avHHqG6E?si=ETv0yX-1b3odCU8F&t=599>`_.
 
-From the identity main screen, click the **Withdraw** button for an identity.
+From the identity main screen,  click the **Actions** button for the identity requesting a
+withdrawal, then click **Withdraw**.
 
-.. figure:: img/identity/withdraw.png
+.. figure:: img/identity/actions-menu.png
    :align: center
    :width: 90%
 
@@ -388,11 +386,6 @@ From the identity main screen, click the **Withdraw** button for an identity.
 On the withdrawal screen, select the key to sign the withdrawal. Selecting the owner key is
 recommended since this will direct the withdrawal to the payout address. Next, set the amount to
 withdraw.
-
-.. note::
-
-  The **Max** button currently has a bug so you may need to manually adjust the amount if you use
-  that button.
 
 Click **Withdraw** after entering the information.
 
