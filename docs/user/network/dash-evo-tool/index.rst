@@ -457,25 +457,56 @@ button to update the screen at any time.
   Voting can only be done by masternodes and evonodes, and each node can only modify its vote four times.
   See the :ref:`load identity section <evo-tool-identity-load>` for instructions on importing your keys.
 
+To vote for a contestant, click on an entry in the Contestants column. You can also vote to Lock the
+name or Abstain from voting by clicking the value in those columns. Vote for multiple name contests
+simultaneously by making several selections.
+
+Once you have made selections for all contests you want to vote on, click the **Cast/Schedule
+Votes** button to open the voting screen. There you can chose to cast your votes immediately or
+schedule them for later.
+
 .. figure:: img/voting/main-contested-name.png
    :align: center
    :width: 90%
 
    Voting screen
 
-To vote for a contestant, click on an entry in the Contestants column. You can also vote to Lock the
-name or Abstain by clicking the value in those columns. You will be prompted to load an evonode or
-masternode identity if you have not already done so.
+Click **Apply Votes** after determining how to vote for each selected contest.
 
-After clicking one of the contestants, vote for that identity to receive the name by clicking one of
-your specific identities on the Vote Confirmation screen. Click **All** to vote with all your loaded
-identities simultaneously.
+.. tab-set::
+   
+   .. tab-item:: Cast vote
 
-.. figure:: img/voting/confirm-vote.png
+      .. figure:: img/voting/vote-now.png
+         :align: center
+         :width: 90%
+
+         Cast vote(s) immediately
+
+   .. tab-item:: Schedule vote
+
+      .. note::
+
+         The Dash Evo Tool must be running and connected for scheduled votes to execute at the
+         planned time.
+
+      .. figure:: img/voting/vote-schedule.png
+         :align: center
+         :width: 90%
+
+         Schedule vote(s) for later
+
+Scheduled votes
+---------------
+
+Click **Scheduled votes** to view a list of any pending scheduled votes. Pending votes can be
+canceled by clicking the **Remove** button. 
+
+.. figure:: img/voting/scheduled-votes.png
    :align: center
    :width: 90%
 
-   Vote confirmation screen
+   Scheduled votes screen
 
 See the `DPNS page
 <https://docs.dash.org/projects/platform/en/stable/docs/explanations/dpns.html#voting-details>`_ for
