@@ -790,7 +790,7 @@ from the wallet screen.
    <dashcore-installation-macos-create-wallet>` for the Dash Evo Tool. Also, make sure to
    :ref:`backup your Dash Core wallet <dashcore-backup>`.
 
-Click **Add Wallet** to create a new wallet.
+Click **Create Wallet** to create a new wallet.
 
 .. figure:: img/wallet/wallet-main.png
    :align: center
@@ -799,13 +799,18 @@ Click **Add Wallet** to create a new wallet.
    Wallet screen
 
 After creating extra randomness with the mouse, select your preferred language and click
-**Generate** to display you passphrase. Write it down and store it securely, then click the checkbox
-in step 3 to confirm.
+**Generate** to display you passphrase. Write it down and store it securely.
 
-Next, enter a wallet name and optionally add a password before clicking **Save Wallet** to store the
-wallet.
+.. figure:: img/wallet/wallet-create-seed.png
+   :align: center
+   :width: 90%
 
-.. figure:: img/wallet/wallet-create-all-fields.png
+   Wallet create screen
+
+Click the checkbox in step 3 to confirm you have saved the passphrase. Next, enter a wallet name and
+optionally add a password before clicking **Save Wallet** to store the wallet.
+
+.. figure:: img/wallet/wallet-create-name.png
    :align: center
    :width: 90%
 
