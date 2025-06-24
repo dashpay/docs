@@ -16,7 +16,6 @@ When run with no arguments, all Dash Core programs default to Dash's main networ
 To use testnet, use the argument `-testnet` with `dash-cli`, `dashd` or `dash-qt` or add `testnet=1` to your `dash.conf` file as [described earlier](../examples/configuration-file.md).  To get free duffs for testing, check the faucets listed below. Some are community supported and due to potentially frequent Testnet changes, one or more of them may be unavailable at a given time:
 
 * [Testnet Faucet - Dash Core Group](https://testnet-faucet.dash.org/)
-* [Testnet Faucet - Crowdnode.io](http://faucet.test.dash.crowdnode.io/)
 
 Testnet is a public resource provided for free by Dash Core Group and members of the community, so please don't abuse it.
 
