@@ -557,7 +557,7 @@ Click **My Usernames** to view a list of usernames owned by your identities.
 Token operations
 =================
 
-My Tokens
+My tokens
 ---------
 
 The My Tokens screen shows all tokens currently being tracked. Click the **Refresh** button to
@@ -645,11 +645,11 @@ You can complete the following actions using the Dash Evo Tool:
 
       Initiate a minting group action
 
-Search Tokens
+Search tokens
 -------------
 
-The Search Tokens screen can be used to search for tokens by the keywords assigned to them by the
-token creator during token registration.
+The Search Tokens screen enables searching for tokens by the keywords assigned to them by the token
+creator during token registration.
 
 .. figure:: img/token/token-search.png
    :align: center
@@ -811,7 +811,7 @@ Register and Review
 
 .. _evo-tool-token-group-actions:
 
-Group Actions
+Group actions
 -------------
 
 The Group Actions screen allows querying group action requests. Select a contract and an identity,
