@@ -789,7 +789,7 @@ On approval screen, select the key to sign the request. Then, click the **Sign <
 When the confirmation screen opens, confirm that the action details are correct. Finally, click
 **Confirm** to complete your approval of the request.
 
-.. figure:: img/token/token-group-actions-mint-confirm-2.png
+.. figure:: img/token/token-group-actions-mint-confirm.png
    :align: center
    :width: 90%
 
