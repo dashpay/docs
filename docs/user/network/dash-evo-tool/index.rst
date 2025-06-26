@@ -496,6 +496,8 @@ Click **Apply Votes** after determining how to vote for each selected contest.
 
          Schedule vote(s) for later
 
+.. _evo-tool-name-scheduled-votes:
+
 Scheduled votes
 ---------------
 
@@ -511,6 +513,44 @@ canceled by clicking the **Remove** button.
 See the `DPNS page
 <https://docs.dash.org/projects/platform/en/stable/docs/explanations/dpns.html#voting-details>`_ for
 more voting details.
+
+.. _evo-tool-name-contests:
+
+View contests
+-------------
+
+Click **Active contests** or **Past contests** to view a list current or previous contests.
+
+.. tab-set::
+   
+   .. tab-item:: Active contests
+
+      .. figure:: img/name/main.png
+         :align: center
+         :width: 90%
+
+         Active contests screen
+
+   .. tab-item:: Past contests
+
+      .. figure:: img/name/past-contests.png
+         :align: center
+         :width: 90%
+
+         Past contests screen
+
+.. _evo-tool-name-mine:
+
+My usernames
+------------
+
+Click **My Usernames** to view a list of usernames owned by your identities.
+
+.. figure:: img/name/my-usernames.png
+   :align: center
+   :width: 90%
+
+   My usernames screen
 
 .. _evo-tool-token:
 
