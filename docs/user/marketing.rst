@@ -33,7 +33,7 @@ identity.
 | Black         | 17,25,33    | 82,71,59,75  | #111921 | Black 6 C     |
 +---------------+-------------+--------------+---------+---------------+
 
- 
+
 Design Materials
 ================
 
@@ -42,8 +42,7 @@ Brochures
 
 An attractive brochure about Dash, designed for handing out at
 conferences and events. Prepared by community member Essra in 2018
-following proposal sponsorship for the German `Dash Embassy D-A-CH
-<https://www.dash-embassy.org/>`__.
+following proposal sponsorship for the German Dash Embassy D-A-CH.
 
 This design can be translated into your language at `Transifex here
 <https://www.transifex.com/dash/dash-graphics/dash-brochurexlsx/>`__.
@@ -75,8 +74,8 @@ Flyers
 
 An attractive flyer about Dash, designed to be folded in half and placed
 on flat surfaces at conferences and events. Prepared by community member
-Essra in 2018 following proposal sponsorship for the German `Dash
-Embassy D-A-CH <https://www.dash-embassy.org/>`__.
+Essra in 2018 following proposal sponsorship for the German Dash
+Embassy D-A-CH.
 
 This design can be translated into your language at `Transifex here
 <https://www.transifex.com/dash/dash-graphics/dash-flyerxlsx/>`__.
@@ -303,7 +302,7 @@ Dash Meetup
 An attractive presentation about Dash, designed to guide the audience
 through the basics of cryptocurrency and advantages of Dash. Prepared by
 community member Essra in 2018 following proposal sponsorship for the
-German `Dash Embassy D-A-CH <https://www.dash-embassy.org/>`__.
+German Dash Embassy D-A-CH.
 
 +------------------------+--------------------------------------------------------------------------------------------------------------+
 | Language               | Download                                                                                                     |
@@ -358,8 +357,7 @@ Dash 101 Presentation
 ^^^^^^^^^^^^^^^^^^^^^
 
 Prepared by community member Essra in 2017 following proposal
-sponsorship for the German `Dash Embassy D-A-CH 
-<https://www.dash-embassy.org>`__.
+sponsorship for the German Dash Embassy D-A-CH.
 
 +----------+---------------------------------------------------------------------------------------------+
 | Language | Download                                                                                    |
