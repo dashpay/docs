@@ -48,7 +48,6 @@ Chat
 - **Dash Dinheiro Digital:** https://t.me/DashDinheiroDigital
 - **Dash Russia Telegram:** https://telegram.me/Dash_Ru
 - **Dash en Español Telegram:** https://t.me/dashpayES
-- **Dash Embassy D-A-CH auf Deutsch Telegram:** https://t.me/dashembassydach
 - **Dash France Telegram:** https://t.me/DashFrance
 - **Dash Indonesia Telegram:** https://t.me/dashindonesia
 - **Dash Iran Telegram:** https://t.me/IranianDash
