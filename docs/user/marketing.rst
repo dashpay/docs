@@ -45,7 +45,7 @@ conferences and events. Prepared by community member Essra in 2018
 following proposal sponsorship for the German Dash Embassy D-A-CH.
 
 This design can be translated into your language at `Transifex here
-<https://www.transifex.com/dash/dash-graphics/dash-brochurexlsx/>`__.
+<https://app.transifex.com/dash/dash-graphics/dash-brochurexlsx/>`__.
 For more information on translating Dash products on Transifex, see
 :ref:`here <translating-dash>`. Please contact leon.white@dash.org once
 translation is complete to request layout of the completed translation.
@@ -78,7 +78,7 @@ Essra in 2018 following proposal sponsorship for the German Dash
 Embassy D-A-CH.
 
 This design can be translated into your language at `Transifex here
-<https://www.transifex.com/dash/dash-graphics/dash-flyerxlsx/>`__.
+<https://app.transifex.com/dash/dash-graphics/dash-flyerxlsx/>`__.
 For more information on translating Dash products on Transifex, see
 :ref:`here <translating-dash>`. Please contact leon.white@dash.org once
 translation is complete to request layout of the completed translation.
@@ -116,7 +116,7 @@ conferences. The current version is **v3.1**; previous versions are
 available below.
 
 This design can be translated into your language at `Transifex here
-<https://www.transifex.com/dash/dash-graphics/dash-handout-v30txt/>`__.
+<https://app.transifex.com/dash/dash-graphics/dash-handout-v30txt/>`__.
 For more information on translating Dash products on Transifex, see
 :ref:`here <translating-dash>`. Please contact leon.white@dash.org once
 translation is complete to request layout of the completed translation.
@@ -176,7 +176,7 @@ delivered by building on the Bitcoin code base. Based on an original
 design by community member J. Arroyo.
 
 This design can be translated into your language at `Transifex here
-<https://www.transifex.com/dash/dash-graphics/the-dash-
+<https://app.transifex.com/dash/dash-graphics/the-dash-
 differencexlsx/>`__. For more information on translating Dash products
 on Transifex, see :ref:`here <translating-dash>`. Please contact
 leon.white@dash.org once translation is complete to request layout of
@@ -238,7 +238,7 @@ This infographic refutes many common yet uninformed arguments made
 against Dash. Based on an original design by community member DashDude.
 
 This design can be translated into your language at `Transifex here
-<https://www.transifex.com/dash/dash-graphics/misconceptionsxlsx/>`__.
+<https://app.transifex.com/dash/dash-graphics/misconceptionsxlsx/>`__.
 For more information on translating Dash products on Transifex, see
 :ref:`here <translating-dash>`. Please contact leon.white@dash.org once
 translation is complete to request layout of the completed translation.
