@@ -734,7 +734,9 @@ Define which administrative actions are permitted after contract creation:
 - **Destroy Frozen Funds**: Destroy frozen balances
 - **Emergency Action**: Permit emergency actions
 - **Max Supply Change**: Allow changes to the maximum supply
-- **Conversions Change**: Allow changes to conversion rates
+- **Conventions Change**: Allow changes to token conventions (supported languages, etc.)
+- **Marketplace Trade Mode Change**: Allow changes to trading mode
+- **Direct Purchase Pricing Change**: Allow changes to direct purchase pricing
 - **Main Control Group Change**: Allow changes to the contract's control group
 
 **Presets**
