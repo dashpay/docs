@@ -1,6 +1,6 @@
 .. meta::
    :description: Description of dash evo tool features and usage
-   :keywords: dash, platform, evonode, masternodes, dash evo tool
+   :keywords: dash, platform, evonode, masternodes, dash evo tool, token
 
 .. _evo-tool:
 
@@ -8,9 +8,10 @@
 Dash Evo Tool
 =============
 
-Dash Evo Tool is an application designed to help you vote on usernames, withdraw evonode credits,
-and complete an expanding list of Platform actions. This guide describes how to download, install,
-and use the Dash Evo Tool.
+Dash Evo Tool is an application designed to help you :ref:`vote on usernames
+<evo-tool-name-voting>`, :ref:`withdraw evonode credits <evo-tool-identity-evo-withdraw>`,
+:ref:`manage tokens <evo-tool-token>`, and complete an expanding list of Platform actions. This
+guide describes how to download, install, and use the Dash Evo Tool.
 
 .. _evo-tool-install:
 
@@ -36,51 +37,55 @@ Operating System, then unzip the downloaded file:
 Configuration
 =============
 
-.. tip::
-   
-   The Dash Evo Tool includes a configuration file that will work without modification. Skip the
-   steps below *unless you have a custom Dash Core configuration that you want to continue using.*
-   
+The Dash Evo Tool includes a configuration file that will work without modification. *If you have a
+custom Dash Core config file that you want to continue using*, expand the dropdown below for
+advanced configuration details.
+
+.. dropdown:: Advanced configuration - using a custom Dash Core config
+
+  .. note::
+    
    The default location of the ``dash.conf`` file can be found in the :ref:`Dash Core documentation
    <dashcore-rpc>`.
 
-1. Open the directory where the download was unzipped.
-2. Open the ``.env`` file (you may need to show hidden files to see it). For the network you plan to
-   connect to, make the following changes. Replace the ``*`` with the network name (MAINNET or
-   TESTNET):
 
-   * Update ``*_CORE_RPC_USER`` to match the ``rpcuser`` value from your Dash Core dash.conf file.
-   * Update ``*_CORE_RPC_PASSWORD`` to match the ``rpcpassword`` value from your Dash Core dash.conf
-     file.
-   * If your dash.conf includes ``rpcallowip``, update ``*_CORE_HOST`` with that IP address.
-   * If your dash.conf includes ``rpcport``, update ``*_CORE_RPC_PORT`` with that port.
-3. Enable ZMQ by adding the following lines to your dash.conf file:
+  1. Open the directory where the download was unzipped.
+  2. Open the ``.env`` file (you may need to show hidden files to see it). For the network you plan to
+     connect to, make the following changes. Replace the ``*`` with the network name (MAINNET or
+     TESTNET):
 
-   .. tab-set::
-      .. tab-item:: Mainnet ZMQ setup
+     * Update ``*_CORE_RPC_USER`` to match the ``rpcuser`` value from your Dash Core dash.conf file.
+     * Update ``*_CORE_RPC_PASSWORD`` to match the ``rpcpassword`` value from your Dash Core dash.conf
+       file.
+     * If your dash.conf includes ``rpcallowip``, update ``*_CORE_HOST`` with that IP address.
+     * If your dash.conf includes ``rpcport``, update ``*_CORE_RPC_PORT`` with that port.
+  3. Enable ZMQ by adding the following lines to your dash.conf file:
 
-         .. code-block:: ini
+     .. tab-set::
+        .. tab-item:: Mainnet ZMQ setup
 
-            # Dash Evo Tool ZMQ config - mainnet
-            zmqpubhashchainlock=tcp://0.0.0.0:23708
-            zmqpubrawtxlocksig=tcp://0.0.0.0:23708
+           .. code-block:: ini
 
-      .. tab-item:: Testnet ZMQ setup
-   
-         .. code-block:: ini
-      
-            # Place under the [test] section
-            # Dash Evo Tool ZMQ config - testnet
-            zmqpubhashchainlock=tcp://0.0.0.0:23709
-            zmqpubrawtxlocksig=tcp://0.0.0.0:23709
+              # Dash Evo Tool ZMQ config - mainnet
+              zmqpubhashchainlock=tcp://0.0.0.0:23708
+              zmqpubrawtxlocksig=tcp://0.0.0.0:23708
 
-4. At a minimum, the following values must be defined for RPC access to be enabled:
+        .. tab-item:: Testnet ZMQ setup
+     
+           .. code-block:: ini
+        
+              # Place under the [test] section
+              # Dash Evo Tool ZMQ config - testnet
+              zmqpubhashchainlock=tcp://0.0.0.0:23709
+              zmqpubrawtxlocksig=tcp://0.0.0.0:23709
 
-   .. code-block:: ini
+  4. At a minimum, the following values must be defined for RPC access to be enabled:
 
-      server=1
-      rpcuser=<some_user_name>
-      rpcpassword=<some_password>
+     .. code-block:: ini
+
+        server=1
+        rpcuser=<some_user_name>
+        rpcpassword=<some_password>
 
 Updating the env file
 ---------------------
@@ -101,6 +106,12 @@ Linux               /home/<user>/.config/dash-evo-tool/
 
 Running the application
 =======================
+
+.. note::
+
+   On some macOS devices, you will need to approve the app in your security settings using the
+   process described in `Safely open apps on your Mac
+   <https://support.apple.com/en-us/102445#openanyway>`__.
 
 Once the ``.env`` file is configured, launch the Dash Evo Tool by double-clicking the file named
 ``dash-evo-tool``.
@@ -123,8 +134,8 @@ Selection screen and click the checkbox in the Select column for the desired net
 
 .. note::
 
-  If you have Dash Core installed in a non-standard location, use the advanced settings to specify
-  where to find it.
+  If you have Dash Core installed in a non-standard location or want to use a custom dash.conf file,
+  configure those options in the advanced settings.
 
 .. tab-set::
   .. tab-item:: Network selection
@@ -168,7 +179,7 @@ screen.
    :align: center
    :width: 90%
 
-   Identity screen with no loaded identities
+   Main identity screen
 
 Some identity types require different information. Use the **Identity Type** dropdown menu to select
 the type you want to add. In this example, an evonode identity is being added.
@@ -232,10 +243,18 @@ screen.
    :align: center
    :width: 90%
 
-   Identity screen with no loaded identities
+   Main identity screen
 
 On the create identity screen, leave the first two options set to the default and select the funding
-method. Then, send the requested amount of DASH to the provided address.
+method.
+
+.. figure:: img/identity/create-options.png
+   :align: center
+   :width: 90%
+
+   Identity create options
+
+Then, choose your funding method and send the requested amount of DASH to the provided address.
 
 .. figure:: img/identity/create-await-funds.png
    :align: center
@@ -243,7 +262,8 @@ method. Then, send the requested amount of DASH to the provided address.
 
    Waiting for funds
 
-The status will change from "Waiting for funds" to "Waiting for Platform acknowledgement" once the
+The status will change from "Waiting for funds" to "Waiting for Core Chain to produce proof of
+transfer of funds". Then, the status will change to "Waiting for Platform acknowledgement" once the
 funds have been received and the identity registration process has started.
 
 .. figure:: img/identity/create-await-platform.png
@@ -266,7 +286,7 @@ Once the identity has been registered, you can choose to return to the identity 
    :align: center
    :width: 90%
 
-   Identity screen with an identity loaded
+   Identity screen with the new identity loaded
 
 .. _evo-tool-identity-top-up:
 
@@ -279,14 +299,14 @@ Top up identity
    <evo-tool-wallet-create>`.
 
 Your identity's credit balance will decrease as you use applications on Platform. You can increase
-your balance by doing and identity top up. On the main identity screen, click the **Top up** button
-for the identity you want to add credits to.
+your balance by doing an identity top up. On the main identity screen, click the **Actions** button
+for the identity you want to add credits to, then click **Top up**.
 
-.. figure:: img/identity/main-new-identity.png
+.. figure:: img/identity/actions-menu.png
    :align: center
    :width: 90%
 
-   Identity screen
+   Identity actions menu
 
 On the top up identity screen, select the funding method and funding amount. Then, click **Top Up
 Identity** to continue.
@@ -314,13 +334,13 @@ Transfer credits
 ----------------
 
 You can transfer credits to another identity by providing the identity's ID. On the main identity
-screen, click the **Transfer** button for the identity sending the credits.
+screen, click the **Actions** button for the identity sending the credits, then click **Transfer**.
 
-.. figure:: img/identity/main-transfer.png
+.. figure:: img/identity/actions-menu.png
    :align: center
    :width: 90%
 
-   Identity screen
+   Identity actions menu
 
 On the transfer screen, set the amount and the identity ID to receive the transferred credits. Then,
 click **Transfer** to continue.
@@ -349,17 +369,15 @@ Evonode withdrawals
 
 .. note::
 
-  Withdrawal requests enter a queue that is currently processed more slowly than intended. Depending
-  on the timing of the withdrawal request, it may take up to 18 hours to complete. 
-  
-  For security, there is also a limit on how much can be withdrawn from Platform daily. If
-  withdrawal requests hit the daily limit, they will remain in the queue longer. For details, see
-  this `DCG development update
+  Withdrawal requests enter a queue for processing. For security, there is a limit on how much can
+  be withdrawn from Platform daily. If withdrawal requests hit the daily limit, they will remain in
+  the queue longer. For details, see this `DCG development update
   <https://www.youtube.com/live/rc_avHHqG6E?si=ETv0yX-1b3odCU8F&t=599>`_.
 
-From the identity main screen, click the **Withdraw** button for an identity.
+From the identity main screen,  click the **Actions** button for the identity requesting a
+withdrawal, then click **Withdraw**.
 
-.. figure:: img/identity/withdraw.png
+.. figure:: img/identity/actions-menu.png
    :align: center
    :width: 90%
 
@@ -368,11 +386,6 @@ From the identity main screen, click the **Withdraw** button for an identity.
 On the withdrawal screen, select the key to sign the withdrawal. Selecting the owner key is
 recommended since this will direct the withdrawal to the payout address. Next, set the amount to
 withdraw.
-
-.. note::
-
-  The **Max** button currently has a bug so you may need to manually adjust the amount if you use
-  that button.
 
 Click **Withdraw** after entering the information.
 
@@ -444,29 +457,385 @@ button to update the screen at any time.
   Voting can only be done by masternodes and evonodes, and each node can only modify its vote four times.
   See the :ref:`load identity section <evo-tool-identity-load>` for instructions on importing your keys.
 
+To vote for a contestant, click on an entry in the Contestants column. You can also vote to Lock the
+name or Abstain from voting by clicking the value in those columns. Vote for multiple name contests
+simultaneously by making several selections.
+
+Once you have made selections for all contests you want to vote on, click the **Cast/Schedule
+Votes** button to open the voting screen. There you can chose to cast your votes immediately or
+schedule them for later.
+
 .. figure:: img/voting/main-contested-name.png
    :align: center
    :width: 90%
 
    Voting screen
 
-To vote for a contestant, click on an entry in the Contestants column. You can also vote to Lock the
-name or Abstain by clicking the value in those columns. You will be prompted to load an evonode or
-masternode identity if you have not already done so.
+Click **Apply Votes** after determining how to vote for each selected contest.
 
-After clicking one of the contestants, vote for that identity to receive the name by clicking one of
-your specific identities on the Vote Confirmation screen. Click **All** to vote with all your loaded
-identities simultaneously.
+.. tab-set::
+   
+   .. tab-item:: Cast vote
 
-.. figure:: img/voting/confirm-vote.png
+      .. figure:: img/voting/vote-now.png
+         :align: center
+         :width: 90%
+
+         Cast vote(s) immediately
+
+   .. tab-item:: Schedule vote
+
+      .. note::
+
+         The Dash Evo Tool must be running and connected for scheduled votes to execute at the
+         planned time.
+
+      .. figure:: img/voting/vote-schedule.png
+         :align: center
+         :width: 90%
+
+         Schedule vote(s) for later
+
+.. _evo-tool-name-scheduled-votes:
+
+Scheduled votes
+---------------
+
+Click **Scheduled votes** to view a list of any pending scheduled votes. Pending votes can be
+canceled by clicking the **Remove** button. 
+
+.. figure:: img/voting/scheduled-votes.png
    :align: center
    :width: 90%
 
-   Vote confirmation screen
+   Scheduled votes screen
 
 See the `DPNS page
 <https://docs.dash.org/projects/platform/en/stable/docs/explanations/dpns.html#voting-details>`_ for
 more voting details.
+
+.. _evo-tool-name-contests:
+
+View contests
+-------------
+
+Click **Active contests** or **Past contests** to view a list current or previous contests.
+
+.. tab-set::
+   
+   .. tab-item:: Active contests
+
+      .. figure:: img/name/main.png
+         :align: center
+         :width: 90%
+
+         Active contests screen
+
+   .. tab-item:: Past contests
+
+      .. figure:: img/name/past-contests.png
+         :align: center
+         :width: 90%
+
+         Past contests screen
+
+.. _evo-tool-name-mine:
+
+My usernames
+------------
+
+Click **My Usernames** to view a list of usernames owned by your identities.
+
+.. figure:: img/name/my-usernames.png
+   :align: center
+   :width: 90%
+
+   My usernames screen
+
+.. _evo-tool-token:
+
+Token operations
+=================
+
+My tokens
+---------
+
+The My Tokens screen shows all tokens currently being tracked. Click the **Refresh** button to
+update the screen at any time or **Add Token** to follow additional tokens.
+
+You can view token information and access token-related commands by clicking on a token name to open
+the Token Details screen.
+
+.. figure:: img/token/my-tokens.png
+   :align: center
+   :width: 90%
+
+   My Tokens screen
+
+The Token Details screen shows the balance for each of your identities and provides access to
+token-related :hoverxref:`actions <evo-tool-token-actions>` (e.g., transfer).
+
+.. figure:: img/token/my-tokens-token-detail.png
+   :align: center
+   :width: 90%
+
+   Token details screen
+
+.. _evo-tool-token-actions:
+
+Token actions
+^^^^^^^^^^^^^
+
+.. note::
+
+   Token actions can only be used when they are enabled by the token's data contract configuration.
+   Enabled actions can only be performed by authorized identities as defined in the token's data
+   contract.
+
+You can complete the following actions using the Dash Evo Tool:
+
++---------------+--------------------------------------------------------------+
+| Action        | Description                                                  |
++===============+==============================================================+
+| Transfer      | Transfer tokens to another identity                          |
++---------------+--------------------------------------------------------------+
+| Claim         | Redeem or withdraw available tokens (e.g., from distribution)|
++---------------+--------------------------------------------------------------+
+| Mint          | Create new tokens and add them to the total supply           |
++---------------+--------------------------------------------------------------+
+| Burn          | Permanently remove tokens from circulation                   |
++---------------+--------------------------------------------------------------+
+| Freeze        | Temporarily disable token transfers for a specific identity  |
++---------------+--------------------------------------------------------------+
+| Destroy       | Permanently eliminate frozen tokens for a specific identity  |
++---------------+--------------------------------------------------------------+
+| Unfreeze      | Re-enable transfers for a previously frozen identity         |
++---------------+--------------------------------------------------------------+
+| Pause         | Halt all token operations temporarily                        |
++---------------+--------------------------------------------------------------+
+| Resume        | Reactivate operations after a pause                          |
++---------------+--------------------------------------------------------------+
+| View Claims   | Display information about completed token claims             |
++---------------+--------------------------------------------------------------+
+| Update Config | Modify token configuration settings                          |
++---------------+--------------------------------------------------------------+
+| Purchase      | Buy tokens that have set a price                             |
++---------------+--------------------------------------------------------------+
+| Set Price     | Define or update the price accepted for the token            |
++---------------+--------------------------------------------------------------+
+
+.. tab-set::
+  .. tab-item:: Example transfer action
+
+    .. figure:: img/token/token-actions-transfer.png
+      :align: center
+      :width: 90%
+
+      Initiate a transfer action
+
+  .. tab-item:: Example group mint action
+
+    For tokens configured to use :ref:`groups <evo-tool-token-group-actions>` for multi-party
+    control, a message is displayed indicating the requirement for other group members to sign off
+    on the request.
+
+    .. figure:: img/token/token-actions-mint-group.png
+      :align: center
+      :width: 90%
+
+      Initiate a minting group action
+
+Search tokens
+-------------
+
+The Search Tokens screen enables searching for tokens by the keywords assigned to them by the token
+creator during token registration.
+
+.. figure:: img/token/token-search.png
+   :align: center
+   :width: 90%
+
+   Token search screen
+
+.. _evo-tool-token-creator:
+
+Token Creator
+-------------
+
+The Token Creator screen provides a comprehensive interface for creating and registering tokens on
+Dash Platform. It covers all configurable token attributes, ranging from basic supply details
+to advanced control mechanisms and distribution rules.
+
+.. figure:: img/token/token-creator.png
+   :align: center
+   :width: 90%
+
+   Token creator screen
+
+The following sections describe the token creator parameters used to configure your token.
+
+Identity and Key Selection
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Select an identity and an associated key to register the token contract:
+
+- **Identity**: The Dash Platform identity that will own the token contract
+- **Key**: The key from the identity used to sign the registration, including purpose and security
+  level
+
+.. note::
+
+   Only valid identity/key pairs are permitted to register token contracts.
+
+Token Information
+^^^^^^^^^^^^^^^^^
+
+**Name and Metadata**
+
+- **Token Name (singular)**: Name for a single unit of the token
+- **Token Name (plural)**: Name for multiple units
+- **Language**: Localized language for token naming
+- **Add singular name to keywords**: Whether the token name will appear in token search queries
+- **Description**: Short (max 100 characters) description of the token
+
+**Supply Parameters**
+
+- **Base Supply**: Number of tokens created at registration
+- **Max Supply**: Maximum possible token supply
+
+**Keywords**
+
+- **Contract Keywords**: Comma-separated tags for categorization and querying
+
+Advanced Settings (Optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**General Options**
+
+- **Start as paused**: Contract starts paused after creation
+- **Keep history**: Enables historical recording. Advanced settings allow specifying which actions are logged.
+- **Name should be capitalized**: Forces capitalization of token name on display
+- **Decimals**: Number of decimal places for token divisibility
+
+Action Rules
+^^^^^^^^^^^^
+
+Define which administrative actions are permitted after contract creation:
+
+.. figure:: img/token/token-creator-action-rules.png
+   :align: center
+   :width: 90%
+
+   Token creator action rules
+
+- **Manual Mint**: Allow creating additional tokens
+- **Manual Burn**: Allow destroying tokens
+- **Freeze**: Freeze balances of individual addresses
+- **Destroy Frozen Funds**: Destroy frozen balances
+- **Emergency Action**: Permit emergency actions
+- **Max Supply Change**: Allow changes to the maximum supply
+- **Conventions Change**: Allow changes to token conventions (supported languages, etc.)
+- **Marketplace Trade Mode Change**: Allow changes to trading mode
+- **Direct Purchase Pricing Change**: Allow changes to direct purchase pricing
+- **Main Control Group Change**: Allow changes to the contract's control group
+
+**Presets**
+
+The Dash Evo Tool provides several pre-defined action templates to simplify token configuration:
+  
+  +----------------------+------------------------------------------------------------------------------+
+  | Rule Preset          | Description                                                                  |
+  +======================+==============================================================================+
+  | Custom               | Allows setting all action rules independently for maximum flexibility.       |
+  +----------------------+------------------------------------------------------------------------------+
+  | Most Restrictive     | No actions are permitted after initialization.                               |
+  |                      | All governance and control settings are immutable.                           |
+  |                      | Suitable for tokens that should remain fixed and tamper-proof.               |
+  +----------------------+------------------------------------------------------------------------------+
+  | Only Emergency       | Only emergency actions (e.g., pausing the token) are permitted.              |
+  | Action               | Minting, burning, and advanced operations (such as freezing) are disallowed. |
+  |                      | This preset allows minimal control for critical situations without risking   |
+  |                      | token supply or ownership manipulation.                                      |
+  +----------------------+------------------------------------------------------------------------------+
+  | Minting and Burning  | Allows minting and burning operations, but not advanced features such as     |
+  |                      | freezing. Enables supply management without enabling full administrative     |
+  |                      | capabilities.                                                                |
+  +----------------------+------------------------------------------------------------------------------+
+  | Advanced Actions     | Grants the ability to perform advanced actions, including freezing and       |
+  |                      | unfreezing balances. Minting and burning are also permitted. Suitable for    |
+  |                      | tokens that require moderate administrative control without total override   |
+  |                      | capabilities.                                                                |
+  +----------------------+------------------------------------------------------------------------------+
+  | All Allowed          | Enables all actions.                                                         |
+  +----------------------+------------------------------------------------------------------------------+
+
+Distribution Options
+^^^^^^^^^^^^^^^^^^^^
+
+Define token distribution using perpetual and/or pre-programmed options:
+
+.. figure:: img/token/token-creator-distribution.png
+   :align: center
+   :width: 90%
+
+   Token creator distribution
+
+**Perpetual Distribution**
+
+Automated recurring token distributions:
+
+- **Enable**: Activates automated distribution
+- **Type**: Distribution trigger type (e.g., ``BlockBased``)
+- **Distributes every (interval)**: Block, epoch, or time-based interval between distribution events
+- **Function**: Distribution model (e.g., ``FixedAmount`` per interval)
+- **Recipient**: Identity receiving distributed tokens
+
+**Pre-Programmed Distribution**
+
+One-time or scheduled future distributions:
+
+- **Enable Pre-Programmed Distribution**: Enables scheduled events
+- **Add New Distribution Entry**: Create new pre-programmed distribution event
+
+Groups (Optional)
+^^^^^^^^^^^^^^^^^
+
+Define multi-party shared control of the contract:
+
+- **Add New Group**: Create a control group
+- **Main Control Group Position**: Set primary group responsible for contract ownership and administration
+
+Register and Review
+^^^^^^^^^^^^^^^^^^^
+
+- **Register Token Contract**: Submit and register the token contract on Dash Platform
+- **View JSON**: View full contract schema prior to registration
+
+.. _evo-tool-token-group-actions:
+
+Group actions
+-------------
+
+The Group Actions screen allows querying group action requests. Select a contract and an identity,
+then click **Fetch Group Actions** to see all related group actions request.
+
+Click the **Take Action** button to open the approval screen for a specific request.
+
+.. figure:: img/token/token-group-actions-main.png
+   :align: center
+   :width: 90%
+
+   Group Actions screen
+
+On approval screen, select the key to sign the request. Then, click the **Sign <Action>** button.
+When the confirmation screen opens, confirm that the action details are correct. Finally, click
+**Confirm** to complete your approval of the request.
+
+.. figure:: img/token/token-group-actions-mint-confirm.png
+   :align: center
+   :width: 90%
+
+   Group Actions Approval screen
 
 .. _evo-tool-wallet:
 
@@ -490,11 +859,11 @@ from the wallet screen.
 .. attention::
 
    Since this tool adds watching-only addresses to Dash Core when creating identities, it is
-   recommended to close all existing Dash Core wallets and :ref:`create a new, empty wallet
+   recommended to close all existing Dash Core wallets and :ref:`create a new wallet
    <dashcore-installation-macos-create-wallet>` for the Dash Evo Tool. Also, make sure to
    :ref:`backup your Dash Core wallet <dashcore-backup>`.
 
-Click **Add Wallet** to create a new wallet.
+Click **Create Wallet** to create a new wallet.
 
 .. figure:: img/wallet/wallet-main.png
    :align: center
@@ -503,13 +872,18 @@ Click **Add Wallet** to create a new wallet.
    Wallet screen
 
 After creating extra randomness with the mouse, select your preferred language and click
-**Generate** to display you passphrase. Write it down and store it securely, then click the checkbox
-in step 3 to confirm.
+**Generate** to display you passphrase. Write it down and store it securely.
 
-Next, enter a wallet name and optionally add a password before clicking **Save Wallet** to store the
-wallet.
+.. figure:: img/wallet/wallet-create-seed.png
+   :align: center
+   :width: 90%
 
-.. figure:: img/wallet/wallet-create-all-fields.png
+   Wallet create screen
+
+Click the checkbox in step 3 to confirm you have saved the passphrase. Next, enter a wallet name and
+optionally add a password before clicking **Save Wallet** to store the wallet.
+
+.. figure:: img/wallet/wallet-create-name.png
    :align: center
    :width: 90%
 
