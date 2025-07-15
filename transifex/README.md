@@ -40,7 +40,7 @@ example:
 [https://www.transifex.com]
 api_hostname = https://api.transifex.com
 hostname = https://www.transifex.com
-password = <enter password generated on https://www.transifex.com/user/settings/api/ here>
+password = <enter password generated on https://app.transifex.com/user/settings/api/ here>
 username = api
 ```
 
