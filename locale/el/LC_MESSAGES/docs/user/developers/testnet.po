@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-19 12:15-0500\n"
+"POT-Creation-Date: 2025-07-16 10:59-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: Leon White <leon.white@dash.org>, 2022\n"
 "Language: el\n"
@@ -157,23 +157,19 @@ msgstr "Faucets"
 msgid "https://faucet.testnet.networks.dash.org - by Dash Core Group"
 msgstr ""
 
-#: ../../docs/user/developers/testnet.rst:62
-msgid "http://faucet.test.dash.crowdnode.io - by CrowdNode"
-msgstr ""
-
-#: ../../docs/user/developers/testnet.rst:65
+#: ../../docs/user/developers/testnet.rst:64
 msgid "Explorers"
 msgstr "Explorers"
 
-#: ../../docs/user/developers/testnet.rst:67
+#: ../../docs/user/developers/testnet.rst:66
 msgid "https://insight.testnet.networks.dash.org/insight"
 msgstr ""
 
-#: ../../docs/user/developers/testnet.rst:70
+#: ../../docs/user/developers/testnet.rst:69
 msgid "Masternodes"
 msgstr "Masternodes"
 
-#: ../../docs/user/developers/testnet.rst:72
+#: ../../docs/user/developers/testnet.rst:71
 msgid ""
 "Installing a masternode under testnet generally follows the same steps as"
 " the :ref:`mainnet masternode installation guide <masternode-setup>`, but"
@@ -183,14 +179,14 @@ msgstr ""
 "και στο :ref:`mainnet masternode installation guide <masternode-setup>`, "
 "με μερικές βασικές διαφορές:"
 
-#: ../../docs/user/developers/testnet.rst:76
+#: ../../docs/user/developers/testnet.rst:75
 msgid ""
 "You will probably be running a development version of Dash instead of the"
 " stable release. Choose the latest `nightly build "
 "<https://github.com/dashpay/dash-dev-branches/releases>`__ on GitHub."
 msgstr ""
 
-#: ../../docs/user/developers/testnet.rst:79
+#: ../../docs/user/developers/testnet.rst:78
 msgid ""
 "When opening the firewall, port 19999 must be opened instead of (or in "
 "addition to) 9999. Use this command: ``ufw allow 19999/tcp``"
@@ -199,7 +195,7 @@ msgstr ""
 " (ή συμπληρωματικά με) το 9999. Χρησιμοποιήστε αυ΄την την εντολή: ``ufw "
 "allow 19999/tcp``"
 
-#: ../../docs/user/developers/testnet.rst:81
+#: ../../docs/user/developers/testnet.rst:80
 msgid ""
 "Your desktop wallet must be running in testnet mode. Add the following "
 "line to *dash.conf*: ``testnet = 1``"
@@ -207,7 +203,7 @@ msgstr ""
 "Το πορτοφόλι του desktop σας πρέπει να τρέχει σε tesnet mode. Προσθέστε "
 "την ακόλουθη γραμμή στο *dash.conf*: ``testnet = 1``"
 
-#: ../../docs/user/developers/testnet.rst:83
+#: ../../docs/user/developers/testnet.rst:82
 msgid ""
 "When sending the collateral, you can get the 1000 tDASH for free from a "
 "faucet (see above)"
@@ -215,14 +211,14 @@ msgstr ""
 "Όταν στέλνετε την εγγύηση, παίρνετε τα 1000 tDash δεωρεάν από ένα faucet "
 "(δείτε πιό πάνω)"
 
-#: ../../docs/user/developers/testnet.rst:85
+#: ../../docs/user/developers/testnet.rst:84
 msgid ""
 "Your masternode configuration file must also specify testnet mode. Add "
 "the following line when setting up *dash.conf* on the masternode: "
 "``testnet = 1``"
 msgstr ""
 
-#: ../../docs/user/developers/testnet.rst:88
+#: ../../docs/user/developers/testnet.rst:87
 msgid ""
 "As for mainnet masternodes, the RPC username and password must contain "
 "alphanumeric characters only"
@@ -234,5 +230,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "http://insight.testnet.networks.dash.org:3001/insight"
+#~ msgstr ""
+
+#~ msgid "http://faucet.test.dash.crowdnode.io - by CrowdNode"
 #~ msgstr ""
 

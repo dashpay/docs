@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-19 12:15-0500\n"
+"POT-Creation-Date: 2025-07-16 10:59-0400\n"
 "PO-Revision-Date: 2024-11-18 17:41+0000\n"
 "Last-Translator: Dash Italia, 2024\n"
 "Language: it\n"
@@ -28,7 +28,7 @@ msgid "Description of dash evo tool features and usage"
 msgstr ""
 
 #: ../../docs/user/network/dash-evo-tool/index.rst:-1
-msgid "dash, platform, evonode, masternodes, dash evo tool"
+msgid "dash, platform, evonode, masternodes, dash evo tool, token"
 msgstr ""
 
 #: ../../docs/user/network/dash-evo-tool/index.rst:9
@@ -37,21 +37,22 @@ msgstr ""
 
 #: ../../docs/user/network/dash-evo-tool/index.rst:11
 msgid ""
-"Dash Evo Tool is an application designed to help you vote on usernames, "
-"withdraw evonode credits, and complete an expanding list of Platform "
-"actions. This guide describes how to download, install, and use the Dash "
-"Evo Tool."
+"Dash Evo Tool is an application designed to help you :ref:`vote on "
+"usernames <evo-tool-name-voting>`, :ref:`withdraw evonode credits <evo-"
+"tool-identity-evo-withdraw>`, :ref:`manage tokens <evo-tool-token>`, and "
+"complete an expanding list of Platform actions. This guide describes how "
+"to download, install, and use the Dash Evo Tool."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:18
+#: ../../docs/user/network/dash-evo-tool/index.rst:19
 msgid "Installation"
 msgstr "Installazione"
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:22
+#: ../../docs/user/network/dash-evo-tool/index.rst:23
 msgid "The Dash Evo Tool requires a running Dash Core full node."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:24
+#: ../../docs/user/network/dash-evo-tool/index.rst:25
 msgid ""
 "Linux, MacOS, or Windows packages are available on the `GitHub releases "
 "page <https://github.com/dashpay/dash-evo-tool/releases/latest>`__. "
@@ -59,89 +60,94 @@ msgid ""
 "downloaded file:"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:28
-msgid ""
-"`Windows <https://github.com/dashpay/dash-evo-"
-"tool/releases/download/v0.8.1/dash-evo-tool-windows.zip>`_"
-msgstr ""
-
 #: ../../docs/user/network/dash-evo-tool/index.rst:29
 msgid ""
-"`Mac (ARM m1-m4) <https://github.com/dashpay/dash-evo-"
-"tool/releases/download/v0.8.1/dash-evo-tool-arm64-mac.zip>`_"
+"`Windows <https://github.com/dashpay/dash-evo-"
+"tool/releases/download/v0.9.0/dash-evo-tool-windows.zip>`_"
 msgstr ""
 
 #: ../../docs/user/network/dash-evo-tool/index.rst:30
 msgid ""
-"`Mac (x86) <https://github.com/dashpay/dash-evo-"
-"tool/releases/download/v0.8.1/dash-evo-tool-x86_64-mac.zip>`_"
+"`Mac (ARM m1-m4) <https://github.com/dashpay/dash-evo-"
+"tool/releases/download/v0.9.0/dash-evo-tool-arm64-mac.zip>`_"
 msgstr ""
 
 #: ../../docs/user/network/dash-evo-tool/index.rst:31
 msgid ""
-"`Linux (x86) <https://github.com/dashpay/dash-evo-"
-"tool/releases/download/v0.8.1/dash-evo-tool-x86_64-linux.zip>`_"
+"`Mac (x86) <https://github.com/dashpay/dash-evo-"
+"tool/releases/download/v0.9.0/dash-evo-tool-x86_64-mac.zip>`_"
 msgstr ""
 
 #: ../../docs/user/network/dash-evo-tool/index.rst:32
 msgid ""
-"`Linux (ARM) <https://github.com/dashpay/dash-evo-"
-"tool/releases/download/v0.8.1/dash-evo-tool-arm64-linux.zip>`_"
+"`Linux (x86) <https://github.com/dashpay/dash-evo-"
+"tool/releases/download/v0.9.0/dash-evo-tool-x86_64-linux.zip>`_"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:37
+#: ../../docs/user/network/dash-evo-tool/index.rst:33
+msgid ""
+"`Linux (ARM) <https://github.com/dashpay/dash-evo-"
+"tool/releases/download/v0.9.0/dash-evo-tool-arm64-linux.zip>`_"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:38
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:41
+#: ../../docs/user/network/dash-evo-tool/index.rst:40
 msgid ""
 "The Dash Evo Tool includes a configuration file that will work without "
-"modification. Skip the steps below *unless you have a custom Dash Core "
-"configuration that you want to continue using.*"
+"modification. *If you have a custom Dash Core config file that you want "
+"to continue using*, expand the dropdown below for advanced configuration "
+"details."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:44
+#: ../../docs/user/network/dash-evo-tool/index.rst
+msgid "Advanced configuration - using a custom Dash Core config"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:48
 msgid ""
 "The default location of the ``dash.conf`` file can be found in the "
 ":ref:`Dash Core documentation <dashcore-rpc>`."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:47
+#: ../../docs/user/network/dash-evo-tool/index.rst:52
 msgid "Open the directory where the download was unzipped."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:48
+#: ../../docs/user/network/dash-evo-tool/index.rst:53
 msgid ""
 "Open the ``.env`` file (you may need to show hidden files to see it). For"
 " the network you plan to connect to, make the following changes. Replace "
 "the ``*`` with the network name (MAINNET or TESTNET):"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:52
+#: ../../docs/user/network/dash-evo-tool/index.rst:57
 msgid ""
 "Update ``*_CORE_RPC_USER`` to match the ``rpcuser`` value from your Dash "
 "Core dash.conf file."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:53
+#: ../../docs/user/network/dash-evo-tool/index.rst:58
 msgid ""
 "Update ``*_CORE_RPC_PASSWORD`` to match the ``rpcpassword`` value from "
 "your Dash Core dash.conf file."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:55
+#: ../../docs/user/network/dash-evo-tool/index.rst:60
 msgid ""
 "If your dash.conf includes ``rpcallowip``, update ``*_CORE_HOST`` with "
 "that IP address."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:56
+#: ../../docs/user/network/dash-evo-tool/index.rst:61
 msgid ""
 "If your dash.conf includes ``rpcport``, update ``*_CORE_RPC_PORT`` with "
 "that port."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:57
+#: ../../docs/user/network/dash-evo-tool/index.rst:62
 msgid "Enable ZMQ by adding the following lines to your dash.conf file:"
 msgstr ""
 
@@ -153,17 +159,17 @@ msgstr ""
 msgid "Testnet ZMQ setup"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:77
+#: ../../docs/user/network/dash-evo-tool/index.rst:82
 msgid ""
 "At a minimum, the following values must be defined for RPC access to be "
 "enabled:"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:86
+#: ../../docs/user/network/dash-evo-tool/index.rst:91
 msgid "Updating the env file"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:88
+#: ../../docs/user/network/dash-evo-tool/index.rst:93
 msgid ""
 "When the application runs for the first time, it creates a application "
 "directory and copies the ``.env`` file into it. It also stores "
@@ -171,60 +177,67 @@ msgid ""
 "file must be made to the copy in the application directory."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:93
+#: ../../docs/user/network/dash-evo-tool/index.rst:98
 msgid "Operating System"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:93
+#: ../../docs/user/network/dash-evo-tool/index.rst:98
 msgid "Configuration File Path"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:95
+#: ../../docs/user/network/dash-evo-tool/index.rst:100
 msgid "macOS"
 msgstr "macOS"
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:95
+#: ../../docs/user/network/dash-evo-tool/index.rst:100
 msgid "~/Library/Application Support/Dash-Evo-Tool/"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:96
+#: ../../docs/user/network/dash-evo-tool/index.rst:101
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:96
+#: ../../docs/user/network/dash-evo-tool/index.rst:101
 msgid "C:\\\\Users\\\\<User>\\\\AppData\\\\Roaming\\\\Dash-Evo-Tool\\\\config"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:97
+#: ../../docs/user/network/dash-evo-tool/index.rst:102
 msgid "Linux"
 msgstr "Linux"
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:97
+#: ../../docs/user/network/dash-evo-tool/index.rst:102
 msgid "/home/<user>/.config/dash-evo-tool/"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:103
+#: ../../docs/user/network/dash-evo-tool/index.rst:108
 msgid "Running the application"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:105
+#: ../../docs/user/network/dash-evo-tool/index.rst:112
+msgid ""
+"On some macOS devices, you will need to approve the app in your security "
+"settings using the process described in `Safely open apps on your Mac "
+"<https://support.apple.com/en-us/102445#openanyway>`__."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:116
 msgid ""
 "Once the ``.env`` file is configured, launch the Dash Evo Tool by double-"
 "clicking the file named ``dash-evo-tool``."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:108
+#: ../../docs/user/network/dash-evo-tool/index.rst:119
 msgid ""
 "Alternatively, you can launch the application directly from your "
 "terminal. For example, on Linux, run::"
 msgstr ""
 
 #: ../../docs/user/network/dash-evo-tool/index.rst
-#: ../../docs/user/network/dash-evo-tool/index.rst:116
+#: ../../docs/user/network/dash-evo-tool/index.rst:127
 msgid "Network selection"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:118
+#: ../../docs/user/network/dash-evo-tool/index.rst:129
 msgid ""
 "The Dash Evo Tool supports both testnet and mainnet. To choose a network,"
 " navigate to the Network Selection screen and click the checkbox in the "
@@ -232,13 +245,14 @@ msgid ""
 " that row to launch Dash Core."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:126
+#: ../../docs/user/network/dash-evo-tool/index.rst:137
 msgid ""
-"If you have Dash Core installed in a non-standard location, use the "
-"advanced settings to specify where to find it."
+"If you have Dash Core installed in a non-standard location or want to use"
+" a custom dash.conf file, configure those options in the advanced "
+"settings."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:136
+#: ../../docs/user/network/dash-evo-tool/index.rst:147
 msgid "Network selection screen with testnet selected"
 msgstr ""
 
@@ -246,61 +260,61 @@ msgstr ""
 msgid "Advanced network settings"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:140
+#: ../../docs/user/network/dash-evo-tool/index.rst:151
 msgid ""
 "If you have Dash Core installed in a non-standard location, click **Show "
 "more advanced settings**, then click **Select file** to select the "
 "location of your Dash Core installation."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:143
+#: ../../docs/user/network/dash-evo-tool/index.rst:154
 msgid ""
 "Also, if you use a custom dash.conf file, uncheck **Overwrite dash.conf**"
 " and make sure your file aligns with the RPC and ZMQ settings mentioned "
 "in the :hoverxref:`Configuration section <evo-tool-configure>`."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:152
+#: ../../docs/user/network/dash-evo-tool/index.rst:163
 msgid "Network selection screen with advanced settings displayed"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:157
+#: ../../docs/user/network/dash-evo-tool/index.rst:168
 msgid "Identity operations"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:162
+#: ../../docs/user/network/dash-evo-tool/index.rst:173
 msgid "Load existing identity"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:164
+#: ../../docs/user/network/dash-evo-tool/index.rst:175
 msgid ""
 "On the main identity screen, click the **Load Identity** button on the "
 "upper right side of the screen."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:171
-#: ../../docs/user/network/dash-evo-tool/index.rst:235
-msgid "Identity screen with no loaded identities"
+#: ../../docs/user/network/dash-evo-tool/index.rst:182
+#: ../../docs/user/network/dash-evo-tool/index.rst:246
+msgid "Main identity screen"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:173
+#: ../../docs/user/network/dash-evo-tool/index.rst:184
 msgid ""
 "Some identity types require different information. Use the **Identity "
 "Type** dropdown menu to select the type you want to add. In this example,"
 " an evonode identity is being added."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:180
+#: ../../docs/user/network/dash-evo-tool/index.rst:191
 msgid "Identity load screen for evonode"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:186
+#: ../../docs/user/network/dash-evo-tool/index.rst:197
 msgid ""
 "Your collateral key is **not** required. Do not enter it into the Dash "
 "Evo Tool."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:188
+#: ../../docs/user/network/dash-evo-tool/index.rst:199
 msgid ""
 "Add the Identity ID and Owner Private Key. You may also want to add the "
 "Voting Private Key, but adding the Payout Address Private Key is **not** "
@@ -308,412 +322,1075 @@ msgid ""
 "Identity ID."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:192
+#: ../../docs/user/network/dash-evo-tool/index.rst:203
 msgid ""
 "If you use the `Dash Masternode Tool <https://github.com/Bertrand256"
 "/dash-masternode-tool>`_, you can get the protx hash and private keys "
 "from the masternode details screen."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:199
+#: ../../docs/user/network/dash-evo-tool/index.rst:210
 msgid "Dash Masternode Tool"
 msgstr "Dash Masternode Tool"
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:201
+#: ../../docs/user/network/dash-evo-tool/index.rst:212
 msgid "Click **Load Identity** once you have entered the required information."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:207
+#: ../../docs/user/network/dash-evo-tool/index.rst:218
 msgid "Identity load screen with evonode info filled out"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:209
+#: ../../docs/user/network/dash-evo-tool/index.rst:220
 msgid ""
 "Once the identity is loaded, you can view its balance and details about "
 "its keys. For evonodes, you can also initiate :ref:`withdrawals <evo-"
 "tool-identity-evo-withdraw>`."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:216
+#: ../../docs/user/network/dash-evo-tool/index.rst:227
 msgid "Identity screen with an evonode identity loaded"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:221
+#: ../../docs/user/network/dash-evo-tool/index.rst:232
 msgid "Create new identity"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:225
+#: ../../docs/user/network/dash-evo-tool/index.rst:236
 msgid ""
 "Before creating an identity, make sure you have :ref:`added a Dash Evo "
 "Tool wallet <evo-tool-wallet-create>`."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:228
+#: ../../docs/user/network/dash-evo-tool/index.rst:239
 msgid ""
 "On the main identity screen, click the **Create Identity** button on the "
 "upper right side of the screen."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:237
+#: ../../docs/user/network/dash-evo-tool/index.rst:248
 msgid ""
 "On the create identity screen, leave the first two options set to the "
-"default and select the funding method. Then, send the requested amount of"
-" DASH to the provided address."
-msgstr ""
-
-#: ../../docs/user/network/dash-evo-tool/index.rst:244
-#: ../../docs/user/network/dash-evo-tool/index.rst:298
-msgid "Waiting for funds"
-msgstr ""
-
-#: ../../docs/user/network/dash-evo-tool/index.rst:246
-msgid ""
-"The status will change from \"Waiting for funds\" to \"Waiting for "
-"Platform acknowledgement\" once the funds have been received and the "
-"identity registration process has started."
-msgstr ""
-
-#: ../../docs/user/network/dash-evo-tool/index.rst:253
-#: ../../docs/user/network/dash-evo-tool/index.rst:307
-msgid "Waiting for Platform acknowledgement"
+"default and select the funding method."
 msgstr ""
 
 #: ../../docs/user/network/dash-evo-tool/index.rst:255
+msgid "Identity create options"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:257
+msgid ""
+"Then, choose your funding method and send the requested amount of DASH to"
+" the provided address."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:263
+#: ../../docs/user/network/dash-evo-tool/index.rst:318
+msgid "Waiting for funds"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:265
+msgid ""
+"The status will change from \"Waiting for funds\" to \"Waiting for Core "
+"Chain to produce proof of transfer of funds\". Then, the status will "
+"change to \"Waiting for Platform acknowledgement\" once the funds have "
+"been received and the identity registration process has started."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:273
+#: ../../docs/user/network/dash-evo-tool/index.rst:327
+msgid "Waiting for Platform acknowledgement"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:275
 msgid ""
 "Once the identity has been registered, you can choose to return to the "
 "identity screen or proceed to :ref:`registering a name <evo-tool-name-"
 "register>`."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:262
+#: ../../docs/user/network/dash-evo-tool/index.rst:282
 msgid "Identity creation success"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:269
-msgid "Identity screen with an identity loaded"
+#: ../../docs/user/network/dash-evo-tool/index.rst:289
+msgid "Identity screen with the new identity loaded"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:274
+#: ../../docs/user/network/dash-evo-tool/index.rst:294
 msgid "Top up identity"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:278
+#: ../../docs/user/network/dash-evo-tool/index.rst:298
 msgid ""
 "Before topping up an identity, make sure you have :ref:`added a Dash Evo "
 "Tool wallet <evo-tool-wallet-create>`."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:281
+#: ../../docs/user/network/dash-evo-tool/index.rst:301
 msgid ""
 "Your identity's credit balance will decrease as you use applications on "
-"Platform. You can increase your balance by doing and identity top up. On "
-"the main identity screen, click the **Top up** button for the identity "
-"you want to add credits to."
+"Platform. You can increase your balance by doing an identity top up. On "
+"the main identity screen, click the **Actions** button for the identity "
+"you want to add credits to, then click **Top up**."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:289
-#: ../../docs/user/network/dash-evo-tool/index.rst:323
-msgid "Identity screen"
+#: ../../docs/user/network/dash-evo-tool/index.rst:309
+#: ../../docs/user/network/dash-evo-tool/index.rst:343
+msgid "Identity actions menu"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:291
+#: ../../docs/user/network/dash-evo-tool/index.rst:311
 msgid ""
 "On the top up identity screen, select the funding method and funding "
 "amount. Then, click **Top Up Identity** to continue."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:300
+#: ../../docs/user/network/dash-evo-tool/index.rst:320
 msgid ""
 "The status will change from \"Waiting for funds\" to \"Waiting for "
 "Platform acknowledgement\" once the funds have been received and the "
 "identity top up process has started."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:309
+#: ../../docs/user/network/dash-evo-tool/index.rst:329
 msgid "Once the top up is complete, a message will indicate it was successful."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:314
+#: ../../docs/user/network/dash-evo-tool/index.rst:334
 msgid "Transfer credits"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:316
+#: ../../docs/user/network/dash-evo-tool/index.rst:336
 msgid ""
 "You can transfer credits to another identity by providing the identity's "
-"ID. On the main identity screen, click the **Transfer** button for the "
-"identity sending the credits."
+"ID. On the main identity screen, click the **Actions** button for the "
+"identity sending the credits, then click **Transfer**."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:325
+#: ../../docs/user/network/dash-evo-tool/index.rst:345
 msgid ""
 "On the transfer screen, set the amount and the identity ID to receive the"
 " transferred credits. Then, click **Transfer** to continue."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:332
+#: ../../docs/user/network/dash-evo-tool/index.rst:352
 msgid "Transfer screen with transfer details entered"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:334
+#: ../../docs/user/network/dash-evo-tool/index.rst:354
 msgid ""
 "When the withdrawal confirmation screen opens, confirm that the amount "
 "and destination identity ID are correct. Click **Confirm** to transfer "
 "the credits."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:341
+#: ../../docs/user/network/dash-evo-tool/index.rst:361
 msgid "Transfer confirmation screen"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:343
+#: ../../docs/user/network/dash-evo-tool/index.rst:363
 msgid "Once the transfer is complete, a message will indicate it was successful."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:348
+#: ../../docs/user/network/dash-evo-tool/index.rst:368
 msgid "Evonode withdrawals"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:352
+#: ../../docs/user/network/dash-evo-tool/index.rst:372
 msgid ""
-"Withdrawal requests enter a queue that is currently processed more slowly"
-" than intended. Depending on the timing of the withdrawal request, it may"
-" take up to 18 hours to complete."
+"Withdrawal requests enter a queue for processing. For security, there is "
+"a limit on how much can be withdrawn from Platform daily. If withdrawal "
+"requests hit the daily limit, they will remain in the queue longer. For "
+"details, see this `DCG development update "
+"<https://www.youtube.com/live/rc_avHHqG6E?si=ETv0yX-1b3odCU8F&t=599>`_."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:355
+#: ../../docs/user/network/dash-evo-tool/index.rst:377
 msgid ""
-"For security, there is also a limit on how much can be withdrawn from "
-"Platform daily. If withdrawal requests hit the daily limit, they will "
-"remain in the queue longer. For details, see this `DCG development update"
-" <https://www.youtube.com/live/rc_avHHqG6E?si=ETv0yX-1b3odCU8F&t=599>`_."
+"From the identity main screen,  click the **Actions** button for the "
+"identity requesting a withdrawal, then click **Withdraw**."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:360
-msgid ""
-"From the identity main screen, click the **Withdraw** button for an "
-"identity."
-msgstr ""
-
-#: ../../docs/user/network/dash-evo-tool/index.rst:366
+#: ../../docs/user/network/dash-evo-tool/index.rst:384
 msgid "Withdraw screen"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:368
+#: ../../docs/user/network/dash-evo-tool/index.rst:386
 msgid ""
 "On the withdrawal screen, select the key to sign the withdrawal. "
 "Selecting the owner key is recommended since this will direct the "
 "withdrawal to the payout address. Next, set the amount to withdraw."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:374
-msgid ""
-"The **Max** button currently has a bug so you may need to manually adjust"
-" the amount if you use that button."
-msgstr ""
-
-#: ../../docs/user/network/dash-evo-tool/index.rst:377
+#: ../../docs/user/network/dash-evo-tool/index.rst:390
 msgid "Click **Withdraw** after entering the information."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:383
+#: ../../docs/user/network/dash-evo-tool/index.rst:396
 msgid "Withdraw screen with key and amount selected"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:385
+#: ../../docs/user/network/dash-evo-tool/index.rst:398
 msgid ""
 "When the withdrawal confirmation screen opens, confirm that the amount "
 "and destination address are correct. Click **Confirm** to request the "
 "withdrawal."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:392
+#: ../../docs/user/network/dash-evo-tool/index.rst:405
 msgid "Withdrawal confirmation screen"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:397
+#: ../../docs/user/network/dash-evo-tool/index.rst:410
 msgid "Name operations"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:402
+#: ../../docs/user/network/dash-evo-tool/index.rst:415
 msgid "Register name"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:404
+#: ../../docs/user/network/dash-evo-tool/index.rst:417
 msgid ""
 "After :ref:`creating an identity <evo-tool-identity-create>`, you can "
 "register a name for it. From the main name screen, click the **Register "
 "Name** button on the upper right side of the screen."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:411
+#: ../../docs/user/network/dash-evo-tool/index.rst:424
 msgid "Name screen"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:413
+#: ../../docs/user/network/dash-evo-tool/index.rst:426
 msgid ""
 "First, select the identity to register a name for. This step will be "
 "automatically done if you are registering a name as part of the identity "
 "creation process."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:416
+#: ../../docs/user/network/dash-evo-tool/index.rst:429
 msgid ""
 "Next, enter the desired name. Notification will be provided if you "
 "selected a contested name and the estimated cost will be displayed. Click"
 " **Register Name** to complete the registration."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:423
+#: ../../docs/user/network/dash-evo-tool/index.rst:436
 msgid "Name registration"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:425
+#: ../../docs/user/network/dash-evo-tool/index.rst:438
 msgid ""
 "Upon successful registration, you can see the name on the **My "
 "usernames** screen along with any other names you have registered."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:432
+#: ../../docs/user/network/dash-evo-tool/index.rst:445
 msgid "Name registered successfully"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:437
+#: ../../docs/user/network/dash-evo-tool/index.rst:450
 msgid "Vote for names"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:439
+#: ../../docs/user/network/dash-evo-tool/index.rst:452
 msgid ""
 "The Voting screen displays a list of names that are currently require a "
 "vote. Click the **Refresh** button to update the screen at any time."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:444
+#: ../../docs/user/network/dash-evo-tool/index.rst:457
 msgid ""
 "Voting can only be done by masternodes and evonodes, and each node can "
 "only modify its vote four times. See the :ref:`load identity section "
 "<evo-tool-identity-load>` for instructions on importing your keys."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:451
+#: ../../docs/user/network/dash-evo-tool/index.rst:460
+msgid ""
+"To vote for a contestant, click on an entry in the Contestants column. "
+"You can also vote to Lock the name or Abstain from voting by clicking the"
+" value in those columns. Vote for multiple name contests simultaneously "
+"by making several selections."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:464
+msgid ""
+"Once you have made selections for all contests you want to vote on, click"
+" the **Cast/Schedule Votes** button to open the voting screen. There you "
+"can chose to cast your votes immediately or schedule them for later."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:472
 msgid "Voting screen"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:453
+#: ../../docs/user/network/dash-evo-tool/index.rst:474
 msgid ""
-"To vote for a contestant, click on an entry in the Contestants column. "
-"You can also vote to Lock the name or Abstain by clicking the value in "
-"those columns. You will be prompted to load an evonode or masternode "
-"identity if you have not already done so."
+"Click **Apply Votes** after determining how to vote for each selected "
+"contest."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:457
+#: ../../docs/user/network/dash-evo-tool/index.rst
+msgid "Cast vote"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:484
+msgid "Cast vote(s) immediately"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst
+msgid "Schedule vote"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:490
 msgid ""
-"After clicking one of the contestants, vote for that identity to receive "
-"the name by clicking one of your specific identities on the Vote "
-"Confirmation screen. Click **All** to vote with all your loaded "
-"identities simultaneously."
+"The Dash Evo Tool must be running and connected for scheduled votes to "
+"execute at the planned time."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:465
-msgid "Vote confirmation screen"
+#: ../../docs/user/network/dash-evo-tool/index.rst:497
+msgid "Schedule vote(s) for later"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:467
+#: ../../docs/user/network/dash-evo-tool/index.rst:502
+msgid "Scheduled votes"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:504
+msgid ""
+"Click **Scheduled votes** to view a list of any pending scheduled votes. "
+"Pending votes can be canceled by clicking the **Remove** button."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:511
+msgid "Scheduled votes screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:513
 msgid ""
 "See the `DPNS page "
 "<https://docs.dash.org/projects/platform/en/stable/docs/explanations/dpns.html"
 "#voting-details>`_ for more voting details."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:474
+#: ../../docs/user/network/dash-evo-tool/index.rst:520
+msgid "View contests"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:522
+msgid ""
+"Click **Active contests** or **Past contests** to view a list current or "
+"previous contests."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst
+msgid "Active contests"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:532
+msgid "Active contests screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst
+msgid "Past contests"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:540
+msgid "Past contests screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:545
+msgid "My usernames"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:547
+msgid ""
+"Click **My Usernames** to view a list of usernames owned by your "
+"identities."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:553
+msgid "My usernames screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:558
+msgid "Token operations"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:561
+msgid "My tokens"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:563
+msgid ""
+"The My Tokens screen shows all tokens currently being tracked. Click the "
+"**Refresh** button to update the screen at any time or **Add Token** to "
+"follow additional tokens."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:566
+msgid ""
+"You can view token information and access token-related commands by "
+"clicking on a token name to open the Token Details screen."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:573
+msgid "My Tokens screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:575
+msgid ""
+"The Token Details screen shows the balance for each of your identities "
+"and provides access to token-related :hoverxref:`actions <evo-tool-token-"
+"actions>` (e.g., transfer)."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:582
+msgid "Token details screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:587
+msgid "Token actions"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:591
+msgid ""
+"Token actions can only be used when they are enabled by the token's data "
+"contract configuration. Enabled actions can only be performed by "
+"authorized identities as defined in the token's data contract."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:595
+msgid "You can complete the following actions using the Dash Evo Tool:"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:598
+msgid "Action"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:598
+#: ../../docs/user/network/dash-evo-tool/index.rst:747
+msgid "Description"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:600
+msgid "Transfer"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:600
+msgid "Transfer tokens to another identity"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:602
+msgid "Claim"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:602
+msgid "Redeem or withdraw available tokens (e.g., from distribution)"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:604
+msgid "Mint"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:604
+msgid "Create new tokens and add them to the total supply"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:606
+msgid "Burn"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:606
+msgid "Permanently remove tokens from circulation"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:608
+msgid "Freeze"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:608
+msgid "Temporarily disable token transfers for a specific identity"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:610
+msgid "Destroy"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:610
+msgid "Permanently eliminate frozen tokens for a specific identity"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:612
+msgid "Unfreeze"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:612
+msgid "Re-enable transfers for a previously frozen identity"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:614
+msgid "Pause"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:614
+msgid "Halt all token operations temporarily"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:616
+msgid "Resume"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:616
+msgid "Reactivate operations after a pause"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:618
+msgid "View Claims"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:618
+msgid "Display information about completed token claims"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:620
+msgid "Update Config"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:620
+msgid "Modify token configuration settings"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:622
+msgid "Purchase"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:622
+msgid "Buy tokens that have set a price"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:624
+msgid "Set Price"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:624
+msgid "Define or update the price accepted for the token"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst
+msgid "Example transfer action"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:634
+msgid "Initiate a transfer action"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst
+msgid "Example group mint action"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:638
+msgid ""
+"For tokens configured to use :ref:`groups <evo-tool-token-group-actions>`"
+" for multi-party control, a message is displayed indicating the "
+"requirement for other group members to sign off on the request."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:646
+msgid "Initiate a minting group action"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:649
+msgid "Search tokens"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:651
+msgid ""
+"The Search Tokens screen enables searching for tokens by the keywords "
+"assigned to them by the token creator during token registration."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:658
+msgid "Token search screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:663
+msgid "Token Creator"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:665
+msgid ""
+"The Token Creator screen provides a comprehensive interface for creating "
+"and registering tokens on Dash Platform. It covers all configurable token"
+" attributes, ranging from basic supply details to advanced control "
+"mechanisms and distribution rules."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:673
+msgid "Token creator screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:675
+msgid ""
+"The following sections describe the token creator parameters used to "
+"configure your token."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:678
+msgid "Identity and Key Selection"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:680
+msgid "Select an identity and an associated key to register the token contract:"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:682
+msgid "**Identity**: The Dash Platform identity that will own the token contract"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:683
+msgid ""
+"**Key**: The key from the identity used to sign the registration, "
+"including purpose and security level"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:688
+msgid "Only valid identity/key pairs are permitted to register token contracts."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:691
+#, fuzzy
+msgid "Token Information"
+msgstr "Configurazione"
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:693
+msgid "**Name and Metadata**"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:695
+msgid "**Token Name (singular)**: Name for a single unit of the token"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:696
+msgid "**Token Name (plural)**: Name for multiple units"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:697
+msgid "**Language**: Localized language for token naming"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:698
+msgid ""
+"**Add singular name to keywords**: Whether the token name will appear in "
+"token search queries"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:699
+msgid "**Description**: Short (max 100 characters) description of the token"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:701
+msgid "**Supply Parameters**"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:703
+msgid "**Base Supply**: Number of tokens created at registration"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:704
+msgid "**Max Supply**: Maximum possible token supply"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:706
+msgid "**Keywords**"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:708
+msgid ""
+"**Contract Keywords**: Comma-separated tags for categorization and "
+"querying"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:711
+msgid "Advanced Settings (Optional)"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:713
+msgid "**General Options**"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:715
+msgid "**Start as paused**: Contract starts paused after creation"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:716
+msgid ""
+"**Keep history**: Enables historical recording. Advanced settings allow "
+"specifying which actions are logged."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:717
+msgid ""
+"**Name should be capitalized**: Forces capitalization of token name on "
+"display"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:718
+msgid "**Decimals**: Number of decimal places for token divisibility"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:721
+msgid "Action Rules"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:723
+msgid "Define which administrative actions are permitted after contract creation:"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:729
+msgid "Token creator action rules"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:731
+msgid "**Manual Mint**: Allow creating additional tokens"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:732
+msgid "**Manual Burn**: Allow destroying tokens"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:733
+msgid "**Freeze**: Freeze balances of individual addresses"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:734
+msgid "**Destroy Frozen Funds**: Destroy frozen balances"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:735
+msgid "**Emergency Action**: Permit emergency actions"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:736
+msgid "**Max Supply Change**: Allow changes to the maximum supply"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:737
+msgid ""
+"**Conventions Change**: Allow changes to token conventions (supported "
+"languages, etc.)"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:738
+msgid "**Marketplace Trade Mode Change**: Allow changes to trading mode"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:739
+msgid ""
+"**Direct Purchase Pricing Change**: Allow changes to direct purchase "
+"pricing"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:740
+msgid ""
+"**Main Control Group Change**: Allow changes to the contract's control "
+"group"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:742
+msgid "**Presets**"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:744
+msgid ""
+"The Dash Evo Tool provides several pre-defined action templates to "
+"simplify token configuration:"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:747
+msgid "Rule Preset"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:749
+msgid "Custom"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:749
+msgid "Allows setting all action rules independently for maximum flexibility."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:751
+msgid "Most Restrictive"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:751
+msgid ""
+"No actions are permitted after initialization. All governance and control"
+" settings are immutable. Suitable for tokens that should remain fixed and"
+" tamper-proof."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:755
+msgid "Only Emergency Action"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:755
+msgid ""
+"Only emergency actions (e.g., pausing the token) are permitted. Minting, "
+"burning, and advanced operations (such as freezing) are disallowed. This "
+"preset allows minimal control for critical situations without risking "
+"token supply or ownership manipulation."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:760
+msgid "Minting and Burning"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:760
+msgid ""
+"Allows minting and burning operations, but not advanced features such as "
+"freezing. Enables supply management without enabling full administrative "
+"capabilities."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:764
+msgid "Advanced Actions"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:764
+msgid ""
+"Grants the ability to perform advanced actions, including freezing and "
+"unfreezing balances. Minting and burning are also permitted. Suitable for"
+" tokens that require moderate administrative control without total "
+"override capabilities."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:769
+msgid "All Allowed"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:769
+#, fuzzy
+msgid "Enables all actions."
+msgstr "Installazione"
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:773
+msgid "Distribution Options"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:775
+msgid "Define token distribution using perpetual and/or pre-programmed options:"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:781
+msgid "Token creator distribution"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:783
+msgid "**Perpetual Distribution**"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:785
+msgid "Automated recurring token distributions:"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:787
+msgid "**Enable**: Activates automated distribution"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:788
+msgid "**Type**: Distribution trigger type (e.g., ``BlockBased``)"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:789
+msgid ""
+"**Distributes every (interval)**: Block, epoch, or time-based interval "
+"between distribution events"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:790
+msgid "**Function**: Distribution model (e.g., ``FixedAmount`` per interval)"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:791
+msgid "**Recipient**: Identity receiving distributed tokens"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:793
+msgid "**Pre-Programmed Distribution**"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:795
+msgid "One-time or scheduled future distributions:"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:797
+msgid "**Enable Pre-Programmed Distribution**: Enables scheduled events"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:798
+msgid ""
+"**Add New Distribution Entry**: Create new pre-programmed distribution "
+"event"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:801
+msgid "Groups (Optional)"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:803
+msgid "Define multi-party shared control of the contract:"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:805
+msgid "**Add New Group**: Create a control group"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:806
+msgid ""
+"**Main Control Group Position**: Set primary group responsible for "
+"contract ownership and administration"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:809
+msgid "Register and Review"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:811
+msgid ""
+"**Register Token Contract**: Submit and register the token contract on "
+"Dash Platform"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:812
+msgid "**View JSON**: View full contract schema prior to registration"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:817
+msgid "Group actions"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:819
+msgid ""
+"The Group Actions screen allows querying group action requests. Select a "
+"contract and an identity, then click **Fetch Group Actions** to see all "
+"related group actions request."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:822
+msgid ""
+"Click the **Take Action** button to open the approval screen for a "
+"specific request."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:828
+msgid "Group Actions screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:830
+msgid ""
+"On approval screen, select the key to sign the request. Then, click the "
+"**Sign <Action>** button. When the confirmation screen opens, confirm "
+"that the action details are correct. Finally, click **Confirm** to "
+"complete your approval of the request."
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:838
+msgid "Group Actions Approval screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:843
 msgid "Wallet operations"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:478
+#: ../../docs/user/network/dash-evo-tool/index.rst:847
 msgid ""
 "The Dash Evo Tool wallet features only work if your Dash Core node has a "
 "single wallet open. **If you have multiple wallets open in Dash Core, "
 "close all of them except the one used by the Dash Evo Tool.**"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:485
+#: ../../docs/user/network/dash-evo-tool/index.rst:854
 msgid "Create wallet"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:487
+#: ../../docs/user/network/dash-evo-tool/index.rst:856
 msgid ""
 "This tool includes a basic wallet feature to support identity "
 "registration. Wallets can be added from the wallet screen."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:492
+#: ../../docs/user/network/dash-evo-tool/index.rst:861
 msgid ""
 "Since this tool adds watching-only addresses to Dash Core when creating "
 "identities, it is recommended to close all existing Dash Core wallets and"
-" :ref:`create a new, empty wallet <dashcore-installation-macos-create-"
-"wallet>` for the Dash Evo Tool. Also, make sure to :ref:`backup your Dash"
-" Core wallet <dashcore-backup>`."
+" :ref:`create a new wallet <dashcore-installation-macos-create-wallet>` "
+"for the Dash Evo Tool. Also, make sure to :ref:`backup your Dash Core "
+"wallet <dashcore-backup>`."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:497
-msgid "Click **Add Wallet** to create a new wallet."
+#: ../../docs/user/network/dash-evo-tool/index.rst:866
+msgid "Click **Create Wallet** to create a new wallet."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:503
+#: ../../docs/user/network/dash-evo-tool/index.rst:872
 msgid "Wallet screen"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:505
+#: ../../docs/user/network/dash-evo-tool/index.rst:874
 msgid ""
 "After creating extra randomness with the mouse, select your preferred "
 "language and click **Generate** to display you passphrase. Write it down "
-"and store it securely, then click the checkbox in step 3 to confirm."
+"and store it securely."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:509
+#: ../../docs/user/network/dash-evo-tool/index.rst:881
+#: ../../docs/user/network/dash-evo-tool/index.rst:890
+msgid "Wallet create screen"
+msgstr ""
+
+#: ../../docs/user/network/dash-evo-tool/index.rst:883
 msgid ""
+"Click the checkbox in step 3 to confirm you have saved the passphrase. "
 "Next, enter a wallet name and optionally add a password before clicking "
 "**Save Wallet** to store the wallet."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:516
-msgid "Wallet create screen"
-msgstr ""
-
-#: ../../docs/user/network/dash-evo-tool/index.rst:521
+#: ../../docs/user/network/dash-evo-tool/index.rst:895
 msgid "Use wallet"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:523
+#: ../../docs/user/network/dash-evo-tool/index.rst:897
 msgid "Select your wallet using the dropdown box."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:529
+#: ../../docs/user/network/dash-evo-tool/index.rst:903
 msgid "Select wallet"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:534
+#: ../../docs/user/network/dash-evo-tool/index.rst:908
 msgid "Funds"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:536
+#: ../../docs/user/network/dash-evo-tool/index.rst:910
 msgid ""
 "Several tabs display wallet details. The Funds tab shows your receiving "
 "addresses. Click **Add Receiving Address** if you want to add additional "
 "addresses to fund the wallet."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:543
+#: ../../docs/user/network/dash-evo-tool/index.rst:917
 msgid "Wallet Funds tab"
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:545
+#: ../../docs/user/network/dash-evo-tool/index.rst:919
 msgid ""
 "After adding addresses, they will appear in a table with balance and "
 "other details."
 msgstr ""
 
-#: ../../docs/user/network/dash-evo-tool/index.rst:551
+#: ../../docs/user/network/dash-evo-tool/index.rst:925
 msgid "Wallet with address added"
 msgstr ""
 
@@ -788,5 +1465,195 @@ msgstr ""
 #~ "in credits instead of DASH, so you"
 #~ " will need to manually adjust the "
 #~ "amount if you use that button."
+#~ msgstr ""
+
+#~ msgid "dash, platform, evonode, masternodes, dash evo tool"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Dash Evo Tool is an application "
+#~ "designed to help you vote on "
+#~ "usernames, withdraw evonode credits, and "
+#~ "complete an expanding list of Platform"
+#~ " actions. This guide describes how to"
+#~ " download, install, and use the Dash"
+#~ " Evo Tool."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Windows <https://github.com/dashpay/dash-evo-"
+#~ "tool/releases/download/v0.8.1/dash-evo-tool-"
+#~ "windows.zip>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Mac (ARM m1-m4) <https://github.com/dashpay"
+#~ "/dash-evo-tool/releases/download/v0.8.1/dash-evo-"
+#~ "tool-arm64-mac.zip>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Mac (x86) <https://github.com/dashpay/dash-evo-"
+#~ "tool/releases/download/v0.8.1/dash-evo-"
+#~ "tool-x86_64-mac.zip>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Linux (x86) <https://github.com/dashpay/dash-"
+#~ "evo-tool/releases/download/v0.8.1/dash-evo-"
+#~ "tool-x86_64-linux.zip>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Linux (ARM) <https://github.com/dashpay/dash-"
+#~ "evo-tool/releases/download/v0.8.1/dash-evo-tool-"
+#~ "arm64-linux.zip>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Dash Evo Tool includes a "
+#~ "configuration file that will work "
+#~ "without modification. Skip the steps "
+#~ "below *unless you have a custom "
+#~ "Dash Core configuration that you want"
+#~ " to continue using.*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you have Dash Core installed in"
+#~ " a non-standard location, use the "
+#~ "advanced settings to specify where to"
+#~ " find it."
+#~ msgstr ""
+
+#~ msgid "Identity screen with no loaded identities"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "On the create identity screen, leave "
+#~ "the first two options set to the"
+#~ " default and select the funding "
+#~ "method. Then, send the requested amount"
+#~ " of DASH to the provided address."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The status will change from \"Waiting"
+#~ " for funds\" to \"Waiting for "
+#~ "Platform acknowledgement\" once the funds "
+#~ "have been received and the identity "
+#~ "registration process has started."
+#~ msgstr ""
+
+#~ msgid "Identity screen with an identity loaded"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your identity's credit balance will "
+#~ "decrease as you use applications on "
+#~ "Platform. You can increase your balance"
+#~ " by doing and identity top up. "
+#~ "On the main identity screen, click "
+#~ "the **Top up** button for the "
+#~ "identity you want to add credits "
+#~ "to."
+#~ msgstr ""
+
+#~ msgid "Identity screen"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can transfer credits to another "
+#~ "identity by providing the identity's ID."
+#~ " On the main identity screen, click"
+#~ " the **Transfer** button for the "
+#~ "identity sending the credits."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Withdrawal requests enter a queue that"
+#~ " is currently processed more slowly "
+#~ "than intended. Depending on the timing"
+#~ " of the withdrawal request, it may"
+#~ " take up to 18 hours to "
+#~ "complete."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For security, there is also a "
+#~ "limit on how much can be withdrawn"
+#~ " from Platform daily. If withdrawal "
+#~ "requests hit the daily limit, they "
+#~ "will remain in the queue longer. "
+#~ "For details, see this `DCG development"
+#~ " update <https://www.youtube.com/live/rc_avHHqG6E?si"
+#~ "=ETv0yX-1b3odCU8F&t=599>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "From the identity main screen, click "
+#~ "the **Withdraw** button for an identity."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The **Max** button currently has a "
+#~ "bug so you may need to manually"
+#~ " adjust the amount if you use "
+#~ "that button."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To vote for a contestant, click on"
+#~ " an entry in the Contestants column."
+#~ " You can also vote to Lock the"
+#~ " name or Abstain by clicking the "
+#~ "value in those columns. You will "
+#~ "be prompted to load an evonode or"
+#~ " masternode identity if you have not"
+#~ " already done so."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After clicking one of the contestants,"
+#~ " vote for that identity to receive"
+#~ " the name by clicking one of "
+#~ "your specific identities on the Vote "
+#~ "Confirmation screen. Click **All** to "
+#~ "vote with all your loaded identities "
+#~ "simultaneously."
+#~ msgstr ""
+
+#~ msgid "Vote confirmation screen"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Since this tool adds watching-only "
+#~ "addresses to Dash Core when creating "
+#~ "identities, it is recommended to close"
+#~ " all existing Dash Core wallets and"
+#~ " :ref:`create a new, empty wallet "
+#~ "<dashcore-installation-macos-create-wallet>` "
+#~ "for the Dash Evo Tool. Also, make"
+#~ " sure to :ref:`backup your Dash Core"
+#~ " wallet <dashcore-backup>`."
+#~ msgstr ""
+
+#~ msgid "Click **Add Wallet** to create a new wallet."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After creating extra randomness with the"
+#~ " mouse, select your preferred language "
+#~ "and click **Generate** to display you"
+#~ " passphrase. Write it down and store"
+#~ " it securely, then click the checkbox"
+#~ " in step 3 to confirm."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Next, enter a wallet name and "
+#~ "optionally add a password before "
+#~ "clicking **Save Wallet** to store the"
+#~ " wallet."
 #~ msgstr ""
 

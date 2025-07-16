@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-19 12:15-0500\n"
+"POT-Creation-Date: 2025-07-16 10:59-0400\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2022\n"
 "Language: zh_CN\n"
@@ -147,62 +147,58 @@ msgstr "Faucets"
 msgid "https://faucet.testnet.networks.dash.org - by Dash Core Group"
 msgstr ""
 
-#: ../../docs/user/developers/testnet.rst:62
-msgid "http://faucet.test.dash.crowdnode.io - by CrowdNode"
-msgstr ""
-
-#: ../../docs/user/developers/testnet.rst:65
+#: ../../docs/user/developers/testnet.rst:64
 msgid "Explorers"
 msgstr "浏览器"
 
-#: ../../docs/user/developers/testnet.rst:67
+#: ../../docs/user/developers/testnet.rst:66
 msgid "https://insight.testnet.networks.dash.org/insight"
 msgstr ""
 
-#: ../../docs/user/developers/testnet.rst:70
+#: ../../docs/user/developers/testnet.rst:69
 msgid "Masternodes"
 msgstr "主节点"
 
-#: ../../docs/user/developers/testnet.rst:72
+#: ../../docs/user/developers/testnet.rst:71
 msgid ""
 "Installing a masternode under testnet generally follows the same steps as"
 " the :ref:`mainnet masternode installation guide <masternode-setup>`, but"
 " with a few key differences:"
 msgstr "在测试网络下安装主节点，步骤一般与 :ref:`主网主节点安装指南 <masternode-setup>` 所述相同，除了一些关键的区别："
 
-#: ../../docs/user/developers/testnet.rst:76
+#: ../../docs/user/developers/testnet.rst:75
 msgid ""
 "You will probably be running a development version of Dash instead of the"
 " stable release. Choose the latest `nightly build "
 "<https://github.com/dashpay/dash-dev-branches/releases>`__ on GitHub."
 msgstr ""
 
-#: ../../docs/user/developers/testnet.rst:79
+#: ../../docs/user/developers/testnet.rst:78
 msgid ""
 "When opening the firewall, port 19999 must be opened instead of (or in "
 "addition to) 9999. Use this command: ``ufw allow 19999/tcp``"
 msgstr "打开防火墙时，必须也打开端口19999，不要打开（或除了）端口9999。使用此指令： ``ufw allow 19999/tcp``"
 
-#: ../../docs/user/developers/testnet.rst:81
+#: ../../docs/user/developers/testnet.rst:80
 msgid ""
 "Your desktop wallet must be running in testnet mode. Add the following "
 "line to *dash.conf*: ``testnet = 1``"
 msgstr "您的桌面钱包必须以测试网络模式运行。添加 *dash.conf*: ``testnet = 1``"
 
-#: ../../docs/user/developers/testnet.rst:83
+#: ../../docs/user/developers/testnet.rst:82
 msgid ""
 "When sending the collateral, you can get the 1000 tDASH for free from a "
 "faucet (see above)"
 msgstr "发送保证金时，您可以从内接头处免费获得1000 tDASH（见上文）"
 
-#: ../../docs/user/developers/testnet.rst:85
+#: ../../docs/user/developers/testnet.rst:84
 msgid ""
 "Your masternode configuration file must also specify testnet mode. Add "
 "the following line when setting up *dash.conf* on the masternode: "
 "``testnet = 1``"
 msgstr "您的主节点配置文件必须指定测试网络模式。在设置 *dash.conf* 时，请在主节点上添加: ``testnet = 1``"
 
-#: ../../docs/user/developers/testnet.rst:88
+#: ../../docs/user/developers/testnet.rst:87
 msgid ""
 "As for mainnet masternodes, the RPC username and password must contain "
 "alphanumeric characters only"
@@ -212,5 +208,8 @@ msgstr "对于主网的主节点，RPC用户名和密码只能包含字母数字
 #~ msgstr ""
 
 #~ msgid "http://insight.testnet.networks.dash.org:3001/insight"
+#~ msgstr ""
+
+#~ msgid "http://faucet.test.dash.crowdnode.io - by CrowdNode"
 #~ msgstr ""
 

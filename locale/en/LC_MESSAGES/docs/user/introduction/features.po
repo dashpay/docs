@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-19 12:15-0500\n"
+"POT-Creation-Date: 2025-07-16 10:59-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgid "No premine"
 msgstr ""
 
 #: ../../docs/user/introduction/features.rst:18
-msgid "X11 hashing algorithm, CPU/GPU/ASIC mining available"
+msgid "X11 hashing algorithm, ASIC mining available"
 msgstr ""
 
 #: ../../docs/user/introduction/features.rst:19
@@ -227,7 +227,7 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/introduction/features.rst:98
-#: ../../docs/user/introduction/features.rst:638
+#: ../../docs/user/introduction/features.rst:611
 msgid "CoinJoin"
 msgstr ""
 
@@ -469,10 +469,10 @@ msgstr ""
 #: ../../docs/user/introduction/features.rst:269
 msgid ""
 "X11 is a widely used hashing algorithm created by Dash core developer "
-"Evan Duffield. X11’s chained hashing algorithm utilizes a sequence of "
+"Evan Duffield. X11's chained hashing algorithm utilizes a sequence of "
 "eleven scientific hashing algorithms for the proof-of-work. This is so "
 "that the processing distribution is fair and coins will be distributed in"
-" much the same way Bitcoin’s were originally. X11 was intended to make "
+" much the same way Bitcoin's were originally. X11 was intended to make "
 "ASICs much more difficult to create, thus giving the currency plenty of "
 "time to develop before mining centralization became a threat. This "
 "approach was largely successful; as of early 2016, ASICs for X11 now "
@@ -1211,41 +1211,10 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/introduction/features.rst:578
-msgid "Sentinel"
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:582
-msgid ""
-"Sentinel was deprecated in Dash Core v20.0 when its functionality was "
-"integrated into Dash Core."
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:585
-msgid ""
-"Introduced in Dash 0.12.1, Sentinel is an autonomous agent for "
-"persisting, processing and automating Dash governance objects and tasks. "
-"Sentinel is implemented as a Python application that binds to a local "
-"version dashd instance on each Dash masternode."
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:590
-msgid ""
-"A Governance Object (or \"govObject\") is a generic structure introduced "
-"in Dash 0.12.1 to allow for the creation of Budget Proposals and "
-"Triggers. Class inheritance has been utilized to extend this generic "
-"object into a \"Proposal\" object to supplant the current Dash budget "
-"system."
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:599
-msgid "Diagram highlighting the relationship between Dash Sentinel and Core"
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:605
 msgid "Fees"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:607
+#: ../../docs/user/introduction/features.rst:580
 msgid ""
 "Transactions on the Dash network are recorded in blocks on the "
 "blockchain. The size of each transaction is measured in bytes, but there "
@@ -1265,7 +1234,7 @@ msgid ""
 "included."
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:624
+#: ../../docs/user/introduction/features.rst:597
 msgid ""
 "The release of Dash 0.12.2.0 and activation of DIP0001 saw a simultaneous"
 " reduction of fees by a factor of 10, while the block size was increased "
@@ -1278,39 +1247,39 @@ msgid ""
 "lock all transactions. The current fee schedule for Dash is as follows:"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:636
+#: ../../docs/user/introduction/features.rst:609
 msgid "Transaction type"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:636
+#: ../../docs/user/introduction/features.rst:609
 msgid "Recommended fee"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:636
+#: ../../docs/user/introduction/features.rst:609
 msgid "Per unit"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:638
+#: ../../docs/user/introduction/features.rst:611
 msgid "0.001 DASH"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:638
+#: ../../docs/user/introduction/features.rst:611
 msgid "Per 10 rounds of CoinJoin (average)"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:640
+#: ../../docs/user/introduction/features.rst:613
 msgid "All other transactions"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:640
+#: ../../docs/user/introduction/features.rst:613
 msgid "0.00001 DASH"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:640
+#: ../../docs/user/introduction/features.rst:613
 msgid "Per kB of transaction data"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:643
+#: ../../docs/user/introduction/features.rst:616
 msgid ""
 "As an example, a standard and relatively simple transaction on the Dash "
 "network with one input, one output and a possible change address "
@@ -1320,7 +1289,7 @@ msgid ""
 "transactions without any extra charge."
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:650
+#: ../../docs/user/introduction/features.rst:623
 msgid ""
 ":ref:`CoinJoin` works by creating denominations of 10, 1, 0.1, 0.01 and "
 "0.001 DASH and then creating CoinJoin transactions with other users using"
@@ -1338,11 +1307,11 @@ msgid ""
 "check your fees before sending a transaction."
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:669
+#: ../../docs/user/introduction/features.rst:642
 msgid "Evolution"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:671
+#: ../../docs/user/introduction/features.rst:644
 msgid ""
 "`Dash Evolution <https://www.dash.org/roadmap/>`_ is the code name for a "
 "decentralized platform built on Dash blockchain technology. The goal is "
@@ -1353,7 +1322,7 @@ msgid ""
 "system."
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:679
+#: ../../docs/user/introduction/features.rst:652
 msgid ""
 "Dash Evolution will be released in stages. Dash Core releases 0.12.1 "
 "through to 0.12.3 lay the groundwork for the decentralized features "
@@ -1363,101 +1332,61 @@ msgid ""
 "Deterministic Masternode Lists "
 "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__. Version "
 "0.14 establishes `DIP6 Long Living Masternode Quorums "
-"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__. Expected in"
-" late 2019, Dash Core 1.0 will introduce key Evolution features such as "
-"username-based payments, the world's first decentralized API (DAPI) and a"
-" decentralized data storage system (Drive) based on IPFS."
+"<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__."
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:690
+#: ../../docs/user/introduction/features.rst:659
 msgid ""
 "Included below is our current work on Evolution, that adds many "
 "components such as:"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:693
+#: ../../docs/user/introduction/features.rst:662
 msgid ""
-"**Drive:** A decentralized shared file system for user data that lives on"
-" the second tier network"
+"**Drive:** A decentralized database for user data that lives on the "
+"second tier network"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:695
+#: ../../docs/user/introduction/features.rst:664
 msgid ""
 "**DAPI:** A decentralized API which allows third tier users to access the"
 " network securely"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:697
+#: ../../docs/user/introduction/features.rst:666
 msgid ""
 "**DashPay Decentralized Wallets:** These wallets are light clients "
 "connected to the network via DAPI and run on various platforms"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:699
+#: ../../docs/user/introduction/features.rst:668
 msgid ""
 "**Second Tier:** The masternode network, which provides compensated "
 "infrastructure for the project"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:701
+#: ../../docs/user/introduction/features.rst:670
 msgid ""
 "**Budgets:** The second tier is given voting power to allocate funds for "
 "specific projects on the network via the budget system"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:703
+#: ../../docs/user/introduction/features.rst:672
 msgid ""
 "**Governance:** The second tier is given voting power to govern the "
 "currency and chart the course the currency takes"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:705
+#: ../../docs/user/introduction/features.rst:674
 msgid ""
 "**Deterministic Masternode Lists:** This feature introduces an on-chain "
 "masternode list, which can be used to calculate past and present quorums"
 msgstr ""
 
-#: ../../docs/user/introduction/features.rst:708
+#: ../../docs/user/introduction/features.rst:677
 msgid ""
 "**Social Wallet:** We introduce a social wallet, which allows friends "
 "lists, grouping of users and shared multisig accounts"
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:712
-msgid "Evolution Previews"
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:714
-msgid ""
-"**Dash Dapps - Demoing Community Development on environment**, 17 August "
-"2020"
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:724
-msgid ""
-"The following videos featuring Dash Founder Evan Duffield and Head of "
-"UI/UX Development Chuck Williams describe the development process and "
-"upcoming features of the Dash Evolution platform."
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:728
-msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:736
-msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:744
-msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:752
-msgid "**Chuck Williams on Evolution**, Dash Conference London, 14 September 2017"
-msgstr ""
-
-#: ../../docs/user/introduction/features.rst:760
-msgid "**Evan Duffield on the Evolution Roadmap**, Dash Force News, 28 June 2017"
 msgstr ""
 
 #~ msgid "8 (Current)"
@@ -1976,5 +1905,132 @@ msgstr ""
 #~ " for masternodes. The expansion will "
 #~ "go into effect upon activation of "
 #~ "the Dash Core v20 hard fork."
+#~ msgstr ""
+
+#~ msgid "X11 hashing algorithm, CPU/GPU/ASIC mining available"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "X11 is a widely used hashing "
+#~ "algorithm created by Dash core developer"
+#~ " Evan Duffield. X11’s chained hashing "
+#~ "algorithm utilizes a sequence of eleven"
+#~ " scientific hashing algorithms for the "
+#~ "proof-of-work. This is so that "
+#~ "the processing distribution is fair and"
+#~ " coins will be distributed in much"
+#~ " the same way Bitcoin’s were "
+#~ "originally. X11 was intended to make "
+#~ "ASICs much more difficult to create, "
+#~ "thus giving the currency plenty of "
+#~ "time to develop before mining "
+#~ "centralization became a threat. This "
+#~ "approach was largely successful; as of"
+#~ " early 2016, ASICs for X11 now "
+#~ "exist and comprise a significant portion"
+#~ " of the network hashrate, but have"
+#~ " not resulted in the level of "
+#~ "centralization present in Bitcoin. Information"
+#~ " on mining with X11 can be "
+#~ "found in the :ref:`Mining <mining>` "
+#~ "section of this documentation."
+#~ msgstr ""
+
+#~ msgid "Sentinel"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sentinel was deprecated in Dash Core "
+#~ "v20.0 when its functionality was "
+#~ "integrated into Dash Core."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Introduced in Dash 0.12.1, Sentinel is"
+#~ " an autonomous agent for persisting, "
+#~ "processing and automating Dash governance "
+#~ "objects and tasks. Sentinel is "
+#~ "implemented as a Python application that"
+#~ " binds to a local version dashd "
+#~ "instance on each Dash masternode."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A Governance Object (or \"govObject\") "
+#~ "is a generic structure introduced in "
+#~ "Dash 0.12.1 to allow for the "
+#~ "creation of Budget Proposals and "
+#~ "Triggers. Class inheritance has been "
+#~ "utilized to extend this generic object"
+#~ " into a \"Proposal\" object to "
+#~ "supplant the current Dash budget system."
+#~ msgstr ""
+
+#~ msgid "Diagram highlighting the relationship between Dash Sentinel and Core"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Dash Evolution will be released in "
+#~ "stages. Dash Core releases 0.12.1 "
+#~ "through to 0.12.3 lay the groundwork "
+#~ "for the decentralized features behind "
+#~ "the scenes. Version 0.13 introduces the"
+#~ " foundation of Evolution, specifically "
+#~ "`DIP2 Special Transactions "
+#~ "<https://github.com/dashpay/dips/blob/master/dip-0002.md>`__ and"
+#~ " `DIP3 Deterministic Masternode Lists "
+#~ "<https://github.com/dashpay/dips/blob/master/dip-0003.md>`__. "
+#~ "Version 0.14 establishes `DIP6 Long "
+#~ "Living Masternode Quorums "
+#~ "<https://github.com/dashpay/dips/blob/master/dip-0006.md>`__. "
+#~ "Expected in late 2019, Dash Core "
+#~ "1.0 will introduce key Evolution "
+#~ "features such as username-based "
+#~ "payments, the world's first decentralized "
+#~ "API (DAPI) and a decentralized data "
+#~ "storage system (Drive) based on IPFS."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Drive:** A decentralized shared file "
+#~ "system for user data that lives on"
+#~ " the second tier network"
+#~ msgstr ""
+
+#~ msgid "Evolution Previews"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Dash Dapps - Demoing Community "
+#~ "Development on environment**, 17 August "
+#~ "2020"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following videos featuring Dash "
+#~ "Founder Evan Duffield and Head of "
+#~ "UI/UX Development Chuck Williams describe "
+#~ "the development process and upcoming "
+#~ "features of the Dash Evolution platform."
+#~ msgstr ""
+
+#~ msgid "**Evolution Demo #1 - The First Dash DAP**, 16 March 2018"
+#~ msgstr ""
+
+#~ msgid "**Evolution Demo #2 - Mobile Evolution**, 25 April 2018"
+#~ msgstr ""
+
+#~ msgid "**Evolution Demo #3 - Dashpay User Experience**, 15 May 2018"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Chuck Williams on Evolution**, Dash "
+#~ "Conference London, 14 September 2017"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Evan Duffield on the Evolution "
+#~ "Roadmap**, Dash Force News, 28 June "
+#~ "2017"
 #~ msgstr ""
 
