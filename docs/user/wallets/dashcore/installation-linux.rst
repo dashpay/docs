@@ -102,7 +102,7 @@ directory. We will now install the executable binaries to
    missing when starting Dash Core, search your distribution's package database for the missing file
    and install the package containing that file.
    
-   On recent versions of Ubuntu, you may need to install the following package by running::
+   On recent versions of Ubuntu, you may need to install libxcb-xinerama0 by running::
 
       sudo apt install libxcb-xinerama0
  
