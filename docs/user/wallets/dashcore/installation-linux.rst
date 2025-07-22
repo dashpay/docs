@@ -95,6 +95,17 @@ directory. We will now install the executable binaries to
 
   sudo install -m 0755 -o root -g root -t /usr/local/bin dashcore-22.1.3/bin/*
 
+.. note::
+
+   In order to run Dash Core, you will need several libraries that should be available in all major,
+   recently-released Linux distributions. If you receive an error message that indicates files are
+   missing when starting Dash Core, search your distribution's package database for the missing file
+   and install the package containing that file.
+   
+   On recent versions of Ubuntu, you may need to install the following package by running::
+
+      sudo apt install libxcb-xinerama0
+ 
 Start Dash Core from the terminal with the following command::
   
   dash-qt
