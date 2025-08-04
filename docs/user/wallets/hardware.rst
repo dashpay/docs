@@ -31,7 +31,6 @@ version 1.2. Follow `these instructions
 to add Dash support to the device.
 
 - Site: https://www.ledger.com
-- Review: https://dashnews.org/ledger-nano-s-review/
 - Shop: https://shop.ledger.com/pages/hardware-wallet
 
 Product video:
@@ -114,7 +113,6 @@ even on compromised and unsafe machines.
   The Trezor Safe 3 does not support Dash.
 
 - Site: https://trezor.io
-- Review: https://dashnews.org/trezor-hardware-wallet-review/
 - Shop: https://shop.trezor.io
 - Wallet: https://trezor.io/trezor-suite
 
