@@ -27,8 +27,7 @@ to Dash. You can then withdraw your wage to any Dash wallet for spending
 or saving. For more information, see the following blog posts:
 
  - **Bitwage:** https://blog.bitwage.com/get-dash/
- - **Uphold:** https://uphold.com/en/blog/bitwage-launches-support-of-dash-powered-by-uphold
- - **Dash Force News:** https://dashnews.org/can-get-salary-dash-right-now/
+ - **Uphold:** https://uphold.com/blog/product-updates/bitwage-launches-support-of-dash
 
 
 Spending
@@ -67,7 +66,7 @@ The rapidly evolving approach to regulation of cryptocurrencies such as
 Dash and instant exchange solutions such as ShapeShift means that
 availability of debit cards cannot be guaranteed in any or all
 jurisdictions. Check with the following providers for updates on the
-availability of Dash debit cards. 
+availability of Dash debit cards.
 
 Disclaimer: This list is provided for informational purposes only. Dash
 Core is not liable for any funds transmitted in error to these
