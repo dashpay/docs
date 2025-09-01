@@ -106,9 +106,7 @@ News
 
 - **Digital Cash Network:** https://www.youtube.com/channel/UCduLugW5-tkzxIde8Iz72mw
 - **Cash Alternative TV:** https://www.youtube.com/channel/UCeFCPtS8sViGO_NpKnS2rpg
-- **Dash News:** https://dashnews.org
 - **Dash News En Español (YouTube):** https://www.youtube.com/channel/UCG6Cuh8Q2eUt4NlZu4K-u8g
-- **Dash News Korea:** https://dashnewskorea.com
 - **Cointelegraph:** https://cointelegraph.com/tags/dash
 - **巴比特 (8BTC):** https://www.8btc.com/p/dash
 - **Dash News China (Wechat):** dashnews (or scan QR below)
