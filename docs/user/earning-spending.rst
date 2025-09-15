@@ -114,17 +114,6 @@ SpectroCoin
   physical card potentially available again soon. Dash, Bitcoin and
   Ethereum are supported, as well as over 20 major fiat currencies.
 
-Bitwala
-  .. image:: img/bitwala.png
-     :width: 200px
-     :align: right
-     :target: https://www.bitwala.com
-
-  https://www.bitwala.com
-
-  Bitwala is currently preparing legal documentation to re-launch it's
-  card service in Europe, and has supported Dash in the past.
-
 
 Tax
 ===
