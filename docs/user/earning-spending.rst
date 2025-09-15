@@ -26,8 +26,8 @@ in the world, and have a percentage of your wage immediately converted
 to Dash. You can then withdraw your wage to any Dash wallet for spending
 or saving. For more information, see the following blog posts:
 
- - **Bitwage:** https://blog.bitwage.com/get-dash/
- - **Uphold:** https://uphold.com/blog/product-updates/bitwage-launches-support-of-dash
+ - **Bitwage:** `Get Your Salary in Dash With Bitwage and Uphold <https://blog.bitwage.com/get-dash/>`_
+ - **Uphold:** `Bitwage Launches Support Of Dash Powered By Uphold <https://uphold.com/blog/product-updates/bitwage-launches-support-of-dash>`_
 
 
 Spending
