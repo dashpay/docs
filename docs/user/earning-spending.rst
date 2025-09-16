@@ -26,9 +26,8 @@ in the world, and have a percentage of your wage immediately converted
 to Dash. You can then withdraw your wage to any Dash wallet for spending
 or saving. For more information, see the following blog posts:
 
- - **Bitwage:** https://blog.bitwage.com/get-dash/
- - **Uphold:** https://uphold.com/en/blog/bitwage-launches-support-of-dash-powered-by-uphold
- - **Dash Force News:** https://dashnews.org/can-get-salary-dash-right-now/
+ - **Bitwage:** `Get Your Salary in Dash With Bitwage and Uphold <https://blog.bitwage.com/get-dash/>`_
+ - **Uphold:** `Bitwage Launches Support Of Dash Powered By Uphold <https://uphold.com/blog/product-updates/bitwage-launches-support-of-dash>`_
 
 
 Spending
@@ -38,20 +37,11 @@ Merchant Directory
 ------------------
 
 Dash can be spent in hundreds of stores and services both online and in
-physical locations.
+physical locations worldwide.
 
-.. image:: img/discover-dash.png
-   :width: 70%
-   :target: https://discoverdash.com
-
-**Discover Dash** lists businesses around the world accepting Dash,
-sorted by category. It's easy to add your business to the list, and also
-features a short introduction for new Dash users. The site is maintained
-by Dash Force, and has been `featured on Dash Force News
-<https://dashnews.org/300-businesses-accept-dash-worldwide-come-blockcypher-grants/>`_.
-
-- `Discover Dash <https://discoverdash.com>`_
-- `Where to Spend Dash <https://www.dash.org/where-to-spend/>`_
+To find businesses that accept Dash, check out `Where to Spend Dash <https://www.dash.org/spend/>`_.
+The Dash mobile apps also include a built-in merchant finder feature to help you locate nearby
+businesses that accept Dash payments.
 
 Debit Cards
 -----------
@@ -59,15 +49,13 @@ Debit Cards
 Debit cards work by prepaying in Dash to load the account, then
 withdrawing cash from an ATM or spending online or anywhere debit/credit
 cards are supported. The Dash is either exchanged at the time of
-purchase or in advance. For an overview and review of all available and
-upcoming cards, including cards funded by the Dash budget system, see
-`this article on Dash Force News <https://dashnews.org/debit-card-proposal-reviews/>`_.
+purchase or in advance.
 
 The rapidly evolving approach to regulation of cryptocurrencies such as
 Dash and instant exchange solutions such as ShapeShift means that
 availability of debit cards cannot be guaranteed in any or all
 jurisdictions. Check with the following providers for updates on the
-availability of Dash debit cards. 
+availability of Dash debit cards.
 
 Disclaimer: This list is provided for informational purposes only. Dash
 Core is not liable for any funds transmitted in error to these
@@ -125,17 +113,6 @@ SpectroCoin
   Spectrocoin offers an exchange, wallet and POS service, with a
   physical card potentially available again soon. Dash, Bitcoin and
   Ethereum are supported, as well as over 20 major fiat currencies.
-
-Bitwala
-  .. image:: img/bitwala.png
-     :width: 200px
-     :align: right
-     :target: https://www.bitwala.com
-
-  https://www.bitwala.com
-
-  Bitwala is currently preparing legal documentation to re-launch it's
-  card service in Europe, and has supported Dash in the past.
 
 
 Tax
