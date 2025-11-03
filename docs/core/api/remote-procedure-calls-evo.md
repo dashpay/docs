@@ -144,11 +144,15 @@ The `protx diff` RPC calculates a diff and a proof between two masternode list.
 | → →<br>`nType`                 | number       | Required<br>(exactly 1) | **Added in Dash Core 19.0.0**<br>Type of masternode<br> `0` - Regular masternode<br>`1` - Evolution masternode |
 | → →<br>`proRegTxHash`          | string (hex) | Required<br>(exactly 1) | The hash of the initial provider registration transaction as hex in RPC byte order |
 | → →<br>`confirmedHash`         | string (hex) | Required<br>(exactly 1) | The hash of the block where the ProRegTx was mined |
-| → →<br>`service`               | string       | Required<br>(exactly 1) | The IP address/Port of the masternode |
+| → →<br>`service`               | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The IP address/Port of the masternode |
+| → →<br>`addresses`             | object       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
+| → → →<br>`core_p2p`            | array        | Required<br>(exactly 1) | Array of core P2P address strings in `ADDR:PORT` format |
+| → → →<br>`platform_p2p`        | array        | Optional<br>(0 or 1)    | Array of platform P2P address strings in `ADDR:PORT` format (evonodes only) |
+| → → →<br>`platform_https`      | array        | Optional<br>(0 or 1)    | Array of platform HTTPS address strings in `ADDR:PORT` format (evonodes only) |
 | → →<br>`pubKeyOperator`        | string (hex) | Required<br>(exactly 1) | The operator public key |
 | → →<br>`votingAddress`         | string       | Required<br>(exactly 1) | The voting address |
 | → →<br>`isValid`               | bool         | Required<br>(exactly 1) | Set to `true` if masternode is valid |
-| → →<br>`platformHTTPPort`      | number       | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>TCP port of Platform HTTP/API interface (evonodes only) |
+| → →<br>`platformHTTPPort`      | number       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_https'][0]` instead<br>TCP port of Platform HTTP/API interface (evonodes only) |
 | → →<br>`platformNodeID`        | string (hex) | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>Platform P2P node ID, derived from P2P public key (evonodes only) |
 | → →<br>`payoutAddress`         | string       | Optional<br>(0 or 1)    | *Added in Dash Core 18.1.0*<br>The owner's payout address. Only included if the `extended` parameter is set to `true`. |
 | → →<br>`operatorPayoutAddress` | string       | Required<br>(exactly 1) | *Added in Dash Core 18.1.0*<br>The operator's payout address.  Only included if the `extended` parameter is set to `true`. |
@@ -304,7 +308,11 @@ The `protx info` RPC returns detailed information about a deterministic masterno
 | →<br>`operatorReward`               | number (float) | Required<br>(exactly 1) | The operator reward %. The value must be between `0.00` and `100.00`.                         |
 | →<br>`state`                        | object/null  | Required<br>(exactly 1) | An object containing a provider transaction state                                               |
 | → →<br>`version`                    | number (int) | Required<br>(exactly 1) | **Added in Dash Core 19.2.0**<br>The version of the most recent ProRegTx or ProUpRegTx          |
-| → →<br>`service`                    | string       | Required<br>(exactly 1) | The masternode's IP:Port                                                                        |
+| → →<br>`service`                    | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The masternode's IP:Port                                                                        |
+| → →<br>`addresses`                  | object       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
+| → → →<br>`core_p2p`                 | array        | Required<br>(exactly 1) | Array of core P2P address strings in `ADDR:PORT` format |
+| → → →<br>`platform_p2p`             | array        | Optional<br>(0 or 1)    | Array of platform P2P address strings in `ADDR:PORT` format (evonodes only) |
+| → → →<br>`platform_https`           | array        | Optional<br>(0 or 1)    | Array of platform HTTPS address strings in `ADDR:PORT` format (evonodes only) |
 | → →<br>`registeredHeight`           | number (int) | Required<br>(exactly 1) | The height where the masternode was registered                                                  |
 | → →<br>`lastPaidHeight`             | number (int) | Required<br>(exactly 1) | The height where the masternode was last paid                                                   |
 | → →<br>`consecutivePayments`        | number (int) | Required<br>(exactly 1) | **Added in Dash Core 19.0.0**<br>The number of consecutive payments the masternode has received in the payment cycle |
@@ -431,7 +439,11 @@ Lists all ProTxs in your wallet or on-chain, depending on the given type. If `ty
 | →<br>`operatorReward`               | number (float) | Required<br>(exactly 1) | The operator reward %. The value must be between `0.00` and `100.00`.                         |
 | →<br>`state`                        | object/null  | Required<br>(exactly 1) | An object containing a provider transaction state                                               |
 | → →<br>`version`                    | number (int) | Required<br>(exactly 1) | **Added in Dash Core 19.2.0**<br>The version of the most recent ProRegTx or ProUpRegTx                                           |
-| → →<br>`service`                    | string       | Required<br>(exactly 1) | The masternode's IP:Port                                                                        |
+| → →<br>`service`                    | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The masternode's IP:Port                                                                        |
+| → →<br>`addresses`                  | object       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
+| → → →<br>`core_p2p`                 | array        | Required<br>(exactly 1) | Array of core P2P address strings in `ADDR:PORT` format |
+| → → →<br>`platform_p2p`             | array        | Optional<br>(0 or 1)    | Array of platform P2P address strings in `ADDR:PORT` format (evonodes only) |
+| → → →<br>`platform_https`           | array        | Optional<br>(0 or 1)    | Array of platform HTTPS address strings in `ADDR:PORT` format (evonodes only) |
 | → →<br>`registeredHeight`           | number (int) | Required<br>(exactly 1) | The height where the masternode was registered                                                  |
 | → →<br>`lastPaidHeight`             | number (int) | Required<br>(exactly 1) | The height where the masternode was last paid                                                   |
 | → →<br>`consecutivePayments`        | number (int) | Required<br>(exactly 1) | **Added in Dash Core 19.0.0**<br>The number of consecutive payments the masternode has received in the payment cycle |
@@ -2105,7 +2117,11 @@ The `quorum info` RPC returns information about a specific quorum.
 | →<br>`members`                        | array        | Required<br>(exactly 1) | An array containing quorum member details                                                                                                                                              |
 | → →<br>Member                         | object       | Required<br>(1 or more) | An object describing a particular member                                                                                                                                               |
 | → → →<br>`proTxHash`                  | string (hex) | Required<br>(exactly 1) | The masternode's Provider Registration transaction hash                                                                                                                                |
-| → → →<br>`service`                    | string       | Required<br>(exactly 1) | *Added in Dash Core 18.1.0*<br>The masternode's IP:Port                                                                                                                              |
+| → → →<br>`service`                    | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The masternode's IP:Port                                                                                                                              |
+| → → →<br>`addresses`                  | object       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
+| → → → →<br>`core_p2p`                 | array        | Required<br>(exactly 1) | Array of core P2P address strings in `ADDR:PORT` format |
+| → → → →<br>`platform_p2p`             | array        | Optional<br>(0 or 1)    | Array of platform P2P address strings in `ADDR:PORT` format (evonodes only) |
+| → → → →<br>`platform_https`           | array        | Optional<br>(0 or 1)    | Array of platform HTTPS address strings in `ADDR:PORT` format (evonodes only) |
 | → → →<br>`pubKeyOperator`             | string (hex) | Required<br>(exactly 1) | *Added in Dash Core 0.15.0*<br>The masternode's Operator public key                                                                                                                    |
 | → → →<br>`valid`                      | bool         | Required<br>(exactly 1) | Indicates if the member is valid                                                                                                                                                       |
 | → → →<br>`pubKeyShare`                | string       | Optional<br>(0 or 1)    | Member public key share                                                                                                                                                                |
