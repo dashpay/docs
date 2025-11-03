@@ -626,11 +626,11 @@ The `protx register` RPC creates a ProRegTx referencing an existing collateral a
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
 | `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
 
-*Parameter #3---IP Address and port*
+*Parameter #3---Core P2P addresses*
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `ipAndPort` | string | Required<br>(exactly 1) | IP and port in the form `IP:PORT`.<br>Must be unique on the network.<br>Can be set to `0`, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -654,7 +654,7 @@ The `protx register` RPC creates a ProRegTx referencing an existing collateral a
 
 | Name             | Type   | Presence                | Description                                                                                                                                              |
 | ---------------- | ------ | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `operatorReward` | number | Required<br>(exactly 1) | The fraction in % to share with the operator. The value must be between `0.00` and `100.00`.<br>**Note**: If non-zero, `ipAndPort` must be zero as well. |
+| `operatorReward` | number | Required<br>(exactly 1) | The fraction in % to share with the operator. The value must be between `0.00` and `100.00`.<br>**Note**: If non-zero, `coreP2PAddrs` must be zero as well. |
 
 *Parameter #8---payout address*
 
@@ -732,11 +732,11 @@ ec66f97568727a9e5188acb3ccf680086ae11217236efcccd67b0b72e83c79a043d6c6d064378fdd
 
 ### ProTx Register Legacy
 
-:::{note}
-Since the v19 hard fork activation, this command must be used if a legacy scheme BLS key is being used to register a masternode. In all other cases the [`protx register`RPC](#protx-register) should be used instead.
-
-Legacy scheme BLS keys are created if the [`bls generate` RPC](#bls-generate) is run prior to v19 hard fork activation OR if a legacy key is explicitly generated using the [`bls generate legacy` RPC](#bls-generate).
+:::{warning}
+**DEPRECATED in Dash Core 23.0.0**: This RPC can be re-enabled with `-deprecatedrpc=legacy_mn`. No new legacy scheme masternode registrations will be permitted after the v24 fork.
 :::
+
+Since the v19 hard fork activation, this command must be used if a legacy scheme BLS key is being used to register a masternode. In all other cases the [`protx register`RPC](#protx-register) should be used instead. Legacy scheme BLS keys are created if a legacy key is explicitly generated using the [`bls generate legacy` RPC](#bls-generate).
 
 The `protx register_legacy` RPC works similar to `protx register`, but parses the operator key using the legacy BLS scheme. The collateral is specified through `collateralHash` and `collateralIndex` and must be an unspent transaction output spendable by this wallet. It must also not be used by any other masternode. This RPC requires a wallet passphrase to be set with walletpassphrase call if wallet is encrypted.
 
@@ -752,11 +752,11 @@ The `protx register_legacy` RPC works similar to `protx register`, but parses th
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
 | `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
 
-*Parameter #3---IP Address and port*
+*Parameter #3---Core P2P addresses*
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `ipAndPort` | string | Required<br>(exactly 1) | IP and port in the form `IP:PORT`.<br>Must be unique on the network.<br>Can be set to `0`, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -863,11 +863,11 @@ The `protx register_fund` RPC creates and funds a ProRegTx with the 1,000 DASH n
 | ------------------- | ------ | ----------------------- | ------------------------------------------ |
 | `collateralAddress` | string | Required<br>(exactly 1) | The Dash address to send the collateral to |
 
-*Parameter #2---IP Address and port*
+*Parameter #2---Core P2P addresses*
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `ipAndPort` | string | Required<br>(exactly 1) | IP and port in the form `IP:PORT`.<br>Must be unique on the network.<br>Can be set to `0`, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #3---owner address*
 
@@ -966,11 +966,11 @@ c207ebd525793ccb43f60ce34a5cd5f4011976a9145a375814e9caf5b8575a8221be246457e5c5c2
 
 ### ProTx Register Fund Legacy
 
-:::{note}
-Since the v19 hard fork activation, this command must be used if a legacy scheme BLS key is being used to register a masternode. In all other cases the [`protx register_fund` RPC](#protx-register-fund) should be used instead.
-
-Legacy scheme BLS keys are created if the [`bls generate` RPC](#bls-generate) is run prior to v19 hard fork activation OR if a legacy key is explicitly generated using the [`bls generate legacy` RPC](#bls-generate).
+:::{warning}
+**DEPRECATED in Dash Core 23.0.0**: This RPC can be re-enabled with `-deprecatedrpc=legacy_mn`. No new legacy scheme masternode registrations will be permitted after the v24 fork.
 :::
+
+Since the v19 hard fork activation, this command must be used if a legacy scheme BLS key is being used to register a masternode. In all other cases the [`protx register_fund` RPC](#protx-register-fund) should be used instead. Legacy scheme BLS keys are created if a legacy key is explicitly generated using the [`bls generate legacy` RPC](#bls-generate).
 
 The `protx register_fund_legacy` RPC creates, funds, and sends a ProTx to the network. The resulting transaction will move 1000 DASH to the address specified by `collateralAddress` and will then function as the collateral of your masternode. A few of the limitations you see in the arguments are temporary and might be lifted after DIP3 is fully deployed.
 
@@ -980,11 +980,11 @@ The `protx register_fund_legacy` RPC creates, funds, and sends a ProTx to the ne
 | ------------------- | ------ | ----------------------- | ------------------------------------------ |
 | `collateralAddress` | string | Required<br>(exactly 1) | The Dash address to send the collateral to |
 
-*Parameter #2---IP Address and port*
+*Parameter #2---Core P2P addresses*
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `ipAndPort` | string | Required<br>(exactly 1) | IP and port in the form `IP:PORT`.<br>Must be unique on the network.<br>Can be set to `0`, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #3---owner address*
 
@@ -1097,11 +1097,11 @@ The `protx register_prepare` RPC creates an unsigned ProTx and a message that mu
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
 | `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
 
-*Parameter #3---IP Address and port*
+*Parameter #3---Core P2P addresses*
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `ipAndPort` | string | Required<br>(exactly 1) | IP and port in the form 'IP:PORT'.<br>Must be unique on the network.<br>Can be set to '0', which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1170,11 +1170,11 @@ Result:
 
 ### ProTx Register Prepare Legacy
 
-:::{note}
-Since the v19 hard fork activation, this command must be used if a legacy scheme BLS key is being used to register a masternode. In all other cases the [`protx register_prepare` RPC](#protx-register-prepare) should be used instead.
-
-Legacy scheme BLS keys are created if the [`bls generate` RPC](#bls-generate) is run prior to v19 hard fork activation OR if a legacy key is explicitly generated using the [`bls generate legacy` RPC](#bls-generate).
+:::{warning}
+**DEPRECATED in Dash Core 23.0.0**: This RPC can be re-enabled with `-deprecatedrpc=legacy_mn`. No new legacy scheme masternode registrations will be permitted after the v24 fork.
 :::
+
+Since the v19 hard fork activation, this command must be used if a legacy scheme BLS key is being used to register a masternode. In all other cases the [`protx register_prepare` RPC](#protx-register-prepare) should be used instead. Legacy scheme BLS keys are created if a legacy key is explicitly generated using the [`bls generate legacy` RPC](#bls-generate).
 
 The `protx register_prepare_legacy` RPC Creates an unsigned ProTx and a message that must be signed externally with the private key that corresponds to collateralAddress to prove collateral ownership. The prepared transaction will also contain inputs and outputs to cover fees.
 
@@ -1190,11 +1190,11 @@ The `protx register_prepare_legacy` RPC Creates an unsigned ProTx and a message 
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
 | `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
 
-*Parameter #3---IP Address and port*
+*Parameter #3---Core P2P addresses*
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `ipAndPort` | string | Required<br>(exactly 1) | IP and port in the form 'IP:PORT'.<br>Must be unique on the network.<br>Can be set to '0', which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1277,11 +1277,11 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
 | `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
 
-*Parameter #3---IP Address and port*
+*Parameter #3---Core P2P Addresses*
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `ipAndPort` | string | Required<br>(exactly 1) | IP and port in the form `IP:PORT`.<br>Must be unique on the network.<br>Can be set to `0`, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1305,7 +1305,7 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 
 | Name             | Type   | Presence                | Description                                                                                                                                              |
 | ---------------- | ------ | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `operatorReward` | number | Required<br>(exactly 1) | The fraction in % to share with the operator. The value must be between `0.00` and `100.00`.<br>**Note**: If non-zero, `ipAndPort` must be zero as well. |
+| `operatorReward` | number | Required<br>(exactly 1) | The fraction in % to share with the operator. The value must be between `0.00` and `100.00`.<br>**Note**: If non-zero, `coreP2PAddrs` must be zero as well. |
 
 *Parameter #8---payout address*
 
@@ -1319,17 +1319,17 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 | ---------------- | ------ | ----------------------- | -------------------------------------------------- |
 | `platformNodeID` | string | Required<br>(exactly 1) | Platform P2P node ID, derived from P2P public key. |
 
-*Parameter #10---platform p2p port*
+*Parameter #10---platform P2P addresses*
 
 | Name              | Type   | Presence                | Description                                                   |
 | ----------------- | ------ | ----------------------- | ------------------------------------------------------------- |
-| `platformP2PPort` | number | Required<br>(exactly 1) | TCP port of Platform HTTP/API interface (network byte order). |
+| `platformP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of Platform P2P address(es) in the form `ADDR:PORT`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
-*Parameter #11---platform p2p port*
+*Parameter #11---platform HTTPS addresses*
 
 | Name              | Type   | Presence                | Description                                                                              |
 | ----------------- | ------ | ----------------------- | ---------------------------------------------------------------------------------------- |
-| `platformP2PPort` | number | Required<br>(exactly 1) | TCP port of Dash Platform peer-to-peer communication between nodes (network byte order). |
+| `platformHTTPSAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of Platform HTTPS address(es) in the form `ADDR:PORT`. Can be an empty string or an array of strings.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #12---fee source address*
 
@@ -1411,11 +1411,11 @@ The `protx register_fund_evo` RPC creates, funds, and sends a ProTx to the netwo
 | ------------------- | ------ | ----------------------- | ------------------------------------------ |
 | `collateralAddress` | string | Required<br>(exactly 1) | The Dash address to send the collateral to |
 
-*Parameter #2---IP Address and port*
+*Parameter #2---Core P2P addresses*
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `ipAndPort` | string | Required<br>(exactly 1) | IP and port in the form `IP:PORT`.<br>Must be unique on the network.<br>Can be set to `0`, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #3---owner address*
 
@@ -1453,17 +1453,17 @@ The `protx register_fund_evo` RPC creates, funds, and sends a ProTx to the netwo
 | ---------------- | ------ | ----------------------- | -------------------------------------------------- |
 | `platformNodeID` | string | Required<br>(exactly 1) | Platform P2P node ID, derived from P2P public key. |
 
-*Parameter #9---platform p2p port*
+*Parameter #9---platform P2P addresses*
 
 | Name              | Type   | Presence                | Description                                                                              |
 | ----------------- | ------ | ----------------------- | ---------------------------------------------------------------------------------------- |
-| `platformP2PPort` | number | Required<br>(exactly 1) | TCP port of Dash Platform peer-to-peer communication between nodes (network byte order). |
+| `platformP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of Platform P2P address(es) in the form `ADDR:PORT`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
-*Parameter #10---platform http port*
+*Parameter #10---platform HTTPS addresses*
 
 | Name               | Type   | Presence                | Description                                                   |
 | ------------------ | ------ | ----------------------- | ------------------------------------------------------------- |
-| `platformHTTPPort` | number | Required<br>(exactly 1) | TCP port of Platform HTTP/API interface (network byte order). |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of Platform HTTPS address(es) in the form `ADDR:PORT`. Can be an empty string or an array of strings.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---fund address*
 
@@ -1546,11 +1546,11 @@ The `protx register_prepare_evo` RPC creates an unsigned ProTx and a message tha
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
 | `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
 
-*Parameter #3---IP Address and port*
+*Parameter #3---Core P2P addresses*
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `ipAndPort` | string | Required<br>(exactly 1) | IP and port in the form 'IP:PORT'.<br>Must be unique on the network.<br>Can be set to '0', which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1588,17 +1588,17 @@ The `protx register_prepare_evo` RPC creates an unsigned ProTx and a message tha
 | ---------------- | ------------ | ----------------------- | -------------------------------------------------- |
 | `platformNodeID` | string (hex) | Required<br>(exactly 1) | Platform P2P node ID, derived from P2P public key. |
 
-*Parameter #10---platform p2p port*
+*Parameter #10---platform P2P addresses*
 
-| Name              | Type    | Presence                | Description                                        |
-| ----------------- | ------- | ----------------------- | -------------------------------------------------- |
-| `platformP2PPort` | numeric | Required<br>(exactly 1) | Platform P2P node ID, derived from P2P public key. |
+| Name | Type | Presence | Description |
+| - | - | - | - |
+| `platformP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of Platform P2P address(es) in the form `ADDR:PORT`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
-*Parameter #11---platform http port*
+*Parameter #11---platform HTTPS addresses*
 
-| Name               | Type    | Presence                | Description                                                   |
-| ------------------ | ------- | ----------------------- | ------------------------------------------------------------- |
-| `platformHTTPPort` | numeric | Required<br>(exactly 1) | TCP port of Platform HTTP/API interface (network byte order). |
+| Name | Type | Presence | Description |
+| - | - | - | - |
+| `platformHTTPSAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of Platform HTTPS address(es) in the form `ADDR:PORT`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #12---fee source address*
 
@@ -1646,11 +1646,11 @@ The `protx update_service_evo` RPC creates and sends a ProUpServTx to the networ
 | ----------- | ------------ | ----------------------- | ------------------------------------------------------------- |
 | `proTxHash` | string (hex) | Required<br>(exactly 1) | The hash of the provider transaction as hex in RPC byte order |
 
-*Parameter #2---IP Address and port*
+*Parameter #2---Core P2P Addresses*
 
 | Name        | Type   | Presence                | Description                                                          |
 | ----------- | ------ | ----------------------- | -------------------------------------------------------------------- |
-| `ipAndPort` | string | Required<br>(exactly 1) | IP and port in the form 'IP:PORT'.<br>Must be unique on the network. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network. |
 
 *Parameter #3---operator key*
 
@@ -1664,17 +1664,17 @@ The `protx update_service_evo` RPC creates and sends a ProUpServTx to the networ
 | ---------------- | ------ | ----------------------- | -------------------------------------------------- |
 | `platformNodeID` | string | Required<br>(exactly 1) | Platform P2P node ID, derived from P2P public key. |
 
-*Parameter #5---platform P2P Port*
+*Parameter #5---platform P2P addresses*
 
-| Name              | Type    | Presence                | Description                                                                              |
-| ----------------- | ------- | ----------------------- | ---------------------------------------------------------------------------------------- |
-| `platformP2PPort` | numeric | Required<br>(exactly 1) | TCP port of Dash Platform peer-to-peer communication between nodes (network byte order). |
+| Name | Type | Presence | Description |
+| - | - | - | - |
+| `platformP2PAddrs` | array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of Platform P2P address(es) in the form `ADDR:PORT`. Must be an array of strings. |
 
-*Parameter #6---platform HTTP Port*
+*Parameter #6---platform HTTPS addresses*
 
-| Name               | Type    | Presence                | Description                                                   |
-| ------------------ | ------- | ----------------------- | ------------------------------------------------------------- |
-| `platformHTTPPort` | numeric | Required<br>(exactly 1) | TCP port of Platform HTTP/API interface (network byte order). |
+| Name | Type | Presence | Description |
+| - | - | - | - |
+| `platformHTTPSAddrs` | array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Platform HTTPS address(es) in the form `ADDR:PORT`. Must be an array of strings. |
 
 *Parameter #7---operator payout address*
 
@@ -1865,9 +1865,11 @@ Result:
 
 ### ProTx Update Registrar Legacy
 
-:::{note}
-Since the v19 hard fork activation, this command must be used if a legacy scheme BLS key is being used to registrar update a masternode. This would include all masternodes registered prior to the hard fork that have not already updated to a new basic scheme BLS key.
+:::{warning}
+**DEPRECATED in Dash Core 23.0.0**: This RPC can be re-enabled with `-deprecatedrpc=legacy_mn`. Basic scheme masternodes cannot downgrade to legacy scheme after the v24 fork deployment.
 :::
+
+Since the v19 hard fork activation, this command must be used if a legacy scheme BLS key is being used to registrar update a masternode. This would include all masternodes registered prior to the hard fork that have not already updated to a new basic scheme BLS key.
 
 The `protx update_registrar_legacy` RPC creates and sends a ProUpRegTx to the network. This will update the operator key, voting key and payout address of the masternode specified by `proTxHash`. The owner key of the masternode must be known to your wallet. Requires the wallet passphrase to be provide with the [`walletpassphrase` RPC](../api/remote-procedure-calls-wallet.md#walletpassphrase) if the wallet is encrypted.
 
@@ -1932,11 +1934,11 @@ The `protx update_service` RPC creates and sends a ProUpServTx to the network.
 | ----------- | ------------ | ----------------------- | ------------------------------------------------------------- |
 | `proTxHash` | string (hex) | Required<br>(exactly 1) | The hash of the provider transaction as hex in RPC byte order |
 
-*Parameter #2---IP Address and port*
+*Parameter #2---Core P2P Addresses*
 
 | Name        | Type   | Presence                | Description                                                          |
 | ----------- | ------ | ----------------------- | -------------------------------------------------------------------- |
-| `ipAndPort` | string | Required<br>(exactly 1) | IP and port in the form 'IP:PORT'.<br>Must be unique on the network. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network. |
 
 *Parameter #3---operator key*
 
