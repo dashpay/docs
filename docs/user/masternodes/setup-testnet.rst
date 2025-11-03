@@ -505,7 +505,7 @@ argument to the command as follows:
   transaction
 - ``collateralIndex``: The output index of the 1000 Dash funding 
   transaction
-- ``ipAndPort``: Masternode IP address and port, in the format 
+- ``coreP2PAddrs``: Array of masternode address(es), in the format 
   ``x.x.x.x:yyyy``
 - ``ownerKeyAddr``: The new Dash address generated above for the 
   owner/voting address
@@ -531,7 +531,7 @@ Example (remove line breaks if copying)::
   protx register_prepare 
     16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3 
     1 
-    45.76.230.239:19999 
+    ["45.76.230.239:19999"]  
     yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip 
     99f20ed1538e28259ff80044982372519a2e6e4cdedb01c96f8f22e755b2b3124fbeebdf6de3587189cf44b3c6e7670e 
     yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg 
