@@ -21,11 +21,27 @@ set -euo pipefail
 
 # ---- Config (override via env vars when running) -----------------------------
 CLI="${CLI:-$HOME/code/dash/src/dash-cli}"    # Path to dash-cli executable
-NET_ARGS="${NET_ARGS:--testnet}"               # e.g. "", "-testnet", "-regtest"
+NET_ARGS="${NET_ARGS-"-testnet"}"               # e.g. "", "-testnet", "-regtest"
 OUT="${OUT:-dash-cli-help-$(date -u +%Y%m%dT%H%M%SZ).txt}"  # Text output file
 OUT_JSONL="${OUT_JSONL:-dash-cli-help-$(date -u +%Y%m%dT%H%M%SZ).jsonl}" # JSONL output
 FORMAT_JSONL="${FORMAT_JSONL:-1}" # set to 0 to disable JSONL output
 # ------------------------------------------------------------------------------
+echo $CLI
+echo $NET_ARGS
+
+# Split NET_ARGS into an array so empty/multiple flags work reliably
+read -r -a NET_ARR <<< "${NET_ARGS}"
+
+# Helper that runs dash-cli with NET_ARR and surfaces errors
+run_cli() {
+  local out
+  if ! out="$("$CLI" "${NET_ARR[@]}" "$@" 2>&1)"; then
+    echo "dash-cli failed for: $CLI ${NET_ARR[*]} $*" >&2
+    echo "$out" >&2
+    exit 1
+  fi
+  printf '%s' "$out"
+}
 
 # Sanity check on the CLI binary
 if [[ ! -x "$CLI" ]]; then
@@ -35,7 +51,7 @@ fi
 
 # Capture version text (non-fatal if it fails)
 # Extract schema like "v23.0.0-rc.3" from dash-cli -version
-full_version="$("$CLI" $NET_ARGS -version 2>/dev/null || true)"
+full_version="$( "$CLI" "${NET_ARR[@]}" -version 2>/dev/null || true )"
 VERSION="$(sed -n 's/.*v\([0-9][^ ]*\).*/\1/p' <<< "$full_version")"
 
 # Update output filenames to include version (if available)
@@ -46,7 +62,7 @@ fi
 
 
 # Grab the full top-level help (one call, reused)
-TOP_HELP="$("$CLI" $NET_ARGS help 2>/dev/null | sed 's/\r$//')"
+TOP_HELP="$( run_cli help | sed 's/\r$//' )"
 
 # Build list of top-level commands and their "signature tail"
 declare -A CMD_TAIL=()
@@ -93,20 +109,20 @@ append_help () {
     echo "================================================================================"
     echo "## $title"
     echo "--------------------------------------------------------------------------------"
-    "$CLI" $NET_ARGS help "$@" 2>&1 || echo "(error retrieving help for: $*)"
+    run_cli help "$@" 2>&1 || echo "(error retrieving help for: $*)"
   } >> "$OUT"
 }
 
 # Capture help output as a string (without writing to file yet)
 capture_help () {
-  "$CLI" $NET_ARGS help "$@" 2>&1 | sed 's/\r$//'
+  run_cli help "$@" 2>&1 | sed 's/\r$//'
 }
 
 # Parse "Available commands:" section from `help <cmd>`
 discover_subcommands () {
   local cmd="$1"
   local txt
-  txt="$("$CLI" $NET_ARGS help "$cmd" 2>/dev/null | sed 's/\r$//')" || return 0
+  txt="$( run_cli help "$cmd" 2>/dev/null | sed 's/\r$//')" || return 0
 
   awk '
     BEGIN { insec=0 }
@@ -155,6 +171,18 @@ discover_subcommands () {
   echo
 } > "$OUT"
 
+# Write JSONL metadata header (single line) before per-command records
+if [[ "$FORMAT_JSONL" -eq 1 ]]; then
+  jq -cn \
+    --arg version "$VERSION" \
+    --arg net "$NET_ARGS" \
+    --arg cli "$CLI" \
+    --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+    --argjson count "${#CMDS[@]}" \
+    '{metadata:{version:$version, network_args:$net, cli_path:$cli, generated_utc:$ts, command_count:$count, format:"dash-cli-help-dump-v1"}}' \
+    > "$OUT_JSONL"
+fi
+
 # -------------------- Main loop --------------------------
 for cmd in "${CMDS[@]}"; do
   help_raw="$(capture_help "$cmd")"
@@ -166,8 +194,6 @@ for cmd in "${CMDS[@]}"; do
     help_sha256=$(printf '%s' "$help_raw" | sha256sum | awk '{print $1}')
     jq -cn \
       --arg cmd "$cmd" \
-      --arg version "$VERSION" \
-      --arg net "$NET_ARGS" \
       --arg help "$help_raw" \
       --arg qual "$cmd" \
       --arg tail "${CMD_TAIL[$cmd]}" \
@@ -180,10 +206,7 @@ for cmd in "${CMDS[@]}"; do
          signature_tail: $tail,
          is_family: $isfam,
          help_raw: $help,
-         help_sha256: $hash,
-         version: $version,
-         network_args: $net,
-         generated_utc: now|strftime("%Y-%m-%dT%H:%M:%SZ")
+         help_sha256: $hash
        }' >> "$OUT_JSONL"
   fi
 
@@ -209,8 +232,6 @@ for cmd in "${CMDS[@]}"; do
           jq -cn \
             --arg cmd "$cmd" \
             --arg sub "$sub" \
-            --arg version "$VERSION" \
-            --arg net "$NET_ARGS" \
             --arg help "$help_sub" \
             --arg qual "$cmd $sub" \
             --arg tail "${CMD_TAIL[$cmd]}" \
@@ -222,10 +243,7 @@ for cmd in "${CMDS[@]}"; do
                signature_tail: $tail,
                is_family: true,
                help_raw: $help,
-               help_sha256: $hash,
-               version: $version,
-               network_args: $net,
-               generated_utc: now|strftime("%Y-%m-%dT%H:%M:%SZ")
+               help_sha256: $hash
              }' >> "$OUT_JSONL"
         fi
       done
