@@ -178,7 +178,7 @@ The `protx diff` RPC calculates a diff and a proof between two masternode list.
 | → →<br>ChainLock signature     | object       | Optional<br>(0 or more) | Key: ChainLock signature<br>Value: array of quorum indexes |
 | → → →<br>Quorum index          | number       | Required<br>(1 or more) | Quorum index indicating a `newQuorums` entry that used this ChainLock signature for their member calculation |
 
-*Example from Dash Core 20.0.0*
+*Example from Dash Core 23.0.0*
 
 ```bash
 dash-cli -testnet protx diff 100000 100500 true
@@ -203,6 +203,11 @@ Result (truncated):
       "proRegTxHash": "488910d2554fbc8f803011dd107b993b185ed6eeb7efef6dedfd74ec6656f58b",
       "confirmedHash": "00000000031c08dad48934c9e2a0bf3dac307aa1b6106ed8aa4345b5423166cd",
       "service": "51.38.80.34:19999",
+      "addresses": {
+        "core_p2p": [
+          "51.38.80.34:19999"
+        ]
+      },
       "pubKeyOperator": "8b63fa3eb2ed4caba1fec3647bcec7a2886b5cde5b2cec6b5a60dc04193e959d21e96cbfa41388159450f244578de9a9",
       "votingAddress": "yXRzKxTbQUGWCqYwXnMWw5SnNCPj19NBGZ",
       "isValid": true,
@@ -214,6 +219,11 @@ Result (truncated):
       "proRegTxHash": "9dadb2198c6c3f7d9aef77493ee2f8f0513198bada377078a99a1128ffa1b2b0",
       "confirmedHash": "00000000006fef47babe96126b70087c46defeb9527de07a52e417fe7fcd2fce",
       "service": "34.83.230.157:19999",
+      "addresses": {
+        "core_p2p": [
+          "34.83.230.157:19999"
+        ]
+      },
       "pubKeyOperator": "963984167b298d8d77b1be02e38e2493a75251cf9abecc7facee85512eabab7b05ffe053e8956d98ad4a3c20b77ade1e",
       "votingAddress": "yW5QUL6GqNswhSdMnWjcyAZ871VKrdY4jS",
       "isValid": true,
@@ -263,20 +273,6 @@ Result (truncated):
   "merkleRootMNList": "bd5ffd82e616e7abcadf01b7ffa50af2908e6c9b681439f9c9ed7de841afd44c",
   "merkleRootQuorums": "091716687aa06b6ee4acd86c6a95ac74455952e91c5f43ef38d97833e100a26a",
   "quorumsCLSigs": [
-    {
-      "82492bd4bcd9cd24b89011f11368e06d79942579cfa957fad51429553a45d9990cc10e8b475f59d5b29cedb7598edd300ccb43614f4c15055ea8b172d0dad174f6e8ea83814d7cd2dd528ec7a882e941e909763f70b1065bcdce384be559c31b": [
-        6,
-        30,
-        86
-      ]
-    },
-    {
-      "aa3759de99561b451f24d95945674ae8e73ceb0dcd9ce303228599993080e20f0add1a99e24e241bc905e66eb6155c4e07adbbf2232f476495aabb48e6761af3e07f6660c2607e54dc2efaee38934f714aeff9199a818fd2dcc043edbb7d429b": [
-        13,
-        37,
-        93
-      ]
-    }
   ]
 }
 ```
@@ -341,8 +337,10 @@ The `protx info` RPC returns detailed information about a deterministic masterno
 | → →<br>`lastOutboundAttemptElapsed` | integer      | Required<br>(exactly 1) | Elapsed time since last outbound attempt                                                        |
 | → →<br>`lastOutboundSuccess`        | integer      | Required<br>(exactly 1) | Unix epoch time of the last successful outbound connection                                      |
 | → →<br>`lastOutboundSuccessElapsed` | integer      | Required<br>(exactly 1) | Elapsed time since last successful outbound attempt                                             |
+| → →<br>`is_platform_banned` | bool | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Platform ban status |
+| → →<br>`platform_ban_height_updated` | integer | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Height when the Platform ban was updated |
 
-*Example from Dash Core 20.1.0*
+*Example from Dash Core 23.10.0*
 
 ```bash
 dash-cli -testnet protx info\
@@ -362,6 +360,11 @@ Result:
   "state": {
     "version": 1,
     "service": "47.111.181.207:20001",
+    "addresses": {
+      "core_p2p": [
+        "47.111.181.207:20001"
+      ]
+    },
     "registeredHeight": 247288,
     "lastPaidHeight": 0,
     "consecutivePayments": 0,
@@ -390,7 +393,9 @@ Result:
     "lastOutboundAttempt": 0,
     "lastOutboundAttemptElapsed": 1686685781,
     "lastOutboundSuccess": 0,
-    "lastOutboundSuccessElapsed": 1686685781
+    "lastOutboundSuccessElapsed": 1686685781,
+    "is_platform_banned": false,
+    "platform_ban_height_updated": 0
   }
 }
 ```
@@ -472,8 +477,10 @@ Lists all ProTxs in your wallet or on-chain, depending on the given type. If `ty
 | → →<br>`lastOutboundAttemptElapsed` | integer      | Required<br>(exactly 1) | Elapsed time since last outbound attempt                                                        |
 | → →<br>`lastOutboundSuccess`        | integer      | Required<br>(exactly 1) | Unix epoch time of the last successful outbound connection                                      |
 | → →<br>`lastOutboundSuccessElapsed` | integer      | Required<br>(exactly 1) | Elapsed time since last successful outbound attempt                                             |
+| → →<br>`is_platform_banned` | bool | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Platform ban status |
+| → →<br>`platform_ban_height_updated` | integer | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Height when the Platform ban was updated |
 
-*Example from Dash Core 19.2.0*
+*Example from Dash Core 23.0.0*
 
 ```bash
 dash-cli -testnet protx list
@@ -519,10 +526,16 @@ Result:
     "proTxHash": "c48a44a9493eae641bea36992bc8c27eaaa33adb1884960f55cd259608d26d2f",
     "collateralHash": "e3270ff48c4b802d56ee58d3d53777f7f9c289964e4df0842518075fc81345b1",
     "collateralIndex": 3,
+    "collateralAddress": "yYpzTXjVx7A5uohsmW8sRy7TJp4tihVuZg",
     "operatorReward": 0,
     "state": {
       "version": 1,
       "service": "173.61.30.231:19013",
+      "addresses": {
+        "core_p2p": [
+          "173.61.30.231:19013"
+        ]
+      },
       "registeredHeight": 7090,
       "lastPaidHeight": 0,
       "consecutivePayments": 0,
@@ -551,7 +564,9 @@ Result:
       "lastOutboundAttempt": 0,
       "lastOutboundAttemptElapsed": 1686684013,
       "lastOutboundSuccess": 0,
-      "lastOutboundSuccessElapsed": 1686684013
+      "lastOutboundSuccessElapsed": 1686684013,
+      "is_platform_banned": false,
+      "platform_ban_height_updated": 0
     }
   }
 ]
