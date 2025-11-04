@@ -156,6 +156,7 @@ for cmd in "${CMDS[@]}"; do
 
   # JSONL output (root command)
   if [[ "$FORMAT_JSONL" -eq 1 ]]; then
+    help_sha256=$(printf '%s' "$help_raw" | sha256sum | awk '{print $1}')
     jq -cn \
       --arg cmd "$cmd" \
       --arg version "$VERSION" \
@@ -163,6 +164,7 @@ for cmd in "${CMDS[@]}"; do
       --arg help "$help_raw" \
       --arg qual "$cmd" \
       --arg tail "${CMD_TAIL[$cmd]}" \
+      --arg hash "$help_sha256" \
       --argjson isfam "$([[ $(is_family "${CMD_TAIL[$cmd]}") ]] && echo true || echo false)" \
       '{
          command: $cmd,
@@ -171,6 +173,7 @@ for cmd in "${CMDS[@]}"; do
          signature_tail: $tail,
          is_family: $isfam,
          help_raw: $help,
+         help_sha256: $hash,
          version: $version,
          network_args: $net,
          generated_utc: now|strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -195,6 +198,7 @@ for cmd in "${CMDS[@]}"; do
 
         # JSONL output (subcommand)
         if [[ "$FORMAT_JSONL" -eq 1 ]]; then
+          help_sha256_sub=$(printf '%s' "$help_sub" | sha256sum | awk '{print $1}')
           jq -cn \
             --arg cmd "$cmd" \
             --arg sub "$sub" \
@@ -203,6 +207,7 @@ for cmd in "${CMDS[@]}"; do
             --arg help "$help_sub" \
             --arg qual "$cmd $sub" \
             --arg tail "${CMD_TAIL[$cmd]}" \
+            --arg hash "$help_sha256_sub" \
             '{
                command: $cmd,
                subcommand: $sub,
@@ -210,6 +215,7 @@ for cmd in "${CMDS[@]}"; do
                signature_tail: $tail,
                is_family: true,
                help_raw: $help,
+               help_sha256: $hash,
                version: $version,
                network_args: $net,
                generated_utc: now|strftime("%Y-%m-%dT%H:%M:%SZ")
