@@ -38,6 +38,13 @@ fi
 full_version="$("$CLI" $NET_ARGS -version 2>/dev/null || true)"
 VERSION="$(sed -n 's/.*v\([0-9][^ ]*\).*/\1/p' <<< "$full_version")"
 
+# Update output filenames to include version (if available)
+if [[ -n "$VERSION" ]]; then
+  OUT="dash-cli-help-${VERSION}-$(date -u +%Y%m%dT%H%M%SZ).txt"
+  OUT_JSONL="dash-cli-help-${VERSION}-$(date -u +%Y%m%dT%H%M%SZ).jsonl"
+fi
+
+
 # Grab the full top-level help (one call, reused)
 TOP_HELP="$("$CLI" $NET_ARGS help 2>/dev/null | sed 's/\r$//')"
 
