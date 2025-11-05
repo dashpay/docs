@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 """
 Generate executive summary of RPC changes between versions.
-
-Improvements vs. previous version:
-- Index JSONL by `qualified` (command OR "command subcommand") to avoid overwriting subcommands.
-- Categorize changes more granularly: signature, arguments, result fields, and deprecations.
-- Robust deprecation finder and "replaced with" detector.
-- Distinguish docs-only changes from structural changes.
 """
 
 import json
@@ -453,12 +447,12 @@ def generate_summary(old_file, new_file, old_version, new_version):
 
 if __name__ == '__main__':
     # Sample usage — update paths/versions as needed
-    old_file = '/home/phez/code/dashpay-docs/dash-cli-help-22.1.3-20251104T214929Z.jsonl'
-    new_file = '/home/phez/code/dashpay-docs/dash-cli-help-23.0.0-rc.3-20251104T213450Z.jsonl'
+    old_file = 'dash-cli-help-22.1.3-20251104T214929Z.jsonl'
+    new_file = 'dash-cli-help-23.0.0-rc.3-20251104T213450Z.jsonl'
 
     summary = generate_summary(old_file, new_file, '22.1.3', '23.0.0-rc.3')
 
-    output_file = '/home/phez/code/dashpay-docs/rpc-changes-summary-22.1.3-to-23.0.0-rc.3.md'
+    output_file = 'rpc-changes-summary-22.1.3-to-23.0.0-rc.3.md'
     with open(output_file, 'w') as f:
         f.write(summary)
 
