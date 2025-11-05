@@ -26,8 +26,6 @@ OUT="${OUT:-dash-cli-help-$(date -u +%Y%m%dT%H%M%SZ).txt}"  # Text output file
 OUT_JSONL="${OUT_JSONL:-dash-cli-help-$(date -u +%Y%m%dT%H%M%SZ).jsonl}" # JSONL output
 FORMAT_JSONL="${FORMAT_JSONL:-1}" # set to 0 to disable JSONL output
 # ------------------------------------------------------------------------------
-echo $CLI
-echo $NET_ARGS
 
 # Split NET_ARGS into an array so empty/multiple flags work reliably
 read -r -a NET_ARR <<< "${NET_ARGS}"
