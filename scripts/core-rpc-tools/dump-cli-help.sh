@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# dump-dash-cli-help.sh
+# dump-cli-help.sh
 #
 # Iterate over all dash-cli RPC commands (including subcommands where applicable)
 # and dump their help text into:
@@ -8,11 +8,11 @@
 #   - Optionally, a newline-delimited JSON file (OUT_JSONL) for machine parsing
 #
 # Usage:
-#   chmod +x dump-dash-cli-help.sh
-#   ./dump-dash-cli-help.sh
+#   chmod +x dump-cli-help.sh
+#   ./dump-cli-help.sh
 #
 # Overrides:
-#   CLI=/path/to/dash-cli NET_ARGS="-testnet" OUT="help.txt" ./dump-dash-cli-help.sh
+#   CLI=/path/to/dash-cli NET_ARGS="-testnet" OUT="help.txt" ./dump-cli-help.sh
 #
 # Dependencies:
 #   Needs a running Dash node with RPC access (same as using dash-cli manually).

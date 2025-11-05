@@ -3,9 +3,9 @@
 Generate executive summary of RPC changes between versions.
 """
 
+import argparse
 import json
 import re
-import os
 from collections import defaultdict
 
 # ---------- JSONL parsing & metadata ----------
@@ -472,11 +472,14 @@ def generate_summary(old_file, new_file, old_version=None, new_version=None):
 # ---------- CLI ----------
 
 if __name__ == '__main__':
-    # Sample usage — update paths as needed
-    old_file = 'dash-cli-help-22.1.3-20251104T214929Z.jsonl'
-    new_file = 'dash-cli-help-23.0.0-rc.3-20251104T213450Z.jsonl'
+    parser = argparse.ArgumentParser(
+        description="Generate executive summary of Dash Core RPC changes between two JSONL dumps."
+    )
+    parser.add_argument("old_jsonl", help="Path to OLD version JSONL file")
+    parser.add_argument("new_jsonl", help="Path to NEW version JSONL file")
+    args = parser.parse_args()
 
-    report, old_ver, new_ver = generate_summary(old_file, new_file)
+    report, old_ver, new_ver = generate_summary(args.old_jsonl, args.new_jsonl)
 
     # Build output filename from metadata versions if available
     safe_old = re.sub(r'[^A-Za-z0-9._-]+', '_', old_ver)

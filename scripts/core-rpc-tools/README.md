@@ -80,9 +80,10 @@ This generates:
 Compare the two versions and generate a detailed change report:
 
 ```bash
-# Edit generate-rpc-change-summary.py to set your file paths
-
-python3 generate-rpc-change-summary.py
+# Pass the two JSONL files as command-line arguments
+python3 generate-rpc-change-summary.py \
+  dash-cli-help-22.1.3-<timestamp>.jsonl \
+  dash-cli-help-23.0.0-<timestamp>.jsonl
 ```
 
 This generates:
@@ -141,21 +142,19 @@ NET_ARGS="" ./dump-cli-help.sh  # mainnet
 **Usage**:
 
 ```bash
-# Edit the script to set your input files
-nano generate-rpc-change-summary.py
-
-# Then run
-python3 generate-rpc-change-summary.py
+python3 generate-rpc-change-summary.py <old_version.jsonl> <new_version.jsonl>
 ```
 
-**Configuration** (edit the `__main__` block at the bottom):
+**Examples**:
 
-```python
-if __name__ == '__main__':
-    old_file = 'dash-cli-help-<old_version>-<timestamp>.jsonl'
-    new_file = 'dash-cli-help-<new_version>-<timestamp>.jsonl'
+```bash
+# Compare version 22.1.3 to 23.0.0
+python3 generate-rpc-change-summary.py \
+  dash-cli-help-22.1.3-20251104T214929Z.jsonl \
+  dash-cli-help-23.0.0-20251104T213450Z.jsonl
 
-    # ... rest of script
+# The script automatically extracts version info from the JSONL metadata
+# and creates an appropriately named output file
 ```
 
 ## Output Files Reference
