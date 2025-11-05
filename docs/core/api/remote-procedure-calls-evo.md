@@ -1715,11 +1715,23 @@ The `protx update_service_evo` RPC creates and sends a ProUpServTx to the networ
 | ------------------ | ------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `feeSourceAddress` | string | Optional<br>(0 or 1) | If specified, the wallet will only use coins from this address to fund the ProTx. If not specified, `operatorPayoutAddress` will be used. The private key belonging to this address must be known in your wallet. |
 
-*Result---provider update service transaction hash*
+*Parameter #9---whether to submit to the network or not*
+
+| Name | Type | Presence | Description |
+| - | - | - | - |
+| `submit` | bool | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>If `true` (default), the resulting transaction is sent to the network. |
+
+*Result if `submit` is not set or set to `true`---provider update service transaction hash*
 
 | Name     | Type         | Presence                | Description                                            |
 | -------- | ------------ | ----------------------- | ------------------------------------------------------ |
 | `result` | string (hex) | Required<br>(exactly 1) | Provider update service transaction (ProUpServTx) hash |
+
+*Result if `submit` is set to `false`---serialized transaction*
+
+| Name | Type | Presence | Description |
+| - | - | - | - |
+| `result` | string (hex) | Required<br>(exactly 1) | The serialized signed ProUpServTx in hex format |
 
 *Example from Dash Core 20.0.0*
 
@@ -1954,11 +1966,23 @@ The `protx update_registrar_legacy` RPC creates and sends a ProUpRegTx to the ne
 | ------------------ | ------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `feeSourceAddress` | string | Optional<br>(0 or 1) | If specified, the wallet will only use coins from this address to fund ProTx. If not specified, payoutAddress is the one that is going to be used. The private key belonging to this address must be known in your wallet. |
 
-*Result---provide transaction ID*
+*Parameter #6---whether to submit to the network or not*
+
+| Name | Type | Presence | Description |
+| - | - | - | - |
+| `submit` | bool | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>If `true` (default), the resulting transaction is sent to the network. |
+
+*Result if `submit` is not set or set to `true`---provider update registrar transaction hash*
 
 | Name     | Type         | Presence                | Description            |
 | -------- | ------------ | ----------------------- | ---------------------- |
-| `result` | string (hex) | Required<br>(exactly 1) | Receive transaction ID |
+| `result` | string (hex) | Required<br>(exactly 1) | Provider update registrar transaction (ProUpRegTx) hash |
+
+*Result if `submit` is set to `false`---serialized transaction*
+
+| Name | Type | Presence | Description |
+| - | - | - | - |
+| `result` | string (hex) | Required<br>(exactly 1) | The serialized signed ProUpRegTx in hex format |
 
 *Example from Dash Core 19.0.0*
 
