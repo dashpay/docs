@@ -228,50 +228,72 @@ def categorize_changes(old_commands, new_commands):
 
 def render_change_details(key, d, report):
     """Append all detected details for an RPC to the report (under one heading)."""
-    report.append(f"#### `{key}`")
+    report.append(f"#### `{key}`\n")
 
-    # Signature delta
+    # Signature delta (show blocks only if signature string changed)
     if d["old_sig"] or d["new_sig"]:
         if d["old_sig"] != d["new_sig"]:
             report.append("**Old signature:**")
-            report.append("```")
+            report.append("\n```text")
             report.append(d["old_sig"])
             report.append("```\n")
             report.append("**New signature:**")
-            report.append("```")
+            report.append("\n```text")
             report.append(d["new_sig"])
             report.append("```\n")
 
-    # Arg deltas (signature & Arguments:)
-    bullets = []
+    # Build grouped changes with nested bullets
+    groups = []
+
+    # Signature-arg tokens (from the signature line)
+    sig_parts = []
     if d["sig_args_added"]:
-        bullets.append(f"sig added: {', '.join(d['sig_args_added'])}")
+        sig_parts.append(f"➕ {', '.join(d['sig_args_added'])}")
     if d["sig_args_removed"]:
-        bullets.append(f"sig removed: {', '.join(d['sig_args_removed'])}")
+        sig_parts.append(f"➖ {', '.join(d['sig_args_removed'])}")
+    if sig_parts:
+        groups.append(("signature", sig_parts))
+
+    # Arguments section deltas (from Arguments: block)
+    arg_parts = []
     if d["args_added"]:
-        bullets.append(f"args added: {', '.join(d['args_added'])}")
+        arg_parts.append(f"➕ {', '.join(d['args_added'])}")
     if d["args_removed"]:
-        bullets.append(f"args removed: {', '.join(d['args_removed'])}")
-    if bullets:
-        report.append("- " + "; ".join(bullets))
+        arg_parts.append(f"➖ {', '.join(d['args_removed'])}")
+    if arg_parts:
+        groups.append(("args", arg_parts))
 
     # Result field deltas
-    bullets = []
+    res_parts = []
     if d["result_fields_added"]:
-        bullets.append(f"result added: {', '.join(d['result_fields_added'])}")
+        res_parts.append(f"➕ {', '.join(d['result_fields_added'])}")
     if d["result_fields_removed"]:
-        bullets.append(f"result removed: {', '.join(d['result_fields_removed'])}")
-    if bullets:
-        report.append("- " + "; ".join(bullets))
+        res_parts.append(f"➖ {', '.join(d['result_fields_removed'])}")
+    if res_parts:
+        groups.append(("result", res_parts))
 
-    # Deprecations + replacements
+    # Deprecations
+    dep_parts = []
     if d["newly_deprecated"]:
         for dep in d["newly_deprecated"]:
-            report.append(f"- deprecation: {dep}")
-    for line, repl in d.get("replacements", []):
-        report.append(f"- replacement hint: {line}")
+            dep_parts.append(f"⚠️ deprecated: {dep}")
+        groups.append(("deprecation", dep_parts))
 
-    report.append("")  # spacing
+    # Replacements (informational)
+    repl_parts = []
+    for line, repl in d.get("replacements", []):
+        repl_parts.append(f"🔁 replacement hint: {line}")
+    if repl_parts:
+        groups.append(("notes", repl_parts))
+
+    # Render groups
+    for label, parts in groups:
+        report.append(f"- {label}:")
+        for part in parts:
+            report.append(f"  - {part}")
+        report.append("")  # spacing after each group
+
+    report.append("")  # final spacing
 
 # ---------- Reporting ----------
 
@@ -331,6 +353,34 @@ def generate_summary(old_file, new_file, old_version, new_version):
                 report.append(f"  - {desc_lines[1].strip()}")
         report.append("")
 
+    # Consolidated table for all modified RPCs (excluding docs-only changes)
+    if changes['modified']:
+        report.append("## Modified RPCs (Consolidated)\n")
+        report.append("| RPC | Sig | Args | Result | Deprecation | Change Types |")
+        report.append("|-----|:---:|:----:|:------:|:-----------:|--------------|")
+
+        for key, data in sorted(changes['modified'].items()):
+            # Skip docs-only changes
+            if data["reasons"] == ["docs-only"]:
+                continue
+
+            # Columns: checkmarks based on detected changes
+            sig = "✔" if data["signature_changed"] or data["sig_args_added"] or data["sig_args_removed"] else ""
+            args = "✔" if data["args_added"] or data["args_removed"] or data["sig_args_added"] or data["sig_args_removed"] else ""
+            res = "✔" if data["result_fields_added"] or data["result_fields_removed"] else ""
+            dep = "✔" if data["newly_deprecated"] else ""
+
+            # High-level types of changes (for Notes column)
+            change_types = ", ".join(data["reasons"])  # e.g. "signature, arguments"
+
+            # Anchor link to detailed section (GitHub-style heading id)
+            link = f"[`{key}`](#{key.replace(' ', '-').lower()})"
+
+            report.append(f"| {link} | {sig} | {args} | {res} | {dep} | {change_types} |")
+
+        report.append("")  # table spacing
+
+
     # ----- One appearance per RPC via priority bucketing -----
     priority = ["signature", "deprecation", "arguments", "result", "docs-only"]
     bucket = {k: [] for k in priority}
@@ -371,31 +421,6 @@ def generate_summary(old_file, new_file, old_version, new_version):
         report.append("*Changed descriptions/examples without structural differences*\n")
         for key, d in bucket["docs-only"]:
             render_change_details(key, d, report)
-
-    # Consolidated table for all modified RPCs
-    if changes['modified']:
-        report.append("## Modified RPCs (Consolidated)\n")
-        report.append("| RPC | Sig | Args | Result | Deprecation | Notes |")
-        report.append("|-----|:---:|:----:|:------:|:-----------:|-------|")
-
-        for key, data in sorted(changes['modified'].items()):
-            sig = "✔" if data["signature_changed"] or data["sig_args_added"] or data["sig_args_removed"] else ""
-            args = "✔" if data["args_added"] or data["args_removed"] or data["sig_args_added"] or data["sig_args_removed"] else ""
-            res = "✔" if data["result_fields_added"] or data["result_fields_removed"] else ""
-            dep = "✔" if data["newly_deprecated"] else ""
-
-            notes = "; ".join(filter(None, [
-                (data["sig_args_added"] and f"sig added: {', '.join(data['sig_args_added'])}") or "",
-                (data["sig_args_removed"] and f"sig removed: {', '.join(data['sig_args_removed'])}") or "",
-                (data["args_added"] and f"args added: {', '.join(data['args_added'])}") or "",
-                (data["args_removed"] and f"args removed: {', '.join(data['args_removed'])}") or "",
-                (data["result_fields_added"] and f"result added: {', '.join(data['result_fields_added'])}") or "",
-                (data["result_fields_removed"] and f"result removed: {', '.join(data['result_fields_removed'])}") or "",
-            ]))
-
-            report.append(f"| `{key}` | {sig} | {args} | {res} | {dep} | {notes} |")
-
-        report.append("")  # table spacing
 
     # Key observations (example heuristics; adapt to your needs)
     report.append("## Key Observations\n")
