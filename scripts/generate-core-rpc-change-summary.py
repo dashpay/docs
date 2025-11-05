@@ -5,9 +5,29 @@ Generate executive summary of RPC changes between versions.
 
 import json
 import re
+import os
 from collections import defaultdict
 
-# ---------- JSONL parsing ----------
+# ---------- JSONL parsing & metadata ----------
+
+def read_metadata(filepath):
+    """
+    Read first JSONL line that contains {"metadata": {...}} and return that dict.
+    Returns {} if not found.
+    """
+    with open(filepath, 'r') as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                data = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            meta = data.get("metadata")
+            if isinstance(meta, dict):
+                return meta
+    return {}
 
 def parse_jsonl(filepath):
     """
@@ -90,9 +110,7 @@ def parse_arguments_section(help_text: str):
             # 1. number-dot form:  1. argname (type, optional, ...)
             m = re.match(r'^\s*\d+\.\s*([A-Za-z0-9_\[\]".-]+)', line)
             if m:
-                name = m.group(1).strip()
-                # strip surrounding quotes if present
-                name = name.strip('"')
+                name = m.group(1).strip().strip('"')
                 args.append(name)
                 continue
             # 2. quoted field as an argument name
@@ -291,12 +309,22 @@ def render_change_details(key, d, report):
 
 # ---------- Reporting ----------
 
-def generate_summary(old_file, new_file, old_version, new_version):
-    print(f"Parsing {old_file}...")
+def generate_summary(old_file, new_file, old_version=None, new_version=None):
+    # Pull metadata versions if present
+    old_meta = read_metadata(old_file)
+    new_meta = read_metadata(new_file)
+    meta_old_ver = (old_meta.get("version") or "").strip()
+    meta_new_ver = (new_meta.get("version") or "").strip()
+
+    # Resolve final versions to use for headings/filenames
+    old_version = old_version or meta_old_ver or "old"
+    new_version = new_version or meta_new_ver or "new"
+
+    print(f"Parsing {old_file} (version: {meta_old_ver or 'n/a'})...")
     old_commands = parse_jsonl(old_file)
     print(f"Found {len(old_commands)} commands in {old_version}")
 
-    print(f"\nParsing {new_file}...")
+    print(f"\nParsing {new_file} (version: {meta_new_ver or 'n/a'})...")
     new_commands = parse_jsonl(new_file)
     print(f"Found {len(new_commands)} commands in {new_version}")
 
@@ -369,11 +397,9 @@ def generate_summary(old_file, new_file, old_version, new_version):
 
             # Anchor link to detailed section (GitHub-style heading id)
             link = f"[`{key}`](#{key.replace(' ', '-').lower()})"
-
             report.append(f"| {link} | {sig} | {args} | {res} | {dep} | {change_types} |")
 
         report.append("")  # table spacing
-
 
     # ----- One appearance per RPC via priority bucketing -----
     priority = ["signature", "deprecation", "arguments", "result", "docs-only"]
@@ -441,21 +467,25 @@ def generate_summary(old_file, new_file, old_version, new_version):
             report.append(f"- `{k}`")
         report.append("")
 
-    return "\n".join(report)
+    return "\n".join(report), old_version, new_version
 
 # ---------- CLI ----------
 
 if __name__ == '__main__':
-    # Sample usage — update paths/versions as needed
+    # Sample usage — update paths as needed
     old_file = 'dash-cli-help-22.1.3-20251104T214929Z.jsonl'
     new_file = 'dash-cli-help-23.0.0-rc.3-20251104T213450Z.jsonl'
 
-    summary = generate_summary(old_file, new_file, '22.1.3', '23.0.0-rc.3')
+    report, old_ver, new_ver = generate_summary(old_file, new_file)
 
-    output_file = 'rpc-changes-summary-22.1.3-to-23.0.0-rc.3.md'
+    # Build output filename from metadata versions if available
+    safe_old = re.sub(r'[^A-Za-z0-9._-]+', '_', old_ver)
+    safe_new = re.sub(r'[^A-Za-z0-9._-]+', '_', new_ver)
+    output_file = f'rpc-changes-summary-{safe_old}-to-{safe_new}.md'
+
     with open(output_file, 'w') as f:
-        f.write(summary)
+        f.write(report)
 
     print(f"\n\nSummary generated: {output_file}")
     print("\n" + "="*80)
-    print(summary)
+    print(report)
