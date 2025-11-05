@@ -1,92 +1,281 @@
 #!/usr/bin/env python3
 """
 Generate executive summary of RPC changes between versions.
+
+Improvements vs. previous version:
+- Index JSONL by `qualified` (command OR "command subcommand") to avoid overwriting subcommands.
+- Categorize changes more granularly: signature, arguments, result fields, and deprecations.
+- Robust deprecation finder and "replaced with" detector.
+- Distinguish docs-only changes from structural changes.
 """
 
 import json
 import re
+from collections import defaultdict
+
+# ---------- JSONL parsing ----------
 
 def parse_jsonl(filepath):
-    """Parse JSONL file and return dict of command -> data"""
-    commands = {}
+    """
+    Parse JSONL file and return dict: qualified -> record
+    Skips metadata lines.
+    """
+    cmds = {}
     with open(filepath, 'r') as f:
         for line in f:
-            if line.strip():
-                data = json.loads(line)
-                if 'metadata' in data:
-                    continue
-                commands[data['command']] = data
-    return commands
+            if not line.strip():
+                continue
+            data = json.loads(line)
+            if 'metadata' in data:
+                continue
+            # Use 'qualified' so subcommands aren't overwritten
+            key = data.get('qualified') or data.get('command')
+            if not key:
+                continue
+            cmds[key] = data
+    return cmds
 
-def find_deprecated_items(help_text):
-    """Find all deprecated items in help text"""
-    deprecated = []
-    lines = help_text.split('\n')
-    for line in lines:
-        if '(DEPRECATED' in line.upper():
-            # Extract the field name or description
-            deprecated.append(line.strip())
-    return deprecated
+# ---------- Text helpers ----------
 
-def extract_signature(help_text):
-    """Extract the command signature from help text"""
-    lines = help_text.split('\n')
-    if lines:
-        return lines[0].strip()
+_DEPRECATION_RE = re.compile(r'\( *DEPRECATED\b[^)]*\)', re.IGNORECASE)
+_REPLACED_WITH_RE = re.compile(r'\b(replaced\s+with)\b[: ]+(?P<replacement>.+)$', re.IGNORECASE)
+_ARGUMENTS_HDR_RE = re.compile(r'^\s*Arguments:\s*$', re.IGNORECASE)
+_RESULT_HDR_RE = re.compile(r'^\s*Result\b', re.IGNORECASE)
+
+# Lines like:   "field" : type, (qualifiers) description
+_RESULT_FIELD_RE = re.compile(r'^\s*"(?P<name>[^"]+)"\s*:\s*')
+
+# Try to extract a concise "signature" = first non-empty line
+def extract_signature(help_text: str) -> str:
+    for line in help_text.splitlines():
+        s = line.strip()
+        if s:
+            return s
     return ""
 
-def categorize_changes(old_commands, new_commands):
-    """Categorize all changes between versions"""
-    old_cmds = set(old_commands.keys())
-    new_cmds = set(new_commands.keys())
+def find_deprecated_items(help_text: str):
+    """Return list of lines that contain '(DEPRECATED...)', case-insensitive."""
+    hits = []
+    for line in help_text.splitlines():
+        if _DEPRECATION_RE.search(line):
+            hits.append(line.strip())
+    return hits
 
-    changes = {
-        'added': sorted(new_cmds - old_cmds),
-        'removed': sorted(old_cmds - new_cmds),
-        'modified': {},
-        'newly_deprecated': {},
-        'signature_changed': [],
+def find_replacements(help_text: str):
+    """
+    Find "replaced with X" hints, returned as list of (line, replacement) tuples.
+    Useful for mapping old->new field names.
+    """
+    items = []
+    for line in help_text.splitlines():
+        m = _REPLACED_WITH_RE.search(line)
+        if m:
+            items.append((line.strip(), m.group('replacement').strip()))
+    return items
+
+def parse_arguments_section(help_text: str):
+    """
+    Parse 'Arguments:' block into a set of argument keys and a dict for detail.
+    Heuristics: lines in the arguments block often start with '1. name  (...)' or quoted names.
+    We’ll extract names conservatively.
+    """
+    lines = help_text.splitlines()
+    in_args = False
+    args = []
+    for i, line in enumerate(lines):
+        if _ARGUMENTS_HDR_RE.match(line):
+            in_args = True
+            continue
+        if in_args:
+            # Stop if we hit an empty line or another header-like thing
+            if not line.strip():
+                break
+            if _RESULT_HDR_RE.match(line):
+                break
+            # Try patterns:
+            # 1. number-dot form:  1. argname (type, optional, ...)
+            m = re.match(r'^\s*\d+\.\s*([A-Za-z0-9_\[\]".-]+)', line)
+            if m:
+                name = m.group(1).strip()
+                # strip surrounding quotes if present
+                name = name.strip('"')
+                args.append(name)
+                continue
+            # 2. quoted field as an argument name
+            m2 = re.match(r'^\s*"([^"]+)"\s*[:)]', line)
+            if m2:
+                args.append(m2.group(1).strip())
+                continue
+            # 3. bare token at start (fallback)
+            m3 = re.match(r'^\s*([A-Za-z0-9_".-]+)\s', line)
+            if m3 and not line.strip().startswith('{'):
+                token = m3.group(1).strip('"')
+                args.append(token)
+    # Normalize + dedup
+    return list(dict.fromkeys(args))
+
+def parse_result_fields(help_text: str):
+    """
+    Parse 'Result' block for JSON-style field names.
+    Collect quoted keys at start-of-line with colon.
+    """
+    lines = help_text.splitlines()
+    in_result = False
+    fields = []
+    for line in lines:
+        if _RESULT_HDR_RE.match(line):
+            in_result = True
+            continue
+        if in_result:
+            # Heuristic stop: out of structured result section if code fence or blank block end
+            if line.strip().startswith('Examples:'):
+                break
+            m = _RESULT_FIELD_RE.match(line)
+            if m:
+                fields.append(m.group('name').strip())
+    return list(dict.fromkeys(fields))
+
+def extract_signature_args(signature: str):
+    """
+    Heuristic arg name extraction from the signature line.
+    We capture tokens inside quotes, like "label", "address", or ["address",...]
+    """
+    quoted = re.findall(r'"([^"]+)"', signature)
+    # Also catch bracketed array arg names like ["address",...]
+    bracket_names = re.findall(r'\[\s*"([^"]+)"', signature)
+    tokens = quoted + bracket_names
+    # Dedup preserving order
+    return list(dict.fromkeys(tokens))
+
+# ---------- Change categorization ----------
+
+def compare_structures(old_help: str, new_help: str):
+    """Return a dict with structured diffs between two help texts."""
+    old_sig = extract_signature(old_help)
+    new_sig = extract_signature(new_help)
+
+    old_sig_args = set(extract_signature_args(old_sig))
+    new_sig_args = set(extract_signature_args(new_sig))
+
+    old_args = set(parse_arguments_section(old_help))
+    new_args = set(parse_arguments_section(new_help))
+
+    old_fields = set(parse_result_fields(old_help))
+    new_fields = set(parse_result_fields(new_help))
+
+    old_dep = set(find_deprecated_items(old_help))
+    new_dep = set(find_deprecated_items(new_help))
+    newly_dep = sorted(new_dep - old_dep)
+
+    repl = find_replacements(new_help)
+
+    return {
+        "old_sig": old_sig,
+        "new_sig": new_sig,
+        "signature_changed": (old_sig != new_sig),
+        "sig_args_added": sorted(new_sig_args - old_sig_args),
+        "sig_args_removed": sorted(old_sig_args - new_sig_args),
+
+        "args_added": sorted(new_args - old_args),
+        "args_removed": sorted(old_args - new_args),
+
+        "result_fields_added": sorted(new_fields - old_fields),
+        "result_fields_removed": sorted(old_fields - new_fields),
+
+        "newly_deprecated": newly_dep,
+        "replacements": repl,
     }
 
-    # Analyze common commands
-    common = sorted(old_cmds & new_cmds)
-    for cmd in common:
-        old_help = old_commands[cmd].get('help_raw', '')
-        new_help = new_commands[cmd].get('help_raw', '')
+def categorize_changes(old_commands, new_commands):
+    """Compute added/removed/modified and categorize modified details."""
+    old_keys = set(old_commands.keys())
+    new_keys = set(new_commands.keys())
 
-        # Check if modified
-        if old_commands[cmd].get('help_sha256') != new_commands[cmd].get('help_sha256'):
-            old_sig = extract_signature(old_help)
-            new_sig = extract_signature(new_help)
+    changes = {
+        "added": sorted(new_keys - old_keys),
+        "removed": sorted(old_keys - new_keys),
+        "modified": {},  # key -> detail dict
+    }
 
-            # Check for deprecations
-            old_dep = set(find_deprecated_items(old_help))
-            new_dep = set(find_deprecated_items(new_help))
-            newly_dep = new_dep - old_dep
+    common = sorted(old_keys & new_keys)
+    for key in common:
+        old = old_commands[key]
+        new = new_commands[key]
+        if old.get('help_sha256') == new.get('help_sha256'):
+            continue  # unchanged
 
-            if newly_dep:
-                changes['newly_deprecated'][cmd] = list(newly_dep)
+        detail = compare_structures(old.get('help_raw', ''), new.get('help_raw', ''))
 
-            # Check for signature changes
-            if old_sig != new_sig:
-                changes['signature_changed'].append({
-                    'command': cmd,
-                    'old': old_sig,
-                    'new': new_sig
-                })
+        # classify reason (multiple may apply; keep a compact list)
+        reasons = []
+        if detail["signature_changed"] or detail["sig_args_added"] or detail["sig_args_removed"]:
+            reasons.append("signature")
+        if detail["args_added"] or detail["args_removed"]:
+            reasons.append("arguments")
+        if detail["result_fields_added"] or detail["result_fields_removed"]:
+            reasons.append("result")
+        if detail["newly_deprecated"]:
+            reasons.append("deprecation")
+        if not reasons:
+            reasons.append("docs-only")
 
-            # Store all modifications
-            changes['modified'][cmd] = {
-                'old_sig': old_sig,
-                'new_sig': new_sig,
-                'sig_changed': old_sig != new_sig,
-                'has_deprecations': len(newly_dep) > 0
-            }
+        detail["reasons"] = reasons
+        changes["modified"][key] = detail
 
     return changes
 
+# ---------- Reporting helpers ----------
+
+def render_change_details(key, d, report):
+    """Append all detected details for an RPC to the report (under one heading)."""
+    report.append(f"#### `{key}`")
+
+    # Signature delta
+    if d["old_sig"] or d["new_sig"]:
+        if d["old_sig"] != d["new_sig"]:
+            report.append("**Old signature:**")
+            report.append("```")
+            report.append(d["old_sig"])
+            report.append("```\n")
+            report.append("**New signature:**")
+            report.append("```")
+            report.append(d["new_sig"])
+            report.append("```\n")
+
+    # Arg deltas (signature & Arguments:)
+    bullets = []
+    if d["sig_args_added"]:
+        bullets.append(f"sig added: {', '.join(d['sig_args_added'])}")
+    if d["sig_args_removed"]:
+        bullets.append(f"sig removed: {', '.join(d['sig_args_removed'])}")
+    if d["args_added"]:
+        bullets.append(f"args added: {', '.join(d['args_added'])}")
+    if d["args_removed"]:
+        bullets.append(f"args removed: {', '.join(d['args_removed'])}")
+    if bullets:
+        report.append("- " + "; ".join(bullets))
+
+    # Result field deltas
+    bullets = []
+    if d["result_fields_added"]:
+        bullets.append(f"result added: {', '.join(d['result_fields_added'])}")
+    if d["result_fields_removed"]:
+        bullets.append(f"result removed: {', '.join(d['result_fields_removed'])}")
+    if bullets:
+        report.append("- " + "; ".join(bullets))
+
+    # Deprecations + replacements
+    if d["newly_deprecated"]:
+        for dep in d["newly_deprecated"]:
+            report.append(f"- deprecation: {dep}")
+    for line, repl in d.get("replacements", []):
+        report.append(f"- replacement hint: {line}")
+
+    report.append("")  # spacing
+
+# ---------- Reporting ----------
+
 def generate_summary(old_file, new_file, old_version, new_version):
-    """Generate executive summary"""
     print(f"Parsing {old_file}...")
     old_commands = parse_jsonl(old_file)
     print(f"Found {len(old_commands)} commands in {old_version}")
@@ -97,117 +286,148 @@ def generate_summary(old_file, new_file, old_version, new_version):
 
     changes = categorize_changes(old_commands, new_commands)
 
-    # Generate summary report
     report = []
-    report.append(f"# Dash Core RPC Changes: {old_version} → {new_version}")
-    report.append(f"\n**Executive Summary**\n")
+    report.append(f"# Dash Core RPC Changes: {old_version} → {new_version}\n")
+    report.append("**Executive Summary**\n")
 
-    # Key Statistics
+    # Key Stats
     report.append("## Key Statistics\n")
-    report.append(f"- **Total RPCs in {old_version}:** {len(old_commands)}")
-    report.append(f"- **Total RPCs in {new_version}:** {len(new_commands)}")
-    report.append(f"- **Added RPCs:** {len(changes['added'])}")
-    report.append(f"- **Removed RPCs:** {len(changes['removed'])}")
-    report.append(f"- **Modified RPCs:** {len(changes['modified'])}")
-    report.append(f"- **RPCs with signature changes:** {len(changes['signature_changed'])}")
-    report.append(f"- **RPCs with new deprecations:** {len(changes['newly_deprecated'])}")
+    report.append(f"- **Total RPC entries in {old_version}:** {len(old_commands)}")
+    report.append(f"- **Total RPC entries in {new_version}:** {len(new_commands)}")
+    report.append(f"- **Added RPC entries:** {len(changes['added'])}")
+    report.append(f"- **Removed RPC entries:** {len(changes['removed'])}")
+    report.append(f"- **Modified RPC entries:** {len(changes['modified'])}")
+
+    # Reason counts
+    reason_counts = defaultdict(int)
+    for d in changes["modified"].values():
+        for r in d["reasons"]:
+            reason_counts[r] += 1
+    if reason_counts:
+        report.append("- **By reason:** " + ", ".join(f"{k}: {v}" for k, v in sorted(reason_counts.items())))
     report.append("")
 
-    # Major Changes Section
+    # Major changes
     report.append("## Major Changes\n")
 
-    # Added RPCs
+    # Added
     if changes['added']:
         report.append(f"### Added RPCs ({len(changes['added'])})\n")
-        for cmd in changes['added']:
-            desc = new_commands[cmd].get('help_raw', '').split('\n')
-            sig = desc[0] if desc else cmd
-            report.append(f"- **`{cmd}`**")
-            if len(desc) > 1:
-                report.append(f"  - {desc[1].strip()}")
-            report.append("")
+        for key in changes['added']:
+            desc_lines = new_commands[key].get('help_raw', '').splitlines()
+            sig = desc_lines[0].strip() if desc_lines else key
+            report.append(f"- **`{key}`**")
+            if len(desc_lines) > 1 and desc_lines[1].strip():
+                report.append(f"  - {desc_lines[1].strip()}")
+        report.append("")
 
-    # Removed RPCs
+    # Removed
     if changes['removed']:
         report.append(f"### Removed RPCs ({len(changes['removed'])})\n")
-        for cmd in changes['removed']:
-            desc = old_commands[cmd].get('help_raw', '').split('\n')
-            report.append(f"- **`{cmd}`**")
-            if len(desc) > 1:
-                report.append(f"  - {desc[1].strip()}")
+        for key in changes['removed']:
+            desc_lines = old_commands[key].get('help_raw', '').splitlines()
+            report.append(f"- **`{key}`**")
+            if len(desc_lines) > 1 and desc_lines[1].strip():
+                report.append(f"  - {desc_lines[1].strip()}")
         report.append("")
 
-    # Signature Changes (Most Important)
-    if changes['signature_changed']:
-        report.append(f"### RPCs with Signature Changes ({len(changes['signature_changed'])})\n")
-        report.append("*These commands have changes to their parameters or calling format*\n")
-        for change in changes['signature_changed']:
-            report.append(f"#### `{change['command']}`\n")
-            report.append("**Old signature:**")
-            report.append(f"```")
-            report.append(change['old'])
-            report.append(f"```\n")
-            report.append("**New signature:**")
-            report.append(f"```")
-            report.append(change['new'])
-            report.append(f"```\n")
+    # ----- One appearance per RPC via priority bucketing -----
+    priority = ["signature", "deprecation", "arguments", "result", "docs-only"]
+    bucket = {k: [] for k in priority}
+    for key, d in changes["modified"].items():
+        for r in priority:
+            if r in d["reasons"]:
+                bucket[r].append((key, d))
+                break
 
-    # New Deprecations
-    if changes['newly_deprecated']:
-        report.append(f"### New Deprecation Notices ({len(changes['newly_deprecated'])})\n")
-        report.append("*These commands or fields are newly marked as deprecated*\n")
-        for cmd, deps in sorted(changes['newly_deprecated'].items()):
-            report.append(f"#### `{cmd}`\n")
-            for dep in deps:
-                # Clean up the deprecation notice
-                dep_clean = dep.strip()
-                report.append(f"- {dep_clean}")
-            report.append("")
+    # Signature
+    if bucket["signature"]:
+        report.append(f"### RPCs with Signature Changes ({len(bucket['signature'])})\n")
+        report.append("*These commands changed their top-line call format*\n")
+        for key, d in bucket["signature"]:
+            render_change_details(key, d, report)
 
-    # Modified RPCs without signature changes
-    modified_no_sig = {k: v for k, v in changes['modified'].items()
-                       if not v['sig_changed'] and not v['has_deprecations']}
-    if modified_no_sig:
-        report.append(f"### Other Modified RPCs ({len(modified_no_sig)})\n")
-        report.append("*These commands have changes to documentation, result format, or minor details*\n")
-        for cmd in sorted(modified_no_sig.keys()):
-            report.append(f"- `{cmd}`")
-        report.append("")
+    # Deprecations
+    if bucket["deprecation"]:
+        report.append(f"### New Deprecation Notices ({len(bucket['deprecation'])})\n")
+        for key, d in bucket["deprecation"]:
+            render_change_details(key, d, report)
 
-    # Key Observations
+    # Arguments
+    if bucket["arguments"]:
+        report.append(f"### Argument Changes ({len(bucket['arguments'])})\n")
+        for key, d in bucket["arguments"]:
+            render_change_details(key, d, report)
+
+    # Result fields
+    if bucket["result"]:
+        report.append(f"### Result Field Changes ({len(bucket['result'])})\n")
+        for key, d in bucket["result"]:
+            render_change_details(key, d, report)
+
+    # Docs-only
+    if bucket["docs-only"]:
+        report.append(f"### Other Modified RPCs (Docs-only, {len(bucket['docs-only'])})\n")
+        report.append("*Changed descriptions/examples without structural differences*\n")
+        for key, d in bucket["docs-only"]:
+            render_change_details(key, d, report)
+
+    # Consolidated table for all modified RPCs
+    if changes['modified']:
+        report.append("## Modified RPCs (Consolidated)\n")
+        report.append("| RPC | Sig | Args | Result | Deprecation | Notes |")
+        report.append("|-----|:---:|:----:|:------:|:-----------:|-------|")
+
+        for key, data in sorted(changes['modified'].items()):
+            sig = "✔" if data["signature_changed"] or data["sig_args_added"] or data["sig_args_removed"] else ""
+            args = "✔" if data["args_added"] or data["args_removed"] or data["sig_args_added"] or data["sig_args_removed"] else ""
+            res = "✔" if data["result_fields_added"] or data["result_fields_removed"] else ""
+            dep = "✔" if data["newly_deprecated"] else ""
+
+            notes = "; ".join(filter(None, [
+                (data["sig_args_added"] and f"sig added: {', '.join(data['sig_args_added'])}") or "",
+                (data["sig_args_removed"] and f"sig removed: {', '.join(data['sig_args_removed'])}") or "",
+                (data["args_added"] and f"args added: {', '.join(data['args_added'])}") or "",
+                (data["args_removed"] and f"args removed: {', '.join(data['args_removed'])}") or "",
+                (data["result_fields_added"] and f"result added: {', '.join(data['result_fields_added'])}") or "",
+                (data["result_fields_removed"] and f"result removed: {', '.join(data['result_fields_removed'])}") or "",
+            ]))
+
+            report.append(f"| `{key}` | {sig} | {args} | {res} | {dep} | {notes} |")
+
+        report.append("")  # table spacing
+
+    # Key observations (example heuristics; adapt to your needs)
     report.append("## Key Observations\n")
 
-    # Platform/EvoNode changes
-    platform_related = [cmd for cmd in changes['signature_changed']
-                       if 'platform' in cmd['new'].lower() or 'evo' in cmd['new'].lower()]
-    if platform_related:
-        report.append(f"### Platform/EvoNode Changes ({len(platform_related)})")
-        report.append("Several commands related to Platform and EvoNodes have been updated:")
-        for change in platform_related:
-            report.append(f"- `{change['command']}`")
+    # Rebuild sig_changes & newly_depr context from buckets for observations
+    sig_changes = bucket["signature"]
+    newly_depr = dict(bucket["deprecation"])
+
+    evo_related = [ k for k, v in sig_changes if "evo" in v["new_sig"].lower() or "platform" in v["new_sig"].lower() ]
+    if evo_related:
+        report.append(f"### Platform/EvoNode Signatures ({len(evo_related)})")
+        for key in evo_related:
+            report.append(f"- `{key}`")
         report.append("")
 
-    # Deprecated service field
-    service_deprecated = [cmd for cmd, deps in changes['newly_deprecated'].items()
-                         if any('service' in dep.lower() for dep in deps)]
-    if service_deprecated:
-        report.append("### Deprecated 'service' Field")
-        report.append("The following commands now deprecate the 'service' field (IP:PORT format),")
-        report.append("moving to a new 'addresses' structure:")
-        for cmd in service_deprecated:
-            report.append(f"- `{cmd}`")
+    service_depr = [
+        k for k, v in newly_depr.items()
+        if any("service" in s.lower() for s in v["newly_deprecated"])
+    ]
+    if service_depr:
+        report.append("### Deprecated 'service' Field\n")
+        report.append("These commands now deprecate the `service` field in favor of structured `addresses`:\n")
+        for k in service_depr:
+            report.append(f"- `{k}`")
         report.append("")
 
-    # BLS legacy deprecation
-    if 'bls' in changes['newly_deprecated']:
-        report.append("### BLS Legacy Scheme Deprecated")
-        report.append("The legacy BLS scheme is now deprecated in the `bls` command.")
-        report.append("This requires the `-deprecatedrpc=legacy_mn` flag to use.")
-        report.append("")
+    return "\n".join(report)
 
-    return '\n'.join(report)
+# ---------- CLI ----------
 
 if __name__ == '__main__':
+    # Sample usage — update paths/versions as needed
     old_file = '/home/phez/code/dashpay-docs/dash-cli-help-22.1.3-20251104T214929Z.jsonl'
     new_file = '/home/phez/code/dashpay-docs/dash-cli-help-23.0.0-rc.3-20251104T213450Z.jsonl'
 
