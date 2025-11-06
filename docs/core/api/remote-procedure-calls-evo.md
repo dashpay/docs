@@ -69,7 +69,7 @@ Since the v19 hard fork activation, BLS keys are generated using the basic schem
 
 | Name     | Type    | Presence             | Description                                                                                            |
 | -------- | ------- | -------------------- | ------------------------------------------------------------------------------------------------------ |
-| `legacy` | boolean | Optional<br>(0 or 1) | Use the legacy BLS scheme (default=`true` prior to v19 hard fork; default=`false` after v19 hard fork) |
+| `legacy` | boolean | Optional<br>(0 or 1) | **DEPRECATED in Dash Core 23.0.0**: Can be set if `-deprecatedrpc=legacy_mn` is passed<br>Use the legacy BLS scheme (default=`false`) |
 
 *Result---a secret/public key pair*
 
@@ -2167,41 +2167,71 @@ The `quorum info` RPC returns information about a specific quorum.
 | →<br>`quorumPublicKey`                | string       | Required<br>(exactly 1) | Quorum public key                                                                                                                                                                      |
 | →<br>`secretKeyShare`                 | string       | Optional<br>(exactly 1) | Quorum secret key share                                                                                                                                                                |
 
-*Example from Dash Core 18.1.0*
+*Example from Dash Core 23.0.0*
 
 ```bash
 dash-cli -testnet quorum info 1 \
-  000000ebd10368ca387ce380539fad9c8ba21108a3bfd6fedeecb60d28f56ae9 true
+  0000004eec0606768f8d46e756182255853c4b92dc1224e58c39f9f803c9eea7 true
 ```
 
 Result (truncated):
 
 ```json
 {
-  "height": 819240,
+  "height": 1359096,
   "type": "llmq_50_60",
-  "quorumHash": "000000ebd10368ca387ce380539fad9c8ba21108a3bfd6fedeecb60d28f56ae9",
+  "quorumHash": "0000004eec0606768f8d46e756182255853c4b92dc1224e58c39f9f803c9eea7",
   "quorumIndex": 0,
-  "minedBlock": "00000548588369399691ad308a3c588a7bf842a40347e23ef40655e315898146",
+  "minedBlock": "00000099ed91a72b28b2272853b50a7dc2afe38a4b31066d66204c3824ca6408",
   "members": [
     {
-      "proTxHash": "f77ec12ec8adb91a3a158c5f9cc3f7e2521d65eac6cda1e44763daa603a77570",
-      "service": "35.89.202.171:19999",
-      "pubKeyOperator": "16f8048e511e7c0c2b495a9b20030b315d75bca283b70af25d16c8809c7f2a786225c2fe47ff1c92aa8ebf586be91abc",
-      "valid": true,
-      "pubKeyShare": "12c305fdc5ec06785d2e89a8b64c291128e4a2034889e9f1539d9194954051a304d8bf1649a2d3a95aac200884e8e99d"
+      "proTxHash": "9fcf7b15b9c7ce71c11b7577e05edd1ea922125b9ee8fed7d0d8ff21d530a33b",
+      "service": "18.237.170.32:19999",
+      "addresses": {
+        "core_p2p": [
+          "18.237.170.32:19999"
+        ]
+      },
+      "pubKeyOperator": "0b04bcb5cf6d2d6df5979234611da42854a5e69374a29e0c85128caedb53d9c818042613d2f30f3ef782ed37bd8ce161",
+      "valid": true
+    },
+    {
+      "proTxHash": "8917bb546318f3410d1a7901c7b846a73446311b5164b45a03f0e613f208f234",
+      "service": "52.13.132.146:19999",
+      "addresses": {
+        "core_p2p": [
+          "52.13.132.146:19999"
+        ],
+        "platform_https": [
+          "52.13.132.146:1443"
+        ],
+        "platform_p2p": [
+          "52.13.132.146:36656"
+        ]
+      },
+      "pubKeyOperator": "87d25769002af2a4f050127c73fff03a24935e48f34fecaacd69410787d0e6384b345c78e81b1cb397b43dcd635568b6",
+      "valid": true
     },
     {"Truncated data":"..."},
     {
-      "proTxHash": "2cd3833e1cef622e875096c70d6eb6c7083a250a6b26ca27edb3aa21ac05e3d1",
-      "service": "89.47.162.137:19999",
-      "pubKeyOperator": "8fc1d0cea417ed963e50d876a38bf0846b536b7e8809826e163bc9ea0f749ea8ebe00c6642e71bb84000549bda5bb1d0",
-      "valid": true,
-      "pubKeyShare": "8662927148ed33b8f0000f1666c277e14df9838c9dce4e3fb273866603b93502e70108408f81698e0b47cb3b5aff3a30"
+      "proTxHash": "85f15a31d3838293a9c1d72a1a0fa21e66110ce20878bd4c1024c4ae1d5be824",
+      "service": "54.201.32.131:19999",
+      "addresses": {
+        "core_p2p": [
+          "54.201.32.131:19999"
+        ],
+        "platform_https": [
+          "54.201.32.131:1443"
+        ],
+        "platform_p2p": [
+          "54.201.32.131:36656"
+        ]
+      },
+      "pubKeyOperator": "ac3026b3e3023db1db9ec8e3b7678761820a2a6e96e7a5d9a39b1894170f9cea7765d3d131d60fa9d17492ba560fb1f9",
+      "valid": true
     }
   ],
-  "quorumPublicKey": "18401a5c5d8d8145cea2843e0c37f10d06de642ce7665599ad35dce9f7a3027b42375a9e138e185867bfe5359fd952f2",
-  "secretKeyShare": "4d39c4c1cb856a5e2d96efffb4cf3695b57b5d0fb4e289e7b2be3b7592a6dfa6"
+  "quorumPublicKey": "a44ba808f2a571cfe0cbf33f3d6ed2b635c15e7ceae2a6a339081446802d22e6422271b686e536c732e9019ff13c3375"
 }
 ```
 
@@ -3957,11 +3987,11 @@ The `quorum rotationinfo` RPC returns  quorum rotation information. The response
 | ------------ | ---- | -------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | `extraShare` | bool | Optional<br>(0 or 1) | Request an extra share (default: false). This extra share would support validation against the previous set of LLMQs. |
 
-*Parameter #3---base block hashes number*
+*Parameter #3---base block hashes*
 
-| Name               | Type         | Presence                | Description                |
-| ------------------ | ------------ | ----------------------- | -------------------------- |
-| `baseBlockHash...` | string (hex) | Optional<br>(0 or more) | Block hashes (default: "") |
+| Name | Type | Presence | Description |
+| - | - | - | - |
+| `baseBlockHashes` | array | Optional<br>(0 or 1) | **Updated in Dash Core 23.0.0** (previously `baseBlockHash...`)<br>Array of block hashes (default: empty array) |
 
 *Result---rotation info*
 
