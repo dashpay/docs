@@ -1279,8 +1279,10 @@ Result:
 
 ### Masternode Current
 
-:::{deprecated} 0.17.0
-This RPC has been deprecated and will be removed in a future version of Dash Core
+:::{attention}
+**REMOVED in Dash Core 23.0.0**
+
+This RPC was deprecated in Dash Core 0.17.0 and removed in v23.0.0.
 :::
 
 The `masternode current` RPC prints info on current masternode winner to be paid the next block (calculated locally).
@@ -1517,8 +1519,10 @@ Result:
 
 ### Masternode Winner
 
-:::{deprecated} 0.17.0
-This RPC has been deprecated and will be removed in a future version of Dash Core
+:::{attention}
+**REMOVED in Dash Core 23.0.0**
+
+This RPC was deprecated in Dash Core 0.17.0 and removed in v23.0.0.
 :::
 
 The `masternode winner` RPC prints info on the next masternode winner to vote for.
