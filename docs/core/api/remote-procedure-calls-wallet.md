@@ -804,6 +804,12 @@ _Parameter #3---whether to include transactions locked via InstantSend_
 | --------- | ---- | ----------------------- | ---------------------------------------------------- |
 | addlocked | bool | Optional<br>(exactly 1) | Add the balance from InstantSend locked transactions |
 
+_Parameter #4---whether to include immature coinbase transactions_
+
+| Name                       | Type | Presence             | Description                                                                               |
+| -------------------------- | ---- | -------------------- | ----------------------------------------------------------------------------------------- |
+| include_immature_coinbase | bool | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>Include immature coinbase transactions. Default is `false` |
+
 _Result---the amount of dash received_
 
 | Name     | Type          | Presence                | Description                                                                              |
@@ -865,6 +871,12 @@ _Parameter #3---whether to include transactions locked via InstantSend_
 | Name      | Type | Presence                | Description                                                          |
 | --------- | ---- | ----------------------- | -------------------------------------------------------------------- |
 | addlocked | bool | Optional<br>(exactly 1) | Add the balance from InstantSend locked transactions (default=false) |
+
+_Parameter #4---whether to include immature coinbase transactions_
+
+| Name                       | Type | Presence             | Description                                                                               |
+| -------------------------- | ---- | -------------------- | ----------------------------------------------------------------------------------------- |
+| include_immature_coinbase | bool | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>Include immature coinbase transactions. Default is `false` |
 
 _Result---the number of DASH received_
 
@@ -1849,6 +1861,12 @@ _Parameter #5---limit returned information to a specific address_
 | -------------- | ------ | -------------------- | ---------------------------------------------------- |
 | Address Filter | string | Optional<br>(0 or 1) | If present, only return information for this address |
 
+_Parameter #6---whether to include immature coinbase transactions_
+
+| Name                       | Type | Presence             | Description                                                                               |
+| -------------------------- | ---- | -------------------- | ----------------------------------------------------------------------------------------- |
+| include_immature_coinbase | bool | Optional<br>(0 or 1) | **Added in Dash Core 22.0.0**<br>Include immature coinbase transactions. Default is `false` |
+
 _Result---addresses, account names, balances, and minimum confirmations_
 
 | Name                       | Type            | Presence                | Description                                                                                                                                                                                                                          |
@@ -1934,6 +1952,12 @@ _Parameter #4---whether to include watch-only addresses in results_
 | Name               | Type | Presence             | Description                                                                                                                                                                                                                                                                                                                                         |
 | ------------------ | ---- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Include Watch-Only | bool | Optional<br>(0 or 1) | If set to `true`, include watch-only addresses in details and calculations as if they were regular addresses belonging to the wallet.  If set to `false` (the default for non-watching only wallets), treat watch-only addresses as if they didn't belong to this wallet.<br>As of Dash Core 18.1, `true` is the default for watching-only wallets. |
+
+_Parameter #5---whether to include immature coinbase transactions_
+
+| Name                       | Type | Presence             | Description                                                                               |
+| -------------------------- | ---- | -------------------- | ----------------------------------------------------------------------------------------- |
+| include_immature_coinbase | bool | Optional<br>(0 or 1) | **Added in Dash Core 22.0.0**<br>Include immature coinbase transactions. Default is `false` |
 
 _Result---account names, balances, and minimum confirmations_
 
