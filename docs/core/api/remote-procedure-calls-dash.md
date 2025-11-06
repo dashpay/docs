@@ -16,7 +16,7 @@ The [`coinjoin` RPC](#coinjoin) controls the CoinJoin process (previously named 
 
 | Name   | Type   | Presence                | Description                                                                                                |
 | ------ | ------ | ----------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `mode` | string | Required<br>(exactly 1) | The command mode to use:<br>`start` - Start CoinJoin<br>`stop` - Stop CoinJoin<br>`reset` - Reset CoinJoin |
+| `mode` | string | Required<br>(exactly 1) | The command mode to use:<br>`start` - Start CoinJoin<br>`status` - Get status<br>`stop` - Stop CoinJoin<br>`reset` - Reset CoinJoin |
 
 **Command Mode - `start`**
 
@@ -36,6 +36,33 @@ Result:
 
 ```text
 Mixing started successfully
+```
+
+**Command Mode - `status`**
+
+:::{versionadded} 23.0.0
+:::
+
+*Result---status of mixing sessions*
+
+| Name     | Type   | Presence                | Description                       |
+| -------- | ------ | ----------------------- | --------------------------------- |
+| `result` | array  | Required<br>(exactly 1) | An array of status strings        |
+| →<br>Status | string | Required<br>(0 or more) | Status of a mixing session     |
+
+*Example from Dash Core 23.0.0*
+
+```bash
+dash-cli coinjoin status
+```
+
+Result:
+
+```json
+[
+  "Session 1: Idle",
+  "Session 2: Mixing"
+]
 ```
 
 **Command Mode - `stop`**

@@ -1588,6 +1588,7 @@ _See also_
 
 * [GetNewAddress](../api/remote-procedure-calls-wallet.md#getnewaddress): returns a new Dash address for receiving payments. If an account is specified, payments received with the address will be credited to that account.
 * [GetWalletInfo](../api/remote-procedure-calls-wallet.md#getwalletinfo): provides information about the wallet.
+* [NewKeyPool](../api/remote-procedure-calls-wallet.md#newkeypool): entirely clears and refills the keypool.
 
 ## ListAddressBalances
 
@@ -2625,6 +2626,42 @@ _See also_
 * [ListLockUnspent](../api/remote-procedure-calls-wallet.md#listlockunspent): returns a list of temporarily unspendable (locked) outputs.
 * [ListUnspent](../api/remote-procedure-calls-wallet.md#listunspent): returns an array of unspent transaction outputs belonging to this wallet.
 
+## NewKeyPool
+
+:::{versionadded} 23.0.0
+:::
+
+:::{warning}
+On non-HD wallets, this will require a new backup immediately to include the new keys. When restoring a backup of an HD wallet created before the `newkeypool` command is run, funds received to new addresses may not appear automatically. They have not been lost, but the wallet may not find them. This can be fixed by running the `newkeypool` command on the backup and then rescanning, so the wallet re-generates the required keys.
+:::
+
+:::{note}
+Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on masternodes**) and an unlocked or unencrypted wallet.
+:::
+
+The [`newkeypool` RPC](../api/remote-procedure-calls-wallet.md#newkeypool) entirely clears and refills the keypool. This command is only compatible with legacy wallets.
+
+_Parameters: none_
+
+_Result---`null` on success_
+
+| Name     | Type | Presence                | Description                                       |
+| -------- | ---- | ----------------------- | ------------------------------------------------- |
+| `result` | null | Required<br>(exactly 1) | JSON `null` when the keypool is successfully cleared and refilled |
+
+_Example from Dash Core 23.0.0_
+
+```bash
+dash-cli newkeypool
+```
+
+(No result shown: success.)
+
+_See also_
+
+* [KeyPoolRefill](../api/remote-procedure-calls-wallet.md#keypoolrefill): fills the cache of unused pre-generated keys (the keypool).
+* [GetWalletInfo](../api/remote-procedure-calls-wallet.md#getwalletinfo): provides information about the wallet.
+
 ## RemovePrunedFunds
 
 :::{note}
@@ -3531,6 +3568,58 @@ _See also_
 * [DecodeRawTransaction](../api/remote-procedure-calls-raw-transactions.md#decoderawtransaction): decodes a serialized transaction hex string into a JSON object describing the transaction.
 * [SendRawTransaction](../api/remote-procedure-calls-raw-transactions.md#sendrawtransaction): validates a transaction and broadcasts it to the peer-to-peer network.
 * [SignRawTransactionWithKey](../api/remote-procedure-calls-raw-transactions.md#signrawtransactionwithkey): signs inputs for a transaction in the serialized transaction format using private keys provided in the call.
+
+## SimulateRawTransaction
+
+:::{versionadded} 23.0.0
+:::
+
+:::{note}
+Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on masternodes**).
+:::
+
+The [`simulaterawtransaction` RPC](../api/remote-procedure-calls-wallet.md#simulaterawtransaction) calculates the balance change resulting from signing and broadcasting the given transaction(s).
+
+_Parameter #1---raw transactions_
+
+| Name          | Type   | Presence             | Description                            |
+| ------------- | ------ | -------------------- | -------------------------------------- |
+| `rawtxs`      | array  | Optional<br>(0 or 1) | An array of hex strings of raw transactions |
+| →<br>Raw Transaction | string | Optional<br>(0 or more) | A hex-encoded raw transaction       |
+
+_Parameter #2---options_
+
+| Name                      | Type    | Presence             | Description                                                        |
+| ------------------------- | ------- | -------------------- | ------------------------------------------------------------------ |
+| `options`                 | object  | Optional<br>(0 or 1) | Options                                                            |
+| →<br>`include_watchonly`  | bool    | Optional<br>(0 or 1) | Whether to include watch-only addresses (default=true for watch-only wallets, otherwise false) |
+
+_Result---balance change_
+
+| Name              | Type    | Presence                | Description                                                   |
+| ----------------- | ------- | ----------------------- | ------------------------------------------------------------- |
+| `result`          | object  | Required<br>(exactly 1) | The simulation result                                         |
+| →<br>`balance_change` | number  | Required<br>(exactly 1) | The wallet balance change (negative means decrease)       |
+
+_Example from Dash Core 23.0.0_
+
+```bash
+dash-cli simulaterawtransaction '["02000000000100205fa0120000001976a914485485425fa99504ec1638ac4213f3cfc9f32ef388ac00000000"]'
+```
+
+Result:
+
+```json
+{
+  "balance_change": 0.00000000
+}
+```
+
+_See also_
+
+* [CreateRawTransaction](../api/remote-procedure-calls-raw-transactions.md#createrawtransaction): creates an unsigned serialized transaction that spends a previous output to a new output with a P2PKH or P2SH address.
+* [SignRawTransactionWithWallet](../api/remote-procedure-calls-wallet.md#signrawtransactionwithwallet): signs a transaction in the serialized transaction format using private keys stored in the wallet.
+* [SendRawTransaction](../api/remote-procedure-calls-raw-transactions.md#sendrawtransaction): validates a transaction and broadcasts it to the peer-to-peer network.
 
 ## UnloadWallet
 

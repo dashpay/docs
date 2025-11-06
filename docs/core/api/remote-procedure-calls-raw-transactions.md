@@ -1313,6 +1313,55 @@ _See also:_
 * [GetSpecialTxes](../api/remote-procedure-calls-blockchain.md#getspecialtxes): returns an array of special transactions found in the specified block
 * [GetTransaction](../api/remote-procedure-calls-wallet.md#gettransaction): gets detailed information about an in-wallet transaction.
 
+## GetTxSpendingPrevout
+
+:::{versionadded} 23.0.0
+:::
+
+The [`gettxspendingprevout` RPC](../api/remote-procedure-calls-raw-transactions.md#gettxspendingprevout) scans the mempool to find transactions spending any of the given outputs.
+
+_Parameter #1---Outputs to check_
+
+| Name         | Type   | Presence                | Description                                         |
+| ------------ | ------ | ----------------------- | --------------------------------------------------- |
+| `outputs`    | array  | Required<br>(exactly 1) | The transaction outputs to check                    |
+| → Output     | object | Required<br>(1 or more) | An object describing an output                      |
+| → →<br>`txid` | string (hex) | Required<br>(exactly 1) | The transaction ID                            |
+| → →<br>`vout` | number (int) | Required<br>(exactly 1) | The output number                             |
+
+_Result---spending transactions_
+
+| Name                    | Type         | Presence                | Description                                                     |
+| ----------------------- | ------------ | ----------------------- | --------------------------------------------------------------- |
+| `result`                | array        | Required<br>(exactly 1) | An array of objects describing the spending status of each output |
+| → Output Status         | object       | Required<br>(1 or more) | An object describing one output                                 |
+| → →<br>`txid`           | string (hex) | Required<br>(exactly 1) | The transaction ID of the checked output                        |
+| → →<br>`vout`           | number (int) | Required<br>(exactly 1) | The vout value of the checked output                            |
+| → →<br>`spendingtxid`   | string (hex) | Optional<br>(0 or 1)    | The transaction ID of the mempool transaction spending this output (omitted if unspent) |
+
+_Example from Dash Core 23.0.0_
+
+```bash
+dash-cli gettxspendingprevout '[{"txid":"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0","vout":3}]'
+```
+
+Result:
+
+```json
+[
+  {
+    "txid": "a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0",
+    "vout": 3,
+    "spendingtxid": "c25b5b9a8e2d5c3d7e6f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d"
+  }
+]
+```
+
+_See also:_
+
+* [GetRawTransaction](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction): gets a hex-encoded serialized transaction or a JSON object describing the transaction.
+* [GetTxOut](../api/remote-procedure-calls-blockchain.md#gettxout): returns details about an unspent transaction output (UTXO).
+
 ## GetTxChainlocks
 
 The [`gettxchainlocks` RPC](../api/remote-procedure-calls-raw-transactions.md#gettxchainlocks) returns the block height each transaction was mined at and indicates whether it is in the mempool, ChainLocked, or neither.
