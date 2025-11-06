@@ -626,13 +626,9 @@ peer_id    | number | Required<br>(exactly 1)  | The ID of the peer to fetch the
 
 *Result---execution result*
 
-Name        | Type    | Presence                | Description
-------------|---------|-------------------------|------------
-`warnings`  | string  | Optional<br>(0 or 1)     | Any warnings or issues encountered during the block fetch attempt. If there are no warnings, this field will not appear.
+**Updated in Dash Core 23.0.0:** Returns an empty JSON object `{}` if the request was successfully scheduled. Otherwise, an error message is returned.
 
-Returns `{}` if a block request was successfully scheduled.
-
-*Example from Dash Core 22.0.0*
+*Example from Dash Core 23.0.0*
 
 Attempt to fetch block `00000021e19ebb597d74627a4df829768c3f26d3185d943a53773e4a681391bd` from peer ID `0`:
 
@@ -642,10 +638,8 @@ dash-cli -testnet getblockfrompeer "00000021e19ebb597d74627a4df829768c3f26d3185d
 
 Result:
 
-```json
-{
-  "warnings": "Block already downloaded"
-}
+```text
+Block already downloaded (code -1)
 ```
 
 *See also*
