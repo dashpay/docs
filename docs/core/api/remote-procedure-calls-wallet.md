@@ -2833,7 +2833,7 @@ _Parameter #5---Options_
 | options                     | json object        | Optional<br>(0 or 1)    | Additional configuration settings for the transaction. |
 | → <br>`add_inputs`          | bool               | Optional<br>(0 or 1)    | If set to `true`, automatically includes more inputs if the initially specified inputs are not sufficient. Defaults to `false`.|
 | → <br>`add_to_wallet`       | bool               | Optional<br>(0 or 1)    | If `false`, returns the transaction as a serialized hex string and does not add it to the wallet or broadcast it. Defaults to `true`. |
-| → <br>`change_address`      | string (hex)       | Optional<br>(0 or 1)    | The Dash address to receive the change. |
+| → <br>`change_address`      | string (hex)       | Optional<br>(0 or 1)    | **Updated in Dash Core 23.0.0**<br>The Dash address to receive the change. If not set, the address is chosen automatically. |
 | → <br>`change_position`     | numeric (int)      | Optional<br>(0 or 1)    | The index of the change output. |
 | → <br>`conf_target`         | numeric (int)      | Optional<br>(0 or 1)    | Confirmation target (in blocks) for the transaction, or fee rate for DASH/kB or duff/B estimate modes. Defaults to wallet's default configuration. |
 | → <br>`estimate_mode`       | string             | Optional<br>(0 or 1)    | The fee estimate mode. Must be one of: `unset`, `economical`, `conservative`, `DASH/kB`, `duff/B`. Default is `unset`. |
@@ -2848,6 +2848,13 @@ _Parameter #5---Options_
 | → <br>`psbt`                | bool               | Optional<br>(0 or 1)    | If `true`, always returns the transaction as a PSBT. Implies `add_to_wallet` is `false`. Default is automatic.|
 | → `subtract_fee_from_outputs` | array            | Optional<br>(0 or 1)    | A JSON array of integers.  The fee will be equally deducted from the amount of each specified output. Those recipients will receive less funds than you enter in their corresponding amount field. If no outputs are specified here, the sender pays the fee. |
 | → → Output index            | numeric (int)      | Required<br>(1 or more) | The zero-based output index, before a change output is added. |
+| → <br>`solving_data`        | object             | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br><br>Keys and scripts needed for producing a final transaction with a dummy signature. Used for fee estimation during coin selection. |
+| → → <br>`pubkeys`           | array              | Optional<br>(0 or 1)    | Public keys involved in this transaction |
+| → → →<br>pubkey             | string             | Optional<br>(0 or more) | A public key |
+| → → <br>`scripts`           | array              | Optional<br>(0 or 1)    | Scripts involved in this transaction |
+| → → →<br>script             | string             | Optional<br>(0 or more) | A script |
+| → → <br>`descriptors`       | array              | Optional<br>(0 or 1)    | Descriptors that provide solving data for this transaction |
+| → → →<br>descriptor         | string             | Optional<br>(0 or more) | A descriptor |
 
 _Result---transaction details_
 
@@ -2855,7 +2862,7 @@ _Result---transaction details_
 | ----------- | ------------------ | ----------------------- | ---------------------------------- |
 | Result      | object             | Required<br>(exactly 1) | JSON object containing transaction details |
 | → `complete`  | bool               | Required<br>(exactly 1) | If the transaction has a complete set of signatures. |
-| → `txid`      | string (hex)       | Required<br>(exactly 1) | The transaction id for the send. Only 1 transaction is created regardless of the number of addresses. |
+| → `txid`      | string (hex)       | Optional<br>(0 or 1) | The transaction id for the send. Only 1 transaction is created regardless of the number of addresses. |
 | → `hex`       | string (hex)       | Optional<br>(0 or 1)    | If `add_to_wallet` is false, the hex-encoded raw transaction with signatures. |
 | → `psbt`      | string             | Optional<br>(0 or 1)    | If more signatures are needed, or if `add_to_wallet` is false, the base64-encoded (partially) signed transaction. |
 
@@ -3644,6 +3651,8 @@ The [`walletcreatefundedpsbt` RPC](../api/remote-procedure-calls-wallet.md#walle
 
 Implements the Creator and Updater roles.
 
+As of Dash Core 23.0.0, all existing inputs must either have their previous output transaction be in the wallet or be in the UTXO set. Solving data must be provided for non-wallet inputs.
+
 _Parameter #1---Inputs_
 
 | Name              | Type         | Presence                | Description                                                                                                |
@@ -3675,7 +3684,7 @@ _Parameter #4---Additional options_
 | ------------------------------ | ----------------- | ----------------------- | ----------- |
 | Options                        | Object            | Optional<br>(0 or 1)    | Additional options |
 | → <br>`add_inputs`             | bool              | Optional<br>(0 or 1)    | If inputs are specified, automatically include more if they are not enough. Defaults to `false`. |
-| → <br>`changeAddress`          | string            | Optional<br>(0 or 1)    | The dash address to receive the change (default=pool address) |
+| → <br>`changeAddress`          | string            | Optional<br>(0 or 1)    | **Updated in Dash Core 23.0.0**<br><br>The dash address to receive the change. If not set, the address is chosen automatically. |
 | → <br>`changePosition`         | numeric (int)     | Optional<br>(0 or 1)    | The index of the change output (default=random) |
 | → <br>`includeWatching`        | bool              | Optional<br>(0 or 1)    | Also select inputs which are watch only (default=`false` for non-watching only wallets and `true` for watching only-wallets) |
 | → <br>`lockUnspents`           | bool              | Optional<br>(0 or 1)    | Lock selected unspent outputs (default=`false`). This applies to manually selected coins also since Dash Core 20.1.0. |
@@ -3684,6 +3693,13 @@ _Parameter #4---Additional options_
 | → →<br>Output index            | numeric (int)     | Optional<br>(0 or more) | An output index number (vout) from which the fee should be subtracted. If multiple vouts are provided, the total fee will be divided by the number of vouts listed and each vout will have that amount subtracted from it. |
 | → <br>`conf_target`            | numeric (int)     | Optional<br>(0 or 1)    | Confirmation target (in blocks) |
 | → <br>`estimate_mode`          | numeric (int)     | Optional<br>(0 or 1)    | The fee estimate mode, must be one of:<br>`unset`<br>`economical`<br>`conservative`<br>`DASH/kB`<br>`duff/B` |
+| → <br>`solving_data`           | object            | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br><br>Keys and scripts needed for producing a final transaction with a dummy signature. Used for fee estimation during coin selection. |
+| → → <br>`pubkeys`              | array             | Optional<br>(0 or 1)    | Public keys involved in this transaction |
+| → → →<br>pubkey                | string            | Optional<br>(0 or more) | A public key |
+| → → <br>`scripts`              | array             | Optional<br>(0 or 1)    | Scripts involved in this transaction |
+| → → →<br>script                | string            | Optional<br>(0 or more) | A script |
+| → → <br>`descriptors`          | array             | Optional<br>(0 or 1)    | Descriptors that provide solving data for this transaction |
+| → → →<br>descriptor            | string            | Optional<br>(0 or more) | A descriptor |
 
 _Parameter #5---bip32derivs_
 

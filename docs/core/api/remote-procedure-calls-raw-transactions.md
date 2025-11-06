@@ -779,9 +779,11 @@ _See also:_
 Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on masternodes**).
 :::
 
-The [`fundrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#fundrawtransaction) adds inputs to a transaction until it has enough in value to meet its out value.  This will not modify existing inputs, and will add one change output to the outputs.  
-Note that inputs which were signed may need to be resigned after completion since in/outputs have been added.  The inputs added will not be signed, use signrawtransaction for that.  
-All existing inputs must have their previous output transaction be in the wallet.
+The [`fundrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#fundrawtransaction) adds inputs to a transaction until it has enough in value to meet its out value.  This will not modify existing inputs, and will add one change output to the outputs.
+
+Note that inputs which were signed may need to be resigned after completion since in/outputs have been added.  The inputs added will not be signed, use signrawtransaction for that.
+
+**Updated in Dash Core 23.0.0:** All existing inputs must either have their previous output transaction be in the wallet or be in the UTXO set. Solving data must be provided for non-wallet inputs.
 
 _Parameter #1---The hex string of the raw transaction_
 
@@ -797,7 +799,7 @@ Note: For backwards compatibility, passing in a `true` instead of an object will
 | ------------------------------ | ------------------ | ----------------------- | ---------- |
 | Options                        | Object             | Optional<br>(0 or 1)    | Additional options. For backward compatibility: passing in a true instead of an object will result in {"includeWatching":true} |
 | → <br>`add_inputs`             | bool               | Optional<br>(0 or 1)    | If inputs are specified, automatically include more if they are not enough. Defaults to `true`. |
-| → <br>`changeAddress`          | string             | Optional<br>(0 or 1)    | The address to receive the change. If not set, the address is chosen from address pool                                                                                                                                    |
+| → <br>`changeAddress`          | string             | Optional<br>(0 or 1)    | **Updated in Dash Core 23.0.0**<br><br>The address to receive the change. If not set, the address is chosen automatically |
 | → <br>`changePosition`         | nummeric (int)     | Optional<br>(0 or 1)    | The index of the change output. If not set, the change position is randomly chosen |
 | `includeWatching`              | bool               | Optional<br>(0 or 1)    | Inputs from watch-only addresses are also considered. The default is `false` for non-watching-only wallets and `true` for watching-only wallets                                                                           |
 | → <br>`lockUnspent`            | bool               | Optional<br>(0 or 1)    | The selected outputs are locked after running the rpc call. The default is `false`. This applies to manually selected coins also since Dash Core 20.1.0. |
@@ -806,6 +808,13 @@ Note: For backwards compatibility, passing in a `true` instead of an object will
 | → →<br>Output index            | numeric (int)      | Optional<br>(0 or more) | A output index number (vout) from which the fee should be subtracted. If multiple vouts are provided, the total fee will be divided by the number of vouts listed and each vout will have that amount subtracted from it. |
 | → <br>`conf_target`            | numberic (int)     | Optional<br>(0 or 1)    | Confirmation target (in blocks), or fee rate (for DASH/kB or duff/B estimate modes) |
 | → <br>`estimate_mode`          | string             | Optional<br>(0 or 1)    | The fee estimate mode, must be one of (case insensitive):<br>`unset`<br>`economical`<br>`conservative`<br>`DASH/kB`<br>`duff/B` |
+| → <br>`solving_data`           | object             | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br><br>Keys and scripts needed for producing a final transaction with a dummy signature. Used for fee estimation during coin selection. |
+| → → <br>`pubkeys`              | array              | Optional<br>(0 or 1)    | Public keys involved in this transaction |
+| → → →<br>pubkey                | string             | Optional<br>(0 or more) | A public key |
+| → → <br>`scripts`              | array              | Optional<br>(0 or 1)    | Scripts involved in this transaction |
+| → → →<br>script                | string             | Optional<br>(0 or more) | A script |
+| → → <br>`descriptors`          | array              | Optional<br>(0 or 1)    | Descriptors that provide solving data for this transaction |
+| → → →<br>descriptor            | string             | Optional<br>(0 or more) | A descriptor |
 
 _Result---information about the created transaction_
 
