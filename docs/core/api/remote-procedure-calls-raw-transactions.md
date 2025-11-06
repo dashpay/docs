@@ -689,13 +689,14 @@ _Result---the decoded script_
 | ---------------- | ------------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `result`         | object       | Required<br>(exactly 1) | An object describing the decoded script, or JSON `null` if the script could not be decoded                                                                                                                                                    |
 | →<br>`asm`       | string       | Required<br>(exactly 1) | The redeem script in decoded form with non-data-pushing opcodes listed.  May be empty                                                                                                                                                         |
-| →<br>`reqSigs`   | number (int) | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The number of signatures required; this is always `1` for P2PK or P2PKH within P2SH.  It may be greater than 1 for P2SH multisig.  This value will not be returned for `nonstandard` script types (see the `type` key above)                  |
+| →<br>`desc`      | string       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Inferred descriptor for the script |
 | →<br>`type`      | string       | Optional<br>(0 or 1)    | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script inside P2SH<br>• `pubkeyhash` for a P2PKH script inside P2SH<br>• `multisig` for a multisig script inside P2SH<br>• `nonstandard` for unknown scripts |
-| →<br>`addresses` | array        | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>A P2PKH addresses used in this script, or the computed P2PKH addresses of any pubkeys in this script.  This array will not be returned for `nonstandard` script types                                                                         |
-| → →<br>Address   | string       | Required<br>(1 or more) | A P2PKH address                                                                                                                                                                                                                               |
-| →<br>`p2sh`      | string (hex) | Required<br>(exactly 1) | The P2SH address of this redeem script                                                                                                                                                                                                        |
+| →<br>`address`   | string       | Optional<br>(0 or 1)    | The Dash address (only if a well-defined address exists) |
+| →<br>`reqSigs`   | number (int) | Optional<br>(0 or 1)    | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0) |
+| →<br>`addresses` | array        | Optional<br>(0 or 1)    | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0) |
+| →<br>`p2sh`      | string (hex) | Optional<br>(0 or 1)    | **Removed in Dash Core 23.0.0** |
 
-_Example from Dash Core 21.0.0_
+_Example from Dash Core 23.0.0_
 
 A 2-of-3 P2SH multisig pubkey script:
 
@@ -711,6 +712,7 @@ Result:
 ```json
 {
   "asm": "2 02eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29 0311f97539724e0de38fb1ff79f5148e5202459d06ed07193ab18c730274fd0d88 03251f25a5c0291446d801ba6df122f67a7dd06c60a9b332b7b29cc94f3b8f57d0 3 OP_CHECKMULTISIG",
+  "desc": "multi(2,02eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29,0311f97539724e0de38fb1ff79f5148e5202459d06ed07193ab18c730274fd0d88,03251f25a5c0291446d801ba6df122f67a7dd06c60a9b332b7b29cc94f3b8f57d0)#79g9wpuh",
   "type": "multisig",
   "p2sh": "8uJLxDxk2gEMbidF5vT8XLS2UCgQmVcroW"
 }

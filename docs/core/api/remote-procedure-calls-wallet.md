@@ -1698,15 +1698,19 @@ _Result---execution result_
 | `descriptors`     | array          | Required<br>(exactly 1) | An array of JSON objects, each describing a descriptor |
 | → Descriptor      | object         | Required<br>(1 or more) | A JSON object describing a particular descriptor |
 | → →<br>`desc`     | string         | Required<br>(exactly 1) | Descriptor string representation |
+| → →<br>`mnemonic` | string         | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>The mnemonic phrase for this wallet. Only present for HD wallets with private keys. |
+| → →<br>`mnemonicpassphrase` | bool | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>Whether the wallet has a mnemonic passphrase. Only present for HD wallets with private keys. |
 | → →<br>`timestamp`| number (int)   | Required<br>(exactly 1) | The creation time of the descriptor in Unix epoch time |
 | → →<br>`active`   | bool           | Required<br>(exactly 1) | Indicates whether this descriptor is currently used to generate new addresses |
 | → →<br>`internal` | bool           | Optional<br>(0 or 1)    | True if this descriptor is used to generate change addresses; False if used for receiving |
+| → →<br>`coinjoin` | bool           | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>Whether this descriptor is used for CoinJoin transactions |
 | → →<br>`range`    | array          | Optional<br>(0 or 1)    | Defined only for ranged descriptors |
 | → →→<br>`start`   | number (int)   | Required<br>(exactly 1) | Range start inclusive |
 | → →→<br>`end`     | number (int)   | Required<br>(exactly 1) | Range end inclusive |
 | → →<br>`next`     | number (int)   | Optional<br>(0 or 1)    | The next index to generate addresses from; defined only for ranged descriptors |
+| → →<br>`next_index` | number (int) | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>The next index for key derivation |
 
-_Example from Dash Core 21.1.0_
+_Example from Dash Core 23.0.0_
 
 List all descriptors in a descriptor-enabled wallet:
 
@@ -1729,7 +1733,8 @@ Result (example output):
         0,
         999
       ],
-      "next": 0
+      "next": 0,
+      "next_index": 0
     }
   ]
 }

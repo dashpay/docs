@@ -3132,7 +3132,7 @@ The `quorum getrecsig` RPC gets the recovered signature for a previous threshold
 
 | Name              | Type         | Presence                | Description                                                                                                                                                                      |
 | ----------------- | ------------ | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| result            | bool         | Required<br>(exactly 1) | Recovered signature details                                                                                                                                                      |
+| result            | object       | Required<br>(exactly 1) | Recovered signature details |
 | →<br>`llmqType`   | number       | Required<br>(exactly 1) | [Type of quorum](https://github.com/dashpay/dips/blob/master/dip-0006/llmq-types.md):<br>`1` - LLMQ_50_60<br>`2` - LLMQ_400_60<br>`3` - LLMQ_400_85<br>`4` - LLMQ_100_67 |
 | →<br>`quorumHash` | string (hex) | Required<br>(exactly 1) | The block hash of the quorum                                                                                                                                                     |
 | →<br>`id`         | string (hex) | Required<br>(exactly 1) | The signing session ID                                                                                                                                                           |
