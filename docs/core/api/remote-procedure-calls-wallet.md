@@ -473,6 +473,7 @@ _Result---returns information about the address_
 | → →<br>Address             | string           | Optional<br>(0 or more) | An address. |
 | →<br>`sigsrequired`        | number (int)     | Optional<br>(0 or 1)    | Only returned for multisig P2SH addresses belonging to the wallet.  The number of signatures required by this script |
 | →<br>`pubkey`              | string (hex)     | Optional<br>(0 or 1)    | The public key corresponding to this address.  Only returned if the address is a P2PKH address in the wallet |
+| →<br>`embedded`            | object           | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>Information about the address embedded in P2SH, if relevant and known. Includes all `getaddressinfo` output fields for the embedded address, excluding metadata (`timestamp`, `hdkeypath`, `hdseedid`) and relation to the wallet (`ismine`, `iswatchonly`). |
 | →<br>`iscompressed`        | bool             | Optional<br>(0 or 1)    | Set to `true` if a compressed public key or set to `false` if an uncompressed public key.  Only returned if the address is a P2PKH address in the wallet |
 | →<br>`timestamp`           | number (int)     | Optional<br>(0 or 1)    | The creation time of the key if available in seconds since epoch (Jan 1 1970 GMT) |
 | →<br>`hdchainid`           | string (hash160) | Optional<br>(0 or 1)    | The ID of the HD chain |
@@ -946,7 +947,7 @@ _Result---a description of the transaction_
 | →<br>`instantlock-internal` | bool           | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock.  Available for 'send' and 'receive' category of transactions. |
 | → <br>`chainlock`            | bool            | Required<br>(exactly 1)     |  If set to `true`, this transaction is in a block that is locked (not susceptible to a chain re-org) |
 | → <br>`trusted`              | bool            | Optional<br>(0 or 1)        | Whether we consider the outputs of this unconfirmed transaction safe to spend. Only returned for unconfirmed transactions |
-| → <br>`generated`            | bool            | Optional<br>(0 or 1)        | Set to `true` if the transaction is a coinbase.  Not returned for regular transactions |
+| → <br>`generated`            | bool            | Optional<br>(0 or 1)        | **Updated in Dash Core 23.0.0**<br>Set to `true` if the transaction's only input is a coinbase one. Only present if the transaction's only input is a coinbase one. |
 | → <br>`blockhash`            | string (hex)    | Optional<br>(0 or 1)        | The hash of the block on the local best block chain which includes this transaction, encoded as hex in RPC byte order.  Only returned for confirmed transactions |
 | → <br>`blockheight`          | string (hex)    | Optional<br>(0 or 1)        | The block height containing the transaction. Only returned for confirmed transactions |
 | → <br>`blockindex`           | number (int)    | Optional<br>(0 or 1)        | The index of the transaction in the block that includes it.  Only returned for confirmed transactions |
@@ -2190,7 +2191,7 @@ _Result---payment details_
 | →<br>`instantlock`          | bool           | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock) |
 | →<br>`instantlock_internal` | bool           | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock |
 | <br>`chainlock`             | bool            | Required<br>(exactly 1) |  If set to `true`, this transaction is in a block that is locked (not susceptible to a chain re-org)                                                                                                                                                                                                                                            |
-| → →<br>`generated`          | bool            | Optional<br>(0 or 1)    | Set to `true` if the transaction is a coinbase.  Not returned for regular transactions or _move_ category payments                                                                                                                                                                                                                                                                 |
+| → →<br>`generated`          | bool            | Optional<br>(0 or 1)    | **Updated in Dash Core 23.0.0**<br>Set to `true` if the transaction's only input is a coinbase one. Only present if the transaction's only input is a coinbase one. |
 | → →<br>`trusted`            | bool            | Optional<br>(0 or 1)    | Indicates whether we consider the outputs of this unconfirmed transaction safe to spend.  Only returned for unconfirmed transactions                                                                                                                                                                                                                                               |
 | → →<br>`blockhash`          | string (hex)    | Optional<br>(0 or 1)    | The hash of the block on the local best block chain which includes this transaction, encoded as hex in RPC byte order.  Only returned for confirmed transactions                                                                                                                                                                                                                   |
 | → →<br>`blockheight`        | string (hex)    | Optional<br>(0 or 1)    | The block height containing the transaction.                                                        |
@@ -2300,6 +2301,9 @@ _Result---the list of unspent outputs_
 | → →<br>`redeemScript`    | string (hex)    | Optional<br>(0 or 1)     | If the output is a P2SH whose script belongs to this wallet, this is the redeem script                                                                                                                                                                 |
 | → →<br>`amount`          | number (int)    | Required<br>(exactly 1)  | The amount paid to the output in dash                                                                                                                                                                                                                  |
 | → →<br>`confirmations`   | number (int)    | Required<br>(exactly 1)  | The number of confirmations received for the transaction containing this output                                                                                                                                                                        |
+| → →<br>`ancestorcount`   | number (int)    | Optional<br>(0 or 1)     | **Added in Dash Core 23.0.0**<br>The number of in-mempool ancestor transactions, including this one (if transaction is in the mempool) |
+| → →<br>`ancestorsize`    | number (int)    | Optional<br>(0 or 1)     | **Added in Dash Core 23.0.0**<br>The virtual transaction size of in-mempool ancestors, including this one (if transaction is in the mempool) |
+| → →<br>`ancestorfees`    | number (int)    | Optional<br>(0 or 1)     | **Added in Dash Core 23.0.0**<br>The total fees of in-mempool ancestors (including this one) with fee deltas used for mining priority in duffs (if transaction is in the mempool) |
 | → →<br>`spendable`       | bool            | Required<br>(exactly 1)  | Set to `true` if the private key or keys needed to spend this output are part of the wallet.  Set to `false` if not (such as for watch-only addresses)                                                                                                 |
 | → →<br>`solvable`        | bool            | Required<br>(exactly 1)  | _Added in Bitcoin Core 0.13.0_<br><br>Set to `true` if the wallet knows how to spend this output.  Set to `false` if the wallet does not know how to spend the output.  It is ignored if the private keys are available                                |
 | → →<br>`desc`            | string          | Optional<br>(0 or 1)     | A descriptor for spending this output                                                                                                                                                                                                                  |
@@ -2736,6 +2740,7 @@ _Result---The unspent and total amount_
 | → → →<br>`scriptPubKey` | string (hex) | Required<br>(exactly 1) | The output's pubkey script encoded as hex                                                              |
 | → → →<br>`desc`         | string       | Required<br>(exactly 1) | A specialized descriptor for the matched scriptPubKey                                                  |
 | → → →<br>`amount`       | number (int) | Required<br>(exactly 1) | The total amount in DASH of the unspent output                                                         |
+| → → →<br>`coinbase`     | bool         | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Whether this is a coinbase output                                     |
 | → → →<br>`height`       | number (int) | Required<br>(exactly 1) | The height of the unspent transaction output                                                           |
 | →<br>`total_amount`     | numeric      | Required<br>(exactly 1) | The total amount of all found unspent outputs in DASH                                                  |
 
@@ -2962,7 +2967,7 @@ If `verbose` is set to `true`:
 | ------------- | ------------ | ----------------------- | ------------------------------------------------- |
 | result        | json object  | Required<br>(exactly 1) | A JSON object containing transaction details      |
 | → txid        | string       | Required<br>(exactly 1) | The transaction id for the send. Only one transaction is created regardless of the number of addresses |
-| → fee reason  | string       | Required<br>(exactly 1) | The transaction fee reason                        |
+| → fee_reason  | string       | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (renamed from `fee reason`)<br>The transaction fee reason                        |
 
 _Example from Dash Core 0.17.0_
 
@@ -3114,7 +3119,7 @@ If `verbose` is set to `true`:
 | ------------- | ------------ | ----------------------- | ------------------------------------------------- |
 | result        | json object  | Required<br>(exactly 1) | A JSON object containing transaction details      |
 | → txid        | string       | Required<br>(exactly 1) | The transaction id for the send                   |
-| → fee reason  | string       | Required<br>(exactly 1) | The transaction fee reason                        |
+| → fee_reason  | string       | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (renamed from `fee reason`)<br>The transaction fee reason                        |
 
 _Example from Dash Core 0.12.2_
 
