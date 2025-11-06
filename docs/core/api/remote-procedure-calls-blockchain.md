@@ -127,7 +127,7 @@ Block Hash | string (hex) | Required<br>(exactly 1) | The hash of the header of 
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Verbosity | number (int) | Optional<br>(0 or 1) | Set to one of the following verbosity levels:<br>• `0` - Get the block as a string in the hex-encoded serialized block format;<br>• `1` - Get the decoded block as a JSON object (default)<br>• `2` - Get the decoded block as a JSON object with transaction details
+Verbosity | number (int) | Optional<br>(0 or 1) | Set to one of the following verbosity levels:<br>• `0` - Get the block as a string in the hex-encoded serialized block format;<br>• `1` - Get the decoded block as a JSON object (default)<br>• `2` - Get the decoded block as a JSON object with transaction details<br>• `3` - **Added in Dash Core 23.0.0** Get the decoded block as a JSON object with transaction details including prevout information for inputs (only for unpruned blocks in the current best chain)
 
 *Result (if verbosity was `0`)---a serialized block*
 
@@ -159,14 +159,14 @@ Name | Type | Presence | Description
 →<br>`size` | number (int) | Required<br>(exactly 1) | The size of this block in serialized block format, counted in bytes
 →<br>`tx` | array | Required<br>(exactly 1) | An array containing the TXIDs of all transactions in this block.  The transactions appear in the array in the same order they appear in the serialized block
 → →<br>TXID | string (hex) | Required<br>(1 or more) | The TXID of a transaction in this block, encoded as hex in RPC byte order
-→<br>`cbTx` | object | Required<br>(exactly 1) | Coinbase special transaction details
+→<br>`cbTx` | object | Optional<br>(0 or 1) | Coinbase special transaction details
 → →<br>`version` | number (int) | Required<br>(exactly 1) | The version of the Coinbase special transaction (CbTx)
 → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
 → →<br>`merkleRootMNList` | string (hex) | Required<br>(exactly 1) | The merkle root for the masternode list
-→ →<br>`merkleRootQuorums` | string (hex) | Required<br>(exactly 1) | The merkle root for the quorum list
-→ →<br>`bestCLHeightDiff` | number (int) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The best ChainLock height difference
-→ →<br>`bestCLSignature` | string (hex) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The best ChainLock signature
-→ →<br>`creditPoolBalance` | number (real) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The balance of the credit pool
+→ →<br>`merkleRootQuorums` | string (hex) | Optional<br>(0 or 1) | The merkle root for the quorum list
+→ →<br>`bestCLHeightDiff` | number (int) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Blocks between the current block and the last known block with a ChainLock
+→ →<br>`bestCLSignature` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Best ChainLock signature known by the miner
+→ →<br>`creditPoolBalance` | number (real) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Balance in the Platform credit pool
 
 *Result (if verbosity was `2`---a JSON block with full transaction details*
 
@@ -226,16 +226,35 @@ Name | Type | Presence | Description
 → →<br>`fee` | number | Optional<br>(0 or 1) | The transaction fee in DASH, omitted if block undo data is not available
 → →<br>`instantlock` | bool | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock)
 → →<br>`instantlock_internal` | bool | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock
-→<br>`cbTx` | object | Required<br>(exactly 1) | Coinbase special transaction details
+→<br>`cbTx` | object | Optional<br>(0 or 1) | Coinbase special transaction details
 → →<br>`version` | number (int) | Required<br>(exactly 1) | The version of the Coinbase special transaction (CbTx)
 → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
 → →<br>`merkleRootMNList` | string (hex) | Required<br>(exactly 1) | The merkle root for the masternode list
-→ →<br>`merkleRootQuorums` | string (hex) | Required<br>(exactly 1) | The merkle root for the quorum list
-→ →<br>`bestCLHeightDiff` | number (int) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The best ChainLock height difference
-→ →<br>`bestCLSignature` | string (hex) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The best ChainLock signature
-→ →<br>`creditPoolBalance` | number (real) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The balance of the credit pool
+→ →<br>`merkleRootQuorums` | string (hex) | Optional<br>(0 or 1) | The merkle root for the quorum list
+→ →<br>`bestCLHeightDiff` | number (int) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Blocks between the current block and the last known block with a ChainLock
+→ →<br>`bestCLSignature` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Best ChainLock signature known by the miner
+→ →<br>`creditPoolBalance` | number (real) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Balance in the Platform credit pool
 
-*Example from Dash Core 21.0.0*
+*Result (if verbosity was `3`)---a JSON block with full transaction and prevout details*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`result` | object/null | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br><br>An object containing the requested block with prevout information, or JSON `null` if an error occurred
+... | ... | ... | Same output as verbosity = 2
+→ →<br>`vin` | array | Required<br>(exactly 1) | An array of objects with each object being an input vector (vin) for this transaction (includes prevout information)
+→ → →<br>Input | object | Required<br>(1 or more) | An object describing one of this transaction's inputs
+... | ... | ... | The same output as verbosity = 2
+→ → → →<br>`prevout` | object | Optional<br>(0 or 1) | Previous output information (only if undo information is available)
+→ → → → →<br>`generated` | bool | Required<br>(exactly 1) | Whether this is a coinbase output
+→ → → → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of the prevout
+→ → → → →<br>`value` | number (Dash) | Required<br>(exactly 1) | The value in DASH
+→ → → → →<br>`scriptPubKey` | object | Required<br>(exactly 1) | The script pubkey
+→ → → → → →<br>`asm` | string | Required<br>(exactly 1) | The asm
+→ → → → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The hex
+→ → → → → →<br>`address` | string | Optional<br>(0 or 1) | The Dash address (only if a well-defined address exists)
+→ → → → → →<br>`type` | string | Required<br>(exactly 1) | The type (e.g., 'pubkeyhash')
+
+*Example from Dash Core 23.0.0*
 
 Get a block in raw hex:
 
@@ -353,12 +372,10 @@ Result:
           "n": 0,
           "scriptPubKey": {
             "asm": "OP_DUP OP_HASH160 c69a0bda7daaae481be8def95e5f347a1d00a4b4 OP_EQUALVERIFY OP_CHECKSIG",
+            "desc": "addr(yeRZBWYfeNE4yVUHV4ZLs83Ppn9aMRH57A)#0u4f4749",
             "hex": "76a914c69a0bda7daaae481be8def95e5f347a1d00a4b488ac",
-            "reqSigs": 1,
-            "type": "pubkeyhash",
-            "addresses": [
-              "yeRZBWYfeNE4yVUHV4ZLs83Ppn9aMRH57A"
-            ]
+            "address": "yeRZBWYfeNE4yVUHV4ZLs83Ppn9aMRH57A",
+            "type": "pubkeyhash"
           }
         },
         {
@@ -367,12 +384,10 @@ Result:
           "n": 1,
           "scriptPubKey": {
             "asm": "OP_DUP OP_HASH160 21eca01872dbfce4bf20886a004f6caaa69c1ff7 OP_EQUALVERIFY OP_CHECKSIG",
+            "desc": "addr(yPQpcZ1EdtQXWHzNjZuvVCKXuESW5wZ5x1)#9x0cknwl",
             "hex": "76a91421eca01872dbfce4bf20886a004f6caaa69c1ff788ac",
-            "reqSigs": 1,
-            "type": "pubkeyhash",
-            "addresses": [
-              "yPQpcZ1EdtQXWHzNjZuvVCKXuESW5wZ5x1"
-            ]
+            "address": "yPQpcZ1EdtQXWHzNjZuvVCKXuESW5wZ5x1",
+            "type": "pubkeyhash"
           }
         }
       ],

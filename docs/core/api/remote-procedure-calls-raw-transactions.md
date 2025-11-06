@@ -534,16 +534,14 @@ _Result---the decoded transaction_
 | → → →<br>`n`            | number (int)   | Required<br>(exactly 1) | The output index number of this output within this transaction                                                                                                                                                                                                                                                                   |
 | → → →<br>`scriptPubKey` | object         | Required<br>(exactly 1) | An object describing the pubkey script                                                                                                                                                                                                                                                                                           |
 | → → → →<br>`asm`        | string         | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed                                                                                                                                                                                                                                                           |
+| → → → →<br>`desc`       | string         | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Inferred descriptor for the output |
 | → → → →<br>`hex`        | string (hex)   | Required<br>(exactly 1) | The pubkey script encoded as hex                                                                                                                                                                                                                                                                                                 |
-| → → → →<br>`reqSigs`    | number (int)   | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The number of signatures required; this is always `1` for P2PK, P2PKH, and P2SH (including P2SH multisig because the redeem script is not available in the pubkey script).  It may be greater than 1 for bare multisig.  This value will not be returned for `nulldata` or `nonstandard` script types (see the `type` key below) |
 | → → → →<br>`type`       | string         | Optional<br>(0 or 1)    | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts                                          |
 | → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists) |
-| → → → →<br>`addresses`  | string : array | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types                                                                                                                            |
-| → → → → →<br>Address    | string         | Required<br>(1 or more) | A P2PKH or P2SH address                                                                                                                                                                                                                                                                                                          |
 | →<br>`extraPayloadSize` | number (int)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction                                                                                                                                                                                                             |
 | →<br>`extraPayload`     | string (hex)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction                                                                                                                                                                                                        |
 
-_Example from Dash Core 21.1.0_
+_Example from Dash Core 23.0.0_
 
 Decode a signed one-input, two-output transaction:
 
@@ -584,6 +582,7 @@ Result:
       "n": 0,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 b02ae52066542b4aec5cf45c7cae3183d7bd3227 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(ycNwAN4DQ7Xnw5XLKg84SR4U1GE22FfLNQ)#dymcgg9m",
         "hex": "76a914b02ae52066542b4aec5cf45c7cae3183d7bd322788ac",
         "address": "ycNwAN4DQ7Xnw5XLKg84SR4U1GE22FfLNQ",
         "type": "pubkeyhash"
@@ -595,6 +594,7 @@ Result:
       "n": 1,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 252c9de3a0ebd5c95886187b24969d4ccdb5576e OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yPi1JKw5fn8bMFsCCtnkGagogW6GXwGktZ)#jt9z47fj",
         "hex": "76a914252c9de3a0ebd5c95886187b24969d4ccdb5576e88ac",
         "address": "yPi1JKw5fn8bMFsCCtnkGagogW6GXwGktZ",
         "type": "pubkeyhash"
@@ -638,6 +638,7 @@ Result:
       "n": 0,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 cbd7bfcc50351180132b2c0698cb90ad74c473c7 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yeuGUfPMrbEqAS2Pw1wonYgEPbM4LAA9LK)#yfqr3rqr",
         "hex": "76a914cbd7bfcc50351180132b2c0698cb90ad74c473c788ac",
         "address": "yeuGUfPMrbEqAS2Pw1wonYgEPbM4LAA9LK",
         "type": "pubkeyhash"
@@ -649,6 +650,7 @@ Result:
       "n": 1,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 88a060bc2dfe05780ae4dcb6c98b12436c35a939 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yYmrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV)#wjszqhw4",
         "hex": "76a91488a060bc2dfe05780ae4dcb6c98b12436c35a93988ac",
         "address": "yYmrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV",
         "type": "pubkeyhash"
@@ -1032,12 +1034,10 @@ _Result (if verbose=`true`)---the decoded transaction_
 | → → →<br>`n`                | number (int)   | Required<br>(exactly 1) | The output index number of this output within this transaction                                                                                                                                                                                                                                                                   |
 | → → →<br>`scriptPubKey`     | object         | Required<br>(exactly 1) | An object describing the pubkey script                                                                                                                                                                                                                                                                                           |
 | → → → →<br>`asm`            | string         | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed                                                                                                                                                                                                                                                           |
+| → → → →<br>`desc`           | string         | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Inferred descriptor for the output |
 | → → → →<br>`hex`            | string (hex)   | Required<br>(exactly 1) | The pubkey script encoded as hex                                                                                                                                                                                                                                                                                                 |
-| → → → →<br>`reqSigs`        | number (int)   | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The number of signatures required; this is always `1` for P2PK, P2PKH, and P2SH (including P2SH multisig because the redeem script is not available in the pubkey script).  It may be greater than 1 for bare multisig.  This value will not be returned for `nulldata` or `nonstandard` script types (see the `type` key below) |
 | → → → →<br>`type`           | string         | Optional<br>(0 or 1)    | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts                                          |
 | → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists) |
-| → → → →<br>`addresses`      | string : array | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types                                                                                                                            |
-| → → → → →<br>Address        | string         | Required<br>(1 or more) | A P2PKH or P2SH address                                                                                                                                                                                                                                                                                                          |
 | →<br>`extraPayloadSize`     | number (int)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction                                                                                                                                                                                                             |
 | →<br>`extraPayload`         | string (hex)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction                                                                                                                                                                                                        |
 | →<br>`hex`                  | string (hex)   | Required<br>(exactly 1) | The serialized, hex-encoded data for the provided `txid`                                                                                                                                                                                                                                                                         |
@@ -1050,7 +1050,7 @@ _Result (if verbose=`true`)---the decoded transaction_
 | →<br>`instantlock_internal` | bool           | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock |
 | →<br>`chainlock`            | bool           | Required<br>(exactly 1) | If set to `true`, this transaction is in a block that is locked (not susceptible to a chain re-org)                                                                                                                                                                                           |
 
-_Examples from Dash Core 21.1.0_
+_Examples from Dash Core 23.0.0_
 
 A classical transaction in serialized transaction format:
 
@@ -1109,6 +1109,7 @@ Result:
       "n": 0,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 8907e625c343ac9c6b56e8180f73af1d23350d0c OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yYoztKLNFLvbNYAPMUGoa5iHz5SBtNLEK8)#vnk3v3tz",
         "hex": "76a9148907e625c343ac9c6b56e8180f73af1d23350d0c88ac",
         "address": "yYoztKLNFLvbNYAPMUGoa5iHz5SBtNLEK8",
         "type": "pubkeyhash"
@@ -1123,6 +1124,7 @@ Result:
       "n": 1,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 dd01754e43690f41feef2cc7974bc2e5101e9f27 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(ygU1vv8a2fhiM2gYUF1GjQAcjxgZUKY5MD)#g0jecjva",
         "hex": "76a914dd01754e43690f41feef2cc7974bc2e5101e9f2788ac",
         "address": "ygU1vv8a2fhiM2gYUF1GjQAcjxgZUKY5MD",
         "type": "pubkeyhash"
@@ -1135,7 +1137,7 @@ Result:
   "hex": "02000000016634e15fe22fe84554833f109916fced5af30fac0849a211f17f326162280f14010000006a47304402207b8f61bebe3560b6ef70de3e10b59bdc60931d09cf0626026bfe3064dcfcf1c00220048ad98398cb294fa19335110db3ce5a466b74cbbf234bf2b4855b264a03ef790121027b90f229e7027758f0c8b39d2d485b88ed5b63b34e58e0dad2a07e3e8eb03373feffffff0278f51104000000001976a9148907e625c343ac9c6b56e8180f73af1d23350d0c88acd007290e000000001976a914dd01754e43690f41feef2cc7974bc2e5101e9f2788accf880d00",
   "blockhash": "0000009f3480f5e2b6821af57ccbfeb064d9e18b6e9e669aad238f2b0059df1a",
   "height": 886992,
-  "confirmations": 192439,
+  "confirmations": 472266,
   "time": 1692025132,
   "blocktime": 1692025132,
   "instantlock": true,
@@ -1193,6 +1195,7 @@ Result:
       "n": 0,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 cbd7bfcc50351180132b2c0698cb90ad74c473c7 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yeuGUfPMrbEqAS2Pw1wonYgEPbM4LAA9LK)#yfqr3rqr",
         "hex": "76a914cbd7bfcc50351180132b2c0698cb90ad74c473c788ac",
         "address": "yeuGUfPMrbEqAS2Pw1wonYgEPbM4LAA9LK",
         "type": "pubkeyhash"
@@ -1207,6 +1210,7 @@ Result:
       "n": 1,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 88a060bc2dfe05780ae4dcb6c98b12436c35a939 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yYmrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV)#wjszqhw4",
         "hex": "76a91488a060bc2dfe05780ae4dcb6c98b12436c35a93988ac",
         "address": "yYmrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV",
         "type": "pubkeyhash"
@@ -1224,7 +1228,7 @@ Result:
   "hex": "03000500010000000000000000000000000000000000000000000000000000000000000000ffffffff2703ae50011a4d696e656420627920416e74506f6f6c2021000b01201da9196f0000000007000000ffffffff02809e4730000000001976a914cbd7bfcc50351180132b2c0698cb90ad74c473c788ac809e4730000000001976a91488a060bc2dfe05780ae4dcb6c98b12436c35a93988ac00000000460200ae50010078e5c08b39960887bf95185c381bdb719e60b6925fa12af78a8824fade927387c757acb6bac63da84f9245e20cfd5d830382ac634d434725ca6349ab5db920a3",
   "blockhash": "00000000007b0fb99e36713cf08012482478ee496e6dcb4007ad2e806306e62b",
   "height": 86190,
-  "confirmations": 993241,
+  "confirmations": 1273069,
   "time": 1556114577,
   "blocktime": 1556114577,
   "instantlock": true,
