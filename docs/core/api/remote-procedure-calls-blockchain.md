@@ -1052,37 +1052,38 @@ All amounts are in duffs.
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object/null | Required<br>(exactly 1) | An object containing stats for the requested block, or JSON `null` if an error occurred
-→<br>`avgfee` | numeric | Required<br>(exactly 1) | Average fee in the block
-→<br>`avgfeerate` | numeric | Required<br>(exactly 1) | Average feerate (in duffs per byte)
-→<br>`avgtxsize` | numeric | Required<br>(exactly 1) | Average transaction size
-→<br>`blockhash` | string (hex) | Required<br>(exactly 1) | The block hash (to check for potential reorgs)
-→<br>`feerate_percentiles` | array (num) | Required<br>(exactly 1) | _Added in Dash Core 18.0.0_<br>Feerates at the 10th, 25th, 50th, 75th, and 90th percentile weight unit, which are in duffs per byte.
-→ → <br>`10th_percentile_feerate` | numeric | Required<br>(exactly 1) | The 10th percentile feerate
-→ → <br>`25th_percentile_feerate` | numeric | Required<br>(exactly 1) | The 25th percentile feerate
-→ → <br>`50th_percentile_feerate` | numeric | Required<br>(exactly 1) | The 50th percentile feerate
-→ → <br>`75th_percentile_feerate` | numeric | Required<br>(exactly 1) | The 75th percentile feerate
-→ → <br>`90th_percentile_feerate` | numeric | Required<br>(exactly 1) | The 90th percentile feerate
-→<br>`height` | numeric | Required<br>(exactly 1) | The height of the block
-→<br>`ins` | numeric | Required<br>(exactly 1) | The number of inputs (excluding coinbase)
-→<br>`maxfee` | numeric | Required<br>(exactly 1) | Maximum fee in the block
-→<br>`maxfeerate` | numeric | Required<br>(exactly 1) | Maximum feerate (in duffs per byte)
-→<br>`maxtxsize` | numeric | Required<br>(exactly 1) | Maximum transaction size
-→<br>`medianfee` | numeric | Required<br>(exactly 1) | Truncated median fee in the block
-→<br>~~medianfeerate~~ | ~~numeric~~ | ~~Required (exactly 1)~~ | **Removed in Dash Core 18.0.0**<br>~~Truncated median feerate (in duffs per byte)~~
-→<br>`mediantime` | numeric | Required<br>(exactly 1) | The block median time past
-→<br>`mediantxsize` | numeric | Required<br>(exactly 1) | Truncated median transaction size
-→<br>`minfee` | numeric | Required<br>(exactly 1) | Minimum fee in the block
-→<br>`minfeerate` | numeric | Required<br>(exactly 1) | Minimum feerate (in duffs per byte)
-→<br>`mintxsize` | numeric | Required<br>(exactly 1) | Minimum transaction size
-→<br>`outs` | numeric | Required<br>(exactly 1) | The number of outputs
-→<br>`subsidy` | numeric | Required<br>(exactly 1) | The block subsidy
-→<br>`time` | number (real) | Required<br>(exactly 1) | The block time
-→<br>`total_out` | numeric | Required<br>(exactly 1) | Total amount in all outputs (excluding coinbase and thus reward [i.e. subsidy + totalfee])
-→<br>`total_size` | numeric | Required<br>(exactly 1) | Total size of all non-coinbase transactions
-→<br>`totalfee` | numeric | Required<br>(exactly 1) | The fee total
-→<br>`txs` | numeric | Required<br>(exactly 1) | The number of transactions (including coinbase)
-→<br>`utxo_increase` | numeric | Required<br>(exactly 1) | The increase/decrease in the number of unspent outputs
-→<br>`utxo_size_inc` | numeric | Required<br>(exactly 1) | The increase/decrease in size for the utxo index (not discounting op_return and similar)
+→<br>`avgfee` | numeric | Optional<br>(0 or 1) | Average fee in the block
+→<br>`avgfeerate` | numeric | Optional<br>(0 or 1) | Average feerate (in duffs per byte)
+→<br>`avgtxsize` | numeric | Optional<br>(0 or 1) | Average transaction size
+→<br>`blockhash` | string (hex) | Optional<br>(0 or 1) | The block hash (to check for potential reorgs)
+→<br>`feerate_percentiles` | array (num) | Optional<br>(0 or 1) | _Added in Dash Core 18.0.0_<br>Feerates at the 10th, 25th, 50th, 75th, and 90th percentile weight unit, which are in duffs per byte.
+→ → <br>`10th_percentile_feerate` | numeric | Optional<br>(0 or 1) | The 10th percentile feerate
+→ → <br>`25th_percentile_feerate` | numeric | Optional<br>(0 or 1) | The 25th percentile feerate
+→ → <br>`50th_percentile_feerate` | numeric | Optional<br>(0 or 1) | The 50th percentile feerate
+→ → <br>`75th_percentile_feerate` | numeric | Optional<br>(0 or 1) | The 75th percentile feerate
+→ → <br>`90th_percentile_feerate` | numeric | Optional<br>(0 or 1) | The 90th percentile feerate
+→<br>`height` | numeric | Optional<br>(0 or 1) | The height of the block
+→<br>`ins` | numeric | Optional<br>(0 or 1) | The number of inputs (excluding coinbase)
+→<br>`maxfee` | numeric | Optional<br>(0 or 1) | Maximum fee in the block
+→<br>`maxfeerate` | numeric | Optional<br>(0 or 1) | Maximum feerate (in duffs per byte)
+→<br>`maxtxsize` | numeric | Optional<br>(0 or 1) | Maximum transaction size
+→<br>`medianfee` | numeric | Optional<br>(0 or 1) | Truncated median fee in the block
+→<br>`mediantime` | numeric | Optional<br>(0 or 1) | The block median time past
+→<br>`mediantxsize` | numeric | Optional<br>(0 or 1) | Truncated median transaction size
+→<br>`minfee` | numeric | Optional<br>(0 or 1) | Minimum fee in the block
+→<br>`minfeerate` | numeric | Optional<br>(0 or 1) | Minimum feerate (in duffs per byte)
+→<br>`mintxsize` | numeric | Optional<br>(0 or 1) | Minimum transaction size
+→<br>`outs` | numeric | Optional<br>(0 or 1) | The number of outputs
+→<br>`subsidy` | numeric | Optional<br>(0 or 1) | The block subsidy
+→<br>`time` | number (real) | Optional<br>(0 or 1) | The block time
+→<br>`total_out` | numeric | Optional<br>(0 or 1) | Total amount in all outputs (excluding coinbase and thus reward [i.e. subsidy + totalfee])
+→<br>`total_size` | numeric | Optional<br>(0 or 1) | Total size of all non-coinbase transactions
+→<br>`totalfee` | numeric | Optional<br>(0 or 1) | The fee total
+→<br>`txs` | numeric | Optional<br>(0 or 1) | The number of transactions (including coinbase)
+→<br>`utxo_increase` | numeric | Optional<br>(0 or 1) | The increase/decrease in the number of unspent outputs (not discounting op_return and similar)
+→<br>`utxo_size_inc` | numeric | Optional<br>(0 or 1) | The increase/decrease in size for the utxo index (not discounting op_return and similar)
+→<br>`utxo_increase_actual` | numeric | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>The increase/decrease in the number of unspent outputs, not counting unspendables
+→<br>`utxo_size_inc_actual` | numeric | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>The increase/decrease in size for the utxo index, not counting unspendables
 
 *Example from Dash Core 18.0.0*
 
