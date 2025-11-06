@@ -87,6 +87,7 @@ exclude_patterns = [
     'docs/core/api/ai-prompt.md',
     'docs/img/dev/gifs/README.md',    
     'docs/user/wallets/electrum/dip3_p2sh_howto.md',
+    'scripts/*',
     'venv'
 ]
 
