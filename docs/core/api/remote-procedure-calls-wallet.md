@@ -1872,7 +1872,7 @@ _Parameter #6---whether to include immature coinbase transactions_
 
 | Name                       | Type | Presence             | Description                                                                               |
 | -------------------------- | ---- | -------------------- | ----------------------------------------------------------------------------------------- |
-| include_immature_coinbase | bool | Optional<br>(0 or 1) | **Added in Dash Core 22.0.0**<br>Include immature coinbase transactions. Default is `false` |
+| include_immature_coinbase | bool | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>Include immature coinbase transactions. Default is `false` |
 
 _Result---addresses, account names, balances, and minimum confirmations_
 
@@ -1964,7 +1964,7 @@ _Parameter #5---whether to include immature coinbase transactions_
 
 | Name                       | Type | Presence             | Description                                                                               |
 | -------------------------- | ---- | -------------------- | ----------------------------------------------------------------------------------------- |
-| include_immature_coinbase | bool | Optional<br>(0 or 1) | **Added in Dash Core 22.0.0**<br>Include immature coinbase transactions. Default is `false` |
+| include_immature_coinbase | bool | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>Include immature coinbase transactions. Default is `false` |
 
 _Result---account names, balances, and minimum confirmations_
 
