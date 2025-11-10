@@ -1691,6 +1691,12 @@ _Added in Dash Core 21.0.0_
 
 The [`listdescriptors` RPC](../api/remote-procedure-calls-wallet.md#listdescriptors) lists descriptors imported into a descriptor-enabled wallet.
 
+_Parameter #1---show private descriptors_
+
+| Name | Type | Presence | Description |
+| - | - | - | - |
+| `private` | boolean | Optional<br>(0 or 1) | Show private descriptors (default: `false`). When set to `true`, the result will include `mnemonic` and `mnemonicpassphrase` for mnemonic wallets. |
+
 _Result---execution result_
 
 | Name              | Type           | Presence                | Description |
@@ -1699,8 +1705,8 @@ _Result---execution result_
 | `descriptors`     | array          | Required<br>(exactly 1) | An array of JSON objects, each describing a descriptor |
 | → Descriptor      | object         | Required<br>(1 or more) | A JSON object describing a particular descriptor |
 | → →<br>`desc`     | string         | Required<br>(exactly 1) | Descriptor string representation |
-| → →<br>`mnemonic` | string         | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>The mnemonic phrase for this wallet. Only present for HD wallets with private keys. |
-| → →<br>`mnemonicpassphrase` | bool | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>Whether the wallet has a mnemonic passphrase. Only present for HD wallets with private keys. |
+| → →<br>`mnemonic` | string         | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>The mnemonic for this descriptor wallet (BIP39, english words). Presented only if private=true and created with a mnemonic. |
+| → →<br>`mnemonicpassphrase` | string | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>The mnemonic passphrase for this descriptor wallet (BIP39). Presented only if private=true and created with a mnemonic. |
 | → →<br>`timestamp`| number (int)   | Required<br>(exactly 1) | The creation time of the descriptor in Unix epoch time |
 | → →<br>`active`   | bool           | Required<br>(exactly 1) | Indicates whether this descriptor is currently used to generate new addresses |
 | → →<br>`internal` | bool           | Optional<br>(0 or 1)    | True if this descriptor is used to generate change addresses; False if used for receiving |
