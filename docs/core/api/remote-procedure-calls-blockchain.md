@@ -127,7 +127,7 @@ Block Hash | string (hex) | Required<br>(exactly 1) | The hash of the header of 
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Verbosity | number (int) | Optional<br>(0 or 1) | Set to one of the following verbosity levels:<br>• `0` - Get the block as a string in the hex-encoded serialized block format;<br>• `1` - Get the decoded block as a JSON object (default)<br>• `2` - Get the decoded block as a JSON object with transaction details
+Verbosity | number (int) | Optional<br>(0 or 1) | Set to one of the following verbosity levels:<br>• `0` - Get the block as a string in the hex-encoded serialized block format;<br>• `1` - Get the decoded block as a JSON object (default)<br>• `2` - Get the decoded block as a JSON object with transaction details<br>• `3` - **Added in Dash Core 23.0.0** Get the decoded block as a JSON object with transaction details including prevout information for inputs (only for unpruned blocks in the current best chain)
 
 *Result (if verbosity was `0`)---a serialized block*
 
@@ -159,14 +159,14 @@ Name | Type | Presence | Description
 →<br>`size` | number (int) | Required<br>(exactly 1) | The size of this block in serialized block format, counted in bytes
 →<br>`tx` | array | Required<br>(exactly 1) | An array containing the TXIDs of all transactions in this block.  The transactions appear in the array in the same order they appear in the serialized block
 → →<br>TXID | string (hex) | Required<br>(1 or more) | The TXID of a transaction in this block, encoded as hex in RPC byte order
-→<br>`cbTx` | object | Required<br>(exactly 1) | Coinbase special transaction details
+→<br>`cbTx` | object | Optional<br>(0 or 1) | Coinbase special transaction details
 → →<br>`version` | number (int) | Required<br>(exactly 1) | The version of the Coinbase special transaction (CbTx)
 → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
 → →<br>`merkleRootMNList` | string (hex) | Required<br>(exactly 1) | The merkle root for the masternode list
-→ →<br>`merkleRootQuorums` | string (hex) | Required<br>(exactly 1) | The merkle root for the quorum list
-→ →<br>`bestCLHeightDiff` | number (int) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The best ChainLock height difference
-→ →<br>`bestCLSignature` | string (hex) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The best ChainLock signature
-→ →<br>`creditPoolBalance` | number (real) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The balance of the credit pool
+→ →<br>`merkleRootQuorums` | string (hex) | Optional<br>(0 or 1) | The merkle root for the quorum list
+→ →<br>`bestCLHeightDiff` | number (int) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Blocks between the current block and the last known block with a ChainLock
+→ →<br>`bestCLSignature` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Best ChainLock signature known by the miner
+→ →<br>`creditPoolBalance` | number (real) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Balance in the Platform credit pool
 
 *Result (if verbosity was `2`---a JSON block with full transaction details*
 
@@ -226,16 +226,35 @@ Name | Type | Presence | Description
 → →<br>`fee` | number | Optional<br>(0 or 1) | The transaction fee in DASH, omitted if block undo data is not available
 → →<br>`instantlock` | bool | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock)
 → →<br>`instantlock_internal` | bool | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock
-→<br>`cbTx` | object | Required<br>(exactly 1) | Coinbase special transaction details
+→<br>`cbTx` | object | Optional<br>(0 or 1) | Coinbase special transaction details
 → →<br>`version` | number (int) | Required<br>(exactly 1) | The version of the Coinbase special transaction (CbTx)
 → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
 → →<br>`merkleRootMNList` | string (hex) | Required<br>(exactly 1) | The merkle root for the masternode list
-→ →<br>`merkleRootQuorums` | string (hex) | Required<br>(exactly 1) | The merkle root for the quorum list
-→ →<br>`bestCLHeightDiff` | number (int) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The best ChainLock height difference
-→ →<br>`bestCLSignature` | string (hex) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The best ChainLock signature
-→ →<br>`creditPoolBalance` | number (real) | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The balance of the credit pool
+→ →<br>`merkleRootQuorums` | string (hex) | Optional<br>(0 or 1) | The merkle root for the quorum list
+→ →<br>`bestCLHeightDiff` | number (int) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Blocks between the current block and the last known block with a ChainLock
+→ →<br>`bestCLSignature` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Best ChainLock signature known by the miner
+→ →<br>`creditPoolBalance` | number (real) | Optional<br>(0 or 1) | **Added in Dash Core 20.0.0**<br>Balance in the Platform credit pool
 
-*Example from Dash Core 21.0.0*
+*Result (if verbosity was `3`)---a JSON block with full transaction and prevout details*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`result` | object/null | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br><br>An object containing the requested block with prevout information, or JSON `null` if an error occurred
+... | ... | ... | Same output as verbosity = 2
+→ →<br>`vin` | array | Required<br>(exactly 1) | An array of objects with each object being an input vector (vin) for this transaction (includes prevout information)
+→ → →<br>Input | object | Required<br>(1 or more) | An object describing one of this transaction's inputs
+... | ... | ... | The same output as verbosity = 2
+→ → → →<br>`prevout` | object | Optional<br>(0 or 1) | Previous output information (only if undo information is available)
+→ → → → →<br>`generated` | bool | Required<br>(exactly 1) | Whether this is a coinbase output
+→ → → → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of the prevout
+→ → → → →<br>`value` | number (Dash) | Required<br>(exactly 1) | The value in DASH
+→ → → → →<br>`scriptPubKey` | object | Required<br>(exactly 1) | The script pubkey
+→ → → → → →<br>`asm` | string | Required<br>(exactly 1) | The asm
+→ → → → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The hex
+→ → → → → →<br>`address` | string | Optional<br>(0 or 1) | The Dash address (only if a well-defined address exists)
+→ → → → → →<br>`type` | string | Required<br>(exactly 1) | The type (e.g., 'pubkeyhash')
+
+*Example from Dash Core 23.0.0*
 
 Get a block in raw hex:
 
@@ -353,12 +372,10 @@ Result:
           "n": 0,
           "scriptPubKey": {
             "asm": "OP_DUP OP_HASH160 c69a0bda7daaae481be8def95e5f347a1d00a4b4 OP_EQUALVERIFY OP_CHECKSIG",
+            "desc": "addr(yeRZBWYfeNE4yVUHV4ZLs83Ppn9aMRH57A)#0u4f4749",
             "hex": "76a914c69a0bda7daaae481be8def95e5f347a1d00a4b488ac",
-            "reqSigs": 1,
-            "type": "pubkeyhash",
-            "addresses": [
-              "yeRZBWYfeNE4yVUHV4ZLs83Ppn9aMRH57A"
-            ]
+            "address": "yeRZBWYfeNE4yVUHV4ZLs83Ppn9aMRH57A",
+            "type": "pubkeyhash"
           }
         },
         {
@@ -367,12 +384,10 @@ Result:
           "n": 1,
           "scriptPubKey": {
             "asm": "OP_DUP OP_HASH160 21eca01872dbfce4bf20886a004f6caaa69c1ff7 OP_EQUALVERIFY OP_CHECKSIG",
+            "desc": "addr(yPQpcZ1EdtQXWHzNjZuvVCKXuESW5wZ5x1)#9x0cknwl",
             "hex": "76a91421eca01872dbfce4bf20886a004f6caaa69c1ff788ac",
-            "reqSigs": 1,
-            "type": "pubkeyhash",
-            "addresses": [
-              "yPQpcZ1EdtQXWHzNjZuvVCKXuESW5wZ5x1"
-            ]
+            "address": "yPQpcZ1EdtQXWHzNjZuvVCKXuESW5wZ5x1",
+            "type": "pubkeyhash"
           }
         }
       ],
@@ -626,13 +641,9 @@ peer_id    | number | Required<br>(exactly 1)  | The ID of the peer to fetch the
 
 *Result---execution result*
 
-Name        | Type    | Presence                | Description
-------------|---------|-------------------------|------------
-`warnings`  | string  | Optional<br>(0 or 1)     | Any warnings or issues encountered during the block fetch attempt. If there are no warnings, this field will not appear.
+**Updated in Dash Core 23.0.0:** Returns an empty JSON object `{}` if the request was successfully scheduled. Otherwise, an error message is returned.
 
-Returns `{}` if a block request was successfully scheduled.
-
-*Example from Dash Core 22.0.0*
+*Example from Dash Core 23.0.0*
 
 Attempt to fetch block `00000021e19ebb597d74627a4df829768c3f26d3185d943a53773e4a681391bd` from peer ID `0`:
 
@@ -642,10 +653,8 @@ dash-cli -testnet getblockfrompeer "00000021e19ebb597d74627a4df829768c3f26d3185d
 
 Result:
 
-```json
-{
-  "warnings": "Block already downloaded"
-}
+```text
+Block already downloaded (code -1)
 ```
 
 *See also*
@@ -1058,37 +1067,38 @@ All amounts are in duffs.
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object/null | Required<br>(exactly 1) | An object containing stats for the requested block, or JSON `null` if an error occurred
-→<br>`avgfee` | numeric | Required<br>(exactly 1) | Average fee in the block
-→<br>`avgfeerate` | numeric | Required<br>(exactly 1) | Average feerate (in duffs per byte)
-→<br>`avgtxsize` | numeric | Required<br>(exactly 1) | Average transaction size
-→<br>`blockhash` | string (hex) | Required<br>(exactly 1) | The block hash (to check for potential reorgs)
-→<br>`feerate_percentiles` | array (num) | Required<br>(exactly 1) | _Added in Dash Core 18.0.0_<br>Feerates at the 10th, 25th, 50th, 75th, and 90th percentile weight unit, which are in duffs per byte.
-→ → <br>`10th_percentile_feerate` | numeric | Required<br>(exactly 1) | The 10th percentile feerate
-→ → <br>`25th_percentile_feerate` | numeric | Required<br>(exactly 1) | The 25th percentile feerate
-→ → <br>`50th_percentile_feerate` | numeric | Required<br>(exactly 1) | The 50th percentile feerate
-→ → <br>`75th_percentile_feerate` | numeric | Required<br>(exactly 1) | The 75th percentile feerate
-→ → <br>`90th_percentile_feerate` | numeric | Required<br>(exactly 1) | The 90th percentile feerate
-→<br>`height` | numeric | Required<br>(exactly 1) | The height of the block
-→<br>`ins` | numeric | Required<br>(exactly 1) | The number of inputs (excluding coinbase)
-→<br>`maxfee` | numeric | Required<br>(exactly 1) | Maximum fee in the block
-→<br>`maxfeerate` | numeric | Required<br>(exactly 1) | Maximum feerate (in duffs per byte)
-→<br>`maxtxsize` | numeric | Required<br>(exactly 1) | Maximum transaction size
-→<br>`medianfee` | numeric | Required<br>(exactly 1) | Truncated median fee in the block
-→<br>~~medianfeerate~~ | ~~numeric~~ | ~~Required (exactly 1)~~ | **Removed in Dash Core 18.0.0**<br>~~Truncated median feerate (in duffs per byte)~~
-→<br>`mediantime` | numeric | Required<br>(exactly 1) | The block median time past
-→<br>`mediantxsize` | numeric | Required<br>(exactly 1) | Truncated median transaction size
-→<br>`minfee` | numeric | Required<br>(exactly 1) | Minimum fee in the block
-→<br>`minfeerate` | numeric | Required<br>(exactly 1) | Minimum feerate (in duffs per byte)
-→<br>`mintxsize` | numeric | Required<br>(exactly 1) | Minimum transaction size
-→<br>`outs` | numeric | Required<br>(exactly 1) | The number of outputs
-→<br>`subsidy` | numeric | Required<br>(exactly 1) | The block subsidy
-→<br>`time` | number (real) | Required<br>(exactly 1) | The block time
-→<br>`total_out` | numeric | Required<br>(exactly 1) | Total amount in all outputs (excluding coinbase and thus reward [i.e. subsidy + totalfee])
-→<br>`total_size` | numeric | Required<br>(exactly 1) | Total size of all non-coinbase transactions
-→<br>`totalfee` | numeric | Required<br>(exactly 1) | The fee total
-→<br>`txs` | numeric | Required<br>(exactly 1) | The number of transactions (including coinbase)
-→<br>`utxo_increase` | numeric | Required<br>(exactly 1) | The increase/decrease in the number of unspent outputs
-→<br>`utxo_size_inc` | numeric | Required<br>(exactly 1) | The increase/decrease in size for the utxo index (not discounting op_return and similar)
+→<br>`avgfee` | numeric | Optional<br>(0 or 1) | Average fee in the block
+→<br>`avgfeerate` | numeric | Optional<br>(0 or 1) | Average feerate (in duffs per byte)
+→<br>`avgtxsize` | numeric | Optional<br>(0 or 1) | Average transaction size
+→<br>`blockhash` | string (hex) | Optional<br>(0 or 1) | The block hash (to check for potential reorgs)
+→<br>`feerate_percentiles` | array (num) | Optional<br>(0 or 1) | _Added in Dash Core 18.0.0_<br>Feerates at the 10th, 25th, 50th, 75th, and 90th percentile weight unit, which are in duffs per byte.
+→ → <br>`10th_percentile_feerate` | numeric | Optional<br>(0 or 1) | The 10th percentile feerate
+→ → <br>`25th_percentile_feerate` | numeric | Optional<br>(0 or 1) | The 25th percentile feerate
+→ → <br>`50th_percentile_feerate` | numeric | Optional<br>(0 or 1) | The 50th percentile feerate
+→ → <br>`75th_percentile_feerate` | numeric | Optional<br>(0 or 1) | The 75th percentile feerate
+→ → <br>`90th_percentile_feerate` | numeric | Optional<br>(0 or 1) | The 90th percentile feerate
+→<br>`height` | numeric | Optional<br>(0 or 1) | The height of the block
+→<br>`ins` | numeric | Optional<br>(0 or 1) | The number of inputs (excluding coinbase)
+→<br>`maxfee` | numeric | Optional<br>(0 or 1) | Maximum fee in the block
+→<br>`maxfeerate` | numeric | Optional<br>(0 or 1) | Maximum feerate (in duffs per byte)
+→<br>`maxtxsize` | numeric | Optional<br>(0 or 1) | Maximum transaction size
+→<br>`medianfee` | numeric | Optional<br>(0 or 1) | Truncated median fee in the block
+→<br>`mediantime` | numeric | Optional<br>(0 or 1) | The block median time past
+→<br>`mediantxsize` | numeric | Optional<br>(0 or 1) | Truncated median transaction size
+→<br>`minfee` | numeric | Optional<br>(0 or 1) | Minimum fee in the block
+→<br>`minfeerate` | numeric | Optional<br>(0 or 1) | Minimum feerate (in duffs per byte)
+→<br>`mintxsize` | numeric | Optional<br>(0 or 1) | Minimum transaction size
+→<br>`outs` | numeric | Optional<br>(0 or 1) | The number of outputs
+→<br>`subsidy` | numeric | Optional<br>(0 or 1) | The block subsidy
+→<br>`time` | number (real) | Optional<br>(0 or 1) | The block time
+→<br>`total_out` | numeric | Optional<br>(0 or 1) | Total amount in all outputs (excluding coinbase and thus reward [i.e. subsidy + totalfee])
+→<br>`total_size` | numeric | Optional<br>(0 or 1) | Total size of all non-coinbase transactions
+→<br>`totalfee` | numeric | Optional<br>(0 or 1) | The fee total
+→<br>`txs` | numeric | Optional<br>(0 or 1) | The number of transactions (including coinbase)
+→<br>`utxo_increase` | numeric | Optional<br>(0 or 1) | The increase/decrease in the number of unspent outputs (not discounting op_return and similar)
+→<br>`utxo_size_inc` | numeric | Optional<br>(0 or 1) | The increase/decrease in size for the utxo index (not discounting op_return and similar)
+→<br>`utxo_increase_actual` | numeric | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>The increase/decrease in the number of unspent outputs, not counting unspendables
+→<br>`utxo_size_inc_actual` | numeric | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>The increase/decrease in size for the utxo index, not counting unspendables
 
 *Example from Dash Core 18.0.0*
 
@@ -2044,12 +2054,12 @@ Name | Type | Presence | Description
 →<br>`value` | number (Dash) | Required<br>(exactly 1) | The amount of Dash spent to this output.  May be `0`
 →<br>`scriptPubKey` | string : object | Optional<br>(0 or 1) | An object with information about the pubkey script.  This may be `null` if there was no pubkey script
 → →<br>`asm` | string | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed
+→ →<br>`desc` | string | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Inferred descriptor for the output
 → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The pubkey script encoded as hex
-→ →<br>`reqSigs` | number (int) | Optional<br>(0 or 1) | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The number of signatures required; this is always `1` for P2PK, P2PKH, and P2SH (including P2SH multisig because the redeem script is not available in the pubkey script).  It may be greater than 1 for bare multisig.  This value will not be returned for `nulldata` or `nonstandard` script types (see the `type` key below)
+→ →<br>`reqSigs` | number (int) | Optional<br>(0 or 1) | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0)
 → →<br>`type` | string | Optional<br>(0 or 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
 → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists)
-→ →<br>`addresses` | string : array | Optional<br>(0 or 1) | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types
-→ → →<br>Address | string | Required<br>(1 or more) | A P2PKH or P2SH address
+→ →<br>`addresses` | string : array | Optional<br>(0 or 1) | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0)
 →<br>`coinbase` | bool | Required<br>(exactly 1) | Set to `true` if the transaction output belonged to a coinbase transaction; set to `false` for all other transactions.  Coinbase transactions need to have 101 confirmations before their outputs can be spent
 
 *Example from Dash Core 0.15.0*

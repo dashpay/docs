@@ -368,7 +368,7 @@ _Result---the decoded transaction_
 | → → →→<br>`pubkey`               | object       | Optional<br>(0 or more) | The public key with the derivation path as the value.                                                                                                                                                                                                                                   |
 | → → →→→<br>`master_fingerprint`  | object       | Optional<br>(0 or more) | The fingerprint of the master key                                                                                                                                                                                                                                                       |
 | → → →→→<br>`path`                | object       | Optional<br>(0 or more) | The public key's path                                                                                                                                                                                                                                                                   |
-| → → →<br>`final_scriptsig`       | object       | Optional<br>(0 or more) |                                                                                                                                                                                                                                                                                         |
+| → → →<br>`final_scriptSig`       | object       | Optional<br>(0 or more) | **Updated in Dash Core 23.0.0** (renamed from `final_scriptsig`) |
 | → → → →<br>`asm`                 | string       | Required<br>(exactly 1) | The signature script in decoded form with non-data-pushing opcodes listed                                                                                                                                                                                                               |
 | → → → →<br>`hex`                 | string (hex) | Required<br>(exactly 1) | The signature script encoded as hex                                                                                                                                                                                                                                                     |
 | → → →<br>`unknown`               | object       | Optional<br>(0 or more) | The unknown global fields                                                                                                                                                                                                                                                               |
@@ -534,16 +534,14 @@ _Result---the decoded transaction_
 | → → →<br>`n`            | number (int)   | Required<br>(exactly 1) | The output index number of this output within this transaction                                                                                                                                                                                                                                                                   |
 | → → →<br>`scriptPubKey` | object         | Required<br>(exactly 1) | An object describing the pubkey script                                                                                                                                                                                                                                                                                           |
 | → → → →<br>`asm`        | string         | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed                                                                                                                                                                                                                                                           |
+| → → → →<br>`desc`       | string         | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Inferred descriptor for the output |
 | → → → →<br>`hex`        | string (hex)   | Required<br>(exactly 1) | The pubkey script encoded as hex                                                                                                                                                                                                                                                                                                 |
-| → → → →<br>`reqSigs`    | number (int)   | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The number of signatures required; this is always `1` for P2PK, P2PKH, and P2SH (including P2SH multisig because the redeem script is not available in the pubkey script).  It may be greater than 1 for bare multisig.  This value will not be returned for `nulldata` or `nonstandard` script types (see the `type` key below) |
 | → → → →<br>`type`       | string         | Optional<br>(0 or 1)    | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts                                          |
 | → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists) |
-| → → → →<br>`addresses`  | string : array | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types                                                                                                                            |
-| → → → → →<br>Address    | string         | Required<br>(1 or more) | A P2PKH or P2SH address                                                                                                                                                                                                                                                                                                          |
 | →<br>`extraPayloadSize` | number (int)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction                                                                                                                                                                                                             |
 | →<br>`extraPayload`     | string (hex)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction                                                                                                                                                                                                        |
 
-_Example from Dash Core 21.1.0_
+_Example from Dash Core 23.0.0_
 
 Decode a signed one-input, two-output transaction:
 
@@ -584,6 +582,7 @@ Result:
       "n": 0,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 b02ae52066542b4aec5cf45c7cae3183d7bd3227 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(ycNwAN4DQ7Xnw5XLKg84SR4U1GE22FfLNQ)#dymcgg9m",
         "hex": "76a914b02ae52066542b4aec5cf45c7cae3183d7bd322788ac",
         "address": "ycNwAN4DQ7Xnw5XLKg84SR4U1GE22FfLNQ",
         "type": "pubkeyhash"
@@ -595,6 +594,7 @@ Result:
       "n": 1,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 252c9de3a0ebd5c95886187b24969d4ccdb5576e OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yPi1JKw5fn8bMFsCCtnkGagogW6GXwGktZ)#jt9z47fj",
         "hex": "76a914252c9de3a0ebd5c95886187b24969d4ccdb5576e88ac",
         "address": "yPi1JKw5fn8bMFsCCtnkGagogW6GXwGktZ",
         "type": "pubkeyhash"
@@ -638,6 +638,7 @@ Result:
       "n": 0,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 cbd7bfcc50351180132b2c0698cb90ad74c473c7 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yeuGUfPMrbEqAS2Pw1wonYgEPbM4LAA9LK)#yfqr3rqr",
         "hex": "76a914cbd7bfcc50351180132b2c0698cb90ad74c473c788ac",
         "address": "yeuGUfPMrbEqAS2Pw1wonYgEPbM4LAA9LK",
         "type": "pubkeyhash"
@@ -649,6 +650,7 @@ Result:
       "n": 1,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 88a060bc2dfe05780ae4dcb6c98b12436c35a939 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yYmrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV)#wjszqhw4",
         "hex": "76a91488a060bc2dfe05780ae4dcb6c98b12436c35a93988ac",
         "address": "yYmrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV",
         "type": "pubkeyhash"
@@ -689,13 +691,14 @@ _Result---the decoded script_
 | ---------------- | ------------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `result`         | object       | Required<br>(exactly 1) | An object describing the decoded script, or JSON `null` if the script could not be decoded                                                                                                                                                    |
 | →<br>`asm`       | string       | Required<br>(exactly 1) | The redeem script in decoded form with non-data-pushing opcodes listed.  May be empty                                                                                                                                                         |
-| →<br>`reqSigs`   | number (int) | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The number of signatures required; this is always `1` for P2PK or P2PKH within P2SH.  It may be greater than 1 for P2SH multisig.  This value will not be returned for `nonstandard` script types (see the `type` key above)                  |
+| →<br>`desc`      | string       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Inferred descriptor for the script |
 | →<br>`type`      | string       | Optional<br>(0 or 1)    | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script inside P2SH<br>• `pubkeyhash` for a P2PKH script inside P2SH<br>• `multisig` for a multisig script inside P2SH<br>• `nonstandard` for unknown scripts |
-| →<br>`addresses` | array        | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>A P2PKH addresses used in this script, or the computed P2PKH addresses of any pubkeys in this script.  This array will not be returned for `nonstandard` script types                                                                         |
-| → →<br>Address   | string       | Required<br>(1 or more) | A P2PKH address                                                                                                                                                                                                                               |
-| →<br>`p2sh`      | string (hex) | Required<br>(exactly 1) | The P2SH address of this redeem script                                                                                                                                                                                                        |
+| →<br>`address`   | string       | Optional<br>(0 or 1)    | The Dash address (only if a well-defined address exists) |
+| →<br>`reqSigs`   | number (int) | Optional<br>(0 or 1)    | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0) |
+| →<br>`addresses` | array        | Optional<br>(0 or 1)    | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0) |
+| →<br>`p2sh`      | string (hex) | Optional<br>(0 or 1)    | **Removed in Dash Core 23.0.0** |
 
-_Example from Dash Core 21.0.0_
+_Example from Dash Core 23.0.0_
 
 A 2-of-3 P2SH multisig pubkey script:
 
@@ -711,6 +714,7 @@ Result:
 ```json
 {
   "asm": "2 02eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29 0311f97539724e0de38fb1ff79f5148e5202459d06ed07193ab18c730274fd0d88 03251f25a5c0291446d801ba6df122f67a7dd06c60a9b332b7b29cc94f3b8f57d0 3 OP_CHECKMULTISIG",
+  "desc": "multi(2,02eacba539d92eb88d4e73bb32749d79f53f6e8d7947ac40a71bd4b26c13b6ec29,0311f97539724e0de38fb1ff79f5148e5202459d06ed07193ab18c730274fd0d88,03251f25a5c0291446d801ba6df122f67a7dd06c60a9b332b7b29cc94f3b8f57d0)#79g9wpuh",
   "type": "multisig",
   "p2sh": "8uJLxDxk2gEMbidF5vT8XLS2UCgQmVcroW"
 }
@@ -775,9 +779,11 @@ _See also:_
 Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on masternodes**).
 :::
 
-The [`fundrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#fundrawtransaction) adds inputs to a transaction until it has enough in value to meet its out value.  This will not modify existing inputs, and will add one change output to the outputs.  
-Note that inputs which were signed may need to be resigned after completion since in/outputs have been added.  The inputs added will not be signed, use signrawtransaction for that.  
-All existing inputs must have their previous output transaction be in the wallet.
+The [`fundrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#fundrawtransaction) adds inputs to a transaction until it has enough in value to meet its out value.  This will not modify existing inputs, and will add one change output to the outputs.
+
+Note that inputs which were signed may need to be resigned after completion since in/outputs have been added.  The inputs added will not be signed, use signrawtransaction for that.
+
+**Updated in Dash Core 23.0.0:** All existing inputs must either have their previous output transaction be in the wallet or be in the UTXO set. Solving data must be provided for non-wallet inputs.
 
 _Parameter #1---The hex string of the raw transaction_
 
@@ -793,7 +799,7 @@ Note: For backwards compatibility, passing in a `true` instead of an object will
 | ------------------------------ | ------------------ | ----------------------- | ---------- |
 | Options                        | Object             | Optional<br>(0 or 1)    | Additional options. For backward compatibility: passing in a true instead of an object will result in {"includeWatching":true} |
 | → <br>`add_inputs`             | bool               | Optional<br>(0 or 1)    | If inputs are specified, automatically include more if they are not enough. Defaults to `true`. |
-| → <br>`changeAddress`          | string             | Optional<br>(0 or 1)    | The address to receive the change. If not set, the address is chosen from address pool                                                                                                                                    |
+| → <br>`changeAddress`          | string             | Optional<br>(0 or 1)    | **Updated in Dash Core 23.0.0**<br><br>The address to receive the change. If not set, the address is chosen automatically |
 | → <br>`changePosition`         | nummeric (int)     | Optional<br>(0 or 1)    | The index of the change output. If not set, the change position is randomly chosen |
 | `includeWatching`              | bool               | Optional<br>(0 or 1)    | Inputs from watch-only addresses are also considered. The default is `false` for non-watching-only wallets and `true` for watching-only wallets                                                                           |
 | → <br>`lockUnspent`            | bool               | Optional<br>(0 or 1)    | The selected outputs are locked after running the rpc call. The default is `false`. This applies to manually selected coins also since Dash Core 20.1.0. |
@@ -802,6 +808,13 @@ Note: For backwards compatibility, passing in a `true` instead of an object will
 | → →<br>Output index            | numeric (int)      | Optional<br>(0 or more) | A output index number (vout) from which the fee should be subtracted. If multiple vouts are provided, the total fee will be divided by the number of vouts listed and each vout will have that amount subtracted from it. |
 | → <br>`conf_target`            | numberic (int)     | Optional<br>(0 or 1)    | Confirmation target (in blocks), or fee rate (for DASH/kB or duff/B estimate modes) |
 | → <br>`estimate_mode`          | string             | Optional<br>(0 or 1)    | The fee estimate mode, must be one of (case insensitive):<br>`unset`<br>`economical`<br>`conservative`<br>`DASH/kB`<br>`duff/B` |
+| → <br>`solving_data`           | object             | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br><br>Keys and scripts needed for producing a final transaction with a dummy signature. Used for fee estimation during coin selection. |
+| → → <br>`pubkeys`              | array              | Optional<br>(0 or 1)    | Public keys involved in this transaction |
+| → → →<br>pubkey                | string             | Optional<br>(0 or more) | A public key |
+| → → <br>`scripts`              | array              | Optional<br>(0 or 1)    | Scripts involved in this transaction |
+| → → →<br>script                | string             | Optional<br>(0 or more) | A script |
+| → → <br>`descriptors`          | array              | Optional<br>(0 or 1)    | Descriptors that provide solving data for this transaction |
+| → → →<br>descriptor            | string             | Optional<br>(0 or more) | A descriptor |
 
 _Result---information about the created transaction_
 
@@ -906,6 +919,7 @@ The RPC returns an array of the same size as the input array. Each element in th
 | → → <br>`inputs`      | array           | Required<br>(exactly 1) | An array of JSON objects describing the transaction inputs in the InstantSend lock |
 | → → → <br> `txid`     | string (hex)    | Required<br>(exactly 1) | The transaction ID of the input |
 | → → → <br> `vout`     | number (int)    | Required<br>(exactly 1) | The output index of the referenced transaction |
+| → → <br>`id`          | string (hex)    | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Request ID |
 | → → <br>`cycleHash`   | string (hex)    | Required<br>(exactly 1) | The cycle hash associated with this InstantSend lock |
 | → → <br>`signature`   | string (hex)    | Required<br>(exactly 1) | The BLS signature associated with this InstantSend lock |
 | → → <br>`hex`         | string (hex)    | Required<br>(exactly 1) | The serialized, hex-encoded InstantSend lock data for the transaction |
@@ -1029,12 +1043,10 @@ _Result (if verbose=`true`)---the decoded transaction_
 | → → →<br>`n`                | number (int)   | Required<br>(exactly 1) | The output index number of this output within this transaction                                                                                                                                                                                                                                                                   |
 | → → →<br>`scriptPubKey`     | object         | Required<br>(exactly 1) | An object describing the pubkey script                                                                                                                                                                                                                                                                                           |
 | → → → →<br>`asm`            | string         | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed                                                                                                                                                                                                                                                           |
+| → → → →<br>`desc`           | string         | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Inferred descriptor for the output |
 | → → → →<br>`hex`            | string (hex)   | Required<br>(exactly 1) | The pubkey script encoded as hex                                                                                                                                                                                                                                                                                                 |
-| → → → →<br>`reqSigs`        | number (int)   | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The number of signatures required; this is always `1` for P2PK, P2PKH, and P2SH (including P2SH multisig because the redeem script is not available in the pubkey script).  It may be greater than 1 for bare multisig.  This value will not be returned for `nulldata` or `nonstandard` script types (see the `type` key below) |
 | → → → →<br>`type`           | string         | Optional<br>(0 or 1)    | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts                                          |
 | → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists) |
-| → → → →<br>`addresses`      | string : array | Optional<br>(0 or 1)    | **Deprecated in Dash Core 21.0.0** (returned only if config option -deprecatedrpc=addresses is passed)<br><br>The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types                                                                                                                            |
-| → → → → →<br>Address        | string         | Required<br>(1 or more) | A P2PKH or P2SH address                                                                                                                                                                                                                                                                                                          |
 | →<br>`extraPayloadSize`     | number (int)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction                                                                                                                                                                                                             |
 | →<br>`extraPayload`         | string (hex)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction                                                                                                                                                                                                        |
 | →<br>`hex`                  | string (hex)   | Required<br>(exactly 1) | The serialized, hex-encoded data for the provided `txid`                                                                                                                                                                                                                                                                         |
@@ -1047,7 +1059,7 @@ _Result (if verbose=`true`)---the decoded transaction_
 | →<br>`instantlock_internal` | bool           | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock |
 | →<br>`chainlock`            | bool           | Required<br>(exactly 1) | If set to `true`, this transaction is in a block that is locked (not susceptible to a chain re-org)                                                                                                                                                                                           |
 
-_Examples from Dash Core 21.1.0_
+_Examples from Dash Core 23.0.0_
 
 A classical transaction in serialized transaction format:
 
@@ -1106,6 +1118,7 @@ Result:
       "n": 0,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 8907e625c343ac9c6b56e8180f73af1d23350d0c OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yYoztKLNFLvbNYAPMUGoa5iHz5SBtNLEK8)#vnk3v3tz",
         "hex": "76a9148907e625c343ac9c6b56e8180f73af1d23350d0c88ac",
         "address": "yYoztKLNFLvbNYAPMUGoa5iHz5SBtNLEK8",
         "type": "pubkeyhash"
@@ -1120,6 +1133,7 @@ Result:
       "n": 1,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 dd01754e43690f41feef2cc7974bc2e5101e9f27 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(ygU1vv8a2fhiM2gYUF1GjQAcjxgZUKY5MD)#g0jecjva",
         "hex": "76a914dd01754e43690f41feef2cc7974bc2e5101e9f2788ac",
         "address": "ygU1vv8a2fhiM2gYUF1GjQAcjxgZUKY5MD",
         "type": "pubkeyhash"
@@ -1132,7 +1146,7 @@ Result:
   "hex": "02000000016634e15fe22fe84554833f109916fced5af30fac0849a211f17f326162280f14010000006a47304402207b8f61bebe3560b6ef70de3e10b59bdc60931d09cf0626026bfe3064dcfcf1c00220048ad98398cb294fa19335110db3ce5a466b74cbbf234bf2b4855b264a03ef790121027b90f229e7027758f0c8b39d2d485b88ed5b63b34e58e0dad2a07e3e8eb03373feffffff0278f51104000000001976a9148907e625c343ac9c6b56e8180f73af1d23350d0c88acd007290e000000001976a914dd01754e43690f41feef2cc7974bc2e5101e9f2788accf880d00",
   "blockhash": "0000009f3480f5e2b6821af57ccbfeb064d9e18b6e9e669aad238f2b0059df1a",
   "height": 886992,
-  "confirmations": 192439,
+  "confirmations": 472266,
   "time": 1692025132,
   "blocktime": 1692025132,
   "instantlock": true,
@@ -1190,6 +1204,7 @@ Result:
       "n": 0,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 cbd7bfcc50351180132b2c0698cb90ad74c473c7 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yeuGUfPMrbEqAS2Pw1wonYgEPbM4LAA9LK)#yfqr3rqr",
         "hex": "76a914cbd7bfcc50351180132b2c0698cb90ad74c473c788ac",
         "address": "yeuGUfPMrbEqAS2Pw1wonYgEPbM4LAA9LK",
         "type": "pubkeyhash"
@@ -1204,6 +1219,7 @@ Result:
       "n": 1,
       "scriptPubKey": {
         "asm": "OP_DUP OP_HASH160 88a060bc2dfe05780ae4dcb6c98b12436c35a939 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yYmrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV)#wjszqhw4",
         "hex": "76a91488a060bc2dfe05780ae4dcb6c98b12436c35a93988ac",
         "address": "yYmrsYP3XYMZr1cGtha3QzmuNB1C7CfyhV",
         "type": "pubkeyhash"
@@ -1221,7 +1237,7 @@ Result:
   "hex": "03000500010000000000000000000000000000000000000000000000000000000000000000ffffffff2703ae50011a4d696e656420627920416e74506f6f6c2021000b01201da9196f0000000007000000ffffffff02809e4730000000001976a914cbd7bfcc50351180132b2c0698cb90ad74c473c788ac809e4730000000001976a91488a060bc2dfe05780ae4dcb6c98b12436c35a93988ac00000000460200ae50010078e5c08b39960887bf95185c381bdb719e60b6925fa12af78a8824fade927387c757acb6bac63da84f9245e20cfd5d830382ac634d434725ca6349ab5db920a3",
   "blockhash": "00000000007b0fb99e36713cf08012482478ee496e6dcb4007ad2e806306e62b",
   "height": 86190,
-  "confirmations": 993241,
+  "confirmations": 1273069,
   "time": 1556114577,
   "blocktime": 1556114577,
   "instantlock": true,
@@ -1296,6 +1312,55 @@ _See also:_
 * [GetRawTransaction](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction): gets a hex-encoded serialized transaction or a JSON object describing the transaction.
 * [GetSpecialTxes](../api/remote-procedure-calls-blockchain.md#getspecialtxes): returns an array of special transactions found in the specified block
 * [GetTransaction](../api/remote-procedure-calls-wallet.md#gettransaction): gets detailed information about an in-wallet transaction.
+
+## GetTxSpendingPrevout
+
+:::{versionadded} 23.0.0
+:::
+
+The [`gettxspendingprevout` RPC](../api/remote-procedure-calls-raw-transactions.md#gettxspendingprevout) scans the mempool to find transactions spending any of the given outputs.
+
+_Parameter #1---Outputs to check_
+
+| Name         | Type   | Presence                | Description                                         |
+| ------------ | ------ | ----------------------- | --------------------------------------------------- |
+| `outputs`    | array  | Required<br>(exactly 1) | The transaction outputs to check                    |
+| → Output     | object | Required<br>(1 or more) | An object describing an output                      |
+| → →<br>`txid` | string (hex) | Required<br>(exactly 1) | The transaction ID                            |
+| → →<br>`vout` | number (int) | Required<br>(exactly 1) | The output number                             |
+
+_Result---spending transactions_
+
+| Name                    | Type         | Presence                | Description                                                     |
+| ----------------------- | ------------ | ----------------------- | --------------------------------------------------------------- |
+| `result`                | array        | Required<br>(exactly 1) | An array of objects describing the spending status of each output |
+| → Output Status         | object       | Required<br>(1 or more) | An object describing one output                                 |
+| → →<br>`txid`           | string (hex) | Required<br>(exactly 1) | The transaction ID of the checked output                        |
+| → →<br>`vout`           | number (int) | Required<br>(exactly 1) | The vout value of the checked output                            |
+| → →<br>`spendingtxid`   | string (hex) | Optional<br>(0 or 1)    | The transaction ID of the mempool transaction spending this output (omitted if unspent) |
+
+_Example from Dash Core 23.0.0_
+
+```bash
+dash-cli gettxspendingprevout '[{"txid":"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0","vout":3}]'
+```
+
+Result:
+
+```json
+[
+  {
+    "txid": "a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0",
+    "vout": 3,
+    "spendingtxid": "c25b5b9a8e2d5c3d7e6f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d"
+  }
+]
+```
+
+_See also:_
+
+* [GetRawTransaction](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction): gets a hex-encoded serialized transaction or a JSON object describing the transaction.
+* [GetTxOut](../api/remote-procedure-calls-blockchain.md#gettxout): returns details about an unspent transaction output (UTXO).
 
 ## GetTxChainlocks
 

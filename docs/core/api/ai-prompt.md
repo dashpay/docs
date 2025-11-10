@@ -106,11 +106,19 @@ _See also_
 * [ImportPrivKey](../api/remote-procedure-calls-wallet.md#importprivkey): adds a private key to your wallet. The key should be formatted in the wallet import format created by the [`dumpprivkey` RPC](../api/remote-procedure-calls-wallet.md#dumpprivkey).
 * [ImportAddress](../api/remote-procedure-calls-wallet.md#importaddress): adds an address or pubkey script to the wallet without the associated private key, allowing you to watch for transactions affecting that address or pubkey script without being able to spend any of its outputs.
 * [ImportWallet](../api/remote-procedure-calls-wallet.md#importwallet): imports private keys from a file in wallet dump file format (see the [`dumpwallet` RPC](../api/remote-procedure-calls-wallet.md#dumpwallet)). These keys will be added to the keys currently in the wallet.  This call may need to rescan all or parts of the block chain for transactions affecting the newly-added keys, which may take several minutes.
-```
-
+``
 
 Create documentation for the following new RPC using the style of previously provided RPC documentation as a template:
 
 ```
 INSERT "HELP <RPCNAME>" OUTPUT HERE
 ```
+
+## Claude Code
+
+### Update RPCs based on the auto-generated help diff summary
+
+**Note:** See the [Core RPC scripts README](../../../scripts/core-rpc-tools/README.md) for details on creating the files used by the following prompt.
+
+Update the RPC docs found in @docs/core/api directory for <vX.Y.Z>. For each RPC in the modified RPCs table of @scripts/core-rpc-tools/rpc-changes-summary-<old-version>-to-<new-version>.md, find the RPC documentation for that RPC and compare it with the info in @scripts/core-rpc-tools/dash-cli-help-<new-version>.jsonl. Make updates as required. Track progress in a table that matches the one in @scripts/core-rpc-tools/rpc-changes-summary-<old-version>-to-<new-version>.md but adds a column for documentation updates completed. Be sure to update @remote-procedure-call-quick-reference.md as changes are made.
+

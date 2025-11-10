@@ -16,7 +16,7 @@ The [`coinjoin` RPC](#coinjoin) controls the CoinJoin process (previously named 
 
 | Name   | Type   | Presence                | Description                                                                                                |
 | ------ | ------ | ----------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `mode` | string | Required<br>(exactly 1) | The command mode to use:<br>`start` - Start CoinJoin<br>`stop` - Stop CoinJoin<br>`reset` - Reset CoinJoin |
+| `mode` | string | Required<br>(exactly 1) | The command mode to use:<br>`start` - Start CoinJoin<br>`status` - Get status<br>`stop` - Stop CoinJoin<br>`reset` - Reset CoinJoin |
 
 **Command Mode - `start`**
 
@@ -36,6 +36,33 @@ Result:
 
 ```text
 Mixing started successfully
+```
+
+**Command Mode - `status`**
+
+:::{versionadded} 23.0.0
+:::
+
+*Result---status of mixing sessions*
+
+| Name     | Type   | Presence                | Description                       |
+| -------- | ------ | ----------------------- | --------------------------------- |
+| `result` | array  | Required<br>(exactly 1) | An array of status strings        |
+| →<br>Status | string | Required<br>(0 or more) | Status of a mixing session     |
+
+*Example from Dash Core 23.0.0*
+
+```bash
+dash-cli coinjoin status
+```
+
+Result:
+
+```json
+[
+  "Session 1: Idle",
+  "Session 2: Mixing"
+]
 ```
 
 **Command Mode - `stop`**
@@ -241,7 +268,9 @@ The [`getcoinjoininfo` RPC](#getcoinjoininfo) returns an object containing an in
 | → →<br>Session           | object                | Optional<br>(1 or more) | Information for a session |
 | → → →<br>`protxhash`     | string                | Required<br>(exactly 1) | The ProTxHash of the masternode |
 | → → →<br>`outpoint`      | string (txid-index)   | Required<br>(exactly 1) | The outpoint of the masternode |
-| → → →<br>`service`       | string (host:port)    | Required<br>(exactly 1) | The IP address and port of the masternode |
+| → → →<br>`service`       | string (host:port)    | Required<br>(exactly 1) | **Deprecated in Dash Core 23.0.0**<br>The IP address and port of the masternode |
+| → → →<br>`addrs_core_p2p` | array               | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Network addresses of the masternode used for protocol P2P |
+| → → → →<br>Address       | string                | Required<br>(1 or more) | Network address (IP:port) |
 | → → →<br>`denomination`  | number (int)          | Required<br>(exactly 1) | The denomination of the session (in DASH) |
 | → → →<br>`state`         | string                | Required<br>(exactly 1) | Current state of the session |
 | → → →<br>`entries_count` | number (int)          | Required<br>(exactly 1) | The number of entries in the session |
@@ -258,7 +287,7 @@ The [`getcoinjoininfo` RPC](#getcoinjoininfo) returns an object containing an in
 | →<br>`state`         | string       | Required<br>(exactly 1) | Current state of the session |
 | →<br>`entries_count` | number (int) | Required<br>(exactly 1) | The number of entries in the session |
 
-*Example from Dash Core 0.17.0 (regular node)*
+*Example from Dash Core 23.0.0 (regular node)*
 
 ``` bash
 dash-cli -testnet getcoinjoininfo
@@ -281,13 +310,16 @@ Result:
     {
       "protxhash": "0515c9a411df0f1bd9940d9a2e4f6d739c29c52fc8c045c383f1ff6acc87c7b7",
       "outpoint": "0a6520a6ef523de71fd0ca70441e1fd648483f094442d986b24e2c9391be61cf-29",
-      "service": "54.170.119.85:26216",
+      "service": "54.202.231.195:19999",
+      "addrs_core_p2p": [
+        "54.202.231.195:19999"
+      ],
       "denomination": 10.00010000,
       "state": "QUEUE",
       "entries_count": 0
     }
   ],
-  "keys_left": 998,
+  "keys_left": 999,
   "warnings": ""
 }
 ```
@@ -1279,8 +1311,10 @@ Result:
 
 ### Masternode Current
 
-:::{deprecated} 0.17.0
-This RPC has been deprecated and will be removed in a future version of Dash Core
+:::{attention}
+**REMOVED in Dash Core 23.0.0**
+
+This RPC was deprecated in Dash Core 0.17.0 and removed in v23.0.0.
 :::
 
 The `masternode current` RPC prints info on current masternode winner to be paid the next block (calculated locally).
@@ -1517,8 +1551,10 @@ Result:
 
 ### Masternode Winner
 
-:::{deprecated} 0.17.0
-This RPC has been deprecated and will be removed in a future version of Dash Core
+:::{attention}
+**REMOVED in Dash Core 23.0.0**
+
+This RPC was deprecated in Dash Core 0.17.0 and removed in v23.0.0.
 :::
 
 The `masternode winner` RPC prints info on the next masternode winner to vote for.
