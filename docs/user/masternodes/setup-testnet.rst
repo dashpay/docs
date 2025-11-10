@@ -488,7 +488,7 @@ We will now prepare an unsigned ProRegTx special transaction using the
 ``protx register_prepare`` command. This command has the following
 syntax::
 
-  protx register_prepare collateralHash collateralIndex ipAndPort ownerKeyAddr 
+  protx register_prepare collateralHash collateralIndex coreP2PAddrs ownerKeyAddr 
     operatorPubKey votingKeyAddr operatorReward payoutAddress (feeSourceAddress)
 
 .. warning::
