@@ -72,43 +72,6 @@ Usage:
   -devnet=<name>
        Use devnet chain with provided name
 
-  -highsubsidyblocks=<n>
-       The number of blocks with a higher than normal subsidy to mine at the
-       start of a chain. Block after that height will have fixed subsidy
-       base. (default: 0, devnet-only)
-
-  -highsubsidyfactor=<n>
-       The factor to multiply the normal block subsidy by while in the
-       highsubsidyblocks window of a chain (default: 1, devnet-only)
-
-  -llmqchainlocks=<quorum name>
-       Override the default LLMQ type used for ChainLocks. Allows using
-       ChainLocks with smaller LLMQs. (default: llmq_devnet,
-       devnet-only)
-
-  -llmqdevnetparams=<size>:<threshold>
-       Override the default LLMQ size for the LLMQ_DEVNET quorum (devnet-only)
-
-  -llmqinstantsenddip0024=<quorum name>
-       Override the default LLMQ type used for InstantSendDIP0024. (default:
-       llmq_devnet_dip0024, devnet-only)
-
-  -llmqmnhf=<quorum name>
-       Override the default LLMQ type used for EHF. (default: llmq_devnet,
-       devnet-only)
-
-  -llmqplatform=<quorum name>
-       Override the default LLMQ type used for Platform. (default:
-       llmq_devnet_platform, devnet-only)
-
-  -minimumdifficultyblocks=<n>
-       The number of blocks that can be mined with the minimum difficulty at
-       the start of a chain (default: 0, devnet-only)
-
-  -powtargetspacing=<n>
-       Override the default PowTargetSpacing value in seconds (default: 2.5
-       minutes, devnet-only)
-
   -testnet
        Use the test chain. Equivalent to -chain=test
 
@@ -136,5 +99,4 @@ Usage:
 
   wipetxes
        Wipe all transactions from a wallet
-
 ```

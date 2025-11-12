@@ -36,14 +36,15 @@ options](#ui-options).
        If this block is in the chain assume that it and its ancestors are valid
        and potentially skip their script verification (0 to verify all,
        default:
-       000000000000001cf26547602d982dcaa909231bbcd1e70c0eb3c65de25473ba,
+       0000000000000009ba1e8f47851d036bb618a4f6565eb3c32d1f647d450ff195,
        testnet:
-       000000eef20eb0062abd4e799967e98bdebb165dd1c567ab4118c1c86c6e948f)
+       00000107d42829a38e31c1a38c660d621e1ca376a880df1520e85e38af175d3a)
 
   -blockfilterindex=<type>
        Maintain an index of compact filters by block (default: 0, values:
        basic). If <type> is not supplied or if <type> = 1, indexes for
-       all known types are enabled.
+       all known types are enabled. Automatically enabled for
+       masternodes with value 'basic'.
 
   -blocknotify=<cmd>
        Execute command when the best block changes (%s in cmd is replaced by
@@ -119,12 +120,16 @@ options](#ui-options).
 
   -minimumchainwork=<hex>
        Minimum work assumed to exist on a valid chain in hex (default:
-       000000000000000000000000000000000000000000009eb0f1d7fefc8750aebb,
+       00000000000000000000000000000000000000000000ae8d578b28f390b9c630,
        testnet:
-       000000000000000000000000000000000000000000000000031ee38bc0876cef)
+       000000000000000000000000000000000000000000000000036073cd80626b9c)
 
   -par=<n>
        Set the number of script verification threads (-16 to 15, 0 = auto, <0 =
+       leave that many cores free, default: 0)
+
+  -parbls=<n>
+       Set the number of BLS verification threads (-16 to 33, 0 = auto, <0 =
        leave that many cores free, default: 0)
 
   -persistmempool
@@ -217,7 +222,7 @@ options](#ui-options).
 
   -dnsseed
        Query for peer addresses via DNS lookup, if low on addresses (default: 1
-       unless -connect used)
+       unless -connect used or -maxconnections=0)
 
   -externalip=<ip>
        Specify your own public address
@@ -239,7 +244,8 @@ options](#ui-options).
        none)
 
   -listen
-       Accept connections from outside (default: 1 if no -proxy or -connect)
+       Accept connections from outside (default: 1 if no -proxy, -connect or
+       -maxconnections=0)
 
   -listenonion
        Automatically create Tor onion service (default: 1)
@@ -259,8 +265,8 @@ options](#ui-options).
 
   -maxtimeadjustment
        Maximum allowed median peer time offset adjustment. Local perspective of
-       time may be influenced by peers forward or backward by this
-       amount. (default: 4200 seconds)
+       time may be influenced by outbound peers forward or backward by
+       this amount (default: 4200 seconds).
 
   -maxuploadtarget=<n>
        Tries to keep outbound traffic under the given target per 24h. Limit
@@ -276,9 +282,10 @@ options](#ui-options).
        Enable all P2P network activity (default: 1). Can be changed by the
        setnetworkactive RPC command
 
-  -onion=<ip:port>
+  -onion=<ip:port|path>
        Use separate SOCKS5 proxy to reach peers via Tor onion services, set
-       -noonion to disable (default: -proxy)
+       -noonion to disable (default: -proxy). May be a local file path
+       prefixed with 'unix:'.
 
   -onlynet=<net>
        Make automatic outbound connections only to network <net> (ipv4, ipv6,
@@ -287,7 +294,8 @@ options](#ui-options).
        allow multiple networks.
 
   -peerblockfilters
-       Serve compact block filters to peers per BIP 157 (default: 0)
+       Serve compact block filters to peers per BIP 157 (default: 0,
+       automatically enabled for masternodes)
 
   -peerbloomfilters
        Support filtering of blocks and transaction with bloom filters (default:
@@ -298,17 +306,15 @@ options](#ui-options).
        peer, wait this amount of time before considering disconnection
        based on inactivity (minimum: 1, default: 60)
 
-  -permitbaremultisig
-       Relay non-P2SH multisig (default: 1)
-
   -port=<port>
        Listen for connections on <port>. Nodes not using the default ports
        (default: 9999, testnet: 19999, regtest: 19899) are unlikely to
        get incoming connections. Not relevant for I2P (see doc/i2p.md).
 
-  -proxy=<ip:port>
+  -proxy=<ip:port|path>
        Connect through SOCKS5 proxy, set -noproxy to disable (default:
-       disabled)
+       disabled). May be a local file path prefixed with 'unix:' if the
+       proxy supports it.
 
   -proxyrandomize
        Randomize credentials for every proxy connection. This enables Tor
@@ -340,11 +346,10 @@ options](#ui-options).
        Enable transaction reconciliations per BIP 330 (default: 0)
 
   -upnp
-       Use UPnP to map the listening port (default: 1 when listening and no
-       -proxy)
+       Use UPnP to map the listening port (default: 0)
 
   -v2transport
-       Support v2 transport (default: 0)
+       Support v2 transport (default: 1)
 
   -whitebind=<[permissions@]addr>
        Bind to the given address and add permission flags to the peers
@@ -441,9 +446,6 @@ options](#ui-options).
        Specify the number of seconds between periodic measurements (default:
        60)
 
-  -statsport=<port>
-       Specify statsd port (default: 8125)
-
   -statsprefix=<string>
        Specify an optional string prepended to every stats key (default: )
 
@@ -465,6 +467,11 @@ options](#ui-options).
        limitation and possibly a larger-than-necessary number of inputs
        being used. Always enabled for wallets with "avoid_reuse"
        enabled, otherwise default: 0.
+
+  -consolidatefeerate=<amt>
+       The maximum feerate (in DASH/kvB) at which transaction building may use
+       more inputs than strictly necessary so that the wallet's UTXO
+       pool can be reduced (default: 0.00001).
 
   -createwalletbackups=<n>
        Number of automatic wallet backups (default: 10)
@@ -637,9 +644,12 @@ options](#ui-options).
        This option is only used by tests to improve their performance
        (default: false)
 
+  -walletcrosschain
+       Allow reusing wallet files across chains (default: 0)
+
   -walletrejectlongchains
        Wallet will not create transactions that violate mempool chain limits
-       (default: 0)
+       (default: 1)
 
 ```
 
@@ -816,25 +826,25 @@ options](#ui-options).
 
   -checkpoints
        Enable rejection of any forks from the known historical chain until
-       block 2175051 (default: 1)
+       block 2361500 (default: 1)
 
   -debug=<category>
-       Output debugging information (default: -nodebug, supplying <category> is
-       optional). If <category> is not supplied or if <category> = 1,
-       output all debugging information. <category> can be: addrman,
-       bench, chainlocks, cmpctblock, coindb, coinjoin, creditpool, ehf,
-       estimatefee, gobject, http, i2p, instantsend, ipc, leveldb,
-       libevent, llmq, llmq-dkg, llmq-sigs, lock, mempool, mempoolrej,
-       mnpayments, mnsync, net, netconn, proxy, prune, qt, rand,
-       reindex, rpc, selectcoins, spork, tor, txreconciliation,
+       Output debug and trace logging (default: -nodebug, supplying <category>
+       is optional). If <category> is not supplied or if <category> = 1,
+       output all debug and trace logging. <category> can be: addrman,
+       bench, blockstorage, chainlocks, cmpctblock, coindb, coinjoin,
+       creditpool, ehf, estimatefee, gobject, http, i2p, instantsend,
+       ipc, leveldb, libevent, llmq, llmq-dkg, llmq-sigs, mempool,
+       mempoolrej, mnpayments, mnsync, net, netconn, proxy, prune, qt,
+       rand, reindex, rpc, selectcoins, spork, tor, txreconciliation,
        validation, walletdb, zmq. This option can be specified multiple
        times to output multiple categories.
 
   -debugexclude=<category>
-       Exclude debugging information for a category. Can be used in conjunction
-       with -debug=1 to output debug logs for all categories except the
-       specified category. This option can be specified multiple times
-       to exclude multiple categories.
+       Exclude debug and trace logging for a category. Can be used in
+       conjunction with -debug=1 to output debug and trace logging for
+       all categories except the specified category. This option can be
+       specified multiple times to exclude multiple categories.
 
   -deprecatedrpc=<method>
        Allows deprecated RPC method(s) to be used
@@ -867,6 +877,20 @@ options](#ui-options).
 
   -logips
        Include IP addresses in debug output (default: 0)
+
+  -loglevel=<level>|<category>:<level>
+       Set the global or per-category severity level for logging categories
+       enabled with the -debug configuration option or the logging RPC:
+       info, debug, trace (default=debug); warning and error levels are
+       always logged. If <category>:<level> is supplied, the setting
+       will override the global one and may be specified multiple times
+       to set multiple category-specific levels. <category> can be:
+       addrman, bench, blockstorage, chainlocks, cmpctblock, coindb,
+       coinjoin, creditpool, ehf, estimatefee, gobject, http, i2p,
+       instantsend, ipc, leveldb, libevent, llmq, llmq-dkg, llmq-sigs,
+       mempool, mempoolrej, mnpayments, mnsync, net, netconn, proxy,
+       prune, qt, rand, reindex, rpc, selectcoins, spork, tor,
+       txreconciliation, validation, walletdb, zmq.
 
   -logsourcelocations
        Prepend debug output with name of the originating source location
@@ -929,10 +953,6 @@ options](#ui-options).
        Stop running after reaching the given height in the main chain (default:
        0)
 
-  -testactivationheight=name@height.
-       Set the activation height of 'name' (bip147, bip34, dersig, cltv, csv,
-       brr, dip0001, dip0008, v20, mn_rr). (regtest-only)
-
   -uacomment=<cmt>
        Append comment to the user agent string
 
@@ -944,9 +964,6 @@ options](#ui-options).
 ### Chain selection options
 
 ```text
-
-  -bip147height=<activation>
-       Override BIP147 activation height (regtest-only)
 
   -budgetparams=<masternode>:<budget>:<superblock>
        Override masternode, budget and superblock start heights (regtest-only)
@@ -960,9 +977,6 @@ options](#ui-options).
 
   -dip3params=<activation>:<enforcement>
        Override DIP3 activation and enforcement heights (regtest-only)
-
-  -dip8params=<activation>
-       Override DIP8 activation height (regtest-only)
 
   -highsubsidyblocks=<n>
        The number of blocks with a higher than normal subsidy to mine at the
@@ -1005,6 +1019,10 @@ options](#ui-options).
        Override the default LLMQ size for the LLMQ_TEST quorum (default: 3:2,
        regtest-only)
 
+  -llmqtestplatformparams=<size>:<threshold>
+       Override the default LLMQ size for the LLMQ_TEST_PLATFORM quorum
+       (default: 3:2, regtest-only)
+
   -minimumdifficultyblocks=<n>
        The number of blocks that can be mined with the minimum difficulty at
        the start of a chain (default: 0, devnet-only)
@@ -1017,6 +1035,10 @@ options](#ui-options).
        Enter regression test mode, which uses a special chain in which blocks
        can be solved instantly. This is intended for regression testing
        tools and app development. Equivalent to -chain=regtest
+
+  -testactivationheight=name@height.
+       Set the activation height of 'name' (bip147, bip34, dersig, cltv, csv,
+       brr, dip0001, dip0008, dip0024, v19, v20, mn_rr). (regtest-only)
 
   -testnet
        Use the test chain. Equivalent to -chain=test
@@ -1061,6 +1083,9 @@ options](#ui-options).
        Fees (in DASH/kB) smaller than this are considered zero fee for
        relaying, mining and transaction creation (default: 0.00001)
 
+  -permitbaremultisig
+       Relay non-P2SH multisig (default: 1)
+
   -whitelistforcerelay
        Add 'forcerelay' permission to whitelisted inbound peers with default
        permissions. This will relay transactions even if the
@@ -1097,10 +1122,11 @@ options](#ui-options).
        Accept public REST requests (default: 0)
 
   -rpcallowip=<ip>
-       Allow JSON-RPC connections from specified source. Valid for <ip> are a
-       single IP (e.g. 1.2.3.4), a network/netmask (e.g.
-       1.2.3.4/255.255.255.0) or a network/CIDR (e.g. 1.2.3.4/24). This
-       option can be specified multiple times
+       Allow JSON-RPC connections from specified source. Valid values for <ip>
+       are a single IP (e.g. 1.2.3.4), a network/netmask (e.g.
+       1.2.3.4/255.255.255.0), a network/CIDR (e.g. 1.2.3.4/24), all
+       ipv4 (0.0.0.0/0), or all ipv6 (::/0). This option can be
+       specified multiple times
 
   -rpcauth=<userpw>
        Username and HMAC-SHA-256 hashed password for JSON-RPC connections. The

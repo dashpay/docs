@@ -115,12 +115,18 @@ Regular masternodes
 A masternode ProUpServTx can be created from DMT by clicking the **Update service**
 button, or from Dash Core using the following syntax::
 
-  protx update_service proTxHash ipAndPort operatorKey (operatorPayoutAddress feeSourceAddress)
+  protx update_service proTxHash coreP2PAddrs operatorKey (operatorPayoutAddress feeSourceAddress)
 
 Where:
 
+.. note::
+  
+  As of Dash Core v23.0, the ``coreP2PAddrs`` field accepts backwards-compatible input.
+
+
 - ``proTxHash``: The transaction id of the initial ProRegTx
-- ``ipAndPort``: IP and port in the form "ip:port"
+- ``coreP2PAddrs``: Array of masternode address(es), in the format 
+  ``x.x.x.x:yyyy``
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
 - ``operatorPayoutAddress`` (optional): The address used for operator 
@@ -133,8 +139,11 @@ Where:
 
 Example::
 
-  protx update_service d6ec9a03e1251ac8c34178f47b6d763dc4ea6d96fd6eddb3c7aae2359e0f474a 140.82.59.51:10002 4308daa8de099d3d5f81694f6b618381e04311b9e0345b4f8b025392c33b0696 yf6Cj6VcCfDxU5yweAT3NKKvm278rVbkhu
+  protx update_service d6ec9a03e1251ac8c34178f47b6d763dc4ea6d96fd6eddb3c7aae2359e0f474a '["140.82.59.51:10002"]' 4308daa8de099d3d5f81694f6b618381e04311b9e0345b4f8b025392c33b0696 yf6Cj6VcCfDxU5yweAT3NKKvm278rVbkhu
 
+::
+
+  # Transaction ID returned
   fad61c5f21cf3c0832f782c1444d3d2e2a8dbff39c5925c38033730e64ecc598
 
 The masternode is now removed from the PoSe-banned list, and the IP:port
@@ -148,17 +157,23 @@ Evonodes
 An evonode ProUpServTx can be created from DMT by clicking the **Update service**
 button, or from Dash Core using the following syntax::
 
-  protx update_service_evo proTxHash ipAndPort operatorKey platformNodeId platformP2PPort platformHTTPPort (operatorPayoutAddress feeSourceAddress)
+  protx update_service_evo proTxHash coreP2PAddrs operatorKey platformNodeId platformP2PAddrs platformHTTPSAddrs (operatorPayoutAddress feeSourceAddress)
 
 Where:
 
+.. note::
+  
+  As of Dash Core v23.0, ``coreP2PAddrs``, ``platformP2PAddrs``, and ``platformHTTPSAddrs``
+  fields accept backwards-compatible input.
+
 - ``proTxHash``: The transaction id of the initial ProRegTx
-- ``ipAndPort``: IP and port in the form "ip:port"
+- ``coreP2PAddrs``: Array of masternode address(es), in the format 
+  ``x.x.x.x:yyyy``
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
 - ``platformNodeId``: The Platform node ID derived from Platform P2P public key.
-- ``platformP2PPort``: TCP port for Platform peer-to-peer communication between nodes (26656 for mainnet).
-- ``platformHTTPPort``: TCP port of Platform HTTP API interface (443 for mainnet).
+- ``platformP2PAddrs``: Array of addresses in the form "ADDR:PORT" used by Platform for peer-to-peer connection (must include 26656 for mainnet). Must be unique on the network..
+- ``platformHTTPSAddrs``: Array of addresses in the form "ADDR:PORT" used by Platform for their HTTPS API (must include 443 for mainnet). Must be unique on the network.
 - ``operatorPayoutAddress`` (optional): The address used for operator 
   reward payments. Only allowed when the ProRegTx had a non-zero 
   ``operatorReward`` value. Enter ``""`` to use the
@@ -169,8 +184,11 @@ Where:
 
 Example::
 
-  protx update_service_evo d6ec9a03e1251ac8c34178f47b6d763dc4ea6d96fd6eddb3c7aae2359e0f474a 140.82.59.51:10002 4308daa8de099d3d5f81694f6b618381e04311b9e0345b4f8b025392c33b0696 972a33056d57359de8acfa4fb8b29dc1c14f76b8 26656 443 yf6Cj6VcCfDxU5yweAT3NKKvm278rVbkhu
+  protx update_service_evo d6ec9a03e1251ac8c34178f47b6d763dc4ea6d96fd6eddb3c7aae2359e0f474a '["140.82.59.51:10002"]' 4308daa8de099d3d5f81694f6b618381e04311b9e0345b4f8b025392c33b0696 972a33056d57359de8acfa4fb8b29dc1c14f76b8 26656 443 yf6Cj6VcCfDxU5yweAT3NKKvm278rVbkhu
 
+::
+
+  # Transaction ID returned
   fad61c5f21cf3c0832f782c1444d3d2e2a8dbff39c5925c38033730e64ecc598
 
 The evonode is now removed from the PoSe-banned list. The IP:port,
@@ -191,21 +209,21 @@ payout addr.** buttons, or from Dash Core using the following syntax::
   protx update_registrar proTxHash operatorKeyAddr votingKeyAddr payoutAddress (feeSourceAddress)
 
 .. warning::
-   After v19 hard fork activation, ``protx update_registrar_legacy`` must
-   be used if a legacy scheme BLS key is being used to registrar update a
-   masternode.
+   
+   Previously, ``protx update_registrar_legacy`` could be used to register a masternode with
+   a legacy scheme BLS key. The legacy commands were deprecated as of Dash Core v23.0, so it
+   is now recommended to generate a new basic scheme BLS key instead. This can be done by
+   following the :ref:`Generate a BLS key pair <bls-generation>` instructions.
 
 Where:
 
 - ``proTxHash``: The transaction id of the initial ProRegTx
-- ``operatorKeyAddr``: An updated BLS public key, or ``""`` to use the
-  last on-chain operator key
-- ``votingKeyAddr``: An updated voting key address, or ``""`` to use the
-  last on-chain voting key
-- ``payoutAddress``: An updated Dash address for owner payments, or 
-  ``""`` to use the last on-chain operator key
-- ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
-  ``PayoutAddress`` will be used if not specified.
+- ``operatorKeyAddr``: An updated BLS public key, or ``""`` to use the last on-chain operator key
+- ``votingKeyAddr``: An updated voting key address, or ``""`` to use the last on-chain voting key
+- ``payoutAddress``: An updated Dash address for owner payments, or ``""`` to use the currently
+  active payout address
+- ``feeSourceAddress`` (optional): An address used to fund ProTx fee. ``payoutAddress`` will be used
+  if not specified.
 
 Example to update payout address::
 
@@ -233,8 +251,7 @@ Where:
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
 - ``reason``: Integer value indicating the revocation `reason <https://github.com/dashpay/dips/blob/master/dip-0003.md#appendix-a-reasons-for-self-revocation-of-operators>`__
-- ``feeSourceAddress`` (optional): An address used to fund ProTx fee. 
-  ``operatorPayoutAddress`` will be used if not specified.
+- ``feeSourceAddress`` (optional): An address used to fund ProTx fee. If not specified, ``operatorPayoutAddress`` will be used.
 
 Example::
 

@@ -48,7 +48,9 @@ View [the list of RPCs](../api/remote-procedure-call-quick-reference.md) for mor
        Print this help message and exit
 
   -addrinfo
-       Get the number of addresses known to the node, per network and total.
+       Get the number of addresses known to the node, per network and total,
+       after filtering for quality and recency. The total number of
+       addresses known to the node may be higher.
 
   -color=<when>
        Color setting for CLI output (default: auto). Valid values: always, auto
@@ -63,8 +65,8 @@ View [the list of RPCs](../api/remote-procedure-call-quick-reference.md) for mor
        Specify data directory
 
   -generate
-       Generate blocks immediately, equivalent to RPC getnewaddress followed by
-       RPC generatetoaddress. Optional positional integer arguments are
+       Generate blocks, equivalent to RPC getnewaddress followed by RPC
+       generatetoaddress. Optional positional integer arguments are
        number of blocks to generate (default: 1) and maximum iterations
        to try (default: 1000000), equivalent to RPC generatetoaddress
        nblocks and maxtries arguments. Example: dash-cli -generate 4
@@ -72,8 +74,8 @@ View [the list of RPCs](../api/remote-procedure-call-quick-reference.md) for mor
 
   -getinfo
        Get general information from the remote server. Note that unlike
-       server-side RPC calls, the results of -getinfo is the result of
-       multiple non-atomic requests. Some entries in the result may
+       server-side RPC calls, the output of -getinfo is the result of
+       multiple non-atomic requests. Some entries in the output may
        represent results from different states (e.g. wallet balance may
        be as of a different block from the chain state reported)
 
@@ -152,43 +154,6 @@ View [the list of RPCs](../api/remote-procedure-call-quick-reference.md) for mor
 
   -devnet=<name>
        Use devnet chain with provided name
-
-  -highsubsidyblocks=<n>
-       The number of blocks with a higher than normal subsidy to mine at the
-       start of a chain. Block after that height will have fixed subsidy
-       base. (default: 0, devnet-only)
-
-  -highsubsidyfactor=<n>
-       The factor to multiply the normal block subsidy by while in the
-       highsubsidyblocks window of a chain (default: 1, devnet-only)
-
-  -llmqchainlocks=<quorum name>
-       Override the default LLMQ type used for ChainLocks. Allows using
-       ChainLocks with smaller LLMQs. (default: llmq_devnet,
-       devnet-only)
-
-  -llmqdevnetparams=<size>:<threshold>
-       Override the default LLMQ size for the LLMQ_DEVNET quorum (devnet-only)
-
-  -llmqinstantsenddip0024=<quorum name>
-       Override the default LLMQ type used for InstantSendDIP0024. (default:
-       llmq_devnet_dip0024, devnet-only)
-
-  -llmqmnhf=<quorum name>
-       Override the default LLMQ type used for EHF. (default: llmq_devnet,
-       devnet-only)
-
-  -llmqplatform=<quorum name>
-       Override the default LLMQ type used for Platform. (default:
-       llmq_devnet_platform, devnet-only)
-
-  -minimumdifficultyblocks=<n>
-       The number of blocks that can be mined with the minimum difficulty at
-       the start of a chain (default: 0, devnet-only)
-
-  -powtargetspacing=<n>
-       Override the default PowTargetSpacing value in seconds (default: 2.5
-       minutes, devnet-only)
 
   -testnet
        Use the test chain. Equivalent to -chain=test

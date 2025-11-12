@@ -492,33 +492,25 @@ syntax::
     operatorPubKey votingKeyAddr operatorReward payoutAddress (feeSourceAddress)
 
 .. warning::
-   After v19 hard fork activation, ``protx register_prepare_legacy`` must
-   be used if a legacy scheme BLS key is being used to register a masternode.
-   It's recommended to instead generate a new basic scheme BLS key where
-   possible. This can be done by following the
-   :ref:`Generate a BLS key pair <testnet-bls-generation>` instructions.    
+  Previously, ``protx register_prepare_legacy`` could be used to register a masternode with a legacy
+  scheme BLS key. The legacy commands were deprecated as of Dash Core v23.0, so it is now recommended
+  to generate a new basic scheme BLS key instead. This can be done by following the :ref:`Generate a
+  BLS key pair <bls-generation>` instructions.
 
 Open a text editor such as notepad to prepare this command. Replace each
 argument to the command as follows:
 
-- ``collateralHash``: The txid of the 1000 Dash collateral funding 
-  transaction
-- ``collateralIndex``: The output index of the 1000 Dash funding 
-  transaction
-- ``coreP2PAddrs``: Array of masternode address(es), in the format 
-  ``x.x.x.x:yyyy``
-- ``ownerKeyAddr``: The new Dash address generated above for the 
-  owner/voting address
-- ``operatorPubKey``: The BLS public key generated above (or provided 
-  by your hosting service)
-- ``votingKeyAddr``: The new Dash address generated above, or the 
-  address of a delegate, used for proposal voting
-- ``operatorReward``: The percentage of the block reward allocated to 
-  the operator as payment
-- ``payoutAddress``: A new or existing Dash address to receive the 
-  owner's masternode rewards
-- ``feeSourceAddress``: An (optional) address used to fund ProTx fee. 
-  ``payoutAddress`` will be used if not specified.
+- ``collateralHash``: The txid of the 1000 Dash collateral funding transaction
+- ``collateralIndex``: The output index of the 1000 Dash funding transaction
+- ``coreP2PAddrs``: Array of masternode address(es), in the format ``x.x.x.x:yyyy``
+- ``ownerKeyAddr``: The new Dash address generated above for the owner/voting address
+- ``operatorPubKey``: The BLS public key generated above (or provided by your hosting service)
+- ``votingKeyAddr``: The new Dash address generated above, or the address of a delegate, used for
+  proposal voting
+- ``operatorReward``: The percentage of the block reward allocated to the operator as payment
+- ``payoutAddress``: A new or existing Dash address to receive the owner's masternode rewards
+- ``feeSourceAddress``: An (optional) address used to fund ProTx fee. ``payoutAddress`` will be used
+  if not specified.
 
 Note that the operator is responsible for :ref:`specifying their own
 reward <dip3-update-service>` address in a separate ``update_service``

@@ -10,10 +10,11 @@
 
 The table below lists some notable versions of the P2P network protocol, with the most recent versions listed first.
 
-As of Dash Core 22.1.2, the most recent protocol version is 70236.
+As of Dash Core 23.0.0, the most recent protocol version is 70238.
 
 | Version | Initial Release                    | Major Changes
 |---------|------------------------------------|--------------
+| 70238 | [Dash Core 23.0.0](https://github.com/dashpay/dash/blob/v23.0.0/doc/release-notes.md) <br> (Nov 2025) | • [Platform Proof-of-Service ban support](https://github.com/dashpay/dash/pull/6613)<br>• [Fix isdlock cycleHash](https://github.com/dashpay/dash/pull/6608)<br>• MIN_PEER_PROTO_VERSION set to 70221
 | 70236 | [Dash Core 22.1.2](https://github.com/dashpay/dash/blob/v22.1.2/doc/release-notes.md) <br> (Apr 2025) | • [Optimized quorum diff processing](https://github.com/dashpay/dash/pull/6587)<br>• [Improved the performance of deterministic masternode list management](https://github.com/dashpay/dash/pull/6625)
 | 70235 | [Dash Core 22.0](https://github.com/dashpay/dash/blob/v22.0.0/doc/release-notes.md) <br> (Nov 2024) | • [P2P protocol encryption (BIP 324)](https://github.com/dashpay/dash-issues/issues/7)<br>• [DSQ via inventory](https://github.com/dashpay/dash/pull/6148)<br>• [Support 8000 compressed headers per request](https://github.com/dashpay/dash/pull/6239/)
 | 70233 | [Dash Core 21.1](https://github.com/dashpay/dash/blob/v21.1.0/doc/release-notes.md) <br> (Aug 2024) | • [Enhanced hard fork update](https://github.com/dashpay/dash/pull/6175)
