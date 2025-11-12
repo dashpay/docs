@@ -44,16 +44,22 @@ dcd5497d105932e609016dac075f02df
 *Added in protocol version 70220 of Dash Core*
 :::
 
-The [`isdlock` message](../reference/p2p-network-instantsend-messages.md#isdlock) is used to provide details of transactions that have been locked by InstantSend. The message includes all details present in the [`islock` message](../reference/p2p-network-deprecated-messages.md#islock) along with additional version and cycle information introduced by [DIP22](https://github.com/dashpay/dips/blob/master/dip-0022.md).  This enables nodes to determine what quorum signed the message and validate the signature in the future after the quorum is no longer active. Additional details about the change are available in [DIP22 - Making InstantSend Deterministic using Quorum Cycles](https://github.com/dashpay/dips/blob/master/dip-0022.md).
+:::{versionchanged} 23.0.0
+As of protocol version 70237, the `cycleHash` field represents the DKG cycle starting block of the signing quorum instead of the DKG cycle starting block corresponding to the current chain height. This change is fully backwards compatible with older versions of Dash Core.
+:::
+
+The [`isdlock` message](../reference/p2p-network-instantsend-messages.md#isdlock) is used to provide details of transactions that have been locked by InstantSend. The message includes all details present in the deprecated [`islock` message](../reference/p2p-network-deprecated-messages.md#islock) along with additional version and cycle information introduced by [DIP22](https://github.com/dashpay/dips/blob/master/dip-0022.md). This enables nodes to determine what quorum signed the message and validate the signature in the future after the quorum is no longer active. Additional details about the change are available in [DIP22 - Making InstantSend Deterministic using Quorum Cycles](https://github.com/dashpay/dips/blob/master/dip-0022.md).
+
+The request ID for an isdlock can be calculated deterministically using the formula: `hash("islock" + serialized_inputs)`, where "islock" is a string prefix and the inputs are serialized in their COutPoint format. This ID is used for quorum signature verification and can be obtained via the [`getislocks` RPC command](../api/remote-procedure-calls-raw-transactions.md#getislocks).
 
 | Bytes | Name | Data type | Description |
 | --- | --- | --- | --- |
-| 1 | version | uint8 | The version of the islock message |
+| 1 | version | uint8 | The version of the isdlock message |
 | 1-9 | inputsSize | compactSize uint | Number of inputs |
 | 36 * `inputsSize`| inputs | COutPoint | Outpoints used in the transaction |
 | 32 | txid | uint256 | TXID of the locked transaction |
-| 32 | cycleHash | uint256 | Block hash of first block of the cycle in which the quorum signing this islock is active |
-| 96 | sig | byte[] | LLMQ BLS Signature<br>**Note**: serialized using the basic BLS scheme after Dash 19.0 activation |
+| 32 | cycleHash | uint256 | Block hash of first block of the DKG cycle in which the quorum signing this isdlock is active.<br>**Note**: As of v23.0.0 (protocol 70237), this represents the signing quorum's cycle, not the current height's cycle |
+| 96 | sig | byte[] | LLMQ BLS Signature serialized using the basic BLS scheme |
 
 The following annotated hexdump shows a [`isdlock` message](../reference/p2p-network-instantsend-messages.md#isdlock). (The message header has been omitted.)
 
