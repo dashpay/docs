@@ -220,8 +220,8 @@ Where:
 - ``proTxHash``: The transaction id of the initial ProRegTx
 - ``operatorKeyAddr``: An updated BLS public key, or ``""`` to use the last on-chain operator key
 - ``votingKeyAddr``: An updated voting key address, or ``""`` to use the last on-chain voting key
-- ``payoutAddress``: An updated Dash address for owner payments, or ``""`` to use the last on-chain
-  operator key
+- ``payoutAddress``: An updated Dash address for owner payments, or ``""`` to use the currently
+  active payout address
 - ``feeSourceAddress`` (optional): An address used to fund ProTx fee. ``PayoutAddress`` will be used
   if not specified.
 
