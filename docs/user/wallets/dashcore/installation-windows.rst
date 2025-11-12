@@ -220,6 +220,9 @@ wallet in the following section.
 .. figure:: img/windows/dash-name-wallet.png
    :width: 300px
 
+Setting your password
+^^^^^^^^^^^^^^^^^^^^^
+
 If you do choose to encrypt now, you will be asked to enter and verify a password.
 
 .. figure:: img/windows/dash-encrypt-wallet.png
