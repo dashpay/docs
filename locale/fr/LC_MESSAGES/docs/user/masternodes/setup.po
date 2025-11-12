@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 10:59-0400\n"
+"POT-Creation-Date: 2025-11-12 12:46-0500\n"
 "PO-Revision-Date: 2022-12-27 18:56+0000\n"
 "Last-Translator: Daf Daf, 2024\n"
 "Language: fr\n"
@@ -748,7 +748,7 @@ msgid ""
 msgstr "Message d'état de dash-cli pour un masternode enregistré avec succès"
 
 #: ../../docs/user/masternodes/setup.rst:416
-#: ../../docs/user/masternodes/setup.rst:681
+#: ../../docs/user/masternodes/setup.rst:677
 msgid ""
 "At this point you can safely log out of your server by typing ``exit``. "
 "Congratulations! Your masternode is now running."
@@ -955,14 +955,14 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup.rst:563
 msgid ""
-"After v19 hard fork activation, ``protx register_prepare_legacy`` must be"
-" used if a legacy scheme BLS key is being used to register a masternode. "
-"It's recommended to instead generate a new basic scheme BLS key where "
-"possible. This can be done by following the :ref:`Generate a BLS key pair"
-" <bls-generation>` instructions."
+"Previously, ``protx register_prepare_legacy`` could be used to register a"
+" masternode with a legacy scheme BLS key. The legacy commands were "
+"deprecated as of Dash Core v23.0, so it is now recommended to generate a "
+"new basic scheme BLS key instead. This can be done by following the "
+":ref:`Generate a BLS key pair <bls-generation>` instructions."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup.rst:569
+#: ../../docs/user/masternodes/setup.rst:568
 msgid ""
 "Open a text editor such as notepad to prepare this command. Replace each "
 "argument to the command as follows:"
@@ -970,7 +970,13 @@ msgstr ""
 "Ouvrez un éditeur de texte, tel que Notepad, pour préparer cette "
 "commande. Remplacez chaque argument de la commande comme suit :"
 
-#: ../../docs/user/masternodes/setup.rst:572
+#: ../../docs/user/masternodes/setup.rst:573
+msgid ""
+"As of Dash Core v23.0, the ``coreP2PAddrs`` field accepts backwards-"
+"compatible input."
+msgstr ""
+
+#: ../../docs/user/masternodes/setup.rst:575
 msgid ""
 "``collateralHash``: The txid of the 1000 Dash collateral funding "
 "transaction"
@@ -978,15 +984,16 @@ msgstr ""
 "``collateralHash`` : l'identifiant de la transaction (txid) de la caution"
 " de 1000 dashs"
 
-#: ../../docs/user/masternodes/setup.rst:574
+#: ../../docs/user/masternodes/setup.rst:576
 msgid "``collateralIndex``: The output index of the 1000 Dash funding transaction"
 msgstr ""
 "``collateralIndex`` : l'index de sortie de la transaction de la caution "
 "de 1000 dashs"
 
-#: ../../docs/user/masternodes/setup.rst:576
+#: ../../docs/user/masternodes/setup.rst:577
+#, fuzzy
 msgid ""
-"``ipAndPort``: Masternode IP address and port, in the format "
+"``coreP2PAddrs``: Array of masternode address(es), in the format "
 "``x.x.x.x:yyyy``"
 msgstr ""
 "``ipAndPort`` : l'adresse IP et le port du masternode, suivant le format "
@@ -1000,7 +1007,7 @@ msgstr ""
 "``ownerKeyAddr`` : l'adresse Dash nouvellement générée ci-dessus, pour "
 "l'adresse du propriétaire et de vote"
 
-#: ../../docs/user/masternodes/setup.rst:580
+#: ../../docs/user/masternodes/setup.rst:579
 msgid ""
 "``operatorPubKey``: The BLS public key generated above (or provided by "
 "your hosting service)"
@@ -1008,7 +1015,7 @@ msgstr ""
 "``operatorPubKey`` : la clé publique BLS générée ci-dessus (ou fournie "
 "par votre service d'hébergement de masternode)"
 
-#: ../../docs/user/masternodes/setup.rst:582
+#: ../../docs/user/masternodes/setup.rst:580
 msgid ""
 "``votingKeyAddr``: The new Dash address generated above, or the address "
 "of a delegate, used for proposal voting"
@@ -1017,7 +1024,7 @@ msgstr ""
 "bien l'adresse d'un délégué, utilisée pour le vote des propositions "
 "budgétaires"
 
-#: ../../docs/user/masternodes/setup.rst:584
+#: ../../docs/user/masternodes/setup.rst:582
 msgid ""
 "``operatorReward``: The percentage of the block reward allocated to the "
 "operator as payment"
@@ -1025,7 +1032,7 @@ msgstr ""
 "``operatorReward`` : le pourcentage de la récompense de bloc à allouer à "
 "l'opérateur en tant que paiement"
 
-#: ../../docs/user/masternodes/setup.rst:586
+#: ../../docs/user/masternodes/setup.rst:583
 msgid ""
 "``payoutAddress``: A new or existing Dash address to receive the owner's "
 "masternode rewards"
@@ -1033,7 +1040,7 @@ msgstr ""
 "``payoutAddress`` : une adresse Dash nouvelle ou déjà existante, où le "
 "propriétaire recevra les paiements de masternode"
 
-#: ../../docs/user/masternodes/setup.rst:588
+#: ../../docs/user/masternodes/setup.rst:584
 msgid ""
 "``feeSourceAddress``: An (optional) address used to fund ProTx fee. "
 "``payoutAddress`` will be used if not specified."
@@ -1042,7 +1049,7 @@ msgstr ""
 " frais de la transaction ProTx. Si elle n'est pas spécifiée, c'est "
 "l'adresse ``payoutAddress`` qui sera utilisée."
 
-#: ../../docs/user/masternodes/setup.rst:591
+#: ../../docs/user/masternodes/setup.rst:587
 msgid ""
 "Note that the operator is responsible for :ref:`specifying their own "
 "reward <dip3-update-service>` address in a separate ``update_service`` "
@@ -1055,17 +1062,17 @@ msgstr ""
 "``operatorReward`` différente de zéro. Le propriétaire de la caution du "
 "masternode ne spécifie pas lui-même l'adresse de paiement de l'opérateur."
 
-#: ../../docs/user/masternodes/setup.rst:597
+#: ../../docs/user/masternodes/setup.rst:593
 msgid "Example (remove line breaks if copying)::"
 msgstr "Exemple (effacez les sauts de ligne si vous le copiez) :"
 
-#: ../../docs/user/masternodes/setup.rst:610
-#: ../../docs/user/masternodes/setup.rst:639
-#: ../../docs/user/masternodes/setup.rst:666
+#: ../../docs/user/masternodes/setup.rst:606
+#: ../../docs/user/masternodes/setup.rst:635
+#: ../../docs/user/masternodes/setup.rst:662
 msgid "Output::"
 msgstr "Sortie :"
 
-#: ../../docs/user/masternodes/setup.rst:618
+#: ../../docs/user/masternodes/setup.rst:614
 msgid ""
 "Next we will use the ``collateralAddress`` and ``signMessage`` fields to "
 "sign the transaction, and the output of the ``tx`` field to submit the "
@@ -1075,11 +1082,11 @@ msgstr ""
 "``signMessage`` pour signer la transaction, et la sortie du champ ``tx`` "
 "pour soumettre la transaction au réseau."
 
-#: ../../docs/user/masternodes/setup.rst:623
+#: ../../docs/user/masternodes/setup.rst:619
 msgid "Sign the ProRegTx transaction"
 msgstr "Signer la transaction ProRegTx"
 
-#: ../../docs/user/masternodes/setup.rst:625
+#: ../../docs/user/masternodes/setup.rst:621
 msgid ""
 "We will now sign the content of the ``signMessage`` field using the "
 "private key for the collateral address as specified in "
@@ -1099,16 +1106,16 @@ msgstr ""
 "fonction de signature d'un portefeuille matériel. La commande a la "
 "syntaxe suivante :"
 
-#: ../../docs/user/masternodes/setup.rst:635
-#: ../../docs/user/masternodes/setup.rst:662
+#: ../../docs/user/masternodes/setup.rst:631
+#: ../../docs/user/masternodes/setup.rst:658
 msgid "Example::"
 msgstr "Exemple :"
 
-#: ../../docs/user/masternodes/setup.rst:645
+#: ../../docs/user/masternodes/setup.rst:641
 msgid "Submit the signed message"
 msgstr "Soumettre le message signé"
 
-#: ../../docs/user/masternodes/setup.rst:647
+#: ../../docs/user/masternodes/setup.rst:643
 msgid ""
 "We will now submit the ProRegTx special transaction to the blockchain to "
 "register the masternode. This command must be sent from a Dash Core "
@@ -1122,11 +1129,11 @@ msgstr ""
 "``feeSourceAddress`` ou à l'adresse ``payoutAddress``, car des frais de "
 "transaction standard seront prélevés. La commande a la syntaxe suivante :"
 
-#: ../../docs/user/masternodes/setup.rst:655
+#: ../../docs/user/masternodes/setup.rst:651
 msgid "Where:"
 msgstr "Où :"
 
-#: ../../docs/user/masternodes/setup.rst:657
+#: ../../docs/user/masternodes/setup.rst:653
 msgid ""
 "``tx``: The serialized transaction previously returned in the ``tx`` "
 "output field from the ``protx register_prepare`` command"
@@ -1134,7 +1141,7 @@ msgstr ""
 "``tx`` : la transaction sérialisée précédemment renvoyée dans le champ de"
 " sortie ``tx`` par la commande ``protx register_prepare``"
 
-#: ../../docs/user/masternodes/setup.rst:659
+#: ../../docs/user/masternodes/setup.rst:655
 msgid ""
 "``sig``: The message signed with the collateral key from the "
 "``signmessage`` command"
@@ -1142,7 +1149,7 @@ msgstr ""
 "``sig`` : le message signé avec la clé de la caution par la commande "
 "``signmessage``"
 
-#: ../../docs/user/masternodes/setup.rst:670
+#: ../../docs/user/masternodes/setup.rst:666
 msgid ""
 "Your masternode is now registered and will appear on the Deterministic "
 "Masternode List after the transaction is mined to a block. You can view "
@@ -1159,7 +1166,7 @@ msgstr ""
 "de la transaction finale ``protx register_submit`` identifie votre "
 "masternode."
 
-#: ../../docs/user/masternodes/setup.rst:677
+#: ../../docs/user/masternodes/setup.rst:673
 msgid ""
 "At this point you can go back to your terminal window and monitor your "
 "masternode by entering ``~/.dashcore/dash-cli masternode status`` or "
@@ -1170,11 +1177,11 @@ msgstr ""
 "masternode status``, ou bien en utilisant la fonction **Get status** "
 "(Voir l'état) dans DMT."
 
-#: ../../docs/user/masternodes/setup.rst:687
+#: ../../docs/user/masternodes/setup.rst:683
 msgid "Option 3: Registering from Dash Electrum wallet"
 msgstr "Option 3 : Enregistrement depuis le portefeuille logiciel Dash Electrum"
 
-#: ../../docs/user/masternodes/setup.rst:689
+#: ../../docs/user/masternodes/setup.rst:685
 msgid ""
 "Dash Electrum supports registering and managing masternodes. Details can "
 "be found on the :ref:`Electrum - Advanced Functions page <electrum-"
@@ -1189,7 +1196,7 @@ msgstr ""
 "multisig>` de Dash Electrum, la caution de masternode peut être stockée "
 "dans un portefeuille multisignature pour une sécurité encore plus grande."
 
-#: ../../docs/user/masternodes/setup.rst:696
+#: ../../docs/user/masternodes/setup.rst:692
 msgid ""
 "Always exercise caution when using multisig accounts and verify that each"
 " mnemonic is backed up appropriately. See `this page "
@@ -1197,4 +1204,16 @@ msgid ""
 " for the Dash Electrum documentation demonstrating how to configure a "
 "masternode using a multisig collateral."
 msgstr ""
+
+#~ msgid ""
+#~ "After v19 hard fork activation, ``protx"
+#~ " register_prepare_legacy`` must be used if"
+#~ " a legacy scheme BLS key is "
+#~ "being used to register a masternode. "
+#~ "It's recommended to instead generate a"
+#~ " new basic scheme BLS key where "
+#~ "possible. This can be done by "
+#~ "following the :ref:`Generate a BLS key"
+#~ " pair <bls-generation>` instructions."
+#~ msgstr ""
 

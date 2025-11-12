@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 10:59-0400\n"
+"POT-Creation-Date: 2025-11-12 12:46-0500\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: Alex.ys <silvershark.ys@gmail.com>, 2022\n"
 "Language: zh_CN\n"
@@ -478,7 +478,7 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:359
-#: ../../docs/user/masternodes/setup-testnet.rst:609
+#: ../../docs/user/masternodes/setup-testnet.rst:601
 msgid ""
 "At this point you can go back to your terminal window and monitor your "
 "masternode by entering ``dashmate status`` or using the **Get status** "
@@ -633,72 +633,72 @@ msgstr ""
 
 #: ../../docs/user/masternodes/setup-testnet.rst:495
 msgid ""
-"After v19 hard fork activation, ``protx register_prepare_legacy`` must be"
-" used if a legacy scheme BLS key is being used to register a masternode. "
-"It's recommended to instead generate a new basic scheme BLS key where "
-"possible. This can be done by following the :ref:`Generate a BLS key pair"
-" <testnet-bls-generation>` instructions."
+"Previously, ``protx register_prepare_legacy`` could be used to register a"
+" masternode with a legacy scheme BLS key. The legacy commands were "
+"deprecated as of Dash Core v23.0, so it is now recommended to generate a "
+"new basic scheme BLS key instead. This can be done by following the "
+":ref:`Generate a BLS key pair <bls-generation>` instructions."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:501
+#: ../../docs/user/masternodes/setup-testnet.rst:500
 msgid ""
 "Open a text editor such as notepad to prepare this command. Replace each "
 "argument to the command as follows:"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:504
+#: ../../docs/user/masternodes/setup-testnet.rst:503
 msgid ""
 "``collateralHash``: The txid of the 1000 Dash collateral funding "
 "transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:506
+#: ../../docs/user/masternodes/setup-testnet.rst:504
 msgid "``collateralIndex``: The output index of the 1000 Dash funding transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:508
+#: ../../docs/user/masternodes/setup-testnet.rst:505
 msgid ""
-"``ipAndPort``: Masternode IP address and port, in the format "
+"``coreP2PAddrs``: Array of masternode address(es), in the format "
 "``x.x.x.x:yyyy``"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:510
+#: ../../docs/user/masternodes/setup-testnet.rst:506
 msgid ""
 "``ownerKeyAddr``: The new Dash address generated above for the "
 "owner/voting address"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:512
+#: ../../docs/user/masternodes/setup-testnet.rst:507
 msgid ""
 "``operatorPubKey``: The BLS public key generated above (or provided by "
 "your hosting service)"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:514
+#: ../../docs/user/masternodes/setup-testnet.rst:508
 msgid ""
 "``votingKeyAddr``: The new Dash address generated above, or the address "
 "of a delegate, used for proposal voting"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:516
+#: ../../docs/user/masternodes/setup-testnet.rst:510
 msgid ""
 "``operatorReward``: The percentage of the block reward allocated to the "
 "operator as payment"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:518
+#: ../../docs/user/masternodes/setup-testnet.rst:511
 msgid ""
 "``payoutAddress``: A new or existing Dash address to receive the owner's "
 "masternode rewards"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:520
+#: ../../docs/user/masternodes/setup-testnet.rst:512
 msgid ""
 "``feeSourceAddress``: An (optional) address used to fund ProTx fee. "
 "``payoutAddress`` will be used if not specified."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:523
+#: ../../docs/user/masternodes/setup-testnet.rst:515
 msgid ""
 "Note that the operator is responsible for :ref:`specifying their own "
 "reward <dip3-update-service>` address in a separate ``update_service`` "
@@ -706,28 +706,28 @@ msgid ""
 "the masternode collateral does not specify the operator's payout address."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:529
+#: ../../docs/user/masternodes/setup-testnet.rst:521
 msgid "Example (remove line breaks if copying)::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:542
-#: ../../docs/user/masternodes/setup-testnet.rst:571
-#: ../../docs/user/masternodes/setup-testnet.rst:598
+#: ../../docs/user/masternodes/setup-testnet.rst:534
+#: ../../docs/user/masternodes/setup-testnet.rst:563
+#: ../../docs/user/masternodes/setup-testnet.rst:590
 msgid "Output::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:550
+#: ../../docs/user/masternodes/setup-testnet.rst:542
 msgid ""
 "Next we will use the ``collateralAddress`` and ``signMessage`` fields to "
 "sign the transaction, and the output of the ``tx`` field to submit the "
 "transaction."
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:555
+#: ../../docs/user/masternodes/setup-testnet.rst:547
 msgid "Sign the ProRegTx transaction"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:557
+#: ../../docs/user/masternodes/setup-testnet.rst:549
 msgid ""
 "We will now sign the content of the ``signMessage`` field using the "
 "private key for the collateral address as specified in "
@@ -738,16 +738,16 @@ msgid ""
 "function of a hardware wallet. The command takes the following syntax::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:567
-#: ../../docs/user/masternodes/setup-testnet.rst:594
+#: ../../docs/user/masternodes/setup-testnet.rst:559
+#: ../../docs/user/masternodes/setup-testnet.rst:586
 msgid "Example::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:577
+#: ../../docs/user/masternodes/setup-testnet.rst:569
 msgid "Submit the signed message"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:579
+#: ../../docs/user/masternodes/setup-testnet.rst:571
 msgid ""
 "We will now submit the ProRegTx special transaction to the blockchain to "
 "register the masternode. This command must be sent from a Dash Core "
@@ -756,23 +756,23 @@ msgid ""
 "command takes the following syntax::"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:587
+#: ../../docs/user/masternodes/setup-testnet.rst:579
 msgid "Where:"
 msgstr "其中："
 
-#: ../../docs/user/masternodes/setup-testnet.rst:589
+#: ../../docs/user/masternodes/setup-testnet.rst:581
 msgid ""
 "``tx``: The serialized transaction previously returned in the ``tx`` "
 "output field from the ``protx register_prepare`` command"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:591
+#: ../../docs/user/masternodes/setup-testnet.rst:583
 msgid ""
 "``sig``: The message signed with the collateral key from the "
 "``signmessage`` command"
 msgstr ""
 
-#: ../../docs/user/masternodes/setup-testnet.rst:602
+#: ../../docs/user/masternodes/setup-testnet.rst:594
 msgid ""
 "Your masternode is now registered and will appear on the Deterministic "
 "Masternode List after the transaction is mined to a block. You can view "
@@ -810,5 +810,23 @@ msgstr ""
 #~ "button **Test Hardware Wallet Connection** "
 #~ "to verify the Trezor connection is "
 #~ "working."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After v19 hard fork activation, ``protx"
+#~ " register_prepare_legacy`` must be used if"
+#~ " a legacy scheme BLS key is "
+#~ "being used to register a masternode. "
+#~ "It's recommended to instead generate a"
+#~ " new basic scheme BLS key where "
+#~ "possible. This can be done by "
+#~ "following the :ref:`Generate a BLS key"
+#~ " pair <testnet-bls-generation>` "
+#~ "instructions."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``ipAndPort``: Masternode IP address and "
+#~ "port, in the format ``x.x.x.x:yyyy``"
 #~ msgstr ""
 
