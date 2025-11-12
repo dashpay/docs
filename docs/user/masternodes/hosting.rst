@@ -53,7 +53,7 @@ Allnodes
 
 - Operated by: Sephiroth
 - Services: Monitoring, Hosting
-- Cost: from $4.50/month
+- Cost: from $9/month (for yearly payment)
 - `Site <https://www.allnodes.com/?utm_source=dashdocs&utm_medium=setup-guide>`__
 - `Email <info@allnodes.com>`__
 - `Twitter <https://twitter.com/allnodes>`__
@@ -73,7 +73,7 @@ https://dashmasternode.io
 
 - Operated by: splawik21 (Dash Core team member)
 - Services: Hosting
-- Cost: €25/month, paid in Dash
+- Cost: €27.5/month, paid in Dash
 - `Site <https://dashmasternode.io>`__
 - `Email <sidhosting@protonmail.com>`__
 
@@ -97,23 +97,6 @@ https://www.poolofstake.io
 - `Telegram <https://telegram.me/poolofstake>`__
 
 
-Staked
-------
-
-.. image:: img/staked.png
-   :width: 200px
-   :align: right
-   :target: https://staked.us
-
-https://staked.us
-
-- Operated by: Staked
-- Services: Hosting, Reporting
-- Cost: 10% of rewards
-- `Site <https://staked.us>`__
-- `Email <sales@staked.us>`__
-
-
 NodeHub.io
 ----------
 
@@ -126,32 +109,13 @@ https://nodehub.io
 
 - Operated by: NodeHub LLC
 - Services: Hosting, Governance, Stats, Monitoring
-- Cost: $3.90/month (charged daily at $0.13)
+- Cost: from $3.90/month (charged daily at $0.13)
 - Accepts DASH as payment
 - `Site <https://nodehub.io?utm_source=dashpay-docs&utm_medium=hosting-services>`__
 - `Email <hello@nodehub.io>`__
 - `X <https://x.com/nodehubio>`__
 - `Telegram <https://t.me/nodehub>`__
 - `Discord <https://discord.com/invite/vvm6sem>`__
-
-
-Gentarium
----------
-
-.. image:: img/gentarium.svg
-   :width: 200px
-   :align: right
-   :target: https://mn.gtmcoin.io
-
-https://mn.gtmcoin.io
-
-- Operated by: Gentarium International OÜ
-- Services: Hosting, Shares
-- Cost: $3.99/month (charged daily at $0.15)
-- `Site <https://mn.gtmcoin.io>`__
-- `Email <info@gtmcoin.io>`__
-- `Twitter <https://twitter.com/GTM_Gentarium>`__
-- `Discord <https://discord.com/invite/vErwUSC>`__
 
 
 Masternodehosting
