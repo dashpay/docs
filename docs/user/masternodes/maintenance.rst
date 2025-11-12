@@ -121,8 +121,7 @@ Where:
 
 .. note::
   
-  As of Dash Core v23.0, the ``coreP2PAddrs`` field accepts
-  backwards-compatible input.
+  As of Dash Core v23.0, the ``coreP2PAddrs`` field accepts backwards-compatible input.
 
 
 - ``proTxHash``: The transaction id of the initial ProRegTx
@@ -162,8 +161,10 @@ button, or from Dash Core using the following syntax::
 
 Where:
 
-  As of Dash Core v23.0, ``coreP2PAddrs``, ``platformP2PAddrs``, and
-  ``platformHTTPSAddrs`` fields accept backwards-compatible input.
+.. note::
+  
+  As of Dash Core v23.0, ``coreP2PAddrs``, ``platformP2PAddrs``, and ``platformHTTPSAddrs``
+  fields accept backwards-compatible input.
 
 - ``proTxHash``: The transaction id of the initial ProRegTx
 - ``coreP2PAddrs``: Array of masternode address(es), in the format 
