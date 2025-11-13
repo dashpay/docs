@@ -217,17 +217,6 @@ closes and you receive your payout. You can also submit the ID to
 DashCentral to claim your proposal and enable simplified voting for
 masternodes using DashCentral voting services.
 
-DashCentral Proposal Generator
-------------------------------
-
-- https://www.dashcentral.org/budget/create
-
-DashCentral also includes a tool to create budget proposals, or claim
-existing proposals so you can add a description on DashCentral and begin
-discussion with the community. The steps to be taken are almost
-identical to the procedure described above, and documentation is
-available `here <https://www.dashcentral.org/about/contact>`_.
-
 Dash Core Wallet
 ----------------
 
