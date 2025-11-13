@@ -140,82 +140,13 @@ You can view the source code for this calculation at this
 Creating proposals
 ==================
 
-Once you have prepared the text of your proposal and set up a website or
-forum post, it is time to submit your proposal to the blockchain for
-voting. While all tasks involved with creating a budget proposal can be
-executed from the Dash Core wallet console, several tools providing a
-user interface have been developed to simplify this procedure.
+Once you have prepared the text of your proposal and set up a website or forum post, it is time to
+submit your proposal to the blockchain for voting. While all tasks involved with creating a budget
+proposal can be executed from the Dash Core wallet (:ref:`GUI <proposal-create-core-qt>` or
+:ref:`console <proposal-create-core-console>`) or the :ref:`Dash Budget Proposal Generator
+<dash-budget-proposal-generator>`.
 
-Dash Budget Proposal Generator
-------------------------------
-
-- https://proposal.dash.org
-
-The `Dash Budget Proposal Generator <https://proposal.dash.org>`__
-supports creating budget proposals on both mainnet and testnet. In the
-first step, you must enter a short, clear and unique name for the
-proposal as it will appear on the blockchain. Proposal names are limited
-to 40 characters. You can then provide a link to the forum or
-DashCentral where your proposal is described in more detail (use a `URL
-shortening service <https://bitly.com>`_ if necessary), as well as
-select the amount of payment you are requesting, how often the payment
-should occur, and the superblock date on which you are requesting
-payment. This allows you to control in which budget period your proposal
-will appear, and gives you enough time to build support for your
-proposal by familiarising voters with your project. Note that the
-payment amount is fixed and cannot be modified after it has been
-submitted to the blockchain.
-
-.. figure:: img/proposal-create.png
-   :width: 300px
-
-.. figure:: img/proposal-burn-prepare.png
-   :width: 300px
-
-   Steps 1 & 2: Creating your proposal and preparing the command
-
-Next, the proposal generator will provide you with a command to run from
-the console of your Dash Core wallet to prepare your budget proposal
-governance object. Running this command will cost you 1 DASH, which will
-be "burnt" or permanently removed from circulation. This one-time fee
-protects the governance system from becoming overwhelmed by spam, poorly
-thought out proposals or users not acting in good faith. A small
-transaction fee is charged as well, so make sure slightly more than 5
-DASH is available in your wallet. Many budget proposals request
-reimbursement of the 1 DASH fee.
-
-First unlock your wallet by clicking **Settings > Unlock wallet**, then
-open the console by clicking **Window > Console** and paste the
-generated command. The transaction ID will appear. Copy and paste this
-into the proposal generator response window. As soon as you do this, the
-system will show a progress bar as it waits for 6 confirmations as
-follows:
-
-.. figure:: img/proposal-burn-console.png
-   :width: 300px
-
-.. figure:: img/proposal-burn-confirming.png
-   :width: 250px
-
-   Step 3: Creating the proposal transaction and waiting for 6 
-   confirmations of the transaction ID
-
-Once 6 block confirmations exist, another command will appear to submit
-the prepared governance object to the network for voting. Copy and paste
-this command, and your governance object ID will appear as follows:
-
-.. figure:: img/proposal-submit.png
-   :width: 300px
-
-.. figure:: img/proposal-submit-console.png
-   :width: 250px
-
-   Step 4: Submitting the governance object to the network
-
-You can use this ID to track voting on the proposal until the budget
-closes and you receive your payout. You can also submit the ID to
-DashCentral to claim your proposal and enable simplified voting for
-masternodes using DashCentral voting services.
+.. _proposal-create-core-qt:
 
 Dash Core Wallet
 ----------------
@@ -344,6 +275,81 @@ voting on the proposal.
 
    You can submit your proposal ID to DashCentral to claim ownership and enable simplified voting
    for masternodes using DashCentral voting services.
+
+.. _dash-budget-proposal-generator:
+
+Dash Budget Proposal Generator
+------------------------------
+
+- https://proposal.dash.org
+
+The `Dash Budget Proposal Generator <https://proposal.dash.org>`__
+supports creating budget proposals on both mainnet and testnet. In the
+first step, you must enter a short, clear and unique name for the
+proposal as it will appear on the blockchain. Proposal names are limited
+to 40 characters. You can then provide a link to the forum or
+DashCentral where your proposal is described in more detail (use a `URL
+shortening service <https://bitly.com>`_ if necessary), as well as
+select the amount of payment you are requesting, how often the payment
+should occur, and the superblock date on which you are requesting
+payment. This allows you to control in which budget period your proposal
+will appear, and gives you enough time to build support for your
+proposal by familiarising voters with your project. Note that the
+payment amount is fixed and cannot be modified after it has been
+submitted to the blockchain.
+
+.. figure:: img/proposal-create.png
+   :width: 300px
+
+.. figure:: img/proposal-burn-prepare.png
+   :width: 300px
+
+   Steps 1 & 2: Creating your proposal and preparing the command
+
+Next, the proposal generator will provide you with a command to run from
+the console of your Dash Core wallet to prepare your budget proposal
+governance object. Running this command will cost you 1 DASH, which will
+be "burnt" or permanently removed from circulation. This one-time fee
+protects the governance system from becoming overwhelmed by spam, poorly
+thought out proposals or users not acting in good faith. A small
+transaction fee is charged as well, so make sure slightly more than 5
+DASH is available in your wallet. Many budget proposals request
+reimbursement of the 1 DASH fee.
+
+First unlock your wallet by clicking **Settings > Unlock wallet**, then
+open the console by clicking **Window > Console** and paste the
+generated command. The transaction ID will appear. Copy and paste this
+into the proposal generator response window. As soon as you do this, the
+system will show a progress bar as it waits for 6 confirmations as
+follows:
+
+.. figure:: img/proposal-burn-console.png
+   :width: 300px
+
+.. figure:: img/proposal-burn-confirming.png
+   :width: 250px
+
+   Step 3: Creating the proposal transaction and waiting for 6 
+   confirmations of the transaction ID
+
+Once 6 block confirmations exist, another command will appear to submit
+the prepared governance object to the network for voting. Copy and paste
+this command, and your governance object ID will appear as follows:
+
+.. figure:: img/proposal-submit.png
+   :width: 300px
+
+.. figure:: img/proposal-submit-console.png
+   :width: 250px
+
+   Step 4: Submitting the governance object to the network
+
+You can use this ID to track voting on the proposal until the budget
+closes and you receive your payout. You can also submit the ID to
+DashCentral to claim your proposal and enable simplified voting for
+masternodes using DashCentral voting services.
+
+.. _proposal-create-core-console:
 
 Dash Core Wallet Console
 ------------------------
