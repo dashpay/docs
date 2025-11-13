@@ -58,7 +58,7 @@ Object structure
 
 The following information is required to create a proposal:
 
-- proposal-name: a unique label, 20 characters or less
+- proposal-name: a unique label, 40 characters or less
 - url: a proposer-created webpage or forum post containing detailed
   proposal information
 - payment-count: how many cycles the proposal is requesting payment
@@ -300,7 +300,7 @@ proposal** to create the fee transaction.
 
    Proposal collateral burn preparation screen
 
-Click **Yes** on the confirmation dialoag to broadcast the collateral transaction.
+Click **Yes** on the confirmation dialog to broadcast the collateral transaction.
 
 .. figure:: img/core-qt/proposal-burn-fee-notice.png
    :width: 300px
