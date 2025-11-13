@@ -220,6 +220,9 @@ wallet in the following section.
 .. figure:: img/windows/dash-name-wallet.png
    :width: 300px
 
+Setting your password
+^^^^^^^^^^^^^^^^^^^^^
+
 If you do choose to encrypt now, you will be asked to enter and verify a password.
 
 .. figure:: img/windows/dash-encrypt-wallet.png
@@ -233,6 +236,50 @@ Following that, you will get a standard warning.
    :width: 350px
 
    Confirm you want to encrypt your wallet
+
+Backing up your mnemonic
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Dash Core will display your mnemonic phrase (also called a recovery phrase) for all wallets
+(encrypted or not). This phrase can be used to restore your wallet if you lose access to your
+device.
+
+.. warning::
+
+   **CRITICAL**: If you lose your mnemonic seed phrase, you will permanently lose access to your
+   wallet and all funds. Write it down on paper (not digitally) and store it in a safe, secure
+   location. Never share your mnemonic with anyone.
+
+.. figure:: img/linux/dash-mnemonic-save.png
+   :width: 400px
+
+   Mnemonic phrase backup prompt
+
+Click the **Show** button to reveal your mnemonic phrase. Then, write down all the words in order
+and check the "I have written down my mnemonic" checkbox to continue.
+
+.. figure:: img/linux/dash-mnemonic-save-show.png
+   :width: 400px
+
+   Revealing the mnemonic phrase
+
+Dash Core will then ask you to verify that you correctly saved the phrase by entering specific words
+from your mnemonic. Enter the requested words to confirm you have properly saved your mnemonic
+phrase. 
+
+As you enter each word correctly, a green checkmark will appear beside it. Once you have
+successfully verified your mnemonic, click **Continue** to complete the wallet creation process.
+
+
+.. figure:: img/linux/dash-mnemonic-save-confirm.png
+   :width: 400px
+
+   Mnemonic verification
+
+.. note::
+
+   For more information about HD wallets and how to view or restore your mnemonic phrase later, see
+   the :hoverxref:`advanced topics section <dashcore-hd>`.
 
 The following section will detail the steps you need to follow if you 
 choose to encrypt your Dash wallet later.
