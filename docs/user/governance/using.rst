@@ -228,6 +228,134 @@ discussion with the community. The steps to be taken are almost
 identical to the procedure described above, and documentation is
 available `here <https://www.dashcentral.org/about/contact>`_.
 
+Dash Core Wallet
+----------------
+
+Dash Core Wallet includes a built-in graphical interface for creating governance proposals directly
+from the Governance tab. This provides a user-friendly alternative to using external web tools or
+manual console commands. To use this feature, your wallet must be unlocked and contain sufficient
+balance to cover the 1 DASH proposal fee plus a small transaction fee.
+
+Accessing the Governance tab
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Open your Dash Core Wallet and click on the **Governance** tab. This displays a list of existing
+proposals and provides a **Create Proposal** button in the upper right corner.
+
+.. figure:: img/core-qt/governance-tab.png
+   :width: 500px
+
+   The Governance tab showing existing proposals and the Create Proposal button
+
+Creating a new proposal
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Click the **Create Proposal** button to open the proposal creation dialog. Enter your proposal
+details:
+
+- **Proposal name**: A unique identifier
+- **URL**: Link to detailed proposal information (use a URL shortener if needed)
+- **Payment address**: The Dash address that will receive payments
+- **Payment amount**: Amount requested per payment cycle
+- **First payment date**: Select the superblock date for the first payment
+- **# of payments**: Number of payment cycles requested
+
+The dialog displays the total amount requested and notes the 1 DASH proposal fee that will be
+burned. Click **Next** when all fields are complete.
+
+.. figure:: img/core-qt/proposal-create.png
+   :width: 350px
+
+   Entering proposal details in the creation dialog
+
+Validating the proposal
+^^^^^^^^^^^^^^^^^^^^^^^
+
+The wallet will generate and display your proposal data in JSON format along with the proposal hash.
+Review the information carefully to ensure accuracy.
+
+Click **Validate** to check the format of the proposal data. If the data is valid, click **Next** to
+proceed to the next step. Otherwise, click **Back** to adjust your proposal data.
+
+.. figure:: img/core-qt/proposal-validate.png
+   :width: 400px
+
+   Validating the proposal JSON and hash
+
+Preparing the collateral
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. warning::
+
+   The following step will create a transaction burning 1 DASH as the proposal submission fee. This
+   transaction is irreversible once broadcast. Verify all proposal details are correct before
+   proceeding.
+
+After validation, you will see a screen prompting you to prepare and burn the 1 DASH collateral fee.
+This fee is required to prevent spam and is permanently removed from circulation. Click **Prepare
+proposal** to create the fee transaction.
+
+.. figure:: img/core-qt/proposal-prepare-burn.png
+   :width: 350px
+
+   Proposal collateral burn preparation screen
+
+Click **Yes** on the confirmation dialoag to broadcast the collateral transaction.
+
+.. figure:: img/core-qt/proposal-burn-fee-notice.png
+   :width: 300px
+
+   Confirmation dialog for burning the proposal fee
+
+The transaction ID will be generated and displayed in the TxID field.
+
+.. figure:: img/core-qt/proposal-prepare-burned.png
+   :width: 350px
+
+   Transaction ID generated for the proposal collateral
+
+Waiting for confirmations
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The wallet will display the confirmation progress for your collateral transaction. One confirmation
+is required before you can submit the proposal to the network. After the first confirmation, click
+the **Next** button to move to the proposal submission screen.
+
+.. figure:: img/core-qt/proposal-prepare-burned-conf-wait.png
+   :width: 350px
+
+   Waiting for confirmations (1 of 6)
+
+Submitting the proposal
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Click **Submit Proposal** to broadcast your governance object to the network.
+
+.. figure:: img/core-qt/proposal-submit-awaiting.png
+   :width: 350px
+
+   Submitting proposal with 5 of 6 confirmations
+
+If successful, a message will be displayed with your proposal ID. Click **OK** to close the message.
+
+.. figure:: img/core-qt/proposal-submitted-conf.png
+   :width: 300px
+
+   Proposal successfully submitted to the network
+
+The proposal ID will also be shown on the submission screen. The proposal ID can be used to track
+voting on the proposal.
+
+.. figure:: img/core-qt/proposal-submitted.png
+   :width: 350px
+
+   Proposal submitted with proposal ID shown
+
+.. note::
+
+   You can submit your proposal ID to DashCentral to claim ownership and enable simplified voting
+   for masternodes using DashCentral voting services.
+
 Dash Core Wallet Console
 ------------------------
 
