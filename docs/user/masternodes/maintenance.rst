@@ -172,7 +172,7 @@ Where:
 - ``operatorKey``: The operator BLS private key associated with the
   registered operator public key
 - ``platformNodeId``: The Platform node ID derived from Platform P2P public key.
-- ``platformP2PAddrs``: Array of addresses in the form "ADDR:PORT" used by Platform for peer-to-peer connection (must include 26656 for mainnet). Must be unique on the network..
+- ``platformP2PAddrs``: Array of addresses in the form "ADDR:PORT" used by Platform for peer-to-peer connection (must include 26656 for mainnet). Must be unique on the network.
 - ``platformHTTPSAddrs``: Array of addresses in the form "ADDR:PORT" used by Platform for their HTTPS API (must include 443 for mainnet). Must be unique on the network.
 - ``operatorPayoutAddress`` (optional): The address used for operator 
   reward payments. Only allowed when the ProRegTx had a non-zero 
