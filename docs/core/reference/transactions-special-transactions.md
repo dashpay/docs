@@ -46,24 +46,27 @@ The special transaction type is 1 and the extra payload consists of the followin
 
 | Bytes | Name | Data type |  Description |
 | ---------- | ----------- | -------- | -------- |
-| 2 | version | uint_16 | Provider transaction version number. Currently set to 1.  Updated to 2 after v19 hard fork.
+| 2 | version | uint_16 | Provider transaction version number.<br>**Version 1** - Legacy BLS scheme<br>**Version 2** - Basic BLS scheme (after v19 hard fork)<br>**Version 3** - Extended addresses with basic BLS scheme (after v24 hard fork activation)
 | 2 | type | uint_16 | Masternode type. Default set to 0.
 | 2 | mode | uint_16 | Masternode mode. Default set to 0.
 | 36 | collateralOutpoint | COutpoint | The collateral outpoint.<br>**Note:** The hash will be null if the collateral is part of this transaction, otherwise it will reference an existing collateral.
-| 16 | ipAddress | byte[] | IPv6 address in network byte order. Only IPv4 mapped addresses are allowed (to be extended in the future)
-| 2 | port | uint_16 | Port (network byte order)
+| 16 | ipAddress | byte[] | ***Version < 3 only***<br>IPv6 address in network byte order. Only IPv4 mapped addresses are allowed (to be extended in the future)<br>**Replaced by netInfo in version 3**
+| 2 | port | uint_16 | ***Version < 3 only***<br>Port (network byte order)<br>**Replaced by netInfo in version 3**
+| Variable | netInfo | NetInfo | ***Version 3 and later***<br>Extended network address information containing Core P2P addresses and optionally Platform P2P/HTTPS addresses. See [Extended Addresses](#extended-addresses) for details.
 | 20 | KeyIdOwner | CKeyID | The public key hash used for owner related signing (ProTx updates, governance voting)
-| 48 | PubKeyOperator | CBLSPublicKey | The BLS public key used for operational related signing (network messages, ProTx updates).<br>**Note**: serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2 - basic BLS scheme
+| 48 | PubKeyOperator | CBLSPublicKey | The BLS public key used for operational related signing (network messages, ProTx updates).<br>**Note**: serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2+ - basic BLS scheme
 | 20 | KeyIdVoting | CKeyID | The public key hash used for voting.
 | 2 | operatorReward | uint_16 | A value from 0 to 10000.
 | 1-9 | scriptPayoutSize | compactSize uint | Size of the Payee Script.
 | Variable | scriptPayout | Script | Payee script (p2pkh/p2sh)
 | 32 | inputsHash | uint256 | Hash of all the outpoints of the transaction inputs
-| 0 or 20 | platformNodeID | byte[] | ***Added by ProRegTx version 2 in Dash Core 19.0.0***<br>Dash Platform P2P node ID, derived from P2P public key. Only present for masternode type 1.
-| 0 or 2 | platformP2PPort | uint_16 | ***Added by ProRegTx version 2 in Dash Core 19.0.0***<br>TCP port of Dash Platform peer-to-peer communication between nodes (network byte order). Only present for masternode type 1.
-| 0 or 2 | platformHTTPPort | uint_16 | ***Added by ProRegTx version 2 in Dash Core 19.0.0***<br>TCP port of Platform HTTP/API interface (network byte order). Only present for masternode type 1.
+| 0 or 20 | platformNodeID | byte[] | ***Version 2 only***<br>Dash Platform P2P node ID, derived from P2P public key. Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
+| 0 or 2 | platformP2PPort | uint_16 | ***Version 2 only***<br>TCP port of Dash Platform peer-to-peer communication between nodes (network byte order). Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
+| 0 or 2 | platformHTTPPort | uint_16 | ***Version 2 only***<br>TCP port of Platform HTTP/API interface (network byte order). Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
 | 1-9 | payloadSigSize |compactSize uint | Size of the Signature
 | Variable | payloadSig | vector | Signature of the hash of the ProTx fields. Signed with the key corresponding to the collateral outpoint in case the collateral is not part of the ProRegTx itself, empty otherwise.
+
+**Note**: The examples below show version 1 (legacy BLS) transactions. Version 3 transactions with extended addresses have a similar structure but replace the `ipAddress` and `port` fields with a `netInfo` structure, and platform-specific fields are included within the netInfo rather than as separate fields.
 
 The following annotated hexdump shows a ProRegTx transaction referencing an existing collateral. (Parts of the classical transaction section have been omitted.)
 
@@ -279,19 +282,22 @@ The special transaction type used for ProUpServTx Transactions is 2 and the extr
 
 | Bytes | Name | Data type |  Description |
 | ---------- | ----------- | -------- | -------- |
-| 2 | version | uint_16 | ProUpServTx version number. Currently set to 1. Updated to 2 after Dash Core 19.0.0 hard fork.
-| 2 | type | uint_16 | ***Added by ProUpServTx version 2 in Dash Core 19.0.0***<br>Masternode type
+| 2 | version | uint_16 | ProUpServTx version number.<br>**Version 1** - Legacy BLS scheme<br>**Version 2** - Basic BLS scheme with type field (after v19 hard fork)<br>**Version 3** - Extended addresses with basic BLS scheme (after v24 hard fork activation)
+| 2 | type | uint_16 | ***Version 2 and later***<br>Masternode type
 | 32 | proTXHash | uint256 | The hash of the initial ProRegTx
-| 16 | ipAddress | byte[] | IPv6 address in network byte order. Only IPv4 mapped addresses are allowed (to be extended in the future)
-| 2 | port | uint_16 | Port (network byte order)
+| 16 | ipAddress | byte[] | ***Version < 3 only***<br>IPv6 address in network byte order. Only IPv4 mapped addresses are allowed (to be extended in the future)<br>**Replaced by netInfo in version 3**
+| 2 | port | uint_16 | ***Version < 3 only***<br>Port (network byte order)<br>**Replaced by netInfo in version 3**
+| Variable | netInfo | NetInfo | ***Version 3 and later***<br>Extended network address information containing Core P2P addresses and optionally Platform P2P/HTTPS addresses. See [Extended Addresses](#extended-addresses) for details.
 | 1-9 | scriptOperator<br>PayoutSize | compactSize uint | Size of the Operator Payee Script.
 | Variable | scriptOperator<br>Payout | Script | Operator Payee script (p2pkh/p2sh)
 | 32 | inputsHash | uint256 | Hash of all the outpoints of the transaction inputs
-| 0 or 20 | platformNodeID | byte[] | ***Added by ProUpServTx version 2 in Dash Core 19.0.0***<br>Dash Platform P2P node ID, derived from P2P public key. Only present for masternode type 1.
-| 0 or 2 | platformP2PPort | uint_16 | ***Added by ProUpServTx version 2 in Dash Core 19.0.0***<br>TCP port of Dash Platform peer-to-peer communication between nodes (network byte order). Only present for masternode type 1.
-| 0 or 2 | platformHTTPPort | uint_16 | ***Added by ProUpServTx version 2 in Dash Core 19.0.0***<br>TCP port of Platform HTTP/API interface (network byte order). Only present for masternode type 1.
+| 0 or 20 | platformNodeID | byte[] | ***Version 2 only***<br>Dash Platform P2P node ID, derived from P2P public key. Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
+| 0 or 2 | platformP2PPort | uint_16 | ***Version 2 only***<br>TCP port of Dash Platform peer-to-peer communication between nodes (network byte order). Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
+| 0 or 2 | platformHTTPPort | uint_16 | ***Version 2 only***<br>TCP port of Platform HTTP/API interface (network byte order). Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
 | 1-9 | payloadSigSize |compactSize uint | Size of the Signature<br>**Note:** not present in BLS implementation
-| 96 | payloadSig | vector | BLS Signature of the hash of the ProUpServTx fields. Signed by the Operator.<br>**Note**:  serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2 - basic BLS scheme
+| 96 | payloadSig | vector | BLS Signature of the hash of the ProUpServTx fields. Signed by the Operator.<br>**Note**:  serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2+ - basic BLS scheme
+
+**Note**: The examples below show version 1 (legacy BLS) transactions. Version 3 transactions with extended addresses have a similar structure but replace the `ipAddress` and `port` fields with a `netInfo` structure, and platform-specific fields are included within the netInfo rather than as separate fields.
 
 The following annotated hexdump shows a ProUpServTx transaction. (Parts of the
 classical transaction section have been omitted.)
@@ -419,10 +425,10 @@ The special transaction type is 3 and the extra payload consists of the followin
 
 | Bytes | Name | Data type |  Description |
 | ---------- | ----------- | -------- | -------- |
-| 2 | version | uint_16 | Provider update registrar transaction version number. Currently set to 1. Updated to 2 after Dash Core 19.0.0 hard fork.
+| 2 | version | uint_16 | Provider update registrar transaction version number.<br>**Version 1** - Legacy BLS scheme<br>**Version 2** - Basic BLS scheme (after v19 hard fork)<br>**Version 3** - Basic BLS scheme (after v24 hard fork activation)
 | 32 | proTXHash | uint256 | The hash of the initial ProRegTx
 | 2 | mode | uint_16 | Masternode mode. Default set to 0.
-| 48 | PubKeyOperator | CBLSPublicKey | The BLS public key used for operational related signing (network messages, ProTx updates).<br>**Note**: serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2 - basic BLS scheme
+| 48 | PubKeyOperator | CBLSPublicKey | The BLS public key used for operational related signing (network messages, ProTx updates).<br>**Note**: serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2+ - basic BLS scheme
 | 20 | KeyIdVoting | CKeyID | The public key hash used for voting.
 | 1-9 | scriptPayoutSize | compactSize uint | Size of the Payee Script.
 | Variable | scriptPayout | Script | Payee script (p2pkh/p2sh)
@@ -564,12 +570,12 @@ The special transaction type used for ProUpServTx Transactions is 4 and the extr
 
 | Bytes | Name | Data type |  Description |
 | ---------- | ----------- | -------- | -------- |
-| 2 | version | uint_16 | ProUpRevTx version number. Currently set to 1.  Updated to 2 after Dash Core 19.0.0 hard fork.
+| 2 | version | uint_16 | ProUpRevTx version number.<br>**Version 1** - Legacy BLS scheme<br>**Version 2** - Basic BLS scheme (after v19 hard fork)<br>**Version 3** - Basic BLS scheme (after v24 hard fork activation)<br>**Note**: The `protx revoke` RPC automatically uses the appropriate version based on the masternode's BLS scheme.
 | 32 | proTXHash | uint256 | The hash of the initial ProRegTx
 | 2 | reason | uint_16 | The reason for revoking the key.<br>`0` - Not specified<br>`1` - Termination of Service<br>`2` - Compromised Key<br>`3` - Change of key
 | 32 | inputsHash | uint256 | Hash of all the outpoints of the transaction inputs
 | 1-9 | payloadSigSize |compactSize uint | Size of the Signature<br>**Note:** not present in BLS implementation
-| 96 | payloadSig | vector | BLS Signature of the hash of the ProUpServTx fields. Signed by the Operator.<br>**Note**:  serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2 - basic BLS scheme
+| 96 | payloadSig | vector | BLS Signature of the hash of the ProUpRevTx fields. Signed by the Operator.<br>**Note**:  serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2+ - basic BLS scheme
 
 The following annotated hexdump shows a ProUpRevTx transaction. (Parts of the classical transaction section have been omitted.)
 
