@@ -52,7 +52,7 @@ The special transaction type is 1 and the extra payload consists of the followin
 | 36 | collateralOutpoint | COutpoint | The collateral outpoint.<br>**Note:** The hash will be null if the collateral is part of this transaction, otherwise it will reference an existing collateral.
 | 16 | ipAddress | byte[] | ***Version < 3 only***<br>IPv6 address in network byte order. Only IPv4 mapped addresses are allowed (to be extended in the future)<br>**Replaced by netInfo in version 3**
 | 2 | port | uint_16 | ***Version < 3 only***<br>Port (network byte order)<br>**Replaced by netInfo in version 3**
-| Variable | netInfo | NetInfo | ***Version 3 and later***<br>Extended network address information containing Core P2P addresses and optionally Platform P2P/HTTPS addresses. See [Extended Addresses](#extended-addresses) for details.
+| Variable | netInfo | byte[] | ***Version 3 and later***<br>Network address information structure. See [NetInfo Structure](#netinfo-structure) for details.
 | 20 | KeyIdOwner | CKeyID | The public key hash used for owner related signing (ProTx updates, governance voting)
 | 48 | PubKeyOperator | CBLSPublicKey | The BLS public key used for operational related signing (network messages, ProTx updates).<br>**Note**: serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2+ - basic BLS scheme
 | 20 | KeyIdVoting | CKeyID | The public key hash used for voting.
@@ -65,6 +65,15 @@ The special transaction type is 1 and the extra payload consists of the followin
 | 0 or 2 | platformHTTPPort | uint_16 | ***Version 2 only***<br>TCP port of Platform HTTP/API interface (network byte order). Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
 | 1-9 | payloadSigSize |compactSize uint | Size of the Signature
 | Variable | payloadSig | vector | Signature of the hash of the ProTx fields. Signed with the key corresponding to the collateral outpoint in case the collateral is not part of the ProRegTx itself, empty otherwise.
+
+### NetInfo Structure
+
+The `netInfo` field contains the following structure:
+
+| Bytes | Name | Data type | Description |
+|-------|------|-----------|-------------|
+| 1 | version | uint8 | NetInfo format version (currently 1)
+| Variable | purposeMap | Map | Map of purpose IDs to address lists. Each purpose can contain up to 4 address entries:<br>• Purpose 0 (CORE_P2P): Core network P2P addresses (required)<br>• Purpose 1 (PLATFORM_P2P): Platform P2P addresses (EvoNodes only)<br>• Purpose 2 (PLATFORM_HTTPS): Platform HTTPS/API addresses (EvoNodes only)<br><br>Each address entry contains:<br>• 1 byte type: 0x01 (Service/IP+port) or 0x02 (Domain+port)<br>• Variable address data: CService or DomainPort
 
 **Note**: The examples below show version 1 (legacy BLS) transactions. Version 3 transactions with extended addresses have a similar structure but replace the `ipAddress` and `port` fields with a `netInfo` structure, and platform-specific fields are included within the netInfo rather than as separate fields.
 
@@ -287,7 +296,7 @@ The special transaction type used for ProUpServTx Transactions is 2 and the extr
 | 32 | proTXHash | uint256 | The hash of the initial ProRegTx
 | 16 | ipAddress | byte[] | ***Version < 3 only***<br>IPv6 address in network byte order. Only IPv4 mapped addresses are allowed (to be extended in the future)<br>**Replaced by netInfo in version 3**
 | 2 | port | uint_16 | ***Version < 3 only***<br>Port (network byte order)<br>**Replaced by netInfo in version 3**
-| Variable | netInfo | NetInfo | ***Version 3 and later***<br>Extended network address information containing Core P2P addresses and optionally Platform P2P/HTTPS addresses. See [Extended Addresses](#extended-addresses) for details.
+| Variable | netInfo | NetInfo | ***Version 3 and later***<br>Network address information structure. See [NetInfo Structure](#proregtx) for details.
 | 1-9 | scriptOperator<br>PayoutSize | compactSize uint | Size of the Operator Payee Script.
 | Variable | scriptOperator<br>Payout | Script | Operator Payee script (p2pkh/p2sh)
 | 32 | inputsHash | uint256 | Hash of all the outpoints of the transaction inputs
