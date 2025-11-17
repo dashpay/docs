@@ -296,7 +296,7 @@ The special transaction type used for ProUpServTx Transactions is 2 and the extr
 | 32 | proTXHash | uint256 | The hash of the initial ProRegTx
 | 16 | ipAddress | byte[] | ***Version < 3 only***<br>IPv6 address in network byte order. Only IPv4 mapped addresses are allowed (to be extended in the future)<br>**Replaced by netInfo in version 3**
 | 2 | port | uint_16 | ***Version < 3 only***<br>Port (network byte order)<br>**Replaced by netInfo in version 3**
-| Variable | netInfo | NetInfo | ***Version 3 and later***<br>Network address information structure. See [NetInfo Structure](#proregtx) for details.
+| Variable | netInfo | NetInfo | ***Version 3 and later***<br>Network address information structure. See [NetInfo Structure](#netinfo-structure) for details.
 | 1-9 | scriptOperator<br>PayoutSize | compactSize uint | Size of the Operator Payee Script.
 | Variable | scriptOperator<br>Payout | Script | Operator Payee script (p2pkh/p2sh)
 | 32 | inputsHash | uint256 | Hash of all the outpoints of the transaction inputs
