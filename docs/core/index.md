@@ -155,7 +155,7 @@ SDK Resources <https://docs.dash.org/en/stable/docs/user/developers/integration-
 Dash Improvement Proposals <dips/README>
 Dash Whitepaper <https://docs.dash.org/en/stable/introduction/about.html#whitepaper>
 Bitcoin Whitepaper <https://bitcoin.org/bitcoin.pdf>
-Previous Version of Docs <https://docs.dash.org/projects/core/en/21.0.0/docs/index.html>
+Previous Version of Docs <https://docs.dash.org/projects/core/en/22.0.0/docs/index.html>
 ```
 
 Questions about Dash development are best asked in one of the [Dash development
