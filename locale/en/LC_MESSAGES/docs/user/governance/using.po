@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-19 12:15-0500\n"
+"POT-Creation-Date: 2025-11-18 11:30-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -142,7 +142,7 @@ msgid "The following information is required to create a proposal:"
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:61
-msgid "proposal-name: a unique label, 20 characters or less"
+msgid "proposal-name: a unique label, 40 characters or less"
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:62
@@ -359,19 +359,218 @@ msgid ""
 "Once you have prepared the text of your proposal and set up a website or "
 "forum post, it is time to submit your proposal to the blockchain for "
 "voting. While all tasks involved with creating a budget proposal can be "
-"executed from the Dash Core wallet console, several tools providing a "
-"user interface have been developed to simplify this procedure."
-msgstr ""
-
-#: ../../docs/user/governance/using.rst:150
-msgid "Dash Budget Proposal Generator"
+"executed from the Dash Core wallet (:ref:`GUI <proposal-create-core-qt>` "
+"or :ref:`console <proposal-create-core-console>`) or the :ref:`Dash "
+"Budget Proposal Generator <dash-budget-proposal-generator>`."
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:152
-msgid "https://proposal.dash.org"
+msgid "Dash Core Wallet"
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:154
+msgid ""
+"Dash Core Wallet includes a built-in graphical interface for creating "
+"governance proposals directly from the Governance tab. This provides a "
+"user-friendly alternative to using external web tools or manual console "
+"commands. To use this feature, your wallet must be unlocked and contain "
+"sufficient balance to cover the 1 DASH proposal fee plus a small "
+"transaction fee."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:160
+msgid "Accessing the Governance tab"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:162
+msgid ""
+"Open your Dash Core Wallet and click on the **Governance** tab. This "
+"displays a list of existing proposals and provides a **Create Proposal** "
+"button in the upper right corner."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:168
+msgid ""
+"The Governance tab showing existing proposals and the Create Proposal "
+"button"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:171
+msgid "Creating a new proposal"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:173
+msgid ""
+"Click the **Create Proposal** button to open the proposal creation "
+"dialog. Enter your proposal details:"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:176
+msgid "**Proposal name**: A unique identifier"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:177
+msgid ""
+"**URL**: Link to detailed proposal information (use a URL shortener if "
+"needed)"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:178
+msgid "**Payment address**: The Dash address that will receive payments"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:179
+msgid "**Payment amount**: Amount requested per payment cycle"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:180
+msgid "**First payment date**: Select the superblock date for the first payment"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:181
+msgid "**# of payments**: Number of payment cycles requested"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:183
+msgid ""
+"The dialog displays the total amount requested and notes the 1 DASH "
+"proposal fee that will be burned. Click **Next** when all fields are "
+"complete."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:189
+msgid "Entering proposal details in the creation dialog"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:192
+msgid "Validating the proposal"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:194
+msgid ""
+"The wallet will generate and display your proposal data in JSON format "
+"along with the proposal hash. Review the information carefully to ensure "
+"accuracy."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:197
+msgid ""
+"Click **Validate** to check the format of the proposal data. If the data "
+"is valid, click **Next** to proceed to the next step. Otherwise, click "
+"**Back** to adjust your proposal data."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:203
+msgid "Validating the proposal JSON and hash"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:206
+msgid "Preparing the collateral"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:210
+msgid ""
+"The following step will create a transaction burning 1 DASH as the "
+"proposal submission fee. This transaction is irreversible once broadcast."
+" Verify all proposal details are correct before proceeding."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:214
+msgid ""
+"After validation, you will see a screen prompting you to prepare and burn"
+" the 1 DASH collateral fee. This fee is required to prevent spam and is "
+"permanently removed from circulation. Click **Prepare proposal** to "
+"create the fee transaction."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:221
+msgid "Proposal collateral burn preparation screen"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:223
+msgid ""
+"Click **Yes** on the confirmation dialog to broadcast the collateral "
+"transaction."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:228
+msgid "Confirmation dialog for burning the proposal fee"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:230
+msgid "The transaction ID will be generated and displayed in the TxID field."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:235
+msgid "Transaction ID generated for the proposal collateral"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:238
+msgid "Waiting for confirmations"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:240
+msgid ""
+"The wallet will display the confirmation progress for your collateral "
+"transaction. One confirmation is required before you can submit the "
+"proposal to the network. After the first confirmation, click the **Next**"
+" button to move to the proposal submission screen."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:247
+msgid "Waiting for confirmations (1 of 6)"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:250
+msgid "Submitting the proposal"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:252
+msgid ""
+"Click **Submit Proposal** to broadcast your governance object to the "
+"network."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:257
+msgid "Submitting proposal with 5 of 6 confirmations"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:259
+msgid ""
+"If successful, a message will be displayed with your proposal ID. Click "
+"**OK** to close the message."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:264
+msgid "Proposal successfully submitted to the network"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:266
+msgid ""
+"The proposal ID will also be shown on the submission screen. The proposal"
+" ID can be used to track voting on the proposal."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:272
+msgid "Proposal submitted with proposal ID shown"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:276
+msgid ""
+"You can submit your proposal ID to DashCentral to claim ownership and "
+"enable simplified voting for masternodes using DashCentral voting "
+"services."
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:282
+msgid "Dash Budget Proposal Generator"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:284
+msgid "https://proposal.dash.org"
+msgstr ""
+
+#: ../../docs/user/governance/using.rst:286
 msgid ""
 "The `Dash Budget Proposal Generator <https://proposal.dash.org>`__ "
 "supports creating budget proposals on both mainnet and testnet. In the "
@@ -388,11 +587,11 @@ msgid ""
 "cannot be modified after it has been submitted to the blockchain."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:175
+#: ../../docs/user/governance/using.rst:307
 msgid "Steps 1 & 2: Creating your proposal and preparing the command"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:177
+#: ../../docs/user/governance/using.rst:309
 msgid ""
 "Next, the proposal generator will provide you with a command to run from "
 "the console of your Dash Core wallet to prepare your budget proposal "
@@ -405,7 +604,7 @@ msgid ""
 "reimbursement of the 1 DASH fee."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:187
+#: ../../docs/user/governance/using.rst:319
 msgid ""
 "First unlock your wallet by clicking **Settings > Unlock wallet**, then "
 "open the console by clicking **Window > Console** and paste the generated"
@@ -414,24 +613,24 @@ msgid ""
 "will show a progress bar as it waits for 6 confirmations as follows:"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:200
+#: ../../docs/user/governance/using.rst:332
 msgid ""
 "Step 3: Creating the proposal transaction and waiting for 6 confirmations"
 " of the transaction ID"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:203
+#: ../../docs/user/governance/using.rst:335
 msgid ""
 "Once 6 block confirmations exist, another command will appear to submit "
 "the prepared governance object to the network for voting. Copy and paste "
 "this command, and your governance object ID will appear as follows:"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:213
+#: ../../docs/user/governance/using.rst:345
 msgid "Step 4: Submitting the governance object to the network"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:215
+#: ../../docs/user/governance/using.rst:347
 msgid ""
 "You can use this ID to track voting on the proposal until the budget "
 "closes and you receive your payout. You can also submit the ID to "
@@ -439,49 +638,32 @@ msgid ""
 "masternodes using DashCentral voting services."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:221
-msgid "DashCentral Proposal Generator"
-msgstr ""
-
-#: ../../docs/user/governance/using.rst:223
-msgid "https://www.dashcentral.org/budget/create"
-msgstr ""
-
-#: ../../docs/user/governance/using.rst:225
-msgid ""
-"DashCentral also includes a tool to create budget proposals, or claim "
-"existing proposals so you can add a description on DashCentral and begin "
-"discussion with the community. The steps to be taken are almost identical"
-" to the procedure described above, and documentation is available `here "
-"<https://www.dashcentral.org/about/contact>`_."
-msgstr ""
-
-#: ../../docs/user/governance/using.rst:232
+#: ../../docs/user/governance/using.rst:355
 msgid "Dash Core Wallet Console"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:234
+#: ../../docs/user/governance/using.rst:357
 msgid ""
 "Creating a proposal using the wallet console follows the same process as "
 "using the Dash budget proposal generator, but it requires several "
 "additional steps to manually construct the proposal governance object."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:239
+#: ../../docs/user/governance/using.rst:362
 msgid "Assemble the proposal data"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:241
+#: ../../docs/user/governance/using.rst:364
 msgid ""
 "To prepare a proposal, put the proposal details such as name and payout "
 "address into a JSON object similar to the example shown below."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:256
+#: ../../docs/user/governance/using.rst:379
 msgid "Set the ``type`` field to ``1`` for all proposals."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:258
+#: ../../docs/user/governance/using.rst:381
 msgid ""
 "The ``start_epoch`` and ``end_epoch`` fields are Unix epoch timestamps "
 "indicating the time range in which the proposal can receive payments. "
@@ -493,28 +675,28 @@ msgid ""
 " epoch values for these fields."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:267
+#: ../../docs/user/governance/using.rst:390
 msgid "Serialize the proposal data"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:269
+#: ../../docs/user/governance/using.rst:392
 msgid ""
 "The proposal information must be serialized to hex before it can be "
 "submitted to the network. Remove all spaces from the JSON object::"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:274
+#: ../../docs/user/governance/using.rst:397
 msgid ""
 "Convert the resulting JSON to its hex equivalent. Sites like "
 "https://codebeautify.org/string-hex-converter provide an easy way to do "
 "this::"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:280
+#: ../../docs/user/governance/using.rst:403
 msgid "Prepare the collateral transaction"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:282
+#: ../../docs/user/governance/using.rst:405
 msgid ""
 "Finally, open your Dash Core wallet console and use the ``gobject "
 "prepare`` command to complete the proposal preparation and submit the "
@@ -522,7 +704,7 @@ msgid ""
 "rpc-dash-gobject-prepare>` for additional details."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:288
+#: ../../docs/user/governance/using.rst:411
 msgid ""
 "Running this command will create a transaction spending 1 DASH from the "
 "wallet as collateral for the proposal being created. Only run this "
@@ -530,40 +712,40 @@ msgid ""
 "transaction is not reversible once sent."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:297
+#: ../../docs/user/governance/using.rst:420
 msgid "``parent-hash`` - set to ``0``"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:298
+#: ../../docs/user/governance/using.rst:421
 msgid "``revision`` - set to ``1``"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:299
+#: ../../docs/user/governance/using.rst:422
 msgid ""
 "``time`` - set to the current Unix epoch time (does not have to be "
 "precise)"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:300
+#: ../../docs/user/governance/using.rst:423
 msgid "``data-hex`` - set to the hex string from the previous step"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:302
-#: ../../docs/user/governance/using.rst:328
+#: ../../docs/user/governance/using.rst:425
+#: ../../docs/user/governance/using.rst:451
 msgid "Example command::"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:306
+#: ../../docs/user/governance/using.rst:429
 msgid ""
 "The command will execute and respond with a transaction ID for the "
 "collateral payment::"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:311
+#: ../../docs/user/governance/using.rst:434
 msgid "Submit the proposal"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:313
+#: ../../docs/user/governance/using.rst:436
 msgid ""
 "Once the transaction has six confirmations, use the ``gobject submit`` "
 "command to submit the prepared governance object to the network for "
@@ -571,46 +753,46 @@ msgid ""
 "submit>` for additional details."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:322
+#: ../../docs/user/governance/using.rst:445
 msgid "``parent-hash`` - use the same value as in the ``gobject prepare`` command"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:323
+#: ../../docs/user/governance/using.rst:446
 msgid "``revision`` - use the same value as in the ``gobject prepare`` command"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:324
+#: ../../docs/user/governance/using.rst:447
 msgid "``time`` - use the same value as in the ``gobject prepare`` command"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:325
+#: ../../docs/user/governance/using.rst:448
 msgid "``data-hex`` - use the same value as in the ``gobject prepare`` command"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:326
+#: ../../docs/user/governance/using.rst:449
 msgid ""
 "``fee-txid`` - the transaction ID returned by the ``gobject prepare`` "
 "command in the previous step"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:332
+#: ../../docs/user/governance/using.rst:455
 msgid ""
 "The command will execute and respond with a transaction ID for the "
 "proposal which can be used to track voting on the proposal::"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:338
+#: ../../docs/user/governance/using.rst:461
 msgid "Voting on proposals"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:340
+#: ../../docs/user/governance/using.rst:463
 msgid ""
 "**You must vote at least three days before the superblock is created or "
 "your vote will not be counted. The exact deadline is 1662 blocks before "
 "the superblock.**"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:344
+#: ../../docs/user/governance/using.rst:467
 msgid ""
 "Voting on DAO proposals is an important part of operating a masternode. "
 "Since masternodes are heavily invested in Dash, they are expected to "
@@ -621,31 +803,31 @@ msgid ""
 "available to view and manage proposals and voting:"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:352
+#: ../../docs/user/governance/using.rst:475
 msgid "`DashCentral <https://www.dashcentral.org/budget>`__"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:353
+#: ../../docs/user/governance/using.rst:476
 msgid "`Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`__"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:354
+#: ../../docs/user/governance/using.rst:477
 msgid ""
 "`Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-"
 "masternode-tool/releases>`__"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:356
+#: ../../docs/user/governance/using.rst:479
 msgid ""
 "For information on how to create a proposal, see :ref:`here <creating-"
 "proposals>`."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:360
+#: ../../docs/user/governance/using.rst:483
 msgid "DashCentral"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:362
+#: ../../docs/user/governance/using.rst:485
 msgid ""
 "Many masternode operators store their password-protected masternode "
 "private key on `DashCentral <https://www.dashcentral.org>`__ to enable "
@@ -660,7 +842,7 @@ msgid ""
 "the site operator voting in your name is minimal."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:374
+#: ../../docs/user/governance/using.rst:497
 msgid ""
 "When you are ready to vote, go to the `budget proposals page "
 "<https://www.dashcentral.org/budget>`_. Simply click to view the "
@@ -668,15 +850,15 @@ msgid ""
 "NO**."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:382
+#: ../../docs/user/governance/using.rst:505
 msgid "Voting interface on DashCentral"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:385
+#: ../../docs/user/governance/using.rst:508
 msgid "Dash Masternode Tool (DMT)"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:387
+#: ../../docs/user/governance/using.rst:510
 msgid ""
 "If you started your masternode from a hardware wallet using `DMT "
 "<https://github.com/Bertrand256/dash-masternode-tool/releases>`_, you can"
@@ -687,15 +869,15 @@ msgid ""
 "tab to **Vote Yes**, **Vote No** or **Vote Abstain** directly from DMT."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:398
+#: ../../docs/user/governance/using.rst:521
 msgid "Voting interface in DMT"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:403
+#: ../../docs/user/governance/using.rst:526
 msgid "Dash Core wallet or masternode"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:405
+#: ../../docs/user/governance/using.rst:528
 msgid ""
 "If you started your masternode using the Dash Core Wallet (not "
 "recommended), you can vote manually from **Window > Console**, or "
@@ -712,14 +894,14 @@ msgid ""
 " voting code for Dash Core Wallet is as follows::"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:424
+#: ../../docs/user/governance/using.rst:547
 msgid ""
 "Note that to vote from your masternode directly, you need to prefix the "
 "command with ``dash-cli``, which is usually found in the ``.dashcore`` "
 "folder. The command should be similar to the following::"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:432
+#: ../../docs/user/governance/using.rst:555
 msgid ""
 "Note this command will trigger a vote from all masternodes configured in "
 "``dash.conf``. If you have multiple masternodes each with its own .conf "
@@ -729,21 +911,21 @@ msgid ""
 "successfully**."
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:442
+#: ../../docs/user/governance/using.rst:565
 msgid "Voting from the debug console in Dash Core Wallet"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:444
+#: ../../docs/user/governance/using.rst:567
 msgid ""
 "You can also view a list of proposals in JSON format from the console to "
 "copy and paste the proposal hash for voting as follows::"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:452
+#: ../../docs/user/governance/using.rst:575
 msgid "Delegating votes"
 msgstr ""
 
-#: ../../docs/user/governance/using.rst:454
+#: ../../docs/user/governance/using.rst:577
 msgid ""
 "Masternodes feature a key designated only for voting, which makes it "
 "possible to delegate your vote to a representative. Simply enter a Dash "
@@ -823,5 +1005,39 @@ msgstr ""
 #~ "voting. See the :ref:`Core developer "
 #~ "documentation <core:api-rpc-dash-gobject-"
 #~ "submit>` for additional details."
+#~ msgstr ""
+
+#~ msgid "proposal-name: a unique label, 20 characters or less"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once you have prepared the text of"
+#~ " your proposal and set up a "
+#~ "website or forum post, it is time"
+#~ " to submit your proposal to the "
+#~ "blockchain for voting. While all tasks"
+#~ " involved with creating a budget "
+#~ "proposal can be executed from the "
+#~ "Dash Core wallet console, several tools"
+#~ " providing a user interface have been"
+#~ " developed to simplify this procedure."
+#~ msgstr ""
+
+#~ msgid "DashCentral Proposal Generator"
+#~ msgstr ""
+
+#~ msgid "https://www.dashcentral.org/budget/create"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "DashCentral also includes a tool to "
+#~ "create budget proposals, or claim "
+#~ "existing proposals so you can add "
+#~ "a description on DashCentral and begin"
+#~ " discussion with the community. The "
+#~ "steps to be taken are almost "
+#~ "identical to the procedure described "
+#~ "above, and documentation is available "
+#~ "`here <https://www.dashcentral.org/about/contact>`_."
 #~ msgstr ""
 

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-12 12:46-0500\n"
+"POT-Creation-Date: 2025-11-18 11:30-0500\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
 "Last-Translator: Alejandro Echeverria <alejem93@gmail.com>, 2023\n"
 "Language: es\n"
@@ -296,54 +296,120 @@ msgid ""
 " encrypt your wallet in the following section."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:214
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:215
+#, fuzzy
+msgid "Setting your password"
+msgstr "Insertar una contraseña"
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:217
 msgid ""
 "If you do choose to encrypt now, you will be asked to enter and verify a "
 "password."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:219
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:222
 msgid "Enter a password"
 msgstr "Establecer una contraseña"
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:221
-msgid "Following that, you will get a standard warning."
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:224
+msgid ""
+"Following that, you will get a standard warning. Click **Yes** to "
+"continue."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:226
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:254
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:229
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:303
 msgid "Confirm you want to encrypt your wallet"
 msgstr "Confirme que quiere encriptar su billetera"
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:228
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:234
+msgid "Backing up your mnemonic"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:236
+msgid ""
+"Dash Core will display your mnemonic phrase (also called a recovery "
+"phrase) for all wallets (encrypted or not). This phrase can be used to "
+"restore your wallet if you lose access to your device."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:242
+msgid ""
+"**CRITICAL**: If you lose your mnemonic seed phrase, you will permanently"
+" lose access to your wallet and all funds. Write it down on paper (not "
+"digitally) and store it in a safe, secure location. Never share your "
+"mnemonic with anyone."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:249
+msgid "Mnemonic phrase backup prompt"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:251
+msgid ""
+"Click the **Show** button to reveal your mnemonic phrase. Then, write "
+"down all the words in order and check the \"I have written down my "
+"mnemonic\" checkbox to continue."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:257
+msgid "Revealing the mnemonic phrase"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:259
+msgid ""
+"Dash Core will then ask you to verify that you correctly saved the phrase"
+" by entering specific words from your mnemonic. Enter the requested words"
+" to confirm you have properly saved your mnemonic phrase."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:263
+msgid ""
+"As you enter each word correctly, a green checkmark will appear beside "
+"it. Once you have successfully verified your mnemonic, click **Continue**"
+" to complete the wallet creation process."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:270
+msgid "Mnemonic verification"
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:274
+msgid ""
+"For more information about HD wallets and how to view or restore your "
+"mnemonic phrase later, see the :hoverxref:`advanced topics section "
+"<dashcore-hd>`."
+msgstr ""
+
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:277
 msgid ""
 "The following section will detail the steps you need to follow if you "
 "choose to encrypt your Dash wallet later."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:235
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:284
 msgid "Encrypting your Dash wallet"
 msgstr "Encriptando su billetera Dash"
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:237
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:286
 msgid "To encrypt your wallet, click **Settings** > **Encrypt wallet**."
 msgstr ""
 "Para encriptar su billetera, clic en **Configuraciones** > **Encriptar "
 "billetera**."
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:242
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:291
 msgid "Encrypting the Dash wallet with a password"
 msgstr "Encriptando la billetera de Dash con una contraseña"
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:244
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:293
 msgid "You will be asked to enter and verify a password."
 msgstr "Se requiere establecer y verificar una contraseña."
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:249
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:298
 msgid "Entering a password"
 msgstr "Insertar una contraseña"
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:256
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:305
 msgid ""
 "When the encryption process is complete, you will see a warning that past"
 " backups of your wallet will no longer be usable, and be asked to shut "
@@ -351,7 +417,7 @@ msgid ""
 "lock in the lower right corner."
 msgstr ""
 
-#: ../../docs/user/wallets/dashcore/installation-linux.rst:264
+#: ../../docs/user/wallets/dashcore/installation-linux.rst:313
 msgid "Fully encrypted and synchronized Dash Core wallet"
 msgstr "Billetera de Dash Core completamente encriptada y sincronizada"
 
@@ -377,5 +443,8 @@ msgstr "Billetera de Dash Core completamente encriptada y sincronizada"
 #~ "directory. We will now install the "
 #~ "executable binaries to ``/usr/local/bin`` "
 #~ "using the ``install`` command::"
+#~ msgstr ""
+
+#~ msgid "Following that, you will get a standard warning."
 #~ msgstr ""
 
