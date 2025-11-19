@@ -8,5 +8,5 @@ set -eu
 # https://containers.dev/implementors/spec/#parallel-exec
 # https://containers.dev/implementors/json_reference/#formatting-string-vs-array-properties
 
-python3.13 -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 make html
