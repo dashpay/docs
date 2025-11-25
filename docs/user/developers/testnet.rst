@@ -44,7 +44,7 @@ Tools and links
 
 The links below were collected from various community sources and may
 not necessarily be online or functioning at any given time. Please join
-`Dash Discord <http://staydashy.com/>`_ or the `Dash Forum
+`Dash Discord <http://chat.dash.org/>`_ or the `Dash Forum
 <https://www.dash.org/forum/>`_ if you have a question relating to a
 specific service.
 
