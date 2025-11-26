@@ -1,33 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, Dash Core Group, Inc
+# Copyright (C) 2025, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # 7b90ac08f561a490019c833f8053e346_9ff464a, 2022
 # Dash Italia, 2024
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 11:30-0500\n"
+"POT-Creation-Date: 2025-11-25 12:40-0500\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
 "Last-Translator: Dash Italia, 2024\n"
-"Language: it\n"
 "Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 "
-"? 1 : 2;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:-1
+#: ../../docs/user/wallets/dashcore/installation-macos.rst-1
 msgid "How to download, install and encrypt the Dash Core wallet in macOS"
-msgstr "Come scaricare, installare e crittografare il wallet Dash Core in macOS"
+msgstr ""
+"Come scaricare, installare e crittografare il wallet Dash Core in macOS"
 
-#: ../../docs/user/wallets/dashcore/installation-macos.rst:-1
+#: ../../docs/user/wallets/dashcore/installation-macos.rst-1
 msgid "dash, core, wallet, macos, installation"
 msgstr "dash, core, wallet, macos, installazione"
 
@@ -41,9 +41,9 @@ msgid ""
 "wallet for macOS. The guide is written for macOS Sierra, but the steps "
 "should be similar for other versions."
 msgstr ""
-"Questa guida descrive come scaricare, installare e crittografare il "
-"wallet Dash Core per macOS. La guida è scritta per macOS Sierra, ma i "
-"passaggi dovrebbero essere simili per le altre versioni."
+"Questa guida descrive come scaricare, installare e crittografare il wallet "
+"Dash Core per macOS. La guida è scritta per macOS Sierra, ma i passaggi "
+"dovrebbero essere simili per le altre versioni."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:15
 msgid "Downloading the Dash Core wallet"
@@ -52,13 +52,13 @@ msgstr "Scaricare il portafoglio Dash Core"
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:17
 msgid ""
 "Visit https://www.dash.org/downloads/ to download the latest Dash Core "
-"wallet. In most cases, the website will properly detect which version you"
-" need. Click **Download Installer** to download the installer directly."
+"wallet. In most cases, the website will properly detect which version you "
+"need. Click **Download Installer** to download the installer directly."
 msgstr ""
-"Visita https://www.dash.org/downloads/ per scaricare l'ultimo wallet Dash"
-" Core. Nella maggior parte dei casi, il sito Web rileverà correttamente "
-"la versione necessaria. Fare clic su **Scarica programma di "
-"installazione** per scaricare direttamente il programma di installazione."
+"Visita https://www.dash.org/downloads/ per scaricare l'ultimo wallet Dash "
+"Core. Nella maggior parte dei casi, il sito Web rileverà correttamente la "
+"versione necessaria. Fare clic su **Scarica programma di installazione** per"
+" scaricare direttamente il programma di installazione."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:25
 msgid "The website properly detects the wallet appropriate for your system"
@@ -68,15 +68,15 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:27
 msgid ""
-"If detection does not work, you will need to manually choose your "
-"operating system. Go to https://www.dash.org/downloads/ and select the "
-"**macOS** tab, then click **Download Installer**. Save the file you "
-"downloaded to your Downloads folder."
+"If detection does not work, you will need to manually choose your operating "
+"system. Go to https://www.dash.org/downloads/ and select the **macOS** tab, "
+"then click **Download Installer**. Save the file you downloaded to your "
+"Downloads folder."
 msgstr ""
-"Se il rilevamento non funziona, dovrai scegliere manualmente il tuo "
-"sistema operativo. Vai su  https://www.dash.org/downloads/ e seleziona la"
-" scheda **macOS**, quindi fai clic su **Scarica programma di "
-"installazione**. Salva il file scaricato nella cartella Download."
+"Se il rilevamento non funziona, dovrai scegliere manualmente il tuo sistema "
+"operativo. Vai su  https://www.dash.org/downloads/ e seleziona la scheda "
+"**macOS**, quindi fai clic su **Scarica programma di installazione**. Salva "
+"il file scaricato nella cartella Download."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:33
 msgid "Verifying Dash Core"
@@ -85,35 +85,34 @@ msgstr "Verifica Dash Core"
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:35
 msgid ""
 "This step is optional, but recommended to verify the authenticity of the "
-"file you downloaded. This is done by checking its detached signature "
-"against the public key published by the Dash Core development team. To "
-"download the detached signature, click the **Installer Signature** button"
-" on the wallet download page and save it to the same folder as the "
-"downloaded binary (which should be by default). You may also need to "
-"download GPG, which you can do via https://gpgtools.org/."
+"file you downloaded. This is done by checking its detached signature against"
+" the public key published by the Dash Core development team. To download the"
+" detached signature, click the **Installer Signature** button on the wallet "
+"download page and save it to the same folder as the downloaded binary (which"
+" should be by default). You may also need to download GPG, which you can do "
+"via https://gpgtools.org/."
 msgstr ""
-"Questo passaggio è facoltativo, ma consigliato per verificare "
-"l'autenticità del file scaricato. Questo viene fatto confrontando la sua "
-"firma distaccata con la chiave pubblica pubblicata dal team di sviluppo "
-"di Dash Core. Per scaricare la firma separata, fai clic sul pulsante "
-"**Firma del programma di installazione** nella pagina di download del "
-"portafoglio e salvala nella stessa cartella del file binario scaricato "
-"(che dovrebbe essere per impostazione predefinita). Potrebbe anche essere"
-" necessario scaricare GPG, cosa che puoi fare tramite "
-"https://gpgtools.org/."
+"Questo passaggio è facoltativo, ma consigliato per verificare l'autenticità "
+"del file scaricato. Questo viene fatto confrontando la sua firma distaccata "
+"con la chiave pubblica pubblicata dal team di sviluppo di Dash Core. Per "
+"scaricare la firma separata, fai clic sul pulsante **Firma del programma di "
+"installazione** nella pagina di download del portafoglio e salvala nella "
+"stessa cartella del file binario scaricato (che dovrebbe essere per "
+"impostazione predefinita). Potrebbe anche essere necessario scaricare GPG, "
+"cosa che puoi fare tramite https://gpgtools.org/."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:43
 msgid ""
-"All releases of Dash since 0.16.0 are signed using GPG with the following"
-" key:"
+"All releases of Dash since 0.16.0 are signed using GPG with the following "
+"key:"
 msgstr ""
-"Tutte le versioni di Dash a partire dalla 0.16.0 sono firmate utilizzando"
-" GPG con la seguente chiave:"
+"Tutte le versioni di Dash a partire dalla 0.16.0 sono firmate utilizzando "
+"GPG con la seguente chiave:"
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:45
 msgid ""
-"Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable on "
-"Keybase <https://keybase.io/pasta>`__ (`download "
+"Pasta (pasta) with the key ``5252 7BED ABE8 7984``, `verifiable on Keybase "
+"<https://keybase.io/pasta>`__ (`download "
 "<https://keybase.io/pasta/pgp_keys.asc>`__)"
 msgstr ""
 "Pasta (pasta) con la chiave ``5252 7BED ABE8 7984``, `verificabile su "
@@ -137,8 +136,8 @@ msgid ""
 "If you see the message ``Good signature from ...`` then you have an "
 "authentic copy of Dash Core for macOS."
 msgstr ""
-"Se vedi il messaggio ``Firma valida da...`` allora hai una copia "
-"autentica di Dash Core per macOS."
+"Se vedi il messaggio ``Firma valida da...`` allora hai una copia autentica "
+"di Dash Core per macOS."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:65
 msgid ""
@@ -155,13 +154,13 @@ msgstr "Installazione di Dash Core"
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:74
 msgid ""
-"Open Finder and browse to your Downloads folder. Then double-click on the"
-" .dmg file you downloaded to decompress it. A window appears showing the "
+"Open Finder and browse to your Downloads folder. Then double-click on the "
+".dmg file you downloaded to decompress it. A window appears showing the "
 "contents of the file."
 msgstr ""
-"Apri Finder e vai alla cartella Download. Quindi fai doppio clic sul file"
-" .dmg scaricato per decomprimerlo. Viene visualizzata una finestra che "
-"mostra il contenuto del file."
+"Apri Finder e vai alla cartella Download. Quindi fai doppio clic sul file "
+".dmg scaricato per decomprimerlo. Viene visualizzata una finestra che mostra"
+" il contenuto del file."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:81
 msgid "Opening the Dash Core .dmg file"
@@ -169,11 +168,11 @@ msgstr "Apertura del file Dash Core .dmg"
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:83
 msgid ""
-"Drag the Dash Core application file into your Applications folder to "
-"install Dash Core."
+"Drag the Dash Core application file into your Applications folder to install"
+" Dash Core."
 msgstr ""
-"Trascina il file dell'applicazione Dash Core nella cartella Applicazioni "
-"per installare Dash Core."
+"Trascina il file dell'applicazione Dash Core nella cartella Applicazioni per"
+" installare Dash Core."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:92
 msgid "Running Dash Core for the first time"
@@ -181,11 +180,11 @@ msgstr "Esecuzione di Dash Core per la prima volta"
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:94
 msgid ""
-"To run Dash Core for the first time, either open Launchpad or browse to "
-"your **Applications** folder in Finder. Double-click **Dash Core** or "
-"**Dash-Qt** to start the application. You may see a warning about opening"
-" an app downloaded from the internet. Simply click **Open** to continue "
-"launching the application."
+"To run Dash Core for the first time, either open Launchpad or browse to your"
+" **Applications** folder in Finder. Double-click **Dash Core** or **Dash-"
+"Qt** to start the application. You may see a warning about opening an app "
+"downloaded from the internet. Simply click **Open** to continue launching "
+"the application."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:103
@@ -195,15 +194,15 @@ msgstr "Sbloccare macOS dall'esecuzione di Dash Core"
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:105
 msgid ""
 "The first time the program is launched, you will be offered a choice of "
-"where you want to store your blockchain and wallet data. Choose a "
-"location with enough free space, as the blockchain can reach 45GB+ in "
-"size. It is recommended to use the default data folder if possible."
+"where you want to store your blockchain and wallet data. Choose a location "
+"with enough free space, as the blockchain can reach 45GB+ in size. It is "
+"recommended to use the default data folder if possible."
 msgstr ""
 "La prima volta che viene avviato il programma, ti verrà offerta la "
 "possibilità di scegliere dove archiviare i dati della blockchain e del "
 "wallet. Scegli una posizione con spazio libero sufficiente, poiché la "
-"blockchain può raggiungere una dimensione di oltre 45 GB. Si consiglia di"
-" utilizzare, se possibile, la cartella dati predefinita."
+"blockchain può raggiungere una dimensione di oltre 45 GB. Si consiglia di "
+"utilizzare, se possibile, la cartella dati predefinita."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:113
 msgid "Choosing the Dash Core data folder"
@@ -211,9 +210,9 @@ msgstr "Scelta della cartella dati Dash Core"
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:115
 msgid ""
-"Dash Core will then start up. This will take a little longer than usual "
-"the first time you run it, since Dash Core needs to generate "
-"cryptographic data to secure your wallet."
+"Dash Core will then start up. This will take a little longer than usual the "
+"first time you run it, since Dash Core needs to generate cryptographic data "
+"to secure your wallet."
 msgstr ""
 "Dash Core verrà quindi avviato. Questa operazione richiederà un po' più "
 "tempo del solito la prima volta che lo esegui, poiché Dash Core deve "
@@ -230,12 +229,12 @@ msgstr "Sincronizzazione di Dash Core con la rete Dash"
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:127
 msgid ""
 "Once Dash Core is successfully installed and started, you will see the "
-"wallet overview screen. The status bar at the bottom of the window will "
-"show the synchronization progress."
+"wallet overview screen. The status bar at the bottom of the window will show"
+" the synchronization progress."
 msgstr ""
-"Una volta installato e avviato correttamente Dash Core, vedrai la "
-"schermata di panoramica del wallet. La barra di stato nella parte "
-"inferiore della finestra mostrerà l'avanzamento della sincronizzazione."
+"Una volta installato e avviato correttamente Dash Core, vedrai la schermata "
+"di panoramica del wallet. La barra di stato nella parte inferiore della "
+"finestra mostrerà l'avanzamento della sincronizzazione."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:134
 msgid "Dash Core begins synchronizing with the Dash network"
@@ -246,15 +245,15 @@ msgid ""
 "During this process, Dash Core will download a full copy of the Dash "
 "blockchain from other nodes to your device. Depending on your internet "
 "connection, this may take a long time. If you see the message “No block "
-"source available”, check your internet connection. When synchronization "
-"is complete, you will see a small blue tick in the lower right corner."
+"source available”, check your internet connection. When synchronization is "
+"complete, you will see a small blue tick in the lower right corner."
 msgstr ""
 "Durante questo processo, Dash Core scaricherà una copia completa della "
 "blockchain Dash da altri nodi sul tuo dispositivo. A seconda della "
-"connessione Internet, l'operazione potrebbe richiedere molto tempo. Se "
-"vedi il messaggio \"Nessuna fonte di blocco disponibile\", controlla la "
-"tua connessione Internet. Una volta completata la sincronizzazione, "
-"vedrai un piccolo segno di spunta blu nell'angolo in basso a destra."
+"connessione Internet, l'operazione potrebbe richiedere molto tempo. Se vedi "
+"il messaggio \"Nessuna fonte di blocco disponibile\", controlla la tua "
+"connessione Internet. Una volta completata la sincronizzazione, vedrai un "
+"piccolo segno di spunta blu nell'angolo in basso a destra."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:145
 msgid "Dash Core synchronization is complete"
@@ -274,38 +273,37 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:158
 msgid ""
-"If no wallet files are loaded, you will get this prompt in the Overview "
-"tab. To create a wallet, click the **Create a new wallet** button or "
-"click **File** -> **Create Wallet**. HD wallets are created by default. "
-"See the :hoverxref:`advanced topics section <dashcore-hd>` for "
-"information about HD wallets."
+"If no wallet files are loaded, you will get this prompt in the Overview tab."
+" To create a wallet, click the **Create a new wallet** button or click "
+"**File** -> **Create Wallet**. HD wallets are created by default. See the "
+":hoverxref:`advanced topics section <dashcore-hd>` for information about HD "
+"wallets."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:167
 msgid ""
-"You will be prompted to create a new wallet with a custom wallet name. By"
-" default, your wallet will be encrypted. You may choose to uncheck the "
-"box and encrypt the wallet later. We have included instructions on how to"
-" encrypt your wallet in the following section."
+"You will be prompted to create a new wallet with a custom wallet name. By "
+"default, your wallet will be encrypted. You may choose to uncheck the box "
+"and encrypt the wallet later. We have included instructions on how to "
+"encrypt your wallet in the following section."
 msgstr ""
 "Ti verrà richiesto di creare un nuovo wallet con un nome di wallet "
 "personalizzato. Per impostazione predefinita, il tuo wallet sarà "
-"crittografato. Puoi scegliere di deselezionare la casella e crittografare"
-" il wallet in un secondo momento. Abbiamo incluso le istruzioni su come "
+"crittografato. Puoi scegliere di deselezionare la casella e crittografare il"
+" wallet in un secondo momento. Abbiamo incluso le istruzioni su come "
 "crittografare il tuo wallet nella sezione seguente."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:176
-#, fuzzy
 msgid "Setting your password"
-msgstr "Inserisci una password"
+msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:178
 msgid ""
 "If you do choose to encrypt now, you will be asked to enter and verify a "
 "password."
 msgstr ""
-"Se scegli di crittografare ora, ti verrà chiesto di inserire e verificare"
-" una password."
+"Se scegli di crittografare ora, ti verrà chiesto di inserire e verificare "
+"una password."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:183
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:254
@@ -327,15 +325,15 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:195
 msgid ""
-"Dash Core will display your mnemonic phrase (also called a recovery "
-"phrase) for all wallets (encrypted or not). This phrase can be used to "
-"restore your wallet if you lose access to your device."
+"Dash Core will display your mnemonic phrase (also called a recovery phrase) "
+"for all wallets (encrypted or not). This phrase can be used to restore your "
+"wallet if you lose access to your device."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:201
 msgid ""
-"**CRITICAL**: If you lose your mnemonic seed phrase, you will permanently"
-" lose access to your wallet and all funds. Write it down on paper (not "
+"**CRITICAL**: If you lose your mnemonic seed phrase, you will permanently "
+"lose access to your wallet and all funds. Write it down on paper (not "
 "digitally) and store it in a safe, secure location. Never share your "
 "mnemonic with anyone."
 msgstr ""
@@ -346,9 +344,9 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:210
 msgid ""
-"Click the **Show** button to reveal your mnemonic phrase. Then, write "
-"down all the words in order and check the \"I have written down my "
-"mnemonic\" checkbox to continue."
+"Click the **Show** button to reveal your mnemonic phrase. Then, write down "
+"all the words in order and check the \"I have written down my mnemonic\" "
+"checkbox to continue."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:216
@@ -357,16 +355,16 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:218
 msgid ""
-"Dash Core will then ask you to verify that you correctly saved the phrase"
-" by entering specific words from your mnemonic. Enter the requested words"
-" to confirm you have properly saved your mnemonic phrase."
+"Dash Core will then ask you to verify that you correctly saved the phrase by"
+" entering specific words from your mnemonic. Enter the requested words to "
+"confirm you have properly saved your mnemonic phrase."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:222
 msgid ""
-"As you enter each word correctly, a green checkmark will appear beside "
-"it. Once you have successfully verified your mnemonic, click **Continue**"
-" to complete the wallet creation process."
+"As you enter each word correctly, a green checkmark will appear beside it. "
+"Once you have successfully verified your mnemonic, click **Continue** to "
+"complete the wallet creation process."
 msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:229
@@ -382,8 +380,8 @@ msgstr ""
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:236
 msgid ""
-"The following section will detail the steps you need to follow if you "
-"choose to encrypt your Dash wallet later."
+"The following section will detail the steps you need to follow if you choose"
+" to encrypt your Dash wallet later."
 msgstr ""
 "La sezione seguente descrive in dettaglio i passaggi che devi seguire se "
 "scegli di crittografare il tuo wallet Dash in un secondo momento."
@@ -408,15 +406,15 @@ msgstr "Ti verrà chiesto di inserire e verificare una password."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:261
 msgid ""
-"When the encryption process is complete, you will see a warning that past"
-" backups of your wallet will no longer be usable, and be asked to shut "
-"down Dash Core. When you restart Dash Core, you will see a small blue "
-"lock in the lower right corner."
+"When the encryption process is complete, you will see a warning that past "
+"backups of your wallet will no longer be usable, and be asked to shut down "
+"Dash Core. When you restart Dash Core, you will see a small blue lock in the"
+" lower right corner."
 msgstr ""
 "Una volta completato il processo di crittografia, vedrai un avviso che "
-"informa che i backup precedenti del tuo wallet non saranno più "
-"utilizzabili e ti verrà chiesto di chiudere Dash Core. Quando riavvii "
-"Dash Core, vedrai un piccolo lucchetto blu nell'angolo in basso a destra."
+"informa che i backup precedenti del tuo wallet non saranno più utilizzabili "
+"e ti verrà chiesto di chiudere Dash Core. Quando riavvii Dash Core, vedrai "
+"un piccolo lucchetto blu nell'angolo in basso a destra."
 
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:269
 msgid "Fully encrypted and synchronized Dash Core wallet"
@@ -425,6 +423,5 @@ msgstr "Wallet Dash Core completamente crittografato e sincronizzato"
 #: ../../docs/user/wallets/dashcore/installation-macos.rst:271
 msgid "You can now begin to use your wallet to safely send and receive funds."
 msgstr ""
-"Ora puoi iniziare a utilizzare il tuo wallet per inviare e ricevere fondi"
-" in sicurezza."
-
+"Ora puoi iniziare a utilizzare il tuo wallet per inviare e ricevere fondi in"
+" sicurezza."
