@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, Dash Core Group, Inc
+# Copyright (C) 2025, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -8,15 +8,16 @@
 # Dima, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
 # Julia Ogonkova <livingflcl@gmail.com>, 2022
+# VONCAN, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-16 12:42-0500\n"
+"POT-Creation-Date: 2025-11-12 12:46-0500\n"
 "PO-Revision-Date: 2022-12-27 18:57+0000\n"
-"Last-Translator: Julia Ogonkova <livingflcl@gmail.com>, 2022\n"
+"Last-Translator: VONCAN, 2025\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -141,22 +142,25 @@ msgid ""
 "following links to the :ref:`Dash Core developer documentation site "
 "<dashcore-arguments-and-commands>`:"
 msgstr ""
+"Подробную информацию обо всех аргументах командной строки можно найти по "
+"следующим ссылкам на :ref:`Сайт документации для разработчиков Dash Core "
+"<dashcore-arguments-and-commands>`:"
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:45
 msgid ":ref:`dashd <dashcore-arguments-and-commands-dashd>`"
-msgstr ""
+msgstr ":ref:`dashd <dashcore-arguments-and-commands-dashd>`"
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:46
 msgid ":ref:`dash-qt <dashcore-arguments-and-commands-dash-qt>`"
-msgstr ""
+msgstr ":ref:`dash-qt <dashcore-arguments-and-commands-dash-qt>`"
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:47
 msgid ":ref:`dash-cli <dashcore-arguments-and-commands-dash-cli>`"
-msgstr ""
+msgstr ":ref:`dash-cli <dashcore-arguments-and-commands-dash-cli>`"
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:48
 msgid ":ref:`dash-tx <dashcore-arguments-and-commands-dash-tx>`"
-msgstr ""
+msgstr ":ref:`dash-tx <dashcore-arguments-and-commands-dash-tx>`"
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:52
 msgid "RPC commands"
@@ -169,6 +173,11 @@ msgid ""
 "using the correct wallet. See the :ref:`Core developer documentation <api-"
 "rpc-multi-wallet-support>` for additional information."
 msgstr ""
+"Для выполнения RPC-вызовов, связанных с кошельком, необходимо использовать "
+"опцию ``-rpcwallet`` при загрузке нескольких файлов кошелька. Это необходимо"
+" для того, чтобы команда RPC выполнялась с использованием правильного "
+"кошелька. Дополнительную информацию см. в :ref:`Core developer document "
+"<api-rpc-multi-wallet-support>`."
 
 #: ../../docs/user/wallets/dashcore/cmd-rpc.rst:60
 msgid ""
@@ -179,3 +188,10 @@ msgid ""
 "either from **Tools > Console** in the QT wallet, or using *dash-cli* for "
 "headless wallets and *dashd*."
 msgstr ""
+"Подробную документацию по всем доступным командам RPC можно найти на "
+"странице :ref:`Документация разработчиков Dash Core, RPC <api-rpc-quick-"
+"reference>`. Для получения полной документации с аргументами, результатами и"
+" примерами введите ``help ( \"command\" )``, чтобы просмотреть подробную "
+"информацию в консоли. Команды можно вводить либо через **Инструменты > "
+"Консоль** в кошельке QT, либо через *dash-cli* для headless-кошельков и "
+"*dashd*."

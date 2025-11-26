@@ -1,11 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, Dash Core Group, Inc
+# Copyright (C) 2025, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # 7b90ac08f561a490019c833f8053e346_9ff464a, 2023
 # Dash Italia, 2023
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -14,20 +15,18 @@ msgstr ""
 "POT-Creation-Date: 2025-11-12 12:46-0500\n"
 "PO-Revision-Date: 2023-05-04 16:28+0000\n"
 "Last-Translator: Dash Italia, 2023\n"
-"Language: it\n"
 "Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 "
-"? 1 : 2;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/network/dashmate/index.rst:-1
+#: ../../docs/user/network/dashmate/index.rst-1
 msgid "Description of dashmate features and usage"
 msgstr "Descrizione delle funzionalità e dell'utilizzo di Dashmate"
 
-#: ../../docs/user/network/dashmate/index.rst:-1
+#: ../../docs/user/network/dashmate/index.rst-1
 msgid "dash, wallet, core, platform, evonode, masternodes, dashmate"
 msgstr "dash, wallet, core, platform, evonode, masternode, dashmate"
 
@@ -42,10 +41,10 @@ msgid ""
 "quickly and easily set up and run a development network on your local "
 "system."
 msgstr ""
-"Dashmate è uno strumento universale progettato per aiutarti a configurare"
-" ed eseguire i masternode Dash in un ambiente containerizzato. È anche "
-"uno strumento ideale per configurare ed eseguire rapidamente e facilmente"
-" una rete di sviluppo sul tuo sistema locale."
+"Dashmate è uno strumento universale progettato per aiutarti a configurare ed"
+" eseguire i masternode Dash in un ambiente containerizzato. È anche uno "
+"strumento ideale per configurare ed eseguire rapidamente e facilmente una "
+"rete di sviluppo sul tuo sistema locale."
 
 #: ../../docs/user/network/dashmate/index.rst:18
 msgid "Setting up a testnet evonode using dashmate"
@@ -57,9 +56,9 @@ msgstr "Installazione"
 
 #: ../../docs/user/network/dashmate/index.rst:25
 msgid ""
-"This guide describes how to download, install and use dashmate on for "
-"Linux. The guide is written for Ubuntu 22.04 x64 LTS, but the steps "
-"should be similar for other Linux distributions."
+"This guide describes how to download, install and use dashmate on for Linux."
+" The guide is written for Ubuntu 22.04 x64 LTS, but the steps should be "
+"similar for other Linux distributions."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:31
@@ -76,10 +75,10 @@ msgstr "Installa dashmate"
 
 #: ../../docs/user/network/dashmate/index.rst:44
 msgid ""
-"There are several methods available for installing dashmate. Installing "
-"the Linux, MacOS, or Windows packages from the `GitHub releases page "
-"<https://github.com/dashpay/platform/releases/latest>`__ is recommended "
-"for mainnet masternodes."
+"There are several methods available for installing dashmate. Installing the "
+"Linux, MacOS, or Windows packages from the `GitHub releases page "
+"<https://github.com/dashpay/platform/releases/latest>`__ is recommended for "
+"mainnet masternodes."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:51
@@ -88,8 +87,8 @@ msgstr "Pacchetto Debian"
 
 #: ../../docs/user/network/dashmate/index.rst:53
 msgid ""
-"Download the newest dashmate installation package for your architecture "
-"from the `GitHub releases page "
+"Download the newest dashmate installation package for your architecture from"
+" the `GitHub releases page "
 "<https://github.com/dashpay/platform/releases/latest>`__::"
 msgstr ""
 
@@ -99,15 +98,15 @@ msgstr "Installa Dashmate utilizzando apt:"
 
 #: ../../docs/user/network/dashmate/index.rst:63
 msgid ""
-"At the end of the installation process, ``apt`` may display an error due "
-"to installing a downloaded package. You can ignore this error message:"
+"At the end of the installation process, ``apt`` may display an error due to "
+"installing a downloaded package. You can ignore this error message:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:65
 msgid ""
 "``N: Download is performed unsandboxed as root as file "
-"'/home/ubuntu/dashmate_2.1.3.077ec826f-1_amd64.deb' couldn't be accessed "
-"by user '_apt'. - pkgAcquire::Run (13: Permission denied)``"
+"'/home/ubuntu/dashmate_2.1.3.077ec826f-1_amd64.deb' couldn't be accessed by "
+"user '_apt'. - pkgAcquire::Run (13: Permission denied)``"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:68
@@ -116,23 +115,23 @@ msgstr "Pacchetto nodo"
 
 #: ../../docs/user/network/dashmate/index.rst:70
 msgid ""
-"This installation option is not recommended for mainnet masternodes. "
-"Please install packages from the `GitHub releases page "
+"This installation option is not recommended for mainnet masternodes. Please "
+"install packages from the `GitHub releases page "
 "<https://github.com/dashpay/platform/releases/latest>`__."
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst
+#: ../../docs/user/network/dashmate/index.rst:0
 msgid "Node.js dashmate install"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:75
 msgid ""
-"To install the NodeJS package, it is necessary to install NodeJS first. "
-"We recommend installing it using `nvm <https://github.com/nvm-"
+"To install the NodeJS package, it is necessary to install NodeJS first. We "
+"recommend installing it using `nvm <https://github.com/nvm-"
 "sh/nvm#readme>`__::"
 msgstr ""
-"Per installare il pacchetto NodeJS, è necessario prima installare NodeJS."
-" Ti consigliamo di installarlo utilizzando `nvm <https://github.com/nvm-"
+"Per installare il pacchetto NodeJS, è necessario prima installare NodeJS. Ti"
+" consigliamo di installarlo utilizzando `nvm <https://github.com/nvm-"
 "sh/nvm#readme>`__::"
 
 #: ../../docs/user/network/dashmate/index.rst:82
@@ -146,19 +145,19 @@ msgstr "Configurazione del masternode"
 #: ../../docs/user/network/dashmate/index.rst:91
 msgid ""
 "Dashmate is primarily recommended for setting up Evolution masternodes "
-"(evonodes). With the exception of a few minor extra steps for evonodes, "
-"the process is identical for evonodes and regular masternodes. Complete "
-"the steps in the sections below to set up your node or follow along with "
-"this step-by-step tutorial."
+"(evonodes). With the exception of a few minor extra steps for evonodes, the "
+"process is identical for evonodes and regular masternodes. Complete the "
+"steps in the sections below to set up your node or follow along with this "
+"step-by-step tutorial."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:102
 msgid ""
-"To begin masternode setup, run ``dashmate setup`` to start the "
-"interactive wizard::"
+"To begin masternode setup, run ``dashmate setup`` to start the interactive "
+"wizard::"
 msgstr ""
-"Per iniziare la configurazione del masternode, esegui ``dashmate setup`` "
-"per avviare la procedura guidata interattiva:"
+"Per iniziare la configurazione del masternode, esegui ``dashmate setup`` per"
+" avviare la procedura guidata interattiva:"
 
 #: ../../docs/user/network/dashmate/index.rst:107
 msgid "Set Network and Node type"
@@ -174,11 +173,11 @@ msgstr "Crea un masternode Evolution"
 
 #: ../../docs/user/network/dashmate/index.rst:121
 msgid ""
-"Select **No** to register a new masternode or **Yes** to import "
-"information about an existing masternode."
+"Select **No** to register a new masternode or **Yes** to import information "
+"about an existing masternode."
 msgstr ""
-"Seleziona **No** per registrare un nuovo masternode o **Sì** per "
-"importare informazioni su un masternode esistente."
+"Seleziona **No** per registrare un nuovo masternode o **Sì** per importare "
+"informazioni su un masternode esistente."
 
 #: ../../docs/user/network/dashmate/index.rst:128
 msgid "Set up a new masternode"
@@ -196,14 +195,14 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:136
 msgid ""
-"The following step only applies when migrating an existing masternode "
-"into dashmate."
+"The following step only applies when migrating an existing masternode into "
+"dashmate."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:138
 msgid ""
-"If you chose to import an existing masternode in the previous step, you "
-"will be prompted for the location of your existing installation."
+"If you chose to import an existing masternode in the previous step, you will"
+" be prompted for the location of your existing installation."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:145
@@ -235,13 +234,13 @@ msgstr "Memorizza le chiavi masternode in Dash Core"
 #: ../../docs/user/network/dashmate/index.rst:173
 msgid ""
 "Enter the requested information from your :hoverxref:`collateral funding "
-"transaction <evonode-send-collateral>`. You can find these values using "
-"Dash Core's :hoverxref:`masternode outputs <evonode-mn-outputs>` command."
+"transaction <evonode-send-collateral>`. You can find these values using Dash"
+" Core's :hoverxref:`masternode outputs <evonode-mn-outputs>` command."
 msgstr ""
 "Inserisci le informazioni richieste dal tuo :hoverxref:`transazione di "
-"finanziamento collaterale <evonode-send-collateral>`. Puoi trovare questi"
-" valori utilizzando il comando :hoverxref:`masternode outputs <evonode-"
-"mn-outputs>` di Dash Core."
+"finanziamento collaterale <evonode-send-collateral>`. Puoi trovare questi "
+"valori utilizzando il comando :hoverxref:`masternode outputs <evonode-mn-"
+"outputs>` di Dash Core."
 
 #: ../../docs/user/network/dashmate/index.rst:181
 msgid "Enter collateral transaction information"
@@ -252,9 +251,9 @@ msgid ""
 "Enter the owner, voting, and payout addresses you :hoverxref:`generated "
 "using Dash Core <evonode-get-addresses>` or your selected wallet."
 msgstr ""
-"Inserisci gli indirizzi del proprietario, della votazione e del pagamento"
-" :hoverxref:`generati utilizzando Dash Core <evonode-get-addresses>` o il"
-" tuo wallet selezionato."
+"Inserisci gli indirizzi del proprietario, della votazione e del pagamento "
+":hoverxref:`generati utilizzando Dash Core <evonode-get-addresses>` o il tuo"
+" wallet selezionato."
 
 #: ../../docs/user/network/dashmate/index.rst:190
 msgid "Enter masternode addresses"
@@ -262,20 +261,20 @@ msgstr "Inserisci gli indirizzi masternode"
 
 #: ../../docs/user/network/dashmate/index.rst:192
 msgid ""
-"Enter an operator BLS private key. You can enter one you have created "
-"(e.g. :hoverxref:`using Dash Core <evonode-bls-generation>`) or received "
-"from a hosting provider. Optionally, use the one automatically generated "
-"by dashmate."
+"Enter an operator BLS private key. You can enter one you have created (e.g. "
+":hoverxref:`using Dash Core <evonode-bls-generation>`) or received from a "
+"hosting provider. Optionally, use the one automatically generated by "
+"dashmate."
 msgstr ""
-"Immettere una chiave privata BLS dell'operatore. Puoi inserirne uno che "
-"hai creato (ad esempio :hoverxref:`using Dash Core <evonode-bls-"
-"generation>`) o ricevuto da un provider di hosting. Facoltativamente, "
-"utilizza quello generato automaticamente da Dashmate."
+"Immettere una chiave privata BLS dell'operatore. Puoi inserirne uno che hai "
+"creato (ad esempio :hoverxref:`using Dash Core <evonode-bls-generation>`) o "
+"ricevuto da un provider di hosting. Facoltativamente, utilizza quello "
+"generato automaticamente da Dashmate."
 
 #: ../../docs/user/network/dashmate/index.rst:196
 msgid ""
-"If a portion of the masternode rewards are intended to go to the operator"
-" directly, set the reward share percentage also."
+"If a portion of the masternode rewards are intended to go to the operator "
+"directly, set the reward share percentage also."
 msgstr ""
 "Se una parte dei premi masternode è destinata ad andare direttamente "
 "all'operatore, imposta anche la percentuale di condivisione del premio."
@@ -290,20 +289,20 @@ msgid ""
 "masternodes do not require a Platform node key since they do not host "
 "Platform services."
 msgstr ""
-"Il passaggio seguente si applica solo ai masternode Evolution. I "
-"masternode regolari non richiedono una chiave di nodo della Platform "
-"poiché non ospitano i servizi della Platform."
+"Il passaggio seguente si applica solo ai masternode Evolution. I masternode "
+"regolari non richiedono una chiave di nodo della Platform poiché non "
+"ospitano i servizi della Platform."
 
 #: ../../docs/user/network/dashmate/index.rst:208
 msgid ""
-"Enter a Platform node key. You can enter one :hoverxref:`you have created"
-" <evonode-generate-platform-node-id>` or received from a hosting "
-"provider. Optionally, use the one automatically generated by dashmate."
+"Enter a Platform node key. You can enter one :hoverxref:`you have created "
+"<evonode-generate-platform-node-id>` or received from a hosting provider. "
+"Optionally, use the one automatically generated by dashmate."
 msgstr ""
 "Immettere una chiave di nodo della platform. Puoi inserirne uno "
-":hoverxref:`che hai creato <evonode-generate-platform-node-id>` o "
-"ricevuto da un provider di hosting. Facoltativamente, utilizza quello "
-"generato automaticamente da Dashmate."
+":hoverxref:`che hai creato <evonode-generate-platform-node-id>` o ricevuto "
+"da un provider di hosting. Facoltativamente, utilizza quello generato "
+"automaticamente da Dashmate."
 
 #: ../../docs/user/network/dashmate/index.rst:216
 msgid "Enter the Platform node key"
@@ -315,15 +314,15 @@ msgstr "Configurare la comunicazione"
 
 #: ../../docs/user/network/dashmate/index.rst:223
 msgid ""
-"Dashmate will automatically detect the external IP address and select the"
-" default ports for the network you are setting up. You can modify these "
-"values if necessary for a specific reason, but typically the defaults "
-"should be used."
+"Dashmate will automatically detect the external IP address and select the "
+"default ports for the network you are setting up. You can modify these "
+"values if necessary for a specific reason, but typically the defaults should"
+" be used."
 msgstr ""
-"Dashmate rileverà automaticamente l'indirizzo IP esterno e selezionerà le"
-" porte predefinite per la rete che stai configurando. È possibile "
-"modificare questi valori se necessario per un motivo specifico, ma in "
-"genere è necessario utilizzare i valori predefiniti."
+"Dashmate rileverà automaticamente l'indirizzo IP esterno e selezionerà le "
+"porte predefinite per la rete che stai configurando. È possibile modificare "
+"questi valori se necessario per un motivo specifico, ma in genere è "
+"necessario utilizzare i valori predefiniti."
 
 #: ../../docs/user/network/dashmate/index.rst:231
 msgid "Enter connection information"
@@ -335,26 +334,26 @@ msgstr "Registra il masternode"
 
 #: ../../docs/user/network/dashmate/index.rst:236
 msgid ""
-"Copy the provided protx command and run it using dash-cli or the Dash "
-"Core console. Do note that your payout address must have a balance for "
-"the registration process to be successful, so remember to send some DASH "
-"to this address before you begin registration."
+"Copy the provided protx command and run it using dash-cli or the Dash Core "
+"console. Do note that your payout address must have a balance for the "
+"registration process to be successful, so remember to send some DASH to this"
+" address before you begin registration."
 msgstr ""
-"Copia il comando protx fornito ed eseguilo utilizzando dash-cli o la "
-"console Dash Core. Tieni presente che il tuo indirizzo di pagamento deve "
-"avere un saldo affinché il processo di registrazione abbia esito "
-"positivo, quindi ricorda di inviare alcuni DASH a questo indirizzo prima "
-"di iniziare la registrazione."
+"Copia il comando protx fornito ed eseguilo utilizzando dash-cli o la console"
+" Dash Core. Tieni presente che il tuo indirizzo di pagamento deve avere un "
+"saldo affinché il processo di registrazione abbia esito positivo, quindi "
+"ricorda di inviare alcuni DASH a questo indirizzo prima di iniziare la "
+"registrazione."
 
 #: ../../docs/user/network/dashmate/index.rst:241
 msgid ""
-"Select **Yes** after the command has been run successfully. If you "
-"receive an error, select **No** to go back through the previous steps and"
-" review details."
+"Select **Yes** after the command has been run successfully. If you receive "
+"an error, select **No** to go back through the previous steps and review "
+"details."
 msgstr ""
-"Selezionare **Sì** dopo che il comando è stato eseguito correttamente. Se"
-" ricevi un errore, seleziona **No** per tornare ai passaggi precedenti ed"
-" esaminare i dettagli."
+"Selezionare **Sì** dopo che il comando è stato eseguito correttamente. Se "
+"ricevi un errore, seleziona **No** per tornare ai passaggi precedenti ed "
+"esaminare i dettagli."
 
 #: ../../docs/user/network/dashmate/index.rst:249
 msgid "Run the registration command"
@@ -369,8 +368,8 @@ msgid ""
 "The following step only applies to evonodes. Regular masternodes do not "
 "require an SSL certificate since they do not host Platform services."
 msgstr ""
-"Il passaggio seguente si applica solo agli evonodi. I masternode regolari"
-" non richiedono un certificato SSL poiché non ospitano i servizi della "
+"Il passaggio seguente si applica solo agli evonodi. I masternode regolari "
+"non richiedono un certificato SSL poiché non ospitano i servizi della "
 "platform."
 
 #: ../../docs/user/network/dashmate/index.rst:259
@@ -378,8 +377,8 @@ msgid ""
 "Dash Platform requires SSL for communication. Dashmate provides several "
 "options for obtaining the required SSL certificate."
 msgstr ""
-"La Platform Dash richiede SSL per la comunicazione. Dashmate offre "
-"diverse opzioni per ottenere il certificato SSL richiesto."
+"La Platform Dash richiede SSL per la comunicazione. Dashmate offre diverse "
+"opzioni per ottenere il certificato SSL richiesto."
 
 #: ../../docs/user/network/dashmate/index.rst:262
 msgid ""
@@ -388,8 +387,8 @@ msgid ""
 "available."
 msgstr ""
 "I certificati autofirmati non possono essere utilizzati sulla mainnet. "
-"Quando si configura un evonode della rete principale, **ZeroSSL** e "
-"**File su disco** sono le uniche opzioni disponibili."
+"Quando si configura un evonode della rete principale, **ZeroSSL** e **File "
+"su disco** sono le uniche opzioni disponibili."
 
 #: ../../docs/user/network/dashmate/index.rst:269
 msgid "Configure SSL"
@@ -397,21 +396,21 @@ msgstr "Configura SSL"
 
 #: ../../docs/user/network/dashmate/index.rst:271
 msgid ""
-"Once the configuration is complete, a summary showing the network and "
-"type of node configured is displayed. This summary includes important "
-"parameters and information on how to proceed."
+"Once the configuration is complete, a summary showing the network and type "
+"of node configured is displayed. This summary includes important parameters "
+"and information on how to proceed."
 msgstr ""
-"Una volta completata la configurazione viene visualizzato un riepilogo "
-"che mostra la rete e la tipologia di nodo configurato. Questo riepilogo "
-"include parametri importanti e informazioni su come procedere."
+"Una volta completata la configurazione viene visualizzato un riepilogo che "
+"mostra la rete e la tipologia di nodo configurato. Questo riepilogo include "
+"parametri importanti e informazioni su come procedere."
 
 #: ../../docs/user/network/dashmate/index.rst:277
 msgid ""
 "The BLS operator private key and Platform Node key must be backed up and "
 "kept secure."
 msgstr ""
-"È necessario eseguire il backup della chiave privata dell'operatore BLS e"
-" della chiave del nodo della Platform e mantenerle al sicuro."
+"È necessario eseguire il backup della chiave privata dell'operatore BLS e "
+"della chiave del nodo della Platform e mantenerle al sicuro."
 
 #: ../../docs/user/network/dashmate/index.rst:283
 msgid "Configuration complete! 🎉"
@@ -427,15 +426,15 @@ msgstr "Avvia il tuo nodo come segue::"
 
 #: ../../docs/user/network/dashmate/index.rst:294
 msgid ""
-"When starting a node for the first time, dashmate will download the "
-"Docker images required for each service. The time required for this one-"
-"time download will depend on the available bandwidth but typically should"
-" complete within a few minutes."
+"When starting a node for the first time, dashmate will download the Docker "
+"images required for each service. The time required for this one-time "
+"download will depend on the available bandwidth but typically should "
+"complete within a few minutes."
 msgstr ""
-"Quando si avvia un nodo per la prima volta, Dashmate scaricherà le "
-"immagini Docker richieste per ciascun servizio. Il tempo necessario per "
-"questo download una tantum dipenderà dalla larghezza di banda "
-"disponibile, ma in genere dovrebbe essere completato in pochi minuti."
+"Quando si avvia un nodo per la prima volta, Dashmate scaricherà le immagini "
+"Docker richieste per ciascun servizio. Il tempo necessario per questo "
+"download una tantum dipenderà dalla larghezza di banda disponibile, ma in "
+"genere dovrebbe essere completato in pochi minuti."
 
 #: ../../docs/user/network/dashmate/index.rst:302
 msgid "Dashmate node operation"
@@ -444,12 +443,11 @@ msgstr "Decima operazione sul nodo"
 #: ../../docs/user/network/dashmate/index.rst:304
 msgid ""
 "You can manage your masternode status, configuration, and running state "
-"entirely from within dashmate. Use the built-in help system to learn "
-"more:"
+"entirely from within dashmate. Use the built-in help system to learn more:"
 msgstr ""
-"Puoi gestire lo stato, la configurazione e lo stato di esecuzione del tuo"
-" masternode interamente da Dashmate. Utilizza il sistema di aiuto "
-"integrato per saperne di più:"
+"Puoi gestire lo stato, la configurazione e lo stato di esecuzione del tuo "
+"masternode interamente da Dashmate. Utilizza il sistema di aiuto integrato "
+"per saperne di più:"
 
 #: ../../docs/user/network/dashmate/index.rst:307
 msgid "``dashmate --help``"
@@ -505,20 +503,20 @@ msgstr "Aggiornamento del nodo"
 
 #: ../../docs/user/network/dashmate/index.rst:354
 msgid ""
-"To update dashmate, it is necessary to download and install the new "
-"version of dashmate. First, stop dashmate if it is running::"
+"To update dashmate, it is necessary to download and install the new version "
+"of dashmate. First, stop dashmate if it is running::"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:359
 msgid ""
-"Next, install the new version of dashmate following the instructions in "
-"the :ref:`dashmate install section <dashmate-install>`."
+"Next, install the new version of dashmate following the instructions in the "
+":ref:`dashmate install section <dashmate-install>`."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:362
 msgid ""
-"Once the new version of dashmate is installed, update dash service docker"
-" images::"
+"Once the new version of dashmate is installed, update dash service docker "
+"images::"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:366
@@ -538,8 +536,8 @@ msgstr ""
 #: ../../docs/user/network/dashmate/index.rst:378
 msgid ""
 "The following sections describe how to enable log rotation, set up file "
-"logging for Core and Platform, adjust log levels, and collect the logs "
-"for analysis."
+"logging for Core and Platform, adjust log levels, and collect the logs for "
+"analysis."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:382
@@ -549,9 +547,9 @@ msgstr ""
 #: ../../docs/user/network/dashmate/index.rst:384
 msgid ""
 "Dashmate logs for each service are stored within its Docker container. "
-"Although this is typically sufficient, more advanced options are "
-"sometimes needed to adjust the log level, output format, or destination. "
-"Several cases include when you need to:"
+"Although this is typically sufficient, more advanced options are sometimes "
+"needed to adjust the log level, output format, or destination. Several cases"
+" include when you need to:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:388
@@ -574,11 +572,11 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:393
 msgid ""
-"For example, since the default dashmate logs are only stored in the "
-"Docker containers, they are lost if the container is removed for some "
-"reason (new Docker image, dashmate reset, failure, etc.). Therefore, you "
-"may want to store persistent log files external to Docker while "
-"troubleshooting an issue to ensure valuable log data cannot be lost."
+"For example, since the default dashmate logs are only stored in the Docker "
+"containers, they are lost if the container is removed for some reason (new "
+"Docker image, dashmate reset, failure, etc.). Therefore, you may want to "
+"store persistent log files external to Docker while troubleshooting an issue"
+" to ensure valuable log data cannot be lost."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:401
@@ -587,10 +585,10 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:403
 msgid ""
-"By default, dashmate logs are not written to the docker host file system."
-" At times you may want to write them to the host file system. Before "
-"enabling logging, it is important to configure log rotation to avoid "
-"running out of disk space."
+"By default, dashmate logs are not written to the docker host file system. At"
+" times you may want to write them to the host file system. Before enabling "
+"logging, it is important to configure log rotation to avoid running out of "
+"disk space."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:407
@@ -599,10 +597,10 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:413
 msgid ""
-"Paste in the following configuration and replace the example path one "
-"that matches your system. This example configuration rotates logs daily "
-"and retains seven historical files for each log file type. Historical "
-"files are each limited to 1GB."
+"Paste in the following configuration and replace the example path one that "
+"matches your system. This example configuration rotates logs daily and "
+"retains seven historical files for each log file type. Historical files are "
+"each limited to 1GB."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:430
@@ -629,9 +627,9 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:447
 msgid ""
-"Use ``dashmate config set`` to configure a location for storing Core logs"
-" on the host file system. Replace the example path with one that matches "
-"your system:"
+"Use ``dashmate config set`` to configure a location for storing Core logs on"
+" the host file system. Replace the example path with one that matches your "
+"system:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:457
@@ -640,20 +638,19 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:459
 msgid ""
-"To enable debug logging for additional details, run the following "
-"command. Debug logs can be turned off by setting the value back to "
-"``false``:"
+"To enable debug logging for additional details, run the following command. "
+"Debug logs can be turned off by setting the value back to ``false``:"
 msgstr ""
 
-#: ../../docs/user/network/dashmate/index.rst
+#: ../../docs/user/network/dashmate/index.rst:0
 msgid "Advanced debug logging"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:468
 msgid ""
-"Dashmate supports some advanced debug log options provided by Dash Core. "
-"The following boolean ``core.log.debug`` settings correspond directly to "
-"the parameters described in the `Core documentation "
+"Dashmate supports some advanced debug log options provided by Dash Core. The"
+" following boolean ``core.log.debug`` settings correspond directly to the "
+"parameters described in the `Core documentation "
 "<https://docs.dash.org/projects/core/en/stable/docs/dashcore/wallet-"
 "arguments-and-commands-dashd.html#debugging-testing-options>`_: ``ips``, "
 "``sourceLocations``, ``threadNames``, and ``timeMicros``."
@@ -685,7 +682,8 @@ msgid "``sourceLocations``"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:481
-msgid "Logs the source locations (file and line number) for debugging information"
+msgid ""
+"Logs the source locations (file and line number) for debugging information"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:484
@@ -702,8 +700,7 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:486
 msgid ""
-"Logs timestamps with microsecond precision for detailed performance "
-"analysis"
+"Logs timestamps with microsecond precision for detailed performance analysis"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:489
@@ -716,8 +713,8 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:491
 msgid ""
-"Log only the specified categories (e.g., ``[\"net\", \"rpc\"]``). If "
-"empty, all categories will be logged"
+"Log only the specified categories (e.g., ``[\"net\", \"rpc\"]``). If empty, "
+"all categories will be logged"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:494
@@ -744,8 +741,8 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:516
 msgid ""
-"To disable logging to a file outside the container, reset the log path to"
-" ``null``:"
+"To disable logging to a file outside the container, reset the log path to "
+"``null``:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:525
@@ -756,8 +753,7 @@ msgstr ""
 msgid ""
 "For troubleshooting flexibility, dashmate provides independent log "
 "configuration for the Platform Gateway, Drive ABCI, and Tenderdash. Each "
-"service can be configured with the most helpful log level and output "
-"format."
+"service can be configured with the most helpful log level and output format."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:534
@@ -766,10 +762,10 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:536
 msgid ""
-"The Platform gateway has two types of logs: service logs and access logs."
-" Service logs are directed to stdout, while access logs can be configured"
-" to go to stdout, stderr, or to a file. If all logs are directed to "
-"stdout, the output will be a mixture of service and access data."
+"The Platform gateway has two types of logs: service logs and access logs. "
+"Service logs are directed to stdout, while access logs can be configured to "
+"go to stdout, stderr, or to a file. If all logs are directed to stdout, the "
+"output will be a mixture of service and access data."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:540
@@ -782,8 +778,8 @@ msgstr ""
 msgid ""
 "Use ``dashmate config set`` to configure a location for storing Platform "
 "gateway access logs on the host file system. The example below adds file "
-"logging while also keeping the default stdout logging. Replace the "
-"example path with one that matches your system:"
+"logging while also keeping the default stdout logging. Replace the example "
+"path with one that matches your system:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:562
@@ -808,15 +804,15 @@ msgstr ""
 msgid ""
 "Platform gateway service logs support several levels of detail. In "
 "increasing order of detail they are: ``critical``, ``error``, ``warn``, "
-"``info`` (default), ``debug``, and ``trace``. To disable service logs, "
-"set the log level to ``off``."
+"``info`` (default), ``debug``, and ``trace``. To disable service logs, set "
+"the log level to ``off``."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:582
 msgid ""
-"The log level can be changed by using ``dashmate config set`` to update "
-"the ``platform.gateway.log.level`` value. For example, run these commands"
-" to change the gateway service log level to debug on your dashmate node:"
+"The log level can be changed by using ``dashmate config set`` to update the "
+"``platform.gateway.log.level`` value. For example, run these commands to "
+"change the gateway service log level to debug on your dashmate node:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:591
@@ -837,14 +833,13 @@ msgstr ""
 #: ../../docs/user/network/dashmate/index.rst:606
 msgid ""
 "Use ``dashmate config set`` to configure a location for storing Platform "
-"ABCI logs on the host file system. Replace the example path with one that"
-" matches your system:"
+"ABCI logs on the host file system. Replace the example path with one that "
+"matches your system:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:628
 msgid ""
-"To disable logging to a file, remove the file config from the logs "
-"setting:"
+"To disable logging to a file, remove the file config from the logs setting:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:643
@@ -852,16 +847,16 @@ msgid ""
 "Drive ABCI logs support several levels of detail. In increasing order of "
 "detail they are: ``error``, ``warn``, ``info`` (default), ``debug``, and "
 "``trace``. A logging specification string can also be provided in the "
-"RUST_LOG format for more flexibility. To disable service logs, set the "
-"log level to ``silent``."
+"RUST_LOG format for more flexibility. To disable service logs, set the log "
+"level to ``silent``."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:648
 msgid ""
-"The log level can be changed by using ``dashmate config set`` to update "
-"the ``platform.drive.abci.logs.*.level`` value. For example, run these "
-"commands to change the log levels for file logging and stdout logging to "
-"debug on your dashmate node:"
+"The log level can be changed by using ``dashmate config set`` to update the "
+"``platform.drive.abci.logs.*.level`` value. For example, run these commands "
+"to change the log levels for file logging and stdout logging to debug on "
+"your dashmate node:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:669
@@ -870,9 +865,9 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:673
 msgid ""
-"Use ``dashmate config set`` to configure a location for storing "
-"Tenderdash logs on the host file system. Replace the example path with "
-"one that matches your system:"
+"Use ``dashmate config set`` to configure a location for storing Tenderdash "
+"logs on the host file system. Replace the example path with one that matches"
+" your system:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:682
@@ -884,15 +879,15 @@ msgid ""
 "Tenderdash logs support several levels of detail. In increasing order of "
 "detail they are: ``error``, ``warn``, ``info`` (default), ``debug``, and "
 "``trace``. A logging specification string can also be provided in the "
-"RUST_LOG format for more flexibility. To disable service logs, set the "
-"log level to ``silent``."
+"RUST_LOG format for more flexibility. To disable service logs, set the log "
+"level to ``silent``."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:695
 msgid ""
-"The log level can be changed by using ``dashmate config set`` to update "
-"the ``platform.drive.abci.logs.*.level`` value. For example, run these "
-"commands to change the log level to debug on your dashmate node:"
+"The log level can be changed by using ``dashmate config set`` to update the "
+"``platform.drive.abci.logs.*.level`` value. For example, run these commands "
+"to change the log level to debug on your dashmate node:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:706
@@ -906,37 +901,36 @@ msgstr ""
 #: ../../docs/user/network/dashmate/index.rst:717
 msgid ""
 "Dashmate includes the doctor command to make troubleshooting and log "
-"reporting easier. The dashmate doctor command collects important "
-"debugging data about the masternode and creates a compressed report file "
-"that can be sent to the support team if necessary. This report includes:"
+"reporting easier. The dashmate doctor command collects important debugging "
+"data about the masternode and creates a compressed report file that can be "
+"sent to the support team if necessary. This report includes:"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:721
 msgid ""
-"**Operating System**: Details about the architecture, CPU, memory, and "
-"swap"
+"**Operating System**: Details about the architecture, CPU, memory, and swap"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:722
-msgid "**Docker**: Status and logs (exit codes, stdout, stderr) for each service"
+msgid ""
+"**Docker**: Status and logs (exit codes, stdout, stderr) for each service"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:723
 msgid ""
-"**Core RPC**: Essential details like the best ChainLock, quorums, "
-"blockchain information, peers, and masternode status"
+"**Core RPC**: Essential details like the best ChainLock, quorums, blockchain"
+" information, peers, and masternode status"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:724
 msgid ""
-"**Tenderdash RPC**: Status, genesis, network information, ABCI details, "
-"and a consensus state dump"
+"**Tenderdash RPC**: Status, genesis, network information, ABCI details, and "
+"a consensus state dump"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:725
 msgid ""
-"**Metrics**: Tenderdash and Drive metrics (if enabled in the "
-"configuration)"
+"**Metrics**: Tenderdash and Drive metrics (if enabled in the configuration)"
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:727
@@ -963,9 +957,8 @@ msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:750
 msgid ""
-"To provide better network visibility to DCG developers for "
-"troubleshooting, volunteers can contribute metrics to the DCG metrics "
-"server."
+"To provide better network visibility to DCG developers for troubleshooting, "
+"volunteers can contribute metrics to the DCG metrics server."
 msgstr ""
 
 #: ../../docs/user/network/dashmate/index.rst:753
@@ -996,28 +989,3 @@ msgid ""
 msgstr ""
 "Per ulteriore documentazione consultare il `repository dashmate "
 "<https://github.com/dashpay/platform/blob/master/packages/dashmate/README.md>`__."
-
-#~ msgid ""
-#~ "``N: Download is performed unsandboxed "
-#~ "as root as file '/home/ubuntu/dashmate_1.7.0"
-#~ ".b265bb81c-1_amd64.deb' couldn't be accessed "
-#~ "by user '_apt'. - pkgAcquire::Run (13:"
-#~ " Permission denied)``"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "``N: Download is performed unsandboxed "
-#~ "as root as file "
-#~ "'/home/ubuntu/dashmate_1.8.0.e4e156c86-1_amd64.deb' couldn't "
-#~ "be accessed by user '_apt'. - "
-#~ "pkgAcquire::Run (13: Permission denied)``"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "``N: Download is performed unsandboxed "
-#~ "as root as file "
-#~ "'/home/ubuntu/dashmate_2.0.1.5f93c7072-1_amd64.deb' couldn't "
-#~ "be accessed by user '_apt'. - "
-#~ "pkgAcquire::Run (13: Permission denied)``"
-#~ msgstr ""
-

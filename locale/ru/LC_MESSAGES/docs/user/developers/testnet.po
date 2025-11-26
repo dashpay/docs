@@ -1,39 +1,36 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, Dash Core Group, Inc
+# Copyright (C) 2025, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # Dima, 2022
 # Андрей Дегтяр <diusha1711@gmail.com>, 2022
 # VONCAN, 2024
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-25 12:01-0500\n"
+"POT-Creation-Date: 2025-11-25 12:40-0500\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: VONCAN, 2024\n"
-"Language: ru\n"
 "Language-Team: Russian (https://app.transifex.com/dash/teams/37570/ru/)\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) "
-"|| (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: ../../docs/user/developers/testnet.rst:-1
+#: ../../docs/user/developers/testnet.rst-1
 msgid ""
-"Dash testnet and devnets are used by Dash developers for testing using "
-"tDASH"
+"Dash testnet and devnets are used by Dash developers for testing using tDASH"
 msgstr ""
-"Тестовая сеть и сеть разработчиков Dash используются разработчиками Dash "
-"для тестирования с использованием монет tDASH"
+"Тестовая сеть и сеть разработчиков Dash используются разработчиками Dash для"
+" тестирования с использованием монет tDASH"
 
-#: ../../docs/user/developers/testnet.rst:-1
+#: ../../docs/user/developers/testnet.rst-1
 msgid ""
 "dash, masternodes, testnet, devnet, faucet, masternodes, testing, pool, "
 "explorer, mining pools, block explorer"
@@ -47,21 +44,21 @@ msgstr "Тестовая сеть и devnets"
 
 #: ../../docs/user/developers/testnet.rst:11
 msgid ""
-"Testnet is a fully functioning Dash blockchain with the one key exception"
-" that because the Dash on the network can be created freely, it has no "
-"value. This currency, known as tDASH, can be requested from a faucet to "
-"help developers test new versions of Dash, as well as test network "
-"operations using identical versions of the software before they are "
-"carried out on the mainnet. There are a few other key differences:"
+"Testnet is a fully functioning Dash blockchain with the one key exception "
+"that because the Dash on the network can be created freely, it has no value."
+" This currency, known as tDASH, can be requested from a faucet to help "
+"developers test new versions of Dash, as well as test network operations "
+"using identical versions of the software before they are carried out on the "
+"mainnet. There are a few other key differences:"
 msgstr ""
 "Testnet - это полностью функционирующий блокчейн Dash с одним ключевым "
 "отличием, которое состоит в том, что монеты Dash в этой сети могут "
 "создаваться свободно и они не имеют ценности. Эта валюта, известная как "
-"tDASH, может запрашиваться на специальных сайтах-кранах и призвана помочь"
-" разработчикам протестировать новые версии Dash, а также проверить "
-"сетевые операции с использованием идентичных версий программного "
-"обеспечения, прежде чем они начнут работать в основной сети. Существует "
-"еще несколько ключевых отличий:"
+"tDASH, может запрашиваться на специальных сайтах-кранах и призвана помочь "
+"разработчикам протестировать новые версии Dash, а также проверить сетевые "
+"операции с использованием идентичных версий программного обеспечения, прежде"
+" чем они начнут работать в основной сети. Существует еще несколько ключевых "
+"отличий:"
 
 #: ../../docs/user/developers/testnet.rst:18
 msgid "Testnet operates on port 19999 (instead of 9999)"
@@ -69,8 +66,8 @@ msgstr "Testnet работает на порту 19999 (вместо 9999)"
 
 #: ../../docs/user/developers/testnet.rst:19
 msgid ""
-"Testnet addresses start with \"y\" instead of \"X\", ADDRESSVERSION is "
-"140 (instead of 76)"
+"Testnet addresses start with \"y\" instead of \"X\", ADDRESSVERSION is 140 "
+"(instead of 76)"
 msgstr ""
 "Адреса в тестовой сети начинаются с «y» вместо «X», ADDRESSVERSION - 140 "
 "(вместо 76)"
@@ -81,12 +78,13 @@ msgstr "Балансы Testnet выражены в tDASH (вместо DASH)"
 
 #: ../../docs/user/developers/testnet.rst:22
 msgid "Protocol message header bytes are 0xcee2caff (instead of 0xbf0c6bbd)"
-msgstr "Протокол байтов заголовков сообщений равен 0xcee2caff (вместо 0xbf0c6bbd)"
+msgstr ""
+"Протокол байтов заголовков сообщений равен 0xcee2caff (вместо 0xbf0c6bbd)"
 
 #: ../../docs/user/developers/testnet.rst:23
 msgid ""
-"Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, "
-"testnet-seed.darkcoin.qa, testnet-seed.dashpay.io"
+"Bootstrapping uses different DNS seeds: test.dnsseed.masternode.io, testnet-"
+"seed.darkcoin.qa, testnet-seed.dashpay.io"
 msgstr ""
 "Во время начальной загрузки используются разные источники DNS: "
 "test.dnsseed.masternode.io, testnet-seed.darkcoin.qa, testnet-"
@@ -94,15 +92,16 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:25
 msgid "Launching Dash Core in testnet mode shows an orange tray icon"
-msgstr "При запуске Dash Core в режиме testnet появляется оранжевый значок в трее"
+msgstr ""
+"При запуске Dash Core в режиме testnet появляется оранжевый значок в трее"
 
 #: ../../docs/user/developers/testnet.rst:27
 msgid ""
-"To start Dash Core in testnet mode, find your dash.conf file and enter "
-"the following line::"
+"To start Dash Core in testnet mode, find your dash.conf file and enter the "
+"following line::"
 msgstr ""
-"Чтобы запустить Dash Core в режиме testnet, найдите файл dash.conf и "
-"введите следующую строку::"
+"Чтобы запустить Dash Core в режиме testnet, найдите файл dash.conf и введите"
+" следующую строку::"
 
 #: ../../docs/user/developers/testnet.rst:32
 msgid ""
@@ -110,11 +109,11 @@ msgid ""
 "feature - **named devnets**. Devnets are developer networks that combine "
 "some aspects of testnet (the global and public testing network) and some "
 "aspects of regtest (the local-only regression testing mode that provides "
-"controlled block generation). Unlike testnet, multiple independent "
-"devnets can be created and coexist without interference. For practical "
-"documentation on how to use devnets, see the :ref:`developer "
-"documentation <examples-testing-applications>` or this `blog post "
-"<https://blog.dash.org/dash-devnets-bc27ecbf0085>`__."
+"controlled block generation). Unlike testnet, multiple independent devnets "
+"can be created and coexist without interference. For practical documentation"
+" on how to use devnets, see the :ref:`developer documentation <examples-"
+"testing-applications>` or this `blog post <https://blog.dash.org/dash-"
+"devnets-bc27ecbf0085>`__."
 msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:43
@@ -122,23 +121,19 @@ msgid "Tools and links"
 msgstr "Инструменты и ссылки"
 
 #: ../../docs/user/developers/testnet.rst:45
-#, fuzzy
 msgid ""
-"The links below were collected from various community sources and may not"
-" necessarily be online or functioning at any given time. Please join "
-"`Dash Discord <http://chat.dash.org/>`_ or the `Dash Forum "
+"The links below were collected from various community sources and may not "
+"necessarily be online or functioning at any given time. Please join `Dash "
+"Discord <http://chat.dash.org/>`_ or the `Dash Forum "
 "<https://www.dash.org/forum/>`_ if you have a question relating to a "
 "specific service."
 msgstr ""
-"Ссылки, приведенные ниже, были собраны из различных источников сообщества"
-" и не обязательно могут быть онлайн или функционировать в любой момент "
-"времени. Присоединяйтесь к `Dash Nation Discord <http://staydashy.com/>`_"
-" или `Dash Forum <https://www.dash.org/forum/>`_, если у вас есть "
-"вопросы, связанные с конкретными услугами."
 
 #: ../../docs/user/developers/testnet.rst:51
-msgid "**Nightly builds:** https://github.com/dashpay/dash-dev-branches/releases"
-msgstr "**Ночные сборки:** https://github.com/dashpay/dash-dev-branches/releases"
+msgid ""
+"**Nightly builds:** https://github.com/dashpay/dash-dev-branches/releases"
+msgstr ""
+"**Ночные сборки:** https://github.com/dashpay/dash-dev-branches/releases"
 
 #: ../../docs/user/developers/testnet.rst:52
 msgid "**Bugtracker:** https://github.com/dashpay/dash/issues/new"
@@ -153,10 +148,10 @@ msgstr ""
 "https://www.dash.org/forum/index.php?forums/testing.53/"
 
 #: ../../docs/user/developers/testnet.rst:54
-msgid "**Android wallet:** https://github.com/dashpay/dash-wallet/releases/latest"
+msgid ""
+"**Android wallet:** https://github.com/dashpay/dash-wallet/releases/latest"
 msgstr ""
-"**Android кошелёк:** https://github.com/dashpay/dash-"
-"wallet/releases/latest"
+"**Android кошелёк:** https://github.com/dashpay/dash-wallet/releases/latest"
 
 #: ../../docs/user/developers/testnet.rst:55
 msgid "**Testnet for Bitcoin:** https://en.bitcoin.it/wiki/Testnet"
@@ -183,9 +178,8 @@ msgid "Explorers"
 msgstr "Обозреватели"
 
 #: ../../docs/user/developers/testnet.rst:66
-#, fuzzy
 msgid "https://insight.testnet.networks.dash.org/insight"
-msgstr "https://insight.testnet.networks.dash.org:3002/insight"
+msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:69
 msgid "Masternodes"
@@ -193,9 +187,9 @@ msgstr "Мастерноды"
 
 #: ../../docs/user/developers/testnet.rst:71
 msgid ""
-"Installing a masternode under testnet generally follows the same steps as"
-" the :ref:`mainnet masternode installation guide <masternode-setup>`, but"
-" with a few key differences:"
+"Installing a masternode under testnet generally follows the same steps as "
+"the :ref:`mainnet masternode installation guide <masternode-setup>`, but "
+"with a few key differences:"
 msgstr ""
 "Установка Мастерноды в тестовой сети обычно выполняется в той же "
 "последовательности, что и :ref:`руководство по установке Мастерноды в "
@@ -203,13 +197,13 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:75
 msgid ""
-"You will probably be running a development version of Dash instead of the"
-" stable release. Choose the latest `nightly build "
+"You will probably be running a development version of Dash instead of the "
+"stable release. Choose the latest `nightly build "
 "<https://github.com/dashpay/dash-dev-branches/releases>`__ on GitHub."
 msgstr ""
-"Вероятно, вы будете использовать версию Dash для разработки, а не "
-"стабильный релиз. Выберите последнюю `ночную сборку "
-"<https://github.com/dashpay/dash-dev-branches/releases>`__ на GitHub."
+"Вероятно, вы будете использовать версию Dash для разработки, а не стабильный"
+" релиз. Выберите последнюю `ночную сборку <https://github.com/dashpay/dash-"
+"dev-branches/releases>`__ на GitHub."
 
 #: ../../docs/user/developers/testnet.rst:78
 msgid ""
@@ -221,8 +215,8 @@ msgstr ""
 
 #: ../../docs/user/developers/testnet.rst:80
 msgid ""
-"Your desktop wallet must be running in testnet mode. Add the following "
-"line to *dash.conf*: ``testnet = 1``"
+"Your desktop wallet must be running in testnet mode. Add the following line "
+"to *dash.conf*: ``testnet = 1``"
 msgstr ""
 "Кошелёк на вашем компьютере должен быть запущен в режиме тестовой сети. "
 "Добавьте следующую строку в файл *dash.conf*: ``testnet = 1``"
@@ -232,14 +226,14 @@ msgid ""
 "When sending the collateral, you can get the 1000 tDASH for free from a "
 "faucet (see above)"
 msgstr ""
-"Если хотите отправить залог, то 1000 tDASH вы можете получить бесплатно с"
-" помощью сайтов-кранов (ссылки на них приведены выше)"
+"Если хотите отправить залог, то 1000 tDASH вы можете получить бесплатно с "
+"помощью сайтов-кранов (ссылки на них приведены выше)"
 
 #: ../../docs/user/developers/testnet.rst:84
 msgid ""
-"Your masternode configuration file must also specify testnet mode. Add "
-"the following line when setting up *dash.conf* on the masternode: "
-"``testnet = 1``"
+"Your masternode configuration file must also specify testnet mode. Add the "
+"following line when setting up *dash.conf* on the masternode: ``testnet = "
+"1``"
 msgstr ""
 "В файле конфигурации вашей мастерноды также должен быть указан режим "
 "тестовой сети. Добавьте следующую строку при настройке файла *dash.conf* "
@@ -250,12 +244,5 @@ msgid ""
 "As for mainnet masternodes, the RPC username and password must contain "
 "alphanumeric characters only"
 msgstr ""
-"Что касается мастернод, работающих в основной сети, то имя пользователя "
-"RPC и пароль должны содержать только буквенно-цифровые символы"
-
-#~ msgid "http://insight.testnet.networks.dash.org:3001/insight"
-#~ msgstr "http://insight.testnet.networks.dash.org:3001/insight"
-
-#~ msgid "http://faucet.test.dash.crowdnode.io - by CrowdNode"
-#~ msgstr "http://faucet.test.dash.crowdnode.io - by CrowdNode"
-
+"Что касается мастернод, работающих в основной сети, то имя пользователя RPC "
+"и пароль должны содержать только буквенно-цифровые символы"
