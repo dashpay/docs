@@ -235,7 +235,3 @@ View Logs
 .. code-block:: shell
 
   tail -100f ~/var/log/electrumx/current
-
-.. toctree::
-  :maxdepth: 1
-
