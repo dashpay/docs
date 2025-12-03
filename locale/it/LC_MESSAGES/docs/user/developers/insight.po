@@ -1,11 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, Dash Core Group, Inc
+# Copyright (C) 2025, Dash Core Group, Inc
 # This file is distributed under the same license as the Dash package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
 # ALXX <mediterraneo9000@gmail.com>, 2022
 # Dash Italia, 2023
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -14,32 +15,30 @@ msgstr ""
 "POT-Creation-Date: 2025-11-12 12:46-0500\n"
 "PO-Revision-Date: 2022-12-27 18:55+0000\n"
 "Last-Translator: Dash Italia, 2023\n"
-"Language: it\n"
 "Language-Team: Italian (https://app.transifex.com/dash/teams/37570/it/)\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 "
-"? 1 : 2;\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../docs/user/developers/insight.rst:-1
+#: ../../docs/user/developers/insight.rst-1
 msgid ""
 "The open-source Dash Insight REST API provides you with a convenient, "
-"powerful and simple way to read data from the Dash network and build your"
-" own services with it."
+"powerful and simple way to read data from the Dash network and build your "
+"own services with it."
 msgstr ""
-"L'API REST di Dash Insight open source ti offre un modo comodo, potente e"
-" semplice per leggere i dati dalla rete Dash e creare i tuoi servizi con "
+"L'API REST di Dash Insight open source ti offre un modo comodo, potente e "
+"semplice per leggere i dati dalla rete Dash e creare i tuoi servizi con "
 "essa."
 
-#: ../../docs/user/developers/insight.rst:-1
+#: ../../docs/user/developers/insight.rst-1
 msgid ""
-"dash, insight, API, REST, blockchain, explorer, JSON, HTTP, blocks, "
-"index, transactions"
+"dash, insight, API, REST, blockchain, explorer, JSON, HTTP, blocks, index, "
+"transactions"
 msgstr ""
-"dash, insight, API, REST, blockchain, explorer, JSON, HTTP, blocchi, "
-"indice, transazioni"
+"dash, insight, API, REST, blockchain, explorer, JSON, HTTP, blocchi, indice,"
+" transazioni"
 
 #: ../../docs/user/developers/insight.rst:9
 msgid "Insight API Installation"
@@ -48,36 +47,36 @@ msgstr "Installazione API Insight"
 #: ../../docs/user/developers/insight.rst:11
 msgid ""
 "The open-source Dash Insight REST API provides you with a convenient, "
-"powerful and simple way to read data from the Dash network and build your"
-" own services with it. Simple HTTP endpoints exist for all common "
-"operations on the Dash blockchain familiar from the Bitcore Insight API, "
-"as well as Dash-specific features such as InstantSend transactions, "
-"budget proposals, sporks and the masternode list. This documentation "
-"describes how to set up the `Dash Insight API <https://github.com/dashpay"
-"/insight-api>`__ server and (optionally) the `Dash Insight UI "
-"<https://github.com/dashpay/insight-ui>`__ block explorer."
+"powerful and simple way to read data from the Dash network and build your "
+"own services with it. Simple HTTP endpoints exist for all common operations "
+"on the Dash blockchain familiar from the Bitcore Insight API, as well as "
+"Dash-specific features such as InstantSend transactions, budget proposals, "
+"sporks and the masternode list. This documentation describes how to set up "
+"the `Dash Insight API <https://github.com/dashpay/insight-api>`__ server and"
+" (optionally) the `Dash Insight UI <https://github.com/dashpay/insight-"
+"ui>`__ block explorer."
 msgstr ""
 "L'API REST Dash Insight open source ti offre un modo comodo, potente e "
 "semplice per leggere i dati dalla rete Dash e creare con essi i tuoi "
 "servizi. Esistono semplici endpoint HTTP per tutte le operazioni comuni "
 "sulla blockchain Dash familiari dall'API Bitcore Insight, nonché "
-"funzionalità specifiche di Dash come transazioni InstantSend, proposte di"
-" budget, spork e l'elenco masternode. Questa documentazione descrive come"
-" configurare il server `Dash Insight API <https://github.com/dashpay"
-"/insight-api>`__ e (facoltativo) l'interfaccia utente di `Dash Insight "
+"funzionalità specifiche di Dash come transazioni InstantSend, proposte di "
+"budget, spork e l'elenco masternode. Questa documentazione descrive come "
+"configurare il server `Dash Insight API <https://github.com/dashpay/insight-"
+"api>`__ e (facoltativo) l'interfaccia utente di `Dash Insight "
 "<https://github.com/dashpay/insight-ui>`__ esploratore di blocchi."
 
 #: ../../docs/user/developers/insight.rst:23
 msgid ""
 "A standard installation of Ubuntu Linux 20.04 LTS will be used as an "
-"environment for the server. We assume you are running as a user with sudo"
-" permissions. First update all packages and install some tools and "
+"environment for the server. We assume you are running as a user with sudo "
+"permissions. First update all packages and install some tools and "
 "dependencies::"
 msgstr ""
-"Come ambiente per il server verrà utilizzata un'installazione standard di"
-" Ubuntu Linux 20.04 LTS. Supponiamo che tu stia eseguendo come utente con"
-" autorizzazioni sudo. Per prima cosa aggiorna tutti i pacchetti e "
-"installa alcuni strumenti e dipendenze::"
+"Come ambiente per il server verrà utilizzata un'installazione standard di "
+"Ubuntu Linux 20.04 LTS. Supponiamo che tu stia eseguendo come utente con "
+"autorizzazioni sudo. Per prima cosa aggiorna tutti i pacchetti e installa "
+"alcuni strumenti e dipendenze::"
 
 #: ../../docs/user/developers/insight.rst:32
 msgid "Download and extract the latest version of Dash Core::"
@@ -88,14 +87,14 @@ msgid ""
 "Install `Dashcore Node <https://github.com/dashpay/dashcore-node>`_ and "
 "create your configuration::"
 msgstr ""
-"Installa `Dashcore Node <https://github.com/dashpay/dashcore-node>`_ e "
-"crea la tua configurazione::"
+"Installa `Dashcore Node <https://github.com/dashpay/dashcore-node>`_ e crea "
+"la tua configurazione::"
 
 #: ../../docs/user/developers/insight.rst:47
 msgid "Install the Insight API service and (optionally) Insight UI::"
 msgstr ""
-"Installa il servizio API Insight e (facoltativamente) l'interfaccia "
-"utente Insight:"
+"Installa il servizio API Insight e (facoltativamente) l'interfaccia utente "
+"Insight:"
 
 #: ../../docs/user/developers/insight.rst:53
 msgid "Change paths in the configuration file as follows::"
@@ -106,17 +105,16 @@ msgid "Change the value of ``datadir`` to ``../../.dashcore``"
 msgstr "Cambiare il valore di ``datadir`` in ``../../.dashcore``"
 
 #: ../../docs/user/developers/insight.rst:58
-#, fuzzy
 msgid "Change the value of ``exec`` to ``../../dashcore-23.0.0/bin/dashd``"
-msgstr "Cambiare il valore di ``datadir`` in ``../../.dashcore``"
+msgstr ""
 
 #: ../../docs/user/developers/insight.rst:59
 msgid ""
-"**Optionally** change the value of ``network`` to ``testnet`` if you want"
-" to run Insight on testnet"
+"**Optionally** change the value of ``network`` to ``testnet`` if you want to"
+" run Insight on testnet"
 msgstr ""
-"** Facoltativamente ** modifica il valore di `` network`` in `` testnet "
-"'' se desideri eseguire Insight su testnet"
+"** Facoltativamente ** modifica il valore di `` network`` in `` testnet '' "
+"se desideri eseguire Insight su testnet"
 
 #: ../../docs/user/developers/insight.rst:62
 msgid "Run it::"
@@ -125,9 +123,9 @@ msgstr "Eseguilo:"
 #: ../../docs/user/developers/insight.rst:66
 msgid ""
 "Your Insight API node will start up and begin to sync. Progress will be "
-"displayed on stdout. Once sync is complete, the `API endpoints listed in "
-"the documentation <https://github.com/dashpay/insight-api#api-http-"
-"endpoints>`_ will be available at::"
+"displayed on stdout. Once sync is complete, the `API endpoints listed in the"
+" documentation <https://github.com/dashpay/insight-api#api-http-endpoints>`_"
+" will be available at::"
 msgstr ""
 "Il tuo nodo API Insight si avvierà e inizierà a sincronizzarsi. "
 "L'avanzamento verrà visualizzato su stdout. Una volta completata la "
@@ -140,7 +138,3 @@ msgid "The Insight UI block explorer will be available at::"
 msgstr ""
 "Il block explorer dell'interfaccia utente di Insight sarà disponibile "
 "all'indirizzo:"
-
-#~ msgid "Change the value of ``exec`` to ``../../dashcore-22.0.0/bin/dashd``"
-#~ msgstr ""
-
