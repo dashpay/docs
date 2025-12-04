@@ -83,14 +83,10 @@ Other mining pools are listed below and may be advantageous for
 different reasons such as ping latency, uptime, fee, users, etc. A guide
 to using a typical mining pool can be found :ref:`here <mining-pools>`.
 
-
-- https://coinfoundry.org
-- https://mining.luxor.tech
-- https://www.nicehash.com
-- https://dash.miningpoolhub.com
-- https://www.multipool.us
-- https://www.f2pool.com
 - https://www.antpool.com
+- https://www.f2pool.com
+- https://dash.miningpoolhub.com
+- https://www.nicehash.com
 - https://www.viabtc.com
 - https://zpool.ca
 
