@@ -1,0 +1,10 @@
+# You can learn more about robots.txt, including how to customize it, in ReadTheDocs documentation:
+#
+# * Documentation on Robots.txt: https://docs.readthedocs.com/platform/stable/reference/robots.html
+# * Guide about SEO techniques: https://docs.readthedocs.com/platform/stable/guides/technical-docs-seo-guide.html
+
+User-agent: *
+
+Disallow: /en/latest/ # Hidden version
+
+Sitemap: https://docs.dash.org/en/stable/sitemap.xml
