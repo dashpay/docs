@@ -112,6 +112,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx_copybutton',
     'sphinx_design',
+    'sphinx_sitemap',
     'sphinxcontrib.googleanalytics',
     'sphinx.ext.intersphinx',
 ]
@@ -197,6 +198,18 @@ html_css_files = [
 # robots.txt or .htaccess. Relative paths are taken as relative to the configuration directory. They
 # are copied to the output directory. They will overwrite any existing file of the same name.
 html_extra_path = ['_extra']
+
+# -- Sitemap configuration ---------------------------------------------------
+# https://sphinx-sitemap.readthedocs.io/
+html_baseurl = 'https://docs.dash.org/en/stable/'
+sitemap_url_scheme = '{link}'
+sitemap_locales = [None]
+sitemap_excludes = [
+    "search.html",     # Exact match
+    "genindex.html",   # Exact match
+]
+sitemap_show_lastmod = True
+sitemap_indent = 2
 
 # Override to allow text wrap in tables
 # Details: https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
