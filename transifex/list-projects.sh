@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 RTD_BASE_URL=${RTD_BASE_URL:-https://app.readthedocs.org}
 
 # Function to list all project slugs (with pagination support)
