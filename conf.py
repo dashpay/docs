@@ -88,7 +88,8 @@ exclude_patterns = [
     'docs/img/dev/gifs/README.md',    
     'docs/user/wallets/electrum/dip3_p2sh_howto.md',
     'scripts/*',
-    'venv'
+    'venv',
+    'dash-core-src'
 ]
 
 # The name of the Pygments (syntax highlighting) style to use.
