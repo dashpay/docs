@@ -78,18 +78,22 @@ gettext_compact = False
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
 exclude_patterns = [
+    '.devcontainer',
+    '.DS_Store',
     '_build',
     'Thumbs.db',
-    '.DS_Store',
+    # Directories to exclude
+    'local/*',
+    'scripts/*',
+    'transifex/*',
+    'venv/*',
+    'dash-core-src',
+    # Docs related files to exclude
+    'CLAUDE.md',
     'README.md',
-    '.devcontainer',
-    'transifex',
     'docs/core/api/ai-prompt.md',
     'docs/img/dev/gifs/README.md',    
     'docs/user/wallets/electrum/dip3_p2sh_howto.md',
-    'scripts/*',
-    'venv',
-    'dash-core-src'
 ]
 
 # The name of the Pygments (syntax highlighting) style to use.
