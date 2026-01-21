@@ -78,25 +78,6 @@ https://dashmasternode.io
 - `Email <sidhosting@protonmail.com>`__
 
 
-Pool of Stake
--------------
-
-.. image:: img/pool-of-stake.svg
-   :width: 200px
-   :align: right
-   :target: https://www.poolofstake.io
-
-https://www.poolofstake.io
-
-- Operated by: Pool of Stake OÜ
-- Services: Hosting, Shares
-- 15% of masternode payments (5% with tokens)
-- `Site <https://www.poolofstake.io>`__
-- `Email <mail@poolofstake.io>`__
-- `Twitter <https://twitter.com/poolofstake>`__
-- `Telegram <https://telegram.me/poolofstake>`__
-
-
 NodeHub.io
 ----------
 
