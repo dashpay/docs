@@ -767,6 +767,10 @@ contribute metrics to the DCG metrics server.
       dashmate config set platform.drive.abci.metrics.host 0.0.0.0
       dashmate config set platform.drive.abci.metrics.port 29090
 
+      dashmate config set  platform.dapi.rsDapi.metrics.enabled true
+      dashmate config set  platform.dapi.rsDapi.metrics.host 0.0.0.0
+      dashmate config set  platform.dapi.rsDapi.metrics.port 9091      
+
       dashmate config set platform.drive.tenderdash.metrics.enabled true
       dashmate config set platform.drive.tenderdash.metrics.host 0.0.0.0
       dashmate config set platform.drive.tenderdash.metrics.port 26660
