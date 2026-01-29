@@ -49,4 +49,5 @@ You can learn more about Dash Governance in the following sections:
 
    understanding.rst
    using.rst
-   eight-steps.rst
+   eight-steps.rstb
+
