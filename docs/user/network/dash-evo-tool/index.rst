@@ -26,11 +26,19 @@ Linux, MacOS, or Windows packages are available on the `GitHub releases page
 <https://github.com/dashpay/dash-evo-tool/releases/latest>`__. Download the zip file for your
 Operating System, then unzip the downloaded file:
 
+* `Mac (Apple Silicon / arm64) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-arm64-mac.zip>`_
+* `Mac (Intel / x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-x86_64-mac.zip>`_
+* `Linux (x86_64) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-x86_64-linux.zip>`_
+* `Linux (arm64) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-arm64-linux.zip>`_ 
 * `Windows <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-windows.zip>`_
-* `Mac (ARM m1-m4) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-arm64-mac.zip>`_
-* `Mac (x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-x86_64-mac.zip>`_
-* `Linux (x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-x86_64-linux.zip>`_
-* `Linux (ARM) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-arm64-linux.zip>`_ 
+
+.. tip::
+
+  If you use the prebuilt Windows binary, make sure the target machine has:
+   - `Microsoft Visual C++ Redistributable <https://aka.ms/vc14/vc_redist.x64.exe>`_
+   - OpenGL 2.0 support. If OpenGL 2.0 is not available (or the app fails to start with
+     OpenGL-related errors), install the `OpenCL, OpenGL, and Vulkan Compatibility Pack
+     <https://apps.microsoft.com/detail/9nqpsl29bfff?ocid=webpdpshare>`_
 
 .. _evo-tool-configure:
 
