@@ -27,7 +27,7 @@ Linux, MacOS, or Windows packages are available on the `GitHub releases page
 Operating System, then unzip the downloaded file:
 
 * `Mac (Apple Silicon / arm64) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-arm64-mac.zip>`_
-* `Mac (Intel / x86) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-x86_64-mac.zip>`_
+* `Mac (Intel / x86_64) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-x86_64-mac.zip>`_
 * `Linux (x86_64) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-x86_64-linux.zip>`_
 * `Linux (arm64) <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-arm64-linux.zip>`_ 
 * `Windows <https://github.com/dashpay/dash-evo-tool/releases/download/v0.9.3/dash-evo-tool-windows.zip>`_
