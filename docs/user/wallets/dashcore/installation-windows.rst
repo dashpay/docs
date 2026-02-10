@@ -31,7 +31,7 @@ downloaded to your Downloads folder.
 
 .. note::
    Dash Core 0.17 was the last release to provide downloads for 32-bit Windows installations.
-   As of Windows 11, Microsoft only provides 64-bit Windows. 
+   As of Windows 11, Microsoft only provides 64-bit Windows.
 
    If you are unsure whether your version of Windows is 32-bit or 64-bit, you can
    check by following the instructions `here
@@ -55,7 +55,7 @@ All releases of Dash since 0.16.0 are signed using GPG with the following key:
 Download the key file above. Install `Gpg4win <https://gpg4win.org/>`__
 if it is not already available on your computer. Once it is installed,
 open the **Kleopatra** certificate manager and click **File -> Import**.
-Import the key file and verify the Key-ID matches the ID above. 
+Import the key file and verify the Key-ID matches the ID above.
 
 .. figure:: img/windows/setup-windows-kleopatra-import.png
    :height: 250px
@@ -74,7 +74,7 @@ downloaded installer.
 
 If you see the first line of the message reads ``Verified
 dashcore-23.0.2-win64-setup.exe with
-dashcore-23.0.2-win64-setup.exe.asc`` then you have an authentic copy
+dashcore-23.0.2-win64-setup.exe.asc``, then you have an authentic copy
 of Dash Core for Windows.
 
 .. figure:: img/windows/setup-windows-kleopatra-verified.png
@@ -111,7 +111,7 @@ app is unrecognized. You can safely skip past this warning by clicking
 .. figure:: img/windows/106328813.png
    :width: 354px
 
-   Bypassing Windows SmartScreen to run the app. This warning is known 
+   Bypassing Windows SmartScreen to run the app. This warning is known
    as a “false positive”.
 
 The installer will then guide you through the installation process.
@@ -200,7 +200,7 @@ Creating your Dash Wallet
 -------------------------
 
 .. versionadded:: v20.1.0
-   
+
    HD wallets are now created by default.
 
 If no wallet files are loaded, you will get this prompt in the Overview tab. To
@@ -265,7 +265,7 @@ and check the "I have written down my mnemonic" checkbox to continue.
 
 Dash Core will then ask you to verify that you correctly saved the phrase by entering specific words
 from your mnemonic. Enter the requested words to confirm you have properly saved your mnemonic
-phrase. 
+phrase.
 
 As you enter each word correctly, a green checkmark will appear beside it. Once you have
 successfully verified your mnemonic, click **Continue** to complete the wallet creation process.
@@ -281,7 +281,7 @@ successfully verified your mnemonic, click **Continue** to complete the wallet c
    For more information about HD wallets and how to view or restore your mnemonic phrase later, see
    the :hoverxref:`advanced topics section <dashcore-hd>`.
 
-The following section will detail the steps you need to follow if you 
+The following section will detail the steps you need to follow if you
 choose to encrypt your Dash wallet later.
 
 Encrypting your Dash wallet
