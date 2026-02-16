@@ -34,10 +34,10 @@ Verifying Dash Core
 
 This step is optional, but recommended to verify the authenticity of the
 file you downloaded. This is done by checking its detached signature
-against the public key published by the Dash Core development team. To download 
+against the public key published by the Dash Core development team. To download
 the detached signature, click the **Installer Signature**
 button on the wallet download page and save it to the same folder as the
-downloaded binary (which should be by default). You may also need to 
+downloaded binary (which should be by default). You may also need to
 download GPG, which you can do via https://gpgtools.org/.
 
 All releases of Dash since 0.16.0 are signed using GPG with the following key:
@@ -57,14 +57,14 @@ download as follows::
 
    Downloading the PGP key and verifying the signed binary
 
-If you see the message ``Good signature from ...`` then you have an
+If you see the message ``Good signature from ...``, then you have an
 authentic copy of Dash Core for macOS.
 
 .. note::
-   
+
    If you have your own key configured, you can eliminate warnings from the
    verification output by signing the imported key before verifying::
-   
+
       gpg --quick-lsign-key "29590362EC878A81FD3C202B52527BEDABE87984"
       gpg --verify dashcore-23.0.2-x86_64-linux-gnu.tar.gz.asc
 
@@ -152,7 +152,7 @@ Creating your Dash Wallet
 -------------------------
 
 .. versionadded:: v20.1.0
-   
+
    HD wallets are now created by default.
 
 If no wallet files are loaded, you will get this prompt in the Overview tab. To
@@ -217,7 +217,7 @@ and check the "I have written down my mnemonic" checkbox to continue.
 
 Dash Core will then ask you to verify that you correctly saved the phrase by entering specific words
 from your mnemonic. Enter the requested words to confirm you have properly saved your mnemonic
-phrase. 
+phrase.
 
 As you enter each word correctly, a green checkmark will appear beside it. Once you have
 successfully verified your mnemonic, click **Continue** to complete the wallet creation process.
