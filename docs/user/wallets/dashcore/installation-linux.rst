@@ -43,9 +43,9 @@ Verifying Dash Core
 -------------------
 
 This step is optional, but recommended to verify the authenticity of the
-file you downloaded. This is done by checking its detached signature 
-against the public key published by the Dash Core development team. 
-To download the detached signature, click the **Signature** button on the 
+file you downloaded. This is done by checking its detached signature
+against the public key published by the Dash Core development team.
+To download the detached signature, click the **Signature** button on the
 wallet download page and save it to the same folder as the downloaded
 binary.
 
@@ -65,14 +65,14 @@ download as follows::
 
    Downloading the PGP key and verifying the signed binary
 
-If you see the message ``Good signature from ...`` then you have an
+If you see the message ``Good signature from ...``, then you have an
 authentic copy of Dash Core for Linux.
 
 .. note::
-   
+
    If you have your own key configured, you can eliminate warnings from the
    verification output by signing the imported key before verifying::
-   
+
       gpg --quick-lsign-key "29590362EC878A81FD3C202B52527BEDABE87984"
       gpg --verify dashcore-23.1.0-x86_64-linux-gnu.tar.gz.asc
 
@@ -101,13 +101,13 @@ directory. We will now install the executable binaries to
    recently-released Linux distributions. If you receive an error message that indicates files are
    missing when starting Dash Core, search your distribution's package database for the missing file
    and install the package containing that file.
-   
+
    On recent versions of Ubuntu, you may need to install libxcb-xinerama0 by running::
 
       sudo apt install libxcb-xinerama0
- 
+
 Start Dash Core from the terminal with the following command::
-  
+
   dash-qt
 
 The first time the program is launched, you will be offered a choice of
@@ -191,7 +191,7 @@ Creating your Dash Wallet
 -------------------------
 
 .. versionadded:: v20.1.0
-   
+
    HD wallets are now created by default.
 
 If no wallet files are loaded, you will get this prompt in the Overview tab. To
@@ -258,7 +258,7 @@ and check the "I have written down my mnemonic" checkbox to continue.
 
 Dash Core will then ask you to verify that you correctly saved the phrase by entering specific words
 from your mnemonic. Enter the requested words to confirm you have properly saved your mnemonic
-phrase. 
+phrase.
 
 As you enter each word correctly, a green checkmark will appear beside it. Once you have
 successfully verified your mnemonic, click **Continue** to complete the wallet creation process.
@@ -274,7 +274,7 @@ successfully verified your mnemonic, click **Continue** to complete the wallet c
    For more information about HD wallets and how to view or restore your mnemonic phrase later, see
    the :hoverxref:`advanced topics section <dashcore-hd>`.
 
-The following section will detail the steps you need to follow if you 
+The following section will detail the steps you need to follow if you
 choose to encrypt your Dash wallet later.
 
 
