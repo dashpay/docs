@@ -21,7 +21,7 @@ The [`govobj` message](../reference/p2p-network-governance-messages.md#govobj) c
 | 32 | nHashParent | uint256 | Required | Parent object (a hash of all zeros here indicates this is the root object, not a child object).
 | 4 | nRevision | int | Required | Object revision in the system
 | 8 | nTime | int64_t | Required | Time which this object was created
-| 32 | nCollateralHash | uint256 | Required* | Hash of the collateral fee transaction for proposals.<br><br>Set to all zeros for Triggers.
+| 32 | nCollateralHash | uint256 | Required* | Hash of the fee transaction for proposals. The fee is an unrecoverable coin burn (OP_RETURN output).<br><br>Set to all zeros for Triggers.<br><br>**Note:** The field is historically named `nCollateralHash`, but the transaction is not recoverable collateral — it is a permanent coin burn.
 | 0-16384 | strData | string | Required | Data field - can be used for anything (leading varint indicates size of data)
 | 4 | nObjectType | int | Required | Type of governance object: <br>• `0` - Unknown<br>• `1` - Proposal<br>• `2` - Trigger
 | 36 | masternode<br>OutPoint | outPoint | Required* | The unspent outpoint of the masternode (holding 1000 DASH) which is signing this object.<br><br>Set to all zeros for proposals since they can be created by non-masternodes.
@@ -32,10 +32,10 @@ Governance Object Types (defined by `src/governance-object.h`)
 | Type | Name                    | Description
 |------|-------------------------|------------
 | 0 | `GOVERNANCE_OBJECT_UNKNOWN`  |
-| 1 | `GOVERNANCE_OBJECT_PROPOSAL` | Submitted proposal (requires a collateral transaction - 1 Dash)
+| 1 | `GOVERNANCE_OBJECT_PROPOSAL` | Submitted proposal (requires a fee of 1 Dash, burned via OP_RETURN)
 | 2 | `GOVERNANCE_OBJECT_TRIGGER`  | Masternode generated. Removed after activation/execution. Used for superblocks.
 
-The following annotated hexdump shows a [`govobj` message](../reference/p2p-network-governance-messages.md#govobj) for a Proposal object. Notice the presence of a non-zero collateral hash, a masternodeOutPoint that is an empty Outpoint (hash of all zeros), and no vchSig. (The message header has been omitted.)
+The following annotated hexdump shows a [`govobj` message](../reference/p2p-network-governance-messages.md#govobj) for a Proposal object. Notice the presence of a non-zero fee transaction hash (the `nCollateralHash` field — a coin burn via OP_RETURN), a masternodeOutPoint that is an empty Outpoint (hash of all zeros), and no vchSig. (The message header has been omitted.)
 
 ``` text
 00000000000000000000000000000000
@@ -43,7 +43,7 @@ The following annotated hexdump shows a [`govobj` message](../reference/p2p-netw
 01000000 ............................. Revision: 1
 c8dfd65900000000 ..................... Create timestamp: 2017-10-06 01:43:31 UTC
 633611d2f3e7481325242f200c7f3485
-e3a9b4b6301e7f7d18d87d8231f3880b ..... Collateral Hash
+e3a9b4b6301e7f7d18d87d8231f3880b ..... Fee Tx Hash (coin burn via OP_RETURN)
 
 Data
 | 3e02 ............................... Data length: 574
@@ -61,7 +61,7 @@ Masternode Unspent Outpoint
 | .................................... Masternode Signature (None required)
 ```
 
-The following annotated hexdump shows a [`govobj` message](../reference/p2p-network-governance-messages.md#govobj) for a Trigger object. Notice the collateral hash of all zeros. (The message header has been omitted.)
+The following annotated hexdump shows a [`govobj` message](../reference/p2p-network-governance-messages.md#govobj) for a Trigger object. Notice the fee transaction hash (`nCollateralHash`) of all zeros since triggers do not require a fee. (The message header has been omitted.)
 
 ``` text
 00000000000000000000000000000000
@@ -69,7 +69,7 @@ The following annotated hexdump shows a [`govobj` message](../reference/p2p-netw
 01000000 ............................. Revision: 1
 911ea85900000000 ..................... Create timestamp: 2017-08-31 14:34:57 UTC
 00000000000000000000000000000000
-00000000000000000000000000000000 ..... Collateral Hash (None required)
+00000000000000000000000000000000 ..... Fee Tx Hash (none required for triggers)
 
 Data
 | ae11 ............................... Data length: 4526
