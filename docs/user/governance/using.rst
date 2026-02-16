@@ -202,8 +202,8 @@ proceed to the next step. Otherwise, click **Back** to adjust your proposal data
 
    Validating the proposal JSON and hash
 
-Preparing the collateral
-^^^^^^^^^^^^^^^^^^^^^^^^
+Preparing the proposal fee
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning::
 
@@ -211,16 +211,16 @@ Preparing the collateral
    transaction is irreversible once broadcast. Verify all proposal details are correct before
    proceeding.
 
-After validation, you will see a screen prompting you to prepare and burn the 1 DASH collateral fee.
+After validation, you will see a screen prompting you to prepare and burn the 1 DASH proposal fee.
 This fee is required to prevent spam and is permanently removed from circulation. Click **Prepare
 proposal** to create the fee transaction.
 
 .. figure:: img/core-qt/proposal-prepare-burn.png
    :width: 350px
 
-   Proposal collateral burn preparation screen
+   Proposal fee burn preparation screen
 
-Click **Yes** on the confirmation dialog to broadcast the collateral transaction.
+Click **Yes** on the confirmation dialog to broadcast the fee transaction.
 
 .. figure:: img/core-qt/proposal-burn-fee-notice.png
    :width: 300px
@@ -232,12 +232,12 @@ The transaction ID will be generated and displayed in the TxID field.
 .. figure:: img/core-qt/proposal-prepare-burned.png
    :width: 350px
 
-   Transaction ID generated for the proposal collateral
+   Transaction ID generated for the proposal fee
 
 Waiting for confirmations
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The wallet will display the confirmation progress for your collateral transaction. One confirmation
+The wallet will display the confirmation progress for your fee transaction. One confirmation
 is required before you can submit the proposal to the network. After the first confirmation, click
 the **Next** button to move to the proposal submission screen.
 
@@ -399,17 +399,17 @@ https://codebeautify.org/string-hex-converter provide an easy way to do this::
 
   7b226e616d65223a22546573742d70726f706f73616c5f31222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353735303030302c22656e645f65706f6368223a313633363735303030307d
 
-Prepare the collateral transaction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Prepare the fee transaction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Finally, open your Dash Core wallet console and use the ``gobject prepare``
-command to complete the proposal preparation and submit the collateral
-transaction. See the :ref:`Core developer documentation
+command to complete the proposal preparation and submit the fee
+transaction (a 1 DASH coin burn). See the :ref:`Core developer documentation
 <api-rpc-dash-gobject-prepare>` for additional details.
 
 .. warning::
-  Running this command will create a transaction spending 1 DASH from the wallet
-  as collateral for the proposal being created. Only run this command once you
+  Running this command will create a transaction burning 1 DASH from the wallet
+  as the proposal fee. This burn is irreversible. Only run this command once you
   have verified all the proposal information. The transaction is not reversible
   once sent.
   
@@ -426,7 +426,7 @@ Example command::
 
   gobject prepare 0 1 1636000000 7b226e616d65223a22546573742d70726f706f73616c5f31222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353735303030302c22656e645f65706f6368223a313633363735303030307d
 
-The command will execute and respond with a transaction ID for the collateral payment::
+The command will execute and respond with a transaction ID for the fee burn::
   
   9192fb57953baba168f685e32378aa6471061301a097598c68ef1a4c136c9ea3
 
