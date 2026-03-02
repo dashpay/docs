@@ -240,7 +240,7 @@ masternode will support:
       ufw allow 443/tcp
       ufw allow 9999/tcp
       ufw allow 26656/tcp
-      # Uncomment the following line if using ZeroSSL
+      # Uncomment the following line if using automatic certificate renewal (Let's Encrypt, ZeroSSL, etc.)
       # ufw allow 80/tcp
       ufw logging on
       ufw enable
