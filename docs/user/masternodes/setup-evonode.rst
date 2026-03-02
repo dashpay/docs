@@ -597,22 +597,39 @@ Prerequisites
   - 9999/tcp
   - 443/tcp
   - 26656/tcp
-  - 80/tcp (if you are going to use ZeroSSL)
+  - 80/tcp (required for Let's Encrypt or ZeroSSL certificate validation)
 - Backup of any existing Dash Core and dashmate configuration data, including private keys
-- `ZeroSSL API access key <https://app.zerossl.com/developer>`_ or SSL certificate for the public
-  IPv4 address (not DNS name)
+- An email address for Let's Encrypt certificate registration, or a `ZeroSSL API access key
+  <https://app.zerossl.com/developer>`_, or an SSL certificate for the public IPv4 address (not DNS
+  name)
 
 .. _evonode-ssl-cert:
 
 SSL certificates
 ----------------
 
-There are two ways to get SSL certificates:
+An SSL certificate is required for your evonode to communicate securely with the Dash Platform
+network. There are three ways to get SSL certificates:
 
-1. Register for the ZeroSSL service and set your API key. Since ZeroSSL provides an API, dashmate
-   can update your certificates automatically. The free plan only provides 3 free certificates (or 3
-   renewals of 1 certificate). Other plans require paying with a credit card. You can get an API key
-   for dashmate by completing the following steps:
+1. **Let's Encrypt (recommended)**. Let's Encrypt is a free, automated certificate authority that
+   provides SSL certificates at no cost and with no account registration required. Dashmate has
+   built-in support for obtaining and automatically renewing these Let's Encrypt `short-lived (160
+   hour) certificates <https://letsencrypt.org/2025/02/20/first-short-lived-cert-issued>`_. All you
+   need is an email address for certificate expiry notifications.
+
+   During ``dashmate setup``, select **Let's Encrypt** as the SSL provider and enter your email
+   address when prompted. Dashmate will handle the rest, including automatic renewal before
+   certificates expire.
+
+   .. note::
+
+      Let's Encrypt requires port 80/tcp to be open for the ACME HTTP-01 challenge used to validate
+      your server's IP address during certificate issuance and renewal.
+
+2. **ZeroSSL**. ZeroSSL provides an API that allows dashmate to obtain and update your certificates
+   automatically. The free plan provides 3 free certificates (or 3 renewals of 1 certificate). Other
+   plans require paying with a credit card. You can get an API key for dashmate by completing the
+   following steps:
 
    - Register on `https://zerossl.com/ <https://zerossl.com/>`_. *We recommend not using your
      personal email address.*
@@ -624,14 +641,15 @@ There are two ways to get SSL certificates:
 
      ZeroSSL Developer tab showing the API key
 
-2. Obtain SSL certificates for your IP address using any available provider and upload the
-   certificate files to your server. `SSL Dragon <https://www.ssldragon.com/>`_ and `SuperbitHost
+3. **Manual certificate upload**. Obtain SSL certificates for your IP address using any available
+   provider and upload the certificate files to your server. `SSL Dragon
+   <https://www.ssldragon.com/>`_ and `SuperbitHost
    <https://www.superbithost.com/ssl-certificates/>`_ are two options that accept cryptocurrency.
 
    Please make sure that the certificate chain file contains your server certificate at the top and
    intermediate/root certificates if present. If a bundle file is present, you need to concatenate it
    with the certificate file::
-   
+
     cat certificate.crt bundle.crt > bundle.crt
 
    Verify the validity of the private key and certificate chain by running these commands::
