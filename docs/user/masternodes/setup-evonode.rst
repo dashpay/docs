@@ -613,8 +613,9 @@ network. There are three ways to get SSL certificates:
 
 1. **Let's Encrypt (recommended)**. Let's Encrypt is a free, automated certificate authority that
    provides SSL certificates at no cost and with no account registration required. Dashmate has
-   built-in support for obtaining and automatically renewing Let's Encrypt certificates. All you need
-   is an email address for certificate expiry notifications.
+   built-in support for obtaining and automatically renewing these Let's Encrypt `short-lived (160
+   hour) certificates <https://letsencrypt.org/2025/02/20/first-short-lived-cert-issued>`_. All you
+   need is an email address for certificate expiry notifications.
 
    During ``dashmate setup``, select **Let's Encrypt** as the SSL provider and enter your email
    address when prompted. Dashmate will handle the rest, including automatic renewal before
