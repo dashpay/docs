@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Dash latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 11:30-0500\n"
+"POT-Creation-Date: 2026-03-02 11:49-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -465,7 +465,7 @@ msgid "Validating the proposal JSON and hash"
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:206
-msgid "Preparing the collateral"
+msgid "Preparing the proposal fee"
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:210
@@ -478,19 +478,17 @@ msgstr ""
 #: ../../docs/user/governance/using.rst:214
 msgid ""
 "After validation, you will see a screen prompting you to prepare and burn"
-" the 1 DASH collateral fee. This fee is required to prevent spam and is "
+" the 1 DASH proposal fee. This fee is required to prevent spam and is "
 "permanently removed from circulation. Click **Prepare proposal** to "
 "create the fee transaction."
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:221
-msgid "Proposal collateral burn preparation screen"
+msgid "Proposal fee burn preparation screen"
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:223
-msgid ""
-"Click **Yes** on the confirmation dialog to broadcast the collateral "
-"transaction."
+msgid "Click **Yes** on the confirmation dialog to broadcast the fee transaction."
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:228
@@ -502,7 +500,7 @@ msgid "The transaction ID will be generated and displayed in the TxID field."
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:235
-msgid "Transaction ID generated for the proposal collateral"
+msgid "Transaction ID generated for the proposal fee"
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:238
@@ -511,7 +509,7 @@ msgstr ""
 
 #: ../../docs/user/governance/using.rst:240
 msgid ""
-"The wallet will display the confirmation progress for your collateral "
+"The wallet will display the confirmation progress for your fee "
 "transaction. One confirmation is required before you can submit the "
 "proposal to the network. After the first confirmation, click the **Next**"
 " button to move to the proposal submission screen."
@@ -693,21 +691,21 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:403
-msgid "Prepare the collateral transaction"
+msgid "Prepare the fee transaction"
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:405
 msgid ""
 "Finally, open your Dash Core wallet console and use the ``gobject "
-"prepare`` command to complete the proposal preparation and submit the "
-"collateral transaction. See the :ref:`Core developer documentation <api-"
-"rpc-dash-gobject-prepare>` for additional details."
+"prepare`` command to complete the proposal preparation and submit the fee"
+" transaction (a 1 DASH coin burn). See the :ref:`Core developer "
+"documentation <api-rpc-dash-gobject-prepare>` for additional details."
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:411
 msgid ""
-"Running this command will create a transaction spending 1 DASH from the "
-"wallet as collateral for the proposal being created. Only run this "
+"Running this command will create a transaction burning 1 DASH from the "
+"wallet as the proposal fee. This burn is irreversible. Only run this "
 "command once you have verified all the proposal information. The "
 "transaction is not reversible once sent."
 msgstr ""
@@ -737,8 +735,8 @@ msgstr ""
 
 #: ../../docs/user/governance/using.rst:429
 msgid ""
-"The command will execute and respond with a transaction ID for the "
-"collateral payment::"
+"The command will execute and respond with a transaction ID for the fee "
+"burn::"
 msgstr ""
 
 #: ../../docs/user/governance/using.rst:434
@@ -1039,5 +1037,68 @@ msgstr ""
 #~ "identical to the procedure described "
 #~ "above, and documentation is available "
 #~ "`here <https://www.dashcentral.org/about/contact>`_."
+#~ msgstr ""
+
+#~ msgid "Preparing the collateral"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After validation, you will see a "
+#~ "screen prompting you to prepare and "
+#~ "burn the 1 DASH collateral fee. "
+#~ "This fee is required to prevent "
+#~ "spam and is permanently removed from "
+#~ "circulation. Click **Prepare proposal** to "
+#~ "create the fee transaction."
+#~ msgstr ""
+
+#~ msgid "Proposal collateral burn preparation screen"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click **Yes** on the confirmation dialog"
+#~ " to broadcast the collateral transaction."
+#~ msgstr ""
+
+#~ msgid "Transaction ID generated for the proposal collateral"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The wallet will display the confirmation"
+#~ " progress for your collateral transaction."
+#~ " One confirmation is required before "
+#~ "you can submit the proposal to the"
+#~ " network. After the first confirmation, "
+#~ "click the **Next** button to move "
+#~ "to the proposal submission screen."
+#~ msgstr ""
+
+#~ msgid "Prepare the collateral transaction"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Finally, open your Dash Core wallet "
+#~ "console and use the ``gobject prepare``"
+#~ " command to complete the proposal "
+#~ "preparation and submit the collateral "
+#~ "transaction. See the :ref:`Core developer "
+#~ "documentation <api-rpc-dash-gobject-"
+#~ "prepare>` for additional details."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Running this command will create a "
+#~ "transaction spending 1 DASH from the "
+#~ "wallet as collateral for the proposal"
+#~ " being created. Only run this command"
+#~ " once you have verified all the "
+#~ "proposal information. The transaction is "
+#~ "not reversible once sent."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The command will execute and respond "
+#~ "with a transaction ID for the "
+#~ "collateral payment::"
 #~ msgstr ""
 

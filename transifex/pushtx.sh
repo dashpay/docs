@@ -29,5 +29,8 @@ sphinx-intl update -p _build/gettext -l de -l pt -l ko -l el -l ar -l ru -l zh_C
 sphinx-intl update -l en
 sphinx-intl update-txconfig-resources --pot-dir locale/pot  --transifex-organization-name dash --transifex-project-name dash-docs
 
+# Fix sphinx-intl defaults (keep_translations)
+sed -i 's/keep_translations      = false/keep_translations      = true/g' .tx/config
+
 # Push to Transifex
-tx push --source --force
+tx push --source --keep-translations --force
