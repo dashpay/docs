@@ -421,7 +421,11 @@ Core. To support the network effectively, the following requirements are recomme
 
 .. note::
 
-  Intel CPUs should be `Haswell architecture <https://en.wikipedia.org/wiki/Haswell_(microarchitecture)>`_ or newer
+  Platform release builds target the `x86-64-v3 <https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels>`_
+  microarchitecture level. Most Intel `Haswell <https://en.wikipedia.org/wiki/Haswell_(microarchitecture)>`_
+  (2013) and newer CPUs, as well as AMD Excavator (2015) and newer CPUs, support this level.
+  However, some older Haswell-era processors (e.g. certain Xeon E5 v3 steppings with TSX disabled)
+  may not be compatible. ARM64 hosts are also supported.
 
 +---------+------------------+
 |         | Recommended      |
