@@ -352,6 +352,8 @@ exploit.
   floating-point accuracy through the use of integers.
 
 
+.. _dash-subsidy-calculator: https://thepastaclaw.github.io/dash-subsidy-calculator/
+
 .. _emission-rate:
 
 Emission Rate
@@ -365,8 +367,7 @@ valid solution for the current :ref:`mining difficulty
 permitted to create new units of the currency. This is known as the 
 block subsidy. To ensure that the currency is not subject to endless 
 inflation, the block subsidy is reduced at regular intervals, as `shown 
-in this calculation
-<https://docs.google.com/spreadsheets/d/1HqgEkyfZDAA6pIZ3df2PwFE8Z430SVIzQ-mCQ6wGCh4/edit#gid=523620673>`_.
+in this calculation <dash-subsidy-calculator_>`_.
 Graphing this data results in a curve showing total coins in 
 circulation, known as the coin emission rate.
 
@@ -394,8 +395,7 @@ emission approaching (but never reaching) 21,000,000 BTC. This will
 continue until 2140, but the mining subsidy reduces so quickly that 99%
 of all bitcoin will be in circulation by 2036, and 99.9% by 2048.
 
-`Dash's total coin emission <https://docs.google.com/spreadsheets/d
-/1JUK4Iy8pjTzQ3Fvc-iV15n2qn19fmiJhnKDDSxebbAA/edit#gid=205877544>`_ is
+`Dash's total coin emission <dash-subsidy-calculator_>`_ is
 also the sum of a geometric series, but the ultimate total coin emission
 is uncertain because it cannot be known how much of the 20% block subsidy
 reserved for budget proposals will actually be allocated, since this
