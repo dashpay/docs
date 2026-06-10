@@ -2,9 +2,34 @@
 #
 # * Documentation on Robots.txt: https://docs.readthedocs.com/platform/stable/reference/robots.html
 # * Guide about SEO techniques: https://docs.readthedocs.com/platform/stable/guides/technical-docs-seo-guide.html
+#
+# robots.txt is served once for the whole domain, taken from the default version (stable).
+# We index only /en/stable/ so search engines stop surfacing outdated release docs.
+# stable is an alias of the newest release, so this list needs no per-release maintenance —
+# only add a line here if a brand-new active version slug should be excluded.
 
 User-agent: *
 
-Disallow: /en/latest/ # Hidden version
+# Outdated / non-default versions — keep these out of search results
+Disallow: /en/latest/        # Hidden version
+Disallow: /en/develop/
+Disallow: /en/23.0.0/
+Disallow: /en/22.0.0/
+Disallow: /en/21.0.0/
+Disallow: /en/20.1.0/
+Disallow: /en/20.0.0/
+Disallow: /en/19.0.0/
+Disallow: /en/18.0.0/
+Disallow: /en/0.17.0/
+Disallow: /en/0.16.0/
+Disallow: /en/0.15.0/
+Disallow: /en/0.14.0/
+Disallow: /en/0.13.0/
+Disallow: /en/0.12.3/
+
+# Legacy Core docs subproject (served under /projects/core/), from the former
+# dashpay/docs-core repo, now merged into this repo. All of it is outdated, so
+# block the whole tree from search results.
+Disallow: /projects/core/
 
 Sitemap: https://docs.dash.org/en/stable/sitemap.xml
