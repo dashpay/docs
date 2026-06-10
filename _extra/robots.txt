@@ -27,4 +27,9 @@ Disallow: /en/0.14.0/
 Disallow: /en/0.13.0/
 Disallow: /en/0.12.3/
 
+# Legacy Core docs subproject (served under /projects/core/), from the former
+# dashpay/docs-core repo, now merged into this repo. All of it is outdated, so
+# block the whole tree from search results.
+Disallow: /projects/core/
+
 Sitemap: https://docs.dash.org/en/stable/sitemap.xml
