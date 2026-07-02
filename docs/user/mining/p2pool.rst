@@ -112,7 +112,7 @@ address to the latest version of Dash Core by right clicking or pressing
 **Ctrl + V**::
 
   cd ~
-  wget https://github.com/dashpay/dash/releases/download/v23.1.4/dashcore-23.1.4-x86_64-linux-gnu.tar.gz
+  wget https://github.com/dashpay/dash/releases/download/v23.1.7/dashcore-23.1.7-x86_64-linux-gnu.tar.gz
 
 Verify the authenticity of your download by checking its detached
 signature against the public key published by the Dash Core development
@@ -125,21 +125,21 @@ following key:
 ::
 
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  wget https://github.com/dashpay/dash/releases/download/v23.1.4/dashcore-23.1.4-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-23.1.4-x86_64-linux-gnu.tar.gz.asc
+  wget https://github.com/dashpay/dash/releases/download/v23.1.7/dashcore-23.1.7-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-23.1.7-x86_64-linux-gnu.tar.gz.asc
 
 Create a working directory for Dash, extract the compressed archive,
 copy the necessary files to the directory and set them as executable::
 
   mkdir ~/.dashcore
-  tar xfvz dashcore-23.1.4-x86_64-linux-gnu.tar.gz
-  cp dashcore-23.1.4/bin/dashd .dashcore/
-  cp dashcore-23.1.4/bin/dash-cli .dashcore/
+  tar xfvz dashcore-23.1.7-x86_64-linux-gnu.tar.gz
+  cp dashcore-23.1.7/bin/dashd .dashcore/
+  cp dashcore-23.1.7/bin/dash-cli .dashcore/
 
 Clean up unneeded files::
 
-  rm dashcore-23.1.4-x86_64-linux-gnu.tar.gz
-  rm -r dashcore-23.1.4/
+  rm dashcore-23.1.7-x86_64-linux-gnu.tar.gz
+  rm -r dashcore-23.1.7/
 
 Create a configuration file using the following command::
 
