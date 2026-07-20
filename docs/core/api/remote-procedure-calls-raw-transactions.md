@@ -806,6 +806,11 @@ Note: For backwards compatibility, passing in a `true` instead of an object will
 | → <br>`feeRate`                | numeric (bitcoins) | Optional<br>(0 or 1)    | The specific feerate  you are willing to pay (BTC per KB). If not set, the wallet determines the fee |
 | → <br>`subtractFeeFromOutputs` | array              | Optional<br>(0 or 1)    | A json array of integers. The fee will be equally deducted from the amount of each specified output. The outputs are specified by their zero-based index, before any change output is added.                              |
 | → →<br>Output index            | numeric (int)      | Optional<br>(0 or more) | A output index number (vout) from which the fee should be subtracted. If multiple vouts are provided, the total fee will be divided by the number of vouts listed and each vout will have that amount subtracted from it. |
+| → <br>`input_sizes`            | array              | Optional<br>(0 or 1)    | Inputs and their corresponding sizes |
+| → →<br>Input                   | object             | Optional<br>(0 or more) | A JSON object describing an input and its size |
+| → → →<br>`txid`                | string (hex)       | Required<br>(exactly 1) | The transaction id |
+| → → →<br>`vout`                | numeric (int)      | Required<br>(exactly 1) | The output index |
+| → → →<br>`size`                | numeric (int)      | Required<br>(exactly 1) | The maximum size for this input, including the size of the outpoint and sequence number. Note that serialized signature sizes are not guaranteed to be consistent, so the maximum DER signatures size of 73 bytes should be used when considering ECDSA signatures. |
 | → <br>`conf_target`            | numberic (int)     | Optional<br>(0 or 1)    | Confirmation target (in blocks), or fee rate (for DASH/kB or duff/B estimate modes) |
 | → <br>`estimate_mode`          | string             | Optional<br>(0 or 1)    | The fee estimate mode, must be one of (case insensitive):<br>`unset`<br>`economical`<br>`conservative`<br>`DASH/kB`<br>`duff/B` |
 | → <br>`solving_data`           | object             | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br><br>Keys and scripts needed for producing a final transaction with a dummy signature. Used for fee estimation during coin selection. |
@@ -1288,7 +1293,7 @@ _Result (if verbose=`true`)---the decoded transactions_
 | Name                        | Type           | Presence                | Description |
 | --------------------------- | -------------- | ----------------------- | ----------- |
 | `result`                    | object         | Required<br>(exactly 1) | If the transaction was found, this will be an object describing it |
-|→<br>TXID / Decoded tx | string:string | Required<br>(1 or more) | A key/value pair with the transaction ID (key) and decoded transaction data represented in JSON (value). See the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction) for an example of the decoded transaction data. |
+|→<br>TXID / Decoded tx | string : object | Required<br>(1 or more) | A key/value pair with the transaction ID (key) and decoded transaction data represented in JSON (value). See the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction) for an example of the decoded transaction data. |
 
 _Examples from Dash Core 20.1.0_
 

@@ -588,6 +588,51 @@ The `protx listdiff` RPC calculates a full MN list diff between two masternode l
 | ------- | ------- | -------------------- | -----------------------|
 | `block` | numeric | Required (exactly 1) | The ending block height|
 
+*Result---the masternode list diff*
+
+| Name                             | Type         | Presence                | Description |
+| -------------------------------- | ------------ | ----------------------- | ----------- |
+| `result`                         | object       | Required<br>(exactly 1) | An object containing the masternode list diff |
+| →<br>`baseHeight`                | number (int) | Required<br>(exactly 1) | Height of base (starting) block |
+| →<br>`blockHeight`               | number (int) | Required<br>(exactly 1) | Height of target (ending) block |
+| →<br>`addedMNs`                  | array        | Required<br>(exactly 1) | Added masternodes |
+| → →<br>Masternode                | object       | Optional<br>(0 or more) | The masternode's details |
+| → → →<br>`type`                  | string       | Required<br>(exactly 1) | The type of masternode |
+| → → →<br>`proTxHash`             | string (hex) | Required<br>(exactly 1) | Hash of the masternode's initial ProRegTx |
+| → → →<br>`collateralHash`        | string (hex) | Required<br>(exactly 1) | Collateral transaction hash |
+| → → →<br>`collateralIndex`       | number (int) | Required<br>(exactly 1) | Collateral transaction output index |
+| → → →<br>`collateralAddress`     | string       | Optional<br>(0 or 1)    | Dash address used for collateral |
+| → → →<br>`operatorReward`        | number       | Required<br>(exactly 1) | Fraction in % of reward shared with the operator between 0 and 10000 |
+| → → →<br>`state`                 | object       | Required<br>(exactly 1) | The masternode state |
+| → → → →<br>`version`             | number       | Required<br>(exactly 1) | Version of the masternode state |
+| → → → →<br>`service`             | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The IP address/Port of the masternode |
+| → → → →<br>`addresses`           | object       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
+| → → → → →<br>`core_p2p`          | array        | Optional<br>(0 or 1)    | Array of core P2P address strings in `ADDR:PORT` format |
+| → → → → →<br>`platform_p2p`      | array        | Optional<br>(0 or 1)    | Array of platform P2P address strings in `ADDR:PORT` format (evonodes only) |
+| → → → → →<br>`platform_https`    | array        | Optional<br>(0 or 1)    | Array of platform HTTPS address strings in `ADDR:PORT` format (evonodes only) |
+| → → → →<br>`registeredHeight`    | number (int) | Required<br>(exactly 1) | Height masternode was registered |
+| → → → →<br>`lastPaidHeight`      | number (int) | Required<br>(exactly 1) | Height masternode was last paid |
+| → → → →<br>`consecutivePayments` | number (int) | Required<br>(exactly 1) | Consecutive payments the masternode has received in the payment cycle |
+| → → → →<br>`PoSePenalty`         | number (int) | Required<br>(exactly 1) | Proof of Service penalty score |
+| → → → →<br>`PoSeRevivedHeight`   | number (int) | Required<br>(exactly 1) | Height masternode recovered from Proof of Service violations |
+| → → → →<br>`PoSeBanHeight`       | number (int) | Required<br>(exactly 1) | Height masternode was banned for Proof of Service violations |
+| → → → →<br>`revocationReason`    | number (int) | Required<br>(exactly 1) | Reason for ProUpRegTx revocation |
+| → → → →<br>`ownerAddress`        | string       | Required<br>(exactly 1) | Dash address used for payee updates and proposal voting |
+| → → → →<br>`votingAddress`       | string       | Required<br>(exactly 1) | Dash address used for voting |
+| → → → →<br>`platformNodeID`      | string (hex) | Optional<br>(0 or 1)    | Node ID derived from P2P public key for Platform P2P (evonodes only) |
+| → → → →<br>`platformP2PPort`     | number (int) | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_p2p'][0]` instead<br>TCP port of Platform P2P (evonodes only) |
+| → → → →<br>`platformHTTPPort`    | number (int) | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_https'][0]` instead<br>TCP port of Platform HTTP/API interface (evonodes only) |
+| → → → →<br>`payoutAddress`       | string       | Optional<br>(0 or 1)    | Dash address used for masternode reward payments |
+| → → → →<br>`pubKeyOperator`      | string       | Required<br>(exactly 1) | BLS public key used for operator signing |
+| → → → →<br>`operatorPayoutAddress` | string     | Optional<br>(0 or 1)    | Dash address used for operator reward payments |
+| →<br>`removedMNs`                | array        | Required<br>(exactly 1) | An array of ProTx hashes of removed masternodes |
+| →<br>`updatedMNs`                | array        | Required<br>(exactly 1) | Updated masternodes |
+| → →<br>ProTx hash                | object       | Optional<br>(0 or more) | Key: the masternode's ProTx hash<br>Value: the masternode state diff (only the changed fields are included) |
+| → → →<br>`version`               | number       | Optional<br>(0 or 1)    | Version of the masternode state diff |
+| → → →<br>`service`               | string       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The IP address/Port of the masternode |
+| → → →<br>`addresses`             | object       | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
+| → → →<br>...other state fields   |              | Optional<br>(0 or 1)    | Any other changed field from the masternode `state` object above, including the deprecated `platformP2PPort` and `platformHTTPPort` |
+
 *Example from Dash Core*
 
 ```bash
@@ -611,6 +656,11 @@ Result:
       "state": {
         "version": 1,
         "service": "64.193.62.206:19999",
+        "addresses": {
+          "core_p2p": [
+            "64.193.62.206:19999"
+          ]
+        },
         "registeredHeight": 7134,
         "lastPaidHeight": 7135,
         "consecutivePayments": 0,

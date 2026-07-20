@@ -580,18 +580,18 @@ The `gobject diff` RPC Lists governance objects differences since last diff.
 | → →<br>`ObjectType`        | number       | Required<br>(exactly 1) | Object types:<br>`1` - Unknown<br>`2` - Proposal<br>`3` - Trigger                                                                                           |
 | → →<br>`CreationTime`      | number       | Required<br>(exactly 1) | Object creation time as Unix epoch time                                                                                                                     |
 | → →<br>`SigningMasternode` | string (hex) | Optional<br>(0 or 1)    | Signing masternode's vin (only present in triggers)                                                                                                         |
+| → →<br>`fBlockchainValidity` | boolean      | Required<br>(exactly 1) | Valid by the blockchain                                                                                                                                     |
+| → →<br>`IsValidReason`       | string       | Required<br>(exactly 1) | `fBlockchainValidity` error result. Empty if no error returned.                                                                                             |
+| → →<br>`fCachedValid`        | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc) |
+| → →<br>`fCachedFunding`      | boolean      | Required<br>(exactly 1) | Minimum network support has been reached for this object to be funded (doesn't mean it will be for sure though)                                             |
+| → →<br>`fCachedDelete`       | boolean      | Required<br>(exactly 1) | Minimum network support has been reached saying this object should be deleted from the system entirely                                                      |
+| → →<br>`fCachedEndorsed`     | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as endorsed                                                                                   |
 | → →<br>`AbsoluteYesCount`  | number       | Required<br>(exactly 1) | Number of `Yes` votes minus number of `No` votes                                                                                                            |
 | → →<br>`YesCount`          | number       | Required<br>(exactly 1) | Number of `Yes` votes                                                                                                                                       |
 | → →<br>`NoCount`           | number       | Required<br>(exactly 1) | Number of `No` votes                                                                                                                                        |
 | → →<br>`AbstainCount`      | number       | Required<br>(exactly 1) | Number of `Abstain` votes                                                                                                                                   |
-| →<br>`fLocalValidity`      | boolean      | Required<br>(exactly 1) | Valid by the blockchain                                                                                                                                     |
-| →<br>`IsValidReason`       | string       | Required<br>(exactly 1) | `fLocalValidity` error result. Empty if no error returned.                                                                                                  |
-| →<br>`fCachedValid`        | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc) |
-| →<br>`fCachedFunding`      | boolean      | Required<br>(exactly 1) | Minimum network support has been reached for this object to be funded (doesn't mean it will be for sure though)                                             |
-| →<br>`fCachedDelete`       | boolean      | Required<br>(exactly 1) | Minimum network support has been reached saying this object should be deleted from the system entirely                                                      |
-| →<br>`fCachedEndorsed`     | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as endorsed                                                                                   |
 
-*Example from Dash Core 0.12.2*
+*Example from Dash Core 23.1.7*
 
 ``` bash
 dash-cli -testnet gobject diff all all
@@ -601,23 +601,23 @@ Result (truncated):
 
 ``` json
 {
-  "17c2bd32005c5168a52f9b5caa74d875ee8a6867a6109f36923887ef6c36b301": {
-    "DataHex": "5b5b2270726f706f73616c222c7b22656e645f65706f6368223a2231353037343533353731222c226e616d65223a227465737470726f706f73616c5f2d5f6162636465666768696a6b6c6d6e6f707172737475767778797a3031323334353637383931353037323634343939222c227061796d656e745f61646472657373223a2279697355653636445352487048504233514245426764574746637068435933626234222c227061796d656e745f616d6f756e74223a2232222c2273746172745f65706f6368223a2231353037323634343939222c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f746573745f70726f706f73616c5f31353037323634343939227d5d5d",
-    "DataString": "[[\"proposal\",{\"end_epoch\":\"1507453571\",\"name\":\"testproposal\",\"payment_address\":\"yisUe66DSRHpHPB3QBEBgdWGFcphCY3bb4\",\"payment_amount\":\"2\",\"start_epoch\":\"1507264499\",\"type\":1,\"url\":\"https://www.dashcentral.org/p/test_proposal_1507264499\"}]]",
-    "Hash": "17c2bd32005c5168a52f9b5caa74d875ee8a6867a6109f36923887ef6c36b301",
-    "CollateralHash": "a25c44b57931afd74530ce39741f91456446a8fd794d2f1c58c42d6f492647ad",
+  "4fe428f7b538ce0b3c08caf187894afcd7c867877495d0b28872c9f9e7e4140f": {
+    "DataHex": "7b226e616d65223a22696e667261636c61772d64656c6574652d746573742d3230323630373136222c2275726c223a2268747470733a2f2f7777772e646173682e6f7267222c227061796d656e745f61646472657373223a227961794e6d5a3563466a313477506457654734445775377a726e7356754633584a43222c227061796d656e745f616d6f756e74223a312c2273746172745f65706f6368223a313738343233313532322c22656e645f65706f6368223a313738343833363332322c2274797065223a317d",
+    "DataString": "{\"name\":\"infraclaw-delete-test-20260716\",\"url\":\"https://www.dash.org\",\"payment_address\":\"yayNmZ5cFj14wPdWeG4DWu7zrnsVuF3XJC\",\"payment_amount\":1,\"start_epoch\":1784231522,\"end_epoch\":1784836322,\"type\":1}",
+    "Hash": "4fe428f7b538ce0b3c08caf187894afcd7c867877495d0b28872c9f9e7e4140f",
+    "CollateralHash": "5ef12401adf87b224b7d362a105986cf530d9a5b84435f461774efe0b61c0ce2",
     "ObjectType": 1,
-    "CreationTime": 1507264499,
-    "AbsoluteYesCount": 0,
-    "YesCount": 0,
-    "NoCount": 0,
-    "AbstainCount": 0,
+    "CreationTime": 1784231522,
     "fBlockchainValidity": true,
     "IsValidReason": "",
     "fCachedValid": true,
     "fCachedFunding": false,
     "fCachedDelete": false,
-    "fCachedEndorsed": false
+    "fCachedEndorsed": false,
+    "AbsoluteYesCount": 0,
+    "YesCount": 0,
+    "NoCount": 0,
+    "AbstainCount": 0
   }
 }
 ```
@@ -797,18 +797,18 @@ The `gobject list` RPC Lists governance objects (can be filtered by signal and/o
 | → →<br>`ObjectType`        | number       | Required<br>(exactly 1) | Object types:<br>`1` - Unknown<br>`2` - Proposal<br>`3` - Trigger                                                                                           |
 | → →<br>`CreationTime`      | number       | Required<br>(exactly 1) | Object creation time as Unix epoch time                                                                                                                     |
 | → →<br>`SigningMasternode` | string (hex) | Optional<br>(0 or 1)    | Signing masternode's vin (only present in triggers)                                                                                                         |
+| → →<br>`fBlockchainValidity` | boolean      | Required<br>(exactly 1) | Valid by the blockchain                                                                                                                                     |
+| → →<br>`IsValidReason`       | string       | Required<br>(exactly 1) | `fBlockchainValidity` error result. Empty if no error returned.                                                                                             |
+| → →<br>`fCachedValid`        | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc) |
+| → →<br>`fCachedFunding`      | boolean      | Required<br>(exactly 1) | Minimum network support has been reached for this object to be funded (doesn't mean it will be for sure though)                                             |
+| → →<br>`fCachedDelete`       | boolean      | Required<br>(exactly 1) | Minimum network support has been reached saying this object should be deleted from the system entirely                                                      |
+| → →<br>`fCachedEndorsed`     | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as endorsed                                                                                   |
 | → →<br>`AbsoluteYesCount`  | number       | Required<br>(exactly 1) | Number of `Yes` votes minus number of `No` votes                                                                                                            |
 | → →<br>`YesCount`          | number       | Required<br>(exactly 1) | Number of `Yes` votes                                                                                                                                       |
 | → →<br>`NoCount`           | number       | Required<br>(exactly 1) | Number of `No` votes                                                                                                                                        |
 | → →<br>`AbstainCount`      | number       | Required<br>(exactly 1) | Number of `Abstain` votes                                                                                                                                   |
-| →<br>`fLocalValidity`      | boolean      | Required<br>(exactly 1) | Valid by the blockchain                                                                                                                                     |
-| →<br>`IsValidReason`       | string       | Required<br>(exactly 1) | `fLocalValidity` error result. Empty if no error returned.                                                                                                  |
-| →<br>`fCachedValid`        | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc) |
-| →<br>`fCachedFunding`      | boolean      | Required<br>(exactly 1) | Minimum network support has been reached for this object to be funded (doesn't mean it will be for sure though)                                             |
-| →<br>`fCachedDelete`       | boolean      | Required<br>(exactly 1) | Minimum network support has been reached saying this object should be deleted from the system entirely                                                      |
-| →<br>`fCachedEndorsed`     | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as endorsed                                                                                   |
 
-*Example from Dash Core 0.12.2*
+*Example from Dash Core 23.1.7*
 
 ``` bash
 dash-cli -testnet gobject list all proposals
@@ -818,41 +818,41 @@ Result (truncated):
 
 ``` json
 {
-  "b370fa1afd61aca9aa879abea3087e29656a670478f281d4196efb4e7e893ffe": {
-    "DataHex": "5b5b2270726f706f73616c222c7b22656e645f65706f6368223a2231353037343430303338222c226e616d65223a227465737470726f706f73616c5f2d5f6162636465666768696a6b6c6d6e6f707172737475767778797a3031323334353637383931353037323530393636222c227061796d656e745f61646472657373223a2279544c636f506d4e315963654432534345474d6b6e34395753565a4277626f646e6e222c227061796d656e745f616d6f756e74223a2232222c2273746172745f65706f6368223a2231353037323530393636222c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f746573745f70726f706f73616c5f31353037323530393636227d5d5d",
-    "DataString": "[[\"proposal\",{\"end_epoch\":\"1507440038\",\"name\":\"testproposal_-_abcdefghijklmnopqrstuvwxyz01234567891507250966\",\"payment_address\":\"yTLcoPmN1YceD2SCEGMkn49WSVZBwbodnn\",\"payment_amount\":\"2\",\"start_epoch\":\"1507250966\",\"type\":1,\"url\":\"https://www.dashcentral.org/p/test_proposal_1507250966\"}]]",
-    "Hash": "b370fa1afd61aca9aa879abea3087e29656a670478f281d4196efb4e7e893ffe",
-    "CollateralHash": "a51ea89c14735f8b5df37cd846b3561494cc616d4a741e4ef83b368d45c960ba",
+  "c6f5059ca0055fb327a6a0b15b9dd80c64b8c0956c1621061b294f8b93edab7f": {
+    "DataHex": "7b22656e645f65706f6368223a313830303834373439382c226e616d65223a2274657374696e67222c227061796d656e745f61646472657373223a227965525a42575966654e45347956554856345a4c73383350706e39614d5248353741222c227061796d656e745f616d6f756e74223a32302c2273746172745f65706f6368223a313734393333373839382c2274797065223a312c2275726c223a2268747470733a2f2f7365636f6e6461727974657374696e672e636f6d227d",
+    "DataString": "{\"end_epoch\":1800847498,\"name\":\"testing\",\"payment_address\":\"yeRZBWYfeNE4yVUHV4ZLs83Ppn9aMRH57A\",\"payment_amount\":20,\"start_epoch\":1749337898,\"type\":1,\"url\":\"https://secondarytesting.com\"}",
+    "Hash": "c6f5059ca0055fb327a6a0b15b9dd80c64b8c0956c1621061b294f8b93edab7f",
+    "CollateralHash": "38e7621be9ca265288095a324dc185b6ba739fe3846858e3133f775c12a91306",
     "ObjectType": 1,
-    "CreationTime": 1507250966,
-    "AbsoluteYesCount": 0,
-    "YesCount": 0,
-    "NoCount": 0,
-    "AbstainCount": 0,
+    "CreationTime": 1748276768,
     "fBlockchainValidity": true,
     "IsValidReason": "",
     "fCachedValid": true,
     "fCachedFunding": false,
     "fCachedDelete": false,
-    "fCachedEndorsed": false
+    "fCachedEndorsed": false,
+    "AbsoluteYesCount": 4,
+    "YesCount": 4,
+    "NoCount": 0,
+    "AbstainCount": 0
   },
-  "906ae4dbd285e1025832ac9b3160073ecbfeef094d34cf81b3d797a349c720ff": {
-    "DataHex": "5b5b2270726f706f73616c222c7b22656e645f65706f6368223a2231353037343534383935222c226e616d65223a227465737470726f706f73616c5f2d5f6162636465666768696a6b6c6d6e6f707172737475767778797a3031323334353637383931353037323635383233222c227061796d656e745f61646472657373223a2279664e68484c4c695936577a5a646a51766137324a64395134313468516578514c68222c227061796d656e745f616d6f756e74223a2232222c2273746172745f65706f6368223a2231353037323635383233222c2274797065223a312c2275726c223a2268747470733a2f2f7777772e6461736863656e7472616c2e6f72672f702f746573745f70726f706f73616c5f31353037323635383233227d5d5d",
-    "DataString": "[[\"proposal\",{\"end_epoch\":\"1507454895\",\"name\":\"testproposal_-_abcdefghijklmnopqrstuvwxyz01234567891507265823\",\"payment_address\":\"yfNhHLLiY6WzZdjQva72Jd9Q414hQexQLh\",\"payment_amount\":\"2\",\"start_epoch\":\"1507265823\",\"type\":1,\"url\":\"https://www.dashcentral.org/p/test_proposal_1507265823\"}]]",
-    "Hash": "906ae4dbd285e1025832ac9b3160073ecbfeef094d34cf81b3d797a349c720ff",
-    "CollateralHash": "1707470c4372ba048b72945365b4bb71afc8a986e0755c1f1e8a37bba21fde83",
+  "01934d6d5c25ade531176a0283148b3d6aeaef2c0b6d599552e43c2199d2f8cd": {
+    "DataHex": "7b22656e645f65706f6368223a313831333732343634322c226e616d65223a2274657374222c227061796d656e745f61646472657373223a227965525a42575966654e45347956554856345a4c73383350706e39614d5248353741222c227061796d656e745f616d6f756e74223a352c2273746172745f65706f6368223a313734393333373634322c2274797065223a312c2275726c223a2268747470733a2f2f746573742e636f6d227d",
+    "DataString": "{\"end_epoch\":1813724642,\"name\":\"test\",\"payment_address\":\"yeRZBWYfeNE4yVUHV4ZLs83Ppn9aMRH57A\",\"payment_amount\":5,\"start_epoch\":1749337642,\"type\":1,\"url\":\"https://test.com\"}",
+    "Hash": "01934d6d5c25ade531176a0283148b3d6aeaef2c0b6d599552e43c2199d2f8cd",
+    "CollateralHash": "9aee5e1a4bc69b8201775daef93be1f21264a28c1cb6dc9e859b91f2e1497df0",
     "ObjectType": 1,
-    "CreationTime": 1507265823,
-    "AbsoluteYesCount": 0,
-    "YesCount": 0,
-    "NoCount": 0,
-    "AbstainCount": 0,
+    "CreationTime": 1748276047,
     "fBlockchainValidity": true,
     "IsValidReason": "",
     "fCachedValid": true,
     "fCachedFunding": false,
     "fCachedDelete": false,
-    "fCachedEndorsed": false
+    "fCachedEndorsed": false,
+    "AbsoluteYesCount": -2,
+    "YesCount": 1,
+    "NoCount": 3,
+    "AbstainCount": 0
   }
 }
 ```
@@ -1115,7 +1115,7 @@ The `gobject vote-alias` RPC votes on a governance object by masternode alias (u
 
 | Name     | Type   | Presence                | Description                                  |
 | -------- | ------ | ----------------------- | -------------------------------------------- |
-| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding`, `valid`, or `delete` |
+| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding` or `valid` |
 
 *Parameter #3---vote outcome*
 
@@ -1174,7 +1174,7 @@ The `gobject vote-many` RPC votes on a governance object by all masternodes (usi
 
 | Name     | Type   | Presence                | Description                                  |
 | -------- | ------ | ----------------------- | -------------------------------------------- |
-| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding`, `valid`, or `delete` |
+| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding` or `valid` |
 
 *Parameter #3---vote outcome*
 
@@ -1492,18 +1492,23 @@ The `masternode status` RPC prints masternode status information.
 | →<br>`collateralIndex`         | int          | Optional<br>(0 or 1)    | Index of the collateral                                                                                                                                                                           |
 | →<br>`dmnState`                | object       | Optional<br>(0 or 1)    | Deterministic Masternode State                                                                                                                                                                    |
 | → →<br>`version`               | int          | Required<br>(exactly 1) | **Added in Dash Core 19.2.0**<br>The version of the most recent ProRegTx or ProUpRegTx                                                                                                            |
-| → →<br>`service`               | string       | Required<br>(exactly 1) | The IP address/port of the masternode                                                                                                                                                             |
+| → →<br>`service`               | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** (use `addresses` instead)<br>The IP address/port of the masternode |
+| → →<br>`addresses`             | object       | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>Network addresses of the masternode |
+| → → →<br>`core_p2p`            | array        | Optional<br>(0 or 1)    | Addresses used for protocol P2P |
+| → → →<br>`platform_p2p`        | array        | Optional<br>(0 or 1)    | Addresses used for Platform P2P |
+| → → →<br>`platform_https`      | array        | Optional<br>(0 or 1)    | Addresses used for Platform HTTPS API |
 | → →<br>`registeredHeight`      | int          | Required<br>(exactly 1) | Block height at which the masternode was registered                                                                                                                                               |
 | → →<br>`lastPaidHeight`        | int          | Required<br>(exactly 1) | Block height at which the masternode was last paid                                                                                                                                                |
+| → →<br>`consecutivePayments`   | int          | Required<br>(exactly 1) | Consecutive payments the masternode has received in the payment cycle |
 | → →<br>`PoSePenalty`           | int          | Required<br>(exactly 1) | Current proof-of-service penalty                                                                                                                                                                  |
 | → →<br>`PoSeRevivedHeight`     | int          | Required<br>(exactly 1) | Block height at which the masternode was last revived from a PoSe ban                                                                                                                             |
 | → →<br>`PoSeBanHeight`         | int          | Required<br>(exactly 1) | Block height at which the masternode was last PoSe banned                                                                                                                                         |
 | → →<br>`revocationReason`      | int          | Required<br>(exactly 1) | Reason code for of masternode operator key revocation                                                                                                                                             |
 | → →<br>`ownerAddress`          | string       | Required<br>(exactly 1) | The owner address                                                                                                                                                                                 |
 | → →<br>`votingAddress`         | string       | Required<br>(exactly 1) | The voting address                                                                                                                                                                                |
-| → →<br>`platformNodeId`        | string       | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>Platform P2P node ID, derived from P2P public key (evonodes only)                                                                                                |
-| → →<br>`platformP2PPort`       | int          | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>Platform P2P port (evonodes only)                                                                                                                                |
-| → →<br>`platformHTTPPort`      | int          | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>TCP port of Platform HTTP/API interface (evonodes only)                                                                                                          |
+| → →<br>`platformNodeID`        | string       | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>Platform P2P node ID, derived from P2P public key (evonodes only)                                                                                                |
+| → →<br>`platformP2PPort`       | int          | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>**DEPRECATED in Dash Core 23.0.0**<br>Platform P2P port (evonodes only) |
+| → →<br>`platformHTTPPort`      | int          | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>**DEPRECATED in Dash Core 23.0.0**<br>TCP port of Platform HTTP/API interface (evonodes only) |
 | → →<br>`payoutAddress`         | string       | Required<br>(exactly 1) | The payout address                                                                                                                                                                                |
 | → →<br>`pubKeyOperator`        | string       | Required<br>(exactly 1) | The operator public key                                                                                                                                                                           |
 | → →<br>`operatorPayoutAddress` | string       | Optional<br>(0 or 1)    | The operator payout address                                                                                                                                                                       |
@@ -1727,7 +1732,13 @@ The [`masternodelist` RPC](#masternodelist) returns a list of masternodes in dif
 | `result`             | object/null | Required<br>(exactly 1) | Information about the masternode sync status                                                  |
 | →<br>Masternode Info | string      | Required<br>(1 or more) | The requested masternode info. Output varies based on selected `mode` and `filter` parameters |
 
-*Example from Dash Core 20.0.0*
+:::{note}
+**Added in Dash Core 23.0.0**
+
+In `json`, `recent`, and `evo` modes, each entry includes a structured `addresses` object (with optional `core_p2p`, `platform_p2p`, and `platform_https` arrays). The flat `address`, `platformP2PPort`, and `platformHTTPPort` fields are **deprecated** in favor of the `addresses` object.
+:::
+
+*Example from Dash Core 23.1.7*
 
 Get unfiltered Masternode list in default mode
 
@@ -1739,37 +1750,63 @@ Result (truncated):
 
 ``` json
 {
-  "ab3435c4974cffa8cf6e9a11d9a263c7efad367c4b22fcc75507c565027b51ecb1ba2a1602d9337eb3edb037d7c03b49"
-  },
-  "482cf74e7a615086514c261a9454db358290f05c6243089a3961ffdf14256d29-0": {
-    "proTxHash": "9bc9b7a879c137114fd17b2af5c3825a6f78224cfac8afd7109e52f1b3a05bff",
-    "address": "[::]:0",
-    "payee": "Xdsbzw7a5wTCQYvCwLuQc7qnRuCcs7ehsK",
-    "status": "POSE_BANNED",
-    "type": "Regular",
-    "pospenaltyscore": 4448,
-    "consecutivePayments": 0,
-    "lastpaidtime": 1660888856,
-    "lastpaidblock": 1723759,
-    "owneraddress": "XfJtpuZxEAYUofWKsHA7KNYpCKNxY98Hm3",
-    "votingaddress": "Xh6M9FR9a8Wdb7aVvWeF8z9CxBAM9PgDbW",
-    "collateraladdress": "Xs1yGUqc53XddB4E9FkHNYXtum5CCoGvbt",
-    "pubkeyoperator": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-  },
-  "a476f59677f43968ef22c12e250605e42b8ae6d0665fef1354c219ac1e3de82e-0": {
-    "proTxHash": "af7b52f2333fbb5605105b3efd094547c2f77d81ca06aa97b784414c4d1efbff",
-    "address": "100.24.78.251:9999",
-    "payee": "XnpE5Mwr8GsVujK2eWVVJh718Zeap5FHLj",
+  "6ce8545e25d4f03aba1527062d9583ae01827c65b234bd979aca5954c6ae3a59-2": {
+    "proTxHash": "40784f3f9a761c60156f9244a902c0626f8bc8fe003786c70f1fc6be41da467d",
+    "address": "68.67.122.11:19999",
+    "addresses": {
+      "core_p2p": [
+        "68.67.122.11:19999"
+      ],
+      "platform_https": [
+        "68.67.122.11:1443"
+      ],
+      "platform_p2p": [
+        "68.67.122.11:36656"
+      ]
+    },
+    "payee": "yeRZBWYfeNE4yVUHV4ZLs83Ppn9aMRH57A",
     "status": "ENABLED",
-    "type": "Regular",
+    "type": "Evo",
+    "platformNodeID": "3e8b10646ee9d6c28d75c280b357dd3a9ae9f962",
+    "platformP2PPort": 36656,
+    "platformHTTPPort": 1443,
     "pospenaltyscore": 0,
     "consecutivePayments": 0,
-    "lastpaidtime": 1689823121,
-    "lastpaidblock": 1906829,
-    "owneraddress": "Xx7xCzbkHJnqbuqBk1zzGeuwopZ9x5UZvu",
-    "votingaddress": "XkK53owYVX5Q2t8XPzkR4bzourNzgfkjts",
-    "collateraladdress": "Xu2B3bvC75NuiYvudvJPR1npDdguyN7aWV",
-    "pubkeyoperator": "8f8097c423ad5bccc3d631bf518a1f28ff60b31841e3c7b0d44e578f94d33b96b9fb485e1690b72608423f3e926ac8c7"
+    "lastpaidtime": 1784548748,
+    "lastpaidblock": 1518209,
+    "owneraddress": "yiWvst7mfjPY54b8cJiXbAhCeN8ejCYBWY",
+    "votingaddress": "yiWvst7mfjPY54b8cJiXbAhCeN8ejCYBWY",
+    "collateraladdress": "yLXeV4P9kofak9vbxfa36ocodzTReTviRZ",
+    "pubkeyoperator": "82f60dad4b7b498379d1c700da56d4927727eab4387a793b861a96df47bdabe5666c270acf04b5b842ab54045bbf102a"
+  },
+  "6ce8545e25d4f03aba1527062d9583ae01827c65b234bd979aca5954c6ae3a59-14": {
+    "proTxHash": "8eca4bcbb3a124ab283afd42dad3bdb2077b3809659788a0f1daffce5b9f001f",
+    "address": "68.67.122.28:19999",
+    "addresses": {
+      "core_p2p": [
+        "68.67.122.28:19999"
+      ],
+      "platform_https": [
+        "68.67.122.28:1443"
+      ],
+      "platform_p2p": [
+        "68.67.122.28:36656"
+      ]
+    },
+    "payee": "yeRZBWYfeNE4yVUHV4ZLs83Ppn9aMRH57A",
+    "status": "ENABLED",
+    "type": "Evo",
+    "platformNodeID": "c075993a8336f93a13bb7bbb7e0e89928be4aafb",
+    "platformP2PPort": 36656,
+    "platformHTTPPort": 1443,
+    "pospenaltyscore": 0,
+    "consecutivePayments": 0,
+    "lastpaidtime": 1784549610,
+    "lastpaidblock": 1518217,
+    "owneraddress": "yaCBsm8dFrNuy8hgDQyzV29MZvqQBRkdxv",
+    "votingaddress": "yaCBsm8dFrNuy8hgDQyzV29MZvqQBRkdxv",
+    "collateraladdress": "yU8gE6mYzrkdyYUVZvUqoBNJ2jJbjiDeJt",
+    "pubkeyoperator": "b942e2e50c5cf9d9fe81119cc5379057c05fe15134f85847356b5d1f6a21f29f4a53f61f03338d056edc15a8c63fbbe8"
   }
 }
 ```

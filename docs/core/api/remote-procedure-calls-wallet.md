@@ -218,6 +218,12 @@ _Parameter #7---load on startup_
 | ----------------- | ---- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `load_on_startup` | bool | Optional<br>(0 or 1) | Save wallet name to persistent settings and load on startup. True to add wallet to startup list, false to remove, null to leave unchanged. |
 
+_Parameter #8---external signer_
+
+| Name              | Type | Presence             | Description                                                                                                                                                                                     |
+| ----------------- | ---- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `external_signer` | bool | Optional<br>(0 or 1) | Use an external signer such as a hardware wallet. Requires `-signer` to be configured. Wallet creation will fail if keys cannot be fetched. Requires `disable_private_keys` and `descriptors` set to true. |
+
 _Result---wallet name and any warnings_
 
 | Name           | Type   | Presence                | Description                                                                                                                   |
@@ -433,6 +439,25 @@ _See also_
 * [WalletPassphrase](../api/remote-procedure-calls-wallet.md#walletpassphrase): stores the wallet decryption key in memory for the indicated number of seconds. Issuing the `walletpassphrase` command while the wallet is already unlocked will set a new unlock time that overrides the old one.
 * [WalletLock](../api/remote-procedure-calls-wallet.md#walletlock): removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call `walletpassphrase` again before being able to call any methods which require the wallet to be unlocked.
 * [WalletPassphraseChange](../api/remote-procedure-calls-wallet.md#walletpassphrasechange): changes the wallet passphrase from 'old passphrase' to 'new passphrase'.
+
+## EnumerateSigners
+
+:::{versionadded} 23.1.0
+:::
+
+The [`enumeratesigners` RPC](../api/remote-procedure-calls-wallet.md#enumeratesigners) returns a list of external signers from `-signer`.
+
+_Parameters: none_
+
+_Result---the available external signers_
+
+| Name                   | Type         | Presence                | Description |
+| ---------------------- | ------------ | ----------------------- | ----------- |
+| `result`               | object       | Required<br>(exactly 1) | An object containing the available external signers |
+| →<br>`signers`         | array        | Required<br>(exactly 1) | Array of external signers |
+| → →<br>Signer          | object       | Optional<br>(0 or more) | JSON object describing an external signer |
+| → → →<br>`fingerprint` | string (hex) | Required<br>(exactly 1) | Master key fingerprint |
+| → → →<br>`name`        | string       | Required<br>(exactly 1) | Device name |
 
 ## GetAddressInfo
 
@@ -681,8 +706,11 @@ _Result---balances in Dash_
 | →→`trusted`           | numeric | Optional<br>(1 or more)                       | Trusted balance (outputs created by the wallet or confirmed outputs).                                |
 | →→`untrusted_pending` | numeric | Optional<br>(1 or more)                       | Untrusted pending balance (outputs created by others that are in the mempool).                       |
 | →→`immature`          | numeric | Optional<br>(1 or more)                       | Balance from immature coinbase outputs.                                                              |
+| →<br>`lastprocessedblock` | object  | Required<br>(exactly 1)                       | Hash and height of the block this information was generated on                                       |
+| → →<br>`hash`             | string  | Required<br>(exactly 1)                       | Hash of the block this information was generated on                                                  |
+| → →<br>`height`           | numeric | Required<br>(exactly 1)                       | Height of the block this information was generated on                                                |
 
-_Example from Dash Core 18.2.0_
+_Example from Dash Core 23.1.7_
 
 ```bash
 dash-cli getbalances
@@ -697,8 +725,11 @@ Result:
     "immature": 0.00000000,
     "used": 0.00000000,
     "coinjoin": 0.00000000
+  },
+  "lastprocessedblock": {
+    "hash": "000000523a483b6e2e1756ea1f4f6b1a3cd0934b2fdc01a2f71031a3bf7a9eb1",
+    "height": 1518273
   }
-
 ```
 
 _See also_
@@ -1090,8 +1121,13 @@ _Result---information about the wallet_
 | → →<br>`duration`              | number (int)     | Optional<br>(0 or 1)    | Elapsed seconds since scan start |
 | → →<br>`progress`              | number (int)     | Optional<br>(0 or 1)    | Scanning progress percentage 0.0 to 1.0 |
 | →<br>`private_keys_enabled`    | boolean          | Optional<br>(0 or 1)    | `false` if private keys are disabled for this wallet (enforced watch-only wallet) |
+| →<br>`descriptors`             | boolean          | Optional<br>(0 or 1)    | Whether this wallet uses descriptors for scriptPubKey management |
+| →<br>`external_signer`         | boolean          | Optional<br>(0 or 1)    | Whether this wallet is configured to use an external signer such as a hardware wallet |
+| →<br>`lastprocessedblock`      | object           | Required<br>(exactly 1) | Hash and height of the block this information was generated on |
+| → →<br>`hash`                  | string (hex)     | Required<br>(exactly 1) | Hash of the block this information was generated on |
+| → →<br>`height`                | number (int)     | Required<br>(exactly 1) | Height of the block this information was generated on |
 
-_Example from Dash Core 20.0.0_
+_Example from Dash Core 23.1.7_
 
 ```bash
 dash-cli -testnet getwalletinfo
@@ -1126,7 +1162,13 @@ Result:
   ],
   "avoid_reuse": false,
   "scanning": false,
-  "private_keys_enabled": true
+  "private_keys_enabled": true,
+  "descriptors": false,
+  "external_signer": false,
+  "lastprocessedblock": {
+    "hash": "000000523a483b6e2e1756ea1f4f6b1a3cd0934b2fdc01a2f71031a3bf7a9eb1",
+    "height": 1518273
+  }
 }
 ```
 
@@ -3826,6 +3868,26 @@ Result:
   "changepos": 1
 }
 ```
+
+## WalletDisplayAddress
+
+:::{versionadded} 23.1.0
+:::
+
+The [`walletdisplayaddress` RPC](../api/remote-procedure-calls-wallet.md#walletdisplayaddress) displays an address on an external signer for verification.
+
+_Parameter #1---address to display_
+
+| Name      | Type   | Presence                | Description             |
+| --------- | ------ | ----------------------- | ----------------------- |
+| `address` | string | Required<br>(exactly 1) | Dash address to display |
+
+_Result---the address confirmed by the signer_
+
+| Name           | Type   | Presence                | Description |
+| -------------- | ------ | ----------------------- | ----------- |
+| `result`       | object | Required<br>(exactly 1) | An object containing the confirmed address |
+| →<br>`address` | string | Required<br>(exactly 1) | The address as confirmed by the signer |
 
 ## WalletLock
 
