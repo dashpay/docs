@@ -250,6 +250,7 @@ Name | Type | Presence | Description
 → → → → →<br>`value` | number (Dash) | Required<br>(exactly 1) | The value in DASH
 → → → → →<br>`scriptPubKey` | object | Required<br>(exactly 1) | The script pubkey
 → → → → → →<br>`asm` | string | Required<br>(exactly 1) | The asm
+→ → → → → →<br>`desc` | string | Required<br>(exactly 1) | Inferred descriptor for the output
 → → → → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The hex
 → → → → → →<br>`address` | string | Optional<br>(0 or 1) | The Dash address (only if a well-defined address exists)
 → → → → → →<br>`type` | string | Required<br>(exactly 1) | The type (e.g., 'pubkeyhash')
