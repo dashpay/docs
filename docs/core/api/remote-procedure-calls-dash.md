@@ -580,18 +580,18 @@ The `gobject diff` RPC Lists governance objects differences since last diff.
 | → →<br>`ObjectType`        | number       | Required<br>(exactly 1) | Object types:<br>`1` - Unknown<br>`2` - Proposal<br>`3` - Trigger                                                                                           |
 | → →<br>`CreationTime`      | number       | Required<br>(exactly 1) | Object creation time as Unix epoch time                                                                                                                     |
 | → →<br>`SigningMasternode` | string (hex) | Optional<br>(0 or 1)    | Signing masternode's vin (only present in triggers)                                                                                                         |
-| →<br>`fBlockchainValidity` | boolean      | Required<br>(exactly 1) | Valid by the blockchain                                                                                                                                     |
-| →<br>`IsValidReason`       | string       | Required<br>(exactly 1) | `fBlockchainValidity` error result. Empty if no error returned.                                                                                             |
-| →<br>`fCachedValid`        | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc) |
-| →<br>`fCachedFunding`      | boolean      | Required<br>(exactly 1) | Minimum network support has been reached for this object to be funded (doesn't mean it will be for sure though)                                             |
-| →<br>`fCachedDelete`       | boolean      | Required<br>(exactly 1) | Minimum network support has been reached saying this object should be deleted from the system entirely                                                      |
-| →<br>`fCachedEndorsed`     | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as endorsed                                                                                   |
+| → →<br>`fBlockchainValidity` | boolean      | Required<br>(exactly 1) | Valid by the blockchain                                                                                                                                     |
+| → →<br>`IsValidReason`       | string       | Required<br>(exactly 1) | `fBlockchainValidity` error result. Empty if no error returned.                                                                                             |
+| → →<br>`fCachedValid`        | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc) |
+| → →<br>`fCachedFunding`      | boolean      | Required<br>(exactly 1) | Minimum network support has been reached for this object to be funded (doesn't mean it will be for sure though)                                             |
+| → →<br>`fCachedDelete`       | boolean      | Required<br>(exactly 1) | Minimum network support has been reached saying this object should be deleted from the system entirely                                                      |
+| → →<br>`fCachedEndorsed`     | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as endorsed                                                                                   |
 | → →<br>`AbsoluteYesCount`  | number       | Required<br>(exactly 1) | Number of `Yes` votes minus number of `No` votes                                                                                                            |
 | → →<br>`YesCount`          | number       | Required<br>(exactly 1) | Number of `Yes` votes                                                                                                                                       |
 | → →<br>`NoCount`           | number       | Required<br>(exactly 1) | Number of `No` votes                                                                                                                                        |
 | → →<br>`AbstainCount`      | number       | Required<br>(exactly 1) | Number of `Abstain` votes                                                                                                                                   |
 
-*Example from Dash Core 0.12.2*
+*Example from Dash Core 23.1.7*
 
 ``` bash
 dash-cli -testnet gobject diff all all
@@ -797,18 +797,18 @@ The `gobject list` RPC Lists governance objects (can be filtered by signal and/o
 | → →<br>`ObjectType`        | number       | Required<br>(exactly 1) | Object types:<br>`1` - Unknown<br>`2` - Proposal<br>`3` - Trigger                                                                                           |
 | → →<br>`CreationTime`      | number       | Required<br>(exactly 1) | Object creation time as Unix epoch time                                                                                                                     |
 | → →<br>`SigningMasternode` | string (hex) | Optional<br>(0 or 1)    | Signing masternode's vin (only present in triggers)                                                                                                         |
-| →<br>`fBlockchainValidity` | boolean      | Required<br>(exactly 1) | Valid by the blockchain                                                                                                                                     |
-| →<br>`IsValidReason`       | string       | Required<br>(exactly 1) | `fBlockchainValidity` error result. Empty if no error returned.                                                                                             |
-| →<br>`fCachedValid`        | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc) |
-| →<br>`fCachedFunding`      | boolean      | Required<br>(exactly 1) | Minimum network support has been reached for this object to be funded (doesn't mean it will be for sure though)                                             |
-| →<br>`fCachedDelete`       | boolean      | Required<br>(exactly 1) | Minimum network support has been reached saying this object should be deleted from the system entirely                                                      |
-| →<br>`fCachedEndorsed`     | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as endorsed                                                                                   |
+| → →<br>`fBlockchainValidity` | boolean      | Required<br>(exactly 1) | Valid by the blockchain                                                                                                                                     |
+| → →<br>`IsValidReason`       | string       | Required<br>(exactly 1) | `fBlockchainValidity` error result. Empty if no error returned.                                                                                             |
+| → →<br>`fCachedValid`        | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as a valid and understood governance object (e.g, the serialized data is correct format, etc) |
+| → →<br>`fCachedFunding`      | boolean      | Required<br>(exactly 1) | Minimum network support has been reached for this object to be funded (doesn't mean it will be for sure though)                                             |
+| → →<br>`fCachedDelete`       | boolean      | Required<br>(exactly 1) | Minimum network support has been reached saying this object should be deleted from the system entirely                                                      |
+| → →<br>`fCachedEndorsed`     | boolean      | Required<br>(exactly 1) | Minimum network support has been reached flagging this object as endorsed                                                                                   |
 | → →<br>`AbsoluteYesCount`  | number       | Required<br>(exactly 1) | Number of `Yes` votes minus number of `No` votes                                                                                                            |
 | → →<br>`YesCount`          | number       | Required<br>(exactly 1) | Number of `Yes` votes                                                                                                                                       |
 | → →<br>`NoCount`           | number       | Required<br>(exactly 1) | Number of `No` votes                                                                                                                                        |
 | → →<br>`AbstainCount`      | number       | Required<br>(exactly 1) | Number of `Abstain` votes                                                                                                                                   |
 
-*Example from Dash Core 0.12.2*
+*Example from Dash Core 23.1.7*
 
 ``` bash
 dash-cli -testnet gobject list all proposals
@@ -1738,7 +1738,7 @@ The [`masternodelist` RPC](#masternodelist) returns a list of masternodes in dif
 In `json`, `recent`, and `evo` modes, each entry includes a structured `addresses` object (with optional `core_p2p`, `platform_p2p`, and `platform_https` arrays). The flat `address`, `platformP2PPort`, and `platformHTTPPort` fields are **deprecated** in favor of the `addresses` object.
 :::
 
-*Example from Dash Core 20.0.0*
+*Example from Dash Core 23.1.7*
 
 Get unfiltered Masternode list in default mode
 

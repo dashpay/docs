@@ -706,9 +706,9 @@ _Result---balances in Dash_
 | →→`trusted`           | numeric | Optional<br>(1 or more)                       | Trusted balance (outputs created by the wallet or confirmed outputs).                                |
 | →→`untrusted_pending` | numeric | Optional<br>(1 or more)                       | Untrusted pending balance (outputs created by others that are in the mempool).                       |
 | →→`immature`          | numeric | Optional<br>(1 or more)                       | Balance from immature coinbase outputs.                                                              |
-| `lastprocessedblock`  | object  | Required<br>(exactly 1)                       | Hash and height of the block this information was generated on                                       |
-| →`hash`               | string  | Required<br>(exactly 1)                       | Hash of the block this information was generated on                                                  |
-| →`height`             | numeric | Required<br>(exactly 1)                       | Height of the block this information was generated on                                                |
+| →<br>`lastprocessedblock` | object  | Required<br>(exactly 1)                       | Hash and height of the block this information was generated on                                       |
+| → →<br>`hash`             | string  | Required<br>(exactly 1)                       | Hash of the block this information was generated on                                                  |
+| → →<br>`height`           | numeric | Required<br>(exactly 1)                       | Height of the block this information was generated on                                                |
 
 _Example from Dash Core 23.1.7_
 
