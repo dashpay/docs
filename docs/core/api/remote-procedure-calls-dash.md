@@ -1115,7 +1115,7 @@ The `gobject vote-alias` RPC votes on a governance object by masternode alias (u
 
 | Name     | Type   | Presence                | Description                                  |
 | -------- | ------ | ----------------------- | -------------------------------------------- |
-| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding`, `valid`, or `delete` |
+| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding` or `valid` |
 
 *Parameter #3---vote outcome*
 
@@ -1174,7 +1174,7 @@ The `gobject vote-many` RPC votes on a governance object by all masternodes (usi
 
 | Name     | Type   | Presence                | Description                                  |
 | -------- | ------ | ----------------------- | -------------------------------------------- |
-| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding`, `valid`, or `delete` |
+| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding` or `valid` |
 
 *Parameter #3---vote outcome*
 
