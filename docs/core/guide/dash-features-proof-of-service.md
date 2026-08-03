@@ -33,26 +33,30 @@ As shown in the following table, the PoSe Score always decreases by 1 per [block
 | PoSe Parameter | Value | Example Value |
 | --- | --- | --- |
 | Maximum PoSe Score | Number of registered masternodes | 5000 |
-| PoSe Score Increases | Maximum PoSe Score * 2/3 | 3333 |
+| PoSe Score Increases | Maximum PoSe Score * 66% | 3300 |
 | PoSe Score Decreases | 1 (per block) | Always `1` |
 
 The current PoSe scoring algorithm increases the PoSe score by 66% of the maximum score for each failed DKG session. Depending on timing, this allows for no more than 2 failures for a masternode within a payment cycle (i.e a number of blocks equal to the number of registered masternodes).
 
 For example, using the values from above with 5000 masternodes:
 
-* In the first 5000 block cycle, two DKG failures occur without the PoSe score exceeding the maximum. This happens since a sufficient number of blocks are mined prior to the second failure to drop the PoSe score below the threshold (`< 5000 - 3333`) that would result in banning.
+* In the first 5000 block cycle, two DKG failures occur without the PoSe score exceeding the maximum. This happens since a sufficient number of blocks are mined prior to the second failure to drop the PoSe score below the threshold (`< 5000 - 3300`) that would result in banning.
 
-* In the second 5000 block cycle, the second DKG failure occurs too close to the first and results in the PoSe score exceeding the maximum limit. This results in the masternode receiving a PoSe Ban.
+* In the second 5000 block cycle, the fourth DKG failure (the second failure of the cycle) occurs too close to the previous failure and results in the PoSe score exceeding the maximum limit. This results in the masternode receiving a PoSe Ban.
 
 | Payment Cycle | Block Number | Event | Score Change | PoSe Score | MN Status |
 | :---: | :--- | --- | :---: | :---: | :---: |
-| 1 | 1 | DKG Failure (1) | +3333 | 3333 | Valid |
-| 1 | 1734 | 1733 Blocks Mined | -1733 | 1600 | Valid |
-| 1 | 1734 | DKG Failure (2) | +3333 | 4933 | Valid |
-| 1 | 5000 | 3266 Blocks Mined | -3266 | 1667 | Valid |
+| 1 | 1 | DKG Failure (1) | +3300 | 3300 | Valid |
+| 1 | 1734 | 1733 Blocks Mined | -1733 | 1567 | Valid |
+| 1 | 1734 | DKG Failure (2) | +3300 | 4867 | Valid |
+| 1 | 5000 | 3266 Blocks Mined | -3266 | 1601 | Valid |
 | | | End of Payment Cycle 1| | | |
-| 2 | 5500 | 500 Blocks Mined | -500 | 1167 | Valid |
-| 2 | 5500 | DKG Failure (3) | +3333 | 4500 | Valid |
-| 2 | 7000 | 1500 Blocks Mined | -1500 | 3000 | Valid |
-| 2 | 7000 | DKG Failure (4) | +3333 | 6333 | PoSe Banned |
-| 2 | 10000 | End of Payment Cycle 2 | - | 6333 | PoSe Banned |
+| 2 | 5500 | 500 Blocks Mined | -500 | 1101 | Valid |
+| 2 | 5500 | DKG Failure (3) | +3300 | 4401 | Valid |
+| 2 | 7000 | 1500 Blocks Mined | -1500 | 2901 | Valid |
+| 2 | 7000 | DKG Failure (4) | +3300 | 6201 | PoSe Banned |
+| 2 | 10000 | End of Payment Cycle 2 | - | 6201 | PoSe Banned |
+
+```{note}
+The `6201` PoSe scores shown for DKG Failure (4) and at the end of Payment Cycle 2 are raw arithmetic values, used here to illustrate that the increase pushes the score past the maximum. On-chain, the stored penalty is capped at the maximum PoSe score (5000 in this example): once it reaches that limit, the masternode is banned and the penalty is not increased further.
+```
