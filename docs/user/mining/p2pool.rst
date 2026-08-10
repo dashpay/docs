@@ -21,7 +21,7 @@ decentralized and fair nature of this mining model means mining with
 P2Pool is strongly encouraged. P2Pool for Dash uses the `p2pool-dash
 <https://github.com/frstrtr/p2pool-dash>`_ software on GitHub, which is
 a fork of p2pool for Bitcoin. For more information, see `here
-<https://en.bitcoin.it/wiki/P2Pool>`__. The original ``dashpay/p2pool-dash`` repository has not been updated since May 2023 (Dash Core v18 era); ``frstrtr/p2pool-dash`` is an actively maintained continuation supporting current Dash Core releases. An experimental modern alternative is `c2pool <https://github.com/frstrtr/c2pool>`_, a from-scratch C++ reimplementation whose Dash support is daemonless (no Dash Core node required) but, per the project's own status, still in development.
+<https://en.bitcoin.it/wiki/P2Pool>`__. The original ``dashpay/p2pool-dash`` repository has not been updated since May 2023 (Dash Core v18 era); ``frstrtr/p2pool-dash`` is an actively maintained continuation supporting current Dash Core releases. An experimental modern alternative is `c2pool <https://github.com/frstrtr/c2pool>`_, a from-scratch C++ reimplementation whose Dash support is daemonless (no Dash Core node required) but, per the project's own status, still in development. On modern Ubuntu/Debian (24.04+, where Python 2 is no longer packaged), follow the fork's own installation guide `INSTALL.md <https://github.com/frstrtr/p2pool-dash/blob/master/INSTALL.md>`_, which uses PyPy and provides an automated Ubuntu 24.04 installer script.
 
 Because of the way P2Pool manages difficulty adjustments on the
 sharechain, it is important to maintain low latency between the miners
