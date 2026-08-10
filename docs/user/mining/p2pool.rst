@@ -19,9 +19,9 @@ cryptographic chain of data representing value, similar to Dash's
 blockchain. The P2Pool version is called the sharechain. The
 decentralized and fair nature of this mining model means mining with
 P2Pool is strongly encouraged. P2Pool for Dash uses the `p2pool-dash
-<https://github.com/dashpay/p2pool-dash>`_ software on GitHub, which is
+<https://github.com/frstrtr/p2pool-dash>`_ software on GitHub, which is
 a fork of p2pool for Bitcoin. For more information, see `here
-<https://en.bitcoin.it/wiki/P2Pool>`__.
+<https://en.bitcoin.it/wiki/P2Pool>`__. The original ``dashpay/p2pool-dash`` repository has not been updated since May 2023 (Dash Core v18 era); ``frstrtr/p2pool-dash`` is an actively maintained continuation supporting current Dash Core releases. An experimental modern alternative is `c2pool <https://github.com/frstrtr/c2pool>`_, a from-scratch C++ reimplementation whose Dash support is daemonless (no Dash Core node required) but, per the project's own status, still in development.
 
 Because of the way P2Pool manages difficulty adjustments on the
 sharechain, it is important to maintain low latency between the miners
@@ -204,7 +204,7 @@ the dependencies::
 
 Create working directories and set up p2pool-dash::
 
-  git clone https://github.com/dashpay/p2pool-dash
+  git clone https://github.com/frstrtr/p2pool-dash
   cd p2pool-dash
   git submodule update --init
   cd dash_hash
