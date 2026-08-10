@@ -78,7 +78,7 @@ centralize, the hashing power.
 
 If you would like to set up your own P2Pool, documentation of the
 process is available :ref:`here <p2pool>` and the code for p2pool-dash
-is available on `GitHub <https://github.com/dashpay/p2pool-dash>`_.
+is available on `GitHub <https://github.com/frstrtr/p2pool-dash>`_. (The original ``dashpay/p2pool-dash`` has not been updated since May 2023; the linked fork is an actively maintained continuation supporting current Dash Core releases.)
 Other mining pools are listed below and may be advantageous for
 different reasons such as ping latency, uptime, fee, users, etc. A guide
 to using a typical mining pool can be found :ref:`here <mining-pools>`.
