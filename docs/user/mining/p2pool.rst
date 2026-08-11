@@ -194,6 +194,12 @@ explorer <https://insight.dash.org/insight/>`_::
 Setting up P2Pool
 -----------------
 
+.. note::
+   The commands in this section are the legacy Python 2 procedure and have been
+   tested on Ubuntu 20.04 LTS and earlier. On Ubuntu/Debian 24.04 and later,
+   where Python 2 is no longer packaged, follow the fork's PyPy-based
+   ``INSTALL.md`` (linked above) instead of the steps below.
+
 We will now set up the P2Pool software and its dependencies. Begin with
 the dependencies::
   
