@@ -57,3 +57,4 @@ a self-operated masternode.
    setup-evonode
    setup-testnet.rst
    maintenance.rst
+   troubleshooting-certificates.rst
