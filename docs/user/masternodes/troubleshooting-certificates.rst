@@ -10,46 +10,40 @@ Certificate renewal troubleshooting
 
 Your evonode serves Dash Platform over TLS, so it needs a valid certificate at all times. Dashmate
 obtains that certificate for you and renews it automatically, but renewal can stop working long
-after setup succeeded — and when it does, nothing warns you until the certificate expires and your
-node stops accepting clients.
+after setup succeeded. If renewal fails without you noticing it, your node will stop accepting
+clients once the certificate expires.
 
-Serving an expired certificate is one of the most common faults on mainnet evonodes, and almost all
-of it comes down to the causes below.
-
-This page explains why renewal fails, how to find out which cause applies to your node, and what to
-do about each one.
+Serving expired certificates is one of the most common connection issues on mainnet evonodes. Use
+the info on this page to find and fix certificate renewal failures on your evonode.
 
 .. _evonode-cert-port-80:
 
 Inbound port 80 is a permanent requirement
 ==========================================
 
-This is the single most common cause, and the most commonly misunderstood.
-
-When dashmate obtains a certificate for you — the Let's Encrypt and ZeroSSL options — the authority
-proves you control your IP address by connecting to your node on port 80 and reading a file
-dashmate serves there for a few seconds. This happens on every issuance and every renewal, not
-only during setup. It does not apply if you upload a certificate yourself.
+This cause is common and often misunderstood. When dashmate obtains a certificate for you using
+Let's Encrypt or ZeroSSL, the authority proves you control your IP address by connecting to your
+node on port 80 and reading a file dashmate temporarily serves there. This happens on every issuance
+and every renewal, not only during setup. It does not apply if you upload a certificate yourself.
 
 Let's Encrypt certificates for IP addresses are :ref:`short-lived <evonode-ssl-cert>` — about 160
-hours — and dashmate renews them a couple of days before they expire. So a firewall rule that was
-opened once for setup and closed afterwards, or one that does not survive a reboot, takes your node
-dark within a week.
+hours — and dashmate renews them a couple of days before they expire. So a non-permanent firewall
+rule can result in your node having an expired certificate within a week.
 
 .. warning::
 
-   Inbound port 80 must stay open permanently. Nothing warns you when it stops being reachable, and
-   the certificate you are currently serving keeps working until it expires.
+   Inbound port 80 must stay open permanently. Dashmate does not warn you when it stops being
+   reachable. The certificate you are serving just becomes invalid when it expires.
+
+.. _evonode-cert-port-80-scan:
 
 Why you cannot test port 80 with a port scanner
 -----------------------------------------------
 
-An external port check on port 80 will report it closed on a perfectly healthy node, and this
-confuses almost everyone who tries it.
-
-Nothing listens on port 80 on a normal evonode. Dashmate starts a listener only for the few seconds
-a renewal takes, and shuts it down again immediately. So a scanner that happens to check at any
-other moment finds nothing — which is exactly what a healthy node looks like.
+Since nothing continuously listens to port 80 on a normal evonode, an external port check will
+report it closed even on healthy nodes. Dashmate starts a listener only for the few seconds a
+renewal takes, and shuts it down again immediately. A scanner that checks at any other time will
+find nothing.
 
 .. note::
 
@@ -68,10 +62,8 @@ Run the doctor::
    dashmate doctor
 
 Dashmate records the outcome of every scheduled renewal, so the doctor reports the reason the
-certificate authority gave rather than guessing. Work from what it tells you.
-
-If the doctor reports no problem with your certificate, renewal is working and there is nothing to
-do here.
+certificate authority gave rather than guessing. If the doctor reports no problem with your
+certificate, renewal is working and there is nothing to do here.
 
 .. _evonode-cert-causes:
 
@@ -84,13 +76,13 @@ The certificate authority could not reach this node on port 80
 Nothing usable answered. Which of two things happened is worth knowing, and ``dashmate doctor``
 shows the authority's own words:
 
-- Timed out. The connection went nowhere and nothing replied — a firewall dropping it silently.
-  Work through the three layers below.
-- Refused. Something reachable actively rejected the connection, so the packets arrive but
-  nothing is listening when they do. Check that port 80 is forwarded to *this* machine, then look
+- **Timed out**. The connection went nowhere and nothing replied because a firewall dropped it
+  silently. Work through the three layers below.
+- **Refused**. Something reachable actively rejected the connection, so the packets arrive but
+  nothing is listening when they do. Check that port 80 is forwarded to the evonode, then look
   at what dashmate reported: ``dashmate logs <config> dashmate_helper``.
 
-For a timeout, check all three layers — a rule on one does not help if another blocks it:
+For a timeout, check all three layers. Connections could be blocked at any or all layers:
 
 #. The machine's own firewall. On Ubuntu with ``ufw``::
 
@@ -104,7 +96,7 @@ For a timeout, check all three layers — a rule on one does not help if another
 #. Your router, if the node is behind NAT. Forward inbound port 80 to the node's internal
    address.
 
-Once the port is open, wait for the next automatic attempt — the doctor tells you when that is. You
+Once the port is open, wait for the next automatic attempt at the time indicated by the doctor. You
 do not need to run any command.
 
 Something answered on port 80, but not this node's certificate check
@@ -118,11 +110,11 @@ Check the machine first::
 
    sudo ss -lntp 'sport = :80'
 
-If that lists a process (nginx, Apache, Caddy, another container), stop it or move it to a different
-port. Dashmate needs port 80 free to answer the challenge.
+If that lists a process (e.g., nginx, Apache, Caddy, another container), stop it or move it to a
+different port. Dashmate needs port 80 free to answer the challenge.
 
-If it lists nothing, then something upstream is answering instead of your node — check your
-router's port forwarding and your hosting provider's configuration.
+If it lists nothing, then something upstream is answering instead of your node. Check your router's
+port forwarding and your hosting provider's configuration.
 
 Something on this machine is already using port 80
 ---------------------------------------------------
@@ -144,8 +136,8 @@ Switch to Let's Encrypt, which is free and does not cap certificates this way::
    dashmate ssl obtain --config mainnet --provider letsencrypt
 
 This still needs inbound port 80 open to the internet, permanently. If you cannot open port 80,
-there is no other way to obtain a certificate for an IP address automatically — see
-:ref:`SSL certificates <evonode-ssl-cert>` for the manual upload option.
+there is no other way to automatically obtain a certificate for an IP address. See :ref:`SSL
+certificates <evonode-ssl-cert>` for the manual upload option.
 
 The certificate authority has temporarily refused this address
 ---------------------------------------------------------------
@@ -179,15 +171,15 @@ Avoid making it worse
 - Do not repeatedly run ``dashmate ssl obtain``. Failed attempts are rate-limited by the
   certificate authority and shared with automatic renewal, so retrying without changing anything
   makes recovery slower.
-- Do not switch provider hoping it helps. If port 80 is unreachable, every provider fails the
-  same way — they all validate the same route.
-- Do not rely on an external port check. See :ref:`above <evonode-cert-port-80>`.
+- Do not switch provider hoping it helps. If port 80 is unreachable, every provider will fail in the
+  same way since they all validate the same route.
+- Do not rely on an external port check. See :ref:`above <evonode-cert-port-80-scan>`.
 
 Getting help
 ============
 
-If the doctor cannot determine the cause, or the remedy does not work, collect a report and send it
-to the support team::
+If the doctor cannot determine the cause, or the fix does not work, collect a report and send it to
+the support team::
 
    dashmate doctor report
 
