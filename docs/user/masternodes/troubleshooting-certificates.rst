@@ -150,8 +150,12 @@ there is no other way to obtain a certificate for an IP address automatically â€
 The certificate authority has temporarily refused this address
 ---------------------------------------------------------------
 
-Let's Encrypt limits how often a single address may fail validation â€” five failed attempts per hour,
-and that budget is shared with dashmate's own automatic renewal.
+Let's Encrypt applies two separate limits, and they are easy to confuse:
+
+- **Five failed validations per hour**, counted per ACME account and address. This is the one you
+  hit by retrying after a failure, and dashmate's own automatic renewal draws on the same budget.
+- **Five certificates per week** for the same address. This one is spent by *successful* issuance,
+  which is why a certificate that was issued but never saved still counts.
 
 .. important::
 
@@ -161,8 +165,8 @@ and that budget is shared with dashmate's own automatic renewal.
 A certificate was issued but dashmate could not save it
 --------------------------------------------------------
 
-The certificate authority issued a certificate that never reached disk. That issuance is spent
-against your weekly limit whether or not it arrived, so requesting another one immediately spends a
+The certificate authority issued a certificate that never reached disk. It counts against the
+five-per-week limit above whether or not it arrived, so requesting another one immediately spends a
 second one to fix a problem that is local to your machine.
 
 Check free disk space and the permissions on your dashmate directory first, then obtain again.
