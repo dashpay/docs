@@ -26,9 +26,10 @@ Inbound port 80 is a permanent requirement
 
 This is the single most common cause, and the most commonly misunderstood.
 
-Both Let's Encrypt and ZeroSSL prove that you control your IP address by connecting **to** your node
-on port 80 and reading a file dashmate serves there for a few seconds. This happens on **every
-issuance and every renewal**, not only during setup.
+When dashmate obtains a certificate for you — the Let's Encrypt and ZeroSSL options — the authority
+proves you control your IP address by connecting **to** your node on port 80 and reading a file
+dashmate serves there for a few seconds. This happens on **every issuance and every renewal**, not
+only during setup. It does not apply if you upload a certificate yourself.
 
 Let's Encrypt certificates for IP addresses are :ref:`short-lived <evonode-ssl-cert>` — about 160
 hours — and dashmate renews them a couple of days before they expire. So a firewall rule that was
@@ -80,15 +81,21 @@ Causes and what to do about each
 The certificate authority could not reach this node on port 80
 --------------------------------------------------------------
 
-Nothing answered. The connection was dropped or refused before it arrived, which means a firewall
-somewhere between the internet and your node.
+Nothing usable answered. Which of two things happened is worth knowing, and ``dashmate doctor``
+shows the authority's own words:
 
-Check all three layers — a rule on one does not help if another blocks it:
+- **Timed out.** The connection went nowhere and nothing replied — a firewall dropping it silently.
+  Work through the three layers below.
+- **Refused.** Something reachable actively rejected the connection, so the packets arrive but
+  nothing is listening when they do. Check that port 80 is forwarded to *this* machine, then look
+  at what dashmate reported: ``dashmate logs <config> dashmate_helper``.
+
+For a timeout, check all three layers — a rule on one does not help if another blocks it:
 
 #. **The machine's own firewall.** On Ubuntu with ``ufw``::
 
-      ufw allow 80/tcp
-      ufw status
+      sudo ufw allow 80/tcp
+      sudo ufw status
 
 #. **Your hosting provider's firewall.** Many providers (AWS security groups, Hetzner Cloud
    firewalls, OVH, Vultr, DigitalOcean) apply a second firewall outside the machine, configured in
@@ -127,8 +134,10 @@ with the ``ss`` command above.
 The free ZeroSSL account has used all three of its certificates
 ----------------------------------------------------------------
 
-A free ZeroSSL account allows three certificates in total, so renewals stop permanently after about
-270 days. This is not something you can wait out or repair — ZeroSSL will not issue another one.
+Dashmate obtains ZeroSSL certificates through ZeroSSL's own API, and :ref:`a free account allows
+3 certificates <evonode-ssl-cert>` — or 3 renewals of one certificate — in total. Renewals stop
+permanently after that. It is not something you can wait out or repair; ZeroSSL will not issue
+another one on that plan.
 
 Switch to Let's Encrypt, which is free and does not cap certificates this way::
 
