@@ -110,8 +110,10 @@ Check the machine first::
 
    sudo ss -lntp 'sport = :80'
 
-If that lists a process (e.g., nginx, Apache, Caddy, another container), stop it or move it to a
-different port. Dashmate needs port 80 free to answer the challenge.
+If that lists a process (e.g., nginx, Apache, Caddy, another container), certificate renewals will
+continue to fail until the port is released. Reconfigure the process to use a different port where
+possible. Otherwise, stop it before the next scheduled renewal attempt and leave it stopped until
+the renewal completes.
 
 If it lists nothing, then something upstream is answering instead of your node. Check your router's
 port forwarding and your hosting provider's configuration.
