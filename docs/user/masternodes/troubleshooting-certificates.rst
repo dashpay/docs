@@ -27,8 +27,8 @@ Inbound port 80 is a permanent requirement
 This is the single most common cause, and the most commonly misunderstood.
 
 When dashmate obtains a certificate for you — the Let's Encrypt and ZeroSSL options — the authority
-proves you control your IP address by connecting **to** your node on port 80 and reading a file
-dashmate serves there for a few seconds. This happens on **every issuance and every renewal**, not
+proves you control your IP address by connecting to your node on port 80 and reading a file
+dashmate serves there for a few seconds. This happens on every issuance and every renewal, not
 only during setup. It does not apply if you upload a certificate yourself.
 
 Let's Encrypt certificates for IP addresses are :ref:`short-lived <evonode-ssl-cert>` — about 160
@@ -44,7 +44,7 @@ dark within a week.
 Why you cannot test port 80 with a port scanner
 -----------------------------------------------
 
-An external port check on port 80 will report it **closed on a perfectly healthy node**, and this
+An external port check on port 80 will report it closed on a perfectly healthy node, and this
 confuses almost everyone who tries it.
 
 Nothing listens on port 80 on a normal evonode. Dashmate starts a listener only for the few seconds
@@ -84,24 +84,24 @@ The certificate authority could not reach this node on port 80
 Nothing usable answered. Which of two things happened is worth knowing, and ``dashmate doctor``
 shows the authority's own words:
 
-- **Timed out.** The connection went nowhere and nothing replied — a firewall dropping it silently.
+- Timed out. The connection went nowhere and nothing replied — a firewall dropping it silently.
   Work through the three layers below.
-- **Refused.** Something reachable actively rejected the connection, so the packets arrive but
+- Refused. Something reachable actively rejected the connection, so the packets arrive but
   nothing is listening when they do. Check that port 80 is forwarded to *this* machine, then look
   at what dashmate reported: ``dashmate logs <config> dashmate_helper``.
 
 For a timeout, check all three layers — a rule on one does not help if another blocks it:
 
-#. **The machine's own firewall.** On Ubuntu with ``ufw``::
+#. The machine's own firewall. On Ubuntu with ``ufw``::
 
       sudo ufw allow 80/tcp
       sudo ufw status
 
-#. **Your hosting provider's firewall.** Many providers (AWS security groups, Hetzner Cloud
+#. Your hosting provider's firewall. Many providers (AWS security groups, Hetzner Cloud
    firewalls, OVH, Vultr, DigitalOcean) apply a second firewall outside the machine, configured in
    their web console. Port 80 must be allowed there too.
 
-#. **Your router**, if the node is behind NAT. Forward inbound port 80 to the node's internal
+#. Your router, if the node is behind NAT. Forward inbound port 80 to the node's internal
    address.
 
 Once the port is open, wait for the next automatic attempt — the doctor tells you when that is. You
@@ -121,7 +121,7 @@ Check the machine first::
 If that lists a process (nginx, Apache, Caddy, another container), stop it or move it to a different
 port. Dashmate needs port 80 free to answer the challenge.
 
-If it lists **nothing**, then something upstream is answering instead of your node — check your
+If it lists nothing, then something upstream is answering instead of your node — check your
 router's port forwarding and your hosting provider's configuration.
 
 Something on this machine is already using port 80
@@ -152,9 +152,9 @@ The certificate authority has temporarily refused this address
 
 Let's Encrypt applies two separate limits, and they are easy to confuse:
 
-- **Five failed validations per hour**, counted per ACME account and address. This is the one you
+- Five failed validations per hour, counted per ACME account and address. This is the one you
   hit by retrying after a failure, and dashmate's own automatic renewal draws on the same budget.
-- **Five certificates per week** for the same address. This one is spent by *successful* issuance,
+- Five certificates per week for the same address. This one is spent by *successful* issuance,
   which is why a certificate that was issued but never saved still counts.
 
 .. important::
@@ -176,12 +176,12 @@ Check free disk space and the permissions on your dashmate directory first, then
 Avoid making it worse
 =====================
 
-- **Do not repeatedly run** ``dashmate ssl obtain``. Failed attempts are rate-limited by the
+- Do not repeatedly run ``dashmate ssl obtain``. Failed attempts are rate-limited by the
   certificate authority and shared with automatic renewal, so retrying without changing anything
   makes recovery slower.
-- **Do not switch provider hoping it helps.** If port 80 is unreachable, every provider fails the
+- Do not switch provider hoping it helps. If port 80 is unreachable, every provider fails the
   same way — they all validate the same route.
-- **Do not rely on an external port check.** See :ref:`above <evonode-cert-port-80>`.
+- Do not rely on an external port check. See :ref:`above <evonode-cert-port-80>`.
 
 Getting help
 ============
