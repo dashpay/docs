@@ -78,7 +78,7 @@ centralize, the hashing power.
 
 If you would like to set up your own P2Pool, documentation of the
 process is available :ref:`here <p2pool>` and the code for p2pool-dash
-is available on `GitHub <https://github.com/dashpay/p2pool-dash>`_.
+is available on `GitHub <https://github.com/frstrtr/p2pool-dash>`_. (The original ``dashpay/p2pool-dash`` has not been updated since May 2023; the linked fork is an actively maintained continuation supporting current Dash Core releases.)
 Other mining pools are listed below and may be advantageous for
 different reasons such as ping latency, uptime, fee, users, etc. A guide
 to using a typical mining pool can be found :ref:`here <mining-pools>`.
@@ -129,15 +129,17 @@ section of the Dash Forums <https://www.dash.org/forum/index.php?forums/hardware
 
 The following X11 ASIC miners are available on the market today:
 
-+----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-----------------+
-| Name                                                                                                     | Hash rate     | Power   | Weight  | Dimensions (mm) |
-+==========================================================================================================+===============+=========+=========+=================+
-| `Bitmain Antminer D5 <https://shop.bitmain.com.cn/product/detail?pid=000201811150956053407f2Bhw2x068D>`_ | 119 GH/s ±5%  | 1566 W  | 7.5 kg  | 486 x 265 x 388 |
-+----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-----------------+
-| Spondoolies SPx36                                                                                        | 540 GH/s ±10% | 4400 W  | 19.5 kg | 640 x 525 x 185 |
-+----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-----------------+
-| StrongU STU-U6                                                                                           | 420 GH/s ±8%  | 2100 W  | 8.5 kg  | 370 x 135 x 208 |
-+----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-----------------+
++----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-------------------+
+| Name                                                                                                     | Hash rate     | Power   | Weight  | Dimensions (mm)   |
++==========================================================================================================+===============+=========+=========+===================+
+| Bitmain Antminer D9                                                                                      | 1770 GH/s     | 2839 W  | 16.1 kg | 430 x 195.5 x 290 |
++----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-------------------+
+| `Bitmain Antminer D5 <https://shop.bitmain.com.cn/product/detail?pid=000201811150956053407f2Bhw2x068D>`_ | 119 GH/s ±5%  | 1566 W  | 7.5 kg  | 486 x 265 x 388   |
++----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-------------------+
+| Spondoolies SPx36                                                                                        | 540 GH/s ±10% | 4400 W  | 19.5 kg | 640 x 525 x 185   |
++----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-------------------+
+| StrongU STU-U6                                                                                           | 420 GH/s ±8%  | 2100 W  | 8.5 kg  | 370 x 135 x 208   |
++----------------------------------------------------------------------------------------------------------+---------------+---------+---------+-------------------+
 
 ASIC resellers may also have miners available:
 

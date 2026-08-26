@@ -93,7 +93,7 @@ To help with the security of the network and decentralization we
 recommend using  P2Pool. To set up your own P2Pool server, follow the
 setup documentation available :ref:`here <p2pool>`. The code for
 p2pool-dash is `available on GitHub
-<https://github.com/dashpay/p2pool-dash>`__. 
+<https://github.com/frstrtr/p2pool-dash>`__. (The original ``dashpay/p2pool-dash`` has not been updated since May 2023; the linked fork is an actively maintained continuation.) 
 
 If you do not want to set up your own pool, you can check out a list of
 pools `here <https://chainz.cryptoid.info/dash/#!extraction>`__. In this

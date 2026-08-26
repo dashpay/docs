@@ -19,9 +19,9 @@ cryptographic chain of data representing value, similar to Dash's
 blockchain. The P2Pool version is called the sharechain. The
 decentralized and fair nature of this mining model means mining with
 P2Pool is strongly encouraged. P2Pool for Dash uses the `p2pool-dash
-<https://github.com/dashpay/p2pool-dash>`_ software on GitHub, which is
+<https://github.com/frstrtr/p2pool-dash>`_ software on GitHub, which is
 a fork of p2pool for Bitcoin. For more information, see `here
-<https://en.bitcoin.it/wiki/P2Pool>`__.
+<https://en.bitcoin.it/wiki/P2Pool>`__. The original ``dashpay/p2pool-dash`` repository has not been updated since May 2023 (Dash Core v18 era); ``frstrtr/p2pool-dash`` is an actively maintained continuation supporting current Dash Core releases. An experimental modern alternative is `c2pool <https://github.com/frstrtr/c2pool>`_, a from-scratch C++ reimplementation whose Dash support is daemonless (no Dash Core node required) but, per the project's own status, still in development. On modern Ubuntu/Debian (24.04+, where Python 2 is no longer packaged), follow the fork's own installation guide `INSTALL.md <https://github.com/frstrtr/p2pool-dash/blob/master/INSTALL.md>`_, which uses PyPy and provides an automated Ubuntu 24.04 installer script.
 
 Because of the way P2Pool manages difficulty adjustments on the
 sharechain, it is important to maintain low latency between the miners
@@ -194,6 +194,12 @@ explorer <https://insight.dash.org/insight/>`_::
 Setting up P2Pool
 -----------------
 
+.. note::
+   The commands in this section are the legacy Python 2 procedure and have been
+   tested on Ubuntu 20.04 LTS and earlier. On Ubuntu/Debian 24.04 and later,
+   where Python 2 is no longer packaged, follow the fork's PyPy-based
+   ``INSTALL.md`` (linked above) instead of the steps below.
+
 We will now set up the P2Pool software and its dependencies. Begin with
 the dependencies::
   
@@ -204,7 +210,7 @@ the dependencies::
 
 Create working directories and set up p2pool-dash::
 
-  git clone https://github.com/dashpay/p2pool-dash
+  git clone https://github.com/frstrtr/p2pool-dash
   cd p2pool-dash
   git submodule update --init
   cd dash_hash
