@@ -72,13 +72,12 @@ Mining Pools
 ============
 
 Mining Dash in pools is more likely to generate rewards than solo mining
-directly on the blockchain. Mining dash using P2Pool is strongly
-encouraged, since it is a good way to distribute, rather than
-centralize, the hashing power.
+directly on the blockchain. Mining Dash using P2Pool is a good way to
+distribute, rather than centralize, the hashing power, but the
+``dashpay/p2pool-dash`` software is no longer maintained. See the
+:ref:`P2Pool documentation <p2pool>` for details and for community forks
+that continue the project.
 
-If you would like to set up your own P2Pool, documentation of the
-process is available :ref:`here <p2pool>` and the code for p2pool-dash
-is available on `GitHub <https://github.com/frstrtr/p2pool-dash>`_. (The original ``dashpay/p2pool-dash`` has not been updated since May 2023; the linked fork is an actively maintained continuation supporting current Dash Core releases.)
 Other mining pools are listed below and may be advantageous for
 different reasons such as ping latency, uptime, fee, users, etc. A guide
 to using a typical mining pool can be found :ref:`here <mining-pools>`.
