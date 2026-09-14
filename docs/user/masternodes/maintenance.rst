@@ -61,7 +61,7 @@ following key:
 
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
   wget https://github.com/dashpay/dash/releases/download/v23.1.8/dashcore-23.1.8-x86_64-linux-gnu.tar.gz.asc
-  gpg --verify dashcore-23.1.8-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-23.1.8-x86_64-linux-gnu.tar.gz.asc dashcore-23.1.8-x86_64-linux-gnu.tar.gz
 
 Extract the compressed archive and copy the new files to the directory::
 

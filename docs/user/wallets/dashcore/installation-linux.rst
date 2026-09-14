@@ -58,7 +58,7 @@ Open a terminal, import the key and verify the authenticity of your
 download as follows::
 
   curl https://keybase.io/pasta/pgp_keys.asc | gpg --import
-  gpg --verify dashcore-23.1.8-x86_64-linux-gnu.tar.gz.asc
+  gpg --verify dashcore-23.1.8-x86_64-linux-gnu.tar.gz.asc dashcore-23.1.8-x86_64-linux-gnu.tar.gz
 
 .. figure:: img/linux/setup-linux-gpg.png
    :width: 400px
@@ -74,7 +74,7 @@ authentic copy of Dash Core for Linux.
    verification output by signing the imported key before verifying::
 
       gpg --quick-lsign-key "29590362EC878A81FD3C202B52527BEDABE87984"
-      gpg --verify dashcore-23.1.8-x86_64-linux-gnu.tar.gz.asc
+      gpg --verify dashcore-23.1.8-x86_64-linux-gnu.tar.gz.asc dashcore-23.1.8-x86_64-linux-gnu.tar.gz
 
 Extracting Dash Core
 ----------------------
