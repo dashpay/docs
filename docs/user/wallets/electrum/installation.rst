@@ -23,7 +23,7 @@ against the public key published by pshenmic. Run the following commands (exampl
   wget https://github.com/pshenmic/electrum-dash/releases/download/4.1.7.7/Dash-Electrum-4.1.7.7-x86_64.AppImage
   wget https://github.com/pshenmic/electrum-dash/releases/download/4.1.7.7/Dash-Electrum-4.1.7.7-x86_64.AppImage.asc
   curl https://keybase.io/pshenmic/pgp_keys.asc | gpg --import
-  gpg --verify Dash-Electrum-4.1.7.7-x86_64.AppImage.asc
+  gpg --verify Dash-Electrum-4.1.7.7-x86_64.AppImage.asc Dash-Electrum-4.1.7.7-x86_64.AppImage
 
 The output should contain the following line::
 
