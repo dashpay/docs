@@ -8,7 +8,7 @@
 
 ## GetZmqNotifications
 
-The [`getzmqnotifications` RPC](../api/remote-procedure-calls-blockchain.md#getblockchaininfo) returns information about the active ZeroMQ notifications.
+The [`getzmqnotifications` RPC](../api/remote-procedure-calls-zmq.md#getzmqnotifications) returns information about the active ZeroMQ notifications.
 
 *Parameters: none*
 
