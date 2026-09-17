@@ -46,14 +46,15 @@ Budgets
 -------
 
 - Budgets are proposals which receive a net total of yes votes equal to
-  or greater than 10% of the total possible votes (for example over 448
-  out of 4480)
-- Budgets can be nullified at any time if vote totals (cast or re-cast)
-  fall below the approval threshold
+  or greater than 10% of the total eligible votes, rounded down, with a
+  minimum of 10 votes on mainnet (for example, 448 out of 4480)
+- Budgets can lose approval if vote totals (cast or re-cast) fall below
+  the approval threshold
 - Budgets are processed (paid) in order of yes minus no votes. More
-  popular budgets get payment priority. 
-- Approximately 7919 dash (in 2024) are available for each budget cycle,
-  decreasing by 7.14% every 210240 blocks (approx. 383.25 days).
+  popular budgets get payment priority.
+- The budget available for each cycle can be checked using the commands
+  in :ref:`budget-cycles`, and decreases by approximately 7.14% every
+  210240 blocks (approx. 383.25 days).
 
 Object structure
 ----------------
@@ -71,18 +72,16 @@ The following information is required to create a proposal:
 Persistence
 -----------
 
-- Proposals become active one day after submission
-- Proposals will remain visible on the network until they are either
-  disapproved or the proposal's last payment-cycle is reached
-- Approval occurs when yes votes minus no votes equals 10% or more of
-  the total available votes.
-- Disapproval occurs when no votes minus yes votes equals 10% or more of
-  the total available votes.
-- The total available votes is the count of online and responding
-  masternodes and can be seen by running the command 
-  ``masternode count`` in the Dash Core wallet debug window. A graph of
-  the total masternode count can be found `here 
-  <http://178.254.23.111/~pub/masternode_count.png>`__
+- Proposals become fully accepted after the proposal fee transaction has
+  six confirmations
+- Proposals remain on the network until their payment period ends or
+  masternodes vote to remove them
+- Approval occurs when yes votes minus no votes meets the threshold
+  described under Budgets
+- Falling below the approval threshold does not remove a proposal
+- The total eligible votes comes from registered masternodes that are
+  not banned for failing to provide service. Regular masternodes count
+  as one vote each, and evonodes count as four.
 
 Templates
 ---------
@@ -102,40 +101,21 @@ Budget cycles
 When preparing a proposal, be aware of when the next cycle will occur
 and plan accordingly. It is recommended to choose your proposal payment
 start block at least one cycle in the future to allow time for
-discussion and gathering support and votes. Note that votes will no
-longer be tallied 1662 blocks (approximately 3 days) prior to the
-superblock.
+discussion and gathering support and votes. Vote at least 1662 blocks
+(approximately 3 days) before the superblock. After this point, masternodes
+begin choosing which proposals to pay, so later votes may not affect
+the upcoming payment.
 
-+--------------+------------------------------+
-| Block height | Approximate date             |
-+==============+==============================+
-| 1212968      | Thu Jan 30 02:38:52 UTC 2020 |
-+--------------+------------------------------+
-| 1229584      | Sat Feb 29 09:43:54 UTC 2020 |
-+--------------+------------------------------+
-| 1246200      | Mon Mar 30 16:48:56 UTC 2020 |
-+--------------+------------------------------+
-| 1262816      | Wed Apr 29 23:53:58 UTC 2020 |
-+--------------+------------------------------+
-| 1279432      | Sat May 30 06:59:00 UTC 2020 |
-+--------------+------------------------------+
-| 1296048      | Mon Jun 29 14:04:02 UTC 2020 |
-+--------------+------------------------------+
-| 1312664      | Wed Jul 29 21:09:04 UTC 2020 |
-+--------------+------------------------------+
-| 1329280      | Sat Aug 29 04:14:06 UTC 2020 |
-+--------------+------------------------------+
-| 1345896      | Mon Sep 28 11:19:08 UTC 2020 |
-+--------------+------------------------------+
-| 1362512      | Wed Oct 28 18:24:10 UTC 2020 |
-+--------------+------------------------------+
-| 1379128      | Sat Nov 28 01:29:12 UTC 2020 |
-+--------------+------------------------------+
-| 1395744      | Mon Dec 28 08:34:14 UTC 2020 |
-+--------------+------------------------------+
+To find the next superblock height, run the following command in the
+Dash Core wallet console::
 
-You can view the source code for this calculation at this
-`GitHub gist <https://gist.github.com/strophy/9eb743f7bc717c17a2e776e461f24c49>`_
+  getgovernanceinfo
+
+The ``nextsuperblock`` field gives the next superblock height. Subsequent
+mainnet superblocks occur every 16616 blocks. To check the maximum budget
+for a superblock, use that height in the following command::
+
+  getsuperblockbudget <superblock-height>
 
 .. _creating-proposals:
 
