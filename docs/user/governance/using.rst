@@ -37,7 +37,9 @@ Votes
 
 - Votes are cast using the registered voting address
 - The voting address can be delegated to a third party
-- Votes can be changed at any time
+- Votes can be changed once per hour
+- A regular masternode's vote counts as one vote; an evonode's vote counts
+  as four
 - Votes are counted every 16616 blocks (approx. 30.29 days)
 
 Budgets
@@ -141,8 +143,8 @@ Creating proposals
 ==================
 
 Once you have prepared the text of your proposal and set up a website or forum post, it is time to
-submit your proposal to the blockchain for voting. While all tasks involved with creating a budget
-proposal can be executed from the Dash Core wallet (:ref:`GUI <proposal-create-core-qt>` or
+submit your proposal to the network for voting. You can create a budget
+proposal using the Dash Core wallet (:ref:`GUI <proposal-create-core-qt>` or
 :ref:`console <proposal-create-core-console>`) or the :ref:`Dash Budget Proposal Generator
 <dash-budget-proposal-generator>`.
 
@@ -157,10 +159,10 @@ manual console commands. To use this feature, your wallet must be unlocked and c
 balance to cover the 1 DASH proposal fee plus a small transaction fee.
 
 Accessing the Governance tab
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Open your Dash Core Wallet and click on the **Governance** tab. This displays a list of existing
-proposals and provides a **Create Proposal** button in the upper right corner.
+proposals and provides **Create Proposal** and **Resume Proposal** buttons.
 
 .. figure:: img/core-qt/governance-tab.png
    :width: 500px
@@ -173,108 +175,63 @@ Creating a new proposal
 Click the **Create Proposal** button to open the proposal creation dialog. Enter your proposal
 details:
 
-- **Proposal name**: A unique identifier
-- **URL**: Link to detailed proposal information (use a URL shortener if needed)
+- **Proposal name**: A label of 40 characters or less
+- **Description URL**: Link to detailed proposal information
 - **Payment address**: The Dash address that will receive payments
 - **Payment amount**: Amount requested per payment cycle
-- **First payment date**: Select the superblock date for the first payment
-- **# of payments**: Number of payment cycles requested
-
-The dialog displays the total amount requested and notes the 1 DASH proposal fee that will be
-burned. Click **Next** when all fields are complete.
+- **Payment date**: Select the first payment
+- **Payments**: Number of payment cycles requested
 
 .. figure:: img/core-qt/proposal-create.png
-   :width: 350px
+   :width: 500px
 
    Entering proposal details in the creation dialog
 
-Validating the proposal
-^^^^^^^^^^^^^^^^^^^^^^^
 
-The wallet will generate and display your proposal data in JSON format along with the proposal hash.
-Review the information carefully to ensure accuracy.
+The dialog displays the total amount requested. Check your proposal details carefully before
+proceeding. **View JSON** and **View Payload** let you inspect the data that will be submitted to
+the network.
 
-Click **Validate** to check the format of the proposal data. If the data is valid, click **Next** to
-proceed to the next step. Otherwise, click **Back** to adjust your proposal data.
-
-.. figure:: img/core-qt/proposal-validate.png
-   :width: 400px
-
-   Validating the proposal JSON and hash
-
-Preparing the proposal fee
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Then, click **Create Proposal**, unlock the wallet if prompted, and review the proposal confirmation
+screen.
 
 .. warning::
 
-   The following step will create a transaction burning 1 DASH as the proposal submission fee. This
-   transaction is irreversible once broadcast. Verify all proposal details are correct before
-   proceeding.
+   Creating the proposal permanently spends the 1 DASH proposal fee, plus a transaction fee. The
+   proposal fee cannot be refunded. Verify all proposal details before proceeding.
 
-After validation, you will see a screen prompting you to prepare and burn the 1 DASH proposal fee.
-This fee is required to prevent spam and is permanently removed from circulation. Click **Prepare
-proposal** to create the fee transaction.
-
-.. figure:: img/core-qt/proposal-prepare-burn.png
-   :width: 350px
-
-   Proposal fee burn preparation screen
-
-Click **Yes** on the confirmation dialog to broadcast the fee transaction.
-
-.. figure:: img/core-qt/proposal-burn-fee-notice.png
+.. figure:: img/core-qt/proposal-create-conf.png
    :width: 300px
 
-   Confirmation dialog for burning the proposal fee
+   Proposal create confirmation screen
 
-The transaction ID will be generated and displayed in the TxID field.
+Click **Send** on the confirmation dialog to broadcast the fee transaction.
 
-.. figure:: img/core-qt/proposal-prepare-burned.png
-   :width: 350px
+.. figure:: img/core-qt/proposal-created.png
+   :width: 400px
 
-   Transaction ID generated for the proposal fee
+   Proposal created
 
-Waiting for confirmations
+After successful creation, the wallet opens a dialog to monitor and broadcast the proposal. You can
+return to pending proposals later using **Resume Proposal** from the Governance tab.
+
+Broadcasting the proposal
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The wallet will display the confirmation progress for your fee transaction. One confirmation
-is required before you can submit the proposal to the network. After the first confirmation, click
-the **Next** button to move to the proposal submission screen.
+The proposal initially shows a **Pending** collateral status. After the fee transaction has one
+confirmation, the status changes to **Ready** and the **Broadcast** button becomes available. Click
+**Broadcast** to submit the proposal. A successful submission displays your proposal ID, which you
+can use to track voting on the proposal.
 
-.. figure:: img/core-qt/proposal-prepare-burned-conf-wait.png
-   :width: 350px
+.. figure:: img/core-qt/resume-proposal-broadcast.png
+   :width: 500px
 
-   Waiting for confirmations (1 of 6)
-
-Submitting the proposal
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Click **Submit Proposal** to broadcast your governance object to the network.
-
-.. figure:: img/core-qt/proposal-submit-awaiting.png
-   :width: 350px
-
-   Submitting proposal with 5 of 6 confirmations
-
-If successful, a message will be displayed with your proposal ID. Click **OK** to close the message.
-
-.. figure:: img/core-qt/proposal-submitted-conf.png
-   :width: 300px
-
-   Proposal successfully submitted to the network
-
-The proposal ID will also be shown on the submission screen. The proposal ID can be used to track
-voting on the proposal.
-
-.. figure:: img/core-qt/proposal-submitted.png
-   :width: 350px
-
-   Proposal submitted with proposal ID shown
+The proposal becomes fully accepted by the network after the fee payment has six confirmations.
 
 .. note::
 
-   You can submit your proposal ID to DashCentral to claim ownership and enable simplified voting
-   for masternodes using DashCentral voting services.
+   You can use the proposal ID to identify your proposal on DashCentral. Consult the service's
+   current instructions for claiming it.
 
 .. _dash-budget-proposal-generator:
 
@@ -312,7 +269,7 @@ governance object. Running this command will cost you 1 DASH, which will
 be "burnt" or permanently removed from circulation. This one-time fee
 protects the governance system from becoming overwhelmed by spam, poorly
 thought out proposals or users not acting in good faith. A small
-transaction fee is charged as well, so make sure slightly more than 5
+transaction fee is charged as well, so make sure slightly more than 1
 DASH is available in your wallet. Many budget proposals request
 reimbursement of the 1 DASH fee.
 
@@ -434,7 +391,9 @@ Submit the proposal
 ^^^^^^^^^^^^^^^^^^^
 
 Once the transaction has six confirmations, use the ``gobject submit`` command
-to submit the prepared governance object to the network for voting. See the
+to submit the prepared governance object to the network for voting. Submission
+after one confirmation is also possible, but the proposal remains postponed
+until the fee transaction has six confirmations. See the
 :ref:`Core developer documentation <api-rpc-dash-gobject-submit>` for additional
 details.
 
@@ -452,7 +411,7 @@ Example command::
 
   gobject submit 0 1 1636000000 7b226e616d65223a22546573742d70726f706f73616c5f31222c227061796d656e745f61646472657373223a227964354b4d52457333474c4d65366d544a597233597248316a75774e777246436642222c227061796d656e745f616d6f756e74223a31302c2274797065223a312c2275726c223a22687474703a2f2f746573742e636f6d222c2273746172745f65706f6368223a313633353735303030302c22656e645f65706f6368223a313633363735303030307d 9192fb57953baba168f685e32378aa6471061301a097598c68ef1a4c136c9ea3
 
-The command will execute and respond with a transaction ID for the proposal
+The command will respond with the governance object hash,
 which can be used to track voting on the proposal::
   
   3108b76c8735132a0b6de856b434a40d75924ba0a535c4a61be4dba0bf83263f
@@ -460,20 +419,20 @@ which can be used to track voting on the proposal::
 Voting on proposals
 ===================
 
-**You must vote at least three days before the superblock is created or
-your vote will not be counted. The exact deadline is 1662 blocks before
-the superblock.**
+**Vote at least 1662 blocks (approximately three days) before the
+superblock. Masternodes begin choosing which proposals to pay at this
+point, so later votes may not affect the upcoming payment.**
 
 Voting on DAO proposals is an important part of operating a masternode.
 Since masternodes are heavily invested in Dash, they are expected to
 critically appraise proposals each month and vote in a manner they
 perceive to be consistent with the best interests of the network. Each
-masternode may vote once on each proposal, and the vote can be changed
-at any time before the voting deadline. The following sites and tools
+masternode can vote yes, no or abstain on each proposal. You can normally
+change your vote on a proposal once per hour. A regular masternode's vote
+counts as one vote, while an evonode's vote counts as four. The following sites and tools
 are available to view and manage proposals and voting:
 
 - `DashCentral <https://www.dashcentral.org/budget>`__
-- `Dash Ninja - Governance <https://www.dashninja.pl/governance.html>`__
 - `Dash Masternode Tool - Proposals <https://github.com/Bertrand256/dash-masternode-tool/releases>`__
 
 For information on how to create a proposal, see :ref:`here
@@ -482,17 +441,9 @@ For information on how to create a proposal, see :ref:`here
 DashCentral
 -----------
 
-Many masternode operators store their password-protected masternode
-private key on `DashCentral <https://www.dashcentral.org>`__ to enable
-simple voting with a user-friendly interface. The popularity of this
-site has made it a common place for discussion of the proposals after
-they are submitted to the governance system. To vote from the
-DashCentral web interface, first add your masternode private key to your
-account according to the instructions here. Note that the masternode
-private key is not the same as the private key controlling the 1000 DASH
-collateral, so there is no risk of losing your collateral. A separate
-password is required to unlock the masternode private key for voting, so
-the risk of the site operator voting in your name is minimal.
+`DashCentral <https://www.dashcentral.org>`__ provides proposal discussion and voting services.
+Follow the service's current instructions to configure voting. Use your masternode's voting key when
+setting up voting services. Anyone with access to this key can vote on your behalf.
 
 When you are ready to vote, go to the `budget proposals page
 <https://www.dashcentral.org/budget>`_. Simply click to view the
@@ -525,49 +476,36 @@ tab to **Vote Yes**, **Vote No** or **Vote Abstain** directly from DMT.
 Dash Core wallet or masternode
 ------------------------------
 
-If you started your masternode using the Dash Core Wallet (not
-recommended), you can vote manually from **Window > Console**, or
-directly from your masternode via SSH using ``dash-cli``. First click on
-the proposal you want to vote on at either `DashCentral
-<https://www.dashcentral.org/budget>`__ or `Dash Ninja
-<https://www.dashninja.pl/governance.html>`__. You will see a command
-for manual voting below the proposal description. Copy and paste the
-command and modify it as necessary. As an example, take this proposal
-from `Dash Ninja
-<https://www.dashninja.pl/proposaldetails.html?proposalhash=6ed741
-8455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d>`__ (or
-`DashCentral
-<https://www.dashcentral.org/p/ScalingUpPublicityWithAmandaPMBC>`__).
-The voting code for Dash Core Wallet is as follows::
+To vote from the Dash Core wallet console or through ``dash-cli``, the wallet
+must contain the private key for your masternode's registered voting address.
+Unlock an encrypted wallet before voting.
 
-  gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding yes
-  gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding no
-  gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding abstain
-
-Note that to vote from your masternode directly, you need to prefix the
-command with ``dash-cli``, which is usually found in the ``.dashcore``
-folder. The command should be similar to the following::
-
-  ~/.dashcore/dash-cli gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding yes
-  ~/.dashcore/dash-cli gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding no
-  ~/.dashcore/dash-cli gobject vote-many 6ed7418455e07f4b30b99f0d4a24a2b83282e12b26fe3415673ecbea04ff6c9d funding abstain
-
-Note this command will trigger a vote from all masternodes configured in
-``dash.conf``. If you have multiple masternodes each with its own .conf
-file, or if you want to vote with only some of your masternodes, you
-must change the command from ``vote-many`` to ``vote``. If your vote was
-successful, you should see a confirmation message reading **Voted
-successfully**.
-
-.. figure:: img/vote-dashcore.png
-   :width: 300px
-
-   Voting from the debug console in Dash Core Wallet
-
-You can also view a list of proposals in JSON format from the console to
-copy and paste the proposal hash for voting as follows::
+Use ``gobject list`` to find proposals and their IDs (shown as hashes)::
 
   gobject list
+
+To vote with every valid masternode whose voting key is present in the wallet,
+use one of these commands, replacing ``<proposal-hash>`` with the proposal's
+actual proposal ID::
+
+  gobject vote-many <proposal-hash> funding yes
+  gobject vote-many <proposal-hash> funding no
+  gobject vote-many <proposal-hash> funding abstain
+
+To vote with one masternode, use ``vote-alias`` and supply its ProTx hash::
+
+  gobject vote-alias <proposal-hash> funding yes <protx-hash>
+
+Replace ``yes`` with ``no`` or ``abstain`` as appropriate. The ProTx hash
+identifies the masternode registration; it is not the proposal hash.
+
+For command-line use, prefix the command with ``dash-cli`` and run it against
+the node with the wallet containing the voting key::
+
+  dash-cli gobject vote-alias <proposal-hash> funding yes <protx-hash>
+
+Check the response to confirm that your votes succeeded and review any
+error messages.
 
 .. _delegating-votes:
 
