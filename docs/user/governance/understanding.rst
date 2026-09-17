@@ -163,10 +163,10 @@ reasonable chance of passing their proposal, it is created as a
 governance object on the blockchain. A fee of 1 DASH is associated with
 this action to prevent spam and ensure only serious proposals make it to
 this stage. Several tools exist to allow masternode operators to
-comfortably review and vote on proposals. The net total of yes votes must
-exceed 10% of the total masternode count at the time votes are tallied
-in order to pass. If there are more passing proposals than the available
-block subsidy can provide for, the proposals with the most yes votes will
+comfortably review and vote on proposals. The weighted net total of yes votes
+minus no votes must meet or exceed the threshold described under Budget
+allocation in order to pass. If there are more passing proposals than the available
+block subsidy can provide for, the proposals with the most weighted yes votes minus no votes will
 pass first, creating a cut-off point for less popular proposals. The
 same process is then repeated every month, and the total amount of Dash
 available for proposals decreases by approximately 7.14% per year,
@@ -207,7 +207,7 @@ proposal owner. Discussion on Dash Central occurs below this
 information, and masternode owners have the option to verify their
 ownership of a masternode and ability to cast a vote by signing a
 message from the masternode collateral address. Masternodes can vote at
-any time, and also change their vote at any time until the cutoff block
+any time, and also change their vote once per hour until the cutoff block
 is mined and voting stops. This occurs 1662 blocks prior to the
 superblock. After voting stops, the blockchain executes a decentralized
 tally and validates all votes. Once consensus is reached, the results
@@ -266,9 +266,11 @@ The total budget of the network can be calculated by taking 20% of the
 block subsidy over the period of time between two superblocks, which occur
 every 16616 blocks or approximately 30.29 days. A voting cutoff occurs
 1662 blocks before the superblock, and the final votes are tallied at
-this point. A proposal must satisfy the condition ``(YES votes - NO
-votes) > (Total Number of Masternodes / 10)`` in order to be considered
-passing. Then, in the superblock, the winning proposals are awarded in
+this point. A proposal passes when yes votes minus no votes reach at least
+10% of the total eligible votes, with a minimum of 10 votes
+on mainnet. Only enabled masternodes count toward these totals. A regular
+masternode's vote counts as one vote; an evonode's vote counts as four.
+Then, in the superblock, the winning proposals are awarded in
 the order of the margin by which they are passing until either the
 entire budget is allocated or no more passing proposals exist. This
 allows for completely trustless and decentralized allocation of the
