@@ -22,25 +22,6 @@ List of hosting services
 members, but is not involved in the provision of any of these services.
 
 
-CrowdNode
----------
-
-.. image:: img/crowdnode.png
-   :width: 200px
-   :align: right
-   :target: https://crowdnode.io
-
-https://crowdnode.io
-
-- Operated by: CrowdNode ApS
-- Services: Hosting, Shares
-- Cost:
-    * 35% of trusted masternode/evonode payments
-    * 20% of trustless masternode payments
-- `Site <https://crowdnode.io>`__
-- `Email <hello@crowdnode.io>`__
-
-
 Allnodes
 --------
 
