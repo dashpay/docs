@@ -164,9 +164,10 @@ governance object on the blockchain. A fee of 1 DASH is associated with
 this action to prevent spam and ensure only serious proposals make it to
 this stage. Several tools exist to allow masternode operators to
 comfortably review and vote on proposals. The weighted net total of yes votes
-minus no votes must meet or exceed the threshold described under Budget
-allocation in order to pass. If there are more passing proposals than the available
-block subsidy can provide for, the proposals with the most weighted yes votes minus no votes will
+minus no votes must meet or exceed the threshold described under
+:hoverxref:`budget allocation <budget-allocation>` in order to pass. If there
+are more passing proposals than the available block subsidy can provide for,
+the proposals with the most weighted yes votes minus no votes will
 pass first, creating a cut-off point for less popular proposals. The
 same process is then repeated every month, and the total amount of Dash
 available for proposals decreases by approximately 7.14% per year,
@@ -259,6 +260,8 @@ team@dashwatch.org email address or through their `website
 
    Proposal monitoring on Dash Watch
 
+.. _budget-allocation:
+
 Budget allocation
 =================
 
@@ -266,7 +269,7 @@ The total budget of the network can be calculated by taking 20% of the
 block subsidy over the period of time between two superblocks, which occur
 every 16616 blocks or approximately 30.29 days. A voting cutoff occurs
 1662 blocks before the superblock, and the final votes are tallied at
-this point. A proposal passes when yes votes minus no votes reach at least
+this point. A proposal passes when ``(YES votes - NO votes)`` is at least
 10% of the total eligible votes, with a minimum of 10 votes
 on mainnet. Only enabled masternodes count toward these totals. A regular
 masternode's vote counts as one vote; an evonode's vote counts as four.
