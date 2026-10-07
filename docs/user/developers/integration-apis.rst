@@ -112,6 +112,20 @@ and easy way to start accepting payments in cryptocurrency.
   year free, then $49/month 
 - Documentation: https://docs.blockmove.io
 
+GetBlock
+--------
+https://getblock.io/
+
+GetBlock provides reliable and scalable RPC access to Dash mainnet
+through shared and dedicated nodes. Its endpoints are useful for
+developers, wallets, exchanges, crypto miners, hardware wallet
+providers, and businesses that need stable access to the Dash network.
+
+- Features: JSON-RPC, REST, Blockbook (REST), Blockbook (WebSocket)
+- Pricing Model: Free up to 50K CUs, paid shared- and dedicated-node
+pricing
+- Documentation: https://docs.getblock.io/
+
 
 NOWNodes
 --------
