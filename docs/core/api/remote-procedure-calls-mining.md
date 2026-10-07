@@ -20,11 +20,13 @@ information, please see the following resources:
 Name | Type | Presence | Description
 --- | --- | --- | ---
 Request | object | Optional<br>(exactly 1) | A JSON request object
-→<br>`mode` | string | Optional<br>(exactly 1) | This must be set to \template\" or omitted"
+→<br>`mode` | string | Optional<br>(exactly 1) | This must be set to "template", "proposal" (see BIP 23), or omitted
 →<br>`capabilities` | array (string) | Optional<br>(0 or more) | A list of strings
 → →<br>Capability | string | Optional<br>(exactly 1) | Client side supported feature, `longpoll`, `coinbasetxn`, `coinbasevalue`, `proposal`, `serverlist`, `workid`
 →<br>`rules` | array (string) | Optional<br>(0 or more) | A list of strings
 → →<br>Rules | string | Optional<br>(exactly 1) | Client side supported softfork deployment, `csv`, `dip0001`, etc.
+→<br>`longpollid` | string | Optional<br>(0 or 1) | Delay processing request until the result would vary significantly from the `longpollid` of a prior template
+→<br>`data` | string (hex) | Optional<br>(0 or 1) | Proposed block data to check, encoded in hexadecimal; valid only for `mode="proposal"`
 
 *Result---block template*
 
@@ -43,8 +45,7 @@ Name | Type | Presence | Description
 →<br>`transactions` | array (objects) | Optional<br>(0 or more) | Non-coinbase transactions to be included in the next block
 → →<br>Transaction | object | Optional<br>(0 or more) | Non-coinbase transaction
 → → →<br>`data` | string (hex) | Optional<br>(0 or more) | Transaction data encoded in hex (byte-for-byte)
-→ → →<br>`txid` | string (hex) | Optional<br>(0 or more) | Transaction ID encoded in little-endian hexadecimal |
-→ → →<br>`hash` | string (hex) | Optional<br>(0 or more) | The hash/id encoded in little-endian hex
+→ → →<br>`hash` | string (hex) | Optional<br>(0 or more) | Transaction ID encoded in little-endian hexadecimal
 → → →<br>`depends` | array (numbers) | Required<br>(0 or more) | An array holding TXIDs of unconfirmed transactions this TX depends upon (parent transactions).
 → → → →<br>Transaction number | number | Optional<br>(1 or more) | Transactions before this one (by 1-based index in `transactions` list) that must be present in the final block if this one is
 → → →<br>`fee` | number | Required<br>(exactly 1) | The difference in value between transaction inputs and outputs (in duffs). For coinbase transactions, this is a negative number of the total collected block fees (ie., not including the block subsidy); if key is not present, fee is unknown and clients MUST NOT assume there isn't one
@@ -52,7 +53,7 @@ Name | Type | Presence | Description
 →<br>`coinbaseaux` | object | Required<br>(exactly 1) | A object containing data that should be included in the coinbase scriptSig content
 →<br>`coinbasevalue` | number | Required<br>(exactly 1) | The maximum allowable input to coinbase transaction, including the generation award and transaction fees (in duffs)
 →<br>`coinbasetxn` | object | Required<br>(exactly 1) | **Removed in Dash Core 20.0.0**
-`longpollid` | string | Required<br>(exactly 1) | An ID to include with a request to longpoll on an update to this template
+→<br>`longpollid` | string | Required<br>(exactly 1) | An ID to include with a request to longpoll on an update to this template
 →<br>`target` | string | Required<br>(exactly 1) | The hash target
 →<br>`mintime` | number | Required<br>(exactly 1) | The minimum timestamp appropriate for next block time in seconds since epoch
 →<br>`mutable` | array (string) | Required<br>(exactly 1) | The list of ways the block template may be changed
@@ -228,13 +229,13 @@ The [`getnetworkhashps` RPC](../api/remote-procedure-calls-mining.md#getnetworkh
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`blocks` | number (int) | Optional<br>(0 or 1) | The number of blocks to average together for calculating the estimated hashes per second.  Default is `120`.  Use `-1` to average all blocks produced since the last difficulty change
+`nblocks` | number (int) | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>The number of previous blocks to calculate estimate from, or -1 for blocks since last difficulty change.  Default is `120`.<br><br>Must be a positive number or `-1`; other values (including `0`) now return an `Invalid nblocks` error
 
 *Parameter #2---block height*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`height` | number (int) | Optional<br>(0 or 1) | The height of the last block to use for calculating the average.  Defaults to `-1` for the highest-height block on the local best block chain.  If the specified height is higher than the highest block on the local best block chain, it will be interpreted the same as `-1`
+`height` | number (int) | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>The height of the last block to use for calculating the average.  Defaults to `-1` for the highest-height block on the local best block chain.<br><br>If the specified height is higher than the highest block on the local best block chain (or less than `-1`), a `Block does not exist at specified height` error is now returned
 
 *Result---estimated hashes per second*
 

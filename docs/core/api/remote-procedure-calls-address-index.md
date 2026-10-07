@@ -151,8 +151,8 @@ Name | Type | Presence | Description
 →→<br>`index` | number | Required<br>(exactly 1) | The related input or output index
 →→<br>`satoshis` | number | Required<br>(exactly 1) | The difference of duffs
 →→<br>`timestamp` | string | Required<br>(exactly 1) | The time the transaction entered the mempool (seconds)
-→→<br>`prevtxid` | string | Required<br>(exactly 1) | The previous txid (if spending)
-→→<br>`prevout` | string | Required<br>(exactly 1) | The previous transaction output index (if spending)
+→→<br>`prevtxid` | string (hex) | Optional<br>(0 or 1) | The previous txid (if spending)
+→→<br>`prevout` | number (int) | Optional<br>(0 or 1) | The previous transaction output index (if spending)
 
 *Example from Dash Core 0.12.2*
 

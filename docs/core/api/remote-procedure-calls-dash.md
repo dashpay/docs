@@ -262,20 +262,21 @@ The [`getcoinjoininfo` RPC](#getcoinjoininfo) returns an object containing an in
 | →<br>`max_amount`        | number (int)          | Required<br>(exactly 1) | How many DASH to keep processed |
 | →<br>`denoms_goal`       | number (int)          | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br>How many inputs of each denominated amount to target |
 | →<br>`denoms_hardcap`    | number (int)          | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br>Maximum limit of how many inputs of each denominated amount to create |
-| →<br>`queue_size`        | number (int)          | Required<br>(exactly 1) | How many queues there are currently on the network |
-| →<br>`running`           | bool                  | Required<br>(exactly 1) | Whether CoinJoin is currently running |
-| →<br>`sessions`          | array of json objects | Required<br>(exactly 1) | Information about session(s) |
+| →<br>`queue_size`        | number (int)          | Optional<br>(0 or 1) | How many queues there are currently on the network |
+| →<br>`running`           | bool                  | Optional<br>(0 or 1) | Whether mixing is currently running (not returned when no wallet is loaded) |
+| →<br>`pending_inputs`    | number (int)          | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>The number of successfully mixed inputs kept locked until the transaction spending them is observed (not returned when no wallet is loaded) |
+| →<br>`sessions`          | array of json objects | Optional<br>(0 or 1) | Information about session(s). Not returned when no wallet is loaded |
 | → →<br>Session           | object                | Optional<br>(1 or more) | Information for a session |
-| → → →<br>`protxhash`     | string                | Required<br>(exactly 1) | The ProTxHash of the masternode |
-| → → →<br>`outpoint`      | string (txid-index)   | Required<br>(exactly 1) | The outpoint of the masternode |
-| → → →<br>`service`       | string (host:port)    | Required<br>(exactly 1) | **Deprecated in Dash Core 23.0.0**<br>The IP address and port of the masternode |
-| → → →<br>`addrs_core_p2p` | array               | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Network addresses of the masternode used for protocol P2P |
+| → → →<br>`protxhash`     | string                | Optional<br>(0 or 1) | The ProTxHash of the masternode (only while connected to one) |
+| → → →<br>`outpoint`      | string (txid-index)   | Optional<br>(0 or 1) | The outpoint of the masternode (only while connected to one) |
+| → → →<br>`service`       | string (host:port)    | Optional<br>(0 or 1) | **Deprecated in Dash Core 24.0.0**, returned only if config option `-deprecatedrpc=service` is passed<br>The IP address and port of the masternode |
+| → → →<br>`addrs_core_p2p` | array               | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>Network addresses of the masternode used for protocol P2P (only while connected to one) |
 | → → → →<br>Address       | string                | Required<br>(1 or more) | Network address (IP:port) |
 | → → →<br>`denomination`  | number (int)          | Required<br>(exactly 1) | The denomination of the session (in DASH) |
 | → → →<br>`state`         | string                | Required<br>(exactly 1) | Current state of the session |
 | → → →<br>`entries_count` | number (int)          | Required<br>(exactly 1) | The number of entries in the session |
 | →<br>`keys_left`         | number (int)          | Optional<br>(0 or 1) | *Changed to optional in Dash Core 22.0.0*<br>How many new keys are left since last automatic backup |
-| →<br>`warnings`          | string                | Optional<br>(exactly 1) | Any warnings |
+| →<br>`warnings`          | string                | Optional<br>(0 or 1) | Any warnings (not returned when no wallet is loaded) |
 
 *Result---(for masternodes) information about the pool*
 
@@ -286,6 +287,12 @@ The [`getcoinjoininfo` RPC](#getcoinjoininfo) returns an object containing an in
 | →<br>`denomination`  | number (int) | Required<br>(exactly 1) | The denomination of the session (in DASH) |
 | →<br>`state`         | string       | Required<br>(exactly 1) | Current state of the session |
 | →<br>`entries_count` | number (int) | Required<br>(exactly 1) | The number of entries in the session |
+
+*Result---(for non-masternodes without wallet support)*
+
+| Name     | Type   | Presence                | Description |
+| -------- | ------ | ----------------------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | Empty JSON object (`{}`) |
 
 *Example from Dash Core 23.0.0 (regular node)*
 
@@ -559,20 +566,20 @@ The `gobject diff` RPC Lists governance objects differences since last diff.
 
 | Name     | Type   | Presence                | Description                                                                                                         |
 | -------- | ------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `signal` | string | Optional<br>(exactly 1) | Type of governance object signal: <br>• `valid`<br>• `funding`<br>• `delete`<br>• `endorsed`<br>• `all` (*DEFAULT*) |
+| `signal` | string | Optional<br>(0 or 1) | Type of governance object signal: <br>• `valid` (*DEFAULT*)<br>• `funding`<br>• `delete`<br>• `endorsed`<br>• `all` |
 
 *Parameter #2---type*
 
 | Name   | Type   | Presence                | Description                                                                                |
 | ------ | ------ | ----------------------- | ------------------------------------------------------------------------------------------ |
-| `type` | string | Optional<br>(exactly 1) | Type of governance object signal: <br>• `proposals`<br>• `triggers`<br>• `all` (*DEFAULT*) |
+| `type` | string | Optional<br>(0 or 1) | Type of governance object signal: <br>• `proposals`<br>• `triggers`<br>• `all` (*DEFAULT*) |
 
 *Result---governance objects*
 
 | Name                       | Type         | Presence                | Description                                                                                                                                                 |
 | -------------------------- | ------------ | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Result                     | object       | Required<br>(exactly 1) | Information about the governance object                                                                                                                     |
-| →<br>Governance Object(s)  | object       | Required<br>(1 or more) | Key: Governance object hash<br>Values: Governance object details                                                                                            |
+| →<br>Governance Object(s)  | object       | Optional<br>(0 or more) | Key: Governance object hash<br>Values: Governance object details                                                                                            |
 | → →<br>`DataHex`           | string (hex) | Required<br>(exactly 1) | Governance object info as hex string                                                                                                                        |
 | → →<br>`DataString`        | string       | Required<br>(exactly 1) | Governance object info as string                                                                                                                            |
 | → →<br>`Hash`              | string (hex) | Required<br>(exactly 1) | Hash of this governance object                                                                                                                              |
@@ -643,6 +650,7 @@ The `gobject get` RPC returns a governance object by hash.
 | →<br>`CollateralHash`     | string (hex) | Required<br>(exactly 1) | Hash of the collateral payment transaction                                                                                                                  |
 | →<br>`ObjectType`         | number       | Required<br>(exactly 1) | Object types:<br>`1` - Unknown<br>`2` - Proposal<br>`3` - Trigger                                                                                           |
 | →<br>`CreationTime`       | number       | Required<br>(exactly 1) | Object creation time as Unix epoch time                                                                                                                     |
+| →<br>`SigningMasternode`  | string (hex) | Optional<br>(0 or 1)    | Signing masternode's vin (only present in triggers)                                                                                                         |
 | →<br>`FundingResult`      | object       | Required<br>(exactly 1) | Funding vote details                                                                                                                                        |
 | → →<br>`AbsoluteYesCount` | number       | Required<br>(exactly 1) | Number of `Yes` votes minus number of `No` votes                                                                                                            |
 | → →<br>`YesCount`         | number       | Required<br>(exactly 1) | Number of `Yes` votes                                                                                                                                       |
@@ -776,20 +784,20 @@ The `gobject list` RPC Lists governance objects (can be filtered by signal and/o
 
 | Name     | Type   | Presence                | Description                                                                                                         |
 | -------- | ------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `signal` | string | Optional<br>(exactly 1) | Type of governance object signal: <br>• `valid`<br>• `funding`<br>• `delete`<br>• `endorsed`<br>• `all` (*DEFAULT*) |
+| `signal` | string | Optional<br>(0 or 1) | Type of governance object signal: <br>• `valid` (*DEFAULT*)<br>• `funding`<br>• `delete`<br>• `endorsed`<br>• `all` |
 
 *Parameter #2---type*
 
 | Name   | Type   | Presence                | Description                                                                                |
 | ------ | ------ | ----------------------- | ------------------------------------------------------------------------------------------ |
-| `type` | string | Optional<br>(exactly 1) | Type of governance object signal: <br>• `proposals`<br>• `triggers`<br>• `all` (*DEFAULT*) |
+| `type` | string | Optional<br>(0 or 1) | Type of governance object signal: <br>• `proposals`<br>• `triggers`<br>• `all` (*DEFAULT*) |
 
 *Result---governance objects*
 
 | Name                       | Type         | Presence                | Description                                                                                                                                                 |
 | -------------------------- | ------------ | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Result                     | object       | Required<br>(exactly 1) | Information about the governance object                                                                                                                     |
-| →<br>Governance Object(s)  | object       | Required<br>(1 or more) | Key: Governance object hash<br>Values: Governance object details                                                                                            |
+| →<br>Governance Object(s)  | object       | Optional<br>(0 or more) | Key: Governance object hash<br>Values: Governance object details                                                                                            |
 | → →<br>`DataHex`           | string (hex) | Required<br>(exactly 1) | Governance object info as hex string                                                                                                                        |
 | → →<br>`DataString`        | string       | Required<br>(exactly 1) | Governance object info as string                                                                                                                            |
 | → →<br>`Hash`              | string (hex) | Required<br>(exactly 1) | Hash of this governance object                                                                                                                              |
@@ -973,9 +981,9 @@ The `gobject list-prepared` RPC returns a list of governance objects prepared by
 
 *Parameter #1---count*
 
-| Name    | Type         | Presence             | Description                         |
-| ------- | ------------ | -------------------- | ----------------------------------- |
-| `count` | number (int) | Optional<br>(0 or 1) | Maximum number of objects to return |
+| Name    | Type         | Presence             | Description                                       |
+| ------- | ------------ | -------------------- | ------------------------------------------------- |
+| `count` | number (int) | Optional<br>(0 or 1) | Maximum number of objects to return (default: 10) |
 
 *Result---list of governance objects*
 
@@ -989,13 +997,14 @@ The `gobject list-prepared` RPC returns a list of governance objects prepared by
 | → →<br>`createdAt`         | number (int) | Required<br>(exactly 1) | Proposal creation time as Unix epoch time                              |
 | → →<br>`revision`          | number (int) | Required<br>(exactly 1) | Proposal revision number                                               |
 | → →<br>`data`              | object       | Required<br>(exactly 1) | Object containing governance object data                               |
-| → → →<br>`end_epoch`       | string       | Required<br>(exactly 1) | Governance object info as string                                       |
-| → → →<br>`name`            | string       | Required<br>(exactly 1) | Proposal name                                                          |
-| → → →<br>`payment_address` | string       | Required<br>(exactly 1) | Proposal payment address                                               |
-| → → →<br>`payment_amount`  | string       | Required<br>(exactly 1) | Proposal payment amount                                                |
-| → → →<br>`start_epoch`     | number (int) | Required<br>(exactly 1) | Proposal start                                                         |
-| → → →<br>`type`            | number (int) | Required<br>(exactly 1) | Object type                                                            |
-| → → →<br>`url`             | string       | Required<br>(exactly 1) | Proposal URL                                                           |
+| → → →<br>`end_epoch`       | any          | Optional<br>(0 or 1)    | Proposal end timestamp                                                 |
+| → → →<br>`name`            | any          | Optional<br>(0 or 1)    | Proposal name                                                          |
+| → → →<br>`payment_address` | any          | Optional<br>(0 or 1)    | Proposal payment address                                               |
+| → → →<br>`payment_amount`  | any          | Optional<br>(0 or 1)    | Proposal payment amount                                                |
+| → → →<br>`start_epoch`     | any          | Optional<br>(0 or 1)    | Proposal start timestamp                                               |
+| → → →<br>`type`            | any          | Optional<br>(0 or 1)    | Object type                                                            |
+| → → →<br>`url`             | any          | Optional<br>(0 or 1)    | Proposal URL                                                           |
+| → → →<br>`plain`           | string       | Optional<br>(0 or 1)    | Governance object data as string                                       |
 | → → →<br>`hex`             | string (hex) | Required<br>(exactly 1) | Governance object data as hex                                          |
 
 *Example from Dash Core 0.17.0*
@@ -1103,7 +1112,7 @@ e353b2ab5f7e7cb24b95e00e153ec2a6339249672f18b8e8e144aa711678710d
 
 ### GObject Vote-alias
 
-The `gobject vote-alias` RPC votes on a governance object by masternode alias (using masternode.conf setup).
+The `gobject vote-alias` RPC votes on a governance object by masternode's voting key (if present in local wallet).
 
 *Parameter #1---governance hash*
 
@@ -1113,9 +1122,9 @@ The `gobject vote-alias` RPC votes on a governance object by masternode alias (u
 
 *Parameter #2---vote signal*
 
-| Name     | Type   | Presence                | Description                                  |
-| -------- | ------ | ----------------------- | -------------------------------------------- |
-| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding` or `valid` |
+| Name     | Type   | Presence                | Description                                              |
+| -------- | ------ | ----------------------- | -------------------------------------------------------- |
+| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding`, `valid`, `delete`, or `endorsed` |
 
 *Parameter #3---vote outcome*
 
@@ -1123,21 +1132,22 @@ The `gobject vote-alias` RPC votes on a governance object by masternode alias (u
 | --------- | ------ | ----------------------- | --------------------------------------- |
 | `outcome` | string | Required<br>(exactly 1) | Vote outcome: `yes`, `no`, or `abstain` |
 
-*Parameter #4---masternode alias*
+*Parameter #4---masternode ProTx hash*
 
-| Name    | Type   | Presence                | Description                |
-| ------- | ------ | ----------------------- | -------------------------- |
-| `alias` | string | Required<br>(exactly 1) | Alias of voting masternode |
+| Name         | Type         | Presence                | Description            |
+| ------------ | ------------ | ----------------------- | ---------------------- |
+| `protx-hash` | string (hex) | Required<br>(exactly 1) | Masternode's proTxHash |
 
 *Result---votes for specified governance*
 
-| Name                    | Type   | Presence                | Description                               |
-| ----------------------- | ------ | ----------------------- | ----------------------------------------- |
-| Result                  | object | Required<br>(exactly 1) | The governance object votes               |
-| →<br>`overall`          | string | Required<br>(1 or more) | Reports number of vote successes/failures |
-| →<br>`detail`           | object | Required<br>(exactly 1) | Vote details                              |
-| → →<br>Masternode Alias | object | Required<br>(1 or more) | Name of the masternode alias              |
-| → → →<br>`result`       | string | Required<br>(exactly 1) | Vote result                               |
+| Name                    | Type   | Presence                | Description                                                                     |
+| ----------------------- | ------ | ----------------------- | ------------------------------------------------------------------------------- |
+| Result                  | object | Required<br>(exactly 1) | The governance object votes                                                     |
+| →<br>`overall`          | string | Required<br>(exactly 1) | Total number of successful and failed votes                                     |
+| →<br>`detail`           | object | Required<br>(exactly 1) | Detailed information for each vote, keyed by the ProTx of the voting masternode |
+| → →<br>ProTx Hash       | object | Optional<br>(0 or more) | ProTx of masternode for voting                                                  |
+| → → →<br>`result`       | string | Required<br>(exactly 1) | Result of voting: `success` or `failed`                                         |
+| → → →<br>`errorMessage` | string | Optional<br>(0 or 1)    | Error message if failed                                                         |
 
 *Example from Dash Core 0.12.2*
 
@@ -1162,7 +1172,7 @@ Result:
 
 ### GObject Vote-many
 
-The `gobject vote-many` RPC votes on a governance object by all masternodes (using masternode.conf setup).
+The `gobject vote-many` RPC votes on a governance object by all masternodes for which the voting key is present in the local wallet.
 
 *Parameter #1---governance hash*
 
@@ -1172,9 +1182,9 @@ The `gobject vote-many` RPC votes on a governance object by all masternodes (usi
 
 *Parameter #2---vote signal*
 
-| Name     | Type   | Presence                | Description                                  |
-| -------- | ------ | ----------------------- | -------------------------------------------- |
-| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding` or `valid` |
+| Name     | Type   | Presence                | Description                                              |
+| -------- | ------ | ----------------------- | -------------------------------------------------------- |
+| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding`, `valid`, `delete`, or `endorsed` |
 
 *Parameter #3---vote outcome*
 
@@ -1182,21 +1192,16 @@ The `gobject vote-many` RPC votes on a governance object by all masternodes (usi
 | --------- | ------ | ----------------------- | --------------------------------------- |
 | `outcome` | string | Required<br>(exactly 1) | Vote outcome: `yes`, `no`, or `abstain` |
 
-*Parameter #4---masternode alias*
-
-| Name    | Type   | Presence                | Description                |
-| ------- | ------ | ----------------------- | -------------------------- |
-| `alias` | string | Required<br>(exactly 1) | Alias of voting masternode |
-
 *Result---votes for specified governance*
 
-| Name                    | Type   | Presence                | Description                               |
-| ----------------------- | ------ | ----------------------- | ----------------------------------------- |
-| Result                  | object | Required<br>(exactly 1) | The governance object votes               |
-| →<br>`overall`          | string | Required<br>(1 or more) | Reports number of vote successes/failures |
-| →<br>`detail`           | object | Required<br>(exactly 1) | Vote details                              |
-| → →<br>Masternode Alias | object | Required<br>(1 or more) | Name of the masternode alias              |
-| → → →<br>`result`       | string | Required<br>(exactly 1) | Vote result                               |
+| Name                    | Type   | Presence                | Description                                                                     |
+| ----------------------- | ------ | ----------------------- | ------------------------------------------------------------------------------- |
+| Result                  | object | Required<br>(exactly 1) | The governance object votes                                                     |
+| →<br>`overall`          | string | Required<br>(exactly 1) | Total number of successful and failed votes                                     |
+| →<br>`detail`           | object | Required<br>(exactly 1) | Detailed information for each vote, keyed by the ProTx of the voting masternode |
+| → →<br>ProTx Hash       | object | Optional<br>(0 or more) | ProTx of masternode for voting                                                  |
+| → → →<br>`result`       | string | Required<br>(exactly 1) | Result of voting: `success` or `failed`                                         |
+| → → →<br>`errorMessage` | string | Optional<br>(0 or 1)    | Error message if failed                                                         |
 
 *Example from Dash Core 0.12.2*
 
@@ -1425,7 +1430,7 @@ By default, payment information is returned for only the chain tip. More block w
 | Result              | array of objects | Required<br>(exactly 1) | List of masternode payment info                  |
 | →<br>Block Payment  | object           | Optional<br>(0 or more) | Masternode payment info for a block              |
 | →→<br>`height`      | number (int)     | Required<br>(exactly 1) | The height of the block                          |
-| →→<br>`blockhash`   | number (int)     | Required<br>(exactly 1) | The hash of the block                            |
+| →→<br>`blockhash`   | string (hex)     | Required<br>(exactly 1) | The hash of the block                            |
 | →→<br>`amount`      | number (int)     | Required<br>(exactly 1) | Amount received in this block by all masternodes |
 | →→<br>`masternodes` | array of objects | Required<br>(exactly 1) | Masternodes that received payments in this block |
 | →→→<br>Masternode   | object           | Required<br>(1 or more) | Masternode info                                  |
@@ -1485,14 +1490,14 @@ The `masternode status` RPC prints masternode status information.
 | ------------------------------ | ------------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Result                         | object       | Required<br>(exactly 1) | Masternode status info                                                                                                                                                                            |
 | →<br>`outpoint`                | string       | Required<br>(exactly 1) | The masternode's outpoint                                                                                                                                                                         |
-| →<br>`service`                 | string       | Required<br>(exactly 1) | The IP address/port of the masternode                                                                                                                                                             |
+| →<br>`service`                 | string       | Required<br>(exactly 1) | **Deprecated**<br>The IP address/port of the masternode |
 | →<br>`proTxHash`               | string (hex) | Optional<br>(0 or 1)    | The masternode's ProRegTx hash                                                                                                                                                                    |
 | →<br>`type`                    | string       | Required<br>(exactly 1) | *Added in Dash Core 19.0*<br>The type of masternode                                                                                                                                               |
 | →<br>`collateralHash`          | string (hex) | Optional<br>(0 or 1)    | The masternode's collateral hash                                                                                                                                                                  |
 | →<br>`collateralIndex`         | int          | Optional<br>(0 or 1)    | Index of the collateral                                                                                                                                                                           |
 | →<br>`dmnState`                | object       | Optional<br>(0 or 1)    | Deterministic Masternode State                                                                                                                                                                    |
 | → →<br>`version`               | int          | Required<br>(exactly 1) | **Added in Dash Core 19.2.0**<br>The version of the most recent ProRegTx or ProUpRegTx                                                                                                            |
-| → →<br>`service`               | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** (use `addresses` instead)<br>The IP address/port of the masternode |
+| → →<br>`service`               | string       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** (use `addresses` instead)<br>The IP address/port of the masternode. Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
 | → →<br>`addresses`             | object       | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>Network addresses of the masternode |
 | → → →<br>`core_p2p`            | array        | Optional<br>(0 or 1)    | Addresses used for protocol P2P |
 | → → →<br>`platform_p2p`        | array        | Optional<br>(0 or 1)    | Addresses used for Platform P2P |
@@ -1504,16 +1509,32 @@ The `masternode status` RPC prints masternode status information.
 | → →<br>`PoSeRevivedHeight`     | int          | Required<br>(exactly 1) | Block height at which the masternode was last revived from a PoSe ban                                                                                                                             |
 | → →<br>`PoSeBanHeight`         | int          | Required<br>(exactly 1) | Block height at which the masternode was last PoSe banned                                                                                                                                         |
 | → →<br>`revocationReason`      | int          | Required<br>(exactly 1) | Reason code for of masternode operator key revocation                                                                                                                                             |
-| → →<br>`ownerAddress`          | string       | Required<br>(exactly 1) | The owner address                                                                                                                                                                                 |
+| → →<br>`ownerAddress`          | string       | Optional<br>(0 or 1)    | **Updated in Dash Core 24.0.0**<br>The owner address. Not returned for shared masternodes (see `shares`) |
 | → →<br>`votingAddress`         | string       | Required<br>(exactly 1) | The voting address                                                                                                                                                                                |
 | → →<br>`platformNodeID`        | string       | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>Platform P2P node ID, derived from P2P public key (evonodes only)                                                                                                |
-| → →<br>`platformP2PPort`       | int          | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>**DEPRECATED in Dash Core 23.0.0**<br>Platform P2P port (evonodes only) |
-| → →<br>`platformHTTPPort`      | int          | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>**DEPRECATED in Dash Core 23.0.0**<br>TCP port of Platform HTTP/API interface (evonodes only) |
-| → →<br>`payoutAddress`         | string       | Required<br>(exactly 1) | The payout address                                                                                                                                                                                |
+| → →<br>`platformP2PPort`       | int          | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0**<br>Platform P2P port (evonodes only). Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
+| → →<br>`platformHTTPPort`      | int          | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0**<br>TCP port of Platform HTTP/API interface (evonodes only). Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
+| → →<br>`payoutAddress`         | string       | Optional<br>(0 or 1)    | **Updated in Dash Core 24.0.0**<br>The payout address. Only returned for masternodes with a state version below 3; version 3 masternodes report `payouts` and shared masternodes report `shares` instead |
+| → →<br>`payouts`               | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Owner masternode reward payout shares (version 3 non-shared masternodes only) |
+| → → →<br>Payout                | object       | Required<br>(1 or more) | Owner payout |
+| → → → →<br>`address`           | string       | Required<br>(exactly 1) | Dash address used for this owner payout |
+| → → → →<br>`script`            | string (hex) | Required<br>(exactly 1) | Owner payout scriptPubKey |
+| → → → →<br>`reward`            | int          | Required<br>(exactly 1) | Owner payout share in basis points |
+| → →<br>`shares`                | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Collateral shares of a shared masternode |
+| → → →<br>Share                 | object       | Required<br>(1 or more) | Collateral share |
+| → → → →<br>`amount`            | int          | Required<br>(exactly 1) | Collateral contribution in duffs |
+| → → → →<br>`refundAddress`     | string       | Required<br>(exactly 1) | Dash address the principal is refunded to at dissolution |
+| → → → →<br>`refundScript`      | string (hex) | Required<br>(exactly 1) | Refund scriptPubKey |
+| → → → →<br>`rewardAddress`     | string       | Required<br>(exactly 1) | Dash address this share's owner rewards are paid to |
+| → → → →<br>`rewardScript`      | string (hex) | Required<br>(exactly 1) | Reward scriptPubKey |
+| → → → →<br>`ownerAddress`      | string       | Required<br>(exactly 1) | Dash address of the share owner key |
+| → →<br>`earlyPeriodBlocks`     | int          | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Length in blocks of the early period during which unilateral dissolution is penalized (shared masternodes only) |
+| → →<br>`earlyPenalty`          | int          | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Penalty in duffs for unilateral dissolution during the early period (shared masternodes only) |
 | → →<br>`pubKeyOperator`        | string       | Required<br>(exactly 1) | The operator public key                                                                                                                                                                           |
 | → →<br>`operatorPayoutAddress` | string       | Optional<br>(0 or 1)    | The operator payout address                                                                                                                                                                       |
 | →<br>`state`                   | string       | Required<br>(exactly 1) | The masternode's state. Valid states are:<br>• `WAITING_FOR_PROTX`<br>• `POSE_BANNED`<br>• `REMOVED`<br>• `OPERATOR_KEY_CHANGED`<br>• `PROTX_IP_CHANGED`<br>• `READY`<br>• `ERROR`<br>• `UNKNOWN` |
 | →<br>`status`                  | string       | Required<br>(exactly 1) | The masternode's status (description based on current state)                                                                                                                                      |
+| →<br>`quorumParticipation`     | bool         | Required<br>(exactly 1) | **Added in Dash Core 24.0.0**<br>Whether DKG participation and quorum signing are enabled |
 
 *Example from Dash Core 19.2.0*
 
@@ -1713,7 +1734,7 @@ The [`masternodelist` RPC](#masternodelist) returns a list of masternodes in dif
 | `json` (Default) | Print info in JSON format (can be additionally filtered, partial match)                                            |
 | `lastpaidblock`  | Print the last block height a node was paid on the network                                                         |
 | `lastpaidtime`   | Print the last time a node was paid on the network                                                                 |
-| `owneraddress`   | Print the masternode owner Dash address                                                                            |
+| `owneraddress`   | Print the masternode owner Dash address (comma-separated share owners for shared masternodes). |
 | `payee`          | Print Dash address associated with a masternode (can be additionally filtered, partial match)                      |
 | `pubKeyOperator` | Print the masternode operator public key                                                                           |
 | `status`         | Print masternode status: ENABLED / POSE_BANNED (can be additionally filtered, partial match)                       |
@@ -1729,13 +1750,21 @@ The [`masternodelist` RPC](#masternodelist) returns a list of masternodes in dif
 
 | Name                 | Type        | Presence                | Description                                                                                   |
 | -------------------- | ----------- | ----------------------- | --------------------------------------------------------------------------------------------- |
-| `result`             | object/null | Required<br>(exactly 1) | Information about the masternode sync status                                                  |
-| →<br>Masternode Info | string      | Required<br>(1 or more) | The requested masternode info. Output varies based on selected `mode` and `filter` parameters |
+| `result`             | object/null | Required<br>(exactly 1) | JSON object with masternode outpoint as keys |
+| →<br>Masternode Info | string/number/object | Required<br>(1 or more) | Key: masternode outpoint<br>Value: the requested masternode info. Output varies based on selected `mode` and `filter` parameters |
 
 :::{note}
 **Added in Dash Core 23.0.0**
 
 In `json`, `recent`, and `evo` modes, each entry includes a structured `addresses` object (with optional `core_p2p`, `platform_p2p`, and `platform_https` arrays). The flat `address`, `platformP2PPort`, and `platformHTTPPort` fields are **deprecated** in favor of the `addresses` object.
+:::
+
+:::{note}
+**Updated in Dash Core 24.0.0**
+
+* The deprecated `address`, `platformP2PPort`, and `platformHTTPPort` fields are only returned if config option `-deprecatedrpc=service` is passed.
+* For shared masternodes, `owneraddress` (in the `owneraddress`, `json`, `recent`, and `evo` modes) contains the comma-separated share owner addresses. The `json`, `recent`, and `evo` modes can be filtered by any share owner address.
+* For masternodes with multiple owner payouts, `payee` contains the comma-separated payout addresses.
 :::
 
 *Example from Dash Core 23.1.7*
@@ -1949,6 +1978,8 @@ To display the status of sporks, use the `show` or `active` syntax.
 | Name   | Type   | Presence                | Description                                                                                             |
 | ------ | ------ | ----------------------- | ------------------------------------------------------------------------------------------------------- |
 | `mode` | string | Required<br>(exactly 1) | The command mode to use:<br>`show` - Display spork values<br>`active` - Display spork activation status |
+
+For an unrecognized command, the result is `null`.
 
 **Command Mode - `show`**
 

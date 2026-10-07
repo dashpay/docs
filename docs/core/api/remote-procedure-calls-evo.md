@@ -110,17 +110,17 @@ The [`protx` RPC](../api/remote-procedure-calls-evo.md#protx) provides a set of 
 
 The `protx diff` RPC calculates a diff and a proof between two masternode list.
 
-*Parameter #1---start block height*
+*Parameter #1---start block*
 
-| Name        | Type         | Presence                | Description               |
-| ----------- | ------------ | ----------------------- | ------------------------- |
-| `baseBlock` | number (int) | Required<br>(Exactly 1) | The starting block height |
+| Name        | Type                     | Presence                | Description                          |
+| ----------- | ------------------------ | ----------------------- | ------------------------------------ |
+| `baseBlock` | string (hex) or number (int) | Required<br>(Exactly 1) | The starting block hash or height |
 
-*Parameter #2---end block height*
+*Parameter #2---end block*
 
-| Name    | Type         | Presence                | Description             |
-| ------- | ------------ | ----------------------- | ----------------------- |
-| `block` | number (int) | Required<br>(Exactly 1) | The ending block height |
+| Name    | Type                     | Presence                | Description                        |
+| ------- | ------------------------ | ----------------------- | ---------------------------------- |
+| `block` | string (hex) or number (int) | Required<br>(Exactly 1) | The ending block hash or height |
 
 *Parameter #3---extended fields*
 
@@ -140,11 +140,11 @@ The `protx diff` RPC calculates a diff and a proof between two masternode list.
 | →<br>`cbTx`                    | string (hex) | Required<br>(exactly 1) | The coinbase transaction |
 | →<br>`deletedMNs`              | array        | Required<br>(exactly 1) | An array of deleted masternode hashes |
 | →<br>`mnlist`                  | array        | Required<br>(exactly 1) | An array of masternode details |
-| → →<br>`nVersion`              | number       | Required<br>(exactly 1) | **Added in Dash Core 19.0.0**<br>BLS version<br>`1` - Legacy BLS scheme<br>`2` - [Basic BLS scheme](https://github.com/dashpay/dash/issues/5001) |
+| → →<br>`nVersion`              | number       | Required<br>(exactly 1) | **Added in Dash Core 19.0.0**<br>BLS version<br>`1` - Legacy BLS scheme<br>`2` - [Basic BLS scheme](https://github.com/dashpay/dash/issues/5001)<br>`3` - Basic BLS scheme with extended addresses and payouts (available after v24 activation) |
 | → →<br>`nType`                 | number       | Required<br>(exactly 1) | **Added in Dash Core 19.0.0**<br>Type of masternode<br> `0` - Regular masternode<br>`1` - Evolution masternode |
 | → →<br>`proRegTxHash`          | string (hex) | Required<br>(exactly 1) | The hash of the initial provider registration transaction as hex in RPC byte order |
 | → →<br>`confirmedHash`         | string (hex) | Required<br>(exactly 1) | The hash of the block where the ProRegTx was mined |
-| → →<br>`service`               | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The IP address/Port of the masternode |
+| → →<br>`service`               | string       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The IP address/Port of the masternode. Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
 | → →<br>`addresses`             | object       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
 | → → →<br>`core_p2p`            | array        | Required<br>(exactly 1) | Array of core P2P address strings in `ADDR:PORT` format |
 | → → →<br>`platform_p2p`        | array        | Optional<br>(0 or 1)    | Array of platform P2P address strings in `ADDR:PORT` format (evonodes only) |
@@ -152,9 +152,22 @@ The `protx diff` RPC calculates a diff and a proof between two masternode list.
 | → →<br>`pubKeyOperator`        | string (hex) | Required<br>(exactly 1) | The operator public key |
 | → →<br>`votingAddress`         | string       | Required<br>(exactly 1) | The voting address |
 | → →<br>`isValid`               | bool         | Required<br>(exactly 1) | Set to `true` if masternode is valid |
-| → →<br>`platformHTTPPort`      | number       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_https'][0]` instead<br>TCP port of Platform HTTP/API interface (evonodes only) |
+| → →<br>`platformHTTPPort`      | number       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_https'][0]` instead<br>TCP port of Platform HTTP/API interface (evonodes only). Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
 | → →<br>`platformNodeID`        | string (hex) | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>Platform P2P node ID, derived from P2P public key (evonodes only) |
-| → →<br>`payoutAddress`         | string       | Optional<br>(0 or 1)    | *Added in Dash Core 18.1.0*<br>The owner's payout address. Only included if the `extended` parameter is set to `true`. |
+| → →<br>`payoutAddress`         | string       | Optional<br>(0 or 1)    | *Added in Dash Core 18.1.0*<br>**Updated in Dash Core 24.0.0**<br>The owner's payout address. Only included if the `extended` parameter is set to `true`. Not included for version 3 (extended address) entries, which return `payouts` instead. |
+| → →<br>`payouts`               | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Owner masternode reward payout shares. Only included if the `extended` parameter is set to `true`. |
+| → → →<br>Payout share          | object       | Required<br>(1 or more) | A payout share |
+| → → → →<br>`address`           | string       | Required<br>(exactly 1) | Dash address used for this owner payout |
+| → → → →<br>`script`            | string (hex) | Required<br>(exactly 1) | Owner payout scriptPubKey |
+| → → → →<br>`reward`            | number (int) | Required<br>(exactly 1) | Owner payout share in basis points |
+| → →<br>`shares`                | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Collateral shares of a shared masternode. Only included if the `extended` parameter is set to `true`. |
+| → → →<br>Share                 | object       | Required<br>(1 or more) | A collateral share |
+| → → → →<br>`amount`            | number (int) | Required<br>(exactly 1) | Collateral contribution in duffs |
+| → → → →<br>`refundAddress`     | string       | Required<br>(exactly 1) | Dash address the principal is refunded to at dissolution |
+| → → → →<br>`refundScript`      | string (hex) | Required<br>(exactly 1) | Refund scriptPubKey |
+| → → → →<br>`rewardAddress`     | string       | Required<br>(exactly 1) | Dash address this share's owner rewards are paid to |
+| → → → →<br>`rewardScript`      | string (hex) | Required<br>(exactly 1) | Reward scriptPubKey |
+| → → → →<br>`ownerAddress`      | string       | Required<br>(exactly 1) | Dash address of the share owner key |
 | → →<br>`operatorPayoutAddress` | string       | Required<br>(exactly 1) | *Added in Dash Core 18.1.0*<br>The operator's payout address.  Only included if the `extended` parameter is set to `true`. |
 | →<br>`deletedQuorums`          | array        | Required<br>(exactly 1) | An array of deleted quorums |
 | → →<br>`llmqType`              | number       | Required<br>(exactly 1) | The quorum type |
@@ -530,7 +543,6 @@ Result:
     "operatorReward": 0,
     "state": {
       "version": 1,
-      "service": "173.61.30.231:19013",
       "addresses": {
         "core_p2p": [
           "173.61.30.231:19013"
@@ -578,15 +590,15 @@ The `protx listdiff` RPC calculates a full MN list diff between two masternode l
 
 *Parameter #1---baseBlock*
 
-| Name        | Type    | Presence             | Description              |
-| ----------- | ------- | -------------------- | ------------------------ |
-| `baseBlock` | numeric | Required (exactly 1) | The starting block height|
+| Name        | Type                         | Presence                | Description                       |
+| ----------- | ---------------------------- | ----------------------- | --------------------------------- |
+| `baseBlock` | string (hex) or number (int) | Required<br>(exactly 1) | The starting block hash or height |
 
 *Parameter #2---block*
 
-| Name    | Type    | Presence             | Description            |
-| ------- | ------- | -------------------- | -----------------------|
-| `block` | numeric | Required (exactly 1) | The ending block height|
+| Name    | Type                         | Presence                | Description                     |
+| ------- | ---------------------------- | ----------------------- | ------------------------------- |
+| `block` | string (hex) or number (int) | Required<br>(exactly 1) | The ending block hash or height |
 
 *Result---the masternode list diff*
 
@@ -605,7 +617,7 @@ The `protx listdiff` RPC calculates a full MN list diff between two masternode l
 | → → →<br>`operatorReward`        | number       | Required<br>(exactly 1) | Fraction in % of reward shared with the operator between 0 and 10000 |
 | → → →<br>`state`                 | object       | Required<br>(exactly 1) | The masternode state |
 | → → → →<br>`version`             | number       | Required<br>(exactly 1) | Version of the masternode state |
-| → → → →<br>`service`             | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The IP address/Port of the masternode |
+| → → → →<br>`service`             | string       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The IP address/Port of the masternode. Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
 | → → → →<br>`addresses`           | object       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
 | → → → → →<br>`core_p2p`          | array        | Optional<br>(0 or 1)    | Array of core P2P address strings in `ADDR:PORT` format |
 | → → → → →<br>`platform_p2p`      | array        | Optional<br>(0 or 1)    | Array of platform P2P address strings in `ADDR:PORT` format (evonodes only) |
@@ -617,21 +629,36 @@ The `protx listdiff` RPC calculates a full MN list diff between two masternode l
 | → → → →<br>`PoSeRevivedHeight`   | number (int) | Required<br>(exactly 1) | Height masternode recovered from Proof of Service violations |
 | → → → →<br>`PoSeBanHeight`       | number (int) | Required<br>(exactly 1) | Height masternode was banned for Proof of Service violations |
 | → → → →<br>`revocationReason`    | number (int) | Required<br>(exactly 1) | Reason for ProUpRegTx revocation |
-| → → → →<br>`ownerAddress`        | string       | Required<br>(exactly 1) | Dash address used for payee updates and proposal voting |
+| → → → →<br>`ownerAddress`        | string       | Optional<br>(0 or 1)    | **Updated in Dash Core 24.0.0**<br>Dash address used for payee updates and proposal voting. Not included for shared masternodes. |
 | → → → →<br>`votingAddress`       | string       | Required<br>(exactly 1) | Dash address used for voting |
 | → → → →<br>`platformNodeID`      | string (hex) | Optional<br>(0 or 1)    | Node ID derived from P2P public key for Platform P2P (evonodes only) |
-| → → → →<br>`platformP2PPort`     | number (int) | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_p2p'][0]` instead<br>TCP port of Platform P2P (evonodes only) |
-| → → → →<br>`platformHTTPPort`    | number (int) | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_https'][0]` instead<br>TCP port of Platform HTTP/API interface (evonodes only) |
-| → → → →<br>`payoutAddress`       | string       | Optional<br>(0 or 1)    | Dash address used for masternode reward payments |
+| → → → →<br>`platformP2PPort`     | number (int) | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_p2p'][0]` instead<br>TCP port of Platform P2P (evonodes only). Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
+| → → → →<br>`platformHTTPPort`    | number (int) | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_https'][0]` instead<br>TCP port of Platform HTTP/API interface (evonodes only). Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
+| → → → →<br>`payoutAddress`       | string       | Optional<br>(0 or 1)    | **Updated in Dash Core 24.0.0**<br>Dash address used for masternode reward payments. Not included for version 3 (extended address) masternodes, which return `payouts` instead, or for shared masternodes. |
+| → → → →<br>`payouts`             | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Owner masternode reward payout shares |
+| → → → → →<br>Payout share        | object       | Required<br>(1 or more) | A payout share |
+| → → → → → →<br>`address`         | string       | Required<br>(exactly 1) | Dash address used for this owner payout |
+| → → → → → →<br>`script`          | string (hex) | Required<br>(exactly 1) | Owner payout scriptPubKey |
+| → → → → → →<br>`reward`          | number (int) | Required<br>(exactly 1) | Owner payout share in basis points |
+| → → → →<br>`shares`              | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Collateral shares of a shared masternode |
+| → → → → →<br>Share               | object       | Required<br>(1 or more) | A collateral share |
+| → → → → → →<br>`amount`          | number (int) | Required<br>(exactly 1) | Collateral contribution in duffs |
+| → → → → → →<br>`refundAddress`   | string       | Required<br>(exactly 1) | Dash address the principal is refunded to at dissolution |
+| → → → → → →<br>`refundScript`    | string (hex) | Required<br>(exactly 1) | Refund scriptPubKey |
+| → → → → → →<br>`rewardAddress`   | string       | Required<br>(exactly 1) | Dash address this share's owner rewards are paid to |
+| → → → → → →<br>`rewardScript`    | string (hex) | Required<br>(exactly 1) | Reward scriptPubKey |
+| → → → → → →<br>`ownerAddress`    | string       | Required<br>(exactly 1) | Dash address of the share owner key |
+| → → → →<br>`earlyPeriodBlocks`   | number (int) | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Length in blocks of the early period during which unilateral dissolution is penalized (shared masternodes only) |
+| → → → →<br>`earlyPenalty`        | number (int) | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Penalty in duffs for unilateral dissolution during the early period (shared masternodes only) |
 | → → → →<br>`pubKeyOperator`      | string       | Required<br>(exactly 1) | BLS public key used for operator signing |
 | → → → →<br>`operatorPayoutAddress` | string     | Optional<br>(0 or 1)    | Dash address used for operator reward payments |
 | →<br>`removedMNs`                | array        | Required<br>(exactly 1) | An array of ProTx hashes of removed masternodes |
 | →<br>`updatedMNs`                | array        | Required<br>(exactly 1) | Updated masternodes |
 | → →<br>ProTx hash                | object       | Optional<br>(0 or more) | Key: the masternode's ProTx hash<br>Value: the masternode state diff (only the changed fields are included) |
 | → → →<br>`version`               | number       | Optional<br>(0 or 1)    | Version of the masternode state diff |
-| → → →<br>`service`               | string       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The IP address/Port of the masternode |
+| → → →<br>`service`               | string       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The IP address/Port of the masternode. Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
 | → → →<br>`addresses`             | object       | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
-| → → →<br>...other state fields   |              | Optional<br>(0 or 1)    | Any other changed field from the masternode `state` object above, including the deprecated `platformP2PPort` and `platformHTTPPort` |
+| → → →<br>...other state fields   |              | Optional<br>(0 or 1)    | Any other changed field from the masternode `state` object above, including `payouts`, `shares`, `earlyPeriodBlocks`, `earlyPenalty`, and the deprecated `platformP2PPort` and `platformHTTPPort` (returned only if config option `-deprecatedrpc=service` is passed) |
 
 *Example from Dash Core*
 
@@ -655,7 +682,6 @@ Result:
       "operatorReward": 0,
       "state": {
         "version": 1,
-        "service": "64.193.62.206:19999",
         "addresses": {
           "core_p2p": [
             "64.193.62.206:19999"
@@ -707,7 +733,7 @@ The `protx register` RPC creates a ProRegTx referencing an existing collateral a
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -737,7 +763,10 @@ The `protx register` RPC creates a ProRegTx referencing an existing collateral a
 
 | Name            | Type   | Presence                | Description                                             |
 | --------------- | ------ | ----------------------- | ------------------------------------------------------- |
-| `payoutAddress` | string | Required<br>(exactly 1) | The Dash address to use for masternode reward payments. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`. |
+| →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
+| → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
+| → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
 
 *Parameter #9---fee source address*
 
@@ -833,7 +862,7 @@ The `protx register_legacy` RPC works similar to `protx register`, but parses th
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -863,7 +892,10 @@ The `protx register_legacy` RPC works similar to `protx register`, but parses th
 
 | Name                     | Type   | Presence                | Description                                             |
 | ------------------------ | ------ | ----------------------- | ------------------------------------------------------- |
-| `payoutAddress_register` | string | Required<br>(exactly 1) | The Dash address to use for masternode reward payments. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`. |
+| →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
+| → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
+| → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
 
 *Parameter #9---fee source address*
 
@@ -944,7 +976,7 @@ The `protx register_fund` RPC creates and funds a ProRegTx with the 1,000 DASH n
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #3---owner address*
 
@@ -974,7 +1006,10 @@ The `protx register_fund` RPC creates and funds a ProRegTx with the 1,000 DASH n
 
 | Name            | Type   | Presence                | Description                                             |
 | --------------- | ------ | ----------------------- | ------------------------------------------------------- |
-| `payoutAddress` | string | Required<br>(exactly 1) | The Dash address to use for masternode reward payments. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`. |
+| →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
+| → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
+| → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
 
 *Parameter #8---fund address*
 
@@ -1061,7 +1096,7 @@ The `protx register_fund_legacy` RPC creates, funds, and sends a ProTx to the ne
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #3---owner address*
 
@@ -1091,7 +1126,10 @@ The `protx register_fund_legacy` RPC creates, funds, and sends a ProTx to the ne
 
 | Name                     | Type   | Presence                | Description                                             |
 | ------------------------ | ------ | ----------------------- | ------------------------------------------------------- |
-| `payoutAddress_register` | string | Required<br>(exactly 1) | The Dash address to use for masternode reward payments. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`. |
+| →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
+| → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
+| → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
 
 *Parameter #8---fund address*
 
@@ -1178,7 +1216,7 @@ The `protx register_prepare` RPC creates an unsigned ProTx and a message that mu
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1208,7 +1246,10 @@ The `protx register_prepare` RPC creates an unsigned ProTx and a message that mu
 
 | Name            | Type   | Presence                | Description                                             |
 | --------------- | ------ | ----------------------- | ------------------------------------------------------- |
-| `payoutAddress` | string | Required<br>(exactly 1) | The Dash address to use for masternode reward payments. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`. |
+| →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
+| → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
+| → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
 
 *Parameter #9---fee source address*
 
@@ -1271,7 +1312,7 @@ The `protx register_prepare_legacy` RPC Creates an unsigned ProTx and a message 
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1301,7 +1342,10 @@ The `protx register_prepare_legacy` RPC Creates an unsigned ProTx and a message 
 
 | Name                      | Type   | Presence                | Description                                             |
 | ------------------------- | ------ | ----------------------- | ------------------------------------------------------- |
-| `payoutAddress_register` | string | Required<br>(exactly 1) | The Dash address to use for masternode reward payments. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`. |
+| →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
+| → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
+| → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
 
 *Parameter #9---fee source address*
 
@@ -1358,7 +1402,7 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1388,7 +1432,10 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 
 | Name                     | Type   | Presence                | Description                                             |
 | ------------------------ | ------ | ----------------------- | ------------------------------------------------------- |
-| `payoutAddress_register` | string | Required<br>(exactly 1) | The Dash address to use for masternode reward payments. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`.<br>An evonode can only use more than one payout share after the `evo_shares` deployment is active. |
+| →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
+| → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
+| → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
 
 *Parameter #9---platform node ID*
 
@@ -1400,13 +1447,13 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 
 | Name              | Type   | Presence                | Description                                                   |
 | ----------------- | ------ | ----------------------- | ------------------------------------------------------------- |
-| `platformP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of Platform P2P address(es) in the form `ADDR:PORT`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---platform HTTPS addresses*
 
 | Name              | Type   | Presence                | Description                                                                              |
 | ----------------- | ------ | ----------------------- | ---------------------------------------------------------------------------------------- |
-| `platformHTTPSAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of Platform HTTPS address(es) in the form `ADDR:PORT`. Can be an empty string or an array of strings.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #12---fee source address*
 
@@ -1492,7 +1539,7 @@ The `protx register_fund_evo` RPC creates, funds, and sends a ProTx to the netwo
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #3---owner address*
 
@@ -1522,7 +1569,10 @@ The `protx register_fund_evo` RPC creates, funds, and sends a ProTx to the netwo
 
 | Name                     | Type   | Presence                | Description                                             |
 | ------------------------ | ------ | ----------------------- | ------------------------------------------------------- |
-| `payoutAddress_register` | string | Required<br>(exactly 1) | The Dash address to use for masternode reward payments. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`.<br>An evonode can only use more than one payout share after the `evo_shares` deployment is active. |
+| →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
+| → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
+| → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
 
 *Parameter #8---platform node ID*
 
@@ -1534,13 +1584,13 @@ The `protx register_fund_evo` RPC creates, funds, and sends a ProTx to the netwo
 
 | Name              | Type   | Presence                | Description                                                                              |
 | ----------------- | ------ | ----------------------- | ---------------------------------------------------------------------------------------- |
-| `platformP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of Platform P2P address(es) in the form `ADDR:PORT`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #10---platform HTTPS addresses*
 
 | Name               | Type   | Presence                | Description                                                   |
 | ------------------ | ------ | ----------------------- | ------------------------------------------------------------- |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of Platform HTTPS address(es) in the form `ADDR:PORT`. Can be an empty string or an array of strings.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---fund address*
 
@@ -1627,7 +1677,7 @@ The `protx register_prepare_evo` RPC creates an unsigned ProTx and a message tha
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1657,7 +1707,10 @@ The `protx register_prepare_evo` RPC creates an unsigned ProTx and a message tha
 
 | Name                     | Type   | Presence                | Description                                             |
 | ------------------------ | ------ | ----------------------- | ------------------------------------------------------- |
-| `payoutAddress_register` | string | Required<br>(exactly 1) | The Dash address to use for masternode reward payments. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`.<br>An evonode can only use more than one payout share after the `evo_shares` deployment is active. |
+| →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
+| → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
+| → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
 
 *Parameter #9---platform node ID*
 
@@ -1669,13 +1722,13 @@ The `protx register_prepare_evo` RPC creates an unsigned ProTx and a message tha
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of Platform P2P address(es) in the form `ADDR:PORT`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---platform HTTPS addresses*
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformHTTPSAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of Platform HTTPS address(es) in the form `ADDR:PORT`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #12---fee source address*
 
@@ -1727,7 +1780,7 @@ The `protx update_service_evo` RPC creates and sends a ProUpServTx to the networ
 
 | Name        | Type   | Presence                | Description                                                          |
 | ----------- | ------ | ----------------------- | -------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx. |
 
 *Parameter #3---operator key*
 
@@ -1745,13 +1798,13 @@ The `protx update_service_evo` RPC creates and sends a ProUpServTx to the networ
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformP2PAddrs` | array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of Platform P2P address(es) in the form `ADDR:PORT`. Must be an array of strings. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>Must be unique on the network. |
 
 *Parameter #6---platform HTTPS addresses*
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformHTTPSAddrs` | array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Platform HTTPS address(es) in the form `ADDR:PORT`. Must be an array of strings. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>Must be unique on the network. |
 
 *Parameter #7---operator payout address*
 
@@ -1935,7 +1988,10 @@ The `protx update_registrar` RPC creates and sends a ProUpRegTx to the network.
 
 | Name            | Type   | Presence             | Description                                                                                                                       |
 | --------------- | ------ | -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `payoutAddress` | string | Optional<br>(0 or 1) | The Dash address to use for masternode reward payments. If set to an empty string, the currently active payout address is reused. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>If set to an empty string, the currently active payout address is reused.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`.<br>An evonode can only use more than one payout share after the `evo_shares` deployment is active. |
+| →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
+| → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
+| → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
 
 *Parameter #5---fee source address*
 
@@ -2008,7 +2064,10 @@ The `protx update_registrar_legacy` RPC creates and sends a ProUpRegTx to the ne
 
 | Name                   | Type   | Presence             | Description                                                                                                                       |
 | ---------------------- | ------ | -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `payoutAddress_update` | string | Optional<br>(0 or 1) | The Dash address to use for masternode reward payments. If set to an empty string, the currently active payout address is reused. |
+| `payoutAddress` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to use for masternode reward payments, or after v24 activation, an array of payout shares. Not compatible with legacy bls operator key.<br>If set to an empty string, the currently active payout address is reused.<br>An array must contain 1 to 8 payout shares. Each `reward` must be at least `100` and all `reward` values must total `10000`. |
+| →<br>Payout share | object | Required<br>(1 to 8) | A payout share |
+| → →<br>`address` | string | Required<br>(exactly 1) | The Dash payout address. |
+| → →<br>`reward` | number (int) | Required<br>(exactly 1) | The payout share in basis points. |
 
 *Parameter #5---fee source address*
 
@@ -2063,7 +2122,7 @@ The `protx update_service` RPC creates and sends a ProUpServTx to the network.
 
 | Name        | Type   | Presence                | Description                                                          |
 | ----------- | ------ | ----------------------- | -------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx. |
 
 *Parameter #3---operator key*
 
@@ -2206,7 +2265,7 @@ The `quorum info` RPC returns information about a specific quorum.
 | →<br>`members`                        | array        | Required<br>(exactly 1) | An array containing quorum member details                                                                                                                                              |
 | → →<br>Member                         | object       | Required<br>(1 or more) | An object describing a particular member                                                                                                                                               |
 | → → →<br>`proTxHash`                  | string (hex) | Required<br>(exactly 1) | The masternode's Provider Registration transaction hash                                                                                                                                |
-| → → →<br>`service`                    | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The masternode's IP:Port                                                                                                                              |
+| → → →<br>`service`                    | string       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The masternode's IP:Port. Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
 | → → →<br>`addresses`                  | object       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
 | → → → →<br>`core_p2p`                 | array        | Required<br>(exactly 1) | Array of core P2P address strings in `ADDR:PORT` format |
 | → → → →<br>`platform_p2p`             | array        | Optional<br>(0 or 1)    | Array of platform P2P address strings in `ADDR:PORT` format (evonodes only) |
@@ -2290,9 +2349,13 @@ Result (truncated):
 :::{versionadded} 20.1.0
 :::
 
-The `quorum dkginfo` RPC returns information about active and upcoming DKG sessions.
+The `quorum dkginfo` RPC returns information about active and upcoming DKG sessions. It is only available in masternode or watch-only mode.
 
-*Parameters: none*
+*Parameter #1---ProTx hash*
+
+| Name        | Type         | Presence             | Description |
+| ----------- | ------------ | -------------------- | ----------- |
+| `proTxHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>The proTxHash of the masternode to report upcoming DKG participation for. Empty string is treated as the default.<br>Default: the local active masternode proTxHash, if any |
 
 *Result---information about DKG*
 
@@ -2301,6 +2364,18 @@ The `quorum dkginfo` RPC returns information about active and upcoming DKG sessi
 | `result`                              | object       | Required<br>(exactly 1) | Quorum info |
 | →<br>`active_dkgs` | number | Required<br>(exactly 1) | Total number of active DKG sessions this node is participating in currently
 | →<br>`next_dkg`    | number | Required<br>(exactly 1) | The number of blocks until the next potential DKG session |
+| →<br>`proTxHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Hash of the masternode's initial ProRegTx |
+| →<br>`upcoming_dkgs` | array | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Upcoming DKG sessions for the given proTxHash whose work block is already mined. For rotated quorums all indices in a cycle share the cycle base work block |
+| → →<br>DKG session | object | Optional<br>(0 or more) | An upcoming DKG session |
+| → → →<br>`llmqType` | number | Required<br>(exactly 1) | Quorum type |
+| → → →<br>`quorumIndex` | number | Required<br>(exactly 1) | Quorum index. Relevant for rotation quorums only, 0 for non-rotating quorums |
+| → → →<br>`quorumHeight` | number | Required<br>(exactly 1) | The height at which the quorum session starts |
+| → → →<br>`blocksUntilStart` | number | Required<br>(exactly 1) | The number of blocks until the quorum session starts |
+| → → →<br>`known` | bool | Required<br>(exactly 1) | Whether participation could be determined |
+| → → →<br>`reason` | string | Optional<br>(0 or 1) | Why participation could not be determined |
+| → → →<br>`isMember` | bool | Optional<br>(0 or 1) | Whether the masternode is a member of the upcoming quorum |
+| → → →<br>`workBlockHeight` | number | Optional<br>(0 or 1) | The height of the work block used to compute membership |
+| → → →<br>`workBlockHash` | string (hex) | Optional<br>(0 or 1) | The hash of the work block used to compute membership |
 
 *Example from Dash Core 20.1.0*
 
@@ -2367,7 +2442,7 @@ The `quorum dkgstatus` RPC displays the status of the current DKG process.
 | → → → →→<br>`connected`                   | boolean          | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>Whether or not the connection is active                                                                                                     |
 | → → → →→<br>`address`                     | string           | Optional<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>Address                                                                                                                                     |
 | → → → →→<br>`outbound`                    | boolean          | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>Whether or not this is an outbound connection                                                                                               |
-| →<br>`minableCommitments`                 | object           | Required<br>(exactly 1) | Object containing minable commitments                                                                                                                                            |
+| →<br>`minableCommitments`                 | array            | Required<br>(exactly 1) | Array of objects containing commitments the next block would include                                                                                                             |
 
 *Result (if detail level was 1)---JSON DKG details including member index*
 
@@ -3375,11 +3450,11 @@ The `quorum listextended` RPC returns an extended list of on-chain quorums.
 | `result`                  | object           | Required<br>(exactly 1) | Object containing an extended list of on-chain quorums          |
 | →<br>`quorumName`         | array of objects | Required<br>(exactly 1) | List of quorum details per some quorum type                     |
 | →→<br>`xxxx`              | object           | Required<br>(exactly 1) | Quorum hash. Note: most recent quorums come first               |
+| →→→<br>`quorumIndex`      | numeric          | Optional<br>(0 or 1)    | Quorum index (applicable only to rotated quorums)               |
 | →→→<br>`creationHeight`   | numeric          | Required<br>(exactly 1) | Block height where the DKG started                              |
-| →→→<br>`quorumIndex`      | numeric          | Required<br>(exactly 1) | Quorum index (applicable only to rotated quorums)               |
 | →→→<br>`minedBlockHash`   | string           | Required<br>(exactly 1) | Blockhash where the commitment was mined.                       |
 | →→→<br> `numValidMembers` | numeric          | Required<br>(exactly 1) | The total of valid members.                                     |
-| →→→<br> `healthRatio`     | numeric          | Required<br>(exactly 1) | The ratio of healthy members to quorum size. Range [0.0 - 1.0]. |
+| →→→<br> `healthRatio`     | string           | Required<br>(exactly 1) | The ratio of healthy members to quorum size. Range [0.0 - 1.0]. |
 
 *Example from Dash Core 18.2.0*
 

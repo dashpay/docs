@@ -22,8 +22,8 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [GetBestBlockHash](../api/remote-procedure-calls-blockchain.md#getbestblockhash): returns the header hash of the most recent block on the best block chain.
 * [DumpTxOutset](../api/remote-procedure-calls-blockchain.md#dumptxoutset): Write the serialized UTXO set to disk. _New in Dash Core 18.1.0_
 * [GetBestChainLock](../api/remote-procedure-calls-blockchain.md#getbestchainlock): returns the block hash of the best chainlock. **_Updated in Dash Core 22.1.0_**
-* [GetBlock](../api/remote-procedure-calls-blockchain.md#getblock): gets a block with a particular header hash from the local block database either as a JSON object or as a serialized block. **Updated in Dash Core 23.0.0**
-* [GetBlockChainInfo](../api/remote-procedure-calls-blockchain.md#getblockchaininfo): provides information about the current state of the block chain. _Updated in Dash Core 21.0.0_
+* [GetBlock](../api/remote-procedure-calls-blockchain.md#getblock): gets a block with a particular header hash from the local block database either as a JSON object or as a serialized block. **Updated in Dash Core 24.0.0**
+* [GetBlockChainInfo](../api/remote-procedure-calls-blockchain.md#getblockchaininfo): provides information about the current state of the block chain. **Updated in Dash Core 24.0.0**
 * [GetBlockCount](../api/remote-procedure-calls-blockchain.md#getblockcount): returns the number of blocks in the local best block chain.
 * [GetBlockFilter](../api/remote-procedure-calls-blockchain.md#getblockfilter): retrieves a [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) content filter for a particular block. _New in Dash Core 18.0.0_
 * [GetBlockFromPeer](../api/remote-procedure-calls-blockchain.md#getblockfrompeer): attempts to fetch a specific block from a given peer. **Updated in Dash Core 23.0.0**
@@ -35,11 +35,11 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [GetChainTips](../api/remote-procedure-calls-blockchain.md#getchaintips): returns information about the highest-height block (tip) of each local block chain. _Updated in Dash Core 0.12.3_
 * [GetChainTxStats](../api/remote-procedure-calls-blockchain.md#getchaintxstats): compute statistics about the total number and rate of transactions in the chain. _Updated in Dash Core 18.0.0_
 * [GetDifficulty](../api/remote-procedure-calls-blockchain.md#getdifficulty): returns the proof-of-work difficulty as a multiple of the minimum difficulty.
-* [GetMemPoolAncestors](../api/remote-procedure-calls-blockchain.md#getmempoolancestors): returns all in-mempool ancestors for a transaction in the mempool. _Updated in Dash Core 20.0.0_
-* [GetMemPoolDescendants](../api/remote-procedure-calls-blockchain.md#getmempooldescendants): returns all in-mempool descendants for a transaction in the mempool. _Updated in Dash Core 20.0.0_
-* [GetMemPoolEntry](../api/remote-procedure-calls-blockchain.md#getmempoolentry): returns mempool data for given transaction (must be in mempool). _Updated in Dash Core 20.0.0_
-* [GetMemPoolInfo](../api/remote-procedure-calls-blockchain.md#getmempoolinfo): returns information about the node's current transaction memory pool. _Updated in Dash Core 20.1.0_
-* [GetRawMemPool](../api/remote-procedure-calls-blockchain.md#getrawmempool): returns all transaction identifiers (TXIDs) in the memory pool as a JSON array, or detailed information about each transaction in the memory pool as a JSON object. **_Updated in Dash Core 22.0.0_**
+* [GetMemPoolAncestors](../api/remote-procedure-calls-blockchain.md#getmempoolancestors): returns all in-mempool ancestors for a transaction in the mempool. **Updated in Dash Core 24.0.0**
+* [GetMemPoolDescendants](../api/remote-procedure-calls-blockchain.md#getmempooldescendants): returns all in-mempool descendants for a transaction in the mempool. **Updated in Dash Core 24.0.0**
+* [GetMemPoolEntry](../api/remote-procedure-calls-blockchain.md#getmempoolentry): returns mempool data for given transaction (must be in mempool). **Updated in Dash Core 24.0.0**
+* [GetMemPoolInfo](../api/remote-procedure-calls-blockchain.md#getmempoolinfo): returns information about the node's current transaction memory pool. **Updated in Dash Core 24.0.0**
+* [GetRawMemPool](../api/remote-procedure-calls-blockchain.md#getrawmempool): returns all transaction identifiers (TXIDs) in the memory pool as a JSON array, or detailed information about each transaction in the memory pool as a JSON object. **Updated in Dash Core 24.0.0**
 * [GetMerkleBlocks](../api/remote-procedure-calls-blockchain.md#getmerkleblocks): returns an array of hex-encoded merkleblocks for <count> blocks starting from <hash> which match <filter>. _New in Dash Core 0.15.0_
 * [GetSpecialTxes](../api/remote-procedure-calls-blockchain.md#getspecialtxes): returns an array of special transactions found in the specified block _New in Dash Core 0.13.1_
 * [GetSpentInfo](../api/remote-procedure-calls-blockchain.md#getspentinfo): returns the txid and index where an output is spent (requires `spentindex` to be enabled). New in Dash Core 0.12.1
@@ -49,16 +49,16 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [PreciousBlock](../api/remote-procedure-calls-blockchain.md#preciousblock): treats a block as if it were received before others with the same work. _New in Dash Core 0.12.3_
 * [PruneBlockChain](../api/remote-procedure-calls-blockchain.md#pruneblockchain): prunes the blockchain up to a specified height or timestamp. _New in Dash Core 0.12.3_
 * [SaveMemPool](../api/remote-procedure-calls-blockchain.md#savemempool): dumps the mempool to disk. **_Updated in Dash Core 22.0.0_**
-* [VerifyChain](../api/remote-procedure-calls-blockchain.md#verifychain): verifies each entry in the local block chain database.
+* [VerifyChain](../api/remote-procedure-calls-blockchain.md#verifychain): verifies each entry in the local block chain database. **Updated in Dash Core 24.0.0**
 * [VerifyTxOutProof](../api/remote-procedure-calls-blockchain.md#verifytxoutproof): verifies that a proof points to one or more transactions in a block, returning the transactions the proof commits to and throwing an RPC error if the block is not in our best block chain.
 
 ## [Control RPCs](../api/remote-procedure-calls-control.md)
 
-* [Debug](../api/remote-procedure-calls-control.md#debug): changes the debug category from the console. _Updated in Dash Core 18.0.0_
+* [Debug](../api/remote-procedure-calls-control.md#debug): changes the debug category from the console. **Updated in Dash Core 24.0.0**
 * [GetMemoryInfo](../api/remote-procedure-calls-control.md#getmemoryinfo): returns information about memory usage. _Updated in Dash Core 0.15.0_
 * [GetRPCInfo](../api/remote-procedure-calls-control.md#getrpcinfo): returns details about the RPC server. _New in Dash Core 18.0.0_
 * [Help](../api/remote-procedure-calls-control.md#help): lists all available public RPC commands, or gets help for the specified RPC.  Commands which are unavailable will not be listed, such as wallet RPCs if wallet support is disabled. _Updated in Dash Core 0.17.0_
-* [Logging](../api/remote-procedure-calls-control.md#logging): gets and sets the logging configuration _Updated in Dash Core 18.0.0_
+* [Logging](../api/remote-procedure-calls-control.md#logging): gets and sets the logging configuration **Updated in Dash Core 24.0.0**
 * [Stop](../api/remote-procedure-calls-control.md#stop): safely shuts down the Dash Core server.
 * [Uptime](../api/remote-procedure-calls-control.md#uptime): returns the total uptime of the server. _New in Dash Core 0.15.0_
 
@@ -66,12 +66,12 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 
 * [CoinJoin](../api/remote-procedure-calls-dash.md#coinjoin): controls the CoinJoin process. **Updated in Dash Core 23.0.0**
 * [CoinJoinSalt](../api/remote-procedure-calls-dash.md#coinjoinsalt): controls the CoinJoin salt used in the process. It allows you to generate, retrieve, or set the salt. **_Added in Dash Core 22.0.0_**
-* [GetCoinJoinInfo](../api/remote-procedure-calls-dash.md#getcoinjoininfo): returns an object containing an information about CoinJoin settings and state. **Updated in Dash Core 23.0.0**
+* [GetCoinJoinInfo](../api/remote-procedure-calls-dash.md#getcoinjoininfo): returns an object containing an information about CoinJoin settings and state. **Updated in Dash Core 24.0.0**
 * [GetGovernanceInfo](../api/remote-procedure-calls-dash.md#getgovernanceinfo): returns an object containing governance parameters. _Updated in Dash Core 20.0.0_
 * [GetSuperblockBudget](../api/remote-procedure-calls-dash.md#getsuperblockbudget): returns the absolute maximum sum of superblock payments allowed.
 * [GObject](../api/remote-procedure-calls-dash.md#gobject): provides a set of commands for managing governance objects and displaying information about them. _Updated in Dash Core 20.0.0_
-* [Masternode](../api/remote-procedure-calls-dash.md#masternode): provides a set of commands for managing masternodes and displaying information about them. **Updated in Dash Core 23.0.0**
-* [MasternodeList](../api/remote-procedure-calls-dash.md#masternodelist): returns a list of masternodes in different modes. _Updated in Dash Core 20.0.0_
+* [Masternode](../api/remote-procedure-calls-dash.md#masternode): provides a set of commands for managing masternodes and displaying information about them. **Updated in Dash Core 24.0.0**
+* [MasternodeList](../api/remote-procedure-calls-dash.md#masternodelist): returns a list of masternodes in different modes. **Updated in Dash Core 24.0.0**
 * [MnSync](../api/remote-procedure-calls-dash.md#mnsync): returns the sync status, updates to the next step or resets it entirely. _Updated in Dash Core 0.14.0_
 * [Spork](../api/remote-procedure-calls-dash.md#spork): shows information about the current state of sporks. _Updated in Dash Core 18.1.0_
 * [SporkUpdate](../api/remote-procedure-calls-dash.md#sporkupdate): updates the value of the provided spork. _New in Dash Core 18.1.0_
@@ -80,8 +80,8 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 ## [Evolution RPCs](../api/remote-procedure-calls-evo.md)
 
 * [BLS](../api/remote-procedure-calls-evo.md#bls): provides a set of commands to execute BLS-related actions. _Updated in Dash Core 19.0.0_
-* [ProTx](../api/remote-procedure-calls-evo.md#protx): provides a set of commands to execute ProTx related actions. **Updated in Dash Core 23.0.0**
-* [Quorum](../api/remote-procedure-calls-evo.md#quorum): provides a set of commands for quorums (LLMQs). **Updated in Dash Core 23.0.0**
+* [ProTx](../api/remote-procedure-calls-evo.md#protx): provides a set of commands to execute ProTx related actions. **Updated in Dash Core 24.0.0**
+* [Quorum](../api/remote-procedure-calls-evo.md#quorum): provides a set of commands for quorums (LLMQs). **Updated in Dash Core 24.0.0**
 * [SubmitChainLock](../api/remote-procedure-calls-evo.md#submitchainlock): allows the submission of a ChainLock signature. _New in Dash Core 20.1.0_
 * [VerifyChainLock](../api/remote-procedure-calls-evo.md#verifychainlock): tests if a quorum signature is valid for a ChainLock. _New in Dash Core 0.17.0_
 * [VerifyISLock](../api/remote-procedure-calls-evo.md#verifyislock): tests if a quorum signature is valid for an InstantSend lock. _New in Dash Core 0.17.0_
@@ -96,7 +96,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 
 * [GetBlockTemplate](../api/remote-procedure-calls-mining.md#getblocktemplate): gets a block template or proposal for use with mining software. _Updated in Dash Core 20.0.0_
 * [GetMiningInfo](../api/remote-procedure-calls-mining.md#getmininginfo): returns various mining-related information. _Updated in Dash Core 18.0.0_
-* [GetNetworkHashPS](../api/remote-procedure-calls-mining.md#getnetworkhashps): returns the estimated network hashes per second based on the last n blocks.
+* [GetNetworkHashPS](../api/remote-procedure-calls-mining.md#getnetworkhashps): returns the estimated network hashes per second based on the last n blocks. **Updated in Dash Core 24.0.0**
 * [PrioritiseTransaction](../api/remote-procedure-calls-mining.md#prioritisetransaction): adds virtual priority or fee to a transaction, allowing it to be accepted into blocks mined by this node (or miners which use this node) with a lower priority or fee. (It can also remove virtual priority or fee, requiring the transaction have a higher priority or fee to be accepted into a locally-mined block.) _Updated in Dash Core 0.14.0_
 * [SubmitBlock](../api/remote-procedure-calls-mining.md#submitblock): accepts a block, verifies it is a valid addition to the block chain, and broadcasts it to the network. Extra parameters are ignored by Dash Core but may be used by mining pools or other programs.
 * [SubmitHeader](../api/remote-procedure-calls-mining.md#submitheader): decodes the given hex data as a header and submits it as a candidate chain tip if valid. _New in Dash Core 18.0.0_
@@ -126,23 +126,23 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [CombineRawTransaction](../api/remote-procedure-calls-raw-transactions.md#combinerawtransaction): combine multiple partially signed transactions into one transaction. _New in Dash Core 0.15.0_
 * [ConvertToPSBT](../api/remote-procedure-calls-raw-transactions.md#converttopsbt): converts a network serialized transaction to a PSBT. _New in Dash Core 18.0.0_
 * [CreatePSBT](../api/remote-procedure-calls-raw-transactions.md#createpsbt): creates a transaction in the Partially Signed Transaction (PST) format. _New in Dash Core 18.0.0_
-* [GetAssetUnlockStatuses](../api/remote-procedure-calls-raw-transactions.md#getassetunlockstatuses): returns the status of the provided Asset Unlock indexes at the tip of the chain or at a particular block height if specified. _New in Dash Core 20.1.0_
+* [GetAssetUnlockStatuses](../api/remote-procedure-calls-raw-transactions.md#getassetunlockstatuses): returns the status of the provided Asset Unlock indexes at the tip of the chain or at a particular block height if specified. **Updated in Dash Core 24.0.0**
 * [CreateRawTransaction](../api/remote-procedure-calls-raw-transactions.md#createrawtransaction): creates an unsigned serialized transaction that spends a previous output to a new output with a P2PKH or P2SH address. The transaction is not stored in the wallet or transmitted to the network. _Updated in Dash Core 0.17.0_
 * [DecodePSBT](../api/remote-procedure-calls-raw-transactions.md#decodepsbt): returns a JSON object representing the serialized, base64-encoded partially signed Dash transaction. **Updated in Dash Core 23.0.0**
-* [DecodeRawTransaction](../api/remote-procedure-calls-raw-transactions.md#decoderawtransaction): decodes a serialized transaction hex string into a JSON object describing the transaction. **Updated in Dash Core 23.0.0**
+* [DecodeRawTransaction](../api/remote-procedure-calls-raw-transactions.md#decoderawtransaction): decodes a serialized transaction hex string into a JSON object describing the transaction. **Updated in Dash Core 24.0.0**
 * [DecodeScript](../api/remote-procedure-calls-raw-transactions.md#decodescript): decodes a hex-encoded P2SH redeem script. **Updated in Dash Core 23.0.0**
 * [FinalizePSBT](../api/remote-procedure-calls-raw-transactions.md#finalizepsbt): finalizes the inputs of a PSBT. The PSBT produces a network serialized transaction if the transaction is fully signed. _New in Dash Core 18.0.0_
-* [FundRawTransaction](../api/remote-procedure-calls-raw-transactions.md#fundrawtransaction): adds inputs to a transaction until it has enough in value to meet its out value. **Updated in Dash Core 23.0.0**
+* [FundRawTransaction](../api/remote-procedure-calls-raw-transactions.md#fundrawtransaction): adds inputs to a transaction until it has enough in value to meet its out value. **Updated in Dash Core 24.0.0**
 * [GetISLocks](../api/remote-procedure-calls-raw-transactions.md#getislocks): returns the raw InstantSend lock data for each provided transaction ID. **Updated in Dash Core 23.0.0**
-* [GetRawTransaction](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction): gets a hex-encoded serialized transaction or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for UTXOs and your own transactions, so the RPC may fail on historic transactions unless you use the non-default `txindex=1` in your Dash Core startup settings. **Updated in Dash Core 23.0.0**
-* [GetRawTransactionMulti](../api/remote-procedure-calls-raw-transactions.md#getrawtransactionmulti): gets hex-encoded serialized transactions or a JSON object describing the multiple transactions. _New in Dash Core 20.1.0_
+* [GetRawTransaction](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction): gets a hex-encoded serialized transaction or a JSON object describing the transaction. By default, Dash Core only stores complete transaction data for UTXOs and your own transactions, so the RPC may fail on historic transactions unless you use the non-default `txindex=1` in your Dash Core startup settings. The `verbose` parameter is replaced by `verbosity`, and verbosity `2` adds fee and prevout details. **Updated in Dash Core 24.0.0**
+* [GetRawTransactionMulti](../api/remote-procedure-calls-raw-transactions.md#getrawtransactionmulti): gets hex-encoded serialized transactions or a JSON object describing the multiple transactions. The `verbose` parameter is replaced by `verbosity`. **Updated in Dash Core 24.0.0**
 * [GetTxChainlocks](../api/remote-procedure-calls-raw-transactions.md#gettxchainlocks): returns the block height each transaction was mined at and whether it is ChainLocked or not. _Updated in Dash Core 20.1.0_
 * [GetTxSpendingPrevout](../api/remote-procedure-calls-raw-transactions.md#gettxspendingprevout): scans the mempool to find transactions spending any of the provided outputs. **New in Dash Core 23.0.0**
 * [JoinPSBTs](../api/remote-procedure-calls-raw-transactions.md#joinpsbts): joins multiple distinct PSBTs with different inputs and outputs into one PSBT with inputs and outputs from all of the PSBTs.
-* [SendRawTransaction](../api/remote-procedure-calls-raw-transactions.md#sendrawtransaction): validates a transaction and broadcasts it to the peer-to-peer network. _Updated in Dash Core 0.15.0_
+* [SendRawTransaction](../api/remote-procedure-calls-raw-transactions.md#sendrawtransaction): validates a transaction and broadcasts it to the peer-to-peer network. **Updated in Dash Core 24.0.0**
 * [SignRawTransactionWithKey](../api/remote-procedure-calls-raw-transactions.md#signrawtransactionwithkey): signs a transaction in the serialized transaction format using private keys provided in the call. _New in Dash Core 0.17.0_
-* [TestMempoolAccept](../api/remote-procedure-calls-raw-transactions.md#testmempoolaccept): returns the results of mempool acceptance tests indicating if raw transaction (serialized, hex-encoded) would be accepted by mempool. _Updated in Dash Core 20.1.0_
-* [UTXOUpdatePSBT](../api/remote-procedure-calls-raw-transactions.md#testmempoolaccept): updates a PSBT with data from output descriptors, UTXOs retrieved from the UTXO set or the mempool. _Updated in Dash Core 18.1.0_
+* [TestMempoolAccept](../api/remote-procedure-calls-raw-transactions.md#testmempoolaccept): returns the results of mempool acceptance tests indicating if raw transaction (serialized, hex-encoded) would be accepted by mempool. **Updated in Dash Core 24.0.0**
+* [UTXOUpdatePSBT](../api/remote-procedure-calls-raw-transactions.md#utxoupdatepsbt): updates a PSBT with data from output descriptors, the UTXO set, txindex, or the mempool. **Updated in Dash Core 24.0.0**
 
 ## [Utility RPCs](../api/remote-procedure-calls-util.md)
 
@@ -152,7 +152,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [GetDescriptorInfo](../api/remote-procedure-calls-util.md#getdescriptorinfo): analyses a descriptor. _New in Dash Core 18.0.0_
 * [GetIndexInfo](../api/remote-procedure-calls-util.md#getindexinfo): returns the status of one or all available indices currently running in the node. _New in Dash Core 20.0.0_
 * [SignMessageWithPrivKey](../api/remote-procedure-calls-util.md#signmessagewithprivkey): signs a message with a given private key.  _New in Dash Core 0.12.3_
-* [ValidateAddress](../api/remote-procedure-calls-util.md#validateaddress): returns information about the given Dash address. _Updated in Dash Core 20.1.0_
+* [ValidateAddress](../api/remote-procedure-calls-util.md#validateaddress): returns information about the given Dash address. **Updated in Dash Core 24.0.0**
 * [VerifyMessage](../api/remote-procedure-calls-util.md#verifymessage): verifies a signed message.
 
 ## [Wallet RPCs](../api/remote-procedure-calls-wallet.md)
@@ -163,13 +163,13 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [AbortRescan](../api/remote-procedure-calls-wallet.md#abortrescan): stops current wallet rescan. _New in Dash Core 0.15.0_
 * [AddMultiSigAddress](../api/remote-procedure-calls-wallet.md#addmultisigaddress): adds a P2SH multisig address to the wallet. _Updated in Dash Core 20.0.0_
 * [BackupWallet](../api/remote-procedure-calls-wallet.md#backupwallet): safely copies `wallet.dat` to the specified file, which can be a directory or a path with filename.
-* [CreateWallet](../api/remote-procedure-calls-wallet.md#createwallet): creates and loads a new wallet. _Updated in Dash Core 21.0.0_
+* [CreateWallet](../api/remote-procedure-calls-wallet.md#createwallet): creates and loads a new wallet. **Updated in Dash Core 24.0.0**
 * [DumpHDInfo](../api/remote-procedure-calls-wallet.md#dumphdinfo): returns an object containing sensitive private info about this HD wallet New in Dash Core 0.12.2
 * [DumpPrivKey](../api/remote-procedure-calls-wallet.md#dumpprivkey): returns the wallet-import-format (WIP) private key corresponding to an address. (But does not remove it from the wallet.)
-* [DumpWallet](../api/remote-procedure-calls-wallet.md#dumpwallet): creates or overwrites a file with all wallet keys in a human-readable format. _Updated in Dash Core 0.17.0_
+* [DumpWallet](../api/remote-procedure-calls-wallet.md#dumpwallet): dumps all wallet keys in a human-readable format to a server-side file. _Updated in Dash Core 20.0.0_
 * [EncryptWallet](../api/remote-procedure-calls-wallet.md#encryptwallet): encrypts the wallet with a passphrase.  This is only to enable encryption for the first time. After encryption is enabled, you will need to enter the passphrase to use private keys.
 * [EnumerateSigners](../api/remote-procedure-calls-wallet.md#enumeratesigners): returns a list of external signers from `-signer`. **New in Dash Core 23.1.0**
-* [GetAddressInfo](../api/remote-procedure-calls-wallet.md#getaddressinfo): returns information about the given Dash address. **Updated in Dash Core 23.0.0**
+* [GetAddressInfo](../api/remote-procedure-calls-wallet.md#getaddressinfo): returns information about the given Dash address. **Updated in Dash Core 24.0.0**
 * [GetAddressesByLabel](../api/remote-procedure-calls-wallet.md#getaddressesbylabel): returns a list of every address assigned to a particular label. _New in Dash Core 0.17.0_
 * [GetBalance](../api/remote-procedure-calls-wallet.md#getbalance): gets the balance in decimal dash across all accounts or for a particular account. _Updated in Dash Core 18.1.0_
 * [GetBalances](../api/remote-procedure-calls-wallet.md#getbalances): returns an object with all balances denominated in DASH. _Updated in Dash Core 18.2.0_
@@ -177,7 +177,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [GetRawChangeAddress](../api/remote-procedure-calls-wallet.md#getrawchangeaddress): returns a new Dash address for receiving change. This is for use with raw transactions, not normal use.
 * [GetReceivedByAddress](../api/remote-procedure-calls-wallet.md#getreceivedbyaddress): returns the total amount received by the specified address in transactions with the specified number of confirmations. It does not count coinbase transactions. **Updated in Dash Core 23.0.0**
 * [GetReceivedByLabel](../api/remote-procedure-calls-wallet.md#getreceivedbylabel): returns the list of addresses assigned the specified label. **Updated in Dash Core 23.0.0**
-* [GetTransaction](../api/remote-procedure-calls-wallet.md#gettransaction): gets detailed information about an in-wallet transaction. **Updated in Dash Core 23.0.0**
+* [GetTransaction](../api/remote-procedure-calls-wallet.md#gettransaction): gets detailed information about an in-wallet transaction. **Updated in Dash Core 24.0.0**
 * [GetUnconfirmedBalance](../api/remote-procedure-calls-wallet.md#getunconfirmedbalance): returns the wallet's total unconfirmed balance.
 * [GetWalletInfo](../api/remote-procedure-calls-wallet.md#getwalletinfo): provides information about the wallet.  _Updated in Dash Core 20.0.0_
 * [ImportAddress](../api/remote-procedure-calls-wallet.md#importaddress): adds an address or pubkey script to the wallet without the associated private key, allowing you to watch for transactions affecting that address or pubkey script without being able to spend any of its outputs.
@@ -196,20 +196,20 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [ListLockUnspent](../api/remote-procedure-calls-wallet.md#listlockunspent): returns a list of temporarily unspendable (locked) outputs.
 * [ListReceivedByAddress](../api/remote-procedure-calls-wallet.md#listreceivedbyaddress): lists the total number of dash received by each address. **Updated in Dash Core 23.0.0**
 * [ListReceivedByLabel](../api/remote-procedure-calls-wallet.md#listreceivedbylabel): lists the total number of dash received by each label. **Updated in Dash Core 23.0.0**
-* [ListSinceBlock](../api/remote-procedure-calls-wallet.md#listsinceblock): gets all transactions affecting the wallet which have occurred since a particular block, plus the header hash of a block at a particular depth. _Updated in Dash Core 20.0.0_
-* [ListTransactions](../api/remote-procedure-calls-wallet.md#listtransactions): returns the most recent transactions that affect the wallet. **Updated in Dash Core 23.0.0**
-* [ListUnspent](../api/remote-procedure-calls-wallet.md#listunspent): returns an array of unspent transaction outputs belonging to this wallet. **Updated in Dash Core 23.0.0**
+* [ListSinceBlock](../api/remote-procedure-calls-wallet.md#listsinceblock): gets all transactions affecting the wallet which have occurred since a particular block, plus the header hash of a block at a particular depth. **Updated in Dash Core 24.0.0**
+* [ListTransactions](../api/remote-procedure-calls-wallet.md#listtransactions): returns the most recent transactions that affect the wallet. **Updated in Dash Core 24.0.0**
+* [ListUnspent](../api/remote-procedure-calls-wallet.md#listunspent): returns an array of unspent transaction outputs belonging to this wallet. **Updated in Dash Core 24.0.0**
 * [ListWalletDir](../api/remote-procedure-calls-wallet.md#listwalletdir): returns a list of wallets in the wallet directory. _New in Dash Core 18.0.0_
 * [ListWallets](../api/remote-procedure-calls-wallet.md#listwallets): returns a list of currently loaded wallets. _New in Dash Core 0.15.0_
-* [LoadWallet](../api/remote-procedure-calls-wallet.md#loadwallet): loads a wallet from a wallet file or directory. _Updated in Dash Core 18.1.0_
+* [LoadWallet](../api/remote-procedure-calls-wallet.md#loadwallet): loads a wallet from a wallet file or directory. **Updated in Dash Core 24.0.0**
 * [LockUnspent](../api/remote-procedure-calls-wallet.md#lockunspent): temporarily locks or unlocks specified transaction outputs. A locked transaction output will not be chosen by automatic coin selection when spending dash. Locks are stored in memory only, so nodes start with zero locked outputs and the locked output list is always cleared when a node stops or fails. **_Updated in Dash Core 22.1.0_**
 * [NewKeyPool](../api/remote-procedure-calls-wallet.md#newkeypool): entirely clears and refills the keypool. **New in Dash Core 23.0.0**
 * [RemovePrunedFunds](../api/remote-procedure-calls-wallet.md#removeprunedfunds): deletes the specified transaction from the wallet. Meant for use with pruned wallets and as a companion to importprunedfunds. _New in Dash Core 0.12.3_
 * [RescanBlockChain](../api/remote-procedure-calls-wallet.md#rescanblockchain): rescans the local blockchain for wallet related transactions. _New in Dash Core 0.16.0_
 * [ScanTxOutset](../api/remote-procedure-calls-wallet.md#scantxoutset): scans the unspent transaction output set for entries that match certain output descriptors. **Updated in Dash Core 23.0.0**
-* [Send](../api/remote-procedure-calls-wallet.md#send): sends a transaction with specified outputs. **Updated in Dash Core 23.0.0**
-* [SendMany](../api/remote-procedure-calls-wallet.md#sendmany): creates and broadcasts a transaction which sends outputs to multiple addresses. **Updated in Dash Core 23.0.0**
-* [SendToAddress](../api/remote-procedure-calls-wallet.md#sendtoaddress): spends an amount to a given address. **Updated in Dash Core 23.0.0**
+* [Send](../api/remote-procedure-calls-wallet.md#send): sends a transaction with specified outputs. **Updated in Dash Core 24.0.0**
+* [SendMany](../api/remote-procedure-calls-wallet.md#sendmany): creates and broadcasts a transaction which sends outputs to multiple addresses. **Updated in Dash Core 24.0.0**
+* [SendToAddress](../api/remote-procedure-calls-wallet.md#sendtoaddress): spends an amount to a given address. **Updated in Dash Core 24.0.0**
 * [SetHDSeed](../api/remote-procedure-calls-wallet.md#sethdseed): sets or generates a new HD wallet seed _New in Dash Core 21.0.0_
 * [SetLabel](../api/remote-procedure-calls-wallet.md#setlabel): sets the label associated with the given address.
 * [SetCoinJoinAmount](../api/remote-procedure-calls-wallet.md#setcoinjoinamount): sets the amount of DASH to be processed _New in Dash Core 0.13.0_
@@ -219,15 +219,15 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [SignMessage](../api/remote-procedure-calls-wallet.md#signmessage): signs a message with the private key of an address.
 * [SignRawTransactionWithWallet](../api/remote-procedure-calls-wallet.md#signrawtransactionwithwallet): signs a transaction in the serialized transaction format using private keys found in the wallet. _New in Dash Core 0.17.0_
 * [SimulateRawTransaction](../api/remote-procedure-calls-wallet.md#simulaterawtransaction): calculates the balance change resulting in the signing and broadcasting of the given transactions. **New in Dash Core 23.0.0**
-* [UnloadWallet](../api/remote-procedure-calls-wallet.md#unloadwallet): unloads the wallet referenced by the request endpoint otherwise unloads the wallet specified in the argument. _Updated in Dash Core 20.0.0_
+* [UnloadWallet](../api/remote-procedure-calls-wallet.md#unloadwallet): unloads the wallet referenced by the request endpoint otherwise unloads the wallet specified in the argument. **Updated in Dash Core 24.0.0**
 * [UpgradeToHD](../api/remote-procedure-calls-wallet.md#upgradetohd): upgrades non-HD wallets to HD. _New in Dash Core 0.17.0_
 * [UpgradeWallet](../api/remote-procedure-calls-wallet.md#upgradewallet): upgrades wallet version. _Updated in Dash Core 21.0.0_
-* [WalletCreateFundedPSBT](../api/remote-procedure-calls-wallet.md#walletcreatefundedpsbt): creates and funds a transaction in the Partially Signed Transaction (PST) format. Inputs will be added if supplied inputs are not enough. **Updated in Dash Core 23.0.0**
+* [WalletCreateFundedPSBT](../api/remote-procedure-calls-wallet.md#walletcreatefundedpsbt): creates and funds a transaction in the Partially Signed Transaction (PST) format. Inputs will be added if supplied inputs are not enough. **Updated in Dash Core 24.0.0**
 * [WalletDisplayAddress](../api/remote-procedure-calls-wallet.md#walletdisplayaddress): displays an address on an external signer for verification. **New in Dash Core 23.1.0**
 * [WalletLock](../api/remote-procedure-calls-wallet.md#walletlock): removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call `walletpassphrase` again before being able to call any methods which require the wallet to be unlocked.
 * [WalletPassphrase](../api/remote-procedure-calls-wallet.md#walletpassphrase): stores the wallet decryption key in memory for the indicated number of seconds. Issuing the `walletpassphrase` command while the wallet is already unlocked will set a new unlock time that overrides the old one.
 * [WalletPassphraseChange](../api/remote-procedure-calls-wallet.md#walletpassphrasechange): changes the wallet passphrase from 'old passphrase' to 'new passphrase'.
-* [WalletProcessPSBT](../api/remote-procedure-calls-wallet.md#walletprocesspsbt): updates a PSBT with input information from a wallet and then allows the signing of inputs. **_Updated in Dash Core 22.1.0_**
+* [WalletProcessPSBT](../api/remote-procedure-calls-wallet.md#walletprocesspsbt): updates a PSBT with input information from a wallet and then allows the signing of inputs. **Updated in Dash Core 24.0.0**
 * [WipeWalletTxes](../api/remote-procedure-calls-wallet.md#wipewallettxes): wipes wallet transactions. _New in Dash Core 19.3.0_
 
 ## [Wallet RPCs (Deprecated)](../api/remote-procedure-calls-wallet-deprecated.md)

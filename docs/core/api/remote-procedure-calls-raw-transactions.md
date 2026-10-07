@@ -524,8 +524,7 @@ _Result---the decoded transaction_
 | → → →<br>`coinbase`     | string (hex)   | Optional<br>(0 or 1)    | The coinbase (similar to the hex field of a scriptSig) encoded as hex.  Only present if this is a coinbase transaction                                                                                                                                                                                                           |
 | → → →<br>`value`        | number (Dash)  | Optional<br>(exactly 1) | The number of Dash paid to this output.  May be `0`.<br><br>Only present if `spentindex` enabled                                                                                                                                                                                                                                 |
 | → → →<br>`valueSat`     | number (duffs) | Optional<br>(exactly 1) | The number of duffs paid to this output.  May be `0`.<br><br>Only present if `spentindex` enabled                                                                                                                                                                                                                                |
-| → → → →<br>`addresses`  | string : array | Optional<br>(0 or 1)    | The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types.<br><br>Only present if `spentindex` enabled                                                                               |
-| → → → → →<br>Address    | string         | Required<br>(1 or more) | A P2PKH or P2SH address                                                                                                                                                                                                                                                                                                          |
+| → → →<br>`address` | string | Optional<br>(0 or 1) | The Dash address of the spent output (only if spentindex is enabled and a well-defined address exists) |
 | → → →<br>`sequence`     | number (int)   | Required<br>(exactly 1) | The input sequence number                                                                                                                                                                                                                                                                                                        |
 | →<br>`vout`             | array          | Required<br>(exactly 1) | An array of objects each describing an output vector (vout) for this transaction.  Output objects will have the same order within the array as they have in the transaction, so the first output listed will be output 0                                                                                                         |
 | → →<br>Output           | object         | Required<br>(1 or more) | An object describing one of this transaction's outputs                                                                                                                                                                                                                                                                           |
@@ -540,6 +539,7 @@ _Result---the decoded transaction_
 | → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists) |
 | →<br>`extraPayloadSize` | number (int)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction                                                                                                                                                                                                             |
 | →<br>`extraPayload`     | string (hex)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction                                                                                                                                                                                                        |
+| →<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs |
 
 _Example from Dash Core 23.0.0_
 
@@ -696,7 +696,7 @@ _Result---the decoded script_
 | →<br>`address`   | string       | Optional<br>(0 or 1)    | The Dash address (only if a well-defined address exists) |
 | →<br>`reqSigs`   | number (int) | Optional<br>(0 or 1)    | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0) |
 | →<br>`addresses` | array        | Optional<br>(0 or 1)    | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0) |
-| →<br>`p2sh`      | string (hex) | Optional<br>(0 or 1)    | **Removed in Dash Core 23.0.0** |
+| →<br>`p2sh`      | string       | Optional<br>(0 or 1)    | Address of P2SH script wrapping this redeem script (not returned for types that should not be wrapped) |
 
 _Example from Dash Core 23.0.0_
 
@@ -799,10 +799,14 @@ Note: For backwards compatibility, passing in a `true` instead of an object will
 | ------------------------------ | ------------------ | ----------------------- | ---------- |
 | Options                        | Object             | Optional<br>(0 or 1)    | Additional options. For backward compatibility: passing in a true instead of an object will result in {"includeWatching":true} |
 | → <br>`add_inputs`             | bool               | Optional<br>(0 or 1)    | If inputs are specified, automatically include more if they are not enough. Defaults to `true`. |
+| → <br>`include_unsafe`         | bool               | Optional<br>(0 or 1)    | Include inputs that are not safe to spend (unconfirmed transactions from outside keys and unconfirmed replacement transactions). Defaults to `false`.<br>Warning: the resulting transaction may become invalid if one of the unsafe inputs disappears. If that happens, you will need to fund the transaction with different inputs and republish it. |
+| → <br>`minconf`                | numeric (int)      | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>If `add_inputs` is specified, require inputs with at least this many confirmations. Defaults to `0`. |
+| → <br>`maxconf`                | numeric (int)      | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>If `add_inputs` is specified, require inputs with at most this many confirmations. |
 | → <br>`changeAddress`          | string             | Optional<br>(0 or 1)    | **Updated in Dash Core 23.0.0**<br><br>The address to receive the change. If not set, the address is chosen automatically |
 | → <br>`changePosition`         | nummeric (int)     | Optional<br>(0 or 1)    | The index of the change output. If not set, the change position is randomly chosen |
 | `includeWatching`              | bool               | Optional<br>(0 or 1)    | Inputs from watch-only addresses are also considered. The default is `false` for non-watching-only wallets and `true` for watching-only wallets                                                                           |
-| → <br>`lockUnspent`            | bool               | Optional<br>(0 or 1)    | The selected outputs are locked after running the rpc call. The default is `false`. This applies to manually selected coins also since Dash Core 20.1.0. |
+| → <br>`lockUnspents`           | bool               | Optional<br>(0 or 1)    | The selected outputs are locked after running the rpc call. The default is `false`. This applies to manually selected coins also since Dash Core 20.1.0. |
+| → <br>`fee_rate`               | numeric or string  | Optional<br>(0 or 1)    | Specify a fee rate in duff/B. If not set, falls back to wallet fee estimation |
 | → <br>`feeRate`                | numeric (bitcoins) | Optional<br>(0 or 1)    | The specific feerate  you are willing to pay (BTC per KB). If not set, the wallet determines the fee |
 | → <br>`subtractFeeFromOutputs` | array              | Optional<br>(0 or 1)    | A json array of integers. The fee will be equally deducted from the amount of each specified output. The outputs are specified by their zero-based index, before any change output is added.                              |
 | → →<br>Output index            | numeric (int)      | Optional<br>(0 or more) | A output index number (vout) from which the fee should be subtracted. If multiple vouts are provided, the total fee will be divided by the number of vouts listed and each vout will have that amount subtracted from it. |
@@ -811,6 +815,7 @@ Note: For backwards compatibility, passing in a `true` instead of an object will
 | → → →<br>`txid`                | string (hex)       | Required<br>(exactly 1) | The transaction id |
 | → → →<br>`vout`                | numeric (int)      | Required<br>(exactly 1) | The output index |
 | → → →<br>`size`                | numeric (int)      | Required<br>(exactly 1) | The maximum size for this input, including the size of the outpoint and sequence number. Note that serialized signature sizes are not guaranteed to be consistent, so the maximum DER signatures size of 73 bytes should be used when considering ECDSA signatures. |
+| → <br>`use_cj`                 | bool               | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Use CoinJoin funds only. Defaults to `false`. |
 | → <br>`conf_target`            | numberic (int)     | Optional<br>(0 or 1)    | Confirmation target (in blocks), or fee rate (for DASH/kB or duff/B estimate modes) |
 | → <br>`estimate_mode`          | string             | Optional<br>(0 or 1)    | The fee estimate mode, must be one of (case insensitive):<br>`unset`<br>`economical`<br>`conservative`<br>`DASH/kB`<br>`duff/B` |
 | → <br>`solving_data`           | object             | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br><br>Keys and scripts needed for producing a final transaction with a dummy signature. Used for fee estimation during coin selection. |
@@ -878,6 +883,7 @@ _Result---Status of the Asset Unlock indexes_
 | → Index data | object | Required<br>(1 or more) | Details for an Asset Unlock index |
 | → → <br>index | numeric | Required<br>(Exactly 1) | The Asset Unlock index |
 | → → <br>status | string | Required<br>(Exactly 1) | Status of the Asset Unlock index. The possible outcomes per each index are:<br>- `chainlocked`: If the Asset Unlock index is mined on a ChainLocked block or up to the given block height.<br>- `mined`: If no ChainLock information is available for the mined Asset Unlock index.<br>- `mempooled`: If the Asset Unlock index is in the mempool.<br>- `unknown`: If none of the above are valid.<br>Note: If a specific block height is passed on request, then only `chainlocked` and `unknown` outcomes are possible. |
+| → → <br>instantlock | bool | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Whether the mempooled Asset Unlock transaction is InstantSend-locked (only for status `mempooled`) |
 
 _Example from Dash Core 20.1.0_
 
@@ -985,11 +991,11 @@ _Parameter #1---the TXID of the transaction to get_
 | ---- | ------------ | ----------------------- | -------------------------------------------------------------------- |
 | TXID | string (hex) | Required<br>(exactly 1) | The TXID of the transaction to get, encoded as hex in RPC byte order |
 
-_Parameter #2---whether to get the serialized or decoded transaction_
+_Parameter #2---the verbosity level of the result_
 
-| Name    | Type | Presence             | Description                                                                                                                                                                                                                                |
-| ------- | ---- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Verbose | bool | Optional<br>(0 or 1) | _Updated in Dash Core 0.12.3 / Bitcoin Core 0.14.0_<br><br>Set to `false` (the default) to return the serialized transaction as hex.  Set to `true` to return a decoded transaction in JSON.  Before 0.12.3, use `0` and `1`, respectively |
+| Name        | Type         | Presence             | Description |
+| ----------- | ------------ | -------------------- | ----------- |
+| `verbosity` | number (int) | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0** (renamed from `verbose`)<br>`0` (the default) for hex-encoded data, `1` for a JSON object, and `2` for JSON object with fee and prevout. For backwards compatibility, `false` and `true` are still accepted as `0` and `1` |
 
 _Parameter #3---hash of a block to look in for the transaction_
 
@@ -1007,7 +1013,7 @@ _Result (if transaction not found)---`null`_
 .. _rpc-raw-txs-getrawtx-hex:
 ```
 
-_Result (if verbose=`false`)---the serialized transaction_
+_Result (if verbosity=`0`)---the serialized transaction_
 
 | Name     | Type         | Presence                | Description                                                                          |
 | -------- | ------------ | ----------------------- | ------------------------------------------------------------------------------------ |
@@ -1017,7 +1023,7 @@ _Result (if verbose=`false`)---the serialized transaction_
 .. _rpc-raw-txs-getrawtx-decoded:
 ```
 
-_Result (if verbose=`true`)---the decoded transaction_
+_Result (if verbosity=`1`)---the decoded transaction_
 
 | Name                        | Type           | Presence                | Description                                                                                                                                                                                                                                                                                                                      |
 | --------------------------- | -------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1038,8 +1044,7 @@ _Result (if verbose=`true`)---the decoded transaction_
 | → → →<br>`coinbase`         | string (hex)   | Optional<br>(0 or 1)    | The coinbase (similar to the hex field of a scriptSig) encoded as hex.  Only present if this is a coinbase transaction                                                                                                                                                                                                           |
 | → → →<br>`value`            | number (Dash)  | Optional<br>(exactly 1) | The number of Dash paid to this output.  May be `0`.<br><br>Only present if `spentindex` enabled                                                                                                                                                                                                                                 |
 | → → →<br>`valueSat`         | number (duffs) | Optional<br>(exactly 1) | The number of duffs paid to this output.  May be `0`.<br><br>Only present if `spentindex` enabled                                                                                                                                                                                                                                |
-| → → → →<br>`addresses`      | string : array | Optional<br>(0 or 1)    | The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types.<br><br>Only present if `spentindex` enabled                                                                               |
-| → → → → →<br>Address        | string         | Required<br>(1 or more) | A P2PKH or P2SH address                                                                                                                                                                                                                                                                                                          |
+| → → →<br>`address` | string | Optional<br>(0 or 1) | The Dash address of the spent output (only if spentindex is enabled and a well-defined address exists) |
 | → → →<br>`sequence`         | number (int)   | Required<br>(exactly 1) | The input sequence number                                                                                                                                                                                                                                                                                                        |
 | →<br>`vout`                 | array          | Required<br>(exactly 1) | An array of objects each describing an output vector (vout) for this transaction.  Output objects will have the same order within the array as they have in the transaction, so the first output listed will be output 0                                                                                                         |
 | → →<br>Output               | object         | Required<br>(1 or more) | An object describing one of this transaction's outputs                                                                                                                                                                                                                                                                           |
@@ -1052,8 +1057,12 @@ _Result (if verbose=`true`)---the decoded transaction_
 | → → → →<br>`hex`            | string (hex)   | Required<br>(exactly 1) | The pubkey script encoded as hex                                                                                                                                                                                                                                                                                                 |
 | → → → →<br>`type`           | string         | Optional<br>(0 or 1)    | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts                                          |
 | → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists) |
+| → → →<br>`spentTxId` | string (hex) | Optional<br>(0 or 1) | The transaction id that spent this output (only if spentindex is enabled) |
+| → → →<br>`spentIndex` | number (int) | Optional<br>(0 or 1) | The input index of the spending transaction (only if spentindex is enabled) |
+| → → →<br>`spentHeight` | number (int) | Optional<br>(0 or 1) | The block height of the spending transaction (only if spentindex is enabled) |
 | →<br>`extraPayloadSize`     | number (int)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction                                                                                                                                                                                                             |
 | →<br>`extraPayload`         | string (hex)   | Optional<br>(0 or 1)    | _Added in Dash Core 0.13.0.0_<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction                                                                                                                                                                                                        |
+| →<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs |
 | →<br>`hex`                  | string (hex)   | Required<br>(exactly 1) | The serialized, hex-encoded data for the provided `txid`                                                                                                                                                                                                                                                                         |
 | →<br>`blockhash`            | string (hex)   | Optional<br>(0 or 1)    | If the transaction has been included in a block on the local best block chain, this is the hash of that block encoded as hex in RPC byte order                                                                                                                                                                                   |
 | →<br>`height`               | number (int)   | Optional<br>(0 or 1)    |  If the transaction has been included in a block on the local best block chain, this is the block height where the transaction was mined.  Otherwise, this is `-1`. Not shown for mempool transactions. |
@@ -1063,6 +1072,29 @@ _Result (if verbose=`true`)---the decoded transaction_
 | →<br>`instantlock`          | bool           | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock) |
 | →<br>`instantlock_internal` | bool           | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock |
 | →<br>`chainlock`            | bool           | Required<br>(exactly 1) | If set to `true`, this transaction is in a block that is locked (not susceptible to a chain re-org)                                                                                                                                                                                           |
+
+_Result (if verbosity=`2`)---the decoded transaction with fee and prevout information_
+
+**Added in Dash Core 24.0.0**
+
+Same output as verbosity = `1`, plus the following fields. If block undo data is not available (for example, for mempool transactions, coinbase transactions, or pruned blocks), the result is the same as verbosity = `1`.
+
+| Name                          | Type          | Presence                | Description |
+| ----------------------------- | ------------- | ----------------------- | ----------- |
+| `result`                      | object        | Required<br>(exactly 1) | If the transaction was found, this will be an object describing it |
+| →<br>`fee`                    | number (Dash) | Optional<br>(0 or 1)    | Transaction fee in DASH, omitted if block undo data is not available |
+| →<br>`vin`                    | array         | Required<br>(exactly 1) | An array of objects with each object being an input vector (vin) for this transaction |
+| → →<br>Input                  | object        | Required<br>(1 or more) | Same output as verbosity = `1`, plus `prevout` |
+| → → →<br>`prevout`            | object        | Optional<br>(0 or 1)    | The output being spent. Only if undo information is available |
+| → → → →<br>`generated`        | bool          | Required<br>(exactly 1) | Coinbase or not |
+| → → → →<br>`height`           | number (int)  | Required<br>(exactly 1) | The height of the prevout |
+| → → → →<br>`value`            | number (Dash) | Required<br>(exactly 1) | The value in DASH |
+| → → → →<br>`scriptPubKey`     | object        | Required<br>(exactly 1) | An object describing the pubkey script |
+| → → → → →<br>`asm`            | string        | Required<br>(exactly 1) | Disassembly of the public key script |
+| → → → → →<br>`desc`           | string        | Required<br>(exactly 1) | Inferred descriptor for the output |
+| → → → → →<br>`hex`            | string (hex)  | Required<br>(exactly 1) | The raw public key script bytes, hex-encoded |
+| → → → → →<br>`address`        | string        | Optional<br>(0 or 1)    | The Dash address (only if a well-defined address exists) |
+| → → → → →<br>`type`           | string        | Required<br>(exactly 1) | The type, eg 'pubkeyhash' |
 
 _Examples from Dash Core 23.0.0_
 
@@ -1269,31 +1301,31 @@ _Parameter #1---block hashes and transaction hash list_
 |→<br>Block Hash | array | Required<br>(1 or more) | The block hash and the list of transaction ids to fetch. Note: if a block hash of `0` is provided, mempool transactions will be returned. |
 |→ →<br>Transaction ID | string | Required<br>(1 or more) | A transaction ID |
 
-_Parameter #2---whether to get the serialized or decoded transaction_
+_Parameter #2---the verbosity level of the result_
 
-| Name    | Type | Presence             | Description |
-| ------- | ---- | -------------------- | ----------- |
-| Verbose | bool | Optional<br>(0 or 1) | Set to `false` (the default) to return the serialized transaction as hex.  Set to `true` to return a decoded transaction in JSON. |
+| Name        | Type         | Presence             | Description |
+| ----------- | ------------ | -------------------- | ----------- |
+| `verbosity` | number (int) | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0** (renamed from `verbose`)<br>`0` (the default) for hex-encoded data, otherwise a JSON object. For backwards compatibility, `false` and `true` are still accepted as `0` and `1` |
 
 _Result (if transactions not found)---`null`_
 
 | Name     | Type | Presence                | Description |
 | -------- | ---- | ----------------------- | ----------- |
-| `result` | null | Required<br>(exactly 1) | If no transactions were found, the result will be JSON `null`.  This can occur because the transactions don't exist in the block chain or memory pool, or because it isn't part of the transaction index.  See the Dash Core `-help` entry for `-txindex` |
+| `result` | null | Required<br>(exactly 1) | If no transactions were found, the result will be JSON `null`.  This can occur because the transactions don't exist in the block chain or memory pool, or because it isn't part of the transaction index.  See the Dash Core `-help` entry for `-txindex`<br><br>Any individual transaction that is unknown is returned with the string `"None"` as its value |
 
-_Result (if verbose=`false`)---the serialized transactions_
+_Result (if verbosity=`0`)---the serialized transactions_
 
 | Name     | Type         | Presence                | Description |
 | -------- | ------------ | ----------------------- | ----------- |
 | `result` | object | Required<br>(exactly 1) | If the transaction was found, this will be an object containing the serialized transaction encoded as hex. |
 |→<br>TXID / Raw tx | string:string | Required<br>(1 or more) | A key/value pair with the transaction ID (key) and raw transaction data (value). See the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction) for an example of the hex transaction data. |
 
-_Result (if verbose=`true`)---the decoded transactions_
+_Result (if verbosity is greater than `0`)---the decoded transactions_
 
 | Name                        | Type           | Presence                | Description |
 | --------------------------- | -------------- | ----------------------- | ----------- |
 | `result`                    | object         | Required<br>(exactly 1) | If the transaction was found, this will be an object describing it |
-|→<br>TXID / Decoded tx | string : object | Required<br>(1 or more) | A key/value pair with the transaction ID (key) and decoded transaction data represented in JSON (value). See the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction) for an example of the decoded transaction data. |
+|→<br>TXID / Decoded tx | string : object | Required<br>(1 or more) | A key/value pair with the transaction ID (key) and decoded transaction data represented in JSON (value). The layout is the same as the output of the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction) with verbosity `1`; `verbosity=2` fee and prevout data is not returned. See the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction) for an example of the decoded transaction data. |
 
 _Examples from Dash Core 20.1.0_
 
@@ -1465,7 +1497,7 @@ _Parameter #2--whether to allow high fees_
 
 | Name         | Type   | Presence             | Description                                                                                                                                                                                                                                                                                                                            |
 | ------------ | ------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `maxfeerate` | number | Optional<br>(0 or 1) | Reject transactions whose fee rate is higher than the specified value, expressed in DASH/kB. **Breaking change: parameter changed from `allowhighfees` to `maxfeerate` in Dash Core 18.0.0.** |
+| `maxfeerate` | number | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>Reject transactions whose fee rate is higher than the specified value, expressed in DASH/kB. Fee rates larger than 1DASH/kB are rejected. Set to 0 to accept any fee rate. Default: `0.10`. **Breaking change: parameter changed from `allowhighfees` to `maxfeerate` in Dash Core 18.0.0.** |
 
 _Parameter #3--whether to use InstantSend_
 
@@ -1597,7 +1629,7 @@ _Parameter #2---set max fee rate_
 
 | Name         | Type   | Presence             | Description |
 | ------------ | ------ | -------------------- | ----------- |
-| `maxfeerate` | number | Optional<br>(0 or 1) | Reject transactions whose fee rate is higher than the specified value, expressed in DASH/kB. Changed from `allowhighfees` in Dash Core 18.0.0. |
+| `maxfeerate` | number | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>Reject transactions whose fee rate is higher than the specified value, expressed in DASH/kB. Fee rates larger than 1DASH/kB are rejected. Set to 0 to accept any fee rate. Default: `0.10`. Changed from `allowhighfees` in Dash Core 18.0.0. |
 
 _Result---mempool acceptance test results_
 
@@ -1605,11 +1637,14 @@ _Result---mempool acceptance test results_
 | -------------------- | ------------ | ----------------------- | ----------- |
 | `result`             | array        | Required<br>(exactly 1) | The result of the mempool acceptance test for each raw transaction in the input array. |
 | →<br>`txid`          | string (hex) | Required<br>(exactly 1) | The TXID of the transaction the output appeared in.  The TXID must be encoded in hex in RPC byte order |
-| `package-error` | string | Optional<br>(0 or 1) | Package validation error, if any (only possible if rawtxs had more than 1 transaction). |
-| →<br>`allowed`       | bool         | Required<br>(exactly 1) | Whether this tx would be accepted to the mempool and pass client-specified maxfeerate. If not present, the tx was not fully validated due to a failure in another tx in the list. |
-| `vsize`         | number (int) | Required<br>(exactly 1) | Virtual transaction size. |
-| `fees`          | object       | Optional<br>(0 or 1)    | Transaction fees (only present if 'allowed' is true). |
-| →<br>`base`     | number       | Required<br>(exactly 1) | Transaction fee in DASH. |
+| →<br>`package-error` | string | Optional<br>(0 or 1) | Package validation error, if any (only possible if rawtxs had more than 1 transaction). |
+| →<br>`allowed`       | bool         | Optional<br>(0 or 1) | Whether this tx would be accepted to the mempool and pass client-specified maxfeerate. If not present, the tx was not fully validated due to a failure in another tx in the list. |
+| →<br>`vsize`         | number (int) | Optional<br>(0 or 1) | Virtual transaction size. |
+| →<br>`fees`          | object       | Optional<br>(0 or 1)    | Transaction fees (only present if 'allowed' is true). |
+| → →<br>`base`     | number       | Required<br>(exactly 1) | Transaction fee in DASH. |
+| → →<br>`effective-feerate` | number | Required<br>(exactly 1) | **Added in Dash Core 24.0.0**<br>The effective feerate in DASH per KvB. May differ from the base feerate if, for example, there are modified fees from prioritisetransaction or a package feerate was used. |
+| → →<br>`effective-includes` | array | Required<br>(exactly 1) | **Added in Dash Core 24.0.0**<br>Transactions whose fees and vsizes are included in effective-feerate. |
+| → → →<br>TXID | string (hex) | Optional<br>(0 or more) | Transaction txid in hex |
 | →<br>`reject-reason` | string       | Optional<br>(0 or 1)    | A rejection string that is only present when 'allowed' is false. |
 
 _Example from Dash Core 18.0.0_
@@ -1640,7 +1675,9 @@ _See also:_
 
 ## UTXOUpdatePSBT
 
-The [`utxoupdatepsbt` RPC](../api/remote-procedure-calls-raw-transactions.md#utxoupdatepsbt) updates a PSBT with  data from output descriptors, UTXOs retrieved from the UTXO set or the mempool.
+The [`utxoupdatepsbt` RPC](../api/remote-procedure-calls-raw-transactions.md#utxoupdatepsbt) updates a PSBT with data from output descriptors, the UTXO set, txindex, or the mempool.
+
+**Updated in Dash Core 24.0.0:** Previous transactions are now also looked up in the txindex (if enabled).
 
 _Parameter #1---psbt_
 
