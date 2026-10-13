@@ -2711,6 +2711,61 @@ _See also_
 * [ListLockUnspent](../api/remote-procedure-calls-wallet.md#listlockunspent): returns a list of temporarily unspendable (locked) outputs.
 * [ListUnspent](../api/remote-procedure-calls-wallet.md#listunspent): returns an array of unspent transaction outputs belonging to this wallet.
 
+## MigrateWallet
+
+:::{versionadded} 24.0.0
+:::
+
+:::{attention}
+EXPERIMENTAL warning: This call may not work as expected and may be changed in future releases.
+:::
+
+:::{note}
+Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on masternodes**).
+:::
+
+The [`migratewallet` RPC](../api/remote-procedure-calls-wallet.md#migratewallet) migrates a legacy (non-descriptor) wallet to a descriptor wallet. A new wallet backup will need to be made after migration.
+
+The migrated wallet has the same name as the original wallet and contains all of its addresses and private keys. Because descriptor wallets cannot hold both private keys and watch-only scripts, up to two additional wallets may be created:
+
+* `<name>_watchonly` contains all of the watch-only scripts
+* `<name>_solvables` contains any scripts which the wallet knows but is not watching the corresponding P2SH scripts
+
+Migration is a best-effort process, and some unusual script configurations may not be captured. Before migrating, the RPC creates a backup of the wallet named `<wallet name>-<timestamp>.legacy.bak` in the wallet's directory. If the migration is incorrect, the backup can be restored using the `restorewallet` RPC. Encrypted wallets must have the passphrase provided as an argument to this call.
+
+_Parameter #1---wallet name_
+
+| Name          | Type   | Presence             | Description |
+| ------------- | ------ | -------------------- | ----------- |
+| `wallet_name` | string | Optional<br>(0 or 1) | The name of the wallet to migrate. If provided both here and in the RPC endpoint (`-rpcwallet`), the two must be identical. Default: the wallet name from the RPC endpoint. Required if no RPC endpoint wallet is given |
+
+_Parameter #2---passphrase_
+
+| Name         | Type   | Presence             | Description |
+| ------------ | ------ | -------------------- | ----------- |
+| `passphrase` | string | Optional<br>(0 or 1) | The wallet passphrase. Required for encrypted wallets |
+
+_Result---migration details_
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | Migration details |
+| →<br>`wallet_name` | string | Required<br>(exactly 1) | The name of the primary migrated wallet |
+| →<br>`watchonly_name` | string | Optional<br>(0 or 1) | The name of the migrated wallet containing the watch-only scripts |
+| →<br>`solvables_name` | string | Optional<br>(0 or 1) | The name of the migrated wallet containing solvable but not watched scripts |
+| →<br>`backup_path` | string | Required<br>(exactly 1) | The location of the backup of the original wallet |
+
+_Example from Dash Core 24.0.0_
+
+```bash
+dash-cli -testnet migratewallet "my-legacy-wallet"
+```
+
+_See also_
+
+* [CreateWallet](../api/remote-procedure-calls-wallet.md#createwallet): creates and loads a new wallet.
+* [ListDescriptors](../api/remote-procedure-calls-wallet.md#listdescriptors): lists descriptors imported into a descriptor-enabled wallet.
+
 ## NewKeyPool
 
 :::{versionadded} 23.0.0
@@ -3010,6 +3065,134 @@ _See also_
 
 * [SendMany](../api/remote-procedure-calls-wallet.md#sendmany): creates and broadcasts a transaction which sends outputs to multiple addresses.
 * [SendToAddress](../api/remote-procedure-calls-wallet.md#sendtoaddress): spends an amount to a given address.
+
+## SendAll
+
+:::{versionadded} 24.0.0
+:::
+:::{attention}
+EXPERIMENTAL warning: This call may be changed in future releases.
+:::
+
+:::{note}
+Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on masternodes**).
+:::
+
+The [`sendall` RPC](../api/remote-procedure-calls-wallet.md#sendall) spends the value of all (or specific) confirmed UTXOs in the wallet to one or more recipients without creating change. Unconfirmed inbound UTXOs and locked UTXOs are not spent. `sendall` respects the `avoid_reuse` wallet flag.
+
+`sendall` is useful for emptying a wallet or creating a changeless payment from selected UTXOs. To make a payment of a specific amount where the recipient pays the transaction fee, use the fee-subtraction option of the [`send`](#send) (`subtract_fee_from_outputs`), [`sendtoaddress`](#sendtoaddress) (`subtractfeefromamount`), or [`sendmany`](#sendmany) (`subtractfeefrom`) RPCs instead.
+
+If the wallet contains many small inputs (for example, from tiny payments or accumulated change), consider using the `send_max` option to exclude inputs that are worth less than the fees needed to spend them.
+
+_Parameter #1---recipients_
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `recipients` | array | Required<br>(exactly 1) | The `sendall` destinations. Each address may only appear once. Some recipients can optionally be given an amount to make payments, but at least one address must appear without an amount |
+| →<br>Address | string | Optional<br>(0 or more) | A Dash address which receives an equal share of the unspecified amount |
+| →<br>Payment | object | Optional<br>(0 or more) | A payment of a specified amount |
+| → →<br>Address/amount pair | string : number (DASH) or string | Required<br>(exactly 1) | A key-value pair. The key is the Dash address and the value is the amount in DASH (as a number or string) |
+
+_Parameter #2---confirmation target_
+
+| Name          | Type         | Presence             | Description |
+| ------------- | ------------ | -------------------- | ----------- |
+| `conf_target` | number (int) | Optional<br>(0 or 1) | Confirmation target in blocks. Default: wallet `-txconfirmtarget` |
+
+_Parameter #3---estimate mode_
+
+| Name            | Type   | Presence             | Description |
+| --------------- | ------ | -------------------- | ----------- |
+| `estimate_mode` | string | Optional<br>(0 or 1) | The fee estimate mode. Must be one of (case insensitive): `unset`, `economical`, `conservative`. Default: `unset` |
+
+_Parameter #4---fee rate_
+
+| Name       | Type             | Presence             | Description |
+| ---------- | ---------------- | -------------------- | ----------- |
+| `fee_rate` | number or string | Optional<br>(0 or 1) | Specify a fee rate in duff/B. Default: not set, falls back to wallet fee estimation |
+
+_Parameter #5---options_
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `options` | object | Optional<br>(0 or 1) | Additional options |
+| →<br>`add_to_wallet` | bool | Optional<br>(0 or 1) | When `false`, returns the serialized transaction without broadcasting it or adding it to the wallet. Default: `true` |
+| →<br>`fee_rate` | number or string | Optional<br>(0 or 1) | Specify a fee rate in duff/B. Default: not set, falls back to wallet fee estimation |
+| →<br>`include_watching` | bool | Optional<br>(0 or 1) | Also select inputs which are watch-only. Only solvable inputs can be used. Watch-only destinations are solvable if the public key and/or output script was imported, e.g. with `importpubkey` or `importmulti` with the `pubkeys` or `desc` field. Default: `true` for watch-only wallets, otherwise `false` |
+| →<br>`inputs` | array | Optional<br>(0 or 1) | Use exactly the specified inputs to build the transaction. Specifying inputs is incompatible with the `send_max`, `minconf`, and `maxconf` options. Default: `[]` |
+| → →<br>Input | object | Required<br>(1 or more) | An input to spend |
+| → → →<br>`txid` | string (hex) | Required<br>(exactly 1) | The transaction ID |
+| → → →<br>`vout` | number (int) | Required<br>(exactly 1) | The output number |
+| → → →<br>`sequence` | number (int) | Optional<br>(0 or 1) | The sequence number. Default: depends on the value of the `locktime` option |
+| →<br>`locktime` | number (int) | Optional<br>(0 or 1) | Raw locktime. A non-zero value also locktime-activates inputs. Default: `0` |
+| →<br>`lock_unspents` | bool | Optional<br>(0 or 1) | Lock selected unspent outputs. Default: `false` |
+| →<br>`psbt` | bool | Optional<br>(0 or 1) | Always return a PSBT. Implies `add_to_wallet` is `false`. Default: automatic |
+| →<br>`send_max` | bool | Optional<br>(0 or 1) | When `true`, only use UTXOs that can pay for their own fees to maximize the output amount. When `false`, no UTXO is left behind. Incompatible with specifying `inputs`. Default: `false` |
+| →<br>`use_cj` | bool | Optional<br>(0 or 1) | Use CoinJoin funds only. The resulting transaction is recorded as a CoinJoin spend (`DS` in `gettransaction`). Default: `false` |
+| →<br>`minconf` | number (int) | Optional<br>(0 or 1) | Require inputs with at least this many confirmations. Default: `0` |
+| →<br>`maxconf` | number (int) | Optional<br>(0 or 1) | Require inputs with at most this many confirmations |
+| →<br>`conf_target` | number (int) | Optional<br>(0 or 1) | Confirmation target in blocks. Default: wallet `-txconfirmtarget` |
+| →<br>`estimate_mode` | string | Optional<br>(0 or 1) | The fee estimate mode. Must be one of (case insensitive): `unset`, `economical`, `conservative`. Default: `unset` |
+| →<br>`solving_data` | object | Optional<br>(0 or 1) | Keys and scripts needed for producing a final transaction with a dummy signature. Used for fee estimation during coin selection |
+| → →<br>`pubkeys` | array | Optional<br>(0 or 1) | Public keys involved in this transaction. Default: `[]` |
+| → → →<br>pubkey | string | Optional<br>(0 or more) | A public key |
+| → →<br>`scripts` | array | Optional<br>(0 or 1) | Scripts involved in this transaction. Default: `[]` |
+| → → →<br>script | string | Optional<br>(0 or more) | A script |
+| → →<br>`descriptors` | array | Optional<br>(0 or 1) | Descriptors that provide solving data for this transaction. Default: `[]` |
+| → → →<br>descriptor | string | Optional<br>(0 or more) | A descriptor |
+
+_Result---transaction details_
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | Transaction details |
+| →<br>`complete` | bool | Required<br>(exactly 1) | If the transaction has a complete set of signatures |
+| →<br>`txid` | string (hex) | Optional<br>(0 or 1) | The transaction ID. Only one transaction is created regardless of the number of addresses. Returned when the transaction is complete |
+| →<br>`hex` | string (hex) | Optional<br>(0 or 1) | The hex-encoded raw transaction with signatures. Returned when the transaction is complete and `add_to_wallet` is `false` (or `psbt` is `true`) |
+| →<br>`psbt` | string (base64) | Optional<br>(0 or 1) | The base64-encoded (partially) signed transaction. Returned if more signatures are needed, if `add_to_wallet` is `false`, or if `psbt` is `true` |
+
+_Examples from Dash Core 24.0.0_
+
+Spend all UTXOs from the wallet with a fee rate of 1 duff/B using named arguments:
+
+```bash
+dash-cli -testnet -named sendall recipients='["yLdTVpyYfEV827SjFbTRskRqvyGyELPG4Y"]' fee_rate=1
+```
+
+Spend all UTXOs split into equal amounts to two addresses with a fee rate of 1.5 duff/B using the options argument:
+
+```bash
+dash-cli -testnet sendall '["yLdTVpyYfEV827SjFbTRskRqvyGyELPG4Y", "yMgJ8zEfhRW6rXZtz1uQFAUj3971JH2Qt6"]' null "unset" null '{"fee_rate": 1.5}'
+```
+
+Spend all UTXOs with a fee rate of 1.3 duff/B, sending 0.25 DASH to one recipient and the rest to another:
+
+```bash
+dash-cli -testnet -named sendall recipients='[{"yMgJ8zEfhRW6rXZtz1uQFAUj3971JH2Qt6": 0.25}, "yLdTVpyYfEV827SjFbTRskRqvyGyELPG4Y"]' fee_rate=1.3
+```
+
+Spend two specific UTXOs to one address without broadcasting the transaction or adding it to the wallet:
+
+```bash
+dash-cli -testnet sendall '["yLdTVpyYfEV827SjFbTRskRqvyGyELPG4Y"]' null "unset" null \
+ '{"fee_rate": 1, "add_to_wallet": false, "inputs": [{"txid":"3e8e3dcc25b1a3887556c1bd9ffe35439ce02b53817d5de0ae68daa5188d3381","vout":82},{"txid":"3e8e3dcc25b1a3887556c1bd9ffe35439ce02b53817d5de0ae68daa5188d3381","vout":83}]}'
+```
+
+Result (`psbt` truncated):
+
+```json
+{
+  "psbt": "cHNidP8BAH4CAAAAAoEzjRil2miu4F19gVMr4JxDNf6fvcFWdYijsSXMPY4+UgAAAAD/////gTONGKXaaK7gXX2BUyvgnEM1/p+9wVZ1iKOxJcw9jj5TAAAAAP////8BdiwxAQAAAAAZdqkUA2gHYQYku6xmuqifcEQvbgXHxzqIrAAAAAAAAQD9NxECAAAAAY5X3e+3iwSb7xo03IKddxKohg9DWbolQOU0feBl...",
+  "txid": "62c292a3cb35e46896d45af507256ff1b3255fcc59724ebd82b1d8ba788a1600",
+  "hex": "020000000281338d18a5da68aee05d7d81532be09c4335fe9fbdc1567588a3b125cc3d8e3e520000006a47304402206058dd83a30d089dadaa28ea4a8e729f65574f1270fca96dc2fa71e5a502b8ff02206836038fdcdd84b46d1040fd00368d9b869a9a1ab8bb9db83625e5745e37f6ba01210237e944aa957520fb2c823d0207d52d8aaf1f3b6dd8baf8e34236a4a476283a90ffffffff81338d18a5da68aee05d7d81532be09c4335fe9fbdc1567588a3b125cc3d8e3e530000006a473044022047023c9ed4d1118d76d0d28f9a373fdd261f406dbde73c49cd9141cc5d70a5d0022004f9e66701e8343a6d97e7195d6ec8484dd01365d5aa3733cae2bb189737397801210298e48d6517c8a969d7629b86e5fd52318ab749ed5a3461daebaf4993dadffdffffffffff01762c3101000000001976a914036807610624bbac66baa89f70442f6e05c7c73a88ac00000000",
+  "complete": true
+}
+```
+
+_See also_
+
+* [Send](../api/remote-procedure-calls-wallet.md#send): sends a transaction with specified outputs.
+* [SendMany](../api/remote-procedure-calls-wallet.md#sendmany): creates and broadcasts a transaction which sends outputs to multiple addresses.
 
 ## SendMany
 

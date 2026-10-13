@@ -34,6 +34,8 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [GetBlockStats](../api/remote-procedure-calls-blockchain.md#getblockstats): computes per block statistics for a given window. **Updated in Dash Core 23.0.0**
 * [GetChainTips](../api/remote-procedure-calls-blockchain.md#getchaintips): returns information about the highest-height block (tip) of each local block chain. _Updated in Dash Core 0.12.3_
 * [GetChainTxStats](../api/remote-procedure-calls-blockchain.md#getchaintxstats): compute statistics about the total number and rate of transactions in the chain. _Updated in Dash Core 18.0.0_
+* [GetCreditPoolInfo](../api/remote-procedure-calls-blockchain.md#getcreditpoolinfo): returns the credit pool balance after a block and the asset unlock limit that applies to the block after it. **New in Dash Core 24.0.0**
+* [GetDeploymentInfo](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo): returns state info regarding deployments of consensus changes at any block. **New in Dash Core 24.0.0**
 * [GetDifficulty](../api/remote-procedure-calls-blockchain.md#getdifficulty): returns the proof-of-work difficulty as a multiple of the minimum difficulty.
 * [GetMemPoolAncestors](../api/remote-procedure-calls-blockchain.md#getmempoolancestors): returns all in-mempool ancestors for a transaction in the mempool. **Updated in Dash Core 24.0.0**
 * [GetMemPoolDescendants](../api/remote-procedure-calls-blockchain.md#getmempooldescendants): returns all in-mempool descendants for a transaction in the mempool. **Updated in Dash Core 24.0.0**
@@ -49,6 +51,7 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [PreciousBlock](../api/remote-procedure-calls-blockchain.md#preciousblock): treats a block as if it were received before others with the same work. _New in Dash Core 0.12.3_
 * [PruneBlockChain](../api/remote-procedure-calls-blockchain.md#pruneblockchain): prunes the blockchain up to a specified height or timestamp. _New in Dash Core 0.12.3_
 * [SaveMemPool](../api/remote-procedure-calls-blockchain.md#savemempool): dumps the mempool to disk. **_Updated in Dash Core 22.0.0_**
+* [ScanBlocks](../api/remote-procedure-calls-blockchain.md#scanblocks): returns relevant block hashes for given descriptors using block filters. **New in Dash Core 24.0.0**
 * [VerifyChain](../api/remote-procedure-calls-blockchain.md#verifychain): verifies each entry in the local block chain database. **Updated in Dash Core 24.0.0**
 * [VerifyTxOutProof](../api/remote-procedure-calls-blockchain.md#verifytxoutproof): verifies that a proof points to one or more transactions in a block, returning the transactions the proof commits to and throwing an RPC error if the block is not in our best block chain.
 
@@ -80,11 +83,14 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 ## [Evolution RPCs](../api/remote-procedure-calls-evo.md)
 
 * [BLS](../api/remote-procedure-calls-evo.md#bls): provides a set of commands to execute BLS-related actions. _Updated in Dash Core 19.0.0_
+* [GetChainLockByHeight](../api/remote-procedure-calls-evo.md#getchainlockbyheight): reads a historical ChainLock from the coinbase transactions on disk. **New in Dash Core 24.0.0**
+* [GetQuorumProofChain](../api/remote-procedure-calls-evo.md#getquorumproofchain): generates a compact DASHNC02 mining-transaction proof from a trusted checkpoint to a ChainLocked target. **New in Dash Core 24.0.0**
 * [ProTx](../api/remote-procedure-calls-evo.md#protx): provides a set of commands to execute ProTx related actions. **Updated in Dash Core 24.0.0**
 * [Quorum](../api/remote-procedure-calls-evo.md#quorum): provides a set of commands for quorums (LLMQs). **Updated in Dash Core 24.0.0**
 * [SubmitChainLock](../api/remote-procedure-calls-evo.md#submitchainlock): allows the submission of a ChainLock signature. _New in Dash Core 20.1.0_
 * [VerifyChainLock](../api/remote-procedure-calls-evo.md#verifychainlock): tests if a quorum signature is valid for a ChainLock. _New in Dash Core 0.17.0_
 * [VerifyISLock](../api/remote-procedure-calls-evo.md#verifyislock): tests if a quorum signature is valid for an InstantSend lock. _New in Dash Core 0.17.0_
+* [VerifyQuorumProofChain](../api/remote-procedure-calls-evo.md#verifyquorumproofchain): verifies a DASHNC02 proof against an independently trusted snapshot. **New in Dash Core 24.0.0**
 
 ## [Generating RPCs](../api/remote-procedure-calls-generating.md)
 
@@ -203,11 +209,13 @@ These RPCs are all Dash-specific and not found in Bitcoin Core
 * [ListWallets](../api/remote-procedure-calls-wallet.md#listwallets): returns a list of currently loaded wallets. _New in Dash Core 0.15.0_
 * [LoadWallet](../api/remote-procedure-calls-wallet.md#loadwallet): loads a wallet from a wallet file or directory. **Updated in Dash Core 24.0.0**
 * [LockUnspent](../api/remote-procedure-calls-wallet.md#lockunspent): temporarily locks or unlocks specified transaction outputs. A locked transaction output will not be chosen by automatic coin selection when spending dash. Locks are stored in memory only, so nodes start with zero locked outputs and the locked output list is always cleared when a node stops or fails. **_Updated in Dash Core 22.1.0_**
+* [MigrateWallet](../api/remote-procedure-calls-wallet.md#migratewallet): migrates a legacy wallet to a descriptor wallet. **New in Dash Core 24.0.0**
 * [NewKeyPool](../api/remote-procedure-calls-wallet.md#newkeypool): entirely clears and refills the keypool. **New in Dash Core 23.0.0**
 * [RemovePrunedFunds](../api/remote-procedure-calls-wallet.md#removeprunedfunds): deletes the specified transaction from the wallet. Meant for use with pruned wallets and as a companion to importprunedfunds. _New in Dash Core 0.12.3_
 * [RescanBlockChain](../api/remote-procedure-calls-wallet.md#rescanblockchain): rescans the local blockchain for wallet related transactions. _New in Dash Core 0.16.0_
 * [ScanTxOutset](../api/remote-procedure-calls-wallet.md#scantxoutset): scans the unspent transaction output set for entries that match certain output descriptors. **Updated in Dash Core 23.0.0**
 * [Send](../api/remote-procedure-calls-wallet.md#send): sends a transaction with specified outputs. **Updated in Dash Core 24.0.0**
+* [SendAll](../api/remote-procedure-calls-wallet.md#sendall): spends the value of all (or specific) confirmed UTXOs in the wallet to one or more recipients without creating change. **New in Dash Core 24.0.0**
 * [SendMany](../api/remote-procedure-calls-wallet.md#sendmany): creates and broadcasts a transaction which sends outputs to multiple addresses. **Updated in Dash Core 24.0.0**
 * [SendToAddress](../api/remote-procedure-calls-wallet.md#sendtoaddress): spends an amount to a given address. **Updated in Dash Core 24.0.0**
 * [SetHDSeed](../api/remote-procedure-calls-wallet.md#sethdseed): sets or generates a new HD wallet seed _New in Dash Core 21.0.0_

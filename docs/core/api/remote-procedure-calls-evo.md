@@ -100,6 +100,136 @@ Result:
 
 * [BLS FromSecret](#bls-fromsecret)
 
+## GetChainLockByHeight
+
+:::{versionadded} 24.0.0
+:::
+
+The [`getchainlockbyheight` RPC](../api/remote-procedure-calls-evo.md#getchainlockbyheight) reads a historical ChainLock from the coinbase transactions on disk. Each [CbTx](../reference/transactions-special-transactions.md#cbtx) carries the best ChainLock known to the miner, so the RPC searches the active chain for the coinbase that embeds a ChainLock for the requested height.
+
+Only ChainLocks that have been embedded in a later block's coinbase can be returned. The current best ChainLock (as reported by [`getbestchainlock`](../api/remote-procedure-calls-blockchain.md#getbestchainlock)) usually has not been embedded yet, and heights skipped by coinbase ChainLocks are never embedded; both return `Chainlock not found for height`. Coinbase ChainLocks only exist from v20 activation onward. Blocks are read on demand, so a pruned node may fail if a required block is no longer available.
+
+*Parameter #1---block height*
+
+| Name     | Type         | Presence                | Description |
+| -------- | ------------ | ----------------------- | ----------- |
+| `height` | number (int) | Required<br>(exactly 1) | Block height. Must be non-negative |
+
+*Result---ChainLock information*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | ChainLock information |
+| →<br>`height` | number (int) | Required<br>(exactly 1) | ChainLocked height |
+| →<br>`blockhash` | string (hex) | Required<br>(exactly 1) | Hash of the ChainLocked block |
+| →<br>`signature` | string (hex) | Required<br>(exactly 1) | BLS signature of the ChainLock |
+| →<br>`cbtx_height` | number (int) | Required<br>(exactly 1) | Height of the block whose coinbase embedded the ChainLock |
+
+*Example from Dash Core 24.0.0*
+
+```bash
+dash-cli -testnet getchainlockbyheight 1571700
+```
+
+Result:
+
+```json
+{
+  "height": 1571700,
+  "blockhash": "0000008e99ca26052e53ce5ece4f3533b5df28dce57a44fb2eae553ad164aefa",
+  "signature": "81d6e32edfb4d7a3b7d3f11ca52c37b3976abeae7d190fda8c809d79d4155d25bcadf0012b85046ee09ba43f8aae4e2b01377b753985897753c79eb021c37a38c4a98f8ba83c179a93d964a79b9f4b0aae892c2527d3c487443c3f1d17f1aac3",
+  "cbtx_height": 1571701
+}
+```
+
+*See also*
+
+* [GetBestChainLock](../api/remote-procedure-calls-blockchain.md#getbestchainlock): returns information about the best ChainLock.
+* [VerifyChainLock](../api/remote-procedure-calls-evo.md#verifychainlock): tests if a quorum signature is valid for a ChainLock.
+
+## GetQuorumProofChain
+
+:::{versionadded} 24.0.0
+:::
+
+The [`getquorumproofchain` RPC](../api/remote-procedure-calls-evo.md#getquorumproofchain) generates a compact DASHNC02 mining-transaction proof that links a trusted checkpoint block to a later ChainLocked target block. Optionally, it also returns authenticated openings of a Platform quorum commitment and EvoNode masternode list entries at the target. The proof can be checked with the [`verifyquorumproofchain` RPC](#verifyquorumproofchain).
+
+The RPC reads required historical blocks on demand, without an additional index or startup scan, and keeps what it reads in bounded in-memory caches (up to about 50 MiB). The node must retain the required historical blocks to generate proofs. Generating a proof can take some time, so consider using no RPC timeout (`dash-cli -rpcclienttimeout=0`).
+
+*Parameter #1---checkpoint hash*
+
+| Name              | Type         | Presence                | Description |
+| ----------------- | ------------ | ----------------------- | ----------- |
+| `checkpoint_hash` | string (hex) | Required<br>(exactly 1) | Release checkpoint block hash. The block must be on the active chain |
+
+*Parameter #2---minimum height*
+
+| Name     | Type         | Presence             | Description |
+| -------- | ------------ | -------------------- | ----------- |
+| `height` | number (int) | Optional<br>(0 or 1) | Minimum certified target height. `0` selects the latest available ChainLock. Default: `0` |
+
+*Parameter #3---quorum hash*
+
+| Name          | Type         | Presence             | Description |
+| ------------- | ------------ | -------------------- | ----------- |
+| `quorum_hash` | string (hex) | Optional<br>(0 or 1) | Platform quorum hash to open. The quorum must be active at the target. Default: `""` |
+
+*Parameter #4---LLMQ type*
+
+| Name        | Type         | Presence             | Description |
+| ----------- | ------------ | -------------------- | ----------- |
+| `llmq_type` | number (int) | Optional<br>(0 or 1) | The quorum type. Required with `quorum_hash` and must be `0` without it. Default: `0` |
+
+*Parameter #5---node count*
+
+| Name         | Type         | Presence             | Description |
+| ------------ | ------------ | -------------------- | ----------- |
+| `node_count` | number (int) | Optional<br>(0 or 1) | Number of eligible EvoNode records to open (`0` to `15`). Default: `0` |
+
+*Result---proof data*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | Proof data |
+| →<br>`proof_hex` | string (hex) | Required<br>(exactly 1) | DASHNC02 proof bytes |
+| →<br>`bootstrap_hex` | string (hex) | Required<br>(exactly 1) | Proof and record openings. Empty when no records are requested (`quorum_hash` and `node_count` not set) |
+| →<br>`target` | object | Required<br>(exactly 1) | Authenticated target state |
+| → →<br>`network` | number (int) | Required<br>(exactly 1) | `0` for mainnet, `1` for testnet |
+| → →<br>`height` | number (int) | Required<br>(exactly 1) | Height of the target block |
+| → →<br>`block_hash` | string (hex) | Required<br>(exactly 1) | Hash of the target block |
+| → →<br>`masternode_root` | string (hex) | Required<br>(exactly 1) | Masternode list merkle root at the target block |
+| → →<br>`quorum_root` | string (hex) | Required<br>(exactly 1) | Quorum merkle root at the target block |
+
+*Example from Dash Core 24.0.0*
+
+Generate a proof from the latest testnet checkpoint (block 1380000) to the latest ChainLock:
+
+```bash
+dash-cli -testnet -rpcclienttimeout=0 getquorumproofchain \
+  000000a98084beaf77ed26a905a7d59979009e23367a55b5d634962d7d65a1f9
+```
+
+Result (`proof_hex` truncated):
+
+```json
+{
+  "proof_hex": "444153484e43303201a00e1500f9a1657d2d9634d6b5557a36239e007999d5a705a926ed77afbe8480a9000000ca6719a8db64766de7d82fa701fa0176e4d66564d1dc8fa15e697e79bb11a65f...",
+  "bootstrap_hex": "",
+  "target": {
+    "network": 1,
+    "height": 1571714,
+    "block_hash": "0000006daabb2da6ded3fa872b2940d7916d5dc5dab63937487c2be759a02c4c",
+    "masternode_root": "97f6eb2dff6ad2795dd20aabc454a21a5dbf37e88861dad5fbafe73487cc33e4",
+    "quorum_root": "6044d1854baea0623ab1999022ccd53326ac154d567751b38e2bd70891ba9027"
+  }
+}
+```
+
+*See also*
+
+* [VerifyQuorumProofChain](../api/remote-procedure-calls-evo.md#verifyquorumproofchain): verifies a DASHNC02 proof against an independently trusted snapshot.
+* [GetChainLockByHeight](../api/remote-procedure-calls-evo.md#getchainlockbyheight): reads a historical ChainLock from the coinbase transactions on disk.
+
 ## ProTx
 
 *Added in Dash Core 0.13.0*
@@ -4548,3 +4678,93 @@ Result:
 ```json
 true
 ```
+
+## VerifyQuorumProofChain
+
+:::{versionadded} 24.0.0
+:::
+
+The [`verifyquorumproofchain` RPC](../api/remote-procedure-calls-evo.md#verifyquorumproofchain) verifies a DASHNC02 proof (as returned by the [`getquorumproofchain` RPC](#getquorumproofchain)) against an independently trusted full snapshot. It never obtains trust roots from the proof data. The snapshot's `masternode_root` and `quorum_root` are the `merkleRootMNList` and `merkleRootQuorums` values from the trusted block's [CbTx](../reference/transactions-special-transactions.md#cbtx).
+
+Verification failures are reported in the result (`valid` is `false` with an `error`) rather than as an RPC error. Malformed parameters still return an RPC error.
+
+*Parameter #1---trusted checkpoint*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `checkpoint` | object | Required<br>(exactly 1) | Trusted snapshot |
+| →<br>`network` | number (int) | Required<br>(exactly 1) | `0` for mainnet, `1` for testnet |
+| →<br>`height` | number (int) | Required<br>(exactly 1) | Snapshot height |
+| →<br>`block_hash` | string (hex) | Required<br>(exactly 1) | Snapshot block hash |
+| →<br>`masternode_root` | string (hex) | Required<br>(exactly 1) | Masternode list merkle root at the snapshot block |
+| →<br>`quorum_root` | string (hex) | Required<br>(exactly 1) | Quorum merkle root at the snapshot block |
+
+*Parameter #2---proof*
+
+| Name        | Type         | Presence                | Description |
+| ----------- | ------------ | ----------------------- | ----------- |
+| `proof_hex` | string (hex) | Required<br>(exactly 1) | DASHNC02 proof |
+
+*Parameter #3---minimum height*
+
+| Name             | Type         | Presence             | Description |
+| ---------------- | ------------ | -------------------- | ----------- |
+| `minimum_height` | number (int) | Optional<br>(0 or 1) | Caller freshness policy. Verification fails with `Stale proof target` if the proven target is below this height. Default: `0` |
+
+*Result---verification result*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | Verification result |
+| →<br>`valid` | bool | Required<br>(exactly 1) | Whether verification succeeded |
+| →<br>`target` | object | Optional<br>(0 or 1) | Authenticated target. Only returned if verification succeeded |
+| → →<br>`network` | number (int) | Required<br>(exactly 1) | `0` for mainnet, `1` for testnet |
+| → →<br>`height` | number (int) | Required<br>(exactly 1) | Height of the target block |
+| → →<br>`block_hash` | string (hex) | Required<br>(exactly 1) | Hash of the target block |
+| → →<br>`masternode_root` | string (hex) | Required<br>(exactly 1) | Masternode list merkle root at the target block |
+| → →<br>`quorum_root` | string (hex) | Required<br>(exactly 1) | Quorum merkle root at the target block |
+| →<br>`error` | string | Optional<br>(0 or 1) | Verification error. Only returned if verification failed |
+
+*Example from Dash Core 24.0.0*
+
+Verify the proof generated in the [`getquorumproofchain` example](#getquorumproofchain), using testnet checkpoint block 1380000 as the trusted snapshot:
+
+```bash
+dash-cli -testnet verifyquorumproofchain \
+  '{"network":1,"height":1380000,"block_hash":"000000a98084beaf77ed26a905a7d59979009e23367a55b5d634962d7d65a1f9","masternode_root":"5fa611bb797e695ea18fdcd16465d6e47601fa01a72fd8e76d7664dba81967ca","quorum_root":"9273f3eb92ea058fd196bc45d302c9f5395b5df03cc3535697e8272ba33fd1f2"}' \
+  "444153484e43303201a00e1500f9a1657d2d9634d6b5557a36239e007999d5a705a926ed77afbe8480a9000000ca6719a8db64766de7d82fa701fa0176e4d66564d1dc8fa15e697e79bb11a65f..."
+```
+
+Result:
+
+```json
+{
+  "valid": true,
+  "target": {
+    "network": 1,
+    "height": 1571714,
+    "block_hash": "0000006daabb2da6ded3fa872b2940d7916d5dc5dab63937487c2be759a02c4c",
+    "masternode_root": "97f6eb2dff6ad2795dd20aabc454a21a5dbf37e88861dad5fbafe73487cc33e4",
+    "quorum_root": "6044d1854baea0623ab1999022ccd53326ac154d567751b38e2bd70891ba9027"
+  }
+}
+```
+
+Verify the same proof with a `minimum_height` above the proven target:
+
+```bash
+dash-cli -testnet verifyquorumproofchain '{"network":1,"height":1380000,...}' "4441...a65f..." 1600000
+```
+
+Result:
+
+```json
+{
+  "valid": false,
+  "error": "Stale proof target"
+}
+```
+
+*See also*
+
+* [GetQuorumProofChain](../api/remote-procedure-calls-evo.md#getquorumproofchain): generates a DASHNC02 mining-transaction proof.

@@ -453,25 +453,25 @@ Name | Type | Presence | Description
 →<br>`pruneheight` | number (int) | Optional<br>(0 or 1) | *Added in Bitcoin Core 0.11.0*<br><br>The lowest-height complete block stored if pruning is activated
 →<br>`automatic_pruning` | bool | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>Whether automatic pruning is enabled (only present if pruning is enabled)
 →<br>`prune_target_size` | number (int) | Optional<br>(0 or 1) | *Added in Dash Core 0.16.0*<br><br>The target size used by pruning (only present if automatic pruning is enabled)
-→<br>`softforks` | object | Optional<br>(0 or 1) | **Deprecated in Dash Core 24.0.0**, returned only if config option `-deprecatedrpc=softforks` is passed. Use the `getdeploymentinfo` RPC instead
+→<br>`softforks` | object | Optional<br>(0 or 1) | **Deprecated in Dash Core 24.0.0**, returned only if config option `-deprecatedrpc=softforks` is passed. Use the [`getdeploymentinfo` RPC](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo) instead
 → →<br>Softfork | object | Required<br>(0 or more) | The name of a specific softfork
 → → →<br>`type`          | string  | Required | One of "buried", "bip9"
 → → →<br>`bip9`          | object  | Optional | Status of bip9 softforks (only for "bip9" type)
-→ → → →<br>`bit`          | numeric | Optional | **Updated in Dash Core 24.0.0**<br>The bit (0-28) in the block version field used to signal this softfork (only for "started" and "locked_in" status)
+→ → → →<br>`bit`          | numeric | Optional | **Updated in Dash Core 24.0.0**<br>The bit (0-28) in the block version field used to signal this softfork (only for "started" and "locked_in" status). Now shown based on the current block's `status` instead of the next block's
 → → → →<br>`start_time`   | numeric | Required | The minimum median time past of a block at which the bit gains its meaning
 → → → →<br>`timeout`      | numeric | Required | The median time past of a block at which the deployment is considered failed if not yet locked in
-→ → → →<br>`activation_height` | numeric | Optional | Expected activation height for this softfork (only for "locked_in" `status`)
+→ → → →<br>`activation_height` | numeric | Optional | **Updated in Dash Core 24.0.0**<br>Expected activation height for this softfork (only for "locked_in" `status`). Now shown based on the current block's `status` instead of the next block's
 → → → →<br>`min_activation_height` | numeric | Required | Minimum height of blocks for which the rules may be enforced
 → → → →<br>`ehf`          | bool | Required | `true` for EHF activated hard forks
 → → → →<br>`ehf_height`   | numeric | Optional | The minimum height at which miner's signals for the deployment matter. Below this height miner signaling cannot trigger hard fork lock-in. Not returned if `ehf` is `false` or if the minimum height is not known yet.
-→ → → →<br>`status`       | string  | Required | **Updated in Dash Core 24.0.0**<br>Status of deployment at specified block (one of "defined", "started", "locked_in", "active", "failed")
-→ → → →<br>`since`        | numeric | Required | Height of the first block to which the status applies
+→ → → →<br>`status`       | string  | Required | **Updated in Dash Core 24.0.0**<br>Status of deployment at the current block (one of "defined", "started", "locked_in", "active", "failed"). Previously reflected the status at the next block; use `status_next` for that
+→ → → →<br>`since`        | numeric | Required | **Updated in Dash Core 24.0.0**<br>Height of the first block to which the status applies. Now relative to the current block's `status` instead of the next block's
 → → → →<br>`status_next`  | string  | Required | **Added in Dash Core 24.0.0**<br>Status of deployment at the next block
-→ → → →<br>`statistics` | string : object | Optional<br>(0 or 1) | *Added in Dash Core 0.15.0*<br><br>Numeric statistics about signalling for a softfork (only for "started" and "locked_in" status)
-→ → → → →<br>`period` | numeric<br>(int) | Optional<br>(0 or 1) | *Added in Dash Core 0.15.0*<br><br>The length in blocks of the BIP9 signaling period.  Field is only shown when status is `started`
+→ → → →<br>`statistics` | string : object | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>Numeric statistics about signalling for a softfork (only for "started" and "locked_in" status). Now shown based on the current block's `status` instead of the next block's
+→ → → → →<br>`period` | numeric<br>(int) | Required<br>(exactly 1) | *Added in Dash Core 0.15.0*<br><br>The length in blocks of the BIP9 signaling period
 → → → → →<br>`threshold` | numeric<br>(int) | Optional<br>(0 or 1) | *Added in Dash Core 0.15.0*<br><br>The number of blocks with the version bit set required to activate the feature.  Field is only shown when status is `started`
-→ → → → →<br>`elapsed` | numeric<br>(int) | Optional<br>(0 or 1) | *Added in Dash Core 0.15.0*<br><br>The number of blocks elapsed since the beginning of the current period.  Field is only shown when status is `started`
-→ → → → →<br>`count` | numeric<br>(int) | Optional<br>(0 or 1) | *Added in Dash Core 0.15.0*<br><br>The number of blocks with the version bit set in the current period.  Field is only shown when status is `started`
+→ → → → →<br>`elapsed` | numeric<br>(int) | Required<br>(exactly 1) | *Added in Dash Core 0.15.0*<br><br>The number of blocks elapsed since the beginning of the current period
+→ → → → →<br>`count` | numeric<br>(int) | Required<br>(exactly 1) | *Added in Dash Core 0.15.0*<br><br>The number of blocks with the version bit set in the current period
 → → → → →<br>`possible` | bool | Optional<br>(0 or 1) | *Added in Bitcoin Core 0.11.0*<br><br>Returns false if there are not enough blocks left in this period to pass activation threshold.  Field is only shown when status is `started`
 → → → →<br>`signalling` | string | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Indicates blocks that signalled with a `#` and blocks that did not with a `-`
 → → →<br>`height` | numeric | Optional | Height of the first block at which the rules are or will be enforced (only for "buried" type, or "bip9" type with "active" status)
@@ -593,6 +593,7 @@ Result:
 
 *See also*
 
+* [GetDeploymentInfo](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo): returns state info regarding deployments of consensus changes at any block.
 * [GetMiningInfo](../api/remote-procedure-calls-mining.md#getmininginfo): returns various mining-related information.
 * [GetNetworkInfo](../api/remote-procedure-calls-network.md#getnetworkinfo): returns information about the node's connection to the network.
 * [GetWalletInfo](../api/remote-procedure-calls-wallet.md#getwalletinfo): provides information about the wallet.
@@ -1227,6 +1228,185 @@ Result:
 ```
 
 *See also: none*
+
+## GetCreditPoolInfo
+
+:::{versionadded} 24.0.0
+:::
+
+The [`getcreditpoolinfo` RPC](../api/remote-procedure-calls-blockchain.md#getcreditpoolinfo) returns the credit pool balance after a block and the asset unlock limit that applies to the block after it.
+
+The limit is computed over a window of blocks ending at that block (576 blocks on mainnet and testnet). Once the v24 hard fork activates, the limit is relative to the balance at the window start: asset unlocks may not leave the credit pool below its balance one window earlier minus an allowed drop of 20% of that balance (at least 2000 DASH).
+
+The result describes the requested block even if it has since left the active chain. The RPC fails if a block of the window cannot be read (for example, on a pruned node).
+
+*Parameter #1---block height*
+
+| Name     | Type         | Presence             | Description |
+| -------- | ------------ | -------------------- | ----------- |
+| `height` | number (int) | Optional<br>(0 or 1) | The block height to report the credit pool at. Default: the chain tip |
+
+*Result---credit pool information*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | Credit pool information |
+| →<br>`height` | number (int) | Required<br>(exactly 1) | The height the credit pool is reported at |
+| →<br>`blockhash` | string (hex) | Required<br>(exactly 1) | The hash of that block |
+| →<br>`balance` | number (DASH) | Required<br>(exactly 1) | The credit pool balance after that block in DASH |
+| →<br>`currentlimit` | number (DASH) | Required<br>(exactly 1) | The total amount of asset unlocks that may be mined in the next block in DASH |
+| →<br>`window` | object | Required<br>(exactly 1) | The window the limit is computed over |
+| → →<br>`blocks` | number (int) | Required<br>(exactly 1) | The number of blocks in the window |
+| → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of the block whose balance the window starts from (`-1` when the chain is shorter than the window) |
+| → →<br>`balance` | number (DASH) | Required<br>(exactly 1) | The credit pool balance after the window start block in DASH (`0` when there is no such block or it has no credit pool) |
+| → →<br>`unlocked` | number (DASH) | Required<br>(exactly 1) | The amount unlocked in the blocks of the window in DASH. Informational only once v24 is active, since the limit no longer uses it |
+
+*Example from Dash Core 24.0.0*
+
+```bash
+dash-cli -testnet getcreditpoolinfo
+```
+
+Result:
+
+```json
+{
+  "height": 1571714,
+  "blockhash": "0000006daabb2da6ded3fa872b2940d7916d5dc5dab63937487c2be759a02c4c",
+  "balance": 374792.72062854,
+  "currentlimit": 2000.00000000,
+  "window": {
+    "blocks": 576,
+    "height": 1571138,
+    "balance": 374405.66256341,
+    "unlocked": 10.60042681
+  }
+}
+```
+
+*See also*
+
+* [GetAssetUnlockStatuses](../api/remote-procedure-calls-raw-transactions.md#getassetunlockstatuses): returns the status of the provided Asset Unlock indexes at the tip of the chain or at a particular block height if specified.
+
+## GetDeploymentInfo
+
+:::{versionadded} 24.0.0
+:::
+
+The [`getdeploymentinfo` RPC](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo) returns an object containing various state info regarding deployments of consensus changes. It replaces the `softforks` field of the [`getblockchaininfo` RPC](../api/remote-procedure-calls-blockchain.md#getblockchaininfo), which is now only returned with `-deprecatedrpc=softforks`, and can report deployment state at any block instead of only at the chain tip.
+
+:::{note}
+The `status` field reflects the status of the requested block, not the next block. Use `status_next` for the status at the next block.
+:::
+
+*Parameter #1---block hash*
+
+| Name        | Type         | Presence             | Description |
+| ----------- | ------------ | -------------------- | ----------- |
+| `blockhash` | string (hex) | Optional<br>(0 or 1) | The block hash at which to query deployment state. Default: hash of the current chain tip |
+
+*Result---deployment information*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | Deployment information |
+| →<br>`hash` | string (hex) | Required<br>(exactly 1) | The requested block hash (or tip) |
+| →<br>`height` | number (int) | Required<br>(exactly 1) | The requested block height (or tip) |
+| →<br>`deployments` | object | Required<br>(exactly 1) | Deployments, keyed by name |
+| → →<br>Deployment | object | Required<br>(1 or more) | The name of the deployment (for example, `dip0003`, `v20`, `v24`, or `evo_shares`) |
+| → → →<br>`type` | string | Required<br>(exactly 1) | One of `buried` or `bip9` |
+| → → →<br>`height` | number (int) | Optional<br>(0 or 1) | Height of the first block which the rules are or will be enforced (only for `buried` type, or `bip9` type with `active` status) |
+| → → →<br>`active` | bool | Required<br>(exactly 1) | `true` if the rules are enforced for the mempool and the next block |
+| → → →<br>`bip9` | object | Optional<br>(0 or 1) | Status of bip9 softforks (only for `bip9` type) |
+| → → → →<br>`bit` | number (int) | Optional<br>(0 or 1) | The bit (0-28) in the block version field used to signal this softfork (only for `started` and `locked_in` status) |
+| → → → →<br>`start_time` | number (int) | Required<br>(exactly 1) | The minimum median time past of a block at which the bit gains its meaning |
+| → → → →<br>`timeout` | number (int) | Required<br>(exactly 1) | The median time past of a block at which the deployment is considered failed if not yet locked in |
+| → → → →<br>`ehf` | bool | Required<br>(exactly 1) | `true` for EHF activated forks |
+| → → → →<br>`ehf_height` | number (int) | Optional<br>(0 or 1) | The minimum height when miner's signals for the deployment matter. Below this height miner signaling cannot trigger hard fork lock-in. Not returned for non-EHF forks |
+| → → → →<br>`activation_height` | number (int) | Optional<br>(0 or 1) | Expected activation height for this softfork (only for `locked_in` status) |
+| → → → →<br>`min_activation_height` | number (int) | Required<br>(exactly 1) | Minimum height of blocks for which the rules may be enforced |
+| → → → →<br>`status` | string | Required<br>(exactly 1) | Status of deployment at the specified block (one of `defined`, `started`, `locked_in`, `active`, `failed`) |
+| → → → →<br>`since` | number (int) | Required<br>(exactly 1) | Height of the first block to which the status applies |
+| → → → →<br>`status_next` | string | Required<br>(exactly 1) | Status of deployment at the next block |
+| → → → →<br>`statistics` | object | Optional<br>(0 or 1) | Numeric statistics about signalling for a softfork (only for `started` and `locked_in` status) |
+| → → → → →<br>`period` | number (int) | Required<br>(exactly 1) | The length in blocks of the signalling period |
+| → → → → →<br>`threshold` | number (int) | Optional<br>(0 or 1) | The number of blocks with the version bit set required to activate the feature (only for `started` status) |
+| → → → → →<br>`elapsed` | number (int) | Required<br>(exactly 1) | The number of blocks elapsed since the beginning of the current period |
+| → → → → →<br>`count` | number (int) | Required<br>(exactly 1) | The number of blocks with the version bit set in the current period |
+| → → → → →<br>`possible` | bool | Optional<br>(0 or 1) | `false` if there are not enough blocks left in this period to pass activation threshold (only for `started` status) |
+| → → → →<br>`signalling` | string | Optional<br>(0 or 1) | Indicates blocks that signalled with a `#` and blocks that did not with a `-` |
+
+*Example from Dash Core 24.0.0*
+
+```bash
+dash-cli -testnet getdeploymentinfo
+```
+
+Result (truncated):
+
+```json
+{
+  "hash": "0000006daabb2da6ded3fa872b2940d7916d5dc5dab63937487c2be759a02c4c",
+  "height": 1571714,
+  "deployments": {
+    "bip34": {
+      "type": "buried",
+      "active": true,
+      "height": 76
+    },
+    "dip0003": {
+      "type": "buried",
+      "active": true,
+      "height": 7000
+    },
+    "withdrawals": {
+      "type": "buried",
+      "active": true,
+      "height": 1148500
+    },
+    "v24": {
+      "type": "bip9",
+      "active": false,
+      "bip9": {
+        "bit": 13,
+        "start_time": 1790208000,
+        "timeout": 9223372036854775807,
+        "ehf": true,
+        "ehf_height": 1565132,
+        "min_activation_height": 0,
+        "status": "started",
+        "since": 1565200,
+        "status_next": "started",
+        "statistics": {
+          "period": 100,
+          "elapsed": 15,
+          "count": 0,
+          "threshold": 60,
+          "possible": true
+        },
+        "signalling": "---------------"
+      }
+    },
+    "evo_shares": {
+      "type": "bip9",
+      "active": false,
+      "bip9": {
+        "start_time": 1790208000,
+        "timeout": 9223372036854775807,
+        "ehf": true,
+        "min_activation_height": 0,
+        "status": "defined",
+        "since": 0,
+        "status_next": "defined"
+      }
+    }
+  }
+}
+```
+
+*See also*
+
+* [GetBlockChainInfo](../api/remote-procedure-calls-blockchain.md#getblockchaininfo): provides information about the current state of the block chain.
 
 ## GetDifficulty
 
@@ -2289,6 +2469,102 @@ Result:
 ```
 
 *See also: none*
+
+## ScanBlocks
+
+:::{versionadded} 24.0.0
+:::
+
+The [`scanblocks` RPC](../api/remote-procedure-calls-blockchain.md#scanblocks) returns relevant block hashes for given descriptors. It uses [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) block filters, so it requires the `-blockfilterindex` Dash Core command-line/configuration-file parameter to be enabled. Only one scan can run at a time.
+
+:::{note}
+This call may take several minutes. Make sure to use no RPC timeout (`dash-cli -rpcclienttimeout=0`).
+:::
+
+*Parameter #1---action*
+
+| Name     | Type   | Presence                | Description |
+| -------- | ------ | ----------------------- | ----------- |
+| `action` | string | Required<br>(exactly 1) | The action to execute:<br>• `start` for starting a scan<br>• `abort` for aborting the current scan (returns `true` when abort was successful)<br>• `status` for progress report (in %) of the current scan |
+
+*Parameter #2---scan objects*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `scanobjects` | array | Optional<br>(0 or 1) | Array of scan objects. Required for the `start` action. Every scan object is either a string descriptor or an object |
+| →<br>Descriptor | string | Optional<br>(0 or more) | An output [descriptor](https://github.com/dashpay/dash/blob/master/doc/descriptors.md) |
+| →<br>Descriptor object | object | Optional<br>(0 or more) | An object with an output descriptor and metadata |
+| → →<br>`desc` | string | Required<br>(exactly 1) | An output descriptor |
+| → →<br>`range` | number (int) or array | Optional<br>(0 or 1) | The range of HD chain indexes to explore (either end or `[begin,end]`). Default: `1000` |
+
+*Parameter #3---start height*
+
+| Name           | Type         | Presence             | Description |
+| -------------- | ------------ | -------------------- | ----------- |
+| `start_height` | number (int) | Optional<br>(0 or 1) | Height to start to scan from. Default: `0` |
+
+*Parameter #4---stop height*
+
+| Name          | Type         | Presence             | Description |
+| ------------- | ------------ | -------------------- | ----------- |
+| `stop_height` | number (int) | Optional<br>(0 or 1) | Height to stop to scan. Default: the chain tip |
+
+*Parameter #5---filter type*
+
+| Name         | Type   | Presence             | Description |
+| ------------ | ------ | -------------------- | ----------- |
+| `filtertype` | string | Optional<br>(0 or 1) | The type name of the filter. Default: `basic` |
+
+*Result if `action` is `start`---relevant blocks*
+
+The RPC only returns after the scan completes.
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | Scan results |
+| →<br>`from_height` | number (int) | Required<br>(exactly 1) | The height the scan started from |
+| →<br>`to_height` | number (int) | Required<br>(exactly 1) | The height the scan ended at |
+| →<br>`relevant_blocks` | array | Required<br>(exactly 1) | Blocks that may have matched a scan object. Block filters can produce false positives |
+| → →<br>Block hash | string (hex) | Optional<br>(0 or more) | A relevant block hash |
+
+*Result if `action` is `status`---scan progress*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object/null | Required<br>(exactly 1) | Progress of the scan in progress, or JSON `null` if no scan is in progress (possibly already completed) |
+| →<br>`progress` | number (int) | Required<br>(exactly 1) | Approximate percent complete |
+| →<br>`current_height` | number (int) | Required<br>(exactly 1) | Height of the block currently being scanned |
+
+*Result if `action` is `abort`---abort status*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | bool | Required<br>(exactly 1) | `true` if the scan will be aborted (not necessarily before this RPC returns), or `false` if there is no scan to abort |
+
+*Examples from Dash Core 24.0.0*
+
+Scan for blocks relevant to an address, starting at block 300000 (requires `-blockfilterindex`):
+
+```bash
+dash-cli -testnet -rpcclienttimeout=0 scanblocks start '["addr(yWjoZBvnUKWhpKMbBkVVnnMD8Bzno9j6tQ)"]' 300000
+```
+
+Abort when no scan is running:
+
+```bash
+dash-cli -testnet scanblocks abort
+```
+
+Result:
+
+```json
+false
+```
+
+*See also*
+
+* [GetBlockFilter](../api/remote-procedure-calls-blockchain.md#getblockfilter): retrieves a BIP157 content filter for a particular block.
+* [ScanTxOutset](../api/remote-procedure-calls-wallet.md#scantxoutset): scans the unspent transaction output set for entries that match certain output descriptors.
 
 ## VerifyChain
 
