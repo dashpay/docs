@@ -98,11 +98,7 @@ EIDEX
 
   https://eidex.io
 
-  EIDEX compares swap routes for Dash across a number of exchange
-  providers. For a given pair and amount it queries the providers and
-  ranks the results by how much Dash you actually receive, showing the
-  rate, fees and estimated time for each route. No account is required
-  and the swap itself is completed on the provider's own site.
+  EIDEX compares swap routes for Dash across many exchange providers. For a given pair and amount it ranks the providers' quotes by the estimated amount of Dash you would receive. Quotes are indicative and the final rate is set by the provider. No EIDEX account is needed, though the chosen provider may require registration or KYC, and the swap itself is completed on the provider's own site.
 
 
 .. _atms:
