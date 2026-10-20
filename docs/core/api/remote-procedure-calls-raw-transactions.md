@@ -781,7 +781,7 @@ Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on mas
 
 The [`fundrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#fundrawtransaction) adds inputs to a transaction until it has enough in value to meet its out value.  This will not modify existing inputs, and will add one change output to the outputs.
 
-Note that inputs which were signed may need to be resigned after completion since in/outputs have been added.  The inputs added will not be signed, use signrawtransaction for that.
+Note that inputs which were signed may need to be resigned after completion since in/outputs have been added.  The inputs added will not be signed, use signrawtransactionwithkey or signrawtransactionwithwallet for that.
 
 **Updated in Dash Core 23.0.0:** All existing inputs must either have their previous output transaction be in the wallet or be in the UTXO set. Solving data must be provided for non-wallet inputs.
 

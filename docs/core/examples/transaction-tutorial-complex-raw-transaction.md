@@ -159,7 +159,7 @@ Signing the raw transaction with [`signrawtransactionwithkey`](../api/remote-pro
 The result is a raw transaction with only one input signed; the fact that the transaction isn't fully signed is indicated by value of the `complete` JSON field.  We save the incomplete, partly-signed raw transaction hex to a shell variable.
 
 ``` bash
-> dash-cli -regtest signrawtransaction $RAW_TX '''
+> dash-cli -regtest signrawtransactionwithkey $RAW_TX '''
     [
       "'$UTXO1_PRIVATE_KEY'"
     ]'''
@@ -199,7 +199,7 @@ The result is a raw transaction with only one input signed; the fact that the tr
 To sign the second input, we repeat the process we used to sign the first input using the second private key. Now that both inputs are signed, the `complete` result is *true*.
 
 ``` bash
-> dash-cli -regtest signrawtransaction $PARTLY_SIGNED_RAW_TX '''
+> dash-cli -regtest signrawtransactionwithkey $PARTLY_SIGNED_RAW_TX '''
     [
       "'$UTXO2_PRIVATE_KEY'"
     ]'''
