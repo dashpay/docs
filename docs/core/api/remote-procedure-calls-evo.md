@@ -2305,6 +2305,483 @@ Result:
 5b6cfa1bdd3c8b7e0b9550b9c4e809381f81a410bc7f241d3879dd736fd51270
 ```
 
+### ProTx Shared Combine
+
+:::{versionadded} 24.0.0
+:::
+
+The `protx shared_combine` RPC combines share owner signatures produced by [`protx shared_sign`](#protx-shared-sign) into a shared masternode transaction.
+
+* **Shared ProRegTx:** the completed transaction hex is returned. Its funding inputs still have to be signed (for example, by passing the result around [`signrawtransactionwithwallet`](../api/remote-procedure-calls-wallet.md#signrawtransactionwithwallet)), so `submit` is not available. A signature from every share is required.
+* **Unanimous ProDisTx:** the transaction can be submitted directly. A signature from every share is required.
+* **ProUpSharedRegTx:** the transaction can be submitted directly, but only from the wallet that ran [`protx shared_update_registrar_prepare`](#protx-shared-update-registrar-prepare). Combining re-signs its fee inputs, which only that wallet can do. With `submit` set to `false`, the returned hex can be finished in that wallet with `signrawtransactionwithwallet`.
+
+*Parameter #1---transaction*
+
+| Name | Type         | Presence                | Description |
+| ---- | ------------ | ----------------------- | ----------- |
+| `tx` | string (hex) | Required<br>(exactly 1) | The serialized transaction in hex format |
+
+*Parameter #2---signatures*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `signatures` | array | Required<br>(exactly 1) | Signature entries collected from `protx shared_sign` |
+| →<br>Signature | object | Required<br>(1 or more) | A share signature. Each `shareIndex` may only appear once |
+| → →<br>`shareIndex` | number (int) | Required<br>(exactly 1) | Index into the share table |
+| → →<br>`signature` | string (base64) | Required<br>(exactly 1) | Base64-encoded signature |
+
+*Parameter #3---submit*
+
+| Name     | Type | Presence             | Description |
+| -------- | ---- | -------------------- | ----------- |
+| `submit` | bool | Optional<br>(0 or 1) | Submit the transaction to the network. Not available for registrations, whose funding inputs still need signing. Default: `false` |
+
+*Result---transaction*
+
+| Name     | Type         | Presence                | Description |
+| -------- | ------------ | ----------------------- | ----------- |
+| `result` | string (hex) | Required<br>(exactly 1) | The transaction ID if submitted, otherwise the combined transaction hex |
+
+*Example from Dash Core 24.0.0*
+
+```bash
+dash-cli -testnet protx shared_combine "<tx>" \
+  '[{"shareIndex":0,"signature":"<signature 0>"},{"shareIndex":1,"signature":"<signature 1>"}]'
+```
+
+### ProTx Shared Dissolve
+
+:::{versionadded} 24.0.0
+:::
+
+The `protx shared_dissolve` RPC creates, signs, and optionally submits a unilateral ProDisTx that dissolves a shared masternode, refunding every participant's principal to its immutable refund script. During the early period, a unilateral dissolution pays the configured penalty, which is redistributed pro-rata to the other shares. The wallet must hold the actor share's owner key.
+
+With `submit` set to `false`, the signed transaction hex is returned instead. It can be stored offline as a standby dissolution: ProDisTx validity is monotone, so a transaction that is valid now stays valid forever.
+
+For a penalty-free dissolution agreed by every participant, use [`protx shared_dissolve_prepare`](#protx-shared-dissolve-prepare) instead.
+
+Requires wallet passphrase to be set with [`walletpassphrase`](../api/remote-procedure-calls-wallet.md#walletpassphrase) call if wallet is encrypted.
+
+*Parameter #1---initial provider registration transaction hash*
+
+| Name        | Type         | Presence                | Description |
+| ----------- | ------------ | ----------------------- | ----------- |
+| `proTxHash` | string (hex) | Required<br>(exactly 1) | The hash of the initial ProRegTx |
+
+*Parameter #2---actor index*
+
+| Name         | Type         | Presence                | Description |
+| ------------ | ------------ | ----------------------- | ----------- |
+| `actorIndex` | number (int) | Required<br>(exactly 1) | Index into the share table of the dissolving participant |
+
+*Parameter #3---fee*
+
+| Name  | Type         | Presence             | Description |
+| ----- | ------------ | -------------------- | ----------- |
+| `fee` | number (int) | Optional<br>(0 or 1) | Transaction fee in duffs, paid from the actor's share. At most `1000000` duffs (consensus ceiling). Default: `100000` |
+
+*Parameter #4---submit*
+
+| Name     | Type | Presence             | Description |
+| -------- | ---- | -------------------- | ----------- |
+| `submit` | bool | Optional<br>(0 or 1) | Submit the transaction to the network. Default: `true` |
+
+*Parameter #5---pay penalty*
+
+| Name         | Type | Presence             | Description |
+| ------------ | ---- | -------------------- | ----------- |
+| `payPenalty` | bool | Optional<br>(0 or 1) | Pay the early-period penalty. Pass `true` to build a standby valid at any height, or `false` for one valid only after the early period ends. Default: determined by the current height |
+
+*Result---transaction*
+
+| Name     | Type         | Presence                | Description |
+| -------- | ------------ | ----------------------- | ----------- |
+| `result` | string (hex) | Required<br>(exactly 1) | The transaction ID if submitted, otherwise the signed transaction hex |
+
+*Example from Dash Core 24.0.0*
+
+Create a zero-penalty standby dissolution for share 0 without submitting it:
+
+```bash
+dash-cli -testnet protx shared_dissolve "<proTxHash>" 0 100000 false false
+```
+
+### ProTx Shared Dissolve Prepare
+
+:::{versionadded} 24.0.0
+:::
+
+The `protx shared_dissolve_prepare` RPC creates an unsigned unanimous ProDisTx that dissolves a shared masternode without penalty at any height. Every share owner must sign it with [`protx shared_sign`](#protx-shared-sign). Then combine and submit the result with [`protx shared_combine`](#protx-shared-combine). For a unilateral dissolution, use [`protx shared_dissolve`](#protx-shared-dissolve) instead.
+
+*Parameter #1---initial provider registration transaction hash*
+
+| Name        | Type         | Presence                | Description |
+| ----------- | ------------ | ----------------------- | ----------- |
+| `proTxHash` | string (hex) | Required<br>(exactly 1) | The hash of the initial ProRegTx |
+
+*Parameter #2---actor index*
+
+| Name         | Type         | Presence                | Description |
+| ------------ | ------------ | ----------------------- | ----------- |
+| `actorIndex` | number (int) | Required<br>(exactly 1) | Index into the share table of the participant paying the transaction fee |
+
+*Parameter #3---fee*
+
+| Name  | Type         | Presence             | Description |
+| ----- | ------------ | -------------------- | ----------- |
+| `fee` | number (int) | Optional<br>(0 or 1) | Transaction fee in duffs, paid from the actor's share. At most `1000000` duffs (consensus ceiling). Default: `100000` |
+
+*Result---unsigned dissolution*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | The unsigned dissolution |
+| →<br>`tx` | string (hex) | Required<br>(exactly 1) | The serialized unsigned ProDisTx |
+| →<br>`signHash` | string (hex) | Required<br>(exactly 1) | The digest every share owner must sign |
+
+*Example from Dash Core 24.0.0*
+
+```bash
+dash-cli -testnet protx shared_dissolve_prepare "<proTxHash>" 0
+```
+
+### ProTx Shared Register Prepare
+
+:::{versionadded} 24.0.0
+:::
+
+The `protx shared_register_prepare` RPC creates an unsigned shared masternode registration: a version 3 ProRegTx with a collateral share table, where 2 to 8 participants fund the masternode collateral together. It appends the shared-collateral output and payload to a caller-supplied funding transaction. The funding transaction must already contain every participant's contribution inputs and any change outputs. The consent digest binds all of them.
+
+Shared masternodes require the v24 hard fork to be active. The shared `protx` commands are only available if Dash Core was built with [wallet support](../resources/glossary.md#wallet-support).
+
+The registration flow is:
+
+1. Create the unsigned registration with `protx shared_register_prepare`.
+2. Every share owner signs the returned consent hash with [`protx shared_sign`](#protx-shared-sign).
+3. Combine the signatures with [`protx shared_combine`](#protx-shared-combine).
+4. Have the funding inputs signed (for example, with [`signrawtransactionwithwallet`](../api/remote-procedure-calls-wallet.md#signrawtransactionwithwallet)) and broadcast the transaction with [`sendrawtransaction`](../api/remote-procedure-calls-raw-transactions.md#sendrawtransaction).
+
+:::{important}
+Consent is required from each share in the table, not from each funding input. An input is not tied to any share. Before signing its funding inputs, each participant should check the share table (`proRegTx` in [`decoderawtransaction`](../api/remote-procedure-calls-raw-transactions.md#decoderawtransaction), or `terms` from `protx shared_sign`) for its own share, with its own amount and addresses. Signing inputs into a table without that share gives the contribution to the other shares.
+:::
+
+:::{important}
+Once the registration confirms, every participant should create a zero-penalty standby dissolution (`protx shared_dissolve <proTxHash> <shareIndex> <fee> false false`) and store the returned hex with their refund-key backup, separately from the share owner key. It becomes valid when the early period ends (or immediately when no early period applies), then never expires. Broadcasting it after that point recovers the participant's principal without cooperation. See [`protx shared_dissolve`](#protx-shared-dissolve).
+:::
+
+*Parameter #1---funding transaction*
+
+| Name        | Type         | Presence                | Description |
+| ----------- | ------------ | ----------------------- | ----------- |
+| `fundingTx` | string (hex) | Required<br>(exactly 1) | The serialized funding transaction with all participants' inputs and change outputs |
+
+*Parameter #2---share table*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `shares` | array | Required<br>(exactly 1) | The collateral share table, in consensus-significant order. Must contain 2 to 8 shares. Amounts must sum to the collateral |
+| →<br>Share | object | Required<br>(2 to 8) | A collateral share |
+| → →<br>`amount` | number (int) | Required<br>(exactly 1) | Collateral contribution in duffs (at least 100 DASH) |
+| → →<br>`refundAddress` | string | Required<br>(exactly 1) | Immutable address the principal is refunded to at dissolution |
+| → →<br>`rewardAddress` | string | Optional<br>(0 or 1) | Address this share's owner rewards are paid to. Default: the refund address |
+| → →<br>`ownerAddress` | string | Required<br>(exactly 1) | P2PKH address of the immutable share owner key |
+
+*Parameter #3---Core P2P addresses*
+
+| Name           | Type   | Presence                | Description |
+| -------------- | ------ | ----------------------- | ----------- |
+| `coreP2PAddrs` | string | Required<br>(exactly 1) | IP address and port of the masternode. Leave empty to set it later with a ProUpServTx |
+
+*Parameter #4---operator public key*
+
+| Name             | Type         | Presence                | Description |
+| ---------------- | ------------ | ----------------------- | ----------- |
+| `operatorPubKey` | string (hex) | Required<br>(exactly 1) | The operator BLS public key |
+
+*Parameter #5---voting address*
+
+| Name            | Type   | Presence                | Description |
+| --------------- | ------ | ----------------------- | ----------- |
+| `votingAddress` | string | Required<br>(exactly 1) | The voting key address (P2PKH) |
+
+*Parameter #6---operator reward*
+
+| Name             | Type   | Presence                | Description |
+| ---------------- | ------ | ----------------------- | ----------- |
+| `operatorReward` | string | Required<br>(exactly 1) | The fraction in % to share with the operator.<br>The value must be between `0.00` and `100.00` |
+
+*Parameter #7---early period*
+
+| Name                | Type         | Presence                | Description |
+| ------------------- | ------------ | ----------------------- | ----------- |
+| `earlyPeriodBlocks` | number (int) | Required<br>(exactly 1) | Length in blocks of the early period during which unilateral dissolution is penalized (up to `420480`, approximately two years) |
+
+*Parameter #8---early penalty*
+
+| Name           | Type         | Presence                | Description |
+| -------------- | ------------ | ----------------------- | ----------- |
+| `earlyPenalty` | number (int) | Required<br>(exactly 1) | Penalty in duffs for unilateral dissolution during the early period. Must be below the smallest share, and zero when `earlyPeriodBlocks` is zero |
+
+*Result---unsigned shared registration*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | The unsigned shared registration |
+| →<br>`tx` | string (hex) | Required<br>(exactly 1) | The serialized unsigned shared ProRegTx |
+| →<br>`collateralIndex` | number (int) | Required<br>(exactly 1) | Output index of the shared collateral |
+| →<br>`consentHash` | string (hex) | Required<br>(exactly 1) | The consent digest every share owner must sign |
+| →<br>`terms` | object | Required<br>(exactly 1) | The masternode registration special transaction payload |
+| → →<br>`version` | number (int) | Required<br>(exactly 1) | Special transaction version |
+| → →<br>`type` | number (int) | Required<br>(exactly 1) | Masternode type |
+| → →<br>`collateralHash` | string (hex) | Required<br>(exactly 1) | Collateral transaction hash |
+| → →<br>`collateralIndex` | number (int) | Required<br>(exactly 1) | Collateral transaction output index |
+| → →<br>`service` | string | Optional<br>(0 or 1) | IP address and port of the masternode. Deprecated, returned only if config option `-deprecatedrpc=service` is passed |
+| → →<br>`addresses` | object | Required<br>(exactly 1) | Network addresses of the masternode |
+| → → →<br>`core_p2p` | array | Optional<br>(0 or 1) | Addresses used for protocol P2P |
+| → → → →<br>Address | string | Optional<br>(0 or more) | An address in the form `ADDR:PORT` |
+| → → →<br>`platform_p2p` | array | Optional<br>(0 or 1) | Addresses used for Platform P2P |
+| → → → →<br>Address | string | Optional<br>(0 or more) | An address in the form `ADDR:PORT` |
+| → → →<br>`platform_https` | array | Optional<br>(0 or 1) | Addresses used for Platform HTTPS API |
+| → → → →<br>Address | string | Optional<br>(0 or more) | An address in the form `ADDR:PORT` |
+| → →<br>`ownerAddress` | string | Optional<br>(0 or 1) | Dash address used for payee updates and proposal voting. Not returned for shared masternodes; each participant's owner address is in `shares` |
+| → →<br>`votingAddress` | string | Required<br>(exactly 1) | Dash address used for voting |
+| → →<br>`payoutAddress` | string | Optional<br>(0 or 1) | Dash address used for masternode reward payments |
+| → →<br>`payouts` | array | Optional<br>(0 or 1) | Owner masternode reward payout shares |
+| → → →<br>Payout | object | Optional<br>(0 or more) | An owner payout share |
+| → → → →<br>`address` | string | Required<br>(exactly 1) | Dash address used for this owner payout |
+| → → → →<br>`script` | string (hex) | Required<br>(exactly 1) | Owner payout scriptPubKey |
+| → → → →<br>`reward` | number (int) | Required<br>(exactly 1) | Owner payout share in basis points |
+| → →<br>`shares` | array | Optional<br>(0 or 1) | Collateral shares of a shared masternode |
+| → → →<br>Share | object | Optional<br>(0 or more) | A collateral share |
+| → → → →<br>`amount` | number (int) | Required<br>(exactly 1) | Collateral contribution in duffs |
+| → → → →<br>`refundAddress` | string | Required<br>(exactly 1) | Dash address the principal is refunded to at dissolution |
+| → → → →<br>`refundScript` | string (hex) | Required<br>(exactly 1) | Refund scriptPubKey |
+| → → → →<br>`rewardAddress` | string | Required<br>(exactly 1) | Dash address this share's owner rewards are paid to |
+| → → → →<br>`rewardScript` | string (hex) | Required<br>(exactly 1) | Reward scriptPubKey |
+| → → → →<br>`ownerAddress` | string | Required<br>(exactly 1) | Dash address of the share owner key |
+| → →<br>`earlyPeriodBlocks` | number (int) | Optional<br>(0 or 1) | Length in blocks of the early period during which unilateral dissolution is penalized |
+| → →<br>`earlyPenalty` | number (int) | Optional<br>(0 or 1) | Penalty in duffs for unilateral dissolution during the early period |
+| → →<br>`pubKeyOperator` | string (hex) | Required<br>(exactly 1) | BLS public key used for operator signing |
+| → →<br>`operatorReward` | number | Required<br>(exactly 1) | Fraction in % of reward shared with the operator between 0 and 10000 |
+| → →<br>`platformNodeID` | string (hex) | Optional<br>(0 or 1) | Node ID derived from P2P public key for Platform P2P (EvoNodes only) |
+| → →<br>`platformP2PPort` | number (int) | Optional<br>(0 or 1) | TCP port of Platform P2P. Deprecated, returned only if config option `-deprecatedrpc=service` is passed |
+| → →<br>`platformHTTPPort` | number (int) | Optional<br>(0 or 1) | TCP port of Platform HTTP API. Deprecated, returned only if config option `-deprecatedrpc=service` is passed |
+| → →<br>`inputsHash` | string (hex) | Required<br>(exactly 1) | Hash of all the outpoints of the transaction inputs |
+| →<br>`warning` | string | Optional<br>(0 or 1) | Present when `earlyPenalty` is zero: any participant can force an early exit at no cost beyond the transaction fee |
+
+*Example from Dash Core 24.0.0*
+
+Create a two-share registration with an early period of 10000 blocks and a 50 DASH early penalty:
+
+```bash
+dash-cli -testnet protx shared_register_prepare "<fundingTx>" \
+  '[{"amount":50000000000,"refundAddress":"yLwEGznVudZKyDbCLXWEAX2wXUAoAZ2fh4","ownerAddress":"yM972VxwBD46FW6xQQBFAHx2HCV4HUEEHL"},{"amount":50000000000,"refundAddress":"yMT8Du3R47PFrLBxA1a9GZ4zu8Ht9B3bfH","rewardAddress":"yZ9fa6vzAS5yz3QjA8etgA4ka1GD2X9ouq","ownerAddress":"yaghgYP39G8JwLSr5aEhdUtMiiP7imyMtj"}]' \
+  "1.2.3.4:19999" \
+  b344d36f4c02cf56b7a975b4ba37edd83835a42586161f42632f09ff6a6100c7cb162c294c90fc25cceee58e088fce14 \
+  yM972VxwBD46FW6xQQBFAHx2HCV4HUEEHL 0 10000 5000000000
+```
+
+### ProTx Shared Register Prepare Evo
+
+:::{versionadded} 24.0.0
+:::
+
+The `protx shared_register_prepare_evo` RPC is the same as [`protx shared_register_prepare`](#protx-shared-register-prepare), but for an EvoNode. It takes the same parameters followed by `platformNodeID`, `platformP2PAddrs`, and `platformHTTPSAddrs`.
+
+EvoNodes can only register with shared collateral once the `evo_shares` deployment is active. Until then, the RPC fails. The consent digest that share owners sign for a shared EvoNode registration also covers the EvoNode's `platformNodeID`.
+
+*Parameters #1 to #8*
+
+The same as [`protx shared_register_prepare`](#protx-shared-register-prepare) parameters #1 to #8.
+
+*Parameter #9---platform node ID*
+
+| Name             | Type         | Presence                | Description |
+| ---------------- | ------------ | ----------------------- | ----------- |
+| `platformNodeID` | string (hex) | Required<br>(exactly 1) | Platform P2P node ID, derived from P2P public key |
+
+*Parameter #10---Platform P2P addresses*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `platformP2PAddrs` | array | Required<br>(exactly 1) | Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards |
+| →<br>Address | string | Required<br>(1 or more) | An address in the form `ADDR:PORT` |
+
+*Parameter #11---Platform HTTPS addresses*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `platformHTTPSAddrs` | array | Required<br>(exactly 1) | Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards |
+| →<br>Address | string | Required<br>(1 or more) | An address in the form `ADDR:PORT` |
+
+*Result---unsigned shared registration*
+
+The same as the [`protx shared_register_prepare`](#protx-shared-register-prepare) result.
+
+*Example from Dash Core 24.0.0*
+
+```bash
+dash-cli -testnet protx shared_register_prepare_evo "<fundingTx>" "<shares>" \
+  "1.2.3.4:19999" \
+  b344d36f4c02cf56b7a975b4ba37edd83835a42586161f42632f09ff6a6100c7cb162c294c90fc25cceee58e088fce14 \
+  yM972VxwBD46FW6xQQBFAHx2HCV4HUEEHL 0 10000 5000000000 \
+  f2dbd9b0a1f541a7c44d34a58674d0262f5feca5 '["1.2.3.4:22821"]' '["1.2.3.4:22822"]'
+```
+
+### ProTx Shared Sign
+
+:::{versionadded} 24.0.0
+:::
+
+The `protx shared_sign` RPC signs a shared masternode transaction (shared ProRegTx, unanimous ProDisTx, or ProUpSharedRegTx) with every share owner key this wallet holds and returns the produced signatures. The transaction itself is not modified. Pass the signatures to [`protx shared_combine`](#protx-shared-combine).
+
+Only the multi-party flows use this RPC. A unilateral dissolution is built, signed, and submitted in one step by [`protx shared_dissolve`](#protx-shared-dissolve).
+
+Requires wallet passphrase to be set with [`walletpassphrase`](../api/remote-procedure-calls-wallet.md#walletpassphrase) call if wallet is encrypted.
+
+*Parameter #1---transaction*
+
+| Name | Type         | Presence                | Description |
+| ---- | ------------ | ----------------------- | ----------- |
+| `tx` | string (hex) | Required<br>(exactly 1) | The serialized transaction in hex format |
+
+*Parameter #2---allow time locks*
+
+| Name             | Type | Presence             | Description |
+| ---------------- | ---- | -------------------- | ----------- |
+| `allowTimeLocks` | bool | Optional<br>(0 or 1) | Sign a registration or dissolution carrying an unsatisfied lock time or a relative (BIP68) input lock. The signed digest commits to these fields, so a lock a co-signer failed to notice delays when the transaction can confirm. Default: `false` |
+
+*Result---signatures*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | The terms being signed and the produced signatures |
+| →<br>`type` | string | Required<br>(exactly 1) | What is being signed: `registration`, `dissolution`, or `registrarUpdate` |
+| →<br>`terms` | object | Required<br>(exactly 1) | The decoded payload being consented to, so a co-signer can review what the signature commits to:<br>• `registration`: the ProRegTx payload (see the [`protx shared_register_prepare`](#protx-shared-register-prepare) `terms` result)<br>• `dissolution`: the ProDisTx payload (`version`, `proTxHash`, `actorIndex`, `sigCount`) plus an `outputs` array of `address`/`amount` objects, since the signed digest covers the outputs directly<br>• `registrarUpdate`: the ProUpSharedRegTx payload (`version`, `proTxHash`, `votingAddress`, `pubKeyOperator`, `inputsHash`, `sigCount`) |
+| →<br>`warning` | string | Optional<br>(0 or 1) | Present for a registration whose `earlyPenalty` is zero: any participant can force an early exit at no cost beyond the transaction fee |
+| →<br>`signatures` | array | Required<br>(exactly 1) | One entry per share owner key this wallet holds |
+| → →<br>Signature | object | Optional<br>(0 or more) | A share signature |
+| → → →<br>`shareIndex` | number (int) | Required<br>(exactly 1) | Index into the share table |
+| → → →<br>`signature` | string (base64) | Required<br>(exactly 1) | Base64-encoded signature by this share's owner key |
+
+*Example from Dash Core 24.0.0*
+
+```bash
+dash-cli -testnet protx shared_sign "<tx>"
+```
+
+### ProTx Shared Update Registrar Prepare
+
+:::{versionadded} 24.0.0
+:::
+
+The `protx shared_update_registrar_prepare` RPC creates an unsigned ProUpSharedRegTx updating a shared masternode's operator key and/or voting key. A plain ProUpRegTx is invalid for shared masternodes. Fee inputs from this wallet are added and signed.
+
+Every share owner must then sign the returned transaction with [`protx shared_sign`](#protx-shared-sign). Combine the signatures with [`protx shared_combine`](#protx-shared-combine) on this same wallet, since combining invalidates the fee-input signatures, which only this wallet can re-sign.
+
+Requires wallet passphrase to be set with [`walletpassphrase`](../api/remote-procedure-calls-wallet.md#walletpassphrase) call if wallet is encrypted.
+
+*Parameter #1---initial provider registration transaction hash*
+
+| Name        | Type         | Presence                | Description |
+| ----------- | ------------ | ----------------------- | ----------- |
+| `proTxHash` | string (hex) | Required<br>(exactly 1) | The hash of the initial ProRegTx |
+
+*Parameter #2---operator public key*
+
+| Name             | Type         | Presence                | Description |
+| ---------------- | ------------ | ----------------------- | ----------- |
+| `operatorPubKey` | string (hex) | Required<br>(exactly 1) | The new operator BLS public key, or an empty string to keep the current key |
+
+*Parameter #3---voting address*
+
+| Name            | Type   | Presence                | Description |
+| --------------- | ------ | ----------------------- | ----------- |
+| `votingAddress` | string | Required<br>(exactly 1) | The new voting address, or an empty string to keep the current address |
+
+*Parameter #4---fee source address*
+
+| Name               | Type   | Presence                | Description |
+| ------------------ | ------ | ----------------------- | ----------- |
+| `feeSourceAddress` | string | Required<br>(exactly 1) | Wallet address to pay the transaction fee from |
+
+*Result---unsigned registrar update*
+
+| Name | Type | Presence | Description |
+| ---- | ---- | -------- | ----------- |
+| `result` | object | Required<br>(exactly 1) | The unsigned registrar update |
+| →<br>`tx` | string (hex) | Required<br>(exactly 1) | The serialized unsigned ProUpSharedRegTx |
+| →<br>`signHash` | string (hex) | Required<br>(exactly 1) | The payload hash every share owner must sign |
+
+*Example from Dash Core 24.0.0*
+
+Change the operator key and keep the current voting address:
+
+```bash
+dash-cli -testnet protx shared_update_registrar_prepare "<proTxHash>" \
+  b344d36f4c02cf56b7a975b4ba37edd83835a42586161f42632f09ff6a6100c7cb162c294c90fc25cceee58e088fce14 \
+  "" ydW7V4e5KZioLKdQkukxt2g4a2t9EnL8hN
+```
+
+### ProTx Shared Update Share
+
+:::{versionadded} 24.0.0
+:::
+
+The `protx shared_update_share` RPC creates and sends a ProUpShareTx updating one collateral share's reward address. Only the share's owner key (which this wallet must hold) can update it. All other share fields are immutable.
+
+Requires wallet passphrase to be set with [`walletpassphrase`](../api/remote-procedure-calls-wallet.md#walletpassphrase) call if wallet is encrypted.
+
+*Parameter #1---initial provider registration transaction hash*
+
+| Name        | Type         | Presence                | Description |
+| ----------- | ------------ | ----------------------- | ----------- |
+| `proTxHash` | string (hex) | Required<br>(exactly 1) | The hash of the initial ProRegTx |
+
+*Parameter #2---share index*
+
+| Name         | Type         | Presence                | Description |
+| ------------ | ------------ | ----------------------- | ----------- |
+| `shareIndex` | number (int) | Required<br>(exactly 1) | Index into the share table of the share to update |
+
+*Parameter #3---reward address*
+
+| Name            | Type   | Presence                | Description |
+| --------------- | ------ | ----------------------- | ----------- |
+| `rewardAddress` | string | Required<br>(exactly 1) | The new reward address. To reset rewards to the share's refund address, provide that address explicitly |
+
+*Parameter #4---fee source address*
+
+| Name               | Type   | Presence                | Description |
+| ------------------ | ------ | ----------------------- | ----------- |
+| `feeSourceAddress` | string | Required<br>(exactly 1) | Wallet address to pay the transaction fee from |
+
+*Parameter #5---submit*
+
+| Name     | Type | Presence             | Description |
+| -------- | ---- | -------------------- | ----------- |
+| `submit` | bool | Optional<br>(0 or 1) | Submit the transaction to the network. Default: `true` |
+
+*Result if `submit` is not set or set to `true`---transaction ID*
+
+| Name     | Type         | Presence                | Description |
+| -------- | ------------ | ----------------------- | ----------- |
+| `result` | string (hex) | Required<br>(exactly 1) | The transaction ID |
+
+*Result if `submit` is set to `false`---serialized transaction*
+
+| Name     | Type         | Presence                | Description |
+| -------- | ------------ | ----------------------- | ----------- |
+| `result` | string (hex) | Required<br>(exactly 1) | The serialized signed ProUpShareTx in hex format |
+
+*Example from Dash Core 24.0.0*
+
+```bash
+dash-cli -testnet protx shared_update_share "<proTxHash>" 0 \
+  yZ9fa6vzAS5yz3QjA8etgA4ka1GD2X9ouq ydW7V4e5KZioLKdQkukxt2g4a2t9EnL8hN
+```
+
 ## Quorum
 
 *Added in Dash Core 0.14.0*
