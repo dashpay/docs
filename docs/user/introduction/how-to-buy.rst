@@ -90,6 +90,16 @@ CoinMarketCap
   clicking Markets allows you to view the markets available and the
   trading pairs they offer.
 
+EIDEX
+  .. image:: exchanges/eidex.png
+     :width: 200px
+     :align: right
+     :target: https://eidex.io/screener/btc-btc-to-dash-dash
+
+  https://eidex.io
+
+  EIDEX compares swap routes for Dash across many exchange providers. For a given pair and amount it ranks the providers' quotes by the estimated amount of Dash you would receive. Quotes are indicative and the final rate is set by the provider. No EIDEX account is needed, though the chosen provider may require registration or KYC, and the swap itself is completed on the provider's own site.
+
 
 .. _atms:
 
