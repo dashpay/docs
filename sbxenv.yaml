@@ -2,8 +2,7 @@ schemaVersion: "1"
 name: dash-docs
 # Claude is the default agent; the T3 kit provides remote access below.
 # Uses Node/npm bundled in the agent image; versions are not pinned here.
-# The shell image probe on 2026-10-22 had Node v22.22.1 and npm 9.2.0;
-# verify the Claude image separately. Platform docs uses Node 22 in .readthedocs.yml.
+# The shell image probe on 2026-10-22 had Node v22.22.1 and npm 9.2.0.
 agent: claude
 
 # Paths resolve relative to this file. Override a different checkout location
