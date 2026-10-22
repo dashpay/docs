@@ -44,7 +44,7 @@ Use the [`listunspent` RPC](../api/remote-procedure-calls-wallet.md#listunspent)
 
 ### 3b. All outputs
 
-Re-running the [`listunspent` RPC](../api/remote-procedure-calls-wallet.md#listunspent) with the argument "0" to also display each [unconfirmed transaction](../resources/glossary.md#unconfirmed-transaction) shows that we have two UTXOs, both with the same [TXID](../resources/glossary.md#transaction-identifiers). The first UTXO shown is a change output that `sendtoaddress` created using a new address from the key pool. The second UTXO shown is the spend to the address we provided. If we had spent those duffs to someone else, that second transaction would not be displayed in our list of UTXOs.
+Re-running the [`listunspent` RPC](../api/remote-procedure-calls-wallet.md#listunspent) with the argument "0" to also display each [unconfirmed transaction](../resources/glossary.md#unconfirmed-transaction) shows that we have two UTXOs, both with the same [TXID](../resources/glossary.md#transaction-identifiers). The output to `$NEW_ADDRESS` is the payment; the other output is change to a new address from the key pool. Output order can vary, and the change amount will be reduced by the transaction fee. If we had spent those duffs to someone else, the payment output would not be displayed in our list of UTXOs.
 
 ``` bash
 > dash-cli -regtest listunspent 0
@@ -83,12 +83,14 @@ Re-running the [`listunspent` RPC](../api/remote-procedure-calls-wallet.md#listu
 Create a new block to confirm the transaction above (takes less than a second) and clear the shell variable.
 
 ``` bash
-> dash-cli -regtest generate 1
+> dash-cli -regtest -generate 1
 
 > unset NEW_ADDRESS
 ```
 
 ## Simple Spending Script
+
+This script generates the initial 101 blocks itself, so run it with a fresh regtest wallet before mining the blocks shown in the tutorial setup.
 
 Shell script to run the previous example ([view as a GitHub Gist](https://gist.github.com/dash-docs/f40bddfc0844ec0d66d196720dc936f8#file-regtest_transaction_simple_spending_example-sh)):
 
@@ -105,7 +107,7 @@ REGTEST_CMD="dash-cli -regtest -rpcuser=$RPCUSER -rpcpassword=$RPCPWD"
 
 BLOCKTOGEN=101
 printf "\nGenerating %s block(s)...\n" $BLOCKTOGEN
-COMMAND="$REGTEST_CMD generate $BLOCKTOGEN"
+COMMAND="$REGTEST_CMD -generate $BLOCKTOGEN"
 echo $COMMAND
 GENERATED=$($COMMAND)
 echo "Generated $BLOCKTOGEN block(s)"
@@ -143,7 +145,7 @@ echo "Unspent (including unconfirmed): " $UNSPENT
 
 BLOCKTOGEN=1
 printf "\nGenerating %s block(s) to confirm...\n" $BLOCKTOGEN
-COMMAND="$REGTEST_CMD generate $BLOCKTOGEN"
+COMMAND="$REGTEST_CMD -generate $BLOCKTOGEN"
 echo $COMMAND
 GENERATED=$($COMMAND)
 echo "Generated $BLOCKTOGEN block(s)"

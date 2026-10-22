@@ -135,7 +135,7 @@ yfijhy7gYY34J2U77xFKdMwfA8k5mVnSRa
 Create the raw transaction the same way we've done in the previous subsections.
 
 ``` bash
-## Outputs - inputs = transaction fee, so always double-check your math!
+## Inputs - outputs = transaction fee, so always double-check your math!
 > dash-cli -regtest createrawtransaction '''
     [
       {
@@ -242,9 +242,7 @@ Attempt to broadcast the second transaction before we've broadcast the first tra
 ``` bash
 error code: -25
 error message:
-Missing inputs
-
-error: {"code":-22,"message":"TX rejected"}
+bad-txns-inputs-missingorspent
 ```
 
 ### 5b. First transaction
