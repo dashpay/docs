@@ -73,9 +73,20 @@ lifecycle:
           npm install -g --prefix "$HOME/.local" @openai/codex
         '
         sbx exec "$SBX_SANDBOX_NAME" -- codex --version
-    - name: Allow uv release downloads
+    - name: Configure sandbox network allowances
       command: |
-        sbx policy allow network --sandbox "$SBX_SANDBOX_NAME" releases.astral.sh:443
+        # Add future allowed destinations here (one host:port per line).
+        # uv releases, Sphinx inventories, and Read the Docs sites/subdomains.
+        for destination in \
+          releases.astral.sh:443 \
+          docs.dash.org:443 \
+          readthedocs.io:443 \
+          "**.readthedocs.io:443" \
+          readthedocs.org:443 \
+          "**.readthedocs.org:443"
+        do
+          sbx policy allow network --sandbox "$SBX_SANDBOX_NAME" "$destination" || exit 1
+        done
     - name: Install Python 3.13 and user docs dependencies
       timeout: 10m
       command: |
