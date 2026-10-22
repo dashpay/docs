@@ -167,6 +167,7 @@ _See also_
 
 * [DumpWallet](../api/remote-procedure-calls-wallet.md#dumpwallet): creates or overwrites a file with all wallet keys in a human-readable format.
 * [ImportWallet](../api/remote-procedure-calls-wallet.md#importwallet): imports private keys from a file in wallet dump file format (see the [`dumpwallet` RPC](../api/remote-procedure-calls-wallet.md#dumpwallet)). These keys will be added to the keys currently in the wallet.  This call may need to rescan all or parts of the block chain for transactions affecting the newly-added keys, which may take several minutes.
+* [RestoreWallet](../api/remote-procedure-calls-wallet.md#restorewallet): restores and loads a wallet from a backup file.
 
 ## CreateWallet
 
@@ -175,6 +176,8 @@ Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on mas
 :::
 
 The [`createwallet` RPC](../api/remote-procedure-calls-wallet.md#createwallet) creates and loads a new wallet.
+
+As of Dash Core 24.0.0, creating a wallet that is not blank and has private keys enabled fails if the `-mnemonicpassphrase` startup option is longer than 248 bytes (not characters). Passphrases of 249 to 256 bytes are only accepted if the node is started with `-allow-deprecated-long-mnemonics`, which should only be used to recover a wallet created with such a passphrase by Dash Core 19.2.0 or later.
 
 _Parameter #1---wallet name_
 
@@ -256,6 +259,7 @@ In the example above, a new directory named `new-wallet` was created in the curr
 _See also_
 
 * [LoadWallet](../api/remote-procedure-calls-wallet.md#loadwallet): loads a wallet from a wallet file or directory.
+* [RestoreWallet](../api/remote-procedure-calls-wallet.md#restorewallet): restores and loads a wallet from a backup file.
 
 ## DumpHDInfo
 
@@ -497,7 +501,6 @@ _Result---returns information about the address_
 | →<br>`isscript`            | bool             | Required<br>(exactly 1) | Set to `true` if a P2SH address; otherwise set to `false`.  Only returned if the address is in the wallet |
 | →<br>`ischange`            | bool             | Required<br>(exactly 1) | Set to `true` if the address was used for change output. |
 | →<br>`script`              | string           | Optional<br>(0 or 1)    | The output script type. Possible types include: `nonstandard`, `pubkey`, `pubkeyhash`, `scripthash`, `multisig`, `nulldata`. Only returned if `isscript` is true and the redeemscript is known. |
-| →<br>`script`              | string           | Optional<br>(0 or 1)    | Only returned for P2SH addresses belonging to this wallet. This is the type of script:<br>• `pubkey` for a P2PK script inside P2SH<br>• `pubkeyhash` for a P2PKH script inside P2SH<br>• `multisig` for a multisig script inside P2SH<br>• `nonstandard` for unknown scripts |
 | →<br>`hex`                 | string (hex)     | Optional<br>(0 or 1)    | Only returned for P2SH addresses belonging to this wallet.  This is the redeem script encoded as hex |
 | →<br>`pubkeys`             | array            | Optional<br>(0 or 1)    | Array of pubkeys associated with the known redeemscript (only if `script` is "multisig") |
 | → →<br>Pubkey              | string           | Optional<br>(0 or more) | A public key |
@@ -594,8 +597,8 @@ _Result---a list of addresses_
 | Name        | Type   | Presence                | Description                                                                         |
 | ----------- | ------ | ----------------------- | ----------------------------------------------------------------------------------- |
 | `result`    | object | Required<br>(exactly 1) | A JSON object containing all addresses belonging to the specified label as keys.    |
-| →Address    | object | Optional<br>(1 or more) | A JSON object with information about a P2PKH or P2SH address belonging to the label |
-| →→`purpose` | string | Optional<br>(1 or more) | Purpose of address (`send` for sending address, `receive` for receiving address)    |
+| →Address    | object | Optional<br>(0 or more) | A JSON object with information about a P2PKH or P2SH address belonging to the label |
+| →→`purpose` | string | Required<br>(exactly 1) | Purpose of address: `send` for sending address, `receive` for receiving address, `refund` (only found in older wallets), or `unknown` if no purpose is recorded or it is not one of these values |
 
 _Example from Dash Core 0.17.0_
 
@@ -971,7 +974,7 @@ _Parameter #3---whether or not to include the decoded transaction_
 
 | Name    | Type | Presence                | Description                                                                                                      |
 | ------- | ---- | ----------------------- | ---------------------------------------------------------------------------------------------------------------  |
-| verbose | bool | Optional<br>(exactly 1) | Whether to include a `decoded` field containing the decoded transaction (equivalent to RPC [`decoderawtransaction`](../api/remote-procedure-calls-raw-transactions.md#decoderawtransaction)) |
+| verbose | bool | Optional<br>(0 or 1) | Whether to include a `decoded` field containing the decoded transaction (equivalent to RPC [`decoderawtransaction`](../api/remote-procedure-calls-raw-transactions.md#decoderawtransaction)) |
 
 _Result---a description of the transaction_
 
@@ -991,7 +994,6 @@ _Result---a description of the transaction_
 | → <br>`blockheight`          | number (int)    | Optional<br>(0 or 1)        | The block height containing the transaction. Only returned for confirmed transactions |
 | → <br>`blockindex`           | number (int)    | Optional<br>(0 or 1)        | The index of the transaction in the block that includes it.  Only returned for confirmed transactions |
 | → <br>`blocktime`            | number (int)    | Optional<br>(0 or 1)        | The block header time (Unix epoch time) of the block on the local best block chain which includes this transaction.  Only returned for confirmed transactions |
-| → <br>`trusted`              | bool            | Optional<br>(0 or 1)        | Whether we consider the outputs of this unconfirmed transaction safe to spend. Only returned for unconfirmed transactions |
 | → <br>`txid`                 | string (hex)    | Required<br>(exactly 1)     | The TXID of the transaction, encoded as hex in RPC byte order                                                                                                                                                                                                                                                                                                                                 |
 | → <br>`walletconflicts`      | array           | Required<br>(exactly 1)     | An array containing the TXIDs of other transactions that spend the same inputs (UTXOs) as this transaction.  Array may be empty                                                                                                                                                                                                                                                               |
 | → →<br>TXID                  | string (hex)    | Optional<br>(0 or more)     | The TXID of a conflicting transaction, encoded as hex in RPC byte order                                                                                                                                                                                                                                                                                                                       |
@@ -1006,7 +1008,7 @@ _Result---a description of the transaction_
 | →<br>`details`               | array           | Required<br>(exactly 1)     | An array containing one object for each input or output in the transaction which affected the wallet                                                                                                                                                                                                                                                                                          |
 | → → <br>`involvesWatchonly`  | bool            | Optional<br>(0 or 1)        | Set to `true` if the input or output involves a watch-only address.  Otherwise not returned                                                                                                                                                                                                                                                                                                   |
 | → →<br>`address`             | string (base58) | Optional<br>(0 or 1)        | If an output, the address paid (may be someone else's address not belonging to this wallet).  If an input, the address paid in the previous output.  May be empty if the address is unknown, such as when paying to a non-standard pubkey script                                                                                                                                              |
-| → →<br>`category`            | string          | Required<br>(exactly 1)     | Set to one of the following values:<br>• `send` if sending payment normally<br>• `coinjoin` if sending CoinJoin payment<br>• `receive` if this wallet received payment in a regular transaction<br>• `generate` if a matured and spendable coinbase<br>• `immature` if a coinbase that is not spendable yet<br>• `orphan` if a coinbase from a block that's not in the local best block chain |
+| → →<br>`category`            | string          | Required<br>(exactly 1)     | Set to one of the following values:<br>• `send` if sending payment normally<br>• `coinjoin` if sending CoinJoin payment<br>• `receive` if this wallet received payment in a regular transaction<br>• `generate` if a matured and spendable coinbase<br>• `immature` if a coinbase that is not spendable yet<br>• `orphan` if a coinbase from a block that's not in the local best block chain<br>• `platform-transfer` if a Platform Transfer transaction was received |
 | → →<br>`amount`              | number (dash)   | Required<br>(exactly 1)     | A negative dash amount if sending payment; a positive dash amount if receiving payment (including coinbases)                                                                                                                                                                                                                                                                                  |
 | → →<br>`label`               | string          | Optional<br>(0 or 1)        | An optional comment for the address/transaction                                                                                                                                                                                                                                                                                                                                               |
 | → →<br>`vout`                | number (int)    | Required<br>(exactly 1)     | For an output, the output index (vout) for this output in this transaction.  For an input, the output index for the output being spent in its transaction.  Because inputs list the output indexes from previous transactions, more than one entry in the details array may have the same output index                                                                                        |
@@ -1016,6 +1018,9 @@ _Result---a description of the transaction_
 | → → →<br>Descriptor          | string          | Optional<br>(0 or more)     | The descriptor string. |
 | →<br>`hex`                   | string (hex)    | Required<br>(exactly 1)     | The transaction in serialized transaction format                                                                                                                                                                                                                                                                                                                                              |
 | →<br>`decoded`               | object          | Optional<br>(0 or 1)        | The decoded transaction (only present when `verbose` is passed), equivalent to the RPC [`decoderawtransaction` method](../api/remote-procedure-calls-raw-transactions.md#decoderawtransaction), or the RPC [`getrawtransaction` method](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction) when `verbose` is passed.                                                                                                                                                                                                                  |
+| →<br>`lastprocessedblock`    | object          | Required<br>(exactly 1)     | Hash and height of the block this information was generated on |
+| → →<br>`hash`                | string (hex)    | Required<br>(exactly 1)     | Hash of the block this information was generated on |
+| → →<br>`height`              | number (int)    | Required<br>(exactly 1)     | Height of the block this information was generated on |
 
 _Example from Dash Core 21.1.0_
 
@@ -1115,7 +1120,7 @@ _Result---information about the wallet_
 | →<br>`immature_balance`        | number (dash)    | Required<br>(exactly 1) | **Deprecated**  The total immature balance of the wallet.  This includes mining/masternode rewards that cannot be spent yet. Identical to `getbalances().mine.immature`. |
 | →<br>`txcount`                 | number (int)     | Required<br>(exactly 1) | The total number of transactions in the wallet (both spends and receives) |
 | →<br>`timefirstkey`            | number (int)     | Optional<br>(0 or 1)    | The timestamp (seconds since Unix epoch) of the oldest known key in the wallet. Legacy wallets only |
-| →<br>`keypoololdest`           | number (int)     | Required<br>(exactly 1) | The date as Unix epoch time when the oldest key in the wallet key pool was created; useful for only scanning blocks created since this date for transactions |
+| →<br>`keypoololdest`           | number (int)     | Optional<br>(0 or 1)    | The date as Unix epoch time when the oldest key in the wallet key pool was created; useful for only scanning blocks created since this date for transactions. Legacy wallets only |
 | →<br>`keypoolsize`             | number (int)     | Required<br>(exactly 1) | The number of keys in the wallet keypool |
 | →<br>`keypoolsize_hd_internal` | number (int)     | Required<br>(exactly 1) | How many new keys are pre-generated for internal use (used for change outputs and mobile coinjoin) |
 | →<br>`keys_left`               | number (int)     | Required<br>(exactly 1) | The number of unused keys left since the last automatic backup |
@@ -1125,12 +1130,12 @@ _Result---information about the wallet_
 | →<br>`hdaccountcount`          | number (int)     | Optional<br>(0 or 1)    | How many accounts of the HD chain are in this wallet. Only present if the wallet is HD |
 | →<br>`hdaccounts`              | array of objects | Optional<br>(0 or 1)    | Array of JSON objects containing account info. Only present if the wallet is HD |
 | → →<br> Account                | object           | Optional<br>(1 or more) | JSON object containing info about a specific account |
-| → → →<br>`hdaccountindex` | number (int)     | Optional<br>(0 or 1)    | The index of the account |
+| → → →<br>`hdaccountindex` | number (int)     | Required<br>(exactly 1) | The index of the account |
 | → → →<br>`hdexternalkeyindex`  | number (int)     | Optional<br>(0 or 1)    | Current external child key index |
 | → → →<br>`hdinternalkeyindex`  | number (int)     | Optional<br>(0 or 1)    | Current internal child key index |
 | → → →<br>`error`               | string           | Optional<br>(0 or 1)    | Description of why the account could not be read |
 | →<br>`avoid_reuse`             | boolean          | Optional<br>(0 or 1)    | Whether this wallet tracks clean/dirty coins in terms of reuse |
-| →<br>`scanning`                | object           | Required<br>(exactly 1) | \_Added in Dash Core 0.16.1\_\_<br><br>JSON object containing current scanning details (false (0) if no scan is in progress) |
+| →<br>`scanning`                | object           | Required<br>(exactly 1) | _Added in Dash Core 0.16.1_<br><br>JSON object containing current scanning details (false (0) if no scan is in progress) |
 | → →<br>`duration`              | number (int)     | Optional<br>(0 or 1)    | Elapsed seconds since scan start |
 | → →<br>`progress`              | number (int)     | Optional<br>(0 or 1)    | Scanning progress percentage 0.0 to 1.0 |
 | →<br>`private_keys_enabled`    | boolean          | Optional<br>(0 or 1)    | `false` if private keys are disabled for this wallet (enforced watch-only wallet) |
@@ -1324,7 +1329,7 @@ _Parameter #2---index_
 
 | Name  | Type         | Presence             | Description                                                                    |
 | ----- | ------------ | -------------------- | ------------------------------------------------------------------------------ |
-| Index | number (int) | Optional<br>(0 or 1) | Rescan the wallet for transactions starting from this block index (default: 0) |
+| Index | number (int) | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>Rescan the wallet for transactions starting from this block index (default: 0). Must be non-negative |
 
 _Result---`null` on success_
 
@@ -1818,7 +1823,7 @@ _Parameter #1---purpose_
 
 | Name    | Type   | Presence             | Description                                                                                                         |
 | ------- | ------ | -------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Purpose | string | Optional<br>(0 or 1) | Address purpose to list labels for (`send`, `receive`). An empty string is the same as not providing this argument. |
+| Purpose | string | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>Address purpose to list labels for (`send`, `receive`, `refund`). An empty string is the same as not providing this argument. Any other value now returns an error. |
 
 _Result---a list of labels_
 
@@ -2105,7 +2110,7 @@ _Parameter #4---include_removed_
 
 | Name            | Type | Presence                   | Description                                                                                                           |
 | --------------- | ---- | -------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| include_removed | bool | Optional<br>Default=`true` | Show transactions that were removed due to a reorg in the \\removed\" array (not guaranteed to work on pruned nodes)" |
+| include_removed | bool | Optional<br>(0 or 1)       | Show transactions that were removed due to a reorg in the `removed` array (not guaranteed to work on pruned nodes). Default is `true` |
 
 _Parameter #5---include_change_
 
@@ -2126,33 +2131,35 @@ _Parameter #6---label_
 | `result`                     | object          | Required<br>(exactly 1)     | An object containing an array of transactions and the lastblock field                                                                                                                                                                                                                                                                                                                         |
 | →<br>`transactions`          | array           | Required<br>(exactly 1)     | An array of objects each describing a particular **payment** to or from this wallet.  The objects in this array do not describe an actual transactions, so more than one object in this array may come from the same transaction.  This array may be empty                                                                                                                                    |
 | → →<br>Payment               | object          | Optional<br>(0 or more)     | An payment which did not appear in the specified block or an earlier block                                                                                                                                                                                                                                                                                                                    |
-| → <br>`involvesWatchonly`    | bool            | Optional<br>(0 or 1)        | Set to `true` if the payment involves a watch-only address.  Otherwise not returned                                                                                                                                                                                                                                                                                                           |
-| → <br>`address`              | string (base58) | Optional<br>(0 or 1)        | The address paid in this payment, which may be someone else's address not belonging to this wallet.  May be empty if the address is unknown, such as when paying to a non-standard pubkey script                                                                                                                                                                                              |
-| → <br>`category`             | string          | Required<br>(exactly 1)     | Set to one of the following values:<br>• `send` if sending payment normally<br>• `coinjoin` if sending CoinJoin payment<br>• `receive` if this wallet received payment in a regular transaction<br>• `generate` if a matured and spendable coinbase<br>• `immature` if a coinbase that is not spendable yet<br>• `orphan` if a coinbase from a block that's not in the local best block chain |
-| → <br>`amount`               | number (dash)   | Required<br>(exactly 1)     | A negative dash amount if sending payment; a positive dash amount if receiving payment (including coinbases)                                                                                                                                                                                                                                                                                  |
-| → <br>`vout`                 | number (int)    | Required<br>(exactly 1)     | For an output, the output index (vout) for this output in this transaction.  For an input, the output index for the output being spent in its transaction.  Because inputs list the output indexes from previous transactions, more than one entry in the details array may have the same output index                                                                                        |
-| → <br>`fee`                  | number (dash)   | Optional<br>(0 or 1)        | If sending payment, the fee paid as a negative dash value.  May be `0`. Not returned if receiving payment                                                                                                                                                                                                                                                                                     |
-| → <br>`confirmations`        | number (int)    | Required<br>(exactly 1)     | The number of confirmations the transaction has received.  Will be `0` for unconfirmed and `-1` for conflicted                                                                                                                                                                                                                                                                                |
-| →<br>`instantlock`          | bool           | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock) |
-| →<br>`instantlock_internal` | bool           | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock |
-| → <br>`chainlock`            | bool            | Required<br>(exactly 1)     |  If set to `true`, this transaction is in a block that is locked (not susceptible to a chain re-org)                                                                                                                                                                                                                                                       |
-| → <br>`generated`            | bool            | Optional<br>(0 or 1)        | Set to `true` if the transaction is a coinbase.  Not returned for regular transactions                                                                                                                                                                                                                                                                                                        |
-| → <br>`platform-transfer`    | bool            | Optional<br>(0 or 1)        | Only present if the transaction is a Platform Transfer. |
-| → <br>`blockhash`            | string (hex)    | Optional<br>(0 or 1)        | The hash of the block on the local best block chain which includes this transaction, encoded as hex in RPC byte order.  Only returned for confirmed transactions                                                                                                                                                                                                                              |
-| → <br>`blockheight`            | number (int)    | Optional<br>(0 or 1)        | The block height containing the transaction.                                                                                                                                                                                                                              |
-| → <br>`blockindex`           | number (int)    | Optional<br>(0 or 1)        | The index of the transaction in the block that includes it.  Only returned for confirmed transactions                                                                                                                                                                                                                                                                                         |
-| → <br>`blocktime`            | number (int)    | Optional<br>(0 or 1)        | The block header time (Unix epoch time) of the block on the local best block chain which includes this transaction.  Only returned for confirmed transactions                                                                                                                                                                                                                                 |
-| → <br>`txid`                 | string (hex)    | Required<br>(exactly 1)     | The TXID of the transaction, encoded as hex in RPC byte order                                                                                                                                                                                                                                                                                                                                 |
-| → <br>`walletconflicts`      | array           | Required<br>(exactly 1)     | An array containing the TXIDs of other transactions that spend the same inputs (UTXOs) as this transaction.  Array may be empty                                                                                                                                                                                                                                                               |
-| → →<br>TXID                  | string (hex)    | Optional<br>(0 or more)     | The TXID of a conflicting transaction, encoded as hex in RPC byte order                                                                                                                                                                                                                                                                                                                       |
-| → <br>`time`                 | number (int)    | Required<br>(exactly 1)     | A Unix epoch time when the transaction was added to the wallet                                                                                                                                                                                                                                                                                                                                |
-| → <br>`timereceived`         | number (int)    | Required<br>(exactly 1)     | A Unix epoch time when the transaction was detected by the local node, or the time of the block on the local best block chain that included the transaction                                                                                                                                                                                                                                   |
-| → <br>`abandoned`            | bool            | Optional<br>(0 or 1)        | `true` if the transaction has been abandoned (inputs are respendable). Only available for the 'send' category of transactions.                                                                                                                                                                                                                                                                |
-| → <br>`comment`              | string          | Optional<br>(0 or 1)        | For transaction originating with this wallet, a locally-stored comment added to the transaction.  Only returned if a comment was added                                                                                                                                                                                                                                                        |
-| → <br>`to`                   | string          | Optional<br>(0 or 1)        | For transaction originating with this wallet, a locally-stored comment added to the transaction identifying who the transaction was sent to.  Only returned if a comment-to was added                                                                                                                                                                                                         |
-| → <br>`DS`                   | string          | Optional<br>(0 or 1)        | Set to "1" if the transaction is a CoinJoin send. |
-| → <br>`parent_descs`         | array           | Optional<br>(0 or 1)        | **Added in Dash Core 24.0.0**<br>Only if 'category' is 'received'. List of parent descriptors for the scriptPubKey of this coin. |
-| → →<br>Descriptor            | string          | Optional<br>(0 or more)     | The descriptor string. |
+| → → →<br>`involvesWatchonly`    | bool            | Optional<br>(0 or 1)        | Set to `true` if the payment involves a watch-only address.  Otherwise not returned                                                                                                                                                                                                                                                                                                           |
+| → → →<br>`address`              | string (base58) | Optional<br>(0 or 1)        | The address paid in this payment, which may be someone else's address not belonging to this wallet.  May be empty if the address is unknown, such as when paying to a non-standard pubkey script                                                                                                                                                                                              |
+| → → →<br>`category`             | string          | Required<br>(exactly 1)     | Set to one of the following values:<br>• `send` if sending payment normally<br>• `coinjoin` if sending CoinJoin payment<br>• `receive` if this wallet received payment in a regular transaction<br>• `generate` if a matured and spendable coinbase<br>• `immature` if a coinbase that is not spendable yet<br>• `orphan` if a coinbase from a block that's not in the local best block chain<br>• `platform-transfer` if a Platform Transfer transaction was received |
+| → → →<br>`amount`               | number (dash)   | Required<br>(exactly 1)     | A negative dash amount if sending payment; a positive dash amount if receiving payment (including coinbases)                                                                                                                                                                                                                                                                                  |
+| → → →<br>`vout`                 | number (int)    | Required<br>(exactly 1)     | For an output, the output index (vout) for this output in this transaction.  For an input, the output index for the output being spent in its transaction.  Because inputs list the output indexes from previous transactions, more than one entry in the details array may have the same output index                                                                                        |
+| → → →<br>`fee`                  | number (dash)   | Optional<br>(0 or 1)        | If sending payment, the fee paid as a negative dash value.  May be `0`. Not returned if receiving payment                                                                                                                                                                                                                                                                                     |
+| → → →<br>`confirmations`        | number (int)    | Required<br>(exactly 1)     | The number of confirmations the transaction has received.  Will be `0` for unconfirmed and `-1` for conflicted                                                                                                                                                                                                                                                                                |
+| → → →<br>`instantlock`          | bool           | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock) |
+| → → →<br>`instantlock_internal` | bool           | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock |
+| → → →<br>`chainlock`            | bool            | Required<br>(exactly 1)     |  If set to `true`, this transaction is in a block that is locked (not susceptible to a chain re-org)                                                                                                                                                                                                                                                       |
+| → → →<br>`generated`            | bool            | Optional<br>(0 or 1)        | Set to `true` if the transaction is a coinbase.  Not returned for regular transactions                                                                                                                                                                                                                                                                                                        |
+| → → →<br>`platform-transfer`    | bool            | Optional<br>(0 or 1)        | Only present if the transaction is a Platform Transfer. |
+| → → →<br>`trusted`              | bool            | Optional<br>(0 or 1)        | Whether we consider the transaction to be trusted and safe to spend from. Only present when the transaction has 0 confirmations (or negative confirmations, if conflicted) |
+| → → →<br>`blockhash`            | string (hex)    | Optional<br>(0 or 1)        | The hash of the block on the local best block chain which includes this transaction, encoded as hex in RPC byte order.  Only returned for confirmed transactions                                                                                                                                                                                                                              |
+| → → →<br>`blockheight`            | number (int)    | Optional<br>(0 or 1)        | The block height containing the transaction.                                                                                                                                                                                                                              |
+| → → →<br>`blockindex`           | number (int)    | Optional<br>(0 or 1)        | The index of the transaction in the block that includes it.  Only returned for confirmed transactions                                                                                                                                                                                                                                                                                         |
+| → → →<br>`blocktime`            | number (int)    | Optional<br>(0 or 1)        | The block header time (Unix epoch time) of the block on the local best block chain which includes this transaction.  Only returned for confirmed transactions                                                                                                                                                                                                                                 |
+| → → →<br>`txid`                 | string (hex)    | Required<br>(exactly 1)     | The TXID of the transaction, encoded as hex in RPC byte order                                                                                                                                                                                                                                                                                                                                 |
+| → → →<br>`walletconflicts`      | array           | Required<br>(exactly 1)     | An array containing the TXIDs of other transactions that spend the same inputs (UTXOs) as this transaction.  Array may be empty                                                                                                                                                                                                                                                               |
+| → → → →<br>TXID                  | string (hex)    | Optional<br>(0 or more)     | The TXID of a conflicting transaction, encoded as hex in RPC byte order                                                                                                                                                                                                                                                                                                                       |
+| → → →<br>`time`                 | number (int)    | Required<br>(exactly 1)     | A Unix epoch time when the transaction was added to the wallet                                                                                                                                                                                                                                                                                                                                |
+| → → →<br>`timereceived`         | number (int)    | Required<br>(exactly 1)     | A Unix epoch time when the transaction was detected by the local node, or the time of the block on the local best block chain that included the transaction                                                                                                                                                                                                                                   |
+| → → →<br>`abandoned`            | bool            | Optional<br>(0 or 1)        | `true` if the transaction has been abandoned (inputs are respendable). Only available for the 'send' category of transactions.                                                                                                                                                                                                                                                                |
+| → → →<br>`comment`              | string          | Optional<br>(0 or 1)        | For transaction originating with this wallet, a locally-stored comment added to the transaction.  Only returned if a comment was added                                                                                                                                                                                                                                                        |
+| → → →<br>`to`                   | string          | Optional<br>(0 or 1)        | For transaction originating with this wallet, a locally-stored comment added to the transaction identifying who the transaction was sent to.  Only returned if a comment-to was added                                                                                                                                                                                                         |
+| → → →<br>`DS`                   | string          | Optional<br>(0 or 1)        | Set to "1" if the transaction is a CoinJoin send. |
+| → → →<br>`parent_descs`         | array           | Optional<br>(0 or 1)        | **Added in Dash Core 24.0.0**<br>Only if 'category' is 'received'. List of parent descriptors for the scriptPubKey of this coin. |
+| → → → →<br>Descriptor            | string          | Optional<br>(0 or more)     | The descriptor string. |
+| → → →<br>`label`                | string          | Optional<br>(0 or 1)        | A comment for the address/transaction, if any |
 | →<br>`removed`               | array           | Optional<br>(0 or 1)        | Structure is the same as `transactions`. Only present if `include_removed` is `true`.<br>_Note_: transactions that were re-added in the active chain will appear as-is in this array, and may thus have a positive confirmation count.                                                                                                                                                        |
 | →<br>`lastblock`             | string (hex)    | Required<br>(exactly 1)     | The header hash of the block with the number of confirmations specified in the _target confirmations_ parameter, encoded as hex in RPC byte order                                                                                                                                                                                                                                             |
 
@@ -2265,15 +2272,15 @@ _Result---payment details_
 | `result`                    | array           | Required<br>(exactly 1) | An array containing objects, with each object describing a **payment** or internal accounting entry (not a transaction).  More than one object in this array may come from a single transaction.  Array may be empty                                                                                                                                                               |
 | →<br>Payment                | object          | Optional<br>(0 or more) | A payment or internal accounting entry                                                                                                                                                                                                                                                                                                                                             |
 | → →<br>`address`            | string (base58) | Optional<br>(0 or 1)    | The address paid in this payment, which may be someone else's address not belonging to this wallet.  May be empty if the address is unknown, such as when paying to a non-standard pubkey script or if this is in the _move_ category                                                                                                                                              |
-| → →<br>`category`           | string          | Required<br>(exactly 1) | Set to one of the following values:<br>• `send` if sending payment<br>• `coinjoin` if sending CoinJoin funds<br>• `receive` if this wallet received payment in a regular transaction<br>• `generate` if a matured and spendable coinbase<br>• `immature` if a coinbase that is not spendable yet<br>• `orphan` if a coinbase from a block that's not in the local best block chain |
+| → →<br>`category`           | string          | Required<br>(exactly 1) | Set to one of the following values:<br>• `send` if sending payment<br>• `coinjoin` if sending CoinJoin funds<br>• `receive` if this wallet received payment in a regular transaction<br>• `generate` if a matured and spendable coinbase<br>• `immature` if a coinbase that is not spendable yet<br>• `orphan` if a coinbase from a block that's not in the local best block chain<br>• `platform-transfer` if a Platform Transfer transaction was received |
 | → →<br>`amount`             | number (dash)   | Required<br>(exactly 1) | A negative dash amount if sending payment; a positive dash amount if receiving payment (including coinbases)                                                                                                                                                                                                                                                                       |
 | → →<br>`label`              | string          | Optional<br>(0 or 1)    | A comment for the address/transaction                                                                                                                                                                                                                                                                                                                                              |
 | → →<br>`vout`               | number (int)    | Optional<br>(0 or 1)    | For an output, the output index (vout) for this output in this transaction.  For an input, the output index for the output being spent in its transaction.  Because inputs list the output indexes from previous transactions, more than one entry in the details array may have the same output index.  Not returned for _move_ category payments                                 |
 | → →<br>`fee`                | number (dash)   | Optional<br>(0 or 1)    | If sending payment, the fee paid as a negative dash value.  May be `0`. Not returned if receiving payment or for _move_ category payments                                                                                                                                                                                                                                          |
 | → →<br>`confirmations`      | number (int)    | Optional<br>(0 or 1)    | The number of confirmations the transaction has received.  Will be `0` for unconfirmed and `-1` for conflicted.  Not returned for _move_ category payments                                                                                                                                                                                                                         |
-| →<br>`instantlock`          | bool           | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock) |
-| →<br>`instantlock_internal` | bool           | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock |
-| <br>`chainlock`             | bool            | Required<br>(exactly 1) |  If set to `true`, this transaction is in a block that is locked (not susceptible to a chain re-org)                                                                                                                                                                                                                                            |
+| → →<br>`instantlock`          | bool           | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock) |
+| → →<br>`instantlock_internal` | bool           | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock |
+| → →<br>`chainlock`             | bool            | Required<br>(exactly 1) |  If set to `true`, this transaction is in a block that is locked (not susceptible to a chain re-org)                                                                                                                                                                                                                                            |
 | → →<br>`generated`          | bool            | Optional<br>(0 or 1)    | **Updated in Dash Core 23.0.0**<br>Set to `true` if the transaction's only input is a coinbase one. Only present if the transaction's only input is a coinbase one. |
 | → →<br>`platform-transfer`  | bool            | Optional<br>(0 or 1)    | Only present if the transaction is a Platform Transfer. |
 | → →<br>`trusted`            | bool            | Optional<br>(0 or 1)    | Indicates whether we consider the outputs of this unconfirmed transaction safe to spend.  Only returned for unconfirmed transactions                                                                                                                                                                                                                                               |
@@ -2291,7 +2298,6 @@ _Result---payment details_
 | → →<br>`DS`                 | string          | Optional<br>(0 or 1)    | Set to "1" if the transaction is a CoinJoin send. |
 | → →<br>`parent_descs`       | array           | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Only if 'category' is 'received'. List of parent descriptors for the scriptPubKey of this coin. |
 | → → →<br>Descriptor         | string          | Optional<br>(0 or more) | The descriptor string. |
-| → →<br>`otheraccount`       | string          | Optional<br>(0 or 1)    | This is the account the dash were moved from or moved to, as indicated by a negative or positive _amount_ field in this payment.  Only returned by _move_ category payments                                                                                                                                                                                                        |
 | → →<br>`abandoned`          | bool            | Optional<br>(0 or 1)    | _Added in Bitcoin Core 0.12.1_<br><br>Indicates if a transaction is was abandoned:<br>• `true` if it was abandoned (inputs are respendable)<br>• `false`  if it was not abandoned<br>Only returned by _send_ category payments                                                                                                                                                     |
 
 _Example from Dash Core 0.17.0_
@@ -2367,7 +2373,7 @@ _Parameter #4---include unsafe outputs_
 
 | Name           | Type | Presence                    | Description                                                                                                |
 | -------------- | ---- | --------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Include Unsafe | bool | Optional<br>(false or true) | Include outputs that are not safe to spend . See description of `safe` attribute below.  Default is `true` |
+| Include Unsafe | bool | Optional<br>(0 or 1)        | Include outputs that are not safe to spend . See description of `safe` attribute below.  Default is `true` |
 
 _Parameter #5---query options_
 
@@ -2384,9 +2390,10 @@ _Result---the list of unspent outputs_
 | → →<br>`txid`            | string (hex)    | Required<br>(exactly 1)  | The TXID of the transaction containing the output, encoded as hex in RPC byte order                                                                                                                                                                    |
 | → →<br>`vout`            | number (int)    | Required<br>(exactly 1)  | The output index number (vout) of the output within its containing transaction                                                                                                                                                                         |
 | → →<br>`address`         | string (base58) | Optional<br>(0 or 1)     | The P2PKH or P2SH address the output paid.  Only returned for P2PKH or P2SH output scripts                                                                                                                                                             |
+| → →<br>`label`           | string          | Optional<br>(0 or 1)     | The associated label, or `""` for the default label |
 | → →<br>`scriptPubKey`    | string (hex)    | Required<br>(exactly 1)  | The output script paid, encoded as hex                                                                                                                                                                                                                 |
 | → →<br>`redeemScript`    | string (hex)    | Optional<br>(0 or 1)     | If the output is a P2SH whose script belongs to this wallet, this is the redeem script                                                                                                                                                                 |
-| → →<br>`amount`          | number (int)    | Required<br>(exactly 1)  | The amount paid to the output in dash                                                                                                                                                                                                                  |
+| → →<br>`amount`          | number (dash)   | Required<br>(exactly 1)  | The amount paid to the output in dash                                                                                                                                                                                                                  |
 | → →<br>`confirmations`   | number (int)    | Required<br>(exactly 1)  | The number of confirmations received for the transaction containing this output                                                                                                                                                                        |
 | → →<br>`ancestorcount`   | number (int)    | Optional<br>(0 or 1)     | **Added in Dash Core 23.0.0**<br>The number of in-mempool ancestor transactions, including this one (if transaction is in the mempool) |
 | → →<br>`ancestorsize`    | number (int)    | Optional<br>(0 or 1)     | **Added in Dash Core 23.0.0**<br>The virtual transaction size of in-mempool ancestors, including this one (if transaction is in the mempool) |
@@ -2564,7 +2571,7 @@ _Result---operation status_
 | Name           | Type   | Presence                | Description                                                                      |
 | -------------- | ------ | ----------------------- | -------------------------------------------------------------------------------- |
 | `result`       | object | Required<br>(exactly 1) | An object containing the wallet name or warning message related to the operation |
-| →<br>`name`    | string | Required                | The wallet name if loaded successfully                                           |
+| →<br>`name`    | string | Required<br>(exactly 1) | The wallet name if loaded successfully                                           |
 | →<br>`warning` | string | Optional<br>(0 or 1)    | **Deprecated in Dash Core 24.0.0**, returned only if config option `-deprecatedrpc=walletwarningfield` is passed<br>Warning messages, if any, related to loading the wallet. Multiple messages will be delimited by newlines. |
 | →<br>`warnings` | array | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Warning messages, if any, related to loading the wallet. |
 | → →<br>Warning | string | Optional<br>(0 or more) | A warning message |
@@ -2587,6 +2594,7 @@ Result:
 _See also_
 
 * [CreateWallet](../api/remote-procedure-calls-wallet.md#createwallet): creates and loads a new wallet.
+* [RestoreWallet](../api/remote-procedure-calls-wallet.md#restorewallet): restores and loads a wallet from a backup file.
 * [UnloadWallet](../api/remote-procedure-calls-wallet.md#unloadwallet): unloads the specified wallet.
 
 ## LockUnspent
@@ -2731,7 +2739,7 @@ The migrated wallet has the same name as the original wallet and contains all of
 * `<name>_watchonly` contains all of the watch-only scripts
 * `<name>_solvables` contains any scripts which the wallet knows but is not watching the corresponding P2SH scripts
 
-Migration is a best-effort process, and some unusual script configurations may not be captured. Before migrating, the RPC creates a backup of the wallet named `<wallet name>-<timestamp>.legacy.bak` in the wallet's directory. If the migration is incorrect, the backup can be restored using the `restorewallet` RPC. Encrypted wallets must have the passphrase provided as an argument to this call.
+Migration is a best-effort process, and some unusual script configurations may not be captured. Before migrating, the RPC creates a backup of the wallet named `<wallet name>-<timestamp>.legacy.bak` in the wallet's directory. If the migration is incorrect, the backup can be restored using the [`restorewallet` RPC](../api/remote-procedure-calls-wallet.md#restorewallet). Encrypted wallets must have the passphrase provided as an argument to this call.
 
 _Parameter #1---wallet name_
 
@@ -2765,6 +2773,7 @@ _See also_
 
 * [CreateWallet](../api/remote-procedure-calls-wallet.md#createwallet): creates and loads a new wallet.
 * [ListDescriptors](../api/remote-procedure-calls-wallet.md#listdescriptors): lists descriptors imported into a descriptor-enabled wallet.
+* [RestoreWallet](../api/remote-procedure-calls-wallet.md#restorewallet): restores and loads a wallet from a backup file.
 
 ## NewKeyPool
 
@@ -2883,6 +2892,58 @@ _See also_
 
 * [AbortRescan](../api/remote-procedure-calls-wallet.md#abortrescan): stops current wallet rescan.
 
+## RestoreWallet
+
+:::{versionadded} 21.0.0
+:::
+
+:::{note}
+Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on masternodes**).
+:::
+
+The [`restorewallet` RPC](../api/remote-procedure-calls-wallet.md#restorewallet) restores and loads a wallet from a backup file. The backup file is copied into a new wallet named `wallet_name` in the wallet directory, and the wallet is then loaded. The call fails if the backup file does not exist or if a wallet with that name already exists.
+
+As of Dash Core 24.0.0, the rescan is significantly faster if a descriptor wallet is restored and block filters are available (using startup option `-blockfilterindex=1`).
+
+_Parameter #1---wallet name_
+
+| Name          | Type   | Presence                | Description |
+| ------------- | ------ | ----------------------- | ----------- |
+| `wallet_name` | string | Required<br>(exactly 1) | The name that will be applied to the restored wallet |
+
+_Parameter #2---backup file_
+
+| Name          | Type   | Presence                | Description |
+| ------------- | ------ | ----------------------- | ----------- |
+| `backup_file` | string | Required<br>(exactly 1) | The backup file that will be used to restore the wallet |
+
+_Parameter #3---load on startup_
+
+| Name              | Type | Presence             | Description |
+| ----------------- | ---- | -------------------- | ----------- |
+| `load_on_startup` | bool | Optional<br>(0 or 1) | Save wallet name to persistent settings and load on startup. True to add wallet to startup list, false to remove, null to leave unchanged. |
+
+_Result---wallet name and any warnings_
+
+| Name            | Type   | Presence                | Description |
+| --------------- | ------ | ----------------------- | ----------- |
+| `result`        | object | Required<br>(exactly 1) | An object containing the wallet name and any warnings related to the operation |
+| →<br>`name`     | string | Required<br>(exactly 1) | The wallet name if restored successfully |
+| →<br>`warning`  | string | Optional<br>(0 or 1)    | **Deprecated in Dash Core 24.0.0**, returned only if config option `-deprecatedrpc=walletwarningfield` is passed<br>Warning messages, if any, related to restoring the wallet. Multiple messages will be delimited by newlines. |
+| →<br>`warnings` | array  | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Warning messages, if any, related to restoring the wallet. |
+| → →<br>Warning  | string | Optional<br>(0 or more) | A warning message |
+
+_Example from Dash Core 24.0.0_
+
+```bash
+dash-cli -testnet restorewallet "restored-wallet" /tmp/backup.dat
+```
+
+_See also_
+
+* [BackupWallet](../api/remote-procedure-calls-wallet.md#backupwallet): safely copies `wallet.dat` to the specified file, which can be a directory or a path with filename.
+* [LoadWallet](../api/remote-procedure-calls-wallet.md#loadwallet): loads a wallet from a wallet file or directory.
+
 ## ScanTXOutset
 
 :::{attention}
@@ -2991,13 +3052,13 @@ _Parameter #2---conf_target_
 
 | Name         | Type          | Presence             | Description                               |
 | ------------ | ------------- | -------------------- | ----------------------------------------- |
-| conf_target  | numeric (int) | Optional<br>(0 or 1) | Confirmation target (in blocks) for the transaction, or fee rate (for DASH/kB or duff/B estimate modes). Uses wallet's default configuration. |
+| conf_target  | numeric (int) | Optional<br>(0 or 1) | Confirmation target (in blocks) for the transaction. Uses wallet's default configuration. |
 
 _Parameter #3---estimate_mode_
 
 | Name           | Type   | Presence             | Description                                                                                                               |
 | -------------- | ------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| estimate_mode  | string | Optional<br>(0 or 1) | The fee estimate mode. Must be one of: `unset`, `economical`, `conservative`, `DASH/kB`, `duff/B`. Default is `unset`.   |
+| estimate_mode  | string | Optional<br>(0 or 1) | The fee estimate mode. Must be one of (case insensitive): `unset`, `economical`, `conservative`. Default is `unset`.   |
 
 _Parameter #4---Fee rate_
 
@@ -3015,16 +3076,18 @@ _Parameter #5---Options_
 | → <br>`minconf`             | numeric (int)      | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>If `add_inputs` is specified, require inputs with at least this many confirmations. Defaults to `0`. |
 | → <br>`maxconf`             | numeric (int)      | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>If `add_inputs` is specified, require inputs with at most this many confirmations. |
 | → <br>`add_to_wallet`       | bool               | Optional<br>(0 or 1)    | If `false`, returns the transaction as a serialized hex string and does not add it to the wallet or broadcast it. Defaults to `true`. |
-| → <br>`change_address`      | string (hex)       | Optional<br>(0 or 1)    | **Updated in Dash Core 23.0.0**<br>The Dash address to receive the change. If not set, the address is chosen automatically. |
+| → <br>`change_address`      | string             | Optional<br>(0 or 1)    | **Updated in Dash Core 23.0.0**<br>The Dash address to receive the change. If not set, the address is chosen automatically. |
 | → <br>`change_position`     | numeric (int)      | Optional<br>(0 or 1)    | The index of the change output. |
-| → <br>`conf_target`         | numeric (int)      | Optional<br>(0 or 1)    | Confirmation target (in blocks) for the transaction, or fee rate for DASH/kB or duff/B estimate modes. Defaults to wallet's default configuration. |
-| → <br>`estimate_mode`       | string             | Optional<br>(0 or 1)    | The fee estimate mode. Must be one of: `unset`, `economical`, `conservative`, `DASH/kB`, `duff/B`. Default is `unset`. |
+| → <br>`conf_target`         | numeric (int)      | Optional<br>(0 or 1)    | Confirmation target (in blocks) for the transaction. Defaults to wallet's default configuration. |
+| → <br>`estimate_mode`       | string             | Optional<br>(0 or 1)    | The fee estimate mode. Must be one of (case insensitive): `unset`, `economical`, `conservative`. Default is `unset`. |
+| → <br>`fee_rate`            | numeric or string  | Optional<br>(0 or 1)    | **Added in Dash Core 22.0.0**<br>Specify a fee rate in duff/B. If not set, falls back to wallet fee estimation |
 | → <br>`include_watching`    | bool               | Optional<br>(0 or 1)    | Also select inputs which are watch only. Only solvable inputs can be used. Watch-only destinations are solvable if the public key and/or output script was imported, e.g. with `importpubkey` or `importmulti` with the 'pubkeys' or 'desc' field. |
 | → `inputs`                  | array              | Optional<br>(0 or 1)    | Specify inputs instead of adding them automatically. Array of JSON objects |
 | → → Input                   | object             | Required<br>(1 or more) | Each object in the array represents an input of the transaction.           |
 | → → →<br>`txid`             | string (hex)       | Required<br>(exactly 1) | The transaction ID of the outpoint to be spent.                            |
 | → → →<br>`vout`             | numeric (int)      | Required<br>(exactly 1) | The output number (vout) of the outpoint to be spent. |
 | → → →<br>`sequence`         | numeric (int)      | Optional<br>(0 or 1)    | The sequence number to use for the input. |
+| → → →<br>`size`             | numeric (int)      | Optional<br>(0 or 1)    | **Added in Dash Core 23.1.0**<br>The maximum size for this input, including the size of the outpoint and sequence number. Note that signature sizes are not guaranteed to be consistent, so the maximum DER signatures size of 73 bytes should be used when considering ECDSA signatures. Default: calculated from wallet and solving data |
 | → <br>`locktime`            | numeric            | Optional<br>(0 or 1)    | Sets the transaction's locktime. If non-zero, it also activates the inputs. Default is `0`. |
 | → <br>`lock_unspents`       | bool               | Optional<br>(0 or 1)    | If `true`, locks the selected unspent outputs. Defaults to `false`. |
 | → <br>`psbt`                | bool               | Optional<br>(0 or 1)    | If `true`, always returns the transaction as a PSBT. Implies `add_to_wallet` is `false`. Default is automatic.|
@@ -3049,16 +3112,16 @@ _Result---transaction details_
 | → `hex`       | string (hex)       | Optional<br>(0 or 1)    | If `add_to_wallet` is false, the hex-encoded raw transaction with signatures. |
 | → `psbt`      | string             | Optional<br>(0 or 1)    | If more signatures are needed, or if `add_to_wallet` is false, the base64-encoded (partially) signed transaction. |
 
-_Examples from Dash Core 21.0.0_
+_Examples from Dash Core 24.0.0_
 
 ```bash
 # Send with a fee rate of 1 duff/B
-dash-cli send '{"XunLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPw0": 0.1}' 1 "duff/B"
+dash-cli send '{"XunLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPw0": 0.1}' null "unset" 1
 ```
 
 ```bash
 # Create a transaction that should confirm in the next block, specify a particular input, and return result without adding to wallet or broadcasting
-dash-cli send '{"XunLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPw0": 0.1}' 1 "economical" '{"add_to_wallet": false, "inputs": [{"txid":"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0", "vout":1}]}'
+dash-cli send '{"XunLY9Tf7Zsef8gMGL2fhWA9ZmMjt4KPw0": 0.1}' 1 "economical" null '{"add_to_wallet": false, "inputs": [{"txid":"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0", "vout":1}]}'
 ```
 
 _See also_
@@ -3262,7 +3325,7 @@ _Parameter #10---fee estimate mode_
 
 | Name | Type | Presence | Description |
 | ---- | ---- | -------- | ----------- |
-| `estimate_mode` | string | Optional<br>(0 or 1) | The fee estimate mode, must be one of:<br>`unset`<br>`economical`<br>`conservative`<br>`DASH/kB`<br>`duff/B` |
+| `estimate_mode` | string | Optional<br>(0 or 1) | The fee estimate mode, must be one of (case insensitive):<br>`unset`<br>`economical`<br>`conservative` |
 
 _Parameter #11---fee rate_
 
@@ -3408,7 +3471,7 @@ _Parameter #9---fee estimate mode_
 
 | Name | Type | Presence | Description |
 | ---- | ---- | -------- | ----------- |
-| `estimate_mode` | string | Optional<br>(0 or 1) | The fee estimate mode, must be one of:<br>`unset`<br>`economical`<br>`conservative`<br>`DASH/kB`<br>`duff/B` |
+| `estimate_mode` | string | Optional<br>(0 or 1) | The fee estimate mode, must be one of (case insensitive):<br>`unset`<br>`economical`<br>`conservative` |
 
 _Parameter #10---avoids partial respends_
 
@@ -3804,9 +3867,9 @@ _Parameter #2---unspent transaction output details_
 
 _Parameter #3---signature hash type_
 
-| Name    | Type   | Presence             | Description                                                                                                                                                                                                                                                                                                         |                      |                            |                |
-| :------ | :----- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------- | :------------------------- | :------------- |
-| SigHash | string | Optional<br>(0 or 1) | The type of signature hash to use for all of the signatures performed.  (You must use separate calls to the [`signrawtransactionwithwallet` RPC](#signrawtransactionwithwallet) if you want to use different signature hash types for different signatures.  The allowed values are: `ALL`, `NONE`, `SINGLE`, `ALL \| ANYONECANPAY`,`NONE \| ANYONECANPAY`, and`SINGLE \| ANYONECANPAY` |
+| Name    | Type   | Presence             | Description |
+| :------ | :----- | :------------------- | :---------- |
+| SigHash | string | Optional<br>(0 or 1) | The type of signature hash to use for all of the signatures performed.  (You must use separate calls to the [`signrawtransactionwithwallet` RPC](#signrawtransactionwithwallet) if you want to use different signature hash types for different signatures.  The allowed values are: `ALL`, `NONE`, `SINGLE`, `ALL \| ANYONECANPAY`, `NONE \| ANYONECANPAY`, and `SINGLE \| ANYONECANPAY` |
 
 _Result---the transaction with any signatures made_
 
@@ -3907,7 +3970,7 @@ _Parameter #1---wallet name_
 
 | Name     | Type   | Presence                | Description                       |
 | -------- | ------ | ----------------------- | --------------------------------- |
-| Filename | string | Required<br>(exactly 1) | The name of the wallet to unload. If provided both here and in the RPC endpoint, the two must be identical. |
+| Filename | string | Optional<br>(0 or 1)    | The name of the wallet to unload. If provided both here and in the RPC endpoint, the two must be identical. Default: the wallet name from the RPC endpoint |
 
 _Parameter #2---load of startup_
 
@@ -3953,15 +4016,15 @@ _Parameters_
 | Name                 | Type    | Presence             | Description                                                                                                                                                          |
 | -------------------- | ------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `mnemonic`           | string  | Optional<br>(0 or 1) | Mnemonic as defined in BIP39 to use for the new HD wallet. Use an empty string `""` to generate a new random mnemonic.                                               |
-| `mnemonicpassphrase` | string  | Optional<br>(0 or 1) | Optional mnemonic passphrase as defined in [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#From_mnemonic_to_seed)                             |
+| `mnemonicpassphrase` | string  | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>Optional mnemonic passphrase as defined in [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#From_mnemonic_to_seed). Must be at most 248 bytes (not characters). Passphrases of 249 to 256 bytes are only accepted if the node is started with `-allow-deprecated-long-mnemonics`, which should only be used to recover a wallet created with such a passphrase by Dash Core 19.2.0 or later. Seed derivation ignores every byte after the 248th |
 | `walletpassphrase`   | string  | Optional<br>(0 or 1) | If your wallet is encrypted you must have your wallet passphrase here. If your wallet is not encrypted, specifying wallet passphrase will trigger wallet encryption. |
 | `rescan`             | boolean | Optional<br>(0 or 1) | Whether to rescan the blockchain for missing transactions or not (default=`false` if mnemonic is empty)                                                              |
 
-_Result---`true` on success_
+_Result---further instructions_
 
-| Name     | Type | Presence                | Description                                                                |
-| -------- | ---- | ----------------------- | -------------------------------------------------------------------------- |
-| `result` | null | Required<br>(exactly 1) | `true` when the command was successful or error message if not successful. |
+| Name     | Type   | Presence                | Description |
+| -------- | ------ | ----------------------- | ----------- |
+| `result` | string | Required<br>(exactly 1) | Further instructions: a reminder to back up the mnemonic, plus a warning if the mnemonic passphrase contains a null character. Prior to Dash Core 23.0.0, `true` was returned on success |
 
 _Example from Dash Core 0.17.0_
 
@@ -4027,11 +4090,12 @@ _Parameter #1---Inputs_
 
 | Name              | Type         | Presence                | Description                                                                                                |
 | ----------------- | ------------ | ----------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Inputs            | array        | Required<br>(exactly 1) | An array of objects, each one to be used as an input to the transaction. Leave empty to add inputs automatically. See `add_inputs` option. |
-| → Input           | object       | Required<br>(1 or more) | An object describing a particular input                                                                    |
+| Inputs            | array        | Optional<br>(0 or 1)    | An array of objects, each one to be used as an input to the transaction. Leave empty to add inputs automatically. See `add_inputs` option. |
+| → Input           | object       | Optional<br>(0 or more) | An object describing a particular input                                                                    |
 | → →<br>`txid`     | string (hex) | Required<br>(exactly 1) | The TXID of the outpoint to be spent encoded as hex in RPC byte order                                      |
 | → →<br>`vout`     | number (int) | Required<br>(exactly 1) | The output index number (vout) of the outpoint to be spent; the first output in a transaction is index `0` |
 | → →<br>`Sequence` | number (int) | Optional<br>(0 or 1)    | The sequence number to use for the input                                                                   |
+| → →<br>`size`     | number (int) | Optional<br>(0 or 1)    | **Added in Dash Core 23.1.0**<br>The maximum size for this input, including the size of the outpoint and sequence number. Note that signature sizes are not guaranteed to be consistent, so the maximum DER signatures size of 73 bytes should be used when considering ECDSA signatures. Default: calculated from wallet and solving data |
 
 _Parameter #2---Outputs_
 
@@ -4061,12 +4125,13 @@ _Parameter #4---Additional options_
 | → <br>`changePosition`         | numeric (int)     | Optional<br>(0 or 1)    | The index of the change output (default=random) |
 | → <br>`includeWatching`        | bool              | Optional<br>(0 or 1)    | Also select inputs which are watch only (default=`false` for non-watching only wallets and `true` for watching only-wallets) |
 | → <br>`lockUnspents`           | bool              | Optional<br>(0 or 1)    | Lock selected unspent outputs (default=`false`). This applies to manually selected coins also since Dash Core 20.1.0. |
+| → <br>`fee_rate`               | numeric or string | Optional<br>(0 or 1)    | **Added in Dash Core 22.0.0**<br>Specify a fee rate in duff/B. If not set, falls back to wallet fee estimation |
 | → <br>`feeRate`                | numeric or string | Optional<br>(0 or 1)    | Set a specific fee rate in DASH/kB |
 | → <br>`subtractFeeFromOutputs` | array             | Optional<br>(0 or 1)    | A json array of integers. The fee will be equally deducted from the amount of each specified output. The outputs are specified by their zero-based index, before any change output is added. Those recipients will receive less Dash than you enter in their corresponding amount field. If no outputs are specified here, the sender pays the fee. |
 | → →<br>Output index            | numeric (int)     | Optional<br>(0 or more) | An output index number (vout) from which the fee should be subtracted. If multiple vouts are provided, the total fee will be divided by the number of vouts listed and each vout will have that amount subtracted from it. |
 | → <br>`use_cj`                 | bool              | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Use CoinJoin funds only. Defaults to `false`. |
 | → <br>`conf_target`            | numeric (int)     | Optional<br>(0 or 1)    | Confirmation target (in blocks) |
-| → <br>`estimate_mode`          | numeric (int)     | Optional<br>(0 or 1)    | The fee estimate mode, must be one of:<br>`unset`<br>`economical`<br>`conservative`<br>`DASH/kB`<br>`duff/B` |
+| → <br>`estimate_mode`          | string            | Optional<br>(0 or 1)    | The fee estimate mode, must be one of (case insensitive):<br>`unset`<br>`economical`<br>`conservative` |
 | → <br>`solving_data`           | object            | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br><br>Keys and scripts needed for producing a final transaction with a dummy signature. Used for fee estimation during coin selection. |
 | → → <br>`pubkeys`              | array             | Optional<br>(0 or 1)    | Public keys involved in this transaction |
 | → → →<br>pubkey                | string            | Optional<br>(0 or more) | A public key |
@@ -4087,7 +4152,7 @@ _Result---information about the created transaction_
 | ----------------- | ------------------ | ----------------------- | ------------------------------------------------------------------------------ |
 | `result`          | object             | Required<br>(exactly 1) | An object including information about the created transaction                  |
 | → <br>`psbt`      | string (base64)    | Required<br>(Exactly 1) | The resulting raw transaction (base64-encoded string)                          |
-| → <br>`fee`       | numeric (bitcoins) | Required<br>(Exactly 1) | Fee in DASH the resulting transaction pays                                     |
+| → <br>`fee`       | number (dash)      | Required<br>(Exactly 1) | Fee in DASH the resulting transaction pays                                     |
 | → <br>`changepos` | numeric (int)      | Required<br>(Exactly 1) | The position of the added change output, or `-1` if no change output was added |
 
 _Example from Dash Core 18.0.0_
