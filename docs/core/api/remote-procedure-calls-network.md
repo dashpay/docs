@@ -302,7 +302,7 @@ The [`getnodeaddresses` RPC](../api/remote-procedure-calls-network.md#getnodeadd
 
 | Name       | Type   | Presence             | Description                                                   |
 | ---------- | ------ | -------------------- | ------------------------------------------------------------- |
-| `network`  | string | Optional<br>(0 or 1) | The network (ipv4, ipv6, onion, i2p) the node connected through. |
+| `network`  | string | Optional<br>(0 or 1) | Return only addresses of the specified network. Can be one of: ipv4, ipv6, onion, i2p, cjdns. Default is all networks |
 
 *Result---the current bytes in, bytes out, and current time*
 
@@ -313,7 +313,7 @@ The [`getnodeaddresses` RPC](../api/remote-procedure-calls-network.md#getnodeadd
 | →<br>`services` | number (int) | Required<br>(exactly 1) | The services offered                                       |
 | →<br>`address`  | string       | Required<br>(exactly 1) | The address of the node                                    |
 | →<br>`port`     | number (int) | Required<br>(exactly 1) | The port of the node                                       |
-| →<br>`network`  | string       | Required<br>(exactly 1) | The network (ipv4, ipv6, onion, i2p) the node connected through |
+| →<br>`network`  | string       | Required<br>(exactly 1) | The network (ipv4, ipv6, onion, i2p, cjdns) the node connected through |
 
 *Example from Dash Core 21.0.0*
 
@@ -416,7 +416,7 @@ The [`getnetworkinfo` RPC](../api/remote-procedure-calls-network.md#getnetworkin
 | →<br>`socketevents`                    | string        | Required<br>(exactly 1) | The socket events mode, either `epoll`, `poll`, or `select`                                                                                                                                                  |
 | →<br>`networks`                        | array         | Required<br>(exactly 1) | An array with three objects: one describing the IPv4 connection, one describing the IPv6 connection, and one describing the Tor hidden service (onion) connection                                                                                 |
 | → →<br>Network                         | object        | Optional<br>(0 to 3)    | An object describing a network.  If the network is unroutable, it will not be returned                                                                                                                                                            |
-| → → →<br>`name`                        | string        | Required<br>(exactly 1) | The name of the network.  Either `ipv4`, `ipv6`, or `onion`                                                                                                                                                                                       |
+| → → →<br>`name`                        | string        | Required<br>(exactly 1) | The name of the network.  Either `ipv4`, `ipv6`, `onion`, `i2p`, or `cjdns`                                                                                                                                                                                       |
 | → → →<br>`limited`                     | bool          | Required<br>(exactly 1) | Set to `true` if only connections to this network are allowed according to the `-onlynet` Dash Core command-line/configuration-file parameter.  Otherwise set to `false`                                                                          |
 | → → →<br>`reachable`                   | bool          | Required<br>(exactly 1) | Set to `true` if connections can be made to or from this network.  Otherwise set to `false`                                                                                                                                                       |
 | → → →<br>`proxy`                       | string        | Required<br>(exactly 1) | The hostname and port of any proxy being used for this network.  If a proxy is not in use, an empty string                                                                                                                                        |
@@ -527,7 +527,7 @@ The [`getpeerinfo` RPC](../api/remote-procedure-calls-network.md#getpeerinfo) re
 | → →<br>`id`                     | number (int)        | Required<br>(exactly 1) | The node's index number in the local node address database |
 | → →<br>`addr`                   | string              | Required<br>(exactly 1) | The IP address and port number used for the connection to the remote node |
 | → →<br>`addrlocal`              | string              | Optional<br>(0 or 1)    | Our IP address and port number according to the remote node.  May be incorrect due to error or lying.  Most SPV nodes set this to `127.0.0.1:9999` |
-| → →<br>`network`                | string              | Optional<br>(0 or 1)    | **Added in Dash Core 20.0.0**<br>The network being used (ipv4, ipv6, onion, i2p, not_publicly_routable)                                                                                                                    |
+| → →<br>`network`                | string              | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>The network being used (ipv4, ipv6, onion, i2p, cjdns, not_publicly_routable)                                                                                                                    |
 | → →<br>`mapped_as`              | number (int)        | Optional<br>(0 or 1)    | _Added in Dash Core 18.0.0_<br>The AS in the BGP route to the peer used for diversifying peer selection |
 | → →<br>`addrbind`               | string              | Optional<br>(0 or 1)    | Bind address of the connection to the peer |
 | → →<br>`services`               | string (hex)        | Required<br>(exactly 1) | The services advertised by the remote node in its [`version` message](../reference/p2p-network-control-messages.md#version) |
@@ -535,16 +535,16 @@ The [`getpeerinfo` RPC](../api/remote-procedure-calls-network.md#getpeerinfo) re
 | → → →<br>SERVICE_NAME           | string              | Required<br>(exactly 1) | The service name if it is recognised. |
 | → →<br>`verified_proregtx_hash` | string (hex)        | Optional<br>(0 or 1)    | The ProRegTx of the masternode |
 | → →<br>`verified_pubkey_hash`   | string (hex)        | Optional<br>(0 or 1)    | The hashed operator public key of the masternode |
-| `relaytxes`          | bool         | Required<br>(exactly 1) | Whether peer has asked us to relay transactions to it. |
+| → →<br>`relaytxes`          | bool         | Optional<br>(0 or 1)    | Whether peer has asked us to relay transactions to it. |
 | → →<br>`lastsend`               | number (int)        | Required<br>(exactly 1) | The Unix epoch time when we last successfully sent data to the TCP socket for this node |
 | → →<br>`lastrecv`               | number (int)        | Required<br>(exactly 1) | The Unix epoch time when we last received data from this node |
-| `last_transaction`   | number (int) | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br>The UNIX epoch time of the last valid transaction received from this peer. |
-| `last_block`         | number (int) | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br>The UNIX epoch time of the last block received from this peer. |
+| → →<br>`last_transaction`   | number (int) | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br>The UNIX epoch time of the last valid transaction received from this peer. |
+| → →<br>`last_block`         | number (int) | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br>The UNIX epoch time of the last block received from this peer. |
 | → →<br>`bytessent`              | number (int)        | Required<br>(exactly 1) | The total number of bytes we've sent to this node |
 | → →<br>`bytesrecv`              | number (int)        | Required<br>(exactly 1) | The total number of bytes we've received from this node |
 | → →<br>`conntime`               | number (int)        | Required<br>(exactly 1) | The Unix epoch time when we connected to this node |
 | → →<br>`timeoffset`             | number (int)        | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The time offset in seconds |
-| → →<br>`pingtime`               | number (real)       | Required<br>(exactly 1) | The number of seconds this node took to respond to our last P2P [`ping` message](../reference/p2p-network-control-messages.md#ping) |
+| → →<br>`pingtime`               | number (real)       | Optional<br>(0 or 1)    | The number of seconds this node took to respond to our last P2P [`ping` message](../reference/p2p-network-control-messages.md#ping) |
 | → →<br>`minping`                | number (real)       | Optional<br>(0 or 1)    | *Updated in Bitcoin Core 0.13.0*<br><br>The minimum observed ping time (if any at all) |
 | → →<br>`pingwait`               | number (real)       | Optional<br>(0 or 1)    | The number of seconds we've been waiting for this node to respond to a P2P [`ping` message](../reference/p2p-network-control-messages.md#ping).  Only shown if there's an outstanding [`ping` message](../reference/p2p-network-control-messages.md#ping) |
 | → →<br>`version`                | number (int)        | Required<br>(exactly 1) | The protocol version number used by this node.  See the [protocol versions section](../reference/p2p-network-protocol-versions.md) for more information |
@@ -552,7 +552,7 @@ The [`getpeerinfo` RPC](../api/remote-procedure-calls-network.md#getpeerinfo) re
 | → →<br>`inbound`                | bool                | Required<br>(exactly 1) | Set to `true` if this node connected to us (inbound); set to `false` if we connected to this node (outbound) |
 | → →<br>`bip152_hb_to`          | bool                | Required<br>(exactly 1) | Whether we selected peer as (compact blocks) high-bandwidth peer |
 | → →<br>`bip152_hb_from`        | bool                | Required<br>(exactly 1) | Whether peer selected us as (compact blocks) high-bandwidth peer |
-| → →<br>`addnode`                | bool                | Required<br>(exactly 1) | **DEPRECATED, returned only if the config option -deprecatedrpc=getpeerinfo_addnode is passed**<br>Set to `true` if this node was added via the [`addnode` RPC](../api/remote-procedure-calls-network.md#addnode). |
+| → →<br>`addnode`                | bool                | Optional<br>(0 or 1)    | **Removed in Dash Core 22.0.0** (previously deprecated in 21.0.0) |
 | → →<br>`masternode`             | bool                | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br>Whether connection was due to masternode connection attempt |
 | → →<br>`banscore`               | number (int)        | Optional<br>(0 or 1)    | *DEPRECATED, returned only if config option -deprecatedrpc=banscore is passed*<br>The ban score we've assigned the node based on any misbehavior it's made.  By default, Dash Core disconnects when the ban score reaches `100` |
 | → →<br>`startingheight`         | number (int)        | Required<br>(exactly 1) | The height of the remote node's block chain when it connected to us as reported in its [`version` message](../reference/p2p-network-control-messages.md#version) |
@@ -563,15 +563,15 @@ The [`getpeerinfo` RPC](../api/remote-procedure-calls-network.md#getpeerinfo) re
 | → →<br>`addr_relay_enabled`            | bool                | Required<br>(exactly 1) | Whether we participate in address relay with this peer. |
 | → →<br>`addr_processed`                | number (int)        | Required<br>(exactly 1) | The total number of addresses processed, excluding those dropped due to rate limiting. |
 | → →<br>`addr_rate_limited`             | number (int)        | Required<br>(exactly 1) | The total number of addresses dropped due to rate limiting. |
-| → →<br>`whitelisted` | bool | Required<br>(exactly 1) | **DEPRECATED, returned only if config option -deprecatedrpc=whitelisted is passed**<br>Set to `true` if the remote peer has been whitelisted; otherwise, set to `false`. Whitelisted peers will not be banned if their ban score exceeds the maximum (100 by default). By default, peers connecting from localhost are whitelisted |
+| → →<br>`whitelisted` | bool | Optional<br>(0 or 1) | **Removed in Dash Core 22.0.0** (previously deprecated in 21.0.0) |
 | → →<br>`permissions` | array | Required<br>(exactly 1) | _Added in Dash Core 18.0.0_<br>Any special permissions that have been granted to this peer |
 | → →<br>`bytessent_per_msg` | string : <br>object | Required<br>(exactly 1) | *Added in Bitcoin Core 0.13.0*<br><br>Information about total sent bytes aggregated by message type |
 | → → →<br>Message Type | number (int) | Required<br>(1 or more) | Total sent bytes aggregated by message type. One field for every used message type |
 | → →<br>`bytesrecv_per_msg` | string : <br>object | Required<br>(exactly 1) | *Added in Bitcoin Core 0.13.0*<br><br>Information about total received bytes aggregated by message type |
 | → → →<br>Message Type | number (int) | Required<br>(1 or more) | Total received bytes aggregated by message type. One field for every used message type |
-| `connection_type` | string | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br>Type of connection:<br>outbound-full-relay, block-relay-only, inbound, manual, addr-fetch, feeler.<br>Describes how the connection was established. Set to `true` if this node was added via the [`addnode` RPC](../api/remote-procedure-calls-network.md#addnode).<br>**Note: This output is subject to change in future releases as connection behaviors are refined.** |
-| `transport_protocol_type`| string | Optional<br>(0 or 1) | **Added in Dash Core 22.0.0**<br>The transport protocol type:<br>`detecting` - peer could be v1 or v2<br>`v1` - plaintext transport protocol<br>`v2` - BIP324 encrypted transport protocol |
-| `session_id` | string | Optional<br>(0 or 1) | **Added in Dash Core 22.0.0**<br>The session ID for this connection, or "" if there is none ("v2" transport protocol only). |
+| → →<br>`connection_type` | string | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br>Type of connection:<br>outbound-full-relay, block-relay-only, inbound, manual, addr-fetch, feeler.<br>Describes how the connection was established.<br>**Note: This output is subject to change in future releases as connection behaviors are refined.** |
+| → →<br>`transport_protocol_type` | string | Required<br>(exactly 1) | **Added in Dash Core 22.0.0**<br>The transport protocol type:<br>`detecting` - peer could be v1 or v2<br>`v1` - plaintext transport protocol<br>`v2` - BIP324 encrypted transport protocol |
+| → →<br>`session_id` | string | Required<br>(exactly 1) | **Added in Dash Core 22.0.0**<br>The session ID for this connection, or "" if there is none ("v2" transport protocol only). |
 
 *Example from Dash Core 22.0.0*
 

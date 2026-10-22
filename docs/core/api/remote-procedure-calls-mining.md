@@ -22,8 +22,8 @@ Name | Type | Presence | Description
 Request | object | Optional<br>(exactly 1) | A JSON request object
 →<br>`mode` | string | Optional<br>(exactly 1) | This must be set to "template", "proposal" (see BIP 23), or omitted
 →<br>`capabilities` | array (string) | Optional<br>(0 or more) | A list of strings
-→ →<br>Capability | string | Optional<br>(exactly 1) | Client side supported feature, `longpoll`, `coinbasetxn`, `coinbasevalue`, `proposal`, `serverlist`, `workid`
-→<br>`rules` | array (string) | Optional<br>(0 or more) | A list of strings
+→ →<br>Capability | string | Optional<br>(exactly 1) | Client side supported feature, `longpoll`, `coinbasevalue`, `proposal`, `serverlist`, `workid`
+→<br>`rules` | array (string) | Optional<br>(0 or 1) | A list of strings. The RPC help lists this field as required, but requests without it are accepted
 → →<br>Rules | string | Optional<br>(exactly 1) | Client side supported softfork deployment, `csv`, `dip0001`, etc.
 →<br>`longpollid` | string | Optional<br>(0 or 1) | Delay processing request until the result would vary significantly from the `longpollid` of a prior template
 →<br>`data` | string (hex) | Optional<br>(0 or 1) | Proposed block data to check, encoded in hexadecimal; valid only for `mode="proposal"`

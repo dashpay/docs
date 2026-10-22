@@ -205,10 +205,6 @@ Name | Type | Presence | Description
 → → → → →<br>`asm` | string | Required<br>(exactly 1) | The signature script in decoded form with non-data-pushing opcodes listed
 → → → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The signature script encoded as hex
 → → → →<br>`coinbase` | string (hex) | Optional<br>(0 or 1) | The coinbase (similar to the hex field of a scriptSig) encoded as hex.  Only present if this is a coinbase transaction
-→ → → →<br>`value` | number (Dash) | Optional<br>(exactly 1) | The number of Dash paid to this output.  May be `0`.<br><br>Only present if `spentindex` enabled
-→ → → →<br>`valueSat` | number (duffs) | Optional<br>(exactly 1) | The number of duffs paid to this output.  May be `0`.<br><br>Only present if `spentindex` enabled
-→ → → → →<br>`addresses` | string : array | Optional<br>(0 or 1) | The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types.<br><br>Only present if `spentindex` enabled
-→ → → → → →<br>Address | string | Required<br>(1 or more) | A P2PKH or P2SH address
 → → → →<br>`sequence` | number (int) | Required<br>(exactly 1) | The input sequence number
 → →<br>`vout` | array | Required<br>(exactly 1) | An array of objects each describing an output vector (vout) for this transaction.  Output objects will have the same order within the array as they have in the transaction, so the first output listed will be output 0
 → → →<br>Output | object | Required<br>(1 or more) | An object describing one of this transaction's outputs
@@ -217,13 +213,15 @@ Name | Type | Presence | Description
 → → → →<br>`n` | number (int) | Required<br>(exactly 1) | The output index number of this output within this transaction
 → → → →<br>`scriptPubKey` | object | Required<br>(exactly 1) | An object describing the pubkey script
 → → → → →<br>`asm` | string | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed
+→ → → → →<br>`desc` | string | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Inferred descriptor for the output
 → → → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The pubkey script encoded as hex
-→ → → → →<br>`reqSigs` | number (int) | Optional<br>(0 or 1) | The number of signatures required; this is always `1` for P2PK, P2PKH, and P2SH (including P2SH multisig because the redeem script is not available in the pubkey script).  It may be greater than 1 for bare multisig.  This value will not be returned for `nulldata` or `nonstandard` script types (see the `type` key below)
-→ → → → →<br>`type` | string | Optional<br>(0 or 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
-→ → → → →<br>`addresses` | string : array | Optional<br>(0 or 1) | The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types
-→ → → → → →<br>Address | string | Required<br>(1 or more) | A P2PKH or P2SH address
+→ → → → →<br>`reqSigs` | number (int) | Optional<br>(0 or 1) | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0)
+→ → → → →<br>`type` | string | Required<br>(exactly 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
+→ → → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists)
+→ → → → →<br>`addresses` | string : array | Optional<br>(0 or 1) | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0)
 → →<br>`extraPayloadSize` | number (int) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction
 → →<br>`extraPayload` | string (hex) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction
+→ →<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs
 → →<br>`fee` | number | Optional<br>(0 or 1) | The transaction fee in DASH, omitted if block undo data is not available
 → →<br>`instantlock` | bool | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock)
 → →<br>`instantlock_internal` | bool | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock
@@ -451,7 +449,7 @@ Name | Type | Presence | Description
 →<br>`size_on_disk` | number (int) | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>The estimated size of the block and undo files on disk
 →<br>`pruned` | bool | Required<br>(exactly 1) | *Added in Bitcoin Core 0.11.0*<br><br>Indicates if the blocks are subject to pruning
 →<br>`pruneheight` | number (int) | Optional<br>(0 or 1) | *Added in Bitcoin Core 0.11.0*<br><br>The lowest-height complete block stored if pruning is activated
-→<br>`automatic_pruning` | bool | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>Whether automatic pruning is enabled (only present if pruning is enabled)
+→<br>`automatic_pruning` | bool | Optional<br>(0 or 1) | *Added in Dash Core 0.16.0*<br><br>Whether automatic pruning is enabled (only present if pruning is enabled)
 →<br>`prune_target_size` | number (int) | Optional<br>(0 or 1) | *Added in Dash Core 0.16.0*<br><br>The target size used by pruning (only present if automatic pruning is enabled)
 →<br>`softforks` | object | Optional<br>(0 or 1) | **Deprecated in Dash Core 24.0.0**, returned only if config option `-deprecatedrpc=softforks` is passed. Use the [`getdeploymentinfo` RPC](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo) instead
 → →<br>Softfork | object | Required<br>(0 or more) | The name of a specific softfork
@@ -476,7 +474,7 @@ Name | Type | Presence | Description
 → → → →<br>`signalling` | string | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Indicates blocks that signalled with a `#` and blocks that did not with a `-`
 → → →<br>`height` | numeric | Optional | Height of the first block at which the rules are or will be enforced (only for "buried" type, or "bip9" type with "active" status)
 → → →<br>`active` | boolean | Required | True if the rules are enforced for the mempool and the next block
-→<br>`warnings` | string | Optional<br>(0 or 1) | *Added in Dash Core 0.16.0*<br><br>Returns any network and blockchain warnings
+→<br>`warnings` | string | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>Returns any network and blockchain warnings
 
 *Example from Dash Core 21.0.0*
 
@@ -1480,10 +1478,10 @@ Name | Type | Presence | Description
 → →<br>`ancestorcount` | number (int) | Required<br>(exactly 1) | The number of in-mempool ancestor transactions (including this one)
 → →<br>`ancestorsize` | number (int) | Required<br>(exactly 1) | The size of in-mempool ancestors (including this one)
 → →<br>`fees` | object | Required<br>(exactly 1) | Object containing fee information
-→→→<br>`base` | number | Required<br>(exactly 1) | Transaction fee in DASH
-→→→<br>`modified` | number | Required<br>(exactly 1) | Transaction fee with fee deltas used for mining priority in DASH
-→→→<br>`ancestor` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool ancestors (including this one) in DASH
-→→→<br>`descendant` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool descendants (including this one) in DASH
+→ → →<br>`base` | number | Required<br>(exactly 1) | Transaction fee in DASH
+→ → →<br>`modified` | number | Required<br>(exactly 1) | Transaction fee with fee deltas used for mining priority in DASH
+→ → →<br>`ancestor` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool ancestors (including this one) in DASH
+→ → →<br>`descendant` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool descendants (including this one) in DASH
 → →<br>`depends` | array | Required<br>(exactly 1) | An array holding TXIDs of unconfirmed transactions this transaction depends upon (parent transactions).  Those transactions must be part of a block before this transaction can be added to a block, although all transactions may be included in the same block.  The array may be empty
 → → →<br>Depends TXID | string | Optional (0 or more) | The TXIDs of any unconfirmed transactions this transaction depends upon, encoded as hex in RPC byte order
 → →<br>`spentby` | array | Required<br>(exactly 1) |  **Added in Dash Core 20.0.0**<br>An array of unconfirmed transactions spending outputs from this transaction
@@ -1594,10 +1592,10 @@ Name | Type | Presence | Description
 → →<br>`ancestorcount` | number (int) | Required<br>(exactly 1) | The number of in-mempool ancestor transactions (including this one)
 → →<br>`ancestorsize` | number (int) | Required<br>(exactly 1) | The size of in-mempool ancestors (including this one)
 → →<br>`fees` | object | Required<br>(exactly 1) | Object containing fee information
-→→→<br>`base` | number | Required<br>(exactly 1) | Transaction fee in DASH
-→→→<br>`modified` | number | Required<br>(exactly 1) | Transaction fee with fee deltas used for mining priority in DASH
-→→→<br>`ancestor` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool ancestors (including this one) in DASH
-→→→<br>`descendant` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool descendants (including this one) in DASH
+→ → →<br>`base` | number | Required<br>(exactly 1) | Transaction fee in DASH
+→ → →<br>`modified` | number | Required<br>(exactly 1) | Transaction fee with fee deltas used for mining priority in DASH
+→ → →<br>`ancestor` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool ancestors (including this one) in DASH
+→ → →<br>`descendant` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool descendants (including this one) in DASH
 → →<br>`depends` | array | Required<br>(exactly 1) | An array holding TXIDs of unconfirmed transactions this transaction depends upon (parent transactions).  Those transactions must be part of a block before this transaction can be added to a block, although all transactions may be included in the same block.  The array may be empty
 → → →<br>Depends TXID | string | Optional (0 or more) | The TXIDs of any unconfirmed transactions this transaction depends upon, encoded as hex in RPC byte order
 → →<br>`spentby` | array | Required<br>(exactly 1) |  **Added in Dash Core 20.0.0**<br>An array of unconfirmed transactions spending outputs from this transaction
@@ -1762,10 +1760,10 @@ Name | Type | Presence | Description
 →<br>`size` | number (int) | Required<br>(exactly 1) | The number of transactions currently in the memory pool
 →<br>`bytes` | number (int) | Required<br>(exactly 1) | The total number of bytes in the transactions in the memory pool
 →<br>`usage` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.11.0*<br><br>Total memory usage for the mempool in bytes
-→<br>`total_fee` | number (int) | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br><br>Total fees for the mempool in DASH, ignoring fees modified through prioritizetransaction
+→<br>`total_fee` | number (real) | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br><br>Total fees for the mempool in DASH, ignoring fees modified through prioritizetransaction
 →<br>`maxmempool` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>Maximum memory usage for the mempool in bytes
 →<br>`mempoolminfee` | number | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br><br>Minimum fee rate in DASH/kB for tx to be accepted. Is the maximum of minrelaytxfee and minimum mempool fee
-→<br>`minrelaytxfee` | number (int) | Required<br>(exactly 1) | *Added in Dash Core 20.0.0*<br><br>Current minimum relay fee for transactions
+→<br>`minrelaytxfee` | number (real) | Required<br>(exactly 1) | *Added in Dash Core 20.0.0*<br><br>Current minimum relay fee for transactions
 →<br>`instantsendlocks` | number (int) | Required<br>(exactly 1) | *Added in Dash Core 0.15.0*<br><br>Number of InstantSend locked transactions not yet in a block
 →<br>`unbroadcastcount` | number (int) | Required<br>(exactly 1) | *Added in Dash Core 20.0.0*<br><br>Current number of transactions that haven't passed initial broadcast yet
 →<br>`pendingassetunlocks` | number (real) | Required<br>(exactly 1) | **Added in Dash Core 24.0.0**<br>Sum of the withdrawal amounts (outputs plus fee) of the Asset Unlock transactions in the mempool in DASH
@@ -1826,7 +1824,15 @@ Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | array | Required<br>(exactly 1) | An array of TXIDs belonging to transactions in the memory pool.  The array may be empty if there are no transactions in the memory pool
 →<br>TXID | string | Optional<br>(0 or more) | The TXID of a transaction in the memory pool, encoded as hex in RPC byte order
-→<br>mempool_sequence | number (int) | Optional<br>(0 or 1) | *Added in Dash Core 22.0.0*<br>The mempool sequence value
+
+*Result (format `false` and mempool sequence `true`)---TXIDs with the mempool sequence*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`result` | object | Required<br>(exactly 1) | *Added in Dash Core 22.0.0*<br>An object containing the TXIDs and the mempool sequence number
+→<br>`txids` | array | Required<br>(exactly 1) | An array of TXIDs belonging to transactions in the memory pool.  The array may be empty if there are no transactions in the memory pool
+→ →<br>TXID | string | Optional<br>(0 or more) | The TXID of a transaction in the memory pool, encoded as hex in RPC byte order
+→<br>`mempool_sequence` | number (int) | Required<br>(exactly 1) | The mempool sequence value
 
 *Result (format: `true`)---a JSON object describing each transaction*
 
@@ -1842,10 +1848,10 @@ Name | Type | Presence | Description
 → →<br>`ancestorcount` | number (int) | Required<br>(exactly 1) | The number of in-mempool ancestor transactions (including this one)
 → →<br>`ancestorsize` | number (int) | Required<br>(exactly 1) | The size of in-mempool ancestors (including this one)
 → →<br>`fees` | object | Required<br>(exactly 1) | Object containing fee information
-→→→<br>`base` | number | Required<br>(exactly 1) | Transaction fee in DASH
-→→→<br>`modified` | number | Required<br>(exactly 1) | Transaction fee with fee deltas used for mining priority in DASH
-→→→<br>`ancestor` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool ancestors (including this one) in DASH
-→→→<br>`descendant` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool descendants (including this one) in DASH
+→ → →<br>`base` | number | Required<br>(exactly 1) | Transaction fee in DASH
+→ → →<br>`modified` | number | Required<br>(exactly 1) | Transaction fee with fee deltas used for mining priority in DASH
+→ → →<br>`ancestor` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool ancestors (including this one) in DASH
+→ → →<br>`descendant` | number | Required<br>(exactly 1) | Modified fees (see above) of in-mempool descendants (including this one) in DASH
 → →<br>`depends` | array | Required<br>(exactly 1) | An array holding TXIDs of unconfirmed transactions this transaction depends upon (parent transactions).  Those transactions must be part of a block before this transaction can be added to a block, although all transactions may be included in the same block.  The array may be empty
 → → →<br>Depends TXID | string | Optional (0 or more) | The TXIDs of any unconfirmed transactions this transaction depends upon, encoded as hex in RPC byte order
 → →<br>`spentby` | array | Required<br>(exactly 1) | An array of unconfirmed transactions spending outputs from this transaction
@@ -2151,17 +2157,13 @@ Requires `spentindex` Dash Core command-line/configuration-file parameter to be 
 
 The [`getspentinfo` RPC](../api/remote-procedure-calls-blockchain.md#getspentinfo) returns the txid and index where an output is spent (requires `spentindex` to be enabled).
 
-*Parameter #1---the TXID of the output*
+*Parameter #1---the output to look up*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-TXID | string (hex) | Required<br>(exactly 1) | The TXID of the transaction containing the relevant output, encoded as hex in RPC byte order
-
-*Parameter #2---the start block height*
-
-Name | Type | Presence | Description
---- | --- | --- | ---
-Index | number (int) | Required<br>(exactly 1) | The block height to begin looking in
+Request | object | Required<br>(exactly 1) | A JSON object identifying the output
+→<br>`txid` | string (hex) | Required<br>(exactly 1) | The TXID of the transaction containing the relevant output, encoded as hex in RPC byte order
+→<br>`index` | number (int) | Required<br>(exactly 1) | The output index number (vout) of the output within the transaction
 
 *Result---the TXID and spending input index*
 
@@ -2337,22 +2339,45 @@ The [`gettxoutsetinfo` RPC](../api/remote-procedure-calls-blockchain.md#gettxout
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-hash_type | string | Optional<br>(0 or 1) | Which UTXO set hash should be calculated. Options: 'hash_serialized_2' (the legacy algorithm), 'muhash', 'none'.
+hash_type | string | Optional<br>(0 or 1) | Which UTXO set hash should be calculated. Options: 'hash_serialized_2' (the legacy algorithm), 'muhash', 'none'. Default is `hash_serialized_2`
+
+*Parameter #2---block hash or height*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+hash_or_height | string or numeric | Optional<br>(0 or 1) | The block hash or height of the target height (only available with coinstatsindex). Default is the current best block.<br><br>Cannot be used with the `hash_serialized_2` hash type or with `use_index` set to `false`
+
+*Parameter #3---use coinstatsindex*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+use_index | bool | Optional<br>(0 or 1) | Use coinstatsindex, if available. Default is `true`
 
 *Result---statistics about the UTXO set*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object | Required<br>(exactly 1) | Information about the UTXO set
-→<br>`height` | number (int) | Required<br>(exactly 1) | The height of the local best block chain.  A new node with only the hardcoded genesis block will have a height of 0
-→<br>`bestblock` | string (hex) | Required<br>(exactly 1) | The hash of the header of the highest block on the local best block chain, encoded as hex in RPC byte order
-→<br>`transactions` | number (int) | Required<br>(exactly 1) | The number of transactions with unspent outputs
+→<br>`height` | number (int) | Required<br>(exactly 1) | The block height (index) of the returned statistics
+→<br>`bestblock` | string (hex) | Required<br>(exactly 1) | The hash of the block at which these statistics are calculated, encoded as hex in RPC byte order
 →<br>`txouts` | number (int) | Required<br>(exactly 1) | The number of unspent transaction outputs
-→<br>`bogosize` | number (int) | Required<br>(exactly 1) | A meaningless metric for UTXO set size
-→<br>`hash_serialized_2` | string (hex) | Optional<br>(exactly 1) |  The serialized hash (only present if 'hash_serialized_2' hash_type is chosen)
-→<br>`muhash` | string (hex) | Optional<br>(exactly 1) | A SHA256(SHA256()) The serialized hash (only present if 'muhash' hash_type is chosen).
-→<br>`disk_size` | number (int) | Required<br>(exactly 1) | The estimated size of the chainstate on disk
+→<br>`bogosize` | number (int) | Required<br>(exactly 1) | Database-independent, meaningless metric indicating the UTXO set size
+→<br>`hash_serialized_2` | string (hex) | Optional<br>(0 or 1) | The serialized hash (only present if 'hash_serialized_2' hash_type is chosen)
+→<br>`muhash` | string (hex) | Optional<br>(0 or 1) | The serialized hash (only present if 'muhash' hash_type is chosen)
+→<br>`transactions` | number (int) | Optional<br>(0 or 1) | The number of transactions with unspent outputs (not available when coinstatsindex is used)
+→<br>`disk_size` | number (int) | Optional<br>(0 or 1) | The estimated size of the chainstate on disk (not available when coinstatsindex is used)
 →<br>`total_amount` | number (Dash) | Required<br>(exactly 1) | The total amount of Dash in the UTXO set
+→<br>`total_unspendable_amount` | number (Dash) | Optional<br>(0 or 1) | The total amount of Dash permanently excluded from the UTXO set (only available if coinstatsindex is used)
+→<br>`block_info` | object | Optional<br>(0 or 1) | Info on amounts in the block at this block height (only available if coinstatsindex is used)
+→ →<br>`prevout_spent` | number (Dash) | Required<br>(exactly 1) | Total amount of all prevouts spent in this block
+→ →<br>`coinbase` | number (Dash) | Required<br>(exactly 1) | Coinbase subsidy amount of this block
+→ →<br>`new_outputs_ex_coinbase` | number (Dash) | Required<br>(exactly 1) | Total amount of new outputs created by this block
+→ →<br>`unspendable` | number (Dash) | Required<br>(exactly 1) | Total amount of unspendable outputs created in this block
+→ →<br>`unspendables` | object | Required<br>(exactly 1) | Detailed view of the unspendable categories
+→ → →<br>`genesis_block` | number (Dash) | Required<br>(exactly 1) | The unspendable amount of the Genesis block subsidy
+→ → →<br>`bip30` | number (Dash) | Optional<br>(0 or 1) | **Removed in Dash Core 24.0.0**<br>Transactions overridden by duplicates. Dash never had such transactions, so the value was always zero
+→ → →<br>`scripts` | number (Dash) | Required<br>(exactly 1) | Amounts sent to scripts that are unspendable (for example OP_RETURN outputs)
+→ → →<br>`unclaimed_rewards` | number (Dash) | Required<br>(exactly 1) | Fee rewards that miners did not claim in their coinbase transaction
 
 *Example from Dash Core 0.15.0*
 
@@ -2574,13 +2599,13 @@ The [`verifychain` RPC](../api/remote-procedure-calls-blockchain.md#verifychain)
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Check Level | number (int) | Optional<br>(0 or 1) | How thoroughly to check each block, from 0 to 4.  Default is the level set with the `-checklevel` command line argument; if that isn't set, the default is `3`.  Each higher level includes the tests from the lower levels<br><br>Levels are:<br>**0.** Read from disk to ensure the files are accessible<br>**1.**  Ensure each block is valid<br>**2.** Make sure undo files can be read from disk and are in a valid format<br>**3.** Test each block undo to ensure it results in correct state<br>**4.** After undoing blocks, reconnect them to ensure they reconnect correctly
+Check Level | number (int) | Optional<br>(0 or 1) | How thoroughly to check each block, from 0 to 4.  Default is `3`.  Each higher level includes the tests from the lower levels<br><br>Levels are:<br>**0.** Read from disk to ensure the files are accessible<br>**1.**  Ensure each block is valid<br>**2.** Make sure undo files can be read from disk and are in a valid format<br>**3.** Test each block undo to ensure it results in correct state<br>**4.** After undoing blocks, reconnect them to ensure they reconnect correctly
 
 *Parameter #2---the number of blocks to check*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Number Of Blocks | number (int) | Optional<br>(0 or 1) | The number of blocks to verify.  Set to `0` to check all blocks.  Defaults to the value of the `-checkblocks` command-line argument; if that isn't set, the default is `288`
+Number Of Blocks | number (int) | Optional<br>(0 or 1) | The number of blocks to verify.  Set to `0` to check all blocks.  Default is `6`
 
 *Result---verification results*
 
