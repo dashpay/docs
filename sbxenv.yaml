@@ -1,3 +1,6 @@
+# Docker Sandboxes environment definition for working on Dash docs.
+# Configures workspace mounts, agent tools, networking, and Python build dependencies.
+# Usage: sbx env run ./sbxenv.yaml (creates the sandbox if needed, then attaches).
 schemaVersion: "1"
 name: dash-docs
 # Claude is the default agent; the T3 kit provides remote access below.
