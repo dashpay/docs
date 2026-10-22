@@ -1,0 +1,93 @@
+schemaVersion: "1"
+name: dash-docs
+# Claude is the default agent; the T3 kit provides remote access below.
+# Uses Node/npm bundled in the agent image; versions are not pinned here.
+# The shell image probe on 2026-10-22 had Node v22.22.1 and npm 9.2.0;
+# verify the Claude image separately. Platform docs uses Node 22 in .readthedocs.yml.
+agent: claude
+
+# Paths resolve relative to this file. Override a different checkout location
+# with --env-arg, e.g. --env-arg platformDocs=/path/to/docs-platform.
+args:
+  platformDocs:
+    default: ../dashpay-docs-platform
+  coreSource:
+    default: ../dash
+  platformSource:
+    default: ../platform
+  dips:
+    default: ../dips
+
+# Primary docs checkout: read-write. This file must stay in the repo root;
+# "." refers to this file directory, not the shell current directory.
+workspace: .
+
+additionalWorkspaces:
+  # Platform docs checkout: read-only reference material.
+  - path: ${{ env.args.platformDocs }}
+    readOnly: true
+  # Source repositories for reference: read-only.
+  - path: ${{ env.args.coreSource }}
+    readOnly: true
+  - path: ${{ env.args.platformSource }}
+    readOnly: true
+  - path: ${{ env.args.dips }}
+    readOnly: true
+
+kits:
+  - docker.io/sbx/t3code-kit:latest
+
+# Explicit sandbox PATH makes user-installed CLIs available to SSH/T3 sessions.
+# sbx passes env values literally, so do not use $HOME or $PATH here.
+env:
+  PATH: /home/agent/.local/bin:/usr/local/share/npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+sandboxOptions:
+  cpus: 4
+  memory: 4g
+
+# Optional preview port; publish on demand with:
+# sbx ports dash-docs --publish 8000:8000
+#
+# ports:
+#   - sandbox: 8000
+#     host: 8000
+
+lifecycle:
+  initialize:
+    - name: Verify primary workspace is the user docs repo root
+      workdir: ${{ env.fileDir }}
+      command: |
+        if [ ! -f conf.py ] || [ ! -f requirements.txt ] ||
+           [ ! -f index.rst ] || [ ! -f Makefile ] || [ ! -d docs/user ]; then
+          echo "Expected sbxenv.yaml in the user docs repo root (conf.py, requirements.txt, index.rst, Makefile, docs/user)." >&2
+          exit 1
+        fi
+  postCreate:
+    # Keep Claude as the default and make Codex available as another agent.
+    - name: Install Codex CLI
+      timeout: 10m
+      command: |
+        # Install as the regular sandbox user; scope the prefix to this install.
+        sbx exec "$SBX_SANDBOX_NAME" -- sh -eu -c '
+          npm install -g --prefix "$HOME/.local" @openai/codex
+        '
+        sbx exec "$SBX_SANDBOX_NAME" -- codex --version
+    - name: Allow uv release downloads
+      command: |
+        sbx policy allow network --sandbox "$SBX_SANDBOX_NAME" releases.astral.sh:443
+    - name: Install Python 3.13 and user docs dependencies
+      timeout: 10m
+      command: |
+        sbx exec --workdir "$SBX_WORKSPACE" "$SBX_SANDBOX_NAME" -- sh -eu -c '
+          installer=$(mktemp)
+          curl -LsSf https://astral.sh/uv/install.sh -o "$installer"
+          sh "$installer"
+          rm -f "$installer"
+          "$HOME/.local/bin/uv" python install 3.13
+          # Sandbox-local venv for building the user docs.
+          "$HOME/.local/bin/uv" venv --python 3.13 /home/agent/docs-venv
+          "$HOME/.local/bin/uv" pip install \
+            --python /home/agent/docs-venv/bin/python \
+            -r requirements.txt
+        '
