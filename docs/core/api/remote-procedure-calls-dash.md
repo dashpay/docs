@@ -574,7 +574,7 @@ The `gobject diff` RPC Lists governance objects differences since last diff.
 | ------ | ------ | ----------------------- | ------------------------------------------------------------------------------------------ |
 | `type` | string | Optional<br>(0 or 1) | Type of governance object signal: <br>• `proposals`<br>• `triggers`<br>• `all` (*DEFAULT*) |
 
-*Result---governance objects*
+*Result (if the request is valid)---governance objects*
 
 | Name                       | Type         | Presence                | Description                                                                                                                                                 |
 | -------------------------- | ------------ | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -597,6 +597,12 @@ The `gobject diff` RPC Lists governance objects differences since last diff.
 | → →<br>`YesCount`          | number       | Required<br>(exactly 1) | Number of `Yes` votes                                                                                                                                       |
 | → →<br>`NoCount`           | number       | Required<br>(exactly 1) | Number of `No` votes                                                                                                                                        |
 | → →<br>`AbstainCount`      | number       | Required<br>(exactly 1) | Number of `Abstain` votes                                                                                                                                   |
+
+*Result (if the request is invalid)---error string*
+
+| Name     | Type   | Presence                | Description |
+| -------- | ------ | ----------------------- | ----------- |
+| `result` | string | Required<br>(exactly 1) | Error message for an invalid `signal` or `type` value, for example `Invalid signal, should be 'valid', 'funding', 'delete', 'endorsed' or 'all'` or `Invalid type, should be 'proposals', 'triggers' or 'all'` |
 
 *Example from Dash Core 23.1.7*
 
@@ -792,7 +798,7 @@ The `gobject list` RPC Lists governance objects (can be filtered by signal and/o
 | ------ | ------ | ----------------------- | ------------------------------------------------------------------------------------------ |
 | `type` | string | Optional<br>(0 or 1) | Type of governance object signal: <br>• `proposals`<br>• `triggers`<br>• `all` (*DEFAULT*) |
 
-*Result---governance objects*
+*Result (if the request is valid)---governance objects*
 
 | Name                       | Type         | Presence                | Description                                                                                                                                                 |
 | -------------------------- | ------------ | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -815,6 +821,12 @@ The `gobject list` RPC Lists governance objects (can be filtered by signal and/o
 | → →<br>`YesCount`          | number       | Required<br>(exactly 1) | Number of `Yes` votes                                                                                                                                       |
 | → →<br>`NoCount`           | number       | Required<br>(exactly 1) | Number of `No` votes                                                                                                                                        |
 | → →<br>`AbstainCount`      | number       | Required<br>(exactly 1) | Number of `Abstain` votes                                                                                                                                   |
+
+*Result (if the request is invalid)---error string*
+
+| Name     | Type   | Presence                | Description |
+| -------- | ------ | ----------------------- | ----------- |
+| `result` | string | Required<br>(exactly 1) | Error message for an invalid `signal` or `type` value, for example `Invalid signal, should be 'valid', 'funding', 'delete', 'endorsed' or 'all'` or `Invalid type, should be 'proposals', 'triggers' or 'all'` |
 
 *Example from Dash Core 23.1.7*
 
@@ -990,7 +1002,7 @@ The `gobject list-prepared` RPC returns a list of governance objects prepared by
 | Name                       | Type         | Presence                | Description                                                            |
 | -------------------------- | ------------ | ----------------------- | ---------------------------------------------------------------------- |
 | `result`                   | array        | Required<br>(exactly 1) | List of governance objects                                             |
-| →<br>Governance Object     | object       | Required<br>(0 or more) | Proposal object                                                        |
+| →<br>Governance Object     | object       | Optional<br>(0 or more) | Proposal object                                                        |
 | → →<br>`objectHash`        | string (hex) | Required<br>(exactly 1) | Proposal object hash                                                   |
 | → →<br>`parentHash`        | string (hex) | Required<br>(exactly 1) | Hash of the parent object. Usually the root node which has a hash of 0 |
 | → →<br>`collateralHash`    | string (hex) | Required<br>(exactly 1) | Hash of the collateral payment transaction                             |
@@ -1410,6 +1422,14 @@ The `masternode payments` RPC prints an array of deterministic masternodes and t
 
 By default, payment information is returned for only the chain tip. More block winners can be requested via the optional `count` parameter.
 
+:::{note}
+**Updated in Dash Core 24.0.0**
+
+* The starting block must be on the active chain; otherwise the RPC fails with `Block is not in main chain`.
+* Results stop at the genesis block, which has no masternode payee.
+* Block fees are calculated from the previous transactions of each block. If one cannot be found (for example, on a node without `-txindex`), the RPC fails with `Unable to calculate block fees: previous transaction not found`.
+:::
+
 *Parameter #1---block hash*
 
 | Name       | Type         | Presence                | Description                                   |
@@ -1490,7 +1510,7 @@ The `masternode status` RPC prints masternode status information.
 | ------------------------------ | ------------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Result                         | object       | Required<br>(exactly 1) | Masternode status info                                                                                                                                                                            |
 | →<br>`outpoint`                | string       | Required<br>(exactly 1) | The masternode's outpoint                                                                                                                                                                         |
-| →<br>`service`                 | string       | Required<br>(exactly 1) | **Deprecated**<br>The IP address/port of the masternode |
+| →<br>`service`                 | string       | Required<br>(exactly 1) | The IP address/port of the masternode                                                                                                                                                             |
 | →<br>`proTxHash`               | string (hex) | Optional<br>(0 or 1)    | The masternode's ProRegTx hash                                                                                                                                                                    |
 | →<br>`type`                    | string       | Required<br>(exactly 1) | *Added in Dash Core 19.0*<br>The type of masternode                                                                                                                                               |
 | →<br>`collateralHash`          | string (hex) | Optional<br>(0 or 1)    | The masternode's collateral hash                                                                                                                                                                  |
@@ -1644,7 +1664,7 @@ By default, the 10 previous block winners, the current block winner, and the nex
 | Name                   | Type   | Presence                | Description                                                                                                                                   |
 | ---------------------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Result                 | object | Required<br>(exactly 1) | Winning masternode info                                                                                                                       |
-| →<br>Masternode Winner | int    | Required<br>(exactly 1) | Key: Block height<br>Value: payee address. As of Dash Core 0.17.0, all payees will be listed (e.g. both owner and operator where applicable). |
+| →<br>Masternode Winner | string | Required<br>(exactly 1) | Key: Block height<br>Value: payee address. As of Dash Core 0.17.0, all payees will be listed (e.g. both owner and operator where applicable).<br>**Updated in Dash Core 24.0.0**<br>Payees are comma-separated. Every owner payout address is listed (for shared masternodes, every share reward address), followed by the operator payout address where applicable. |
 
 *Example from Dash Core 0.17.0*
 

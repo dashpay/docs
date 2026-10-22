@@ -107,7 +107,7 @@ Result:
 
 The [`getchainlockbyheight` RPC](../api/remote-procedure-calls-evo.md#getchainlockbyheight) reads a historical ChainLock from the coinbase transactions on disk. Each [CbTx](../reference/transactions-special-transactions.md#cbtx) carries the best ChainLock known to the miner, so the RPC searches the active chain for the coinbase that embeds a ChainLock for the requested height.
 
-Only ChainLocks that have been embedded in a later block's coinbase can be returned. The current best ChainLock (as reported by [`getbestchainlock`](../api/remote-procedure-calls-blockchain.md#getbestchainlock)) usually has not been embedded yet, and heights skipped by coinbase ChainLocks are never embedded; both return `Chainlock not found for height`. Coinbase ChainLocks only exist from v20 activation onward. Blocks are read on demand, so a pruned node may fail if a required block is no longer available.
+Only ChainLocks that have been embedded in a later block's coinbase on the active chain can be returned. The current best ChainLock is unavailable until it has been embedded; use [`getbestchainlock`](../api/remote-procedure-calls-blockchain.md#getbestchainlock) to read it. Heights skipped by coinbase ChainLocks cannot be returned, even if they are ChainLocked. A completed lookup with no matching embedded ChainLock returns `Chainlock not found for height`. Coinbase ChainLocks only exist from v20 activation onward. Blocks are read on demand, so a pruned node may fail if a required block is no longer available.
 
 *Parameter #1---block height*
 
@@ -431,7 +431,7 @@ The `protx info` RPC returns detailed information about a deterministic masterno
 | Name        | Type         | Presence                | Description               |
 | ----------- | ------------ | ----------------------- | ------------------------- |
 | `proTxHash` | string | Required<br>(Exactly 1) | The hash of the initial ProRegTx |
-| `blockHash` | string | Optional<br>(0 or 1) | The hash of the block to get deterministic masternode state at. Defaults to chain tip if not provided. |
+| `blockHash` | string | Optional<br>(0 or 1) | The hash of the block to get deterministic masternode state at. Defaults to chain tip if not provided.<br>**Updated in Dash Core 24.0.0**<br>The block must be on the active chain; otherwise the RPC fails with `Block is not in main chain`. |
 
 *Result--Details about a specific deterministic masternode*
 
@@ -443,11 +443,11 @@ The `protx info` RPC returns detailed information about a deterministic masterno
 | →<br>`proTxHash`                    | string (hex) | Required<br>(exactly 1) | The hash of the provider transaction as hex in RPC byte order                                   |
 | →<br>`collateralHash`               | string (hex) | Required<br>(exactly 1) | The hash of the collateral transaction as hex in RPC byte order                                 |
 | →<br>`collateralIndex`              | number (int) | Required<br>(exactly 1) | The collateral index                                                                            |
-| →<br>`collateralAddress`          | string       | Required<br>(exactly 1) | The collateral address                                                                          |
+| →<br>`collateralAddress`            | string       | Optional<br>(0 or 1)    | The collateral address. Only included if `-txindex` is enabled |
 | →<br>`operatorReward`               | number (float) | Required<br>(exactly 1) | The operator reward %. The value must be between `0.00` and `100.00`.                         |
 | →<br>`state`                        | object/null  | Required<br>(exactly 1) | An object containing a provider transaction state                                               |
 | → →<br>`version`                    | number (int) | Required<br>(exactly 1) | **Added in Dash Core 19.2.0**<br>The version of the most recent ProRegTx or ProUpRegTx          |
-| → →<br>`service`                    | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The masternode's IP:Port                                                                        |
+| → →<br>`service`                    | string       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The masternode's IP:Port. Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
 | → →<br>`addresses`                  | object       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
 | → → →<br>`core_p2p`                 | array        | Required<br>(exactly 1) | Array of core P2P address strings in `ADDR:PORT` format |
 | → → →<br>`platform_p2p`             | array        | Optional<br>(0 or 1)    | Array of platform P2P address strings in `ADDR:PORT` format (evonodes only) |
@@ -459,18 +459,36 @@ The `protx info` RPC returns detailed information about a deterministic masterno
 | → →<br>`PoSeRevivedHeight`          | number (int) | Required<br>(exactly 1) | The height where the masternode recovered from a proof of service ban                           |
 | → →<br>`PoSeBanHeight`              | number (int) | Required<br>(exactly 1) | The height where the masternode was banned for proof of service violations                      |
 | → →<br>`revocationReason`           | number (int) | Required<br>(exactly 1) | The reason for a ProUpRegTx revocation                                                          |
-| → →<br>`ownerAddress`               | string       | Required<br>(exactly 1) | The owner address                                                                               |
+| → →<br>`ownerAddress`               | string       | Optional<br>(0 or 1)    | **Updated in Dash Core 24.0.0**<br>The owner address. Not included for shared masternodes. |
 | → →<br>`votingAddress`              | string       | Required<br>(exactly 1) | The voting address                                                                              |
-| → →<br>`payoutAddress`              | string       | Required<br>(exactly 1) | The owner's payout address                                                                      |
+| → →<br>`platformNodeID`             | string (hex) | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>Platform P2P node ID, derived from P2P public key (evonodes only) |
+| → →<br>`platformP2PPort`            | number (int) | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_p2p'][0]` instead<br>TCP port of Platform P2P (evonodes only). Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
+| → →<br>`platformHTTPPort`           | number (int) | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_https'][0]` instead<br>TCP port of Platform HTTP/API interface (evonodes only). Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
+| → →<br>`payoutAddress`              | string       | Optional<br>(0 or 1)    | **Updated in Dash Core 24.0.0**<br>The owner's payout address. Not included for version 3 (extended address) masternodes, which return `payouts` instead, or for shared masternodes. |
+| → →<br>`payouts`                    | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Owner masternode reward payout shares |
+| → → →<br>Payout share               | object       | Required<br>(1 or more) | A payout share |
+| → → → →<br>`address`                | string       | Required<br>(exactly 1) | Dash address used for this owner payout |
+| → → → →<br>`script`                 | string (hex) | Required<br>(exactly 1) | Owner payout scriptPubKey |
+| → → → →<br>`reward`                 | number (int) | Required<br>(exactly 1) | Owner payout share in basis points |
+| → →<br>`shares`                     | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Collateral shares of a shared masternode |
+| → → →<br>Share                      | object       | Required<br>(1 or more) | A collateral share |
+| → → → →<br>`amount`                 | number (int) | Required<br>(exactly 1) | Collateral contribution in duffs |
+| → → → →<br>`refundAddress`          | string       | Required<br>(exactly 1) | Dash address the principal is refunded to at dissolution |
+| → → → →<br>`refundScript`           | string (hex) | Required<br>(exactly 1) | Refund scriptPubKey |
+| → → → →<br>`rewardAddress`          | string       | Required<br>(exactly 1) | Dash address this share's owner rewards are paid to |
+| → → → →<br>`rewardScript`           | string (hex) | Required<br>(exactly 1) | Reward scriptPubKey |
+| → → → →<br>`ownerAddress`           | string       | Required<br>(exactly 1) | Dash address of the share owner key |
+| → →<br>`earlyPeriodBlocks`          | number (int) | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Length in blocks of the early period during which unilateral dissolution is penalized (shared masternodes only) |
+| → →<br>`earlyPenalty`               | number (int) | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Penalty in duffs for unilateral dissolution during the early period (shared masternodes only) |
 | → →<br>`pubKeyOperator`             | string (hex) | Required<br>(exactly 1) | The operator public key                                                                         |
-| → →<br>`operatorPayoutAddress`      | string       | Required<br>(exactly 1) | The operator's payout address                                                                   |
+| → →<br>`operatorPayoutAddress`      | string       | Optional<br>(0 or 1)    | The operator's payout address                                                                   |
 | →<br>`confirmations`                | number (int) | Required<br>(exactly 1) | The number of confirmations this ProTx has                                                      |
-| →<br>`wallet`                       | object/null  | Required<br>(exactly 1) | An object containing a wallet details related to this ProTx                                     |
-| → →<br>`hasOwnerKey`                | bool         | Required<br>(exactly 1) | The owner key is present in this wallet                                                         |
+| →<br>`wallet`                       | object       | Optional<br>(0 or 1)    | An object containing a wallet details related to this ProTx. Only included if a wallet is available |
+| → →<br>`hasOwnerKey`                | bool         | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The owner key (for shared masternodes, any share owner key) is present in this wallet |
 | → →<br>`hasOperatorKey`             | bool         | Required<br>(exactly 1) | The operator key is present in this wallet                                                      |
 | → →<br>`hasVotingKey`               | bool         | Required<br>(exactly 1) | The voting key is present in this wallet                                                        |
 | → →<br>`ownsCollateral`             | bool         | Required<br>(exactly 1) | The collateral is owned by this wallet                                                          |
-| → →<br>`ownsPayeeScript`            | bool         | Required<br>(exactly 1) | The payee script is owned by this wallet                                                        |
+| → →<br>`ownsPayeeScript`            | bool         | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Any owner payout script (for shared masternodes, any share reward script) is owned by this wallet |
 | → →<br>`ownsOperatorRewardScript`   | bool         | Required<br>(exactly 1) | The operator reward script is owned by this wallet                                              |
 | →<br>`metaInfo`                     | object/null  | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br>An object containing a metainfo related to this ProTx      |
 | → →<br>`lastDSQ`                    | string       | Required<br>(exactly 1) | The owner key is present in this wallet                                                         |
@@ -553,7 +571,7 @@ Lists all ProTxs in your wallet or on-chain, depending on the given type. If `ty
 
 | Name   | Type   | Presence             | Description |
 | ------ | ------ | -------------------- | ----------- |
-| `type` | string | Optional<br>(0 or 1) | The type of ProTxs to list:<br>`registered` - all ProTxs registered at height<br>`valid` - all active/valid ProTxs at height<br>`evo` - List only ProTxs corresponding to evonodes at the given chain height<br>`wallet` - all ProTxs found in the current wallet<br><br>Height defaults to current chain-tip if one is not provided |
+| `type` | string | Optional<br>(0 or 1) | The type of ProTxs to list:<br>`registered` - all ProTxs registered at height<br>`valid` - all active/valid ProTxs at height<br>`evo` - List only ProTxs corresponding to evonodes at the given chain height<br>`wallet` - all ProTxs found in the current wallet<br>**Updated in Dash Core 24.0.0**: `wallet` also matches masternodes where the wallet holds a share owner key, a share refund or reward address, or any owner payout address<br><br>Height defaults to current chain-tip if one is not provided |
 
 *Parameter #2---detailed*
 
@@ -583,11 +601,11 @@ Lists all ProTxs in your wallet or on-chain, depending on the given type. If `ty
 | →<br>`proTxHash`                    | string (hex) | Required<br>(exactly 1) | The hash of the provider transaction as hex in RPC byte order                                   |
 | →<br>`collateralHash`               | string (hex) | Required<br>(exactly 1) | The hash of the collateral transaction as hex in RPC byte order                                 |
 | →<br>`collateralIndex`              | number (int) | Required<br>(exactly 1) | The collateral index                                                                            |
-| → →<br>`collateralAddress`          | string       | Required<br>(exactly 1) | The collateral address                                                                          |
+| →<br>`collateralAddress`            | string       | Optional<br>(0 or 1)    | The collateral address. Only included if `-txindex` is enabled |
 | →<br>`operatorReward`               | number (float) | Required<br>(exactly 1) | The operator reward %. The value must be between `0.00` and `100.00`.                         |
 | →<br>`state`                        | object/null  | Required<br>(exactly 1) | An object containing a provider transaction state                                               |
 | → →<br>`version`                    | number (int) | Required<br>(exactly 1) | **Added in Dash Core 19.2.0**<br>The version of the most recent ProRegTx or ProUpRegTx                                           |
-| → →<br>`service`                    | string       | Required<br>(exactly 1) | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The masternode's IP:Port                                                                        |
+| → →<br>`service`                    | string       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['core_p2p'][0]` instead<br>The masternode's IP:Port. Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
 | → →<br>`addresses`                  | object       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Masternode network addresses object |
 | → → →<br>`core_p2p`                 | array        | Required<br>(exactly 1) | Array of core P2P address strings in `ADDR:PORT` format |
 | → → →<br>`platform_p2p`             | array        | Optional<br>(0 or 1)    | Array of platform P2P address strings in `ADDR:PORT` format (evonodes only) |
@@ -599,18 +617,36 @@ Lists all ProTxs in your wallet or on-chain, depending on the given type. If `ty
 | → →<br>`PoSeRevivedHeight`          | number (int) | Required<br>(exactly 1) | The height where the masternode recovered from a proof of service ban                           |
 | → →<br>`PoSeBanHeight`              | number (int) | Required<br>(exactly 1) | The height where the masternode was banned for proof of service violations                      |
 | → →<br>`revocationReason`           | number (int) | Required<br>(exactly 1) | The reason for a ProUpRegTx revocation                                                          |
-| → →<br>`ownerAddress`               | string       | Required<br>(exactly 1) | The owner address                                                                               |
+| → →<br>`ownerAddress`               | string       | Optional<br>(0 or 1)    | **Updated in Dash Core 24.0.0**<br>The owner address. Not included for shared masternodes. |
 | → →<br>`votingAddress`              | string       | Required<br>(exactly 1) | The voting address                                                                              |
-| → →<br>`payoutAddress`              | string       | Required<br>(exactly 1) | The owner's payout address                                                                      |
+| → →<br>`platformNodeID`             | string (hex) | Optional<br>(0 or 1)    | **Added in Dash Core 19.0.0**<br>Platform P2P node ID, derived from P2P public key (evonodes only) |
+| → →<br>`platformP2PPort`            | number (int) | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_p2p'][0]` instead<br>TCP port of Platform P2P (evonodes only). Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
+| → →<br>`platformHTTPPort`           | number (int) | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** - Use `addresses['platform_https'][0]` instead<br>TCP port of Platform HTTP/API interface (evonodes only). Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
+| → →<br>`payoutAddress`              | string       | Optional<br>(0 or 1)    | **Updated in Dash Core 24.0.0**<br>The owner's payout address. Not included for version 3 (extended address) masternodes, which return `payouts` instead, or for shared masternodes. |
+| → →<br>`payouts`                    | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Owner masternode reward payout shares |
+| → → →<br>Payout share               | object       | Required<br>(1 or more) | A payout share |
+| → → → →<br>`address`                | string       | Required<br>(exactly 1) | Dash address used for this owner payout |
+| → → → →<br>`script`                 | string (hex) | Required<br>(exactly 1) | Owner payout scriptPubKey |
+| → → → →<br>`reward`                 | number (int) | Required<br>(exactly 1) | Owner payout share in basis points |
+| → →<br>`shares`                     | array        | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Collateral shares of a shared masternode |
+| → → →<br>Share                      | object       | Required<br>(1 or more) | A collateral share |
+| → → → →<br>`amount`                 | number (int) | Required<br>(exactly 1) | Collateral contribution in duffs |
+| → → → →<br>`refundAddress`          | string       | Required<br>(exactly 1) | Dash address the principal is refunded to at dissolution |
+| → → → →<br>`refundScript`           | string (hex) | Required<br>(exactly 1) | Refund scriptPubKey |
+| → → → →<br>`rewardAddress`          | string       | Required<br>(exactly 1) | Dash address this share's owner rewards are paid to |
+| → → → →<br>`rewardScript`           | string (hex) | Required<br>(exactly 1) | Reward scriptPubKey |
+| → → → →<br>`ownerAddress`           | string       | Required<br>(exactly 1) | Dash address of the share owner key |
+| → →<br>`earlyPeriodBlocks`          | number (int) | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Length in blocks of the early period during which unilateral dissolution is penalized (shared masternodes only) |
+| → →<br>`earlyPenalty`               | number (int) | Optional<br>(0 or 1)    | **Added in Dash Core 24.0.0**<br>Penalty in duffs for unilateral dissolution during the early period (shared masternodes only) |
 | → →<br>`pubKeyOperator`             | string (hex) | Required<br>(exactly 1) | The operator public key                                                                         |
-| → →<br>`operatorPayoutAddress`      | string       | Required<br>(exactly 1) | The operator's payout address                                                                   |
+| → →<br>`operatorPayoutAddress`      | string       | Optional<br>(0 or 1)    | The operator's payout address                                                                   |
 | →<br>`confirmations`                | number (int) | Required<br>(exactly 1) | The number of confirmations this ProTx has                                                      |
-| →<br>`wallet`                       | object/null  | Required<br>(exactly 1) | An object containing a wallet details related to this ProTx                                     |
-| → →<br>`hasOwnerKey`                | bool         | Required<br>(exactly 1) | The owner key is present in this wallet                                                         |
+| →<br>`wallet`                       | object       | Optional<br>(0 or 1)    | An object containing a wallet details related to this ProTx. Only included if a wallet is available |
+| → →<br>`hasOwnerKey`                | bool         | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The owner key (for shared masternodes, any share owner key) is present in this wallet |
 | → →<br>`hasOperatorKey`             | bool         | Required<br>(exactly 1) | The operator key is present in this wallet                                                      |
 | → →<br>`hasVotingKey`               | bool         | Required<br>(exactly 1) | The voting key is present in this wallet                                                        |
 | → →<br>`ownsCollateral`             | bool         | Required<br>(exactly 1) | The collateral is owned by this wallet                                                          |
-| → →<br>`ownsPayeeScript`            | bool         | Required<br>(exactly 1) | The payee script is owned by this wallet                                                        |
+| → →<br>`ownsPayeeScript`            | bool         | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Any owner payout script (for shared masternodes, any share reward script) is owned by this wallet |
 | → →<br>`ownsOperatorRewardScript`   | bool         | Required<br>(exactly 1) | The operator reward script is owned by this wallet                                              |
 | →<br>`metaInfo`                     | object/null  | Required<br>(exactly 1) | *Added in Dash Core 0.16.0*<br>An object containing a metainfo related to this ProTx      |
 | → →<br>`lastDSQ`                    | string       | Required<br>(exactly 1) | The owner key is present in this wallet                                                         |
@@ -717,6 +753,12 @@ Result:
 ### ProTx List Diff
 
 The `protx listdiff` RPC calculates a full MN list diff between two masternode lists.
+
+:::{note}
+**Updated in Dash Core 24.0.0**
+
+Both blocks must be on the active chain; otherwise the RPC fails with `Block is not in main chain`.
+:::
 
 *Parameter #1---baseBlock*
 
@@ -857,7 +899,7 @@ The `protx register` RPC creates a ProRegTx referencing an existing collateral a
 
 | Name              | Type         | Presence                | Description                             |
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
-| `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
+| `collateralIndex` | number (int) | Required<br>(exactly 1) | The collateral transaction output index |
 
 *Parameter #3---Core P2P addresses*
 
@@ -986,7 +1028,7 @@ The `protx register_legacy` RPC works similar to `protx register`, but parses th
 
 | Name              | Type         | Presence                | Description                             |
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
-| `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
+| `collateralIndex` | number (int) | Required<br>(exactly 1) | The collateral transaction output index |
 
 *Parameter #3---Core P2P addresses*
 
@@ -1004,13 +1046,13 @@ The `protx register_legacy` RPC works similar to `protx register`, but parses th
 
 | Name                       | Type         | Presence                | Description                                                                                                                                                                |
 | -------------------------- | ------------ | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `operatorPubKey_register` | string (hex) | Required<br>(exactly 1) | The operator BLS public key. <br>The BLS private key does not have to be known. <br>It has to match the BLS private key which is later used when operating the masternode. |
+| `operatorPubKey` | string (hex) | Required<br>(exactly 1) | The operator BLS public key. <br>The BLS private key does not have to be known. <br>It has to match the BLS private key which is later used when operating the masternode. |
 
 *Parameter #6---voting address*
 
 | Name                     | Type   | Presence                | Description                                                                                                                                                                                                                   |
 | ------------------------ | ------ | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `votingAddress_register` | string | Required<br>(exactly 1) | The voting key address. <br>The private key does not have to be known by your wallet. <br>It has to match the private key which is later used when voting on proposals. If set to an empty string, ownerAddress will be used. |
+| `votingAddress` | string | Required<br>(exactly 1) | The voting key address. <br>The private key does not have to be known by your wallet. <br>It has to match the private key which is later used when voting on proposals. If set to an empty string, ownerAddress will be used. |
 
 *Parameter #7---operator reward*
 
@@ -1238,7 +1280,7 @@ The `protx register_fund_legacy` RPC creates, funds, and sends a ProTx to the ne
 
 | Name                      | Type         | Presence                | Description                                                                                                                                                                |
 | ------------------------- | ------------ | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `operatorPubKey_register` | string (hex) | Required<br>(exactly 1) | The operator BLS public key. <br>The BLS private key does not have to be known. <br>It has to match the BLS private key which is later used when operating the masternode. |
+| `operatorPubKey` | string (hex) | Required<br>(exactly 1) | The operator BLS public key. <br>The BLS private key does not have to be known. <br>It has to match the BLS private key which is later used when operating the masternode. |
 
 *Parameter #5---voting address*
 
@@ -1340,7 +1382,7 @@ The `protx register_prepare` RPC creates an unsigned ProTx and a message that mu
 
 | Name              | Type         | Presence                | Description                             |
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
-| `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
+| `collateralIndex` | number (int) | Required<br>(exactly 1) | The collateral transaction output index |
 
 *Parameter #3---Core P2P addresses*
 
@@ -1436,7 +1478,7 @@ The `protx register_prepare_legacy` RPC Creates an unsigned ProTx and a message 
 
 | Name              | Type         | Presence                | Description                             |
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
-| `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
+| `collateralIndex` | number (int) | Required<br>(exactly 1) | The collateral transaction output index |
 
 *Parameter #3---Core P2P addresses*
 
@@ -1454,13 +1496,13 @@ The `protx register_prepare_legacy` RPC Creates an unsigned ProTx and a message 
 
 | Name                      | Type         | Presence                | Description                                                                                                                                            |
 | ------------------------- | ------------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `operatorPubKey_register` | string (hex) | Required<br>(exactly 1) | The operator public key. The private key does not have to be known. It has to match the private key which is later used when operating the masternode. |
+| `operatorPubKey` | string (hex) | Required<br>(exactly 1) | The operator public key. The private key does not have to be known. It has to match the private key which is later used when operating the masternode. |
 
 *Parameter #6---voting address*
 
 | Name                     | Type   | Presence                | Description                                                                                                                                                                                                         |
 | ------------------------ | ------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `votingAddress_register` | string | Required<br>(exactly 1) | The voting address. The private key does not have to be known by your wallet. It has to match the private key which is later used when voting on proposals. If set to an empty string, `ownerAddress` will be used. |
+| `votingAddress` | string | Required<br>(exactly 1) | The voting address. The private key does not have to be known by your wallet. It has to match the private key which is later used when voting on proposals. If set to an empty string, `ownerAddress` will be used. |
 
 *Parameter #7---operator reward*
 
@@ -1526,7 +1568,7 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 
 | Name              | Type         | Presence                | Description                             |
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
-| `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
+| `collateralIndex` | number (int) | Required<br>(exactly 1) | The collateral transaction output index |
 
 *Parameter #3---Core P2P Addresses*
 
@@ -1544,13 +1586,13 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 
 | Name                      | Type         | Presence                | Description                                                                                                                                            |
 | ------------------------- | ------------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `operatorPubKey_register` | string (hex) | Required<br>(exactly 1) | The operator public key. The private key does not have to be known. It has to match the private key which is later used when operating the masternode. |
+| `operatorPubKey` | string (hex) | Required<br>(exactly 1) | The operator public key. The private key does not have to be known. It has to match the private key which is later used when operating the masternode. |
 
 *Parameter #6---voting address*
 
 | Name                     | Type   | Presence                | Description                                                                                                                                                                                                         |
 | ------------------------ | ------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `votingAddress_register` | string | Required<br>(exactly 1) | The voting address. The private key does not have to be known by your wallet. It has to match the private key which is later used when voting on proposals. If set to an empty string, `ownerAddress` will be used. |
+| `votingAddress` | string | Required<br>(exactly 1) | The voting address. The private key does not have to be known by your wallet. It has to match the private key which is later used when voting on proposals. If set to an empty string, `ownerAddress` will be used. |
 
 *Parameter #7---operator reward*
 
@@ -1681,13 +1723,13 @@ The `protx register_fund_evo` RPC creates, funds, and sends a ProTx to the netwo
 
 | Name                       | Type         | Presence                | Description                                                                                                                                            |
 | -------------------------- | ------------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `operatorPubKey_register` | string (hex) | Required<br>(exactly 1) | The operator public key. The private key does not have to be known. It has to match the private key which is later used when operating the masternode. |
+| `operatorPubKey` | string (hex) | Required<br>(exactly 1) | The operator public key. The private key does not have to be known. It has to match the private key which is later used when operating the masternode. |
 
 *Parameter #5---voting address register*
 
 | Name                     | Type   | Presence                | Description                                                                                                                                                                                                         |
 | ------------------------ | ------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `votingAddress_register` | string | Required<br>(exactly 1) | The voting address. The private key does not have to be known by your wallet. It has to match the private key which is later used when voting on proposals. If set to an empty string, `ownerAddress` will be used. |
+| `votingAddress` | string | Required<br>(exactly 1) | The voting address. The private key does not have to be known by your wallet. It has to match the private key which is later used when voting on proposals. If set to an empty string, `ownerAddress` will be used. |
 
 *Parameter #6---operator reward*
 
@@ -1801,7 +1843,7 @@ The `protx register_prepare_evo` RPC creates an unsigned ProTx and a message tha
 
 | Name              | Type         | Presence                | Description                             |
 | ----------------- | ------------ | ----------------------- | --------------------------------------- |
-| `collateralIndex` | string (hex) | Required<br>(exactly 1) | The collateral transaction output index |
+| `collateralIndex` | number (int) | Required<br>(exactly 1) | The collateral transaction output index |
 
 *Parameter #3---Core P2P addresses*
 
@@ -1819,13 +1861,13 @@ The `protx register_prepare_evo` RPC creates an unsigned ProTx and a message tha
 
 | Name                      | Type         | Presence                | Description                                                                                                                                            |
 | ------------------------- | ------------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `operatorPubKey_register` | string (hex) | Required<br>(exactly 1) | The operator public key. The private key does not have to be known. It has to match the private key which is later used when operating the masternode. |
+| `operatorPubKey` | string (hex) | Required<br>(exactly 1) | The operator public key. The private key does not have to be known. It has to match the private key which is later used when operating the masternode. |
 
 *Parameter #6---voting address register*
 
 | Name                     | Type   | Presence                | Description                                                                                                                                                                                                         |
 | ------------------------ | ------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `votingAddress_register` | string | Required<br>(exactly 1) | The voting address. The private key does not have to be known by your wallet. It has to match the private key which is later used when voting on proposals. If set to an empty string, `ownerAddress` will be used. |
+| `votingAddress` | string | Required<br>(exactly 1) | The voting address. The private key does not have to be known by your wallet. It has to match the private key which is later used when voting on proposals. If set to an empty string, `ownerAddress` will be used. |
 
 *Parameter #7---operator reward*
 
@@ -2182,13 +2224,13 @@ The `protx update_registrar_legacy` RPC creates and sends a ProUpRegTx to the ne
 
 | Name                    | Type         | Presence                | Description                                                                                                                                                                                                                               |
 | ----------------------- | ------------ | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `operatorPubKey_update` | string (hex) | Required<br>(exactly 1) | The operator public key. The private key does not have to be known. It has to match the private key which is later used when operating the masternode. If set to an empty string, the currently active operator BLS public key is reused. |
+| `operatorPubKey` | string (hex) | Required<br>(exactly 1) | The operator public key. The private key does not have to be known. It has to match the private key which is later used when operating the masternode. If set to an empty string, the currently active operator BLS public key is reused. |
 
 *Parameter #3---voting address*
 
 | Name                   | Type   | Presence                | Description                                                                                                                                                                                                                                   |
 | ---------------------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `votingAddress_update` | string | Required<br>(exactly 1) | The voting key address. The private key does not have to be known by your wallet. It has to match the private key which is later used when voting on proposals. If set to an empty string, the currently active voting key address is reused. |
+| `votingAddress` | string | Required<br>(exactly 1) | The voting key address. The private key does not have to be known by your wallet. It has to match the private key which is later used when voting on proposals. If set to an empty string, the currently active voting key address is reused. |
 
 *Parameter #4---operator payout address*
 
@@ -2314,7 +2356,7 @@ The `protx shared_combine` RPC combines share owner signatures produced by [`pro
 
 * **Shared ProRegTx:** the completed transaction hex is returned. Its funding inputs still have to be signed (for example, by passing the result around [`signrawtransactionwithwallet`](../api/remote-procedure-calls-wallet.md#signrawtransactionwithwallet)), so `submit` is not available. A signature from every share is required.
 * **Unanimous ProDisTx:** the transaction can be submitted directly. A signature from every share is required.
-* **ProUpSharedRegTx:** the transaction can be submitted directly, but only from the wallet that ran [`protx shared_update_registrar_prepare`](#protx-shared-update-registrar-prepare). Combining re-signs its fee inputs, which only that wallet can do. With `submit` set to `false`, the returned hex can be finished in that wallet with `signrawtransactionwithwallet`.
+* **ProUpSharedRegTx:** the transaction can be submitted directly, but only from the wallet that ran [`protx shared_update_registrar_prepare`](#protx-shared-update-registrar-prepare). A signature from every share is required. Combining re-signs its fee inputs, and is refused unless they are unlocked coins of a single address of this wallet, any change returns to that address, and the fee is within `-maxtxfee`. With `submit` set to `false`, the fully signed transaction hex is returned. Requires wallet passphrase to be set with [`walletpassphrase`](../api/remote-procedure-calls-wallet.md#walletpassphrase) call if wallet is encrypted.
 
 *Parameter #1---transaction*
 
@@ -2637,6 +2679,8 @@ dash-cli -testnet protx shared_register_prepare_evo "<fundingTx>" "<shares>" \
 The `protx shared_sign` RPC signs a shared masternode transaction (shared ProRegTx, unanimous ProDisTx, or ProUpSharedRegTx) with every share owner key this wallet holds and returns the produced signatures. The transaction itself is not modified. Pass the signatures to [`protx shared_combine`](#protx-shared-combine).
 
 Only the multi-party flows use this RPC. A unilateral dissolution is built, signed, and submitted in one step by [`protx shared_dissolve`](#protx-shared-dissolve).
+
+For a registrar update, the signature covers the payload, including `inputsHash` (the input outpoints), but not the transaction outputs. [`protx shared_combine`](#protx-shared-combine) checks the outputs on the funding wallet before re-signing the fee inputs.
 
 Requires wallet passphrase to be set with [`walletpassphrase`](../api/remote-procedure-calls-wallet.md#walletpassphrase) call if wallet is encrypted.
 
@@ -2969,7 +3013,7 @@ The `quorum dkginfo` RPC returns information about active and upcoming DKG sessi
 | Name                                  | Type         | Presence                | Description |
 | ------------------------------------- | ------------ | ----------------------- | ----------- |
 | `result`                              | object       | Required<br>(exactly 1) | Quorum info |
-| →<br>`active_dkgs` | number | Required<br>(exactly 1) | Total number of active DKG sessions this node is participating in currently
+| →<br>`active_dkgs` | number | Required<br>(exactly 1) | Total number of active DKG sessions this node is participating in currently |
 | →<br>`next_dkg`    | number | Required<br>(exactly 1) | The number of blocks until the next potential DKG session |
 | →<br>`proTxHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Hash of the masternode's initial ProRegTx |
 | →<br>`upcoming_dkgs` | array | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Upcoming DKG sessions for the given proTxHash whose work block is already mined. For rotated quorums all indices in a cycle share the cycle base work block |
@@ -3024,7 +3068,7 @@ The `quorum dkgstatus` RPC displays the status of the current DKG process.
 | → → → →<br>`llmqType`                     | number           | Required<br>(exactly 1) | [Type of quorum](https://github.com/dashpay/dips/blob/master/dip-0006/llmq-types.md):<br>`1` - LLMQ_50_60<br>`2` - LLMQ_400_60<br>`3` - LLMQ_400_85<br>`4` - LLMQ_100_67 |
 | → → → →<br>`quorumHash`                   | string (hex)     | Required<br>(exactly 1) | The block hash of the quorum                                                                                                                                                     |
 | → → → →<br>`quorumHeight`                 | number           | Required<br>(exactly 1) | The block height of the quorum                                                                                                                                                   |
-| → → → →<br>`phase`                        | number           | Required<br>(exactly 1) | The active DKG phase<br>`1` - Initialized<br>`2` - Contributing<br>`3` - Complaining<br>`4` - Justifying<br>`5` - Committing<br>`6` - Finalizing                                 |
+| → → → →<br>`phase`                        | number           | Required<br>(exactly 1) | Latest DKG phase whose messages this node has already sent<br>`1` - Initialized<br>`2` - Contributing<br>`3` - Complaining<br>`4` - Justifying<br>`5` - Committing<br>`6` - Finalizing                                 |
 | → → → →<br>`sentContributions`            | bool             | Required<br>(exactly 1) | True when contributions have been sent                                                                                                                                           |
 | → → → →<br>`sentComplaint`                | bool             | Required<br>(exactly 1) | True when complaints have been sent                                                                                                                                              |
 | → → → →<br>`sentJustification`            | bool             | Required<br>(exactly 1) | True when justifications have been sent                                                                                                                                          |
@@ -4056,12 +4100,13 @@ The `quorum listextended` RPC returns an extended list of on-chain quorums.
 | ------------------------- | ---------------- | ----------------------- | --------------------------------------------------------------- |
 | `result`                  | object           | Required<br>(exactly 1) | Object containing an extended list of on-chain quorums          |
 | →<br>`quorumName`         | array of objects | Required<br>(exactly 1) | List of quorum details per some quorum type                     |
-| →→<br>`xxxx`              | object           | Required<br>(exactly 1) | Quorum hash. Note: most recent quorums come first               |
-| →→→<br>`quorumIndex`      | numeric          | Optional<br>(0 or 1)    | Quorum index (applicable only to rotated quorums)               |
-| →→→<br>`creationHeight`   | numeric          | Required<br>(exactly 1) | Block height where the DKG started                              |
-| →→→<br>`minedBlockHash`   | string           | Required<br>(exactly 1) | Blockhash where the commitment was mined.                       |
-| →→→<br> `numValidMembers` | numeric          | Required<br>(exactly 1) | The total of valid members.                                     |
-| →→→<br> `healthRatio`     | string           | Required<br>(exactly 1) | The ratio of healthy members to quorum size. Range [0.0 - 1.0]. |
+| →→<br>Quorum              | object           | Optional<br>(0 or more) | Object with the quorum hash as key. Note: most recent quorums come first |
+| →→→<br>`xxxx`             | object           | Required<br>(exactly 1) | Key: quorum hash<br>Value: quorum details                       |
+| →→→→<br>`quorumIndex`     | numeric          | Optional<br>(0 or 1)    | Quorum index (applicable only to rotated quorums)               |
+| →→→→<br>`creationHeight`  | numeric          | Required<br>(exactly 1) | Block height where the DKG started                              |
+| →→→→<br>`minedBlockHash`  | string           | Required<br>(exactly 1) | Blockhash where the commitment was mined.                       |
+| →→→→<br>`numValidMembers` | numeric          | Required<br>(exactly 1) | The total of valid members.                                     |
+| →→→→<br>`healthRatio`     | string           | Required<br>(exactly 1) | The ratio of healthy members to quorum size. Range [0.0 - 1.0]. |
 
 *Example from Dash Core 18.2.0*
 
