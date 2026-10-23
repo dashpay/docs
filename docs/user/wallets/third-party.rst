@@ -375,9 +375,10 @@ https://gemwallet.com
 Gem Wallet is an open-source, self-custody multi-chain mobile wallet with
 native Dash support. Private keys are stored only on the user's device,
 and no account, email or KYC is required. Users can send and receive
-DASH (transfers are locked by InstantSend in about two seconds), pay by
-QR code, and swap DASH for BTC, USDT and other assets through the
-built-in swap aggregator. The full source code is available on GitHub.
+DASH (eligible transfers use InstantSend and are typically locked in about
+two seconds), pay by QR code, and swap DASH for BTC, USDT and other assets
+through the built-in swap aggregator. The full source code is available on
+GitHub.
 
 Installation
 ------------
