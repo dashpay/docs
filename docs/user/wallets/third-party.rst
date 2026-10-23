@@ -1,6 +1,6 @@
 .. meta::
    :description: List and detailed information on third-party wallets supporting the Dash cryptocurrency
-   :keywords: dash, wallet, mobile, edge, ethos, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, trust, kurepay, ownbit, abra, vegawallet
+   :keywords: dash, wallet, mobile, edge, ethos, mobi, guarda, exodus, atomic, jaxx, coinomi, cobo, trust, kurepay, ownbit, abra, vegawallet, gem
 
 .. _dash-third-party:
 
@@ -360,6 +360,52 @@ https://support.exodus.io and a few quick links are also collected here:
    :width: 400px
 
    Exodus wallet Portfolio screen
+
+
+Gem Wallet
+==========
+
+https://gemwallet.com
+
+.. image:: img/gem.png
+   :width: 100px
+   :align: right
+   :target: https://gemwallet.com
+
+Gem Wallet is an open-source, self-custody multi-chain mobile wallet with
+native Dash support. Private keys are stored only on the user's device,
+and no account, email or KYC is required. Users can send and receive
+DASH (transfers are locked by InstantSend in about two seconds), pay by
+QR code, and swap DASH for BTC, USDT and other assets through the
+built-in swap aggregator. The full source code is available on GitHub.
+
+Installation
+------------
+
+.. image:: img/google-play-badge.png
+   :width: 200px
+   :target: https://play.google.com/store/apps/details?id=com.gemwallet.android
+
+.. image:: img/app-store.png
+   :width: 180px
+   :target: https://apps.apple.com/app/id6448712670
+
+Gem Wallet is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.gemwallet.android>`__,
+the `Apple App Store for iOS <https://apps.apple.com/app/id6448712670>`__
+and `F-Droid <https://f-droid.org/packages/com.gemwallet.android/>`__.
+An APK is also available from https://gemwallet.com/download/.
+
+Documentation
+-------------
+
+Gem Wallet offers documentation at https://docs.gemwallet.com and
+support at https://gemwallet.com/support/. The source code is
+available at https://github.com/gemwalletcom/wallet.
+
+.. figure:: img/gem-wallet.png
+   :width: 133px
+
+   Gem Wallet running on iOS
 
 
 Guarda
