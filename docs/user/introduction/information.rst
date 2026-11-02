@@ -30,7 +30,6 @@ Community sites
 
 - https://dashdevs.org
 - https://www.dashcentral.org
-- https://www.dashninja.pl
 
 Forums
 ------
@@ -167,16 +166,14 @@ Treasury tools
 --------------
 
 - https://www.dashcentral.org
-- https://dashvotetracker.com
 - https://proposal.dash.org
-- https://www.dashninja.pl/governance.html
 - https://mnowatch.org/leaderboard/
 
 
 Masternode management
 ---------------------
 
-- https://www.dashninja.pl
+- https://nodes.dashhq.org
 - https://github.com/Bertrand256/dash-masternode-tool
 - http://178.254.23.111/~pub/Dash/Dash_Info.html
 - https://dash-news.de/dashtv/
