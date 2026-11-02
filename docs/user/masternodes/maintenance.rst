@@ -534,17 +534,17 @@ wallets such as Trezor, Ledger and KeepKey. It also supports functions
 to vote on proposals and withdraw masternode payments without affecting
 the collateral transaction.
 
-DASH Ninja
-----------
+DashHQ Radar
+------------
 
-https://www.dashninja.pl
+https://radar.dashhq.org
 
-DASH Ninja, operated by forum member and Dash Core developer elbereth,
-offers key statistics on the adoption of different versions of Dash
-across the masternode network. Several features to monitor governance of
-the Dash, the masternode payment schedule and the geographic
-distribution of masternodes are also available, as well as a simple
-blockchain explorer.
+DashHQ Radar is a free, `open-source
+<https://github.com/PastaPastaPasta/dash-nodes>`__ monitor of the Dash
+network. It has a page for each masternode, checks whether masternodes
+can be reached, and tracks the adoption of Dash Core versions and user
+agents. It also breaks the network down by hosting provider and country
+and shows the masternodes on a map.
 
 DashCentral
 -----------

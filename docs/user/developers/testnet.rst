@@ -59,6 +59,7 @@ Faucets
 -------
 
 - https://faucet.testnet.networks.dash.org - by Dash Core Group
+- https://faucet.dashhq.org
 
 Explorers
 ---------
