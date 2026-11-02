@@ -537,7 +537,7 @@ the collateral transaction.
 DashHQ Radar
 ------------
 
-https://nodes.dashhq.org
+https://radar.dashhq.org
 
 DashHQ Radar is a free, `open-source
 <https://github.com/PastaPastaPasta/dash-nodes>`__ monitor of the Dash

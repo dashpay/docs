@@ -189,9 +189,10 @@ Proposal websites
 The community has gathered around `DashCentral
 <https://www.dashcentral.org>`__ as a website to facilitate discussion
 and voting on proposals formally entered on the Dash blockchain. Other
-websites like the `MNOwatch proposal leaderboard
-<https://mnowatch.org/leaderboard/>`__ are available to monitor progress
-over time and gather more detailed statistics.
+websites like `govhub <https://gov.dashhq.org>`__ and the `MNOwatch
+proposal leaderboard <https://mnowatch.org/leaderboard/>`__ are
+available to monitor progress over time and gather more detailed
+statistics.
 `Dash Masternode Tool <https://github.com/Bertrand256/dash-masternode-tool/releases>`__ also
 allows for voting without the need to share masternode private keys with
 a third party service.
