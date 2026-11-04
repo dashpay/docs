@@ -514,20 +514,20 @@ Installation
 
 .. image:: img/google-play-badge.png
    :width: 200px
-   :target: https://play.google.com/store/apps/details?id=com.bitbill.www
+   :target: https://play.google.com/store/apps/details?id=io.ownbit.app
 
 .. image:: img/app-store.png
    :width: 180px
    :target: https://apps.apple.com/app/id1321798216
 
-Ownbit is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=com.bitbill.www>`__ 
+Ownbit is available from the `Google Play Store for Android <https://play.google.com/store/apps/details?id=io.ownbit.app>`__ 
 and the `Apple App Store for iOS <https://apps.apple.com/app/id1321798216>`__.
 
 Documentation
 -------------
 
 Join the `Ownbit Telegram group <https://t.me/bitbill>`_ or send an
-email to hi@bitbill.com for support with Ownbit.
+email to support@ownbit.io for support with Ownbit.
 
 .. figure:: img/ownbit-wallet.png
    :width: 180px
