@@ -1153,7 +1153,7 @@ Name | Type | Presence | Description
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | array | Required<br>(exactly 1) | An array of JSON objects, with each object describing a chain tip.  At least one tip---the local best block chain---will always be present
-→<br>Tip | object | Required<br>(1 or more) | An object describing a particular chain tip.  The first object will always describe the active chain (the local best block chain)
+→<br>Tip | object | Optional<br>(0 or more) | An object describing a particular chain tip, ordered by height (highest first). With the default parameters, the active chain (the local best block chain) is always included
 → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of the highest block in the chain.  A new node with only the genesis block will have a single tip with height of 0
 → →<br>`hash` | string (hex) | Required<br>(exactly 1) | The hash of the highest block in the chain, encoded as hex in RPC byte order
 → →<br>`difficulty` | number (real) | Required<br>(exactly 1) | The difficulty of the highest-height block in this chain (Added in Dash Core 0.12.1)

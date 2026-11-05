@@ -22,8 +22,9 @@ The [`getaddressbalance` RPC](../api/remote-procedure-calls-address-index.md#get
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`addresses` | object | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
-→Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
+Request | object | Required<br>(exactly 1) | A JSON object with the addresses
+→<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
+→→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
 
 *Result---the current balance in [duffs](../resources/glossary.md#duffs) and the total number of duffs received (including change)*
 
@@ -137,8 +138,9 @@ The [`getaddressmempool` RPC](../api/remote-procedure-calls-address-index.md#get
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`addresses` | object | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
-→Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
+Request | object | Required<br>(exactly 1) | A JSON object with the addresses
+→<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
+→→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
 
 *Result---information about mempool deltas for the address(es)*
 
@@ -238,8 +240,9 @@ The [`getaddressutxos` RPC](../api/remote-procedure-calls-address-index.md#getad
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`addresses` | object | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
-→Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
+Request | object | Required<br>(exactly 1) | A JSON object with the addresses
+→<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
+→→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
 
 *Result---information about unspent outputs for the address(es)*
 

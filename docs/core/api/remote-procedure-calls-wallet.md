@@ -446,7 +446,7 @@ _Result---a notice_
 | -------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------- |
 | `result` | string | Required<br>(exactly 1) | A string with further instructions.  The wallet is now encrypted and the server keeps running             |
 
-_Example from Dash Core 0.12.2_
+_Example from Dash Core 24.0.0_
 
 ```bash
 dash-cli -testnet encryptwallet "test"
@@ -455,9 +455,7 @@ dash-cli -testnet encryptwallet "test"
 Result:
 
 ```text
-Wallet encrypted; Dash Core server stopping, restart to run with encrypted wallet.
-The keypool has been flushed and a new HD seed was generated (if you are using
-HD). You need to make a new backup.
+wallet encrypted; If you forget the passphrase, you will lose access to your funds. Make sure that you have backup of your seed or mnemonic.
 
 ```
 
@@ -850,6 +848,8 @@ Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on mas
 ![Warning icon](https://raw.githubusercontent.com/dashpay/docs-core/main/img/icons/icon_warning.svg) Note: This RPC only returns a balance for addresses contained in the local wallet.
 
 The [`getreceivedbyaddress` RPC](../api/remote-procedure-calls-wallet.md#getreceivedbyaddress) returns the total amount received by the specified address in transactions with the specified number of confirmations. Mature coinbase outputs are always counted; immature coinbase outputs are counted only if `include_immature_coinbase` is `true`.
+
+As of Dash Core 24.0.0, the `-deprecatedrpc=exclude_coinbase` option has been removed, so coinbase outputs can no longer be excluded.
 
 _Parameter #1---the address_
 
@@ -2667,7 +2667,7 @@ Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on mas
 
 The [`lockunspent` RPC](../api/remote-procedure-calls-wallet.md#lockunspent) temporarily locks or unlocks specified transaction outputs. A locked transaction output will not be chosen by automatic coin selection when spending dash. Locks are stored in memory only unless `persistent` is `true`, in which case they are written to the wallet database and restored on startup.
 
-As of Dash Core 24.0.0, the wallet also locks some outputs itself, and these locks are persistent: dust received from external transactions when `-dustprotectionthreshold` is set, and inputs of a completed CoinJoin session until the mixing transaction spending them is seen. Unlocking a pending CoinJoin input with `lockunspent` also stops the wallet from tracking it.
+As of Dash Core 24.0.0, the wallet also locks some outputs itself, and these locks are persistent: dust received from external transactions when `-dustprotectionthreshold` is set, and inputs of a completed CoinJoin session until the mixing transaction spending them is seen (or for at most about an hour if it never propagates). Unlocking a pending CoinJoin input with `lockunspent` also stops the wallet from tracking it.
 
 _Parameter #1---whether to lock or unlock the outputs_
 
@@ -3211,7 +3211,7 @@ EXPERIMENTAL warning: This call may be changed in future releases.
 Requires [wallet](../resources/glossary.md#wallet) support (**unavailable on masternodes**).
 :::
 
-The [`sendall` RPC](../api/remote-procedure-calls-wallet.md#sendall) spends the value of all (or specific) confirmed UTXOs in the wallet to one or more recipients without creating change. Unconfirmed inbound UTXOs and locked UTXOs are not spent. `sendall` respects the `avoid_reuse` wallet flag. A wallet unlocked only for mixing cannot sign the transaction; an incomplete PSBT is returned until the wallet is fully unlocked.
+The [`sendall` RPC](../api/remote-procedure-calls-wallet.md#sendall) spends the value of all (or specific) confirmed UTXOs in the wallet to one or more recipients without creating change. Unconfirmed inbound UTXOs and locked UTXOs are not spent. `sendall` respects the `avoid_reuse` wallet flag. As of Dash Core 24.0.0, a wallet unlocked only for mixing cannot sign the transaction; an incomplete PSBT is returned until the wallet is fully unlocked.
 
 `sendall` is useful for emptying a wallet or creating a changeless payment from selected UTXOs. To make a payment of a specific amount where the recipient pays the transaction fee, use the fee-subtraction option of the [`send`](#send) (`subtract_fee_from_outputs`), [`sendtoaddress`](#sendtoaddress) (`subtractfeefromamount`), or [`sendmany`](#sendmany) (`subtractfeefrom`) RPCs instead.
 
@@ -3346,7 +3346,7 @@ _Parameter #2---the addresses and amounts to pay_
 | Name | Type | Presence | Description |
 | ---- | ---- | -------- | ----------- |
 | Outputs             | object                          | Required<br>(exactly 1) | An object containing key/value pairs corresponding to the addresses and amounts to pay                                                               |
-| →<br>Address/Amount | string (base58) : number (dash) | Required<br>(1 or more) | **Updated in Dash Core 24.0.0**<br>A key/value pair with a base58check-encoded string containing the P2PKH or P2SH address to pay as the key, and an amount of dash to pay as the value. A DIP-18 Dash Platform address makes this an asset lock transaction (version 2 payload). Paying a Platform address is refused before the `v24` hard fork activates, and a Platform recipient cannot be listed in `subtractfeefrom`. Version 2 asset locks are currently non-standard, so under default policy the send fails with `Transaction is non-standard (assetlocktx-version-2)` (on testnet, devnets and regtest, `-acceptnonstdtxn=1` allows them) |
+| →<br>Address/Amount | string : number (dash) | Required<br>(1 or more) | **Updated in Dash Core 24.0.0**<br>A key/value pair with a base58check-encoded P2PKH or P2SH address (or a DIP-18 Dash Platform address) to pay as the key, and an amount of dash to pay as the value. A DIP-18 Dash Platform address makes this an asset lock transaction (version 2 payload). Paying a Platform address is refused before the `v24` hard fork activates, and a Platform recipient cannot be listed in `subtractfeefrom`. Version 2 asset locks are currently non-standard, so under default policy the send fails with `Transaction is non-standard (assetlocktx-version-2)` (on testnet, devnets and regtest, `-acceptnonstdtxn=1` allows them) |
 
 _Parameter #3---minimum confirmations_
 
@@ -3943,7 +3943,7 @@ _Parameter #3---signature hash type_
 
 | Name    | Type   | Presence             | Description |
 | :------ | :----- | :------------------- | :---------- |
-| SigHash | string | Optional<br>(0 or 1) | The type of signature hash to use for all of the signatures performed.  (You must use separate calls to the [`signrawtransactionwithwallet` RPC](#signrawtransactionwithwallet) if you want to use different signature hash types for different signatures.  The allowed values are: `ALL`, `NONE`, `SINGLE`, `ALL \| ANYONECANPAY`, `NONE \| ANYONECANPAY`, and `SINGLE \| ANYONECANPAY`. Default is `ALL`. As of Dash Core 24.0.0, an invalid value fails with error `-8` (invalid parameter) instead of `-1` |
+| SigHash | string | Optional<br>(0 or 1) | The type of signature hash to use for all of the signatures performed.  (You must use separate calls to the [`signrawtransactionwithwallet` RPC](#signrawtransactionwithwallet) if you want to use different signature hash types for different signatures.  The allowed values are: `ALL`, `NONE`, `SINGLE`, `ALL\|ANYONECANPAY`, `NONE\|ANYONECANPAY`, and `SINGLE\|ANYONECANPAY`. Default is `ALL`. As of Dash Core 24.0.0, an invalid value fails with error `-8` (invalid parameter) instead of `-1` |
 
 _Result---the transaction with any signatures made_
 

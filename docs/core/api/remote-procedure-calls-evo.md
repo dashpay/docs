@@ -245,7 +245,7 @@ The [`protx` RPC](../api/remote-procedure-calls-evo.md#protx) provides a set of 
 :::{note}
 **Updated in Dash Core 24.0.0**
 
-Boolean arguments must be passed as JSON `true` or `false`, and numeric arguments as JSON numbers, except the `baseBlock` and `block` arguments of `protx diff` and `protx listdiff`, which still accept a block height as a string. See [Request Format](../api/remote-procedure-calls.md#request-format) for details.
+Boolean arguments must be passed as JSON `true` or `false`, and numeric arguments as JSON numbers, except the `baseBlock` and `block` arguments of `protx diff` and `protx listdiff` (which still accept a block height as a string) and the `operatorReward` and bare-port Platform arguments of the registration RPCs (which accept a number or a string). See [Request Format](../api/remote-procedure-calls.md#request-format) for details.
 :::
 
 ### ProTx Diff
@@ -917,7 +917,7 @@ The `protx register` RPC creates a ProRegTx referencing an existing collateral a
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4. On mainnet, the first entry must use port `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4, and on mainnet it must use port `9999`. A legacy ProTx always requires a single IPv4 address, which must use port `9999` on mainnet and a different port on other networks.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1046,7 +1046,7 @@ The `protx register_legacy` RPC works similar to `protx register`, but parses th
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4. On mainnet, the first entry must use port `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Must be an IPv4 address. On mainnet, the port must be `9999`; on other networks, it must not be `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1160,7 +1160,7 @@ The `protx register_fund` RPC creates and funds a ProRegTx with the 1,000 DASH n
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4. On mainnet, the first entry must use port `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4, and on mainnet it must use port `9999`. A legacy ProTx always requires a single IPv4 address, which must use port `9999` on mainnet and a different port on other networks.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #3---owner address*
 
@@ -1280,7 +1280,7 @@ The `protx register_fund_legacy` RPC creates, funds, and sends a ProTx to the ne
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4. On mainnet, the first entry must use port `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Must be an IPv4 address. On mainnet, the port must be `9999`; on other networks, it must not be `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #3---owner address*
 
@@ -1397,7 +1397,7 @@ The `protx register_prepare` RPC creates an unsigned ProTx and a message that mu
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4. On mainnet, the first entry must use port `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4, and on mainnet it must use port `9999`. A legacy ProTx always requires a single IPv4 address, which must use port `9999` on mainnet and a different port on other networks.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1493,7 +1493,7 @@ The `protx register_prepare_legacy` RPC Creates an unsigned ProTx and a message 
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4. On mainnet, the first entry must use port `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>Must be an IPv4 address. On mainnet, the port must be `9999`; on other networks, it must not be `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1580,7 +1580,7 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4. On mainnet, the first entry must use port `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4, and on mainnet it must use port `9999`. A legacy ProTx always requires a single IPv4 address, which must use port `9999` on mainnet and a different port on other networks.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1625,13 +1625,13 @@ The `protx register_evo` RPC functions similar to `protx register_fund_evo`, but
 
 | Name              | Type   | Presence                | Description                                                   |
 | ----------------- | ------ | ----------------------- | ------------------------------------------------------------- |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address. On mainnet, the first entry must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---platform HTTPS addresses*
 
 | Name              | Type   | Presence                | Description                                                                              |
 | ----------------- | ------ | ----------------------- | ---------------------------------------------------------------------------------------- |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address. On mainnet, the first entry must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #12---fee source address*
 
@@ -1716,7 +1716,7 @@ The `protx register_fund_evo` RPC creates, funds, and sends a ProTx to the netwo
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4. On mainnet, the first entry must use port `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4, and on mainnet it must use port `9999`. A legacy ProTx always requires a single IPv4 address, which must use port `9999` on mainnet and a different port on other networks.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #3---owner address*
 
@@ -1761,13 +1761,13 @@ The `protx register_fund_evo` RPC creates, funds, and sends a ProTx to the netwo
 
 | Name              | Type   | Presence                | Description                                                                              |
 | ----------------- | ------ | ----------------------- | ---------------------------------------------------------------------------------------- |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address. On mainnet, the first entry must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #10---platform HTTPS addresses*
 
 | Name               | Type   | Presence                | Description                                                   |
 | ------------------ | ------ | ----------------------- | ------------------------------------------------------------- |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address. On mainnet, the first entry must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---fund address*
 
@@ -1855,7 +1855,7 @@ The `protx register_prepare_evo` RPC creates an unsigned ProTx and a message tha
 
 | Name        | Type   | Presence                | Description                                                                                                                             |
 | ----------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4. On mainnet, the first entry must use port `9999`.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4, and on mainnet it must use port `9999`. A legacy ProTx always requires a single IPv4 address, which must use port `9999` on mainnet and a different port on other networks.<br>Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #4---owner address*
 
@@ -1900,13 +1900,13 @@ The `protx register_prepare_evo` RPC creates an unsigned ProTx and a message tha
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address. On mainnet, the first entry must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #11---platform HTTPS addresses*
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address. On mainnet, the first entry must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. Can be set to an empty string, which will require a ProUpServTx afterwards. |
 
 *Parameter #12---fee source address*
 
@@ -1958,7 +1958,7 @@ The `protx update_service_evo` RPC creates and sends a ProUpServTx to the networ
 
 | Name        | Type   | Presence                | Description                                                          |
 | ----------- | ------ | ----------------------- | -------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4. On mainnet, the first entry must use port `9999`. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4, and on mainnet it must use port `9999`. A legacy ProTx always requires a single IPv4 address, which must use port `9999` on mainnet and a different port on other networks. |
 
 *Parameter #3---operator key*
 
@@ -1976,13 +1976,13 @@ The `protx update_service_evo` RPC creates and sends a ProUpServTx to the networ
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address. On mainnet, the first entry must use port `26656`.<br>Must be unique on the network. |
+| `platformP2PAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformP2PPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for peer-to-peer connection.<br>For a legacy ProTx, pass a bare port number instead (e.g. `26656`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `26656`.<br>Must be unique on the network. |
 
 *Parameter #6---platform HTTPS addresses*
 
 | Name | Type | Presence | Description |
 | - | - | - | - |
-| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address. On mainnet, the first entry must use port `443`.<br>Must be unique on the network. |
+| `platformHTTPSAddrs` | number/string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `platformHTTPPort`)<br>Array of addresses in the form `ADDR:PORT` used by Platform for their HTTPS API.<br>For a legacy ProTx, pass a bare port number instead (e.g. `443`); the `ADDR:PORT` / address-array form requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must use the first `coreP2PAddrs` address, and on mainnet it must use port `443`.<br>Must be unique on the network. |
 
 *Parameter #7---operator payout address*
 
@@ -2299,7 +2299,7 @@ The `protx update_service` RPC creates and sends a ProUpServTx to the network.
 
 | Name        | Type   | Presence                | Description                                                          |
 | ----------- | ------ | ----------------------- | -------------------------------------------------------------------- |
-| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>Where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4. On mainnet, the first entry must use port `9999`. |
+| `coreP2PAddrs` | string/array | Required<br>(exactly 1) | **Updated in Dash Core 23.0.0** (previously `ipAndPort`)<br>Core P2P address(es) in the form `ADDR:PORT`. Can be a single string or an array of strings.<br>Must be unique on the network.<br>A legacy ProTx can only store a single entry; storing multiple entries requires upgrading to a version 3 ProTx.<br>**Updated in Dash Core 24.0.0**<br>For a version 3 ProTx, where masternodes require IPv4 (mainnet and, by default, regtest), the first entry must be IPv4, and on mainnet it must use port `9999`. A legacy ProTx always requires a single IPv4 address, which must use port `9999` on mainnet and a different port on other networks. |
 
 *Parameter #3---operator key*
 
@@ -4899,12 +4899,7 @@ Result (truncated):
   "mnListDiffAtHMinusC": {}, // Content truncated
   "mnListDiffAtHMinus2C": {}, // Content truncated
   "mnListDiffAtHMinus3C": {}, // Content truncated
-  "blockHashList": [
-    "000000956145f9b48231bbb2a7acd54301823f5619854df4487879dff18f2d79",
-    "0000002cc74d9300f5d8a5436cfaead69fd1aaf3d68a00e57bd89e878a76a841",
-    "0000002911d8f6c21571280953e9e581a6996822fab82adfb766c44e49d050e4",
-    "00000064edcdaea4f2962b3a7bf40bcb0aa8ee00a73da86c6bf80ef7c90af0ce"
-  ],
+  "lastCommitmentPerIndex": [], // Content truncated
   "quorumSnapshotList": [
     {
       "activeQuorumMembers": [
