@@ -29,12 +29,19 @@ Name | Type | Presence | Description
 Transactions | array | Required<br>(exactly 1) | An array of hex strings which are either txids or raw transactions. TXIDs must reference transactions currently in the mempool. All transactions must be valid and in valid order, otherwise the block will be rejected. Array can be empty.
 →<br>Raw Transaction / TXID | string | Optional<br>(0 or more) | A raw transaction or transaction ID.
 
+*Parameter #3---whether to submit the block*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`submit` | bool | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Whether to submit the block before the RPC call returns (`true`, the default) or to return it as hex without submitting it (`false`)
+
 *Result---the generated block hash*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object | Required<br>(exactly 1) | A JSON object containing the block header hash of the generated block
 →<br>`hash` | string (hex) | Required<br>(exactly 1) | The hash of the header of the block generated, as hex in RPC byte order
+→<br>`hex` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>The generated block in serialized block format, encoded as hex. Only returned if `submit` is `false`
 
 *Example from Dash Core 18.1.0*
 

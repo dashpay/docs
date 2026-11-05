@@ -90,7 +90,7 @@ Name | Type | Presence | Description
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`range` | number | Optional<br>(0 or 1) | If a ranged descriptor is used, this specifies the end or the range (in [begin,end] notation) to derive (e.g. "[0,2]").
+`range` | number or array | Optional<br>(0 or 1) | If a ranged descriptor is used, this specifies the end or the range (in [begin,end] notation) to derive (e.g. `[0,2]`).
 
 *Result---the derived addresses*
 
@@ -142,7 +142,8 @@ Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object | Required<br>(exactly 1) | JSON Object containing estimate information
 →<br>`feerate` | number (Dash) | Optional<br>(0 or 1) | The estimated fee the transaction should pay in order to be included within the specified number of blocks.  If the node doesn't have enough information to make an estimate, this field will not be returned
-→<br>`error` | JSON array (strings) | Optional<br>(0 or 1) | Errors encountered during processing
+→<br>`errors` | array | Optional<br>(0 or 1) | Errors encountered during processing (if there are any)
+→ →<br>Error | string | Required<br>(1 or more) | An error
 →<br>`blocks` | number | Required<br>(exactly 1) | Block number where the estimate was found
 
 *Examples from Dash Core 0.15.0*
@@ -198,13 +199,13 @@ Name | Type | Presence | Description
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object | Required<br>(exactly 1) | Information about the descriptor
-→<br>`descriptor` | string | Required<br>(exactly 1) | The descriptor in canonical form, without private keys
+→<br>`descriptor` | string | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The descriptor in canonical form, without private keys. Hardened derivation steps keep the marker used in the input (`h` or `'`)
 →<br>`checksum` | string | Required<br>(exactly 1) | The checksum for the input descriptor
 →<br>`isrange` | bool | Required<br>(exactly 1) | Whether the descriptor is ranged
 →<br>`issolvable` | bool | Required<br>(exactly 1) | Whether the descriptor is solvable
 →<br>`hasprivatekeys` | bool | Required<br>(exactly 1) | Whether the input descriptor contained at least one private key
 
-*Example from Dash Core 18.0.0*
+*Example from Dash Core 24.0.0*
 
 Analyse a descriptor:
 
@@ -216,7 +217,7 @@ Result:
 
 ``` json
 {
-  "descriptor": "pkh([d34db33f/84'/0'/0']0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798)#9ffuvyvv",
+  "descriptor": "pkh([d34db33f/84h/0h/0h]0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798)#z9qxhc8w",
   "checksum": "yrc20h56",
   "isrange": false,
   "issolvable": true,
@@ -244,10 +245,10 @@ Name | Type | Presence | Description
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`result` | object | Required<br>(exactly 1) | Information about the descriptor
-→<br>`name` | string | Required<br>(exactly 1) | The descriptor in canonical form, without private keys
-→ →<br>`synced` | string | Required<br>(exactly 1) | The checksum for the input descriptor
-→ →<br>`best_block_height` | bool | Required<br>(exactly 1) | Whether the descriptor is ranged
+`result` | object | Required<br>(exactly 1) | Status of the indexes, keyed by index name
+→<br>Index name | object | Optional<br>(0 or more) | **Updated in Dash Core 24.0.0**<br>The name of the index: `txindex`, `coinstatsindex`, `basic block filter index`, `addressindex`, `spentindex` or `timestampindex`. Only enabled indexes are returned. `addressindex`, `spentindex` and `timestampindex` are reported since Dash Core 24.0.0
+→ →<br>`synced` | bool | Required<br>(exactly 1) | Whether the index is synced or not
+→ →<br>`best_block_height` | number (int) | Required<br>(exactly 1) | The block height to which the index is synced
 
 *Example from Dash Core 20.0.0*
 
@@ -318,22 +319,27 @@ IBx8jxFjutPlcZcFdQPlA2n/B4yTrYhH43qYJURKRj7LWhSD0ERE/nnRLOnXi/gwULUcqfqOKqnqkSvu
 
 The [`validateaddress` RPC](../api/remote-procedure-calls-util.md#validateaddress) returns information about the given Dash address.
 
+As of Dash Core 24.0.0, DIP-18 Dash Platform addresses are also accepted. A DIP-18 Dash Platform address is described against the credit output script an asset lock would carry for it.
+
 *Parameter #1---a P2PKH or P2SH address*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Address | string (base58) | Required<br>(exactly 1) | The P2PKH or P2SH address to validate encoded in base58check format
+Address | string | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>The Dash address to validate. May be a P2PKH or P2SH address encoded in base58check format, or a DIP-18 Dash Platform address
 
 *Result---information about the address*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object | Required<br>(exactly 1) | Information about the address
-→<br>`isvalid` | bool | Required<br>(exactly 1) | Set to `true` if the address is a valid P2PKH or P2SH address; set to `false` otherwise
-→<br>`address` | string (base58) | Optional<br>(0 or 1) | The Dash address given as parameter
-→<br>`scriptPubKey` | string (hex) | Optional<br>(0 or 1) | The hex encoded scriptPubKey generated by the address
-→<br>`isscript` | bool | Optional<br>(0 or 1) | Set to `true` if a P2SH address; otherwise set to `false`.  Only returned if the address is in the wallet
-→`error` | string | Optional<br>(0 or 1) | Error message, if any
+→<br>`isvalid` | bool | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Set to `true` if the address is a valid P2PKH, P2SH, or DIP-18 Dash Platform address; set to `false` otherwise
+→<br>`isplatform` | bool | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>If the address is a DIP-18 Dash Platform address
+→<br>`address` | string | Optional<br>(0 or 1) | The Dash address given as parameter
+→<br>`scriptPubKey` | string (hex) | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>The hex-encoded scriptPubKey generated by the address. For a DIP-18 Platform address, the credit output script an asset lock would carry for it
+→<br>`isscript` | bool | Optional<br>(0 or 1) | Set to `true` if a P2SH address; otherwise set to `false`
+→<br>`error` | string | Optional<br>(0 or 1) | Error message, if any
+→<br>`error_locations` | array | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Indices of likely error locations in address, if known (e.g. Bech32 errors)
+→ →<br>Index | number (int) | Optional<br>(0 or more) | Index of a potential error
 
 *Example from Dash Core 20.1.0*
 
