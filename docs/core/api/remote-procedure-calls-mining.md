@@ -15,6 +15,10 @@ information, please see the following resources:
 * [BIP22](https://github.com/bitcoin/bips/blob/master/bip-0022.mediawiki)
 * [BIP23](https://github.com/bitcoin/bips/blob/master/bip-0023.mediawiki)
 
+:::{versionchanged} 24.0.0
+On mainnet, if the next block is a superblock, this RPC returns a `Dash Core is syncing with network...` error until the node has fully synced, including governance data. This check no longer depends on a spork and is skipped on testnet, devnets and regtest.
+:::
+
 *Parameter #1---a JSON request object*
 
 Name | Type | Presence | Description
@@ -78,7 +82,7 @@ Name | Type | Presence | Description
 → → →<br>`script` | string | Required<br>(exactly 1) | Payee scriptPubKey
 → → →<br>`amount` | number | Required<br>(exactly 1) | Required amount to pay
 →<br>`superblocks_started` | boolean | Required<br>(exactly 1) | True if superblock payments started
-→<br>`superblocks_enabled` | boolean | Required<br>(exactly 1) | True if superblock payments enabled
+→<br>`superblocks_enabled` | boolean | Required<br>(exactly 1) | **Updated in Dash Core 24.0.0**<br>Always `true`. Retained for backwards compatibility
 →<br>`coinbase_payload` | string (hex) | Required<br>(exactly 1) | *Added in Dash Core 0.13.0*<br><br>Coinbase transaction payload data encoded in hexadecimal
 
 *Example from Dash Core 20.0.0*
@@ -189,7 +193,7 @@ Name | Type | Presence | Description
 →<br>`blocks` | number (int) | Required<br>(exactly 1) | The height of the highest block on the local best block chain
 →<br>`currentblocksize` | number (int) | Optional<br>(0 or 1) | If generation was enabled since the last time this node was restarted, this is the size in bytes of the last block built by this node for header hash checking.
 →<br>`currentblocktx` | number (int) | Optional<br>(0 or 1) | If generation was enabled since the last time this node was restarted, this is the number of transactions in the last block built by this node for header hash checking.
-→<br>`difficulty` | number (real) | Required<br>(exactly 1) | If generation was enabled since the last time this node was restarted, this is the difficulty of the highest-height block in the local best block chain.  Otherwise, this is the value `0`
+→<br>`difficulty` | number (real) | Required<br>(exactly 1) | The difficulty of the highest-height block in the local best block chain
 →<br>`networkhashps` | number (int) | Required<br>(exactly 1) | An estimate of the number of hashes per second the network is generating to maintain the current difficulty.  See the [`getnetworkhashps` RPC](../api/remote-procedure-calls-mining.md#getnetworkhashps) for configurable access to this data
 →<br>`pooledtx` | number (int) | Required<br>(exactly 1) | The number of transactions in the memory pool
 →<br>`chain` | string | Required<br>(exactly 1) | Set to `main` for mainnet, `test` for testnet, and `regtest` for regtest
@@ -241,7 +245,7 @@ Name | Type | Presence | Description
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`result` | number (int) | Required<br>(exactly 1) | The estimated number of hashes per second based on the parameters provided.  May be 0 (for Height=`0`, the genesis block) or a negative value if the highest-height block averaged has a block header time earlier than the lowest-height block averaged
+`result` | number (real) | Required<br>(exactly 1) | The estimated number of hashes per second based on the parameters provided.  May be `0` (for Height=`0`, the genesis block, or if all averaged blocks have the same block header time)
 
 *Example from Dash Core 0.12.2*
 
@@ -283,7 +287,7 @@ Fee | number (int) | Required<br>(exactly 1) | **Warning:** this value is in duf
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`result` | bool (true only) | Required<br>(exactly 1) | Always set to `true` if all three parameters are provided.  Will not return an error if the TXID is not in the memory pool.  If fewer or more than three arguments are provided, or if something goes wrong, will be set to `null`
+`result` | bool (true only) | Required<br>(exactly 1) | Always set to `true`.  Will not return an error if the TXID is not in the memory pool
 
 *Example from Dash Core 0.14.0*
 

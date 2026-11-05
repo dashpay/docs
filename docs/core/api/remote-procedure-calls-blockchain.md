@@ -43,7 +43,7 @@ Write the serialized UTXO set to disk.
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-path | string (hex) | Required<br>(exactly 1) | Path to the output file. If relative, will be prefixed by datadir.
+path | string | Required<br>(exactly 1) | Path to the output file. If relative, will be prefixed by datadir.
 
 *Result*
 
@@ -53,7 +53,9 @@ Name | Type | Presence | Description
 →<br>`coins_written` | number (int) | Required<br>(exactly 1) | the number of coins written in the snapshot
 →<br>`base_hash` | string (hex) | Required<br>(exactly 1) | the hash of the base of the snapshot
 →<br>`base_height` | number (int) | Required<br>(exactly 1) | the height of the base of the snapshot
-→<br>`path` | string (str) | Required<br>(exactly 1) | the absolute path that the snapshot was written to
+→<br>`path` | string | Required<br>(exactly 1) | the absolute path that the snapshot was written to
+→<br>`txoutset_hash` | string (hex) | Required<br>(exactly 1) | the hash of the UTXO set contents
+→<br>`nchaintx` | number (int) | Required<br>(exactly 1) | the number of transactions in the chain up to and including the base block
 
 *Example from Dash Core 18.1.0*
 
@@ -223,6 +225,7 @@ Name | Type | Presence | Description
 → →<br>`extraPayload` | string (hex) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction
 → →<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs
 → →<br>`fee` | number | Optional<br>(0 or 1) | The transaction fee in DASH, omitted if block undo data is not available
+→ →<br>`hex` | string (hex) | Required<br>(exactly 1) | The serialized, hex-encoded data for the transaction
 → →<br>`instantlock` | bool | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock)
 → →<br>`instantlock_internal` | bool | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock
 →<br>`cbTx` | object | Optional<br>(0 or 1) | Coinbase special transaction details
@@ -755,6 +758,10 @@ Result:
 Requires `timestampindex` Dash Core command-line/configuration-file parameter to be enabled.
 :::
 
+:::{versionchanged} 24.0.0
+The timestamp index is now built in the background. While it is syncing, this RPC returns a `Timestamp index is syncing` error. Use the [`getindexinfo` RPC](../api/remote-procedure-calls-util.md#getindexinfo) to check its progress.
+:::
+
 *Added in Dash Core 0.12.1*
 
 The [`getblockhashes` RPC](../api/remote-procedure-calls-blockchain.md#getblockhashes) returns array of hashes of blocks within the timestamp range provided (requires `timestampindex` to be enabled).
@@ -839,6 +846,7 @@ Name | Type | Presence | Description
 →<br>`confirmations` | number (int) | Required<br>(exactly 1) | The number of confirmations the transactions in this block have, starting at 1 when this block is at the tip of the best block chain.  This score will be -1 if the the block is not part of the best block chain
 →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
 →<br>`version` | number (int) | Required<br>(exactly 1) | This block's version number.  See [block version numbers](../reference/block-chain-block-headers.md#block-versions)
+→<br>`versionHex` | string (hex) | Required<br>(exactly 1) | The block version formatted in hexadecimal
 →<br>`merkleroot` | string (hex) | Required<br>(exactly 1) | The merkle root for this block, encoded as hex in RPC byte order
 →<br>`time` | number (int) | Required<br>(exactly 1) | The time of the block  
 →<br>`mediantime` | number (int) | Required<br>(exactly 1) | The computed median time of the previous 11 blocks.  Used for validating transaction locktime under BIP113
@@ -849,12 +857,7 @@ Name | Type | Presence | Description
 →<br>`nTx` | number (int) | Required<br>(exactly 1) | The number of transactions in the block
 →<br>`previousblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the header of the previous block, encoded as hex in RPC byte order.  Not returned for genesis block
 →<br>`nextblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the next block on the best block chain, if known, encoded as hex in RPC byte order
-
-*Changes from Bitcoin - Following items not present in Dash result*
-
-Name | Type | Presence | Description
---- | --- | --- | ---
-→<br>`versionHex` | number (hex) | Required<br>(exactly 1) | This block's hex version number.  See [block version numbers](../reference/block-chain-block-headers.md#block-versions)
+→<br>`chainlock` | bool | Required<br>(exactly 1) | *Added in Dash Core 0.14.0*<br><br>If set to `true`, this block is locked by a ChainLock
 
 *Example from Dash Core 0.16.0*
 
@@ -957,16 +960,18 @@ Name | Type | Presence | Description
 → →<br>`confirmations` | number (int) | Required<br>(exactly 1) | The number of confirmations the transactions in this block have, starting at 1 when this block is at the tip of the best block chain.  This score will be -1 if the the block is not part of the best block chain
 → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
 → →<br>`version` | number (int) | Required<br>(exactly 1) | This block's version number.  See [block version numbers](../reference/block-chain-block-headers.md#block-versions)
+→ →<br>`versionHex` | string (hex) | Required<br>(exactly 1) | The block version formatted in hexadecimal
 → →<br>`merkleroot` | string (hex) | Required<br>(exactly 1) | The merkle root for this block, encoded as hex in RPC byte order
 → →<br>`time` | number (int) | Required<br>(exactly 1) | The time of the block
 → →<br>`mediantime` | number (int) | Required<br>(exactly 1) | The computed median time of the previous 11 blocks.  Used for validating transaction locktime under BIP113
 → →<br>`nonce` | number (int) | Required<br>(exactly 1) | The nonce which was successful at turning this particular block into one that could be added to the best block chain
 → →<br>`bits` | string (hex) | Required<br>(exactly 1) | The value of the *nBits* field in the block header, indicating the target threshold this block's header had to pass
 → →<br>`difficulty` | number (real) | Required<br>(exactly 1) | The estimated amount of work done to find this block relative to the estimated amount of work done to find block 0
-→<br>`chainwork` | string (hex) | Required<br>(exactly 1) | The estimated number of block header hashes miners had to check from the genesis block to this block, encoded as big-endian hex
-→<br>`nTx` | number (int) | Required<br>(exactly 1) | The number of transactions in the block
+→ →<br>`chainwork` | string (hex) | Required<br>(exactly 1) | The estimated number of block header hashes miners had to check from the genesis block to this block, encoded as big-endian hex
+→ →<br>`nTx` | number (int) | Required<br>(exactly 1) | The number of transactions in the block
 → →<br>`previousblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the header of the previous block, encoded as hex in RPC byte order.  Not returned for genesis block
 → →<br>`nextblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the next block on the best block chain, if known, encoded as hex in RPC byte order
+→ →<br>`chainlock` | bool | Required<br>(exactly 1) | *Added in Dash Core 0.14.0*<br><br>If set to `true`, this block is locked by a ChainLock
 
 *Example from Dash Core 0.16.0*
 
@@ -994,8 +999,8 @@ Result (wrapped):
 Get the same two block headers in JSON:
 
 ``` bash
-dash-cli -testnet getblockheader \
-            00000000eb0af5aec7b673975a22593dc0cc763f71ba8de26292410273437078 \
+dash-cli -testnet getblockheaders \
+            00000000007b0fb99e36713cf08012482478ee496e6dcb4007ad2e806306e62b \
             2 true
 ```
 
@@ -1131,7 +1136,17 @@ Result:
 
 The [`getchaintips` RPC](../api/remote-procedure-calls-blockchain.md#getchaintips) returns information about the highest-height block (tip) of each local block chain.
 
-*Parameters: none*
+*Parameter #1---the maximum number of tips to return*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`count` | number (int) | Optional<br>(0 or 1) | Only show this many of the highest tips. Default: all tips
+
+*Parameter #2---minimum branch length*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`branchlen` | number (int) | Optional<br>(0 or 1) | Only show tips whose `branchlen` is equal to or greater than this value (`1` or more excludes the active tip). Default: `-1` (all tips)
 
 *Result---an array of block chain tips*
 
@@ -1141,11 +1156,11 @@ Name | Type | Presence | Description
 →<br>Tip | object | Required<br>(1 or more) | An object describing a particular chain tip.  The first object will always describe the active chain (the local best block chain)
 → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of the highest block in the chain.  A new node with only the genesis block will have a single tip with height of 0
 → →<br>`hash` | string (hex) | Required<br>(exactly 1) | The hash of the highest block in the chain, encoded as hex in RPC byte order
-→<br>`difficulty` | number (real) | Required<br>(exactly 1) | The difficulty of the highest-height block in the best block chain (Added in Dash Core 0.12.1)
-→<br>`chainwork` | string (hex) | Required<br>(exactly 1) | The estimated number of block header hashes checked from the genesis block to this block, encoded as big-endian hex (Added in Dash Core 0.12.1)
+→ →<br>`difficulty` | number (real) | Required<br>(exactly 1) | The difficulty of the highest-height block in this chain (Added in Dash Core 0.12.1)
+→ →<br>`chainwork` | string (hex) | Required<br>(exactly 1) | The estimated number of block header hashes checked from the genesis block to this tip, encoded as big-endian hex (Added in Dash Core 0.12.1)
 → →<br>`branchlen` | number (int) | Required<br>(exactly 1) | The number of blocks that are on this chain but not on the main chain.  For the local best block chain, this will be `0`; for all other chains, it will be at least `1`
 → →<br>`forkpoint` | string (hex) | Required<br>(exactly 1) | *Added in Dash Core 0.12.3*<br><br>Block hash of the last common block between this tip and the main chain
-→ →<br>`status` | string | Required<br>(exactly 1) | The status of this chain.  Valid values are:<br>• `active` for the local best block chain<br>• `invalid` for a chain that contains one or more invalid blocks<br>• `headers-only` for a chain with valid headers whose corresponding blocks both haven't been validated and aren't stored locally<br>• `valid-headers` for a chain with valid headers whose corresponding blocks are stored locally, but which haven't been fully validated<br>• `valid-fork` for a chain which is fully validated but which isn't part of the local best block chain (it was probably the local best block chain at some point)<br>• `unknown` for a chain whose reason for not being the active chain is unknown
+→ →<br>`status` | string | Required<br>(exactly 1) | The status of this chain.  Valid values are:<br>• `active` for the local best block chain<br>• `invalid` for a chain that contains one or more invalid blocks<br>• `headers-only` for a chain with valid headers whose corresponding blocks both haven't been validated and aren't stored locally<br>• `valid-headers` for a chain with valid headers whose corresponding blocks are stored locally, but which haven't been fully validated<br>• `valid-fork` for a chain which is fully validated but which isn't part of the local best block chain (it was probably the local best block chain at some point)<br>• `conflicting` for a chain where this block or one of its ancestors conflicts with a ChainLock<br>• `unknown` for a chain whose reason for not being the active chain is unknown
 
 *Example from Dash Core 0.12.3*
 
@@ -1523,16 +1538,12 @@ Result:
       "descendant": 0.00003226
     },
     "vsize": 226,
-    "fee": 0.00000226,
-    "modifiedfee": 0.00000226,
     "time": 1690318336,
     "height": 1909978,
     "descendantcount": 6,
     "descendantsize": 1648,
-    "descendantfees": 3226,
     "ancestorcount": 1,
     "ancestorsize": 226,
-    "ancestorfees": 226,
     "depends": [
     ],
     "spentby": [
@@ -1637,16 +1648,12 @@ Result:
       "descendant": 0.00000225
     },
     "vsize": 225,
-    "fee": 0.00000225,
-    "modifiedfee": 0.00000225,
     "time": 1690906537,
     "height": 879144,
     "descendantcount": 1,
     "descendantsize": 225,
-    "descendantfees": 225,
     "ancestorcount": 2,
     "ancestorsize": 450,
-    "ancestorfees": 450,
     "depends": [
       "414735b9b4da8232299b25510628e321ba7d2adfb042f7c6437ad3b0f7793b80"
     ],
@@ -1720,16 +1727,12 @@ Result:
     "descendant": 0.00009350
   },
   "vsize": 374,
-  "fee": 0.00009350,
-  "modifiedfee": 0.00009350,
   "time": 1690317662,
   "height": 1909971,
   "descendantcount": 1,
   "descendantsize": 374,
-  "descendantfees": 9350,
   "ancestorcount": 1,
   "ancestorsize": 374,
-  "ancestorfees": 9350,
   "depends": [
   ],
   "spentby": [
@@ -1911,16 +1914,12 @@ Result:
       "descendant": 0.00000225
     },
     "vsize": 225,
-    "fee": 0.00000225,
-    "modifiedfee": 0.00000225,
     "time": 1690318205,
     "height": 1909975,
     "descendantcount": 1,
     "descendantsize": 225,
-    "descendantfees": 225,
     "ancestorcount": 1,
     "ancestorsize": 225,
-    "ancestorfees": 225,
     "depends": [
     ],
     "spentby": [
@@ -2153,6 +2152,10 @@ Result:
 Requires `spentindex` Dash Core command-line/configuration-file parameter to be enabled.
 :::
 
+:::{versionchanged} 24.0.0
+The spent index is now built in the background. While it is syncing, this RPC returns an `Unable to get spent info. Spent index is syncing` error if the spend isn't found. Spends by transactions in the memory pool are still returned. Use the [`getindexinfo` RPC](../api/remote-procedure-calls-util.md#getindexinfo) to check its progress.
+:::
+
 *Added in Dash Core 0.12.1*
 
 The [`getspentinfo` RPC](../api/remote-procedure-calls-blockchain.md#getspentinfo) returns the txid and index where an output is spent (requires `spentindex` to be enabled).
@@ -2169,10 +2172,10 @@ Request | object | Required<br>(exactly 1) | A JSON object identifying the outpu
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`result` | object/null | Required<br>(exactly 1) | Information about the spent output.  If output wasn't found or if an error occurred, this will be JSON `null`
-→<br>`txid` | string | Required<br>(exactly 1) | The output txid
+`result` | object | Required<br>(exactly 1) | Information about the spent output.  If the spend isn't found, an `Unable to get spent info` error is returned
+→<br>`txid` | string | Required<br>(exactly 1) | The TXID of the spending transaction
 →<br>`index` | number | Required<br>(exactly 1) | The spending input index
-→<br>`height` | number (int) | Required<br>(exactly 1) | The block height of the spending transaction
+→<br>`height` | number (int) | Required<br>(exactly 1) | The block height of the spending transaction, or `-1` if it is in the memory pool
 
 *Example from Dash Core 0.12.2*
 
@@ -2220,22 +2223,22 @@ Vout | number (int) | Required<br>(exactly 1) | The output index number (vout) o
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Unconfirmed | bool | Optional<br>(0 or 1) | Set to `true` to display unconfirmed outputs from the memory pool; set to `false` (the default) to only display outputs from confirmed transactions
+Unconfirmed | bool | Optional<br>(0 or 1) | Set to `true` (the default) to also check the memory pool: unconfirmed outputs are displayed, and outputs spent in the memory pool are not. Set to `false` to only display outputs from confirmed transactions
 
 *Result---a description of the output*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object/null | Required<br>(exactly 1) | Information about the output.  If output wasn't found, if it was spent, or if an error occurred, this will be JSON `null`
-→<br>`bestblock` | string (hex) | Required<br>(exactly 1) | The hash of the header of the block on the local best block chain which includes this transaction.  The hash will encoded as hex in RPC byte order.  If the transaction is not part of a block, the string will be empty
+→<br>`bestblock` | string (hex) | Required<br>(exactly 1) | The hash of the block at the tip of the local best block chain, encoded as hex in RPC byte order
 →<br>`confirmations` | number (int) | Required<br>(exactly 1) | The number of confirmations received for the transaction containing this output or `0` if the transaction hasn't been confirmed yet
 →<br>`value` | number (Dash) | Required<br>(exactly 1) | The amount of Dash spent to this output.  May be `0`
-→<br>`scriptPubKey` | string : object | Optional<br>(0 or 1) | An object with information about the pubkey script.  This may be `null` if there was no pubkey script
+→<br>`scriptPubKey` | object | Required<br>(exactly 1) | An object with information about the pubkey script
 → →<br>`asm` | string | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed
 → →<br>`desc` | string | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Inferred descriptor for the output
 → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The pubkey script encoded as hex
 → →<br>`reqSigs` | number (int) | Optional<br>(0 or 1) | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0)
-→ →<br>`type` | string | Optional<br>(0 or 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
+→ →<br>`type` | string | Required<br>(exactly 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
 → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists)
 → →<br>`addresses` | string : array | Optional<br>(0 or 1) | **Removed in Dash Core 23.0.0** (previously deprecated in 21.0.0)
 →<br>`coinbase` | bool | Required<br>(exactly 1) | Set to `true` if the transaction output belonged to a coinbase transaction; set to `false` for all other transactions.  Coinbase transactions need to have 101 confirmations before their outputs can be spent
@@ -2437,6 +2440,10 @@ Result (no output from `dash-cli` because result is set to `null`).
 *Added in Dash Core 0.12.3 / Bitcoin Core 0.14.0*
 
 The [`pruneblockchain` RPC](../api/remote-procedure-calls-blockchain.md#pruneblockchain) prunes the blockchain up to a specified height or timestamp. The `-prune` option needs to be enabled (disabled by default).
+
+:::{versionchanged} 24.0.0
+On mainnet, testnet and devnets, the node now keeps at least the last 2304 blocks (about four days) instead of 288. A requested height closer to the tip is lowered to that limit. On testnet and devnets, the chain height must now be at least 3000 (previously 1000) before it can be pruned. Regtest is unchanged.
+:::
 
 *Parameter #1---the block height or timestamp*
 
@@ -2646,7 +2653,8 @@ Name | Type | Presence | Description
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`result` | string | Required<br>(exactly 1) | The txid(s) which the proof commits to, or empty array if the proof cannot be validated
+`result` | array | Required<br>(exactly 1) | The txid(s) which the proof commits to, or an empty array if the proof cannot be validated
+→<br>TXID | string (hex) | Optional<br>(0 or more) | A txid which the proof commits to
 
 *Example from Dash Core 0.12.2*
 
