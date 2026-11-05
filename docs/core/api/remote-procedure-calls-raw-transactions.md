@@ -351,7 +351,7 @@ _Result---the decoded transaction_
 | Name                             | Type         | Presence                | Description                                                                                                                                                                                                                                                                             |
 | -------------------------------- | ------------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `result`                         | object       | Required<br>(exactly 1) | An object describing the decoded transaction, or JSON `null` if the transaction could not be decoded                                                                                                                                                                                    |
-| →<br>`tx`                        | string (hex) | Required<br>(exactly 1) | The decoded network-serialized unsigned transaction. The layout is the same as the output of [decoderawtransaction](#decoderawtransaction).                                                                                                                                             |
+| →<br>`tx`                        | object       | Required<br>(exactly 1) | The decoded network-serialized unsigned transaction. The layout is the same as the output of [decoderawtransaction](#decoderawtransaction).                                                                                                                                             |
 | →<br>`unknown`                   | object       | Required<br>(exactly 1) | The unknown global fields                                                                                                                                                                                                                                                               |
 | →→<br>Unknown                    | object       | Required<br>(0 or more) | An unknown key-value pair                                                                                                                                                                                                                                                               |
 | →<br>`inputs`                    | array        | Required<br>(exactly 1) | An array of objects with each object being an input vector (vin) for this transaction                                                                                                                                                                                                   |
@@ -373,7 +373,7 @@ _Result---the decoded transaction_
 | → → → →<br>`hex`                 | string (hex) | Required<br>(exactly 1) | The signature script encoded as hex                                                                                                                                                                                                                                                     |
 | → → →<br>`unknown`               | object       | Optional<br>(0 or more) | The unknown global fields                                                                                                                                                                                                                                                               |
 | → → → →<br>Unknown               | object       | Required<br>(0 or more) | An unknown key-value pair                                                                                                                                                                                                                                                               |
-| →<br>`vout`                      | array        | Required<br>(exactly 1) | An array of objects each describing an output vector (vout) for this transaction.  Output objects will have the same order within the array as they have in the transaction, so the first output listed will be output 0                                                                |
+| →<br>`outputs`                   | array        | Required<br>(exactly 1) | An array of objects, one per transaction output, holding the PSBT output data. Output objects will have the same order within the array as they have in the transaction, so the first output listed will be output 0                                                                    |
 | → →<br>Output                    | object       | Required<br>(1 or more) | An object describing one of this transaction's outputs                                                                                                                                                                                                                                  |
 | → → →<br>`redeem_script`         | object       | Required<br>(exactly 1) | An object describing the pubkey script                                                                                                                                                                                                                                                  |
 | → → → →<br>`asm`                 | string       | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed                                                                                                                                                                                                                  |
@@ -872,7 +872,7 @@ _Parameters_
 
 | Name    | Type  | Presence | Description |
 | ------- | ----- | -------- | ----------- |
-| Indexes | array | Required | An array of Asset Unlock indexes (no more than 100). Each element is a numeric Asset Unlock index. |
+| Indexes | array | Required | An array of Asset Unlock indexes (no more than 100). Each element is an Asset Unlock index passed as a string (for example `"1"`); JSON numbers are rejected. |
 | height | numeric | Optional (0 or 1) | The maximum block height to check. If not specified, the chain's tip is used. |
 
 _Result---Status of the Asset Unlock indexes_
@@ -1416,9 +1416,9 @@ _Result---transaction information_
 | -------------------- | ------- | ----------------------- | ----------- |
 | `result`             | array   | Required<br>(exactly 1) | An array of objects providing transaction information for each transaction ID in the input array. |
 | →<br>Transaction info | object | Optional<br>(0 or more) | An object containting transaction details |
-| →<br>`height`        | number  | Required<br>(exactly 1) | Height of the block containing the transaction (-1 if the transaction is not in a block) |
-| →<br>`chainlock`     | bool    | Required<br>(exactly 1) | ChainLock status for the block containing the transaction |
-| →<br>`mempool`       | bool    | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br><br>Mempool status for the transaction |
+| → →<br>`height`      | number  | Required<br>(exactly 1) | Height of the block containing the transaction (-1 if the transaction is not in a block) |
+| → →<br>`chainlock`   | bool    | Required<br>(exactly 1) | ChainLock status for the block containing the transaction |
+| → →<br>`mempool`     | bool    | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br><br>Mempool status for the transaction |
 
 _Example from Dash Core 20.1.0_
 
@@ -1572,7 +1572,7 @@ _Parameter #3---unspent transaction output details_
 | → →<br>`vout`         | number (int) | Required<br>(exactly 1) | The index number of the output (vout) as it appeared in its transaction, with the first output being 0 |
 | → →<br>`scriptPubKey` | string (hex) | Required<br>(exactly 1) | The output's pubkey script encoded as hex                                                              |
 | → →<br>`redeemScript` | string (hex) | Optional<br>(0 or 1)    | If the pubkey script was a script hash, this must be the corresponding redeem script                   |
-| → →<br>`amount`       | numeric      | Required<br>(exactly 1) | The amount of Dash spent                                                                               |
+| → →<br>`amount`       | numeric      | Optional<br>(0 or 1)    | The amount of Dash spent                                                                               |
 
 _Parameter #4---signature hash type_
 
@@ -1587,6 +1587,13 @@ _Result---the transaction with any signatures made_
 | `result`        | object       | Required<br>(exactly 1) | The results of the signature                                                                                                                                                                           |
 | →<br>`hex`      | string (hex) | Required<br>(exactly 1) | The resulting serialized transaction encoded as hex with any signatures made inserted.  If no signatures were made, this will be the same transaction provided in parameter #1                         |
 | →<br>`complete` | bool         | Required<br>(exactly 1) | The value `true` if transaction is fully signed; the value `false` if more signatures are required. Once `true` the transaction can be sent using the [`sendrawtransaction` RPC](#sendrawtransaction). |
+| →<br>`errors`   | array        | Optional<br>(0 or 1)    | Script verification errors (if there are any)                                                                                                                                                          |
+| → →<br>Error    | object       | Required<br>(1 or more) | An input that failed verification or signing                                                                                                                                                           |
+| → → →<br>`txid` | string (hex) | Required<br>(exactly 1) | The hash of the referenced, previous transaction                                                                                                                                                       |
+| → → →<br>`vout` | number (int) | Required<br>(exactly 1) | The index of the output to spent and used as input                                                                                                                                                     |
+| → → →<br>`scriptSig` | string (hex) | Required<br>(exactly 1) | The hex-encoded signature script                                                                                                                                                                       |
+| → → →<br>`sequence` | number (int) | Required<br>(exactly 1) | Script sequence number                                                                                                                                                                                 |
+| → → →<br>`error` | string       | Required<br>(exactly 1) | Verification or signing error related to the input                                                                                                                                                     |
 
 _Example from Dash Core 0.17.0_
 

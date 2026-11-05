@@ -109,8 +109,9 @@ Name | Type | Presence | Description
 `result` | object | Required<br>(exactly 1) | An object containing information about the RPC server
 →<br>`active_commands` | array of objects | Required<br>(exactly 1) | An object containing information about active RPC commands
 →→<br>Active command | object | Optional<br>(0 or more) | Information about a currently active command
-→→→<br>`method` | number (int) | Required<br>(exactly 1) | Name of the command
+→→→<br>`method` | string | Required<br>(exactly 1) | Name of the command
 →→→<br>`duration` | number (int) | Required<br>(exactly 1) | Number of microseconds the command has been active
+→<br>`logpath` | string | Required<br>(exactly 1) | The complete file path to the debug log
 
 *Example from Dash Core 18.0.0*
 

@@ -73,7 +73,7 @@ of a potential peer to the address manager.
 
 | Name | Type | Presence | Description |
 | ---- | ---- | -------- | ----------- |
-| `tried` | bool | Optional<br>(0 or 1) | If true, attempt to add the peer to the tried addresses table |
+| `tried` | bool | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>If true, attempt to add the peer to the tried addresses table. Must be `true`, `false` or `null`; other values now return a type error (previously treated as `false`) |
 
 *Result---a list of added nodes*
 
@@ -170,7 +170,7 @@ The [`disconnectnode` RPC](../api/remote-procedure-calls-network.md#disconnectno
 
 | Name      | Type   | Presence                | Description                                                                                                                    |
 | --------- | ------ | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `address` | string | Required<br>(exactly 1) | The node you want to disconnect from as a string in the form of `<IP address>:<port>`.<br><br>*Updated in Bitcoin Core 0.14.1* |
+| `address` | string | Optional<br>(0 or 1)    | The node you want to disconnect from as a string in the form of `<IP address>:<port>`. Exactly one of `address` and `nodeid` must be provided; to disconnect by `nodeid`, set `address` to an empty string or use the named `nodeid` argument only.<br><br>*Updated in Bitcoin Core 0.14.1* |
 
 *Parameter #2---nodeid*
 
@@ -296,7 +296,7 @@ The [`getnodeaddresses` RPC](../api/remote-procedure-calls-network.md#getnodeadd
 
 | Name    | Type         | Presence             | Description                                                                                                    |
 | ------- | ------------ | -------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `count` | number (int) | Optional<br>(0 or 1) | The number of addresses to return. Limited to the smaller of 2500 or 23% of all known addresses (default = 1). |
+| `count` | number (int) | Optional<br>(0 or 1) | The maximum number of addresses to return (default = 1). Specify `0` to return all known addresses.               |
 
 *Parameter #2---network*
 
@@ -404,7 +404,7 @@ The [`getnetworkinfo` RPC](../api/remote-procedure-calls-network.md#getnetworkin
 | →<br>`localservices`                   | string (hex)  | Required<br>(exactly 1) | The services supported by this node as advertised in its [`version` message](../reference/p2p-network-control-messages.md#version)                                                                                                                       |
 | →<br>`localservicesnames`              | array         | Required<br>(exactly 1) | _Added in Dash Core 18.0.0_<br>An array of strings describing the services offered, in human-readable form.                                                                                                                                     |
 | → →<br>SERVICE_NAME                    | string        | Required<br>(exactly 1) | The service name.                                                                                                                                                                                                                                 |
-| →<br>`localrelay`                      | bool          | Required<br>(exactly 1) | *Added in Bitcoin Core 0.13.0*<br><br>The services supported by this node as advertised in its [`version` message](../reference/p2p-network-control-messages.md#version)                                                                                 |
+| →<br>`localrelay`                      | bool          | Required<br>(exactly 1) | *Added in Bitcoin Core 0.13.0*<br><br>Set to `true` if transaction relay is requested from peers                                                                                                                                                         |
 | →<br>`timeoffset`                      | number (int)  | Required<br>(exactly 1) | The offset of the node's clock from the computer's clock (both in UTC) in seconds.  The offset may be up to 4200 seconds (70 minutes)                                                                                                             |
 | →<br>`networkactive`                   | bool          | Required<br>(exactly 1) | Set to `true` if P2P networking is enabled.  Set to `false` if P2P networking is disabled. Enabling/disabling done via [SetNetworkActive](../api/remote-procedure-calls-network.md#setnetworkactive)                                     |
 | →<br>`connections`                     | number (int)  | Required<br>(exactly 1) | The total number of open connections (both outgoing and incoming) between this node and other nodes                                                                                                                                               |
@@ -413,11 +413,11 @@ The [`getnetworkinfo` RPC](../api/remote-procedure-calls-network.md#getnetworkin
 | →<br>`connections_mn`                   | number (int)  | Required<br>(exactly 1) | _Added in Dash Core 18.0.0_<br><br>The number of verified masternode connections                                                                                                                                                                |
 | →<br>`connections_mn_in`            | number (int)  | Required<br>(exactly 1) | _Added in Dash Core 18.0.0_<br><br>The number of inbound verified masternode connections                                                                                                                                                        |
 | →<br>`connections_mn_out`           | number (int)  | Required<br>(exactly 1) | _Added in Dash Core 18.0.0_<br><br>The number of outbound verified masternode connections                                                                                                                                                       |
-| →<br>`socketevents`                    | string        | Required<br>(exactly 1) | The socket events mode, either `epoll`, `poll`, or `select`                                                                                                                                                  |
-| →<br>`networks`                        | array         | Required<br>(exactly 1) | An array with three objects: one describing the IPv4 connection, one describing the IPv6 connection, and one describing the Tor hidden service (onion) connection                                                                                 |
-| → →<br>Network                         | object        | Optional<br>(0 to 3)    | An object describing a network.  If the network is unroutable, it will not be returned                                                                                                                                                            |
+| →<br>`socketevents`                    | string        | Required<br>(exactly 1) | The socket events mode, either `kqueue`, `epoll`, `poll`, or `select`                                                                                                                                        |
+| →<br>`networks`                        | array         | Required<br>(exactly 1) | An array with one object per network: `ipv4`, `ipv6`, `onion`, `i2p` and `cjdns`                                                                                                                                                                  |
+| → →<br>Network                         | object        | Required<br>(exactly 5) | An object describing a network                                                                                                                                                                                                                    |
 | → → →<br>`name`                        | string        | Required<br>(exactly 1) | The name of the network.  Either `ipv4`, `ipv6`, `onion`, `i2p`, or `cjdns`                                                                                                                                                                                       |
-| → → →<br>`limited`                     | bool          | Required<br>(exactly 1) | Set to `true` if only connections to this network are allowed according to the `-onlynet` Dash Core command-line/configuration-file parameter.  Otherwise set to `false`                                                                          |
+| → → →<br>`limited`                     | bool          | Required<br>(exactly 1) | Set to `true` if connections to this network are not allowed (limited by `-onlynet` or unreachable).  Always the opposite of `reachable`                                                                                                          |
 | → → →<br>`reachable`                   | bool          | Required<br>(exactly 1) | Set to `true` if connections can be made to or from this network.  Otherwise set to `false`                                                                                                                                                       |
 | → → →<br>`proxy`                       | string        | Required<br>(exactly 1) | The hostname and port of any proxy being used for this network.  If a proxy is not in use, an empty string                                                                                                                                        |
 | → → →<br>`proxy_randomize_credentials` | bool          | Required<br>(exactly 1) | *Added in Bitcoin Core 0.11.0*<br><br>Set to `true` if randomized credentials are set for this proxy. Otherwise set to `false`                                                                                                                    |
@@ -688,13 +688,13 @@ Dash Core 18.1.0 introduced changes to how misbehaving peers are treated. As a r
 
 | Name                    | Type            | Presence                    | Description |
 | ----------------------- | --------------- | --------------------------- | ----------- |
-| `result`                | object          | Required<br>(exactly 1)     | An array of objects each describing one entry. If there are no entries in the ban list, the array will be empty |
+| `result`                | array           | Required<br>(exactly 1)     | An array of objects each describing one entry. If there are no entries in the ban list, the array will be empty |
 | →<br>Node               | object          | Optional<br>(0 or more)     | A ban list entry |
 | → →<br>`address`        | string          | Required<br>(exactly 1)     | The IP/Subnet of the entry |
-| → →<br>`banned_until`   | number<br>(int) | Required<br>(exactly 1)     | The Unix epoch time when the entry was added to the ban list |
-| → →<br>`ban_created`    | number<br>(int) | Required<br>(exactly 1)     | The Unix epoch time until the IP/Subnet is banned |
-| `ban_duration`          | number (int)    | Required<br>(exactly 1)     | The ban duration, in seconds. |
-| `time_remaining`        | number (int)    | Required<br>(exactly 1)     | The time remaining until the ban expires, in seconds. |
+| → →<br>`banned_until`   | number<br>(int) | Required<br>(exactly 1)     | The Unix epoch time until the IP/Subnet is banned |
+| → →<br>`ban_created`    | number<br>(int) | Required<br>(exactly 1)     | The Unix epoch time when the entry was added to the ban list |
+| → →<br>`ban_duration`   | number (int)    | Required<br>(exactly 1)     | The ban duration, in seconds. |
+| → →<br>`time_remaining` | number (int)    | Required<br>(exactly 1)     | The time remaining until the ban expires, in seconds. |
 
 *Examples from Dash Core 21.1.0*
 
@@ -800,7 +800,7 @@ The [`setban` RPC](../api/remote-procedure-calls-network.md#setban) attempts add
 
 | Name     | Type | Presence             | Description                                                                              |
 | -------- | ---- | -------------------- | ---------------------------------------------------------------------------------------- |
-| Absolute | bool | Optional<br>(0 or 1) | If set, the bantime must be a absolute timestamp in seconds since epoch (Jan 1 1970 GMT) |
+| Absolute | bool | Optional<br>(0 or 1) | **Updated in Dash Core 24.0.0**<br>If set, the bantime must be a absolute timestamp in seconds since epoch (Jan 1 1970 GMT). Must be `true`, `false` or `null`; other values now return a type error (previously treated as `false`) |
 
 _Result---`null` on success_
 

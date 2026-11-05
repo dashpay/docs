@@ -112,6 +112,10 @@ Mixing was reset
 The [`coinjoinsalt` RPC](#coinjoinsalt) controls the CoinJoin salt used in the process. It allows
 you to generate, retrieve, or set the salt.
 
+:::{versionchanged} 24.0.0
+The `overwrite` argument must be a JSON boolean. See [Request Format](../api/remote-procedure-calls.md#request-format) for details.
+:::
+
 | Name      | Type   | Presence                | Description                                                                                      |
 | --------- | ------ | ----------------------- | ------------------------------------------------------------------------------------------------ |
 | `command` | string | Required<br>(exactly 1) | The command mode to use:<br>`generate` - Generate new CoinJoin salt<br>`get` - Fetch existing CoinJoin salt<br>`set` - Set new CoinJoin salt |
@@ -209,7 +213,7 @@ The [`getgovernanceinfo` RPC](#getgovernanceinfo) returns an object containing g
 | ------------------------------- | ------------ | ----------------------- | ----------- |
 | `result`                        | object       | Required<br>(exactly 1) | Information about the governance system |
 | →<br>`governanceminquorum`      | number (int) | Required<br>(exactly 1) | The absolute minimum number of votes needed to trigger a governance action |
-| →<br>`proposalfee`              | number (int) | Required<br>(exactly 1) | The collateral transaction fee which must be paid to create a proposal in Dash |
+| →<br>`proposalfee`              | number (DASH) | Required<br>(exactly 1) | The collateral transaction fee which must be paid to create a proposal in Dash |
 | →<br>`superblockcycle`          | number (int) | Required<br>(exactly 1) | The number of blocks between superblocks |
 | →<br>`superblockmaturitywindow` | number (int) | Required<br>(exactly 1) | The superblock trigger creation window |
 | →<br>`lastsuperblock`           | number (int) | Required<br>(exactly 1) | The block number of the last superblock |
@@ -272,7 +276,7 @@ The [`getcoinjoininfo` RPC](#getcoinjoininfo) returns an object containing an in
 | → → →<br>`service`       | string (host:port)    | Optional<br>(0 or 1) | **Deprecated in Dash Core 24.0.0**, returned only if config option `-deprecatedrpc=service` is passed<br>The IP address and port of the masternode |
 | → → →<br>`addrs_core_p2p` | array               | Optional<br>(0 or 1) | **Added in Dash Core 23.0.0**<br>Network addresses of the masternode used for protocol P2P (only while connected to one) |
 | → → → →<br>Address       | string                | Required<br>(1 or more) | Network address (IP:port) |
-| → → →<br>`denomination`  | number (int)          | Required<br>(exactly 1) | The denomination of the session (in DASH) |
+| → → →<br>`denomination`  | number (DASH)         | Required<br>(exactly 1) | The denomination of the session (in DASH) |
 | → → →<br>`state`         | string                | Required<br>(exactly 1) | Current state of the session |
 | → → →<br>`entries_count` | number (int)          | Required<br>(exactly 1) | The number of entries in the session |
 | →<br>`keys_left`         | number (int)          | Optional<br>(0 or 1) | *Changed to optional in Dash Core 22.0.0*<br>How many new keys are left since last automatic backup |
@@ -284,7 +288,7 @@ The [`getcoinjoininfo` RPC](#getcoinjoininfo) returns an object containing an in
 | -------------------- | ------------ | ----------------------- | ----------- |
 | `result`             | object       | Required<br>(exactly 1) | Information about the pool |
 | →<br>`queue_size`    | number (int) | Required<br>(exactly 1) | How many queues there are currently on the network |
-| →<br>`denomination`  | number (int) | Required<br>(exactly 1) | The denomination of the session (in DASH) |
+| →<br>`denomination`  | number (DASH) | Required<br>(exactly 1) | The denomination of the session (in DASH) |
 | →<br>`state`         | string       | Required<br>(exactly 1) | Current state of the session |
 | →<br>`entries_count` | number (int) | Required<br>(exactly 1) | The number of entries in the session |
 
@@ -339,15 +343,15 @@ The [`getsuperblockbudget` RPC](#getsuperblockbudget) returns the absolute maxim
 
 *Parameter #1---block index*
 
-| Name  | Type         | Presence                | Description          |
-| ----- | ------------ | ----------------------- | -------------------- |
-| index | number (int) | Required<br>(exactly 1) | The superblock index |
+| Name  | Type         | Presence                | Description                        |
+| ----- | ------------ | ----------------------- | ---------------------------------- |
+| index | number (int) | Required<br>(exactly 1) | The block height of the superblock |
 
 *Result---maximum sum of superblock payments*
 
-| Name     | Type         | Presence                | Description                                                      |
-| -------- | ------------ | ----------------------- | ---------------------------------------------------------------- |
-| `result` | number (int) | Required<br>(exactly 1) | The absolute maximum sum of superblock payments allowed, in DASH |
+| Name     | Type          | Presence                | Description                                                      |
+| -------- | ------------- | ----------------------- | ---------------------------------------------------------------- |
+| `result` | number (DASH) | Required<br>(exactly 1) | The absolute maximum sum of superblock payments allowed, in DASH |
 
 *Example from Dash Core 0.12.2*
 
@@ -368,6 +372,10 @@ Result:
 ## GObject
 
 The [`gobject` RPC](#gobject) provides a set of commands for managing governance objects and displaying information about them.
+
+:::{versionchanged} 24.0.0
+Numeric arguments must be JSON numbers. See [Request Format](../api/remote-procedure-calls.md#request-format) for details.
+:::
 
 ### GObject Check
 
@@ -584,7 +592,7 @@ The `gobject diff` RPC Lists governance objects differences since last diff.
 | → →<br>`DataString`        | string       | Required<br>(exactly 1) | Governance object info as string                                                                                                                            |
 | → →<br>`Hash`              | string (hex) | Required<br>(exactly 1) | Hash of this governance object                                                                                                                              |
 | → →<br>`CollateralHash`    | string (hex) | Required<br>(exactly 1) | Hash of the collateral payment transaction                                                                                                                  |
-| → →<br>`ObjectType`        | number       | Required<br>(exactly 1) | Object types:<br>`1` - Unknown<br>`2` - Proposal<br>`3` - Trigger                                                                                           |
+| → →<br>`ObjectType`        | number       | Required<br>(exactly 1) | Object types:<br>`0` - Unknown<br>`1` - Proposal<br>`2` - Trigger                                                                                           |
 | → →<br>`CreationTime`      | number       | Required<br>(exactly 1) | Object creation time as Unix epoch time                                                                                                                     |
 | → →<br>`SigningMasternode` | string (hex) | Optional<br>(0 or 1)    | Signing masternode's vin (only present in triggers)                                                                                                         |
 | → →<br>`fBlockchainValidity` | boolean      | Required<br>(exactly 1) | Valid by the blockchain                                                                                                                                     |
@@ -654,7 +662,7 @@ The `gobject get` RPC returns a governance object by hash.
 | →<br>`DataString`         | string       | Required<br>(exactly 1) | Governance object info as string                                                                                                                            |
 | →<br>`Hash`               | string (hex) | Required<br>(exactly 1) | Hash of this governance object                                                                                                                              |
 | →<br>`CollateralHash`     | string (hex) | Required<br>(exactly 1) | Hash of the collateral payment transaction                                                                                                                  |
-| →<br>`ObjectType`         | number       | Required<br>(exactly 1) | Object types:<br>`1` - Unknown<br>`2` - Proposal<br>`3` - Trigger                                                                                           |
+| →<br>`ObjectType`         | number       | Required<br>(exactly 1) | Object types:<br>`0` - Unknown<br>`1` - Proposal<br>`2` - Trigger                                                                                           |
 | →<br>`CreationTime`       | number       | Required<br>(exactly 1) | Object creation time as Unix epoch time                                                                                                                     |
 | →<br>`SigningMasternode`  | string (hex) | Optional<br>(0 or 1)    | Signing masternode's vin (only present in triggers)                                                                                                         |
 | →<br>`FundingResult`      | object       | Required<br>(exactly 1) | Funding vote details                                                                                                                                        |
@@ -808,7 +816,7 @@ The `gobject list` RPC Lists governance objects (can be filtered by signal and/o
 | → →<br>`DataString`        | string       | Required<br>(exactly 1) | Governance object info as string                                                                                                                            |
 | → →<br>`Hash`              | string (hex) | Required<br>(exactly 1) | Hash of this governance object                                                                                                                              |
 | → →<br>`CollateralHash`    | string (hex) | Required<br>(exactly 1) | Hash of the collateral payment transaction                                                                                                                  |
-| → →<br>`ObjectType`        | number       | Required<br>(exactly 1) | Object types:<br>`1` - Unknown<br>`2` - Proposal<br>`3` - Trigger                                                                                           |
+| → →<br>`ObjectType`        | number       | Required<br>(exactly 1) | Object types:<br>`0` - Unknown<br>`1` - Proposal<br>`2` - Trigger                                                                                           |
 | → →<br>`CreationTime`      | number       | Required<br>(exactly 1) | Object creation time as Unix epoch time                                                                                                                     |
 | → →<br>`SigningMasternode` | string (hex) | Optional<br>(0 or 1)    | Signing masternode's vin (only present in triggers)                                                                                                         |
 | → →<br>`fBlockchainValidity` | boolean      | Required<br>(exactly 1) | Valid by the blockchain                                                                                                                                     |
@@ -1166,7 +1174,7 @@ The `gobject vote-alias` RPC votes on a governance object by masternode's voting
 ``` bash
 dash-cli -testnet gobject vote-alias \
 0bf97bce78b3b642c36d4ca8e9265f8f66de8774c220221f57739c1956413e2b \
-funding yes MN01
+funding yes 9cb04f271ba050132c00cc5838fb69e77bc55b5689f9d2d850dc528935f8145c
 ```
 
 Result:
@@ -1175,7 +1183,7 @@ Result:
 {
   "overall": "Voted successfully 1 time(s) and failed 0 time(s).",
   "detail": {
-    "MN01": {
+    "9cb04f271ba050132c00cc5838fb69e77bc55b5689f9d2d850dc528935f8145c": {
       "result": "success"
     }
   }
@@ -1226,7 +1234,7 @@ dash-cli -testnet gobject vote-many \
 {
   "overall": "Voted successfully 1 time(s) and failed 0 time(s).",
   "detail": {
-    "MN01": {
+    "9cb04f271ba050132c00cc5838fb69e77bc55b5689f9d2d850dc528935f8145c": {
       "result": "success"
     }
   }
@@ -1241,6 +1249,10 @@ dash-cli -testnet gobject vote-many \
 ## Masternode
 
 The [`masternode` RPC](#masternode) provides a set of commands for managing masternodes and displaying information about them.
+
+:::{versionchanged} 24.0.0
+Numeric and boolean arguments must be JSON numbers and booleans. See [Request Format](../api/remote-procedure-calls.md#request-format) for details.
+:::
 
 ### Masternode Connect
 
@@ -1512,13 +1524,13 @@ The `masternode status` RPC prints masternode status information.
 | →<br>`outpoint`                | string       | Required<br>(exactly 1) | The masternode's outpoint                                                                                                                                                                         |
 | →<br>`service`                 | string       | Required<br>(exactly 1) | The IP address/port of the masternode                                                                                                                                                             |
 | →<br>`proTxHash`               | string (hex) | Optional<br>(0 or 1)    | The masternode's ProRegTx hash                                                                                                                                                                    |
-| →<br>`type`                    | string       | Required<br>(exactly 1) | *Added in Dash Core 19.0*<br>The type of masternode                                                                                                                                               |
+| →<br>`type`                    | string       | Optional<br>(0 or 1)    | *Added in Dash Core 19.0*<br>The type of masternode                                                                                                                                               |
 | →<br>`collateralHash`          | string (hex) | Optional<br>(0 or 1)    | The masternode's collateral hash                                                                                                                                                                  |
 | →<br>`collateralIndex`         | int          | Optional<br>(0 or 1)    | Index of the collateral                                                                                                                                                                           |
 | →<br>`dmnState`                | object       | Optional<br>(0 or 1)    | Deterministic Masternode State                                                                                                                                                                    |
 | → →<br>`version`               | int          | Required<br>(exactly 1) | **Added in Dash Core 19.2.0**<br>The version of the most recent ProRegTx or ProUpRegTx                                                                                                            |
 | → →<br>`service`               | string       | Optional<br>(0 or 1)    | **DEPRECATED in Dash Core 23.0.0** (use `addresses` instead)<br>The IP address/port of the masternode. Returned only if config option `-deprecatedrpc=service` is passed since Dash Core 24.0.0. |
-| → →<br>`addresses`             | object       | Optional<br>(0 or 1)    | **Added in Dash Core 23.0.0**<br>Network addresses of the masternode |
+| → →<br>`addresses`             | object       | Required<br>(exactly 1) | **Added in Dash Core 23.0.0**<br>Network addresses of the masternode |
 | → → →<br>`core_p2p`            | array        | Optional<br>(0 or 1)    | Addresses used for protocol P2P |
 | → → →<br>`platform_p2p`        | array        | Optional<br>(0 or 1)    | Addresses used for Platform P2P |
 | → → →<br>`platform_https`      | array        | Optional<br>(0 or 1)    | Addresses used for Platform HTTPS API |
@@ -1664,7 +1676,7 @@ By default, the 10 previous block winners, the current block winner, and the nex
 | Name                   | Type   | Presence                | Description                                                                                                                                   |
 | ---------------------- | ------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Result                 | object | Required<br>(exactly 1) | Winning masternode info                                                                                                                       |
-| →<br>Masternode Winner | string | Required<br>(exactly 1) | Key: Block height<br>Value: payee address. As of Dash Core 0.17.0, all payees will be listed (e.g. both owner and operator where applicable).<br>**Updated in Dash Core 24.0.0**<br>Payees are comma-separated. Every owner payout address is listed (for shared masternodes, every share reward address), followed by the operator payout address where applicable. |
+| →<br>Masternode Winner | string | Required<br>(exactly 1) | Key: Block height<br>Value: payee address. As of Dash Core 0.17.0, all payees will be listed (e.g. both owner and operator where applicable).<br>**Updated in Dash Core 24.0.0**<br>Payees are separated by `, ` (comma and space). Every owner payout address is listed (for shared masternodes, every share reward address), followed by the operator payout address where applicable. At superblock heights, the superblock payee addresses are appended. |
 
 *Example from Dash Core 0.17.0*
 
@@ -1676,7 +1688,7 @@ Result (current block - 37458):
 
 ``` json
 {
-  "37448": "ygSWwhyzU61FNEta8gDh8gfoH5EZZUvc5m,yP8A3cbdxRtLRduy5mXDsBnJtMzHWs6ZXr",
+  "37448": "ygSWwhyzU61FNEta8gDh8gfoH5EZZUvc5m, yP8A3cbdxRtLRduy5mXDsBnJtMzHWs6ZXr",
   "37449": "yjGZLzSSoFfTFgLDJrgniXfYxu3xF9xKQg",
   "37450": "yRTo1wXWoNnPFWcQVepKGXuLsoypnPkGWj",
   "37451": "yYMFRAYZ25XspHZ1EXC39wUMx9FhoC5VT2",
@@ -2001,6 +2013,10 @@ To display the status of sporks, use the `show` or `active` syntax.
 
 For an unrecognized command, the result is `null`.
 
+:::{versionchanged} 24.0.0
+`SPORK_3_INSTANTSEND_BLOCK_FILTERING` and `SPORK_9_SUPERBLOCKS_ENABLED` were removed and are no longer returned.
+:::
+
 **Command Mode - `show`**
 
 *Result---spork values*
@@ -2021,8 +2037,6 @@ Result:
 ``` json
 {
   "SPORK_2_INSTANTSEND_ENABLED": 0,
-  "SPORK_3_INSTANTSEND_BLOCK_FILTERING": 0,
-  "SPORK_9_SUPERBLOCKS_ENABLED": 0,
   "SPORK_17_QUORUM_DKG_ENABLED": 0,
   "SPORK_19_CHAINLOCKS_ENABLED": 0,
   "SPORK_21_QUORUM_ALL_CONNECTED": 1,
@@ -2050,8 +2064,6 @@ Result:
 ``` json
 {
   "SPORK_2_INSTANTSEND_ENABLED": true,
-  "SPORK_3_INSTANTSEND_BLOCK_FILTERING": true,
-  "SPORK_9_SUPERBLOCKS_ENABLED": true,
   "SPORK_17_QUORUM_DKG_ENABLED": true,
   "SPORK_19_CHAINLOCKS_ENABLED": true,
   "SPORK_21_QUORUM_ALL_CONNECTED": true,
@@ -2094,7 +2106,7 @@ To update the state of a spork activation, use the `<name> [value]` syntax.
 *Example from Dash Core 18.1.0*
 
 ``` bash
-dash-cli -testnet spork SPORK_2_INSTANTSEND_ENABLED 0
+dash-cli -testnet sporkupdate SPORK_2_INSTANTSEND_ENABLED 0
 ```
 
 Result:
@@ -2119,9 +2131,9 @@ The [`voteraw` RPC](#voteraw) compiles and relays a governance vote with provide
 
 *Parameter #2---masternode collateral transaction index*
 
-| Name                             | Type   | Presence                | Description                                    |
-| -------------------------------- | ------ | ----------------------- | ---------------------------------------------- |
-| `masternode-collateral-tx-index` | string | Required<br>(exactly 1) | Index of the masternode collateral transaction |
+| Name                             | Type         | Presence                | Description                                    |
+| -------------------------------- | ------------ | ----------------------- | ---------------------------------------------- |
+| `masternode-collateral-tx-index` | number (int) | Required<br>(exactly 1) | Index of the masternode collateral transaction |
 
 *Parameter #3---governance hash*
 
@@ -2131,9 +2143,9 @@ The [`voteraw` RPC](#voteraw) compiles and relays a governance vote with provide
 
 *Parameter #4---vote signal*
 
-| Name     | Type   | Presence                | Description                                  |
-| -------- | ------ | ----------------------- | -------------------------------------------- |
-| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding`, `valid`, or `delete` |
+| Name     | Type   | Presence                | Description                                              |
+| -------- | ------ | ----------------------- | -------------------------------------------------------- |
+| `signal` | string | Required<br>(exactly 1) | Vote signal: `funding`, `valid`, `delete`, or `endorsed` |
 
 *Parameter #5---vote outcome*
 
@@ -2157,7 +2169,7 @@ The [`voteraw` RPC](#voteraw) compiles and relays a governance vote with provide
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Result | object | Required<br>(exactly 1) | The vote result
+Result | string | Required<br>(exactly 1) | The vote result (`Voted successfully`)
 
 *Example from Dash Core 0.12.2*
 

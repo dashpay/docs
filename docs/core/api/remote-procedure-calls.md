@@ -72,6 +72,10 @@ rpcwhitelistdefault=0
 
 In this example, user1 can only call `getnetworkinfo`, user2 can only call `getnetworkinfo` or `getwalletinfo`, while user3 can still call all RPCs.
 
+:::{versionchanged} 24.0.0
+[Batch requests](#batch-requests) from users with an `rpcwhitelist` entry are now checked request by request. The whole batch is rejected with HTTP 403 if any of its methods is not whitelisted for the user, as a single call already was. Previously, depending on the whitelist, such batches either bypassed it or were always rejected.
+:::
+
 ### Restricted Access Users
 
 All RPC request restrictions are now configured using the [RPC whitelist settings](#rpc-whitelist).
@@ -145,6 +149,16 @@ In the table above and in other tables describing RPC input and output, we use t
 * "Type" is the JSON data type and the specific Dash Core type.
 
 * "Presence" indicates whether or not a field must be present within its containing array or object. Note that an optional object may still have required children.
+
+:::{versionchanged} 24.0.0
+Argument types are checked more strictly:
+
+* Boolean arguments of the Dash-specific RPCs (`bls`, `coinjoinsalt`, `masternode`, `protx`, `quorum` and their subcommands) must be JSON `true` or `false`. Strings such as `"true"` or `"1"` are rejected. Starting Dash Core with `-deprecatedrpc=permissive_bool` restores the old behavior, but this option will be removed in a future version.
+* Numeric arguments of the `gobject`, `masternode`, `protx` and `quorum` RPCs and their subcommands must be JSON numbers. Strings containing a number are rejected with a type error (code -3), and there is no option to restore the old behavior. The exception is the `baseBlock` and `block` arguments of `protx diff` and `protx listdiff`, which take a block hash or a height.
+* The boolean arguments of `setban` and `addpeeraddress` accept only `true`, `false` or `null`. Other values, which were previously treated as `false`, now return a type error.
+
+`dash-cli` converts these arguments to the correct JSON type, so the change mainly affects clients that build JSON-RPC requests themselves.
+:::
 
 ### Response Format
 
