@@ -3846,9 +3846,9 @@ _Result_
 
 | Name              | Type                  | Presence                | Description                                                                   |
 | ----------------- | --------------------- | ----------------------- | ----------------------------------------------------------------------------- |
-| `result`          | object/null           | Required<br>(exactly 1) | An object containing the requested block, or JSON `null` if an error occurred |
+| `result`          | object                | Required<br>(exactly 1) | An object describing the flag change                                          |
 | →<br>`flag_name`  | str (string)          | Required<br>(exactly 1) | the name of the flag that was modified                                        |
-| →<br>`flag_state` | true\|false (boolean) | Required<br>(0 or 1)    | the new state of the flag                                                     |
+| →<br>`flag_state` | true\|false (boolean) | Required<br>(exactly 1) | the new state of the flag                                                     |
 | →<br>`warnings`   | str (string)          | Optional<br>(0 or 1)    | Any warnings associated with the change                                       |
 
 _Example from Dash Core 18.1.0_

@@ -2038,7 +2038,7 @@ Name | Type | Presence | Description
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-`result` | string (hex): array of ojbects | Required<br>(exactly 1) | Array of special transaction objects in the format of the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction)
+`result` | string (hex): array of objects | Required<br>(exactly 1) | Array of special transaction objects in the format of the [`getrawtransaction` RPC](../api/remote-procedure-calls-raw-transactions.md#getrawtransaction)
 
 *Example from Dash Core 0.13.1*
 
