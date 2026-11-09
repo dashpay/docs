@@ -1174,7 +1174,7 @@ The `gobject vote-alias` RPC votes on a governance object by masternode's voting
 ``` bash
 dash-cli -testnet gobject vote-alias \
 0bf97bce78b3b642c36d4ca8e9265f8f66de8774c220221f57739c1956413e2b \
-funding yes 9cb04f271ba050132c00cc5838fb69e77bc55b5689f9d2d850dc528935f8145c
+funding yes MN01
 ```
 
 Result:
@@ -1183,7 +1183,7 @@ Result:
 {
   "overall": "Voted successfully 1 time(s) and failed 0 time(s).",
   "detail": {
-    "9cb04f271ba050132c00cc5838fb69e77bc55b5689f9d2d850dc528935f8145c": {
+    "MN01": {
       "result": "success"
     }
   }
@@ -1234,7 +1234,7 @@ dash-cli -testnet gobject vote-many \
 {
   "overall": "Voted successfully 1 time(s) and failed 0 time(s).",
   "detail": {
-    "9cb04f271ba050132c00cc5838fb69e77bc55b5689f9d2d850dc528935f8145c": {
+    "MN01": {
       "result": "success"
     }
   }
@@ -2037,6 +2037,8 @@ Result:
 ``` json
 {
   "SPORK_2_INSTANTSEND_ENABLED": 0,
+  "SPORK_3_INSTANTSEND_BLOCK_FILTERING": 0,
+  "SPORK_9_SUPERBLOCKS_ENABLED": 0,
   "SPORK_17_QUORUM_DKG_ENABLED": 0,
   "SPORK_19_CHAINLOCKS_ENABLED": 0,
   "SPORK_21_QUORUM_ALL_CONNECTED": 1,
@@ -2064,6 +2066,8 @@ Result:
 ``` json
 {
   "SPORK_2_INSTANTSEND_ENABLED": true,
+  "SPORK_3_INSTANTSEND_BLOCK_FILTERING": true,
+  "SPORK_9_SUPERBLOCKS_ENABLED": true,
   "SPORK_17_QUORUM_DKG_ENABLED": true,
   "SPORK_19_CHAINLOCKS_ENABLED": true,
   "SPORK_21_QUORUM_ALL_CONNECTED": true,

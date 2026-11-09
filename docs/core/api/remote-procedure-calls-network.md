@@ -535,7 +535,7 @@ The [`getpeerinfo` RPC](../api/remote-procedure-calls-network.md#getpeerinfo) re
 | → → →<br>SERVICE_NAME           | string              | Required<br>(exactly 1) | The service name if it is recognised. |
 | → →<br>`verified_proregtx_hash` | string (hex)        | Optional<br>(0 or 1)    | The ProRegTx of the masternode |
 | → →<br>`verified_pubkey_hash`   | string (hex)        | Optional<br>(0 or 1)    | The hashed operator public key of the masternode |
-| → →<br>`relaytxes`          | bool         | Optional<br>(0 or 1)    | Whether peer has asked us to relay transactions to it. |
+| → →<br>`relaytxes`          | bool         | Optional<br>(0 or 1)    | Whether we relay transactions to this peer |
 | → →<br>`lastsend`               | number (int)        | Required<br>(exactly 1) | The Unix epoch time when we last successfully sent data to the TCP socket for this node |
 | → →<br>`lastrecv`               | number (int)        | Required<br>(exactly 1) | The Unix epoch time when we last received data from this node |
 | → →<br>`last_transaction`   | number (int) | Required<br>(exactly 1) | **Added in Dash Core 20.1.0**<br>The UNIX epoch time of the last valid transaction received from this peer. |
