@@ -24,7 +24,7 @@ On mainnet, if the next block is a superblock, this RPC returns a `Dash Core is 
 Name | Type | Presence | Description
 --- | --- | --- | ---
 Request | object | Optional<br>(exactly 1) | A JSON request object
-→<br>`mode` | string | Optional<br>(exactly 1) | This must be set to "template", "proposal" (see BIP 23), or omitted
+→<br>`mode` | string | Optional<br>(exactly 1) | This must be set to "template", "proposal" (see BIP 23), or omitted.<br><br>If set to "proposal", `data` is required. Instead of a block template, the result is then JSON `null` if the proposal was accepted, or a string (see BIP 22) if it was rejected or inconclusive
 →<br>`capabilities` | array (string) | Optional<br>(0 or more) | A list of strings
 → →<br>Capability | string | Optional<br>(exactly 1) | Client side supported feature, `longpoll`, `coinbasevalue`, `proposal`, `serverlist`, `workid`
 →<br>`rules` | array (string) | Optional<br>(0 or 1) | A list of strings. The RPC help lists this field as required, but requests without it are accepted

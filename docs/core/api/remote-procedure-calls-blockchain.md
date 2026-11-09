@@ -1502,7 +1502,7 @@ Name | Type | Presence | Description
 → →<br>`spentby` | array | Required<br>(exactly 1) |  **Added in Dash Core 20.0.0**<br>An array of unconfirmed transactions spending outputs from this transaction
 → → →<br>TXID | string | Optional (0 or more) | The TXIDs of any unconfirmed transactions spending from this transaction
 → →<br>`unbroadcast` | bool | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>True if this transaction  is currently unbroadcast (initial broadcast not yet acknowledged by any peers)
-→ →<br>`instantlock` | string | Required<br>(exactly 1) | "true" if this transaction was locked via [InstantSend](../resources/glossary.md#instantsend), "unknown" if InstantSend is unavailable
+→ →<br>`instantlock` | string | Required<br>(exactly 1) | "true" if this transaction was locked via [InstantSend](../resources/glossary.md#instantsend), "false" if it was not, or "unknown" if InstantSend is unavailable
 
 *Examples from Dash Core 20.0.0*
 
@@ -1612,7 +1612,7 @@ Name | Type | Presence | Description
 → →<br>`spentby` | array | Required<br>(exactly 1) |  **Added in Dash Core 20.0.0**<br>An array of unconfirmed transactions spending outputs from this transaction
 → → →<br>TXID | string | Optional (0 or more) | The TXIDs of any unconfirmed transactions spending from this transaction
 → →<br>`unbroadcast` | bool | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>True if this transaction  is currently unbroadcast (initial broadcast not yet acknowledged by any peers)
-→ →<br>`instantlock` | string | Required<br>(exactly 1) | "true" if this transaction was locked via [InstantSend](../resources/glossary.md#instantsend), "unknown" if InstantSend is unavailable
+→ →<br>`instantlock` | string | Required<br>(exactly 1) | "true" if this transaction was locked via [InstantSend](../resources/glossary.md#instantsend), "false" if it was not, or "unknown" if InstantSend is unavailable
 
 *Examples from Dash Core 20.0.0*
 
@@ -1708,7 +1708,7 @@ Name | Type | Presence | Description
 →<br>`spentby` | array | Required<br>(exactly 1) |  **Added in Dash Core 20.0.0**<br>An array of unconfirmed transactions spending outputs from this transaction
 → →<br>TXID | string | Optional (0 or more) | The TXIDs of any unconfirmed transactions spending from this transaction
 →<br>`unbroadcast` | bool | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>True if this transaction  is currently unbroadcast (initial broadcast not yet acknowledged by any peers)
-→<br>`instantlock` | string | Required<br>(exactly 1) | "true" if this transaction was locked via [InstantSend](../resources/glossary.md#instantsend), "unknown" if InstantSend is unavailable
+→<br>`instantlock` | string | Required<br>(exactly 1) | "true" if this transaction was locked via [InstantSend](../resources/glossary.md#instantsend), "false" if it was not, or "unknown" if InstantSend is unavailable
 
 *Example from Dash Core 20.0.0*
 
@@ -1860,7 +1860,7 @@ Name | Type | Presence | Description
 → →<br>`spentby` | array | Required<br>(exactly 1) | An array of unconfirmed transactions spending outputs from this transaction
 → → →<br>TXID | string | Optional (0 or more) | The TXIDs of any unconfirmed transactions spending from this transaction
 → →<br>`unbroadcast` | bool | Required<br>(exactly 1) | **Added in Dash Core 20.0.0**<br>True if this transaction  is currently unbroadcast (initial broadcast not yet acknowledged by any peers)
-→ →<br>`instantlock` | string | Required<br>(exactly 1) | *Added in Dash Core 0.12.3*<br><br>"true" if this transaction was locked via [InstantSend](../resources/glossary.md#instantsend), "unknown" if InstantSend is unavailable
+→ →<br>`instantlock` | string | Required<br>(exactly 1) | *Added in Dash Core 0.12.3*<br><br>"true" if this transaction was locked via [InstantSend](../resources/glossary.md#instantsend), "false" if it was not, or "unknown" if InstantSend is unavailable
 
 *Examples from Dash Core 20.0.0*
 
@@ -2507,7 +2507,7 @@ Result:
 :::{versionadded} 24.0.0
 :::
 
-The [`scanblocks` RPC](../api/remote-procedure-calls-blockchain.md#scanblocks) returns relevant block hashes for given descriptors. It uses [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) block filters, so it requires the `-blockfilterindex` Dash Core command-line/configuration-file parameter to be enabled. Only one scan can run at a time.
+The [`scanblocks` RPC](../api/remote-procedure-calls-blockchain.md#scanblocks) returns relevant block hashes for given descriptors. It uses [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) block filters, so it requires the `-blockfilterindex` Dash Core command-line/configuration-file parameter to be enabled. Enabling the index is not enough: the scan does not wait for the index to sync, and it skips blocks the index does not have yet without returning an error. Use the [`getindexinfo` RPC](../api/remote-procedure-calls-util.md#getindexinfo) to check that the block filter index is synced through the stop height before starting a scan. Only one scan can run at a time.
 
 :::{note}
 This call may take several minutes. Make sure to use no RPC timeout (`dash-cli -rpcclienttimeout=0`).
@@ -2549,7 +2549,7 @@ This call may take several minutes. Make sure to use no RPC timeout (`dash-cli -
 
 *Result if `action` is `start`---relevant blocks*
 
-The RPC only returns after the scan completes.
+The RPC only returns after the scan completes or is aborted. An aborted scan returns the blocks found so far, with nothing in the result to show that it was aborted. Compare `to_height` with the requested stop height before treating the results as complete.
 
 | Name | Type | Presence | Description |
 | ---- | ---- | -------- | ----------- |

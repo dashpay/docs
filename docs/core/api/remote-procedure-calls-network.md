@@ -296,7 +296,7 @@ The [`getnodeaddresses` RPC](../api/remote-procedure-calls-network.md#getnodeadd
 
 | Name    | Type         | Presence             | Description                                                                                                    |
 | ------- | ------------ | -------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `count` | number (int) | Optional<br>(0 or 1) | The maximum number of addresses to return (default = 1). Specify `0` to return all known addresses.               |
+| `count` | number (int) | Optional<br>(0 or 1) | The maximum number of addresses to return (default = 1). Specify `0` to return all eligible addresses. Addresses the address manager considers low quality, and banned or discouraged addresses, are never returned.               |
 
 *Parameter #2---network*
 

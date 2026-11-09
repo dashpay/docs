@@ -22,7 +22,7 @@ The [`getaddressbalance` RPC](../api/remote-procedure-calls-address-index.md#get
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Request | object | Required<br>(exactly 1) | A JSON object with the addresses
+Request | object or string | Required<br>(exactly 1) | A JSON object with the addresses, or a single address as a string
 →<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
 →→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
 
@@ -138,7 +138,7 @@ The [`getaddressmempool` RPC](../api/remote-procedure-calls-address-index.md#get
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Request | object | Required<br>(exactly 1) | A JSON object with the addresses
+Request | object or string | Required<br>(exactly 1) | A JSON object with the addresses, or a single address as a string
 →<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
 →→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
 
@@ -194,7 +194,7 @@ The [`getaddresstxids` RPC](../api/remote-procedure-calls-address-index.md#getad
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Request | object | Required<br>(exactly 1) | A JSON object with the addresses and an optional block height range
+Request | object or string | Required<br>(exactly 1) | A JSON object with the addresses and an optional block height range, or a single address as a string (no height range)
 →<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
 →→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
 →<br>`start` | number (int) | Optional<br>(0 or 1) | The start block height. The range is only applied if `start` and `end` are both set and greater than `0`
@@ -240,7 +240,7 @@ The [`getaddressutxos` RPC](../api/remote-procedure-calls-address-index.md#getad
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
-Request | object | Required<br>(exactly 1) | A JSON object with the addresses
+Request | object or string | Required<br>(exactly 1) | A JSON object with the addresses, or a single address as a string
 →<br>`addresses` | array | Required<br>(exactly 1) | An array of P2PKH or P2SH Dash address(es)
 →→<br>Address | string (base58) | Required<br>(1 or more) | The base58check encoded address
 

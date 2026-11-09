@@ -157,6 +157,8 @@ Argument types are checked more strictly:
 * Numeric arguments of the `gobject`, `masternode`, `protx` and `quorum` RPCs and their subcommands must be JSON numbers. Strings containing a number are rejected with a type error (code -3), and there is no option to restore the old behavior. The exceptions are the `baseBlock` and `block` arguments of `protx diff` and `protx listdiff`, which take a block hash or a height, and the `operatorReward` and bare-port `platformP2PAddrs`/`platformHTTPSAddrs` arguments of the `protx register*` RPCs, which accept a number or a string.
 * The boolean arguments of `setban` and `addpeeraddress` accept only `true`, `false` or `null`. Other values, which were previously treated as `false`, now return a type error.
 
+These rules apply only to values that are passed. An optional boolean or numeric argument can still be set to JSON `null` to use its default, for example the `detailed` argument of `protx list` or the `fee` argument of `protx shared_dissolve`.
+
 `dash-cli` converts these arguments to the correct JSON type, so the change mainly affects clients that build JSON-RPC requests themselves.
 :::
 

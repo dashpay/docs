@@ -1782,8 +1782,8 @@ The [`masternodelist` RPC](#masternodelist) returns a list of masternodes in dif
 
 | Name                 | Type        | Presence                | Description                                                                                   |
 | -------------------- | ----------- | ----------------------- | --------------------------------------------------------------------------------------------- |
-| `result`             | object/null | Required<br>(exactly 1) | JSON object with masternode outpoint as keys |
-| →<br>Masternode Info | string/number/object | Required<br>(1 or more) | Key: masternode outpoint<br>Value: the requested masternode info. Output varies based on selected `mode` and `filter` parameters |
+| `result`             | object | Required<br>(exactly 1) | JSON object with masternode outpoint as keys. If no masternodes match, the result is an empty object (`{}`), not `null` |
+| →<br>Masternode Info | string/number/object | Optional<br>(0 or more) | Key: masternode outpoint<br>Value: the requested masternode info. Output varies based on selected `mode` and `filter` parameters |
 
 :::{note}
 **Added in Dash Core 23.0.0**
@@ -2101,7 +2101,7 @@ To update the state of a spork activation, use the `<name> [value]` syntax.
 
 | Name     | Type   | Presence                | Description                         |
 | -------- | ------ | ----------------------- | ----------------------------------- |
-| `result` | string | Required<br>(exactly 1) | Update status (`success` or `null`) |
+| `result` | string/null | Required<br>(exactly 1) | `success` if the spork value was updated, or JSON `null` if the update was rejected |
 
 *Example from Dash Core 18.1.0*
 
@@ -2109,7 +2109,7 @@ To update the state of a spork activation, use the `<name> [value]` syntax.
 dash-cli -testnet sporkupdate SPORK_2_INSTANTSEND_ENABLED 0
 ```
 
-Result:
+Result (the update was rejected, so the RPC returned `null`; a successful update returns `success`):
 
 ``` bash
 null
