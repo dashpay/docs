@@ -69,6 +69,10 @@ If a block has three or more transactions, intermediate [merkle tree](../resourc
 
 TXIDs and intermediate hashes are always in [internal byte order](../resources/glossary.md#internal-byte-order) when they're concatenated, and the resulting merkle root is also in internal byte order when it's placed in the [block header](../resources/glossary.md#block-header).
 
+:::{note}
+The TXID of a [version 2 asset unlock transaction](../reference/transactions-special-transactions.md#version-2-asset-unlocks) (Dash Core 24.0.0+) excludes the transaction's quorum signing info, so the merkle root does not commit to that data. Instead, the coinbase special transaction commits to the full hashes of those transactions in its [`merkleRootAssetUnlocks` field](../reference/transactions-special-transactions.md#cbtx).
+:::
+
 ## Target nBits
 
 The [target threshold](../resources/glossary.md#target) is a 256-bit unsigned integer which a [header](../resources/glossary.md#header) hash must be equal to or below in order for that header to be a valid part of the [block chain](../resources/glossary.md#block-chain). However, the header field *[nBits](../resources/glossary.md#nbits)* provides only 32 bits of space, so the [target](../resources/glossary.md#target) number uses a less precise format called "compact" which works like a base-256 version of scientific notation:

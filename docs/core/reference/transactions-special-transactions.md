@@ -29,6 +29,9 @@ Classical (financial) transactions have a `type` of 0 while special transactions
 | 18.0.0  | 3          | 7       | [MnHfTx](#mnhftx)           | Masternode hard fork signal              | hex     | compactSize uint |
 | 21.0.0  | 3          | 8       | [AssetLockTx](#assetlocktx)   | Asset Lock Transaction                   | hex     | compactSize uint |
 | 21.0.0  | 3          | 9       | [AssetUnlocktx](#assetunlocktx)   | Asset Unlock Transaction                   | hex     | compactSize uint |
+| 24.0.0  | 3          | 10      | [ProDisTx](#prodistx)       | Shared Masternode Dissolution            | hex     | compactSize uint |
+| 24.0.0  | 3          | 11      | [ProUpShareTx](#proupsharetx) | Update Shared Masternode Share Reward  | hex     | compactSize uint |
+| 24.0.0  | 3          | 12      | [ProUpSharedRegTx](#proupsharedregtx) | Update Shared Masternode Registrar | hex | compactSize uint |
 
 ```{eval-rst}
 .. _ref-txs-proregtx:
@@ -42,29 +45,87 @@ The [masternode](../resources/glossary.md#masternode) Registration (ProRegTx) sp
 
 A ProRegTx is created and sent using the [`protx` RPC](../api/remote-procedure-calls-evo.md#protx). The ProRegTx must either include an [output](../resources/glossary.md#output) with 1000 DASH (`protx register`) or refer to an existing unspent output holding 1000 DASH (`protx fund_register`). If the 1000 DASH is an output of the ProRegTx, the collateralOutpoint hash field should be null.
 
+**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, a version 3 ProRegTx replaces the single owner payout script with a list of up to 8 owner payouts ([multi-party payouts](https://github.com/dashpay/dips/blob/master/dip-0026.md)). It can also register a shared masternode whose collateral is funded by 2 to 8 participants (see [Shared Masternode Registration](#shared-masternode-registration)). New version 1 (legacy BLS scheme) registrations are not valid after v24 activation.
+
+**Note**: The version 3 wire format differs from the version 3 format defined in Dash Core 23.0.0. In Dash Core 23.0.0, version 3 only replaced the `ipAddress` and `port` fields with `netInfo` and kept the single `scriptPayout`. In Dash Core 24.0.0, version 3 also replaces `scriptPayout` with the `payouts` list and adds the `shares`, `joinSigs`, `earlyPeriodBlocks`, and `earlyPenalty` fields. Software that parses version 3 provider transactions using the Dash Core 23.0.0 format must be updated.
+
 The special transaction type is 1 and the extra payload consists of the following data:
 
 | Bytes | Name | Data type |  Description |
 | ---------- | ----------- | -------- | -------- |
-| 2 | version | uint_16 | Provider transaction version number.<br>**Version 1** - Legacy BLS scheme<br>**Version 2** - Basic BLS scheme (after v19 hard fork)<br>**Version 3** - Extended addresses with basic BLS scheme (after v24 hard fork activation)
+| 2 | version | uint_16 | Provider transaction version number.<br>**Version 1** - Legacy BLS scheme. Not valid after v24 hard fork activation<br>**Version 2** - Basic BLS scheme (after v19 hard fork)<br>**Version 3** - Extended addresses, multi-party payouts, and shared masternodes with basic BLS scheme (after v24 hard fork activation)
 | 2 | type | uint_16 | Masternode type. Default set to 0.
 | 2 | mode | uint_16 | Masternode mode. Default set to 0.
-| 36 | collateralOutpoint | COutpoint | The collateral outpoint.<br>**Note:** The hash will be null if the collateral is part of this transaction, otherwise it will reference an existing collateral.
+| 36 | collateralOutpoint | COutpoint | The collateral outpoint.<br>**Note:** The hash will be null if the collateral is part of this transaction, otherwise it will reference an existing collateral. A shared masternode registration must use a collateral output of this transaction.
 | 16 | ipAddress | byte[] | ***Version < 3 only***<br>IPv6 address in network byte order. Only IPv4 mapped addresses are allowed (to be extended in the future)<br>**Replaced by netInfo in version 3**
 | 2 | port | uint_16 | ***Version < 3 only***<br>Port (network byte order)<br>**Replaced by netInfo in version 3**
 | Variable | netInfo | byte[] | ***Version 3 and later***<br>Network address information structure. See [NetInfo Structure](#netinfo-structure) for details.
-| 20 | KeyIdOwner | CKeyID | The public key hash used for owner related signing (ProTx updates, governance voting)
+| 20 | KeyIdOwner | CKeyID | The public key hash used for owner related signing (ProTx updates, governance voting).<br>Must be null (all zeros) for a shared masternode registration. The share owner keys replace it.
 | 48 | PubKeyOperator | CBLSPublicKey | The BLS public key used for operational related signing (network messages, ProTx updates).<br>**Note**: serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2+ - basic BLS scheme
 | 20 | KeyIdVoting | CKeyID | The public key hash used for voting.
 | 2 | operatorReward | uint_16 | A value from 0 to 10000.
-| 1-9 | scriptPayoutSize | compactSize uint | Size of the Payee Script.
-| Variable | scriptPayout | Script | Payee script (p2pkh/p2sh)
+| 1-9 | scriptPayoutSize | compactSize uint | ***Version < 3 only***<br>Size of the Payee Script.<br>**Replaced by payouts in version 3**
+| Variable | scriptPayout | Script | ***Version < 3 only***<br>Payee script (p2pkh/p2sh)<br>**Replaced by payouts in version 3**
+| 1 | payoutsCount | uint8_t | ***Version 3 and later***<br>Number of owner payout entries. 1 to 8 for an ordinary registration. Must be 0 for a shared masternode registration.
+| Variable | payouts | payoutShare[] | ***Version 3 and later***<br>Owner payout list. See [Payout Share Structure](#payout-share-structure) for details.
+| 1 | sharesCount | uint8_t | ***Version 3 and later***<br>Number of collateral shares. 0 for an ordinary registration; 2 to 8 for a shared masternode registration.
+| Variable | shares | collateralShare[] | ***Version 3 and later***<br>Collateral share table, in consensus-significant order. See [Collateral Share Structure](#collateral-share-structure) for details.
+| 65 * sharesCount | joinSigs | byte[65][] | ***Version 3 and later***<br>One 65-byte compact ECDSA signature per share, in share order, by that share's owner key. Each signature is serialized without a length prefix. See [Shared Masternode Registration](#shared-masternode-registration).
+| 4 | earlyPeriodBlocks | uint32_t | ***Version 3 and later***<br>Number of blocks after registration during which a unilateral dissolution ([ProDisTx](#prodistx)) must pay `earlyPenalty`. Maximum 420480 (approximately two years). Must be 0 for an ordinary registration.
+| 8 | earlyPenalty | int64_t | ***Version 3 and later***<br>Penalty in duffs that a unilateral dissolution during the early period must pay to the other participants. Must be less than the smallest share amount and must be 0 when `earlyPeriodBlocks` is 0. Must be 0 for an ordinary registration.
 | 32 | inputsHash | uint256 | Hash of all the outpoints of the transaction inputs
-| 0 or 20 | platformNodeID | byte[] | ***Version 2 only***<br>Dash Platform P2P node ID, derived from P2P public key. Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
+| 0 or 20 | platformNodeID | byte[] | ***Version 2 and later***<br>Dash Platform P2P node ID, derived from P2P public key. Only present for masternode type 1.
 | 0 or 2 | platformP2PPort | uint_16 | ***Version 2 only***<br>TCP port of Dash Platform peer-to-peer communication between nodes (network byte order). Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
 | 0 or 2 | platformHTTPPort | uint_16 | ***Version 2 only***<br>TCP port of Platform HTTP/API interface (network byte order). Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
 | 1-9 | payloadSigSize |compactSize uint | Size of the Signature
 | Variable | payloadSig | vector | Signature of the hash of the ProTx fields. Signed with the key corresponding to the collateral outpoint in case the collateral is not part of the ProRegTx itself, empty otherwise.
+
+### Payout Share Structure
+
+*Added in Dash Core 24.0.0 as described by [DIP26](https://github.com/dashpay/dips/blob/master/dip-0026.md)*
+
+**Note**: The Dash Core 24.0.0 implementation differs from the current DIP26 draft (for example, in the payload version, the count encoding, the entry limits, and the signed message format). The tables on this page describe what Dash Core 24.0.0 implements.
+
+Version 3 ProRegTx and [ProUpRegTx](#proupregtx) payloads carry the owner payout as a list of `payoutShare` entries. Each entry has the following structure:
+
+| Bytes | Name | Data type | Description |
+|-------|------|-----------|-------------|
+| 1-9 | scriptPayoutSize | compactSize uint | Size of the payee script
+| Variable | scriptPayout | Script | Payee script (p2pkh/p2sh)
+| 2 | reward | uint_16 | Portion of the owner reward paid to this script, in basis points (100 to 10000)
+
+A payout list contains 1 to 8 entries. Each `reward` must be 100 to 10000 basis points, and the `reward` values must sum to exactly 10000. Each `scriptPayout` must be a unique P2PKH or P2SH script. EvoNodes are limited to a single payout entry until the `evo_shares` deployment activates.
+
+The owner reward (the masternode reward minus any operator reward) is split across the list in proportion to each entry's `reward`. A version 1 or 2 payload's single `scriptPayout` is treated as one entry with a `reward` of 10000.
+
+For a version 3 ProRegTx with an external collateral, the payout part of the signed `payloadSig` message is a comma-separated list of `<address>:<reward>` entries instead of a single address.
+
+### Collateral Share Structure
+
+*Added in Dash Core 24.0.0*
+
+A shared masternode registration lists its participants in the `shares` field of a version 3 ProRegTx. Each `collateralShare` entry has the following structure:
+
+| Bytes | Name | Data type | Description |
+|-------|------|-----------|-------------|
+| 8 | amount | int64_t | Collateral contribution in duffs. Must be at least 100 DASH.
+| 1-9 | refundScriptSize | compactSize uint | Size of the refund script
+| Variable | refundScript | Script | Immutable script (p2pkh/p2sh) that receives this share's principal when the masternode is dissolved
+| 1-9 | rewardScriptSize | compactSize uint | Size of the reward script
+| Variable | rewardScript | Script | Script (p2pkh/p2sh) that receives this share's portion of the owner reward. Zero length means use `refundScript`. Can be changed with a [ProUpShareTx](#proupsharetx).
+| 20 | keyIdOwner | CKeyID | Immutable share owner key hash. Signs this share's consent, dissolutions, and updates.
+
+### Shared Masternode Registration
+
+*Added in Dash Core 24.0.0*
+
+A version 3 ProRegTx with a non-zero `sharesCount` registers a shared masternode whose collateral is funded by 2 to 8 participants. Each share must be at least 100 DASH, and the share amounts must sum to exactly the required collateral. The collateral must be an output of the ProRegTx itself that pays the shared collateral script `04445348437551` (`0x04 "DSHC" OP_DROP OP_TRUE`). `KeyIdOwner` must be null and `payoutsCount` must be 0, since the share owner keys and share table replace them. Shared EvoNode registrations also require the `evo_shares` deployment to be active.
+
+Instead of `payloadSig` (which is left empty), each participant consents to the registration by signing it with their share's `keyIdOwner`. These signatures are stored in `joinSigs`. An unsigned shared registration is created using the [`protx shared_register_prepare` RPC](../api/remote-procedure-calls-evo.md#protx-shared-register-prepare). It is then signed with [`protx shared_sign`](../api/remote-procedure-calls-evo.md#protx-shared-sign) and submitted with [`protx shared_combine`](../api/remote-procedure-calls-evo.md#protx-shared-combine).
+
+The shared collateral script has no keys. Consensus rules protect it instead: once v24 activates, it can only be spent by a [ProDisTx](#prodistx).
+
+The owner reward of a shared masternode is split across the share table in proportion to each share's `amount`. Each portion is paid to the share's `rewardScript`, or to its `refundScript` if no reward script is set. Operator rewards are unchanged.
 
 ### NetInfo Structure
 
@@ -75,7 +136,13 @@ The `netInfo` field contains the following structure:
 | 1 | version | uint8 | NetInfo format version (currently 1)
 | Variable | purposeMap | Map | Map of purpose IDs to address lists. Each purpose can contain up to 4 address entries:<br>• Purpose 0 (CORE_P2P): Core network P2P addresses (required)<br>• Purpose 1 (PLATFORM_P2P): Platform P2P addresses (EvoNodes only)<br>• Purpose 2 (PLATFORM_HTTPS): Platform HTTPS/API addresses (EvoNodes only)<br><br>Each address entry contains:<br>• 1 byte type: 0x01 (Service/IP+port) or 0x02 (Domain+port)<br>• Variable address data: CService or DomainPort
 
-**Note**: The examples below show version 1 (legacy BLS) transactions. Version 3 transactions with extended addresses have a similar structure but replace the `ipAddress` and `port` fields with a `netInfo` structure, and platform-specific fields are included within the netInfo rather than as separate fields.
+The map is serialized as a compactSize count of purposes, then each purpose as a 1-byte purpose ID followed by a compactSize count of its address entries. A `CService` entry uses the ADDRv2 address encoding (network ID, compactSize address length, address bytes) followed by a 2-byte big-endian port. A `DomainPort` entry is a compactSize-prefixed domain name of 3 to 253 characters followed by a 2-byte big-endian port. *Since Dash Core 24.0.0*, purpose IDs must be known and appear in ascending order, otherwise the payload fails to deserialize.
+
+EvoNodes must provide both Platform purposes, and regular masternodes must not include them. Domain entries are only allowed for PLATFORM_HTTPS. Entries cannot be duplicated. Port 443 is allowed for PLATFORM_HTTPS entries. *Since Dash Core 24.0.0*, this includes IP address (`CService`) entries, not only domain entries.
+
+*Added in Dash Core 24.0.0*: The first entry of each purpose (its primary address) must be an IPv4 address, and the first Platform entries must use the same IPv4 address as the first CORE_P2P entry. This applies on mainnet and, by default, regtest, but not on testnet or devnets. On mainnet, the first entry of each purpose must also use its standard port: 9999 for CORE_P2P, 26656 for PLATFORM_P2P, and 443 for PLATFORM_HTTPS. Additional entries can use other addresses, ports, and network types (IPv6, Tor, I2P, CJDNS).
+
+**Note**: The examples below show version 1 (legacy BLS) transactions. Version 3 transactions replace the `ipAddress` and `port` fields with a `netInfo` structure and the `scriptPayout` field with the `payouts` list, and add the share fields described above. EvoNode Platform ports are included within the netInfo rather than as separate fields.
 
 The following annotated hexdump shows a ProRegTx transaction referencing an existing collateral. (Parts of the classical transaction section have been omitted.)
 
@@ -287,6 +354,8 @@ A ProUpServTx is only valid for masternodes in the registered masternodes subset
 
 A ProUpServTx is created and sent using the [`protx update_service` RPC](../api/remote-procedure-calls-evo.md#protx-update-service).
 
+**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, an EvoNode ProUpServTx must be version 3 and list its Platform addresses in `netInfo`. A ProUpServTx with a higher version raises the masternode's version, so a legacy BLS scheme masternode can move directly to version 2 or 3. A version 1 ProUpServTx is not valid for a masternode that already uses version 2 or later.
+
 The special transaction type used for ProUpServTx Transactions is 2 and the extra payload consists of the following data:
 
 | Bytes | Name | Data type |  Description |
@@ -300,13 +369,13 @@ The special transaction type used for ProUpServTx Transactions is 2 and the extr
 | 1-9 | scriptOperator<br>PayoutSize | compactSize uint | Size of the Operator Payee Script.
 | Variable | scriptOperator<br>Payout | Script | Operator Payee script (p2pkh/p2sh)
 | 32 | inputsHash | uint256 | Hash of all the outpoints of the transaction inputs
-| 0 or 20 | platformNodeID | byte[] | ***Version 2 only***<br>Dash Platform P2P node ID, derived from P2P public key. Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
+| 0 or 20 | platformNodeID | byte[] | ***Version 2 and later***<br>Dash Platform P2P node ID, derived from P2P public key. Only present for masternode type 1.
 | 0 or 2 | platformP2PPort | uint_16 | ***Version 2 only***<br>TCP port of Dash Platform peer-to-peer communication between nodes (network byte order). Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
 | 0 or 2 | platformHTTPPort | uint_16 | ***Version 2 only***<br>TCP port of Platform HTTP/API interface (network byte order). Only present for masternode type 1.<br>**Replaced by netInfo in version 3**
 | 1-9 | payloadSigSize |compactSize uint | Size of the Signature<br>**Note:** not present in BLS implementation
 | 96 | payloadSig | vector | BLS Signature of the hash of the ProUpServTx fields. Signed by the Operator.<br>**Note**:  serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2+ - basic BLS scheme
 
-**Note**: The examples below show version 1 (legacy BLS) transactions. Version 3 transactions with extended addresses have a similar structure but replace the `ipAddress` and `port` fields with a `netInfo` structure, and platform-specific fields are included within the netInfo rather than as separate fields.
+**Note**: The examples below show version 1 (legacy BLS) transactions. Version 3 transactions replace the `ipAddress` and `port` fields with a `netInfo` structure. EvoNode Platform ports are included within the netInfo rather than as separate fields, while `platformNodeID` remains a separate field.
 
 The following annotated hexdump shows a ProUpServTx transaction. (Parts of the
 classical transaction section have been omitted.)
@@ -430,20 +499,24 @@ The [masternode](../resources/glossary.md#masternode) Provider Update Registrar 
 
 A ProUpRegTx is created and sent using the [`protx update_registrar` RPC](../api/remote-procedure-calls-evo.md#protx-update-registrar).
 
+**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, a ProUpRegTx can use version 3, which replaces the single payout script with a [payout list](#payout-share-structure). A ProUpRegTx is not valid for a shared masternode; use a [ProUpShareTx](#proupsharetx) or [ProUpSharedRegTx](#proupsharedregtx) instead. A ProUpRegTx with a higher version raises the masternode's version. A version 1 ProUpRegTx is not valid for a masternode that already uses version 2 or later.
+
 The special transaction type is 3 and the extra payload consists of the following data:
 
 | Bytes | Name | Data type |  Description |
 | ---------- | ----------- | -------- | -------- |
-| 2 | version | uint_16 | Provider update registrar transaction version number.<br>**Version 1** - Legacy BLS scheme<br>**Version 2** - Basic BLS scheme (after v19 hard fork)<br>**Version 3** - Basic BLS scheme (after v24 hard fork activation)
+| 2 | version | uint_16 | Provider update registrar transaction version number.<br>**Version 1** - Legacy BLS scheme<br>**Version 2** - Basic BLS scheme (after v19 hard fork)<br>**Version 3** - Multi-party payouts with basic BLS scheme (after v24 hard fork activation)
 | 32 | proTXHash | uint256 | The hash of the initial ProRegTx
 | 2 | mode | uint_16 | Masternode mode. Default set to 0.
 | 48 | PubKeyOperator | CBLSPublicKey | The BLS public key used for operational related signing (network messages, ProTx updates).<br>**Note**: serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2+ - basic BLS scheme
 | 20 | KeyIdVoting | CKeyID | The public key hash used for voting.
-| 1-9 | scriptPayoutSize | compactSize uint | Size of the Payee Script.
-| Variable | scriptPayout | Script | Payee script (p2pkh/p2sh)
+| 1-9 | scriptPayoutSize | compactSize uint | ***Version < 3 only***<br>Size of the Payee Script.<br>**Replaced by payouts in version 3**
+| Variable | scriptPayout | Script | ***Version < 3 only***<br>Payee script (p2pkh/p2sh)<br>**Replaced by payouts in version 3**
+| 1 | payoutsCount | uint8_t | ***Version 3 and later***<br>Number of owner payout entries (1 to 8)
+| Variable | payouts | payoutShare[] | ***Version 3 and later***<br>Owner payout list. See [Payout Share Structure](#payout-share-structure) for details.
 | 32 | inputsHash | uint256 | Hash of all the outpoints of the transaction inputs
 | 1-9 | payloadSigSize |compactSize uint | Size of the Signature
-| Variable | payloadSig | vector | Signature of the hash of the ProTx fields. Signed with the key corresponding to the collateral outpoint in case the collateral is not part of the ProRegTx itself, empty otherwise.
+| Variable | payloadSig | vector | Signature of the hash of the ProUpRegTx fields (excluding the signature). Signed with the masternode's owner key (`KeyIdOwner`).
 
 The following annotated hexdump shows a ProUpRegTx transaction referencing an
 existing collateral. (Parts of the classical transaction section have been omitted.)
@@ -459,7 +532,7 @@ existing collateral. (Parts of the classical transaction section have been omitt
 
 e4 ......................................... Extra payload size (228)
 
-ProRegTx Payload
+ProUpRegTx Payload
 | 0100 ..................................... Version (1)
 |
 | ddaf13bf1b02de39711de911e646c63e
@@ -575,7 +648,9 @@ The [masternode](../resources/glossary.md#masternode) Operator Revocation (ProUp
 
 A ProUpRevTx is created and sent using the [`protx revoke` RPC](../api/remote-procedure-calls-evo.md#protx-revoke).
 
-The special transaction type used for ProUpServTx Transactions is 4 and the extra payload consists of the following data:
+**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, a ProUpRevTx can use version 3, and a revocation no longer resets the masternode's state version to version 1. The masternode keeps the higher of its current version and the ProUpRevTx version. A version 1 ProUpRevTx is not valid for a masternode that already uses version 2 or later. An operator can also revoke the key of a shared masternode.
+
+The special transaction type used for ProUpRevTx Transactions is 4 and the extra payload consists of the following data:
 
 | Bytes | Name | Data type |  Description |
 | ---------- | ----------- | -------- | -------- |
@@ -689,6 +764,79 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
 ```
 
 ```{eval-rst}
+.. _ref-txs-prodistx:
+```
+
+## ProDisTx
+
+*Added in Dash Core 24.0.0. Valid after the v24 hard fork activates.*
+
+The Provider Dissolution (ProDisTx) special transaction dissolves a [shared masternode](#shared-masternode-registration). It spends the shared collateral and refunds each participant's principal to the share's immutable `refundScript`. A ProDisTx is the only transaction that can spend a shared collateral output. Once it is mined, the masternode is removed from the masternode list.
+
+A unilateral ProDisTx is created, signed, and sent using the [`protx shared_dissolve` RPC](../api/remote-procedure-calls-evo.md#protx-shared-dissolve). An unsigned unanimous ProDisTx is created using the [`protx shared_dissolve_prepare` RPC](../api/remote-procedure-calls-evo.md#protx-shared-dissolve-prepare). It is then signed with [`protx shared_sign`](../api/remote-procedure-calls-evo.md#protx-shared-sign) and submitted with [`protx shared_combine`](../api/remote-procedure-calls-evo.md#protx-shared-combine).
+
+The special transaction type used for ProDisTx Transactions is 10 and the extra payload consists of the following data:
+
+| Bytes | Name | Data type |  Description |
+| ---------- | ----------- | -------- | -------- |
+| 2 | version | uint_16 | ProDisTx version number. Currently set to 1.
+| 32 | proTXHash | uint256 | The hash of the initial ProRegTx of the shared masternode
+| 2 | actorIndex | uint_16 | Index in the share table of the participant initiating the dissolution
+| 1 | sigCount | uint8_t | Number of signatures. Selects the dissolution mode:<br>`1` - Unilateral, signed by the share at `actorIndex`<br>`sharesCount` - Unanimous, signed by every share
+| 65 * sigCount | sigs | byte[65][] | Compact ECDSA signatures by the share owner keys, in share order. Each signature is serialized without a length prefix.
+
+A ProDisTx has a single input, the collateral outpoint, and outputs that refund each participant's `amount` to their `refundScript` in share order. A unilateral dissolution made within `earlyPeriodBlocks` of registration must also pay `earlyPenalty` to the other participants, split in proportion to their shares. A unanimous dissolution, or a unilateral one after the early period, has no penalty. The transaction fee is taken from the initiating participant's share and is limited to 0.01 DASH.
+
+```{eval-rst}
+.. _ref-txs-proupsharetx:
+```
+
+## ProUpShareTx
+
+*Added in Dash Core 24.0.0. Valid after the v24 hard fork activates.*
+
+The Provider Update Share (ProUpShareTx) special transaction lets one participant of a [shared masternode](#shared-masternode-registration) change the `rewardScript` of their share. All other share fields are immutable.
+
+A ProUpShareTx is created and sent using the [`protx shared_update_share` RPC](../api/remote-procedure-calls-evo.md#protx-shared-update-share).
+
+The special transaction type used for ProUpShareTx Transactions is 11 and the extra payload consists of the following data:
+
+| Bytes | Name | Data type |  Description |
+| ---------- | ----------- | -------- | -------- |
+| 2 | version | uint_16 | ProUpShareTx version number. Currently set to 1.
+| 32 | proTXHash | uint256 | The hash of the initial ProRegTx of the shared masternode
+| 2 | shareIndex | uint_16 | Index in the share table of the share being updated
+| 1-9 | rewardScriptSize | compactSize uint | Size of the new reward script
+| Variable | rewardScript | Script | New reward script (p2pkh/p2sh). An empty script is not valid. To pay rewards to the share's refund script again, set it explicitly.
+| 32 | inputsHash | uint256 | Hash of all the outpoints of the transaction inputs
+| 1-9 | payloadSigSize | compactSize uint | Size of the Signature. Must be 65.
+| 65 | payloadSig | vector | Compact ECDSA signature of the hash of the ProUpShareTx fields (excluding the signature). Signed by the `keyIdOwner` of the share at `shareIndex`.
+
+```{eval-rst}
+.. _ref-txs-proupsharedregtx:
+```
+
+## ProUpSharedRegTx
+
+*Added in Dash Core 24.0.0. Valid after the v24 hard fork activates.*
+
+The Provider Update Shared Registrar (ProUpSharedRegTx) special transaction updates the operator key and voting key of a [shared masternode](#shared-masternode-registration). It replaces the [ProUpRegTx](#proupregtx), which is invalid for shared masternodes, and requires a signature from every share owner. Changing the operator key has the same effect as in a ProUpRegTx: the masternode's service fields are reset and it is PoSe-banned until a new [ProUpServTx](#proupservtx) is mined. The operator reward cannot be changed.
+
+An unsigned ProUpSharedRegTx is created using the [`protx shared_update_registrar_prepare` RPC](../api/remote-procedure-calls-evo.md#protx-shared-update-registrar-prepare). It is then signed with [`protx shared_sign`](../api/remote-procedure-calls-evo.md#protx-shared-sign) and submitted with [`protx shared_combine`](../api/remote-procedure-calls-evo.md#protx-shared-combine).
+
+The special transaction type used for ProUpSharedRegTx Transactions is 12 and the extra payload consists of the following data:
+
+| Bytes | Name | Data type |  Description |
+| ---------- | ----------- | -------- | -------- |
+| 2 | version | uint_16 | ProUpSharedRegTx version number. Currently set to 1.
+| 32 | proTXHash | uint256 | The hash of the initial ProRegTx of the shared masternode
+| 48 | PubKeyOperator | CBLSPublicKey | The BLS public key used for operational related signing. Always serialized using the basic BLS scheme. Legacy scheme keys are invalid.
+| 20 | KeyIdVoting | CKeyID | The public key hash used for voting
+| 32 | inputsHash | uint256 | Hash of all the outpoints of the transaction inputs
+| 1 | sigCount | uint8_t | Number of signatures. Must equal the masternode's number of shares.
+| 65 * sigCount | sigs | byte[65][] | Compact ECDSA signatures of the hash of the ProUpSharedRegTx fields (excluding `sigCount` and `sigs`), one by each share's `keyIdOwner`, in share order. Each signature is serialized without a length prefix.
+
+```{eval-rst}
 .. _ref-txs-cbtx:
 ```
 
@@ -702,13 +850,14 @@ The special transaction type used for CbTx Transactions is 5 and the extra paylo
 
 | Bytes | Name | Data type |  Description |
 | ---------- | ----------- | -------- | -------- |
-| 2 | version | uint_16 | CbTx version number. Currently set to 2.
+| 2 | version | uint_16 | CbTx version number. Currently set to 3. Set to 4 once the `v24` hard fork activates.
 | 4 | height | uint32_t | Height of the block
 | 32 | merkleRootMNList | uint256 | Merkle root of the masternode list
 | 32 | merkleRootQuorums | uint256 | *Added by CbTx version 2 in v0.14.0*<br><br>Merkle root of currently active LLMQs
 | 1-9 | bestCLHeightDiff | compactSize uint | ***Added by CbTx version 3 in v20.0.0***<br><br>Number of blocks between the current block and the last known block with a ChainLock
 | 96 | bestCLSignature | CBLSSignature | ***Added by CbTx version 3 in Dash Core 20.0.0***<br>Best ChainLock signature known by the miner
 | 8 | creditPoolBalance | int64_t | ***Added by CbTx version 3 in Dash Core v20.0.0***<br>Balance in the Platform credit pool
+| 32 | merkleRootAssetUnlocks | uint256 | ***Added by CbTx version 4 in Dash Core 24.0.0***<br>Merkle root of the instance hashes of the block's version 2 [asset unlock transactions](#assetunlocktx), in block order. Set to all zeros if the block contains none. Since the TXIDs of version 2 asset unlocks exclude their quorum signing info, this field commits the block to that data.
 
 Version History
 
@@ -717,6 +866,7 @@ Version History
 | 1 | 70213 | 0.13.0 | Enabled by [DIP3](https://github.com/dashpay/dips/blob/master/dip-0003.md) activation
 | 2 | 70214 | 0.14.0 | Enabled by [DIP8](https://github.com/dashpay/dips/blob/master/dip-0008.md) activation
 | 3 | 70230 | 20.0.0 | Enabled by [DIP29](https://github.com/dashpay/dips/blob/master/dip-0029.md) activation
+| 4 | 70242 | 24.0.0 | Required once the `v24` hard fork activates (and not valid before it)
 
 The following annotated hexdump shows a CbTx transaction (v3).
 
@@ -1110,9 +1260,13 @@ The special transaction type used for asset lock transactions is 8 and the extra
 
 | Bytes | Name | Data type | Description |
 |-|-|-|-|
-| 1 | version | uint8_t | Asset lock payload version number |
-| 1 | count | uint8_t | Number of accounts funded by this asset lock |
-| Variable | credit_outputs | vector<TxOut> | The hash of the public key used to claim credits on Dash Platform, as well as the amount of Dash in duffs transferred into credits for this hash |
+| 1 | version | uint8_t | Asset lock payload version number (1 or 2)<br><br>***Version 2 added in Dash Core 24.0.0***. Version 2 is only valid once the `v24` hard fork activates. A version 2 payload signals that Platform assigns each credit output to the matching Identity automatically ([DIP27](https://github.com/dashpay/dips/blob/master/dip-0027.md)). Dash Core uses it for asset locks that pay [DIP18](https://github.com/dashpay/dips/blob/master/dip-0018.md) Platform addresses. |
+| 1-9 | count | compactSize uint | Number of accounts funded by this asset lock |
+| Variable | credit_outputs | vector<TxOut> | The script used to claim credits on Dash Platform, as well as the amount of Dash in duffs transferred into credits for this script. Version 1 payloads require P2PKH scripts. Version 2 payloads allow P2PKH or P2SH scripts. |
+
+:::{note}
+Asset lock transactions with more than 100 inputs or larger than 20480 bytes have been non-standard since Dash Core 23.1.4 because Dash Platform cannot process them. Asset locks with a version 2 payload also remain non-standard in Dash Core 24.0.0 until Platform supports them. These transactions are not accepted into the mempool or relayed by default, but they remain valid in a block (version 2 payloads only after `v24` activates).
+:::
 
 The following annotated hexdump shows an asset lock transaction.
 
@@ -1270,12 +1424,16 @@ The special transaction type used for asset unlock transactions is 9 and the ext
 
 | Bytes | Name | Data type | Description |
 |-|-|-|-|
-| 1 | version | uint8_t | Asset unlock payload version number |
+| 1 | version | uint8_t | Asset unlock payload version number (1 or 2)<br><br>***Version 2 added in Dash Core 24.0.0***. Version 2 is only valid once the `v24` hard fork activates. See [Version 2 asset unlocks](#version-2-asset-unlocks) below. |
 | 8 | index | uint64_t | The index of the transaction |
 | 4 | fee | uint32_t | The transaction fee in duffs that should be awarded to the miner |
 | 4 | requestedHeight | uint32_t | The payment chain block height known by platform at the moment of the withdrawal signing |
 | 32 | quorumHash | uint256 | Hash of the quorum signing this message |
 | 96 | quorumSig | CBLSSig | BLS signature for the entire transaction by a public key associated with the quorum referenced by `quorumHash` |
+
+The quorum signs a message hash and request ID. The message hash is the SHA256(SHA256()) hash of the full transaction serialized with `quorumSig` set to all zeros, so it commits to `requestedHeight` and `quorumHash`. The request ID is the SHA256(SHA256()) hash of the string `plwdtx` (serialized with its compactSize length prefix) followed by the 8-byte `index`.
+
+Once `v24` activates, the asset unlock limit is relative to the credit pool balance. Asset unlocks may not leave the credit pool below its balance one window earlier (576 blocks on mainnet and testnet) minus an allowed drop of 20% of that balance. The allowed drop is never less than 2000 DASH.
 
 The following annotated hexdump shows an asset unlock transaction.
 
@@ -1360,3 +1518,21 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
   }
 }
 ```
+
+### Version 2 Asset Unlocks
+
+*Added in Dash Core 24.0.0*
+
+Once the `v24` hard fork activates, version 2 asset unlock transactions become valid and version 1 remains valid. Dash Platform continues to create version 1 withdrawals until a future Platform release adopts version 2.
+
+A version 2 payload is serialized exactly like version 1, but the transaction's [TXID](../resources/glossary.md#transaction-identifiers) is calculated differently:
+
+* **TXID:** the SHA256(SHA256()) hash of the transaction serialized with its last 132 bytes (the quorum signing info: `requestedHeight`, `quorumHash`, and `quorumSig`) set to zero. Platform changes only these fields when it re-signs an expired withdrawal, so every re-signed instance of a withdrawal has the same TXID. Spends of an unmined withdrawal's outputs therefore remain valid across re-signs.
+
+* **Instance hash:** the SHA256(SHA256()) hash of the full serialized transaction. It distinguishes re-signed instances of the same withdrawal. It is reported as `instanceHash` by the transaction-decoding RPCs, and the coinbase transaction commits to it in the [CbTx](#cbtx) `merkleRootAssetUnlocks` field (CbTx version 4).
+
+Version 2 asset unlocks are relayed by instance hash using the `MSG_ASSET_UNLOCK` (34) inventory type with peers using protocol version 70242 or higher. Unlike version 1, they can be [InstantSend](../resources/glossary.md#instantsend)-locked. The lock uses an outpoint made of the request ID and index 0 in place of a transaction input.
+
+:::{note}
+Block merkle roots use the TXID. Software that hashes raw transaction bytes to identify transactions (e.g., from P2P messages, ZMQ, or `getblocktemplate` `data`) must apply the same zeroing to get the TXID of a version 2 asset unlock.
+:::
