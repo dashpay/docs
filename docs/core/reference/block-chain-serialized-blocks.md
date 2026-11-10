@@ -73,7 +73,7 @@ The following table details how the block subsidy and fees are allocated between
 :::{note}
 Once the Dash Core 24.0.0 `v24` hard fork activates, the masternode owner reward may be split across multiple coinbase outputs. A masternode can list several payout scripts, each receiving a share of the owner reward in basis points, and a shared masternode splits the owner reward among its collateral participants based on their contributions. The operator reward is unchanged.
 
-After activation, coinbase payments are also matched by multiplicity. Each expected masternode payment, and each superblock payment, must be paid by a separate coinbase output, even when two expected payments of the same kind have the same script and amount. Blocks that merge or deduplicate those outputs are invalid (`bad-cb-payee` / `bad-cb-amount`).
+After activation, coinbase payments are also matched by multiplicity. Each expected masternode payment, and each superblock payment, must be paid by a separate coinbase output, even when two expected payments of the same kind have the same script and amount. Blocks that merge or deduplicate those outputs are invalid.
 :::
 
 <img src="https://files.readme.io/fa5bfbe-mining-banner-1.svg" alt="Mining" style="width:50%;text-align:center;"/>
