@@ -9,6 +9,10 @@
 In order to send a [transaction](../resources/glossary.md#transaction) to a [peer](../resources/glossary.md#peer), an [`inv` message](../reference/p2p-network-data-messages.md#inv) is sent. If a [`getdata` message](../reference/p2p-network-data-messages.md#getdata) is received in reply, the transaction is sent using a [`tx` message](../reference/p2p-network-data-messages.md#tx). If it is a valid transaction, the peer receiving the transaction also forwards the transaction to its peers.
 
 :::{note}
+As of Dash Core 24.0.0, version 2 asset unlock transactions are announced to peers with protocol version 70242 or higher using the `MSG_ASSET_UNLOCK` [inventory](../reference/p2p-network-data-messages.md#inv) type, which identifies the transaction by its instance hash instead of its TXID. This allows a re-signed asset unlock to propagate even if a transaction with the same TXID is already in the mempool.
+:::
+
+:::{note}
 Dash Core 18.1.0 backported changes from Bitcoin to support block-only relay connections (specific connections that do not relay transaction information). This change was made to improve network topology and reduce information leaked by transaction relay. See the [Bitcoin pull request](https://github.com/bitcoin/bitcoin/pull/15759) for additional details.
 :::
 
