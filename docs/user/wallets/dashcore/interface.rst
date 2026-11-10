@@ -169,6 +169,22 @@ registered on the Dash network. You can filter the data by entering a
 value in the Filter List field, or display only masternodes with owner
 keys stored in the loaded wallet.
 
+The type filter can show all masternodes, or only regular masternodes,
+evonodes or shared masternodes. Click **Register Masternode…** to register a
+new masternode or evonode using the loaded wallet, or click **Shared
+Masternode…** to create a masternode whose collateral is pooled by multiple
+parties, or to continue a saved session. See :ref:`dashcore-mn-wizard` for
+details on registering a masternode from this tab, and
+:ref:`masternode-maintenance` for details on maintaining a masternode.
+
+Right-click a masternode to copy its ProTx hash or collateral outpoint, filter
+the list by one of its addresses, or maintain a masternode controlled by the
+loaded wallet. Maintenance actions include **Update Service…**, **Update
+Registrar…** and **Revoke…**. Shared masternodes also offer **Change Reward
+Address…**, **Rotate Keys…**, **Dissolve…** and **Create Standby
+Dissolution…**. Actions that the loaded wallet cannot perform are disabled,
+and their tooltips explain why.
+
 .. figure:: img/masternodes.png
 
    The Masternodes tab
@@ -179,6 +195,13 @@ The Governance Tab
 The Governance tab shows an overview of the governance proposals currently
 active on the Dash network. You can filter the data by entering a
 value in the Filter List field.
+
+The tab also shows an estimate of the voting deadline for the current
+superblock cycle. When a wallet is loaded, the **My Votes** column summarizes
+the current votes on each proposal from masternodes whose voting keys are in the
+wallet, or shows **No voting keys**. Select a proposal and click **Votes…** to
+view each masternode's current vote and to vote with selected masternodes. See
+:ref:`proposal-vote-core-qt` for details.
 
 .. figure:: img/governance.png
 
@@ -349,17 +372,6 @@ Enable coin control features
 Keep custom change address
   Whether to keep the specified custom change address or not.
   
-Show Masternodes tab
-  Enabling this option causes Dash Core to display an additional
-  Masternodes tab to the right of the Transactions tab. This option
-  requires you to restart the Dash Core app. The Masternodes tab can be
-  used to view details of masternodes registered on the Dash blockchain.
-
-Show Governance tab
-  Enabling this option causes Dash Core to display an additional Governance tab.
-  This option requires you to restart the Dash Core app. The Governance tab can
-  be used to view details of governance proposals active on the Dash network.
-
 Spend unconfirmed change
   When this option is enabled, the Dash Core wallet permits you to
   immediately spend change from previous transactions that has been
@@ -488,6 +500,20 @@ window.
 User interface language
   Select your preferred language from this drop-down menu. Changing the
   language requires you to restart the Dash Core app.
+
+Show Masternodes tab
+  Enabling this option causes Dash Core to display an additional
+  Masternodes tab to the right of the Transactions tab. The Masternodes tab can
+  be used to view details of masternodes registered on the Dash blockchain.
+
+Show Governance tab
+  Enabling this option causes Dash Core to display an additional Governance tab.
+  The Governance tab can be used to view details of governance proposals active
+  on the Dash network.
+
+Show governance clock
+  Enabling this option shows the governance clock in the status bar. This option
+  is only available when the Governance tab is shown.
 
 Unit to show amounts in
   This allows you to change the default unit of currency in Dash Core from
