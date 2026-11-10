@@ -26,7 +26,7 @@ The following table details the data flow of P2P messages exchanged during initi
 | **Syncing Node Message** | **Direction**  | **Masternode Response**   | **Description** |
 | --- | :---: | --- | --- |
 | **1. Sporks** |   |  |  |
-| [`getsporks` message](../reference/p2p-network-control-messages.md#getsporks)                            | → |                           | **Removed in Dash Core 24.0.0**<br>Syncing node requests sporks. Dash Core 24.0.0 no longer requests sporks during sync. Instead, on test networks (testnet, devnets, and regtest), nodes announce their active sporks to each peer with [`inv` messages](../reference/p2p-network-data-messages.md#inv) once the connection handshake completes. Dash Core 24.0.0 still responds to `getsporks` messages from older nodes.
+| [`getsporks` message](../reference/p2p-network-control-messages.md#getsporks)                            | → |                           | **No longer sent during sync as of Dash Core 24.0.0**<br>Syncing node requests sporks. Dash Core 24.0.0 no longer requests sporks during sync. Instead, on test networks (testnet, devnets, and regtest), nodes announce their active sporks to each peer with [`inv` messages](../reference/p2p-network-data-messages.md#inv) once the connection handshake completes. Mainnet spork values are hardcoded, so no announcement is needed there. Dash Core 24.0.0 still responds to `getsporks` messages from older nodes.
 |                                                | ← | [`spork` message](../reference/p2p-network-control-messages.md#spork)(s)        |
 | **2. Mempool** |   |  |  |
 | [`mempool` message](../reference/p2p-network-data-messages.md#mempool)                            | → |                           | Syncing node requests mempool entries

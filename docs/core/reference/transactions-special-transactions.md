@@ -45,7 +45,9 @@ The [masternode](../resources/glossary.md#masternode) Registration (ProRegTx) sp
 
 A ProRegTx is created and sent using the [`protx` RPC](../api/remote-procedure-calls-evo.md#protx). The ProRegTx must either include an [output](../resources/glossary.md#output) with 1000 DASH (`protx register`) or refer to an existing unspent output holding 1000 DASH (`protx fund_register`). If the 1000 DASH is an output of the ProRegTx, the collateralOutpoint hash field should be null.
 
-**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, a version 3 ProRegTx replaces the single owner payout script with a list of up to 8 owner payouts ([multi-party payouts](https://github.com/dashpay/dips/blob/master/dip-0026.md)). It can also register a shared masternode whose collateral is funded by 2 to 8 participants (see [Shared Masternode Registration](#shared-masternode-registration)). New version 1 (legacy BLS scheme) registrations are rejected after v24 activation.
+**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, a version 3 ProRegTx replaces the single owner payout script with a list of up to 8 owner payouts ([multi-party payouts](https://github.com/dashpay/dips/blob/master/dip-0026.md)). It can also register a shared masternode whose collateral is funded by 2 to 8 participants (see [Shared Masternode Registration](#shared-masternode-registration)). New version 1 (legacy BLS scheme) registrations are rejected after v24 activation. After activation, a ProRegTx is also rejected (`bad-protx-dup-key`) if another masternode already holds the same operator key under either BLS scheme encoding.
+
+**Note**: The version 3 wire format differs from the version 3 format defined in Dash Core 23.0.0. In Dash Core 23.0.0, version 3 only replaced the `ipAddress` and `port` fields with `netInfo` and kept the single `scriptPayout`. In Dash Core 24.0.0, version 3 also replaces `scriptPayout` with the `payouts` list and adds the `shares`, `joinSigs`, `earlyPeriodBlocks`, and `earlyPenalty` fields. Software that parses version 3 provider transactions using the Dash Core 23.0.0 format must be updated.
 
 The special transaction type is 1 and the extra payload consists of the following data:
 
@@ -81,6 +83,8 @@ The special transaction type is 1 and the extra payload consists of the followin
 ### Payout Share Structure
 
 *Added in Dash Core 24.0.0 as described by [DIP26](https://github.com/dashpay/dips/blob/master/dip-0026.md)*
+
+**Note**: The Dash Core 24.0.0 implementation differs from the current DIP26 draft (for example, in the payload version, the count encoding, the entry limits, and the signed message format). The tables on this page describe what Dash Core 24.0.0 implements.
 
 Version 3 ProRegTx and [ProUpRegTx](#proupregtx) payloads carry the owner payout as a list of `payoutShare` entries. Each entry has the following structure:
 
@@ -132,7 +136,7 @@ A version 3 ProRegTx with a non-zero `sharesCount` registers a shared masternode
 * `earlyPeriodBlocks` is at most 420480, and `earlyPenalty` is at least 0, less than the smallest share amount, and 0 when `earlyPeriodBlocks` is 0.
 * `payloadSig` is empty, and each `joinSigs` entry is a valid signature by the corresponding share's `keyIdOwner` over the consent hash described below.
 
-The shared collateral script has no keys and can be spent with an empty `scriptSig` at the script layer. Consensus rules protect it instead. After v24 activation, an output paying this script is valid only as the collateral of a valid shared registration, and it can only be spent by a [ProDisTx](#prodistx).
+The shared collateral script has no keys and can be spent with an empty `scriptSig` at the script layer. Consensus rules protect it instead. After v24 activation, an output paying this script is valid only as the collateral of a valid shared registration, and it can only be spent by a [ProDisTx](#prodistx). Outputs paying this script that were mined before v24 activation belong to no masternode and become permanently unspendable.
 
 Each `joinSigs` entry is a 65-byte compact (recoverable) ECDSA signature. It must be canonical: the recovery header byte must be 27 to 34 and S must be low. The signed consent hash is the double-SHA256 of the following fields:
 
@@ -151,11 +155,11 @@ The `netInfo` field contains the following structure:
 
 The map is serialized as a compactSize count of purposes, then each purpose as a 1-byte purpose ID followed by a compactSize count of its address entries. A `CService` entry uses the ADDRv2 address encoding (network ID, compactSize address length, address bytes) followed by a 2-byte big-endian port. A `DomainPort` entry is a compactSize-prefixed domain name of 3 to 253 characters followed by a 2-byte big-endian port. *Since Dash Core 24.0.0*, purpose IDs must be known and appear in ascending order, otherwise the payload fails to deserialize.
 
-EvoNodes must provide both Platform purposes, and regular masternodes must not include them. Domain entries are only allowed for PLATFORM_HTTPS. Entries cannot be duplicated, and port 443 is allowed for PLATFORM_HTTPS entries.
+EvoNodes must provide both Platform purposes, and regular masternodes must not include them. Domain entries are only allowed for PLATFORM_HTTPS. Entries cannot be duplicated. Port 443 is allowed for PLATFORM_HTTPS entries. *Since Dash Core 24.0.0*, this includes IP address (`CService`) entries, not only domain entries.
 
 *Added in Dash Core 24.0.0*: The first entry of each purpose (its primary address) must also meet the following requirements. Additional entries can use other addresses, ports, and network types (IPv6, Tor, I2P, CJDNS).
 
-* The first CORE_P2P entry must be an IPv4 address (`bad-protx-netinfo-addr-type`). The first PLATFORM_P2P and PLATFORM_HTTPS entries must use that same IPv4 address (`bad-protx-netinfo-addr`). This applies until masternodes are allowed to operate without IPv4, which is not scheduled on mainnet. Testnet and devnets already allow it.
+* The first CORE_P2P entry must be an IPv4 address (`bad-protx-netinfo-addr-type`). The first PLATFORM_P2P and PLATFORM_HTTPS entries must also be IPv4 addresses (`bad-protx-netinfo-addr-type`), so a domain cannot be the first PLATFORM_HTTPS entry. They must use the same IPv4 address as the first CORE_P2P entry (`bad-protx-netinfo-addr`). Mainnet and regtest (by default) enforce this rule; testnet and devnets do not. On regtest, it can be lifted with `-testactivationheight=ipv4_optional@<height>`.
 * On mainnet, the first entry must use the purpose's standard port: 9999 for CORE_P2P, 26656 for PLATFORM_P2P, and 443 for PLATFORM_HTTPS (`bad-protx-netinfo-port`).
 
 After the v24 hard fork activates, an EvoNode [ProUpServTx](#proupservtx) must be version 3 and list its Platform addresses in `netInfo`. Any other transaction that would raise an EvoNode with addresses to version 3 is rejected (`bad-protx-netinfo-version`).
@@ -372,7 +376,7 @@ A ProUpServTx is only valid for masternodes in the registered masternodes subset
 
 A ProUpServTx is created and sent using the [`protx update_service` RPC](../api/remote-procedure-calls-evo.md#protx-update-service).
 
-**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, an EvoNode ProUpServTx must be version 3 (`bad-protx-version-disallowed`). A ProUpServTx with a higher version raises the masternode's state version. A legacy BLS scheme masternode can move directly to version 2 or 3, which re-encodes its operator key to the basic scheme in place. A version 1 ProUpServTx is rejected for a masternode that already uses version 2 or later (`bad-protx-version-downgrade`).
+**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, an EvoNode ProUpServTx must be version 3 (`bad-protx-version-disallowed`). A ProUpServTx with a higher version raises the masternode's state version. A legacy BLS scheme masternode can move directly to version 2 or 3, which re-encodes its operator key to the basic scheme in place. A version 1 ProUpServTx is rejected for a masternode that already uses version 2 or later (`bad-protx-version-downgrade`). A legacy-to-basic scheme migration is rejected (`bad-protx-dup-key`) if another masternode already holds the same operator key under either BLS scheme encoding.
 
 The special transaction type used for ProUpServTx Transactions is 2 and the extra payload consists of the following data:
 
@@ -393,7 +397,7 @@ The special transaction type used for ProUpServTx Transactions is 2 and the extr
 | 1-9 | payloadSigSize |compactSize uint | Size of the Signature<br>**Note:** not present in BLS implementation
 | 96 | payloadSig | vector | BLS Signature of the hash of the ProUpServTx fields. Signed by the Operator.<br>**Note**:  serialization varies based on `version`:<br> - Version 1 - legacy BLS scheme<br> - Version 2+ - basic BLS scheme
 
-**Note**: The examples below show version 1 (legacy BLS) transactions. Version 3 transactions with extended addresses have a similar structure but replace the `ipAddress` and `port` fields with a `netInfo` structure, and platform-specific fields are included within the netInfo rather than as separate fields.
+**Note**: The examples below show version 1 (legacy BLS) transactions. Version 3 transactions replace the `ipAddress` and `port` fields with a `netInfo` structure. EvoNode Platform ports are included within the netInfo rather than as separate fields, while `platformNodeID` remains a separate field.
 
 The following annotated hexdump shows a ProUpServTx transaction. (Parts of the
 classical transaction section have been omitted.)
@@ -517,7 +521,7 @@ The [masternode](../resources/glossary.md#masternode) Provider Update Registrar 
 
 A ProUpRegTx is created and sent using the [`protx update_registrar` RPC](../api/remote-procedure-calls-evo.md#protx-update-registrar).
 
-**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, a ProUpRegTx can use version 3, which replaces the single payout script with a [payout list](#payout-share-structure). A ProUpRegTx is invalid for a shared masternode (`bad-protx-shared-mn`); use a [ProUpShareTx](#proupsharetx) or [ProUpSharedRegTx](#proupsharedregtx) instead. A ProUpRegTx with a higher version raises the masternode's state version, and a legacy BLS scheme masternode can migrate to the basic scheme in place without changing its operator key. An EvoNode that still uses version 2 addresses must be upgraded with a version 3 [ProUpServTx](#proupservtx) before a version 3 ProUpRegTx that keeps its operator key is valid.
+**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, a ProUpRegTx can use version 3, which replaces the single payout script with a [payout list](#payout-share-structure). A ProUpRegTx is invalid for a shared masternode (`bad-protx-shared-mn`); use a [ProUpShareTx](#proupsharetx) or [ProUpSharedRegTx](#proupsharedregtx) instead. A ProUpRegTx with a higher version raises the masternode's state version, and a legacy BLS scheme masternode can migrate to the basic scheme in place without changing its operator key. A version 1 ProUpRegTx is rejected for a masternode that already uses version 2 or later (`bad-protx-version-downgrade`). A ProUpRegTx that changes the operator key or migrates the BLS scheme is rejected (`bad-protx-dup-key`) if another masternode already holds the target operator key under either BLS scheme encoding. An EvoNode that still uses version 2 addresses must be upgraded with a version 3 [ProUpServTx](#proupservtx) before a version 3 ProUpRegTx that keeps its operator key is valid.
 
 The special transaction type is 3 and the extra payload consists of the following data:
 
@@ -534,7 +538,7 @@ The special transaction type is 3 and the extra payload consists of the followin
 | Variable | payouts | payoutShare[] | ***Version 3 and later***<br>Owner payout list. See [Payout Share Structure](#payout-share-structure) for details.
 | 32 | inputsHash | uint256 | Hash of all the outpoints of the transaction inputs
 | 1-9 | payloadSigSize |compactSize uint | Size of the Signature
-| Variable | payloadSig | vector | Signature of the hash of the ProTx fields. Signed with the key corresponding to the collateral outpoint in case the collateral is not part of the ProRegTx itself, empty otherwise.
+| Variable | payloadSig | vector | Signature of the hash of the ProUpRegTx fields (excluding the signature). Signed with the masternode's owner key (`KeyIdOwner`).
 
 The following annotated hexdump shows a ProUpRegTx transaction referencing an
 existing collateral. (Parts of the classical transaction section have been omitted.)
@@ -550,7 +554,7 @@ existing collateral. (Parts of the classical transaction section have been omitt
 
 e4 ......................................... Extra payload size (228)
 
-ProRegTx Payload
+ProUpRegTx Payload
 | 0100 ..................................... Version (1)
 |
 | ddaf13bf1b02de39711de911e646c63e
@@ -666,9 +670,9 @@ The [masternode](../resources/glossary.md#masternode) Operator Revocation (ProUp
 
 A ProUpRevTx is created and sent using the [`protx revoke` RPC](../api/remote-procedure-calls-evo.md#protx-revoke).
 
-**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, a ProUpRevTx can use version 3, and a revocation no longer resets the masternode's state version to version 1. The masternode keeps the higher of its current version and the ProUpRevTx version. An operator can also revoke the key of a shared masternode.
+**Updated in Dash Core 24.0.0**: After the v24 hard fork activates, a ProUpRevTx can use version 3, and a revocation no longer resets the masternode's state version to version 1. The masternode keeps the higher of its current version and the ProUpRevTx version. A version 1 ProUpRevTx is rejected for a masternode that already uses version 2 or later (`bad-protx-version-downgrade`). An operator can also revoke the key of a shared masternode.
 
-The special transaction type used for ProUpServTx Transactions is 4 and the extra payload consists of the following data:
+The special transaction type used for ProUpRevTx Transactions is 4 and the extra payload consists of the following data:
 
 | Bytes | Name | Data type |  Description |
 | ---------- | ----------- | -------- | -------- |
@@ -1295,12 +1299,12 @@ The special transaction type used for asset lock transactions is 8 and the extra
 
 | Bytes | Name | Data type | Description |
 |-|-|-|-|
-| 1 | version | uint8_t | Asset lock payload version number (1 or 2)<br><br>***Version 2 added in Dash Core 24.0.0***. Version 2 is only valid once the `v24` hard fork activates. It is used for asset locks that fund [DIP18](https://github.com/dashpay/dips/blob/master/dip-0018.md) Platform addresses. |
-| 1 | count | uint8_t | Number of accounts funded by this asset lock |
+| 1 | version | uint8_t | Asset lock payload version number (1 or 2)<br><br>***Version 2 added in Dash Core 24.0.0***. Version 2 is only valid once the `v24` hard fork activates. A version 2 payload signals that Platform assigns each credit output to the matching Identity automatically ([DIP27](https://github.com/dashpay/dips/blob/master/dip-0027.md)). Dash Core uses it for asset locks that pay [DIP18](https://github.com/dashpay/dips/blob/master/dip-0018.md) Platform addresses. |
+| 1-9 | count | compactSize uint | Number of accounts funded by this asset lock |
 | Variable | credit_outputs | vector<TxOut> | The script used to claim credits on Dash Platform, as well as the amount of Dash in duffs transferred into credits for this script. Version 1 payloads require P2PKH scripts. Version 2 payloads allow P2PKH or P2SH scripts. |
 
 :::{note}
-Asset lock transactions with more than 100 inputs or larger than 20480 bytes have been non-standard since Dash Core 23.1.4 (`assetlocktx-too-many-inputs`, `assetlocktx-too-big`) because Dash Platform cannot process them. Dash Core 24.0.0 also treats asset locks with a version 2 payload as non-standard (`assetlocktx-version-2`) until Platform supports them. These transactions are not accepted into the mempool or relayed by default, but they remain valid in a block (version 2 payloads only after `v24` activates).
+Asset lock transactions with more than 100 inputs or larger than 20480 bytes have been non-standard since Dash Core 23.1.4 (`assetlocktx-too-many-inputs`, `assetlocktx-too-big`) because Dash Platform cannot process them. Asset locks with a version 2 payload also remain non-standard in Dash Core 24.0.0 (`assetlocktx-version-2`) until Platform supports them. These transactions are not accepted into the mempool or relayed by default, but they remain valid in a block (version 2 payloads only after `v24` activates).
 :::
 
 The following annotated hexdump shows an asset lock transaction.
