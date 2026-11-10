@@ -14,12 +14,18 @@ The following network messages enable the creation of long living masternode quo
 
 With the exception of the [`qfcommit` message](../reference/p2p-network-quorum-messages.md#qfcommit), these messages are for intra-quorum communication only and are not propagated on the Dash network.
 
+:::{note}
+As of Dash Core 23.1.7, the [`qcontrib`](#qcontrib), [`qcomplaint`](#qcomplaint), [`qjustify`](#qjustify), and [`qpcommit`](#qpcommit) messages are only accepted from peers that have authenticated as a masternode via the [`mnauth` message](../reference/p2p-network-masternode-messages.md#mnauth), and messages that exceed the size or structure limits derived from the quorum parameters are rejected. As of Dash Core 24.0.0, these messages are also only accepted if the node requested them from the sending peer via a [`getdata` message](../reference/p2p-network-data-messages.md#getdata); unrequested messages are ignored and the sending peer is treated as misbehaving.
+
+As of Dash Core 24.0.0, nodes monitoring in Watch Mode that are not masternodes no longer request or process these four messages. See the [`qwatch` message](#qwatch) for details.
+:::
+
 ### qcontrib
 
 *Added in protocol version 70214 of Dash Core*
 
 :::{note}
-This message is used for intra-quorum communication and is only sent to the [masternodes](../resources/glossary.md#masternode) in the LLMQ and [nodes](../resources/glossary.md#node) that are monitoring in Watch Mode for auditing/debugging purposes.
+This message is used for intra-quorum communication and is only sent to the [masternodes](../resources/glossary.md#masternode) in the LLMQ and [nodes](../resources/glossary.md#node) that are monitoring in Watch Mode for auditing/debugging purposes. As of Dash Core 24.0.0, Watch Mode nodes that are not masternodes no longer request or process this message.
 :::
 
 The [`qcontrib` message](../reference/p2p-network-quorum-messages.md#qcontrib) is used by each member of the DKG process to send key contributions to all other members.
@@ -100,7 +106,7 @@ e000da1aeda5f98ec9e64b801681bfc1 ........... BLS signature (Operator Key)
 *Added in protocol version 70214 of Dash Core*
 
 :::{note}
-This message is used for intra-quorum communication and is only sent to the [masternodes](../resources/glossary.md#masternode) in the LLMQ and [nodes](../resources/glossary.md#node) that are monitoring in Watch Mode for auditing/debugging purposes.
+This message is used for intra-quorum communication and is only sent to the [masternodes](../resources/glossary.md#masternode) in the LLMQ and [nodes](../resources/glossary.md#node) that are monitoring in Watch Mode for auditing/debugging purposes. As of Dash Core 24.0.0, Watch Mode nodes that are not masternodes no longer request or process this message.
 :::
 
 The [`qcomplaint` message](../reference/p2p-network-quorum-messages.md#qcomplaint) is used to notify other members in the DKG process of any members that provided no contribution or an invalid secret key contribution. The notifications are divided into 2 fields:
@@ -239,6 +245,10 @@ This message is used for intra-quorum communication and is only sent to the [mas
 
 The [`qgetdata` message](../reference/p2p-network-quorum-messages.md#qgetdata) is used to request DKG data from a masternode. The response to a `qgetdata` message is a [`qdata` message](../reference/p2p-network-quorum-messages.md#qdata). These messages allows an LLMQ member to recover its DKG data if needed with the help of other members of that LLMQ type.
 
+:::{note}
+As of Dash Core 24.0.0, a node tracks at most 64 pending `qgetdata` requests per requesting masternode (identified by its ProRegTx hash; all Watch Mode peers that are not masternodes share a single allowance) and at most 4096 pending requests in total. Requests beyond the per-masternode limit are dropped without a [`qdata` message](../reference/p2p-network-quorum-messages.md#qdata) reply and the sending masternode is treated as misbehaving. Requests beyond the shared Watch Mode allowance or the total limit are dropped without a reply. A `qgetdata` message with a payload larger than the fixed request size is rejected, and a request for an unknown `llmqType` is answered with a `QUORUM_TYPE_INVALID` error before the sending peer is treated as misbehaving.
+:::
+
 | Bytes | Name | Data type | Description |
 | --- | --- | --- | --- |
 | 1 | llmqType | uint8_t | The type of LLMQ
@@ -265,7 +275,7 @@ c7ccb13df0c0e950b4d1b737808c2c72 ........... ProRegTx hash
 *Added in protocol version 70214 of Dash Core*
 
 :::{note}
-This message is used for intra-quorum communication and is only sent to the [masternodes](../resources/glossary.md#masternode) in the LLMQ and [nodes](../resources/glossary.md#node) that are monitoring in Watch Mode for auditing/debugging purposes.
+This message is used for intra-quorum communication and is only sent to the [masternodes](../resources/glossary.md#masternode) in the LLMQ and [nodes](../resources/glossary.md#node) that are monitoring in Watch Mode for auditing/debugging purposes. As of Dash Core 24.0.0, Watch Mode nodes that are not masternodes no longer request or process this message.
 :::
 
 The [`qjustify` message](../reference/p2p-network-quorum-messages.md#qjustify) is used to respond to complaints. This provides a way for [nodes](../resources/glossary.md#node) that have been complained about to offer proof of correct behavior. If a valid justification is not provided, all other nodes mark it as a bad. If a valid justification is provided, the complaining node is marked as bad instead (since it submitted a bad complaint).
@@ -328,7 +338,7 @@ Contribution #2
 *Added in protocol version 70214 of Dash Core*
 
 :::{note}
-This message is used for intra-quorum communication and is only sent to the [masternodes](../resources/glossary.md#masternode) in the LLMQ and [nodes](../resources/glossary.md#node) that are monitoring in Watch Mode for auditing/debugging purposes.
+This message is used for intra-quorum communication and is only sent to the [masternodes](../resources/glossary.md#masternode) in the LLMQ and [nodes](../resources/glossary.md#node) that are monitoring in Watch Mode for auditing/debugging purposes. As of Dash Core 24.0.0, Watch Mode nodes that are not masternodes no longer request or process this message.
 :::
 
 The [`qpcommit` message](../reference/p2p-network-quorum-messages.md#qpcommit) is used to exchange premature commitment messages for verification and selection of the final commitment.
@@ -388,6 +398,8 @@ b6a5077267fdc61cdb192faffa27bed9
 The [`qfcommit` message](../reference/p2p-network-quorum-messages.md#qfcommit) is used to finalize a [Long-Living Masternode Quorum](../resources/glossary.md#long-living-masternode-quorum) setup by aggregating the information necessary to mine the on-chain [QcTx](../reference/transactions-special-transactions.md#qctx) special transaction. The message contains all the necessary information required to validate the long-living masternode quorum's signing results.
 
 It is possible to receive multiple valid final commitments for the same DKG session. These should only differ in the number of signers, which can be ignored as long as there are at least `quorumThreshold` number of signers. The set of valid members for these final commitments should always be the same, as each member only creates a single premature commitment. This means that only one set of valid members (and thus only one quorum verification vector and quorum [public key](../resources/glossary.md#public-key)) can gain a majority. If the threshold is not reached, there will be no valid final commitment.
+
+As of Dash Core 24.0.0, a `qfcommit` message is only accepted if the node requested it from the sending peer via a [`getdata` message](../reference/p2p-network-data-messages.md#getdata); unrequested messages are ignored and the sending peer is treated as misbehaving. As of protocol version 70239 (Dash Core 23.1.0), peers that relay a stale `qfcommit` message (one whose quorum base block is more than one DKG interval below the chain tip) are also treated as misbehaving.
 
 :::{note}
 * Version 2 (Dash Core 18.0) - updated the `qfcommit` message to support a [new method](https://github.com/dashpay/dips/blob/master/dip-0024.md) of quorum creation for some quorum types. Note the addition of the `quorumIndex` field in version 2 messages.
@@ -581,14 +593,14 @@ This message is used for intra-quorum communication and is only sent to the [mas
 The [`qgetsigs` message](../reference/p2p-network-quorum-messages.md#qgetsigs) is used to request signature shares. The response to a [`qgetsigs` message](../reference/p2p-network-quorum-messages.md#qgetsigs) is a [`qbsigs` message](../reference/p2p-network-quorum-messages.md#qbsigs).
 
 :::{note}
-The number of inventories in a [`qgetsigs` message](../reference/p2p-network-quorum-messages.md#qgetsigs) is limited to 200 (as defined by `MAX_MSGS_CNT_QGETSIGSHARES` in Dash Core).
+The number of inventories in a [`qgetsigs` message](../reference/p2p-network-quorum-messages.md#qgetsigs) is limited to 200 (as defined by `MAX_MSGS_CNT_QSIGSHARES` in Dash Core).
 :::
 
 | Bytes | Name | Data type | Description |
 | --- | --- | --- | --- |
 | Varies | count | compactSize uint | Number of signature shares requested |
 | Varies | sessionId | varint | Signing session ID
-| Varies | invSize | compactSize uint | Inventory size
+| Varies | invSize | compactSize uint | Inventory size<br>As of Dash Core 23.1.4, limited to 400 (as defined by `MAX_MSGS_TOTAL_BATCHED_SIGS` in Dash Core)
 | Varies | inv | CAutoBitSet | Quorum signature inventory |
 
 The following annotated hexdump shows a [`qgetsigs` message](../reference/p2p-network-quorum-messages.md#qgetsigs). (The message header has been omitted.)
@@ -617,6 +629,8 @@ The [`qsendrecsigs` message](../reference/p2p-network-quorum-messages.md#qsendre
 SPV nodes should not send this message as they are usually only interested in the higher level messages.
 :::
 
+As of Dash Core 23.1.0, peers that have sent a `qsendrecsigs` message enabling recovered signatures are not sent [`isdlock`](../reference/p2p-network-instantsend-messages.md#isdlock) inventory announcements, since they can reconstruct the `isdlock` from the recovered signature. Since Dash Core 23.1.3, this only applies to peers that have authenticated as a masternode via the [`mnauth` message](../reference/p2p-network-masternode-messages.md#mnauth); other peers (e.g., nodes running with `-watchquorums`) still receive `isdlock` announcements.
+
 | Bytes | Name | Data type | Description |
 | --- | --- | --- | --- |
 | 1 | fSendRecSigs | bool | 0 - Notify peer to not send plain LLMQ recovered signatures<br>1 - Notify peer to send plain LLMQ recovered signatures (default for Dash Core nodes)
@@ -632,6 +646,8 @@ The following annotated hexdump shows a [`qsendrecsigs` message](../reference/p2
 *Added in protocol version 70214 of Dash Core*
 
 The [`qsigrec` message](../reference/p2p-network-quorum-messages.md#qsigrec) is used to provide recovered signatures and related quorum details to [nodes](../resources/glossary.md#node) that have requested this information via the [`qsendrecsigs` message](../reference/p2p-network-quorum-messages.md#qsendrecsigs).
+
+As of Dash Core 23.1.0, a node that produces a recovered signature locally (rather than receiving it from a peer) sends the `qsigrec` message directly to all peers that requested recovered signatures, without first announcing it via an [`inv` message](../reference/p2p-network-data-messages.md#inv). Recovered signatures for `LLMQ_100_67`, `LLMQ_400_60`, and `LLMQ_400_85` quorums are still announced via `inv` messages.
 
 | Bytes | Name | Data type | Description |
 | --- | --- | --- | --- |
@@ -678,7 +694,7 @@ This message is used for intra-quorum communication and is only sent to the [mas
 The [`qsigsesann` message](../reference/p2p-network-quorum-messages.md#qsigsesann) is used to announce the sessionId for a signing session. The sessionId will be used for all P2P messages related to that session.
 
 :::{note}
-The maximum number of inventories in a [`qsigsinv` message](../reference/p2p-network-quorum-messages.md#qsigsinv) is limited to 200 (as defined by `MAX_MSGS_CNT_QSIGSHARESINV` in Dash Core).
+The maximum number of session announcements in a [`qsigsesann` message](../reference/p2p-network-quorum-messages.md#qsigsesann) is limited to 100 (as defined by `MAX_MSGS_CNT_QSIGSESANN` in Dash Core).
 :::
 
 | Bytes | Name | Data type | Description |
@@ -735,7 +751,7 @@ This message is used for intra-quorum communication and is only sent to the [mas
 The [`qsigshare` message](../reference/p2p-network-quorum-messages.md#qsigshare) (quorum signature share) announces one or more quorum signature shares known by the transmitting peer.
 
 :::{note}
-The maximum number of inventories in a [`qsigsinv` message](../reference/p2p-network-quorum-messages.md#qsigsinv) is limited to 200 (as defined by `MAX_MSGS_CNT_QSIGSHARESINV` in Dash Core).
+The maximum number of signature shares in a [`qsigshare` message](../reference/p2p-network-quorum-messages.md#qsigshare) is limited to 32 (as defined by `MAX_MSGS_SIG_SHARES` in Dash Core).
 :::
 
 | Bytes | Name | Data type | Description |
@@ -786,14 +802,14 @@ The [`qsigsinv` message](../reference/p2p-network-quorum-messages.md#qsigsinv) (
 Info callout
 
 :::{note}
-The maximum number of inventories in a [`qsigsinv` message](../reference/p2p-network-quorum-messages.md#qsigsinv) is limited to 200 (as defined by `MAX_MSGS_CNT_QSIGSHARESINV` in Dash Core).
+The maximum number of inventories in a [`qsigsinv` message](../reference/p2p-network-quorum-messages.md#qsigsinv) is limited to 200 (as defined by `MAX_MSGS_CNT_QSIGSHARES` in Dash Core).
 :::
 
 | Bytes | Name | Data type | Description |
 | --- | --- | --- | --- |
 | Varies | count | compactSize uint | Number of session announcements |
 | Varies | sessionId | varint | Signing session ID (must be less than the maximum uint32_t value) |
-| Varies | invSize | compactSize uint | Inventory size
+| Varies | invSize | compactSize uint | Inventory size<br>As of Dash Core 23.1.4, limited to 400 (as defined by `MAX_MSGS_TOTAL_BATCHED_SIGS` in Dash Core)
 | Varies | inv | CAutoBitSet | Quorum signature inventory |
 
 The following annotated hexdump shows a [`qsigsinv` message](../reference/p2p-network-quorum-messages.md#qsigsinv). (The message header has been omitted.)
@@ -819,5 +835,9 @@ The following annotated hexdump shows a [`qsigsinv` message](../reference/p2p-ne
 The [`qwatch` message](../reference/p2p-network-quorum-messages.md#qwatch) tells the receiving [peer](../resources/glossary.md#peer) to relay [LLMQ](../resources/glossary.md#long-living-masternode-quorum) [DKG messages](#distributed-key-generation) and [Signing session messages](#signing-sessions) (e.g., [`qcontrib`](../reference/p2p-network-quorum-messages.md#qcontrib)).
 
 This message is sent when a Dash Core node is started with the [`-watchquorums` option](../dashcore/wallet-arguments-and-commands-dashd.md#debuggingtesting-options) enabled.
+
+:::{note}
+As of Dash Core 24.0.0, nodes running with `-watchquorums` that are not masternodes no longer request or process DKG messages ([`qcontrib`](#qcontrib), [`qcomplaint`](#qcomplaint), [`qjustify`](#qjustify), and [`qpcommit`](#qpcommit)). Masternodes still announce these messages to `qwatch` peers, but such nodes treat the announcements as already known and do not request them. Watch Mode nodes can obtain quorum data using the [`qgetdata` message](#qgetdata) instead.
+:::
 
 There is no payload in a [`qwatch` message](../reference/p2p-network-quorum-messages.md#qwatch).  See the [message header section](../reference/p2p-network-message-headers.md) for an example of a message without a payload.

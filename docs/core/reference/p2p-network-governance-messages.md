@@ -25,7 +25,7 @@ The [`govobj` message](../reference/p2p-network-governance-messages.md#govobj) c
 | 0-16384 | strData | string | Required | Data field - can be used for anything (leading varint indicates size of data)
 | 4 | nObjectType | int | Required | Type of governance object: <br>• `0` - Unknown<br>• `1` - Proposal<br>• `2` - Trigger
 | 36 | masternode<br>OutPoint | outPoint | Required* | The unspent outpoint of the masternode (holding 1000 DASH) which is signing this object.<br><br>Set to all zeros for proposals since they can be created by non-masternodes.
-| 97 | vchSig | char | Required* | BLS Signature of the masternode (Length (1 byte) + Signature (96 bytes))<br>**Note**: serialized using the basic BLS scheme after Dash 19.0 activation<br><br>Not required for proposals - they will have a length of 0x00 and no Signature.
+| 97 | vchSig | char | Required* | BLS Signature of the masternode (Length (1 byte) + Signature (96 bytes))<br>**Note**: serialized using the basic BLS scheme after Dash 19.0 activation<br><br>Not required for proposals - they will have a length of 0x00 and no Signature.<br><br>As of Dash Core 24.0.0, objects with a signature longer than 96 bytes are rejected.
 
 Governance Object Types (defined by `src/governance-object.h`)
 
@@ -117,7 +117,7 @@ the node being banned.
 | 4 | nVoteOutcome | int | Required | None (0), Yes (1), No (2), Abstain (3)
 | 4 | nVoteSignal | int | Required |  None (0), Funding (1), Valid (2), Delete (3), Endorsed (4)
 | 8 | nTime | int64_t | Required | Time the vote was created
-| 97 | vchSig | char[] | Required | BLS Signature of the masternode (Length (1 byte) + Signature (96 bytes))<br>**Note**: serialized using the basic BLS scheme after Dash 19.0 activation
+| 66 or 97 | vchSig | char[] | Required | Signature of the masternode (Length (1 byte) + Signature). One of:<br>• 65-byte compact ECDSA signature by the masternode's voting key (`Funding` votes on proposals)<br>• 96-byte BLS signature by the masternode's operator key (other votes)<br>**Note**: BLS signatures are serialized using the basic BLS scheme after Dash 19.0 activation<br><br>As of Dash Core 23.1.8, votes with a signature of any other length are rejected.
 
 Governance Object Vote Signals (defined by `src/governance-object.h`)
 
@@ -162,10 +162,16 @@ This message responds in one of two ways depending on the request:
 
 2. Vote Sync - When a masternode receives a [`govsync` message](../reference/p2p-network-governance-messages.md#govsync) with a specific hash, it responds with an [`ssc` message](../reference/p2p-network-masternode-messages.md#ssc) for `govobjvote` objects. The masternode also sends a `govobjvote` inventory messages (MSG_GOVERNANCE_OBJECT_VOTE - 0x18) for the object requested.
 
+:::{note}
+As of Dash Core 23.1.8, a [`govsync` message](../reference/p2p-network-governance-messages.md#govsync) with a specific hash and an empty bloom filter is treated as a request for the governance object itself rather than a vote sync. The node replies only with an [`inv` message](../reference/p2p-network-data-messages.md#inv) (MSG_GOVERNANCE_OBJECT - 0x17) for that object, and only if it has the object. No [`ssc` message](../reference/p2p-network-masternode-messages.md#ssc) or vote inventory is sent. Dash Core uses this to request the parent objects of orphan votes.
+
+Vote sync therefore requires a non-empty bloom filter. Vote sync requests for the same object are also rate limited per peer. Frequent requests increase the requesting peer's misbehavior score.
+:::
+
 | Bytes | Name | Data type | Required | Description |
 | ---------- | ----------- | --------- | -------- | -------- |
 | 32 | nHash | uint256 | Required | Hash of governance object to request<br>Set to all zeros to request all objects (excludes votes)
-| # | filter | CBloomFilter | Required | Can be set to all zeros.<br>Only supported since [protocol version 70206](../reference/p2p-network-protocol-versions.md)
+| # | filter | CBloomFilter | Required | Bloom filter of votes the requesting node already has. Can be set to all zeros (empty filter) for object sync.<br>As of Dash Core 23.1.8, an empty filter combined with a specific hash requests only the governance object (no votes).<br>Only supported since [protocol version 70206](../reference/p2p-network-protocol-versions.md)
 
 The following annotated hexdump shows a [`govsync` message](../reference/p2p-network-governance-messages.md#govsync). (The message header has been omitted.)
 

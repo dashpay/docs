@@ -21,7 +21,7 @@ The currently-available type identifiers are:
 
 | Type Identifier | Name                            | Description
 |-----------------|---------------------------------|------------
-| 1               | MSG_TX                          | The hash is a TXID.
+| 1               | MSG_TX                          | The hash is a TXID.<br><br>**Note**: As of Dash Core 24.0.0, `MSG_TX` is also used to announce CoinJoin broadcast transactions that are unbalanced or oversized to peers below protocol version 70241 (instead of `MSG_DSTX`), and version 2 asset unlock transactions to peers below protocol version 70242 (instead of `MSG_ASSET_UNLOCK`).
 | 2               | MSG_BLOCK                       | The hash is of a block header.
 | 3               | MSG_FILTERED_BLOCK              | The hash is of a block header; identical to `MSG_BLOCK`. When used in a [`getdata` message](../reference/p2p-network-data-messages.md#getdata), this indicates the response should be a [`merkleblock` message](../reference/p2p-network-data-messages.md#merkleblock) rather than a [`block` message](../reference/p2p-network-data-messages.md#block) (but this only works if a bloom filter was previously configured).  **Only for use in [`getdata` messages](../reference/p2p-network-data-messages.md#getdata).**
 | 6               | MSG_SPORK                       | The hash is Spork ID.
@@ -38,6 +38,8 @@ The currently-available type identifiers are:
 | 29              | MSG_CLSIG                       | The hash is a ChainLock signature.<br>_Added in 0.14.0_
 | 31              | MSG_ISDLOCK                     | The hash is an LLMQ-based deterministic InstantSend lock ([DIP22](https://github.com/dashpay/dips/blob/master/dip-0022.md)).<br>_Added in 18.0_
 | 32              | MSG_DSQ                         | The hash of a CoinJoin [dsq message](./p2p-network-privatesend-messages.md#dsq).<br>**Added in 22.0.0**
+| 33              | MSG_PLATFORM_BAN                | The hash of a [`platformban` message](../reference/p2p-network-masternode-messages.md#platformban), excluding its signature.<br>_Added in 23.0.0_
+| 34              | MSG_ASSET_UNLOCK                | The hash is the instance hash (the hash of the full serialization, including the quorum signing info) of a version 2 asset unlock transaction. A [`getdata` message](../reference/p2p-network-data-messages.md#getdata) for this type is answered with a [`tx` message](../reference/p2p-network-data-messages.md#tx). Only announced to peers with protocol version 70242 or higher; older peers receive a `MSG_TX` inventory with the TXID instead.<br>_Added in 24.0.0_
 
 **Deprecated Type Identifiers**
 
@@ -206,7 +208,7 @@ The [`cmpctblock` message](../reference/p2p-network-data-messages.md#cmpctblock)
 Short transaction IDs are used to represent a transaction without sending a full 256-bit hash. They are calculated as follows,
 
 * A single-SHA256 hashing the [block header](../resources/glossary.md#block-header) with the nonce appended (in little-endian)
-* Running SipHash-2-4 with the input being the transaction ID and the keys (k0/k1) set to the first two little-endian 64-bit integers from the above hash, respectively.
+* Running SipHash-2-4 with the input being the transaction ID (as of Dash Core 24.0.0, the transaction's instance hash, which equals the transaction ID for all transactions except version 2 asset unlock transactions) and the keys (k0/k1) set to the first two little-endian 64-bit integers from the above hash, respectively.
 * Dropping the 2 most significant bytes from the SipHash output to make it 6 bytes.
 
 The following annotated hexdump shows a [`cmpctblock` message](../reference/p2p-network-data-messages.md#cmpctblock). (The message header has been omitted.)
@@ -359,7 +361,7 @@ The [`getcfilters` message](../reference/p2p-network-data-messages.md#getcfilter
 
 The [`getdata` message](../reference/p2p-network-data-messages.md#getdata) requests one or more data objects from another [node](../resources/glossary.md#node). The objects are requested by an inventory, which the requesting node typically previously received by way of an [`inv` message](../reference/p2p-network-data-messages.md#inv).
 
-The response to a [`getdata` message](../reference/p2p-network-data-messages.md#getdata) can be a [`tx` message](../reference/p2p-network-data-messages.md#tx), [`block` message](../reference/p2p-network-data-messages.md#block), [`merkleblock` message](../reference/p2p-network-data-messages.md#merkleblock), [`dstx` message](../reference/p2p-network-privatesend-messages.md#dstx), [`govobj` message](../reference/p2p-network-governance-messages.md#govobj), [`govobjvote` message](../reference/p2p-network-governance-messages.md#govobjvote), [`notfound` message](../reference/p2p-network-data-messages.md#notfound), [`cmpctblock` message](../reference/p2p-network-data-messages.md#cmpctblock), or any other messages that are exchanged by way of [`inv` messages](../reference/p2p-network-data-messages.md#inv).
+The response to a [`getdata` message](../reference/p2p-network-data-messages.md#getdata) can be a [`tx` message](../reference/p2p-network-data-messages.md#tx), [`block` message](../reference/p2p-network-data-messages.md#block), [`merkleblock` message](../reference/p2p-network-data-messages.md#merkleblock), [`dstx` message](../reference/p2p-network-privatesend-messages.md#dstx), [`govobj` message](../reference/p2p-network-governance-messages.md#govobj), [`govobjvote` message](../reference/p2p-network-governance-messages.md#govobjvote), [`platformban` message](../reference/p2p-network-masternode-messages.md#platformban), [`notfound` message](../reference/p2p-network-data-messages.md#notfound), [`cmpctblock` message](../reference/p2p-network-data-messages.md#cmpctblock), or any other messages that are exchanged by way of [`inv` messages](../reference/p2p-network-data-messages.md#inv). As of protocol version 70242, a request for a `MSG_ASSET_UNLOCK` inventory is answered with a [`tx` message](../reference/p2p-network-data-messages.md#tx).
 
 This message cannot be used to request arbitrary data, such as historic transactions no longer in the memory pool or relay set. Full nodes may not even be able to provide older [blocks](../resources/glossary.md#block) if they've pruned old transactions from their block database. For this reason, the [`getdata` message](../reference/p2p-network-data-messages.md#getdata) should usually only be used to request data from a node which previously advertised it had that data by sending an [`inv` message](../reference/p2p-network-data-messages.md#inv).
 
@@ -402,6 +404,8 @@ The [`getmnlistd` message](../reference/p2p-network-data-messages.md#getmnlistd)
   1. A full [masternode](../resources/glossary.md#masternode) list (if `baseBlockHash` is all-zero)
   2. An update to a previously requested masternode list
 
+As of Dash Core 24.0.0, a node that cannot build the response because the required block data is unavailable (for example, a pruned node) ignores the request.
+
 | Bytes | Name | Data type | Required | Description |
 | ---------- | ----------- | --------- | -------- | -------- |
 | 32 | baseBlockHash | uint256 | Required | Hash of a block the requester already has a valid masternode list of.<br>_Note: Can be all-zero to indicate that a full masternode list is requested._
@@ -421,12 +425,12 @@ db3fe368976296fd3b6d73fdaf898cc0 ........... Block hash
 
 _Added in protocol version 70222 of Dash Core._
 
-The `getqrinfo` message requests a [`qrinfo` message](../reference/p2p-network-data-messages.md#qrinfo) that provides the information required to verify quorum details for quorums formed using the quorum rotation process.
+The `getqrinfo` message requests a [`qrinfo` message](../reference/p2p-network-data-messages.md#qrinfo) that provides the information required to verify quorum details for quorums formed using the quorum rotation process. As of Dash Core 24.0.0, a node that cannot build the response because the required block data is unavailable (for example, a pruned node) ignores the request.
 
 | Bytes | Name | Data type | Required | Description
 | ---------- | ----------- | --------- | -------- | --------
 | Varies | baseBlockHashesNb | compactSize uint | Required | Number of masternode lists the light client already knows
-| Varies | baseBlockHashes | uint256[] | Required | Array of base block hashes for the masternode lists the light client already knows
+| Varies | baseBlockHashes | uint256[] | Required | Array of base block hashes for the masternode lists the light client already knows<br>As of Dash Core 24.0.0, requests with more than 4096 base block hashes are rejected
 | 32 | blockRequestHash | uint256 | Required | Hash of the block for which the masternode list diff is requested
 | 1 | extraShare | bool | Optional | Flag to indicate if an extra share is requested
 
@@ -987,8 +991,10 @@ Last quorum hash per index
 
 The [`tx` message](../reference/p2p-network-data-messages.md#tx) transmits a single transaction in the [raw transaction](../resources/glossary.md#raw-transaction) format. It can be sent in a variety of situations;
 
-* **Transaction Response:** Dash Core will send it in response to a [`getdata` message](../reference/p2p-network-data-messages.md#getdata) that requests the transaction with an [inventory](../resources/glossary.md#inventory)  type of `MSG_TX`.
+* **Transaction Response:** Dash Core will send it in response to a [`getdata` message](../reference/p2p-network-data-messages.md#getdata) that requests the transaction with an [inventory](../resources/glossary.md#inventory)  type of `MSG_TX`, or `MSG_ASSET_UNLOCK` as of protocol version 70242.
 
 * **MerkleBlock Response:** Dash Core will send it in response to a [`getdata` message](../reference/p2p-network-data-messages.md#getdata) that requests a [merkle block](../resources/glossary.md#merkle-block) with an [inventory](../resources/glossary.md#inventory) type of `MSG_MERKLEBLOCK`. (This is in addition to sending a [`merkleblock` message](../reference/p2p-network-data-messages.md#merkleblock).) Each [`tx` message](../reference/p2p-network-data-messages.md#tx) in this case provides a matched transaction from that [block](../resources/glossary.md#block).
+
+As of Dash Core 24.0.0, the TXID of a version 2 asset unlock transaction (an asset unlock with payload version 2) is calculated with the quorum signing info (requested height, quorum hash, and quorum signature) zeroed out, so it stays the same when Platform re-signs the withdrawal. The hash of the full serialization is the transaction's instance hash, which is used for `MSG_ASSET_UNLOCK` inventories.
 
 For an example hexdump of the raw transaction format, see the [raw transaction section](../reference/transactions-raw-transaction-format.md).

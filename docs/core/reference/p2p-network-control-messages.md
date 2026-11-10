@@ -267,6 +267,8 @@ There is no payload in a [`getaddr` message](../reference/p2p-network-control-me
 
 The [`getsporks` message](../reference/p2p-network-control-messages.md#getsporks) requests [`spork` messages](../reference/p2p-network-control-messages.md#spork) from the receiving node.
 
+As of Dash Core 24.0.0, nodes no longer send `getsporks` messages during masternode sync (see the [`spork` message](../reference/p2p-network-control-messages.md#spork) for how sporks are shared on test networks instead). Nodes still respond to `getsporks` messages from older peers, but ignore repeated requests from a peer while their set of active sporks is unchanged.
+
 There is no payload in a [`getsporks` message](../reference/p2p-network-control-messages.md#getsporks).  See the [message header section](../reference/p2p-network-message-headers.md) for an example of a message without a payload.
 
 ## ping
@@ -367,6 +369,8 @@ Sporks are a mechanism by which updated code is released to test networks, but n
 
 A [`spork` message](../reference/p2p-network-control-messages.md#spork) may be sent in response to a [`getsporks` message](../reference/p2p-network-control-messages.md#getsporks).
 
+As of Dash Core 24.0.0, on test networks (testnet, devnets, and regtest), a node announces each of its active sporks to a new peer with an [`inv` message](../reference/p2p-network-data-messages.md#inv) (`MSG_SPORK`) once the handshake completes. The peer then requests any sporks it does not have with a [`getdata` message](../reference/p2p-network-data-messages.md#getdata).
+
 The [`spork` message](../reference/p2p-network-control-messages.md#spork) tells the receiving peer the status of the spork defined by the SporkID field. Upon receiving a [spork](../resources/glossary.md#spork) message, the client must verify the [signature](../resources/glossary.md#signature) before accepting the spork message as valid.
 
 | Bytes | Name | Data type | Required | Description |
@@ -374,7 +378,7 @@ The [`spork` message](../reference/p2p-network-control-messages.md#spork) tells 
 | 4 | nSporkID | int | Required | ID assigned in spork.h
 | 8 | nValue | int64_t | Required | Value assigned to spork<br>Default (disabled): `4000000000`
 | 8 | nTimeSigned | int64_t | Required | Time the spork value was signed
-| 66 | vchSig | char[] | Required | Length (1 byte) + Signature (65 bytes)
+| 66 | vchSig | char[] | Required | Length (1 byte) + Signature (65 bytes)<br>As of Dash Core 23.1.8, spork messages with a signature longer than 65 bytes are rejected
 
 The following annotated hexdump shows a [`spork` message](../reference/p2p-network-control-messages.md#spork).
 
@@ -405,8 +409,6 @@ sporks section](#removed-sporks) for a list of previously removed sporks.
 | Spork ID | Num. | Name | Description |
 | :----------: | :----------: | ----------- | ----------- |
 | 10001 | 2 | `INSTANTSEND_ENABLED` | *Updated in Dash Core 0.17.0*<br>Turns InstantSend on and off network wide. Also determines if new mempool transactions should be locked or not.
-| 10002 | 3 | `INSTANTSEND_BLOCK_`<br>`FILTERING` | Turns on and off InstantSend block filtering
-| 10008 | 9 | `SUPERBLOCKS_ENABLED` | Superblocks are enabled (20% of the block subsidy is allocated to the Dash treasury for funding approved proposals)
 | 10016 | 17 | `SPORK_17_QUORUM_DKG_`<br>`ENABLED` | Enable long-living masternode quorum (LLMQ) distributed key generation (DKG). When enabled, simple PoSe  scoring and banning is active as well.
 | 10018 | 19 | `SPORK_19_CHAINLOCKS_`<br>`ENABLED` | ***Updated in Dash Core 19.2.0***<br>Enable LLMQ-based ChainLocks.
 | 10020 | 21 | `SPORK_21_QUORUM_ALL_`<br>`CONNECTED` | *Added in Dash Core 0.16.0*<br>Enable connections between all masternodes in a quorum to optimize the signature recovery process.<br>Note: Prior to Dash Core 0.17.0 this spork also enforced [PoSe requirements](../guide/dash-features-proof-of-service.md#distributed-key-generation-participation-requirements) for masternodes to support a minimum protocol version and maintain open ports.
@@ -447,21 +449,27 @@ The following sporks were used in the past but are no longer necessary and have 
 | :----------: | :----------: | ----------- | ----------- |
 | *10005* | *6* | `NEW_SIGS` | _Removed in Dash Core 0.16.0.<br>Turns on and off new signature format for Dash-specific messages.<br>Never enabled on mainnet. The associated logic was hardened in [PR  3662](https://github.com/dashpay/dash/pull/3662) to support testnet (where it is enabled). If testnet is reset at some point in the future, the remaining logic will be removed._
 | *10021* | *22* | `SPORK_22_PS_MORE_`<br>`PARTICIPANTS` | *Removed in Dash Core 0.17.0*<br>*Increase the maximum number of participants in CoinJoin sessions.*
+| *10002* | *3* | `INSTANTSEND_BLOCK_`<br>`FILTERING` | **Removed in Dash Core 24.0.0**<br>Turns on and off InstantSend block filtering. The associated functionality is now always enabled.
+| *10008* | *9* | `SUPERBLOCKS_ENABLED` | **Removed in Dash Core 24.0.0**<br>Superblocks are enabled (20% of the block subsidy is allocated to the Dash treasury for funding approved proposals). Superblocks are now always enabled.
 | *10023* | *24* | `SPORK_24_TEST_EHF` | **Removed in Dash Core 22.0.0** (*Testnet/Devnet/Regtest only*)<br>Enables quorums to sign and broadcast the `mnhfsignal` message that allows the fork to proceed
 
 ### Spork verification
 
-To verify `vchSig`, compare the hard-coded spork public key (`strSporkPubKey` from [`src/chainparams.cpp`](https://github.com/dashpay/dash/blob/eaf90b77177efbaf9cbed46e822f0d794f1a0ee5/src/chainparams.cpp#L158)) with the public key recovered from the [`spork` message](../reference/p2p-network-control-messages.md#spork)'s hash and `vchSig` value (implementation details for Dash Core can be found in `CPubKey::RecoverCompact`). The hash is a double SHA-256 hash of:
+To verify `vchSig`, recover the public key from the [`spork` message](../reference/p2p-network-control-messages.md#spork)'s signature hash and `vchSig` value (implementation details for Dash Core can be found in `CPubKey::RecoverCompact`) and compare its key ID with the hard-coded spork address (`strSporkAddress` from [`src/chainparams.cpp`](https://github.com/dashpay/dash/blob/v24.0.0/src/chainparams.cpp#L304)). As of Dash Core 24.0.0, each network has a single spork address; support for multiple spork signers (the `-minsporkkeys` option) has been removed.
 
-* The spork magic message (`"DarkCoin Signed Message:\n"`)
-* nSporkID + nValue + nTimeSigned
+The signature hash is a double SHA-256 hash of:
 
-| Network | Spork Pubkey (wrapped) |
+* Testnet: the serialized nSporkID, nValue, and nTimeSigned fields
+* All other networks: the spork magic message (`"DarkCoin Signed Message:\n"`) followed by a string containing the decimal values of nSporkID, nValue, and nTimeSigned concatenated together (the same format used for signed messages)
+
+| Network | Spork Address |
 | ---------- | ---------- |
-| Mainnet | 04549ac134f694c0243f503e8c8a9a986f5de6610049c40b07816809b0d1<br>d06a21b07be27b9bb555931773f62ba6cf35a25fd52f694d4e1106ccd237<br>a7bb899fdd |
-| Testnet3 | 046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb50<br>1b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f7<br>5e76869f0e |
-| RegTest | Undefined |
-| Devnets | 046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb50<br>1b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f7<br>5e76869f0e |
+| Mainnet | Xgtyuk76vhuFW2iT7UAiHgNdWXCf3J34wh |
+| Testnet3 | yjPtiKh2uwk3bDutTEA2q9mCtXyiZRWn55 |
+| RegTest | yj949n1UH6fDhw6HtVE5VMj2iSTaSWBMcW |
+| Devnets | yjPtiKh2uwk3bDutTEA2q9mCtXyiZRWn55 |
+
+The `-sporkaddr` option can override the spork address; it is only intended for use on RegTest and Devnets.
 
 ## verack
 
@@ -490,7 +498,7 @@ Protocol version 70214 added a [masternode](../resources/glossary.md#masternode)
 | *Varies* | user_agent bytes      | compactSize uint | Required | Number of bytes in following user\_agent field.  If 0x00, no user agent field is sent.
 | *Varies* | user_agent            | string           | Required if user_agent bytes > 0 | *Renamed in protocol version 60000.* <br><br>User agent as defined by BIP14. Previously called subVer.<br><br>Dash Core limits the length to 256 characters.
 | 4        | start_height          | int32_t          | Required | The height of the transmitting node's best block chain or, in the case of an SPV client, best block header chain.
-| 1        | relay                 | bool             | Optional | *Added in protocol version 70001 as described by BIP37.* <br><br>Transaction relay flag.  If 0x00, no [`inv` messages](../reference/p2p-network-data-messages.md#inv) or [`tx` messages](../reference/p2p-network-data-messages.md#tx) announcing new transactions should be sent to this client until it sends a [`filterload` message](../reference/p2p-network-control-messages.md#filterload) or [`filterclear` message](../reference/p2p-network-control-messages.md#filterclear).  If the relay field is not present or is set to 0x01, this node wants [`inv` messages](../reference/p2p-network-data-messages.md#inv) and [`tx` messages](../reference/p2p-network-data-messages.md#tx) announcing new transactions.
+| 1        | relay                 | bool             | Optional | *Added in protocol version 70001 as described by BIP37.* <br><br>Transaction relay flag.  If 0x00, no [`inv` messages](../reference/p2p-network-data-messages.md#inv) or [`tx` messages](../reference/p2p-network-data-messages.md#tx) announcing new transactions should be sent to this client until it sends a [`filterload` message](../reference/p2p-network-control-messages.md#filterload) or [`filterclear` message](../reference/p2p-network-control-messages.md#filterclear).  If the relay field is not present or is set to 0x01, this node wants [`inv` messages](../reference/p2p-network-data-messages.md#inv) and [`tx` messages](../reference/p2p-network-data-messages.md#tx) announcing new transactions.<br><br>As of Dash Core 24.0.0, masternodes must set this flag to 0x01. During [DKG](../guide/dash-features-proof-of-service.md#distributed-key-generation-participation-requirements), quorum members flag a masternode as having a bad connection if none of their masternode connections to it set this flag. _Enforcement of this requirement is dependent on Spork 23 being enabled_
 | 32       | mnauth_<br>challenge  | uint256          | Optional | *Added in protocol version 70214* <br><br>A challenge to be signed by the receiving masternode. The response is returned via a [`mnauth` message](../reference/p2p-network-masternode-messages.md#mnauth) following the [`verack` message](../reference/p2p-network-control-messages.md#verack).
 | 1        | mn_connection         | bool             | Optional | If 0x00, the connection is from a non-masternode. If 0x01, the connection is from a masternode.
 
@@ -503,7 +511,7 @@ The following service identifiers have been assigned.
 | 0x02  | `NODE_GETUTXO` | **Removed in Dash Core 20.0.0**<br>This node is capable of responding to the getutxo protocol request.
 | 0x04  | `NODE_BLOOM` | This node is capable and willing to handle bloom-filtered connections.  Dash Core nodes used to support this by default, without advertising this bit, but no longer do as of protocol version 70201 (= NO_BLOOM_VERSION)
 | 0x08 | `NODE_XTHIN` | **Dash Core does not support this service**<br>This node supports Xtreme Thinblocks.
-| 0x40 | `NODE_COMPACT_FILTERS` | This node supports basic block filter requests. See [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) and [BIP158](https://github.com/bitcoin/bips/blob/master/bip-0158.mediawiki) for details on how this is implemented.
+| 0x40 | `NODE_COMPACT_FILTERS` | This node supports basic block filter requests. See [BIP157](https://github.com/bitcoin/bips/blob/master/bip-0157.mediawiki) and [BIP158](https://github.com/bitcoin/bips/blob/master/bip-0158.mediawiki) for details on how this is implemented.<br><br>As of Dash Core 24.0.0, masternodes must advertise this service. During [DKG](../guide/dash-features-proof-of-service.md#distributed-key-generation-participation-requirements), quorum members flag a masternode as having a bad connection if none of their masternode connections to it advertise this service. _Enforcement of this requirement is dependent on Spork 23 being enabled_
 | 0x400 | `NODE_NETWORK_LIMITED` | This is the same as `NODE_NETWORK` with the limitation of only serving the last 288 blocks. See [BIP159](https://github.com/bitcoin/bips/blob/master/bip-0159.mediawiki) for details on how this is implemented. *Not supported prior to Dash Core 0.16.0*
 | 0x800 | `NODE_HEADERS_COMPRESSED` | This node supports compressed headers as described in [DIP-25](https://github.com/dashpay/dips/blob/master/dip-0025.md)
 | 0x1000 | `NODE_P2P_V2` | This node supports the version 2 of the peer-to-peer protocol, which provides an encrypted transport protocol. See [BIP-324](https://github.com/bitcoin/bips/blob/master/bip-0324.mediawiki) for details. *Not supported prior to Dash Core 22.0.0*
