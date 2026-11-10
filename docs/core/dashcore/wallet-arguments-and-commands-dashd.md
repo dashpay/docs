@@ -1243,7 +1243,7 @@ The following sections show all available options including debug options that a
 ```
 ## Network Dependent Options
 
-The following options can only be used for specific network types. These options are provided support development (devnet) and regression test (regtest) networks.
+The following options can only be used for specific network types. These options are provided to support development (devnet) and regression test (regtest) networks.
 
 ### Devnet Options
 
@@ -1290,17 +1290,17 @@ The quorum names used in these options are:
 
 | LLMQ Type | LLMQ Name             |
 | :-------: | --------------------- |
-|     1     | llmq50_60             |
-|     2     | llmq400_60            |
-|     3     | llmq400_85            |
-|     4     | llmq100_67            |
-|     5     | llmq60_75             |
-|     6     | llmq25_67             |
+|     1     | llmq_50_60            |
+|     2     | llmq_400_60           |
+|     3     | llmq_400_85           |
+|     4     | llmq_100_67           |
+|     5     | llmq_60_75            |
+|     6     | llmq_25_67            |
 |    100    | llmq_test             |
 |    101    | llmq_devnet           |
 |    102    | llmq_test_v17         |
 |    103    | llmq_test_dip0024     |
-|    104    | llqm_test_instantsend |
+|    104    | llmq_test_instantsend |
 |    105    | llmq_devnet_dip0024   |
 |    106    | llmq_test_platform    |
 |    107    | llmq_devnet_platform  |
@@ -1312,6 +1312,9 @@ Refer to [this table in DIP-6 - LLMQs](https://github.com/dashpay/dips/blob/mast
 ```text
   -budgetparams=<masternode>:<budget>:<superblock>
        Override masternode, budget and superblock start heights (regtest-only)
+
+  -dip3params=<activation>:<enforcement>
+       Override DIP3 activation and enforcement heights (regtest-only)
 
   -llmqtestinstantsenddip0024=<quorum name>
        Override the default LLMQ type used for InstantSendDIP0024. Used mainly
@@ -1328,6 +1331,11 @@ Refer to [this table in DIP-6 - LLMQs](https://github.com/dashpay/dips/blob/mast
   -llmqtestplatformparams=<size>:<threshold>
        Override the default LLMQ size for the LLMQ_TEST_PLATFORM quorum
        (default: 3:2, regtest-only)
+
+  -testactivationheight=name@height.
+       Set the activation height of 'name' (bip147, bip34, dersig, cltv, csv,
+       brr, dip0001, dip0008, dip0024, v19, v20, mn_rr, ipv4_optional).
+       (regtest-only)
 
   -vbparams=<deployment>:<start>:<end>(:min_activation_height(:<window>:<threshold/thresholdstart>(:<thresholdmin>:<falloffcoeff>:<mnactivation>)))
        Use given start/end times and min_activation_height for specified
