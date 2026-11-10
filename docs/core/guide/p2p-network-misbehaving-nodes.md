@@ -77,7 +77,7 @@ Furthermore, a few additional changes are introduced to how discouraged addresse
 | LLMQ Quorum Data | Unauthorized Request | 10 | Request received by a node that is not a masternode, or from a peer that is neither a verified masternode nor a `qwatch` connection ([`qgetdata` message](../reference/p2p-network-quorum-messages.md#qgetdata))
 | LLMQ Quorum Data | Oversized Request | **100** | Request payload larger than a valid request (`qgetdata` message)
 | LLMQ Quorum Data | Invalid LLMQ Type | **100** | Request for an unknown LLMQ type (`qgetdata` message)
-| LLMQ Quorum Data | Too Many Requests | 25 | More than 64 pending requests from one masternode, or a repeated request before the previous one expired (`qgetdata` message)
+| LLMQ Quorum Data | Too Many Requests | 25 | More than 64 requests from one masternode within about 5 minutes, or a repeated request for the same quorum within 5 minutes unless a requested quorum verification vector is missing (`qgetdata` message)
 | LLMQ Quorum Data | Unauthorized Response | 10 | Response from a peer that is not a verified masternode, or received by a node that is neither a masternode nor watching quorums ([`qdata` message](../reference/p2p-network-quorum-messages.md#qdata))
 | LLMQ Quorum Data | Unrequested Response | 10 | Response that was not requested, was already received, or does not match the request (`qdata` message)
 | LLMQ Quorum Data | Invalid Data Size | **100** | Verification vector or encrypted contributions with the wrong number of entries (`qdata` message)

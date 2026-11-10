@@ -28,7 +28,7 @@ As of protocol version 70241 (Dash Core 24.0.0), a participant can use the `nFla
 | ---------- | ----------- | --------- | -------- | -------- |
 | 4 | nDenom | int | Required | Denomination that will be exclusively used when submitting inputs into the pool
 | 216+ | txCollateral | [`tx` message](../reference/p2p-network-data-messages.md#tx) | Required | Collateral TX that will be charged if this client acts maliciously
-| 0 or 1 | nFlags | uint8_t | Optional | *Added in protocol version 70241 of Dash Core*<br><br>Only present when the negotiated protocol version is 70241 or higher. Declares the type of entry the participant intends to submit:<br>• Bit 0 (`0x01`) - Promotion<br>• Bit 1 (`0x02`) - Demotion<br>Setting both bits is invalid. A value of `0` indicates standard mixing.
+| 0 or 1 | nFlags | uint8_t | Required* | *Added in protocol version 70241 of Dash Core*<br><br>Only present when the negotiated protocol version is 70241 or higher. Declares the type of entry the participant intends to submit:<br>• Bit 0 (`0x01`) - Promotion<br>• Bit 1 (`0x02`) - Demotion<br>Setting both bits is invalid. A value of `0` indicates standard mixing.
 
 The following annotated hexdump shows a [`dsa` message](../reference/p2p-network-privatesend-messages.md#dsa). (The message header has been omitted.) Note that the 'Required inputs' bytes will only be preset if [Spork](../resources/glossary.md#spork) 6 is active and protocol version => 70209.
 
@@ -77,7 +77,7 @@ d9070700 ............................. Session ID: 791686
 
 The [`dsf` message](../reference/p2p-network-privatesend-messages.md#dsf) is sent by the masternode as the final transaction in a CoinJoin session. The [masternode](../resources/glossary.md#masternode) expects [nodes](../resources/glossary.md#node) in the session to respond with a [`dss` message](../reference/p2p-network-privatesend-messages.md#dss).
 
-Before the v24 hard fork activates, the final transaction must have an equal number of inputs and outputs (at most 180 each). After activation, sessions that include promotion or demotion entries produce final transactions with unequal input and output counts. These transactions can have up to 200 inputs and 200 outputs, and neither count may exceed 10 times the other.
+Before the v24 hard fork activates, the final transaction must have an equal number of inputs and outputs (at most 180 each). After activation, sessions that include promotion or demotion entries can produce final transactions with unequal input and output counts. These transactions can have up to 200 inputs and 200 outputs, and neither count may exceed 10 times the other.
 
 | Bytes | Name | Data type | Required | Description |
 | ---------- | ----------- | --------- | -------- | -------- |
@@ -186,7 +186,7 @@ Transaction Message
 
 The [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi) replies to a [`dsq` message](../reference/p2p-network-privatesend-messages.md#dsq) that has the Ready field set to 0x01. The [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi) contains user [inputs](../resources/glossary.md#input) for processing along with the [outputs](../resources/glossary.md#output) and a collateral. Once the [masternode](../resources/glossary.md#masternode) receives [`dsi` messages](../reference/p2p-network-privatesend-messages.md#dsi) from all members of the pool, it responds with a [`dsf` message](../reference/p2p-network-privatesend-messages.md#dsf).
 
-Each entry can contain at most 9 inputs and 9 outputs. After the v24 hard fork activates, sessions that include promotion or demotion participants (see the [`dsa` message](#dsa)) allow up to 10 inputs and 10 outputs per entry, and an entry can take one of the following forms:
+Each entry can contain at most 9 inputs and 9 outputs. After the v24 hard fork activates, sessions that include promotion or demotion participants (see the [`dsa` message](#dsa)) allow up to 10 inputs and 10 outputs per entry. Each entry must match the form declared by `nFlags` in the participant's `dsa` message; otherwise the masternode rejects it and consumes the participant's collateral. The permitted forms are:
 
 * Standard - N inputs of the session denomination and N outputs of the session denomination
 * Promotion - 10 inputs of the session denomination and 1 output of the next larger denomination
@@ -502,7 +502,7 @@ The following annotated hexdump shows a [`dssu` message](../reference/p2p-networ
 
 The [`dstx` message](../reference/p2p-network-privatesend-messages.md#dstx) allows [masternodes](../resources/glossary.md#masternode) to broadcast subsidized transactions without fees (to provide security in processing).
 
-As of protocol version 70241 (Dash Core 24.0.0), a CoinJoin transaction that has unequal input and output counts (promotion/demotion) or more than 180 inputs is only announced as a `dstx` to peers using protocol version 70241 or higher. Peers using older protocol versions receive a plain transaction announcement instead, so they still receive the transaction without the CoinJoin metadata.
+As of protocol version 70241 (Dash Core 24.0.0), a CoinJoin transaction that has unequal input and output counts (promotion/demotion) or more than 180 inputs is only announced as a `dstx` to peers using protocol version 70241 or higher. Peers using older protocol versions receive a plain transaction announcement instead. Since the transaction pays no fee and lacks the CoinJoin metadata, those peers may reject it under their normal relay fee rules until it is mined.
 
 | Bytes | Name | Data type | Required | Description |
 | ---------- | ----------- | --------- | -------- | -------- |

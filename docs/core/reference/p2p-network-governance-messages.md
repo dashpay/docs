@@ -157,15 +157,15 @@ The [`govsync` message](../reference/p2p-network-governance-messages.md#govsync)
 
 This message responds in one of two ways depending on the request:
 
-1. Object Sync - When a masternode receives a [`govsync` message](../reference/p2p-network-governance-messages.md#govsync) with a hash of all zeros, it responds with a [`ssc` message](../reference/p2p-network-masternode-messages.md#ssc) for `govobj` objects. The masternode also sends an [`inv` message](../reference/p2p-network-data-messages.md#inv) (MSG_GOVERNANCE_OBJECT - 0x17) for all valid `govobj` governance objects. Do note that Dash limits how frequently object sync can be requested. Frequent requests will result in the node being banned.
+1. Object Sync - When a masternode receives a [`govsync` message](../reference/p2p-network-governance-messages.md#govsync) with a hash of all zeros, it responds with a [`ssc` message](../reference/p2p-network-masternode-messages.md#ssc) for `govobj` objects. The masternode also sends an [`inv` message](../reference/p2p-network-data-messages.md#inv) (MSG_GOVERNANCE_OBJECT - 0x11) for all valid `govobj` governance objects. Do note that Dash limits how frequently object sync can be requested. Frequent requests will result in the node being banned.
 *Governance object votes are excluded in this type of response.*
 
-2. Vote Sync - When a masternode receives a [`govsync` message](../reference/p2p-network-governance-messages.md#govsync) with a specific hash, it responds with an [`ssc` message](../reference/p2p-network-masternode-messages.md#ssc) for `govobjvote` objects. The masternode also sends a `govobjvote` inventory messages (MSG_GOVERNANCE_OBJECT_VOTE - 0x18) for the object requested.
+2. Vote Sync - When a masternode receives a [`govsync` message](../reference/p2p-network-governance-messages.md#govsync) with a specific hash, it responds with an [`ssc` message](../reference/p2p-network-masternode-messages.md#ssc) for `govobjvote` objects. The masternode also sends a `govobjvote` inventory messages (MSG_GOVERNANCE_OBJECT_VOTE - 0x12) for the object requested.
 
 :::{note}
-As of Dash Core 23.1.8, a [`govsync` message](../reference/p2p-network-governance-messages.md#govsync) with a specific hash and an empty bloom filter is treated as a request for the governance object itself rather than a vote sync. The node replies only with an [`inv` message](../reference/p2p-network-data-messages.md#inv) (MSG_GOVERNANCE_OBJECT - 0x17) for that object, and only if it has the object. No [`ssc` message](../reference/p2p-network-masternode-messages.md#ssc) or vote inventory is sent. Dash Core uses this to request the parent objects of orphan votes.
+As of Dash Core 23.1.8, a [`govsync` message](../reference/p2p-network-governance-messages.md#govsync) with a specific hash and an empty bloom filter is treated as a request for the governance object itself rather than a vote sync. The node replies only with an [`inv` message](../reference/p2p-network-data-messages.md#inv) (MSG_GOVERNANCE_OBJECT - 0x11) for that object, and only if it has the object. No [`ssc` message](../reference/p2p-network-masternode-messages.md#ssc) or vote inventory is sent. Dash Core uses this to request the parent objects of orphan votes.
 
-Vote sync therefore requires a non-empty bloom filter. Vote sync requests for the same object are also rate limited per peer. Frequent requests increase the requesting peer's misbehavior score.
+Vote sync therefore requires a bloom filter whose data is not zero-length. Vote sync requests for the same object are also rate limited per peer. Frequent requests increase the requesting peer's misbehavior score.
 :::
 
 | Bytes | Name | Data type | Required | Description |

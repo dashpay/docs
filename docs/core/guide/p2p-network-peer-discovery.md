@@ -32,7 +32,7 @@ Once a program has connected to the [network](../resources/glossary.md#network),
 
 However, peers often leave the network or change IP addresses, so programs may need to make several different connection attempts at startup before a successful connection is made. This can add a significant delay to the amount of time it takes to connect to the network, forcing a user to wait before sending a transaction or checking the status of payment.
 
-Dash Core tries to strike a balance between minimizing delays and avoiding unnecessary DNS seed use: if Dash Core has entries in its peer database, it spends up to 11 seconds (or up to 5 minutes if the database has 1000 or more entries) attempting to connect to them before falling back to seeds; if at least two outbound connections are made within that time, it does not query any seeds.
+Dash Core tries to strike a balance between minimizing delays and avoiding unnecessary DNS seed use: if Dash Core has entries in its peer database, it spends up to 11 seconds (or up to 5 minutes if the database has 1000 or more entries) attempting to connect to them before falling back to seeds; if it has at least two full-relay outbound connections at any point during that time, it does not query any seeds.
 
 ## Hardcoded Masternode IPs
 

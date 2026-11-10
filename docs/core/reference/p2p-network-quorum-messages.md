@@ -246,7 +246,7 @@ This message is used for intra-quorum communication and is only sent to the [mas
 The [`qgetdata` message](../reference/p2p-network-quorum-messages.md#qgetdata) is used to request DKG data from a masternode. The response to a `qgetdata` message is a [`qdata` message](../reference/p2p-network-quorum-messages.md#qdata). These messages allows an LLMQ member to recover its DKG data if needed with the help of other members of that LLMQ type.
 
 :::{note}
-As of Dash Core 24.0.0, a node tracks at most 64 pending `qgetdata` requests per requesting masternode (identified by its ProRegTx hash; all Watch Mode peers that are not masternodes share a single allowance) and at most 4096 pending requests in total. Requests beyond the per-masternode limit are dropped without a [`qdata` message](../reference/p2p-network-quorum-messages.md#qdata) reply and the sending masternode is treated as misbehaving. Requests beyond the shared Watch Mode allowance or the total limit are dropped without a reply. A `qgetdata` message with a payload larger than the fixed request size is rejected, and a request for an unknown `llmqType` is answered with a `QUORUM_TYPE_INVALID` error before the sending peer is treated as misbehaving.
+As of Dash Core 24.0.0, a node tracks each received `qgetdata` request for about 5 minutes, whether or not it has been answered, and tracks at most 64 requests per requesting masternode (identified by its ProRegTx hash; all Watch Mode peers that are not masternodes share a single allowance) and at most 4096 requests in total. Requests beyond the per-masternode limit are dropped without a [`qdata` message](../reference/p2p-network-quorum-messages.md#qdata) reply and the sending masternode is treated as misbehaving. Requests beyond the shared Watch Mode allowance or the total limit are dropped without a reply. A `qgetdata` message with a payload larger than the fixed request size is rejected, and a request for an unknown `llmqType` is answered with a `QUORUM_TYPE_INVALID` error before the sending peer is treated as misbehaving.
 :::
 
 | Bytes | Name | Data type | Description |
@@ -600,7 +600,7 @@ The number of inventories in a [`qgetsigs` message](../reference/p2p-network-quo
 | --- | --- | --- | --- |
 | Varies | count | compactSize uint | Number of signature shares requested |
 | Varies | sessionId | varint | Signing session ID
-| Varies | invSize | compactSize uint | Inventory size<br>As of Dash Core 23.1.4, limited to 400 (as defined by `MAX_MSGS_TOTAL_BATCHED_SIGS` in Dash Core)
+| Varies | invSize | compactSize uint | Inventory size (must equal the quorum size)<br>As of Dash Core 23.1.4, limited to 400 (as defined by `MAX_MSGS_TOTAL_BATCHED_SIGS` in Dash Core)
 | Varies | inv | CAutoBitSet | Quorum signature inventory |
 
 The following annotated hexdump shows a [`qgetsigs` message](../reference/p2p-network-quorum-messages.md#qgetsigs). (The message header has been omitted.)
@@ -809,7 +809,7 @@ The maximum number of inventories in a [`qsigsinv` message](../reference/p2p-net
 | --- | --- | --- | --- |
 | Varies | count | compactSize uint | Number of session announcements |
 | Varies | sessionId | varint | Signing session ID (must be less than the maximum uint32_t value) |
-| Varies | invSize | compactSize uint | Inventory size<br>As of Dash Core 23.1.4, limited to 400 (as defined by `MAX_MSGS_TOTAL_BATCHED_SIGS` in Dash Core)
+| Varies | invSize | compactSize uint | Inventory size (must equal the quorum size)<br>As of Dash Core 23.1.4, limited to 400 (as defined by `MAX_MSGS_TOTAL_BATCHED_SIGS` in Dash Core)
 | Varies | inv | CAutoBitSet | Quorum signature inventory |
 
 The following annotated hexdump shows a [`qsigsinv` message](../reference/p2p-network-quorum-messages.md#qsigsinv). (The message header has been omitted.)
