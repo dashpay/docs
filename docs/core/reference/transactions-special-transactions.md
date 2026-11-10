@@ -702,13 +702,14 @@ The special transaction type used for CbTx Transactions is 5 and the extra paylo
 
 | Bytes | Name | Data type |  Description |
 | ---------- | ----------- | -------- | -------- |
-| 2 | version | uint_16 | CbTx version number. Currently set to 2.
+| 2 | version | uint_16 | CbTx version number. Currently set to 3. Set to 4 once the `v24` hard fork activates.
 | 4 | height | uint32_t | Height of the block
 | 32 | merkleRootMNList | uint256 | Merkle root of the masternode list
 | 32 | merkleRootQuorums | uint256 | *Added by CbTx version 2 in v0.14.0*<br><br>Merkle root of currently active LLMQs
 | 1-9 | bestCLHeightDiff | compactSize uint | ***Added by CbTx version 3 in v20.0.0***<br><br>Number of blocks between the current block and the last known block with a ChainLock
 | 96 | bestCLSignature | CBLSSignature | ***Added by CbTx version 3 in Dash Core 20.0.0***<br>Best ChainLock signature known by the miner
 | 8 | creditPoolBalance | int64_t | ***Added by CbTx version 3 in Dash Core v20.0.0***<br>Balance in the Platform credit pool
+| 32 | merkleRootAssetUnlocks | uint256 | ***Added by CbTx version 4 in Dash Core 24.0.0***<br>Merkle root of the instance hashes of the block's version 2 [asset unlock transactions](#assetunlocktx), in block order. Set to all zeros if the block contains none. Since the TXIDs of version 2 asset unlocks exclude their quorum signing info, this field commits the block to that data. A block whose value does not match is rejected as mutated (`bad-cbtx-assetunlockmerkleroot`).
 
 Version History
 
@@ -717,6 +718,7 @@ Version History
 | 1 | 70213 | 0.13.0 | Enabled by [DIP3](https://github.com/dashpay/dips/blob/master/dip-0003.md) activation
 | 2 | 70214 | 0.14.0 | Enabled by [DIP8](https://github.com/dashpay/dips/blob/master/dip-0008.md) activation
 | 3 | 70230 | 20.0.0 | Enabled by [DIP29](https://github.com/dashpay/dips/blob/master/dip-0029.md) activation
+| 4 | 70242 | 24.0.0 | Required once the `v24` hard fork activates (and not valid before it)
 
 The following annotated hexdump shows a CbTx transaction (v3).
 
@@ -1110,9 +1112,13 @@ The special transaction type used for asset lock transactions is 8 and the extra
 
 | Bytes | Name | Data type | Description |
 |-|-|-|-|
-| 1 | version | uint8_t | Asset lock payload version number |
+| 1 | version | uint8_t | Asset lock payload version number (1 or 2)<br><br>***Version 2 added in Dash Core 24.0.0***. Version 2 is only valid once the `v24` hard fork activates. It is used for asset locks that fund [DIP18](https://github.com/dashpay/dips/blob/master/dip-0018.md) Platform addresses. |
 | 1 | count | uint8_t | Number of accounts funded by this asset lock |
-| Variable | credit_outputs | vector<TxOut> | The hash of the public key used to claim credits on Dash Platform, as well as the amount of Dash in duffs transferred into credits for this hash |
+| Variable | credit_outputs | vector<TxOut> | The script used to claim credits on Dash Platform, as well as the amount of Dash in duffs transferred into credits for this script. Version 1 payloads require P2PKH scripts. Version 2 payloads allow P2PKH or P2SH scripts. |
+
+:::{note}
+Asset lock transactions with more than 100 inputs or larger than 20480 bytes have been non-standard since Dash Core 23.1.4 (`assetlocktx-too-many-inputs`, `assetlocktx-too-big`) because Dash Platform cannot process them. Dash Core 24.0.0 also treats asset locks with a version 2 payload as non-standard (`assetlocktx-version-2`) until Platform supports them. These transactions are not accepted into the mempool or relayed by default, but they remain valid in a block (version 2 payloads only after `v24` activates).
+:::
 
 The following annotated hexdump shows an asset lock transaction.
 
@@ -1270,12 +1276,16 @@ The special transaction type used for asset unlock transactions is 9 and the ext
 
 | Bytes | Name | Data type | Description |
 |-|-|-|-|
-| 1 | version | uint8_t | Asset unlock payload version number |
+| 1 | version | uint8_t | Asset unlock payload version number (1 or 2)<br><br>***Version 2 added in Dash Core 24.0.0***. Version 2 is only valid once the `v24` hard fork activates. See [Version 2 asset unlocks](#version-2-asset-unlocks) below. |
 | 8 | index | uint64_t | The index of the transaction |
 | 4 | fee | uint32_t | The transaction fee in duffs that should be awarded to the miner |
 | 4 | requestedHeight | uint32_t | The payment chain block height known by platform at the moment of the withdrawal signing |
 | 32 | quorumHash | uint256 | Hash of the quorum signing this message |
 | 96 | quorumSig | CBLSSig | BLS signature for the entire transaction by a public key associated with the quorum referenced by `quorumHash` |
+
+The quorum signs a message hash and request ID. The message hash is the SHA256(SHA256()) hash of the full transaction serialized with `quorumSig` set to all zeros, so it commits to `requestedHeight` and `quorumHash`. The request ID is the SHA256(SHA256()) hash of the string `plwdtx` (serialized with its compactSize length prefix) followed by the 8-byte `index`.
+
+Once `v24` activates, the asset unlock limit is relative to the credit pool balance. Asset unlocks may not leave the credit pool below its balance one window earlier (576 blocks on mainnet and testnet) minus an allowed drop of 20% of that balance. The allowed drop is never less than 2000 DASH.
 
 The following annotated hexdump shows an asset unlock transaction.
 
@@ -1360,3 +1370,21 @@ The JSON representation of a raw transaction can be obtained with the [`getrawtr
   }
 }
 ```
+
+### Version 2 Asset Unlocks
+
+*Added in Dash Core 24.0.0*
+
+Once the `v24` hard fork activates, version 2 asset unlock transactions become valid and version 1 remains valid. Dash Platform continues to create version 1 withdrawals until a future Platform release adopts version 2.
+
+A version 2 payload is serialized exactly like version 1, but the transaction's [TXID](../resources/glossary.md#transaction-identifiers) is calculated differently:
+
+* **TXID:** the SHA256(SHA256()) hash of the transaction serialized with its last 132 bytes (the quorum signing info: `requestedHeight`, `quorumHash`, and `quorumSig`) set to zero. Platform changes only these fields when it re-signs an expired withdrawal, so every re-signed instance of a withdrawal has the same TXID. Spends of an unmined withdrawal's outputs therefore remain valid across re-signs.
+
+* **Instance hash:** the SHA256(SHA256()) hash of the full serialized transaction. It distinguishes re-signed instances of the same withdrawal. It is reported as `instanceHash` by the transaction-decoding RPCs, and the coinbase transaction commits to it in the [CbTx](#cbtx) `merkleRootAssetUnlocks` field (CbTx version 4).
+
+Version 2 asset unlocks are relayed by instance hash using the `MSG_ASSET_UNLOCK` (34) inventory type with peers using protocol version 70242 or higher. Unlike version 1, they can be [InstantSend](../resources/glossary.md#instantsend)-locked. The lock uses an outpoint made of the request ID and index 0 in place of a transaction input.
+
+:::{note}
+Block merkle roots use the TXID. Software that hashes raw transaction bytes to identify transactions (e.g., from P2P messages, ZMQ, or `getblocktemplate` `data`) must apply the same zeroing to get the TXID of a version 2 asset unlock.
+:::

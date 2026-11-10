@@ -20,6 +20,8 @@ Standard transactions must also meet the following conditions:
 
 * The transaction must be smaller than 100,000 bytes. That's around 200 times larger than a typical single-input, single-output P2PKH transaction.
 
+* The transaction must be at least 65 bytes. *Lowered from 83 bytes in Dash Core 24.0.0.*
+
 * Each of the transaction's signature scripts must be smaller than 1,650 bytes. That's large enough to allow 15-of-15 multisig transactions in P2SH using compressed [public keys](../resources/glossary.md#public-key).
 
 * Bare (non-P2SH) multisig transactions which require more than 3 public keys are currently non-standard.
