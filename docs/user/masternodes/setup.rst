@@ -74,6 +74,13 @@ will describe the steps for both hardware wallets and Dash Core.
   Details of registering a masternode with Dash Electrum can be found on the
   :ref:`Electrum - Advanced Functions page <electrum-masternodes>`.
 
+.. tip::
+
+  If you plan to register your masternode with the :ref:`Dash Core
+  registration wizard <dashcore-mn-wizard>`, you do not need to send the
+  collateral in advance. The wizard can send the collateral from your wallet to
+  a new address and register the masternode in a single transaction.
+
 Option 1: Sending from a hardware wallet
 ----------------------------------------
 
@@ -417,10 +424,228 @@ At this point you can safely log out of your server by typing ``exit``.
 Congratulations! Your masternode is now running.
 
 
+.. _dashcore-mn-wizard:
+
+Option 2: Registering with the Dash Core wizard
+-----------------------------------------------
+
+Starting with Dash Core v24.0.0, you can register a masternode or evonode
+directly from the **Masternodes** tab of the Dash Core wallet using the
+**Register Masternode…** wizard. The wizard can fund the collateral, generate
+the operator key and submit the provider registration transaction (ProRegTx) for
+you, without any console commands.
+
+Before you start
+^^^^^^^^^^^^^^^^
+
+- Open Dash Core wallet and wait for it to synchronize with the network.
+- If the **Masternodes** tab is not visible, enable it by selecting **Settings >
+  Options**, opening the **Display** tab and checking **Show Masternodes Tab**.
+- The wallet must hold private keys. The **Register Masternode…** button is
+  disabled for watch-only wallets and for wallets that use an external signer.
+  Hover over the button to see the reason if it is disabled.
+- Make sure the wallet holds enough funds. If the wizard sends the collateral,
+  a single address in your wallet must hold the full collateral amount (1000
+  DASH for a masternode, 4000 DASH for an evonode) plus the transaction fee.
+  Otherwise, you only need a small balance to pay the transaction fee.
+- If your wallet is encrypted, you will be asked to unlock it when the
+  registration is prepared and sent.
+
+To start the wizard, open the **Masternodes** tab and click **Register
+Masternode…**. The wizard shows your progress at the top of each page. Click
+**Next** to continue or **Back** to return to an earlier page.
+
+.. figure:: img/dashcore-mn-register-button.png
+   :width: 400px
+
+   Masternodes tab showing the Register Masternode… button
+
+Masternode type
+^^^^^^^^^^^^^^^
+
+Select **Masternode** to register a regular masternode or **EvoNode** to
+register an evonode. Evonodes also host Dash Platform and require additional
+information later in the wizard. See the :ref:`evonode setup guide
+<evonode-setup>` for details on preparing an evonode server.
+
+Collateral
+^^^^^^^^^^
+
+Select how the collateral will be provided:
+
+- **Send collateral from this wallet to a new address**: A single transaction
+  sends the collateral to a new address in this wallet and registers the
+  masternode. A new address is filled in automatically. Click **Use new
+  address** to generate another one.
+- **Use an existing collateral output of this wallet**: Select an output from
+  the list. Only unspent P2PKH outputs of exactly the collateral amount that
+  have at least one confirmation, are not locked and are not already used by
+  another masternode are shown. If your collateral output is locked in Coin
+  Control, unlock it first.
+- **Reference an external collateral (e.g. hardware wallet)**: Enter the
+  **Transaction ID** and **Output index** of the collateral transaction held
+  outside this wallet. You will be asked to sign a message with the collateral
+  key before the registration is submitted.
+
+.. figure:: img/dashcore-mn-wizard-collateral.png
+   :width: 400px
+
+   Collateral page of the Register Masternode wizard
+
+Service addresses
+^^^^^^^^^^^^^^^^^
+
+Enter the public IP address and port of your masternode server, for example
+``45.76.230.239:9999``. Separate multiple addresses with commas or spaces.
+Multiple addresses can only be registered after the v24 hard fork activates, and
+the first address must be an IPv4 address. This
+field may be left empty, but the masternode then stays inactive until you send
+an :ref:`Update Service <dashcore-mn-maintenance>` transaction with an address.
+
+Keys
+^^^^
+
+- **Owner address**: Controls the masternode and signs registrar updates. A new
+  address from this wallet is filled in automatically. You can also enter an
+  address controlled by the owner.
+- **Voting address**: Used to vote on governance proposals. Leave it empty to
+  vote with the owner key, click **Use new address** to keep a separate voting
+  key in this wallet, or enter the address of your :ref:`voting delegate
+  <delegating-votes>`.
+- **Operator key**: Select **Generate a new operator key** to create a new BLS
+  key pair, or **Use an existing operator public key** if your hosting provider
+  gave you their BLS public key. A generated secret key is shown later and must
+  be confirmed before registering.
+
+The owner and voting addresses must be different from the collateral address.
+
+.. figure:: img/dashcore-mn-wizard-keys.png
+   :width: 400px
+
+   Keys page of the Register Masternode wizard
+
+Payout
+^^^^^^
+
+Enter the **Payout address** that will receive the owner's masternode rewards. A
+new address is filled in automatically. The payout address must be different
+from the owner, voting and collateral addresses. Optionally set an **Operator
+reward** percentage if you have an agreement with a hosting provider. Leave it
+at 0 otherwise, since the operator will permanently receive this share of all
+rewards of the masternode. The operator specifies their own payout address in a
+separate :ref:`Update Service <dip3-update-service>` transaction.
+
+Platform services (evonodes only)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you selected **EvoNode**, enter the **Platform node ID** (40 hexadecimal
+characters), which is derived from the Platform P2P key. See
+:ref:`evonode-generate-platform-node-id` for instructions on generating it.
+Then enter the **Platform P2P** and **Platform HTTPS API** addresses in the
+``ADDR:PORT`` format. Before the v24 hard fork activates, only the **Platform P2P
+port** and **Platform HTTPS port** can be registered instead.
+
+Fee source
+^^^^^^^^^^
+
+Select the wallet address that pays the transaction fee. If the wizard is
+sending the collateral, the selected address also funds the collateral and
+change returns to this address. The exact fee is calculated from your wallet
+settings when you register.
+
+Review
+^^^^^^
+
+Check the summary of all values carefully. If anything is wrong, click **Back**
+to correct it. Then click **Continue** (if you generated a new operator key),
+**Register**, or **Prepare** (if you referenced an external collateral).
+
+Save operator key
+^^^^^^^^^^^^^^^^^
+
+If you generated a new operator key, the wizard now shows the **Operator secret
+key** and the line to add to the ``dash.conf`` file on your masternode server.
+Click **Copy** and store the line somewhere safe. **This key is not stored in
+the wallet and cannot be recovered.** Type the last 4 characters of the secret
+key to confirm you saved it, then click **Register** (or **Prepare** for an
+external collateral).
+
+.. figure:: img/dashcore-mn-wizard-operator-key.png
+   :width: 400px
+
+   Save operator key page of the Register Masternode wizard
+
+Prove collateral ownership (external collateral only)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you referenced an external collateral, the wizard prepares the registration
+and shows the collateral address and a message. Click **Copy message** and sign
+the message with the private key of the collateral address, for example with
+your hardware wallet's sign-message feature. Paste the base64 signature into the
+**Signature** field and click **Submit**.
+
+The registration cannot be changed at this point, so the **Back** button is not
+available. If you click **Cancel**, the prepared registration is discarded.
+
+.. figure:: img/dashcore-mn-wizard-sign.png
+   :width: 400px
+
+   Prove collateral ownership page of the Register Masternode wizard
+
+After you click **Register** (or **Submit** for an external collateral), a
+**Confirm masternode registration** dialog summarizes the transaction. Click
+**Send** to broadcast it, then unlock the wallet if prompted.
+
+Masternode registered
+^^^^^^^^^^^^^^^^^^^^^
+
+The final page shows the **Provider transaction hash** (proTxHash) that
+identifies your masternode, along with a list of next steps. The transaction
+appears in the **Transactions** tab as **Masternode Registration**. Click
+**Finish** to close the wizard.
+
+.. figure:: img/dashcore-mn-wizard-complete.png
+   :width: 400px
+
+   Masternode registered page of the Register Masternode wizard
+
+.. _dashcore-mn-wizard-configure:
+
+Configure the masternode server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you used an operator public key provided by your hosting service, they
+configure the server for you. If you generated a new operator key, the operator
+secret key must now be entered on your masternode server.
+
+For a regular masternode, log in to your masternode using ``ssh`` or PuTTY and
+edit the configuration file as follows::
+
+  nano ~/.dashcore/dash.conf
+
+Add the ``masternodeblsprivkey=`` line you saved in the wizard, then save the
+file and restart Dash Core::
+
+  ~/.dashcore/dash-cli stop
+  sleep 15
+  ~/.dashcore/dashd
+
+Make sure every registered service address and port is reachable from the
+internet. The masternode becomes active once the registration is confirmed on
+the network. You can monitor it by entering ``~/.dashcore/dash-cli masternode
+status``.
+
+For an evonode, run ``dashmate setup`` on your server as described in
+:ref:`Complete server configuration <evonode-complete-server-config>`. Select
+**Yes** when asked whether the masternode is already registered, and enter the
+operator secret key from the wizard as the BLS private key along with your
+Platform node key. The Platform node key must match the Platform node ID you
+registered.
+
 .. _dashcore-protx:
 
-Option 2: Registering from Dash Core wallet
--------------------------------------------
+Option 3: Registering from Dash Core console
+--------------------------------------------
 
 Identify the funding transaction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -679,7 +904,7 @@ Congratulations! Your masternode is now running.
 
 .. _dashelectrum-protx:
 
-Option 3: Registering from Dash Electrum wallet
+Option 4: Registering from Dash Electrum wallet
 -----------------------------------------------
 
 Dash Electrum supports registering and managing masternodes. Details can be
@@ -695,3 +920,115 @@ flexibility.
   for the Dash Electrum documentation demonstrating how to configure a
   masternode using a multisig collateral.
   
+
+.. _shared-masternode-setup:
+
+Register a shared masternode
+============================
+
+Starting with Dash Core v24.0.0, between two and eight participants can fund
+the collateral of one regular masternode together using the **Shared
+Masternode…** wizard on the **Masternodes** tab. Each participant contributes at
+least 100 DASH, and the contributions must add up to exactly 1000 DASH. The
+owner reward is split between the participants in proportion to their
+contributions, after any operator reward has been paid.
+
+.. note::
+
+  Shared masternodes require the v24 hard fork. The **Shared Masternode…**
+  button is disabled until the hard fork is active on the network. Evonodes
+  cannot use shared collateral yet.
+
+One person acts as the **coordinator** and enters the participants, masternode
+settings and exit terms. Everyone else is a **participant** who pastes the
+messages they receive and copies back a reply. Messages can be exchanged using
+any channel, either as text copied to the clipboard or as files saved with
+**Save…** and opened with **Open File…**. Nothing reaches the network until the
+coordinator broadcasts the final registration. Every message shows a short code
+so the coordinator and participants can confirm they hold the same message.
+Replies are accepted in any order, and either role can save a session and
+reopen it later from the **Shared Masternode…** landing page.
+
+The registration is completed in three rounds:
+
+#. **Invitation**: The coordinator sends one invitation to every participant.
+   Each participant reserves their coins and replies with their details.
+#. **Locked terms**: The coordinator locks the terms and sends them to every
+   participant. Each participant reviews the terms and replies with their
+   approval.
+#. **Signing request**: The coordinator sends a signing request. Each
+   participant replies with their signed contribution, and the coordinator
+   broadcasts the registration.
+
+Coordinator steps
+-----------------
+
+#. Open the **Masternodes** tab, click **Shared Masternode…** and then click
+   **Start a Shared Masternode**.
+#. On the **Participants** page, enter a name and amount for each participant
+   (two rows are provided; click **Add Participant** for more, up to eight), and
+   select your own row in the **Me** column.
+#. On the **Masternode settings** page, enter the **Service addresses**, the
+   **Operator key**, the name of the participant who runs the node in **Node
+   run by**, the **Voting address** and an optional **Operator reward**. These
+   settings apply to the whole masternode.
+#. On the **Exit terms** page, select the **Early period** and the
+   **Early-exit penalty**. Anyone can dissolve the masternode on their own at
+   any time, and everyone gets their principal back. During the early period,
+   whoever dissolves alone pays the penalty out of their own share and it is
+   split among the others. If everyone agrees, dissolving is free at any time.
+   The penalty must be less than the smallest share.
+#. On the **Your contribution** page, enter your **Owner address**, **Refund
+   address** and optional **Reward address**, then click **Reserve Coins**. The
+   refund address receives your principal when the masternode is dissolved and
+   cannot be changed later.
+#. If you generated a new operator key, save it on the **Save operator key**
+   page and confirm it by typing its last 4 characters.
+#. On the **Invite participants** page, click **Copy Invitation** or **Save
+   Invitation…** and send the invitation to every participant. Click **Paste**
+   to add each reply as it arrives. When every participant has replied, click
+   **Lock Terms**, review the terms shown, and click **Lock and Approve**. This
+   locks the terms and approves them with your owner key.
+#. On the **Approvals** page, click **Copy Locked Terms** and send them to every
+   participant. Paste each approval as it arrives. When all approvals are in,
+   Dash Core signs your coins and opens the **Signatures** page. If you released
+   your coins in the meantime, click **Reserve and Sign** to continue.
+#. On the **Signatures** page, click **Copy Signing Request** and send it to
+   every participant. Paste each signed contribution as it arrives, then click
+   **Broadcast Registration**.
+
+Participant steps
+-----------------
+
+#. Open the **Masternodes** tab, click **Shared Masternode…** and click **Paste
+   From Clipboard** or **Open File…** to open the invitation you received.
+#. On the **Your share** page, select your row in **This is me:**, enter your
+   **Owner address**, **Refund address** and optional **Reward address**, and
+   check the coins the wallet will use for your share. Click **Reserve Coins and
+   Copy Details** and send the reply to the coordinator.
+#. When you receive the locked terms, click **Paste** to open them. Check that
+   your share has the correct amount and addresses, then click **Approve and
+   Copy Reply** and send the reply to the coordinator.
+#. When you receive the signing request, paste it, click **Sign and Copy
+   Reply** and send the reply to the coordinator.
+#. Wait for the coordinator to broadcast the registration.
+
+If you need to withdraw before the registration is broadcast, click **Release
+my coins** to release the coins reserved for your share. Reserved coins are
+released automatically after the registration is broadcast.
+
+After the registration
+----------------------
+
+The **Shared masternode registered** page lists what to keep safe: your share
+owner key, the operator secret key (if you hold it), a standby dissolution and
+the session record. Click **Save Final Record…** to save the session record.
+The masternode appears in the list on the **Masternodes** tab with the type
+**Shared (you hold k of n)** after one confirmation. Once the registration is
+confirmed, create a standby dissolution as described in
+:ref:`shared-masternode-maintenance` and store it with your refund address
+backup, separately from your wallet.
+
+The participant who runs the node must configure the operator secret key on the
+masternode server as described in :ref:`Configure the masternode server
+<dashcore-mn-wizard-configure>`.
