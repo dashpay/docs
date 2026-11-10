@@ -32,13 +32,19 @@ options](#ui-options).
        Execute command when an alert is raised (%s in cmd is replaced by
        message)
 
+  -allowignoredconf
+       For backwards compatibility, treat an unused dash.conf file in the
+       datadir as a warning, not an error.
+
   -assumevalid=<hex>
        If this block is in the chain assume that it and its ancestors are valid
        and potentially skip their script verification (0 to verify all,
        default:
-       0000000000000009ba1e8f47851d036bb618a4f6565eb3c32d1f647d450ff195,
+       000000000000000346a1804da4832b0b69dd9a7f96b14c7cb54585a9ac6ae98f,
        testnet:
-       00000107d42829a38e31c1a38c660d621e1ca376a880df1520e85e38af175d3a)
+       000000116cd3c11d44c88cbc0a26804bd277a5d790f684ec3a8aaa820690318c,
+       devnet:
+       0000000000000000000000000000000000000000000000000000000000000000)
 
   -blockfilterindex=<type>
        Maintain an index of compact filters by block (default: 0, values:
@@ -59,10 +65,10 @@ options](#ui-options).
        <datadir>)
 
   -blocksonly
-       Whether to reject transactions from network peers. Automatic broadcast
-       and rebroadcast of any transactions from inbound peers is
-       disabled, unless the peer has the 'forcerelay' permission. RPC
-       transactions are not affected. (default: 0)
+       Whether to reject transactions from network peers. Disables automatic
+       broadcast and rebroadcast of transactions, unless the source peer
+       has the 'forcerelay' permission. RPC transactions are not
+       affected. (default: 0)
 
   -chainlocknotify=<cmd>
        Execute command when the best chainlock changes (%s in cmd is replaced
@@ -73,7 +79,8 @@ options](#ui-options).
 
   -conf=<file>
        Specify path to read-only configuration file. Relative paths will be
-       prefixed by datadir location. (default: dash.conf)
+       prefixed by datadir location (only useable from command line, not
+       configuration file) (default: dash.conf)
 
   -daemon
        Run in the background as a daemon and accept commands (default: 0)
@@ -94,9 +101,9 @@ options](#ui-options).
        -maxmempool).
 
   -debuglogfile=<file>
-       Specify location of debug log file. Relative paths will be prefixed by a
-       net-specific datadir location. (-nodebuglogfile to disable;
-       default: debug.log)
+       Specify location of debug log file (default: debug.log). Relative paths
+       will be prefixed by a net-specific datadir location. Pass
+       -nodebuglogfile to disable writing the log to a file.
 
   -includeconf=<file>
        Specify additional configuration file, relative to the -datadir path
@@ -120,17 +127,19 @@ options](#ui-options).
 
   -minimumchainwork=<hex>
        Minimum work assumed to exist on a valid chain in hex (default:
-       00000000000000000000000000000000000000000000ae8d578b28f390b9c630,
+       00000000000000000000000000000000000000000000c15981a81af44a6abe1a,
        testnet:
-       000000000000000000000000000000000000000000000000036073cd80626b9c)
+       00000000000000000000000000000000000000000000000003ed573a939487fc,
+       devnet:
+       0000000000000000000000000000000000000000000000000000000000000000)
 
   -par=<n>
-       Set the number of script verification threads (-16 to 15, 0 = auto, <0 =
-       leave that many cores free, default: 0)
+       Set the number of script verification threads (0 = auto, <0 = leave that
+       many cores free, max: 15, default: 0)
 
   -parbls=<n>
-       Set the number of BLS verification threads (-16 to 33, 0 = auto, <0 =
-       leave that many cores free, default: 0)
+       Set the number of BLS verification threads (0 = auto, <0 = leave that
+       many cores free, max: 33, default: 0)
 
   -persistmempool
        Whether to save the mempool on shutdown and load on restart (default: 1)
@@ -144,11 +153,12 @@ options](#ui-options).
        blocks. This allows the pruneblockchain RPC to be called to
        delete specific blocks, and enables automatic pruning of old
        blocks if a target size in MiB is provided. This mode is
-       incompatible with -txindex, -rescan and -disablegovernance=false.
-       Warning: Reverting this setting requires re-downloading the
-       entire blockchain. (default: 0 = disable pruning blocks, 1 =
-       allow manual pruning via RPC, >945 = automatically prune block
-       files to stay under the specified target size in MiB)
+       incompatible with -txindex, -addressindex, -spentindex and
+       -disablegovernance=false. Warning: Reverting this setting
+       requires re-downloading the entire blockchain. (default: 0 =
+       disable pruning blocks, 1 = allow manual pruning via RPC, >945 =
+       automatically prune block files to stay under the specified
+       target size in MiB)
 
   -settings=<file>
        Specify path to dynamic settings data file. Can be disabled with
@@ -157,15 +167,17 @@ options](#ui-options).
        Relative paths will be prefixed by datadir location. (default:
        settings.json)
 
+  -shutdownnotify=<cmd>
+       Execute command immediately before beginning shutdown. The need for
+       shutdown may be urgent, so be careful not to delay it long (if
+       the command doesn't require interaction with the server, consider
+       having it fork into the background).
+
   -startupnotify=<cmd>
        Execute command on startup.
 
   -syncmempool
        Sync mempool from other nodes on start (default: 1)
-
-  -sysperms
-       Create new files with system default permissions, instead of umask 077
-       (only effective with disabled wallet functionality)
 
   -version
        Print version and exit
@@ -200,7 +212,12 @@ options](#ui-options).
        [host]:port notation for IPv6. Append =onion to tag any incoming
        connections to that address and port as incoming Tor connections
        (default: 127.0.0.1:9996=onion, testnet: 127.0.0.1:19996=onion,
-       regtest: 127.0.0.1:19896=onion)
+       devnet: 127.0.0.1:19796=onion, regtest: 127.0.0.1:19896=onion).
+       Without an =onion bind, the default onion bind is added unless
+       -bind is given and -listenonion is disabled; failing to bind it
+       stops startup only with an explicit -listenonion=1, and otherwise
+       no onion service is created. While -listenonion is enabled, a
+       wildcard =onion bind is an error.
 
   -cjdnsreachable
        If set, then this host is configured for CJDNS (connecting to fc00::/8
@@ -248,7 +265,9 @@ options](#ui-options).
        -maxconnections=0)
 
   -listenonion
-       Automatically create Tor onion service (default: 1)
+       Automatically create Tor onion service if Tor is available and the onion
+       bind could be bound (see -bind). If set to 1 explicitly, fail to
+       start if the onion bind cannot be bound (default: 1)
 
   -maxconnections=<n>
        Maintain at most <n> connections to peers (temporary service connections
@@ -308,8 +327,9 @@ options](#ui-options).
 
   -port=<port>
        Listen for connections on <port>. Nodes not using the default ports
-       (default: 9999, testnet: 19999, regtest: 19899) are unlikely to
-       get incoming connections. Not relevant for I2P (see doc/i2p.md).
+       (default: 9999, testnet: 19999, devnet: 19799, regtest: 19899)
+       are unlikely to get incoming connections. Not relevant for I2P
+       (see doc/i2p.md).
 
   -proxy=<ip:port|path>
        Connect through SOCKS5 proxy, set -noproxy to disable (default:
@@ -336,8 +356,9 @@ options](#ui-options).
        (minimum: 1, default: 5000)
 
   -torcontrol=<ip>:<port>
-       Tor control port to use if onion listening enabled (default:
-       127.0.0.1:9051)
+       Tor control host and port to use if onion listening enabled (default:
+       127.0.0.1:9051). If no port is specified, the default port of
+       9051 will be used.
 
   -torpassword=<pass>
        Tor control port password (default: empty)
@@ -366,10 +387,11 @@ options](#ui-options).
        download,noban,mempool,relay). Can be specified multiple times.
 
   -whitelist=<[permissions@]IP address or network>
-       Add permission flags to the peers connecting from the given IP address
-       (e.g. 1.2.3.4) or CIDR-notated network (e.g. 1.2.3.0/24). Uses
-       the same permissions as -whitebind. Can be specified multiple
-       times.
+       Add permission flags to the peers using the given IP address (e.g.
+       1.2.3.4) or CIDR-notated network (e.g. 1.2.3.0/24). Uses the same
+       permissions as -whitebind. Additional flags "in" and "out"
+       control whether permissions apply to incoming connections and/or
+       manual (default: incoming only). Can be specified multiple times.
 
 ```
 
@@ -388,7 +410,7 @@ options](#ui-options).
   -reindex-chainstate
        Rebuild chain state from the currently indexed blocks. When in pruning
        mode or if blocks on disk might be corrupted, use full -reindex
-       instead. Deactivate all optional indexes before running this.
+       instead.
 
   -spentindex
        Maintain a full spent index, used to query the spending txid and input
@@ -479,6 +501,13 @@ options](#ui-options).
   -disablewallet
        Do not load the wallet and disable wallet RPC calls
 
+  -dustprotectionthreshold=<n>
+       Automatically lock UTXOs from incoming external transactions at or below
+       <n> duffs to protect against dust attacks. Locked UTXOs persist
+       across restarts and are not automatically unlocked when threshold
+       changes; use lockunspent RPC to unlock manually (0 = disabled,
+       default: 0, max: 1000000)
+
   -instantsendnotify=<cmd>
        Execute command when a wallet InstantSend transaction is successfully
        locked. %s in cmd is replaced by TxID and %w is replaced by
@@ -496,9 +525,8 @@ options](#ui-options).
        Spend up to this amount in additional (absolute) fees (in DASH) if it
        allows the use of partial spend avoidance (default: 0.00)
 
-  -rescan=<mode>
-       Rescan the block chain for missing wallet transactions on startup (1 =
-       start from wallet creation time, 2 = start from genesis block)
+  -signer=<cmd>
+       External signing tool, see doc/external-signer.md
 
   -spendzeroconfchange
        Spend unconfirmed change when sending transactions (default: 1)
@@ -566,6 +594,13 @@ options](#ui-options).
 ### HD wallet options
 
 ```text
+
+  -allow-deprecated-long-mnemonics
+       Allow creating an HD wallet with a mnemonic passphrase of 249 to 256
+       bytes. Seed derivation ignores the bytes past the 248th, so use
+       this only to recover a wallet created with such a passphrase by
+       Dash Core 19.2.0 or later. It can't recover one created by an
+       earlier version (default: 0)
 
   -hdseed=<hex>
        User defined seed for HD wallet (should be in hex). Only has effect
@@ -799,6 +834,10 @@ options](#ui-options).
 
 ```text
 
+  -acceptstalefeeestimates
+       Read fee estimates even if they are stale (regtest only; default: 0) fee
+       estimates are considered stale if they are 60 hours old
+
   -capturemessages
        Capture all P2P messages to disk
 
@@ -826,7 +865,7 @@ options](#ui-options).
 
   -checkpoints
        Enable rejection of any forks from the known historical chain until
-       block 2361500 (default: 1)
+       block 2563000 (default: 1)
 
   -debug=<category>
        Output debug and trace logging (default: -nodebug, supplying <category>
@@ -836,9 +875,9 @@ options](#ui-options).
        creditpool, ehf, estimatefee, gobject, http, i2p, instantsend,
        ipc, leveldb, libevent, llmq, llmq-dkg, llmq-sigs, mempool,
        mempoolrej, mnpayments, mnsync, net, netconn, proxy, prune, qt,
-       rand, reindex, rpc, selectcoins, spork, tor, txreconciliation,
-       validation, walletdb, zmq. This option can be specified multiple
-       times to output multiple categories.
+       rand, reindex, rpc, scan, selectcoins, spork, tor,
+       txreconciliation, validation, walletdb, zmq. This option can be
+       specified multiple times to output multiple categories.
 
   -debugexclude=<category>
        Exclude debug and trace logging for a category. Can be used in
@@ -855,6 +894,10 @@ options](#ui-options).
   -fastprune
        Use smaller block files and lower minimum prune height for testing
        purposes
+
+  -forceevodbrepair
+       Force evodb masternode list diff verification and repair on startup,
+       even if already repaired (default: 0)
 
   -help-debug
        Print help message with debugging options and exit
@@ -880,17 +923,21 @@ options](#ui-options).
 
   -loglevel=<level>|<category>:<level>
        Set the global or per-category severity level for logging categories
-       enabled with the -debug configuration option or the logging RPC:
-       info, debug, trace (default=debug); warning and error levels are
-       always logged. If <category>:<level> is supplied, the setting
-       will override the global one and may be specified multiple times
-       to set multiple category-specific levels. <category> can be:
-       addrman, bench, blockstorage, chainlocks, cmpctblock, coindb,
-       coinjoin, creditpool, ehf, estimatefee, gobject, http, i2p,
-       instantsend, ipc, leveldb, libevent, llmq, llmq-dkg, llmq-sigs,
-       mempool, mempoolrej, mnpayments, mnsync, net, netconn, proxy,
-       prune, qt, rand, reindex, rpc, selectcoins, spork, tor,
+       enabled with the -debug configuration option or the logging RPC.
+       Possible values are info, debug, trace (default=debug). The
+       following levels are always logged: error, warning, info. If
+       <category>:<level> is supplied, the setting will override the
+       global one and may be specified multiple times to set multiple
+       category-specific levels. <category> can be: addrman, bench,
+       blockstorage, chainlocks, cmpctblock, coindb, coinjoin,
+       creditpool, ehf, estimatefee, gobject, http, i2p, instantsend,
+       ipc, leveldb, libevent, llmq, llmq-dkg, llmq-sigs, mempool,
+       mempoolrej, mnpayments, mnsync, net, netconn, proxy, prune, qt,
+       rand, reindex, rpc, scan, selectcoins, spork, tor,
        txreconciliation, validation, walletdb, zmq.
+
+  -loglevelalways
+       Always prepend a category and level (default: 0)
 
   -logsourcelocations
        Prepend debug output with name of the originating source location
@@ -917,11 +964,6 @@ options](#ui-options).
   -maxtxfee=<amt>
        Maximum total fees (in DASH) to use in a single wallet transaction;
        setting this too low may abort large transactions (default: 0.10)
-
-  -minsporkkeys=<n>
-       Overrides minimum spork signers to change spork value. Only useful for
-       regtest and devnet. Using this on mainnet or testnet will ban
-       you.
 
   -mocktime=<n>
        Replace actual time with UNIX epoch time (default: 0)
@@ -953,6 +995,9 @@ options](#ui-options).
        Stop running after reaching the given height in the main chain (default:
        0)
 
+  -tinyblk
+       Use smaller block files for testing purposes
+
   -uacomment=<cmt>
        Append comment to the user agent string
 
@@ -970,7 +1015,7 @@ options](#ui-options).
 
   -chain=<chain>
        Use the chain <chain> (default: main). Allowed values: main, test,
-       regtest
+       devnet, regtest
 
   -devnet=<name>
        Use devnet chain with provided name
@@ -1038,7 +1083,8 @@ options](#ui-options).
 
   -testactivationheight=name@height.
        Set the activation height of 'name' (bip147, bip34, dersig, cltv, csv,
-       brr, dip0001, dip0008, dip0024, v19, v20, mn_rr). (regtest-only)
+       brr, dip0001, dip0008, dip0024, v19, v20, mn_rr, ipv4_optional).
+       (regtest-only)
 
   -testnet
        Use the test chain. Equivalent to -chain=test
@@ -1056,8 +1102,8 @@ options](#ui-options).
 ```text
 
   -acceptnonstdtxn
-       Relay and mine "non-standard" transactions (testnet/regtest only;
-       default: 1)
+       Relay and mine "non-standard" transactions (test networks only; default:
+       0)
 
   -bytespersigop
        Equivalent bytes per sigop in transactions for relay and mining
@@ -1067,8 +1113,8 @@ options](#ui-options).
        Relay and mine data carrier transactions (default: 1)
 
   -datacarriersize
-       Maximum size of data in data carrier transactions we relay and mine
-       (default: 83)
+       Relay and mine transactions whose data-carrying raw scriptPubKey is of
+       this size or less (default: 83)
 
   -dustrelayfee=<amt>
        Fee rate (in DASH/kB) used to define dust, the value of an output such
@@ -1077,7 +1123,7 @@ options](#ui-options).
 
   -incrementalrelayfee=<amt>
        Fee rate (in DASH/kB) used to define cost of relay, used for mempool
-       limiting and BIP 125 replacement. (default: 0.00001)
+       limiting. (default: 0.00001)
 
   -minrelaytxfee=<amt>
        Fees (in DASH/kB) smaller than this are considered zero fee for
@@ -1087,14 +1133,14 @@ options](#ui-options).
        Relay non-P2SH multisig (default: 1)
 
   -whitelistforcerelay
-       Add 'forcerelay' permission to whitelisted inbound peers with default
+       Add 'forcerelay' permission to whitelisted peers with default
        permissions. This will relay transactions even if the
        transactions were already in the mempool. (default: 0)
 
   -whitelistrelay
-       Add 'relay' permission to whitelisted inbound peers with default
-       permissions. This will accept relayed transactions even when not
-       relaying transactions (default: 1)
+       Add 'relay' permission to whitelisted peers with default permissions.
+       This will accept relayed transactions even when not relaying
+       transactions (default: 1)
 
 ```
 
@@ -1149,6 +1195,10 @@ options](#ui-options).
        Location of the auth cookie. Relative paths will be prefixed by a
        net-specific datadir location. (default: data dir)
 
+  -rpcdoccheck
+       Throw a non-fatal error at runtime if the documentation for an RPC is
+       incorrect (default: 0)
+
   -rpcexternaluser=<users>
        List of comma-separated usernames for JSON-RPC external connections
 
@@ -1161,7 +1211,7 @@ options](#ui-options).
 
   -rpcport=<port>
        Listen for JSON-RPC connections on <port> (default: 9998, testnet:
-       19998, regtest: 19898)
+       19998, devnet: 19798, regtest: 19898)
 
   -rpcservertimeout=<n>
        Timeout during HTTP requests (default: 30)
@@ -1213,7 +1263,7 @@ options](#ui-options).
        0)
 
   -font-family
-       Set the font family. Possible values: SystemDefault, Montserrat.
+       Set the font family. Possible values: Montserrat, SystemDefault.
        (default: SystemDefault)
 
   -font-scale
@@ -1244,5 +1294,4 @@ options](#ui-options).
 
   -windowtitle=<name>
        Sets a window title which is appended to "Dash Core - "
-
 ```

@@ -103,8 +103,8 @@ View [the list of RPCs](../api/remote-procedure-call-quick-reference.md) for mor
        Password for JSON-RPC connections
 
   -rpcport=<port>
-       Connect to JSON-RPC on <port> (default: 9998, testnet: 19998, regtest:
-       19898)
+       Connect to JSON-RPC on <port> (default: 9998, testnet: 19998, devnet:
+       19798, regtest: 19898)
 
   -rpcuser=<user>
        Username for JSON-RPC connections
@@ -150,12 +150,11 @@ View [the list of RPCs](../api/remote-procedure-call-quick-reference.md) for mor
 
   -chain=<chain>
        Use the chain <chain> (default: main). Allowed values: main, test,
-       regtest
+       devnet, regtest
 
   -devnet=<name>
        Use devnet chain with provided name
 
   -testnet
        Use the test chain. Equivalent to -chain=test
-
 ```
