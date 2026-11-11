@@ -90,6 +90,54 @@ DISPLAY=:99 LANG=en_US.UTF-8 QT_FONT_DPI=96 dash-qt -regtest -datadir=<dir> &
 The static dash-qt build only has the `xcb` Qt platform plugin, so it needs an
 X display (Xvfb) even for `dash-qt -help`.
 
+## Scripted capture
+
+Some screenshots can be retaken with scripts in this directory. They need the
+packages above (the scripts set up fontconfig, Qt settings and Xvfb themselves)
+and a Dash Core build.
+
+```bash
+export DASH_BIN=/path/to/dash/bin   # dashd, dash-cli, and dash-qt (or qt/dash-qt)
+export WORK=/tmp/dash-qt-screenshots # optional; data and output go here
+
+./setup-demo.sh            # build the regtest demo data (about 15 s)
+./capture.sh               # all shots, or name some: capture.sh options wizard
+./compare.sh               # what changed against the committed images
+./compare.sh --install     # copy the changed images into the repository
+```
+
+| Script | What it does |
+|---|---|
+| `setup-demo.sh` | Builds a regtest chain with a fixed clock (mocktime), wallets from fixed mnemonics, 8 masternodes with fixed BLS keys, 4 proposals and votes. Keeps a pristine copy of it. |
+| `capture.sh` | Restores the pristine copy, starts Xvfb, a peer `dashd` and `dash-qt` with the screenshot profile, navigates by fixed window sizes and click coordinates, and writes images to `$WORK/out/<repo path>`. Run `capture.sh --help` for the shot names. |
+| `compare.sh` | Compares `$WORK/out` with the repository, or with another output directory, and lists the share of changed pixels per image. |
+| `lib.sh` | Shared settings and helpers. |
+
+What is repeatable:
+
+- Two capture runs on the same demo data give identical images, except the
+  wizard's Keys, Review and Save operator key pages. Those show an operator key
+  that dash-qt generates at random.
+- A new demo data build gives the same addresses, keys, heights, dates, proposal
+  hashes and votes. Only the masternode **Last Paid** and **Next Payment**
+  columns can differ, because payment order depends on transaction hashes that
+  include random wallet choices.
+
+Limits:
+
+- Coordinates are tied to the window sizes and layout of the Dash Core version
+  the shots were written for (v24.0.0). When a release moves a button, update
+  the coordinates in `capture.sh`. A changed `compare.sh` result is the signal
+  to look.
+- The GUI compares the chain tip with the real clock, not mocktime, so it shows
+  the sync overlay. `capture.sh` clicks **Hide**. Anything else that uses the
+  real clock may differ between days.
+- Not scripted yet, take these by hand: the masternode context menu, the
+  Proposal Votes dialog, Coin Selection, wallet migration, the splash screen,
+  Create Wallet, the wizard's confirm, signing and finished pages (they register
+  a masternode, which changes the demo data), and anything that needs v24
+  active.
+
 ### Driving the GUI
 
 - Find windows with `xdotool search --onlyvisible --name ''` and
