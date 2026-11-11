@@ -435,20 +435,7 @@ Name | Type | Presence | Description
 →<br>`chainwork` | string (hex) | Required<br>(exactly 1) | The estimated number of block header hashes checked from the genesis block to this block, encoded as big-endian hex
 →<br>`pruned` | bool | Required<br>(exactly 1) | Indicates if the blocks are subject to pruning
 →<br>`pruneheight` | number (int) | Optional<br>(0 or 1) | The lowest-height complete block stored if pruning is activated
-→<br>`softforks` | array | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>An array of objects each describing a current or previous soft fork
-→ →<br>Softfork | object | Required<br>(3 or more) | A specific softfork
-→ → →<br>`id` | string | Required<br>(exactly 1) | The name of the softfork
-→ → →<br>`version` | numeric<br>(int) | Required<br>(exactly 1) | The block version used for the softfork
-→ → →<br>`enforce` | string : object | Optional<br>(0 or 1) | The progress toward enforcing the softfork rules for new-version blocks
-→ → → →<br>`status` | bool | Required<br>(exactly 1) | Indicates if the threshold was reached
-→ → → →<br>`found` | numeric<br>(int) | Optional<br>(0 or 1) | Number of blocks that support the softfork
-→ → → →<br>`required` | numeric<br>(int) | Optional<br>(0 or 1) | Number of blocks that are required to reach the threshold
-→ → → →<br>`window` | numeric<br>(int) | Optional<br>(0 or 1) | The maximum size of examined window of recent blocks
-→ → →<br>`reject` | object | Optional<br>(0 or 1) | The progress toward enforcing the softfork rules for new-version blocks
-→ → → →<br>`status` | bool | Optional<br>(0 or 1) | Indicates if the threshold was reached
-→ → → →<br>`found` | numeric<br>(int) | Optional<br>(0 or 1) | Number of blocks that support the softfork
-→ → → →<br>`required` | numeric<br>(int) | Optional<br>(0 or 1) | Number of blocks that are required to reach the threshold
-→ → → →<br>`window` | numeric<br>(int) | Optional<br>(0 or 1) | The maximum size of examined window of recent blocks
+→<br>`softforks` | object | Optional<br>(0 or 1) | *Deprecated in Dash Core 24.0.0*<br><br>Status of softforks, keyed by name. Only returned if config option `-deprecatedrpc=softforks` is passed. Use [GET DeploymentInfo](../api/http-rest-requests.md#get-deploymentinfo) instead, which returns the same per-deployment objects in its `deployments` field
 →<br>`bip9_softforks` | object | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.1*<br><br>The status of BIP9 softforks in progress
 → →<br>Name | string : object | Required<br>(1 or more) | A specific BIP9 softfork
 → → →<br>`status` | string | Required<br>(exactly 1) | Set to one of the following reasons:<br>• `defined` if voting hasn't started yet<br>• `started` if the voting has started <br>• `locked_in` if the voting was successful but the softfort hasn't been activated yet<br>• `active` if the softfork was activated<br>• `failed` if the softfork has not receieved enough votes
@@ -539,7 +526,95 @@ Result (whitespace added):
 
 *See also*
 
+* [GET DeploymentInfo](../api/http-rest-requests.md#get-deploymentinfo): returns state info regarding deployments of consensus changes at the chain tip or at a specified block.
 * [GetBlockChainInfo](../api/remote-procedure-calls-blockchain.md#getblockchaininfo) RPC: provides information about the current state of the block chain.
+
+## GET DeploymentInfo
+
+:::{versionadded} 24.0.0
+:::
+
+The `GET deploymentinfo` operation returns an object containing various state info regarding deployments of consensus changes, either at the current chain tip or at a specified block.  The output is the same as the [`getdeploymentinfo` RPC](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo).  Supports only `json` as output format.
+
+*Request*
+
+``` text
+GET /deploymentinfo.json
+GET /deploymentinfo/<blockhash>.json
+```
+
+*Parameter #1---the header hash of the block to query*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+Block Hash | path (hex) | Optional<br>(0 or 1) | The hash of the header of the block at which to query deployment state, encoded as hex in RPC byte order.  If omitted, the current chain tip is used.  An invalid hash returns HTTP 400 with `Invalid hash: <hash>`, and a hash not found in the local block index returns HTTP 400 with `Block not found`
+
+*Response as JSON*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`result` | object | Required<br>(exactly 1) | Deployment information for the requested block (or tip).  See the [`getdeploymentinfo` RPC](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo) for a full description of each deployment object
+→<br>`hash` | string (hex) | Required<br>(exactly 1) | The requested block hash (or tip)
+→<br>`height` | number (int) | Required<br>(exactly 1) | The requested block height (or tip)
+→<br>`deployments` | object | Required<br>(exactly 1) | Deployments, keyed by name
+
+*Examples from Dash Core 24.0.0*
+
+Get deployment info at the current chain tip in JSON:
+
+``` bash
+curl http://localhost:19898/rest/deploymentinfo.json
+```
+
+Get deployment info at a specific block in JSON:
+
+``` bash
+curl http://localhost:19898/rest/deploymentinfo/2a4cac3cf6ef86bbeb4339b75f15e4b0c529b2f2bea76726cdd2d3971495cb2f.json
+```
+
+Result for the specific block (whitespace added, truncated):
+
+``` json
+{
+  "hash": "2a4cac3cf6ef86bbeb4339b75f15e4b0c529b2f2bea76726cdd2d3971495cb2f",
+  "height": 100,
+  "deployments": {
+    "bip34": {
+      "type": "buried",
+      "active": true,
+      "height": 1
+    },
+    "dip0003": {
+      "type": "buried",
+      "active": false,
+      "height": 432
+    },
+    "withdrawals": {
+      "type": "buried",
+      "active": false,
+      "height": 600
+    },
+    "v24": {
+      "type": "bip9",
+      "active": false,
+      "bip9": {
+        "start_time": 0,
+        "timeout": 9223372036854775807,
+        "ehf": true,
+        "min_activation_height": 0,
+        "status": "defined",
+        "since": 0,
+        "status_next": "defined"
+      }
+    }
+  }
+}
+```
+
+*See also*
+
+* [GET ChainInfo](../api/http-rest-requests.md#get-chaininfo): returns information about the current state of the block chain.
+* [GetDeploymentInfo](../api/remote-procedure-calls-blockchain.md#getdeploymentinfo) RPC: returns state info regarding deployments of consensus changes at any block.
 
 ## GET GetUtxos
 
@@ -765,56 +840,145 @@ The `GET mempool/contents` operation returns all transaction in the memory pool 
 
 ``` text
 GET /mempool/contents.json
+GET /mempool/contents.json?verbose=<true|false>&mempool_sequence=<true|false>
 ```
 
-*Parameters: none*
+*Parameter #1---verbose output*
 
-*Result as JSON*
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`verbose` | query (bool) | Optional<br>(0 or 1) | *Added in Dash Core 24.0.0*<br><br>Set to `true` (the default) to return a JSON object describing each transaction, or `false` to return an array of TXIDs.  Any value other than `true` or `false` returns HTTP 400 with `The "verbose" query parameter must be either "true" or "false".`
+
+*Parameter #2---include mempool sequence*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`mempool_sequence` | query (bool) | Optional<br>(0 or 1) | *Added in Dash Core 24.0.0*<br><br>Set to `true` to return the TXIDs together with the mempool sequence number.  Default: `false`.  Only valid with `verbose=false`; combining it with verbose output returns HTTP 400 with `Verbose results cannot contain mempool sequence values. (hint: set "verbose=false")`.  Any value other than `true` or `false` returns HTTP 400 with `The "mempool_sequence" query parameter must be either "true" or "false".`
+
+*Result (`verbose=true`, the default)---a JSON object describing each transaction*
 
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object | Required<br>(exactly 1) | A object containing transactions currently in the memory pool.  May be empty
 →<br>TXID | string : object | Optional<br>(0 or more) | The TXID of a transaction in the memory pool, encoded as hex in RPC byte order
-→ →<br>`size` | number (int) | Required<br>(exactly 1) | The size of the serialized transaction in bytes
-→ →<br>`fee` | number (bitcoins) | Required<br>(exactly 1) | The transaction fee paid by the transaction in decimal bitcoins
-→ →<br>`modifiedfee` | number (bitcoins) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The transaction fee with fee deltas used for mining priority in decimal bitcoins
+→ →<br>`vsize` | number (int) | Required<br>(exactly 1) | Transaction size
 → →<br>`time` | number (int) | Required<br>(exactly 1) | The time the transaction entered the memory pool, Unix epoch time format
 → →<br>`height` | number (int) | Required<br>(exactly 1) | The block height when the transaction entered the memory pool
-→ →<br>`startingpriority` | number (int) | Required<br>(exactly 1) | The priority of the transaction when it first entered the memory pool
-→ →<br>`currentpriority` | number (int) | Required<br>(exactly 1) | The current priority of the transaction
-→ →<br>`descendantcount` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The number of in-mempool descendant transactions (including this one)
-→ →<br>`descendantsize` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The size of in-mempool descendants (including this one)
-→ →<br>`descendantfees` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The modified fees (see `modifiedfee` above) of in-mempool descendants (including this one)
+→ →<br>`descendantcount` | number (int) | Required<br>(exactly 1) | The number of in-mempool descendant transactions (including this one)
+→ →<br>`descendantsize` | number (int) | Required<br>(exactly 1) | The size of in-mempool descendants (including this one)
+→ →<br>`ancestorcount` | number (int) | Required<br>(exactly 1) | The number of in-mempool ancestor transactions (including this one)
+→ →<br>`ancestorsize` | number (int) | Required<br>(exactly 1) | The size of in-mempool ancestors (including this one)
+→ →<br>`fees` | object | Required<br>(exactly 1) | Object containing fee information
+→ → →<br>`base` | number (Dash) | Required<br>(exactly 1) | Transaction fee in DASH
+→ → →<br>`modified` | number (Dash) | Required<br>(exactly 1) | Transaction fee with fee deltas used for mining priority in DASH
+→ → →<br>`ancestor` | number (Dash) | Required<br>(exactly 1) | Modified fees (see above) of in-mempool ancestors (including this one) in DASH
+→ → →<br>`descendant` | number (Dash) | Required<br>(exactly 1) | Modified fees (see above) of in-mempool descendants (including this one) in DASH
 → →<br>`depends` | array | Required<br>(exactly 1) | An array holding TXIDs of unconfirmed transactions this transaction depends upon (parent transactions).  Those transactions must be part of a block before this transaction can be added to a block, although all transactions may be included in the same block.  The array may be empty
 → → →<br>Depends TXID | string | Optional (0 or more) | The TXIDs of any unconfirmed transactions this transaction depends upon, encoded as hex in RPC byte order
+→ →<br>`spentby` | array | Required<br>(exactly 1) | An array of unconfirmed transactions spending outputs from this transaction
+→ → →<br>TXID | string | Optional (0 or more) | The TXIDs of any unconfirmed transactions spending from this transaction
+→ →<br>`instantlock` | string | Required<br>(exactly 1) | `"true"` if this transaction was locked via [InstantSend](../resources/glossary.md#instantsend), `"false"` if it was not, or `"unknown"` if InstantSend is unavailable
+→ →<br>`unbroadcast` | bool | Required<br>(exactly 1) | Whether this transaction is currently unbroadcast (initial broadcast not yet acknowledged by any peers)
 
-*Examples from Dash Core 0.12.2*
+*Result (`verbose=false`)---an array of TXIDs*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`result` | array | Required<br>(exactly 1) | An array of TXIDs belonging to transactions in the memory pool.  The array may be empty if there are no transactions in the memory pool
+→<br>TXID | string | Optional<br>(0 or more) | The TXID of a transaction in the memory pool, encoded as hex in RPC byte order
+
+*Result (`verbose=false&mempool_sequence=true`)---TXIDs with the mempool sequence*
+
+Name | Type | Presence | Description
+--- | --- | --- | ---
+`result` | object | Required<br>(exactly 1) | An object containing the TXIDs and the mempool sequence number
+→<br>`txids` | array | Required<br>(exactly 1) | An array of TXIDs belonging to transactions in the memory pool.  The array may be empty if there are no transactions in the memory pool
+→ →<br>TXID | string | Optional<br>(0 or more) | The TXID of a transaction in the memory pool, encoded as hex in RPC byte order
+→<br>`mempool_sequence` | number (int) | Required<br>(exactly 1) | The mempool sequence value
+
+*Examples from Dash Core 24.0.0*
 
 Get all transactions in the memory pool in JSON:
 
 ``` bash
-curl http://localhost:19998/rest/mempool/contents.json
+curl http://localhost:19898/rest/mempool/contents.json
 ```
 
 Result (whitespace added):
 
 ``` json
-{  
-   "b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32":{  
-      "size":225,
-      "fee":0.00010000,
-      "modifiedfee":0.00010000,
-      "time":1512596309,
-      "height":38094,
-      "startingpriority":1934576927.410256,
-      "currentpriority":1934576927.410256,
-      "descendantcount":1,
-      "descendantsize":225,
-      "descendantfees":10000,
-      "depends":[  
+{
+  "0d3c1eae261c05edd07911804100b11da4268b315eb956896230800f645eea51": {
+    "vsize": 225,
+    "time": 1794435096,
+    "height": 110,
+    "descendantcount": 1,
+    "descendantsize": 225,
+    "ancestorcount": 1,
+    "ancestorsize": 225,
+    "fees": {
+      "base": 0.00000225,
+      "modified": 0.00000225,
+      "ancestor": 0.00000225,
+      "descendant": 0.00000225
+    },
+    "depends": [],
+    "spentby": [],
+    "instantlock": "false",
+    "unbroadcast": true
+  },
+  "6e348d42b95de8899eca2ab8894a54eed68f037086c64862a64a3c1fcd2245e9": {
+    "vsize": 225,
+    "time": 1794435096,
+    "height": 110,
+    "descendantcount": 1,
+    "descendantsize": 225,
+    "ancestorcount": 1,
+    "ancestorsize": 225,
+    "fees": {
+      "base": 0.00000225,
+      "modified": 0.00000225,
+      "ancestor": 0.00000225,
+      "descendant": 0.00000225
+    },
+    "depends": [],
+    "spentby": [],
+    "instantlock": "false",
+    "unbroadcast": true
+  }
+}
+```
 
-      ]
-   }
+Get only the TXIDs:
+
+``` bash
+curl "http://localhost:19898/rest/mempool/contents.json?verbose=false"
+```
+
+Result (whitespace added):
+
+``` json
+[
+  "0d3c1eae261c05edd07911804100b11da4268b315eb956896230800f645eea51",
+  "6e348d42b95de8899eca2ab8894a54eed68f037086c64862a64a3c1fcd2245e9"
+]
+```
+
+Get the TXIDs with the mempool sequence number:
+
+``` bash
+curl "http://localhost:19898/rest/mempool/contents.json?verbose=false&mempool_sequence=true"
+```
+
+Result (whitespace added):
+
+``` json
+{
+  "txids": [
+    "0d3c1eae261c05edd07911804100b11da4268b315eb956896230800f645eea51",
+    "6e348d42b95de8899eca2ab8894a54eed68f037086c64862a64a3c1fcd2245e9"
+  ],
+  "mempool_sequence": 3
 }
 ```
 
@@ -846,6 +1010,7 @@ Name | Type | Presence | Description
 →<br>`usage` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.11.0*<br><br>Total memory usage for the mempool in bytes
 →<br>`maxmempool` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>Maximum memory usage for the mempool in bytes
 →<br>`mempoolminfee` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The lowest fee per kilobyte paid by any transaction in the memory pool
+→<br>`pendingassetunlocks` | number (Dash) | Required<br>(exactly 1) | *Added in Dash Core 24.0.0*<br><br>Sum of the withdrawal amounts (outputs plus fee) of the Asset Unlock transactions in the mempool in DASH
 
 *Examples from Dash Core 0.12.2*
 

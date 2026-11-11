@@ -44,6 +44,14 @@ Currently, the following notifications are supported:
 | zmqpubrawrecoveredsig | Raw recovered signatures (recovered by LLMQs) |
 | zmqpubsequence | Mempool sequence number |
 
+:::{note}
+As of Dash Core 24.0.0, the TXID of a [version 2 asset unlock transaction](../reference/transactions-special-transactions.md#version-2-asset-unlocks) is calculated with the payload's quorum signing info set to zero. Notifications that publish a transaction hash (such as `zmqpubhashtx`, `zmqpubhashtxlock`, and `zmqpubsequence`) use this TXID, so hashing the raw transaction published by `zmqpubrawtx` or `zmqpubrawblock` gives the transaction's instance hash, not its TXID.
+:::
+
+:::{note}
+As of Dash Core 23.1.9, masternodes do not sign InstantSend locks for [provider (ProTx) special transactions](../reference/transactions-special-transactions.md), so the `zmqpubhashtxlock`, `zmqpubrawtxlock`, and `zmqpubrawtxlocksig` notifications are normally not published for them.
+:::
+
 ## High Water Mark
 
 The option to set the PUB socket's outbound message [high water mark](https://zeromq.org/socket-api/#high-water-mark) (SNDHWM) may be set individually for each notification:
