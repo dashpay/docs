@@ -11,7 +11,11 @@ Dash Core provides several network options designed to let developers test their
 
 ## Testnet
 
-When run with no arguments, all Dash Core programs default to Dash's main network ([mainnet](../resources/glossary.md#mainnet)). However, for development, it's safer and cheaper to use Dash's test network ([testnet](../resources/glossary.md#testnet)) where the [duffs](../resources/glossary.md#duffs) spent have no real-world value. Testnet also relaxes some restrictions (such as standard transaction checks) so you can test functions which might currently be disabled by default on [mainnet](../resources/glossary.md#mainnet).
+When run with no arguments, all Dash Core programs default to Dash's main network ([mainnet](../resources/glossary.md#mainnet)). However, for development, it's safer and cheaper to use Dash's test network ([testnet](../resources/glossary.md#testnet)) where the [duffs](../resources/glossary.md#duffs) spent have no real-world value. Test networks (testnet, regtest, and devnet) also let you relay and mine non-standard transactions by starting Dash Core with `-acceptnonstdtxn=1`, which is not allowed on [mainnet](../resources/glossary.md#mainnet).
+
+:::{versionchanged} 24.0.0
+Testnet and devnet no longer accept non-standard transactions by default. Use `-acceptnonstdtxn=1` to accept them.
+:::
 
 To use testnet, use the argument `-testnet` with `dash-cli`, `dashd` or `dash-qt` or add `testnet=1` to your `dash.conf` file as [described earlier](../examples/configuration-file.md).  To get free duffs for testing, check the faucets listed below. Some are community supported and due to potentially frequent Testnet changes, one or more of them may be unavailable at a given time:
 
@@ -68,6 +72,10 @@ To use devnet, use the argument `-devnet=<name>` with `dash-cli`, `dashd`or `das
 
 Devnets must be assigned both `-port` and `-rpcport` unless they are not listening (`-listen=0`). It is possible to run a devnet on a private (RFC1918) network by using the `-allowprivatenet=1` argument.
 
+:::{versionchanged} 23.1.9
+`-allowprivatenet` only affects P2P networking (peer connections and address relay). Masternode service addresses on devnet (as on mainnet and testnet) must be publicly routable, and RFC1918 addresses are rejected regardless of this option.
+:::
+
 Example devnet start command:
 
 ``` bash
@@ -109,7 +117,7 @@ Each network type has some unique characteristics to support development and tes
 | Number of networks | 1 | 1 | Unlimited | Unlimited / Unique (named) |
 
 :::{note}
-To enable or disable sporks on a regtest or devnet, set `sporkaddr` and `sporkkey` in the `dash.conf` config file. Any valid Dash address / private key can be used. You can get an address using the [`getnewaddress` RPC](../api/remote-procedure-calls-wallet.md#getnewaddress) and retrieve its private key using the [`dumpprivkey` RPC](../api/remote-procedure-calls-wallet.md#dumpprivkey).
+To enable or disable sporks on a regtest or devnet, set `sporkaddr` and `sporkkey` in the `dash.conf` config file. Any valid Dash address / private key can be used. You can get an address using the [`getnewaddress` RPC](../api/remote-procedure-calls-wallet.md#getnewaddress) and retrieve its private key using the [`dumpprivkey` RPC](../api/remote-procedure-calls-wallet.md#dumpprivkey), which only works with legacy wallets (see the [transaction tutorial setup](../examples/transaction-tutorial.md#setup)).
 :::
 
 ### Mining characteristics

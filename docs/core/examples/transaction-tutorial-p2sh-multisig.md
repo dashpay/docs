@@ -70,7 +70,7 @@ You must not lose the redeem script, especially if you don't have a record of wh
 If you lose the redeem script, you can recreate it by running the same command above, with the public keys listed in the same order. **However, if you lose both the redeem script and even one of the public keys, you will never be able to spend duffs sent to that P2SH address.**
 :::
 
-Neither the address nor the redeem script are stored in the wallet when you use `createmultisig`. To store them in the wallet, use the [`addmultisigaddress` RPC](../api/remote-procedure-calls-wallet.md#addmultisigaddress) instead.  If you add an address to the wallet, you should also make a new backup.
+Neither the address nor the redeem script are stored in the wallet when you use `createmultisig`. To store them in the wallet, use the [`addmultisigaddress` RPC](../api/remote-procedure-calls-wallet.md#addmultisigaddress) instead (legacy wallets only).  If you add an address to the wallet, you should also make a new backup.
 
 ``` bash
 > dash-cli -regtest createmultisig 2 '''
@@ -235,6 +235,10 @@ We get the [private keys](../resources/glossary.md#private-key) for two of the [
 
 :::{attention}
 Users should never manually manage private keys on mainnet. See the warning in the [complex raw transaction section](../examples/transaction-tutorial-complex-raw-transaction.md).
+:::
+
+:::{note}
+The `dumpprivkey` RPC only works with legacy wallets. See the [tutorial setup](../examples/transaction-tutorial.md#setup) to create one.
 :::
 
 ``` bash
