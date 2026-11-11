@@ -49,6 +49,8 @@ As of protocol version 70218, when communicating with masternodes that have repo
 
 This is primarily used as a DoS protection mechanism to allow persistent connections between masternodes to remain open even if inbound connection limits are reached.
 
+As of Dash Core 23.1.9, a node accepts at most 3 verified inbound connections per ProRegTx hash (`MAX_VERIFIED_INBOUND_PER_PROTX`). Additional inbound connections that authenticate with the same ProRegTx hash are disconnected.
+
 | Bytes | Name | Data type | Description |
 | --- | --- | --- | --- |
 | 32 | proRegTxHash | uint256 | The hash of the ProRegTx that identifies the masternode
@@ -67,3 +69,25 @@ abffc96819c5030fd5a7601af9c8ee50
 91e2a887f963904f33af851ddc9167d5
 66d6d3bd6c07e99091edd8867d0dd56e ........... Masternode BLS Signature (96 bytes)
 ```
+
+## platformban
+
+*Added in protocol version 70238 of Dash Core*
+
+The [`platformban` message](../reference/p2p-network-masternode-messages.md#platformban) is used by Dash Platform to request a Proof of Service (PoSe) ban of an [EvoNode](../resources/glossary.md#evolution-masternode-evonode) as described in [DIP31](https://github.com/dashpay/dips/blob/master/dip-0031.md). Platform injects the message by sending it to a Dash Core node, which validates it and relays it to its peers. When quorum PoSe is enabled ([Spork 23](../reference/p2p-network-control-messages.md#spork)), masternodes that accept the message consider the targeted EvoNode to have a bad connection in subsequent DKG sessions until a ProUpServTx for that EvoNode is mined (for example, to revive it after a PoSe ban).
+
+A node only processes the message once its blockchain is synced. The message is accepted only if all of the following are true:
+
+* `protx_hash` identifies an EvoNode in the current masternode list
+* `requested_height` is no more than 576 blocks below the current chain tip and not above it
+* `quorum_hash` identifies an existing quorum of the network's Platform LLMQ type
+* `signature` is a valid threshold signature by that quorum, where the request ID is `hash("PlatformPoSeBan" + protx_hash + requested_height)` and the message hash is `hash(protx_hash + requested_height)`
+
+Valid messages are relayed using an [`inv` message](../reference/p2p-network-data-messages.md#inv) of type `MSG_PLATFORM_BAN` (33). The inventory hash is the hash of the message excluding the `signature` field. Peers request the message with a [`getdata` message](../reference/p2p-network-data-messages.md#getdata) and receive the `platformban` message in response. As of protocol version 70240, the message can use the BIP324 short message ID 168.
+
+| Bytes | Name | Data type | Required | Description |
+| ---------- | ----------- | --------- | -------- | -------- |
+| 32 | protx_hash | uint256 | Required | The ProRegTx hash of the EvoNode to ban
+| 4 | requested_height | int32_t | Required | Block height at which the ban was requested
+| 32 | quorum_hash | uint256 | Required | The hash of the Platform quorum that signed the message
+| 96 | signature | byte[] | Required | Platform quorum BLS signature<br>**Note**: serialized using the basic BLS scheme
