@@ -27,7 +27,8 @@ Minimum Masternode Protocol Version Since Dash Core 0.16.0, masternodes perform 
 check](https://github.com/dashpay/dash/pull/3390) on their quorum peers during DKG. Masternodes that
 do not meet the `MIN_MASTERNODE_PROTO_VERSION` will begin receiving increases in
 [PoSe](../guide/dash-features-proof-of-service.md) score once ~70% of the masternodes on the network
-have upgraded to that version.
+have upgraded to that version. As of Dash Core 24.0.0, `MIN_MASTERNODE_PROTO_VERSION` is 70242, so
+masternodes running Dash Core 23.x do not meet it.
 :::
 
 | **Masternode** | **Direction**  | **Peers**   | **Description** |
@@ -72,7 +73,7 @@ Please read [DIP7 LLMQ Signing Requests / Sessions](https://github.com/dashpay/d
 |                                                | ← | [`qgetsigs` message](../reference/p2p-network-quorum-messages.md#qgetsigs) (qcontrib) | Peer(s) respond with request for signature shares<br>*May occur multiple times in this phase*
 | [`qbsigs` message](../reference/p2p-network-quorum-messages.md#qbsigs)                             | → |                              | Masternode sends the requested batched signature share(s)<br>*May occur multiple times in this phase*
 | **[Threshold Signature Recovery Phase](https://github.com/dashpay/dips/blob/master/dip-0007.md#recovered-threshold-signatures)** | | | A recovered signature is created by a quorum member once valid signature shares from at least the threshold number of members have been received |
-| [`qsigrec` message](../reference/p2p-network-quorum-messages.md#qsigrec)                             | → |                              | Masternode sends the quorum recovered signature **to all peers** (except those that have asked to be excluded via a [`qsendrecsigs` message](../reference/p2p-network-quorum-messages.md#qsendrecsigs))
+| [`qsigrec` message](../reference/p2p-network-quorum-messages.md#qsigrec)                             | → |                              | Masternode sends the quorum recovered signature to peers that have requested recovered signatures via a [`qsendrecsigs` message](../reference/p2p-network-quorum-messages.md#qsendrecsigs)<br>*As of Dash Core 23.1.0, the masternode that recovers the signature sends it directly without first announcing it via an `inv` message (see the [`qsigrec` message](../reference/p2p-network-quorum-messages.md#qsigrec) for exceptions)*
 
 Note the following timeouts defined by Dash Core related to signing sessions:
 

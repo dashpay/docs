@@ -52,6 +52,8 @@ In protocol versions > 70208, Dash Core can use any [input](../resources/glossar
 
 This phase involves exchanging a sequence of messages with a [masternode](../resources/glossary.md#masternode) so it can construct a denominate transaction with inputs from the clients in its pool.
 
+As of Dash Core 24.0.0, once the v24 hard fork activates, a client can also use a mixing session to rebalance how many coins it holds of each denomination. In a promotion, the client combines 10 coins of the session denomination into 1 coin of the next larger denomination. In a demotion, it splits 1 coin of the next larger denomination into 10 coins of the session denomination. See the [`dsa` message](../reference/p2p-network-privatesend-messages.md#dsa) and [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi) for details.
+
 ### Data Flow
 
 :::{attention}
@@ -106,7 +108,7 @@ Clients must respond to the Queue ready within 30 seconds or risk forfeiting the
 _**Step 6 - Inputs**_
 
 * The collateral transaction can be the same in the [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi) as the one in the [`dsa` message](../reference/p2p-network-privatesend-messages.md#dsa) (Step 1) as long as it has not been spent
-* Each client can provide up to 9 (`COINJOIN_ENTRY_MAX_SIZE`) inputs (and an equal number of outputs) to be used ([Dash Core Reference](https://github.com/dashpay/dash/blob/v21.1.x/src/coinjoin/coinjoin.h#L46))
+* Each client can provide up to 9 (`COINJOIN_ENTRY_MAX_SIZE`) inputs (and an equal number of outputs) to be used ([Dash Core Reference](https://github.com/dashpay/dash/blob/v21.1.x/src/coinjoin/coinjoin.h#L46)). After the v24 hard fork activates, promotion and demotion entries are an exception (see the [`dsi` message](../reference/p2p-network-privatesend-messages.md#dsi)).
 * This is the only message in the process that contains enough information to link a wallet's CoinJoin inputs with its outputs
   * This message is sent directly between a client and the masternode processing the session (not relayed across the Dash network) so no other clients see it
 
