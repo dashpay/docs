@@ -3,7 +3,7 @@
 #
 # Usage: capture.sh [--keep] [shot...]
 #   shot     one or more of the names below (default: all)
-#   --keep   leave Xvfb, dash-qt and the peer running afterwards
+#   --keep   leave dash-qt and the peer running afterwards (Xvfb always stays up)
 #
 # Images are written to $WORK/out/<repo path>, e.g.
 # $WORK/out/docs/user/wallets/dashcore/img/masternodes.png. Compare them with
@@ -92,7 +92,7 @@ KEEP=0; REQ=()
 for a in "$@"; do
   case $a in
     --keep) KEEP=1 ;;
-    -h|--help) sed -n '2,15p' "$0"; echo "Shots: ${SHOTS[*]}"; exit 0 ;;
+    -h|--help) sed -n '2,/^set /{/^#/s/^# \{0,1\}//p}' "$0"; echo "Shots: ${SHOTS[*]}"; exit 0 ;;
     *) [[ " ${SHOTS[*]} " == *" $a "* ]] || die "unknown shot '$a' (shots: ${SHOTS[*]})"; REQ+=("$a") ;;
   esac
 done
