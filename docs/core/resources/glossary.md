@@ -336,7 +336,7 @@ In HD wallets, the master chain code and master private key are the two pieces o
 
 ## Masternode
 
-A computer that provides second-tier Dash functionality (InstantSend, CoinJoin, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks.
+A computer that provides second-tier Dash functionality (InstantSend, CoinJoin, decentralized governance). Masternodes are incentivized by receiving part of the block reward, but must hold 1000 Dash as collateral to prevent sybil attacks. After the v24 hard fork activates, the collateral can be funded jointly by 2 to 8 participants (a [shared masternode](../reference/transactions-special-transactions.md#shared-masternode-registration)).
 
 See also: [Evolution masternode](#evolution-masternode-evonode)
 
@@ -654,7 +654,7 @@ The amount remaining when the value of all outputs in a transaction are subtract
 
 ## Transaction identifiers
 
-Identifiers used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction. Also known as TXIDs.
+Identifiers used to uniquely identify a particular transaction; specifically, the sha256d hash of the transaction. Also known as TXIDs. The TXID of a [version 2 asset unlock transaction](../reference/transactions-special-transactions.md#version-2-asset-unlocks) (valid after the v24 hard fork activates) is calculated with its quorum signing fields set to zero; the hash of the full transaction is called its instance hash.
 
 ## Transaction version number
 
