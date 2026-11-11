@@ -39,8 +39,8 @@ message or PR.
 - **Retaking an existing screenshot:** resize the window so the capture matches
   the old image's size (`identify old.png`). The figure's `:width:` in the `.rst`
   then still fits and the page layout doesn't change. If the old image includes
-  a title bar, subtract its height (about 37 px on Ubuntu) instead of leaving an
-  empty band.
+  a title bar and the new capture doesn't, subtract its height (about 37 px on
+  Ubuntu) instead of leaving an empty band.
 - **New main-window shots:** 1064 x 749, the smallest size Dash Core allows on
   an Ubuntu desktop with this profile. Larger shots shrink more on the page.
 - **New dialogs:** use the dialog's natural size unless content is cut off or
@@ -53,17 +53,15 @@ for example the Proposal Votes dialog, the registration wizard's Review page and
 the confirmation pop-ups. That is app behaviour, and it looks the same on a
 desktop.
 
-### Open decision: window title bars
+### Window title bars
 
 Desktop captures include the window title bar and a drop shadow. Headless
-captures have neither because no window manager runs. Not decided yet:
+captures have neither because no window manager runs. Both are fine:
 
-- crop every screenshot to the window contents (matches everywhere,
-  theme-neutral), or
-- keep title bars (only desktop captures, or a window manager that approximates
-  the Ubuntu theme).
+- Keep the title bar if the capture has one. Don't crop it off.
+- Don't add one to a capture that doesn't have it.
 
-Until this is decided, headless captures are contents-only.
+Following this process keeps the window contents consistent either way.
 
 ## Headless setup (Ubuntu, no desktop)
 
