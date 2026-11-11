@@ -468,6 +468,11 @@ register an evonode. Evonodes also host Dash Platform and require additional
 information later in the wizard. See the :ref:`evonode setup guide
 <evonode-setup>` for details on preparing an evonode server.
 
+.. figure:: img/dashcore-mn-wizard-type.png
+   :width: 400px
+
+   Masternode type page of the Register Masternode wizard
+
 Collateral
 ^^^^^^^^^^
 
@@ -502,6 +507,11 @@ the first address must be an IPv4 address. This
 field may be left empty, but the masternode then stays inactive until you send
 an :ref:`Update Service <dashcore-mn-maintenance>` transaction with an address.
 
+.. figure:: img/dashcore-mn-wizard-service.png
+   :width: 400px
+
+   Service addresses page of the Register Masternode wizard
+
 Keys
 ^^^^
 
@@ -535,6 +545,11 @@ at 0 otherwise, since the operator will permanently receive this share of all
 rewards of the masternode. The operator specifies their own payout address in a
 separate :ref:`Update Service <dip3-update-service>` transaction.
 
+.. figure:: img/dashcore-mn-wizard-payout.png
+   :width: 400px
+
+   Payout page of the Register Masternode wizard
+
 Platform services (evonodes only)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -545,6 +560,11 @@ Then enter the **Platform P2P** and **Platform HTTPS API** addresses in the
 ``ADDR:PORT`` format. Before the v24 hard fork activates, only the **Platform P2P
 port** and **Platform HTTPS port** can be registered instead.
 
+.. figure:: img/dashcore-mn-wizard-platform.png
+   :width: 400px
+
+   Platform services page of the Register Masternode wizard before v24 activation
+
 Fee source
 ^^^^^^^^^^
 
@@ -553,12 +573,22 @@ sending the collateral, the selected address also funds the collateral and
 change returns to this address. The exact fee is calculated from your wallet
 settings when you register.
 
+.. figure:: img/dashcore-mn-wizard-fee.png
+   :width: 400px
+
+   Fee source page of the Register Masternode wizard
+
 Review
 ^^^^^^
 
 Check the summary of all values carefully. If anything is wrong, click **Back**
 to correct it. Then click **Continue** (if you generated a new operator key),
 **Register**, or **Prepare** (if you referenced an external collateral).
+
+.. figure:: img/dashcore-mn-wizard-review.png
+   :width: 400px
+
+   Review page of the Register Masternode wizard
 
 Save operator key
 ^^^^^^^^^^^^^^^^^
@@ -595,6 +625,11 @@ available. If you click **Cancel**, the prepared registration is discarded.
 After you click **Register** (or **Submit** for an external collateral), a
 **Confirm masternode registration** dialog summarizes the transaction. Click
 **Send** to broadcast it, then unlock the wallet if prompted.
+
+.. figure:: img/dashcore-mn-wizard-confirm.png
+   :width: 300px
+
+   Confirm masternode registration dialog
 
 Masternode registered
 ^^^^^^^^^^^^^^^^^^^^^
