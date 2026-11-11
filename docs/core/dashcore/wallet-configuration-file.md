@@ -88,6 +88,10 @@ rpcport=21998
 
 With this configuration file, dashd, dash-qt, or dash-cli can be run with the `-conf=<configuration file>` along with the `-testnet`,  `-regtest`, or `-devnet=<devnet name>` parameter to select the correct settings.
 
+:::{note}
+As of Dash Core 24.0.0, dashd and dash-qt fail at startup if the data directory contains a `dash.conf` file that is ignored because a different configuration file is being used (for example, when `-conf` points to another file, or a `datadir=` line selects a data directory with its own `dash.conf`). Set `-allowignoredconf` to log a warning instead.
+:::
+
 :::{attention}
 The following options will only apply to mainnet **_unless they are in a section_** (e.g., `[test]`): `addnode=`, `connect=`, `port=`, `bind=`, `rpcport=`, `rpcbind=` and `wallet=`.
 The options to choose a network (`regtest=` and `testnet=`) must be specified outside of sections.
@@ -97,4 +101,6 @@ The options to choose a network (`regtest=` and `testnet=`) must be specified ou
 
 Since Dash Core 18.1, wallets created or loaded in the GUI will now be automatically loaded on startup so they don't need to be manually reloaded the next time Dash is started. The list of wallets to load on startup is stored in `\<datadir\>/settings.json`. Additionally, any wallets specified in `-wallet=` settings on the command line or in the `dash.conf` file are also loaded. Wallets that are unloaded in the GUI are also removed from the settings list so they won't automatically load on the next startup.
 
-The `createwallet`, `loadwallet`, and `unloadwallet` RPCs now accept `load_on_startup` options to modify the settings list. Unless these options are explicitly set to true or false, the list is not modified, so the RPC methods remain backwards compatible.
+The `createwallet`, `loadwallet`, and `unloadwallet` RPCs now accept `load_on_startup` options to modify the settings list. Unless these options are explicitly set to true or false, the list is not modified, so the RPC methods remain backwards compatible. However, as of Dash Core 24.0.0, the [`createwallet` RPC](../api/remote-procedure-calls-wallet.md#createwallet) fails with error `-8` (`The createwallet RPC requires specifying the 'load_on_startup' flag when param 'descriptors' is specified...`) if `descriptors` is specified without `load_on_startup`. Previously, this was only required when `descriptors` was set to true.
+
+Since Dash Core 23.1.0, settings changed in the dash-qt options dialog are also stored in `settings.json` instead of the Qt settings backend (Windows registry or Unix desktop config files). Settings that have an equivalent command-line option also apply to dashd. These include the database cache, script verification threads, pruning, proxy, port mapping, listening, RPC server, language, font, and CoinJoin settings; Dash Core 24.0.0 adds the dust protection threshold (`dustprotectionthreshold`). Values in `settings.json` take precedence over `dash.conf`, while command-line options take precedence over both.
