@@ -425,102 +425,49 @@ GET /chaininfo.json
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object | Required<br>(exactly 1) | Information about the current state of the local block chain
-→<br>`chain` | string | Required<br>(exactly 1) | The name of the block chain.  One of `main` for mainnet, `test` for testnet, or `regtest` for regtest
+→<br>`chain` | string | Required<br>(exactly 1) | The name of the block chain.  One of `main` for mainnet, `test` for testnet, `regtest` for regtest, or `devnet-<name>` for a devnet started with `-devnet=<name>` (`devnet` if started with `-devnet` and no name)
 →<br>`blocks` | number (int) | Required<br>(exactly 1) | The number of validated blocks in the local best block chain.  For a new node with just the hardcoded genesis block, this will be 0
 →<br>`headers` | number (int) | Required<br>(exactly 1) | The number of validated headers in the local best headers chain.  For a new node with just the hardcoded genesis block, this will be zero.  This number may be higher than the number of *blocks*
 →<br>`bestblockhash` | string (hex) | Required<br>(exactly 1) | The hash of the header of the highest validated block in the best block chain, encoded as hex in RPC byte order.  This is identical to the string returned by the [`getbestblockhash` RPC](../api/remote-procedure-calls-blockchain.md#getbestblockhash)
 →<br>`difficulty` | number (real) | Required<br>(exactly 1) | The difficulty of the highest-height block in the best block chain
+→<br>`time` | number (int) | Required<br>(exactly 1) | The block time of the highest-height block in the best block chain, expressed in Unix epoch time
 →<br>`mediantime` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The median time of the 11 blocks before the most recent block on the blockchain.  Used for validating transaction locktime under BIP113
 →<br>`verificationprogress` | number (real) | Required (exactly 1) | Estimate of what percentage of the block chain transactions have been verified so far, starting at 0.0 and increasing to 1.0 for fully verified.  May slightly exceed 1.0 when fully synced to account for transactions in the memory pool which have been verified before being included in a block
+→<br>`initialblockdownload` | bool | Required<br>(exactly 1) | An estimate of whether this node is in [Initial Block Download](../guide/p2p-network-initial-block-download.md) mode (*debug information*)
 →<br>`chainwork` | string (hex) | Required<br>(exactly 1) | The estimated number of block header hashes checked from the genesis block to this block, encoded as big-endian hex
+→<br>`size_on_disk` | number (int) | Required<br>(exactly 1) | The estimated size of the block and undo files on disk, in bytes
 →<br>`pruned` | bool | Required<br>(exactly 1) | Indicates if the blocks are subject to pruning
 →<br>`pruneheight` | number (int) | Optional<br>(0 or 1) | The lowest-height complete block stored if pruning is activated
+→<br>`automatic_pruning` | bool | Optional<br>(0 or 1) | Whether automatic pruning is enabled (`false` if started with `-prune=1` for manual pruning).  Only present if pruning is enabled
+→<br>`prune_target_size` | number (int) | Optional<br>(0 or 1) | The target size used by pruning, in bytes.  Only present if automatic pruning is enabled
 →<br>`softforks` | object | Optional<br>(0 or 1) | *Deprecated in Dash Core 24.0.0*<br><br>Status of softforks, keyed by name. Only returned if config option `-deprecatedrpc=softforks` is passed. Use [GET DeploymentInfo](../api/http-rest-requests.md#get-deploymentinfo) instead, which returns the same per-deployment objects in its `deployments` field
-→<br>`bip9_softforks` | object | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.1*<br><br>The status of BIP9 softforks in progress
-→ →<br>Name | string : object | Required<br>(1 or more) | A specific BIP9 softfork
-→ → →<br>`status` | string | Required<br>(exactly 1) | Set to one of the following reasons:<br>• `defined` if voting hasn't started yet<br>• `started` if the voting has started <br>• `locked_in` if the voting was successful but the softfort hasn't been activated yet<br>• `active` if the softfork was activated<br>• `failed` if the softfork has not receieved enough votes
+→<br>`warnings` | string | Required<br>(exactly 1) | Any network and blockchain warnings
 
-*Examples from Dash Core 0.12.2*
+*Examples from Dash Core 24.0.0*
 
 Get blockchain info in JSON:
 
 ``` bash
-curl http://localhost:19998/rest/chaininfo.json
+curl http://localhost:19898/rest/chaininfo.json
 ```
 
 Result (whitespace added):
 
 ``` json
-{  
-   "chain":"test",
-   "blocks":38066,
-   "headers":38066,
-   "bestblockhash":"0000000006c6f812d4721c09b3a3ce6547d2291ff822ee39597515f75822ed3e",
-   "difficulty":18.8278810867833,
-   "mediantime":1512591324,
-   "verificationprogress":0.9999996159024219,
-   "chainwork":"00000000000000000000000000000000000000000000000000093549c2729cb1",
-   "pruned":false,
-   "softforks":[  
-      {  
-         "id":"bip34",
-         "version":2,
-         "enforce":{  
-            "status":true,
-            "found":100,
-            "required":51,
-            "window":100
-         },
-         "reject":{  
-            "status":true,
-            "found":100,
-            "required":75,
-            "window":100
-         }
-      },
-      {  
-         "id":"bip66",
-         "version":3,
-         "enforce":{  
-            "status":true,
-            "found":100,
-            "required":51,
-            "window":100
-         },
-         "reject":{  
-            "status":true,
-            "found":100,
-            "required":75,
-            "window":100
-         }
-      },
-      {  
-         "id":"bip65",
-         "version":4,
-         "enforce":{  
-            "status":true,
-            "found":100,
-            "required":51,
-            "window":100
-         },
-         "reject":{  
-            "status":true,
-            "found":100,
-            "required":75,
-            "window":100
-         }
-      }
-   ],
-   "bip9_softforks":[  
-      {  
-         "id":"csv",
-         "status":"active"
-      },
-      {  
-         "id":"dip0001",
-         "status":"active"
-      }
-   ]
+{
+  "chain": "regtest",
+  "blocks": 110,
+  "headers": 110,
+  "bestblockhash": "4b2c6d816a68272214a25fe33850b372715c099dbb80d6816d4081a7bfd47ffa",
+  "difficulty": 4.656542373906925e-10,
+  "time": 1794435770,
+  "mediantime": 1794435769,
+  "verificationprogress": 1,
+  "initialblockdownload": false,
+  "chainwork": "00000000000000000000000000000000000000000000000000000000000000de",
+  "size_on_disk": 24278,
+  "pruned": false,
+  "warnings": "Make sure to encrypt your wallet and delete all non-encrypted backups after you have verified that the wallet works!"
 }
 ```
 
@@ -834,7 +781,7 @@ Result (whitespace added):
 
 ## GET MemPool/Contents
 
-The `GET mempool/contents` operation returns all transaction in the memory pool with detailed information.  Supports only `json` as output format.
+The `GET mempool/contents` operation returns all transaction in the memory pool with detailed information, or only their TXIDs (`verbose=false`).  Supports only `json` as output format.
 
 *Request*
 
@@ -1005,36 +952,47 @@ GET /mempool/info.json
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object | Required<br>(exactly 1) | A object containing information about the memory pool
+→<br>`loaded` | bool | Required<br>(exactly 1) | True if the mempool is fully loaded
 →<br>`size` | number (int) | Required<br>(exactly 1) | The number of transactions currently in the memory pool
 →<br>`bytes` | number (int) | Required<br>(exactly 1) | The total number of bytes in the transactions in the memory pool
 →<br>`usage` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.11.0*<br><br>Total memory usage for the mempool in bytes
+→<br>`total_fee` | number (Dash) | Required<br>(exactly 1) | Total fees for the mempool in DASH, ignoring fees modified through the [`prioritisetransaction` RPC](../api/remote-procedure-calls-mining.md#prioritisetransaction)
 →<br>`maxmempool` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>Maximum memory usage for the mempool in bytes
-→<br>`mempoolminfee` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The lowest fee per kilobyte paid by any transaction in the memory pool
+→<br>`mempoolminfee` | number (Dash) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>Minimum fee rate in DASH/kB for a transaction to be accepted.  This is the maximum of `minrelaytxfee` and the minimum mempool fee
+→<br>`minrelaytxfee` | number (Dash) | Required<br>(exactly 1) | Current minimum relay fee rate for transactions, in DASH/kB
+→<br>`instantsendlocks` | number (int) | Required<br>(exactly 1) | Number of unconfirmed InstantSend locks
+→<br>`unbroadcastcount` | number (int) | Required<br>(exactly 1) | Current number of transactions that haven't passed initial broadcast yet
 →<br>`pendingassetunlocks` | number (Dash) | Required<br>(exactly 1) | *Added in Dash Core 24.0.0*<br><br>Sum of the withdrawal amounts (outputs plus fee) of the Asset Unlock transactions in the mempool in DASH
 
-*Examples from Dash Core 0.12.2*
+*Examples from Dash Core 24.0.0*
 
 Get memory pool info in JSON:
 
 ``` bash
-curl http://localhost:19998/rest/mempool/info.json
+curl http://localhost:19898/rest/mempool/info.json
 ```
 
 Result (whitespace added):
 
 ``` json
-{  
-   "size":1,
-   "bytes":1256,
-   "usage":3376,
-   "maxmempool":300000000,
-   "mempoolminfee":0.00000000
+{
+  "loaded": true,
+  "size": 1,
+  "bytes": 225,
+  "usage": 1040,
+  "total_fee": 0.00000225,
+  "maxmempool": 300000000,
+  "mempoolminfee": 0.00001000,
+  "minrelaytxfee": 0.00001000,
+  "instantsendlocks": 0,
+  "unbroadcastcount": 1,
+  "pendingassetunlocks": 0.00000000
 }
 ```
 
 *See also*
 
-* [GET MemPool/Contents](../api/http-rest-requests.md#get-mempoolcontents): returns all transaction in the memory pool with detailed information.
+* [GET MemPool/Contents](../api/http-rest-requests.md#get-mempoolcontents): returns all transaction in the memory pool with detailed information, or only their TXIDs.
 * [GetMemPoolInfo](../api/remote-procedure-calls-blockchain.md#getmempoolinfo) RPC: returns information about the node's current transaction memory pool.
 
 ## GET Tx
