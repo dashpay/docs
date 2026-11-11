@@ -197,7 +197,11 @@ html_static_path = ['_static']
 html_css_files = [
     'css/footer.css',
     'css/pydata-overrides.css',
+    'css/image-zoom.css',
 ]
+
+# Don't wrap scaled images in a link to the image file; image-zoom.js zooms them in place instead
+html_scaled_image_link = False
 
 # A list of paths that contain extra files not directly related to the documentation, such as
 # robots.txt or .htaccess. Relative paths are taken as relative to the configuration directory. They
@@ -297,3 +301,5 @@ googleanalytics_enabled = True
 def setup(app):
     app.add_js_file('js/lang.js')
     app.add_js_file('js/pydata-search-close.js')
+    app.add_js_file('js/medium-zoom.min.js', loading_method='defer')
+    app.add_js_file('js/image-zoom.js', loading_method='defer')
