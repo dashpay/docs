@@ -75,7 +75,7 @@ Translations are managed via Transifex. Scripts in `transifex/` handle push/pull
 * `scripts/check-rpc-links.py` - Verifies that `` [`<rpc>` RPC](...#anchor) `` links point at the RPC they name. Run after editing RPC docs: `scripts/check-rpc-links.py [paths...]` (default: `docs/`)
 * `scripts/core-help-parsing.sh` - Converts `dashd`/`dash-qt`/`dash-cli --help` output into the format used by the `docs/core/dashcore/wallet-arguments-and-commands-*` pages (supports `--update <file>`)
 * `scripts/core-rpc-tools/` - Dumps RPC help from a running node and generates version-to-version change summaries. Primary workflow for Dash Core release updates; see its README.
-* `scripts/dash-qt-screenshots/README.md` - Screenshot profile and headless (Xvfb) setup for Dash Core GUI screenshots. Follow it for every new or retaken Dash Core screenshot so desktop and headless captures match. In short: Ubuntu Sans, Light theme, font-scale -30, weights 3/6, `LANG=en_US.UTF-8`, `QT_FONT_DPI=96`, main window 1064x749. Whether to keep window title bars is still undecided.
+* `scripts/dash-qt-screenshots/README.md` - Screenshot profile and headless (Xvfb) setup for Dash Core GUI screenshots. Follow it for every new or retaken Dash Core screenshot so desktop and headless captures match. In short: Ubuntu Sans, Light theme, font-scale -30, weights 3/6, `LANG=en_US.UTF-8`, `QT_FONT_DPI=96`. Retakes match the old image's size; new main-window shots default to 1064x749. Whether to keep window title bars is still undecided.
 
 ## Automation
 
