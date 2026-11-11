@@ -1,4 +1,4 @@
-// Click-to-zoom for content images, using medium-zoom (vendored in medium-zoom.min.js).
+// Click-to-zoom for content images, using medium-zoom (pinned and vendored in medium-zoom-1.1.0.min.js).
 // Only images that are shown smaller than their real size get zoom, since medium-zoom never
 // enlarges past the natural size. Images inside a link (e.g. a :target:) keep their link.
 // Add the "no-zoom" class to an image to opt it out.
