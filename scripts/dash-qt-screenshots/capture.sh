@@ -3,7 +3,9 @@
 #
 # Usage: capture.sh [--keep] [shot...]
 #   shot     one or more of the names below (default: all)
-#   --keep   leave dash-qt and the peer running afterwards (Xvfb always stays up)
+#   --keep   leave dash-qt and the peer running afterwards, e.g. to inspect a
+#            failed shot (Xvfb always stays up). The next run restarts them
+#            from the pristine demo data anyway.
 #
 # Images are written to $WORK/out/<repo path>, e.g.
 # $WORK/out/docs/user/wallets/dashcore/img/masternodes.png. Compare them with
@@ -101,17 +103,17 @@ need_bins
 [ -d "$WORK/demo.base" ] || die "no demo data in $WORK; run setup-demo.sh first"
 
 start_x
-if ! pgrep -f -- "-datadir=$DEMO( |$)" >/dev/null; then   # fresh start from the pristine copy
-  stop_node pcli "$PEER"
-  rm -rf "$DEMO" "$PEER"; cp -a "$WORK/demo.base" "$DEMO"; cp -a "$WORK/peer.base" "$PEER"
-  start_peer; start_demo_qt
-fi
+# Always start from the pristine copy, so a failed or --keep run can't leak state.
+stop_node cli "$DEMO"; stop_node pcli "$PEER"
+rm -rf "$DEMO" "$PEER"; cp -a "$WORK/demo.base" "$DEMO"; cp -a "$WORK/peer.base" "$PEER"
+[ $KEEP = 1 ] || trap 'stop_node cli "$DEMO"; stop_node pcli "$PEER"' EXIT
+start_peer; start_demo_qt
 sync_nodes; finish_mnsync
 M=$(main_win); place "$M" 1124 784
 click "$M" 980 627   # "Hide" on the sync overlay (shown because the GUI compares
                      # the mocktime tip with the real clock); harmless otherwise
 mkdir -p "$U/wallets/dashcore/img" "$U/masternodes/img" "$U/governance/img/core-qt"
+touch "$OUT/.run-start"   # compare.sh only looks at images from this run
 for s in "${REQ[@]}"; do echo "capturing $s"; "shot_$s"; done
 
-if [ $KEEP = 0 ]; then stop_node cli "$DEMO"; stop_node pcli "$PEER"; fi
 echo "Images in $OUT"

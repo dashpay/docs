@@ -4,8 +4,8 @@
 # Creates $WORK/demo (the wallet shown in screenshots) and $WORK/peer (a helper
 # node that mines and owns the "ext" wallet). Fixed mnemonics, BLS secrets and
 # mocktime make addresses, keys, block heights and dates the same on every run.
-# Transaction ids and object hashes still vary (wallet coin selection and change
-# position are random).
+# Transaction ids and object hashes can still vary (wallet coin selection and
+# change position are random).
 #
 # Usage: setup-demo.sh            (refuses to overwrite an existing $WORK)
 #        setup-demo.sh --force    (deletes $WORK first)
@@ -15,12 +15,15 @@ set -euo pipefail
 need_bins
 if [ -e "$WORK" ]; then
   [ "${1:-}" = --force ] || die "$WORK exists; use --force to rebuild it"
+  # Only delete a directory this script created.
+  [ -f "$WORK/mocktime" ] || die "$WORK does not look like demo data; not deleting it"
   stop_node cli "$DEMO"; stop_node pcli "$PEER"; rm -rf "$WORK"
 fi
 mkdir -p "$WORK"; echo "$MOCKTIME" > "$WORK/mocktime"
 
+# Non-default ports so a maintainer's own regtest node doesn't clash.
 write_conf "$PEER" 29898 29899
-write_conf "$DEMO" 19898 19899 connect=127.0.0.1:29899
+write_conf "$DEMO" 39898 39899 connect=127.0.0.1:29899
 write_profile
 start_peer; start_demo_daemon
 

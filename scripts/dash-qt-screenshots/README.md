@@ -109,8 +109,8 @@ export WORK=/tmp/dash-qt-screenshots # optional; data and output go here
 | Script | What it does |
 |---|---|
 | `setup-demo.sh` | Builds a regtest chain with a fixed clock (mocktime), wallets from fixed mnemonics, 8 masternodes with fixed BLS keys, 4 proposals and votes. Keeps a pristine copy of it. |
-| `capture.sh` | Restores the pristine copy, starts Xvfb, a peer `dashd` and `dash-qt` with the screenshot profile, navigates by fixed window sizes and click coordinates, and writes images to `$WORK/out/<repo path>`. Run `capture.sh --help` for the shot names. |
-| `compare.sh` | Compares `$WORK/out` with the repository, or with another output directory, and lists the share of changed pixels per image. |
+| `capture.sh` | Restores the pristine copy (every run), starts Xvfb, a peer `dashd` and `dash-qt` with the screenshot profile, navigates by fixed window sizes and click coordinates, and writes images to `$WORK/out/<repo path>`. Run `capture.sh --help` for the shot names. |
+| `compare.sh` | Compares the images from the latest capture run with the repository, or with another output directory, and lists the share of changed pixels per image. |
 | `lib.sh` | Shared settings and helpers. |
 
 What is repeatable:
@@ -118,10 +118,11 @@ What is repeatable:
 - Two capture runs on the same demo data give identical images, except the
   wizard's Keys, Review and Save operator key pages. Those show an operator key
   that dash-qt generates at random.
-- A new demo data build gives the same addresses, keys, heights, dates, proposal
-  hashes and votes. Only the masternode **Last Paid** and **Next Payment**
-  columns can differ, because payment order depends on transaction hashes that
-  include random wallet choices.
+- A new demo data build gives the same addresses, keys, heights, dates and vote
+  totals. Masternode payment order (**Last Paid**, **Next Payment**) and
+  proposal hashes (Governance tab **Hash** column) depend on transaction hashes
+  that include random wallet choices, so they can differ. Rebuild the demo data
+  only when you need to; capture runs reuse it.
 
 Limits:
 

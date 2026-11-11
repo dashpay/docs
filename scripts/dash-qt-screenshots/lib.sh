@@ -5,7 +5,8 @@
 # DASH_BIN: directory with dashd and dash-cli, plus dash-qt either next to them
 # (release tarball bin/) or in qt/ (source build src/).
 DASH_BIN=${DASH_BIN:-$(dirname "$(command -v dashd 2>/dev/null || echo /nonexistent/dashd)")}
-WORK=${WORK:-/tmp/dash-qt-screenshots}
+WORK=$(realpath -m "${WORK:-/tmp/dash-qt-screenshots}")
+shopt -s inherit_errexit
 export DISPLAY=${DISPLAY_NUM:-:99}
 
 DASHD=$DASH_BIN/dashd
@@ -21,8 +22,11 @@ WALLET_PASS=docs-demo-pass
 MNEMONIC_WALLET="abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
 MNEMONIC_EXT="legal winner thank year wave sausage worth useful legal winner thank yellow"
 
-# Profile from README.md. TZ and XDG_CONFIG_HOME keep host settings out.
-QT_ENV=(LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 TZ=UTC QT_FONT_DPI=96 QT_SCALE_FACTOR=1
+# Profile from README.md. Unsetting desktop Qt variables, TZ and XDG_CONFIG_HOME
+# keep host settings out.
+QT_ENV=(-u QT_QPA_PLATFORM -u QT_QPA_PLATFORMTHEME -u QT_STYLE_OVERRIDE -u WAYLAND_DISPLAY
+        -u QT_SCREEN_SCALE_FACTORS -u QT_AUTO_SCREEN_SCALE_FACTOR -u QT_ENABLE_HIGHDPI_SCALING
+        LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 TZ=UTC QT_FONT_DPI=96 QT_SCALE_FACTOR=1
         XDG_CONFIG_HOME="$WORK/xdg")
 
 need_bins() {
@@ -79,7 +83,8 @@ EOF
 start_x() {
   if ! xdpyinfo >/dev/null 2>&1 && ! xdotool getdisplaygeometry >/dev/null 2>&1; then
     nohup Xvfb "$DISPLAY" -screen 0 1920x1080x24 -nolisten tcp > "$WORK/xvfb.log" 2>&1 &
-    pause 1
+    for _ in $(seq 10); do xdotool getdisplaygeometry >/dev/null 2>&1 && return; pause 0.5; done
+    die "Xvfb did not start on $DISPLAY; see $WORK/xvfb.log"
   fi
 }
 
@@ -107,13 +112,15 @@ start_demo_qt() {
   cli -rpcwait -rpcwaittimeout=90 getblockcount >/dev/null
 }
 
+running() { pgrep -u "$(id -u)" -f -- "-datadir=$1( |$)" >/dev/null; }
 stop_node() { # cli-function datadir
-  "$1" stop >/dev/null 2>&1 || return 0
-  for _ in $(seq 30); do pgrep -f -- "-datadir=$2( |$)" >/dev/null || return 0; pause 1; done
-  # An open modal dialog blocks dash-qt's RPC shutdown; SIGTERM still works.
-  pkill -TERM -f -- "-datadir=$2( |$)" || true
-  for _ in $(seq 30); do pgrep -f -- "-datadir=$2( |$)" >/dev/null || return 0; pause 1; done
-  pkill -KILL -f -- "-datadir=$2( |$)" || true; pause 1
+  running "$2" || return 0
+  "$1" stop >/dev/null 2>&1 || true
+  for _ in $(seq 30); do running "$2" || return 0; pause 1; done
+  # An open modal dialog can block dash-qt's shutdown; then signal it.
+  pkill -u "$(id -u)" -TERM -f -- "-datadir=$2( |$)" || true
+  for _ in $(seq 15); do running "$2" || return 0; pause 1; done
+  pkill -u "$(id -u)" -KILL -f -- "-datadir=$2( |$)" || true; pause 1
 }
 
 sync_nodes() { # wait until the demo node has the peer's tip
@@ -146,10 +153,10 @@ grab() { mkdir -p "$(dirname "$2")"; import -window "$1" +repage -strip "$2"; } 
 # Cut the empty space between a dialog's content and its bottom button row.
 # Keeps the content, a 24 px margin and the last 64 px (buttons).
 compact() { # in out
-  local in=$1 out=$2 w h bb y bh
+  local in=$1 out=$2 w h bb y bh keep
   w=$(identify -format %w "$in"); h=$(identify -format %h "$in")
   bb=$(convert "$in" -crop "${w}x$((h-80))+0+0" +repage -fuzz 2% -trim -format '%h %Y' info: | tr -d '+')
-  bh=${bb% *}; y=${bb#* }
-  convert \( "$in" -crop "${w}x$((y+bh+24))+0+0" +repage \) \
+  bh=${bb% *}; y=${bb#* }; keep=$((y+bh+24)); [ $keep -le $((h-64)) ] || keep=$((h-64))
+  convert \( "$in" -crop "${w}x${keep}+0+0" +repage \) \
           \( "$in" -crop "${w}x64+0+$((h-64))" +repage \) -append -strip "$out"
 }
