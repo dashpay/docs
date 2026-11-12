@@ -35,11 +35,21 @@ Name | Type | Presence | Description
 Result | object | Required<br>(exactly 1) | An object containing the requested block
 →<br>`hash` | string (hex) | Required<br>(exactly 1) | The hash of this block's block header encoded as hex in RPC byte order.  This is the same as the hash provided in parameter #1
 →<br>`confirmations` | number (int) | Required<br>(exactly 1) | The number of confirmations the transactions in this block have, starting at 1 when this block is at the tip of the best block chain.  This score will be -1 if the the block is not part of the best block chain
-→<br>`size` | number (int) | Required<br>(exactly 1) | The size of this block in serialized block format, counted in bytes
 →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
 →<br>`version` | number (int) | Required<br>(exactly 1) | This block's version number.  See [block version numbers](../reference/block-chain-block-headers.md#block-versions)
-→<br>`versionHex` | number (int) | Required<br>(exactly 1) | This block's version number formatted in hexadecimal.
+→<br>`versionHex` | string (hex) | Required<br>(exactly 1) | This block's version number formatted in hexadecimal
 →<br>`merkleroot` | string (hex) | Required<br>(exactly 1) | The merkle root for this block, encoded as hex in RPC byte order
+→<br>`time` | number (int) | Required<br>(exactly 1) | The value of the *time* field in the block header, indicating approximately when the block was created
+→<br>`mediantime` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The median time of the 11 blocks before the most recent block on the blockchain.  Used for validating transaction locktime under BIP113
+→<br>`nonce` | number (int) | Required<br>(exactly 1) | The nonce which was successful at turning this particular block into one that could be added to the best block chain
+→<br>`bits` | string (hex) | Required<br>(exactly 1) | The value of the *nBits* field in the block header, indicating the target threshold this block's header had to pass
+→<br>`difficulty` | number (real) | Required<br>(exactly 1) | The estimated amount of work done to find this block relative to the estimated amount of work done to find block 0
+→<br>`chainwork` | string (hex) | Required<br>(exactly 1) | The estimated number of block header hashes miners had to check from the genesis block to this block, encoded as big-endian hex
+→<br>`nTx` | number (int) | Required<br>(exactly 1) | The number of transactions in the block
+→<br>`previousblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the header of the previous block, encoded as hex in RPC byte order.  Not returned for genesis block
+→<br>`nextblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the next block on the best block chain, if known, encoded as hex in RPC byte order
+→<br>`chainlock` | bool | Required<br>(exactly 1) | If set to `true`, this block is locked by a ChainLock
+→<br>`size` | number (int) | Required<br>(exactly 1) | The size of this block in serialized block format, counted in bytes
 →<br>`tx` | array | Required<br>(exactly 1) | An array containing all transactions in this block.  The transactions appear in the array in the same order they appear in the serialized block
 → →<br>Transaction | object | Required<br>(1 or more) | An object describing a particular transaction within this block
 → → →<br>`txid` | string (hex) | Required<br>(exactly 1) | The transaction's TXID encoded as hex in RPC byte order
@@ -55,10 +65,16 @@ Result | object | Required<br>(exactly 1) | An object containing the requested b
 → → → → → →<br>`asm` | string | Required<br>(exactly 1) | The signature script in decoded form with non-data-pushing opcodes listed
 → → → → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The signature script encoded as hex
 → → → → →<br>`coinbase` | string (hex) | Optional<br>(0 or 1) | The coinbase (similar to the hex field of a scriptSig) encoded as hex.  Only present if this is a coinbase transaction
-→ → → → →<br>`value` | number (Dash) | Optional<br>(exactly 1) | The number of Dash paid to this output.  May be `0`.<br><br>Only present if `spentindex` enabled
-→ → → → →<br>`valueSat` | number (duffs) | Optional<br>(exactly 1) | The number of duffs paid to this output.  May be `0`.<br><br>Only present if `spentindex` enabled
-→ → → → → →<br>`addresses` | string : array | Optional<br>(0 or 1) | The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types.<br><br>Only present if `spentindex` enabled
-→ → → → → → →<br>Address | string | Required<br>(1 or more) | A P2PKH or P2SH address
+→ → → → →<br>`prevout` | object | Optional<br>(0 or 1) | The output being spent.  Only present if block undo data is available.  Not present if this is a coinbase transaction
+→ → → → → →<br>`generated` | bool | Required<br>(exactly 1) | Whether the output being spent is a coinbase output
+→ → → → → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of the block containing the output being spent
+→ → → → → →<br>`value` | number (Dash) | Required<br>(exactly 1) | The value of the output being spent in DASH
+→ → → → → →<br>`scriptPubKey` | object | Required<br>(exactly 1) | An object describing the pubkey script of the output being spent
+→ → → → → → →<br>`asm` | string | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed
+→ → → → → → →<br>`desc` | string | Required<br>(exactly 1) | Inferred descriptor for the output
+→ → → → → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The pubkey script encoded as hex
+→ → → → → → →<br>`type` | string | Required<br>(exactly 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
+→ → → → → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists)
 → → → → →<br>`sequence` | number (int) | Required<br>(exactly 1) | The input sequence number
 → → →<br>`vout` | array | Required<br>(exactly 1) | An array of objects each describing an output vector (vout) for this transaction.  Output objects will have the same order within the array as they have in the transaction, so the first output listed will be output 0
 → → → →<br>Output | object | Required<br>(1 or more) | An object describing one of this transaction's outputs
@@ -67,168 +83,210 @@ Result | object | Required<br>(exactly 1) | An object containing the requested b
 → → → → →<br>`n` | number (int) | Required<br>(exactly 1) | The output index number of this output within this transaction
 → → → → →<br>`scriptPubKey` | object | Required<br>(exactly 1) | An object describing the pubkey script
 → → → → → →<br>`asm` | string | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed
+→ → → → → →<br>`desc` | string | Required<br>(exactly 1) | Inferred descriptor for the output
 → → → → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The pubkey script encoded as hex
-→ → → → → →<br>`reqSigs` | number (int) | Optional<br>(0 or 1) | The number of signatures required; this is always `1` for P2PK, P2PKH, and P2SH (including P2SH multisig because the redeem script is not available in the pubkey script).  It may be greater than 1 for bare multisig.  This value will not be returned for `nulldata` or `nonstandard` script types (see the `type` key below)
-→ → → → → →<br>`type` | string | Optional<br>(0 or 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
-→ → → → → →<br>`addresses` | string : array | Optional<br>(0 or 1) | The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types
-→ → → → → → →<br>Address | string | Required<br>(1 or more) | A P2PKH or P2SH address
+→ → → → → →<br>`type` | string | Required<br>(exactly 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
+→ → → → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists)
 → → →<br>`extraPayloadSize` | number (int) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction
 → → →<br>`extraPayload` | string (hex) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction
-→<br>`time` | number (int) | Required<br>(exactly 1) | The value of the *time* field in the block header, indicating approximately when the block was created
-→<br>`mediantime` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The median time of the 11 blocks before the most recent block on the blockchain.  Used for validating transaction locktime under BIP113
-→<br>`nonce` | number (int) | Required<br>(exactly 1) | The nonce which was successful at turning this particular block into one that could be added to the best block chain
-→<br>`bits` | string (hex) | Required<br>(exactly 1) | The value of the *nBits* field in the block header, indicating the target threshold this block's header had to pass
-→<br>`difficulty` | number (real) | Required<br>(exactly 1) | The estimated amount of work done to find this block relative to the estimated amount of work done to find block 0
-→<br>`chainwork` | string (hex) | Required<br>(exactly 1) | The estimated number of block header hashes miners had to check from the genesis block to this block, encoded as big-endian hex
-→<br>`previousblockhash` | string (hex) | Required<br>(exactly 1) | The hash of the header of the previous block, encoded as hex in RPC byte order
-→<br>`nextblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the next block on the best block chain, if known, encoded as hex in RPC byte order
+→ → →<br>`cbTx` | object | Optional<br>(0 or 1) | The decoded Coinbase special transaction (CbTx) payload, with the same fields as the block's `cbTx` object.  Only present if this is a coinbase special transaction.  Other DIP2 special transaction types include their own decoded payload object instead (for example, `proRegTx` or `qcTx`)
+→ → →<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs
+→ → →<br>`fee` | number (Dash) | Optional<br>(0 or 1) | The transaction fee in DASH.  Not present for the coinbase transaction or if block undo data is not available
+→ → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The serialized, hex-encoded data for the transaction
+→ → →<br>`instantlock` | bool | Required<br>(exactly 1) | If set to `true`, this transaction is either protected by an [InstantSend](../resources/glossary.md#instantsend) lock or it is in a block that has received a [ChainLock](../resources/glossary.md#chainlock)
+→ → →<br>`instantlock_internal` | bool | Required<br>(exactly 1) | If set to `true`, this transaction has an [InstantSend](../resources/glossary.md#instantsend) lock
+→<br>`cbTx` | object | Optional<br>(0 or 1) | Coinbase special transaction details.  Only present if the block's coinbase transaction is a Coinbase special transaction (CbTx)
+→ →<br>`version` | number (int) | Required<br>(exactly 1) | The version of the Coinbase special transaction (CbTx)
+→ →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
+→ →<br>`merkleRootMNList` | string (hex) | Required<br>(exactly 1) | The merkle root for the masternode list
+→ →<br>`merkleRootQuorums` | string (hex) | Optional<br>(0 or 1) | The merkle root for the quorum list
+→ →<br>`bestCLHeightDiff` | number (int) | Optional<br>(0 or 1) | Blocks between the current block and the last known block with a ChainLock
+→ →<br>`bestCLSignature` | string (hex) | Optional<br>(0 or 1) | Best ChainLock signature known by the miner
+→ →<br>`creditPoolBalance` | number (real) | Optional<br>(0 or 1) | Balance in the Platform credit pool
+→ →<br>`merkleRootAssetUnlocks` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Merkle root of the instance hashes of the block's version 2 asset unlock transactions
 
-*Examples from Dash Core 0.12.2*
+*Examples from Dash Core 24.0.0*
 
 Request a block in hex-encoded serialized block format:
 
 ``` bash
-curl http://localhost:19998/rest/block/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.hex
+curl http://localhost:19898/rest/block/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.hex
 ```
 
 Result (wrapped):
 
 ``` bash
-0000002097e8135d73afa52145f6d0b4d0f957030cd598837ddc6750271fb109\
-000000008478305a7abf2f7cb21a889fb68d53c3e51685349e18e1b104b5956c\
-100bfea2c72d285a84030a1cd0041ed701010000000100000000000000000000\
-00000000000000000000000000000000000000000000ffffffff13037a94000e\
-2f5032506f6f6c2d74444153482fffffffff06a1f9ef04000000001976a91414\
-e3832cd7192ffb358a31d842636c4db8dfb1ac88ac6c357f3c000000001976a9\
-149262f2289e1f021dca954d8cf07a7ad72c2cc24d88ac31f49e010000000019\
-76a914d93f7ffa324b77d361e89a3c9c8df46ccdb4b39288ac40230e43000000\
-001976a914c4541983721b26ada79770bf22de4885e19f566188ac0200000000\
-0000004341047559d13c3f81b1fadbd8dd03e4b5a1c73b05e2b980e00d467aa9\
-440b29c7de23664dde6428d75cafed22ae4f0d302e26c5c5a5dd4d3e1b796d72\
-81bdc9430f35ac00000000000000002a6a28c855abe6461b1003ea36feb88a3b\
-d50c5696e5784d11f8cd5e892978685de1d6000000000100000000000000
+000000209845c5e39b8d98c7094801cbb0fa27ba6ddb110d00cbf20a1aef1e35\
+44f9b255036f309b40326518781c29a054f83d68e3ca73b9c685edc19f849de3\
+3dbdf3b77e1b5769ffff7f200000000002030005000100000000000000000000\
+00000000000000000000000000000000000000000000ffffffff016affffffff\
+023fe8ec0f000000001976a91432ae99679ea84309f80373691cf2bb7b0da9ae\
+1688ac374e3b0600000000016a00000000af03005e0200000000000000000000\
+0000000000000000000000000000000000000000000000000000000000000000\
+0000000000000000000000000000000000000000000000000000000000000000\
+0000000000000000000000000000000000000000000000000000000000000000\
+0000000000000000000000000000000000000000000000000000000000000000\
+0000000000000000000000000000000000000000000000000010655c9d040000\
+000200000001fdd454572780af673f0c39335cf2f6db997ca0d55c0606d765cf\
+6303ad091709000000006a47304402206465db43706bd35b1ced14e27b89ecc2\
+ad939bb04fd7f644e74d322ef5c553b7022022069e76134796df3a006d6c18d9\
+4ff75cbb4165508211914d41b3ea0e6122cc012102cde88a8b67f85aa08dfaf0\
+c10714d5af431b8909ea5a2da4551584e3533b621bffffffff0200ca9a3b0000\
+00001976a914db91347da1e3fc25608b441994027847f489191b88ac18a6a068\
+0b0000001976a91432ae99679ea84309f80373691cf2bb7b0da9ae1688ac0000\
+0000
 ```
 
 Get the same block in JSON:
 
 ``` bash
-curl http://localhost:19998/rest/block/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json
+curl http://localhost:19898/rest/block/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.json
 ```
 
 Result (whitespace added):
 
 ``` json
-{  
-   "hash":"0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451",
-   "confirmations":20,
-   "size":414,
-   "height":38010,
-   "version":536870912,
-   "merkleroot":"a2fe0b106c95b504b1e1189e348516e5c3538db69f881ab27c2fbf7a5a307884",
-   "tx":[  
-      {  
-         "txid":"a2fe0b106c95b504b1e1189e348516e5c3538db69f881ab27c2fbf7a5a307884",
-         "size":333,
-         "version":1,
-         "locktime":0,
-         "vin":[  
-            {  
-               "coinbase":"037a94000e2f5032506f6f6c2d74444153482f",
-               "sequence":4294967295
+{
+  "hash": "7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79",
+  "confirmations": 5,
+  "height": 606,
+  "version": 536870912,
+  "versionHex": "20000000",
+  "merkleroot": "b7f3bd3de39d849fc1ed85c6b973cae3683df854a0291c78186532409b306f03",
+  "time": 1767316350,
+  "mediantime": 1767315600,
+  "nonce": 0,
+  "bits": "207fffff",
+  "difficulty": 4.656542373906925e-10,
+  "chainwork": "00000000000000000000000000000000000000000000000000000000000004be",
+  "nTx": 2,
+  "previousblockhash": "55b2f944351eef1a0af2cb000d11db6dba27fab0cb014809c7988d9be3c54598",
+  "nextblockhash": "54a630f248fa9cd8b7dd7ddddf5e74b7d91de5d168c6708656fd85b182b516e4",
+  "chainlock": false,
+  "size": 578,
+  "tx": [
+    {
+      "txid": "d4a330e14742feb8f38947ffd9eea12a5bba3301513c94ef60a5b76a1bed0cc6",
+      "version": 3,
+      "type": 5,
+      "size": 272,
+      "locktime": 0,
+      "vin": [
+        {
+          "coinbase": "6a",
+          "sequence": 4294967295
+        }
+      ],
+      "vout": [
+        {
+          "value": 2.67184191,
+          "valueSat": 267184191,
+          "n": 0,
+          "scriptPubKey": {
+            "asm": "OP_DUP OP_HASH160 32ae99679ea84309f80373691cf2bb7b0da9ae16 OP_EQUALVERIFY OP_CHECKSIG",
+            "desc": "addr(yQwRoAN7nzz1rbjq5oyt3d5gpyqChMEn3x)#73ua6uzw",
+            "hex": "76a91432ae99679ea84309f80373691cf2bb7b0da9ae1688ac",
+            "address": "yQwRoAN7nzz1rbjq5oyt3d5gpyqChMEn3x",
+            "type": "pubkeyhash"
+          }
+        },
+        {
+          "value": 1.04549943,
+          "valueSat": 104549943,
+          "n": 1,
+          "scriptPubKey": {
+            "asm": "OP_RETURN",
+            "desc": "raw(6a)#4mhr9ur5",
+            "hex": "6a",
+            "type": "nulldata"
+          }
+        }
+      ],
+      "extraPayloadSize": 175,
+      "extraPayload": "03005e020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010655c9d04000000",
+      "cbTx": {
+        "version": 3,
+        "height": 606,
+        "merkleRootMNList": "0000000000000000000000000000000000000000000000000000000000000000",
+        "merkleRootQuorums": "0000000000000000000000000000000000000000000000000000000000000000",
+        "bestCLHeightDiff": 0,
+        "bestCLSignature": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "creditPoolBalance": 198.19947280
+      },
+      "hex": "03000500010000000000000000000000000000000000000000000000000000000000000000ffffffff016affffffff023fe8ec0f000000001976a91432ae99679ea84309f80373691cf2bb7b0da9ae1688ac374e3b0600000000016a00000000af03005e020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010655c9d04000000",
+      "instantlock": false,
+      "instantlock_internal": false
+    },
+    {
+      "txid": "2d527d1ca1900100c40b41d1881afb6a07888373e03ff7be0420960005b6f648",
+      "version": 2,
+      "type": 0,
+      "size": 225,
+      "locktime": 0,
+      "vin": [
+        {
+          "txid": "091709ad0363cf65d706065cd5a07c99dbf6f25c33390c3f67af80275754d4fd",
+          "vout": 0,
+          "scriptSig": {
+            "asm": "304402206465db43706bd35b1ced14e27b89ecc2ad939bb04fd7f644e74d322ef5c553b7022022069e76134796df3a006d6c18d94ff75cbb4165508211914d41b3ea0e6122cc[ALL] 02cde88a8b67f85aa08dfaf0c10714d5af431b8909ea5a2da4551584e3533b621b",
+            "hex": "47304402206465db43706bd35b1ced14e27b89ecc2ad939bb04fd7f644e74d322ef5c553b7022022069e76134796df3a006d6c18d94ff75cbb4165508211914d41b3ea0e6122cc012102cde88a8b67f85aa08dfaf0c10714d5af431b8909ea5a2da4551584e3533b621b"
+          },
+          "prevout": {
+            "generated": true,
+            "height": 1,
+            "value": 500.00000000,
+            "scriptPubKey": {
+              "asm": "OP_DUP OP_HASH160 32ae99679ea84309f80373691cf2bb7b0da9ae16 OP_EQUALVERIFY OP_CHECKSIG",
+              "desc": "addr(yQwRoAN7nzz1rbjq5oyt3d5gpyqChMEn3x)#73ua6uzw",
+              "hex": "76a91432ae99679ea84309f80373691cf2bb7b0da9ae1688ac",
+              "address": "yQwRoAN7nzz1rbjq5oyt3d5gpyqChMEn3x",
+              "type": "pubkeyhash"
             }
-         ],
-         "vout":[  
-            {  
-               "value":0.82835873,
-               "valueSat":82835873,
-               "n":0,
-               "scriptPubKey":{  
-                  "asm":"OP_DUP OP_HASH160 14e3832cd7192ffb358a31d842636c4db8dfb1ac OP_EQUALVERIFY OP_CHECKSIG",
-                  "hex":"76a91414e3832cd7192ffb358a31d842636c4db8dfb1ac88ac",
-                  "reqSigs":1,
-                  "type":"pubkeyhash",
-                  "addresses":[  
-                     "yNDtusuhm6otr3eeGh3SqdpNczV4aZSx1b"
-                  ]
-               }
-            },
-            {  
-               "value":10.14969708,
-               "valueSat":1014969708,
-               "n":1,
-               "scriptPubKey":{  
-                  "asm":"OP_DUP OP_HASH160 9262f2289e1f021dca954d8cf07a7ad72c2cc24d OP_EQUALVERIFY OP_CHECKSIG",
-                  "hex":"76a9149262f2289e1f021dca954d8cf07a7ad72c2cc24d88ac",
-                  "reqSigs":1,
-                  "type":"pubkeyhash",
-                  "addresses":[  
-                     "yZfU36R8dhdnFaK3AwfnubrLXAG2G1WiVn"
-                  ]
-               }
-            },
-            {  
-               "value":0.27194417,
-               "valueSat":27194417,
-               "n":2,
-               "scriptPubKey":{  
-                  "asm":"OP_DUP OP_HASH160 d93f7ffa324b77d361e89a3c9c8df46ccdb4b392 OP_EQUALVERIFY OP_CHECKSIG",
-                  "hex":"76a914d93f7ffa324b77d361e89a3c9c8df46ccdb4b39288ac",
-                  "reqSigs":1,
-                  "type":"pubkeyhash",
-                  "addresses":[  
-                     "yg89Yt5Tjzs9nRpX3wJCuvr7KuQvgkvmeC"
-                  ]
-               }
-            },
-            {  
-               "value":11.25000000,
-               "valueSat":1125000000,
-               "n":3,
-               "scriptPubKey":{  
-                  "asm":"OP_DUP OP_HASH160 c4541983721b26ada79770bf22de4885e19f5661 OP_EQUALVERIFY OP_CHECKSIG",
-                  "hex":"76a914c4541983721b26ada79770bf22de4885e19f566188ac",
-                  "reqSigs":1,
-                  "type":"pubkeyhash",
-                  "addresses":[  
-                     "yeDY39aiqbBHbJft5F6rokR23EaZca6UTU"
-                  ]
-               }
-            },
-            {  
-               "value":0.00000002,
-               "valueSat":2,
-               "n":4,
-               "scriptPubKey":{  
-                  "asm":"047559d13c3f81b1fadbd8dd03e4b5a1c73b05e2b980e00d467aa9440b29c7de23664dde6428d75cafed22ae4f0d302e26c5c5a5dd4d3e1b796d7281bdc9430f35 OP_CHECKSIG",
-                  "hex":"41047559d13c3f81b1fadbd8dd03e4b5a1c73b05e2b980e00d467aa9440b29c7de23664dde6428d75cafed22ae4f0d302e26c5c5a5dd4d3e1b796d7281bdc9430f35ac",
-                  "reqSigs":1,
-                  "type":"pubkey",
-                  "addresses":[  
-                     "yb21342iADyqAotjwcn4imqjvAcdYhnzeH"
-                  ]
-               }
-            },
-            {  
-               "value":0.00000000,
-               "valueSat":0,
-               "n":5,
-               "scriptPubKey":{  
-                  "asm":"OP_RETURN c855abe6461b1003ea36feb88a3bd50c5696e5784d11f8cd5e892978685de1d60000000001000000",
-                  "hex":"6a28c855abe6461b1003ea36feb88a3bd50c5696e5784d11f8cd5e892978685de1d60000000001000000",
-                  "type":"nulldata"
-               }
-            }
-         ]
-      }
-   ],
-   "time":1512582599,
-   "mediantime":1512582025,
-   "nonce":3609068752,
-   "bits":"1c0a0384",
-   "difficulty":25.56450187425715,
-   "chainwork":"00000000000000000000000000000000000000000000000000092fc476457b68",
-   "previousblockhash":"0000000009b11f275067dc7d8398d50c0357f9d0b4d0f64521a5af735d13e897",
-   "nextblockhash":"0000000000a9baff28a79db2a50e13af8f313138f4568339f58d73eda14a4d51"
+          },
+          "sequence": 4294967295
+        }
+      ],
+      "vout": [
+        {
+          "value": 10.00000000,
+          "valueSat": 1000000000,
+          "n": 0,
+          "scriptPubKey": {
+            "asm": "OP_DUP OP_HASH160 db91347da1e3fc25608b441994027847f489191b OP_EQUALVERIFY OP_CHECKSIG",
+            "desc": "addr(ygLQnEhtRv9LiQAfjzvURpUiEXLK9xei6f)#e0zk9xr6",
+            "hex": "76a914db91347da1e3fc25608b441994027847f489191b88ac",
+            "address": "ygLQnEhtRv9LiQAfjzvURpUiEXLK9xei6f",
+            "type": "pubkeyhash"
+          }
+        },
+        {
+          "value": 489.99999000,
+          "valueSat": 48999999000,
+          "n": 1,
+          "scriptPubKey": {
+            "asm": "OP_DUP OP_HASH160 32ae99679ea84309f80373691cf2bb7b0da9ae16 OP_EQUALVERIFY OP_CHECKSIG",
+            "desc": "addr(yQwRoAN7nzz1rbjq5oyt3d5gpyqChMEn3x)#73ua6uzw",
+            "hex": "76a91432ae99679ea84309f80373691cf2bb7b0da9ae1688ac",
+            "address": "yQwRoAN7nzz1rbjq5oyt3d5gpyqChMEn3x",
+            "type": "pubkeyhash"
+          }
+        }
+      ],
+      "fee": 0.00001000,
+      "hex": "0200000001fdd454572780af673f0c39335cf2f6db997ca0d55c0606d765cf6303ad091709000000006a47304402206465db43706bd35b1ced14e27b89ecc2ad939bb04fd7f644e74d322ef5c553b7022022069e76134796df3a006d6c18d94ff75cbb4165508211914d41b3ea0e6122cc012102cde88a8b67f85aa08dfaf0c10714d5af431b8909ea5a2da4551584e3533b621bffffffff0200ca9a3b000000001976a914db91347da1e3fc25608b441994027847f489191b88ac18a6a0680b0000001976a91432ae99679ea84309f80373691cf2bb7b0da9ae1688ac00000000",
+      "instantlock": false,
+      "instantlock_internal": false
+    }
+  ],
+  "cbTx": {
+    "version": 3,
+    "height": 606,
+    "merkleRootMNList": "0000000000000000000000000000000000000000000000000000000000000000",
+    "merkleRootQuorums": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bestCLHeightDiff": 0,
+    "bestCLSignature": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "creditPoolBalance": 198.19947280
+  }
 }
 ```
 
@@ -268,75 +326,105 @@ Name | Type | Presence | Description
 Result | object | Required<br>(exactly 1) | An object containing the requested block
 →<br>`hash` | string (hex) | Required<br>(exactly 1) | The hash of this block's block header encoded as hex in RPC byte order.  This is the same as the hash provided in parameter #1
 →<br>`confirmations` | number (int) | Required<br>(exactly 1) | The number of confirmations the transactions in this block have, starting at 1 when this block is at the tip of the best block chain.  This score will be -1 if the the block is not part of the best block chain
-→<br>`size` | number (int) | Required<br>(exactly 1) | The size of this block in serialized block format, counted in bytes
 →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
 →<br>`version` | number (int) | Required<br>(exactly 1) | This block's version number.  See [block version numbers](../reference/block-chain-block-headers.md#block-versions)
-→<br>`versionHex` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.13.0*<br><br>This block's version number formatted in hexadecimal.  See [BIP9 assignments]
+→<br>`versionHex` | string (hex) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.13.0*<br><br>This block's version number formatted in hexadecimal.  See [BIP9 assignments]
 →<br>`merkleroot` | string (hex) | Required<br>(exactly 1) | The merkle root for this block, encoded as hex in RPC byte order
-→<br>`tx` | array | Required<br>(exactly 1) | An array containing all transactions in this block.  The transactions appear in the array in the same order they appear in the serialized block
-→ →<br>TXID | string (hex) | Required<br>(1 or more) | The TXID of a transaction in this block, encoded as hex in RPC byte order
 →<br>`time` | number (int) | Required<br>(exactly 1) | The value of the *time* field in the block header, indicating approximately when the block was created
-→<br>`mediantime` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The median time of the 11 blocks before the most recent block on the blockchain.  Used for validating transaction locktime under BIP113  
+→<br>`mediantime` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The median time of the 11 blocks before the most recent block on the blockchain.  Used for validating transaction locktime under BIP113
 →<br>`nonce` | number (int) | Required<br>(exactly 1) | The nonce which was successful at turning this particular block into one that could be added to the best block chain
 →<br>`bits` | string (hex) | Required<br>(exactly 1) | The value of the *nBits* field in the block header, indicating the target threshold this block's header had to pass
 →<br>`difficulty` | number (real) | Required<br>(exactly 1) | The estimated amount of work done to find this block relative to the estimated amount of work done to find block 0
 →<br>`chainwork` | string (hex) | Required<br>(exactly 1) | The estimated number of block header hashes miners had to check from the genesis block to this block, encoded as big-endian hex
-→<br>`previousblockhash` | string (hex) | Required<br>(exactly 1) | The hash of the header of the previous block, encoded as hex in RPC byte order
+→<br>`nTx` | number (int) | Required<br>(exactly 1) | The number of transactions in the block
+→<br>`previousblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the header of the previous block, encoded as hex in RPC byte order.  Not returned for genesis block
 →<br>`nextblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the next block on the best block chain, if known, encoded as hex in RPC byte order
+→<br>`chainlock` | bool | Required<br>(exactly 1) | If set to `true`, this block is locked by a ChainLock
+→<br>`size` | number (int) | Required<br>(exactly 1) | The size of this block in serialized block format, counted in bytes
+→<br>`tx` | array | Required<br>(exactly 1) | An array containing the TXIDs of all transactions in this block.  The transactions appear in the array in the same order they appear in the serialized block
+→ →<br>TXID | string (hex) | Required<br>(1 or more) | The TXID of a transaction in this block, encoded as hex in RPC byte order
+→<br>`cbTx` | object | Optional<br>(0 or 1) | Coinbase special transaction details.  Only present if the block's coinbase transaction is a Coinbase special transaction (CbTx)
+→ →<br>`version` | number (int) | Required<br>(exactly 1) | The version of the Coinbase special transaction (CbTx)
+→ →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
+→ →<br>`merkleRootMNList` | string (hex) | Required<br>(exactly 1) | The merkle root for the masternode list
+→ →<br>`merkleRootQuorums` | string (hex) | Optional<br>(0 or 1) | The merkle root for the quorum list
+→ →<br>`bestCLHeightDiff` | number (int) | Optional<br>(0 or 1) | Blocks between the current block and the last known block with a ChainLock
+→ →<br>`bestCLSignature` | string (hex) | Optional<br>(0 or 1) | Best ChainLock signature known by the miner
+→ →<br>`creditPoolBalance` | number (real) | Optional<br>(0 or 1) | Balance in the Platform credit pool
+→ →<br>`merkleRootAssetUnlocks` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Merkle root of the instance hashes of the block's version 2 asset unlock transactions
 
-*Examples from Dash Core 0.12.2*
+*Examples from Dash Core 24.0.0*
 
 Request a block in hex-encoded serialized block format:
 
 ``` bash
-curl http://localhost:19998/rest/block/notxdetails/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.hex
+curl http://localhost:19898/rest/block/notxdetails/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.hex
 ```
 
 Result (wrapped):
 
 ``` bash
-0000002097e8135d73afa52145f6d0b4d0f957030cd598837ddc6750271fb109\
-000000008478305a7abf2f7cb21a889fb68d53c3e51685349e18e1b104b5956c\
-100bfea2c72d285a84030a1cd0041ed701010000000100000000000000000000\
-00000000000000000000000000000000000000000000ffffffff13037a94000e\
-2f5032506f6f6c2d74444153482fffffffff06a1f9ef04000000001976a91414\
-e3832cd7192ffb358a31d842636c4db8dfb1ac88ac6c357f3c000000001976a9\
-149262f2289e1f021dca954d8cf07a7ad72c2cc24d88ac31f49e010000000019\
-76a914d93f7ffa324b77d361e89a3c9c8df46ccdb4b39288ac40230e43000000\
-001976a914c4541983721b26ada79770bf22de4885e19f566188ac0200000000\
-0000004341047559d13c3f81b1fadbd8dd03e4b5a1c73b05e2b980e00d467aa9\
-440b29c7de23664dde6428d75cafed22ae4f0d302e26c5c5a5dd4d3e1b796d72\
-81bdc9430f35ac00000000000000002a6a28c855abe6461b1003ea36feb88a3b\
-d50c5696e5784d11f8cd5e892978685de1d6000000000100000000000000
+000000209845c5e39b8d98c7094801cbb0fa27ba6ddb110d00cbf20a1aef1e35\
+44f9b255036f309b40326518781c29a054f83d68e3ca73b9c685edc19f849de3\
+3dbdf3b77e1b5769ffff7f200000000002030005000100000000000000000000\
+00000000000000000000000000000000000000000000ffffffff016affffffff\
+023fe8ec0f000000001976a91432ae99679ea84309f80373691cf2bb7b0da9ae\
+1688ac374e3b0600000000016a00000000af03005e0200000000000000000000\
+0000000000000000000000000000000000000000000000000000000000000000\
+0000000000000000000000000000000000000000000000000000000000000000\
+0000000000000000000000000000000000000000000000000000000000000000\
+0000000000000000000000000000000000000000000000000000000000000000\
+0000000000000000000000000000000000000000000000000010655c9d040000\
+000200000001fdd454572780af673f0c39335cf2f6db997ca0d55c0606d765cf\
+6303ad091709000000006a47304402206465db43706bd35b1ced14e27b89ecc2\
+ad939bb04fd7f644e74d322ef5c553b7022022069e76134796df3a006d6c18d9\
+4ff75cbb4165508211914d41b3ea0e6122cc012102cde88a8b67f85aa08dfaf0\
+c10714d5af431b8909ea5a2da4551584e3533b621bffffffff0200ca9a3b0000\
+00001976a914db91347da1e3fc25608b441994027847f489191b88ac18a6a068\
+0b0000001976a91432ae99679ea84309f80373691cf2bb7b0da9ae1688ac0000\
+0000
 ```
 
 Get the same block in JSON:
 
 ``` bash
-curl http://localhost:19998/rest/block/notxdetails/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json
+curl http://localhost:19898/rest/block/notxdetails/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.json
 ```
 
 Result (whitespace added):
 
 ``` json
-{  
-   "hash":"0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451",
-   "confirmations":55,
-   "size":414,
-   "height":38010,
-   "version":536870912,
-   "merkleroot":"a2fe0b106c95b504b1e1189e348516e5c3538db69f881ab27c2fbf7a5a307884",
-   "tx":[  
-      "a2fe0b106c95b504b1e1189e348516e5c3538db69f881ab27c2fbf7a5a307884"
-   ],
-   "time":1512582599,
-   "mediantime":1512582025,
-   "nonce":3609068752,
-   "bits":"1c0a0384",
-   "difficulty":25.56450187425715,
-   "chainwork":"00000000000000000000000000000000000000000000000000092fc476457b68",
-   "previousblockhash":"0000000009b11f275067dc7d8398d50c0357f9d0b4d0f64521a5af735d13e897",
-   "nextblockhash":"0000000000a9baff28a79db2a50e13af8f313138f4568339f58d73eda14a4d51"
+{
+  "hash": "7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79",
+  "confirmations": 5,
+  "height": 606,
+  "version": 536870912,
+  "versionHex": "20000000",
+  "merkleroot": "b7f3bd3de39d849fc1ed85c6b973cae3683df854a0291c78186532409b306f03",
+  "time": 1767316350,
+  "mediantime": 1767315600,
+  "nonce": 0,
+  "bits": "207fffff",
+  "difficulty": 4.656542373906925e-10,
+  "chainwork": "00000000000000000000000000000000000000000000000000000000000004be",
+  "nTx": 2,
+  "previousblockhash": "55b2f944351eef1a0af2cb000d11db6dba27fab0cb014809c7988d9be3c54598",
+  "nextblockhash": "54a630f248fa9cd8b7dd7ddddf5e74b7d91de5d168c6708656fd85b182b516e4",
+  "chainlock": false,
+  "size": 578,
+  "tx": [
+    "d4a330e14742feb8f38947ffd9eea12a5bba3301513c94ef60a5b76a1bed0cc6",
+    "2d527d1ca1900100c40b41d1881afb6a07888373e03ff7be0420960005b6f648"
+  ],
+  "cbTx": {
+    "version": 3,
+    "height": 606,
+    "merkleRootMNList": "0000000000000000000000000000000000000000000000000000000000000000",
+    "merkleRootQuorums": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bestCLHeightDiff": 0,
+    "bestCLSignature": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "creditPoolBalance": 198.19947280
+  }
 }
 ```
 
@@ -376,31 +464,31 @@ Name | Type | Presence | Description
 `result` | object | Required<br>(exactly 1) | An object containing the block hash for the requested height
 →<br>`blockhash` | string | Required<br>(exactly 1) | Block hash for the requested height
 
-*Examples from Dash Core 18.0.0*
+*Examples from Dash Core 24.0.0*
 
 Request a block hash in hex-encoded serialized block hash format:
 
 ``` bash
-curl http://localhost:19998/rest/blockhashbyheight/1.hex
+curl http://localhost:19898/rest/blockhashbyheight/606.hex
 ```
 
 Result:
 
 ```text
-0000047d24635e347be3aaaeb66c26be94901a2f962feccd4f95090191f208c1
+7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79
 ```
 
 Get the same block hash in JSON:
 
 ``` bash
-curl http://localhost:19998/rest/blockhashbyheight/1.json
+curl http://localhost:19898/rest/blockhashbyheight/606.json
 ```
 
 Result:
 
 ```json
 {
-  "blockhash": "0000047d24635e347be3aaaeb66c26be94901a2f962feccd4f95090191f208c1"
+  "blockhash": "7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79"
 }
 ```
 
@@ -456,18 +544,18 @@ Result (whitespace added):
 ``` json
 {
   "chain": "regtest",
-  "blocks": 110,
-  "headers": 110,
-  "bestblockhash": "4b2c6d816a68272214a25fe33850b372715c099dbb80d6816d4081a7bfd47ffa",
+  "blocks": 610,
+  "headers": 610,
+  "bestblockhash": "3990ef757c54a2866029c56f693797e78c426e7c47afbc102902a2d12c54efe9",
   "difficulty": 4.656542373906925e-10,
-  "time": 1794435770,
-  "mediantime": 1794435769,
+  "time": 1767316950,
+  "mediantime": 1767316200,
   "verificationprogress": 1,
   "initialblockdownload": false,
-  "chainwork": "00000000000000000000000000000000000000000000000000000000000000de",
-  "size_on_disk": 24278,
+  "chainwork": "00000000000000000000000000000000000000000000000000000000000004c6",
+  "size_on_disk": 272279,
   "pruned": false,
-  "warnings": "Make sure to encrypt your wallet and delete all non-encrypted backups after you have verified that the wallet works!"
+  "warnings": ""
 }
 ```
 
@@ -516,15 +604,15 @@ curl http://localhost:19898/rest/deploymentinfo.json
 Get deployment info at a specific block in JSON:
 
 ``` bash
-curl http://localhost:19898/rest/deploymentinfo/2a4cac3cf6ef86bbeb4339b75f15e4b0c529b2f2bea76726cdd2d3971495cb2f.json
+curl http://localhost:19898/rest/deploymentinfo/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.json
 ```
 
 Result for the specific block (whitespace added, truncated):
 
 ``` json
 {
-  "hash": "2a4cac3cf6ef86bbeb4339b75f15e4b0c529b2f2bea76726cdd2d3971495cb2f",
-  "height": 100,
+  "hash": "7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79",
+  "height": 606,
   "deployments": {
     "bip34": {
       "type": "buried",
@@ -533,12 +621,12 @@ Result for the specific block (whitespace added, truncated):
     },
     "dip0003": {
       "type": "buried",
-      "active": false,
+      "active": true,
       "height": 432
     },
     "withdrawals": {
       "type": "buried",
-      "active": false,
+      "active": true,
       "height": 600
     },
     "v24": {
@@ -596,67 +684,74 @@ Format | suffix | Required<br>(exactly 1) | Set to `.json` for decoded block con
 Name | Type | Presence | Description
 --- | --- | --- | ---
 `result` | object | Required<br>(exactly 1) | The requested UTXO set
-→→<br>`chainHeight` | number (int) | Required<br>(exactly 1) | The height of the chain at the moment the result was calculated
-→<br>`chaintipHash` | number (int) | Required<br>(exactly 1) | The block hash of the top of the chain at the moment the result was calculated
-→<br>`bitmap` | number (int) | Required<br>(exactly 1) | Whether each requested output was found in the UTXO set or not.  A `1` is returned for those that were found and a `0` is returned for those that were not found.  Results are returned in the same order as outpoints were requested in the input parameters
+→<br>`chainHeight` | number (int) | Required<br>(exactly 1) | The height of the chain at the moment the result was calculated
+→<br>`chaintipHash` | string (hex) | Required<br>(exactly 1) | The block hash of the top of the chain at the moment the result was calculated, encoded as hex in RPC byte order
+→<br>`bitmap` | string | Required<br>(exactly 1) | Whether each requested output was found in the UTXO set or not.  A `1` is returned for those that were found and a `0` is returned for those that were not found.  Results are returned in the same order as outpoints were requested in the input parameters
 →<br>`utxos` | array | Required<br>(exactly 1) | An array of objects each describing an outpoint that is unspent
-→→`Unspent Outpoint` | object | Optional<br>(0 or more) | A UTXO match based on the query
-→→→<br>`txvers` | number (int) | Required<br>(exactly 1) | The version number of the transaction the UTXO was found in
-→<br>`height` | number (int) | Required (exactly 1) | The height of the block containing the defining transaction, or 0x7FFFFFFF if the tx is in the mempool
-→ → →<br>`value` | number (int) | Required<br>(exactly 1) | The value of the transaction
+→ →<br>Unspent Outpoint | object | Optional<br>(0 or more) | A UTXO match based on the query
+→ → →<br>`height` | number (int) | Required<br>(exactly 1) | The height of the block containing the defining transaction, or `2147483647` (0x7FFFFFFF) if the transaction is in the memory pool
+→ → →<br>`value` | number (Dash) | Required<br>(exactly 1) | The value of the output in DASH
 → → →<br>`scriptPubKey` | object | Required<br>(exactly 1) | An object describing the pubkey script
 → → → →<br>`asm` | string | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed
+→ → → →<br>`desc` | string | Required<br>(exactly 1) | Inferred descriptor for the output
 → → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The pubkey script encoded as hex
-→ → → →<br>`reqSigs` | number (int) | Optional<br>(0 or 1) | The number of signatures required; this is always `1` for P2PK, P2PKH, and P2SH (including P2SH multisig because the redeem script is not available in the pubkey script).  It may be greater than 1 for bare multisig.  This value will not be returned for `nulldata` or `nonstandard` script types (see the `type` key below)
-→ → → →<br>`type` | string | Optional<br>(0 or 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
-→ → → →<br>`addresses` | string : array | Optional<br>(0 or 1) | Array of P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types
-→ → → → →<br>Address | string | Required<br>(1 or more) | A P2PKH or P2SH address
+→ → → →<br>`type` | string | Required<br>(exactly 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
+→ → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists)
 
-*Examples from Dash Core 0.12.2*
+*Examples from Dash Core 24.0.0*
 
-Request the UTXO set:
+Request the UTXO set for a confirmed output and an unconfirmed (memory pool) output:
 
 ``` bash
-curl http://localhost:19998/rest/getutxos/checkmempool/7b6caf68c33794b0bda65e63691739919f13156b57c7ec20a0b4de1f33c580bd-0.hex
+curl http://localhost:19898/rest/getutxos/checkmempool/2d527d1ca1900100c40b41d1881afb6a07888373e03ff7be0420960005b6f648-0/5c4551c47487217a228ca7d10d39dea9bdb25d8ce327740be94e1dc596613939-0.hex
 ```
 
 Result (wrapped):
 
 ``` bash
-c39400005ac8db505390f3c77635132117a7fdf07b2eb45c3d9fe38535b77b05\
-0000000001010101000000c394000050ae3b16000000001976a9146f4def95a3\
-15e83bef5e1197ace4aa7ec55f2ecc88ac
+62020000e9ef542cd1a2022910bcaf477c6e428ce79737696fc5296086a2547c\
+75ef9039010302000000005e02000000ca9a3b000000001976a914db91347da1\
+e3fc25608b441994027847f489191b88ac00000000ffffff7f0065cd1d000000\
+001976a914db91347da1e3fc25608b441994027847f489191b88ac
 ```
 
 Same request in JSON:
 
 ``` bash
-curl http://localhost:19998/rest/getutxos/checkmempool/7b6caf68c33794b0bda65e63691739919f13156b57c7ec20a0b4de1f33c580bd-0.json
+curl http://localhost:19898/rest/getutxos/checkmempool/2d527d1ca1900100c40b41d1881afb6a07888373e03ff7be0420960005b6f648-0/5c4551c47487217a228ca7d10d39dea9bdb25d8ce327740be94e1dc596613939-0.json
 ```
 
 Result (whitespace added):
 
 ``` json
-{  
-   "chainHeight":38083,
-   "chaintipHash":"00000000057bb73585e39f3d5cb42e7bf0fda71721133576c7f3905350dbc85a",
-   "bitmap":"1",
-   "utxos":[  
-      {  
-         "txvers":1,
-         "height":38083,
-         "value":3.73010000,
-         "scriptPubKey":{  
-            "asm":"OP_DUP OP_HASH160 6f4def95a315e83bef5e1197ace4aa7ec55f2ecc OP_EQUALVERIFY OP_CHECKSIG",
-            "hex":"76a9146f4def95a315e83bef5e1197ace4aa7ec55f2ecc88ac",
-            "reqSigs":1,
-            "type":"pubkeyhash",
-            "addresses":[  
-               "yWTyDaMb1KZSRYwrq2DDW3Q4rKYuuPutDS"
-            ]
-         }
+{
+  "chainHeight": 610,
+  "chaintipHash": "3990ef757c54a2866029c56f693797e78c426e7c47afbc102902a2d12c54efe9",
+  "bitmap": "11",
+  "utxos": [
+    {
+      "height": 606,
+      "value": 10.00000000,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 db91347da1e3fc25608b441994027847f489191b OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(ygLQnEhtRv9LiQAfjzvURpUiEXLK9xei6f)#e0zk9xr6",
+        "hex": "76a914db91347da1e3fc25608b441994027847f489191b88ac",
+        "address": "ygLQnEhtRv9LiQAfjzvURpUiEXLK9xei6f",
+        "type": "pubkeyhash"
       }
-   ]
+    },
+    {
+      "height": 2147483647,
+      "value": 5.00000000,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 db91347da1e3fc25608b441994027847f489191b OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(ygLQnEhtRv9LiQAfjzvURpUiEXLK9xei6f)#e0zk9xr6",
+        "hex": "76a914db91347da1e3fc25608b441994027847f489191b88ac",
+        "address": "ygLQnEhtRv9LiQAfjzvURpUiEXLK9xei6f",
+        "type": "pubkeyhash"
+      }
+    }
+  ]
 }
 ```
 
@@ -698,78 +793,87 @@ Name | Type | Presence | Description
 --- | --- | --- | ---
 Result | array | Required<br>(exactly 1) | An array containing the requested block headers
 →<br>Block Header | object | Required<br>(1 or more) | An object containing a block header.  The amount of the objects is the same as the amount provided in parameter #1
-→→<br>`hash` | string (hex) | Required<br>(exactly 1) | The hash of this block's block header encoded as hex in RPC byte order.  This is the same as the hash provided in parameter #2
-→→<br>`confirmations` | number (int) | Required<br>(exactly 1) | The number of confirmations the transactions in this block have, starting at 1 when this block is at the tip of the best block chain.  This score will be -1 if the the block is not part of the best block chain
-→→<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
-→→<br>`version` | number (int) | Required<br>(exactly 1) | This block's version number.  See [block version numbers](../reference/block-chain-block-headers.md#block-versions)
-→→<br>`merkleroot` | string (hex) | Required<br>(exactly 1) | The merkle root for this block, encoded as hex in RPC byte order
-→→<br>`time` | number (int) | Required<br>(exactly 1) | The value of the *time* field in the block header, indicating approximately when the block was created
-→→<br>`mediantime` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The median time of the 11 blocks before the most recent block on the blockchain.  Used for validating transaction locktime under BIP113
-→→<br>`nonce` | number (int) | Required<br>(exactly 1) | The nonce which was successful at turning this particular block into one that could be added to the best block chain
-→→<br>`bits` | string (hex) | Required<br>(exactly 1) | The value of the *nBits* field in the block header, indicating the target threshold this block's header had to pass
-→→<br>`difficulty` | number (real) | Required<br>(exactly 1) | The estimated amount of work done to find this block relative to the estimated amount of work done to find block 0
-→→<br>`chainwork` | string (hex) | Required<br>(exactly 1) | The estimated number of block header hashes miners had to check from the genesis block to this block, encoded as big-endian hex
-→→<br>`previousblockhash` | string (hex) | Required<br>(exactly 1) | The hash of the header of the previous block, encoded as hex in RPC byte order
-→→<br>`nextblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the next block on the best block chain, if known, encoded as hex in RPC byte order
+→ →<br>`hash` | string (hex) | Required<br>(exactly 1) | The hash of this block's block header encoded as hex in RPC byte order.  This is the same as the hash provided in parameter #2
+→ →<br>`confirmations` | number (int) | Required<br>(exactly 1) | The number of confirmations the transactions in this block have, starting at 1 when this block is at the tip of the best block chain.  This score will be -1 if the the block is not part of the best block chain
+→ →<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
+→ →<br>`version` | number (int) | Required<br>(exactly 1) | This block's version number.  See [block version numbers](../reference/block-chain-block-headers.md#block-versions)
+→ →<br>`versionHex` | string (hex) | Required<br>(exactly 1) | This block's version number formatted in hexadecimal
+→ →<br>`merkleroot` | string (hex) | Required<br>(exactly 1) | The merkle root for this block, encoded as hex in RPC byte order
+→ →<br>`time` | number (int) | Required<br>(exactly 1) | The value of the *time* field in the block header, indicating approximately when the block was created
+→ →<br>`mediantime` | number (int) | Required<br>(exactly 1) | *Added in Bitcoin Core 0.12.0*<br><br>The median time of the 11 blocks before the most recent block on the blockchain.  Used for validating transaction locktime under BIP113
+→ →<br>`nonce` | number (int) | Required<br>(exactly 1) | The nonce which was successful at turning this particular block into one that could be added to the best block chain
+→ →<br>`bits` | string (hex) | Required<br>(exactly 1) | The value of the *nBits* field in the block header, indicating the target threshold this block's header had to pass
+→ →<br>`difficulty` | number (real) | Required<br>(exactly 1) | The estimated amount of work done to find this block relative to the estimated amount of work done to find block 0
+→ →<br>`chainwork` | string (hex) | Required<br>(exactly 1) | The estimated number of block header hashes miners had to check from the genesis block to this block, encoded as big-endian hex
+→ →<br>`nTx` | number (int) | Required<br>(exactly 1) | The number of transactions in the block
+→ →<br>`previousblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the header of the previous block, encoded as hex in RPC byte order.  Not returned for genesis block
+→ →<br>`nextblockhash` | string (hex) | Optional<br>(0 or 1) | The hash of the next block on the best block chain, if known, encoded as hex in RPC byte order
+→ →<br>`chainlock` | bool | Required<br>(exactly 1) | If set to `true`, this block is locked by a ChainLock
 
-*Examples from Dash Core 0.12.2*
+*Examples from Dash Core 24.0.0*
 
 Request 2 block headers in hex-encoded serialized block format:
 
 ``` bash
-curl http://localhost:19998/rest/headers/2/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.hex
+curl http://localhost:19898/rest/headers/2/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.hex
 ```
 
 Result (wrapped):
 
 ``` bash
-0000002097e8135d73afa52145f6d0b4d0f957030cd598837ddc6750271fb109\
-000000008478305a7abf2f7cb21a889fb68d53c3e51685349e18e1b104b5956c\
-100bfea2c72d285a84030a1cd0041ed70000002051b45fe788d100ff8be0bc39\
-e88b59829f01c17a82786bcf46bfcc000000000004dc24bddd15f790efcd7af3\
-8d03f805cc1c74516888ccec8874db2ac8beb043092e285a999f091c5d6ec419
+000000209845c5e39b8d98c7094801cbb0fa27ba6ddb110d00cbf20a1aef1e35\
+44f9b255036f309b40326518781c29a054f83d68e3ca73b9c685edc19f849de3\
+3dbdf3b77e1b5769ffff7f200000000000000020798b062ea8524b1b17c52d9c\
+e38da7819f78c6f62b452c263292038e7069b87ec8997f386905bafad4ff3e6a\
+a14244e881eb7c2ed29d6d39d9f406dbd431a28c141c5769ffff7f2001000000
 ```
 
 Get the same block headers in JSON:
 
 ``` bash
-curl http://localhost:19998/rest/headers/2/0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451.json
+curl http://localhost:19898/rest/headers/2/7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79.json
 ```
 
 Result (whitespace added):
 
 ``` json
-[  
-   {  
-      "hash":"0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451",
-      "confirmations":80,
-      "height":38010,
-      "version":536870912,
-      "merkleroot":"a2fe0b106c95b504b1e1189e348516e5c3538db69f881ab27c2fbf7a5a307884",
-      "time":1512582599,
-      "mediantime":1512582025,
-      "nonce":3609068752,
-      "bits":"1c0a0384",
-      "difficulty":25.56450187425715,
-      "chainwork":"00000000000000000000000000000000000000000000000000092fc476457b68",
-      "previousblockhash":"0000000009b11f275067dc7d8398d50c0357f9d0b4d0f64521a5af735d13e897",
-      "nextblockhash":"0000000000a9baff28a79db2a50e13af8f313138f4568339f58d73eda14a4d51"
-   },
-   {  
-      "hash":"0000000000a9baff28a79db2a50e13af8f313138f4568339f58d73eda14a4d51",
-      "confirmations":79,
-      "height":38011,
-      "version":536870912,
-      "merkleroot":"43b0bec82adb7488eccc886851741ccc05f8038df37acdef90f715ddbd24dc04",
-      "time":1512582665,
-      "mediantime":1512582146,
-      "nonce":432303709,
-      "bits":"1c099f99",
-      "difficulty":26.60134045579303,
-      "chainwork":"00000000000000000000000000000000000000000000000000092fdf1051882b",
-      "previousblockhash":"0000000000ccbf46cf6b78827ac1019f82598be839bce08bff00d188e75fb451",
-      "nextblockhash":"0000000008de9da638149042323fc05ded619a922ff1fac6e66f66fc773bd716"
-   }
+[
+  {
+    "hash": "7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79",
+    "confirmations": 5,
+    "height": 606,
+    "version": 536870912,
+    "versionHex": "20000000",
+    "merkleroot": "b7f3bd3de39d849fc1ed85c6b973cae3683df854a0291c78186532409b306f03",
+    "time": 1767316350,
+    "mediantime": 1767315600,
+    "nonce": 0,
+    "bits": "207fffff",
+    "difficulty": 4.656542373906925e-10,
+    "chainwork": "00000000000000000000000000000000000000000000000000000000000004be",
+    "nTx": 2,
+    "previousblockhash": "55b2f944351eef1a0af2cb000d11db6dba27fab0cb014809c7988d9be3c54598",
+    "nextblockhash": "54a630f248fa9cd8b7dd7ddddf5e74b7d91de5d168c6708656fd85b182b516e4",
+    "chainlock": false
+  },
+  {
+    "hash": "54a630f248fa9cd8b7dd7ddddf5e74b7d91de5d168c6708656fd85b182b516e4",
+    "confirmations": 4,
+    "height": 607,
+    "version": 536870912,
+    "versionHex": "20000000",
+    "merkleroot": "8ca231d4db06f4d9396d9dd22e7ceb81e84442a16a3effd4faba0569387f99c8",
+    "time": 1767316500,
+    "mediantime": 1767315750,
+    "nonce": 1,
+    "bits": "207fffff",
+    "difficulty": 4.656542373906925e-10,
+    "chainwork": "00000000000000000000000000000000000000000000000000000000000004c0",
+    "nTx": 1,
+    "previousblockhash": "7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79",
+    "nextblockhash": "702d26b15179aa51cffba4bc6ab7f3b18fc2ef68886c5cc9db1c232ad387ae95",
+    "chainlock": false
+  }
 ]
 ```
 
@@ -855,40 +959,44 @@ Result (whitespace added):
 
 ``` json
 {
-  "0d3c1eae261c05edd07911804100b11da4268b315eb956896230800f645eea51": {
+  "5c4551c47487217a228ca7d10d39dea9bdb25d8ce327740be94e1dc596613939": {
     "vsize": 225,
-    "time": 1794435096,
-    "height": 110,
-    "descendantcount": 1,
-    "descendantsize": 225,
+    "time": 1767317100,
+    "height": 610,
+    "descendantcount": 2,
+    "descendantsize": 450,
     "ancestorcount": 1,
     "ancestorsize": 225,
     "fees": {
-      "base": 0.00000225,
-      "modified": 0.00000225,
-      "ancestor": 0.00000225,
-      "descendant": 0.00000225
+      "base": 0.00001000,
+      "modified": 0.00001000,
+      "ancestor": 0.00001000,
+      "descendant": 0.00002000
     },
     "depends": [],
-    "spentby": [],
+    "spentby": [
+      "7713aaad561955af9c0cf461e3823d3413f3de370b9420a2c6f3f666c4cb02a5"
+    ],
     "instantlock": "false",
     "unbroadcast": true
   },
-  "6e348d42b95de8899eca2ab8894a54eed68f037086c64862a64a3c1fcd2245e9": {
+  "7713aaad561955af9c0cf461e3823d3413f3de370b9420a2c6f3f666c4cb02a5": {
     "vsize": 225,
-    "time": 1794435096,
-    "height": 110,
+    "time": 1767317100,
+    "height": 610,
     "descendantcount": 1,
     "descendantsize": 225,
-    "ancestorcount": 1,
-    "ancestorsize": 225,
+    "ancestorcount": 2,
+    "ancestorsize": 450,
     "fees": {
-      "base": 0.00000225,
-      "modified": 0.00000225,
-      "ancestor": 0.00000225,
-      "descendant": 0.00000225
+      "base": 0.00001000,
+      "modified": 0.00001000,
+      "ancestor": 0.00002000,
+      "descendant": 0.00001000
     },
-    "depends": [],
+    "depends": [
+      "5c4551c47487217a228ca7d10d39dea9bdb25d8ce327740be94e1dc596613939"
+    ],
     "spentby": [],
     "instantlock": "false",
     "unbroadcast": true
@@ -906,8 +1014,8 @@ Result (whitespace added):
 
 ``` json
 [
-  "0d3c1eae261c05edd07911804100b11da4268b315eb956896230800f645eea51",
-  "6e348d42b95de8899eca2ab8894a54eed68f037086c64862a64a3c1fcd2245e9"
+  "5c4551c47487217a228ca7d10d39dea9bdb25d8ce327740be94e1dc596613939",
+  "7713aaad561955af9c0cf461e3823d3413f3de370b9420a2c6f3f666c4cb02a5"
 ]
 ```
 
@@ -922,10 +1030,10 @@ Result (whitespace added):
 ``` json
 {
   "txids": [
-    "0d3c1eae261c05edd07911804100b11da4268b315eb956896230800f645eea51",
-    "6e348d42b95de8899eca2ab8894a54eed68f037086c64862a64a3c1fcd2245e9"
+    "5c4551c47487217a228ca7d10d39dea9bdb25d8ce327740be94e1dc596613939",
+    "7713aaad561955af9c0cf461e3823d3413f3de370b9420a2c6f3f666c4cb02a5"
   ],
-  "mempool_sequence": 3
+  "mempool_sequence": 5
 }
 ```
 
@@ -977,15 +1085,15 @@ Result (whitespace added):
 ``` json
 {
   "loaded": true,
-  "size": 1,
-  "bytes": 225,
-  "usage": 1040,
-  "total_fee": 0.00000225,
+  "size": 2,
+  "bytes": 450,
+  "usage": 2176,
+  "total_fee": 0.00002000,
   "maxmempool": 300000000,
   "mempoolminfee": 0.00001000,
   "minrelaytxfee": 0.00001000,
   "instantsendlocks": 0,
-  "unbroadcastcount": 1,
+  "unbroadcastcount": 2,
   "pendingassetunlocks": 0.00000000
 }
 ```
@@ -1039,10 +1147,6 @@ Result | object | Required<br>(exactly 1) | An object describing the request tra
 → → → →<br>`asm` | string | Required<br>(exactly 1) | The signature script in decoded form with non-data-pushing opcodes listed
 → → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The signature script encoded as hex
 → → →<br>`coinbase` | string (hex) | Optional<br>(0 or 1) | The coinbase (similar to the hex field of a scriptSig) encoded as hex.  Only present if this is a coinbase transaction
-→ → →<br>`value` | number (Dash) | Optional<br>(exactly 1) | The number of Dash paid to this output.  May be `0`.<br><br>Only present if `spentindex` enabled
-→ → →<br>`valueSat` | number (duffs) | Optional<br>(exactly 1) | The number of duffs paid to this output.  May be `0`.<br><br>Only present if `spentindex` enabled
-→ → → →<br>`addresses` | string : array | Optional<br>(0 or 1) | The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types.<br><br>Only present if `spentindex` enabled
-→ → → → →<br>Address | string | Required<br>(1 or more) | A P2PKH or P2SH address
 → → →<br>`sequence` | number (int) | Required<br>(exactly 1) | The input sequence number
 →<br>`vout` | array | Required<br>(exactly 1) | An array of objects each describing an output vector (vout) for this transaction.  Output objects will have the same order within the array as they have in the transaction, so the first output listed will be output 0
 → →<br>Output | object | Required<br>(1 or more) | An object describing one of this transaction's outputs
@@ -1051,99 +1155,92 @@ Result | object | Required<br>(exactly 1) | An object describing the request tra
 → → →<br>`n` | number (int) | Required<br>(exactly 1) | The output index number of this output within this transaction
 → → →<br>`scriptPubKey` | object | Required<br>(exactly 1) | An object describing the pubkey script
 → → → →<br>`asm` | string | Required<br>(exactly 1) | The pubkey script in decoded form with non-data-pushing opcodes listed
+→ → → →<br>`desc` | string | Required<br>(exactly 1) | Inferred descriptor for the output
 → → → →<br>`hex` | string (hex) | Required<br>(exactly 1) | The pubkey script encoded as hex
-→ → → →<br>`reqSigs` | number (int) | Optional<br>(0 or 1) | The number of signatures required; this is always `1` for P2PK, P2PKH, and P2SH (including P2SH multisig because the redeem script is not available in the pubkey script).  It may be greater than 1 for bare multisig.  This value will not be returned for `nulldata` or `nonstandard` script types (see the `type` key below)
-→ → → →<br>`type` | string | Optional<br>(0 or 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
-→ → → →<br>`addresses` | string : array | Optional<br>(0 or 1) | The P2PKH or P2SH addresses used in this transaction, or the computed P2PKH address of any pubkeys in this transaction.  This array will not be returned for `nulldata` or `nonstandard` script types
-→ → → → →<br>Address | string | Required<br>(1 or more) | A P2PKH or P2SH address
+→ → → →<br>`type` | string | Required<br>(exactly 1) | The type of script.  This will be one of the following:<br>• `pubkey` for a P2PK script<br>• `pubkeyhash` for a P2PKH script<br>• `scripthash` for a P2SH script<br>• `multisig` for a bare multisig script<br>• `nulldata` for nulldata scripts<br>• `nonstandard` for unknown scripts
+→ → → →<br>`address` | string | Optional<br>(0 or 1) | Dash address (only if a well-defined address exists)
 →<br>`extraPayloadSize` | number (int) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Size of the DIP2 extra payload. Only present if it's a DIP2 special transaction
 →<br>`extraPayload` | string (hex) | Optional<br>(0 or 1) | *Added in Dash Core 0.13.0.0*<br><br>Hex encoded DIP2 extra payload data. Only present if it's a DIP2 special transaction
-→<br>`blockhash` | string (hex) | Optional<br>(0 or 1) | If the transaction has been included in a block on the local best block chain, this is the hash of that block encoded as hex in RPC byte order
-→<br>`height` | number (int) | Required<br>(exactly 1) | The height of this block on its block chain
-→<br>`confirmations` | number (int) | Required<br>(exactly 1) | If the transaction has been included in a block on the local best block chain, this is how many confirmations it has.  Otherwise, this is `0`
-→<br>`time` | number (int) | Optional<br>(0 or 1) | If the transaction has been included in a block on the local best block chain, this is the block header time of that block (may be in the future)
-→<br>`blocktime` | number (int) | Optional<br>(0 or 1) | This field is currently identical to the time field described above
+→<br>`cbTx` | object | Optional<br>(0 or 1) | The decoded Coinbase special transaction (CbTx) payload, with the same fields as the block-level `cbTx` object in [GET Block](../api/http-rest-requests.md#get-block).  Only present if this is a coinbase special transaction.  Other DIP2 special transaction types include their own decoded payload object instead (for example, `proRegTx` or `qcTx`)
+→<br>`instanceHash` | string (hex) | Optional<br>(0 or 1) | **Added in Dash Core 24.0.0**<br>Full-serialization hash distinguishing this re-signed instance of the withdrawal; the txid is shared by all instances. Only present for version 2 Asset Unlock special TXs
+→<br>`blockhash` | string (hex) | Optional<br>(0 or 1) | If the transaction has been included in a block on the local best block chain, this is the hash of that block encoded as hex in RPC byte order.  Not present for memory pool transactions
+→<br>`hex` | string (hex) | Required<br>(exactly 1) | The serialized, hex-encoded data for the transaction
 
-*Examples from Dash Core 0.12.2*
+*Examples from Dash Core 24.0.0*
 
 Request a transaction in hex-encoded serialized transaction format:
 
 ``` bash
-curl http://localhost:19998/rest/tx/b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32.hex
+curl http://localhost:19898/rest/tx/2d527d1ca1900100c40b41d1881afb6a07888373e03ff7be0420960005b6f648.hex
 ```
 
 Result (wrapped):
 
 ``` text
-0100000001c91d4bb14e061f8f6b775ca8e62ec8a66739b375f169bce1964cee\
-a2368197e5000000006a473044022050644e406be3e463d94868c617309dc021\
-174551dbb340665f48119e110a72b2022022f3cc93deeb4c44ce70bebe8e7f0f\
-69c462f120eb64b47eeb77f0a62e9bd361012102f542dde7c155717ac8df05d0\
-fc8f65e2ecc078ecad42b23462f27832b441ffa5feffffff0200e1f505000000\
-001976a91443d11ad5889532f22f069b18b24489b1f94f253188ac7dbafa0800\
-0000001976a914bb900427682b8f7cae6779fb955a610ff71d68c888acce940000
+0200000001fdd454572780af673f0c39335cf2f6db997ca0d55c0606d765cf63\
+03ad091709000000006a47304402206465db43706bd35b1ced14e27b89ecc2ad\
+939bb04fd7f644e74d322ef5c553b7022022069e76134796df3a006d6c18d94f\
+f75cbb4165508211914d41b3ea0e6122cc012102cde88a8b67f85aa08dfaf0c1\
+0714d5af431b8909ea5a2da4551584e3533b621bffffffff0200ca9a3b000000\
+001976a914db91347da1e3fc25608b441994027847f489191b88ac18a6a0680b\
+0000001976a91432ae99679ea84309f80373691cf2bb7b0da9ae1688ac000000\
+00
 ```
 
 Get the same transaction in JSON:
 
 ``` bash
-curl http://localhost:19998/rest/tx/b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32.json
+curl http://localhost:19898/rest/tx/2d527d1ca1900100c40b41d1881afb6a07888373e03ff7be0420960005b6f648.json
 ```
 
 Result (whitespace added):
 
 ``` json
-{  
-   "txid":"b06edec446fbcc0fc04a6e2774a843823f5238c2e15de40e61767a44f6788d32",
-   "size":225,
-   "version":1,
-   "locktime":38094,
-   "vin":[  
-      {  
-         "txid":"e5978136a2ee4c96e1bc69f175b33967a6c82ee6a85c776b8f1f064eb14b1dc9",
-         "vout":0,
-         "scriptSig":{  
-            "asm":"3044022050644e406be3e463d94868c617309dc021174551dbb340665f48119e110a72b2022022f3cc93deeb4c44ce70bebe8e7f0f69c462f120eb64b47eeb77f0a62e9bd361[ALL] 02f542dde7c155717ac8df05d0fc8f65e2ecc078ecad42b23462f27832b441ffa5",
-            "hex":"473044022050644e406be3e463d94868c617309dc021174551dbb340665f48119e110a72b2022022f3cc93deeb4c44ce70bebe8e7f0f69c462f120eb64b47eeb77f0a62e9bd361012102f542dde7c155717ac8df05d0fc8f65e2ecc078ecad42b23462f27832b441ffa5"
-         },
-         "sequence":4294967294
-      }
-   ],
-   "vout":[  
-      {  
-         "value":1.00000000,
-         "valueSat":100000000,
-         "n":0,
-         "scriptPubKey":{  
-            "asm":"OP_DUP OP_HASH160 43d11ad5889532f22f069b18b24489b1f94f2531 OP_EQUALVERIFY OP_CHECKSIG",
-            "hex":"76a91443d11ad5889532f22f069b18b24489b1f94f253188ac",
-            "reqSigs":1,
-            "type":"pubkeyhash",
-            "addresses":[  
-               "ySW2cuvm2wJ4EU5KzX4waYfFPV3xQni6Nm"
-            ]
-         }
+{
+  "txid": "2d527d1ca1900100c40b41d1881afb6a07888373e03ff7be0420960005b6f648",
+  "version": 2,
+  "type": 0,
+  "size": 225,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "091709ad0363cf65d706065cd5a07c99dbf6f25c33390c3f67af80275754d4fd",
+      "vout": 0,
+      "scriptSig": {
+        "asm": "304402206465db43706bd35b1ced14e27b89ecc2ad939bb04fd7f644e74d322ef5c553b7022022069e76134796df3a006d6c18d94ff75cbb4165508211914d41b3ea0e6122cc[ALL] 02cde88a8b67f85aa08dfaf0c10714d5af431b8909ea5a2da4551584e3533b621b",
+        "hex": "47304402206465db43706bd35b1ced14e27b89ecc2ad939bb04fd7f644e74d322ef5c553b7022022069e76134796df3a006d6c18d94ff75cbb4165508211914d41b3ea0e6122cc012102cde88a8b67f85aa08dfaf0c10714d5af431b8909ea5a2da4551584e3533b621b"
       },
-      {  
-         "value":1.50649469,
-         "valueSat":150649469,
-         "n":1,
-         "scriptPubKey":{  
-            "asm":"OP_DUP OP_HASH160 bb900427682b8f7cae6779fb955a610ff71d68c8 OP_EQUALVERIFY OP_CHECKSIG",
-            "hex":"76a914bb900427682b8f7cae6779fb955a610ff71d68c888ac",
-            "reqSigs":1,
-            "type":"pubkeyhash",
-            "addresses":[  
-               "ydRBjVr78ejCqXuGs2wbtYoFpGbDkqV8V4"
-            ]
-         }
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "value": 10.00000000,
+      "valueSat": 1000000000,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 db91347da1e3fc25608b441994027847f489191b OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(ygLQnEhtRv9LiQAfjzvURpUiEXLK9xei6f)#e0zk9xr6",
+        "hex": "76a914db91347da1e3fc25608b441994027847f489191b88ac",
+        "address": "ygLQnEhtRv9LiQAfjzvURpUiEXLK9xei6f",
+        "type": "pubkeyhash"
       }
-   ],
-   "blockhash":"0000000003b6a57e3614176e5b93caf9498009853e06d16028ebffeb361afda5",
-   "height":38095,
-   "confirmations":9,
-   "time":1512596315,
-   "blocktime":1512596315
+    },
+    {
+      "value": 489.99999000,
+      "valueSat": 48999999000,
+      "n": 1,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 32ae99679ea84309f80373691cf2bb7b0da9ae16 OP_EQUALVERIFY OP_CHECKSIG",
+        "desc": "addr(yQwRoAN7nzz1rbjq5oyt3d5gpyqChMEn3x)#73ua6uzw",
+        "hex": "76a91432ae99679ea84309f80373691cf2bb7b0da9ae1688ac",
+        "address": "yQwRoAN7nzz1rbjq5oyt3d5gpyqChMEn3x",
+        "type": "pubkeyhash"
+      }
+    }
+  ],
+  "blockhash": "7eb869708e039232262c452bf6c6789f81a78de39c2dc5171b4b52a82e068b79",
+  "hex": "0200000001fdd454572780af673f0c39335cf2f6db997ca0d55c0606d765cf6303ad091709000000006a47304402206465db43706bd35b1ced14e27b89ecc2ad939bb04fd7f644e74d322ef5c553b7022022069e76134796df3a006d6c18d94ff75cbb4165508211914d41b3ea0e6122cc012102cde88a8b67f85aa08dfaf0c10714d5af431b8909ea5a2da4551584e3533b621bffffffff0200ca9a3b000000001976a914db91347da1e3fc25608b441994027847f489191b88ac18a6a0680b0000001976a91432ae99679ea84309f80373691cf2bb7b0da9ae1688ac00000000"
 }
 ```
 
